@@ -8,16 +8,8 @@ define(["charts/charts"], function() {
             var chart = $(containerIDWithHash).highcharts();
             if (chart)
             {
-                if (chart.series[0].option.tooltip.crosshairs[0])
-                {
-                    chart.series[0].option.tooltip.crosshairs = [false, false];
-                    chart.series[0].option.tooltip.enabled = false;
-                }
-                else
-                {
-                    chart.series[0].option.tooltip.crosshairs = [true, true];
-                    chart.series[0].option.tooltip.enabled = true;
-                }
+                chart.xAxis[0].crosshair = !chart.xAxis[0].crosshair;
+                chart.yAxis[0].crosshair = !chart.yAxis[0].crosshair;
             }
         }
     };

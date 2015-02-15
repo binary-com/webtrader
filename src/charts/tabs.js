@@ -37,7 +37,19 @@ define(["jquery", "index"], function ($) {
                     .append($("<div id='" + newTabId + "_chart'></div>").addClass('chartSubContainer'))
                 );
             $.get("charts/chartOptions.html", function($html) {
-                $("#" + newTabId + "_header").prepend($html).find('button').button();
+                //attach different button actions
+                $html = $($html).find(".crosshair").click(function() {
+
+                    //Change ID for input and update label's 'for' this input
+                    $(this).attr("id", $(this).attr('id') + newTabId);
+                    $(this).next('label').attr('for', $(this).attr('id'));
+
+                    require(["charts/crosshair"], function( crosshair ) {
+                        crosshair.toggleCrossHair('#' + newTabId + '_chart');
+                    });
+                }).end();
+
+                $("#" + newTabId + "_header").prepend($html).find('button,input').button();
             });
 
             $(document).trigger('resize');
