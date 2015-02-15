@@ -1,0 +1,43 @@
+<div id="instrumentsDialog" title="Select instrument">
+    <p>
+        <div class="ui-widget instruments_table">
+            <div class="ui-widget">
+                <div class="ui-widget">
+                    <input id="timePeriod" type="number" min="1" max="100" value="1"/>
+                </div>
+                <div class="ui-widget">
+                    <select id="units">
+                        <option value="t">Tick</option>
+                        <option value="m">Minute(s)</option>
+                        <option value="d">Day(s)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="ui-widget instruments_table">
+            <div class="ui-widget">
+                <div class="ui-widget"><strong class="underline">Standard periods</strong></div>
+            </div>
+        </div>
+        <div class="ui-widget instruments_table" id="standardPeriodsButtonContainer">
+            <div class="ui-widget">
+                <div class="ui-widget"><button class="fixed_width" id="1m">1min</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="5m">5min</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="15m">15min</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="30m">30min</button></div>
+            </div>
+            <div class="ui-widget">
+                <div class="ui-widget"><button class="fixed_width" id="1h">1h</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="4h">4h</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="8h">8h</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="12h">12h</button></div>
+            </div>
+            <div class="ui-widget">
+                <div class="ui-widget"><button class="fixed_width" id="1d">1d</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="7d">7d</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="15d">15d</button></div>
+                <div class="ui-widget"><button class="fixed_width" id="30d">30d</button></div>
+            </div>
+        </div>
+    </p>
+</div>

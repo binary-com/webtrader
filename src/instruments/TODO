@@ -1,0 +1,19 @@
+> Code timer so that any changes in instrument will be reflected
+    > Check this every 24 hours
+    > The timer should check if any instrument have been removed from the list. If a instrument is not available anymore and client already opened a chart for it, the chart should be removed and client should be notified in a popup saying that this chart is no longer available
+    > Inform user that new list of instruments are available for them
+        > Highlight and show an arrow of where the instrument menu is and fade the highlight away
+
+> Consider delay amount. If the underlying instrument does not support the time period user is trying to add, they should not be allowed or should be shown a pop up
+
+> The input field should only allow numbers and should be in range 1-100
+
+> 'Select Instrument' action should show an overlay with all instruments menu
+
+> When the instruments menu is shown, it should show loading first until the instruments are all loaded
+
+> When OK is clicked, hand over control to chart module with selected instrument and time period details
+
+> When any of the standard period button is clicked, hand over control to chart module with selected instrument and time period details
+
+> Review TODO comments in code (for this module)

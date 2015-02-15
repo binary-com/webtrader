@@ -1,0 +1,14 @@
+body{
+    min-width: 400px;
+    min-height: 600px;
+}
+
+.topContainer {
+    text-align: center;
+}
+
+.chartContainer {
+    position: absolute;
+    left: 10px;
+    top: 35px;
+}
