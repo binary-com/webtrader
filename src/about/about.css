@@ -1,0 +1,13 @@
+.about {
+    display: table;
+}
+
+.about > div {
+    display: table-row;
+}
+
+.about > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 5px 5px 5px;
+}

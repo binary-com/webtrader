@@ -1,8 +1,31 @@
-<div class="ui-widget topContainer">
-    <button class="chartType">Chart Type</button>
-    <button class="logScale">Log Scale</button>
-    <input type="checkbox" class="crosshair" checked id="crosshair"><label for="crosshair">Crosshair</label>
-    <button class="draw">Draw</button>
-    <button class="overlay">Overlay</button>
-    <button class="indicators">Indicators</button>
+<div class="ui-widget chartOptions">
+
+    <img src="images/hamburger.svg" width="25px" height="25px">
+
+    <ul class="ui-corner-all">
+        <li class="chartTypeLI">
+            Chart Type
+            <ul class="ui-corner-all chartType">
+                <li class="area">Area</li>
+                <li class="candlestick">Candlestick</li>
+                <li class="line">Line</li>
+                <li class="areaspline">Areaspline</li>
+                <li class="spline">Spline</li>
+                <li class="column">Column</li>
+                <li class="ohlc">OHLC</li>
+                <!--<li class="scatter">Scatter</li> TODO scatter plot throws error for tooltip-->
+            </ul>
+        </li>
+        <li class="logScaleLI">
+            <span></span><span>Log Scale</span>
+        </li>
+        <li class="crosshairLI">
+            <span class="ui-icon ui-icon-check"></span><span>Crosshair</span>
+        </li>
+        <li class="ui-state-disabled">Draw</li>
+        <li class="overlay">Overlay</li>
+        <li class="indicators ui-state-disabled">Indicators</li>
+        <li class="refresh">Refresh</li>
+    </ul>
+
 </div>

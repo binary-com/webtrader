@@ -16,17 +16,6 @@
     text-decoration: underline;
 }
 
-.fixed_width {
+.instruments_fixed_width {
     width: 55px;
-}
-
-#instrumentSelectionMenuDIV {
-    position: relative;
-    z-index: 1;
-    padding: 0;
-}
-
-#instrumentSelectionMenuDIV ul {
-    width: 100px;
-    text-align: left;
 }

@@ -1,0 +1,11 @@
+.atr_input_width {
+    width: 90px;
+}
+
+.atr_input_width_for_period {
+    width: 85px;
+}
+
+.atr label {
+    display: block;
+}

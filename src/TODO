@@ -13,3 +13,21 @@
 > add readme for each folder with detailed documentation
 
 > Add documentation for JS class and HTML pages
+
+> User should be able to change main candle color by double clicking on it
+
+> In general, users should be able to do following
+    > Change main series candle color
+    > Change overlay series color
+    > Change indicator parameters including color settings
+    > Change chart objects
+    > Delete overlay
+    > Delete indicators
+    > Delete objects from chart
+
+> Use JSHint
+> List of features for next release. Review all issues and features of binary charts java application and if they are good bring them in this new application
+> Video detailing each and every features of the new charting software
+> Use modernizr to check if jquery version 2.xxx is supported by the user browser or not. Also check if worker thread is supported or not. If not, then remove loading image and show not supported.....test user browser if they are supporting EventSource/SSE
+
+> On load of first page, make the user wait until the market data is loaded. If market data load fails, then give user proper message and stop doing anything further

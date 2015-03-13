@@ -1,4 +1,0 @@
-> When this button is clicked, it should trigger the same popup menu as Instruments, but with an indicator that it is opened for overlay
-    > Investigate if overlay could be done with candle stick, if not implement one of the following ideas
-        > Either keep the main chart in candlestick and others as line
-        > Or change all of them to line

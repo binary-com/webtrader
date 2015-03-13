@@ -1,14 +1,14 @@
-> After sometime, the entire chart vanishes
-
-> After sometime, the chart does not update. This is a problem with our Live Charts. Not sure if this project has same issue
+> Overlay instruments
 
 > Latest price horizontal line and its label should be on top of any other information on chart
 
-> Logarithmic scale
+> Logarithmic scale (review it again. Not matching with java charts)
 
 > Binary logo in the background (better would be to show the transparent logo for the entire body)
     > Make sure that it is not interfering with main highstock charts
 
 > Option to share chart with social media
 
+> A button to control whether to shift the chart with new data point or not
 
+> Review scatter plot again. It is throwing error for tooltip
