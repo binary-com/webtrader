@@ -1,0 +1,207 @@
+/**
+ * Created by arnab on 2/11/15.
+ */
+
+define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highstock-indicators", "highcharts/exporting", "sand-signika-theme"],
+  function ( $, requireJSESHInstance ) {
+
+    "use strict";
+
+    $(function () {
+
+        Highcharts.setOptions({
+            global: {
+                useUTC: true
+            }
+        });
+
+    });
+
+    return {
+
+        /**
+         * This method is the core and the starting point of highstock charts drawing
+         * @param containerIDWithHash
+         * @param instrumentCode
+         * @param instrumentName
+         * @param timeperiod
+         * @param type
+         */
+        drawChart: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare) {
+
+            if ($(containerIDWithHash).highcharts()) {
+                //Just making sure that everything has been cleared out before starting a new thread
+                this.destroy(containerIDWithHash);
+                $(containerIDWithHash).highcharts().destroy();
+            }
+
+            //Save some data in DOM
+            $(containerIDWithHash).data({
+                instrumentCode : instrumentCode,
+                instrumentName : instrumentName,
+                timeperiod : timeperiod,
+                type : type
+            });
+
+            // Create the chart
+            $(containerIDWithHash).highcharts('StockChart', {
+
+                chart: {
+                    events: {
+                        load: function () {
+                            this.showLoading();
+                            requireJSESHInstance.eventSourceHandler( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
+                        }
+                    }
+                },
+
+                //This will be updated when 'Settings' button is implemented
+                plotOptions: {
+                    candlestick: {
+                        lineColor: 'black',
+                        color: 'red',
+                        upColor: 'green',
+                        upLineColor: 'black',
+                        shadow: true
+                    }
+                },
+
+                title: {
+                    text: instrumentName + " (" + timeperiod + ")"//name to display
+                },
+
+                credits: {
+                    href: 'http://www.binary.com',
+                    text: 'Binary.com'
+                },
+
+                xAxis: {
+                    events: {
+                        afterSetExtremes: function () {
+                            /*console.log('This method is called every time the zoom control is changed. TODO.' +
+                             'In future, I want to get more data from server if users is dragging the zoom control more.' +
+                             'This will help to load data on chart forever! We can warn users if they are trying to load' +
+                             'too much data!');*/
+                        }
+                    }
+                },
+
+                yAxis: [{
+                    opposite: false,
+                    labels: {
+                        formatter: function () {
+                            if ($(containerIDWithHash).data("overlayIndicator"))
+                            {
+                                return (this.value > 0 ? ' + ' : '') + this.value + '%';
+                            }
+                            else
+                            {
+                                return this.value;
+                            }
+                        }
+                    }
+                }],
+
+                rangeSelector: {
+                    enabled: false
+                },
+
+                tooltip: {
+                    crosshairs: [{
+                        width: 2,
+                        color: 'red',
+                        dashStyle: 'dash'
+                    }, {
+                        width: 2,
+                        color: 'red',
+                        dashStyle: 'dash'
+                    }],
+                    enabled: true,
+                    enabledIndicators: true
+                }
+
+            });
+
+
+        },
+
+        destroy : function( containerIDWithHash ) {
+            requireJSESHInstance.close( containerIDWithHash );
+        },
+
+        triggerReflow : function( containerIDWithHash ) {
+            if ($(containerIDWithHash).highcharts())
+            {
+                $(containerIDWithHash).highcharts().reflow();
+            }
+        },
+
+        refresh : function ( containerIDWithHash ) {
+            //Get all series details from this chart
+            var chart = $(containerIDWithHash).highcharts();
+            var marketData_displayValue = [], series_compare = undefined;
+            $(chart.series).each(function (index, series) {
+                marketData_displayValue.push(series.name);
+                series_compare = series.options.compare;
+            });
+            console.log('22' + series_compare);
+
+            this.drawChart( containerIDWithHash, $(containerIDWithHash).data("instrumentCode"),
+                $(containerIDWithHash).data("instrumentName"),
+                $(containerIDWithHash).data("timeperiod"),
+                $(containerIDWithHash).data("type"),
+                series_compare
+            );
+
+            //Trigger overlay
+            var chartObj = this;
+            require(['instruments/instruments'], function (ins) {
+                $(marketData_displayValue).each(function (index, value) {
+                    $(document).oneTime(1000, null, function () {
+                        var marketDataObj = ins.getSpecificMarketData(value);
+                        if (marketDataObj.symbol != undefined
+                            && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
+                        {
+                            chartObj.overlay( containerIDWithHash, marketDataObj.symbol, value);
+                        }
+                    });
+                });
+            });
+        },
+
+        addIndicator : function ( containerIDWithHash, options ) {
+            if($(containerIDWithHash).highcharts())
+            {
+                var chart = $(containerIDWithHash).highcharts();
+                var series = chart.series[0];
+                if (series) {
+                    chart.addIndicator($.extend({
+                                id: series.options.id
+                            }, options));
+                }
+            }
+        },
+
+        overlay : function( containerIDWithHash, overlayInsCode, overlayInsName ) {
+            if($(containerIDWithHash).highcharts()) {
+                var chart = $(containerIDWithHash).highcharts();
+                //var mainSeries_instCode     = $(containerIDWithHash).data("instrumentCode");
+                //var mainSeries_instName     = $(containerIDWithHash).data("instrumentName");
+                var mainSeries_timeperiod   = $(containerIDWithHash).data("timeperiod");
+                var mainSeries_type         = $(containerIDWithHash).data("type");
+                chart.showLoading();
+                for (var index = 0; index < chart.series.length; index++) {
+                    //console.log('Instrument name : ' + chart.series[index].name);
+                    chart.series[index].update({
+                        compare : 'percent'
+                    });
+                }
+
+                requireJSESHInstance.eventSourceHandler( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
+
+            }
+        }
+
+    }
+
+});
