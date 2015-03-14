@@ -41,11 +41,22 @@ define(["charts/chartWindow", "common/util"], function() {
                             return;
                         }
 
-                        $("#" + newTabId + "_chart").data('type', $(this).attr("class").split(" ")[0].replace(".", "").trim());
+                        var type = $(this).attr("class").split(" ")[0].replace(".", "").trim();
+                        $("#" + newTabId + "_chart").data('type', type);
                         require(["charts/charts"], function( charts ) {
                             charts.refresh( '#' + newTabId + '_chart' );
                         });
                         $(this).closest("ul").closest("ul").hide();
+
+                        //Toggle overlay menu
+                        if (isDataTypeClosePriceOnly(type))
+                        {
+                            $html.find('li.overlay').removeClass('ui-state-disabled');
+                        }
+                        else
+                        {
+                            $html.find('li.overlay').addClass('ui-state-disabled');
+                        }
                     });
 
                 $html

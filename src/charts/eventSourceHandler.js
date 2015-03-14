@@ -5,7 +5,7 @@
 define(["common/util", "jquery-timer"], function() {
 
 
-    //Key is the chartID and value is the instance of EventSourceHandler
+    //Key is the chartID and value is the instance of eventSourceHandler
     var eventSourceMap = {};
 
     function processOHLC(eachData, type, dataInHighChartsFormat)
@@ -35,22 +35,26 @@ define(["common/util", "jquery-timer"], function() {
     }
 
 
-    function renderChartFirstTime( chart, dataInHighChartsFormat, type, instrumentName, id, series_compare )
+    function renderChartFirstTime( chart, dataInHighChartsFormat, type, instrumentName, id, series_compare, instrumentCode )
     {
 
         if( !chart ) return;
 
-        chart.hideLoading();
         //set the range
         var totalLength = dataInHighChartsFormat.length;
         var endIndex = dataInHighChartsFormat.length > 30 ? totalLength - 30 : 0;
 
         //if chart.series.length == 0 -> means this the first series getting added to the chart
-        //if ( !series_compare )
+        //If series_compare == percent, that means, this series is a overlay series
+        if ( series_compare != 'percent' )
         {
             chart.xAxis[0].range = dataInHighChartsFormat[totalLength - 1][0] - dataInHighChartsFormat[endIndex][0]; //show 30 bars
         }
+        else {
+            dataInHighChartsFormat = chart.series[0].options.data;
+        }
 
+        console.log('Rendering for : ' + instrumentCode + " " + id);
         chart.addSeries({
             id: id,
             name: instrumentName,
@@ -59,8 +63,10 @@ define(["common/util", "jquery-timer"], function() {
             dataGrouping: {
                 enabled: false
             },
-            compare: series_compare
+            compare: series_compare,
+            instrumentCode : instrumentCode //Binary.com variable
         });
+        chart.hideLoading();
 
     }
 
@@ -79,12 +85,7 @@ define(["common/util", "jquery-timer"], function() {
                     //console.log('I am updating just one data point!');
                     if (!$.isNumeric(price)) return;
                     //Only update when its not in loading mode
-                    if (mainChartSeries.chart.series.length <= 2) { //TODO
-                        if ($.isNumeric(price))
-                        {
-                            last.update([last.x, price]);
-                        }
-                    }
+                    last.update([last.x, price]);
                 }
                 else
                 {
@@ -93,7 +94,7 @@ define(["common/util", "jquery-timer"], function() {
                     var close = last.close;
                     var high = last.high;
                     //console.log(timeInMillis + " " + endTimeInMillis + " " + open + " " + high + " " + low + " " + close);
-                    if (!$.isNumeric(open) || !$.isNumeric(high) || !$.isNumeric(low) || !$.isNumeric(close)) return;
+                    if (!$.isNumeric(open) || !$.isNumeric(high) || !$.isNumeric(low) || !$.isNumeric(close) || !$.isNumeric(price)) return;
                     if (open && high && low && close)
                     {
                         if (price < low) {
@@ -102,10 +103,7 @@ define(["common/util", "jquery-timer"], function() {
                             high = price;
                         }
                         close = price;
-                        if ($.isNumeric(open) && $.isNumeric(high) && $.isNumeric(low) && $.isNumeric(close))
-                        {
-                            last.update([last.x, open, high, low, close]);
-                        }
+                        last.update([last.x, open, high, low, close]);
                     }
                 }
             }
@@ -176,6 +174,7 @@ define(["common/util", "jquery-timer"], function() {
      */
     function init( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, firstTimeLoad, series_compare, id)
     {
+
         var eventSource = new EventSource(buildFeedURL(timeperiod, "https://stream.binary.com/stream/ticks/" + instrumentCode + "/"));
         if ($.isEmptyObject(eventSourceMap['' + containerIDWithHash])) {
             eventSourceMap['' + containerIDWithHash] = [];
@@ -267,7 +266,7 @@ define(["common/util", "jquery-timer"], function() {
             if (firstTimeLoad && dataInHighChartsFormat.length > 0)
             {
                 firstTimeLoad = false;
-                renderChartFirstTime( $(containerIDWithHash).highcharts(), dataInHighChartsFormat, type, instrumentName, eventSource.id, series_compare );
+                renderChartFirstTime( $(containerIDWithHash).highcharts(), dataInHighChartsFormat, type, instrumentName, eventSource.id, series_compare, instrumentCode );
             }
 
         }, false);
@@ -294,7 +293,7 @@ define(["common/util", "jquery-timer"], function() {
 
     return {
 
-        EventSourceHandler : function( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare )
+        eventSourceHandler : function( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare )
         {
             init( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, true, series_compare );
         },
