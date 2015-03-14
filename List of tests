@@ -3,29 +3,48 @@
 #### Eventually we want to have automated phantomJS or selenium test cases written for all these scenarios
 
 1. When the page is loaded, it should show the loading image
+
 2. When the loading image is gone, it should show the left hamburger icon for menu
+
 3. The above menu should show these options
     a. Instruments
     b. Save workspace
     c. Windows
     d. About
+
 4. When the application is loaded, it will show a growl message saying instruments menu is getting loaded. In this interim
 phase, it will disable the instruments. When the data is available, this menu will be enabled
+
 5. Windows > Tile - Should tile all windows. The dimension is 350x400
+
 6. Windows > Close ALl - Will close all windows
+
 7. About > Shows binary copyright and link to the main website
+
 8. When the page is loaded first time, the number of charts loaded depends on the size of the window
+
 9. When you select an instrument from the Instruments menu, it will show Instruments dialog
+
 10. This dialog allows to select any timeperiod for the instrument. If the timeperiod selected is less than the delay amount of the
 instrument, it will show error message
+
 11. When we are not in overlay mode, we can see any type of charts like Candlestick, line, ohlc, spline, area, areaspline, column
+
 12. We can view log scale charts
+
 13. Crosshair menu allows to toggle crosshair on chart.
+
 14. Refresh will reload the chart
+
 15. Overlay - When this menu option is clicked, a pop up dialog is show where user can filter with instrument name or scroll to select the instrument they want to overlay with
+
 16. Overlay and Chartype change conditions - When more than one series are displayed on chart, candlestick and ohlc options are not available
+
 17. When we change chart type in overlay condition, all series must be reloaded automatically
+
 18. Tick with overlay should be left for more than 24 hours to see if the charts are getting stopped out
+
 19. 1 Minute chart with overlay should be left for more than 24 hours to see if the charts are getting stopped out
+
 20. SHould not able to open more than 4 charts in mobile and 10 charts on desktop
 
