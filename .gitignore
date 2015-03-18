@@ -1,0 +1,4 @@
+.grunt
+.idea
+dist
+node_modules

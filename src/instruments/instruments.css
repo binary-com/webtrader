@@ -9,7 +9,7 @@
 
 .instruments_table div div {
     display: table-cell;
-    padding: 5px 5px 5px 5px;
+    padding: 3px 3px 3px 3px;
 }
 
 .underline {
@@ -17,5 +17,5 @@
 }
 
 .instruments_fixed_width {
-    width: 55px;
+    width: 65px;
 }

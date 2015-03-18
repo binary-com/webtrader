@@ -1,0 +1,15 @@
+language: node_js
+notifications:
+  email:
+  - arnab@binary.com
+branches:
+  only:
+  - master
+before_script:
+- sudo npm install grunt-cli
+script:
+- npm install
+- grunt
+env:
+  global:
+    secure: Wa2Y1ucPj4CH8tj1CvO2GkM//j3s12zZVe+E6+HZkerxdcy9UmHlkmMAcoN69EA6GRLHZ8Db0BJj0KnES5XhZnxMHwHv/p/fevWmEleXQpDsXFKWGPD5FzemMfASQa6cHPJ5L9gjYHiTCSVjmc2v2SN3y9soh187asmCgqui2po=

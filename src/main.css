@@ -1,3 +1,7 @@
+body {
+    font-size: 12px;
+}
+
 .topContainer {
     position: absolute;
     z-index: 1003;

@@ -45,13 +45,10 @@ define(["common/util", "jquery-timer"], function() {
         var endIndex = dataInHighChartsFormat.length > 30 ? totalLength - 30 : 0;
 
         //if chart.series.length == 0 -> means this the first series getting added to the chart
-        //If series_compare == percent, that means, this series is a overlay series
+        //If series_compare == percent, that means, this series is an overlay series
         if ( series_compare != 'percent' )
         {
             chart.xAxis[0].range = dataInHighChartsFormat[totalLength - 1][0] - dataInHighChartsFormat[endIndex][0]; //show 30 bars
-        }
-        else {
-            dataInHighChartsFormat = chart.series[0].options.data;
         }
 
         console.log('Rendering for : ' + instrumentCode + " " + id);
@@ -63,14 +60,13 @@ define(["common/util", "jquery-timer"], function() {
             dataGrouping: {
                 enabled: false
             },
-            compare: series_compare,
-            instrumentCode : instrumentCode //Binary.com variable
+            compare: series_compare
         });
         chart.hideLoading();
 
     }
 
-    function nonTickChartUpdate( endTimeInMillis, mainChartSeries, startTimeInMillis, timeInMillis, price, timeperiod, type )
+    function nonTickChartUpdate( endTimeInMillis, series, startTimeInMillis, timeInMillis, price, timeperiod, type )
     {
 
         //console.log(startTimeInMillis + " " + timeInMillis + " " + endTimeInMillis);
@@ -79,13 +75,14 @@ define(["common/util", "jquery-timer"], function() {
             if (timeInMillis >= startTimeInMillis)
             {
                 //console.log('Updating data point');
-                var last = mainChartSeries.data[mainChartSeries.data.length - 1];
+                var last = series.data[series.data.length - 1];
                 if ( type && isDataTypeClosePriceOnly(type) )
                 {
-                    //console.log('I am updating just one data point!');
+                    //console.log('I am updating just one data point! (before) ' + series.name + " " + series.data.length);
                     if (!$.isNumeric(price)) return;
                     //Only update when its not in loading mode
                     last.update([last.x, price]);
+                    //console.log('I am updating just one data point! (after) ' + series.name + " " + series.data.length);
                 }
                 else
                 {
@@ -111,7 +108,7 @@ define(["common/util", "jquery-timer"], function() {
         else
         {
             //We remove the first data point before adding a new one
-            addANewDataPoint( endTimeInMillis, price, mainChartSeries, timeperiod, type );
+            addANewDataPoint( endTimeInMillis, price, series, timeperiod, type );
         }
 
     }
@@ -120,9 +117,9 @@ define(["common/util", "jquery-timer"], function() {
     {
         if (!$.isNumeric(endTimeInMillis) || !$.isNumeric(price)) return;
 
-        if (series.data && series.data.length > 0)
+        if (series.options.data && series.options.data.length > 0)
         {
-            series.removePoint(0);
+            //series.removePoint(0); See how much does it impact performance if we do not remove points from memory
         }
         if (isTick( timeperiod ) || (type && isDataTypeClosePriceOnly(type)))
         {
@@ -132,7 +129,7 @@ define(["common/util", "jquery-timer"], function() {
         {
             series.addPoint([endTimeInMillis, price, price, price, price]);
         }
-        console.log("Total bars in memory : " + series.data.length);
+        console.log("Total bars in memory : " + series.options.data.length);
     }
 
     function buildFeedURL(timeperiod, sourceURL) {
@@ -163,14 +160,14 @@ define(["common/util", "jquery-timer"], function() {
     }
 
     /**
-     *
      * @param timeperiod
      * @param instrumentCode
      * @param containerIDWithHash
      * @param type
      * @param instrumentName
      * @param firstTimeLoad
-     * @param series_compare - Whether to show percent or actual value
+     * @param series_compare
+     * @param id
      */
     function init( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, firstTimeLoad, series_compare, id)
     {
@@ -221,7 +218,7 @@ define(["common/util", "jquery-timer"], function() {
                 }
 
                 //Updating or adding more data in running chart
-                else if ( eachData == 'tick' && chart)
+                else if ( eachData == 'tick')
                 {
 
                     var series = chart.get(eventSource.id);
@@ -231,7 +228,7 @@ define(["common/util", "jquery-timer"], function() {
                         var price = parseFloat(data[++index]);
                         addANewDataPoint( timeInMillis, price, series, timeperiod, type );
                     }
-                    else if (series && series.data && series.data.length > 0)
+                    else if (series && series.options.data && series.options.data.length > 0)
                     {
 
                         var timeInMillis = parseInt(data[++index]) * 1000;
@@ -266,7 +263,7 @@ define(["common/util", "jquery-timer"], function() {
             if (firstTimeLoad && dataInHighChartsFormat.length > 0)
             {
                 firstTimeLoad = false;
-                renderChartFirstTime( $(containerIDWithHash).highcharts(), dataInHighChartsFormat, type, instrumentName, eventSource.id, series_compare, instrumentCode );
+                renderChartFirstTime( chart, dataInHighChartsFormat, type, instrumentName, eventSource.id, series_compare, instrumentCode );
             }
 
         }, false);

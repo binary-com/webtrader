@@ -135,6 +135,7 @@ define(["jquery", "jquery-ui", "main"], function($) {
                             $( "#instrumentsDialog" ).dialog({
                                 autoOpen: false,
                                 resizable: false,
+                                width: 320,
                                 buttons: [
                                     {
                                         text: "Ok",

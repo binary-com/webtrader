@@ -2,7 +2,7 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highstock-indicators", "highcharts/exporting", "sand-signika-theme"],
+define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highcharts/exporting", "sand-signika-theme"],
   function ( $, requireJSESHInstance ) {
 
     "use strict";
@@ -144,7 +144,6 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                 marketData_displayValue.push(series.name);
                 series_compare = series.options.compare;
             });
-            console.log('22' + series_compare);
 
             this.drawChart( containerIDWithHash, $(containerIDWithHash).data("instrumentCode"),
                 $(containerIDWithHash).data("instrumentName"),
@@ -182,19 +181,38 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
             }
         },
 
+        /**
+         * Function to overlay instrument on base chart
+         * @param containerIDWithHash
+         * @param overlayInsCode
+         * @param overlayInsName
+         */
         overlay : function( containerIDWithHash, overlayInsCode, overlayInsName ) {
             if($(containerIDWithHash).highcharts()) {
                 var chart = $(containerIDWithHash).highcharts();
                 //var mainSeries_instCode     = $(containerIDWithHash).data("instrumentCode");
                 //var mainSeries_instName     = $(containerIDWithHash).data("instrumentName");
+                /*
+                    We have to first set the data to NULL and then recaculate the data and set it back
+                    This is needed, else highstocks throws error
+                 */
                 var mainSeries_timeperiod   = $(containerIDWithHash).data("timeperiod");
                 var mainSeries_type         = $(containerIDWithHash).data("type");
                 chart.showLoading();
                 for (var index = 0; index < chart.series.length; index++) {
                     //console.log('Instrument name : ' + chart.series[index].name);
-                    chart.series[index].update({
-                        compare : 'percent'
+                    var series = chart.series[index];
+                    var data = series.options.data;
+                    series.setData([]);
+                    for (var i = 0 ; i < data.length; i++) {
+                        if (data[i].x && data[i].y) {
+                            data[i] = [data[i].x, data[i].y];
+                        }
+                    }
+                    series.update({
+                        compare: 'percent'
                     });
+                    series.setData(data);
                 }
 
                 requireJSESHInstance.eventSourceHandler( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );

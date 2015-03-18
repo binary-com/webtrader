@@ -5,15 +5,15 @@
 requirejs.config({
     baseUrl: ".",
     paths: {
-        'jquery': "jquery/jquery",
+        'jquery': "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min",
         'highstock': "highcharts/highstock.src",
-        'jquery-ui': "jquery/jquery-ui/jquery-ui.min",
+        'jquery-ui': "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min",
         'jquery-growl': "jquery/jquery-growl/jquery.growl",
         'sand-signika-theme': 'highcharts/themes/sand-signika',
         'jquery-timer': "jquery/timer/jquery.timers.min",
         'datatables': "jquery/jquery-ui/datatables/dataTables.jqueryui",
-        'highstock-indicators': "highcharts/indicators/indicators",
-        'color-picker': "jquery/jquery-ui/colorpicker/jquery.colorpicker"
+        'color-picker': "jquery/jquery-ui/colorpicker/jquery.colorpicker",
+        modernizr: 'modernizr/modernizr.custom.53883'
     },
     "shim": {
         "jquery-ui": {
@@ -36,14 +36,11 @@ requirejs.config({
         },
         "datatables": {
             deps: ["jquery-ui"]
-        },
-        "highstock-indicators": {
-            deps: ["highstock"]
         }
     }
 });
 
-require(["jquery", "jquery-ui", "common/loadCSS", "modernizr/modernizr.custom.53883"], function( $ ) {
+require(["jquery", "jquery-ui", "common/loadCSS", "modernizr"], function( $ ) {
 
     "use strict";
 
@@ -54,9 +51,7 @@ require(["jquery", "jquery-ui", "common/loadCSS", "modernizr/modernizr.custom.53
     }
 
     //Load Jquery UI CSS
-    loadCSS("jquery/jquery-ui/jquery-ui.min.css");
-    loadCSS("jquery/jquery-ui/jquery-ui.theme.min.css");
-    loadCSS("jquery/jquery-ui/jquery-ui.structure.min.css");
+    loadCSS("//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css");
 
     //Load our main CSS
     loadCSS("main.css");
