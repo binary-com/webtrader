@@ -3,7 +3,7 @@ node_js:
   - "0.12"
 notifications:
   email:
-  - arnab@binary.com
+  	- arnab@binary.com
 branches:
   only:
   - master
