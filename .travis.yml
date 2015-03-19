@@ -8,7 +8,7 @@ branches:
   only:
   - master
 script:
-- sudo npm install -g grunt-cli
+- npm install -g grunt-cli
 - grunt
 - sh travis_script.sh
 env:
