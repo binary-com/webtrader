@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "0.12"
+- '0.12'
 notifications:
   email:
   - arnab@binary.com
@@ -8,9 +8,9 @@ branches:
   only:
   - master
 script:
-- npm install grunt-cli
+- sudo npm install -g grunt-cli
 - grunt
 - sh travis_script.sh
 env:
   global:
-    secure: Wa2Y1ucPj4CH8tj1CvO2GkM//j3s12zZVe+E6+HZkerxdcy9UmHlkmMAcoN69EA6GRLHZ8Db0BJj0KnES5XhZnxMHwHv/p/fevWmEleXQpDsXFKWGPD5FzemMfASQa6cHPJ5L9gjYHiTCSVjmc2v2SN3y9soh187asmCgqui2po=
+    secure: UJurrAi/wjp1pycEDH0r6QuqsCO6nWuN7JQzzzY4n0fDnoLjcycCDlDe+VrgsKRU0ApKh4pBrL3D1ruSbmdH0N9gtWtKiZiSbVYIvRPVEnOgQLvyR7LlK0yoYagACkbZsbgcWM4Rgq3vb3vG3YPXx1/ID/AdjYr+hEsa6NvbEhg=
