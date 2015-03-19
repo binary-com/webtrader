@@ -19,5 +19,6 @@
     "grunt-gh-pages": "^0.10.0",
     "grunt-rename": "^0.1.4",
     "grunt-text-replace": "^0.4.0"
-  }
+  },
+  license: "Binary.com"
 }

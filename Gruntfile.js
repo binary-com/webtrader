@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function ( grunt ) {
+module.exports = function (grunt) {
 	
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-clean');
