@@ -1,4 +1,4 @@
-#highcharts 
+#highcharts [![Build Status](https://magnum.travis-ci.com/regentmarkets/highcharts.svg?token=G5WVALzDGxSszAeYnDnJ&branch=master)](https://magnum.travis-ci.com/regentmarkets/highcharts) <a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px"></a>
 This repository contains HTML, Javascript, CSS, and images content of the [Higcharts implementation for binary.com charts](http://regentmarkets.github.io/highcharts) website.
 
 ##How to work with this project
@@ -71,10 +71,3 @@ In order to contribute, please fork and submit pull request by following all the
     
 #####Other details
 When commit is done with [release] tag in the master branch, it will trigger deployment into highcharts gh-pages automatically and will update the release files and changes could be seen live @ [Higcharts implementation for binary.com charts](http://regentmarkets.github.io/highcharts)
-    
-
-##External tools
-
-<a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px"></a>
-
-**Continuous integration** with Travis-CI: [![Build Status](https://magnum.travis-ci.com/regentmarkets/highcharts.svg?token=G5WVALzDGxSszAeYnDnJ&branch=master)](https://magnum.travis-ci.com/regentmarkets/highcharts)
