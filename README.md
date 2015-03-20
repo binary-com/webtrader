@@ -36,14 +36,6 @@ Include at the beginning of each .js file:
         
         "use strict";
 
-It is important that each statement is put in a closure like this (so the strict mode does not extend when bundling to files that are not intended):
-
-        (function(){
-            "use strict";
-
-            // All other code here
-        })();
-
 #####More details on strict mode:
 
 [ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
