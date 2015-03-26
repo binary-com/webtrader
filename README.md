@@ -21,7 +21,7 @@ In order to get SLOC(Source line of Code) report, run
 
         $ grunt sloc
 
-In order to bump version, run
+To bump release version, run
 
         $ grunt bump:major
 
