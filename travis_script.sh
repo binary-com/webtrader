@@ -2,5 +2,7 @@
 
 release="$(git log -1 --pretty=%B | awk '/[release]]/ { print $1 } ')"
 if [ -n $release ]; then 
-	grunt gh-pages
+    git config --global user.email "arnab@binary.com"
+    git config --global user.name "Arnab Karmakar"
+  	grunt gh-pages
 fi
