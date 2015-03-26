@@ -119,7 +119,7 @@ define(["common/util", "jquery-timer"], function() {
 
         if (series.options.data && series.options.data.length > 0)
         {
-            //series.removePoint(0); See how much does it impact performance if we do not remove points from memory
+            //series.removePoint(0); See how much does it impact performance if we do not remove points from memory TODO
         }
         if (isTick( timeperiod ) || (type && isDataTypeClosePriceOnly(type)))
         {

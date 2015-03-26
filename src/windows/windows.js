@@ -5,6 +5,7 @@
 define(['jquery'], function ($) {
 
     var closeAllObject = null, tileObject = null,
+        //We cannot open more than 6 charts in modern browsers - Restriction of 6 connections
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
             {
                 symbol : 'R_25',

@@ -7,14 +7,25 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-rename');
 	grunt.loadNpmTasks('grunt-text-replace');
-
 	grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    /*
+     "loc": 72,    //physical lines
+     "sloc": 45,   //lines of source code
+     "cloc": 10,   //total comment
+     "scloc": 10,  //singleline
+     "mcloc": 0,   //multiline
+     "nloc": 17,   //multiline
+     "file": 22,   //empty
+     */
+    grunt.loadNpmTasks('grunt-sloc');
+    grunt.loadNpmTasks('grunt-bump');
+
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -30,19 +41,24 @@ module.exports = function (grunt) {
 		copy: {
 			main: {
 				files: [
-					{expand: true, cwd: 'src/', src: ['**'], dest: 'dist/v<%=pkg.version%>'}
+					{expand: true, cwd: 'src/', src: ['**'], dest: 'dist/uncompressed/v<%=pkg.version%>'}
 				]
-			}
+			},
+            resourcesToCompressed: {
+                files: [
+                    {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html'], dest: 'dist/compressed'}
+                ]
+            }
 		},
 		rename: {
 			moveThis: {
-				src: 'dist/v<%=pkg.version%>/index.html',
-				dest: 'dist/index.html'
+				src: 'dist/uncompressed/v<%=pkg.version%>/index.html',
+				dest: 'dist/uncompressed/index.html'
 			}
 		},
 		replace: {
-			example: {
-				src: ['dist/index.html'],
+			version: {
+				src: ['dist/uncompressed/index.html'],
 				overwrite: true,
 				replacements: [{
 					from: 'v1.0.0', //TODO, not working
@@ -50,10 +66,38 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
+        cssmin: {
+            minify: {
+                expand: true,
+                cwd: 'dist/uncompressed',
+                src: ['**/*.css'],
+                dest: 'dist/compressed'
+            }
+        },
+        htmlmin: {
+            options: {
+                removeComments: true,
+                collapseWhitespace: true
+            },
+            minify: {
+                expand: true,
+                cwd: 'dist/uncompressed',
+                src: ['**/*.html'],
+                dest: 'dist/compressed'
+            }
+        },
+        uglify: {
+            minify: {
+                expand: true,
+                cwd: 'dist/uncompressed',
+                src: ['**/*.js'],
+                dest: 'dist/compressed'
+            }
+        },
 		'gh-pages': {
 			'gh-pages': {
 				options: {
-					base: 'dist/',
+					base: 'dist/compressed',
 					add: true,
 					repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
 					message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
@@ -70,9 +114,37 @@ module.exports = function (grunt) {
 					keepalive: true
 				}
 			}
-		}
+		},
+        sloc: {
+            analyze: {
+                files: {
+                    //Check the negate option. Its not working
+                    //Currently open ticket https://github.com/rhiokim/grunt-sloc/issues/14
+                    //TODO
+                    src: ['**/*.js', '**/*.css', '**/*.html', '!**/libs/**']
+                }
+            }
+        },
+        bump: {
+            options: {
+                files: ['package.json'],
+                updateConfigs: [],
+                commit: false,
+                /*commitMessage: 'Release v%VERSION%',
+                commitFiles: ['package.json'],*/
+                createTag: false,
+                /*tagName: 'v%VERSION%',
+                tagMessage: 'Version %VERSION%',*/
+                push: false,
+                /*pushTo: 'upstream',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+                globalReplace: false,
+                prereleaseName: false,*/
+                regExp: false
+            }
+        }
 	});
 
-	grunt.registerTask('default', ['jshint', 'clean:0', 'copy', 'clean:1', 'rename', 'replace']);
+	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed']);
 
 };

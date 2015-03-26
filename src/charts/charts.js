@@ -2,7 +2,7 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highcharts/exporting", "sand-signika-theme"],
+define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highcharts-exporting", "highcharts-theme"],
   function ( $, requireJSESHInstance ) {
 
     "use strict";

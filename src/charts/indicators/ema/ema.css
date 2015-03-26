@@ -1,0 +1,15 @@
+.ema_input_width {
+    width: 90px;
+}
+
+.ema_input_width_for_period {
+    width: 85px;
+}
+
+.ema label {
+    display: block;
+}
+
+.ema td {
+    white-space: nowrap;
+}

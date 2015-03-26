@@ -6,14 +6,15 @@ requirejs.config({
     baseUrl: ".",
     paths: {
         'jquery': "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min",
-        'highstock': "highcharts/highstock.src",
+        'highstock': "//code.highcharts.com/stock/highstock",
+        'highcharts-exporting': '//code.highcharts.com/stock/modules/exporting',
         'jquery-ui': "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min",
-        'jquery-growl': "jquery/jquery-growl/jquery.growl",
-        'sand-signika-theme': 'highcharts/themes/sand-signika',
-        'jquery-timer': "jquery/timer/jquery.timers.min",
-        'datatables': "jquery/jquery-ui/datatables/dataTables.jqueryui",
-        'color-picker': "jquery/jquery-ui/colorpicker/jquery.colorpicker",
-        modernizr: 'modernizr/modernizr.custom.53883'
+        'jquery-growl': "lib/jquery/jquery-growl/jquery.growl",
+        'highcharts-theme': 'lib/highcharts/themes/sand-signika',
+        'jquery-timer': "lib/jquery/timer/jquery.timers.min",
+        'datatables': "//cdn.datatables.net/1.10.5/js/jquery.dataTables.min",
+        'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
+        'modernizr': 'lib/modernizr/modernizr.custom.53883'
     },
     "shim": {
         "jquery-ui": {
@@ -22,10 +23,10 @@ requirejs.config({
         "highstock": {
             deps: ["jquery"]
         },
-        "highcharts/exporting": {
+        "highcharts-exporting": {
             deps: ["highstock"]
         },
-        "sand-signika-theme": {
+        "highcharts-theme": {
             deps: ["highstock"]
         },
         "jquery-growl": {
@@ -58,6 +59,14 @@ require(["jquery", "jquery-ui", "common/loadCSS", "modernizr"], function( $ ) {
 
     //All dependencies loaded
     $(document).ready(function () {
+
+        //https://github.com/highslide-software/highcharts.com/issues/4022
+        require(['highstock'], function () {
+            Highcharts.wrap(Highcharts.Series.prototype, 'render', function (proceed) {
+                proceed.call(this);
+                this.clipBox = null;
+            });
+        });
 
         $(".mainContainer").load("mainContent.html", function() {
 
@@ -106,7 +115,7 @@ require(["jquery", "jquery-ui", "common/loadCSS", "modernizr"], function( $ ) {
         });
 
         //Now load all other CSS asynchronously
-        loadCSS('jquery/jquery-growl/jquery.growl.css');
+        loadCSS('lib/jquery/jquery-growl/jquery.growl.css');
         loadCSS('charts/charts.css');
 
     });

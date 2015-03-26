@@ -1,5 +1,68 @@
+/*<!--<tr class="indicator_avgprice">-->
+  <!--<td>Average Price(AVGPRICE)</td>-->
+  <!--</tr>-->
+  <!--<tr class="indicator_adx">-->
+  <!--<td>Average Directional Movement Index(ADX)</td>-->
+  <!--</tr>-->
+  <!--<tr class="indicator_apo">-->
+  <!--<td>Absolute Price Oscillator(APO)</td>-->
+  <!--</tr>-->
+  <!--<tr class="indicator_bbands">-->
+  <!--<td>Bollinger Bands(BBANDS)</td>-->
+  <!--</tr>-->
+  <!--<tr class="indicator_cci">-->
+  <!--<td>Commodity Channel Index(CCI)</td>-->
+  <!--</tr>-->*/
+
+  /*  <!--<tr class="indicator_macd">-->
+      <!--<td>Moving Average Convergence/Divergence(MACD)</td>-->
+      <!--</tr>-->
+      <!--<tr class="indicator_mfi">-->
+      <!--<td>Money Flow Index(MFI)</td>-->
+      <!--</tr>-->
+      <!--<tr class="indicator_sar">-->
+      <!--<td>Parabolic SAR(SAR)</td>-->
+      <!--</tr>-->
+      <!--<tr class="indicator_roc">-->
+      <!--<td>Rate of change(ROC)</td>-->
+      <!--</tr>-->*/
+
+      /*  <!--<tr class="indicator_stddev">-->
+          <!--<td>Standard Deviation(STDDEV)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_stoch">-->
+          <!--<td>Stochastic(STOCH)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_sum">-->
+          <!--<td>Summation(SUM)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_trange">-->
+          <!--<td>True Range(TRANGE)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_trima">-->
+          <!--<td>Triangular Moving Average(TRIMA)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_typprice">-->
+          <!--<td>Typical Price(TYPPRICE)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_ultosc">-->
+          <!--<td>Ultimate Oscillator(ULTOSC)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_var">-->
+          <!--<td>Variance(VAR)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_wclprice">-->
+          <!--<td>Weighted Close Price(WCLPRICE)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_willr">-->
+          <!--<td>Williams' %R(WILLR)</td>-->
+          <!--</tr>-->
+          <!--<tr class="indicator_wma">-->
+          <!--<td>Weighted Moving Average(WMA)</td>-->
+          <!--</tr>-->*/
+
 Current price indicator
-D                  Chaikin A/D Line
+D                   Chaikin A/D Line
 ADOSC               Chaikin A/D Oscillator
 ADXR                Average Directional Movement Index Rating
 AROON               Aroon
@@ -122,14 +185,4 @@ TYPPRICE            Typical Price
 > Option to modify or delete indicator
 
 > When chart is refreshed or chart type is changed, it should retain the indicators added on chart
-
-> Fix the issues related to blacklevel provided indicator code for RSI, ATR, SMA, EMA
-> Work on infrastructure code for SMA, EMA, RSI
-    > charts.js
-    > eventSourceHandler.js
-    > main.js
-    > atr.js
-    > atr.html
-    > atr.css
-> Code current price indicator
 

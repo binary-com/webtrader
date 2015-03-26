@@ -89,17 +89,30 @@ define(["charts/chartWindow", "common/util"], function() {
                                     charts.refresh( '#' + newTabId + '_chart' );
                                 });
                             }
-                            else if ($(this).hasClass('indicators')) {
-                                require(["charts/indicators/indicators"], function( indicators ) {
-                                    indicators.openDialog( '#' + newTabId + '_chart' );
-                                });
-                            }
                             else if ($(this).hasClass('overlay')) {
                                 require(["overlay/overlay"], function( overlay ) {
                                     overlay.openDialog( '#' + newTabId + '_chart' );
                                 });
                             }
                         });
+                    });
+
+                $html
+                    .find('.indicators li').click(function () {
+
+                        //If disabled, ignore this click
+                        if ($(this).hasClass('addInidicators'))
+                        {
+                            require(["charts/indicators/indicators_add"], function( indicators ) {
+                                indicators.openDialog( '#' + newTabId + '_chart' );
+                            });
+                        }
+                        else if ($(this).hasClass('removeIndicators'))
+                        {
+                            require(["charts/indicators/indicators_remove"], function( indicators ) {
+                                indicators.openDialog( '#' + newTabId + '_chart' );
+                            });
+                        }
                     });
 
                 $("#" + newTabId + "_header").prepend($html);

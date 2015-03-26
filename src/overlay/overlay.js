@@ -91,9 +91,9 @@ define(["jquery", "datatables", "common/loadCSS"], function ($) {
             }
             else {
 
-                loadCSS("jquery/jquery-ui/datatables/dataTables.jqueryui.css");
-                loadCSS("jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
-                loadCSS("charts/indicators/indicators.css");
+                loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
+                loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
+                loadCSS("overlay/overlay.css");
 
                 $.get("overlay/overlay.html", function($html) {
                     $html = $($html);

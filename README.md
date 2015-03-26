@@ -15,6 +15,22 @@ In order to get started on this project, follow these steps. The steps are meant
 At this point, your project is properly setup. You can now run following command to start a local server
         
         $ grunt connect
+
+In order to get SLOC(Source line of Code) report, run
+
+        $ grunt sloc
+
+In order to bump version, run
+
+        $ grunt bump:major
+
+        or
+
+        $ grunt bump:minor
+
+        or
+
+        $ grunt bump:patch
     
 You can now access the charting page by opening http://localhost:10001/main.html in browser
 

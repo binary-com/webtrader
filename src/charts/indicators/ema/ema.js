@@ -11,9 +11,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/atr/atr.css');
+        loadCSS('charts/indicators/ema/ema.css');
 
-        $.get("charts/indicators/atr/atr.html" , function ( $html ) {
+        $.get("charts/indicators/ema/ema.html" , function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -45,7 +45,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 270,
+                width: 320,
                 buttons: [
                     {
                         text: "Ok",
@@ -53,28 +53,29 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                             //console.log('Ok button is clicked!');
                             require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".atr_input_width_for_period").val(),
-                                                parseInt($html.find(".atr_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".atr_input_width_for_period").attr("max"))))
+                                if (!validation.validateNumericBetween($html.find(".ema_input_width_for_period").val(),
+                                                parseInt($html.find(".ema_input_width_for_period").attr("min")),
+                                                parseInt($html.find(".ema_input_width_for_period").attr("max"))))
                                 {
                                     require(["jquery", "jquery-growl"], function($) {
                                         $("#timePeriod").addClass('ui-state-error');
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".atr_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".atr_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".atr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".ema_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".ema_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".ema_input_width_for_period").closest('tr').find('td:first').text() + "!" });
                                     });
                                     return;
                                 }
 
-                                require(['charts/indicators/atr/highcharts_atr'], function ( ) {
+                                require(['charts/indicators/ema/highcharts_ema'], function ( ) {
                                     var options = {
-                                        period : parseInt($html.find(".atr_input_width_for_period").val()),
+                                        period : parseInt($html.find(".ema_input_width_for_period").val()),
                                         stroke : defaultStrokeColor,
                                         strokeWidth : parseInt($html.find("#strokeWidth").val()),
-                                        dashStyle : $html.find("#dashStyle").val()
+                                        dashStyle : $html.find("#dashStyle").val(),
+                                        appliedTo: parseInt($html.find("#appliedTo").val())
                                     }
-                                    //Add ATR for the main series
-                                    $($(".atr").data('refererChartID')).highcharts().series[0].addATR(options);
+                                    //Add EMA for the main series
+                                    $($(".ema").data('refererChartID')).highcharts().series[0].addEMA(options);
                                 });
 
                                 closeDialog.call($html);
@@ -104,13 +105,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
 
         open : function ( containerIDWithHash ) {
 
-            if ($(".atr").length == 0)
+            if ($(".ema").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".ema").data('refererChartID', containerIDWithHash).dialog( "open" );
 
         }
 
