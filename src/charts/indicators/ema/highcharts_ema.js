@@ -106,7 +106,7 @@
                 color: emaOptions.stroke,
                 lineWidth: emaOptions.strokeWidth,
                 dashStyle: emaOptions.dashStyle
-            }, false);
+            }, false, false);
 
             //We are update everything in one shot
             chart.redraw();
@@ -137,9 +137,9 @@
     /*
      *  Wrap HC's Point.update
      */
-    H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw) {
+    H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
 
-        proceed.call(this, options, redraw);
+        proceed.call(this, options, redraw, animation);
 
         //if this is a point in EMA series, ignore
         if (this.series.options.name.indexOf('EMA') != -1) return;
@@ -171,7 +171,7 @@
 
             //Add a new EMA data point
             for (var key in this.emaSeries) {
-                if (this.emaSeries[key] && this.emaSeries[key].options.data && this.emaSeries[key].options.data.length > 0) {
+                if (this.emaSeries[key] && this.emaSeries[key].options && this.emaSeries[key].options.data && this.emaSeries[key].options.data.length > 0) {
                     //This is EMA series. Add one more EMA point
                     //Calculate EMA data
                     /*
@@ -184,7 +184,7 @@
                     var n = this.emaOptions[key].period;
                     for (var index = 1; index < data.length; index++) {
                         //Matching time
-                        if (data[index][0] === options[0] || matchFound) {
+                        if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
                             matchFound = true; //We have to recalculate all EMAs after a match has been found
                             var price = 0.0;
                             if (isOHLCorCandlestick(this.options.type))
@@ -210,7 +210,13 @@
                             }
                             else
                             {
-                                chart.get(this.emaSeries[key].options.id).addPoint([(data[index].x || data[index][0]), emaValue]);
+                                chart.get(this.emaSeries[key].options.id).addPoint([(data[index].x || data[index][0]), emaValue], false, false);
+                                //Most of the time, we add one data point after the main series has been added. This will not be a 
+                                //performance issue if that is the scenario. But if add many data points after ATR is added to the
+                                //main series, then we should rethink about this code
+                                this.emaSeries[key].isDirty = true;
+                                this.emaSeries[key].isDirtyData = true;
+                                chart.redraw();
                             }
                         }
                     }

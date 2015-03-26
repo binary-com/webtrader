@@ -124,7 +124,7 @@
                 color: atrOptions.stroke,
                 lineWidth: atrOptions.strokeWidth,
                 dashStyle: atrOptions.dashStyle
-            }, false);
+            }, false, false);
 
             //We are update everything in one shot
             chart.redraw();
@@ -161,9 +161,9 @@
     /*
      *  Wrap HC's Point.update
      */
-    H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw) {
+    H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
 
-        proceed.call(this, options, redraw);
+        proceed.call(this, options, redraw, animation);
 
         //if this is a point in ATR series, ignore
         if (this.series.options.name.indexOf('ATR') != -1) return;
@@ -231,7 +231,7 @@
 
             //Add a new ATR data point
             for (var key in this.atrSeries) {
-                if (this.atrSeries[key] && this.atrSeries[key].options.data && this.atrSeries[key].options.data.length > 0) {
+                if (this.atrSeries[key] && this.atrSeries[key].options && this.atrSeries[key].options.data && this.atrSeries[key].options.data.length > 0) {
                     //This is ATR series. Add one more ATR point
                     //Calculate ATR data
                     /*
@@ -254,7 +254,7 @@
                     var n = this.atrOptions[key].period;
                     for (var index = 1; index < data.length; index++) {
                         //Matching time
-                        if (data[index][0] === options[0] || matchFound) {
+                        if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
                             matchFound = true; //We have to recalculate all ATRs after a match has been found
                             var tr = 0.0;
                             if (isOHLCorCandlestick(series.options.type)) {
@@ -269,11 +269,17 @@
                             var atr = Math.round(( (atrData[index - 1].y || atrData[index - 1][1]) * (n - 1) + tr ) * 100 / n) / 100;
                             if (isPointUpdate)
                             {
-                                chart.get(this.atrSeries[key].options.id).data[index].update([(data[index].x || data[index][0]), atr], true, false);
+                                this.atrSeries[key].data[index].update([(data[index].x || data[index][0]), atr]);
                             }
                             else
                             {
-                                chart.get(this.atrSeries[key].options.id).addPoint([(data[index].x || data[index][0]), atr], true, false);
+                                this.atrSeries[key].addPoint([(data[index].x || data[index][0]), atr], false, false);
+                                //Most of the time, we add one data point after the main series has been added. This will not be a 
+                                //performance issue if that is the scenario. But if add many data points after ATR is added to the
+                                //main series, then we should rethink about this code
+                                this.atrSeries[key].isDirty = true;
+                                this.atrSeries[key].isDirtyData = true;
+                                chart.redraw();
                             }
                         }
                     }

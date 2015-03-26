@@ -118,7 +118,7 @@
                 color: smaOptions.stroke,
                 lineWidth: smaOptions.strokeWidth,
                 dashStyle: smaOptions.dashStyle
-            }, false);
+            }, false, false);
 
             //We are update everything in one shot
             chart.redraw();
@@ -149,9 +149,9 @@
     /*
      *  Wrap HC's Point.update
      */
-    H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw) {
+    H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
 
-        proceed.call(this, options, redraw);
+        proceed.call(this, options, redraw, animation);
 
         //if this is a point in SMA series, ignore
         if (this.series.options.name.indexOf('SMA') != -1) return;
@@ -183,7 +183,7 @@
 
             //Add a new SMA data point
             for (var key in this.smaSeries) {
-                if (this.smaSeries[key] && this.smaSeries[key].options.data && this.smaSeries[key].options.data.length > 0) {
+                if (this.smaSeries[key] && this.smaSeries[key].options && this.smaSeries[key].options.data && this.smaSeries[key].options.data.length > 0) {
                     //This is SMA series. Add one more SMA point
                     //Calculate SMA data
                     /*
@@ -201,7 +201,7 @@
                     var n = this.smaOptions[key].period;
                     for (var index = 1; index < data.length; index++) {
                         //Matching time
-                        if (data[index][0] === options[0] || matchFound) {
+                        if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
                             matchFound = true; //We have to recalculate all SMAs after a match has been found
                             var price = 0.0;
                             if (isOHLCorCandlestick(this.options.type))
@@ -226,7 +226,13 @@
                             }
                             else
                             {
-                                chart.get(this.smaSeries[key].options.id).addPoint([(data[index].x || data[index][0]), smaValue]);
+                                chart.get(this.smaSeries[key].options.id).addPoint([(data[index].x || data[index][0]), smaValue], false, false);
+                                //Most of the time, we add one data point after the main series has been added. This will not be a 
+                                //performance issue if that is the scenario. But if add many data points after ATR is added to the
+                                //main series, then we should rethink about this code
+                                this.smaSeries[key].isDirty = true;
+                                this.smaSeries[key].isDirtyData = true;
+                                chart.redraw();
                             }
                         }
                     }

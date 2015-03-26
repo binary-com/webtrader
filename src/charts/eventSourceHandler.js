@@ -52,7 +52,7 @@ define(["common/util", "jquery-timer"], function() {
         }
 
         console.log('Rendering for : ' + instrumentCode + " " + id);
-        chart.addSeries({
+        var series = chart.addSeries({
             id: id,
             name: instrumentName,
             data: dataInHighChartsFormat,
@@ -62,6 +62,9 @@ define(["common/util", "jquery-timer"], function() {
             },
             compare: series_compare
         });
+        series.isDirty = true;
+        series.isDirtyData = true;
+
         chart.hideLoading();
 
     }
@@ -92,7 +95,7 @@ define(["common/util", "jquery-timer"], function() {
                     var high = last.high;
                     //console.log(timeInMillis + " " + endTimeInMillis + " " + open + " " + high + " " + low + " " + close);
                     if (!$.isNumeric(open) || !$.isNumeric(high) || !$.isNumeric(low) || !$.isNumeric(close) || !$.isNumeric(price)) return;
-                    if (open && high && low && close)
+                    if (open && high && low && close && close != price)
                     {
                         if (price < low) {
                             low = price;
@@ -127,7 +130,11 @@ define(["common/util", "jquery-timer"], function() {
         }
         else
         {
-            series.addPoint([endTimeInMillis, price, price, price, price]);
+            series.addPoint([endTimeInMillis, price, price, price, price], false. false);
+            //We have to mark it dirty because for OHLC, Highcharts leave some weird marks on chart that do not belong to OHLC
+            series.isDirty = true;
+            series.isDirtyData = true;
+            series.chart.redraw();
         }
         console.log("Total bars in memory : " + series.options.data.length);
     }
