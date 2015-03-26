@@ -1,9 +1,10 @@
-#highcharts 
+#highcharts [![Build Status](https://magnum.travis-ci.com/regentmarkets/highcharts.svg?token=G5WVALzDGxSszAeYnDnJ&branch=master)](https://magnum.travis-ci.com/regentmarkets/highcharts) <a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px"></a>
 This repository contains HTML, Javascript, CSS, and images content of the [Higcharts implementation for binary.com charts](http://regentmarkets.github.io/highcharts) website.
 
-#How to work with this project
+##How to work with this project
 ####Learn how to setup the project:
 In order to get started on this project, follow these steps. The steps are meant for Linux OS users. However Windows and MacOS should be similar
+
         > Open command prompt
         $ sudo apt-get install git
         $ git clone https://github.com/regentmarkets/highcharts.git
@@ -51,14 +52,6 @@ Include at the beginning of each .js file:
         
         "use strict";
 
-It is important that each statement is put in a closure like this (so the strict mode does not extend when bundling to files that are not intended):
-
-        (function(){
-            "use strict";
-
-            // All other code here
-        })();
-
 #####More details on strict mode:
 
 [ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
@@ -86,10 +79,3 @@ In order to contribute, please fork and submit pull request by following all the
     
 #####Other details
 When commit is done with [release] tag in the master branch, it will trigger deployment into highcharts gh-pages automatically and will update the release files and changes could be seen live @ [Higcharts implementation for binary.com charts](http://regentmarkets.github.io/highcharts)
-    
-
-##External tools
-
-<a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px"></a>
-
-**Continuous integration** with Travis-CI: [![Build Status](https://magnum.travis-ci.com/regentmarkets/highcharts.svg?token=G5WVALzDGxSszAeYnDnJ&branch=master)](https://magnum.travis-ci.com/regentmarkets/highcharts)
