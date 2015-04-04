@@ -2,7 +2,7 @@
  * Created by arnab on 2/24/15.
  */
 
-define(["common/util", "jquery-timer"], function() {
+define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], function(currentPrice) {
 
 
     //Key is the chartID and value is the instance of eventSourceHandler
@@ -63,7 +63,15 @@ define(["common/util", "jquery-timer"], function() {
             compare: series_compare
         });
         series.isDirty = true;
+        //Its our variable
+        series.isInstrument = true;//Currently used to indicator that this series is holding the chart OHLC or close data
         series.isDirtyData = true;
+
+        //Add current price indicator
+        $(document).oneTime(1000, null, function () {
+            series.addCurrentPrice();
+            chart.redraw();
+        });
 
         chart.hideLoading();
 
@@ -299,6 +307,9 @@ define(["common/util", "jquery-timer"], function() {
 
         eventSourceHandler : function( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare )
         {
+            //Init the current price indicator
+            currentPrice.init();
+
             init( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, true, series_compare );
         },
 

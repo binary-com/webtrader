@@ -110,6 +110,7 @@ define(["jquery", "datatables", "common/loadCSS"], function ($) {
                     $(".overlay_dialog").dialog({
                         autoOpen: false,
                         resizable: false,
+                        modal: true,
                         buttons: []
                     });
 

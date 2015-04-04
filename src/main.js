@@ -11,10 +11,11 @@ requirejs.config({
         'jquery-ui': "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min",
         'jquery-growl': "lib/jquery/jquery-growl/jquery.growl",
         'highcharts-theme': 'lib/highcharts/themes/sand-signika',
-        'jquery-timer': "lib/jquery/timer/jquery.timers.min",
+        'jquery-timer': "lib/jquery/jquery.timers",
         'datatables': "//cdn.datatables.net/1.10.5/js/jquery.dataTables.min",
         'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
-        'modernizr': 'lib/modernizr/modernizr.custom.53883'
+        'eventsource': 'lib/eventsource',
+        'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice'
     },
     "shim": {
         "jquery-ui": {
@@ -37,19 +38,16 @@ requirejs.config({
         },
         "datatables": {
             deps: ["jquery-ui"]
+        },
+        "currentPriceIndicator": {
+            deps: ["highstock"]
         }
     }
 });
 
-require(["jquery", "jquery-ui", "common/loadCSS", "modernizr"], function( $ ) {
+require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
 
     "use strict";
-
-    if (!Modernizr.eventsource)
-    {
-        $(".mainContainer").load("unsupported_browsers.html");
-        return;
-    }
 
     //Load Jquery UI CSS
     loadCSS("//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css");
@@ -59,14 +57,6 @@ require(["jquery", "jquery-ui", "common/loadCSS", "modernizr"], function( $ ) {
 
     //All dependencies loaded
     $(document).ready(function () {
-
-        //https://github.com/highslide-software/highcharts.com/issues/4022
-        require(['highstock'], function () {
-            Highcharts.wrap(Highcharts.Series.prototype, 'render', function (proceed) {
-                proceed.call(this);
-                this.clipBox = null;
-            });
-        });
 
         $(".mainContainer").load("mainContent.html", function() {
 

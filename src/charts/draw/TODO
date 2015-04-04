@@ -1,10 +1,9 @@
 > Chart objects
-    > short line (Supporting both magnet and free hand)
-    > long line
+    > Up, down, left , right arrows
     > vertical
     > horizontal
-    > rectangle
-    > circle
+    > short line (Supporting both magnet and free hand)
+    > long line
     > triangle
     > Trend channel - A channel is drawn between two points
     > Andrew's Pitchfork
@@ -12,9 +11,6 @@
     > Fibonacci Arc
     > Fibonacci Retracement
     > Fibonacci Timezone
-    > Up, down, left , right arrows
-    > Label
 
 > https://github.com/blacklabel/annotations
 http://blacklabel.github.io/annotations/
-

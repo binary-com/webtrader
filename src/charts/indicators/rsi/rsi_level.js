@@ -1,9 +1,10 @@
 /**
- * Created by arnab on 3/1/15.
+ * Created by arnab on 3/29/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
+    var callBackAfterOKPressed = undefined;
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -11,9 +12,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/atr/atr.css');
+        var Level = function (level, stroke, strokeWidth, dashStyle) {
+            this.level = level;
+            this.stroke = stroke;
+            this.strokeWidth = strokeWidth;
+            this.dashStyle = dashStyle;
+        };
 
-        $.get("charts/indicators/atr/atr.html" , function ( $html ) {
+        $.get("charts/indicators/rsi/rsi_level.html" , function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -23,19 +29,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
             //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
-            $html.find("#atr_stroke").colorpicker({
+            $html.find("#rsi_level_stroke").colorpicker({
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:			function(event, color) {
-                    $("#atr_stroke").css({
+                    $("#rsi_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok:             			function(event, color) {
-                    $("#atr_stroke").css({
+                    $("#rsi_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
@@ -45,7 +51,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 270,
+                width: 350,
                 modal: true,
                 buttons: [
                     {
@@ -54,29 +60,23 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                             //console.log('Ok button is clicked!');
                             require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".atr_input_width_for_period").val(),
-                                                parseInt($html.find(".atr_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".atr_input_width_for_period").attr("max"))))
+                                if (!validation.validateNumericBetween($html.find(".rsi_level_input_width_for_level").val(),
+                                        parseInt($html.find(".rsi_level_input_width_for_level").attr("min")),
+                                        parseInt($html.find(".rsi_level_input_width_for_level").attr("max"))))
                                 {
                                     require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".atr_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".atr_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".atr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".rsi_level_input_width_for_level").attr("min")
+                                        + " to " + $html.find(".rsi_level_input_width_for_level").attr("max")
+                                        + " is allowed for " + $html.find(".rsi_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
                                     });
                                     return;
                                 }
 
-                                require(['charts/indicators/highcharts_custom/atr'], function ( atr ) {
-                                    atr.init();
-                                    var options = {
-                                        period : parseInt($html.find(".atr_input_width_for_period").val()),
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#atr_strokeWidth").val()),
-                                        dashStyle : $html.find("#atr_dashStyle").val()
-                                    }
-                                    //Add ATR for the main series
-                                    $($(".atr").data('refererChartID')).highcharts().series[0].addATR(options);
-                                });
+                                if (callBackAfterOKPressed) {
+                                    callBackAfterOKPressed([new Level(parseInt($html.find(".rsi_level_input_width_for_level").val()),
+                                        defaultStrokeColor, parseInt($html.find("#rsi_level_strokeWidth").val()),
+                                        $html.find("#rsi_level_dashStyle").val())]);
+                                }
 
                                 closeDialog.call($html);
 
@@ -92,9 +92,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                 ]
             });
 
-            if (typeof _callback == "function")
+            if ($.isFunction(_callback))
             {
-                _callback( containerIDWithHash );
+                _callback( containerIDWithHash, callBackAfterOKPressed );
             }
 
         });
@@ -103,15 +103,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
+        open : function ( containerIDWithHash, _callback ) {
 
-            if ($(".atr").length == 0)
+            callBackAfterOKPressed = _callback;
+            if ($(".rsi_level").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".rsi_level").dialog( "open" );
 
         }
 

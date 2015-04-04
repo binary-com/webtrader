@@ -94,6 +94,38 @@ define(["charts/chartWindow", "common/util"], function() {
                                     overlay.openDialog( '#' + newTabId + '_chart' );
                                 });
                             }
+                            else if ($(this).hasClass('currentPriceLI')) {
+                                require(["currentPriceIndicator"], function() {
+                                    var chartIDWithHash = '#' + newTabId + '_chart';
+                                    var chart = $(chartIDWithHash).highcharts();
+                                    //Find currentPriceOptions prop for each series on chart. This prop will contain list of unique IDs that
+                                    //should be removed
+                                    var removed = false;
+                                    $.each(chart.series, function(index, series) {
+                                        $.each(series, function (key, value) {
+                                            if (key == 'currentPriceOptions') {
+                                                $.each(value, function (uniqueID, uniqueIDVal) {
+                                                    if ( uniqueID && uniqueIDVal ) {
+                                                        series.removeCurrentPrice(uniqueID);
+                                                        removed = true;
+                                                    }
+                                                });
+                                                return false;
+                                            }
+                                        });
+                                    });
+                                    if (!removed) {
+                                        //Means this is not a remove case, we have to add the indicator
+                                        $.each(chart.series, function(index, series) {
+                                            if (series && series.isInstrument)
+                                            {
+                                                series.addCurrentPrice();
+                                            }
+                                        });
+                                    }
+                                });
+                                $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
+                            }
                         });
                     });
 

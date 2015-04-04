@@ -1,67 +1,24 @@
-/*<!--<tr class="indicator_avgprice">-->
-  <!--<td>Average Price(AVGPRICE)</td>-->
-  <!--</tr>-->
-  <!--<tr class="indicator_adx">-->
-  <!--<td>Average Directional Movement Index(ADX)</td>-->
-  <!--</tr>-->
-  <!--<tr class="indicator_apo">-->
-  <!--<td>Absolute Price Oscillator(APO)</td>-->
-  <!--</tr>-->
-  <!--<tr class="indicator_bbands">-->
-  <!--<td>Bollinger Bands(BBANDS)</td>-->
-  <!--</tr>-->
-  <!--<tr class="indicator_cci">-->
-  <!--<td>Commodity Channel Index(CCI)</td>-->
-  <!--</tr>-->*/
+> Average Price(AVGPRICE)
+> Average Directional Movement Index(ADX)
+> Absolute Price Oscillator(APO)
+> Bollinger Bands(BBANDS)
+> Commodity Channel Index(CCI)
+> Moving Average Convergence/Divergence(MACD)
+> Money Flow Index(MFI)
+> Parabolic SAR(SAR)
+> Rate of change(ROC)
+Standard Deviation(STDDEV)
+Stochastic(STOCH)
+Summation(SUM)
+True Range(TRANGE)
+Triangular Moving Average(TRIMA)
+Typical Price(TYPPRICE)
+Ultimate Oscillator(ULTOSC)
+Variance(VAR)
+Weighted Close Price(WCLPRICE)
+Williams' %R(WILLR)
+Weighted Moving Average(WMA)
 
-  /*  <!--<tr class="indicator_macd">-->
-      <!--<td>Moving Average Convergence/Divergence(MACD)</td>-->
-      <!--</tr>-->
-      <!--<tr class="indicator_mfi">-->
-      <!--<td>Money Flow Index(MFI)</td>-->
-      <!--</tr>-->
-      <!--<tr class="indicator_sar">-->
-      <!--<td>Parabolic SAR(SAR)</td>-->
-      <!--</tr>-->
-      <!--<tr class="indicator_roc">-->
-      <!--<td>Rate of change(ROC)</td>-->
-      <!--</tr>-->*/
-
-      /*  <!--<tr class="indicator_stddev">-->
-          <!--<td>Standard Deviation(STDDEV)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_stoch">-->
-          <!--<td>Stochastic(STOCH)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_sum">-->
-          <!--<td>Summation(SUM)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_trange">-->
-          <!--<td>True Range(TRANGE)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_trima">-->
-          <!--<td>Triangular Moving Average(TRIMA)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_typprice">-->
-          <!--<td>Typical Price(TYPPRICE)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_ultosc">-->
-          <!--<td>Ultimate Oscillator(ULTOSC)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_var">-->
-          <!--<td>Variance(VAR)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_wclprice">-->
-          <!--<td>Weighted Close Price(WCLPRICE)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_willr">-->
-          <!--<td>Williams' %R(WILLR)</td>-->
-          <!--</tr>-->
-          <!--<tr class="indicator_wma">-->
-          <!--<td>Weighted Moving Average(WMA)</td>-->
-          <!--</tr>-->*/
-
-Current price indicator
 D                   Chaikin A/D Line
 ADOSC               Chaikin A/D Oscillator
 ADXR                Average Directional Movement Index Rating
@@ -182,7 +139,9 @@ TYPPRICE            Typical Price
 > The dash style drop down should show proper image style indicating how the dash style would look like
 (check any indicator folder for more details)
 
-> Option to modify or delete indicator
+> Option to modify indicator(another menu under Indicators)
 
 > When chart is refreshed or chart type is changed, it should retain the indicators added on chart
 
+> In overlay chart mode, the tooltil should show price(percent% change) just like highcharts examples
+http://www.highcharts.com/stock/demo/compare

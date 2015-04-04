@@ -22,11 +22,27 @@ define(["jquery", "datatables", "common/loadCSS", 'charts/charts'], function ($)
             $html.appendTo("body");
             $( ".indicator_remove_dialog" ).dialog({
                 autoOpen: false,
+                modal: true,
                 resizable: false,
                 buttons: [{
                     text: "Remove Selected",
                     click: function() {
-                        console.log($(table).find('tr.selected').length);
+                        table
+                            .rows( '.selected' )
+                            .nodes()
+                            .to$().each(function () {
+                                var seriesID = $(this).data('seriesID');
+                                var parentSeriesID = $(this).data('parentSeriesID');
+                                var indicatorID = $(this).data('id');
+                                var chart = $(containerIDWithHash).highcharts();
+                                $.each(chart.series, function (index, series) {
+                                    if (series.options.id == parentSeriesID) {
+                                        var functionName = series['remove' + $.trim(indicatorID).toUpperCase()];
+                                        functionName.call(series, seriesID);
+                                        return false;
+                                    }
+                                });
+                            });
                         $( ".indicator_remove_dialog" ).dialog('close');
                     }
                 },{
@@ -71,10 +87,18 @@ define(["jquery", "datatables", "common/loadCSS", 'charts/charts'], function ($)
                     if (key.indexOf(indicatorDataValue.id + 'Options') != -1) {
                         //Now loop through all instances of this indicator. It could be used multiple times with different parameters
                         $.each(value, function (optionKey, optionValue) {
+
+                            if (!optionValue) return true;
+
                             $(table.row.add([indicatorDataValue.long_display_name + '(' + optionValue.period + ')']).draw().node())
                                 .click(function () {
                                     $(this).toggleClass('selected');
-                                }).data('seriesID', key);
+                                }).data({
+                                    'id': indicatorDataValue.id,
+                                    'seriesID': optionKey,
+                                    'parentSeriesID': optionValue.parentSeriesID
+                                });
+
                         });
                         return false;
                     }

@@ -202,17 +202,27 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                 for (var index = 0; index < chart.series.length; index++) {
                     //console.log('Instrument name : ' + chart.series[index].name);
                     var series = chart.series[index];
-                    var data = series.options.data;
-                    series.setData([]);
-                    for (var i = 0 ; i < data.length; i++) {
-                        if (data[i].x && data[i].y) {
-                            data[i] = [data[i].x, data[i].y];
+                    if (series.isInstrument || series.options.name.toUpperCase().indexOf('SMA') != -1
+                                            || series.options.name.toUpperCase().indexOf('EMA') != -1) {
+                        if (series.isInstrument) {
+                            var data = series.options.data;
+                            series.setData([]);
+                            for (var i = 0; i < data.length; i++) {
+                                if (data[i].x && data[i].y) {
+                                    data[i] = [data[i].x, data[i].y];
+                                }
+                            }
+                            series.update({
+                                compare: 'percent'
+                            });
+                            series.setData(data);
+                        }
+                        else {
+                            series.update({
+                                compare: 'percent'
+                            });
                         }
                     }
-                    series.update({
-                        compare: 'percent'
-                    });
-                    series.setData(data);
                 }
 
                 requireJSESHInstance.eventSourceHandler( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );

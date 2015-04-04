@@ -21,6 +21,7 @@ define(["jquery", "datatables", "common/loadCSS"], function ($) {
             $( ".indicator_add_dialog" ).dialog({
                 autoOpen: false,
                 resizable: false,
+                modal: true,
                 buttons: []
             });
 

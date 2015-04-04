@@ -23,19 +23,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
             //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
-            $html.find("#stroke").colorpicker({
+            $html.find("#ema_stroke").colorpicker({
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:			function(event, color) {
-                    $("#stroke").css({
+                    $("#ema_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok:             			function(event, color) {
-                    $("#stroke").css({
+                    $("#ema_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
@@ -45,7 +45,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 320,
+                width: 315,
+                modal: true,
                 buttons: [
                     {
                         text: "Ok",
@@ -58,7 +59,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                                                 parseInt($html.find(".ema_input_width_for_period").attr("max"))))
                                 {
                                     require(["jquery", "jquery-growl"], function($) {
-                                        $("#timePeriod").addClass('ui-state-error');
                                         $.growl.error({ message: "Only numbers between " + $html.find(".ema_input_width_for_period").attr("min")
                                                 + " to " + $html.find(".ema_input_width_for_period").attr("max")
                                                 + " is allowed for " + $html.find(".ema_input_width_for_period").closest('tr').find('td:first').text() + "!" });
@@ -66,13 +66,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                                     return;
                                 }
 
-                                require(['charts/indicators/ema/highcharts_ema'], function ( ) {
+                                require(['charts/indicators/highcharts_custom/ema'], function ( ema ) {
+                                    ema.init();
                                     var options = {
                                         period : parseInt($html.find(".ema_input_width_for_period").val()),
                                         stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#strokeWidth").val()),
-                                        dashStyle : $html.find("#dashStyle").val(),
-                                        appliedTo: parseInt($html.find("#appliedTo").val())
+                                        strokeWidth : parseInt($html.find("#ema_strokeWidth").val()),
+                                        dashStyle : $html.find("#ema_dashStyle").val(),
+                                        appliedTo: parseInt($html.find("#ema_appliedTo").val())
                                     }
                                     //Add EMA for the main series
                                     $($(".ema").data('refererChartID')).highcharts().series[0].addEMA(options);
