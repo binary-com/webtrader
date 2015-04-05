@@ -3,6 +3,8 @@
  */
 define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
 
+    var emaOptionsMap = {}, emaSeriesMap = {};
+    
     return {
         init: function () {
 
@@ -76,12 +78,10 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                         var chart = this.chart;
 
-                        this.emaOptions = this.emaOptions || {};
-                        this.emaOptions[uniqueID] = emaOptions;
+                        emaOptionsMap[uniqueID] = emaOptions;
 
                         var series = this;
-                        this.emaSeries = this.emaSeries || {};
-                        this.emaSeries[uniqueID] = chart.addSeries({
+                        emaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
                             name: 'EMA(' + emaOptions.period + ', ' + indicatorBase.appliedPriceString(emaOptions.period) + ')',
                             data: emaData,
@@ -95,6 +95,16 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             compare: series.options.compare
                         }, false, false);
 
+                        //This is a on chart indicator
+                        $(emaSeriesMap[uniqueID]).data({
+                            onChartIndicator: true,
+                            indicatorID: 'ema',
+                            isIndicator: true,
+                            parentSeriesID: emaOptions.parentSeriesID,
+                            period: emaOptions.period
+                        });
+                        //console.log('EMA series data length : ', emaSeriesMap[uniqueID].options.data.length, ', Instrument series data length : ', this.options.data.length);
+
                         //We are update everything in one shot
                         chart.redraw();
 
@@ -106,9 +116,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                 H.Series.prototype.removeEMA = function (uniqueID) {
                     var chart = this.chart;
-                    this.emaOptions[uniqueID] = null;
+                    emaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
-                    this.emaSeries[uniqueID] = null;
+                    emaSeriesMap[uniqueID] = null;
                 }
 
                 /*
@@ -117,7 +127,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Series.prototype, 'addPoint', function (proceed, options, redraw, shift, animation) {
 
                     proceed.call(this, options, redraw, shift, animation);
-                    updateEMASeries.call(this, options);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(emaOptionsMap, this.options.id)) {
+                        updateEMASeries.call(this, options);
+                    }
 
                 });
 
@@ -127,14 +139,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Point.prototype, 'update', function (proceed, options, redraw, animation) {
 
                     proceed.call(this, options, redraw, animation);
-
-                    //if this is a point in EMA series, ignore
-                    if (this.series.options.name.indexOf('EMA') != -1) return;
-
-                    var series = this.series;
-
-                    //Update EMA values
-                    updateEMASeries.call(series, options, true);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(emaOptionsMap, this.series.options.id)) {
+                        updateEMASeries.call(this.series, options, true);
+                    }
 
                 });
 
@@ -143,53 +150,48 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                  * @param options - The data update values
                  */
                 function updateEMASeries(options, isPointUpdate) {
-                    //if this is EMA series, ignore
-                    if (this.options.name.indexOf('EMA') == -1) {
+                    var series = this;
+                    var chart = series.chart;
 
-                        var series = this;
-                        var chart = series.chart;
+                    //Add a new EMA data point
+                    for (var key in emaSeriesMap) {
+                        if (emaSeriesMap[key] && emaSeriesMap[key].options && emaSeriesMap[key].options.data && emaSeriesMap[key].options.data.length > 0) {
+                            //This is EMA series. Add one more EMA point
+                            //Calculate EMA data
+                            /*
+                             * ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var emaData = emaSeriesMap[key].options.data;
+                            var matchFound = false;
+                            var n = emaOptionsMap[key].period;
+                            for (var index = 1; index < data.length; index++) {
+                                //Matching time
+                                if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
+                                    matchFound = true; //We have to recalculate all EMAs after a match has been found
+                                    var price = 0.0;
+                                    if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
+                                        price = indicatorBase.extractPriceForAppliedTO(emaOptionsMap[key].appliedTo, data, index);
+                                    }
+                                    else {
+                                        price = data[index].y ? data[index].y : data[index][1];
+                                    }
 
-                        //Add a new EMA data point
-                        for (var key in this.emaSeries) {
-                            if (this.emaSeries[key] && this.emaSeries[key].options && this.emaSeries[key].options.data && this.emaSeries[key].options.data.length > 0) {
-                                //This is EMA series. Add one more EMA point
-                                //Calculate EMA data
-                                /*
-                                 * ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-                                 */
-                                //Find the data point
-                                var data = series.options.data;
-                                var emaData = this.emaSeries[key].options.data;
-                                var matchFound = false;
-                                var n = this.emaOptions[key].period;
-                                for (var index = 1; index < data.length; index++) {
-                                    //Matching time
-                                    if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
-                                        matchFound = true; //We have to recalculate all EMAs after a match has been found
-                                        var price = 0.0;
-                                        if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                                            price = indicatorBase.extractPriceForAppliedTO(this.emaOptions[key].appliedTo, data, index);
+                                    //Calculate EMA - start
+                                    var emaValue = indicatorBase.toFixed((price * 2 / (n + 1)) + ((emaData[index - 1][1] || emaData[index - 1].y) * (1 - 2 / (n + 1))), 4);
+                                    //console.log(emaValue, price, n, emaData[index - 1]);
+                                     //emaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(emaValue , 4)]);
+                                    if (isPointUpdate) {
+                                        if (emaSeriesMap[key].options.data.length < data.length) {
+                                            emaSeriesMap[key].addPoint([(data[index].x || data[index][0]), emaValue]);
+                                        } else
+                                        {
+                                            emaSeriesMap[key].data[index].update([(data[index].x || data[index][0]), emaValue]);
                                         }
-                                        else {
-                                            price = data[index].y ? data[index].y : data[index][1];
-                                        }
-
-                                        //Calculate EMA - start
-                                        var emaValue = indicatorBase.toFixed((price * 2 / (n + 1)) + ((emaData[index - 1][1] || emaData[index - 1].y) * (1 - 2 / (n + 1))), 4);
-                                        //console.log(emaValue, price, n, emaData[index - 1]);
-                                         //emaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(emaValue , 4)]);
-                                        if (isPointUpdate) {
-                                            chart.get(this.emaSeries[key].options.id).data[index].update([(data[index].x || data[index][0]), emaValue]);
-                                        }
-                                        else {
-                                            chart.get(this.emaSeries[key].options.id).addPoint([(data[index].x || data[index][0]), emaValue], false, false);
-                                            //Most of the time, we add one data point after the main series has been added. This will not be a
-                                            //performance issue if that is the scenario. But if add many data points after ATR is added to the
-                                            //main series, then we should rethink about this code
-                                            this.emaSeries[key].isDirty = true;
-                                            this.emaSeries[key].isDirtyData = true;
-                                            chart.redraw();
-                                        }
+                                    }
+                                    else {
+                                        emaSeriesMap[key].addPoint([(data[index].x || data[index][0]), emaValue]);
                                     }
                                 }
                             }

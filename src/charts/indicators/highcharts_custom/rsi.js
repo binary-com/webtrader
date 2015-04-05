@@ -3,6 +3,8 @@
  */
 define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
 
+    var rsiOptionsMap = {}, rsiSeriesMap = {};
+    
     return {
         init: function() {
 
@@ -78,8 +80,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                         var chart = this.chart;
 
-                        this.rsiOptions = this.rsiOptions || {};
-                        this.rsiOptions[uniqueID] = rsiOptions;
+                        rsiOptionsMap[uniqueID] = rsiOptions;
 
                         chart.addAxis({ // Secondary yAxis
                             id: 'rsi'+ uniqueID,
@@ -100,8 +101,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                         indicatorBase.recalculate(chart);
 
                         var series = this;
-                        this.rsiSeries = this.rsiSeries || {};
-                        this.rsiSeries[uniqueID] = chart.addSeries({
+                        rsiSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
                             name: 'RSI(' + rsiOptions.period  + ')',
                             data: rsiData,
@@ -114,6 +114,13 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             dashStyle: rsiOptions.dashStyle
                         }, false, false);
 
+                        $(rsiSeriesMap[uniqueID]).data({
+                            isIndicator: true,
+                            indicatorID: 'rsi',
+                            parentSeriesID: rsiOptions.parentSeriesID,
+                            period: rsiOptions.period
+                        });
+
                         //We are update everything in one shot
                         chart.redraw();
 
@@ -125,10 +132,10 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                 H.Series.prototype.removeRSI = function (uniqueID) {
                     var chart = this.chart;
-                    this.rsiOptions[uniqueID] = null;
+                    rsiOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
                     chart.get('rsi' + uniqueID).remove(false);
-                    this.rsiSeries[uniqueID] = null;
+                    rsiSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
@@ -140,7 +147,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
 
                     proceed.call(this, options, redraw, shift, animation);
-                    updateRSISeries.call(this, options);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(rsiOptionsMap, this.options.id)) {
+                        updateRSISeries.call(this, options);
+                    }
 
                 });
 
@@ -150,14 +159,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
 
                     proceed.call(this, options, redraw, animation);
-
-                    //if this is a point in RSI series, ignore
-                    if (this.series.options.name.indexOf('RSI') != -1) return;
-
-                    var series = this.series;
-
-                    //Update RSI values
-                    updateRSISeries.call(series, options, true);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(rsiOptionsMap, this.series.options.id)) {
+                        updateRSISeries.call(this.series, options, true);
+                    }
 
                 });
 
@@ -167,69 +171,63 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
                 function updateRSISeries(options, isPointUpdate) {
-                    //if this is RSI series, ignore
-                    if (this.options.name.indexOf('RSI') == -1) {
+                    var series = this;
+                    var chart = series.chart;
 
-                        var series = this;
-                        var chart = series.chart;
+                    //Add a new RSI data point
+                    for (var key in rsiSeriesMap) {
+                        if (rsiSeriesMap[key] && rsiSeriesMap[key].options && rsiSeriesMap[key].options.data && rsiSeriesMap[key].options.data.length > 0) {
+                            //This is RSI series. Add one more RSI point
+                            //Calculate RSI data
+                            /*
+                             * Formula(OHLC or Candlestick) -
+                             * 	rs(t) = avg-gain(n) / avg-loss(n)
+                             *  rsi(t) = if avg-loss(n) == 0 ? 100 : 100 - (100/ (1+rs(t))
+                             * 		t - current
+                             * 		n - period
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var matchFound = false;
+                            var n = rsiOptionsMap[key].period;
+                            for (var index = 1; index < data.length; index++) {
+                                //Matching time
+                                if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
+                                    matchFound = true; //We have to recalculate all RSIs after a match has been found
+                                    //Calculate RSI - start
+                                    var rsiValue = 0.0;
+                                    if (index >= n)
+                                    {
 
-                        //Add a new RSI data point
-                        for (var key in this.rsiSeries) {
-                            if (this.rsiSeries[key] && this.rsiSeries[key].options && this.rsiSeries[key].options.data && this.rsiSeries[key].options.data.length > 0) {
-                                //This is RSI series. Add one more RSI point
-                                //Calculate RSI data
-                                /*
-                                 * Formula(OHLC or Candlestick) -
-                                 * 	rs(t) = avg-gain(n) / avg-loss(n)
-                                 *  rsi(t) = if avg-loss(n) == 0 ? 100 : 100 - (100/ (1+rs(t))
-                                 * 		t - current
-                                 * 		n - period
-                                 */
-                                //Find the data point
-                                var data = series.options.data;
-                                var matchFound = false;
-                                var n = this.rsiOptions[key].period;
-                                for (var index = 1; index < data.length; index++) {
-                                    //Matching time
-                                    if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
-                                        matchFound = true; //We have to recalculate all RSIs after a match has been found
-                                        //Calculate RSI - start
-                                        var rsiValue = 0.0;
-                                        if (index >= n)
-                                        {
-
-                                            var avgGain = 0, avgLoss = 0;
-                                            //Calculate RS - start
-                                            for (var i = index, count = 1; i > 0 && count <= 14; i--, count++) {
-                                                var price1 = indicatorBase.extractPrice(data, i-1);
-                                                var price2 = indicatorBase.extractPrice(data, i);
-                                                if (price2 > price1) avgGain += price2 - price1;
-                                                if (price2 < price1) avgLoss += price1 - price2;
-                                            }
-                                            avgGain /= n;
-                                            avgLoss /= n;
-                                            var rs = avgGain / avgLoss;
-                                            //Calculate RS - end
-
-                                            rsiValue = (avgLoss == 0 ? 100 : (100 - (100 / (1+rs))));
+                                        var avgGain = 0, avgLoss = 0;
+                                        //Calculate RS - start
+                                        for (var i = index, count = 1; i > 0 && count <= 14; i--, count++) {
+                                            var price1 = indicatorBase.extractPrice(data, i-1);
+                                            var price2 = indicatorBase.extractPrice(data, i);
+                                            if (price2 > price1) avgGain += price2 - price1;
+                                            if (price2 < price1) avgLoss += price1 - price2;
                                         }
-                                        //Calculate RSI - end
-                                        if (isNaN(rsiValue) || !isFinite(rsiValue) || rsiValue <= 0.0) continue;
+                                        avgGain /= n;
+                                        avgLoss /= n;
+                                        var rs = avgGain / avgLoss;
+                                        //Calculate RS - end
 
-                                        if (isPointUpdate)
-                                        {
-                                            this.rsiSeries[key].data[index].update([(data[index].x || data[index][0]), indicatorBase.toFixed(rsiValue , 2)]);
+                                        rsiValue = (avgLoss == 0 ? 100 : (100 - (100 / (1+rs))));
+                                    }
+                                    //Calculate RSI - end
+                                    if (isNaN(rsiValue) || !isFinite(rsiValue) || rsiValue <= 0.0) continue;
+
+                                    if (isPointUpdate)
+                                    {
+                                        if (rsiSeriesMap[key].options.data.length < data.length) {
+                                            rsiSeriesMap[key].addPoint([(data[index].x || data[index][0]), indicatorBase.toFixed(rsiValue , 2)]);
+                                        } else {
+                                            rsiSeriesMap[key].data[index].update([(data[index].x || data[index][0]), indicatorBase.toFixed(rsiValue, 2)]);
                                         }
-                                        else
-                                        {
-                                            this.rsiSeries[key].addPoint([(data[index].x || data[index][0]), indicatorBase.toFixed(rsiValue , 2)], false, false);
-                                            //Most of the time, we add one data point after the main series has been added. This will not be a
-                                            //performance issue if that is the scenario. But if add many data points after RSI is added to the
-                                            //main series, then we should rethink about this code
-                                            this.rsiSeries[key].isDirty = true;
-                                            this.rsiSeries[key].isDirtyData = true;
-                                            chart.redraw();
-                                        }
+                                    }
+                                    else
+                                    {
+                                        rsiSeriesMap[key].addPoint([(data[index].x || data[index][0]), indicatorBase.toFixed(rsiValue , 2)]);
                                     }
                                 }
                             }

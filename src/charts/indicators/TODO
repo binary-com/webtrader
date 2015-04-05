@@ -145,3 +145,5 @@ TYPPRICE            Typical Price
 
 > In overlay chart mode, the tooltil should show price(percent% change) just like highcharts examples
 http://www.highcharts.com/stock/demo/compare
+
+> On chart indicator should also be applied to all series in overlay mode

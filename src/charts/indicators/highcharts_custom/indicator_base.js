@@ -106,6 +106,19 @@ define(['jquery'], function ($) {
                 value = Math.round(value * Math.pow(10, precision)) / Math.pow(10, precision);
             }
             return value;
+        },
+
+        checkCurrentSeriesHasIndicator: function(optionsMap, currentSeriesID) {
+            var ret = false;
+            if (optionsMap && currentSeriesID) {
+                $.each(optionsMap, function (key, value) {
+                    if (value.parentSeriesID == currentSeriesID) {
+                        ret = true;
+                        return false;
+                    }
+                });
+            }
+            return ret;
         }
 
     };

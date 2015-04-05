@@ -3,6 +3,8 @@
  */
 define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
 
+    var atrOptionsMap = {}, atrSeriesMap = {};
+
     return {
         init: function() {
 
@@ -100,8 +102,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                         var chart = this.chart;
 
-                        this.atrOptions = this.atrOptions || {};
-                        this.atrOptions[uniqueID] = atrOptions;
+                        atrOptionsMap[uniqueID] = atrOptions;
 
                         chart.addAxis({ // Secondary yAxis
                             id: 'atr'+ uniqueID,
@@ -119,8 +120,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                         indicatorBase.recalculate(chart);
 
                         var series = this;
-                        this.atrSeries = this.atrSeries || {};
-                        this.atrSeries[uniqueID] = chart.addSeries({
+                        atrSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
                             name: 'ATR(' + atrOptions.period  + ')',
                             data: atrData,
@@ -133,8 +133,17 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             dashStyle: atrOptions.dashStyle
                         }, false, false);
 
+                        $(atrSeriesMap[uniqueID]).data({
+                            isIndicator: true,
+                            indicatorID: 'atr',
+                            parentSeriesID: atrOptions.parentSeriesID,
+                            period: atrOptions.period
+                        });
+
                         //We are update everything in one shot
                         chart.redraw();
+                        //console.log('series.options.length : ', this.options.data.length);
+                        //console.log('atrSeriesMap.options.data.length : ', atrSeriesMap[uniqueID].options.data.length);
 
                     }
 
@@ -144,10 +153,10 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                 H.Series.prototype.removeATR = function (uniqueID) {
                     var chart = this.chart;
-                    this.atrOptions[uniqueID] = null;
+                    atrOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
                     chart.get('atr' + uniqueID).remove(false);
-                    this.atrSeries[uniqueID] = null;
+                    atrSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
@@ -159,7 +168,10 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
 
                     proceed.call(this, options, redraw, shift, animation);
-                    updateATRSeries.call(this, options);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(atrOptionsMap, this.options.id))
+                    {
+                        updateATRSeries.call(this, options);
+                    }
 
                 });
 
@@ -169,14 +181,10 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
 
                     proceed.call(this, options, redraw, animation);
-
-                    //if this is a point in ATR series, ignore
-                    if (this.series.options.name.indexOf('ATR') != -1) return;
-
-                    var series = this.series;
-
-                    //Update ATR values
-                    updateATRSeries.call(series, options, true);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(atrOptionsMap, this.series.options.id))
+                    {
+                        updateATRSeries.call(this.series, options, true);
+                    }
 
                 });
 
@@ -186,64 +194,66 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
                 function updateATRSeries(options, isPointUpdate) {
-                    //if this is ATR series, ignore
-                    if (this.options.name.indexOf('ATR') == -1) {
+                    var series = this;
+                    var chart = series.chart;
 
-                        var series = this;
-                        var chart = series.chart;
-
-                        //Add a new ATR data point
-                        for (var key in this.atrSeries) {
-                            if (this.atrSeries[key] && this.atrSeries[key].options && this.atrSeries[key].options.data && this.atrSeries[key].options.data.length > 0) {
-                                //This is ATR series. Add one more ATR point
-                                //Calculate ATR data
-                                /*
-                                 * Formula(OHLC or Candlestick) -
-                                 * 	tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
-                                 * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
-                                 * 		t - current
-                                 * 		n - period
-                                 *
-                                 * Formula(other chart types) -
-                                 * 	tr(t) = abs(close(t) - close(t - 1))
-                                 * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
-                                 * 		t - current
-                                 * 		n - period
-                                 */
-                                //Find the data point
-                                var data = series.options.data;
-                                var atrData = this.atrSeries[key].options.data;
-                                var matchFound = false;
-                                var n = this.atrOptions[key].period;
-                                for (var index = 1; index < data.length; index++) {
-                                    //Matching time
-                                    if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
-                                        matchFound = true; //We have to recalculate all ATRs after a match has been found
-                                        var tr = 0.0;
-                                        if (indicatorBase.isOHLCorCandlestick(series.options.type)) {
-                                            tr = Math.max(Math.max((data[index].high || data[index][2]) - (data[index].low || data[index][3]), Math.abs((data[index].high || data[index][2]) - (data[index - 1].close || data[index - 1][4])))
-                                                , (data[index].low || data[index][3]) - (data[index - 1].close || data[index - 1][4])
-                                            );
-                                        }
-                                        else {
-                                            tr = Math.abs((data[index].y || data[index][1]) - (data[index - 1].y || data[index - 1][1]));
-                                        }
-                                        //Round to 2 decimal places
-                                        var atr = indicatorBase.toFixed(( (atrData[index - 1].y || atrData[index - 1][1]) * (n - 1) + tr ) / n, 2) ;
-                                        if (isPointUpdate)
+                    //Add a new ATR data point
+                    for (var key in atrSeriesMap) {
+                        if (atrSeriesMap[key] && atrSeriesMap[key].options && atrSeriesMap[key].options.data
+                                            && atrSeriesMap[key].options.data.length > 0
+                                            && atrOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is ATR series. Add one more ATR point
+                            //Calculate ATR data
+                            /*
+                             * Formula(OHLC or Candlestick) -
+                             * 	tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
+                             * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
+                             * 		t - current
+                             * 		n - period
+                             *
+                             * Formula(other chart types) -
+                             * 	tr(t) = abs(close(t) - close(t - 1))
+                             * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
+                             * 		t - current
+                             * 		n - period
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var atrData = atrSeriesMap[key].options.data;
+                            var matchFound = false;
+                            var n = atrOptionsMap[key].period;
+                            for (var index = 1; index < data.length; index++) {
+                                //Matching time
+                                if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
+                                    matchFound = true; //We have to recalculate all ATRs after a match has been found
+                                    var tr = 0.0;
+                                    if (indicatorBase.isOHLCorCandlestick(series.options.type)) {
+                                        tr = Math.max(Math.max((data[index].high || data[index][2]) - (data[index].low || data[index][3]), Math.abs((data[index].high || data[index][2]) - (data[index - 1].close || data[index - 1][4])))
+                                            , (data[index].low || data[index][3]) - (data[index - 1].close || data[index - 1][4])
+                                        );
+                                    }
+                                    else {
+                                        tr = Math.abs((data[index].y || data[index][1]) - (data[index - 1].y || data[index - 1][1]));
+                                    }
+                                    //Round to 2 decimal places
+                                    var atr = indicatorBase.toFixed(( (atrData[index - 1].y || atrData[index - 1][1]) * (n - 1) + tr ) / n, 2) ;
+                                    if (isPointUpdate)
+                                    {
+                                        //console.log('series.options.data.length , update : ', data.length, ', Series name : ', series.options.name);
+                                        //console.log('atrSeries.options.data.length , update : ', atrSeriesMap[key].options.data.length);
+                                        if (atrSeriesMap[key].options.data.length < data.length) {
+                                            atrSeriesMap[key].addPoint([(data[index].x || data[index][0]), atr]);
+                                        } else
                                         {
-                                            this.atrSeries[key].data[index].update([(data[index].x || data[index][0]), atr]);
+                                            atrSeriesMap[key].data[index].update([(data[index].x || data[index][0]), atr]);
                                         }
-                                        else
-                                        {
-                                            this.atrSeries[key].addPoint([(data[index].x || data[index][0]), atr], false, false);
-                                            //Most of the time, we add one data point after the main series has been added. This will not be a
-                                            //performance issue if that is the scenario. But if add many data points after ATR is added to the
-                                            //main series, then we should rethink about this code
-                                            this.atrSeries[key].isDirty = true;
-                                            this.atrSeries[key].isDirtyData = true;
-                                            chart.redraw();
-                                        }
+                                    }
+                                    else
+                                    {
+                                        //console.log('series.options.data.length : ', data.length);
+                                        //console.log('atrSeries.options.data.length (before) : ', atrSeriesMap[key].options.data.length);
+                                        atrSeriesMap[key].addPoint([(data[index].x || data[index][0]), atr]);
+                                        //console.log('atrSeries.options.data.length (after) : ', atrSeriesMap[key].options.data.length);
                                     }
                                 }
                             }

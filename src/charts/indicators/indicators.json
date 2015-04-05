@@ -2,24 +2,24 @@
   "atr": {
     "id": "atr",
     "long_display_name": "Average True Range",
-    "short_disaply_name": "ATR"
+    "short_display_name": "ATR"
   },
 
   "ema": {
     "id": "ema",
     "long_display_name": "Exponential Moving Average",
-    "short_disaply_name": "EMA"
+    "short_display_name": "EMA"
   },
 
   "rsi": {
     "id": "rsi",
     "long_display_name": "Relative Strength Index",
-    "short_disaply_name": "RSI"
+    "short_display_name": "RSI"
   },
   "sma": {
     "id": "sma",
     "long_display_name": "Simple Moving Average",
-    "short_disaply_name": "SMA"
+    "short_display_name": "SMA"
   }
 
 }

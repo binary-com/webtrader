@@ -141,8 +141,10 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
             var chart = $(containerIDWithHash).highcharts();
             var marketData_displayValue = [], series_compare = undefined;
             $(chart.series).each(function (index, series) {
-                marketData_displayValue.push(series.name);
-                series_compare = series.options.compare;
+                if ($(series).data('isInstrument')) {
+                    marketData_displayValue.push(series.name);
+                    series_compare = series.options.compare;
+                }
             });
 
             this.drawChart( containerIDWithHash, $(containerIDWithHash).data("instrumentCode"),
@@ -156,14 +158,14 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
             var chartObj = this;
             require(['instruments/instruments'], function (ins) {
                 $(marketData_displayValue).each(function (index, value) {
-                    $(document).oneTime(1000, null, function () {
+                    //$(document).oneTime(1000, null, function () {
                         var marketDataObj = ins.getSpecificMarketData(value);
                         if (marketDataObj.symbol != undefined
                             && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
                         {
                             chartObj.overlay( containerIDWithHash, marketDataObj.symbol, value);
                         }
-                    });
+                    //});
                 });
             });
         },
@@ -202,26 +204,25 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                 for (var index = 0; index < chart.series.length; index++) {
                     //console.log('Instrument name : ' + chart.series[index].name);
                     var series = chart.series[index];
-                    if (series.isInstrument || series.options.name.toUpperCase().indexOf('SMA') != -1
-                                            || series.options.name.toUpperCase().indexOf('EMA') != -1) {
-                        if (series.isInstrument) {
-                            var data = series.options.data;
-                            series.setData([]);
-                            for (var i = 0; i < data.length; i++) {
-                                if (data[i].x && data[i].y) {
-                                    data[i] = [data[i].x, data[i].y];
-                                }
+                    if ($(series).data('isInstrument')) {
+                        var data = series.options.data;
+                        series.setData([]);
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i].x && data[i].y) {
+                                data[i] = [data[i].x, data[i].y];
                             }
-                            series.update({
-                                compare: 'percent'
-                            });
-                            series.setData(data);
                         }
-                        else {
-                            series.update({
-                                compare: 'percent'
-                            });
-                        }
+                        series.update({
+                            compare: 'percent'
+                        });
+                        series.setData(data);
+                        //Since we manipulated the complete dataset, we have to set the isInstrument variable again
+                        $(series).data('isInstrument', true);
+                    }
+                    else if ($(series).data('onChartIndicator')) {
+                        series.update({
+                            compare: 'percent'
+                        });
                     }
                 }
 

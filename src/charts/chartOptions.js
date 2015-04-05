@@ -95,31 +95,26 @@ define(["charts/chartWindow", "common/util"], function() {
                                 });
                             }
                             else if ($(this).hasClass('currentPriceLI')) {
-                                require(["currentPriceIndicator"], function() {
+                                require(["currentPriceIndicator"], function(currentPriceIndicator) {
                                     var chartIDWithHash = '#' + newTabId + '_chart';
                                     var chart = $(chartIDWithHash).highcharts();
                                     //Find currentPriceOptions prop for each series on chart. This prop will contain list of unique IDs that
                                     //should be removed
                                     var removed = false;
                                     $.each(chart.series, function(index, series) {
-                                        $.each(series, function (key, value) {
-                                            if (key == 'currentPriceOptions') {
-                                                $.each(value, function (uniqueID, uniqueIDVal) {
-                                                    if ( uniqueID && uniqueIDVal ) {
-                                                        series.removeCurrentPrice(uniqueID);
-                                                        removed = true;
-                                                    }
-                                                });
-                                                return false;
+                                        $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
+                                            if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
+                                                series.removeCurrentPrice(key);
+                                                removed = true;
                                             }
                                         });
                                     });
                                     if (!removed) {
                                         //Means this is not a remove case, we have to add the indicator
-                                        $.each(chart.series, function(index, series) {
-                                            if (series && series.isInstrument)
+                                        $.each(chart.series, function() {
+                                            if ($(this).data('isInstrument'))
                                             {
-                                                series.addCurrentPrice();
+                                                this.addCurrentPrice();
                                             }
                                         });
                                     }

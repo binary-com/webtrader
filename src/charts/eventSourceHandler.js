@@ -46,7 +46,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
 
         //if chart.series.length == 0 -> means this the first series getting added to the chart
         //If series_compare == percent, that means, this series is an overlay series
-        if ( series_compare != 'percent' )
+        //if ( series_compare != 'percent' )
         {
             chart.xAxis[0].range = dataInHighChartsFormat[totalLength - 1][0] - dataInHighChartsFormat[endIndex][0]; //show 30 bars
         }
@@ -64,7 +64,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
         });
         series.isDirty = true;
         //Its our variable
-        series.isInstrument = true;//Currently used to indicator that this series is holding the chart OHLC or close data
+        $(series).data('isInstrument', true);//Currently used to indicator that this series is holding the chart OHLC or close data
         series.isDirtyData = true;
 
         //Add current price indicator

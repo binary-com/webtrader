@@ -6,13 +6,11 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
     /*
         This is a map storing information as -
         currentPriceOptions[seriesID] = {
-                     stroke : 'red',
-                     strokeWidth : 1,
-                     dashStyle : 'dash',
-                     parentSeriesID : seriesID
+                         stroke : 'red',
+                         strokeWidth : 1,
+                         dashStyle : 'dash',
+                         parentSeriesID : seriesID
                      }
-         This implementation is different than other indicators because other indicators are applied to series[0] whereas
-         this is applied to all series loaded on the chart(all instrument series, that is for overlay scenario)
      */
     var currentPriceOptionsMap = {};
 
@@ -63,7 +61,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                 H.Series.prototype.removeCurrentPrice = function (uniqueID) {
                     currentPriceOptionsMap[uniqueID] = null;
+                    //console.log('Before>>' + $(this).data('isInstrument'));
                     this.yAxis.removePlotLine('CurrentPrice' + uniqueID);
+                    //console.log('After>>' + $(this).data('isInstrument'));
                 }
 
                 /*
@@ -142,6 +142,10 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
             }(Highcharts, jQuery, indicatorBase));
 
+        },
+
+        getCurrentPriceOptions: function() {
+            return currentPriceOptionsMap;
         }
 
     };

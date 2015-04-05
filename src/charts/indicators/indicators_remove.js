@@ -77,32 +77,22 @@ define(["jquery", "datatables", "common/loadCSS", 'charts/charts'], function ($)
             table.clear().draw();
             var chart = $(containerIDWithHash).highcharts();
             if (!chart) return;
-            var mainSeries = chart.series[0];
-            //Find all custom indicator properties
-            $.each(mainSeries, function (key, value) {
-                if (!key || key.indexOf('Options') == -1 || !value) return;
-                //Loop through the know indicator JSON details
-                $.each(indicatorsJSON, function (indicatorDataKey, indicatorDataValue) {
-                    //If we find <indicatorID>Options parameter in series, that means this indicator was added to this series
-                    if (key.indexOf(indicatorDataValue.id + 'Options') != -1) {
-                        //Now loop through all instances of this indicator. It could be used multiple times with different parameters
-                        $.each(value, function (optionKey, optionValue) {
-
-                            if (!optionValue) return true;
-
-                            $(table.row.add([indicatorDataValue.long_display_name + '(' + optionValue.period + ')']).draw().node())
+            $.each(chart.series, function (index, series) {
+                if ($(this).data('isIndicator')) {
+                    $.each(indicatorsJSON, function (indicatorDataKey, indicatorDataValue) {
+                        if (series.options.name.indexOf(indicatorDataValue.short_display_name) != -1) {
+                            $(table.row.add([indicatorDataValue.long_display_name + '(' + $(series).data('period') + ')']).draw().node())
                                 .click(function () {
                                     $(this).toggleClass('selected');
                                 }).data({
                                     'id': indicatorDataValue.id,
-                                    'seriesID': optionKey,
-                                    'parentSeriesID': optionValue.parentSeriesID
+                                    'seriesID': series.options.id,
+                                    'parentSeriesID': $(series).data('parentSeriesID')
                                 });
-
-                        });
-                        return false;
-                    }
-                });
+                            return false;
+                        }
+                    });
+                }
             });
 
             $(".indicator_remove_dialog").data('refererChartID', containerIDWithHash).dialog("open");

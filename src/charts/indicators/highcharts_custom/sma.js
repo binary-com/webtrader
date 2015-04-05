@@ -3,6 +3,8 @@
  */
 define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
 
+    var smaOptionsMap = {}, smaSeriesMap = {};
+    
     return {
         init: function() {
 
@@ -97,12 +99,10 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                         var chart = this.chart;
 
-                        this.smaOptions = this.smaOptions || {};
-                        this.smaOptions[uniqueID] = smaOptions;
+                        smaOptionsMap[uniqueID] = smaOptions;
 
                         var series = this;
-                        this.smaSeries = this.smaSeries || {};
-                        this.smaSeries[uniqueID] = chart.addSeries({
+                        smaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
                             name: 'SMA(' + smaOptions.period  + ', ' + indicatorBase.appliedPriceString(smaOptions.appliedTo) + ')',
                             data: smaData,
@@ -116,6 +116,15 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             compare: series.options.compare
                         }, false, false);
 
+                        //This is a on chart indicator
+                        $(smaSeriesMap[uniqueID]).data({
+                            onChartIndicator: true,
+                            indicatorID: 'sma',
+                            isIndicator: true,
+                            parentSeriesID: smaOptions.parentSeriesID,
+                            period: smaOptions.period
+                        });
+
                         //We are update everything in one shot
                         chart.redraw();
 
@@ -127,9 +136,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                 H.Series.prototype.removeSMA = function (uniqueID) {
                     var chart = this.chart;
-                    this.smaOptions[uniqueID] = null;
+                    smaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
-                    this.smaSeries[uniqueID] = null;
+                    smaSeriesMap[uniqueID] = null;
                 }
 
                 /*
@@ -138,7 +147,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
 
                     proceed.call(this, options, redraw, shift, animation);
-                    updateSMASeries.call(this, options);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(smaOptionsMap, this.options.id)) {
+                        updateSMASeries.call(this, options);
+                    }
 
                 });
 
@@ -148,14 +159,9 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                 H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
 
                     proceed.call(this, options, redraw, animation);
-
-                    //if this is a point in SMA series, ignore
-                    if (this.series.options.name.indexOf('SMA') != -1) return;
-
-                    var series = this.series;
-
-                    //Update SMA values
-                    updateSMASeries.call(series, options, true);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(smaOptionsMap, this.series.options.id)) {
+                        updateSMASeries.call(this.series, options, true);
+                    }
 
                 });
 
@@ -165,59 +171,54 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                  */
                 function updateSMASeries(options, isPointUpdate) {
                     //if this is SMA series, ignore
-                    if (this.options.name.indexOf('SMA') == -1) {
+                    var series = this;
+                    var chart = series.chart;
 
-                        var series = this;
-                        var chart = series.chart;
+                    //Add a new SMA data point
+                    for (var key in smaSeriesMap) {
+                        if (smaSeriesMap[key] && smaSeriesMap[key].options && smaSeriesMap[key].options.data && smaSeriesMap[key].options.data.length > 0) {
+                            //This is SMA series. Add one more SMA point
+                            //Calculate SMA data
+                            /*
+                             * Formula(OHLC or Candlestick), consider the indicated price(O,H,L,C) -
+                             * Formula(other chart types) -
+                             * 	sma(t) = (sma(t-1) x (n - 1) + price) / n
+                             * 		t - current
+                             * 		n - period
+                             *
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var smaData = smaSeriesMap[key].options.data;
+                            var matchFound = false;
+                            var n = smaOptionsMap[key].period;
+                            for (var index = 1; index < data.length; index++) {
+                                //Matching time
+                                if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
+                                    matchFound = true; //We have to recalculate all SMAs after a match has been found
+                                    var price = 0.0;
+                                    if (indicatorBase.isOHLCorCandlestick(this.options.type))
+                                    {
+                                        price = indicatorBase.extractPriceForAppliedTO(smaOptionsMap[key].appliedTo, data, index);
+                                    }
+                                    else
+                                    {
+                                        price = data[index].y ? data[index].y : data[index][1];
+                                    }
 
-                        //Add a new SMA data point
-                        for (var key in this.smaSeries) {
-                            if (this.smaSeries[key] && this.smaSeries[key].options && this.smaSeries[key].options.data && this.smaSeries[key].options.data.length > 0) {
-                                //This is SMA series. Add one more SMA point
-                                //Calculate SMA data
-                                /*
-                                 * Formula(OHLC or Candlestick), consider the indicated price(O,H,L,C) -
-                                 * Formula(other chart types) -
-                                 * 	sma(t) = (sma(t-1) x (n - 1) + price) / n
-                                 * 		t - current
-                                 * 		n - period
-                                 *
-                                 */
-                                //Find the data point
-                                var data = series.options.data;
-                                var smaData = this.smaSeries[key].options.data;
-                                var matchFound = false;
-                                var n = this.smaOptions[key].period;
-                                for (var index = 1; index < data.length; index++) {
-                                    //Matching time
-                                    if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
-                                        matchFound = true; //We have to recalculate all SMAs after a match has been found
-                                        var price = 0.0;
-                                        if (indicatorBase.isOHLCorCandlestick(this.options.type))
-                                        {
-                                            price = indicatorBase.extractPriceForAppliedTO(this.smaOptions[key].appliedTo, data, index);
+                                    //Calculate SMA - start
+                                    var smaValue = indicatorBase.toFixed(((smaData[index - 1].y || smaData[index - 1][1]) * (n - 1) + price) / n, 4);
+                                    if (isPointUpdate)
+                                    {
+                                        if (smaSeriesMap[key].options.data.length < data.length) {
+                                            smaSeriesMap[key].addPoint([(data[index].x || data[index][0]), smaValue]);
+                                        } else {
+                                            smaSeriesMap[key].data[index].update([(data[index].x || data[index][0]), smaValue]);
                                         }
-                                        else
-                                        {
-                                            price = data[index].y ? data[index].y : data[index][1];
-                                        }
-
-                                        //Calculate SMA - start
-                                        var smaValue = indicatorBase.toFixed(((smaData[index - 1].y || smaData[index - 1][1]) * (n - 1) + price) / n, 4);
-                                        if (isPointUpdate)
-                                        {
-                                            chart.get(this.smaSeries[key].options.id).data[index].update([(data[index].x || data[index][0]), smaValue]);
-                                        }
-                                        else
-                                        {
-                                            chart.get(this.smaSeries[key].options.id).addPoint([(data[index].x || data[index][0]), smaValue], false, false);
-                                            //Most of the time, we add one data point after the main series has been added. This will not be a
-                                            //performance issue if that is the scenario. But if add many data points after ATR is added to the
-                                            //main series, then we should rethink about this code
-                                            this.smaSeries[key].isDirty = true;
-                                            this.smaSeries[key].isDirtyData = true;
-                                            chart.redraw();
-                                        }
+                                    }
+                                    else
+                                    {
+                                        smaSeriesMap[key].addPoint([(data[index].x || data[index][0]), smaValue]);
                                     }
                                 }
                             }
