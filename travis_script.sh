@@ -11,7 +11,7 @@ if [ -n $release ]; then
         mv beta dist/compressed
         grunt gh-pages:gh-pages-beta
     fi
-    if [ -n $release_beta ]; then
+    if [ -n $release_prod ]; then
       	grunt gh-pages:gh-pages-prod
     fi
 fi
