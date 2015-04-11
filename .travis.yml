@@ -11,6 +11,8 @@ script:
 - npm install -g grunt-cli
 - grunt
 - sh travis_script.sh
+- git config --global user.email "arnab@binary.com"
+- git config --global user.name "Arnab Karmakar"
 env:
   global:
     secure: UJurrAi/wjp1pycEDH0r6QuqsCO6nWuN7JQzzzY4n0fDnoLjcycCDlDe+VrgsKRU0ApKh4pBrL3D1ruSbmdH0N9gtWtKiZiSbVYIvRPVEnOgQLvyR7LlK0yoYagACkbZsbgcWM4Rgq3vb3vG3YPXx1/ID/AdjYr+hEsa6NvbEhg=
