@@ -9,9 +9,9 @@ if [ -n $release ]; then
         mkdir beta
         mv dist/compressed/* beta
         mv beta dist/compressed
-        grunt gh-pages-beta
+        grunt gh-pages:gh-pages-beta
     fi
     if [ -n $release_beta ]; then
-      	grunt gh-pages-prod
+      	grunt gh-pages:gh-pages-prod
     fi
 fi

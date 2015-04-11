@@ -32,6 +32,13 @@ To bump release version, run
         or
 
         $ grunt bump:patch
+
+To release code
+        (beta release, http://regentmarkets.github.io/highcharts/beta)
+        $ grunt gh-pages:gh-pages-beta
+
+To release code (prod release, http://regentmarkets.github.io/highcharts)
+        $ grunt gh-pages:gh-pages-prod
     
 You can now access the charting page by opening http://localhost:10001/main.html in browser
 
