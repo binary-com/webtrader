@@ -65,7 +65,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             }
                             else
                             {
-                                sum += data[index].y ? data[index].y : data[index][1];
+                                sum += indicatorBase.extractPrice(data, index);
                             }
                             if (index == (smaOptions.period - 1))
                             {
@@ -190,36 +190,32 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             //Find the data point
                             var data = series.options.data;
                             var smaData = smaSeriesMap[key].options.data;
-                            var matchFound = false;
                             var n = smaOptionsMap[key].period;
-                            for (var index = 1; index < data.length; index++) {
-                                //Matching time
-                                if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
-                                    matchFound = true; //We have to recalculate all SMAs after a match has been found
-                                    var price = 0.0;
-                                    if (indicatorBase.isOHLCorCandlestick(this.options.type))
-                                    {
-                                        price = indicatorBase.extractPriceForAppliedTO(smaOptionsMap[key].appliedTo, data, index);
-                                    }
-                                    else
-                                    {
-                                        price = data[index].y ? data[index].y : data[index][1];
-                                    }
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                var price = 0.0;
+                                if (indicatorBase.isOHLCorCandlestick(this.options.type))
+                                {
+                                    price = indicatorBase.extractPriceForAppliedTO(smaOptionsMap[key].appliedTo, data, dataPointIndex);
+                                }
+                                else
+                                {
+                                    price = data[dataPointIndex].y ? data[dataPointIndex].y : data[dataPointIndex][1];
+                                }
 
-                                    //Calculate SMA - start
-                                    var smaValue = indicatorBase.toFixed(((smaData[index - 1].y || smaData[index - 1][1]) * (n - 1) + price) / n, 4);
-                                    if (isPointUpdate)
-                                    {
-                                        if (smaSeriesMap[key].options.data.length < data.length) {
-                                            smaSeriesMap[key].addPoint([(data[index].x || data[index][0]), smaValue]);
-                                        } else {
-                                            smaSeriesMap[key].data[index].update([(data[index].x || data[index][0]), smaValue]);
-                                        }
+                                //Calculate SMA - start
+                                var smaValue = indicatorBase.toFixed(((smaData[dataPointIndex - 1].y || smaData[dataPointIndex - 1][1]) * (n - 1) + price) / n, 4);
+                                if (isPointUpdate)
+                                {
+                                    if (smaSeriesMap[key].options.data.length < data.length) {
+                                        smaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), smaValue]);
+                                    } else {
+                                        smaSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), smaValue]);
                                     }
-                                    else
-                                    {
-                                        smaSeriesMap[key].addPoint([(data[index].x || data[index][0]), smaValue]);
-                                    }
+                                }
+                                else
+                                {
+                                    smaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), smaValue]);
                                 }
                             }
                         }

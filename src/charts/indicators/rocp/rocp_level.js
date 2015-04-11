@@ -19,7 +19,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             this.dashStyle = dashStyle;
         };
 
-        $.get("charts/indicators/rsi/rsi_level.html" , function ( $html ) {
+        $.get("charts/indicators/rocp/rocp_level.html" , function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -29,19 +29,19 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
-            $html.find("#rsi_level_stroke").colorpicker({
+            $html.find("#rocp_level_stroke").colorpicker({
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:			function(event, color) {
-                    $("#rsi_level_stroke").css({
+                    $("#rocp_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok:             			function(event, color) {
-                    $("#rsi_level_stroke").css({
+                    $("#rocp_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
@@ -60,22 +60,22 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                             //console.log('Ok button is clicked!');
                             require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".rsi_level_input_width_for_level").val(),
-                                        parseInt($html.find(".rsi_level_input_width_for_level").attr("min")),
-                                        parseInt($html.find(".rsi_level_input_width_for_level").attr("max"))))
+                                if (!validation.validateNumericBetween($html.find(".rocp_level_input_width_for_level").val(),
+                                        parseInt($html.find(".rocp_level_input_width_for_level").attr("min")),
+                                        parseInt($html.find(".rocp_level_input_width_for_level").attr("max"))))
                                 {
                                     require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".rsi_level_input_width_for_level").attr("min")
-                                        + " to " + $html.find(".rsi_level_input_width_for_level").attr("max")
-                                        + " is allowed for " + $html.find(".rsi_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".rocp_level_input_width_for_level").attr("min")
+                                        + " to " + $html.find(".rocp_level_input_width_for_level").attr("max")
+                                        + " is allowed for " + $html.find(".rocp_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
                                     });
                                     return;
                                 }
 
                                 if (callBackAfterOKPressed) {
-                                    callBackAfterOKPressed([new Level(parseFloat($html.find(".rsi_level_input_width_for_level").val()),
-                                        defaultStrokeColor, parseInt($html.find("#rsi_level_strokeWidth").val()),
-                                        $html.find("#rsi_level_dashStyle").val())]);
+                                    callBackAfterOKPressed([new Level(parseFloat($html.find(".rocp_level_input_width_for_level").val()),
+                                        defaultStrokeColor, parseInt($html.find("#rocp_level_strokeWidth").val()),
+                                        $html.find("#rocp_level_dashStyle").val())]);
                                 }
 
                                 closeDialog.call($html);
@@ -106,13 +106,13 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
         open : function ( containerIDWithHash, _callback ) {
 
             callBackAfterOKPressed = _callback;
-            if ($(".rsi_level").length == 0)
+            if ($(".rocp_level").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".rsi_level").dialog( "open" );
+            $(".rocp_level").dialog( "open" );
 
         }
 

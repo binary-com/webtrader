@@ -1,8 +1,17 @@
 #!/bin/bash
 
-release="$(git log -1 --pretty=%B | awk '/[release]]/ { print $1 } ')"
-if [ -n $release ]; then 
+release_prod="$(git log -1 --pretty=%B | awk '/[release_prod]]/ { print $1 } ')"
+release_beta="$(git log -1 --pretty=%B | awk '/[release_beta]]/ { print $1 } ')"
+if [ -n $release ]; then
     git config --global user.email "arnab@binary.com"
     git config --global user.name "Arnab Karmakar"
-  	grunt gh-pages
+    if [ -n $release_beta ]; then
+        mkdir beta
+        mv -R dist/compressed/* beta
+        mvn beta dist/compressed
+        grunt gh-pages-beta
+    fi
+    if [ -n $release_beta ]; then
+      	grunt gh-pages-prod
+    fi
 fi

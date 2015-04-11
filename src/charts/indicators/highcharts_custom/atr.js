@@ -114,7 +114,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                                 y: 10, //Trying to show title inside the indicator chart
                                 x: 50
                             },
-                            lineWidth: 2
+                            lineWidth: 2,
+                            plotLines: atrOptions.levels
                         }, false, false, false);
 
                         indicatorBase.recalculate(chart);
@@ -220,41 +221,40 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             //Find the data point
                             var data = series.options.data;
                             var atrData = atrSeriesMap[key].options.data;
-                            var matchFound = false;
                             var n = atrOptionsMap[key].period;
-                            for (var index = 1; index < data.length; index++) {
-                                //Matching time
-                                if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
-                                    matchFound = true; //We have to recalculate all ATRs after a match has been found
-                                    var tr = 0.0;
-                                    if (indicatorBase.isOHLCorCandlestick(series.options.type)) {
-                                        tr = Math.max(Math.max((data[index].high || data[index][2]) - (data[index].low || data[index][3]), Math.abs((data[index].high || data[index][2]) - (data[index - 1].close || data[index - 1][4])))
-                                            , (data[index].low || data[index][3]) - (data[index - 1].close || data[index - 1][4])
-                                        );
-                                    }
-                                    else {
-                                        tr = Math.abs((data[index].y || data[index][1]) - (data[index - 1].y || data[index - 1][1]));
-                                    }
-                                    //Round to 2 decimal places
-                                    var atr = indicatorBase.toFixed(( (atrData[index - 1].y || atrData[index - 1][1]) * (n - 1) + tr ) / n, 2) ;
-                                    if (isPointUpdate)
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                var tr = 0.0;
+                                if (indicatorBase.isOHLCorCandlestick(series.options.type)) {
+                                    var highValue = (data[dataPointIndex].high || data[dataPointIndex][2]);
+                                    var lowValue = (data[dataPointIndex].low || data[dataPointIndex][3]);
+                                    var closeValue = (data[dataPointIndex - 1].close || data[dataPointIndex - 1][4]);
+                                    tr = Math.max(Math.max(highValue - lowValue, Math.abs(highValue - closeValue)), (lowValue - closeValue));
+                                }
+                                else {
+                                    var priceNow = (data[dataPointIndex].y || data[dataPointIndex][1]);
+                                    var pricePrev = (data[dataPointIndex - 1].y || data[dataPointIndex - 1][1]);
+                                    tr = Math.abs(priceNow - pricePrev);
+                                }
+                                //Round to 2 decimal places
+                                var atr = indicatorBase.toFixed(( (atrData[dataPointIndex - 1].y || atrData[dataPointIndex - 1][1]) * (n - 1) + tr ) / n, 2) ;
+                                if (isPointUpdate)
+                                {
+                                    //console.log('series.options.data.length , update : ', data.length, ', Series name : ', series.options.name);
+                                    //console.log('atrSeries.options.data.length , update : ', atrSeriesMap[key].options.data.length);
+                                    if (atrSeriesMap[key].options.data.length < data.length) {
+                                        atrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
+                                    } else
                                     {
-                                        //console.log('series.options.data.length , update : ', data.length, ', Series name : ', series.options.name);
-                                        //console.log('atrSeries.options.data.length , update : ', atrSeriesMap[key].options.data.length);
-                                        if (atrSeriesMap[key].options.data.length < data.length) {
-                                            atrSeriesMap[key].addPoint([(data[index].x || data[index][0]), atr]);
-                                        } else
-                                        {
-                                            atrSeriesMap[key].data[index].update([(data[index].x || data[index][0]), atr]);
-                                        }
+                                        atrSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
                                     }
-                                    else
-                                    {
-                                        //console.log('series.options.data.length : ', data.length);
-                                        //console.log('atrSeries.options.data.length (before) : ', atrSeriesMap[key].options.data.length);
-                                        atrSeriesMap[key].addPoint([(data[index].x || data[index][0]), atr]);
-                                        //console.log('atrSeries.options.data.length (after) : ', atrSeriesMap[key].options.data.length);
-                                    }
+                                }
+                                else
+                                {
+                                    //console.log('series.options.data.length : ', data.length);
+                                    //console.log('atrSeries.options.data.length (before) : ', atrSeriesMap[key].options.data.length);
+                                    atrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
+                                    //console.log('atrSeries.options.data.length (after) : ', atrSeriesMap[key].options.data.length);
                                 }
                             }
                         }

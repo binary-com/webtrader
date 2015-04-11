@@ -1,16 +1,16 @@
-.atr_input_width {
+.roc_input_width {
     width: 120px;
 }
 
-.atr_input_width_for_period {
+.roc_input_width_for_period {
     width: 115px;
 }
 
-.atr label {
+.roc label {
     display: block;
 }
 
-#atr_levels_wrapper {
+#roc_levels_wrapper {
     border: 1px solid #aaaaaa;
     width: 100%;
     border-radius: 5px;

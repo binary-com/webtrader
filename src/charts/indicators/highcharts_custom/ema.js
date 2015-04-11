@@ -4,7 +4,7 @@
 define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
 
     var emaOptionsMap = {}, emaSeriesMap = {};
-    
+
     return {
         init: function () {
 
@@ -42,7 +42,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                         /*  ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
                          *  Do not fill any value in emaData from 0 index to options.period-1 index
                          */
-                        var tr = [], emaData = [], sum = 0.0;
+                        var emaData = [], sum = 0.0;
                         for (var index = 0; index < emaOptions.period; index++) {
                             if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
                                 sum += indicatorBase.extractPriceForAppliedTO(emaOptions.appliedTo, data, index);
@@ -164,35 +164,30 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             //Find the data point
                             var data = series.options.data;
                             var emaData = emaSeriesMap[key].options.data;
-                            var matchFound = false;
                             var n = emaOptionsMap[key].period;
-                            for (var index = 1; index < data.length; index++) {
-                                //Matching time
-                                if (data[index][0] === options[0] || data[index].x === options[0] || matchFound) {
-                                    matchFound = true; //We have to recalculate all EMAs after a match has been found
-                                    var price = 0.0;
-                                    if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                                        price = indicatorBase.extractPriceForAppliedTO(emaOptionsMap[key].appliedTo, data, index);
-                                    }
-                                    else {
-                                        price = data[index].y ? data[index].y : data[index][1];
-                                    }
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                var price = 0.0;
+                                if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
+                                    price = indicatorBase.extractPriceForAppliedTO(emaOptionsMap[key].appliedTo, data, dataPointIndex);
+                                }
+                                else {
+                                    price = data[dataPointIndex].y ? data[dataPointIndex].y : data[dataPointIndex][1];
+                                }
 
-                                    //Calculate EMA - start
-                                    var emaValue = indicatorBase.toFixed((price * 2 / (n + 1)) + ((emaData[index - 1][1] || emaData[index - 1].y) * (1 - 2 / (n + 1))), 4);
-                                    //console.log(emaValue, price, n, emaData[index - 1]);
-                                     //emaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(emaValue , 4)]);
-                                    if (isPointUpdate) {
-                                        if (emaSeriesMap[key].options.data.length < data.length) {
-                                            emaSeriesMap[key].addPoint([(data[index].x || data[index][0]), emaValue]);
-                                        } else
-                                        {
-                                            emaSeriesMap[key].data[index].update([(data[index].x || data[index][0]), emaValue]);
-                                        }
+                                //Calculate EMA - start
+                                var emaValue = indicatorBase.toFixed((price * 2 / (n + 1)) + ((emaData[dataPointIndex - 1][1] || emaData[dataPointIndex - 1].y) * (1 - 2 / (n + 1))), 4);
+                                //console.log(emaValue, price, n, emaData[dataPointIndex - 1]);
+                                //emaData.push([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(emaValue , 4)]);
+                                if (isPointUpdate) {
+                                    if (emaSeriesMap[key].options.data.length < data.length) {
+                                        emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
+                                    } else {
+                                        emaSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
                                     }
-                                    else {
-                                        emaSeriesMap[key].addPoint([(data[index].x || data[index][0]), emaValue]);
-                                    }
+                                }
+                                else {
+                                    emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
                                 }
                             }
                         }

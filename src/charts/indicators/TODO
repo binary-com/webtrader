@@ -1,26 +1,35 @@
-> Average Price(AVGPRICE)
-> Average Directional Movement Index(ADX)
-> Absolute Price Oscillator(APO)
-> Bollinger Bands(BBANDS)
-> Commodity Channel Index(CCI)
-> Moving Average Convergence/Divergence(MACD)
-> Money Flow Index(MFI)
-> Parabolic SAR(SAR)
-> Rate of change(ROC)
+> Implemented MEDPRICE            Median Price
+Implemented MIDPOINT            MidPoint over period
+Implemented MIDPRICE            Midpoint Price over period
+
+> NATR                Normalized Average True Range
+>MA                  All Moving Average
+    > WMA
+    > DEMA
+    > TEMA
+    > TRIMA
+    > KAMA
+    > MAMA
+    > T3
+    > HMA
+    > LWMA
+    > SMMA
+
+
+Average Price(AVGPRICE)
+Average Directional Movement Index(ADX)
+Absolute Price Oscillator(APO)
+Bollinger Bands(BBANDS)
+Commodity Channel Index(CCI)
+Moving Average Convergence/Divergence(MACD)
+Parabolic SAR(SAR)
 Standard Deviation(STDDEV)
 Stochastic(STOCH)
-Summation(SUM)
 True Range(TRANGE)
-Triangular Moving Average(TRIMA)
-Typical Price(TYPPRICE)
 Ultimate Oscillator(ULTOSC)
 Variance(VAR)
 Weighted Close Price(WCLPRICE)
-Williams' %R(WILLR)
-Weighted Moving Average(WMA)
-
 D                   Chaikin A/D Line
-ADOSC               Chaikin A/D Oscillator
 ADXR                Average Directional Movement Index Rating
 AROON               Aroon
 AROONOSC            Aroon Oscillator
@@ -89,52 +98,34 @@ CDLUPSIDEGAP2CROWS  Upside Gap Two Crows
 CDLXSIDEGAP3METHODS Upside/Downside Gap Three Methods
 CMO                 Chande Momentum Oscillator
 CORREL              Pearson's Correlation Coefficient (r)
-DEMA                Double Exponential Moving Average
 DX                  Directional Movement Index
-EMA                 Exponential Moving Average
 HT_DCPERIOD         Hilbert Transform - Dominant Cycle Period
 HT_DCPHASE          Hilbert Transform - Dominant Cycle Phase
 HT_PHASOR           Hilbert Transform - Phasor Components
 HT_SINE             Hilbert Transform - SineWave
 HT_TRENDLINE        Hilbert Transform - Instantaneous Trendline
 HT_TRENDMODE        Hilbert Transform - Trend vs Cycle Mode
-KAMA                Kaufman Adaptive Moving Average
 LINEARREG           Linear Regression
 LINEARREG_ANGLE     Linear Regression Angle
 LINEARREG_INTERCEPT Linear Regression Intercept
 LINEARREG_SLOPE     Linear Regression Slope
-MA                  All Moving Average
 MACDEXT             MACD with controllable MA type
 MACDFIX             Moving Average Convergence/Divergence Fix 12/26
-MAMA                MESA Adaptive Moving Average
-MAX                 Highest value over a specified period
 MAXINDEX            Index of highest value over a specified period
-MEDPRICE            Median Price
-MIDPOINT            MidPoint over period
-MIDPRICE            Midpoint Price over period
-MIN                 Lowest value over a specified period
 MININDEX            Index of lowest value over a specified period
 MINMAX              Lowest and highest values over a specified period
 MINMAXINDEX         Indexes of lowest and highest values over a specified period
 MINUS_DI            Minus Directional Indicator
 MINUS_DM            Minus Directional Movement
 MOM                 Momentum
-NATR                Normalized Average True Range
-OBV                 On Balance Volume
 PLUS_DI             Plus Directional Indicator
 PLUS_DM             Plus Directional Movement
 PPO                 Percentage Price Oscillator
-ROCP                Rate of change Percentage: (price-prevPrice)/prevPrice
-ROCR                Rate of change ratio: (price/prevPrice)
-ROCR100             Rate of change ratio 100 scale: (price/prevPrice)*100
 SAREXT              Parabolic SAR - Extended
 STOCHF              Stochastic Fast
 STOCHRSI            Stochastic Relative Strength Index
-T3                  Triple Exponential Moving Average (T3)
-TEMA                Triple Exponential Moving Average
 TRIX                1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
 TSF                 Time Series Forecast
-TYPPRICE            Typical Price
 
 > The dash style drop down should show proper image style indicating how the dash style would look like
 (check any indicator folder for more details)
@@ -143,7 +134,13 @@ TYPPRICE            Typical Price
 
 > When chart is refreshed or chart type is changed, it should retain the indicators added on chart
 
-> In overlay chart mode, the tooltil should show price(percent% change) just like highcharts examples
+> In overlay chart mode, the tooltip should show price(percent% change) just like highcharts examples
 http://www.highcharts.com/stock/demo/compare
 
 > On chart indicator should also be applied to all series in overlay mode
+
+> Some of the indicators like EMA, SMA etc shows Applied to price in line chart. Does not make sense
+
+> Some of the indicators like ATR, RSI, ROC etc are not asking for appliedTo
+
+> Review indicators to see if we can improve the calculation and make it faster

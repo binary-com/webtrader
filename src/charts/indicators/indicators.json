@@ -16,10 +16,59 @@
     "long_display_name": "Relative Strength Index",
     "short_display_name": "RSI"
   },
+
   "sma": {
     "id": "sma",
     "long_display_name": "Simple Moving Average",
     "short_display_name": "SMA"
+  },
+
+  "roc": {
+    "id": "roc",
+    "long_display_name": "Rate Of Change",
+    "short_display_name": "ROC"
+  },
+
+  "typprice": {
+    "id": "typprice",
+    "long_display_name": "Typical Price",
+    "short_display_name": "TYPPRICE"
+  },
+
+  "willr": {
+    "id": "willr",
+    "long_display_name": "Williams' %R",
+    "short_display_name": "WILLR"
+  },
+
+  "rocp": {
+    "id": "rocp",
+    "long_display_name": "Rate Of Change Percentage",
+    "short_display_name": "ROCP"
+  },
+
+  "rocr": {
+    "id": "rocr",
+    "long_display_name": "Rate Of Change Ratio",
+    "short_display_name": "ROCR"
+  },
+
+  "min": {
+    "id": "min",
+    "long_display_name": "Minimum",
+    "short_display_name": "MIN"
+  },
+
+  "max": {
+    "id": "max",
+    "long_display_name": "Maximum",
+    "short_display_name": "MAX"
+  },
+
+  "sum": {
+    "id": "sum",
+    "long_display_name": "Summation",
+    "short_display_name": "SUM"
   }
 
 }

@@ -108,19 +108,30 @@ define(['jquery'], function ($) {
             return value;
         },
 
-        checkCurrentSeriesHasIndicator: function(optionsMap, currentSeriesID) {
+        checkCurrentSeriesHasIndicator: function (optionsMap, currentSeriesID) {
             var ret = false;
             if (optionsMap && currentSeriesID) {
                 $.each(optionsMap, function (key, value) {
-                    if (value.parentSeriesID == currentSeriesID) {
+                    if (value && value.parentSeriesID == currentSeriesID) {
                         ret = true;
                         return false;
                     }
                 });
             }
             return ret;
-        }
+        },
 
+        findDataUpdatedDataPoint: function (data, options) {
+            var dataPointIndex = -1;
+            for (var index = data.length - 1; index >= 1; index--) {
+                //Matching time
+                if (data[index][0] === options[0] || data[index].x === options[0]) {
+                    dataPointIndex = index;
+                    break;
+                }
+            }
+            return dataPointIndex;
+        }
     };
 
     return indicatorBase;

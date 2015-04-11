@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/atr/atr.css');
+        loadCSS('charts/indicators/willr/willr.css');
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -19,9 +19,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
             this.strokeWidth = strokeWidth;
             this.dashStyle = dashStyle;
         };
-        var defaultLevels = [new Level(30, 'red', 1, 'dash'), new Level(70, 'red', 1, 'dash')];
+        var defaultLevels = [];
 
-        $.get("charts/indicators/atr/atr.html" , function ( $html ) {
+        $.get("charts/indicators/willr/willr.html" , function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -31,26 +31,26 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
             //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
-            $html.find("#atr_stroke").colorpicker({
+            $html.find("#willr_stroke").colorpicker({
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:			function(event, color) {
-                    $("#atr_stroke").css({
+                    $("#willr_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok:             			function(event, color) {
-                    $("#atr_stroke").css({
+                    $("#willr_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 }
             });
 
-            var table = $html.find('#atr_levels').DataTable({
+            var table = $html.find('#willr_levels').DataTable({
                 paging: false,
                 scrollY: 100,
                 autoWidth: true,
@@ -64,7 +64,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                         $(this).toggleClass('selected');
                     } );
             });
-            $html.find('#atr_level_delete').click(function () {
+            $html.find('#willr_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
                     require(["jquery", "jquery-growl"], function($) {
                         $.growl.error({ message: "Select levels to delete!" });
@@ -73,9 +73,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                     table.rows('.selected').remove().draw();
                 }
             });
-            $html.find('#atr_level_add').click(function () {
-                require(["charts/indicators/atr/atr_level"], function(atr_level) {
-                    atr_level.open(containerIDWithHash, function (levels) {
+            $html.find('#willr_level_add').click(function () {
+                require(["charts/indicators/willr/willr_level"], function(willr_level) {
+                    willr_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
                                 .data("level", value)
@@ -100,20 +100,20 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                             //console.log('Ok button is clicked!');
                             require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".atr_input_width_for_period").val(),
-                                                parseInt($html.find(".atr_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".atr_input_width_for_period").attr("max"))))
+                                if (!validation.validateNumericBetween($html.find(".willr_input_width_for_period").val(),
+                                                parseInt($html.find(".willr_input_width_for_period").attr("min")),
+                                                parseInt($html.find(".willr_input_width_for_period").attr("max"))))
                                 {
                                     require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".atr_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".atr_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".atr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".willr_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".willr_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".willr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
                                     });
                                     return;
                                 }
 
-                                require(['charts/indicators/highcharts_custom/atr'], function ( atr ) {
-                                    atr.init();
+                                require(['charts/indicators/highcharts_custom/willr'], function ( willr ) {
+                                    willr.init();
                                     var levels = [];
                                     $.each(table.rows().nodes(), function () {
                                         var data = $(this).data('level');
@@ -130,14 +130,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                                         }
                                     });
                                     var options = {
-                                        period : parseInt($html.find(".atr_input_width_for_period").val()),
+                                        period : parseInt($html.find(".willr_input_width_for_period").val()),
                                         stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#atr_strokeWidth").val()),
-                                        dashStyle : $html.find("#atr_dashStyle").val(),
+                                        strokeWidth : parseInt($html.find("#willr_strokeWidth").val()),
+                                        dashStyle : $html.find("#willr_dashStyle").val(),
                                         levels : levels
                                     };
-                                    //Add ATR for the main series
-                                    $($(".atr").data('refererChartID')).highcharts().series[0].addATR(options);
+                                    //Add WILLR for the main series
+                                    $($(".willr").data('refererChartID')).highcharts().series[0].addWILLR(options);
                                 });
 
                                 closeDialog.call($html);
@@ -167,13 +167,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
 
         open : function ( containerIDWithHash ) {
 
-            if ($(".atr").length == 0)
+            if ($(".willr").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".willr").data('refererChartID', containerIDWithHash).dialog( "open" );
 
         }
 

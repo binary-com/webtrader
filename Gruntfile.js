@@ -95,15 +95,24 @@ module.exports = function (grunt) {
             }
         },
 		'gh-pages': {
-			'gh-pages': {
+			'gh-pages-beta': {
 				options: {
 					base: 'dist/compressed',
 					add: true,
 					repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
-					message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
+					message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
 				},
 				src: ['**/*']
-			}
+			},
+            'gh-pages-prod': {
+                options: {
+                    base: 'dist/compressed',
+                    add: true,
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+                },
+                src: ['**/*']
+            }
 		},
 		connect: {
 			server: {

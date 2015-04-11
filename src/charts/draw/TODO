@@ -1,4 +1,15 @@
 > Chart objects
+http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/chart/events-click/
+http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/element-tofront/
+http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/renderer-g/
+http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/renderer-on-chart/
+http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/element-on/
+https://github.com/blacklabel/annotations/blob/master/js/annotations.js
+http://blacklabel.github.io/annotations/
+	> rectangle
+    	> circle
+    	> short line (free hand for now)
+    	> Label
     > Up, down, left , right arrows
     > vertical
     > horizontal

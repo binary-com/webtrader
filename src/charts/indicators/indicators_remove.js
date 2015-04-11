@@ -81,7 +81,8 @@ define(["jquery", "datatables", "common/loadCSS", 'charts/charts'], function ($)
                 if ($(this).data('isIndicator')) {
                     $.each(indicatorsJSON, function (indicatorDataKey, indicatorDataValue) {
                         if (series.options.name.indexOf(indicatorDataValue.short_display_name) != -1) {
-                            $(table.row.add([indicatorDataValue.long_display_name + '(' + $(series).data('period') + ')']).draw().node())
+                            var period_text = $(series).data('period') ? '(' + $(series).data('period') + ')' : '';
+                            $(table.row.add([indicatorDataValue.long_display_name + period_text]).draw().node())
                                 .click(function () {
                                     $(this).toggleClass('selected');
                                 }).data({

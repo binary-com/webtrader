@@ -25,3 +25,4 @@
 > If we use the above files, make sure to update grunt configuration and add watch plugin. This will help to watch these files for modification. If the files are change, it will automatically push the code to dist folder. Update connect plugin to server from dist folder.
 > Do some memory and frame profiling -> Note any performance degrading points
 > Try to think about an icon for menu items. Icons make more sense than text for menu items and will save more space and will be mobile friendly
+> Read the binary.com style document in order to make changes to highcharts application according to binary.com requirement
