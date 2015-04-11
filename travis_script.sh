@@ -7,8 +7,8 @@ if [ -n $release ]; then
     git config --global user.name "Arnab Karmakar"
     if [ -n $release_beta ]; then
         mkdir beta
-        mv -R dist/compressed/* beta
-        mvn beta dist/compressed
+        mv dist/compressed/* beta
+        mv beta dist/compressed
         grunt gh-pages-beta
     fi
     if [ -n $release_beta ]; then
