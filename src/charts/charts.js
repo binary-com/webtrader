@@ -2,7 +2,7 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highcharts-exporting", "highcharts-theme"],
+define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highcharts-exporting"],
   function ( $, requireJSESHInstance ) {
 
     "use strict";
@@ -118,6 +118,10 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                     }],
                     enabled: true,
                     enabledIndicators: true
+                },
+
+                exporting: {
+                    enabled: false //TODO work on this later
                 }
 
             });

@@ -69,6 +69,30 @@
     "id": "sum",
     "long_display_name": "Summation",
     "short_display_name": "SUM"
+  },
+
+  "wma": {
+    "id": "wma",
+    "long_display_name": "Weighted Moving Average",
+    "short_display_name": "WMA"
+  },
+
+  "tema": {
+    "id": "tema",
+    "long_display_name": "Triple Exponential Moving Average",
+    "short_display_name": "TEMA"
+  },
+
+  "trima": {
+    "id": "trima",
+    "long_display_name": "Triangular Moving Average",
+    "short_display_name": "TRIMA"
+  },
+
+  "natr": {
+    "id": "natr",
+    "long_display_name": "Normalized Average True Range",
+    "short_display_name": "NATR"
   }
 
 }

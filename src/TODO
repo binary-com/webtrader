@@ -26,3 +26,4 @@
 > Do some memory and frame profiling -> Note any performance degrading points
 > Try to think about an icon for menu items. Icons make more sense than text for menu items and will save more space and will be mobile friendly
 > Read the binary.com style document in order to make changes to highcharts application according to binary.com requirement
+> Over the course of time, the navigator curve becomes flat alothough charts are fine

@@ -174,7 +174,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new RSI data point
                     for (var key in rsiSeriesMap) {
-                        if (rsiSeriesMap[key] && rsiSeriesMap[key].options && rsiSeriesMap[key].options.data && rsiSeriesMap[key].options.data.length > 0) {
+                        if (rsiSeriesMap[key] && rsiSeriesMap[key].options && rsiSeriesMap[key].options.data && rsiSeriesMap[key].options.data.length > 0
+                            && rsiOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is RSI series. Add one more RSI point
                             //Calculate RSI data
                             /*

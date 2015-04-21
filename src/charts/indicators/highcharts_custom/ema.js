@@ -54,7 +54,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                                 emaData.push([data[emaOptions.period - 1].x ? data[emaOptions.period - 1].x : data[emaOptions.period - 1][0], sum / emaOptions.period]);
                             }
                             else {
-                                emaData.push([data[emaOptions.period - 1].x ? data[emaOptions.period - 1].x : data[emaOptions.period - 1][0], null]);
+                                emaData.push([data[index].x ? data[index].x : data[index][0], null]);
                             }
                         }
 
@@ -155,7 +155,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new EMA data point
                     for (var key in emaSeriesMap) {
-                        if (emaSeriesMap[key] && emaSeriesMap[key].options && emaSeriesMap[key].options.data && emaSeriesMap[key].options.data.length > 0) {
+                        if (emaSeriesMap[key] && emaSeriesMap[key].options && emaSeriesMap[key].options.data && emaSeriesMap[key].options.data.length > 0
+                                && emaOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is EMA series. Add one more EMA point
                             //Calculate EMA data
                             /*

@@ -160,7 +160,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new MAX data point
                     for (var key in maxSeriesMap) {
-                        if (maxSeriesMap[key] && maxSeriesMap[key].options && maxSeriesMap[key].options.data && maxSeriesMap[key].options.data.length > 0) {
+                        if (maxSeriesMap[key] && maxSeriesMap[key].options && maxSeriesMap[key].options.data && maxSeriesMap[key].options.data.length > 0
+                            && maxOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is MAX series. Add one more MAX point
                             //Calculate MAX data
                             /*

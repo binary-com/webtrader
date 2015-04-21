@@ -1,35 +1,22 @@
+> Implement Moving Average Convergence/Divergence(MACD)
+> Implement DEMA
+> KAMA
+> MAMA
+> T3
+> HMA
+> LWMA
+> SMMA
+> Average Price(AVGPRICE)
+> Average Directional Movement Index(ADX)
+> Bollinger Bands(BBANDS)
+> Parabolic SAR(SAR)
+> True Range(TRANGE)
+> Variance(VAR)
+> Weighted Close Price(WCLPRICE)
 > Implemented MEDPRICE            Median Price
-Implemented MIDPOINT            MidPoint over period
-Implemented MIDPRICE            Midpoint Price over period
-
-> NATR                Normalized Average True Range
->MA                  All Moving Average
-    > WMA
-    > DEMA
-    > TEMA
-    > TRIMA
-    > KAMA
-    > MAMA
-    > T3
-    > HMA
-    > LWMA
-    > SMMA
-
-
-Average Price(AVGPRICE)
-Average Directional Movement Index(ADX)
-Absolute Price Oscillator(APO)
-Bollinger Bands(BBANDS)
-Commodity Channel Index(CCI)
-Moving Average Convergence/Divergence(MACD)
-Parabolic SAR(SAR)
-Standard Deviation(STDDEV)
-Stochastic(STOCH)
-True Range(TRANGE)
-Ultimate Oscillator(ULTOSC)
-Variance(VAR)
-Weighted Close Price(WCLPRICE)
-D                   Chaikin A/D Line
+> Implemented MIDPOINT            MidPoint over period
+> Implemented MIDPRICE            Midpoint Price over period
+> D                   Chaikin A/D Line
 ADXR                Average Directional Movement Index Rating
 AROON               Aroon
 AROONOSC            Aroon Oscillator
@@ -111,10 +98,6 @@ LINEARREG_INTERCEPT Linear Regression Intercept
 LINEARREG_SLOPE     Linear Regression Slope
 MACDEXT             MACD with controllable MA type
 MACDFIX             Moving Average Convergence/Divergence Fix 12/26
-MAXINDEX            Index of highest value over a specified period
-MININDEX            Index of lowest value over a specified period
-MINMAX              Lowest and highest values over a specified period
-MINMAXINDEX         Indexes of lowest and highest values over a specified period
 MINUS_DI            Minus Directional Indicator
 MINUS_DM            Minus Directional Movement
 MOM                 Momentum
@@ -141,6 +124,4 @@ http://www.highcharts.com/stock/demo/compare
 
 > Some of the indicators like EMA, SMA etc shows Applied to price in line chart. Does not make sense
 
-> Some of the indicators like ATR, RSI, ROC etc are not asking for appliedTo
-
-> Review indicators to see if we can improve the calculation and make it faster
+> Some of the indicators like ATR, RSI, ROC, NATR etc are not asking for appliedTo

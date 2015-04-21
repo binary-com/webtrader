@@ -142,7 +142,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new TYPPRICE data point
                     for (var key in typpriceSeriesMap) {
-                        if (typpriceSeriesMap[key] && typpriceSeriesMap[key].options && typpriceSeriesMap[key].options.data && typpriceSeriesMap[key].options.data.length > 0) {
+                        if (typpriceSeriesMap[key] && typpriceSeriesMap[key].options && typpriceSeriesMap[key].options.data && typpriceSeriesMap[key].options.data.length > 0
+                            && typpriceOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is TYPPRICE series. Add one more TYPPRICE point
                             //Calculate TYPPRICE data
                             /*

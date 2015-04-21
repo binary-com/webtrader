@@ -159,7 +159,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new ROCP data point
                     for (var key in rocpSeriesMap) {
-                        if (rocpSeriesMap[key] && rocpSeriesMap[key].options && rocpSeriesMap[key].options.data && rocpSeriesMap[key].options.data.length > 0) {
+                        if (rocpSeriesMap[key] && rocpSeriesMap[key].options && rocpSeriesMap[key].options.data && rocpSeriesMap[key].options.data.length > 0
+                                && rocpOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is ROCP series. Add one more ROCP point
                             //Calculate ROCP data
                             /*

@@ -73,7 +73,7 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
                             }
                             else
                             {
-                                smaData.push([data[smaOptions.period - 1].x ? data[smaOptions.period - 1].x : data[smaOptions.period - 1][0], null]);
+                                smaData.push([data[index].x ? data[index].x : data[index][0], null]);
                             }
                         }
 
@@ -176,7 +176,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new SMA data point
                     for (var key in smaSeriesMap) {
-                        if (smaSeriesMap[key] && smaSeriesMap[key].options && smaSeriesMap[key].options.data && smaSeriesMap[key].options.data.length > 0) {
+                        if (smaSeriesMap[key] && smaSeriesMap[key].options && smaSeriesMap[key].options.data && smaSeriesMap[key].options.data.length > 0
+                            && smaOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is SMA series. Add one more SMA point
                             //Calculate SMA data
                             /*

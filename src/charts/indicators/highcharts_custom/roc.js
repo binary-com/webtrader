@@ -159,7 +159,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new ROC data point
                     for (var key in rocSeriesMap) {
-                        if (rocSeriesMap[key] && rocSeriesMap[key].options && rocSeriesMap[key].options.data && rocSeriesMap[key].options.data.length > 0) {
+                        if (rocSeriesMap[key] && rocSeriesMap[key].options && rocSeriesMap[key].options.data && rocSeriesMap[key].options.data.length > 0
+                                && rocOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is ROC series. Add one more ROC point
                             //Calculate ROC data
                             /*

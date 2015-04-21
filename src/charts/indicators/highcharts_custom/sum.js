@@ -162,7 +162,8 @@ define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], func
 
                     //Add a new SUM data point
                     for (var key in sumSeriesMap) {
-                        if (sumSeriesMap[key] && sumSeriesMap[key].options && sumSeriesMap[key].options.data && sumSeriesMap[key].options.data.length > 0) {
+                        if (sumSeriesMap[key] && sumSeriesMap[key].options && sumSeriesMap[key].options.data && sumSeriesMap[key].options.data.length > 0
+                            && sumOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is SUM series. Add one more SUM point
                             //Calculate SUM data
                             /*
