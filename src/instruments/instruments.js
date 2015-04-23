@@ -41,11 +41,10 @@ define(["jquery", "jquery-ui", "main"], function($) {
                             {
                                 require(["jquery", "jquery-growl"], function($) {
                                     $("#timePeriod").addClass('ui-state-error');
-                                    $.growl.error({ message:
-                                        + "Charts of less than "
+                                    $.growl.error({ message: "Charts of less than "
                                             //Convert to human readable (in minutes) format
                                         + convertToTimeperiodObject(delayAmount + 'm').humanReadableString()
-                                        + " minute(s) are not available for the " + displaySymbol + "." });
+                                        + " are not available for the " + displaySymbol + "." });
                                 });
                             }
                         }
