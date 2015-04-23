@@ -90,10 +90,12 @@ module.exports = function (grunt) {
         },
         uglify: {
             minify: {
-                expand: true,
-                cwd: 'dist/uncompressed',
-                src: ['**/*.js'],
-                dest: 'dist/compressed',
+                files: [{
+                    expand: true,
+                    cwd: 'dist/uncompressed',
+                    src: '**/*.js',
+                    dest: 'dist/compressed'
+                }],
                 mangle: true,
                 compress: {
                     sequences: true,

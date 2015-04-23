@@ -51,7 +51,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
             chart.xAxis[0].range = dataInHighChartsFormat[totalLength - 1][0] - dataInHighChartsFormat[endIndex][0]; //show 30 bars
         }
 
-        console.log('Rendering for : ' + instrumentCode + " " + id);
+        //console.log('Rendering for : ' + instrumentCode + " " + id);
         var series = chart.addSeries({
             id: id,
             name: instrumentName,
@@ -144,7 +144,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
             series.isDirtyData = true;
             series.chart.redraw();
         }
-        console.log("Total bars in memory : " + series.options.data.length);
+        //console.log("Total bars in memory : " + series.options.data.length);
     }
 
     function buildFeedURL(timeperiod, sourceURL) {
@@ -284,12 +284,12 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
         }, false);
 
         eventSource.addEventListener("error", function (event) {
-            console.log('Error!');
+            //console.log('Error!');
             eventSource.close();
             //Try it after a second in order to make sure that there are not too many connection requests
             $(document).oneTime(1000, null, function () {
-                console.log('Calling init again : ' + timeperiod + " " + instrumentCode + " "
-                                                        + containerIDWithHash + " " + type + " " + instrumentName);
+                //console.log('Calling init again : ' + timeperiod + " " + instrumentCode + " "
+                //                                        + containerIDWithHash + " " + type + " " + instrumentName);
                 //timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, firstTimeLoad, series_compare, id
                 init( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, false, series_compare, eventSource.id );
             });
@@ -298,7 +298,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
              });*/
         });
         eventSource.addEventListener("open", function (event) {
-            console.log('Connection opened!');
+            //console.log('Connection opened!');
         });
 
     }
@@ -317,7 +317,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
         {
             if (!$.isEmptyObject(eventSourceMap['' + containerIDWithHash])) {
                 $(eventSourceMap['' + containerIDWithHash]).each(function (index) {
-                    console.log('Closing EventSournce instance for container ID : ' + containerIDWithHash + ", index : " + index);
+                    //console.log('Closing EventSournce instance for container ID : ' + containerIDWithHash + ", index : " + index);
                     this.close();
                 })
             }
