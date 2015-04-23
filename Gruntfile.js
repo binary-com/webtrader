@@ -8,20 +8,22 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-rename');
 	grunt.loadNpmTasks('grunt-text-replace');
 	grunt.loadNpmTasks('grunt-gh-pages');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    /*
-     "loc": 72,    //physical lines
-     "sloc": 45,   //lines of source code
-     "cloc": 10,   //total comment
-     "scloc": 10,  //singleline
-     "mcloc": 0,   //multiline
-     "nloc": 17,   //multiline
-     "file": 22,   //empty
-     */
-    grunt.loadNpmTasks('grunt-sloc');
-    grunt.loadNpmTasks('grunt-bump');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-css-cleaner');
+
+	/*
+	"loc": 72,    //physical lines
+	"sloc": 45,   //lines of source code
+	"cloc": 10,   //total comment
+	"scloc": 10,  //singleline
+	"mcloc": 0,   //multiline
+	"nloc": 17,   //multiline
+	"file": 22,   //empty
+	*/
+	grunt.loadNpmTasks('grunt-sloc');
+	grunt.loadNpmTasks('grunt-bump');
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
@@ -91,39 +93,50 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'dist/uncompressed',
                 src: ['**/*.js'],
-                dest: 'dist/compressed'
+                dest: 'dist/compressed',
+                mangle: true,
+                compress: {
+                    sequences: true,
+                    dead_code: true,
+                    conditionals: true,
+                    booleans: true,
+                    unused: true,
+                    if_return: true,
+                    join_vars: true,
+                    drop_console: true
+                }
             }
         },
-		'gh-pages': {
-			'gh-pages-beta': {
-				options: {
-					base: 'dist/compressed',
-					add: true,
-					repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
-					message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
-				},
-				src: ['**/*']
-			},
-            'gh-pages-prod': {
+        'gh-pages': {
+            'gh-pages-beta': {
                 options: {
                     base: 'dist/compressed',
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
                 },
                 src: ['**/*']
+            },
+                'gh-pages-prod': {
+                    options: {
+                        base: 'dist/compressed',
+                        add: true,
+                        repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
+                        message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+                    },
+                    src: ['**/*']
+                }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 10001,
+                    base: 'src',
+                    hostname: 'localhost',
+                    keepalive: true
+                }
             }
-		},
-		connect: {
-			server: {
-				options: {
-					port: 10001,
-					base: 'src',
-					hostname: 'localhost',
-					keepalive: true
-				}
-			}
-		},
+        },
         sloc: {
             analyze: {
                 files: {
@@ -151,9 +164,16 @@ module.exports = function (grunt) {
                 prereleaseName: false,*/
                 regExp: false
             }
+        },
+        css_cleaner: {
+            taskname: {
+                options: {
+                    appRoot       : "./dist/compressed"
+                }
+            }
         }
 	});
 
-	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed']);
+	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'css_cleaner']);
 
 };

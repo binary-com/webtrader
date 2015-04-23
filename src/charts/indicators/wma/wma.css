@@ -1,0 +1,15 @@
+.wma_input_width {
+    width: 140px;
+}
+
+.wma_input_width_for_period {
+    width: 135px;
+}
+
+.wma label {
+    display: block;
+}
+
+.wma td {
+    white-space: nowrap;
+}
