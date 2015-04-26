@@ -1,0 +1,13 @@
+.bop_input_width {
+    width: 120px;
+}
+
+.bop label {
+    display: block;
+}
+
+#bop_levels_wrapper {
+    border: 1px solid #aaaaaa;
+    width: 100%;
+    border-radius: 5px;
+}

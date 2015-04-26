@@ -21,7 +21,6 @@ ADXR                Average Directional Movement Index Rating
 AROON               Aroon
 AROONOSC            Aroon Oscillator
 BETA                Beta
-BOP                 Balance Of Power
 CDL2CROWS           Two Crows
 CDL3BLACKCROWS      Three Black Crows
 CDL3INSIDE          Three Inside Up/Down
@@ -125,3 +124,5 @@ http://www.highcharts.com/stock/demo/compare
 > Some of the indicators like EMA, SMA etc shows Applied to price in line chart. Does not make sense
 
 > Some of the indicators like ATR, RSI, ROC, NATR etc are not asking for appliedTo
+
+> Add a new variable in indicator.json which will indicate whether this indicator could be used in line chart or not 

@@ -40,7 +40,7 @@ define(["jquery", "main"], function ($) {
                         height: 400,
                         title: instrumentName + " (" + timePeriod + ")",
                         close : function() {
-                            console.log('Destroying dialog ' + newTabId);
+                            //console.log('Destroying dialog ' + newTabId);
                             $(this).dialog('destroy');//completely remove this dialog
                             require(["charts/charts"], function (charts) {
                                 charts.destroy( "#" + newTabId + "_chart" );
