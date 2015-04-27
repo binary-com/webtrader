@@ -24,3 +24,11 @@ body {
     white-space: nowrap;
     display: block;
 }
+
+/*Applying ui-state-active and ui-state-hover does not work for this element*/
+.mainMenuHamburgerMenu:hover {
+    border      : 1px solid #AAA;
+    background  : url("images/ui-bg_glass_65_ffffff_1x400.png") repeat-x scroll 50% 50% #FFF;
+    font-weight : normal;
+    color       : #212121;
+}

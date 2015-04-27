@@ -115,7 +115,14 @@
     "id": "bop",
     "long_display_name": "Balance of Power",
     "short_display_name": "BOP",
-	"ohlcOnly" : true
+    "ohlcOnly" : true
+  },
+
+  "cdl2crows": {
+    "id": "cdl2crows",
+    "long_display_name": "Two Crows",
+    "short_display_name": "CDL2CROWS",
+    "ohlcOnly" : true
   }
 
 }

@@ -54,18 +54,17 @@ require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
 
     //Load our main CSS
     loadCSS("main.css");
+    loadCSS("lib/hamburger.css");
 
     //All dependencies loaded
     $(document).ready(function () {
 
         $(".mainContainer").load("mainContent.html", function() {
 
-            $(this).find('img:first').hover(function() {
-                $(this).toggleClass('ui-state-hover').toggleClass('ui-state-active');
-            }, function () {
-                $(this).toggleClass('ui-state-hover').toggleClass('ui-state-active');
-            }).click(function (e) {
-                $(this).next('ul:first').toggle();
+            $('.mainMenuHamburgerMenu').click(function (e) {
+                $(this)
+                    .toggleClass('active')
+                    .next('ul:first').toggle();
                 return false;
             });
 
@@ -75,6 +74,8 @@ require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
                 if( e.target.nodeName != 'LI' || $(e.target).find('ul').length == 0 )
                 {
                     $("ul.ui-menu").hide();
+                    //We are hiding menu, so have to revert back the menus to normal state
+                    $(".cmn-toggle-switch").removeClass("active");
                 }
             });
 
