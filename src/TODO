@@ -29,3 +29,4 @@
 > Over the course of time, the navigator curve becomes flat alothough charts are fine
 > Grunt HTMLHint
 > Revist all menus and figure out if we can provide on chart feature for the menus
+> Convert all PNG or other format images to SVG. If that is not possible, then figure out if we can compress images further

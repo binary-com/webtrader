@@ -20,3 +20,7 @@ or client side code)
 > Push the y axis labels inside the indicator area. Right now one indicator label is overlapping with others(continued)
 
 > Enable export feature again
+
+> Try to figure out if we can do anything in order allow usage of all indicators on charts other than OHLC or candlestick.
+If we can, then we should remove the usage of isOHLCOnly indicator from indicators.json file and also replace all its usage
+in other places. 

@@ -1,3 +1,4 @@
+Multiple series indicators - 
 > Implement Moving Average Convergence/Divergence(MACD)
 > Implement DEMA
 > KAMA
@@ -6,6 +7,7 @@
 > HMA
 > LWMA
 > SMMA
+
 > Average Price(AVGPRICE)
 > Average Directional Movement Index(ADX)
 > Bollinger Bands(BBANDS)
@@ -21,46 +23,6 @@ ADXR                Average Directional Movement Index Rating
 AROON               Aroon
 AROONOSC            Aroon Oscillator
 BETA                Beta
-CDLGAPSIDESIDEWHITE Up/Down-gap side-by-side white lines
-CDLGRAVESTONEDOJI   Gravestone Doji
-CDLHAMMER           Hammer
-CDLHANGINGMAN       Hanging Man
-CDLHARAMI           Harami Pattern
-CDLHARAMICROSS      Harami Cross Pattern
-CDLHIGHWAVE         High-Wave Candle
-CDLHIKKAKE          Hikkake Pattern
-CDLHIKKAKEMOD       Modified Hikkake Pattern
-CDLHOMINGPIGEON     Homing Pigeon
-CDLIDENTICAL3CROWS  Identical Three Crows
-CDLINNECK           In-Neck Pattern
-CDLINVERTEDHAMMER   Inverted Hammer
-CDLKICKING          Kicking
-CDLKICKINGBYLENGTH  Kicking - bull/bear determined by the longer marubozu
-CDLLADDERBOTTOM     Ladder Bottom
-CDLLONGLEGGEDDOJI   Long Legged Doji
-CDLLONGLINE         Long Line Candle
-CDLMARUBOZU         Marubozu
-CDLMATCHINGLOW      Matching Low
-CDLMATHOLD          Mat Hold
-CDLMORNINGDOJISTAR  Morning Doji Star
-CDLMORNINGSTAR      Morning Star
-CDLONNECK           On-Neck Pattern
-CDLPIERCING         Piercing Pattern
-CDLRICKSHAWMAN      Rickshaw Man
-CDLRISEFALL3METHODS Rising/Falling Three Methods
-CDLSEPARATINGLINES  Separating Lines
-CDLSHOOTINGSTAR     Shooting Star
-CDLSHORTLINE        Short Line Candle
-CDLSPINNINGTOP      Spinning Top
-CDLSTALLEDPATTERN   Stalled Pattern
-CDLSTICKSANDWICH    Stick Sandwich
-CDLTAKURI           Takuri (Dragonfly Doji with very long lower shadow)
-CDLTASUKIGAP        Tasuki Gap
-CDLTHRUSTING        Thrusting Pattern
-CDLTRISTAR          Tristar Pattern
-CDLUNIQUE3RIVER     Unique 3 River
-CDLUPSIDEGAP2CROWS  Upside Gap Two Crows
-CDLXSIDEGAP3METHODS Upside/Downside Gap Three Methods
 CMO                 Chande Momentum Oscillator
 CORREL              Pearson's Correlation Coefficient (r)
 DX                  Directional Movement Index
@@ -105,3 +67,5 @@ http://www.highcharts.com/stock/demo/compare
 > Some of the indicators like ATR, RSI, ROC, NATR etc are not asking for appliedTo
 
 > Add a new variable in indicator.json which will indicate whether this indicator could be used in line chart or not 
+
+> Find out a chart/series which could be used to test Two Crows indicator

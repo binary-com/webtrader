@@ -123,6 +123,34 @@
     "long_display_name": "Two Crows",
     "short_display_name": "CDL2CROWS",
     "ohlcOnly" : true
+  },
+
+  "cdl3blackcrows": {
+    "id": "cdl3blackcrows",
+    "long_display_name": "Three Black Crows",
+    "short_display_name": "CDL3BLACKCROWS",
+    "ohlcOnly" : true
+  },
+
+  "cdl3inside": {
+    "id": "cdl3inside",
+    "long_display_name": "Three Inside Up/Down",
+    "short_display_name": "CDL3INSIDE",
+    "ohlcOnly" : true
+  },
+
+  "cdl3linestrike": {
+    "id": "cdl3linestrike",
+    "long_display_name": "Three-Line Strike",
+    "short_display_name": "CDL3LINESTRIKE",
+    "ohlcOnly" : true
+  },
+
+  "cdl3outside": {
+    "id": "cdl3outside",
+    "long_display_name": "Three Outside Up/Down",
+    "short_display_name": "CDL3OUTSIDE",
+    "ohlcOnly" : true
   }
 
 }

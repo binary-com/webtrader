@@ -75,7 +75,7 @@ define(['jquery'], function ($) {
                 tileObject = $html.find('li.tile');
 
                 closeAllObject = $html.find('li.closeAll').click(function () {
-                    console.log('Event for closing all chart windows!');
+                    //console.log('Event for closing all chart windows!');
                     $('.chart-dialog').dialog( 'close' );
                 });
                 $parentObj.append($html).closest('ul').menu('refresh');
