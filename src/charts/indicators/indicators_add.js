@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "common/loadCSS"], function ($) {
+define(["jquery", "datatables", "common/loadCSS", "common/util"], function ($) {
 
     function init( containerIDWithHash, _callback ) {
 
@@ -22,7 +22,31 @@ define(["jquery", "datatables", "common/loadCSS"], function ($) {
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                buttons: []
+                buttons: [],
+                open : function(event, ui) {
+                  table
+                      .rows()
+                      .nodes()
+                      .to$().each(function() {
+
+                        try {
+                          var indicatorData = $(this).data("indicatorData");
+                          var refererChartID = $(".indicator_add_dialog").data('refererChartID');
+                          var chart = $(refererChartID).highcharts();
+                          var series = chart.series[0];//This is the main series
+                          var type = series.options.type;
+
+                          if (indicatorData && indicatorData.ohlcOnly && isDataTypeClosePriceOnly(type)) {
+                            $(this).hide();
+                          } else {
+                            $(this).show();
+                          }
+                        } catch (e) {
+                          $(this).show();
+                        }
+
+                      });
+                }
             });
 
             table.clear();

@@ -30,3 +30,4 @@
 > Grunt HTMLHint
 > Revist all menus and figure out if we can provide on chart feature for the menus
 > Convert all PNG or other format images to SVG. If that is not possible, then figure out if we can compress images further
+> Redirect users to unsupported_browsers.html in case any of features are not going to work for the client browser

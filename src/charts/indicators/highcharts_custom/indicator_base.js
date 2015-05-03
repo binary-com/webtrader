@@ -131,7 +131,28 @@ define(['jquery'], function ($) {
                 }
             }
             return dataPointIndex;
+        },
+
+        isDoji: function(options) {
+          if (options && options.open && options.high && options.low && options.close) {
+            var isOpenCloseSame = (options.open == options.close),
+                    differenceBet_Open_High = Math.abs(options.open - options.high),
+                    differenceBet_Open_Low = Math.abs(options.open - options.low),
+                    candleBodySize = Math.abs(options.low - options.high);
+
+            //Either open and close is same or difference between Open and Close is 1% of the total size of candle
+        		var isBearishContinuation = (isOpenCloseSame || ((candleBodySize * 0.10) >= Math.abs(options.open - options.close)))
+                                  && differenceBet_Open_High < differenceBet_Open_Low;
+
+        		var isBullishContinuation = (isOpenCloseSame || ((candleBodySize * 0.10) >= Math.abs(options.open - options.close)))
+                                  && differenceBet_Open_High > differenceBet_Open_Low;
+          }
+          return {
+            isBull : isBullishContinuation,
+            isBear : isBearishContinuation
+          };
         }
+
     };
 
     return indicatorBase;
