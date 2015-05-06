@@ -1,15 +1,22 @@
 <div class="roc" title="Rate Of Change(ROC)">
     <table width="100%">
         <tr>
-            <td>Period</td>
+          <td colspan="2">
+            The Price Rate-of-Change ("ROC") indicator displays the difference between the current
+            price and the price x-time periods ago. The difference can be displayed in either points
+            or as a percentage.
+          </td>
+        </tr>
+        <tr>
+            <td><strong>Period</strong></td>
             <td><input value="14" min="1" max="200" class="roc_input_width_for_period"/></td>
         </tr>
         <tr>
-            <td>Stroke</td>
+            <td><strong>Stroke</strong></td>
             <td><input value="" id="roc_stroke" type="button" class="roc_input_width" style="background: #cd0a0a;"/></td>
         </tr>
         <tr>
-            <td>Stroke width</td>
+            <td><strong>Stroke width</strong></td>
             <td>
                 <select id="roc_strokeWidth" class="roc_input_width">
                     <option value="1">1</option>
@@ -26,7 +33,7 @@
             </td>
         </tr>
         <tr>
-            <td>Dash style</td>
+            <td><strong>Dash style</strong></td>
             <td>
                 <select id="roc_dashStyle" class="roc_input_width">
                     <option value="Solid" selected>Solid</option>

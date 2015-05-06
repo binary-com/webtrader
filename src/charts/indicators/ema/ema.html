@@ -1,15 +1,23 @@
 <div class="ema" title="Exponential Moving Average(EMA)">
     <table width="100%">
         <tr>
-            <td>Period</td>
+          <td colspan="2">
+            The Exponential Moving Average (EMA) represents an average of prices, but places more
+            weight on recent prices. The weighting applied to the most recent price depends on the
+            selected period of the moving average. The shorter the period for the EMA, the more
+            weight that will be applied to the most recent price.
+          </td>
+        </tr>
+        <tr>
+            <td><strong>Period</strong></td>
             <td><input value="21" min="1" max="200" class="ema_input_width_for_period"/></td>
         </tr>
         <tr>
-            <td>Stroke</td>
+            <td><strong>Stroke</strong></td>
             <td><input value="" id="ema_stroke" type="button" class="ema_input_width" style="background: #cd0a0a;"/></td>
         </tr>
         <tr>
-            <td>Stroke width</td>
+            <td><strong>Stroke width</strong></td>
             <td>
                 <select id="ema_strokeWidth" class="ema_input_width">
                     <option value="1">1</option>
@@ -26,7 +34,7 @@
             </td>
         </tr>
         <tr>
-            <td>Dash style</td>
+            <td><strong>Dash style</strong></td>
             <td>
                 <select id="ema_dashStyle" class="ema_input_width">
                     <option value="Solid" selected>Solid</option>
@@ -44,7 +52,7 @@
             </td>
         </tr>
         <tr>
-            <td>Applied to</td>
+            <td><strong>Applied to</strong></td>
             <td>
                 <select id="ema_appliedTo" class="ema_input_width">
                     <option value="0">OPEN</option>

@@ -1,15 +1,22 @@
 <div class="rocr" title="Rate Of Change Ratio(ROCR)">
     <table width="100%">
         <tr>
-            <td>Period</td>
+          <td colspan="2">
+            The Rate of Change Rate (ROCR) indicator compares the current price with the previous
+            price from a selected number of periods ago. The current price is divided by the previous
+            price. This indicator is also commonly known as a momentum indicator.
+          </td>
+        </tr>
+        <tr>
+            <td><strong>Period</strong></td>
             <td><input value="14" min="1" max="200" class="rocr_input_width_for_period"/></td>
         </tr>
         <tr>
-            <td>Stroke</td>
+            <td><strong>Stroke</strong></td>
             <td><input value="" id="rocr_stroke" type="button" class="rocr_input_width" style="background: #cd0a0a;"/></td>
         </tr>
         <tr>
-            <td>Stroke width</td>
+            <td><strong>Stroke width</strong></td>
             <td>
                 <select id="rocr_strokeWidth" class="rocr_input_width">
                     <option value="1">1</option>
@@ -26,7 +33,7 @@
             </td>
         </tr>
         <tr>
-            <td>Dash style</td>
+            <td><strong>Dash style</strong></td>
             <td>
                 <select id="rocr_dashStyle" class="rocr_input_width">
                     <option value="Solid" selected>Solid</option>

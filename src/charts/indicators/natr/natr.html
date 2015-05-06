@@ -1,15 +1,21 @@
 <div class="natr" title="Normalized Average True Range(NATR)">
     <table width="100%">
         <tr>
-            <td>Period</td>
+          <td colspan="2">
+            Normalized Average True Range (NATR) attempts to normalize the average true range
+            values across instruments by using the formula below.
+          </td>
+        </tr>
+        <tr>
+            <td><strong>Period</strong></td>
             <td><input value="14" min="1" max="200" class="natr_input_width_for_period"/></td>
         </tr>
         <tr>
-            <td>Stroke</td>
+            <td><strong>Stroke</strong></td>
             <td><input value="" id="natr_stroke" type="button" class="natr_input_width" style="background: #cd0a0a;"/></td>
         </tr>
         <tr>
-            <td>Stroke width</td>
+            <td><strong>Stroke width</strong></td>
             <td>
                 <select id="natr_strokeWidth" class="natr_input_width">
                     <option value="1">1</option>
@@ -26,7 +32,7 @@
             </td>
         </tr>
         <tr>
-            <td>Dash style</td>
+            <td><strong>Dash style</strong></td>
             <td>
                 <select id="natr_dashStyle" class="natr_input_width">
                     <option value="Solid" selected>Solid</option>

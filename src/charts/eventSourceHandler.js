@@ -187,7 +187,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
     function init( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, firstTimeLoad, series_compare, id)
     {
 
-        var eventSource = new EventSource(buildFeedURL(timeperiod, "https://stream.binary.com/stream/ticks/" + instrumentCode + "/"));
+        var eventSource = new EventSource(buildFeedURL(timeperiod, "https://www.binary.com/stream/ticks/" + instrumentCode + "/"));
         if ($.isEmptyObject(eventSourceMap['' + containerIDWithHash])) {
             eventSourceMap['' + containerIDWithHash] = [];
         }

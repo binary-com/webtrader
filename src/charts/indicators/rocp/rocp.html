@@ -1,15 +1,23 @@
 <div class="rocp" title="Rate Of Change Percentage(ROCP)">
     <table width="100%">
         <tr>
-            <td>Period</td>
+          <td colspan="2">
+            The Rate of Change Percentage (ROCP) indicator compares the current price with the
+            previous price from a selected number of periods ago. The current price is divided
+            by the previous price. ROCP does not express as a percentage. This indicator is also
+            commonly known as a momentum indicator.
+          </td>
+        </tr>
+        <tr>
+            <td><strong>Period</strong></td>
             <td><input value="14" min="1" max="200" class="rocp_input_width_for_period"/></td>
         </tr>
         <tr>
-            <td>Stroke</td>
+            <td><strong>Stroke</strong></td>
             <td><input value="" id="rocp_stroke" type="button" class="rocp_input_width" style="background: #cd0a0a;"/></td>
         </tr>
         <tr>
-            <td>Stroke width</td>
+            <td><strong>Stroke width</strong></td>
             <td>
                 <select id="rocp_strokeWidth" class="rocp_input_width">
                     <option value="1">1</option>
@@ -26,7 +34,7 @@
             </td>
         </tr>
         <tr>
-            <td>Dash style</td>
+            <td><strong>Dash style</strong></td>
             <td>
                 <select id="rocp_dashStyle" class="rocp_input_width">
                     <option value="Solid" selected>Solid</option>

@@ -6,6 +6,10 @@
     width: 115px;
 }
 
+.rocp_level_input_width_for_level {
+    width: 115px;
+}
+
 .rocp label {
     display: block;
 }

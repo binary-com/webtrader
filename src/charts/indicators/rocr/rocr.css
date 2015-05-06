@@ -6,6 +6,10 @@
     width: 115px;
 }
 
+.rocr_level_input_width_for_level {
+    width: 115px;
+}
+
 .rocr label {
     display: block;
 }

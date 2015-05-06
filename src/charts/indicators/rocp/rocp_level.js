@@ -51,7 +51,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 350,
+                width: 280,
                 modal: true,
                 buttons: [
                     {

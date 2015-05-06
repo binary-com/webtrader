@@ -5,7 +5,3 @@
 .typprice label {
     display: block;
 }
-
-.typprice td {
-    white-space: nowrap;
-}
