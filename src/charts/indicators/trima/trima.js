@@ -48,7 +48,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                 modal: true,
                 width: 320,
                 buttons: [
-                    {
+                    {
                         text: "Ok",
                         click: function() {
                             //console.log('Ok button is clicked!');

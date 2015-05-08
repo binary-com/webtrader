@@ -15,7 +15,7 @@
 4. When the application is loaded, it will show a growl message saying instruments menu is getting loaded. In this interim
 phase, it will disable the instruments. When the data is available, this menu will be enabled
 
-5. Windows > Tile - Should tile all windows. The dimension is 350x400
+5. Windows > Tile - Should tile all windows. The dimension is 350x400 
 
 6. Windows > Close ALl - Will close all windows
 
@@ -47,4 +47,3 @@ instrument, it will show error message
 19. 1 Minute chart with overlay should be left for more than 24 hours to see if the charts are getting stopped out
 
 20. SHould not able to open more than 4 charts in mobile and 10 charts on desktop
-
