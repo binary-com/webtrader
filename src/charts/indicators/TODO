@@ -1,4 +1,59 @@
-Multiple series indicators - 
+CDLADVANCEBLOCK     Advance Block
+CDLBELTHOLD         Belt-hold
+CDLBREAKAWAY        Breakaway
+CDLCONCEALBABYSWALL Concealing Baby Swallow
+CDLCOUNTERATTACK    Counterattack
+CDLDARKCLOUDCOVER   Dark Cloud Cover
+CDLDRAGONFLYDOJI    Dragonfly Doji
+CDLENGULFING        Engulfing Pattern
+CDLEVENINGDOJISTAR  Evening Doji Star
+CDLEVENINGSTAR      Evening Star
+CDLGAPSIDESIDEWHITE Up/Down-gap side-by-side white lines
+CDLGRAVESTONEDOJI   Gravestone Doji
+CDLHAMMER           Hammer
+CDLHANGINGMAN       Hanging Man
+CDLHARAMI           Harami Pattern
+CDLHARAMICROSS      Harami Cross Pattern
+CDLHIGHWAVE         High-Wave Candle
+CDLHIKKAKE          Hikkake Pattern
+CDLHIKKAKEMOD       Modified Hikkake Pattern
+CDLHOMINGPIGEON     Homing Pigeon
+CDLIDENTICAL3CROWS  Identical Three Crows
+CDLINNECK           In-Neck Pattern
+CDLINVERTEDHAMMER   Inverted Hammer
+CDLKICKING          Kicking
+CDLKICKINGBYLENGTH  Kicking - bull/bear determined by the longer marubozu
+CDLLADDERBOTTOM     Ladder Bottom
+CDLLONGLEGGEDDOJI   Long Legged Doji
+CDLLONGLINE         Long Line Candle
+CDLMARUBOZU         Marubozu
+CDLMATCHINGLOW      Matching Low
+CDLMATHOLD          Mat Hold
+CDLMORNINGDOJISTAR  Morning Doji Star
+CDLMORNINGSTAR      Morning Star
+CDLONNECK           On-Neck Pattern
+CDLPIERCING         Piercing Pattern
+CDLRICKSHAWMAN      Rickshaw Man
+CDLRISEFALL3METHODS Rising/Falling Three Methods
+CDLSEPARATINGLINES  Separating Lines
+CDLSHOOTINGSTAR     Shooting Star
+CDLSHORTLINE        Short Line Candle
+CDLSPINNINGTOP      Spinning Top
+CDLSTALLEDPATTERN   Stalled Pattern
+CDLSTICKSANDWICH    Stick Sandwich
+CDLTAKURI           Takuri (Dragonfly Doji with very long lower shadow)
+CDLTASUKIGAP        Tasuki Gap
+CDLTRISTAR          Tristar Pattern
+CDLUNIQUE3RIVER     Unique 3 River
+CDLUPSIDEGAP2CROWS  Upside Gap Two Crows
+CDLXSIDEGAP3METHODS Upside/Downside Gap Three Methods
+> Stochastic(STOCH) https://www.tradingtechnologies.com/help/xstudy/stochastic-stoch/
+> Standard Deviation(STDDEV) https://www.tradingtechnologies.com/help/xstudy/standard-deviation-stddev/
+> Ultimate Oscillator(ULTOSC) https://www.tradingtechnologies.com/help/xstudy/ultimate-oscillator-ultosc/
+> Commodity Channel Index(CCI) https://www.tradingtechnologies.com/help/xstudy/commodity-channel-index-cci/
+> Absolute Price Oscillator(APO) https://www.tradingtechnologies.com/help/xstudy/absolute-price-oscillator-apo/
+
+Multiple series indicators -
 > Implement Moving Average Convergence/Divergence(MACD)
 > Implement DEMA
 > KAMA
@@ -66,6 +121,6 @@ http://www.highcharts.com/stock/demo/compare
 
 > Some of the indicators like ATR, RSI, ROC, NATR etc are not asking for appliedTo
 
-> Add a new variable in indicator.json which will indicate whether this indicator could be used in line chart or not 
+> Add a new variable in indicator.json which will indicate whether this indicator could be used in line chart or not
 
 > Find out a chart/series which could be used to test Two Crows indicator
