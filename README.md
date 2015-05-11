@@ -1,6 +1,6 @@
 #highcharts [![Build Status](https://magnum.travis-ci.com/regentmarkets/highcharts.svg?token=G5WVALzDGxSszAeYnDnJ&branch=master)](https://magnum.travis-ci.com/regentmarkets/highcharts) <a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px"></a>
 This repository contains HTML, Javascript, CSS, and images content of the [Higcharts implementation for binary.com charts](http://regentmarkets.github.io/highcharts) website.
-
+ 
 ##How to work with this project
 ####Learn how to setup the project:
 In order to get started on this project, follow these steps. The steps are meant for Linux OS users. However Windows and MacOS should be similar
