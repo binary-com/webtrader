@@ -32,3 +32,7 @@ body {
     font-weight : normal;
     color       : #212121;
 }
+
+.gtm_data_layer {
+  display : none;
+}

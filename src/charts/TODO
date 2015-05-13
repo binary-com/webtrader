@@ -24,3 +24,5 @@ or client side code)
 > Try to figure out if we can do anything in order allow usage of all indicators on charts other than OHLC or candlestick.
 If we can, then we should remove the usage of isOHLCOnly indicator from indicators.json file and also replace all its usage
 in other places.
+
+> Overlay menu should be automatically disabled in OHLC chart types if we are not allowing overlays on chart types that are not allowed
