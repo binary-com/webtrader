@@ -15,7 +15,8 @@ requirejs.config({
         'datatables': "//cdn.datatables.net/1.10.5/js/jquery.dataTables.min",
         'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
         'eventsource': 'lib/eventsource',
-        'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice'
+        'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
+        'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min'
     },
     "shim": {
         "jquery-ui": {
@@ -68,7 +69,7 @@ require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
                 return false;
             });
 
-            $( ".topContainer ul" ).menu();
+            $( ".topContainer .topMenu button" ).button();
             $(document).click(function (e) {
                 //e.target.nodeName != 'LI' >>> Captures click on document
                 if( e.target.nodeName != 'LI' || $(e.target).find('ul').length == 0 )
@@ -92,10 +93,10 @@ require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer ul li.windows'));
+                windows.init($('.topContainer .windows'));
             });
 
-            $('.topContainer ul li.about').click(function () {
+            $('.topContainer .about').click(function () {
 
                 require(["about/about"], function( about ) {
                     about.open();

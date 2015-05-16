@@ -6,6 +6,7 @@ body {
     position: absolute;
     z-index: 1003;
     float: left;
+    width: 100%;
 }
 
 .topContainer > img {
@@ -35,4 +36,15 @@ body {
 
 .gtm_data_layer {
   display : none;
+}
+
+@media (screen and (max-device-width: 600px)) {
+  .windows {
+    display : none;
+  }
+}
+
+.topMenu {
+  width : 100%;
+  text-align : center;
 }

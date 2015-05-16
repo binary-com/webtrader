@@ -2,21 +2,20 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery'], function ($) {
+define(['jquery', 'modernizr'], function ($) {
 
     var closeAllObject = null, tileObject = null,
-        //We cannot open more than 6 charts in modern browsers - Restriction of 6 connections
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
             {
                 symbol : 'R_25',
                 name : 'Random 25 Index',
                 timeperiod : '1d',
-                chartType : 'line'
+                chartType : 'candlestick'
             }, {
                 symbol : 'R_50',
                 name : 'Random 50 Index',
                 timeperiod : '8h',
-                chartType : 'candlestick'
+                chartType : 'line'
             }, {
                 symbol : 'R_75',
                 name : 'Random 75 Index',
@@ -59,11 +58,18 @@ define(['jquery'], function ($) {
                 chartType : 'line'
             }];
 
-    //---------Calculation to find out how many windows to open based on user's window size-----start----
+    //-----start----
+    //For desktops and laptops or large size tablets
+    //---------Calculation to find out how many windows to open based on user's window size
     var totalAvailableBrowserWindowWidth = $(window).width() - $('.topContainer').width();
     var totalAvailableBrowserWindowHeight = $(window).height();
     var totalChartsPerRow = Math.floor(totalAvailableBrowserWindowWidth / (350 + 20));
     var totalRows = Math.floor(totalAvailableBrowserWindowHeight / (400 + 10));
+    //For small size screens
+    if (Modernizr.mq("screen and (max-device-width: 600px)")) {
+      totalRows = 1;
+      totalChartsPerRow = 1;
+    }
     //---------End-----------------------------
 
     return {
@@ -78,7 +84,10 @@ define(['jquery'], function ($) {
                     //console.log('Event for closing all chart windows!');
                     $('.chart-dialog').dialog( 'close' );
                 });
-                $parentObj.append($html).closest('ul').menu('refresh');
+                $html.menu();
+                $parentObj.click(function() {
+                  $html.menu('enable');
+                }).append($html);
 
                 require(["charts/chartWindow"], function (chartWindowObj) {
 
