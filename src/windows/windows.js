@@ -2,9 +2,9 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'modernizr'], function ($) {
+define(['jquery', 'modernizr', 'common/util'], function ($) {
 
-    var closeAllObject = null, tileObject = null,
+    var closeAllObject = null,
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
             {
                 symbol : 'R_25',
@@ -61,16 +61,64 @@ define(['jquery', 'modernizr'], function ($) {
     //-----start----
     //For desktops and laptops or large size tablets
     //---------Calculation to find out how many windows to open based on user's window size
-    var totalAvailableBrowserWindowWidth = $(window).width() - $('.topContainer').width();
+    var totalAvailableBrowserWindowWidth = $(window).width();
     var totalAvailableBrowserWindowHeight = $(window).height();
     var totalChartsPerRow = Math.floor(totalAvailableBrowserWindowWidth / (350 + 20));
     var totalRows = Math.floor(totalAvailableBrowserWindowHeight / (400 + 10));
     //For small size screens
-    if (Modernizr.mq("screen and (max-device-width: 600px)")) {
+    if (isSmallView() || totalRows <= 0 || totalChartsPerRow <= 0) {
       totalRows = 1;
       totalChartsPerRow = 1;
     }
     //---------End-----------------------------
+
+    function tileAction() {
+      require(["charts/chartWindow"], function (chartWindowObj) {
+        var topMargin = 40;
+        if (isSmallView()) topMargin = 100;
+
+        var cellCount = 1, rowCount = 1, leftMargin = 20;
+        var minWidth = $(".chart-dialog").dialog('option', 'minWidth');
+        var minHeight = $(".chart-dialog").dialog('option', 'minHeight');
+
+        if (isSmallView()) {
+          minWidth = $(window).width() - leftMargin * 2;
+          minHeight = $(window).height() - topMargin;
+        }
+
+        var totalOccupiedSpace = totalChartsPerRow * minWidth + (totalChartsPerRow - 1) * leftMargin;
+        var remainingSpace = $(window).width() - totalOccupiedSpace;
+        var startMargin = Math.round(remainingSpace / 2) - Math.round(leftMargin / 2);
+
+        var referenceObjectForPositioning = window;
+
+        $(".chart-dialog").each(function () {
+
+          var leftShift = (cellCount == 1 ? startMargin : minWidth + leftMargin);
+          var topShift = -topMargin - 3;
+          if (referenceObjectForPositioning == window) {
+            topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
+          }
+
+          referenceObjectForPositioning = $(this).dialog('option', {
+                position: {
+                    my: "left+" + leftShift + " top" + (topShift < 0 ? "-" : "+") + topShift,
+                    at: "left top",
+                    of: referenceObjectForPositioning
+                },
+                width : minWidth,
+                height : minHeight
+            });
+            chartWindowObj.triggerResizeEffects( $(this).dialog( "widget").find('.chart-dialog') );
+            if (++cellCount > totalChartsPerRow)
+            {
+                cellCount = 1;
+                ++rowCount;
+                referenceObjectForPositioning = window;
+            }
+        });
+      });
+    };
 
     return {
 
@@ -84,68 +132,39 @@ define(['jquery', 'modernizr'], function ($) {
                     //console.log('Event for closing all chart windows!');
                     $('.chart-dialog').dialog( 'close' );
                 });
-                $html.menu();
-                $parentObj.click(function() {
-                  $html.menu('enable');
+
+                $parentObj.find('button').button("enable").button("refresh").button("widget").click(function(e) {
+                  var menu = $(this).closest('div').find("ul").menu();
+                  if (menu.is(":visible")) {
+                    menu.hide();
+                  } else {
+                    menu.show();
+                  }
+                  e.preventDefault();
+                  return false;
+                }).focusout(function() {
+                  $(this).closest('div').find('ul').menu().hide();
                 }).append($html);
 
                 require(["charts/chartWindow"], function (chartWindowObj) {
 
                     //Attach click listener for tile menu
                     tileObject.click(function () {
-                        var cellCount = 1, rowCount = 1;
-                        $(".chart-dialog").each(function () {
-                            var minWidth = $(this).dialog('option', 'minWidth');
-                            var minHeight = $(this).dialog('option', 'minHeight');
-                            $(this).dialog('option', {
-                                position: {
-                                    my: "left+" + ((cellCount - 1) * 350 + $('.topContainer').width() + cellCount * 20)
-                                    + " top+" + ((rowCount - 1) * 400 + rowCount * 10),
-                                    at: "left top",
-                                    of: window
-                                },
-                                width : minWidth,
-                                height : minHeight
-                            });
-                            chartWindowObj.triggerResizeEffects( $(this).dialog( "widget").find('.chart-dialog') );
-                            if (++cellCount > totalChartsPerRow)
-                            {
-                                cellCount = 1;
-                                ++rowCount;
-                            }
-                        });
+                      tileAction();
                     });
 
                     //Based on totalChartsPerRow and totalRows, open some charts
-                    var count = 1, cellCount = 1, rowCount = 1;
-                    function openChart() {
-                        chartWindowObj.addNewWindow(instrumentArrayForInitialLoading[count - 1].symbol,
-                            instrumentArrayForInitialLoading[count - 1].name,
-                            instrumentArrayForInitialLoading[count - 1].timeperiod, function (chartWindowJqueryObj) {
-                                chartWindowJqueryObj.dialog('option', {
-                                    position: {
-                                        my: "left+" + ((cellCount - 1) * 350 + $('.topContainer').width() + cellCount * 20)
-                                                    + " top+" + ((rowCount - 1) * 400 + rowCount * 10),
-                                        at: "left top",
-                                        of: window
-                                    }
-                                });
-                                if (++count <= instrumentArrayForInitialLoading.length)
-                                {
-                                    if (++cellCount > totalChartsPerRow)
-                                    {
-                                        cellCount = 1;
-                                        rowCount++;
-                                    }
-                                    if (rowCount <= totalRows)
-                                    {
-                                        openChart();
-                                    }
-                                }
-                            }, instrumentArrayForInitialLoading[count - 1].chartType);
-                    }
+                    var totalCharts_renderable = totalChartsPerRow * totalRows;
+                    $(instrumentArrayForInitialLoading).each(function (index, value) {
+                      if (index < totalCharts_renderable) {
+                        chartWindowObj.addNewWindow(value.symbol, value.name, value.timeperiod,
+                            function() {
+                              //Trigger tile action
+                              tileAction();
+                            }, value.chartType);
+                      }
+                    });
 
-                    openChart();
                 });
 
             });
@@ -153,10 +172,7 @@ define(['jquery', 'modernizr'], function ($) {
         },
 
         tile: function() {
-            if (!tileObject)
-            {
-                tileObject.click();
-            }
+          tileAction();
         },
 
         closeAll: function() {

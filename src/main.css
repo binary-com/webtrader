@@ -1,23 +1,17 @@
 body {
-    font-size: 12px;
+    font-size: 100%;
 }
 
 .topContainer {
     position: absolute;
-    z-index: 1003;
-    float: left;
+    left: 0;
+    top: 0;
     width: 100%;
-}
-
-.topContainer > img {
-    position: relative;
-    float: left;
 }
 
 .topContainer ul {
     display: none;
     position: absolute;
-    top: 26px;
 }
 
 .topContainer li {
@@ -38,13 +32,47 @@ body {
   display : none;
 }
 
-@media (screen and (max-device-width: 600px)) {
-  .windows {
-    display : none;
-  }
-}
-
 .topMenu {
   width : 100%;
   text-align : center;
+}
+
+.topMenu div {
+  display : inline;
+}
+
+.ui-menu {
+  z-Index : 1003;
+}
+
+.instruments-icon {
+  background-image: url(images/charts.svg) !important;
+  background-size: 100% 100%;
+  top: 30% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.windows-icon {
+  background-image: url(images/windows.svg) !important;
+  background-size: 100% 100%;
+  top: 30% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.workspace-icon {
+  background-image: url(images/settings.svg) !important;
+  background-size: 100% 100%;
+  top: 30% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.about-icon {
+  background-image: url(images/about.svg) !important;
+  background-size: 100% 100%;
+  top: 30% !important;
+  width: 26px !important;
+  height: 26px !important;
 }

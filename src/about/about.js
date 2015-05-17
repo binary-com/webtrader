@@ -9,13 +9,17 @@ define(['jquery'], function ($) {
 
         init : function() {
             if (!aboutDialogObject) {
-                loadCSS('about/about.css');
                 $.get('about/about.html', function ($html) {
-                    aboutDialogObject = $($html).dialog({
+                    aboutDialogObject = $($html);
+                    $("body").append(aboutDialogObject);
+                    aboutDialogObject.dialog({
                         autoOpen: false,
                         resizable: false,
-                        width: 330,
+                        width: 300,
                         height: 120,
+                        my: 'center',
+                        at: 'center',
+                        of: window,
                         title: 'About'
                     });
                     aboutDialogObject.dialog('open');

@@ -18,6 +18,7 @@ define(["jquery", "main"], function ($) {
         require(["charts/charts"], function(charts) {
             charts.triggerReflow(containerIDWithHash);
         });
+
     }
 
     return {
@@ -38,6 +39,9 @@ define(["jquery", "main"], function ($) {
                         minHeight: 400,
                         width: 350,
                         height: 400,
+                        my: 'center',
+                        at: 'center',
+                        of: window,
                         title: instrumentName + " (" + timePeriod + ")",
                         close : function() {
                             //console.log('Destroying dialog ' + newTabId);

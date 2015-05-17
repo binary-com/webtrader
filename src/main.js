@@ -46,7 +46,7 @@ requirejs.config({
     }
 });
 
-require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
+require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], function( $ ) {
 
     "use strict";
 
@@ -57,28 +57,54 @@ require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
     loadCSS("main.css");
     loadCSS("lib/hamburger.css");
 
+    function resetTopMenu() {
+      var show = true;
+      if(isSmallView()) {
+        show = false;
+      }
+      $('.topContainer .topMenu button' ).each(function() {
+        //This cloning step is required for proper functioning of clicks
+        var ul = $(this).find("ul:first").clone(true);
+        $(this).find("ul:first").remove();
+        //When we set the text, Jquery UI is removing any child of this button. We have to restore this
+        $(this).button("option", "text", show).button("widget").append(ul);
+      });
+    };
+
     //All dependencies loaded
     $(document).ready(function () {
 
         $(".mainContainer").load("mainContent.html", function() {
 
-            $('.mainMenuHamburgerMenu').click(function (e) {
-                $(this)
-                    .toggleClass('active')
-                    .next('ul:first').toggle();
-                return false;
-            });
+            $('.topContainer .topMenu')
+                    .find("button" ).button()
+                    .filter('.about').button({
+                      icons: {
+                        primary: "about-icon",
+                      }
+                    }).end()
+                    .filter('.windows').button({
+                      icons: {
+                        primary: "windows-icon",
+                      }
+                    }).end()
+                    .filter('.instruments').button({
+                      icons: {
+                        primary: "instruments-icon",
+                      },
+                      disabled: true
+                    }).end()
+                    .filter(".workspace").button({
+                      icons: {
+                        primary: "workspace-icon",
+                      },
+                      disabled: true
+                    });
 
-            $( ".topContainer .topMenu button" ).button();
-            $(document).click(function (e) {
-                //e.target.nodeName != 'LI' >>> Captures click on document
-                if( e.target.nodeName != 'LI' || $(e.target).find('ul').length == 0 )
-                {
-                    $("ul.ui-menu").hide();
-                    //We are hiding menu, so have to revert back the menus to normal state
-                    $(".cmn-toggle-switch").removeClass("active");
-                }
+            $(window).resize(function() {
+              resetTopMenu();
             });
+            resetTopMenu();
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
@@ -88,12 +114,12 @@ require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
                     $.growl.notice({ message: "Loading instruments menu!" });
                 });
 
-                instrumentsMod.init( $(".mainContainer").find('.instruments') );
+                instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
             });
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows'));
+                windows.init($('.topContainer .windows').closest('div'));
             });
 
             $('.topContainer .about').click(function () {
@@ -102,6 +128,11 @@ require(["jquery", "jquery-ui", "common/loadCSS"], function( $ ) {
                     about.open();
                 });
 
+            });
+
+            //Resize the background image
+            $(window).resize(function() {
+              $(".binary-watermark-logo").height($(this).height());
             });
 
         });

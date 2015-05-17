@@ -111,6 +111,9 @@ define(["jquery", "datatables", "common/loadCSS"], function ($) {
                         autoOpen: false,
                         resizable: false,
                         modal: true,
+                        my: 'center',
+                        at: 'center',
+                        of: window,
                         buttons: []
                     });
 

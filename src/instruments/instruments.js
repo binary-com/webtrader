@@ -15,7 +15,7 @@ define(["jquery", "jquery-ui", "main"], function($) {
                 if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows()))
                 {
                     require(["jquery", "jquery-growl"], function($) {
-                        $.growl.error({ message: "Too many charts!" });
+                        $.growl.error({ message: "No more charts allowed!" });
                     });
                     return;
                 }
@@ -80,17 +80,19 @@ define(["jquery", "jquery-ui", "main"], function($) {
 
         $.each(data, function(key, value) {
             var newLI = $("<li>").append(value.display_name)
-                .data("symbol", value.symbol)
+                                .data("symbol", value.symbol)
                                 .data("delay_amount", value.delay_amount)
                                 .appendTo( rootElement );
 
-
             if (value.submarkets || value.instruments) {
+                newLI.click(function(e) {
+                  e.preventDefault();
+                  return false;
+                });
                 var newUL = $("<ul>").addClass('ui-corner-all');
                 newUL.appendTo(newLI);
                 _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
             } else {
-
 
                 newLI.click(function() {
 
@@ -135,6 +137,9 @@ define(["jquery", "jquery-ui", "main"], function($) {
                                 autoOpen: false,
                                 resizable: false,
                                 width: 320,
+                                my: 'center',
+                                at: 'center',
+                                of: window,
                                 buttons: [
                                     {
                                         text: "Ok",
@@ -168,6 +173,8 @@ define(["jquery", "jquery-ui", "main"], function($) {
                         $("#instrumentSelectionMenuDIV").hide();
                     }
 
+                    $(document).click();
+
                 });
 
             }
@@ -190,9 +197,21 @@ define(["jquery", "jquery-ui", "main"], function($) {
 
                         //Enable the instruments menu
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
-                        instrumentsMenu.removeClass('ui-state-disabled');
-                        _refreshInstrumentMenu($("<ul>").addClass('ui-corner-all').appendTo(instrumentsMenu), _instrumentJSON);
-                        instrumentsMenu.closest('ul').menu("refresh");
+                        instrumentsMenu.button("enable").button("refresh").button("widget").click(function(e) {
+                          var menu = $(this).closest('div').find("ul:first").menu();
+                          if (menu.is(":visible")) {
+                            menu.hide();
+                          } else {
+                            menu.show();
+                          }
+                        }).focusout(function() {
+                          $(this).closest('div').find('ul').menu().hide();
+                        });
+
+                        var rootUL = $("<ul>").addClass('ui-corner-all');
+                        rootUL.appendTo(instrumentsMenu);
+                        _refreshInstrumentMenu(rootUL, _instrumentJSON);
+                        rootUL.menu();
 
                     }
                 }, 'json').error(function () {

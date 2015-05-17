@@ -21,6 +21,9 @@ define(["charts/chartWindow", "common/util"], function() {
                         .toggleClass('active')
                         .next('ul:first').toggle();
                     return false;
+                }).focusout(function() {
+                  //We are hiding menu, so have to revert back the menus to normal state
+                  $(this).removeClass("active").next('ul:first').menu().hide();
                 });
 
 

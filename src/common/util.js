@@ -63,3 +63,13 @@ function isDataTypeClosePriceOnly( type )
 {
     return !(type == 'candlestick' || type == 'ohlc')
 }
+
+function isSmallView() {
+  var ret = false;
+  if(Modernizr) {
+    if (Modernizr.mq("all and (max-width: 600px)") || Modernizr.mq("all and (max-device-width: 600px)")) {
+      ret = true;
+    }
+  }
+  return ret;
+}

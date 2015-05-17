@@ -22,6 +22,9 @@ define(["jquery", "datatables", "common/loadCSS", "common/util"], function ($) {
                 autoOpen: false,
                 resizable: false,
                 modal: true,
+                my: 'center',
+                at: 'center',
+                of: window,
                 buttons: [],
                 open : function(event, ui) {
                   table

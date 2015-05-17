@@ -23,6 +23,9 @@ define(["jquery", "datatables", "common/loadCSS", 'charts/charts'], function ($)
             $( ".indicator_remove_dialog" ).dialog({
                 autoOpen: false,
                 modal: true,
+                my: 'center',
+                at: 'center',
+                of: window,
                 resizable: false,
                 buttons: [{
                     text: "Remove Selected",

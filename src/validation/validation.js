@@ -2,7 +2,7 @@
  * Created by arnab on 2/14/15.
  */
 
-define(["jquery"], function($) {
+define(["jquery", "common/util"], function($) {
 
     "use strict";
     var MIN_WIDTH = 350;
@@ -14,7 +14,7 @@ define(["jquery"], function($) {
             return $.isNumeric(value) && Math.floor(value) == value && min <= value && max >= value;
         },
 
-        //10 for desktop and 4 for mobile devices
+        //10 for desktop and 1 for mobile devices
         validateIfNoOfChartsCrossingThreshold : function( noOfChartsAlreadyOpened ) {
             var ret = true;
             if ((noOfChartsAlreadyOpened + 1) > 10)
@@ -23,7 +23,7 @@ define(["jquery"], function($) {
             }
             else
             {
-                if ($(window).width() <= MIN_WIDTH && (noOfChartsAlreadyOpened + 1) > 4)
+                if (isSmallView() && (noOfChartsAlreadyOpened + 1) > 1)
                 {
                     ret = false;
                 }
