@@ -8,7 +8,6 @@ define(["jquery", "datatables", "common/loadCSS", "common/util"], function ($) {
 
         loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
         loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
-        loadCSS("charts/indicators/indicators_add.css");
 
         $.get("charts/indicators/indicators_add.html", function($html) {
             $html = $($html);

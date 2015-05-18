@@ -6,9 +6,22 @@ define(["charts/chartWindow", "common/util"], function() {
 
     "use strict";
 
+    function disableEnableOverlay(newTabId, chartType) {
+      var overlay = $("#" + newTabId + "_header").find('li.overlay');
+      if (isDataTypeClosePriceOnly(chartType))
+      {
+        overlay.removeClass('ui-state-disabled');
+      }
+      else
+      {
+        overlay.addClass('ui-state-disabled');
+      }
+      overlay.closest("ul.ui-menu").menu("refresh");
+    };
+
     return {
 
-        init : function (newTabId, timePeriod) {
+        init : function (newTabId, timePeriod, chartType) {
 
             $.get("charts/chartOptions.html", function($html) {
                 //attach different button actions
@@ -17,9 +30,8 @@ define(["charts/chartWindow", "common/util"], function() {
                 $html.find('.chartMenuHamburgerMenu').hover(function() {
                     $(this).toggleClass('ui-state-hover').toggleClass('ui-state-active');
                 }).click(function (e) {
-                    $(this)
-                        .toggleClass('active')
-                        .next('ul:first').toggle();
+                    $(this).toggleClass('active')
+                           .next('ul:first').toggle();
                     return false;
                 }).focusout(function() {
                   //We are hiding menu, so have to revert back the menus to normal state
@@ -35,8 +47,7 @@ define(["charts/chartWindow", "common/util"], function() {
                     $html.find(".candlestick, .ohlc").addClass('ui-state-disabled');
                 }
 
-                $html
-                    .find('.chartType li').click(function () {
+                $html.find('.chartType li').click(function () {
 
                         //If disabled, ignore this click
                         if ($(this).hasClass('ui-state-disabled'))
@@ -49,21 +60,13 @@ define(["charts/chartWindow", "common/util"], function() {
                         require(["charts/charts"], function( charts ) {
                             charts.refresh( '#' + newTabId + '_chart' );
                         });
-                        $(this).closest("ul").closest("ul").hide();
 
                         //Toggle overlay menu
-                        if (isDataTypeClosePriceOnly(type))
-                        {
-                            $html.find('li.overlay').removeClass('ui-state-disabled');
-                        }
-                        else
-                        {
-                            $html.find('li.overlay').addClass('ui-state-disabled');
-                        }
+                        disableEnableOverlay(newTabId, type);
+                        $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                     });
 
-                $html
-                    .find('ul:first > li').each(function () {
+                $html.find('ul:first > li').each(function () {
                         $(this).click(function () {
 
                             //If disabled, ignore this click
@@ -79,6 +82,7 @@ define(["charts/chartWindow", "common/util"], function() {
                                     type : series.yAxis.options.type == 'logarithmic' ? 'linear' : 'logarithmic'
                                 });
                                 $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
+                                $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                             }
                             else if ($(this).hasClass('crosshairLI')) {
                                 //$(this).val(!$(this).is(":selected"));
@@ -86,16 +90,13 @@ define(["charts/chartWindow", "common/util"], function() {
                                     crosshair.toggleCrossHair('#' + newTabId + '_chart');
                                 });
                                 $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
+                                $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                             }
                             else if ($(this).hasClass('refresh')) {
                                 require(["charts/charts"], function( charts ) {
                                     charts.refresh( '#' + newTabId + '_chart' );
                                 });
-                            }
-                            else if ($(this).hasClass('overlay')) {
-                                require(["overlay/overlay"], function( overlay ) {
-                                    overlay.openDialog( '#' + newTabId + '_chart' );
-                                });
+                                $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                             }
                             else if ($(this).hasClass('currentPriceLI')) {
                                 require(["currentPriceIndicator"], function(currentPriceIndicator) {
@@ -123,7 +124,9 @@ define(["charts/chartWindow", "common/util"], function() {
                                     }
                                 });
                                 $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
+                                $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                             }
+
                         });
                     });
 
@@ -145,7 +148,22 @@ define(["charts/chartWindow", "common/util"], function() {
                         }
                     });
 
+                $html.find(".overlay li").click(function () {
+                  if ($(this).hasClass('addOverlay')) {
+                      require(["overlay/overlay_add"], function( overlay ) {
+                          overlay.openDialog( '#' + newTabId + '_chart' );
+                      });
+                  }
+                  else if ($(this).hasClass('removeOverlay')) {
+                      require(["overlay/overlay_remove"], function( overlay ) {
+                          overlay.openDialog( '#' + newTabId + '_chart' );
+                      });
+                  }
+                });
+
                 $("#" + newTabId + "_header").prepend($html);
+                //Enable/disable overlay menu based on chart type
+                disableEnableOverlay(newTabId, chartType);
             });
 
         },
@@ -184,6 +202,10 @@ define(["charts/chartWindow", "common/util"], function() {
             } else {
                 logMenuObj.addClass('ui-state-disabled');
             }
+        },
+
+        disableEnableOverlay : function(newTabId, chartType) {
+          disableEnableOverlay(newTabId, chartType);
         }
 
     };

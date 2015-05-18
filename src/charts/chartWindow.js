@@ -59,7 +59,7 @@ define(["jquery", "main"], function ($) {
                     ;
 
                 require(["charts/chartOptions"], function(chartOptions) {
-                    chartOptions.init(newTabId, timePeriod);
+                    chartOptions.init(newTabId, timePeriod, type);
                 });
 
                 $('#' + newTabId).dialog( 'open' );

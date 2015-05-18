@@ -88,7 +88,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
         var totalOccupiedSpace = totalChartsPerRow * minWidth + (totalChartsPerRow - 1) * leftMargin;
         var remainingSpace = $(window).width() - totalOccupiedSpace;
-        var startMargin = Math.round(remainingSpace / 2) - Math.round(leftMargin / 2);
+        var startMargin = Math.round(remainingSpace / 2) - leftMargin;
 
         var referenceObjectForPositioning = window;
 
@@ -130,7 +130,15 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
                 closeAllObject = $html.find('li.closeAll').click(function () {
                     //console.log('Event for closing all chart windows!');
-                    $('.chart-dialog').dialog( 'close' );
+                    /*
+                      The close click is behaving weird.
+                      Behavior - When there are charts opened, this event is able to close all charts and then
+                                unable to hide the menu. When There are no charts, then it behaves normally
+                    */
+                    if ($('.chart-dialog').length > 0) {
+                      $('.chart-dialog').dialog( 'close' );
+                      $('.windows').click();
+                    }
                 });
 
                 $parentObj.find('button').button("enable").button("refresh").button("widget").click(function(e) {

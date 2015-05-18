@@ -64,7 +64,7 @@ define(['currentPriceIndicator', "common/util", "jquery-timer", 'eventsource'], 
         });
         series.isDirty = true;
         //Its our variable
-        $(series).data('isInstrument', true);//Currently used to indicator that this series is holding the chart OHLC or close data
+        $(series).data('isInstrument', true);//Currently used to indicate that this series is holding the chart OHLC or close data
         series.isDirtyData = true;
 
         //Add current price indicator

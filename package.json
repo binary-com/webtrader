@@ -23,7 +23,8 @@
     "grunt-rename": "^0.1.4",
     "grunt-sloc": "^0.6.0",
     "grunt-string-replace": "^1.0.0",
-    "grunt-text-replace": "^0.4.0"
+    "grunt-text-replace": "^0.4.0",
+    "grunt-remove-logging": "~0.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

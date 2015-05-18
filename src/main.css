@@ -76,3 +76,13 @@ body {
   width: 26px !important;
   height: 26px !important;
 }
+
+/*Overriding this class inheritted from dataTables jquery plugin*/
+.dataTables_scrollHeadInner, .sorting_asc , .dataTable , .dataTables_filter {
+    width: 100% !important;
+}
+
+.dataTables_filter label {
+    position: relative;
+    float: left;
+}

@@ -16,7 +16,8 @@ requirejs.config({
         'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
         'eventsource': 'lib/eventsource',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
-        'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min'
+        'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min',
+        'jquery-share': 'lib/jquery/jquery-share/jquery.share'
     },
     "shim": {
         "jquery-ui": {
@@ -56,6 +57,11 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
     //Load our main CSS
     loadCSS("main.css");
     loadCSS("lib/hamburger.css");
+
+    function resizeBackgroundWatermark() {
+      $(".binary-watermark-logo").height($(window).height() - 20)
+                                 .width($(window).width() - 10);
+    };
 
     function resetTopMenu() {
       var show = true;
@@ -132,7 +138,19 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
             //Resize the background image
             $(window).resize(function() {
-              $(".binary-watermark-logo").height($(this).height());
+              resizeBackgroundWatermark();
+            });
+            resizeBackgroundWatermark();
+
+            require(["jquery-share"], function() {
+              loadCSS("lib/jquery/jquery-share/jquery.share.css");
+              //Social media
+              $("#socialMedia").share({
+                  networks: ['facebook','pinterest','googleplus','twitter','linkedin','tumblr','in1','email','stumbleupon','digg'],
+                  orientation: 'vertical',
+                  urlToShare: 'http://highcharts.binary.com',
+                  affix: 'right top'
+              });
             });
 
         });

@@ -24,11 +24,7 @@
 > Use Sass instead of CSS
 > If we use the above files, make sure to update grunt configuration and add watch plugin. This will help to watch these files for modification. If the files are change, it will automatically push the code to dist folder. Update connect plugin to server from dist folder.
 > Do some memory and frame profiling -> Note any performance degrading points
-> Try to think about an icon for menu items. Icons make more sense than text for menu items and will save more space and will be mobile friendly
-> Read the binary.com style document in order to make changes to highcharts application according to binary.com requirement
 > Over the course of time, the navigator curve becomes flat alothough charts are fine
 > Grunt HTMLHint
-> Revist all menus and figure out if we can provide on chart feature for the menus
 > Convert all PNG or other format images to SVG. If that is not possible, then figure out if we can compress images further
-> Redirect users to unsupported_browsers.html in case any of features are not going to work for the client browser
 > https://www.npmjs.com/package/grunt-code-quality-report

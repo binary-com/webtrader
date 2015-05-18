@@ -10,7 +10,6 @@ define(["jquery", "datatables", "common/loadCSS", 'charts/charts'], function ($)
 
         loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
         loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
-        loadCSS("charts/indicators/indicators_remove.css");
 
         $.get("charts/indicators/indicators_remove.html", function($html) {
             $html = $($html);
@@ -25,11 +24,13 @@ define(["jquery", "datatables", "common/loadCSS", 'charts/charts'], function ($)
                 modal: true,
                 my: 'center',
                 at: 'center',
+                width: 330,
                 of: window,
                 resizable: false,
                 buttons: [{
                     text: "Remove Selected",
                     click: function() {
+                      var containerIDWithHash = $(".indicator_remove_dialog").data('refererChartID');
                         table
                             .rows( '.selected' )
                             .nodes()
