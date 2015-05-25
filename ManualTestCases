@@ -1,7 +1,7 @@
 #### This file list all the tests that a developer should do before releasing anything from this codebase
 #### This will ensure that with the developer's code changes, no other parts of the application is broken
 #### Eventually we want to have automated phantomJS or selenium test cases written for all these scenarios
-
+ 
 1. When the page is loaded, it should show the loading image
 
 2. When the loading image is gone, it should show the left hamburger icon for menu
