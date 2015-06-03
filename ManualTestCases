@@ -1,7 +1,7 @@
 #### This file list all the tests that a developer should do before releasing anything from this codebase
 #### This will ensure that with the developer's code changes, no other parts of the application is broken
 #### Eventually we want to have automated phantomJS or selenium test cases written for all these scenarios
- 
+
 1. When the page is loaded, it should show the loading image
 
 2. When the loading image is gone, it should show the left hamburger icon for menu
@@ -15,14 +15,14 @@
 4. When the application is loaded, it will show a growl message saying instruments menu is getting loaded. In this interim
 phase, it will disable the instruments. When the data is available, this menu will be enabled
 
-5. Windows > Tile - Should tile all windows. The dimension is 350x400 
+5. Windows > Tile - Should tile all windows. The dimension is 350x400
 
 6. Windows > Close ALl - Will close all windows
 
 7. About > Shows binary copyright and link to the main website
 
 8. When the page is loaded first time, the number of charts loaded depends on the size of the window
-
+ 
 9. When you select an instrument from the Instruments menu, it will show Instruments dialog
 
 10. This dialog allows to select any timeperiod for the instrument. If the timeperiod selected is less than the delay amount of the
@@ -47,4 +47,3 @@ instrument, it will show error message
 19. 1 Minute chart with overlay should be left for more than 24 hours to see if the charts are getting stopped out
 
 20. SHould not able to open more than 4 charts in mobile and 10 charts on desktop
-
