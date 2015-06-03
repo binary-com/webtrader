@@ -22,7 +22,7 @@ phase, it will disable the instruments. When the data is available, this menu wi
 7. About > Shows binary copyright and link to the main website
 
 8. When the page is loaded first time, the number of charts loaded depends on the size of the window
- 
+  
 9. When you select an instrument from the Instruments menu, it will show Instruments dialog
 
 10. This dialog allows to select any timeperiod for the instrument. If the timeperiod selected is less than the delay amount of the
