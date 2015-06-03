@@ -4,35 +4,31 @@
     <meta charset="UTF-8">
     <title>Binary Charts</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js" data-main="main"></script>
-    <style>
-        .mainContainer {
-            width: 100%;
-        }
-        .mainContainer > img {
-            display: block;
-            margin: auto auto;
-        }
-    </style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-40877026-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
 
     <div class="ui-widget mainContainer">
-        <img src="images/load.gif">
+      <div class="sk-spinner-container">
+        <div class="sk-spinner sk-spinner-wave">
+              <div class="sk-rect1"></div>
+              <div class="sk-rect2"></div>
+              <div class="sk-rect3"></div>
+              <div class="sk-rect4"></div>
+              <div class="sk-rect5"></div>
+        </div>
+      </div>
     </div>
     <img src="images/binary-watermark-logo.svg" width="100%" height="400px" class="binary-watermark-logo">
-
-    <!-- Google Tag Manager -->
-    <div class="gtm_data_layer" style="display:none;">
-    <div id="event">page_load</div>
-    </div>
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MZWFF7"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MZWFF7');</script>
-    <!-- End Google Tag Manager -->
 
 </body>
 </html>

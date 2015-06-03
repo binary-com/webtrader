@@ -161,6 +161,19 @@ define(["charts/chartWindow", "common/util"], function() {
                   }
                 });
 
+                $html.find(".drawLI li").click(function () {
+                  if ($(this).hasClass('addChartObject')) {
+                      require(["charts/draw/chartobject_add"], function( overlay ) {
+                          overlay.openDialog( '#' + newTabId + '_chart' );
+                      });
+                  }
+                  else if ($(this).hasClass('removeChartObject')) {
+                      require(["charts/draw/chartobject_remove"], function( overlay ) {
+                          overlay.openDialog( '#' + newTabId + '_chart' );
+                      });
+                  }
+                });
+
                 $("#" + newTabId + "_header").prepend($html);
                 //Enable/disable overlay menu based on chart type
                 disableEnableOverlay(newTabId, chartType);

@@ -46,7 +46,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                width: 280,
+                width: 350,
                 my: 'center',
                 at: 'center',
                 of: window,

@@ -95,7 +95,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
         $(".chart-dialog").each(function () {
 
           var leftShift = (cellCount == 1 ? startMargin : minWidth + leftMargin);
-          var topShift = -topMargin - 3;
+          var topShift = -topMargin - 6;
           if (referenceObjectForPositioning == window) {
             topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
           }

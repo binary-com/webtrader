@@ -51,6 +51,13 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
     "use strict";
 
+    //TODO if SVG, eventsource are not allowed, then redirect to unsupported_browsers.html
+    if (!Modernizr.svg) {
+      window.location.href = 'unsupported_browsers.html';
+      return;
+    }
+
+    resizeBackgroundWatermark();
     //Load Jquery UI CSS
     loadCSS("//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css");
 
@@ -140,7 +147,6 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
             $(window).resize(function() {
               resizeBackgroundWatermark();
             });
-            resizeBackgroundWatermark();
 
             require(["jquery-share"], function() {
               loadCSS("lib/jquery/jquery-share/jquery.share.css");
