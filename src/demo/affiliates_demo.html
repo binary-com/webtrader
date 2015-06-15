@@ -73,7 +73,7 @@
             var instrumentCode = $("#instruments").val();
             var timePeriod = $("#timePeriod").val();
             if (instrumentCode && timePeriod) {
-              $("#chartFrame").attr('src', 'http://highcharts.local.binary.com:9001?affiliates=true&instrument='
+              $("#chartFrame").attr('src', '/index.html?affiliates=true&instrument='
                             + instrumentCode + '&timePeriod=' + timePeriod);
             }
           });
