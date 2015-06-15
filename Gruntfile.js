@@ -30,6 +30,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks("grunt-remove-logging");
 
+	grunt.loadNpmTasks('grunt-contrib-watch');
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		jshint: {
@@ -134,7 +136,7 @@ module.exports = function (grunt) {
         server: {
             options: {
                 port: 9001,
-                base: 'src',
+                base: 'dist/uncompressed',
                 hostname: '0.0.0.0',
                 keepalive: true
             }
@@ -179,6 +181,15 @@ module.exports = function (grunt) {
 			dist: {
 				src : "dist/compressed/**/*.js"
 			}
+		},
+		watch: {
+		  scripts: {
+		    files: ['src/**'],
+		    tasks: ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'copy:resourcesToCompressed'],
+		    options: {
+		      spawn: true,
+		    },
+		  },
 		}
 	});
 

@@ -2,7 +2,7 @@
  * Created by arnab on 2/13/15.
  */
 
-define(["jquery", "main"], function ($) {
+define(["jquery"], function ($) {
 
     "use strict";
 
