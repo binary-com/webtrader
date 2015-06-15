@@ -26,36 +26,6 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
                 name : 'Random 100 Index',
                 timeperiod : '2h',
                 chartType : 'spline'
-            }, {
-                symbol : 'RDBEAR',
-                name : 'Random Bear',
-                timeperiod : '1h',
-                chartType : 'area'
-            }, {
-                symbol : 'RDBULL',
-                name : 'Random Bull',
-                timeperiod : '30m',
-                chartType : 'column'
-            }, {
-                symbol : 'RDMOON',
-                name : 'Random Moon',
-                timeperiod : '15m',
-                chartType : 'ohlc'
-            }, {
-                symbol : 'RDSUN',
-                name : 'Random Sun',
-                timeperiod : '10m',
-                chartType : 'candlestick'
-            }, {
-                symbol : 'RDMARS',
-                name : 'Random Mars',
-                timeperiod : '2d',
-                chartType : 'spline'
-            }, {
-                symbol : 'RDVENUS',
-                name : 'Random Venus',
-                timeperiod : '3d',
-                chartType : 'line'
             }];
 
     //-----start----
@@ -95,7 +65,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
         $(".chart-dialog").each(function () {
 
           var leftShift = (cellCount == 1 ? startMargin : minWidth + leftMargin);
-          var topShift = -topMargin - 6;
+          var topShift = -topMargin + 2;
           if (referenceObjectForPositioning == window) {
             topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
           }
