@@ -49,11 +49,11 @@ module.exports = function (grunt) {
 					{expand: true, cwd: 'src/', src: ['**'], dest: 'dist/uncompressed/v<%=pkg.version%>'}
 				]
 			},
-            resourcesToCompressed: {
-                files: [
-                    {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html'], dest: 'dist/compressed'}
-                ]
-            }
+      resourcesToCompressed: {
+          files: [
+              {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html'], dest: 'dist/compressed'}
+          ]
+      }
 		},
 		rename: {
 			moveThis: {
@@ -122,15 +122,15 @@ module.exports = function (grunt) {
             },
             src: ['**/*']
         },
-            'gh-pages-prod': {
-                options: {
-                    base: 'dist/compressed',
-                    add: true,
-                    repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
-                },
-                src: ['**/*']
-            }
+        'gh-pages-prod': {
+            options: {
+                base: 'dist/compressed',
+                add: true,
+                repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
+                message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+            },
+            src: ['**/*']
+        }
     },
     connect: {
         server: {
