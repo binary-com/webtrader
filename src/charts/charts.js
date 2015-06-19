@@ -52,8 +52,8 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                             this.showLoading();
                             requireJSESHInstance.eventSourceHandler( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
                         }
-                    },
-                    plotBackgroundImage: 'images/binary-watermark-logo.svg'
+                    }
+                    //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
                 },
 
                 //This will be updated when 'Settings' button is implemented
