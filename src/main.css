@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 body {
     font-size: 80%;
 }
@@ -28,6 +30,39 @@ body {
     color       : #212121;
 }
 
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid #3F476E;
+  background: #3F476E url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.ui-widget-header {
+  border: 1px solid #273051;
+  background: #273051 url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+  color: #FFFFFF;
+  font-family: 'Roboto'!important;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: 'Roboto'!important;
+}
+
+.ui-widget {
+  outline: 0;
+}
+
+.ui-state-hover, .ui-button:hover{
+  color: #FFFFFF!important;
+}
+
+.logo {
+  width: 40px;
+  float: left;
+  margin-top: -5px;
+  padding-left: 20px;
+}
+
 .gtm_data_layer {
   display : none;
 }
@@ -35,6 +70,8 @@ body {
 .topMenu {
   width : 100%;
   text-align : center;
+  background: #273051;
+  padding: 10px 0;
 }
 
 .topMenu div {
@@ -45,34 +82,50 @@ body {
   z-Index : 1003;
 }
 
+.statement-icon {
+  background-image: url(images/statement.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.portfolio-icon {
+  background-image: url(images/portfolio.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.password-icon {
+  background-image: url(images/password.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.settings-icon {
+  background-image: url(images/setting.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
 .instruments-icon {
-  background-image: url(images/charts.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
+  background-image: url(images/chart.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
   width: 26px !important;
   height: 26px !important;
 }
 
 .windows-icon {
-  background-image: url(images/windows.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.workspace-icon {
-  background-image: url(images/settings.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.about-icon {
-  background-image: url(images/about.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
+  background-image: url(images/window.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
   width: 26px !important;
   height: 26px !important;
 }

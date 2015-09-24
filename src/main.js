@@ -17,7 +17,6 @@ requirejs.config({
         'eventsource': 'lib/eventsource',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min',
-        'jquery-share': 'lib/jquery/jquery-share/jquery.share'
     },
     "shim": {
         "jquery-ui": {
@@ -91,9 +90,24 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
             $('.topContainer .topMenu')
                     .find("button" ).button()
-                    .filter('.about').button({
+                    .filter('.statement').button({
                       icons: {
-                        primary: "about-icon",
+                        primary: "statement-icon",
+                      }
+                    }).end()
+                    .filter('.portfolio').button({
+                      icons: {
+                        primary: "portfolio-icon",
+                      }
+                    }).end()
+                    .filter('.password').button({
+                      icons: {
+                        primary: "password-icon",
+                      }
+                    }).end()
+                    .filter('.settings').button({
+                      icons: {
+                        primary: "settings-icon",
                       }
                     }).end()
                     .filter('.windows').button({
@@ -107,12 +121,6 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                       },
                       disabled: true
                     }).end()
-                    .filter(".workspace").button({
-                      icons: {
-                        primary: "workspace-icon",
-                      },
-                      disabled: true
-                    });
 
             $(window).resize(function() {
               resetTopMenu();
@@ -135,30 +143,10 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 windows.init($('.topContainer .windows').closest('div'));
             });
 
-            $('.topContainer .about').click(function () {
-
-                require(["about/about"], function( about ) {
-                    about.open();
-                });
-
-            });
-
             //Resize the background image
             $(window).resize(function() {
               resizeBackgroundWatermark();
             });
-
-            require(["jquery-share"], function() {
-              loadCSS("lib/jquery/jquery-share/jquery.share.css");
-              //Social media
-              $("#socialMedia").share({
-                  networks: ['facebook','pinterest','googleplus','twitter','linkedin','tumblr','in1','email','stumbleupon','digg'],
-                  orientation: 'vertical',
-                  urlToShare: 'http://highcharts.binary.com',
-                  affix: 'right top'
-              });
-            });
-
         });
 
         //Now load all other CSS asynchronously
