@@ -1,1 +1,185 @@
-define(["jquery","jquery-ui","color-picker","common/loadCSS"],function(a){function b(){a(this).dialog("close"),a(this).find("*").removeClass("ui-state-error")}function c(c,d){loadCSS("charts/indicators/atr/atr.css");var e=function(a,b,c,d){this.level=a,this.stroke=b,this.strokeWidth=c,this.dashStyle=d},f=[new e(30,"red",1,"dash"),new e(70,"red",1,"dash")];a.get("charts/indicators/atr/atr.html",function(e){var g="#cd0a0a";e=a(e),e.appendTo("body"),e.find("input[type='button']").button(),e.find("#atr_stroke").colorpicker({part:{map:{size:128},bar:{size:128}},select:function(b,c){a("#atr_stroke").css({background:"#"+c.formatted}).val(""),g="#"+c.formatted},ok:function(b,c){a("#atr_stroke").css({background:"#"+c.formatted}).val(""),g="#"+c.formatted}});var h=e.find("#atr_levels").DataTable({paging:!1,scrollY:100,autoWidth:!0,searching:!1,info:!1});a.each(f,function(b,c){a(h.row.add([c.level,'<div style="background-color: '+c.stroke+';width:100%;height:20px;"></div>',c.strokeWidth,c.dashStyle]).draw().node()).data("level",c).on("click",function(){a(this).toggleClass("selected")})}),e.find("#atr_level_delete").click(function(){h.rows(".selected").indexes().length<=0?require(["jquery","jquery-growl"],function(a){a.growl.error({message:"Select levels to delete!"})}):h.rows(".selected").remove().draw()}),e.find("#atr_level_add").click(function(){require(["charts/indicators/atr/atr_level"],function(b){b.open(c,function(b){a.each(b,function(b,c){a(h.row.add([c.level,'<div style="background-color: '+c.stroke+';width:100%;height:20px;"></div>',c.strokeWidth,c.dashStyle]).draw().node()).data("level",c).on("click",function(){a(this).toggleClass("selected")})})})})}),e.dialog({autoOpen:!1,resizable:!1,width:350,modal:!0,my:"center",at:"center",of:window,buttons:[{text:"Ok",click:function(){require(["validation/validation"],function(c){return c.validateNumericBetween(e.find(".atr_input_width_for_period").val(),parseInt(e.find(".atr_input_width_for_period").attr("min")),parseInt(e.find(".atr_input_width_for_period").attr("max")))?(require(["charts/indicators/highcharts_custom/atr"],function(b){b.init();var c=[];a.each(h.rows().nodes(),function(){var b=a(this).data("level");b&&c.push({color:b.stroke,dashStyle:b.dashStyle,width:b.strokeWidth,value:b.level,label:{text:b.level}})});var d={period:parseInt(e.find(".atr_input_width_for_period").val()),stroke:g,strokeWidth:parseInt(e.find("#atr_strokeWidth").val()),dashStyle:e.find("#atr_dashStyle").val(),levels:c};a(a(".atr").data("refererChartID")).highcharts().series[0].addATR(d)}),void b.call(e)):void require(["jquery","jquery-growl"],function(a){a.growl.error({message:"Only numbers between "+e.find(".atr_input_width_for_period").attr("min")+" to "+e.find(".atr_input_width_for_period").attr("max")+" is allowed for "+e.find(".atr_input_width_for_period").closest("tr").find("td:first").text()+"!"})})})}},{text:"Cancel",click:function(){b.call(this)}}]}),"function"==typeof d&&d(c)})}return{open:function(b){return 0==a(".atr").length?void c(b,this.open):void a(".atr").data("refererChartID",b).dialog("open")}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
+
+    function closeDialog() {
+        $(this).dialog("close");
+        $(this).find("*").removeClass('ui-state-error');
+    }
+
+    function init( containerIDWithHash, _callback ) {
+
+        loadCSS('charts/indicators/atr/atr.css');
+
+        var Level = function (level, stroke, strokeWidth, dashStyle) {
+            this.level = level;
+            this.stroke = stroke;
+            this.strokeWidth = strokeWidth;
+            this.dashStyle = dashStyle;
+        };
+        var defaultLevels = [new Level(30, 'red', 1, 'dash'), new Level(70, 'red', 1, 'dash')];
+
+        $.get("charts/indicators/atr/atr.html" , function ( $html ) {
+
+            var defaultStrokeColor = '#cd0a0a';
+
+            $html = $($html);
+            //$html.hide();
+            $html.appendTo("body");
+            //$html.find('select').selectmenu(); TODO for some reason, this does not work
+            $html.find("input[type='button']").button();
+
+            $html.find("#atr_stroke").colorpicker({
+                part:	{
+                    map:		{ size: 128 },
+                    bar:		{ size: 128 }
+                },
+                select:			function(event, color) {
+                    $("#atr_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                },
+                ok:             			function(event, color) {
+                    $("#atr_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                }
+            });
+
+            var table = $html.find('#atr_levels').DataTable({
+                paging: false,
+                scrollY: 100,
+                autoWidth: true,
+                searching: false,
+                info: false
+            });
+            $.each(defaultLevels, function (index, value) {
+                $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                    .data("level", value)
+                    .on('click', function () {
+                        $(this).toggleClass('selected');
+                    } );
+            });
+            $html.find('#atr_level_delete').click(function () {
+                if (table.rows('.selected').indexes().length <= 0) {
+                    require(["jquery", "jquery-growl"], function($) {
+                        $.growl.error({ message: "Select levels to delete!" });
+                    });
+                } else {
+                    table.rows('.selected').remove().draw();
+                }
+            });
+            $html.find('#atr_level_add').click(function () {
+                require(["charts/indicators/atr/atr_level"], function(atr_level) {
+                    atr_level.open(containerIDWithHash, function (levels) {
+                        $.each(levels, function (ind, value) {
+                            $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                                .data("level", value)
+                                .on('click', function () {
+                                    $(this).toggleClass('selected');
+                                } );
+                        });
+                    });
+                });
+            });
+
+
+            $html.dialog({
+                autoOpen: false,
+                resizable: false,
+                width: 350,
+                modal: true,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            //console.log('Ok button is clicked!');
+                            require(["validation/validation"], function(validation) {
+
+                                if (!validation.validateNumericBetween($html.find(".atr_input_width_for_period").val(),
+                                                parseInt($html.find(".atr_input_width_for_period").attr("min")),
+                                                parseInt($html.find(".atr_input_width_for_period").attr("max"))))
+                                {
+                                    require(["jquery", "jquery-growl"], function($) {
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".atr_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".atr_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".atr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
+                                    });
+                                    return;
+                                }
+
+                                require(['charts/indicators/highcharts_custom/atr'], function ( atr ) {
+                                    atr.init();
+                                    var levels = [];
+                                    $.each(table.rows().nodes(), function () {
+                                        var data = $(this).data('level');
+                                        if (data) {
+                                            levels.push({
+                                                color: data.stroke,
+                                                dashStyle: data.dashStyle,
+                                                width: data.strokeWidth,
+                                                value: data.level,
+                                                label: {
+                                                    text: data.level
+                                                }
+                                            });
+                                        }
+                                    });
+                                    var options = {
+                                        period : parseInt($html.find(".atr_input_width_for_period").val()),
+                                        stroke : defaultStrokeColor,
+                                        strokeWidth : parseInt($html.find("#atr_strokeWidth").val()),
+                                        dashStyle : $html.find("#atr_dashStyle").val(),
+                                        levels : levels
+                                    };
+                                    //Add ATR for the main series
+                                    $($(".atr").data('refererChartID')).highcharts().series[0].addATR(options);
+                                });
+
+                                closeDialog.call($html);
+
+                            });
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function() {
+                            closeDialog.call(this);
+                        }
+                    }
+                ]
+            });
+
+            if (typeof _callback == "function")
+            {
+                _callback( containerIDWithHash );
+            }
+
+        });
+
+    }
+
+    return {
+
+        open : function ( containerIDWithHash ) {
+
+            if ($(".atr").length == 0)
+            {
+                init( containerIDWithHash, this.open );
+                return;
+            }
+
+            $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
+
+        }
+
+    };
+
+});

@@ -1,1 +1,124 @@
-define(["jquery","jquery-ui","color-picker"],function(a){function b(){a(this).dialog("close"),a(this).find("*").removeClass("ui-state-error")}function c(c,e){var f=function(a,b,c,d){this.level=a,this.stroke=b,this.strokeWidth=c,this.dashStyle=d};a.get("charts/indicators/atr/atr_level.html",function(g){var h="#cd0a0a";g=a(g),g.appendTo("body"),g.find("input[type='button']").button(),g.find("#atr_level_stroke").colorpicker({part:{map:{size:128},bar:{size:128}},select:function(b,c){a("#atr_level_stroke").css({background:"#"+c.formatted}).val(""),h="#"+c.formatted},ok:function(b,c){a("#atr_level_stroke").css({background:"#"+c.formatted}).val(""),h="#"+c.formatted}}),g.dialog({autoOpen:!1,resizable:!1,width:280,modal:!0,my:"center",at:"center",of:window,buttons:[{text:"Ok",click:function(){require(["validation/validation"],function(a){return a.validateNumericBetween(g.find(".atr_level_input_width_for_level").val(),parseInt(g.find(".atr_level_input_width_for_level").attr("min")),parseInt(g.find(".atr_level_input_width_for_level").attr("max")))?(d&&d([new f(parseFloat(g.find(".atr_level_input_width_for_level").val()),h,parseInt(g.find("#atr_level_strokeWidth").val()),g.find("#atr_level_dashStyle").val())]),void b.call(g)):void require(["jquery","jquery-growl"],function(a){a.growl.error({message:"Only numbers between "+g.find(".atr_level_input_width_for_level").attr("min")+" to "+g.find(".atr_level_input_width_for_level").attr("max")+" is allowed for "+g.find(".atr_level_input_width_for_level").closest("tr").find("td:first").text()+"!"})})})}},{text:"Cancel",click:function(){b.call(this)}}]}),a.isFunction(e)&&e(c,d)})}var d=void 0;return{open:function(b,e){return d=e,0==a(".atr_level").length?void c(b,this.open):void a(".atr_level").dialog("open")}}});
+/**
+ * Created by arnab on 3/29/15.
+ */
+
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
+
+    var callBackAfterOKPressed = undefined;
+    function closeDialog() {
+        $(this).dialog("close");
+        $(this).find("*").removeClass('ui-state-error');
+    }
+
+    function init( containerIDWithHash, _callback ) {
+
+        var Level = function (level, stroke, strokeWidth, dashStyle) {
+            this.level = level;
+            this.stroke = stroke;
+            this.strokeWidth = strokeWidth;
+            this.dashStyle = dashStyle;
+        };
+
+        $.get("charts/indicators/atr/atr_level.html" , function ( $html ) {
+
+            var defaultStrokeColor = '#cd0a0a';
+
+            $html = $($html);
+            //$html.hide();
+            $html.appendTo("body");
+            //$html.find('select').selectmenu(); TODO for some reason, this does not work
+            $html.find("input[type='button']").button();
+
+            $html.find("#atr_level_stroke").colorpicker({
+                part:	{
+                    map:		{ size: 128 },
+                    bar:		{ size: 128 }
+                },
+                select:			function(event, color) {
+                    $("#atr_level_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                },
+                ok:             			function(event, color) {
+                    $("#atr_level_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                }
+            });
+
+            $html.dialog({
+                autoOpen: false,
+                resizable: false,
+                width: 280,
+                modal: true,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            //console.log('Ok button is clicked!');
+                            require(["validation/validation"], function(validation) {
+
+                                if (!validation.validateNumericBetween($html.find(".atr_level_input_width_for_level").val(),
+                                        parseInt($html.find(".atr_level_input_width_for_level").attr("min")),
+                                        parseInt($html.find(".atr_level_input_width_for_level").attr("max"))))
+                                {
+                                    require(["jquery", "jquery-growl"], function($) {
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".atr_level_input_width_for_level").attr("min")
+                                        + " to " + $html.find(".atr_level_input_width_for_level").attr("max")
+                                        + " is allowed for " + $html.find(".atr_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
+                                    });
+                                    return;
+                                }
+
+                                if (callBackAfterOKPressed) {
+                                    callBackAfterOKPressed([new Level(parseFloat($html.find(".atr_level_input_width_for_level").val()),
+                                        defaultStrokeColor, parseInt($html.find("#atr_level_strokeWidth").val()),
+                                        $html.find("#atr_level_dashStyle").val())]);
+                                }
+
+                                closeDialog.call($html);
+
+                            });
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function() {
+                            closeDialog.call(this);
+                        }
+                    }
+                ]
+            });
+
+            if ($.isFunction(_callback))
+            {
+                _callback( containerIDWithHash, callBackAfterOKPressed );
+            }
+
+        });
+
+    }
+
+    return {
+
+        open : function ( containerIDWithHash, _callback ) {
+
+            callBackAfterOKPressed = _callback;
+            if ($(".atr_level").length == 0)
+            {
+                init( containerIDWithHash, this.open );
+                return;
+            }
+
+            $(".atr_level").dialog( "open" );
+
+        }
+
+    };
+
+});

@@ -1,1 +1,202 @@
-define(["charts/indicators/highcharts_custom/indicator_base","highstock"],function(a){var b={},c={};return{init:function(){!function(d,e){function f(d,e){{var f=this;f.chart}for(var g in c)if(c[g]&&c[g].options&&c[g].options.data&&c[g].options.data.length>0&&b[g].parentSeriesID==f.options.id){var h=f.options.data,i=c[g].options.data,j=b[g].period,k=a.findDataUpdatedDataPoint(h,d);if(k>=1){var l=0;l=a.isOHLCorCandlestick(this.options.type)?a.extractPriceForAppliedTO(b[g].appliedTo,h,k):h[k].y?h[k].y:h[k][1];var m=a.toFixed(2*l/(j+1)+(i[k-1][1]||i[k-1].y)*(1-2/(j+1)),4);e?c[g].options.data.length<h.length?c[g].addPoint([h[k].x||h[k][0],m]):c[g].data[k].update([h[k].x||h[k][0],m]):c[g].addPoint([h[k].x||h[k][0],m])}}}d&&!d.Series.prototype.addEMA&&(d.Series.prototype.addEMA=function(d){var f=this.options.id;d=e.extend({period:21,stroke:"red",strokeWidth:2,dashStyle:"line",levels:[],appliedTo:a.CLOSE,parentSeriesID:f},d);var g="_"+(new Date).getTime(),h=this.options.data||[];if(!(d.period>=h.length)){if(h&&h.length>0){for(var i=[],j=0,k=0;k<d.period;k++)j+=a.isOHLCorCandlestick(this.options.type)?a.extractPriceForAppliedTO(d.appliedTo,h,k):h[k].y?h[k].y:h[k][1],i.push(k==d.period-1?[h[d.period-1].x?h[d.period-1].x:h[d.period-1][0],j/d.period]:[h[k].x?h[k].x:h[k][0],null]);for(var k=d.period;k<h.length;k++){var l=0;l=a.isOHLCorCandlestick(this.options.type)?a.extractPriceForAppliedTO(d.appliedTo,h,k):h[k].y?h[k].y:h[k][1];var m=2*l/(d.period+1)+(i[k-1][1]||i[k-1].y)*(1-2/(d.period+1));i.push([h[k].x||h[k][0],a.toFixed(m,4)])}var n=this.chart;b[g]=d;var o=this;c[g]=n.addSeries({id:g,name:"EMA("+d.period+", "+a.appliedPriceString(d.period)+")",data:i,type:"line",dataGrouping:o.options.dataGrouping,opposite:o.options.opposite,color:d.stroke,lineWidth:d.strokeWidth,dashStyle:d.dashStyle,compare:o.options.compare},!1,!1),e(c[g]).data({onChartIndicator:!0,indicatorID:"ema",isIndicator:!0,parentSeriesID:d.parentSeriesID,period:d.period}),n.redraw()}return g}},d.Series.prototype.removeEMA=function(a){var d=this.chart;b[a]=null,d.get(a).remove(),c[a]=null},d.wrap(d.Series.prototype,"addPoint",function(c,d,e,g,h){c.call(this,d,e,g,h),a.checkCurrentSeriesHasIndicator(b,this.options.id)&&f.call(this,d)}),d.wrap(d.Point.prototype,"update",function(c,d,e,g){c.call(this,d,e,g),a.checkCurrentSeriesHasIndicator(b,this.series.options.id)&&f.call(this.series,d,!0)}))}(Highcharts,jQuery,a)}}});
+/**
+ * Created by arnab on 3/22/15.
+ */
+define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
+
+    var emaOptionsMap = {}, emaSeriesMap = {};
+
+    return {
+        init: function () {
+
+            (function (H, $) {
+
+                //Make sure that HighStocks have been loaded
+                //If we already loaded this, ignore further execution
+                if (!H || H.Series.prototype.addEMA) return;
+
+                H.Series.prototype.addEMA = function (emaOptions) {
+
+                    //Check for undefined
+                    //Merge the options
+                    var seriesID = this.options.id;
+                    emaOptions = $.extend({
+                        period: 21,
+                        stroke: 'red',
+                        strokeWidth: 2,
+                        dashStyle: 'line',
+                        levels: [],
+                        appliedTo: indicatorBase.CLOSE,
+                        parentSeriesID: seriesID
+                    }, emaOptions);
+
+                    var uniqueID = '_' + new Date().getTime();
+
+                    //If this series has data, add ATR series to the chart
+                    var data = this.options.data || [];
+                    //If period is higher than data.length, we cannot calculate EMA. Return from here
+                    if (emaOptions.period >= data.length) return;
+
+                    if (data && data.length > 0) {
+
+                        //Calculate EMA data
+                        /*  ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
+                         *  Do not fill any value in emaData from 0 index to options.period-1 index
+                         */
+                        var emaData = [], sum = 0.0;
+                        for (var index = 0; index < emaOptions.period; index++) {
+                            if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
+                                sum += indicatorBase.extractPriceForAppliedTO(emaOptions.appliedTo, data, index);
+                            }
+                            else {
+                                sum += data[index].y ? data[index].y : data[index][1];
+                            }
+                            if (index == (emaOptions.period - 1)) {
+                                emaData.push([data[emaOptions.period - 1].x ? data[emaOptions.period - 1].x : data[emaOptions.period - 1][0], sum / emaOptions.period]);
+                            }
+                            else {
+                                emaData.push([data[index].x ? data[index].x : data[index][0], null]);
+                            }
+                        }
+
+                        for (var index = emaOptions.period; index < data.length; index++) {
+
+                            var price = 0.0;
+                            if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
+                                price = indicatorBase.extractPriceForAppliedTO(emaOptions.appliedTo, data, index);
+                            }
+                            else {
+                                price = data[index].y ? data[index].y : data[index][1];
+                            }
+
+                            //Calculate EMA - start
+                            //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
+                            var emaValue = (price * 2 / (emaOptions.period + 1)) + ((emaData[index - 1][1] || emaData[index - 1].y) * (1 - 2 / (emaOptions.period + 1)))
+                            emaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(emaValue, 4)]);
+                            //Calculate EMA - end
+
+                        }
+
+                        var chart = this.chart;
+
+                        emaOptionsMap[uniqueID] = emaOptions;
+
+                        var series = this;
+                        emaSeriesMap[uniqueID] = chart.addSeries({
+                            id: uniqueID,
+                            name: 'EMA(' + emaOptions.period + ', ' + indicatorBase.appliedPriceString(emaOptions.period) + ')',
+                            data: emaData,
+                            type: 'line',
+                            dataGrouping: series.options.dataGrouping,
+                            //yAxis: 'ema'+ uniqueID,
+                            opposite: series.options.opposite,
+                            color: emaOptions.stroke,
+                            lineWidth: emaOptions.strokeWidth,
+                            dashStyle: emaOptions.dashStyle,
+                            compare: series.options.compare
+                        }, false, false);
+
+                        //This is a on chart indicator
+                        $(emaSeriesMap[uniqueID]).data({
+                            onChartIndicator: true,
+                            indicatorID: 'ema',
+                            isIndicator: true,
+                            parentSeriesID: emaOptions.parentSeriesID,
+                            period: emaOptions.period
+                        });
+                        //console.log('EMA series data length : ', emaSeriesMap[uniqueID].options.data.length, ', Instrument series data length : ', this.options.data.length);
+
+                        //We are update everything in one shot
+                        chart.redraw();
+
+                    }
+
+                    return uniqueID;
+
+                };
+
+                H.Series.prototype.removeEMA = function (uniqueID) {
+                    var chart = this.chart;
+                    emaOptionsMap[uniqueID] = null;
+                    chart.get(uniqueID).remove();
+                    emaSeriesMap[uniqueID] = null;
+                }
+
+                /*
+                 *  Wrap HC's Series.addPoint
+                 */
+                H.wrap(H.Series.prototype, 'addPoint', function (proceed, options, redraw, shift, animation) {
+
+                    proceed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(emaOptionsMap, this.options.id)) {
+                        updateEMASeries.call(this, options);
+                    }
+
+                });
+
+                /*
+                 *  Wrap HC's Point.update
+                 */
+                H.wrap(H.Point.prototype, 'update', function (proceed, options, redraw, animation) {
+
+                    proceed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(emaOptionsMap, this.series.options.id)) {
+                        updateEMASeries.call(this.series, options, true);
+                    }
+
+                });
+
+                /**
+                 * This function should be called in the context of series object
+                 * @param options - The data update values
+                 */
+                function updateEMASeries(options, isPointUpdate) {
+                    var series = this;
+                    var chart = series.chart;
+
+                    //Add a new EMA data point
+                    for (var key in emaSeriesMap) {
+                        if (emaSeriesMap[key] && emaSeriesMap[key].options && emaSeriesMap[key].options.data && emaSeriesMap[key].options.data.length > 0
+                                && emaOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is EMA series. Add one more EMA point
+                            //Calculate EMA data
+                            /*
+                             * ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var emaData = emaSeriesMap[key].options.data;
+                            var n = emaOptionsMap[key].period;
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                var price = 0.0;
+                                if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
+                                    price = indicatorBase.extractPriceForAppliedTO(emaOptionsMap[key].appliedTo, data, dataPointIndex);
+                                }
+                                else {
+                                    price = data[dataPointIndex].y ? data[dataPointIndex].y : data[dataPointIndex][1];
+                                }
+
+                                //Calculate EMA - start
+                                var emaValue = indicatorBase.toFixed((price * 2 / (n + 1)) + ((emaData[dataPointIndex - 1][1] || emaData[dataPointIndex - 1].y) * (1 - 2 / (n + 1))), 4);
+                                //console.log(emaValue, price, n, emaData[dataPointIndex - 1]);
+                                //emaData.push([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(emaValue , 4)]);
+                                if (isPointUpdate) {
+                                    if (emaSeriesMap[key].options.data.length < data.length) {
+                                        emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
+                                    } else {
+                                        emaSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
+                                    }
+                                }
+                                else {
+                                    emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            })(Highcharts, jQuery, indicatorBase);
+
+        }
+    };
+});

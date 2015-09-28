@@ -1,1 +1,185 @@
-define(["jquery","jquery-ui","color-picker","common/loadCSS"],function(a){function b(){a(this).dialog("close"),a(this).find("*").removeClass("ui-state-error")}function c(c,d){loadCSS("charts/indicators/rocr/rocr.css");var e=[];a.get("charts/indicators/rocr/rocr.html",function(f){var g="#cd0a0a";f=a(f),f.appendTo("body"),f.find("input[type='button']").button(),f.find("#rocr_stroke").colorpicker({part:{map:{size:128},bar:{size:128}},select:function(b,c){a("#rocr_stroke").css({background:"#"+c.formatted}).val(""),g="#"+c.formatted},ok:function(b,c){a("#rocr_stroke").css({background:"#"+c.formatted}).val(""),g="#"+c.formatted}});var h=f.find("#rocr_levels").DataTable({paging:!1,scrollY:100,autoWidth:!0,searching:!1,info:!1});a.each(e,function(b,c){a(h.row.add([c.level,'<div style="background-color: '+c.stroke+';width:100%;height:20px;"></div>',c.strokeWidth,c.dashStyle]).draw().node()).data("level",c).on("click",function(){a(this).toggleClass("selected")})}),f.find("#rocr_level_delete").click(function(){h.rows(".selected").indexes().length<=0?require(["jquery","jquery-growl"],function(a){a.growl.error({message:"Select levels to delete!"})}):h.rows(".selected").remove().draw()}),f.find("#rocr_level_add").click(function(){require(["charts/indicators/rocr/rocr_level"],function(b){b.open(c,function(b){a.each(b,function(b,c){a(h.row.add([c.level,'<div style="background-color: '+c.stroke+';width:100%;height:20px;"></div>',c.strokeWidth,c.dashStyle]).draw().node()).data("level",c).on("click",function(){a(this).toggleClass("selected")})})})})}),f.dialog({autoOpen:!1,resizable:!1,width:350,modal:!0,my:"center",at:"center",of:window,buttons:[{text:"Ok",click:function(){require(["validation/validation"],function(c){return c.validateNumericBetween(f.find(".rocr_input_width_for_period").val(),parseInt(f.find(".rocr_input_width_for_period").attr("min")),parseInt(f.find(".rocr_input_width_for_period").attr("max")))?(require(["charts/indicators/highcharts_custom/rocr"],function(b){b.init();var c=[];a.each(h.rows().nodes(),function(){var b=a(this).data("level");b&&c.push({color:b.stroke,dashStyle:b.dashStyle,width:b.strokeWidth,value:b.level,label:{text:b.level}})});var d={period:parseInt(f.find(".rocr_input_width_for_period").val()),stroke:g,strokeWidth:parseInt(f.find("#rocr_strokeWidth").val()),dashStyle:f.find("#rocr_dashStyle").val(),levels:c};a(a(".rocr").data("refererChartID")).highcharts().series[0].addROCR(d)}),void b.call(f)):void require(["jquery","jquery-growl"],function(a){a.growl.error({message:"Only numbers between "+f.find(".rocr_input_width_for_period").attr("min")+" to "+f.find(".rocr_input_width_for_period").attr("max")+" is allowed for "+f.find(".rocr_input_width_for_period").closest("tr").find("td:first").text()+"!"})})})}},{text:"Cancel",click:function(){b.call(this)}}]}),"function"==typeof d&&d(c)})}return{open:function(b){return 0==a(".rocr").length?void c(b,this.open):void a(".rocr").data("refererChartID",b).dialog("open")}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
+
+    function closeDialog() {
+        $(this).dialog("close");
+        $(this).find("*").removeClass('ui-state-error');
+    }
+
+    function init( containerIDWithHash, _callback ) {
+
+        loadCSS('charts/indicators/rocr/rocr.css');
+
+        var Level = function (level, stroke, strokeWidth, dashStyle) {
+            this.level = level;
+            this.stroke = stroke;
+            this.strokeWidth = strokeWidth;
+            this.dashStyle = dashStyle;
+        };
+        var defaultLevels = [];
+
+        $.get("charts/indicators/rocr/rocr.html" , function ( $html ) {
+
+            var defaultStrokeColor = '#cd0a0a';
+
+            $html = $($html);
+            //$html.hide();
+            $html.appendTo("body");
+            //$html.find('select').selectmenu(); TODO for some reason, this does not work
+            $html.find("input[type='button']").button();
+
+            $html.find("#rocr_stroke").colorpicker({
+                part:	{
+                    map:		{ size: 128 },
+                    bar:		{ size: 128 }
+                },
+                select:			function(event, color) {
+                    $("#rocr_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                },
+                ok:             			function(event, color) {
+                    $("#rocr_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                }
+            });
+
+            var table = $html.find('#rocr_levels').DataTable({
+                paging: false,
+                scrollY: 100,
+                autoWidth: true,
+                searching: false,
+                info: false
+            });
+            $.each(defaultLevels, function (index, value) {
+                $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                    .data("level", value)
+                    .on('click', function () {
+                        $(this).toggleClass('selected');
+                    } );
+            });
+            $html.find('#rocr_level_delete').click(function () {
+                if (table.rows('.selected').indexes().length <= 0) {
+                    require(["jquery", "jquery-growl"], function($) {
+                        $.growl.error({ message: "Select levels to delete!" });
+                    });
+                } else {
+                    table.rows('.selected').remove().draw();
+                }
+            });
+            $html.find('#rocr_level_add').click(function () {
+                require(["charts/indicators/rocr/rocr_level"], function(rocr_level) {
+                    rocr_level.open(containerIDWithHash, function (levels) {
+                        $.each(levels, function (ind, value) {
+                            $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                                .data("level", value)
+                                .on('click', function () {
+                                    $(this).toggleClass('selected');
+                                } );
+                        });
+                    });
+                });
+            });
+
+
+            $html.dialog({
+                autoOpen: false,
+                resizable: false,
+                width: 350,
+                modal: true,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            //console.log('Ok button is clicked!');
+                            require(["validation/validation"], function(validation) {
+
+                                if (!validation.validateNumericBetween($html.find(".rocr_input_width_for_period").val(),
+                                                parseInt($html.find(".rocr_input_width_for_period").attr("min")),
+                                                parseInt($html.find(".rocr_input_width_for_period").attr("max"))))
+                                {
+                                    require(["jquery", "jquery-growl"], function($) {
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".rocr_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".rocr_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".rocr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
+                                    });
+                                    return;
+                                }
+
+                                require(['charts/indicators/highcharts_custom/rocr'], function ( rocr ) {
+                                    rocr.init();
+                                    var levels = [];
+                                    $.each(table.rows().nodes(), function () {
+                                        var data = $(this).data('level');
+                                        if (data) {
+                                            levels.push({
+                                                color: data.stroke,
+                                                dashStyle: data.dashStyle,
+                                                width: data.strokeWidth,
+                                                value: data.level,
+                                                label: {
+                                                    text: data.level
+                                                }
+                                            });
+                                        }
+                                    });
+                                    var options = {
+                                        period : parseInt($html.find(".rocr_input_width_for_period").val()),
+                                        stroke : defaultStrokeColor,
+                                        strokeWidth : parseInt($html.find("#rocr_strokeWidth").val()),
+                                        dashStyle : $html.find("#rocr_dashStyle").val(),
+                                        levels : levels
+                                    };
+                                    //Add ROCR for the main series
+                                    $($(".rocr").data('refererChartID')).highcharts().series[0].addROCR(options);
+                                });
+
+                                closeDialog.call($html);
+
+                            });
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function() {
+                            closeDialog.call(this);
+                        }
+                    }
+                ]
+            });
+
+            if (typeof _callback == "function")
+            {
+                _callback( containerIDWithHash );
+            }
+
+        });
+
+    }
+
+    return {
+
+        open : function ( containerIDWithHash ) {
+
+            if ($(".rocr").length == 0)
+            {
+                init( containerIDWithHash, this.open );
+                return;
+            }
+
+            $(".rocr").data('refererChartID', containerIDWithHash).dialog( "open" );
+
+        }
+
+    };
+
+});

@@ -1,1 +1,269 @@
-define(["charts/indicators/highcharts_custom/indicator_base","highstock"],function(a){var b={},c={};return{init:function(){!function(a,d,e){function f(a,d){{var f=this;f.chart}for(var g in c)if(c[g]&&c[g].options&&c[g].options.data&&c[g].options.data.length>0&&b[g].parentSeriesID==f.options.id){var h=f.options.data,i=c[g].options.data,j=b[g].period,k=e.findDataUpdatedDataPoint(h,a);if(k>=1){var l=0;if(e.isOHLCorCandlestick(f.options.type)){var m=h[k].high||h[k][2],n=h[k].low||h[k][3],o=h[k-1].close||h[k-1][4];l=Math.max(Math.max(m-n,Math.abs(m-o)),n-o)}else{var p=h[k].y||h[k][1],q=h[k-1].y||h[k-1][1];l=Math.abs(p-q)}var r=e.toFixed(((i[k-1].y||i[k-1][1])*(j-1)+l)/j,2);d?c[g].options.data.length<h.length?c[g].addPoint([h[k].x||h[k][0],r]):c[g].data[k].update([h[k].x||h[k][0],r]):c[g].addPoint([h[k].x||h[k][0],r])}}}a&&!a.Series.prototype.addATR&&(a.Series.prototype.addATR=function(a){var f=this.options.id;a=d.extend({period:14,stroke:"red",strokeWidth:2,dashStyle:"line",levels:[],parentSeriesID:f},a);var g="_"+(new Date).getTime(),h=this.options.data||[];if(h&&h.length>0){for(var i=[],j=[],k=0;k<h.length;k++)if(i.push(e.isOHLCorCandlestick(this.options.type)?0==k?(h[k].high||h[k][2])-(h[k].low||[k][3]):Math.max(Math.max((h[k].high||h[k][2])-(h[k].low||h[k][3]),Math.abs((h[k].high||h[k][2])-(h[k-1].close||h[k-1][4]))),(h[k].low||h[k][3])-(h[k-1].close||h[k-1][4])):0==k?h[k].y||h[k][1]:Math.abs((h[k].y||h[k][1])-(h[k-1].y||h[k-1][1]))),k>=a.period){var l=(j[k-1][1]*(a.period-1)+i[k])/a.period;isFinite(l)&&!isNaN(l)&&j.push([h[k].x||h[k][0],e.toFixed(l,2)])}else j.push([h[k].x||h[k][0],0]);var m=this.chart;b[g]=a,m.addAxis({id:"atr"+g,title:{text:"ATR("+a.period+")",align:"high",offset:0,rotation:0,y:10,x:50},lineWidth:2,plotLines:a.levels},!1,!1,!1),e.recalculate(m);var n=this;c[g]=m.addSeries({id:g,name:"ATR("+a.period+")",data:j,type:"line",dataGrouping:n.options.dataGrouping,yAxis:"atr"+g,opposite:n.options.opposite,color:a.stroke,lineWidth:a.strokeWidth,dashStyle:a.dashStyle},!1,!1),d(c[g]).data({isIndicator:!0,indicatorID:"atr",parentSeriesID:a.parentSeriesID,period:a.period}),m.redraw()}return g},a.Series.prototype.removeATR=function(a){var d=this.chart;b[a]=null,d.get(a).remove(!1),d.get("atr"+a).remove(!1),c[a]=null,e.recalculate(d),d.redraw()},a.wrap(a.Series.prototype,"addPoint",function(a,c,d,g,h){a.call(this,c,d,g,h),e.checkCurrentSeriesHasIndicator(b,this.options.id)&&f.call(this,c)}),a.wrap(a.Point.prototype,"update",function(a,c,d,g){a.call(this,c,d,g),e.checkCurrentSeriesHasIndicator(b,this.series.options.id)&&f.call(this.series,c,!0)}))}(Highcharts,jQuery,a)}}});
+/**
+ * Created by arnab on 3/22/15.
+ */
+define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
+
+    var atrOptionsMap = {}, atrSeriesMap = {};
+
+    return {
+        init: function() {
+
+            (function(H,$,indicatorBase) {
+
+                //Make sure that HighStocks have been loaded
+                //If we already loaded this, ignore further execution
+                if (!H || H.Series.prototype.addATR) return;
+
+                H.Series.prototype.addATR = function ( atrOptions ) {
+
+                    //Check for undefined
+                    //Merge the options
+                    var seriesID = this.options.id;
+                    atrOptions = $.extend({
+                        period : 14,
+                        stroke : 'red',
+                        strokeWidth : 2,
+                        dashStyle : 'line',
+                        levels : [],
+                        parentSeriesID : seriesID
+                    }, atrOptions);
+
+                    var uniqueID = '_' + new Date().getTime();
+
+                    //If this series has data, add ATR series to the chart
+                    var data = this.options.data || [];
+                    if (data && data.length > 0)
+                    {
+
+                        //Calculate ATR data
+                        /*
+                         * Formula(OHLC or Candlestick) -
+                         * 	tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
+                         * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
+                         * 		t - current
+                         * 		n - period
+                         *
+                         * Formula(other chart types) -
+                         * 	tr(t) = abs(close(t) - close(t - 1))
+                         * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
+                         * 		t - current
+                         * 		n - period
+                         */
+                        var tr = [], atrData = [];
+                        for (var index = 0; index < data.length; index++)
+                        {
+
+                            //Calculate TR - start
+                            if (indicatorBase.isOHLCorCandlestick(this.options.type))
+                            {
+                                if (index == 0)
+                                {
+                                    tr.push((data[index].high || data[index][2]) - (data[index].low || [index][3]));
+                                }
+                                else
+                                {
+                                    tr.push(
+                                        Math.max(Math.max((data[index].high || data[index][2]) - (data[index].low || data[index][3]), Math.abs((data[index].high || data[index][2]) - (data[index - 1].close || data[index - 1][4])))
+                                            , (data[index].low || data[index][3]) - (data[index - 1].close || data[index - 1][4])
+                                        )
+                                    );
+                                }
+                            }
+                            else
+                            {
+                                if (index == 0)
+                                {
+                                    //The close price is TR when index is 0
+                                    tr.push(data[index].y || data[index][1]);
+                                }
+                                else
+                                {
+                                    tr.push(Math.abs((data[index].y || data[index][1]) - (data[index - 1].y || data[index - 1][1])));
+                                }
+                            }
+                            //Calculate TR - end
+
+                            //Calculate ATR - start
+                            if (index >= atrOptions.period)
+                            {
+                                var atrValue = (atrData[index - 1][1] * (atrOptions.period - 1) + tr[index]) / atrOptions.period;
+                                if (isFinite(atrValue) && !isNaN(atrValue))
+                                {
+                                    atrData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(atrValue, 2)]);
+                                }
+                            }
+                            else
+                            {
+                                atrData.push([(data[index].x || data[index][0]), 0]);
+                            }
+                            //Calculate ATR - end
+
+                        }
+
+                        var chart = this.chart;
+
+                        atrOptionsMap[uniqueID] = atrOptions;
+
+                        chart.addAxis({ // Secondary yAxis
+                            id: 'atr'+ uniqueID,
+                            title: {
+                                text: 'ATR(' + atrOptions.period  + ')',
+                                align: 'high',
+                                offset: 0,
+                                rotation: 0,
+                                y: 10, //Trying to show title inside the indicator chart
+                                x: 50
+                            },
+                            lineWidth: 2,
+                            plotLines: atrOptions.levels
+                        }, false, false, false);
+
+                        indicatorBase.recalculate(chart);
+
+                        var series = this;
+                        atrSeriesMap[uniqueID] = chart.addSeries({
+                            id: uniqueID,
+                            name: 'ATR(' + atrOptions.period  + ')',
+                            data: atrData,
+                            type: 'line',
+                            dataGrouping: series.options.dataGrouping,
+                            yAxis: 'atr'+ uniqueID,
+                            opposite: series.options.opposite,
+                            color: atrOptions.stroke,
+                            lineWidth: atrOptions.strokeWidth,
+                            dashStyle: atrOptions.dashStyle
+                        }, false, false);
+
+                        $(atrSeriesMap[uniqueID]).data({
+                            isIndicator: true,
+                            indicatorID: 'atr',
+                            parentSeriesID: atrOptions.parentSeriesID,
+                            period: atrOptions.period
+                        });
+
+                        //We are update everything in one shot
+                        chart.redraw();
+                        //console.log('series.options.length : ', this.options.data.length);
+                        //console.log('atrSeriesMap.options.data.length : ', atrSeriesMap[uniqueID].options.data.length);
+
+                    }
+
+                    return uniqueID;
+
+                };
+
+                H.Series.prototype.removeATR = function (uniqueID) {
+                    var chart = this.chart;
+                    atrOptionsMap[uniqueID] = null;
+                    chart.get(uniqueID).remove(false);
+                    chart.get('atr' + uniqueID).remove(false);
+                    atrSeriesMap[uniqueID] = null;
+                    //Recalculate the heights and position of yAxes
+                    indicatorBase.recalculate(chart);
+                    chart.redraw();
+                }
+
+                /*
+                 *  Wrap HC's Series.addPoint
+                 */
+                H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
+
+                    proceed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(atrOptionsMap, this.options.id))
+                    {
+                        updateATRSeries.call(this, options);
+                    }
+
+                });
+
+                /*
+                 *  Wrap HC's Point.update
+                 */
+                H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
+
+                    proceed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(atrOptionsMap, this.series.options.id))
+                    {
+                        updateATRSeries.call(this.series, options, true);
+                    }
+
+                });
+
+                /**
+                 * This function should be called in the context of series object
+                 * @param options - The data update values
+                 * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
+                 */
+                function updateATRSeries(options, isPointUpdate) {
+                    var series = this;
+                    var chart = series.chart;
+
+                    //Add a new ATR data point
+                    for (var key in atrSeriesMap) {
+                        if (atrSeriesMap[key] && atrSeriesMap[key].options && atrSeriesMap[key].options.data
+                                            && atrSeriesMap[key].options.data.length > 0
+                                            && atrOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is ATR series. Add one more ATR point
+                            //Calculate ATR data
+                            /*
+                             * Formula(OHLC or Candlestick) -
+                             * 	tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
+                             * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
+                             * 		t - current
+                             * 		n - period
+                             *
+                             * Formula(other chart types) -
+                             * 	tr(t) = abs(close(t) - close(t - 1))
+                             * 	atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n
+                             * 		t - current
+                             * 		n - period
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var atrData = atrSeriesMap[key].options.data;
+                            var n = atrOptionsMap[key].period;
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                var tr = 0.0;
+                                if (indicatorBase.isOHLCorCandlestick(series.options.type)) {
+                                    var highValue = (data[dataPointIndex].high || data[dataPointIndex][2]);
+                                    var lowValue = (data[dataPointIndex].low || data[dataPointIndex][3]);
+                                    var closeValue = (data[dataPointIndex - 1].close || data[dataPointIndex - 1][4]);
+                                    tr = Math.max(Math.max(highValue - lowValue, Math.abs(highValue - closeValue)), (lowValue - closeValue));
+                                }
+                                else {
+                                    var priceNow = (data[dataPointIndex].y || data[dataPointIndex][1]);
+                                    var pricePrev = (data[dataPointIndex - 1].y || data[dataPointIndex - 1][1]);
+                                    tr = Math.abs(priceNow - pricePrev);
+                                }
+                                //Round to 2 decimal places
+                                var atr = indicatorBase.toFixed(( (atrData[dataPointIndex - 1].y || atrData[dataPointIndex - 1][1]) * (n - 1) + tr ) / n, 2) ;
+                                if (isPointUpdate)
+                                {
+                                    //console.log('series.options.data.length , update : ', data.length, ', Series name : ', series.options.name);
+                                    //console.log('atrSeries.options.data.length , update : ', atrSeriesMap[key].options.data.length);
+                                    if (atrSeriesMap[key].options.data.length < data.length) {
+                                        atrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
+                                    } else
+                                    {
+                                        atrSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
+                                    }
+                                }
+                                else
+                                {
+                                    //console.log('series.options.data.length : ', data.length);
+                                    //console.log('atrSeries.options.data.length (before) : ', atrSeriesMap[key].options.data.length);
+                                    atrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
+                                    //console.log('atrSeries.options.data.length (after) : ', atrSeriesMap[key].options.data.length);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            } (Highcharts,jQuery,indicatorBase));
+
+        }
+    }
+
+});

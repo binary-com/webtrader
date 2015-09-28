@@ -1,1 +1,146 @@
-define(["jquery","datatables","common/loadCSS"],function(a){function b(c,d,e){a.each(d,function(d,f){f.submarkets||f.instruments?b(c,f.submarkets||f.instruments,e):a(c.row.add([f.display_name]).node()).data({symbol:f.symbol,delay_amount:f.delay_amount}).click(function(){a(".overlay_dialog_add").dialog("close");var b=a(this).data("symbol"),c=a(this).data("delay_amount"),d=a(this).text(),f=a(e).data("timeperiod"),g=a(e).data("type");require(["common/util"],function(){if(isDataTypeClosePriceOnly(g)){var h=convertToTimeperiodObject(f);c<=h.timeInSeconds()/60?require(["charts/chartOptions","charts/charts"],function(c,f){a(e).data("overlayIndicator",!0);var g=e.replace("#","").replace("_chart","");c.isCurrentViewInLogScale(g)&&c.triggerToggleLogScale(g),c.disableEnableLogMenu(g,!1),c.disableEnableCandlestick(g,!1),c.disableEnableOHLC(g,!1),f.overlay(e,b,d)}):require(["jquery","jquery-growl"],function(a){a("#timePeriod").addClass("ui-state-error"),a.growl.error({message:d+" is not allowed to overlay on this chart!"})})}else require(["jquery","jquery-growl"],function(a){a("#timePeriod").addClass("ui-state-error"),a.growl.error({message:"Overlaying on "+g+" chart type is not allowed!"})})})})})}function c(c,d,e){c.find("tbody tr").remove();var f=c.find("table").DataTable();f.clear().draw(),b(f,d.getMarketData(),e),f.draw(),a(".overlay_dialog_add").dialog("open")}function d(b){require(["instruments/instruments"],function(d){a.isEmptyObject(d.getMarketData())?require(["jquery","jquery-growl"],function(a){a.growl.error({message:"Market data is not loaded yet!"})}):(loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css"),loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css"),a.get("overlay/overlay_add.html",function(e){e=a(e),e.hide(),e.appendTo("body"),e.find("table").DataTable({paging:!1,scrollY:200,info:!1}),a(".overlay_dialog_add").dialog({autoOpen:!1,resizable:!1,modal:!0,my:"center",at:"center",of:window,buttons:[]}),c(e,d,b)}))})}return{openDialog:function(b){return 0==a(".overlay_dialog_add").length?void d(b):void require(["instruments/instruments"],function(d){c(a(".overlay_dialog_add"),d,b)})}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "datatables", "common/loadCSS"], function ($) {
+
+    function _refreshInstruments( table, data, containerIDWithHash ) {
+
+        $.each(data, function (key, value) {
+            if (value.submarkets || value.instruments) {
+                _refreshInstruments(table, value.submarkets || value.instruments, containerIDWithHash);
+            }
+            else {
+                $(table.row.add([value.display_name]).node()).data(
+                    {
+                        "symbol": value.symbol,
+                        "delay_amount": value.delay_amount
+                    }).click(function () {
+
+                        $(".overlay_dialog_add").dialog("close");
+                        var symbol = $(this).data("symbol");
+                        var delay_amount = $(this).data("delay_amount");
+                        var displaySymbol = $(this).text();
+                        var mainSeries_timeperiod = $(containerIDWithHash).data("timeperiod");
+                        var type = $(containerIDWithHash).data("type");
+
+                        //validate time period of the main series
+                        require(["common/util"], function () {
+                            if (isDataTypeClosePriceOnly(type)) {
+                                var timeperiodObject = convertToTimeperiodObject(mainSeries_timeperiod);
+                                if (delay_amount <= (timeperiodObject.timeInSeconds() / 60)) {
+                                    require(['charts/chartOptions', "charts/charts"], function (chartOptions, charts) {
+                                        $(containerIDWithHash).data("overlayIndicator", true);
+                                        var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
+                                        if (chartOptions.isCurrentViewInLogScale(newTabId))
+                                        {
+                                            chartOptions.triggerToggleLogScale(newTabId);
+                                        }
+                                        chartOptions.disableEnableLogMenu( newTabId, false );
+                                        chartOptions.disableEnableCandlestick( newTabId, false );
+                                        chartOptions.disableEnableOHLC( newTabId, false );
+                                        charts.overlay(containerIDWithHash, symbol, displaySymbol);
+                                    });
+                                } else {
+                                    require(["jquery", "jquery-growl"], function ($) {
+                                        $("#timePeriod").addClass('ui-state-error');
+                                        $.growl.error({
+                                            message: displaySymbol
+                                            + " is not allowed to overlay on this chart!"
+                                        });
+                                    });
+                                }
+                            } else {
+                                require(["jquery", "jquery-growl"], function ($) {
+                                    $("#timePeriod").addClass('ui-state-error');
+                                    $.growl.error({
+                                        message: "Overlaying on " + type + " chart type is not allowed!"
+                                    });
+                                });
+                            }
+                        });
+                    });
+            }
+        });
+
+    }
+
+    function refreshTable($html, instruments, containerIDWithHash) {
+
+        //Clear what we already have
+        $html.find('tbody tr').remove();
+
+        var table = $html.find('table').DataTable();
+        table.clear().draw();
+
+        //Load market data
+        _refreshInstruments(table, instruments.getMarketData(), containerIDWithHash);
+        table.draw();
+
+        $(".overlay_dialog_add").dialog( 'open' );
+    }
+
+    function init( containerIDWithHash, _callback ) {
+
+        //validate if instruments menu has already been loaded or not
+        require(["instruments/instruments"], function (instruments) {
+            if ($.isEmptyObject(instruments.getMarketData())) {
+                require(["jquery", "jquery-growl"], function ($) {
+                    $.growl.error({message: "Market data is not loaded yet!"});
+                });
+            }
+            else {
+
+                loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
+                loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
+
+                $.get("overlay/overlay_add.html", function($html) {
+                    $html = $($html);
+                    $html.hide();
+                    $html.appendTo("body");
+
+                    //Init the scrollable and searchable table
+                    $html.find('table').DataTable({
+                        paging: false,
+                        scrollY: 200,
+                        info: false
+                    });
+
+                    $(".overlay_dialog_add").dialog({
+                        autoOpen: false,
+                        resizable: false,
+                        modal: true,
+                        my: 'center',
+                        at: 'center',
+                        of: window,
+                        buttons: []
+                    });
+
+                    refreshTable( $html, instruments, containerIDWithHash );
+                });
+
+            }
+        });
+
+    }
+
+    return {
+
+        openDialog : function( containerIDWithHash ) {
+
+            //If it has not been initiated, then init it first
+            if ($(".overlay_dialog_add").length == 0)
+            {
+                init( containerIDWithHash);
+                return;
+            }
+
+            require(["instruments/instruments"], function (instruments) {
+                refreshTable($(".overlay_dialog_add"), instruments, containerIDWithHash);
+            });
+
+        }
+
+    };
+
+});

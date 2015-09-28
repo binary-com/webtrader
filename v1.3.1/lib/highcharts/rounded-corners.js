@@ -1,1 +1,61 @@
-!function(a){a.wrap(a.seriesTypes.column.prototype,"translate",function(b){var c=this.options,d=c.borderRadiusTopLeft||0,e=c.borderRadiusTopRight||0,f=c.borderRadiusBottomRight||0,g=c.borderRadiusBottomLeft||0;b.call(this),(d||e||f||g)&&a.each(this.points,function(a){var b=a.shapeArgs,c=b.width,h=b.height,i=b.x,j=b.y;a.dlBox=a.shapeArgs,a.shapeType="path",a.shapeArgs={d:["M",i+d,j,"L",i+c-e,j,"C",i+c-e/2,j,i+c,j+e/2,i+c,j+e,"L",i+c,j+h-f,"C",i+c,j+h-f/2,i+c-f/2,j+h,i+c-f,j+h,"L",i+g,j+h,"C",i+g/2,j+h,i,j+h-g/2,i,j+h-g,"L",i,j+d,"C",i,j+d/2,i+d/2,j,i+d,j,"Z"]}})})}(Highcharts);
+/**
+ * Highcharts plugin for creating individual rounded corners.
+ * 
+ * Author: Torstein Honsi
+ * Last revision: 2014-09-19
+ * License: MIT License
+ *
+ * Known issues:
+ * - Animation isn't working. To overcome that, create a method on the Renderer which points
+ *   to a symbol definition, like it is currently done with "arc" in PieSeries.
+ * - Dom exception on showing/hiding the series
+ */
+(function (H) {
+    H.wrap(H.seriesTypes.column.prototype, 'translate', function (proceed) {
+        var options = this.options,
+            rTopLeft = options.borderRadiusTopLeft || 0,
+            rTopRight = options.borderRadiusTopRight || 0,
+            rBottomRight = options.borderRadiusBottomRight || 0,
+            rBottomLeft = options.borderRadiusBottomLeft || 0;
+
+        proceed.call(this);
+
+        if (rTopLeft || rTopRight || rBottomRight || rBottomLeft) {
+            H.each(this.points, function (point) {
+                var shapeArgs = point.shapeArgs,
+                    w = shapeArgs.width,
+                    h = shapeArgs.height,
+                    x = shapeArgs.x,
+                    y = shapeArgs.y;
+
+                // Preserve the box for data labels
+                point.dlBox = point.shapeArgs;
+
+                point.shapeType = 'path';
+                point.shapeArgs = {
+                    d: [
+                        'M', x + rTopLeft, y,
+                        // top side
+                        'L', x + w - rTopRight, y,
+                        // top right corner
+                        'C', x + w - rTopRight / 2, y, x + w, y + rTopRight / 2, x + w, y + rTopRight,
+                        // right side
+                        'L', x + w, y + h - rBottomRight,
+                        // bottom right corner
+                        'C', x + w, y + h - rBottomRight / 2, x + w - rBottomRight / 2, y + h, x + w - rBottomRight, y + h,
+                        // bottom side
+                        'L', x + rBottomLeft, y + h,
+                        // bottom left corner
+                        'C', x + rBottomLeft / 2, y + h, x, y + h - rBottomLeft / 2, x, y + h - rBottomLeft,
+                        // left side
+                        'L', x, y + rTopLeft,
+                        // top left corner
+                        'C', x, y + rTopLeft / 2, x + rTopLeft / 2, y, x + rTopLeft, y,
+                        'Z'
+                    ]
+                };
+                    
+            });
+        }
+    });
+}(Highcharts));

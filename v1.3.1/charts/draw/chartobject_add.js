@@ -1,1 +1,67 @@
-define(["jquery","datatables","common/loadCSS","common/util"],function(a){function b(b,c){loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css"),loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css"),a.get("charts/draw/chartobject_add.html",function(d){d=a(d);var e=d.hide().find("table").DataTable({paging:!1,scrollY:200,info:!1});e.rows().nodes().to$().click(function(){var b=a.trim((a(this).find("td").attr("class")||"").split(" ")[0]);require(["charts/draw/highcharts_custom/"+b],function(b){var c=a(".chartobject_add_dialog").data("refererChartID");a(c).highcharts().annotate=!0,b.init(),a(".chartobject_add_dialog").dialog("close")})}),d.appendTo("body"),a(".chartobject_add_dialog").dialog({autoOpen:!1,resizable:!1,modal:!0,my:"center",at:"center",of:window,buttons:[]}),"function"==typeof c&&c(b)})}return{openDialog:function(c){return 0==a(".chartobject_add_dialog").length?void b(c,this.openDialog):void a(".chartobject_add_dialog").data("refererChartID",c).dialog("open")}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "datatables", "common/loadCSS", "common/util"], function ($) {
+
+    function init( containerIDWithHash, _callback ) {
+
+        loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
+        loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
+
+        $.get("charts/draw/chartobject_add.html", function($html) {
+            $html = $($html);
+            var table = $html.hide().find('table').DataTable({
+                paging: false,
+                scrollY: 200,
+                info: false
+            });
+
+            //Attach row click listener
+            table.rows().nodes().to$().click(function() {
+              var className = $.trim(($(this).find('td').attr('class') || '').split(" ")[0]);
+              require(["charts/draw/highcharts_custom/" + className], function(draw) {
+                var refererChartID = $('.chartobject_add_dialog').data('refererChartID');
+                $(refererChartID).highcharts().annotate = true;
+                draw.init();
+                $('.chartobject_add_dialog').dialog('close');
+              });
+            });
+
+            $html.appendTo("body");
+            $( ".chartobject_add_dialog" ).dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: true,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: []
+            });
+
+            if (typeof _callback == "function")
+            {
+                _callback( containerIDWithHash );
+            }
+
+        });
+    }
+
+    return {
+
+        openDialog : function( containerIDWithHash ) {
+
+            //If it has not been initiated, then init it first
+            if ($(".chartobject_add_dialog").length == 0)
+            {
+                init( containerIDWithHash, this.openDialog);
+                return;
+            }
+
+            $(".chartobject_add_dialog").data('refererChartID', containerIDWithHash).dialog("open");
+
+        }
+
+    };
+
+});

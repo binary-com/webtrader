@@ -1,1 +1,124 @@
-define(["jquery","jquery-ui","color-picker","common/loadCSS"],function(a){function b(){a(this).dialog("close"),a(this).find("*").removeClass("ui-state-error")}function c(c,d){loadCSS("charts/indicators/max/max.css"),a.get("charts/indicators/max/max.html",function(e){var f="#cd0a0a";e=a(e),e.appendTo("body"),e.find("input[type='button']").button(),e.find("#max_stroke").colorpicker({part:{map:{size:128},bar:{size:128}},select:function(b,c){a("#max_stroke").css({background:"#"+c.formatted}).val(""),f="#"+c.formatted},ok:function(b,c){a("#max_stroke").css({background:"#"+c.formatted}).val(""),f="#"+c.formatted}}),e.dialog({autoOpen:!1,resizable:!1,modal:!0,width:280,my:"center",at:"center",of:window,buttons:[{text:"Ok",click:function(){require(["validation/validation"],function(c){return c.validateNumericBetween(e.find(".max_input_width_for_period").val(),parseInt(e.find(".max_input_width_for_period").attr("min")),parseInt(e.find(".max_input_width_for_period").attr("max")))?(require(["charts/indicators/highcharts_custom/max"],function(b){b.init();var c={period:parseInt(e.find(".max_input_width_for_period").val()),stroke:f,strokeWidth:parseInt(e.find("#max_strokeWidth").val()),dashStyle:e.find("#max_dashStyle").val(),appliedTo:parseInt(e.find("#max_appliedTo").val())};a(a(".max").data("refererChartID")).highcharts().series[0].addMAX(c)}),void b.call(e)):void require(["jquery","jquery-growl"],function(a){a.growl.error({message:"Only numbers between "+e.find(".max_input_width_for_period").attr("min")+" to "+e.find(".max_input_width_for_period").attr("max")+" is allowed for "+e.find(".max_input_width_for_period").closest("tr").find("td:first").text()+"!"})})})}},{text:"Cancel",click:function(){b.call(this)}}]}),"function"==typeof d&&d(c)})}return{open:function(b){return 0==a(".max").length?void c(b,this.open):void a(".max").data("refererChartID",b).dialog("open")}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
+
+    function closeDialog() {
+        $(this).dialog("close");
+        $(this).find("*").removeClass('ui-state-error');
+    }
+
+    function init( containerIDWithHash, _callback ) {
+
+        loadCSS('charts/indicators/max/max.css');
+
+        $.get("charts/indicators/max/max.html" , function ( $html ) {
+
+            var defaultStrokeColor = '#cd0a0a';
+
+            $html = $($html);
+            //$html.hide();
+            $html.appendTo("body");
+            //$html.find('select').selectmenu(); TODO for some reason, this does not work
+            $html.find("input[type='button']").button();
+
+            $html.find("#max_stroke").colorpicker({
+                part:	{
+                    map:		{ size: 128 },
+                    bar:		{ size: 128 }
+                },
+                select:			function(event, color) {
+                    $("#max_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                },
+                ok:             			function(event, color) {
+                    $("#max_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                }
+            });
+
+            $html.dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: true,
+                width: 280,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            //console.log('Ok button is clicked!');
+                            require(["validation/validation"], function(validation) {
+
+                                if (!validation.validateNumericBetween($html.find(".max_input_width_for_period").val(),
+                                                parseInt($html.find(".max_input_width_for_period").attr("min")),
+                                                parseInt($html.find(".max_input_width_for_period").attr("max"))))
+                                {
+                                    require(["jquery", "jquery-growl"], function($) {
+                                        $.growl.error({ message: "Only numbers between " + $html.find(".max_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".max_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".max_input_width_for_period").closest('tr').find('td:first').text() + "!" });
+                                    });
+                                    return;
+                                }
+
+                                require(['charts/indicators/highcharts_custom/max'], function ( max ) {
+                                    max.init();
+                                    var options = {
+                                        period : parseInt($html.find(".max_input_width_for_period").val()),
+                                        stroke : defaultStrokeColor,
+                                        strokeWidth : parseInt($html.find("#max_strokeWidth").val()),
+                                        dashStyle : $html.find("#max_dashStyle").val(),
+                                        appliedTo: parseInt($html.find("#max_appliedTo").val())
+                                    }
+                                    //Add MAX for the main series
+                                    $($(".max").data('refererChartID')).highcharts().series[0].addMAX(options);
+                                });
+
+                                closeDialog.call($html);
+
+                            });
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function() {
+                            closeDialog.call(this);
+                        }
+                    }
+                ]
+            });
+
+            if (typeof _callback == "function")
+            {
+                _callback( containerIDWithHash );
+            }
+
+        });
+
+    }
+
+    return {
+
+        open : function ( containerIDWithHash ) {
+
+            if ($(".max").length == 0)
+            {
+                init( containerIDWithHash, this.open );
+                return;
+            }
+
+            $(".max").data('refererChartID', containerIDWithHash).dialog( "open" );
+
+        }
+
+    };
+
+});

@@ -1,1 +1,106 @@
-define(["jquery","jquery-ui","color-picker","common/loadCSS"],function(a){function b(){a(this).dialog("close"),a(this).find("*").removeClass("ui-state-error")}function c(c,d){loadCSS("charts/indicators/typprice/typprice.css"),a.get("charts/indicators/typprice/typprice.html",function(e){var f="#cd0a0a";e=a(e),e.appendTo("body"),e.find("input[type='button']").button(),e.find("#typprice_stroke").colorpicker({part:{map:{size:128},bar:{size:128}},select:function(b,c){a("#typprice_stroke").css({background:"#"+c.formatted}).val(""),f="#"+c.formatted},ok:function(b,c){a("#typprice_stroke").css({background:"#"+c.formatted}).val(""),f="#"+c.formatted}}),e.dialog({autoOpen:!1,resizable:!1,modal:!0,width:280,my:"center",at:"center",of:window,buttons:[{text:"Ok",click:function(){require(["charts/indicators/highcharts_custom/typprice"],function(b){b.init();var c={stroke:f,strokeWidth:parseInt(e.find("#typprice_strokeWidth").val()),dashStyle:e.find("#typprice_dashStyle").val()};a(a(".typprice").data("refererChartID")).highcharts().series[0].addTYPPRICE(c)}),b.call(e)}},{text:"Cancel",click:function(){b.call(this)}}]}),"function"==typeof d&&d(c)})}return{open:function(b){return 0==a(".typprice").length?void c(b,this.open):void a(".typprice").data("refererChartID",b).dialog("open")}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
+
+    function closeDialog() {
+        $(this).dialog("close");
+        $(this).find("*").removeClass('ui-state-error');
+    }
+
+    function init( containerIDWithHash, _callback ) {
+
+        loadCSS('charts/indicators/typprice/typprice.css');
+
+        $.get("charts/indicators/typprice/typprice.html" , function ( $html ) {
+
+            var defaultStrokeColor = '#cd0a0a';
+
+            $html = $($html);
+            //$html.hide();
+            $html.appendTo("body");
+            //$html.find('select').selectmenu(); TODO for some reason, this does not work
+            $html.find("input[type='button']").button();
+
+            $html.find("#typprice_stroke").colorpicker({
+                part:	{
+                    map:		{ size: 128 },
+                    bar:		{ size: 128 }
+                },
+                select:			function(event, color) {
+                    $("#typprice_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                },
+                ok:             			function(event, color) {
+                    $("#typprice_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                }
+            });
+
+            $html.dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: true,
+                width: 280,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            //console.log('Ok button is clicked!');
+                            require(['charts/indicators/highcharts_custom/typprice'], function ( typprice ) {
+                                typprice.init();
+                                var options = {
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#typprice_strokeWidth").val()),
+                                    dashStyle : $html.find("#typprice_dashStyle").val()
+                                }
+                                //Add TYPPRICE for the main series
+                                $($(".typprice").data('refererChartID')).highcharts().series[0].addTYPPRICE(options);
+                            });
+
+                            closeDialog.call($html);
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function() {
+                            closeDialog.call(this);
+                        }
+                    }
+                ]
+            });
+
+            if (typeof _callback == "function")
+            {
+                _callback( containerIDWithHash );
+            }
+
+        });
+
+    }
+
+    return {
+
+        open : function ( containerIDWithHash ) {
+
+            if ($(".typprice").length == 0)
+            {
+                init( containerIDWithHash, this.open );
+                return;
+            }
+
+            $(".typprice").data('refererChartID', containerIDWithHash).dialog( "open" );
+
+        }
+
+    };
+
+});

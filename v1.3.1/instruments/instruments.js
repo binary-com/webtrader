@@ -1,1 +1,267 @@
-define(["jquery","jquery-ui","websockets/symbol_handler"],function(a,b,c){"use strict";function d(b){require(["validation/validation"],function(c){require(["charts/chartWindow"],function(d){if(!c.validateIfNoOfChartsCrossingThreshold(d.totalWindows()))return void require(["jquery","jquery-growl"],function(a){a.growl.error({message:"No more charts allowed!"})});var f=a("#instrumentsDialog").dialog("option","title"),g=a("#instrumentsDialog").data("symbol"),h=a("#instrumentsDialog").data("delay_amount");require(["common/util"],function(){var i=convertToTimeperiodObject(b);i?c.validateNumericBetween(i.intValue(),parseInt(a("#timePeriod").attr("min")),parseInt(a("#timePeriod").attr("max")))?h<=i.timeInSeconds()/60?(d.addNewWindow(g,f,b,null,isTick(b)?"line":"candlestick"),e.call(a("#instrumentsDialog"))):require(["jquery","jquery-growl"],function(a){a("#timePeriod").addClass("ui-state-error"),a.growl.error({message:"Charts of less than "+convertToTimeperiodObject(h+"m").humanReadableString()+" are not available for the "+f+"."})}):require(["jquery","jquery-growl"],function(a){a("#timePeriod").addClass("ui-state-error"),a.growl.error({message:"Only numbers between "+a("#timePeriod").attr("min")+" to "+a("#timePeriod").attr("max")+" is allowed for "+a("#units option:selected").text()+"!"})}):require(["jquery","jquery-growl"],function(a){a("#timePeriod").addClass("ui-state-error"),a.growl.error({message:"Only numbers between 1 to 100 is allowed!"})})})})})}function e(){a(this).dialog("close"),a(this).find("*").removeClass("ui-state-error")}function f(b,c){a.each(c,function(c,g){var h=a("<li>").append(g.display_name).data("symbol",g.symbol).data("delay_amount",g.delay_amount).appendTo(b);if(g.submarkets||g.instruments){h.click(function(a){return a.preventDefault(),!1});var i=a("<ul>").addClass("ui-corner-all");i.appendTo(h),f(i,g.submarkets||g.instruments)}else h.click(function(){0==a("#instrumentsDialog").length?a.get("instruments/instruments.html",function(b){a(b).css("display","none").appendTo("body"),a("#standardPeriodsButtonContainer").find("button").click(function(){d(a(this).attr("id"))}).button(),a("#units").change(function(){"t"==a(this).val()?a("#timePeriod").val("1").attr("disabled","disabled").attr("min",1).attr("max",1):(a("#timePeriod").removeAttr("disabled"),"m"==a("#units").val()?a("#timePeriod").attr("max",50):"h"==a("#units").val()?a("#timePeriod").attr("max",23):a("#timePeriod").attr("max",120))}),a("#instrumentsDialog").dialog({autoOpen:!1,resizable:!1,width:260,my:"center",at:"center",of:window,buttons:[{text:"Ok",click:function(){d(a("#timePeriod").val()+a("#units").val())}},{text:"Cancel",click:function(){e.call(this)}}]}),a("#instrumentsDialog").dialog("option","title",h.text()).data("symbol",h.data("symbol")).data("delay_amount",h.data("delay_amount")),a("#instrumentsDialog").dialog("open"),a("#instrumentSelectionMenuDIV").hide()}):(a("#instrumentsDialog").dialog("option","title",a(this).text()).data("symbol",a(this).data("symbol")).data("delay_amount",a(this).data("delay_amount")),a("#instrumentsDialog").dialog("open"),a("#instrumentSelectionMenuDIV").hide()),a(document).click()})})}var g=[];return{init:function(){a.isEmptyObject(g)&&(loadCSS("instruments/instruments.css"),c.fetchMarkets(function(b){if(!a.isEmptyObject(b)){g=b;var c=a(".mainContainer").find(".instruments");c.button("enable").button("refresh").button("widget").click(function(){var b=a(this).closest("div").find("ul:first").menu();b.is(":visible")?b.hide():b.show()}).focusout(function(){a(this).closest("div").find("ul").menu().hide()});var d=a("<ul>").addClass("ui-corner-all");d.appendTo(c),f(d,b),d.menu()}}))},getMarketData:function(){return g},isMarketDataPresent:function(b,c){var d=!1;c||(c=g);var e=this;return a.each(c,function(c,f){return f.submarkets||f.instruments?d=e.isMarketDataPresent(b,f.submarkets||f.instruments):a.trim(f.display_name)==a.trim(b)&&(d=!0),!d}),d},getSpecificMarketData:function(b,c){var d={};c||(c=g);var e=this;return a.each(c,function(c,f){return f.submarkets||f.instruments?d=e.getSpecificMarketData(b,f.submarkets||f.instruments):a.trim(f.display_name)==a.trim(b)&&(d=f),a.isEmptyObject(d)}),d}}});
+/**
+ * Created by arnab on 2/12/15.
+ */
+
+define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
+
+    "use strict";
+
+    function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
+
+        require(["validation/validation"], function(validation) {
+
+            require(["charts/chartWindow"], function (chartWindow) {
+
+                if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows()))
+                {
+                    require(["jquery", "jquery-growl"], function($) {
+                        $.growl.error({ message: "No more charts allowed!" });
+                    });
+                    return;
+                }
+
+                //validate the selection
+                var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
+                var internalSymbol = $("#instrumentsDialog").data("symbol");
+                var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
+                require(["common/util"], function() {
+                    var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
+                    if (timeperiodObject) {
+
+                        if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max"))))
+                        {
+
+                            if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
+
+                                chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
+                                            isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
+                                closeDialog.call($("#instrumentsDialog"));
+                            }
+                            else
+                            {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $("#timePeriod").addClass('ui-state-error');
+                                    $.growl.error({ message: "Charts of less than "
+                                            //Convert to human readable (in minutes) format
+                                        + convertToTimeperiodObject(delayAmount + 'm').humanReadableString()
+                                        + " are not available for the " + displaySymbol + "." });
+                                });
+                            }
+                        }
+                        else
+                        {
+                            require(["jquery", "jquery-growl"], function($) {
+                                $("#timePeriod").addClass('ui-state-error');
+                                $.growl.error({ message: "Only numbers between " + $("#timePeriod").attr("min") + " to " + $("#timePeriod").attr("max") + " is allowed for " + $("#units option:selected").text() + "!" });
+                            });
+                        }
+
+                    }
+                    else
+                    {
+                        require(["jquery", "jquery-growl"], function($) {
+                            $("#timePeriod").addClass('ui-state-error');
+                            $.growl.error({ message: "Only numbers between 1 to 100 is allowed!" });
+                        });
+                    }
+
+                });
+            });
+        });
+
+    }
+
+    function closeDialog() {
+        $(this).dialog("close");
+        $(this).find("*").removeClass('ui-state-error');
+    }
+
+    function _refreshInstrumentMenu( rootElement, data ) {
+
+        $.each(data, function(key, value) {
+            var newLI = $("<li>").append(value.display_name)
+                                .data("symbol", value.symbol)
+                                .data("delay_amount", value.delay_amount)
+                                .appendTo( rootElement );
+
+            if (value.submarkets || value.instruments) {
+                newLI.click(function(e) {
+                  e.preventDefault();
+                  return false;
+                });
+                var newUL = $("<ul>").addClass('ui-corner-all');
+                newUL.appendTo(newLI);
+                _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
+            } else {
+
+                newLI.click(function() {
+
+                    if ($("#instrumentsDialog").length == 0) {
+
+                        $.get("instruments/instruments.html", function ($html) {
+                            $($html).css("display", "none").appendTo("body");
+                            $("#standardPeriodsButtonContainer").find("button")
+                                .click(function() {
+                                    //console.log('Standard button is clicked');
+                                    openNewChart($(this).attr('id'));
+                                })
+                                .button();
+
+
+                            //attach unit change listener
+                            $("#units").change(function () {
+                                if ($(this).val() == 't')
+                                {
+                                    $("#timePeriod").val('1').attr('disabled', 'disabled')
+                                        .attr("min", 1).attr("max", 1);
+                                }
+                                else
+                                {
+                                    $("#timePeriod").removeAttr('disabled');
+                                    if ($("#units").val() == 'm')
+                                    {
+                                        $("#timePeriod").attr("max", 50);
+                                    }
+                                    else if ($("#units").val() == 'h')
+                                    {
+                                        $("#timePeriod").attr("max", 23);
+                                    }
+                                    else
+                                    {
+                                        $("#timePeriod").attr("max", 120);
+                                    }
+                                }
+                            });
+
+                            $( "#instrumentsDialog" ).dialog({
+                                autoOpen: false,
+                                resizable: false,
+                                width: 260,
+                                my: 'center',
+                                at: 'center',
+                                of: window,
+                                buttons: [
+                                    {
+                                        text: "Ok",
+                                        click: function() {
+                                            //console.log('Ok button is clicked!');
+                                            openNewChart($("#timePeriod").val() + $("#units").val());
+                                        }
+                                    },
+                                    {
+                                        text: "Cancel",
+                                        click: function() {
+                                            closeDialog.call(this);
+                                        }
+                                    }
+                                ]
+                            });
+
+                            $("#instrumentsDialog").dialog('option', 'title', newLI.text())
+                                                        .data("symbol", newLI.data("symbol"))
+                                                        .data("delay_amount", newLI.data("delay_amount"));
+                            $( "#instrumentsDialog" ).dialog( "open" );
+                            $("#instrumentSelectionMenuDIV").hide();
+
+                        });
+
+                    } else {
+                        $("#instrumentsDialog").dialog('option', 'title', $(this).text())
+                                        .data("symbol", $(this).data("symbol"))
+                                        .data("delay_amount", $(this).data("delay_amount"));
+                        $( "#instrumentsDialog" ).dialog( "open" );
+                        $("#instrumentSelectionMenuDIV").hide();
+                    }
+
+                    $(document).click();
+
+                });
+
+            }
+        });
+
+    }
+
+    var markets = [];
+
+    return {
+
+        init: function( ) {
+
+            if ($.isEmptyObject(markets)) {
+                loadCSS("instruments/instruments.css");
+                symbol_handler.fetchMarkets(function (_instrumentJSON) {
+                    if (!$.isEmptyObject(_instrumentJSON)) {
+
+                        markets = _instrumentJSON;
+
+                        //Enable the instruments menu
+                        var instrumentsMenu = $(".mainContainer").find('.instruments');
+                        instrumentsMenu.button("enable").button("refresh").button("widget").click(function(e) {
+                          var menu = $(this).closest('div').find("ul:first").menu();
+                          if (menu.is(":visible")) {
+                            menu.hide();
+                          } else {
+                            menu.show();
+                          }
+                        }).focusout(function() {
+                          $(this).closest('div').find('ul').menu().hide();
+                        });
+
+                        var rootUL = $("<ul>").addClass('ui-corner-all');
+                        rootUL.appendTo(instrumentsMenu);
+                        _refreshInstrumentMenu(rootUL, _instrumentJSON);
+                        rootUL.menu();
+
+                    }
+                });
+            }
+
+        },
+
+        getMarketData : function() {
+            return markets;
+        },
+
+        isMarketDataPresent : function( marketDataDisplayName, marketData ) {
+            var present = false;
+            if (!marketData) {
+                marketData = markets;
+            }
+
+            var instrumentObj = this;
+            $.each(marketData, function (key, value) {
+                if (value.submarkets || value.instruments) {
+                    present = instrumentObj.isMarketDataPresent(marketDataDisplayName, value.submarkets || value.instruments);
+                } else {
+                    if ($.trim(value.display_name) == $.trim(marketDataDisplayName)) {
+                        present = true;
+                    }
+                }
+                return !present;
+            });
+            return present;
+        },
+
+        getSpecificMarketData : function( marketDataDisplayName, marketData ) {
+            var present = {};
+            if (!marketData) {
+                marketData = markets;
+            }
+
+            var instrumentObj = this;
+            $.each(marketData, function (key, value) {
+                if (value.submarkets || value.instruments) {
+                    present = instrumentObj.getSpecificMarketData(marketDataDisplayName, value.submarkets || value.instruments);
+                } else {
+                    if ($.trim(value.display_name) == $.trim(marketDataDisplayName)) {
+                        present = value;
+                    }
+                }
+                return $.isEmptyObject(present);
+            });
+            return present;
+        }
+    };
+
+});

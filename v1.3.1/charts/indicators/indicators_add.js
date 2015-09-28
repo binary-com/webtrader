@@ -1,1 +1,98 @@
-define(["jquery","datatables","common/loadCSS","common/util"],function(a){function b(b,c){loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css"),loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css"),a.get("charts/indicators/indicators_add.html",function(d){d=a(d);var e=d.hide().find("table").DataTable({paging:!1,scrollY:200,info:!1});d.appendTo("body"),a(".indicator_add_dialog").dialog({autoOpen:!1,resizable:!1,modal:!0,my:"center",at:"center",of:window,buttons:[],open:function(){e.rows().nodes().to$().each(function(){try{var b=a(this).data("indicatorData"),c=a(".indicator_add_dialog").data("refererChartID"),d=a(c).highcharts(),e=d.series[0],f=e.options.type;b&&b.ohlcOnly&&isDataTypeClosePriceOnly(f)?a(this).hide():a(this).show()}catch(g){a(this).show()}})}}),e.clear(),a.get("charts/indicators/indicators.json",function(d){a.each(JSON.parse(d),function(b,c){a(e.row.add([c.long_display_name]).draw().node()).data("indicatorData",c).on("click",function(){a(".indicator_add_dialog").dialog("close");var b=a(this).data("indicatorData").id;require(["charts/indicators/"+b+"/"+b],function(b){b.open(a(".indicator_add_dialog").data("refererChartID"))})})}),"function"==typeof c&&c(b)},"text")})}return{openDialog:function(c){return 0==a(".indicator_add_dialog").length?void b(c,this.openDialog):void a(".indicator_add_dialog").data("refererChartID",c).dialog("open")}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "datatables", "common/loadCSS", "common/util"], function ($) {
+
+    function init( containerIDWithHash, _callback ) {
+
+        loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
+        loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
+
+        $.get("charts/indicators/indicators_add.html", function($html) {
+            $html = $($html);
+            var table = $html.hide().find('table').DataTable({
+                paging: false,
+                scrollY: 200,
+                info: false
+            });
+            $html.appendTo("body");
+            $( ".indicator_add_dialog" ).dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: true,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: [],
+                open : function(event, ui) {
+                  table
+                      .rows()
+                      .nodes()
+                      .to$().each(function() {
+
+                        try {
+                          var indicatorData = $(this).data("indicatorData");
+                          var refererChartID = $(".indicator_add_dialog").data('refererChartID');
+                          var chart = $(refererChartID).highcharts();
+                          var series = chart.series[0];//This is the main series
+                          var type = series.options.type;
+
+                          if (indicatorData && indicatorData.ohlcOnly && isDataTypeClosePriceOnly(type)) {
+                            $(this).hide();
+                          } else {
+                            $(this).show();
+                          }
+                        } catch (e) {
+                          $(this).show();
+                        }
+
+                      });
+                }
+            });
+
+            table.clear();
+
+            $.get('charts/indicators/indicators.json', function (indicatorsJSON) {
+
+                $.each(JSON.parse(indicatorsJSON), function (key, value) {
+                    $(table.row.add([value.long_display_name]).draw().node())
+                        .data("indicatorData", value)
+                        .on('click', function () {
+                            $( ".indicator_add_dialog").dialog( "close" );
+
+                            var indicatorName = $(this).data('indicatorData').id;
+                            require(["charts/indicators/" + indicatorName + "/" + indicatorName], function ( indicatorObj ) {
+                                indicatorObj.open( $(".indicator_add_dialog").data('refererChartID') );
+                            });
+                        } );
+                });
+
+                if (typeof _callback == "function")
+                {
+                    _callback( containerIDWithHash );
+                }
+
+            }, 'text');
+
+        });
+    }
+
+    return {
+
+        openDialog : function( containerIDWithHash ) {
+
+            //If it has not been initiated, then init it first
+            if ($(".indicator_add_dialog").length == 0)
+            {
+                init( containerIDWithHash, this.openDialog);
+                return;
+            }
+
+            $(".indicator_add_dialog").data('refererChartID', containerIDWithHash).dialog("open");
+
+        }
+
+    };
+
+});

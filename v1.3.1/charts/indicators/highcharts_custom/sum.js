@@ -1,1 +1,208 @@
-define(["charts/indicators/highcharts_custom/indicator_base","highstock"],function(a){function b(b,c,d){for(var e=0,f=b,g=1;f>=0&&g<=c.period;f--,g++)e+=a.extractPrice(d,f);return e}var c={},d={};return{init:function(){!function(a,e,f){function g(a,e){{var g=this;g.chart}for(var h in d)if(d[h]&&d[h].options&&d[h].options.data&&d[h].options.data.length>0&&c[h].parentSeriesID==g.options.id){var i=g.options.data,j=(d[h].options.data,c[h].period,f.findDataUpdatedDataPoint(i,a));if(j>=1){var k=b(j,c[h],i);k=f.toFixed(k,5),e?d[h].options.data.length<i.length?d[h].addPoint([i[j].x||i[j][0],k]):d[h].data[j].update([i[j].x||i[j][0],k]):d[h].addPoint([i[j].x||i[j][0],k])}}}a&&!a.Series.prototype.addSUM&&(a.Series.prototype.addSUM=function(a){var g=this.options.id;a=e.extend({period:14,stroke:"red",strokeWidth:2,dashStyle:"line",levels:[],parentSeriesID:g},a);var h="_"+(new Date).getTime(),i=this.options.data||[];if(i&&i.length>0){for(var j=[],k=0;k<i.length;k++)if(k>=a.period){var l=b(k,a,i);j.push([i[k].x||i[k][0],f.toFixed(l,5)])}else j.push([i[k].x||i[k][0],0]);var m=this.chart;c[h]=a,m.addAxis({id:"sum"+h,title:{text:"SUM("+a.period+")",align:"high",offset:0,rotation:0,y:10,x:50},lineWidth:2,plotLines:a.levels},!1,!1,!1),f.recalculate(m);var n=this;d[h]=m.addSeries({id:h,name:"SUM("+a.period+")",data:j,type:"line",dataGrouping:n.options.dataGrouping,yAxis:"sum"+h,opposite:n.options.opposite,color:a.stroke,lineWidth:a.strokeWidth,dashStyle:a.dashStyle},!1,!1),e(d[h]).data({isIndicator:!0,indicatorID:"sum",parentSeriesID:a.parentSeriesID,period:a.period}),m.redraw()}return h},a.Series.prototype.removeSUM=function(a){var b=this.chart;c[a]=null,b.get(a).remove(!1),b.get("sum"+a).remove(!1),d[a]=null,f.recalculate(b),b.redraw()},a.wrap(a.Series.prototype,"addPoint",function(a,b,d,e,h){a.call(this,b,d,e,h),f.checkCurrentSeriesHasIndicator(c,this.options.id)&&g.call(this,b)}),a.wrap(a.Point.prototype,"update",function(a,b,d,e){a.call(this,b,d,e),f.checkCurrentSeriesHasIndicator(c,this.series.options.id)&&g.call(this.series,b,!0)}))}(Highcharts,jQuery,a)}}});
+/**
+ * Created by arnab on 3/22/15.
+ */
+define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
+
+    var sumOptionsMap = {}, sumSeriesMap = {};
+
+    function calculateIndicatorValue(index, sumOptions, data) {
+        var sumValue = 0.0;
+        for (var j = index, count = 1; j >= 0 && count <= sumOptions.period; j--, count++) {
+            sumValue += indicatorBase.extractPrice(data, j);
+        }
+        return sumValue;
+    }
+
+    return {
+        init: function() {
+
+            (function(H,$,indicatorBase) {
+
+                //Make sure that HighStocks have been loaded
+                //If we already loaded this, ignore further execution
+                if (!H || H.Series.prototype.addSUM) return;
+
+                H.Series.prototype.addSUM = function ( sumOptions ) {
+
+                    //Check for undefined
+                    //Merge the options
+                    var seriesID = this.options.id;
+                    sumOptions = $.extend({
+                        period : 14,
+                        stroke : 'red',
+                        strokeWidth : 2,
+                        dashStyle : 'line',
+                        levels : [],
+                        parentSeriesID : seriesID
+                    }, sumOptions);
+
+                    var uniqueID = '_' + new Date().getTime();
+
+                    //If this series has data, add SUM series to the chart
+                    var data = this.options.data || [];
+                    if (data && data.length > 0)
+                    {
+
+                        //Calculate SUM data
+                        /*
+                         * Formula(OHLC or Candlestick) -
+                         * 	SUM = Sum of price over n
+                         * 		n - period
+                         */
+                        var sumData = [];
+                        for (var index = 0; index < data.length; index++)
+                        {
+
+                            //Calculate SUM - start
+                            if (index >= sumOptions.period) {
+                                var sumValue = calculateIndicatorValue(index, sumOptions, data);
+                                sumData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sumValue, 5)]);
+                            }
+                            else
+                            {
+                                sumData.push([(data[index].x || data[index][0]), 0]);
+                            }
+                            //Calculate SUM - end
+
+                        }
+
+                        var chart = this.chart;
+
+                        sumOptionsMap[uniqueID] = sumOptions;
+
+                        chart.addAxis({ // Secondary yAxis
+                            id: 'sum'+ uniqueID,
+                            title: {
+                                text: 'SUM(' + sumOptions.period  + ')',
+                                align: 'high',
+                                offset: 0,
+                                rotation: 0,
+                                y: 10, //Trying to show title inside the indicator chart
+                                x: 50
+                            },
+                            lineWidth: 2,
+                            plotLines: sumOptions.levels
+                        }, false, false, false);
+
+                        indicatorBase.recalculate(chart);
+
+                        var series = this;
+                        sumSeriesMap[uniqueID] = chart.addSeries({
+                            id: uniqueID,
+                            name: 'SUM(' + sumOptions.period  + ')',
+                            data: sumData,
+                            type: 'line',
+                            dataGrouping: series.options.dataGrouping,
+                            yAxis: 'sum'+ uniqueID,
+                            opposite: series.options.opposite,
+                            color: sumOptions.stroke,
+                            lineWidth: sumOptions.strokeWidth,
+                            dashStyle: sumOptions.dashStyle
+                        }, false, false);
+
+                        $(sumSeriesMap[uniqueID]).data({
+                            isIndicator: true,
+                            indicatorID: 'sum',
+                            parentSeriesID: sumOptions.parentSeriesID,
+                            period: sumOptions.period
+                        });
+
+                        //We are update everything in one shot
+                        chart.redraw();
+
+                    }
+
+                    return uniqueID;
+
+                };
+
+                H.Series.prototype.removeSUM = function (uniqueID) {
+                    var chart = this.chart;
+                    sumOptionsMap[uniqueID] = null;
+                    chart.get(uniqueID).remove(false);
+                    chart.get('sum' + uniqueID).remove(false);
+                    sumSeriesMap[uniqueID] = null;
+                    //Recalculate the heights and position of yAxes
+                    indicatorBase.recalculate(chart);
+                    chart.redraw();
+                }
+
+                /*
+                 *  Wrap HC's Series.addPoint
+                 */
+                H.wrap(H.Series.prototype, 'addPoint', function(psumeed, options, redraw, shift, animation) {
+
+                    psumeed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(sumOptionsMap, this.options.id)) {
+                        updateSUMSeries.call(this, options);
+                    }
+
+                });
+
+                /*
+                 *  Wrap HC's Point.update
+                 */
+                H.wrap(H.Point.prototype, 'update', function(psumeed, options, redraw, animation) {
+
+                    psumeed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(sumOptionsMap, this.series.options.id)) {
+                        updateSUMSeries.call(this.series, options, true);
+                    }
+
+                });
+
+                /**
+                 * This function should be called in the context of series object
+                 * @param options - The data update values
+                 * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
+                 */
+                function updateSUMSeries(options, isPointUpdate) {
+                    var series = this;
+                    var chart = series.chart;
+
+                    //Add a new SUM data point
+                    for (var key in sumSeriesMap) {
+                        if (sumSeriesMap[key] && sumSeriesMap[key].options && sumSeriesMap[key].options.data && sumSeriesMap[key].options.data.length > 0
+                            && sumOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is SUM series. Add one more SUM point
+                            //Calculate SUM data
+                            /*
+                             * Formula(OHLC or Candlestick) -
+                             * 	SUM = Sum of price over n
+                             * 		n - period
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var smaData = sumSeriesMap[key].options.data;
+                            var n = sumOptionsMap[key].period;
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                //Calculate SUM - start
+                                var sumValue = calculateIndicatorValue(dataPointIndex, sumOptionsMap[key], data);
+                                //console.log('Sum : ' + sumValue);
+                                //Calculate SUM - end
+                                sumValue = indicatorBase.toFixed(sumValue , 5);
+
+                                if (isPointUpdate)
+                                {
+                                    if (sumSeriesMap[key].options.data.length < data.length) {
+                                        sumSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), sumValue]);
+                                    } else {
+                                        sumSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), sumValue]);
+                                    }
+                                }
+                                else
+                                {
+                                    sumSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), sumValue]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            })(Highcharts, jQuery,indicatorBase);
+
+        }
+    }
+
+});

@@ -1,1 +1,83 @@
-define([],function(){var a=[],b=[],c=!1;return{process:function(d){c=!1;for(var e in d.trading_times.markets){var f=d.trading_times.markets[e],g={name:f.name,display_name:f.name,submarkets:[]};for(var h in f.submarkets){var i=f.submarkets[h],j={name:i.name,display_name:i.name,instruments:[]};for(var k in i.symbols){var l=i.symbols[k];j.instruments.push({symbol:l.symbol,display_name:l.name,delay_amount:0})}g.submarkets.push(j)}a.push(g)}for(var m in b)b[m](a);b=[]},fetchMarkets:function(a){a&&b.push(a),c||(require(["websockets/eventSourceHandler"],function(a){a.retrieveInstrumentList()}),c=!0)}}});
+define([], function() {
+	/*
+		random: {
+			submarkets : [
+				{
+					instruments: [
+						{
+							"symbol": "R_100",
+                			"feed_license": "realtime",
+                			"delay_amount": "0",
+                			"display_name": "Random 100 Index"
+                		},
+						{}
+					],
+		            "name": "random_index",
+		            "display_name": "Indices"
+				},
+				{}
+			],
+	        "name": "random",
+	        "display_name": "Randoms"
+		},
+		{}
+	*/
+	var markets = [];
+	var callBacksWhenMarketsIsLoaded = [];
+	var requestSubmitted = false;
+	return {
+		
+		process : function(data) {
+			requestSubmitted = false;
+			
+			for (var marketIndex in data.trading_times.markets) {
+			    var marketFromResponse = data.trading_times.markets[marketIndex];
+			    var market = {
+			      name : marketFromResponse.name, 
+			      display_name : marketFromResponse.name,
+			      submarkets : []
+			    };
+
+			    for (var submarketIndxx in marketFromResponse.submarkets) {
+			      var submarket = marketFromResponse.submarkets[submarketIndxx];
+			      var submarketObj = {
+			        name : submarket.name,
+			        display_name : submarket.name,
+			        instruments : []
+			      };
+			      for (var eachSymbolIndx in submarket.symbols) {
+			        var eachSymbol = submarket.symbols[eachSymbolIndx];
+			        submarketObj.instruments.push({
+			          symbol : eachSymbol.symbol,
+			          display_name : eachSymbol.name,
+			          delay_amount : 0 //TODO fix this when API provides it
+			        });
+			      }
+
+			      market.submarkets.push(submarketObj);
+			    }
+
+			    markets.push(market);
+		  	}
+
+			for (var index in callBacksWhenMarketsIsLoaded) {
+				callBacksWhenMarketsIsLoaded[index](markets);
+			}
+			callBacksWhenMarketsIsLoaded = [];
+		},
+
+		fetchMarkets : function(callBack) {
+			if (callBack) 
+			{
+				callBacksWhenMarketsIsLoaded.push(callBack);
+			}
+			if (!requestSubmitted) {
+				require(['websockets/eventSourceHandler'], function(eventSourceHandler) {
+					eventSourceHandler.retrieveInstrumentList();
+				});
+				requestSubmitted = true;
+			}
+		}
+
+	};
+});

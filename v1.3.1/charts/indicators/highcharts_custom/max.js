@@ -1,1 +1,197 @@
-define(["charts/indicators/highcharts_custom/indicator_base","highstock"],function(a){function b(b,c,d){var e=0;e=a.isOHLCorCandlestick(this.options.type)?a.extractPriceForAppliedTO(b.appliedTo,c,d):a.extractPrice(c,d);for(var f=d,g=1;f>=0&&g<=b.period;f--,g++){var h=0;h=a.isOHLCorCandlestick(this.options.type)?a.extractPriceForAppliedTO(b.appliedTo,c,f):a.extractPrice(c,f),e=Math.max(e,h)}return e}var c={},d={};return{init:function(){!function(a,e,f){function g(a,e){{var g=this;g.chart}for(var h in d)if(d[h]&&d[h].options&&d[h].options.data&&d[h].options.data.length>0&&c[h].parentSeriesID==g.options.id){var i=g.options.data,j=f.findDataUpdatedDataPoint(i,a);if(j>=1){var k=b.call(this,c[h],i,j);e?d[h].options.data.length<i.length?d[h].addPoint([i[j].x||i[j][0],k]):d[h].data[j].update([i[j].x||i[j][0],k]):d[h].addPoint([i[j].x||i[j][0],k])}}}a&&!a.Series.prototype.addMAX&&(a.Series.prototype.addMAX=function(a){var g=this.options.id;a=e.extend({period:21,stroke:"red",strokeWidth:2,dashStyle:"line",levels:[],appliedTo:f.CLOSE,parentSeriesID:g},a);var h="_"+(new Date).getTime(),i=this.options.data||[];if(!(a.period>=i.length)){if(i&&i.length>0){for(var j=[],k=0;k<i.length;k++)if(k>=a.period){var l=b.call(this,a,i,k);j.push([i[k].x||i[k][0],f.toFixed(l,5)])}else j.push([i[k].x||i[k][0],0]);var m=this.chart;c[h]=a;var n=this;d[h]=m.addSeries({id:h,name:"MAX("+a.period+", "+f.appliedPriceString(a.appliedTo)+")",data:j,type:"line",dataGrouping:n.options.dataGrouping,opposite:n.options.opposite,color:a.stroke,lineWidth:a.strokeWidth,dashStyle:a.dashStyle,compare:n.options.compare},!1,!1),e(d[h]).data({onChartIndicator:!0,indicatorID:"max",isIndicator:!0,parentSeriesID:a.parentSeriesID,period:a.period}),m.redraw()}return h}},a.Series.prototype.removeMAX=function(a){var b=this.chart;c[a]=null,b.get(a).remove(),d[a]=null},a.wrap(a.Series.prototype,"addPoint",function(a,b,d,e,h){a.call(this,b,d,e,h),f.checkCurrentSeriesHasIndicator(c,this.options.id)&&g.call(this,b)}),a.wrap(a.Point.prototype,"update",function(a,b,d,e){a.call(this,b,d,e),f.checkCurrentSeriesHasIndicator(c,this.series.options.id)&&g.call(this.series,b,!0)}))}(Highcharts,jQuery,a)}}});
+/**
+ * Created by arnab on 3/22/15.
+ */
+define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
+
+    var maxOptionsMap = {}, maxSeriesMap = {};
+
+    function calculateIndicatorValue(maxOptions, data, index) {
+        var maxValue = 0.0;
+        if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
+            maxValue = indicatorBase.extractPriceForAppliedTO(maxOptions.appliedTo, data, index);
+        }
+        else {
+            maxValue = indicatorBase.extractPrice(data, index);
+        }
+        for (var j = index, count = 1; j >= 0 && count <= maxOptions.period; j--, count++) {
+            var tempValue = 0.0;
+            if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
+                tempValue = indicatorBase.extractPriceForAppliedTO(maxOptions.appliedTo, data, j);
+            }
+            else {
+                tempValue = indicatorBase.extractPrice(data, j);
+            }
+            maxValue = Math.max(maxValue, tempValue);
+        }
+        return maxValue;
+    }
+
+    return {
+        init: function() {
+
+            (function(H,$,indicatorBase) {
+
+                //Make sure that HighStocks have been loaded
+                //If we already loaded this, ignore further execution
+                if (!H || H.Series.prototype.addMAX) return;
+
+                H.Series.prototype.addMAX = function ( maxOptions ) {
+
+                    //Check for undefined
+                    //Merge the options
+                    var seriesID = this.options.id;
+                    maxOptions = $.extend({
+                        period : 21,
+                        stroke : 'red',
+                        strokeWidth : 2,
+                        dashStyle : 'line',
+                        levels : [],
+                        appliedTo: indicatorBase.CLOSE,
+                        parentSeriesID : seriesID
+                    }, maxOptions);
+
+                    var uniqueID = '_' + new Date().getTime();
+
+                    //If this series has data, add ATR series to the chart
+                    var data = this.options.data || [];
+                    //If period is higher than data.length, we cannot calculate MAX. Return from here
+                    if (maxOptions.period >= data.length) return;
+
+                    if (data && data.length > 0)
+                    {
+
+                        //Calculate MAX data
+                        /*
+                         *  Formula - max price over n, n - period
+                         */
+                        var maxData = [];
+                        for (var index = 0; index < data.length; index++)
+                        {
+
+                            //Calculate SUM - start
+                            if (index >= maxOptions.period) {
+                                var maxValue = calculateIndicatorValue.call(this, maxOptions, data, index);
+                                maxData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maxValue, 5)]);
+                            }
+                            else
+                            {
+                                maxData.push([(data[index].x || data[index][0]), 0]);
+                            }
+                            //Calculate SUM - end
+
+                        }
+
+                        var chart = this.chart;
+
+                        maxOptionsMap[uniqueID] = maxOptions;
+
+                        var series = this;
+                        maxSeriesMap[uniqueID] = chart.addSeries({
+                            id: uniqueID,
+                            name: 'MAX(' + maxOptions.period  + ', ' + indicatorBase.appliedPriceString(maxOptions.appliedTo) + ')',
+                            data: maxData,
+                            type: 'line',
+                            dataGrouping: series.options.dataGrouping,
+                            //yAxis: 'max'+ uniqueID,
+                            opposite: series.options.opposite,
+                            color: maxOptions.stroke,
+                            lineWidth: maxOptions.strokeWidth,
+                            dashStyle: maxOptions.dashStyle,
+                            compare: series.options.compare
+                        }, false, false);
+
+                        //This is a on chart indicator
+                        $(maxSeriesMap[uniqueID]).data({
+                            onChartIndicator: true,
+                            indicatorID: 'max',
+                            isIndicator: true,
+                            parentSeriesID: maxOptions.parentSeriesID,
+                            period: maxOptions.period
+                        });
+
+                        //We are update everything in one shot
+                        chart.redraw();
+
+                    }
+
+                    return uniqueID;
+
+                };
+
+                H.Series.prototype.removeMAX = function (uniqueID) {
+                    var chart = this.chart;
+                    maxOptionsMap[uniqueID] = null;
+                    chart.get(uniqueID).remove();
+                    maxSeriesMap[uniqueID] = null;
+                }
+
+                /*
+                 *  Wrap HC's Series.addPoint
+                 */
+                H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
+
+                    proceed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(maxOptionsMap, this.options.id)) {
+                        updateMAXSeries.call(this, options);
+                    }
+
+                });
+
+                /*
+                 *  Wrap HC's Point.update
+                 */
+                H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
+
+                    proceed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(maxOptionsMap, this.series.options.id)) {
+                        updateMAXSeries.call(this.series, options, true);
+                    }
+
+                });
+
+                /**
+                 * This function should be called in the context of series object
+                 * @param options - The data update values
+                 */
+                function updateMAXSeries(options, isPointUpdate) {
+                    //if this is MAX series, ignore
+                    var series = this;
+                    var chart = series.chart;
+
+                    //Add a new MAX data point
+                    for (var key in maxSeriesMap) {
+                        if (maxSeriesMap[key] && maxSeriesMap[key].options && maxSeriesMap[key].options.data && maxSeriesMap[key].options.data.length > 0
+                            && maxOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is MAX series. Add one more MAX point
+                            //Calculate MAX data
+                            /*
+                             * Formula - max price over n, n - period
+                             */
+                            //Find the data point
+                            var data = series.options.data;
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                var maxValue = calculateIndicatorValue.call(this, maxOptionsMap[key], data, dataPointIndex);
+                                if (isPointUpdate)
+                                {
+                                    if (maxSeriesMap[key].options.data.length < data.length) {
+                                        maxSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), maxValue]);
+                                    } else {
+                                        maxSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), maxValue]);
+                                    }
+                                }
+                                else
+                                {
+                                    maxSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), maxValue]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            })(Highcharts, jQuery, indicatorBase);
+
+        }
+    }
+
+});

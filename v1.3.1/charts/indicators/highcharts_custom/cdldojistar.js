@@ -1,1 +1,244 @@
-define(["charts/indicators/highcharts_custom/indicator_base","highstock"],function(a){function b(b,c){var d=c,e=c-1,f=a.extractPriceForAppliedTO(a.OPEN,b,e),g=a.extractPriceForAppliedTO(a.CLOSE,b,e),h=a.extractPriceForAppliedTO(a.OPEN,b,d),i=a.extractPriceForAppliedTO(a.CLOSE,b,d),j=a.extractPriceForAppliedTO(a.LOW,b,d),k=a.extractPriceForAppliedTO(a.HIGH,b,d),l=a.isDoji({open:h,high:k,low:j,close:i})||{},m=g>f,n=f>g,o=m&&l.isBear,p=n&&l.isBull;return{isBullishContinuation:p,isBearishContinuation:o}}var c={},d={};return{init:function(){!function(a,e,f){function g(a,e){{var g=this;g.chart}for(var h in d)if(d[h]&&d[h].options&&d[h].options.data&&d[h].options.data.length>0&&c[h].parentSeriesID==g.options.id){var i=g.options.data,j=(c[h].period,f.findDataUpdatedDataPoint(i,a));if(j>=1){var k=b(i,j),l=null;k.isBullishContinuation?l={x:i[j].x||i[j][0],title:'<span style="color : blue">DS</span>',text:"Doji Star : Bull"}:k.isBearishContinuation&&(l={x:i[j].x||i[j][0],title:'<span style="color : red">DS</span>',text:"Doji Star : Bear"});for(var m=-1,n=d[h].data.length-1;n>=0;n--)if((d[h].data[n].x||d[h].data[n][0])==(i[j].x||i[j][0])){m=n;break}l?(e&&m>=0&&d[h].data[m].remove(),d[h].addPoint(l)):m>=0&&d[h].data[m].remove()}}}a&&!a.Series.prototype.addCDLDOJISTAR&&(a.Series.prototype.addCDLDOJISTAR=function(a){var f=this.options.id;a=e.extend({parentSeriesID:f},a);var g="_"+(new Date).getTime(),h=this.options.data||[];if(h&&h.length>0){for(var i=[],j=2;j<h.length;j++){var k=b(h,j),l=k.isBullishContinuation,m=k.isBearishContinuation;l&&i.push({x:h[j].x||h[j][0],title:'<span style="color : blue">DS</span>',text:"Doji Star : Bull"}),m&&i.push({x:h[j].x||h[j][0],title:'<span style="color : red">DS</span>',text:"Doji Star : Bear"})}var n=this.chart;c[g]=a;d[g]=n.addSeries({id:g,name:"CDLDOJISTAR("+a.period+")",data:i,type:"flags",onSeries:f,shape:"flag",turboThreshold:0},!1,!1),e(d[g]).data({isIndicator:!0,indicatorID:"cdldojistar",parentSeriesID:a.parentSeriesID}),n.redraw()}return g},a.Series.prototype.removeCDLDOJISTAR=function(a){var b=this.chart;c[a]=null,b.get(a).remove(!1),d[a]=null,b.redraw()},a.wrap(a.Series.prototype,"addPoint",function(a,b,d,e,h){a.call(this,b,d,e,h),f.checkCurrentSeriesHasIndicator(c,this.options.id)&&g.call(this,b)}),a.wrap(a.Point.prototype,"update",function(a,b,d,e){a.call(this,b,d,e),f.checkCurrentSeriesHasIndicator(c,this.series.options.id)&&g.call(this.series,b,!0)}))}(Highcharts,jQuery,a)}}});
+/**
+ * Created by arnab on 3/22/15
+ */
+define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
+
+    var cdldojistarOptionsMap = {}, cdldojistarSeriesMap = {};
+
+	function calculateIndicatorValue(data, index) {
+		var candleOne_Index = index;
+		var candleTwo_Index = index - 1;
+
+		var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
+			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
+    var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
+        candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
+        candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
+        candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index)
+      ;
+
+    var response = indicatorBase.isDoji({
+      open: candleOne_Open,
+      high: candleOne_High,
+      low: candleOne_Low,
+      close: candleOne_Close
+    }) || {};
+
+		var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+		var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+		var isBearishContinuation = isCandleTwo_Bullish && response.isBear;
+
+		var isBullishContinuation = isCandleTwo_Bearish && response.isBull;
+
+		return {
+			isBullishContinuation : isBullishContinuation,
+			isBearishContinuation : isBearishContinuation
+		};
+	}
+
+    return {
+        init: function() {
+
+            (function(H,$,indicatorBase) {
+
+                //Make sure that HighStocks have been loaded
+                //If we already loaded this, ignore further execution
+                if (!H || H.Series.prototype.addCDLDOJISTAR) return;
+
+                H.Series.prototype.addCDLDOJISTAR = function ( cdldojistarOptions ) {
+
+                    //Check for undefined
+                    //Merge the options
+                    var seriesID = this.options.id;
+                    cdldojistarOptions = $.extend({
+                        //stroke : 'red',
+                        //strokeWidth : 2,
+                        //dashStyle : 'line',
+                        //levels : [],
+                        parentSeriesID : seriesID
+                    }, cdldojistarOptions);
+
+                    var uniqueID = '_' + new Date().getTime();
+
+                    //If this series has data, add CDLDOJISTAR series to the chart
+                    var data = this.options.data || [];
+                    if (data && data.length > 0)
+                    {
+
+                        //Calculate CDLDOJISTAR data
+                        /*
+                         * Formula(OHLC or Candlestick) -
+                            Refer to dl2crows.html for detailed information on this indicator
+                         */
+                        var cdldojistarData = [];
+                        for (var index = 2; index < data.length; index++)
+                        {
+
+                            //Calculate CDLDOJISTAR - start
+              							var bull_bear = calculateIndicatorValue(data, index);
+              							var isBullishContinuation = bull_bear.isBullishContinuation,
+              								isBearishContinuation = bull_bear.isBearishContinuation;
+
+              							if (isBullishContinuation) {
+              								cdldojistarData.push({
+              									x : data[index].x || data[index][0],
+              									title : '<span style="color : blue">DS</span>',
+              									text : 'Doji Star : Bull'
+              								});
+              							}
+              							if (isBearishContinuation) {
+              								cdldojistarData.push({
+              									x : data[index].x || data[index][0],
+              									title : '<span style="color : red">DS</span>',
+              									text : 'Doji Star : Bear'
+              								});
+              							}
+                            //Calculate CDLDOJISTAR - end
+
+                        }
+
+                        var chart = this.chart;
+
+                        cdldojistarOptionsMap[uniqueID] = cdldojistarOptions;
+
+
+                        var series = this;
+                        cdldojistarSeriesMap[uniqueID] = chart.addSeries({
+                            id: uniqueID,
+                            name: 'CDLDOJISTAR(' + cdldojistarOptions.period  + ')',
+                            data: cdldojistarData,
+                            type: 'flags',
+                            //dataGrouping: series.options.dataGrouping,
+                            //yAxis: 'cdldojistar'+ uniqueID,
+                            //opposite: series.options.opposite,
+                            //color: cdldojistarOptions.stroke,
+                            //lineWidth: cdldojistarOptions.strokeWidth,
+                            //dashStyle: cdldojistarOptions.dashStyle,
+              							onSeries: seriesID,
+              							shape: 'flag',
+              							turboThreshold: 0
+                        }, false, false);
+
+                        $(cdldojistarSeriesMap[uniqueID]).data({
+                            isIndicator: true,
+                            indicatorID: 'cdldojistar',
+                            parentSeriesID: cdldojistarOptions.parentSeriesID
+                        });
+
+                        //We are update everything in one shot
+                        chart.redraw();
+
+                    }
+
+                    return uniqueID;
+
+                };
+
+                H.Series.prototype.removeCDLDOJISTAR = function (uniqueID) {
+                    var chart = this.chart;
+                    cdldojistarOptionsMap[uniqueID] = null;
+                    chart.get(uniqueID).remove(false);
+                    cdldojistarSeriesMap[uniqueID] = null;
+                    //Recalculate the heights and position of yAxes
+                    chart.redraw();
+                }
+
+                /*
+                 *  Wrap HC's Series.addPoint
+                 */
+                H.wrap(H.Series.prototype, 'addPoint', function(pcdldojistareed, options, redraw, shift, animation) {
+
+                    pcdldojistareed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdldojistarOptionsMap, this.options.id)) {
+                        updateCDLDOJISTARSeries.call(this, options);
+                    }
+
+                });
+
+                /*
+                 *  Wrap HC's Point.update
+                 */
+                H.wrap(H.Point.prototype, 'update', function(pcdldojistareed, options, redraw, animation) {
+
+                    pcdldojistareed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdldojistarOptionsMap, this.series.options.id)) {
+                        updateCDLDOJISTARSeries.call(this.series, options, true);
+                    }
+
+                });
+
+                /**
+                 * This function should be called in the context of series object
+                 * @param options - The data update values
+                 * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
+                 */
+                function updateCDLDOJISTARSeries(options, isPointUpdate) {
+                    var series = this;
+                    var chart = series.chart;
+
+                    //Add a new CDLDOJISTAR data point
+                    for (var key in cdldojistarSeriesMap) {
+                        if (cdldojistarSeriesMap[key] && cdldojistarSeriesMap[key].options && cdldojistarSeriesMap[key].options.data && cdldojistarSeriesMap[key].options.data.length > 0
+                            && cdldojistarOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLDOJISTAR series. Add one more CDLDOJISTAR point
+                            //Calculate CDLDOJISTAR data
+                            //Find the data point
+                            var data = series.options.data;
+                            var n = cdldojistarOptionsMap[key].period;
+                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            if (dataPointIndex >= 1) {
+                                //Calculate CDLDOJISTAR - start
+								var bull_bear = calculateIndicatorValue(data, dataPointIndex);
+                                //console.log('Roc : ' + cdldojistarValue);
+                                //Calculate CDLDOJISTAR - end
+								var bullBearData = null;
+								if (bull_bear.isBullishContinuation) {
+									bullBearData = {
+											x : data[dataPointIndex].x || data[dataPointIndex][0],
+											title : '<span style="color : blue">DS</span>',
+											text : 'Doji Star : Bull'
+									}
+								} else if (bull_bear.isBearishContinuation) {
+									bullBearData = {
+											x : data[dataPointIndex].x || data[dataPointIndex][0],
+											title : '<span style="color : red">DS</span>',
+											text : 'Doji Star : Bear'
+									}
+								}
+
+								var whereToUpdate = -1;
+								for (var sIndx = cdldojistarSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+									if ((cdldojistarSeriesMap[key].data[sIndx].x || cdldojistarSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+										whereToUpdate = sIndx;
+										break;
+									}
+								}
+								if (bullBearData) {
+	                                if (isPointUpdate)
+	                                {
+										if (whereToUpdate >= 0)
+	                                    {
+											cdldojistarSeriesMap[key].data[whereToUpdate].remove();
+										}
+	                                }
+                                    cdldojistarSeriesMap[key].addPoint(bullBearData);
+								} else {
+									if (whereToUpdate>=0)
+									{
+										cdldojistarSeriesMap[key].data[whereToUpdate].remove();
+									}
+								}
+                            }
+                        }
+                    }
+                }
+
+            })(Highcharts, jQuery,indicatorBase);
+
+        }
+    }
+
+});

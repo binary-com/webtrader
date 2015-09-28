@@ -1,1 +1,89 @@
-define(["highstock"],function(){var a=!1,b=null;return{init:function(){a||!function(c,d){c.wrap(c.Pointer.prototype,"drag",function(a,c){var e=this.chart,f=e.renderer;if(e.annotate){{e.container.getBoundingClientRect()}if(c=e.pointer.normalize(),null==b){var g=c.chartX;g=e.xAxis[0].toPixels(g);var h=c.chartY;h=e.yAxis[0].toPixels(h);var i=g,j=h,k=Math.sqrt(Math.pow(g-i,2)+Math.pow(h-j,2)),l=this.chart.series[0].group;b=f.circle(g,h,k).attr({fill:"rgba(255,0,0,0.4)",stroke:"black","stroke-width":2}).add(l),d(e.container).one("mouseup",function(){e.annotate=!1,b=null})}else{var g=b.attr("cx"),h=b.attr("cy"),i=c.chartX;i=e.xAxis[0].toPixels(i);var j=c.chartY;j=e.xAxis[0].toPixels(j);var k=Math.sqrt(Math.pow(g-i,2)+Math.pow(h-j,2));b.attr({r:k})}
+/**
+ * Created by arnab on 4/3/15.
+ */
+define(['highstock'], function () {
+
+  var isLibraryLoaded = false, currentObject = null;
+
+  return {
+      init: function() {
+
+        if (isLibraryLoaded) return;
+
+          (function(H,$) {
+
+            /*
+              - When not annnotating, allow dragging of chart or zooming
+              - Have to annotate chart where it got triggered from
+              TODO
+              - check if the drag is inside chart container
+              - Glow the object when hover over
+              - Should be able to hold and move the objects
+              - Change mouse cursor to square when inside the chart area
+              - Escape should remove the annotate mode
+            */
+
+            // when drawing annotation, don't zoom/select place
+            H.wrap(H.Pointer.prototype, 'drag', function(c, e) {
+              var chart = this.chart;
+              var renderer = chart.renderer;
+              if (chart.annotate) {
+                var bbox = chart.container.getBoundingClientRect();
+                e = chart.pointer.normalize();
+                if (currentObject == null) {
+
+                  var startX = e.chartX;
+                  // translate my coordinates to pixel values
+                  startX = chart.xAxis[0].toPixels(startX)
+                  var startY = e.chartY;
+                  startY = chart.yAxis[0].toPixels(startY);
+                  var endX = startX;
+                  var endY = startY;
+                  var radius = Math.sqrt(Math.pow(startX - endX, 2) + Math.pow(startY - endY, 2));
+
+                  var seriesGroup = this.chart.series[0].group;
+                  currentObject = renderer.circle(startX, startY, radius).attr({
+                    'fill'        : 'rgba(255,0,0,0.4)',
+                    'stroke'      : 'black',
+                    'stroke-width': 2
+                  }).add(seriesGroup);
+                  $(chart.container).one("mouseup", function() {
+                    chart.annotate = false;
+                    currentObject = null;
+                  });
+
+                } else {
+
+                  var startX = currentObject.attr("cx");
+                  var startY = currentObject.attr("cy");
+                  var endX = e.chartX;
+                  endX = chart.xAxis[0].toPixels(endX);
+                  var endY = e.chartY;
+                  endY = chart.xAxis[0].toPixels(endY);
+                  var radius = Math.sqrt(Math.pow(startX - endX, 2) + Math.pow(startY - endY, 2));
+                  currentObject.attr({
+                    r : radius
+                  });
+
+                }
+
+                console.log('Its an annotate call from chart : ' + $(chart.container).attr("id"));
+              }
+            	else {
+            		c.call(this, e);
+            	}
+            });
+
+            // update annotations after chart redraw
+        		// Highcharts.addEvent(chart, 'redraw', function () {
+        		// 	console.log('Redraw called - I am in circle.js!');
+        		// });
+
+            isLibraryLoaded = true;
+
+          } (Highcharts,jQuery));
+
+      }
+  }
+
+});

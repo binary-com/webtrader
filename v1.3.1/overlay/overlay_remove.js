@@ -1,1 +1,117 @@
-define(["jquery","datatables","common/loadCSS"],function(a){function b(b,d){loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css"),loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css"),a.get("overlay/overlay_remove.html",function(e){e=a(e),e.hide(),e.appendTo("body"),c=e.find("table").DataTable({paging:!1,scrollY:200,info:!1}),a(".overlay_dialog_remove").dialog({autoOpen:!1,resizable:!1,width:330,modal:!0,my:"center",at:"center",of:window,buttons:[{text:"Remove Selected",click:function(){require(["currentPriceIndicator"],function(b){var d=a(".overlay_dialog_remove").data("refererChartID");c.rows(".selected").nodes().to$().each(function(){var c=a(this).data("id"),e=a(d).highcharts();if(e&&c){var f=e.get(c);f&&(a.each(b.getCurrentPriceOptions(),function(a,b){return b&&f.options&&f.options.id&&b.parentSeriesID==f.options.id?(f.removeCurrentPrice(a),!1):void 0}),f.remove())}}),a(".overlay_dialog_remove").dialog("close")})}},{text:"Cancel",click:function(){a(".overlay_dialog_remove").dialog("close")}}]}),"function"==typeof d&&d(b)})}var c=void 0;return{openDialog:function(d){if(0==a(".overlay_dialog_remove").length)return void b(d,this.openDialog);c.clear().draw();var e=a(d).highcharts();e&&(a.each(e.series,function(b,d){a(this).data("isInstrument")&&b>0&&a(c.row.add([d.options.name]).draw().node()).click(function(){a(this).toggleClass("selected")}).data({id:d.options.id})}),a(".overlay_dialog_remove").data("refererChartID",d).dialog("open"))}}});
+/**
+ * Created by arnab on 3/1/15.
+ */
+
+define(["jquery", "datatables", "common/loadCSS"], function ($) {
+
+  var table = undefined;
+
+    function init( containerIDWithHash, _callback ) {
+
+      loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
+      loadCSS("lib/jquery/jquery-ui/colorpicker/jquery.colorpicker.css");
+
+      $.get("overlay/overlay_remove.html", function($html) {
+          $html = $($html);
+          $html.hide();
+          $html.appendTo("body");
+
+          //Init the scrollable and searchable table
+          table = $html.find('table').DataTable({
+              paging: false,
+              scrollY: 200,
+              info: false
+          });
+
+          $(".overlay_dialog_remove").dialog({
+              autoOpen: false,
+              resizable: false,
+              width: 330,
+              modal: true,
+              my: 'center',
+              at: 'center',
+              of: window,
+              buttons: [{
+                  text: "Remove Selected",
+                  click: function() {
+                    require(["currentPriceIndicator"], function(currentPriceIndicator) {
+
+                      var containerIDWithHash = $(".overlay_dialog_remove").data('refererChartID');
+                        table
+                            .rows( '.selected' )
+                            .nodes()
+                            .to$().each(function () {
+                                var seriesID = $(this).data('id');
+                                var chart = $(containerIDWithHash).highcharts();
+                                if (chart && seriesID)
+                                {
+                                  var series = chart.get(seriesID);
+                                  if (series) {
+                                    //Remove the current price indicator first
+                                    $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
+                                        if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
+                                            series.removeCurrentPrice(key);
+                                            return false;
+                                        }
+                                    });
+
+                                    //Then remove the series
+                                    series.remove();
+                                  }
+                                }
+                            });
+                        $( ".overlay_dialog_remove" ).dialog('close');
+                      
+                    });
+                  }
+              },{
+                  text: "Cancel",
+                  click: function() {
+                      $( ".overlay_dialog_remove" ).dialog('close');
+                  }
+              }]
+          });
+
+          if (typeof _callback == "function") {
+              _callback(containerIDWithHash);
+          }
+
+      });
+
+    }
+
+    return {
+
+        openDialog : function( containerIDWithHash ) {
+
+            //If it has not been initiated, then init it first
+            if ($(".overlay_dialog_remove").length == 0)
+            {
+                init( containerIDWithHash, this.openDialog);
+                return;
+            }
+
+            //Clear previous entries and add list of series that are added for the referring chart
+            table.clear().draw();
+            var chart = $(containerIDWithHash).highcharts();
+            if (!chart) return;
+
+            $.each(chart.series, function (index, series) {
+                //We cannot remove the main series
+                if ($(this).data('isInstrument') && index > 0) {
+                  $(table.row.add([series.options.name]).draw().node())
+                      .click(function () {
+                          $(this).toggleClass('selected');
+                      }).data({
+                          'id': series.options.id
+                      });
+                }
+            });
+
+            $(".overlay_dialog_remove").data('refererChartID', containerIDWithHash).dialog("open");
+
+        }
+
+    };
+
+});
