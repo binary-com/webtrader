@@ -117,7 +117,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
                     message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
                 },
                 src: ['**/*']
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary.com/webtrader.git',
                     message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
                 },
                 src: ['**/*']
