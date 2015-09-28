@@ -1,4 +1,4 @@
-#Webtrader [Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
+#Webtrader ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
 This repository contains HTML, Javascript, CSS, and images for [Web Trader](http://binary-com.github.io/webtrader) website.
  
 ##How to work with this project
@@ -34,11 +34,11 @@ To bump release version, run
 
         $ grunt bump:patch
 
-To release code (beta release, http://binary-com.github.io/webtrader/beta) - Not recommended to be used from local environment
+To release code (beta release, [Web Trader (beta)](http://binary-com.github.io/webtrader/beta)) - Not recommended to be used from local environment
 
         $ grunt gh-pages:gh-pages-beta
 
-To release code (prod release, http://binary-com.github.io/webtrader) - Not recommended to be used from local environment
+To release code (prod release, [Web Trader](http://binary-com.github.io/webtrader)) - Not recommended to be used from local environment
 
         $ grunt gh-pages:gh-pages-prod
     
@@ -95,4 +95,4 @@ Every module, JS file, classes, function, etc that is coded for this project, sh
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
     
 #####Other details
-When commit is done with [release] tag in the master branch, it will trigger deployment into highcharts gh-pages automatically and will update the release files and changes could be seen live @ [Higcharts implementation for binary.com charts](http://binary-com.github.io/webtrader)
+When commit is done with [release] tag in the master branch, it will trigger deployment into webtrader gh-pages automatically and will update the release files and changes could be seen live @ [Web Trader](http://binary-com.github.io/webtrader)
