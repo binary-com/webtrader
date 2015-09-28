@@ -234,6 +234,50 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                 requireJSESHInstance.eventSourceHandler( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
 
             }
+        },
+
+        passwordForm: function (title) {
+            var form = document.createElement("form");
+            
+            var currPassword = document.createTextNode("Current Password: ");
+            form.appendChild(currPassword);
+
+            var input = document.createElement("input");
+            input.setAttribute('type',"password");
+            input.setAttribute('name',"Current Password");
+            input.style.margin='10px';
+            form.appendChild(input);
+
+            form.appendChild(document.createElement("br"));
+
+            var newPassword = document.createTextNode("New Password: ");
+            form.appendChild(newPassword);
+
+            var input = document.createElement("input");
+            input.setAttribute('type',"password");
+            input.setAttribute('name',"New Password");
+            input.style.margin='10px';
+            form.appendChild(input);
+
+            form.appendChild(document.createElement("br"));
+
+            var verPassword = document.createTextNode("Verify New Password: ");
+            form.appendChild(verPassword);
+
+            var input = document.createElement("input");
+            input.setAttribute('type',"password");
+            input.setAttribute('name',"Verify New Password");
+            form.appendChild(input);
+
+            form.style.textAlign='center';
+            input.style.margin='10px';
+
+            var submit = document.createElement("submit");
+            submit.setAttribute('type',"submit");
+            submit.setAttribute('name',"Change Password");
+            form.appendChild(submit);
+
+            $(title).append(form);
         }
 
     }

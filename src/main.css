@@ -30,18 +30,30 @@ body {
     color       : #212121;
 }
 
+.ui-dialog {
+  padding: 0!important;
+}
+
+.ui-corner-all {
+  border-bottom-right-radius: 0!important;
+  border-bottom-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+  border-top-left-radius: 0!important;
+}
+
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   border: 1px solid #3F476E;
-  background: #3F476E url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+  background: #3F476E!important;
   font-weight: normal;
   color: #FFFFFF;
 }
 
 .ui-widget-header {
   border: 1px solid #273051;
-  background: #273051 url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+  background: #273051!important;
   color: #FFFFFF;
   font-family: 'Roboto'!important;
+  font-weight: normal!important;
 }
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
@@ -52,6 +64,10 @@ body {
   outline: 0;
 }
 
+.ui-button {
+  margin-top: 5px;
+}
+
 .ui-state-hover, .ui-button:hover{
   color: #FFFFFF!important;
 }
@@ -59,8 +75,7 @@ body {
 .logo {
   width: 40px;
   float: left;
-  margin-top: -5px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .gtm_data_layer {
@@ -82,8 +97,16 @@ body {
   z-Index : 1003;
 }
 
-.statement-icon {
-  background-image: url(images/statement.svg) !important;
+.trade-icon {
+  background-image: url(images/trade.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.instruments-icon {
+  background-image: url(images/chart.svg) !important;
   background-size: 65%;
   top: 50% !important;
   width: 26px !important;
@@ -92,6 +115,46 @@ body {
 
 .portfolio-icon {
   background-image: url(images/portfolio.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.statement-icon {
+  background-image: url(images/statement.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.asset-icon {
+  background-image: url(images/asset.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.profit-icon {
+  background-image: url(images/profit-table.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.time-icon {
+  background-image: url(images/trading-times.svg) !important;
+  background-size: 65%;
+  top: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.pricing-icon {
+  background-image: url(images/pricing-table.svg) !important;
   background-size: 65%;
   top: 50% !important;
   width: 26px !important;
@@ -108,14 +171,6 @@ body {
 
 .settings-icon {
   background-image: url(images/setting.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.instruments-icon {
-  background-image: url(images/chart.svg) !important;
   background-size: 65%;
   top: 50% !important;
   width: 26px !important;

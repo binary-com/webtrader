@@ -90,17 +90,48 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
             $('.topContainer .topMenu')
                     .find("button" ).button()
-                    .filter('.statement').button({
+                    .filter('.trade').button({
                       icons: {
-                        primary: "statement-icon",
+                        primary: "trade-icon",
                       }
+                    }).end()
+                    .filter('.instruments').button({
+                      icons: {
+                        primary: "instruments-icon",
+                      },
+                      disabled: true
                     }).end()
                     .filter('.portfolio').button({
                       icons: {
                         primary: "portfolio-icon",
                       }
                     }).end()
-                    .filter('.password').button({
+                    .filter('.statement').button({
+                      icons: {
+                        primary: "statement-icon",
+                      }
+                    }).end()
+                    .filter('.asset').button({
+                      icons: {
+                        primary: "asset-icon",
+                      }
+                    }).end()
+                    .filter('.profit').button({
+                      icons: {
+                        primary: "profit-icon",
+                      }
+                    }).end()
+                    .filter('.time').button({
+                      icons: {
+                        primary: "time-icon",
+                      }
+                    }).end()
+                    .filter('.pricing').button({
+                      icons: {
+                        primary: "pricing-icon",
+                      }
+                    }).end()
+                    .filter('#password').button({
                       icons: {
                         primary: "password-icon",
                       }
@@ -115,12 +146,6 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                         primary: "windows-icon",
                       }
                     }).end()
-                    .filter('.instruments').button({
-                      icons: {
-                        primary: "instruments-icon",
-                      },
-                      disabled: true
-                    }).end()
 
             $(window).resize(function() {
               resetTopMenu();
@@ -132,7 +157,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
                 //Just an info
                 require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: "Loading instruments menu!" });
+                    $.growl.notice({ message: "Loading chart menu!" });
                 });
 
                 instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
