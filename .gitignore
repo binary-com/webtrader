@@ -1,0 +1,6 @@
+.git
+.grunt
+.idea
+dist
+node_modules
+.brackets.json

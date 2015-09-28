@@ -1,0 +1,11 @@
+> Color settings to change entire color combination
+    > This should be exhaustive to support pretty much each and every color on entire chart
+
+> Theme settings to choose from what is already provided by HighStocks
+
+> To apply theme in highStocks
+<script type="text/javascript" src="/js/themes/gray.js"></script>
+
+> Change language
+
+> By default it should start in the user's Locale

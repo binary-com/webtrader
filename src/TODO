@@ -1,0 +1,31 @@
+> QUnit for unit testing
+> News, message or server alert panel poping out from right
+> An option to distribute indicators
+    > If creator wants to distribute it for free, no commission asked
+    > If creator wants to take out commission, discuss this with Jean if we want to charge a commission
+    > We will review the code before releasing to app store
+        > Review for performance or any other copyright issues or anything that might interfere with our business model
+> add readme for each folder with detailed documentation
+> Add documentation for JS class and HTML pages
+> User should be able to change main candle color by double clicking on it
+> In general, users should be able to do following
+    > Change main series candle color
+    > Change overlay series color
+    > Change indicator parameters including color settings
+    > Change chart objects
+    > Delete overlay
+    > Delete indicators
+    > Delete objects from chart
+> Use JSHint
+> List of features for next release. Review all issues and features of binary charts java application and if they are good bring them in this new application
+> Video detailing each and every features of the new charting software
+> On load of first page, make the user wait until the market data is loaded. If market data load fails, then give user proper message and stop doing anything further
+> Use HALM instead of HTML
+> Use Sass instead of CSS
+> If we use the above files, make sure to update grunt configuration and add watch plugin. This will help to watch these files for modification. If the files are change, it will automatically push the code to dist folder. Update connect plugin to server from dist folder.
+> Do some memory and frame profiling -> Note any performance degrading points
+> Over the course of time, the navigator curve becomes flat alothough charts are fine
+> Grunt HTMLHint
+> Convert all PNG or other format images to SVG. If that is not possible, then figure out if we can compress images further
+> https://www.npmjs.com/package/grunt-code-quality-report
+> Redirect users to unsupported_browsers.html in case any of features are not going to work for the client browser. Test from IE and prepare a list of feature which are not allowed and use modernizr to show error page. moderniz is doing wrong feature detection. Look into more details
