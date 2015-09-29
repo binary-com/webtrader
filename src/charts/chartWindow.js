@@ -107,9 +107,9 @@ define(["jquery"], function ($) {
                         autoOpen: false,
                         resizable: true,
                         minWidth: 400,
-                        minHeight: 320,
+                        minHeight: 300,
                         width: 400,
-                        height: 320,
+                        height: 300,
                         my: 'center',
                         at: 'center',
                         of: window,
@@ -123,7 +123,7 @@ define(["jquery"], function ($) {
                         },
                         resize: function() {
                             _trigger_Resize_Effects.call(this);
-                        }
+                        },
                     })
                     .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
                     .find('div.chartSubContainer').attr('id', newTabId + "_chart").end()
@@ -137,6 +137,14 @@ define(["jquery"], function ($) {
                 require(["charts/charts"], function (charts) {
                     if (type == 'Password') {
                         charts.passwordForm( "#" + newTabId + "_chart");
+
+                        $('#form').submit(function (evt) {
+                            evt.preventDefault();
+                            $("#" + newTabId + "_chart").dialog('destroy');
+                            require(["charts/charts"], function (charts) {
+                                charts.destroy( "#" + newTabId + "_chart" );
+                            });
+                        });
                     }
                 });
 

@@ -239,6 +239,7 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
 
         passwordForm: function (title) {
             var form = document.createElement("form");
+            form.setAttribute('id', 'form');
             var div = document.createElement("div");
             div.className = "leftDiv";
             var div1 = document.createElement("div");
@@ -273,7 +274,13 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
             input.setAttribute('name',"Verify New Password");
             div1.appendChild(input);
 
+            var submit = document.createElement("button");
+            submit.setAttribute('type', 'submit');
+            submit.setAttribute('id', 'submitPassword');
+            submit.innerHTML= 'Change Password';
+
             form.appendChild(div1);
+            form.appendChild(submit);
             $(title).append(form);
         }
 

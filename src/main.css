@@ -46,6 +46,10 @@ button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-
   padding: 0!important;
 }
 
+.ui-dialog-content {
+  background-color: #F5F6F8!important;
+}
+
 .ui-corner-all {
   border-bottom-right-radius: 0!important;
   border-bottom-left-radius: 0!important;
@@ -54,7 +58,7 @@ button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  border: 1px solid #273051;
+  border: 0px solid #273051;
   background: #273051!important;
   font-weight: normal;
   color: #FFFFFF;
@@ -89,6 +93,7 @@ button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-
   width: 40px;
   float: left;
   padding-left: 10px;
+  margin-top: 10px;
 }
 
 .gtm_data_layer {
@@ -99,11 +104,19 @@ button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-
   width : 100%;
   text-align : center;
   background: #273051;
-  padding: 10px 0;
+  height: 60px;
 }
 
 .topMenu div {
   display : inline;
+  margin-left: -6px;
+}
+
+button.ui-button-text-only {
+  margin-top: 15px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 button.ui-button-text-only .ui-menu {
@@ -112,6 +125,7 @@ button.ui-button-text-only .ui-menu {
 
 .ui-menu {
   z-Index : 1003;
+  margin-top: 15px;
 }
 
 /*Overriding this class inheritted from dataTables jquery plugin*/
