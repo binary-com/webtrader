@@ -232,7 +232,7 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
                     }
                 }
 
-	        requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
+            requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
 
             }
         },

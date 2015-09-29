@@ -54,8 +54,8 @@ button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  border: 1px solid #3F476E;
-  background: #3F476E!important;
+  border: 1px solid #273051;
+  background: #273051!important;
   font-weight: normal;
   color: #FFFFFF;
 }
@@ -80,8 +80,9 @@ button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-
   margin-top: 5px;
 }
 
-.ui-state-hover, .ui-button:hover{
+.ui-button-text-only.ui-state-hover, .ui-button-text-only.ui-button:hover, .ui-button-text-only.ui-state-focus{
   color: #FFFFFF!important;
+  background: #3F476E!important;
 }
 
 .logo {
