@@ -1,0 +1,21 @@
+.instruments_table {
+    display: table;
+}
+
+.instruments_table div {
+    display: table-row;
+    padding: 5px 5px 5px 5px;
+}
+
+.instruments_table div div {
+    display: table-cell;
+    padding: 3px 3px 3px 3px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.instruments_fixed_width {
+    width: 65px;
+}
