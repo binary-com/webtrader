@@ -45,16 +45,16 @@ define(["jquery"], function ($) {
                         title: instrumentName + " (" + timePeriod + ")",
                         close : function() {
                             //console.log('Destroying dialog ' + newTabId);
+                            var containerIDWithHash = "#" + newTabId + "_chart";
+                            var timeperiod = $(containerIDWithHash).data("timeperiod");
+                            var instrumentCode = $(containerIDWithHash).data('instrumentCode');
                             $(this).dialog('destroy');//completely remove this dialog
                             require(["charts/charts"], function (charts) {
-                                charts.destroy( "#" + newTabId + "_chart" );
+                                charts.destroy( "#" + newTabId + "_chart", timeperiod, instrumentCode );
                             });
                         },
                         resize: function() {
                             _trigger_Resize_Effects.call(this);
-                        },
-                        hover: function() {
-                            $(this).css('background-color', '#FFFFFF');
                         }
                     })
                     .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()

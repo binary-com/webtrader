@@ -2,7 +2,7 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui"], function($) {
+define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
 
     "use strict";
 
@@ -136,7 +136,7 @@ define(["jquery", "jquery-ui"], function($) {
                             $( "#instrumentsDialog" ).dialog({
                                 autoOpen: false,
                                 resizable: false,
-                                width: 320,
+                                width: 260,
                                 my: 'center',
                                 at: 'center',
                                 of: window,
@@ -190,7 +190,7 @@ define(["jquery", "jquery-ui"], function($) {
 
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
-                $.get("https://chart.binary.com/d/backend/markets.cgi", function (_instrumentJSON) {
+                symbol_handler.fetchMarkets(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
 
                         markets = _instrumentJSON;
@@ -214,10 +214,6 @@ define(["jquery", "jquery-ui"], function($) {
                         rootUL.menu();
 
                     }
-                }, 'json').error(function () {
-                    require(["jquery", "jquery-growl"], function ($) {
-                        $.growl.error({message: "Error getting market information!"});
-                    });
                 });
             }
 

@@ -8,8 +8,8 @@ if [ ! -z "$release_beta" -a "$release_beta" != " " ]; then
     mkdir beta
     mv dist/compressed/* beta
     mv beta dist/compressed
-    grunt gh-pages:gh-pages-beta
+    grunt gh-pages:gh-pages-beta-uncompressed
 fi
 if [ ! -z "$release_prod" -a "$release_prod" != " " ]; then
-    grunt gh-pages:gh-pages-prod
+    grunt gh-pages:gh-pages-prod-uncompressed
 fi

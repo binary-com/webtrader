@@ -11,16 +11,16 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-css-cleaner');
+  	grunt.loadNpmTasks('grunt-css-cleaner');
 
 	/*
-	"loc": 72,    //physical lines
-	"sloc": 45,   //lines of source code
-	"cloc": 10,   //total comment
-	"scloc": 10,  //singleline
-	"mcloc": 0,   //multiline
-	"nloc": 17,   //multiline
-	"file": 22,   //empty
+    	"loc": 72,    //physical lines
+    	"sloc": 45,   //lines of source code
+    	"cloc": 10,   //total comment
+    	"scloc": 10,  //singleline
+    	"mcloc": 0,   //multiline
+    	"nloc": 17,   //multiline
+    	"file": 22,   //empty
 	*/
 	grunt.loadNpmTasks('grunt-sloc');
 	grunt.loadNpmTasks('grunt-bump');
@@ -49,11 +49,11 @@ module.exports = function (grunt) {
 					{expand: true, cwd: 'src/', src: ['**'], dest: 'dist/uncompressed/v<%=pkg.version%>'}
 				]
 			},
-      resourcesToCompressed: {
-          files: [
-              {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html'], dest: 'dist/compressed'}
-          ]
-      }
+            resourcesToCompressed: {
+              files: [
+                  {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html'], dest: 'dist/compressed'}
+              ]
+            }
 		},
 		rename: {
 			moveThis: {
@@ -71,112 +71,138 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-    cssmin: {
-        minify: {
-            expand: true,
-            cwd: 'dist/uncompressed',
-            src: ['**/*.css'],
-            dest: 'dist/compressed'
-        }
-    },
-    htmlmin: {
-        options: {
-            removeComments: true,
-            collapseWhitespace: true
-        },
-        minify: {
-            expand: true,
-            cwd: 'dist/uncompressed',
-            src: ['**/*.html'],
-            dest: 'dist/compressed'
-        }
-    },
-    uglify: {
-        minify: {
-            files: [{
+        cssmin: {
+            minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: '**/*.js',
+                src: ['**/*.css'],
                 dest: 'dist/compressed'
-            }],
-            mangle: true,
-            compress: {
-                sequences: true,
-                dead_code: true,
-                conditionals: true,
-                booleans: true,
-                unused: true,
-                if_return: true,
-                join_vars: true,
-                drop_console: true
             }
-        }
-    },
-    'gh-pages': {
-        'gh-pages-beta': {
-            options: {
-                base: 'dist/compressed',
-                add: true,
-                repo: 'https://' + process.env.GIT_KEY + '@github.com/negar-binary/highcharts.git',
-                message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
-            },
-            src: ['**/*']
         },
-        'gh-pages-prod': {
+        htmlmin: {
             options: {
-                base: 'dist/compressed',
-                add: true,
-                repo: 'https://' + process.env.GIT_KEY + '@github.com/regentmarkets/highcharts.git',
-                message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+                removeComments: true,
+                collapseWhitespace: true
             },
-            src: ['**/*']
-        }
-    },
-    connect: {
-        server: {
+            minify: {
+                expand: true,
+                cwd: 'dist/uncompressed',
+                src: ['**/*.html'],
+                dest: 'dist/compressed'
+            }
+        },
+        uglify: {
+            minify: {
+                files: [{
+                    expand: true,
+                    cwd: 'dist/uncompressed',
+                    src: '**/*.js',
+                    dest: 'dist/compressed'
+                }],
+                mangle: true,
+                compress: {
+                    sequences: true,
+                    dead_code: true,
+                    conditionals: true,
+                    booleans: true,
+                    unused: true,
+                    if_return: true,
+                    join_vars: true,
+                    drop_console: true
+                }
+            }
+        },
+        'gh-pages': {
+            'gh-pages-beta-compressed': {
+                options: {
+                    base: 'dist/compressed',
+                    add: true,
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
+                },
+                src: ['**/*']
+            },
+            'gh-pages-prod-compressed': {
+                options: {
+                    base: 'dist/compressed',
+                    add: true,
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+                },
+                src: ['**/*']
+            },
+            'gh-pages-beta-uncompressed': {
+                options: {
+                    base: 'dist/uncompressed',
+                    add: true,
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta (releasing uncompressed code)'
+                },
+                src: ['**/*']
+            },
+            'gh-pages-prod-uncompressed': {
+                options: {
+                    base: 'dist/uncompressed',
+                    add: true,
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod (releasing uncompressed code)'
+                },
+                src: ['**/*']
+            }
+        },
+        connect: {
+            server_uncompressed: {
+                options: {
+                    port: 9001,
+                    base: 'dist/uncompressed',
+                    hostname: '0.0.0.0',
+                    keepalive: true
+                }
+            },
+            server_compressed: {
+                options: {
+                    port: 9001,
+                    base: 'dist/compressed',
+                    hostname: '0.0.0.0',
+                    keepalive: true
+                }
+            }
+        },
+        sloc: {
+            analyze: {
+                files: {
+                    //Check the negate option. Its not working
+                    //Currently open ticket https://github.com/rhiokim/grunt-sloc/issues/14
+                    //TODO
+                    src: ['**/*.js', '**/*.css', '**/*.html', '!**/libs/**']
+                }
+            }
+        },
+        bump: {
             options: {
-                port: 9001,
-                base: 'dist/uncompressed',
-                hostname: '0.0.0.0',
-                keepalive: true
+                files: ['package.json'],
+                updateConfigs: [],
+                commit: false,
+                /*commitMessage: 'Release v%VERSION%',
+                commitFiles: ['package.json'],*/
+                createTag: false,
+                /*tagName: 'v%VERSION%',
+                tagMessage: 'Version %VERSION%',*/
+                push: false,
+                /*pushTo: 'upstream',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+                globalReplace: false,
+                prereleaseName: false,*/
+                regExp: false
             }
-        }
-    },
-    sloc: {
-        analyze: {
-            files: {
-                //Check the negate option. Its not working
-                //Currently open ticket https://github.com/rhiokim/grunt-sloc/issues/14
-                //TODO
-                src: ['**/*.js', '**/*.css', '**/*.html', '!**/libs/**']
+        },
+        css_cleaner: {
+            taskname: {
+                options: {
+                    appRoot : "./dist/compressed"
+                }
             }
-        }
-    },
-    bump: {
-        options: {
-            files: ['package.json'],
-            updateConfigs: [],
-            commit: false,
-            /*commitMessage: 'Release v%VERSION%',
-            commitFiles: ['package.json'],*/
-            createTag: false,
-            /*tagName: 'v%VERSION%',
-            tagMessage: 'Version %VERSION%',*/
-            push: false,
-            /*pushTo: 'upstream',
-            gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
-            globalReplace: false,
-            prereleaseName: false,*/
-            regExp: false
-        }
-    },
-    css_cleaner: {
-        taskname: {
-            options: {
-                appRoot       : "./dist/compressed"
-            }
-        }
-    },
+        },
 		removelogging: {
 			dist: {
 				src : "dist/compressed/**/*.js"

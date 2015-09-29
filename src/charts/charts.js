@@ -2,7 +2,7 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "highcharts-exporting"],
+define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "highcharts-exporting"],
   function ( $, requireJSESHInstance ) {
 
     "use strict";
@@ -31,7 +31,7 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
-                this.destroy(containerIDWithHash);
+                this.destroy(containerIDWithHash, timeperiod, instrumentCode);
                 $(containerIDWithHash).highcharts().destroy();
             }
 
@@ -50,7 +50,8 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                     events: {
                         load: function () {
                             this.showLoading();
-                            requireJSESHInstance.eventSourceHandler( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
+                            console.log('Calling render chart for the first time for the instrument : ', instrumentCode);
+                            requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
                         }
                     }
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
@@ -130,8 +131,8 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
 
         },
 
-        destroy : function( containerIDWithHash ) {
-            requireJSESHInstance.close( containerIDWithHash );
+        destroy : function( containerIDWithHash, timeperiod, instrumentCode ) {
+            requireJSESHInstance.close( containerIDWithHash, timeperiod, instrumentCode );
         },
 
         triggerReflow : function( containerIDWithHash ) {
@@ -231,7 +232,7 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
                     }
                 }
 
-                requireJSESHInstance.eventSourceHandler( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
+	        requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
 
             }
         },

@@ -10,7 +10,7 @@ requirejs.config({
         'jquery-timer': "lib/jquery/jquery.timers",
         'datatables': "//cdn.datatables.net/1.10.5/js/jquery.dataTables.min",
         'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
-        'eventsource': 'lib/eventsource',
+        'reconnecting-websocket': '//cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min'
     },
@@ -51,7 +51,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
     };
 
 
-    //TODO if SVG, eventsource are not allowed, then redirect to unsupported_browsers.html
+    //TODO if SVG, websockets are not allowed, then redirect to unsupported_browsers.html
     if (!Modernizr.svg) {
       window.location.href = 'unsupported_browsers.html';
       return;
