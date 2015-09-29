@@ -52,45 +52,6 @@ Every checking into master will trigger travis-ci build process. Release is base
     [release_beta]
     With this commit message, travis-ci will automatically deploy code into gh-pages for beta release
 
-####Follow these rules:
-##### General Guidelines
-[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-
-##### Anonymous closures
-To prevent global variables, use closures:
-
-        (function () {
-            // ... all vars and functions are in this scope only
-            // still maintains access to all globals
-        }());
-    
-##### Strict Mode
-Include at the beginning of each .js file:
-        
-        "use strict";
-
-#####More details on strict mode:
-
-[ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
-
-[Strict Mode ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
-
-[It’s time to start using JavaScript strict mode](http://www.nczonline.net/blog/2012/03/13/its-time-to-start-using-javascript-strict-mode/)
-
-##### Naming conventions
-Variables that contain jquery selected elements should start with a '$'.
-
-Don't:
-
-        var due = $('#due');
-
-Do:
-
-        var $due = $('#due');
-
-#####Test thoroughly:
-Every module, JS file, classes, function, etc that is coded for this project, should be accompanied by a corresponding test file. We use QUnit and it is expected that every src code submission is covered by a unit test scenario. Our project is connected with travis CI and each checkin is validated by Travis Continuous Integration system. 
-
 #####Get your code to our repo:
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
     
