@@ -96,3 +96,4 @@ In order to contribute, please fork and submit pull request by following all the
     
 #####Other details
 When commit is done with [release] tag in the master branch, it will trigger deployment into webtrader gh-pages automatically and will update the release files and changes could be seen live @ [WebTrader](http://binary-com.github.io/webtrader)
+
