@@ -232,9 +232,56 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
                     }
                 }
 
-                requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
+            requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
 
             }
+        },
+
+        passwordForm: function (title) {
+            var form = document.createElement("form");
+            form.setAttribute('id', 'form');
+            var div = document.createElement("div");
+            div.className = "leftDiv";
+            var div1 = document.createElement("div");
+            div1.className = "rightDiv";
+
+            var currPassword = document.createTextNode("Current Password: ");
+            div.appendChild(currPassword);
+            div.appendChild(document.createElement("br"));
+            var newPassword = document.createTextNode("New Password: ");
+            div.appendChild(newPassword);
+            div.appendChild(document.createElement("br"));
+            var verPassword = document.createTextNode("Verify New Password: ");
+            div.appendChild(verPassword);
+            form.appendChild(div);
+
+            var input = document.createElement("input");
+            input.setAttribute('type',"password");
+            input.setAttribute('name',"Current Password");
+            div1.appendChild(input);
+
+            div1.appendChild(document.createElement("br"));
+
+            var input = document.createElement("input");
+            input.setAttribute('type',"password");
+            input.setAttribute('name',"New Password");
+            div1.appendChild(input);
+
+            div1.appendChild(document.createElement("br"));
+
+            var input = document.createElement("input");
+            input.setAttribute('type',"password");
+            input.setAttribute('name',"Verify New Password");
+            div1.appendChild(input);
+
+            var submit = document.createElement("button");
+            submit.setAttribute('type', 'submit');
+            submit.setAttribute('id', 'submitPassword');
+            submit.innerHTML= 'Change Password';
+
+            form.appendChild(div1);
+            form.appendChild(submit);
+            $(title).append(form);
         }
 
     }

@@ -91,23 +91,6 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
             $('.topContainer .topMenu')
                     .find("button" ).button()
-                    .filter('.windows').button({
-                      icons: {
-                        primary: "windows-icon",
-                      }
-                    }).end()
-                    .filter('.instruments').button({
-                      icons: {
-                        primary: "instruments-icon",
-                      },
-                      disabled: true
-                    }).end()
-                    .filter(".workspace").button({
-                      icons: {
-                        primary: "workspace-icon",
-                      },
-                      disabled: true
-                    });
 
             $(window).resize(function() {
               resetTopMenu();
@@ -119,7 +102,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
                 //Just an info
                 require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: "Loading instruments menu!" });
+                    $.growl.notice({ message: "Loading chart menu!" });
                 });
 
                 instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
@@ -130,9 +113,16 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 windows.init($('.topContainer .windows').closest('div'));
             });
 
-            //Resize the background image
-            $(window).resize(function() {
-              resizeBackgroundWatermark();
+            require(["reports/reports"], function( reports ) {
+                reports.init($('.topContainer .reports').closest('div'));
+            });
+
+            require(["asset/asset"], function( asset ) {
+                asset.init($('.topContainer .asset').closest('div'));
+            });
+
+            require(["settings/settings"], function( settings ) {
+                settings.init($('.topContainer .settings').closest('div'));
             });
 
         });

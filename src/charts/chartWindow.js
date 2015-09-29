@@ -88,6 +88,70 @@ define(["jquery"], function ($) {
          */
         triggerResizeEffects : function( callerContext ) {
             _trigger_Resize_Effects.call( callerContext );
+        },
+
+        addNewSmallWindow: function(type) {
+            
+            $.get("charts/chartWindow.html" , function( $html ) {
+
+                var newTabId = "chart-dialog-" + ++chartDialogCounter;
+
+                $html = $($html);
+
+                if ( ($('#' + type).length )) {
+                    $('#' + type).dialog( "moveToTop" );
+                } else {
+
+                $html.attr("id", newTabId)
+                    .dialog({
+                        autoOpen: false,
+                        resizable: true,
+                        minWidth: 400,
+                        minHeight: 300,
+                        width: 400,
+                        height: 300,
+                        my: 'center',
+                        at: 'center',
+                        of: window,
+                        title: type,
+                        close : function() {
+                            //console.log('Destroying dialog ' + newTabId);
+                            $(this).dialog('destroy');//completely remove this dialog
+                            require(["charts/charts"], function (charts) {
+                                charts.destroy( "#" + newTabId + "_chart" );
+                            });
+                        },
+                        resize: function() {
+                            _trigger_Resize_Effects.call(this);
+                        },
+                    })
+                    .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
+                    .find('div.chartSubContainer').attr('id', newTabId + "_chart").end()
+                    ;
+
+                $('#' + newTabId).dialog( 'open' );
+                $html.attr("id", type);
+
+                _trigger_Resize_Effects.call($('#' + newTabId));
+
+                require(["charts/charts"], function (charts) {
+                    if (type == 'Password') {
+                        charts.passwordForm( "#" + newTabId + "_chart");
+
+                        $('#form').submit(function (evt) {
+                            evt.preventDefault();
+                            $("#" + newTabId + "_chart").dialog('destroy');
+                            require(["charts/charts"], function (charts) {
+                                charts.destroy( "#" + newTabId + "_chart" );
+                            });
+                        });
+                    }
+                });
+
+                }
+
+            });
+
         }
 
     };

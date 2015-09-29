@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 body {
     font-size: 80%;
 }
@@ -28,6 +30,72 @@ body {
     color       : #212121;
 }
 
+button.ui-button-text-only .ui-menu-item {
+  background-color: #3F476E; 
+  color: #FFFFFF;
+  border-color: #3F476E;
+}
+
+button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-only .ui-menu-item .ui-state-active, button.ui-button-text-only .ui-widget-content .ui-state-active, button.ui-button-text-only .ui-widget-content .ui-state-focus {
+  background: #273051!important;
+  color: #FFFFFF!important;
+  border-color: #3F476E;
+}
+
+.ui-dialog {
+  padding: 0!important;
+}
+
+.ui-dialog-content {
+  background-color: #F5F6F8!important;
+}
+
+.ui-corner-all {
+  border-bottom-right-radius: 0!important;
+  border-bottom-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+  border-top-left-radius: 0!important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 0px solid #273051;
+  background: #273051!important;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.ui-widget-header {
+  border: 1px solid #273051;
+  background: #273051!important;
+  color: #FFFFFF;
+  font-family: 'Roboto'!important;
+  font-weight: normal!important;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: 'Roboto'!important;
+}
+
+.ui-widget {
+  outline: 0;
+}
+
+.ui-button {
+  margin-top: 5px;
+}
+
+.ui-button-text-only.ui-state-hover, .ui-button-text-only.ui-button:hover, .ui-button-text-only.ui-state-focus{
+  color: #FFFFFF!important;
+  background: #3F476E!important;
+}
+
+.logo {
+  width: 40px;
+  float: left;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
 .gtm_data_layer {
   display : none;
 }
@@ -35,38 +103,29 @@ body {
 .topMenu {
   width : 100%;
   text-align : center;
+  background: #273051;
+  height: 60px;
 }
 
 .topMenu div {
   display : inline;
+  margin-left: -6px;
+}
+
+button.ui-button-text-only {
+  margin-top: 15px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+button.ui-button-text-only .ui-menu {
+  border-color: #3F476E;
 }
 
 .ui-menu {
   z-Index : 1003;
-}
-
-.instruments-icon {
-  background-image: url(images/charts.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.windows-icon {
-  background-image: url(images/windows.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.workspace-icon {
-  background-image: url(images/settings.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
+  margin-top: 15px;
 }
 
 /*Overriding this class inheritted from dataTables jquery plugin*/

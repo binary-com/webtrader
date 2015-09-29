@@ -44,7 +44,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
-        var topMargin = 40;
+        var topMargin = 100;
         if (isSmallView()) topMargin = 100;
 
         var cellCount = 1, rowCount = 1, leftMargin = 20;
@@ -64,8 +64,13 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
         $(".chart-dialog").each(function () {
 
-          var leftShift = (cellCount == 1 ? startMargin : minWidth + leftMargin);
+          if (cellCount == 1) {
+            var leftShift = startMargin;
+          } else if (cellCount > 1) {
+            var leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
+          }
           var topShift = -topMargin + 2;
+          referenceObjectForPositioning = window;
           if (referenceObjectForPositioning == window) {
             topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
           }
