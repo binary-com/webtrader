@@ -238,45 +238,41 @@ define(["jquery", "charts/eventSourceHandler", "common/util", "highstock", "high
 
         passwordForm: function (title) {
             var form = document.createElement("form");
-            
+            var div = document.createElement("div");
+            div.className = "leftDiv";
+            var div1 = document.createElement("div");
+            div1.className = "rightDiv";
+
             var currPassword = document.createTextNode("Current Password: ");
-            form.appendChild(currPassword);
+            div.appendChild(currPassword);
+            div.appendChild(document.createElement("br"));
+            var newPassword = document.createTextNode("New Password: ");
+            div.appendChild(newPassword);
+            div.appendChild(document.createElement("br"));
+            var verPassword = document.createTextNode("Verify New Password: ");
+            div.appendChild(verPassword);
+            form.appendChild(div);
 
             var input = document.createElement("input");
             input.setAttribute('type',"password");
             input.setAttribute('name',"Current Password");
-            input.style.margin='10px';
-            form.appendChild(input);
+            div1.appendChild(input);
 
-            form.appendChild(document.createElement("br"));
-
-            var newPassword = document.createTextNode("New Password: ");
-            form.appendChild(newPassword);
+            div1.appendChild(document.createElement("br"));
 
             var input = document.createElement("input");
             input.setAttribute('type',"password");
             input.setAttribute('name',"New Password");
-            input.style.margin='10px';
-            form.appendChild(input);
+            div1.appendChild(input);
 
-            form.appendChild(document.createElement("br"));
-
-            var verPassword = document.createTextNode("Verify New Password: ");
-            form.appendChild(verPassword);
+            div1.appendChild(document.createElement("br"));
 
             var input = document.createElement("input");
             input.setAttribute('type',"password");
             input.setAttribute('name',"Verify New Password");
-            form.appendChild(input);
+            div1.appendChild(input);
 
-            form.style.textAlign='center';
-            input.style.margin='10px';
-
-            var submit = document.createElement("submit");
-            submit.setAttribute('type',"submit");
-            submit.setAttribute('name',"Change Password");
-            form.appendChild(submit);
-
+            form.appendChild(div1);
             $(title).append(form);
         }
 

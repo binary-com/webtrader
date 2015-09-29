@@ -106,9 +106,9 @@ define(["jquery"], function ($) {
                     .dialog({
                         autoOpen: false,
                         resizable: true,
-                        minWidth: 370,
+                        minWidth: 400,
                         minHeight: 320,
-                        width: 370,
+                        width: 400,
                         height: 320,
                         my: 'center',
                         at: 'center',

@@ -90,62 +90,6 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
             $('.topContainer .topMenu')
                     .find("button" ).button()
-                    .filter('.trade').button({
-                      icons: {
-                        primary: "trade-icon",
-                      }
-                    }).end()
-                    .filter('.instruments').button({
-                      icons: {
-                        primary: "instruments-icon",
-                      },
-                      disabled: true
-                    }).end()
-                    .filter('.portfolio').button({
-                      icons: {
-                        primary: "portfolio-icon",
-                      }
-                    }).end()
-                    .filter('.statement').button({
-                      icons: {
-                        primary: "statement-icon",
-                      }
-                    }).end()
-                    .filter('.asset').button({
-                      icons: {
-                        primary: "asset-icon",
-                      }
-                    }).end()
-                    .filter('.profit').button({
-                      icons: {
-                        primary: "profit-icon",
-                      }
-                    }).end()
-                    .filter('.time').button({
-                      icons: {
-                        primary: "time-icon",
-                      }
-                    }).end()
-                    .filter('.pricing').button({
-                      icons: {
-                        primary: "pricing-icon",
-                      }
-                    }).end()
-                    .filter('#password').button({
-                      icons: {
-                        primary: "password-icon",
-                      }
-                    }).end()
-                    .filter('.settings').button({
-                      icons: {
-                        primary: "settings-icon",
-                      }
-                    }).end()
-                    .filter('.windows').button({
-                      icons: {
-                        primary: "windows-icon",
-                      }
-                    }).end()
 
             $(window).resize(function() {
               resetTopMenu();
@@ -168,9 +112,16 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 windows.init($('.topContainer .windows').closest('div'));
             });
 
-            //Resize the background image
-            $(window).resize(function() {
-              resizeBackgroundWatermark();
+            require(["reports/reports"], function( reports ) {
+                reports.init($('.topContainer .reports').closest('div'));
+            });
+
+            require(["asset/asset"], function( asset ) {
+                asset.init($('.topContainer .asset').closest('div'));
+            });
+
+            require(["settings/settings"], function( settings ) {
+                settings.init($('.topContainer .settings').closest('div'));
             });
         });
 

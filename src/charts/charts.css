@@ -22,3 +22,22 @@
     text-align: left;
     white-space: nowrap;
 }
+
+form input {
+    margin: 10px;
+}
+
+form div {
+    line-height: 300%;
+    width: 50%;
+}
+
+form .leftDiv {
+    text-align: right;
+    float: left;
+}
+
+form .rightDiv {
+    text-align: left;
+    float: left;
+}

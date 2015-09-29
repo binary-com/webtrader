@@ -30,6 +30,18 @@ body {
     color       : #212121;
 }
 
+button.ui-button-text-only .ui-menu-item {
+  background-color: #3F476E; 
+  color: #FFFFFF;
+  border-color: #3F476E;
+}
+
+button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-only .ui-menu-item .ui-state-active, button.ui-button-text-only .ui-widget-content .ui-state-active, button.ui-button-text-only .ui-widget-content .ui-state-focus {
+  background: #273051!important;
+  color: #FFFFFF!important;
+  border-color: #3F476E;
+}
+
 .ui-dialog {
   padding: 0!important;
 }
@@ -93,96 +105,12 @@ body {
   display : inline;
 }
 
+button.ui-button-text-only .ui-menu {
+  border-color: #3F476E;
+}
+
 .ui-menu {
   z-Index : 1003;
-}
-
-.trade-icon {
-  background-image: url(images/trade.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.instruments-icon {
-  background-image: url(images/chart.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.portfolio-icon {
-  background-image: url(images/portfolio.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.statement-icon {
-  background-image: url(images/statement.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.asset-icon {
-  background-image: url(images/asset.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.profit-icon {
-  background-image: url(images/profit-table.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.time-icon {
-  background-image: url(images/trading-times.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.pricing-icon {
-  background-image: url(images/pricing-table.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.password-icon {
-  background-image: url(images/password.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.settings-icon {
-  background-image: url(images/setting.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.windows-icon {
-  background-image: url(images/window.svg) !important;
-  background-size: 65%;
-  top: 50% !important;
-  width: 26px !important;
-  height: 26px !important;
 }
 
 /*Overriding this class inheritted from dataTables jquery plugin*/
