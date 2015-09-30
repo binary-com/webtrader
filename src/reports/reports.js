@@ -7,7 +7,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
             $.get('reports/reports.html', function ( $html ) {
                 $html = $($html);
 
-                $parentObj.find('button').button("enable").button("refresh").button("widget").click(function(e) {
+                $parentObj.find('button').button("enable").button("refresh").button("widget").hover(function(e) {
                   var menu = $(this).closest('div').find("ul").menu();
                   if (menu.is(":visible")) {
                     menu.hide();

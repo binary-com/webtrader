@@ -116,7 +116,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
                     }
                 });
 
-                $parentObj.find('button').button("enable").button("refresh").button("widget").click(function(e) {
+                $parentObj.find('button').button("enable").button("refresh").button("widget").hover(function(e) {
                   var menu = $(this).closest('div').find("ul").menu();
                   if (menu.is(":visible")) {
                     menu.hide();

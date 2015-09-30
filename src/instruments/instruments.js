@@ -197,7 +197,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
                         //Enable the instruments menu
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
-                        instrumentsMenu.button("enable").button("refresh").button("widget").click(function(e) {
+                        instrumentsMenu.button("enable").button("refresh").button("widget").hover(function(e) {
                           var menu = $(this).closest('div').find("ul:first").menu();
                           if (menu.is(":visible")) {
                             menu.hide();
