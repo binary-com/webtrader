@@ -70,7 +70,13 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
         $(".mainContainer").load("mainContent.html", function() {
 
-            //Show the default chart windows
+
+            //Trigger async loading of instruments and refresh menu
+            require(["instruments/instruments"], function(instrumentsMod) {
+                instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
+            });
+
+            //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
                 windows.init($('.topContainer .windows').closest('div'));
             });

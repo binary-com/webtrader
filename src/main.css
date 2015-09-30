@@ -11,17 +11,6 @@ body {
     width: 100%;
 }
 
-.topContainer ul {
-    display: none;
-    position: absolute;
-}
-
-.topContainer li {
-    text-align: left;
-    white-space: nowrap;
-    display: block;
-}
-
 /*Applying ui-state-active and ui-state-hover does not work for this element*/
 .mainMenuHamburgerMenu:hover {
     border      : 1px solid #AAA;
@@ -30,17 +19,73 @@ body {
     color       : #212121;
 }
 
-button.ui-button-text-only .ui-menu-item {
-  background-color: #3F476E; 
+nav {
+  height: 46px;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 1003;
+}
+
+nav ul li:hover > ul {
+  display: block;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  position: relative;
+  display: inline-table;
+  background: #273051;
   color: #FFFFFF;
-  border-color: #3F476E;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+nav ul li {
+  float: left;
+  text-align: left;
+  height: 46px;
+}
+
+nav ul li:hover {
+  background-color: #3F476E;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  padding: 13px;
+}
+
+nav ul ul li {
+  float: none;
+  position: relative;
+  height: auto;
+}
+
+nav ul ul li a {
   padding: 6px 30px 6px 10px;
 }
 
-button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-only .ui-menu-item .ui-state-active, button.ui-button-text-only .ui-widget-content .ui-state-active, button.ui-button-text-only .ui-widget-content .ui-state-focus {
-  background: #273051!important;
-  color: #FFFFFF!important;
-  border-color: #273051;
+nav ul ul li a:hover {
+  background-color: #3F476E;
+}
+
+nav ul ul ul {
+  position: absolute;
+  left: 100%
+  top: 0;
 }
 
 .ui-dialog {
