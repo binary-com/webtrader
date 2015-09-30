@@ -75,7 +75,8 @@ nav ul ul li {
 }
 
 nav ul ul li a {
-  padding: 6px 30px 6px 10px;
+  padding: 6px 30px 6px 15px;
+  width: 110px;
 }
 
 nav ul ul li a:hover {
