@@ -85,7 +85,7 @@ button.ui-button-text-only .ui-menu-item .ui-state-focus, button.ui-button-text-
   margin-top: 5px;
 }
 
-.ui-button-text-only.ui-state-hover, .ui-button-text-only.ui-button:hover, .ui-button-text-only.ui-state-focus{
+.ui-button-text-only.ui-state-hover, .ui-button-text-only.ui-button:hover{
   color: #FFFFFF!important;
   background: #3F476E!important;
 }
