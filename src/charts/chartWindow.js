@@ -138,13 +138,7 @@ define(["jquery"], function ($) {
                     if (type == 'Password') {
                         charts.passwordForm( "#" + newTabId + "_chart");
 
-                        $('#form').submit(function (evt) {
-                            evt.preventDefault();
-                            $("#" + newTabId + "_chart").dialog('destroy');
-                            require(["charts/charts"], function (charts) {
-                                charts.destroy( "#" + newTabId + "_chart" );
-                            });
-                        });
+                        
                     }
                 });
 

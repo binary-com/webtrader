@@ -275,7 +275,6 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
             div1.appendChild(input);
 
             var submit = document.createElement("button");
-            submit.setAttribute('type', 'submit');
             submit.setAttribute('id', 'submitPassword');
             submit.innerHTML= 'Change Password';
 

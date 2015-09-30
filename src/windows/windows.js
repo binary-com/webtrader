@@ -44,7 +44,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
-        var topMargin = 100;
+        var topMargin = 60;
         if (isSmallView()) topMargin = 100;
 
         var cellCount = 1, rowCount = 1, leftMargin = 20;
