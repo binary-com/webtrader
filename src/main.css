@@ -23,6 +23,22 @@ nav {
   height: 46px;
 }
 
+.instruments .ui-menu {
+  display: none;
+}
+
+.instruments:hover ul {
+  display: block;
+  height: auto;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 1003;
+}
+
 nav ul ul {
   display: none;
   position: absolute;
@@ -33,6 +49,12 @@ nav ul ul {
 nav ul li:hover > ul {
   display: block;
   height: auto;
+}
+
+.instruments ul {
+  background: #273051;
+  color: #FFFFFF;
+  border-color: #273051;
 }
 
 nav ul {
@@ -51,10 +73,21 @@ nav ul:after {
   display: block;
 }
 
+.instruments li {
+  padding: 6px 30px 6px 15px!important;
+  width: 110px;
+}
+
 nav ul li {
   float: left;
   text-align: left;
   height: 46px;
+}
+
+.instruments .ui-widget-content .ui-state-focus, .instruments .ui-state-focus, .instruments .ui-widget-content .ui-state-active, .instruments .ui-state-active {
+  background: #3F476E!important;
+  border: 1px solid #3F476E!important;
+  color: #FFFFFF;
 }
 
 nav ul li:hover {
@@ -172,7 +205,6 @@ button.ui-button-text-only .ui-menu {
 
 .ui-menu {
   z-Index : 1003;
-  margin-top: 7px;
 }
 
 /*Overriding this class inheritted from dataTables jquery plugin*/

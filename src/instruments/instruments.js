@@ -195,18 +195,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
                         markets = _instrumentJSON;
 
-                        //Enable the instruments menu
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
-                        instrumentsMenu.button("enable").button("refresh").button("widget").hover(function(e) {
-                          var menu = $(this).closest('div').find("ul:first").menu();
-                          if (menu.is(":visible")) {
-                            menu.hide();
-                          } else {
-                            menu.show();
-                          }
-                        }).focusout(function() {
-                          $(this).closest('div').find('ul').menu().hide();
-                        });
 
                         var rootUL = $("<ul>").addClass('ui-corner-all');
                         rootUL.appendTo(instrumentsMenu);

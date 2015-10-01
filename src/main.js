@@ -70,15 +70,19 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
         $(".mainContainer").load("mainContent.html", function() {
 
+            //Just an info
+                require(["jquery", "jquery-growl"], function($) {
+                    $.growl.notice({ message: "Loading chart menu!" });
+                });
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
-                instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
+                instrumentsMod.init( $(".mainContainer .instruments").closest('li') );
             });
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows').closest('div'));
+                windows.init($('.topContainer .windows').closest('li'));
             });
 
         });
