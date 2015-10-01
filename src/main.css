@@ -74,7 +74,7 @@ nav ul:after {
 }
 
 .instruments li {
-  padding: 6px 30px 6px 15px!important;
+  padding: 10px 30px 10px 15px!important;
   width: 110px;
 }
 
@@ -108,7 +108,7 @@ nav ul ul li {
 }
 
 nav ul ul li a {
-  padding: 6px 30px 6px 15px;
+  padding: 10px 30px 10px 15px;
   width: 110px;
 }
 
