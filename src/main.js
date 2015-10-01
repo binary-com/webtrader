@@ -85,6 +85,10 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 windows.init($('.topContainer .windows').closest('li'));
             });
 
+            require(["settings/settings"], function( settings ) {
+                settings.init($('.topContainer .settings').closest('li'));
+            });
+
         });
 
         //Now load all other CSS asynchronously

@@ -99,11 +99,10 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
         init: function( $parentObj ) {
 
-            $.get('mainContent.html', function ( $html ) {
-                $html = $($html);
-                tileObject = $html.find('a.tile');
+            
+                tileObject = $('a.tile');
 
-                closeAllObject = $html.find('a.closeAll').click(function () {
+                closeAllObject = $('a.closeAll').click(function () {
                     //console.log('Event for closing all chart windows!');
                     /*
                       The close click is behaving weird.
@@ -137,7 +136,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
                 });
 
-            });
+            
             return this;
         },
 
