@@ -18,7 +18,8 @@ define(["jquery", "jquery-ui"], function ($, $ui) {
             },
             "load": null,
             "beforeRestore": null,
-            "restore": null
+            "restore": null,
+            "resize" : null
         },
         _create: function () {
             this._state = "normal";
@@ -30,8 +31,15 @@ define(["jquery", "jquery-ui"], function ($, $ui) {
             this._initButtons();
             this._initTitleBar();
             this._setState("normal");
-            this._on("load", function (e) {
-                return console.log("test", e);
+            this._on("load", function (e) { });
+
+            /* Amin: trigger resize event when the window size changes */
+            var me = this;
+            $(window).on('resize', function () {
+                if(me.state() === "maximized"){
+                    me.maximize();
+                    me._trigger("resize");
+                }
             });
             return this._trigger("load");
         },
