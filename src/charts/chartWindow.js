@@ -2,7 +2,7 @@
  * Created by arnab on 2/13/15.
  */
 
-define(["jquery"], function ($) {
+define(["jquery","jquery.dialogextend"], function ($) {
 
     "use strict";
 
@@ -53,9 +53,13 @@ define(["jquery"], function ($) {
                                 charts.destroy( "#" + newTabId + "_chart", timeperiod, instrumentCode );
                             });
                         },
-                        resize: function() {
-                            _trigger_Resize_Effects.call(this);
-                        }
+                        resize: _trigger_Resize_Effects
+                    })
+                    .dialogExtend({
+                        "maximize": _trigger_Resize_Effects,
+                        "restore": _trigger_Resize_Effects,
+                        "minimize": _trigger_Resize_Effects,
+                        "resize": _trigger_Resize_Effects
                     })
                     .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
                     .find('div.chartSubContainer').attr('id', newTabId + "_chart").end()
