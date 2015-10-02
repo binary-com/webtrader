@@ -1,9 +1,11 @@
 {
   "name": "webtrader",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "This is a WebTrader project for binary.com",
   "main": "Gruntfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-remove-logging": "git://github.com/ehynds/grunt-remove-logging.git"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bump": "^0.3.0",
@@ -21,7 +23,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-css-cleaner": "^1.0.0",
     "grunt-gh-pages": "^0.10.0",
-    "grunt-remove-logging": "~0.2.0",
     "grunt-rename": "^0.1.4",
     "grunt-sloc": "^0.6.0",
     "grunt-string-replace": "^1.0.0",

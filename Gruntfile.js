@@ -3,6 +3,7 @@
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-rename');
@@ -113,22 +114,23 @@ module.exports = function (grunt) {
             }
         },
         'gh-pages': {
-            'compressed': {
+            'travis-deploy':{
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
                 },
                 src: ['**/*']
             },
-            'uncompressed': {
+            'deploy': {
                 options: {
-                    base: 'dist/uncompressed',
+                    base: 'dist/compressed',
                     add: true,
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod (releasing uncompressed code)'
+                    message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod'
                 },
                 src: ['**/*']
-            },
+            }
         },
         connect: {
             server_uncompressed: {
@@ -136,7 +138,8 @@ module.exports = function (grunt) {
                     port: 9001,
                     base: 'dist/uncompressed',
                     hostname: '0.0.0.0',
-                    keepalive: true
+                    keepalive: true,
+                    livereload: true
                 }
             },
             server_compressed: {
@@ -144,7 +147,8 @@ module.exports = function (grunt) {
                     port: 9001,
                     base: 'dist/compressed',
                     hostname: '0.0.0.0',
-                    keepalive: true
+                    keepalive: true,
+                    livereload: true
                 }
             }
         },
@@ -185,10 +189,14 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src : "dist/compressed/**/*.js"
+                src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
+				options : {
+					"verbose" : false
+				}
             }
         },
         watch: {
+          options: { livereload: true },
           scripts: {
             files: ['src/**'],
             tasks: ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'copy:resourcesToCompressed'],
@@ -199,8 +207,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'css_cleaner', 'removelogging']);
-    grunt.registerTask('compressed-deploy', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'css_cleaner', 'removelogging', 'gh-pages:compressed']);
-    grunt.registerTask('uncompressed-deploy', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'css_cleaner', 'removelogging', 'gh-pages:uncompressed']);
+	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'css_cleaner', 'removelogging']);
+    grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
 
 };

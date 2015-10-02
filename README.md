@@ -21,7 +21,7 @@ At this point, your project is properly setup. You can now run following command
         For compressed file serving
 
         $ grunt connect:uncompressed
-        For uncompressed file serving
+        For uncompressed file serving(this is default, you can just do grunt connect)
 
 Running this command will launch local server at http://localhost:9001
 
@@ -54,8 +54,5 @@ Every checkin or merge of PR into development will trigger travis-ci build and d
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
     
-        $ grunt compressed-deploy
+        $ grunt deploy
         For releasing compressed code
-
-        $ grunt uncompressed-deploy
-        For releasing uncompressed code

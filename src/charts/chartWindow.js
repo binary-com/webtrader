@@ -2,7 +2,7 @@
  * Created by arnab on 2/13/15.
  */
 
-define(["jquery"], function ($) {
+define(["jquery","jquery.dialogextend"], function ($) {
 
     "use strict";
 
@@ -21,6 +21,11 @@ define(["jquery"], function ($) {
 
     }
 
+    /* events that this module will fire */
+    var events = {
+        onCreate: $.Callbacks(),  // on new chart created
+        onRemove: $.Callbacks()   // on chart removed
+    }
     return {
 
         addNewWindow: function( instrumentCode, instrumentName, timePeriod, _callback, type ) {
@@ -30,8 +35,9 @@ define(["jquery"], function ($) {
             //console.log(newTabId)
             $.get("charts/chartWindow.html" , function( $html ) {
 
+                var title = instrumentName + " (" + timePeriod + ")";
                 $html = $($html);
-                $html.attr("id", newTabId)
+                var newWindow = $html.attr("id", newTabId)
                     .dialog({
                         autoOpen: false,
                         resizable: true,
@@ -42,7 +48,7 @@ define(["jquery"], function ($) {
                         my: 'center',
                         at: 'center',
                         of: window,
-                        title: instrumentName + " (" + timePeriod + ")",
+                        title: title,
                         close : function() {
                             //console.log('Destroying dialog ' + newTabId);
                             var containerIDWithHash = "#" + newTabId + "_chart";
@@ -53,13 +59,20 @@ define(["jquery"], function ($) {
                                 charts.destroy( "#" + newTabId + "_chart", timeperiod, instrumentCode );
                             });
                         },
-                        resize: function() {
-                            _trigger_Resize_Effects.call(this);
-                        }
+                        resize: _trigger_Resize_Effects
+                    })
+                    .dialogExtend({
+                        "maximize": _trigger_Resize_Effects,
+                        "restore": _trigger_Resize_Effects,
+                        "minimize": _trigger_Resize_Effects,
+                        "resize": _trigger_Resize_Effects
                     })
                     .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
                     .find('div.chartSubContainer').attr('id', newTabId + "_chart").end()
                     ;
+
+                newWindow.on('dialogclose', events.onRemove.fire.bind(null, title, newWindow)); // trigger the corresponding event
+                events.onCreate.fire(title,newWindow); // trigger new chart created event
 
                 require(["charts/chartOptions"], function(chartOptions) {
                     chartOptions.init(newTabId, timePeriod, type);
@@ -88,8 +101,9 @@ define(["jquery"], function ($) {
          */
         triggerResizeEffects : function( callerContext ) {
             _trigger_Resize_Effects.call( callerContext );
-        }
+        },
 
+        events: events
     };
 
 });
