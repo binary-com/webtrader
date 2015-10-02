@@ -19,6 +19,10 @@ body {
     color       : #212121;
 }
 
+.ui-icon {
+    background-image: url(images/ui-icons_ffffff_256x240.png)!important;
+}
+
 nav {
   height: 46px;
 }
