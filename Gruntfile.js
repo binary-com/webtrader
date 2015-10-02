@@ -114,11 +114,30 @@ module.exports = function (grunt) {
             }
         },
         'gh-pages': {
+            'travis-compressed': {
+                options: {
+                    base: 'dist/compressed',
+                    add: true,
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
+                },
+                src: ['**/*']
+            },
+            ,
+            'travis-uncompressed': {
+                options: {
+                    base: 'dist/uncompressed',
+                    add: true,
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta (releasing uncompressed code)'
+                },
+                src: ['**/*']
+            }
             'compressed': {
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod'
+                    message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod'
                 },
                 src: ['**/*']
             },
@@ -126,7 +145,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'dist/uncompressed',
                     add: true,
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for prod (releasing uncompressed code)'
+                    message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod (releasing uncompressed code)'
                 },
                 src: ['**/*']
             },
