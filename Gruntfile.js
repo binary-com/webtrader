@@ -119,20 +119,19 @@ module.exports = function (grunt) {
                     base: 'dist/compressed',
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta'
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
                 },
                 src: ['**/*']
             },
-            ,
             'travis-uncompressed': {
                 options: {
                     base: 'dist/uncompressed',
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process for beta (releasing uncompressed code)'
+                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process(releasing uncompressed code)'
                 },
                 src: ['**/*']
-            }
+            },
             'compressed': {
                 options: {
                     base: 'dist/compressed',

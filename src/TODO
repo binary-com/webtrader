@@ -20,7 +20,6 @@
 > List of features for next release. Review all issues and features of binary charts java application and if they are good bring them in this new application
 > Video detailing each and every features of the new charting software
 > On load of first page, make the user wait until the market data is loaded. If market data load fails, then give user proper message and stop doing anything further
-> Use HALM instead of HTML
 > Use Sass instead of CSS
 > If we use the above files, make sure to update grunt configuration and add watch plugin. This will help to watch these files for modification. If the files are change, it will automatically push the code to dist folder. Update connect plugin to server from dist folder.
 > Do some memory and frame profiling -> Note any performance degrading points
@@ -29,3 +28,4 @@
 > Convert all PNG or other format images to SVG. If that is not possible, then figure out if we can compress images further
 > https://www.npmjs.com/package/grunt-code-quality-report
 > Redirect users to unsupported_browsers.html in case any of features are not going to work for the client browser. Test from IE and prepare a list of feature which are not allowed and use modernizr to show error page. moderniz is doing wrong feature detection. Look into more details
+
