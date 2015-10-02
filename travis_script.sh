@@ -8,8 +8,8 @@ if [ $TRAVIS_PULL_REQUEST ]; then
     mkdir beta
     mv dist/compressed/* beta
     mv beta dist/compressed
-    grunt gh-pages:compressed
+    grunt gh-pages:travis-uncompressed
 fi
 if [[ $TRAVIS_BRANCH == 'master' ]]; then
-    grunt gh-pages:compressed
+    grunt gh-pages:travis-uncompressed
 fi
