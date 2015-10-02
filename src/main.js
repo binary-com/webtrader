@@ -80,13 +80,21 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 instrumentsMod.init( $(".mainContainer .instruments").closest('li') );
             });
 
-            //Trigger async loading of window sub-menu
-            require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows').closest('li'));
+            require(["reports/reports"], function(reports) {
+                reports.init( $(".mainContainer .reports").closest('li') );
+            });
+
+            require(["resources/resources"], function(resources) {
+                resources.init( $(".mainContainer .reports").closest('li') );
             });
 
             require(["settings/settings"], function( settings ) {
                 settings.init($('.topContainer .settings').closest('li'));
+            });
+
+            //Trigger async loading of window sub-menu
+            require(["windows/windows"], function( windows ) {
+                windows.init($('.topContainer .windows').closest('li'));
             });
 
         });
