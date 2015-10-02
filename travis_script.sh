@@ -4,7 +4,7 @@ git config --global user.email "arnab@binary.com"
 git config --global user.name "Arnab Karmakar"
 echo $TRAVIS_BRANCH
 echo $TRAVIS_PULL_REQUEST
-if [[ $TRAVIS_BRANCH == 'development' ]]; then
+if [ $TRAVIS_PULL_REQUEST ]; then
     mkdir beta
     mv dist/compressed/* beta
     mv beta dist/compressed
