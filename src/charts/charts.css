@@ -22,3 +22,45 @@
     text-align: left;
     white-space: nowrap;
 }
+
+form input {
+    margin: 10px;
+}
+
+form div {
+    line-height: 300%;
+    width: 50%;
+}
+
+form .leftDiv {
+    text-align: right;
+    float: left;
+}
+
+form .rightDiv {
+    text-align: left;
+    float: left;
+}
+
+form {
+    text-align: center;
+}
+
+form button {
+    color: #FFFFFF;
+    background-color: #288942;
+    text-align: center;
+    outline: 0;
+    margin-top: 30px;
+    font-size: 120%!important;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 25px;
+    display: inline-block;
+    letter-spacing: .75px;
+    overflow: visible;
+}
+
+form button:hover {
+    background-color: #14602B;
+}
