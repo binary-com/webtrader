@@ -189,8 +189,10 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src : "dist/compressed/**/*.js",
-				verbose : false
+                src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
+				options : {
+					"verbose" : false
+				}
             }
         },
         watch: {

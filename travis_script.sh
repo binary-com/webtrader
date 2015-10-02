@@ -10,6 +10,6 @@ if [ $TRAVIS_PULL_REQUEST ]; then
     mv dist/compressed/* beta
     mv beta dist/compressed
 fi
-if [ $TRAVIS_BRANCH == 'master' ]; then
+if [ $TRAVIS_BRANCH = 'master' ]; then
     grunt gh-pages:travis-deploy
 fi
