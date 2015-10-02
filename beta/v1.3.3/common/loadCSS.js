@@ -1,0 +1,1 @@
+function loadCSS(a,b,c){"use strict";var d=window.document.createElement("link"),e=b||window.document.getElementsByTagName("script")[0];return d.rel="stylesheet",d.href=a,d.media="only x",e.parentNode.insertBefore(d,e),setTimeout(function(){d.media=c||"all"}),d}
