@@ -12,7 +12,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-css-cleaner');
 
     /*
         "loc": 72,    //physical lines
@@ -100,16 +99,18 @@ module.exports = function (grunt) {
                     src: '**/*.js',
                     dest: 'dist/compressed'
                 }],
-                mangle: true,
-                compress: {
-                    sequences: true,
-                    dead_code: true,
-                    conditionals: true,
-                    booleans: true,
-                    unused: true,
-                    if_return: true,
-                    join_vars: true,
-                    drop_console: true
+                options: {
+                    mangle: true,
+                    compress: {
+                        sequences: true,
+                        dead_code: true,
+                        conditionals: true,
+                        booleans: true,
+                        unused: true,
+                        if_return: true,
+                        join_vars: true,
+                        drop_console: true
+                    }
                 }
             }
         },
@@ -180,13 +181,6 @@ module.exports = function (grunt) {
                 regExp: false
             }
         },
-        css_cleaner: {
-            taskname: {
-                options: {
-                    appRoot : "./dist/compressed"
-                }
-            }
-        },
         removelogging: {
             dist: {
                 src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
@@ -207,7 +201,7 @@ module.exports = function (grunt) {
         }
     });
 
-	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'css_cleaner', 'removelogging']);
+	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'removelogging']);
     grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
 
 };
