@@ -42,6 +42,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
     }
     //---------End-----------------------------
 
+
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
         var topMargin = 40;
@@ -125,6 +126,22 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
                 }).append($html);
 
                 require(["charts/chartWindow"], function (chartWindowObj) {
+
+                    /* register events to add and remove menuse to window button */
+                    chartWindowObj.events.onCreate.add(function (title, chart) {
+                        var id = chart.attr('id');
+                        var li = $('<li />').addClass(id + 'LI').text(title);
+                        li.on('click', function () { // bring window to top on click
+                            chart.dialog('moveToTop')
+                                .parent().effect("bounce", { times: 2, distance: 15 }, 450);
+                        });
+
+                        $html.append(li);
+                    });
+                    chartWindowObj.events.onRemove.add(function (title, chart) {
+                        var id = chart.attr('id');
+                        $html.find('li.' + id + 'LI').remove();
+                    });
 
                     //Attach click listener for tile menu
                     tileObject.click(function () {
