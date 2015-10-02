@@ -3,6 +3,7 @@
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-rename');
@@ -136,7 +137,8 @@ module.exports = function (grunt) {
                     port: 9001,
                     base: 'dist/uncompressed',
                     hostname: '0.0.0.0',
-                    keepalive: true
+                    keepalive: true,
+                    livereload: true
                 }
             },
             server_compressed: {
@@ -144,7 +146,8 @@ module.exports = function (grunt) {
                     port: 9001,
                     base: 'dist/compressed',
                     hostname: '0.0.0.0',
-                    keepalive: true
+                    keepalive: true,
+                    livereload: true
                 }
             }
         },
@@ -189,6 +192,7 @@ module.exports = function (grunt) {
             }
         },
         watch: {
+          options: { livereload: true },
           scripts: {
             files: ['src/**'],
             tasks: ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'copy:resourcesToCompressed'],
