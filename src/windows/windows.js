@@ -44,7 +44,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
-        var topMargin = 40;
+        var topMargin = 60;
         if (isSmallView()) topMargin = 100;
 
         var cellCount = 1, rowCount = 1, leftMargin = 20;
@@ -64,8 +64,13 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
         $(".chart-dialog").each(function () {
 
-          var leftShift = (cellCount == 1 ? startMargin : minWidth + leftMargin);
+          if (cellCount == 1) {
+            var leftShift = startMargin;
+          } else if (cellCount > 1) {
+            var leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
+          }
           var topShift = -topMargin + 2;
+          referenceObjectForPositioning = window;
           if (referenceObjectForPositioning == window) {
             topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
           }
@@ -94,11 +99,10 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
         init: function( $parentObj ) {
 
-            $.get('windows/windows.html', function ( $html ) {
-                $html = $($html);
-                tileObject = $html.find('li.tile');
+            
+                tileObject = $('a.tile');
 
-                closeAllObject = $html.find('li.closeAll').click(function () {
+                closeAllObject = $('a.closeAll').click(function () {
                     //console.log('Event for closing all chart windows!');
                     /*
                       The close click is behaving weird.
@@ -110,19 +114,6 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
                       $('.windows').click();
                     }
                 });
-
-                $parentObj.find('button').button("enable").button("refresh").button("widget").click(function(e) {
-                  var menu = $(this).closest('div').find("ul").menu();
-                  if (menu.is(":visible")) {
-                    menu.hide();
-                  } else {
-                    menu.show();
-                  }
-                  e.preventDefault();
-                  return false;
-                }).focusout(function() {
-                  $(this).closest('div').find('ul').menu().hide();
-                }).append($html);
 
                 require(["charts/chartWindow"], function (chartWindowObj) {
 
@@ -145,7 +136,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
                 });
 
-            });
+            
             return this;
         },
 
