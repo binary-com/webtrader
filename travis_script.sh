@@ -2,14 +2,14 @@
 
 git config --global user.email "arnab@binary.com"
 git config --global user.name "Arnab Karmakar"
-echo $TRAVIS_BRANCH
-echo $TRAVIS_PULL_REQUEST
+echo GIT Branch : $TRAVIS_BRANCH , Pull request number : $TRAVIS_PULL_REQUEST
+
+#This if block is true when a PR is opened from development branch to master branch
 if [ $TRAVIS_PULL_REQUEST ]; then
     mkdir beta
-    mv dist/uncompressed/* beta
-    mv beta dist/uncompressed
-    grunt travis-uncompressed-deploy
+    mv dist/compressed/* beta
+    mv beta dist/compressed
 fi
-if [[ $TRAVIS_BRANCH == 'master' ]]; then
-    grunt travis-uncompressed-deploy
+if [ $TRAVIS_BRANCH == 'master' ]; then
+    grunt gh-pages:travis-deploy
 fi
