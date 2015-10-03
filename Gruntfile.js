@@ -51,7 +51,7 @@ module.exports = function (grunt) {
             },
             resourcesToCompressed: {
               files: [
-                  {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html'], dest: 'dist/compressed'}
+                  {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html', '**/lib/**'], dest: 'dist/compressed'}
               ]
             }
         },
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.css'],
+                src: ['**/*.css', "!**/lib/**/*.css"],
                 dest: 'dist/compressed'
             }
         },
@@ -87,7 +87,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.html'],
+                src: ['**/*.html', "!**/lib/**/*.html"],
                 dest: 'dist/compressed'
             }
         },
@@ -96,7 +96,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/uncompressed',
-                    src: '**/*.js',
+                    src: ['**/*.js', '!**/lib/**'],
                     dest: 'dist/compressed'
                 }],
                 options: {

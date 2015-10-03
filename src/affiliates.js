@@ -1,18 +1,20 @@
 requirejs.config({
     baseUrl: ".",
     paths: {
-        'jquery': "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min",
-        'highstock': "//code.highcharts.com/stock/highstock",
-        'highcharts-exporting': '//code.highcharts.com/stock/modules/exporting',
-        'jquery-ui': "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min",
-        'jquery-growl': "lib/jquery/jquery-growl/jquery.growl",
-        'highcharts-theme': 'lib/highcharts/themes/sand-signika',
-        'jquery-timer': "lib/jquery/jquery.timers",
-        'datatables': "//cdn.datatables.net/1.10.5/js/jquery.dataTables.min",
-        'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
-        'reconnecting-websocket': '//cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min',
+        'jquery': "lib/jquery-legacy/dist/jquery.min",
+        'jquery-ui': "lib/jqueryui/jquery-ui.min",
+        'highstock': "lib/highstock/highstock",
+        'highcharts-exporting': 'lib/highstock/modules/exporting',
+        'highcharts-theme': 'lib/highstock/themes/sand-signika',
+        'jquery.dialogextend' : "lib/jquery-dialogextend/build/jquery.dialogextend.min",
+        'jquery-growl': "lib/growl/javascripts/jquery.growl",
+        'modernizr': 'lib/modernizr/dist/modernizr-build',
+        'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
+        'lokijs': 'lib/lokijs/build/lokijs.min',
+        'jquery-timer': "lib/jquery.timers/jquery.timers",
+        'color-picker': "lib/colorpicker/jquery.colorpicker",
+        'datatables': "lib/datatables/media/js/jquery.dataTables.min",
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
-        'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min'
     },
     "shim": {
         "jquery-ui": {
@@ -42,7 +44,7 @@ requirejs.config({
     }
 });
 
-require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], function( $ ) {
+require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], function( $ ) {
 
     "use strict";
 
@@ -59,7 +61,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
     resizeElement(".binary-watermark-logo");
     //Load Jquery UI CSS
-    loadCSS("//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css");
+    loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.css");
 
     //Load our main CSS
     loadCSS("main.css");
@@ -97,7 +99,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
-                instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
+                instrumentsMod.init();
             });
 
             $.get("charts/chartWindow.html" , function( $html ) {
@@ -166,7 +168,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
         });
 
         //Now load all other CSS asynchronously
-        loadCSS('lib/jquery/jquery-growl/jquery.growl.css');
+        loadCSS('lib/growl/stylesheets/jquery.growl.css');
         loadCSS('charts/charts.css');
 
     });

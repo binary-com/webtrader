@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'common/loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'lib/loadCSS'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
