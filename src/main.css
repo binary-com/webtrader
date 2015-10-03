@@ -69,6 +69,14 @@ body {
   height: 26px !important;
 }
 
+.reports-icon {
+  background-image: url(images/settings.svg) !important; /* TODO (amin): add an icon for reports*/
+  background-size: 100% 100%;
+  top: 30% !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
 /*Overriding this class inheritted from dataTables jquery plugin*/
 .dataTables_scrollHeadInner, .sorting_asc , .dataTable , .dataTables_filter {
     width: 100% !important;

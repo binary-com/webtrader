@@ -108,6 +108,12 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                         primary: "workspace-icon",
                       },
                       disabled: true
+                    }).end()
+                    .filter(".reports").button({
+                      icons: {
+                        primary: "reports-icon",
+                      },
+                      disabled: true
                     });
 
             $(window).resize(function() {
@@ -124,6 +130,11 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 });
 
                 instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
+            });
+
+            //Trigger async loading of reports sub-menu
+            require(["reports/reports"], function (reportsMod) {
+                reportsMod.init($('.topContainer .reports').closest('div'));
             });
 
             //Trigger async loading of window sub-menu
