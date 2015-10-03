@@ -120,7 +120,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                                     $("#timePeriod").removeAttr('disabled');
                                     if ($("#units").val() == 'm')
                                     {
-                                        $("#timePeriod").attr("max", 50);
+                                        $("#timePeriod").attr("max", 59);
                                     }
                                     else if ($("#units").val() == 'h')
                                     {
@@ -132,6 +132,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                                     }
                                 }
                             });
+                            $("#units").trigger("change");
 
                             $( "#instrumentsDialog" ).dialog({
                                 autoOpen: false,
