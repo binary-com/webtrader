@@ -203,7 +203,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('mainTask', ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace']);
-    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify'])
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify']);
 	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'copy:resourcesToCompressed', 'removelogging']);
     grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
 
