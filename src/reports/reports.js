@@ -34,7 +34,6 @@ define(["jquery", "jquery-ui",'websockets/symbol_handler'], function ($,$ui,symb
                             .parent().effect("bounce", { times: 2, distance: 15 }, 450);
                 });
             });
-            symbol_handler.fetchMarkets(onTradingTimes); // register onTradingTimes callback
         });
     }
 
