@@ -50,7 +50,7 @@ define([], function() {
 			        submarketObj.instruments.push({
 			          symbol : eachSymbol.symbol,
 			          display_name : eachSymbol.name,
-			          delay_amount : 0 //TODO fix this when API provides it
+			          delay_amount : eachSymbol.delay_amount || 0
 			        });
 			      }
 

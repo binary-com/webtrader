@@ -77,12 +77,13 @@ require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], func
       try {
         timePeriod_Obj = convertToTimeperiodObject(timePeriod_param);
       } catch(e) {}
-      if (!timePeriod_Obj || ['t', 'm', 'h', 'd'].indexOf(timePeriod_Obj.suffix()) == -1) return false;
-      if (timePeriod_Obj.suffix() == 't' && timePeriod_Obj.intValue() != 1) return false;
+      if (!timePeriod_Obj) return false;
 
-      var timePeriod_inMins = timePeriod_Obj.timeInSeconds() / 60;
-      var feedDelay_inMins = instrumentObject.delay_amount;
-      return timePeriod_inMins >= feedDelay_inMins;
+      var isValidTickTF = timePeriod_Obj.suffix() == 't' && timePeriod_Obj.intValue() == 1;
+      var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 59;
+      var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 23;
+      var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 3;
+      return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
     };
 
     //All dependencies loaded
@@ -99,30 +100,15 @@ require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], func
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
-                instrumentsMod.init();
-            });
+                instrumentsMod.init( function(_instrumentJSON) {
 
-            $.get("charts/chartWindow.html" , function( $html ) {
-
-                var newTabId = "chart-dialog-1",
-                    timePeriod = getParameterByName('timePeriod') || '1d',
-                    type = timePeriod == '1t'? 'line' : 'candlestick';
-
-                $html = $($html);
-                $html.attr("id", newTabId)
-                    .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
-                    .find('div.chartSubContainer').attr('id', newTabId + "_chart").end()
-                    ;
-
-                require(["charts/chartOptions"], function(chartOptions) {
-                    chartOptions.init(newTabId, timePeriod, type);
-                });
-
-                $.get("https://chart.binary.com/d/backend/markets.cgi", function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
                       var instrumentObject = getObjects(_instrumentJSON, 'symbol', getParameterByName('instrument'));
-                      if (instrumentObject && instrumentObject.length > 0
-                              && instrumentObject[0].symbol && instrumentObject[0].display_name) {
+                      if (instrumentObject && instrumentObject.length > 0 && instrumentObject[0].symbol && instrumentObject[0].display_name) {
+
+                                var newTabId = "chart-dialog-1",
+                                    timePeriod = getParameterByName('timePeriod') || '1d',
+                                    type = timePeriod == '1t'? 'line' : 'candlestick';
 
                                 //Do validation of parameters here
                                 if (validateParameters(instrumentObject[0])) {
@@ -144,14 +130,25 @@ require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], func
                         });
                         $html.find('div.chartSubContainerHeader').hide();
                       }
-                    } else {
+                    } 
 
-                    }
-                }, 'json').error(function () {
-                    require(["jquery", "jquery-growl"], function ($) {
-                        $.growl.error({message: "Error getting market information!"});
-                    });
-                    $html.find('div.chartSubContainerHeader').hide();
+                });
+            });
+
+            $.get("charts/chartWindow.html" , function( $html ) {
+
+                var newTabId = "chart-dialog-1",
+                    timePeriod = getParameterByName('timePeriod') || '1d',
+                    type = timePeriod == '1t'? 'line' : 'candlestick';
+
+                $html = $($html);
+                $html.attr("id", newTabId)
+                    .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
+                    .find('div.chartSubContainer').attr('id', newTabId + "_chart").end()
+                    ;
+
+                require(["charts/chartOptions"], function(chartOptions) {
+                    chartOptions.init(newTabId, timePeriod, type);
                 });
 
                 $(".mainContainer").append($html);

@@ -190,18 +190,21 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-          options: { livereload: true },
           scripts: {
             files: ['src/**'],
-            tasks: ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'copy:resourcesToCompressed'],
+            tasks: ['mainTask'],
             options: {
-              spawn: true,
+              spawn: false,
+              interrupt : true,
+              livereload: true
             },
           },
         }
     });
 
-	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'removelogging']);
+    grunt.registerTask('mainTask', ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace']);
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify'])
+	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'copy:resourcesToCompressed', 'removelogging']);
     grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
 
 };
