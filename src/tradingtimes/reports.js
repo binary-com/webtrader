@@ -1,10 +1,10 @@
 ﻿/**
  * Created by amin on 10/3/15.
  */
-define(["jquery", "jquery-ui",'websockets/symbol_handler'], function ($,$ui,symbol_handler) {
+define(["jquery", "jquery-ui"], function ($,$ui) {
 
     function init($parentObj) {
-        $.get("reports/reports.html", function ($html) {
+        $.get("tradingtimes/reports.html", function ($html) {
             $html = $($html);
             var button = $parentObj.find('button').button("widget");
             button.append($html).button("enable").button("refresh");
@@ -17,7 +17,7 @@ define(["jquery", "jquery-ui",'websockets/symbol_handler'], function ($,$ui,symb
             }).focusout( menu.hide.bind(menu,true));
 
             /* create or reveal the tradingTimes Dialog on corresponding li click */
-            require(['charts/chartWindow','reports/tradingTimes'], function (chartWindow,tradingTimes) {
+            require(['charts/chartWindow', 'tradingtimes/tradingTimes'], function (chartWindow, tradingTimes) {
                 var tradingWin = null;
                 var animation = {effect: "bounce",  times: 2, distance: 15 ,duration: 450};
 

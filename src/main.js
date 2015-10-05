@@ -133,7 +133,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
             });
 
             //Trigger async loading of reports sub-menu
-            require(["reports/reports"], function (reportsMod) {
+            require(["tradingtimes/reports"], function (reportsMod) {
                 reportsMod.init($('.topContainer .reports').closest('div'));
             });
 
