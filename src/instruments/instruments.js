@@ -118,18 +118,9 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                                 else
                                 {
                                     $("#timePeriod").removeAttr('disabled');
-                                    if ($("#units").val() == 'm')
-                                    {
-                                        $("#timePeriod").attr("max", 59);
-                                    }
-                                    else if ($("#units").val() == 'h')
-                                    {
-                                        $("#timePeriod").attr("max", 23);
-                                    }
-                                    else
-                                    {
-                                        $("#timePeriod").attr("max", 120);
-                                    }
+                                    var val = $("#units").val();
+                                    var max = { m: 59, h: 23, d: 3 }[val] || 120; /* restric range for minute,hour,day*/
+                                    $("#timePeriod").attr("max", max);
                                 }
                             });
                             $("#units").trigger("change");
