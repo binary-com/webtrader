@@ -27,48 +27,47 @@ body {
     background-image: url(images/ui-icons_ffffff_256x240.png)!important;
 }
 
+nav .ui-widget-content {
+  background: #273051;
+  color: #FFFFFF;
+}
+
+ul#menu.ui-menu.ui-widget.ui-widget-content {
+  height: 46px;
+  display: inline-table;
+  border: 0;
+}
+
+nav .ui-widget-content, nav .ui-widget-content a {
+  color: #FFFFFF;
+}
+
+nav .ui-widget-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  top: auto!important;
+  left: 0!important;
+}
+
+nav .ui-widget-content .ui-state-focus, nav .ui-state-focus, nav .ui-widget-content .ui-state-active, nav .ui-state-active, nav .ui-state-active a, nav .ui-state-focus a {
+  background: #3F476E!important;
+  border: 0!important;
+  color: #FFFFFF!important;
+}
+
+nav .ui-menu-item {
+  margin: 0!important;
+  padding-bottom: 0!important;
+  height: 42px;
+}
+
 nav {
   height: 46px;
 }
 
-.instruments .ui-menu {
-  display: none;
-}
-
-.instruments:hover ul {
-  display: block;
-  height: auto;
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  z-index: 1003;
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  z-index: 1003;
-}
-
-nav ul li:hover > ul {
-  display: block;
-  height: auto;
-}
-
-nav ul ul ul ul li {
-  display: inline-block;
-}
-
-.instruments ul {
-  background: #273051;
-  color: #FFFFFF;
-  border-color: #273051;
-}
-
-nav ul {
+nav ul.ui-widget-content {
   list-style: none;
   position: relative;
   display: inline-table;
@@ -78,59 +77,43 @@ nav ul {
   padding: 0;
 }
 
-nav ul:after {
+nav ul.ui-widget-content:after {
   content: "";
   clear: both;
   display: block;
 }
 
-.instruments li {
-  padding: 10px 30px 10px 15px!important;
-  width: 110px;
-}
-
-nav ul li {
+nav ul.ui-widget-content li {
   float: left;
   text-align: left;
-  height: 46px;
+  height: 42px;
 }
 
-.instruments .ui-widget-content .ui-state-focus, .instruments .ui-state-focus, .instruments .ui-widget-content .ui-state-active, .instruments .ui-state-active {
-  background: #3F476E!important;
-  border: 1px solid #3F476E!important;
-  color: #FFFFFF;
-}
-
-nav ul li:hover {
-  background-color: #3F476E;
-}
-
-nav ul li a {
+nav ul.ui-widget-content li a {
   text-decoration: none;
   color: #FFFFFF;
   display: block;
   padding: 13px;
 }
 
-nav ul ul li {
+nav ul.ui-widget-content ul.ui-widget-content li {
   float: none;
   position: relative;
   height: auto;
-}
-
-nav ul ul li a {
-  padding: 10px 30px 10px 15px;
+  background-color: #273051;
+  padding: 10px 30px 10px 15px!important;
   width: 110px;
+  border: 0;
 }
 
-nav ul ul li a:hover {
-  background-color: #3F476E;
-}
-
-nav ul ul ul {
+nav ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content,  nav ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content, nav ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content {
   position: absolute;
-  left: 100%
-  top: 0;
+  left: 100%!important;
+  top: 0!important;
+}
+
+nav .hide .ui-icon {
+  display: none;
 }
 
 .ui-dialog {
@@ -178,6 +161,11 @@ nav ul ul ul {
 .ui-button-text-only.ui-state-hover, .ui-button-text-only.ui-button:hover{
   color: #FFFFFF!important;
   background: #3F476E!important;
+}
+
+.ui-dialog .ui-dialog-content {
+  padding: .5em .5em;
+  padding-bottom: 0;
 }
 
 .logo {

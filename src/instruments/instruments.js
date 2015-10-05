@@ -2,6 +2,12 @@
  * Created by arnab on 2/12/15.
  */
 
+$(document).ready(function(){
+    $(function() {
+      $( "#menu" ).menu();
+    });
+});
+
 define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
 
     "use strict";

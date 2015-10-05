@@ -46,7 +46,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
-        var topMargin = 60;
+        var topMargin = 80;
         if (isSmallView()) topMargin = 100;
 
         var cellCount = 1, rowCount = 1, leftMargin = 20;
@@ -102,9 +102,9 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
         init: function( $parentObj ) {
 
             
-                tileObject = $('a.tile');
+                tileObject = $('li.tile');
 
-                closeAllObject = $('a.closeAll').click(function () {
+                closeAllObject = $('li.closeAll').click(function () {
                     //console.log('Event for closing all chart windows!');
                     /*
                       The close click is behaving weird.
@@ -117,22 +117,6 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
                 });
 
                 require(["charts/chartWindow"], function (chartWindowObj) {
-
-                    /* register events to add and remove menuse to window button */
-                    chartWindowObj.events.onCreate.add(function (title, chart) {
-                        var id = chart.attr('id');
-                        var li = $('<li />').addClass(id + 'LI').text(title);
-                        li.on('click', function () { // bring window to top on click
-                            chart.dialog('moveToTop')
-                                .parent().effect("bounce", { times: 2, distance: 15 }, 450);
-                        });
-
-                        $html.append(li);
-                    });
-                    chartWindowObj.events.onRemove.add(function (title, chart) {
-                        var id = chart.attr('id');
-                        $html.find('li.' + id + 'LI').remove();
-                    });
 
                     //Attach click listener for tile menu
                     tileObject.click(function () {
@@ -153,7 +137,6 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
                 });
 
-            
             return this;
         },
 
