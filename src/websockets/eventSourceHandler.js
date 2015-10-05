@@ -161,16 +161,15 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
         webSocketConnection.send(JSON.stringify(wsCompatibleJSONObject));
     });
 
-
     return {
-
-        retrieveInstrumentList : function() {
-            if (isConnectionReady) {
-                webSocketConnection.send(JSON.stringify({"trading_times": "" + new Date().toISOString().slice(0, 10)}));
-            } else {
-                $(document).one('websocketsConnectionReady', function() {
-                    webSocketConnection.send(JSON.stringify({"trading_times": "" + new Date().toISOString().slice(0, 10)}));
-                });
+        apicall : {
+            /* pass the date in yyy-mm-dd format */
+            trading_times: function (yyyy_mm_dd) {
+                var apicall = this.custom.bind(this,JSON.stringify({ "trading_times": "" + yyyy_mm_dd }));
+                isConnectionReady ? apicall() : $(document).one('websocketsConnectionReady', apicall);
+            },
+            custom: function (options) {
+                webSocketConnection.send(options);
             }
         },
 

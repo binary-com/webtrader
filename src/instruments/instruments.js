@@ -176,6 +176,39 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
     var markets = [];
 
+    /* amin: moved from symbol_handler.js */
+    function _extractInstrumentMarkets(data) {
+        for (var marketIndex in data.trading_times.markets) {
+            var marketFromResponse = data.trading_times.markets[marketIndex];
+            var market = {
+                name: marketFromResponse.name,
+                display_name: marketFromResponse.name,
+                submarkets: []
+            };
+
+            for (var submarketIndxx in marketFromResponse.submarkets) {
+                var submarket = marketFromResponse.submarkets[submarketIndxx];
+                var submarketObj = {
+                    name: submarket.name,
+                    display_name: submarket.name,
+                    instruments: []
+                };
+                for (var eachSymbolIndx in submarket.symbols) {
+                    var eachSymbol = submarket.symbols[eachSymbolIndx];
+                    submarketObj.instruments.push({
+                        symbol: eachSymbol.symbol,
+                        display_name: eachSymbol.name,
+                        delay_amount: 0 //TODO fix this when API provides it
+                    });
+                }
+
+                market.submarkets.push(submarketObj);
+            }
+
+            markets.push(market);
+        }
+    }
+
     return {
 
         init: function( ) {
@@ -185,7 +218,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                 symbol_handler.fetchMarkets(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
 
-                        markets = _instrumentJSON;
+                        _extractInstrumentMarkets(_instrumentJSON);
 
                         //Enable the instruments menu
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
@@ -202,7 +235,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
                         var rootUL = $("<ul>").addClass('ui-corner-all');
                         rootUL.appendTo(instrumentsMenu);
-                        _refreshInstrumentMenu(rootUL, _instrumentJSON);
+                        _refreshInstrumentMenu(rootUL, markets);
                         rootUL.menu();
 
                     }
