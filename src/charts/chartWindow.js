@@ -28,28 +28,28 @@ define(["jquery","jquery.dialogextend"], function ($) {
     }
     return {
 
-        createBlankWindow: function(title,onClose,callback){
+        createBlankWindow: function(title,options,callback){
             $.get("charts/chartWindow.html", function ($html) {
                 $html = $($html);
                 var id = "chart-dialog-" + ++chartDialogCounter;
 
+                options = $.extend({
+                    autoOpen: false,
+                    resizable: true,
+                    minWidth: 350,
+                    minHeight: 400,
+                    width: 350,
+                    height: 400,
+                    my: 'center',
+                    at: 'center',
+                    of: window,
+                    title: title,
+                    close: function () { },
+                    resize: _trigger_Resize_Effects
+                }, options || {});
+
                 var blankWindow = $html.attr("id", id)
-                    .dialog({
-                        autoOpen: false,
-                        resizable: true,
-                        minWidth: 350,
-                        minHeight: 400,
-                        width: 350,
-                        height: 400,
-                        my: 'center',
-                        at: 'center',
-                        of: window,
-                        title: title,
-                        close: function () {
-                            onClose && onClose(title,blankWindow);
-                        },
-                        resize: _trigger_Resize_Effects
-                    })
+                    .dialog(options)
                     .dialogExtend({
                         "maximize": _trigger_Resize_Effects,
                         "restore": _trigger_Resize_Effects,
