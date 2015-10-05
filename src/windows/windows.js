@@ -136,7 +136,6 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
                     //Attach click listener for tile menu
                     tileObject.click(function () {
-                      $('.windows ul').hide();
                       tileAction();
                     });
 

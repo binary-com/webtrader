@@ -89,7 +89,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                   e.preventDefault();
                   return false;
                 });
-                var newUL = $("<ul>").addClass('ui-corner-all');
+                var newUL = $("<ul>");
                 newUL.appendTo(newLI);
                 _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
             } else {
@@ -197,11 +197,10 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
 
-                        var rootUL = $("<ul>").addClass('ui-corner-all');
+                        var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, _instrumentJSON);
                         rootUL.menu();
-
                     }
                 });
             }
