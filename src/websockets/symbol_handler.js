@@ -22,7 +22,17 @@ define(['jquery'], function($) {
 		},
 		{}
 	*/
-	var callBacksWhenMarketsIsLoaded = $.Callbacks('once'); // the callback list can only be fired once.
+    // the callback list can only be fired once.(TODO: make this a unitlity)
+    var callBacksWhenMarketsIsLoaded = {
+        list: [],
+        add: function (callback) {
+            $.type(callback) == "function" && this.list.push(callback);
+        },
+        fire: function () {
+            while (this.list.length > 0)
+                this.list.shift().apply(this, arguments);
+        }
+    };
 	var requestSubmitted = false;
 	return {
 		
