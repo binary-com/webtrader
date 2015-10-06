@@ -19,15 +19,11 @@ body {
     color       : #212121;
 }
 
-.chartOptions .ui-icon {
-  background-image: url(images/ui-icons_273051_256x240.png)!important;
-}
-
 .ui-icon {
     background-image: url(images/ui-icons_ffffff_256x240.png)!important;
 }
 
-nav .ui-widget-content {
+#menu .ui-widget-content {
   background: #273051;
   color: #FFFFFF;
 }
@@ -38,11 +34,11 @@ ul#menu.ui-menu.ui-widget.ui-widget-content {
   border: 0;
 }
 
-nav .ui-widget-content, nav .ui-widget-content a {
+#menu .ui-widget-content, #menu .ui-widget-content a {
   color: #FFFFFF;
 }
 
-nav .ui-widget-content ul {
+#menu.ui-widget-content ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -51,23 +47,23 @@ nav .ui-widget-content ul {
   left: 0!important;
 }
 
-nav .ui-widget-content .ui-state-focus, nav .ui-state-focus, nav .ui-widget-content .ui-state-active, nav .ui-state-active, nav .ui-state-active a, nav .ui-state-focus a {
+#menu .ui-widget-content .ui-state-focus, #menu .ui-state-focus, #menu .ui-widget-content .ui-state-active, #menu .ui-state-active, #menu .ui-state-active a, #menu .ui-state-focus a {
   background: #3F476E!important;
   border: 0!important;
   color: #FFFFFF!important;
 }
 
-nav .ui-menu-item {
+#menu .ui-menu-item {
   margin: 0!important;
   padding-bottom: 0!important;
   height: 42px;
 }
 
-nav {
+nav.headMenu {
   height: 46px;
 }
 
-nav ul.ui-widget-content {
+ul#menu.ui-widget-content {
   list-style: none;
   position: relative;
   display: inline-table;
@@ -77,26 +73,26 @@ nav ul.ui-widget-content {
   padding: 0;
 }
 
-nav ul.ui-widget-content:after {
+#menu ul.ui-widget-content:after {
   content: "";
   clear: both;
   display: block;
 }
 
-nav ul.ui-widget-content li {
+ul#menu.ui-widget-content li {
   float: left;
   text-align: left;
   height: 42px;
 }
 
-nav ul.ui-widget-content li a {
+ul#menu.ui-widget-content li a {
   text-decoration: none;
   color: #FFFFFF;
   display: block;
   padding: 13px;
 }
 
-nav ul.ui-widget-content ul.ui-widget-content li {
+ul#menu.ui-widget-content ul.ui-widget-content li {
   float: none;
   position: relative;
   height: auto;
@@ -106,13 +102,13 @@ nav ul.ui-widget-content ul.ui-widget-content li {
   border: 0;
 }
 
-nav ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content,  nav ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content, nav ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content {
+ul#menu.ui-widget-content ul.ui-widget-content ul.ui-widget-content,  ul#menu.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content, ul#menu.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content {
   position: absolute;
   left: 100%!important;
   top: 0!important;
 }
 
-nav .hide .ui-icon {
+nav.headMenu .hide .ui-icon {
   display: none;
 }
 
