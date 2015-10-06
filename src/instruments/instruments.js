@@ -2,6 +2,12 @@
  * Created by arnab on 2/12/15.
  */
 
+$(document).ready(function(){
+    $(function() {
+      $( "#menu" ).menu();
+    });
+});
+
 define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
 
     "use strict";
@@ -89,7 +95,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                   e.preventDefault();
                   return false;
                 });
-                var newUL = $("<ul>").addClass('ui-corner-all');
+                var newUL = $("<ul>");
                 newUL.appendTo(newLI);
                 _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
             } else {
@@ -220,24 +226,12 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
                         _extractInstrumentMarkets(_instrumentJSON);
 
-                        //Enable the instruments menu
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
-                        instrumentsMenu.button("enable").button("refresh").button("widget").click(function(e) {
-                          var menu = $(this).closest('div').find("ul:first").menu();
-                          if (menu.is(":visible")) {
-                            menu.hide();
-                          } else {
-                            menu.show();
-                          }
-                        }).focusout(function() {
-                          $(this).closest('div').find('ul').menu().hide();
-                        });
 
-                        var rootUL = $("<ul>").addClass('ui-corner-all');
+                        var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
                         rootUL.menu();
-
                     }
                 });
             }

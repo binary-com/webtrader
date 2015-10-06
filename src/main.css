@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 body {
     font-size: 80%;
 }
@@ -9,23 +11,164 @@ body {
     width: 100%;
 }
 
-.topContainer ul {
-    display: none;
-    position: absolute;
-}
-
-.topContainer li {
-    text-align: left;
-    white-space: nowrap;
-    display: block;
-}
-
 /*Applying ui-state-active and ui-state-hover does not work for this element*/
 .mainMenuHamburgerMenu:hover {
     border      : 1px solid #AAA;
     background  : url("//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/images/ui-bg_glass_65_ffffff_1x400.png") repeat-x scroll 50% 50% #FFF;
     font-weight : normal;
     color       : #212121;
+}
+
+.ui-icon {
+    background-image: url(images/ui-icons_ffffff_256x240.png)!important;
+}
+
+#menu .ui-widget-content {
+  background: #273051;
+  color: #FFFFFF;
+}
+
+ul#menu.ui-menu.ui-widget.ui-widget-content {
+  height: 46px;
+  display: inline-table;
+  border: 0;
+}
+
+#menu .ui-widget-content, #menu .ui-widget-content a {
+  color: #FFFFFF;
+}
+
+#menu.ui-widget-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  top: auto!important;
+  left: 0!important;
+}
+
+#menu .ui-widget-content .ui-state-focus, #menu .ui-state-focus, #menu .ui-widget-content .ui-state-active, #menu .ui-state-active, #menu .ui-state-active a, #menu .ui-state-focus a {
+  background: #3F476E!important;
+  border: 0!important;
+  color: #FFFFFF!important;
+}
+
+#menu .ui-menu-item {
+  margin: 0!important;
+  padding-bottom: 0!important;
+  height: 42px;
+}
+
+nav.headMenu {
+  height: 46px;
+}
+
+ul#menu.ui-widget-content {
+  list-style: none;
+  position: relative;
+  display: inline-table;
+  background: #273051;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul.ui-widget-content:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+ul#menu.ui-widget-content li {
+  float: left;
+  text-align: left;
+  height: 42px;
+}
+
+ul#menu.ui-widget-content li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  padding: 13px;
+}
+
+ul#menu.ui-widget-content ul.ui-widget-content li {
+  float: none;
+  position: relative;
+  height: auto;
+  background-color: #273051;
+  padding: 10px 30px 10px 15px!important;
+  width: 110px;
+  border: 0;
+}
+
+ul#menu.ui-widget-content ul.ui-widget-content ul.ui-widget-content,  ul#menu.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content, ul#menu.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content ul.ui-widget-content {
+  position: absolute;
+  left: 100%!important;
+  top: 0!important;
+}
+
+nav.headMenu .hide .ui-icon {
+  display: none;
+}
+
+.ui-dialog {
+  padding: 0!important;
+}
+
+.ui-dialog-content {
+  background-color: #F5F6F8!important;
+}
+
+.ui-corner-all {
+  border-bottom-right-radius: 0!important;
+  border-bottom-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+  border-top-left-radius: 0!important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 0px solid #273051;
+  background: #273051!important;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.ui-widget-header {
+  border: 1px solid #273051;
+  background: #273051!important;
+  color: #FFFFFF;
+  font-family: 'Roboto'!important;
+  font-weight: normal!important;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: 'Roboto'!important;
+}
+
+.ui-widget {
+  outline: 0;
+}
+
+.ui-button {
+  margin-top: 5px;
+}
+
+.ui-button-text-only.ui-state-hover, .ui-button-text-only.ui-button:hover{
+  color: #FFFFFF!important;
+  background: #3F476E!important;
+}
+
+.ui-dialog .ui-dialog-content {
+  padding: .5em .5em;
+  padding-bottom: 0;
+}
+
+.logo {
+  width: 40px;
+  float: left;
+  padding-left: 10px;
+  margin-top: 3px;
 }
 
 .gtm_data_layer {
@@ -35,46 +178,28 @@ body {
 .topMenu {
   width : 100%;
   text-align : center;
+  background: #273051;
+  height: 46px;
 }
 
 .topMenu div {
   display : inline;
+  margin-left: -6px;
+}
+
+button.ui-button-text-only {
+  margin-top: 15px;
+  height: 46px;
+  margin: 0;
+  padding: 0;
+}
+
+button.ui-button-text-only .ui-menu {
+  border-color: #3F476E;
 }
 
 .ui-menu {
   z-Index : 1003;
-}
-
-.instruments-icon {
-  background-image: url(images/charts.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.windows-icon {
-  background-image: url(images/windows.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.workspace-icon {
-  background-image: url(images/settings.svg) !important;
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
-}
-
-.reports-icon {
-  background-image: url(images/settings.svg) !important; /* TODO (amin): add an icon for reports*/
-  background-size: 100% 100%;
-  top: 30% !important;
-  width: 26px !important;
-  height: 26px !important;
 }
 
 /*Overriding this class inheritted from dataTables jquery plugin*/

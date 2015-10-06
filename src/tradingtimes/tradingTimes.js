@@ -1,11 +1,12 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "datatables","websockets/symbol_handler"], function ($,$ui,symbol_handler) {
+define(["jquery", "charts/chartWindow","websockets/symbol_handler","datatables"], function ($,chartWindow,symbol_handler) {
     loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
 
 
-    var table;
+    var table = null;
+    var tradingWin = null;
 
     /* result of trading_times api */
     function update(data){
@@ -50,7 +51,21 @@ define(["jquery", "datatables","websockets/symbol_handler"], function ($,$ui,sym
         updateTable(market_names[0], submarket_names[market_names[0]][0]);
     }
 
-    function init(tradingWin) {
+    function init(li) {
+        li.click(function () {
+            if (!tradingWin)
+                chartWindow.createBlankWindow('Trading Times', { width: 500 }, function (win) {
+                    tradingWin = win;
+                    initTradingWin();
+                });
+            else
+                tradingWin.dialog('open');
+
+        });
+    }
+
+    function initTradingWin() {
+
         table = $("<table width='100%' class='display' cellspacing='0'/>");
         table.appendTo(tradingWin.find('.chartSubContainer'));
         table = table.DataTable({
