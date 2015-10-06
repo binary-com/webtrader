@@ -81,11 +81,6 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 instrumentsMod.init( $(".mainContainer .instruments").closest('li') );
             });
 
-            //Trigger async loading of reports sub-menu
-            require(["tradingtimes/tradingTimes"], function (tradingTimes) {
-                var li = $('.topContainer .tradingTimesLI');
-                tradingTimes.init(li);
-            });
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {

@@ -29,44 +29,40 @@ define(["jquery","jquery.dialogextend"], function ($) {
     return {
 
         createBlankWindow: function(title,options,callback){
-            $.get("charts/chartWindow.html", function ($html) {
-                $html = $($html);
-                var id = "chart-dialog-" + ++chartDialogCounter;
+            var $html = $('<div/>');
+            var id = "chart-dialog-" + ++chartDialogCounter;
 
-                options = $.extend({
-                    autoOpen: false,
-                    resizable: true,
-                    minWidth: 350,
-                    minHeight: 400,
-                    width: 350,
-                    height: 400,
-                    my: 'center',
-                    at: 'center',
-                    of: window,
-                    title: title,
-                    close: function () { },
-                    resize: _trigger_Resize_Effects
-                }, options || {});
+            options = $.extend({
+                autoOpen: false,
+                resizable: true,
+                minWidth: 350,
+                minHeight: 400,
+                width: 350,
+                height: 400,
+                my: 'center',
+                at: 'center',
+                of: window,
+                title: title,
+                close: function () { },
+                resize: _trigger_Resize_Effects
+            }, options || {});
 
-                var blankWindow = $html.attr("id", id)
-                    .dialog(options)
-                    .dialogExtend({
-                        "maximize": _trigger_Resize_Effects,
-                        "restore": _trigger_Resize_Effects,
-                        "minimize": _trigger_Resize_Effects,
-                        "resize": _trigger_Resize_Effects
-                    })
-                    .find('div.chartSubContainerHeader').attr('id', id + "_header").end()
-                    .find('div.chartSubContainer').attr('id', id + "_body").end(); // NOTE: changed 'id_chart' to 'id_body'
+            var blankWindow = $html.attr("id", id)
+                .dialog(options)
+                .dialogExtend({
+                    "maximize": _trigger_Resize_Effects,
+                    "restore": _trigger_Resize_Effects,
+                    "minimize": _trigger_Resize_Effects,
+                    "resize": _trigger_Resize_Effects
+                });
 
-                blankWindow.on('dialogclose', events.onRemove.fire.bind(null, title, blankWindow)); // trigger the corresponding event
-                events.onCreate.fire(title,blankWindow); // trigger new chart created event
-                
-                blankWindow.dialog('open');
-                _trigger_Resize_Effects.call(blankWindow);
-                if (callback)
-                    callback(blankWindow);
-            })
+            blankWindow.on('dialogclose', events.onRemove.fire.bind(null, title, blankWindow)); // trigger the corresponding event
+            events.onCreate.fire(title, blankWindow); // trigger new chart created event
+
+            blankWindow.dialog('open');
+            _trigger_Resize_Effects.call(blankWindow);
+            if (callback)
+                callback(blankWindow);
         },
 
         addNewWindow: function( instrumentCode, instrumentName, timePeriod, _callback, type ) {
