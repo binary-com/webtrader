@@ -74,7 +74,7 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
                         time  = parseInt(eachData.epoch) * 1000,
                         bar   = barsTable.chain()
                                         .find({time : time})
-                                        .find({instrumentCdAndTp : data.echo_req.instrumentCdAndTp})
+                                        .find({instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp})
                                         .limit(1)
                                         .data();
                   if (bar && bar.length > 0) {
@@ -86,7 +86,7 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
                     barsTable.update(bar);
                   } else {
                       barsTable.insert({
-                            instrumentCdAndTp : data.echo_req.instrumentCdAndTp,
+                            instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp,
                             time: time,
                             open: open,
                             high: high,
@@ -95,7 +95,7 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
                       });
                   }
             }
-            ohlc_handler.barsLoaded(data.echo_req.instrumentCdAndTp, chartingRequestMap, barsTable, data.echo_req.isTimer, null);
+            ohlc_handler.barsLoaded(data.echo_req.passthrough.instrumentCdAndTp, chartingRequestMap, barsTable, data.echo_req.passthrough.isTimer, null);
             break;
 
           case "history":
@@ -105,7 +105,7 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
                     price = parseFloat(data.history.prices[index]),
                     bar  = barsTable.chain()
                                         .find({time : time})
-                                        .find({instrumentCdAndTp : data.echo_req.instrumentCdAndTp})
+                                        .find({instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp})
                                         .limit(1)
                                         .data();
                   if (bar && bar.length > 0) {
@@ -117,7 +117,7 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
                     barsTable.update(bar);
                   } else {
                       barsTable.insert({
-                            instrumentCdAndTp : data.echo_req.instrumentCdAndTp,
+                            instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp,
                             time: time,
                             open: price,
                             high: price,
@@ -126,26 +126,26 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
                       });
                   }
             }
-            ohlc_handler.barsLoaded(data.echo_req.instrumentCdAndTp, chartingRequestMap, barsTable, false, null);
+            ohlc_handler.barsLoaded(data.echo_req.passthrough.instrumentCdAndTp, chartingRequestMap, barsTable, false, null);
             break;
 
           case "tick":
             console.log(JSON.stringify(data));
-            if (data.echo_req.instrumentCdAndTp) {
-                chartingRequestMap[data.echo_req.instrumentCdAndTp].tickStreamingID = data.tick.id;
+            if (data.echo_req.passthrough.instrumentCdAndTp) {
+                chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp].tickStreamingID = data.tick.id;
             }
             //console.log(data);
             if (data.tick.error) {
               //This means, there is no real time feed for this instrument
-              $(document).trigger("feedTypeNotification", [data.echo_req.instrumentCdAndTp, "delayed-feed"]); //TODO have to consume this notification
+              $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "delayed-feed"]); //TODO have to consume this notification
             } else {
-              if (data.echo_req.instrumentCdAndTp) {
-                var chartingRequest = chartingRequestMap[data.echo_req.instrumentCdAndTp];
+              if (data.echo_req.passthrough.instrumentCdAndTp) {
+                var chartingRequest = chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp];
                 if (chartingRequest) {
-                      $(document).trigger("feedTypeNotification", [data.echo_req.instrumentCdAndTp, "realtime-feed"]); //TODO have to consume this notification
+                      $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "realtime-feed"]); //TODO have to consume this notification
                       var price = parseFloat(data.tick.quote);
                       var time = parseInt(data.tick.epoch) * 1000;
-                      tick_handler.tickReceived(chartingRequest, data.echo_req.instrumentCdAndTp, time, price, barsTable);
+                      tick_handler.tickReceived(chartingRequest, data.echo_req.passthrough.instrumentCdAndTp, time, price, barsTable);
                 }
               }
             }

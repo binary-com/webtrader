@@ -21,7 +21,9 @@ define([], function() {
 					            var requestObject = {
 					                "ticks": chartIDs[0].instrumentCode,
 					                "end": 'latest',
-					                "instrumentCdAndTp" : key.toUpperCase()
+					                "passthrough": {
+						                "instrumentCdAndTp" : key.toUpperCase()
+					                }
 					            };
 					            console.log('Resubscribing : ', JSON.stringify(requestObject));
 					            webSocketConnection.send(JSON.stringify(requestObject));
