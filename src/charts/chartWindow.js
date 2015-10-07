@@ -8,24 +8,15 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
 
 
     function _trigger_Resize_Effects() {
-
-        $(this).find(".chartSubContainer").width($(this).width() - 30);
+        $(this).find(".chartSubContainer").width($(this).width() - 15);
         $(this).find(".chartSubContainer").height($(this).height() - 10);
 
-        //$(window).resize();
         var containerIDWithHash = "#" + $(this).find(".chartSubContainer").attr("id");
         require(["charts/charts"], function(charts) {
             charts.triggerReflow(containerIDWithHash);
         });
-
     }
 
-    var counter = 0;
-    /* events that this module will fire */
-    var events = {
-        onCreate: $.Callbacks(),  // on new chart created
-        onRemove: $.Callbacks()   // on chart removed
-    }
     return {
 
         addNewWindow: function( instrumentCode, instrumentName, timePeriod, _callback, type ) {
@@ -49,60 +40,19 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
 
                 var dialog = windows.createBlankWindow($html, options),
                     id = dialog.attr('id');
-                dialog.find('div.chartsubcontainerheader').attr('id', id + "_header").end()
-                    .find('div.chartsubcontainer').attr('id', id + "_chart").end();
-
-                //$html = $($html);
-                //var title = instrumentName + " (" + timePeriod + ")";
-                //var newTabId = "chart-dialog-" + ++counter;
-                ////console.log(newTabId)
-                //var newWindow = $html.attr("id", newTabId)
-                //    .dialog({
-                //        autoOpen: false,
-                //        resizable: true,
-                //        minWidth: 335,
-                //        minHeight: 400,
-                //        width: 335,
-                //        height: 400,
-                //        my: 'center',
-                //        at: 'center',
-                //        of: window,
-                //        title: title,
-                //        close : function() {
-                //            //console.log('Destroying dialog ' + newTabId);
-                //            var containerIDWithHash = "#" + newTabId + "_chart";
-                //            var timeperiod = $(containerIDWithHash).data("timeperiod");
-                //            var instrumentCode = $(containerIDWithHash).data('instrumentCode');
-                //            $(this).dialog('destroy');//completely remove this dialog
-                //            require(["charts/charts"], function (charts) {
-                //                charts.destroy( "#" + newTabId + "_chart", timeperiod, instrumentCode );
-                //            });
-                //        },
-                //        resize: _trigger_Resize_Effects
-                //    })
-                //    .dialogExtend({
-                //        "maximize": _trigger_Resize_Effects,
-                //        "restore": _trigger_Resize_Effects,
-                //        "minimize": _trigger_Resize_Effects,
-                //        "resize": _trigger_Resize_Effects
-                //    })
-                //    .find('div.chartsubcontainerheader').attr('id', newtabid + "_header").end()
-                //    .find('div.chartsubcontainer').attr('id', newtabid + "_chart").end()
-                //    ;
-
-                //newWindow.on('dialogclose', events.onRemove.fire.bind(null, title, newWindow)); // trigger the corresponding event
-                //events.onCreate.fire(title,newWindow); // trigger new chart created event
+                dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()
+                    .find('div.chartSubContainer').attr('id', id + "_chart").end();
 
                 require(["charts/chartOptions"], function(chartOptions) {
                     chartOptions.init(id, timePeriod, type);
                 });
 
-                debugger;
-                _trigger_Resize_Effects.call(dialog);
-
                 require(["charts/charts"], function (charts) {
                     charts.drawChart( "#" + id + "_chart", instrumentCode, instrumentName, timePeriod, type );
                 });
+
+                dialog.dialog('open');
+                options.resize.call($html);
 
                 if ( _callback )
                 _callback(dialog);
@@ -119,9 +69,7 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
          */
         triggerResizeEffects : function( callerContext ) {
             _trigger_Resize_Effects.call( callerContext );
-        },
-
-        events: events
+        }
     };
 
 });
