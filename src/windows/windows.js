@@ -154,17 +154,17 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
         },
 
         /* important options: { title:'',
-                                resize:fn,
-                                close: fn,
+                                resize:fn, // callabak for dialog resize event
+                                close: fn, // callback for dialog close event
                                 resizeable:true,
                                 collapsable:true,
                                 minimizable: true,
                                 maximizable: true,
                                 closable:true
                               } */
-        createBlankWindow: function($html,options,callback){
+        createBlankWindow: function($html,options){
             $html = $($html);
-            var id = "dialog-" + ++dialogCounter;
+            var id = "windows-dialog-" + ++dialogCounter;
 
             options = $.extend({
                 autoOpen: false,
@@ -192,8 +192,8 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
             blankWindow.dialog('open');
             if (options.resize)
                 options.resize(blankWindow);
-            if (callback)
-                callback(blankWindow);
+
+            return blankWindow;
         }
     };
 
