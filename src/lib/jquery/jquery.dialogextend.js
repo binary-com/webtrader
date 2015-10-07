@@ -348,7 +348,7 @@ define(["jquery", "jquery-ui"], function ($, $ui) {
             var newHeight, newWidth;
 
             newHeight = $(window).height();
-            newWidth = $(window).width() - 11;
+            newWidth = $(window).width();
             this._trigger("beforeMaximize");
             if (this._state !== "normal") {
                 this._restore();

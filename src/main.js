@@ -81,6 +81,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
                 instrumentsMod.init( $(".mainContainer .instruments").closest('li') );
             });
 
+
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
                 windows.init($('.topContainer .windows').closest('li'));
