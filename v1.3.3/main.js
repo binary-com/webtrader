@@ -9,7 +9,6 @@ requirejs.config({
         'highstock': "//code.highcharts.com/stock/highstock",
         'highcharts-exporting': '//code.highcharts.com/stock/modules/exporting',
         'jquery-ui': "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min",
-        'jquery.dialogextend' : "lib/jquery/jquery.dialogextend",
         'jquery-growl': "lib/jquery/jquery-growl/jquery.growl",
         'highcharts-theme': 'lib/highcharts/themes/sand-signika',
         'jquery-timer': "lib/jquery/jquery.timers",
