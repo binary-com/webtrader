@@ -2,11 +2,10 @@
  * Created by arnab on 2/13/15.
  */
 
-define(["jquery","jquery.dialogextend"], function ($) {
+define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) {
 
     "use strict";
 
-    var chartDialogCounter = 0;
 
     function _trigger_Resize_Effects() {
         //console.log($(this).width() - 10);
@@ -28,43 +27,6 @@ define(["jquery","jquery.dialogextend"], function ($) {
     }
     return {
 
-        createBlankWindow: function(title,options,callback){
-            var $html = $('<div/>');
-            var id = "chart-dialog-" + ++chartDialogCounter;
-
-            options = $.extend({
-                autoOpen: false,
-                resizable: true,
-                minWidth: 350,
-                minHeight: 400,
-                width: 350,
-                height: 400,
-                my: 'center',
-                at: 'center',
-                of: window,
-                title: title,
-                close: function () { },
-                resize: _trigger_Resize_Effects
-            }, options || {});
-
-            var blankWindow = $html.attr("id", id)
-                .dialog(options)
-                .dialogExtend({
-                    "maximize": _trigger_Resize_Effects,
-                    "restore": _trigger_Resize_Effects,
-                    "minimize": _trigger_Resize_Effects,
-                    "resize": _trigger_Resize_Effects
-                });
-
-            blankWindow.on('dialogclose', events.onRemove.fire.bind(null, title, blankWindow)); // trigger the corresponding event
-            events.onCreate.fire(title, blankWindow); // trigger new chart created event
-
-            blankWindow.dialog('open');
-            _trigger_Resize_Effects.call(blankWindow);
-            if (callback)
-                callback(blankWindow);
-        },
-
         addNewWindow: function( instrumentCode, instrumentName, timePeriod, _callback, type ) {
 
             //first add a new li
@@ -72,8 +34,21 @@ define(["jquery","jquery.dialogextend"], function ($) {
             //console.log(newTabId)
             $.get("charts/chartWindow.html" , function( $html ) {
 
-                var title = instrumentName + " (" + timePeriod + ")";
-                $html = $($html);
+                var options = {
+                    title: instrumentName + " (" + timePeriod + ")",
+                    close: function () {
+
+                            var id = 
+                            var containerIDWithHash = "#" + newTabId + "_chart";
+                            var timeperiod = $(containerIDWithHash).data("timeperiod");
+                            var instrumentCode = $(containerIDWithHash).data('instrumentCode');
+                            $(this).dialog('destroy');//completely remove this dialog
+                            require(["charts/charts"], function (charts) {
+                                charts.destroy( "#" + newTabId + "_chart", timeperiod, instrumentCode );
+                            });
+                    }
+                };
+
                 var newWindow = $html.attr("id", newTabId)
                     .dialog({
                         autoOpen: false,

@@ -43,6 +43,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
     }
     //---------End-----------------------------
 
+    var dialogCounter = 0;
 
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
@@ -150,8 +151,50 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
             {
                 closeAllObject.click();
             }
-        }
+        },
 
+        /* important options: { title:'',
+                                resize:fn,
+                                close: fn,
+                                resizeable:true,
+                                collapsable:true,
+                                minimizable: true,
+                                maximizable: true,
+                                closable:true
+                              } */
+        createBlankWindow: function($html,options,callback){
+            $html = $($html);
+            var id = "dialog-" + ++dialogCounter;
+
+            options = $.extend({
+                autoOpen: false,
+                resizable: true,
+                minWidth: 350,
+                minHeight: 400,
+                width: 350,
+                height: 400,
+                my: 'center',
+                at: 'center',
+                of: window,
+                title: 'blank window'
+            }, options || {});
+            
+            if (options.resize)
+                options.maximize = options.minimize  = options.restore = options.resize;
+
+            var blankWindow = $html.attr("id", id)
+                .dialog(options)
+                .dialogExtend(options);
+
+            //blankWindow.on('dialogclose', events.onRemove.fire.bind(null, title, blankWindow)); // trigger the corresponding event
+            //events.onCreate.fire(title, blankWindow); // trigger new chart created event
+
+            blankWindow.dialog('open');
+            if (options.resize)
+                options.resize(blankWindow);
+            if (callback)
+                callback(blankWindow);
+        }
     };
 
 });
