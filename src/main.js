@@ -10,7 +10,7 @@ requirejs.config({
         'highstock': "lib/highstock/highstock",
         'highcharts-exporting': 'lib/highstock/modules/exporting',
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
-        'jquery.dialogextend' : "lib/jquery-dialogextend/build/jquery.dialogextend.min",
+        'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'modernizr': 'lib/modernizr/dist/modernizr-build',
         'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
