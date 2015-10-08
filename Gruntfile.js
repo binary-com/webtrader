@@ -27,7 +27,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
-    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks("grunt-remove-logging");
 
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -51,7 +50,7 @@ module.exports = function (grunt) {
             },
             resourcesToCompressed: {
               files: [
-                  {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html'], dest: 'dist/compressed'}
+                  {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html', '**/lib/**'], dest: 'dist/compressed'}
               ]
             }
         },
@@ -75,7 +74,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.css'],
+                src: ['**/*.css', "!**/lib/**/*.css"],
                 dest: 'dist/compressed'
             }
         },
@@ -87,7 +86,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.html'],
+                src: ['**/*.html', "!**/lib/**/*.html"],
                 dest: 'dist/compressed'
             }
         },
@@ -96,7 +95,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/uncompressed',
-                    src: '**/*.js',
+                    src: ['**/*.js', '!**/lib/**'],
                     dest: 'dist/compressed'
                 }],
                 options: {
@@ -190,18 +189,21 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-          options: { livereload: true },
           scripts: {
             files: ['src/**'],
-            tasks: ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'copy:resourcesToCompressed'],
+            tasks: ['mainTask'],
             options: {
-              spawn: true,
+              spawn: false,
+              interrupt : true,
+              livereload: true
             },
           },
         }
     });
 
-	grunt.registerTask('default', ['jshint', 'clean:0', 'copy:main', 'clean:1', 'rename', 'replace', 'cssmin', 'htmlmin', 'uglify', 'copy:resourcesToCompressed', 'removelogging']);
+    grunt.registerTask('mainTask', ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace']);
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify']);
+	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'copy:resourcesToCompressed', 'removelogging']);
     grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
 
 };

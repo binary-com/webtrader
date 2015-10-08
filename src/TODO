@@ -27,5 +27,3 @@
 > Grunt HTMLHint
 > Convert all PNG or other format images to SVG. If that is not possible, then figure out if we can compress images further
 > https://www.npmjs.com/package/grunt-code-quality-report
-> Redirect users to unsupported_browsers.html in case any of features are not going to work for the client browser. Test from IE and prepare a list of feature which are not allowed and use modernizr to show error page. moderniz is doing wrong feature detection. Look into more details
-

@@ -217,7 +217,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
     return {
 
-        init: function( ) {
+        init: function( _callback ) {
 
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
@@ -232,6 +232,11 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
                         rootUL.menu();
+
+                        if(_callback) {
+                            _callback(markets);
+                        }
+
                     }
                 });
             }
