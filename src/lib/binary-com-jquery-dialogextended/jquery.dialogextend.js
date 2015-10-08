@@ -1,8 +1,4 @@
-(function() {
-  var $;
-
-  $ = jQuery;
-
+define(["jquery", "jquery-ui"], function($, $ui) {
   $.widget("ui.dialogExtend", {
     version: "2.0.0",
     modes: {},
@@ -16,9 +12,11 @@
       },
       "load": null,
       "beforeRestore": null,
-      "restore": null
+      "restore": null,
+      "resize": null
     },
     _create: function() {
+      var me;
       this._state = "normal";
       if (!$(this.element[0]).data("ui-dialog")) {
         $.error("jQuery.dialogExtend Error : Only jQuery UI Dialog element is accepted");
@@ -28,8 +26,12 @@
       this._initButtons();
       this._initTitleBar();
       this._setState("normal");
-      this._on("load", function(e) {
-        return console.log("test", e);
+      me = this;
+      $(window).on('resize', function() {
+        if (me.state() === "maximized") {
+          me.maximize();
+          me._trigger("resize");
+        }
       });
       return this._trigger("load");
     },
@@ -39,7 +41,6 @@
     },
     _verifyOptions: function() {
       var name, _ref, _results;
-
       if (this.options.dblclick && !(this.options.dblclick in this.modes)) {
         $.error("jQuery.dialogExtend Error : Invalid <dblclick> value '" + this.options.dblclick + "'");
         this.options.dblclick = false;
@@ -60,7 +61,6 @@
     },
     _initStyles: function() {
       var name, style, _results;
-
       if (!$(".dialog-extend-css").length) {
         style = '';
         style += '<style class="dialog-extend-css" type="text/css">';
@@ -82,7 +82,6 @@
     _initButtons: function() {
       var buttonPane, mode, name, titlebar, _ref,
         _this = this;
-
       titlebar = $(this.element[0]).dialog("widget").find(".ui-dialog-titlebar");
       buttonPane = $('<div class="ui-dialog-titlebar-buttonpane"></div>').appendTo(titlebar);
       buttonPane.css({
@@ -131,7 +130,6 @@
     _initModuleButton: function(name, mode) {
       var buttonPane,
         _this = this;
-
       buttonPane = $(this.element[0]).dialog("widget").find('.ui-dialog-titlebar-buttonpane');
       return buttonPane.append('<a class="ui-dialog-titlebar-' + name + ' ui-corner-all ui-state-default" href="#" title="' + name + '"><span class="ui-icon ' + this.options.icons[name] + '">' + name + '</span></a>').find(".ui-dialog-titlebar-" + name).attr("role", "button").mouseover(function() {
         return $(this).addClass("ui-state-hover");
@@ -148,7 +146,6 @@
     },
     _initTitleBar: function() {
       var handle;
-
       switch (this.options.titlebar) {
         case false:
           return 0;
@@ -189,6 +186,7 @@
       if (this._state !== "normal") {
         this["_restore_" + this._state]();
         this._setState("normal");
+        $(this.element[0]).dialog("widget").addClass('ui-corner-all');
         return $(this.element[0]).dialog("widget").focus();
       }
     },
@@ -228,7 +226,6 @@
     },
     _toggleButtons: function(newstate) {
       var mode, name, state, _ref, _ref1, _results;
-
       state = newstate || this._state;
       $(this.element[0]).dialog("widget").find(".ui-dialog-titlebar-restore").toggle(state !== "normal").css({
         "right": "1.4em"
@@ -251,14 +248,6 @@
       return _results;
     }
   });
-
-}).call(this);
-
-(function() {
-  var $;
-
-  $ = jQuery;
-
   $.extend(true, $.ui.dialogExtend.prototype, {
     modes: {
       "collapse": {
@@ -267,7 +256,7 @@
       }
     },
     options: {
-      "collapsable": false,
+      "collapsable": true,
       "icons": {
         "collapse": "ui-icon-triangle-1-s"
       },
@@ -276,7 +265,6 @@
     },
     collapse: function() {
       var newHeight, pos;
-
       newHeight = $(this.element[0]).dialog("widget").find(".ui-dialog-titlebar").height() + 15;
       this._trigger("beforeCollapse");
       if (this._state !== "normal") {
@@ -296,7 +284,6 @@
     },
     _restore_collapsed: function() {
       var original;
-
       original = this._loadSnapshot();
       return $(this.element[0]).show().dialog("widget").find(".ui-dialog-buttonpane:hidden").show().end().find(".ui-dialog-titlebar").css("white-space", original.titlebar.wrap).end().find(".ui-dialog-content").dialog("option", {
         "resizable": original.config.resizable,
@@ -306,7 +293,6 @@
     },
     _initStyles_collapse: function() {
       var style;
-
       if (!$(".dialog-extend-collapse-css").length) {
         style = '';
         style += '<style class="dialog-extend-collapse-css" type="text/css">';
@@ -322,14 +308,6 @@
       return $(this).dialogExtend("restore");
     }
   });
-
-}).call(this);
-
-(function() {
-  var $;
-
-  $ = jQuery;
-
   $.extend(true, $.ui.dialogExtend.prototype, {
     modes: {
       "maximize": {
@@ -338,7 +316,7 @@
       }
     },
     options: {
-      "maximizable": false,
+      "maximizable": true,
       "icons": {
         "maximize": "ui-icon-extlink"
       },
@@ -347,8 +325,7 @@
     },
     maximize: function() {
       var newHeight, newWidth;
-
-      newHeight = $(window).height() - 11;
+      newHeight = $(window).height();
       newWidth = $(window).width() - 11;
       this._trigger("beforeMaximize");
       if (this._state !== "normal") {
@@ -369,13 +346,13 @@
           of: window
         }
       });
+      $(this.element[0]).dialog("widget").removeClass('ui-corner-all');
       this._setState("maximized");
       this._toggleButtons();
       return this._trigger("maximize");
     },
     _restore_maximized: function() {
       var original;
-
       original = this._loadSnapshot();
       $(this.element[0]).dialog("widget").css("position", original.position.mode).find(".ui-dialog-titlebar").css("white-space", original.titlebar.wrap).end().find(".ui-dialog-content").dialog("option", {
         "resizable": original.config.resizable,
@@ -395,7 +372,6 @@
     },
     _initStyles_maximize: function() {
       var style;
-
       if (!$(".dialog-extend-maximize-css").length) {
         style = '';
         style += '<style class="dialog-extend-maximize-css" type="text/css">';
@@ -408,14 +384,6 @@
       }
     }
   });
-
-}).call(this);
-
-(function() {
-  var $;
-
-  $ = jQuery;
-
   $.extend(true, $.ui.dialogExtend.prototype, {
     modes: {
       "minimize": {
@@ -424,7 +392,7 @@
       }
     },
     options: {
-      "minimizable": false,
+      "minimizable": true,
       "minimizeLocation": "left",
       "icons": {
         "minimize": "ui-icon-minus"
@@ -434,7 +402,6 @@
     },
     minimize: function() {
       var dialogcontrols, fixedContainer, newWidth;
-
       this._trigger("beforeMinimize");
       if (this._state !== "normal") {
         this._restore();
@@ -481,7 +448,6 @@
     },
     _initStyles_minimize: function() {
       var style;
-
       if (!$(".dialog-extend-minimize-css").length) {
         style = '';
         style += '<style class="dialog-extend-minimize-css" type="text/css">';
@@ -495,7 +461,6 @@
     },
     _verifyOptions_minimize: function() {
       var _ref;
-
       if (!this.options.minimizeLocation || ((_ref = this.options.minimizeLocation) !== 'left' && _ref !== 'right')) {
         $.error("jQuery.dialogExtend Error : Invalid <minimizeLocation> value '" + this.options.minimizeLocation + "'");
         return this.options.minimizeLocation = "left";
@@ -505,5 +470,4 @@
       return $(this).dialogExtend("restore");
     }
   });
-
-}).call(this);
+});
