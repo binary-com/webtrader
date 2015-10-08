@@ -8,7 +8,4 @@ dist
 node_modules
 .brackets.json
 *.swp
-
-src/instruments/.Rhistory
-
-src/websockets/.Rhistory
+.Rhistory
