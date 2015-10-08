@@ -77,19 +77,22 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
         return $element;
     }
     function addSpinner(list) {
-        var spinner = $('<input>').spinner({
+        var spinner = $('<input  class="spinner" style="width:30px" type="text"></input>');
+
+        var header = tradingWin.parent().find('.ui-dialog-title');
+        spinner.css({ float: 'left' }).insertAfter(header);
+
+        spinner = spinner.spinner({
             max: list.lenght -1,
             min: 0,
-            icons: { down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n" }
         });
+        ggg = spinner;
+        spinner.parent().find('.ui-spinner-up').css('margin-top', 0); // TODO: see if can be fixed in css
         spinner.change(function () {
             var elem = $(this);
             //elem.val(list[elem.val()]);
         })
         .trigger("change");
-        ggg = spinner;
-
-        addToHeader(spinner);
     }
 
     function initTradingWin() {

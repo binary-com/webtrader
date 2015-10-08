@@ -83,6 +83,7 @@ require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], func
 
             //Trigger async loading of tradingTimes sub-menu
             require(["tradingtimes/tradingTimes"], function( tradingTimes ) {
+                var gg = $('.topContainer .tradingTimesLI');
                 tradingTimes.init($('.topContainer .tradingTimesLI'));
                 $('.topContainer .tradingTimesLI').click();
             });
