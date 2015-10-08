@@ -168,6 +168,7 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
            notes:
                 1- get generated dialog id via createBlankWindow(...).attr('id')
                 2- if autoOpen == false  use createBalnkWindow(...).dialog('open') to open the dialog
+                2- if minWidth and minHeight are not specified the options.width and options.height will be used for minimums.
           */
         createBlankWindow: function($html,options){
             $html = $($html);
@@ -176,8 +177,6 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
             options = $.extend({
                 autoOpen: false,
                 resizable: true,
-                minWidth: 350,
-                minHeight: 400,
                 width: 350,
                 height: 400,
                 my: 'center',
@@ -185,6 +184,8 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
                 of: window,
                 title: 'blank window'
             }, options || {});
+            options.minWidth = options.minWidth || options.width;
+            options.minHeight = options.minHeight || options.height;
             
             if (options.resize)
                 options.maximize = options.minimize  = options.restore = options.resize;

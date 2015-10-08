@@ -8,7 +8,7 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
 
 
     function _trigger_Resize_Effects() {
-        $(this).find(".chartSubContainer").width($(this).width() - 15);
+        $(this).find(".chartSubContainer").width($(this).width() - 20);
         $(this).find(".chartSubContainer").height($(this).height() - 10);
 
         var containerIDWithHash = "#" + $(this).find(".chartSubContainer").attr("id");
@@ -55,7 +55,7 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
                 options.resize.call($html);
 
                 if ( _callback )
-                _callback(dialog);
+                    _callback(dialog);
             });
 
         },
