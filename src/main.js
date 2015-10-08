@@ -61,8 +61,6 @@ require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], func
     //Load Jquery UI CSS
     loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
 
-    resizeBackgroundWatermark();
-
     //Load our main CSS
     loadCSS("main.css");
     loadCSS("lib/hamburger.css");
