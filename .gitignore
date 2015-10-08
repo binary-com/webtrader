@@ -3,7 +3,7 @@
 .idea
 
 dist
-!/lib/*/dist
+!/lib/*/*/dist
 
 node_modules
 .brackets.json
