@@ -1,0 +1,5 @@
+.header-bar { position: fixed; width: 1072px; top: -100px; left: 50%; margin-left: -536px; background: url(images/ribbon-left.png) no-repeat left 15px; padding: 5px 10px 5px 0; z-index: 99999; }
+.header-bar-container { background: url(images/ribbon-right.png) no-repeat right bottom; padding: 0px 30px 13px 30px; }
+.header-bar-content { display: block; width: 100%; box-shadow: 0 2px 6px #333; visibility: visible; background: url(images/ribbon-bg.jpg) repeat-x left center; }
+.header-bar-content table { height: 40px; }
+.header-bar-content .logo-bar-container { padding: 4px 10px; background: #fff; }
