@@ -3,7 +3,7 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'modernizr', 'common/util'], function ($) {
+define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
 
     var closeAllObject = null,
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
