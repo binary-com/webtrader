@@ -38,7 +38,6 @@ define(['jquery'], function($) {
 		
 		process : function(data) {
 			requestSubmitted = false;
-
 			callBacksWhenMarketsIsLoaded.fire(data);
 		},
 
