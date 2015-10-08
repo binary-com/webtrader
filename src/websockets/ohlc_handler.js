@@ -151,7 +151,9 @@ define([], function() {
                 "end": 'latest',
                 "count": count,
                 "adjust_start_time" : 1,
-                "instrumentCdAndTp" : (instrumentCode + timeperiod).toUpperCase()
+                "passthrough": {
+                    "instrumentCdAndTp" : (instrumentCode + timeperiod).toUpperCase()
+                }
               };
               if (!isTick(timeperiod)) {
                 requestObject = $.extend(requestObject, {
@@ -258,7 +260,9 @@ define([], function() {
                 //Subscribe to tick streaming
                 $(document).trigger('sendAnyWSMessage', [{
                                   "ticks": chartID.instrumentCode,
-                                  "instrumentCdAndTp": key
+                                  "passthrough": {
+                                      "instrumentCdAndTp": key
+                                  }
                                 }]);
 
                 if (isTick(timeperiod)) return; //TODO think about what to do for tick charts
@@ -309,10 +313,12 @@ define([], function() {
                             "ticks": instrumentCode,
                             "end": 'latest',
                             //"count": count,
-                            "instrumentCdAndTp" : key,
                             "start": lastBar.time/1000,
                             "granularity":  suffix + intVal,
-                            "isTimer": "true"
+                            "passthrough": {
+                                "isTimer": "true",
+                                "instrumentCdAndTp" : key
+                            }
                           };
                         console.log('Timer based request >> ', JSON.stringify(requestObject));
                         $(document).trigger('sendAnyWSMessage', [requestObject]);

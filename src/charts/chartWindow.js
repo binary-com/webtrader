@@ -41,9 +41,9 @@ define(["jquery","jquery.dialogextend"], function ($) {
                     .dialog({
                         autoOpen: false,
                         resizable: true,
-                        minWidth: 350,
+                        minWidth: 335,
                         minHeight: 400,
-                        width: 350,
+                        width: 335,
                         height: 400,
                         my: 'center',
                         at: 'center',

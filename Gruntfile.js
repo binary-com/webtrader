@@ -27,7 +27,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
-    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks("grunt-remove-logging");
 
     grunt.loadNpmTasks('grunt-contrib-watch');
