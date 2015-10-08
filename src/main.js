@@ -67,74 +67,26 @@ require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], func
     loadCSS("main.css");
     loadCSS("lib/hamburger.css");
 
-    function resizeBackgroundWatermark() {
-      $(".binary-watermark-logo").height($(window).height() - 20)
-                                 .width($(window).width() - 10);
-    };
-
-    function resetTopMenu() {
-      var show = true;
-      if(isSmallView()) {
-        show = false;
-      }
-      $('.topContainer .topMenu button' ).each(function() {
-        //This cloning step is required for proper functioning of clicks
-        var ul = $(this).find("ul:first").clone(true);
-        $(this).find("ul:first").remove();
-        //When we set the text, Jquery UI is removing any child of this button. We have to restore this
-        $(this).button("option", "text", show).button("widget").append(ul);
-      });
-    };
-
     //All dependencies loaded
     $(document).ready(function () {
 
         $(".mainContainer").load("mainContent.html", function() {
-
-            $('.topContainer .topMenu')
-                    .find("button" ).button()
-                    .filter('.windows').button({
-                      icons: {
-                        primary: "windows-icon",
-                      }
-                    }).end()
-                    .filter('.instruments').button({
-                      icons: {
-                        primary: "instruments-icon",
-                      },
-                      disabled: true
-                    }).end()
-                    .filter(".workspace").button({
-                      icons: {
-                        primary: "workspace-icon",
-                      },
-                      disabled: true
-                    });
-
-            $(window).resize(function() {
-              resetTopMenu();
-            });
-            resetTopMenu();
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
 
                 //Just an info
                 require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: "Loading instruments menu!" });
+                    $.growl.notice({ message: "Loading chart menu!" });
                 });
 
                 instrumentsMod.init();
             });
 
+
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows').closest('div'));
-            });
-
-            //Resize the background image
-            $(window).resize(function() {
-              resizeBackgroundWatermark();
+                windows.init($('.topContainer .windows').closest('li'));
             });
 
         });
