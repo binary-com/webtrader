@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 3/22/15.
  */
-define(['charts/indicators/highcharts_custom/indicator_base', 'highstock'], function (indicatorBase) {
+define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var rsiOptionsMap = {}, rsiSeriesMap = {};
     

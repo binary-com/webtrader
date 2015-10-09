@@ -45,13 +45,50 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true, cwd: 'src/', src: ['**'], dest: 'dist/uncompressed/v<%=pkg.version%>'}
+                    {
+                        expand: true, 
+                        cwd: 'src/', 
+                        src: ['**'], 
+                        dest: 'dist/uncompressed/v<%=pkg.version%>'
+                    }
                 ]
             },
-            resourcesToCompressed: {
-              files: [
-                  {expand: true, cwd: 'dist/uncompressed', src: ['**', '!**/*.css', '!**/*.js', '!**/*.html', '**/lib/**'], dest: 'dist/compressed'}
-              ]
+            copyLibraries: {
+                files: [
+                    {
+                        expand: true, 
+                        cwd: 'bower_components/', 
+                        src: [
+                            '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
+                            '!colorpicker/**', 'colorpicker/jquery.colorpicker.js', 'colorpicker/images/**', 'colorpicker/jquery.colorpicker.css',
+                            '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css', 
+                            '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css', 
+                            '!jquery-ui/**', 'jquery-ui/themes/smoothness/images/**', 'jquery-ui/jquery-ui.min.js', 'jquery-ui/themes/smoothness/jquery-ui.min.css',
+                            '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js',
+                            'jquery/dist/jquery.min.js',
+                            'jquery.timers/jquery.timers.min.js',
+                            'loadcss/loadCSS.js',
+                            'lokijs/build/lokijs.min.js',
+                            'modernizr/modernizr.js',
+                            'reconnectingWebsocket/reconnecting-websocket.min.js',
+                            'requirejs/require.js',
+                            '!**/**/favicon.ico'
+                        ], 
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
+                    }
+                ]
+            },
+            copy_AfterCompression: {
+                files: [
+                    {
+                        expand: true, 
+                        cwd: 'dist/uncompressed',
+                        src: [
+                            '**', '!**/*.js', '!**/*.css', '!**/*.html'
+                        ],
+                        dest: 'dist/compressed'
+                    }
+                ]
             }
         },
         rename: {
@@ -74,7 +111,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.css', "!**/lib/**/*.css"],
+                src: ['**/*.css'],
                 dest: 'dist/compressed'
             }
         },
@@ -86,7 +123,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.html', "!**/lib/**/*.html"],
+                src: ['**/*.html'],
                 dest: 'dist/compressed'
             }
         },
@@ -95,7 +132,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/uncompressed',
-                    src: ['**/*.js', '!**/lib/**'],
+                    src: ['**/*.js'],
                     dest: 'dist/compressed'
                 }],
                 options: {
@@ -182,7 +219,7 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
+                src : ["dist/compressed/**/*.js"],
 				options : {
 					"verbose" : false
 				}
@@ -201,9 +238,9 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:0', 'copy:main', 'clean:1', 'rename', 'replace']);
-    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify']);
-	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'copy:resourcesToCompressed', 'removelogging']);
+    grunt.registerTask('mainTask', ['clean:0', 'copy:main', 'copy:copyLibraries', 'clean:1', 'rename', 'replace']);
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify', 'copy:copy_AfterCompression']);
+	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
     grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
 
 };

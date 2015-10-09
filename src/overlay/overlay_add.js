@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "lib/loadCSS"], function ($) {
+define(["jquery", "datatables", "loadCSS"], function ($) {
 
     function _refreshInstruments( table, data, containerIDWithHash ) {
 
@@ -90,9 +90,6 @@ define(["jquery", "datatables", "lib/loadCSS"], function ($) {
                 });
             }
             else {
-
-        loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-        loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
                 $.get("overlay/overlay_add.html", function($html) {
                     $html = $($html);

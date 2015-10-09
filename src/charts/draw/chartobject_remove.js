@@ -2,14 +2,11 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "lib/loadCSS", 'charts/charts'], function ($) {
+define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
 
     var table = undefined, indicatorsJSON = undefined;
 
     function init( containerIDWithHash, _callback ) {
-
-        loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-        loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
         $.get("charts/indicators/indicators_remove.html", function($html) {
             $html = $($html);
