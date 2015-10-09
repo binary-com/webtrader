@@ -2,12 +2,9 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "lib/loadCSS", "common/util"], function ($) {
+define(["jquery", "datatables", "loadCSS", "common/util"], function ($) {
 
     function init( containerIDWithHash, _callback ) {
-
-        loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-        loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
         $.get("charts/indicators/indicators_add.html", function($html) {
             $html = $($html);
