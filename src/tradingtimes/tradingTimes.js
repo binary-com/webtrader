@@ -10,7 +10,7 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
 
     /* result of trading_times api */
     function update(data){
-        markets = data.trading_times.markets;
+        markets = (data.trading_times && data.trading_times.markets) || [];
         //    || [{
         //    name: 'Forex',
         //    submarkets: [{
@@ -41,7 +41,8 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
 
         function updateTable(name, submarket) {
             var market = markets.find(function (m) { return m.name == name; });
-            var symbols = market.submarkets.find(function(s) { return s.name == submarket;}).symbols;
+            var symbols = (market && market.submarkets.find(function (s) { return s.name == submarket; }).symbols)
+                || [];
             var rows = symbols.map(function (sym) {
                 return [
                     sym.name,
@@ -53,11 +54,9 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
             });
             table.rows().remove();
             table.rows.add(rows);
-            table.columns.adjust();
             table.draw();
         }
 
-        updateTable(market_names[0], submarket_names[market_names[0]][0]);
         return {
             market_names: market_names,
             submarket_names: submarket_names,
@@ -77,20 +76,24 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
     }
 
     function addSpinnerToHeader(header,options) {
-        var spinner = $('<input  class="spinner-in-dialog-header" type="text"></input>');
-        spinner.val(options.value + '');
-        spinner.insertAfter(header);
+        var input = $('<input  class="spinner-in-dialog-header" type="text"></input>');
+        input.val(options.value + '');
+        input.insertAfter(header);
+        var last_val = options.value + '';
 
-        spinner = spinner.spinner({
+        var spinner = input.spinner({
             max: options.max,
             min: options.min,
             spin: function (e, ui) {
+                last_val = ui.value;
                 spinner.trigger('changed',[ui.value]);
             }
         });
         // TODO: see if can be fixed in css without affecting other items
         spinner.parent().css('margin-left', '5px');
         spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
+
+        spinner.val = function () { return last_val + ''; };
         return spinner;
     }
     function addSpinnerToBody(sub_header,inx, list) {
@@ -133,7 +136,7 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
         $('<span class="span-in-dialog-header">Date: </span>').insertAfter(header);
         var day = addSpinnerToHeader(header, { value: dt.getDate(), min: 1, max: 31 });
         var month = addSpinnerToHeader(header, { value: dt.getMonth()+1, min: 1, max: 12 });
-        var year = addSpinnerToHeader(header, { value: dt.getFullYear(), min: 2000, max: 2100 });
+        var year = addSpinnerToHeader(header, { value: dt.getFullYear(), min: 2000, max: dt.getFullYear() });
 
 
         table = $("<table width='100%' class='display compact'/>");
@@ -154,24 +157,32 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
 
         var market_names = null,
             submarket_names = null;
-        symbol_handler.fetchMarkets(function (data) {
-            var result = update(data);
-            if (market_names == null)
-                market_names = addSpinnerToBody(subheader, 0, result.market_names);
-            
-            if (submarket_names == null) 
-                submarket_names = addSpinnerToBody(subheader, 0, result.submarket_names[market_names.val()]);
-            
-            submarket_names.on('changed', function (e, val) {
+
+        var refresh_table = function () {
+            var yyyy_mm_dd = year.val() + '-' + month.val() + '-' + day.val();
+            symbol_handler.fetchMarkets(function (data) {
+                var result = update(data);
+                if (market_names == null)
+                    market_names = addSpinnerToBody(subheader, 0, result.market_names);
+                
+                if (submarket_names == null) 
+                    submarket_names = addSpinnerToBody(subheader, 0, result.submarket_names[market_names.val()]);
+                
+                submarket_names.on('changed', function (e, val) {
+                    result.updateTable(market_names.val(), submarket_names.val());
+                })
+                market_names.on('changed', function (e, val) {
+                    submarket_names.update_list(result.submarket_names[val]);
+                    result.updateTable(market_names.val(), submarket_names.val());
+                });
                 result.updateTable(market_names.val(), submarket_names.val());
-            })
-            market_names.on('changed', function (e, val) {
-                submarket_names.update_list(result.submarket_names[val]);
-                result.updateTable(market_names.val(), submarket_names.val());
-            });
-            g = submarket_names;
-            ggg = data;
-        });
+            },yyyy_mm_dd);
+        }
+
+        year.on('changed', refresh_table);
+        month.on('changed', refresh_table);
+        day.on('changed', refresh_table);
+        refresh_table();
     }
    
     return {

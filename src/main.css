@@ -232,9 +232,11 @@ button.ui-button-text-only .ui-menu {
     width: 40px;
     margin-left: 5px;
     float:left;
+    border: none;
+    border-color: transparent;
 }
 .spinner-in-dialog-body {
-    width: 80px;
+    width: 100px;
     margin-left:5px;
     float:left;
 }

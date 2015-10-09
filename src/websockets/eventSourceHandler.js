@@ -153,6 +153,8 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
 
           case 'error':
             console.log('[ERROR] : ', JSON.stringify(data));
+            if (data.echo_req.trading_times)
+                symbol_handler.process({error: true});
             break;
         }
     };
