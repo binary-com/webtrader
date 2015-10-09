@@ -48,11 +48,11 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
                 });
 
                 require(["charts/charts"], function (charts) {
-                    charts.drawChart( "#" + id + "_chart", instrumentCode, instrumentName, timePeriod, type );
+                    var chart = charts.drawChart("#" + id + "_chart", instrumentCode,
+                        instrumentName, timePeriod, type, null, options.resize.bind(dialog));
                 });
 
                 dialog.dialog('open');
-                options.resize.call($html);
 
                 if ( _callback )
                     _callback(dialog);
