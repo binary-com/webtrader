@@ -2,14 +2,11 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "lib/loadCSS"], function ($) {
+define(["jquery", "datatables", "loadCSS"], function ($) {
 
   var table = undefined;
 
     function init( containerIDWithHash, _callback ) {
-
-        loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-        loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
       $.get("overlay/overlay_remove.html", function($html) {
           $html = $($html);

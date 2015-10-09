@@ -5,20 +5,24 @@
 requirejs.config({
     baseUrl: ".",
     paths: {
-        'jquery': "lib/jquery-legacy/dist/jquery.min",
-        'jquery-ui': "lib/jqueryui/jquery-ui.min",
+        'jquery': "lib/jquery/dist/jquery.min",
+        'jquery-ui': "lib/jquery-ui/jquery-ui.min",
         'highstock': "lib/highstock/highstock",
         'highcharts-exporting': 'lib/highstock/modules/exporting',
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
-        'jquery.dialogextend' : "lib/jquery-dialogextend/build/jquery.dialogextend.min",
+        'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
-        'modernizr': 'lib/modernizr/dist/modernizr-build',
+        'modernizr': 'lib/modernizr/modernizr',
         'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
         'lokijs': 'lib/lokijs/build/lokijs.min',
-        'jquery-timer': "lib/jquery.timers/jquery.timers",
+        'jquery-timer': "lib/jquery.timers/jquery.timers.min",
         'color-picker': "lib/colorpicker/jquery.colorpicker",
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
+        //TODO find out whats the advantage of using datatables-jquery-ui
+        'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
+        'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
+        'loadCSS': 'lib/loadcss/loadCSS'
     },
     "shim": {
         "jquery-ui": {
@@ -48,7 +52,7 @@ requirejs.config({
     }
 });
 
-require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], function( $ ) {
+require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
 
     "use strict";
 
@@ -98,6 +102,9 @@ require(["jquery", "jquery-ui", "modernizr", "lib/loadCSS", "common/util"], func
         //Now load all other CSS asynchronously
         loadCSS('lib/growl/stylesheets/jquery.growl.css');
         loadCSS('charts/charts.css');
+        loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
+        loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
+        loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
     });
 
