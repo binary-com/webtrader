@@ -1,4 +1,4 @@
-define([], function() {
+define(['jquery'], function($) {
 	/*
 		random: {
 			submarkets : [
@@ -22,58 +22,30 @@ define([], function() {
 		},
 		{}
 	*/
-	var markets = [];
-	var callBacksWhenMarketsIsLoaded = [];
+    // the callback list can only be fired once.(TODO: make this a unitlity)
+    var callBacksWhenMarketsIsLoaded = {
+        list: [],
+        add: function (callback) {
+            $.type(callback) == "function" && this.list.push(callback);
+        },
+        fire: function () {
+            while (this.list.length > 0)
+                this.list.shift().apply(this, arguments);
+        }
+    };
 	var requestSubmitted = false;
 	return {
 		
 		process : function(data) {
 			requestSubmitted = false;
-			
-			for (var marketIndex in data.trading_times.markets) {
-			    var marketFromResponse = data.trading_times.markets[marketIndex];
-			    var market = {
-			      name : marketFromResponse.name, 
-			      display_name : marketFromResponse.name,
-			      submarkets : []
-			    };
-
-			    for (var submarketIndxx in marketFromResponse.submarkets) {
-			      var submarket = marketFromResponse.submarkets[submarketIndxx];
-			      var submarketObj = {
-			        name : submarket.name,
-			        display_name : submarket.name,
-			        instruments : []
-			      };
-			      for (var eachSymbolIndx in submarket.symbols) {
-			        var eachSymbol = submarket.symbols[eachSymbolIndx];
-			        submarketObj.instruments.push({
-			          symbol : eachSymbol.symbol,
-			          display_name : eachSymbol.name,
-			          delay_amount : 0 //TODO fix this when API provides it
-			        });
-			      }
-
-			      market.submarkets.push(submarketObj);
-			    }
-
-			    markets.push(market);
-		  	}
-
-			for (var index in callBacksWhenMarketsIsLoaded) {
-				callBacksWhenMarketsIsLoaded[index](markets);
-			}
-			callBacksWhenMarketsIsLoaded = [];
+			callBacksWhenMarketsIsLoaded.fire(data);
 		},
 
 		fetchMarkets : function(callBack) {
-			if (callBack) 
-			{
-				callBacksWhenMarketsIsLoaded.push(callBack);
-			}
+		    callBack && callBacksWhenMarketsIsLoaded.add(callBack);
 			if (!requestSubmitted) {
 				require(['websockets/eventSourceHandler'], function(eventSourceHandler) {
-					eventSourceHandler.retrieveInstrumentList();
+				    eventSourceHandler.apicall.trading_times(new Date().toISOString().slice(0, 10));
 				});
 				requestSubmitted = true;
 			}

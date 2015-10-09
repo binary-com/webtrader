@@ -81,6 +81,10 @@ function getParameterByName(name) {
   return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+/**
+    This method can be used to retrieve any property of an object by its name. Does not matter how deep
+    the property might be in the passed object. This is a recurrsive function to find the target property
+**/
 function getObjects(obj, key, val) {
     var objects = [];
     for (var i in obj) {
@@ -93,3 +97,26 @@ function getObjects(obj, key, val) {
     }
     return objects;
 }
+
+/**
+    Currently this is being used to validate the parameters passed by affilates/external applications
+    It will validate instrument and timePeriod passed in URL
+**/
+function validateParameters(instrumentObject) {
+      var instrumentCode_param = getParameterByName('instrument');
+      var timePeriod_param = getParameterByName('timePeriod');
+
+      if (!instrumentCode_param || !timePeriod_param) return false;
+
+      var timePeriod_Obj = null;
+      try {
+        timePeriod_Obj = convertToTimeperiodObject(timePeriod_param);
+      } catch(e) {}
+      if (!timePeriod_Obj) return false;
+
+      var isValidTickTF = timePeriod_Obj.suffix() == 't' && timePeriod_Obj.intValue() == 1;
+      var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 59;
+      var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 23;
+      var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 3;
+      return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
+};

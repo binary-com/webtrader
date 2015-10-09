@@ -2,14 +2,14 @@
 
 git config --global user.email "arnab@binary.com"
 git config --global user.name "Arnab Karmakar"
-release_prod="$(git log -1 --pretty=%B | awk '/[release_prod]]/ { print $1 } ')"
-release_beta="$(git log -1 --pretty=%B | awk '/[release_beta]]/ { print $1 } ')"
-if [ ! -z "$release_beta" -a "$release_beta" != " " ]; then
+echo GIT Branch : $TRAVIS_BRANCH , Pull request number : $TRAVIS_PULL_REQUEST
+
+#This if block is true when a PR is opened from development branch to master branch
+if [ $TRAVIS_PULL_REQUEST ]; then
     mkdir beta
     mv dist/compressed/* beta
     mv beta dist/compressed
-    grunt gh-pages:gh-pages-beta-uncompressed
 fi
-if [ ! -z "$release_prod" -a "$release_prod" != " " ]; then
-    grunt gh-pages:gh-pages-prod-uncompressed
+if [ $TRAVIS_BRANCH = 'master' ]; then
+    grunt gh-pages:travis-deploy
 fi

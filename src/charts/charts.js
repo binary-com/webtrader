@@ -26,8 +26,9 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
          * @param instrumentName
          * @param timeperiod
          * @param type
+         * @param onload // optional onload callback
          */
-        drawChart: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare) {
+        drawChart: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare, onload) {
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
@@ -52,6 +53,8 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
                             this.showLoading();
                             console.log('Calling render chart for the first time for the instrument : ', instrumentCode);
                             requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
+                            if (onload)
+                                onload();
                         }
                     }
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'

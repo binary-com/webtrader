@@ -1,6 +1,12 @@
 .git
 .grunt
 .idea
+
 dist
+!/lib/*/*/dist
+
 node_modules
 .brackets.json
+*.swp
+.Rhistory
+.DS_Store

@@ -1,8 +1,9 @@
+
 /**
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'modernizr', 'common/util'], function ($) {
+define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
 
     var closeAllObject = null,
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
@@ -42,9 +43,12 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
     }
     //---------End-----------------------------
 
+    var dialogCounter = 0;
+    var $menuUL = null;
+
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
-        var topMargin = 40;
+        var topMargin = 80;
         if (isSmallView()) topMargin = 100;
 
         var cellCount = 1, rowCount = 1, leftMargin = 20;
@@ -64,8 +68,13 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
 
         $(".chart-dialog").each(function () {
 
-          var leftShift = (cellCount == 1 ? startMargin : minWidth + leftMargin);
+          if (cellCount == 1) {
+            var leftShift = startMargin;
+          } else if (cellCount > 1) {
+            var leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
+          }
           var topShift = -topMargin + 2;
+          referenceObjectForPositioning = window;
           if (referenceObjectForPositioning == window) {
             topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
           }
@@ -93,59 +102,44 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
     return {
 
         init: function( $parentObj ) {
+            $menuUL = $parentObj.find('ul');
 
-            $.get('windows/windows.html', function ( $html ) {
-                $html = $($html);
-                tileObject = $html.find('li.tile');
+            tileObject = $('li.tile');
 
-                closeAllObject = $html.find('li.closeAll').click(function () {
-                    //console.log('Event for closing all chart windows!');
-                    /*
-                      The close click is behaving weird.
-                      Behavior - When there are charts opened, this event is able to close all charts and then
-                                unable to hide the menu. When There are no charts, then it behaves normally
-                    */
-                    if ($('.chart-dialog').length > 0) {
-                      $('.chart-dialog').dialog( 'close' );
-                      $('.windows').click();
+            closeAllObject = $('li.closeAll').click(function () {
+                //console.log('Event for closing all chart windows!');
+                /*
+                  The close click is behaving weird.
+                  Behavior - When there are charts opened, this event is able to close all charts and then
+                            unable to hide the menu. When There are no charts, then it behaves normally
+                */
+                if ($('.chart-dialog').length > 0) {
+                    $('.chart-dialog').dialog('close');
+                }
+            });
+
+            require(["charts/chartWindow"], function (chartWindowObj) {
+
+
+                //Attach click listener for tile menu
+                tileObject.click(function () {
+                    tileAction();
+                });
+
+                //Based on totalChartsPerRow and totalRows, open some charts
+                var totalCharts_renderable = totalChartsPerRow * totalRows;
+                $(instrumentArrayForInitialLoading).each(function (index, value) {
+                    if (index < totalCharts_renderable) {
+                        chartWindowObj.addNewWindow(value.symbol, value.name, value.timeperiod,
+                            function () {
+                                //Trigger tile action
+                                tileAction();
+                            }, value.chartType);
                     }
                 });
 
-                $parentObj.find('button').button("enable").button("refresh").button("widget").click(function(e) {
-                  var menu = $(this).closest('div').find("ul").menu();
-                  if (menu.is(":visible")) {
-                    menu.hide();
-                  } else {
-                    menu.show();
-                  }
-                  e.preventDefault();
-                  return false;
-                }).focusout(function() {
-                  $(this).closest('div').find('ul').menu().hide();
-                }).append($html);
-
-                require(["charts/chartWindow"], function (chartWindowObj) {
-
-                    //Attach click listener for tile menu
-                    tileObject.click(function () {
-                      tileAction();
-                    });
-
-                    //Based on totalChartsPerRow and totalRows, open some charts
-                    var totalCharts_renderable = totalChartsPerRow * totalRows;
-                    $(instrumentArrayForInitialLoading).each(function (index, value) {
-                      if (index < totalCharts_renderable) {
-                        chartWindowObj.addNewWindow(value.symbol, value.name, value.timeperiod,
-                            function() {
-                              //Trigger tile action
-                              tileAction();
-                            }, value.chartType);
-                      }
-                    });
-
-                });
-
             });
+
             return this;
         },
 
@@ -159,8 +153,69 @@ define(['jquery', 'modernizr', 'common/util'], function ($) {
             {
                 closeAllObject.click();
             }
-        }
+        },
 
+        /* important options: { title:'',
+                                resize:fn, // callabak for dialog resize event
+                                close: fn, // callback for dialog close event
+                                autoOpen: false,
+                                resizeable:true,
+                                collapsable:true,
+                                minimizable: true,
+                                maximizable: true,
+                                closable:true
+                              }
+           notes:
+                1- get generated dialog id via createBlankWindow(...).attr('id')
+                2- if autoOpen == false  use createBalnkWindow(...).dialog('open') to open the dialog
+                2- if minWidth and minHeight are not specified the options.width and options.height will be used for minimums.
+          */
+        createBlankWindow: function($html,options){
+            $html = $($html);
+            var id = "windows-dialog-" + ++dialogCounter;
+
+            options = $.extend({
+                autoOpen: false,
+                resizable: true,
+                width: 350,
+                height: 400,
+                my: 'center',
+                at: 'center',
+                of: window,
+                title: 'blank window'
+            }, options || {});
+            options.minWidth = options.minWidth || options.width;
+            options.minHeight = options.minHeight || options.height;
+            
+            if (options.resize)
+                options.maximize = options.minimize  = options.restore = options.resize;
+
+            var blankWindow = $html.attr("id", id)
+                .dialog(options)
+                .dialogExtend(options);
+
+            // add an item to window menu
+            var li = $('<li />').addClass(id + 'LI').text(options.title);
+            $menuUL.append(li);
+            // bring window to top on click
+            li.on('click', function () {
+                blankWindow.dialog('moveToTop')
+                     .parent().effect("bounce", { times: 2, distance: 15 }, 450);
+            });
+            // remove item from window menu on close
+            blankWindow.on('dialogclose', function () {
+                li.remove();
+                $('#menu').menu('refresh');
+            });
+
+            // refresh the main jquery ui menu
+            $('#menu').menu('refresh');
+
+            if (options.resize)
+                options.resize.call($html[0]);
+
+            return blankWindow;
+        }
     };
 
 });

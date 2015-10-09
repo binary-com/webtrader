@@ -1,0 +1,12 @@
+{
+	"name" : "binary-com-jquery-dialogextended",
+	"version" : "2.0.5",
+	"ignore": [
+		"example.html",
+		"README.md"
+	],
+	"dependencies": {
+		"jquery": ">=1.11.0",
+		"jquery-ui": ">=1.11.0"
+	}
+}
