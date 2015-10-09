@@ -48,15 +48,21 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
                     sym.times.open[0],
                     sym.times.close[0],
                     sym.settlement || '-',
-                    sym.events[0].descrip + ':' + sym.events[0].dates
+                    sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
                 ];
             });
+            table.rows().remove();
             table.rows.add(rows);
             table.columns.adjust();
             table.draw();
         }
 
         updateTable(market_names[0], submarket_names[market_names[0]][0]);
+        return {
+            market_names: market_names,
+            submarket_names: submarket_names,
+            updateTable: updateTable
+        };
     }
 
     function init(li) {
@@ -70,34 +76,65 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
         });
     }
 
-    function addToHeader($element){
-        var header = tradingWin.parent().find('.ui-dialog-title');
-        header.css('width', '25%');
-        $element.css({ float: 'left' }).insertAfter(header);
-        return $element;
-    }
-    function addSpinner(list) {
-        var spinner = $('<input  class="spinner" style="width:30px" type="text"></input>');
-
-        var header = tradingWin.parent().find('.ui-dialog-title');
-        spinner.css({ float: 'left' }).insertAfter(header);
+    function addSpinnerToHeader(header,options) {
+        var spinner = $('<input  class="spinner-in-dialog-header" type="text"></input>');
+        spinner.val(options.value + '');
+        spinner.insertAfter(header);
 
         spinner = spinner.spinner({
-            max: list.lenght -1,
-            min: 0,
+            max: options.max,
+            min: options.min,
+            spin: function (e, ui) {
+                spinner.trigger('changed',[ui.value]);
+            }
         });
-        ggg = spinner;
-        spinner.parent().find('.ui-spinner-up').css('margin-top', 0); // TODO: see if can be fixed in css
-        spinner.change(function () {
-            var elem = $(this);
-            //elem.val(list[elem.val()]);
-        })
-        .trigger("change");
+        // TODO: see if can be fixed in css without affecting other items
+        spinner.parent().css('margin-left', '5px');
+        spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
+        return spinner;
+    }
+    function addSpinnerToBody(sub_header,inx, list) {
+        var input = $('<input  class="spinner-in-dialog-body" type="text"></input>');
+        input.val(list[inx]);
+        input.appendTo(sub_header);
+
+        var spinner = input.spinner({
+            max: list.length - 1,
+            min: 0,
+            spin: function(e,ui){
+                e.preventDefault();
+                var direction = (ui.value | 0) === 0 ? -1 : +1;
+                inx = inx + direction;
+                inx = Math.max(inx, 0);
+                inx = Math.min(inx, list.length - 1);
+                input.val(list[inx]);
+                spinner.trigger('changed', [list[inx]]);
+            }
+        });
+
+        spinner.parent().css('margin-left', '5px');
+        spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
+        spinner.update_list = function (new_list) {
+            list = new_list;
+            inx = 0;
+            input.val(list[inx]);
+        }
+        return spinner;
     }
 
     function initTradingWin() {
-        addToHeader($('<span>Date: </span>'));
-        addSpinner(["a", "bcd", "dd"]);
+        var header = tradingWin.parent().find('.ui-dialog-title');
+        header.css('width', '25%');
+
+        var subheader = $('<div class="trading-times-sub-header" />');
+        subheader.appendTo(tradingWin);
+
+        var dt = new Date();
+        $('<span class="span-in-dialog-header">Date: </span>').insertAfter(header);
+        var day = addSpinnerToHeader(header, { value: dt.getDate(), min: 1, max: 31 });
+        var month = addSpinnerToHeader(header, { value: dt.getMonth()+1, min: 1, max: 12 });
+        var year = addSpinnerToHeader(header, { value: dt.getFullYear(), min: 2000, max: 2100 });
+
 
         table = $("<table width='100%' class='display compact'/>");
         table.appendTo(tradingWin);
@@ -115,7 +152,26 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
             searching: false
         });
 
-        symbol_handler.fetchMarkets(update)
+        var market_names = null,
+            submarket_names = null;
+        symbol_handler.fetchMarkets(function (data) {
+            var result = update(data);
+            if (market_names == null)
+                market_names = addSpinnerToBody(subheader, 0, result.market_names);
+            
+            if (submarket_names == null) 
+                submarket_names = addSpinnerToBody(subheader, 0, result.submarket_names[market_names.val()]);
+            
+            submarket_names.on('changed', function (e, val) {
+                result.updateTable(market_names.val(), submarket_names.val());
+            })
+            market_names.on('changed', function (e, val) {
+                submarket_names.update_list(result.submarket_names[val]);
+                result.updateTable(market_names.val(), submarket_names.val());
+            });
+            g = submarket_names;
+            ggg = data;
+        });
     }
    
     return {
