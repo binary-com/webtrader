@@ -75,35 +75,6 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
         });
     }
 
-    function addSpinnerToBody(sub_header,inx, list) {
-        var input = $('<input  class="spinner-in-dialog-body" type="text"></input>');
-        input.val(list[inx]);
-        input.appendTo(sub_header);
-
-        var spinner = input.spinner({
-            max: list.length - 1,
-            min: 0,
-            spin: function(e,ui){
-                e.preventDefault();
-                var direction = (ui.value | 0) === 0 ? -1 : +1;
-                inx = inx + direction;
-                inx = Math.max(inx, 0);
-                inx = Math.min(inx, list.length - 1);
-                input.val(list[inx]);
-                spinner.trigger('changed', [list[inx]]);
-            }
-        });
-
-        spinner.parent().css('margin-left', '5px');
-        spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
-        spinner.update_list = function (new_list) {
-            list = new_list;
-            inx = 0;
-            input.val(list[inx]);
-        }
-        return spinner;
-    }
-
     function initTradingWin() {
         var subheader = $('<div class="trading-times-sub-header" />');
         subheader.appendTo(tradingWin);
@@ -130,19 +101,29 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
         var refresh_table = function (yyyy_mm_dd) {
             symbol_handler.fetchMarkets(function (data) {
                 var result = update(data);
-                if (market_names == null)
-                    market_names = addSpinnerToBody(subheader, 0, result.market_names);
+                if (market_names == null) {
+                    var input_mn = $('<input  class="spinner-in-dialog-body" type="text"></input>');
+                    input_mn.appendTo(subheader);
+                    market_names = windows.makeTextSpinner(input_mn, {
+                        list: result.market_names,
+                        inx: 0,
+                        changed: function (val) {
+                            submarket_names.update_list(result.submarket_names[val]);
+                            result.updateTable(market_names.val(), submarket_names.val());
+                        }
+                    });
+                }
                 
-                if (submarket_names == null) 
-                    submarket_names = addSpinnerToBody(subheader, 0, result.submarket_names[market_names.val()]);
+                if (submarket_names == null)  {
+                    var input_smn = $('<input  class="spinner-in-dialog-body" type="text"></input>');
+                    input_smn.appendTo(subheader);
+                    submarket_names = windows.makeTextSpinner(input_smn, {
+                        list: result.submarket_names[market_names.val()],
+                        inx: 0,
+                        changed: function (val) { result.updateTable(market_names.val(), submarket_names.val()); }
+                    });
+                }
                 
-                submarket_names.on('changed', function (e, val) {
-                    result.updateTable(market_names.val(), submarket_names.val());
-                })
-                market_names.on('changed', function (e, val) {
-                    submarket_names.update_list(result.submarket_names[val]);
-                    result.updateTable(market_names.val(), submarket_names.val());
-                });
                 result.updateTable(market_names.val(), submarket_names.val());
             },yyyy_mm_dd);
         }
