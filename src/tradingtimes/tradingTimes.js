@@ -75,27 +75,6 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
         });
     }
 
-    function addSpinnerToHeader(header,options) {
-        var input = $('<input  class="spinner-in-dialog-header" type="text"></input>');
-        input.val(options.value + '');
-        input.insertAfter(header);
-        var last_val = options.value + '';
-
-        var spinner = input.spinner({
-            max: options.max,
-            min: options.min,
-            spin: function (e, ui) {
-                last_val = ui.value;
-                spinner.trigger('changed',[ui.value]);
-            }
-        });
-        // TODO: see if can be fixed in css without affecting other items
-        spinner.parent().css('margin-left', '5px');
-        spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
-
-        spinner.val = function () { return last_val + ''; };
-        return spinner;
-    }
     function addSpinnerToBody(sub_header,inx, list) {
         var input = $('<input  class="spinner-in-dialog-body" type="text"></input>');
         input.val(list[inx]);
@@ -126,18 +105,8 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
     }
 
     function initTradingWin() {
-        var header = tradingWin.parent().find('.ui-dialog-title');
-        header.css('width', '25%');
-
         var subheader = $('<div class="trading-times-sub-header" />');
         subheader.appendTo(tradingWin);
-
-        var dt = new Date();
-        $('<span class="span-in-dialog-header">Date: </span>').insertAfter(header);
-        var day = addSpinnerToHeader(header, { value: dt.getDate(), min: 1, max: 31 });
-        var month = addSpinnerToHeader(header, { value: dt.getMonth()+1, min: 1, max: 12 });
-        var year = addSpinnerToHeader(header, { value: dt.getFullYear(), min: 2000, max: dt.getFullYear() });
-
 
         table = $("<table width='100%' class='display compact'/>");
         table.appendTo(tradingWin);
@@ -158,8 +127,7 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
         var market_names = null,
             submarket_names = null;
 
-        var refresh_table = function () {
-            var yyyy_mm_dd = year.val() + '-' + month.val() + '-' + day.val();
+        var refresh_table = function (yyyy_mm_dd) {
             symbol_handler.fetchMarkets(function (data) {
                 var result = update(data);
                 if (market_names == null)
@@ -178,11 +146,13 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
                 result.updateTable(market_names.val(), submarket_names.val());
             },yyyy_mm_dd);
         }
+        refresh_table(new Date().toISOString().slice(0, 10));
 
-        year.on('changed', refresh_table);
-        month.on('changed', refresh_table);
-        day.on('changed', refresh_table);
-        refresh_table();
+        tradingWin.addDateToHeader({
+            title: 'Date: ',
+            date: new Date(),
+            changed: refresh_table
+        });
     }
    
     return {

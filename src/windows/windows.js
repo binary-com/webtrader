@@ -99,6 +99,60 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
       });
     };
 
+    /*
+        @param: options.date    javascript Date object representing initial time
+        @param: options.title   the header title for spinners
+        @param: options.changed  called when Date changes, callback argument is a string in yyyy_mm_dd format.
+      useage: 
+         var win = createBlankWindow(...);
+         win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
+    */
+    function addDateToHeader(options) {
+        options = $.extend({
+            title: 'title',
+            date: new Date(),
+            changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
+        },options);
+        var header = this.parent().find('.ui-dialog-title').css('width', '25%');
+
+        var addSpinner = function(opts) {
+            var input = $('<input  class="spinner-in-dialog-header" type="text"></input>');
+            input.val(opts.value + '');
+            input.insertAfter(header);
+            var last_val = opts.value + '';
+
+            var spinner = input.spinner({
+                max: opts.max,
+                min: opts.min,
+                spin: function (e, ui) {
+                    last_val = ui.value;
+                    spinner.trigger('changed',[ui.value]);
+                }
+            });
+            // TODO: see if can be fixed in css without affecting other items
+            spinner.parent().css('margin-left', '5px');
+            spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
+
+            spinner.val = function () { return last_val + ''; };
+            return spinner;
+        }
+
+        var dt = options.date;
+        $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
+        var day = addSpinner({ value: dt.getDate(), min: 1, max: 31 });
+        var month = addSpinner({ value: dt.getMonth()+1, min: 1, max: 12 });
+        var year = addSpinner({ value: dt.getFullYear(), min: 2000, max: dt.getFullYear() });
+
+        var changed = function () {
+            var yyyy_mm_dd = year.val() + '-' + month.val() + '-' + day.val();
+            options.changed(yyyy_mm_dd);
+        }
+
+        year.on('changed', changed);
+        month.on('changed', changed);
+        day.on('changed', changed);
+    }
+
     return {
 
         init: function( $parentObj ) {
@@ -213,6 +267,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
             if (options.resize)
                 options.resize.call($html[0]);
+            blankWindow.addDateToHeader = addDateToHeader;
 
             return blankWindow;
         }
