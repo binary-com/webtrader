@@ -15,6 +15,20 @@ In order to get started on this project, follow these steps. The steps are meant
         $ sudo npm install -g grunt-cli
         $ npm install
     
+####Windows Users
+In order to get started on this project in Windows, follow these steps.
+
+1.  Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
+2. Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
+3. Open Git Bash and run the following commands:
+```
+$ git clone https://github.com/binary-com/webtrader.git
+$ cd webtrader
+$ install -g grunt-cli
+$ npm install
+```
+These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from the `package.json` file.
+
 At this point, your project is properly setup. You can now run following command to start a local server
         
         $ grunt connect:compressed
@@ -56,3 +70,4 @@ While submitting your PR, make sure that you deploy your code to your forked gh-
     
         $ grunt deploy
         For releasing compressed code
+
