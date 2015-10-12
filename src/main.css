@@ -228,6 +228,33 @@ button.ui-button-text-only .ui-menu {
     display: block;
     margin: auto auto;
 }
+.spinner-in-dialog-header {
+    width: 40px;
+    margin-left: 5px;
+    float:left;
+    border: none;
+    border-color: transparent;
+}
+.spinner-in-dialog-body {
+    width: 100px;
+    margin-left:5px;
+    float:left;
+}
+.spinner-in-dialog-header:focus,
+.spinner-in-dialog-body:focus {
+    outline: 0;
+}
+
+.span-in-dialog-header {
+    margin-top: 5px;
+    margin-left: 5px;
+    float:left;
+}
+
+.trading-times-sub-header{
+    height: 2em;
+}
+
 
 /*
  *  Usage:

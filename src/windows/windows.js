@@ -99,6 +99,60 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
       });
     };
 
+    /*
+        @param: options.date    javascript Date object representing initial time
+        @param: options.title   the header title for spinners
+        @param: options.changed  called when Date changes, callback argument is a string in yyyy_mm_dd format.
+      useage: 
+         var win = createBlankWindow(...);
+         win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
+    */
+    function addDateToHeader(options) {
+        options = $.extend({
+            title: 'title',
+            date: new Date(),
+            changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
+        },options);
+        var header = this.parent().find('.ui-dialog-title').css('width', '25%');
+
+        var addSpinner = function(opts) {
+            var input = $('<input  class="spinner-in-dialog-header" type="text"></input>');
+            input.val(opts.value + '');
+            input.insertAfter(header);
+            var last_val = opts.value + '';
+
+            var spinner = input.spinner({
+                max: opts.max,
+                min: opts.min,
+                spin: function (e, ui) {
+                    last_val = ui.value;
+                    spinner.trigger('changed',[ui.value]);
+                }
+            });
+            // TODO: see if can be fixed in css without affecting other items
+            spinner.parent().css('margin-left', '5px');
+            spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
+
+            spinner.val = function () { return last_val + ''; };
+            return spinner;
+        }
+
+        var dt = options.date;
+        $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
+        var day = addSpinner({ value: dt.getDate(), min: 1, max: 31 });
+        var month = addSpinner({ value: dt.getMonth()+1, min: 1, max: 12 });
+        var year = addSpinner({ value: dt.getFullYear(), min: 2000, max: dt.getFullYear() });
+
+        var changed = function () {
+            var yyyy_mm_dd = year.val() + '-' + month.val() + '-' + day.val();
+            options.changed(yyyy_mm_dd);
+        }
+
+        year.on('changed', changed);
+        month.on('changed', changed);
+        day.on('changed', changed);
+    }
+
     return {
 
         init: function( $parentObj ) {
@@ -213,8 +267,57 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
             if (options.resize)
                 options.resize.call($html[0]);
+            blankWindow.addDateToHeader = addDateToHeader;
 
             return blankWindow;
+        },
+
+
+        /*
+            Uses a jquery-ui spinner to display a list of strings.
+                @param: options.index       initial value of the array to show.
+                @param: options.list        array of string items to show
+                @param: options.changed     callback thats i called when menu is changed.
+            Note: you should add your input to dom before turning it a spinner.
+    
+            Note: you can call 'update_list(...)' on the returned spinner to update the list of items:
+                var spinner = makeTextSpinner(input,{list:['a,'b','c'],inx:0});
+                spinner.update_list(['a','d','e','f']);
+    
+            TODO: move this to a utility file
+        */
+        makeTextSpinner: function (input, options) {
+            options = $.extend({
+                list: ['empty'],
+                inx: 0,
+                changed: function () { }
+            }, options);
+
+            var inx = options.inx, list = options.list;
+            input.val(list[inx]);
+            var spinner = input.spinner({
+                max: list.length - 1,
+                min: 0,
+                spin: function (e, ui) {
+                    e.preventDefault();
+                    var direction = (ui.value | 0) === 0 ? -1 : +1;
+                    inx = inx + direction;
+                    inx = Math.max(inx, 0);
+                    inx = Math.min(inx, list.length - 1);
+                    input.val(list[inx]);
+                    options.changed && options.changed(list[inx]);
+                    spinner.trigger('changed', [list[inx]]);
+                }
+            });
+
+            spinner.parent().css('margin-left', '5px');
+            spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
+            spinner.update_list = function (new_list) {
+                list = new_list;
+                inx = 0;
+                input.val(list[inx]);
+            }
+            return spinner;
         }
     };
 
