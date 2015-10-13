@@ -10,3 +10,4 @@ node_modules
 *.swp
 .Rhistory
 .DS_Store
+npm-debug.log

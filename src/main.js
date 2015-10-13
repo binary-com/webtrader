@@ -91,6 +91,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 windows.init($('.topContainer .windows').closest('li'));
             });
 
+            // Trigger async loading of password menu
+            require(["password/password"], function(password) {
+                password.init($('.topContainer .password').closest('li'));
+            });
         });
 
         //Now load all other CSS asynchronously
