@@ -57,6 +57,8 @@ ul#menu.ui-menu.ui-widget.ui-widget-content {
   margin: 0!important;
   padding-bottom: 0!important;
   height: 42px;
+  white-space: nowrap;
+  width: auto !important;
 }
 
 nav.headMenu {
