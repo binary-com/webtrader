@@ -6,6 +6,7 @@ dist
 !/lib/*/*/dist
 
 node_modules
+bower_components
 .brackets.json
 *.swp
 .Rhistory
