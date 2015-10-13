@@ -67,6 +67,7 @@ module.exports = function (grunt) {
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js',
                             'jquery/dist/jquery.min.js',
                             'jquery.timers/jquery.timers.min.js',
+                            'jquery-validation/dist/jquery.validate.min.js',
                             'loadcss/loadCSS.js',
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',

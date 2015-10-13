@@ -2,7 +2,7 @@
 	Created by Armin on 10/13/2015
 */
 
-define(["jquery", "jquery-ui"], function ($, $ui) {
+define(["jquery", "jquery-ui", "jquery-validation"], function ($, $ui, $validation) {
 	"use strict";
 
 	function closeDialog() {
@@ -19,13 +19,30 @@ define(["jquery", "jquery-ui"], function ($, $ui) {
 
 				// change password button click handler
 				$("#btn-change-pwd").click(function(e) {
-					alert("You've clicked the Change Password button");
+					// validate the password form.
+					var isValid = $("#password-form").validate().form();
+					if(!isValid) {
+						$.growl.error({
+							title: "Validation failed",
+							message: "Please correct your errors and try again"
+						});
+						return false;
+					}
+
+					// if we reach here, the form is valid.
+					$.growl.notice({ message: "The Password API hasn't been released yet." });
+
 					e.preventDefault();
 				});
 			});
 
 			// password menu click handler
 			$menuItem.click(function(e) {
+				// reset the password form.
+				$("#password-form")[0].reset();
+				var validator = $("#password-form").validate();
+				validator.resetForm();
+
 				$("#passwordDialog").dialog({
 						resizable: false,
 						width: 310,
