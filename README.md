@@ -4,8 +4,8 @@
 This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://binary-com.github.io/webtrader) website.
  
 ##How to work with this project
-####Learn how to setup the project:
-In order to get started on this project, follow these steps. The steps are meant for Linux OS users. However Windows and MacOS should be similar
+####Linux Users
+In order to get started on this project in Linux, follow these steps.
 
         $ sudo apt-get install git
         $ git clone https://github.com/binary-com/webtrader.git
