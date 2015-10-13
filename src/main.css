@@ -191,7 +191,7 @@ nav.headMenu .hide .ui-icon {
 
 button.ui-button-text-only {
   margin-top: 15px;
-  height: 46px;
+  /*height: 46px;*/
   margin: 0;
   padding: 0;
 }
@@ -229,6 +229,10 @@ button.ui-button-text-only .ui-menu {
     -webkit-user-select: none;
     display: block;
     margin: auto auto;
+}
+
+input#timePeriod {
+  width: 50px;
 }
 
 /*
