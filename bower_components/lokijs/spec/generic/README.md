@@ -1,1 +1,0 @@
-This folder contains Jasmine test specifications which can be tested both in a browser and using nodejs

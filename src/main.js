@@ -12,6 +12,7 @@ requirejs.config({
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
         'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
+        'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
         'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
         'lokijs': 'lib/lokijs/build/lokijs.min',
@@ -91,6 +92,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 windows.init($('.topContainer .windows').closest('li'));
             });
 
+            // Trigger async loading of password menu
+            require(["password/password"], function(password) {
+                password.init($('.topContainer .password').closest('li'));
+            });
         });
 
         //Now load all other CSS asynchronously
