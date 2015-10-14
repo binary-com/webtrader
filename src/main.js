@@ -50,6 +50,9 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
+        },
+        "underscore": {
+            exports: '_'
         }
     }
 });
