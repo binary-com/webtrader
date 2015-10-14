@@ -29,6 +29,5 @@
   },
   "_source": "git://github.com/joewalnes/reconnecting-websocket.git",
   "_target": "~1.0.0",
-  "_originalSource": "joewalnes/reconnecting-websocket",
-  "_direct": true
+  "_originalSource": "joewalnes/reconnecting-websocket"
 }
