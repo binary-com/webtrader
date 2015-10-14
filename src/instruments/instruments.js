@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 });
 
-define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
+define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], function($, $ui, _ , symbol_handler) {
 
     "use strict";
 
@@ -227,6 +227,17 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                         _extractInstrumentMarkets(_instrumentJSON);
 
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
+
+                        // sort Random Indices instruments array.
+                        var _indices = markets[4].submarkets[0].instruments;
+                        var _sortedArray = _.sortBy(_indices, function(item) {
+                            var symbol = item.symbol;
+                            var R_value = symbol.substr(2, symbol.length);
+
+                            return parseInt(R_value);
+                        });
+                        // update markets collection with sorted array.
+                        markets[4].submarkets[0].instruments = _sortedArray;
 
                         var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
