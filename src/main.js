@@ -12,6 +12,7 @@ requirejs.config({
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
         'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
+        'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
         'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
         'lokijs': 'lib/lokijs/build/lokijs.min',
@@ -22,7 +23,8 @@ requirejs.config({
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
-        'loadCSS': 'lib/loadcss/loadCSS'
+        'loadCSS': 'lib/loadcss/loadCSS',
+        'underscore': 'lib/underscore/underscore-min'
     },
     "shim": {
         "jquery-ui": {
@@ -85,12 +87,21 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 instrumentsMod.init();
             });
 
-
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
                 windows.init($('.topContainer .windows').closest('li'));
             });
 
+            // attach a one-time click handler to password menu.
+            var $passwordMenu = $('.topContainer .password');
+            $passwordMenu.one('click', function(e) {
+                // Trigger async loading of password module
+                require(["password/password"], function(password) {
+                    password.init($passwordMenu);
+                });
+
+                e.preventDefault();
+            });
         });
 
         //Now load all other CSS asynchronously
