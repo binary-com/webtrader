@@ -28,3 +28,7 @@
   display: block;
   height: auto;
 }
+
+input#timePeriod {
+  width: 50px;
+}
