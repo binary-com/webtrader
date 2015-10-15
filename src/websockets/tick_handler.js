@@ -4,20 +4,21 @@ define(["websockets/eventSourceHandler", "charts/chartingRequestMap", "common/ut
     liveapi.events.on('tick', function (data) {
         console.log(JSON.stringify(data));
         //console.log(data);
+        var key = data.echo_req.passthrough.instrumentCdAndTp;
         if (data.tick.error) {
             //This means, there is no real time feed for this instrument
-            $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "delayed-feed"]); //TODO have to consume this notification
+            $(document).trigger("feedTypeNotification", [key, "delayed-feed"]); //TODO have to consume this notification
         } else {
-            if (data.echo_req.passthrough.instrumentCdAndTp) {
-                chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp].tickStreamingID = data.tick.id;
-            }
-            if (data.echo_req.passthrough.instrumentCdAndTp) {
-                var chartingRequest = chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp];
+            if (key) {
+                chartingRequestMap[key] = chartingRequestMap[key] || {};
+                chartingRequestMap[key].tickStreamingID = data.tick.id;
+
+                var chartingRequest = chartingRequestMap[key];
                 if (chartingRequest) {
-                    $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "realtime-feed"]); //TODO have to consume this notification
+                    $(document).trigger("feedTypeNotification", [key, "realtime-feed"]); //TODO have to consume this notification
                     var price = parseFloat(data.tick.quote);
                     var time = parseInt(data.tick.epoch) * 1000;
-                    tickReceived(chartingRequest, data.echo_req.passthrough.instrumentCdAndTp, time, price);
+                    tickReceived(chartingRequest, key, time, price);
                 }
             }
         }

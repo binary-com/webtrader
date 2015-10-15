@@ -367,17 +367,16 @@ define(['websockets/eventSourceHandler',"charts/chartingRequestMap"], function(l
                 return;
             }
                     
-            chartingRequestMap[(instrumentCode + timeperiod).toUpperCase()] = {
-                tickStreamingID : '',
-                chartIDs : [
+            var key = (instrumentCode + timeperiod).toUpperCase();
+            chartingRequestMap[key] = chartingRequestMap[key] || { tickStreamingID: ''};
+            chartingRequestMap[key].chartIDs = [
                     {
                         containerIDWithHash : containerIDWithHash,
                         series_compare : series_compare,
                         instrumentCode : instrumentCode,
                         instrumentName : instrumentName
                     }
-                ]
-            };
+            ];
 
             //Send the WS request
             var requestObject = {
