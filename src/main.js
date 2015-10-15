@@ -90,6 +90,17 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             require(["windows/windows"], function( windows ) {
                 windows.init($('.topContainer .windows').closest('li'));
             });
+
+            // attach a one-time click handler to password menu.
+            var $passwordMenu = $('.topContainer .password');
+            $passwordMenu.one('click', function(e) {
+                // Trigger async loading of password module
+                require(["password/password"], function(password) {
+                    password.init($passwordMenu);
+                });
+
+                e.preventDefault();
+            });
         });
 
         //Now load all other CSS asynchronously
