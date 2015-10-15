@@ -2,8 +2,8 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websockets/tick_handler', 'websockets/symbol_handler', 'websockets/connection_check', 'common/util', 'jquery-timer'],
-    function (loki, ReconnectingWebSocket, ohlc_handler, tick_handler, symbol_handler, connection_check) {
+define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websockets/symbol_handler', 'websockets/connection_check', 'common/util', 'jquery-timer'],
+    function (loki, ReconnectingWebSocket, ohlc_handler,  symbol_handler, connection_check) {
 
     var db = new loki();
     /**
@@ -50,6 +50,7 @@ define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websocke
     };
 
     var that = this;
+    var callbacks = {};
     connection_check.init(webSocketConnection, chartingRequestMap);
     webSocketConnection.onmessage = function(event) {
         var data = JSON.parse( event.data );
@@ -131,25 +132,26 @@ define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websocke
             break;
 
           case "tick":
-            console.log(JSON.stringify(data));
-            if (data.echo_req.passthrough.instrumentCdAndTp) {
-                chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp].tickStreamingID = data.tick.id;
-            }
-            //console.log(data);
-            if (data.tick.error) {
-              //This means, there is no real time feed for this instrument
-              $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "delayed-feed"]); //TODO have to consume this notification
-            } else {
-              if (data.echo_req.passthrough.instrumentCdAndTp) {
-                var chartingRequest = chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp];
-                if (chartingRequest) {
-                      $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "realtime-feed"]); //TODO have to consume this notification
-                      var price = parseFloat(data.tick.quote);
-                      var time = parseInt(data.tick.epoch) * 1000;
-                      tick_handler.tickReceived(chartingRequest, data.echo_req.passthrough.instrumentCdAndTp, time, price, barsTable);
-                }
-              }
-            }
+              callbacks['tick'] && callbacks['tick'].forEach(function (cb) { cb(data) });
+            //console.log(JSON.stringify(data));
+            //if (data.echo_req.passthrough.instrumentCdAndTp) {
+            //    chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp].tickStreamingID = data.tick.id;
+            //}
+            ////console.log(data);
+            //if (data.tick.error) {
+            //  //This means, there is no real time feed for this instrument
+            //  $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "delayed-feed"]); //TODO have to consume this notification
+            //} else {
+            //  if (data.echo_req.passthrough.instrumentCdAndTp) {
+            //    var chartingRequest = chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp];
+            //    if (chartingRequest) {
+            //          $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "realtime-feed"]); //TODO have to consume this notification
+            //          var price = parseFloat(data.tick.quote);
+            //          var time = parseInt(data.tick.epoch) * 1000;
+            //          tick_handler.tickReceived(chartingRequest, data.echo_req.passthrough.instrumentCdAndTp, time, price, barsTable);
+            //    }
+            //  }
+            //}
             break;
 
           case 'error':
@@ -161,6 +163,8 @@ define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websocke
     $(document).bind('sendAnyWSMessage', function(event, wsCompatibleJSONObject) {
         webSocketConnection.send(JSON.stringify(wsCompatibleJSONObject));
     });
+
+    require(['websockets/tick_handler']); // require tick_handler to handle ticks.
 
     return {
         apicall : {
@@ -177,6 +181,12 @@ define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websocke
         execute: function(fn){
             if (isConnectionReady) fn();
             else $(document).one('websocketsConnectionReady', fn);
+        },
+        events: {
+            on: function (name, cb) {
+                callbacks[name] = callbacks[name] || [];
+                callbacks[name].push(cb);
+            }
         },
         chartingRequestMap : chartingRequestMap,
         barsTable: barsTable,

@@ -1,8 +1,29 @@
-define(["common/util"], function() {
+define(["websockets/eventSourceHandler", "common/util"], function(liveapi) {
 
-    return {
-        tickReceived : function(chartingRequest, instrumentCodeAndTimeperiod, time, price, barsTable) {
-            
+    var chartingRequestMap = liveapi.chartingRequestMap;
+    var barsTable = liveapi.barsTable;
+    liveapi.events.on('tick', function (data) {
+        console.log(JSON.stringify(data));
+        if (data.echo_req.passthrough.instrumentCdAndTp) {
+            chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp].tickStreamingID = data.tick.id;
+        }
+        //console.log(data);
+        if (data.tick.error) {
+            //This means, there is no real time feed for this instrument
+            $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "delayed-feed"]); //TODO have to consume this notification
+        } else {
+            if (data.echo_req.passthrough.instrumentCdAndTp) {
+                var chartingRequest = chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp];
+                if (chartingRequest) {
+                    $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "realtime-feed"]); //TODO have to consume this notification
+                    var price = parseFloat(data.tick.quote);
+                    var time = parseInt(data.tick.epoch) * 1000;
+                    tickReceived(chartingRequest, data.echo_req.passthrough.instrumentCdAndTp, time, price);
+                }
+            }
+        }
+    });
+    function tickReceived(chartingRequest, instrumentCodeAndTimeperiod, time, price) {
             if (chartingRequest && chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0) {
                 var timeperiod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timeperiod');
                 if (timeperiod) {
@@ -80,6 +101,7 @@ define(["common/util"], function() {
                 } //timeperiod check if
             }//chartRequest check if
         }//tickReceived method ends
-    };
+
+    return { };
 
 });
