@@ -107,7 +107,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
          var win = createBlankWindow(...);
          win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
     */
-    var styles_loaded = false;
     function addDateToHeader(options) {
         options = $.extend({
             title: 'title',
@@ -115,9 +114,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
         },options);
         var header = this.parent().find('.ui-dialog-title').css('width', '25%');
-
-        styles_loaded || loadCSS("windows/windows.css");
-        styles_loaded = true;
 
         var addSpinner = function(opts) {
             var input = $('<input  class="spinner-in-dialog-header" type="text"></input>');
@@ -140,8 +136,16 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             spinner.val = function () { return last_val + ''; };
             return spinner;
         }
-
+        var addDatePicker = function (opts) {
+            var dpicker_input = $("<input  />")
+                .addClass('datepicker-in-dialog-header')
+                .insertAfter(header);
+            var dpicker = dpicker_input.datepicker({
+                showOn: 'both' 
+            });
+        }
         var dt = options.date;
+        addDatePicker({ date: dt });
         $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
         var day = addSpinner({ value: dt.getDate(), min: 1, max: 31 });
         var month = addSpinner({ value: dt.getMonth()+1, min: 1, max: 12 });

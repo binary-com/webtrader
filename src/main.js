@@ -89,6 +89,9 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             //Trigger async loading of tradingTimes sub-menu
             require(["tradingtimes/tradingTimes"], function( tradingTimes ) {
                 tradingTimes.init($('.topContainer .tradingTimesLI'));
+                setTimeout(function () {
+                    $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
+                },2000);
             });
 
             //Trigger async loading of window sub-menu
@@ -101,6 +104,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         //Now load all other CSS asynchronously
         loadCSS('lib/growl/stylesheets/jquery.growl.css');
         loadCSS('charts/charts.css');
+        loadCSS("windows/windows.css");
         loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
         loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
         loadCSS("lib/colorpicker/jquery.colorpicker.css");
