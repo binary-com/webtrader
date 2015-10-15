@@ -329,7 +329,7 @@ define(['websockets/eventSourceHandler',"charts/chartingRequestMap"], function(l
          * @param series_compare
          * @param id
          */
-        retrieveChartDataAndRender: function( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare, chartingRequestMap, webSocketConnection, barsTable)
+        retrieveChartDataAndRender: function( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare)
         {
 
             var parsedSuffixAndIntValue = parseSuffixAndIntValue(timeperiod),
@@ -396,12 +396,8 @@ define(['websockets/eventSourceHandler',"charts/chartingRequestMap"], function(l
                 });
               }
             console.log(JSON.stringify(requestObject));
-            webSocketConnection.send(requestObject);
-
-        },
-
-        barsLoaded : barsLoaded
-
+            liveapi.send(requestObject);
+        }
     };
 
 });

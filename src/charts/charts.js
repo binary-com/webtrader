@@ -83,7 +83,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/eventSourceHandler", "
                         load: function () {
                             this.showLoading();
                             console.log('Calling render chart for the first time for the instrument : ', instrumentCode);
-                            tada.retrieveChartDataAndRender( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
+                            currentPrice.init();
+                            liveapi.execute(function () {
+                                ohlc_handler.retrieveChartDataAndRender(timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare);
+                            });
                             if (onload)
                                 onload();
                         }
@@ -266,8 +269,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/eventSourceHandler", "
                     }
                 }
 
-                tada.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
-
+                currentPrice.init();
+                liveapi.execute(function(){
+                    ohlc_handler.retrieveChartDataAndRender(mainSeries_timeperiod, overlayInsName, containerIDWithHash, mainSeries_type, overlayInsName, 'percent' );
+                });
             }
         }
 
