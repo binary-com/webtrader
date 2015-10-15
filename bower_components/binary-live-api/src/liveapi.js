@@ -101,7 +101,7 @@ export default class LiveApi {
             this.bufferedSends.push(data);
         }
         var promise = new Promise((resolve, reject) => {
-            this.unresolvedPromises[data.uid] = { resolve, reject };
+            this.unresolvedPromises[data.passthrough.uid] = { resolve, reject };
         });
         return promise;
     }

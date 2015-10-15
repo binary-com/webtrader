@@ -240,12 +240,12 @@ define(['websockets/eventSourceHandler',"charts/chartingRequestMap"], function(l
                 var instrumentCode = $(chartID.containerIDWithHash).data('instrumentCode');
                 var timeperiod = $(chartID.containerIDWithHash).data('timeperiod');
                 //Subscribe to tick streaming
-                $(document).trigger('sendAnyWSMessage', [{
-                                  "ticks": chartID.instrumentCode,
-                                  "passthrough": {
-                                      "instrumentCdAndTp": key
-                                  }
-                                }]);
+                liveapi.send({
+                    "ticks": chartID.instrumentCode,
+                    "passthrough": {
+                        "instrumentCdAndTp": key
+                    }
+                });
 
                 if (isTick(timeperiod)) return; //TODO think about what to do for tick charts
 
@@ -303,8 +303,7 @@ define(['websockets/eventSourceHandler',"charts/chartingRequestMap"], function(l
                             }
                           };
                         console.log('Timer based request >> ', JSON.stringify(requestObject));
-                        $(document).trigger('sendAnyWSMessage', [requestObject]);
-
+                        liveapi.send(requestObject);
                       }
                     };
 
