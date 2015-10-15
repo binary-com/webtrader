@@ -3,14 +3,14 @@ define(["websockets/eventSourceHandler", "charts/chartingRequestMap", "common/ut
     var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('tick', function (data) {
         console.log(JSON.stringify(data));
-        if (data.echo_req.passthrough.instrumentCdAndTp) {
-            chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp].tickStreamingID = data.tick.id;
-        }
         //console.log(data);
         if (data.tick.error) {
             //This means, there is no real time feed for this instrument
             $(document).trigger("feedTypeNotification", [data.echo_req.passthrough.instrumentCdAndTp, "delayed-feed"]); //TODO have to consume this notification
         } else {
+            if (data.echo_req.passthrough.instrumentCdAndTp) {
+                chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp].tickStreamingID = data.tick.id;
+            }
             if (data.echo_req.passthrough.instrumentCdAndTp) {
                 var chartingRequest = chartingRequestMap[data.echo_req.passthrough.instrumentCdAndTp];
                 if (chartingRequest) {
