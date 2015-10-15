@@ -38,6 +38,6 @@
     "reconnectingWebsocket": "joewalnes/reconnecting-websocket#~1.0.0",
     "requirejs": "~2.1.20",
     "jquery-validation": "~1.14.0",
-    "binary-live-api": "git@github.com:binary-com/binary-live-api.git#347efd83001f9b566c928da83dc45bf5415ba80e"
+    "es6-promise": "~3.0.2"
   }
 }
