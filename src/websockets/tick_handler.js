@@ -5,7 +5,7 @@ define(["websockets/eventSourceHandler", "charts/chartingRequestMap", "common/ut
         console.log(JSON.stringify(data));
         //console.log(data);
         var key = data.echo_req.passthrough.instrumentCdAndTp;
-        if (data.tick.error) {
+        if (data.error) {
             //This means, there is no real time feed for this instrument
             $(document).trigger("feedTypeNotification", [key, "delayed-feed"]); //TODO have to consume this notification
         } else {

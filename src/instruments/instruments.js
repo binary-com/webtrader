@@ -2,15 +2,43 @@
  * Created by arnab on 2/12/15.
  */
 
-$(document).ready(function(){
-    $(function() {
-      $( "#menu" ).menu();
-    });
-});
-
 define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui, liveapi) {
 
     "use strict";
+
+    function sortAlphaNum(property) {
+        'use strict';
+        var reA = /[^a-zA-Z]/g;
+        var reN = /[^0-9]/g;
+
+        return function(a, b) {
+            var aA = a[property].replace(reA, "");
+            var bA = b[property].replace(reA, "");
+            if(aA === bA) {
+                var aN = parseInt(a[property].replace(reN, ""), 10);
+                var bN = parseInt(b[property].replace(reN, ""), 10);
+                return aN === bN ? 0 : aN > bN ? 1 : -1;
+            } else {
+                return aA > bA ? 1 : -1;
+            }
+        };
+    }
+
+    function sortMarkets(data) {
+        if($.isArray(data)) {
+            data.sort(sortAlphaNum('display_name'));
+
+            // iterate array items.
+            $.each(data, function (i, item) {
+                // iterame item properties.
+                $.each(item, function (i, prop) {
+                    if($.isArray(prop)) {
+                        sortMarkets(prop);
+                    }
+                });
+            });
+        }
+    }
 
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
 
@@ -213,21 +241,21 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
 
             markets.push(market);
         }
+
+        sortMarkets(markets);
     }
 
     return {
-
         init: function( _callback ) {
-
+            $("#menu").menu();
+            
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
                 liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) }).then(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
-
                         _extractInstrumentMarkets(_instrumentJSON);
 
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
-
                         var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);

@@ -7,6 +7,7 @@ notifications:
 branches:
   only:
   - master
+  - development
 script:
 - npm install -g grunt-cli
 - grunt
