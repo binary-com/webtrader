@@ -2,7 +2,6 @@
  * Created by amin on 10/5/15.
  */
 define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"], function ($,windows,liveapi) {
-    loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
 
 
     var table = null;
@@ -65,6 +64,7 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
     }
 
     function init(li) {
+        loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
         li.click(function () {
             if (!tradingWin) {
                 tradingWin = windows.createBlankWindow($('<div/>'), { title:'Trading Times', width: 700 });

@@ -107,6 +107,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
          var win = createBlankWindow(...);
          win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
     */
+    var styles_loaded = false;
     function addDateToHeader(options) {
         options = $.extend({
             title: 'title',
@@ -114,6 +115,9 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
         },options);
         var header = this.parent().find('.ui-dialog-title').css('width', '25%');
+
+        styles_loaded || loadCSS("windows/windows.css");
+        styles_loaded = true;
 
         var addSpinner = function(opts) {
             var input = $('<input  class="spinner-in-dialog-header" type="text"></input>');
