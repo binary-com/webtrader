@@ -229,6 +229,7 @@ define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], funct
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
 
                         // sort Random Indices instruments array.
+                        // This is a temporary fix.
                         var _indices = markets[4].submarkets[0].instruments;
                         var _sortedArray = _.sortBy(_indices, function(item) {
                             var symbol = item.symbol;
@@ -236,6 +237,7 @@ define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], funct
 
                             return parseInt(R_value);
                         });
+
                         // update markets collection with sorted array.
                         markets[4].submarkets[0].instruments = _sortedArray;
 
