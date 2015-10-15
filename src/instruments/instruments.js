@@ -12,6 +12,12 @@ define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], funct
 
     "use strict";
 
+    function sortByFirstDigits(propName) {
+        return function (a, b) {
+            return a[propName].match(/\d+/)[0] - b[propName].match(/\d+/)[0];
+        };
+    }
+
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
 
         require(["validation/validation"], function(validation) {
@@ -211,8 +217,19 @@ define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], funct
                 market.submarkets.push(submarketObj);
             }
 
+            // sort submarkets.
+            market.submarkets = _.sortBy(market.submarkets, 'display_name');
+
+            // sort Randoms > Indices.
+            if(market.name.toLowerCase() === 'randoms') {
+                market.submarkets[0].instruments.sort(sortByFirstDigits('display_name'));
+            }
+
             markets.push(market);
         }
+
+        // sort markets.
+        markets = _.sortBy(markets, 'dislay_name');
     }
 
     return {
@@ -223,24 +240,9 @@ define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], funct
                 loadCSS("instruments/instruments.css");
                 symbol_handler.fetchMarkets(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
-
                         _extractInstrumentMarkets(_instrumentJSON);
 
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
-
-                        // sort Random Indices instruments array.
-                        // This is a temporary fix.
-                        var _indices = markets[4].submarkets[0].instruments;
-                        var _sortedArray = _.sortBy(_indices, function(item) {
-                            var symbol = item.symbol;
-                            var R_value = symbol.substr(2, symbol.length);
-
-                            return parseInt(R_value);
-                        });
-
-                        // update markets collection with sorted array.
-                        markets[4].submarkets[0].instruments = _sortedArray;
-
                         var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
