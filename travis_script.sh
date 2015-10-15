@@ -5,7 +5,7 @@ git config --global user.name "Arnab Karmakar"
 echo GIT Branch : $TRAVIS_BRANCH , Pull request number : $TRAVIS_PULL_REQUEST
 
 #This if block is true when a PR is opened from development branch to master branch
-if [ $TRAVIS_PULL_REQUEST ]; then
+if [ $TRAVIS_BRANCH = 'development' ]; then
     mkdir beta
     mv dist/compressed/* beta
     mv beta dist/compressed
