@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery','websockets/eventSourceHandler'], function($,liveapi) {
 	/*
 		random: {
 			submarkets : [
@@ -44,9 +44,10 @@ define(['jquery'], function($) {
 		fetchMarkets : function(callBack) {
 		    callBack && callBacksWhenMarketsIsLoaded.add(callBack);
 			if (!requestSubmitted) {
-				require(['websockets/eventSourceHandler'], function(eventSourceHandler) {
-				    eventSourceHandler.apicall.trading_times(new Date().toISOString().slice(0, 10));
-				});
+			    liveapi.getTradingTimes(new Date()).then(this.process);
+				//require(['websockets/eventSourceHandler'], function(eventSourceHandler) {
+				//    eventSourceHandler.apicall.trading_times(new Date().toISOString().slice(0, 10));
+				//});
 				requestSubmitted = true;
 			}
 		}

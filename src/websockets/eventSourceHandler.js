@@ -2,8 +2,8 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websockets/symbol_handler', 'websockets/connection_check', 'common/util', 'jquery-timer'],
-    function (loki, ReconnectingWebSocket, ohlc_handler,  symbol_handler, connection_check) {
+define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websockets/connection_check', 'common/util', 'jquery-timer'],
+    function (loki, ReconnectingWebSocket, ohlc_handler, connection_check) {
 
     var db = new loki();
     /**
@@ -62,7 +62,8 @@ define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websocke
             break;
 
           case "trading_times":
-            symbol_handler.process( data );
+            callbacks['trading_times'].resolve(data);
+            callbacks['trading_times'] = undefined;
             break;
           
           case "candles":
@@ -166,16 +167,22 @@ define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websocke
 
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
 
+    var apicall = {
+        /* pass the date in yyy-mm-dd format */
+        trading_times: function (yyyy_mm_dd) {
+            var apicall = this.custom.bind(this,JSON.stringify({ "trading_times": "" + yyyy_mm_dd }));
+            isConnectionReady ? apicall() : $(document).one('websocketsConnectionReady', apicall);
+        },
+        custom: function (options) {
+            webSocketConnection.send(options);
+        }
+    };
     return {
-        apicall : {
-            /* pass the date in yyy-mm-dd format */
-            trading_times: function (yyyy_mm_dd) {
-                var apicall = this.custom.bind(this,JSON.stringify({ "trading_times": "" + yyyy_mm_dd }));
-                isConnectionReady ? apicall() : $(document).one('websocketsConnectionReady', apicall);
-            },
-            custom: function (options) {
-                webSocketConnection.send(options);
-            }
+        getTradingTimes: function (date) {
+            return new Promise(function (resolve, reject) {
+                callbacks['trading_times'] = { resolve: resolve, reject: reject };
+                apicall.trading_times(date.toISOString().slice(0, 10));
+            });
         },
 
         execute: function(fn){
