@@ -2,12 +2,6 @@
  * Created by arnab on 2/12/15.
  */
 
-$(document).ready(function(){
-    $(function() {
-      $( "#menu" ).menu();
-    });
-});
-
 define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], function($, $ui, _ , symbol_handler) {
 
     "use strict";
@@ -229,12 +223,14 @@ define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], funct
         }
 
         // sort markets.
-        markets = _.sortBy(markets, 'dislay_name');
+        markets = _.sortBy(markets, 'display_name');
+        debugger;
     }
 
     return {
 
         init: function( _callback ) {
+            $("#menu").menu();
 
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
