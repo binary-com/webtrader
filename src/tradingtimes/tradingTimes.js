@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], function ($,windows,symbol_handler) {
+define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"], function ($,windows,liveapi) {
     loadCSS("//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css");
 
 
@@ -99,7 +99,7 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
             submarket_names = null;
 
         var refresh_table = function (yyyy_mm_dd) {
-            symbol_handler.fetchMarkets(function (data) {
+            liveapi.send({ trading_times: yyyy_mm_dd }).then(function (data) {
                 var result = update(data);
                 if (market_names == null) {
                     var input_mn = $('<input  class="spinner-in-dialog-body" type="text"></input>');
@@ -125,7 +125,8 @@ define(["jquery", "windows/windows","websockets/symbol_handler","datatables"], f
                 }
                 
                 result.updateTable(market_names.val(), submarket_names.val());
-            },yyyy_mm_dd);
+
+            });
         }
         refresh_table(new Date().toISOString().slice(0, 10));
 
