@@ -57,6 +57,8 @@ ul#menu.ui-menu.ui-widget.ui-widget-content {
   margin: 0!important;
   padding-bottom: 0!important;
   height: 42px;
+  white-space: nowrap;
+  width: auto !important;
 }
 
 nav.headMenu {
@@ -189,7 +191,7 @@ nav.headMenu .hide .ui-icon {
 
 button.ui-button-text-only {
   margin-top: 15px;
-  height: 46px;
+  /*height: 46px;*/
   margin: 0;
   padding: 0;
 }

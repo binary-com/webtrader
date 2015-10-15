@@ -16,6 +16,5 @@
   },
   "_source": "git://github.com/filamentgroup/loadCSS.git",
   "_target": "~0.2.0",
-  "_originalSource": "loadcss",
-  "_direct": true
+  "_originalSource": "loadcss"
 }
