@@ -2,14 +2,46 @@
  * Created by arnab on 2/12/15.
  */
 
+$(function() {
+    $("#menu").menu();
+});
+
 define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], function($, $ui, _ , symbol_handler) {
 
     "use strict";
 
-    function sortByFirstDigits(propName) {
-        return function (a, b) {
-            return a[propName].match(/\d+/)[0] - b[propName].match(/\d+/)[0];
+    function sortAlphaNum(property) {
+        'use strict';
+        var reA = /[^a-zA-Z]/g;
+        var reN = /[^0-9]/g;
+
+        return function(a, b) {
+            var aA = a[property].replace(reA, "");
+            var bA = b[property].replace(reA, "");
+            if(aA === bA) {
+                var aN = parseInt(a[property].replace(reN, ""), 10);
+                var bN = parseInt(b[property].replace(reN, ""), 10);
+                return aN === bN ? 0 : aN > bN ? 1 : -1;
+            } else {
+                return aA > bA ? 1 : -1;
+            }
         };
+    }
+
+    function sortMarkets(data) {
+        if($.isArray(data)) {
+            data.sort(sortAlphaNum('display_name'));
+
+            // iterate array items.
+            $.each(data, function (i, item) {
+                // iterame item properties.
+                $.each(item, function (i, prop) {
+                    if($.isArray(prop)) {
+                        sortMarkets(prop);
+                    }
+                });
+            });
+        }
     }
 
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
@@ -211,27 +243,14 @@ define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], funct
                 market.submarkets.push(submarketObj);
             }
 
-            // sort submarkets.
-            market.submarkets = _.sortBy(market.submarkets, 'display_name');
-
-            // sort Randoms > Indices.
-            if(market.name.toLowerCase() === 'randoms') {
-                market.submarkets[0].instruments.sort(sortByFirstDigits('display_name'));
-            }
-
             markets.push(market);
         }
 
-        // sort markets.
-        markets = _.sortBy(markets, 'display_name');
-        debugger;
+        sortMarkets(markets);
     }
 
     return {
-
         init: function( _callback ) {
-            $("#menu").menu();
-
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
                 symbol_handler.fetchMarkets(function (_instrumentJSON) {
