@@ -37,6 +37,7 @@
     "modernizr": "components/modernizr#~2.8.3",
     "reconnectingWebsocket": "joewalnes/reconnecting-websocket#~1.0.0",
     "requirejs": "~2.1.20",
-    "jquery-validation": "~1.14.0"
+    "jquery-validation": "~1.14.0",
+    "es6-promise": "~3.0.2"
   }
 }

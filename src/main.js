@@ -23,6 +23,7 @@ requirejs.config({
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
+        'es6-promise':'lib/es6-promise/promise.min',
         'loadCSS': 'lib/loadcss/loadCSS'
     },
     "shim": {

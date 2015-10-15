@@ -72,6 +72,7 @@ module.exports = function (grunt) {
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
+                            'es6-promise/promise.min.js',
                             'requirejs/require.js',
                             'underscore/underscore-min.js',
                             '!**/**/favicon.ico'

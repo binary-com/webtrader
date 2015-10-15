@@ -12,3 +12,8 @@ bower_components
 .Rhistory
 .DS_Store
 npm-debug.log
+
+#VS editor stuff
+_references.js
+src/.vsdoc/
+
