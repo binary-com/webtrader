@@ -17,5 +17,6 @@ define(['binary-live-api', 'reconnecting-websocket', 'jquery-timer'],
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
     require(['websockets/connection_check']); // require connection_check to handle pings.
 
+    _ggg = liveapi;
     return liveapi;
 });

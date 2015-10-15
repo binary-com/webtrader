@@ -113,8 +113,18 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             date: new Date(),
             changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
         },options);
+
+        // note that month is 0-based, like in the Date object. Adjust if necessary.
+        function numberOfDays(year, month) {
+            var isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
+            return [31, (isLeap ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+        }
+
         var header = this.parent().find('.ui-dialog-title').css('width', '25%');
 
+        var addDropDown = function (opts) {
+
+        }
         var addSpinner = function(opts) {
             var input = $('<input  class="spinner-in-dialog-header" type="text"></input>');
             input.val(opts.value + '');
@@ -141,24 +151,41 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 .addClass('datepicker-in-dialog-header')
                 .insertAfter(header);
             var dpicker = dpicker_input.datepicker({
-                showOn: 'both' 
-            });
+                showOn: 'both',
+                numberOfMonths: 2,
+                maxDate: 0,
+                dateFormat: 'yy-mm-dd',
+                showAnim: 'drop', // https://jqueryui.com/datepicker/#animation
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true,
+                beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '0px', marginLeft: '-200px' }); },
+                onSelect: function () { $(this).change(); }
+            }).datepicker( "setDate", opts.date.toISOString().slice(0,10) );
+
+            return dpicker_input;
         }
+
         var dt = options.date;
-        addDatePicker({ date: dt });
+        var dpicker = addDatePicker({ date: dt });
         $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
-        var day = addSpinner({ value: dt.getDate(), min: 1, max: 31 });
-        var month = addSpinner({ value: dt.getMonth()+1, min: 1, max: 12 });
-        var year = addSpinner({ value: dt.getFullYear(), min: 2000, max: dt.getFullYear() });
+        //var day = addSpinner({ value: dt.getDate(), min: 1, max: 31 });
+        //var month = addSpinner({ value: dt.getMonth()+1, min: 1, max: 12 });
+        //var year = addSpinner({ value: dt.getFullYear(), min: 2000, max: dt.getFullYear() });
 
-        var changed = function () {
-            var yyyy_mm_dd = year.val() + '-' + month.val() + '-' + day.val();
+        dpicker.on('change', function () {
+            var yyyy_mm_dd = $(this).val();
             options.changed(yyyy_mm_dd);
-        }
+        })
+        
+        //var changed = function () {
+        //    var yyyy_mm_dd = year.val() + '-' + month.val() + '-' + day.val();
+        //    options.changed(yyyy_mm_dd);
+        //}
 
-        year.on('changed', changed);
-        month.on('changed', changed);
-        day.on('changed', changed);
+        //year.on('changed', changed);
+        //month.on('changed', changed);
+        //day.on('changed', changed);
     }
 
     return {

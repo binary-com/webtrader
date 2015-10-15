@@ -17,8 +17,9 @@
 .datepicker-in-dialog-header {
     margin-left: 5px;
     width: 80px;
-    border: none;
-    border-color: transparent;
+    /*border: none;*/
+    text-align: center;
+    /*border-color: transparent;*/
 }
 
 .span-in-dialog-header {
