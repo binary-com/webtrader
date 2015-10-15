@@ -2,8 +2,8 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery", "websockets/eventSourceHandler", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
-  function ( $, liveapi, ohlc_handler,currentPrice ) {
+define(["jquery","charts/chartingRequestMap", "websockets/eventSourceHandler", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
+  function ( $,chartingRequestMap, liveapi, ohlc_handler,currentPrice ) {
 
     "use strict";
 
@@ -17,8 +17,7 @@ define(["jquery", "websockets/eventSourceHandler", "websockets/ohlc_handler","cu
 
     });
 
-    var chartingRequestMap = liveapi.chartingRequestMap;
-    var barsTable = liveapi.barsTable;
+    var barsTable = chartingRequestMap.barsTable;
     var tada = {
         retrieveChartDataAndRender: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare) {
             //Init the current price indicator

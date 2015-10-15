@@ -1,7 +1,6 @@
-define(['websockets/eventSourceHandler'], function(liveapi) {
+define(['websockets/eventSourceHandler',"charts/chartingRequestMap"], function(liveapi, chartingRequestMap) {
 
-    var barsTable = liveapi.barsTable;
-    var chartingRequestMap = liveapi.chartingRequestMap;
+    var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('candles', function (data) {
         for ( var index in data.candles ) {
               var eachData = data.candles[index],

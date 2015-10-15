@@ -1,7 +1,6 @@
-define(["websockets/eventSourceHandler", "common/util"], function(liveapi) {
+define(["websockets/eventSourceHandler", "charts/chartingRequestMap", "common/util"], function(liveapi,chartingRequestMap) {
 
-    var chartingRequestMap = liveapi.chartingRequestMap;
-    var barsTable = liveapi.barsTable;
+    var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('tick', function (data) {
         console.log(JSON.stringify(data));
         if (data.echo_req.passthrough.instrumentCdAndTp) {

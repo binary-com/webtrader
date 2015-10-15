@@ -1,6 +1,5 @@
-define(["websockets/eventSourceHandler"], function(liveapi) {
+define(["websockets/eventSourceHandler","charts/chartingRequestMap"], function(liveapi,chartingRequestMap) {
     //Ping server every 15 seconds
-	var chartingRequestMap = liveapi.chartingRequestMap;
 	var lastUpdateTime = null;
     $(document).everyTime(15000, null, function() {
         var difference = new Date().getTime() - (lastUpdateTime || new Date().getTime());
@@ -36,7 +35,7 @@ define(["websockets/eventSourceHandler"], function(liveapi) {
     });
 
     liveapi.events.on('ping', function () {
-        console.warn('Server ponged!');
+        console.log('Server ponged!');
         lastUpdateTime = new Date().getTime();
     })
 	return { };

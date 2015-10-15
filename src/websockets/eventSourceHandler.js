@@ -2,38 +2,8 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['lokijs', 'reconnecting-websocket', 'common/util', 'jquery-timer'],
-    function (loki, ReconnectingWebSocket) {
-
-    var db = new loki();
-    /**
-        {
-            instrumentCode+timeperiod,
-            time, //in milliseconds
-            open,
-            high,
-            low,
-            close
-        }
-    **/
-    var barsTable = db.addCollection('bars_table');
-
-    /**
-        Key is instrumentCode+timeperiod, Value is 
-            {
-                tickStreamingID : , //Unique returned from WS API call for tick streaming,
-                timerHandler : ,
-                chartIDs : [
-                    {
-                        containerIDWithHash : containerIDWithHash,
-                        series_compare : series_compare,
-                        instrumentCode : instrumentCode,
-                        instrumentName : instrumentName
-                    }
-                ]
-            }
-    **/
-    var chartingRequestMap = {};
+define([ 'reconnecting-websocket', 'common/util', 'jquery-timer'],
+    function ( ReconnectingWebSocket) {
 
     //Init websockets here
     var isConnectionReady = false;
@@ -108,8 +78,6 @@ define(['lokijs', 'reconnecting-websocket', 'common/util', 'jquery-timer'],
                 callbacks[name].push(cb);
             }
         },
-        chartingRequestMap : chartingRequestMap,
-        barsTable: barsTable,
         send: function(obj){
             webSocketConnection.send(JSON.stringify(obj));
         }

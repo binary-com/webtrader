@@ -45,9 +45,6 @@ define(['jquery','websockets/eventSourceHandler'], function($,liveapi) {
 		    callBack && callBacksWhenMarketsIsLoaded.add(callBack);
 			if (!requestSubmitted) {
 			    liveapi.getTradingTimes(new Date()).then(this.process);
-				//require(['websockets/eventSourceHandler'], function(eventSourceHandler) {
-				//    eventSourceHandler.apicall.trading_times(new Date().toISOString().slice(0, 10));
-				//});
 				requestSubmitted = true;
 			}
 		}
