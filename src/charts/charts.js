@@ -18,27 +18,16 @@ define(["jquery","charts/chartingRequestMap", "websockets/eventSourceHandler", "
     });
 
     var barsTable = chartingRequestMap.barsTable;
-    var tada = {
-        retrieveChartDataAndRender: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare) {
-            //Init the current price indicator
-            currentPrice.init();
+    function destroy(containerIDWithHash, timeperiod, instrumentCode) {
+        if (!timeperiod || !instrumentCode) return;
 
-            liveapi.execute(function () {
-                ohlc_handler.retrieveChartDataAndRender(timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare, chartingRequestMap, liveapi, barsTable);
-            })
-        },
-
-        close: function (containerIDWithHash, timeperiod, instrumentCode) {
-            if (!timeperiod || !instrumentCode) return;
-
-            var instrumentCdAndTp = (instrumentCode + timeperiod).toUpperCase();
-            if (chartingRequestMap) {
-                for (var index in chartingRequestMap[instrumentCdAndTp].chartIDs) {
-                    var chartID = chartingRequestMap[instrumentCdAndTp].chartIDs[index];
-                    if (chartID.containerIDWithHash == containerIDWithHash) {
-                        chartingRequestMap[instrumentCdAndTp].chartIDs.splice(index, 1);
-                        break;
-                    }
+        var instrumentCdAndTp = (instrumentCode + timeperiod).toUpperCase();
+        if (chartingRequestMap[instrumentCdAndTp]) {
+            for (var index in chartingRequestMap[instrumentCdAndTp].chartIDs) {
+                var chartID = chartingRequestMap[instrumentCdAndTp].chartIDs[index];
+                if (chartID.containerIDWithHash == containerIDWithHash) {
+                    chartingRequestMap[instrumentCdAndTp].chartIDs.splice(index, 1);
+                    break;
                 }
             }
             if ($.isEmptyObject(chartingRequestMap[instrumentCdAndTp].chartIDs)) {
@@ -47,7 +36,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/eventSourceHandler", "
                 delete chartingRequestMap[instrumentCdAndTp];
             }
         }
-    };
+    }
+
     return {
 
         /**
@@ -168,9 +158,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/eventSourceHandler", "
 
         },
 
-        destroy : function( containerIDWithHash, timeperiod, instrumentCode ) {
-            tada.close( containerIDWithHash, timeperiod, instrumentCode );
-        },
+        destroy : destroy,
 
         triggerReflow : function( containerIDWithHash ) {
             if ($(containerIDWithHash).highcharts())

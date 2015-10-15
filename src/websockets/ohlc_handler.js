@@ -151,6 +151,8 @@ define(['websockets/eventSourceHandler',"charts/chartingRequestMap"], function(l
     function barsLoaded(instrumentCdAndTp, chartingRequestMap, barsTable, isTimer, specific_containerIDWithHash) {
 
             var key = instrumentCdAndTp;
+            if (!chartingRequestMap[key])
+                return;
             var chartIDList = chartingRequestMap[key].chartIDs;
             if (specific_containerIDWithHash) {
                 var chartID = undefined;
