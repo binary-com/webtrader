@@ -2,10 +2,6 @@
  * Created by arnab on 2/12/15.
  */
 
-$(function() {
-    $("#menu").menu();
-});
-
 define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
 
     "use strict";
@@ -251,6 +247,8 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
     return {
         init: function( _callback ) {
+            $("#menu").menu();
+            
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
                 symbol_handler.fetchMarkets(function (_instrumentJSON) {
