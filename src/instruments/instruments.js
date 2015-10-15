@@ -6,7 +6,7 @@ $(function() {
     $("#menu").menu();
 });
 
-define(["jquery", "jquery-ui", "underscore", 'websockets/symbol_handler'], function($, $ui, _ , symbol_handler) {
+define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
 
     "use strict";
 
