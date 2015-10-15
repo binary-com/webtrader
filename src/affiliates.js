@@ -12,7 +12,8 @@ requirejs.config({
         'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
         'reconnecting-websocket': '//cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
-        'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min'
+        'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min',
+        'lokijs': 'lib/lokijs.min'
     },
     "shim": {
         "jquery-ui": {
