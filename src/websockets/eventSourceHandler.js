@@ -2,8 +2,8 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'common/util', 'jquery-timer'],
-    function (loki, ReconnectingWebSocket, ohlc_handler) {
+define(['lokijs', 'reconnecting-websocket', 'common/util', 'jquery-timer'],
+    function (loki, ReconnectingWebSocket) {
 
     var db = new loki();
     /**
@@ -49,90 +49,22 @@ define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'common/u
         console.log('WS error!', event);//TODO handle it properly. May be show message to user to refresh the page
     };
 
-    var that = this;
     var callbacks = {};
     webSocketConnection.onmessage = function(event) {
         var data = JSON.parse( event.data );
         console.log('Message type : ', data.msg_type);
         switch( data.msg_type ) {
           
+          case "history":
+          case "tick":
+          case "candles":
           case 'ping':
-              callbacks['ping'] && callbacks['ping'].forEach(function (cb) { cb(data) });
+              callbacks[data.msg_type] && callbacks[data.msg_type].forEach(function (cb) { cb(data) });
             break;
 
           case "trading_times":
             callbacks['trading_times'].resolve(data);
             callbacks['trading_times'] = undefined;
-            break;
-          
-          case "candles":
-            for ( var index in data.candles )
-            {
-                  var eachData = data.candles[index],
-                        open  = parseFloat(eachData.open),
-                        high  = parseFloat(eachData.high),
-                        low   = parseFloat(eachData.low),
-                        close = parseFloat(eachData.close),
-                        time  = parseInt(eachData.epoch) * 1000,
-                        bar   = barsTable.chain()
-                                        .find({time : time})
-                                        .find({instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp})
-                                        .limit(1)
-                                        .data();
-                  if (bar && bar.length > 0) {
-                    bar = bar[0];
-                    bar.open = open;
-                    bar.high = high;
-                    bar.low = low;
-                    bar.close = close;
-                    barsTable.update(bar);
-                  } else {
-                      barsTable.insert({
-                            instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp,
-                            time: time,
-                            open: open,
-                            high: high,
-                            low: low,
-                            close: close
-                      });
-                  }
-            }
-            ohlc_handler.barsLoaded(data.echo_req.passthrough.instrumentCdAndTp, chartingRequestMap, barsTable, data.echo_req.passthrough.isTimer, null);
-            break;
-
-          case "history":
-            //For tick history handling
-            for (var index in data.history.times) {
-                var time = parseInt(data.history.times[index]) * 1000,
-                    price = parseFloat(data.history.prices[index]),
-                    bar  = barsTable.chain()
-                                        .find({time : time})
-                                        .find({instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp})
-                                        .limit(1)
-                                        .data();
-                  if (bar && bar.length > 0) {
-                    bar = bar[0];
-                    bar.open = price;
-                    bar.high = price;
-                    bar.low = price;
-                    bar.close = price;
-                    barsTable.update(bar);
-                  } else {
-                      barsTable.insert({
-                            instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp,
-                            time: time,
-                            open: price,
-                            high: price,
-                            low: price,
-                            close: price
-                      });
-                  }
-            }
-            ohlc_handler.barsLoaded(data.echo_req.passthrough.instrumentCdAndTp, chartingRequestMap, barsTable, false, null);
-            break;
-
-          case "tick":
-              callbacks['tick'] && callbacks['tick'].forEach(function (cb) { cb(data) });
             break;
 
           case 'error':

@@ -1,4 +1,70 @@
-define([], function() {
+define(['websockets/eventSourceHandler'], function(liveapi) {
+
+    var barsTable = liveapi.barsTable;
+    var chartingRequestMap = liveapi.chartingRequestMap;
+    liveapi.events.on('candles', function (data) {
+        for ( var index in data.candles ) {
+              var eachData = data.candles[index],
+                    open  = parseFloat(eachData.open),
+                    high  = parseFloat(eachData.high),
+                    low   = parseFloat(eachData.low),
+                    close = parseFloat(eachData.close),
+                    time  = parseInt(eachData.epoch) * 1000,
+                    bar   = barsTable.chain()
+                                    .find({time : time})
+                                    .find({instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp})
+                                    .limit(1)
+                                    .data();
+              if (bar && bar.length > 0) {
+                bar = bar[0];
+                bar.open = open;
+                bar.high = high;
+                bar.low = low;
+                bar.close = close;
+                barsTable.update(bar);
+              } else {
+                  barsTable.insert({
+                        instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp,
+                        time: time,
+                        open: open,
+                        high: high,
+                        low: low,
+                        close: close
+                  });
+              }
+        }
+        barsLoaded(data.echo_req.passthrough.instrumentCdAndTp, chartingRequestMap, barsTable, data.echo_req.passthrough.isTimer, null);
+    });
+    liveapi.events.on('history', function (data) {
+        //For tick history handling
+        for (var index in data.history.times) {
+            var time = parseInt(data.history.times[index]) * 1000,
+                price = parseFloat(data.history.prices[index]),
+                bar  = barsTable.chain()
+                                    .find({time : time})
+                                    .find({instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp})
+                                    .limit(1)
+                                    .data();
+              if (bar && bar.length > 0) {
+                bar = bar[0];
+                bar.open = price;
+                bar.high = price;
+                bar.low = price;
+                bar.close = price;
+                barsTable.update(bar);
+              } else {
+                  barsTable.insert({
+                        instrumentCdAndTp : data.echo_req.passthrough.instrumentCdAndTp,
+                        time: time,
+                        open: price,
+                        high: price,
+                        low: price,
+                        close: price
+                  });
+              }
+        }
+        barsLoaded(data.echo_req.passthrough.instrumentCdAndTp, chartingRequestMap, barsTable, false, null);
+    });
 
     function parseSuffixAndIntValue(timeperiod) {
       var intValInString = timeperiod.toUpperCase().replace('D', '').replace('M', '').replace('W', '');
@@ -83,90 +149,7 @@ define([], function() {
         chart.hideLoading();
     }
 
-    return {
-
-        /**
-         * @param timeperiod
-         * @param instrumentCode
-         * @param containerIDWithHash
-         * @param type
-         * @param instrumentName
-         * @param firstTimeLoad
-         * @param series_compare
-         * @param id
-         */
-        retrieveChartDataAndRender: function( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare, chartingRequestMap, webSocketConnection, barsTable)
-        {
-
-            var parsedSuffixAndIntValue = parseSuffixAndIntValue(timeperiod),
-                  suffix = parsedSuffixAndIntValue.suffix,
-                  intVal = parsedSuffixAndIntValue.intVal,
-                  totalSeconds = totalSecondsInABar(suffix, intVal);
-            console.log(suffix, intVal, totalSeconds);
-
-            //We are only going to request 1000 bars if possible
-            var numberOfBarsToRequest = 1000;
-            if (suffix == 'D' && intVal > 1) {
-                numberOfBarsToRequest = Math.floor(numberOfBarsToRequest / intVal);
-            }
-            var rangeEndDate = Math.ceil(new Date().getTime() / 1000);
-            var rangeStartDate = rangeEndDate - numberOfBarsToRequest * totalSeconds;
-            var count = Math.ceil((rangeEndDate - rangeStartDate) / totalSeconds);
-            if (isTick(timeperiod)) {
-                count = 1000;
-            }
-            console.log('Number of bars requested : ', count);
-
-            if (!$.isEmptyObject(chartingRequestMap[(instrumentCode + timeperiod).toUpperCase()])) {
-                //Since streaming for this instrument+timeperiod has already been requested, 
-                //we just take note of containerIDWithHash so that once the data is received, we will just
-                //call refresh for all registered charts
-                chartingRequestMap[(instrumentCode + timeperiod).toUpperCase()].chartIDs.push({
-                        containerIDWithHash : containerIDWithHash,
-                        series_compare : series_compare,
-                        instrumentCode : instrumentCode,
-                        instrumentName : instrumentName
-                    });   
-                //We still need to call refresh the chart with data we already received
-                //Use local caching to retrieve that data. 
-                this.barsLoaded((instrumentCode + timeperiod).toUpperCase(), chartingRequestMap, barsTable, false, containerIDWithHash);
-                return;
-            }
-                    
-            chartingRequestMap[(instrumentCode + timeperiod).toUpperCase()] = {
-                tickStreamingID : '',
-                chartIDs : [
-                    {
-                        containerIDWithHash : containerIDWithHash,
-                        series_compare : series_compare,
-                        instrumentCode : instrumentCode,
-                        instrumentName : instrumentName
-                    }
-                ]
-            };
-
-            //Send the WS request
-            var requestObject = {
-                "ticks": instrumentCode,
-                "end": 'latest',
-                "count": count,
-                "adjust_start_time" : 1,
-                "passthrough": {
-                    "instrumentCdAndTp" : (instrumentCode + timeperiod).toUpperCase()
-                }
-              };
-              if (!isTick(timeperiod)) {
-                requestObject = $.extend(requestObject, {
-                    "start": rangeStartDate,
-                    "granularity":  suffix + intVal
-                });
-              }
-            console.log(JSON.stringify(requestObject));
-            webSocketConnection.send(requestObject);
-
-        },
-
-        barsLoaded : function(instrumentCdAndTp, chartingRequestMap, barsTable, isTimer, specific_containerIDWithHash) {
+    function barsLoaded(instrumentCdAndTp, chartingRequestMap, barsTable, isTimer, specific_containerIDWithHash) {
 
             var key = instrumentCdAndTp;
             var chartIDList = chartingRequestMap[key].chartIDs;
@@ -336,6 +319,90 @@ define([], function() {
 
             }
         }
+    return {
+
+        /**
+         * @param timeperiod
+         * @param instrumentCode
+         * @param containerIDWithHash
+         * @param type
+         * @param instrumentName
+         * @param firstTimeLoad
+         * @param series_compare
+         * @param id
+         */
+        retrieveChartDataAndRender: function( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare, chartingRequestMap, webSocketConnection, barsTable)
+        {
+
+            var parsedSuffixAndIntValue = parseSuffixAndIntValue(timeperiod),
+                  suffix = parsedSuffixAndIntValue.suffix,
+                  intVal = parsedSuffixAndIntValue.intVal,
+                  totalSeconds = totalSecondsInABar(suffix, intVal);
+            console.log(suffix, intVal, totalSeconds);
+
+            //We are only going to request 1000 bars if possible
+            var numberOfBarsToRequest = 1000;
+            if (suffix == 'D' && intVal > 1) {
+                numberOfBarsToRequest = Math.floor(numberOfBarsToRequest / intVal);
+            }
+            var rangeEndDate = Math.ceil(new Date().getTime() / 1000);
+            var rangeStartDate = rangeEndDate - numberOfBarsToRequest * totalSeconds;
+            var count = Math.ceil((rangeEndDate - rangeStartDate) / totalSeconds);
+            if (isTick(timeperiod)) {
+                count = 1000;
+            }
+            console.log('Number of bars requested : ', count);
+
+            if (!$.isEmptyObject(chartingRequestMap[(instrumentCode + timeperiod).toUpperCase()])) {
+                //Since streaming for this instrument+timeperiod has already been requested, 
+                //we just take note of containerIDWithHash so that once the data is received, we will just
+                //call refresh for all registered charts
+                chartingRequestMap[(instrumentCode + timeperiod).toUpperCase()].chartIDs.push({
+                        containerIDWithHash : containerIDWithHash,
+                        series_compare : series_compare,
+                        instrumentCode : instrumentCode,
+                        instrumentName : instrumentName
+                    });   
+                //We still need to call refresh the chart with data we already received
+                //Use local caching to retrieve that data. 
+                barsLoaded((instrumentCode + timeperiod).toUpperCase(), chartingRequestMap, barsTable, false, containerIDWithHash);
+                return;
+            }
+                    
+            chartingRequestMap[(instrumentCode + timeperiod).toUpperCase()] = {
+                tickStreamingID : '',
+                chartIDs : [
+                    {
+                        containerIDWithHash : containerIDWithHash,
+                        series_compare : series_compare,
+                        instrumentCode : instrumentCode,
+                        instrumentName : instrumentName
+                    }
+                ]
+            };
+
+            //Send the WS request
+            var requestObject = {
+                "ticks": instrumentCode,
+                "end": 'latest',
+                "count": count,
+                "adjust_start_time" : 1,
+                "passthrough": {
+                    "instrumentCdAndTp" : (instrumentCode + timeperiod).toUpperCase()
+                }
+              };
+              if (!isTick(timeperiod)) {
+                requestObject = $.extend(requestObject, {
+                    "start": rangeStartDate,
+                    "granularity":  suffix + intVal
+                });
+              }
+            console.log(JSON.stringify(requestObject));
+            webSocketConnection.send(requestObject);
+
+        },
+
+        barsLoaded : barsLoaded
 
     };
 
