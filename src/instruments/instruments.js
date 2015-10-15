@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 });
 
-define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
+define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui, liveapi) {
 
     "use strict";
 
@@ -221,7 +221,7 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
-                symbol_handler.fetchMarkets(function (_instrumentJSON) {
+                liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) }).then(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
 
                         _extractInstrumentMarkets(_instrumentJSON);
