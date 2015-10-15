@@ -10,6 +10,8 @@ branches:
   - development
 script:
 - npm install -g grunt-cli
+- npm install -g bower
+- npm install
 - bower install
 - git config --global user.email "arnab@binary.com"
 - git config --global user.name "Arnab Karmakar"
