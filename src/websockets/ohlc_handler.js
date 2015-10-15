@@ -162,7 +162,7 @@ define([], function() {
                 });
               }
             console.log(JSON.stringify(requestObject));
-            webSocketConnection.send(JSON.stringify(requestObject));
+            webSocketConnection.send(requestObject);
 
         },
 

@@ -2,8 +2,8 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "highcharts-exporting"],
-  function ( $, requireJSESHInstance ) {
+define(["jquery", "websockets/eventSourceHandler", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
+  function ( $, liveapi, ohlc_handler,currentPrice ) {
 
     "use strict";
 
@@ -17,6 +17,38 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
 
     });
 
+    var chartingRequestMap = liveapi.chartingRequestMap;
+    var barsTable = liveapi.barsTable;
+    var tada = {
+        retrieveChartDataAndRender: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare) {
+            //Init the current price indicator
+            currentPrice.init();
+
+            liveapi.execute(function () {
+                ohlc_handler.retrieveChartDataAndRender(timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare, chartingRequestMap, liveapi, barsTable);
+            })
+        },
+
+        close: function (containerIDWithHash, timeperiod, instrumentCode) {
+            if (!timeperiod || !instrumentCode) return;
+
+            var instrumentCdAndTp = (instrumentCode + timeperiod).toUpperCase();
+            if (chartingRequestMap) {
+                for (var index in chartingRequestMap[instrumentCdAndTp].chartIDs) {
+                    var chartID = chartingRequestMap[instrumentCdAndTp].chartIDs[index];
+                    if (chartID.containerIDWithHash == containerIDWithHash) {
+                        chartingRequestMap[instrumentCdAndTp].chartIDs.splice(index, 1);
+                        break;
+                    }
+                }
+            }
+            if ($.isEmptyObject(chartingRequestMap[instrumentCdAndTp].chartIDs)) {
+                liveapi.send({ "forget": chartingRequestMap[instrumentCdAndTp].tickStreamingID });
+                $(document).stopTime(chartingRequestMap[instrumentCdAndTp].timerHandler);
+                delete chartingRequestMap[instrumentCdAndTp];
+            }
+        }
+    };
     return {
 
         /**
@@ -52,7 +84,7 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
                         load: function () {
                             this.showLoading();
                             console.log('Calling render chart for the first time for the instrument : ', instrumentCode);
-                            requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
+                            tada.retrieveChartDataAndRender( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
                             if (onload)
                                 onload();
                         }
@@ -135,7 +167,7 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
         },
 
         destroy : function( containerIDWithHash, timeperiod, instrumentCode ) {
-            requireJSESHInstance.close( containerIDWithHash, timeperiod, instrumentCode );
+            tada.close( containerIDWithHash, timeperiod, instrumentCode );
         },
 
         triggerReflow : function( containerIDWithHash ) {
@@ -235,7 +267,7 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
                     }
                 }
 
-                requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
+                tada.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
 
             }
         }

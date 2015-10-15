@@ -1,0 +1,16 @@
+{
+  "name": "node-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node-demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Boris Yankov <borisyankov@gmail.com> (https://github.com/borisyankov)",
+  "license": "ISC",
+  "dependencies": {
+    "binary-live-api": "*",
+    "ws": "^0.8.0"
+  }
+}

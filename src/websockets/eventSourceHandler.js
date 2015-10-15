@@ -2,7 +2,8 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websockets/ohlc_handler', 'websockets/tick_handler', 'websockets/symbol_handler', 'websockets/connection_check', 'common/util', 'jquery-timer'], function(currentPrice, loki, ReconnectingWebSocket, ohlc_handler, tick_handler, symbol_handler, connection_check) {
+define(['lokijs', 'reconnecting-websocket', 'websockets/ohlc_handler', 'websockets/tick_handler', 'websockets/symbol_handler', 'websockets/connection_check', 'common/util', 'jquery-timer'],
+    function (loki, ReconnectingWebSocket, ohlc_handler, tick_handler, symbol_handler, connection_check) {
 
     var db = new loki();
     /**
@@ -173,41 +174,15 @@ define(['currentPriceIndicator', 'lokijs',  'reconnecting-websocket', 'websocket
             }
         },
 
-        retrieveChartDataAndRender : function( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare )
-        {
-            //Init the current price indicator
-            currentPrice.init();
-
-            if (isConnectionReady) {
-                ohlc_handler.retrieveChartDataAndRender( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare, chartingRequestMap, webSocketConnection, barsTable );
-            } else {
-                $(document).one('websocketsConnectionReady', function() {
-                    ohlc_handler.retrieveChartDataAndRender( timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare, chartingRequestMap, webSocketConnection, barsTable );
-                });
-            }
+        execute: function(fn){
+            if (isConnectionReady) fn();
+            else $(document).one('websocketsConnectionReady', fn);
         },
-
-        close : function ( containerIDWithHash, timeperiod, instrumentCode )
-        {
-            if (!timeperiod || !instrumentCode) return;
-
-            var instrumentCdAndTp = (instrumentCode + timeperiod).toUpperCase();
-            if (chartingRequestMap) {
-                for (var index in chartingRequestMap[instrumentCdAndTp].chartIDs) {
-                    var chartID = chartingRequestMap[instrumentCdAndTp].chartIDs[index];
-                    if (chartID.containerIDWithHash == containerIDWithHash) {
-                        chartingRequestMap[instrumentCdAndTp].chartIDs.splice(index, 1);
-                        break;
-                    }
-                }
-            }
-            if ($.isEmptyObject(chartingRequestMap[instrumentCdAndTp].chartIDs)) {
-                webSocketConnection.send(JSON.stringify({"forget" : chartingRequestMap[instrumentCdAndTp].tickStreamingID}));
-                $(document).stopTime(chartingRequestMap[instrumentCdAndTp].timerHandler);
-                delete chartingRequestMap[instrumentCdAndTp];
-            }
+        chartingRequestMap : chartingRequestMap,
+        barsTable: barsTable,
+        send: function(obj){
+            webSocketConnection.send(JSON.stringify(obj));
         }
-
     };
 
 });
