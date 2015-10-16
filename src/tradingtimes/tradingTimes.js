@@ -66,7 +66,7 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
     function init(li) {
         li.click(function () {
             if (!tradingWin) {
-                tradingWin = windows.createBlankWindow($('<div/>'), { title:'Trading Times', width: 700 });
+                tradingWin = windows.createBlankWindow($('<div/>'), { title:'Trading Times', width: 800 });
                 initTradingWin();
             }
             tradingWin.dialog('open');
@@ -90,10 +90,28 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                 {title: 'Settles'},
                 {title: 'Upcoming Events'}
             ],
+            "columnDefs": [
+                { className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4 ] }
+            ],
             paging: false,
             ordering: false,
-            searching: false,
+            searching: true,
             processing: true
+        });
+        table.parent().addClass('hide-search-input');
+
+        table.find('thead th').each(function () {
+            var th = $(this),
+                text = th.text();
+            th.html(text +'<br/><input class="search-input" placeholder="Search ' + text + '" />');
+        });
+        // Apply the a search on each column input change
+        table.api().columns().every(function () {
+            var column = this;
+            $('input', this.header()).on('keyup change', function () {
+                if (column.search() !== this.value)
+                    column.search(this.value) .draw();
+            });
         });
 
         var market_names = null,
