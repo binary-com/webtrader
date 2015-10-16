@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"], function ($,windows,liveapi) {
+define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables","jquery-growl"], function ($,windows,liveapi) {
 
 
     var table = null;
@@ -51,9 +51,9 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                     sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
                 ];
             });
-            table.rows().remove();
-            table.rows.add(rows);
-            table.draw();
+            table.api().rows().remove();
+            table.api().rows.add(rows);
+            table.api().draw();
         }
 
         return {
@@ -80,7 +80,7 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
 
         table = $("<table width='100%' class='display compact'/>");
         table.appendTo(tradingWin);
-        table = table.DataTable({
+        table = table.dataTable({
             data: [],
             columns: [
                 {title: 'Asset'},
@@ -91,14 +91,17 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
             ],
             paging: false,
             ordering: false,
-            searching: false
+            searching: false,
+            processing: true
         });
 
         var market_names = null,
             submarket_names = null;
 
         var refresh_table = function (yyyy_mm_dd) {
-            liveapi.send({ trading_times: yyyy_mm_dd }).then(function (data) {
+            var processing_msg = $('#' + table.attr('id') + '_processing');
+            processing_msg.show();
+            var refresh = function (data) {
                 var result = update(data);
                 if (market_names == null) {
                     var input_mn = $('<input  class="spinner-in-dialog-body" type="text"></input>');
@@ -112,8 +115,8 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                         }
                     });
                 }
-                
-                if (submarket_names == null)  {
+
+                if (submarket_names == null) {
                     var input_smn = $('<input  class="spinner-in-dialog-body" type="text"></input>');
                     input_smn.appendTo(subheader);
                     submarket_names = windows.makeTextSpinner(input_smn, {
@@ -122,9 +125,17 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                         changed: function (val) { result.updateTable(market_names.val(), submarket_names.val()); }
                     });
                 }
-                
-                result.updateTable(market_names.val(), submarket_names.val());
 
+                result.updateTable(market_names.val(), submarket_names.val());
+                processing_msg.hide();
+            };
+            
+            liveapi.send({ trading_times: yyyy_mm_dd })
+            .then(refresh)
+            .catch(function (error) {
+                refresh({});
+                $.growl.error({ message: error.message });
+                console.warn(error);
             });
         }
         refresh_table(new Date().toISOString().slice(0, 10));
