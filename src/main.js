@@ -75,9 +75,12 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
     $(document).ready(function () {
 
         /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
-        var load_ondemand = function (element, event_name, module_name,callback) {
+        var load_ondemand = function (element, event_name,msg, module_name,callback) {
             element.one(event_name, function () {
                 require([module_name], function (module) {
+                    require(["jquery", "jquery-growl"], function($) {
+                        $.growl.notice({ message: msg });
+                    });
                     callback && callback(module);
                 });
             });
@@ -97,7 +100,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             });
 
             //Register async loading of tradingTimes sub-menu
-            load_ondemand($('.topContainer .tradingTimesLI'), 'click', 'tradingtimes/tradingtimes', function (tradingTimes) {
+            load_ondemand($('.topContainer .tradingTimesLI'), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
                 tradingTimes.init($('.topContainer .tradingTimesLI'));
                 $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
             });
