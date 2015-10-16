@@ -74,6 +74,15 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
     //All dependencies loaded
     $(document).ready(function () {
 
+        /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
+        var load_ondemand = function (element, event_name, module_name,callback) {
+            element.one(event_name, function () {
+                require([module_name], function (module) {
+                    callback && callback(module);
+                });
+            });
+        }
+
         $(".mainContainer").load("mainContent.html", function() {
 
             //Trigger async loading of instruments and refresh menu
@@ -87,12 +96,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 instrumentsMod.init();
             });
 
-            //Trigger async loading of tradingTimes sub-menu
-            require(["tradingtimes/tradingTimes"], function( tradingTimes ) {
+            //Register async loading of tradingTimes sub-menu
+            load_ondemand($('.topContainer .tradingTimesLI'), 'click', 'tradingtimes/tradingtimes', function (tradingTimes) {
                 tradingTimes.init($('.topContainer .tradingTimesLI'));
-                setTimeout(function () {
-                    $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
-                },2000);
+                $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
             });
 
             //Trigger async loading of window sub-menu
