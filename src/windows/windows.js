@@ -357,7 +357,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
     
             TODO: move this to a utility file
         */
-        makeTextSpinner: function (input, options) {
+        makeSelectmenu: function (select, options) {
+            
             options = $.extend({
                 list: ['empty'],
                 inx: 0,
@@ -365,30 +366,26 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             }, options);
 
             var inx = options.inx, list = options.list;
-            input.val(list[inx]);
-            var spinner = input.spinner({
-                max: list.length - 1,
-                min: 0,
-                spin: function (e, ui) {
-                    e.preventDefault();
-                    var direction = (ui.value | 0) === 0 ? -1 : +1;
-                    inx = inx + direction;
-                    inx = Math.max(inx, 0);
-                    inx = Math.min(inx, list.length - 1);
-                    input.val(list[inx]);
-                    options.changed && options.changed(list[inx]);
-                    spinner.trigger('changed', [list[inx]]);
-                }
-            });
-
-            spinner.parent().css('margin-left', '5px');
-            spinner.parent().find('.ui-spinner-up').css('margin-top', 0);
-            spinner.update_list = function (new_list) {
-                list = new_list;
-                inx = 0;
-                input.val(list[inx]);
+            var update_select = function(list) {
+                select.children().remove();
+                for(var i = 0; i < list.length; ++i)
+                    $('<option/>').val(list[i]).text(list[i]).appendTo(select);
             }
-            return spinner;
+            update_select(list);
+            select.val(list[inx]);
+
+            select = select.selectmenu();
+            select.on('selectmenuchange', function () {
+                var val = $(this).val();
+                options.changed(val);
+            })
+
+            select.update_list = function (new_list) {
+                update_select(new_list);
+                select.val(new_list[0]);
+                select.selectmenu('refresh');
+            }
+            return select;
         }
     };
 

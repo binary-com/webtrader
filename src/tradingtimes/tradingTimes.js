@@ -101,12 +101,13 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
         var refresh_table = function (yyyy_mm_dd) {
             var processing_msg = $('#' + table.attr('id') + '_processing');
             processing_msg.show();
+
             var refresh = function (data) {
                 var result = update(data);
                 if (market_names == null) {
-                    var input_mn = $('<input  class="spinner-in-dialog-body" type="text"></input>');
-                    input_mn.appendTo(subheader);
-                    market_names = windows.makeTextSpinner(input_mn, {
+                    var select = $('<select class="spinner-in-dialog-body"/>');
+                    select.appendTo(subheader);
+                    market_names = windows.makeSelectmenu(select, {
                         list: result.market_names,
                         inx: 0,
                         changed: function (val) {
@@ -117,9 +118,9 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                 }
 
                 if (submarket_names == null) {
-                    var input_smn = $('<input  class="spinner-in-dialog-body" type="text"></input>');
-                    input_smn.appendTo(subheader);
-                    submarket_names = windows.makeTextSpinner(input_smn, {
+                    var sub_select = $('<select />');
+                    sub_select.appendTo(subheader);
+                    submarket_names = windows.makeSelectmenu(sub_select, {
                         list: result.submarket_names[market_names.val()],
                         inx: 0,
                         changed: function (val) { result.updateTable(market_names.val(), submarket_names.val()); }
