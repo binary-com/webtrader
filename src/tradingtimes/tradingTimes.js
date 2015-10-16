@@ -76,6 +76,7 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
 
     function initTradingWin() {
         var subheader = $('<div class="trading-times-sub-header" />');
+        $('<span class="subheader-message"/>').text('All times are in GMT(Greenwich mean time).').appendTo(subheader);
         subheader.appendTo(tradingWin);
 
         table = $("<table width='100%' class='display compact'/>");
