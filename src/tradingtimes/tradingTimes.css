@@ -15,15 +15,12 @@
     font-size: 90%;
 }
 
-.hide-search-input .dataTables_filter {
-    display:none;
-}
-table.compact th,td {
+table.trading-times-dialog th,td {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-    table.compact th > .search-input {
+    table.trading-times-dialog th > .search-input {
         text-align:center;
         width: 100%; 
         box-sizing: border-box;
@@ -32,12 +29,12 @@ table.compact th,td {
         border-radius:10px;
     }
 
-    table.compact th > .search-input:focus {
+    table.trading-times-dialog th > .search-input:focus {
         box-shadow: 3px -1px 8px 1pt lightblue;
         outline: 0;
     }
-.search-input::-webkit-input-placeholder,
-.search-input::-moz-placeholder,     /* firefox 19+ */
-.search-input:-ms-input-placeholder /* ie */ {
+table.trading-times-dialog .search-input::-webkit-input-placeholder,
+table.trading-times-dialog .search-input::-moz-placeholder,     /* firefox 19+ */
+table.trading-times-dialog .search-input:-ms-input-placeholder /* ie */ {
     font-size: 90%;
 }

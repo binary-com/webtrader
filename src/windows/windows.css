@@ -26,4 +26,9 @@
         padding-left: 1.0em;
         padding-right:0.1em;
     }
+    /* use a maximum height for jq-ui dropdowns */
     ul.ui-menu { max-height: 320px !important; }
+/* hide the search section from jq-datatables if hide-search-input is set */
+.hide-search-input .dataTables_filter {
+    display:none;
+}
