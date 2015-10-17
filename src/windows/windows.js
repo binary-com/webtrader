@@ -224,31 +224,32 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
     }
 
     return {
-
-        init: function( $parentObj ) {
+        init: function($menuLI) {
             loadCSS("windows/windows.css");
-            $menuUL = $parentObj.find('ul');
+            $menuUL = $menuLI.find('ul');
 
-            tileObject = $('li.tile');
-
-            closeAllObject = $('li.closeAll').click(function () {
+            tileObject = $menuUL.find('.tile');
+            closeAllObject = $menuUL.find('.closeAll').click(function (e) {
                 //console.log('Event for closing all chart windows!');
-                /*
-                  The close click is behaving weird.
-                  Behavior - When there are charts opened, this event is able to close all charts and then
-                            unable to hide the menu. When There are no charts, then it behaves normally
-                */
+                    
+                // The close click is behaving weird.
+                // Behavior - When there are charts opened, this event is able to close all charts and then
+                //           unable to hide the menu. When There are no charts, then it behaves normally
+                    
                 if ($('.chart-dialog').length > 0) {
                     $('.chart-dialog').dialog('close');
                 }
+
+                e.preventDefault();
             });
 
             require(["charts/chartWindow"], function (chartWindowObj) {
 
 
                 //Attach click listener for tile menu
-                tileObject.click(function () {
+                tileObject.click(function (e) {
                     tileAction();
+                    e.preventDefault();
                 });
 
                 //Based on totalChartsPerRow and totalRows, open some charts
@@ -265,7 +266,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
             });
 
-            return this;
+            // return this;
         },
 
         tile: function() {
@@ -320,21 +321,18 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 .dialogExtend(options);
 
             // add an item to window menu
-            var li = $('<li />').addClass(id + 'LI').text(options.title);
+            var $windowLink = $("<a href='#'>" + options.title + "</a>");
+            var li = $('<li />').addClass(id + 'LI').append($windowLink);
             $menuUL.append(li);
             // bring window to top on click
-            li.on('click', function () {
+            $windowLink.on('click', function () {
                 blankWindow.dialog('moveToTop')
                      .parent().effect("bounce", { times: 2, distance: 15 }, 450);
             });
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
                 li.remove();
-                $('#menu').menu('refresh');
             });
-
-            // refresh the main jquery ui menu
-            $('#menu').menu('refresh');
 
             if (options.resize)
                 options.resize.call($html[0]);

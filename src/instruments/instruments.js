@@ -111,25 +111,26 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
     }
 
     function _refreshInstrumentMenu( rootElement, data ) {
-
         $.each(data, function(key, value) {
-            var newLI = $("<li>").append(value.display_name)
+            var submenuSymbol = value.submarkets || value.instruments ? " »" : "";
+            var menuLink = "<a href='#'>" + value.display_name + submenuSymbol + "</a>";
+            
+            var newLI = $("<li>").append(menuLink)
                                 .data("symbol", value.symbol)
                                 .data("delay_amount", value.delay_amount)
                                 .appendTo( rootElement );
 
             if (value.submarkets || value.instruments) {
-                newLI.click(function(e) {
-                  e.preventDefault();
-                  return false;
-                });
+                // newLI.click(function(e) {
+                //   e.preventDefault();
+                //   return false;
+                // });
                 var newUL = $("<ul>");
                 newUL.appendTo(newLI);
+                
                 _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
             } else {
-
                 newLI.click(function() {
-
                     if ($("#instrumentsDialog").length == 0) {
 
                         $.get("instruments/instruments.html", function ($html) {
@@ -190,8 +191,8 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
                             $("#instrumentSelectionMenuDIV").hide();
 
                         });
-
-                    } else {
+                    }
+                    else {
                         $("#instrumentsDialog").dialog('option', 'title', $(this).text())
                                         .data("symbol", $(this).data("symbol"))
                                         .data("delay_amount", $(this).data("delay_amount"));
@@ -200,9 +201,7 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
                     }
 
                     $(document).click();
-
                 });
-
             }
         });
 
@@ -246,20 +245,18 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
     }
 
     return {
-        init: function( _callback ) {
-            $("#menu").menu();
-            
+        init: function(_callback) {
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
                 liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) }).then(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
                         _extractInstrumentMarkets(_instrumentJSON);
 
-                        var instrumentsMenu = $(".mainContainer").find('.instruments');
+                        // var instrumentsMenu = $(".mainContainer").find('.instruments');
+                        var instrumentsMenu = $("#nav-menu").find(".instruments");
                         var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
-                        rootUL.menu();
 
                         if(_callback) {
                             _callback(markets);
