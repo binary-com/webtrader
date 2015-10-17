@@ -39,25 +39,14 @@ define(['es6-promise', 'reconnecting-websocket', 'jquery-timer'], function (es6_
             cb(data);
         });
 
-        if (!data.error) {
-            var key = data.echo_req.passthrough && data.echo_req.passthrough.uid;
-            var promise = unresolved_promises[key];
-            if (promise) {
-                delete unresolved_promises[key];
-                promise.resolve(data);
-            }
-        }
-        /* WS has bug, when an error accures no echo_req will be returned.
-           This needs to be fixed because we can't know which promise should be rejected.
-           As a TEMPORARY WORKAROUND :
-               requests are returned in FIFO order (not documented), we will reject the first promise.
-	   TODO: remove this workaround
-        */
-        else {
-            var key = Object.keys(unresolved_promises)[0];
-            var promise = unresolved_promises[key];
+        var key = data.echo_req.passthrough && data.echo_req.passthrough.uid;
+        var promise = unresolved_promises[key];
+        if (promise) {
             delete unresolved_promises[key];
-            promise.reject(data.error);
+            if (data.error)
+                promise.reject(data.error);
+            else
+                promise.resolve(data);
         }
     }
 
