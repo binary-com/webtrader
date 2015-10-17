@@ -205,7 +205,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             return dpicker_input;
         }
 
-        $('<span class="title">' + options.title + '</span>').insertAfter(header);
 
         var dt = options.date;
         var dpicker = addDatePicker({
@@ -220,6 +219,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 options.changed(yyyy_mm_dd);
             }
         });
+
+        $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
     }
 
     return {
