@@ -12,7 +12,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-
     /*
         "loc": 72,    //physical lines
         "sloc": 45,   //lines of source code
@@ -24,12 +23,12 @@ module.exports = function (grunt) {
     */
     grunt.loadNpmTasks('grunt-sloc');
     grunt.loadNpmTasks('grunt-bump');
-
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks("grunt-remove-logging");
-
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-if');
+    grunt.loadNpmTasks('grunt-shell');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -67,11 +66,14 @@ module.exports = function (grunt) {
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js',
                             'jquery/dist/jquery.min.js',
                             'jquery.timers/jquery.timers.min.js',
+                            'jquery-validation/dist/jquery.validate.min.js',
                             'loadcss/loadCSS.js',
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
+                            'es6-promise/promise.min.js',
                             'requirejs/require.js',
+                            'underscore/underscore-min.js',
                             '!**/**/favicon.ico'
                         ], 
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
@@ -201,7 +203,7 @@ module.exports = function (grunt) {
         },
         bump: {
             options: {
-                files: ['package.json'],
+                files: ['package.json', 'bower.json'],
                 updateConfigs: [],
                 commit: false,
                 /*commitMessage: 'Release v%VERSION%',
@@ -235,12 +237,42 @@ module.exports = function (grunt) {
               livereload: true
             },
           },
+        },
+        shell: {
+            moveEverythingToBETA_folder: {
+                command: 'mkdir beta; mv dist/compressed/* beta; mv beta dist/compressed'
+            }
+        },
+        if: {
+            live: {
+                // Target-specific file lists and/or options go here. 
+                options: {
+                    // execute test function(s) 
+                    test: function() { 
+                        return process.env.TRAVIS_BRANCH === 'master'; 
+                    }
+                },
+                //array of tasks to execute if all tests pass 
+                ifTrue: [ 'gh-pages:travis-deploy' ]
+            },
+            beta: {
+                // Target-specific file lists and/or options go here. 
+                options: {
+                    // execute test function(s) 
+                    test: function() { 
+                        return process.env.TRAVIS_BRANCH === 'development'; 
+                    }
+                },
+                //array of tasks to execute if all tests pass 
+                ifTrue: [ 'shell:moveEverythingToBETA_folder', 'gh-pages:travis-deploy' ]
+            }
         }
     });
 
     grunt.registerTask('mainTask', ['clean:0', 'copy:main', 'copy:copyLibraries', 'clean:1', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify', 'copy:copy_AfterCompression']);
 	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
+    //Meant for local development use ONLY - for pushing to individual forks
     grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
 
 };

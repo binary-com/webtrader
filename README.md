@@ -4,9 +4,7 @@
 This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://binary-com.github.io/webtrader) website.
  
 ##How to work with this project
-####Learn how to setup the project:
-In order to get started on this project, follow these steps. The steps are meant for Linux OS users. However Windows and MacOS should be similar
-
+####Linux Users
         $ sudo apt-get install git
         $ git clone https://github.com/binary-com/webtrader.git
         $ cd webtrader
@@ -14,7 +12,21 @@ In order to get started on this project, follow these steps. The steps are meant
         $ sudo apt-get install nodejs-legacy
         $ sudo npm install -g grunt-cli
         $ npm install
+        $ bower install
     
+####Windows Users
+1.  Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
+2. Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
+3. Open Git Bash and run the following commands:
+```
+$ git clone https://github.com/binary-com/webtrader.git
+$ cd webtrader
+$ install -g grunt-cli
+$ npm install
+$ bower install
+```
+These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from `package.json` and `bower.json` files.
+
 At this point, your project is properly setup. You can now run following command to start a local server
         
         $ grunt connect:compressed
@@ -56,3 +68,4 @@ While submitting your PR, make sure that you deploy your code to your forked gh-
     
         $ grunt deploy
         For releasing compressed code
+

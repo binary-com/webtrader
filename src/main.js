@@ -12,6 +12,7 @@ requirejs.config({
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
         'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
+        'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
         'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
         'lokijs': 'lib/lokijs/build/lokijs.min',
@@ -22,6 +23,7 @@ requirejs.config({
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
+        'es6-promise':'lib/es6-promise/promise.min',
         'loadCSS': 'lib/loadcss/loadCSS'
     },
     "shim": {
@@ -85,12 +87,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 instrumentsMod.init();
             });
 
-
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
                 windows.init($('.topContainer .windows').closest('li'));
             });
-
         });
 
         //Now load all other CSS asynchronously
