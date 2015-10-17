@@ -99,9 +99,134 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
       });
     };
 
+    /*
+        @param: options.date    javascript Date object representing initial time
+        @param: options.title   the header title for spinners
+        @param: options.changed  called when Date changes, callback argument is a string in yyyy_mm_dd format.
+      useage: 
+         var win = createBlankWindow(...);
+         win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
+    */
+    function addDateToHeader(options) {
+        options = $.extend({
+            title: 'title',
+            date: new Date(),
+            changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
+        },options);
+
+        var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates');
+        var header = this.parent().find('.ui-dialog-title');
+
+        
+        /* options: {date: date, onchange: fn } */
+        var addDateDropDowns = function (opts) {
+            // note that month is 0-based, like in the Date object. Adjust if necessary.
+            function numberOfDays(year, month) {
+                var isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
+                return [31, (isLeap ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+            }
+
+            function update(select, options) {
+                var render = options.render || function (v) { return v + ''; };
+                select.children().remove();
+                for (var i = options.min; i <= options.max; ++i)
+                    $('<option/>').val(i).text(render(i)).appendTo(select);
+                select.val(options.initial || options.min);
+                select.selectmenu('refresh');
+                return select;
+            }
+
+            var dt = opts.date || new Date();
+            var year = $('<select />').insertAfter(header).selectmenu({ width: '70px' });
+            var month = $('<select />').insertAfter(header).selectmenu({ width: '65px' });
+            var day = $('<select />').insertAfter(header).selectmenu({ width: '60px'});
+            year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
+            month = update(month, {
+                min: 0, max: 11, initial: dt.getMonth(),
+                render: function (inx) { return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][inx]; }
+            });
+            day = update(day, { min: 1, max: numberOfDays(dt.getFullYear(),dt.getMonth()), initial: dt.getDate()});
+            
+            var trigger_change = function () {
+                var yyyy_mm_dd = new Date(year.val(), month.val(), day.val()).toISOString().slice(0, 10);
+                opts.onchange(yyyy_mm_dd);
+            }
+            day.on('selectmenuchange', trigger_change);
+
+            var update_day = function () {
+                var options = { min: 1, max: numberOfDays(year.val(), month.val()), initial: day.val() };
+                if (options.initial > options.max)
+                    options.initial = options.min;
+                update(day, options);
+            };
+
+            [year, month].forEach(function (select) {
+                select.on('selectmenuchange', function () {
+                    update_day();
+                    trigger_change();
+                });
+            })
+            return {
+                update: function (yyyy_mm_dd) {
+                    var args = yyyy_mm_dd.split('-');
+                    year.val(args[0] | 0); year.selectmenu('refresh');
+                    month.val(args[1] | 0); month.selectmenu('refresh');
+                    day.val(args[2] | 0); update_day();
+                }
+            }
+        }
+
+        /* options: {date: date, onchange: fn} , events => element.on('change',...) */
+        var addDatePicker = function (opts) {
+            var dpicker_input = $("<input type='hidden' />")
+                .insertAfter(header);
+            var dpicker = dpicker_input.datepicker({
+                showOn: 'both',
+                numberOfMonths: 2,
+                maxDate: 0,
+                minDate: new Date(2010,0,1),
+                dateFormat: 'yy-mm-dd',
+                showAnim: 'drop',
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true,
+                beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' }); },
+                onSelect: function () { $(this).change(); }
+            }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
+
+            /* use JQ-UI icon for datepicker */
+            dpicker .next('button') .text('')
+                .button({ icons: { primary: 'ui-icon-calendar' } });
+
+            dpicker_input.on('change', function () {
+                var yyyy_mm_dd = $(this).val();
+                opts.onchange && opts.onchange(yyyy_mm_dd);
+            });
+            return dpicker_input;
+        }
+
+
+        var dt = options.date;
+        var dpicker = addDatePicker({
+            date: dt,onchange: function (yyyy_mm_dd) {
+                dropdonws.update(yyyy_mm_dd);
+                options.changed(yyyy_mm_dd);
+            }
+        });
+        var dropdonws = addDateDropDowns({
+            date: dt, onchange: function (yyyy_mm_dd) {
+                dpicker.datepicker("setDate", yyyy_mm_dd);
+                options.changed(yyyy_mm_dd);
+            }
+        });
+
+        $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
+    }
+
     return {
 
         init: function( $parentObj ) {
+            loadCSS("windows/windows.css");
             $menuUL = $parentObj.find('ul');
 
             tileObject = $('li.tile');
@@ -213,8 +338,54 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
             if (options.resize)
                 options.resize.call($html[0]);
+            blankWindow.addDateToHeader = addDateToHeader;
 
             return blankWindow;
+        },
+
+
+        /*
+            Uses a jquery-ui spinner to display a list of strings.
+                @param: options.index       initial value of the array to show.
+                @param: options.list        array of string items to show
+                @param: options.changed     callback thats i called when menu is changed.
+            Note: you should add your input to dom before turning it a spinner.
+    
+            Note: you can call 'update_list(...)' on the returned spinner to update the list of items:
+                var spinner = makeTextSpinner(input,{list:['a,'b','c'],inx:0});
+                spinner.update_list(['a','d','e','f']);
+    
+            TODO: move this to a utility file
+        */
+        makeSelectmenu: function (select, options) {
+            
+            options = $.extend({
+                list: ['empty'],
+                inx: 0,
+                changed: function () { }
+            }, options);
+
+            var inx = options.inx, list = options.list;
+            var update_select = function(list) {
+                select.children().remove();
+                for(var i = 0; i < list.length; ++i)
+                    $('<option/>').val(list[i]).text(list[i]).appendTo(select);
+            }
+            update_select(list);
+            select.val(list[inx]);
+
+            select = select.selectmenu();
+            select.on('selectmenuchange', function () {
+                var val = $(this).val();
+                options.changed(val);
+            })
+
+            select.update_list = function (new_list) {
+                update_select(new_list);
+                select.val(new_list[0]);
+                select.selectmenu('refresh');
+            }
+            return select;
         }
     };
 

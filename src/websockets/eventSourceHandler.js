@@ -40,13 +40,13 @@ define(['es6-promise', 'reconnecting-websocket', 'jquery-timer'], function (es6_
         });
 
         var key = data.echo_req.passthrough && data.echo_req.passthrough.uid;
-        if(key){
-            var promise = unresolved_promises[key];
+        var promise = unresolved_promises[key];
+        if (promise) {
             delete unresolved_promises[key];
-            if(promise) {
-                data.error ?
-                    promise.reject(data.error) : promise.resolve(data);
-            }
+            if (data.error)
+                promise.reject(data.error);
+            else
+                promise.resolve(data);
         }
     }
 
