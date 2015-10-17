@@ -1,4 +1,20 @@
-﻿
+﻿.trading-times-sub-header{
+    margin-top:-.3em;
+    height: 2em;
+}
+.trading-times-sub-header .ui-selectmenu-button {
+    margin-right: .2em;
+    width: 148px !important;
+}
+.trading-times-sub-header .subheader-message {
+    float:right;
+    margin-top: .5em;
+    font-weight:bold;
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+    font-size: 90%;
+}
+
 .hide-search-input .dataTables_filter {
     display:none;
 }

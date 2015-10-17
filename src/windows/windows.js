@@ -194,11 +194,9 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 onSelect: function () { $(this).change(); }
             }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
 
-            dpicker.next('button').button({
-                icons: {
-                    primary: 'ui-icon-calendar'
-                }, text: false
-            });
+            /* use JQ-UI icon for datepicker */
+            dpicker .next('button') .text('')
+                .button({ icons: { primary: 'ui-icon-calendar' } });
 
             dpicker_input.on('change', function () {
                 var yyyy_mm_dd = $(this).val();

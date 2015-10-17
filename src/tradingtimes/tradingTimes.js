@@ -66,30 +66,22 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
         loadCSS("tradingtimes/tradingTimes.css");
         li.click(function () {
             if (!tradingWin) {
-                tradingWin = windows.createBlankWindow($('<div/>'), { title:'Trading Times', width: 800 });
-                initTradingWin();
+                tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
+                $.get('tradingtimes/tradingTimes.html', initTradingWin);
             }
             tradingWin.dialog('open');
 
         });
     }
 
-    function initTradingWin() {
-        var subheader = $('<div class="trading-times-sub-header" />');
-        $('<span class="subheader-message"/>').text('All times are in GMT(Greenwich mean time).').appendTo(subheader);
-        subheader.appendTo(tradingWin);
+    function initTradingWin($html) {
+        $html = $($html);
+        var subheader = $html.filter('.trading-times-sub-header');
+        table = $html.filter('table');
+        $html.appendTo(tradingWin);
 
-        table = $("<table width='100%' class='display compact'/>");
-        table.appendTo(tradingWin);
         table = table.dataTable({
             data: [],
-            columns: [
-                {title: 'Asset'},
-                {title: 'Opens'},
-                {title: 'Closes'},
-                {title: 'Settles'},
-                {title: 'Upcoming Events'}
-            ],
             "columnDefs": [
                 { className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4 ] }
             ],
@@ -100,11 +92,6 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
         });
         table.parent().addClass('hide-search-input');
 
-        table.find('thead th').each(function () {
-            var th = $(this),
-                text = th.text();
-            th.html(text +'<br/><input class="search-input" placeholder="Search ' + text + '" />');
-        });
         // Apply the a search on each column input change
         table.api().columns().every(function () {
             var column = this;
@@ -133,7 +120,7 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                 var result = processData(data);
 
                 if (market_names == null) {
-                    var select = $('<select class="spinner-in-dialog-body"/>');
+                    var select = $('<select />');
                     select.appendTo(subheader);
                     market_names = windows.makeSelectmenu(select, {
                         list: result.market_names,
@@ -169,8 +156,8 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                 console.warn(error);
             });
         }
-        refreshTable(new Date().toISOString().slice(0, 10));
 
+        refreshTable(new Date().toISOString().slice(0, 10));
         tradingWin.addDateToHeader({
             title: 'Date: ',
             date: new Date(),
