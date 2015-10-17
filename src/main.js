@@ -114,7 +114,6 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         //Now load all other CSS asynchronously
         loadCSS('lib/growl/stylesheets/jquery.growl.css');
         loadCSS('charts/charts.css');
-        loadCSS("windows/windows.css");
         loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
         loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
         loadCSS("lib/colorpicker/jquery.colorpicker.css");

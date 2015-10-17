@@ -7,9 +7,9 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
     var table = null;
     var tradingWin = null;
 
-    /* result of trading_times api */
-    function update(data){
-        markets = (data.trading_times && data.trading_times.markets) || [];
+    /* data: result of trading_times api */
+    function processData(data){
+        var markets = (data.trading_times && data.trading_times.markets) || [];
         //    || [{
         //    name: 'Forex',
         //    submarkets: [{
@@ -38,11 +38,12 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
             })
         });
 
-        function updateTable(name, submarket) {
-            var market = markets.find(function (m) { return m.name == name; });
-            var symbols = (market && market.submarkets.find(function (s) { return s.name == submarket; }).symbols)
-                || [];
-            var rows = symbols.map(function (sym) {
+        /* get the rows for this particular marketname and sumbarket_name */
+        function getRowsFor(marketname, submarket_name) {
+            var market = markets.find(function (m) { return m.name == marketname; });
+            var symbols = market && market.submarkets.find(function (s) { return s.name == submarket_name; }).symbols;
+
+            var rows = (symbols || []).map(function (sym) {
                 return [
                     sym.name,
                     sym.times.open[0],
@@ -51,19 +52,18 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                     sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
                 ];
             });
-            table.api().rows().remove();
-            table.api().rows.add(rows);
-            table.api().draw();
+            return rows;
         }
 
         return {
             market_names: market_names,
             submarket_names: submarket_names,
-            updateTable: updateTable
+            getRowsFor: getRowsFor
         };
     }
 
     function init(li) {
+        loadCSS("tradingtimes/tradingTimes.css");
         li.click(function () {
             if (!tradingWin) {
                 tradingWin = windows.createBlankWindow($('<div/>'), { title:'Trading Times', width: 800 });
@@ -117,12 +117,21 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
         var market_names = null,
             submarket_names = null;
 
-        var refresh_table = function (yyyy_mm_dd) {
-            var processing_msg = $('#' + table.attr('id') + '_processing');
-            processing_msg.show();
+        var refreshTable = function (yyyy_mm_dd) {
+            var processing_msg = $('#' + table.attr('id') + '_processing').show();
 
+            /* update the table with the given marketname and submarketname */
+            var updateTable = function(result, market_name,submarket_name){
+                var rows = result.getRowsFor(market_name, submarket_name);
+                table.api().rows().remove();
+                table.api().rows.add(rows);
+                table.api().draw();
+            }
+
+            /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
             var refresh = function (data) {
-                var result = update(data);
+                var result = processData(data);
+
                 if (market_names == null) {
                     var select = $('<select class="spinner-in-dialog-body"/>');
                     select.appendTo(subheader);
@@ -131,7 +140,7 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                         inx: 0,
                         changed: function (val) {
                             submarket_names.update_list(result.submarket_names[val]);
-                            result.updateTable(market_names.val(), submarket_names.val());
+                            updateTable(result, market_names.val(), submarket_names.val());
                         }
                     });
                 }
@@ -142,11 +151,13 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                     submarket_names = windows.makeSelectmenu(sub_select, {
                         list: result.submarket_names[market_names.val()],
                         inx: 0,
-                        changed: function (val) { result.updateTable(market_names.val(), submarket_names.val()); }
+                        changed: function (val) {
+                            updateTable(result, market_names.val(), submarket_names.val());
+                        }
                     });
                 }
 
-                result.updateTable(market_names.val(), submarket_names.val());
+                updateTable(result, market_names.val(), submarket_names.val());
                 processing_msg.hide();
             };
             
@@ -158,12 +169,12 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
                 console.warn(error);
             });
         }
-        refresh_table(new Date().toISOString().slice(0, 10));
+        refreshTable(new Date().toISOString().slice(0, 10));
 
         tradingWin.addDateToHeader({
             title: 'Date: ',
             date: new Date(),
-            changed: refresh_table
+            changed: refreshTable
         });
     }
    

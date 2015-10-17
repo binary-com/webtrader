@@ -1,0 +1,27 @@
+﻿
+.hide-search-input .dataTables_filter {
+    display:none;
+}
+table.compact th,td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+    table.compact th > .search-input {
+        text-align:center;
+        width: 100%; 
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+        border-radius:10px;
+    }
+
+    table.compact th > .search-input:focus {
+        box-shadow: 3px -1px 8px 1pt lightblue;
+        outline: 0;
+    }
+.search-input::-webkit-input-placeholder,
+.search-input::-moz-placeholder,     /* firefox 19+ */
+.search-input:-ms-input-placeholder /* ie */ {
+    font-size: 90%;
+}

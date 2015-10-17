@@ -227,6 +227,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
     return {
 
         init: function( $parentObj ) {
+            loadCSS("windows/windows.css");
             $menuUL = $parentObj.find('ul');
 
             tileObject = $('li.tile');
