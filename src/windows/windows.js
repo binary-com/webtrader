@@ -323,6 +323,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             // add an item to window menu
             var $windowLink = $("<a href='#'>" + options.title + "</a>");
             var li = $('<li />').addClass(id + 'LI').append($windowLink);
+            
+            var $menuUL = $("#nav-menu .windows").find("ul");
             $menuUL.append(li);
             // bring window to top on click
             $windowLink.on('click', function () {

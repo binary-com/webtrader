@@ -1,19 +1,27 @@
-.logo {
-	float: left;
+/* Created by Armin on 10/17/2015 */
+/* Binary standard colors
+   menu normal: #273051;
+   menu hover: #3F476E;
+*/
+
+#nav-container .logo {
+	position: absolute;
+	margin-top: 6px;
 	width: 40px;
-	margin-top: 5px;
-	margin-left: 10px;
+	left: 15px;
 }
 
 #nav-container {
 	background-color: #273051;
-	height: 50px;
+	height: 53px;
+	text-align: center;
 }
 
 #nav-menu {
 	margin: 0 0 0 60px;
 	padding: 0;
 	list-style: none outside none;
+	display: inline-table;
 }
 
 #nav-menu li {
@@ -25,7 +33,8 @@
 	display: block;
 	color: white;
 	text-decoration: none;
-	padding: 16px 20px;
+	padding: 16px 30px;
+	font-size: 16px;
 	white-space: nowrap;
 	text-align: left;
 }
@@ -51,6 +60,10 @@
 	background-color: #273051;
 }
 
+#nav-menu li > ul li a {
+	font-size: 14px;
+}
+
 #nav-menu li:hover > ul {
 	display: block;
 	list-style: none outside none;
@@ -62,17 +75,15 @@
 	background-color: #3F476E;
 }
 
-/* helper classes */
-.pull-right {
-	float: right;
+/* slicknav customization */
+.slicknav_menu {
+	background-color: #273051;
 }
 
-.pull-left {
-	float: left;
-}
-
-.clear {
-	clear: both;
+.slicknav_nav a:hover,
+.slicknav_nav .slicknav_row:hover {
+	background-color: #3F476E;
+	color: white;
 }
 
 /* slicknav responsive rules */
@@ -82,10 +93,8 @@
 
 @media screen and (max-width: 40em) {
 	/* #menu is the original menu */
-	.logo {
-		position: absolute;
-		top: 5px;
-		width: 35px;
+	#nav-container .logo {
+		top: 1px;
 	}
 
 	#nav-container {

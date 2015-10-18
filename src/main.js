@@ -90,20 +90,17 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
         /* this callback is executed right after the
            navigation menu has been loaded and initialized.
-           For some reason if you don't use this callback and
-           register your click handlers after the navigation.init()
-           statement, they won't work. P.S I'm looking into it. */
-        // register all your menu click handlers here
+           register your menu click handlers here */
         var registerMenusCallback = function () {
             // Register async loading of tradingTimes sub-menu
-            var $ttMenu = $("#nav-menu .tradingTimes");
-            load_ondemand($ttMenu, 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                tradingTimes.init($ttMenu);
+            var $tradingTimesMenu = $("#nav-menu .tradingTimes");
+            load_ondemand($tradingTimesMenu, 'click', 'Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+                tradingTimes.init($tradingTimesMenu);
             });
         }
 
+        // Trigger async loading of navigation module
         require(['navigation/navigation'], function(navigation) {
-            // initialize the menu && execute callback
             navigation.init(registerMenusCallback);
 
             // Trigger async loading of instruments menu
@@ -129,6 +126,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
         loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
+        // once the document is ready, hide spinner.
         $(".sk-spinner-container").hide();
     });
 
