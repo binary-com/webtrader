@@ -69,7 +69,7 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
             try {
                 assets = results[1].asset_index;
                 markets = processMarketSubmarkets(results[0]);
-                var titlebar = assetWin.parent().find('.ui-dialog-titlebar').addClass('with-dates');
+                var titlebar = assetWin.parent().find('.ui-dialog-titlebar');
                 var dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
 
                 var market_names = windows
