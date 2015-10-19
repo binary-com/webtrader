@@ -1,111 +1,92 @@
 /* Created by Armin on 10/17/2015 */
+
 /* Binary standard colors
    menu normal: #273051;
    menu hover: #3F476E;
 */
 
 #nav-container .logo {
-	position: absolute;
-	margin-top: 6px;
-	width: 40px;
-	left: 15px;
+    position: absolute;
+    margin-top: 6px;
+    width: 40px;
+    left: 10px;
 }
 
 #nav-container {
-	background-color: #273051;
-	height: 53px;
-	text-align: center;
+    background-color: #273051;
+    height: 53px;
+    text-align: center;
 }
 
 #nav-menu {
-	margin: 0 0 0 60px;
-	padding: 0;
-	list-style: none outside none;
-	display: inline-table;
+    margin: 0 0 0 60px;
+    padding: 0;
+    list-style: none outside none;
+    display: inline-table;
+    background-color: #273051;
 }
 
 #nav-menu li {
-	float: left;
-	position: relative;
+    float: left;
+    position: relative;
 }
 
 #nav-menu li a {
-	display: block;
-	color: white;
-	text-decoration: none;
-	padding: 16px 30px;
-	font-size: 16px;
-	white-space: nowrap;
-	text-align: left;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 30px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: left;
 }
 
 #nav-menu li a:hover {
-	background-color: #3F476E;
+    background-color: #3F476E;
 }
 
 #nav-menu li ul {
-	position: absolute;
-	display: none;
-	z-index: 999999;
+    position: absolute;
+    display: none;
+    z-index: 999999;
 }
 
 #nav-menu li ul li ul {
-	position: absolute;
-	left: 100%;
-	top: 0;
+    position: absolute;
+    left: 100%;
+    top: 0;
 }
 
 #nav-menu li > ul li {
-	float: none;
-	background-color: #273051;
+    float: none;
+    background-color: #273051;
 }
 
 #nav-menu li > ul li a {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 #nav-menu li:hover > ul {
-	display: block;
-	list-style: none outside none;
-	margin: 0;
-	padding: 0;
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
 }
 
 #nav-menu li:hover {
-	background-color: #3F476E;
+    background-color: #3F476E;
 }
 
-/* slicknav customization */
-.slicknav_menu {
-	background-color: #273051;
-}
+@media screen and (max-width: 755px) {
+    #nav-container {
+        text-align: left;
+    }
 
-.slicknav_nav a:hover,
-.slicknav_nav .slicknav_row:hover {
-	background-color: #3F476E;
-	color: white;
-}
+    #nav-menu {
+        display: block;
+    }
 
-/* slicknav responsive rules */
-.slicknav_menu {
-	display:none;
-}
-
-@media screen and (max-width: 40em) {
-	/* #menu is the original menu */
-	#nav-container .logo {
-		top: 1px;
-	}
-
-	#nav-container {
-		text-align: inherit;
-	}
-
-	#nav-menu {
-		display:none;
-	}
-	
-	.slicknav_menu {
-		display:block;
-	}
+    #nav-menu li a {
+        padding: 16px 25px;
+    }
 }

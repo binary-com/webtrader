@@ -24,8 +24,7 @@ requirejs.config({
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
-        'loadCSS': 'lib/loadcss/loadCSS',
-        'slicknav': 'lib/slicknav/dist/jquery.slicknav.min'
+        'loadCSS': 'lib/loadcss/loadCSS'
     },
     "shim": {
         "jquery-ui": {
@@ -88,12 +87,13 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             });
         }
 
-        /* this callback is executed right after the
-           navigation menu has been loaded and initialized.
-           register your menu click handlers here */
-        var registerMenusCallback = function () {
+        /* this callback is executed after the menu has been
+           loaded. register your menu click handlers here */
+        var registerMenuHandlers = function ($navMenu) {
+            // $navMenu: #nav-container #nav-menu
+
             // Register async loading of tradingTimes sub-menu
-            var $tradingTimesMenu = $("#nav-menu .tradingTimes");
+            var $tradingTimesMenu = $navMenu.find(".tradingTimes");
             load_ondemand($tradingTimesMenu, 'click', 'Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
                 tradingTimes.init($tradingTimesMenu);
             });
@@ -101,7 +101,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
         // Trigger async loading of navigation module
         require(['navigation/navigation'], function(navigation) {
-            navigation.init(registerMenusCallback);
+            navigation.init(registerMenuHandlers);
 
             // Trigger async loading of instruments menu
             require(["instruments/instruments"], function(instrumentsMod) {
@@ -126,7 +126,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
         loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
-        // once the document is ready, hide spinner.
+        // the document's ready, hide the spinner.
         $(".sk-spinner-container").hide();
     });
 

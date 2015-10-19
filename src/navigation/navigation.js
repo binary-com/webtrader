@@ -1,28 +1,19 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "jquery-growl", "slicknav"], function ($) {
+define(["jquery"], function ($) {
 	"use strict";
 
 	return {
 		init: function(_callback) {
-			loadCSS("lib/slicknav/dist/slicknav.min.css");
 			loadCSS("navigation/navigation.css");
-			
-			if($("#nav-menu").length == 0) {
-				$.get("navigation/navigation.html", function ($html) {
-					$("#nav-container").append($html);
 
-					$("#nav-menu").slicknav({
-						label: 'Binary.com',
-						prependTo: '#nav-container',
-						closeOnClick: true
-					});
+			$.get("navigation/navigation.html", function ($html) {
+				$("body").prepend($html);
 
-					if(_callback) {
-						_callback();
-					}
-				});
-			}
+				if(_callback) {
+					_callback($("#nav-menu"));
+				}
+			});
 		}
 	};
 });
