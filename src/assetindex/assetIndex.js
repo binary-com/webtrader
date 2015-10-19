@@ -10,13 +10,11 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
         loadCSS("assetindex/assetIndex.css");
         li.click(function () {
             if (!assetWin) {
-                assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 700 });
+                assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750 });
                 $.get('assetindex/assetIndex.html', initAssetWin);
             }
             assetWin.dialog('open'); /* bring winodw to front */
         });
-
-        setTimeout(li.click.bind(li), 2000);// TODO: debug only remove this
     }
 
     function processMarketSubmarkets(data) {
@@ -69,7 +67,7 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
             try {
                 assets = results[1].asset_index;
                 markets = processMarketSubmarkets(results[0]);
-                var titlebar = assetWin.parent().find('.ui-dialog-titlebar');
+                var titlebar = assetWin.parent().find('.ui-dialog-titlebar').addClass('with-contents');
                 var dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
 
                 var market_names = windows
@@ -80,7 +78,8 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
                             var list = Object.keys(markets[val]); /* get list of sub_markets */
                             submarket_names.update_list(list);
                             updateTable(market_names.val(), submarket_names.val());
-                        }
+                        },
+                        width: '150px'
                     });
 
                 var submarket_names = windows
@@ -89,7 +88,8 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
                         inx: 0,
                         changed: function (val) {
                             updateTable(market_names.val(), submarket_names.val());
-                        }
+                        },
+                        width: '150px'
                     });
 
                 updateTable(market_names.val(),submarket_names.val());

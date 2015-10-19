@@ -100,15 +100,20 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             });
 
             //Register async loading of tradingTimes sub-menu
-            load_ondemand($('.topContainer .tradingTimesLI'), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                tradingTimes.init($('.topContainer .tradingTimesLI'));
-                $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
-            });
+            load_ondemand($('.topContainer .tradingTimesLI'), 'click', 'Loading Trading Times ...', 'tradingtimes/tradingTimes',
+                function (tradingTimes) {
+                    var li = $('.topContainer .tradingTimesLI');
+                    tradingTimes.init(li);
+                    li.click();
+                });
 
-            //Trigger async loading of window asset-index
-            require(["assetindex/assetIndex"], function( assetIndex ) {
-                assetIndex.init($('.topContainer .assetIndexLI'));
-            });
+            //Register async loading of window asset-index
+            load_ondemand($('.topContainer .assetIndexLI'), 'click', 'loading Asset Index ...', 'assetindex/assetIndex',
+                function (assetIndex) {
+                    var li = $('.topContainer .assetIndexLI');
+                    assetIndex.init(li);
+                    li.click();
+                });
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {

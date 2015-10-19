@@ -3,19 +3,20 @@
     float:left;
 }
 
-.ui-dialog-titlebar.with-dates {
+.ui-dialog-titlebar.with-contents {
     height:20px;
 }
-    .ui-dialog-titlebar.with-dates .ui-dialog-title {
+    .ui-dialog-titlebar.with-contents .ui-dialog-title {
         width: 20%;
     }
-    .ui-dialog-titlebar.with-dates .ui-selectmenu-button {
+    .ui-dialog-titlebar.with-contents .ui-selectmenu-button {
         margin-top: -.4em;
     }
-    .ui-dialog-titlebar.with-dates .title {
+    .ui-dialog-titlebar.with-contents .title {
         margin-top: .1em;
         float:left;
     }
+
     .ui-dialog-titlebar.with-dates .ui-datepicker-trigger {
         margin-top: -1.6em;
     }
