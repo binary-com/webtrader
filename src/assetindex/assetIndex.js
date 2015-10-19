@@ -13,38 +13,93 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
                 assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 700 });
                 $.get('assetindex/assetIndex.html', initAssetWin);
             }
-            assetWin.dialog('open');
+            assetWin.dialog('open'); /* bring winodw to front */
         });
 
         setTimeout(li.click.bind(li), 2000);// TODO: debug only remove this
     }
 
     function processMarketSubmarkets(data) {
-        var ret = {
-            hierarchical: {}, // hierarchical view of markets and submarkets
-            flatten: []       // flatten view of ...
-        };
         var markets = (data.trading_times && data.trading_times.markets) || [];
 
-        /* ret.hierarchical */
+        var ret = {};
         markets.forEach(function (market) {
-            ret.hierarchical[market.name] = {};
-            var smarkets = ret.hierarchical[market.name];
+            var smarkets = ret[market.name] = {};
             market.submarkets.forEach(function (smarket) {
                 smarkets[smarket.name] = smarket.symbols.map(function (symbol) { return symbol.name; });
             });
         });
-        /* ret.flatten */
-        var list = markets.map(function (market) {
-            var arr = market.submarkets.map(function (smarket) {
-                return smarket.symbols.map(function (symbol) {
-                    return { market: market.name, submakret: smarket.name, symbol: symbol.name };
-                });
-            });
-            return [].concat.apply([], arr); // flatten the array
-        });
-        ret.flatten = [].concat.apply([], list); // flatten the array
         return ret;
+    }
+
+    function refreshTable() {
+        var assets = [];
+        var markets = {};
+        var updateTable = function (market_name, submarket_name) {
+            var symbols = markets[market_name][submarket_name];
+            var rows = assets
+                .filter(function (asset) {
+                    return symbols.indexOf(asset[1] /* asset.name */) > -1;
+                })
+                .map(function (asset) {
+                    /* secham: 
+                        [ "frxAUDJPY","AUD/JPY",
+                            ["callput","callput","5t","365d"],
+                            ["touchnotouch","Touch/No Touch","1h","1h"],
+                            ["endsinout","endsinout","1d","1d"],
+                            ["staysinout","staysinout","1d","1d"]
+                        ]
+                    */
+                    var props = asset[2] /* asset.props */
+                        .map(function (prop) { return prop[2] + '-' + prop[3]; }); /* for each property extract a string */
+                    props.unshift(asset[1]); /* add asset.name to the beginning of array */
+                     
+                    return props;
+                });
+            table.api().rows().remove();
+            table.api().rows.add(rows);
+            table.api().draw();
+        }
+
+        var processing_msg = $('#' + table.attr('id') + '_processing').show();
+        Promise.all(
+            [{ trading_times: new Date().toISOString().slice(0, 10) }, { asset_index: 1 }]
+            .map(liveapi.send))
+        .then(function (results) {
+            try {
+                assets = results[1].asset_index;
+                markets = processMarketSubmarkets(results[0]);
+                var titlebar = assetWin.parent().find('.ui-dialog-titlebar').addClass('with-dates');
+                var dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
+
+                var market_names = windows
+                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
+                        list: Object.keys(markets),
+                        inx: 0,
+                        changed: function (val) {
+                            var list = Object.keys(markets[val]); /* get list of sub_markets */
+                            submarket_names.update_list(list);
+                            updateTable(market_names.val(), submarket_names.val());
+                        }
+                    });
+
+                var submarket_names = windows
+                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
+                        list: Object.keys(markets[market_names.val()]),
+                        inx: 0,
+                        changed: function (val) {
+                            updateTable(market_names.val(), submarket_names.val());
+                        }
+                    });
+
+                updateTable(market_names.val(),submarket_names.val());
+                processing_msg.hide();
+            } catch (err) { console.error(err) }
+        })
+        .catch(function (error) {
+            $.growl.error({ message: error.message });
+            console.error(error);
+        });
     }
 
     function initAssetWin($html) {
@@ -74,75 +129,7 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
             });
         });
 
-        var assets = [];
-        var markets = [];
-        var updateTable = function (market_name, submarket_name) {
-            var symbols = markets.hierarchical[market_name][submarket_name];
-            var rows = assets
-                .filter(function (asset) {
-                    return symbols.indexOf(asset[1] /* asset.name */) > -1;
-                })
-                .map(function (asset) {
-                    /* secham: 
-                        [ "frxAUDJPY","AUD/JPY",
-                            ["callput","callput","5t","365d"],
-                            ["touchnotouch","Touch/No Touch","1h","1h"],
-                            ["endsinout","endsinout","1d","1d"],
-                            ["staysinout","staysinout","1d","1d"]
-                        ]
-                    */
-                    var props = asset[2] /* asset.props */
-                        .map(function (prop) { return prop[2] + '-' + prop[3]; }); /* for each property extract a string */
-                    props.unshift(asset[1]); /* add asset.name to the beginning of array */
-                     
-                    return props;
-                });
-            table.api().rows().remove();
-            table.api().rows.add(rows);
-            table.api().draw();
-        }
-
-
-        var processing_msg = $('#' + table.attr('id') + '_processing').show();
-        Promise.all(
-            [{ trading_times: new Date().toISOString().slice(0, 10) }, { asset_index: 1 }]
-            .map(liveapi.send))
-        .then(function (results) {
-            try {
-                assets = results[1].asset_index;
-                markets = processMarketSubmarkets(results[0]);
-                var titlebar = assetWin.parent().find('.ui-dialog-titlebar').addClass('with-dates');
-                var dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
-
-                var market_names = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                        list: Object.keys(markets.hierarchical),
-                        inx: 0,
-                        changed: function (val) {
-                            var list = Object.keys(markets.hierarchical[val]); /* get list of sub_markets */
-                            submarket_names.update_list(list);
-                            updateTable(market_names.val(), submarket_names.val());
-                        }
-                    });
-
-                var submarket_names = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                        list: Object.keys(markets.hierarchical[market_names.val()]),
-                        inx: 0,
-                        changed: function (val) {
-                            updateTable(market_names.val(), submarket_names.val());
-                        }
-                    });
-
-                updateTable(market_names.val(),submarket_names.val());
-                processing_msg.hide();
-            } catch (err) { console.error(err) }
-        })
-        .catch(function (error) {
-            refresh();
-            $.growl.error({ message: error.message });
-            console.warn(error);
-        });
+        refreshTable();
     }
 
     return {
