@@ -64,6 +64,7 @@
 
 #nav-menu li > ul li a {
     font-size: 14px;
+    padding: 10px 30px;
 }
 
 #nav-menu li:hover > ul {
@@ -91,7 +92,7 @@
 .nav-submenu-caret {
     position: absolute;
     right: 15px;
-    top: 16px;
+    top: 10px;
     display: inline-block;
     color: white;
 }
@@ -100,16 +101,12 @@
     content: '»';
 }
 
-@media screen and (max-width: 755px) {
-    #nav-container {
-        text-align: left;
-    }
-
-    #nav-menu {
-        display: block;
-    }
-
+@media screen and (max-width: 824px) {
     #nav-menu li a {
-        padding: 16px 25px;
+        padding: 16px;
+    }
+
+    #nav-menu li > ul li a {
+        padding: 10px 30px;
     }
 }
