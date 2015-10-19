@@ -111,6 +111,10 @@
 }
 
 @media screen and (max-width: 824px) {
+    #nav-menu {
+        display: block;
+    }
+
     #nav-menu li a {
         padding: 16px;
     }
