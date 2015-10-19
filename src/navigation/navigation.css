@@ -59,12 +59,17 @@
 
 #nav-menu li > ul li {
     float: none;
-    background-color: #273051;
+    /*background-color: #273051;*/
+    background-color: #3F476E;
 }
 
 #nav-menu li > ul li a {
     font-size: 14px;
     padding: 10px 30px;
+}
+
+#nav-menu li > ul li a:hover {
+    background-color: #273051;
 }
 
 #nav-menu li:hover > ul {
@@ -76,6 +81,10 @@
 
 #nav-menu li:hover {
     background-color: #3F476E;
+}
+
+#nav-menu li > ul li:hover {
+    background-color: #273051;
 }
 
 .nav-caret {
