@@ -113,10 +113,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             });
 
             // Trigger async loading of window sub-menu
-            // require(["windows/windows"], function (windows) {
-            //     var $windowsMenu = $("#nav-menu .windows");
-            //     windows.init($windowsMenu);
-            // });
+            require(["windows/windows"], function (windows) {
+                var $windowsMenu = $("#nav-menu .windows");
+                windows.init($windowsMenu);
+            });
         });
 
         //Now load all other CSS asynchronously
