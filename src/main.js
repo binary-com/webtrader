@@ -55,7 +55,6 @@ requirejs.config({
 });
 
 require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
-
     "use strict";
 
     //TODO if SVG, websockets are not allowed, then redirect to unsupported_browsers.html
@@ -73,25 +72,39 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
     //All dependencies loaded
     $(document).ready(function () {
-
         /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
         var load_ondemand = function (element, event_name,msg, module_name,callback) {
             element.one(event_name, function () {
                 require([module_name], function (module) {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.notice({ message: msg });
-                    });
+                    // display a notification only if a message exists
+                    if (msg && msg.length) {
+                        require(["jquery", "jquery-growl"], function($) {
+                            $.growl.notice({ message: msg });
+                        });
+                    }
                     callback && callback(module);
                 });
             });
         }
 
-        $(".mainContainer").load("mainContent.html", function() {
+        /* this callback is executed after the menu has been
+           loaded. register your menu click handlers here */
+        var registerMenuHandlers = function ($navMenu) {
+            // $navMenu: #nav-container #nav-menu
 
-            //Trigger async loading of instruments and refresh menu
+            // Register async loading of tradingTimes sub-menu
+            var $tradingTimesMenu = $navMenu.find(".tradingTimes");
+            load_ondemand($tradingTimesMenu, 'click', 'Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+                tradingTimes.init($tradingTimesMenu);
+            });
+        }
+
+        // Trigger async loading of navigation module
+        require(['navigation/navigation'], function(navigation) {
+            navigation.init(registerMenuHandlers);
+
+            // Trigger async loading of instruments menu
             require(["instruments/instruments"], function(instrumentsMod) {
-
-                //Just an info
                 require(["jquery", "jquery-growl"], function($) {
                     $.growl.notice({ message: "Loading chart menu!" });
                 });
@@ -99,15 +112,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 instrumentsMod.init();
             });
 
-            //Register async loading of tradingTimes sub-menu
-            load_ondemand($('.topContainer .tradingTimesLI'), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                tradingTimes.init($('.topContainer .tradingTimesLI'));
-                $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
-            });
-
-            //Trigger async loading of window sub-menu
-            require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows').closest('li'));
+            // Trigger async loading of window sub-menu
+            require(["windows/windows"], function (windows) {
+                var $windowsMenu = $("#nav-menu .windows");
+                windows.init($windowsMenu);
             });
         });
 
@@ -118,6 +126,8 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
         loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
+        // the document's ready, hide the spinner.
+        $(".sk-spinner-container").hide();
     });
 
 });

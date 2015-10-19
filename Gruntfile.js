@@ -72,8 +72,8 @@ module.exports = function (grunt) {
                             'modernizr/modernizr.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
+                            'slicknav/dist/jquery.slicknav.min.js', 'slicknav/dist/slicknav.min.css',
                             'requirejs/require.js',
-                            'underscore/underscore-min.js',
                             '!**/**/favicon.ico'
                         ], 
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'

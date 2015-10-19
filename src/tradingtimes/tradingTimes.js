@@ -62,18 +62,6 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
         };
     }
 
-    function init(li) {
-        loadCSS("tradingtimes/tradingTimes.css");
-        li.click(function () {
-            if (!tradingWin) {
-                tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
-                $.get('tradingtimes/tradingTimes.html', initTradingWin);
-            }
-            tradingWin.dialog('open');
-
-        });
-    }
-
     function initTradingWin($html) {
         $html = $($html);
         var subheader = $html.filter('.trading-times-sub-header');
@@ -165,7 +153,23 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
         });
     }
    
+    function openDialog() {
+        if (!tradingWin) {
+            tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
+            $.get('tradingtimes/tradingTimes.html', initTradingWin);
+        }
+        tradingWin.dialog('open');
+    }
+
     return {
-        init: init
+        init: function ($menuItem) {
+            loadCSS("tradingtimes/tradingTimes.css");
+            openDialog();
+
+            $menuItem.click(function (e) {
+                openDialog();
+                e.preventDefault();
+            });
+        }
     }
 });

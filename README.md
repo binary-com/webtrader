@@ -1,8 +1,12 @@
 #Webtrader ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
 
 [![Join the chat at https://gitter.im/binary-com/webtrader](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/binary-com/webtrader?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://binary-com.github.io/webtrader) website.
- 
+This repository contains the HTML, Javascript, CSS, and images for the [WebTrader](http://binary-com.github.io/webtrader) website.
+
+##Project goal
+The goal of this project is to create a full-screen trading interface for [Binary.com](https://www.binary.com) according to the following design:
+![Webtrader](https://banners.binary.com/misc/webtrader-layout.jpg)
+
 ##How to work with this project
 ####Linux Users
         $ sudo apt-get install git
