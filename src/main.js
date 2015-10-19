@@ -105,6 +105,11 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
             });
 
+            //Trigger async loading of window asset-index
+            require(["assetindex/assetIndex"], function( assetIndex ) {
+                assetIndex.init($('.topContainer .assetIndexLI'));
+            });
+
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
                 windows.init($('.topContainer .windows').closest('li'));
