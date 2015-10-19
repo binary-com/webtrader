@@ -77,6 +77,29 @@
     background-color: #3F476E;
 }
 
+.nav-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.nav-submenu-caret {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    display: inline-block;
+    color: white;
+}
+
+.nav-submenu-caret:after {
+    content: '»';
+}
+
 @media screen and (max-width: 755px) {
     #nav-container {
         text-align: left;

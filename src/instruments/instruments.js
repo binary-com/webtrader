@@ -111,8 +111,10 @@ define(["jquery", "jquery-ui", "websockets/eventSourceHandler"], function($, $ui
 
     function _refreshInstrumentMenu(rootElement, data) {
         $.each(data, function(key, value) {
-            var submenuSymbol = value.submarkets || value.instruments ? " »" : "";
-            var menuLink = "<a href='#'>" + value.display_name + submenuSymbol + "</a>";
+            var caretHtml = "<span class='nav-submenu-caret'></span>";
+            var menuHtml = value.submarkets || value.instruments ? 
+                value.display_name + caretHtml : value.display_name;
+            var menuLink = "<a href='#'>" + menuHtml + "</a>";
 
             var newLI = $("<li>").append(menuLink)
                 .data("symbol", value.symbol)
@@ -120,10 +122,10 @@ define(["jquery", "jquery-ui", "websockets/eventSourceHandler"], function($, $ui
                 .appendTo(rootElement);
 
             if (value.submarkets || value.instruments) {
-                // newLI.click(function(e) {
-                //   e.preventDefault();
-                //   return false;
-                // });
+                newLI.click(function(e) {
+                  e.preventDefault();
+                  return false;
+                });
                 var newUL = $("<ul>");
                 newUL.appendTo(newLI);
 
