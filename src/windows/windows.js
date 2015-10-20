@@ -227,11 +227,12 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
         init: function( $parentObj ) {
             loadCSS("windows/windows.css");
-            $menuUL = $parentObj.find('ul');
+            $menuUL = $parentObj.find("ul");
 
-            tileObject = $('li.tile');
+            tileObject = $menuUL.find(".tile");
 
-            closeAllObject = $('li.closeAll').click(function () {
+            closeAllObject = $menuUL.find(".closeAll");
+            closeAllObject.click(function () {
                 //console.log('Event for closing all chart windows!');
                 /*
                   The close click is behaving weird.
@@ -320,7 +321,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 .dialogExtend(options);
 
             // add an item to window menu
-            var li = $('<li />').addClass(id + 'LI').text(options.title);
+            var $windowMenuLink = $("<a href='#'>" + options.title + "</a>");
+            var li = $('<li />').addClass(id + 'LI').html($windowMenuLink);
             $menuUL.append(li);
             // bring window to top on click
             li.on('click', function () {
@@ -330,11 +332,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
                 li.remove();
-                $('#menu').menu('refresh');
             });
-
-            // refresh the main jquery ui menu
-            $('#menu').menu('refresh');
 
             if (options.resize)
                 options.resize.call($html[0]);

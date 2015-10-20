@@ -2,7 +2,7 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui, liveapi) {
+define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navigation"], function($, $ui, liveapi, navigation) {
 
     "use strict";
 
@@ -113,16 +113,20 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
     function _refreshInstrumentMenu( rootElement, data ) {
 
         $.each(data, function(key, value) {
-            var newLI = $("<li>").append(value.display_name)
+            var isDropdownMenu = value.submarkets || value.instruments;
+            var caretHtml = "<span class='nav-submenu-caret'></span>";
+            var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
+            var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
+            if(isDropdownMenu) {
+                $menuLink.addClass("dropdown-toggle");
+            }
+
+            var newLI = $("<li>").append($menuLink)
                                 .data("symbol", value.symbol)
                                 .data("delay_amount", value.delay_amount)
                                 .appendTo( rootElement );
 
-            if (value.submarkets || value.instruments) {
-                newLI.click(function(e) {
-                  e.preventDefault();
-                  return false;
-                });
+            if (isDropdownMenu) {
                 var newUL = $("<ul>");
                 newUL.appendTo(newLI);
                 _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
@@ -247,19 +251,18 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
 
     return {
         init: function( _callback ) {
-            $("#menu").menu();
-            
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
                 liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) }).then(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
                         _extractInstrumentMarkets(_instrumentJSON);
 
-                        var instrumentsMenu = $(".mainContainer").find('.instruments');
+                        var instrumentsMenu = $("#nav-menu").find(".instruments");
                         var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
-                        rootUL.menu();
+
+                        navigation.updateMenuToggleHandlers();
 
                         if(_callback) {
                             _callback(markets);

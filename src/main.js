@@ -86,28 +86,33 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             });
         }
 
-        $(".mainContainer").load("mainContent.html", function() {
+        /* this callback is executed right after the navigation module
+           has been loaded & initialized. register your menu click handlers here */
+        var registerMenusCallback = function ($navMenu) {
+            //Register async loading of tradingTimes sub-menu
+            var $tradingTimesMenu = $navMenu.find(".tradingTimes");
+            load_ondemand($tradingTimesMenu, 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+                tradingTimes.init($tradingTimesMenu);
+                $tradingTimesMenu.click();
+            });
+        }
+
+        require(["navigation/navigation"], function (navigation) {
+            navigation.init(registerMenusCallback);
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
-
-                //Just an info
-                require(["jquery", "jquery-growl"], function($) {
+                require(["jquery-growl"], function($) {
                     $.growl.notice({ message: "Loading chart menu!" });
                 });
 
                 instrumentsMod.init();
             });
 
-            //Register async loading of tradingTimes sub-menu
-            load_ondemand($('.topContainer .tradingTimesLI'), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                tradingTimes.init($('.topContainer .tradingTimesLI'));
-                $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
-            });
-
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows').closest('li'));
+                var $windowsLI = $("#nav-menu .windows");
+                windows.init($windowsLI);
             });
         });
 
@@ -118,6 +123,9 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
         loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
+        // once the document is ready,
+        // hide the loading spinner.
+        $(".sk-spinner-container").hide();
     });
 
 });

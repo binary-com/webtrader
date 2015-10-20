@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
     font-size: 80%;
 }
@@ -164,13 +170,6 @@ nav.headMenu .hide .ui-icon {
 .ui-dialog .ui-dialog-content {
   padding: .5em .5em;
   padding-bottom: 0;
-}
-
-.logo {
-  width: 40px;
-  float: left;
-  padding-left: 10px;
-  margin-top: 3px;
 }
 
 .gtm_data_layer {
