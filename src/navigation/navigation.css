@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-#nav-container .logo {
+#nav-container .nav-logo {
     position: absolute;
     margin-top: 6px;
     width: 40px;
@@ -20,7 +20,7 @@
 }
 
 /** normal menu (desktop/tablet) **/
-.normal-menu {
+.nav-normal-menu {
     margin: 0 0 0 60px;
     padding: 0;
     list-style: none outside none;
@@ -28,12 +28,12 @@
     background-color: #273051;
 }
 
-.normal-menu li {
+.nav-normal-menu li {
     float: left;
     position: relative;
 }
 
-.normal-menu li a {
+.nav-normal-menu li a {
     display: block;
     color: white;
     text-decoration: none;
@@ -44,11 +44,11 @@
     outline: none;
 }
 
-.normal-menu li a:hover {
+.nav-normal-menu li a:hover {
     background-color: #3F476E;
 }
 
-.normal-menu li > ul {
+.nav-normal-menu li > ul {
     position: absolute;
     display: none;
     z-index: 999999;
@@ -56,46 +56,46 @@
     min-width: 100%;
 }
 
-.normal-menu li ul li ul {
+.nav-normal-menu li ul li ul {
     position: absolute;
     left: 100%;
     top: 0;
 }
 
-.normal-menu li > ul li {
+.nav-normal-menu li > ul li {
     float: none;
     background-color: #3F476E;
 }
 
-.normal-menu li > ul li a {
+.nav-normal-menu li > ul li a {
     font-size: 14px;
     padding: 10px 30px;
 }
 
-.normal-menu li > ul li a:hover {
+.nav-normal-menu li > ul li a:hover {
     background-color: #273051;
 }
 
-.normal-menu li > ul.nav-closed {
+.nav-normal-menu li > ul.nav-closed {
     display: none;
 }
 
-.normal-menu li:hover > ul {
+.nav-normal-menu li:hover > ul {
     display: block;
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
 
-.normal-menu li > ul.nav-closed {
+.nav-normal-menu li > ul.nav-closed {
     display: none;
 }
 
-.normal-menu li:hover {
+.nav-normal-menu li:hover {
     background-color: #3F476E;
 }
 
-.normal-menu li > ul li:hover {
+.nav-normal-menu li > ul li:hover {
     background-color: #273051;
 }
 
@@ -110,11 +110,11 @@
     z-index: 999999;
 }
 
-.mobile-menu {
+.nav-mobile-menu {
     display: block;
 }
 
-.mobile-menu {
+.nav-mobile-menu {
     margin: 0;
     padding: 0;
     list-style: none outside none;
@@ -122,7 +122,7 @@
     /*background-color: #273051;*/
 }
 
-.mobile-menu li a {
+.nav-mobile-menu li a {
     display: block;
     color: white;
     text-decoration: none;
@@ -133,37 +133,37 @@
     outline: none;
 }
 
-.mobile-menu li a:hover {
+.nav-mobile-menu li a:hover {
     background-color: #3F476E;
 }
 
-.mobile-menu li > ul {
+.nav-mobile-menu li > ul {
     display: none;
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
 
-.mobile-menu li ul li a {
+.nav-mobile-menu li ul li a {
     font-size: 14px;
     padding: 10px 45px;
     background-color: #3F476E;
 }
 
-.mobile-menu li ul li ul li a {
+.nav-mobile-menu li ul li ul li a {
     padding: 10px 60px;
 }
 
-.mobile-menu li ul li ul li ul li a {
+.nav-mobile-menu li ul li ul li ul li a {
     padding: 10px 75px;
 }
 
-.mobile-menu li > ul li a:hover {
+.nav-mobile-menu li > ul li a:hover {
     /*background-color: #273051;*/
     background-color: #222A47;
 }
 
-.mobile-menu .active {
+.nav-mobile-menu .nav-toggle-active {
     background-color: #222A47;
 }
 
@@ -191,7 +191,7 @@
     content: '»';
 }
 
-.mobile-menu .nav-submenu-caret {
+.nav-mobile-menu .nav-submenu-caret {
     top: inherit;
 }
 
@@ -234,19 +234,19 @@
   bottom: -10px; 
 }
 
-#nav-toggle.active span {
+#nav-toggle.nav-toggle-active span {
   background-color: transparent;
 }
 
-#nav-toggle.active span:before, #nav-toggle.active span:after {
+#nav-toggle.nav-toggle-active span:before, #nav-toggle.nav-toggle-active span:after {
   top: 0;
 }
 
-#nav-toggle.active span:before {
+#nav-toggle.nav-toggle-active span:before {
   transform: rotate(45deg);
 }
 
-#nav-toggle.active span:after {
+#nav-toggle.nav-toggle-active span:after {
   transform: rotate(-45deg);
 }
 
@@ -256,7 +256,6 @@
     position: absolute;
     color: white;
     font-size: 24px;
-    font-weight: bold;
     left: 60px;
     top: 12px;
     text-shadow: 0 0 3px #333;
@@ -264,22 +263,22 @@
 
 /** targets min-width requirement **/
 @media screen and (max-width: 825px) {
-    .normal-menu {
+    .nav-normal-menu {
         display: block;
     }
 
-    .normal-menu li a {
+    .nav-normal-menu li a {
         padding: 16px;
     }
 
-    .normal-menu li > ul li a {
+    .nav-normal-menu li > ul li a {
         padding: 10px 30px;
     }
 }
 
 /** targets mobile devices **/
 @media screen and (max-width: 699px) {
-    .normal-menu {
+    .nav-normal-menu {
         display: none;
     }
 

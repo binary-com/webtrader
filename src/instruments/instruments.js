@@ -118,7 +118,7 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navi
             var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
             var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
             if(isDropdownMenu) {
-                $menuLink.addClass("dropdown-toggle");
+                $menuLink.addClass("nav-dropdown-toggle");
             }
 
             var newLI = $("<li>").append($menuLink)

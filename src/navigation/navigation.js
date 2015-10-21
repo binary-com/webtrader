@@ -19,13 +19,13 @@ define(["jquery"], function ($) {
 		var $menu = $("#nav-menu");
 		var $mobileNav = $("#mobile-nav");
 		var $navToggle = $("#nav-toggle");
-		var normal_class = "normal-menu";
-		var mobile_class = "mobile-menu";
+		var normal_class = "nav-normal-menu";
+		var mobile_class = "nav-mobile-menu";
 
 		if(mq.matches) {
 			// width is less than 700px, toggle mobile menu
 			if(!$mobileNav.is(":visible")) {
-				$navToggle.removeClass("active");
+				$navToggle.removeClass("nav-toggle-active");
 			}
 
 			unbindMenusClickAndHoverHandlers();
@@ -51,8 +51,8 @@ define(["jquery"], function ($) {
 
 	function toggleMenuStyle() {
 		var $menu = $("#nav-menu");
-		var normal_class = "normal-menu";
-		var mobile_class = "mobile-menu";
+		var normal_class = "nav-normal-menu";
+		var mobile_class = "nav-mobile-menu";
 
 		if($menu.hasClass(normal_class)) {
 			// add mobile navigation
@@ -76,13 +76,13 @@ define(["jquery"], function ($) {
 	}
 
 	function bindMobileMenuClickHandlers() {
-		$("#nav-menu.mobile-menu li > ul li").each(function () {
+		$("#nav-menu.nav-mobile-menu li > ul li").each(function () {
 			$(this).unbind('click');
 			$(this).click(function (e) {
 				var hasSubMenus = $(this).find("ul").length > 0;
 				if(!hasSubMenus) {
 					$("#mobile-nav").animate({ left: "-=280" }, 320, function() {
-						$("#nav-toggle").removeClass("active");
+						$("#nav-toggle").removeClass("nav-toggle-active");
 						toggleMenuStyle();
 					});
 				}
@@ -91,20 +91,20 @@ define(["jquery"], function ($) {
 	}
 
 	function unbindMobileMenuClickHandlers() {
-		$("#nav-menu.mobile-menu li > ul li").each(function () {
+		$("#nav-menu.nav-mobile-menu li > ul li").each(function () {
 			$(this).unbind('click');
 		});
 	}
 
 	function bindMenusClickAndHoverHandlers() {
-		$("#nav-menu.normal-menu li > ul li").each(function() {
+		$("#nav-menu.nav-normal-menu li > ul li").each(function() {
 			$(this).unbind('click');
 			$(this).click(function (e) {
 				$(this).parent("ul").not("#nav-menu").toggleClass("nav-closed");
 			});
 		});
 
-		$("#nav-menu.normal-menu li").each(function () {
+		$("#nav-menu.nav-normal-menu li").each(function () {
 			$(this).unbind('mouseover');
 			$(this).mouseover(function () {
 				$(this).find("ul.nav-closed").each(function() {
@@ -126,7 +126,7 @@ define(["jquery"], function ($) {
 	}
 
 	function updateNavClickHandlers() {
-		$("#nav-menu a.dropdown-toggle").each(function () {
+		$("#nav-menu a.nav-dropdown-toggle").each(function () {
 			var $anchor = $(this);
 			$anchor.unbind('click');
 			$anchor.click(function (e) {
@@ -134,7 +134,7 @@ define(["jquery"], function ($) {
 				var $parentUL = $listItem.parent();
 				
 				var isRoot = $parentUL.attr("id") === "nav-menu";
-				var mobile_menu_class = "mobile-menu";
+				var mobile_menu_class = "nav-mobile-menu";
 				var expanded_class = "submenu-expanded";
 				var isMobileMenu = $anchor.parents("#nav-menu").hasClass(mobile_menu_class);
 				
@@ -143,7 +143,7 @@ define(["jquery"], function ($) {
 					if($submenu.length > 0) {
 						// reset active classes
 						if(isRoot) {
-							$("#nav-menu.mobile-menu li").each(function () {
+							$("#nav-menu.nav-mobile-menu li").each(function () {
 								$(this).removeClass("active");
 							});
 						}
@@ -171,7 +171,7 @@ define(["jquery"], function ($) {
 						}
 
 						if(isRoot) {
-							$listItem.toggleClass("active");
+							$listItem.toggleClass("nav-toggle-active");
 						}
 
 						if($submenu.is(":visible")) {
@@ -199,7 +199,7 @@ define(["jquery"], function ($) {
 				$("body").prepend($html);
 
 				$("#nav-toggle").click(function (e) {
-					$("#nav-toggle").toggleClass("active");
+					$("#nav-toggle").toggleClass("nav-toggle-active");
 					toggleMenuStyle();
 
 					e.preventDefault();
