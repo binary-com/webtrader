@@ -259,7 +259,7 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navi
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
 
-                        navigation.updateToggleHandlers();
+                        navigation.updateDropdownToggles();
 
                         if(_callback) {
                             _callback(markets);

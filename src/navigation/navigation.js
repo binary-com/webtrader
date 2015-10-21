@@ -27,9 +27,6 @@ define(["jquery"], function ($) {
 			if(!$mobileNav.is(":visible")) {
 				$navToggle.removeClass("nav-toggle-active");
 			}
-
-			unbindMenusClickAndHoverHandlers();
-			bindMobileMenuClickHandlers();
 		} else {
 			// width is at least 700px, toggle normal menu
 			if($menu.hasClass(mobile_class)) {
@@ -43,9 +40,6 @@ define(["jquery"], function ($) {
 			$menu.find("li > ul").each(function () {
 				$(this).removeAttr("style");
 			});
-
-			unbindMobileMenuClickHandlers();
-			bindMenusClickAndHoverHandlers();
 		}
 	}
 
@@ -58,9 +52,6 @@ define(["jquery"], function ($) {
 			// add mobile navigation
 			$menu.removeClass(normal_class).addClass(mobile_class);
 			$menu.wrap("<div id='mobile-nav'></div>");
-			
-			unbindMenusClickAndHoverHandlers();
-			bindMobileMenuClickHandlers();
 
 			$("#mobile-nav").animate({ left: "+=280" }, 320);
 		} else if($menu.hasClass(mobile_class)) {
@@ -68,76 +59,59 @@ define(["jquery"], function ($) {
 			$("#mobile-nav").animate({ left: "-=280" }, 320, function () {
 				$menu.removeClass(mobile_class).addClass(normal_class);
 				$menu.unwrap();
-
-				unbindMobileMenuClickHandlers();
-				bindMenusClickAndHoverHandlers();
 			});
 		}
+
+		updateListItemHandlers();
 	}
 
-	function bindMobileMenuClickHandlers() {
-		$("#nav-menu.nav-mobile-menu li > ul li").each(function () {
-			$(this).unbind('click');
-			$(this).click(function (e) {
-				var hasSubMenus = $(this).find("ul").length > 0;
-				if(!hasSubMenus) {
-					$("#mobile-nav").animate({ left: "-=280" }, 320, function() {
-						$("#nav-toggle").removeClass("nav-toggle-active");
-						toggleMenuStyle();
-					});
+	function updateListItemHandlers() {
+		$("#nav-menu li > ul li").each(function () {
+			$(this).off("click");
+			$(this).on("click", function () {
+				var normal_class = "nav-normal-menu";
+				var mobile_class = "nav-mobile-menu";
+				var $elem = $(this);
+				var $parentUL = $elem.parents("#nav-menu");
+				var hasSubMenus = $elem.find("ul").length > 0;
+				if($parentUL.hasClass(normal_class)) {
+					if(!hasSubMenus) {
+						$elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");
+					}
+				} else if($parentUL.hasClass(mobile_class)) {
+					if(!hasSubMenus) {
+						$("#mobile-nav").animate({ left: "-=280" }, 320, function() {
+							$("#nav-toggle").removeClass("nav-toggle-active");
+							toggleMenuStyle();
+						});
+					}
 				}
-			});
-		});
-	}
-
-	function unbindMobileMenuClickHandlers() {
-		$("#nav-menu.nav-mobile-menu li > ul li").each(function () {
-			$(this).unbind('click');
-		});
-	}
-
-	function bindMenusClickAndHoverHandlers() {
-		$("#nav-menu.nav-normal-menu li > ul li").each(function() {
-			$(this).unbind('click');
-			$(this).click(function (e) {
-				$(this).parent("ul").not("#nav-menu").toggleClass("nav-closed");
 			});
 		});
 
 		$("#nav-menu.nav-normal-menu li").each(function () {
-			$(this).unbind('mouseover');
-			$(this).mouseover(function () {
-				$(this).find("ul.nav-closed").each(function() {
+			$(this).off("mouseover");
+			$(this).on("mouseover", function () {
+				$(this).find("ul.nav-closed").each(function () {
 					$(this).removeClass("nav-closed");
 				});
 			});
 		});
 	}
 
-	function unbindMenusClickAndHoverHandlers() {
-		// remove menus click handlers
-		$("#nav-menu li > ul li").each(function () {
-			$(this).unbind('click');
-		});
-		// remove menus mouseover handlers
-		$("#nav-menu li").each(function() {
-			$(this).unbind('mouseover');
-		});
-	}
-
-	function updateNavClickHandlers() {
+	function updateDropdownToggleHandlers() {
 		$("#nav-menu a.nav-dropdown-toggle").each(function () {
 			var $anchor = $(this);
-			$anchor.unbind('click');
-			$anchor.click(function (e) {
+			$anchor.off('click');
+			$anchor.on('click', function (e) {
 				var $listItem = $anchor.parent();
 				var $parentUL = $listItem.parent();
-				
+
 				var isRoot = $parentUL.attr("id") === "nav-menu";
 				var mobile_menu_class = "nav-mobile-menu";
 				var expanded_class = "submenu-expanded";
 				var isMobileMenu = $anchor.parents("#nav-menu").hasClass(mobile_menu_class);
-				
+
 				if(isMobileMenu) {
 					var $submenu = $anchor.next("ul");
 					if($submenu.length > 0) {
@@ -188,7 +162,7 @@ define(["jquery"], function ($) {
 			});
 		});
 
-		bindMenusClickAndHoverHandlers();
+		updateListItemHandlers();
 	}
 
 	return {
@@ -198,22 +172,22 @@ define(["jquery"], function ($) {
 			$.get("navigation/navigation.html", function ($html) {
 				$("body").prepend($html);
 
-				$("#nav-toggle").click(function (e) {
+				$("#nav-toggle").on("click", function (e) {
 					$("#nav-toggle").toggleClass("nav-toggle-active");
 					toggleMenuStyle();
 
 					e.preventDefault();
 				});
 
-				updateNavClickHandlers();
+				updateDropdownToggleHandlers();
 
 				if(_callback) {
 					_callback($("#nav-menu"));
 				}
 			});
 		},
-		updateToggleHandlers: function() {
-			updateNavClickHandlers();
+		updateDropdownToggles: function() {
+			updateDropdownToggleHandlers();
 		}
 	};
 });

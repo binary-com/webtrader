@@ -78,9 +78,13 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         var load_ondemand = function (element, event_name,msg, module_name,callback) {
             element.one(event_name, function () {
                 require([module_name], function (module) {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.notice({ message: msg });
-                    });
+                    // display the message only if there is one.
+                    if(msg.length) {
+                        require(["jquery", "jquery-growl"], function($) {
+                            $.growl.notice({ message: msg });
+                        });
+                    }
+                    
                     callback && callback(module);
                 });
             });
@@ -90,7 +94,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
            has been loaded & initialized. register your menu click handlers here */
         var registerMenusCallback = function ($navMenu) {
             //Register async loading of tradingTimes sub-menu
-            var $tradingTimesMenu = $navMenu.find(".tradingTimes");
+            var $tradingTimesMenu = $navMenu.find("a.tradingTimes");
             load_ondemand($tradingTimesMenu, 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
                 tradingTimes.init($tradingTimesMenu);
                 $tradingTimesMenu.click();
