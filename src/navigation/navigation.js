@@ -27,6 +27,9 @@ define(["jquery"], function ($) {
 			if(!$mobileNav.is(":visible")) {
 				$navToggle.removeClass("active");
 			}
+
+			unbindMenusClickAndHoverHandlers();
+			bindMobileMenuClickHandlers();
 		} else {
 			// width is at least 700px, toggle normal menu
 			if($menu.hasClass(mobile_class)) {
@@ -40,6 +43,9 @@ define(["jquery"], function ($) {
 			$menu.find("li > ul").each(function () {
 				$(this).removeAttr("style");
 			});
+
+			unbindMobileMenuClickHandlers();
+			bindMenusClickAndHoverHandlers();
 		}
 	}
 
@@ -53,14 +59,70 @@ define(["jquery"], function ($) {
 			$menu.removeClass(normal_class).addClass(mobile_class);
 			$menu.wrap("<div id='mobile-nav'></div>");
 			
-			$("#mobile-nav").animate({ left: "+=260" }, 320);
+			unbindMenusClickAndHoverHandlers();
+			bindMobileMenuClickHandlers();
+
+			$("#mobile-nav").animate({ left: "+=280" }, 320);
 		} else if($menu.hasClass(mobile_class)) {
 			// remove mobile navigation
-			$("#mobile-nav").animate({ left: "-=260" }, 320, function () {
+			$("#mobile-nav").animate({ left: "-=280" }, 320, function () {
 				$menu.removeClass(mobile_class).addClass(normal_class);
 				$menu.unwrap();
+
+				unbindMobileMenuClickHandlers();
+				bindMenusClickAndHoverHandlers();
 			});
 		}
+	}
+
+	function bindMobileMenuClickHandlers() {
+		$("#nav-menu.mobile-menu li > ul li").each(function () {
+			$(this).unbind('click');
+			$(this).click(function (e) {
+				var hasSubMenus = $(this).find("ul").length > 0;
+				if(!hasSubMenus) {
+					$("#mobile-nav").animate({ left: "-=280" }, 320, function() {
+						$("#nav-toggle").toggleClass("active");
+						toggleMenuStyle();
+					});
+				}
+			});
+		});
+	}
+
+	function unbindMobileMenuClickHandlers() {
+		$("#nav-menu.mobile-menu li > ul li").each(function () {
+			$(this).unbind('click');
+		});
+	}
+
+	function bindMenusClickAndHoverHandlers() {
+		$("#nav-menu.normal-menu li > ul li").each(function() {
+			$(this).unbind('click');
+			$(this).click(function (e) {
+				$(this).parent("ul").not("#nav-menu").toggleClass("nav-closed");
+			});
+		});
+
+		$("#nav-menu.normal-menu li").each(function () {
+			$(this).unbind('mouseover');
+			$(this).mouseover(function () {
+				$(this).find("ul.nav-closed").each(function() {
+					$(this).removeClass("nav-closed");
+				});
+			});
+		});
+	}
+
+	function unbindMenusClickAndHoverHandlers() {
+		// remove menus click handlers
+		$("#nav-menu li > ul li").each(function () {
+			$(this).unbind('click');
+		});
+		// remove menus mouseover handlers
+		$("#nav-menu li").each(function() {
+			$(this).unbind('mouseover');
+		});
 	}
 
 	function updateNavClickHandlers() {
@@ -125,6 +187,8 @@ define(["jquery"], function ($) {
 				e.preventDefault();
 			});
 		});
+
+		bindMenusClickAndHoverHandlers();
 	}
 
 	return {
@@ -148,7 +212,7 @@ define(["jquery"], function ($) {
 				}
 			});
 		},
-		updateMenuToggleHandlers: function() {
+		updateToggleHandlers: function() {
 			updateNavClickHandlers();
 		}
 	};

@@ -131,11 +131,8 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navi
                 newUL.appendTo(newLI);
                 _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
             } else {
-
-                newLI.click(function() {
-
+                $menuLink.click(function() {
                     if ($("#instrumentsDialog").length == 0) {
-
                         $.get("instruments/instruments.html", function ($html) {
                             $($html).css("display", "none").appendTo("body");
                             $("#standardPeriodsButtonContainer").find("button")
@@ -262,7 +259,7 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navi
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
 
-                        navigation.updateMenuToggleHandlers();
+                        navigation.updateToggleHandlers();
 
                         if(_callback) {
                             _callback(markets);

@@ -325,7 +325,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             var li = $('<li />').addClass(id + 'LI').html($windowMenuLink);
             $menuUL.append(li);
             // bring window to top on click
-            li.on('click', function () {
+            $windowMenuLink.click(function () {
                 blankWindow.dialog('moveToTop')
                      .parent().effect("bounce", { times: 2, distance: 15 }, 450);
             });

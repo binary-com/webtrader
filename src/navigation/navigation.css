@@ -41,6 +41,7 @@
     font-size: 16px;
     white-space: nowrap;
     text-align: left;
+    outline: none;
 }
 
 .normal-menu li a:hover {
@@ -75,11 +76,19 @@
     background-color: #273051;
 }
 
+.normal-menu li > ul.nav-closed {
+    display: none;
+}
+
 .normal-menu li:hover > ul {
     display: block;
     list-style: none outside none;
     margin: 0;
     padding: 0;
+}
+
+.normal-menu li > ul.nav-closed {
+    display: none;
 }
 
 .normal-menu li:hover {
@@ -93,7 +102,7 @@
 /** responsive menu (mobile/handheld) **/
 #mobile-nav {
     position: absolute;
-    left: -260px;
+    left: -280px;
     top: 53px;
     width: 280px;
     min-height: 100%;
@@ -121,6 +130,7 @@
     font-size: 16px;
     white-space: nowrap;
     text-align: left;
+    outline: none;
 }
 
 .mobile-menu li a:hover {
@@ -195,6 +205,11 @@
     padding: 12px;
     right: 35px;
     top: 12px;
+    outline: none;
+}
+
+#nav-toggle:active {
+    background-color: transparent;
 }
 
 #nav-toggle span,
