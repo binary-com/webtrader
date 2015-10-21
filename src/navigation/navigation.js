@@ -82,7 +82,7 @@ define(["jquery"], function ($) {
 				var hasSubMenus = $(this).find("ul").length > 0;
 				if(!hasSubMenus) {
 					$("#mobile-nav").animate({ left: "-=280" }, 320, function() {
-						$("#nav-toggle").toggleClass("active");
+						$("#nav-toggle").removeClass("active");
 						toggleMenuStyle();
 					});
 				}
