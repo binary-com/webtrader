@@ -110,7 +110,7 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
                 }
                 
                 if (Cookies.get('webtrader_token'))     /* we have a cookie for the token */
-                    return auth_send();
+                    return auth_send(Cookies.get('webtrader_token'));
                 else                                    /* get the token from user */
                     return tokenWin
                         .getTokenAsync()

@@ -113,7 +113,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             // TODO: make this on_demand
             //Trigger async loading of Portfolio sub-menu
             require(["portfolio/portfolio"], function (portfolio) {
-                portfolio.init($('.topContainer .portfolioLI'));
+                portfolio.init($('.topContainer .portfolio'));
             });
 
             //Trigger async loading of window sub-menu
