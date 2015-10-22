@@ -89,6 +89,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
         $(".mainContainer").load("mainContent.html", function() {
 
+            /* initialize the top menu because other dialogs
+             * will assume an initialized top menu */
+            $("#menu").menu();
+
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
 
