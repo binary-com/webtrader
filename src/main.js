@@ -86,14 +86,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         }
     }
 
-    //Load Jquery UI CSS
+    // load Jquery UI CSS
     loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
+    // load our main CSS
+    loadCSS("main.css");
+    loadCSS("lib/hamburger.css");
 
-    //Load our main CSS
-    var mainStylesheet = loadCSS("main.css");
-    onloadCSS(mainStylesheet, function () {
-        loadCSS("lib/hamburger.css");
-
+    var navigationStylesheet = loadCSS("navigation/navigation.css");
+    onloadCSS(navigationStylesheet, function () {
         //All dependencies loaded
         $(window).load(function () {
             /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
@@ -139,6 +139,9 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 require(["windows/windows"], function( windows ) {
                     var $windowsLI = $("#nav-menu .windows");
                     windows.init($windowsLI);
+
+                    // hide the main loading spinner.
+                    $(".sk-spinner-container").hide();
                 });
             });
 
@@ -148,9 +151,6 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
             loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
             loadCSS("lib/colorpicker/jquery.colorpicker.css");
-
-            // once the document is ready, hide the loading spinner.
-            $(".sk-spinner-container").hide();
         });
     });
 });
