@@ -64,72 +64,94 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
       return;
     }
 
+    // adds onload support for asynchronous stylesheets loaded with loadCSS.
+    function onloadCSS( ss, callback ) {
+        ss.onload = function() {
+            ss.onload = null;
+            if( callback ) {
+                callback.call( ss );
+            }
+        };
+
+        // This code is for browsers that don’t support onload, any browser that
+        // supports onload should use that instead.
+        // No support for onload:
+        //  * Android 4.3 (Samsung Galaxy S4, Browserstack)
+        //  * Android 4.2 Browser (Samsung Galaxy SIII Mini GT-I8200L)
+        //  * Android 2.3 (Pantech Burst P9070)
+
+        // Weak inference targets Android < 4.4
+        if( "isApplicationInstalled" in navigator && "onloadcssdefined" in ss ) {
+            ss.onloadcssdefined( callback );
+        }
+    }
+
     //Load Jquery UI CSS
     loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
 
     //Load our main CSS
     loadCSS("main.css");
     loadCSS("lib/hamburger.css");
+    
+    var navigationStylesheet = loadCSS("navigation/navigation.css");
+    onloadCSS(navigationStylesheet, function () {
+        //All dependencies loaded
+        $(window).load(function () {
+            /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
+            var load_ondemand = function (element, event_name,msg, module_name,callback) {
+                element.one(event_name, function () {
+                    require([module_name], function (module) {
+                        // display the message only if there is one.
+                        if(msg.length) {
+                            require(["jquery", "jquery-growl"], function($) {
+                                $.growl.notice({ message: msg });
+                            });
+                        }
+                        
+                        callback && callback(module);
+                    });
+                });
+            }
 
-    //All dependencies loaded
-    $(document).ready(function () {
+            /* this callback is executed right after the navigation module
+               has been loaded & initialized. register your menu click handlers here */
+            var registerMenusCallback = function ($navMenu) {
+                //Register async loading of tradingTimes sub-menu
+                var $tradingTimesMenu = $navMenu.find("a.tradingTimes");
+                load_ondemand($tradingTimesMenu, 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+                    tradingTimes.init($tradingTimesMenu);
+                    $tradingTimesMenu.click();
+                });
+            }
 
-        /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
-        var load_ondemand = function (element, event_name,msg, module_name,callback) {
-            element.one(event_name, function () {
-                require([module_name], function (module) {
-                    // display the message only if there is one.
-                    if(msg.length) {
-                        require(["jquery", "jquery-growl"], function($) {
-                            $.growl.notice({ message: msg });
-                        });
-                    }
-                    
-                    callback && callback(module);
+            require(["navigation/navigation"], function (navigation) {
+                navigation.init(registerMenusCallback);
+
+                //Trigger async loading of instruments and refresh menu
+                require(["instruments/instruments"], function(instrumentsMod) {
+                    require(["jquery", "jquery-growl"], function($) {
+                        $.growl.notice({ message: "Loading chart menu!" });
+                    });
+
+                    instrumentsMod.init();
+                });
+
+                //Trigger async loading of window sub-menu
+                require(["windows/windows"], function( windows ) {
+                    var $windowsLI = $("#nav-menu .windows");
+                    windows.init($windowsLI);
                 });
             });
-        }
 
-        /* this callback is executed right after the navigation module
-           has been loaded & initialized. register your menu click handlers here */
-        var registerMenusCallback = function ($navMenu) {
-            //Register async loading of tradingTimes sub-menu
-            var $tradingTimesMenu = $navMenu.find("a.tradingTimes");
-            load_ondemand($tradingTimesMenu, 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                tradingTimes.init($tradingTimesMenu);
-                $tradingTimesMenu.click();
-            });
-        }
+            //Now load all other CSS asynchronously
+            loadCSS('lib/growl/stylesheets/jquery.growl.css');
+            loadCSS('charts/charts.css');
+            loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
+            loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
+            loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
-        require(["navigation/navigation"], function (navigation) {
-            navigation.init(registerMenusCallback);
-
-            //Trigger async loading of instruments and refresh menu
-            require(["instruments/instruments"], function(instrumentsMod) {
-                require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: "Loading chart menu!" });
-                });
-
-                instrumentsMod.init();
-            });
-
-            //Trigger async loading of window sub-menu
-            require(["windows/windows"], function( windows ) {
-                var $windowsLI = $("#nav-menu .windows");
-                windows.init($windowsLI);
-            });
+            // once the document is ready, hide the loading spinner.
+            $(".sk-spinner-container").hide();
         });
-
-        //Now load all other CSS asynchronously
-        loadCSS('lib/growl/stylesheets/jquery.growl.css');
-        loadCSS('charts/charts.css');
-        loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-        loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
-        loadCSS("lib/colorpicker/jquery.colorpicker.css");
-
-        // once the document is ready,
-        // hide the loading spinner.
-        $(".sk-spinner-container").hide();
     });
-
 });
