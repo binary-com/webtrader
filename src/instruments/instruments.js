@@ -247,7 +247,6 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
 
     return {
         init: function( _callback ) {
-            $("#menu").menu();
             
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
