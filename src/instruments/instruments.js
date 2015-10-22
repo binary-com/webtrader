@@ -251,7 +251,10 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
             
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
-                liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) }).then(function (_instrumentJSON) {
+                /* cache the result of trading_times call, because assetIndex needs the same data */
+                liveapi
+                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                    .then(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
                         _extractInstrumentMarkets(_instrumentJSON);
 

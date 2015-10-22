@@ -61,8 +61,10 @@ define(["jquery", "windows/windows", "websockets/eventSourceHandler", "datatable
 
         var processing_msg = $('#' + table.attr('id') + '_processing').show();
         Promise.all(
-            [{ trading_times: new Date().toISOString().slice(0, 10) }, { asset_index: 1 }]
-            .map(liveapi.send))
+            [
+                liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
+                liveapi.cached.send({ asset_index: 1 })
+            ])
         .then(function (results) {
             try {
                 assets = results[1].asset_index;
