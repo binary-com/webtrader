@@ -200,10 +200,6 @@ button.ui-button-text-only .ui-menu {
   border-color: #3F476E;
 }
 
-.ui-menu {
-  z-Index : 1003;
-}
-
 /*Overriding this class inheritted from dataTables jquery plugin*/
 .dataTables_scrollHeadInner, .sorting_asc , .dataTable , .dataTables_filter {
     width: 100% !important;
