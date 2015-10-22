@@ -1,0 +1,13 @@
+﻿.token-dialog input {
+    width: 99%;
+    margin-top:5px;
+    margin-bottom: 10px;
+}
+.token-dialog a, .token-dialog a:visited {
+    color: #2a3052;
+    font-weight: bold;
+}
+.token-dialog .token-dialog-cancel {
+    border: 0px solid #980000;
+    background: #980000!important;
+}
