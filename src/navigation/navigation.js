@@ -167,6 +167,8 @@ define(["jquery"], function ($) {
 
 	return {
 		init: function(_callback) {
+			loadCSS("navigation/navigation.css");
+			
 			$.get("navigation/navigation.html", function ($html) {
 				$("body").prepend($html);
 

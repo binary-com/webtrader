@@ -90,11 +90,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
     loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
 
     //Load our main CSS
-    loadCSS("main.css");
-    loadCSS("lib/hamburger.css");
-    
-    var navigationStylesheet = loadCSS("navigation/navigation.css");
-    onloadCSS(navigationStylesheet, function () {
+    var mainStylesheet = loadCSS("main.css");
+    onloadCSS(mainStylesheet, function () {
+        loadCSS("lib/hamburger.css");
+
         //All dependencies loaded
         $(window).load(function () {
             /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
