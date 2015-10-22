@@ -2,7 +2,7 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['es6-promise', 'reconnecting-websocket', 'jquery-timer'], function (es6_promise, ReconnectingWebSocket) {
+define(['es6-promise', 'reconnecting-websocket','js-cookie', 'jquery-timer'], function (es6_promise, ReconnectingWebSocket, Cookies) {
     es6_promise.polyfill(); /* polyfill for es6-promises */
 
     function WebtraderWebsocket() {
@@ -22,6 +22,8 @@ define(['es6-promise', 'reconnecting-websocket', 'jquery-timer'], function (es6_
     var is_connected = function () {
         return socket && socket.readyState === 1;
     }
+
+    Cookies.set('webtrader_token', 'value', { expires: 7 });
    
     socket.onopen = function () {
         /* send buffered sends */
