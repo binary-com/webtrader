@@ -57,8 +57,7 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
     require(['websockets/connection_check']); // require connection_check to handle pings.
 
-    /* TODO: DEBUG ONLY gloval variable 'api' */
-    api = {
+    var api = {
         events: {
             on: function (name, cb) {
                 (callbacks[name] = callbacks[name] || []).push(cb);
@@ -109,7 +108,6 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
                             throw up; /* pass the exception to next catch */
                         });
                 }
-
                 
                 if (Cookies.get('webtrader_token'))     /* we have a cookie for the token */
                     return auth_send();

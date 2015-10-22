@@ -5,9 +5,9 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
     var $html = $('<div />');
     var promise = null;
     var tokenWin = null;
+    loadCSS('token/token.css');
     function show() {
         if (tokenWin == null) { /* TODO: try to laod html files with requriejs instead */
-            loadCSS('token/token.css');
             $.get('token/token.html', function ($html) {
                 $html = $($html);
                 tokenWin = windows.createBlankWindow($html, {
@@ -18,7 +18,8 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
                     maximizable: false,
                     close: function () {
                         promise && promise.reject({ message: "user didn't provide a token" });
-                    }
+                    },
+                    modal: true
                 });
 
                 var input = $html.find('input');
