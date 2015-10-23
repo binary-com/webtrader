@@ -202,9 +202,9 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
-    padding: 12px;
-    right: 35px;
-    top: 12px;
+    padding: 12px 0;
+    right: 10px;
+    top: 10px;
     outline: none;
 }
 
@@ -220,7 +220,7 @@
   height: 5px;
   width: 35px;
   background: white;
-  position: absolute;
+  position: relative;
   display: block;
   content: '';
   transition: all 500ms ease-in-out;
@@ -231,7 +231,7 @@
 }
 
 #nav-toggle span:after {
-  bottom: -10px; 
+  bottom: -5px; 
 }
 
 #nav-toggle.nav-toggle-active span {
@@ -248,6 +248,7 @@
 
 #nav-toggle.nav-toggle-active span:after {
   transform: rotate(-45deg);
+  top: -5px;
 }
 
 /** mobile menu heading **/
