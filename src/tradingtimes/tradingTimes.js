@@ -1,0 +1,171 @@
+﻿/**
+ * Created by amin on 10/5/15.
+ */
+define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables","jquery-growl"], function ($,windows,liveapi) {
+
+
+    var table = null;
+    var tradingWin = null;
+
+    /* data: result of trading_times api */
+    function processData(data){
+        var markets = (data.trading_times && data.trading_times.markets) || [];
+        //    || [{
+        //    name: 'Forex',
+        //    submarkets: [{
+        //        name: 'Major Paris',
+        //        symbols: [{
+        //            delay_amount: 0,
+        //            events: [{dates:'Fridays',descrip:'Closes early at(21:00)'}],
+        //            name: 'AUD/JPY',
+        //            settlement: '23:59:59',
+        //            symbol: 'frxAUDJPY',
+        //            times: {
+        //                close: ['23:59:59'],
+        //                open: ['00:00:00']
+        //            }
+        //        }]
+        //    }]
+        //}];
+        /* extract market and submarket names */
+        var market_names = [];
+        var submarket_names = { };
+        markets.forEach(function(market) {
+            market_names.push(market.name);             
+            submarket_names[market.name] = [];
+            market.submarkets.forEach(function (submarket) {
+                submarket_names[market.name].push(submarket.name);
+            })
+        });
+
+        /* get the rows for this particular marketname and sumbarket_name */
+        function getRowsFor(marketname, submarket_name) {
+            var market = markets.find(function (m) { return m.name == marketname; });
+            var symbols = market && market.submarkets.find(function (s) { return s.name == submarket_name; }).symbols;
+
+            var rows = (symbols || []).map(function (sym) {
+                return [
+                    sym.name,
+                    sym.times.open[0],
+                    sym.times.close[0],
+                    sym.settlement || '-',
+                    sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
+                ];
+            });
+            return rows;
+        }
+
+        return {
+            market_names: market_names,
+            submarket_names: submarket_names,
+            getRowsFor: getRowsFor
+        };
+    }
+
+    function init(li) {
+        loadCSS("tradingtimes/tradingTimes.css");
+        li.click(function () {
+            if (!tradingWin) {
+                tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
+                $.get('tradingtimes/tradingTimes.html', initTradingWin);
+            }
+            tradingWin.dialog('open');
+
+        });
+    }
+
+    function initTradingWin($html) {
+        $html = $($html);
+        var subheader = $html.filter('.trading-times-sub-header');
+        table = $html.filter('table');
+        $html.appendTo(tradingWin);
+
+        table = table.dataTable({
+            data: [],
+            "columnDefs": [
+                { className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4 ] }
+            ],
+            paging: false,
+            ordering: false,
+            searching: true,
+            processing: true
+        });
+        table.parent().addClass('hide-search-input');
+
+        // Apply the a search on each column input change
+        table.api().columns().every(function () {
+            var column = this;
+            $('input', this.header()).on('keyup change', function () {
+                if (column.search() !== this.value)
+                    column.search(this.value) .draw();
+            });
+        });
+
+        var market_names = null,
+            submarket_names = null;
+
+        var refreshTable = function (yyyy_mm_dd) {
+            var processing_msg = $('#' + table.attr('id') + '_processing').show();
+
+            /* update the table with the given marketname and submarketname */
+            var updateTable = function(result, market_name,submarket_name){
+                var rows = result.getRowsFor(market_name, submarket_name);
+                table.api().rows().remove();
+                table.api().rows.add(rows);
+                table.api().draw();
+            }
+
+            /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
+            var refresh = function (data) {
+                var result = processData(data);
+
+                if (market_names == null) {
+                    var select = $('<select />');
+                    select.appendTo(subheader);
+                    market_names = windows.makeSelectmenu(select, {
+                        list: result.market_names,
+                        inx: 0,
+                        changed: function (val) {
+                            submarket_names.update_list(result.submarket_names[val]);
+                            updateTable(result, market_names.val(), submarket_names.val());
+                        }
+                    });
+                }
+
+                if (submarket_names == null) {
+                    var sub_select = $('<select />');
+                    sub_select.appendTo(subheader);
+                    submarket_names = windows.makeSelectmenu(sub_select, {
+                        list: result.submarket_names[market_names.val()],
+                        inx: 0,
+                        changed: function (val) {
+                            updateTable(result, market_names.val(), submarket_names.val());
+                        }
+                    });
+                }
+
+                updateTable(result, market_names.val(), submarket_names.val());
+                processing_msg.hide();
+            };
+            
+            liveapi.send({ trading_times: yyyy_mm_dd })
+            .then(refresh)
+            .catch(function (error) {
+                refresh({});
+                $.growl.error({ message: error.message });
+                console.warn(error);
+            });
+        }
+
+        refreshTable(new Date().toISOString().slice(0, 10));
+        tradingWin.addDateToHeader({
+            title: 'Date: ',
+            date: new Date(),
+            changed: refreshTable
+        });
+    }
+   
+    return {
+        init: init
+    }
+});
