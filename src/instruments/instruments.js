@@ -2,7 +2,7 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui, liveapi) {
+define(["jquery", "jquery-ui", "websockets/eventSourceHandler", "jquery-growl"], function($, $ui, liveapi) {
 
     "use strict";
 
@@ -42,65 +42,43 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
 
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
 
-        require(["validation/validation"], function(validation) {
+        require(["validation/validation","charts/chartWindow"], function(validation, chartWindow) {
+            if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows())) {
+                $.growl.error({ message: "No more charts allowed!" });
+                return;
+            }
 
-            require(["charts/chartWindow"], function (chartWindow) {
+            //validate the selection
+            var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
+            var internalSymbol = $("#instrumentsDialog").data("symbol");
+            var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
+            var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
 
-                if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows()))
-                {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.error({ message: "No more charts allowed!" });
-                    });
-                    return;
-                }
+            var error_message = null;
+            if (timeperiodObject) {
+                if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max")))) {
 
-                //validate the selection
-                var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
-                var internalSymbol = $("#instrumentsDialog").data("symbol");
-                var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
-                require(["common/util"], function() {
-                    var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
-                    if (timeperiodObject) {
+                    if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
 
-                        if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max"))))
-                        {
-
-                            if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
-
-                                chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
-                                            isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
-                                closeDialog.call($("#instrumentsDialog"));
-                            }
-                            else
-                            {
-                                require(["jquery", "jquery-growl"], function($) {
-                                    $("#timePeriod").addClass('ui-state-error');
-                                    $.growl.error({ message: "Charts of less than "
-                                            //Convert to human readable (in minutes) format
-                                        + convertToTimeperiodObject(delayAmount + 'm').humanReadableString()
-                                        + " are not available for the " + displaySymbol + "." });
-                                });
-                            }
-                        }
-                        else
-                        {
-                            require(["jquery", "jquery-growl"], function($) {
-                                $("#timePeriod").addClass('ui-state-error');
-                                $.growl.error({ message: "Only numbers between " + $("#timePeriod").attr("min") + " to " + $("#timePeriod").attr("max") + " is allowed for " + $("#units option:selected").text() + "!" });
-                            });
-                        }
-
+                        chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
+                                    isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
+                        closeDialog.call($("#instrumentsDialog"));
                     }
                     else
-                    {
-                        require(["jquery", "jquery-growl"], function($) {
-                            $("#timePeriod").addClass('ui-state-error');
-                            $.growl.error({ message: "Only numbers between 1 to 100 is allowed!" });
-                        });
-                    }
+                        error_message = "Charts of less than " + convertToTimeperiodObject(delayAmount + 'm').humanReadableString()
+                            + " are not available for the " + displaySymbol + ".";
+                }
+                else
+                    error_message = "Only numbers between " + $("#timePeriod").attr("min") + " to " + $("#timePeriod").attr("max") + " is allowed for " + $("#units option:selected").text() + "!";
 
-                });
-            });
+            }
+            else
+                error_message = "Only numbers between 1 to 100 is allowed!";
+
+            if(error_message) {
+                $("#timePeriod").addClass('ui-state-error');
+                $.growl.error({ message: error_message });
+            }
         });
 
     }
@@ -210,64 +188,43 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler'], function($, $ui
 
     var markets = [];
 
-    /* amin: moved from symbol_handler.js */
-    function _extractInstrumentMarkets(data) {
-        for (var marketIndex in data.trading_times.markets) {
-            var marketFromResponse = data.trading_times.markets[marketIndex];
-            var market = {
-                name: marketFromResponse.name,
-                display_name: marketFromResponse.name,
-                submarkets: []
-            };
-
-            for (var submarketIndxx in marketFromResponse.submarkets) {
-                var submarket = marketFromResponse.submarkets[submarketIndxx];
-                var submarketObj = {
-                    name: submarket.name,
-                    display_name: submarket.name,
-                    instruments: []
-                };
-                for (var eachSymbolIndx in submarket.symbols) {
-                    var eachSymbol = submarket.symbols[eachSymbolIndx];
-                    submarketObj.instruments.push({
-                        symbol: eachSymbol.symbol,
-                        display_name: eachSymbol.name,
+    function processMarketSubmarkets(in_markets) {
+        markets = in_markets.map(function (m) {
+            var market = { name: m.name, display_name: m.name };
+            market.submarkets = m.submarkets.map(function (sm) {
+                var submarket = { name: sm.name, display_name: sm.name };
+                submarket.instruments = sm.symbols.map(function (sym) {
+                    return {
+                        symbol: sym.symbol,
+                        display_name: sym.name,
                         delay_amount: 0 //TODO fix this when API provides it
-                    });
-                }
-
-                market.submarkets.push(submarketObj);
-            }
-
-            markets.push(market);
-        }
-
+                    };
+                });
+                return submarket;
+            });
+            return market;
+        });
         sortMarkets(markets);
     }
 
     return {
-        init: function( _callback ) {
-            
+        init: function() {
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
-                liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) }).then(function (_instrumentJSON) {
-                    if (!$.isEmptyObject(_instrumentJSON)) {
-                        _extractInstrumentMarkets(_instrumentJSON);
+                liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                    .then(function (data) {
+                        processMarketSubmarkets(data.trading_times.markets);
 
                         var instrumentsMenu = $(".mainContainer").find('.instruments');
                         var rootUL = $("<ul>");
                         rootUL.appendTo(instrumentsMenu);
                         _refreshInstrumentMenu(rootUL, markets);
                         rootUL.menu();
-
-                        if(_callback) {
-                            _callback(markets);
-                        }
-
-                    }
-                });
+                    })
+                    .catch(function (err) {
+                        $.growl.error({ message: err.message });
+                    });
             }
-
         },
 
         getMarketData : function() {
