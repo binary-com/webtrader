@@ -150,12 +150,9 @@ button.ui-button-text-only .ui-menu {
     height: 100%;
     width: 6px;
     display: inline-block;
+    margin-right: 3px;
     -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
     animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
-}
-
-.sk-spinner-wave > div {
-  margin-right: 2px;
 }
 
 .sk-spinner-wave .sk-rect2 {
