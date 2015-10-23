@@ -135,7 +135,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     instrumentsMod.init();
                 });
 
-                Trigger async loading of window sub-menu
+                //Trigger async loading of window sub-menu
                 require(["windows/windows"], function( windows ) {
                     var $windowsLI = $("#nav-menu .windows");
                     windows.init($windowsLI);
