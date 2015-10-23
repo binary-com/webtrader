@@ -31,7 +31,7 @@ define(['jquery', 'windows/windows', 'websockets/eventSourceHandler', 'datatable
 
                 table = $("<table width='100%' class='display compact'/>");
                 table.appendTo(portfolioWin);
-                table = table.DataTable({
+                table = table.dataTable({
                     data: [],
                     columns: [
                         { title: 'Ref.' },
@@ -53,10 +53,36 @@ define(['jquery', 'windows/windows', 'websockets/eventSourceHandler', 'datatable
     }
 
     function update_table(){
-        liveapi.send({ portfolio: 1 }).then(function (data) {
-            var contracts = (data.portfolio && data.portfolio.contracts) || [];
-            console.warn('ret:' + JSON.stringify(data));
-        });
+        liveapi.authenticated.send({ portfolio: 1 })
+            .then(function (data) {
+                var contracts = (data.portfolio && data.portfolio.contracts)
+                    || [
+                        {
+                            symbol: '', shortcode: '', contract_id: '', longcode: '', expiry_time: 0, currency: '',
+                            date_start: 0, purchase_time: 0, buy_price: '', contract_type: '', payout: ''
+                        }
+                    ];
+
+
+                var rows = contracts.map(function (contract) {
+                    return [
+                        contract.contract_id,
+                        contract.longcode,
+                        contract.currency + ' ' + contract.buy_price,
+                        contract.currency + ' ' + contract.payout /* TODO: fix this */
+                    ]
+                });
+                
+                /* update the table */
+                table.api().rows().remove();
+                table.api().rows.add(rows);
+                table.api().draw();
+
+                console.warn(contracts);
+            })
+            .catch(function (err) {
+                $.growl.error({ message: err.message });
+            });
     }
 
     return {
