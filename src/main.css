@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -15,78 +15,89 @@ body {
 }
 
 .ui-dialog {
-  padding: 0!important;
+    padding: 0!important;
 }
 
 .ui-dialog-content {
-  background-color: #F5F6F8!important;
+    background-color: #F5F6F8!important;
 }
 
 .ui-corner-all {
-  border-bottom-right-radius: 0!important;
-  border-bottom-left-radius: 0!important;
-  border-top-right-radius: 0!important;
-  border-top-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+    border-top-left-radius: 0!important;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  border: 0px solid #273051;
-  background: #273051!important;
-  font-weight: normal;
-  color: #FFFFFF;
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: 0px solid #273051;
+    background: #273051!important;
+    font-weight: normal;
+    color: #FFFFFF;
 }
 
 .ui-widget-header {
-  border: 1px solid #273051;
-  background: #273051!important;
-  color: #FFFFFF;
-  font-family: 'Roboto'!important;
-  font-weight: normal!important;
+    border: 1px solid #273051;
+    background: #273051!important;
+    color: #FFFFFF;
+    font-family: 'Roboto'!important;
+    font-weight: normal!important;
 }
 
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-  font-family: 'Roboto'!important;
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: 'Roboto'!important;
 }
 
 .ui-widget {
-  outline: 0;
+    outline: 0;
 }
 
 .ui-button {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
-.ui-button-text-only.ui-state-hover, .ui-button-text-only.ui-button:hover{
-  color: #FFFFFF!important;
-  background: #3F476E!important;
+.ui-button-text-only.ui-state-hover,
+.ui-button-text-only.ui-button:hover {
+    color: #FFFFFF!important;
+    background: #3F476E!important;
 }
 
 .ui-dialog .ui-dialog-content {
-  padding: .5em .5em;
-  padding-bottom: 0;
+    padding: .5em .5em;
+    padding-bottom: 0;
 }
 
 .gtm_data_layer {
-  display : none;
+    display: none;
 }
 
 button.ui-button-text-only {
-  margin-top: 15px;
-  /*height: 46px;*/
-  margin: 0;
-  padding: 0;
+    margin-top: 15px;
+    /*height: 46px;*/
+    margin: 0;
+    padding: 0;
 }
 
 button.ui-button-text-only .ui-menu {
-  border-color: #3F476E;
+    border-color: #3F476E;
 }
 
 .ui-menu {
-  z-Index : 1003;
+    z-Index: 1003;
 }
 
+
 /*Overriding this class inheritted from dataTables jquery plugin*/
-.dataTables_scrollHeadInner, .sorting_asc , .dataTable , .dataTables_filter {
+
+.dataTables_scrollHeadInner,
+.sorting_asc,
+.dataTable,
+.dataTables_filter {
     width: 100% !important;
 }
 
@@ -98,6 +109,20 @@ button.ui-button-text-only .ui-menu {
 .mainContainer {
     width: 100%;
 }
+
+/* SK SPINNER STYLES
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-spinner-wave">
+ *      <div class="sk-rect1"></div>
+ *      <div class="sk-rect2"></div>
+ *      <div class="sk-rect3"></div>
+ *      <div class="sk-rect4"></div>
+ *      <div class="sk-rect5"></div>
+ *    </div>
+ *
+ */
+
 .sk-spinner-container {
     width: 60px;
     height: 60px;
@@ -112,58 +137,69 @@ button.ui-button-text-only .ui-menu {
     margin: auto auto;
 }
 
-/*
- *  Usage:
- *
- *    <div class="sk-spinner sk-spinner-wave">
- *      <div class="sk-rect1"></div>
- *      <div class="sk-rect2"></div>
- *      <div class="sk-rect3"></div>
- *      <div class="sk-rect4"></div>
- *      <div class="sk-rect5"></div>
- *    </div>
- *
- */
 .sk-spinner-wave.sk-spinner {
-  margin: 0 auto;
-  width: 50px;
-  height: 30px;
-  text-align: center;
-  font-size: 10px; }
+    margin: 0 auto;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+}
+
 .sk-spinner-wave div {
-  background-color: #333;
-  height: 100%;
-  width: 6px;
-  display: inline-block;
-  -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
-          animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+    animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+}
+
+.sk-spinner-wave > div {
+  margin-right: 2px;
+}
+
 .sk-spinner-wave .sk-rect2 {
-  -webkit-animation-delay: -1.1s;
-          animation-delay: -1.1s; }
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
 .sk-spinner-wave .sk-rect3 {
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s; }
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
 .sk-spinner-wave .sk-rect4 {
-  -webkit-animation-delay: -0.9s;
-          animation-delay: -0.9s; }
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
 .sk-spinner-wave .sk-rect5 {
-  -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s; }
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
 
 @-webkit-keyframes sk-waveStretchDelay {
-  0%, 40%, 100% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4); }
-
-  20% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1); } }
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
 
 @keyframes sk-waveStretchDelay {
-  0%, 40%, 100% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4); }
-
-  20% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1); } }
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}

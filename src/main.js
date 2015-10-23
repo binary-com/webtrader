@@ -86,11 +86,11 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         }
     }
 
-    // load Jquery UI CSS
+    // load jq-ui & growl stylesheets.
     loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
-    // load our main CSS
+    loadCSS('lib/growl/stylesheets/jquery.growl.css');
+    // load main stylesheet.
     loadCSS("main.css");
-    loadCSS("lib/hamburger.css");
 
     var navigationStylesheet = loadCSS("navigation/navigation.css");
     onloadCSS(navigationStylesheet, function () {
@@ -136,17 +136,18 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 });
 
                 //Trigger async loading of window sub-menu
-                require(["windows/windows"], function( windows ) {
-                    var $windowsLI = $("#nav-menu .windows");
-                    windows.init($windowsLI);
+                // require(["windows/windows"], function( windows ) {
+                //     var $windowsLI = $("#nav-menu .windows");
+                //     windows.init($windowsLI);
 
-                    // hide the main loading spinner.
-                    $(".sk-spinner-container").hide();
-                });
+                //     // hide the main loading spinner,
+                //     // after the `last module` has been loaded.
+                //     $(".sk-spinner-container").hide();
+                // });
             });
 
             //Now load all other CSS asynchronously
-            loadCSS('lib/growl/stylesheets/jquery.growl.css');
+            loadCSS("lib/hamburger.css");
             loadCSS('charts/charts.css');
             loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
             loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
