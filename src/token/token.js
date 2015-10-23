@@ -11,6 +11,8 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
             $.get('token/token.html', function ($html) {
                 $html = $($html);
                 tokenWin = windows.createBlankWindow($html, {
+                    width: 800,
+                    height: 400,
                     title: 'Authentication Token',
                     resizeable: false,
                     collapsable: false,
