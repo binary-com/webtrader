@@ -64,6 +64,14 @@ ul#menu.ui-menu.ui-widget.ui-widget-content {
 nav.headMenu {
   height: 46px;
 }
+nav.headMenu ul > li.ui-state-active,
+nav.headMenu ul > li.ui-state-focus
+{
+    z-index: 1003;
+}
+nav.headMenu ul > li * {
+    z-index:1003;
+}
 
 ul#menu.ui-widget-content {
   list-style: none;
