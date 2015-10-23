@@ -135,15 +135,15 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     instrumentsMod.init();
                 });
 
-                //Trigger async loading of window sub-menu
-                // require(["windows/windows"], function( windows ) {
-                //     var $windowsLI = $("#nav-menu .windows");
-                //     windows.init($windowsLI);
+                Trigger async loading of window sub-menu
+                require(["windows/windows"], function( windows ) {
+                    var $windowsLI = $("#nav-menu .windows");
+                    windows.init($windowsLI);
 
-                //     // hide the main loading spinner,
-                //     // after the `last module` has been loaded.
-                //     $(".sk-spinner-container").hide();
-                // });
+                    // hide the main loading spinner,
+                    // after the `last module` has been loaded.
+                    $(".sk-spinner-container").hide();
+                });
             });
 
             //Now load all other CSS asynchronously
