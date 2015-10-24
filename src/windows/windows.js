@@ -4,6 +4,29 @@
  */
 
 define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
+    //For desktops and laptops or large size tablets
+    //---------Calculation to find out how many windows to open based on user's window size
+    var totalAvailableBrowserWindowWidth;
+    var totalAvailableBrowserWindowHeight;
+    var totalChartsPerRow, totalRows;
+
+    function calculateChartsPerScreen() {
+        totalAvailableBrowserWindowWidth = $(window).width();
+        totalAvailableBrowserWindowHeight = $(window).height();
+        totalChartsPerRow = Math.floor(totalAvailableBrowserWindowWidth / (350 + 20));
+        totalRows = Math.floor(totalAvailableBrowserWindowHeight / (400 + 10));
+
+        //For small size screens
+        if (isSmallView() || totalRows <= 0 || totalChartsPerRow <= 0) {
+          totalRows = 1;
+          totalChartsPerRow = 1;
+        }
+    }
+
+    $(window).resize(function () {
+        calculateChartsPerScreen();
+        tileAction();
+    });
 
     var closeAllObject = null,
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
@@ -29,27 +52,12 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 chartType : 'spline'
             }];
 
-    //-----start----
-    //For desktops and laptops or large size tablets
-    //---------Calculation to find out how many windows to open based on user's window size
-    var totalAvailableBrowserWindowWidth = $(window).width();
-    var totalAvailableBrowserWindowHeight = $(window).height();
-    var totalChartsPerRow = Math.floor(totalAvailableBrowserWindowWidth / (350 + 20));
-    var totalRows = Math.floor(totalAvailableBrowserWindowHeight / (400 + 10));
-    //For small size screens
-    if (isSmallView() || totalRows <= 0 || totalChartsPerRow <= 0) {
-      totalRows = 1;
-      totalChartsPerRow = 1;
-    }
-    //---------End-----------------------------
-
     var dialogCounter = 0;
     var $menuUL = null;
 
     function tileAction() {
       require(["charts/chartWindow"], function (chartWindowObj) {
         var topMargin = 80;
-        if (isSmallView()) topMargin = 100;
 
         var cellCount = 1, rowCount = 1, leftMargin = 20;
         var minWidth = $(".chart-dialog").dialog('option', 'minWidth');
@@ -67,9 +75,9 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         var referenceObjectForPositioning = window;
 
         $(".chart-dialog").each(function () {
-
           if (cellCount == 1) {
             var leftShift = startMargin;
+            if(isSmallView()) leftShift = 20;
           } else if (cellCount > 1) {
             var leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
           }
@@ -226,6 +234,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
     return {
 
         init: function( $parentObj ) {
+            calculateChartsPerScreen();
+
             loadCSS("windows/windows.css");
             $menuUL = $parentObj.find("ul");
 
@@ -245,8 +255,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             });
 
             require(["charts/chartWindow"], function (chartWindowObj) {
-
-
                 //Attach click listener for tile menu
                 tileObject.click(function () {
                     tileAction();
