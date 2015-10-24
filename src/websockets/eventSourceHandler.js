@@ -2,15 +2,19 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['es6-promise', 'reconnecting-websocket', 'jquery-timer'], function (es6_promise, ReconnectingWebSocket) {
+define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jquery-timer'],
+    function (es6_promise, ReconnectingWebSocket, Cookies, tokenWin) {
     es6_promise.polyfill(); /* polyfill for es6-promises */
+
+    var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 
     function WebtraderWebsocket() {
         var api_url = 'wss://www.binary.com/websockets/v2';
-        var ws = new ReconnectingWebSocket(api_url);
-        ws.debug = false;
-        ws.timeInterval = 5400;
-        //TODO ws.onerror(...)
+        var ws = new ReconnectingWebSocket(api_url, null, { debug: false, timeoutInterval: 5400});
+
+        ws.onclose = function () {
+            is_authenitcated_session = false;
+        }
         return ws;
     }
 
@@ -53,7 +57,7 @@ define(['es6-promise', 'reconnecting-websocket', 'jquery-timer'], function (es6_
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
     require(['websockets/connection_check']); // require connection_check to handle pings.
 
-    return {
+    var api = {
         events: {
             on: function (name, cb) {
                 (callbacks[name] = callbacks[name] || []).push(cb);
@@ -78,6 +82,41 @@ define(['es6-promise', 'reconnecting-websocket', 'jquery-timer'], function (es6_
                 else
                     buffered_sends.push(data);
             });
+        },
+        /* send an authenticated request */
+        authenticated: {
+            send: function (data) {
+                if (is_authenitcated_session)
+                    return api.send(data);
+
+                /* authenticate and then send the request */
+                var auth_send = function (token) {
+                    var auth_successfull = false;
+                    return api
+                        .send({ authorize: token })
+                        .then(function () {
+                            Cookies.set('webtrader_token', token); /* never expiers */
+                            is_authenitcated_session = true;
+                            auth_successfull = true;
+                            return api.send(data);
+                        })
+                        .catch(function (up) {
+                            if (!auth_successfull) {    /* authentication request is failed, delete the cookie */
+                                is_authenitcated_session = false;
+                                Cookies.remove('webtrader_token');
+                            }
+                            throw up; /* pass the exception to next catch */
+                        });
+                }
+                
+                if (Cookies.get('webtrader_token'))     /* we have a cookie for the token */
+                    return auth_send(Cookies.get('webtrader_token'));
+                else                                    /* get the token from user */
+                    return tokenWin
+                        .getTokenAsync()
+                        .then(auth_send);
+            }
         }
     }
+    return api;
 });
