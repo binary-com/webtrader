@@ -16,7 +16,7 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
                     width: 605,
                     height: 380,
                     title: 'Authentication Token',
-                    resizeable: false,
+                    resizable: false,
                     collapsable: false,
                     minimizable: false,
                     maximizable: false,
