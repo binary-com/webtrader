@@ -65,29 +65,67 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
       return;
     }
 
-    //Load Jquery UI CSS
-    loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
+    // adds onload support for asynchronous stylesheets loaded with loadCSS.
+    function onloadCSS( ss, callback ) {
+        ss.onload = function() {
+            ss.onload = null;
+            if( callback ) {
+                callback.call( ss );
+            }
+        };
 
-    //Load our main CSS
-    loadCSS("main.css");
-    loadCSS("lib/hamburger.css");
+        // This code is for browsers that don’t support onload, any browser that
+        // supports onload should use that instead.
+        // No support for onload:
+        //  * Android 4.3 (Samsung Galaxy S4, Browserstack)
+        //  * Android 4.2 Browser (Samsung Galaxy SIII Mini GT-I8200L)
+        //  * Android 2.3 (Pantech Burst P9070)
 
-    //All dependencies loaded
-    $(document).ready(function () {
-
-        /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
-        var load_ondemand = function (element, event_name,msg, module_name,callback) {
-            element.one(event_name, function () {
-                require([module_name], function (module) {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.notice({ message: msg });
-                    });
-                    callback && callback(module);
-                });
-            });
+        // Weak inference targets Android < 4.4
+        if( "isApplicationInstalled" in navigator && "onloadcssdefined" in ss ) {
+            ss.onloadcssdefined( callback );
         }
+    }
 
-        $(".mainContainer").load("mainContent.html", function() {
+    // load jq-ui & growl stylesheets.
+    loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
+    loadCSS('lib/growl/stylesheets/jquery.growl.css');
+    // load main stylesheet.
+    loadCSS("main.css");
+
+    var navigationStylesheet = loadCSS("navigation/navigation.css");
+    onloadCSS(navigationStylesheet, function () {
+        //All dependencies loaded
+        $(window).load(function () {
+            /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
+            var load_ondemand = function (element, event_name,msg, module_name,callback) {
+                element.one(event_name, function () {
+                    require([module_name], function (module) {
+                        // display the message only if there is one.
+                        if(msg.length) {
+                            require(["jquery", "jquery-growl"], function($) {
+                                $.growl.notice({ message: msg });
+                            });
+                        }
+                        
+                        callback && callback(module);
+                    });
+                });
+            }
+
+            /* this callback is executed right after the navigation module
+               has been loaded & initialized. register your menu click handlers here */
+            var registerMenusCallback = function ($navMenu) {
+                //Register async loading of tradingTimes sub-menu
+                var $tradingTimesMenu = $navMenu.find("a.tradingTimes");
+                load_ondemand($tradingTimesMenu, 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+                    tradingTimes.init($tradingTimesMenu);
+                    $tradingTimesMenu.click();
+                });
+            }
+
+            require(["navigation/navigation"], function (navigation) {
+                navigation.init(registerMenusCallback);
 
             /* initialize the top menu because other dialogs
              * will assume an initialized top menu */
@@ -95,34 +133,30 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
+                    require(["jquery", "jquery-growl"], function($) {
+                        $.growl.notice({ message: "Loading chart menu!" });
+                    });
 
-                //Just an info
-                require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: "Loading chart menu!" });
+                    instrumentsMod.init();
                 });
 
-                instrumentsMod.init();
+                //Trigger async loading of window sub-menu
+                require(["windows/windows"], function( windows ) {
+                    var $windowsLI = $("#nav-menu .windows");
+                    windows.init($windowsLI);
+
+                    // hide the main loading spinner,
+                    // after the `last module` has been loaded.
+                    $(".sk-spinner-container").hide();
+                });
             });
 
-            //Register async loading of tradingTimes sub-menu
-            load_ondemand($('.topContainer .tradingTimesLI'), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                tradingTimes.init($('.topContainer .tradingTimesLI'));
-                $('.topContainer .tradingTimesLI').click(); // TODO: remove this (only for testing)
-            });
-
-            //Trigger async loading of window sub-menu
-            require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows').closest('li'));
-            });
+            //Now load all other CSS asynchronously
+            loadCSS("lib/hamburger.css");
+            loadCSS('charts/charts.css');
+            loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
+            loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
+            loadCSS("lib/colorpicker/jquery.colorpicker.css");
         });
-
-        //Now load all other CSS asynchronously
-        loadCSS('lib/growl/stylesheets/jquery.growl.css');
-        loadCSS('charts/charts.css');
-        loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-        loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
-        loadCSS("lib/colorpicker/jquery.colorpicker.css");
-
     });
-
 });
