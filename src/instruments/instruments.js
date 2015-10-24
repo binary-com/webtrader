@@ -2,7 +2,7 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navigation"], function($, $ui, liveapi, navigation) {
+define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navigation"], function($, $ui, liveapi, navigation) {
 
     "use strict";
 
@@ -250,7 +250,10 @@ define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navi
         init: function( _callback ) {
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
-                liveapi.send({ trading_times: new Date().toISOString().slice(0, 10) }).then(function (_instrumentJSON) {
+                /* cache the result of trading_times call, because assetIndex needs the same data */
+                liveapi
+                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                    .then(function (_instrumentJSON) {
                     if (!$.isEmptyObject(_instrumentJSON)) {
                         _extractInstrumentMarkets(_instrumentJSON);
 

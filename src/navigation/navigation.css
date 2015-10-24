@@ -33,6 +33,10 @@
     position: relative;
 }
 
+.nav-normal-menu li:hover {
+    z-index: 999999;
+}
+
 .nav-normal-menu li a {
     display: block;
     color: white;

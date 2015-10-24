@@ -114,7 +114,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
         },options);
 
-        var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates');
+        var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
         var header = this.parent().find('.ui-dialog-title');
 
         
@@ -347,6 +347,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 @param: options.index       initial value of the array to show.
                 @param: options.list        array of string items to show
                 @param: options.changed     callback thats i called when menu is changed.
+                @param: options.width       can specify the with of selectmenu.
             Note: you should add your input to dom before turning it a spinner.
     
             Note: you can call 'update_list(...)' on the returned spinner to update the list of items:
@@ -372,7 +373,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             update_select(list);
             select.val(list[inx]);
 
-            select = select.selectmenu();
+            select = select.selectmenu({ width: options.width });
             select.on('selectmenuchange', function () {
                 var val = $(this).val();
                 options.changed(val);

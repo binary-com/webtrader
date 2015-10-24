@@ -101,12 +101,9 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             var load_ondemand = function (element, event_name,msg, module_name,callback) {
                 element.one(event_name, function () {
                     require([module_name], function (module) {
-                        // display the message only if there is one.
-                        if(msg.length) {
-                            require(["jquery", "jquery-growl"], function($) {
-                                $.growl.notice({ message: msg });
-                            });
-                        }
+                        require(["jquery", "jquery-growl"], function($) {
+                            $.growl.notice({ message: msg });
+                        });
                         
                         callback && callback(module);
                     });
@@ -116,35 +113,43 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             /* this callback is executed right after the navigation module
                has been loaded & initialized. register your menu click handlers here */
             var registerMenusCallback = function ($navMenu) {
+
                 //Register async loading of tradingTimes sub-menu
-                var $tradingTimesMenu = $navMenu.find("a.tradingTimes");
-                load_ondemand($tradingTimesMenu, 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                    tradingTimes.init($tradingTimesMenu);
-                    $tradingTimesMenu.click();
+                load_ondemand($navMenu.find("a.tradingTimes"), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+                    var elem = $navMenu.find("a.tradingTimes");
+                    tradingTimes.init(elem);
+                    elem.click();
                 });
+
+                //Register async loading of window asset-index
+                load_ondemand($navMenu.find("a.assetIndex"), 'click', 'loading Asset Index ...', 'assetindex/assetIndex',
+                    function (assetIndex) {
+                        var elem = $navMenu.find("a.assetIndex");
+                        assetIndex.init(elem);
+                        elem.click(); 
+                    });
             }
 
             require(["navigation/navigation"], function (navigation) {
                 navigation.init(registerMenusCallback);
 
-            /* initialize the top menu because other dialogs
-             * will assume an initialized top menu */
-            $("#menu").menu();
+                /* initialize the top menu because other dialogs
+                 * will assume an initialized top menu */
+                $("#menu").menu();
 
-            //Trigger async loading of instruments and refresh menu
-            require(["instruments/instruments"], function(instrumentsMod) {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.notice({ message: "Loading chart menu!" });
+                //Trigger async loading of instruments and refresh menu
+                require(["instruments/instruments"], function(instrumentsMod) {
+                        require(["jquery", "jquery-growl"], function($) {
+                            $.growl.notice({ message: "Loading chart menu!" });
+                        });
+
+                        instrumentsMod.init();
                     });
-
-                    instrumentsMod.init();
-                });
 
                 //Trigger async loading of window sub-menu
                 require(["windows/windows"], function( windows ) {
                     var $windowsLI = $("#nav-menu .windows");
                     windows.init($windowsLI);
-
                     // hide the main loading spinner,
                     // after the `last module` has been loaded.
                     $(".sk-spinner-container").hide();

@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables","jquery-growl"], function ($,windows,liveapi) {
+define(["jquery", "windows/windows","websockets/binary_websockets","datatables","jquery-growl"], function ($,windows,liveapi) {
 
 
     var table = null;

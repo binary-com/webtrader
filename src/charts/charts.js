@@ -2,7 +2,7 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery","charts/chartingRequestMap", "websockets/eventSourceHandler", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
+define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
   function ( $,chartingRequestMap, liveapi, ohlc_handler,currentPrice ) {
 
     "use strict";
