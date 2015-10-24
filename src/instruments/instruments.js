@@ -2,7 +2,7 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", 'websockets/eventSourceHandler', "navigation/navigation"], function($, $ui, liveapi, navigation) {
+define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navigation"], function($, $ui, liveapi, navigation) {
 
     "use strict";
 
