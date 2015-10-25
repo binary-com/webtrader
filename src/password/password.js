@@ -18,7 +18,7 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 
 		$("#passwordDialog").dialog({
 				resizable: false,
-				width: 400,
+				width: 410,
 				my: 'center',
 				at: 'center',
 				of: window,
@@ -27,8 +27,6 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 	}
 
 	function changePassword($elem) {
-		var normal_icon = "ui-icon ui-icon-check";
-		var loading_icon = "ui-icon ui-icon-gear";
 		var normal_label = "Change Password";
 		var loading_label = "Working, please wait...";
 
@@ -51,12 +49,12 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 			"new_password": _newPassword
 		};
 
-		$elem.button({ disabled: true , label: loading_label, icons: { primary: loading_icon }});
+		$elem.button({ disabled: true , label: loading_label });
 		liveapi.authenticated.send(requestData)
 			.then(function (d) {
 				console.warn(d);
 				
-				$elem.button({ disabled: false, label: normal_label, icons: { primary: normal_icon }});
+				$elem.button({ disabled: false, label: normal_label });
 
 				var message = "Password changed successfully";
 				$.growl.notice({ message: message });
@@ -66,7 +64,7 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 			.catch(function (e) {
 				console.error(e);
 				
-				$elem.button({ disabled: false, label: normal_label, icons: { primary: normal_icon }});
+				$elem.button({ disabled: false, label: normal_label });
 
 				if(e.code == 'InputValidationFailed') {
 					var title = "Input Validation Failed";
@@ -87,7 +85,7 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 				$($html).css("display", "none").appendTo("body");
 
 				// change password button.
-				$("#btn-change-password").button({ icons: { primary: "ui-icon ui-icon-check" }})
+				$("#btn-change-password").button()
 					.click(function (e) {
 						var $elem = $(this);
 						changePassword($elem);
