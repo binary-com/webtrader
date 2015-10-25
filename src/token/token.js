@@ -31,7 +31,7 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
                 
                 $html.find("button")
                     .first()
-                    .button({ icons: { primary: "ui-icon-check" } })
+                    .button({ icons: { primary: "ui-icon ui-icon-check" } })
                     .click(function () {
                         var val = input.val();
                         if (val) callbacks.resolve(val);
@@ -41,7 +41,7 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
                         tokenWin.dialog('close');
                     })
                     .next()
-                    .button({ icons: { secondary: "ui-icon-cancel" } })
+                    .button({ icons: { secondary: "ui-icon ui-icon-cancel" } })
                     .click(function () {
                         callbacks && callbacks.reject({ message: "User didn't provide a token" });
 

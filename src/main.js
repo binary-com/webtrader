@@ -149,7 +149,6 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     function (password) {
                         var $elem = $navMenu.find("a.password");
                         password.init($elem);
-                        $elem.click();
                     }
                 );
             }

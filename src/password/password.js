@@ -18,7 +18,7 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 
 		$("#passwordDialog").dialog({
 				resizable: false,
-				width: 310,
+				width: 400,
 				my: 'center',
 				at: 'center',
 				of: window,
@@ -27,6 +27,11 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 	}
 
 	function changePassword($elem) {
+		var normal_icon = "ui-icon ui-icon-check";
+		var loading_icon = "ui-icon ui-icon-gear";
+		var normal_label = "Change Password";
+		var loading_label = "Working, please wait...";
+
 		// validate the password form.
 		var isValid = $("#password-form").validate().form();
 		if(!isValid) {
@@ -46,17 +51,12 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 			"new_password": _newPassword
 		};
 
-		var normal_text = $elem.text();
-		var loading_text = "Working...";
-		$elem.prop("disabled", true);
-		$elem.text(loading_text);
-
+		$elem.button({ disabled: true , label: loading_label, icons: { primary: loading_icon }});
 		liveapi.authenticated.send(requestData)
 			.then(function (d) {
 				console.warn(d);
 				
-				$elem.prop("disabled", false);
-				$elem.text(normal_text);
+				$elem.button({ disabled: false, label: normal_label, icons: { primary: normal_icon }});
 
 				var message = "Password changed successfully";
 				$.growl.notice({ message: message });
@@ -66,8 +66,7 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 			.catch(function (e) {
 				console.error(e);
 				
-				$elem.prop("disabled", false);
-				$elem.text(normal_text);
+				$elem.button({ disabled: false, label: normal_label, icons: { primary: normal_icon }});
 
 				if(e.code == 'InputValidationFailed') {
 					var title = "Input Validation Failed";
@@ -87,12 +86,13 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 			$.get("password/password.html", function($html) {
 				$($html).css("display", "none").appendTo("body");
 
-				// change password button click handler
-				$("#btn-change-pwd").click(function(e) {
-					var $elem = $(this);
-					changePassword($elem);
-					e.preventDefault();
-				});
+				// change password button.
+				$("#btn-change-password").button({ icons: { primary: "ui-icon ui-icon-check" }})
+					.click(function (e) {
+						var $elem = $(this);
+						changePassword($elem);
+						e.preventDefault();
+					});
 
 				// password menu click handler
 				$menuItem.click(function (e) {
@@ -110,7 +110,7 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 					e.preventDefault();
 				});
 
-				openDialog();
+				$menuItem.click();
 			});
 		}
 	};
