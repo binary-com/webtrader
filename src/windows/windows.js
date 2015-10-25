@@ -1,102 +1,112 @@
-
 /**
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
+define(['jquery', 'jquery.dialogextend', 'modernizr', 'common/util'], function($) {
+    //For desktops and laptops or large size tablets
+    //---------Calculation to find out how many windows to open based on user's window size
+    var totalAvailableBrowserWindowWidth;
+    var totalAvailableBrowserWindowHeight;
+    var totalChartsPerRow, totalRows;
+
+    function calculateChartsPerScreen() {
+        totalAvailableBrowserWindowWidth = $(window).width();
+        totalAvailableBrowserWindowHeight = $(window).height();
+        totalChartsPerRow = Math.floor(totalAvailableBrowserWindowWidth / (350));
+        totalRows = Math.floor(totalAvailableBrowserWindowHeight / (400));
+
+        //For small size screens
+        if (isSmallView() || totalRows <= 0 || totalChartsPerRow <= 0) {
+            totalRows = 1;
+            totalChartsPerRow = 1;
+        }
+    }
 
     var closeAllObject = null,
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
             {
-                symbol : 'R_25',
-                name : 'Random 25 Index',
-                timeperiod : '1d',
-                chartType : 'candlestick'
+                symbol: 'R_25',
+                name: 'Random 25 Index',
+                timeperiod: '1d',
+                chartType: 'candlestick'
             }, {
-                symbol : 'R_50',
-                name : 'Random 50 Index',
-                timeperiod : '8h',
-                chartType : 'line'
+                symbol: 'R_50',
+                name: 'Random 50 Index',
+                timeperiod: '8h',
+                chartType: 'line'
             }, {
-                symbol : 'R_75',
-                name : 'Random 75 Index',
-                timeperiod : '4h',
-                chartType : 'ohlc'
+                symbol: 'R_75',
+                name: 'Random 75 Index',
+                timeperiod: '4h',
+                chartType: 'ohlc'
             }, {
-                symbol : 'R_100',
-                name : 'Random 100 Index',
-                timeperiod : '2h',
-                chartType : 'spline'
-            }];
-
-    //-----start----
-    //For desktops and laptops or large size tablets
-    //---------Calculation to find out how many windows to open based on user's window size
-    var totalAvailableBrowserWindowWidth = $(window).width();
-    var totalAvailableBrowserWindowHeight = $(window).height();
-    var totalChartsPerRow = Math.floor(totalAvailableBrowserWindowWidth / (350 + 20));
-    var totalRows = Math.floor(totalAvailableBrowserWindowHeight / (400 + 10));
-    //For small size screens
-    if (isSmallView() || totalRows <= 0 || totalChartsPerRow <= 0) {
-      totalRows = 1;
-      totalChartsPerRow = 1;
-    }
-    //---------End-----------------------------
+                symbol: 'R_100',
+                name: 'Random 100 Index',
+                timeperiod: '2h',
+                chartType: 'spline'
+            }
+        ];
 
     var dialogCounter = 0;
     var $menuUL = null;
 
     function tileAction() {
-      require(["charts/chartWindow"], function (chartWindowObj) {
-        var topMargin = 80;
-        if (isSmallView()) topMargin = 100;
+        calculateChartsPerScreen();
 
-        var cellCount = 1, rowCount = 1, leftMargin = 20;
-        var minWidth = $(".chart-dialog").dialog('option', 'minWidth');
-        var minHeight = $(".chart-dialog").dialog('option', 'minHeight');
+        require(["charts/chartWindow"], function(chartWindowObj) {
+            var topMargin = 80;
 
-        if (isSmallView()) {
-          minWidth = $(window).width() - leftMargin * 2;
-          minHeight = $(window).height() - topMargin;
-        }
+            var cellCount = 1,
+                rowCount = 1,
+                leftMargin = 20;
+            var minWidth = $(".chart-dialog").dialog('option', 'minWidth');
+            var minHeight = $(".chart-dialog").dialog('option', 'minHeight');
 
-        var totalOccupiedSpace = totalChartsPerRow * minWidth + (totalChartsPerRow - 1) * leftMargin;
-        var remainingSpace = $(window).width() - totalOccupiedSpace;
-        var startMargin = Math.round(remainingSpace / 2) - leftMargin;
-
-        var referenceObjectForPositioning = window;
-
-        $(".chart-dialog").each(function () {
-
-          if (cellCount == 1) {
-            var leftShift = startMargin;
-          } else if (cellCount > 1) {
-            var leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
-          }
-          var topShift = -topMargin + 2;
-          referenceObjectForPositioning = window;
-          if (referenceObjectForPositioning == window) {
-            topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
-          }
-
-          referenceObjectForPositioning = $(this).dialog('option', {
-                position: {
-                    my: "left+" + leftShift + " top" + (topShift < 0 ? "-" : "+") + topShift,
-                    at: "left top",
-                    of: referenceObjectForPositioning
-                },
-                width : minWidth,
-                height : minHeight
-            });
-            chartWindowObj.triggerResizeEffects( $(this).dialog( "widget").find('.chart-dialog') );
-            if (++cellCount > totalChartsPerRow)
-            {
-                cellCount = 1;
-                ++rowCount;
-                referenceObjectForPositioning = window;
+            if (isSmallView()) {
+                minWidth = $(window).width() - leftMargin * 2;
+                minHeight = $(window).height() - topMargin;
             }
+
+            var totalOccupiedSpace = totalChartsPerRow * minWidth + (totalChartsPerRow - 1) * leftMargin;
+            var remainingSpace = $(window).width() - totalOccupiedSpace;
+            var startMargin = Math.round(remainingSpace / 2) - leftMargin;
+
+            var referenceObjectForPositioning = window;
+
+            $(".chart-dialog").each(function() {
+                if (cellCount == 1) {
+                    var leftShift = startMargin;
+                    if (isSmallView()) leftShift = 20;
+                } else if (cellCount > 1) {
+                    var leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
+                }
+
+                // var topShift = -topMargin + 2;
+
+                referenceObjectForPositioning = window;
+                if (referenceObjectForPositioning == window) {
+                    topShift = ((rowCount - 1) * minHeight) + (rowCount + topMargin);
+                    if(rowCount > 1)
+                        topShift = topShift + 20;
+                }
+
+                referenceObjectForPositioning = $(this).dialog('option', {
+                    position: {
+                        my: "left+" + leftShift + " top" + (topShift < 0 ? "-" : "+") + topShift,
+                        at: "left top",
+                        of: referenceObjectForPositioning
+                    },
+                    width: minWidth,
+                    height: minHeight
+                });
+                chartWindowObj.triggerResizeEffects($(this).dialog("widget").find('.chart-dialog'));
+                if (++cellCount > totalChartsPerRow) {
+                    cellCount = 1;
+                    ++rowCount;
+                    referenceObjectForPositioning = window;
+                }
+            });
         });
-      });
     };
 
     /*
@@ -111,15 +121,17 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         options = $.extend({
             title: 'title',
             date: new Date(),
-            changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
-        },options);
+            changed: function(yyyy_mm_dd) {
+                console.log(yyyy_mm_dd + ' changed');
+            }
+        }, options);
 
         var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
         var header = this.parent().find('.ui-dialog-title');
 
-        
+
         /* options: {date: date, onchange: fn } */
-        var addDateDropDowns = function (opts) {
+        var addDateDropDowns = function(opts) {
             // note that month is 0-based, like in the Date object. Adjust if necessary.
             function numberOfDays(year, month) {
                 var isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
@@ -127,7 +139,9 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             }
 
             function update(select, options) {
-                var render = options.render || function (v) { return v + ''; };
+                var render = options.render || function(v) {
+                    return v + '';
+                };
                 select.children().remove();
                 for (var i = options.min; i <= options.max; ++i)
                     $('<option/>').val(i).text(render(i)).appendTo(select);
@@ -137,68 +151,104 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             }
 
             var dt = opts.date || new Date();
-            var year = $('<select />').insertAfter(header).selectmenu({ width: '70px' });
-            var month = $('<select />').insertAfter(header).selectmenu({ width: '65px' });
-            var day = $('<select />').insertAfter(header).selectmenu({ width: '60px'});
-            year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
-            month = update(month, {
-                min: 0, max: 11, initial: dt.getMonth(),
-                render: function (inx) { return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][inx]; }
+            var year = $('<select />').insertAfter(header).selectmenu({
+                width: '70px'
             });
-            day = update(day, { min: 1, max: numberOfDays(dt.getFullYear(),dt.getMonth()), initial: dt.getDate()});
-            
-            var trigger_change = function () {
+            var month = $('<select />').insertAfter(header).selectmenu({
+                width: '65px'
+            });
+            var day = $('<select />').insertAfter(header).selectmenu({
+                width: '60px'
+            });
+            year = update(year, {
+                min: 2010,
+                max: dt.getFullYear(),
+                initial: dt.getFullYear()
+            });
+            month = update(month, {
+                min: 0,
+                max: 11,
+                initial: dt.getMonth(),
+                render: function(inx) {
+                    return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][inx];
+                }
+            });
+            day = update(day, {
+                min: 1,
+                max: numberOfDays(dt.getFullYear(), dt.getMonth()),
+                initial: dt.getDate()
+            });
+
+            var trigger_change = function() {
                 var yyyy_mm_dd = new Date(year.val(), month.val(), day.val()).toISOString().slice(0, 10);
                 opts.onchange(yyyy_mm_dd);
             }
             day.on('selectmenuchange', trigger_change);
 
-            var update_day = function () {
-                var options = { min: 1, max: numberOfDays(year.val(), month.val()), initial: day.val() };
+            var update_day = function() {
+                var options = {
+                    min: 1,
+                    max: numberOfDays(year.val(), month.val()),
+                    initial: day.val()
+                };
                 if (options.initial > options.max)
                     options.initial = options.min;
                 update(day, options);
             };
 
-            [year, month].forEach(function (select) {
-                select.on('selectmenuchange', function () {
+            [year, month].forEach(function(select) {
+                select.on('selectmenuchange', function() {
                     update_day();
                     trigger_change();
                 });
             })
             return {
-                update: function (yyyy_mm_dd) {
+                update: function(yyyy_mm_dd) {
                     var args = yyyy_mm_dd.split('-');
-                    year.val(args[0] | 0); year.selectmenu('refresh');
-                    month.val(args[1] | 0); month.selectmenu('refresh');
-                    day.val(args[2] | 0); update_day();
+                    year.val(args[0] | 0);
+                    year.selectmenu('refresh');
+                    month.val(args[1] | 0);
+                    month.selectmenu('refresh');
+                    day.val(args[2] | 0);
+                    update_day();
                 }
             }
         }
 
         /* options: {date: date, onchange: fn} , events => element.on('change',...) */
-        var addDatePicker = function (opts) {
+        var addDatePicker = function(opts) {
             var dpicker_input = $("<input type='hidden' />")
                 .insertAfter(header);
             var dpicker = dpicker_input.datepicker({
                 showOn: 'both',
                 numberOfMonths: 2,
                 maxDate: 0,
-                minDate: new Date(2010,0,1),
+                minDate: new Date(2010, 0, 1),
                 dateFormat: 'yy-mm-dd',
                 showAnim: 'drop',
                 showButtonPanel: true,
                 changeMonth: true,
                 changeYear: true,
-                beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' }); },
-                onSelect: function () { $(this).change(); }
+                beforeShow: function(input, inst) {
+                    inst.dpDiv.css({
+                        marginTop: '10px',
+                        marginLeft: '-220px'
+                    });
+                },
+                onSelect: function() {
+                    $(this).change();
+                }
             }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
 
             /* use JQ-UI icon for datepicker */
-            dpicker .next('button') .text('')
-                .button({ icons: { primary: 'ui-icon-calendar' } });
+            dpicker.next('button').text('')
+                .button({
+                    icons: {
+                        primary: 'ui-icon-calendar'
+                    }
+                });
 
-            dpicker_input.on('change', function () {
+            dpicker_input.on('change', function() {
                 var yyyy_mm_dd = $(this).val();
                 opts.onchange && opts.onchange(yyyy_mm_dd);
             });
@@ -208,13 +258,15 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
         var dt = options.date;
         var dpicker = addDatePicker({
-            date: dt,onchange: function (yyyy_mm_dd) {
+            date: dt,
+            onchange: function(yyyy_mm_dd) {
                 dropdonws.update(yyyy_mm_dd);
                 options.changed(yyyy_mm_dd);
             }
         });
         var dropdonws = addDateDropDowns({
-            date: dt, onchange: function (yyyy_mm_dd) {
+            date: dt,
+            onchange: function(yyyy_mm_dd) {
                 dpicker.datepicker("setDate", yyyy_mm_dd);
                 options.changed(yyyy_mm_dd);
             }
@@ -225,14 +277,16 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
     return {
 
-        init: function( $parentObj ) {
+        init: function($parentObj) {
+            calculateChartsPerScreen();
+
             loadCSS("windows/windows.css");
             $menuUL = $parentObj.find("ul");
 
             tileObject = $menuUL.find(".tile");
 
             closeAllObject = $menuUL.find(".closeAll");
-            closeAllObject.click(function () {
+            closeAllObject.click(function() {
                 //console.log('Event for closing all chart windows!');
                 /*
                   The close click is behaving weird.
@@ -244,20 +298,18 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 }
             });
 
-            require(["charts/chartWindow"], function (chartWindowObj) {
-
-
+            require(["charts/chartWindow"], function(chartWindowObj) {
                 //Attach click listener for tile menu
-                tileObject.click(function () {
+                tileObject.click(function() {
                     tileAction();
                 });
 
                 //Based on totalChartsPerRow and totalRows, open some charts
                 var totalCharts_renderable = totalChartsPerRow * totalRows;
-                $(instrumentArrayForInitialLoading).each(function (index, value) {
+                $(instrumentArrayForInitialLoading).each(function(index, value) {
                     if (index < totalCharts_renderable) {
                         chartWindowObj.addNewWindow(value.symbol, value.name, value.timeperiod,
-                            function () {
+                            function() {
                                 //Trigger tile action
                                 tileAction();
                             }, value.chartType);
@@ -270,13 +322,12 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         },
 
         tile: function() {
-          tileAction();
+            tileAction();
         },
 
         closeAll: function() {
             //Trigger close even on all dialogs
-            if (!closeAllObject)
-            {
+            if (!closeAllObject) {
                 closeAllObject.click();
             }
         },
@@ -296,7 +347,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 2- if autoOpen == false  use createBalnkWindow(...).dialog('open') to open the dialog
                 2- if minWidth and minHeight are not specified the options.width and options.height will be used for minimums.
           */
-        createBlankWindow: function($html,options){
+        createBlankWindow: function($html, options) {
             $html = $($html);
             var id = "windows-dialog-" + ++dialogCounter;
 
@@ -312,9 +363,9 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;
-            
+
             if (options.resize)
-                options.maximize = options.minimize  = options.restore = options.resize;
+                options.maximize = options.minimize = options.restore = options.resize;
 
             var blankWindow = $html.attr("id", id)
                 .dialog(options)
@@ -325,12 +376,15 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             var li = $('<li />').addClass(id + 'LI').html($windowMenuLink);
             $menuUL.append(li);
             // bring window to top on click
-            $windowMenuLink.click(function () {
+            $windowMenuLink.click(function() {
                 blankWindow.dialog('moveToTop')
-                     .parent().effect("bounce", { times: 2, distance: 15 }, 450);
+                    .parent().effect("bounce", {
+                        times: 2,
+                        distance: 15
+                    }, 450);
             });
             // remove item from window menu on close
-            blankWindow.on('dialogclose', function () {
+            blankWindow.on('dialogclose', function() {
                 li.remove();
             });
 
@@ -356,30 +410,33 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
     
             TODO: move this to a utility file
         */
-        makeSelectmenu: function (select, options) {
-            
+        makeSelectmenu: function(select, options) {
+
             options = $.extend({
                 list: ['empty'],
                 inx: 0,
-                changed: function () { }
+                changed: function() {}
             }, options);
 
-            var inx = options.inx, list = options.list;
+            var inx = options.inx,
+                list = options.list;
             var update_select = function(list) {
                 select.children().remove();
-                for(var i = 0; i < list.length; ++i)
+                for (var i = 0; i < list.length; ++i)
                     $('<option/>').val(list[i]).text(list[i]).appendTo(select);
             }
             update_select(list);
             select.val(list[inx]);
 
-            select = select.selectmenu({ width: options.width });
-            select.on('selectmenuchange', function () {
+            select = select.selectmenu({
+                width: options.width
+            });
+            select.on('selectmenuchange', function() {
                 var val = $(this).val();
                 options.changed(val);
             })
 
-            select.update_list = function (new_list) {
+            select.update_list = function(new_list) {
                 update_select(new_list);
                 select.val(new_list[0]);
                 select.selectmenu('refresh');
