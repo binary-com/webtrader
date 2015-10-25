@@ -56,7 +56,6 @@ requirejs.config({
 });
 
 require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
-
     "use strict";
 
     //TODO if SVG, websockets are not allowed, then redirect to unsupported_browsers.html
@@ -101,9 +100,13 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             var load_ondemand = function (element, event_name,msg, module_name,callback) {
                 element.one(event_name, function () {
                     require([module_name], function (module) {
-                        require(["jquery", "jquery-growl"], function($) {
-                            $.growl.notice({ message: msg });
-                        });
+                        // display a notification only
+                        // if there's a message.
+                        if(msg && msg.length) {
+                            require(["jquery", "jquery-growl"], function($) {
+                                $.growl.notice({ message: msg });
+                            });
+                        }
                         
                         callback && callback(module);
                     });
@@ -113,21 +116,43 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             /* this callback is executed right after the navigation module
                has been loaded & initialized. register your menu click handlers here */
             var registerMenusCallback = function ($navMenu) {
-
                 //Register async loading of tradingTimes sub-menu
-                load_ondemand($navMenu.find("a.tradingTimes"), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
-                    var elem = $navMenu.find("a.tradingTimes");
-                    tradingTimes.init(elem);
-                    elem.click();
-                });
+                load_ondemand(
+                    $navMenu.find("a.tradingTimes"),
+                    'click','Loading Trading Times ...',
+                    'tradingtimes/tradingTimes',
+                    function (tradingTimes) {
+                        var elem = $navMenu.find("a.tradingTimes");
+                        tradingTimes.init(elem);
+                        elem.click();
+                    }
+                );
 
                 //Register async loading of window asset-index
-                load_ondemand($navMenu.find("a.assetIndex"), 'click', 'loading Asset Index ...', 'assetindex/assetIndex',
+                load_ondemand(
+                    $navMenu.find("a.assetIndex"),
+                    'click',
+                    'loading Asset Index ...',
+                    'assetindex/assetIndex',
                     function (assetIndex) {
                         var elem = $navMenu.find("a.assetIndex");
                         assetIndex.init(elem);
                         elem.click(); 
-                    });
+                    }
+                );
+
+                // register async loading of change password dialog.
+                load_ondemand(
+                    $navMenu.find("a.password"),
+                    'click',
+                    'Loading Change Password Dialog...',
+                    'password/password',
+                    function (password) {
+                        var $elem = $navMenu.find("a.password");
+                        password.init($elem);
+                        $elem.click();
+                    }
+                );
             }
 
             require(["navigation/navigation"], function (navigation) {
