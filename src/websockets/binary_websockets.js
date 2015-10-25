@@ -22,6 +22,7 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
     var buffered_execs = [];
     var buffered_sends = [];
     var unresolved_promises = {};
+    var cached_promises = {}; /* requests that have been cached */
     var socket = new WebtraderWebsocket();
     var is_connected = function () {
         return socket && socket.readyState === 1;
@@ -69,6 +70,18 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
                 setTimeout(cb, 0);// always run the callback async
             else
                 buffered_execs.push(cb);
+        },
+        /* send a request and cache the result */
+        cached :{
+            send: function(data){
+                var key = JSON.stringify(data);
+                /* if there is a cached promise for this key (let say P), return P.
+                 * assume P is in pending state, when P is fullfiled all attached .then() calls will run.
+                 * assume P is in rejected state (or in fullfiled state), the changed .then() calls will be immediately rejected(or fullfiled).  */
+                if (cached_promises[key])
+                    return cached_promises[key];
+                return cached_promises[key] = api.send(data);
+            }
         },
         /* send returns an es6-promise */
         send: function (data) {

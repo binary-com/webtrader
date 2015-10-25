@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables","jquery-growl"], function ($,windows,liveapi) {
+define(["jquery", "windows/windows","websockets/binary_websockets","datatables","jquery-growl"], function ($,windows,liveapi) {
 
 
     var table = null;
@@ -62,15 +62,14 @@ define(["jquery", "windows/windows","websockets/eventSourceHandler","datatables"
         };
     }
 
-    function init(li) {
+    function init($menuLink) {
         loadCSS("tradingtimes/tradingTimes.css");
-        li.click(function () {
+        $menuLink.click(function () {
             if (!tradingWin) {
                 tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
                 $.get('tradingtimes/tradingTimes.html', initTradingWin);
             }
             tradingWin.dialog('open');
-
         });
     }
 

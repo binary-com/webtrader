@@ -1,0 +1,18 @@
+﻿table.asset-index-dialog th,td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+    table.asset-index-dialog th > .search-input {
+        text-align:center;
+        width: 100%; 
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+        border-radius:10px;
+    }
+
+    table.asset-index-dialog th > .search-input:focus {
+        box-shadow: 3px -1px 8px 1pt lightblue;
+        outline: 0;
+    }

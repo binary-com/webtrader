@@ -13,10 +13,10 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
             $.get('token/token.html', function ($html) {
                 $html = $($html);
                 tokenWin = windows.createBlankWindow($html, {
-                    width: 800,
-                    height: 400,
+                    width: 605,
+                    height: 380,
                     title: 'Authentication Token',
-                    resizeable: false,
+                    resizable: false,
                     collapsable: false,
                     minimizable: false,
                     maximizable: false,
@@ -29,7 +29,8 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
 
                 var input = $html.find('input');
                 
-                $html.find(".token-dialog-apply")
+                $html.find("button")
+                    .first()
                     .button({ icons: { primary: "ui-icon-check" } })
                     .click(function () {
                         var val = input.val();
@@ -38,10 +39,9 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
 
                         callbacks = promise = null;
                         tokenWin.dialog('close');
-                    });
-
-                $html.find(".token-dialog-cancel")
-                    .button({ icons: { primary: "ui-icon-cancel" } })
+                    })
+                    .next()
+                    .button({ icons: { secondary: "ui-icon-cancel" } })
                     .click(function () {
                         callbacks && callbacks.reject({ message: "User didn't provide a token" });
 
