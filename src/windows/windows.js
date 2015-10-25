@@ -23,10 +23,10 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         }
     }
 
-    $(window).resize(function () {
-        calculateChartsPerScreen();
-        tileAction();
-    });
+    // $(window).resize(function () {
+    //     calculateChartsPerScreen();
+    //     tileAction();
+    // });
 
     var closeAllObject = null,
         instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
@@ -56,6 +56,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
     var $menuUL = null;
 
     function tileAction() {
+      calculateChartsPerScreen();
+
       require(["charts/chartWindow"], function (chartWindowObj) {
         var topMargin = 80;
 
