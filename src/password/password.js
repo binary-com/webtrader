@@ -94,10 +94,12 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 
 				// password menu click handler
 				$menuItem.click(function (e) {
+					// see if the user is authenticated or not.
 					var requestData = { trading_times: '2015-5-5' };
 					liveapi.authenticated.send(requestData)
 						.then(function (d) {
 							console.warn(d);
+							// open the dialog when authenticated.
 							openDialog();
 						})
 						.catch(function (e) {
