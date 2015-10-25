@@ -139,9 +139,9 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
                 //Trigger async loading of instruments and refresh menu
                 require(["instruments/instruments"], function(instrumentsMod) {
-                        require(["jquery", "jquery-growl"], function($) {
-                            $.growl.notice({ message: "Loading chart menu!" });
-                        });
+                        // require(["jquery", "jquery-growl"], function($) {
+                        //     $.growl.notice({ message: "Loading chart menu!" });
+                        // });
 
                         instrumentsMod.init();
                     });
