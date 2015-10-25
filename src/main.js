@@ -144,8 +144,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 // register async loading of change password dialog.
                 load_ondemand(
                     $navMenu.find("a.password"),
-                    'click',
-                    'Loading Change Password Dialog...',
+                    'click', '',
                     'password/password',
                     function (password) {
                         var $elem = $navMenu.find("a.password");
