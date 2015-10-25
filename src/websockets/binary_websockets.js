@@ -129,7 +129,10 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
             else
                 buffered_execs.push(cb);
         },
-        /* send a request and cache the result */
+        /* if you want a request to be cached, that is when multiple modules request 
+           the same data or a module request a data multiple times, instead of calling
+           liveapi.send can liveapi.cached.send.
+           node: this will only cache if the result was successfull */
         cached :{
             send: function(data){
                 var key = JSON.stringify(data);
