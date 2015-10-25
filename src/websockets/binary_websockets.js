@@ -2,9 +2,9 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['reconnecting-websocket', 'js-cookie', 'token/token', 'jquery-timer'],
-    function (ReconnectingWebSocket, Cookies, tokenWin) {
-    //es6_promise.polyfill(); /* polyfill for es6-promises */
+define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jquery-timer'],
+    function (es6_promise, ReconnectingWebSocket, Cookies, tokenWin) {
+    es6_promise.polyfill(); /* polyfill for es6-promises */
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 
