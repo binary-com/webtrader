@@ -85,7 +85,10 @@
             var timePeriod = $("#timePeriod").val();
             console.log('changed', instrumentCode + ' : ' + timePeriod);
             if (instrumentCode && timePeriod) {
-                $("#chartFrame").attr('src', '/index.html?affiliates=true&instrument=' + instrumentCode + '&timePeriod=' + timePeriod);
+                var basePath = window.location.origin;
+                var srcPath = basePath + "/index.html?affiliates=true&instrument=" + instrumentCode + "&timePeriod=" + timePeriod;
+                
+                $("#chartFrame").attr('src', srcPath);
             }
         });
 
