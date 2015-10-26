@@ -68,6 +68,7 @@ require(["jquery", "websockets/binary_websockets", "jquery-ui", "modernizr", "lo
     //Load our main CSS
     loadCSS("main.css");
     loadCSS("lib/hamburger.css");
+    loadCSS("lib/growl/stylesheets/jquery.growl.css")
 
     function validateParameters(instrumentObject) {
         var instrumentCode_param = getParameterByName('instrument');
@@ -88,11 +89,7 @@ require(["jquery", "websockets/binary_websockets", "jquery-ui", "modernizr", "lo
 
     //All dependencies loaded
     $(document).ready(function() {
-        //Trigger async loading of instruments and refresh menu
-        require(["instruments/instruments"], function(instrumentsMod) {
-            instrumentsMod.init();
-        });
-
+        // get chart window html.
         $.get("charts/chartWindow.html", function(html) {
             var newTabId = "chart-dialog-1",
                 timePeriod = getParameterByName('timePeriod') || '1d',
@@ -107,6 +104,7 @@ require(["jquery", "websockets/binary_websockets", "jquery-ui", "modernizr", "lo
                 chartOptions.init(newTabId, timePeriod, type);
             });
 
+            // load market information (instruments) from API.
             liveapi
               .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
               .then(function (_instrumentJSON) {
@@ -114,7 +112,7 @@ require(["jquery", "websockets/binary_websockets", "jquery-ui", "modernizr", "lo
                     var instrumentCode = getParameterByName('instrument');
                     var instrumentObject = getObjects(_instrumentJSON, 'symbol', instrumentCode);
                     if (instrumentObject && instrumentObject.length > 0 && instrumentObject[0].symbol && instrumentObject[0].name) {
-                        //Do validation of parameters here
+                        // validate the parameters here.
                         if (validateParameters(instrumentObject[0])) {
                             var instrumentCode = instrumentObject[0].symbol;
                             var instrumentName = instrumentObject[0].name;
@@ -122,7 +120,6 @@ require(["jquery", "websockets/binary_websockets", "jquery-ui", "modernizr", "lo
                                 charts.drawChart("#" + newTabId + "_chart", instrumentCode, instrumentName, timePeriod, type);
                             });
                         } else {
-                            alert("Invalid parameter(s)!");
                             require(["jquery", "jquery-growl"], function($) {
                                 $.growl.error({
                                     message: "Invalid parameter(s)!"
@@ -131,7 +128,6 @@ require(["jquery", "websockets/binary_websockets", "jquery-ui", "modernizr", "lo
                             $html.find('div.chartSubContainerHeader').hide();
                         }
                     } else {
-                        alert("Instrument Code Unknown/Unavailable!");
                         require(["jquery", "jquery-growl"], function($) {
                             $.growl.error({
                                 message: "Instrument Code Unknown/Unavailable!"
@@ -142,7 +138,6 @@ require(["jquery", "websockets/binary_websockets", "jquery-ui", "modernizr", "lo
                 }
               })
               .catch(function (e) {
-                  alert("Error getting market information!");
                   require(["jquery", "jquery-growl"], function($) {
                       $.growl.error({
                           message: "Error getting market information!"
