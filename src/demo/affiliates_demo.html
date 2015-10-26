@@ -86,7 +86,12 @@
             console.log('changed', instrumentCode + ' : ' + timePeriod);
             if (instrumentCode && timePeriod) {
                 var basePath = window.location.origin;
-                var srcPath = basePath + "/index.html?affiliates=true&instrument=" + instrumentCode + "&timePeriod=" + timePeriod;
+                console.log('basePath', basePath);
+                if (basePath.toLowerCase().indexOf(".github.io") >= 0) {
+                  basePath = basePath + "/webtrader/";
+                }
+                var srcPath = basePath + "/index.html?affiliates=true&instrument=" + instrumentCode 
+                  + "&timePeriod=" + timePeriod;
                 
                 $("#chartFrame").attr('src', srcPath);
             }
