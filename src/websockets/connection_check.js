@@ -1,4 +1,4 @@
-define(["websockets/eventSourceHandler","charts/chartingRequestMap"], function(liveapi,chartingRequestMap) {
+define(["websockets/binary_websockets","charts/chartingRequestMap"], function(liveapi,chartingRequestMap) {
     //Ping server every 15 seconds
 	var lastUpdateTime = null;
     $(document).everyTime(15000, null, function() {

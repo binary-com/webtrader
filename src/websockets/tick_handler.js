@@ -1,4 +1,4 @@
-define(["websockets/eventSourceHandler", "charts/chartingRequestMap", "common/util"], function(liveapi,chartingRequestMap) {
+define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/util"], function(liveapi,chartingRequestMap) {
 
     var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('tick', function (data) {
