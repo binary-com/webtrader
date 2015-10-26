@@ -5,9 +5,23 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <META http-equiv="Refresh" content="0;URL=v1.0.0/main.html">
     <title>Highcharts implementation for Binary.com</title>
 </head>
 <body>
+    <script charset="utf-8">
+      function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      var affiliates = getParameterByName('affiliates') || false;
+      if (affiliates && affiliates == 'true') {
+          window.location.href = 'v2.0.0/affiliates.html?' + 'affiliates=true&instrument=' + getParameterByName('instrument') + '&timePeriod=' + getParameterByName('timePeriod');
+      } else {
+          window.location.href = 'v2.0.0/main.html';
+      }
+    </script>
 </body>
 </html>

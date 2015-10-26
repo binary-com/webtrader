@@ -245,8 +245,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             });
 
             require(["charts/chartWindow"], function (chartWindowObj) {
-
-
                 //Attach click listener for tile menu
                 tileObject.click(function () {
                     tileAction();
@@ -263,7 +261,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                             }, value.chartType);
                     }
                 });
-
             });
 
             return this;

@@ -56,7 +56,6 @@ requirejs.config({
 });
 
 require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
-
     "use strict";
 
     //TODO if SVG, websockets are not allowed, then redirect to unsupported_browsers.html
