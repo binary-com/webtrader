@@ -5,8 +5,6 @@
 define(["jquery", "common/util"], function($) {
 
     "use strict";
-    var MIN_WIDTH = 350;
-    var MIN_HEIGHT = 400;
 
     return {
 
@@ -14,21 +12,15 @@ define(["jquery", "common/util"], function($) {
             return $.isNumeric(value) && Math.floor(value) == value && min <= value && max >= value;
         },
 
-        //10 for desktop and 1 for mobile devices
+        /*
+            We are not restricting how many dialogs user can open on desktop or laptop as long as their system
+            resource can support. Since we moved to WS API, we are capable of handling large instruments now.
+            This application is not meant for small devices. However if anyone opens it in small device, we will
+            show one window
+        */
         validateIfNoOfChartsCrossingThreshold : function( noOfChartsAlreadyOpened ) {
-            var ret = true;
-            if ((noOfChartsAlreadyOpened + 1) > 10)
-            {
-                ret = false;
-            }
-            else
-            {
-                if (isSmallView() && (noOfChartsAlreadyOpened + 1) > 1)
-                {
-                    ret = false;
-                }
-            }
-            return ret;
+            var ret = isSmallView() && (noOfChartsAlreadyOpened + 1) > 1
+            return !ret;
         }
 
     };
