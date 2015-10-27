@@ -2,7 +2,8 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navigation"], function($, $ui, liveapi, navigation) {
+define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navigation", "jquery-growl"],
+    function ($, $ui, liveapi, navigation) {
 
     "use strict";
 
@@ -42,65 +43,42 @@ define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navig
 
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
 
-        require(["validation/validation"], function(validation) {
+        require(["validation/validation","charts/chartWindow","common/util"], function(validation,chartWindow) {
+            if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows())) {
+                $.growl.error({ message: "No more charts allowed!" });
+                return;
+            }
 
-            require(["charts/chartWindow"], function (chartWindow) {
+            //validate the selection
+            var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
+            var internalSymbol = $("#instrumentsDialog").data("symbol");
+            var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
 
-                if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows()))
-                {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.error({ message: "No more charts allowed!" });
-                    });
-                    return;
-                }
+            var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
+            var error_msg = null;
+            if (timeperiodObject) {
+                if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max")))) {
+                    if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
 
-                //validate the selection
-                var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
-                var internalSymbol = $("#instrumentsDialog").data("symbol");
-                var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
-                require(["common/util"], function() {
-                    var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
-                    if (timeperiodObject) {
-
-                        if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max"))))
-                        {
-
-                            if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
-
-                                chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
-                                            isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
-                                closeDialog.call($("#instrumentsDialog"));
-                            }
-                            else
-                            {
-                                require(["jquery", "jquery-growl"], function($) {
-                                    $("#timePeriod").addClass('ui-state-error');
-                                    $.growl.error({ message: "Charts of less than "
-                                            //Convert to human readable (in minutes) format
-                                        + convertToTimeperiodObject(delayAmount + 'm').humanReadableString()
-                                        + " are not available for the " + displaySymbol + "." });
-                                });
-                            }
-                        }
-                        else
-                        {
-                            require(["jquery", "jquery-growl"], function($) {
-                                $("#timePeriod").addClass('ui-state-error');
-                                $.growl.error({ message: "Only numbers between " + $("#timePeriod").attr("min") + " to " + $("#timePeriod").attr("max") + " is allowed for " + $("#units option:selected").text() + "!" });
-                            });
-                        }
-
+                        chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
+                                    isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
+                        closeDialog.call($("#instrumentsDialog"));
                     }
                     else
-                    {
-                        require(["jquery", "jquery-growl"], function($) {
-                            $("#timePeriod").addClass('ui-state-error');
-                            $.growl.error({ message: "Only numbers between 1 to 100 is allowed!" });
-                        });
-                    }
+                        error_msg = "Charts of less than "
+                                   + convertToTimeperiodObject(delayAmount + 'm').humanReadableString() //Convert to human readable (in minutes) format
+                                   + " are not available for the " + displaySymbol + ".";
+                }
+                else
+                    error_msg = "Only numbers between " + $("#timePeriod").attr("min") + " to " + $("#timePeriod").attr("max") + " is allowed for " + $("#units option:selected").text() + "!";
+            }
+            else
+                error_msg = "Only numbers between 1 to 100 is allowed!";
 
-                });
-            });
+            if (error_msg) {
+                $("#timePeriod").addClass('ui-state-error');
+                $.growl.error({ message: "Only numbers between 1 to 100 is allowed!" });
+            }
         });
 
     }
@@ -110,7 +88,7 @@ define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navig
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function _refreshInstrumentMenu( rootElement, data ) {
+    function refreshInstrumentMenu( rootElement, data ) {
 
         $.each(data, function(key, value) {
             var isDropdownMenu = value.submarkets || value.instruments;
@@ -129,7 +107,7 @@ define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navig
             if (isDropdownMenu) {
                 var newUL = $("<ul>");
                 newUL.appendTo(newLI);
-                _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
+                refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
             } else {
                 $menuLink.click(function() {
                     if ($("#instrumentsDialog").length == 0) {
@@ -212,36 +190,28 @@ define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navig
     var markets = [];
 
     /* amin: moved from symbol_handler.js */
-    function _extractInstrumentMarkets(data) {
-        for (var marketIndex in data.trading_times.markets) {
-            var marketFromResponse = data.trading_times.markets[marketIndex];
+    function extractInstrumentMarkets(data) {
+        markets = data.trading_times.markets.map(function (m) {
             var market = {
-                name: marketFromResponse.name,
-                display_name: marketFromResponse.name,
-                submarkets: []
+                name: m.name,
+                display_name: m.name
             };
-
-            for (var submarketIndxx in marketFromResponse.submarkets) {
-                var submarket = marketFromResponse.submarkets[submarketIndxx];
-                var submarketObj = {
-                    name: submarket.name,
-                    display_name: submarket.name,
-                    instruments: []
+            market.submarkets = m.submarkets.map(function (sm) {
+                var submarket = {
+                    name: sm.name,
+                    display_name: sm.name
                 };
-                for (var eachSymbolIndx in submarket.symbols) {
-                    var eachSymbol = submarket.symbols[eachSymbolIndx];
-                    submarketObj.instruments.push({
-                        symbol: eachSymbol.symbol,
-                        display_name: eachSymbol.name,
+                submarket.instruments = sm.symbols.map(function (sym) {
+                    return {
+                        symbol: sym.symbol,
+                        display_name: sym.name,
                         delay_amount: 0 //TODO fix this when API provides it
-                    });
-                }
-
-                market.submarkets.push(submarketObj);
-            }
-
-            markets.push(market);
-        }
+                    };
+                });
+                return submarket;
+            });
+            return market;
+        });
 
         sortMarkets(markets);
     }
@@ -253,23 +223,23 @@ define(["jquery", "jquery-ui", 'websockets/binary_websockets', "navigation/navig
                 /* cache the result of trading_times call, because assetIndex needs the same data */
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                    .then(function (_instrumentJSON) {
-                    if (!$.isEmptyObject(_instrumentJSON)) {
-                        _extractInstrumentMarkets(_instrumentJSON);
+                    .then(function (data) {
+                        if (!$.isEmptyObject(data)) {
+                            extractInstrumentMarkets(data);
 
-                        var instrumentsMenu = $("#nav-menu").find(".instruments");
-                        var rootUL = $("<ul>");
-                        rootUL.appendTo(instrumentsMenu);
-                        _refreshInstrumentMenu(rootUL, markets);
+                            var instrumentsMenu = $("#nav-menu").find(".instruments");
+                            var rootUL = $("<ul>");
+                            rootUL.appendTo(instrumentsMenu);
+                            refreshInstrumentMenu(rootUL, markets);
 
-                        navigation.updateDropdownToggles();
+                            navigation.updateDropdownToggles();
 
-                        if(_callback) {
-                            _callback(markets);
+                            if (_callback) {
+                                _callback(markets);
+                            }
+
                         }
-
-                    }
-                });
+                    }).catch(console.error.bind(console));
             }
 
         },
