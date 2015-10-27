@@ -15,7 +15,7 @@ define(['jquery', 'jquery.dialogextend', 'modernizr', 'common/util'], function($
 
         //Based on totalChartsPerRow and totalRows, open some charts
         totalCharts_renderable = totalChartsPerRow * totalRows;
-        
+
         //For small size screens
         if (isSmallView())
             totalRows = totalChartsPerRow = 1;
@@ -47,12 +47,12 @@ define(['jquery', 'jquery.dialogextend', 'modernizr', 'common/util'], function($
 
             $(".chart-dialog").each(function() {
                 var leftShift = startMargin;
-                if(cellCount > 1) {
+                if (cellCount > 1) {
                     leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
                 }
 
                 var topShift = topMargin + (minHeight * (rowCount - 1));
-                if(rowCount > 1) {
+                if (rowCount > 1) {
                     topShift = topShift + ((rowCount - 1) * 20);
                 }
 
@@ -66,9 +66,9 @@ define(['jquery', 'jquery.dialogextend', 'modernizr', 'common/util'], function($
                     width: minWidth,
                     height: minHeight
                 });
-                
+
                 chartWindowObj.triggerResizeEffects($(this).dialog("widget").find('.chart-dialog'));
-                
+
                 if (++cellCount > totalChartsPerRow) {
                     cellCount = 1;
                     ++rowCount;
@@ -283,15 +283,11 @@ define(['jquery', 'jquery.dialogextend', 'modernizr', 'common/util'], function($
                             return arr[Math.floor(Math.random() * arr.length)];
                         };
                         for (var inx = 0; inx < totalCharts_renderable; ++inx) {
-                        var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
-                        var timePeriods = ['2h', '4h', '8h', '1d'];
-                        var chartTypes = ['candlestick', 'line', 'ohlc', 'spline'];
-                        for (var inx = 0; inx < totalCharts_renderable; ++inx){
                             var submarkets = rand(markets).submarkets;
                             var symbols = rand(submarkets).symbols;
                             var sym = rand(symbols);
-                            var timepreiod = rand(timePeriods);
-                            var chart_type = rand(chartTypes);
+                            var timepreiod = ['2h', '4h', '8h', '1d'][inx];
+                            var chart_type = ['candlestick', 'line', 'ohlc', 'spline'][inx];
 
                             chartWindowObj
                                 .addNewWindow(
