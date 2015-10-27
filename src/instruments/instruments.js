@@ -2,7 +2,7 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navigation", "jquery-growl"],
+define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navigation", "jquery-growl","common/util"],
     function ($, $ui, liveapi, navigation) {
 
     "use strict";
@@ -43,7 +43,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
 
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
 
-        require(["validation/validation","charts/chartWindow","common/util"], function(validation,chartWindow) {
+        require(["validation/validation","charts/chartWindow"], function(validation,chartWindow) {
             if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows())) {
                 $.growl.error({ message: "No more charts allowed!" });
                 return;
