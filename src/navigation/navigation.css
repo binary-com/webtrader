@@ -34,6 +34,9 @@
 }
 
 .nav-normal-menu li:hover {
+    /* nothing should exceed this max value.
+       navigation menu should be on top of everything.
+    */
     z-index: 999999;
 }
 
@@ -55,6 +58,9 @@
 .nav-normal-menu li > ul {
     position: absolute;
     display: none;
+    /* nothing should exceed this max value.
+       navigation menu should be on top of everything.
+    */
     z-index: 999999;
     list-style: none outside none;
     min-width: 100%;
@@ -111,6 +117,9 @@
     width: 280px;
     min-height: 100%;
     background-color: #273051;
+    /* nothing should exceed this max value.
+       navigation menu should be on top of everything.
+    */
     z-index: 999999;
 }
 
