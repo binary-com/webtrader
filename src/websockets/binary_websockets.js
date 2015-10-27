@@ -58,6 +58,69 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
     require(['websockets/connection_check']); // require connection_check to handle pings.
 
+    /* whether the given request needs authentication or not */
+    var needs_authentication = function (data) {
+        for (prop in { balance: 1, statement: 1, profit_table: 1, portfolio: 1, proposal_open_contract: 1, buy: 1, sell: 1 })
+            if (prop in data)
+                return true;
+        return false;
+    };
+
+    /* send a raw request and return a promise */
+    var send_request = function (data) {
+        data.passthrough = data.passthrough || { };
+        data.passthrough.uid =  (Math.random() * 1e17).toString();
+
+        return new Promise(function (resolve,reject) {
+            unresolved_promises[data.passthrough.uid] = { resolve: resolve, reject: reject };
+            if (is_connected())
+                socket.send(JSON.stringify(data));
+            else
+                buffered_sends.push(data);
+        });
+    };
+
+    /* authenticate and return a promise */
+    var authenticate = function (token) {
+        var auth_successfull = false,
+            key = JSON.stringify({ authorize: token }),
+            promise = send_request({ authorize: token });
+
+        return promise
+            .then(function (val) {
+                Cookies.set('webtrader_token', token); /* never expiers */
+                is_authenitcated_session = true;
+                auth_successfull = true;
+                cached_promises[key] = promise; /* cache successfull authentication */
+                return val; /* pass the result */
+            })
+            .catch(function (up) {
+                if (!auth_successfull) {    /* authentication request is failed, delete the cookie */
+                    is_authenitcated_session = false;
+                    Cookies.remove('webtrader_token');
+                }
+                delete cached_promises[key];
+                throw up; /* pass the exception to next catch */
+            });
+    };
+
+    /* first authenticate and then send the request */
+    var send_authenticated_request = function (data) {
+        if (is_authenitcated_session)
+            return send_request(data);
+
+        var send = send_request.bind(null,data);// function () { return send_request(data); };
+
+        if (Cookies.get('webtrader_token'))     /* we have a cookie for the token */
+            return authenticate(Cookies.get('webtrader_token'))
+                    .then(send);
+        else                                    /* get the token from user */
+            return tokenWin
+                .getTokenAsync()
+                .then(authenticate)
+                .then(send);
+    };
+
     var api = {
         events: {
             on: function (name, cb) {
@@ -71,7 +134,10 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
             else
                 buffered_execs.push(cb);
         },
-        /* send a request and cache the result */
+        /* if you want a request to be cached, that is when multiple modules request 
+           the same data or a module request a data multiple times, instead of calling
+           liveapi.send can liveapi.cached.send.
+           node: this will only cache if the result was successfull */
         cached :{
             send: function(data){
                 var key = JSON.stringify(data);
@@ -80,55 +146,36 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
                  * assume P is in rejected state (or in fullfiled state), the changed .then() calls will be immediately rejected(or fullfiled).  */
                 if (cached_promises[key])
                     return cached_promises[key];
-                return cached_promises[key] = api.send(data);
+                /* We don't want to cache promises that are rejected,
+                   Clear the cache in case of promise rejection */
+                return cached_promises[key] = api.send(data)
+                    .then(
+                        function (val) {
+                            return val;
+                        }, /* on resolve: do nothing */
+                        function (up) {
+                            delete cached_promises[key]; throw up;
+                        } /* on reject: clear cache */
+                    );
+            },
+            /* return the promise from last successfull authentication request,
+               if the session is not already authorized will send an authentication request */
+            authorize: function () {
+                var token = Cookies.get('webtrader_token'),
+                    key = JSON.stringify({ token: token });
+
+                if (is_authenitcated_session && token && cached_promises[key])
+                    return cached_promises[key];
+
+                return token ? authenticate(token) : /* we have a token => autheticate */
+                                  tokenWin.getTokenAsync().then(authenticate); /* get the token from user and authenticate */
             }
         },
-        /* send returns an es6-promise */
+        /* sends a request and returns an es6-promise */
         send: function (data) {
-            data.passthrough = data.passthrough || { };
-            data.passthrough.uid =  (Math.random() * 1e17).toString();
-
-            return new Promise(function (resolve,reject) {
-                unresolved_promises[data.passthrough.uid] = { resolve: resolve, reject: reject };
-                if (is_connected())
-                    socket.send(JSON.stringify(data));
-                else
-                    buffered_sends.push(data);
-            });
-        },
-        /* send an authenticated request */
-        authenticated: {
-            send: function (data) {
-                if (is_authenitcated_session)
-                    return api.send(data);
-
-                /* authenticate and then send the request */
-                var auth_send = function (token) {
-                    var auth_successfull = false;
-                    return api
-                        .send({ authorize: token })
-                        .then(function () {
-                            Cookies.set('webtrader_token', token); /* never expiers */
-                            is_authenitcated_session = true;
-                            auth_successfull = true;
-                            return api.send(data);
-                        })
-                        .catch(function (up) {
-                            if (!auth_successfull) {    /* authentication request is failed, delete the cookie */
-                                is_authenitcated_session = false;
-                                Cookies.remove('webtrader_token');
-                            }
-                            throw up; /* pass the exception to next catch */
-                        });
-                }
-                
-                if (Cookies.get('webtrader_token'))     /* we have a cookie for the token */
-                    return auth_send(Cookies.get('webtrader_token'));
-                else                                    /* get the token from user */
-                    return tokenWin
-                        .getTokenAsync()
-                        .then(auth_send);
-            }
+            if (needs_authentication(data))
+                return send_authenticated_request(data);
+            return send_request(data);
         }
     }
     return api;
