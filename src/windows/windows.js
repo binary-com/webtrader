@@ -5,42 +5,16 @@
 
 define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
 
-    var closeAllObject = null,
-        instrumentArrayForInitialLoading = [ //Figure out if we can get this from market.json URL rather than hard coding TODO
-            {
-                symbol : 'R_25',
-                name : 'Random 25 Index',
-                timeperiod : '1d',
-                chartType : 'candlestick'
-            }, {
-                symbol : 'R_50',
-                name : 'Random 50 Index',
-                timeperiod : '8h',
-                chartType : 'line'
-            }, {
-                symbol : 'R_75',
-                name : 'Random 75 Index',
-                timeperiod : '4h',
-                chartType : 'ohlc'
-            }, {
-                symbol : 'R_100',
-                name : 'Random 100 Index',
-                timeperiod : '2h',
-                chartType : 'spline'
-            }];
+    var closeAllObject = null;
 
     //-----start----
     //For desktops and laptops or large size tablets
     //---------Calculation to find out how many windows to open based on user's window size
-    var totalAvailableBrowserWindowWidth = $(window).width();
-    var totalAvailableBrowserWindowHeight = $(window).height();
-    var totalChartsPerRow = Math.floor(totalAvailableBrowserWindowWidth / (350 + 20));
-    var totalRows = Math.floor(totalAvailableBrowserWindowHeight / (400 + 10));
+    var totalChartsPerRow = Math.floor($(window).width() / (350 + 20)) || 1;
+    var totalRows = Math.floor($(window).height() / (400 + 10)) || 1;
     //For small size screens
-    if (isSmallView() || totalRows <= 0 || totalChartsPerRow <= 0) {
-      totalRows = 1;
-      totalChartsPerRow = 1;
-    }
+    if (isSmallView())
+      totalRows = totalChartsPerRow = 1;
     //---------End-----------------------------
 
     var dialogCounter = 0;
