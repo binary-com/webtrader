@@ -147,9 +147,11 @@ function onloadCSS( ss, callback ) {
 function load_ondemand(element, event_name,msg, module_name, callback) {
     element.one(event_name, function () {
         require([module_name], function (module) {
-            require(["jquery", "jquery-growl"], function($) {
-                $.growl.notice({ message: msg });
-            });
+            if(msg && msg.length) {
+                require(["jquery", "jquery-growl"], function($) {
+                    $.growl.notice({ message: msg });
+                });
+            }
             
             callback && callback(module);
         });

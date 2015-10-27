@@ -56,7 +56,6 @@ requirejs.config({
 });
 
 require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
-
     "use strict";
 
     //TODO if SVG, websockets are not allowed, then redirect to unsupported_browsers.html
@@ -95,6 +94,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     var elem = $navMenu.find("a.assetIndex");
                     assetIndex.init(elem);
                     elem.click(); 
+                });
+
+            // Register async loading of change password menu
+            load_ondemand($navMenu.find("a.password"), 'click', '', 'password/password', 
+                function (password) {
+                    var elem = $navMenu.find("a.password");
+                    password.init(elem);
+                    elem.click();
                 });
         }
 
