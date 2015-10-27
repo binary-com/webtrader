@@ -7,24 +7,6 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
 
     "use strict";
 
-    function sortAlphaNum(property) {
-        'use strict';
-        var reA = /[^a-zA-Z]/g;
-        var reN = /[^0-9]/g;
-
-        return function(a, b) {
-            var aA = a[property].replace(reA, "");
-            var bA = b[property].replace(reA, "");
-            if(aA === bA) {
-                var aN = parseInt(a[property].replace(reN, ""), 10);
-                var bN = parseInt(b[property].replace(reN, ""), 10);
-                return aN === bN ? 0 : aN > bN ? 1 : -1;
-            } else {
-                return aA > bA ? 1 : -1;
-            }
-        };
-    }
-
     function sortMarkets(data) {
         if($.isArray(data)) {
             data.sort(sortAlphaNum('display_name'));
@@ -100,8 +82,8 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
             }
 
             var newLI = $("<li>").append($menuLink)
-                                .data("symbol", value.symbol)
-                                .data("delay_amount", value.delay_amount)
+                                .data("symbol", value.symbol)//TODO This is invalid for root level object
+                                .data("delay_amount", value.delay_amount)//TODO This is invalid for root level object
                                 .appendTo( rootElement );
 
             if (isDropdownMenu) {
@@ -205,7 +187,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
                     return {
                         symbol: sym.symbol,
                         display_name: sym.name,
-                        delay_amount: 0 //TODO fix this when API provides it
+                        delay_amount: sym.delay_amount
                     };
                 });
                 return submarket;
