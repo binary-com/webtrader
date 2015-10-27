@@ -234,12 +234,14 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                         var markets = data.trading_times.markets;
                         /* return a random element of an array */
                         var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
+                        var timePeriods = ['2h', '4h', '8h', '1d'];
+                        var chartTypes = ['candlestick', 'line', 'ohlc', 'spline'];
                         for (var inx = 0; inx < totalCharts_renderable; ++inx){
                             var submarkets = rand(markets).submarkets;
                             var symbols = rand(submarkets).symbols;
                             var sym = rand(symbols);
-                            var timepreiod = ['2h', '4h', '8h', '1d'][inx];
-                            var chart_type = ['candlestick', 'line', 'ohlc', 'spline'][inx];
+                            var timepreiod = rand(timePeriods);
+                            var chart_type = rand(chartTypes);
 
                             chartWindowObj
                                 .addNewWindow(
