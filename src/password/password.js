@@ -50,14 +50,12 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 		};
 
 		$elem.button({ disabled: true , label: loading_label });
-		liveapi.authenticated.send(requestData)
+		liveapi.cached.send(requestData)
 			.then(function (d) {
 				console.warn(d);
-				
 				$elem.button({ disabled: false, label: normal_label });
-
-				var message = "Password changed successfully";
-				$.growl.notice({ message: message });
+				
+				$.growl.notice({ message: "Password changed successfully" });
 
 				closeDialog();
 			})
@@ -65,7 +63,6 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 				console.error(e);
 				
 				$elem.button({ disabled: false, label: normal_label });
-
 				if(e.code == 'InputValidationFailed') {
 					var title = "Input Validation Failed";
 					var message = "Passwords should contain 5 to 25 alphanumeric characters";
@@ -95,18 +92,16 @@ define(["jquery", "jquery-validation", "websockets/binary_websockets"], function
 				// password menu click handler
 				$menuItem.click(function (e) {
 					// see if the user is authenticated or not.
-					var requestData = { trading_times: '2015-5-5' };
-					liveapi.authenticated.send(requestData)
+					liveapi.cached.authorize()
 						.then(function (d) {
 							console.warn(d);
-							// open the dialog when authenticated.
 							openDialog();
 						})
 						.catch(function (e) {
-							console.error(e)
+							console.error(e);
 							$.growl.error({ message: e.message });
 						});
-
+					
 					e.preventDefault();
 				});
 
