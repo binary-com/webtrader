@@ -244,7 +244,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 }
             });
 
-            require(["charts/chartWindow"], function (chartWindowObj) {
+            require(["charts/chartWindow","websockets/binary_websockets"], function (chartWindowObj,liveapi) {
 
 
                 //Attach click listener for tile menu
@@ -254,16 +254,26 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
                 //Based on totalChartsPerRow and totalRows, open some charts
                 var totalCharts_renderable = totalChartsPerRow * totalRows;
-                $(instrumentArrayForInitialLoading).each(function (index, value) {
-                    if (index < totalCharts_renderable) {
-                        chartWindowObj.addNewWindow(value.symbol, value.name, value.timeperiod,
-                            function () {
-                                //Trigger tile action
-                                tileAction();
-                            }, value.chartType);
-                    }
-                });
+                liveapi
+                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                    .then(function (data) {
+                        var markets = data.trading_times.markets;
+                        /* return a random element of an array */
+                        var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
+                        for (var inx = 0; inx < totalCharts_renderable; ++inx){
+                            var submarkets = rand(markets).submarkets;
+                            var symbols = rand(submarkets).symbols;
+                            var sym = rand(symbols);
+                            var timepreiod = ['2h', '4h', '8h', '1d'][inx];
+                            var chart_type = ['candlestick', 'line', 'ohlc', 'spline'][inx];
 
+                            chartWindowObj
+                                .addNewWindow(
+                                    sym.symbol, sym.name, timepreiod,
+                                    tileAction,/*Trigger tile action */ 
+                                    chart_type);
+                        }
+                    });
             });
 
             return this;
