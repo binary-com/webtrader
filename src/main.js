@@ -96,6 +96,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     assetIndex.init(elem);
                     elem.click(); 
                 });
+
+            //Register async loading of portfolio window 
+            load_ondemand($navMenu.find("a.portfolio"), 'click', 'loading portfolio ...', 'portfolio/portfolio',
+                function (portfolio) {
+                    var elem = $navMenu.find("a.portfolio");
+                    portfolio.init(elem);
+                    elem.click(); 
+                });
         }
 
         require(["navigation/navigation"], function (navigation) {

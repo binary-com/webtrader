@@ -2,7 +2,7 @@
  * Created by amin on 10/9/15.
  */
 
-define(['jquery', 'windows/windows', 'websockets/eventSourceHandler', 'datatables','jquery-growl'], function ($, windows, liveapi) {
+define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables','jquery-growl'], function ($, windows, liveapi) {
 
     var portfolioWin = null;
     var table = null;
@@ -18,7 +18,7 @@ define(['jquery', 'windows/windows', 'websockets/eventSourceHandler', 'datatable
 
     function initPortfolioWin() {
         $.growl.notice({ message: 'Loading Portfolio ...' });
-        liveapi.authenticated.send({ balance: 1 })
+        liveapi.send({ balance: 1 })
             .then(function (data) {
                 portfolioWin = windows.createBlankWindow($('<div/>'), { title:'Portfolio', width: 700 });
                 var currency = data.balance[0].currency;
@@ -48,12 +48,13 @@ define(['jquery', 'windows/windows', 'websockets/eventSourceHandler', 'datatable
                 portfolioWin.dialog('open');
             })
             .catch(function (err) {
+                console.error(err);
                 $.growl.error({ message: err.message });
             });
     }
 
     function update_table(){
-        liveapi.authenticated.send({ portfolio: 1 })
+        liveapi.send({ portfolio: 1 })
             .then(function (data) {
                 var contracts = (data.portfolio && data.portfolio.contracts)
                     || [
@@ -69,8 +70,8 @@ define(['jquery', 'windows/windows', 'websockets/eventSourceHandler', 'datatable
                         contract.contract_id,
                         contract.longcode,
                         contract.currency + ' ' + contract.buy_price,
-                        contract.currency + ' ' + contract.payout /* TODO: fix this */
-                    ]
+                        '-'
+                    ];
                 });
                 
                 /* update the table */
@@ -81,6 +82,7 @@ define(['jquery', 'windows/windows', 'websockets/eventSourceHandler', 'datatable
                 console.warn(contracts);
             })
             .catch(function (err) {
+                console.error(err);
                 $.growl.error({ message: err.message });
             });
     }
