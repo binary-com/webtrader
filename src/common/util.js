@@ -120,3 +120,61 @@ function validateParameters(instrumentObject) {
       var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 3;
       return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
 };
+
+// adds onload support for asynchronous stylesheets loaded with loadCSS.
+function onloadCSS( ss, callback ) {
+    ss.onload = function() {
+        ss.onload = null;
+        if( callback ) {
+            callback.call( ss );
+        }
+    };
+
+    // This code is for browsers that don’t support onload, any browser that
+    // supports onload should use that instead.
+    // No support for onload:
+    //  * Android 4.3 (Samsung Galaxy S4, Browserstack)
+    //  * Android 4.2 Browser (Samsung Galaxy SIII Mini GT-I8200L)
+    //  * Android 2.3 (Pantech Burst P9070)
+
+    // Weak inference targets Android < 4.4
+    if( "isApplicationInstalled" in navigator && "onloadcssdefined" in ss ) {
+        ss.onloadcssdefined( callback );
+    }
+}
+
+/* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
+function load_ondemand(element, event_name,msg, module_name, callback) {
+    element.one(event_name, function () {
+        require([module_name], function (module) {
+            require(["jquery", "jquery-growl"], function($) {
+                $.growl.notice({ message: msg });
+            });
+            
+            callback && callback(module);
+        });
+    });
+}
+
+function resizeElement(selector) {
+  $(selector).height($(window).height() - 10).width($(window).width() - 10);
+};
+
+function sortAlphaNum(property) {
+    'use strict';
+    var reA = /[^a-zA-Z]/g;
+    var reN = /[^0-9]/g;
+
+    return function(a, b) {
+        var aA = a[property].replace(reA, "");
+        var bA = b[property].replace(reA, "");
+        if(aA === bA) {
+            var aN = parseInt(a[property].replace(reN, ""), 10);
+            var bN = parseInt(b[property].replace(reN, ""), 10);
+            return aN === bN ? 0 : aN > bN ? 1 : -1;
+        } else {
+            return aA > bA ? 1 : -1;
+        }
+    };
+}
+
