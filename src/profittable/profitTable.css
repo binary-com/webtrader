@@ -2,11 +2,29 @@
  * Created by amin on 10/5/15.
  */
 
-table.profit-table-dialog th,td {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+table.profit-table-dialog {
+    /*table-layout:fixed;*/
 }
+
+table.profit-table-dialog th,
+table.profit-table-dialog td
+ {
+  /*overflow: hidden;*/
+  /*text-overflow: ellipsis;*/
+  /*white-space: nowrap;*/
+  /*word-wrap:break-word;*/
+  /*word-break: break-all;*/
+  text-align:center;
+  width: 12% !important; /* make important: jQ-datatables overrides this */
+}
+    table.profit-table-dialog th span {
+        /*white-space:nowrap;*/
+        /*font-size:80%;*/
+    }
+    table.profit-table-dialog th.wide-column{
+        width: 28% !important;
+    }
+
     table.profit-table-dialog th > .search-input {
         text-align:center;
         width: 100%; 

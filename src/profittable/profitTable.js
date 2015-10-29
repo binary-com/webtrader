@@ -11,7 +11,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         loadCSS("profittable/profitTable.css");
         $menuLink.click(function () {
             if (!profitWin) {
-                profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 1200 });
+                profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 800 });
                 $.get('profittable/profitTable.html', initProfitWin);
             }
             profitWin.dialog('open');
@@ -27,7 +27,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         table = table.dataTable({
             data: [],
             "columnDefs": [
-                { className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4,5,6 ] }
+                //{ className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4,5,6 ] },
+                { "width": "40%", "targets": 0 }
             ],
             paging: false,
             ordering: false,
@@ -53,9 +54,20 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             var refresh = function (data) {
                 var transactions = (data.profit_table && data.profit_table.transactions) || [];
                 console.warn(transactions);
+                var date_to_string = function (epoch) {
+                    var d = new Date(epoch | 0);
+                    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' +
+                    d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                };
                 var rows = transactions.map(function (trans) {
                     return [
-                        '', '', '', '', '', '', ''
+                        date_to_string(trans.purchase_time),
+                        trans.contract_id,
+                        trans.longcode,
+                        trans.buy_price,
+                        date_to_string(trans.sell_time),
+                        trans.sell_price,
+                        parseFloat(trans.buy_price) - parseFloat(trans.sell_price)
                     ]
                 });
                 table.api().rows().remove();
