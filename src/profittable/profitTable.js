@@ -26,10 +26,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
         table = table.dataTable({
             data: [],
-            "columnDefs": [
-                //{ className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4,5,6 ] },
-                { "width": "40%", "targets": 0 }
-            ],
             paging: false,
             ordering: false,
             searching: true,
@@ -55,7 +51,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 var transactions = (data.profit_table && data.profit_table.transactions) || [];
                 console.warn(transactions);
                 var date_to_string = function (epoch) {
-                    var d = new Date(epoch | 0);
+                    var d = new Date(epoch);
                     return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' +
                     d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
                 };
