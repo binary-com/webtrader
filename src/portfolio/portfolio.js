@@ -15,9 +15,18 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                 portfolioWin.dialog('open');
         });
     }
+    function update_indicative(data) {
+        var contract = data.proposal_open_contract,
+            id = contract.contract_id,
+            ask_price = contract.ask_price,
+            bid_price = contract.bid_price;
+        if (table) {
+            console.warn(id + ' => ' + ask_price);
+        }
+        
+    }
 
     function initPortfolioWin() {
-        $.growl.notice({ message: 'Loading Portfolio ...' });
         liveapi.send({ balance: 1 })
             .then(function (data) {
                 portfolioWin = windows.createBlankWindow($('<div/>'), { title:'Portfolio', width: 700 });
@@ -51,6 +60,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                 console.error(err);
                 $.growl.error({ message: err.message });
             });
+
+        /* register handler to update indicative value */
+        liveapi.events.on('proposal_open_contract', update_indicative);
     }
 
     function update_table(){
@@ -79,6 +91,14 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                 table.api().rows.add(rows);
                 table.api().draw();
 
+                /* register to the stream of proposal_open_contract to get indicative values */
+                contracts.forEach(function (contract) {
+                    liveapi.send({ proposal_open_contract: 1, contract_id: contract.contract_id })
+                           .then(update_indicative)
+                           .catch(function (err) {
+                               console.error(err); // TODO: find a reasonable alternative
+                           });
+                });
                 console.warn(contracts);
             })
             .catch(function (err) {
