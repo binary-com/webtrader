@@ -11,7 +11,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         loadCSS("profittable/profitTable.css");
         $menuLink.click(function () {
             if (!profitWin) {
-                profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 800 });
+                profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 850 });
                 $.get('profittable/profitTable.html', initProfitWin);
             }
             profitWin.dialog('open');
@@ -51,7 +51,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 var transactions = (data.profit_table && data.profit_table.transactions) || [];
                 console.warn(transactions);
                 var date_to_string = function (epoch) {
-                    var d = new Date(epoch);
+                    var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
                     return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' +
                     d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
                 };
