@@ -2,6 +2,8 @@
  * Created by amin on October 29, 2015.
  */
 define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
+    'use strict';
+
     var profitWin = null,
         table = null;
 
@@ -9,7 +11,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         loadCSS("profittable/profitTable.css");
         $menuLink.click(function () {
             if (!profitWin) {
-                profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 700 });
+                profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 1200 });
                 $.get('profittable/profitTable.html', initProfitWin);
             }
             profitWin.dialog('open');
@@ -17,32 +19,42 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     }
 
     function initProfitWin($html) {
-        console.warn($html);
-        //$html = $($html);
-        //var subheader = $html.filter('.trading-times-sub-header');
-        //table = $html.filter('table');
-        //$html.appendTo(tradingWin);
+        $html = $($html);
+        $html.appendTo(profitWin);
 
-        //table = table.dataTable({
-        //    data: [],
-        //    "columnDefs": [
-        //        { className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4 ] }
-        //    ],
-        //    paging: false,
-        //    ordering: false,
-        //    searching: true,
-        //    processing: true
-        //});
-        //table.parent().addClass('hide-search-input');
+        table = $html;
 
-        //// Apply the a search on each column input change
-        //table.api().columns().every(function () {
-        //    var column = this;
-        //    $('input', this.header()).on('keyup change', function () {
-        //        if (column.search() !== this.value)
-        //            column.search(this.value) .draw();
-        //    });
-        //});
+        table = table.dataTable({
+            data: [],
+            "columnDefs": [
+                { className: "dt-body-center dt-header-center", "targets": [ 0,1,2,3,4,5,6 ] }
+            ],
+            paging: false,
+            ordering: false,
+            searching: true,
+            processing: true
+        });
+        table.parent().addClass('hide-search-input');
+
+        // Apply the a search on each column input change
+        table.api().columns().every(function () {
+            var column = this;
+            $('input', this.header()).on('keyup change', function () {
+                if (column.search() !== this.value)
+                    column.search(this.value) .draw();
+            });
+        });
+        
+        var processing_msg = $('#' + table.attr('id') + '_processing').show();
+        liveapi.cached.send({ profit_table: 1 })
+            .then(function (data) {
+                var transactions = (data.profit_table && data.profit_table.transactions) || [];
+                console.warn(transactions);
+            })
+            .catch(function (err) {
+                console.error(err);
+                $.growl.error({ message: err.message });
+            });
 
         //var market_names = null,
         //    submarket_names = null;
@@ -51,8 +63,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         //    var processing_msg = $('#' + table.attr('id') + '_processing').show();
 
         //    /* update the table with the given marketname and submarketname */
-        //    var updateTable = function(result, market_name,submarket_name){
-        //        var rows = result.getRowsFor(market_name, submarket_name);
+        //    var updatetable = function(result, market_name,submarket_name){
+        //        var rows = result.getrowsfor(market_name, submarket_name);
         //        table.api().rows().remove();
         //        table.api().rows.add(rows);
         //        table.api().draw();
