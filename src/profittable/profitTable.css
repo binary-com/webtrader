@@ -21,6 +21,15 @@ table.profit-table-dialog td
     table.profit-table-dialog th.wide-column{
         width: 28% !important;
     }
+    table.profit-table-dialog td.red {
+        color: #d71818;
+        font-weight:bold;
+    }
+
+    table.profit-table-dialog td.green {
+        color: #02920e;
+        font-weight:bold;
+    }
 
     table.profit-table-dialog th > .search-input {
         text-align:center;

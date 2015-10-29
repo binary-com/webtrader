@@ -26,6 +26,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
         table = table.dataTable({
             data: [],
+            "columnDefs": [ {
+                "targets": 6,
+                "createdCell": function (td, cellData) {
+                    var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : '';
+                    if (css_class)
+                        $(td).addClass(css_class);
+                }
+            }],
             paging: false,
             ordering: false,
             searching: true,
