@@ -1,0 +1,27 @@
+﻿/**
+ * Created by amin on 10/5/15.
+ */
+
+table.profit-table-dialog th,td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+    table.profit-table-dialog th > .search-input {
+        text-align:center;
+        width: 100%; 
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+        border-radius:10px;
+    }
+
+    table.profit-table-dialog th > .search-input:focus {
+        box-shadow: 3px -1px 8px 1pt lightblue;
+        outline: 0;
+    }
+table.profit-table-dialog .search-input::-webkit-input-placeholder,
+table.profit-table-dialog .search-input::-moz-placeholder,     /* firefox 19+ */
+table.profit-table-dialog .search-input:-ms-input-placeholder /* ie */ {
+    font-size: 90%;
+}
