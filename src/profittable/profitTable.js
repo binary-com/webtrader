@@ -10,90 +10,100 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     function init($menuLink) {
         loadCSS("profittable/profitTable.css");
         $menuLink.click(function () {
-            if (!profitWin) {
-                profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 850 });
-                $.get('profittable/profitTable.html', initProfitWin);
-            }
-            profitWin.dialog('open');
+            if (!profitWin)
+                liveapi.cached.authorize()
+                    .then(initProfitWin)
+                    .catch(function (err) {
+                        $.growl.error({ message: err.message });
+                        console.error(err);
+                    });
+            else
+                profitWin.dialog('open');
         });
     }
 
     function initProfitWin($html) {
-        $html = $($html);
-        $html.appendTo(profitWin);
+        profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 850 });
+        $.get('profittable/profitTable.html', function ($html) {
 
-        table = $html;
+            $html = $($html);
+            $html.appendTo(profitWin);
 
-        table = table.dataTable({
-            data: [],
-            "columnDefs": [ {
-                "targets": 6,
-                "createdCell": function (td, cellData) {
-                    var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : '';
-                    if (css_class)
-                        $(td).addClass(css_class);
-                }
-            }],
-            paging: false,
-            ordering: false,
-            searching: true,
-            processing: true
-        });
-        table.parent().addClass('hide-search-input');
+            table = $html;
 
-        // Apply the a search on each column input change
-        table.api().columns().every(function () {
-            var column = this;
-            $('input', this.header()).on('keyup change', function () {
-                if (column.search() !== this.value)
-                    column.search(this.value) .draw();
+            table = table.dataTable({
+                data: [],
+                "columnDefs": [ {
+                    "targets": 6,
+                    "createdCell": function (td, cellData) {
+                        var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : '';
+                        if (css_class)
+                            $(td).addClass(css_class);
+                    }
+                }],
+                paging: false,
+                ordering: false,
+                searching: true,
+                processing: true
             });
-        });
-        
-        var refreshTable = function (yyyy_mm_dd) {
-            var processing_msg = $('#' + table.attr('id') + '_processing').show();
+            table.parent().addClass('hide-search-input');
 
-
-            /* refresh the table with result of { profit_table:1 } from WS */
-            var refresh = function (data) {
-                var transactions = (data.profit_table && data.profit_table.transactions) || [];
-                console.warn(transactions);
-                var date_to_string = function (epoch) {
-                    var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
-                    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' +
-                    d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-                };
-                var rows = transactions.map(function (trans) {
-                    return [
-                        date_to_string(trans.purchase_time),
-                        trans.contract_id,
-                        trans.longcode,
-                        trans.buy_price,
-                        date_to_string(trans.sell_time),
-                        trans.sell_price,
-                        parseFloat(trans.buy_price) - parseFloat(trans.sell_price)
-                    ]
+            // Apply the a search on each column input change
+            table.api().columns().every(function () {
+                var column = this;
+                $('input', this.header()).on('keyup change', function () {
+                    if (column.search() !== this.value)
+                        column.search(this.value) .draw();
                 });
-                table.api().rows().remove();
-                table.api().rows.add(rows);
-                table.api().draw();
-                processing_msg.hide();
-            };
-            
-            liveapi.send({ profit_table: 1, description: 1 })
-            .then(refresh)
-            .catch(function (err) {
-                refresh({});
-                $.growl.error({ message: err.message });
-                console.error(err);
             });
-        }
+            
+            var refreshTable = function (yyyy_mm_dd) {
+                var processing_msg = $('#' + table.attr('id') + '_processing').show();
 
-        refreshTable(new Date().toISOString().slice(0, 10));
-        profitWin.addDateToHeader({
-            title: 'Jump to: ',
-            date: new Date(),
-            changed: refreshTable
+
+                /* refresh the table with result of { profit_table:1 } from WS */
+                var refresh = function (data) {
+                    var transactions = (data.profit_table && data.profit_table.transactions) || [];
+                    console.warn(transactions[0]);
+                    var date_to_string = function (epoch) {
+                        var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
+                        return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' +
+                        d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                    };
+                    var rows = transactions.map(function (trans) {
+                        return [
+                            date_to_string(trans.purchase_time),
+                            trans.contract_id,
+                            trans.longcode,
+                            trans.buy_price,
+                            date_to_string(trans.sell_time),
+                            trans.sell_price,
+                            parseFloat(trans.buy_price) - parseFloat(trans.sell_price)
+                        ]
+                    });
+                    table.api().rows().remove();
+                    table.api().rows.add(rows);
+                    table.api().draw();
+                    processing_msg.hide();
+                };
+                
+                liveapi.send({ profit_table: 1, description: 1 })
+                .then(refresh)
+                .catch(function (err) {
+                    refresh({});
+                    $.growl.error({ message: err.message });
+                    console.error(err);
+                });
+            }
+
+            refreshTable(new Date().toISOString().slice(0, 10));
+            profitWin.addDateToHeader({
+                title: 'Jump to: ',
+                date: new Date(),
+                changed: refreshTable
+            });
+
+            profitWin.dialog('open');
         });
     }
 
