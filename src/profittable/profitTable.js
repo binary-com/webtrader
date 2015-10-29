@@ -2,6 +2,9 @@
  * Created by amin on October 29, 2015.
  */
 define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
+    var profitWin = null,
+        table = null;
+
     function init($menuLink) {
         loadCSS("profittable/profitTable.css");
         $menuLink.click(function () {
@@ -13,7 +16,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         });
     }
 
-    function initTradingWin($html) {
+    function initProfitWin($html) {
         console.warn($html);
         //$html = $($html);
         //var subheader = $html.filter('.trading-times-sub-header');
@@ -103,5 +106,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         //    date: new Date(),
         //    changed: refreshTable
         //});
+    }
+
+    return {
+        init: init
     }
 });
