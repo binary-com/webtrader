@@ -96,6 +96,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     assetIndex.init(elem);
                     elem.click(); 
                 });
+
+            // register async loading of change password dialog
+            var $passMenu = $navMenu.find("a.password");
+            load_ondemand($passMenu, 'click', '', 'password/password', 
+                function (password) {
+                    password.init($passMenu);
+                    $passMenu.click();
+                });
         }
 
         require(["navigation/navigation"], function (navigation) {
