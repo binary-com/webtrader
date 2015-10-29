@@ -45,79 +45,40 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
         });
         
-        var processing_msg = $('#' + table.attr('id') + '_processing').show();
-        liveapi.cached.send({ profit_table: 1 })
-            .then(function (data) {
+        var refreshTable = function (yyyy_mm_dd) {
+            var processing_msg = $('#' + table.attr('id') + '_processing').show();
+
+
+            /* refresh the table with result of { profit_table:1 } from WS */
+            var refresh = function (data) {
                 var transactions = (data.profit_table && data.profit_table.transactions) || [];
                 console.warn(transactions);
-            })
-            .catch(function (err) {
-                console.error(err);
-                $.growl.error({ message: err.message });
-            });
-
-        //var market_names = null,
-        //    submarket_names = null;
-
-        //var refreshTable = function (yyyy_mm_dd) {
-        //    var processing_msg = $('#' + table.attr('id') + '_processing').show();
-
-        //    /* update the table with the given marketname and submarketname */
-        //    var updatetable = function(result, market_name,submarket_name){
-        //        var rows = result.getrowsfor(market_name, submarket_name);
-        //        table.api().rows().remove();
-        //        table.api().rows.add(rows);
-        //        table.api().draw();
-        //    }
-
-        //    /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
-        //    var refresh = function (data) {
-        //        var result = processData(data);
-
-        //        if (market_names == null) {
-        //            var select = $('<select />');
-        //            select.appendTo(subheader);
-        //            market_names = windows.makeSelectmenu(select, {
-        //                list: result.market_names,
-        //                inx: 0,
-        //                changed: function (val) {
-        //                    submarket_names.update_list(result.submarket_names[val]);
-        //                    updateTable(result, market_names.val(), submarket_names.val());
-        //                }
-        //            });
-        //        }
-
-        //        if (submarket_names == null) {
-        //            var sub_select = $('<select />');
-        //            sub_select.appendTo(subheader);
-        //            submarket_names = windows.makeSelectmenu(sub_select, {
-        //                list: result.submarket_names[market_names.val()],
-        //                inx: 0,
-        //                changed: function (val) {
-        //                    updateTable(result, market_names.val(), submarket_names.val());
-        //                }
-        //            });
-        //        }
-
-        //        updateTable(result, market_names.val(), submarket_names.val());
-        //        processing_msg.hide();
-        //    };
+                var rows = transactions.map(function (trans) {
+                    return [
+                        '', '', '', '', '', '', ''
+                    ]
+                });
+                table.api().rows().remove();
+                table.api().rows.add(rows);
+                table.api().draw();
+                processing_msg.hide();
+            };
             
-        //    liveapi.send({ trading_times: yyyy_mm_dd })
-        //    .then(refresh)
-        //    .catch(function (error) {
-        //        refresh({});
-        //        $.growl.error({ message: error.message });
-        //        console.warn(error);
-        //    });
-        //}
+            liveapi.send({ profit_table: 1, description: 1 })
+            .then(refresh)
+            .catch(function (err) {
+                refresh({});
+                $.growl.error({ message: err.message });
+                console.error(err);
+            });
+        }
 
-        //refreshTable(new Date().toISOString().slice(0, 10));
-        //tradingWin.addDateToHeader({
-        //    title: 'Date: ',
-        //    date: new Date(),
-        //    changed: refreshTable
-        //});
+        refreshTable(new Date().toISOString().slice(0, 10));
+        profitWin.addDateToHeader({
+            title: 'Jump to: ',
+            date: new Date(),
+            changed: refreshTable
+        });
     }
 
     return {
