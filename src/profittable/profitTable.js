@@ -75,7 +75,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 /* refresh the table with result of { profit_table:1 } from WS */
                 var refresh = function (data) {
                     var transactions = (data.profit_table && data.profit_table.transactions) || [];
-                    console.warn(transactions[0]);
                     var date_to_string = function (epoch) {
                         var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
                         return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' +
@@ -90,7 +89,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                             date_to_string(trans.sell_time),
                             trans.sell_price,
                             (parseFloat(trans.buy_price) - parseFloat(trans.sell_price)).toFixed(2) /* 2 decimal points */
-                        ]
+                        ];
                     });
                     table.api().rows().remove();
                     table.api().rows.add(rows);
@@ -110,7 +109,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             refreshTable();
             profitWin.addDateToHeader({
                 title: 'Jump to: ',
-                date: new Date(),
+                date: null, /* set date to null */
                 changed: refreshTable
             });
 
