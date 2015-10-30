@@ -11,100 +11,98 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/sar/sar.css'); 
+        loadCSS('charts/indicators/sar/sar.css');
 
-        //TODO
+        $.get("charts/indicators/sar/sar.html" , function ( $html ) {
 
-        // $.get("charts/indicators/sar/sar.html" , function ( $html ) {
+            var defaultStrokeColor = '#cd0a0a';
 
-        //     var defaultStrokeColor = '#cd0a0a';
+            $html = $($html);
+            //$html.hide();
+            $html.appendTo("body");
+            //$html.find('select').selectmenu(); TODO for some reason, this does not work
+            $html.find("input[type='button']").button();
 
-        //     $html = $($html);
-        //     //$html.hide();
-        //     $html.appendTo("body");
-        //     //$html.find('select').selectmenu(); TODO for some reason, this does not work
-        //     $html.find("input[type='button']").button();
+            $html.find("#sar_stroke").colorpicker({
+                part:	{
+                    map:		{ size: 128 },
+                    bar:		{ size: 128 }
+                },
+                select:			function(event, color) {
+                    $("#sar_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                },
+                ok:             			function(event, color) {
+                    $("#sar_stroke").css({
+                        background: '#' + color.formatted
+                    }).val('');
+                    defaultStrokeColor = '#' + color.formatted;
+                }
+            });
 
-        //     $html.find("#sar_stroke").colorpicker({
-        //         part:	{
-        //             map:		{ size: 128 },
-        //             bar:		{ size: 128 }
-        //         },
-        //         select:			function(event, color) {
-        //             $("#sar_stroke").css({
-        //                 background: '#' + color.formatted
-        //             }).val('');
-        //             defaultStrokeColor = '#' + color.formatted;
-        //         },
-        //         ok:             			function(event, color) {
-        //             $("#sar_stroke").css({
-        //                 background: '#' + color.formatted
-        //             }).val('');
-        //             defaultStrokeColor = '#' + color.formatted;
-        //         }
-        //     });
+            $html.dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: true,
+                width: 280,
+                my: 'center',
+                at: 'center',
+                of: window,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            //console.log('Ok button is clicked!');
+                            require(["validation/validation"], function(validation) {
 
-        //     $html.dialog({
-        //         autoOpen: false,
-        //         resizable: false,
-        //         modal: true,
-        //         width: 280,
-        //         my: 'center',
-        //         at: 'center',
-        //         of: window,
-        //         buttons: [
-        //             {
-        //                 text: "Ok",
-        //                 click: function() {
-        //                     //console.log('Ok button is clicked!');
-        //                     require(["validation/validation"], function(validation) {
+                                var isValid = true;
+                                $('.sar_input_width_for_period').each(function()
+                                {
+                                    if (!$.isNumeric($(this).val())) {
+                                        require(["jquery", "jquery-growl"], function($) {
+                                            $.growl.error({ message: "Only numeric value allowed!" });
+                                        });
+                                        isValid = false;
+                                        return isValid;
+                                    }
+                                });
+                                if (!isValid) return;
 
-        //                         var isValid = true;
-        //                         $('.sar_input_width_for_period').each(function()
-        //                         {
-        //                             if (!$.isNumeric($(this).val())) {
-        //                                 require(["jquery", "jquery-growl"], function($) {
-        //                                     $.growl.error({ message: "Only numeric value allowed!" });
-        //                                 });
-        //                                 isValid = false;
-        //                                 return isValid;
-        //                             }
-        //                         });
-        //                         if (!isValid) return;
+                                require(['charts/indicators/highcharts_custom/sar'], function ( sar ) {
+                                    sar.init();
+                                    var options = {
+                                        acceleration : parseInt($html.find("#sar_acceleration").val()),
+                                        maximum : parseInt($html.find("#sar_maximum").val()),
+                                        stroke : defaultStrokeColor,
+                                        strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
+                                        dashStyle : 'Dot'
+                                    }
+                                    //Add sar for the main series TODO
+                                    $($(".sar").data('refererChartID')).highcharts().series[0].addSAR(options);
+                                });
 
-        //                         require(['charts/indicators/highcharts_custom/sar'], function ( sar ) {
-        //                             sar.init();
-        //                             var options = {
-        //                                 acceleration : parseInt($html.find("#sar_acceleration").val()),
-        //                                 maximum : parseInt($html.find("#sar_maximum").val()),
-        //                                 stroke : defaultStrokeColor,
-        //                                 strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
-        //                                 dashStyle : 'Dot'
-        //                             }
-        //                             //Add sar for the main series TODO
-        //                             $($(".sar").data('refererChartID')).highcharts().series[0].addSAR(options);
-        //                         });
+                                closeDialog.call($html);
 
-        //                         closeDialog.call($html);
+                            });
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function() {
+                            closeDialog.call(this);
+                        }
+                    }
+                ]
+            });
 
-        //                     });
-        //                 }
-        //             },
-        //             {
-        //                 text: "Cancel",
-        //                 click: function() {
-        //                     closeDialog.call(this);
-        //                 }
-        //             }
-        //         ]
-        //     });
+            if (typeof _callback == "function")
+            {
+                _callback( containerIDWithHash );
+            }
 
-        //     if (typeof _callback == "function")
-        //     {
-        //         _callback( containerIDWithHash );
-        //     }
-
-        // });
+        });
 
     }
 

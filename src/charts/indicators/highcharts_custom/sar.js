@@ -37,7 +37,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     {
 
                         //Calculate SAR data
-                        var sarData = [], ep = [], sar = [], ep_sar[], af = [], af_star = [], td = [];
+                        var sarData = [], ep = [], sar = [], ep_sar = [], af = [], af_star = [], td = [];
                         for (var index = 0; index < data.length; index++)
                         {
 
