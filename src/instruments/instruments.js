@@ -2,8 +2,8 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navigation", "common/menu", "jquery-growl","common/util"],
-    function ($, $ui, liveapi, navigation, menu) {
+define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "jquery-growl","common/util"],
+    function ($, $ui, liveapi, menu) {
 
     "use strict";
 
@@ -54,103 +54,70 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function refreshInstrumentMenu( rootElement, data ) {
+    function onMenuItemClick(li) {
+        var update = function () {
+            $("#instrumentsDialog").dialog('option', 'title', li.find('a').text())
+                                        .data("symbol", li.data('symbol'))
+                                        .data("delay_amount", li.data('delay_amount'))
+                                        .dialog("open");
+            $("#instrumentSelectionMenuDIV").hide();
+        };
 
-        $.each(data, function(key, value) {
-            var isDropdownMenu = value.submarkets || value.instruments;
-            var caretHtml = "<span class='nav-submenu-caret'></span>";
-            var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
-            var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
-            if(isDropdownMenu) {
-                $menuLink.addClass("nav-dropdown-toggle");
-            }
-
-            var newLI = $("<li>").append($menuLink)
-                                .data("symbol", value.symbol)//TODO This is invalid for root level object
-                                .data("delay_amount", value.delay_amount)//TODO This is invalid for root level object
-                                .appendTo( rootElement );
-
-            if (isDropdownMenu) {
-                var newUL = $("<ul>");
-                newUL.appendTo(newLI);
-                refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
-            } else {
-                $menuLink.click(function() {
-                    if ($("#instrumentsDialog").length == 0) {
-                        $.get("instruments/instruments.html", function ($html) {
-                            $($html).css("display", "none").appendTo("body");
-                            $("#standardPeriodsButtonContainer").find("button")
-                                .click(function() {
-                                    //console.log('Standard button is clicked');
-                                    openNewChart($(this).attr('id'));
-                                })
-                                .button();
+        if (!document.getElementById("#instrumentsDialog"))
+            $.get("instruments/instruments.html", function ($html) {
+                $($html).css("display", "none").appendTo("body");
+                $("#standardPeriodsButtonContainer").find("button")
+                    .click(function() {
+                        openNewChart($(this).attr('id'));
+                    })
+                    .button();
 
 
-                            //attach unit change listener
-                            $("#units").change(function () {
-                                if ($(this).val() == 't')
-                                {
-                                    $("#timePeriod").val('1').attr('disabled', 'disabled')
-                                        .attr("min", 1).attr("max", 1);
-                                }
-                                else
-                                {
-                                    $("#timePeriod").removeAttr('disabled');
-                                    var val = $("#units").val();
-                                    var max = { m: 59, h: 23, d: 3 }[val] || 120; /* restric range for minute,hour,day*/
-                                    $("#timePeriod").attr("max", max);
-                                }
-                            });
-                            $("#units").trigger("change");
-
-                            $( "#instrumentsDialog" ).dialog({
-                                autoOpen: false,
-                                resizable: false,
-                                width: 260,
-                                my: 'center',
-                                at: 'center',
-                                of: window,
-                                buttons: [
-                                    {
-                                        text: "Ok",
-                                        click: function() {
-                                            //console.log('Ok button is clicked!');
-                                            openNewChart($("#timePeriod").val() + $("#units").val());
-                                        }
-                                    },
-                                    {
-                                        text: "Cancel",
-                                        click: function() {
-                                            closeDialog.call(this);
-                                        }
-                                    }
-                                ]
-                            });
-
-                            $("#instrumentsDialog").dialog('option', 'title', newLI.text())
-                                                        .data("symbol", newLI.data("symbol"))
-                                                        .data("delay_amount", newLI.data("delay_amount"));
-                            $( "#instrumentsDialog" ).dialog( "open" );
-                            $("#instrumentSelectionMenuDIV").hide();
-
-                        });
-
-                    } else {
-                        $("#instrumentsDialog").dialog('option', 'title', $(this).text())
-                                        .data("symbol", $(this).data("symbol"))
-                                        .data("delay_amount", $(this).data("delay_amount"));
-                        $( "#instrumentsDialog" ).dialog( "open" );
-                        $("#instrumentSelectionMenuDIV").hide();
+                //attach unit change listener
+                $("#units").change(function () {
+                    if ($(this).val() == 't') {
+                        $("#timePeriod").val('1').attr('disabled', 'disabled')
+                            .attr("min", 1).attr("max", 1);
                     }
+                    else {
+                        $("#timePeriod").removeAttr('disabled');
+                        var val = $("#units").val();
+                        var max = { m: 59, h: 23, d: 3 }[val] || 120; /* restric range for minute,hour,day*/
+                        $("#timePeriod").attr("max", max);
+                    }
+                });
+                $("#units").trigger("change");
 
-                    $(document).click();
-
+                $("#instrumentsDialog").dialog({
+                    autoOpen: false,
+                    resizable: false,
+                    width: 260,
+                    my: 'center',
+                    at: 'center',
+                    of: window,
+                    buttons: [
+                        {
+                            text: "Ok",
+                            click: function () {
+                                //console.log('Ok button is clicked!');
+                                openNewChart($("#timePeriod").val() + $("#units").val());
+                            }
+                        },
+                        {
+                            text: "Cancel",
+                            click: function () {
+                                closeDialog.call(this);
+                            }
+                        }
+                    ]
                 });
 
-            }
-        });
+                update();
+            });
+        else
+            update();
 
+        $(document).click();
     }
 
     var markets = [];
@@ -163,24 +130,14 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (data) {
-                        if (!$.isEmptyObject(data)) {
+                            var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
 
                             markets = menu.extractMenu(data);
                             markets = menu.sortMenu(markets);
 
-                            var instrumentsMenu = $("#nav-menu").find(".instruments");
-                            var rootUL = $("<ul>");
-                            rootUL.appendTo(instrumentsMenu);
-                            refreshInstrumentMenu(rootUL, markets);
-
-                            navigation.updateDropdownToggles();
-
-                            if (_callback) {
-                                _callback(markets);
-                            }
-
+                            menu.refreshMenu(rootUL,markets,onMenuItemClick);
                         }
-                    }).catch(console.error.bind(console));
+                    ).catch(console.error.bind(console));
             }
 
         },

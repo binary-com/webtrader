@@ -2,7 +2,8 @@
  * Created by amin on October 30, 2015.
  */
 
-define(['jquery', 'common/util'], function ($) {
+define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigation) {
+    'use strict';
 
     function sortMarkets(data) {
         if($.isArray(data)) {
@@ -19,6 +20,39 @@ define(['jquery', 'common/util'], function ($) {
             });
         }
         return data;
+    }
+
+    /* recursively creates menu into root element, set on_click to register menu item clicks */
+    function refreshMenu( root, data , on_click) {
+
+        data.forEach(function (value) {
+            var isDropdownMenu = value.submarkets || value.instruments;
+            var caretHtml = "<span class='nav-submenu-caret'></span>";
+            var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
+            var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
+            if(isDropdownMenu) {
+                $menuLink.addClass("nav-dropdown-toggle");
+            }
+
+            var newLI = $("<li>").append($menuLink)
+                                .data("symbol", value.symbol)//TODO This is invalid for root level object
+                                .data("delay_amount", value.delay_amount)//TODO This is invalid for root level object
+                                .appendTo( root);
+
+            if (isDropdownMenu) {
+                var newUL = $("<ul>");
+                newUL.appendTo(newLI);
+                refreshMenu( newUL, value.submarkets || value.instruments, on_click );
+            }
+            else if(on_click )
+                $menuLink.click(function () {
+                    /* pass the <li> not the <a> tag */
+                    var li = $(this).parent();
+                    on_click(li);
+                });
+        });
+
+        navigation.updateDropdownToggles();
     }
 
     return {
@@ -48,6 +82,7 @@ define(['jquery', 'common/util'], function ($) {
             return markets;
         },
 
-        sortMenu: sortMarkets
+        sortMenu: sortMarkets,
+        refreshMenu: refreshMenu
     }
 });
