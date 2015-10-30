@@ -2,26 +2,10 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navigation", "jquery-growl","common/util"],
-    function ($, $ui, liveapi, navigation) {
+define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navigation", "common/menu", "jquery-growl","common/util"],
+    function ($, $ui, liveapi, navigation, menu) {
 
     "use strict";
-
-    function sortMarkets(data) {
-        if($.isArray(data)) {
-            data.sort(sortAlphaNum('display_name'));
-
-            // iterate array items.
-            $.each(data, function (i, item) {
-                // iterame item properties.
-                $.each(item, function (i, prop) {
-                    if($.isArray(prop)) {
-                        sortMarkets(prop);
-                    }
-                });
-            });
-        }
-    }
 
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
 
@@ -171,33 +155,6 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
 
     var markets = [];
 
-    /* amin: moved from symbol_handler.js */
-    function extractInstrumentMarkets(data) {
-        markets = data.trading_times.markets.map(function (m) {
-            var market = {
-                name: m.name,
-                display_name: m.name
-            };
-            market.submarkets = m.submarkets.map(function (sm) {
-                var submarket = {
-                    name: sm.name,
-                    display_name: sm.name
-                };
-                submarket.instruments = sm.symbols.map(function (sym) {
-                    return {
-                        symbol: sym.symbol,
-                        display_name: sym.name,
-                        delay_amount: sym.delay_amount
-                    };
-                });
-                return submarket;
-            });
-            return market;
-        });
-
-        sortMarkets(markets);
-    }
-
     return {
         init: function( _callback ) {
             if ($.isEmptyObject(markets)) {
@@ -207,7 +164,9 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navig
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (data) {
                         if (!$.isEmptyObject(data)) {
-                            extractInstrumentMarkets(data);
+
+                            markets = menu.extractMenu(data);
+                            markets = menu.sortMenu(markets);
 
                             var instrumentsMenu = $("#nav-menu").find(".instruments");
                             var rootUL = $("<ul>");
