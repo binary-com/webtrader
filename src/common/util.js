@@ -81,6 +81,10 @@ function getParameterByName(name) {
   return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+/**
+    This method can be used to retrieve any property of an object by its name. Does not matter how deep
+    the property might be in the passed object. This is a recurrsive function to find the target property
+**/
 function getObjects(obj, key, val) {
     var objects = [];
     for (var i in obj) {
@@ -93,3 +97,84 @@ function getObjects(obj, key, val) {
     }
     return objects;
 }
+
+/**
+    Currently this is being used to validate the parameters passed by affilates/external applications
+    It will validate instrument and timePeriod passed in URL
+**/
+function validateParameters(instrumentObject) {
+      var instrumentCode_param = getParameterByName('instrument');
+      var timePeriod_param = getParameterByName('timePeriod');
+
+      if (!instrumentCode_param || !timePeriod_param) return false;
+
+      var timePeriod_Obj = null;
+      try {
+        timePeriod_Obj = convertToTimeperiodObject(timePeriod_param);
+      } catch(e) {}
+      if (!timePeriod_Obj) return false;
+
+      var isValidTickTF = timePeriod_Obj.suffix() == 't' && timePeriod_Obj.intValue() == 1;
+      var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 59;
+      var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 23;
+      var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 3;
+      return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
+};
+
+// adds onload support for asynchronous stylesheets loaded with loadCSS.
+function onloadCSS( ss, callback ) {
+    ss.onload = function() {
+        ss.onload = null;
+        if( callback ) {
+            callback.call( ss );
+        }
+    };
+
+    // This code is for browsers that don’t support onload, any browser that
+    // supports onload should use that instead.
+    // No support for onload:
+    //  * Android 4.3 (Samsung Galaxy S4, Browserstack)
+    //  * Android 4.2 Browser (Samsung Galaxy SIII Mini GT-I8200L)
+    //  * Android 2.3 (Pantech Burst P9070)
+
+    // Weak inference targets Android < 4.4
+    if( "isApplicationInstalled" in navigator && "onloadcssdefined" in ss ) {
+        ss.onloadcssdefined( callback );
+    }
+}
+
+/* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
+function load_ondemand(element, event_name,msg, module_name, callback) {
+    element.one(event_name, function () {
+        require([module_name], function (module) {
+            require(["jquery", "jquery-growl"], function($) {
+                $.growl.notice({ message: msg });
+            });
+            
+            callback && callback(module);
+        });
+    });
+}
+
+function resizeElement(selector) {
+  $(selector).height($(window).height() - 10).width($(window).width() - 10);
+};
+
+function sortAlphaNum(property) {
+    'use strict';
+    var reA = /[^a-zA-Z]/g;
+    var reN = /[^0-9]/g;
+
+    return function(a, b) {
+        var aA = a[property].replace(reA, "");
+        var bA = b[property].replace(reA, "");
+        if(aA === bA) {
+            var aN = parseInt(a[property].replace(reN, ""), 10);
+            var bN = parseInt(b[property].replace(reN, ""), 10);
+            return aN === bN ? 0 : aN > bN ? 1 : -1;
+        } else {
+            return aA > bA ? 1 : -1;
+        }
+    };
+}
+

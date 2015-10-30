@@ -6,7 +6,8 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>Demo for affiliates to access Binary.com charts in IFRAME</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/reconnectingWebsocket/reconnecting-websocket.min.js"></script>
 </head>
 <body>
 
@@ -39,32 +40,34 @@
     <script charset="utf-8">
         $(document).ready(function() {
 
-          /*
-            Building the instrument drop down - A recurrsion function
-          */
-          function addInstrument(instrumentJSON) {
-            $.each(instrumentJSON, function(key, value) {
-                if (value.submarkets || value.instruments) {
-                  addInstrument( value.submarkets || value.instruments );
-                } else {
-                  $("<option>").append(value.display_name)
-                              .attr('value', value.symbol)
-                              .appendTo( $('#instruments') );
+          var ws = new ReconnectingWebSocket("wss://www.binary.com/websockets/v3");
+          ws.debug = false;
+          ws.timeoutInterval = 5400;
+          ws.onopen = function(event) {
+            var now = new Date();
+            ws.send(JSON.stringify({"trading_times": now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate()}));
+          };
+          ws.onmessage = function(event) {
+            var data = JSON.parse( event.data );
+            switch( data.msg_type ) {
+              case "trading_times":
+                for (var marketIndex in data.trading_times.markets) {
+                  var marketFromResponse = data.trading_times.markets[marketIndex];
+                  for (var submarketIndxx in marketFromResponse.submarkets) {
+                    var submarket = marketFromResponse.submarkets[submarketIndxx];
+                    for (var eachSymbolIndx in submarket.symbols) {
+                      var eachSymbol = submarket.symbols[eachSymbolIndx];
+                      $("<option>").append(eachSymbol.name)
+                                   .attr('value', eachSymbol.symbol)
+                                   .appendTo( $('#instruments') );
+                    }
+                  }
                 }
-              });
+                $('#instruments').val('R_25').change();
+                ws.close();
+              break;
+            }
           }
-
-          /*
-            Retrieving instrument list
-          */
-          $.get("https://chart.binary.com/d/backend/markets.cgi", function (_instrumentJSON) {
-              if (!$.isEmptyObject(_instrumentJSON)) {
-                addInstrument(_instrumentJSON);
-                $("#instruments").change();
-              }
-            }, 'json').error(function () {
-              alert("Error getting market information!");
-            });
 
           /*
             Attaching change event to the drop downs
@@ -73,8 +76,7 @@
             var instrumentCode = $("#instruments").val();
             var timePeriod = $("#timePeriod").val();
             if (instrumentCode && timePeriod) {
-              $("#chartFrame").attr('src', '/index.html?affiliates=true&instrument='
-                            + instrumentCode + '&timePeriod=' + timePeriod);
+              $("#chartFrame").attr('src', '/index.html?affiliates=true&instrument=' + instrumentCode + '&timePeriod=' + timePeriod);
             }
           });
 

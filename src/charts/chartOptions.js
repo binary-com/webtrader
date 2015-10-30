@@ -23,6 +23,7 @@ define(["charts/chartWindow", "common/util"], function() {
 
         init : function (newTabId, timePeriod, chartType) {
 
+            loadCSS("charts/chartOptions.css");
             $.get("charts/chartOptions.html", function($html) {
                 //attach different button actions
                 $html = $($html);
@@ -47,6 +48,9 @@ define(["charts/chartWindow", "common/util"], function() {
                     $html.find(".candlestick, .ohlc").addClass('ui-state-disabled');
                 }
 
+                // Add a tick mark to initial chart type
+                $html.find('.chartType li.' + chartType).find('span:first').addClass('ui-icon ui-icon-check');
+
                 $html.find('.chartType li').click(function () {
 
                         //If disabled, ignore this click
@@ -54,6 +58,10 @@ define(["charts/chartWindow", "common/util"], function() {
                         {
                             return;
                         }
+
+                        // Remove tick mark from other types and add it to this one.
+                        $html.find('.chartType li span').removeClass('ui-icon ui-icon-check');
+                        $(this).find('span:first').addClass('ui-icon ui-icon-check');
 
                         var type = $(this).attr("class").split(" ")[0].replace(".", "").trim();
                         $("#" + newTabId + "_chart").data('type', type);

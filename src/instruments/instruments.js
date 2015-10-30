@@ -2,71 +2,65 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, symbol_handler) {
+define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/navigation", "jquery-growl","common/util"],
+    function ($, $ui, liveapi, navigation) {
 
     "use strict";
 
-    function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
+    function sortMarkets(data) {
+        if($.isArray(data)) {
+            data.sort(sortAlphaNum('display_name'));
 
-        require(["validation/validation"], function(validation) {
-
-            require(["charts/chartWindow"], function (chartWindow) {
-
-                if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows()))
-                {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.error({ message: "No more charts allowed!" });
-                    });
-                    return;
-                }
-
-                //validate the selection
-                var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
-                var internalSymbol = $("#instrumentsDialog").data("symbol");
-                var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
-                require(["common/util"], function() {
-                    var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
-                    if (timeperiodObject) {
-
-                        if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max"))))
-                        {
-
-                            if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
-
-                                chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
-                                            isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
-                                closeDialog.call($("#instrumentsDialog"));
-                            }
-                            else
-                            {
-                                require(["jquery", "jquery-growl"], function($) {
-                                    $("#timePeriod").addClass('ui-state-error');
-                                    $.growl.error({ message: "Charts of less than "
-                                            //Convert to human readable (in minutes) format
-                                        + convertToTimeperiodObject(delayAmount + 'm').humanReadableString()
-                                        + " are not available for the " + displaySymbol + "." });
-                                });
-                            }
-                        }
-                        else
-                        {
-                            require(["jquery", "jquery-growl"], function($) {
-                                $("#timePeriod").addClass('ui-state-error');
-                                $.growl.error({ message: "Only numbers between " + $("#timePeriod").attr("min") + " to " + $("#timePeriod").attr("max") + " is allowed for " + $("#units option:selected").text() + "!" });
-                            });
-                        }
-
+            // iterate array items.
+            $.each(data, function (i, item) {
+                // iterame item properties.
+                $.each(item, function (i, prop) {
+                    if($.isArray(prop)) {
+                        sortMarkets(prop);
                     }
-                    else
-                    {
-                        require(["jquery", "jquery-growl"], function($) {
-                            $("#timePeriod").addClass('ui-state-error');
-                            $.growl.error({ message: "Only numbers between 1 to 100 is allowed!" });
-                        });
-                    }
-
                 });
             });
+        }
+    }
+
+    function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
+
+        require(["validation/validation","charts/chartWindow"], function(validation,chartWindow) {
+            if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows())) {
+                $.growl.error({ message: "No more charts allowed!" });
+                return;
+            }
+
+            //validate the selection
+            var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
+            var internalSymbol = $("#instrumentsDialog").data("symbol");
+            var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
+
+            var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
+            var error_msg = null;
+            if (timeperiodObject) {
+                if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max")))) {
+                    if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
+
+                        chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
+                                    isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
+                        closeDialog.call($("#instrumentsDialog"));
+                    }
+                    else
+                        error_msg = "Charts of less than "
+                                   + convertToTimeperiodObject(delayAmount + 'm').humanReadableString() //Convert to human readable (in minutes) format
+                                   + " are not available for the " + displaySymbol + ".";
+                }
+                else
+                    error_msg = "Only numbers between " + $("#timePeriod").attr("min") + " to " + $("#timePeriod").attr("max") + " is allowed for " + $("#units option:selected").text() + "!";
+            }
+            else
+                error_msg = "Only numbers between 1 to 100 is allowed!";
+
+            if (error_msg) {
+                $("#timePeriod").addClass('ui-state-error');
+                $.growl.error({ message: "Only numbers between 1 to 100 is allowed!" });
+            }
         });
 
     }
@@ -76,28 +70,29 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function _refreshInstrumentMenu( rootElement, data ) {
+    function refreshInstrumentMenu( rootElement, data ) {
 
         $.each(data, function(key, value) {
-            var newLI = $("<li>").append(value.display_name)
-                                .data("symbol", value.symbol)
-                                .data("delay_amount", value.delay_amount)
+            var isDropdownMenu = value.submarkets || value.instruments;
+            var caretHtml = "<span class='nav-submenu-caret'></span>";
+            var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
+            var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
+            if(isDropdownMenu) {
+                $menuLink.addClass("nav-dropdown-toggle");
+            }
+
+            var newLI = $("<li>").append($menuLink)
+                                .data("symbol", value.symbol)//TODO This is invalid for root level object
+                                .data("delay_amount", value.delay_amount)//TODO This is invalid for root level object
                                 .appendTo( rootElement );
 
-            if (value.submarkets || value.instruments) {
-                newLI.click(function(e) {
-                  e.preventDefault();
-                  return false;
-                });
-                var newUL = $("<ul>").addClass('ui-corner-all');
+            if (isDropdownMenu) {
+                var newUL = $("<ul>");
                 newUL.appendTo(newLI);
-                _refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
+                refreshInstrumentMenu( newUL, value.submarkets || value.instruments );
             } else {
-
-                newLI.click(function() {
-
+                $menuLink.click(function() {
                     if ($("#instrumentsDialog").length == 0) {
-
                         $.get("instruments/instruments.html", function ($html) {
                             $($html).css("display", "none").appendTo("body");
                             $("#standardPeriodsButtonContainer").find("button")
@@ -118,20 +113,12 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
                                 else
                                 {
                                     $("#timePeriod").removeAttr('disabled');
-                                    if ($("#units").val() == 'm')
-                                    {
-                                        $("#timePeriod").attr("max", 50);
-                                    }
-                                    else if ($("#units").val() == 'h')
-                                    {
-                                        $("#timePeriod").attr("max", 23);
-                                    }
-                                    else
-                                    {
-                                        $("#timePeriod").attr("max", 120);
-                                    }
+                                    var val = $("#units").val();
+                                    var max = { m: 59, h: 23, d: 3 }[val] || 120; /* restric range for minute,hour,day*/
+                                    $("#timePeriod").attr("max", max);
                                 }
                             });
+                            $("#units").trigger("change");
 
                             $( "#instrumentsDialog" ).dialog({
                                 autoOpen: false,
@@ -184,37 +171,57 @@ define(["jquery", "jquery-ui", 'websockets/symbol_handler'], function($, $ui, sy
 
     var markets = [];
 
+    /* amin: moved from symbol_handler.js */
+    function extractInstrumentMarkets(data) {
+        markets = data.trading_times.markets.map(function (m) {
+            var market = {
+                name: m.name,
+                display_name: m.name
+            };
+            market.submarkets = m.submarkets.map(function (sm) {
+                var submarket = {
+                    name: sm.name,
+                    display_name: sm.name
+                };
+                submarket.instruments = sm.symbols.map(function (sym) {
+                    return {
+                        symbol: sym.symbol,
+                        display_name: sym.name,
+                        delay_amount: sym.delay_amount
+                    };
+                });
+                return submarket;
+            });
+            return market;
+        });
+
+        sortMarkets(markets);
+    }
+
     return {
-
-        init: function( ) {
-
+        init: function( _callback ) {
             if ($.isEmptyObject(markets)) {
                 loadCSS("instruments/instruments.css");
-                symbol_handler.fetchMarkets(function (_instrumentJSON) {
-                    if (!$.isEmptyObject(_instrumentJSON)) {
+                /* cache the result of trading_times call, because assetIndex needs the same data */
+                liveapi
+                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                    .then(function (data) {
+                        if (!$.isEmptyObject(data)) {
+                            extractInstrumentMarkets(data);
 
-                        markets = _instrumentJSON;
+                            var instrumentsMenu = $("#nav-menu").find(".instruments");
+                            var rootUL = $("<ul>");
+                            rootUL.appendTo(instrumentsMenu);
+                            refreshInstrumentMenu(rootUL, markets);
 
-                        //Enable the instruments menu
-                        var instrumentsMenu = $(".mainContainer").find('.instruments');
-                        instrumentsMenu.button("enable").button("refresh").button("widget").click(function(e) {
-                          var menu = $(this).closest('div').find("ul:first").menu();
-                          if (menu.is(":visible")) {
-                            menu.hide();
-                          } else {
-                            menu.show();
-                          }
-                        }).focusout(function() {
-                          $(this).closest('div').find('ul').menu().hide();
-                        });
+                            navigation.updateDropdownToggles();
 
-                        var rootUL = $("<ul>").addClass('ui-corner-all');
-                        rootUL.appendTo(instrumentsMenu);
-                        _refreshInstrumentMenu(rootUL, _instrumentJSON);
-                        rootUL.menu();
+                            if (_callback) {
+                                _callback(markets);
+                            }
 
-                    }
-                });
+                        }
+                    }).catch(console.error.bind(console));
             }
 
         },

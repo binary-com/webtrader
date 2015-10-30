@@ -37,11 +37,11 @@
 .cmn-toggle-switch span {
     display: block;
     position: absolute;
-    top: 5px;
-    left: 10px;
+    top: 7px;
+    left: 12px;
     right: 10px;
-    height: 6px;
-    background: navy;
+    height: 4px;
+    background: #273051;
     border-radius: 5px;
 }
 
@@ -51,18 +51,18 @@
     display: block;
     left: 0;
     width: 100%;
-    height: 6px;
-    background-color: navy;
+    height: 4px;
+    background-color: #273051;
     content: "";
     border-radius: 5px;
 }
 
 .cmn-toggle-switch span::before {
-    top: 20px;
+    top: 16px;
 }
 
 .cmn-toggle-switch span::after {
-    bottom: -10px;
+    bottom: -8px;
 }
 
 /**
@@ -81,14 +81,14 @@
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-color: navy;
+    background-color: #273051;
     top: 15px;
     left: 30px;
 }
 
 .cmn-toggle-switch__rot.active span::before,
 .cmn-toggle-switch__rot.active span::after {
-    background-color: navy;
+    background-color: #273051;
 }
 
 /**

@@ -2,8 +2,8 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "highcharts-exporting"],
-  function ( $, requireJSESHInstance ) {
+define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
+  function ( $,chartingRequestMap, liveapi, ohlc_handler,currentPrice ) {
 
     "use strict";
 
@@ -17,6 +17,27 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
 
     });
 
+    var barsTable = chartingRequestMap.barsTable;
+    function destroy(containerIDWithHash, timeperiod, instrumentCode) {
+        if (!timeperiod || !instrumentCode) return;
+
+        var instrumentCdAndTp = (instrumentCode + timeperiod).toUpperCase();
+        if (chartingRequestMap[instrumentCdAndTp]) {
+            for (var index in chartingRequestMap[instrumentCdAndTp].chartIDs) {
+                var chartID = chartingRequestMap[instrumentCdAndTp].chartIDs[index];
+                if (chartID.containerIDWithHash == containerIDWithHash) {
+                    chartingRequestMap[instrumentCdAndTp].chartIDs.splice(index, 1);
+                    break;
+                }
+            }
+            if ($.isEmptyObject(chartingRequestMap[instrumentCdAndTp].chartIDs)) {
+                liveapi.send({ "forget": chartingRequestMap[instrumentCdAndTp].tickStreamingID });
+                $(document).stopTime(chartingRequestMap[instrumentCdAndTp].timerHandler);
+                delete chartingRequestMap[instrumentCdAndTp];
+            }
+        }
+    }
+
     return {
 
         /**
@@ -26,8 +47,9 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
          * @param instrumentName
          * @param timeperiod
          * @param type
+         * @param onload // optional onload callback
          */
-        drawChart: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare) {
+        drawChart: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare, onload) {
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
@@ -51,7 +73,12 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
                         load: function () {
                             this.showLoading();
                             console.log('Calling render chart for the first time for the instrument : ', instrumentCode);
-                            requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare );
+                            currentPrice.init();
+                            liveapi.execute(function () {
+                                ohlc_handler.retrieveChartDataAndRender(timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare);
+                            });
+                            if (onload)
+                                onload();
                         }
                     }
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
@@ -131,9 +158,7 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
 
         },
 
-        destroy : function( containerIDWithHash, timeperiod, instrumentCode ) {
-            requireJSESHInstance.close( containerIDWithHash, timeperiod, instrumentCode );
-        },
+        destroy : destroy,
 
         triggerReflow : function( containerIDWithHash ) {
             if ($(containerIDWithHash).highcharts())
@@ -232,8 +257,10 @@ define(["jquery", "websockets/eventSourceHandler", "common/util", "highstock", "
                     }
                 }
 
-                requireJSESHInstance.retrieveChartDataAndRender( containerIDWithHash, overlayInsCode, overlayInsName, mainSeries_timeperiod, mainSeries_type, 'percent' );
-
+                currentPrice.init();
+                liveapi.execute(function(){
+                    ohlc_handler.retrieveChartDataAndRender(mainSeries_timeperiod, overlayInsName, containerIDWithHash, mainSeries_type, overlayInsName, 'percent' );
+                });
             }
         }
 

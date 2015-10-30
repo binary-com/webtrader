@@ -5,19 +5,27 @@
 requirejs.config({
     baseUrl: ".",
     paths: {
-        'jquery': "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min",
-        'highstock': "//code.highcharts.com/stock/highstock",
-        'highcharts-exporting': '//code.highcharts.com/stock/modules/exporting',
-        'jquery-ui': "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min",
-        'jquery-growl': "lib/jquery/jquery-growl/jquery.growl",
-        'highcharts-theme': 'lib/highcharts/themes/sand-signika',
-        'jquery-timer': "lib/jquery/jquery.timers",
-        'datatables': "//cdn.datatables.net/1.10.5/js/jquery.dataTables.min",
-        'color-picker': "lib/jquery/jquery-ui/colorpicker/jquery.colorpicker",
+        'jquery': "lib/jquery/dist/jquery.min",
+        'jquery-ui': "lib/jquery-ui/jquery-ui.min",
+        'highstock': "lib/highstock/highstock",
+        'highcharts-exporting': 'lib/highstock/modules/exporting',
+        'highcharts-theme': 'lib/highstock/themes/sand-signika',
+        'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
+        'jquery-growl': "lib/growl/javascripts/jquery.growl",
+        'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
+        'modernizr': 'lib/modernizr/modernizr',
+        'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
+        'lokijs': 'lib/lokijs/build/lokijs.min',
+        'jquery-timer': "lib/jquery.timers/jquery.timers.min",
+        'color-picker': "lib/colorpicker/jquery.colorpicker",
+        'datatables': "lib/datatables/media/js/jquery.dataTables.min",
+        //TODO find out whats the advantage of using datatables-jquery-ui
+        'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
-        'modernizr': '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min',
-        'reconnecting-websocket': '//cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min',
-        'lokijs': 'lib/lokijs.min'
+        'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
+        'es6-promise':'lib/es6-promise/promise.min',
+        'js-cookie':'lib/js-cookie/src/js.cookie',
+        'loadCSS': 'lib/loadcss/loadCSS'
     },
     "shim": {
         "jquery-ui": {
@@ -47,7 +55,7 @@ requirejs.config({
     }
 });
 
-require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], function( $ ) {
+require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
 
     "use strict";
 
@@ -57,90 +65,88 @@ require(["jquery", "jquery-ui", "modernizr", "common/loadCSS", "common/util"], f
       return;
     }
 
-    resizeBackgroundWatermark();
-    //Load Jquery UI CSS
-    loadCSS("//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css");
-
-    //Load our main CSS
+    // load jq-ui & growl stylesheets.
+    loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
+    loadCSS('lib/growl/stylesheets/jquery.growl.css');
+    // load main stylesheet.
     loadCSS("main.css");
-    loadCSS("lib/hamburger.css");
 
-    function resizeBackgroundWatermark() {
-      $(".binary-watermark-logo").height($(window).height() - 20)
-                                 .width($(window).width() - 10);
-    };
+    function handle_affiliate_route() {
+        require(['affiliates/affiliates'], function(affiliates) {
+            affiliates.init();
+        });
+    }
 
-    function resetTopMenu() {
-      var show = true;
-      if(isSmallView()) {
-        show = false;
-      }
-      $('.topContainer .topMenu button' ).each(function() {
-        //This cloning step is required for proper functioning of clicks
-        var ul = $(this).find("ul:first").clone(true);
-        $(this).find("ul:first").remove();
-        //When we set the text, Jquery UI is removing any child of this button. We have to restore this
-        $(this).button("option", "text", show).button("widget").append(ul);
-      });
-    };
+    function handle_normal_route() {
+        /* this callback is executed right after the navigation module
+           has been loaded & initialized. register your menu click handlers here */
+        var registerMenusCallback = function ($navMenu) {
 
-    //All dependencies loaded
-    $(document).ready(function () {
-
-        $(".mainContainer").load("mainContent.html", function() {
-
-            $('.topContainer .topMenu')
-                    .find("button" ).button()
-                    .filter('.windows').button({
-                      icons: {
-                        primary: "windows-icon",
-                      }
-                    }).end()
-                    .filter('.instruments').button({
-                      icons: {
-                        primary: "instruments-icon",
-                      },
-                      disabled: true
-                    }).end()
-                    .filter(".workspace").button({
-                      icons: {
-                        primary: "workspace-icon",
-                      },
-                      disabled: true
-                    });
-
-            $(window).resize(function() {
-              resetTopMenu();
+            //Register async loading of tradingTimes sub-menu
+            load_ondemand($navMenu.find("a.tradingTimes"), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+                var elem = $navMenu.find("a.tradingTimes");
+                tradingTimes.init(elem);
+                elem.click();
             });
-            resetTopMenu();
+
+            //Register async loading of window asset-index
+            load_ondemand($navMenu.find("a.assetIndex"), 'click', 'loading Asset Index ...', 'assetindex/assetIndex',
+                function (assetIndex) {
+                    var elem = $navMenu.find("a.assetIndex");
+                    assetIndex.init(elem);
+                    elem.click(); 
+                });
+        }
+
+        require(["navigation/navigation"], function (navigation) {
+            navigation.init(registerMenusCallback);
+
+            /* initialize the top menu because other dialogs
+             * will assume an initialized top menu */
+            $("#menu").menu();
 
             //Trigger async loading of instruments and refresh menu
             require(["instruments/instruments"], function(instrumentsMod) {
+                    require(["jquery", "jquery-growl"], function($) {
+                        $.growl.notice({ message: "Loading chart menu!" });
+                    });
 
-                //Just an info
-                require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: "Loading instruments menu!" });
+                    instrumentsMod.init();
                 });
-
-                instrumentsMod.init( $(".mainContainer .instruments").closest('div') );
-            });
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
-                windows.init($('.topContainer .windows').closest('div'));
+                var $windowsLI = $("#nav-menu .windows");
+                windows.init($windowsLI);
+                // hide the main loading spinner,
+                // after the `last module` has been loaded.
+                $(".sk-spinner-container").hide();
             });
+        });
+    }
 
-            //Resize the background image
-            $(window).resize(function() {
-              resizeBackgroundWatermark();
-            });
+    onloadCSS(loadCSS("navigation/navigation.css"), function () {
+        //All dependencies loaded
+        $(window).load(function () {
 
+            var isAffiliate = getParameterByName("affiliates") || false;
+
+            //Our chart is accessed by other applications
+            if (isAffiliate == 'true') {
+                handle_affiliate_route();
+            }
+            //Our chart is accessed directly
+            else {
+                handle_normal_route();
+            }
+
+            //Now load all other CSS asynchronously
+            loadCSS("lib/hamburger.css");
+            loadCSS('charts/charts.css');
+            loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
+            loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
+            loadCSS("lib/colorpicker/jquery.colorpicker.css");
         });
 
-        //Now load all other CSS asynchronously
-        loadCSS('lib/jquery/jquery-growl/jquery.growl.css');
-        loadCSS('charts/charts.css');
-
     });
-
 });

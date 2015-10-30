@@ -6,12 +6,10 @@ This repository contains the HTML, Javascript, CSS, and images for the [WebTrade
 ##Project goal
 The goal of this project is to create a full-screen trading interface for [Binary.com](https://www.binary.com) according to the following design:
 ![Webtrader](https://banners.binary.com/misc/webtrader-layout.jpg)
-
+ 
+>>>>>>> development
 ##How to work with this project
-####Learn how to setup the project:
-In order to get started on this project, follow these steps. The steps are meant for Linux OS users. However Windows and MacOS should be similar
-
-        > Open command prompt
+####Linux Users
         $ sudo apt-get install git
         $ git clone https://github.com/binary-com/webtrader.git
         $ cd webtrader
@@ -19,10 +17,35 @@ In order to get started on this project, follow these steps. The steps are meant
         $ sudo apt-get install nodejs-legacy
         $ sudo npm install -g grunt-cli
         $ npm install
+        $ bower install
     
+####Windows Users
+1.  Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
+2. Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
+3. Open Git Bash and run the following commands:
+```
+$ git clone https://github.com/binary-com/webtrader.git
+$ cd webtrader
+$ install -g grunt-cli
+$ npm install
+$ bower install
+```
+These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from `package.json` and `bower.json` files.
+
 At this point, your project is properly setup. You can now run following command to start a local server
         
-        $ grunt connect
+        $ grunt connect:compressed
+        For compressed file serving
+
+        $ grunt connect:uncompressed
+        For uncompressed file serving(this is default, you can just do grunt connect)
+
+Running this command will launch local server at http://localhost:9001
+
+You should always combine the above command with 
+        
+        $ grunt watch
+This command will help to automatically run grunt task when files are changed under src directory
 
 In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
 
@@ -40,27 +63,14 @@ To bump release version, run
 
         $ grunt bump:patch
 
-To release code (beta release, [WebTrader (beta)](http://binary-com.github.io/webtrader/beta)) - Not recommended to be used from local environment
+Every checkin or merge into master will trigger travis-ci build and do a release to production.
 
-        $ grunt gh-pages:gh-pages-beta
+Every checkin or merge of PR into development will trigger travis-ci build and do a beta release
 
-To release code (prod release, [WebTrader](http://binary-com.github.io/webtrader)) - Not recommended to be used from local environment
-
-        $ grunt gh-pages:gh-pages-prod
-    
-You can now access the charting page by opening http://localhost:9001/main.html in browser
-
-Every checking into master will trigger travis-ci build process. Release is based on commit hooks. 
-
-    [release_prod]
-    With this commit message, travis-ci will automatically deploy code into gh-pages for production release
-
-    [release_beta]
-    With this commit message, travis-ci will automatically deploy code into gh-pages for beta release
-
-#####Get your code to our repo:
+#####Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
+While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
     
-#####Other details
-When commit is done with [release] tag in the master branch, it will trigger deployment into webtrader gh-pages automatically and will update the release files and changes could be seen live @ [WebTrader](http://binary-com.github.io/webtrader)
+        $ grunt deploy
+        For releasing compressed code
 

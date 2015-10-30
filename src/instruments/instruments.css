@@ -19,3 +19,12 @@
 .instruments_fixed_width {
     width: 65px;
 }
+
+/*.instruments .ui-menu {
+  display: none;
+}
+
+.instruments:hover ul {
+  display: block;
+  height: auto;
+}*/

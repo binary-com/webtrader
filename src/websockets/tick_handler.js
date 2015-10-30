@@ -1,8 +1,29 @@
-define(["common/util"], function() {
+define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/util"], function(liveapi,chartingRequestMap) {
 
-    return {
-        tickReceived : function(chartingRequest, instrumentCodeAndTimeperiod, time, price, barsTable) {
-            
+    var barsTable = chartingRequestMap.barsTable;
+    liveapi.events.on('tick', function (data) {
+        console.log(JSON.stringify(data));
+        //console.log(data);
+        var key = data.echo_req.passthrough.instrumentCdAndTp;
+        if (data.error) {
+            //This means, there is no real time feed for this instrument
+            $(document).trigger("feedTypeNotification", [key, "delayed-feed"]); //TODO have to consume this notification
+        } else {
+            if (key) {
+                chartingRequestMap[key] = chartingRequestMap[key] || {};
+                chartingRequestMap[key].tickStreamingID = data.tick.id;
+
+                var chartingRequest = chartingRequestMap[key];
+                if (chartingRequest) {
+                    $(document).trigger("feedTypeNotification", [key, "realtime-feed"]); //TODO have to consume this notification
+                    var price = parseFloat(data.tick.quote);
+                    var time = parseInt(data.tick.epoch) * 1000;
+                    tickReceived(chartingRequest, key, time, price);
+                }
+            }
+        }
+    });
+    function tickReceived(chartingRequest, instrumentCodeAndTimeperiod, time, price) {
             if (chartingRequest && chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0) {
                 var timeperiod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timeperiod');
                 if (timeperiod) {
@@ -80,6 +101,7 @@ define(["common/util"], function() {
                 } //timeperiod check if
             }//chartRequest check if
         }//tickReceived method ends
-    };
+
+    return { };
 
 });
