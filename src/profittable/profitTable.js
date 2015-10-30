@@ -23,7 +23,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     }
 
     function initProfitWin($html) {
-        profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 850 });
+        profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 900 });
         $.get('profittable/profitTable.html', function ($html) {
 
             $html = $($html);
@@ -60,6 +60,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             var refreshTable = function (yyyy_mm_dd) {
                 var processing_msg = $('#' + table.attr('id') + '_processing').show();
 
+                var request = {
+                    profit_table: 1,
+                    description: 1,
+                    sort: 'DESC'
+                };
+
+                /* if a date is specified get the transactions for that date */
+                if (yyyy_mm_dd)
+                    request.date_from = request.date_to = yyyy_mm_dd;
+                else /* otherwise get the most recent 10 transactions */
+                    request.limit = 10;
 
                 /* refresh the table with result of { profit_table:1 } from WS */
                 var refresh = function (data) {
@@ -78,7 +89,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                             trans.buy_price,
                             date_to_string(trans.sell_time),
                             trans.sell_price,
-                            parseFloat(trans.buy_price) - parseFloat(trans.sell_price)
+                            (parseFloat(trans.buy_price) - parseFloat(trans.sell_price)).toFixed(2) /* 2 decimal points */
                         ]
                     });
                     table.api().rows().remove();
@@ -87,7 +98,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     processing_msg.hide();
                 };
                 
-                liveapi.send({ profit_table: 1, description: 1 })
+                liveapi.send(request)
                 .then(refresh)
                 .catch(function (err) {
                     refresh({});
@@ -96,7 +107,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 });
             }
 
-            refreshTable(new Date().toISOString().slice(0, 10));
+            refreshTable();
             profitWin.addDateToHeader({
                 title: 'Jump to: ',
                 date: new Date(),
