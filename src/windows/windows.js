@@ -217,6 +217,10 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 onSelect: function () { $(this).change(); }
             }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
 
+            $.datepicker._gotoToday = function (id) {
+                $(id).datepicker('setDate', new Date()).change().datepicker('hide');
+            };
+
             /* use JQ-UI icon for datepicker */
             dpicker .next('button') .text('')
                 .button({ icons: { primary: 'ui-icon-calendar' } });
