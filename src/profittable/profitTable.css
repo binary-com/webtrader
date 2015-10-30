@@ -10,7 +10,7 @@ table.profit-table-dialog th,
 table.profit-table-dialog td
  {
   text-align:center;
-  width: 12% !important; /* make important: jQ-datatables overrides this */
+  width: 13% !important; /* make important: jQ-datatables overrides this */
 }
     table.profit-table-dialog span {
         height:2.5em !important;
@@ -19,7 +19,7 @@ table.profit-table-dialog td
     }
 
     table.profit-table-dialog th.wide-column{
-        width: 28% !important;
+        width: 22% !important;
     }
     table.profit-table-dialog td.red {
         color: #d71818;

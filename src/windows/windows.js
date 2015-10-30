@@ -156,7 +156,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             }
             
             var trigger_change = function () {
-                var yyyy_mm_dd = new Date(year.val(), month.val(), day.val()).toISOString().slice(0, 10);
+                /* TODO: search other files and make sure to use a UTC date */
+                var yyyy_mm_dd = new Date(Date.UTC(year.val(), month.val(), day.val())).toISOString().slice(0, 10);
                 opts.onchange(yyyy_mm_dd);
             }
             day.on('selectmenuchange', function () {
@@ -215,6 +216,10 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' }); },
                 onSelect: function () { $(this).change(); }
             }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
+
+            $.datepicker._gotoToday = function (id) {
+                $(id).datepicker('setDate', new Date()).change().datepicker('hide');
+            };
 
             /* use JQ-UI icon for datepicker */
             dpicker .next('button') .text('')
