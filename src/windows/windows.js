@@ -156,7 +156,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
             }
             
             var trigger_change = function () {
-                var yyyy_mm_dd = new Date(year.val(), month.val(), day.val()).toISOString().slice(0, 10);
+                /* TODO: search other files and make sure to use a UTC date */
+                var yyyy_mm_dd = new Date(Date.UTC(year.val(), month.val(), day.val())).toISOString().slice(0, 10);
                 opts.onchange(yyyy_mm_dd);
             }
             day.on('selectmenuchange', function () {
