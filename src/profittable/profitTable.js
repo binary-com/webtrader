@@ -77,8 +77,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     var transactions = (data.profit_table && data.profit_table.transactions) || [];
                     var date_to_string = function (epoch) {
                         var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
-                        return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' +
-                        d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                         return d.getFullYear() + "-" +
+                                ("00" + (d.getMonth() + 1)).slice(-2) + "-" +
+                                ("00" + d.getDate()).slice(-2) + " " +
+                                ("00" + d.getHours()).slice(-2) + ":" +
+                                ("00" + d.getMinutes()).slice(-2) + ":" +
+                                ("00" + d.getSeconds()).slice(-2);
                     };
                     var rows = transactions.map(function (trans) {
                         return [
