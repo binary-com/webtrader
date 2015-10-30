@@ -125,7 +125,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                     else {
                         if (select._title) {
                             var value = select.val() === -1 ? options.initial : select.val();
-                            console.warn(value);
                             select._title.remove();
                             select.updating = true;
                             select.val(value).selectmenu('refresh');
