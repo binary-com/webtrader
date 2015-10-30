@@ -6,71 +6,76 @@
 define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
 
     var closeAllObject = null;
-
-    //-----start----
-    //For desktops and laptops or large size tablets
-    //---------Calculation to find out how many windows to open based on user's window size
-    var totalChartsPerRow = Math.floor($(window).width() / (350 + 20)) || 1;
-    var totalRows = Math.floor($(window).height() / (400 + 10)) || 1;
-    //For small size screens
-    if (isSmallView())
-      totalRows = totalChartsPerRow = 1;
-    //---------End-----------------------------
-
     var dialogCounter = 0;
     var $menuUL = null;
 
+    function calculateChartsPerScreen() {
+        totalChartsPerRow = Math.floor($(window).width() / 350) || 1;
+        totalRows = Math.floor($(window).height() / 400) || 1;
+
+        //Based on totalChartsPerRow and totalRows, open some charts
+        totalCharts_renderable = totalChartsPerRow * totalRows;
+
+        //For small size screens
+        if (isSmallView())
+            totalRows = totalChartsPerRow = 1;
+    }
+
     function tileAction() {
-      require(["charts/chartWindow"], function (chartWindowObj) {
-        var topMargin = 80;
-        if (isSmallView()) topMargin = 100;
+        calculateChartsPerScreen();
 
-        var cellCount = 1, rowCount = 1, leftMargin = 20;
-        var minWidth = $(".chart-dialog").dialog('option', 'minWidth');
-        var minHeight = $(".chart-dialog").dialog('option', 'minHeight');
+        require(["charts/chartWindow"], function(chartWindowObj) {
+            var topMargin = 80;
+            if (isSmallView()) topMargin = 100;
 
-        if (isSmallView()) {
-          minWidth = $(window).width() - leftMargin * 2;
-          minHeight = $(window).height() - topMargin;
-        }
+            var cellCount = 1,
+                rowCount = 1,
+                leftMargin = 20;
+            var minWidth = $(".chart-dialog").dialog('option', 'minWidth');
+            var minHeight = $(".chart-dialog").dialog('option', 'minHeight');
 
-        var totalOccupiedSpace = totalChartsPerRow * minWidth + (totalChartsPerRow - 1) * leftMargin;
-        var remainingSpace = $(window).width() - totalOccupiedSpace;
-        var startMargin = Math.round(remainingSpace / 2) - leftMargin;
-
-        var referenceObjectForPositioning = window;
-
-        $(".chart-dialog").each(function () {
-
-          if (cellCount == 1) {
-            var leftShift = startMargin;
-          } else if (cellCount > 1) {
-            var leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
-          }
-          var topShift = -topMargin + 2;
-          referenceObjectForPositioning = window;
-          if (referenceObjectForPositioning == window) {
-            topShift = ((rowCount - 1) * minHeight + rowCount * topMargin);
-          }
-
-          referenceObjectForPositioning = $(this).dialog('option', {
-                position: {
-                    my: "left+" + leftShift + " top" + (topShift < 0 ? "-" : "+") + topShift,
-                    at: "left top",
-                    of: referenceObjectForPositioning
-                },
-                width : minWidth,
-                height : minHeight
-            });
-            chartWindowObj.triggerResizeEffects( $(this).dialog( "widget").find('.chart-dialog') );
-            if (++cellCount > totalChartsPerRow)
-            {
-                cellCount = 1;
-                ++rowCount;
-                referenceObjectForPositioning = window;
+            if (isSmallView()) {
+                minWidth = $(window).width() - (leftMargin * 2);
+                minHeight = $(window).height() - topMargin;
             }
+
+            var totalOccupiedSpace = (totalChartsPerRow * minWidth) + ((totalChartsPerRow - 1) * leftMargin);
+            var remainingSpace = $(window).width() - totalOccupiedSpace;
+            var startMargin = Math.round(remainingSpace / 2);
+
+            var referenceObjectForPositioning = window;
+
+            $(".chart-dialog").each(function() {
+                var leftShift = startMargin;
+                if (cellCount > 1) {
+                    leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
+                }
+
+                var topShift = topMargin + (minHeight * (rowCount - 1));
+                if (rowCount > 1) {
+                    topShift = topShift + ((rowCount - 1) * 20);
+                }
+
+                referenceObjectForPositioning = window;
+                referenceObjectForPositioning = $(this).dialog('option', {
+                    position: {
+                        my: "left+" + leftShift + " top" + (topShift < 0 ? "-" : "+") + topShift,
+                        at: "left top",
+                        of: referenceObjectForPositioning
+                    },
+                    width: minWidth,
+                    height: minHeight
+                });
+
+                chartWindowObj.triggerResizeEffects($(this).dialog("widget").find('.chart-dialog'));
+
+                if (++cellCount > totalChartsPerRow) {
+                    cellCount = 1;
+                    ++rowCount;
+                    referenceObjectForPositioning = window;
+                }
+            });
         });
-      });
     };
 
     /*
@@ -200,6 +205,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
     return {
 
         init: function( $parentObj ) {
+            calculateChartsPerScreen();
+
             loadCSS("windows/windows.css");
             $menuUL = $parentObj.find("ul");
 
