@@ -1,0 +1,51 @@
+﻿/**
+ * Created by amin on 10/5/15.
+ */
+
+table.profit-table-dialog {
+    /*table-layout:fixed;*/
+}
+
+table.profit-table-dialog th,
+table.profit-table-dialog td
+ {
+  text-align:center;
+  width: 12% !important; /* make important: jQ-datatables overrides this */
+}
+    table.profit-table-dialog span {
+        height:2.5em !important;
+        display:block;
+        font-size:90%;
+    }
+
+    table.profit-table-dialog th.wide-column{
+        width: 28% !important;
+    }
+    table.profit-table-dialog td.red {
+        color: #d71818;
+        font-weight:bold;
+    }
+
+    table.profit-table-dialog td.green {
+        color: #02920e;
+        font-weight:bold;
+    }
+
+    table.profit-table-dialog th > .search-input {
+        text-align:center;
+        width: 100%; 
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+        border-radius:10px;
+    }
+
+    table.profit-table-dialog th > .search-input:focus {
+        box-shadow: 3px -1px 8px 1pt lightblue;
+        outline: 0;
+    }
+table.profit-table-dialog .search-input::-webkit-input-placeholder,
+table.profit-table-dialog .search-input::-moz-placeholder,     /* firefox 19+ */
+table.profit-table-dialog .search-input:-ms-input-placeholder /* ie */ {
+    font-size: 90%;
+}
