@@ -97,6 +97,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     elem.click(); 
                 });
 
+            // register async loading of statement dialog
+            var $statementMenu = $navMenu.find("a.statement");
+            load_ondemand($statementMenu, 'click', 'loading Statement...', 'statement/statement',
+                function (statement) {
+                    statement.init($statementMenu);
+                    $statementMenu.click();
+                });
+
             //Register async loading of window profit-table
             load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
                 function (profitTable) {
