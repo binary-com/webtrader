@@ -96,6 +96,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     assetIndex.init(elem);
                     elem.click(); 
                 });
+
+            //Register async loading of window profit-table
+            load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
+                function (profitTable) {
+                    var elem = $navMenu.find("a.profitTable");
+                    profitTable.init(elem);
+                    elem.click(); 
+                });
         }
 
         require(["navigation/navigation"], function (navigation) {
