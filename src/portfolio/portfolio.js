@@ -50,11 +50,12 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                     ],
                     paging: false,
                     ordering: false,
-                    searching: false
+                    processing: true
                 });
+                table.parent().addClass('hide-search-input');
 
-                update_table();
                 portfolioWin.dialog('open');
+                update_table();
             })
             .catch(function (err) {
                 console.error(err);
@@ -66,6 +67,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
     }
 
     function update_table(){
+        var processing_msg = $('#' + table.attr('id') + '_processing').show();
         liveapi.send({ portfolio: 1 })
             .then(function (data) {
                 var contracts = (data.portfolio && data.portfolio.contracts)
@@ -90,6 +92,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                 table.api().rows().remove();
                 table.api().rows.add(rows);
                 table.api().draw();
+                processing_msg.hide();
 
                 /* register to the stream of proposal_open_contract to get indicative values */
                 contracts.forEach(function (contract) {
@@ -103,6 +106,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
             })
             .catch(function (err) {
                 console.error(err);
+                table.api().rows().remove();
+                table.api().draw();
+                processing_msg.hide();
                 $.growl.error({ message: err.message });
             });
     }
