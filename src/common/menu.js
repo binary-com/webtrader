@@ -67,11 +67,15 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                         name: sm.name,
                         display_name: sm.name
                     };
-                    submarket.instruments = sm.symbols.map(function (sym) {
+                    submarket.instruments = sm.symbols
+                        .filter(function (sym) {
+                            return sym.feed_license !== 'realtime';
+                        })
+                        .map(function (sym) {
                         return {
                             symbol: sym.symbol,
                             display_name: sym.name,
-                            delay_amount: sym.delay_amount
+                            delay_amount: sym.delay_amount || 0
                         };
                     });
                     return submarket;
