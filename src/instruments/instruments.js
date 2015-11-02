@@ -132,7 +132,10 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
                     .then(function (data) {
                             var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
 
-                            markets = menu.extractMenu(data);
+                            markets = menu.extractMenu(data, {
+                                filter: function (sym) { return sym.feed_license !== 'realtime'; }
+                            });
+
                             markets = menu.sortMenu(markets);
 
                             menu.refreshMenu(rootUL,markets,onMenuItemClick);

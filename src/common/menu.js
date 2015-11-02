@@ -56,7 +56,12 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
     }
 
     return {
-        extractMenu: function (trading_times_data) {
+        /* you can filter the symbols with the options parameter, for example:
+            options: {
+                filter: function(sym) { return sym.feed_license !== 'realtime'; }
+            }
+        }*/
+        extractMenu: function (trading_times_data, options) {
             var markets = trading_times_data.trading_times.markets.map(function (m) {
                 var market = {
                     name: m.name,
@@ -67,11 +72,10 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                         name: sm.name,
                         display_name: sm.name
                     };
-                    submarket.instruments = sm.symbols
-                        .filter(function (sym) {
-                            return sym.feed_license !== 'realtime';
-                        })
-                        .map(function (sym) {
+                    var symbols = sm.symbols;
+                    if (options && options.filter) /* filter the symbols */
+                        symbols = symbols.filter(options.filter);
+                     submarket.instruments = symbols.map(function (sym) {
                         return {
                             symbol: sym.symbol,
                             display_name: sym.name,
