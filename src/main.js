@@ -122,9 +122,6 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     instrumentsMod.init();
                 });
 
-            //Trigger async loading of trade menu and refresh
-            require(["trade/tradeMenu"]);
-
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {
                 var $windowsLI = $("#nav-menu .windows");
