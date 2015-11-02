@@ -27,7 +27,9 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
                 buttons: [{
                     text: "Remove Selected",
                     click: function() {
-                      var containerIDWithHash = $(".indicator_remove_dialog").data('refererChartID');
+                      var rowCount = table.rows('.selected').data().length;
+                      if(rowCount > 0) {
+                        var containerIDWithHash = $(".indicator_remove_dialog").data('refererChartID');
                         table
                             .rows( '.selected' )
                             .nodes()
@@ -44,7 +46,11 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
                                     }
                                 });
                             });
+
                         $( ".indicator_remove_dialog" ).dialog('close');
+                      } else {
+                        $.growl.error({ message: "Please select indicators to remove" });
+                      }
                     }
                 },{
                     text: "Cancel",
