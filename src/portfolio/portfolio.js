@@ -37,7 +37,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
             var td = $('#' + id).find('td:nth-child(4)');
             td.removeClass('red green').addClass((perv_indicative*1) <= (indicative*1) ? 'green' : 'red');
         }
-        
     }
 
     function initPortfolioWin() {
@@ -63,7 +62,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                         { title: 'Indicative' }
                     ],
                     rowId : '0', /* jQ datatables support selecting rows based on rowId https://datatables.net/reference/type/row-selector
-                                    we use this no to query DOM everytime we want to update indicative column */
+                                    we want not to query rows everytime we update the indicative column */
                     paging: false,
                     ordering: false,
                     processing: true
@@ -71,7 +70,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                 table.parent().addClass('hide-search-input');
 
                 portfolioWin.dialog('open');
+
+                /* update table every 1 minute */
                 update_table();
+                setInterval(update_table, 60 * 1000); // TODO: ask arnab if needs to removeInterval(...) on window close.
             })
             .catch(function (err) {
                 console.error(err);
@@ -112,11 +114,13 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
 
                 /* register to the stream of proposal_open_contract to get indicative values */
                 contracts.forEach(function (contract) {
-                    liveapi.send({ proposal_open_contract: 1, contract_id: contract.contract_id })
-                           .then(update_indicative)
-                           .catch(function (err) {
+                    liveapi
+                        .proposal_open_contract
+                        .register(contract.contract_id)
+                        .catch(function (err) {
+                            if(!err.already_registered)
                                console.error(err); // TODO: find a reasonable alternative
-                           });
+                         });
                 });
             })
             .catch(function (err) {
