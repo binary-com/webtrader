@@ -16,12 +16,21 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
         });
     }
     function update_indicative(data) {
-        var contract = data.proposal_open_contract,
-            id = contract.contract_id,
+        var contract = data.proposal_open_contract;
+        var id = contract.contract_id,
             ask_price = contract.ask_price,
             bid_price = contract.bid_price;
-        if (table) {
-            console.warn(id + ' => ' + ask_price);
+        if (!id) {
+
+            return;
+        }
+
+        if (table)
+        {
+            var row = table.api().row('#' + id);
+            var cols = row.data();
+            cols[3] = ask_price; /* update the indicative column */
+            row.data(cols);
         }
         
     }
@@ -48,6 +57,8 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                         { title: 'Purchase' },
                         { title: 'Indicative' }
                     ],
+                    rowId : '0', /* jQ datatables support selecting rows based on rowId https://datatables.net/reference/type/row-selector
+                                    we use this no to query DOM everytime we want to update indicative column */
                     paging: false,
                     ordering: false,
                     processing: true
@@ -102,7 +113,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                                console.error(err); // TODO: find a reasonable alternative
                            });
                 });
-                console.warn(contracts);
             })
             .catch(function (err) {
                 console.error(err);
