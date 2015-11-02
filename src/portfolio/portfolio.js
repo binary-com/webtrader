@@ -18,7 +18,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
     function update_indicative(data) {
         var contract = data.proposal_open_contract;
         var id = contract.contract_id,
-            ask_price = contract.ask_price,
+            indicative = contract.ask_price,
             bid_price = contract.bid_price;
         if (!id) {
 
@@ -29,8 +29,13 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
         {
             var row = table.api().row('#' + id);
             var cols = row.data();
-            cols[3] = ask_price; /* update the indicative column */
+            var perv_indicative = cols[3];
+            cols[3] = indicative; /* update the indicative column */
             row.data(cols);
+
+            /* colorize indicative column on change */
+            var td = $('#' + id).find('td:nth-child(4)');
+            td.removeClass('red green').addClass((perv_indicative*1) <= (indicative*1) ? 'green' : 'red');
         }
         
     }
