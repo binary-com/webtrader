@@ -63,7 +63,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
             $("#instrumentSelectionMenuDIV").hide();
         };
 
-        if (!document.getElementById("#instrumentsDialog"))
+        if($("#instrumentsDialog").length == 0)
             $.get("instruments/instruments.html", function ($html) {
                 $($html).css("display", "none").appendTo("body");
                 $("#standardPeriodsButtonContainer").find("button")
