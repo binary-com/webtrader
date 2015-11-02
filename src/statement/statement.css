@@ -1,0 +1,26 @@
+/*
+	Created by Armin on Oct 31, 2015
+*/
+
+table.statement-table-dialog {}
+
+table.statement-table-dialog th,
+table.statement-table-dialog td {
+    text-align: center;
+    width: 12% !important;
+    /* make important, jq-datatables overrides this */
+}
+
+table.statement-table-dialog th.wide-column {
+    width: 28% !important;
+}
+
+table.statement-table-dialog td.red {
+    color: #d71818;
+    font-weight: bold;
+}
+
+table.statement-table-dialog td.green {
+    color: #02920e;
+    font-weight: bold;
+}
