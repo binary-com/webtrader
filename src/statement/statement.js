@@ -19,7 +19,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 				"columnDefs": [{
                     "targets": 4,
                     "createdCell": function (td, cellData) {
-                        var css_class = (parseFloat(cellData) < 0) ? 'red' : (parseFloat(cellData) > 0) ? 'green' : '';
+                        var css_class = (parseFloat(cellData) < 0) ? 'red' : (parseFloat(cellData) >= 0) ? 'green' : '';
                         if (css_class) {
                             $(td).addClass(css_class);
                         }
@@ -47,6 +47,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 				if(yyyy_mm_dd) {
 					var d = new Date(yyyy_mm_dd);
 					var epoch = d.getTime() / 1000.0;
+					/* request.date_from = request.date_to = yyyy_mm_dd;
+					   The API has to be updated to accept string values.
+					   I've talked to Raunak about this, will come back to this.
+					*/
 					request.date_from = request.date_to = epoch;
 				} else {
 					request.limit = 10;
@@ -69,7 +73,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 							date_to_string(trans.transaction_time),
 							trans.transaction_id,
 							trans.action_type,
-							'desc goes here...',
+							trans.longcode,
 							parseFloat(trans.amount).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'),
 							parseFloat(trans.balance_after).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
 						];
