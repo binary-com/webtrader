@@ -21,8 +21,22 @@ define(['lokijs'],function(loki){
     var db = new loki();
     var barsTable = db.addCollection('bars_table');
     // TODO: add common tasks for chartingRequestMap to this module
-    //       move code from charts.js, ohlc_handler.js, tick_handler.js, connection_check.js and symbol_handler.js
+    //       move code from charts.js, ohlc_handler.js, tick_handler.js and connection_check.js
     return {
         barsTable: barsTable
     }
+
+    /* the structure of chartingRequestMap
+        {
+            instrumentCdAndTp : {
+                tickStreamingID: '',
+                chartIDs: [ {
+                    containerIDWithHash : '',
+                    series_compare : '',
+                    instrumentCode : '',
+                    instrumentName : ''
+                }]
+            }
+        }
+    */
 })
