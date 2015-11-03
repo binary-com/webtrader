@@ -154,7 +154,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
             // add GTM scripts if specified.
-            var loadGTM = getParameterByName("gtm") || false;
+            var loadGTM = getParameterByName("gtm") || true;
             if(loadGTM == 'true') {
                 require(['gtm/gtm'], function (gtm) {
                     gtm.init();

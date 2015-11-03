@@ -11,18 +11,18 @@
 <body>
 	<script>
       var affiliates = getParameterByName('affiliates') || false;
-      var gtm = getParameterByName('gtm') || false;
+      var gtm = getParameterByName('gtm') || true;
       var suffix = "";
       
       if (affiliates && affiliates == 'true') {
           suffix = '?affiliates=true&instrument=' + getParameterByName('instrument') + '	&timePeriod=' + getParameterByName('timePeriod');
       }
       
-      if (gtm && gtm == 'true') {
+      if (gtm && gtm == 'false') {
         if (suffix.length) {
-          suffix = suffix + '&gtm=true';
+          suffix = suffix + '&gtm=false';
         } else {
-          suffix = '?gtm=true';
+          suffix = '?gtm=false';
         }
       }
 
