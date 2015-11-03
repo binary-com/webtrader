@@ -7,5 +7,5 @@ define(["jquery", "jquery-growl"], function ($) {
 				$("body").append(html);
 			});
 		}
-	}
+	};
 });
