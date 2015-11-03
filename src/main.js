@@ -136,9 +136,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
     onloadCSS(loadCSS("navigation/navigation.css"), function () {
         //All dependencies loaded
         $(window).load(function () {
-
             var isAffiliate = getParameterByName("affiliates") || false;
-
             //Our chart is accessed by other applications
             if (isAffiliate == 'true') {
                 handle_affiliate_route();
@@ -154,6 +152,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
             loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
             loadCSS("lib/colorpicker/jquery.colorpicker.css");
+
+            // add GTM scripts if specified.
+            var loadGTM = getParameterByName("gtm") || false;
+            if(loadGTM == 'true') {
+                require(['gtm/gtm'], function (gtm) {
+                    gtm.init();
+                });
+            }
         });
 
     });
