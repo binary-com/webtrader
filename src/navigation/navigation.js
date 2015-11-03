@@ -186,6 +186,9 @@ define(["jquery"], function ($) {
 		},
 		updateDropdownToggles: function() {
 			updateDropdownToggleHandlers();
+		},
+		updateListItemToggles: function() {
+			updateListItemHandlers();
 		}
 	};
 });
