@@ -9,6 +9,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
     function init($menuLink) {
         loadCSS("profittable/profitTable.css");
+        loadCSS("lib/datatables-scroller/css/dataTables.scroller.css");
         $menuLink.click(function () {
             if (!profitWin)
                 liveapi.cached.authorize()
