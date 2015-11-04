@@ -9,7 +9,7 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 
     function WebtraderWebsocket() {
-        var api_url = 'wss://www.binary.com/websockets/v2';
+        var api_url = 'wss://www.binary.com/websockets/v3?l=EN';
         var ws = new ReconnectingWebSocket(api_url, null, { debug: false, timeoutInterval: 5400});
 
         ws.onclose = function () {
