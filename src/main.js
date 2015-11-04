@@ -96,6 +96,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     assetIndex.init(elem);
                     elem.click(); 
                 });
+
+            //Register async loading of window profit-table
+            load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
+                function (profitTable) {
+                    var elem = $navMenu.find("a.profitTable");
+                    profitTable.init(elem);
+                    elem.click(); 
+                });
         }
 
         require(["navigation/navigation"], function (navigation) {
@@ -128,9 +136,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
     onloadCSS(loadCSS("navigation/navigation.css"), function () {
         //All dependencies loaded
         $(window).load(function () {
-
             var isAffiliate = getParameterByName("affiliates") || false;
-
             //Our chart is accessed by other applications
             if (isAffiliate == 'true') {
                 handle_affiliate_route();
@@ -146,6 +152,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
             loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
             loadCSS("lib/colorpicker/jquery.colorpicker.css");
+
+            // add GTM scripts if specified.
+            var loadGTM = getParameterByName("gtm") || true;
+            if(loadGTM == 'true') {
+                require(['gtm/gtm'], function (gtm) {
+                    gtm.init();
+                });
+            }
         });
 
     });

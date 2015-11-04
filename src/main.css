@@ -1,4 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@font-face {
+    src: url('fonts/Roboto-Regular.ttf') format('truetype'),
+    font-family: 'Roboto';
+}
+
 html,
 body {
     margin: 0;
