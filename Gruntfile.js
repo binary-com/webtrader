@@ -72,6 +72,7 @@ module.exports = function (grunt) {
                             'modernizr/modernizr.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
+                            'datatables-scroller/js/dataTables.scroller.js',
                             'requirejs/require.js',
                             'js-cookie/src/js.cookie.js',
                             'underscore/underscore-min.js',

@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on October 29, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "datatables-scroller", "jquery-growl"], function ($, windows, liveapi) {
     'use strict';
 
     var profitWin = null,
@@ -23,7 +23,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     }
 
     function initProfitWin($html) {
-        profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 900 });
+        profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 900, scroller: true });
         $.get('profittable/profitTable.html', function ($html) {
 
             $html = $($html);

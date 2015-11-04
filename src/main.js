@@ -19,6 +19,7 @@ requirejs.config({
         'jquery-timer': "lib/jquery.timers/jquery.timers.min",
         'color-picker': "lib/colorpicker/jquery.colorpicker",
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
+        'datatables-scroller' : "lib/datatables-scroller/js/dataTables.scroller",
         //TODO find out whats the advantage of using datatables-jquery-ui
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
