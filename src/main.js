@@ -135,7 +135,9 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
     onloadCSS(loadCSS("navigation/navigation.css"), function () {
         //All dependencies loaded
-        $(window).load(function () {
+        //TODO find out the consequence of not having the following line
+        //This is causing very slow loading of charts, sometimes not loading at all
+        //$(window).load(function () {
             var isAffiliate = getParameterByName("affiliates") || false;
             //Our chart is accessed by other applications
             if (isAffiliate == 'true') {
@@ -160,7 +162,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     gtm.init();
                 });
             }
-        });
+        //});
 
     });
 });
