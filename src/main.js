@@ -25,7 +25,8 @@ requirejs.config({
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
         'js-cookie':'lib/js-cookie/src/js.cookie',
-        'loadCSS': 'lib/loadcss/loadCSS'
+        'loadCSS': 'lib/loadcss/loadCSS',
+        'gtm': 'gtm/gtm'
     },
     "shim": {
         "jquery-ui": {
@@ -51,6 +52,9 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
+        },
+        "gtm": {
+            deps: ['jquery']
         }
     }
 });
@@ -135,7 +139,19 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
     onloadCSS(loadCSS("navigation/navigation.css"), function () {
         //All dependencies loaded
-        $(window).load(function () {
+        //TODO find out the consequence of not having the following line
+        //This is causing very slow loading of charts, sometimes not loading at all
+        //$(window).load(function () {
+
+            // add GTM scripts if specified.
+            //TODO
+            // var loadGTM = getParameterByName("gtm") || true;
+            // if(loadGTM == 'true') {
+            //     require(['gtm'], function (gtm) {
+            //         gtm.init();
+            //     });
+            // }
+
             var isAffiliate = getParameterByName("affiliates") || false;
             //Our chart is accessed by other applications
             if (isAffiliate == 'true') {
@@ -153,14 +169,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
             loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
             loadCSS("lib/colorpicker/jquery.colorpicker.css");
 
-            // add GTM scripts if specified.
-            var loadGTM = getParameterByName("gtm") || true;
-            if(loadGTM == 'true') {
-                require(['gtm/gtm'], function (gtm) {
-                    gtm.init();
-                });
-            }
-        });
+        //});
 
     });
 });
