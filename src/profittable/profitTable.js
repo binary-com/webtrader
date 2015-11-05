@@ -9,7 +9,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
     function init($menuLink) {
         loadCSS("profittable/profitTable.css");
-        loadCSS("lib/datatables-scroller/css/dataTables.scroller.css");
+        // datatables scroller installed via bower does not include the css file, load from cdn instead.
+        onloadCSS('https://cdn.datatables.net/scroller/1.3.0/css/scroller.dataTables.min.css');
         $menuLink.click(function () {
             if (!profitWin)
                 liveapi.cached.authorize()
@@ -22,6 +23,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 profitWin.dialog('open');
         });
     }
+
+    var date_to_string = function (epoch) {
+        var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
+        return d.getFullYear() + "-" +
+               ("00" + (d.getMonth() + 1)).slice(-2) + "-" +
+               ("00" + d.getDate()).slice(-2) + " " +
+               ("00" + d.getHours()).slice(-2) + ":" +
+               ("00" + d.getMinutes()).slice(-2) + ":" +
+               ("00" + d.getSeconds()).slice(-2);
+    };
 
     function initProfitWin($html) {
         profitWin = windows.createBlankWindow($('<div/>'), {
@@ -45,66 +56,66 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                             $(td).addClass(css_class);
                     }
                 }],
-                //paging: false,
-                serverSide: true,
-                dom: "rtiS",
-                scrollY: '300px',
-                //scrollCollapse: true,
-                //paging:         false,
-                //scrollY: '100%',
-                //ordering: false,
-                //searching: false,
+                info: false,
+                //serverSide: true,
+                ordering: false,
+                searching: true,
                 //deferRender: true,
-                //processing: true,
-                scroller: { loadingIndicator: true },
-                ajax: function (data, callback, settings) {
-                    console.warn(data,settings);
-                    var request = {
-                        profit_table: 1,
-                        description: 1,
-                        offset: data.start,
-                        sort: 'DESC',
-                        limit: data.length
-                    };
-                    liveapi
-                        .send(request)
-                        .then(function (res) {
-                            var transactions = (res.profit_table && res.profit_table.transactions) || [];
-                            var date_to_string = function (epoch) {
-                                var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
-                                return d.getFullYear() + "-" +
-                                       ("00" + (d.getMonth() + 1)).slice(-2) + "-" +
-                                       ("00" + d.getDate()).slice(-2) + " " +
-                                       ("00" + d.getHours()).slice(-2) + ":" +
-                                       ("00" + d.getMinutes()).slice(-2) + ":" +
-                                       ("00" + d.getSeconds()).slice(-2);
-                            };
-                            var rows = transactions.map(function (trans) {
-                                return [
-                                    date_to_string(trans.purchase_time),
-                                    trans.contract_id,
-                                    trans.longcode,
-                                    trans.buy_price,
-                                    date_to_string(trans.sell_time),
-                                    trans.sell_price,
-                                    (parseFloat(trans.buy_price) - parseFloat(trans.sell_price)).toFixed(2) /* 2 decimal points */
-                                ];
-                            });
-                            console.warn(rows);
-                            callback({
-                                draw: data.draw,
-                                recordsTotal: '',
-                                recordsFiltered: '',
-                                data: rows
-                            });
-                        })
-                        .catch(function (err) {
-                            $.growl.error({ message: err.message });
-                        });
-                }
+                processing: true,
+                paging: false,
+
+                //ajax: function (data, callback, settings) {
+                //    console.warn(data,settings);
+                //    var request = {
+                //        profit_table: 1,
+                //        description: 1,
+                //        offset: data.start,
+                //        sort: 'DESC',
+                //        limit: 10
+                //    };
+                //    liveapi
+                //        .send(request)
+                //        .then(function (res) {
+                //            var transactions = (res.profit_table && res.profit_table.transactions) || [];
+                //            var rows = transactions.map(function (trans) {
+                //                return [
+                //                    date_to_string(trans.purchase_time),
+                //                    trans.contract_id,
+                //                    trans.longcode,
+                //                    trans.buy_price,
+                //                    date_to_string(trans.sell_time),
+                //                    trans.sell_price,
+                //                    (parseFloat(trans.buy_price) - parseFloat(trans.sell_price)).toFixed(2) /* 2 decimal points */
+                //                ];
+                //            });
+                //            console.warn(rows);
+                //            var records_no = request.offset + rows.length
+                //            if (rows.length === request.limit)
+                //                records_no += request.limit; // we might have extra data
+                //            callback({
+                //                draw: data.draw,
+                //                recordsTotal: records_no,
+                //                recordsFiltered: records_no,
+                //                data: rows
+                //            });
+                //        })
+                //        .catch(function (err) {
+                //            console.error(err);
+                //            $.growl.error({ message: err.message });
+                //        });
+                //},
+                //dom: "frtiS",
+                //deferRender: true,
+                //scrollY: 300,
+                //scroller: {
+                //    loadingIndicator: true,
+                //    trace: true,
+                //}
             });
+
             table.parent().addClass('hide-search-input');
 
+            if(false)
             // Apply the a search on each column input change
             table.api().columns().every(function () {
                 var column = this;
@@ -167,7 +178,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 });
             }
 
-            //refreshTable();
+            refreshTable();
             profitWin.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
