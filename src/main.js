@@ -70,10 +70,16 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
     }
 
     // load jq-ui & growl stylesheets.
-    loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
+
+    onloadCSS(
+        loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css"),
+        function () {
+            /* main.css overrides some classes in jquery-ui.css,
+               make sure to load it after jquery-ui.css file */
+            loadCSS("main.css");
+        });
+
     loadCSS('lib/growl/stylesheets/jquery.growl.css');
-    // load main stylesheet.
-    loadCSS("main.css");
 
     function handle_affiliate_route() {
         require(['affiliates/affiliates'], function(affiliates) {
