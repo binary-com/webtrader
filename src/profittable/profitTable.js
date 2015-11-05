@@ -47,18 +47,24 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 }],
                 //paging: false,
                 serverSide: true,
-                ordering: false,
-                searching: false,
+                dom: "rtiS",
+                scrollY: '300px',
+                //scrollCollapse: true,
+                //paging:         false,
+                //scrollY: '100%',
+                //ordering: false,
+                //searching: false,
                 //deferRender: true,
                 //processing: true,
-                //scroller: { loadingIndicator: true },
+                scroller: { loadingIndicator: true },
                 ajax: function (data, callback, settings) {
-                    console.warn('ajax called');
+                    console.warn(data,settings);
                     var request = {
                         profit_table: 1,
                         description: 1,
+                        offset: data.start,
                         sort: 'DESC',
-                        limit: 3
+                        limit: data.length
                     };
                     liveapi
                         .send(request)
@@ -86,6 +92,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                             });
                             console.warn(rows);
                             callback({
+                                draw: data.draw,
+                                recordsTotal: '',
+                                recordsFiltered: '',
                                 data: rows
                             });
                         })

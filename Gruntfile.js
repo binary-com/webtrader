@@ -74,6 +74,7 @@ module.exports = function (grunt) {
                             'es6-promise/promise.min.js',
                             'datatables-scroller/js/dataTables.scroller.js',
                             'datatables-scroller/css/dataTables.scroller.css',
+                            'datatables-scroller/images/loading-background.png',
                             'requirejs/require.js',
                             'js-cookie/src/js.cookie.js',
                             'underscore/underscore-min.js',
