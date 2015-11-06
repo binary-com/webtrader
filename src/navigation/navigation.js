@@ -1,6 +1,6 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery"], function ($) {
+define(["jquery","css!navigation/navigation.css"], function ($) {
 	"use strict";
 
 	$(window).resize(function () {

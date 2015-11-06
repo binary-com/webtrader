@@ -144,40 +144,18 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         });
     }
 
-    require(['css!navigation/navigation.css'], function() {
-    //onloadCSS(loadCSS("navigation/navigation.css"), function () {
-        //All dependencies loaded
-        //TODO find out the consequence of not having the following line
-        //This is causing very slow loading of charts, sometimes not loading at all
-        //$(window).load(function () {
 
-            // add GTM scripts if specified.
-            //TODO
-            // var loadGTM = getParameterByName("gtm") || true;
-            // if(loadGTM == 'true') {
-            //     require(['gtm'], function (gtm) {
-            //         gtm.init();
-            //     });
-            // }
+    if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
+        handle_affiliate_route();
+    else //Our chart is accessed directly
+        handle_normal_route();
 
-            var isAffiliate = getParameterByName("affiliates") || false;
-            //Our chart is accessed by other applications
-            if (isAffiliate == 'true') {
-                handle_affiliate_route();
-            }
-            //Our chart is accessed directly
-            else {
-                handle_normal_route();
-            }
-
-            //Now load all other CSS asynchronously
-            loadCSS("lib/hamburger.css");
-            loadCSS('charts/charts.css');
-            loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-            loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
-            loadCSS("lib/colorpicker/jquery.colorpicker.css");
-
-        //});
-
-    });
+    //load all other .css files asynchronously
+    require([
+        'css!lib/hamburger.css',
+        'css!charts/charts.css',
+        'css!lib/datatables/media/css/jquery.dataTables.min.css',
+        'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
+        'css!lib/colorpicker/jquery.colorpicker.css'
+    ]);
 });
