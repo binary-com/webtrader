@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
+define(["jquery", "datatables", 'charts/charts'], function ($) {
 
     var table = undefined, indicatorsJSON = undefined;
 

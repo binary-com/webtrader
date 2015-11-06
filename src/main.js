@@ -25,7 +25,6 @@ requirejs.config({
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
         'js-cookie':'lib/js-cookie/src/js.cookie',
-        'loadCSS': 'lib/loadcss/loadCSS',
         'gtm': 'gtm/gtm'
     },
     map: {
@@ -65,7 +64,7 @@ requirejs.config({
     }
 });
 
-require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
+require(["jquery", "jquery-ui", "modernizr", "common/util"], function( $ ) {
 
     "use strict";
 

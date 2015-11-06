@@ -125,7 +125,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
     return {
         init: function( _callback ) {
             if ($.isEmptyObject(markets)) {
-                loadCSS("instruments/instruments.css");
+                require(["css!instruments/instruments.css"]);
                 /* cache the result of trading_times call, because assetIndex needs the same data */
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })

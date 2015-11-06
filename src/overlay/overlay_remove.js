@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS"], function ($) {
+define(["jquery", "datatables"], function ($) {
 
   var table = undefined;
 

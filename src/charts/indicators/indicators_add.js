@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS", "common/util"], function ($) {
+define(["jquery", "datatables", "common/util"], function ($) {
 
     function init( containerIDWithHash, _callback ) {
 
