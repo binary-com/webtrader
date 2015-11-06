@@ -3,7 +3,7 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util'], function ($, navigation) {
+define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, navigation) {
 
     var totalChartsPerRow, totalRows, totalCharts_renderable;
 
@@ -266,7 +266,6 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         init: function( $parentObj ) {
             calculateChartsPerScreen();
 
-            loadCSS("windows/windows.css");
             $menuUL = $parentObj.find("ul");
 
             tileObject = $menuUL.find(".tile");

@@ -19,7 +19,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             this.dashStyle = dashStyle;
         };
 
-        $.get("charts/indicators/atr/atr_level.html" , function ( $html ) {
+        require(['text!charts/indicators/atr/atr_level.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

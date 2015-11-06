@@ -7,11 +7,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     var assetWin = null;
 
     function init(li) {
-        loadCSS("assetindex/assetIndex.css");
+        require(['css!assetindex/assetIndex.css']);
         li.click(function () {
             if (!assetWin) {
                 assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750 });
-                $.get('assetindex/assetIndex.html', initAssetWin);
+                require(['text!assetindex/assetIndex.html'], initAssetWin);
             }
             assetWin.dialog('open'); /* bring winodw to front */
         });

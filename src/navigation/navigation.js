@@ -1,6 +1,6 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery"], function ($) {
+define(["jquery","css!navigation/navigation.css"], function ($) {
 	"use strict";
 
 	$(window).resize(function () {
@@ -167,7 +167,7 @@ define(["jquery"], function ($) {
 
 	return {
 		init: function(_callback) {
-			$.get("navigation/navigation.html", function ($html) {
+			require(['text!navigation/navigation.html'], function ($html) {
 				$("body").prepend($html);
 
 				$("#nav-toggle").on("click", function (e) {
