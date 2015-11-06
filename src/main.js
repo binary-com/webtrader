@@ -65,7 +65,7 @@ requirejs.config({
     }
 });
 
-require(["jquery", "jquery-ui", "modernizr", "common/util"], function( $ ) {
+require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     "use strict";
 
@@ -74,6 +74,14 @@ require(["jquery", "jquery-ui", "modernizr", "common/util"], function( $ ) {
       window.location.href = 'unsupported_browsers.html';
       return;
     }
+
+    /* Trigger *Parallel* loading of big .js files,
+       Suppose moudle X depends on lib A and module Y depends on lib B,
+       When X loads it will trigger loading Y, which results in loading A and B Sequentially,
+       
+       We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
+    require(['jquery-ui', 'highstock', 'lokijs']);
+
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
@@ -116,7 +124,7 @@ require(["jquery", "jquery-ui", "modernizr", "common/util"], function( $ ) {
                 });
         }
 
-        require(["navigation/navigation"], function (navigation) {
+        require(["navigation/navigation","jquery-ui"], function (navigation) {
             navigation.init(registerMenusCallback);
 
             /* initialize the top menu because other dialogs
