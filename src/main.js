@@ -30,7 +30,8 @@ requirejs.config({
     },
     map: {
         '*': {
-            'css': 'lib/require-css/css.min'
+            'css': 'lib/require-css/css.min',
+            'text': 'lib/text/text.js'
         }
     },
     "shim": {
@@ -74,12 +75,10 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
       return;
     }
 
-    // load jq-ui & growl stylesheets.
-
-
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
 
+    // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);
 
     function handle_affiliate_route() {

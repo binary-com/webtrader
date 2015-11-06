@@ -75,6 +75,7 @@ module.exports = function (grunt) {
                             'requirejs/require.js',
                             'js-cookie/src/js.cookie.js',
                             'require-css/css.min.js',
+                            'text/text.js',
                             'underscore/underscore-min.js',
                             '!**/**/favicon.ico'
                         ], 
