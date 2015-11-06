@@ -33,6 +33,7 @@ requirejs.config({
             'text': 'lib/text/text.js'
         }
     },
+    waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
         "jquery-ui": {
             deps: ["jquery"]
