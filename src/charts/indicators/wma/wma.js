@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/wma/wma.css');
 
-        $.get("charts/indicators/wma/wma.html" , function ( $html ) {
+        require(['text!charts/indicators/wma/wma.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

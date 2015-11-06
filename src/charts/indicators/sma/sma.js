@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/sma/sma.css');
 
-        $.get("charts/indicators/sma/sma.html" , function ( $html ) {
+        require(['text!charts/indicators/sma/sma.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

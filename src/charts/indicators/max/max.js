@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/max/max.css');
 
-        $.get("charts/indicators/max/max.html" , function ( $html ) {
+        require(['text!charts/indicators/max/max.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

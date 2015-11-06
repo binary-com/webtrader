@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/min/min.css');
 
-        $.get("charts/indicators/min/min.html" , function ( $html ) {
+        require(['text!charts/indicators/min/min.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

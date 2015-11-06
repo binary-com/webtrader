@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/ema/ema.css');
 
-        $.get("charts/indicators/ema/ema.html" , function ( $html ) {
+        require(['text!charts/indicators/ema/ema.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

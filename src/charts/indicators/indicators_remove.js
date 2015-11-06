@@ -8,7 +8,7 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/indicators_remove.html", function($html) {
+        require(['text!charts/indicators/indicators_remove.html'], function($html) {
             $html = $($html);
             table = $html.hide().find('table').DataTable({
                 paging: false,
@@ -60,7 +60,7 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
                 }]
             });
 
-            $.get('charts/indicators/indicators.json', function (jsonData) {
+            require(['text!charts/indicators/indicators.json'], function (jsonData) {
                 indicatorsJSON = jsonData;
                 if (typeof _callback == "function") {
                     _callback(containerIDWithHash);

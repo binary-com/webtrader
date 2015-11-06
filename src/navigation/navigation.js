@@ -167,7 +167,7 @@ define(["jquery","css!navigation/navigation.css"], function ($) {
 
 	return {
 		init: function(_callback) {
-			$.get("navigation/navigation.html", function ($html) {
+			require(['text!navigation/navigation.html'], function ($html) {
 				$("body").prepend($html);
 
 				$("#nav-toggle").on("click", function (e) {

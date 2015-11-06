@@ -21,7 +21,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
         };
         var defaultLevels = [];
 
-        $.get("charts/indicators/willr/willr.html" , function ( $html ) {
+        require(['text!charts/indicators/willr/willr.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

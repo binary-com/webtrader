@@ -6,7 +6,7 @@ define(["jquery", "datatables", "loadCSS", "common/util"], function ($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/draw/chartobject_add.html", function($html) {
+        require(['text!charts/draw/chartobject_add.html'], function($html) {
             $html = $($html);
             var table = $html.hide().find('table').DataTable({
                 paging: false,

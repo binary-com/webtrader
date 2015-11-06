@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/typprice/typprice.css');
 
-        $.get("charts/indicators/typprice/typprice.html" , function ( $html ) {
+        require(['text!charts/indicators/typprice/typprice.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/tema/tema.css');
 
-        $.get("charts/indicators/tema/tema.html" , function ( $html ) {
+        require(['text!charts/indicators/tema/tema.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

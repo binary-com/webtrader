@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/cdldojistar/cdldojistar.html" , function ( $html ) {
+        require(['text!charts/indicators/cdldojistar/cdldojistar.html'], function ( $html ) {
 
             $html = $($html);
             //$html.hide();

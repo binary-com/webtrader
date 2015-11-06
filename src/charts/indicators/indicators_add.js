@@ -6,7 +6,7 @@ define(["jquery", "datatables", "loadCSS", "common/util"], function ($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/indicators_add.html", function($html) {
+        require(['text!charts/indicators/indicators_add.html'], function($html) {
             $html = $($html);
             var table = $html.hide().find('table').DataTable({
                 paging: false,
@@ -50,7 +50,7 @@ define(["jquery", "datatables", "loadCSS", "common/util"], function ($) {
 
             table.clear();
 
-            $.get('charts/indicators/indicators.json', function (indicatorsJSON) {
+            require(['text!charts/indicators/indicators.json'], function (indicatorsJSON) {
 
                 $.each(JSON.parse(indicatorsJSON), function (key, value) {
                     $(table.row.add([value.long_display_name]).draw().node())

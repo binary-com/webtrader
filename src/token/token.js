@@ -10,7 +10,7 @@ define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
 
     function show() {
         if (tokenWin == null) { /* TODO: try to laod html files with requriejs instead */
-            $.get('token/token.html', function ($html) {
+            require(['text!token/token.html'], function ($html) {
                 $html = $($html);
                 tokenWin = windows.createBlankWindow($html, {
                     width: 605,

@@ -19,7 +19,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             this.dashStyle = dashStyle;
         };
 
-        $.get("charts/indicators/rocr/rocr_level.html" , function ( $html ) {
+        require(['text!charts/indicators/rocr/rocr_level.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

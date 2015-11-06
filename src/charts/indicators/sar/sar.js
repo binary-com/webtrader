@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/sar/sar.css');
 
-        $.get("charts/indicators/sar/sar.html" , function ( $html ) {
+        require(['text!charts/indicators/sar/sar.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

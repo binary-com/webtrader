@@ -91,7 +91,7 @@ define(["jquery", "datatables", "loadCSS"], function ($) {
             }
             else {
 
-                $.get("overlay/overlay_add.html", function($html) {
+                require(['text!overlay/overlay_add.html'], function($html) {
                     $html = $($html);
                     $html.hide();
                     $html.appendTo("body");

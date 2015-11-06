@@ -24,7 +24,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
     function initProfitWin($html) {
         profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 900 });
-        $.get('profittable/profitTable.html', function ($html) {
+        require(['text!profittable/profitTable.html'], function ($html) {
 
             $html = $($html);
             $html.appendTo(profitWin);

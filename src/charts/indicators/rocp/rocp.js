@@ -21,7 +21,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
         };
         var defaultLevels = [];
 
-        $.get("charts/indicators/rocp/rocp.html" , function ( $html ) {
+        require(['text!charts/indicators/rocp/rocp.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

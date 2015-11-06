@@ -13,7 +13,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
         loadCSS('charts/indicators/trima/trima.css');
 
-        $.get("charts/indicators/trima/trima.html" , function ( $html ) {
+        require(['text!charts/indicators/trima/trima.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

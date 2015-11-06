@@ -21,7 +21,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'dash'), new Level(70, 'red', 1, 'dash')];
 
-        $.get("charts/indicators/rsi/rsi.html" , function ( $html ) {
+        require(['text!charts/indicators/rsi/rsi.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
