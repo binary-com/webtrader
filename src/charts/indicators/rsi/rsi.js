@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/rsi/rsi.css');
+        require(['css!charts/indicators/rsi/rsi.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -21,7 +21,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'dash'), new Level(70, 'red', 1, 'dash')];
 
-        $.get("charts/indicators/rsi/rsi.html" , function ( $html ) {
+        require(['text!charts/indicators/rsi/rsi.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

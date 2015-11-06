@@ -25,8 +25,15 @@ requirejs.config({
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
         'js-cookie':'lib/js-cookie/src/js.cookie',
-        'loadCSS': 'lib/loadcss/loadCSS'
+        'gtm': 'gtm/gtm'
     },
+    map: {
+        '*': {
+            'css': 'lib/require-css/css.min',
+            'text': 'lib/text/text.js'
+        }
+    },
+    waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
         "jquery-ui": {
             deps: ["jquery"]
@@ -51,11 +58,14 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
+        },
+        "gtm": {
+            deps: ['jquery']
         }
     }
 });
 
-require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
+require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     "use strict";
 
@@ -65,11 +75,19 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
       return;
     }
 
+    /* Trigger *Parallel* loading of big .js files,
+       Suppose moudle X depends on lib A and module Y depends on lib B,
+       When X loads it will trigger loading Y, which results in loading A and B Sequentially,
+       
+       We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
+    require(['jquery-ui', 'highstock', 'lokijs']);
+
+
+    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
+    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
+
     // load jq-ui & growl stylesheets.
-    loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
-    loadCSS('lib/growl/stylesheets/jquery.growl.css');
-    // load main stylesheet.
-    loadCSS("main.css");
+    require(['css!lib/growl/stylesheets/jquery.growl.css']);
 
     function handle_affiliate_route() {
         require(['affiliates/affiliates'], function(affiliates) {
@@ -114,7 +132,7 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                 });
         }
 
-        require(["navigation/navigation"], function (navigation) {
+        require(["navigation/navigation","jquery-ui"], function (navigation) {
             navigation.init(registerMenusCallback);
 
             /* initialize the top menu because other dialogs
@@ -141,28 +159,18 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         });
     }
 
-    onloadCSS(loadCSS("navigation/navigation.css"), function () {
-        //All dependencies loaded
-        $(window).load(function () {
 
-            var isAffiliate = getParameterByName("affiliates") || false;
+    if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
+        handle_affiliate_route();
+    else //Our chart is accessed directly
+        handle_normal_route();
 
-            //Our chart is accessed by other applications
-            if (isAffiliate == 'true') {
-                handle_affiliate_route();
-            }
-            //Our chart is accessed directly
-            else {
-                handle_normal_route();
-            }
-
-            //Now load all other CSS asynchronously
-            loadCSS("lib/hamburger.css");
-            loadCSS('charts/charts.css');
-            loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-            loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
-            loadCSS("lib/colorpicker/jquery.colorpicker.css");
-        });
-
-    });
+    //load all other .css files asynchronously
+    require([
+        'css!lib/hamburger.css',
+        'css!charts/charts.css',
+        'css!lib/datatables/media/css/jquery.dataTables.min.css',
+        'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
+        'css!lib/colorpicker/jquery.colorpicker.css'
+    ]);
 });

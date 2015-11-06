@@ -3,7 +3,9 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
+define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, navigation) {
+
+    var totalChartsPerRow, totalRows, totalCharts_renderable;
 
     var closeAllObject = null;
     var dialogCounter = 0;
@@ -45,15 +47,25 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
             var referenceObjectForPositioning = window;
 
-            $(".chart-dialog").each(function() {
-                var leftShift = startMargin;
-                if (cellCount > 1) {
-                    leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
+            var chartCount = $(".chart-dialog").length;
+            $(".chart-dialog").each(function () {
+                var leftShift;
+                var topShift = topMargin;
+
+                // if charts can fit into a single row
+                if(chartCount <= totalChartsPerRow)
+                    leftShift = ($(window).width() - (minWidth * chartCount)) / 2;
+                else {
+                    // we have 2 rows or more
+                    leftShift = ($(window).width() - (minWidth * totalChartsPerRow)) / 2;
                 }
 
-                var topShift = topMargin + (minHeight * (rowCount - 1));
+                if (cellCount > 1) {
+                    leftShift = leftShift + (minWidth * (cellCount - 1)) + ((cellCount - 1) * 20);
+                }
+
                 if (rowCount > 1) {
-                    topShift = topShift + ((rowCount - 1) * 20);
+                    topShift = topMargin + (minHeight * (rowCount - 1) + ((rowCount - 1) * 20));
                 }
 
                 referenceObjectForPositioning = window;
@@ -254,7 +266,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         init: function( $parentObj ) {
             calculateChartsPerScreen();
 
-            loadCSS("windows/windows.css");
             $menuUL = $parentObj.find("ul");
 
             tileObject = $menuUL.find(".tile");
@@ -369,6 +380,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 blankWindow.dialog('moveToTop')
                      .parent().effect("bounce", { times: 2, distance: 15 }, 450);
             });
+
+            navigation.updateListItemToggles();
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
                 li.remove();

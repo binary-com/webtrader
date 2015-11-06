@@ -2,13 +2,13 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
+define(["jquery", "datatables", 'charts/charts'], function ($) {
 
     var table = undefined, indicatorsJSON = undefined;
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/indicators_remove.html", function($html) {
+        require(['text!charts/indicators/indicators_remove.html'], function($html) {
             $html = $($html);
             table = $html.hide().find('table').DataTable({
                 paging: false,
@@ -27,7 +27,9 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
                 buttons: [{
                     text: "Remove Selected",
                     click: function() {
-                      var containerIDWithHash = $(".indicator_remove_dialog").data('refererChartID');
+                      var rowCount = table.rows('.selected').data().length;
+                      if(rowCount > 0) {
+                        var containerIDWithHash = $(".indicator_remove_dialog").data('refererChartID');
                         table
                             .rows( '.selected' )
                             .nodes()
@@ -44,7 +46,11 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
                                     }
                                 });
                             });
+
                         $( ".indicator_remove_dialog" ).dialog('close');
+                      } else {
+                        $.growl.error({ message: "Please select indicators to remove" });
+                      }
                     }
                 },{
                     text: "Cancel",
@@ -54,7 +60,7 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
                 }]
             });
 
-            $.get('charts/indicators/indicators.json', function (jsonData) {
+            require(['text!charts/indicators/indicators.json'], function (jsonData) {
                 indicatorsJSON = jsonData;
                 if (typeof _callback == "function") {
                     _callback(containerIDWithHash);

@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/bop/bop.css');
+        require(['css!charts/indicators/bop/bop.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -21,7 +21,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
         };
         var defaultLevels = [];
 
-        $.get("charts/indicators/bop/bop.html" , function ( $html ) {
+        require(['text!charts/indicators/bop/bop.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

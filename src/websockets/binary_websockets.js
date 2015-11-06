@@ -8,14 +8,36 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 
-    function WebtraderWebsocket() {
-        var api_url = 'wss://www.binary.com/websockets/v3';
-        var ws = new ReconnectingWebSocket(api_url, null, { debug: false, timeoutInterval: 5400});
+    var connect = function () {
+        var api_url = 'wss://www.binary.com/websockets/v3?l=EN';
+        var ws = new ReconnectingWebSocket(api_url, null, { debug: false, timeoutInterval: 2500 });
 
-        ws.onclose = function () {
-            is_authenitcated_session = false;
-        }
+        ws.addEventListener('open', onopen);
+        ws.addEventListener('close', onclose);
+        ws.addEventListener('message', onmessage);
+
         return ws;
+    }
+
+    var onclose = function () {
+        is_authenitcated_session = false;
+        /* the connection is closed, resubscrible to tick streaming */
+        require(['charts/chartingRequestMap'], function (map) {
+            Object.keys(map).forEach(function (key) {
+                var req = map[key];
+                var instrumentCode = req && req.chartIDs && req.chartIDs[0] && req.chartIDs[0].instrumentCode;
+
+                /* resubscribe */
+                if (req && instrumentCode)
+                    api.send({ ticks: instrumentCode, passthrough: { instrumentCdAndTp: key } })
+                        .then(function (data) {
+                            req.tickStreamingID = data.tick.id;
+                        })
+                        .catch(function (err) {
+                            console.error(err);
+                        });
+            });
+        });
     }
 
     var callbacks = {};
@@ -23,12 +45,11 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
     var buffered_sends = [];
     var unresolved_promises = {};
     var cached_promises = {}; /* requests that have been cached */
-    var socket = new WebtraderWebsocket();
     var is_connected = function () {
         return socket && socket.readyState === 1;
     }
    
-    socket.onopen = function () {
+    var onopen = function () {
         /* send buffered sends */
         while (buffered_sends.length > 0) {
             socket.send(JSON.stringify(buffered_sends.shift()));
@@ -36,8 +57,9 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
         while (buffered_execs.length > 0)
             buffered_execs.shift()();
     }
+
     /* execute buffered executes */
-    socket.onmessage = function (message) {
+    var onmessage = function (message) {
         var data = JSON.parse(message.data);
 
         (callbacks[data.msg_type] || []).forEach(function (cb) {
@@ -55,8 +77,8 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
         }
     }
 
+    var socket = connect();
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
-    require(['websockets/connection_check']); // require connection_check to handle pings.
 
     /* whether the given request needs authentication or not */
     var needs_authentication = function (data) {

@@ -64,7 +64,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
         };
 
         if($("#instrumentsDialog").length == 0)
-            $.get("instruments/instruments.html", function ($html) {
+            require(['text!instruments/instruments.html'], function ($html) {
                 $($html).css("display", "none").appendTo("body");
                 $("#standardPeriodsButtonContainer").find("button")
                     .click(function() {
@@ -125,7 +125,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
     return {
         init: function( _callback ) {
             if ($.isEmptyObject(markets)) {
-                loadCSS("instruments/instruments.css");
+                require(["css!instruments/instruments.css"]);
                 /* cache the result of trading_times call, because assetIndex needs the same data */
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
@@ -133,7 +133,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
                             var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
 
                             markets = menu.extractMenu(data, {
-                                filter: function (sym) { return sym.feed_license !== 'realtime'; }
+                                filter: function (sym) { return sym.feed_license !== 'chartonly'; }
                             });
 
                             markets = menu.sortMenu(markets);
