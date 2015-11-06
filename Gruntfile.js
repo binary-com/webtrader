@@ -74,6 +74,7 @@ module.exports = function (grunt) {
                             'es6-promise/promise.min.js',
                             'requirejs/require.js',
                             'js-cookie/src/js.cookie.js',
+                            'require-css/css.min.js',
                             'underscore/underscore-min.js',
                             '!**/**/favicon.ico'
                         ], 

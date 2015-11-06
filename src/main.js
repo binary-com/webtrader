@@ -28,6 +28,11 @@ requirejs.config({
         'loadCSS': 'lib/loadcss/loadCSS',
         'gtm': 'gtm/gtm'
     },
+    map: {
+        '*': {
+            'css': 'lib/require-css/css.min'
+        }
+    },
     "shim": {
         "jquery-ui": {
             deps: ["jquery"]
@@ -71,15 +76,11 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
 
     // load jq-ui & growl stylesheets.
 
-    onloadCSS(
-        loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css"),
-        function () {
-            /* main.css overrides some classes in jquery-ui.css,
-               make sure to load it after jquery-ui.css file */
-            loadCSS("main.css");
-        });
 
-    loadCSS('lib/growl/stylesheets/jquery.growl.css');
+    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
+    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
+
+    require(['css!lib/growl/stylesheets/jquery.growl.css']);
 
     function handle_affiliate_route() {
         require(['affiliates/affiliates'], function(affiliates) {
@@ -143,7 +144,8 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         });
     }
 
-    onloadCSS(loadCSS("navigation/navigation.css"), function () {
+    require(['css!navigation/navigation.css'], function() {
+    //onloadCSS(loadCSS("navigation/navigation.css"), function () {
         //All dependencies loaded
         //TODO find out the consequence of not having the following line
         //This is causing very slow loading of charts, sometimes not loading at all
