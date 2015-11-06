@@ -67,7 +67,6 @@ module.exports = function (grunt) {
                             'jquery/dist/jquery.min.js',
                             'jquery.timers/jquery.timers.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
-                            'loadcss/loadCSS.js',
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
