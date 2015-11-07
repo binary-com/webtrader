@@ -115,6 +115,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     elem.click(); 
                 });
 
+            //Register async loading of portfolio window 
+            load_ondemand($navMenu.find("a.portfolio"), 'click', 'loading portfolio ...', 'portfolio/portfolio',
+                function (portfolio) {
+                    var elem = $navMenu.find("a.portfolio");
+                    portfolio.init(elem);
+                    elem.click(); 
+                });
+
             //Register async loading of window profit-table
             load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
                 function (profitTable) {
