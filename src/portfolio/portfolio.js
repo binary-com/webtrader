@@ -139,7 +139,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                                 /* show a tooltip on indicative column mouseover */
                                 td = $('#' + id).find('td:nth-child(4)');
                                 td.attr('title', '').tooltip({ content: err.message });
-                                //console.error(err);
+                                registered_contracts[id] = false;
                             });
                     }
                 }
