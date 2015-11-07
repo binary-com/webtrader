@@ -2,10 +2,11 @@
  * Created by amin on 10/9/15.
  */
 
-define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables','jquery-growl'], function ($, windows, liveapi) {
+define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui', 'datatables','jquery-growl'], function ($, windows, liveapi) {
 
     var portfolioWin = null;
     var table = null;
+    var registered_contracts = {};
 
     function init(li) {
         li.click(function () {
@@ -43,8 +44,8 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
         liveapi.send({ balance: 1 })
             .then(function (data) {
                 portfolioWin = windows.createBlankWindow($('<div/>'), { title:'Portfolio', width: 700 });
-                var currency = data.balance[0].currency;
-                var balance = data.balance[0].balance;
+                var currency = data.balance.currency;
+                var balance = data.balance.balance;
                 var header = portfolioWin.parent().find('.ui-dialog-title').css('width', '25%');
 
                 $('<span class="span-in-dialog-header" />')
@@ -112,16 +113,22 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets', 'datatables
                 table.api().draw();
                 processing_msg.hide();
 
+                var register = function (contract) {
+                    var id = contract.contract_id;
+                    if (registered_contracts[id] !== true) {
+                        registered_contracts[id] = true;
+                        liveapi.send({ proposal_open_contract: 1, contract_id: id })
+                            .catch(function (err) {
+                                console.error(err);
+
+                                /* show a tooltip on indicative column mouseover */
+                                td = $('#' + id).find('td:nth-child(4)');
+                                td.attr('title', '').tooltip({ content: err.message });
+                            });
+                    }
+                }
                 /* register to the stream of proposal_open_contract to get indicative values */
-                contracts.forEach(function (contract) {
-                    liveapi
-                        .proposal_open_contract
-                        .register(contract.contract_id)
-                        .catch(function (err) {
-                            if(!err.already_registered)
-                               console.error(err); // TODO: find a reasonable alternative
-                         });
-                });
+                contracts.forEach(register);
             })
             .catch(function (err) {
                 console.error(err);

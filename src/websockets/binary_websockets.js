@@ -198,19 +198,7 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
             if (needs_authentication(data))
                 return send_authenticated_request(data);
             return send_request(data);
-        },
-
-        proposal_open_contract: {
-            registered: {},
-            /* register a contract if not already registered */
-            register: function (contract_id) {
-                if (this.registered[contract_id] === true)
-                    return Promise.reject({ message: 'already registered', already_registered: true });
-                this.registered[contract_id] = true;
-
-                return api.send({ proposal_open_contract: 1, contract_id: contract_id });
-            }
-        },
+        }
     }
     return api;
 });
