@@ -16,3 +16,7 @@
         box-shadow: 3px -1px 8px 1pt lightblue;
         outline: 0;
     }
+
+.asset-index-selectmenu span.ui-selectmenu-text {
+    padding: 0.4em 0.5em 0.4em 0.5em
+}

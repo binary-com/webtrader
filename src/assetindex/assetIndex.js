@@ -7,11 +7,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     var assetWin = null;
 
     function init(li) {
-        loadCSS("assetindex/assetIndex.css");
+        require(['css!assetindex/assetIndex.css']);
         li.click(function () {
             if (!assetWin) {
                 assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750 });
-                $.get('assetindex/assetIndex.html', initAssetWin);
+                require(['text!assetindex/assetIndex.html'], initAssetWin);
             }
             assetWin.dialog('open'); /* bring winodw to front */
         });
@@ -81,8 +81,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                             submarket_names.update_list(list);
                             updateTable(market_names.val(), submarket_names.val());
                         },
-                        width: '150px'
+                        width: '120px'
                     });
+                market_names.selectmenu('widget').addClass('asset-index-selectmenu');
 
                 var submarket_names = windows
                     .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
@@ -91,8 +92,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         changed: function (val) {
                             updateTable(market_names.val(), submarket_names.val());
                         },
-                        width: '150px'
+                        width: '135px'
                     });
+                submarket_names.selectmenu('widget').addClass('asset-index-selectmenu');
 
                 updateTable(market_names.val(),submarket_names.val());
                 processing_msg.hide();
