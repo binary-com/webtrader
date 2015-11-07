@@ -43,7 +43,28 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     function initPortfolioWin() {
         liveapi.send({ balance: 1 })
             .then(function (data) {
-                portfolioWin = windows.createBlankWindow($('<div/>'), { title:'Portfolio', width: 700 });
+                var portfolio_refresh_interval = null;
+                portfolioWin = windows.createBlankWindow($('<div/>'), {
+                    title: 'Portfolio',
+                    width: 700,
+                    close: function () {
+                        portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
+                        portfolio_refresh_interval = null;
+
+                        liveapi.send({ forget_all: 'proposal_open_contract' })
+                                .then(function () {
+                                    registered_contracts = {};
+                                })
+                                .catch(function (err) {
+                                    console.error(err.message);
+                                });
+                    },
+                    open: function () {
+                        /* update table every 1 minute */
+                        update_table();
+                        portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                    }
+                });
                 var currency = data.balance.currency;
                 var balance = data.balance.balance;
                 var header = portfolioWin.parent().find('.ui-dialog-title').css('width', '25%');
@@ -71,10 +92,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 table.parent().addClass('hide-search-input');
 
                 portfolioWin.dialog('open');
-
-                /* update table every 1 minute */
-                update_table();
-                setInterval(update_table, 60 * 1000); // TODO: ask arnab if needs to removeInterval(...) on window close.
             })
             .catch(function (err) {
                 console.error(err);
@@ -89,13 +106,13 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         var processing_msg = $('#' + table.attr('id') + '_processing').show();
         liveapi.send({ portfolio: 1 })
             .then(function (data) {
-                var contracts = (data.portfolio && data.portfolio.contracts)
-                    || [
-                        {
-                            symbol: '', shortcode: '', contract_id: '', longcode: '', expiry_time: 0, currency: '',
-                            date_start: 0, purchase_time: 0, buy_price: '', contract_type: '', payout: ''
-                        }
-                    ];
+                var contracts = (data.portfolio && data.portfolio.contracts);
+                    //|| [
+                    //    {
+                    //        symbol: '', shortcode: '', contract_id: '', longcode: '', expiry_time: 0, currency: '',
+                    //        date_start: 0, purchase_time: 0, buy_price: '', contract_type: '', payout: ''
+                    //    }
+                    //];
 
 
                 var rows = contracts.map(function (contract) {
@@ -119,11 +136,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         registered_contracts[id] = true;
                         liveapi.send({ proposal_open_contract: 1, contract_id: id })
                             .catch(function (err) {
-                                console.error(err);
-
                                 /* show a tooltip on indicative column mouseover */
                                 td = $('#' + id).find('td:nth-child(4)');
                                 td.attr('title', '').tooltip({ content: err.message });
+                                //console.error(err);
                             });
                     }
                 }

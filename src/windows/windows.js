@@ -335,6 +335,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         /* important options: { title:'',
                                 resize:fn, // callabak for dialog resize event
                                 close: fn, // callback for dialog close event
+                                open: fn,  // callback for dialog open event
                                 autoOpen: false,
                                 resizeable:true,
                                 collapsable:true,
