@@ -67,13 +67,14 @@ module.exports = function (grunt) {
                             'jquery/dist/jquery.min.js',
                             'jquery.timers/jquery.timers.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
-                            'loadcss/loadCSS.js',
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
                             'requirejs/require.js',
                             'js-cookie/src/js.cookie.js',
+                            'require-css/css.min.js',
+                            'text/text.js',
                             'underscore/underscore-min.js',
                             '!**/**/favicon.ico'
                         ], 
@@ -105,7 +106,7 @@ module.exports = function (grunt) {
                 src: ['dist/uncompressed/index.html'],
                 overwrite: true,
                 replacements: [{
-                    from: 'v1.0.0', //TODO, not working
+                    from: '<verrsion>', //TODO, not working
                     to: 'v<%=pkg.version%>'
                 }]
             }

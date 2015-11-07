@@ -21,8 +21,7 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
 
         addNewWindow: function( instrumentCode, instrumentName, timePeriod, _callback, type ) {
 
-            $.get("charts/chartWindow.html" , function( $html ) {
-
+            require(['text!charts/chartWindow.html'], function($html) {
                 var options = {
                     title: instrumentName + " (" + timePeriod + ")",
                     close: function () {
