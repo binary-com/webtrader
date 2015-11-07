@@ -75,22 +75,22 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 /* refresh the table with result of { profit_table:1 } from WS */
                 var refresh = function (data) {
                     var transactions = (data.profit_table && data.profit_table.transactions) || [];
-                    var date_to_string = function (epoch) {
+                    var date_to_utc_string = function (epoch) {
                         var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
-                         return d.getFullYear() + "-" +
-                                ("00" + (d.getMonth() + 1)).slice(-2) + "-" +
-                                ("00" + d.getDate()).slice(-2) + " " +
-                                ("00" + d.getHours()).slice(-2) + ":" +
-                                ("00" + d.getMinutes()).slice(-2) + ":" +
-                                ("00" + d.getSeconds()).slice(-2);
+                         return d.getUTCFullYear() + "-" +
+                                ("00" + (d.getUTCMonth() + 1)).slice(-2) + "-" +
+                                ("00" + d.getUTCDate()).slice(-2) + " " +
+                                ("00" + d.getUTCHours()).slice(-2) + ":" +
+                                ("00" + d.getUTCMinutes()).slice(-2) + ":" +
+                                ("00" + d.getUTCSeconds()).slice(-2);
                     };
                     var rows = transactions.map(function (trans) {
                         return [
-                            date_to_string(trans.purchase_time),
+                            date_to_utc_string(trans.purchase_time),
                             trans.contract_id,
                             trans.longcode,
                             trans.buy_price,
-                            date_to_string(trans.sell_time),
+                            date_to_utc_string(trans.sell_time),
                             trans.sell_price,
                             (parseFloat(trans.buy_price) - parseFloat(trans.sell_price)).toFixed(2) /* 2 decimal points */
                         ];
