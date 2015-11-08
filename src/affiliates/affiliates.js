@@ -23,11 +23,11 @@ define(['jquery', "websockets/binary_websockets", 'common/util'], function( $, l
 	                if (!$.isEmptyObject(_instrumentJSON)) {
 	                    var instrumentCode = getParameterByName('instrument');
 	                    var instrumentObject = getObjects(_instrumentJSON, 'symbol', instrumentCode);
-	                    if (instrumentObject && instrumentObject.length > 0 && instrumentObject[0].symbol && instrumentObject[0].name) {
+	                    if (instrumentObject && instrumentObject.length > 0 && instrumentObject[0].symbol && instrumentObject[0].display_name) {
 	                        // validate the parameters here.
 	                        if (validateParameters(instrumentObject[0])) {
 	                            var instrumentCode = instrumentObject[0].symbol;
-	                            var instrumentName = instrumentObject[0].name;
+	                            var instrumentName = instrumentObject[0].display_name;
 	                            require(["charts/charts"], function(charts) {
 	                                charts.drawChart("#" + newTabId + "_chart", instrumentCode, instrumentName, timePeriod, type);
 	                            });

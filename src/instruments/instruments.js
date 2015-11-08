@@ -129,11 +129,10 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
                 /* cache the result of trading_times call, because assetIndex needs the same data */
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                    .then(function (markets) {
+                    .then(function (data) {
+                            markets = data;
                             var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
-                            console.log('Before : ', markets);
                             menu.sortMenu(markets);
-                            console.log('After : ', markets);
                             menu.refreshMenu(rootUL,markets,onMenuItemClick);
                         }
                     ).catch(console.error.bind(console));
