@@ -283,7 +283,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 }
             });
 
-            require(["charts/chartWindow","websockets/binary_websockets"], function (chartWindowObj,liveapi) {
+            require(["charts/chartWindow","websockets/binary_websockets", "common/menu"], function (chartWindowObj,liveapi, menu) {
 
 
                 //Attach click listener for tile menu
@@ -295,22 +295,22 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 var totalCharts_renderable = totalChartsPerRow * totalRows;
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                    .then(function (data) {
-                        var markets = data.trading_times.markets;
+                    .then(function (markets) {
+                        markets = menu.extractChartableMarkets(markets);
                         /* return a random element of an array */
                         var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
                         var timePeriods = ['2h', '4h', '8h', '1d'];
                         var chartTypes = ['candlestick', 'line', 'ohlc', 'spline'];
                         for (var inx = 0; inx < totalCharts_renderable; ++inx){
                             var submarkets = rand(markets).submarkets;
-                            var symbols = rand(submarkets).symbols;
+                            var symbols = rand(submarkets).instruments;
                             var sym = rand(symbols);
                             var timepreiod = rand(timePeriods);
                             var chart_type = rand(chartTypes);
 
                             chartWindowObj
                                 .addNewWindow(
-                                    sym.symbol, sym.name, timepreiod,
+                                    sym.symbol, sym.display_name, timepreiod,
                                     tileAction,/*Trigger tile action */ 
                                     chart_type);
                         }

@@ -5,23 +5,6 @@
 define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigation) {
     'use strict';
 
-    function sortMarkets(data) {
-        if($.isArray(data)) {
-            data.sort(sortAlphaNum('display_name'));
-
-            // iterate array items.
-            $.each(data, function (i, item) {
-                // iterame item properties.
-                $.each(item, function (i, prop) {
-                    if($.isArray(prop)) {
-                        sortMarkets(prop);
-                    }
-                });
-            });
-        }
-        return data;
-    }
-
     /* recursively creates menu into root element, set on_click to register menu item clicks */
     function refreshMenu( root, data , on_click) {
 
@@ -61,7 +44,12 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                 filter: function(sym) { return sym.feed_license !== 'realtime'; }
             }
         }*/
-        extractMenu: function (trading_times_data, options) {
+        extractChartableMarkets: function(trading_times_data) {
+            return this.extractFilteredMarkets(trading_times_data, {
+                            filter: function (sym) { return sym.feed_license !== 'chartonly'; }
+                        }) || [];
+        },
+        extractFilteredMarkets: function (trading_times_data, options) {
             var markets = trading_times_data.trading_times.markets.map(function (m) {
                 var market = {
                     name: m.name,
@@ -79,7 +67,11 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                         return {
                             symbol: sym.symbol,
                             display_name: sym.name,
-                            delay_amount: sym.delay_amount || 0
+                            delay_amount: sym.delay_amount || 0,
+                            events: sym.events,
+                            times: sym.times,
+                            settlement: sym.settlement,
+                            feed_license: sym.feed_license || 'realtime'
                         };
                     });
                     return submarket;
@@ -90,7 +82,26 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
             return markets;
         },
 
-        sortMenu: sortMarkets,
+        sortMenu: function(markets) {
+            var sort_fn = sortAlphaNum('display_name');
+            //Sort market
+            if($.isArray(markets)) {
+                markets.sort(sort_fn);
+                markets.forEach(function (market) {
+                    if($.isArray(market.submarkets)) {
+                        // Sort sub-markets
+                        market.submarkets.sort(sort_fn);
+                        market.submarkets.forEach(function (submarket) {
+                            if($.isArray(submarket.instruments)) {
+                                // Sort instruments
+                                submarket.instruments.sort(sort_fn);
+                            }
+                        });
+                    }
+                });
+            }
+        },
+
         refreshMenu: refreshMenu
     }
 });

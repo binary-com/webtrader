@@ -78,6 +78,8 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
     }
 
     var socket = connect();
+    //This is triggering asycn loading of tick_handler. 
+    //The module will automatically start working as soon as its loaded
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
 
     /* whether the given request needs authentication or not */

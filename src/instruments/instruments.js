@@ -130,14 +130,9 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (data) {
+                            markets = menu.extractChartableMarkets(data);
                             var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
-
-                            markets = menu.extractMenu(data, {
-                                filter: function (sym) { return sym.feed_license !== 'chartonly'; }
-                            });
-
-                            markets = menu.sortMenu(markets);
-
+                            menu.sortMenu(markets);
                             menu.refreshMenu(rootUL,markets,onMenuItemClick);
                         }
                     ).catch(console.error.bind(console));
