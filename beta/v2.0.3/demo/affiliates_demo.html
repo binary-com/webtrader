@@ -17,9 +17,10 @@
                     var submarket = marketFromResponse.submarkets[submarketIndxx];
                     for (var eachSymbolIndx in submarket.symbols) {
                       var eachSymbol = submarket.symbols[eachSymbolIndx];
-                      $("<option>").append(eachSymbol.name)
-                                   .attr('value', eachSymbol.symbol)
-                                   .appendTo( $('#instruments') );
+                      if (eachSymbol.feed_license !== 'chartonly')
+                        $("<option>").append(eachSymbol.name)
+                                     .attr('value', eachSymbol.symbol)
+                                     .appendTo( $('#instruments') );
                     }
                   }
                 }
