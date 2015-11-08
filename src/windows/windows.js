@@ -283,7 +283,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 }
             });
 
-            require(["charts/chartWindow","websockets/binary_websockets"], function (chartWindowObj,liveapi) {
+            require(["charts/chartWindow","websockets/binary_websockets", "common/menu"], function (chartWindowObj,liveapi, menu) {
 
 
                 //Attach click listener for tile menu
@@ -296,7 +296,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (markets) {
-                        markets = markets || [];
+                        markets = menu.extractChartableMarkets(markets);
                         /* return a random element of an array */
                         var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
                         var timePeriods = ['2h', '4h', '8h', '1d'];

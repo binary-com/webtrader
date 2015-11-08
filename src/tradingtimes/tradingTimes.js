@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "windows/windows","websockets/binary_websockets","datatables","jquery-growl"], function ($,windows,liveapi) {
+define(["jquery", "windows/windows","websockets/binary_websockets","common/menu", "datatables","jquery-growl"], function ($,windows,liveapi, menu) {
 
 
     var table = null;
@@ -120,6 +120,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","datatables",
 
             /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
             var refresh = function (data) {
+                data = menu.extractChartableMarkets(data);
                 var result = processData(data);
 
                 if (market_names == null) {

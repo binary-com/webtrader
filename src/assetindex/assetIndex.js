@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on October 19, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "common/menu", "datatables", "jquery-growl"], function ($, windows, liveapi, menu) {
 
     var table = null;
     var assetWin = null;
@@ -18,7 +18,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     }
 
     function processMarketSubmarkets(markets) {
-        markets = markets || [];
+        markets = menu.extractChartableMarkets(markets);
 
         var ret = {};
         markets.forEach(function (market) {

@@ -72,14 +72,6 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
             delete unresolved_promises[key];
             if (data.error)
                 promise.reject(data.error);
-            else if (data.echo_req.trading_times) {
-                require(['common/menu'], function(menu) {
-                    markets = menu.extractMenu(data, {
-                        filter: function (sym) { return sym.feed_license !== 'chartonly'; }
-                    });
-                    promise.resolve(markets);
-                });
-            }
             else
                 promise.resolve(data);
         }
