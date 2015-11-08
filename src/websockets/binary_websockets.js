@@ -72,12 +72,22 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
             delete unresolved_promises[key];
             if (data.error)
                 promise.reject(data.error);
+            else if (data.echo_req.trading_times) {
+                require(['common/menu'], function(menu) {
+                    markets = menu.extractMenu(data, {
+                        filter: function (sym) { return sym.feed_license !== 'chartonly'; }
+                    });
+                    promise.resolve(markets);
+                });
+            }
             else
                 promise.resolve(data);
         }
     }
 
     var socket = connect();
+    //This is triggering asycn loading of tick_handler. 
+    //The module will automatically start working as soon as its loaded
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
 
     /* whether the given request needs authentication or not */

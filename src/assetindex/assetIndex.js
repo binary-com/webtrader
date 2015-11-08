@@ -17,14 +17,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         });
     }
 
-    function processMarketSubmarkets(data) {
-        var markets = (data.trading_times && data.trading_times.markets) || [];
+    function processMarketSubmarkets(markets) {
+        markets = markets || [];
 
         var ret = {};
         markets.forEach(function (market) {
-            var smarkets = ret[market.name] = {};
+            var smarkets = ret[market.display_name] = {};
             market.submarkets.forEach(function (smarket) {
-                smarkets[smarket.name] = smarket.symbols.map(function (symbol) { return symbol.name; });
+                smarkets[smarket.display_name] = smarket.instruments.map(function (symbol) { return symbol.display_name; });
             });
         });
         return ret;
@@ -74,8 +74,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
                 var market_names = windows
                     .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                        list: Object.keys(markets),
-                        inx: 0,
+                        list: Object.keys(markets), //Keys are the display_name
+                        inx: 1, //Index to select the item in drop down
                         changed: function (val) {
                             var list = Object.keys(markets[val]); /* get list of sub_markets */
                             submarket_names.update_list(list);
