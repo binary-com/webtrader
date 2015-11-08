@@ -106,7 +106,7 @@ module.exports = function (grunt) {
                 src: ['dist/uncompressed/index.html'],
                 overwrite: true,
                 replacements: [{
-                    from: 'v1.0.0', //TODO, not working
+                    from: '<verrsion>', //TODO, not working
                     to: 'v<%=pkg.version%>'
                 }]
             }
