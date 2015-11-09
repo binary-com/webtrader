@@ -102,7 +102,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         options = $.extend({
             title: 'title',
             date: null,
-            changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
+            changed: function () { },
+            cleared: function() { }
         },options);
 
         var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
@@ -207,6 +208,11 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                     year.val(args[0] | 0); year.selectmenu('refresh');
                     month.val((args[1] | 0)-1); month.selectmenu('refresh');
                     day.val(args[2] | 0); update_day();
+                },
+                clear: function () {
+                    year.title('Year');
+                    month.title('Month');
+                    day.title('Day');
                 }
             }
         }
@@ -226,7 +232,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                     $('<button/>', {
                         text: 'Clear',
                         click: function () {
-                            console.warn('Clear clicked');
+                            opts.onclear && opts.onclear();
                             $(input).datepicker('hide');
                         }
                     })
@@ -234,6 +240,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                         .appendTo(button_pane);
                 }, 0);
             };
+
             var options = {
                 showOn: 'both',
                 numberOfMonths: 2,
@@ -275,6 +282,10 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             onchange: function (yyyy_mm_dd) {
                 dropdonws.update(yyyy_mm_dd);
                 options.changed(yyyy_mm_dd);
+            },
+            onclear: function () {
+                dropdonws.clear();
+                options.cleared();
             }
         });
         var dropdonws = addDateDropDowns({
