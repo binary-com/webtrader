@@ -130,6 +130,16 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     profitTable.init(elem);
                     elem.click(); 
                 });
+
+            //Register async loading of statement dialog
+            load_ondemand($navMenu.find("a.statement"), 'click', 'loading Statement Table ...', 'statement/statement',
+                function (statement) {
+                    var elem = $navMenu.find("a.statement");
+                    statement.init(elem);
+                    elem.click(); 
+                });
+
+            $navMenu.find("a.statement").click(); // TODO: remove this line (development only)
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
