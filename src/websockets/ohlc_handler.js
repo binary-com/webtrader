@@ -397,7 +397,10 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap"], function(li
                 });
               }
             console.log(JSON.stringify(requestObject));
-            liveapi.send(requestObject);
+            liveapi.send(requestObject)
+                   .catch(function(err){
+                       console.error(err); // TODO: can we recover?
+                   });
         }
     };
 
