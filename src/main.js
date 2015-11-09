@@ -139,14 +139,13 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
              * will assume an initialized top menu */
             $("#menu").menu();
 
-            //Trigger async loading of instruments and refresh menu
-            require(["instruments/instruments"], function(instrumentsMod) {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.notice({ message: "Loading chart menu!" });
-                    });
+            //Trigger async loading of instruments and trade menu and refresh
+            require(["instruments/instruments", "trade/tradeMenu", "jquery-growl"], function (instruments, trade) {
+                $.growl.notice({ message: "Loading chart and trade menus ..." });
 
-                    instrumentsMod.init();
-                });
+                instruments.init();
+                trade.init();
+            });
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {

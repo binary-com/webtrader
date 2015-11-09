@@ -104,6 +104,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                     }
                 });
             }
+            return markets;
         },
 
         refreshMenu: refreshMenu
