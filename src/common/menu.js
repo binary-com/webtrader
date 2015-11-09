@@ -63,7 +63,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                     var symbols = sm.symbols;
                     if (options && options.filter) /* filter the symbols */
                         symbols = symbols.filter(options.filter);
-                     submarket.instruments = symbols.map(function (sym) {
+                    submarket.instruments = symbols.map(function (sym) {
                         return {
                             symbol: sym.symbol,
                             display_name: sym.name,
@@ -75,6 +75,10 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                         };
                     });
                     return submarket;
+                })
+                /* there might be a submarket (e.g "Americas") which does not have any symbols after filtering */
+                .filter(function (sm) {
+                    return sm.instruments.length > 0;
                 });
                 return market;
             });
