@@ -58,7 +58,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
             
             var refreshTable = function (yyyy_mm_dd) {
-                var processing_msg = $('#' + table.attr('id') + '_processing').show();
+                var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
 
                 var request = {
                     profit_table: 1,
@@ -114,7 +114,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             profitWin.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
-                changed: refreshTable
+                changed: refreshTable,
+                cleared: refreshTable
             });
 
             profitWin.dialog('open');

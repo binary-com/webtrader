@@ -102,7 +102,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         options = $.extend({
             title: 'title',
             date: null,
-            changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
+            changed: function () { },
+            cleared: function() { }
         },options);
 
         var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
@@ -207,6 +208,11 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                     year.val(args[0] | 0); year.selectmenu('refresh');
                     month.val((args[1] | 0)-1); month.selectmenu('refresh');
                     day.val(args[2] | 0); update_day();
+                },
+                clear: function () {
+                    year.title('Year');
+                    month.title('Month');
+                    day.title('Day');
                 }
             }
         }
@@ -215,19 +221,45 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         var addDatePicker = function (opts) {
             var dpicker_input = $("<input type='hidden' />")
                 .insertAfter(header);
-            var dpicker = dpicker_input.datepicker({
+            var add_clear_button = function (input) {
+                /* Run this after date-picker is constructed
+                   Source: stackoverflow.com/questions/4598850 */
+                setTimeout(function () {
+                    var button_pane = $(input)
+                        .datepicker('widget')
+                        .find('.ui-datepicker-buttonpane');
+                        
+                    $('<button/>', {
+                        text: 'Clear',
+                        click: function () {
+                            opts.onclear && opts.onclear();
+                            $(input).datepicker('hide');
+                        }
+                    })
+                        .addClass('ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all')
+                        .appendTo(button_pane);
+                }, 0);
+            };
+
+            var options = {
                 showOn: 'both',
                 numberOfMonths: 2,
                 maxDate: 0,
-                minDate: new Date(2010,0,1),
+                minDate: new Date(2010, 0, 1),
                 dateFormat: 'yy-mm-dd',
                 showAnim: 'drop',
                 showButtonPanel: true,
                 changeMonth: true,
                 changeYear: true,
                 beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' }); },
-                onSelect: function () { $(this).change(); }
-            }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
+                onSelect: function () { $(this).change(); },
+                beforeShow: add_clear_button,
+                onChangeMonthYear:add_clear_button
+            };
+
+            var dpicker = dpicker_input
+                            .datepicker(options)
+                            .datepicker("setDate", opts.date.toISOString().slice(0, 10));
 
             $.datepicker._gotoToday = function (id) {
                 $(id).datepicker('setDate', new Date()).change().datepicker('hide');
@@ -246,9 +278,14 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
 
 
         var dpicker = addDatePicker({
-            date: options.date || new Date(),onchange: function (yyyy_mm_dd) {
+            date: options.date || new Date(),
+            onchange: function (yyyy_mm_dd) {
                 dropdonws.update(yyyy_mm_dd);
                 options.changed(yyyy_mm_dd);
+            },
+            onclear: function () {
+                dropdonws.clear();
+                options.cleared();
             }
         });
         var dropdonws = addDateDropDowns({
