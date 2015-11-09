@@ -215,19 +215,44 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         var addDatePicker = function (opts) {
             var dpicker_input = $("<input type='hidden' />")
                 .insertAfter(header);
-            var dpicker = dpicker_input.datepicker({
+            var add_clear_button = function (input) {
+                /* Run this after date-picker is constructed
+                   Source: stackoverflow.com/questions/4598850 */
+                setTimeout(function () {
+                    var button_pane = $(input)
+                        .datepicker('widget')
+                        .find('.ui-datepicker-buttonpane');
+                        
+                    $('<button/>', {
+                        text: 'Clear',
+                        click: function () {
+                            console.warn('Clear clicked');
+                            $(input).datepicker('hide');
+                        }
+                    })
+                        .addClass('ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all')
+                        .appendTo(button_pane);
+                }, 0);
+            };
+            var options = {
                 showOn: 'both',
                 numberOfMonths: 2,
                 maxDate: 0,
-                minDate: new Date(2010,0,1),
+                minDate: new Date(2010, 0, 1),
                 dateFormat: 'yy-mm-dd',
                 showAnim: 'drop',
                 showButtonPanel: true,
                 changeMonth: true,
                 changeYear: true,
                 beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' }); },
-                onSelect: function () { $(this).change(); }
-            }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
+                onSelect: function () { $(this).change(); },
+                beforeShow: add_clear_button,
+                onChangeMonthYear:add_clear_button
+            };
+
+            var dpicker = dpicker_input
+                            .datepicker(options)
+                            .datepicker("setDate", opts.date.toISOString().slice(0, 10));
 
             $.datepicker._gotoToday = function (id) {
                 $(id).datepicker('setDate', new Date()).change().datepicker('hide');
@@ -246,7 +271,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
 
 
         var dpicker = addDatePicker({
-            date: options.date || new Date(),onchange: function (yyyy_mm_dd) {
+            date: options.date || new Date(),
+            onchange: function (yyyy_mm_dd) {
                 dropdonws.update(yyyy_mm_dd);
                 options.changed(yyyy_mm_dd);
             }
