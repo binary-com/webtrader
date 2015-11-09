@@ -251,9 +251,11 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 showButtonPanel: true,
                 changeMonth: true,
                 changeYear: true,
-                beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' }); },
                 onSelect: function () { $(this).change(); },
-                beforeShow: add_clear_button,
+                beforeShow: function (input, inst) {
+                    add_clear_button(input);
+                    inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' });
+                },
                 onChangeMonthYear:add_clear_button
             };
 

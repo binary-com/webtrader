@@ -138,8 +138,6 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     statement.init(elem);
                     elem.click(); 
                 });
-
-            $navMenu.find("a.statement").click(); // TODO: remove this line (development only)
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
