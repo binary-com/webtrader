@@ -5,90 +5,113 @@
 
 define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, navigation) {
 
-    var totalChartsPerRow, totalRows, totalCharts_renderable;
-
     var closeAllObject = null;
     var dialogCounter = 0;
     var $menuUL = null;
 
-    function calculateChartsPerScreen() {
-        totalChartsPerRow = Math.floor($(window).width() / 350) || 1;
-        totalRows = Math.floor($(window).height() / 400) || 1;
+    /* options: { width: 350, height: 400 } */
+    function calculateChartCount(options) {
+        options = $.extend({ width: 350, height: 400 }, options);
+        var rows = Math.floor($(window).height() / options.height) || 1,
+            cols = Math.floor($(window).width() / options.width) || 1;
 
-        //Based on totalChartsPerRow and totalRows, open some charts
-        totalCharts_renderable = totalChartsPerRow * totalRows;
-
-        //For small size screens
-        if (isSmallView())
-            totalRows = totalChartsPerRow = 1;
+        if (isSmallView()) //For small size screens
+            rows = cols = 1;
+        return {
+            rows: rows,
+            cols: cols,
+            total: rows * cols
+        };
     }
 
-    function tileAction() {
-        calculateChartsPerScreen();
+    /* shuffle the given array */
+    function shuffle(array) {
+        var temp, rand_inx;
 
-        require(["charts/chartWindow"], function(chartWindowObj) {
-            var topMargin = 80;
-            if (isSmallView()) topMargin = 100;
+        for (var inx = array.length; inx > 0;) {
+            rand_inx = Math.floor(Math.random() * inx);
+            --inx;
+            temp = array[inx];
+            array[inx] = array[rand_inx];
+            array[rand_inx] = temp;
+        }
 
-            var cellCount = 1,
-                rowCount = 1,
-                leftMargin = 20;
-            var minWidth = $(".webtrader-dialog").dialog('option', 'minWidth');
-            var minHeight = $(".webtrader-dialog").dialog('option', 'minHeight');
+        return array;
+    }
 
-            if (isSmallView()) {
-                minWidth = $(window).width() - (leftMargin * 2);
-                minHeight = $(window).height() - topMargin;
-            }
-
-            var totalOccupiedSpace = (totalChartsPerRow * minWidth) + ((totalChartsPerRow - 1) * leftMargin);
-            var remainingSpace = $(window).width() - totalOccupiedSpace;
-            var startMargin = Math.round(remainingSpace / 2);
-
-            var referenceObjectForPositioning = window;
-
-            var chartCount = $(".webtrader-dialog").length;
-            $(".webtrader-dialog").each(function () {
-                var leftShift;
-                var topShift = topMargin;
-
-                // if charts can fit into a single row
-                if(chartCount <= totalChartsPerRow)
-                    leftShift = ($(window).width() - (minWidth * chartCount)) / 2;
-                else {
-                    // we have 2 rows or more
-                    leftShift = ($(window).width() - (minWidth * totalChartsPerRow)) / 2;
-                }
-
-                if (cellCount > 1) {
-                    leftShift = leftShift + (minWidth * (cellCount - 1)) + ((cellCount - 1) * 20);
-                }
-
-                if (rowCount > 1) {
-                    topShift = topMargin + (minHeight * (rowCount - 1) + ((rowCount - 1) * 20));
-                }
-
-                referenceObjectForPositioning = window;
-                referenceObjectForPositioning = $(this).dialog('option', {
-                    position: {
-                        my: "left+" + leftShift + " top" + (topShift < 0 ? "-" : "+") + topShift,
-                        at: "left top",
-                        of: referenceObjectForPositioning
-                    },
-                    width: minWidth,
-                    height: minHeight
-                });
-
-                chartWindowObj.triggerResizeEffects($(this).dialog("widget").find('.webtrader-dialog'));
-
-                if (++cellCount > totalChartsPerRow) {
-                    cellCount = 1;
-                    ++rowCount;
-                    referenceObjectForPositioning = window;
-                }
-            });
+    function tileDialogs() {
+        // get array of dialogs
+        var dialogs = $('.webtrader-dialog').filter(function (inx, d) {
+            /* check to see if initialized and is visible */
+            return $(d).hasClass("ui-dialog-content") && $(d).dialog("isOpen");
         });
-    };
+
+
+        var arrange = function (dialogs, perform) {
+            var total_free_space = 0;
+
+            var max_x = $(window).width(),
+                y = isSmallView() ? 100 : 80; // position of the next window from top
+
+            for (var inx = 0; inx < dialogs.length;) {
+                var inx_start = inx;
+                var row_height = 0; // height of the current row of dialogs
+                var x = 0; // positon of the next window from left
+
+                for (;/* see which which dialogs fit into current row */;) {
+                    if (inx == dialogs.length)
+                        break;
+                    var d = $(dialogs[inx]);
+                    var w = d.dialog('option', 'width'),
+                        h = d.dialog('option', 'height');
+                    row_height = Math.max(row_height, h);
+                    if (x + w <= max_x) {
+                        x += w;
+                        ++inx;
+                    }
+                    else
+                        break;
+                }
+
+                /* divide the vertical space equally between dialogs. */
+                var free_space = x < max_x ? (max_x - x) : 0;
+                var margin_left = x < max_x ? (max_x - x) / (inx - inx_start + 1) : 0; /* the current window might be wider than screen width */
+                total_free_space += free_space;
+
+                x = 0;
+                for (var j = inx_start; j < inx; ++j) {
+                    x += margin_left;
+                    var d = $(dialogs[j]);
+                    var w = d.dialog('option', 'width'),
+                        h = d.dialog('option', 'height');
+
+                    if(perform) /* are we testing or do we want to arrange elements */
+                        d.dialog('widget').animate({
+                            left: x + 'px',
+                            top: y + 'px'
+                        }, 1500);
+
+                    x += w;
+                };
+
+                y += row_height + 20;
+            }
+            return total_free_space;
+        }
+
+        /* we will try 1000 different arrangements and pick the best one */
+        var best = null,
+            best_free_space = 1000*1000;
+        for (var i = 0; i < 1000; ++i) {
+            shuffle(dialogs); // shuffle dialogs
+            var total_free_space = arrange(dialogs, false);
+            if (total_free_space < best_free_space) {
+                best = dialogs.slice(); // clone the array
+                best_free_space = total_free_space;
+            }
+        }
+        arrange(best, true);
+    }
 
     /*
         @param: options.date    javascript Date object representing initial time
@@ -303,8 +326,6 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
     return {
 
         init: function( $parentObj ) {
-            calculateChartsPerScreen();
-
             $menuUL = $parentObj.find("ul");
 
             tileObject = $menuUL.find(".tile");
@@ -326,12 +347,9 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
 
 
                 //Attach click listener for tile menu
-                tileObject.click(function () {
-                    tileAction();
-                });
+                tileObject.click(tileDialogs);
 
-                //Based on totalChartsPerRow and totalRows, open some charts
-                var totalCharts_renderable = totalChartsPerRow * totalRows;
+                var counts = calculateChartCount();
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (markets) {
@@ -340,7 +358,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                         var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
                         var timePeriods = ['2h', '4h', '8h', '1d'];
                         var chartTypes = ['candlestick', 'line', 'ohlc', 'spline'];
-                        for (var inx = 0; inx < totalCharts_renderable; ++inx){
+                        for (var inx = 0; inx < counts.total; ++inx){
                             var submarkets = rand(markets).submarkets;
                             var symbols = rand(submarkets).instruments;
                             var sym = rand(symbols);
@@ -350,18 +368,17 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                             chartWindowObj
                                 .addNewWindow(
                                     sym.symbol, sym.display_name, timepreiod,
-                                    tileAction,/*Trigger tile action */ 
                                     chart_type);
                         }
+
+                        tileDialogs(); // Trigger tile action
                     });
             });
 
             return this;
         },
 
-        tile: function() {
-          tileAction();
-        },
+        tile: tileDialogs,
 
         closeAll: function() {
             //Trigger close even on all dialogs
