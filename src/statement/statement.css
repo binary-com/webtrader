@@ -27,3 +27,10 @@ table.statement-dialog td
         box-shadow: 3px -1px 8px 1pt lightblue;
         outline: 0;
     }
+
+table.statement-dialog img.arrow {
+    width: 30px;
+    width: 30px;
+    height: 30px;
+    float: right;
+}

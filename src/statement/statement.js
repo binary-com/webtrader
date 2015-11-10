@@ -79,13 +79,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 var refresh = function (data) {
                     var transactions = (data.statement && data.statement.transactions) || [];
                     var rows = transactions.map(function (trans) {
+                        var amount = trans.amount * 1;
+                        var svg = amount > 0 ? 'up' : amount < 0 ? 'down' : 'equal';
+                        var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
                         return [
                             epoch_to_string(trans.transaction_time, { utc: true }),
-                            trans.contract_id,
+                            trans.transaction_id,
                             capitalizeFirstLetter(trans.action_type),
-                            trans.longcode,
+                             img + trans.longcode ,
                             (trans.amount * 1).toFixed(2),
-                            '<b>' + (trans.balance_after * 1).toFixed(2) + '</b>'
+                            '<b>' + (trans.balance_after * 1).toFixed(2)
+                                /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
+                                .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + '</b>'
                         ];
                     });
                     table.api().rows().remove();
