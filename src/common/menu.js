@@ -17,10 +17,12 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                 $menuLink.addClass("nav-dropdown-toggle");
             }
 
-            var newLI = $("<li>").append($menuLink)
-                                .data("symbol", value.symbol)//TODO This is invalid for root level object
-                                .data("delay_amount", value.delay_amount)//TODO This is invalid for root level object
-                                .appendTo( root);
+            var newLI = $("<li>").append($menuLink);
+            if(!isDropdownMenu) {
+                newLI.data("symbol", value.symbol)
+                     .data("delay_amount", value.delay_amount)
+            }
+            newLI.appendTo( root);
 
             if (isDropdownMenu) {
                 var newUL = $("<ul>");
