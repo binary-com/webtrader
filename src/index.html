@@ -5,18 +5,28 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <!-- <META http-equiv="Refresh" content="0;URL=v1.0.0/main.html"> -->
     <title>Highcharts implementation for Binary.com</title>
-    <script src="v1.0.0/common/util.js"></script>
+    <script src="<verrsion>/common/util.js"></script>
 </head>
 <body>
 	<script>
       var affiliates = getParameterByName('affiliates') || false;
+      var gtm = getParameterByName('gtm') || true;
       var suffix = "";
+      
       if (affiliates && affiliates == 'true') {
           suffix = '?affiliates=true&instrument=' + getParameterByName('instrument') + '	&timePeriod=' + getParameterByName('timePeriod');
       }
-      window.location.href = 'v1.0.0/main.html' + suffix;
+      
+      if (gtm && gtm == 'false') {
+        if (suffix.length) {
+          suffix = suffix + '&gtm=false';
+        } else {
+          suffix = '?gtm=false';
+        }
+      }
+
+      window.location.href = '<verrsion>/main.html' + suffix;
     </script>
 </body>
 </html>

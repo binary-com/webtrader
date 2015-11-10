@@ -201,14 +201,4 @@
     "short_display_name": "CDLTHRUSTING",
     "ohlcOnly" : true
   }
-  //TODO
-  // ,
-
-  // "sar": {
-  //   "id": "sar",
-  //   "long_display_name": "Parabolic SAR",
-  //   "short_display_name": "SAR",
-  //   "ohlcOnly" : false
-  // }
-
 }

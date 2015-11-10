@@ -1,23 +1,23 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "windows/windows","websockets/binary_websockets","datatables","jquery-growl"], function ($,windows,liveapi) {
+define(["jquery", "windows/windows","websockets/binary_websockets","common/menu", "datatables","jquery-growl"], function ($,windows,liveapi, menu) {
 
 
     var table = null;
     var tradingWin = null;
 
     /* data: result of trading_times api */
-    function processData(data){
-        var markets = (data.trading_times && data.trading_times.markets) || [];
+    function processData(markets){
+        var markets = markets || [];
         //    || [{
-        //    name: 'Forex',
+        //    display_name: 'Forex',
         //    submarkets: [{
-        //        name: 'Major Paris',
-        //        symbols: [{
+        //        display_name: 'Major Paris',
+        //        instruments: [{
         //            delay_amount: 0,
         //            events: [{dates:'Fridays',descrip:'Closes early at(21:00)'}],
-        //            name: 'AUD/JPY',
+        //            display_name: 'AUD/JPY',
         //            settlement: '23:59:59',
         //            symbol: 'frxAUDJPY',
         //            times: {
@@ -31,27 +31,29 @@ define(["jquery", "windows/windows","websockets/binary_websockets","datatables",
         var market_names = [];
         var submarket_names = { };
         markets.forEach(function(market) {
-            market_names.push(market.name);             
-            submarket_names[market.name] = [];
+            market_names.push(market.display_name);             
+            submarket_names[market.display_name] = [];
             market.submarkets.forEach(function (submarket) {
-                submarket_names[market.name].push(submarket.name);
+                submarket_names[market.display_name].push(submarket.display_name);
             })
         });
 
         /* get the rows for this particular marketname and sumbarket_name */
         function getRowsFor(marketname, submarket_name) {
-            var market = markets.find(function (m) { return m.name == marketname; });
-            var symbols = market && market.submarkets.find(function (s) { return s.name == submarket_name; }).symbols;
+            var market = markets.find(function (m) { return m.display_name == marketname; });
+            var symbols = market && market.submarkets.find(function (s) { return s.display_name == submarket_name; }).instruments;
+            console.log(symbols);
 
             var rows = (symbols || []).map(function (sym) {
                 return [
-                    sym.name,
+                    sym.display_name,
                     sym.times.open[0],
                     sym.times.close[0],
                     sym.settlement || '-',
                     sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
                 ];
             });
+            console.log(rows);
             return rows;
         }
 
@@ -63,11 +65,11 @@ define(["jquery", "windows/windows","websockets/binary_websockets","datatables",
     }
 
     function init($menuLink) {
-        loadCSS("tradingtimes/tradingTimes.css");
+        require(["css!tradingtimes/tradingTimes.css"]);
         $menuLink.click(function () {
             if (!tradingWin) {
                 tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
-                $.get('tradingtimes/tradingTimes.html', initTradingWin);
+                require(['text!tradingtimes/tradingTimes.html'], initTradingWin);
             }
             tradingWin.dialog('open');
         });
@@ -108,7 +110,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","datatables",
 
             /* update the table with the given marketname and submarketname */
             var updateTable = function(result, market_name,submarket_name){
+                console.log(market_name, submarket_name)
                 var rows = result.getRowsFor(market_name, submarket_name);
+                console.log(rows);
                 table.api().rows().remove();
                 table.api().rows.add(rows);
                 table.api().draw();
@@ -116,6 +120,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","datatables",
 
             /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
             var refresh = function (data) {
+                data = menu.extractChartableMarkets(data);
                 var result = processData(data);
 
                 if (market_names == null) {

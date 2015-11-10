@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/cdl3inside/cdl3inside.html" , function ( $html ) {
+        require(['text!charts/indicators/cdl3inside/cdl3inside.html'], function ( $html ) {
 
             $html = $($html);
             //$html.hide();

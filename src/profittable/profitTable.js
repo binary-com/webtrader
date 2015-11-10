@@ -1,14 +1,16 @@
 ﻿/**
  * Created by amin on October 29, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl", 'common/util'],
+    function ($, windows, liveapi) {
     'use strict';
 
     var profitWin = null,
         table = null;
 
     function init($menuLink) {
-        loadCSS("profittable/profitTable.css");
+        require(["css!profittable/profitTable.css"]);
+        require(['text!profittable/profitTable.html']); // Don't wait for liveapi to finish, trigger loading .html file now.
         $menuLink.click(function () {
             if (!profitWin)
                 liveapi.cached.authorize()
@@ -22,9 +24,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         });
     }
 
-    function initProfitWin($html) {
+    function initProfitWin() {
         profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 900 });
-        $.get('profittable/profitTable.html', function ($html) {
+        require(['text!profittable/profitTable.html'], function ($html) {
 
             $html = $($html);
             $html.appendTo(profitWin);
@@ -36,7 +38,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 "columnDefs": [ {
                     "targets": 6,
                     "createdCell": function (td, cellData) {
-                        var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : '';
+                        var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
                         if (css_class)
                             $(td).addClass(css_class);
                     }
@@ -58,7 +60,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
             
             var refreshTable = function (yyyy_mm_dd) {
-                var processing_msg = $('#' + table.attr('id') + '_processing').show();
+                var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
 
                 var request = {
                     profit_table: 1,
@@ -69,28 +71,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 /* if a date is specified get the transactions for that date */
                 if (yyyy_mm_dd)
                     request.date_from = request.date_to = yyyy_mm_dd;
-                else /* otherwise get the most recent 10 transactions */
-                    request.limit = 10;
+                else /* otherwise get the most recent 50 transactions */
+                    request.limit = 50;
 
                 /* refresh the table with result of { profit_table:1 } from WS */
                 var refresh = function (data) {
                     var transactions = (data.profit_table && data.profit_table.transactions) || [];
-                    var date_to_string = function (epoch) {
-                        var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
-                         return d.getFullYear() + "-" +
-                                ("00" + (d.getMonth() + 1)).slice(-2) + "-" +
-                                ("00" + d.getDate()).slice(-2) + " " +
-                                ("00" + d.getHours()).slice(-2) + ":" +
-                                ("00" + d.getMinutes()).slice(-2) + ":" +
-                                ("00" + d.getSeconds()).slice(-2);
-                    };
                     var rows = transactions.map(function (trans) {
                         return [
-                            date_to_string(trans.purchase_time),
+                            epoch_to_string(trans.purchase_time, { utc: true }),
                             trans.contract_id,
                             trans.longcode,
                             trans.buy_price,
-                            date_to_string(trans.sell_time),
+                            epoch_to_string(trans.sell_time, { utc: true }),
                             trans.sell_price,
                             (parseFloat(trans.buy_price) - parseFloat(trans.sell_price)).toFixed(2) /* 2 decimal points */
                         ];
@@ -114,7 +107,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             profitWin.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
-                changed: refreshTable
+                changed: refreshTable,
+                cleared: refreshTable
             });
 
             profitWin.dialog('open');

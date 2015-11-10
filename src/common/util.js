@@ -121,28 +121,6 @@ function validateParameters(instrumentObject) {
       return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
 };
 
-// adds onload support for asynchronous stylesheets loaded with loadCSS.
-function onloadCSS( ss, callback ) {
-    ss.onload = function() {
-        ss.onload = null;
-        if( callback ) {
-            callback.call( ss );
-        }
-    };
-
-    // This code is for browsers that don’t support onload, any browser that
-    // supports onload should use that instead.
-    // No support for onload:
-    //  * Android 4.3 (Samsung Galaxy S4, Browserstack)
-    //  * Android 4.2 Browser (Samsung Galaxy SIII Mini GT-I8200L)
-    //  * Android 2.3 (Pantech Burst P9070)
-
-    // Weak inference targets Android < 4.4
-    if( "isApplicationInstalled" in navigator && "onloadcssdefined" in ss ) {
-        ss.onloadcssdefined( callback );
-    }
-}
-
 /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
 function load_ondemand(element, event_name,msg, module_name, callback) {
     element.one(event_name, function () {
@@ -154,6 +132,36 @@ function load_ondemand(element, event_name,msg, module_name, callback) {
             callback && callback(module);
         });
     });
+}
+
+/* convert epoch to stirng yyyy:mm:ss format 
+   options: { utc: true/false } */
+function epoch_to_string(epoch, options) {
+    var prefix = (options && options.utc) ? "getUTC" : "get"; // Local or UTC time
+    var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
+     return d[prefix + "FullYear"]() + "-" +
+            ("00" + (d[prefix+ "Month"]() + 1)).slice(-2) + "-" +
+            ("00" + d[prefix+ "Date"]()).slice(-2) + " " +
+            ("00" + d[prefix+ "Hours"]()).slice(-2) + ":" +
+            ("00" + d[prefix+ "Minutes"]()).slice(-2) + ":" +
+            ("00" + d[prefix+ "Seconds"]()).slice(-2);
+}
+
+/* convert string in '2015-11-9' format to epoch
+   options: { utc: true/false } */
+function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
+    var ymd = yyyy_mm_dd.split('-'),
+        y = ymd[0] * 1,
+        m = ymd[1] * 1,
+        d = ymd[2] * 1;
+    if (options && options.utc)
+        return Date.UTC(y, m - 1, d) / 1000;
+    return new Date(y, m - 1, d).getTime() / 1000;
+}
+
+/* capitalize the first letter of a string */
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function resizeElement(selector) {

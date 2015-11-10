@@ -3,7 +3,9 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($) {
+define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, navigation) {
+
+    var totalChartsPerRow, totalRows, totalCharts_renderable;
 
     var closeAllObject = null;
     var dialogCounter = 0;
@@ -45,15 +47,25 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
             var referenceObjectForPositioning = window;
 
-            $(".chart-dialog").each(function() {
-                var leftShift = startMargin;
-                if (cellCount > 1) {
-                    leftShift = startMargin + ((minWidth + leftMargin) * (cellCount - 1));
+            var chartCount = $(".chart-dialog").length;
+            $(".chart-dialog").each(function () {
+                var leftShift;
+                var topShift = topMargin;
+
+                // if charts can fit into a single row
+                if(chartCount <= totalChartsPerRow)
+                    leftShift = ($(window).width() - (minWidth * chartCount)) / 2;
+                else {
+                    // we have 2 rows or more
+                    leftShift = ($(window).width() - (minWidth * totalChartsPerRow)) / 2;
                 }
 
-                var topShift = topMargin + (minHeight * (rowCount - 1));
+                if (cellCount > 1) {
+                    leftShift = leftShift + (minWidth * (cellCount - 1)) + ((cellCount - 1) * 20);
+                }
+
                 if (rowCount > 1) {
-                    topShift = topShift + ((rowCount - 1) * 20);
+                    topShift = topMargin + (minHeight * (rowCount - 1) + ((rowCount - 1) * 20));
                 }
 
                 referenceObjectForPositioning = window;
@@ -90,7 +102,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         options = $.extend({
             title: 'title',
             date: null,
-            changed: function (yyyy_mm_dd) { console.log(yyyy_mm_dd + ' changed'); }
+            changed: function () { },
+            cleared: function() { }
         },options);
 
         var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
@@ -195,6 +208,11 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                     year.val(args[0] | 0); year.selectmenu('refresh');
                     month.val((args[1] | 0)-1); month.selectmenu('refresh');
                     day.val(args[2] | 0); update_day();
+                },
+                clear: function () {
+                    year.title('Year');
+                    month.title('Month');
+                    day.title('Day');
                 }
             }
         }
@@ -203,19 +221,47 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         var addDatePicker = function (opts) {
             var dpicker_input = $("<input type='hidden' />")
                 .insertAfter(header);
-            var dpicker = dpicker_input.datepicker({
+            var add_clear_button = function (input) {
+                /* Run this after date-picker is constructed
+                   Source: stackoverflow.com/questions/4598850 */
+                setTimeout(function () {
+                    var button_pane = $(input)
+                        .datepicker('widget')
+                        .find('.ui-datepicker-buttonpane');
+                        
+                    $('<button/>', {
+                        text: 'Clear',
+                        click: function () {
+                            opts.onclear && opts.onclear();
+                            $(input).datepicker('hide');
+                        }
+                    })
+                        .addClass('ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all')
+                        .appendTo(button_pane);
+                }, 0);
+            };
+
+            var options = {
                 showOn: 'both',
                 numberOfMonths: 2,
                 maxDate: 0,
-                minDate: new Date(2010,0,1),
+                minDate: new Date(2010, 0, 1),
                 dateFormat: 'yy-mm-dd',
                 showAnim: 'drop',
                 showButtonPanel: true,
                 changeMonth: true,
                 changeYear: true,
-                beforeShow: function (input, inst) { inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' }); },
-                onSelect: function () { $(this).change(); }
-            }).datepicker("setDate", opts.date.toISOString().slice(0, 10));
+                onSelect: function () { $(this).change(); },
+                beforeShow: function (input, inst) {
+                    add_clear_button(input);
+                    inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' });
+                },
+                onChangeMonthYear:add_clear_button
+            };
+
+            var dpicker = dpicker_input
+                            .datepicker(options)
+                            .datepicker("setDate", opts.date.toISOString().slice(0, 10));
 
             $.datepicker._gotoToday = function (id) {
                 $(id).datepicker('setDate', new Date()).change().datepicker('hide');
@@ -234,9 +280,14 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
 
 
         var dpicker = addDatePicker({
-            date: options.date || new Date(),onchange: function (yyyy_mm_dd) {
+            date: options.date || new Date(),
+            onchange: function (yyyy_mm_dd) {
                 dropdonws.update(yyyy_mm_dd);
                 options.changed(yyyy_mm_dd);
+            },
+            onclear: function () {
+                dropdonws.clear();
+                options.cleared();
             }
         });
         var dropdonws = addDateDropDowns({
@@ -254,7 +305,6 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         init: function( $parentObj ) {
             calculateChartsPerScreen();
 
-            loadCSS("windows/windows.css");
             $menuUL = $parentObj.find("ul");
 
             tileObject = $menuUL.find(".tile");
@@ -272,7 +322,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 }
             });
 
-            require(["charts/chartWindow","websockets/binary_websockets"], function (chartWindowObj,liveapi) {
+            require(["charts/chartWindow","websockets/binary_websockets", "common/menu"], function (chartWindowObj,liveapi, menu) {
 
 
                 //Attach click listener for tile menu
@@ -284,22 +334,22 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 var totalCharts_renderable = totalChartsPerRow * totalRows;
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                    .then(function (data) {
-                        var markets = data.trading_times.markets;
+                    .then(function (markets) {
+                        markets = menu.extractChartableMarkets(markets);
                         /* return a random element of an array */
                         var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
                         var timePeriods = ['2h', '4h', '8h', '1d'];
                         var chartTypes = ['candlestick', 'line', 'ohlc', 'spline'];
                         for (var inx = 0; inx < totalCharts_renderable; ++inx){
                             var submarkets = rand(markets).submarkets;
-                            var symbols = rand(submarkets).symbols;
+                            var symbols = rand(submarkets).instruments;
                             var sym = rand(symbols);
                             var timepreiod = rand(timePeriods);
                             var chart_type = rand(chartTypes);
 
                             chartWindowObj
                                 .addNewWindow(
-                                    sym.symbol, sym.name, timepreiod,
+                                    sym.symbol, sym.display_name, timepreiod,
                                     tileAction,/*Trigger tile action */ 
                                     chart_type);
                         }
@@ -324,6 +374,7 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
         /* important options: { title:'',
                                 resize:fn, // callabak for dialog resize event
                                 close: fn, // callback for dialog close event
+                                open: fn,  // callback for dialog open event
                                 autoOpen: false,
                                 resizeable:true,
                                 collapsable:true,
@@ -369,6 +420,8 @@ define(['jquery','jquery.dialogextend', 'modernizr', 'common/util'], function ($
                 blankWindow.dialog('moveToTop')
                      .parent().effect("bounce", { times: 2, distance: 15 }, 450);
             });
+
+            navigation.updateListItemToggles();
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
                 li.remove();

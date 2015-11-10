@@ -294,7 +294,7 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap"], function(li
                               suffix = parsedSuffixAndIntValue.suffix,
                               intVal = parsedSuffixAndIntValue.intVal;
                         var requestObject = {
-                            "ticks": instrumentCode,
+                            "ticks_history": instrumentCode,
                             "end": 'latest',
                             //"count": count,
                             "start": lastBar.time/1000,
@@ -382,7 +382,7 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap"], function(li
 
             //Send the WS request
             var requestObject = {
-                "ticks": instrumentCode,
+                "ticks_history": instrumentCode,
                 "end": 'latest',
                 "count": count,
                 "adjust_start_time" : 1,
@@ -397,7 +397,10 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap"], function(li
                 });
               }
             console.log(JSON.stringify(requestObject));
-            liveapi.send(requestObject);
+            liveapi.send(requestObject)
+                   .catch(function(err){
+                       console.error(err); // TODO: can we recover?
+                   });
         }
     };
 
