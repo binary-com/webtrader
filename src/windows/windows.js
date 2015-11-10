@@ -33,8 +33,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             var cellCount = 1,
                 rowCount = 1,
                 leftMargin = 20;
-            var minWidth = $(".chart-dialog").dialog('option', 'minWidth');
-            var minHeight = $(".chart-dialog").dialog('option', 'minHeight');
+            var minWidth = $(".webtrader-dialog").dialog('option', 'minWidth');
+            var minHeight = $(".webtrader-dialog").dialog('option', 'minHeight');
 
             if (isSmallView()) {
                 minWidth = $(window).width() - (leftMargin * 2);
@@ -47,8 +47,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
 
             var referenceObjectForPositioning = window;
 
-            var chartCount = $(".chart-dialog").length;
-            $(".chart-dialog").each(function () {
+            var chartCount = $(".webtrader-dialog").length;
+            $(".webtrader-dialog").each(function () {
                 var leftShift;
                 var topShift = topMargin;
 
@@ -79,7 +79,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                     height: minHeight
                 });
 
-                chartWindowObj.triggerResizeEffects($(this).dialog("widget").find('.chart-dialog'));
+                chartWindowObj.triggerResizeEffects($(this).dialog("widget").find('.webtrader-dialog'));
 
                 if (++cellCount > totalChartsPerRow) {
                     cellCount = 1;
@@ -317,8 +317,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                   Behavior - When there are charts opened, this event is able to close all charts and then
                             unable to hide the menu. When There are no charts, then it behaves normally
                 */
-                if ($('.chart-dialog').length > 0) {
-                    $('.chart-dialog').dialog('close');
+                if ($('.webtrader-dialog').length > 0) {
+                    $('.webtrader-dialog').dialog('close');
                 }
             });
 
@@ -365,10 +365,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
 
         closeAll: function() {
             //Trigger close even on all dialogs
-            if (!closeAllObject)
-            {
-                closeAllObject.click();
-            }
+            closeAllObject && closeAllObject.click();
         },
 
         /* important options: { title:'',
@@ -407,7 +404,9 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             if (options.resize)
                 options.maximize = options.minimize  = options.restore = options.resize;
 
-            var blankWindow = $html.attr("id", id)
+            var blankWindow = $html
+                .attr("id", id)
+                .addClass('webtrader-dialog')
                 .dialog(options)
                 .dialogExtend(options);
 

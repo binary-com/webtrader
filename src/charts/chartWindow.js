@@ -60,7 +60,7 @@ define(["jquery","windows/windows","jquery.dialogextend"], function ($,windows) 
         },
 
         totalWindows : function() {
-            return $("div.chart-dialog").length;
+            return $("div.webtrader-dialog").length;
         },
 
         /**
