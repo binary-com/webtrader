@@ -3,7 +3,7 @@ define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'],
 		init: function() {
 			// get chart window html.
 	        require(['text!charts/chartWindow.html'], function(html) {
-	            var newTabId = "webtrader-dialog-1",
+	            var newTabId = "chart-dialog-1",
 	                timePeriod = getParameterByName('timePeriod') || '1d',
 	                type = timePeriod == '1t' ? 'line' : 'candlestick';
 
