@@ -2,7 +2,7 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jquery-timer'],
+define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token'],
     function (es6_promise, ReconnectingWebSocket, Cookies, tokenWin) {
     es6_promise.polyfill(); /* polyfill for es6-promises */
 

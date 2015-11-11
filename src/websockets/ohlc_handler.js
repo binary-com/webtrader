@@ -1,4 +1,4 @@
-define(['websockets/binary_websockets',"charts/chartingRequestMap"], function(liveapi, chartingRequestMap) {
+define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jquery-timer"], function(liveapi, chartingRequestMap, $) {
 
     var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('candles', function (data) {
