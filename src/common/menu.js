@@ -34,8 +34,6 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                     on_click(li);
                 });
         });
-
-        navigation.updateDropdownToggles();
     }
 
     return {
@@ -106,6 +104,9 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
             }
         },
 
-        refreshMenu: refreshMenu
+        refreshMenu: function (root,data,on_click) {
+            refreshMenu(root, data, on_click);
+            navigation.updateDropdownToggles();
+        }
     }
 });

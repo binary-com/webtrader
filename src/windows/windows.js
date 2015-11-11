@@ -441,7 +441,6 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             };
             add_to_windows_menu();
 
-            navigation.updateListItemToggles();
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
                 li.remove();
