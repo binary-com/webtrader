@@ -68,6 +68,9 @@ requirejs.config({
     }
 });
 
+/* Initialize the websocket as soon as posssilbe */
+require(['reconnecting-websocket', 'websockets/binary_websockets']);
+
 require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     "use strict";
