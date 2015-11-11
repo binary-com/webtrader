@@ -2,9 +2,8 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token'],
-    function (es6_promise, ReconnectingWebSocket, Cookies, tokenWin) {
-    es6_promise.polyfill(); /* polyfill for es6-promises */
+define(['reconnecting-websocket', 'js-cookie', 'token/token'],
+    function (ReconnectingWebSocket, Cookies, tokenWin) {
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 

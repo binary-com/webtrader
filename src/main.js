@@ -35,6 +35,9 @@ requirejs.config({
     },
     waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
+        "websockets/binary_websockets": {
+          deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
+        },
         "jquery-ui": {
             deps: ["jquery"]
         },
