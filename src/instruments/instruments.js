@@ -26,7 +26,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
                 if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max")))) {
                     if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
 
-                        chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
+                        chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat,
                                     isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
                         closeDialog.call($("#instrumentsDialog"));
                     }

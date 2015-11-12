@@ -82,8 +82,10 @@ define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
         var promise = unresolved_promises[key];
         if (promise) {
             delete unresolved_promises[key];
-            if (data.error)
+            if (data.error) {
+                data.error.echo_req = data.echo_req;
                 promise.reject(data.error);
+            }
             else
                 promise.resolve(data);
         }
