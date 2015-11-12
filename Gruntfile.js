@@ -202,6 +202,13 @@ module.exports = function (grunt) {
                     message: 'Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= gitinfo.local.branch.current.name %>'
                 },
                 src: ['**/*']
+            },
+            'clean': {
+                options: {
+                    add: false /* remove existing files in gh-pages branch */,
+                    message: 'Cleaning all files in gh-pages'
+                },
+                src: [ 'README.md']
             }
         },
         connect: {
@@ -312,5 +319,6 @@ module.exports = function (grunt) {
     /* Deoploy to a subfolder of gh-pages with the name of current branch,
        This is only for developers working on different branches in their forks. */
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
-   
+    /* clean all the files in gh-pages branch */
+    grunt.registerTask('clean', ['gh-pages:clean']);
 };
