@@ -412,19 +412,26 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 .dialogExtend(options);
 
             // add an item to window menu
-            var $windowMenuLink = $("<a href='#'>" + options.title + "</a>");
-            var li = $('<li />').addClass(id + 'LI').html($windowMenuLink);
-            $menuUL.append(li);
-            // bring window to top on click
-            $windowMenuLink.click(function () {
-                blankWindow.dialog('moveToTop')
-                     .parent().effect("bounce", { times: 2, distance: 15 }, 450);
-            });
+            var li = null;
+            var add_to_windows_menu = function () {
+                var link = $("<a href='#'>" + options.title + "</a>");
+                // bring window to top on click
+                link.click(function () {
+                    blankWindow.dialog('moveToTop')
+                         .parent().effect("bounce", { times: 2, distance: 15 }, 450);
+                });
+                li = $('<li />').addClass(id + 'LI').html(link);
+                $menuUL.append(li);
+            };
+            add_to_windows_menu();
 
-            navigation.updateListItemToggles();
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
                 li.remove();
+                li = null;
+            });
+            blankWindow.on('dialogopen', function () {
+                !li && add_to_windows_menu();
             });
 
             if (options.resize)

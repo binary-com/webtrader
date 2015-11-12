@@ -61,36 +61,35 @@ define(["jquery","css!navigation/navigation.css"], function ($) {
 				$menu.unwrap();
 			});
 		}
-
-		updateListItemHandlers();
 	}
 
 	function updateListItemHandlers() {
-		$("#nav-menu li > ul li").each(function () {
-			$(this).off("click");
-			$(this).on("click", function () {
-				var normal_class = "nav-normal-menu";
-				var mobile_class = "nav-mobile-menu";
-				var $elem = $(this);
-				var $parentUL = $elem.parents("#nav-menu");
-				var hasSubMenus = $elem.find("ul").length > 0;
-				if($parentUL.hasClass(normal_class)) {
-					if(!hasSubMenus) {
-						$elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");
-					}
-				} else if($parentUL.hasClass(mobile_class)) {
-					if(!hasSubMenus) {
-						$("#mobile-nav").animate({ left: "-=280" }, 320, function() {
-							$("#nav-toggle").removeClass("nav-toggle-active");
-							toggleMenuStyle();
-						});
-					}
-				}
-			});
-		});
-
+        $("#nav-menu li > ul li").each(function () {
+            var $li = $(this);
+            if ($li.hasClass('update-list-item-handlers'))
+                return;
+            $li.addClass('update-list-item-handlers');
+            $li.on("click", function clickHandler() {
+                var normal_class = "nav-normal-menu";
+                var mobile_class = "nav-mobile-menu";
+                var $elem = $(this);
+                var $parentUL = $elem.parents("#nav-menu");
+                var hasSubMenus = $elem.find("ul").length > 0;
+                if ($parentUL.hasClass(normal_class)) {
+                    if (!hasSubMenus) {
+                        $elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");
+                    }
+                } else if ($parentUL.hasClass(mobile_class)) {
+                    if (!hasSubMenus) {
+                        $("#mobile-nav").animate({ left: "-=280" }, 320, function () {
+                            $("#nav-toggle").removeClass("nav-toggle-active");
+                            toggleMenuStyle();
+                        });
+                    }
+                }
+            });
+        });
 		$("#nav-menu.nav-normal-menu li").each(function () {
-			$(this).off("mouseover");
 			$(this).on("mouseover", function () {
 				$(this).find("ul.nav-closed").each(function () {
 					$(this).removeClass("nav-closed");
@@ -102,7 +101,9 @@ define(["jquery","css!navigation/navigation.css"], function ($) {
 	function updateDropdownToggleHandlers() {
 		$("#nav-menu a.nav-dropdown-toggle").each(function () {
 			var $anchor = $(this);
-			$anchor.off('click');
+			if ($anchor.hasClass('update-dropdown-toggle-handlers'))
+			    return;
+            $anchor.addClass('update-dropdown-toggle-handlers')
 			$anchor.on('click', function (e) {
 				var $listItem = $anchor.parent();
 				var $parentUL = $listItem.parent();
@@ -161,7 +162,6 @@ define(["jquery","css!navigation/navigation.css"], function ($) {
 				e.preventDefault();
 			});
 		});
-
 		updateListItemHandlers();
 	}
 
@@ -176,7 +176,7 @@ define(["jquery","css!navigation/navigation.css"], function ($) {
 
 					e.preventDefault();
 				});
-
+	
 				updateDropdownToggleHandlers();
 
 				if(_callback) {
@@ -184,11 +184,6 @@ define(["jquery","css!navigation/navigation.css"], function ($) {
 				}
 			});
 		},
-		updateDropdownToggles: function() {
-			updateDropdownToggleHandlers();
-		},
-		updateListItemToggles: function() {
-			updateListItemHandlers();
-		}
+        updateDropdownToggles : updateDropdownToggleHandlers
 	};
 });
