@@ -1,7 +1,7 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery","css!navigation/navigation.css"], function ($) {
-	"use strict";
+define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.css"], function ($, $navHtml) {
+    "use strict";
 
 	$(window).resize(function () {
 		// media query event handler
@@ -167,22 +167,20 @@ define(["jquery","css!navigation/navigation.css"], function ($) {
 
 	return {
 		init: function(_callback) {
-			require(['text!navigation/navigation.html'], function ($html) {
-				$("body").prepend($html);
+            $("body").prepend($navHtml);
 
-				$("#nav-toggle").on("click", function (e) {
-					$("#nav-toggle").toggleClass("nav-toggle-active");
-					toggleMenuStyle();
+            $("#nav-toggle").on("click", function (e) {
+                $("#nav-toggle").toggleClass("nav-toggle-active");
+                toggleMenuStyle();
 
-					e.preventDefault();
-				});
-	
-				updateDropdownToggleHandlers();
+                e.preventDefault();
+            });
 
-				if(_callback) {
-					_callback($("#nav-menu"));
-				}
-			});
+            updateDropdownToggleHandlers();
+
+            if(_callback) {
+                _callback($("#nav-menu"));
+            }
 		},
         updateDropdownToggles : updateDropdownToggleHandlers
 	};
