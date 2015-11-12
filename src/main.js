@@ -35,6 +35,9 @@ requirejs.config({
     },
     waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
+        "websockets/binary_websockets": {
+          deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
+        },
         "jquery-ui": {
             deps: ["jquery"]
         },
@@ -64,6 +67,9 @@ requirejs.config({
         }
     }
 });
+
+/* Initialize the websocket as soon as posssilbe */
+require(['reconnecting-websocket', 'websockets/binary_websockets']);
 
 require(["jquery", "modernizr", "common/util"], function( $ ) {
 
