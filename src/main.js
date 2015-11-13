@@ -24,8 +24,7 @@ requirejs.config({
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
-        'js-cookie':'lib/js-cookie/src/js.cookie',
-        'gtm': 'gtm/gtm'
+        'js-cookie':'lib/js-cookie/src/js.cookie'
     },
     map: {
         '*': {
@@ -35,6 +34,9 @@ requirejs.config({
     },
     waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
+        "websockets/binary_websockets": {
+          deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
+        },
         "jquery-ui": {
             deps: ["jquery"]
         },
@@ -58,12 +60,12 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
-        },
-        "gtm": {
-            deps: ['jquery']
         }
     }
 });
+
+/* Initialize the websocket as soon as posssilbe */
+require(['reconnecting-websocket', 'websockets/binary_websockets']);
 
 require(["jquery", "modernizr", "common/util"], function( $ ) {
 
@@ -130,6 +132,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     profitTable.init(elem);
                     elem.click(); 
                 });
+
+            //Register async loading of statement dialog
+            load_ondemand($navMenu.find("a.statement"), 'click', 'loading Statement Table ...', 'statement/statement',
+                function (statement) {
+                    var elem = $navMenu.find("a.statement");
+                    statement.init(elem);
+                    elem.click(); 
+                });
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
@@ -171,5 +181,17 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
         'css!lib/colorpicker/jquery.colorpicker.css'
-    ]);
+    ], function() {
+
+        if (getParameterByName("gtm") === 'true'
+                            || getParameterByName("gtm") === undefined
+                            || $.trim(getParameterByName("gtm")).length <= 0) {
+            require(['gtm/gtm'], function (gtm) {
+                console.log(2);
+                gtm.init();
+            });
+        }
+
+    });
+
 });

@@ -29,9 +29,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-if');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-gitinfo');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        //Executing this task will populate grunt.config.gitinfo with repository data below
+        gitinfo: { 
+            local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
+            remote: { origin: { url: "" } }
+        },
         jshint: {
             options: {
                 node: true
@@ -40,7 +46,13 @@ module.exports = function (grunt) {
                 'Gruntfile.js'//, 'src/**/*.js', 'src/*.js' TODO
             ]
         },
-        clean: ['dist', 'dist/**/TODO'],
+        clean: {
+            compressed: ['dist/compressed'],
+            uncompressed: ['dist/uncompressed'],
+            branches:[ 'dist/branches'],
+            current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
+            dist: ['dist']
+        },
         copy: {
             main: {
                 files: [
@@ -91,6 +103,17 @@ module.exports = function (grunt) {
                             '**', '!**/*.js', '!**/*.css', '!**/*.html'
                         ],
                         dest: 'dist/compressed'
+                    }
+                ]
+            },
+            /* copy the compressed folder to /dist/branches/compressed/CURRENT_GIT_BRANCH_NAME */
+            copy_current_branch: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'dist/compressed',
+                        src: [ '**'],
+                        dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
                     }
                 ]
             }
@@ -171,6 +194,21 @@ module.exports = function (grunt) {
                     message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod'
                 },
                 src: ['**/*']
+            },
+            'deploy-branch': {
+                options: {
+                    base: 'dist/branches/compressed',
+                    add: true,
+                    message: 'Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= gitinfo.local.branch.current.name %>'
+                },
+                src: ['**/*']
+            },
+            'clean': {
+                options: {
+                    add: false /* remove existing files in gh-pages branch */,
+                    message: 'Cleaning all files in gh-pages'
+                },
+                src: [ 'README.md']
             }
         },
         connect: {
@@ -271,10 +309,17 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:0', 'copy:main', 'copy:copyLibraries', 'clean:1', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'copy:copyLibraries', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify', 'copy:copy_AfterCompression']);
 	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
+
     //Meant for local development use ONLY - for pushing to individual forks
+    /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
     grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
+    /* Deoploy to a subfolder of gh-pages with the name of current branch,
+       This is only for developers working on different branches in their forks. */
+    grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
+    /* clean all the files in gh-pages branch */
+    grunt.registerTask('gh-pages-clean', ['gh-pages:clean']);
 
 };
