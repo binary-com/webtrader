@@ -14,7 +14,7 @@
     "hightcharts",
     "binary.com"
   ],
-  "license": "Binary.com",
+  "license": "CC-BY-NC-ND-4.0",
   "private": true,
   "ignore": [
     "**/.*",

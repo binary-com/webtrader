@@ -320,5 +320,6 @@ module.exports = function (grunt) {
        This is only for developers working on different branches in their forks. */
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
     /* clean all the files in gh-pages branch */
-    grunt.registerTask('clean', ['gh-pages:clean']);
+    grunt.registerTask('gh-pages-clean', ['gh-pages:clean']);
+
 };
