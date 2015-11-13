@@ -4,7 +4,7 @@ define(["jquery"], function ($) {
 	return {
 		init: function () {
 			require(['text!gtm/gtm.html'], function (html) {
-				$("body").prepend(html);
+				$("body").append(html);
 			});
 		}
 	};
