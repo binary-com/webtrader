@@ -24,8 +24,7 @@ requirejs.config({
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
-        'js-cookie':'lib/js-cookie/src/js.cookie',
-        'gtm': 'gtm/gtm'
+        'js-cookie':'lib/js-cookie/src/js.cookie'
     },
     map: {
         '*': {
@@ -61,9 +60,6 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
-        },
-        "gtm": {
-            deps: ['jquery']
         }
     }
 });
@@ -186,5 +182,17 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
         'css!lib/colorpicker/jquery.colorpicker.css'
-    ]);
+    ], function() {
+
+        if (getParameterByName("gtm") === 'true'
+                            || getParameterByName("gtm") === undefined
+                            || $.trim(getParameterByName("gtm")).length <= 0) {
+            require(['gtm/gtm'], function (gtm) {
+                console.log(2);
+                gtm.init();
+            });
+        }
+
+    });
+
 });
