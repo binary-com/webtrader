@@ -2,9 +2,21 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jquery-timer'],
-    function (es6_promise, ReconnectingWebSocket, Cookies, tokenWin) {
-    es6_promise.polyfill(); /* polyfill for es6-promises */
+define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
+
+    var Cookies = null,
+        tokenWin = null;
+    /* these dependencies are only need for authenticated api sends.
+       load them on demand, so websocket can start before loading them.  */
+    var authentication_deps = new Promise(function (resolve, reject) {
+        require(['js-cookie', 'token/token'], function (_cookies, _tokenwin) {
+            Cookies = _cookies;
+            tokenWin = _tokenwin;
+            resolve();
+        });
+    });
+    /* don't wait for an authenticated request, trigger loading these now */
+    require(['js-cookie', 'token/token']);
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 
@@ -70,8 +82,10 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
         var promise = unresolved_promises[key];
         if (promise) {
             delete unresolved_promises[key];
-            if (data.error)
+            if (data.error) {
+                data.error.echo_req = data.echo_req;
                 promise.reject(data.error);
+            }
             else
                 promise.resolve(data);
         }
@@ -185,20 +199,24 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
             /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
             authorize: function () {
-                var token = Cookies.get('webtrader_token'),
-                    key = JSON.stringify({ token: token });
+                return authentication_deps.then(function () {
+                    var token = Cookies.get('webtrader_token'),
+                        key = JSON.stringify({ token: token });
 
-                if (is_authenitcated_session && token && cached_promises[key])
-                    return cached_promises[key];
+                    if (is_authenitcated_session && token && cached_promises[key])
+                        return cached_promises[key];
 
-                return token ? authenticate(token) : /* we have a token => autheticate */
-                                  tokenWin.getTokenAsync().then(authenticate); /* get the token from user and authenticate */
+                    return token ? authenticate(token) : /* we have a token => autheticate */
+                                      tokenWin.getTokenAsync().then(authenticate); /* get the token from user and authenticate */
+                })
             }
         },
         /* sends a request and returns an es6-promise */
         send: function (data) {
             if (needs_authentication(data))
-                return send_authenticated_request(data);
+                return authentication_deps.then(function () {
+                    return send_authenticated_request(data);
+                });
             return send_request(data);
         }
     }

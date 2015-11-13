@@ -17,10 +17,12 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                 $menuLink.addClass("nav-dropdown-toggle");
             }
 
-            var newLI = $("<li>").append($menuLink)
-                                .data("symbol", value.symbol)//TODO This is invalid for root level object
-                                .data("delay_amount", value.delay_amount)//TODO This is invalid for root level object
-                                .appendTo( root);
+            var newLI = $("<li>").append($menuLink);
+            if(!isDropdownMenu) {
+                newLI.data("symbol", value.symbol)
+                     .data("delay_amount", value.delay_amount)
+            }
+            newLI.appendTo( root);
 
             if (isDropdownMenu) {
                 var newUL = $("<ul>");
@@ -34,8 +36,6 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                     on_click(li);
                 });
         });
-
-        navigation.updateDropdownToggles();
     }
 
     return {
@@ -63,7 +63,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                     var symbols = sm.symbols;
                     if (options && options.filter) /* filter the symbols */
                         symbols = symbols.filter(options.filter);
-                     submarket.instruments = symbols.map(function (sym) {
+                    submarket.instruments = symbols.map(function (sym) {
                         return {
                             symbol: sym.symbol,
                             display_name: sym.name,
@@ -75,6 +75,10 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                         };
                     });
                     return submarket;
+                })
+                /* there might be a submarket (e.g "Americas") which does not have any symbols after filtering */
+                .filter(function (sm) {
+                    return sm.instruments.length > 0;
                 });
                 return market;
             });
@@ -102,6 +106,9 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
             }
         },
 
-        refreshMenu: refreshMenu
+        refreshMenu: function (root,data,on_click) {
+            refreshMenu(root, data, on_click);
+            navigation.updateDropdownToggles();
+        }
     }
 });

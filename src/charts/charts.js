@@ -31,7 +31,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 }
             }
             if ($.isEmptyObject(chartingRequestMap[instrumentCdAndTp].chartIDs)) {
-                liveapi.send({ "forget": chartingRequestMap[instrumentCdAndTp].tickStreamingID });
+                if(chartingRequestMap[instrumentCdAndTp].tickStreamingID) /* only forget if a stream is available */
+                    liveapi.send({ "forget": chartingRequestMap[instrumentCdAndTp].tickStreamingID });
                 $(document).stopTime(chartingRequestMap[instrumentCdAndTp].timerHandler);
                 delete chartingRequestMap[instrumentCdAndTp];
             }
@@ -259,7 +260,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                 currentPrice.init();
                 liveapi.execute(function(){
-                    ohlc_handler.retrieveChartDataAndRender(mainSeries_timeperiod, overlayInsName, containerIDWithHash, mainSeries_type, overlayInsName, 'percent' );
+                    ohlc_handler.retrieveChartDataAndRender(mainSeries_timeperiod, overlayInsCode, containerIDWithHash, mainSeries_type, overlayInsName, 'percent' );
                 });
             }
         }

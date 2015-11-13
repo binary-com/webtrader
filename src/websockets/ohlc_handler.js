@@ -1,4 +1,4 @@
-define(['websockets/binary_websockets',"charts/chartingRequestMap"], function(liveapi, chartingRequestMap) {
+define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jquery-timer"], function(liveapi, chartingRequestMap, $) {
 
     var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('candles', function (data) {
@@ -397,7 +397,10 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap"], function(li
                 });
               }
             console.log(JSON.stringify(requestObject));
-            liveapi.send(requestObject);
+            liveapi.send(requestObject)
+                   .catch(function(err){
+                       console.error(err); // TODO: can we recover?
+                   });
         }
     };
 
