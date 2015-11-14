@@ -23,8 +23,7 @@ define(["charts/chartWindow", "common/util"], function() {
 
         init : function (newTabId, timePeriod, chartType) {
 
-            loadCSS("charts/chartOptions.css");
-            $.get("charts/chartOptions.html", function($html) {
+            require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function($html) {
                 //attach different button actions
                 $html = $($html);
 

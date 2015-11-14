@@ -26,7 +26,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
                 if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max")))) {
                     if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
 
-                        chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat, null,
+                        chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat,
                                     isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
                         closeDialog.call($("#instrumentsDialog"));
                     }
@@ -43,7 +43,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
 
             if (error_msg) {
                 $("#timePeriod").addClass('ui-state-error');
-                $.growl.error({ message: "Only numbers between 1 to 100 is allowed!" });
+                $.growl.error({ message: error_msg});
             }
         });
 
@@ -56,15 +56,23 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
 
     function onMenuItemClick(li) {
         var update = function () {
+            var delay_amount = li.data('delay_amount');
             $("#instrumentsDialog").dialog('option', 'title', li.find('a').text())
                                         .data("symbol", li.data('symbol'))
-                                        .data("delay_amount", li.data('delay_amount'))
+                                        .data("delay_amount", delay_amount)
                                         .dialog("open");
+            /* disable or enable the buttons based on delay_amount */
+            $("#instrumentsDialog").find('button').each(function () {
+                var btn = $(this); // button ids are    1m, 5m, 15m, 1h, 4h, 8h, 1d, 2d, ...
+                var act = convertToTimeperiodObject(btn.attr('id')).timeInSeconds() < delay_amount * 60 ? 'disable' : 'enable';
+                btn.button(act);
+            })
+
             $("#instrumentSelectionMenuDIV").hide();
         };
 
         if($("#instrumentsDialog").length == 0)
-            $.get("instruments/instruments.html", function ($html) {
+            require(['text!instruments/instruments.html'], function ($html) {
                 $($html).css("display", "none").appendTo("body");
                 $("#standardPeriodsButtonContainer").find("button")
                     .click(function() {
@@ -125,19 +133,14 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
     return {
         init: function( _callback ) {
             if ($.isEmptyObject(markets)) {
-                loadCSS("instruments/instruments.css");
+                require(["css!instruments/instruments.css"]);
                 /* cache the result of trading_times call, because assetIndex needs the same data */
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (data) {
+                            markets = menu.extractChartableMarkets(data);
                             var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
-
-                            markets = menu.extractMenu(data, {
-                                filter: function (sym) { return sym.feed_license !== 'chartonly'; }
-                            });
-
-                            markets = menu.sortMenu(markets);
-
+                            menu.sortMenu(markets);
                             menu.refreshMenu(rootUL,markets,onMenuItemClick);
                         }
                     ).catch(console.error.bind(console));

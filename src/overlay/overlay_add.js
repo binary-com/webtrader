@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS"], function ($) {
+define(["jquery", "datatables"], function ($) {
 
     function _refreshInstruments( table, data, containerIDWithHash ) {
 
@@ -91,7 +91,7 @@ define(["jquery", "datatables", "loadCSS"], function ($) {
             }
             else {
 
-                $.get("overlay/overlay_add.html", function($html) {
+                require(['text!overlay/overlay_add.html'], function($html) {
                     $html = $($html);
                     $html.hide();
                     $html.appendTo("body");

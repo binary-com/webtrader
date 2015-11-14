@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,9 +11,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/sma/sma.css');
+        require(['css!charts/indicators/sma/sma.css']);
 
-        $.get("charts/indicators/sma/sma.html" , function ( $html ) {
+        require(['text!charts/indicators/sma/sma.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

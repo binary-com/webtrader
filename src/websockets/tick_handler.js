@@ -1,107 +1,85 @@
-define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/util"], function(liveapi,chartingRequestMap) {
+define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/util"], function (liveapi, chartingRequestMap) {
 
     var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('tick', function (data) {
-        console.log(JSON.stringify(data));
-        //console.log(data);
-        var key = data.echo_req.passthrough.instrumentCdAndTp;
         if (data.error) {
-            //This means, there is no real time feed for this instrument
-            $(document).trigger("feedTypeNotification", [key, "delayed-feed"]); //TODO have to consume this notification
-        } else {
-            if (key) {
-                chartingRequestMap[key] = chartingRequestMap[key] || {};
-                chartingRequestMap[key].tickStreamingID = data.tick.id;
+            // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
+            $(document).trigger("feedTypeNotification", [key, "delayed-feed"]);
+            console.error(data.error); // TODO: can we recover?
+            return;
+        }
 
-                var chartingRequest = chartingRequestMap[key];
-                if (chartingRequest) {
-                    $(document).trigger("feedTypeNotification", [key, "realtime-feed"]); //TODO have to consume this notification
-                    var price = parseFloat(data.tick.quote);
-                    var time = parseInt(data.tick.epoch) * 1000;
-                    tickReceived(chartingRequest, key, time, price);
-                }
-            }
+        var key = data.echo_req.passthrough.instrumentCdAndTp;
+        if (key) {
+            chartingRequestMap[key] = chartingRequestMap[key] || {};
+            chartingRequestMap[key].tickStreamingID = data.tick.id;
+
+            // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
+            $(document).trigger("feedTypeNotification", [key, "realtime-feed"]);
+
+            var price = parseFloat(data.tick.quote);
+            var time = parseInt(data.tick.epoch) * 1000;
+            tickReceived(key, time, price);
         }
     });
-    function tickReceived(chartingRequest, instrumentCodeAndTimeperiod, time, price) {
-            if (chartingRequest && chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0) {
-                var timeperiod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timeperiod');
-                if (timeperiod) {
 
-                    var bar = undefined;
-                    if (isTick(timeperiod)) 
-                    {
-                        //Update OHLC with same value in DB
-                        barsTable.insert({
-                                instrumentCdAndTp : instrumentCodeAndTimeperiod,
-                                time: time,
-                                open: price,
-                                high: price,
-                                low: price,
-                                close: price
-                          });
-                    } else 
-                    {
-                        //Just update high/low/close price in DB as necessary
-                        bar = barsTable.chain()
-                                        .find({instrumentCdAndTp : instrumentCodeAndTimeperiod})
-                                        .simplesort("time", true)
-                                        .limit(1)
-                                        .data();
-                        if (!bar || bar.length <= 0) {
-                            console.log('There are no bars in barsTable for instrumentCdAndTp : ' + instrumentCodeAndTimeperiod);
-                            return;
-                        } else {
-                            bar = bar[0];
-                        }
-                        if (price < bar.low) {
-                            bar.low = price;
-                        } else if (price > bar.high) {
-                            bar.high = price;
-                        }
-                        bar.close = price;
-                        barsTable.update(bar);
-                    }
+    function tickReceived(key, time, price) {
+        var chartingRequest = chartingRequestMap[key];
+        if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
+            return;
+        var timeperiod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timeperiod');
+        if (!timeperiod)
+            return;
 
-                    //notify all registered charts
-                    for (var index in chartingRequest.chartIDs) {
+        var bar = null;
+        if (isTick(timeperiod)) { //Update OHLC with same value in DB
 
-                        var chartID     = chartingRequest.chartIDs[index];
-                        var chart       = $(chartID.containerIDWithHash).highcharts();
-                        if (!chart) continue;
+            barsTable.insert({
+                instrumentCdAndTp: key,
+                time: time,
+                open: price,
+                high: price,
+                low: price,
+                close: price
+            });
+        }
+        else { //Just update high/low/close price in DB as necessary
+            bar = barsTable.chain()
+                            .find({ instrumentCdAndTp: key })
+                            .simplesort("time", true)
+                            .limit(1)
+                            .data();
+            if (!bar || bar.length <= 0) {
+                console.error('There are no bars in barsTable for instrumentCdAndTp : ' + key);
+                return;
+            }
+            bar = bar[0];
+            bar.close = Math.min(Math.max(price, bar.low), bar.high);
+            barsTable.update(bar);
+        }
 
-                        var series      = chart.get(instrumentCodeAndTimeperiod);
-                        if (!series) continue;
-                        
-                        var type        = $(chartID.containerIDWithHash).data('type');
-                        
-                        if (isTick(timeperiod)) 
-                        {
-                            series.addPoint([time, price]);
-                        } else 
-                        {
-                            //Just update high/low/close price in DB as necessary
-                            var last = series.data[series.data.length - 1];
-                            //console.log('Updating data point');
-                            if ( type && isDataTypeClosePriceOnly(type) )
-                            {
-                                //console.log('I am updating just one data point! (before) ' + series.name + " " + series.data.length);
-                                //Only update when its not in loading mode
-                                console.log(series.options.name, last.x, price, instrumentCodeAndTimeperiod);
-                                last.update([last.x, price]);
-                                //console.log('I am updating just one data point! (after) ' + series.name + " " + series.data.length);
-                            }
-                            else if (bar)
-                            {
-                                //console.log(timeInMillis + " " + endTimeInMillis + " " + open + " " + high + " " + low + " " + close);
-                                last.update([last.x, bar.open, bar.high, bar.low, bar.close]);
-                            }
-                        }//Non-tick chart condition ends
-                    } //For loop ends
-                } //timeperiod check if
-            }//chartRequest check if
-        }//tickReceived method ends
+        //notify all registered charts
+        chartingRequest.chartIDs.forEach(function (chartID) {
+            var chart = $(chartID.containerIDWithHash).highcharts();
+            if (!chart) return;
 
-    return { };
+            var series = chart.get(key);
+            if (!series) return;
 
+            if (isTick(timeperiod)) {
+                series.addPoint([time, price]);
+                return;
+            }
+
+            var type = $(chartID.containerIDWithHash).data('type');
+            var last = series.data[series.data.length - 1];
+
+            if (type && isDataTypeClosePriceOnly(type)) //Only update when its not in loading mode
+                last.update([last.x, price]);
+            else if (bar)
+                last.update([last.x, bar.open, bar.high, bar.low, bar.close]);
+        });
+    }
+
+    return {};
 });

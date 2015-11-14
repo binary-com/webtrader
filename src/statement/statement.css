@@ -1,0 +1,36 @@
+﻿table.statement-dialog th,
+table.statement-dialog td
+ {
+  text-align:center;
+  width: 13% !important; /* make important: jQ-datatables overrides this */
+}
+    table.statement-dialog span {
+        height:2.5em !important;
+        display:block;
+        font-size:90%;
+    }
+
+    table.statement-dialog th.wide-column{
+        width: 35% !important;
+    }
+
+    table.statement-dialog th > .search-input {
+        text-align:center;
+        width: 100%; 
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+        border-radius:10px;
+    }
+
+    table.statement-dialog th > .search-input:focus {
+        box-shadow: 3px -1px 8px 1pt lightblue;
+        outline: 0;
+    }
+
+table.statement-dialog img.arrow {
+    width: 30px;
+    width: 30px;
+    height: 30px;
+    float: right;
+}

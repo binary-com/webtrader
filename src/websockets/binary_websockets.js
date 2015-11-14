@@ -2,20 +2,54 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jquery-timer'],
-    function (es6_promise, ReconnectingWebSocket, Cookies, tokenWin) {
-    es6_promise.polyfill(); /* polyfill for es6-promises */
+define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
+
+    var Cookies = null,
+        tokenWin = null;
+    /* these dependencies are only need for authenticated api sends.
+       load them on demand, so websocket can start before loading them.  */
+    var authentication_deps = new Promise(function (resolve, reject) {
+        require(['js-cookie', 'token/token'], function (_cookies, _tokenwin) {
+            Cookies = _cookies;
+            tokenWin = _tokenwin;
+            resolve();
+        });
+    });
+    /* don't wait for an authenticated request, trigger loading these now */
+    require(['js-cookie', 'token/token']);
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 
-    function WebtraderWebsocket() {
+    var connect = function () {
         var api_url = 'wss://www.binary.com/websockets/v3?l=EN';
-        var ws = new ReconnectingWebSocket(api_url, null, { debug: false, timeoutInterval: 5400});
+        var ws = new ReconnectingWebSocket(api_url, null, { debug: false, timeoutInterval: 2500 });
 
-        ws.onclose = function () {
-            is_authenitcated_session = false;
-        }
+        ws.addEventListener('open', onopen);
+        ws.addEventListener('close', onclose);
+        ws.addEventListener('message', onmessage);
+
         return ws;
+    }
+
+    var onclose = function () {
+        is_authenitcated_session = false;
+        /* the connection is closed, resubscrible to tick streaming */
+        require(['charts/chartingRequestMap'], function (map) {
+            Object.keys(map).forEach(function (key) {
+                var req = map[key];
+                var instrumentCode = req && req.chartIDs && req.chartIDs[0] && req.chartIDs[0].instrumentCode;
+
+                /* resubscribe */
+                if (req && instrumentCode)
+                    api.send({ ticks: instrumentCode, passthrough: { instrumentCdAndTp: key } })
+                        .then(function (data) {
+                            req.tickStreamingID = data.tick.id;
+                        })
+                        .catch(function (err) {
+                            console.error(err);
+                        });
+            });
+        });
     }
 
     var callbacks = {};
@@ -23,12 +57,11 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
     var buffered_sends = [];
     var unresolved_promises = {};
     var cached_promises = {}; /* requests that have been cached */
-    var socket = new WebtraderWebsocket();
     var is_connected = function () {
         return socket && socket.readyState === 1;
     }
    
-    socket.onopen = function () {
+    var onopen = function () {
         /* send buffered sends */
         while (buffered_sends.length > 0) {
             socket.send(JSON.stringify(buffered_sends.shift()));
@@ -36,8 +69,9 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
         while (buffered_execs.length > 0)
             buffered_execs.shift()();
     }
+
     /* execute buffered executes */
-    socket.onmessage = function (message) {
+    var onmessage = function (message) {
         var data = JSON.parse(message.data);
 
         (callbacks[data.msg_type] || []).forEach(function (cb) {
@@ -48,15 +82,19 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
         var promise = unresolved_promises[key];
         if (promise) {
             delete unresolved_promises[key];
-            if (data.error)
+            if (data.error) {
+                data.error.echo_req = data.echo_req;
                 promise.reject(data.error);
+            }
             else
                 promise.resolve(data);
         }
     }
 
+    var socket = connect();
+    //This is triggering asycn loading of tick_handler. 
+    //The module will automatically start working as soon as its loaded
     require(['websockets/tick_handler']); // require tick_handler to handle ticks.
-    require(['websockets/connection_check']); // require connection_check to handle pings.
 
     /* whether the given request needs authentication or not */
     var needs_authentication = function (data) {
@@ -161,20 +199,24 @@ define(['es6-promise', 'reconnecting-websocket', 'js-cookie', 'token/token', 'jq
             /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
             authorize: function () {
-                var token = Cookies.get('webtrader_token'),
-                    key = JSON.stringify({ token: token });
+                return authentication_deps.then(function () {
+                    var token = Cookies.get('webtrader_token'),
+                        key = JSON.stringify({ token: token });
 
-                if (is_authenitcated_session && token && cached_promises[key])
-                    return cached_promises[key];
+                    if (is_authenitcated_session && token && cached_promises[key])
+                        return cached_promises[key];
 
-                return token ? authenticate(token) : /* we have a token => autheticate */
-                                  tokenWin.getTokenAsync().then(authenticate); /* get the token from user and authenticate */
+                    return token ? authenticate(token) : /* we have a token => autheticate */
+                                      tokenWin.getTokenAsync().then(authenticate); /* get the token from user and authenticate */
+                })
             }
         },
         /* sends a request and returns an es6-promise */
         send: function (data) {
             if (needs_authentication(data))
-                return send_authenticated_request(data);
+                return authentication_deps.then(function () {
+                    return send_authenticated_request(data);
+                });
             return send_request(data);
         }
     }

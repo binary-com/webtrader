@@ -3,8 +3,8 @@ define(["jquery"], function ($) {
 
 	return {
 		init: function () {
-			$.get("gtm/gtm.html", function (html) {
-				$("body").prepend(html);
+			require(['text!gtm/gtm.html'], function (html) {
+				$("body").append(html);
 			});
 		}
 	};
