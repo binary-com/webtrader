@@ -298,7 +298,7 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
                             "end": 'latest',
                             //"count": count,
                             "start": lastBar.time/1000,
-                            "granularity":  suffix + intVal,
+                            "granularity":  totalSecsInBar,
                             "passthrough": {
                                 "isTimer": "true",
                                 "instrumentCdAndTp" : key
@@ -393,7 +393,7 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
               if (!isTick(timeperiod)) {
                 requestObject = $.extend(requestObject, {
                     "start": rangeStartDate,
-                    "granularity":  suffix + intVal
+                    "granularity":  totalSeconds
                 });
               }
             console.log(JSON.stringify(requestObject));
