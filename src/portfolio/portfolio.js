@@ -79,11 +79,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     data: [],
                     columns: [
                         { title: 'Ref.' },
-                        { title: 'Contact Detail' },
+                        { title: 'Contract Detail' },
                         { title: 'Purchase' },
                         { title: 'Indicative' }
                     ],
-                    rowId : '0', /* jQ datatables support selecting rows based on rowId https://datatables.net/reference/type/row-selector
+                    rowId : '4', /* jQ datatables support selecting rows based on rowId https://datatables.net/reference/type/row-selector
                                     we want not to query rows everytime we update the indicative column */
                     paging: false,
                     ordering: false,
@@ -117,10 +117,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
                 var rows = contracts.map(function (contract) {
                     return [
-                        contract.contract_id,
+                        contract.transaction_id,
                         contract.longcode,
                         contract.currency + ' ' + contract.buy_price,
-                        '-'
+                        '-',
+                        contract.contract_id, /* for jq-datatables rowId */
                     ];
                 });
                 
