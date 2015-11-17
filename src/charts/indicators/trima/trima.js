@@ -54,37 +54,33 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".trima_input_width_for_period").val(),
-                                                parseInt($html.find(".trima_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".trima_input_width_for_period").attr("max"))))
-                                {
-                                    require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".trima_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".trima_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".trima_input_width_for_period").closest('tr').find('td:first').text() + "!" });
-                                    });
-                                    return;
-                                }
-
-                                require(['charts/indicators/highcharts_custom/trima'], function ( trima ) {
-                                    trima.init();
-                                    var options = {
-                                        period : parseInt($html.find(".trima_input_width_for_period").val()),
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#trima_strokeWidth").val()),
-                                        dashStyle : $html.find("#trima_dashStyle").val(),
-                                        appliedTo: parseInt($html.find("#trima_appliedTo").val())
-                                    }
-                                    //Add TRIMA for the main series
-                                    $($(".trima").data('refererChartID')).highcharts().series[0].addTRIMA(options);
+                            if (!isNumericBetween($html.find(".trima_input_width_for_period").val(),
+                                            parseInt($html.find(".trima_input_width_for_period").attr("min")),
+                                            parseInt($html.find(".trima_input_width_for_period").attr("max"))))
+                            {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $.growl.error({ message: "Only numbers between " + $html.find(".trima_input_width_for_period").attr("min")
+                                            + " to " + $html.find(".trima_input_width_for_period").attr("max")
+                                            + " is allowed for " + $html.find(".trima_input_width_for_period").closest('tr').find('td:first').text() + "!" });
                                 });
+                                return;
+                            }
 
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/trima'], function ( trima ) {
+                                trima.init();
+                                var options = {
+                                    period : parseInt($html.find(".trima_input_width_for_period").val()),
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#trima_strokeWidth").val()),
+                                    dashStyle : $html.find("#trima_dashStyle").val(),
+                                    appliedTo: parseInt($html.find("#trima_appliedTo").val())
+                                }
+                                //Add TRIMA for the main series
+                                $($(".trima").data('refererChartID')).highcharts().series[0].addTRIMA(options);
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

@@ -29,18 +29,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdlthrusting'], function ( cdlthrusting ) {
-                                    cdlthrusting.init();
-                                    //Add CDLTHRUSTING for the main series
-                                    $($(".cdlthrusting").data('refererChartID')).highcharts().series[0].addCDLTHRUSTING();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdlthrusting'], function ( cdlthrusting ) {
+                                cdlthrusting.init();
+                                //Add CDLTHRUSTING for the main series
+                                $($(".cdlthrusting").data('refererChartID')).highcharts().series[0].addCDLTHRUSTING();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

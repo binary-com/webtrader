@@ -60,30 +60,26 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".rsi_level_input_width_for_level").val(),
-                                        parseInt($html.find(".rsi_level_input_width_for_level").attr("min")),
-                                        parseInt($html.find(".rsi_level_input_width_for_level").attr("max"))))
-                                {
-                                    require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".rsi_level_input_width_for_level").attr("min")
-                                        + " to " + $html.find(".rsi_level_input_width_for_level").attr("max")
-                                        + " is allowed for " + $html.find(".rsi_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
-                                    });
-                                    return;
-                                }
+                            if (!isNumericBetween($html.find(".rsi_level_input_width_for_level").val(),
+                                    parseInt($html.find(".rsi_level_input_width_for_level").attr("min")),
+                                    parseInt($html.find(".rsi_level_input_width_for_level").attr("max"))))
+                            {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $.growl.error({ message: "Only numbers between " + $html.find(".rsi_level_input_width_for_level").attr("min")
+                                    + " to " + $html.find(".rsi_level_input_width_for_level").attr("max")
+                                    + " is allowed for " + $html.find(".rsi_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
+                                });
+                                return;
+                            }
 
-                                if (callBackAfterOKPressed) {
-                                    callBackAfterOKPressed([new Level(parseFloat($html.find(".rsi_level_input_width_for_level").val()),
-                                        defaultStrokeColor, parseInt($html.find("#rsi_level_strokeWidth").val()),
-                                        $html.find("#rsi_level_dashStyle").val())]);
-                                }
+                            if (callBackAfterOKPressed) {
+                                callBackAfterOKPressed([new Level(parseFloat($html.find(".rsi_level_input_width_for_level").val()),
+                                    defaultStrokeColor, parseInt($html.find("#rsi_level_strokeWidth").val()),
+                                    $html.find("#rsi_level_dashStyle").val())]);
+                            }
 
-                                closeDialog.call($html);
-
-                            });
+                            closeDialog.call($html);
                         }
                     },
                     {
