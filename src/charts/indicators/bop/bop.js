@@ -100,39 +100,35 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/bop'], function ( bop ) {
-                                    bop.init();
-                                    var levels = [];
-                                    $.each(table.rows().nodes(), function () {
-                                        var data = $(this).data('level');
-                                        if (data) {
-                                            levels.push({
-                                                color: data.stroke,
-                                                dashStyle: data.dashStyle,
-                                                width: data.strokeWidth,
-                                                value: data.level,
-                                                label: {
-                                                    text: data.level
-                                                }
-                                            });
-                                        }
-                                    });
-                                    var options = {
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#bop_strokeWidth").val()),
-                                        dashStyle : $html.find("#bop_dashStyle").val(),
-                                        levels : levels
-                                    };
-                                    //Add BOP for the main series
-                                    $($(".bop").data('refererChartID')).highcharts().series[0].addBOP(options);
+                            require(['charts/indicators/highcharts_custom/bop'], function ( bop ) {
+                                bop.init();
+                                var levels = [];
+                                $.each(table.rows().nodes(), function () {
+                                    var data = $(this).data('level');
+                                    if (data) {
+                                        levels.push({
+                                            color: data.stroke,
+                                            dashStyle: data.dashStyle,
+                                            width: data.strokeWidth,
+                                            value: data.level,
+                                            label: {
+                                                text: data.level
+                                            }
+                                        });
+                                    }
                                 });
-
-                                closeDialog.call($html);
-
+                                var options = {
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#bop_strokeWidth").val()),
+                                    dashStyle : $html.find("#bop_dashStyle").val(),
+                                    levels : levels
+                                };
+                                //Add BOP for the main series
+                                $($(".bop").data('refererChartID')).highcharts().series[0].addBOP(options);
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

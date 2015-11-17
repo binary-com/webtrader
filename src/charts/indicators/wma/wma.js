@@ -54,37 +54,33 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".wma_input_width_for_period").val(),
-                                                parseInt($html.find(".wma_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".wma_input_width_for_period").attr("max"))))
-                                {
-                                    require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".wma_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".wma_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".wma_input_width_for_period").closest('tr').find('td:first').text() + "!" });
-                                    });
-                                    return;
-                                }
-
-                                require(['charts/indicators/highcharts_custom/wma'], function ( wma ) {
-                                    wma.init();
-                                    var options = {
-                                        period : parseInt($html.find(".wma_input_width_for_period").val()),
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#wma_strokeWidth").val()),
-                                        dashStyle : $html.find("#wma_dashStyle").val(),
-                                        appliedTo: parseInt($html.find("#wma_appliedTo").val())
-                                    }
-                                    //Add WMA for the main series
-                                    $($(".wma").data('refererChartID')).highcharts().series[0].addWMA(options);
+                            if (!isNumericBetween($html.find(".wma_input_width_for_period").val(),
+                                            parseInt($html.find(".wma_input_width_for_period").attr("min")),
+                                            parseInt($html.find(".wma_input_width_for_period").attr("max"))))
+                            {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $.growl.error({ message: "Only numbers between " + $html.find(".wma_input_width_for_period").attr("min")
+                                            + " to " + $html.find(".wma_input_width_for_period").attr("max")
+                                            + " is allowed for " + $html.find(".wma_input_width_for_period").closest('tr').find('td:first').text() + "!" });
                                 });
+                                return;
+                            }
 
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/wma'], function ( wma ) {
+                                wma.init();
+                                var options = {
+                                    period : parseInt($html.find(".wma_input_width_for_period").val()),
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#wma_strokeWidth").val()),
+                                    dashStyle : $html.find("#wma_dashStyle").val(),
+                                    appliedTo: parseInt($html.find("#wma_appliedTo").val())
+                                }
+                                //Add WMA for the main series
+                                $($(".wma").data('refererChartID')).highcharts().series[0].addWMA(options);
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

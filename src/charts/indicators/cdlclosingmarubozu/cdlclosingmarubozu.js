@@ -29,18 +29,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdlclosingmarubozu'], function ( cdlclosingmarubozu ) {
-                                    cdlclosingmarubozu.init();
-                                    //Add CDLCLOSINGMARUBOZU for the main series
-                                    $($(".cdlclosingmarubozu").data('refererChartID')).highcharts().series[0].addCDLCLOSINGMARUBOZU();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdlclosingmarubozu'], function ( cdlclosingmarubozu ) {
+                                cdlclosingmarubozu.init();
+                                //Add CDLCLOSINGMARUBOZU for the main series
+                                $($(".cdlclosingmarubozu").data('refererChartID')).highcharts().series[0].addCDLCLOSINGMARUBOZU();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {
