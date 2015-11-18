@@ -19,8 +19,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
 
             var newLI = $("<li>").append($menuLink);
             if(!isDropdownMenu) {
-                newLI.data("symbol", value.symbol)
-                     .data("delay_amount", value.delay_amount)
+                newLI.data(value); /* example use => newLI.data('symbol'), newLI.data('delay_amount'), newLI.data('display_name') */
             }
             newLI.appendTo( root);
 

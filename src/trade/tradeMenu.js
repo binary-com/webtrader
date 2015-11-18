@@ -5,6 +5,7 @@ define(["jquery", "websockets/binary_websockets", "common/menu", "jquery-growl"]
 
 
     function init() {
+        require(['trade/tradeDialog']); // Trigger loading of tradeDialog
         liveapi
             .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
             .then(function (data) {
@@ -14,7 +15,9 @@ define(["jquery", "websockets/binary_websockets", "common/menu", "jquery-growl"]
 
                 var root = $("<ul>").appendTo($("#nav-menu").find(".trade")); /* add to trade menu */
                 menu.refreshMenu(root, markets, function (li) {
-                    console.warn(li);
+                    require(['trade/tradeDialog'], function (tradeDialog) {
+                        tradeDialog.init(li.data());
+                    });
                 });
             })
             .catch(function (err) {
