@@ -79,7 +79,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     data: [],
                     columns: [
                         { title: 'Ref.' },
-                        { title: 'Contract Detail' },
+                        { title: 'Contract Details' },
                         { title: 'Purchase' },
                         { title: 'Indicative' }
                     ],
