@@ -1,4 +1,8 @@
-﻿.trade-dialog select.contract-type + .ui-selectmenu-button {
+﻿.trade-dialog .gray {
+    background-color: #F5F6F8; 
+}
+
+.trade-dialog select.contract-type + .ui-selectmenu-button {
     display: block;
     margin:0 auto;
     width: 250px !important; /* !important because jq-ui.selecetmenu(...) overrides this */

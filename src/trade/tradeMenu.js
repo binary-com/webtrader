@@ -3,6 +3,7 @@
  */
 define(["jquery", "websockets/binary_websockets", "common/menu", "jquery-growl"], function ($, liveapi, menu) {
 
+    var show_error = function (err) { $.growl.error({ message: err.message }); console.error(err); };
 
     function init() {
         require(['trade/tradeDialog']); // Trigger loading of tradeDialog
@@ -15,15 +16,20 @@ define(["jquery", "websockets/binary_websockets", "common/menu", "jquery-growl"]
 
                 var root = $("<ul>").appendTo($("#nav-menu").find(".trade")); /* add to trade menu */
                 menu.refreshMenu(root, markets, function (li) {
-                    require(['trade/tradeDialog'], function (tradeDialog) {
-                        tradeDialog.init(li.data());
-                    });
+                    var data = li.data();
+                    liveapi
+                        .send({ contracts_for: data.symbol })
+                        .then(function (res) {
+
+                            require(['trade/tradeDialog'], function (tradeDialog) {
+                                tradeDialog.init(data, res.contracts_for);
+                            });
+
+                        })
+                        .catch(show_error);
                 });
             })
-            .catch(function (err) {
-                $.growl.error({ message: err.message });
-                console.error(err);
-            });
+            .catch(show_error);
     }
 
     return {
