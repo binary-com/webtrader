@@ -1,4 +1,5 @@
-﻿table.asset-index-dialog th,td {
+﻿table.asset-index-dialog th,
+table.asset-index-dialog td {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
