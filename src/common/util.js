@@ -191,3 +191,8 @@ function sortAlphaNum(property) {
     };
 }
 
+function uniqueArray(array) {
+    return array.filter(function (el, index, arr) {
+        return index === arr.indexOf(el);
+    });
+}

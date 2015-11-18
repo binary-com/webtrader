@@ -23,20 +23,13 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
             spot: "5137.20",
             available: [
                 {
-                    market: "indices",
-                    contract_display: "higher",
-                    min_contract_duration: "1d",
-                    max_contract_duration: "365d",
-                    barriers: 0,
-                    sentiment: "up",
-                    barrier_category: "euro_atm",
-                    start_type: "spot",
-                    contract_category: "callput",
-                    submarket: "asia_oceania",
-                    exchange_name: "ASX",
-                    expiry_type: "daily",
-                    underlying_symbol: "AS51",
-                    contract_category_display: "Up/Down",
+                    market: "indices",                  contract_display: "higher",
+                    min_contract_duration: "1d",        max_contract_duration: "365d",
+                    barriers: 0,                        sentiment: "up",
+                    barrier_category: "euro_atm",       start_type: "spot",
+                    contract_category: "callput",       submarket: "asia_oceania",
+                    exchange_name: "ASX",               expiry_type: "daily",
+                    underlying_symbol: "AS51",          contract_category_display: "Up/Down",
                     contract_type: "CALL"
                 }]
         }
@@ -48,8 +41,9 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
     $html = $($html);
 
     function contract_type_change() {
-        type = contract_type.find('option:selected').val();
-        console.warn(type);
+        var text = contract_type.find('option:selected').val();
+        available_r = contracts_for.available.filter(function (row) { return row.contract_category_display === text });
+        console.warn(available_r[0],available_r);
     }
 
     function init(_symbol, _contracts_for) {
@@ -66,8 +60,15 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
             //height: 500
         });
 
-        contract_type = $html.find('.contract-type')
-                             .selectmenu({ change: contract_type_change });
+        var select = $html.find('.contract-type');
+        var array = contracts_for.available
+                        .map(function (row) { return row.contract_category_display; })
+                        .filter(function (el, index, arr) { return index === arr.indexOf(el); }) // make unique
+                        .forEach(function (el) {
+                            $('<option/>').text(el).appendTo(select);
+                        });
+        contract_type = select.selectmenu({ change: contract_type_change });
+
         contract_type_change();
 
         dialog.dialog('open');
