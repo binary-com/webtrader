@@ -9,12 +9,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
 
     function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
 
-        require(["validation/validation","charts/chartWindow"], function(validation,chartWindow) {
-            if (!validation.validateIfNoOfChartsCrossingThreshold(chartWindow.totalWindows())) {
-                $.growl.error({ message: "No more charts allowed!" });
-                return;
-            }
-
+        require(["charts/chartWindow"], function(chartWindow) {
             //validate the selection
             var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
             var internalSymbol = $("#instrumentsDialog").data("symbol");
@@ -23,7 +18,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
             var timeperiodObject = convertToTimeperiodObject(timePeriodInStringFormat);
             var error_msg = null;
             if (timeperiodObject) {
-                if (validation.validateNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max")))) {
+                if (isNumericBetween(timeperiodObject.intValue(), parseInt($("#timePeriod").attr("min")), parseInt($("#timePeriod").attr("max")))) {
                     if (delayAmount <= (timeperiodObject.timeInSeconds() / 60)) {
 
                         chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat,

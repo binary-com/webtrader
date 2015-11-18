@@ -54,38 +54,34 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                var isValid = true;
-                                $('.sar_input_width_for_period').each(function()
-                                {
-                                    if (!$.isNumeric($(this).val())) {
-                                        require(["jquery", "jquery-growl"], function($) {
-                                            $.growl.error({ message: "Only numeric value allowed!" });
-                                        });
-                                        isValid = false;
-                                        return isValid;
-                                    }
-                                });
-                                if (!isValid) return;
-
-                                require(['charts/indicators/highcharts_custom/sar'], function ( sar ) {
-                                    sar.init();
-                                    var options = {
-                                        acceleration : parseInt($html.find("#sar_acceleration").val()),
-                                        maximum : parseInt($html.find("#sar_maximum").val()),
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
-                                        dashStyle : 'Dot'
-                                    }
-                                    //Add sar for the main series TODO
-                                    $($(".sar").data('refererChartID')).highcharts().series[0].addSAR(options);
-                                });
-
-                                closeDialog.call($html);
-
+                            var isValid = true;
+                            $('.sar_input_width_for_period').each(function()
+                            {
+                                if (!$.isNumeric($(this).val())) {
+                                    require(["jquery", "jquery-growl"], function($) {
+                                        $.growl.error({ message: "Only numeric value allowed!" });
+                                    });
+                                    isValid = false;
+                                    return isValid;
+                                }
                             });
+                            if (!isValid) return;
+
+                            require(['charts/indicators/highcharts_custom/sar'], function ( sar ) {
+                                sar.init();
+                                var options = {
+                                    acceleration : parseInt($html.find("#sar_acceleration").val()),
+                                    maximum : parseInt($html.find("#sar_maximum").val()),
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
+                                    dashStyle : 'Dot'
+                                }
+                                //Add sar for the main series TODO
+                                $($(".sar").data('refererChartID')).highcharts().series[0].addSAR(options);
+                            });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

@@ -29,18 +29,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdl2crows'], function ( cdl2crows ) {
-                                    cdl2crows.init();
-                                    //Add CDL2CROWS for the main series
-                                    $($(".cdl2crows").data('refererChartID')).highcharts().series[0].addCDL2CROWS();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdl2crows'], function ( cdl2crows ) {
+                                cdl2crows.init();
+                                //Add CDL2CROWS for the main series
+                                $($(".cdl2crows").data('refererChartID')).highcharts().series[0].addCDL2CROWS();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

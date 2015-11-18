@@ -22,6 +22,11 @@ function isDaily(ohlc)
     return ohlc.indexOf('d') != -1;
 }
 
+function isNumericBetween(value, min, max) {
+    var isNumeric = !isNaN(parseFloat(value)) && isFinite(value)
+    return isNumeric && Math.floor(value) == value && min <= value && max >= value;
+};
+
 function convertToTimeperiodObject(timeperiodInStringFormat)
 {
     return {

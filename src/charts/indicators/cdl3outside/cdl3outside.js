@@ -30,18 +30,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdl3outside'], function ( cdl3outside ) {
-                                    cdl3outside.init();
-                                    //Add CDL3OUTSIDE for the main series
-                                    $($(".cdl3outside").data('refererChartID')).highcharts().series[0].addCDL3OUTSIDE();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdl3outside'], function ( cdl3outside ) {
+                                cdl3outside.init();
+                                //Add CDL3OUTSIDE for the main series
+                                $($(".cdl3outside").data('refererChartID')).highcharts().series[0].addCDL3OUTSIDE();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {
