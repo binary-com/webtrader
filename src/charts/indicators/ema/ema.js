@@ -54,37 +54,33 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".ema_input_width_for_period").val(),
-                                                parseInt($html.find(".ema_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".ema_input_width_for_period").attr("max"))))
-                                {
-                                    require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".ema_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".ema_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".ema_input_width_for_period").closest('tr').find('td:first').text() + "!" });
-                                    });
-                                    return;
-                                }
-
-                                require(['charts/indicators/highcharts_custom/ema'], function ( ema ) {
-                                    ema.init();
-                                    var options = {
-                                        period : parseInt($html.find(".ema_input_width_for_period").val()),
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#ema_strokeWidth").val()),
-                                        dashStyle : $html.find("#ema_dashStyle").val(),
-                                        appliedTo: parseInt($html.find("#ema_appliedTo").val())
-                                    }
-                                    //Add EMA for the main series
-                                    $($(".ema").data('refererChartID')).highcharts().series[0].addEMA(options);
+                            if (!isNumericBetween($html.find(".ema_input_width_for_period").val(),
+                                            parseInt($html.find(".ema_input_width_for_period").attr("min")),
+                                            parseInt($html.find(".ema_input_width_for_period").attr("max"))))
+                            {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $.growl.error({ message: "Only numbers between " + $html.find(".ema_input_width_for_period").attr("min")
+                                            + " to " + $html.find(".ema_input_width_for_period").attr("max")
+                                            + " is allowed for " + $html.find(".ema_input_width_for_period").closest('tr').find('td:first').text() + "!" });
                                 });
+                                return;
+                            }
 
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/ema'], function ( ema ) {
+                                ema.init();
+                                var options = {
+                                    period : parseInt($html.find(".ema_input_width_for_period").val()),
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#ema_strokeWidth").val()),
+                                    dashStyle : $html.find("#ema_dashStyle").val(),
+                                    appliedTo: parseInt($html.find("#ema_appliedTo").val())
+                                }
+                                //Add EMA for the main series
+                                $($(".ema").data('refererChartID')).highcharts().series[0].addEMA(options);
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

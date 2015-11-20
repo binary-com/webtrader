@@ -30,18 +30,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdl3whitesoldiers'], function ( cdl3whitesoldiers ) {
-                                    cdl3whitesoldiers.init();
-                                    //Add CDL3WHITESOLDIERS for the main series
-                                    $($(".cdl3whitesoldiers").data('refererChartID')).highcharts().series[0].addCDL3WHITESOLDIERS();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdl3whitesoldiers'], function ( cdl3whitesoldiers ) {
+                                cdl3whitesoldiers.init();
+                                //Add CDL3WHITESOLDIERS for the main series
+                                $($(".cdl3whitesoldiers").data('refererChartID')).highcharts().series[0].addCDL3WHITESOLDIERS();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {
