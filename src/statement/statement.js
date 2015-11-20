@@ -88,9 +88,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                             capitalizeFirstLetter(trans.action_type),
                              img + trans.longcode ,
                             (trans.amount * 1).toFixed(2),
-                            '<b>' + (trans.balance_after * 1).toFixed(2)
-                                /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
-                                .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + '</b>'
+                            '<b>' + formatPrice(trans.balance_after) + '</b>'
                         ];
                     });
                     table.api().rows().remove();

@@ -70,7 +70,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 var header = portfolioWin.parent().find('.ui-dialog-title').css('width', '25%');
 
                 $('<span class="span-in-dialog-header" />')
-                    .html('Account balance: <strong>' + currency + ' ' + balance + '</strong>')
+                    .html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>')
                     .insertAfter(header);
 
                 table = $("<table width='100%' class='display compact'/>");
@@ -119,7 +119,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     return [
                         contract.transaction_id,
                         contract.longcode,
-                        contract.currency + ' ' + contract.buy_price,
+                        contract.currency + ' ' + formatPrice(contract.buy_price),
                         '-',
                         contract.contract_id, /* for jq-datatables rowId */
                     ];
