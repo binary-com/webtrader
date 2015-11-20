@@ -45,6 +45,7 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
         root: $html,
         contract_category_display: null, // contract type drop down
         contract_displays: null,         // contract displays ul
+        duration: null,                  // duration drop down
     };
 
     window.dict = null; // TODO: make this local after development
@@ -93,10 +94,32 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
 
         cds.empty(); // clear the list
         dict.contract[name].contract_displays.forEach(function (txt) {
-            $('<li/>').text(txt).appendTo(cds);
+            $('<li/>').text(txt).appendTo(cds)
+                .on('click', function () {
+                    cds.find('li').removeClass('active');
+                    $(this).addClass('active');
+                    console.warn(txt);
+                });
         });
+        cds.find('li:first').addClass('active');
     };
 
+    function selectmenu(select, options /* = {render?:fn, initial?:'', change?:fn, array:[] */) {
+        var render = options.render || function (v) { return v + ''; };
+        select.children().remove();
+        options.array.forEach(function (txt) {
+            $('<option/>').val(txt).text(render(txt)).appendTo(select);
+        });
+
+        select.val(options.initial || options.array[0]);
+
+        if (!select._initialized) {
+            select._initialized = true;
+            return select.selectmenu({ change: function () { options.change && options.change.call(this, select.val()); } });
+        }
+
+        return select.selectmenu('refresh');
+    }
 
     function init(_symbol, contracts_for) {
         symbol = _symbol;
@@ -114,14 +137,19 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
             //height: 500
         });
 
-        var select = dom.root.find('.contract-category-display');
+        dom.contract_category_display = selectmenu(dom.root.find('.contract-category-display'), {
+            array: dict.categories,
+            change: events.contract_category_display.change
+        });
 
-        dict.categories
-                .forEach(function (name) {
-                    $('<option/>').text(name).appendTo(select);
-                });
+        dom.duration = selectmenu(dom.root.find('.duration-select'), {
+            array: ['Duration', 'End Time'],
+            change: function (val) {
+                console.warn(val);
+            }
+        });
 
-        dom.contract_category_display = select.selectmenu({ change: events.contract_category_display.change });
+        //dom.contract_category_display = select.selectmenu({ change: events.contract_category_display.change });
         dom.contract_displays = dom.root.find('.contract-displays');
         events.contract_category_display.change();
 
