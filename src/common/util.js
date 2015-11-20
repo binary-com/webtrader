@@ -164,6 +164,11 @@ function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+/* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
+function formatPrice(float) {
+    return (float * 1).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+}
+
 function resizeElement(selector) {
   $(selector).height($(window).height() - 10).width($(window).width() - 10);
 };
