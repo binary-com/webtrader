@@ -4,6 +4,8 @@
 
 define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-ui'], function ($, windows, $html) {
 
+    $html = $($html);
+
     /* The symbol is in the following format:
          symbol = {
             symbol: "frxXAUUSD",
@@ -35,41 +37,93 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
         }
        */
 
-    var symbol = null, contracts_for = null;
-    var dialog = null; // trade dialog
-    var contract_type = null;
-    $html = $($html);
+    //var symbol = null, dict = null; // clean *contracts_for.available* into a dictionary object
+    //var dialog = null; // trade dialog
+    /* DOM elements that we need to query in this module */
+    // TODO: make this variable local after development in done!
+    window.dom = {
+        root: $html,
+        contract_category_display: null, // contract type drop down
+        contract_displays: null,         // contract displays ul
+    };
 
-    function contract_type_change() {
-        var text = contract_type.find('option:selected').val();
-        available_r = contracts_for.available.filter(function (row) { return row.contract_category_display === text });
-        console.warn(available_r[0],available_r);
+    window.dict = null; // TODO: make this local after development
+
+    var events = {
+        contract_category_display: { }
+    };
+
+    // clean the data returend in *contracts_for.available*.
+    function clean(available){
+        var mapper = function(name) { return function(row) { return row[name]; }; };
+        var filter = function(name,value) { return function(row) { return row[name] === value; }; };
+        
+        var ret = {
+            categories: uniqueArray(available.map(mapper('contract_category_display'))),
+            contract: {
+                /*
+                    categories[i] : {
+                        contract_types: ["ASIANU", "ASIAND", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT",
+                                "DIGITMATCH", "DIGITDIFF", "DIGITODD", "DIGITEVEN", "DIGITOVER", "DIGITUNDER",
+                                "EXPIRYMISS", "EXPIRYRANGE", "EXPIRYMISS", "EXPIRYRANGE", "SPREADU", "SPREADD", "RANGE", "UPORDOWN", "RANGE", "UPORDOWN", "ONETOUCH", "NOTOUCH", "ONETOUCH", "NOTOUCH"],
+                        contract_displays: ["asian up", "asian down", "higher", "lower", "higher", "lower", "higher", "lower", "higher", "lower", "higher", "lower", "higher", "lower",
+                                "matches", "differs", "odd", "even", "over", "under",
+                                "ends outside", "ends between", "ends outside", "ends between", "spread up", "spread down", "stays between", "goes outside", "stays between", "goes outside", "touches", "does not touch", "touches", "does not touch"]
+                    }
+                */
+            },
+        };
+
+        ret.categories.forEach(function (display) {
+            var filtered = available.filter(filter('contract_category_display', display))
+            var contract = ret.contract[display] = ret.contract[display] || {};
+            contract.contract_types = uniqueArray( filtered.map(mapper('contract_type')) );
+            contract.contract_displays = uniqueArray( filtered.map(mapper('contract_display')).map(capitalizeFirstLetter) );
+        });
+
+        return ret;
     }
 
-    function init(_symbol, _contracts_for) {
+    events.contract_category_display.change = function () {
+        var ccd = dom.contract_category_display;
+        var cds = dom.contract_displays;
+        var name = ccd.find('option:selected').val(); // available[i].contract_category_display
+
+        console.warn(dict.contract[name]);
+
+        cds.empty(); // clear the list
+        dict.contract[name].contract_displays.forEach(function (txt) {
+            $('<li/>').text(txt).appendTo(cds);
+        });
+    };
+
+
+    function init(_symbol, contracts_for) {
         symbol = _symbol;
-        contracts_for = _contracts_for;
-        console.warn(symbol,contracts_for);
+        g = contracts_for;
+        dict = clean(contracts_for.available); // clean the data
+
+        console.warn(contracts_for);
 
         dialog = windows.createBlankWindow($html, {
             title: symbol.display_name,
-            resizable:false,
-            collapsable:false,
+            resizable: false,
+            collapsable: false,
             minimizable: false,
             maximizable: false,
             //height: 500
         });
 
-        var select = $html.find('.contract-type');
-        var array = contracts_for.available
-                        .map(function (row) { return row.contract_category_display; })
-                        .filter(function (el, index, arr) { return index === arr.indexOf(el); }) // make unique
-                        .forEach(function (el) {
-                            $('<option/>').text(el).appendTo(select);
-                        });
-        contract_type = select.selectmenu({ change: contract_type_change });
+        var select = dom.root.find('.contract-category-display');
 
-        contract_type_change();
+        dict.categories
+                .forEach(function (name) {
+                    $('<option/>').text(name).appendTo(select);
+                });
+
+        dom.contract_category_display = select.selectmenu({ change: events.contract_category_display.change });
+        dom.contract_displays = dom.root.find('.contract-displays');
+        events.contract_category_display.change();
 
         dialog.dialog('open');
     }

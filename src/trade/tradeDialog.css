@@ -1,9 +1,37 @@
-﻿.trade-dialog .gray {
-    background-color: #F5F6F8; 
+﻿.trade-dialog {
+    padding:.5em 0 !important;
 }
 
-.trade-dialog select.contract-type + .ui-selectmenu-button {
+.trade-dialog select.contract-category-display + .ui-selectmenu-button {
     display: block;
     margin:0 auto;
     width: 250px !important; /* !important because jq-ui.selecetmenu(...) overrides this */
+    border-radius: 5px !important;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
+
+.trade-dialog ul.contract-displays {
+    list-style:none;
+    text-align:center;
+    background: #c2c1c1;
+    padding: 10px 0;
+    margin: 5px 0 0 0;
+}
+
+.trade-dialog ul.contract-displays li {
+    opacity: .5;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.trade-dialog ul.contract-displays li:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.trade-dialog ul.contract-displays li:before {
+    content: " | ";
+    opacity: .5;
+    font-weight:normal;
+}
+.trade-dialog ul.contract-displays li:first-child:before { content: none; }
