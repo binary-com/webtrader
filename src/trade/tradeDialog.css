@@ -19,6 +19,9 @@
     padding:0;
     width: 50px;
 }
+.trade-dialog .duration-unit {
+    width: 100px;
+}
 
 /*#region input type=number */
 .trade-dialog input[type="number"]::-webkit-outer-spin-button,
@@ -34,7 +37,9 @@
     background: none;
     border:none;
     vertical-align: baseline;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
+
 .trade-dialog input[type=number] {
     outline: 0;
     border:solid 1px #ccc;

@@ -47,6 +47,7 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
         contract_displays: null,         // contract displays ul
         duration_select: null,                  // duration drop down
         duration_count: null,
+        duration_unit: null
     };
 
     window.dict = null; // TODO: make this local after development
@@ -149,7 +150,13 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
                 console.warn(val);
             }
         });
-        dom.duration_count = $('.duration-count', dom.root).spinner({
+        dom.duration_unit = selectmenu(dom.root.find('.duration-unit'), {
+            array: ['ticks','minutes','hours', 'days'],
+            change: function (val) {
+                console.warn(val);
+            }
+        });
+        dom.duration_count = dom.root.find('.duration-count').spinner({
             min: 0
         });
 
