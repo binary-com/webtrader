@@ -123,10 +123,16 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         return select.selectmenu('refresh');
     }
 
+    var state = {
+        me: {
+            name: 'amin'
+        }
+    };
+
     function init(_symbol, contracts_for) {
         symbol = _symbol;
         g = contracts_for;
-        gg = rv;
+        _view = rv.bind(dom.root[0],state)
         dict = clean(contracts_for.available); // clean the data
 
         console.warn(contracts_for);

@@ -88,7 +88,8 @@ module.exports = function (grunt) {
                             'require-css/css.min.js',
                             'text/text.js',
                             'underscore/underscore-min.js',
-                            'rivets/dist/rivets.bundled.min.js',
+                            'rivets/dist/rivets.min.js',
+                            'sightglass/index.js',
                             '!**/**/favicon.ico'
                         ], 
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'

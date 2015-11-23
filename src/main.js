@@ -24,7 +24,8 @@ requirejs.config({
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
-        'rivets': 'lib/rivets/dist/rivets.bundled.min',
+        'rivets': 'lib/rivets/dist/rivets.min',
+        'sightglass': 'lib/sightglass/index',
         'js-cookie':'lib/js-cookie/src/js.cookie'
     },
     map: {
@@ -61,6 +62,13 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
+        },
+        sightglass : {          //fix for rivets not playing nice with requriejs (https://github.com/mikeric/rivets/issues/427)
+            exports: 'sightglass'
+        },
+        rivets : {
+            deps : ['sightglass'],
+            exports : 'rivets'
         }
     }
 });
