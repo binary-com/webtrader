@@ -15,6 +15,38 @@
 .trade-dialog .duration-select + .ui-selectmenu-button {
     width: 120px !important;
 }
+.trade-dialog .duration-count {
+    padding:0;
+    width: 50px;
+}
+
+/*#region input type=number */
+.trade-dialog input[type="number"]::-webkit-outer-spin-button,
+.trade-dialog [type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.trade-dialog [type="number"] {
+    -moz-appearance: textfield;
+}
+
+.trade-dialog span.ui-spinner {
+    background: none;
+    border:none;
+    vertical-align: baseline;
+}
+.trade-dialog input[type=number] {
+    outline: 0;
+    border:solid 1px #ccc;
+    border-radius:5px;
+    background: white;
+    height: 1.5em;
+    margin:0;
+}
+.trade-dialog .ui-spinner-button.ui-spinner-up {
+    margin-top: 0;
+}
+/*#endregion*/
 
 .trade-dialog .hide {
     display:none;

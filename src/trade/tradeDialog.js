@@ -45,7 +45,8 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
         root: $html,
         contract_category_display: null, // contract type drop down
         contract_displays: null,         // contract displays ul
-        duration: null,                  // duration drop down
+        duration_select: null,                  // duration drop down
+        duration_count: null,
     };
 
     window.dict = null; // TODO: make this local after development
@@ -142,11 +143,14 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
             change: events.contract_category_display.change
         });
 
-        dom.duration = selectmenu(dom.root.find('.duration-select'), {
+        dom.duration_select = selectmenu(dom.root.find('.duration-select'), {
             array: ['Duration', 'End Time'],
             change: function (val) {
                 console.warn(val);
             }
+        });
+        dom.duration_count = $('.duration-count', dom.root).spinner({
+            min: 0
         });
 
         //dom.contract_category_display = select.selectmenu({ change: events.contract_category_display.change });
