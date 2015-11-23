@@ -413,7 +413,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 my: 'center',
                 at: 'center',
                 of: window,
-                title: 'blank window'
+                title: 'blank window',
+                hide: 'fade'
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;
