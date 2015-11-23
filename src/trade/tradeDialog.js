@@ -122,11 +122,25 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         state.category_displays.selected = $(e.target).attr('data');
     };
 
+    /* Rivets js does not allow manually observing properties from javascript,
+       Use "rv.bind().observe('path.to.object', callback)" to subscribe */
+    rivets._.View.prototype.observe = function (keypath, callback) {
+        var model = this.models,
+            inx;
+        while ((inx = keypath.indexOf('.')) !== -1) {
+            model = model[keypath.substring(0,inx)];
+            keypath = keypath.substring(inx + 1);
+            console.warn(JSON.stringify(model), keypath);
+        };
+        this.adapters['.'].observe(model, keypath, function () {
+            callback(model[keypath]);
+        });
+    };
+    /* rivets formatter to check equallity of two values */
     rv.formatters.eq = function (value, other) {
         console.warn('eq >', value, other);
         return value === other;
     }
-
     /* turn current select item into a jquery-ui-selectmenu, update value on change */
     rv.binders.selectmenu = {
         priority: 100,
@@ -201,7 +215,7 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         state.categories.array = dict.categories.slice(0);
         state.categories.value = state.categories.array[0];
 
-        _view = rv.bind(root[0],state)
+        window._view = rv.bind(root[0],state)
         state.categories.onchange(); // trigger to init categories_display submenu
 
         dialog.dialog('open');
