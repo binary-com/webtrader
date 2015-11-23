@@ -52,10 +52,6 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
 
     window.dict = null; // TODO: make this local after development
 
-    var events = {
-        contract_category_display: { }
-    };
-
     // clean the data returend in *contracts_for.available*.
     function clean(available){
         var mapper = function(name) { return function(row) { return row[name]; }; };
@@ -87,25 +83,6 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         return ret;
     }
 
-    events.contract_category_display.change = function () {
-        var ccd = dom.contract_category_display;
-        var cds = dom.contract_displays;
-        var name = ccd.find('option:selected').val(); // available[i].contract_category_display
-
-        console.warn(dict.contract[name]);
-
-        cds.empty(); // clear the list
-        dict.contract[name].contract_displays.forEach(function (txt) {
-            $('<li/>').text(txt).appendTo(cds)
-                .on('click', function () {
-                    cds.find('li').removeClass('active');
-                    $(this).addClass('active');
-                    console.warn(txt);
-                });
-        });
-        cds.find('li:first').addClass('active');
-    };
-
     function selectmenu(select, options /* = {render?:fn, initial?:'', change?:fn, array:[] */) {
         var render = options.render || function (v) { return v + ''; };
         select.children().remove();
@@ -131,22 +108,48 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         duration_unit: {
             array: ['ticks','seconds','minutes','hours','days'],
             value: 'ticks'
+        },
+        categories: {
+            array: [],
+            value: ''
+        },
+        category_displays: {
+            array: [],
+            selected: ''
         }
     };
 
 
+
+    state.categories.onchange = function () {
+        var name = state.categories.value;
+        console.warn('state.categories.onchange() ', name);
+        state.category_displays.array = dict.contract[name].contract_displays.slice(0);
+        state.category_displays.selected = state.category_displays.array[0];
+    };
+    
+    state.category_displays.onclick = function (e) {
+        state.category_displays.selected = $(e.target).attr('data');
+    };
+
+    rv.formatters.eq = function (value, other) {
+        console.warn('eq >', value, other);
+        return value === other;
+    }
+
     /* turn corrent select item into a jquery-ui-selectmenu, update value on change */
     rv.binders.selectmenu = {
         priority: 100,
+        publishes: true,
         bind: function (el) {
             console.warn('selectmenu.bind()');
-            console.warn(el);
             var publish = this.publish.bind(this),
                 select = $(el);
             select.selectmenu({
                 change: function () {
-                    console.warn('changed => ' + select.val());
-                    publish(select.val());
+                    var v = select.val();
+                    publish(v);
+                    select.trigger('change');
                 }
             });
             select.selectmenu('refresh');
@@ -162,16 +165,17 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
     rv.binders.selectrefresh = {
         priority: 99,
         routine: function(el,array) {
-            console.warn('selectrefersh.routine()',array);
+            console.warn('selectrefersh.routine()', array);
             $(el).selectmenu('refresh');
         }
     }
+
 
     function init(_symbol, contracts_for) {
         symbol = _symbol;
         dict = clean(contracts_for.available); // clean the data
 
-        console.warn(contracts_for);
+        _contracts_for = contracts_for;
 
         dialog = windows.createBlankWindow($html, {
             title: symbol.display_name,
@@ -181,37 +185,18 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             maximizable: false,
             //height: 500
         });
+
+        state.categories.array = dict.categories.slice(0);
+        state.categories.value = state.categories.array[0];
+
         _view = rv.bind(dom.root[0],state)
+        state.categories.onchange(); // trigger to init categories_display submenu
 
-        dom.contract_category_display = selectmenu(dom.root.find('.contract-category-display'), {
-            array: dict.categories,
-            change: events.contract_category_display.change
-        });
-
-        //dom.duration_select = dom.root.find('.duration-select').selectmenu({
-        //    change: function (val) {
-        //        console.warn(val);
-        //    }
-        //});
-        //dom.duration_select = selectmenu(dom.root.find('.duration-select'), {
-        //    array: ['Duration', 'End Time'],
-        //    change: function (val) {
-        //        console.warn(val);
-        //    }
-        //});
-        //dom.duration_unit = selectmenu(dom.root.find('.duration-unit'), {
-        //    array: ['ticks','minutes','hours', 'days'],
-        //    change: function (val) {
-        //        console.warn(val);
-        //    }
-        //});
         dom.duration_count = dom.root.find('.duration-count').spinner({
             min: 0
         });
 
-        //dom.contract_category_display = select.selectmenu({ change: events.contract_category_display.change });
         dom.contract_displays = dom.root.find('.contract-displays');
-        events.contract_category_display.change();
 
         dialog.dialog('open');
     }

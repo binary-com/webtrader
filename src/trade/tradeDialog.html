@@ -1,16 +1,30 @@
 ﻿<div class="trade-dialog">
     <ul><li>
-        <select class="contract-category-display"> </select>
+        <select class="contract-category-display"
+                rv-selectmenu="categories.value"
+                rv-selectrefresh="categories.array"
+                rv-on-change="categories.onchange"
+                >
+
+                <option rv-each-row="categories.array" rv-value="row">{row}</option>
+       </select>
     </li></ul>
-    <ul class="contract-displays"></ul>
+
+    <ul class="contract-displays">
+        <li rv-each-row="category_displays.array"
+            rv-on-click="category_displays.onclick"
+            rv-data="row"
+            rv-class-active="category_displays.selected | eq row"
+            > {row} </li>
+    </ul>
+
     <ul class="duration-row">
         <li>
             <select class="duration-select"
                     rv-selectmenu="duration.value"
                     rv-selectrefresh="duration.array">
-                <option
-                        rv-each-row="duration.array"
-                        rv-value="row">{row}</option>
+
+                <option rv-each-row="duration.array" rv-value="row">{row}</option>
            </select>
         </li>
         <li>
@@ -19,11 +33,9 @@
         <li>
             <select class="duration-unit"
                     rv-selectmenu="duration_unit.value" 
-                    rv-selectmenurefresh="duration_unit.array"
-                    >
-                <option
-                        rv-each-row="duration_unit.array"
-                        rv-value="row">{row}</option>
+                    rv-selectmenurefresh="duration_unit.array" >
+
+                <option rv-each-row="duration_unit.array" rv-value="row">{row}</option>
            </select>
         </li>
     </ul>
