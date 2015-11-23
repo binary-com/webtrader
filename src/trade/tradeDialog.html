@@ -5,17 +5,26 @@
     <ul class="contract-displays"></ul>
     <ul class="duration-row">
         <li>
-            <select class="duration-select"> </select>
+            <select class="duration-select"
+                    rv-selectmenu="duration.value"
+                    rv-selectrefresh="duration.array">
+                <option
+                        rv-each-row="duration.array"
+                        rv-value="row">{row}</option>
+           </select>
         </li>
         <li>
             <input class="duration-count" type="number" min="1" step="1" />
         </li>
         <li>
-            <select class="duration-unit"> </select>
-        </li>
-        <li>
-             <h1 rv-text="me.name"></h1>
-             {me.name}
+            <select class="duration-unit"
+                    rv-selectmenu="duration_unit.value" 
+                    rv-selectmenurefresh="duration_unit.array"
+                    >
+                <option
+                        rv-each-row="duration_unit.array"
+                        rv-value="row">{row}</option>
+           </select>
         </li>
     </ul>
 </div>

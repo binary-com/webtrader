@@ -123,16 +123,52 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         return select.selectmenu('refresh');
     }
 
-    var state = {
-        me: {
-            name: 'amin'
+    state = {
+        duration: {
+            array: ['Duration', 'End Time'],
+            value: 'Duration'
+        },
+        duration_unit: {
+            array: ['ticks','seconds','minutes','hours','days'],
+            value: 'ticks'
         }
     };
 
+
+    /* turn corrent select item into a jquery-ui-selectmenu, update value on change */
+    rv.binders.selectmenu = {
+        priority: 100,
+        bind: function (el) {
+            console.warn('selectmenu.bind()');
+            console.warn(el);
+            var publish = this.publish.bind(this),
+                select = $(el);
+            select.selectmenu({
+                change: function () {
+                    console.warn('changed => ' + select.val());
+                    publish(select.val());
+                }
+            });
+            select.selectmenu('refresh');
+        },
+        unbind: function(el){
+            $(el).selectmenu( "destroy" )
+        },
+        routine: function (el, value) {
+            $(el).val(value).selectmenu('refresh');
+        }
+    };
+    /* refersh the selectmenu on array changes */
+    rv.binders.selectrefresh = {
+        priority: 99,
+        routine: function(el,array) {
+            console.warn('selectrefersh.routine()',array);
+            $(el).selectmenu('refresh');
+        }
+    }
+
     function init(_symbol, contracts_for) {
         symbol = _symbol;
-        g = contracts_for;
-        _view = rv.bind(dom.root[0],state)
         dict = clean(contracts_for.available); // clean the data
 
         console.warn(contracts_for);
@@ -145,24 +181,30 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             maximizable: false,
             //height: 500
         });
+        _view = rv.bind(dom.root[0],state)
 
         dom.contract_category_display = selectmenu(dom.root.find('.contract-category-display'), {
             array: dict.categories,
             change: events.contract_category_display.change
         });
 
-        dom.duration_select = selectmenu(dom.root.find('.duration-select'), {
-            array: ['Duration', 'End Time'],
-            change: function (val) {
-                console.warn(val);
-            }
-        });
-        dom.duration_unit = selectmenu(dom.root.find('.duration-unit'), {
-            array: ['ticks','minutes','hours', 'days'],
-            change: function (val) {
-                console.warn(val);
-            }
-        });
+        //dom.duration_select = dom.root.find('.duration-select').selectmenu({
+        //    change: function (val) {
+        //        console.warn(val);
+        //    }
+        //});
+        //dom.duration_select = selectmenu(dom.root.find('.duration-select'), {
+        //    array: ['Duration', 'End Time'],
+        //    change: function (val) {
+        //        console.warn(val);
+        //    }
+        //});
+        //dom.duration_unit = selectmenu(dom.root.find('.duration-unit'), {
+        //    array: ['ticks','minutes','hours', 'days'],
+        //    change: function (val) {
+        //        console.warn(val);
+        //    }
+        //});
         dom.duration_count = dom.root.find('.duration-count').spinner({
             min: 0
         });
