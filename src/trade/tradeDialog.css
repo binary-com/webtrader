@@ -17,7 +17,7 @@
 }
 .trade-dialog .duration-count {
     padding:0;
-    width: 50px;
+    width: 40px;
 }
 .trade-dialog .duration-unit {
     width: 100px;
@@ -42,11 +42,12 @@
 
 .trade-dialog input[type=number] {
     outline: 0;
-    border:solid 1px #ccc;
     border-radius:5px;
-    background: white;
-    height: 1.5em;
+    height: 2em;
     margin:0;
+    padding-left: 5px;
+    background: #273051;
+    color:white;
 }
 .trade-dialog .ui-spinner-button.ui-spinner-up {
     margin-top: 0;

@@ -4,7 +4,7 @@
 
 define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-ui'], function ($, windows, rv, $html) {
 
-    $html = $($html);
+    var root = $($html);
 
     /* The symbol is in the following format:
          symbol = {
@@ -36,19 +36,6 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
                 }]
         }
        */
-
-    //var symbol = null, dict = null; // clean *contracts_for.available* into a dictionary object
-    //var dialog = null; // trade dialog
-    /* DOM elements that we need to query in this module */
-    // TODO: make this variable local after development in done!
-    window.dom = {
-        root: $html,
-        contract_category_display: null, // contract type drop down
-        contract_displays: null,         // contract displays ul
-        duration_select: null,                  // duration drop down
-        duration_count: null,
-        duration_unit: null
-    };
 
     window.dict = null; // TODO: make this local after development
 
@@ -100,7 +87,7 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         return select.selectmenu('refresh');
     }
 
-    state = {
+    window.state = {
         duration: {
             array: ['Duration', 'End Time'],
             value: 'Duration'
@@ -109,6 +96,11 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             array: ['ticks','seconds','minutes','hours','days'],
             value: 'ticks'
         },
+        duration_count: {
+            value: 1,
+            min: 1,
+            max: 365
+        },
         categories: {
             array: [],
             value: ''
@@ -116,10 +108,8 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         category_displays: {
             array: [],
             selected: ''
-        }
+        },
     };
-
-
 
     state.categories.onchange = function () {
         var name = state.categories.value;
@@ -137,18 +127,17 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         return value === other;
     }
 
-    /* turn corrent select item into a jquery-ui-selectmenu, update value on change */
+    /* turn current select item into a jquery-ui-selectmenu, update value on change */
     rv.binders.selectmenu = {
         priority: 100,
         publishes: true,
         bind: function (el) {
             console.warn('selectmenu.bind()');
-            var publish = this.publish.bind(this),
+            var publish = this.publish,
                 select = $(el);
             select.selectmenu({
                 change: function () {
-                    var v = select.val();
-                    publish(v);
+                    publish(select.val());
                     select.trigger('change');
                 }
             });
@@ -169,15 +158,38 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             $(el).selectmenu('refresh');
         }
     }
-
+    /* turn input element into jquery-ui-spinner, model = {min:, max, value:} */
+    rv.binders.spinner = {
+        priority: 98,
+        publishes: true,
+        bind: function (el) {
+            console.warn('spinner.bind()');
+            var model = this.model;
+            var publish = this.publish;
+            var input = $(el);
+            var onchange = function () {
+                var value = input.val();
+                publish(value | 0);
+            }
+            input.spinner({
+                min: model.min || 1,
+                max: model.max || null,
+                stop: onchange
+            });
+        },
+        routine: function(el,value){
+            console.warn('spinner.routing()', value);
+            $(el).spinner('value', value);
+        }
+    };
 
     function init(_symbol, contracts_for) {
         symbol = _symbol;
         dict = clean(contracts_for.available); // clean the data
 
-        _contracts_for = contracts_for;
+        window._contracts_for = contracts_for;
 
-        dialog = windows.createBlankWindow($html, {
+        dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
             resizable: false,
             collapsable: false,
@@ -189,14 +201,8 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         state.categories.array = dict.categories.slice(0);
         state.categories.value = state.categories.array[0];
 
-        _view = rv.bind(dom.root[0],state)
+        _view = rv.bind(root[0],state)
         state.categories.onchange(); // trigger to init categories_display submenu
-
-        dom.duration_count = dom.root.find('.duration-count').spinner({
-            min: 0
-        });
-
-        dom.contract_displays = dom.root.find('.contract-displays');
 
         dialog.dialog('open');
     }
