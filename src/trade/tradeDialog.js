@@ -2,7 +2,7 @@
  * Created by amin on November 18, 2015.
  */
 
-define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-ui'], function ($, windows, $html) {
+define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-ui'], function ($, windows, rv, $html) {
 
     $html = $($html);
 
@@ -126,6 +126,7 @@ define(['jquery', 'windows/windows', 'text!trade/tradeDialog.html', 'css!trade/t
     function init(_symbol, contracts_for) {
         symbol = _symbol;
         g = contracts_for;
+        gg = rv;
         dict = clean(contracts_for.available); // clean the data
 
         console.warn(contracts_for);

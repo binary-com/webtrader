@@ -24,6 +24,7 @@ requirejs.config({
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
+        'rivets': 'lib/rivets/dist/rivets.bundled.min',
         'js-cookie':'lib/js-cookie/src/js.cookie'
     },
     map: {
