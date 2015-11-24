@@ -43,5 +43,9 @@
             <input type="text" class="datepicker endtime-date"
                    readonly rv-datepicker="endtime_date.value" /> 
         </li>
+        <li rv-show="duration.value | eq 'End Time' ">
+            <input type="text" class="timepicker endtime-hour"
+                   readonly rv-timepicker="endtime_hour.value" /> 
+        </li>
     </ul>
 </div>

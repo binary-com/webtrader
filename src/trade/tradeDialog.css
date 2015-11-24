@@ -23,7 +23,9 @@
     width: 100px;
 }
 
-.trade-dialog input.datepicker {
+.trade-dialog input.datepicker,
+.trade-dialog input.timepicker
+ {
     outline: 0;
     border:none;
     border-radius:5px;
@@ -37,7 +39,15 @@
 .trade-dialog input.endtime-date {
     vertical-align: bottom;
     margin-bottom: 2px;
-    width: 73px;
+    width: 100px;
+    padding-left:0;
+    text-align:center;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
+}
+.trade-dialog input.endtime-hour {
+    vertical-align: bottom;
+    margin-bottom: 2px;
+    width: 40px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
 

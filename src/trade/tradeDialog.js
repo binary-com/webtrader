@@ -117,6 +117,9 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
                 marginLeft: '-50px'
             }
         },
+        endtime_hour: {
+            value: '04:00',
+        }
     };
 
     state.categories.onchange = function () {
@@ -209,7 +212,7 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
     };
     /* trun input element in jquery-ui-datepicker */
     rv.binders.datepicker = {
-        priority: 98,
+        priority: 97,
         publishes: true,
         bind: function (el) {
             console.warn('datepicker.bind()');
@@ -249,6 +252,37 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
         },
         routine: function (el, value) {
             $(el).datepicker("setDate", value);
+        }
+    }
+    /* truen input element in to jquery-ui-timepicker */
+    rv.binders.timepicker = {
+        priority: 96,
+        publishes: true,
+        bind: function (el) {
+            var input = $(el);
+            var publish = this.publish;
+            var model = this.model;
+            var allways_ok = function () { return true };
+
+            input.timepicker({
+                showPeriod: model.showPeriod || false,
+                showLeadingZero: model.showLeadingZero || true,
+                showCloseButton: model.showCloseButton || true,
+                showNowButton: model.showNowButton || true,
+                onHourShow: model.onHourShow || allways_ok,
+                onMinuteShow: model.onMinuteShow || allways_ok,
+                onSelect: function () {
+                    var value = input.val();
+                    console.warn('timepicker changed >', value);
+                    publish(value);
+                }
+            });
+        },
+        unbind: function (el) {
+            $(el).timepicker('destroy');
+        },
+        routine: function (el, value) {
+            $(el).val(value);
         }
     }
 
