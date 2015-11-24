@@ -109,6 +109,14 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             array: [],
             selected: ''
         },
+        endtime_date: {
+            value: new Date(),
+            numberOfMonths: 1,
+            styles: {
+                marginTop: '3px',
+                marginLeft: '-50px'
+            }
+        },
     };
 
     state.categories.onchange = function () {
@@ -191,11 +199,58 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
                 stop: onchange
             });
         },
+        unbind: function (el) {
+            $(el).spinner('destroy');
+        },
         routine: function(el,value){
             console.warn('spinner.routing()', value);
             $(el).spinner('value', value);
         }
     };
+
+    rv.binders.datepicker = {
+        priority: 98,
+        publishes: true,
+        bind: function (el) {
+            console.warn('datepicker.bind()');
+            var input = $(el);
+            var publish = this.publish;
+            var model = this.model;
+            var styles = (model && model.styles) || { marginTop: '10px', marginLeft: '-220px' }; 
+
+            var options = {
+                showOn: model.showOn || 'focus',
+                numberOfMonths: model.numberOfMonths || 2,
+                maxDate: model.maxDate || 0,
+                minDate: model.minDate || new Date(2010, 0, 1),
+                dateFormat: model.dateFormat || 'yy-mm-dd',
+                showAnim: model.showAnim ||  'drop',
+                showButtonPanel: model.showButtonPanel || true,
+                changeMonth: model.changeMonth || true,
+                changeYear: model.changeYear || true,
+                onSelect: function () { $(this).change(); },
+                beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
+            };
+
+            var dpicker = input.datepicker(options);
+            input.on('change', function () {
+                var value = input.val();
+                console.warn('datepicker change > ', value);
+                publish(value);
+                input.blur(); // remove focus from input
+            });
+
+            $.datepicker._gotoToday = function (id) {
+                $(id).datepicker('setDate', new Date()).change().datepicker('hide');
+            };
+        },
+        unbind: function(el){
+            $(el).datepicker('destroy');
+        },
+        routine: function (el, value) {
+            $(el).datepicker("setDate", value);
+        }
+    }
 
     function init(_symbol, contracts_for) {
         symbol = _symbol;

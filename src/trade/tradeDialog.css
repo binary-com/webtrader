@@ -23,6 +23,22 @@
     width: 100px;
 }
 
+.trade-dialog input.datepicker {
+    outline: 0;
+    border:none;
+    border-radius:5px;
+    height: 2em;
+    margin:0;
+    padding-left: 5px;
+    background: #273051;
+    color:white;
+}
+
+.trade-dialog input.endtime-date {
+    width: 73px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
+}
+
 /*#region input type=number */
 .trade-dialog input[type="number"]::-webkit-outer-spin-button,
 .trade-dialog [type="number"]::-webkit-inner-spin-button {
@@ -42,6 +58,7 @@
 
 .trade-dialog input[type=number] {
     outline: 0;
+    border:none;
     border-radius:5px;
     height: 2em;
     margin:0;
