@@ -219,7 +219,7 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             var input = $(el);
             var publish = this.publish;
             var model = this.model;
-            var styles = (model && model.styles) || { marginTop: '10px', marginLeft: '-220px' }; 
+            var styles = (model && model.styles) || { marginTop: '10px', marginLeft: '-250px' }; 
 
             var options = {
                 showOn: model.showOn || 'focus',
@@ -264,6 +264,7 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             var model = this.model;
             var allways_ok = function () { return true };
 
+            var styles = model.styles || { marginTop: '3px', marginLeft: '-250px' }; 
             input.timepicker({
                 showPeriod: model.showPeriod || false,
                 showLeadingZero: model.showLeadingZero || true,
@@ -271,6 +272,9 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
                 showNowButton: model.showNowButton || true,
                 onHourShow: model.onHourShow || allways_ok,
                 onMinuteShow: model.onMinuteShow || allways_ok,
+                beforeShow: function (input, inst) {
+                    inst.tpDiv.css(styles);
+                },
                 onSelect: function () {
                     var value = input.val();
                     console.warn('timepicker changed >', value);
