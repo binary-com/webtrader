@@ -35,6 +35,8 @@
 }
 
 .trade-dialog input.endtime-date {
+    vertical-align: bottom;
+    margin-bottom: 2px;
     width: 73px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
@@ -58,7 +60,6 @@
 
 .trade-dialog input[type=number] {
     outline: 0;
-    border:none;
     border-radius:5px;
     height: 2em;
     margin:0;

@@ -27,11 +27,11 @@
                 <option rv-each-row="duration.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li>
+        <li rv-show="duration.value | eq 'Duration' ">
             <input class="duration-count" type="number" min="1" step="1" readonly
                    rv-spinner="duration_count.value" />
         </li>
-        <li>
+        <li rv-show="duration.value | eq 'Duration' ">
             <select class="duration-unit"
                     rv-selectmenu="duration_unit.value" 
                     rv-selectmenurefresh="duration_unit.array" >
@@ -39,7 +39,7 @@
                 <option rv-each-row="duration_unit.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li>
+        <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="datepicker endtime-date"
                    readonly rv-datepicker="endtime_date.value" /> 
         </li>
