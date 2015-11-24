@@ -76,6 +76,7 @@ module.exports = function (grunt) {
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css', 
                             '!jquery-ui/**', 'jquery-ui/themes/smoothness/images/**', 'jquery-ui/jquery-ui.min.js', 'jquery-ui/themes/smoothness/jquery-ui.min.css',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js',
+                            'jquery.ui.timepicker/jquery.ui.timepicker.js', 'jquery.ui.timepicker/jquery.ui.timepicker.css',
                             'jquery/dist/jquery.min.js',
                             'jquery.timers/jquery.timers.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',

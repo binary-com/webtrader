@@ -2,7 +2,7 @@
  * Created by amin on November 18, 2015.
  */
 
-define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-ui'], function ($, windows, rv, $html) {
+define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'], function ($, windows, rv, $html) {
 
     var root = $($html);
 
@@ -207,7 +207,7 @@ define(['jquery', 'windows/windows', 'rivets', 'text!trade/tradeDialog.html', 'c
             $(el).spinner('value', value);
         }
     };
-
+    /* trun input element in jquery-ui-datepicker */
     rv.binders.datepicker = {
         priority: 98,
         publishes: true,
