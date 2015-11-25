@@ -33,6 +33,11 @@
     text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
 }
 
+
+.trade-dialog .basis-select + .ui-selectmenu-button {
+    width: 100px !important;
+}
+
 .trade-dialog input.datepicker,
 .trade-dialog input.timepicker
  {

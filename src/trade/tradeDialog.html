@@ -70,4 +70,16 @@
            </select>
         </li>
     </ul>
+
+    <ul class="basis-row">
+        <li>
+            <select class="basis-select"
+                    rv-selectmenu="basis.value | capitalize"
+                    rv-selectrefresh="basis.array">
+
+                <option rv-each-row="basis.array" rv-value="row">{row}</option>
+           </select>
+
+        </li>
+    </ul>
 </div>

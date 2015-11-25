@@ -106,7 +106,15 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
         },
         digits: {
             value: '0',
-        }
+        },
+        currency: {
+            array: ['USD'],
+            vlaue: 'USD',
+        },
+        basis: {
+            array: ['Payout', 'Stake'],
+            value: 'payout',
+        },
     };
 
     state.categories.onchange = function () {

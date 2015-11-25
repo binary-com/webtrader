@@ -25,6 +25,15 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         console.warn('eq >', value, other);
         return value === other;
     }
+    /* rivets formater to capitalize string */
+    rv.formatters.capitalize = {
+        read: function (value) {
+            return value.charAt(0).toUpperCase() + value.slice(1);
+        },
+        publish: function (value) {
+            return value.toLowerCase();
+        }
+    }
 
 
     /*************************************  binding *****************************************/
