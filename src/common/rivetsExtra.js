@@ -25,6 +25,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         console.warn('eq >', value, other);
         return value === other;
     }
+
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -35,6 +36,20 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         }
     }
 
+    /* notify another function on property changes */
+    rv.formatters['instant-notify'] = function(value, callback, timeout) {
+        callback(value);
+        return value;
+    }
+
+    /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
+       As in "execute this function only if 100 milliseconds have passed without it being called." */
+    rv.formatters.notify = function(value, callback, timeout) {
+        timeout = timeout || 250;
+        clearTimeout(callback._timer_notify);
+        callback._timer_notify = setTimeout(callback.bind(this,value), timeout);
+        return value;
+    }
 
     /*************************************  binding *****************************************/
     /* turn current select item into a jquery-ui-selectmenu, update value on change */
@@ -179,6 +194,5 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             $(el).val(value);
         }
     }
-
     return rv;
 });
