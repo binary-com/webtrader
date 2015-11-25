@@ -114,6 +114,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
         basis: {
             array: ['Payout', 'Stake'],
             value: 'payout',
+            amount: 10,
         },
     };
 

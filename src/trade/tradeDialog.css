@@ -33,9 +33,15 @@
     text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
 }
 
-
 .trade-dialog .basis-select + .ui-selectmenu-button {
     width: 100px !important;
+}
+.trade-dialog .currency-select + .ui-selectmenu-button {
+    width: 75px !important;
+}
+.trade-dialog .basis-amount {
+    padding:0;
+    width: 80px;
 }
 
 .trade-dialog input.datepicker,

@@ -79,7 +79,18 @@
 
                 <option rv-each-row="basis.array" rv-value="row">{row}</option>
            </select>
+        </li>
+        <li>
+            <select class="currency-select"
+                    rv-selectmenu="currency.value"
+                    rv-selectrefresh="currency.array">
 
+                <option rv-each-row="currency.array" rv-value="row">{row}</option>
+           </select>
+        </li>
+        <li>
+            <input class="basis-amount" type="number" min="1" step=".01"
+                   rv-spinner="basis.amount" />
         </li>
     </ul>
 </div>
