@@ -33,8 +33,8 @@
     }
 */
 
-define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
-    function ($, windows, rv, $html) {
+define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
+    function ($, windows, rv, liveapi, $html) {
 
     var root = $($html);
 
@@ -116,6 +116,10 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
             value: 'payout',
             amount: 10,
         },
+        tick: {
+            epoch: '0',
+            quote:'-'
+        }
     };
 
     state.categories.onchange = function () {
@@ -131,6 +135,15 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
 
     function init(_symbol, contracts_for) {
         symbol = _symbol;
+        /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
+        liveapi.send({ ticks: symbol.symbol }).catch(function (err) { console.warn(err); });
+        liveapi.events.on('tick', function (data) {
+            if (data.tick && data.tick.symbol == symbol.symbol) {
+                state.tick.epoch = data.tick.epoch;
+                state.tick.quote = data.tick.quote;
+            }
+        });
+
         dict = clean(contracts_for.available);  // clean the data
 
         window._contracts_for = contracts_for;
@@ -145,7 +158,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
         });
 
         state.categories.array = dict.categories.slice(0);
-        state.categories.value = state.categories.array[0];
+        state.categories.value = 'Digits' || state.categories.array[0];
 
         window._view = rv.bind(root[0],state)
         state.categories.onchange();            // trigger change to init categories_display submenu

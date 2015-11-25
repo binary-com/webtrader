@@ -23,6 +23,14 @@
     width: 100px;
 }
 
+.trade-dialog .tick-quote {
+    background: #273051;
+    display:block;
+    border-radius: 20px;
+    padding: 8px 10px;
+    color:white;
+}
+
 .trade-dialog .digits-select + .ui-selectmenu-button {
     width: 40px !important;
 }
