@@ -38,6 +38,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
                 select = $(el);
             select.selectmenu({
                 change: function () {
+                    console.warn('selectmenu.change()', select.val());
                     publish(select.val());
                     select.trigger('change');
                 }
@@ -47,6 +48,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             $(el).selectmenu( "destroy" )
         },
         routine: function (el, value) {
+            console.warn('selectmenu.routine()', value);
             $(el).val(value).selectmenu('refresh');
         }
     };

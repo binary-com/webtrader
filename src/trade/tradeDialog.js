@@ -2,45 +2,45 @@
  * Created by amin on November 18, 2015.
  */
 
+/* init(...) parameters => The symbol is in the following format:
+     symbol = {
+        symbol: "frxXAUUSD",
+        display_name: "Gold/USD",
+        delay_amount: 0,
+        settlement: "",
+        feed_license: "realtime",
+        events: [{ dates: "Fridays", descrip: "Closes early (at 21:00)" }, { dates: "2015-11-26", descrip: "Closes early (at 18:00)" }],
+        times: { open: ["00:00:00"], close: ["23:59:59"], settlement: "23:59:59" }
+      },
+
+  The contracts_for is in the following format:
+    contracts_for = {
+        open: 1447801200,
+        close: 1447822800,
+        hit_count: 14,
+        spot: "5137.20",
+        available: [
+            {
+                market: "indices",                  contract_display: "higher",
+                min_contract_duration: "1d",        max_contract_duration: "365d",
+                barriers: 0,                        sentiment: "up",
+                barrier_category: "euro_atm",       start_type: "spot",
+                contract_category: "callput",       submarket: "asia_oceania",
+                exchange_name: "ASX",               expiry_type: "daily",
+                underlying_symbol: "AS51",          contract_category_display: "Up/Down",
+                contract_type: "CALL"
+            }]
+    }
+*/
+
 define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
     function ($, windows, rv, $html) {
 
     var root = $($html);
 
-    /* The symbol is in the following format:
-         symbol = {
-            symbol: "frxXAUUSD",
-            display_name: "Gold/USD",
-            delay_amount: 0,
-            settlement: "",
-            feed_license: "realtime",
-            events: [{ dates: "Fridays", descrip: "Closes early (at 21:00)" }, { dates: "2015-11-26", descrip: "Closes early (at 18:00)" }],
-            times: { open: ["00:00:00"], close: ["23:59:59"], settlement: "23:59:59" }
-          },
-
-      The contracts_for is in the following format:
-        contracts_for = {
-            open: 1447801200,
-            close: 1447822800,
-            hit_count: 14,
-            spot: "5137.20",
-            available: [
-                {
-                    market: "indices",                  contract_display: "higher",
-                    min_contract_duration: "1d",        max_contract_duration: "365d",
-                    barriers: 0,                        sentiment: "up",
-                    barrier_category: "euro_atm",       start_type: "spot",
-                    contract_category: "callput",       submarket: "asia_oceania",
-                    exchange_name: "ASX",               expiry_type: "daily",
-                    underlying_symbol: "AS51",          contract_category_display: "Up/Down",
-                    contract_type: "CALL"
-                }]
-        }
-       */
-
     window.dict = null; // TODO: make this local after development
 
-    // clean the data returend in *contracts_for.available*.
+    /* clean the data returend in *contracts_for.available */
     function clean(available){
         var mapper = function(name) { return function(row) { return row[name]; }; };
         var filter = function(name,value) { return function(row) { return row[name] === value; }; };
@@ -103,6 +103,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
         },
         endtime_hour: {
             value: '04:00',
+        },
+        digits: {
+            value: '0',
         }
     };
 
@@ -119,7 +122,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
 
     function init(_symbol, contracts_for) {
         symbol = _symbol;
-        dict = clean(contracts_for.available); // clean the data
+        dict = clean(contracts_for.available);  // clean the data
 
         window._contracts_for = contracts_for;
 
@@ -136,7 +139,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'text!trade/tradeDial
         state.categories.value = state.categories.array[0];
 
         window._view = rv.bind(root[0],state)
-        state.categories.onchange(); // trigger to init categories_display submenu
+        state.categories.onchange();            // trigger change to init categories_display submenu
 
         dialog.dialog('open');
     }

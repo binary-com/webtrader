@@ -23,6 +23,16 @@
     width: 100px;
 }
 
+.trade-dialog .digits-select + .ui-selectmenu-button {
+    width: 40px !important;
+}
+.trade-dialog .digits-select + .ui-selectmenu-button .ui-selectmenu-text {
+    padding-left: 0.4em;
+}
+.trade-dialog .digits-row li p {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+}
+
 .trade-dialog input.datepicker,
 .trade-dialog input.timepicker
  {
@@ -37,16 +47,14 @@
 }
 
 .trade-dialog input.endtime-date {
-    vertical-align: bottom;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     width: 100px;
     padding-left:0;
     text-align:center;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
 .trade-dialog input.endtime-hour {
-    vertical-align: bottom;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     width: 40px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
@@ -64,14 +72,14 @@
 .trade-dialog span.ui-spinner {
     background: none;
     border:none;
-    vertical-align: baseline;
+    margin-bottom:5px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
 
 .trade-dialog input[type=number] {
     outline: 0;
     border-radius:5px;
-    height: 2em;
+    height: 30px;
     margin:0;
     padding-left: 5px;
     background: #273051;
@@ -94,6 +102,7 @@
 }
 
 .trade-dialog ul li {
+    vertical-align:middle;
     display: inline-block;
     padding: 0 5px;
 }
