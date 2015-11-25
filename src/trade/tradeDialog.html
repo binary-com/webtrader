@@ -1,16 +1,14 @@
 ﻿<div class="trade-dialog">
     <ul><li>
         <select class="contract-category-display"
-                rv-selectmenu="categories.value"
-                rv-selectrefresh="categories.array"
-                rv-on-change="categories.onchange"
-                >
+                rv-selectmenu="categories.value | notify proposal.onchange | instant-notify categories.onchange"
+                rv-selectrefresh="categories.array" >
 
                 <option rv-each-row="categories.array" rv-value="row">{row}</option>
        </select>
     </li></ul>
 
-    <ul class="contract-displays">
+    <ul class="contract-displays" rv-data="category_displays.selected | notify proposal.onchange">
         <li rv-each-row="category_displays.array"
             rv-on-click="category_displays.onclick"
             rv-data="row"
@@ -21,7 +19,7 @@
     <ul class="duration-row">
         <li>
             <select class="duration-select"
-                    rv-selectmenu="duration.value"
+                    rv-selectmenu="duration.value | notify proposal.onchange"
                     rv-selectrefresh="duration.array">
 
                 <option rv-each-row="duration.array" rv-value="row">{row}</option>
@@ -29,11 +27,11 @@
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
             <input class="duration-count" type="number" min="1" step="1" readonly
-                   rv-spinner="duration_count.value" />
+                   rv-spinner="duration_count.value | notify proposal.onchange" />
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
             <select class="duration-unit"
-                    rv-selectmenu="duration_unit.value" 
+                    rv-selectmenu="duration_unit.value | notify proposal.onchange" 
                     rv-selectmenurefresh="duration_unit.array" >
 
                 <option rv-each-row="duration_unit.array" rv-value="row">{row}</option>
@@ -41,11 +39,11 @@
         </li>
         <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="datepicker endtime-date"
-                   readonly rv-datepicker="endtime_date.value" /> 
+                   readonly rv-datepicker="endtime_date.value | notify proposal.onchange" /> 
         </li>
         <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="timepicker endtime-hour"
-                   readonly rv-timepicker="endtime_hour.value" /> 
+                   readonly rv-timepicker="endtime_hour.value | notify proposal.onchange" /> 
         </li>
     </ul>
 
@@ -55,7 +53,7 @@
         </li>
         <li>
             <select class="digits-select"
-                    rv-selectmenu="digits.value"  >
+                    rv-selectmenu="digits.value | notify proposal.onchange"  >
 
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -77,7 +75,7 @@
     <ul class="basis-row">
         <li>
             <select class="basis-select"
-                    rv-selectmenu="basis.value | capitalize"
+                    rv-selectmenu="basis.value | capitalize | notify proposal.onchange"
                     rv-selectrefresh="basis.array">
 
                 <option rv-each-row="basis.array" rv-value="row">{row}</option>
@@ -85,7 +83,7 @@
         </li>
         <li>
             <select class="currency-select"
-                    rv-selectmenu="currency.value"
+                    rv-selectmenu="currency.value | notify proposal.onchange"
                     rv-selectrefresh="currency.array">
 
                 <option rv-each-row="currency.array" rv-value="row">{row}</option>
@@ -93,7 +91,7 @@
         </li>
         <li>
             <input class="basis-amount" type="number" min="1" step=".01"
-                   rv-spinner="basis.amount" />
+                   rv-spinner="basis.amount | notify proposal.onchange" />
         </li>
     </ul>
 </div>

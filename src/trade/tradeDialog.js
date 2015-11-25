@@ -119,7 +119,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         tick: {
             epoch: '0',
             quote:'-'
-        }
+        },
+        proposal: { }
     };
 
     state.categories.onchange = function () {
@@ -132,6 +133,10 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
     state.category_displays.onclick = function (e) {
         state.category_displays.selected = $(e.target).attr('data');
     };
+
+    state.proposal.onchange = function () {
+        console.warn('state.proposal.onchange(...)', arguments);
+    }
 
     function init(_symbol, contracts_for) {
         symbol = _symbol;
@@ -158,7 +163,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         });
 
         state.categories.array = dict.categories.slice(0);
-        state.categories.value = 'Digits' || state.categories.array[0];
+        state.categories.value = state.categories.array.indexOf('Digits') >= 0 ? 'Digits' : state.categories.array[0]; // TODO: show first tab
 
         window._view = rv.bind(root[0],state)
         state.categories.onchange();            // trigger change to init categories_display submenu
