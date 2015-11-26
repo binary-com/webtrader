@@ -36,40 +36,12 @@
 define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
     function ($, windows, rv, liveapi, $html) {
 
+    var mapper = function(name) { return function(row) { return row[name]; }; };
+    var filter = function(name,value) { return function(row) { return row[name] === value; }; };
+    var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
+
     var root = $($html);
-
-    window.dict = null; // TODO: make this local after development
-
-    /* clean the data returend in *contracts_for.available */
-    function clean(available){
-        var mapper = function(name) { return function(row) { return row[name]; }; };
-        var filter = function(name,value) { return function(row) { return row[name] === value; }; };
-        
-        var ret = {
-            categories: uniqueArray(available.map(mapper('contract_category_display'))),
-            contract: {
-                /*
-                    categories[i] : {
-                        contract_types: ["ASIANU", "ASIAND", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT", "CALL", "PUT",
-                                "DIGITMATCH", "DIGITDIFF", "DIGITODD", "DIGITEVEN", "DIGITOVER", "DIGITUNDER",
-                                "EXPIRYMISS", "EXPIRYRANGE", "EXPIRYMISS", "EXPIRYRANGE", "SPREADU", "SPREADD", "RANGE", "UPORDOWN", "RANGE", "UPORDOWN", "ONETOUCH", "NOTOUCH", "ONETOUCH", "NOTOUCH"],
-                        contract_displays: ["asian up", "asian down", "higher", "lower", "higher", "lower", "higher", "lower", "higher", "lower", "higher", "lower", "higher", "lower",
-                                "matches", "differs", "odd", "even", "over", "under",
-                                "ends outside", "ends between", "ends outside", "ends between", "spread up", "spread down", "stays between", "goes outside", "stays between", "goes outside", "touches", "does not touch", "touches", "does not touch"]
-                    }
-                */
-            },
-        };
-
-        ret.categories.forEach(function (display) {
-            var filtered = available.filter(filter('contract_category_display', display))
-            var contract = ret.contract[display] = ret.contract[display] || {};
-            contract.contract_types = uniqueArray( filtered.map(mapper('contract_type')) );
-            contract.contract_displays = uniqueArray( filtered.map(mapper('contract_display')).map(capitalizeFirstLetter) );
-        });
-
-        return ret;
-    }
+    window.available = null;
 
     window.state = {
         duration: {
@@ -126,7 +98,10 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
     state.categories.onchange = function () {
         var name = state.categories.value;
         console.warn('state.categories.onchange() ', name);
-        state.category_displays.array = dict.contract[name].contract_displays.slice(0);
+        state.category_displays.array = available
+                                            .filter(filter('contract_category_display', name))
+                                            .map(mapper('contract_display'))
+                                            .unique();
         state.category_displays.selected = state.category_displays.array[0];
     };
     
@@ -134,7 +109,19 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.category_displays.selected = $(e.target).attr('data');
     };
 
+    state.category_displays.onchange = function () {
+        console.warn('state.category_displays.onchange()', state.category_displays.selected)
+        var filtered = available
+                        .filter(filter('contract_category_display', state.categories.value))
+                        .filter(filter('contract_display', state.category_displays.selected));
+        console.warn('state.category_displays.onchange()',filtered);
+    }
+
     state.proposal.onchange = function () {
+        var request = {
+            proposal: 1,
+
+        };
         console.warn('state.proposal.onchange(...)', arguments);
     }
 
@@ -149,9 +136,17 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             }
         });
 
-        dict = clean(contracts_for.available);  // clean the data
-
         window._contracts_for = contracts_for;
+        available = contracts_for.available;
+        /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
+        available.filter(filter('contract_category_display','Up/Down'))
+                 .filter(filter('barrier_category', 'euro_non_atm'))
+                 .filter(filter('contract_display', 'higher'))
+                 .forEach(replacer('contract_display','rise'));
+        available.filter(filter('contract_category_display','Up/Down'))
+                 .filter(filter('barrier_category', 'euro_non_atm'))
+                 .filter(filter('contract_display', 'lower'))
+                 .forEach(replacer('contract_display','fall'));
 
         dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
@@ -162,7 +157,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             //height: 500
         });
 
-        state.categories.array = dict.categories.slice(0);
+        state.categories.array = available.map(mapper('contract_category_display')).unique();
         state.categories.value = state.categories.array.indexOf('Digits') >= 0 ? 'Digits' : state.categories.array[0]; // TODO: show first tab
 
         window._view = rv.bind(root[0],state)

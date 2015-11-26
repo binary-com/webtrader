@@ -191,8 +191,38 @@ function sortAlphaNum(property) {
     };
 }
 
-function uniqueArray(array) {
-    return array.filter(function (el, index, arr) {
-        return index === arr.indexOf(el);
+Array.prototype.unique = Array.prototype.unique || function () {
+    return this.filter(function (el, inx, arr) {
+        return inx === arr.indexOf(el);
+    });
+}
+
+Array.prototype.groupBy = function (props) {
+    var hash = function (obj) {
+        var ret = {};
+        Object.keys(props).forEach(function (k) {
+            ret[k] = obj[k];
+        });
+        return JSON.stringify(ret);
+    };
+
+    var _map = {};
+    var put = function (map, key, value) {
+        var _key = hash(key);
+        if (!map[_key]) {
+            map[_key] = {};
+            map[_key].group = [];
+            map[_key].key = _key;
+        }
+        //Object.keys(props).forEach(function (k) { delete value[k]; });
+        map[_key].group.push(value);
+    }
+
+    this.map(function (obj) {
+        put(_map, obj, obj);
+    });
+
+    return Object.keys(_map).map(function (key) {
+        return { key: _map[key].key, group: _map[key].group };
     });
 }

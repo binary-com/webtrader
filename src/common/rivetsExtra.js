@@ -22,7 +22,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     /************************************* formatters ***************************************/
     /* rivets formatter to check equallity of two values */
     rv.formatters.eq = function (value, other) {
-        console.warn('eq >', value, other);
         return value === other;
     }
 
