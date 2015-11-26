@@ -193,5 +193,19 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             $(el).val(value);
         }
     }
+
+    /* add a css class to corresponding jquery-ui widget from the dummy html element */
+    rv.binders['jq-class'] = {
+        priority: 95,
+        routine: function (el, value) {
+            console.warn('rv.binders.jq-class.routine()', value);
+            el = $(el);
+            var menu = $('#' + el.attr('id') + '-menu'); // get the id of widget
+            console.warn(menu);
+            menu.removeClass(el.data('jq-class'));
+            el.data({ 'jq-class': value });
+            menu.addClass(value);
+        }
+    }
     return rv;
 });
