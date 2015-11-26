@@ -31,6 +31,19 @@
     color:white;
 }
 
+.trade-dialog .date-start-select + .ui-selectmenu-button {
+    width:120px !important;
+}
+/* style elments in the drop down*/
+.trade-dialog-date-start-ul li {
+    height:10px;
+    font-size:13px;
+    text-align:center;
+}
+.trade-dialog-date-start-ul {
+    height: 240px;
+}
+
 .trade-dialog .digits-select + .ui-selectmenu-button {
     width: 40px !important;
 }
@@ -41,6 +54,16 @@
 .trade-dialog .date-start-row li p {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
 }
+/* style elments in the drop down*/
+.trade-dialog-digits-select-ul li
+ {
+    overflow-y:hidden;
+    height:10px;
+    font-size:13px;
+    text-align:center;
+    padding:0;
+}
+
 
 .trade-dialog .basis-select + .ui-selectmenu-button {
     width: 100px !important;
@@ -118,7 +141,7 @@
     list-style:none;
     text-align:center;
     margin: 0;
-    padding: 5px 0 0 0;
+    padding: 3px 0 0 0;
 }
 
 .trade-dialog ul li {

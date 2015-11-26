@@ -22,12 +22,13 @@
             <p>Start time </p>
         </li>
         <li>
-            <!--<select class="date-start"
-                    rv-selectmenu="date.forward | instant-notify categories.onchange | notify proposal.onchange"
-                    rv-selectrefresh="categories.array" >
+            <select class="date-start-select"
+                    rv-jq-class="'trade-dialog-date-start-ul'"
+                    rv-selectmenu="date_start.value | notify proposal.onchange"
+                    rv-selectrefresh="date_start.array" >
+                    <option rv-each-row="date_start.array" rv-value="row.value">{row.text}</option>
 
-                    <option rv-each-row="categories.array" rv-value="row">{row}</option>
-           </select>-->
+           </select>
         </li>
     </ul>
 
@@ -68,6 +69,7 @@
         </li>
         <li>
             <select class="digits-select"
+                    rv-jq-class="'trade-dialog-digits-select-ul'"
                     rv-selectmenu="digits.value | notify proposal.onchange"  >
 
                 <option value="0">0</option>

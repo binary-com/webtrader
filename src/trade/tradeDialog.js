@@ -94,8 +94,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             quote:'-'
         },
         date_start: {
-            value: '',
-            array: [],
+            value: 'now',
+            array: [{ text: 'Now', value: 'now' } ],
+            css: { 'font-size': '12px' },
             visible: false,
         },
         proposal: {
@@ -124,7 +125,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         if (!forward_starting_options) {
             state.date_start.visible = false;
             state.date_start.array = [];
-            state.date_start.value = '';
+            state.date_start.value = 'now';
             return;
         };
         var array = [{ text: 'Now', value: 'now' } ];
@@ -140,6 +141,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                 array.push({ text: text, value: epoch });
             }
         });
+        state.date_start.value = 'now';
         state.date_start.array = array;
         state.date_start.visible = true;
     }
