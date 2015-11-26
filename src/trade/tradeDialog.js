@@ -46,7 +46,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
     window.state = {
         duration: {
             array: ['Duration', 'End Time'],
-            value: 'Duration'
+            value: 'Duration',
+            expiry: '',
         },
         duration_unit: {
             array: ['ticks','seconds','minutes','hours','days'],
@@ -92,7 +93,16 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             epoch: '0',
             quote:'-'
         },
-        proposal: { }
+        date_start: {
+            value: '',
+            array: [],
+            visible: false,
+        },
+        proposal: {
+            symbol: '-',
+            contract_type: '-',
+        },
+
     };
 
     state.categories.onchange = function () {
@@ -109,11 +119,26 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.category_displays.selected = $(e.target).attr('data');
     };
 
+    state.date_start.update = function (forward_starting_options) {
+        var model = state.date_start;
+        if (!forward_starting_options) {
+            state.date_start.visible = false;
+            return;
+        }
+        state.date_start.visible = true;
+    }
+
     state.category_displays.onchange = function () {
         console.warn('state.category_displays.onchange()', state.category_displays.selected)
         var filtered = available
                         .filter(filter('contract_category_display', state.categories.value))
                         .filter(filter('contract_display', state.category_displays.selected));
+        state.proposal.contract_type = filtered.first().contract_type;
+
+        /* Array of returned forward starting options */
+        var forward_starting_options = filtered.filter(filter('start_type', 'forward')).first()
+        state.date_start.update(forward_starting_options && forward_starting_options.forward_starting_options);
+
         console.warn('state.category_displays.onchange()',filtered);
     }
 
@@ -125,8 +150,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         console.warn('state.proposal.onchange(...)', arguments);
     }
 
-    function init(_symbol, contracts_for) {
-        symbol = _symbol;
+    function init(symbol, contracts_for) {
+        window.contracts_for = contracts_for;
+        available = contracts_for.available;
+
+        state.proposal.symbol = symbol;
         /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
         liveapi.send({ ticks: symbol.symbol }).catch(function (err) { console.warn(err); });
         liveapi.events.on('tick', function (data) {
@@ -136,15 +164,13 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             }
         });
 
-        window._contracts_for = contracts_for;
-        available = contracts_for.available;
         /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
         available.filter(filter('contract_category_display','Up/Down'))
-                 .filter(filter('barrier_category', 'euro_non_atm'))
+                 .filter(filter('barrier_category', 'euro_atm'))
                  .filter(filter('contract_display', 'higher'))
                  .forEach(replacer('contract_display','rise'));
         available.filter(filter('contract_category_display','Up/Down'))
-                 .filter(filter('barrier_category', 'euro_non_atm'))
+                 .filter(filter('barrier_category', 'euro_atm'))
                  .filter(filter('contract_display', 'lower'))
                  .forEach(replacer('contract_display','fall'));
 
@@ -158,7 +184,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         });
 
         state.categories.array = available.map(mapper('contract_category_display')).unique();
-        state.categories.value = state.categories.array.indexOf('Digits') >= 0 ? 'Digits' : state.categories.array[0]; // TODO: show first tab
+        state.categories.value = state.categories.array.indexOf('Up/Down') >= 0 ? 'Up/Down' : state.categories.array[0]; // TODO: show first tab
 
         window._view = rv.bind(root[0],state)
         state.categories.onchange();            // trigger change to init categories_display submenu

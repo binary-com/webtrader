@@ -37,7 +37,8 @@
 .trade-dialog .digits-select + .ui-selectmenu-button .ui-selectmenu-text {
     padding-left: 0.4em;
 }
-.trade-dialog .digits-row li p {
+.trade-dialog .digits-row li p,
+.trade-dialog .date-start-row li p {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
 }
 

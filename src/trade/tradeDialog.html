@@ -17,6 +17,20 @@
             > {row} </li>
     </ul>
 
+    <ul class="date-start-row" rv-show="date_start.visible">
+        <li>
+            <p>Start time </p>
+        </li>
+        <li>
+            <!--<select class="date-start"
+                    rv-selectmenu="date.forward | instant-notify categories.onchange | notify proposal.onchange"
+                    rv-selectrefresh="categories.array" >
+
+                    <option rv-each-row="categories.array" rv-value="row">{row}</option>
+           </select>-->
+        </li>
+    </ul>
+
     <ul class="duration-row">
         <li>
             <select class="duration-select"

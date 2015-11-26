@@ -196,6 +196,8 @@ Array.prototype.unique = Array.prototype.unique || function () {
         return inx === arr.indexOf(el);
     });
 }
+Array.prototype.first = Array.prototype.first || function () { return this[0]; }
+Array.prototype.last = Array.prototype.last || function () { return this[this.length - 1]; }
 
 Array.prototype.groupBy = function (props) {
     var hash = function (obj) {
