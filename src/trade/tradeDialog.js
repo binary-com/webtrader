@@ -123,8 +123,24 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         var model = state.date_start;
         if (!forward_starting_options) {
             state.date_start.visible = false;
+            state.date_start.array = [];
+            state.date_start.value = '';
             return;
-        }
+        };
+        var array = [{ text: 'Now', value: 'now' } ];
+        forward_starting_options.forEach(function (row) {
+            var step = 5*60; // 5 minutes step
+            var from = Math.ceil(Math.max(new Date().getTime() / 1000, row.open) / step) * step;
+                to = row.close;
+            for (var epoch = from; epoch < to; epoch += step) {
+                var d = new Date(epoch * 1000);
+                var text = ("00" + d.getUTCHours()).slice(-2) + ":" +
+                       ("00" + d.getUTCMinutes()).slice(-2)  + ' ' +
+                       ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][d.getUTCDay()];
+                array.push({ text: text, value: epoch });
+            }
+        });
+        state.date_start.array = array;
         state.date_start.visible = true;
     }
 
