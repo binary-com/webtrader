@@ -357,7 +357,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                         /* return a random element of an array */
                         var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
                         var timePeriods = ['2h', '4h', '8h', '1d'];
-                        var chartTypes = ['candlestick', 'line', 'ohlc', 'spline'];
+                        var chartTypes = ['candlestick', 'line', 'ohlc', 'spline']; //This is not the complete chart type list, however its good enough to randomly select one from this subset
                         for (var inx = 0; inx < counts.total; ++inx){
                             var submarkets = rand(markets).submarkets;
                             var symbols = rand(submarkets).instruments;
