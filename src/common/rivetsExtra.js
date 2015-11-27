@@ -116,9 +116,15 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         }
     };
 
+    /* bind values to jquery ui spinner options like 'min', 'max', ... */
+    rv.binders['spinner-*'] = function(el,value) {
+        $(el).spinner('option', this.args[0], value);
+        console.warn('spinner-*', this.args[0], value);
+    }
+
     /* trun input element in jquery-ui-datepicker */
     rv.binders.datepicker = {
-        priority: 97,
+        priority: 96,
         publishes: true,
         bind: function (el) {
             console.warn('datepicker.bind()');
@@ -163,7 +169,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
 
     /* truen input element in to jquery-ui-timepicker */
     rv.binders.timepicker = {
-        priority: 96,
+        priority: 95,
         publishes: true,
         bind: function (el) {
             var input = $(el);
@@ -199,7 +205,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
 
     /* add a css class to corresponding jquery-ui widget from the dummy html element */
     rv.binders['jq-class'] = {
-        priority: 95,
+        priority: 94,
         routine: function (el, value) {
             console.warn('rv.binders.jq-class.routine()', value);
             el = $(el);
