@@ -24,6 +24,9 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.formatters.eq = function (value, other) {
         return value === other;
     }
+    rv.formatters['not-eq'] = function (value, other) {
+        return value !== other;
+    }
 
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
@@ -40,7 +43,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         var args = [].slice.call(arguments, 0);
         var value = args[0];
         for (var i = 1; i < args.length ; ++i)
-            args[i](value);
+            setTimeout(args[i].bind(this, value), 0);
         return value;
     }
 
@@ -215,5 +218,13 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             menu.addClass(value);
         }
     }
+
+
+    /* override rv-show to use jQuery fadeIn/FadeOut instead */
+    rv.binders['show'] = function(el, value) {
+        value ? $(el).fadeIn() : $(el).fadeOut();
+        return value ? '' : 'none';
+    };
+
     return rv;
 });

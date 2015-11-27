@@ -203,6 +203,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             return dict[r1.type] - dict[r2.type];
         })
 
+        if (!array.length) return;
         state.duration_unit.array = array;
         if (!array.map(mapper('type')).contains(state.duration_unit.value))
             state.duration_unit.value = array.first().type;

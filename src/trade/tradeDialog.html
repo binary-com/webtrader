@@ -32,7 +32,8 @@
         </li>
     </ul>
 
-    <ul class="duration-row">
+    <ul class="duration-row"
+        rv-show="categories.value | not-eq 'Spreads'">
         <li>
             <select class="duration-select"
                     rv-selectmenu="duration.value | notify proposal.onchange"
@@ -65,7 +66,8 @@
         </li>
     </ul>
 
-    <ul class="digits-row">
+    <ul class="digits-row"
+        rv-show="categories.value | eq 'Digits'">
         <li>
             <p>Last Digit Prediction </p>
         </li>
