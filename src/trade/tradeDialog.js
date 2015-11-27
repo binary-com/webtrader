@@ -81,8 +81,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             barrier : '+0.00000',
             high_barrier: '+0.00000',
             low_barrier: '-0.00000',
-
-            barrier_live: '+0.0000', // barrier + quote
+            barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; },
         },
         digits: {
             value: '0',
@@ -112,6 +111,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         },
 
     };
+    state.barriers.root = state; // reference to root object for computed properties
 
     state.categories.update = function () {
         var name = state.categories.value;
@@ -245,23 +245,17 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.barriers.barrier = '' + (barriers.barrier || '+0.00000');
         state.barriers.high_barrier = '' + (barriers.high_barrier || '+0.00000');
         state.barriers.low_barrier = '' + (barriers.low_barrier || '-0.00000');
-        console.warn('state.barriers.update()', JSON.stringify(state.barriers));
     };
 
     state.basis.update_limit = function () {
         var basis = state.basis;
         var limit = available.filter(filter('contract_category_display', state.categories.value))
                                                 .filter(filter('contract_display', state.category_displays.selected))
-                                                .first()
-                                                .payout_limit || null;
+                                                .first();
+        limit = (limit && limit.payout_limit) || null;
         basis.limit = limit ? (limit | 0) : null;
         basis.limit && (basis.amount = Math.min(basis.amount, basis.limit));
     };
-
-
-    state.barriers.update = function () {
-        state.barriers.barrier_live = state.barriers.barrier * 1 + state.tick.quote * 1;
-    }
 
     state.proposal.onchange = function () {
         var request = {

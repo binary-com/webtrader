@@ -9,7 +9,7 @@
            </select>
         </li>
         <li>
-            <span class="tick-quote" rv-text="tick.quote | instant-notify barriers.update"></span>
+            <span class="tick-quote" rv-text="tick.quote"></span>
         </li>
     </ul>
 
@@ -99,10 +99,10 @@
         <li> <p>Barrier offset</p> </li>
         <li>
             <input class="barriers-barrier" type="text" min="0" step=".00001"
-                   rv-spinner="barriers.barrier | instant-notify barriers.update | notify proposal.onchange" />
+                   rv-spinner="barriers.barrier | notify proposal.onchange" />
         </li>
         <li>
-            <span class="barrier-live">{barriers.barrier_live | to-fixed 5}</span>
+            <span class="barrier-live">{barriers.barrier_live < barrier root.tick.quote | to-fixed 5}</span>
         </li>
     </ul>
 

@@ -115,7 +115,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             $(el).spinner('destroy');
         },
         routine: function(el,value){
-            console.warn('spinner.routing()', value * 1);
+            console.warn('spinner.routing()', (value * 1) || 0);
             $(el).spinner('value', value * 1);
         }
     };
