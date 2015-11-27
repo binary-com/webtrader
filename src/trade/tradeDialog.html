@@ -9,7 +9,7 @@
     </li></ul>
 
     <ul class="contract-displays"
-        rv-data="category_displays.selected | instant-notify date_start.update duration_unit.update | notify proposal.onchange">
+        rv-data="category_displays.selected | instant-notify date_start.update duration_unit.update basis.update_limit | notify proposal.onchange">
         <li rv-each-row="category_displays.array"
             rv-on-click="category_displays.onclick"
             rv-data="row"
@@ -110,7 +110,8 @@
         </li>
         <li>
             <input class="basis-amount" type="number" min="1" step=".01"
-                   rv-spinner="basis.amount | notify proposal.onchange" />
+                   rv-spinner="basis.amount | notify proposal.onchange"
+                   rv-spinner-max="basis.limit" />
         </li>
     </ul>
 </div>

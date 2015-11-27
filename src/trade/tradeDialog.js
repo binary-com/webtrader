@@ -88,6 +88,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             array: ['Payout', 'Stake'],
             value: 'payout',
             amount: 10,
+            limit: null,
         },
         tick: {
             epoch: '0',
@@ -205,7 +206,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.duration_unit.array = array;
         if (!array.map(mapper('type')).contains(state.duration_unit.value))
             state.duration_unit.value = array.first().type;
-        else /* manulall notify duration_count to update */
+        else /* manual notify duration_count to update itself */
             state.duration_count.update();
     };
 
@@ -218,6 +219,16 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         var value = state.duration_count.value;
         state.duration_count.value = Math.min(Math.max(value, range.min), range.max);
         console.warn('state.duration_count.update()', state.duration_count.value);
+    };
+
+    state.basis.update_limit = function () {
+        var basis = state.basis;
+        var limit = available.filter(filter('contract_category_display', state.categories.value))
+                                                .filter(filter('contract_display', state.category_displays.selected))
+                                                .first()
+                                                .payout_limit || null;
+        basis.limit = limit ? (limit | 0) : null;
+        basis.limit && (basis.amount = Math.min(basis.amount, basis.limit));
     };
 
     state.proposal.onchange = function () {
