@@ -198,6 +198,7 @@ Array.prototype.unique = Array.prototype.unique || function () {
 }
 Array.prototype.first = Array.prototype.first || function () { return this[0]; }
 Array.prototype.last = Array.prototype.last || function () { return this[this.length - 1]; }
+Array.prototype.contains = Array.prototype.contains || function (value) { return this.indexOf(value) >= 0; }
 
 Array.prototype.groupBy = function (props) {
     var hash = function (obj) {

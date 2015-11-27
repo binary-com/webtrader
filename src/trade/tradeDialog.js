@@ -96,7 +96,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         date_start: {
             value: 'now',
             array: [{ text: 'Now', value: 'now' } ],
-            css: { 'font-size': '12px' },
             visible: false,
         },
         proposal: {
@@ -145,6 +144,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.date_start.array = array;
         state.date_start.visible = true;
     }
+    state.duration.update = function () {
+        //["Up/Down",  "Ends In/Out", "Spreads", "Stays In/Goes Out", "Touch/No Touch"]
+    };
 
     state.category_displays.onchange = function () {
         console.warn('state.category_displays.onchange()', state.category_displays.selected)
@@ -191,6 +193,16 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                  .filter(filter('barrier_category', 'euro_atm'))
                  .filter(filter('contract_display', 'lower'))
                  .forEach(replacer('contract_display','fall'));
+        /* fix for server side api, returning two different contract_category_displays for In/Out */
+        available.filter(filter('contract_category_display', 'Stays In/Goes Out'))
+                 .forEach(replacer('contract_category_display', 'In/Out'));
+        available.filter(filter('contract_category_display', 'Ends In/Out'))
+                 .forEach(replacer('contract_category_display', 'In/Out'));
+        /* fix for contract_display text in In/Out menue */
+        available.filter(filter('contract_display', 'ends outside')).forEach(replacer('contract_display', 'ends out'));
+        available.filter(filter('contract_display', 'ends between')).forEach(replacer('contract_display', 'ends in'));
+        available.filter(filter('contract_display', 'stays between')).forEach(replacer('contract_display', 'stays in'));
+        available.filter(filter('contract_display', 'goes outside')).forEach(replacer('contract_display', 'goes out'));
 
         dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,

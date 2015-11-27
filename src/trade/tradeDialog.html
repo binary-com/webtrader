@@ -14,7 +14,7 @@
             rv-on-click="category_displays.onclick"
             rv-data="row"
             rv-class-active="category_displays.selected | eq row"
-            > {row} </li>
+            > {row | capitalize} </li>
     </ul>
 
     <ul class="date-start-row" rv-show="date_start.visible">
