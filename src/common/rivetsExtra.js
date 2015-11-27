@@ -27,7 +27,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.formatters['not-eq'] = function (value, other) {
         return value !== other;
     }
-
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -36,6 +35,11 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         publish: function (value) {
             return value.toLowerCase();
         }
+    }
+    /* call toFixed on a fload number */
+    rv.formatters['to-fixed'] = function (value, digits) {
+        digits = digits || 2;
+        return (value * 1).toFixed(digits);
     }
 
     /* notify another function on property changes */
@@ -99,14 +103,11 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var model = this.model;
             var publish = this.publish;
             var input = $(el);
-            var onchange = function () {
-                var value = input.val();
-                publish(value | 0);
-            }
             input.spinner({
-                min: model.min || 1,
-                max: model.max || null,
-                stop: onchange
+                stop: function () {
+                    var value = input.val();
+                    publish(value | 0);
+                }
             });
             input.spinner('value', model.value || model.min || 1);
         },
@@ -114,8 +115,8 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             $(el).spinner('destroy');
         },
         routine: function(el,value){
-            console.warn('spinner.routing()', value);
-            $(el).spinner('value', value);
+            console.warn('spinner.routing()', value * 1);
+            $(el).spinner('value', value * 1);
         }
     };
 

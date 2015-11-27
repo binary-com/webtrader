@@ -1,12 +1,17 @@
 ﻿<div class="trade-dialog">
-    <ul><li>
-        <select class="contract-category-display"
-                rv-selectmenu="categories.value | instant-notify categories.update duration.update | notify proposal.onchange"
-                rv-selectrefresh="categories.array" >
+    <ul>
+        <li>
+            <select class="contract-category-display"
+                    rv-selectmenu="categories.value | instant-notify categories.update duration.update | notify proposal.onchange"
+                    rv-selectrefresh="categories.array" >
 
-                <option rv-each-row="categories.array" rv-value="row">{row}</option>
-       </select>
-    </li></ul>
+                    <option rv-each-row="categories.array" rv-value="row">{row}</option>
+           </select>
+        </li>
+        <li>
+            <span class="tick-quote" rv-text="tick.quote | instant-notify barriers.update"></span>
+        </li>
+    </ul>
 
     <ul class="contract-displays"
         rv-data="category_displays.selected | instant-notify date_start.update duration_unit.update basis.update_limit | notify proposal.onchange">
@@ -88,8 +93,16 @@
                 <option value="9">9</option>
            </select>
         </li>
+    </ul>
+
+    <ul class="barriers-barrier-row">
+        <li> <p>Barrier offset</p> </li>
         <li>
-            <span class="tick-quote">{tick.quote}</span>
+            <input class="barriers-barrier" type="text" min="0" step=".00001"
+                   rv-spinner="barriers.barrier | instant-notify barriers.update | notify proposal.onchange" />
+        </li>
+        <li>
+            <span class="barrier-live">{barriers.barrier_live | to-fixed 5}</span>
         </li>
     </ul>
 

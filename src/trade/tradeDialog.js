@@ -81,6 +81,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             barrier : '+0.00000',
             high_barrier: '+0.00000',
             low_barrier: '-0.00000',
+
+            barrier_live: '+0.0000', // barrier + quote
         },
         digits: {
             value: '0',
@@ -97,7 +99,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         },
         tick: {
             epoch: '0',
-            quote:'-'
+            quote:'0'
         },
         date_start: {
             value: 'now',
@@ -255,6 +257,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         basis.limit = limit ? (limit | 0) : null;
         basis.limit && (basis.amount = Math.min(basis.amount, basis.limit));
     };
+
+
+    state.barriers.update = function () {
+        state.barriers.barrier_live = state.barriers.barrier * 1 + state.tick.quote * 1;
+    }
 
     state.proposal.onchange = function () {
         var request = {
