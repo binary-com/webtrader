@@ -77,6 +77,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         endtime_hour: {
             value: '04:00',
         },
+        barriers: {
+            barrier : '+0.00000',
+            high_barrier: '+0.00000',
+            low_barrier: '-0.00000',
+        },
         digits: {
             value: '0',
         },
@@ -207,19 +212,38 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.duration_unit.array = array;
         if (!array.map(mapper('type')).contains(state.duration_unit.value))
             state.duration_unit.value = array.first().type;
-        else /* manual notify duration_count to update itself */
+        else {
+            /* manual notify 'duration_count' and 'barriers' to update themselves */
             state.duration_count.update();
+            state.barriers.update();
+        }
     };
 
     state.duration_count.update = function () {
         var range = state.duration_unit.array.filter(filter('type', state.duration_unit.value)).first();
-        console.warn('state.duration_count.update()', state.duration_count.value);
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;
         var value = state.duration_count.value;
         state.duration_count.value = Math.min(Math.max(value, range.min), range.max);
         console.warn('state.duration_count.update()', state.duration_count.value);
+    };
+
+    state.barriers.update = function () {
+        var unit = state.duration_unit.value;
+        var expiry_type = ['seconds', 'minutes', 'hours'].contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+        var barriers = available.filter(filter('contract_category_display', state.categories.value))
+                                                .filter(filter('contract_display', state.category_displays.selected))
+                                                .filter(filter('expiry_type',expiry_type))
+                                                .filter(function (r) { return r.barriers >= 1; })
+                                                .first();
+        if (!barriers)
+            return;
+
+        state.barriers.barrier = '' + (barriers.barrier || '+0.00000');
+        state.barriers.high_barrier = '' + (barriers.high_barrier || '+0.00000');
+        state.barriers.low_barrier = '' + (barriers.low_barrier || '-0.00000');
+        console.warn('state.barriers.update()', JSON.stringify(state.barriers));
     };
 
     state.basis.update_limit = function () {

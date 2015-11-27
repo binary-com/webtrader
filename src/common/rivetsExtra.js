@@ -122,7 +122,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     /* bind values to jquery ui spinner options like 'min', 'max', ... */
     rv.binders['spinner-*'] = function(el,value) {
         $(el).spinner('option', this.args[0], value);
-        console.warn('spinner-*', this.args[0], value);
     }
 
     /* trun input element in jquery-ui-datepicker */
