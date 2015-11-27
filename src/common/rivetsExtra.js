@@ -105,6 +105,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
                 max: model.max || null,
                 stop: onchange
             });
+            input.spinner('value', model.value || model.min || 1);
         },
         unbind: function (el) {
             $(el).spinner('destroy');

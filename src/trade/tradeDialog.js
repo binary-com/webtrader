@@ -50,7 +50,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             expiry: '',
         },
         duration_unit: {
-            array: [{ type: '' }],
+            array: [{ type: '', min: 1, max:365 }],
             value: '',
         },
         duration_count: {
@@ -131,15 +131,15 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         };
         forward_starting_options = forward_starting_options.forward_starting_options
         var model = state.date_start;
-        var array = [{ text: 'Now', value: 'now' } ];
+        var array = [{ text: 'Now', value: 'now' }];
         forward_starting_options.forEach(function (row) {
-            var step = 5*60; // 5 minutes step
+            var step = 5 * 60; // 5 minutes step
             var from = Math.ceil(Math.max(new Date().getTime() / 1000, row.open) / step) * step;
-                to = row.close;
+            to = row.close;
             for (var epoch = from; epoch < to; epoch += step) {
                 var d = new Date(epoch * 1000);
                 var text = ("00" + d.getUTCHours()).slice(-2) + ":" +
-                       ("00" + d.getUTCMinutes()).slice(-2)  + ' ' +
+                       ("00" + d.getUTCMinutes()).slice(-2) + ' ' +
                        ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][d.getUTCDay()];
                 array.push({ text: text, value: epoch });
             }
@@ -147,7 +147,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.date_start.value = 'now';
         state.date_start.array = array;
         state.date_start.visible = true;
-    }
+    };
 
     state.duration.update = function () {
         var category = state.categories.value;
@@ -177,7 +177,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             /* fix intraday duration intervals */
             var min = d.min.replace('s', '').replace('m', ''),
                 max = d.max.replace('s', '').replace('m', '').replace('d', '');
-            
+
             min *= { 's': 1, 'm': 60 }[d.min.last()];                 // convert to seconds
             max *= { 's': 1, 'm': 60, 'd': 3600 * 24 }[d.max.last()];
 
@@ -186,14 +186,14 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                 max: max,
                 type: 'seconds'
             });
-            ['s','m'].contains(d.min.last()) && max >= 60 && array.push({
-                min: Math.max(min/60, 1),
-                max: max/60,
+            ['s', 'm'].contains(d.min.last()) && max >= 60 && array.push({
+                min: Math.max(min / 60, 1),
+                max: max / 60,
                 type: 'minutes'
             });
-            ['s','m'].contains(d.min.last()) && max >= 3600 && array.push({
-                min: Math.max(min/3600,1),
-                max: max/3600,
+            ['s', 'm'].contains(d.min.last()) && max >= 3600 && array.push({
+                min: Math.max(min / 3600, 1),
+                max: max / 3600,
                 type: 'hours'
             });
         });
@@ -203,16 +203,30 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         })
 
         state.duration_unit.array = array;
-        if(!array.map(mapper('type')).contains(state.duration_unit.value))
+        if (!array.map(mapper('type')).contains(state.duration_unit.value))
             state.duration_unit.value = array.first().type;
-    }
+        else /* manulall notify duration_count to update */
+            state.duration_count.update();
+    };
+
+    state.duration_count.update = function () {
+        var range = state.duration_unit.array.filter(filter('type', state.duration_unit.value)).first();
+        console.warn('state.duration_count.update()', state.duration_count.value);
+        if (!range) return;
+        state.duration_count.min = range.min;
+        state.duration_count.max = range.max;
+        var value = state.duration_count.value;
+        state.duration_count.value = Math.min(Math.max(value, range.min), range.max);
+        console.warn('state.duration_count.update()', state.duration_count.value);
+    };
+
     state.proposal.onchange = function () {
         var request = {
             proposal: 1,
 
         };
         console.warn('state.proposal.onchange(...)', arguments);
-    }
+    };
 
     function init(symbol, contracts_for) {
         window.contracts_for = contracts_for;
