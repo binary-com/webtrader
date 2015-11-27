@@ -105,7 +105,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
 
     };
 
-    state.categories.onchange = function () {
+    state.categories.update = function () {
         var name = state.categories.value;
         console.warn('state.categories.onchange() ', name);
         state.category_displays.array = available
@@ -145,7 +145,13 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.date_start.visible = true;
     }
     state.duration.update = function () {
-        //["Up/Down",  "Ends In/Out", "Spreads", "Stays In/Goes Out", "Touch/No Touch"]
+        var category = state.categories.value;
+        if (["Up/Down", "In/Out", "Touch/No Touch"].contains(category))
+            state.duration.array.length !== 2 && (state.duration.array = ['Duration', 'End Time'])
+        else {
+            state.duration.value !== 'Duration' && (state.duration.value = 'Duration');
+            state.duration.array.length !== 1 && (state.duration.array = ['Duration'])
+        }
     };
 
     state.category_displays.onchange = function () {
@@ -203,6 +209,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         available.filter(filter('contract_display', 'ends between')).forEach(replacer('contract_display', 'ends in'));
         available.filter(filter('contract_display', 'stays between')).forEach(replacer('contract_display', 'stays in'));
         available.filter(filter('contract_display', 'goes outside')).forEach(replacer('contract_display', 'goes out'));
+        available.filter(filter('contract_display', 'touches')).forEach(replacer('contract_display', 'touch'));
+        available.filter(filter('contract_display', 'does not touch')).forEach(replacer('contract_display', 'no touch'));
 
         dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
@@ -217,7 +225,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.categories.value = state.categories.array.indexOf('Up/Down') >= 0 ? 'Up/Down' : state.categories.array[0]; // TODO: show first tab
 
         window._view = rv.bind(root[0],state)
-        state.categories.onchange();            // trigger change to init categories_display submenu
+        state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
     }
