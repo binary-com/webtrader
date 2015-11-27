@@ -159,6 +159,50 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         }
     };
 
+    state.duration_unit.update = function () {
+        var durations = available.filter(filter('contract_category_display', state.categories.value))
+                                                .filter(filter('contract_display', state.category_displays.selected))
+                                                .filter(filter('start_type', 'spot'))
+                                                .map(function (r) { return { min: r.min_contract_duration, max: r.max_contract_duration, type: r.expiry_type }; });
+        var array = [];
+        durations.forEach(function (d) {
+            if (['tick', 'daily'].contains(d.type)) {
+                array.push({
+                    min: (d.min + '').replace('d', '') | 0,
+                    max: (d.max + '').replace('d', '') | 0,
+                    type: { tick: 'ticks', daily: 'days' }[d.type]
+                });
+                return;
+            }
+            /* fix intraday duration intervals */
+            var min = d.min.replace('s', '').replace('m', ''),
+                max = d.max.replace('s', '').replace('m', '').replace('d', '');
+            
+            min *= { 's': 1, 'm': 60 }[d.min.last()];                 // convert to seconds
+            max *= { 's': 1, 'm': 60, 'd': 3600 * 24 }[d.max.last()];
+
+            's' === d.min.last() && array.push({
+                min: min,
+                max: max,
+                type: 'seconds'
+            });
+            ['s','m'].contains(d.min.last()) && max >= 60 && array.push({
+                min: Math.max(min/60, 1),
+                max: max/60,
+                type: 'minutes'
+            });
+            ['s','m'].contains(d.min.last()) && max >= 3600 && array.push({
+                min: Math.max(min/3600,1),
+                max: max/3600,
+                type: 'hours'
+            });
+        });
+        array.sort(function (r1, r2) {
+            var dict = { 'ticks': 0, 'seconds': 1, 'minutes': 2, 'hours': 3, 'days': 4 };
+            return dict[r1.type] - dict[r2.type];
+        })
+        console.warn(array);
+    }
     state.proposal.onchange = function () {
         var request = {
             proposal: 1,

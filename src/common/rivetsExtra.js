@@ -83,7 +83,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.binders.selectrefresh = {
         priority: 99,
         routine: function(el,array) {
-            console.warn('selectrefersh.routine()', array);
             $(el).selectmenu('refresh');
         }
     }
@@ -204,7 +203,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             console.warn('rv.binders.jq-class.routine()', value);
             el = $(el);
             var menu = $('#' + el.attr('id') + '-menu'); // get the id of widget
-            console.warn(menu);
             menu.removeClass(el.data('jq-class'));
             el.data({ 'jq-class': value });
             menu.addClass(value);
