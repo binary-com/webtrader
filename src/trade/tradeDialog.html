@@ -50,7 +50,7 @@
                     rv-selectmenu="duration_unit.value | notify proposal.onchange" 
                     rv-selectmenurefresh="duration_unit.array" >
 
-                <option rv-each-row="duration_unit.array" rv-value="row">{row}</option>
+                <option rv-each-row="duration_unit.array" rv-value="row.type">{row.type}</option>
            </select>
         </li>
         <li rv-show="duration.value | eq 'End Time' ">

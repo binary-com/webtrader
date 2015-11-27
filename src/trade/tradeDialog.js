@@ -50,8 +50,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             expiry: '',
         },
         duration_unit: {
-            array: ['ticks','seconds','minutes','hours','days'],
-            value: 'ticks'
+            array: [{ type: '' }],
+            value: '',
         },
         duration_count: {
             value: 1,
@@ -201,7 +201,10 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             var dict = { 'ticks': 0, 'seconds': 1, 'minutes': 2, 'hours': 3, 'days': 4 };
             return dict[r1.type] - dict[r2.type];
         })
-        console.warn(array);
+
+        state.duration_unit.array = array;
+        if(!array.map(mapper('type')).contains(state.duration_unit.value))
+            state.duration_unit.value = array.first().type;
     }
     state.proposal.onchange = function () {
         var request = {
