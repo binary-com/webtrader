@@ -119,14 +119,18 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.category_displays.selected = $(e.target).attr('data');
     };
 
-    state.date_start.update = function (forward_starting_options) {
-        var model = state.date_start;
+    state.date_start.update = function () {
+        var forward_starting_options = available.filter(filter('contract_category_display', state.categories.value))
+                                                .filter(filter('contract_display', state.category_displays.selected))
+                                                .filter(filter('start_type', 'forward')).first();
         if (!forward_starting_options) {
             state.date_start.visible = false;
             state.date_start.array = [];
             state.date_start.value = 'now';
             return;
         };
+        forward_starting_options = forward_starting_options.forward_starting_options
+        var model = state.date_start;
         var array = [{ text: 'Now', value: 'now' } ];
         forward_starting_options.forEach(function (row) {
             var step = 5*60; // 5 minutes step
@@ -144,6 +148,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.date_start.array = array;
         state.date_start.visible = true;
     }
+
     state.duration.update = function () {
         var category = state.categories.value;
         if (["Up/Down", "In/Out", "Touch/No Touch"].contains(category))
@@ -153,20 +158,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             state.duration.array.length !== 1 && (state.duration.array = ['Duration'])
         }
     };
-
-    state.category_displays.onchange = function () {
-        console.warn('state.category_displays.onchange()', state.category_displays.selected)
-        var filtered = available
-                        .filter(filter('contract_category_display', state.categories.value))
-                        .filter(filter('contract_display', state.category_displays.selected));
-        state.proposal.contract_type = filtered.first().contract_type;
-
-        /* Array of returned forward starting options */
-        var forward_starting_options = filtered.filter(filter('start_type', 'forward')).first()
-        state.date_start.update(forward_starting_options && forward_starting_options.forward_starting_options);
-
-        console.warn('state.category_displays.onchange()',filtered);
-    }
 
     state.proposal.onchange = function () {
         var request = {

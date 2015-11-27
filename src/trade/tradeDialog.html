@@ -1,7 +1,7 @@
 ﻿<div class="trade-dialog">
     <ul><li>
         <select class="contract-category-display"
-                rv-selectmenu="categories.value | instant-notify categories.update | instant-notify duration.update | notify proposal.onchange"
+                rv-selectmenu="categories.value | instant-notify categories.update duration.update | notify proposal.onchange"
                 rv-selectrefresh="categories.array" >
 
                 <option rv-each-row="categories.array" rv-value="row">{row}</option>
@@ -9,7 +9,7 @@
     </li></ul>
 
     <ul class="contract-displays"
-        rv-data="category_displays.selected | instant-notify category_displays.onchange | notify proposal.onchange">
+        rv-data="category_displays.selected | instant-notify date_start.update | notify proposal.onchange">
         <li rv-each-row="category_displays.array"
             rv-on-click="category_displays.onclick"
             rv-data="row"

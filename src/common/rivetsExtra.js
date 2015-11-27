@@ -36,8 +36,11 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     }
 
     /* notify another function on property changes */
-    rv.formatters['instant-notify'] = function(value, callback, timeout) {
-        callback(value);
+    rv.formatters['instant-notify'] = function() {
+        var args = [].slice.call(arguments, 0);
+        var value = args[0];
+        for (var i = 1; i < args.length ; ++i)
+            args[i](value);
         return value;
     }
 
