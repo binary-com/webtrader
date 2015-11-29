@@ -206,6 +206,7 @@ function sortAlphaNum(property) {
 
 String.prototype.first = String.prototype.first || function () { return this[0]; }
 String.prototype.last = String.prototype.last || function () { return this[this.length - 1]; }
+String.prototype.contains = String.prototype.contains || function (value) { return this.indexOf(value) >= 0; }
 
 Array.prototype.unique = Array.prototype.unique || function () {
     return this.filter(function (el, inx, arr) {

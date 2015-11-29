@@ -94,7 +94,40 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         }
     }
 
-    /* turn input element into jquery-ui-spinner, model = {min:, max, value:} */
+    /* extend jquery ui spinner to support multiple buttons */
+    $.widget('ui.webtrader_spinner', $.ui.spinner, {
+        _create: function( ) {
+            this._super();
+        },
+        _buttonHtml: function () {
+            var btn = function(dir, icon, step, radius, right){
+                icon = 'ui-icon-' + icon + '-1-' + (dir === 'up' ? 'n' : 's');
+                right = 'right: ' + (right || '0px') + ';';
+                radius = radius || '5px';
+                radius = 'border-radius: 0 ' + (dir == 'up' ? radius + ' 0' : '0 ' + radius) + ' 0';
+
+                return "<button step='" + step + "' class='ui-spinner-button ui-spinner-" + dir +
+                        "' style='" + right + radius + "'>" +
+                          "<span class='ui-icon " + icon +"'>&#9650;</span>" +
+                       "</button>";
+            }
+
+            var ret = '';
+            if (this.options.step_big)
+                ret += btn('up', 'arrowthick', this.options.step_big, '5px', '15px');
+
+            ret += btn('up', 'triangle', this.options.step, '5px');
+
+            if (this.options.step_big)
+                ret += btn('down', 'arrowthick', '-' + this.options.step_big, '5px', '17px');
+
+            ret += btn('down', 'triangle', '-' + this.options.step, '5px');
+            return ret;
+        }
+    });
+    /* turn input element into jquery-ui-spinner, model = {min:, max, value:},
+        the element can have attributes like 'step' and in additoin an new attribute named 'step-big'.
+        the value of these attrebutes will be used to increment/decrement on button press.  */
     rv.binders.spinner = {
         priority: 98,
         publishes: true,
@@ -103,26 +136,36 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var model = this.model;
             var publish = this.publish;
             var input = $(el);
-            input.spinner({
+            input.webtrader_spinner({
                 stop: function () {
                     var value = input.val();
-                    publish(value | 0);
-                }
+                    publish(value * 1);
+                    console.warn('spinner.stop()', value);
+                },
+                spin: function (e,ui) {
+                    var step = $(e.currentTarget).attr('step') + '';
+                    var decimals = (step.split('.')[1] || []).length;
+                    value = $(this).val()*1 + step*1;
+                    $(this).val(value.toFixed(decimals));
+                    e.preventDefault();
+                },
+                step: input.attr('step') || 1,
+                step_big: input.attr('step-big') || null
             });
-            input.spinner('value', model.value || model.min || 1);
+            input.webtrader_spinner('value', model.value || model.min || 1);
         },
         unbind: function (el) {
             $(el).spinner('destroy');
         },
         routine: function(el,value){
             console.warn('spinner.routing()', (value * 1) || 0);
-            $(el).spinner('value', value * 1);
+            $(el).webtrader_spinner('value', value * 1);
         }
     };
 
     /* bind values to jquery ui spinner options like 'min', 'max', ... */
     rv.binders['spinner-*'] = function(el,value) {
-        $(el).spinner('option', this.args[0], value);
+        $(el).webtrader_spinner('option', this.args[0], value);
     }
 
     /* trun input element in jquery-ui-datepicker */

@@ -242,7 +242,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         if (!barriers)
             return;
 
-        state.barriers.barrier = '' + (barriers.barrier || '+0.00000');
+        state.barriers.barrier = (barriers.barrier || '+0.00000') * 1;
         state.barriers.high_barrier = '' + (barriers.high_barrier || '+0.00000');
         state.barriers.low_barrier = '' + (barriers.low_barrier || '-0.00000');
     };

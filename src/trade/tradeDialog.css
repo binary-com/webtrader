@@ -133,10 +133,16 @@
     margin:0;
     /*padding-left: 5px;*/
     text-align:center;
-    padding-right: 15px;
     background: #273051;
     color:white;
 }
+.trade-dialog input[step] {
+    padding-right: 15px;
+}
+.trade-dialog input[step-big] {
+    padding-right: 30px;
+}
+
 .trade-dialog .ui-spinner-button.ui-spinner-up {
     margin-top: 0;
 }
