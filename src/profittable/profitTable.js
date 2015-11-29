@@ -80,7 +80,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     var rows = transactions.map(function (trans) {
                         return [
                             epoch_to_string(trans.purchase_time, { utc: true }),
-                            trans.contract_id,
+                            trans.transaction_id,
                             trans.longcode,
                             trans.buy_price,
                             epoch_to_string(trans.sell_time, { utc: true }),
