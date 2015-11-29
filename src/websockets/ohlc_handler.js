@@ -1,4 +1,4 @@
-define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jquery-timer"], function(liveapi, chartingRequestMap, $) {
+define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jquery-timer", 'common/util'], function(liveapi, chartingRequestMap, $) {
 
     var barsTable = chartingRequestMap.barsTable;
     liveapi.events.on('candles', function (data) {
@@ -124,16 +124,28 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
         }
 
         //console.log('Rendering for : ' + instrumentCode + " " + id);
-        var series = chart.addSeries({
+        var seriesConf = {
             id: id,
             name: instrumentName,
             data: dataInHighChartsFormat,
-            type: type ? type : 'candlestick', //area, candlestick, line, areaspline, column, ohlc, scatter,
+            type: type ? type : 'candlestick', //area, candlestick, line, areaspline, column, ohlc, scatter, dot, linedot
             dataGrouping: {
                 enabled: false
             },
             compare: series_compare
-        });
+        };
+        if (isDotType(type)) {
+            seriesConf.type = 'line';
+            seriesConf.dashStyle = 'dot';
+        } else if (isLineDotType(type)) {
+            seriesConf.type = 'line';
+            seriesConf.marker = {
+                enabled: true,
+                width : 7,
+                height : 7
+            };
+        }
+        var series = chart.addSeries(seriesConf);
         series.isDirty = true;
         //Its our variable
         $(series).data('isInstrument', true);//Currently used to indicate that this series is holding the chart OHLC or close data

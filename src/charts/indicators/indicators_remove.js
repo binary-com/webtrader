@@ -60,8 +60,8 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                 }]
             });
 
-            require(['text!charts/indicators/indicators.json'], function (jsonData) {
-                indicatorsJSON = jsonData;
+            require(['text!charts/indicators/indicators.json'], function (instrumentNameListString) {
+                indicatorsJSON = JSON.parse(instrumentNameListString);
                 if (typeof _callback == "function") {
                     _callback(containerIDWithHash);
                 }

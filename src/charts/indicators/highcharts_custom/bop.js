@@ -66,7 +66,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'bop'+ uniqueID,
                             title: {
-                                text: 'BOP(' + bopOptions.period  + ')',
+                                text: 'BOP',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,

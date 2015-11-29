@@ -22,6 +22,14 @@ function isDaily(ohlc)
     return ohlc.indexOf('d') != -1;
 }
 
+function isDotType(type) {
+    return type === 'dot';
+}
+
+function isLineDotType(type) {
+    return type === 'linedot';
+}
+
 function isNumericBetween(value, min, max) {
     var isNumeric = !isNaN(parseFloat(value)) && isFinite(value)
     return isNumeric && Math.floor(value) == value && min <= value && max >= value;
@@ -167,6 +175,11 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 /* capitalize the first letter of a string */
 function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
+function formatPrice(float) {
+    return (float * 1).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
 
 function resizeElement(selector) {
