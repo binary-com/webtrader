@@ -102,7 +102,7 @@
                    rv-spinner="barriers.barrier | notify proposal.onchange" />
         </li>
         <li>
-            <span class="barrier-live">{barriers.barrier_live < barrier root.tick.quote | to-fixed 5}</span>
+            <span class="barrier-live" rv-text="barriers.barrier_live < barrier root.tick.quote | to-fixed 5" />
         </li>
     </ul>
 
