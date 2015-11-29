@@ -188,7 +188,6 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                             || getParameterByName("gtm") === undefined
                             || $.trim(getParameterByName("gtm")).length <= 0) {
             require(['gtm/gtm'], function (gtm) {
-                console.log(2);
                 gtm.init();
             });
         }

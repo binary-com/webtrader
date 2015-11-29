@@ -22,6 +22,14 @@ function isDaily(ohlc)
     return ohlc.indexOf('d') != -1;
 }
 
+function isDotType(type) {
+    return type === 'dot';
+}
+
+function isLineDotType(type) {
+    return type === 'linedot';
+}
+
 function isNumericBetween(value, min, max) {
     var isNumeric = !isNaN(parseFloat(value)) && isFinite(value)
     return isNumeric && Math.floor(value) == value && min <= value && max >= value;
