@@ -42,6 +42,10 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         return (value * 1).toFixed(digits);
     }
 
+    rv.formatters['json-parse'] = function (value) {
+        return JSON.parse(value);
+    }
+
     /* notify another function on property changes */
     rv.formatters['instant-notify'] = function() {
         var args = [].slice.call(arguments, 0);
@@ -165,9 +169,32 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         $(el).webtrader_spinner('option', this.args[0], value);
     }
 
+    /* binder for jquery ui tooltip */
+    rv.binders.tooltip = {
+        priority: 97,
+        bind: function (el) {
+            console.warn('binders.tooltip.bind()');
+            $(el).attr('title',' ');
+            $(el).tooltip();
+        },
+        unbind: function (el) {
+            console.warn('binders.tooltip.unbind()');
+            $(el).tooltip('destory');
+        },
+        routine: function (el, value) {
+            console.warn('binders.tooltip.routing()', value);
+            $(el).tooltip('option', 'content', value);
+        }
+    }
+    /* bindar for jqueyr ui tooltip options */
+    rv.binders['tooltip-*'] = function (el, value) {
+        console.warn('binders.tooltip-*.routine()', this.args[0], value);
+        $(el).tooltip('option', this.args[0], value);
+    }
+
     /* trun input element in jquery-ui-datepicker */
     rv.binders.datepicker = {
-        priority: 96,
+        priority: 94,
         publishes: true,
         bind: function (el) {
             console.warn('datepicker.bind()');
@@ -212,7 +239,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
 
     /* truen input element in to jquery-ui-timepicker */
     rv.binders.timepicker = {
-        priority: 95,
+        priority: 93,
         publishes: true,
         bind: function (el) {
             var input = $(el);
@@ -248,7 +275,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
 
     /* add a css class to corresponding jquery-ui widget from the dummy html element */
     rv.binders['jq-class'] = {
-        priority: 94,
+        priority: 92,
         routine: function (el, value) {
             console.warn('rv.binders.jq-class.routine()', value);
             el = $(el);

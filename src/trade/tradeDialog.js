@@ -82,7 +82,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             barrier : '+0.00000',
             high_barrier: '+0.00000',
             low_barrier: '-0.00000',
-            barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; },
+            barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; }
         },
         digits: {
             value: '0',
@@ -111,6 +111,10 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             contract_type: '-',
         },
 
+        tooltips: {
+            barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
+            barrier_p: { my: "left-5 top+10", at: "left bottom", collision: "flipfit" },
+        }
     };
     state.barriers.root = state; // reference to root object for computed properties
 

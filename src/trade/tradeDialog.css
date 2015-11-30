@@ -26,11 +26,8 @@
 .trade-dialog .tick-quote,
 .trade-dialog .barrier-live
  {
-    background: #273051;
-    display:block;
-    border-radius: 20px;
-    padding: 8px 10px;
-    color:white;
+    border-bottom:1px dotted #000;
+    text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
 }
 
 .trade-dialog .date-start-select + .ui-selectmenu-button {
