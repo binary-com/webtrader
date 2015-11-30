@@ -201,11 +201,12 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var input = $(el);
             var publish = this.publish;
             var model = this.model;
-            var styles = (model && model.styles) || { marginTop: '10px', marginLeft: '-250px' }; 
+            var styles = { marginTop: input.attr('marginTop') || '10px', marginLeft: input.attr('marginLeft') || '-250px' };
+            console.warn('datepicker.bind() styles=', styles);
 
             var options = {
                 showOn: model.showOn || 'focus',
-                numberOfMonths: model.numberOfMonths || 2,
+                numberOfMonths: input.attr('numberOfMonths')*1 || 2,
                 maxDate: model.maxDate || 0,
                 minDate: model.minDate || new Date(2010, 0, 1),
                 dateFormat: model.dateFormat || 'yy-mm-dd',
@@ -247,7 +248,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var model = this.model;
             var allways_ok = function () { return true };
 
-            var styles = model.styles || { marginTop: '3px', marginLeft: '-250px' }; 
+            var styles = { marginTop: input.attr('marginTop') || '10px', marginLeft: input.attr('marginLeft') || '-250px' };
             input.timepicker({
                 showPeriod: model.showPeriod || false,
                 showLeadingZero: model.showLeadingZero || true,

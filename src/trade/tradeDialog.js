@@ -64,11 +64,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         },
         date_expiry: {
             value_date: new Date(),
-            numberOfMonths: 1,
-            styles: {
-                marginTop: '3px',
-                marginLeft: '-50px'
-            },
             value_hour: '04:00',
         },
         categories: {
