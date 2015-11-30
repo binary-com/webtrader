@@ -305,6 +305,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                  .forEach(replacer('contract_category_display', 'In/Out'));
         available.filter(filter('contract_category_display', 'Ends In/Out'))
                  .forEach(replacer('contract_category_display', 'In/Out'));
+        /* fix for websocket having a useless barrier value for digits */
+        available.filter(filter('contract_category_display', 'Digits'))
+                 .forEach(replacer('barriers', 0));
         /* fix for contract_display text in In/Out menue */
         available.filter(filter('contract_display', 'ends outside')).forEach(replacer('contract_display', 'ends out'));
         available.filter(filter('contract_display', 'ends between')).forEach(replacer('contract_display', 'ends in'));
