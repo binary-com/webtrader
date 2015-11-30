@@ -1,9 +1,9 @@
-define(['jquery', "websockets/binary_websockets", 'common/util'], function( $, liveapi ) {
+define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'], function( $, liveapi, menu ) {
 	return {
 		init: function() {
 			// get chart window html.
-	        $.get("charts/chartWindow.html", function(html) {
-	            var newTabId = "chart-dialog-1",
+	        require(['text!charts/chartWindow.html'], function(html) {
+	            var newTabId = "webtrader-dialog-1",
 	                timePeriod = getParameterByName('timePeriod') || '1d',
 	                type = timePeriod == '1t' ? 'line' : 'candlestick';
 
@@ -20,14 +20,16 @@ define(['jquery', "websockets/binary_websockets", 'common/util'], function( $, l
 	            liveapi
 	              .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
 	              .then(function (_instrumentJSON) {
+                    
+                    _instrumentJSON = menu.extractChartableMarkets(_instrumentJSON);
 	                if (!$.isEmptyObject(_instrumentJSON)) {
 	                    var instrumentCode = getParameterByName('instrument');
 	                    var instrumentObject = getObjects(_instrumentJSON, 'symbol', instrumentCode);
-	                    if (instrumentObject && instrumentObject.length > 0 && instrumentObject[0].symbol && instrumentObject[0].name) {
+	                    if (instrumentObject && instrumentObject.length > 0 && instrumentObject[0].symbol && instrumentObject[0].display_name) {
 	                        // validate the parameters here.
-	                        if (validateParameters(instrumentObject[0])) {
+	                        if (validateParameters()) {
 	                            var instrumentCode = instrumentObject[0].symbol;
-	                            var instrumentName = instrumentObject[0].name;
+	                            var instrumentName = instrumentObject[0].display_name;
 	                            require(["charts/charts"], function(charts) {
 	                                charts.drawChart("#" + newTabId + "_chart", instrumentCode, instrumentName, timePeriod, type);
 	                            });

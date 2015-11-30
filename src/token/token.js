@@ -1,16 +1,15 @@
 ﻿/**
  * Created by amin on October 22, 2015.
  */
-define(["jquery", "windows/windows","jquery-growl"], function ($, windows) {
+define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], function ($, windows) {
     var $html = $('<div />');
     var callbacks = null;
     var promise = null;
     var tokenWin = null;
-    loadCSS('token/token.css');
 
     function show() {
         if (tokenWin == null) { /* TODO: try to laod html files with requriejs instead */
-            $.get('token/token.html', function ($html) {
+            require(['text!token/token.html'], function ($html) {
                 $html = $($html);
                 tokenWin = windows.createBlankWindow($html, {
                     width: 605,

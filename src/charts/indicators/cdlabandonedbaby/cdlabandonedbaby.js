@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/cdlabandonedbaby/cdlabandonedbaby.html" , function ( $html ) {
+        require(['text!charts/indicators/cdlabandonedbaby/cdlabandonedbaby.html'], function ( $html ) {
 
             $html = $($html);
             //$html.hide();
@@ -30,18 +30,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdlabandonedbaby'], function ( cdlabandonedbaby ) {
-                                    cdlabandonedbaby.init();
-                                    //Add CDLABANDONEDBABY for the main series
-                                    $($(".cdlabandonedbaby").data('refererChartID')).highcharts().series[0].addCDLABANDONEDBABY();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdlabandonedbaby'], function ( cdlabandonedbaby ) {
+                                cdlabandonedbaby.init();
+                                //Add CDLABANDONEDBABY for the main series
+                                $($(".cdlabandonedbaby").data('refererChartID')).highcharts().series[0].addCDLABANDONEDBABY();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

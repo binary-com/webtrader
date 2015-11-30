@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS"], function ($) {
+define(["jquery", "datatables"], function ($) {
 
     function _refreshInstruments( table, data, containerIDWithHash ) {
 
@@ -21,14 +21,14 @@ define(["jquery", "datatables", "loadCSS"], function ($) {
                         var symbol = $(this).data("symbol");
                         var delay_amount = $(this).data("delay_amount");
                         var displaySymbol = $(this).text();
-                        var mainSeries_timeperiod = $(containerIDWithHash).data("timeperiod");
+                        var mainSeries_timePeriod = $(containerIDWithHash).data("timePeriod");
                         var type = $(containerIDWithHash).data("type");
 
                         //validate time period of the main series
                         require(["common/util"], function () {
                             if (isDataTypeClosePriceOnly(type)) {
-                                var timeperiodObject = convertToTimeperiodObject(mainSeries_timeperiod);
-                                if (delay_amount <= (timeperiodObject.timeInSeconds() / 60)) {
+                                var timePeriodObject = convertToTimeperiodObject(mainSeries_timePeriod);
+                                if (delay_amount <= (timePeriodObject.timeInSeconds() / 60)) {
                                     require(['charts/chartOptions', "charts/charts"], function (chartOptions, charts) {
                                         $(containerIDWithHash).data("overlayIndicator", true);
                                         var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
@@ -91,7 +91,7 @@ define(["jquery", "datatables", "loadCSS"], function ($) {
             }
             else {
 
-                $.get("overlay/overlay_add.html", function($html) {
+                require(['text!overlay/overlay_add.html'], function($html) {
                     $html = $($html);
                     $html.hide();
                     $html.appendTo("body");

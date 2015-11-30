@@ -23,8 +23,7 @@ define(["charts/chartWindow", "common/util"], function() {
 
         init : function (newTabId, timePeriod, chartType) {
 
-            loadCSS("charts/chartOptions.css");
-            $.get("charts/chartOptions.html", function($html) {
+            require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function($html) {
                 //attach different button actions
                 $html = $($html);
 
@@ -123,10 +122,9 @@ define(["charts/chartWindow", "common/util"], function() {
                                     });
                                     if (!removed) {
                                         //Means this is not a remove case, we have to add the indicator
-                                        $.each(chart.series, function() {
-                                            if ($(this).data('isInstrument'))
-                                            {
-                                                this.addCurrentPrice();
+                                        chart.series(function(series) {
+                                            if (series.options.isInstrument) {
+                                                series.addCurrentPrice();
                                             }
                                         });
                                     }

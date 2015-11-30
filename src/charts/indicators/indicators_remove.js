@@ -2,13 +2,13 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
+define(["jquery", "datatables", 'charts/charts'], function ($) {
 
     var table = undefined, indicatorsJSON = undefined;
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/indicators_remove.html", function($html) {
+        require(['text!charts/indicators/indicators_remove.html'], function($html) {
             $html = $($html);
             table = $html.hide().find('table').DataTable({
                 paging: false,
@@ -60,8 +60,8 @@ define(["jquery", "datatables", "loadCSS", 'charts/charts'], function ($) {
                 }]
             });
 
-            $.get('charts/indicators/indicators.json', function (jsonData) {
-                indicatorsJSON = jsonData;
+            require(['text!charts/indicators/indicators.json'], function (instrumentNameListString) {
+                indicatorsJSON = JSON.parse(instrumentNameListString);
                 if (typeof _callback == "function") {
                     _callback(containerIDWithHash);
                 }

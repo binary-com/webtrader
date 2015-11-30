@@ -14,7 +14,6 @@ requirejs.config({
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
-        'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
         'lokijs': 'lib/lokijs/build/lokijs.min',
         'jquery-timer': "lib/jquery.timers/jquery.timers.min",
         'color-picker': "lib/colorpicker/jquery.colorpicker",
@@ -24,11 +23,19 @@ requirejs.config({
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
-        'js-cookie':'lib/js-cookie/src/js.cookie',
-        'loadCSS': 'lib/loadcss/loadCSS',
-        'gtm': 'gtm/gtm'
+        'js-cookie':'lib/js-cookie/src/js.cookie'
     },
+    map: {
+        '*': {
+            'css': 'lib/require-css/css.min',
+            'text': 'lib/text/text.js'
+        }
+    },
+    waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
+        "websockets/binary_websockets": {
+          deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
+        },
         "jquery-ui": {
             deps: ["jquery"]
         },
@@ -52,14 +59,14 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
-        },
-        "gtm": {
-            deps: ['jquery']
         }
     }
 });
 
-require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function( $ ) {
+/* Initialize the websocket as soon as posssilbe */
+require(['websockets/binary_websockets']);
+
+require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     "use strict";
 
@@ -69,11 +76,19 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
       return;
     }
 
+    /* Trigger *Parallel* loading of big .js files,
+       Suppose moudle X depends on lib A and module Y depends on lib B,
+       When X loads it will trigger loading Y, which results in loading A and B Sequentially,
+       
+       We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
+    require(['jquery-ui', 'highstock', 'lokijs']);
+
+
+    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
+    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
+
     // load jq-ui & growl stylesheets.
-    loadCSS("lib/jquery-ui/themes/smoothness/jquery-ui.min.css");
-    loadCSS('lib/growl/stylesheets/jquery.growl.css');
-    // load main stylesheet.
-    loadCSS("main.css");
+    require(['css!lib/growl/stylesheets/jquery.growl.css']);
 
     function handle_affiliate_route() {
         require(['affiliates/affiliates'], function(affiliates) {
@@ -101,6 +116,14 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     elem.click(); 
                 });
 
+            //Register async loading of portfolio window 
+            load_ondemand($navMenu.find("a.portfolio"), 'click', 'loading portfolio ...', 'portfolio/portfolio',
+                function (portfolio) {
+                    var elem = $navMenu.find("a.portfolio");
+                    portfolio.init(elem);
+                    elem.click(); 
+                });
+
             //Register async loading of window profit-table
             load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
                 function (profitTable) {
@@ -108,9 +131,17 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
                     profitTable.init(elem);
                     elem.click(); 
                 });
+
+            //Register async loading of statement dialog
+            load_ondemand($navMenu.find("a.statement"), 'click', 'loading Statement Table ...', 'statement/statement',
+                function (statement) {
+                    var elem = $navMenu.find("a.statement");
+                    statement.init(elem);
+                    elem.click(); 
+                });
         }
 
-        require(["navigation/navigation"], function (navigation) {
+        require(["navigation/navigation","jquery-ui"], function (navigation) {
             navigation.init(registerMenusCallback);
 
             /* initialize the top menu because other dialogs
@@ -137,39 +168,29 @@ require(["jquery", "jquery-ui", "modernizr", "loadCSS", "common/util"], function
         });
     }
 
-    onloadCSS(loadCSS("navigation/navigation.css"), function () {
-        //All dependencies loaded
-        //TODO find out the consequence of not having the following line
-        //This is causing very slow loading of charts, sometimes not loading at all
-        //$(window).load(function () {
 
-            // add GTM scripts if specified.
-            //TODO
-            // var loadGTM = getParameterByName("gtm") || true;
-            // if(loadGTM == 'true') {
-            //     require(['gtm'], function (gtm) {
-            //         gtm.init();
-            //     });
-            // }
+    if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
+        handle_affiliate_route();
+    else //Our chart is accessed directly
+        handle_normal_route();
 
-            var isAffiliate = getParameterByName("affiliates") || false;
-            //Our chart is accessed by other applications
-            if (isAffiliate == 'true') {
-                handle_affiliate_route();
-            }
-            //Our chart is accessed directly
-            else {
-                handle_normal_route();
-            }
+    //load all other .css files asynchronously
+    require([
+        'css!lib/hamburger.css',
+        'css!charts/charts.css',
+        'css!lib/datatables/media/css/jquery.dataTables.min.css',
+        'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
+        'css!lib/colorpicker/jquery.colorpicker.css'
+    ], function() {
 
-            //Now load all other CSS asynchronously
-            loadCSS("lib/hamburger.css");
-            loadCSS('charts/charts.css');
-            loadCSS("lib/datatables/media/css/jquery.dataTables.min.css");
-            loadCSS("lib/datatables/media/css/dataTables.jqueryui.min.css");
-            loadCSS("lib/colorpicker/jquery.colorpicker.css");
-
-        //});
+        if (getParameterByName("gtm") === 'true'
+                            || getParameterByName("gtm") === undefined
+                            || $.trim(getParameterByName("gtm")).length <= 0) {
+            require(['gtm/gtm'], function (gtm) {
+                gtm.init();
+            });
+        }
 
     });
+
 });

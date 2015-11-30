@@ -1,3 +1,6 @@
+#instrumentsDialog {
+    margin:auto;
+}
 .instruments_table {
     display: table;
 }
@@ -17,14 +20,5 @@
 }
 
 .instruments_fixed_width {
-    width: 65px;
+    width: 80px;
 }
-
-/*.instruments .ui-menu {
-  display: none;
-}
-
-.instruments:hover ul {
-  display: block;
-  height: auto;
-}*/

@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/willr/willr.css');
+        require(['css!charts/indicators/willr/willr.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -21,7 +21,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
         };
         var defaultLevels = [];
 
-        $.get("charts/indicators/willr/willr.html" , function ( $html ) {
+        require(['text!charts/indicators/willr/willr.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -100,52 +100,48 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".willr_input_width_for_period").val(),
-                                                parseInt($html.find(".willr_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".willr_input_width_for_period").attr("max"))))
-                                {
-                                    require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".willr_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".willr_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".willr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
-                                    });
-                                    return;
-                                }
-
-                                require(['charts/indicators/highcharts_custom/willr'], function ( willr ) {
-                                    willr.init();
-                                    var levels = [];
-                                    $.each(table.rows().nodes(), function () {
-                                        var data = $(this).data('level');
-                                        if (data) {
-                                            levels.push({
-                                                color: data.stroke,
-                                                dashStyle: data.dashStyle,
-                                                width: data.strokeWidth,
-                                                value: data.level,
-                                                label: {
-                                                    text: data.level
-                                                }
-                                            });
-                                        }
-                                    });
-                                    var options = {
-                                        period : parseInt($html.find(".willr_input_width_for_period").val()),
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#willr_strokeWidth").val()),
-                                        dashStyle : $html.find("#willr_dashStyle").val(),
-                                        levels : levels
-                                    };
-                                    //Add WILLR for the main series
-                                    $($(".willr").data('refererChartID')).highcharts().series[0].addWILLR(options);
+                            if (!isNumericBetween($html.find(".willr_input_width_for_period").val(),
+                                            parseInt($html.find(".willr_input_width_for_period").attr("min")),
+                                            parseInt($html.find(".willr_input_width_for_period").attr("max"))))
+                            {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $.growl.error({ message: "Only numbers between " + $html.find(".willr_input_width_for_period").attr("min")
+                                            + " to " + $html.find(".willr_input_width_for_period").attr("max")
+                                            + " is allowed for " + $html.find(".willr_input_width_for_period").closest('tr').find('td:first').text() + "!" });
                                 });
+                                return;
+                            }
 
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/willr'], function ( willr ) {
+                                willr.init();
+                                var levels = [];
+                                $.each(table.rows().nodes(), function () {
+                                    var data = $(this).data('level');
+                                    if (data) {
+                                        levels.push({
+                                            color: data.stroke,
+                                            dashStyle: data.dashStyle,
+                                            width: data.strokeWidth,
+                                            value: data.level,
+                                            label: {
+                                                text: data.level
+                                            }
+                                        });
+                                    }
+                                });
+                                var options = {
+                                    period : parseInt($html.find(".willr_input_width_for_period").val()),
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#willr_strokeWidth").val()),
+                                    dashStyle : $html.find("#willr_dashStyle").val(),
+                                    levels : levels
+                                };
+                                //Add WILLR for the main series
+                                $($(".willr").data('refererChartID')).highcharts().series[0].addWILLR(options);
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

@@ -38,9 +38,3 @@
 .hide-search-input .dataTables_filter {
     display:none;
 }
-
-/* Remove IE10+ "clear field" X button on certain inputs
-   This does not trigger a JQ changed event, and no other browser has such X button */
-input::-ms-clear {
-    display: none;
-}

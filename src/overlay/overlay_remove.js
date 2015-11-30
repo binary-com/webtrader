@@ -2,13 +2,13 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "loadCSS"], function ($) {
+define(["jquery", "datatables"], function ($) {
 
   var table = undefined;
 
     function init( containerIDWithHash, _callback ) {
 
-      $.get("overlay/overlay_remove.html", function($html) {
+      require(['text!overlay/overlay_remove.html'], function($html) {
           $html = $($html);
           $html.hide();
           $html.appendTo("body");
@@ -95,7 +95,7 @@ define(["jquery", "datatables", "loadCSS"], function ($) {
 
             $.each(chart.series, function (index, series) {
                 //We cannot remove the main series
-                if ($(this).data('isInstrument') && index > 0) {
+                if (series.options.isInstrument && index > 0 && series.options.id !== 'navigator') {
                   $(table.row.add([series.options.name]).draw().node())
                       .click(function () {
                           $(this).toggleClass('selected');

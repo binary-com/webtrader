@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/cdldoji/cdldoji.html" , function ( $html ) {
+        require(['text!charts/indicators/cdldoji/cdldoji.html'], function ( $html ) {
 
             $html = $($html);
             //$html.hide();
@@ -29,18 +29,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdldoji'], function ( cdldoji ) {
-                                    cdldoji.init();
-                                    //Add CDLDOJI for the main series
-                                    $($(".cdldoji").data('refererChartID')).highcharts().series[0].addCDLDOJI();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdldoji'], function ( cdldoji ) {
+                                cdldoji.init();
+                                //Add CDLDOJI for the main series
+                                $($(".cdldoji").data('refererChartID')).highcharts().series[0].addCDLDOJI();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

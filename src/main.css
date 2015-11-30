@@ -1,17 +1,19 @@
 @font-face {
-    src: url('fonts/Roboto-Regular.ttf') format('truetype'),
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
     font-family: 'Roboto';
 }
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 body {
     font-size: 80%;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
 }
 
 .ui-icon {
@@ -33,11 +35,15 @@ body {
     border-top-left-radius: 0!important;
 }
 
+.ui-priority-secondary {
+    opacity: 1!important;
+}
+
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
     border: 0px solid #273051;
-    background: #273051!important;
+    background: #273051;
     font-weight: normal;
     color: #FFFFFF;
 }
@@ -202,4 +208,24 @@ button.ui-button-text-only .ui-menu {
         -webkit-transform: scaleY(1);
         transform: scaleY(1);
     }
+}
+
+td.red {
+    color: #d71818;
+    font-weight:bold;
+}
+
+td.green {
+    color: #02920e;
+    font-weight:bold;
+}
+
+td.bold {
+    font-weight: bold
+}
+
+/* Remove IE10+ "clear field" X button on certain inputs
+   This does not trigger a JQ changed event, and no other browser has such X button */
+input::-ms-clear {
+    display: none;
 }

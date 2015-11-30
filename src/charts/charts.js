@@ -17,23 +17,34 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     });
 
-    var barsTable = chartingRequestMap.barsTable;
-    function destroy(containerIDWithHash, timeperiod, instrumentCode) {
-        if (!timeperiod || !instrumentCode) return;
+    function destroy(containerIDWithHash, timePeriod, instrumentCode) {
+        if (!timePeriod || !instrumentCode) return;
 
-        var instrumentCdAndTp = (instrumentCode + timeperiod).toUpperCase();
-        if (chartingRequestMap[instrumentCdAndTp]) {
-            for (var index in chartingRequestMap[instrumentCdAndTp].chartIDs) {
-                var chartID = chartingRequestMap[instrumentCdAndTp].chartIDs[index];
+        //granularity will be 0 for tick timePeriod
+        var granularity = convertToTimeperiodObject(timePeriod).timeInSeconds();
+        var key = (instrumentCode + granularity).toUpperCase();
+        if (chartingRequestMap[key]) {
+            for (var index in chartingRequestMap[key].chartIDs) {
+                var chartID = chartingRequestMap[key].chartIDs[index];
                 if (chartID.containerIDWithHash == containerIDWithHash) {
-                    chartingRequestMap[instrumentCdAndTp].chartIDs.splice(index, 1);
+                    chartingRequestMap[key].chartIDs.splice(index, 1);
                     break;
                 }
             }
-            if ($.isEmptyObject(chartingRequestMap[instrumentCdAndTp].chartIDs)) {
-                liveapi.send({ "forget": chartingRequestMap[instrumentCdAndTp].tickStreamingID });
-                $(document).stopTime(chartingRequestMap[instrumentCdAndTp].timerHandler);
-                delete chartingRequestMap[instrumentCdAndTp];
+            if ($.isEmptyObject(chartingRequestMap[key].chartIDs)) {
+                var requestObject = {
+                    "ticks_history": instrumentCode,
+                    "granularity" : granularity,
+                    "end": 'latest',
+                    "count": 1,
+                    "subscribe": 0
+                };
+                liveapi.send(requestObject);
+
+                if (chartingRequestMap[key].timerHandler) {
+                    $(document).stopTime(chartingRequestMap[key].timerHandler);
+                }
+                delete chartingRequestMap[key];
             }
         }
     }
@@ -45,24 +56,25 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
          * @param containerIDWithHash
          * @param instrumentCode
          * @param instrumentName
-         * @param timeperiod
+         * @param timePeriod
          * @param type
          * @param onload // optional onload callback
          */
-        drawChart: function (containerIDWithHash, instrumentCode, instrumentName, timeperiod, type, series_compare, onload) {
+        drawChart: function (containerIDWithHash, options, onload) {
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
-                this.destroy(containerIDWithHash, timeperiod, instrumentCode);
+                this.destroy(containerIDWithHash, options.timePeriod, options.instrumentCode);
                 $(containerIDWithHash).highcharts().destroy();
             }
 
             //Save some data in DOM
             $(containerIDWithHash).data({
-                instrumentCode : instrumentCode,
-                instrumentName : instrumentName,
-                timeperiod : timeperiod,
-                type : type
+                instrumentCode : options.instrumentCode,
+                instrumentName : options.instrumentName,
+                timePeriod : options.timePeriod,
+                type : options.type,
+                delayAmount : options.delayAmount
             });
 
             // Create the chart
@@ -72,16 +84,32 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     events: {
                         load: function () {
                             this.showLoading();
-                            console.log('Calling render chart for the first time for the instrument : ', instrumentCode);
+                            console.log('Calling render chart for the first time for the instrument : ', options.instrumentCode);
                             currentPrice.init();
                             liveapi.execute(function () {
-                                ohlc_handler.retrieveChartDataAndRender(timeperiod, instrumentCode, containerIDWithHash, type, instrumentName, series_compare);
+                                ohlc_handler.retrieveChartDataAndRender({
+                                    timePeriod : options.timePeriod,
+                                    instrumentCode : options.instrumentCode,
+                                    containerIDWithHash : containerIDWithHash,
+                                    type : options.type,
+                                    instrumentName : options.instrumentName,
+                                    series_compare : options.series_compare,
+                                    delayAmount : options.delayAmount
+                                });
                             });
-                            if (onload)
+                            if (onload) {
                                 onload();
+                            }
                         }
                     }
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
+                },
+
+                navigator: {
+                    enabled: true,
+                    series: {
+                        id: 'navigator'
+                    }
                 },
 
                 //This will be updated when 'Settings' button is implemented
@@ -92,11 +120,27 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                         upColor: 'green',
                         upLineColor: 'black',
                         shadow: true
+                    },
+                    series: {
+                        events: {
+                            afterAnimate: function () {
+                                if (this.options.isInstrument && this.options.id !== "navigator") {
+                                    console.log('Series finished rendering!', this.options);
+                                    //this.isDirty = true;
+                                    //this.isDirtyData = true;
+
+                                    //Add current price indicator
+                                    this.addCurrentPrice();
+                                }
+                                this.chart.hideLoading();
+                                //this.chart.redraw();
+                            }
+                        }
                     }
                 },
 
                 title: {
-                    text: instrumentName + " (" + timeperiod + ")"//name to display
+                    text: options.instrumentName + " (" + options.timePeriod + ")"//name to display
                 },
 
                 credits: {
@@ -170,33 +214,34 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         refresh : function ( containerIDWithHash ) {
             //Get all series details from this chart
             var chart = $(containerIDWithHash).highcharts();
-            var marketData_displayValue = [], series_compare = undefined;
+            var loadedMarketData = [], series_compare = undefined;
             $(chart.series).each(function (index, series) {
-                if ($(series).data('isInstrument')) {
-                    marketData_displayValue.push(series.name);
+                console.log('Refreshing : ', series.options.isInstrument, series.options.name);
+                if (series.options.isInstrument) {
+                    loadedMarketData.push(series.name);
+                    //There could be one valid series_compare value per chart
                     series_compare = series.options.compare;
                 }
             });
 
-            this.drawChart( containerIDWithHash, $(containerIDWithHash).data("instrumentCode"),
-                $(containerIDWithHash).data("instrumentName"),
-                $(containerIDWithHash).data("timeperiod"),
-                $(containerIDWithHash).data("type"),
-                series_compare
-            );
+            this.drawChart( containerIDWithHash, {
+                instrumentCode : $(containerIDWithHash).data("instrumentCode"),
+                instrumentName : $(containerIDWithHash).data("instrumentName"),
+                timePeriod : $(containerIDWithHash).data("timePeriod"),
+                type : $(containerIDWithHash).data("type"),
+                series_compare : series_compare,
+                delayAmount : $(containerIDWithHash).data("delayAmount")
+            });
 
             //Trigger overlay
             var chartObj = this;
             require(['instruments/instruments'], function (ins) {
-                $(marketData_displayValue).each(function (index, value) {
-                    //$(document).oneTime(1000, null, function () {
-                        var marketDataObj = ins.getSpecificMarketData(value);
-                        if (marketDataObj.symbol != undefined
-                            && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
-                        {
-                            chartObj.overlay( containerIDWithHash, marketDataObj.symbol, value);
-                        }
-                    //});
+                loadedMarketData.forEach(function (value) {
+                    var marketDataObj = ins.getSpecificMarketData(value);
+                    if (marketDataObj.symbol != undefined && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
+                    {
+                        chartObj.overlay( containerIDWithHash, marketDataObj.symbol, value, marketDataObj.delay_amount);
+                    }
                 });
             });
         },
@@ -220,7 +265,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
          * @param overlayInsCode
          * @param overlayInsName
          */
-        overlay : function( containerIDWithHash, overlayInsCode, overlayInsName ) {
+        overlay : function( containerIDWithHash, overlayInsCode, overlayInsName, delayAmount ) {
             if($(containerIDWithHash).highcharts()) {
                 var chart = $(containerIDWithHash).highcharts();
                 //var mainSeries_instCode     = $(containerIDWithHash).data("instrumentCode");
@@ -229,13 +274,13 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     We have to first set the data to NULL and then recaculate the data and set it back
                     This is needed, else highstocks throws error
                  */
-                var mainSeries_timeperiod   = $(containerIDWithHash).data("timeperiod");
+                var mainSeries_timePeriod   = $(containerIDWithHash).data("timePeriod");
                 var mainSeries_type         = $(containerIDWithHash).data("type");
                 chart.showLoading();
                 for (var index = 0; index < chart.series.length; index++) {
                     //console.log('Instrument name : ' + chart.series[index].name);
                     var series = chart.series[index];
-                    if ($(series).data('isInstrument')) {
+                    if (series.options.isInstrument) {
                         var data = series.options.data;
                         series.setData([]);
                         for (var i = 0; i < data.length; i++) {
@@ -247,8 +292,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             compare: 'percent'
                         });
                         series.setData(data);
-                        //Since we manipulated the complete dataset, we have to set the isInstrument variable again
-                        $(series).data('isInstrument', true);
+                        series.options.isInstrument = true;
                     }
                     else if ($(series).data('onChartIndicator')) {
                         series.update({
@@ -259,7 +303,15 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                 currentPrice.init();
                 liveapi.execute(function(){
-                    ohlc_handler.retrieveChartDataAndRender(mainSeries_timeperiod, overlayInsName, containerIDWithHash, mainSeries_type, overlayInsName, 'percent' );
+                    ohlc_handler.retrieveChartDataAndRender({
+                        timePeriod : mainSeries_timePeriod,
+                        instrumentCode : overlayInsCode,
+                        containerIDWithHash : containerIDWithHash,
+                        type : mainSeries_type,
+                        instrumentName : overlayInsName,
+                        series_compare : 'percent',
+                        delayAmount : delayAmount
+                    });
                 });
             }
         }

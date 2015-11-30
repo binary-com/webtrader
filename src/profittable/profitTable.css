@@ -6,29 +6,26 @@ table.profit-table-dialog {
     /*table-layout:fixed;*/
 }
 
+table.profit-table-dialog th {
+    padding: 5px 5px !important;
+}
+table.profit-table-dialog td {
+    padding: 0 5px !important;
+}
 table.profit-table-dialog th,
 table.profit-table-dialog td
  {
-  text-align:center;
-  width: 13% !important; /* make important: jQ-datatables overrides this */
+    text-align:center;
+    width: 12% !important; /* make important: jQ-datatables overrides this */
 }
     table.profit-table-dialog span {
-        height:2.5em !important;
+        margin-bottom: 5px;
         display:block;
         font-size:90%;
     }
 
     table.profit-table-dialog th.wide-column{
-        width: 22% !important;
-    }
-    table.profit-table-dialog td.red {
-        color: #d71818;
-        font-weight:bold;
-    }
-
-    table.profit-table-dialog td.green {
-        color: #02920e;
-        font-weight:bold;
+        width: 28% !important;
     }
 
     table.profit-table-dialog th > .search-input {
@@ -38,14 +35,15 @@ table.profit-table-dialog td
         -webkit-box-sizing:border-box;
         -moz-box-sizing: border-box;
         border-radius:10px;
+        font-family: 'Roboto', sans-serif !important;
+        font-size: 90%;
     }
 
     table.profit-table-dialog th > .search-input:focus {
         box-shadow: 3px -1px 8px 1pt lightblue;
         outline: 0;
     }
-table.profit-table-dialog .search-input::-webkit-input-placeholder,
-table.profit-table-dialog .search-input::-moz-placeholder,     /* firefox 19+ */
-table.profit-table-dialog .search-input:-ms-input-placeholder /* ie */ {
-    font-size: 90%;
+
+table.profit-table-dialog + div {
+    padding: 0.5em 0 !important;
 }

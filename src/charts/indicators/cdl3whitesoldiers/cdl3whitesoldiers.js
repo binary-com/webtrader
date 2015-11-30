@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        $.get("charts/indicators/cdl3whitesoldiers/cdl3whitesoldiers.html" , function ( $html ) {
+        require(['text!charts/indicators/cdl3whitesoldiers/cdl3whitesoldiers.html'], function ( $html ) {
 
             $html = $($html);
             //$html.hide();
@@ -30,18 +30,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                require(['charts/indicators/highcharts_custom/cdl3whitesoldiers'], function ( cdl3whitesoldiers ) {
-                                    cdl3whitesoldiers.init();
-                                    //Add CDL3WHITESOLDIERS for the main series
-                                    $($(".cdl3whitesoldiers").data('refererChartID')).highcharts().series[0].addCDL3WHITESOLDIERS();
-                                });
-
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/cdl3whitesoldiers'], function ( cdl3whitesoldiers ) {
+                                cdl3whitesoldiers.init();
+                                //Add CDL3WHITESOLDIERS for the main series
+                                $($(".cdl3whitesoldiers").data('refererChartID')).highcharts().series[0].addCDL3WHITESOLDIERS();
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {

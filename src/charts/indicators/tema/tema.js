@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,9 +11,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        loadCSS('charts/indicators/tema/tema.css');
+        require(['css!charts/indicators/tema/tema.css']);
 
-        $.get("charts/indicators/tema/tema.html" , function ( $html ) {
+        require(['text!charts/indicators/tema/tema.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -54,37 +54,33 @@ define(["jquery", "jquery-ui", 'color-picker', 'loadCSS'], function($) {
                     {
                         text: "Ok",
                         click: function() {
-                            //console.log('Ok button is clicked!');
-                            require(["validation/validation"], function(validation) {
 
-                                if (!validation.validateNumericBetween($html.find(".tema_input_width_for_period").val(),
-                                                parseInt($html.find(".tema_input_width_for_period").attr("min")),
-                                                parseInt($html.find(".tema_input_width_for_period").attr("max"))))
-                                {
-                                    require(["jquery", "jquery-growl"], function($) {
-                                        $.growl.error({ message: "Only numbers between " + $html.find(".tema_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".tema_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".tema_input_width_for_period").closest('tr').find('td:first').text() + "!" });
-                                    });
-                                    return;
-                                }
-
-                                require(['charts/indicators/highcharts_custom/tema'], function ( tema ) {
-                                    tema.init();
-                                    var options = {
-                                        period : parseInt($html.find(".tema_input_width_for_period").val()),
-                                        stroke : defaultStrokeColor,
-                                        strokeWidth : parseInt($html.find("#tema_strokeWidth").val()),
-                                        dashStyle : $html.find("#tema_dashStyle").val(),
-                                        appliedTo: parseInt($html.find("#tema_appliedTo").val())
-                                    }
-                                    //Add TEMA for the main series
-                                    $($(".tema").data('refererChartID')).highcharts().series[0].addTEMA(options);
+                            if (!isNumericBetween($html.find(".tema_input_width_for_period").val(),
+                                            parseInt($html.find(".tema_input_width_for_period").attr("min")),
+                                            parseInt($html.find(".tema_input_width_for_period").attr("max"))))
+                            {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $.growl.error({ message: "Only numbers between " + $html.find(".tema_input_width_for_period").attr("min")
+                                            + " to " + $html.find(".tema_input_width_for_period").attr("max")
+                                            + " is allowed for " + $html.find(".tema_input_width_for_period").closest('tr').find('td:first').text() + "!" });
                                 });
+                                return;
+                            }
 
-                                closeDialog.call($html);
-
+                            require(['charts/indicators/highcharts_custom/tema'], function ( tema ) {
+                                tema.init();
+                                var options = {
+                                    period : parseInt($html.find(".tema_input_width_for_period").val()),
+                                    stroke : defaultStrokeColor,
+                                    strokeWidth : parseInt($html.find("#tema_strokeWidth").val()),
+                                    dashStyle : $html.find("#tema_dashStyle").val(),
+                                    appliedTo: parseInt($html.find("#tema_appliedTo").val())
+                                }
+                                //Add TEMA for the main series
+                                $($(".tema").data('refererChartID')).highcharts().series[0].addTEMA(options);
                             });
+
+                            closeDialog.call($html);
                         }
                     },
                     {
