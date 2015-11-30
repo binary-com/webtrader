@@ -206,7 +206,7 @@
     "id": "bllngrbnd",
     "long_display_name": "Bollinger Band",
     "short_display_name": "BLLNGRBND",
-    "ohlcOnly" : true
+    "ohlcOnly" : false
   }
 
 }

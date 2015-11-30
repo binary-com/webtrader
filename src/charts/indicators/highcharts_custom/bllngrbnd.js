@@ -28,8 +28,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
      	/////todo
      	var variance=sumDeviations/bllngrbndOptions.period;
      	//The standard deviation is equal to the square root of the variance:
-        var standardDeviation=Math.sqrt(variance);
-        return standardDeviation;
+        return standardDeviation=Math.sqrt(variance);
 	}
 
     function calculateMiddleBand(data,index,bllngrbndOptions,type)
@@ -69,8 +68,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
     	var sma=calculateMiddleBand(data,index,bllngrbndOptions,type);
     	var standardDeviation=calculateStandardDeviation(data,index,bllngrbndOptions,type,sma);
     	//Lower Band = 20-day SMA + (20-day standard deviation of price x 2)
-    	var uperBandValue=sma+(standardDeviation*2);
-    	return uperBandValue;
+    	return uperBandValue=sma+(standardDeviation*2);
     }
 
     return {
@@ -144,7 +142,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         bllngrbndSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'Bollinger(' + bllngrbndOptions.period  + ')',
+                            name: 'BLLNGRBND(MDDLBND' + bllngrbndOptions.period  + ')',
                             data: bllngrMiddleBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -159,12 +157,12 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         bllngrbndSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'Bollinger(' + bllngrbndOptions.period  + ')',
+                            name: 'BLLNGRBND(LWRBND' + bllngrbndOptions.period  + ')',
                             data: bllngrLowerBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
                             opposite: series.options.opposite,
-                            color: "red",
+                            color: "#A52A2A",
                             lineWidth: bllngrbndOptions.strokeWidth,
                             dashStyle: bllngrbndOptions.dashStyle,
                             compare: series.options.compare
@@ -174,12 +172,12 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         bllngrbndSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'Bollinger(' + bllngrbndOptions.period  + ')',
+                            name: 'BLLNGRBND(UPRBND' + bllngrbndOptions.period  + ')',
                             data: bllngrUperBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
                             opposite: series.options.opposite,
-                            color: "red",
+                            color: "#A52A2A",
                             lineWidth: bllngrbndOptions.strokeWidth,
                             dashStyle: bllngrbndOptions.dashStyle,
                             compare: series.options.compare
@@ -200,38 +198,38 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                  };
                     
 
-                // H.Series.prototype.removeBLLNGRBND = function (uniqueID) {
-                //     var chart = this.chart;
-                //     bllngrbndOptionsMap[uniqueID] = null;
-                //     chart.get(uniqueID).remove(false);
-                //     bllngrbndSeriesMap[uniqueID] = null;
-                //     chart.redraw();
-                // }
+                H.Series.prototype.removeBLLNGRBND = function (uniqueID) {
+                    var chart = this.chart;
+                    bllngrbndOptionsMap[uniqueID] = null;
+                    chart.get(uniqueID).remove(false);
+                    bllngrbndSeriesMap[uniqueID] = null;
+                    chart.redraw();
+                }
 
-                // H.wrap(H.Series.prototype, 'addPoint', function(pbllngbndseed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function(pbllngbndseed, options, redraw, shift, animation) {
 
-                //     pbllngbndseed.call(this, options, redraw, shift, animation);
-                //     if (indicatorBase.checkCurrentSeriesHasIndicator(bllngrbndOptionsMap, this.options.id)) {
-                //         updateBLLNGRBNDSeries.call(this, options);
-                //     }
+                    pbllngbndseed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(bllngrbndOptionsMap, this.options.id)) {
+                        updateBLLNGRBNDSeries.call(this, options);
+                    }
 
-                // });
+                });
 
-                // H.wrap(H.Point.prototype, 'update', function(pbllngbndseed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function(pbllngbndseed, options, redraw, animation) {
 
-                //     pbllngbndseed.call(this, options, redraw, animation);
-                //     if (indicatorBase.checkCurrentSeriesHasIndicator(bllngrbndOptionsMap, this.series.options.id)) {
-                //         updateBLLNGRBNDSeries.call(this.series, options, true);
-                //     }
+                    pbllngbndseed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(bllngrbndOptionsMap, this.series.options.id)) {
+                        updateBLLNGRBNDSeries.call(this.series, options, true);
+                    }
 
-                // });
+                });
 
- 			// 	function updateATRSeries(options, isPointUpdate) {
-    //                 var series = this;
-    //                 var chart = series.chart;
+ 				function updateBLLNGRBNDSeries(options, isPointUpdate) {
+                    var series = this;
+                    var chart = series.chart;
 
-    //                 ////////????????????????????????
-				// }
+                    ///TO DO
+				}
 
     		  })(Highcharts, jQuery,indicatorBase);
     	}
