@@ -112,6 +112,39 @@
         </li>
     </ul>
 
+    <ul class="barriers-high-barrier-row" rv-show="barriers.barrier_count | eq 2">
+        <li> <p rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+                rv-tooltip-position="tooltips.barrier_p"
+                >High barrier offset</p> </li>
+        <li>
+            <input class="barriers-barrier" type="number" min="0" step="0.00001" step-big="0.001"
+                   rv-spinner="barriers.high_barrier | notify proposal.onchange" />
+        </li>
+        <li>
+            <span class="barrier-live"
+                  rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 5"
+                  rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
+                  rv-tooltip-position='tooltips.barrier'
+                  />
+        </li>
+    </ul>
+    <ul class="barriers-low-barrier-row" rv-show="barriers.barrier_count | eq 2">
+        <li> <p rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+                rv-tooltip-position="tooltips.barrier_p"
+                >Low barrier offset</p> </li>
+        <li>
+            <input class="barriers-barrier" type="number" max="0" step="0.00001" step-big="0.001"
+                   rv-spinner="barriers.low_barrier | notify proposal.onchange" />
+        </li>
+        <li>
+            <span class="barrier-live"
+                  rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 5"
+                  rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
+                  rv-tooltip-position='tooltips.barrier'
+                  />
+        </li>
+    </ul>
+
     <ul class="basis-row">
         <li>
             <select class="basis-select"

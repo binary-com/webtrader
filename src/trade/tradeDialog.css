@@ -52,6 +52,7 @@
 
 .trade-dialog li p {
     text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
+    border-bottom:1px dotted #000;
 }
 
 /* style elments in the drop down*/

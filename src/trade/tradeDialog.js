@@ -82,7 +82,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             barrier : '+0.00000',
             high_barrier: '+0.00000',
             low_barrier: '-0.00000',
-            barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; }
+            barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; },
+            high_barrier_live: function() { return this.high_barrier * 1 + state.tick.quote * 1; },
+            low_barrier_live: function() { return this.low_barrier * 1 + state.tick.quote * 1; },
         },
         digits: {
             value: '0',
@@ -215,7 +217,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             return dict[r1.type] - dict[r2.type];
         })
 
-        if (!array.length) return;
+        if (!array.length) {
+            state.barriers.update();
+            return;
+        }
+
         state.duration_unit.array = array;
         if (!array.map(mapper('type')).contains(state.duration_unit.value))
             state.duration_unit.value = array.first().type;
