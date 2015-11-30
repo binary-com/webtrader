@@ -12,8 +12,9 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
     }
 
     liveapi.events.on('tick', function (data) {
-        var key = (data.echo_req.ticks_history + data.echo_req.granularity).toUpperCase();
+        var key = data.echo_req.ticks_history + data.echo_req.granularity;
         if (key) {
+            key = key.toUpperCase();
             chartingRequestMap[key] = chartingRequestMap[key] || {};
 
             // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
