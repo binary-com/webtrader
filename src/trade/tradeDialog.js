@@ -299,7 +299,17 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         if (state.categories.value === 'Digits') {
             request.barrier = state.digits.value + '';
         }
+        if (state.date_start.value !== 'now') {
+            request.date_start = state.date_start.value;
+        }
         /* set value for duration or date_expiry */
+        if (state.duration.value === 'Duration') {
+            request.duration_unit = state.duration_unit.value.first(); //  (d|h|m|s|t), Duration unit is s(seconds), m(minutes), h(hours), d(days), t(ticks)
+            request.duration = state.duration_count.value * 1;
+        }
+        else {
+            request.date_expiry = state.date_expiry.value;
+        }
 
         console.warn('state.proposal.onchange(...)', request);
     };
