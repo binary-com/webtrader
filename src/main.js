@@ -14,7 +14,6 @@ requirejs.config({
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
-        'reconnecting-websocket': 'lib/reconnectingWebsocket/reconnecting-websocket.min',
         'lokijs': 'lib/lokijs/build/lokijs.min',
         'jquery-timer': "lib/jquery.timers/jquery.timers.min",
         'color-picker': "lib/colorpicker/jquery.colorpicker",
@@ -78,7 +77,7 @@ requirejs.config({
 });
 
 /* Initialize the websocket as soon as posssilbe */
-require(['reconnecting-websocket', 'websockets/binary_websockets']);
+require(['websockets/binary_websockets']);
 
 require(["jquery", "modernizr", "common/util"], function( $ ) {
 

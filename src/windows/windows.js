@@ -362,13 +362,17 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                             var submarkets = rand(markets).submarkets;
                             var symbols = rand(submarkets).instruments;
                             var sym = rand(symbols);
-                            var timepreiod = rand(timePeriods);
+                            var timePeriod = rand(timePeriods);
                             var chart_type = rand(chartTypes);
 
                             chartWindowObj
-                                .addNewWindow(
-                                    sym.symbol, sym.display_name, timepreiod,
-                                    chart_type);
+                                .addNewWindow({
+                                    instrumentCode : sym.symbol,
+                                    instrumentName : sym.display_name,
+                                    timePeriod : timePeriod,
+                                    type : chart_type,
+                                    delayAmount : sym.delay_amount
+                                });
                         }
 
                         tileDialogs(); // Trigger tile action

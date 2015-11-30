@@ -19,21 +19,26 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
 
     return {
 
-        addNewWindow: function( instrumentCode, instrumentName, timePeriod, type ) {
-            var options = {
-                title: instrumentName + " (" + timePeriod + ")",
+        /**
+         * @param options
+         * @returns {*}
+         */
+        addNewWindow: function( options ) {
+            options = $.extend({
+                title: options.instrumentName + " (" + options.timePeriod + ")",
                 close: function () {
                     var id = $(this).attr('id');
                     var container = $("#" + id + "_chart");
-                    var timeperiod = container.data("timeperiod");
+                    var timePeriod = container.data("timePeriod");
                     var instrumentCode = container.data('instrumentCode');
                     $(this).dialog('destroy');//completely remove this dialog
                     require(["charts/charts"], function (charts) {
-                        charts.destroy("#" + id + "_chart", timeperiod, instrumentCode);
+                        charts.destroy("#" + id + "_chart", timePeriod, instrumentCode);
                     });
                 },
                 resize: _trigger_Resize_Effects
-            };
+            }, options );
+
 
             var dialog = windows.createBlankWindow($chartWindowHtml, options),
                 id = dialog.attr('id');
@@ -41,12 +46,11 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
                 .find('div.chartSubContainer').attr('id', id + "_chart").end();
 
             require(["charts/chartOptions"], function (chartOptions) {
-                chartOptions.init(id, timePeriod, type);
+                chartOptions.init(id, options.timePeriod, options.type);
             });
 
             require(["charts/charts"], function (charts) {
-                var chart = charts.drawChart("#" + id + "_chart", instrumentCode,
-                    instrumentName, timePeriod, type, null, options.resize.bind(dialog));
+                charts.drawChart("#" + id + "_chart", options, options.resize.bind(dialog));
             });
 
             dialog.dialog('open');

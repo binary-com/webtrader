@@ -17,11 +17,8 @@
     > Delete indicators
     > Delete objects from chart
 > Use JSHint
-> List of features for next release. Review all issues and features of binary charts java application and if they are good bring them in this new application
 > Video detailing each and every features of the new charting software
-> On load of first page, make the user wait until the market data is loaded. If market data load fails, then give user proper message and stop doing anything further
 > Use Sass instead of CSS
-> If we use the above files, make sure to update grunt configuration and add watch plugin. This will help to watch these files for modification. If the files are change, it will automatically push the code to dist folder. Update connect plugin to server from dist folder.
 > Do some memory and frame profiling -> Note any performance degrading points
 > Over the course of time, the navigator curve becomes flat alothough charts are fine
 > Grunt HTMLHint

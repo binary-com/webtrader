@@ -2,7 +2,7 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
+define(['jquery'], function ($) {
 
     var Cookies = null,
         tokenWin = null;
@@ -20,35 +20,64 @@ define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 
+    var socket = null;
+
     var connect = function () {
         var api_url = 'wss://www.binary.com/websockets/v3?l=EN';
-        var ws = new ReconnectingWebSocket(api_url, null, { debug: false, timeoutInterval: 2500 });
+        var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
         ws.addEventListener('close', onclose);
         ws.addEventListener('message', onmessage);
+
+        ws.addEventListener('error', function(event) {
+            console.log('WS connection error : ', event);
+            // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
+            $(document).trigger("feedTypeNotification", [key, "noconnection-feed"]);
+            $.growl.error({message: "Connection error. Refresh page!"});
+            //Clear everything. No more changes on chart. Refresh of page is needed!
+        });
 
         return ws;
     }
 
     var onclose = function () {
         is_authenitcated_session = false;
-        /* the connection is closed, resubscrible to tick streaming */
-        require(['charts/chartingRequestMap'], function (map) {
-            Object.keys(map).forEach(function (key) {
-                var req = map[key];
-                var instrumentCode = req && req.chartIDs && req.chartIDs[0] && req.chartIDs[0].instrumentCode;
+        /**
+         *  The connection is closed, resubscrible to tick streaming.
+         *  We have to make sure that resubscribe is atleast 1 second delayed
+         **/
+        $(document).oneTime(1000, null, function() {
 
-                /* resubscribe */
-                if (req && instrumentCode)
-                    api.send({ ticks: instrumentCode, passthrough: { instrumentCdAndTp: key } })
-                        .then(function (data) {
-                            req.tickStreamingID = data.tick.id;
-                        })
-                        .catch(function (err) {
-                            console.error(err);
-                        });
+            socket = connect();
+            require(['charts/chartingRequestMap'], function (chartingRequestMap) {
+                Object.keys(chartingRequestMap).forEach(function (key) {
+                    var req = chartingRequestMap[key];
+                    var instrumentCode = req && req.chartIDs && req.chartIDs[0] && req.chartIDs[0].instrumentCode;
+                    var granularity = parseInt(key.replace(instrumentCode, "")) | 0;
+                    /* resubscribe */
+                    if (req && instrumentCode) {
+                        if (req.timerHandler) {return;} //just ignore timer cases
+
+                        var requestObject = {
+                            "ticks_history": instrumentCode,
+                            "granularity": granularity,
+                            "end": 'latest',
+                            "count": 1,
+                            "subscribe": 1
+                        };
+                        if (granularity > 0) {
+                            requestObject.style = 'candles';
+                        }
+                        console.log('Sending new streaming request after connection close', requestObject);
+                        api.send(requestObject)
+                            .catch(function (err) {
+                                console.error(err);
+                            });
+                    }
+                });
             });
+
         });
     }
 
@@ -72,13 +101,14 @@ define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
 
     /* execute buffered executes */
     var onmessage = function (message) {
+        console.log('Server response : ', message);
         var data = JSON.parse(message.data);
 
         (callbacks[data.msg_type] || []).forEach(function (cb) {
             cb(data);
         });
 
-        var key = data.echo_req.passthrough && data.echo_req.passthrough.uid;
+        var key = data && data.echo_req && data.echo_req.passthrough && data.echo_req.passthrough.uid;
         var promise = unresolved_promises[key];
         if (promise) {
             delete unresolved_promises[key];
@@ -91,14 +121,15 @@ define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
         }
     }
 
-    var socket = connect();
-    //This is triggering asycn loading of tick_handler. 
+    socket = connect();
+
+    //This is triggering asycn loading of tick_handler.
     //The module will automatically start working as soon as its loaded
-    require(['websockets/tick_handler']); // require tick_handler to handle ticks.
+    require(['websockets/stream_handler']); // require tick_handler to handle ticks.
 
     /* whether the given request needs authentication or not */
     var needs_authentication = function (data) {
-        for (prop in { balance: 1, statement: 1, profit_table: 1, portfolio: 1, proposal_open_contract: 1, buy: 1, sell: 1 })
+        for (var prop in { balance: 1, statement: 1, profit_table: 1, portfolio: 1, proposal_open_contract: 1, buy: 1, sell: 1 })
             if (prop in data)
                 return true;
         return false;
@@ -213,7 +244,7 @@ define(['reconnecting-websocket'], function (ReconnectingWebSocket) {
         },
         /* sends a request and returns an es6-promise */
         send: function (data) {
-            if (needs_authentication(data))
+            if (data && needs_authentication(data))
                 return authentication_deps.then(function () {
                     return send_authenticated_request(data);
                 });
