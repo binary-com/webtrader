@@ -58,13 +58,15 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             max: 365
         },
         date_start: {
-            value: 'now',
+            value: 'now', /* epoch value if selected */
             array: [{ text: 'Now', value: 'now' } ],
             visible: false,
         },
+
         date_expiry: {
-            value_date: new Date(),
+            value_date: new Date().toISOString().split('T')[0], /* today in yyyy-mm-dd format */
             value_hour: '04:00',
+            value: 0,    /* epoch value of date+hour */
         },
         categories: {
             array: [],
@@ -153,6 +155,19 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.date_start.array = array;
         state.date_start.visible = true;
     };
+
+    state.date_expiry.update = function () {
+        var yyyy_mm_dd = state.date_expiry.value_date,
+            hh_mm = state.date_expiry.value_hour;
+        var ymd = yyyy_mm_dd.split('-'),
+            hm = hh_mm.split(':'),
+            year = ymd[0] * 1,
+            month = ymd[1] * 1,
+            day = ymd[2] * 1,
+            hour = hm[0] * 1,
+            minute = hm[1] * 1;
+        state.date_expiry.value = Date.UTC(year, month, day, hour, minute) / 1000;
+    }
 
     state.duration.update = function () {
         var category = state.categories.value;

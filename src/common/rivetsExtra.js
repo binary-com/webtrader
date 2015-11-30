@@ -215,7 +215,8 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
                 changeMonth: model.changeMonth || true,
                 changeYear: model.changeYear || true,
                 onSelect: function () { $(this).change(); },
-                beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
+                beforeShow: function (input, inst) { inst.dpDiv.css(styles); },
+                dateFormat: "yy-mm-dd"
             };
 
             var dpicker = input.datepicker(options);
@@ -233,6 +234,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         unbind: function(el){
             $(el).datepicker('destroy');
         },
+        /* value could be Date() object or a string in yyyy-mm-dd format */
         routine: function (el, value) {
             $(el).datepicker("setDate", value);
         }
