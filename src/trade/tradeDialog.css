@@ -89,14 +89,14 @@
     color:white;
 }
 
-.trade-dialog input.endtime-date {
+.trade-dialog input.date-expiry-date {
     margin-bottom: 5px;
     width: 100px;
     padding-left:0;
     text-align:center;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
-.trade-dialog input.endtime-hour {
+.trade-dialog input.date-expiry-hour {
     margin-bottom: 5px;
     width: 40px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);

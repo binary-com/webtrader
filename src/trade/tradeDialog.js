@@ -47,7 +47,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         duration: {
             array: ['Duration', 'End Time'],
             value: 'Duration',
-            expiry: '',
         },
         duration_unit: {
             array: [{ type: '', min: 1, max:365 }],
@@ -58,6 +57,20 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             min: 1,
             max: 365
         },
+        date_start: {
+            value: 'now',
+            array: [{ text: 'Now', value: 'now' } ],
+            visible: false,
+        },
+        date_expiry: {
+            value_date: new Date(),
+            numberOfMonths: 1,
+            styles: {
+                marginTop: '3px',
+                marginLeft: '-50px'
+            },
+            value_hour: '04:00',
+        },
         categories: {
             array: [],
             value: ''
@@ -65,17 +78,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         category_displays: {
             array: [],
             selected: ''
-        },
-        endtime_date: {
-            value: new Date(),
-            numberOfMonths: 1,
-            styles: {
-                marginTop: '3px',
-                marginLeft: '-50px'
-            }
-        },
-        endtime_hour: {
-            value: '04:00',
         },
         barriers: {
             barrier_count: 0,
@@ -91,7 +93,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         },
         currency: {
             array: ['USD'],
-            vlaue: 'USD',
+            value: 'USD',
         },
         basis: {
             array: ['Payout', 'Stake'],
@@ -103,16 +105,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             epoch: '0',
             quote:'0'
         },
-        date_start: {
-            value: 'now',
-            array: [{ text: 'Now', value: 'now' } ],
-            visible: false,
-        },
         proposal: {
             symbol: '-',
-            contract_type: '-',
         },
-
         tooltips: {
             barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
             barrier_p: { my: "left-5 top+10", at: "left bottom", collision: "flipfit" },
@@ -270,18 +265,40 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
     };
 
     state.proposal.onchange = function () {
+        var unit = state.duration_unit.value;
+        var expiry_type = ['seconds', 'minutes', 'hours'].contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+        var row = available.filter(filter('contract_category_display', state.categories.value))
+                           .filter(filter('contract_display', state.category_displays.selected))
+                           .filter(filter('expiry_type', expiry_type))
+                            .first();
         var request = {
             proposal: 1,
-
+            amount: state.basis.amount, /* Proposed payout or stake value */
+            contract_type: row.contract_type,
+            currency: state.currency.value, /* This can only be the account-holder's currency */
+            symbol: state.proposal.symbol, /* Symbol code */
         };
-        console.warn('state.proposal.onchange(...)', arguments);
+        /* set the value for barrier(s) */
+        if (state.barriers.barrier_count == 1) {
+            request.barrier = state.barriers.barrier + '';
+        }
+        if (state.barriers.barrier_count == 2) {
+            request.barrier = state.barriers.low_barrier + '';
+            request.barrier2 = state.barriers.high_barrier + '';
+        }
+        if (state.categories.value === 'Digits') {
+            request.barrier = state.digits.value + '';
+        }
+        /* set value for duration or date_expiry */
+
+        console.warn('state.proposal.onchange(...)', request);
     };
 
     function init(symbol, contracts_for) {
         window.contracts_for = contracts_for;
         available = contracts_for.available;
 
-        state.proposal.symbol = symbol;
+        state.proposal.symbol = symbol.symbol;
         /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
         liveapi.send({ ticks: symbol.symbol }).catch(function (err) { console.warn(err); });
         liveapi.events.on('tick', function (data) {
