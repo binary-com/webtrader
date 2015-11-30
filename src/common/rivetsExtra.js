@@ -96,9 +96,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
 
     /* extend jquery ui spinner to support multiple buttons */
     $.widget('ui.webtrader_spinner', $.ui.spinner, {
-        _create: function( ) {
-            this._super();
-        },
         _buttonHtml: function () {
             var btn = function(dir, icon, step, radius, right){
                 icon = 'ui-icon-' + icon + '-1-' + (dir === 'up' ? 'n' : 's');

@@ -78,6 +78,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             value: '04:00',
         },
         barriers: {
+            barrier_count: 0,
             barrier : '+0.00000',
             high_barrier: '+0.00000',
             low_barrier: '-0.00000',
@@ -239,6 +240,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                                                 .filter(filter('expiry_type',expiry_type))
                                                 .filter(function (r) { return r.barriers >= 1; })
                                                 .first();
+        state.barriers.barrier_count = barriers ? barriers.barriers : 0;
         if (!barriers)
             return;
 
