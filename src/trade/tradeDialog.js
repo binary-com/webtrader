@@ -315,6 +315,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         available.filter(filter('contract_display', 'goes outside')).forEach(replacer('contract_display', 'goes out'));
         available.filter(filter('contract_display', 'touches')).forEach(replacer('contract_display', 'touch'));
         available.filter(filter('contract_display', 'does not touch')).forEach(replacer('contract_display', 'no touch'));
+        /* Digits odd/even/over/under are not yet implemented in beta trading interface ignore them for now, TODO: implement them */
+        available = available.filter(function (r) { return !['odd', 'even', 'over', 'under'].contains(r.contract_display); });
 
         dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
