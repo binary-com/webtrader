@@ -251,6 +251,12 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var allways_ok = function () { return true };
 
             var styles = { marginTop: input.attr('marginTop') || '10px', marginLeft: input.attr('marginLeft') || '-250px' };
+            var update = function () {
+                var value = input.val();
+                console.warn('timepicker changed >', value);
+                publish(value);
+            };
+
             input.timepicker({
                 showPeriod: model.showPeriod || false,
                 showLeadingZero: model.showLeadingZero || true,
@@ -261,11 +267,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
                 beforeShow: function (input, inst) {
                     inst.tpDiv.css(styles);
                 },
-                onSelect: function () {
-                    var value = input.val();
-                    console.warn('timepicker changed >', value);
-                    publish(value);
-                }
+                onClose: update
             });
         },
         unbind: function (el) {

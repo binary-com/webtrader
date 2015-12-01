@@ -76,31 +76,6 @@
     width: 80px;
 }
 
-.trade-dialog input.datepicker,
-.trade-dialog input.timepicker
- {
-    outline: 0;
-    border:none;
-    border-radius:5px;
-    height: 2em;
-    margin:0;
-    padding-left: 5px;
-    background: #273051;
-    color:white;
-}
-
-.trade-dialog input.date-expiry-date {
-    margin-bottom: 5px;
-    width: 100px;
-    padding-left:0;
-    text-align:center;
-    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
-}
-.trade-dialog input.date-expiry-hour {
-    margin-bottom: 5px;
-    width: 40px;
-    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
-}
 
 .trade-dialog .barriers-barrier {
     width: 70px;
@@ -126,10 +101,10 @@
 .trade-dialog input[type=number],
 .trade-dialog input[type=text] {
     outline: 0;
+    border:none;
     border-radius:5px;
     height: 30px;
     margin:0;
-    /*padding-left: 5px;*/
     text-align:center;
     background: #273051;
     color:white;
@@ -188,3 +163,30 @@
     }
     .trade-dialog ul.contract-displays li:first-child:before { content: none; }
 /*#endregion*/
+
+.trade-dialog input.datepicker,
+.trade-dialog input.timepicker
+ {
+    margin-bottom: 5px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
+}
+
+.trade-dialog input.date-expiry-date {
+    width: 100px;
+}
+.trade-dialog input.date-expiry-hour {
+    width: 50px;
+}
+
+/* override timepciker styles */
+.ui-timepicker-table td a {
+    width: 1.1em !important;
+    padding: .2em .4em !important;
+    border: .1em solid #273051 !important;
+}
+.ui-timepicker-table td a.ui-state-active {
+    color: orange;
+    border: .1em solid orange !important;
+    background: white;
+    text-align:center;
+}
