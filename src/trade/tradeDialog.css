@@ -139,6 +139,11 @@
 }
 
 
+.trade-dialog .proposal-message {
+    border-top: 1px solid #c2c1c1;
+    /*background: #c2c1c1;*/
+}
+
 /*#region ul.contract-displays */
     .trade-dialog ul.contract-displays {
         background: #c2c1c1;
@@ -178,7 +183,8 @@
     width: 50px;
 }
 
-/* override timepciker styles */
+/* override timepciker styles 
+*/
 .ui-timepicker-table td a {
     width: 1.1em !important;
     padding: .2em .4em !important;

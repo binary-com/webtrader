@@ -130,6 +130,7 @@
                   />
         </li>
     </ul>
+
     <ul class="barriers-low-barrier-row" rv-show="barriers.barrier_count | eq 2">
         <li> <p rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
@@ -169,5 +170,9 @@
                    rv-spinner="basis.amount | notify proposal.onchange"
                    rv-spinner-max="basis.limit" />
         </li>
+    </ul>
+
+    <ul class="proposal-message">
+        <li>{proposal.message} &amp; {proposal.spot}</li>
     </ul>
 </div>

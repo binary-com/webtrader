@@ -104,6 +104,16 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         },
         proposal: {
             symbol: '-',
+            ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
+
+            ask_price: "0.0",
+            date_start: 0,
+            display_value: "0.0",
+            message: 'loading ...', /* longcode */
+            payout: 0,
+            spot: "0.0",
+            spot_time: "0",
+            error: '',
         },
         tooltips: {
             barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
@@ -261,8 +271,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             return;
 
         state.barriers.barrier = (barriers.barrier || '+0.00000') * 1;
-        state.barriers.high_barrier = '' + (barriers.high_barrier || '+0.00000');
-        state.barriers.low_barrier = '' + (barriers.low_barrier || '-0.00000');
+        state.barriers.high_barrier = '' + (barriers.high_barrier || '+0.00000') * 1;
+        state.barriers.low_barrier = '' + (barriers.low_barrier || '-0.00000') * 1;
     };
 
     state.basis.update_limit = function () {
@@ -281,21 +291,22 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         var row = available.filter(filter('contract_category_display', state.categories.value))
                            .filter(filter('contract_display', state.category_displays.selected))
                            .filter(filter('expiry_type', expiry_type))
-                            .first();
+                           .first();
         var request = {
             proposal: 1,
             amount: state.basis.amount, /* Proposed payout or stake value */
+            basis: state.basis.value, /* Indicate whether amount is 'payout' or 'stake */
             contract_type: row.contract_type,
             currency: state.currency.value, /* This can only be the account-holder's currency */
             symbol: state.proposal.symbol, /* Symbol code */
         };
         /* set the value for barrier(s) */
         if (state.barriers.barrier_count == 1) {
-            request.barrier = state.barriers.barrier + '';
+            request.barrier = '+' + state.barriers.barrier;
         }
         if (state.barriers.barrier_count == 2) {
-            request.barrier = state.barriers.low_barrier + '';
-            request.barrier2 = state.barriers.high_barrier + '';
+            request.barrier = '+' + state.barriers.high_barrier;
+            request.barrier2 = state.barriers.low_barrier + '';
         }
         if (state.categories.value === 'Digits') {
             request.barrier = state.digits.value + '';
@@ -312,6 +323,24 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             request.date_expiry = state.date_expiry.value;
         }
 
+        /* forget requested streams */
+        while (state.proposal.ids.length) {
+            var id = state.proposal.ids.shift();
+            liveapi.send({ forget: id });
+            console.warn('forget: ', id);
+        }
+
+        liveapi.send(request)
+               .then(function (data) {
+                   var id = data.proposal.id;
+                   state.proposal.ids.push(id);
+                   state.proposal.error = '';
+                   console.warn('registered: ', id);
+               })
+               .catch(function (err) {
+                   console.error(err);
+                   state.proposal.error = err.message;
+               });
         console.warn('state.proposal.onchange(...)', request);
     };
 
@@ -327,6 +356,21 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                 state.tick.epoch = data.tick.epoch;
                 state.tick.quote = data.tick.quote;
             }
+        });
+
+        /* register for proposal event */
+        liveapi.events.on('proposal', function (data) {
+            if (data.echo_req.symbol !== state.proposal.symbol)
+                return;
+            /* update fields */
+            var proposal = data.proposal;
+            state.proposal.ask_price = proposal.ask_price;
+            state.proposal.date_start = proposal.date_start;
+            state.proposal.display_value = proposal.display_value;
+            state.proposal.message = proposal.longcode;
+            state.proposal.payout = proposal.payout;
+            state.proposal.spot = proposal.spot;
+            state.proposal.spot_time = proposal.spot_time;
         });
 
         /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
@@ -355,6 +399,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         available.filter(filter('contract_display', 'does not touch')).forEach(replacer('contract_display', 'no touch'));
         /* Digits odd/even/over/under are not yet implemented in beta trading interface ignore them for now, TODO: implement them */
         available = available.filter(function (r) { return !['odd', 'even', 'over', 'under'].contains(r.contract_display); });
+        /* Spreads are not yet implemented, ignore them for now, TODO: itempement Spreads */
+        available = available.filter(function (r) { return r.contract_category_display !== 'Spreads'; });
 
         dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
