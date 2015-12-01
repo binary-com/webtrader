@@ -180,9 +180,10 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
     };
 
     state.duration_unit.update = function () {
+        var start_type = state.date_start.value !== 'now' ? 'forward' : 'spot';
         var durations = available.filter(filter('contract_category_display', state.categories.value))
                                                 .filter(filter('contract_display', state.category_displays.selected))
-                                                .filter(filter('start_type', 'spot'))
+                                                .filter(filter('start_type', start_type))
                                                 .map(function (r) { return { min: r.min_contract_duration, max: r.max_contract_duration, type: r.expiry_type }; });
         var array = [];
         durations.forEach(function (d) {
@@ -300,7 +301,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             request.barrier = state.digits.value + '';
         }
         if (state.date_start.value !== 'now') {
-            request.date_start = state.date_start.value;
+            request.date_start = state.date_start.value * 1;
         }
         /* set value for duration or date_expiry */
         if (state.duration.value === 'Duration') {

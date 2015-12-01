@@ -29,7 +29,7 @@
         <li>
             <select class="date-start-select"
                     rv-jq-class="'trade-dialog-date-start-ul'"
-                    rv-selectmenu="date_start.value | notify proposal.onchange"
+                    rv-selectmenu="date_start.value | instant-notify duration_unit.update | notify proposal.onchange"
                     rv-selectrefresh="date_start.array" >
                     <option rv-each-row="date_start.array" rv-value="row.value">{row.text}</option>
 
