@@ -23,7 +23,7 @@ define(['jquery'], function ($) {
     var socket = null;
 
     var connect = function () {
-        var api_url = 'wss://www.binary.com/websockets/v3?l=EN';
+        var api_url = 'wss://ws.binaryws.com/websockets/v3?l=EN';
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
