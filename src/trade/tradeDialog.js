@@ -64,8 +64,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         },
 
         date_expiry: {
-            value_date: new Date().toISOString().split('T')[0], /* today in yyyy-mm-dd format */
-            value_hour: '04:00',
+            value_date: new Date().toISOString().split('T')[0], /* today utc in yyyy-mm-dd format */
+            value_hour: new Date().toISOString().split('T')[1].slice(0,5), /* now utc in hh:mm format */
             value: 0,    /* epoch value of date+hour */
         },
         categories: {
@@ -162,7 +162,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         var ymd = yyyy_mm_dd.split('-'),
             hm = hh_mm.split(':'),
             year = ymd[0] * 1,
-            month = ymd[1] * 1,
+            month = ymd[1] * 1 - 1,
             day = ymd[2] * 1,
             hour = hm[0] * 1,
             minute = hm[1] * 1;
