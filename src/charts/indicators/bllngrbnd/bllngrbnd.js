@@ -10,13 +10,36 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 	}
 
 	function init(containerIDWithHash, _callback)
-	{
+	{ 
+		require(['css!charts/indicators/bllngrbnd/bllngrbnd.css']);
+
 		require(['text!charts/indicators/bllngrbnd/bllngrbnd.html'], function ( $html ) {	
 			
 			$html = $($html);
 
 			$html.appendTo("body");
 
+            $html.find("#bllngrbnd_mdl_stroke,#bllngrbnd_up_stroke,#bllngrbnd_lwr_stroke").each(function(){
+   				 $(this).colorpicker({
+	                part:	{
+	                    map:		{ size: 128 },
+	                    bar:		{ size: 128 }
+	                },
+	                select:	function(event, color) {
+	                    $(this).css({
+	                        background:'#' + color.formatted
+	                    }).val('');
+	                    $(this).data("color",'#' + color.formatted);
+	                },
+	                ok:function(event, color) {
+	                    $(this).css({
+	                        background: '#' + color.formatted
+	                    }).val('');
+	                    $(this).data("color",'#' + color.formatted);
+	                }
+   				 });
+			});
+            
 			$html.dialog({
 				autoOpen:false,
 				resisable:false,
@@ -46,12 +69,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 							    require(['charts/indicators/highcharts_custom/bllngrbnd'], function ( bllngrbnd ) {
                                 bllngrbnd.init();
                                 var options = {
-                                    period : parseInt($html.find(".bllngrbnd_input_width_for_period").val()),
-                                    //stroke : defaultStrokeColor,
-                                    //strokeWidth : parseInt($html.find("#bllngrbnd_strokeWidth").val()),
-                                    //dashStyle : $html.find("#bllngrbnd_dashStyle").val(),
+                                    period : parseInt($(".bllngrbnd_input_width_for_period").val()),
+                                    mdlBndStroke : $("#bllngrbnd_mdl_stroke").css("background-color"),
+                                    uprBndStroke : $("#bllngrbnd_up_stroke").css('background-color'),
+                                    lwrBndStroke : $("#bllngrbnd_lwr_stroke").css('background-color'),
+                                    strokeWidth : parseInt($("#bllngrbnd_strokeWidth").val()),
+                                    dashStyle : $("#bllngrbnd_dashStyle").val(),
                                     appliedTo: parseInt($html.find("#bllngrbnd_appliedTo").val())
                                 }
+                                console.log(options);
                                 //Add Bollinger for the main series
                                 $($(".bllngrbnd").data('refererChartID')).highcharts().series[0].addBLLNGRBND(options);
                             });

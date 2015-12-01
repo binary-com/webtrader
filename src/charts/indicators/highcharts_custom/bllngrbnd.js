@@ -8,25 +8,22 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
     function calculateStandardDeviation(data,index,bllngrbndOptions,type,average)
     {
         var sumDeviations=0;
-    	for(var j=0;j<bllngrbndOptions.period;j++)
+    	for(var j=0;j<bllngrbndOptions.period && index>=0;j++)
      	{
-     		if(index>=0)
-     		{
-     			 var price = 0.0;
-                 if (indicatorBase.isOHLCorCandlestick(type)) {
-                    price = indicatorBase.extractPriceForAppliedTO(bllngrbndOptions.appliedTo, data, index);
-                 }
-                 else {
-                    price = data[index].y ? data[index].y : data[index][1];
-                 }
-                //calculate the deviations of each data point from the mean, and square the result of each
-     			var deviation =Math.pow(price-average,2);
-				sumDeviations+=deviation;
-     			--index;
-	     	}
-     	}
-     	/////todo
-     	var variance=sumDeviations/bllngrbndOptions.period;
+     	    var price = 0.0;
+            if (indicatorBase.isOHLCorCandlestick(type)) {
+                price = indicatorBase.extractPriceForAppliedTO(bllngrbndOptions.appliedTo, data, index);
+            }
+            else {
+                price = data[index].y ? data[index].y : data[index][1];
+            }
+            //calculate the deviations of each data point from the mean, and square the result of each
+     		var deviation =Math.pow(price-average,2);
+			sumDeviations+=deviation;
+     		--index;
+	    }
+
+     	var variance=sumDeviations/j;
      	//The standard deviation is equal to the square root of the variance:
         return standardDeviation=Math.sqrt(variance);
 	}
@@ -36,21 +33,18 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
     	var sum=0;
      	for(var i=0; i<bllngrbndOptions.period && index>=0; i++)
      	{
-     		
-     			 var price = 0.0;
-                 if (indicatorBase.isOHLCorCandlestick(type)) {
-                    price = indicatorBase.extractPriceForAppliedTO(bllngrbndOptions.appliedTo, data, index);
-                 }
-                 else {
-                    price = data[index].y ? data[index].y : data[index][1];
-                 }
+        	var price = 0.0;
+            if (indicatorBase.isOHLCorCandlestick(type)) {
+                price = indicatorBase.extractPriceForAppliedTO(bllngrbndOptions.appliedTo, data, index);
+            }
+            else {
+                price = data[index].y ? data[index].y : data[index][1];
+            }
 
-     			sum+=price;
-     			--index;
-	     	
+     		sum+=price;
+     		index--;
      	}
-     	/////////////tedad
- 		return sum/bllngrbndOptions.period;
+ 		return sum/i;
     }
 
     function calculateLowerBand(data,index,bllngrbndOptions,type)
@@ -74,14 +68,16 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
     return {
     	init:function(){
     		  (function(H,$,indicatorBase) {
-    		  	if (!H || H.Series.prototype.addBOP) return;
+    		  	if (!H || H.Series.prototype.addBLLNGRBND) return;
 
                 H.Series.prototype.addBLLNGRBND = function ( bllngrbndOptions ) {
 
                     var seriesID = this.options.id;
                     bllngrbndOptions = $.extend({
                         period: 21,
-                        stroke: 'red',
+                        mdlBndStroke: 'red',
+                        uprBndStroke:'#A52A2A',
+                        lwrBndStroke:'#A52A2A',
                         strokeWidth: 1,
                         dashStyle: 'line',
                         levels: [],
@@ -89,8 +85,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         parentSeriesID: seriesID
                     }, bllngrbndOptions);
 
-
-                    var uniqueID = '_' + new Date().getTime();
+                    var mddlUniqueID = '_m' + new Date().getTime();
+                    var upUniqueID = '_u' + new Date().getTime();
+                    var dwnUniqueID = '_d' + new Date().getTime();
 
                     var data = this.options.data || [];
                     if (data && data.length > 0)
@@ -135,19 +132,22 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                           }
 
   						var chart = this.chart;
-
-                        bllngrbndOptionsMap[uniqueID] = bllngrbndOptions;
+ 
+ 						//bllngrbndOptionsMap[uniqueID] = bllngrbndOptions;
+                        bllngrbndOptionsMap[mddlUniqueID] = bllngrbndOptions;
+                        bllngrbndOptionsMap[upUniqueID]=bllngrbndOptions;
+                        bllngrbndOptionsMap[dwnUniqueID]=bllngrbndOptions;
 
                         //Bollinger Middle Band
                         var series = this;
-                        bllngrbndSeriesMap[uniqueID] = chart.addSeries({
-                            id: uniqueID,
+                        bllngrbndSeriesMap[mddlUniqueID] = chart.addSeries({
+                            id: mddlUniqueID,
                             name: 'BLLNGRBND(MDDLBND' + bllngrbndOptions.period  + ')',
                             data: bllngrMiddleBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
                             opposite: series.options.opposite,
-                            color: "blue",
+                            color: bllngrbndOptions.mdlBndStroke,
                             lineWidth: bllngrbndOptions.strokeWidth,
                             dashStyle: bllngrbndOptions.dashStyle,
                             compare: series.options.compare
@@ -155,14 +155,14 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 
                         //Bollinger Lower Band
                         var series = this;
-                        bllngrbndSeriesMap[uniqueID] = chart.addSeries({
-                            id: uniqueID,
+                        bllngrbndSeriesMap[dwnUniqueID] = chart.addSeries({
+                            id: dwnUniqueID,
                             name: 'BLLNGRBND(LWRBND' + bllngrbndOptions.period  + ')',
                             data: bllngrLowerBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
                             opposite: series.options.opposite,
-                            color: "#A52A2A",
+                            color: bllngrbndOptions.lwrBndStroke,
                             lineWidth: bllngrbndOptions.strokeWidth,
                             dashStyle: bllngrbndOptions.dashStyle,
                             compare: series.options.compare
@@ -170,14 +170,14 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 
                         //Bollinger Uper Band
                         var series = this;
-                        bllngrbndSeriesMap[uniqueID] = chart.addSeries({
-                            id: uniqueID,
+                        bllngrbndSeriesMap[upUniqueID] = chart.addSeries({
+                            id: upUniqueID,
                             name: 'BLLNGRBND(UPRBND' + bllngrbndOptions.period  + ')',
                             data: bllngrUperBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
                             opposite: series.options.opposite,
-                            color: "#A52A2A",
+                            color: bllngrbndOptions.uprBndStroke,
                             lineWidth: bllngrbndOptions.strokeWidth,
                             dashStyle: bllngrbndOptions.dashStyle,
                             compare: series.options.compare
@@ -185,7 +185,21 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 
 
                         //This is a on chart indicator
-                        $(bllngrbndSeriesMap[uniqueID]).data({
+                        $(bllngrbndSeriesMap[mddlUniqueID]).data({
+                            onChartIndicator: true,
+                            indicatorID: 'bllngrbnd',
+                            isIndicator: true,
+                            parentSeriesID: bllngrbndOptions.parentSeriesID,
+                            period: bllngrbndOptions.period
+                        });
+                          $(bllngrbndSeriesMap[upUniqueID]).data({
+                            onChartIndicator: true,
+                            indicatorID: 'bllngrbnd',
+                            isIndicator: true,
+                            parentSeriesID: bllngrbndOptions.parentSeriesID,
+                            period: bllngrbndOptions.period
+                        });
+                            $(bllngrbndSeriesMap[dwnUniqueID]).data({
                             onChartIndicator: true,
                             indicatorID: 'bllngrbnd',
                             isIndicator: true,
