@@ -120,7 +120,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                 return this.payout - this.ask_price;
             },
             return_: function () {
-                return ((this.netprofit() / this.ask_price) || 0).toFixed(2) * 100 + '%';
+                var ret = ((this.netprofit() / this.ask_price) || 0).toFixed(2) ;
+                return (ret* 100 | 0) + '%';
             }
         },
         tooltips: {
