@@ -114,6 +114,14 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             spot: "0.0",
             spot_time: "0",
             error: '',
+
+            /* computed properties */
+            netprofit: function () {
+                return this.payout - this.ask_price;
+            },
+            return_: function () {
+                return ((this.netprofit() / this.ask_price) || 0).toFixed(2) * 100 + '%';
+            }
         },
         tooltips: {
             barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },

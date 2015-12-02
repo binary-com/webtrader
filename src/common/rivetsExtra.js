@@ -27,6 +27,10 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.formatters['not-eq'] = function (value, other) {
         return value !== other;
     }
+    /* rivets formatter to replace a falsy value with a default one */
+    rv.formatters['or'] = function (value, other) {
+        return value || other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {

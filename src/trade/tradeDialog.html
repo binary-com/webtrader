@@ -173,6 +173,13 @@
     </ul>
 
     <ul class="proposal-message">
-        <li>{proposal.message} &amp; {proposal.spot}</li>
+        <li>{proposal.message}</li>
+    </ul>
+    <ul rv-class-netprofit="proposal.error | eq ''" rv-class-error="proposal.error | not-eq ''">
+        <li rv-show="proposal.error | eq ''">
+                    Net Profit: {currency.value}
+                    {proposal.netprofit < ask_price payout | or 0 | to-fixed 2} |
+                    Return {proposal.return_ < ask_price payout }</li>
+        <li rv-show="proposal.error | not-eq ''">{proposal.error}</li>
     </ul>
 </div>

@@ -141,7 +141,6 @@
 
 .trade-dialog .proposal-message {
     border-top: 1px solid #c2c1c1;
-    /*background: #c2c1c1;*/
 }
 
 /*#region ul.contract-displays */
@@ -195,4 +194,11 @@
     border: .1em solid orange !important;
     background: white;
     text-align:center;
+}
+
+.trade-dialog .netprofit {
+    background: #c2c1c1;
+}
+.trade-dialog .error {
+    background: #fef1cf;
 }
