@@ -97,7 +97,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     delayAmount : options.delayAmount
                                 });
                             });
-                            if (onload) {
+                            if ($.isFunction(onload)) {
                                 onload();
                             }
                         }

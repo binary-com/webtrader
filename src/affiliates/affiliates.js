@@ -31,7 +31,12 @@ define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'],
 	                            var instrumentCode = instrumentObject[0].symbol;
 	                            var instrumentName = instrumentObject[0].display_name;
 	                            require(["charts/charts"], function(charts) {
-	                                charts.drawChart("#" + newTabId + "_chart", instrumentCode, instrumentName, timePeriod, type);
+	                                charts.drawChart("#" + newTabId + "_chart", {
+										instrumentCode : instrumentCode,
+										instrumentName : instrumentName,
+										timePeriod : timePeriod,
+										type : type
+									});
 	                            });
 	                        } else {
 	                            require(["jquery", "jquery-growl"], function($) {
