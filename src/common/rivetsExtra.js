@@ -201,7 +201,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var input = $(el);
             var publish = this.publish;
             var model = this.model;
-            var styles = { marginTop: input.attr('marginTop') || '10px', marginLeft: input.attr('marginLeft') || '-250px' };
+            var styles = { marginTop: input.attr('marginTop') || '0px', marginLeft: input.attr('marginLeft') || '0px' };
             console.warn('datepicker.bind() styles=', styles);
 
             var options = {
@@ -250,7 +250,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var model = this.model;
             var allways_ok = function () { return true };
 
-            var styles = { marginTop: input.attr('marginTop') || '10px', marginLeft: input.attr('marginLeft') || '-250px' };
+            var styles = { marginTop: input.attr('marginTop') || '0px', marginLeft: input.attr('marginLeft') || '0px' };
             var update = function () {
                 var value = input.val();
                 console.warn('timepicker changed >', value);
