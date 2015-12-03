@@ -23,14 +23,15 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     /* rivets formatter to check equallity of two values */
     rv.formatters.eq = function (value, other) {
         return value === other;
-    }
+    };
+    /* formatter to check not-equality of values */
     rv.formatters['not-eq'] = function (value, other) {
         return value !== other;
-    }
+    };
     /* rivets formatter to replace a falsy value with a default one */
     rv.formatters['or'] = function (value, other) {
         return value || other;
-    }
+    };
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -39,19 +40,18 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         publish: function (value) {
             return value.toLowerCase();
         }
-    }
+    };
     /* call toFixed on a fload number */
     rv.formatters['to-fixed'] = function (value, digits) {
         digits = digits || 2;
         return (value * 1).toFixed(digits);
     }
-
+    /* rviets formatter to parse json values */
     rv.formatters['json-parse'] = function (value) {
         return JSON.parse(value);
     }
-
     /* notify another function on property changes */
-    rv.formatters['instant-notify'] = function() {
+    rv.formatters['notify'] = function() {
         var args = [].slice.call(arguments, 0);
         var value = args[0];
         for (var i = 1; i < args.length ; ++i)
@@ -61,7 +61,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
        As in "execute this function only if 100 milliseconds have passed without it being called." */
-    rv.formatters.notify = function(value, callback, timeout) {
+    rv.formatters.debounce = function(value, callback, timeout) {
         timeout = timeout || 250;
         clearTimeout(callback._timer_notify);
         callback._timer_notify = setTimeout(callback.bind(this,value), timeout);

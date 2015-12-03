@@ -34,13 +34,13 @@
 */
 
 define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
-    function ($, windows, rv, liveapi, $html) {
+    function ($, windows, rv, liveapi, html) {
 
     var mapper = function(name) { return function(row) { return row[name]; }; };
     var filter = function(name,value) { return function(row) { return row[name] === value; }; };
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
 
-    var root = $($html);
+    var root = $(html);
     window.available = null;
 
     window.state = {
@@ -140,7 +140,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                                             .unique();
         state.category_displays.selected = state.category_displays.array[0];
     };
-    
+
     state.category_displays.onclick = function (e) {
         state.category_displays.selected = $(e.target).attr('data');
     };
@@ -371,6 +371,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         liveapi.events.on('proposal', function (data) {
             if (data.echo_req.symbol !== state.proposal.symbol)
                 return;
+            console.warn(data.proposal);
             /* update fields */
             var proposal = data.proposal;
             state.proposal.ask_price = proposal.ask_price;
