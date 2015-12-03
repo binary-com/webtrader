@@ -188,9 +188,9 @@
 
     <ul class="netprofit-row stick-to-bottom" rv-class-netprofit="proposal.error | eq ''" rv-class-error="proposal.error | not-eq ''">
         <li rv-show="proposal.error | eq ''">
-                    Net Profit: <span rv-text='currency.value' />
+                    Net Profit:
                     <span
-                        rv-text='proposal.netprofit < ask_price payout | or 0 | to-fixed 2' /> |
+                        rv-text='proposal.netprofit_ < ask_price payout'  /> |
                     Return
                     <span
                         rv-text='proposal.return_ < ask_price payout' />

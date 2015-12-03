@@ -223,6 +223,7 @@
 .trade-dialog .purchase-row span { font-weight: bolder; }
 .trade-dialog .purchase-button {
     background: #2e8836;
+    border: none;
     border-radius: 5px;
     line-height: 2.25em;
     color: white;

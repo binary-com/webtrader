@@ -120,11 +120,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             error: '',
 
             /* computed properties */
-            netprofit: function () {
-                return this.payout - this.ask_price;
+            netprofit_: function () {
+                return state.currency.value + ' ' + ((this.payout - this.ask_price) || 0).toFixed(2);
             },
             return_: function () {
-                var ret = ((this.netprofit() / this.ask_price) || 0).toFixed(2) ;
+                var ret = (((this.payout - this.ask_price) / this.ask_price) || 0).toFixed(2) ;
                 return (ret* 100 | 0) + '%';
             }
         },
