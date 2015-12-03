@@ -70,7 +70,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         },
         categories: {
             array: [],
-            value: ''
+            value: '',
+            paddingTop: function(){
+                var paddings = { "Asians" : '20px', "Up/Down" : '15px', "Digits" : '15px', "In/Out" : '3px', "Touch/No Touch" : '15px' };
+                return paddings[state.categories.value] || '3px';
+            }
         },
         category_displays: {
             array: [],

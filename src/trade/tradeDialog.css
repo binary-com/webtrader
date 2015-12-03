@@ -1,5 +1,6 @@
 ﻿.trade-dialog {
     padding: 0 !important;
+    position: relative;
 }
 
 .trade-dialog .ui-selectmenu-button {
@@ -24,8 +25,7 @@
 }
 
 .trade-dialog .tick-quote,
-.trade-dialog .barrier-live
- {
+.trade-dialog .barrier-live {
     border-bottom:1px dotted #000;
     text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
 }
@@ -53,6 +53,7 @@
 .trade-dialog li p {
     text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
     border-bottom:1px dotted #000;
+    margin: 0;
 }
 
 /* style elments in the drop down*/
@@ -139,9 +140,6 @@
 }
 
 
-.trade-dialog .proposal-message {
-    border-top: 1px solid #c2c1c1;
-}
 
 /*#region ul.contract-displays */
     .trade-dialog ul.contract-displays {
@@ -196,26 +194,39 @@
     text-align:center;
 }
 
-.trade-dialog .netprofit {
-    background: #c2c1c1;
-}
-.trade-dialog .error {
-    background: #fef1cf;
-}
-
-.trade-dialog .you-pay-row li {
-  font-size: larger;
-}
-.trade-dialog .you-pay-row span {
-  font-weight: bolder;
+/* for elements that should stick to the buttom of dialog */
+.trade-dialog .stick-to-bottom {
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  width: 100%;
 }
 
+.trade-dialog .proposal-message {
+    border-top: 1px solid #c2c1c1;
+    text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
+    font-size: 95%;
+    bottom: 75px;
+}
+
+.trade-dialog .netprofit-row {
+  bottom: 50px;
+  padding: 0px 0;
+  height: 20px;
+}
+
+.trade-dialog .netprofit { background: #c2c1c1; }
+.trade-dialog .error { background: #fef1cf; }
+
+.trade-dialog .purchase-row { bottom: 5px; }
+.trade-dialog .purchase-row li { font-size: larger; }
+.trade-dialog .purchase-row span { font-weight: bolder; }
 .trade-dialog .purchase-button {
     background: #2e8836;
     border-radius: 5px;
     line-height: 2.25em;
     color: white;
-    width: 120px;
     outline: 0;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
+    width: 120px;
 }

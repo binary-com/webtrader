@@ -312,11 +312,18 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         }
     }
 
+    /* bindar for css attributes */
+    rv.binders['css-*'] = function (el, value) {
+        var style = {};
+        style[this.args[0]] = value;
+        console.warn('binders.css-*.routine()', style);
+        $(el).css(style);
+    }
 
     /* override rv-show to use jQuery fadeIn/FadeOut instead */
     rv.binders['show'] = function(el, value) {
-        value ? $(el).fadeIn() : $(el).fadeOut();
-        return value ? '' : 'none';
+        value ? $(el).show() : $(el).hide();
+        return value;
     };
 
     return rv;
