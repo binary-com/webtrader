@@ -182,7 +182,7 @@
     width: 50px;
 }
 
-/* override timepciker styles 
+/* override timepciker styles
 */
 .ui-timepicker-table td a {
     width: 1.1em !important;
@@ -201,4 +201,11 @@
 }
 .trade-dialog .error {
     background: #fef1cf;
+}
+
+.trade-dialog .you-pay-row li {
+  font-size: larger;
+}
+.trade-dialog .you-pay-row span {
+  font-weight: bolder;
 }

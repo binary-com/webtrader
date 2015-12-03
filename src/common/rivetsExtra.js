@@ -58,6 +58,23 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             setTimeout(args[i].bind(this, value), 0);
         return value;
     }
+    /* prepend fomatter will use + perator to prepend (usallay a string) value */
+    rv.formatters.prepend = function(value, other){
+      return other + value;
+    }
+    /* formatter to add a currency symbol before the value */
+    rv.formatters.currency = function(value, currency){
+      var currency_symbols = {
+        'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
+        'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
+        'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
+        'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
+        'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
+        'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
+        'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
+      };
+      return (currency_symbols[currency] || currency) + value;
+    }
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
        As in "execute this function only if 100 milliseconds have passed without it being called." */

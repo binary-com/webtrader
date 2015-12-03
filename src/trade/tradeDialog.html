@@ -184,4 +184,7 @@
         </li>
         <li rv-show="proposal.error | not-eq ''">{proposal.error}</li>
     </ul>
+    <ul class="you-pay-row">
+        <li> You pay: <span rv-text="proposal.ask_price | currency currency.value" />
+    </ul>
 </div>
