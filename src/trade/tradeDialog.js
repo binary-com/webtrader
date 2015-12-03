@@ -149,6 +149,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           spot: "0.0",
           spot_time: "0",
           error: '',
+          loading: true, /* the proposal request state */
 
           /* computed properties */
           netprofit_: function () {
@@ -365,11 +366,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           request.date_expiry = state.date_expiry.value;
         }
 
+        state.proposal.loading = true;
         /* forget requested streams */
         while (state.proposal.ids.length) {
           var id = state.proposal.ids.shift();
           liveapi.send({ forget: id });
-          console.warn('forget: ', id);
         }
 
         liveapi.send(request)
@@ -377,7 +378,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           var id = data.proposal.id;
           state.proposal.ids.push(id);
           state.proposal.error = '';
-          console.warn('registered: ', id);
+          state.proposal.loading = false;
         })
         .catch(function (err) {
           console.error(err);
@@ -429,6 +430,14 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             collapsable: true,
             minimizable: true,
             maximizable: false,
+            /* forget proposal streams on close,
+              TODO: figure out if/when we should close tick stream */
+            close: function() {
+              while (state.proposal.ids.length) {
+                var id = state.proposal.ids.shift();
+                liveapi.send({ forget: id });
+              }
+            }
         });
 
         var view = rv.bind(root[0],state)

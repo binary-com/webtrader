@@ -182,11 +182,15 @@
         </li>
     </ul>
 
-    <ul class="proposal-message stick-to-bottom">
+    <ul class="proposal-message stick-to-bottom"
+        rv-css-opacity="proposal.loading | ternary 0.5 1">
         <li>{proposal.message}</li>
     </ul>
 
-    <ul class="netprofit-row stick-to-bottom" rv-class-netprofit="proposal.error | eq ''" rv-class-error="proposal.error | not-eq ''">
+    <ul class="netprofit-row stick-to-bottom"
+        rv-css-opacity="proposal.loading | ternary 0.5 1"
+        rv-class-netprofit="proposal.error | eq ''"
+        rv-class-error="proposal.error | not-eq ''">
         <li rv-show="proposal.error | eq ''">
                     Net Profit:
                     <span rv-text="proposal.netprofit_ < ask_price payout"/>
@@ -197,7 +201,8 @@
         <li rv-show="proposal.error | not-eq ''">{proposal.error}</li>
     </ul>
 
-    <ul class="purchase-row stick-to-bottom">
+    <ul class="purchase-row stick-to-bottom"
+        rv-css-opacity="proposal.loading | ternary 0.5 1">
       <li> You pay: <span rv-text="proposal.ask_price | currency currency.value" />
       <li> <button class="purchase-button shine">Purchase</button> </li>
     </ul>

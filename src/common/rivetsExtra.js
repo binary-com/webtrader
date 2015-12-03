@@ -31,6 +31,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.formatters['or'] = function (value, other) {
         return value || other;
     };
+
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -56,6 +57,10 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         for (var i = 1; i < args.length ; ++i)
             setTimeout(args[i].bind(this, value), 0);
         return value;
+    }
+    /* ternary operator (condition ? first : second) */
+    rv.formatters['ternary'] = function(condition, first, second){
+      return condition ? first : second;
     }
     /* prepend fomatter will use + perator to prepend (usallay a string) value */
     rv.formatters.prepend = function(value, other){
