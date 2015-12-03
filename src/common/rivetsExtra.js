@@ -12,7 +12,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         while ((inx = keypath.indexOf('.')) !== -1) {
             model = model[keypath.substring(0,inx)];
             keypath = keypath.substring(inx + 1);
-            console.warn(JSON.stringify(model), keypath);
         };
         this.adapters['.'].observe(model, keypath, function () {
             callback(model[keypath]);
@@ -91,12 +90,10 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         priority: 100,
         publishes: true,
         bind: function (el) {
-            console.warn('selectmenu.bind()');
             var publish = this.publish,
                 select = $(el);
             select.selectmenu({
                 change: function () {
-                    console.warn('selectmenu.change()', select.val());
                     publish(select.val());
                     select.trigger('change');
                 }
@@ -106,7 +103,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             $(el).selectmenu( "destroy" )
         },
         routine: function (el, value) {
-            console.warn('selectmenu.routine()', value);
             $(el).val(value).selectmenu('refresh');
         }
     };
@@ -154,7 +150,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         priority: 98,
         publishes: true,
         bind: function (el) {
-            console.warn('spinner.bind()');
             var model = this.model;
             var publish = this.publish;
             var input = $(el);
@@ -162,7 +157,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
                 stop: function () {
                     var value = input.val();
                     publish(value * 1);
-                    console.warn('spinner.stop()', value);
                 },
                 spin: function (e,ui) {
                     var step = $(e.currentTarget).attr('step') + '';
@@ -180,7 +174,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             $(el).spinner('destroy');
         },
         routine: function(el,value){
-            console.warn('spinner.routing()', (value * 1) || 0);
             $(el).webtrader_spinner('value', value * 1);
         }
     };
@@ -194,22 +187,18 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.binders.tooltip = {
         priority: 97,
         bind: function (el) {
-            console.warn('binders.tooltip.bind()');
             $(el).attr('title',' ');
             $(el).tooltip();
         },
         unbind: function (el) {
-            console.warn('binders.tooltip.unbind()');
             $(el).tooltip('destory');
         },
         routine: function (el, value) {
-            console.warn('binders.tooltip.routing()', value);
             $(el).tooltip('option', 'content', value);
         }
     }
     /* bindar for jqueyr ui tooltip options */
     rv.binders['tooltip-*'] = function (el, value) {
-        console.warn('binders.tooltip-*.routine()', this.args[0], value);
         $(el).tooltip('option', this.args[0], value);
     }
 
@@ -218,12 +207,10 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         priority: 94,
         publishes: true,
         bind: function (el) {
-            console.warn('datepicker.bind()');
             var input = $(el);
             var publish = this.publish;
             var model = this.model;
             var styles = { marginTop: input.attr('marginTop') || '0px', marginLeft: input.attr('marginLeft') || '0px' };
-            console.warn('datepicker.bind() styles=', styles);
 
             var options = {
                 showOn: model.showOn || 'focus',
@@ -243,7 +230,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var dpicker = input.datepicker(options);
             input.on('change', function () {
                 var value = input.val();
-                console.warn('datepicker change > ', value);
                 publish(value);
                 input.blur(); // remove focus from input
             });
@@ -274,7 +260,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
             var styles = { marginTop: input.attr('marginTop') || '0px', marginLeft: input.attr('marginLeft') || '0px' };
             var update = function () {
                 var value = input.val();
-                console.warn('timepicker changed >', value);
                 publish(value);
             };
 
@@ -303,7 +288,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.binders['jq-class'] = {
         priority: 92,
         routine: function (el, value) {
-            console.warn('rv.binders.jq-class.routine()', value);
             el = $(el);
             var menu = $('#' + el.attr('id') + '-menu'); // get the id of widget
             menu.removeClass(el.data('jq-class'));
@@ -316,7 +300,6 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.binders['css-*'] = function (el, value) {
         var style = {};
         style[this.args[0]] = value;
-        console.warn('binders.css-*.routine()', style);
         $(el).css(style);
     }
 

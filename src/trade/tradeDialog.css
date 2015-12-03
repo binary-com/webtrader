@@ -206,13 +206,12 @@
     border-top: 1px solid #c2c1c1;
     text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
     font-size: 95%;
-    bottom: 75px;
+    bottom: 80px;
 }
 
 .trade-dialog .netprofit-row {
   bottom: 50px;
-  padding: 0px 0;
-  height: 20px;
+  padding: 2px 0;
 }
 
 .trade-dialog .netprofit { background: #c2c1c1; }

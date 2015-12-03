@@ -72,7 +72,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             array: [],
             value: '',
             paddingTop: function(){
-                var paddings = { "Asians" : '20px', "Up/Down" : '15px', "Digits" : '15px', "In/Out" : '3px', "Touch/No Touch" : '15px' };
+                var paddings = { "Asians" : '17px', "Up/Down" : '12px', "Digits" : '12px', "In/Out" : '1px', "Touch/No Touch" : '12px' };
                 return paddings[state.categories.value] || '3px';
             }
         },
@@ -137,7 +137,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
 
     state.categories.update = function () {
         var name = state.categories.value;
-        console.warn('state.categories.onchange() ', name);
         state.category_displays.array = available
                                             .filter(filter('contract_category_display', name))
                                             .map(mapper('contract_display'))
@@ -268,7 +267,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.duration_count.max = range.max;
         var value = state.duration_count.value;
         state.duration_count.value = Math.min(Math.max(value, range.min), range.max);
-        console.warn('state.duration_count.update()', state.duration_count.value);
     };
 
     state.barriers.update = function () {
@@ -354,7 +352,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                    console.error(err);
                    state.proposal.error = err.message;
                });
-        console.warn('state.proposal.onchange(...)', request);
     };
 
     function init(symbol, contracts_for) {
@@ -363,7 +360,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
 
         state.proposal.symbol = symbol.symbol;
         /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
-        liveapi.send({ ticks: symbol.symbol }).catch(function (err) { console.warn(err); });
+        liveapi.send({ ticks: symbol.symbol }).catch(function (err) { console.error(err); });
         liveapi.events.on('tick', function (data) {
             if (data.tick && data.tick.symbol == symbol.symbol) {
                 state.tick.epoch = data.tick.epoch;
@@ -375,7 +372,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         liveapi.events.on('proposal', function (data) {
             if (data.echo_req.symbol !== state.proposal.symbol)
                 return;
-            console.warn(data.proposal);
             /* update fields */
             var proposal = data.proposal;
             state.proposal.ask_price = proposal.ask_price;

@@ -24,7 +24,7 @@
 
     <ul class="date-start-row" rv-show="date_start.visible">
         <li>
-            <p>Start time </p>
+            <span>Start time </span>
         </li>
         <li>
             <select class="date-start-select"
@@ -189,11 +189,10 @@
     <ul class="netprofit-row stick-to-bottom" rv-class-netprofit="proposal.error | eq ''" rv-class-error="proposal.error | not-eq ''">
         <li rv-show="proposal.error | eq ''">
                     Net Profit:
-                    <span
-                        rv-text='proposal.netprofit_ < ask_price payout'  /> |
-                    Return
-                    <span
-                        rv-text='proposal.return_ < ask_price payout' />
+                    <span rv-text="proposal.netprofit_ < ask_price payout"/>
+        </li>
+        <li rv-show="proposal.error | eq ''" style="margin-left: -5px">
+                     | Return <span rv-text="proposal.return_ < ask_price payout"/>
         </li>
         <li rv-show="proposal.error | not-eq ''">{proposal.error}</li>
     </ul>
