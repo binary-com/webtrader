@@ -38,3 +38,38 @@
 .hide-search-input .dataTables_filter {
     display:none;
 }
+
+.shine {
+  position: relative;
+}
+/* sine effect, hover style if required */
+.shine:hover { }
+/* generated element for shine effect. normal state is semi-transparent
+ * white but with zero width. Set no transition here for no mouse-leave
+ * animations. Otherwise the effect will play in reverse when your mouse
+ * leaves the element */
+.shine:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+/* on hover we animate the width to 100% and opacity to 0 so the element
+ * grows and fades out */
+.shine:hover:after {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}

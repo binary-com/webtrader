@@ -209,3 +209,13 @@
 .trade-dialog .you-pay-row span {
   font-weight: bolder;
 }
+
+.trade-dialog .purchase-button {
+    background: #2e8836;
+    border-radius: 5px;
+    line-height: 2.25em;
+    color: white;
+    width: 120px;
+    outline: 0;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
+}
