@@ -37,7 +37,6 @@
         </li>
     </ul>
 
-
     <ul class="duration-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="categories.value | not-eq 'Spreads'">
@@ -203,7 +202,15 @@
 
     <ul class="purchase-row stick-to-bottom"
         rv-css-opacity="proposal.loading | ternary 0.5 1">
-      <li> You pay: <span rv-text="proposal.ask_price | currency currency.value" />
-      <li> <button class="purchase-button shine">Purchase</button> </li>
+      <li> You pay: <span rv-text="proposal.ask_price | currency currency.value" /> </li>
+      <li> <button
+              rv-on-click="purchase.onclick"
+              rv-disabled="proposal.loading"
+              class="purchase-button shine">Purchase</button>
+      </li>
+    </ul>
+
+    <ul class="trade-conf conf-message-row">
+        <li>Contract Confirmation</li>
     </ul>
 </div>

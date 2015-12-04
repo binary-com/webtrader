@@ -72,7 +72,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         return available;
     }
 
-    function init_sate(available,root){
+    function init_state(available,root){
 
       var state = {
         duration: {
@@ -159,6 +159,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
             var ret = (((this.payout - this.ask_price) / this.ask_price) || 0).toFixed(2) ;
             return (ret* 100 | 0) + '%';
           }
+        },
+        purchase: {
+
         },
         tooltips: {
           barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
@@ -386,6 +389,12 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         });
       };
 
+      state.purchase.onclick = function(){
+        root.addClass('show-conf');
+        //root.find('ul:not(.trade-conf)').css('animation', 'trade-dialog-slide 1.2s 1 forwards');
+        //root.find('ul.trade-conf').css('animation', 'trade-dialog-slide-conf 1.2s 1 forwards');
+        console.warn('clicked');
+      }
       state.categories.array = available.map(mapper('contract_category_display')).unique();
       state.categories.value = state.categories.array.indexOf('Up/Down') >= 0 ? 'Up/Down' : state.categories.array[0]; // TODO: show first tab
 
@@ -419,10 +428,10 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
     function init(symbol, contracts_for) {
         var root = $(html);
         var available = apply_fixes(contracts_for.available);
-        var state = init_sate(available,root);
+        var state = init_state(available,root);
 
         /* TODO: development only! */
-        window.state = state; window.available = available;
+        window.state = state; window.available = available; window.root = root;
 
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,

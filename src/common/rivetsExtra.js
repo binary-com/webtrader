@@ -313,6 +313,11 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
         value ? $(el).show() : $(el).hide();
         return value;
     };
+    /* binder to add or remove disabled attribute */
+    rv.binders.disabled = function(el,value){
+      if(value) $(el).attr('disabled', 'disabled');
+      else $(el).removeAttr('disabled');
+    }
 
     return rv;
 });
