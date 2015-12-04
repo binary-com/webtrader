@@ -398,9 +398,24 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
         };
 
-        require(['trade/tradeConf'], function(tradeConf){
-            tradeConf.init(show);
-        });
+        // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!
+        liveapi.send({
+                buy: state.proposal.ids.last(),
+                price: state.proposal.ask_price,
+                passthrough: { payout_amount: state.basis.amount } /* TODO: workaround for api not providing this field */
+             })
+             .then(function(data){
+                data.buy.payout_amount = data.echo_req.passthrough.payout_amount;
+                console.warn(data.buy);
+                require(['trade/tradeConf'], function(tradeConf){
+                    tradeConf.init(data.buy, show);
+                });
+             })
+             .catch(function(err){
+               state.purchase.loading = false;
+               $.growl.error({ message: err.message });
+               console.error(err);
+             })
       }
       state.categories.array = available.map(mapper('contract_category_display')).unique();
       state.categories.value = state.categories.array.indexOf('Up/Down') >= 0 ? 'Up/Down' : state.categories.array[0]; // TODO: show first tab
@@ -461,7 +476,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        // setTimeout(state.purchase.onclick.bind(state.purchase), 1500); // TODO: remove this
+        // setTimeout(state.purchase.onclick.bind(state.purchase), 4000); // TODO: remove this
     }
 
     return {
