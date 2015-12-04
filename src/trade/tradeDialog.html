@@ -70,7 +70,7 @@
         </li>
         <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="timepicker date-expiry-hour"
-                   marginTop="0px" marginLeft="20px"
+                   marginTop="0px" marginLeft="-255px"
                    rv-timepicker="date_expiry.value_hour | notify date_expiry.update | debounce proposal.onchange" />
         </li>
     </ul>
@@ -183,12 +183,12 @@
     </ul>
 
     <ul class="proposal-message stick-to-bottom"
-        rv-css-opacity="proposal.loading | ternary 0.5 1">
+        rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li>{proposal.message}</li>
     </ul>
 
     <ul class="netprofit-row stick-to-bottom"
-        rv-css-opacity="proposal.loading | ternary 0.5 1"
+        rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1"
         rv-class-netprofit="proposal.error | eq ''"
         rv-class-error="proposal.error | not-eq ''">
         <li rv-show="proposal.error | eq ''">
@@ -202,11 +202,11 @@
     </ul>
 
     <ul class="purchase-row stick-to-bottom"
-        rv-css-opacity="proposal.loading | ternary 0.5 1">
+        rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
       <li> You pay: <span rv-text="proposal.ask_price | currency currency.value" /> </li>
       <li> <button
               rv-on-click="purchase.onclick"
-              rv-disabled="proposal.loading"
+              rv-disabled="proposal.loading | purchase.loading"
               class="purchase-button shine">Purchase</button>
       </li>
     </ul>

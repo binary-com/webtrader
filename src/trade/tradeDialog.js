@@ -144,7 +144,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           ask_price: "0.0",
           date_start: 0,
           display_value: "0.0",
-          message: 'loading ...', /* longcode */
+          message: 'Loading ...', /* longcode */
           payout: 0,
           spot: "0.0",
           spot_time: "0",
@@ -389,7 +389,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         });
       };
 
-      state.purchase.onclick = function(){
+      state.purchase.onclick = function() {
         state.purchase.loading = true;
         var show = function(div){
           div.appendTo(root);
@@ -397,6 +397,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
           root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
         };
+
         require(['trade/tradeConf'], function(tradeConf){
             tradeConf.init(show);
         });
@@ -460,7 +461,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        //setTimeout(state.purchase.onclick.bind(state.purchase), 1000); // TODO: remove this
+        // setTimeout(state.purchase.onclick.bind(state.purchase), 1500); // TODO: remove this
     }
 
     return {

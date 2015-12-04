@@ -11,6 +11,9 @@ define(['jquery', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/
         title: {
           text: 'Contract Confirmation',
         },
+        buy: {
+          message: 'USD 5.15 USD 10.00 payout if Random 100 Index is strictly higher than entry spot at 1 minute after contract start time.'
+        }
       };
       var view = rv.bind(root[0], state)
       show(root);
