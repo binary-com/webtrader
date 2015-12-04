@@ -19,8 +19,13 @@ define(['jquery', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/
           start_time: data.start_time,
           transaction_id: data.transaction_id,
           payout_amount: data.payout_amount,
+          currency: data.currency,
           potential_profit : data.payout_amount - data.buy_price,
-        }
+        },
+        arrow: { }
+      };
+      state.arrow.onclick = function(){
+         $.growl.error({ message: 'Not implement yet!' });
       };
       var view = rv.bind(root[0], state)
       show_callback(root);

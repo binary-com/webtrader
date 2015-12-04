@@ -37,3 +37,25 @@
 .trade-conf .transaction-row {
   margin-top: 15px;
 }
+
+.trade-conf .view-row {
+  margin-top: 40px;
+  background: #c2c1c1;
+}
+.trade-conf .view-row .view {
+  padding-right: 30px;
+  font-size: 1.4em;
+}
+.trade-conf .view-row .arrow {
+  width: 30px;
+  height: 30px;
+}
+
+.trade-conf .balance-row {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+.trade-conf .balance-row .bold {
+    font-weight: bold;
+}

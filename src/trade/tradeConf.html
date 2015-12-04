@@ -33,4 +33,20 @@
     </li>
   </ul>
 
+  <ul class='view-row'>
+    <li class="view">
+      View
+    </li>
+    <li rv-on-click='arrow.onclick'>
+      <img class="arrow" src="images/up-arrow.svg"/>
+    </li>
+  </ul>
+
+  <ul class='balance-row'>
+    <li>
+      <span> Account blance: </span>
+      <span rv-text='buy.currency' class="bold" />
+      <span rv-text='buy.balance_after | to-fixed 2' class="bold" />
+    </li>
+  </ul>
 </div>

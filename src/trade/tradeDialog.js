@@ -402,10 +402,11 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         liveapi.send({
                 buy: state.proposal.ids.last(),
                 price: state.proposal.ask_price,
-                passthrough: { payout_amount: state.basis.amount } /* TODO: workaround for api not providing this field */
+                passthrough: { payout_amount: state.basis.amount, currency: state.currency.value } /* TODO: workaround for api not providing this fields */
              })
              .then(function(data){
                 data.buy.payout_amount = data.echo_req.passthrough.payout_amount;
+                data.buy.currency = data.echo_req.passthrough.currency;
                 console.warn(data.buy);
                 require(['trade/tradeConf'], function(tradeConf){
                     tradeConf.init(data.buy, show);
