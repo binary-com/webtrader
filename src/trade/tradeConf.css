@@ -1,0 +1,6 @@
+.trade-conf .conf-message-row {
+    text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
+    background: #c2c1c1;
+    font-size: large;
+    padding: 5px 0;
+}

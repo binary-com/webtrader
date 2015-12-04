@@ -35,7 +35,7 @@
 
 define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
     function ($, windows, rv, liveapi, html) {
-
+    require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var mapper = function(name) { return function(row) { return row[name]; }; };
     var filter = function(name,value) { return function(row) { return row[name] === value; }; };
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
@@ -390,10 +390,13 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
       };
 
       state.purchase.onclick = function(){
-        root.addClass('show-conf');
-        //root.find('ul:not(.trade-conf)').css('animation', 'trade-dialog-slide 1.2s 1 forwards');
-        //root.find('ul.trade-conf').css('animation', 'trade-dialog-slide-conf 1.2s 1 forwards');
-        console.warn('clicked');
+        var show = function(div){
+          div.appendTo(root);
+          root.addClass('show-conf');
+        };
+        require(['trade/tradeConf'], function(tradeConf){
+            tradeConf.init(show);
+        });
       }
       state.categories.array = available.map(mapper('contract_category_display')).unique();
       state.categories.value = state.categories.array.indexOf('Up/Down') >= 0 ? 'Up/Down' : state.categories.array[0]; // TODO: show first tab

@@ -247,15 +247,9 @@
     animation: trade-dialog-slide-conf 2s 1 forwards;
 }
 
-.trade-dialog ul.trade-conf {
+.trade-dialog .trade-conf {
     left:-350px;
     position: absolute;
     width: 100%;
-}
-.trade-dialog .conf-message-row {
-    text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
-    background: #c2c1c1;
-    font-size: large;
-    padding: 5px 0;
     top: 0;
 }
