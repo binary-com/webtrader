@@ -1,14 +1,17 @@
 <div class="trade-conf">
+
   <ul class="title-row">
     <li>
       <span rv-text="title.text" />
     </li>
   </ul>
+
   <ul class='message-row'>
     <li>
       <span rv-text="buy.message" />
     </li>
   </ul>
+
   <ul class='payout-row'>
     <li>
       <span>Potential Payout</span>
@@ -23,4 +26,11 @@
       <span rv-text='buy.potential_profit | to-fixed 2' />
     </li>
   </ul>
+
+  <ul class='transaction-row'>
+    <li>
+      <span>Your transaction reference is </span><span rv-text='buy.transaction_id' />
+    </li>
+  </ul>
+
 </div>

@@ -33,3 +33,7 @@
 .trade-conf .payout-row li span:nth-child(2) {
   font-weight: bold;
 }
+
+.trade-conf .transaction-row {
+  margin-top: 15px;
+}
