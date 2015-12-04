@@ -138,10 +138,9 @@
 }
 
 .trade-dialog ul li {
+    text-align: center;
     padding: 0 5px;
 }
-
-
 
 /*#region ul.contract-displays */
     .trade-dialog ul.contract-displays {

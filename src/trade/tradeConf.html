@@ -9,4 +9,18 @@
       <span rv-text="buy.message" />
     </li>
   </ul>
+  <ul class='payout-row'>
+    <li>
+      <span>Potential Payout</span>
+      <span rv-text='buy.payout_amount' />
+    </li>
+    <li>
+      <span>Total Cost</span>
+      <span rv-text='buy.buy_price' />
+    </li>
+    <li>
+      <span>Potential Profit</span>
+      <span rv-text='buy.potential_profit | to-fixed 2' />
+    </li>
+  </ul>
 </div>

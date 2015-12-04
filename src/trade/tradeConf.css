@@ -8,3 +8,28 @@
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
 }
+.trade-conf .payout-row {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 0;
+}
+.trade-conf .payout-row li {
+  height: 90px;
+  display: flex;
+  padding: 0 10px;
+  flex-direction: column;
+  justify-content: center;
+  width: 32%;
+  font-size: 1.2em;
+  text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
+}
+.trade-conf .payout-row li:not(:first-child) {
+  border-left: 1px solid #ccc;
+}
+
+.trade-conf .payout-row li span:first-child {
+  height: 50px;
+}
+.trade-conf .payout-row li span:nth-child(2) {
+  font-weight: bold;
+}

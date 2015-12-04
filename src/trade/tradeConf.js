@@ -19,9 +19,7 @@ define(['jquery', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/
           start_time: data.start_time,
           transaction_id: data.transaction_id,
           payout_amount: data.payout_amount,
-          potential_profit : function() {
-              this.payout_amount - this.ask_price;
-          }
+          potential_profit : data.payout_amount - data.buy_price,
         }
       };
       var view = rv.bind(root[0], state)
