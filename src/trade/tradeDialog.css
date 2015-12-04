@@ -231,25 +231,15 @@
     width: 120px;
 }
 
-@keyframes trade-dialog-slide {
-  0% { left: 0; }
-  100% { left: 350px; }
+.trade-dialog .trade-fields {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
-@keyframes trade-dialog-slide-conf {
-  0% { left: -350px; }
-  100% { left: 0; }
-}
-
-.trade-dialog.show-conf  ul {
-    animation: trade-dialog-slide 2s 1 forwards;
-}
-.trade-dialog.show-conf .bla-trade-conf {
-    animation: trade-dialog-slide-conf 2s 1 forwards;
-}
-
 .trade-dialog .trade-conf {
     left:-350px;
     position: absolute;
+    height: 100%;
     width: 100%;
     top: 0;
 }

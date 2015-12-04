@@ -393,7 +393,9 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.purchase.loading = true;
         var show = function(div){
           div.appendTo(root);
-          root.addClass('show-conf');
+
+          root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
+          root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
         };
         require(['trade/tradeConf'], function(tradeConf){
             tradeConf.init(show);
@@ -458,6 +460,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
+        //setTimeout(state.purchase.onclick.bind(state.purchase), 1000); // TODO: remove this
     }
 
     return {
