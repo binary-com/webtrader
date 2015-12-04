@@ -161,7 +161,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           }
         },
         purchase: {
-
+          loading: false, /* is the purchased button clicked and confirmation dialog is loading */
         },
         tooltips: {
           barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
@@ -390,6 +390,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
       };
 
       state.purchase.onclick = function(){
+        state.purchase.loading = true;
         var show = function(div){
           div.appendTo(root);
           root.addClass('show-conf');
@@ -406,14 +407,15 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
+              if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
               state.tick.epoch = data.tick.epoch;
               state.tick.quote = data.tick.quote;
           }
       });
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
-          if (data.echo_req.symbol !== state.proposal.symbol)
-              return;
+          if (data.echo_req.symbol !== state.proposal.symbol) return; /* TODO: fix this for multiple dialogs with the same symbol */
+          if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
           /* update fields */
           var proposal = data.proposal;
           state.proposal.ask_price = proposal.ask_price;

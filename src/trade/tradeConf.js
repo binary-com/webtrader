@@ -7,6 +7,12 @@ define(['jquery', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/
 
     function init(show){
       var root = $(html);
+      var state = {
+        title: {
+          text: 'Contract Confirmation',
+        },
+      };
+      var view = rv.bind(root[0], state)
       show(root);
     }
 

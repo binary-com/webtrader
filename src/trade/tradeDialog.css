@@ -240,10 +240,10 @@
   100% { left: 0; }
 }
 
-.trade-dialog.show-conf ul:not(.trade-conf) {
+.trade-dialog.show-conf  ul {
     animation: trade-dialog-slide 2s 1 forwards;
 }
-.trade-dialog.show-conf ul.trade-conf {
+.trade-dialog.show-conf .bla-trade-conf {
     animation: trade-dialog-slide-conf 2s 1 forwards;
 }
 
