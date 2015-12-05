@@ -69,15 +69,16 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 							    require(['charts/indicators/highcharts_custom/bllngrbnd'], function ( bllngrbnd ) {
                                 bllngrbnd.init();
                                 var options = {
-                                    period : parseInt($(".bllngrbnd_input_width_for_period").val()),
+                                    period : parseInt($("#bllngrbnd_time_period").val()),
+                                    devUp:parseInt($("#bllngr_dev_up").val()),
+                                    devDn:parseInt($("#bllngr_dev_dn").val()),
                                     mdlBndStroke : $("#bllngrbnd_mdl_stroke").css("background-color"),
                                     uprBndStroke : $("#bllngrbnd_up_stroke").css('background-color'),
                                     lwrBndStroke : $("#bllngrbnd_lwr_stroke").css('background-color'),
                                     strokeWidth : parseInt($("#bllngrbnd_strokeWidth").val()),
                                     dashStyle : $("#bllngrbnd_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#bllngrbnd_appliedTo").val())
+                                    appliedTo: parseInt($("#bllngrbnd_appliedTo").val())
                                 }
-                                console.log(options);
                                 //Add Bollinger for the main series
                                 $($(".bllngrbnd").data('refererChartID')).highcharts().series[0].addBLLNGRBND(options);
                             });
