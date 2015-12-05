@@ -41,6 +41,6 @@
     "require-css": "~0.1.8",
     "text": "~2.0.14",
     "rivets": "~0.8.1",
-    "jquery.ui.timepicker": "git@github.com:binary-com/timepicker.git#997f365"
+    "binary-com-jquery-ui-timepicker": "*"
   }
 }

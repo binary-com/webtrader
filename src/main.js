@@ -25,7 +25,7 @@ requirejs.config({
         'es6-promise':'lib/es6-promise/promise.min',
         'rivets': 'lib/rivets/dist/rivets.min',
         'sightglass': 'lib/sightglass/index',
-        'timepicker': 'lib/jquery.ui.timepicker/jquery.ui.timepicker',
+        'timepicker': 'lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker',
         'js-cookie':'lib/js-cookie/src/js.cookie'
     },
     map: {
@@ -40,7 +40,7 @@ requirejs.config({
           deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
         },
         "timepicker": {
-            deps:['css!lib/jquery.ui.timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']   
+            deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']   
         },
         "jquery-ui": {
             deps: ["jquery"]
