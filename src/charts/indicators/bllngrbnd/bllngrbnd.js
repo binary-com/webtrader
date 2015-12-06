@@ -72,6 +72,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                     period : parseInt($("#bllngrbnd_time_period").val()),
                                     devUp:parseInt($("#bllngr_dev_up").val()),
                                     devDn:parseInt($("#bllngr_dev_dn").val()),
+                                    maType:$("#bllngbnd_ma_type").val(),
                                     mdlBndStroke : $("#bllngrbnd_mdl_stroke").css("background-color"),
                                     uprBndStroke : $("#bllngrbnd_up_stroke").css('background-color'),
                                     lwrBndStroke : $("#bllngrbnd_lwr_stroke").css('background-color'),

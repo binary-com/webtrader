@@ -36,22 +36,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
      		--index;
 	    }
 
-     	var variance=sumDeviations/j;
-     	//The standard deviation is equal to the square root of the variance:
-        return standardDeviation=Math.sqrt(variance);
+        return Math.sqrt(sumDeviations/j);
 	}
 	
-   //  function calculateSMA(data,index,bllngrbndOptions,type)
-   //  {
-   //  	var sum=0;
-   //   	for(var i=0; i<bllngrbndOptions.period && index>=0; i++)
-   //   	{
-   //   		sum+=getPrice(data,index,bllngrbndOptions,type);
-   //   		index--;
-   //   	}
- 		// return sum/i;
-   //  }
-
     function calculateSMA(data,bllngrbndOptions,type)
     {
         var smaData = [], sum = 0.0;
@@ -78,7 +65,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
         return smaData;
     }
 
-    function calculateEMA(data,index,bllngrbndOptions,type,preEma)
+    function calculateEMA(data,bllngrbndOptions,type)
 	{
 		//Calculate Bollinger Band data
         // Formula
@@ -92,15 +79,15 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
         for (var index = 0; index < bllngrbndOptions.period; index++) {
         	sum+=getPrice(data,index,bllngrbndOptions,type);
         
-            if (index == (emaOptions.period - 1)) {
-                emaData.push([data[emaOptions.period - 1].x ? data[emaOptions.period - 1].x : data[emaOptions.period - 1][0], sum / emaOptions.period]);
+            if (index == (bllngrbndOptions.period - 1)) {
+                emaData.push([data[bllngrbndOptions.period - 1].x ? data[bllngrbndOptions.period - 1].x : data[bllngrbndOptions.period - 1][0], sum / bllngrbndOptions.period]);
             }
              else {
                 emaData.push([data[index].x ? data[index].x : data[index][0], null]);
             }
         }
 
-        for (var index = emaOptions.period; index < data.length; index++) {
+        for (var index = bllngrbndOptions.period; index < data.length; index++) {
 
         	var price =getPrice(data,index,bllngrbndOptions,type);
         	//Calculate EMA - start
@@ -112,22 +99,188 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 		return emaData;
 	}
 
-    function calculateLowerBand(data,index,bllngrbndOptions,type,ma)
+    function calculateEMAValue(data,period) {
+        var temaData = [], sum = 0.0;
+        for (var index = 0; index < period; index++) {
+            sum += data[index][1];
+            if (index == (period - 1)) {
+                var val = sum / period;
+                if (!$.isNumeric(val)) {
+                    val = data[index][1];
+                }
+                temaData.push([data[index][0], val]);
+            }
+            else {
+                temaData.push([data[index][0], null]);
+            }
+        }
+
+        for (var index = period; index < data.length; index++) {
+
+            var price = data[index][1];
+
+            //Calculate EMA - start
+            //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
+            var temaValue = (price * 2 / (period + 1)) + (temaData[index - 1][1] * (1 - 2 / (period + 1)))
+            temaData.push([data[index][0], indicatorBase.toFixed(temaValue, 4)]);
+            //Calculate EMA - end
+
+        }
+        return temaData;
+    }
+
+	function calculateTEMA(data,bllngrbndOptions,type)
+	{
+	     //Calculate TEMA data
+		 /*
+	     The Triple Exponential Moving Average (TEMA) of time series 't' is:
+	     *      EMA1 = EMA(t,period)
+	     *      EMA2 = EMA(EMA1,period)
+	     *      EMA3 = EMA(EMA2,period))
+	     *      TEMA = 3*EMA1 - 3*EMA2 + EMA3
+	     * Do not fill any value in temaData from 0 index to options.period-1 index
+	     */
+	    var inputData = [];
+	    //Prepare input data for indicator value calculation
+	    for (var index = 0; index < data.length; index++) {
+	    	var price=getPrice(data,index,bllngrbndOptions,type);
+	        inputData.push([data[index].x ? data[index].x : data[index][0], price]);
+	    }
+	    var ema1Data = calculateEMAValue(inputData,bllngrbndOptions.period);
+	    var ema2Data = calculateEMAValue(ema1Data,bllngrbndOptions.period);
+	    var ema3Data = calculateEMAValue(ema2Data,bllngrbndOptions.period);
+	    var temaData = [];
+	    for (var index = 0; index < ema3Data.length; index++) {
+	        var temaVal = 3 * ema1Data[index][1] - 3 * ema2Data[index][1] + ema3Data[index][1];
+	        temaData.push([ema3Data[index][0], indicatorBase.toFixed(temaVal, 4)]);
+	    }      
+        return temaData;
+	}
+
+    function calculateWMAValue(data,bllngrbndOptions,index, type)
     {
-    	//var sma=calculateSMA(data,index,bllngrbndOptions,type);
-    	var standardDeviation=calculateStandardDeviation(data,index,bllngrbndOptions,type,ma);
-    	//Lower Band = 20-day SMA - (20-day standard deviation of price x 2)
-    	var lowerbandValue=ma-(standardDeviation*bllngrbndOptions.devDn);
-    	return lowerbandValue;
+        var wmaValue = 0;
+        for (var subIndex = index, count = bllngrbndOptions.period; subIndex >= 0 && count >= 0; count--, subIndex--) {
+            var price =getPrice(data,subIndex,bllngrbndOptions,type);
+            wmaValue += price * count;
+        }
+        return wmaValue / (bllngrbndOptions.period * (bllngrbndOptions.period + 1) / 2);
+    }
+
+	function calculateWMA(data,bllngrbndOptions,type)
+	{
+	    //Calculate WMA data
+        /*
+        WMA = ( Price * n + Price(1) * n-1 + ... Price( n-1 ) * 1) / ( n * ( n + 1 ) / 2 )
+        Where: n = time period
+        *
+        *  Do not fill any value in wmaData from 0 index to options.period-1 index
+        */
+        var wmaData = [];
+        for (var index = 0; index < bllngrbndOptions.period; index++)
+        {
+            wmaData.push([data[bllngrbndOptions.period - 1].x ? data[bllngrbndOptions.period - 1].x : data[bllngrbndOptions.period - 1][0], null]);
+        }
+
+        for (var index = bllngrbndOptions.period; index < data.length; index++) 
+        {
+            //Calculate WMA - start
+            var wmaValue = calculateWMAValue(data, bllngrbndOptions,index ,type);
+            wmaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(wmaValue, 4)]);
+            //Calculate WMA - end
+        }
+        return wmaData;
+	}
+
+	function calculateTRIMA(data,bllngrbndOptions,type)
+	{
+        var trimaData = [], sum = 0.0, N = bllngrbndOptions.period + 1,
+        Nm = Math.round( N / 2 );
+        for (var index = 0; index < Nm; index++)
+        {
+            if (indicatorBase.isOHLCorCandlestick(type))
+            {
+                sum += indicatorBase.extractPriceForAppliedTO(bllngrbndOptions.appliedTo, data, index);
+            }
+            else
+            {
+                sum += indicatorBase.extractPrice(data, index);
+            }
+            if (index == (Nm - 1))
+            {
+                trimaData.push([data[Nm - 1].x ? data[Nm - 1].x : data[Nm - 1][0], sum / Nm]);
+            }
+            else
+            {
+                trimaData.push([data[index].x ? data[index].x : data[index][0], null]);
+            }
+        }
+
+        for (var index = Nm; index < data.length; index++)
+        {
+            var price=getPrice(data,index,bllngrbndOptions,type);
+            //Calculate TRIMA - start
+            var trimaValue = (trimaData[index - 1][1] * (Nm - 1) + price) / Nm;
+            trimaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(trimaValue , 4)]);
+            //Calculate TRIMA - end
+        }
+        return trimaData;
+	}
+
+    function calculateMiddleBand(data,bllngrbndOptions,type)
+    {
+     var bllngrMdlBndData=[];
+     switch(bllngrbndOptions.maType) {
+	     case "SMA":
+	        bllngrMdlBndData=calculateSMA(data,bllngrbndOptions,type);
+	        break;
+	     case "EMA":
+	         bllngrMdlBndData=calculateEMA(data,bllngrbndOptions,type);
+	        break;
+	     case "WMA":
+	        bllngrMdlBndData=calculateWMA(data,bllngrbndOptions,type);
+	        break;
+	     case "TEMA":
+	        bllngrMdlBndData=calculateTEMA(data,bllngrbndOptions,type);
+	        break;
+	     case "TRIMA":
+	        bllngrMdlBndData=calculateTRIMA(data,bllngrbndOptions,type);
+	        break;
+	    }
+	    return bllngrMdlBndData;
+	}
+
+    function calculateLowerBand(data,bllngrMddlBndData,bllngrbndOptions,type)
+    {
+    	var bllngrLwrBndData=[];
+    	for (var index = 0; index < data.length; index++)
+        {
+        	 //Calculate Lower Band - start
+        	 var ma=bllngrMddlBndData[index][1];
+  	    	 var standardDeviation=calculateStandardDeviation(data,index,bllngrbndOptions,type,ma);
+    		 //Lower Band = 20-day SMA - (20-day standard deviation of price x 2)
+    	     var lwrBndVal=ma-(standardDeviation*bllngrbndOptions.devDn);
+             bllngrLwrBndData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(lwrBndVal, 4)]);
+            //Calculate Lower Band - End                    
+        }
+ 		 return bllngrLwrBndData;    
     }
 
 
-    function calculateUperBand(data,index,bllngrbndOptions,type,ma)
+    function calculateUperBand(data,bllngrMddlBndData,bllngrbndOptions,type)
     {
-    	//var sma=calculateSMA(data,index,bllngrbndOptions,type);
-    	var standardDeviation=calculateStandardDeviation(data,index,bllngrbndOptions,type,ma);
-    	//Lower Band = 20-day MA + (20-day standard deviation of price x 2)
-    	return uperBandValue=ma+(standardDeviation*bllngrbndOptions.devUp);
+    	var bllngrUprBandData=[];
+    	for (var index = 0; index < data.length; index++)
+        {
+        	 //Calculate Uper Band - start
+        	 var ma=bllngrMddlBndData[index][1];
+  	    	 var standardDeviation=calculateStandardDeviation(data,index,bllngrbndOptions,type,ma);
+    		 //Uper Band = 20-day SMA + (20-day standard deviation of price x 2)
+    	     var UprBndVal=ma+(standardDeviation*bllngrbndOptions.devDn);
+             bllngrUprBandData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(UprBndVal, 4)]);
+            //Calculate Uper Band - End
+        }
+        return bllngrUprBandData;
     }
 
     return {
@@ -142,12 +295,12 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         period: 20,
                         devUp:2,
                         devDn:2,
+                        maType:"SMA",
                         mdlBndStroke: 'red',
                         uprBndStroke:'#A52A2A',
                         lwrBndStroke:'#A52A2A',
                         strokeWidth: 1,
                         dashStyle: 'line',
-                        //levels: [],
                         appliedTo: indicatorBase.CLOSE,
                         parentSeriesID: seriesID
                     }, bllngrbndOptions);
@@ -170,29 +323,14 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
   							SMA:
   								* N period sum / N
                          */
-                        var bllngrMiddleBandData = [],bllngrLowerBandData=[],bllngrUperBandData=[];
+                        var bllngrMiddleBandData=calculateMiddleBand(data,bllngrbndOptions,this.options.type);
 
-                            //Calculate Uper Band(SMA) - Start
-						    // var smaValue = calculateSMA(data, index,bllngrbndOptions,this.options.type);
-       						// bllngrMiddleBandData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(smaValue, 4)]);
-        				bllngrMiddleBandData=calculateSMA(data,bllngrbndOptions,this.options.type);
-                             //Calculate SMA - end
-                        for (var index = 0; index < data.length; index++)
-                        {
-                             //Calculate Lower Band - start
-                             var lowerBandValue = calculateLowerBand(data, index,bllngrbndOptions,this.options.type,bllngrMiddleBandData[index][1]);
-                             bllngrLowerBandData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(lowerBandValue, 4)]);
-                             //Calculate Lower Band - End
+        				var bllngrUperBandData=calculateUperBand(data,bllngrMiddleBandData,bllngrbndOptions,this.options.type);
 
-                             //Calculate Uper Band - start
-                             var uperBandValue = calculateUperBand(data, index,bllngrbndOptions,this.options.type,bllngrMiddleBandData[index][1]);
-                             bllngrUperBandData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(uperBandValue, 4)]);
- 							 //Calculate Uper Band - end                          
-                          }
+        				var bllngrLowerBandData=calculateLowerBand(data,bllngrMiddleBandData,bllngrbndOptions,this.options.type);
 
-  						var chart = this.chart;
+   						var chart = this.chart;
  
- 						//bllngrbndOptionsMap[uniqueID] = bllngrbndOptions;
                         bllngrbndOptionsMap[mddlUniqueID] = bllngrbndOptions;
                         bllngrbndOptionsMap[upUniqueID]=bllngrbndOptions;
                         bllngrbndOptionsMap[dwnUniqueID]=bllngrbndOptions;
@@ -207,21 +345,6 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             dataGrouping: series.options.dataGrouping,
                             opposite: series.options.opposite,
                             color: bllngrbndOptions.mdlBndStroke,
-                            lineWidth: bllngrbndOptions.strokeWidth,
-                            dashStyle: bllngrbndOptions.dashStyle,
-                            compare: series.options.compare
-                        }, false, false);
-
-                        //Bollinger Lower Band
-                        var series = this;
-                        bllngrbndSeriesMap[dwnUniqueID] = chart.addSeries({
-                            id: dwnUniqueID,
-                            name: 'BLLNGRBND(LWRBND' + bllngrbndOptions.period  + ')',
-                            data: bllngrLowerBandData,
-                            type: 'line',
-                            dataGrouping: series.options.dataGrouping,
-                            opposite: series.options.opposite,
-                            color: bllngrbndOptions.lwrBndStroke,
                             lineWidth: bllngrbndOptions.strokeWidth,
                             dashStyle: bllngrbndOptions.dashStyle,
                             compare: series.options.compare
@@ -242,6 +365,21 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             compare: series.options.compare
                         }, false, false);
 
+
+                        //Bollinger Lower Band
+                        var series = this;
+                        bllngrbndSeriesMap[dwnUniqueID] = chart.addSeries({
+                            id: dwnUniqueID,
+                            name: 'BLLNGRBND(LWRBND' + bllngrbndOptions.period  + ')',
+                            data: bllngrLowerBandData,
+                            type: 'line',
+                            dataGrouping: series.options.dataGrouping,
+                            opposite: series.options.opposite,
+                            color: bllngrbndOptions.lwrBndStroke,
+                            lineWidth: bllngrbndOptions.strokeWidth,
+                            dashStyle: bllngrbndOptions.dashStyle,
+                            compare: series.options.compare
+                        }, false, false);
 
                         //This is a on chart indicator
                         $(bllngrbndSeriesMap[mddlUniqueID]).data({
@@ -274,7 +412,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                 H.Series.prototype.removeBLLNGRBND = function (uniqueID) {
                     var chart = this.chart;
                     bllngrbndOptionsMap[uniqueID] = null;
-                    chart.get(uniqueID).remove(false);
+                    chart.get(uniqueID).remove();
                     bllngrbndSeriesMap[uniqueID] = null;
                     chart.redraw();
                 }
