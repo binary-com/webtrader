@@ -398,18 +398,29 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
           root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
         };
 
+        /* workaround for api not providing this fields */
+        var passthrough = {
+            payout_amount: state.basis.amount,
+            currency: state.currency.value,
+            symbol: state.proposal.symbol,
+            category: state.categories.value,
+        };
+        /* pass data which is needed to show live tick purchase results */
+        if(passthrough.category === 'Digits' && state.duration_unit.value === 'ticks'){
+          passthrough.digits_value = state.digits.value;
+          passthrough.digits_count = state.duration_count.value;
+        }
+
         // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!
         liveapi.send({
                 buy: state.proposal.ids.last(),
                 price: state.proposal.ask_price,
-                passthrough: { payout_amount: state.basis.amount, currency: state.currency.value } /* TODO: workaround for api not providing this fields */
+                passthrough: passthrough
              })
              .then(function(data){
-                data.buy.payout_amount = data.echo_req.passthrough.payout_amount;
-                data.buy.currency = data.echo_req.passthrough.currency;
-                console.warn(data.buy);
+                console.warn(data);
                 require(['trade/tradeConf'], function(tradeConf){
-                    tradeConf.init(data.buy, show);
+                    tradeConf.init(data, show);
                 });
              })
              .catch(function(err){
@@ -419,7 +430,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
              })
       }
       state.categories.array = available.map(mapper('contract_category_display')).unique();
-      state.categories.value = state.categories.array.indexOf('Up/Down') >= 0 ? 'Up/Down' : state.categories.array[0]; // TODO: show first tab
+      state.categories.value = state.categories.array.indexOf('Digits') >= 0 ? 'Digits' : state.categories.array[0]; // TODO: show first tab
 
       /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
       liveapi.send({ ticks: state.proposal.symbol }).catch(function (err) { console.error(err); });
