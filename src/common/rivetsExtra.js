@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
+define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -35,36 +35,27 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
-            return value.charAt(0).toUpperCase() + value.slice(1);
+          return _.capitalize(value);
         },
         publish: function (value) {
-            return value.toLowerCase();
+          return value.toLowerCase();
         }
     };
     /* call toFixed on a fload number */
     rv.formatters['to-fixed'] = function (value, digits) {
-        digits = digits || 2;
-        return (value * 1).toFixed(digits);
-    }
-    /* rviets formatter to parse json values */
-    rv.formatters['json-parse'] = function (value) {
-        return JSON.parse(value);
+        return (value * 1).toFixed(digits || 2);
     }
     /* notify another function on property changes */
     rv.formatters['notify'] = function() {
         var args = [].slice.call(arguments, 0);
         var value = args[0];
         for (var i = 1; i < args.length ; ++i)
-            setTimeout(args[i].bind(this, value), 0);
+          _.defer(args[i],value);
         return value;
     }
     /* ternary operator (condition ? first : second) */
     rv.formatters['ternary'] = function(condition, first, second){
       return condition ? first : second;
-    }
-    /* prepend fomatter will use + perator to prepend (usallay a string) value */
-    rv.formatters.prepend = function(value, other){
-      return other + value;
     }
     /* formatter to add a currency symbol before the value */
     rv.formatters.currency = function(value, currency){
@@ -85,7 +76,7 @@ define(['jquery', 'rivets', 'jquery-ui'], function ($, rv) {
     rv.formatters.debounce = function(value, callback, timeout) {
         timeout = timeout || 250;
         clearTimeout(callback._timer_notify);
-        callback._timer_notify = setTimeout(callback.bind(this,value), timeout);
+        callback._timer_notify = setTimeout(callback.bind(undefined,value), timeout);
         return value;
     }
 
