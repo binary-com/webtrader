@@ -2,8 +2,8 @@
  * Created by amin on December 4, 2015.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
-  function($, liveapi, rv, html){
+define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
+  function(_, $, liveapi, rv, html){
 
     function register_ticks(state, passthrough){
       var digits_count = passthrough.digits_count * 1,

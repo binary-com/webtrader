@@ -140,7 +140,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           quote:'0'
         },
         proposal: {
-          symbol: available.first().underlying_symbol,
+          symbol: _(available).first().underlying_symbol,
           ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
 
           ask_price: "0.0",
