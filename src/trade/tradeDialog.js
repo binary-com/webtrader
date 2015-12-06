@@ -33,8 +33,8 @@
     }
 */
 
-define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
-    function ($, windows, rv, liveapi, html) {
+define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
+    function (_, $, windows, rv, liveapi, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var mapper = function(name) { return function(row) { return row[name]; }; };
     var filter = function(name,value) { return function(row) { return row[name] === value; }; };
@@ -42,22 +42,26 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
 
     function apply_fixes(available){
         /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
-        available.filter(filter('contract_category_display','Up/Down'))
-                 .filter(filter('barrier_category', 'euro_atm'))
-                 .filter(filter('contract_display', 'higher'))
-                 .forEach(replacer('contract_display','rise'));
-        available.filter(filter('contract_category_display','Up/Down'))
-                 .filter(filter('barrier_category', 'euro_atm'))
-                 .filter(filter('contract_display', 'lower'))
-                 .forEach(replacer('contract_display','fall'));
+
+        _(available).filter({
+          'contract_category_display': 'Up/Down',
+          'barrier_category' : 'euro_atm',
+          'contract_display' : 'higher'
+        }).each(replacer('contract_display', 'rise')).run();
+
+        _(available).filter({
+          'contract_category_display':'Up/Down',
+          'barrier_category': 'euro_atm',
+          'contract_display': 'lower',
+        }).each(replacer('contract_display','fall')).run();
         /* fix for server side api, returning two different contract_category_displays for In/Out */
-        available.filter(filter('contract_category_display', 'Stays In/Goes Out'))
-                 .forEach(replacer('contract_category_display', 'In/Out'));
-        available.filter(filter('contract_category_display', 'Ends In/Out'))
-                 .forEach(replacer('contract_category_display', 'In/Out'));
+        _(available).filter('contract_category_display', 'Stays In/Goes Out')
+                    .each(replacer('contract_category_display', 'In/Out')).run();
+        _(available).filter('contract_category_display', 'Ends In/Out')
+                    .each(replacer('contract_category_display', 'In/Out')).run();
         /* fix for websocket having a useless barrier value for digits */
-        available.filter(filter('contract_category_display', 'Digits'))
-                 .forEach(replacer('barriers', 0));
+        _(available).filter('contract_category_display', 'Digits')
+                    .each(replacer('barriers', 0)).run();
         /* fix for contract_display text in In/Out menue */
         available.filter(filter('contract_display', 'ends outside')).forEach(replacer('contract_display', 'ends out'));
         available.filter(filter('contract_display', 'ends between')).forEach(replacer('contract_display', 'ends in'));
@@ -427,8 +431,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_we
                state.purchase.loading = false;
                $.growl.error({ message: err.message });
                console.error(err);
-             })
-      }
+             });
+      };
       state.categories.array = available.map(mapper('contract_category_display')).unique();
       state.categories.value = state.categories.array.indexOf('Digits') >= 0 ? 'Digits' : state.categories.array[0]; // TODO: show first tab
 

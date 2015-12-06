@@ -26,7 +26,8 @@ requirejs.config({
         'rivets': 'lib/rivets/dist/rivets.min',
         'sightglass': 'lib/sightglass/index',
         'timepicker': 'lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker',
-        'js-cookie':'lib/js-cookie/src/js.cookie'
+        'js-cookie':'lib/js-cookie/src/js.cookie',
+        'lodash': 'lib/lodash/lodash.min'
     },
     map: {
         '*': {
@@ -40,7 +41,7 @@ requirejs.config({
           deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
         },
         "timepicker": {
-            deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']   
+            deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']
         },
         "jquery-ui": {
             deps: ["jquery"]
@@ -92,7 +93,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
-       
+
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
     require(['jquery-ui', 'highstock', 'lokijs']);
 
@@ -126,15 +127,15 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 function (assetIndex) {
                     var elem = $navMenu.find("a.assetIndex");
                     assetIndex.init(elem);
-                    elem.click(); 
+                    elem.click();
                 });
 
-            //Register async loading of portfolio window 
+            //Register async loading of portfolio window
             load_ondemand($navMenu.find("a.portfolio"), 'click', 'loading portfolio ...', 'portfolio/portfolio',
                 function (portfolio) {
                     var elem = $navMenu.find("a.portfolio");
                     portfolio.init(elem);
-                    elem.click(); 
+                    elem.click();
                 });
 
             //Register async loading of window profit-table
@@ -142,7 +143,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 function (profitTable) {
                     var elem = $navMenu.find("a.profitTable");
                     profitTable.init(elem);
-                    elem.click(); 
+                    elem.click();
                 });
 
             //Register async loading of statement dialog
@@ -150,7 +151,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 function (statement) {
                     var elem = $navMenu.find("a.statement");
                     statement.init(elem);
-                    elem.click(); 
+                    elem.click();
                 });
         }
 

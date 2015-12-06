@@ -41,6 +41,7 @@
     "require-css": "~0.1.8",
     "text": "~2.0.14",
     "rivets": "~0.8.1",
-    "binary-com-jquery-ui-timepicker": "*"
+    "binary-com-jquery-ui-timepicker": "*",
+    "lodash": "~3.10.1"
   }
 }
