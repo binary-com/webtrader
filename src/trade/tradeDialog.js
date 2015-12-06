@@ -36,8 +36,6 @@
 define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
     function (_, $, windows, rv, liveapi, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
-    var mapper = function(name) { return function(row) { return row[name]; }; };
-    var filter = function(name,value) { return function(row) { return row[name] === value; }; };
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
 
     function apply_fixes(available){
@@ -317,15 +315,16 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
       state.barriers.update = function () {
         var unit = state.duration_unit.value;
-        var expiry_type = ['seconds', 'minutes', 'hours'].contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
-        var barriers = available.filter(filter('contract_category_display', state.categories.value))
-        .filter(filter('contract_display', state.category_displays.selected))
-        .filter(filter('expiry_type',expiry_type))
-        .filter(function (r) { return r.barriers >= 1; })
-        .first();
+        var expiry_type = _(['seconds', 'minutes', 'hours']).contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+        var barriers = _(available).filter({
+          'contract_category_display': state.categories.value,
+          'contract_display': state.category_displays.selected,
+          'expiry_type':expiry_type
+        }).filter(function (r) { return r.barriers >= 1; }).first();
+
         state.barriers.barrier_count = barriers ? barriers.barriers : 0;
         if (!barriers)
-        return;
+          return;
 
         state.barriers.barrier = (barriers.barrier || '+0.00000') * 1;
         state.barriers.high_barrier = '' + (barriers.high_barrier || '+0.00000') * 1;
@@ -334,21 +333,26 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
       state.basis.update_limit = function () {
         var basis = state.basis;
-        var limit = available.filter(filter('contract_category_display', state.categories.value))
-        .filter(filter('contract_display', state.category_displays.selected))
-        .first();
+        var limit = _(available).filter({
+          'contract_category_display': state.categories.value,
+          'contract_display': state.category_displays.selected
+        }).first();
+
         limit = (limit && limit.payout_limit) || null;
-        basis.limit = limit ? (limit | 0) : null;
-        basis.limit && (basis.amount = Math.min(basis.amount, basis.limit));
+        basis.limit = limit ? (limit * 1) : null;
+        if(basis.limit) {
+          basis.amount = Math.min(basis.amount, basis.limit);
+        }
       };
 
       state.proposal.onchange = function () {
         var unit = state.duration_unit.value;
-        var expiry_type = ['seconds', 'minutes', 'hours'].contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
-        var row = available.filter(filter('contract_category_display', state.categories.value))
-        .filter(filter('contract_display', state.category_displays.selected))
-        .filter(filter('expiry_type', expiry_type))
-        .first();
+        var expiry_type = _(['seconds', 'minutes', 'hours']).contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+        var row = _(available).filter({
+          'contract_category_display': state.categories.value,
+          'contract_display': state.category_displays.selected,
+          'expiry_type': expiry_type
+        }).first();
         var request = {
           proposal: 1,
           amount: state.basis.amount, /* Proposed payout or stake value */
@@ -373,7 +377,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         }
         /* set value for duration or date_expiry */
         if (state.duration.value === 'Duration') {
-          request.duration_unit = state.duration_unit.value.first(); //  (d|h|m|s|t), Duration unit is s(seconds), m(minutes), h(hours), d(days), t(ticks)
+          request.duration_unit = _(state.duration_unit.value).first(); //  (d|h|m|s|t), Duration unit is s(seconds), m(minutes), h(hours), d(days), t(ticks)
           request.duration = state.duration_count.value * 1;
         }
         else {
@@ -424,7 +428,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
         // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!
         liveapi.send({
-                buy: state.proposal.ids.last(),
+                buy: _(state.proposal.ids).last(),
                 price: state.proposal.ask_price,
                 passthrough: passthrough
              })
@@ -440,8 +444,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
                console.error(err);
              });
       };
-      state.categories.array = available.map(mapper('contract_category_display')).unique();
-      state.categories.value = state.categories.array.indexOf('Digits') >= 0 ? 'Digits' : state.categories.array[0]; // TODO: show first tab
+      state.categories.array = _(available).map('contract_category_display').uniq().run();
+      state.categories.value = _(state.categories).contains('Digits') ? 'Digits' : _(state.categories.array).first(); // TODO: show first tab
 
       /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
       liveapi.send({ ticks: state.proposal.symbol }).catch(function (err) { console.error(err); });
