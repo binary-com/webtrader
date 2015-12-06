@@ -63,16 +63,16 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         _(available).filter('contract_category_display', 'Digits')
                     .each(replacer('barriers', 0)).run();
         /* fix for contract_display text in In/Out menue */
-        available.filter(filter('contract_display', 'ends outside')).forEach(replacer('contract_display', 'ends out'));
-        available.filter(filter('contract_display', 'ends between')).forEach(replacer('contract_display', 'ends in'));
-        available.filter(filter('contract_display', 'stays between')).forEach(replacer('contract_display', 'stays in'));
-        available.filter(filter('contract_display', 'goes outside')).forEach(replacer('contract_display', 'goes out'));
-        available.filter(filter('contract_display', 'touches')).forEach(replacer('contract_display', 'touch'));
-        available.filter(filter('contract_display', 'does not touch')).forEach(replacer('contract_display', 'no touch'));
+        _(available).filter('contract_display', 'ends outside').each(replacer('contract_display', 'ends out')).run();
+        _(available).filter('contract_display', 'ends between').each(replacer('contract_display', 'ends in')).run();
+        _(available).filter('contract_display', 'stays between').each(replacer('contract_display', 'stays in')).run();
+        _(available).filter('contract_display', 'goes outside').each(replacer('contract_display', 'goes out')).run();
+        _(available).filter('contract_display', 'touches').each(replacer('contract_display', 'touch')).run();
+        _(available).filter('contract_display', 'does not touch').each(replacer('contract_display', 'no touch')).run();
         /* Digits odd/even/over/under are not yet implemented in beta trading interface ignore them for now, TODO: implement them */
-        available = available.filter(function (r) { return !['odd', 'even', 'over', 'under'].contains(r.contract_display); });
+        available = _(available).reject(function (r) { return _(['odd', 'even', 'over', 'under']).contains(r.contract_display); }).run();
         /* Spreads are not yet implemented, ignore them for now, TODO: itempement Spreads */
-        available = available.filter(function (r) { return r.contract_category_display !== 'Spreads'; });
+        available = _(available).reject('contract_category_display', 'Spreads').run();
         return available;
     }
 
@@ -176,11 +176,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
       state.categories.update = function () {
         var name = state.categories.value;
-        state.category_displays.array = available
-        .filter(filter('contract_category_display', name))
-        .map(mapper('contract_display'))
-        .unique();
-        state.category_displays.selected = state.category_displays.array[0];
+        state.category_displays.array = _(available).filter('contract_category_display', name).map('contract_display').uniq().run();
+        state.category_displays.selected = _.first(state.category_displays.array);
       };
 
       state.category_displays.onclick = function (e) {
@@ -188,19 +185,21 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       };
 
       state.date_start.update = function () {
-        var forward_starting_options = available.filter(filter('contract_category_display', state.categories.value))
-        .filter(filter('contract_display', state.category_displays.selected))
-        .filter(filter('start_type', 'forward')).first();
+        var forward_starting_options = _(available).filter({
+          'contract_category_display': state.categories.value,
+          'contract_display': state.category_displays.selected,
+          'start_type': 'forward'
+        }).first();
+
         if (!forward_starting_options) {
-          state.date_start.visible = false;
-          state.date_start.array = [];
-          state.date_start.value = 'now';
+          _.assign(state.date_start, { visible: false, array: [], value: 'now' });
           return;
         };
+
         forward_starting_options = forward_starting_options.forward_starting_options
         var model = state.date_start;
         var array = [{ text: 'Now', value: 'now' }];
-        forward_starting_options.forEach(function (row) {
+        _.each(forward_starting_options, function (row) {
           var step = 5 * 60; // 5 minutes step
           var from = Math.ceil(Math.max(new Date().getTime() / 1000, row.open) / step) * step;
           to = row.close;
@@ -212,9 +211,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             array.push({ text: text, value: epoch });
           }
         });
-        state.date_start.value = 'now';
-        state.date_start.array = array;
-        state.date_start.visible = true;
+        _.assign(state.date_start, { value: 'now', array: array, visible: true });
       };
 
       state.date_expiry.update = function () {
@@ -232,23 +229,36 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
       state.duration.update = function () {
         var category = state.categories.value;
-        if (["Up/Down", "In/Out", "Touch/No Touch"].contains(category))
-        state.duration.array.length !== 2 && (state.duration.array = ['Duration', 'End Time'])
+        if (_(["Up/Down", "In/Out", "Touch/No Touch"]).contains(category)) {
+          if(state.duration.array.length !== 2)
+            state.duration.array = ['Duration', 'End Time'];
+        }
         else {
-          state.duration.value !== 'Duration' && (state.duration.value = 'Duration');
-          state.duration.array.length !== 1 && (state.duration.array = ['Duration'])
+          state.duration.value = 'Duration';
+          if(state.duration.array.length !== 1)
+            state.duration.array = ['Duration'];
         }
       };
 
       state.duration_unit.update = function () {
         var start_type = state.date_start.value !== 'now' ? 'forward' : 'spot';
-        var durations = available.filter(filter('contract_category_display', state.categories.value))
-        .filter(filter('contract_display', state.category_displays.selected))
-        .filter(filter('start_type', start_type))
-        .map(function (r) { return { min: r.min_contract_duration, max: r.max_contract_duration, type: r.expiry_type }; });
+
+        var durations = _(available).filter({
+          'contract_category_display': state.categories.value,
+          'contract_display': state.category_displays.selected,
+          'start_type': start_type
+        })
+        .map(function (r) {
+          return {
+            min: r.min_contract_duration,
+            max: r.max_contract_duration,
+            type: r.expiry_type
+          }
+        }).run();
+
         var array = [];
-        durations.forEach(function (d) {
-          if (['tick', 'daily'].contains(d.type)) {
+        _.each(durations, function (d) {
+          if (_(['tick', 'daily']).contains(d.type)) {
             array.push({
               min: (d.min + '').replace('d', '') | 0,
               max: (d.max + '').replace('d', '') | 0,
@@ -258,31 +268,28 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           }
           /* fix intraday duration intervals */
           var min = d.min.replace('s', '').replace('m', ''),
-          max = d.max.replace('s', '').replace('m', '').replace('d', '');
+              max = d.max.replace('s', '').replace('m', '').replace('d', '');
+          var min_unit = _(d.min).last(),
+              max_unit = _(d.max).last();
 
-          min *= { 's': 1, 'm': 60 }[d.min.last()];                 // convert to seconds
-          max *= { 's': 1, 'm': 60, 'd': 3600 * 24 }[d.max.last()];
+          min *= { 's': 1, 'm': 60 }[min_unit];                 // convert to seconds
+          max *= { 's': 1, 'm': 60, 'd': 3600 * 24 }[max_unit];
 
-          's' === d.min.last() && array.push({
-            min: min,
-            max: max,
-            type: 'seconds'
-          });
-          ['s', 'm'].contains(d.min.last()) && max >= 60 && array.push({
-            min: Math.max(min / 60, 1),
-            max: max / 60,
-            type: 'minutes'
-          });
-          ['s', 'm'].contains(d.min.last()) && max >= 3600 && array.push({
-            min: Math.max(min / 3600, 1),
-            max: max / 3600,
-            type: 'hours'
-          });
+          if('s' === min_unit) {
+            array.push({ min: min, max: max, type: 'seconds' });
+          }
+          if(_(['s', 'm']).contains(min_unit) && max >= 60) {
+            array.push({ min: Math.max(min / 60, 1), max: max / 60, type: 'minutes' });
+          }
+          if(_(['s', 'm']).contains(min_unit) && max >= 3600) {
+            array.push({ min: Math.max(min / 3600, 1), max: max / 3600, type: 'hours' });
+          }
         });
+
         array.sort(function (r1, r2) {
           var dict = { 'ticks': 0, 'seconds': 1, 'minutes': 2, 'hours': 3, 'days': 4 };
           return dict[r1.type] - dict[r2.type];
-        })
+        });
 
         if (!array.length) {
           state.barriers.update();
@@ -290,17 +297,17 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         }
 
         state.duration_unit.array = array;
-        if (!array.map(mapper('type')).contains(state.duration_unit.value))
-        state.duration_unit.value = array.first().type;
-        else {
-          /* manual notify 'duration_count' and 'barriers' to update themselves */
+        if (!_(array).map('type').contains(state.duration_unit.value)) {
+          state.duration_unit.value = _(array).first().type;
+        }
+        else { /* manualy notify 'duration_count' and 'barriers' to update themselves */
           state.duration_count.update();
           state.barriers.update();
         }
       };
 
       state.duration_count.update = function () {
-        var range = state.duration_unit.array.filter(filter('type', state.duration_unit.value)).first();
+        var range = _(state.duration_unit.array).filter('type', state.duration_unit.value).first();
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;
