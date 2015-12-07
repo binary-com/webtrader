@@ -35,7 +35,8 @@ define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'],
 										instrumentCode : instrumentCode,
 										instrumentName : instrumentName,
 										timePeriod : timePeriod,
-										type : type
+										type : type,
+										delayAmount : instrumentObject[0].delay_amount || 0
 									});
 	                            });
 	                        } else {
