@@ -79,19 +79,19 @@ define(['jquery'], function ($) {
         },
 
         extractPriceForAppliedTO: function (appliedTO, data, index) {
-            var price = 0;
+            var price = 0.0;
             switch (appliedTO) {
                 case indicatorBase.OPEN :
-                    price += data[index].open || data[index][1];
+                    price = data[index].open || data[index][1];
                     break;
                 case indicatorBase.HIGH :
-                    price += data[index].high || data[index][2];
+                    price = data[index].high || data[index][2];
                     break;
                 case  indicatorBase.LOW :
-                    price += data[index].low || data[index][3];
+                    price = data[index].low || data[index][3];
                     break;
                 case indicatorBase.CLOSE :
-                    price += data[index].close || data[index][4];
+                    price = data[index].close || data[index][4];
                     break;
             }
             return price;

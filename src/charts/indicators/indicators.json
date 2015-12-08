@@ -207,6 +207,13 @@
     "long_display_name": "Bollinger Band",
     "short_display_name": "BLLNGRBND",
     "ohlcOnly" : false
+  },
+
+  "cdlshootingstar": {
+    "id": "cdlshootingstar",
+    "long_display_name": "Shooting Star",
+    "short_display_name": "CDLSHOOTINGSTAR",
+    "ohlcOnly" : true
   }
 
 }
