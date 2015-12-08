@@ -577,11 +577,11 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 					            //Calculate Uper Band - End
 					            if (isPointUpdate && bllngrbndUprSeriesMap[key].options.data.length >= data.length)
                                 {
-                                	bllngrbndUprSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), uprBndVal]);
+                                	bllngrbndUprSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(uprBndVal,4)]);
                                 }
                                 else
                                 {
-                                    bllngrbndUprSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), uprBndVal]);
+                                    bllngrbndUprSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), , indicatorBase.toFixed(uprBndVal,4)]);
                                 }
                             }
                         }
@@ -612,11 +612,11 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 					            //Calculate Lower Band - End
 					            if (isPointUpdate && bllngrbndLwrSeriesMap[key].options.data.length >= data.length)
                                 {
-                                	bllngrbndLwrSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), lwrBndVal]);
+                                	bllngrbndLwrSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(lwrBndVal,4)]);
                                 }
                                 else
                                 {
-                                    bllngrbndLwrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), lwrBndVal]);
+                                    bllngrbndLwrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(lwrBndVal,4)]);
                                 }
                             }
                         }
