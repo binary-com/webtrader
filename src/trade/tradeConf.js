@@ -28,7 +28,6 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
           symbol = passthrough.symbol,
           purchase_epoch = state.buy.purchase_time * 1;
 
-      state.ticks.active = true;
       liveapi.events.on('tick', function (data) {
           if (digits_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
             return;
@@ -66,7 +65,6 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             category: passthrough.category,
             category_display: passthrough.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
-            active: false,
         },
         arrow: { }
       };

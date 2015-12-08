@@ -19,6 +19,15 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
     };
 
     /************************************* formatters ***************************************/
+    /* rivets formatter to check if a value is one of the given arguments */
+    rv.formatters['one-of'] = function() {
+        var args = [].slice.call(arguments, 0),
+            value = args[0];
+        for (var i = 1; i < args.length ; ++i)
+          if(args[i] === value)
+            return true;
+        return false;
+    }
     /* rivets formatter to check equallity of two values */
     rv.formatters.eq = function (value, other) {
         return value === other;

@@ -34,7 +34,7 @@
   </ul>
 
   <ul class='view-row'
-    rv-show='ticks.active | eq false'>
+    rv-unless="ticks.category | one-of 'Digits' 'Up/Down'">
     <li class="view">
       View
     </li>
@@ -47,7 +47,7 @@
       rv-auto-scroll-bottom="ticks.array"
       rv-class-won="ticks.status | notify title.update | eq 'won'"
       rv-class-lost="ticks.status | eq 'lost'"
-      rv-show="ticks.active">
+      rv-if="ticks.category | eq 'Digits'">
       <li rv-each-row="ticks.array">
           <span> Tick {row.number} </span>
           <span>{row.epoch | utc-time}</span>

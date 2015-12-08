@@ -68,13 +68,15 @@
 }
 .trade-conf .digits-row {
   margin-top: 15px;
-  max-height: 108px;
-  padding: 5px 0;
+  max-height: 100px;
+  padding:0 0 5px 0;
   overflow-y: hidden;
+  display: block;
 }
 .trade-conf .digits-row li {
-    height: 18px;
-    display: flex;
+  height: 18px;
+  display: flex;
+  padding-top: 2px;
 }
 .trade-conf .digits-row li span {
   width: 33%;
