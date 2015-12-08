@@ -424,7 +424,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         /* pass data which is needed to show live tick purchase results */
         if(_(['Digits','Up/Down']).contains(passthrough.category) && state.duration_unit.value === 'ticks'){
           passthrough.digits_value = state.digits.value;
-          passthrough.digits_count = state.duration_count.value;
+          passthrough.tick_count = state.duration_count.value;
         }
 
         // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!
@@ -446,7 +446,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
              });
       };
       state.categories.array = _(available).map('contract_category_display').uniq().run();
-      state.categories.value = _(state.categories.array).contains('Digits') ? 'Digits' : _(state.categories.array).first(); // TODO: show first tab
+      state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 
       /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
       liveapi.send({ ticks: state.proposal.symbol }).catch(function (err) { console.error(err); });
@@ -480,9 +480,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         var root = $(html);
         var available = apply_fixes(contracts_for.available);
         var state = init_state(available,root);
-
-        /* TODO: development only! */
-        window.state = state; window.available = available; window.root = root;
 
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,

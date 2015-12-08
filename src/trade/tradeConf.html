@@ -54,6 +54,13 @@
           <span rv-html="row.quote | bold-last-character"></span>
       </li>
   </ul>
+  <div class='tick-chart'
+       rv-if="ticks.category | eq 'Up/Down'"
+       rv-tick-chart='ticks.array'
+       rv-tick-count='ticks.tick_count'
+       width='350'
+       height='130'>
+  </div>
 
   <ul class='balance-row'>
     <li>

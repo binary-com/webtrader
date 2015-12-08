@@ -5,6 +5,53 @@
 define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
   function(_, $, liveapi, rv, html){
 
+    rv.binders['tick-chart'] = {
+      bind: function(el) {
+          console.warn('rv-tick-chart.bind()',el);
+          this.chart = new Highcharts.Chart({
+            chart: {
+                type: 'line',
+                renderTo: el,
+                width: (el.getAttribute('width') || 350)*1,
+                height: (el.getAttribute('height') || 120)*1,
+                //events: { load: $self.plot(config.plot_from, config.plot_to) },
+            },
+            credits: {enabled: false},
+            tooltip: {
+                formatter: function () {
+                    return 'hello from formatter';
+                    //var that = this;
+                    //var new_decimal = that.y.toString().split('.')[1].length;
+                    //var decimal_places = Math.max( $self.display_decimal, new_decimal);
+                    //$self.display_decimal = decimal_places;
+                    //var new_y = that.y.toFixed(decimal_places);
+                    //var mom = moment.utc($self.applicable_ticks[that.x].epoch*1000).format("dddd, MMM D, HH:mm:ss");
+                    //return mom + "<br/>" + $self.display_symbol + " " + new_y;
+                },
+            },
+            xAxis: {
+                type: 'linear',
+                min: 0,
+                max: el.getAttribute('tick-count')*1 + 1,
+                labels: { enabled: false, }
+            },
+            yAxis: {
+                labels: {
+                    align: 'left',
+                    x: 0,
+                },
+                title: ''
+            },
+            series: [{
+                data: [],
+            }],
+            title: '',
+            exporting: {enabled: false, enableImages: false},
+            legend: {enabled: false},
+        });
+      } /* end of => bind() */
+    }
+
     /* called when the last tick have been received for 'Digits' or 'Up/Down' contracts */
     function ticks_done(state, last_tick) {
       var category = state.ticks.category,
@@ -24,17 +71,17 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
     }
 
     function register_ticks(state, passthrough){
-      var digits_count = passthrough.digits_count * 1,
+      var tick_count = passthrough.tick_count * 1,
           symbol = passthrough.symbol,
           purchase_epoch = state.buy.purchase_time * 1;
 
       liveapi.events.on('tick', function (data) {
-          if (digits_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
+          if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
             return;
           var tick = data.tick;
           state.ticks.array.push({quote: tick.quote, epoch: tick.epoch, number: state.ticks.array.length+1 });
-          --digits_count;
-          if(digits_count === 0) {
+          --tick_count;
+          if(tick_count === 0) {
               ticks_done(state, _.last(state.ticks.array));
           }
       });
@@ -61,6 +108,7 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
         },
         ticks: {
             array: [],
+            tick_count: passthrough.tick_count,
             value: passthrough.digits_value * 1 || '0', // last digit value selected by the user
             category: passthrough.category,
             category_display: passthrough.category_display,
@@ -87,6 +135,9 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
 
       var view = rv.bind(root[0], state)
       show_callback(root);
+
+      /* TODO: development only! */
+      window.state = state;
     }
 
     return {
