@@ -422,9 +422,10 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             category_display: state.category_displays.selected,
         };
         /* pass data which is needed to show live tick purchase results */
-        if(_(['Digits','Up/Down']).contains(passthrough.category) && state.duration_unit.value === 'ticks'){
-          passthrough.digits_value = state.digits.value;
-          passthrough.tick_count = state.duration_count.value;
+        if(_(['Digits','Up/Down']).contains(passthrough.category) && state.duration_unit.value === 'ticks') {
+            passthrough.digits_value = state.digits.value;
+            passthrough.tick_count = state.duration_count.value*1;
+            passthrough.tick_count += passthrough.category == 'Up/Down' ? 1 : 0; /* Up/Down trades need one extra tick for entry spot */
         }
 
         // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!

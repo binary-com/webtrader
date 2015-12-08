@@ -8,15 +8,17 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
     rv.binders['tick-chart'] = {
       bind: function(el) {
           console.warn('rv-tick-chart.bind()',el);
-          this.chart = new Highcharts.Chart({
+          el.chart = new Highcharts.Chart({
+            title: '',
+            credits: {enabled: false},
             chart: {
                 type: 'line',
                 renderTo: el,
+                backgroundColor: null,
                 width: (el.getAttribute('width') || 350)*1,
                 height: (el.getAttribute('height') || 120)*1,
                 //events: { load: $self.plot(config.plot_from, config.plot_to) },
             },
-            credits: {enabled: false},
             tooltip: {
                 formatter: function () {
                     return 'hello from formatter';
@@ -32,24 +34,32 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             xAxis: {
                 type: 'linear',
                 min: 0,
-                max: el.getAttribute('tick-count')*1 + 1,
+                max: el.getAttribute('tick-count')*1,
                 labels: { enabled: false, }
             },
             yAxis: {
-                labels: {
-                    align: 'left',
-                    x: 0,
-                },
+                labels: { align: 'left', x: 0, },
                 title: ''
             },
-            series: [{
-                data: [],
-            }],
-            title: '',
+            series: [{ data: [] }],
             exporting: {enabled: false, enableImages: false},
             legend: {enabled: false},
         });
-      } /* end of => bind() */
+      }, /* end of => bind() */
+      routine: function(el, ticks){
+        var index = ticks.length;
+        if(index == 0) return;
+        var chart = el.chart;
+        var tick = _.last(ticks);
+        chart.xAxis[0].addPlotLine({
+           value: tick.quote*1,
+           id: 'tick_' + index,
+           label: {text: 'tick_' + index},
+           color: '#e98024',
+           width: 2,
+        });
+        console.warn(tick);
+      }
     }
 
     /* called when the last tick have been received for 'Digits' or 'Up/Down' contracts */
