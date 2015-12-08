@@ -70,6 +70,18 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
       };
       return (currency_symbols[currency] || currency) + value;
     }
+    /* formatter to convert epoch to utc-time in hh:mm:ss format */
+    rv.formatters['utc-time'] = function(epoch){
+      var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
+      return ("00" + d.getUTCHours()).slice(-2) + ":" +
+             ("00" + d.getUTCMinutes()).slice(-2) + ":" +
+             ("00" + d.getUTCSeconds()).slice(-2);
+    }
+    /* formatter to bold last character */
+    rv.formatters['bold-last-character'] = function(str){
+      str = str + '';
+      return str.substring(0, str.length - 1) + '<strong>' + _.last(str) + '</strong>';
+    }
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
        As in "execute this function only if 100 milliseconds have passed without it being called." */
@@ -310,5 +322,12 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
       else $(el).removeAttr('disabled');
     }
 
+    /* formater to scroll to buttom automatically */
+    rv.binders['auto-scroll-bottom'] = {
+      priority: 91, /* run after native bindings */
+      routine: function(el) {
+        $(el).animate({ scrollTop: el.scrollHeight - $(el).height() }, 'slow');
+      }
+    }
     return rv;
 });

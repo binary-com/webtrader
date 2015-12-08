@@ -10,11 +10,12 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
           symbol = passthrough.symbol,
           purchase_epoch = state.buy.purchase_time * 1;
 
+      state.ticks.active = true;
       liveapi.events.on('tick', function (data) {
           if (digits_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
             return;
-          state.ticks.array.push(data.tick);
-          console.warn(state.ticks.array);
+          var tick = data.tick;
+          state.ticks.array.push({quote: tick.quote, epoch: tick.epoch, number: state.ticks.array.length+1 });
           --digits_count;
       });
     }
@@ -41,11 +42,13 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
         ticks: {
             array: [],
             value: passthrough.digits_value * 1 || '0', // last digit value selected by the user
+            category: passthrough.category,
+            active: false,
         },
         arrow: { }
       };
 
-      if(passthrough.category === 'Digits') {
+      if(_(['Digits','Up/Down']).contains(passthrough.category)) {
           register_ticks(state,passthrough);
       }
 

@@ -33,7 +33,8 @@
     </li>
   </ul>
 
-  <ul class='view-row'>
+  <ul class='view-row'
+    rv-show='ticks.active | eq false'>
     <li class="view">
       View
     </li>
@@ -42,11 +43,21 @@
     </li>
   </ul>
 
+  <ul class="digits-row"
+      rv-auto-scroll-bottom="ticks.array"
+      rv-show="ticks.active">
+      <li rv-each-row="ticks.array">
+          <span> Tick {row.number} </span>
+          <span>{row.epoch | utc-time}</span>
+          <span rv-html="row.quote | bold-last-character"></span>
+      </li>
+  </ul>
+
   <ul class='balance-row'>
     <li>
       <span> Account blance: </span>
-      <span rv-text='buy.currency' class="bold" />
-      <span rv-text='buy.balance_after | to-fixed 2' class="bold" />
+      <span class="bold">{buy.currency}</span>
+      <span class="bold">{buy.balance_after | to-fixed 2}</span>
     </li>
   </ul>
 </div>

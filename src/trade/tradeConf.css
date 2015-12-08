@@ -59,3 +59,16 @@
 .trade-conf .balance-row .bold {
     font-weight: bold;
 }
+
+.trade-conf .digits-row {
+  margin-top: 15px;
+  height: 108px;
+  overflow-y: hidden;
+}
+.trade-conf .digits-row li {
+    height: 18px;
+    display: flex;
+}
+.trade-conf .digits-row li span {
+  width: 33%;
+}
