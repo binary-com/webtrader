@@ -419,6 +419,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             currency: state.currency.value,
             symbol: state.proposal.symbol,
             category: state.categories.value,
+            category_display: state.category_displays.selected,
         };
         /* pass data which is needed to show live tick purchase results */
         if(_(['Digits','Up/Down']).contains(passthrough.category) && state.duration_unit.value === 'ticks'){

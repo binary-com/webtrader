@@ -60,9 +60,16 @@
     font-weight: bold;
 }
 
+.trade-conf .lost {
+  background: rgba(204, 0, 0, 0.098);
+}
+.trade-conf .won {
+  background: rgba(46, 136, 54, 0.196);
+}
 .trade-conf .digits-row {
   margin-top: 15px;
-  height: 108px;
+  max-height: 108px;
+  padding: 5px 0;
   overflow-y: hidden;
 }
 .trade-conf .digits-row li {

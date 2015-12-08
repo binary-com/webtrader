@@ -45,6 +45,8 @@
 
   <ul class="digits-row"
       rv-auto-scroll-bottom="ticks.array"
+      rv-class-won="ticks.status | notify title.update | eq 'won'"
+      rv-class-lost="ticks.status | eq 'lost'"
       rv-show="ticks.active">
       <li rv-each-row="ticks.array">
           <span> Tick {row.number} </span>

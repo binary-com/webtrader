@@ -5,6 +5,24 @@
 define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
   function(_, $, liveapi, rv, html){
 
+    /* called when the last tick have been received for 'Digits' or 'Up/Down' contracts */
+    function ticks_done(state, last_tick) {
+      var category = state.ticks.category,
+          display = state.ticks.category_display;
+      var css = {
+            Digits: {
+              matches: function(quote,expected) { return _.last(quote) === expected;},
+              differs: function(quote,expected) { return _.last(quote) !== expected;}
+            },
+            'Up/Down': {
+              rise: function(quote,expected) { return quote*1 > expected*1; },
+              fall: function(quote,expected) { return quote*1 < expected*1; }
+            }
+          };
+        /* set the css class */
+        state.ticks.status = css[category][display](last_tick.quote, state.ticks.digits_value) ? 'won' : 'lost';
+    }
+
     function register_ticks(state, passthrough){
       var digits_count = passthrough.digits_count * 1,
           symbol = passthrough.symbol,
@@ -17,6 +35,9 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
           var tick = data.tick;
           state.ticks.array.push({quote: tick.quote, epoch: tick.epoch, number: state.ticks.array.length+1 });
           --digits_count;
+          if(digits_count === 0) {
+              ticks_done(state, _.last(state.ticks.array));
+          }
       });
     }
 
@@ -43,9 +64,18 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             array: [],
             value: passthrough.digits_value * 1 || '0', // last digit value selected by the user
             category: passthrough.category,
+            category_display: passthrough.category_display,
+            status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
             active: false,
         },
         arrow: { }
+      };
+
+      state.title.update = function() {
+        state.title.text = { waiting: 'Contract Confirmation',
+                              won : 'This contract won',
+                              lost: 'This contract lost'
+                            }[state.ticks.status];
       };
 
       if(_(['Digits','Up/Down']).contains(passthrough.category)) {
