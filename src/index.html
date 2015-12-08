@@ -10,22 +10,14 @@
 </head>
 <body>
 	<script>
-      var affiliates = getParameterByName('affiliates') || false;
-      var gtm = getParameterByName('gtm') || true;
+      var affiliates = getParameterByName('affiliates') || 'false';
       var suffix = "";
       
-      if (affiliates && affiliates == 'true') {
-          suffix = '?affiliates=true&instrument=' + getParameterByName('instrument') + '	&timePeriod=' + getParameterByName('timePeriod');
+      if (affiliates === 'true') {
+          var url = window.location.href;
+          suffix = url.substring(url.indexOf('?')); //Pass all parameters
       }
       
-      if (gtm && gtm == 'false') {
-        if (suffix.length) {
-          suffix = suffix + '&gtm=false';
-        } else {
-          suffix = '?gtm=false';
-        }
-      }
-
       window.location.href = '<verrsion>/main.html' + suffix;
     </script>
 </body>

@@ -30,9 +30,56 @@ define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'],
 	                        if (validateParameters()) {
 	                            var instrumentCode = instrumentObject[0].symbol;
 	                            var instrumentName = instrumentObject[0].display_name;
-	                            require(["charts/charts"], function(charts) {
-	                                charts.drawChart("#" + newTabId + "_chart", instrumentCode, instrumentName, timePeriod, type);
-	                            });
+								var delayAmount = instrumentObject[0].delay_amount || 0;
+
+								/**
+								 * Additional requirements to render tick charts ONLY when following parameters are passed
+								 * 	startTime - optional
+								 * 	endTime - mandatory
+								 * 	entrySpotTime - mandatory
+								 * 	barrierPrice - mandatory
+								 */
+								var startTime = getParameterByName('startTime');
+								var endTime = getParameterByName('endTime');
+								var entrySpotTime = getParameterByName('entrySpotTime');
+								var barrierPrice = getParameterByName('barrierPrice');
+								if (endTime && entrySpotTime && barrierPrice) {
+
+									if (delayAmount > 0) {
+										$.growl.error({
+											message: "Delayed instruments cannot be rendered!"
+										});
+									} else if (timePeriod.toUpperCase() !== '1T') {
+										$.growl.error({
+											message: "Only tick charts are supported in this route!"
+										});
+									} else {
+										require(["charts/charts"], function(charts) {
+											charts.drawChart("#" + newTabId + "_chart", {
+												instrumentCode : instrumentCode,
+												instrumentName : instrumentName,
+												timePeriod : timePeriod,
+												type : type,
+												delayAmount : delayAmount
+											});
+										});
+									}
+
+								} else {
+
+									//Render in normal way
+									require(["charts/charts"], function(charts) {
+										charts.drawChart("#" + newTabId + "_chart", {
+											instrumentCode : instrumentCode,
+											instrumentName : instrumentName,
+											timePeriod : timePeriod,
+											type : type,
+											delayAmount : delayAmount
+										});
+									});
+
+								}
+
 	                        } else {
 	                            require(["jquery", "jquery-growl"], function($) {
 	                                $.growl.error({

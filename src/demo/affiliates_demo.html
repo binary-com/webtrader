@@ -7,7 +7,6 @@
     <meta http-equiv="Expires" content="0" />
     <title>Demo for affiliates to access Binary.com charts in IFRAME</title>
     <script src="../lib/jquery/dist/jquery.min.js"></script>
-    <script src="../lib/reconnectingWebsocket/reconnecting-websocket.min.js"></script>
 </head>
 <body>
 
@@ -40,7 +39,7 @@
     <script charset="utf-8">
         $(document).ready(function() {
 
-          var ws = new ReconnectingWebSocket("wss://www.binary.com/websockets/v3");
+          var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3");
           ws.debug = false;
           ws.timeoutInterval = 5400;
           ws.onopen = function(event) {
