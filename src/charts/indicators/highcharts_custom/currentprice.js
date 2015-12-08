@@ -39,11 +39,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     var uniqueID = '_' + new Date().getTime();
 
                     //If this series has data, add CurrentPrice series to the chart
-                    var data = this.options.data || [];
+                    var data = this.data || [];
                     if (data && data.length > 0)
                     {
-
-                        var chart = this.chart;
 
                         currentPriceOptionsMap[uniqueID] = currentPriceOptions;
 
@@ -119,6 +117,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 function addPlotLines(uniqueID, currentPriceOptions, price) {
                     var zIndex = this.chart.series.length + 1;
                     var isChange = false;
+                    if (!this.data[this.data.length - 1]) return;
+
                     if ($.isNumeric(this.data[this.data.length - 1].change)) {
                         isChange = true;
                         price = indicatorBase.toFixed(this.data[this.data.length - 1].change, 2);

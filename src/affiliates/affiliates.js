@@ -27,11 +27,17 @@ define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'],
 	                    var instrumentObject = getObjects(_instrumentJSON, 'symbol', instrumentCode);
 	                    if (instrumentObject && instrumentObject.length > 0 && instrumentObject[0].symbol && instrumentObject[0].display_name) {
 	                        // validate the parameters here.
-	                        if (validateParameters(instrumentObject[0])) {
+	                        if (validateParameters()) {
 	                            var instrumentCode = instrumentObject[0].symbol;
 	                            var instrumentName = instrumentObject[0].display_name;
 	                            require(["charts/charts"], function(charts) {
-	                                charts.drawChart("#" + newTabId + "_chart", instrumentCode, instrumentName, timePeriod, type);
+	                                charts.drawChart("#" + newTabId + "_chart", {
+										instrumentCode : instrumentCode,
+										instrumentName : instrumentName,
+										timePeriod : timePeriod,
+										type : type,
+										delayAmount : instrumentObject[0].delay_amount || 0
+									});
 	                            });
 	                        } else {
 	                            require(["jquery", "jquery-growl"], function($) {

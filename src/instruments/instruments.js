@@ -13,10 +13,15 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
             //validate the selection
             var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
             var internalSymbol = $("#instrumentsDialog").data("symbol");
-            //var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
+            var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
 
-            chartWindow.addNewWindow(internalSymbol, displaySymbol, timePeriodInStringFormat,
-                isTick(timePeriodInStringFormat) ? 'line' : 'candlestick');
+            chartWindow.addNewWindow({
+                instrumentCode : internalSymbol,
+                instrumentName : displaySymbol,
+                timePeriod : timePeriodInStringFormat,
+                type : isTick(timePeriodInStringFormat) ? 'line' : 'candlestick',
+                delayAmount : delayAmount
+            });
             $("#instrumentsDialog").dialog("close");
         });
 
