@@ -17,7 +17,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
             price = indicatorBase.extractPriceForAppliedTO(bllngrbndOptions.appliedTo, data, index);
         }
         else {
-            price = data[index].y ? data[index].y : data[index][1];
+            price = indicatorBase.extractPrice(data, index); 
         }
         return price;
     }
@@ -422,7 +422,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         bllngrbndMdlSeriesMap[mdlUniqueID] = chart.addSeries({
                             id: mdlUniqueID,
-                            name: 'BLLNGRBND(MDDLBND' + bllngrbndOptions.period  + ')',
+                            name: 'BLLNGRBND(MDDLBND ' + bllngrbndOptions.period +',' +bllngrbndOptions.devUp +','+bllngrbndOptions.devDn +',' + indicatorBase.appliedPriceString(bllngrbndOptions.appliedTo) + ')',
                             data: bllngrMiddleBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -437,7 +437,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         bllngrbndUprSeriesMap[uprUniqueID] = chart.addSeries({
                             id: uprUniqueID,
-                            name: 'BLLNGRBND(UPRBND' + bllngrbndOptions.period  + ')',
+                            name: 'BLLNGRBND(UPRBND ' + bllngrbndOptions.period +',' +bllngrbndOptions.devUp +','+bllngrbndOptions.devDn +',' + indicatorBase.appliedPriceString(bllngrbndOptions.appliedTo) + ')',
                             data: bllngrUperBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -453,7 +453,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         bllngrbndLwrSeriesMap[lwrUniqueID] = chart.addSeries({
                             id: lwrUniqueID,
-                            name: 'BLLNGRBND(LWRBND' + bllngrbndOptions.period  + ')',
+                            name: 'BLLNGRBND(LWRBND ' + bllngrbndOptions.period +',' +bllngrbndOptions.devUp +','+bllngrbndOptions.devDn +',' + indicatorBase.appliedPriceString(bllngrbndOptions.appliedTo) + ')',
                             data: bllngrLowerBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
