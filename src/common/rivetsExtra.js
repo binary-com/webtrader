@@ -331,11 +331,19 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
       else $(el).removeAttr('disabled');
     }
 
-    /* formater to scroll to buttom automatically */
+    /* binder to scroll to buttom automatically */
     rv.binders['auto-scroll-bottom'] = {
       priority: 91, /* run after native bindings */
       routine: function(el) {
         $(el).animate({ scrollTop: el.scrollHeight - $(el).height() }, 'slow');
+      }
+    }
+
+    /* binder with high priority to apply attributes first */
+    rv.binders['attr-*'] = {
+      priority: 10*1000,
+      routine: function(el,value){
+        el.setAttribute(this.args[0],value);
       }
     }
     return rv;

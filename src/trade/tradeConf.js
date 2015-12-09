@@ -6,6 +6,7 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
   function(_, $, liveapi, rv, html){
 
     rv.binders['tick-chart'] = {
+      priority: 65, /* a low priority to apply last */
       bind: function(el) {
           console.warn('rv-tick-chart.bind()',el);
           el.chart = new Highcharts.Chart({
@@ -14,10 +15,9 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             chart: {
                 type: 'line',
                 renderTo: el,
-                backgroundColor: null,
+                // backgroundColor: null,
                 width: (el.getAttribute('width') || 350)*1,
                 height: (el.getAttribute('height') || 120)*1,
-                //events: { load: $self.plot(config.plot_from, config.plot_to) },
             },
             tooltip: {
                 formatter: function () {
@@ -33,7 +33,7 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             },
             xAxis: {
                 type: 'linear',
-                min: 0,
+                min: 1,
                 max: el.getAttribute('tick-count')*1,
                 labels: { enabled: false, }
             },
@@ -45,20 +45,27 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             exporting: {enabled: false, enableImages: false},
             legend: {enabled: false},
         });
+        console.warn(el.getAttribute('tick-count')*1);
       }, /* end of => bind() */
       routine: function(el, ticks){
+        function addPlotLineX (chart, options){
+          chart.xAxis[0].addPlotLine({
+             value: options.value,
+             id: options.id || JSON.stringify(options),
+             label: {text: options.label || 'label'},
+             color: options.color || '#e98024',
+             width: options.width || 2,
+          });
+        };
         var index = ticks.length;
         if(index == 0) return;
-        var chart = el.chart;
         var tick = _.last(ticks);
-        chart.xAxis[0].addPlotLine({
-           value: tick.quote*1,
-           id: 'tick_' + index,
-           label: {text: 'tick_' + index},
-           color: '#e98024',
-           width: 2,
-        });
-        console.warn(tick);
+        console.warn([index, tick.quote*1]);
+        el.chart.series[0].addPoint([index, tick.quote*1]);
+
+        if(index === 1) addPlotLineX(el.chart, {value: index, label: 'Entry Spot'});
+        if(index === el.getAttribute('tick-count')*1) addPlotLineX(el.chart, {value:index, label: 'Exit Spot'});
+
       }
     }
 
