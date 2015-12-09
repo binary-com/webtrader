@@ -71,8 +71,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                             require(['charts/indicators/highcharts_custom/sar'], function ( sar ) {
                                 sar.init();
                                 var options = {
-                                    acceleration : parseInt($html.find("#sar_acceleration").val()),
-                                    maximum : parseInt($html.find("#sar_maximum").val()),
+                                    acceleration :  parseFloat($html.find("#sar_acceleration").val()),
+                                    maximum :  parseFloat($html.find("#sar_maximum").val()),
                                     stroke : defaultStrokeColor,
                                     strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
                                     dashStyle : 'Dot'
