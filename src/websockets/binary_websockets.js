@@ -256,6 +256,10 @@ define(['jquery'], function ($) {
                     return send_authenticated_request(data);
                 });
             return send_request(data);
+        },
+        /* whether currenct session is authenticated or not */
+        is_authenticated: function () {
+          return is_authenitcated_session;
         }
     }
     return api;

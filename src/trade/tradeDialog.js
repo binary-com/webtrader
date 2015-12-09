@@ -438,22 +438,39 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             passthrough.tick_count += passthrough.category == 'Up/Down' ? 1 : 0; /* Up/Down trades need one extra tick for entry spot */
         }
 
-        // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!
-        liveapi.send({
-                buy: _(state.proposal.ids).last(),
-                price: state.proposal.ask_price,
-                passthrough: passthrough
-             })
-             .then(function(data){
-                require(['trade/tradeConf'], function(tradeConf){
-                    tradeConf.init(data, show, hide);
-                });
-             })
-             .catch(function(err){
-               state.purchase.loading = false;
-               $.growl.error({ message: err.message });
-               console.error(err);
-             });
+        // manually check to see if the user is authenticated or not,
+        // we should update state.currency from user profile first (not everyone is using USD)
+        if(!liveapi.is_authenticated()) {
+            liveapi.cached
+              .authorize()
+              .then(function(data){
+                state.currency.array = [data.authorize.currency];
+                state.currency.value = state.currency.value;
+                $.growl.notice({ message: 'You are now loged in' });
+                state.purchase.loading = false;
+              })
+              .catch(function(err){
+                $.growl.error({ message: err.message });
+                state.purchase.loading = false;
+              });
+        }
+        else {
+            liveapi.send({
+                  buy: _(state.proposal.ids).last(),
+                  price: state.proposal.ask_price,
+                  passthrough: passthrough
+               })
+               .then(function(data){
+                  require(['trade/tradeConf'], function(tradeConf){
+                      tradeConf.init(data, show, hide);
+                  });
+               })
+               .catch(function(err){
+                 state.purchase.loading = false;
+                 $.growl.error({ message: err.message });
+                 console.error(err);
+               });
+       }
       };
 
       state.categories.array = _(available).map('contract_category_display').uniq().run();
