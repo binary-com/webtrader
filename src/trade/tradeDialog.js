@@ -439,10 +439,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         }
 
         // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!
-        var proposal_id = _(state.proposal.ids).last();
-        state.proposal.ids = _.initial(state.proposal.ids); // remove last one
         liveapi.send({
-                buy: proposal_id,
+                buy: _(state.proposal.ids).last(),
                 price: state.proposal.ask_price,
                 passthrough: passthrough
              })
@@ -473,7 +471,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       });
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
-          if (data.echo_req.symbol !== state.proposal.symbol) return; /* TODO: fix this for multiple dialogs with the same symbol */
+          var proposal_id = _.last(state.proposal.ids);
+          if (data.proposal.id !== proposal_id) return;
           if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
           /* update fields */
           var proposal = data.proposal;
