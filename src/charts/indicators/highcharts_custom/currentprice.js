@@ -92,6 +92,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
                 function updateCurrentPriceSeries(options, isPointUpdate) {
+
+                    if(Array.isArray(options)) {/* ignore, if the given option is an array */
+                      return;
+                    }
                     //if this is CurrentPrice series, ignore
                     if (this.options.name.indexOf('CurrentPrice') == -1) {
                         var series = this;
