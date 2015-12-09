@@ -97,6 +97,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           if(tick_count === 0) {
               state.ticks.update_status();
               state.title.update();
+              state.back.visible = true; /* show back button */
           }
           /* update state for each new tick in Up/Down contracts */
           if(state.ticks.category === 'Up/Down')
@@ -131,7 +132,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             category_display: passthrough.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
         },
-        arrow: { }
+        arrow: { },
+        back: { visible: false }, /* back buttom */
       };
 
       state.title.update = function() {
@@ -162,6 +164,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
       if(_(['Digits','Up/Down']).contains(passthrough.category)) {
           register_ticks(state,passthrough);
+      }
+      else {
+        state.back.visible = true;
       }
 
       console.warn(buy,passthrough);

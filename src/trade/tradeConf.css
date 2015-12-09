@@ -82,5 +82,18 @@
   width: 33%;
 }
 
-.trade-conf .tick-chart {
+.trade-conf .tick-chart { }
+
+.trade-conf .close {
+  position: absolute;
+  z-index: +1;
+  /*top: 0;*/
+  right: 0;
+  background: #e98024;
+  border: 1px solid #e98024;
+  border-radius: 0 0 0 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0px 10px;
 }
