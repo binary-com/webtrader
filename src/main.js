@@ -27,7 +27,8 @@ requirejs.config({
         'sightglass': 'lib/sightglass/index',
         'timepicker': 'lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker',
         'js-cookie':'lib/js-cookie/src/js.cookie',
-        'lodash': 'lib/lodash/lodash.min'
+        'lodash': 'lib/lodash/lodash.min',
+        'moment': 'lib/moment/min/moment.min',
     },
     map: {
         '*': {

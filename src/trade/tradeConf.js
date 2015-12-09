@@ -2,12 +2,13 @@
  * Created by amin on December 4, 2015.
  */
 
-define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
-  function(_, $, liveapi, rv, html){
+define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
+  function(_, $, moment, liveapi, rv, html){
 
     rv.binders['tick-chart'] = {
       priority: 65, /* a low priority to apply last */
       bind: function(el) {
+          var model = this.model;
           console.warn('rv-tick-chart.bind()',el);
           el.chart = new Highcharts.Chart({
             title: '',
@@ -15,26 +16,18 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             chart: {
                 type: 'line',
                 renderTo: el,
-                // backgroundColor: null,
+                backgroundColor: null,
                 width: (el.getAttribute('width') || 350)*1,
                 height: (el.getAttribute('height') || 120)*1,
             },
-            tooltip: {
-                formatter: function () {
-                    return 'hello from formatter';
-                    //var that = this;
-                    //var new_decimal = that.y.toString().split('.')[1].length;
-                    //var decimal_places = Math.max( $self.display_decimal, new_decimal);
-                    //$self.display_decimal = decimal_places;
-                    //var new_y = that.y.toFixed(decimal_places);
-                    //var mom = moment.utc($self.applicable_ticks[that.x].epoch*1000).format("dddd, MMM D, HH:mm:ss");
-                    //return mom + "<br/>" + $self.display_symbol + " " + new_y;
-                },
-            },
+            tooltip: { formatter: function () {
+                var tick = model.array[this.x-1];
+                return (tick && tick.tooltip) || false;
+            }},
             xAxis: {
                 type: 'linear',
                 min: 1,
-                max: el.getAttribute('tick-count')*1,
+                max: el.getAttribute('tick-count')*1 + 1 /* exist spot vertical plot will not be at the end */,
                 labels: { enabled: false, }
             },
             yAxis: {
@@ -45,28 +38,43 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
             exporting: {enabled: false, enableImages: false},
             legend: {enabled: false},
         });
-        console.warn(el.getAttribute('tick-count')*1);
       }, /* end of => bind() */
       routine: function(el, ticks){
-        function addPlotLineX (chart, options){
+        var addPlotLineX = function(chart, options) {
           chart.xAxis[0].addPlotLine({
              value: options.value,
-             id: options.id || JSON.stringify(options),
+             id: options.id || options.label,
              label: {text: options.label || 'label'},
              color: options.color || '#e98024',
              width: options.width || 2,
           });
         };
+
+        var addPlotLineY = function(chart,tick) {
+          chart.yAxis[0].addPlotLine({
+            id: 'tick-barrier',
+            value: tick.quote*1,
+            label: {text: 'Barrier ('+tick.quote+')', align: 'center'},
+            color: 'green',
+            width: 2,
+          });
+        };
+
         var index = ticks.length;
         if(index == 0) return;
+
         var tick = _.last(ticks);
-        console.warn([index, tick.quote*1]);
         el.chart.series[0].addPoint([index, tick.quote*1]);
 
-        if(index === 1) addPlotLineX(el.chart, {value: index, label: 'Entry Spot'});
-        if(index === el.getAttribute('tick-count')*1) addPlotLineX(el.chart, {value:index, label: 'Exit Spot'});
-
-      }
+        if(index === 1) {
+           addPlotLineX(el.chart, {value: index, label: 'Entry Spot'});
+           addPlotLineY(el.chart, tick);
+           el.chart.barrier = tick.quote * 1;
+        }
+        if(index === el.getAttribute('tick-count')*1) {
+          addPlotLineX(el.chart, {value:index, label: 'Exit Spot'});
+        }
+      } /* end of routine() */
     }
 
     /* called when the last tick have been received for 'Digits' or 'Up/Down' contracts */
@@ -96,7 +104,12 @@ define(['lodash', 'jquery', 'websockets/binary_websockets', 'common/rivetsExtra'
           if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
             return;
           var tick = data.tick;
-          state.ticks.array.push({quote: tick.quote, epoch: tick.epoch, number: state.ticks.array.length+1 });
+          state.ticks.array.push({
+            quote: tick.quote,
+            epoch: tick.epoch,
+            number: state.ticks.array.length+1,
+            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss")
+          });
           --tick_count;
           if(tick_count === 0) {
               ticks_done(state, _.last(state.ticks.array));

@@ -42,6 +42,7 @@
     "text": "~2.0.14",
     "rivets": "~0.8.1",
     "binary-com-jquery-ui-timepicker": "*",
-    "lodash": "~3.10.1"
+    "lodash": "~3.10.1",
+    "moment": "~2.10.6"
   }
 }

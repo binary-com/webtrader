@@ -92,6 +92,7 @@ module.exports = function (grunt) {
                             'underscore/underscore-min.js',
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',
+                            'moment/min/moment.min.js',
                             '!**/**/favicon.ico'
                         ], 
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
