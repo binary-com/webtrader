@@ -45,7 +45,7 @@
 
   <ul class="digits-row"
       rv-auto-scroll-bottom="ticks.array"
-      rv-class-won="ticks.status | notify title.update | eq 'won'"
+      rv-class-won="ticks.status | eq 'won'"
       rv-class-lost="ticks.status | eq 'lost'"
       rv-if="ticks.category | eq 'Digits'">
       <li rv-each-row="ticks.array">
@@ -58,6 +58,8 @@
        rv-if="ticks.category | eq 'Up/Down'"
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
+       rv-class-won="ticks.status | eq 'won'"
+       rv-class-lost="ticks.status | eq 'lost'"
        width='350'
        height='130'>
   </div>

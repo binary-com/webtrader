@@ -5,6 +5,7 @@
 define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
   function(_, $, moment, liveapi, rv, html){
 
+    /* rv binder to show tick chart for this confirmation dialog */
     rv.binders['tick-chart'] = {
       priority: 65, /* a low priority to apply last */
       bind: function(el) {
@@ -16,7 +17,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             chart: {
                 type: 'line',
                 renderTo: el,
-                backgroundColor: null,
+                backgroundColor: null, /* make background transparent */
                 width: (el.getAttribute('width') || 350)*1,
                 height: (el.getAttribute('height') || 120)*1,
             },
@@ -69,31 +70,13 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         if(index === 1) {
            addPlotLineX(el.chart, {value: index, label: 'Entry Spot'});
            addPlotLineY(el.chart, tick);
-           el.chart.barrier = tick.quote * 1;
         }
         if(index === el.getAttribute('tick-count')*1) {
           addPlotLineX(el.chart, {value:index, label: 'Exit Spot'});
         }
       } /* end of routine() */
-    }
+    };
 
-    /* called when the last tick have been received for 'Digits' or 'Up/Down' contracts */
-    function ticks_done(state, last_tick) {
-      var category = state.ticks.category,
-          display = state.ticks.category_display;
-      var css = {
-            Digits: {
-              matches: function(quote,expected) { return _.last(quote) === expected;},
-              differs: function(quote,expected) { return _.last(quote) !== expected;}
-            },
-            'Up/Down': {
-              rise: function(quote,expected) { return quote*1 > expected*1; },
-              fall: function(quote,expected) { return quote*1 < expected*1; }
-            }
-          };
-        /* set the css class */
-        state.ticks.status = css[category][display](last_tick.quote, state.ticks.digits_value) ? 'won' : 'lost';
-    }
 
     function register_ticks(state, passthrough){
       var tick_count = passthrough.tick_count * 1,
@@ -112,8 +95,12 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           });
           --tick_count;
           if(tick_count === 0) {
-              ticks_done(state, _.last(state.ticks.array));
+              state.ticks.update_status();
+              state.title.update();
           }
+          /* update state for each new tick in Up/Down contracts */
+          if(state.ticks.category === 'Up/Down')
+              state.ticks.update_status();
       });
     }
 
@@ -153,6 +140,25 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                               lost: 'This contract lost'
                             }[state.ticks.status];
       };
+      state.ticks.update_status = function() {
+        var first_quote = _.first(state.ticks.array).quote,
+            last_quote = _.last(state.ticks.array).quote,
+            digits_value = state.ticks.digits_value + '';
+        var category = state.ticks.category,
+            display = state.ticks.category_display;
+        var css = {
+              Digits: {
+                matches:  _.last(last_quote+'') === digits_value,
+                differs:  _.last(last_quote) !== digits_value
+              },
+              'Up/Down': {
+                rise: last_quote*1 > first_quote*1,
+                fall: last_quote*1 < first_quote*1
+              }
+            };
+          /* set the css class */
+          state.ticks.status = css[category][display] ? 'won' : 'lost';
+      }
 
       if(_(['Digits','Up/Down']).contains(passthrough.category)) {
           register_ticks(state,passthrough);
