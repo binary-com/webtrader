@@ -412,6 +412,13 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
           root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
         };
+        var hide = function(div){
+          root.find('.trade-fields').animate({ left : '-=350'}, 500, 'linear');
+          root.find('.trade-conf').animate({ left : '-=350'}, 500, 'linear', function(){
+            state.purchase.loading = false;
+            div.remove();
+          });
+        }
 
         /* workaround for api not providing this fields */
         var passthrough = {
@@ -420,9 +427,10 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             symbol: state.proposal.symbol,
             category: state.categories.value,
             category_display: state.category_displays.selected,
+            duration_unit: state.duration_unit.value,
         };
         /* pass data which is needed to show live tick purchase results */
-        if(_(['Digits','Up/Down']).contains(passthrough.category) && state.duration_unit.value === 'ticks') {
+        if(_(['Digits','Up/Down']).contains(passthrough.category) && passthrough.duration_unit === 'ticks') {
             passthrough.digits_value = state.digits.value;
             passthrough.tick_count = state.duration_count.value*1;
             passthrough.tick_count += passthrough.category == 'Up/Down' ? 1 : 0; /* Up/Down trades need one extra tick for entry spot */
@@ -437,7 +445,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
              .then(function(data){
                 console.warn(data);
                 require(['trade/tradeConf'], function(tradeConf){
-                    tradeConf.init(data, show);
+                    tradeConf.init(data, show, hide);
                 });
              })
              .catch(function(err){
@@ -446,6 +454,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
                console.error(err);
              });
       };
+
       state.categories.array = _(available).map('contract_category_display').uniq().run();
       state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 

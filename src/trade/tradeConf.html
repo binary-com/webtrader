@@ -2,7 +2,7 @@
 
   <span class="close"
         rv-show='back.visible'
-        rv-tooltip="'back'">X</span>
+        rv-on-click='back.onclick'>X</span>
 
   <ul class="title-row">
     <li>
@@ -38,7 +38,7 @@
   </ul>
 
   <ul class='view-row'
-    rv-unless="ticks.category | one-of 'Digits' 'Up/Down'">
+    rv-if="arrow.visible">
     <li class="view">
       View
     </li>

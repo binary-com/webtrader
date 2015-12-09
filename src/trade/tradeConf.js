@@ -77,7 +77,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       } /* end of routine() */
     };
 
-
     function register_ticks(state, passthrough){
       var tick_count = passthrough.tick_count * 1,
           symbol = passthrough.symbol,
@@ -105,7 +104,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       });
     }
 
-    function init(data, show_callback){
+    function init(data, show_callback, hide_callback){
       var root = $(html);
       var buy = data.buy,
           passthrough = data.echo_req.passthrough;
@@ -132,7 +131,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             category_display: passthrough.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
         },
-        arrow: { },
+        arrow: {
+          visible:!(_(['Digits','Up/Down']).contains(passthrough.category) && passthrough.duration_unit === 'ticks'),
+        },
         back: { visible: false }, /* back buttom */
       };
 
@@ -162,12 +163,14 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           state.ticks.status = css[category][display] ? 'won' : 'lost';
       }
 
-      if(_(['Digits','Up/Down']).contains(passthrough.category)) {
-          register_ticks(state,passthrough);
+      state.back.onclick = function(){
+        console.warn('state.back.onclick()');
+        // Todo unregister ticks
+        hide_callback(root);
       }
-      else {
-        state.back.visible = true;
-      }
+
+      if(!state.arrow.visible) { register_ticks(state,passthrough); }
+      else { state.back.visible = true; }
 
       console.warn(buy,passthrough);
       state.arrow.onclick = function(){
