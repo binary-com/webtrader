@@ -10,7 +10,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       priority: 65, /* a low priority to apply last */
       bind: function(el) {
           var model = this.model;
-          console.warn('rv-tick-chart.bind()',el);
           el.chart = new Highcharts.Chart({
             title: '',
             credits: {enabled: false},
@@ -82,7 +81,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           symbol = passthrough.symbol,
           purchase_epoch = state.buy.purchase_time * 1;
 
-      liveapi.events.on('tick', function (data) {
+      var fn = liveapi.events.on('tick', function (data) {
           if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
             return;
           var tick = data.tick;
@@ -97,6 +96,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               state.ticks.update_status();
               state.title.update();
               state.back.visible = true; /* show back button */
+              /* unregister from tick stream */
+              liveapi.events.off('tick',fn);
           }
           /* update state for each new tick in Up/Down contracts */
           if(state.ticks.category === 'Up/Down')
@@ -163,19 +164,12 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           state.ticks.status = css[category][display] ? 'won' : 'lost';
       }
 
-      state.back.onclick = function(){
-        console.warn('state.back.onclick()');
-        // Todo unregister ticks
-        hide_callback(root);
-      }
+      state.back.onclick = function(){ hide_callback(root); }
+      state.arrow.onclick = function() { $.growl.error({ message: 'Not implement yet!' }); };
 
       if(!state.arrow.visible) { register_ticks(state,passthrough); }
       else { state.back.visible = true; }
 
-      console.warn(buy,passthrough);
-      state.arrow.onclick = function(){
-         $.growl.error({ message: 'Not implement yet!' });
-      };
 
       var view = rv.bind(root[0], state)
       show_callback(root);

@@ -418,6 +418,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             state.purchase.loading = false;
             div.remove();
           });
+          /* trigger a new proposal stream */
+          state.proposal.onchange();
         }
 
         /* workaround for api not providing this fields */
@@ -437,13 +439,14 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         }
 
         // TODO: manually check to see if the user is authenticated or not, we should update state.currency from user profile (not everyone is using USD)!
+        var proposal_id = _(state.proposal.ids).last();
+        state.proposal.ids = _.initial(state.proposal.ids); // remove last one
         liveapi.send({
-                buy: _(state.proposal.ids).last(),
+                buy: proposal_id,
                 price: state.proposal.ask_price,
                 passthrough: passthrough
              })
              .then(function(data){
-                console.warn(data);
                 require(['trade/tradeConf'], function(tradeConf){
                     tradeConf.init(data, show, hide);
                 });

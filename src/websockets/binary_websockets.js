@@ -89,7 +89,7 @@ define(['jquery'], function ($) {
     var is_connected = function () {
         return socket && socket.readyState === 1;
     }
-   
+
     var onopen = function () {
         /* send buffered sends */
         while (buffered_sends.length > 0) {
@@ -194,6 +194,13 @@ define(['jquery'], function ($) {
         events: {
             on: function (name, cb) {
                 (callbacks[name] = callbacks[name] || []).push(cb);
+                return cb;
+            },
+            off: function(name, cb){
+                if(callbacks[name]) {
+                  var index = callbacks[name].indexOf(cb);
+                  index !== -1 && callbacks[name].splice(index, 1);
+                }
             }
         },
         /* execute callback when the connection is ready */
@@ -203,7 +210,7 @@ define(['jquery'], function ($) {
             else
                 buffered_execs.push(cb);
         },
-        /* if you want a request to be cached, that is when multiple modules request 
+        /* if you want a request to be cached, that is when multiple modules request
            the same data or a module request a data multiple times, instead of calling
            liveapi.send can liveapi.cached.send.
            node: this will only cache if the result was successfull */
