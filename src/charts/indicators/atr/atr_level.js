@@ -58,7 +58,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 of: window,
                 buttons: [
                     {
-                        text: "Ok",
+                        text: "OK",
                         click: function() {
 
                             if (!isNumericBetween($html.find(".atr_level_input_width_for_level").val(),
