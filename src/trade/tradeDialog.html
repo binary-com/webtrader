@@ -201,6 +201,27 @@
                    rv-spinner="spreads.amount_per_point | debounce proposal.onchange" />
         </li>
     </ul>
+    <ul class="stop-type-row">
+      <li>
+        <span>Stop-type</span>
+      </li>
+      <li>
+         <label class="checkbox">
+           <input type="checkbox">
+           <span class="check"></span>
+           <span class="box"></span>
+           <span class="text">Points</span>
+         </label>
+      </li>
+      <li>
+         <label class="checkbox">
+           <input type="checkbox">
+           <span class="check"></span>
+           <span class="box"></span>
+           <span class="text">{currency.value}</span>
+         </label>
+      </li>
+    </ul>
 
     <ul class="proposal-message stick-to-bottom"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
