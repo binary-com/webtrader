@@ -47,6 +47,7 @@ define(["jquery", "lodash", "websockets/binary_websockets", "common/menu", "jque
 
     function init() {
         require(['trade/tradeDialog']); // Trigger loading of tradeDialog
+        refresh_active_symbols();
         setInterval(refresh_active_symbols, 60*1000); // refersh active symbols every minute
     }
 
