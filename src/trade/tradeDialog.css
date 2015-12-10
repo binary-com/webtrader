@@ -210,6 +210,10 @@
     text-align:center;
 }
 
+.trade-fields .amount-per-point {
+  width: 70px;
+}
+
 /* for elements that should stick to the buttom of dialog */
 .trade-fields .stick-to-bottom {
   position: absolute;

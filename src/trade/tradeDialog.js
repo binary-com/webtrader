@@ -95,7 +95,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           array: [{ text: 'Now', value: 'now' } ],
           visible: false,
         },
-
         date_expiry: {
           value_date: new Date().toISOString().split('T')[0], /* today utc in yyyy-mm-dd format */
           value_hour: new Date().toISOString().split('T')[1].slice(0,5), /* now utc in hh:mm format */
@@ -134,6 +133,12 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           value: 'payout',
           amount: 10,
           limit: null,
+        },
+        spreads: {
+          amount_per_point: 1,
+          stop_type: 'point', /* could be 'point' or 'dollar' */
+          stop_loss: 10,
+          stop_profit: 10,
         },
         tick: {
           epoch: '0',
@@ -364,8 +369,12 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           request.amount = state.basis.amount; /* Proposed payout or stake value */
           request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
         } else {
-          // TODO: add Spreads specific fields
+          request.amount_per_point = state.spreads.amount_per_point;
+          request.stop_type = state.spreads.stop_type;
+          request.stop_loss = state.spreads.stop_loss;
+          request.stop_profit = state.spreads.stop_profit;
         }
+        console.warn(request);
         /* set the value for barrier(s) */
         if (state.barriers.barrier_count == 1) {
           request.barrier = '+' + state.barriers.barrier;
@@ -479,7 +488,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       };
 
       state.categories.array = _(available).map('contract_category_display').uniq().run();
-      state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
+      state.categories.value = _(state.categories.array).contains('Spreads') ? 'Spreads' : _(state.categories.array).first(); // TODO: show first tab
 
       /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
       liveapi.send({ ticks: state.proposal.symbol }).catch(function (err) { console.error(err); });
