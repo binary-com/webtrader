@@ -52,135 +52,87 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         //Trend Direction :
                         // Up=0
                         //Down=1
-                        var trendDirection='Up';
+                        var trendDirection='UP';
                         var sarData = [], ep = [],  af = [],sar=[],trend=[];
                         for (var index = 0; index < data.length; index++)
                         {
-                            var highPrice=indicatorBase.extractPriceForAppliedTO("1", data, index);
-                            var lowPrice=indicatorBase.extractPriceForAppliedTO("2", data, index);
+                            var price=indicatorBase.extractPrice(data,index);
+                            var highPrice=price,lowPrice=price;
+                            // var highPrice=indicatorBase.extractPriceForAppliedTO(1, data, index);
+                            // var lowPrice=indicatorBase.extractPriceForAppliedTO(2, data, index);
                             preIndex=index-1>=0?index-1:0;
                             if(index<period)
                             {
                                 sarData.push([(data[index].x || data[index][0]), 0]);
                                 sar.push(0);
                                 ep.push(0);
-                                af.push(0);
-                                trend.push('Up');
+                                af.push(sar.acceleration);
+                                trend.push('UP');
                             }
                             else if(index==period)
                             {
-                                var sarValue=0;
+                                var sarValue=price;
                                 for(var i=0; i<period; i++)
                                 {
+                                    // var highPrice=indicatorBase.extractPriceForAppliedTO(1, data, index-i);
+                                    // var lowPrice=indicatorBase.extractPriceForAppliedTO(2, data, index-i);
+
+                                    // sarValue=Math.min(sarValue,lowPrice,highPrice);
                                     sarValue=Math.min(sarValue,indicatorBase.extractPrice(data,index-i));
                                 }
                                 sar.push(sarValue);
                                 var epValue=0;
                                 for(var i=0; i<period; i++)
                                 {
+                                    // var highPrice=indicatorBase.extractPriceForAppliedTO(1, data, index-i);
+                                    // var lowPrice=indicatorBase.extractPriceForAppliedTO(2, data, index-i);
+
                                     epValue=Math.max(epValue,indicatorBase.extractPrice(data,index-i));
                                 }
                                 ep.push(epValue);
+
                                 af.push(sarOptions.acceleration);
+
                                 trendDirection=trend[preIndex]=="UP"?(lowPrice>sarValue?"UP":"DOWN"):(highPrice<sarValue?"DOWN":"UP");      
                                 trend.push(trendDirection);
 
                                 sarData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sarValue , 4)]);
                             }
                             else
-                            {   var currentSar=sar[preIndex]+af[preIndex]*(ep[preIndex]-sar[preIndex]);
-                                minPrice=math.min(C6:C7);
-                                maxPrice=math.max(B6:B7)
-                                var sarValue=trend[preIndex]==trend[preIndex-1]?
-                                             trend[preIndex]="UP"?
+                            {   
+                                var currentSar=sar[preIndex]+af[preIndex]*(ep[preIndex]-sar[preIndex]);
+                                // minPrice=Math.min(indicatorBase.extractPriceForAppliedTO(2, data, preIndex),indicatorBase.extractPriceForAppliedTO(2, data, preIndex-1));
+                                // maxPrice=Math.max(indicatorBase.extractPriceForAppliedTO(1, data, preIndex),indicatorBase.extractPriceForAppliedTO(1, data, preIndex-1));
+                                minPrice=Math.min(indicatorBase.extractPrice(data, preIndex),indicatorBase.extractPrice(data, preIndex-1));
+                                maxPrice=Math.max(indicatorBase.extractPrice(data, preIndex),indicatorBase.extractPrice(data, preIndex-1));
+                                var sarValue = trend[preIndex]==trend[preIndex-1]?
+                                             trend[preIndex]=="UP"?
                                                 (currentSar<minPrice?currentSar:minPrice):
                                                 (currentSar>maxPrice?currentSar:maxPrice)
                                             :ep[preIndex];
                                 sar.push(sarValue);
 
-                                var epValue==IF(I7="UP",IF(B8>E7,B8,E7),IF(C8<E7,C8,E7));
+                                var epValue = trend[preIndex]=="UP"?
+                                             (highPrice>ep[preIndex]?highPrice:ep[preIndex])
+                                             :(lowPrice<ep[preIndex]?lowPrice:ep[preIndex]);
                                 ep.push(epValue);
-
-                                var afValue=(ep[preIndex]!=0 && ep[preIndex]<epValue)?(af[preIndex] <sarOptions.maximum? af[preIndex]+sarOptions.acceleration:sarOptions.acceleration):af[preIndex];
-                                af.push(afValue);
 
                                 trendDirection=trend[preIndex]=="UP"?(lowPrice>sarValue?"UP":"DOWN"):(highPrice<sarValue?"DOWN":"UP");      
                                 trend.push(trendDirection);
+                                
+                                //var afValue=(ep[preIndex]!=0 && ep[preIndex]<epValue)?(af[preIndex] <sarOptions.maximum? af[preIndex]+sarOptions.acceleration:sarOptions.acceleration):af[preIndex];
+                                var afValue=trend[index]==trend[preIndex]?
+                                     (trend[index]=="UP"?
+                                        ep[index]>ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex]
+                                       :ep[index]<ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex])
+                                     :af[preIndex];
+                                af.push(afValue);
 
                                 sarData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sarValue , 4)]);
-                                // if(true)
-                                // {
-                                //     var epValue=0;
-                                //     for(var i=0; i<period; i++){
-                                //         epValue=Math.max(epValue,indicatorBase.extractPrice(data,index-i));
-                                //     }
 
-                                //     ep.push(epValue);
-                                //     //Acceleration Factor (AF): Starting at .02, AF increases by .02 each 
-                                //     // time the extreme point makes a new high. AF can reach a maximum 
-                                //     // of .20, no matter how long the uptrend extends.
-                                   
-                                //     //Current SAR = Prior SAR + Prior AF(Prior EP - Prior SAR)
-                                //     var sarValue=sarData[preIndex][1]+af[preIndex]*( sarData[preIndex][1]-ep[preIndex]);
-                                //     sarData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sarValue , 4)]);
-                                // }
-                                // else
-                                // {
-                                //     var epValue=0;
-                                //     for(var i=0; i<period; i++)
-                                //     {
-                                //         epValue=Math.min(epValue,indicatorBase.extractPrice(data,index-i));
-                                //     }
-                                //     ep.push(epValue);
-
-                                //     var afValue=(ep[preIndex]!=0 && ep[preIndex]>epValue)?(af[preIndex] <sarOptions.maximum? af[preIndex]+sarOptions.acceleration:sarOptions.acceleration):af[preIndex];
-                                //     af.push(afValue);
-                                //     //Current SAR = Prior SAR + Prior AF(Prior EP - Prior SAR)
-                                //     var sarValue=sarData[preIndex][1]+af[preIndex]*(ep[preIndex]- sarData[preIndex][1]);
-                                //     sarData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sarValue , 4)]);
-                                // }
                             }
                         }
-                            //Calculate sar - start - Leave first 5 bars
-                            // if (index >= 6)
-                            // { 
-                            //     //Calculate SAR - start
-                            //     //Calculate first SAR
-                            //     if (sarData[index - 1] == 0.0) {
-                            //         var sar = Math.min(indicatorBase.extractPrice(data, index-1),
-                            //                             indicatorBase.extractPrice(data, index-2),
-                            //                             indicatorBase.extractPrice(data, index-3),
-                            //                             indicatorBase.extractPrice(data, index-4),
-                            //                             indicatorBase.extractPrice(data, index-5));
-                            //         var ep = Math.max(indicatorBase.extractPrice(data, index-1),
-                            //                             indicatorBase.extractPrice(data, index-2),
-                            //                             indicatorBase.extractPrice(data, index-3),
-                            //                             indicatorBase.extractPrice(data, index-4),
-                            //                             indicatorBase.extractPrice(data, index-5));
-                            //         var ep_sar = ep - sar;
-
-
-                            //     }
-                            //     //Calculate subsequent SAR
-                            //     else {
-
-                            //     }
-                            //     //Calculate SAR - end
-
-                            //     var sarValue = (avgLoss == 0 ? 100 : (100 - (100 / (1+rs))));
-
-                            //     if (isFinite(sarValue) && !isNaN(sarValue))
-                            //     {
-                            //         sarData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sarValue , 4)]);
-                            //     }
-                            // }
-                            // else
-                            // {
-                            //     sarData.push([(data[index].x || data[index][0]), 0]);
-                            // }
-                            // //Calculate sar - end
-
-                        
+                                                    
 
                         var chart = this.chart;
 
