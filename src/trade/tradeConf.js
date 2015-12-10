@@ -173,9 +173,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
       var view = rv.bind(root[0], state)
       show_callback(root);
-
-      /* TODO: development only! */
-      window.state = state;
     }
 
     return {

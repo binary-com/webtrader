@@ -70,7 +70,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         /* Digits odd/even/over/under are not yet implemented in beta trading interface ignore them for now, TODO: implement them */
         available = _(available).reject(function (r) { return _(['odd', 'even', 'over', 'under']).contains(r.contract_display); }).run();
         /* Spreads are not yet implemented, ignore them for now, TODO: itempement Spreads */
-        available = _(available).reject('contract_category_display', 'Spreads').run();
+        // available = _(available).reject('contract_category_display', 'Spreads').run();
         return available;
     }
 
@@ -348,6 +348,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       state.proposal.onchange = function () {
         var unit = state.duration_unit.value;
         var expiry_type = _(['seconds', 'minutes', 'hours']).contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+        if(state.categories.value === 'Spreads') expiry_type = 'intraday';
         var row = _(available).filter({
           'contract_category_display': state.categories.value,
           'contract_display': state.category_displays.selected,
@@ -470,7 +471,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
                  $.growl.error({ message: err.message });
                  console.error(err);
                });
-       }
+         }
       };
 
       state.categories.array = _(available).map('contract_category_display').uniq().run();
@@ -530,7 +531,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        // setTimeout(state.purchase.onclick.bind(state.purchase), 4000); // TODO: remove this
+        //TODO : development only REMOVE THIS
+        window.state = state; window.available = available;
     }
 
     return {
