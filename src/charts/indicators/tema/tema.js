@@ -45,14 +45,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 315,
+                width: 335,
                 modal: true,
                 my: 'center',
                 at: 'center',
                 of: window,
                 buttons: [
                     {
-                        text: "Ok",
+                        text: "OK",
                         click: function() {
 
                             if (!isNumericBetween($html.find(".tema_input_width_for_period").val(),

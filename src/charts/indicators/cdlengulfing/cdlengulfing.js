@@ -1,7 +1,6 @@
 /**
- * Created by arnab on 3/1/15.
+ * Created by arnab on 3/1/15
  */
-
 define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
@@ -11,11 +10,12 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function init( containerIDWithHash, _callback ) {
 
-        require(['text!charts/indicators/cdl2crows/cdl2crows.html'], function ( $html ) {
+        require(['text!charts/indicators/cdlengulfing/cdlengulfing.html'], function ( $html ) {
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+            //$html.find('select').selectmenu(); TODO for some reason, this does not work
 
             $html.dialog({
                 autoOpen: false,
@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                         text: "OK",
                         click: function() {
 
-                            require(['charts/indicators/highcharts_custom/cdl2crows'], function ( cdl2crows ) {
-                                cdl2crows.init();
-                                //Add CDL2CROWS for the main series
-                                $($(".cdl2crows").data('refererChartID')).highcharts().series[0].addCDL2CROWS();
+                            require(['charts/indicators/highcharts_custom/cdlengulfing'], function ( cdlengulfing ) {
+                                cdlengulfing.init();
+                                //Add CDLENGULFING for the main series
+                                $($(".cdlengulfing").data('refererChartID')).highcharts().series[0].addCDLENGULFING();
                             });
 
                             closeDialog.call($html);
@@ -61,13 +61,13 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
         open : function ( containerIDWithHash ) {
 
-            if ($(".cdl2crows").length == 0)
+            if ($(".cdlengulfing").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".cdl2crows").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".cdlengulfing").data('refererChartID', containerIDWithHash).dialog( "open" );
 
         }
 
