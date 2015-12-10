@@ -55,6 +55,12 @@
     background-color: #3F476E;
 }
 
+.nav-normal-menu li a.disabled,
+.nav-normal-menu li a.disabled:hover {
+  opacity: 0.5;
+  background-color: #273051;
+}
+
 .nav-normal-menu li > ul {
     position: absolute;
     display: none;
@@ -148,6 +154,12 @@
 
 .nav-mobile-menu li a:hover {
     background-color: #3F476E;
+}
+
+.nav-mobile-menu li a.disabled,
+.nav-mobile-menu li a.disabled:hover {
+  opacity: 0.5;
+  background-color: #273051;
 }
 
 .nav-mobile-menu li > ul {
@@ -244,7 +256,7 @@
 }
 
 #nav-toggle span:after {
-  bottom: -5px; 
+  bottom: -5px;
 }
 
 #nav-toggle.nav-toggle-active span {

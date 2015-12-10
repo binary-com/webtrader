@@ -13,6 +13,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
             var caretHtml = "<span class='nav-submenu-caret'></span>";
             var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
             var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
+            if(value.is_disabled)  $menuLink.addClass('disabled');
             if(isDropdownMenu) {
                 $menuLink.addClass("nav-dropdown-toggle");
             }
@@ -28,7 +29,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                 newUL.appendTo(newLI);
                 refreshMenu( newUL, value.submarkets || value.instruments, on_click );
             }
-            else if(on_click )
+            else if(on_click && !value.is_disabled)
                 $menuLink.click(function () {
                     /* pass the <li> not the <a> tag */
                     var li = $(this).parent();
