@@ -207,5 +207,12 @@
     "long_display_name": "Shooting Star",
     "short_display_name": "CDLSHOOTINGSTAR",
     "ohlcOnly" : true
+  },
+
+  "cdlengulfing": {
+    "id": "cdlengulfing",
+    "long_display_name": "Engulfing Pattern",
+    "short_display_name": "CDLENGULFING",
+    "ohlcOnly" : true
   }
 }
