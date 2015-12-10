@@ -62,6 +62,19 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
           _.defer(args[i],value);
         return value;
     }
+    /* rv 2-way formatter for checkboxes */
+    rv.formatters.checkbox = {
+      read: function(value, first, second) {
+        value = _.trim(value, " '\"");
+        return value === first;
+      },
+      publish: function(value, first, second){
+        first = _.trim(first, " '\"");
+        second = _.trim(second, " '\"");
+        return value ? first : second;
+      }
+    }
+
     /* ternary operator (condition ? first : second) */
     rv.formatters['ternary'] = function(condition, first, second){
       return condition ? first : second;

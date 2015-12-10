@@ -374,7 +374,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           request.stop_loss = state.spreads.stop_loss;
           request.stop_profit = state.spreads.stop_profit;
         }
-        console.warn(request);
         /* set the value for barrier(s) */
         if (state.barriers.barrier_count == 1) {
           request.barrier = '+' + state.barriers.barrier;

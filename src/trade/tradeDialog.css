@@ -278,7 +278,6 @@ label.checkbox span.text     {
 }
 label.checkbox span.box     {
   border:3px solid #273051;
-  z-index:888;
   transition-delay:0.1s;
 }
 label.checkbox span.check  {
@@ -291,7 +290,6 @@ label.checkbox span.check  {
   border-width: medium 4px 3px medium;
   border-color: #273051;
   opacity:0;
-  z-index:888;
   transform:rotate(180deg);
   transition-delay:0.2s;
 }

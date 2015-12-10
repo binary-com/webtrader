@@ -207,7 +207,7 @@
       </li>
       <li>
          <label class="checkbox">
-           <input type="checkbox">
+           <input type="checkbox" rv-checked="spreads.stop_type | checkbox 'point' 'dollar' | debounce proposal.onchange">
            <span class="check"></span>
            <span class="box"></span>
            <span class="text">Points</span>
@@ -215,10 +215,10 @@
       </li>
       <li>
          <label class="checkbox">
-           <input type="checkbox">
+           <input type="checkbox" rv-checked="spreads.stop_type | checkbox 'dollar' 'point' | debounce proposal.onchange">
            <span class="check"></span>
            <span class="box"></span>
-           <span class="text">{currency.value}</span>
+           <span class="text">USD</span>
          </label>
       </li>
     </ul>
