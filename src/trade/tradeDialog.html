@@ -184,7 +184,8 @@
     </ul>
 
     <ul class="amount-per-point-row"
-        rv-show="categories.value | eq 'Spreads'">
+        rv-show="categories.value | eq 'Spreads'"
+        rv-css-padding-top="categories.paddingTop < value">
         <li>
           <span>Amount per point</span>
         </li>
@@ -201,7 +202,10 @@
                    rv-spinner="spreads.amount_per_point | debounce proposal.onchange" />
         </li>
     </ul>
-    <ul class="stop-type-row">
+
+    <ul class="stop-type-row"
+        rv-show="categories.value | eq 'Spreads'"
+        rv-css-padding-top="categories.paddingTop < value">
       <li>
         <span>Stop-type</span>
       </li>
@@ -220,6 +224,27 @@
            <span class="box"></span>
            <span class="text">USD</span>
          </label>
+      </li>
+    </ul>
+
+    <ul class="stop-loss-row"
+        rv-show="categories.value | eq 'Spreads'"
+        rv-css-padding-top="categories.paddingTop < value">
+      <li><span>Stop-loss</span></li>
+      <li></li>
+      <li>
+            <input class="stop-loss" type="number" min="1" step=".01" step-big="1"
+                   rv-spinner="spreads.stop_loss | debounce proposal.onchange" />
+      </li>
+    </ul>
+
+    <ul class="stop-profit-row"
+        rv-show="categories.value | eq 'Spreads'">
+      <li><span>Stop-profit</span></li>
+      <li></li>
+      <li>
+            <input class="stop-profit" type="number" min="1" step=".01" step-big="1"
+                   rv-spinner="spreads.stop_profit | debounce proposal.onchange" />
       </li>
     </ul>
 

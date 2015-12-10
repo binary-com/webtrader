@@ -104,7 +104,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           array: [],
           value: '',
           paddingTop: function(){
-            var paddings = { "Asians" : '17px', "Up/Down" : '12px', "Digits" : '12px', "In/Out" : '1px', "Touch/No Touch" : '12px' };
+            var paddings = { "Asians" : '17px', "Up/Down" : '12px', "Digits" : '12px', "In/Out" : '1px', "Touch/No Touch" : '12px' , "Spreads":'10px' };
             return paddings[state.categories.value] || '3px';
           }
         },

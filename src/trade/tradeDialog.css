@@ -215,9 +215,22 @@
 }
 
 .trade-fields .stop-type-row li {
-    padding-top: 10px;
     width: 32%;
 }
+
+.trade-fields .stop-loss-row li,
+.trade-fields .stop-profit-row li {
+  width:32%;
+}
+.trade-fields .stop-loss-row li span.ui-spinner,
+.trade-fields .stop-profit-row li span.ui-spinner {
+    margin-left: -30px;
+}
+.trade-fields .stop-loss-row li input,
+.trade-fields .stop-profit-row li input {
+    width: 70px;
+}
+
 
 /* for elements that should stick to the buttom of dialog */
 .trade-fields .stick-to-bottom {
