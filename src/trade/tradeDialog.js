@@ -356,12 +356,16 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         }).first();
         var request = {
           proposal: 1,
-          amount: state.basis.amount, /* Proposed payout or stake value */
-          basis: state.basis.value, /* Indicate whether amount is 'payout' or 'stake */
           contract_type: row.contract_type,
           currency: state.currency.value, /* This can only be the account-holder's currency */
           symbol: state.proposal.symbol, /* Symbol code */
         };
+        if(state.categories.value !== 'Spreads') {
+          request.amount = state.basis.amount; /* Proposed payout or stake value */
+          request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
+        } else {
+          // TODO: add Spreads specific fields
+        }
         /* set the value for barrier(s) */
         if (state.barriers.barrier_count == 1) {
           request.barrier = '+' + state.barriers.barrier;
