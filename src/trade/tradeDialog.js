@@ -82,7 +82,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           value: 'Duration',
         },
         duration_unit: {
-          array: [{ type: '', min: 1, max:365 }],
+          array: ['-'],
+          ranges: [{min: 1, max:365}],
           value: '',
         },
         duration_count: {
@@ -267,9 +268,11 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         }).run();
 
         var array = [];
+        var ranges = [];
         _.each(durations, function (d) {
           if (_(['tick', 'daily']).contains(d.type)) {
-            array.push({
+            array.push({ tick: 'ticks', daily: 'days' }[d.type]);
+            ranges.push({
               min: (d.min + '').replace('d', '') | 0,
               max: (d.max + '').replace('d', '') | 0,
               type: { tick: 'ticks', daily: 'days' }[d.type]
@@ -286,28 +289,34 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           max *= { 's': 1, 'm': 60, 'd': 3600 * 24 }[max_unit];
 
           if('s' === min_unit) {
-            array.push({ min: min, max: max, type: 'seconds' });
+            array.push('seconds');
+            ranges.push({ min: min, max: max, type: 'seconds'});
           }
           if(_(['s', 'm']).contains(min_unit) && max >= 60) {
-            array.push({ min: Math.max(min / 60, 1), max: max / 60, type: 'minutes' });
+            array.push('minutes');
+            ranges.push({ min: Math.max(min / 60, 1), max: max / 60, type: 'minutes' });
           }
           if(_(['s', 'm']).contains(min_unit) && max >= 3600) {
-            array.push({ min: Math.max(min / 3600, 1), max: max / 3600, type: 'hours' });
+            array.push('hours');
+            ranges.push({ min: Math.max(min / 3600, 1), max: max / 3600, type: 'hours' });
           }
         });
 
-        array.sort(function (r1, r2) {
-          var dict = { 'ticks': 0, 'seconds': 1, 'minutes': 2, 'hours': 3, 'days': 4 };
-          return dict[r1.type] - dict[r2.type];
-        });
+        /* sort the arrays */
+        var sort_dict = { 'ticks': 0, 'seconds': 1, 'minutes': 2, 'hours': 3, 'days': 4 };
+        array.sort(function (r1, r2) { return sort_dict[r1] - sort_dict[r2]; });
+        ranges.sort(function(r1,r2){ return sort_dict[r1.type] - sort_dict[r2.type]; })
 
         if (!array.length) {
           state.barriers.update();
           return;
         }
 
+        console.warn('1');
+        state.duration_unit.ranges = ranges;
         state.duration_unit.array = array;
-        if (!_(array).map('type').contains(state.duration_unit.value)) {
+        if (!_(array).contains(state.duration_unit.value)) {
+          console.warn('2');
           state.duration_unit.value = _(array).first().type;
         }
         else { /* manualy notify 'duration_count' and 'barriers' to update themselves */
@@ -317,7 +326,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       };
 
       state.duration_count.update = function () {
-        var range = _(state.duration_unit.array).filter('type', state.duration_unit.value).first();
+        var range = _(state.duration_unit.ranges).filter({'type': state.duration_unit.value}).first();
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;

@@ -141,6 +141,7 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
     rv.binders.selectrefresh = {
         priority: 99,
         routine: function(el,array) {
+            console.warn(el.classList);
             $(el).selectmenu('refresh');
         }
     }
