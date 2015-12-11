@@ -139,6 +139,14 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           stop_type: 'point', /* could be 'point' or 'dollar' */
           stop_loss: 10,
           stop_profit: 10,
+          /* updated from #proposal websocket api */
+          spread: 0.0,
+          spot: '0.0',
+          spot_time: '0',
+          deposit_: function(){
+            console.warn('deposit_', this.stop_loss, this.amount_per_point);
+            return this.stop_loss * this.amount_per_point;
+          }
         },
         tick: {
           epoch: '0',
@@ -513,6 +521,9 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           state.proposal.payout = proposal.payout;
           state.proposal.spot = proposal.spot;
           state.proposal.spot_time = proposal.spot_time;
+          state.spreads.spread = proposal.spread || 0.0;
+          state.spreads.spot = proposal.spot || '0.0';
+          state.spreads.spot_time = proposal.spot_time || '0';
       });
 
       return state;

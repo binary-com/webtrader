@@ -251,6 +251,11 @@
 }
 
 .trade-fields .netprofit { background: #c2c1c1; }
+.trade-fields .spread-deposit {
+    background: #c2c1c1;
+    white-space: nowrap;
+    font-size: 90%;
+}
 
 .trade-fields .purchase-row { bottom: 5px; }
 .trade-fields .purchase-row li { font-size: larger; }
