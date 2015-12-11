@@ -124,6 +124,11 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           currency: passthrough.currency,
           potential_profit : passthrough.payout_amount - buy.buy_price,
         },
+        spreads: {
+            amount_per_point: buy.amount_per_point || '0',
+            stop_loss_level: buy.stop_loss_level || '0',
+            stop_profit_level: buy.stop_profit_level || '0',
+        },
         ticks: {
             array: [],
             tick_count: passthrough.tick_count,
