@@ -245,7 +245,7 @@
     bottom: 80px;
 }
 
-.trade-fields .netprofit-row {
+.trade-fields .message-row {
   bottom: 50px;
   padding: 2px 0;
 }
@@ -254,7 +254,7 @@
 .trade-fields .spread-deposit {
     background: #c2c1c1;
     white-space: nowrap;
-    font-size: 90%;
+    font-size: 85%;
 }
 
 .trade-fields .purchase-row { bottom: 5px; }

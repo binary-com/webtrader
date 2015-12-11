@@ -253,7 +253,7 @@
         <li>{proposal.message}</li>
     </ul>
 
-    <ul class="netprofit-row stick-to-bottom netprofit"
+    <ul class="message-row stick-to-bottom netprofit"
         rv-if="categories.value | not-eq 'Spreads'"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li>
@@ -264,14 +264,16 @@
         </li>
     </ul>
 
-    <ul class="netprofit-row stick-to-bottom spread-deposit">
+    <ul class="message-row stick-to-bottom spread-deposit"
+        rv-if="categories.value | eq 'Spreads'"
+        rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
       <li rv-if="categories.value | eq 'Spreads'">
         Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss | to-fixed 2 "/>
         is required. Current spread: <span rv-text="spreads.spread" /> points
       </li>
     </ul>
 
-    <ul class="netprofit-row stick-to-bottom error"
+    <ul class="message-row stick-to-bottom error"
         rv-if="proposal.error | not-eq ''">
         <li>{proposal.error}</li>
     </ul>

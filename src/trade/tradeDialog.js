@@ -144,7 +144,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           spot: '0.0',
           spot_time: '0',
           deposit_: function(){
-            console.warn('deposit_', this.stop_loss, this.amount_per_point);
             return this.stop_loss * this.amount_per_point;
           }
         },
