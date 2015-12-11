@@ -94,10 +94,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           --tick_count;
           if(tick_count === 0) {
               state.ticks.update_status();
-              state.title.update();
+              state.buy.update(); /* show buy-price final and profit & update title */
               state.back.visible = true; /* show back button */
-              /* unregister from tick stream */
-              liveapi.events.off('tick',fn);
+              liveapi.events.off('tick',fn); /* unregister from tick stream */
           }
           /* update state for each new tick in Up/Down contracts */
           if(state.ticks.category === 'Up/Down')
@@ -120,9 +119,11 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           purchase_time: buy.purchase_time,
           start_time: buy.start_time,
           transaction_id: buy.transaction_id,
-          payout_amount: passthrough.payout_amount,
+          payout: buy.payout,
           currency: passthrough.currency,
-          potential_profit : passthrough.payout_amount - buy.buy_price,
+          potential_profit : buy.payout - buy.buy_price,
+          potential_profit_text : 'Profit',
+          show_result: false,
         },
         spreads: {
             amount_per_point: buy.amount_per_point || '0',
@@ -143,12 +144,18 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         back: { visible: false }, /* back buttom */
       };
 
-      state.title.update = function() {
+      state.buy.update = function(){
+        var status = state.ticks.status;
         state.title.text = { waiting: 'Contract Confirmation',
                               won : 'This contract won',
                               lost: 'This contract lost'
-                            }[state.ticks.status];
-      };
+                            }[status];
+        if(status === 'lost') {
+          state.buy.potential_profit = -state.buy.potential_profit;
+          state.buy.potential_profit_text = 'Lost';
+        }
+        state.buy.show_result = true;
+      }
       state.ticks.update_status = function() {
         var first_quote = _.first(state.ticks.array).quote,
             last_quote = _.last(state.ticks.array).quote,
@@ -171,6 +178,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
       state.back.onclick = function(){ hide_callback(root); }
       state.arrow.onclick = function() { $.growl.error({ message: 'Not implement yet!' }); };
+
 
       if(!state.arrow.visible) { register_ticks(state,passthrough); }
       else { state.back.visible = true; }

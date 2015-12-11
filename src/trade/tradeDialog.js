@@ -448,7 +448,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
         /* workaround for api not providing this fields */
         var passthrough = {
-            payout_amount: state.basis.amount,
             currency: state.currency.value,
             symbol: state.proposal.symbol,
             category: state.categories.value,
@@ -498,7 +497,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       };
 
       state.categories.array = _(available).map('contract_category_display').uniq().run();
-      state.categories.value = _(state.categories.array).contains('Spreads') ? 'Spreads' : _(state.categories.array).first(); // TODO: show first tab
+      state.categories.value = _(state.categories.array).contains('Digits') ? 'Digits' : _(state.categories.array).first(); // TODO: show first tab
 
       /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
       liveapi.send({ ticks: state.proposal.symbol }).catch(function (err) { console.error(err); });
@@ -558,8 +557,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        //TODO : development only REMOVE THIS
-        window.state = state; window.available = available;
     }
 
     return {
