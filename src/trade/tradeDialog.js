@@ -416,7 +416,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           var id = data.proposal.id;
           state.proposal.ids.push(id);
           state.proposal.error = '';
-          state.proposal.loading = false;
         })
         .catch(function (err) {
           console.error(err);
@@ -523,6 +522,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           state.spreads.spread = proposal.spread || 0.0;
           state.spreads.spot = proposal.spot || '0.0';
           state.spreads.spot_time = proposal.spot_time || '0';
+          state.proposal.loading = false;
       });
 
       return state;
