@@ -105,7 +105,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           array: [],
           value: '',
           paddingTop: function(){
-            var paddings = { "Asians" : '17px', "Up/Down" : '12px', "Digits" : '12px', "In/Out" : '1px', "Touch/No Touch" : '12px' , "Spreads":'10px' };
+            var paddings = { "Asians" : '19px', "Up/Down" : '12px', "Digits" : '14px', "In/Out" : '2px', "Touch/No Touch" : '16px' , "Spreads":'8px' };
             return paddings[state.categories.value] || '3px';
           }
         },
@@ -261,8 +261,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         })
         .map(function (r) {
           return {
-            min: r.min_contract_duration,
-            max: r.max_contract_duration,
+            min: r.min_contract_duration + '',
+            max: r.max_contract_duration + '',
             type: r.expiry_type
           }
         }).run();
@@ -273,8 +273,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           if (_(['tick', 'daily']).contains(d.type)) {
             array.push({ tick: 'ticks', daily: 'days' }[d.type]);
             ranges.push({
-              min: (d.min + '').replace('d', '') | 0,
-              max: (d.max + '').replace('d', '') | 0,
+              min: d.min.replace('d', '') | 0,
+              max: d.max.replace('d', '') | 0,
               type: { tick: 'ticks', daily: 'days' }[d.type]
             });
             return;
