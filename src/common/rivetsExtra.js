@@ -334,9 +334,8 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
         $(el).css(style);
     }
 
-    /* override rv-show to use jQuery fadeIn/FadeOut instead */
     rv.binders['show'] = function(el, value) {
-        value ? $(el).show() : $(el).hide();
+        el.style.display = value ? '' : 'none';
         return value;
     };
     /* binder to add or remove disabled attribute */
