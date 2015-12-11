@@ -497,7 +497,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       };
 
       state.categories.array = _(available).map('contract_category_display').uniq().run();
-      state.categories.value = _(state.categories.array).contains('Digits') ? 'Digits' : _(state.categories.array).first(); // TODO: show first tab
+      state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 
       /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
       liveapi.send({ ticks: state.proposal.symbol }).catch(function (err) { console.error(err); });
