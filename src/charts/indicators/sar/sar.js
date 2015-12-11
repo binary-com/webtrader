@@ -75,7 +75,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                     maximum :  parseFloat($html.find("#sar_maximum").val()),
                                     stroke : defaultStrokeColor,
                                     strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
-                                    dashStyle : 'Dot'
+                                    dashStyle : 'line'
                                 }
                                 //Add sar for the main series TODO
                                 $($(".sar").data('refererChartID')).highcharts().series[0].addSAR(options);

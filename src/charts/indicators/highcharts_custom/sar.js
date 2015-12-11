@@ -1,27 +1,94 @@
 /**
- * Created by arnab on 3/22/15.
+ * Created by Mahbobeh on 12/9/15.
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var sarOptionsMap = {}, sarSeriesMap = {};
+    var epArray={},  afArray = {},sarArray={},trendArray={};
+    // var ep = [],  af = [],sar=[],trend=[];
+    var open= 0, high= 1, low=2, close= 3;
      //******************************Get Price*************************
-    function getPrice(data,index,bllngrbndOptions,type)
+    function calculateSarValue(data,index,sarOptions,key,isPointUpdate)
     {
-        var price = 0.0;
-        if (indicatorBase.isOHLCorCandlestick(type)) {
-            price = indicatorBase.extractPriceForAppliedTO(bllngrbndOptions.appliedTo, data, index);
+        var ep = epArray[key],  af = afArray[key] , sar=sarArray[key] , trend=trendArray[key];
+        var preIndex=index-1>=0?index-1:0;
+        var price=indicatorBase.extractPrice(data,index);
+        var highPrice=indicatorBase.extractPriceForAppliedTO(high, data, index);
+        var lowPrice=indicatorBase.extractPriceForAppliedTO(low, data, index);
+        var currentSar=sar[preIndex]+af[preIndex]*(ep[preIndex]-sar[preIndex]);
+        var minPrice=Math.min(indicatorBase.extractPriceForAppliedTO(low, data, preIndex),indicatorBase.extractPriceForAppliedTO(low, data, preIndex-1));
+        var maxPrice=Math.max(indicatorBase.extractPriceForAppliedTO(high, data, preIndex),indicatorBase.extractPriceForAppliedTO(high, data, preIndex-1));
+        var sarValue = trend[preIndex]==trend[preIndex-1]?
+                     trend[preIndex]=="UP"?
+                        (currentSar<minPrice?currentSar:minPrice):
+                        (currentSar>maxPrice?currentSar:maxPrice)
+                    :ep[preIndex];
+        if (isPointUpdate)
+        {
+            sar[index]=sarValue;
         }
-        else {
-            price = indicatorBase.extractPrice(data, index); 
+        else
+        {
+            sar.push(sarValue);
         }
-        return price;
+
+        var epValue = trend[preIndex]=="UP"?
+                     (highPrice>ep[preIndex]?highPrice:ep[preIndex])
+                     :(lowPrice<ep[preIndex]?lowPrice:ep[preIndex]);
+       
+        if (isPointUpdate)
+        {
+            ep[index]=epValue;
+        }
+        else
+        {
+            ep.push(epValue);
+        }
+
+        trendDirection=trend[preIndex]=="UP"?
+                     (lowPrice>sarValue?"UP":"DOWN")
+                     :(highPrice<sarValue?"DOWN":"UP");      
+
+        if (isPointUpdate)
+        {
+            trend[index]=trendDirection;
+        }
+        else
+        {
+            trend.push(trendDirection);
+        }
+        
+        //var afValue=(ep[preIndex]!=0 && ep[preIndex]<epValue)?(af[preIndex] <sarOptions.maximum? af[preIndex]+sarOptions.acceleration:sarOptions.acceleration):af[preIndex];
+        var afValue=trend[index]==trend[preIndex]?
+             (trend[index]=="UP"?
+                ep[index]>ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex]
+               :ep[index]<ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex])
+             :sarOptions.acceleration;
+        
+
+        if (isPointUpdate)
+        {
+            af[index]=afValue;
+        }
+        else
+        {
+            af.push(afValue);
+        }
+
+        epArray[key]=ep;
+        afArray[key]=af;
+        sarArray[key]=sar;
+        trendArray[key]=trend;
+
+        return sarValue;
+        // sarData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sarValue , 4)]);
     }
     
     return {
         init: function() {
 
             (function(H,$,indicatorBase) {
-
+                 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
                 if (!H || H.Series.prototype.addSAR) return;
@@ -36,7 +103,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         maximum : 0.2,
                         stroke : 'red',
                         strokeWidth : 2,
-                        dashStyle : 'Dot',
+                        dashStyle : 'line',
                         levels : [],
                         parentSeriesID : seriesID
                     }, sarOptions);
@@ -48,19 +115,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     if (data && data.length > 0)
                     {
                         //Calculate SAR data
-                        var period=6;
+                        var period=5;
                         //Trend Direction :
                         // Up=0
                         //Down=1
                         var trendDirection='UP';
-                        var sarData = [], ep = [],  af = [],sar=[],trend=[];
+                        var sarData = [];
+                        var ep = [],  af = [],sar=[],trend=[];
                         for (var index = 0; index < data.length; index++)
                         {
                             var price=indicatorBase.extractPrice(data,index);
-                            var highPrice=price,lowPrice=price;
-                            // var highPrice=indicatorBase.extractPriceForAppliedTO(1, data, index);
-                            // var lowPrice=indicatorBase.extractPriceForAppliedTO(2, data, index);
-                            preIndex=index-1>=0?index-1:0;
+                            var highPrice=indicatorBase.extractPriceForAppliedTO(high, data, index);
+                            var lowPrice=indicatorBase.extractPriceForAppliedTO(low, data, index);
+                            var preIndex=index-1>=0?index-1:0;
                             if(index<period)
                             {
                                 sarData.push([(data[index].x || data[index][0]), 0]);
@@ -71,24 +138,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             }
                             else if(index==period)
                             {
-                                var sarValue=price;
+                                var sarValue=0,epValue=0;
                                 for(var i=0; i<period; i++)
                                 {
-                                    // var highPrice=indicatorBase.extractPriceForAppliedTO(1, data, index-i);
-                                    // var lowPrice=indicatorBase.extractPriceForAppliedTO(2, data, index-i);
+                                    var highPrice=indicatorBase.extractPriceForAppliedTO(high, data, index-i);
+                                    var lowPrice=indicatorBase.extractPriceForAppliedTO(low, data, index-i);
 
-                                    // sarValue=Math.min(sarValue,lowPrice,highPrice);
-                                    sarValue=Math.min(sarValue,indicatorBase.extractPrice(data,index-i));
+                                     sarValue=Math.min(sarValue,lowPrice,highPrice);
+                                     epValue=Math.max(sarValue,lowPrice,highPrice);
+                                    // sarValue=Math.min(sarValue,indicatorBase.extractPrice(data,index-i));
                                 }
                                 sar.push(sarValue);
-                                var epValue=0;
-                                for(var i=0; i<period; i++)
-                                {
-                                    // var highPrice=indicatorBase.extractPriceForAppliedTO(1, data, index-i);
-                                    // var lowPrice=indicatorBase.extractPriceForAppliedTO(2, data, index-i);
-
-                                    epValue=Math.max(epValue,indicatorBase.extractPrice(data,index-i));
-                                }
                                 ep.push(epValue);
 
                                 af.push(sarOptions.acceleration);
@@ -100,33 +160,42 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             }
                             else
                             {   
-                                var currentSar=sar[preIndex]+af[preIndex]*(ep[preIndex]-sar[preIndex]);
+                                // var currentSar=sar[preIndex]+af[preIndex]*(ep[preIndex]-sar[preIndex]);
                                 // minPrice=Math.min(indicatorBase.extractPriceForAppliedTO(2, data, preIndex),indicatorBase.extractPriceForAppliedTO(2, data, preIndex-1));
                                 // maxPrice=Math.max(indicatorBase.extractPriceForAppliedTO(1, data, preIndex),indicatorBase.extractPriceForAppliedTO(1, data, preIndex-1));
-                                minPrice=Math.min(indicatorBase.extractPrice(data, preIndex),indicatorBase.extractPrice(data, preIndex-1));
-                                maxPrice=Math.max(indicatorBase.extractPrice(data, preIndex),indicatorBase.extractPrice(data, preIndex-1));
-                                var sarValue = trend[preIndex]==trend[preIndex-1]?
-                                             trend[preIndex]=="UP"?
-                                                (currentSar<minPrice?currentSar:minPrice):
-                                                (currentSar>maxPrice?currentSar:maxPrice)
-                                            :ep[preIndex];
-                                sar.push(sarValue);
+                                // // minPrice=Math.min(indicatorBase.extractPrice(data, preIndex),indicatorBase.extractPrice(data, preIndex-1));
+                                // // maxPrice=Math.max(indicatorBase.extractPrice(data, preIndex),indicatorBase.extractPrice(data, preIndex-1));
+                                // var sarValue = trend[preIndex]==trend[preIndex-1]?
+                                //              trend[preIndex]=="UP"?
+                                //                 (currentSar<minPrice?currentSar:minPrice):
+                                //                 (currentSar>maxPrice?currentSar:maxPrice)
+                                //             :ep[preIndex];
+                                // sar.push(sarValue);
 
-                                var epValue = trend[preIndex]=="UP"?
-                                             (highPrice>ep[preIndex]?highPrice:ep[preIndex])
-                                             :(lowPrice<ep[preIndex]?lowPrice:ep[preIndex]);
-                                ep.push(epValue);
+                                // var epValue = trend[preIndex]=="UP"?
+                                //              (highPrice>ep[preIndex]?highPrice:ep[preIndex])
+                                //              :(lowPrice<ep[preIndex]?lowPrice:ep[preIndex]);
+                                // ep.push(epValue);
 
-                                trendDirection=trend[preIndex]=="UP"?(lowPrice>sarValue?"UP":"DOWN"):(highPrice<sarValue?"DOWN":"UP");      
-                                trend.push(trendDirection);
+                                // trendDirection=trend[preIndex]=="UP"?
+                                //              (lowPrice>sarValue?"UP":"DOWN")
+                                //              :(highPrice<sarValue?"DOWN":"UP");      
+                                // trend.push(trendDirection);
                                 
-                                //var afValue=(ep[preIndex]!=0 && ep[preIndex]<epValue)?(af[preIndex] <sarOptions.maximum? af[preIndex]+sarOptions.acceleration:sarOptions.acceleration):af[preIndex];
-                                var afValue=trend[index]==trend[preIndex]?
-                                     (trend[index]=="UP"?
-                                        ep[index]>ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex]
-                                       :ep[index]<ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex])
-                                     :af[preIndex];
-                                af.push(afValue);
+                                // //var afValue=(ep[preIndex]!=0 && ep[preIndex]<epValue)?(af[preIndex] <sarOptions.maximum? af[preIndex]+sarOptions.acceleration:sarOptions.acceleration):af[preIndex];
+                                // var afValue=trend[index]==trend[preIndex]?
+                                //      (trend[index]=="UP"?
+                                //         ep[index]>ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex]
+                                //        :ep[index]<ep[preIndex]?(af[preIndex]==sarOptions.maximum?af[preIndex]:af[preIndex]+sarOptions.acceleration):af[preIndex])
+                                //      :sarOptions.acceleration;
+                                // af.push(afValue);
+
+                                epArray[uniqueID]=ep;
+                                afArray[uniqueID]=af;
+                                sarArray[uniqueID]=sar;
+                                trendArray[uniqueID]=trend;
+
+                                var sarValue=calculateSarValue(data,index,sarOptions,uniqueID,false);
 
                                 sarData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(sarValue , 4)]);
 
@@ -138,33 +207,23 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                         sarOptionsMap[uniqueID] = sarOptions;
 
-                        // chart.addAxis({ // Secondary yAxis
-                        //     id: 'sar'+ uniqueID,
-                        //     title: {
-                        //         text: 'SAR(' + sarOptions.acceleration + "," + sarOptions.maximum  + ')',
-                        //         align: 'high',
-                        //         offset: 0,
-                        //         rotation: 0,
-                        //         y: 10, //Trying to show title inside the indicator chart
-                        //         x: 50
-                        //     },
-                        //     lineWidth: 2
-                        // }, false, false, false);
-
-                        // indicatorBase.recalculate(chart);
-
                         var series = this;
                         sarSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
                             name: 'SAR(' + sarOptions.acceleration + "," + sarOptions.maximum  + ')',
                             data: sarData,
-                             type: 'line', //TODO
+                            //type: 'column', //TODO
+                            lineWidth : 0,
+                            marker : {
+                                enabled : true,
+                                radius : 2
+                            },
                             dataGrouping: series.options.dataGrouping,
                             // yAxis: 'sar'+ uniqueID,
                             opposite: series.options.opposite,
                             color: sarOptions.stroke,
-                            lineWidth: sarOptions.strokeWidth,
-                            dashStyle: sarOptions.dashStyle
+                            //lineWidth: sarOptions.strokeWidth,
+                            //dashStyle: sarOptions.dashStyle
                         }, false, false);
 
                         $(sarSeriesMap[uniqueID]).data({
@@ -232,58 +291,25 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         if (sarSeriesMap[key] && sarSeriesMap[key].options && sarSeriesMap[key].options.data && sarSeriesMap[key].options.data.length > 0
                             && sarOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is sar series. Add one more sar point
-                            //Calculate sar data
-                            /*
-                             * Formula(OHLC or Candlestick) -
-                             * 	rs(t) = avg-gain(n) / avg-loss(n)
-                             *  sar(t) = if avg-loss(n) == 0 ? 100 : 100 - (100/ (1+rs(t))
-                             * 		t - current
-                             * 		n - period
-                             */
-                            //Find the data point
                             var data = series.options.data;
-                            var n = sarOptionsMap[key].period;
                             var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var sarOptions=sarOptionsMap[key];
                             if (dataPointIndex >= 1) {
-                                //Calculate sar - start
-                                var sarValue = 0.0;
-                                if (dataPointIndex >= n)
+
+                                var sarValue=calculateSarValue(data,dataPointIndex,sarOptions,key,isPointUpdate && sarSeriesMap[key].options.data.length >= data.length);
+
+                                if (isPointUpdate && sarSeriesMap[key].options.data.length >= data.length)
                                 {
-
-                                    var avgGain = 0, avgLoss = 0;
-                                    //Calculate RS - start
-                                    for (var i = dataPointIndex, count = 1; i > 0 && count <= n; i--, count++) {
-                                        var price1 = indicatorBase.extractPrice(data, i-1);
-                                        var price2 = indicatorBase.extractPrice(data, i);
-                                        if (price2 > price1) avgGain += price2 - price1;
-                                        if (price2 < price1) avgLoss += price1 - price2;
-                                    }
-                                    avgGain /= n;
-                                    avgLoss /= n;
-                                    var rs = avgGain / avgLoss;
-                                    //Calculate RS - end
-
-                                    sarValue = (avgLoss == 0 ? 100 : (100 - (100 / (1+rs))));
-
+                                    sarSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(sarValue , 4)]);
                                 }
-                                //Calculate sar - end
-                                sarValue = indicatorBase.toFixed(sarValue , 2);
+                                else 
+                                {
+                                    sarSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(sarValue , 4)]);
 
-                                if (isPointUpdate)
-                                {
-                                    if (sarSeriesMap[key].options.data.length < data.length) {
-                                        sarSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), sarValue]);
-                                    } else {
-                                        sarSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), sarValue]);
-                                    }
-                                }
-                                else
-                                {
-                                    sarSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), sarValue]);
                                 }
                             }
                         }
-                    }
+                    }    
                 }
 
             })(Highcharts, jQuery,indicatorBase);
