@@ -133,7 +133,8 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
             $(el).selectmenu( "destroy" )
         },
         routine: function (el, value) {
-            $(el).val(value).selectmenu('refresh');
+            $(el).val(value);
+            $(el).selectmenu('refresh');
         }
     };
 
@@ -141,7 +142,6 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
     rv.binders.selectrefresh = {
         priority: 99,
         routine: function(el,array) {
-            console.warn(el.classList);
             $(el).selectmenu('refresh');
         }
     }

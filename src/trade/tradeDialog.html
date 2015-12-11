@@ -57,7 +57,7 @@
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
             <select class="duration-unit"
-                    rv-selectmenu="duration_unit.value | notify duration_count.update barriers.update | debounce proposal.onchange"
+                    rv-selectmenu="duration_unit.value | debounce proposal.onchange"
                     rv-selectrefresh="duration_unit.array" >
 
                 <option rv-each-row="duration_unit.array" rv-value="row">{row}</option>

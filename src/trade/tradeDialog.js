@@ -82,7 +82,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           value: 'Duration',
         },
         duration_unit: {
-          array: ['-'],
+          array: [''],
           ranges: [{min: 1, max:365}],
           value: '',
         },
@@ -312,17 +312,13 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           return;
         }
 
-        console.warn('1');
         state.duration_unit.ranges = ranges;
         state.duration_unit.array = array;
-        if (!_(array).contains(state.duration_unit.value)) {
-          console.warn('2');
-          state.duration_unit.value = _(array).first().type;
-        }
-        else { /* manualy notify 'duration_count' and 'barriers' to update themselves */
-          state.duration_count.update();
-          state.barriers.update();
-        }
+        state.duration_unit.value = _.first(array);
+
+        /* manualy notify 'duration_count' and 'barriers' to update themselves */
+        state.duration_count.update();
+        state.barriers.update();
       };
 
       state.duration_count.update = function () {
