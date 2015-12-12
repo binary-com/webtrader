@@ -70,7 +70,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'roc'+ uniqueID,
                             title: {
-                                text: 'ROC(' + rocOptions.period  + ')',
+                                text: 'ROC (' + rocOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -86,7 +86,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         rocSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'ROC(' + rocOptions.period  + ')',
+                            name: 'ROC (' + rocOptions.period  + ')',
                             data: rocData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -122,7 +122,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckROC = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !rocOptionsMap[uniqueID] ? undefined : rocOptionsMap[uniqueID].period,
+                        isValidUniqueID : rocOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

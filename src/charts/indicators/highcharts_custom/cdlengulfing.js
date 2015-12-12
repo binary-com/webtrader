@@ -140,7 +140,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdlengulfingSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckCDLENGULFING = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : cdlengulfingOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

@@ -116,7 +116,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl3whitesoldiersSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL3WHITESOLDIERS(' + cdl3whitesoldiersOptions.period  + ')',
+                            name: 'CDL3WHITESOLDIERS',
                             data: cdl3whitesoldiersData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -152,7 +152,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl3whitesoldiersSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL3WHITESOLDIERS = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl3whitesoldiersOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint

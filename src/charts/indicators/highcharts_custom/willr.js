@@ -82,7 +82,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'willr'+ uniqueID,
                             title: {
-                                text: 'WILLR(' + willrOptions.period  + ')',
+                                text: 'WILLR (' + willrOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -98,7 +98,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         willrSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'WILLR(' + willrOptions.period  + ')',
+                            name: 'WILLR (' + willrOptions.period  + ')',
                             data: willrData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -134,7 +134,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckWILLR = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !willrOptionsMap[uniqueID] ? undefined : willrOptionsMap[uniqueID].period,
+                        isValidUniqueID : willrOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

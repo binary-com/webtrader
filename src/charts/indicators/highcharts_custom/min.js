@@ -90,7 +90,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         minSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'MIN(' + minOptions.period  + ', ' + indicatorBase.appliedPriceString(minOptions.appliedTo) + ')',
+                            name: 'MIN (' + minOptions.period  + ', ' + indicatorBase.appliedPriceString(minOptions.appliedTo) + ')',
                             data: minData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -125,7 +125,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     minOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     minSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckMIN = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !minOptionsMap[uniqueID] ? undefined : minOptionsMap[uniqueID].period,
+                        appliedTo : !minOptionsMap[uniqueID] ? undefined : minOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : minOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

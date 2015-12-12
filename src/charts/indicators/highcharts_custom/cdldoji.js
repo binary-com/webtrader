@@ -96,7 +96,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdldojiSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLDOJI(' + cdldojiOptions.period  + ')',
+                            name: 'CDLDOJI',
                             data: cdldojiData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -132,7 +132,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdldojiSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckCDLDOJI = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : cdldojiOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

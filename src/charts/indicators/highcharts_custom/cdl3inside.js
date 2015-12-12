@@ -109,7 +109,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl3insideSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL3INSIDE(' + cdl3insideOptions.period  + ')',
+                            name: 'CDL3INSIDE',
                             data: cdl3insideData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -145,7 +145,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl3insideSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL3INSIDE = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl3insideOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint

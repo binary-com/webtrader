@@ -125,7 +125,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdlabandonedbabySeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLABANDONEDBABY(' + cdlabandonedbabyOptions.period  + ')',
+                            name: 'CDLABANDONEDBABY',
                             data: cdlabandonedbabyData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -161,7 +161,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdlabandonedbabySeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDLABANDONEDBABY = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdlabandonedbabyOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint

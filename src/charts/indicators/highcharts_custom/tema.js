@@ -106,7 +106,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         temaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'TEMA(' + period + ', ' + indicatorBase.appliedPriceString(period) + ')',
+                            name: 'TEMA (' + period + ', ' + indicatorBase.appliedPriceString(period) + ')',
                             data: temaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -145,7 +145,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     ema1[uniqueID] = [];
                     ema2[uniqueID] = [];
                     ema3[uniqueID] = [];
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckTEMA = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !temaOptionsMap[uniqueID] ? undefined : temaOptionsMap[uniqueID].period,
+                        appliedTo : !temaOptionsMap[uniqueID] ? undefined : temaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : temaOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

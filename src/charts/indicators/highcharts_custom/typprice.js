@@ -105,7 +105,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     typpriceOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     typpriceSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckTYPPRICE = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : typpriceOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

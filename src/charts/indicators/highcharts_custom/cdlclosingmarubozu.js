@@ -91,7 +91,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdlclosingmarubozuSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLCLOSINGMARUBOZU(' + cdlclosingmarubozuOptions.period  + ')',
+                            name: 'CDLCLOSINGMARUBOZU',
                             data: cdlclosingmarubozuData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -127,7 +127,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdlclosingmarubozuSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckCDLCLOSINGMARUBOZU = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : cdlclosingmarubozuOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

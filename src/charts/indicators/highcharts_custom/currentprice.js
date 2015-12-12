@@ -62,7 +62,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //console.log('Before>>' + $(this).data('isInstrument'));
                     this.yAxis.removePlotLine('CurrentPrice' + uniqueID);
                     //console.log('After>>' + $(this).data('isInstrument'));
-                }
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

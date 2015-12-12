@@ -108,7 +108,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdlthrustingSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLTHRUSTING(' + cdlthrustingOptions.period  + ')',
+                            name: 'CDLTHRUSTING',
                             data: cdlthrustingData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -144,7 +144,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdlthrustingSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckCDLTHRUSTING = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : cdlthrustingOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

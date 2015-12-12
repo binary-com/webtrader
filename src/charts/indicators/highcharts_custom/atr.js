@@ -58,7 +58,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             {
                                 if (index == 0)
                                 {
-                                    tr.push((data[index].high || data[index][2]) - (data[index].low || [index][3]));
+                                    tr.push((data[index].high || data[index][2]) - (data[index].low || data[index][3]));
                                 }
                                 else
                                 {
@@ -107,7 +107,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'atr'+ uniqueID,
                             title: {
-                                text: 'ATR(' + atrOptions.period  + ')',
+                                text: 'ATR (' + atrOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -123,7 +123,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         atrSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'ATR(' + atrOptions.period  + ')',
+                            name: 'ATR (' + atrOptions.period  + ')',
                             data: atrData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -161,7 +161,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckATR = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !atrOptionsMap[uniqueID] ? undefined : atrOptionsMap[uniqueID].period,
+                        isValidUniqueID : atrOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

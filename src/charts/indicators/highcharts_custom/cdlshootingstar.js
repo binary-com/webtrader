@@ -121,7 +121,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdlshootingstarSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckCDLSHOOTINGSTAR = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : cdlshootingstarOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
