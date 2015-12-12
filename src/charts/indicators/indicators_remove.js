@@ -45,9 +45,11 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                                         return false;
                                     }
                                 });
+                                table.row($(this)).remove().draw();
                             });
 
-                        $( ".indicator_remove_dialog" ).dialog('close');
+                        //Feature request https://trello.com/c/udgxUvGT/213-test-wma
+                        //$( ".indicator_remove_dialog" ).dialog('close');
                       } else {
                         $.growl.error({ message: "Please select indicators to remove" });
                       }
