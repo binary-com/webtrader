@@ -133,7 +133,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         ticks: {
             array: [],
             tick_count: passthrough.tick_count,
-            value: passthrough.digits_value * 1 || '0', // last digit value selected by the user
+            value: (passthrough.digits_value || '0') + '', // last digit value selected by the user
             category: passthrough.category,
             category_display: passthrough.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
@@ -157,14 +157,14 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         state.buy.show_result = true;
       }
       state.ticks.update_status = function() {
-        var first_quote = _.first(state.ticks.array).quote,
-            last_quote = _.last(state.ticks.array).quote,
-            digits_value = state.ticks.digits_value + '';
+        var first_quote = _.first(state.ticks.array).quote + '',
+            last_quote = _.last(state.ticks.array).quote + '',
+            digits_value = state.ticks.value + '';
         var category = state.ticks.category,
             display = state.ticks.category_display;
         var css = {
               Digits: {
-                matches:  _.last(last_quote+'') === digits_value,
+                matches:  _.last(last_quote) === digits_value,
                 differs:  _.last(last_quote) !== digits_value
               },
               'Up/Down': {
