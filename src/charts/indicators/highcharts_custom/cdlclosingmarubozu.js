@@ -91,7 +91,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdlclosingmarubozuSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLCLOSINGMARUBOZU(' + cdlclosingmarubozuOptions.period  + ')',
+                            name: 'CDLCLOSINGMARUBOZU',
                             data: cdlclosingmarubozuData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -127,7 +127,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdlclosingmarubozuSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckCDLCLOSINGMARUBOZU = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : cdlclosingmarubozuOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -136,7 +143,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlclosingmarubozueed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlclosingmarubozuOptionsMap, this.options.id)) {
-                        updateCDLCLOSINGMARUBOZUSeries.call(this, options);
+                        updateCDLCLOSINGMARUBOZUSeries.call(this, options[0]);
                     }
 
                 });
@@ -148,17 +155,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlclosingmarubozueed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlclosingmarubozuOptionsMap, this.series.options.id)) {
-                        updateCDLCLOSINGMARUBOZUSeries.call(this.series, options, true);
+                        updateCDLCLOSINGMARUBOZUSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLCLOSINGMARUBOZUSeries(options, isPointUpdate) {
+                function updateCDLCLOSINGMARUBOZUSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -171,7 +178,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdlclosingmarubozuOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDLCLOSINGMARUBOZU - start
 								                var bull_bear = calculateIndicatorValue(data, dataPointIndex);

@@ -84,7 +84,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         wmaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'WMA(' + wmaOptions.period  + ', ' + indicatorBase.appliedPriceString(wmaOptions.appliedTo) + ')',
+                            name: 'WMA (' + wmaOptions.period  + ', ' + indicatorBase.appliedPriceString(wmaOptions.appliedTo) + ')',
                             data: wmaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -119,7 +119,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     wmaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     wmaSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckWMA = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !wmaOptionsMap[uniqueID] ? undefined : wmaOptionsMap[uniqueID].period,
+                        appliedTo : !wmaOptionsMap[uniqueID] ? undefined : wmaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : wmaOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -128,7 +137,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(wmaOptionsMap, this.options.id)) {
-                        updateWMASeries.call(this, options);
+                        updateWMASeries.call(this, options[0]);
                     }
 
                 });
@@ -140,7 +149,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(wmaOptionsMap, this.series.options.id)) {
-                        updateWMASeries.call(this.series, options, true);
+                        updateWMASeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -168,22 +177,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var wmaData = wmaSeriesMap[key].options.data;
 
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, options);
                             if (dataPointIndex >= 1) {
                                 //Calculate WMA - start
                                 var wmaValue = calculateIndicatorValue.call(this, dataPointIndex, wmaOptionsMap[key], data);
                                 wmaValue = indicatorBase.toFixed(wmaValue, 4);
                                 if (isPointUpdate)
                                 {
-                                    if (wmaSeriesMap[key].options.data.length < data.length) {
-                                        wmaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), wmaValue]);
-                                    } else {
-                                        wmaSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), wmaValue]);
-                                    }
+                                    wmaSeriesMap[key].data[dataPointIndex].update({ y: wmaValue});
                                 }
                                 else
                                 {
-                                    wmaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), wmaValue]);
+                                    wmaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), wmaValue], true, true, false);
                                 }
                             }
                         }

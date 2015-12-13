@@ -70,7 +70,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'roc'+ uniqueID,
                             title: {
-                                text: 'ROC(' + rocOptions.period  + ')',
+                                text: 'ROC (' + rocOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -86,7 +86,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         rocSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'ROC(' + rocOptions.period  + ')',
+                            name: 'ROC (' + rocOptions.period  + ')',
                             data: rocData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -122,7 +122,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckROC = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !rocOptionsMap[uniqueID] ? undefined : rocOptionsMap[uniqueID].period,
+                        isValidUniqueID : rocOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -131,7 +139,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rocOptionsMap, this.options.id)) {
-                        updateROCSeries.call(this, options);
+                        updateROCSeries.call(this, options[0]);
                     }
 
                 });
@@ -143,17 +151,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rocOptionsMap, this.series.options.id)) {
-                        updateROCSeries.call(this.series, options, true);
+                        updateROCSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateROCSeries(options, isPointUpdate) {
+                function updateROCSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -171,7 +179,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = rocOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate ROC - start
                                 var rocValue = (indicatorBase.extractPrice(data, dataPointIndex) - indicatorBase.extractPrice(data, dataPointIndex - n)) * 100 / indicatorBase.extractPrice(data, dataPointIndex - n);
@@ -181,15 +189,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                                 if (isPointUpdate)
                                 {
-                                    if (rocSeriesMap[key].options.data.length < data.length) {
-                                        rocSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue]);
-                                    } else {
-                                        rocSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue]);
-                                    }
+                                    rocSeriesMap[key].data[dataPointIndex].update({ y : rocValue});
                                 }
                                 else
                                 {
-                                    rocSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue]);
+                                    rocSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue], true, true, false);
                                 }
                             }
                         }

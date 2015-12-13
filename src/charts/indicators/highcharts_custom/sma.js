@@ -104,7 +104,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         smaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'SMA(' + smaOptions.period  + ', ' + indicatorBase.appliedPriceString(smaOptions.appliedTo) + ')',
+                            name: 'SMA (' + smaOptions.period  + ', ' + indicatorBase.appliedPriceString(smaOptions.appliedTo) + ')',
                             data: smaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -139,7 +139,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     smaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     smaSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckSMA = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !smaOptionsMap[uniqueID] ? undefined : smaOptionsMap[uniqueID].period,
+                        appliedTo : !smaOptionsMap[uniqueID] ? undefined : smaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : smaOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -148,7 +157,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(smaOptionsMap, this.options.id)) {
-                        updateSMASeries.call(this, options);
+                        updateSMASeries.call(this, options[0]);
                     }
 
                 });
@@ -160,16 +169,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(smaOptionsMap, this.series.options.id)) {
-                        updateSMASeries.call(this.series, options, true);
+                        updateSMASeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  */
-                function updateSMASeries(options, isPointUpdate) {
+                function updateSMASeries(time, isPointUpdate) {
                     //if this is SMA series, ignore
                     var series = this;
                     var chart = series.chart;
@@ -192,7 +201,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var data = series.options.data;
                             var smaData = smaSeriesMap[key].options.data;
                             var n = smaOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var price = 0.0;
                                 if (indicatorBase.isOHLCorCandlestick(this.options.type))
@@ -208,15 +217,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 var smaValue = indicatorBase.toFixed(((smaData[dataPointIndex - 1].y || smaData[dataPointIndex - 1][1]) * (n - 1) + price) / n, 4);
                                 if (isPointUpdate)
                                 {
-                                    if (smaSeriesMap[key].options.data.length < data.length) {
-                                        smaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), smaValue]);
-                                    } else {
-                                        smaSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), smaValue]);
-                                    }
+                                    smaSeriesMap[key].data[dataPointIndex].update({ y : smaValue});
                                 }
                                 else
                                 {
-                                    smaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), smaValue]);
+                                    smaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), smaValue], true, true, false);
                                 }
                             }
                         }

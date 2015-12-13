@@ -111,7 +111,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl2crowsSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL2CROWS(' + cdl2crowsOptions.period  + ')',
+                            name: 'CDL2CROWS',
                             data: cdl2crowsData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -147,7 +147,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl2crowsSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL2CROWS = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl2crowsOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -156,7 +163,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl2crowseed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl2crowsOptionsMap, this.options.id)) {
-                        updateCDL2CROWSSeries.call(this, options);
+                        updateCDL2CROWSSeries.call(this, options[0], false);
                     }
 
                 });
@@ -168,17 +175,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl2crowseed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl2crowsOptionsMap, this.series.options.id)) {
-                        updateCDL2CROWSSeries.call(this.series, options, true);
+                        updateCDL2CROWSSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDL2CROWSSeries(options, isPointUpdate) {
+                function updateCDL2CROWSSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -191,7 +198,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdl2crowsOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDL2CROWS - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);
