@@ -137,7 +137,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlshootingstareed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlshootingstarOptionsMap, this.options.id)) {
-                        updateCDLSHOOTINGSTARSeries.call(this, options);
+                        updateCDLSHOOTINGSTARSeries.call(this, options[0]);
                     }
 
                 });
@@ -149,17 +149,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlshootingstareed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlshootingstarOptionsMap, this.series.options.id)) {
-                        updateCDLSHOOTINGSTARSeries.call(this.series, options, true);
+                        updateCDLSHOOTINGSTARSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLSHOOTINGSTARSeries(options, isPointUpdate) {
+                function updateCDLSHOOTINGSTARSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -171,7 +171,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Calculate CDLSHOOTINGSTAR data
                             //Find the data point
                             var data = series.options.data;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var bullBearData = null;
 								if (calculateIndicatorValue(data, dataPointIndex)) {

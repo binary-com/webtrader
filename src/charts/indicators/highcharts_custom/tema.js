@@ -163,7 +163,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(temaOptionsMap, this.options.id)) {
-                        updateTEMASeries.call(this, options);
+                        updateTEMASeries.call(this, options[0]);
                     }
 
                 });
@@ -175,16 +175,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(temaOptionsMap, this.series.options.id)) {
-                        updateTEMASeries.call(this.series, options, true);
+                        updateTEMASeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  */
-                function updateTEMASeries(options, isPointUpdate) {
+                function updateTEMASeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -204,7 +204,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = temaOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var price = 0.0;
                                 if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
@@ -227,23 +227,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 //Calculate TEMA - start
                                 //console.log(temaValue, price, n, temaData[dataPointIndex - 1]);
                                 if (isPointUpdate) {
-                                    if (temaSeriesMap[key].options.data.length < data.length) {
-                                        ema1[key].push([time, ema1Value]);
-                                        ema2[key].push([time, ema2Value]);
-                                        ema3[key].push([time, ema3Value]);
-                                        temaSeriesMap[key].addPoint([time, temaValue]);
-                                    } else {
-                                        ema1[key][dataPointIndex] = [time, ema1Value];
-                                        ema2[key][dataPointIndex] = [time, ema2Value];
-                                        ema3[key][dataPointIndex] = [time, ema3Value];
-                                        temaSeriesMap[key].data[dataPointIndex].update([time, temaValue]);
-                                    }
+                                    ema1[key][dataPointIndex] = [time, ema1Value];
+                                    ema2[key][dataPointIndex] = [time, ema2Value];
+                                    ema3[key][dataPointIndex] = [time, ema3Value];
+                                    temaSeriesMap[key].data[dataPointIndex].update({ y : temaValue});
                                 }
                                 else {
                                     ema1[key].push([time, ema1Value]);
                                     ema2[key].push([time, ema2Value]);
                                     ema3[key].push([time, ema3Value]);
-                                    temaSeriesMap[key].addPoint([time, temaValue]);
+                                    temaSeriesMap[key].addPoint([time, temaValue], true, true, false);
                                 }
                             }
                         }

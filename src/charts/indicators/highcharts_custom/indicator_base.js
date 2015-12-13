@@ -121,11 +121,11 @@ define(['jquery'], function ($) {
             return ret;
         },
 
-        findDataUpdatedDataPoint: function (data, options) {
+        findIndexInDataForTime: function (data, time) {
             var dataPointIndex = -1;
             for (var index = data.length - 1; index >= 1; index--) {
                 //Matching time
-                if (data[index][0] === options[0] || data[index].x === options[0]) {
+                if ((data[index][0] || data[index].x) === time) {
                     dataPointIndex = index;
                     break;
                 }

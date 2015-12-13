@@ -90,7 +90,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'sar'+ uniqueID,
                             title: {
-                                text: 'SAR(' + sarOptions.acceleration + "," + sarOptions.maximum  + ')',
+                                text: 'SAR (' + sarOptions.acceleration + "," + sarOptions.maximum  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -192,7 +192,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = sarOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, options);
                             if (dataPointIndex >= 1) {
                                 //Calculate sar - start
                                 var sarValue = 0.0;

@@ -156,7 +156,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlengulfingeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlengulfingOptionsMap, this.options.id)) {
-                        updateCDLENGULFINGSeries.call(this, options);
+                        updateCDLENGULFINGSeries.call(this, options[0]);
                     }
 
                 });
@@ -168,17 +168,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlengulfingeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlengulfingOptionsMap, this.series.options.id)) {
-                        updateCDLENGULFINGSeries.call(this.series, options, true);
+                        updateCDLENGULFINGSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLENGULFINGSeries(options, isPointUpdate) {
+                function updateCDLENGULFINGSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -191,7 +191,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdlengulfingOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDLENGULFING - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);

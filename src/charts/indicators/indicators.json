@@ -202,10 +202,10 @@
     "ohlcOnly" : true
   },
   
- "bllngrbnd": {
-    "id": "bllngrbnd",
-    "long_display_name": "Bollinger Band",
-    "short_display_name": "BLLNGRBND",
+ "bbands": {
+    "id": "bbands",
+    "long_display_name": "Bollinger Bands",
+    "short_display_name": "BBANDS",
     "ohlcOnly" : false
   },
 

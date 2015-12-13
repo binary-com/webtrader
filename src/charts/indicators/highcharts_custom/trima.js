@@ -155,7 +155,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(trimaOptionsMap, this.options.id)) {
-                        updateTRIMASeries.call(this, options);
+                        updateTRIMASeries.call(this, options[0]);
                     }
 
                 });
@@ -167,16 +167,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(trimaOptionsMap, this.series.options.id)) {
-                        updateTRIMASeries.call(this.series, options, true);
+                        updateTRIMASeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  */
-                function updateTRIMASeries(options, isPointUpdate) {
+                function updateTRIMASeries(time, isPointUpdate) {
                     //if this is TRIMA series, ignore
                     var series = this;
                     var chart = series.chart;
@@ -201,7 +201,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var data = series.options.data;
                             var trimaData = trimaSeriesMap[key].options.data;
                             var N = trimaOptionsMap[key].period + 1, Nm = Math.round( N / 2 );
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var price = 0.0;
                                 if (indicatorBase.isOHLCorCandlestick(this.options.type))
@@ -217,15 +217,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 var trimaValue = indicatorBase.toFixed(((trimaData[dataPointIndex - 1].y || trimaData[dataPointIndex - 1][1]) * (Nm - 1) + price) / Nm, 4);
                                 if (isPointUpdate)
                                 {
-                                    if (trimaSeriesMap[key].options.data.length < data.length) {
-                                        trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), trimaValue]);
-                                    } else {
-                                        trimaSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), trimaValue]);
-                                    }
+                                    trimaSeriesMap[key].data[dataPointIndex].update({ y : trimaValue});
                                 }
                                 else
                                 {
-                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), trimaValue]);
+                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), trimaValue], true, true, false);
                                 }
                             }
                         }

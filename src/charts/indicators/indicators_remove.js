@@ -90,7 +90,7 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                         if ($.isFunction(series[eachKey]) && eachKey.indexOf("preRemovalCheck") === 0) {
                             var parameters = series[eachKey].call(series, series.options.id);
                             if (parameters && parameters.isValidUniqueID && parameters.isMainIndicator) {
-                                $(table.row.add([series.options.name]).draw().node())
+                                $(table.row.add([parameters.indicatorName || series.options.name]).draw().node())
                                     .click(function () {
                                         $(this).toggleClass('selected');
                                     }).data({

@@ -143,7 +143,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(minOptionsMap, this.options.id)) {
-                        updateMINSeries.call(this, options);
+                        updateMINSeries.call(this, options[0]);
                     }
 
                 });
@@ -155,16 +155,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(minOptionsMap, this.series.options.id)) {
-                        updateMINSeries.call(this.series, options, true);
+                        updateMINSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  */
-                function updateMINSeries(options, isPointUpdate) {
+                function updateMINSeries(time, isPointUpdate) {
                     //if this is MIN series, ignore
                     var series = this;
                     var chart = series.chart;
@@ -180,21 +180,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                              */
                             //Find the data point
                             var data = series.options.data;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var minValue = calculateIndicatorValue.call(this, minOptionsMap[key], data, dataPointIndex);
                                 minValue = indicatorBase.toFixed(minValue, 5);
                                 if (isPointUpdate)
                                 {
-                                    if (minSeriesMap[key].options.data.length < data.length) {
-                                        minSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), minValue]);
-                                    } else {
-                                        minSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), minValue]);
-                                    }
+                                    minSeriesMap[key].data[dataPointIndex].update({ y : minValue});
                                 }
                                 else
                                 {
-                                    minSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), minValue]);
+                                    minSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), minValue], true, true, false);
                                 }
                             }
                         }

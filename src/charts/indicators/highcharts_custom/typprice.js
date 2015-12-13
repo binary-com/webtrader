@@ -121,7 +121,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(typpriceOptionsMap, this.options.id)) {
-                        updateTYPPRICESeries.call(this, options);
+                        updateTYPPRICESeries.call(this, options[0]);
                     }
 
                 });
@@ -133,16 +133,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(typpriceOptionsMap, this.series.options.id)) {
-                        updateTYPPRICESeries.call(this.series, options, true);
+                        updateTYPPRICESeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  */
-                function updateTYPPRICESeries(options, isPointUpdate) {
+                function updateTYPPRICESeries(time, isPointUpdate) {
                     //if this is TYPPRICE series, ignore
                     var series = this;
                     var chart = series.chart;
@@ -165,7 +165,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var data = series.options.data;
                             var typpriceData = typpriceSeriesMap[key].options.data;
                             var n = typpriceOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var price = calculateIndicatorValue.call(this, indicatorBase, data, dataPointIndex);
                                 //console.log('typrice : ' + price);
@@ -174,15 +174,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 var typpriceValue = indicatorBase.toFixed(price, 4);
                                 if (isPointUpdate)
                                 {
-                                    if (typpriceSeriesMap[key].options.data.length < data.length) {
-                                        typpriceSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), typpriceValue]);
-                                    } else {
-                                        typpriceSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), typpriceValue]);
-                                    }
+                                    typpriceSeriesMap[key].data[dataPointIndex].update({ y : typpriceValue});
                                 }
                                 else
                                 {
-                                    typpriceSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), typpriceValue]);
+                                    typpriceSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), typpriceValue], true, true, false);
                                 }
                             }
                         }

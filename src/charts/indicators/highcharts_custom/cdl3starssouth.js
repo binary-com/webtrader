@@ -168,7 +168,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3starssoutheed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3starssouthOptionsMap, this.options.id)) {
-                        updateCDL3STARSSOUTHSeries.call(this, options);
+                        updateCDL3STARSSOUTHSeries.call(this, options[0]);
                     }
 
                 });
@@ -180,17 +180,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3starssoutheed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3starssouthOptionsMap, this.series.options.id)) {
-                        updateCDL3STARSSOUTHSeries.call(this.series, options, true);
+                        updateCDL3STARSSOUTHSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDL3STARSSOUTHSeries(options, isPointUpdate) {
+                function updateCDL3STARSSOUTHSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -203,7 +203,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdl3starssouthOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDL3STARSSOUTH - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);

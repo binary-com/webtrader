@@ -179,7 +179,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(atrOptionsMap, this.options.id))
                     {
-                        updateATRSeries.call(this, options);
+                        updateATRSeries.call(this, options[0], false);
                     }
 
                 });
@@ -192,7 +192,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(atrOptionsMap, this.series.options.id))
                     {
-                        updateATRSeries.call(this.series, options, true);
+                        updateATRSeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -202,7 +202,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param options - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateATRSeries(options, isPointUpdate) {
+                function updateATRSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -230,7 +230,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var data = series.options.data;
                             var atrData = atrSeriesMap[key].options.data;
                             var n = atrOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
+                            console.log('dataPointIndex', dataPointIndex);
                             if (dataPointIndex >= 1) {
                                 var tr = 0.0;
                                 if (indicatorBase.isOHLCorCandlestick(series.options.type)) {
@@ -248,21 +249,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 var atr = indicatorBase.toFixed(( (atrData[dataPointIndex - 1].y || atrData[dataPointIndex - 1][1]) * (n - 1) + tr ) / n, 2) ;
                                 if (isPointUpdate)
                                 {
-                                    //console.log('series.options.data.length , update : ', data.length, ', Series name : ', series.options.name);
-                                    //console.log('atrSeries.options.data.length , update : ', atrSeriesMap[key].options.data.length);
-                                    if (atrSeriesMap[key].options.data.length < data.length) {
-                                        atrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
-                                    } else
-                                    {
-                                        atrSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
-                                    }
+                                    atrSeriesMap[key].data[dataPointIndex].update({ y : atr});
                                 }
                                 else
                                 {
-                                    //console.log('series.options.data.length : ', data.length);
-                                    //console.log('atrSeries.options.data.length (before) : ', atrSeriesMap[key].options.data.length);
-                                    atrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), atr]);
-                                    //console.log('atrSeries.options.data.length (after) : ', atrSeriesMap[key].options.data.length);
+                                    console.log('series.options.data.length : ', data.length);
+                                    console.log('atrSeries.options.data.length (before) : ', atrSeriesMap[key].options.data.length);
+                                    atrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), atr], true, true, false);
+                                    console.log('atrSeries.options.data.length (after) : ', atrSeriesMap[key].options.data.length);
                                 }
                             }
                         }

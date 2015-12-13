@@ -139,7 +139,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rocOptionsMap, this.options.id)) {
-                        updateROCSeries.call(this, options);
+                        updateROCSeries.call(this, options[0]);
                     }
 
                 });
@@ -151,17 +151,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rocOptionsMap, this.series.options.id)) {
-                        updateROCSeries.call(this.series, options, true);
+                        updateROCSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateROCSeries(options, isPointUpdate) {
+                function updateROCSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -179,7 +179,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = rocOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate ROC - start
                                 var rocValue = (indicatorBase.extractPrice(data, dataPointIndex) - indicatorBase.extractPrice(data, dataPointIndex - n)) * 100 / indicatorBase.extractPrice(data, dataPointIndex - n);
@@ -189,15 +189,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                                 if (isPointUpdate)
                                 {
-                                    if (rocSeriesMap[key].options.data.length < data.length) {
-                                        rocSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue]);
-                                    } else {
-                                        rocSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue]);
-                                    }
+                                    rocSeriesMap[key].data[dataPointIndex].update({ y : rocValue});
                                 }
                                 else
                                 {
-                                    rocSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue]);
+                                    rocSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocValue], true, true, false);
                                 }
                             }
                         }
