@@ -88,7 +88,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         maxSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'MAX(' + maxOptions.period  + ', ' + indicatorBase.appliedPriceString(maxOptions.appliedTo) + ')',
+                            name: 'MAX (' + maxOptions.period  + ', ' + indicatorBase.appliedPriceString(maxOptions.appliedTo) + ')',
                             data: maxData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -123,7 +123,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     maxOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     maxSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckMAX = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !maxOptionsMap[uniqueID] ? undefined : maxOptionsMap[uniqueID].period,
+                        appliedTo : !maxOptionsMap[uniqueID] ? undefined : maxOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : maxOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

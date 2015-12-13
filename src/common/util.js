@@ -22,19 +22,27 @@ function isDaily(ohlc)
     return ohlc.indexOf('d') != -1;
 }
 
+function isDotType(type) {
+    return type === 'dot';
+}
+
+function isLineDotType(type) {
+    return type === 'linedot';
+}
+
 function isNumericBetween(value, min, max) {
     var isNumeric = !isNaN(parseFloat(value)) && isFinite(value)
     return isNumeric && Math.floor(value) == value && min <= value && max >= value;
 };
 
-function convertToTimeperiodObject(timeperiodInStringFormat)
+function convertToTimeperiodObject(timePeriodInStringFormat)
 {
     return {
         intValue : function() {
-            return parseInt(timeperiodInStringFormat.replace("t", "").replace("h", "").replace("d", "").trim())
+            return parseInt(timePeriodInStringFormat.toLowerCase().replace("t", "").replace("h", "").replace("d", "").trim())
         },
         suffix : function() {
-            return timeperiodInStringFormat.replace("" + this.intValue(), "").trim().charAt(0);
+            return timePeriodInStringFormat.toLowerCase().replace("" + this.intValue(), "").trim().charAt(0);
         },
         timeInMillis : function() {
             var val = 0;
@@ -107,7 +115,7 @@ function getObjects(obj, key, val) {
     Currently this is being used to validate the parameters passed by affilates/external applications
     It will validate instrument and timePeriod passed in URL
 **/
-function validateParameters(instrumentObject) {
+function validateParameters() {
       var instrumentCode_param = getParameterByName('instrument');
       var timePeriod_param = getParameterByName('timePeriod');
 
@@ -119,10 +127,10 @@ function validateParameters(instrumentObject) {
       } catch(e) {}
       if (!timePeriod_Obj) return false;
 
-      var isValidTickTF = timePeriod_Obj.suffix() == 't' && timePeriod_Obj.intValue() == 1;
-      var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 59;
-      var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 23;
-      var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() >= 1 && timePeriod_Obj.intValue() <= 3;
+      var isValidTickTF = timePeriod_Obj.suffix() === 't' && timePeriod_Obj.intValue() === 1;
+      var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 && timePeriod_Obj.intValue() in [1,2,3,5,10,15,30];
+      var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && timePeriod_Obj.intValue() in [1,2,4,8];
+      var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() === 1;
       return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
 };
 

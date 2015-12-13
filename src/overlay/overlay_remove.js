@@ -95,7 +95,7 @@ define(["jquery", "datatables"], function ($) {
 
             $.each(chart.series, function (index, series) {
                 //We cannot remove the main series
-                if ($(this).data('isInstrument') && index > 0) {
+                if (series.options.isInstrument && index > 0 && series.options.id !== 'navigator') {
                   $(table.row.add([series.options.name]).draw().node())
                       .click(function () {
                           $(this).toggleClass('selected');

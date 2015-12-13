@@ -116,7 +116,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl3blackcrowsSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL3BLACKCROWS(' + cdl3blackcrowsOptions.period  + ')',
+                            name: 'CDL3BLACKCROWS',
                             data: cdl3blackcrowsData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -152,7 +152,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl3blackcrowsSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL3BLACKCROWS = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl3blackcrowsOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint

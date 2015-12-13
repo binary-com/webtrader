@@ -102,7 +102,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         trimaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'TRIMA(' + trimaOptions.period  + ', ' + indicatorBase.appliedPriceString(trimaOptions.appliedTo) + ')',
+                            name: 'TRIMA (' + trimaOptions.period  + ', ' + indicatorBase.appliedPriceString(trimaOptions.appliedTo) + ')',
                             data: trimaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -137,7 +137,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     trimaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     trimaSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckTRIMA = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !trimaOptionsMap[uniqueID] ? undefined : trimaOptionsMap[uniqueID].period,
+                        appliedTo : !trimaOptionsMap[uniqueID] ? undefined : trimaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : trimaOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

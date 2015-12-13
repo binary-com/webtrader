@@ -45,9 +45,11 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                                         return false;
                                     }
                                 });
+                                table.row($(this)).remove().draw();
                             });
 
-                        $( ".indicator_remove_dialog" ).dialog('close');
+                        //Feature request https://trello.com/c/udgxUvGT/213-test-wma
+                        //$( ".indicator_remove_dialog" ).dialog('close');
                       } else {
                         $.growl.error({ message: "Please select indicators to remove" });
                       }
@@ -60,12 +62,10 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                 }]
             });
 
-            require(['text!charts/indicators/indicators.json'], function (jsonData) {
-                indicatorsJSON = jsonData;
-                if (typeof _callback == "function") {
-                    _callback(containerIDWithHash);
-                }
-            });
+            if ($.isFunction(_callback)) {
+                _callback(containerIDWithHash);
+            }
+
         });
     }
 
@@ -84,22 +84,23 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
             table.clear().draw();
             var chart = $(containerIDWithHash).highcharts();
             if (!chart) return;
-            $.each(chart.series, function (index, series) {
-                if ($(this).data('isIndicator')) {
-                    $.each(indicatorsJSON, function (indicatorDataKey, indicatorDataValue) {
-                        if (series.options.name.indexOf(indicatorDataValue.short_display_name) != -1) {
-                            var period_text = $(series).data('period') ? '(' + $(series).data('period') + ')' : '';
-                            $(table.row.add([indicatorDataValue.long_display_name + period_text]).draw().node())
-                                .click(function () {
-                                    $(this).toggleClass('selected');
-                                }).data({
-                                    'id': indicatorDataValue.id,
-                                    'seriesID': series.options.id,
-                                    'parentSeriesID': $(series).data('parentSeriesID')
-                                });
-                            return false;
+            chart.series.forEach(function (series) {
+                if ($(series).data('isIndicator')) {
+                    for(var eachKey in series) {
+                        if ($.isFunction(series[eachKey]) && eachKey.indexOf("preRemovalCheck") === 0) {
+                            var parameters = series[eachKey].call(series, series.options.id);
+                            if (parameters && parameters.isValidUniqueID && parameters.isMainIndicator) {
+                                $(table.row.add([series.options.name]).draw().node())
+                                    .click(function () {
+                                        $(this).toggleClass('selected');
+                                    }).data({
+                                        'id': eachKey.replace('preRemovalCheck' , '').toUpperCase(),
+                                        'seriesID': series.options.id,
+                                        'parentSeriesID': $(series).data('parentSeriesID')
+                                    });
+                            }
                         }
-                    });
+                    }
                 }
             });
 

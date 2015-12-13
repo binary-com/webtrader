@@ -111,7 +111,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl2crowsSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL2CROWS(' + cdl2crowsOptions.period  + ')',
+                            name: 'CDL2CROWS',
                             data: cdl2crowsData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -147,7 +147,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl2crowsSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL2CROWS = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl2crowsOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint

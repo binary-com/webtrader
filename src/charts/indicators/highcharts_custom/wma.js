@@ -84,7 +84,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         wmaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'WMA(' + wmaOptions.period  + ', ' + indicatorBase.appliedPriceString(wmaOptions.appliedTo) + ')',
+                            name: 'WMA (' + wmaOptions.period  + ', ' + indicatorBase.appliedPriceString(wmaOptions.appliedTo) + ')',
                             data: wmaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -119,7 +119,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     wmaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     wmaSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckWMA = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !wmaOptionsMap[uniqueID] ? undefined : wmaOptionsMap[uniqueID].period,
+                        appliedTo : !wmaOptionsMap[uniqueID] ? undefined : wmaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : wmaOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

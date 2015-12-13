@@ -66,12 +66,12 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'bop'+ uniqueID,
                             title: {
-                                text: 'BOP(' + bopOptions.period  + ')',
+                                text: 'BOP',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
                                 y: 10, //Trying to show title inside the indicator chart
-                                x: 55
+                                x: 25
                             },
                             lineWidth: 2,
                             plotLines: bopOptions.levels
@@ -82,7 +82,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         bopSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'BOP(' + bopOptions.period  + ')',
+                            name: 'BOP',
                             data: bopData,
                             type: 'column',
                             dataGrouping: series.options.dataGrouping,
@@ -118,7 +118,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckBOP = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : bopOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

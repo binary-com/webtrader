@@ -116,7 +116,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl3linestrikeSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL3LINESTRIKE(' + cdl3linestrikeOptions.period  + ')',
+                            name: 'CDL3LINESTRIKE',
                             data: cdl3linestrikeData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -152,7 +152,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl3linestrikeSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL3LINESTRIKE = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl3linestrikeOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -195,7 +202,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Calculate CDL3LINESTRIKE data
                             //Find the data point
                             var data = series.options.data;
-                            var n = cdl3linestrikeOptionsMap[key].period;
                             var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDL3LINESTRIKE - start

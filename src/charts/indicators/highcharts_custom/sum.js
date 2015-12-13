@@ -73,7 +73,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'sum'+ uniqueID,
                             title: {
-                                text: 'SUM(' + sumOptions.period  + ')',
+                                text: 'SUM (' + sumOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -89,7 +89,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         sumSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'SUM(' + sumOptions.period  + ')',
+                            name: 'SUM (' + sumOptions.period  + ')',
                             data: sumData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -125,7 +125,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckSUM = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !sumOptionsMap[uniqueID] ? undefined : sumOptionsMap[uniqueID].period,
+                        isValidUniqueID : sumOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

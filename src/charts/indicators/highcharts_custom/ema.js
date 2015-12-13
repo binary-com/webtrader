@@ -83,7 +83,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         emaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'EMA(' + emaOptions.period + ', ' + indicatorBase.appliedPriceString(emaOptions.period) + ')',
+                            name: 'EMA (' + emaOptions.period + ', ' + indicatorBase.appliedPriceString(emaOptions.period) + ')',
                             data: emaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -119,7 +119,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     emaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     emaSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckEMA = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !emaOptionsMap[uniqueID] ? undefined : emaOptionsMap[uniqueID].period,
+                        appliedTo : !emaOptionsMap[uniqueID] ? undefined : emaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : emaOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

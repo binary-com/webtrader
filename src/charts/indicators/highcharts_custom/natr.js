@@ -110,7 +110,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'natr'+ uniqueID,
                             title: {
-                                text: 'NATR(' + natrOptions.period  + ')',
+                                text: 'NATR (' + natrOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -126,7 +126,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         natrSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'NATR(' + natrOptions.period  + ')',
+                            name: 'NATR (' + natrOptions.period  + ')',
                             data: natrData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -165,7 +165,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckNATR = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !natrOptionsMap[uniqueID] ? undefined : natrOptionsMap[uniqueID].period,
+                        isValidUniqueID : natrOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

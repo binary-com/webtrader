@@ -85,7 +85,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'rsi'+ uniqueID,
                             title: {
-                                text: 'RSI(' + rsiOptions.period  + ')',
+                                text: 'RSI (' + rsiOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -101,7 +101,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         rsiSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'RSI(' + rsiOptions.period  + ')',
+                            name: 'RSI (' + rsiOptions.period  + ')',
                             data: rsiData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -137,7 +137,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckRSI = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !rsiOptionsMap[uniqueID] ? undefined : rsiOptionsMap[uniqueID].period,
+                        isValidUniqueID : rsiOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint

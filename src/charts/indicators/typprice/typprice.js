@@ -52,7 +52,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 of: window,
                 buttons: [
                     {
-                        text: "Ok",
+                        text: "OK",
                         click: function() {
                             //console.log('Ok button is clicked!');
                             require(['charts/indicators/highcharts_custom/typprice'], function ( typprice ) {

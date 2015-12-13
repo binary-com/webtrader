@@ -116,7 +116,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl3starssouthSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL3STARSSOUTH(' + cdl3starssouthOptions.period  + ')',
+                            name: 'CDL3STARSSOUTH',
                             data: cdl3starssouthData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -152,7 +152,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl3starssouthSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL3STARSSOUTH = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl3starssouthOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint
