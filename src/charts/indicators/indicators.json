@@ -201,6 +201,13 @@
     "short_display_name": "CDLTHRUSTING",
     "ohlcOnly" : true
   },
+  
+ "bllngrbnd": {
+    "id": "bllngrbnd",
+    "long_display_name": "Bollinger Band",
+    "short_display_name": "BLLNGRBND",
+    "ohlcOnly" : false
+  },
 
   "cdlshootingstar": {
     "id": "cdlshootingstar",
@@ -215,4 +222,5 @@
     "short_display_name": "CDLENGULFING",
     "ohlcOnly" : true
   }
+
 }
