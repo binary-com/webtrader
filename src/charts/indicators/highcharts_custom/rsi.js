@@ -154,7 +154,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rsiOptionsMap, this.options.id)) {
-                        updateRSISeries.call(this, options);
+                        updateRSISeries.call(this, options[0]);
                     }
 
                 });
@@ -166,17 +166,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rsiOptionsMap, this.series.options.id)) {
-                        updateRSISeries.call(this.series, options, true);
+                        updateRSISeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateRSISeries(options, isPointUpdate) {
+                function updateRSISeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -196,7 +196,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = rsiOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate RSI - start
                                 var rsiValue = 0.0;
@@ -224,15 +224,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                                 if (isPointUpdate)
                                 {
-                                    if (rsiSeriesMap[key].options.data.length < data.length) {
-                                        rsiSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rsiValue]);
-                                    } else {
-                                        rsiSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), rsiValue]);
-                                    }
+                                    rsiSeriesMap[key].data[dataPointIndex].update({ y : rsiValue});
                                 }
                                 else
                                 {
-                                    rsiSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rsiValue]);
+                                    rsiSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rsiValue], true, true, false);
                                 }
                             }
                         }

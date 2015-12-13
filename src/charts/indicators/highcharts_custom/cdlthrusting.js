@@ -160,7 +160,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlthrustingeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlthrustingOptionsMap, this.options.id)) {
-                        updateCDLTHRUSTINGSeries.call(this, options);
+                        updateCDLTHRUSTINGSeries.call(this, options[0]);
                     }
 
                 });
@@ -172,17 +172,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlthrustingeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlthrustingOptionsMap, this.series.options.id)) {
-                        updateCDLTHRUSTINGSeries.call(this.series, options, true);
+                        updateCDLTHRUSTINGSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLTHRUSTINGSeries(options, isPointUpdate) {
+                function updateCDLTHRUSTINGSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -195,49 +195,49 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdlthrustingOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDLTHRUSTING - start
 								                var bull_bear = calculateIndicatorValue(data, dataPointIndex);
                                 //console.log('Roc : ' + cdlthrustingValue);
                                 //Calculate CDLTHRUSTING - end
-                								var bullBearData = null;
-                								if (bull_bear.isBullishContinuation) {
-                									bullBearData = {
-                											x : data[dataPointIndex].x || data[dataPointIndex][0],
-                											title : '<span style="color : blue">TP</span>',
-                											text : 'Thrusting Pattern : Bull'
-                									}
-                								} else if (bull_bear.isBearishContinuation) {
-                									bullBearData = {
-                											x : data[dataPointIndex].x || data[dataPointIndex][0],
-                											title : '<span style="color : red">TP</span>',
-                											text : 'Thrusting Pattern : Bear'
-                									}
-                								}
+                                var bullBearData = null;
+                                if (bull_bear.isBullishContinuation) {
+                                    bullBearData = {
+                                            x : data[dataPointIndex].x || data[dataPointIndex][0],
+                                            title : '<span style="color : blue">TP</span>',
+                                            text : 'Thrusting Pattern : Bull'
+                                    }
+                                } else if (bull_bear.isBearishContinuation) {
+                                    bullBearData = {
+                                            x : data[dataPointIndex].x || data[dataPointIndex][0],
+                                            title : '<span style="color : red">TP</span>',
+                                            text : 'Thrusting Pattern : Bear'
+                                    }
+                                }
 
-                								var whereToUpdate = -1;
-                								for (var sIndx = cdlthrustingSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                									if ((cdlthrustingSeriesMap[key].data[sIndx].x || cdlthrustingSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
-                										whereToUpdate = sIndx;
-                										break;
-                									}
-                								}
-                								if (bullBearData) {
+                                var whereToUpdate = -1;
+                                for (var sIndx = cdlthrustingSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlthrustingSeriesMap[key].data[sIndx].x || cdlthrustingSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                        whereToUpdate = sIndx;
+                                        break;
+                                    }
+                                }
+                                if (bullBearData) {
                                     if (isPointUpdate)
                                     {
-                  										if (whereToUpdate >= 0)
-                  	                                    {
-                  											cdlthrustingSeriesMap[key].data[whereToUpdate].remove();
-                  										}
+                                        if (whereToUpdate >= 0)
+                                        {
+                                            cdlthrustingSeriesMap[key].data[whereToUpdate].remove();
+                                        }
                                     }
                                     cdlthrustingSeriesMap[key].addPoint(bullBearData);
-                								} else {
-                									if (whereToUpdate>=0)
-                									{
-                										cdlthrustingSeriesMap[key].data[whereToUpdate].remove();
-                									}
-                								}
+                                } else {
+                                    if (whereToUpdate>=0)
+                                    {
+                                        cdlthrustingSeriesMap[key].data[whereToUpdate].remove();
+                                    }
+                                }
                             }
                         }
                     }

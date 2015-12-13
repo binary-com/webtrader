@@ -168,7 +168,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3linestrikeeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3linestrikeOptionsMap, this.options.id)) {
-                        updateCDL3LINESTRIKESeries.call(this, options);
+                        updateCDL3LINESTRIKESeries.call(this, options[0]);
                     }
 
                 });
@@ -180,17 +180,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3linestrikeeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3linestrikeOptionsMap, this.series.options.id)) {
-                        updateCDL3LINESTRIKESeries.call(this.series, options, true);
+                        updateCDL3LINESTRIKESeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDL3LINESTRIKESeries(options, isPointUpdate) {
+                function updateCDL3LINESTRIKESeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -202,7 +202,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Calculate CDL3LINESTRIKE data
                             //Find the data point
                             var data = series.options.data;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDL3LINESTRIKE - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);

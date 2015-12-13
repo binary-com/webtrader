@@ -148,7 +148,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdldojieed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdldojiOptionsMap, this.options.id)) {
-                        updateCDLDOJISeries.call(this, options);
+                        updateCDLDOJISeries.call(this, options[0]);
                     }
 
                 });
@@ -160,17 +160,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdldojieed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdldojiOptionsMap, this.series.options.id)) {
-                        updateCDLDOJISeries.call(this.series, options, true);
+                        updateCDLDOJISeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLDOJISeries(options, isPointUpdate) {
+                function updateCDLDOJISeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -183,7 +183,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdldojiOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDLDOJI - start
 								                var bull_bear = calculateIndicatorValue(data, dataPointIndex);

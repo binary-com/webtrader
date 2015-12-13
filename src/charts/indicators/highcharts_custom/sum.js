@@ -142,7 +142,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     psumeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(sumOptionsMap, this.options.id)) {
-                        updateSUMSeries.call(this, options);
+                        updateSUMSeries.call(this, options[0]);
                     }
 
                 });
@@ -154,17 +154,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     psumeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(sumOptionsMap, this.series.options.id)) {
-                        updateSUMSeries.call(this.series, options, true);
+                        updateSUMSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateSUMSeries(options, isPointUpdate) {
+                function updateSUMSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -183,7 +183,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var data = series.options.data;
                             var smaData = sumSeriesMap[key].options.data;
                             var n = sumOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate SUM - start
                                 var sumValue = calculateIndicatorValue(dataPointIndex, sumOptionsMap[key], data);
@@ -193,15 +193,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                                 if (isPointUpdate)
                                 {
-                                    if (sumSeriesMap[key].options.data.length < data.length) {
-                                        sumSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), sumValue]);
-                                    } else {
-                                        sumSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), sumValue]);
-                                    }
+                                    sumSeriesMap[key].data[dataPointIndex].update({ y : sumValue});
                                 }
                                 else
                                 {
-                                    sumSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), sumValue]);
+                                    sumSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), sumValue], true, true, false);
                                 }
                             }
                         }

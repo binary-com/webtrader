@@ -183,7 +183,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(natrOptionsMap, this.options.id))
                     {
-                        updateNATRSeries.call(this, options);
+                        updateNATRSeries.call(this, options[0]);
                     }
 
                 });
@@ -196,17 +196,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(natrOptionsMap, this.series.options.id))
                     {
-                        updateNATRSeries.call(this.series, options, true);
+                        updateNATRSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateNATRSeries(options, isPointUpdate) {
+                function updateNATRSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -226,7 +226,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var data = series.options.data;
                             var natrData = natrSeriesMap[key].options.data;
                             var n = natrOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
                                 var tr = 0.0;
@@ -257,23 +257,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 var time = (data[dataPointIndex].x || data[dataPointIndex][0]);
                                 if (isPointUpdate)
                                 {
-                                    //console.log('series.options.data.length , update : ', data.length, ', Series name : ', series.options.name);
-                                    //console.log('natrSeries.options.data.length , update : ', natrSeriesMap[key].options.data.length);
-                                    if (natrSeriesMap[key].options.data.length < data.length) {
-                                        atr[key].push([time, atrVal]);
-                                        natrSeriesMap[key].addPoint([time, natr]);
-                                    } else
-                                    {
-                                        atr[key][dataPointIndex] = [time, atrVal];
-                                        natrSeriesMap[key].data[dataPointIndex].update([time, natr]);
-                                    }
+                                    atr[key][dataPointIndex] = [time, atrVal];
+                                    natrSeriesMap[key].data[dataPointIndex].update({ y : natr});
                                 }
                                 else
                                 {
                                     //console.log('series.options.data.length : ', data.length);
                                     //console.log('natrSeries.options.data.length (before) : ', natrSeriesMap[key].options.data.length);
                                     atr[key].push([time, atrVal]);
-                                    natrSeriesMap[key].addPoint([time, natr]);
+                                    natrSeriesMap[key].addPoint([time, natr], true, true, false);
                                     //console.log('natrSeries.options.data.length (after) : ', natrSeriesMap[key].options.data.length);
                                 }
                             }

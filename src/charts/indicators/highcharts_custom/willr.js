@@ -151,7 +151,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pwillreed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(willrOptionsMap, this.options.id)) {
-                        updateWILLRSeries.call(this, options);
+                        updateWILLRSeries.call(this, options[0]);
                     }
 
                 });
@@ -163,17 +163,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pwillreed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(willrOptionsMap, this.series.options.id)) {
-                        updateWILLRSeries.call(this.series, options, true);
+                        updateWILLRSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateWILLRSeries(options, isPointUpdate) {
+                function updateWILLRSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -191,7 +191,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = willrOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate WILLR - start
                                 var willrValue = calculateIndicatorValue(dataPointIndex, n, data);
@@ -201,15 +201,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                                 if (isPointUpdate)
                                 {
-                                    if (willrSeriesMap[key].options.data.length < data.length) {
-                                        willrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), willrValue]);
-                                    } else {
-                                        willrSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), willrValue]);
-                                    }
+                                    willrSeriesMap[key].data[dataPointIndex].update({ y : willrValue});
                                 }
                                 else
                                 {
-                                    willrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), willrValue]);
+                                    willrSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), willrValue], true, true, false);
                                 }
                             }
                         }
