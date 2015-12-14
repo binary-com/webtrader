@@ -244,7 +244,7 @@
 }
 
 #nav-toggle span:after {
-  bottom: -5px; 
+  bottom: -5px;
 }
 
 #nav-toggle.nav-toggle-active span {
@@ -275,6 +275,35 @@
     text-shadow: 0 0 3px #333;
 }
 
+/* authentication button */
+#nav-container .authentication {
+  display: inline-table;
+  position: relative;
+  height: 30px;
+  top:-20px;
+}
+#nav-container .authentication span,
+#nav-container .authentication button {
+  display: inline-block;
+  margin-left: 10px;
+  height: 2em;
+  vertical-align: middle;
+  font-size: larger;
+  line-height: 2em;
+  width:90px;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  color: white;
+}
+#nav-container .authentication .login {
+  background: #2e8836;
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
+}
+#nav-container .authentication .loginid {
+  text-shadow: 2px 2px 8px rgba(255,255,255,0.75);
+}
+
 /** targets min-width requirement **/
 @media screen and (max-width: 825px) {
     .nav-normal-menu {
@@ -302,5 +331,11 @@
 
     #nav-toggle {
         display: block;
+    }
+
+    #nav-container .authentication {
+      position: absolute;
+      top: 10px;
+      right: 60px;
     }
 }
