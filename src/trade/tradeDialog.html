@@ -15,7 +15,7 @@
     </ul>
 
     <ul class="contract-displays"
-        rv-data="category_displays.selected | notify date_start.update duration_unit.update basis.update_limit | debounce proposal.onchange">
+        rv-data="category_displays.selected | notify date_start.update duration_unit.update basis.update_limit digits.update | debounce proposal.onchange">
         <li rv-each-row="category_displays.array"
             rv-on-click="category_displays.onclick"
             rv-data="row"
@@ -77,25 +77,17 @@
 
     <ul class="digits-row"
         rv-css-padding-top="categories.paddingTop < value"
-        rv-show="categories.value | eq 'Digits'">
+        rv-show="digits.visible">
         <li>
-            <p>Last Digit Prediction </p>
+            <p>{digits.text}</p>
         </li>
         <li>
             <select class="digits-select"
                     rv-jq-class="'trade-dialog-digits-select-ul'"
-                    rv-selectmenu="digits.value | debounce proposal.onchange"  >
+                    rv-selectmenu="digits.value | debounce proposal.onchange"
+                    rv-selectrefresh="digits.array">
 
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
+                <option rv-each-row="digits.array" rv-value="row">{row}</option>
            </select>
         </li>
     </ul>

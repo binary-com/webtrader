@@ -67,10 +67,15 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         _(available).filter('contract_display', 'goes outside').each(replacer('contract_display', 'goes out')).run();
         _(available).filter('contract_display', 'touches').each(replacer('contract_display', 'touch')).run();
         _(available).filter('contract_display', 'does not touch').each(replacer('contract_display', 'no touch')).run();
-        /* Digits odd/even/over/under are not yet implemented in beta trading interface ignore them for now, TODO: implement them */
-        available = _(available).reject(function (r) { return _(['odd', 'even', 'over', 'under']).contains(r.contract_display); }).run();
-        /* Spreads are not yet implemented, ignore them for now, TODO: itempement Spreads */
-        // available = _(available).reject('contract_category_display', 'Spreads').run();
+
+        /* put 'odd' & 'even' to the end of list */
+        var put_to_end = function(array, condition){
+          var inx = _(array).findIndex(condition);
+          if(inx !== -1) array.push(array.splice(inx,1)[0]);
+        }
+        put_to_end(available, {'contract_display': 'odd'});
+        put_to_end(available, {'contract_display': 'even'});
+
         return available;
     }
 
@@ -123,7 +128,10 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           low_barrier_live: function() { return this.low_barrier * 1 + state.tick.quote * 1; },
         },
         digits: {
+          array: ['0', '1','2','3','4','5','6','7','8','9'],
           value: '0',
+          visible: false,
+          text: 'Last Digit Prediction'
         },
         currency: {
           array: ['USD'],
@@ -328,6 +336,32 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         state.duration_count.max = range.max;
         var value = state.duration_count.value;
         state.duration_count.value = Math.min(Math.max(value, range.min), range.max);
+      };
+
+      state.digits.update = function() {
+          var subcat = state.category_displays.selected;
+          if(state.categories.value !== 'Digits' || subcat === 'odd' || subcat === 'even') {
+            state.digits.visible = false;
+            return;
+          }
+
+          var array = {
+            matches: ['0', '1','2','3','4','5','6','7','8', '9'],
+            differs: ['0', '1','2','3','4','5','6','7','8', '9'],
+            under: ['1','2','3','4','5','6','7','8', '9'],
+            over: ['0','1','2','3','4','5','6','7','8'],
+          }[subcat];
+          var text = {
+            matches: 'Last Digit Prediction',
+            differs: 'Last Digit Prediction',
+            under: 'Last Digit is Under',
+            over: 'Last Digit is Over'
+          }[subcat];
+
+          state.digits.array = array;
+          state.digits.value = array[0];
+          state.digits.text = text;
+          state.digits.visible = true;
       };
 
       state.barriers.update = function () {
@@ -557,6 +591,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
+        // window.state = state; // TODO: remove this
+        // window.aa = available;
     }
 
     return {
