@@ -221,6 +221,13 @@
     "long_display_name": "Engulfing Pattern",
     "short_display_name": "CDLENGULFING",
     "ohlcOnly" : true
+  },
+
+  "sar": {
+    "id": "sar",
+    "long_display_name": "Parabolic SAR",
+    "short_display_name": "SAR",
+    "ohlcOnly" : true
   }
 
 }
