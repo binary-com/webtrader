@@ -33,10 +33,30 @@
     }
 */
 
-define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
+define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
     function (_, $, windows, rv, liveapi, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
+
+    rv.binders['trade-dialog-sparkline'] = function(el, ticks) {
+      var chart = $(el);
+      var spots = _.map(ticks,'quote');
+      var config = {
+        type: 'line',
+        lineColor: '#606060',
+        fillColor: false,
+        spotColor: '#00f000',
+        minSpotColor: '#f00000',
+        maxSpotColor: '#0000f0',
+        highlightSpotColor: '#ffff00',
+        highlightLineColor: '#000000',
+        spotRadius: 1.25
+      };
+      setTimeout(function(){
+        chart.sparkline(spots, config);
+        spots.length ? chart.show() : chart.hide();
+      },0);
+    }
 
     function apply_fixes(available){
         /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
@@ -160,6 +180,9 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           epoch: '0',
           quote:'0'
         },
+        ticks: {
+          array: [], /* ticks for sparkline chart */
+        },
         proposal: {
           symbol: _(available).first().underlying_symbol,
           ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
@@ -189,7 +212,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         tooltips: {
           barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
           barrier_p: { my: "left-5 top+10", at: "left bottom", collision: "flipfit" },
-        }
+        },
       };
       state.barriers.root = state; // reference to root object for computed properties
 
@@ -538,9 +561,14 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
-              if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
+              // if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
               state.tick.epoch = data.tick.epoch;
               state.tick.quote = data.tick.quote;
+              /* update ticks for sparkline chart */
+              if(state.ticks.array.length > 30) {
+                state.ticks.array.shift();
+              }
+              state.ticks.array.push(data.tick);
           }
       });
       /* register for proposal event */

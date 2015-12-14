@@ -27,9 +27,14 @@
     box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
 }
 
+.trade-fields .sparkline-chart {
+  width:95px;
+  padding:0;
+}
+
 .trade-fields select.contract-category-display + .ui-selectmenu-button {
     /*display: block; margin:0 auto;*/
-    width: 200px !important; /* !important because jq-ui.selecetmenu(...) overrides this */
+    width: 160px !important; /* !important because jq-ui.selecetmenu(...) overrides this */
 }
 
 .trade-fields .duration-select + .ui-selectmenu-button {
