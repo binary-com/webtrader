@@ -591,8 +591,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        // window.state = state; // TODO: remove this
-        // window.aa = available;
     }
 
     return {

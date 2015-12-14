@@ -165,7 +165,11 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         var css = {
               Digits: {
                 matches:  _.last(last_quote) === digits_value,
-                differs:  _.last(last_quote) !== digits_value
+                differs:  _.last(last_quote) !== digits_value,
+                over: _.last(last_quote)*1 > digits_value*1,
+                under: _.last(last_quote)*1 < digits_value*1,
+                odd: (_.last(last_quote)*1)%2 === 1,
+                even: (_.last(last_quote)*1)%2 === 0
               },
               'Up/Down': {
                 rise: last_quote*1 > first_quote*1,
