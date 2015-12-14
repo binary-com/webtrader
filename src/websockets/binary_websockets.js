@@ -105,7 +105,10 @@ define(['jquery'], function ($) {
         var data = JSON.parse(message.data);
 
         (callbacks[data.msg_type] || []).forEach(function (cb) {
+          /* do not block the main thread */
+          setTimeout(function(){
             cb(data);
+          },0);
         });
 
         var key = data && data.echo_req && data.echo_req.passthrough && data.echo_req.passthrough.uid;
