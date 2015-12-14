@@ -71,13 +71,13 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                             require(['charts/indicators/highcharts_custom/sar'], function ( sar ) {
                                 sar.init();
                                 var options = {
-                                    acceleration : parseInt($html.find("#sar_acceleration").val()),
-                                    maximum : parseInt($html.find("#sar_maximum").val()),
+                                    acceleration :  parseFloat($html.find("#sar_acceleration").val()),
+                                    maximum :  parseFloat($html.find("#sar_maximum").val()),
                                     stroke : defaultStrokeColor,
                                     strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
-                                    dashStyle : 'Dot'
+                                    dashStyle : 'line'
                                 }
-                                //Add sar for the main series TODO
+                                //Add sar for the main series
                                 $($(".sar").data('refererChartID')).highcharts().series[0].addSAR(options);
                             });
 
@@ -93,7 +93,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 ]
             });
 
-            if (typeof _callback == "function")
+            if ($.isFunction(_callback))
             {
                 _callback( containerIDWithHash );
             }
