@@ -28,6 +28,7 @@ requirejs.config({
         'timepicker': 'lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker',
         'js-cookie':'lib/js-cookie/src/js.cookie',
         'lodash': 'lib/lodash/lodash.min',
+        'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
     },
     map: {
