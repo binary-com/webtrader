@@ -30,7 +30,7 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 		} else {
 			// width is at least 700px, toggle normal menu
 			if($menu.hasClass(mobile_class)) {
-				$menu.removeClass(mobile_class).addClass(normal_class);	
+				$menu.removeClass(mobile_class).addClass(normal_class);
 			}
 
 			if($menu.parents("#mobile-nav").length) {
@@ -122,12 +122,12 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 								$(this).removeClass("active");
 							});
 						}
-						
+
 						if(isRoot) {
 							// close all submenus
 							$("#nav-menu li > ul").each(function () {
 								$(this).slideUp();
-							});	
+							});
 						} else {
 							$("#nav-menu li > ul").each(function () {
 								var $elem = $(this);
@@ -167,7 +167,8 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 
 	return {
 		init: function(_callback) {
-            $("body").prepend($navHtml);
+            var root = $($navHtml);
+            $("body").prepend(root);
 
             $("#nav-toggle").on("click", function (e) {
                 $("#nav-toggle").toggleClass("nav-toggle-active");
@@ -175,6 +176,9 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 
                 e.preventDefault();
             });
+
+            var login_btn = root.find('.authentication button');
+            console.warn(login_btn);
 
             updateDropdownToggleHandlers();
 
