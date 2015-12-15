@@ -79,19 +79,19 @@ define(['jquery'], function ($) {
         },
 
         extractPriceForAppliedTO: function (appliedTO, data, index) {
-            var price = 0;
+            var price = 0.0;
             switch (appliedTO) {
                 case indicatorBase.OPEN :
-                    price += data[index].open || data[index][1];
+                    price = data[index].open || data[index][1];
                     break;
                 case indicatorBase.HIGH :
-                    price += data[index].high || data[index][2];
+                    price = data[index].high || data[index][2];
                     break;
                 case  indicatorBase.LOW :
-                    price += data[index].low || data[index][3];
+                    price = data[index].low || data[index][3];
                     break;
                 case indicatorBase.CLOSE :
-                    price += data[index].close || data[index][4];
+                    price = data[index].close || data[index][4];
                     break;
             }
             return price;
@@ -121,11 +121,11 @@ define(['jquery'], function ($) {
             return ret;
         },
 
-        findDataUpdatedDataPoint: function (data, options) {
+        findIndexInDataForTime: function (data, time) {
             var dataPointIndex = -1;
             for (var index = data.length - 1; index >= 1; index--) {
                 //Matching time
-                if (data[index][0] === options[0] || data[index].x === options[0]) {
+                if ((data[index][0] || data[index].x) === time) {
                     dataPointIndex = index;
                     break;
                 }

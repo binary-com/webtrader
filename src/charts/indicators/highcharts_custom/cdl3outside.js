@@ -109,7 +109,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl3outsideSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL3OUTSIDE(' + cdl3outsideOptions.period  + ')',
+                            name: 'CDL3OUTSIDE',
                             data: cdl3outsideData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -145,7 +145,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl3outsideSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL3OUTSIDE = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl3outsideOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -154,7 +161,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3outsideeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3outsideOptionsMap, this.options.id)) {
-                        updateCDL3OUTSIDESeries.call(this, options);
+                        updateCDL3OUTSIDESeries.call(this, options[0]);
                     }
 
                 });
@@ -166,17 +173,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3outsideeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3outsideOptionsMap, this.series.options.id)) {
-                        updateCDL3OUTSIDESeries.call(this.series, options, true);
+                        updateCDL3OUTSIDESeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDL3OUTSIDESeries(options, isPointUpdate) {
+                function updateCDL3OUTSIDESeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -189,7 +196,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdl3outsideOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDL3OUTSIDE - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);

@@ -116,7 +116,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdl3blackcrowsSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDL3BLACKCROWS(' + cdl3blackcrowsOptions.period  + ')',
+                            name: 'CDL3BLACKCROWS',
                             data: cdl3blackcrowsData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -152,7 +152,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdl3blackcrowsSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDL3BLACKCROWS = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdl3blackcrowsOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -161,7 +168,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3blackcrowseed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3blackcrowsOptionsMap, this.options.id)) {
-                        updateCDL3BLACKCROWSSeries.call(this, options);
+                        updateCDL3BLACKCROWSSeries.call(this, options[0]);
                     }
 
                 });
@@ -173,17 +180,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdl3blackcrowseed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdl3blackcrowsOptionsMap, this.series.options.id)) {
-                        updateCDL3BLACKCROWSSeries.call(this.series, options, true);
+                        updateCDL3BLACKCROWSSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDL3BLACKCROWSSeries(options, isPointUpdate) {
+                function updateCDL3BLACKCROWSSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -196,7 +203,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdl3blackcrowsOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDL3BLACKCROWS - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);

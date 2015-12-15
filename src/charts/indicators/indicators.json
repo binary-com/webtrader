@@ -200,5 +200,40 @@
     "long_display_name": "Thrusting Pattern",
     "short_display_name": "CDLTHRUSTING",
     "ohlcOnly" : true
+  },
+  
+ "bbands": {
+    "id": "bbands",
+    "long_display_name": "Bollinger Bands",
+    "short_display_name": "BBANDS",
+    "ohlcOnly" : false
+  },
+
+  "cdlshootingstar": {
+    "id": "cdlshootingstar",
+    "long_display_name": "Shooting Star",
+    "short_display_name": "CDLSHOOTINGSTAR",
+    "ohlcOnly" : true
+  },
+
+  "sar": {
+    "id": "sar",
+    "long_display_name": "Parabolic SAR",
+    "short_display_name": "SAR",
+    "ohlcOnly" : true
+  },
+  
+  "cdlengulfing": {
+    "id": "cdlengulfing",
+    "long_display_name": "Engulfing Pattern",
+    "short_display_name": "CDLENGULFING",
+    "ohlcOnly" : true
+
+  },
+   "macd": {
+    "id": "macd",
+    "long_display_name": "Moving Average Convergence/Divergence",
+    "short_display_name": "MACD",
+    "ohlcOnly" : true
   }
 }

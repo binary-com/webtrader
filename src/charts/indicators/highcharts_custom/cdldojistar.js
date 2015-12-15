@@ -108,7 +108,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdldojistarSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLDOJISTAR(' + cdldojistarOptions.period  + ')',
+                            name: 'CDLDOJISTAR',
                             data: cdldojistarData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -144,7 +144,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdldojistarSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckCDLDOJISTAR = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : cdldojistarOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -153,7 +160,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdldojistareed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdldojistarOptionsMap, this.options.id)) {
-                        updateCDLDOJISTARSeries.call(this, options);
+                        updateCDLDOJISTARSeries.call(this, options[0]);
                     }
 
                 });
@@ -165,17 +172,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdldojistareed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdldojistarOptionsMap, this.series.options.id)) {
-                        updateCDLDOJISTARSeries.call(this.series, options, true);
+                        updateCDLDOJISTARSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLDOJISTARSeries(options, isPointUpdate) {
+                function updateCDLDOJISTARSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -188,7 +195,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdldojistarOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDLDOJISTAR - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);

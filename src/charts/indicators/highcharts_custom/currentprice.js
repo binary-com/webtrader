@@ -62,7 +62,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //console.log('Before>>' + $(this).data('isInstrument'));
                     this.yAxis.removePlotLine('CurrentPrice' + uniqueID);
                     //console.log('After>>' + $(this).data('isInstrument'));
-                }
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -70,7 +70,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
 
                     proceed.call(this, options, redraw, shift, animation);
-                    updateCurrentPriceSeries.call(this, options);
+                    updateCurrentPriceSeries.call(this, options[0]);
 
                 });
 
@@ -82,16 +82,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     proceed.call(this, options, redraw, animation);
                     var series = this.series;
                     //Update CurrentPrice values
-                    updateCurrentPriceSeries.call(series, options, true);
+                    updateCurrentPriceSeries.call(series, this.x, true);
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCurrentPriceSeries(options, isPointUpdate) {
+                function updateCurrentPriceSeries(time, isPointUpdate) {
                     //if this is CurrentPrice series, ignore
                     if (this.options.name.indexOf('CurrentPrice') == -1) {
                         var series = this;

@@ -28,7 +28,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 of: window,
                 buttons: [
                     {
-                        text: "Ok",
+                        text: "OK",
                         click: function() {
 
                             require(['charts/indicators/highcharts_custom/cdldojistar'], function ( cdldojistar ) {

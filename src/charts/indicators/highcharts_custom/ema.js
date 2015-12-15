@@ -83,7 +83,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         emaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'EMA(' + emaOptions.period + ', ' + indicatorBase.appliedPriceString(emaOptions.period) + ')',
+                            name: 'EMA (' + emaOptions.period + ', ' + indicatorBase.appliedPriceString(emaOptions.period) + ')',
                             data: emaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -119,7 +119,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     emaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     emaSeriesMap[uniqueID] = null;
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckEMA = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !emaOptionsMap[uniqueID] ? undefined : emaOptionsMap[uniqueID].period,
+                        appliedTo : !emaOptionsMap[uniqueID] ? undefined : emaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID : emaOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -128,7 +137,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(emaOptionsMap, this.options.id)) {
-                        updateEMASeries.call(this, options);
+                        updateEMASeries.call(this, options[0]);
                     }
 
                 });
@@ -140,16 +149,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     proceed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(emaOptionsMap, this.series.options.id)) {
-                        updateEMASeries.call(this.series, options, true);
+                        updateEMASeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  */
-                function updateEMASeries(options, isPointUpdate) {
+                function updateEMASeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -166,7 +175,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var data = series.options.data;
                             var emaData = emaSeriesMap[key].options.data;
                             var n = emaOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var price = 0.0;
                                 if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
@@ -181,14 +190,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 //console.log(emaValue, price, n, emaData[dataPointIndex - 1]);
                                 //emaData.push([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(emaValue , 4)]);
                                 if (isPointUpdate) {
-                                    if (emaSeriesMap[key].options.data.length < data.length) {
-                                        emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
-                                    } else {
-                                        emaSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
-                                    }
+                                    emaSeriesMap[key].data[dataPointIndex].update({ y : emaValue});
                                 }
                                 else {
-                                    emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue]);
+                                    emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), emaValue], true, true, false);
                                 }
                             }
                         }

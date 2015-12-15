@@ -125,7 +125,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         cdlabandonedbabySeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLABANDONEDBABY(' + cdlabandonedbabyOptions.period  + ')',
+                            name: 'CDLABANDONEDBABY',
                             data: cdlabandonedbabyData,
                             type: 'flags',
                             //dataGrouping: series.options.dataGrouping,
@@ -161,7 +161,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     cdlabandonedbabySeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
-                }
+                };
+
+				H.Series.prototype.preRemovalCheckCDLABANDONEDBABY = function(uniqueID) {
+					return {
+						isMainIndicator : true,
+						isValidUniqueID : cdlabandonedbabyOptionsMap[uniqueID] != null
+					};
+				};
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -170,7 +177,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlabandonedbabyeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlabandonedbabyOptionsMap, this.options.id)) {
-                        updateCDLABANDONEDBABYSeries.call(this, options);
+                        updateCDLABANDONEDBABYSeries.call(this, options[0]);
                     }
 
                 });
@@ -182,17 +189,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pcdlabandonedbabyeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(cdlabandonedbabyOptionsMap, this.series.options.id)) {
-                        updateCDLABANDONEDBABYSeries.call(this.series, options, true);
+                        updateCDLABANDONEDBABYSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLABANDONEDBABYSeries(options, isPointUpdate) {
+                function updateCDLABANDONEDBABYSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -205,7 +212,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = cdlabandonedbabyOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate CDLABANDONEDBABY - start
             								var bull_bear = calculateIndicatorValue(data, dataPointIndex);

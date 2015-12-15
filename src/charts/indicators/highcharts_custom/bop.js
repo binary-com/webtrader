@@ -71,7 +71,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 offset: 0,
                                 rotation: 0,
                                 y: 10, //Trying to show title inside the indicator chart
-                                x: 55
+                                x: 25
                             },
                             lineWidth: 2,
                             plotLines: bopOptions.levels
@@ -82,7 +82,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         bopSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'BOP(' + bopOptions.period  + ')',
+                            name: 'BOP',
                             data: bopData,
                             type: 'column',
                             dataGrouping: series.options.dataGrouping,
@@ -118,7 +118,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckBOP = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        isValidUniqueID : bopOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -127,7 +134,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pbopeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(bopOptionsMap, this.options.id)) {
-                        updateBOPSeries.call(this, options);
+                        updateBOPSeries.call(this, options[0]);
                     }
 
                 });
@@ -139,7 +146,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     pbopeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(bopOptionsMap, this.series.options.id)) {
-                        updateBOPSeries.call(this.series, options, true);
+                        updateBOPSeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -149,7 +156,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param options - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateBOPSeries(options, isPointUpdate) {
+                function updateBOPSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -167,7 +174,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = bopOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate BOP - start
 								var bopValue = calculateIndicatorValue(data, dataPointIndex);
@@ -177,15 +184,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                                 if (isPointUpdate)
                                 {
-                                    if (bopSeriesMap[key].options.data.length < data.length) {
-                                        bopSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), bopValue]);
-                                    } else {
-                                        bopSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), bopValue]);
-                                    }
+                                    bopSeriesMap[key].data[dataPointIndex].update({ y : bopValue});
                                 }
                                 else
                                 {
-                                    bopSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), bopValue]);
+                                    bopSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), bopValue], true, true, false);
                                 }
                             }
                         }

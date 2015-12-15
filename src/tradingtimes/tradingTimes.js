@@ -31,7 +31,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
         var market_names = [];
         var submarket_names = { };
         markets.forEach(function(market) {
-            market_names.push(market.display_name);             
+            market_names.push(market.display_name);
             submarket_names[market.display_name] = [];
             market.submarkets.forEach(function (submarket) {
                 submarket_names[market.display_name].push(submarket.display_name);
@@ -40,8 +40,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
 
         /* get the rows for this particular marketname and sumbarket_name */
         function getRowsFor(marketname, submarket_name) {
-            var market = markets.find(function (m) { return m.display_name == marketname; });
-            var symbols = market && market.submarkets.find(function (s) { return s.display_name == submarket_name; }).instruments;
+            // TODO: comeback and use lodash once 'trade module' changes got merged.
+            var market = markets.filter(function (m) { return m.display_name == marketname; })[0];
+            var symbols = market && market.submarkets.filter(function (s) { return s.display_name == submarket_name; })[0].instruments;
             console.log(symbols);
 
             var rows = (symbols || []).map(function (sym) {
@@ -151,13 +152,13 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
                 updateTable(result, market_names.val(), submarket_names.val());
                 processing_msg.hide();
             };
-            
+
             liveapi.send({ trading_times: yyyy_mm_dd })
             .then(refresh)
             .catch(function (error) {
-                refresh({});
                 $.growl.error({ message: error.message });
                 console.warn(error);
+                refresh({});
             });
         }
 
@@ -168,7 +169,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
             changed: refreshTable
         });
     }
-   
+
     return {
         init: init
     }

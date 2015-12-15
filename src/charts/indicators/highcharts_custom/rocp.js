@@ -70,7 +70,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         chart.addAxis({ // Secondary yAxis
                             id: 'rocp'+ uniqueID,
                             title: {
-                                text: 'ROCP(' + rocpOptions.period  + ')',
+                                text: 'ROCP (' + rocpOptions.period  + ')',
                                 align: 'high',
                                 offset: 0,
                                 rotation: 0,
@@ -86,7 +86,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         rocpSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'ROCP(' + rocpOptions.period  + ')',
+                            name: 'ROCP (' + rocpOptions.period  + ')',
                             data: rocpData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -122,7 +122,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
                     chart.redraw();
-                }
+                };
+
+                H.Series.prototype.preRemovalCheckROCP = function(uniqueID) {
+                    return {
+                        isMainIndicator : true,
+                        period : !rocpOptionsMap[uniqueID] ? undefined : rocpOptionsMap[uniqueID].period,
+                        isValidUniqueID : rocpOptionsMap[uniqueID] != null
+                    };
+                };
 
                 /*
                  *  Wrap HC's Series.addPoint
@@ -131,7 +139,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     procpeed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rocpOptionsMap, this.options.id)) {
-                        updateROCPSeries.call(this, options);
+                        updateROCPSeries.call(this, options[0]);
                     }
 
                 });
@@ -143,17 +151,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     procpeed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(rocpOptionsMap, this.series.options.id)) {
-                        updateROCPSeries.call(this.series, options, true);
+                        updateROCPSeries.call(this.series, this.x, true);
                     }
 
                 });
 
                 /**
                  * This function should be called in the context of series object
-                 * @param options - The data update values
+                 * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateROCPSeries(options, isPointUpdate) {
+                function updateROCPSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
@@ -171,7 +179,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var n = rocpOptionsMap[key].period;
-                            var dataPointIndex = indicatorBase.findDataUpdatedDataPoint(data, options);
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 //Calculate ROCP - start
                                 var rocpValue = (indicatorBase.extractPrice(data, dataPointIndex) - indicatorBase.extractPrice(data, dataPointIndex - n)) / indicatorBase.extractPrice(data, dataPointIndex - n);
@@ -181,15 +189,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 rocpValue = indicatorBase.toFixed(rocpValue , 5);
                                 if (isPointUpdate)
                                 {
-                                    if (rocpSeriesMap[key].options.data.length < data.length) {
-                                        rocpSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocpValue]);
-                                    } else {
-                                        rocpSeriesMap[key].data[dataPointIndex].update([(data[dataPointIndex].x || data[dataPointIndex][0]), rocpValue]);
-                                    }
+                                    rocpSeriesMap[key].data[dataPointIndex].update({ y : rocpValue});
                                 }
                                 else
                                 {
-                                    rocpSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocpValue]);
+                                    rocpSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), rocpValue], true, true, false);
                                 }
                             }
                         }
