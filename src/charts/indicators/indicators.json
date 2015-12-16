@@ -235,5 +235,12 @@
     "long_display_name": "Weighted Close Price",
     "short_display_name": "WCLPRICE",
     "ohlcOnly" : true
+  },
+   
+  "cci": {
+    "id": "cci",
+    "long_display_name": "Commodity Channel Index",
+    "short_display_name": "CCI",
+    "ohlcOnly" : true
   }
 }
