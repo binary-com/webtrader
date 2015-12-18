@@ -162,15 +162,8 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
             }
 
             var ret = '';
-            if (this.options.step_big)
-                ret += btn('up', 'arrowthick', this.options.step_big, '5px', '15px');
-
-            ret += btn('up', 'triangle', this.options.step, '5px');
-
-            if (this.options.step_big)
-                ret += btn('down', 'arrowthick', '-' + this.options.step_big, '5px', '17px');
-
-            ret += btn('down', 'triangle', '-' + this.options.step, '5px');
+            ret += btn('up', 'triangle', this.options.step_big || this.options.step, '5px');
+            ret += btn('down', 'triangle', '-' +(this.options.step_big || this.options.step), '5px');
             return ret;
         }
     });
