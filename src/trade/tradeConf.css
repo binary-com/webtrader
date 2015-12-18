@@ -14,7 +14,6 @@
 }
 
 .trade-conf .title-row {
-    text-shadow: 3px 2px 4px rgba(0,0,0,0.45);
     background: #c2c1c1;
     font-size: large;
     padding: 5px 0;
@@ -37,7 +36,6 @@
   width: 33%;
   font-size: 1.2em;
   font-weight: bold;
-  text-shadow: 3px 2px 4px rgba(0,0,0,0.25);
 }
 .trade-conf .payout-row li:not(:first-child) {
   border-left: 1px solid #ccc;

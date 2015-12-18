@@ -1,6 +1,6 @@
 ﻿<div class="trade-dialog">
   <div class="trade-fields">
-    <ul>
+    <ul class="categories-row">
         <li>
             <select class="contract-category-display"
                     rv-selectmenu="categories.value | notify categories.update duration.update | debounce proposal.onchange"
@@ -9,8 +9,8 @@
                     <option rv-each-row="categories.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li>
-            <span class="tick-quote" rv-text="tick.quote"></span>
+        <li class="tick-quote">
+            <span rv-text="tick.quote" class="text-vertical-align"></span>
         </li>
         <li class='sparkline-chart'>
             <span rv-trade-dialog-sparkline="ticks.array"></span>
@@ -28,7 +28,7 @@
 
     <ul class="date-start-row" rv-show="date_start.visible">
         <li>
-            <span>Start time </span>
+            <span class="text-vertical-align">Start time </span>
         </li>
         <li>
             <select class="date-start-select"
@@ -36,9 +36,27 @@
                     rv-selectmenu="date_start.value | notify duration_unit.update | debounce proposal.onchange"
                     rv-selectrefresh="date_start.array" >
                     <option rv-each-row="date_start.array" rv-value="row.value">{row.text}</option>
-
            </select>
         </li>
+        <li></li>
+    </ul>
+
+    <ul class="digits-row"
+        rv-css-padding-top="categories.paddingTop < value"
+        rv-show="digits.visible">
+        <li>
+            <span class="text-vertical-align">{digits.text}</span>
+        </li>
+        <li>
+            <select class="digits-select"
+                    rv-jq-class="'trade-dialog-digits-select-ul'"
+                    rv-selectmenu="digits.value | debounce proposal.onchange"
+                    rv-selectrefresh="digits.array">
+
+                <option rv-each-row="digits.array" rv-value="row">{row}</option>
+           </select>
+        </li>
+        <li></li>
     </ul>
 
     <ul class="duration-row"
@@ -53,7 +71,7 @@
            </select>
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
-            <input class="duration-count" type="number" step="1" readonly
+            <input class="duration-count" type="number" step="1"
                    rv-spinner="duration_count.value | debounce proposal.onchange"
                    rv-spinner-min="duration_count.min"
                    rv-spinner-max="duration_count.max" />
@@ -78,35 +96,18 @@
         </li>
     </ul>
 
-    <ul class="digits-row"
-        rv-css-padding-top="categories.paddingTop < value"
-        rv-show="digits.visible">
-        <li>
-            <p>{digits.text}</p>
-        </li>
-        <li>
-            <select class="digits-select"
-                    rv-jq-class="'trade-dialog-digits-select-ul'"
-                    rv-selectmenu="digits.value | debounce proposal.onchange"
-                    rv-selectrefresh="digits.array">
-
-                <option rv-each-row="digits.array" rv-value="row">{row}</option>
-           </select>
-        </li>
-    </ul>
-
     <ul class="barriers-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 1">
-        <li> <p rv-tooltip="'Enter the barrier in terms of the difference from the spot price.  If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot.  The entry spot will be the next tick after your order has been received'"
+        <li> <span class="dotted-underline text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price.  If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot.  The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
-                >Barrier offset</p> </li>
+                >Barrier offset</span> </li>
         <li>
             <input class="barriers-barrier" type="number" min="0" step="0.00001" step-big="0.001"
                    rv-spinner="barriers.barrier | debounce proposal.onchange" />
         </li>
         <li>
-            <span class="barrier-live"
+            <span class="dotted-underline text-vertical-align"
                   rv-text="barriers.barrier_live < barrier root.tick.quote | to-fixed 3"
                   rv-tooltip='"This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."'
                   rv-tooltip-position='tooltips.barrier'
@@ -117,15 +118,15 @@
     <ul class="barriers-high-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <p rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+        <li> <span class="dotted-underline text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
-                >High barrier offset</p> </li>
+                >High barrier offset</span> </li>
         <li>
             <input class="barriers-barrier" type="number" min="0" step="0.00001" step-big="0.001"
                    rv-spinner="barriers.high_barrier | debounce proposal.onchange" />
         </li>
         <li>
-            <span class="barrier-live"
+            <span class="dotted-underline"
                   rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3"
                   rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   rv-tooltip-position='tooltips.barrier'
@@ -136,15 +137,15 @@
     <ul class="barriers-low-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <p rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+        <li> <span class="dotted-underline text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
-                >Low barrier offset</p> </li>
+                >Low barrier offset</span> </li>
         <li>
             <input class="barriers-barrier" type="number" max="0" step="0.00001" step-big="0.001"
                    rv-spinner="barriers.low_barrier | debounce proposal.onchange" />
         </li>
         <li>
-            <span class="barrier-live"
+            <span class="dotted-underline"
                   rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 3"
                   rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   rv-tooltip-position='tooltips.barrier'
@@ -164,6 +165,11 @@
            </select>
         </li>
         <li>
+            <input class="basis-amount" type="number" min="1" step=".01" step-big="1"
+                   rv-spinner="basis.amount | debounce proposal.onchange"
+                   rv-spinner-max="basis.limit" />
+        </li>
+        <li>
             <select class="currency-select"
                     rv-selectmenu="currency.value | debounce proposal.onchange"
                     rv-selectrefresh="currency.array">
@@ -171,18 +177,13 @@
                 <option rv-each-row="currency.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li>
-            <input class="basis-amount" type="number" min="1" step=".01"
-                   rv-spinner="basis.amount | debounce proposal.onchange"
-                   rv-spinner-max="basis.limit" />
-        </li>
     </ul>
 
     <ul class="amount-per-point-row"
         rv-show="categories.value | eq 'Spreads'"
         rv-css-padding-top="categories.paddingTop < value">
         <li>
-          <span>Amount per point</span>
+          <span class="text-vertical-align">Amount per point</span>
         </li>
         <li>
             <select class="currency-select"
@@ -202,7 +203,7 @@
         rv-show="categories.value | eq 'Spreads'"
         rv-css-padding-top="categories.paddingTop < value">
       <li>
-        <span>Stop-type</span>
+        <span class="text-vertical-align">Stop-type</span>
       </li>
       <li>
          <label class="checkbox">
@@ -225,22 +226,22 @@
     <ul class="stop-loss-row"
         rv-show="categories.value | eq 'Spreads'"
         rv-css-padding-top="categories.paddingTop < value">
-      <li><span>Stop-loss</span></li>
-      <li></li>
+      <li><span class="text-vertical-align">Stop-loss</span></li>
       <li>
             <input class="stop-loss" type="number" min="1" step=".01" step-big="1"
                    rv-spinner="spreads.stop_loss | debounce proposal.onchange" />
       </li>
+      <li></li>
     </ul>
 
     <ul class="stop-profit-row"
         rv-show="categories.value | eq 'Spreads'">
-      <li><span>Stop-profit</span></li>
-      <li></li>
+      <li><span class="text-vertical-align">Stop-profit</span></li>
       <li>
             <input class="stop-profit" type="number" min="1" step=".01" step-big="1"
                    rv-spinner="spreads.stop_profit | debounce proposal.onchange" />
       </li>
+      <li></li>
     </ul>
 
     <ul class="proposal-message stick-to-bottom"
@@ -252,10 +253,8 @@
         rv-if="categories.value | not-eq 'Spreads'"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li>
-              Net Profit: <span rv-text="proposal.netprofit_ < ask_price payout"/>
-        </li>
-        <li style="margin-left: -5px">
-             | Return <span rv-text="proposal.return_ < ask_price payout"/>
+          Net Profit: <span rv-text="proposal.netprofit_ < ask_price payout"/>
+          | Return <span rv-text="proposal.return_ < ask_price payout"/>
         </li>
     </ul>
 
@@ -275,11 +274,11 @@
 
     <ul class="purchase-row stick-to-bottom"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
-      <li> You pay: <span rv-text="proposal.ask_price | currency currency.value" /> </li>
+      <li> <span class="text-vertical-align"> You pay: <span rv-text="proposal.ask_price | currency currency.value" /> </span> </li>
       <li> <button
               rv-on-click="purchase.onclick"
               rv-disabled="proposal.loading | purchase.loading"
-              class="purchase-button shine">Purchase</button>
+              class="purchase-button shine text-vertical-align">Purchase</button>
       </li>
     </ul>
   </div>

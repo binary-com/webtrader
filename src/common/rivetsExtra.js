@@ -192,13 +192,12 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
                 step: input.attr('step') || 1,
                 step_big: input.attr('step-big') || null
             });
-            input.webtrader_spinner('value', model.value || model.min || 1);
         },
         unbind: function (el) {
             $(el).spinner('destroy');
         },
         routine: function(el,value){
-            $(el).webtrader_spinner('value', value * 1);
+            $(el).webtrader_spinner('value', value*1);
         }
     };
 
