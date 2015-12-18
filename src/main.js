@@ -8,6 +8,7 @@ requirejs.config({
         'jquery': "lib/jquery/dist/jquery.min",
         'jquery-ui': "lib/jquery-ui/jquery-ui.min",
         'highstock': "lib/highstock/highstock",
+        'highcharts-more': "lib/highstock/highcharts-more",
         'highcharts-exporting': 'lib/highstock/modules/exporting',
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
         'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
@@ -69,12 +70,15 @@ requirejs.config({
         "currentPriceIndicator": {
             deps: ["highstock"]
         },
-        sightglass : {          //fix for rivets not playing nice with requriejs (https://github.com/mikeric/rivets/issues/427)
+        sightglass : { //fix for rivets not playing nice with requriejs (https://github.com/mikeric/rivets/issues/427)
             exports: 'sightglass'
         },
         rivets : {
             deps : ['sightglass'],
             exports : 'rivets'
+        },
+        "highcharts-more": {
+            deps: ["highstock"]
         }
     }
 });

@@ -1,6 +1,5 @@
 #Webtrader ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
 
-[![Join the chat at https://gitter.im/binary-com/webtrader](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/binary-com/webtrader?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://binary-com.github.io/webtrader) website.
 
 ##Project goal
