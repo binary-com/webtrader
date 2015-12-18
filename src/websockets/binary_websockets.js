@@ -95,6 +95,18 @@ define(['jquery'], function ($) {
         while (buffered_sends.length > 0) {
             socket.send(JSON.stringify(buffered_sends.shift()));
         }
+        /* if the connection got closed while the result of an unresolved request
+           is not back yet, issue the same request again */
+        for(var key in unresolved_promises) {
+          var promise = unresolved_promises[key];
+          if(!promise) continue;
+          if(promise.sent_before) { /* reject if sent once before */
+              promise.reject({message: 'connection closed'});
+          } else { /* send */
+              promise.sent_before = true;
+              socket.send(JSON.stringify(promise.data));
+          }
+        }
         while (buffered_execs.length > 0)
             buffered_execs.shift()();
     }
@@ -144,7 +156,7 @@ define(['jquery'], function ($) {
         data.passthrough.uid =  (Math.random() * 1e17).toString();
 
         return new Promise(function (resolve,reject) {
-            unresolved_promises[data.passthrough.uid] = { resolve: resolve, reject: reject };
+            unresolved_promises[data.passthrough.uid] = { resolve: resolve, reject: reject, data: data };
             if (is_connected())
                 socket.send(JSON.stringify(data));
             else
