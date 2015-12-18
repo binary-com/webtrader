@@ -168,7 +168,10 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
                                             "granularity":  convertToTimeperiodObject(timePeriod).timeInSeconds()
                                         };
                                         console.log('Timer based request >> ', JSON.stringify(requestObject));
-                                        liveapi.send(requestObject);
+                                        liveapi.send(requestObject)
+                                               .catch(function(err){
+                                                 console.error(err.message);
+                                               });
                                     }
                                 });
                             }
