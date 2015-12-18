@@ -47,7 +47,7 @@ define(['jquery'], function ($) {
          *  The connection is closed, resubscrible to tick streaming.
          *  We have to make sure that resubscribe is atleast 1 second delayed
          **/
-        $(document).oneTime(1000, null, function() {
+        setTimeout(function(){
 
             socket = connect();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
@@ -78,7 +78,7 @@ define(['jquery'], function ($) {
                 });
             });
 
-        });
+        }, 1000);
     }
 
     var callbacks = {};
