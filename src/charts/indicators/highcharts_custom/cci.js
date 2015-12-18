@@ -5,45 +5,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cciOptionsMap = {}, cciSeriesMap = {};
     var maData = {}, tpData = {}, mDevData = {};
-    //******************************Get Price******************************
-    function getPrice(data, index, appliedTo, type) {
-        if (typeof data[index] === 'number') {
-            return data[index];
-        }
-        else if (data[index].length === 2) {
-            return data[index][1];
-        }
-        else if (indicatorBase.isOHLCorCandlestick(type)) {
-            return indicatorBase.extractPriceForAppliedTO(appliedTo, data, index);
-        }
-        else {
-            return indicatorBase.extractPrice(data, index);
-        }
-    }
 
-    //*************************SMA***************************************
-    function calculateSMAValue(data, smaData, index, period, type, appliedTo) {
-        if (index < period - 1) {
-            return null;
-        }
-        else if (index === (period - 1)) {
-            var sum = 0.0;
-            for (var i = 0; i < period; i++) {
-                sum += getPrice(data, i, appliedTo, type);
-            }
-            return (sum / period);
-        }
-        else {
-            var price = getPrice(data, index, appliedTo, type);
-            //Calculate SMA - start
-            var preSma = smaData[index - 1].length ? smaData[index - 1][1] : smaData[index - 1];
-            return (preSma * (period - 1) + price) / period;
-            //Calculate SMA - end
-        }
-    }
-    //*************************END SMA***************************************
-
-    function calculateCciValue(data, index, period, type, key, isPointUpdate)
+    function calculateCciValue(data, index, period, maType, type, key, isPointUpdate)
     {
         
         //* Calculate CCI FORMULA
@@ -56,32 +19,37 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         //* A = n period moving        //* average of M
         //* D = mean deviation        //* of the absolute value of the difference between the mean price and        //* the moving average of mean prices, M - A
         //*Typical Price (TP) = (High + Low + Close)/3
-        var tpValue = (getPrice(data, index, indicatorBase.HIGH, type) + getPrice(data, index, indicatorBase.LOW, type) + getPrice(data, index, indicatorBase.CLOSE,type)) / 3;
-        var dataIndex = (data[index][0] || data[index].x);
+        var tpValue = (indicatorBase.getPrice(data, index, indicatorBase.HIGH, type) + indicatorBase.getPrice(data, index, indicatorBase.LOW, type) + indicatorBase.getPrice(data, index, indicatorBase.CLOSE,type)) / 3;
+        var time = (data[index][0] || data[index].x);
         if (isPointUpdate)
         {
-            tpData[key][index] = tpValue;
+            tpData[key][index] = [time, tpValue];
         }
         else
         {
-            tpData[key].push(tpValue);
+            tpData[key].push([time, tpValue]);
         }
 
 
         if (index < period - 1) {
-            maData[key].push(null);
-            mDevData[key].push(null);
+            maData[key].push([time,null]);
+            mDevData[key].push([time,null]);
             return null;
         }
         else {
             //* Calculate Ma Type
-            var maValue = calculateSMAValue(tpData[key], maData[key], index, period, type)
+            //if (maType === indicatorBase.TEMA) {
+            //    var maValue = indicatorBase.calculateTEMAValue(tpData[key], index, period, type, key, isPointUpdate);
+            //}
+            //else {
+            var maValue = indicatorBase.calculateMAValue(tpData[key], maData[key], index, period, maType, type, key, isPointUpdate);
+            //}
 
             //*Calculate Mean Deviation
             //*mean deviation of the absolute value of the difference between the mean price and  the moving average of mean prices, M - A
             var sum = 0;
             for (var i = 0; i < period - 1; i++) {
-                sum += Math.abs(maValue - tpData[key][index - i]);
+                sum += Math.abs(maValue - tpData[key][index - i][1]);
             }
             var mDevValue = sum / period;
 
@@ -89,13 +57,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             //* CCI = ( M - A ) / ( 0.015 * D )
             var cciValue = (tpValue - maValue) / (.015 * mDevValue);
             if (isPointUpdate) {
-                maData[key][index] = maValue;
-                mDevData[key][index]= mDevValue;
+                maData[key][index] = [time,maValue];
+                mDevData[key][index]= [time,mDevValue];
             }
             else
             {
-                maData[key].push(maValue);
-                mDevData[key].push(mDevValue);
+                maData[key].push([time, maValue]);
+                mDevData[key].push([time, mDevValue]);
             }
 
             return cciValue;
@@ -127,7 +95,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var cciData = [];
                         tpData[uniqueID] = [], maData[uniqueID] = [], mDevData[uniqueID] = [];
                         for (var index = 0; index < data.length; index++) {
-                            var cciValue=calculateCciValue(data,index,cciOptions.period,this.options.type,uniqueID);
+                            var cciValue=calculateCciValue(data,index,cciOptions.period,cciOptions.maType,this.options.type,uniqueID);
                             cciData.push([(data[index][0] || data[index].x), indicatorBase.toFixed(cciValue, 4)]);
                         }
 
@@ -143,7 +111,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 offset: 0,
                                 rotation: 0,
                                 y: 10,
-                                x: 55
+                                x: 35
                             },
                             lineWidth: 2
                         }, false, false, false);
@@ -224,7 +192,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var cciOptions = cciOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var cciValue = calculateCciValue(data, dataPointIndex, cciOptions.period, this.options.type, key, isPointUpdate);
+                                var cciValue = calculateCciValue(data, dataPointIndex, cciOptions.period, cciOptions.maType, this.options.type, key, isPointUpdate);
                                 if (isPointUpdate) {
                                     cciSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(cciValue, 4) });
                                 }
