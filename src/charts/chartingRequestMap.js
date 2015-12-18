@@ -27,7 +27,7 @@ define(['lokijs', 'jquery', 'common/util'],function(loki, $){
     function barsLoaded(instrumentCdAndTp) {
 
         var key = instrumentCdAndTp;
-        if (!this[key]) return;
+        if (!this[key] || !this[key].chartIDs) return;
 
         var chartIDList = this[key].chartIDs;
         var processOHLC = this.processOHLC;
