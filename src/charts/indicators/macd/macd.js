@@ -1,7 +1,6 @@
 /**
 Created By Mahboob.M on 12/12/2015
 */
-
 define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
 	function closeDialog()
@@ -46,7 +45,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
 			$html.dialog({
 				autoOpen:false,
-				resisable:false,
+				resizable:false,
 				width:350,
 				modal:true,
 				my:"center",
@@ -102,7 +101,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 				]
 			});
 
-            if (typeof _callback == "function")
+            if ($.isFunction(_callback))
             {
                 _callback( containerIDWithHash );
             }
@@ -112,7 +111,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
 	return{
 		open : function(containerIDWithHash){
- 			if ($(".macd").length == 0)
+ 			if ($(".macd").length === 0)
             {
                 init( containerIDWithHash, this.open );
                 return;

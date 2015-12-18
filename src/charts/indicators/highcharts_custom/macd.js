@@ -452,7 +452,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                                 offset: 0,
                                 rotation: 0,
                                 y: 10, 
-                                x: 55
+                                x: 35
                             },
                             lineWidth: 2
                            // plotLines: bopOptions.levels
@@ -464,7 +464,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         histogramSeriesMap[hstgrmUniqueID] = chart.addSeries({
                             id: hstgrmUniqueID,
-                            name: 'MACD(HISTOGRAM ' + indicatorBase.appliedPriceString(macdOptions.appliedTo) + ')',
+                            name: 'MACD (HISTOGRAM, ' + indicatorBase.appliedPriceString(macdOptions.appliedTo) + ')',
                             data: histogramData,
                             type: 'column',
                             yAxis:'macd' + macdUniqueID,
@@ -480,7 +480,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         macdSeriesMap[macdUniqueID] = chart.addSeries({
                             id: macdUniqueID,
-                            name: 'MACD( ' + macdOptions.fastPeriod +',' + indicatorBase.appliedPriceString(macdOptions.appliedTo) + ')',
+                            name: 'MACD (' + macdOptions.fastPeriod +',' + indicatorBase.appliedPriceString(macdOptions.appliedTo) + ')',
                             data: macdData,
                             type: 'line',
                             yAxis:'macd' + macdUniqueID,
@@ -496,7 +496,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         var series = this;
                         signalSeriesMap[signalUniqueID] = chart.addSeries({
                             id: signalUniqueID,
-                            name: 'MACD(SIGNAL ' + macdOptions.signalPeriod +',' + indicatorBase.appliedPriceString(macdOptions.appliedTo) + ')',
+                            name: 'MACD (SIGNAL,' + macdOptions.signalPeriod +',' + indicatorBase.appliedPriceString(macdOptions.appliedTo) + ')',
                             data: signalData,
                             type: 'line',
                             yAxis:'macd' + macdUniqueID,
@@ -578,7 +578,6 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                   };
                 };
 
-
                 H.wrap(H.Series.prototype, 'addPoint', function(pmacdseed, options, redraw, shift, animation) {
                     pmacdseed.call(this, options, redraw, shift, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(macdOptionsMap, this.options.id)) {
@@ -591,7 +590,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                 H.wrap(H.Point.prototype, 'update', function(pmacdseed, options, redraw, animation) {
                     pmacdseed.call(this, options, redraw, animation);
                     if (indicatorBase.checkCurrentSeriesHasIndicator(macdOptionsMap, this.series.options.id)) {
-                        console.log('BBANDS : Updating BB values for main series ID : ', this.series.options.id);
+                        console.log('MACD : Updating MACD values for main series ID : ', this.series.options.id);
                         updateMACDLineSeries.call(this.series, this.x, true);
                         updateSignalLineSeries.call(this.series, this.x, true);
                         updateHistogramSeries.call(this.series, this.x, true);
@@ -613,7 +612,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var macdValue = calculateMACDValue(data,dataPointIndex,macdOptions,this.options.type,key,isPointUpdate && macdSeriesMap[key].options.data.length >= data.length)
-                                if (isPointUpdate && macdSeriesMap[key].options.data.length >= data.length)
+                                if (isPointUpdate)
                                 {
                                     macdSeriesMap[key].data[dataPointIndex].update({ y : indicatorBase.toFixed(macdValue,4)});
                                 }
@@ -646,7 +645,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                                 var signalValue =calculateSignalValue(macdData,signalData,dataPointIndex,macdOptions,this.options.type,key,isPointUpdate && signalSeriesMap[key].options.data.length >= data.length);
                                 if(signalValue && !isNaN(signalValue))
                                 {
-                                    if (isPointUpdate && signalSeriesMap[key].options.data.length >= data.length)
+                                    if (isPointUpdate)
                                     {
                                         signalSeriesMap[key].data[dataPointIndex].update({ y : indicatorBase.toFixed(signalValue,4)});
                                     }
@@ -659,7 +658,6 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         }
                     }
                 }
-
                 
                 function updateHistogramSeries(time, isPointUpdate) {
                     var series = this;
@@ -680,7 +678,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
                                 var histogramValue = calculateHistogramValue(macdData,signalData,dataPointIndex)
-                                if (isPointUpdate && histogramSeriesMap[key].options.data.length >= data.length)
+                                if (isPointUpdate)
                                 {
                                     histogramSeriesMap[key].data[dataPointIndex].update({ y : indicatorBase.toFixed(histogramValue,4)});
                                 }
