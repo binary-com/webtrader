@@ -164,7 +164,7 @@ define(['jquery'], function ($) {
                 return data[index];
             }
             else if (data[index].length === 2) {
-                return data[index][1] || data[index].y;
+                return data[index][1] || data[index].y || null;
             }
             else if (indicatorBase.isOHLCorCandlestick(type)) {
                 return indicatorBase.extractPriceForAppliedTO(appliedTo, data, index);
@@ -198,7 +198,7 @@ define(['jquery'], function ($) {
         },
 
         //*************************SMA***************************************
-        calculateSMAValue: function (data, smaData, index, period, type, appliedTo) {
+        calculateSMAValue: function (data, maData, index, period, type, appliedTo) {
             //Calculate SMA data
             /*
 
@@ -229,14 +229,14 @@ define(['jquery'], function ($) {
             else {
                 var price = this.getPrice(data, index, appliedTo, type);
                 //Calculate SMA - start
-                var preSma = smaData[index - 1].length ? smaData[index - 1][1] : smaData[index - 1];
+                var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
                 return (preSma * (period - 1) + price) / period;
                 //Calculate SMA - end
             }
         },
 
         //*************************EMA***************************************
-        calculateEMAValue: function (data, emaData, index, period, type, appliedTo) {
+        calculateEMAValue: function (data, maData, index, period, type, appliedTo) {
             //Calculate EMA data
             /*  ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
              *  Do not fill any value in emaData from 0 index to options.period-1 index
@@ -247,14 +247,14 @@ define(['jquery'], function ($) {
             else if (index === period - 1) {
                 var sum = 0;
                 for (var i = 0 ; i < period ; i++) {
-                    sum += this.getPrice(data, i, appliedTo, type) || 0;
+                    sum += this.getPrice(data, i, appliedTo, type);
                 }
                 return sum / period;
             }
             else {
                 //Calculate EMA - start
                 //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-                var preEma = emaData[index - 1].length ? emaData[index - 1][1] : emaData[index - 1];
+                var preEma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
                 var price = this.getPrice(data, index, appliedTo, type);
                 return (price * 2 / (period + 1)) + (preEma * (1 - 2 / (period + 1)));
             }
@@ -342,7 +342,7 @@ define(['jquery'], function ($) {
         },
 
         //*************************TRIMA******************************************
-        calculateTRIMAValue: function (data, trimaData, index, period, type, appliedTo) {
+        calculateTRIMAValue: function (data, maData, index, period, type, appliedTo) {
             //Calculate TRIMA data
             /*
 
@@ -357,7 +357,7 @@ define(['jquery'], function ($) {
              *  Do not fill any value in trimaData from 0 index to options.period-1 index
 
              */
-            var Nm = Math.round(period + 1 / 2);
+            var Nm = Math.round((period + 1) / 2);
             if (index < (Nm - 1)) {
                 return null;
             }
@@ -370,7 +370,7 @@ define(['jquery'], function ($) {
             }
             else {
                 var price = this.getPrice(data, index, appliedTo, type);
-                var preTrima = trimaData[index - 1].length ? trimaData[index - 1][1] : trimaData[index - 1];
+                var preTrima = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
                 return (preTrima * (Nm - 1) + price) / Nm;
             }
         }

@@ -38,12 +38,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         }
         else {
             //* Calculate Ma Type
-            //if (maType === indicatorBase.TEMA) {
-            //    var maValue = indicatorBase.calculateTEMAValue(tpData[key], index, period, type, key, isPointUpdate);
-            //}
-            //else {
             var maValue = indicatorBase.calculateMAValue(tpData[key], maData[key], index, period, maType, type, key, isPointUpdate);
-            //}
 
             //*Calculate Mean Deviation
             //*mean deviation of the absolute value of the difference between the mean price and  the moving average of mean prices, M - A

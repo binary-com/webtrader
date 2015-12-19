@@ -222,6 +222,13 @@
     "short_display_name": "SAR",
     "ohlcOnly" : true
   },
+
+   "macd": {
+    "id": "macd",
+    "long_display_name": "Moving Average Convergence/Divergence",
+    "short_display_name": "MACD",
+    "ohlcOnly" : true
+  },
   
   "cdlengulfing": {
     "id": "cdlengulfing",

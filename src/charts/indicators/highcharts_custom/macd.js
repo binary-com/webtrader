@@ -4,394 +4,41 @@ Created by Mahboob.M on 12.12.2015
 define(['indicator_base', 'highstock'],function(indicatorBase){
 
 	 var macdOptionsMap = {} , macdSeriesMap = {} , signalSeriesMap = {} , histogramSeriesMap = {};
-     var  ema1 = {} , ema2 = {} , ema3 = {};
      var fastEma = {} , slowEma = {};
-     var maTypes = {SMA:"SMA", EMA:"EMA" ,WMA:"WMA" , TEMA:"TEMA" , TRIMA:"TRIMA"};
 
-    //******************************Get Price*************************
-    function getPrice(data,index,appliedTo,type)
-    {
-        if(data[index].length === 2)
-        {
-          return data[index][1];
-        }
-        else if (indicatorBase.isOHLCorCandlestick(type))
-        {
-            return indicatorBase.extractPriceForAppliedTO(appliedTo, data, index);
-        }
-        else {
-            return indicatorBase.extractPrice(data, index); 
-        }
-    }
-    //*************************SAM***************************************
-    function calculateSMAValue(data,smaData,index,period,type,appliedTo)
-    {
-        if(index<period-1)
-        {
-            return null;
-        }
-        else if(index === (period-1))
-        {
-           var sum = 0.0;
-           for (var i = 0; i < period; i++)
-           {
-              sum += getPrice(data,i,appliedTo,type);
-           }
-            return (sum / period);
-        }
-        else
-        {
-           var price = getPrice(data,index,appliedTo,type);
-           //Calculate SMA - start
-           //alert(Price);
-           //alert(smaData[index-1][1]);
-           var preSma = smaData[index-1].length?smaData[index-1][1]:smaData[index-1];
-           return (preSma * (period - 1) + price) / period;
-           //Calculate SMA - end
-        }
-    }
-    //*************************EMA***************************************
-    function calculateEMAValue(data,emaData,index,period,type,appliedTo)
-    {
-        if(index<period-1)
-        { 
-            return null;
-        }
-        else if(index === period-1)
-        {
-            var sum = 0;
-            for (var i = 0 ; i<period ; i++)
-            {
-                sum += getPrice(data,index,appliedTo,type);
-            }
-            return sum/period;
-        }
-        else
-        {
-            //Calculate EMA - start
-            //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-            var preEma = emaData[index-1].length?emaData[index-1][1]:emaData[index-1];
-            var price = getPrice(data,index,appliedTo,type);
-            return (price * 2 / (period + 1)) + (preEma * (1 - 2 / (period + 1)));
-        }
-    }
-    //*************************TEMA*****************************************
-    function calculateTEMAValue(data,period) 
-    {
-        var temaData = [], sum = 0.0;
-        for (var index = 0; index < period; index++) {
-            sum += data[index][1];
-            if (index === (period - 1)) {
-                var val = sum / period;
-                if (!$.isNumeric(val)) {
-                    val = data[index][1];
-                }
-                temaData.push([data[index][0], val]);
-            }
-            else {
-                temaData.push([data[index][0], null]);
-            }
-        }
+    //****************************MACD************************************
+     function calculateMACDValue(data, index, macdOptions, type, key, isPointUpdate) {
 
-        for (var index = period; index < data.length; index++) {
-            var price = data[index][1];
-            //Calculate EMA - start
-            //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-            var temaValue = (price * 2 / (period + 1)) + (temaData[index - 1][1] * (1 - 2 / (period + 1)))
-            temaData.push([data[index][0], indicatorBase.toFixed(temaValue, 4)]);
-            //Calculate EMA - end
-        }
-        return temaData;
-    }
-
-    function calculateTEMAData(data,period,type,appliedTo,key,hasDataIndex)
-    {
-        //Calculate TEMA data
-        /*
-        The Triple Exponential Moving Average (TEMA) of time series 't' is:
-        *      EMA1 = EMA(t,period)
-        *      EMA2 = EMA(EMA1,period)
-        *      EMA3 = EMA(EMA2,period))
-        *      TEMA = 3*EMA1 - 3*EMA2 + EMA3
-        * Do not fill any value in temaData from 0 index to options.period-1 index
-        */
-        var inputData = [];
-        //Prepare input data for indicator value calculation
-        for (var index = 0; index < data.length; index++)
-        {
-            var price = getPrice(data,index,appliedTo,type);
-            inputData.push([data[index].x ? data[index].x : data[index][0], price]);
-        }
-        var ema1Data = calculateTEMAValue(inputData,period);
-        var ema2Data = calculateTEMAValue(ema1Data,period);
-        var ema3Data = calculateTEMAValue(ema2Data,period);
-        var temaData = [];
-        for (var index = 0; index < ema3Data.length; index++) {
-            var temaVal = 3 * ema1Data[index][1] - 3 * ema2Data[index][1] + ema3Data[index][1];
-            if(hasDataIndex)
-                temaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(temaVal , 4)]);
-            else
-                temaData.push(temaVal);
-        }      
-        ema1[key] = ema1Data;
-        ema2[key] = ema2Data;
-        ema3[key] = ema3Data;
-
-        return temaData;
-    }
-
-    function calculateTEMAValueForUpdate(data,index,bbandsOptions,type,key,isPointUpdate)
-    {
-        var price = getPrice(data,index,bbandsOptions,type);
-        var n = bbandsOptions.period;
-        var ema1Value = (price * 2 / (n + 1)) + (ema1[key][index - 1][1] * (1 - 2 / (n + 1)))
-            , ema2Value = (ema1Value * 2 / (n + 1)) + (ema2[key][index - 1][1] * (1 - 2 / (n + 1)))
-            , ema3Value = (ema2Value * 2 / (n + 1)) + (ema3[key][index - 1][1] * (1 - 2 / (n + 1)));
-        var temaValue = 3*ema1Value - 3*ema2Value + ema3Value;
-        ema1Value = indicatorBase.toFixed(ema1Value, 4);
-        ema2Value = indicatorBase.toFixed(ema2Value, 4);
-        ema3Value = indicatorBase.toFixed(ema3Value, 4);
-        temaValue = indicatorBase.toFixed(temaValue, 4);
-
-        var time = (data[index].x || data[index][0]);
-        if (isPointUpdate)
-        {
-            ema1[key][index] = [time, ema1Value];
-            ema2[key][index] = [time, ema2Value];
-            ema3[key][index] = [time, ema3Value];
-        }
-        else
-        {
-            ema1[key].push([time, ema1Value]);
-            ema2[key].push([time, ema2Value]);
-            ema3[key].push([time, ema3Value]);
-        }
-        return temaValue;
-    }
-
-   //*************************WMA******************************************   
-    function calculateWMAValue(data,index,period,type,appliedTo) 
-    {
-        //Calculate WMA data
-        /*
-        WMA = ( Price * n + Price(1) * n-1 + ... Price( n-1 ) * 1) / ( n * ( n + 1 ) / 2 )
-        Where: n = time period
-        *
-        *  Do not fill any value in wmaData from 0 index to options.period-1 index
-        */
-        if (index < period-1)
-        {
-           return null;
-        }
-        else
-        {
-           //Calculate WMA - start
-           var wmaValue = 0;
-           for (var subIndex = index, count = period; subIndex >= 0 && count >= 0; count--, subIndex--) 
-           {
-               var price = getPrice(data,subIndex,appliedTo,type);
-               wmaValue += price * count;
-           }
-        }
-        return wmaValue / (period * (period + 1) / 2);
-        //Calculate WMA - end
-    }
+         var macdValue = null;
+         //*12 Day EMA
+         var fastEmaValue = indicatorBase.calculateMAValue(data, fastEma[key], index, macdOptions.fastPeriod, macdOptions.fastMaType, type, 'f' + key, isPointUpdate, macdOptions.appliedTo);
+         //*26 Day EMA
+         var slowEmaValue = indicatorBase.calculateMAValue(data, slowEma[key], index, macdOptions.slowPeriod, macdOptions.slowMaType, type, 's' + key, isPointUpdate, macdOptions.appliedTo);
+         //*MACD Line: (12-day EMA - 26-day EMA)
+         if (index >= macdOptions.slowPeriod) {
+             macdValue = fastEmaValue - slowEmaValue;
+         }
+         if (isPointUpdate) {
+             fastEma[key][index] = fastEmaValue;
+             slowEma[key][index] = slowEmaValue;
+         }
+         else {
+             fastEma[key].push(fastEmaValue);
+             slowEma[key].push(slowEmaValue);
+         }
+         return macdValue;
+     }
     
-    //*************************TRIMA***************************************
-    function calculateTRIMAValue(data,trimaData,index,period,type,appliedTo)
-    {
-        var Nm = Math.round( period + 1 / 2 );
-        if (index < (Nm - 1))
-        {
-            return null;
-        }
-        else if(index === Nm-1)
-        {
-            var sum = 0;
-            for (var subIndex = 0; subIndex < Nm; subIndex++)
-            {
-                sum += getPrice(data,subIndex,appliedTo,type);
-            }
-            return sum / Nm;
-        }
-        else
-        {
-            var price = getPrice(data,index,appliedTo,type);
-            var preTrima = trimaData[index-1].length?trimaData[index-1][1]:trimaData[index-1];
-            return (preTrima * (Nm - 1) + price) / Nm;
-        }
-    }
-
-    //****************************MA****************************************
-    function calculateMAValue(data,maData,index,period,maType,type,appliedTo)
-    {
-        var maValue=null;
-        switch(maType)
-        {
-            case maTypes.SMA:
-               maValue=calculateSMAValue(data,maData,index,period,type,appliedTo);
-               break;
-            case maTypes.EMA:
-               maValue=calculateEMAValue(data,maData,index,period,type,appliedTo);
-               break;
-            case maTypes.WMA:
-               maValue=calculateWMAValue(data,index,period,type,appliedTo);
-               break;
-            case maTypes.TEMA:
-               maValue=calculateTEMAValue(data,maData,index,period,type,appliedTo);
-               break;
-            case maTypes.TRIMA:
-               maValue= calculateTRIMAValue(data,maData,index,period,type,appliedTo);
-               break;
-        }
-        return maValue;
-    }
-
-    //****************************MACD**************************************
-    function calculateMACD(data,macdOptions,type,key)
-    {
-        var fastEmaData = [],slowEmaData = [],macdData=[];
-        var macdValue = null;
-        if(macdOptions.fastMaType === maTypes.TEMA)
-        {
-            fastEmaData = calculateTEMAData(data,macdOptions.fastPeriod,type,macdOptions.appliedTo,"f"+key,false);
-        }
-        if(macdOptions.slowMaType ===  maTypes.TEMA)
-        {
-            slowEmaData = calculateTEMAData(data,macdOptions.slowPeriod,type,macdOptions.appliedTo,"s"+key,false);
-        }
-        for (var index = 0; index < data.length; index++)
-        {
-            //*12 Day EMA
-            if(macdOptions.fastMaType !=  maTypes.TEMA)
-            {
-                var fastEmaValue=calculateMAValue(data,fastEmaData,index,macdOptions.fastPeriod,macdOptions.fastMaType,type,macdOptions.appliedTo);
-                fastEmaData.push(fastEmaValue);
-            }
-            //*26 Day EMA
-            if(macdOptions.slowMaType !=  maTypes.TEMA)
-            {
-                var slowEmaValue=calculateMAValue(data,slowEmaData,index,macdOptions.slowPeriod,macdOptions.slowMaType,type,macdOptions.appliedTo);
-                slowEmaData.push(slowEmaValue);
-            }
-            
-            //*MACD Line: (12-day EMA - 26-day EMA)
-            if(index >= macdOptions.slowPeriod)
-            {
-               macdValue = fastEmaData[index] - slowEmaData[index];
-            }
-            macdData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(macdValue , 4)]);
-        }
-
-        fastEma[key] = fastEmaData;
-        slowEma[key] = slowEmaData;
-
-        return macdData;
-    }
-
-    function calculateMACDValue(data,index,macdOptions,type,key,isPointUpdate)
-    {
-        var macdValue = null , fastEmaValue = null , slowEmaValue = null;
-
-        if(macdOptions.fastMaType === maTypes.TEMA)
-        {
-            fastEmaValue = calculateTEMAValueForUpdate(data,macdOptions.fastPeriod,type,macdOptions.appliedTo,"f"+uniqueID,false);
-        }
-        else
-        {
-            fastEmaValue=calculateMAValue(data,fastEma[key],index,macdOptions.fastPeriod,macdOptions.fastMaType,type,macdOptions.appliedTo);
-        }
-
-        if(macdOptions.slowMaType ===  maTypes.TEMA)
-        {
-            slowEmaValue = calculateTEMAValueForUpdate(data,macdOptions.slowPeriod,type,macdOptions.appliedTo,"s"+uniqueID,false);
-        }
-        else
-        {
-            slowEmaValue=calculateMAValue(data,slowEma[key],index,macdOptions.slowPeriod,macdOptions.slowMaType,type,macdOptions.appliedTo);
-        }
-            
-        //*MACD Line: (12-day EMA - 26-day EMA)
-        if(index >= macdOptions.slowPeriod)
-        {
-            macdValue = fastEmaValue - slowEmaValue;
-        }
-
-         if (isPointUpdate)
-        {
-            fastEma[key][index] = fastEmaValue;
-            slowEma[key][index] = slowEmaValue;
-        }
-        else
-        {
-            fastEma[key].push(fastEmaValue);
-            slowEma[key].push(slowEmaValue);
-        }
-
-        return macdValue;
-    }
-
-    //****************************Signal************************************
-    function calculateSignal(data,macdOptions,type,uniqueID)
-    {
-        var signalData = [];
-        if(macdOptions.signalMaType == maTypes.TEMA)
-        {
-            signalData = calculateTEMAData(data,macdOptions.signalPeriod,type,macdOptions.appliedTo,"sg" + uniqueID,true);
-        }
-        else
-        {
-            for (var index = 0; index < data.length; index++)
-            {
-                //*Signal Line: 9-day EMA of MACD Line
-                var signalEma = calculateMAValue(data,signalData,index,macdOptions.signalPeriod + macdOptions.slowPeriod-1,macdOptions.signalMaType,type,macdOptions.appliedTo);
-                signalData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(signalEma , 4)]);
-            }
-        }
-        return signalData;
-    }
-
-    function calculateSignalValue(data,signalData,index,macdOptions,type,key,isPointUpdate)
-    {
-        var signalValue = null;
-        if(macdOptions.signalMaType === maTypes.TEMA)
-        {
-            signalValue = calculateTEMAValueForUpdate(data,macdOptions.signalPeriod,type,macdOptions.appliedTo,"sg"+uniqueID,false);
-        }
-        else
-        {
-            //*Signal Line: 9-day EMA of MACD Line
-            signalValue = calculateMAValue(data,signalData,index,macdOptions.signalPeriod + macdOptions.slowPeriod-1,macdOptions.signalMaType,type,macdOptions.appliedTo);
-        }
-        return signalValue;
-    }
-
     //****************************Histogram************************************
-    function calculateHistogram(macdData,signalData)
-    {
-        var histogramData = [];
-        for (var index = 0; index < macdData.length; index++)
-        {
-             var hstgrmEma = null;
-            //*MACD Histogram: MACD Line - Signal Line
-            var macdValue = macdData[index][1] || macdData[index].y;
-            var signalValue = signalData[index][1] || signalData[index].y;
-            if(macdValue && signalValue)
-               hstgrmEma = macdValue - signalValue;
-            histogramData.push([(macdData[index].x || macdData[index][0]), indicatorBase.toFixed(hstgrmEma , 4)]);
-        }
-        return histogramData;
-    }
-
     function calculateHistogramValue(macdData,signalData,index)
     {
-        var hstgrmEma = null;
+        var hstgrmValue = null;
         //*MACD Histogram: MACD Line - Signal Line
         var macdValue = macdData[index][1] || macdData[index].y;
         var signalValue = signalData[index][1] || signalData[index].y;
-        if(macdValue && signalValue)
-           hstgrmEma = macdValue - signalValue;
-       return hstgrmEma;
+        if (macdValue && signalValue)
+            hstgrmValue = macdValue - signalValue;
+        return hstgrmValue;
     }
 
     //*************************End Histogram************************************
@@ -431,12 +78,24 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         //*MACD Line: (12-day EMA - 26-day EMA)
                         //* Signal Line: 9-day EMA of MACD Line
                         //* MACD Histogram: MACD Line - Signal Line
+                        var macdData = [];
+                        fastEma[macdUniqueID] = [], slowEma[macdUniqueID] = [];
+                        for (var index = 0; index < data.length; index++) {
+                            var macdValue = calculateMACDValue(data, index, macdOptions, this.options.type, macdUniqueID, false);
+                            macdData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(macdValue, 4)]);
+                        }
 
-                        var macdData = calculateMACD(data,macdOptions,this.options.type,macdUniqueID);
+                        var signalData = [];
+                        for (var index = 0; index < macdData.length; index++) {
+                            var signalValue = indicatorBase.calculateMAValue(macdData, signalData, index, macdOptions.signalPeriod + macdOptions.slowPeriod - 1, macdOptions.signalMaType, this.options.type, signalUniqueID, false, macdOptions.appliedTo);
+                            signalData.push([(macdData[index].x || macdData[index][0]), indicatorBase.toFixed(signalValue, 4)]);
+                        }
 
-                        var signalData = calculateSignal(macdData,macdOptions,this.options.type,signalUniqueID);
-
-                        var histogramData = calculateHistogram(macdData,signalData);
+                        var histogramData = [];
+                        for (var index = 0; index < macdData.length; index++) {
+                            var hstgrmValue = calculateHistogramValue(macdData, signalData, index);
+                            histogramData.push([(macdData[index].x || macdData[index][0]), indicatorBase.toFixed(hstgrmValue, 4)]);
+                        }
 
    						var chart = this.chart;
  
@@ -455,7 +114,6 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                                 x: 35
                             },
                             lineWidth: 2
-                           // plotLines: bopOptions.levels
                         }, false, false, false);
 
                         indicatorBase.recalculate(chart);
@@ -542,12 +200,6 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                     var datePart = uniqueID.replace("m-", "").replace('s-', "").replace('h-', '');
                     ['m', 's', 'h'].forEach(function(eachSeriesType) {
                         var key = eachSeriesType + '-' + datePart;
-                        if(macdOptionsMap[key].maType === "TEMA")
-                        {
-                            ema1Data[key] = [];
-                            ema2Data[key] = [];
-                            ema3Data[key] = [];
-                        }
                         macdOptionsMap[key] = null;
                         chart.get(key).remove();
                         macdSeriesMap[key] = null;
@@ -611,7 +263,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             var macdOptions=macdOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var macdValue = calculateMACDValue(data,dataPointIndex,macdOptions,this.options.type,key,isPointUpdate && macdSeriesMap[key].options.data.length >= data.length)
+                                var macdValue = calculateMACDValue(data, dataPointIndex, macdOptions, this.options.type, key, isPointUpdate)
                                 if (isPointUpdate)
                                 {
                                     macdSeriesMap[key].data[dataPointIndex].update({ y : indicatorBase.toFixed(macdValue,4)});
@@ -642,7 +294,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             var macdData = macdSeriesMap[macdKey].options.data;
                             console.log(key,macdKey)
                             if ( dataPointIndex >= 1) {
-                                var signalValue =calculateSignalValue(macdData,signalData,dataPointIndex,macdOptions,this.options.type,key,isPointUpdate && signalSeriesMap[key].options.data.length >= data.length);
+                                var signalValue = indicatorBase.calculateMAValue(macdData, signalData, dataPointIndex, macdOptions.signalPeriod + macdOptions.slowPeriod - 1, macdOptions.signalMaType, this.options.type, key, isPointUpdate, macdOptions.appliedTo);
                                 if(signalValue && !isNaN(signalValue))
                                 {
                                     if (isPointUpdate)
