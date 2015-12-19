@@ -81,6 +81,10 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           symbol = passthrough.symbol,
           purchase_epoch = state.buy.purchase_time * 1;
 
+      /* TODO: if the connection get closed while we are adding new ticks,
+               although we will automatically resubscribe (in binary_websockets),
+               BUT we will also lose some ticks in between!
+               which means we ware showing the wrong ticks to the user! FIX THIS*/
       var fn = liveapi.events.on('tick', function (data) {
           if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
             return;

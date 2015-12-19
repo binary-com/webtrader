@@ -53,27 +53,14 @@ define(['jquery'], function ($) {
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
                     var req = chartingRequestMap[key];
-                    var instrumentCode = req && req.chartIDs && req.chartIDs[0] && req.chartIDs[0].instrumentCode;
-                    var granularity = parseInt(key.replace(instrumentCode, "")) | 0;
-                    /* resubscribe */
-                    if (req && instrumentCode) {
-                        if (req.timerHandler) {return;} //just ignore timer cases
-
-                        var requestObject = {
-                            "ticks_history": instrumentCode,
-                            "granularity": granularity,
-                            "end": 'latest',
-                            "count": 1,
-                            "subscribe": 1
-                        };
-                        if (granularity > 0) {
-                            requestObject.style = 'candles';
-                        }
-                        console.log('Sending new streaming request after connection close', requestObject);
-                        api.send(requestObject)
-                            .catch(function (err) {
-                                console.error(err);
-                            });
+                    if (req && req.symbol && !req.timerHandler) { /* resubscribe */
+                        chartingRequestMap.register({
+                          symbol: req.symbol,
+                          granularity: req.granularity,
+                          subscribe: 1,
+                          count: 1,
+                          style: req.granularity > 0 ? 'candles' : 'ticks'
+                        }).catch(function (err) { console.error(err); });
                     }
                 });
             });

@@ -33,8 +33,8 @@
     }
 */
 
-define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
-    function (_, $, windows, rv, liveapi, html) {
+define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
+    function (_, $, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
 
@@ -556,8 +556,16 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       state.categories.array = _(available).map('contract_category_display').uniq().run();
       state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 
-      /* register for this symbol, TODO: don't register if already someone else has registered for this symbol */
-      liveapi.send({ ticks: state.proposal.symbol }).catch(function (err) { console.error(err); });
+      var key = chartingRequestMap.keyFor(state.proposal.symbol, 0);
+      if($.isEmptyObject(chartingRequestMap[key])){ /* don't register if already someone else has registered for this symbol */
+          chartingRequestMap.register({
+            symbol: state.proposal.symbol,
+            subscribe: 1,
+            granularity: 0,
+            count: 1,
+            style: 'ticks'
+          }).catch(function (err) { console.error(err); });
+      }
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
