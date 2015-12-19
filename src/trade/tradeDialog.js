@@ -557,7 +557,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 
       var key = chartingRequestMap.keyFor(state.proposal.symbol, 0);
-      if($.isEmptyObject(chartingRequestMap[key])){ /* don't register if already someone else has registered for this symbol */
+      if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
           chartingRequestMap.register({
             symbol: state.proposal.symbol,
             subscribe: 1,

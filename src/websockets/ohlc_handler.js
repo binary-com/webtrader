@@ -68,7 +68,7 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
                 series_compare = options.series_compare;
 
             var key = chartingRequestMap.keyFor(instrumentCode, timePeriod);
-            if (!$.isEmptyObject(chartingRequestMap[key])) {
+            if (chartingRequestMap[key]) {
                 /* Since streaming for this instrument+timePeriod has already been requested,
                    we just take note of containerIDWithHash so that once the data is received, we will just
                    call refresh for all registered charts */

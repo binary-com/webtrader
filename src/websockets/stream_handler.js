@@ -13,9 +13,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
 
     liveapi.events.on('tick', function (data) {
         var key = data.echo_req.ticks_history + data.echo_req.granularity;
-        if (key) {
+        if (key && chartingRequestMap[key.toUpperCase()]) {
             key = key.toUpperCase();
-            chartingRequestMap[key] = chartingRequestMap[key] || {};
 
             // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
             $(document).trigger("feedTypeNotification", [key, "realtime-feed"]);
@@ -61,9 +60,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
 
     liveapi.events.on('ohlc', function (data) {
         var key = data.echo_req.ticks_history + data.echo_req.granularity;
-        if (key) {
+        if (key && chartingRequestMap[key.toUpperCase()]) {
             key = key.toUpperCase();
-            chartingRequestMap[key] = chartingRequestMap[key] || {};
 
             // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
             $(document).trigger("feedTypeNotification", [key, "realtime-feed"]);
