@@ -53,21 +53,27 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 				of:window,
 				buttons:[
 					{
-						text: "Ok",
+						text: "OK",
 						click: function() {
 							    //Check validation
-							    if (!isNumericBetween($html.find(".macd_input_width_for_period").val(),
-                                            parseInt($html.find(".macd_input_width_for_period").attr("min")),
-                                            parseInt($html.find(".macd_input_width_for_period").attr("max")))) {
-                                require(["jquery", "jquery-growl"], function ($) {
-                                    $.growl.error({
-                                        message: "Only numbers between " + $html.find(".macd_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".macd_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".macd_input_width_for_period").closest('tr').find('td:first').text() + "!"
-                                    });
-                                });
-                                return;
-                            	}
+							    var isValid = true;
+							    $(".macd_input_width_for_period").each(function () {
+							        if (!isNumericBetween(parseInt($(this).val()), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+							            var $elem = $(this);
+							            require(["jquery", "jquery-growl"], function ($) {
+							                $.growl.error({
+							                    message: "Only numbers between " + $elem.attr("min")
+                                                        + " to " + $elem.attr("max")
+                                                        + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+							                });
+							            });
+							            isValid = false;
+							            return;
+							        }
+							    });;
+
+							    if (!isValid) return;
+
 
 							    require(['charts/indicators/highcharts_custom/macd'], function ( macd ) {
                                 macd.init();

@@ -286,7 +286,7 @@ define(['jquery'], function ($) {
 
             var price = this.getPrice(data, index, appliedTo, type);
 
-            var ema1Value = this.calculateEMAValue(data, ema1[key], index, period, type, appliedTo);  //(price * 2 / (period + 1)) + (ema1[key][index - 1][1] * (1 - 2 / (period + 1)))
+            var ema1Value = this.calculateEMAValue(data, ema1[key], index, period, type, appliedTo);
             if (isPointUpdate) {
                 ema1[key][index] = [time, ema1Value];
             }
@@ -294,7 +294,7 @@ define(['jquery'], function ($) {
                 ema1[key].push([time, ema1Value]);
             }
 
-            var ema2Value = this.calculateEMAValue(ema1[key], ema2[key], index, period, type, appliedTo);  //(ema1Value * 2 / (period + 1)) + (ema2[key][index - 1][1] * (1 - 2 / (period + 1)))
+            var ema2Value = this.calculateEMAValue(ema1[key], ema2[key], index, period, type, appliedTo); 
 
             if (isPointUpdate) {
                 ema2[key][index] = [time, ema2Value];
@@ -303,7 +303,7 @@ define(['jquery'], function ($) {
                 ema2[key].push([time, ema2Value]);
             }
 
-            var ema3Value = this.calculateEMAValue(ema2[key], ema3[key], index, period, type, appliedTo); //(ema2Value * 2 / (period + 1)) + (ema3[key][index - 1][1] * (1 - 2 / (period + 1)));
+            var ema3Value = this.calculateEMAValue(ema2[key], ema3[key], index, period, type, appliedTo);
 
             if (isPointUpdate) {
                 ema3[key][index] = [time, ema3Value];
@@ -312,9 +312,8 @@ define(['jquery'], function ($) {
                 ema3[key].push([time, ema3Value]);
             }
 
-            var temaValue = 3 * ema1Value - 3 * ema2Value + ema3Value;
+            return 3 * ema1Value - 3 * ema2Value + ema3Value;
 
-            return temaValue;
         },
 
         //*************************WMA*****************************************
