@@ -1,12 +1,12 @@
 /*
 Created by Mahboob.M on 26.11.2015
 */
-define(['indicator_base', 'highstock'],function(indicatorBase){
+define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase) {
 
 	var bbandsOptionsMap = {}, 
-	 bbandsMdlSeriesMap = {},
-	 bbandsUprSeriesMap = {},
-	 bbandsLwrSeriesMap = {};
+	    bbandsMdlSeriesMap = {},
+	    bbandsUprSeriesMap = {},
+	    bbandsLwrSeriesMap = {};
     var  ema1 = {}, ema2 = {}, ema3 = {};
 
     //******************************Get Price*************************
@@ -387,10 +387,11 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         parentSeriesID: seriesID
                     }, bbandsOptions);
 
-                    var uniqueID =  new Date().getTime();
-                    var mdlUniqueID="m-"+uniqueID;
-                    var uprUniqueID="u-"+uniqueID;
-                    var lwrUniqueID="l-"+uniqueID;
+                    var uniqueID      =  Date.now();
+                    var mdlUniqueID   = "m-" + uniqueID;
+                    var uprUniqueID   = "u-" + uniqueID;
+                    var lwrUniqueID   = "l-" + uniqueID;
+                    var rangeUniqueID = "range-" + uniqueID;
 
                     var data = this.options.data || [];
                     if (data && data.length > 0)
@@ -406,11 +407,11 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
   								* N period sum / N
                          */
                         //* Middle Band Data
-                        var bbandsMiddleBandData=calculateMiddleBand(data,bbandsOptions,this.options.type,mdlUniqueID);
+                        var bbandsMiddleBandData = calculateMiddleBand(data,bbandsOptions,this.options.type,mdlUniqueID);
                         //* Upper Band Data
-        				var bbandsUperBandData=calculateUperBand(data,bbandsMiddleBandData,bbandsOptions,this.options.type);
+        				var bbandsUperBandData = calculateUperBand(data,bbandsMiddleBandData,bbandsOptions,this.options.type);
                         //* Lower Band Data
-        				var bbandsLowerBandData=calculateLowerBand(data,bbandsMiddleBandData,bbandsOptions,this.options.type);
+        				var bbandsLowerBandData = calculateLowerBand(data,bbandsMiddleBandData,bbandsOptions,this.options.type);
 
    						var chart = this.chart;
  
@@ -434,10 +435,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         }, false, false);
 
                         //Bollinger Uper Band
-                        var series = this;
                         bbandsUprSeriesMap[uprUniqueID] = chart.addSeries({
                             id: uprUniqueID,
-                            name: 'BBANDS (Upper,' + bbandsOptions.period +',' +bbandsOptions.devUp +','+bbandsOptions.devDn +',' + indicatorBase.appliedPriceString(bbandsOptions.appliedTo) + ')',
+                            name: 'BBANDS Upper',
                             data: bbandsUperBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -450,10 +450,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 
 
                         //Bollinger Lower Band
-                        var series = this;
                         bbandsLwrSeriesMap[lwrUniqueID] = chart.addSeries({
                             id: lwrUniqueID,
-                            name: 'BBANDS (Lower,' + bbandsOptions.period +',' +bbandsOptions.devUp +','+bbandsOptions.devDn +',' + indicatorBase.appliedPriceString(bbandsOptions.appliedTo) + ')',
+                            name: 'BBANDS Lower',
                             data: bbandsLowerBandData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -462,6 +461,42 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             lineWidth: bbandsOptions.strokeWidth,
                             dashStyle: bbandsOptions.dashStyle,
                             compare: series.options.compare
+                        }, false, false);
+
+                        /**
+                         * Following series is just to show the colored range
+                         * @type {Array}
+                         */
+                        var seriesAreaData = [];
+                        bbandsLowerBandData.forEach(function(eachLwr, index) {
+                            var data = [eachLwr[0], eachLwr[1], bbandsUperBandData[index][1]];
+                            seriesAreaData.push(data);
+                        });
+                        chart.addSeries({
+                            id: rangeUniqueID,
+                            data: seriesAreaData,
+                            name: "BBANDS Range",
+                            type: 'arearange',
+                            dataGrouping: series.options.dataGrouping,
+                            opposite: series.options.opposite,
+                            color: 'white',
+                            fillColor: 'rgba(28,28,28,0.5)',
+                            connectNulls: true,
+                            compare: series.options.compare,
+                            //Following properties, states, events, dataLabels, point are needed. Otherwise higcharts-more throws error
+                            states: {
+                                hover: {
+                                    enabled: false
+                                }
+                            },
+                            events : {},
+                            dataLabels : {
+                                enabled : false
+                            },
+                            point: {
+                                events: {}
+                            },
+                            enableMouseTracking: false
                         }, false, false);
 
                         $(bbandsMdlSeriesMap[mdlUniqueID]).data({
@@ -493,19 +528,20 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                 H.Series.prototype.removeBBANDS = function (uniqueID) {
                     var chart = this.chart;
                     var datePart = uniqueID.replace("m-", "").replace('l-', "").replace('u-', '');
-                    ['m', 'u', 'l'].forEach(function(eachSeriesType) {
+                    ['m', 'u', 'l', 'range'].forEach(function(eachSeriesType) {
                         var key = eachSeriesType + '-' + datePart;
-                        if(bbandsOptionsMap[key].maType === "TEMA")
-                        {
-                            ema1[key] = [];
-                            ema2[key] = [];
-                            ema3[key] = [];
-                        }
-                        bbandsOptionsMap[key] = null;
                         chart.get(key).remove();
-                        bbandsMdlSeriesMap[key] = null;
-                        bbandsUprSeriesMap[key] = null;
-                        bbandsLwrSeriesMap[key] = null;
+                        if (eachSeriesType !== 'range') {
+                            if (bbandsOptionsMap[key].maType === "TEMA") {
+                                ema1[key] = [];
+                                ema2[key] = [];
+                                ema3[key] = [];
+                            }
+                            bbandsOptionsMap[key] = null;
+                            bbandsMdlSeriesMap[key] = null;
+                            bbandsUprSeriesMap[key] = null;
+                            bbandsLwrSeriesMap[key] = null;
+                        }
                     });
                     chart.redraw();
                 };
@@ -533,6 +569,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         updateBBANDSMDLBNDSeries.call(this, options[0]);
                         updateBBANDSUPRBNDSeries.call(this, options[0]);
                         updateBBANDSLWRBNDSeries.call(this, options[0]);
+                        updateBBANDS_range.call(this, options[0]);
                     }
                 });
 
@@ -543,6 +580,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         updateBBANDSMDLBNDSeries.call(this.series, this.x, true);
                         updateBBANDSUPRBNDSeries.call(this.series, this.x, true);
                         updateBBANDSLWRBNDSeries.call(this.series, this.x, true);
+                        updateBBANDS_range.call(this.series, this.x, true);
                     }
                 });
 
@@ -645,6 +683,43 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                         }
                     }
 				}
+
+                function updateBBANDS_range(time, isPointUpdate) {
+                    var series = this;
+                    var chart = series.chart;
+
+                    //Add a new  data point
+                    for (var key in bbandsUprSeriesMap) {
+                        if (bbandsUprSeriesMap[key] && bbandsUprSeriesMap[key].options && bbandsUprSeriesMap[key].options.data && bbandsUprSeriesMap[key].options.data.length > 0
+                            && bbandsOptionsMap[key].parentSeriesID == series.options.id) {
+                            //Find the data point
+                            var data = series.options.data;
+                            var upperBandData = bbandsUprSeriesMap[key].options.data;
+                            var lowerBandData = bbandsLwrSeriesMap[key.replace('u', 'l')].options.data;
+                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
+                            var updatePointInTime = data[dataPointIndex].x || data[dataPointIndex][0];
+                            var lowerValue = lowerBandData[dataPointIndex].y || lowerBandData[dataPointIndex][1];
+                            var upperValue = upperBandData[dataPointIndex].y || upperBandData[dataPointIndex][1];
+                            var value = [updatePointInTime, lowerValue, upperValue];
+                            if (dataPointIndex >= 1) {
+                                chart.series.forEach(function(eachSeries) {
+                                    if (eachSeries.options.id === ('range' + key.replace('u', ''))) {
+                                        //Calculate Upper Band - End
+                                        if (isPointUpdate) {
+                                            eachSeries.data[dataPointIndex].update(value);
+                                        } else {
+                                            eachSeries.addPoint(value, true, true, false);
+                                        }
+                                        return false;
+                                    }
+                                });
+                            }
+                            console.log('BBAND series range : ', updatePointInTime,
+                                lowerBandData[lowerBandData.length - 1].x || lowerBandData[lowerBandData.length - 1][0],
+                                upperBandData[upperBandData.length - 1].x || upperBandData[upperBandData.length - 1][0]);
+                        }
+                    }
+                }
 
     		  })(Highcharts, jQuery,indicatorBase);
     	}

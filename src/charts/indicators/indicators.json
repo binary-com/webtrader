@@ -216,11 +216,24 @@
     "ohlcOnly" : true
   },
 
+  "sar": {
+    "id": "sar",
+    "long_display_name": "Parabolic SAR",
+    "short_display_name": "SAR",
+    "ohlcOnly" : true
+  },
+  
   "cdlengulfing": {
     "id": "cdlengulfing",
     "long_display_name": "Engulfing Pattern",
     "short_display_name": "CDLENGULFING",
     "ohlcOnly" : true
+  },
+  
+  "wclprice": {
+    "id": "wclprice",
+    "long_display_name": "Weighted Close Price",
+    "short_display_name": "WCLPRICE",
+    "ohlcOnly" : true
   }
-
 }
