@@ -165,10 +165,39 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 		updateListItemHandlers();
 	}
 
+  function initLoginButton(root){
+      var login_btn = root.find('.authentication button');
+      var loginid = root.find('.authentication span.loginid').hide();
+      require(['websockets/binary_websockets'],function(liveapi) {
+          liveapi.events.on('logout', function(){
+              login_btn.removeClass('logout').addClass('login')
+                .removeAttr('disabled').text('Login');
+              loginid.fadeOut();
+          });
+          liveapi.events.on('login', function(data){
+              login_btn.removeClass('login').addClass('logout')
+                .removeAttr('disabled').text('Logout');
+              loginid.text(data.authorize.loginid).fadeIn();
+          });
+
+          login_btn.on('click', function(){
+            login_btn.attr('disabled','disabled');
+            var logedin = login_btn.hasClass('logout');
+            if(logedin) {
+              liveapi.invalidate();
+            }
+            else {
+              liveapi.cached.authorize().catch(function(err) {console.warn(err.message)});
+            }
+          });
+      });
+  }
+
 	return {
 		init: function(_callback) {
             var root = $($navHtml);
             $("body").prepend(root);
+            initLoginButton(root);
 
             $("#nav-toggle").on("click", function (e) {
                 $("#nav-toggle").toggleClass("nav-toggle-active");
@@ -176,9 +205,6 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 
                 e.preventDefault();
             });
-
-            var login_btn = root.find('.authentication button');
-            console.warn(login_btn);
 
             updateDropdownToggleHandlers();
 

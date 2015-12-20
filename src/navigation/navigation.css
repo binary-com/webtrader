@@ -290,19 +290,16 @@
   vertical-align: middle;
   font-size: larger;
   line-height: 2em;
-  width:90px;
+  width:100px;
   border: none;
   border-radius: 5px;
   outline: 0;
   color: white;
 }
-#nav-container .authentication .login {
-  background: #2e8836;
-  box-shadow: 5px 5px 8px rgba(0,0,0,0.25);
-}
-#nav-container .authentication .loginid {
-  text-shadow: 2px 2px 8px rgba(255,255,255,0.75);
-}
+
+#nav-container .authentication button[disabled] { opacity: 0.5;}
+#nav-container .authentication button.login { background: #2e8836; }
+#nav-container .authentication button.logout { background: #4F577E; }
 
 /** targets min-width requirement **/
 @media screen and (max-width: 825px) {
