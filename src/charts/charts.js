@@ -104,7 +104,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                 onload();
                             }
                         }
-                    }
+                    },
+                    spacingLeft: 0, 
+                    marginLeft: 40,  /* disable the auto size labels so the Y axes become aligned */
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
                 },
 
