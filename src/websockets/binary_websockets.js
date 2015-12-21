@@ -43,6 +43,7 @@ define(['jquery'], function ($) {
 
     var onclose = function () {
         is_authenitcated_session = false;
+        fire_event('logout');
         /**
          *  The connection is closed, resubscrible to tick streaming.
          *  We have to make sure that resubscribe is atleast 1 second delayed
@@ -161,6 +162,7 @@ define(['jquery'], function ($) {
             .then(function (val) {
                 Cookies.set('webtrader_token', token); /* never expiers */
                 is_authenitcated_session = true;
+                fire_event('login', val);
                 auth_successfull = true;
                 cached_promises[key] = promise; /* cache successfull authentication */
                 return val; /* pass the result */
@@ -168,12 +170,20 @@ define(['jquery'], function ($) {
             .catch(function (up) {
                 if (!auth_successfull) {    /* authentication request is failed, delete the cookie */
                     is_authenitcated_session = false;
+                    fire_event('logout');
                     Cookies.remove('webtrader_token');
                 }
                 delete cached_promises[key];
                 throw up; /* pass the exception to next catch */
             });
     };
+
+    /* un-athenticate current session */
+    var invalidate = function(){
+        if(!is_authenitcated_session) { return; }
+        Cookies.remove('webtrader_token');
+        socket.close();
+    }
 
     /* first authenticate and then send the request */
     var send_authenticated_request = function (data) {
@@ -191,6 +201,17 @@ define(['jquery'], function ($) {
                 .then(authenticate)
                 .then(send);
     };
+
+    /* fire a custom event and call registered callbacks(api.events.on(name)) */
+    var fire_event = function(name /*, args */){
+      var args = [].slice.call(arguments,1);
+      var fns = callbacks[name] || [];
+      fns.forEach(function (cb) {
+          setTimeout(function(){
+            cb.apply(undefined, args);
+          },0);
+      });
+    }
 
     var api = {
         events: {
@@ -212,6 +233,8 @@ define(['jquery'], function ($) {
             else
                 buffered_execs.push(cb);
         },
+        /* remove token, and reopen current socket */
+        invalidate: invalidate,
         /* if you want a request to be cached, that is when multiple modules request
            the same data or a module request a data multiple times, instead of calling
            liveapi.send can liveapi.cached.send.

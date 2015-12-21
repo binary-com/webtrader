@@ -117,7 +117,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         @param: options.date    javascript Date object representing initial time
         @param: options.title   the header title for spinners
         @param: options.changed  called when Date changes, callback argument is a string in yyyy_mm_dd format.
-      useage: 
+      useage:
          var win = createBlankWindow(...);
          win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
     */
@@ -129,10 +129,9 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             cleared: function() { }
         },options);
 
-        var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
         var header = this.parent().find('.ui-dialog-title');
 
-        
+
         /* options: {date: date, onchange: fn } */
         var addDateDropDowns = function (opts) {
             // note that month is 0-based, like in the Date object. Adjust if necessary.
@@ -174,9 +173,9 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             }
 
             var dt = opts.date || new Date();
-            var year = $('<select />').insertAfter(header).selectmenu({ width: '70px' });
-            var month = $('<select />').insertAfter(header).selectmenu({ width: '65px' });
-            var day = $('<select />').insertAfter(header).selectmenu({ width: '60px'});
+            var year = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
+            var month = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
+            var day = $('<select />').insertAfter(header).selectmenu({ width: 'auto'});
             year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
             month = update(month, {
                 min: 0, max: 11, initial: dt.getMonth(),
@@ -190,7 +189,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 month.title('Month');
                 day.title('Day');
             }
-            
+
             var trigger_change = function () {
                 /* TODO: search other files and make sure to use a UTC date */
                 var yyyy_mm_dd = new Date(Date.UTC(year.val(), month.val(), day.val())).toISOString().slice(0, 10);
@@ -251,7 +250,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                     var button_pane = $(input)
                         .datepicker('widget')
                         .find('.ui-datepicker-buttonpane');
-                        
+
                     $('<button/>', {
                         text: 'Clear',
                         click: function () {
@@ -422,7 +421,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;
-            
+
             if (options.resize)
                 options.maximize = options.minimize  = options.restore = options.resize;
 
@@ -470,15 +469,15 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 @param: options.changed     callback thats i called when menu is changed.
                 @param: options.width       can specify the with of selectmenu.
             Note: you should add your input to dom before turning it a spinner.
-    
+
             Note: you can call 'update_list(...)' on the returned spinner to update the list of items:
                 var spinner = makeTextSpinner(input,{list:['a,'b','c'],inx:0});
                 spinner.update_list(['a','d','e','f']);
-    
+
             TODO: move this to a utility file
         */
         makeSelectmenu: function (select, options) {
-            
+
             options = $.extend({
                 list: ['empty'],
                 inx: 0,
