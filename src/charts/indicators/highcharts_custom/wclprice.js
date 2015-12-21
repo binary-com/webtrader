@@ -13,7 +13,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         }
         else
         {
-            price = indicatorBase.extractPrice(data, index);
+            throw new Error("This indicator is only for OHLC charts!")
         }
         return price;
     }
