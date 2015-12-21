@@ -249,5 +249,12 @@
     "long_display_name": "Commodity Channel Index",
     "short_display_name": "CCI",
     "ohlcOnly" : true
+  },
+
+  "mama": {
+    "id": "mama",
+    "long_display_name": "MESA Adaptive Moving Average",
+    "short_display_name": "MAMA",
+    "ohlcOnly" : true
   }
 }
