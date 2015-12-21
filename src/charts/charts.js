@@ -214,6 +214,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                              'This will help to load data on chart forever! We can warn users if they are trying to load' +
                              'too much data!');*/
                         }
+                    },
+                    labels: {
+                        formatter: function(){
+                            var str = this.axis.defaultLabelFormatter.call(this);
+                            return str.replace('.','');
+                        }
                     }
                 },
 
