@@ -40,7 +40,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
                     return symbols.indexOf(asset[1] /* asset.name */) > -1;
                 })
                 .map(function (asset) {
-                    /* secham: 
+                    /* secham:
                         [ "frxAUDJPY","AUD/JPY",
                             ["callput","callput","5t","365d"],
                             ["touchnotouch","Touch/No Touch","1h","1h"],
@@ -51,7 +51,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
                     var props = asset[2] /* asset.props */
                         .map(function (prop) { return prop[2] + '-' + prop[3]; }); /* for each property extract a string */
                     props.unshift(asset[1]); /* add asset.name to the beginning of array */
-                     
+
                     return props;
                 });
             table.api().rows().remove();
@@ -69,7 +69,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
             try {
                 assets = results[1].asset_index;
                 markets = processMarketSubmarkets(results[0]);
-                var titlebar = assetWin.parent().find('.ui-dialog-titlebar').addClass('with-contents');
                 var dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
 
                 var market_names = windows
