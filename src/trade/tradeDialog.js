@@ -521,18 +521,8 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         // manually check to see if the user is authenticated or not,
         // we should update state.currency from user profile first (not everyone is using USD)
         if(!liveapi.is_authenticated()) {
-            liveapi.cached
-              .authorize()
-              .then(function(data){
-                state.currency.array = [data.authorize.currency];
-                state.currency.value = state.currency.value;
-                $.growl.notice({ message: 'You are now loged in' });
-                state.purchase.loading = false;
-              })
-              .catch(function(err){
-                $.growl.error({ message: err.message });
-                state.purchase.loading = false;
-              });
+            $.growl.notice({ message: 'You are not loged in' });
+            state.purchase.loading = false;
         }
         else {
             liveapi.send({
@@ -597,6 +587,12 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           state.spreads.spot = proposal.spot || '0.0';
           state.spreads.spot_time = proposal.spot_time || '0';
           state.proposal.loading = false;
+      });
+
+      /* change currency on user login */
+      liveapi.events.on('login', function(data){
+          state.currency.array = [data.authorize.currency];
+          state.currency.value = state.currency.value;
       });
 
       return state;
