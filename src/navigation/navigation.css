@@ -7,6 +7,7 @@
 */
 
 #nav-container {
+    position: relative;
     background-color: #273051;
     height: 53px;
     text-align: center;
@@ -21,7 +22,7 @@
 
 /** normal menu (desktop/tablet) **/
 .nav-normal-menu {
-    margin: 0 0 0 60px;
+    margin: 0 220px 0 60px;
     padding: 0;
     list-style: none outside none;
     display: inline-table;
@@ -44,7 +45,8 @@
     display: block;
     color: white;
     text-decoration: none;
-    padding: 16px 30px;
+    padding: 16px 20px;
+    transition: padding .5s;
     font-size: 16px;
     white-space: nowrap;
     text-align: left;
@@ -217,7 +219,7 @@
     font-size: 20px;
     padding: 12px 0;
     right: 10px;
-    top: 10px;
+    top: 12px;
     outline: none;
 }
 
@@ -244,7 +246,7 @@
 }
 
 #nav-toggle span:after {
-  bottom: -5px; 
+  bottom: -5px;
 }
 
 #nav-toggle.nav-toggle-active span {
@@ -275,14 +277,38 @@
     text-shadow: 0 0 3px #333;
 }
 
+/* authentication button */
+#nav-container .authentication {
+  display: inline-block;
+  position: absolute;
+  line-height: 52px;
+  right: 20px;
+}
+#nav-container .authentication span,
+#nav-container .authentication button {
+  display: inline-block;
+  margin-left: 10px;
+  height: 2em;
+  font-size: larger;
+  min-width:80px;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  color: white;
+}
+
+#nav-container .authentication button[disabled] { opacity: 0.5;}
+#nav-container .authentication button.login { background: #2e8836; }
+#nav-container .authentication button.logout { background: #4F577E; }
+
 /** targets min-width requirement **/
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 900px) {
     .nav-normal-menu {
         display: inline-table;
     }
 
     .nav-normal-menu li a {
-        padding: 16px;
+        padding: 16px 8px;
     }
 
     .nav-normal-menu li > ul li a {
@@ -291,7 +317,7 @@
 }
 
 /** targets mobile devices **/
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 750px) {
     .nav-normal-menu {
         display: none;
     }
@@ -303,4 +329,11 @@
     #nav-toggle {
         display: block;
     }
+
+    #nav-container .authentication { right: 60px; }
+}
+
+/** on very small screens **/
+@media screen and (max-width: 460px) {
+    #nav-container .authentication { display: none;}
 }
