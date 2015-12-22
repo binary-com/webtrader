@@ -29,7 +29,6 @@
     "binary-com-jquery-dialogextended": "binary-com/jquery-dialogextend#master",
     "highstock": "highslide-software/highstock-release",
     "colorpicker": "vanderlee/colorpicker#~1.1.4",
-    "jquery.timers": "patryk/jquery.timers",
     "growl": "ksylvest/jquery-growl#~1.3.1",
     "lokijs": "~1.3.10",
     "datatables": "DataTables/DataTables#~1.10.9",
