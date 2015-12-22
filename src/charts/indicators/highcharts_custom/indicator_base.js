@@ -227,11 +227,15 @@ define(['jquery'], function ($) {
                 return (sum / period);
             }
             else {
+                //var price = this.getPrice(data, index, appliedTo, type);
+                //var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+                //preSma = preSma ? preSma : null;
+                //return (preSma * (period - 1) + price) / period;
                 var price = this.getPrice(data, index, appliedTo, type);
-                //Calculate SMA - start
+                var dropPrice = this.getPrice(data, index - period, appliedTo, type);
                 var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
-                return (preSma * (period - 1) + price) / period;
-                //Calculate SMA - end
+                preSma = preSma ? preSma : null;
+                return preSma + (price / period) - (dropPrice / period);
             }
         },
 
@@ -255,6 +259,7 @@ define(['jquery'], function ($) {
                 //Calculate EMA - start
                 //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
                 var preEma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+                preEma = preEma ? preEma : null;
                 var price = this.getPrice(data, index, appliedTo, type);
                 return (price * 2 / (period + 1)) + (preEma * (1 - 2 / (period + 1)));
             }
@@ -371,6 +376,7 @@ define(['jquery'], function ($) {
             else {
                 var price = this.getPrice(data, index, appliedTo, type);
                 var preTrima = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+                preTrima = preTrima ? preTrima : null;
                 return (preTrima * (Nm - 1) + price) / Nm;
             }
         }
