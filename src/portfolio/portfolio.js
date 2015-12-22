@@ -22,12 +22,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             indicative = contract.ask_price,
             bid_price = contract.bid_price;
         if (!id) {
-
             return;
         }
 
-        if (table)
-        {
+        if (table) {
             var row = table.api().row('#' + id);
             var cols = row.data();
             var perv_indicative = cols[3];
@@ -35,8 +33,8 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             row.data(cols);
 
             /* colorize indicative column on change */
-            var td = $('#' + id).find('td:nth-child(4)');
-            td.removeClass('red green').addClass((perv_indicative*1) <= (indicative*1) ? 'green' : 'red');
+            var span = $('#' + id).find('td:nth-child(4)').find('span');
+            span.removeClass('red green').addClass((perv_indicative*1) <= (indicative*1) ? 'green' : 'red');
         }
     }
 
@@ -81,8 +79,14 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     columns: [
                         { title: 'Ref.' },
                         { title: 'Contract Details' },
-                        { title: 'Purchase' },
-                        { title: 'Indicative' }
+                        {
+                          title: 'Purchase',
+                          render: function(val) { return currency + ' ' + '<span class="bold">' + val + '</span>'; }
+                        },
+                        {
+                          title: 'Indicative',
+                          render: function(val) { return currency + ' ' + '<span class="bold">' + val + '</span>'; }
+                        }
                     ],
                     rowId : '4', /* jQ datatables support selecting rows based on rowId https://datatables.net/reference/type/row-selector
                                     we want not to query rows everytime we update the indicative column */
@@ -120,8 +124,8 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     return [
                         contract.transaction_id,
                         contract.longcode,
-                        contract.currency + ' ' + formatPrice(contract.buy_price),
-                        '-',
+                        formatPrice(contract.buy_price),
+                        '0.00',
                         contract.contract_id, /* for jq-datatables rowId */
                     ];
                 });

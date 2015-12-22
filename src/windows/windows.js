@@ -129,7 +129,6 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             cleared: function() { }
         },options);
 
-        var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
         var header = this.parent().find('.ui-dialog-title');
 
 
@@ -174,9 +173,9 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             }
 
             var dt = opts.date || new Date();
-            var year = $('<select />').insertAfter(header).selectmenu({ width: '70px' });
-            var month = $('<select />').insertAfter(header).selectmenu({ width: '65px' });
-            var day = $('<select />').insertAfter(header).selectmenu({ width: '60px'});
+            var year = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
+            var month = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
+            var day = $('<select />').insertAfter(header).selectmenu({ width: 'auto'});
             year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
             month = update(month, {
                 min: 0, max: 11, initial: dt.getMonth(),

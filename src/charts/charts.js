@@ -104,7 +104,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                 onload();
                             }
                         }
-                    }
+                    },
+                    spacingLeft: 0, 
+                    marginLeft: 40,  /* disable the auto size labels so the Y axes become aligned */
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
                 },
 
@@ -213,6 +215,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                              'In future, I want to get more data from server if users is dragging the zoom control more.' +
                              'This will help to load data on chart forever! We can warn users if they are trying to load' +
                              'too much data!');*/
+                        }
+                    },
+                    labels: {
+                        formatter: function(){
+                            var str = this.axis.defaultLabelFormatter.call(this);
+                            return str.replace('.','');
                         }
                     }
                 },

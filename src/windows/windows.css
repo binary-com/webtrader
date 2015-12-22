@@ -3,35 +3,25 @@
     float:left;
 }
 
-.ui-dialog-titlebar.with-contents {
+.ui-dialog-titlebar {
     height:20px;
+    overflow: hidden;
 }
-    .ui-dialog-titlebar.with-contents .ui-dialog-title {
+    .ui-dialog-titlebar .ui-dialog-title {
         min-width:120px;
         width: 20%;
         padding-bottom: 5px;
     }
-    .ui-dialog-titlebar.with-contents .ui-selectmenu-button {
+    .ui-dialog-titlebar .ui-selectmenu-button {
         margin-top: -.4em;
     }
-    .ui-dialog-titlebar.with-contents .title {
+    .ui-dialog-titlebar .title {
         margin-top: .1em;
         float:left;
     }
 
-    .ui-dialog-titlebar.with-dates .ui-datepicker-trigger {
-        margin-top: -1.6em;
-    }
-    .ui-dialog-titlebar.with-dates .ui-selectmenu-button span.ui-icon{
-        right:0;
-    }
-    .ui-dialog-titlebar.with-dates .ui-selectmenu-button span.ui-selectmenu-text{
-        padding-left: 1em;
-        padding-right:0.1em;
-    }
-    .ui-dialog-titlebar.with-dates :nth-child(6) span.ui-selectmenu-text{
-        padding-left: .5em;
-    }
+    .ui-dialog-titlebar .ui-datepicker-trigger { position: absolute; }
+
     /* use a maximum height for jq-ui dropdowns */
     ul.ui-menu { max-height: 320px !important; }
 /* hide the search section from jq-datatables if hide-search-input is set */
