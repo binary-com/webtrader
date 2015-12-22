@@ -170,6 +170,7 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
       var loginid = root.find('.authentication span.loginid').hide();
       require(['websockets/binary_websockets'],function(liveapi) {
           liveapi.events.on('logout', function(){
+              $('.webtrader-dialog[data-authorized=true]').dialog('close'); /* close all authorized dialogs */
               login_btn.removeClass('logout').addClass('login')
                 .removeAttr('disabled').text('Login');
               loginid.fadeOut();

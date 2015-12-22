@@ -47,6 +47,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
                     width: 700,
+                    'data-authorized': 'true',
                     close: function () {
                         portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
                         portfolio_refresh_interval = null;
@@ -124,7 +125,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         contract.contract_id, /* for jq-datatables rowId */
                     ];
                 });
-                
+
                 /* update the table */
                 table.api().rows().remove();
                 table.api().rows.add(rows);

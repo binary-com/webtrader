@@ -117,7 +117,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         @param: options.date    javascript Date object representing initial time
         @param: options.title   the header title for spinners
         @param: options.changed  called when Date changes, callback argument is a string in yyyy_mm_dd format.
-      useage: 
+      useage:
          var win = createBlankWindow(...);
          win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
     */
@@ -132,7 +132,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         var titlebar = this.parent().find('.ui-dialog-titlebar').addClass('with-dates with-contents');
         var header = this.parent().find('.ui-dialog-title');
 
-        
+
         /* options: {date: date, onchange: fn } */
         var addDateDropDowns = function (opts) {
             // note that month is 0-based, like in the Date object. Adjust if necessary.
@@ -190,7 +190,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 month.title('Month');
                 day.title('Day');
             }
-            
+
             var trigger_change = function () {
                 /* TODO: search other files and make sure to use a UTC date */
                 var yyyy_mm_dd = new Date(Date.UTC(year.val(), month.val(), day.val())).toISOString().slice(0, 10);
@@ -251,7 +251,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                     var button_pane = $(input)
                         .datepicker('widget')
                         .find('.ui-datepicker-buttonpane');
-                        
+
                     $('<button/>', {
                         text: 'Clear',
                         click: function () {
@@ -399,6 +399,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                                 minimizable: true,
                                 maximizable: true,
                                 closable:true
+                                data-*: 'value' // add arbitary data-* attributes to the dialog.('data-authorized' for exmaple)
                               }
            notes:
                 1- get generated dialog id via createBlankWindow(...).attr('id')
@@ -421,7 +422,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;
-            
+
             if (options.resize)
                 options.maximize = options.minimize  = options.restore = options.resize;
 
@@ -458,6 +459,10 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 options.resize.call($html[0]);
             blankWindow.addDateToHeader = addDateToHeader;
 
+            /* set data-* attributes on created dialog */
+            var attributes = Object.keys(options).filter(function(key) { return key.startsWith('data-'); } );
+            attributes.forEach(function(key) { return blankWindow.attr(key, options[key]); } );
+
             return blankWindow;
         },
 
@@ -469,15 +474,15 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 @param: options.changed     callback thats i called when menu is changed.
                 @param: options.width       can specify the with of selectmenu.
             Note: you should add your input to dom before turning it a spinner.
-    
+
             Note: you can call 'update_list(...)' on the returned spinner to update the list of items:
                 var spinner = makeTextSpinner(input,{list:['a,'b','c'],inx:0});
                 spinner.update_list(['a','d','e','f']);
-    
+
             TODO: move this to a utility file
         */
         makeSelectmenu: function (select, options) {
-            
+
             options = $.extend({
                 list: ['empty'],
                 inx: 0,
