@@ -18,7 +18,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         console.error(err);
                     });
             else
-                statement.dialog('open');
+                statement.moveToTop();
         });
     };
 

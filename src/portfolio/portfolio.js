@@ -13,7 +13,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             if(!portfolioWin)
                 initPortfolioWin();
             else
-                portfolioWin.dialog('open');
+                portfolioWin.moveToTop();
         });
     }
     function update_indicative(data) {

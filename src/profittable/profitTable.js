@@ -20,7 +20,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         console.error(err);
                     });
             else
-                profitWin.dialog('open');
+                profitWin.moveToTop();
         });
     }
 
