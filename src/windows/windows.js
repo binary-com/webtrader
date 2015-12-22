@@ -431,7 +431,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 .dialog(options)
                 .dialogExtend(options);
 
-            balnkWindow.moveToTop = function () {
+            blankWindow.moveToTop = function () {
                 blankWindow.dialogExtend('restore');
                 blankWindow.dialog('moveToTop')
                      .parent().effect("bounce", { times: 2, distance: 15 }, 450);
