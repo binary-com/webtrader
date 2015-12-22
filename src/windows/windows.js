@@ -432,15 +432,18 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 .dialog(options)
                 .dialogExtend(options);
 
+            balnkWindow.moveToTop = function () {
+                blankWindow.dialogExtend('restore');
+                blankWindow.dialog('moveToTop')
+                     .parent().effect("bounce", { times: 2, distance: 15 }, 450);
+            };
+
             // add an item to window menu
             var li = null;
             var add_to_windows_menu = function () {
                 var link = $("<a href='#'>" + options.title + "</a>");
                 // bring window to top on click
-                link.click(function () {
-                    blankWindow.dialog('moveToTop')
-                         .parent().effect("bounce", { times: 2, distance: 15 }, 450);
-                });
+                link.click(blankWindow.moveToTop);
                 li = $('<li />').addClass(id + 'LI').html(link);
                 $menuUL.append(li);
             };
