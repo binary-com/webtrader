@@ -53,7 +53,8 @@
 }
 
 .trade-conf .transaction-row {
-  margin-top: 15px;
+  margin-top: 5px;
+  padding-bottom: 10px;
 }
 
 .trade-conf .view-row {
