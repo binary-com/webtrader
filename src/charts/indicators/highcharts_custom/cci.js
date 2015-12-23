@@ -12,12 +12,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         //* Calculate CCI FORMULA
         //* CCI = ( M - A ) / ( 0.015 * D )
         //* Where:
-        //* M = ( H + L + C ) /        //* 3
-        //* H = Highest price for        //* the period
-        //* L = Lowest price for        //* the period
-        //* C = Closing price for        //* the period
-        //* A = n period moving        //* average of M
-        //* D = mean deviation        //* of the absolute value of the difference between the mean price and        //* the moving average of mean prices, M - A
+        //* M = ( H + L + C ) /
+        //* 3
+        //* H = Highest price for
+        //* the period
+        //* L = Lowest price for
+        //* the period
+        //* C = Closing price for
+        //* the period
+        //* A = n period moving
+        //* average of M
+        //* D = mean deviation
+        //* of the absolute value of the difference between the mean price and
+        //* the moving average of mean prices, M - A
         //*Typical Price (TP) = (High + Low + Close)/3
         var tpValue = (indicatorBase.getPrice(data, index, indicatorBase.HIGH, type) + indicatorBase.getPrice(data, index, indicatorBase.LOW, type) + indicatorBase.getPrice(data, index, indicatorBase.CLOSE,type)) / 3;
         var time = (data[index][0] || data[index].x);
@@ -57,6 +64,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             }
             else
             {
+                console.log(maValue);
                 maData[key].push([time, maValue]);
                 mDevData[key].push([time, mDevValue]);
             }
@@ -88,10 +96,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     if (data && data.length > 0) {
 
                         var cciData = [];
-                        tpData[uniqueID] = [], maData[uniqueID] = [], mDevData[uniqueID] = [];
+                        tpData[uniqueID] = [];
+                        maData[uniqueID] = [];
+                        mDevData[uniqueID] = [];
                         for (var index = 0; index < data.length; index++) {
-                            var cciValue=calculateCciValue(data,index,cciOptions.period,cciOptions.maType,this.options.type,uniqueID);
-                            cciData.push([(data[index][0] || data[index].x), indicatorBase.toFixed(cciValue, 4)]);
+                            var cciValue = calculateCciValue(data,index,cciOptions.period,cciOptions.maType,this.options.type,uniqueID);
+                            //console.log('CCI value : ', cciValue);
+                            cciData.push([(data[index][0] || data[index].x), cciValue != null ? indicatorBase.toFixed(cciValue, 4) : null]);
                         }
 
                         var chart = this.chart;

@@ -82,8 +82,6 @@ define(['jquery'], function ($) {
         },
 
         /**
-         * This method is now being used to extract price from OHLC
-         * This method can also be used to extract indicator value from an indicator series
          * @param appliedTO
          * @param data
          * @param index
@@ -96,13 +94,13 @@ define(['jquery'], function ($) {
                     price = data[index].open || data[index][1];
                     break;
                 case indicatorBase.HIGH:
-                    price = data[index].high || data[index][2] || /*For indicator series only*/ (data[index].length === 2 ? (data[index][1] || data[index].y) : /*This should never happen*/0.0);
+                    price = data[index].high || data[index][2];
                     break;
                 case indicatorBase.LOW:
-                    price = data[index].low || data[index][3] || /*For indicator series only*/ (data[index].length === 2 ? (data[index][1] || data[index].y) : /*This should never happen*/0.0);
+                    price = data[index].low || data[index][3];
                     break;
                 case indicatorBase.CLOSE:
-                    price = data[index].close || data[index][4] || /*For indicator series only*/ (data[index].length === 2 ? (data[index][1] || data[index].y) : /*This should never happen*/0.0);
+                    price = data[index].close || data[index][4];
                     break;
             }
             return price;
@@ -244,6 +242,7 @@ define(['jquery'], function ($) {
                 //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
                 var preEma = maData[index - 1][1] || maData[index - 1].y;
                 var price = this.getPrice(data, index, appliedTo, type);
+                //console.log(preEma, price);
                 return (price * 2 / (period + 1)) + (preEma * (1 - 2 / (period + 1)));
             }
         },
