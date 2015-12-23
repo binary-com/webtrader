@@ -72,9 +72,7 @@
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
             <input class="duration-count" type="number" step="1"
-                   rv-spinner="duration_count.value | debounce proposal.onchange"
-                   rv-spinner-min="duration_count.min"
-                   rv-spinner-max="duration_count.max" />
+                   rv-spinner="duration_count.value | debounce proposal.onchange" />
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
             <select class="duration-unit"
@@ -166,8 +164,7 @@
         </li>
         <li>
             <input class="basis-amount" type="number" min="1" step=".01" step-big="1"
-                   rv-spinner="basis.amount | debounce proposal.onchange"
-                   rv-spinner-max="basis.limit" />
+                   rv-spinner="basis.amount | debounce proposal.onchange" />
         </li>
         <li>
             <select class="currency-select"
@@ -274,7 +271,7 @@
 
     <ul class="purchase-row stick-to-bottom"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
-      <li> <span class="text-vertical-align"> You pay: <span rv-text="proposal.ask_price | currency currency.value"> </span> </span> </li>
+      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-text="proposal.ask_price | currency currency.value"> </span> </span> </li>
       <li> <button
               rv-on-click="purchase.onclick"
               rv-disabled="proposal.loading | purchase.loading"
