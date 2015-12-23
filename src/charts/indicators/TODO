@@ -1,14 +1,3 @@
-> TSF                 Time Series Forecast
-
-> Option to modify indicator(another menu under Indicators)
-
-> When chart is refreshed or chart type is changed, it should retain the indicators added on chart
-
-> In overlay chart mode, the tooltip should show price(percent% change) just like highcharts examples
-http://www.highcharts.com/stock/demo/compare
-
-> Some of the indicators like EMA, SMA etc shows Applied to price in line chart. Does not make sense
-
 > Some of the indicators like ATR, RSI, ROC, NATR etc are not asking for appliedTo
 
 > Find out a chart/series which could be used to test Two Crows indicator
