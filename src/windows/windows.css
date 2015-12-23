@@ -28,3 +28,10 @@
 .hide-search-input .dataTables_filter {
     display:none;
 }
+
+/* reload unicode character */
+span.reload {
+  font-family: Lucida Sans Unicode;
+  cursor: pointer;
+}
+span.reload::after { content: "↻" }
