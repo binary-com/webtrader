@@ -482,6 +482,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         .catch(function (err) {
           console.error(err);
           state.proposal.error = err.message;
+          state.proposal.message = '';
         });
       };
 
