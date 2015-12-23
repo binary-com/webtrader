@@ -97,7 +97,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 table.parent().addClass('hide-search-input');
 
                 var header = portfolioWin.parent().find('.ui-dialog-title');
-                var refresh = $("<span class='reload' style='position:absolute; right:85px' />").insertBefore(header);
+                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
                 refresh.on('click',function(){
                     if(portfolioWin.dialogExtend('state') === 'minimized') {
                         portfolioWin.dialogExtend('restore');
