@@ -36,6 +36,7 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
         //*MACD Histogram: MACD Line - Signal Line
         var macdValue = macdData[index][1] || macdData[index].y;
         var signalValue = signalData[index][1] || signalData[index].y;
+        //console.log(macdValue, signalValue);
         if (macdValue && signalValue)
             hstgrmValue = macdValue - signalValue;
         return hstgrmValue;
@@ -292,9 +293,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             var signalData = signalSeriesMap[key].options.data;
                             var macdKey = key.replace('s','m');
                             var macdData = macdSeriesMap[macdKey].options.data;
-                            console.log(key,macdKey)
                             if ( dataPointIndex >= 1) {
                                 var signalValue = indicatorBase.calculateMAValue(macdData, signalData, dataPointIndex, macdOptions.signalPeriod + macdOptions.slowPeriod - 1, macdOptions.signalMaType, this.options.type, key, isPointUpdate, macdOptions.appliedTo);
+                                console.log(signalValue);
                                 if(signalValue && !isNaN(signalValue))
                                 {
                                     if (isPointUpdate)

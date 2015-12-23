@@ -9,7 +9,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
     //******************************Get Price*************************
     function calculateSarValue(data, index, sarOptions, key, isPointUpdate) {
         var ep = epArray[key], af = afArray[key], sar = sarArray[key], trend = trendArray[key];
-        var price = indicatorBase.extractPrice(data, index);
         var highPrice = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, index);
         var lowPrice = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, index);
 
@@ -147,7 +146,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         sarArray[uniqueID] = sar;
                         trendArray[uniqueID] = trend;
                         for (var index = 0; index < data.length; index++) {
-                            //var price = indicatorBase.extractPrice(data, index);
                             var highPrice = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, index);
                             var lowPrice = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, index);
                             if (index < period) {
@@ -173,7 +171,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     }
                                     sarValue = Math.min(sarValue, lowPrice, highPrice);
                                     epValue = Math.max(sarValue, lowPrice, highPrice);
-                                    // sarValue=Math.min(sarValue,indicatorBase.extractPrice(data,index-i));
                                 }
                                 sar.push(sarValue);
                                 ep.push(epValue);

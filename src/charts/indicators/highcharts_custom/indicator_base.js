@@ -81,6 +81,14 @@ define(['jquery'], function ($) {
             return ret;
         },
 
+        /**
+         * This method is now being used to extract price from OHLC
+         * This method can also be used to extract indicator value from an indicator series
+         * @param appliedTO
+         * @param data
+         * @param index
+         * @returns {number}
+         */
         extractPriceForAppliedTO: function (appliedTO, data, index) {
             var price = 0.0;
             switch (appliedTO) {
@@ -88,13 +96,13 @@ define(['jquery'], function ($) {
                     price = data[index].open || data[index][1];
                     break;
                 case indicatorBase.HIGH:
-                    price = data[index].high || data[index][2];
+                    price = data[index].high || data[index][2] || /*For indicator series only*/ (data[index].length === 2 ? (data[index][1] || data[index].y) : /*This should never happen*/0.0);
                     break;
                 case indicatorBase.LOW:
-                    price = data[index].low || data[index][3];
+                    price = data[index].low || data[index][3] || /*For indicator series only*/ (data[index].length === 2 ? (data[index][1] || data[index].y) : /*This should never happen*/0.0);
                     break;
                 case indicatorBase.CLOSE:
-                    price = data[index].close || data[index][4];
+                    price = data[index].close || data[index][4] || /*For indicator series only*/ (data[index].length === 2 ? (data[index][1] || data[index].y) : /*This should never happen*/0.0);
                     break;
             }
             return price;
@@ -158,19 +166,12 @@ define(['jquery'], function ($) {
 
 
         //**Moving Average Types Calculations
-
         getPrice: function (data, index, appliedTo, type) {
-            if (typeof data[index] === 'number') {
-                return data[index];
-            }
-            else if (data[index].length === 2) {
-                return data[index][1] || data[index].y || null;
-            }
-            else if (indicatorBase.isOHLCorCandlestick(type)) {
-                return indicatorBase.extractPriceForAppliedTO(appliedTo, data, index);
+            if (this.isOHLCorCandlestick(type)) {
+                return this.extractPriceForAppliedTO(appliedTo, data, index);
             }
             else {
-                return indicatorBase.extractPrice(data, index);
+                return this.extractPrice(data, index);
             }
         },
 
@@ -201,37 +202,24 @@ define(['jquery'], function ($) {
         calculateSMAValue: function (data, maData, index, period, type, appliedTo) {
             //Calculate SMA data
             /*
-
                 Daily Closing Prices: 11,12,13,14,15,16,17
                 First day of 5-day SMA: (11 + 12 + 13 + 14 + 15) / 5 = 13
                 Second day of 5-day SMA: (12 + 13 + 14 + 15 + 16) / 5 = 14
                 Third day of 5-day SMA: (13 + 14 + 15 + 16 + 17) / 5 = 15
 
-             *  Formula(OHLC or Candlestick), consider the indicated price(O,H,L,C) -
-             *  Formula(other chart types) -
-             * 	    sma(t) = (sma(t-1) x (n - 1) + price) / n
-             * 		    t - current
-             * 		    n - period
-             *
-             *  Do not fill any value in smaData from 0 index to options.period-1 index
-
+                Do not fill any value in smaData from 0 index to options.period-1 index
              */
             if (index < period - 1) {
                 return null;
             }
-            else if (index === (period - 1)) {
+            else if (index >= (period - 1)) {
+                //This is the slowest method of calculating SMA. TODO
+                //Reviewing it later while working on task https://trello.com/c/3zXWZcNW/256-review-the-calculation-of-all-ma-types-make-sure-that-they-are-matching-with-whats-in-tradingview-binary-com
                 var sum = 0.0;
-                for (var i = 0; i < period; i++) {
-                    sum += this.getPrice(data, i, appliedTo, type);
+                for (var i = period - 1; i >= 0; i--) {
+                    sum += this.getPrice(data, index - i, appliedTo, type);
                 }
                 return (sum / period);
-            }
-            else {
-                var price = this.getPrice(data, index, appliedTo, type);
-                //Calculate SMA - start
-                var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
-                return (preSma * (period - 1) + price) / period;
-                //Calculate SMA - end
             }
         },
 
@@ -254,7 +242,7 @@ define(['jquery'], function ($) {
             else {
                 //Calculate EMA - start
                 //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-                var preEma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+                var preEma = maData[index - 1][1] || maData[index - 1].y;
                 var price = this.getPrice(data, index, appliedTo, type);
                 return (price * 2 / (period + 1)) + (preEma * (1 - 2 / (period + 1)));
             }
@@ -370,7 +358,7 @@ define(['jquery'], function ($) {
             }
             else {
                 var price = this.getPrice(data, index, appliedTo, type);
-                var preTrima = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+                var preTrima = maData[index - 1][1] || maData[index - 1].y;
                 return (preTrima * (Nm - 1) + price) / Nm;
             }
         }
