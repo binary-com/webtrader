@@ -42,7 +42,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 liveapi.send(requestObject);
 
                 if (chartingRequestMap[key].timerHandler) {
-                    $(document).stopTime(chartingRequestMap[key].timerHandler);
+                    clearInterval(chartingRequestMap[key].timerHandler);
                 }
                 delete chartingRequestMap[key];
             }
@@ -104,7 +104,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                 onload();
                             }
                         }
-                    }
+                    },
+                    spacingLeft: 0,
+                    marginLeft: 40,  /* disable the auto size labels so the Y axes become aligned */
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
                 },
 
@@ -162,15 +164,14 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                                 name : 'End Time'
                                             });
                                             //Start a timer which will stop chart feed
-                                            var timerID = "_timer_" + Date.now();
-                                            $(document).everyTime(500, timerID, function() {
+                                            var interval = setInterval(function(){
                                                 if (Date.now() > ((endTime + 1) * 1000)) { //Keep rendering atleast 1 second after the end time
                                                     var ourData = $(series.chart.options.chart.renderTo).data();
                                                     console.log('Stopping feed based off timer : ', containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
                                                     referenceToChartsJSObject.destroy(containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
-                                                    $(document).stopTime(timerID);
+                                                    clearInterval(interval);
                                                 }
-                                            });
+                                            }, 500);
                                         }
                                         if (entrySpotTime > 0) {
                                             //Draw vertical line
@@ -213,6 +214,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                              'In future, I want to get more data from server if users is dragging the zoom control more.' +
                              'This will help to load data on chart forever! We can warn users if they are trying to load' +
                              'too much data!');*/
+                        }
+                    },
+                    labels: {
+                        formatter: function(){
+                            var str = this.axis.defaultLabelFormatter.call(this);
+                            return str.replace('.','');
                         }
                     }
                 },

@@ -30,7 +30,7 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 		} else {
 			// width is at least 700px, toggle normal menu
 			if($menu.hasClass(mobile_class)) {
-				$menu.removeClass(mobile_class).addClass(normal_class);	
+				$menu.removeClass(mobile_class).addClass(normal_class);
 			}
 
 			if($menu.parents("#mobile-nav").length) {
@@ -122,12 +122,12 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 								$(this).removeClass("active");
 							});
 						}
-						
+
 						if(isRoot) {
 							// close all submenus
 							$("#nav-menu li > ul").each(function () {
 								$(this).slideUp();
-							});	
+							});
 						} else {
 							$("#nav-menu li > ul").each(function () {
 								var $elem = $(this);
@@ -165,9 +165,42 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
 		updateListItemHandlers();
 	}
 
+  function initLoginButton(root){
+      var login_btn = root.find('.authentication button');
+      var loginid = root.find('.authentication span.loginid').hide();
+      require(['websockets/binary_websockets'],function(liveapi) {
+          liveapi.events.on('logout', function(){
+              login_btn.removeClass('logout').addClass('login')
+                .removeAttr('disabled').text('Login');
+              loginid.fadeOut();
+          });
+          liveapi.events.on('login', function(data){
+              login_btn.removeClass('login').addClass('logout')
+                .removeAttr('disabled').text('Logout');
+              loginid.text(data.authorize.loginid).fadeIn();
+          });
+
+          login_btn.on('click', function(){
+            login_btn.attr('disabled','disabled');
+            var logedin = login_btn.hasClass('logout');
+            if(logedin) {
+              liveapi.invalidate();
+            }
+            else {
+              liveapi.cached.authorize().catch(function(err) {
+                login_btn.removeAttr('disabled');
+                console.warn(err.message)
+              });
+            }
+          });
+      });
+  }
+
 	return {
 		init: function(_callback) {
-            $("body").prepend($navHtml);
+            var root = $($navHtml);
+            $("body").prepend(root);
+            initLoginButton(root);
 
             $("#nav-toggle").on("click", function (e) {
                 $("#nav-toggle").toggleClass("nav-toggle-active");
