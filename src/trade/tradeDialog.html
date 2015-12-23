@@ -253,8 +253,8 @@
         rv-if="categories.value | not-eq 'Spreads'"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li>
-          Net Profit: <span rv-text="proposal.netprofit_ < ask_price payout"/>
-          | Return <span rv-text="proposal.return_ < ask_price payout"/>
+          Net Profit: <span rv-text="proposal.netprofit_ < ask_price payout"> </span>
+          | Return <span rv-text="proposal.return_ < ask_price payout"> </span>
         </li>
     </ul>
 
@@ -262,8 +262,8 @@
         rv-if="categories.value | eq 'Spreads'"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
       <li rv-if="categories.value | eq 'Spreads'">
-        Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss | to-fixed 2 "/>
-        is required. Current spread: <span rv-text="spreads.spread" /> points
+        Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss | to-fixed 2 "> </span>
+        is required. Current spread: <span rv-text="spreads.spread" > </span> points
       </li>
     </ul>
 
@@ -274,7 +274,7 @@
 
     <ul class="purchase-row stick-to-bottom"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
-      <li> <span class="text-vertical-align"> You pay: <span rv-text="proposal.ask_price | currency currency.value" /> </span> </li>
+      <li> <span class="text-vertical-align"> You pay: <span rv-text="proposal.ask_price | currency currency.value"> </span> </span> </li>
       <li> <button
               rv-on-click="purchase.onclick"
               rv-disabled="proposal.loading | purchase.loading"
