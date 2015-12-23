@@ -59,7 +59,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
     });
 
     liveapi.events.on('ohlc', function (data) {
-        var key = (data.echo_req.args.ticks_history + data.echo_req.args.granularity).toUpperCase();
+        console.log('OHLC response : ', data);
+        var key = (data.echo_req.ticks_history + data.echo_req.granularity).toUpperCase();
         if (key) {
             chartingRequestMap[key] = chartingRequestMap[key] || {};
 
