@@ -311,13 +311,13 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             return;
           }
           /* fix intraday duration intervals */
-          var min = d.min.replace('s', '').replace('m', ''),
-              max = d.max.replace('s', '').replace('m', '').replace('d', '');
+          var min = d.min.replace('s', '').replace('m', '').replace('h',''),
+              max = d.max.replace('s', '').replace('m', '').replace('h','').replace('d', '');
           var min_unit = _(d.min).last(),
               max_unit = _(d.max).last();
 
-          min *= { 's': 1, 'm': 60 }[min_unit];                 // convert to seconds
-          max *= { 's': 1, 'm': 60, 'd': 3600 * 24 }[max_unit];
+          min *= { 's': 1, 'm': 60, 'h': 3600 }[min_unit];                 // convert to seconds
+          max *= { 's': 1, 'm': 60, 'h':3600, 'd': 3600 * 24 }[max_unit];
 
           if('s' === min_unit) {
             array.push('seconds');
@@ -327,7 +327,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
             array.push('minutes');
             ranges.push({ min: Math.max(min / 60, 1), max: max / 60, type: 'minutes' });
           }
-          if(_(['s', 'm']).contains(min_unit) && max >= 3600) {
+          if(_(['s', 'm', 'h']).contains(min_unit) && max >= 3600) {
             array.push('hours');
             ranges.push({ min: Math.max(min / 3600, 1), max: max / 3600, type: 'hours' });
           }
@@ -623,6 +623,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
         window.state = state; // TODO: remove this
+        window.ava = available;
 
         dialog.dialog('open');
     }
