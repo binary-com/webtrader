@@ -622,6 +622,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
+        window.state = state; // TODO: remove this
 
         dialog.dialog('open');
     }
