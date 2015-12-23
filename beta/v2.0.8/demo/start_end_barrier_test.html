@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Test Start time, End time, Entry Spot and Barrier parameters</title><script src="../lib/jquery/dist/jquery.min.js"></script></head><body><table width="600px" align="center"><tr><td>Instruments :</td><td><select id="instruments"></select></td></tr><tr><td>Start time :</td><td><input readonly="readonly" value="" id="startTime"></td></tr><tr><td>Entry Spot :</td><td><input readonly="readonly" value="" id="entrySpot"></td></tr><tr><td>End Time :</td><td><input readonly="readonly" value="" id="endTime"></td></tr><tr><td>Barrier :</td><td><input readonly="readonly" value="" id="barrier"></td></tr><tr><td>Testing URI :</td><td><div style="width: 200px; word-wrap: break-word"><a id="testingURI" href="#" target="_blank"></a></div></td></tr><tr><td colspan="2"><button id="generateBttn">Generate</button></td></tr></table><script charset="utf-8">$(document).ready(function() {
+
+            var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3");
+            ws.debug = false;
+            ws.timeoutInterval = 5400;
+            ws.onopen = function(event) {
+                var now = new Date();
+                ws.send(JSON.stringify({"trading_times": now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate()}));
+            };
+            ws.onmessage = function(event) {
+                var data = JSON.parse( event.data );
+                console.log('Server response : ', data);
+                switch( data.msg_type ) {
+                    case "trading_times":
+                        for (var marketIndex in data.trading_times.markets) {
+                            var marketFromResponse = data.trading_times.markets[marketIndex];
+                            for (var submarketIndxx in marketFromResponse.submarkets) {
+                                var submarket = marketFromResponse.submarkets[submarketIndxx];
+                                for (var eachSymbolIndx in submarket.symbols) {
+                                    var eachSymbol = submarket.symbols[eachSymbolIndx];
+                                    if (!eachSymbol.delay_amount || eachSymbol.delay_amount == 0) {
+                                        console.log(eachSymbol.delay_amount);
+                                        $("<option>").append(eachSymbol.name)
+                                                .attr('value', eachSymbol.symbol)
+                                                .appendTo($('#instruments'));
+                                    } else {
+                                        console.log('Delay amt : ', eachSymbol.delay_amount);
+                                    }
+                                }
+                            }
+                        }
+                        $('#instruments').val('R_25').change();
+                        break;
+                    case "history" :
+                            if (data.history && data.history.prices) {
+                                var startTime = Date.now() / 1000 | 0;
+                                $("#startTime").val(startTime);
+                                $("#entrySpot").val( startTime + 10); //Entry spot after 10 seconds
+                                $("#endTime").val( startTime + 40); //End time after 40 seconds
+                                $("#barrier").val(data.history.prices[0]);
+                                var link = "startTime=" + $("#startTime").val() +
+                                        "&entrySpotTime=" + $("#entrySpot").val() +
+                                        "&endTime=" + $("#endTime").val() +
+                                        "&barrierPrice=" + $("#barrier").val() +
+                                        "&instrument=" + $('#instruments').val() +
+                                        "&timePeriod=1t&affiliates=true";
+                                $("#testingURI").attr('href', "../../?" + link).html(link);
+                            }
+                        break;
+                }
+            }
+
+            /*
+             Attaching change event to the drop downs
+             */
+            $("#instruments").change(function() {
+                $("#generateBttn").click();
+            });
+
+            $("#generateBttn").click(function() {
+                var instrumentCode = $("#instruments").val();
+                ws.send(JSON.stringify({
+                    "ticks_history": instrumentCode,
+                    "end": "latest",
+                    "count": 1
+                }));
+            });
+
+        });</script></body></html>
