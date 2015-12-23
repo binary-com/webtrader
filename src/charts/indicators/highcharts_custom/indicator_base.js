@@ -173,31 +173,46 @@ define(['jquery'], function ($) {
             }
         },
 
+        getIndicatorData: function (data, index) {
+            return data[index][1] || data[index].y || null;
+        },
+
         //****************************MA****************************************
-        calculateMAValue: function (data, maData, index, period, maType, type, key, isPointUpdate, appliedTo) {
+        calculateMAValue: function (maOptions) {
+            //maOptions contains:
+            //    data: tpData[key],
+            //    maData: maData[key],
+            //    index: index,
+            //    period: period,
+            //    maType: maType,
+            //    type: type,
+            //    key: key,
+            //    isPointUpdate: isPointUpdate,
+            //    appliedTo: null,
+            //    isIndicatorData: true
             var maValue = null;
-            switch (maType) {
+            switch (maOptions.maType) {
                 case this.SMA:
-                    maValue = this.calculateSMAValue(data, maData, index, period, type, appliedTo);
+                    maValue = this.calculateSMAValue(maOptions);
                     break;
                 case this.EMA:
-                    maValue = this.calculateEMAValue(data, maData, index, period, type, appliedTo);
+                    maValue = this.calculateEMAValue(maOptions);
                     break;
                 case this.WMA:
-                    maValue = this.calculateWMAValue(data, index, period, type, appliedTo);
+                    maValue = this.calculateWMAValue(maOptions);
                     break;
                 case this.TEMA:
-                    maValue = this.calculateTEMAValue(data, index, period, type, key, isPointUpdate, appliedTo)
+                    maValue = this.calculateTEMAValue(maOptions)
                     break;
                 case this.TRIMA:
-                    maValue = this.calculateTRIMAValue(data, maData, index, period, type, appliedTo);
+                    maValue = this.calculateTRIMAValue(maOptions);
                     break;
             }
             return maValue;
         },
 
         //*************************SMA***************************************
-        calculateSMAValue: function (data, maData, index, period, type, appliedTo) {
+        calculateSMAValue: function (maOptions) {
             //Calculate SMA data
             /*
                 Daily Closing Prices: 11,12,13,14,15,16,17
@@ -207,48 +222,57 @@ define(['jquery'], function ($) {
 
                 Do not fill any value in smaData from 0 index to options.period-1 index
              */
-            if (index < period - 1) {
+            if (maOptions.index < maOptions.period - 1) {
                 return null;
             }
-            else if (index >= (period - 1)) {
+            else if (maOptions.index >= (maOptions.period - 1)) {
                 //This is the slowest method of calculating SMA. TODO
                 //Reviewing it later while working on task https://trello.com/c/3zXWZcNW/256-review-the-calculation-of-all-ma-types-make-sure-that-they-are-matching-with-whats-in-tradingview-binary-com
                 var sum = 0.0;
-                for (var i = period - 1; i >= 0; i--) {
-                    sum += this.getPrice(data, index - i, appliedTo, type);
+                for (var i = maOptions.period - 1; i >= 0; i--) {
+                    if (maOptions.isIndicatorData)
+                        sum += this.getIndicatorData(maOptions.data, maOptions.index-i);
+                    else
+                        sum += this.getPrice(maOptions.data, maOptions.index-i, maOptions.appliedTo, maOptions.type);
                 }
-                return (sum / period);
+                return (sum / maOptions.period);
             }
         },
 
         //*************************EMA***************************************
-        calculateEMAValue: function (data, maData, index, period, type, appliedTo) {
+        calculateEMAValue: function (maOptions) {
             //Calculate EMA data
             /*  ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
              *  Do not fill any value in emaData from 0 index to options.period-1 index
              */
-            if (index < period - 1) {
+            if (maOptions.index < maOptions.period - 1) {
                 return null;
             }
-            else if (index === period - 1) {
+            else if (maOptions.index === maOptions.period - 1) {
                 var sum = 0;
-                for (var i = 0 ; i < period ; i++) {
-                    sum += this.getPrice(data, i, appliedTo, type);
+                for (var i = 0 ; i < maOptions.period ; i++) {
+                    if (maOptions.isIndicatorData)
+                        sum += this.getIndicatorData(maOptions.data, i);
+                    else
+                        sum += this.getPrice(maOptions.data, i, maOptions.appliedTo, maOptions.type);
                 }
-                return sum / period;
+                return sum / maOptions.period;
             }
             else {
                 //Calculate EMA - start
                 //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-                var preEma = maData[index - 1][1] || maData[index - 1].y;
-                var price = this.getPrice(data, index, appliedTo, type);
-                //console.log(preEma, price);
-                return (price * 2 / (period + 1)) + (preEma * (1 - 2 / (period + 1)));
+                var preEma = this.getIndicatorData(maOptions.maData, maOptions.index - 1);
+                var price = 0;
+                if (maOptions.isIndicatorData)
+                    price = this.getIndicatorData(maOptions.data, maOptions.index);
+                else
+                    price = this.getPrice(maOptions.data, maOptions.index, maOptions.appliedTo, maOptions.type);
+                return (price * 2 / (maOptions.period + 1)) + (preEma * (1 - 2 / (maOptions.period + 1)));
             }
         },
 
         //*************************TEMA*****************************************
-        calculateTEMAValue: function (data, index, period, type, key, isPointUpdate, appliedTo) {
+        calculateTEMAValue: function (maOptions) {
             //Calculate TEMA data
             /*
              The Triple Exponential Moving Average (TEMA) of time series 't' is:
@@ -258,45 +282,70 @@ define(['jquery'], function ($) {
              *      TEMA = 3*EMA1 - 3*EMA2 + EMA3
              * Do not fill any value in temaData from 0 index to options.period-1 index
              */
-            var time = (data[index].x || data[index][0]);
-            if (!ema1[key]) {
-                ema1[key] = [], ema2[key] = [], ema3[key] = [];
+            var time = (maOptions.data[maOptions.index].x || maOptions.data[maOptions.index][0]);
+            if (!ema1[maOptions.key]) {
+                ema1[maOptions.key] = [], ema2[maOptions.key] = [], ema3[maOptions.key] = [];
                 //*If it hasn't been called for index zero to period-1
-                if (index === period - 1) {
-                    for (var i = 0; i < period - 1; i++) {
-                        ema1[key].push([time, null]);
-                        ema2[key].push([time, null]);
-                        ema3[key].push([time, null]);
+                if (maOptions.index === maOptions.period - 1) {
+                    for (var i = 0; i < maOptions.period - 1; i++) {
+                        ema1[maOptions.key].push([time, null]);
+                        ema2[maOptions.key].push([time, null]);
+                        ema3[maOptions.key].push([time, null]);
                     }
                 }
             };
 
-            var price = this.getPrice(data, index, appliedTo, type);
-
-            var ema1Value = this.calculateEMAValue(data, ema1[key], index, period, type, appliedTo);  //(price * 2 / (period + 1)) + (ema1[key][index - 1][1] * (1 - 2 / (period + 1)))
-            if (isPointUpdate) {
-                ema1[key][index] = [time, ema1Value];
+            var ma1Options = {
+                data: maOptions.data,
+                maData: ema1[maOptions.key],
+                index: maOptions.index,
+                period: maOptions.period,
+                type: maOptions.type,
+                appliedTo: maOptions.appliedTo,
+                isIndicatorData: maOptions.isIndicatorData || false
+            };
+            var ema1Value = this.calculateEMAValue(ma1Options);
+            if (maOptions.isPointUpdate) {
+                ema1[maOptions.key][maOptions.index] = [time, ema1Value];
             }
             else {
-                ema1[key].push([time, ema1Value]);
+                ema1[maOptions.key].push([time, ema1Value]);
             }
 
-            var ema2Value = this.calculateEMAValue(ema1[key], ema2[key], index, period, type, appliedTo);  //(ema1Value * 2 / (period + 1)) + (ema2[key][index - 1][1] * (1 - 2 / (period + 1)))
+            var ma2Options = {
+                data: ema1[maOptions.key],
+                maData: ema2[maOptions.key],
+                index: maOptions.index,
+                period: maOptions.period,
+                type: maOptions.type,
+                appliedTo: maOptions.appliedTo,
+                isIndicatorData: true
+            };
+            var ema2Value = this.calculateEMAValue(ma2Options);
 
-            if (isPointUpdate) {
-                ema2[key][index] = [time, ema2Value];
+            if (maOptions.isPointUpdate) {
+                ema2[maOptions.key][maOptions.index] = [time, ema2Value];
             }
             else {
-                ema2[key].push([time, ema2Value]);
+                ema2[maOptions.key].push([time, ema2Value]);
             }
 
-            var ema3Value = this.calculateEMAValue(ema2[key], ema3[key], index, period, type, appliedTo); //(ema2Value * 2 / (period + 1)) + (ema3[key][index - 1][1] * (1 - 2 / (period + 1)));
+            var ma3Options = {
+                data: ema2[maOptions.key],
+                maData: ema3[maOptions.key],
+                index: maOptions.index,
+                period: maOptions.period,
+                type: maOptions.type,
+                appliedTo: maOptions.appliedTo,
+                isIndicatorData: true
+            };
+            var ema3Value = this.calculateEMAValue(ma3Options);
 
-            if (isPointUpdate) {
-                ema3[key][index] = [time, ema3Value];
+            if (maOptions.isPointUpdate) {
+                ema3[maOptions.key][maOptions.index] = [time, ema3Value];
             }
             else {
-                ema3[key].push([time, ema3Value]);
+                ema3[maOptions.key].push([time, ema3Value]);
             }
 
             var temaValue = 3 * ema1Value - 3 * ema2Value + ema3Value;
@@ -305,7 +354,7 @@ define(['jquery'], function ($) {
         },
 
         //*************************WMA*****************************************
-        calculateWMAValue: function (data, index, period, type, appliedTo) {
+        calculateWMAValue: function (maOptions) {
             //Calculate WMA data
             /*
             WMA = ( Price * n + Price(1) * n-1 + ... Price( n-1 ) * 1) / ( n * ( n + 1 ) / 2 )
@@ -313,23 +362,27 @@ define(['jquery'], function ($) {
             *
             *  Do not fill any value in wmaData from 0 index to options.period-1 index
             */
-            if (index < period - 1) {
+            if (maOptions.index < maOptions.period - 1) {
                 return null;
             }
             else {
                 //Calculate WMA - start
                 var wmaValue = 0;
-                for (var subIndex = index, count = period; subIndex >= 0 && count >= 0; count--, subIndex--) {
-                    var price = this.getPrice(data, subIndex, appliedTo, type);
+                for (var subIndex = maOptions.index, count = maOptions.period; subIndex >= 0 && count >= 0; count--, subIndex--) {
+                    var price = 0;
+                    if (maOptions.isIndicatorData)
+                        price = this.getIndicatorData(maOptions.data, subIndex);
+                    else
+                        price = this.getPrice(maOptions.data, subIndex, maOptions.appliedTo, maOptions.type);
                     wmaValue += price * count;
                 }
             }
-            return wmaValue / (period * (period + 1) / 2);
+            return wmaValue / (maOptions.period * (maOptions.period + 1) / 2);
             //Calculate WMA - end
         },
 
         //*************************TRIMA******************************************
-        calculateTRIMAValue: function (data, maData, index, period, type, appliedTo) {
+        calculateTRIMAValue: function (maOptions) {
             //Calculate TRIMA data
             /*
 
@@ -344,25 +397,30 @@ define(['jquery'], function ($) {
              *  Do not fill any value in trimaData from 0 index to options.period-1 index
 
              */
-            var Nm = Math.round((period + 1) / 2);
-            if (index < (Nm - 1)) {
+            var Nm = Math.round((maOptions.period + 1) / 2);
+            if (maOptions.index < (Nm - 1)) {
                 return null;
             }
-            else if (index === Nm - 1) {
+            else if (maOptions.index === Nm - 1) {
                 var sum = 0;
                 for (var subIndex = 0; subIndex < Nm; subIndex++) {
-                    sum += this.getPrice(data, subIndex, appliedTo, type);
+                    if (maOptions.isIndicatorData)
+                        sum += this.getIndicatorData(maOptions.data, subIndex);
+                    else
+                        sum += this.getPrice(maOptions.data, subIndex, maOptions.appliedTo, maOptions.type);
                 }
                 return sum / Nm;
             }
             else {
-                var price = this.getPrice(data, index, appliedTo, type);
-                var preTrima = maData[index - 1][1] || maData[index - 1].y;
+                var price = 0;
+                if (maOptions.isIndicatorData)
+                    price = this.getIndicatorData(maOptions.data, maOptions.index);
+                else
+                    price = this.getPrice(maOptions.data, maOptions.index, maOptions.appliedTo, maOptions.type);
+                var preTrima = this.getIndicatorData(maOptions.maData, maOptions.index - 1);
                 return (preTrima * (Nm - 1) + price) / Nm;
             }
         }
-
-
     };
 
     return indicatorBase;

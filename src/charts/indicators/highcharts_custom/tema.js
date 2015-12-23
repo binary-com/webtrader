@@ -50,7 +50,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                         var temaData = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = indicatorBase.calculateTEMAValue(data, index, temaOptions.period, this.options.type, uniqueID, false, temaOptions.appliedTo);
+                            var maOptions = {
+                                data: data,
+                                index: index,
+                                period: temaOptions.period,
+                                type: this.options.type,
+                                key: uniqueID,
+                                isPointUpdate: false,
+                                appliedTo: temaOptions.appliedTo,
+                                isIndicatorData: false
+                            };
+                            var maValue = indicatorBase.calculateTEMAValue(maOptions);
+                            //var maValue = indicatorBase.calculateTEMAValue(data, index, temaOptions.period, this.options.type, uniqueID, false, temaOptions.appliedTo);
                             temaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -160,14 +171,24 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var temaOptions = temaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-
-                                var temaValue = indicatorBase.calculateTEMAValue(data, dataPointIndex, temaOptions.period, this.options.type, key, isPointUpdate, temaOptions.appliedTo);
+                                var maOptions = {
+                                    data: data,
+                                    index: dataPointIndex,
+                                    period: temaOptions.period,
+                                    type: this.options.type,
+                                    key: key,
+                                    isPointUpdate: isPointUpdate,
+                                    appliedTo: temaOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+                                var maValue = indicatorBase.calculateTEMAValue(maOptions);
+                                //var temaValue = indicatorBase.calculateTEMAValue(data, dataPointIndex, temaOptions.period, this.options.type, key, isPointUpdate, temaOptions.appliedTo);
 
                                 if (isPointUpdate) {
-                                    temaSeriesMap[key].data[dataPointIndex].update({ y : indicatorBase.toFixed(temaValue,4)});
+                                    temaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else {
-                                    temaSeriesMap[key].addPoint([time, indicatorBase.toFixed(temaValue, 4)], true, true, false);
+                                    temaSeriesMap[key].addPoint([time, indicatorBase.toFixed(maValue, 4)], true, true, false);
                                 }
                             }
                         }

@@ -59,7 +59,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                      
                         var smaData = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = indicatorBase.calculateSMAValue(data, smaData, index, smaOptions.period, this.options.type, smaOptions.appliedTo);
+                            var maOptions = {
+                                data: data,
+                                maData: smaData,
+                                index: index,
+                                period: smaOptions.period,
+                                type: this.options.type,
+                                appliedTo: smaOptions.appliedTo,
+                            };
+                            var maValue = indicatorBase.calculateSMAValue(maOptions);
                             smaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -169,7 +177,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var smaOptions = smaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var smaValue = indicatorBase.calculateSMAValue(data, smaData, dataPointIndex, smaOptions.period, this.options.type, smaOptions.appliedTo);
+                                var maOptions = {
+                                    data: data,
+                                    maData: smaData,
+                                    index: dataPointIndex,
+                                    period: smaOptions.period,
+                                    type: this.options.type,
+                                    appliedTo: smaOptions.appliedTo,
+                                };
+                                var smaValue = indicatorBase.calculateSMAValue(maOptions);
 
                                 if (isPointUpdate)
                                 {

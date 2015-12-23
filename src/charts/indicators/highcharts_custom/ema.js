@@ -44,7 +44,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          */
                         var emaData = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = indicatorBase.calculateEMAValue(data, emaData, index, emaOptions.period, this.options.type, emaOptions.appliedTo);
+                            var maOptions = {
+                                data: data,
+                                maData: emaData,
+                                index: index,
+                                period: emaOptions.period,
+                                type: this.options.type,
+                                appliedTo: emaOptions.appliedTo,
+                                isIndicatorData:false
+                            };
+                            var maValue = indicatorBase.calculateEMAValue(maOptions);
+
                             emaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -149,14 +159,22 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var emaOptions = emaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-
-                                var emaValue = indicatorBase.calculateEMAValue(data, emaData, dataPointIndex, emaOptions.period, this.options.type, emaOptions.appliedTo);
+                                var maOptions = {
+                                    data: data,
+                                    maData: emaData,
+                                    index: dataPointIndex,
+                                    period: emaOptions.period,
+                                    type: this.options.type,
+                                    appliedTo: emaOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+                                var maValue = indicatorBase.calculateEMAValue(maOptions);
 
                                 if (isPointUpdate) {
-                                    emaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(emaValue, 4) });
+                                    emaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else {
-                                    emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(emaValue, 4)], true, true, false);
+                                    emaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
                                 }
                             }
                         }
