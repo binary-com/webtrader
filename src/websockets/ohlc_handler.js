@@ -1,4 +1,4 @@
-define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jquery-timer", 'common/util'], function(liveapi, chartingRequestMap, $) {
+define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','common/util'], function(liveapi, chartingRequestMap, $) {
 
     var barsTable = chartingRequestMap.barsTable;
 
@@ -145,8 +145,7 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
                         if (data && !data.error) {
                             if (isDelayedInstrument) {
                                 //start the timer
-                                chartingRequestMap[key].timerHandler = '_' + new Date().getTime();
-                                $(document).everyTime(60000, chartingRequestMap[key].timerHandler, function() {
+                                chartingRequestMap[key].timerHandler = setInterval(function() {
                                     //Avoid global notification - TODO
                                     //Consume this notification - TODO
                                     $(document).trigger("feedTypeNotification", [key, "delayed-feed"]);
@@ -170,7 +169,7 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
                                         console.log('Timer based request >> ', JSON.stringify(requestObject));
                                         liveapi.send(requestObject);
                                     }
-                                });
+                                }, 60*1000);
                             }
                         }
                     });
