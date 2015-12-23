@@ -400,9 +400,9 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         if (!barriers)
           return;
 
-        state.barriers.barrier = (barriers.barrier || '+0.00000') * 1;
-        state.barriers.high_barrier = '' + (barriers.high_barrier || '+0.00000') * 1;
-        state.barriers.low_barrier = '' + (barriers.low_barrier || '-0.00000') * 1;
+        state.barriers.barrier = '+' + (barriers.barrier || '+0.00000') * 1;
+        state.barriers.high_barrier = '+' + (barriers.high_barrier || '+0.00000') * 1;
+        state.barriers.low_barrier = (barriers.low_barrier || '-0.00000') * 1;
       };
 
       state.basis.update_limit = function () {
@@ -445,10 +445,10 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         }
         /* set the value for barrier(s) */
         if (state.barriers.barrier_count == 1) {
-          request.barrier = '+' + state.barriers.barrier;
+          request.barrier = state.barriers.barrier;
         }
         if (state.barriers.barrier_count == 2) {
-          request.barrier = '+' + state.barriers.high_barrier;
+          request.barrier = state.barriers.high_barrier;
           request.barrier2 = state.barriers.low_barrier + '';
         }
         if (state.categories.value === 'Digits') {

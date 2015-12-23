@@ -112,6 +112,9 @@
 .trade-fields ul li:nth-child(2) input { width: 85px !important; }
 .trade-fields ul li:nth-child(3) input { width: 85px !important; }
 
+.trade-fields ul li:nth-child(2) input:not([step]) { width: 100px !important; }
+.trade-fields ul li:nth-child(3) input:not([step]) { width: 100px !important; }
+
 .trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px !important }
 
 /*#region ul.contract-displays */

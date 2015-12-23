@@ -344,6 +344,35 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
       }
     }
 
+    /* http://stackoverflow.com/questions/10454518 */
+    function decimalPlaces(num) {
+        var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+        if (!match) { return 0; }
+        return Math.max( 0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
+      }
+    /* rviets formatter for decimal round */
+    rv.binders['decimal-round'] = {
+        priority: 3001,
+        routine: function(input, places){
+            var mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000}[places];
+            input = $(input);
+            input.on('input',function(){
+                var val = input.val();
+                var dps = decimalPlaces(val);
+                if(dps && dps <= places ) return;
+                var dot = val.endsWith('.') ? '.' : '';
+                val = val.replace(/[^\d.-]/g,'');
+                val = (Math.round(val * mul) / mul);
+                val = Math.abs(val);
+                if(val) {
+                  var symbol = input.attr('max') ? '-' : '+';
+                  input.val(symbol + val + dot);
+                }
+            })
+
+        }
+    }
+
     /* binder with high priority to apply attributes first */
     rv.binders['attr-*'] = {
       priority: 10*1000,

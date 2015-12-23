@@ -101,12 +101,12 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >Barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="number" min="0" step="0.00001" step-big="0.001"
-                   rv-spinner="barriers.barrier | debounce proposal.onchange" />
+            <input class="barriers-barrier" type="text" min="0" rv-decimal-round="5"
+                   rv-value="barriers.barrier | debounce proposal.onchange" />
         </li>
         <li>
             <span class="dotted-underline text-vertical-align"
-                  rv-text="barriers.barrier_live < barrier root.tick.quote | to-fixed 3"
+                  rv-text="barriers.barrier_live < barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-tooltip='"This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."'
                   rv-tooltip-position='tooltips.barrier'
                   />
@@ -120,12 +120,12 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >High barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="number" min="0" step="0.00001" step-big="0.001"
-                   rv-spinner="barriers.high_barrier | debounce proposal.onchange" />
+            <input class="barriers-barrier" type="text" min="0" rv-decimal-round="5"
+                   rv-value="barriers.high_barrier | debounce proposal.onchange" />
         </li>
         <li>
             <span class="dotted-underline"
-                  rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3"
+                  rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   rv-tooltip-position='tooltips.barrier'
                   />
@@ -139,12 +139,12 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >Low barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="number" max="0" step="0.00001" step-big="0.001"
-                   rv-spinner="barriers.low_barrier | debounce proposal.onchange" />
+            <input class="barriers-barrier" type="text" max="0" rv-decimal-round="5"
+                   rv-value="barriers.low_barrier | debounce proposal.onchange" />
         </li>
         <li>
             <span class="dotted-underline"
-                  rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 3"
+                  rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   rv-tooltip-position='tooltips.barrier'
                   />
