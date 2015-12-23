@@ -255,3 +255,7 @@ input::-ms-clear {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
+
+#growls.default {
+  top: 45px !important; /* show growl notifictions below the navigation-bar */
+}
