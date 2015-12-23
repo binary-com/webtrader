@@ -99,17 +99,19 @@
 }
 
 .trade-fields ul li { text-align: left; }
-.trade-fields ul li:nth-child(1) { width:135px; }
-.trade-fields ul li:nth-child(2n) { width:110px; }
+.trade-fields ul li:nth-child(1) { width:133px; }
+.trade-fields ul li:nth-child(2n) { width:112px; }
 .trade-fields ul li:nth-child(2n+3) { width:95px; }
 
 .trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { min-width: 120px !important; }
 
-.trade-fields ul li:nth-child(2) select + .ui-selectmenu-button,
+.trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { width: 100px !important; }
 .trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 95px !important; }
 
-.trade-fields ul li:nth-child(2) input,
+.trade-fields ul li:nth-child(2) input { width: 85px !important; }
 .trade-fields ul li:nth-child(3) input { width: 80px !important; }
+
+.trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px !important }
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
