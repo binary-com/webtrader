@@ -3,6 +3,8 @@
     position: relative;
     overflow-x: hidden !important;
 }
+.trade-dialog .text-align-center { text-align: center; }
+.trade-dialog .bold { font-weight: bold; }
 .trade-dialog .text-vertical-align { line-height:2em; }
 .trade-dialog .no-wrap { white-space: nowrap; }
 .trade-dialog .dotted-underline { border-bottom: 1px dotted #000; }
