@@ -49,7 +49,6 @@ define(['jquery'], function ($) {
          *  We have to make sure that resubscribe is atleast 1 second delayed
          **/
         setTimeout(function(){
-
             socket = connect();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
@@ -65,7 +64,6 @@ define(['jquery'], function ($) {
                     }
                 });
             });
-
         }, 1000);
     }
 

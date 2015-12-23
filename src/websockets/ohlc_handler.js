@@ -1,4 +1,4 @@
-define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jquery-timer", 'common/util'], function(liveapi, chartingRequestMap, $) {
+define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','common/util'], function(liveapi, chartingRequestMap, $) {
 
     var barsTable = chartingRequestMap.barsTable;
 
@@ -101,28 +101,30 @@ define(['websockets/binary_websockets',"charts/chartingRequestMap","jquery", "jq
             .then(function(data) {
                 if (data && !data.error && options.delayAmount > 0) {
                     //start the timer
-                    chartingRequestMap[key].timerHandler = '_' + new Date().getTime();
-                    $(document).everyTime(60000, chartingRequestMap[key].timerHandler, function() {
-                        //TODO: Avoid global notification - TODO:Consume this notification
-                        $(document).trigger("feedTypeNotification", [key, "delayed-feed"]);
-                        var lastBar = barsTable.chain()
-                                            .find({instrumentCdAndTp : key})
-                                            .simplesort('time', true)
-                                            .limit(1).data();
-                        if (!lastBar || lastBar.length === 0)
-                          return;
-
-                        lastBar = lastBar[0];
-                        //requests new bars, Send the WS request
-                        var requestObject = {
-                            "ticks_history": instrumentCode,
-                            "end": 'latest',
-                            "start": (lastBar.time/1000) | 0,
-                            "granularity":  convertToTimeperiodObject(timePeriod).timeInSeconds()
-                        };
-                        console.log('Timer based request >> ', JSON.stringify(requestObject));
-                        liveapi.send(requestObject).catch(function(err){ console.error(err.message); });
-                    });
+                    chartingRequestMap[key].timerHandler = setInterval(function() {
+                      //TODO: Avoid global notification - TODO: Consume this notification
+                      $(document).trigger("feedTypeNotification", [key, "delayed-feed"]);
+                      var lastBar = barsTable.chain()
+                                              .find({instrumentCdAndTp : key})
+                                              .simplesort('time', true)
+                                              .limit(1)
+                                              .data();
+                      if (lastBar && lastBar.length > 0) {
+                          lastBar = lastBar[0];
+                          console.log('LastBar : ', lastBar);
+                          //requests new bars
+                          //Send the WS request
+                          var requestObject = {
+                              "ticks_history": instrumentCode,
+                              "end": 'latest',
+                              //"count": count,
+                              "start": (lastBar.time/1000) | 0,
+                              "granularity":  convertToTimeperiodObject(timePeriod).timeInSeconds()
+                          };
+                          console.log('Timer based request >> ', JSON.stringify(requestObject));
+                          liveapi.send(requestObject);
+                      }
+                    }, 60*1000);
                 }
             });
 

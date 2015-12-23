@@ -521,7 +521,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         // manually check to see if the user is authenticated or not,
         // we should update state.currency from user profile first (not everyone is using USD)
         if(!liveapi.is_authenticated()) {
-            $.growl.notice({ message: 'You are not loged in' });
+            $.growl.warning({ message: 'You are not loged in' });
             state.purchase.loading = false;
         }
         else {

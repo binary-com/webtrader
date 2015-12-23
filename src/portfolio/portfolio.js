@@ -63,6 +63,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
                     }
                 });
+
                 var currency = data.balance.currency;
                 var balance = data.balance.balance;
                 var header = portfolioWin.parent().find('.ui-dialog-title').css('width', '25%');
@@ -94,6 +95,17 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     processing: true
                 });
                 table.parent().addClass('hide-search-input');
+
+                var header = portfolioWin.parent().find('.ui-dialog-title');
+                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
+                refresh.on('click',function(){
+                    if(portfolioWin.dialogExtend('state') === 'minimized') {
+                        portfolioWin.dialogExtend('restore');
+                    }
+                    portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
+                    portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                    update_table();
+                });
 
                 portfolioWin.dialog('open');
             })

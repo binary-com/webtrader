@@ -16,7 +16,6 @@ requirejs.config({
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
         'lokijs': 'lib/lokijs/build/lokijs.min',
-        'jquery-timer': "lib/jquery.timers/jquery.timers.min",
         'color-picker': "lib/colorpicker/jquery.colorpicker",
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
         //TODO find out whats the advantage of using datatables-jquery-ui
@@ -59,9 +58,6 @@ requirejs.config({
             deps: ["highstock"]
         },
         "jquery-growl": {
-            deps: ["jquery"]
-        },
-        "jquery-timer": {
             deps: ["jquery"]
         },
         "datatables": {
