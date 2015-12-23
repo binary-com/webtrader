@@ -325,6 +325,17 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
     return {
 
         init: function( $parentObj ) {
+            /* wrap jquery ui dialog('destory') to fire an event */
+            var original = $.fn.dialog;
+            $.fn.dialog = function(cmd) {
+
+              if(cmd === 'destroy') {
+                this.trigger('dialogdestroy');
+                return original.call(this, 'destroy'); // destroy and remove from dom
+              }
+              return original.apply(this, arguments);
+            }
+
             $menuUL = $parentObj.find("ul");
 
             tileObject = $menuUL.find(".tile");
@@ -392,6 +403,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                                 resize:fn, // callabak for dialog resize event
                                 close: fn, // callback for dialog close event
                                 open: fn,  // callback for dialog open event
+                                destroy: fn, // callback for dialog destroy event
                                 autoOpen: false,
                                 resizeable:true,
                                 collapsable:true,
@@ -430,6 +442,10 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 .addClass('webtrader-dialog')
                 .dialog(options)
                 .dialogExtend(options);
+
+            if(options.destroy) { /* register for destroy event which have been patched */
+              blankWindow.on('dialogdestroy', options.destroy);
+            }
 
             blankWindow.moveToTop = function () {
                 blankWindow.dialog('open');

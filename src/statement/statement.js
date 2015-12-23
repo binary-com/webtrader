@@ -23,7 +23,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     };
 
     function initStatement() {
-        statement = windows.createBlankWindow($('<div/>'), { title: 'Statement', width: 900 , 'data-authorized' :'true'});
+        statement = windows.createBlankWindow($('<div/>'), {
+            title: 'Statement',
+            width: 900 ,
+            destroy: function() { table && table.DataTable().destroy(true); statement = null; },
+            'data-authorized' :'true'
+        });
         require(['text!statement/statement.html'], function ($html) {
 
             $html = $($html);

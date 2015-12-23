@@ -25,7 +25,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     }
 
     function initProfitWin() {
-        profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 900, 'data-authorized': 'true'});
+        profitWin = windows.createBlankWindow($('<div/>'), {
+            title: 'Profit Table',
+            width: 900,
+            destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
+            'data-authorized': 'true'
+        });
         require(['text!profittable/profitTable.html'], function ($html) {
 
             $html = $($html);
