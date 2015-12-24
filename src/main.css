@@ -245,7 +245,7 @@ input::-ms-clear {
 .shine:not([disabled=disabled]):hover:after {
     width: 120%;
     background-color: rgba(255,255,255,0);
-    transition: all 0.6s ease-out;
+    transition: all 1s ease-out;
 }
 
 #growls.default {
