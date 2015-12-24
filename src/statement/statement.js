@@ -141,7 +141,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
         });
 
-        window.statement = statement;
     };
 
     return {
