@@ -88,13 +88,15 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         _(available).filter('contract_display', 'touches').each(replacer('contract_display', 'touch')).run();
         _(available).filter('contract_display', 'does not touch').each(replacer('contract_display', 'no touch')).run();
 
-        /* put 'odd' & 'even' to the end of list */
-        var put_to_end = function(array, condition){
-          var inx = _(array).findIndex(condition);
-          if(inx !== -1) array.push(array.splice(inx,1)[0]);
-        }
-        put_to_end(available, {'contract_display': 'odd'});
-        put_to_end(available, {'contract_display': 'even'});
+        /* sort the items in the array according to the way we want to show them */
+        available = _.sortBy(available,function(row){
+          var rank = { 'Up/Down': 1, 'Touch/No Touch':2, 'In/Out': 3, 'Digits': 4, 'Asians': 5, 'Spreads': 6 }[row.contract_category_display];
+          if(rank === 4) { /* Digits */
+            rank = {'odd': 4, 'even' : 4.5}[row.contract_display] || 3.5;
+          }
+          return rank
+        });
+
 
         return available;
     }
