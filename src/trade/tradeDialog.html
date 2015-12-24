@@ -270,11 +270,11 @@
     </ul>
 
     <ul class="purchase-row stick-to-bottom"
-        rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
+        rv-css-opacity="proposal.loading | or purchase.loading | or ticks.loading | ternary 0.5 1">
       <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-text="proposal.ask_price | currency currency.value"> </span> </span> </li>
       <li> <button
               rv-on-click="purchase.onclick"
-              rv-disabled="proposal.loading | purchase.loading"
+              rv-disabled="proposal.loading | or purchase.loading | or ticks.loading"
               class="purchase-button shine text-vertical-align">Purchase</button>
       </li>
     </ul>

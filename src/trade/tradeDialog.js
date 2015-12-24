@@ -182,6 +182,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         },
         ticks: {
           array: [], /* ticks for sparkline chart */
+          loading: true,
         },
         proposal: {
           symbol: _(available).first().underlying_symbol,
@@ -562,6 +563,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
               // if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
               state.tick.epoch = data.tick.epoch;
               state.tick.quote = data.tick.quote;
+              state.ticks.loading = false;
               /* update ticks for sparkline chart */
               if(state.ticks.array.length > 30) {
                 state.ticks.array.shift();
