@@ -235,7 +235,7 @@ define(['jquery'], function ($) {
                     else
                         sum += this.getPrice(maOptions.data, maOptions.index-i, maOptions.appliedTo, maOptions.type);
                 }
-                return (sum / period);
+                return (sum / maOptions.period);
             }
 //            else {
 //                //var price = this.getPrice(data, index, appliedTo, type);
@@ -426,18 +426,12 @@ define(['jquery'], function ($) {
                 return sum / Nm;
             }
             else {
-<<<<<<< HEAD
-                var price = this.getPrice(data, index, appliedTo, type);
-                var preTrima = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
-                preTrima = preTrima ? preTrima : null;
-=======
                 var price = 0;
                 if (maOptions.isIndicatorData)
                     price = this.getIndicatorData(maOptions.data, maOptions.index);
                 else
                     price = this.getPrice(maOptions.data, maOptions.index, maOptions.appliedTo, maOptions.type);
                 var preTrima = this.getIndicatorData(maOptions.maData, maOptions.index - 1);
->>>>>>> upstream/development
                 return (preTrima * (Nm - 1) + price) / Nm;
             }
         }

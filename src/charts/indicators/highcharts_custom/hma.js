@@ -5,42 +5,77 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var hmaOptionsMap = {}, hmaSeriesMap = {};
     var ma1Data = {}, ma2Data = {}, inputData = {};
-    function calculateHmaValue(data, hmaData, index, period, maType, type, key, isPointUpdate, appliedTo) {
+    function calculateHmaValue(options) {
 
         //* Calculate HMA FORMULA
         // HMA(n) = WMA(2*WMA(n/2) – WMA(n)),sqrt(n))
-        var time = (data[index][0] || data[index].x);
+        var time = (options.data.data[options.index][0] || options.data.data[options.index].x);
 
-        var n = Math.round(period / 2);
-        var ma1Value = indicatorBase.calculateMAValue(data, ma1Data[key], index, n, maType, type, 'n' + key, isPointUpdate, appliedTo);
-        if (isPointUpdate) {
-            ma1Data[key][index] = [time, ma1Value];
+        var n = Math.round(options.period / 2);
+        var ma1Options = {
+            data: options.data.data,
+            maData: ma1Data[options.key],
+            index: options.index,
+            period: n,
+            maType: options.maType,
+            type: options.type,
+            key: 'n' + options.key,
+            isPointUpdate: options.isPointUpdate,
+            appliedTo: options.appliedTo,
+            isIndicatorData: false
+        };
+        var ma1Value = indicatorBase.calculateMAValue(ma1Options);
+
+        if (options.isPointUpdate) {
+            ma1Data[options.key][options.index] = [time, ma1Value];
         }
         else {
-            ma1Data[key].push([time, ma1Value]);
+            ma1Data[options.key].push([time, ma1Value]);
         }
+        var ma2Options = {
+            data: options.data.data,
+            maData: ma2Data[options.key],
+            index: options.index,
+            period: options.period,
+            maType: options.maType,
+            type: options.type,
+            key: 'p' + options.key,
+            isPointUpdate: options.isPointUpdate,
+            appliedTo: options.appliedTo,
+            isIndicatorData: false
+        };
+        var ma2Value = indicatorBase.calculateMAValue(ma2Options);
 
-        var ma2Value = indicatorBase.calculateMAValue(data, ma2Data[key], index, period, maType, type, 'p' + key, isPointUpdate, appliedTo);
-        if (isPointUpdate) {
-            ma2Data[key][index] = [time, ma2Value];
+        if (options.isPointUpdate) {
+            ma2Data[options.key][options.index] = [time, ma2Value];
         }
         else {
-            ma2Data[key].push([time, ma2Value]);
+            ma2Data[options.key].push([time, ma2Value]);
         }
 
         var ma3Value = 2 * ma1Value - ma2Value;
 
-        if (isPointUpdate) {
-            inputData[key][index] = [time, ma3Value];
+        if (options.isPointUpdate) {
+            inputData[options.key][options.index] = [time, ma3Value];
         }
         else {
-            inputData[key].push([time, ma3Value]);
+            inputData[options.key].push([time, ma3Value]);
         }
 
-        var hmaPeriod = Math.round(Math.sqrt(period, 2));
-        var hmaValue = indicatorBase.calculateMAValue(inputData[key], hmaData, index, hmaPeriod, maType, type, 'h' + key, isPointUpdate, appliedTo);
-
-        return hmaValue;
+        var hmaPeriod = Math.round(Math.sqrt(options.period, 2));
+        var hOptions = {
+            data: inputData[options.key],
+            maData: options.data.hmaData,
+            index: options.index,
+            period: hmaPeriod,
+            maType: options.maType,
+            type: options.type,
+            key: 'h' + options.key,
+            isPointUpdate: options.isPointUpdate,
+            appliedTo: options.appliedTo,
+            isIndicatorData: true
+        };
+        return indicatorBase.calculateMAValue(hOptions);
     }
 
     //*************************INIT***************************************
@@ -69,7 +104,21 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var hmaData = [];
                         ma1Data[uniqueID] = [], ma2Data[uniqueID] = [], inputData[uniqueID] = [];
                         for (var index = 0; index < data.length; index++) {
-                            var hmaValue = calculateHmaValue(data, hmaData, index, hmaOptions.period, hmaOptions.maType, this.options.type,uniqueID, false, hmaOptions.appliedTo);
+                            var hOptions = {
+                                data: {
+                                    data: data,
+                                    hmaData: hmaData
+                                },
+                                index: index,
+                                period: hmaOptions.period,
+                                maType: hmaOptions.maType,
+                                type: this.options.type,
+                                key: uniqueID,
+                                isPointUpdate: false,
+                                appliedTo: hmaOptions.appliedTo,
+                                isIndicatorData: false
+                            };
+                            var hmaValue = calculateHmaValue(hOptions);
                             hmaData.push([(data[index][0] || data[index].x), indicatorBase.toFixed(hmaValue, 4)]);
                         }
 
@@ -109,6 +158,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     hmaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
                     hmaSeriesMap[uniqueID] = null;
+                    ma1Data[uniqueID] = [];
+                    ma2Data[uniqueID] = [];
+                    inputData[uniqueID] = [];
                     chart.redraw();
                 };
 
@@ -145,11 +197,26 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             && hmaOptionsMap[key].parentSeriesID === series.options.id) {
                             //Find the data point
                             var data = series.options.data;
-                            var hmaData = hmaOptionsMap[key].options.data;
+                            var hmaData = hmaSeriesMap[key].options.data;
                             var hmaOptions = hmaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var hmaValue = calculateHmaValue(data, hmaData, dataPointIndex, hmaOptions.period, hmaOptions.maType, this.options.type,key, isPointUpdate, hmaOptions.appliedTo);
+                                var hOptions = {
+                                    data: {
+                                        data: data,
+                                        hmaData: hmaData
+                                    },
+                                    index: dataPointIndex,
+                                    period: hmaOptions.period,
+                                    maType: hmaOptions.maType,
+                                    type: this.options.type,
+                                    key: key,
+                                    isPointUpdate: isPointUpdate,
+                                    appliedTo: hmaOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+                                var hmaValue = calculateHmaValue(hOptions);
+
                                 if (isPointUpdate) {
                                     hmaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(hmaValue, 4) });
                                 }

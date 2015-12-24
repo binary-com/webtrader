@@ -50,14 +50,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					{
 					    text: "OK",
 					    click: function () {
-					        if (!isNumericBetween($html.find(".smma_input_width_for_period").val(),
-                                           parseInt($html.find(".smma_input_width_for_period").attr("min")),
-                                           parseInt($html.find(".smma_input_width_for_period").attr("max")))) {
+					        if (!isNumericBetween($html.find(".hma_input_width_for_period").val(),
+                                           parseInt($html.find(".hma_input_width_for_period").attr("min")),
+                                           parseInt($html.find(".hma_input_width_for_period").attr("max")))) {
 					            require(["jquery", "jquery-growl"], function ($) {
 					                $.growl.error({
-					                    message: "Only numbers between " + $html.find(".smma_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".smma_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".smma_input_width_for_period").closest('tr').find('td:first').text() + "!"
+					                    message: "Only numbers between " + $html.find(".hma_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".hma_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".hma_input_width_for_period").closest('tr').find('td:first').text() + "!"
 					                });
 					            });
 					            return;

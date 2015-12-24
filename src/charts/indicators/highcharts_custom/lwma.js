@@ -4,22 +4,21 @@ Created by Mahboob.M on 12.22.2015
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var lwmaOptionsMap = {}, lwmaSeriesMap = {};
-    var ma1Data = {}, ma2Data = {}, inputData = {};
-    function calculateLwmaValue(data, index, period, type, appliedTo) {
+    function calculateLwmaValue(options) {
 
         //* Calculate LWMA FORMULA
         // LWMA = SUM(Close(i)*i, N)/SUM(i, N)
         //Where: 
         // SUM(i, N) — is the total sum of weight coefficients.
-        if (index < period - 1) {
+        if (options.index < options.period - 1) {
             return null;
         }
         else {
             var sum = 0.0;
             var sumI = 0;
-            for (var i = 0; i < period; i++) {
-                sum += indicatorBase.getPrice(data, index - i, appliedTo, type) * (index - i);
-                sumI += index - i;
+            for (var i = 0; i < options.period; i++) {
+                sum += indicatorBase.getPrice(options.data, options.index - i, options.appliedTo, options.type) * (options.index - i);
+                sumI += options.index - i;
             }
             return (sum / sumI);
         }
@@ -48,9 +47,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     if (data && data.length > 0) {
 
                         var lwmaData = [];
-                        ma1Data[uniqueID] = [], ma2Data[uniqueID] = [], inputData[uniqueID] = [];
                         for (var index = 0; index < data.length; index++) {
-                            var lwmaValue = calculateLwmaValue(data, index, lwmaOptions.period, this.options.type, lwmaOptions.appliedTo);
+                            var lOptions =
+                               {
+                                   data: data,
+                                   index: index,
+                                   period: lwmaOptions.period,
+                                   type: this.options.type,
+                                   appliedTo: lwmaOptions.appliedTo
+                               };
+                            var lwmaValue = calculateLwmaValue(lOptions);
                             lwmaData.push([(data[index][0] || data[index].x), indicatorBase.toFixed(lwmaValue, 4)]);
                         }
 
@@ -129,7 +135,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var lwmaOptions = lwmaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var lwmaValue = calculateLwmaValue(data, dataPointIndex, lwmaOptions.period, this.options.type, lwmaOptions.appliedTo);
+                                var lOptions =
+                                {
+                                    data: data,
+                                    index: dataPointIndex,
+                                    period: lwmaOptions.period,
+                                    type: this.options.type,
+                                    appliedTo: lwmaOptions.appliedTo
+                                };
+                                var lwmaValue = calculateLwmaValue(lOptions);
                                 if (isPointUpdate) {
                                     lwmaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(lwmaValue, 4) });
                                 }

@@ -4,8 +4,7 @@ Created by Mahboob.M on 12.22.2015
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var smmaOptionsMap = {}, smmaSeriesMap = {};
-    var ma1Data = {}, ma2Data = {}, inputData = {};
-    function calculateSmmaValue(data,smmaData, index, period, type, appliedTo) {
+    function calculateSmmaValue(options) {
 
         //* Calculate SMMA FORMULA
         //PREVSUM = SMMA(i - 1) * N
@@ -16,20 +15,20 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         //SMMA(i) — is the smoothed moving average of the current bar (except for the first one);
         //CLOSE(i) — is the current closing price;
         //N — is the smoothing period.
-        if (index < period - 1) {
+        if (options.index < options.period - 1) {
             return null;
         }
-        else if (index === (period - 1)) {
+        else if (options.index === (options.period - 1)) {
             var sum = 0.0;
-            for (var i = 0; i < period; i++) {
-                sum += indicatorBase.getPrice(data, i, appliedTo, type);
+            for (var i = 0; i < options.period; i++) {
+                sum += indicatorBase.getPrice(options.data.data, i, options.appliedTo, options.type);
             }
-            return (sum / period);
+            return (sum / options.period);
         }
         else {
-            var preSma = smmaData[index - 1][1] || smmaData[index - 1].y;
-            var preSum = preSma * period;
-            var smmaValue = (preSum - preSma + indicatorBase.getPrice(data, index, appliedTo, type)) / period;
+            var preSma = indicatorBase.getIndicatorData(options.data.smmaData, options.index - 1);
+            var preSum = preSma * options.period;
+            var smmaValue = (preSum - preSma + indicatorBase.getPrice(options.data.data, options.index, options.appliedTo, options.type)) / options.period;
             return smmaValue;
         }
     }
@@ -57,9 +56,20 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     if (data && data.length > 0) {
 
                         var smmaData = [];
-                        ma1Data[uniqueID] = [], ma2Data[uniqueID] = [], inputData[uniqueID] = [];
                         for (var index = 0; index < data.length; index++) {
-                            var smmaValue = calculateSmmaValue(data, smmaData, index, smmaOptions.period, this.options.type, smmaOptions.appliedTo);
+                            var sOptions =
+                                {
+                                    data:
+                                        {
+                                            data: data,
+                                            smmaData: smmaData
+                                        },
+                                    index: index,
+                                    period: smmaOptions.period,
+                                    type: this.options.type
+                                    , appliedTo: smmaOptions.appliedTo
+                                };
+                            var smmaValue = calculateSmmaValue(sOptions);
                             smmaData.push([(data[index][0] || data[index].x), indicatorBase.toFixed(smmaValue, 4)]);
                         }
 
@@ -135,11 +145,23 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             && smmaOptionsMap[key].parentSeriesID === series.options.id) {
                             //Find the data point
                             var data = series.options.data;
-                            var smmaData = smmaOptionsMap[key].options.data;
+                            var smmaData = smmaSeriesMap[key].options.data;
                             var smmaOptions = smmaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var smmaValue = calculateSmmaValue(data, smmaData, dataPointIndex, smmaOptions.period, this.options.type, smmaOptions.appliedTo);
+                                var sOptions =
+                               {
+                                   data:
+                                       {
+                                           data: data,
+                                           smmaData: smmaData
+                                       },
+                                   index: dataPointIndex,
+                                   period: smmaOptions.period,
+                                   type: this.options.type,
+                                   appliedTo: smmaOptions.appliedTo
+                               };
+                                var smmaValue = calculateSmmaValue(sOptions);
                                 if (isPointUpdate) {
                                     smmaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(smmaValue, 4) });
                                 }
