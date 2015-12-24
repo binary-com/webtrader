@@ -20,12 +20,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         console.error(err);
                     });
             else
-                profitWin.dialog('open');
+                profitWin.moveToTop();
         });
     }
 
     function initProfitWin() {
-        profitWin = windows.createBlankWindow($('<div/>'), { title: 'Profit Table', width: 900 });
+        profitWin = windows.createBlankWindow($('<div/>'), {
+            title: 'Profit Table',
+            width: 900,
+            destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
+            'data-authorized': 'true'
+        });
         require(['text!profittable/profitTable.html'], function ($html) {
 
             $html = $($html);
@@ -58,7 +63,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         column.search(this.value) .draw();
                 });
             });
-            
+
             var refreshTable = function (yyyy_mm_dd) {
                 var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
 
@@ -93,7 +98,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     table.api().draw();
                     processing_msg.hide();
                 };
-                
+
                 liveapi.send(request)
                 .then(refresh)
                 .catch(function (err) {

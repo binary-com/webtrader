@@ -3,37 +3,7 @@
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var temaOptionsMap = {}, temaSeriesMap = {}, ema1 = {}, ema2 = {}, ema3 = {};
-
-    function initEMAData(period, data) {
-        var temaData = [], sum = 0.0;
-        for (var index = 0; index < period; index++) {
-            sum += data[index][1];
-            if (index == (period - 1)) {
-                var val = sum / period;
-                if (!$.isNumeric(val)) {
-                    val = data[index][1];
-                }
-                temaData.push([data[index][0], val]);
-            }
-            else {
-                temaData.push([data[index][0], null]);
-            }
-        }
-
-        for (var index = period; index < data.length; index++) {
-
-            var price = data[index][1];
-
-            //Calculate EMA - start
-            //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-            var temaValue = (price * 2 / (period + 1)) + (temaData[index - 1][1] * (1 - 2 / (period + 1)))
-            temaData.push([data[index][0], indicatorBase.toFixed(temaValue, 4)]);
-            //Calculate EMA - end
-
-        }
-        return temaData;
-    }
+    var temaOptionsMap = {}, temaSeriesMap = {};
 
     return {
         init: function () {
@@ -77,27 +47,23 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          *      TEMA = 3*EMA1 - 3*EMA2 + EMA3
                          * Do not fill any value in temaData from 0 index to options.period-1 index
                          */
-                        var inputData = [], period = temaOptions.period;
-                        //Prepare input data for indicator value calculation
-                        for (var index = 0; index < data.length; index++) {
-                            if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                                inputData.push([data[index].x ? data[index].x : data[index][0], indicatorBase.extractPriceForAppliedTO(temaOptions.appliedTo, data, index)]);
-                            }
-                            else {
-                                inputData.push([data[index].x ? data[index].x : data[index][0], data[index].y ? data[index].y : data[index][1]]);
-                            }
-                        }
-                        var ema1Data = initEMAData.call(this, period, inputData);
-                        var ema2Data = initEMAData.call(this, period, ema1Data);
-                        var ema3Data = initEMAData.call(this, period, ema2Data);
+
                         var temaData = [];
-                        for (var index = 0; index < ema3Data.length; index++) {
-                            var temaVal = 3 * ema1Data[index][1] - 3 * ema2Data[index][1] + ema3Data[index][1];
-                            temaData.push([ema3Data[index][0], indicatorBase.toFixed(temaVal, 4)]);
+                        for (var index = 0; index < data.length; index++) {
+                            var maOptions = {
+                                data: data,
+                                index: index,
+                                period: temaOptions.period,
+                                type: this.options.type,
+                                key: uniqueID,
+                                isPointUpdate: false,
+                                appliedTo: temaOptions.appliedTo,
+                                isIndicatorData: false
+                            };
+                            var maValue = indicatorBase.calculateTEMAValue(maOptions);
+                            //var maValue = indicatorBase.calculateTEMAValue(data, index, temaOptions.period, this.options.type, uniqueID, false, temaOptions.appliedTo);
+                            temaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
-                        ema1[uniqueID] = ema1Data;
-                        ema2[uniqueID] = ema2Data;
-                        ema3[uniqueID] = ema3Data;
 
                         var chart = this.chart;
 
@@ -106,7 +72,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var series = this;
                         temaSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'TEMA (' + period + ', ' + indicatorBase.appliedPriceString(period) + ')',
+                            name: 'TEMA (' + temaOptions.period + ', ' + indicatorBase.appliedPriceString(temaOptions.period) + ')',
                             data: temaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
@@ -124,9 +90,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             indicatorID: 'tema',
                             isIndicator: true,
                             parentSeriesID: temaOptions.parentSeriesID,
-                            period: period
+                            period: temaOptions.period
                         });
-                        //console.log('TEMA series data length : ', temaSeriesMap[uniqueID].options.data.length, ', Instrument series data length : ', this.options.data.length);
 
                         //We are update everything in one shot
                         chart.redraw();
@@ -203,40 +168,27 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                              **/
                             //Find the data point
                             var data = series.options.data;
-                            var n = temaOptionsMap[key].period;
+                            var temaOptions = temaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var price = 0.0;
-                                if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                                    price = indicatorBase.extractPriceForAppliedTO(temaOptionsMap[key].appliedTo, data, dataPointIndex);
-                                }
-                                else {
-                                    price = data[dataPointIndex].y ? data[dataPointIndex].y : data[dataPointIndex][1];
-                                }
+                                var maOptions = {
+                                    data: data,
+                                    index: dataPointIndex,
+                                    period: temaOptions.period,
+                                    type: this.options.type,
+                                    key: key,
+                                    isPointUpdate: isPointUpdate,
+                                    appliedTo: temaOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+                                var maValue = indicatorBase.calculateTEMAValue(maOptions);
+                                //var temaValue = indicatorBase.calculateTEMAValue(data, dataPointIndex, temaOptions.period, this.options.type, key, isPointUpdate, temaOptions.appliedTo);
 
-                                var ema1Value = (price * 2 / (n + 1)) + (ema1[key][dataPointIndex - 1][1] * (1 - 2 / (n + 1)))
-                                    , ema2Value = (ema1Value * 2 / (n + 1)) + (ema2[key][dataPointIndex - 1][1] * (1 - 2 / (n + 1)))
-                                    , ema3Value = (ema2Value * 2 / (n + 1)) + (ema3[key][dataPointIndex - 1][1] * (1 - 2 / (n + 1)));
-                                var temaValue = 3*ema1Value - 3*ema2Value + ema3Value;
-                                ema1Value = indicatorBase.toFixed(ema1Value, 4);
-                                ema2Value = indicatorBase.toFixed(ema2Value, 4);
-                                ema3Value = indicatorBase.toFixed(ema3Value, 4);
-                                temaValue = indicatorBase.toFixed(temaValue, 4);
-
-                                var time = (data[dataPointIndex].x || data[dataPointIndex][0]);
-                                //Calculate TEMA - start
-                                //console.log(temaValue, price, n, temaData[dataPointIndex - 1]);
                                 if (isPointUpdate) {
-                                    ema1[key][dataPointIndex] = [time, ema1Value];
-                                    ema2[key][dataPointIndex] = [time, ema2Value];
-                                    ema3[key][dataPointIndex] = [time, ema3Value];
-                                    temaSeriesMap[key].data[dataPointIndex].update({ y : temaValue});
+                                    temaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else {
-                                    ema1[key].push([time, ema1Value]);
-                                    ema2[key].push([time, ema2Value]);
-                                    ema3[key].push([time, ema3Value]);
-                                    temaSeriesMap[key].addPoint([time, temaValue], true, true, false);
+                                    temaSeriesMap[key].addPoint([time, indicatorBase.toFixed(maValue, 4)], true, true, false);
                                 }
                             }
                         }
