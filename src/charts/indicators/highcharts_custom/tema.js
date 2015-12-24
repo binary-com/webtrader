@@ -61,7 +61,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 isIndicatorData: false
                             };
                             var maValue = indicatorBase.calculateTEMAValue(maOptions);
-                            //var maValue = indicatorBase.calculateTEMAValue(data, index, temaOptions.period, this.options.type, uniqueID, false, temaOptions.appliedTo);
                             temaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
