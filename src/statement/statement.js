@@ -18,12 +18,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         console.error(err);
                     });
             else
-                statement.dialog('open');
+                statement.moveToTop();
         });
     };
 
     function initStatement() {
-        statement = windows.createBlankWindow($('<div/>'), { title: 'Statement', width: 900 });
+        statement = windows.createBlankWindow($('<div/>'), {
+            title: 'Statement',
+            width: 900 ,
+            destroy: function() { table && table.DataTable().destroy(true); statement = null; },
+            'data-authorized' :'true'
+        });
         require(['text!statement/statement.html'], function ($html) {
 
             $html = $($html);
@@ -61,7 +66,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             var loading = false;
             var options = { offset : 0, limit: 50 };
             var is_specific_date_shown = false; /* is data for a specific date is shown */
-            var refreshTable = function (optoins) {
+            var refreshTable = function (yyy_mm_dd) {
                 var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
                 loading = true;
 
@@ -71,14 +76,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 };
 
                 /* if a date is specified get the transactions for that date */
-                if (typeof optoins === 'string') {
-                    request.date_from = yyyy_mm_dd_to_epoch(optoins, { utc: true });
+                if (typeof yyy_mm_dd === 'string') {
+                    request.date_from = yyyy_mm_dd_to_epoch(yyy_mm_dd, { utc: true });
                     var one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
                     request.date_to = request.date_from + one_day_utc;
                     table.api().rows().remove();
                     is_specific_date_shown = true;
                 }
-                else  {
+                else  { /* request the next 50 items for live scroll */
                     request.limit = 50;
                     if(is_specific_date_shown) {
                         table.api().rows().remove();
