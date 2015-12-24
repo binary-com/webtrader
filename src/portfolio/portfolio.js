@@ -13,7 +13,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             if(!portfolioWin)
                 initPortfolioWin();
             else
-                portfolioWin.dialog('open');
+                portfolioWin.moveToTop();
         });
     }
     function update_indicative(data) {
@@ -45,6 +45,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
                     width: 700,
+                    'data-authorized': 'true',
                     close: function () {
                         portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
                         portfolio_refresh_interval = null;
@@ -61,6 +62,12 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         /* update table every 1 minute */
                         update_table();
                         portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                    },
+                    destroy: function() {
+                      table && table.DataTable().destroy(true);
+                      portfolioWin = null;
+                      portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
+                      portfolio_refresh_interval = null;
                     }
                 });
 

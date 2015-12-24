@@ -6,21 +6,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
     var maxOptionsMap = {}, maxSeriesMap = {};
 
     function calculateIndicatorValue(maxOptions, data, index) {
-        var maxValue = 0.0;
-        if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-            maxValue = indicatorBase.extractPriceForAppliedTO(maxOptions.appliedTo, data, index);
-        }
-        else {
-            maxValue = indicatorBase.extractPrice(data, index);
-        }
+        var maxValue = indicatorBase.getPrice(data, index, maxOptions.appliedTo, this.options.type);
         for (var j = index, count = 1; j >= 0 && count <= maxOptions.period; j--, count++) {
-            var tempValue = 0.0;
-            if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                tempValue = indicatorBase.extractPriceForAppliedTO(maxOptions.appliedTo, data, j);
-            }
-            else {
-                tempValue = indicatorBase.extractPrice(data, j);
-            }
+            var tempValue = indicatorBase.getPrice(data, j, maxOptions.appliedTo, this.options.type);
             maxValue = Math.max(maxValue, tempValue);
         }
         return maxValue;

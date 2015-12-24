@@ -15,14 +15,15 @@
     font-size: 90%;
 }
 
-table.trading-times-dialog th,td {
+table.trading-times-dialog th,
+table.trading-times-dialog td {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
     table.trading-times-dialog th > .search-input {
         text-align:center;
-        width: 100%; 
+        width: 100%;
         box-sizing: border-box;
         -webkit-box-sizing:border-box;
         -moz-box-sizing: border-box;

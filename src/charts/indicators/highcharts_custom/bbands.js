@@ -7,22 +7,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
 	    bbandsMdlSeriesMap = {},
 	    bbandsUprSeriesMap = {},
 	    bbandsLwrSeriesMap = {};
-    var  ema1 = {}, ema2 = {}, ema3 = {};
-
-    //******************************Get Price*************************
-    function getPrice(data,index,bbandsOptions,type)
-    {
-    	var price = 0.0;
-        if (indicatorBase.isOHLCorCandlestick(type)) {
-            price = indicatorBase.extractPriceForAppliedTO(bbandsOptions.appliedTo, data, index);
-        }
-        else {
-            price = indicatorBase.extractPrice(data, index); 
-        }
-        return price;
-    }
     
-    //*************************Standard Deviation**********************
     function calculateStandardDeviation(data,index,bbandsOptions,type,average)
     {
     	// Standard Dviation :
@@ -36,7 +21,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
         var sumDeviations=0;
     	for(var j=0;j<bbandsOptions.period && index>=0;j++)
      	{
-            var price=getPrice(data,index,bbandsOptions,type);
+    	    var price = indicatorBase.getPrice(data, index, bbandsOptions.appliedTo, type);
             //calculate the deviations of each data point from the mean, and square the result of each
      		var deviation =Math.pow(price-average,2);
 			sumDeviations+=deviation;
@@ -45,302 +30,14 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
 
         return Math.sqrt(sumDeviations/j);
 	}
-	//*************************End Standard Deviation********************
 
-	//*************************SMA***************************************
-	function calculateSMAValue(data,smaData,index,bbandsOptions,type)
-	{
-		var smaValue=null;
-		if (index >= 1) 
-		{
-           var price = getPrice(data,index,bbandsOptions,type);
-           //Calculate SMA - start
-           smaValue = indicatorBase.toFixed(((smaData[index - 1].y || smaData[index - 1][1]) * (bbandsOptions.period - 1) + price) / bbandsOptions.period, 4);
-           //Calculate SMA - end
-        }
-        return smaValue;
-	}
-
-    function calculateSMAData(data,bbandsOptions,type)
-    {
-        var smaData = [], sum = 0.0;
-        for (var index = 0; index < bbandsOptions.period; index++)
-        {
-            sum+=getPrice(data,index,bbandsOptions,type);
-            if (index == (bbandsOptions.period - 1))
-            {
-                smaData.push([data[bbandsOptions.period - 1].x ? data[bbandsOptions.period - 1].x : data[bbandsOptions.period - 1][0], sum / bbandsOptions.period]);
-            }
-            else
-            {
-                smaData.push([data[index].x ? data[index].x : data[index][0], null]);
-            }
-        }
-        for (var index = bbandsOptions.period; index < data.length; index++)
-        {
-            var smaValue=calculateSMAValue(data,smaData,index,bbandsOptions,type)
-            smaData.push([(data[index].x || data[index][0]), smaValue]);
-        }
-        return smaData;
-    }
-    //*************************End SMA***********************************
-
-	//*************************EMA***************************************
-	function calculateEMAValue(data,emaData,index,bbandsOptions,type)
-	{
-		var price =getPrice(data,index,bbandsOptions,type);
-        //Calculate EMA - start
-       	//ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-       	return (price * 2 / (bbandsOptions.period + 1)) + ((emaData[index - 1][1] || emaData[index - 1].y) * (1 - 2 / (bbandsOptions.period + 1)))
-    }
-
-    function calculateEMAData(data,bbandsOptions,type)
-    {
-        var emaData = [], sum = 0.0;
-        for (var index = 0; index < bbandsOptions.period; index++) {
-        	sum+=getPrice(data,index,bbandsOptions,type);
-        
-            if (index == (bbandsOptions.period - 1)) {
-                emaData.push([data[bbandsOptions.period - 1].x ? data[bbandsOptions.period - 1].x : data[bbandsOptions.period - 1][0], sum / bbandsOptions.period]);
-            }
-             else {
-                emaData.push([data[index].x ? data[index].x : data[index][0], null]);
-            }
-        }
-
-        for (var index = bbandsOptions.period; index < data.length; index++) 
-        {
-       		var emaValue = calculateEMAValue(data,emaData,index,bbandsOptions,type);
-       		emaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(emaValue, 4)]);
-            //Calculate EMA - end
-		}
-		return emaData;
-	}
-    //*************************End EMA**************************************
-
-    //*************************TEMA*****************************************
-    function calculateTEMAValue(data,period) 
-    {
-        var temaData = [], sum = 0.0;
-        for (var index = 0; index < period; index++) {
-            sum += data[index][1];
-            if (index == (period - 1)) {
-                var val = sum / period;
-                if (!$.isNumeric(val)) {
-                    val = data[index][1];
-                }
-                temaData.push([data[index][0], val]);
-            }
-            else {
-                temaData.push([data[index][0], null]);
-            }
-        }
-
-        for (var index = period; index < data.length; index++) {
-            var price = data[index][1];
-            //Calculate EMA - start
-            //ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
-            var temaValue = (price * 2 / (period + 1)) + (temaData[index - 1][1] * (1 - 2 / (period + 1)))
-            temaData.push([data[index][0], indicatorBase.toFixed(temaValue, 4)]);
-            //Calculate EMA - end
-        }
-        return temaData;
-    }
-
-	function calculateTEMAData(data,bbandsOptions,type,uniqueID)
-	{
-	    //Calculate TEMA data
-		/*
-	    The Triple Exponential Moving Average (TEMA) of time series 't' is:
-	    *      EMA1 = EMA(t,period)
-	    *      EMA2 = EMA(EMA1,period)
-	    *      EMA3 = EMA(EMA2,period))
-	    *      TEMA = 3*EMA1 - 3*EMA2 + EMA3
-	    * Do not fill any value in temaData from 0 index to options.period-1 index
-	    */
-	    var inputData = [];
-	    //Prepare input data for indicator value calculation
-	    for (var index = 0; index < data.length; index++)
-	    {
-	    	var price=getPrice(data,index,bbandsOptions,type);
-	        inputData.push([data[index].x ? data[index].x : data[index][0], price]);
-	    }
-	    var ema1Data = calculateTEMAValue(inputData,bbandsOptions.period);
-		var ema2Data = calculateTEMAValue(ema1Data,bbandsOptions.period);
-	    var ema3Data = calculateTEMAValue(ema2Data,bbandsOptions.period);
-	    var temaData = [];
-	    for (var index = 0; index < ema3Data.length; index++) {
-	        var temaVal = 3 * ema1Data[index][1] - 3 * ema2Data[index][1] + ema3Data[index][1];
-	        temaData.push([ema3Data[index][0], indicatorBase.toFixed(temaVal, 4)]);
-	    }      
-	    ema1[uniqueID] = ema1Data;
-        ema2[uniqueID] = ema2Data;
-        ema3[uniqueID] = ema3Data;
-
-        return temaData;
-	}
-
-	function calculateTEMAValueForUpdate(data,index,bbandsOptions,type,key,isPointUpdate)
-	{
-		var price=getPrice(data,index,bbandsOptions,type);
-		var n = bbandsOptions.period;
-        var ema1Value = (price * 2 / (n + 1)) + (ema1[key][index - 1][1] * (1 - 2 / (n + 1)))
-            , ema2Value = (ema1Value * 2 / (n + 1)) + (ema2[key][index - 1][1] * (1 - 2 / (n + 1)))
-            , ema3Value = (ema2Value * 2 / (n + 1)) + (ema3[key][index - 1][1] * (1 - 2 / (n + 1)));
-        var temaValue = 3*ema1Value - 3*ema2Value + ema3Value;
-        ema1Value = indicatorBase.toFixed(ema1Value, 4);
-        ema2Value = indicatorBase.toFixed(ema2Value, 4);
-        ema3Value = indicatorBase.toFixed(ema3Value, 4);
-        temaValue = indicatorBase.toFixed(temaValue, 4);
-
-        var time = (data[index].x || data[index][0]);
-        if (isPointUpdate)
-        {
-            ema1[key][index] = [time, ema1Value];
-            ema2[key][index] = [time, ema2Value];
-            ema3[key][index] = [time, ema3Value];
-        }
-        else
-        {
-            ema1[key].push([time, ema1Value]);
-            ema2[key].push([time, ema2Value]);
-            ema3[key].push([time, ema3Value]);
-        }
-        return temaValue;
-	}
-    //*************************End TEMA*************************************
-	
-	//*************************WMA******************************************
-    function calculateWMAValue(data,bbandsOptions,index, type)
-    {
-        var wmaValue = 0;
-        for (var subIndex = index, count = bbandsOptions.period; subIndex >= 0 && count >= 0; count--, subIndex--) {
-            var price =getPrice(data,subIndex,bbandsOptions,type);
-            wmaValue += price * count;
-        }
-        return wmaValue / (bbandsOptions.period * (bbandsOptions.period + 1) / 2);
-    }
-	
-	function calculateWMAData(data,bbandsOptions,type)
-	{
-	    //Calculate WMA data
-        /*
-        WMA = ( Price * n + Price(1) * n-1 + ... Price( n-1 ) * 1) / ( n * ( n + 1 ) / 2 )
-        Where: n = time period
-        *
-        *  Do not fill any value in wmaData from 0 index to options.period-1 index
-        */
-        var wmaData = [];
-        for (var index = 0; index < bbandsOptions.period; index++)
-        {
-            wmaData.push([data[bbandsOptions.period - 1].x ? data[bbandsOptions.period - 1].x : data[bbandsOptions.period - 1][0], null]);
-        }
-
-        for (var index = bbandsOptions.period; index < data.length; index++) 
-        {
-            //Calculate WMA - start
-            var wmaValue = calculateWMAValue(data, bbandsOptions,index ,type);
-            wmaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(wmaValue, 4)]);
-            //Calculate WMA - end
-        }
-        return wmaData;
-	}
-    //*************************End WMA***************************************
-
-    //*************************TRIMA************************************
-    function calculateTRIMAValue(data,trimaData,index,bbandsOptions,type,Nm)
-	{
-	    var price=getPrice(data,index,bbandsOptions,type);
-        return(trimaData[index - 1][1] * (Nm - 1) + price) / Nm;
-	}
-	
-	function calculateTRIMAData(data,bbandsOptions,type)
-	{
-        var trimaData = [], sum = 0.0, N = bbandsOptions.period + 1,
-        Nm = Math.round( N / 2 );
-        for (var index = 0; index < Nm; index++)
-        {
-            if (indicatorBase.isOHLCorCandlestick(type))
-            {
-                sum += indicatorBase.extractPriceForAppliedTO(bbandsOptions.appliedTo, data, index);
-            }
-            else
-            {
-                sum += indicatorBase.extractPrice(data, index);
-            }
-            if (index == (Nm - 1))
-            {
-                trimaData.push([data[Nm - 1].x ? data[Nm - 1].x : data[Nm - 1][0], sum / Nm]);
-            }
-            else
-            {
-                trimaData.push([data[index].x ? data[index].x : data[index][0], null]);
-            }
-        }
-
-        for (var index = Nm; index < data.length; index++)
-        {
-            var trimaValue=calculateTRIMAValue(data,trimaData,index,bbandsOptions,type,Nm);
-            trimaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(trimaValue , 4)]);
-        }
-        return trimaData;
-	}
-	//*************************End TRIMA************************************
-
-    function calculateMAValue(data,maData,index,bbandsOptions,type,key,isPointUpdate)
-    {
-     var maValue=null;
-     switch(bbandsOptions.maType) {
-	     case "SMA":
-	        maValue=calculateSMAValue(data,maData,index,bbandsOptions,type);
-	        break;
-	     case "EMA":
-	        maValue=calculateEMAValue(data,maData,index,bbandsOptions,type);
-	        break;
-	     case "WMA":
-	        maValue=calculateWMAValue(data,bbandsOptions,index,type);
-	        break;
-	     case "TEMA":
-	        maValue=calculateTEMAValueForUpdate(data,index,bbandsOptions,type,key,isPointUpdate);
-	        break;
-	     case "TRIMA":
-	        var  Nm = Math.round( (bbandsOptions.period + 1) / 2 );
-	        maValue= calculateTRIMAValue(data,maData,index,bbandsOptions,type,Nm);
-	        break;
-	    }
-	    return maValue;
-	}
-
-    function calculateMiddleBand(data,bbandsOptions,type,uniqueID)
-    {
-     var bbandsMdlBndData=[];
-     switch(bbandsOptions.maType) {
-	     case "SMA":
-	        bbandsMdlBndData=calculateSMAData(data,bbandsOptions,type);
-	        break;
-	     case "EMA":
-	         bbandsMdlBndData=calculateEMAData(data,bbandsOptions,type);
-	        break;
-	     case "WMA":
-	        bbandsMdlBndData=calculateWMAData(data,bbandsOptions,type);
-	        break;
-	     case "TEMA":
-	        bbandsMdlBndData=calculateTEMAData(data,bbandsOptions,type,uniqueID);
-	        break;
-	     case "TRIMA":
-	        bbandsMdlBndData=calculateTRIMAData(data,bbandsOptions,type);
-	        break;
-	    }
-	    return bbandsMdlBndData;
-	}
-
-    function calculateLowerBand(data,bbandsMddlBndData,bbandsOptions,type)
+    function calculateLowerBand(data, bbandsMddlBndData, bbandsOptions, type)
     {
     	var bbandsLwrBndData=[];
     	for (var index = 0; index < data.length; index++)
         {
         	//Calculate Lower Band - start
-        	var ma=bbandsMddlBndData[index][1];
+    	    var ma = indicatorBase.getIndicatorData(bbandsMddlBndData, index);
   	    	var standardDeviation=calculateStandardDeviation(data,index,bbandsOptions,type,ma);
     	    //Lower Band = 20-day SMA - (20-day standard deviation of price x 2)
     	    var lwrBndVal=ma-(standardDeviation*bbandsOptions.devDn);
@@ -356,7 +53,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
     	for (var index = 0; index < data.length; index++)
         {
         	//Calculate Uper Band - start
-            var ma=bbandsMddlBndData[index][1];
+    	    var ma = indicatorBase.getIndicatorData(bbandsMddlBndData, index);
   	    	var standardDeviation=calculateStandardDeviation(data,index,bbandsOptions,type,ma);
     		//Uper Band = 20-day SMA + (20-day standard deviation of price x 2)
     	    var UprBndVal=ma+(standardDeviation*bbandsOptions.devDn);
@@ -407,7 +104,25 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
   								* N period sum / N
                          */
                         //* Middle Band Data
-                        var bbandsMiddleBandData = calculateMiddleBand(data,bbandsOptions,this.options.type,mdlUniqueID);
+                        var bbandsMiddleBandData = [];
+                        for (var index = 0; index < data.length; index++)
+                        {
+                            var maOptions = {
+                                data: data,
+                                maData: bbandsMiddleBandData,
+                                index: index,
+                                period: bbandsOptions.period,
+                                maType: bbandsOptions.maType,
+                                type: this.options.type,
+                                key: mdlUniqueID,
+                                isPointUpdate: false,
+                                appliedTo: bbandsOptions.appliedTo,
+                                isIndicatorData: false
+                            };
+                            var middleBandvalue = indicatorBase.calculateMAValue(maOptions);
+                            bbandsMiddleBandData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(middleBandvalue, 4)])
+                        }
+
                         //* Upper Band Data
         				var bbandsUperBandData = calculateUperBand(data,bbandsMiddleBandData,bbandsOptions,this.options.type);
                         //* Lower Band Data
@@ -599,7 +314,19 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                             var middleBandData = bbandsMdlSeriesMap[key].options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var maValue = calculateMAValue(data,maData,dataPointIndex,bbandsOptions,this.options.type,key,isPointUpdate && bbandsMdlSeriesMap[key].options.data.length >= data.length)
+                                var maOptions = {
+                                    data: data,
+                                    maData: maData,
+                                    index: dataPointIndex,
+                                    period: bbandsOptions.period,
+                                    maType: bbandsOptions.maType,
+                                    type: this.options.type,
+                                    key: key,
+                                    isPointUpdate: isPointUpdate,
+                                    appliedTo: bbandsOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+                                var maValue = indicatorBase.calculateMAValue(maOptions);
                                 if (isPointUpdate)
                                 {
                                 	bbandsMdlSeriesMap[key].data[dataPointIndex].update({ y : indicatorBase.toFixed(maValue,4)});
@@ -702,7 +429,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                             var upperValue = upperBandData[dataPointIndex].y || upperBandData[dataPointIndex][1];
                             var value = [updatePointInTime, lowerValue, upperValue];
                             if (dataPointIndex >= 1) {
-                                chart.series.forEach(function(eachSeries) {
+                                chart.series.forEach(function (eachSeries) {
                                     if (eachSeries.options.id === ('range' + key.replace('u', ''))) {
                                         //Calculate Upper Band - End
                                         if (isPointUpdate) {

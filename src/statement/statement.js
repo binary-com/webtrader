@@ -18,12 +18,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         console.error(err);
                     });
             else
-                statement.dialog('open');
+                statement.moveToTop();
         });
     };
 
     function initStatement() {
-        statement = windows.createBlankWindow($('<div/>'), { title: 'Statement', width: 900 });
+        statement = windows.createBlankWindow($('<div/>'), {
+            title: 'Statement',
+            width: 900 ,
+            destroy: function() { table && table.DataTable().destroy(true); statement = null; },
+            'data-authorized' :'true'
+        });
         require(['text!statement/statement.html'], function ($html) {
 
             $html = $($html);
@@ -46,7 +51,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 searching: true,
                 processing: true
             });
-            
+
             table.parent().addClass('hide-search-input');
 
             // Apply the a search on each column input change
@@ -57,7 +62,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                         column.search(this.value) .draw();
                 });
             });
-            
+
             var refreshTable = function (yyyy_mm_dd) {
                 var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
 
@@ -96,7 +101,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     table.api().draw();
                     processing_msg.hide();
                 };
-                
+
                 liveapi.send(request)
                 .then(refresh)
                 .catch(function (err) {
