@@ -357,8 +357,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;
-        var value = state.duration_count.value;
-        state.duration_count.value = Math.min(Math.max(value, range.min), range.max);
+        state.duration_count.value = range.min;
       };
 
       state.digits.update = function() {
