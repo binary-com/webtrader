@@ -37,7 +37,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
     	for (var index = 0; index < data.length; index++)
         {
         	//Calculate Lower Band - start
-        	var ma=bbandsMddlBndData[index][1];
+    	    var ma = indicatorBase.getIndicatorData(bbandsMddlBndData, index);
   	    	var standardDeviation=calculateStandardDeviation(data,index,bbandsOptions,type,ma);
     	    //Lower Band = 20-day SMA - (20-day standard deviation of price x 2)
     	    var lwrBndVal=ma-(standardDeviation*bbandsOptions.devDn);
@@ -53,7 +53,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
     	for (var index = 0; index < data.length; index++)
         {
         	//Calculate Uper Band - start
-            var ma=bbandsMddlBndData[index][1];
+    	    var ma = indicatorBase.getIndicatorData(bbandsMddlBndData, index);
   	    	var standardDeviation=calculateStandardDeviation(data,index,bbandsOptions,type,ma);
     		//Uper Band = 20-day SMA + (20-day standard deviation of price x 2)
     	    var UprBndVal=ma+(standardDeviation*bbandsOptions.devDn);
@@ -107,7 +107,19 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                         var bbandsMiddleBandData = [];
                         for (var index = 0; index < data.length; index++)
                         {
-                            var middleBandvalue = indicatorBase.calculateMAValue(data, bbandsMiddleBandData, index, bbandsOptions.period, bbandsOptions.maType, this.options.type, mdlUniqueID, false, bbandsOptions.appliedTo);
+                            var maOptions = {
+                                data: data,
+                                maData: bbandsMiddleBandData,
+                                index: index,
+                                period: bbandsOptions.period,
+                                maType: bbandsOptions.maType,
+                                type: this.options.type,
+                                key: mdlUniqueID,
+                                isPointUpdate: false,
+                                appliedTo: bbandsOptions.appliedTo,
+                                isIndicatorData: false
+                            };
+                            var middleBandvalue = indicatorBase.calculateMAValue(maOptions);
                             bbandsMiddleBandData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(middleBandvalue, 4)])
                         }
 
@@ -302,7 +314,19 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                             var middleBandData = bbandsMdlSeriesMap[key].options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var maValue = indicatorBase.calculateMAValue(data, maData, dataPointIndex, bbandsOptions.period, bbandsOptions.maType, this.options.type, key, isPointUpdate, bbandsOptions.appliedTo);
+                                var maOptions = {
+                                    data: data,
+                                    maData: maData,
+                                    index: dataPointIndex,
+                                    period: bbandsOptions.period,
+                                    maType: bbandsOptions.maType,
+                                    type: this.options.type,
+                                    key: key,
+                                    isPointUpdate: isPointUpdate,
+                                    appliedTo: bbandsOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+                                var maValue = indicatorBase.calculateMAValue(maOptions);
                                 if (isPointUpdate)
                                 {
                                 	bbandsMdlSeriesMap[key].data[dataPointIndex].update({ y : indicatorBase.toFixed(maValue,4)});

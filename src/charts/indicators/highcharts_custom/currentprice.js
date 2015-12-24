@@ -131,11 +131,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         width: currentPriceOptions.strokeWidth,
                         value: price,
                         zIndex: zIndex,
+                        textAlign: 'left',
                         label: {
-                            text: '<div style="background-color: #2ECC71; border-radius: 2px;">' + price + (isChange ? '%' : '') + '</div>',
+                            text:  price + (isChange ? '%' : ''),
+                            style: { 'background': '#2ECC71'},
                             x: -40,
                             y: 4,
-                            useHTML: true
+                            useHTML: true,
                         }
                     });
                 }

@@ -5,24 +5,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var wclpriceOptionsMap = {}, wclpriceSeriesMap = {};
 
-    //******************************Get Price******************************
-    function getPrice(data, index, appliedTo, type) {
-        var price = 0.0;
-        if (indicatorBase.isOHLCorCandlestick(type)) {
-            price = indicatorBase.extractPriceForAppliedTO(appliedTo, data, index);
-        }
-        else
-        {
-            price = indicatorBase.extractPrice(data, index);
-        }
-        return price;
-    }
-
     //*************************WCLPRIC***************************************
     function calculateWCLPRICEValue(data, index, type) {
-        var closePeice = getPrice(data, index, indicatorBase.CLOSE, type);
-        var highPeice = getPrice(data, index, indicatorBase.HIGH, type);
-        var lowPeice = getPrice(data, index, indicatorBase.LOW, type);
+        var closePeice =indicatorBase.getPrice(data, index, indicatorBase.CLOSE, type);
+        var highPeice =indicatorBase.getPrice(data, index, indicatorBase.HIGH, type);
+        var lowPeice =indicatorBase.getPrice(data, index, indicatorBase.LOW, type);
         //((Close * 2)+High + Low) / 4
         return ((closePeice * 2) + highPeice + lowPeice) / 4
     }

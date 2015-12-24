@@ -77,7 +77,6 @@ module.exports = function (grunt) {
                             '!jquery-ui/**', 'jquery-ui/themes/smoothness/images/**', 'jquery-ui/jquery-ui.min.js', 'jquery-ui/themes/smoothness/jquery-ui.min.css',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js', 'highstock/highcharts-more.js',
                             'jquery/dist/jquery.min.js',
-                            'jquery.timers/jquery.timers.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',

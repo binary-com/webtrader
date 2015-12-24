@@ -89,7 +89,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 var atrValue = (atrData[index - 1][1] * (atrOptions.period - 1) + tr[index]) / atrOptions.period;
                                 if (isFinite(atrValue) && !isNaN(atrValue))
                                 {
-                                    atrData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(atrValue, 2)]);
+                                    atrData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(atrValue, 4)]);
                                 }
                             }
                             else
@@ -246,7 +246,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     tr = Math.abs(priceNow - pricePrev);
                                 }
                                 //Round to 2 decimal places
-                                var atr = indicatorBase.toFixed(( (atrData[dataPointIndex - 1].y || atrData[dataPointIndex - 1][1]) * (n - 1) + tr ) / n, 2) ;
+                                var atr = indicatorBase.toFixed(( (atrData[dataPointIndex - 1].y || atrData[dataPointIndex - 1][1]) * (n - 1) + tr ) / n, 4) ;
                                 if (isPointUpdate)
                                 {
                                     atrSeriesMap[key].data[dataPointIndex].update({ y : atr});
