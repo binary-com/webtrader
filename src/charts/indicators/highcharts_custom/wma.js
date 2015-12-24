@@ -50,7 +50,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                         var wmaData = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = indicatorBase.calculateWMAValue(data, index, wmaOptions.period, this.options.type, wmaOptions.appliedTo);
+                            var maOptions = {
+                                data: data,
+                                index: index,
+                                period: wmaOptions.period,
+                                type: this.options.type,
+                                appliedTo: wmaOptions.appliedTo,
+                                isIndicatorData: false
+                            };
+                            var maValue = indicatorBase.calculateWMAValue(maOptions);
+
                             wmaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -157,16 +166,23 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var wmaOptions = wmaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, options);
                             if (dataPointIndex >= 1) {
-
-                                var wmaValue = indicatorBase.calculateWMAValue(data, dataPointIndex, wmaOptions.period, this.options.type, wmaOptions.appliedTo);
+                                var maOptions = {
+                                    data: data,
+                                    index: dataPointIndex,
+                                    period: wmaOptions.period,
+                                    type: this.options.type,
+                                    appliedTo: wmaOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+                                var maValue = indicatorBase.calculateWMAValue(maOptions);
 
                                 if (isPointUpdate)
                                 {
-                                    wmaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(wmaValue, 4)});
+                                    wmaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else
                                 {
-                                    wmaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(wmaValue, 4)], true, true, false);
+                                    wmaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
                                 }
                             }
                         }

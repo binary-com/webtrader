@@ -56,7 +56,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                        
                         var trimaData = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = indicatorBase.calculateTRIMAValue(data, trimaData, index, trimaOptions.period, this.options.type, trimaOptions.appliedTo);
+                            var maOptions = {
+                                data: data,
+                                maData: trimaData,
+                                index: index,
+                                period: trimaOptions.period,
+                                type: this.options.type,
+                                appliedTo: trimaOptions.appliedTo,
+                            };
+                            var maValue = indicatorBase.calculateTRIMAValue(maOptions);
+
                             trimaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -169,16 +178,23 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var trimaOptions = trimaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                               
-                                var trimaValue = indicatorBase.calculateTRIMAValue(data, trimaData, dataPointIndex, trimaOptions.period, this.options.type, trimaOptions.appliedTo);
+                                var maOptions = {
+                                    data: data,
+                                    maData: trimaData,
+                                    index: dataPointIndex,
+                                    period: trimaOptions.period,
+                                    type: this.options.type,
+                                    appliedTo: trimaOptions.appliedTo,
+                                };
+                                var maValue = indicatorBase.calculateTRIMAValue(maOptions);
 
                                 if (isPointUpdate)
                                 {
-                                    trimaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(trimaValue, 4)});
+                                    trimaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else
                                 {
-                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(trimaValue, 4)], true, true, false);
+                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
                                 }
                             }
                         }

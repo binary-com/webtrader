@@ -70,9 +70,11 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
         $menuLink.click(function () {
             if (!tradingWin) {
                 tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
+                tradingWin.dialog('open');
                 require(['text!tradingtimes/tradingTimes.html'], initTradingWin);
             }
-            tradingWin.dialog('open');
+            else
+                tradingWin.moveToTop();
         });
     }
 

@@ -1,11 +1,6 @@
 > QUnit for unit testing
 > News, message or server alert panel poping out from right
-> An option to distribute indicators
-    > If creator wants to distribute it for free, no commission asked
-    > If creator wants to take out commission, discuss this with Jean if we want to charge a commission
-    > We will review the code before releasing to app store
-        > Review for performance or any other copyright issues or anything that might interfere with our business model
-> add readme for each folder with detailed documentation
+> Add readme for each folder with detailed documentation
 > Add documentation for JS class and HTML pages
 > User should be able to change main candle color by double clicking on it
 > In general, users should be able to do following
@@ -20,7 +15,7 @@
 > Video detailing each and every features of the new charting software
 > Use Sass instead of CSS
 > Do some memory and frame profiling -> Note any performance degrading points
-> Over the course of time, the navigator curve becomes flat alothough charts are fine
+> Over the course of time, the navigator curve becomes flat although charts are fine
 > Grunt HTMLHint
 > Convert all PNG or other format images to SVG. If that is not possible, then figure out if we can compress images further
 > https://www.npmjs.com/package/grunt-code-quality-report

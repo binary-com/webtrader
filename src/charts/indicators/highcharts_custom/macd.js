@@ -8,23 +8,47 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 
     //****************************MACD************************************
      function calculateMACDValue(data, index, macdOptions, type, key, isPointUpdate) {
-
+         var time = (data[index].x || data[index][0]);
          var macdValue = null;
          //*12 Day EMA
-         var fastEmaValue = indicatorBase.calculateMAValue(data, fastEma[key], index, macdOptions.fastPeriod, macdOptions.fastMaType, type, 'f' + key, isPointUpdate, macdOptions.appliedTo);
+         var fastMaOptions = {
+             data: data,
+             maData: fastEma[key],
+             index: index,
+             period: macdOptions.fastPeriod,
+             maType: macdOptions.fastMaType,
+             type: type,
+             key: 'f' + key,
+             isPointUpdate: isPointUpdate,
+             appliedTo: macdOptions.appliedTo,
+             isIndicatorData: false
+         };
+         var fastEmaValue = indicatorBase.calculateMAValue(fastMaOptions);
          //*26 Day EMA
-         var slowEmaValue = indicatorBase.calculateMAValue(data, slowEma[key], index, macdOptions.slowPeriod, macdOptions.slowMaType, type, 's' + key, isPointUpdate, macdOptions.appliedTo);
+         var slowMaOptions = {
+             data: data,
+             maData: slowEma[key],
+             index: index,
+             period: macdOptions.slowPeriod,
+             maType: macdOptions.slowMaType,
+             type: type,
+             key: 's' + key,
+             isPointUpdate: isPointUpdate,
+             appliedTo: macdOptions.appliedTo,
+             isIndicatorData: false
+         };
+         var slowEmaValue = indicatorBase.calculateMAValue(slowMaOptions);
          //*MACD Line: (12-day EMA - 26-day EMA)
          if (index >= macdOptions.slowPeriod) {
              macdValue = fastEmaValue - slowEmaValue;
          }
          if (isPointUpdate) {
-             fastEma[key][index] = fastEmaValue;
-             slowEma[key][index] = slowEmaValue;
+             fastEma[key][index] = [time,fastEmaValue];
+             slowEma[key][index] = [time,slowEmaValue];
          }
          else {
-             fastEma[key].push(fastEmaValue);
-             slowEma[key].push(slowEmaValue);
+             fastEma[key].push([time, fastEmaValue]);
+             slowEma[key].push([time, slowEmaValue]);
          }
          return macdValue;
      }
@@ -34,8 +58,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
     {
         var hstgrmValue = null;
         //*MACD Histogram: MACD Line - Signal Line
-        var macdValue = macdData[index][1] || macdData[index].y;
-        var signalValue = signalData[index][1] || signalData[index].y;
+        var macdValue = indicatorBase.getIndicatorData(macdData, index);//macdData[index][1] || macdData[index].y;
+        var signalValue = indicatorBase.getIndicatorData(signalData, index);// signalData[index][1] || signalData[index].y;
+        //console.log(macdValue, signalValue);
         if (macdValue && signalValue)
             hstgrmValue = macdValue - signalValue;
         return hstgrmValue;
@@ -87,7 +112,19 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
 
                         var signalData = [];
                         for (var index = 0; index < macdData.length; index++) {
-                            var signalValue = indicatorBase.calculateMAValue(macdData, signalData, index, macdOptions.signalPeriod + macdOptions.slowPeriod - 1, macdOptions.signalMaType, this.options.type, signalUniqueID, false, macdOptions.appliedTo);
+                            var maOptions = {
+                                data: macdData,
+                                maData: signalData,
+                                index: index,
+                                period: macdOptions.signalPeriod + macdOptions.slowPeriod - 1,
+                                maType: macdOptions.signalMaType,
+                                type: this.options.type,
+                                key: signalUniqueID,
+                                isPointUpdate: false,
+                                appliedTo: macdOptions.appliedTo,
+                                isIndicatorData: true
+                            };
+                            var signalValue = indicatorBase.calculateMAValue(maOptions);
                             signalData.push([(macdData[index].x || macdData[index][0]), indicatorBase.toFixed(signalValue, 4)]);
                         }
 
@@ -292,9 +329,20 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                             var signalData = signalSeriesMap[key].options.data;
                             var macdKey = key.replace('s','m');
                             var macdData = macdSeriesMap[macdKey].options.data;
-                            console.log(key,macdKey)
-                            if ( dataPointIndex >= 1) {
-                                var signalValue = indicatorBase.calculateMAValue(macdData, signalData, dataPointIndex, macdOptions.signalPeriod + macdOptions.slowPeriod - 1, macdOptions.signalMaType, this.options.type, key, isPointUpdate, macdOptions.appliedTo);
+                            if (dataPointIndex >= 1) {
+                                var maOptions = {
+                                    data: macdData,
+                                    maData: signalData,
+                                    index: dataPointIndex,
+                                    period: macdOptions.signalPeriod + macdOptions.slowPeriod - 1,
+                                    maType: macdOptions.signalMaType,
+                                    type: this.options.type,
+                                    key: key,
+                                    isPointUpdate: isPointUpdate,
+                                    appliedTo: macdOptions.appliedTo,
+                                    isIndicatorData: true
+                                };
+                                var signalValue = indicatorBase.calculateMAValue(maOptions);
                                 if(signalValue && !isNaN(signalValue))
                                 {
                                     if (isPointUpdate)
