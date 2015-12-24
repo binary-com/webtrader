@@ -238,8 +238,8 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
             var options = {
                 showOn: model.showOn || 'focus',
                 numberOfMonths: input.attr('numberOfMonths')*1 || 2,
-                maxDate: model.maxDate || 0,
-                minDate: model.minDate || new Date(2010, 0, 1),
+                maxDate: model.maxDate || null,
+                minDate: model.minDate || 0,
                 dateFormat: model.dateFormat || 'yy-mm-dd',
                 showAnim: model.showAnim ||  'drop',
                 showButtonPanel: model.showButtonPanel || true,
