@@ -320,6 +320,10 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         });
 
         $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
+
+        return {
+          clear: function() { dropdonws.clear(); }
+        };
     }
 
     return {
@@ -404,6 +408,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                                 close: fn, // callback for dialog close event
                                 open: fn,  // callback for dialog open event
                                 destroy: fn, // callback for dialog destroy event
+                                refresh: fn, // callback for refresh button click
                                 autoOpen: false,
                                 resizeable:true,
                                 collapsable:true,
@@ -483,6 +488,12 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             var attributes = Object.keys(options).filter(function(key) { return key.startsWith('data-'); } );
             attributes.forEach(function(key) { return blankWindow.attr(key, options[key]); } );
 
+            /* check and add the refresh button if needed */
+            if(options.refresh){
+                var header = blankWindow.parent().find('.ui-dialog-title');
+                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
+                refresh.on('click',options.refresh);
+            }
             return blankWindow;
         },
 

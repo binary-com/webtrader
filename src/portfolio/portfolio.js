@@ -3,6 +3,7 @@
  */
 
 define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui', 'datatables','jquery-growl'], function ($, windows, liveapi) {
+    'use strict';
 
     var portfolioWin = null;
     var table = null;
@@ -68,6 +69,14 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                       portfolioWin = null;
                       portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
                       portfolio_refresh_interval = null;
+                    },
+                    refresh: function() {
+                      if(portfolioWin.dialogExtend('state') === 'minimized') {
+                          portfolioWin.dialogExtend('restore');
+                      }
+                      portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
+                      portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                      update_table();
                     }
                 });
 
@@ -102,17 +111,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     processing: true
                 });
                 table.parent().addClass('hide-search-input');
-
-                var header = portfolioWin.parent().find('.ui-dialog-title');
-                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
-                refresh.on('click',function(){
-                    if(portfolioWin.dialogExtend('state') === 'minimized') {
-                        portfolioWin.dialogExtend('restore');
-                    }
-                    portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
-                    portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
-                    update_table();
-                });
 
                 portfolioWin.dialog('open');
             })

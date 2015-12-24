@@ -4,7 +4,8 @@
 define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
 
     var statement = null,
-        table = null;
+        table = null,
+        datepicker = null;
 
     function init($menuLink) {
         require(['css!statement/statement.css']);
@@ -22,19 +23,66 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         });
     };
 
+    function refreshTable (yyyy_mm_dd) {
+        var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
+
+        var request = {
+            statement: 1,
+            description: 1
+        };
+
+        /* if a date is specified get the transactions for that date */
+        if (yyyy_mm_dd) {
+            request.date_from = yyyy_mm_dd_to_epoch(yyyy_mm_dd, { utc: true });
+            var one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
+            request.date_to = request.date_from + one_day_utc;
+        }
+        else /* otherwise get the most recent 50 transactions */
+            request.limit = 50;
+
+        /* refresh the table with result of { profit_table:1 } from WS */
+        var refresh = function (data) {
+            var transactions = (data.statement && data.statement.transactions) || [];
+            var rows = transactions.map(function (trans) {
+                var amount = trans.amount * 1;
+                var svg = amount > 0 ? 'up' : amount < 0 ? 'down' : 'equal';
+                var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
+                return [
+                    epoch_to_string(trans.transaction_time, { utc: true }),
+                    trans.transaction_id,
+                    capitalizeFirstLetter(trans.action_type),
+                     img + trans.longcode ,
+                    (trans.amount * 1).toFixed(2),
+                    '<b>' + formatPrice(trans.balance_after) + '</b>'
+                ];
+            });
+            table.api().rows().remove();
+            table.api().rows.add(rows);
+            table.api().draw();
+            processing_msg.hide();
+        };
+
+        liveapi.send(request)
+        .then(refresh)
+        .catch(function (err) {
+            refresh({});
+            $.growl.error({ message: err.message });
+            console.error(err);
+        });
+    }
+
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
             title: 'Statement',
             width: 900 ,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
+            refresh: function() { datepicker.clear(); refreshTable(); },
             'data-authorized' :'true'
         });
-        require(['text!statement/statement.html'], function ($html) {
+        require(['text!statement/statement.html'], function (html) {
 
-            $html = $($html);
-            $html.appendTo(statement);
-
-            table = $html;
+            table = $(html);
+            table.appendTo(statement);
 
             table = table.dataTable({
                 data: [],
@@ -63,56 +111,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 });
             });
 
-            var refreshTable = function (yyyy_mm_dd) {
-                var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
-
-                var request = {
-                    statement: 1,
-                    description: 1
-                };
-
-                /* if a date is specified get the transactions for that date */
-                if (yyyy_mm_dd) {
-                    request.date_from = yyyy_mm_dd_to_epoch(yyyy_mm_dd, { utc: true });
-                    var one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
-                    request.date_to = request.date_from + one_day_utc;
-                }
-                else /* otherwise get the most recent 50 transactions */
-                    request.limit = 50;
-
-                /* refresh the table with result of { profit_table:1 } from WS */
-                var refresh = function (data) {
-                    var transactions = (data.statement && data.statement.transactions) || [];
-                    var rows = transactions.map(function (trans) {
-                        var amount = trans.amount * 1;
-                        var svg = amount > 0 ? 'up' : amount < 0 ? 'down' : 'equal';
-                        var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
-                        return [
-                            epoch_to_string(trans.transaction_time, { utc: true }),
-                            trans.transaction_id,
-                            capitalizeFirstLetter(trans.action_type),
-                             img + trans.longcode ,
-                            (trans.amount * 1).toFixed(2),
-                            '<b>' + formatPrice(trans.balance_after) + '</b>'
-                        ];
-                    });
-                    table.api().rows().remove();
-                    table.api().rows.add(rows);
-                    table.api().draw();
-                    processing_msg.hide();
-                };
-
-                liveapi.send(request)
-                .then(refresh)
-                .catch(function (err) {
-                    refresh({});
-                    $.growl.error({ message: err.message });
-                    console.error(err);
-                });
-            }
-
             refreshTable();
-            statement.addDateToHeader({
+            datepicker = statement.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
                 changed: refreshTable,
