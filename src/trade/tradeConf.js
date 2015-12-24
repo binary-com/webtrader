@@ -102,8 +102,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               state.back.visible = true; /* show back button */
               liveapi.events.off('tick',fn); /* unregister from tick stream */
           }
-          /* update state for each new tick in Up/Down contracts */
-          if(state.ticks.category === 'Up/Down')
+          /* update state for each new tick in Up/Down && Asians contracts */
+          if(state.ticks.category !== 'Digits')
               state.ticks.update_status();
       });
     }
@@ -136,6 +136,14 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         },
         ticks: {
             array: [],
+            average: function(){
+              var array = this.array;
+              var sum = 0;
+              for(var i = 0; i < array.length; ++i)
+                sum += array[i].quote*1;
+              var avg = sum / (array.length || 1);
+              return avg;
+            },
             getPlotX: function(){
               var inx = this.array.length;
               if(inx === 1) return {value: inx, label: 'Entry Spot'};
@@ -144,9 +152,15 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             },
             getPlotY: function(){
               var inx = this.array.length;
-              if(inx !== 1) return null;
               var tick = this.array[inx-1];
-              return {value: tick.quote*1, label:'Barrier ('+tick.quote+')', id: 'plot-barrier-y'};
+              if(this.category === 'Up/Down' && inx === 1)
+                return {value: tick.quote*1, label:'Barrier ('+tick.quote+')', id: 'plot-barrier-y'};
+
+              if(this.category === 'Asians') {
+                var avg = this.average().toFixed(5);
+                return {value: avg, label:'Average ('+ avg +')', id: 'plot-barrier-y'};
+              }
+              return null;
             },
             tick_count: passthrough.tick_count,
             value: (passthrough.digits_value || '0') + '', // last digit value selected by the user
@@ -155,7 +169,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
         },
         arrow: {
-          visible:!(_(['Digits','Up/Down']).contains(passthrough.category) && passthrough.duration_unit === 'ticks'),
+          visible:!(_(['Digits','Up/Down','Asians']).contains(passthrough.category) && passthrough.duration_unit === 'ticks'),
         },
         back: { visible: false }, /* back buttom */
       };
@@ -175,7 +189,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       state.ticks.update_status = function() {
         var first_quote = _.first(state.ticks.array).quote + '',
             last_quote = _.last(state.ticks.array).quote + '',
-            digits_value = state.ticks.value + '';
+            digits_value = state.ticks.value + '',
+            average = state.ticks.average().toFixed(5);
         var category = state.ticks.category,
             display = state.ticks.category_display;
         var css = {
@@ -190,6 +205,10 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               'Up/Down': {
                 rise: last_quote*1 > first_quote*1,
                 fall: last_quote*1 < first_quote*1
+              },
+              Asians: {
+                'asian up': average < last_quote*1,
+                'asian down': average > last_quote*1,
               }
             };
           /* set the css class */

@@ -66,8 +66,9 @@
           <span rv-html="row.quote | bold-last-character"></span>
       </li>
   </ul>
+
   <div class='tick-chart'
-       rv-if="ticks.category | eq 'Up/Down'"
+       rv-if="ticks.category | one-of 'Up/Down' 'Asians'"
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
        rv-class-won="ticks.status | eq 'won'"
