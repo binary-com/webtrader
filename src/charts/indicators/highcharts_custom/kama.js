@@ -4,10 +4,9 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var kamaOptionsMap = {}, kamaSeriesMap = {};
-    var kama1 = {}, kama2 = {};
 
     //*************************KAMA*****************************************
-    function calculateKAMAValue(data, kamaData, index, period, fastPeriod, slowPeriod, type, appliedTo) {
+    function calculateKAMAValue(kamaOptions) {
 
         //Calculate KAMA data
         //Change = ABS(Close - Close (10 periods ago))
@@ -17,24 +16,26 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         //slowest SC = 2/(slowest + 1);
         //SC = [ER x (fastest SC - slowest SC) + slowest SC]2
         //Current KAMA = Prior KAMA + SC * (Price - Prior KAMA)
-        if (index < period - 1)
+        if (kamaOptions.index < kamaOptions.period - 1)
             return null;
-        else if (index == period - 1)
-            return indicatorBase.getPrice(data, index, appliedTo, type);
+        else if (kamaOptions.index == kamaOptions.period - 1)
+            return indicatorBase.getPrice(kamaOptions.data.data, kamaOptions.index, kamaOptions.appliedTo, kamaOptions.type);
         else {
-            var fastestSC = 2 / (fastPeriod + 1);
-            var slowestSC = 2 / (slowPeriod + 1);
+            var fastestSC = 2 / (kamaOptions.fastPeriod + 1);
+            var slowestSC = 2 / (kamaOptions.slowPeriod + 1);
             //Change = ABS(Close - Close (10 periods ago))
-            var change = Math.abs(indicatorBase.getPrice(data, index, appliedTo, type) - indicatorBase.getPrice(data, index - period, appliedTo, type));
+            var change = Math.abs(indicatorBase.getPrice(kamaOptions.data.data, kamaOptions.index, kamaOptions.appliedTo, kamaOptions.type)
+                - indicatorBase.getPrice(kamaOptions.data.data, kamaOptions.index - kamaOptions.period, kamaOptions.appliedTo, kamaOptions.type));
             var sum = 0.0;
-            for (var i = 0; i < period; i++) {
+            for (var i = 0; i < kamaOptions.period; i++) {
                 //Volatility = Sum10(ABS(Close - Prior Close))
-                sum += Math.abs(indicatorBase.getPrice(data, index - i, appliedTo, type) - indicatorBase.getPrice(data, index - (i + 1), appliedTo, type));
+                sum += Math.abs(indicatorBase.getPrice(kamaOptions.data.data, kamaOptions.index - i, kamaOptions.appliedTo, kamaOptions.type)
+                    - indicatorBase.getPrice(kamaOptions.data.data, kamaOptions.index - (i + 1), kamaOptions.appliedTo, kamaOptions.type));
             }
             var er = change / sum;
             var sc = Math.pow((er * (fastestSC - slowestSC) + slowestSC), 2);
-            var price = indicatorBase.getPrice(data, index, appliedTo, type);
-            var preKama = typeof kamaData[index - 1] === "number" ? kamaData[index - 1] : (kamaData[index - 1][1] || kamaData[index - 1].y);
+            var price = indicatorBase.getPrice(kamaOptions.data.data, kamaOptions.index, kamaOptions.appliedTo, kamaOptions.type);
+            var preKama = indicatorBase.getIndicatorData(kamaOptions.data.kamaData, kamaOptions.index - 1);
             return preKama + sc * (price - preKama);
         }
     };
@@ -85,7 +86,23 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                         var kamaData = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = calculateKAMAValue(data, kamaData, index, kamaOptions.period, kamaOptions.fastPeriod, kamaOptions.slowPeriod, this.options.type, kamaOptions.appliedTo);
+
+                            var kOptions = {
+                                data:
+                                    {
+                                        data: data,
+                                        kamaData: kamaData
+                                    },
+                                index: index,
+                                period: kamaOptions.period,
+                                fastPeriod: kamaOptions.fastPeriod,
+                                slowPeriod: kamaOptions.slowPeriod,
+                                type: this.options.type,
+                                appliedTo: kamaOptions.appliedTo,
+                                isIndicatorData: false
+                            };
+
+                            var maValue = calculateKAMAValue(kOptions);
                             kamaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -193,13 +210,28 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var kamaOptions = kamaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var kamaValue =  calculateKAMAValue(data, kamaData, dataPointIndex, kamaOptions.period, kamaOptions.fastPeriod, kamaOptions.slowPeriod, this.options.type, kamaOptions.appliedTo);
+                                var kOptions = {
+                                    data:
+                                        {
+                                            data: data,
+                                            kamaData: kamaData
+                                        },
+                                    index: dataPointIndex,
+                                    period: kamaOptions.period,
+                                    fastPeriod: kamaOptions.fastPeriod,
+                                    slowPeriod: kamaOptions.slowPeriod,
+                                    type: this.options.type,
+                                    appliedTo: kamaOptions.appliedTo,
+                                    isIndicatorData: false
+                                };
+
+                                var maValue = calculateKAMAValue(kOptions);
 
                                 if (isPointUpdate) {
-                                    kamaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(kamaValue, 4) });
+                                    kamaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else {
-                                    kamaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(kamaValue, 4)], true, true, false);
+                                    kamaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
                                 }
                             }
                         }

@@ -7,7 +7,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
     var dema1 = {}, dema2 = {};
 
     //*************************DEMA*****************************************
-    function calculateDEMAValue (data, index, period, type, key, isPointUpdate, appliedTo) {
+    function calculateDEMAValue(demaOptions) {
         //Calculate DEMA data
         /*
          The Double Exponential Moving Average (DEMA) of time series 't' is:
@@ -16,38 +16,46 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
          *      DEMA = 2 * EMA1 - EMA2 
          * Do not fill any value in DemaData from 0 index to options.period-1 index
          */
-        var time = (data[index].x || data[index][0]);
-        if (!dema1[key]) {
-            dema1[key] = [], dema2[key] = [];
-            //*If it hasn't been called for index zero to period-1
-            if (index === period - 1) {
-                for (var i = 0; i < period - 1; i++) {
-                    dema1[key].push([time, null]);
-                    dema2[key].push([time, null]);
-                }
-            }
+
+        var time = (demaOptions.data[demaOptions.index].x || demaOptions.data[demaOptions.index][0]);
+        var price = indicatorBase.getPrice(demaOptions.data, demaOptions.index, demaOptions.appliedTo, demaOptions.type);
+
+        var ma1Options = {
+            data: demaOptions.data,
+            maData: dema1[demaOptions.key],
+            index: demaOptions.index,
+            period: demaOptions.period,
+            type: demaOptions.type,
+            appliedTo: demaOptions.appliedTo,
+            isIndicatorData: false
         };
-
-        var price = indicatorBase.getPrice(data, index, appliedTo, type);
-
-        var dema1Value = indicatorBase.calculateEMAValue(data, dema1[key], index, period, type, appliedTo);
-        if (isPointUpdate) {
-            dema1[key][index] = [time, dema1Value];
+        var dema1Value = indicatorBase.calculateEMAValue(ma1Options);
+        if (demaOptions.isPointUpdate) {
+            dema1[demaOptions.key][demaOptions.index] = [time, dema1Value];
         }
         else {
-            dema1[key].push([time, dema1Value]);
+            dema1[demaOptions.key].push([time, dema1Value]);
         }
 
-        var dema2Value = indicatorBase.calculateEMAValue(dema1[key], dema2[key], index, period, type, appliedTo);
+        var ma2Options = {
+            data: dema1[demaOptions.key],
+            maData: dema2[demaOptions.key],
+            index: demaOptions.index,
+            period: demaOptions.period,
+            type: demaOptions.type,
+            appliedTo: demaOptions.appliedTo,
+            isIndicatorData: true
+        };
+        var dema2Value = indicatorBase.calculateEMAValue(ma2Options);
 
-        if (isPointUpdate) {
-            dema2[key][index] = [time, dema2Value];
+        if (demaOptions.isPointUpdate) {
+            dema2[demaOptions.key][demaOptions.index] = [time, dema2Value];
         }
         else {
-            dema2[key].push([time, dema2Value]);
+            dema2[demaOptions.key].push([time, dema2Value]);
         }
-       
-        return  2 * dema1Value - dema2Value;
+
+        return 2 * dema1Value - dema2Value;
 
     };
 
@@ -94,8 +102,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          */
 
                         var demaData = [];
+                        dema1[uniqueID] = [], dema2[uniqueID] = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = calculateDEMAValue(data, index, demaOptions.period, this.options.type, uniqueID, false, demaOptions.appliedTo);
+                            var dOptions =
+                            {
+                                data: data,
+                                index: index,
+                                period: demaOptions.period,
+                                type: this.options.type,
+                                key: uniqueID,
+                                isPointUpdate: false,
+                                appliedTo: demaOptions.appliedTo
+                            };
+                            var maValue = calculateDEMAValue(dOptions);
                             demaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -141,6 +160,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     demaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     demaSeriesMap[uniqueID] = null;
+                    dema1[uniqueID] = [];
+                    dema2[uniqueID] = [];
                 };
 
                 H.Series.prototype.preRemovalCheckDEMA = function (uniqueID) {
@@ -200,11 +221,20 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                              */
                             //Find the data point
                             var data = series.options.data;
-                            var demaData = demaSeriesMap[key].options.data;
                             var demaOptions = demaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var demaValue = calculateDEMAValue(data, dataPointIndex, demaOptions.period, this.options.type, key, isPointUpdate, demaOptions.appliedTo);
+                                var dOptions =
+                                {
+                                   data: data,
+                                   index: dataPointIndex,
+                                   period: demaOptions.period,
+                                   type: this.options.type,
+                                   key: key,
+                                   isPointUpdate: isPointUpdate,
+                                   appliedTo: demaOptions.appliedTo
+                                };
+                                var demaValue = calculateDEMAValue(dOptions);
 
                                 if (isPointUpdate) {
                                     demaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(demaValue, 4) });

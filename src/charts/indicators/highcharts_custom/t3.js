@@ -7,7 +7,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
     var t3Ema1 = {}, t3Ema2 = {}, gd1 = {}, gd2 = {};
 
     //*************************DEMA*****************************************
-    function calculateGD(data, index, period, vfactor, type, key, isPointUpdate, appliedTo) {
+    function calculateGD(options) {
         //Calculate T3 data
         /*
         EMA1 = EMA(x,Period)
@@ -20,58 +20,111 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         Tim Tillson advised or preferred a value of 0.7.
          */
 
-        var time = (data[index].x || data[index][0]);
-        if (!t3Ema1[key]) {
-            t3Ema1[key] = [], t3Ema2[key] = [];
+        var time = (options.data[options.index].x || options.data[options.index][0]);
+        if (options.index === 0) {
+            t3Ema1[options.key] = [], t3Ema2[options.key] = [];
         }
 
-        var t3Ema1Value = indicatorBase.calculateEMAValue(data, t3Ema1[key], index, period, type, appliedTo);
-        if (isPointUpdate) {
-            t3Ema1[key][index] = [time, t3Ema1Value];
+        var ma1Options = {
+            data: options.data,
+            maData: t3Ema1[options.key],
+            index: options.index,
+            period: options.period,
+            type: options.type,
+            appliedTo: options.appliedTo,
+            isIndicatorData: options.isIndicatorData
+        };
+        var t3Ema1Value = indicatorBase.calculateEMAValue(ma1Options);
+        if (options.isPointUpdate) {
+            t3Ema1[options.key][options.index] = [time, t3Ema1Value];
         }
         else {
-            t3Ema1[key].push([time, t3Ema1Value]);
+            t3Ema1[options.key].push([time, t3Ema1Value]);
         }
 
-        var t3Ema2Value = indicatorBase.calculateEMAValue(t3Ema1[key], t3Ema2[key], index, period, type, appliedTo);
+        var ma2Options = {
+            data: t3Ema1[options.key],
+            maData: t3Ema2[options.key],
+            index: options.index,
+            period: options.period,
+            type: options.type,
+            appliedTo: options.appliedTo,
+            isIndicatorData: true
+        };
+        var t3Ema2Value = indicatorBase.calculateEMAValue(ma2Options);
 
-        if (isPointUpdate) {
-            t3Ema2[key][index] = [time, t3Ema2Value];
+        if (options.isPointUpdate) {
+            t3Ema2[options.key][options.index] = [time, t3Ema2Value];
         }
         else {
-            t3Ema2[key].push([time, t3Ema2Value]);
+            t3Ema2[options.key].push([time, t3Ema2Value]);
         }
 
-        return (t3Ema1Value * (1 + vfactor)) - (t3Ema2Value * vfactor);
+        return (t3Ema1Value * (1 + options.vFactor)) - (t3Ema2Value * options.vFactor);
     };
 
 
-    function calculateT3Value(data, index, period, vfactor, type, key, isPointUpdate, appliedTo) {
+    function calculateT3Value(t3Options) {
         //T3 = GD(GD(GD(t, Period, vFactor), Period, vFactor), Period, vFactor);
-        var time = (data[index].x || data[index][0]);
+        var time = (t3Options.data[t3Options.index].x || t3Options.data[t3Options.index][0]);
 
-        if (!gd1[key]) {
-            gd1[key] = [], gd2[key] = [];
+        if (t3Options.index === 0) {
+            gd1[t3Options.key] = [], gd2[t3Options.key] = [];
         }
-        var gd1value = calculateGD(data, index, period, vfactor, type, 'g1' + key, isPointUpdate, appliedTo);
-        if (isPointUpdate) {
-            gd1[key][index] = [time, gd1value];
+
+        var gd1Options =
+        {
+            data: t3Options.data,
+            index: t3Options.index,
+            period: t3Options.period,
+            vFactor: t3Options.vFactor,
+            type: t3Options.type,
+            key: 'g1' + t3Options.key,
+            isPointUpdate: t3Options.isPointUpdate,
+            appliedTo: t3Options.appliedTo,
+            isIndicatorData: false
+        }
+        var gd1value = calculateGD(gd1Options);
+        if (t3Options.isPointUpdate) {
+            gd1[t3Options.key][t3Options.index] = [time, gd1value];
         }
         else {
-            gd1[key].push([time, gd1value]);
+            gd1[t3Options.key].push([time, gd1value]);
         }
 
-        var gd2value = calculateGD(gd1[key], index, period, vfactor, type, 'g2' + key, isPointUpdate, appliedTo);
-        if (isPointUpdate) {
-            gd2[key][index] = [time, gd2value];
+        var gd2Options =
+        {
+            data: gd1[t3Options.key],
+            index: t3Options.index,
+            period: t3Options.period,
+            vFactor: t3Options.vFactor,
+            type: t3Options.type,
+            key: 'g2' + t3Options.key,
+            isPointUpdate: t3Options.isPointUpdate,
+            appliedTo: t3Options.appliedTo,
+            isIndicatorData: true
+        }
+        var gd2value = calculateGD(gd2Options);
+        if (t3Options.isPointUpdate) {
+            gd2[t3Options.key][t3Options.index] = [time, gd2value];
         }
         else {
-            gd2[key].push([time, gd2value]);
+            gd2[t3Options.key].push([time, gd2value]);
         }
 
-        var gd3value = calculateGD(gd2[key], index, period, vfactor, type, 'g3' + key, isPointUpdate, appliedTo);
-
-        return gd3value;
+        var gd3Options =
+        {
+            data: gd2[t3Options.key],
+            index: t3Options.index,
+            period: t3Options.period,
+            vFactor: t3Options.vFactor,
+            type: t3Options.type,
+            key: 'g3' + t3Options.key,
+            isPointUpdate: t3Options.isPointUpdate,
+            appliedTo: t3Options.appliedTo,
+            isIndicatorData: true
+        }
+        return calculateGD(gd3Options);
     }
 
     return {
@@ -124,10 +177,21 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                         var t3Data = [];
                         for (var index = 0; index < data.length; index++) {
-                            var maValue = calculateT3Value(data, index, t3Options.period, t3Options.vFactor, this.options.type, uniqueID, false, t3Options.appliedTo);
+                            var tOptions =
+                                {
+                                    data: data,
+                                    index: index,
+                                    period: t3Options.period,
+                                    vFactor: t3Options.vFactor,
+                                    type: this.options.type,
+                                    key: uniqueID,
+                                    isPointUpdate: false,
+                                    appliedTo: t3Options.appliedTo,
+                                    isIndicatorData: false
+                                };
+                            var maValue = calculateT3Value(tOptions);
                             t3Data.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
-                        }
-
+                        };
 
                         var chart = this.chart;
 
@@ -165,11 +229,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeT3 = function (uniqueID) {
+                H.Series.prototype.removeT3 = function (key) {
                     var chart = this.chart;
-                    t3OptionsMap[uniqueID] = null;
-                    chart.get(uniqueID).remove();
-                    t3SeriesMap[uniqueID] = null;
+                    t3OptionsMap[key] = null;
+                    chart.get(key).remove();
+                    t3SeriesMap[key] = null;
+                    t3Ema1['g1' + key] = [], t3Ema1['g2' + key] = [], t3Ema1['g3' + key] = [];
+                    t3Ema2['g1' + key] = [], t3Ema2['g2' + key] = [], t3Ema2['g3' + key] = [];
+                    gd1[key] = []; gd2[key] = [];
                 };
 
                 H.Series.prototype.preRemovalCheckT3 = function (uniqueID) {
@@ -238,7 +305,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             var t3Options = t3OptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var t3Value = calculateT3Value(data, dataPointIndex, t3Options.period, t3Options.vFactor, this.options.type, key, isPointUpdate, t3Options.appliedTo);
+                                var tOptions =
+                                {
+                                    data: data,
+                                    index: dataPointIndex,
+                                    period: t3Options.period,
+                                    vFactor: t3Options.vFactor,
+                                    type: this.options.type,
+                                    key: key,
+                                    isPointUpdate: isPointUpdate,
+                                    appliedTo: t3Options.appliedTo,
+                                    isIndicatorData: false
+                                }
+                                var t3Value = calculateT3Value(tOptions);
 
                                 if (isPointUpdate) {
                                     t3SeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(t3Value, 4) });

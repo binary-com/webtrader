@@ -328,7 +328,7 @@ define(['jquery'], function ($) {
             else {
                 ema2[maOptions.key].push([time, ema2Value]);
             }
-
+                  
             var ma3Options = {
                 data: ema2[maOptions.key],
                 maData: ema3[maOptions.key],

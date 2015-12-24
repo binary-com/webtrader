@@ -68,7 +68,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					            var options = {
 					                period: parseInt($("#t3_period").val()),
 					                vFactor: parseFloat($("#t3_volume_factor").val()),
-					                stroke: $("#t3_line_stroke").css("background-color"),
+					                stroke: $("#t3_stroke").css("background-color"),
 					                strokeWidth: parseInt($("#t3_stroke_width").val()),
 					                dashStyle: $("#t3_dash_style").val(),
 					                appliedTo: parseInt($("#t3_applied_to").val())
