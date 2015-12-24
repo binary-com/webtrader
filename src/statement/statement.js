@@ -59,7 +59,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
 
             var loading = false;
-            var total_rows = 0;
+            var options = { offset : 0, limit: 50 };
+            var is_specific_date_shown = false; /* is data for a specific date is shown */
             var refreshTable = function (optoins) {
                 var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
                 loading = true;
@@ -74,13 +75,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     request.date_from = yyyy_mm_dd_to_epoch(optoins, { utc: true });
                     var one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
                     request.date_to = request.date_from + one_day_utc;
+                    table.api().rows().remove();
+                    is_specific_date_shown = true;
                 }
-                else if(typeof optoins === 'object') {
-                    request.limit = options.limit;
-                    request.offset = options.offset;
-                }
-                else /* otherwise get the most recent 50 transactions */
+                else  {
                     request.limit = 50;
+                    if(is_specific_date_shown) {
+                        table.api().rows().remove();
+                        is_specific_date_shown = false;
+                    }
+                    request.offset = table.api().column(0).data().length;
+                }
 
                 /* refresh the table with result of { profit_table:1 } from WS */
                 var refresh = function (data) {
@@ -98,8 +103,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                             '<b>' + formatPrice(trans.balance_after) + '</b>'
                         ];
                     });
-                    // table.api().rows().remove();
-                    total_rows += rows.length;
                     table.api().rows.add(rows);
                     table.api().draw();
                     loading = false;
@@ -115,7 +118,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 });
             }
 
-            refreshTable();
             statement.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
@@ -125,33 +127,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
             statement.dialog('open');
 
-            var options = {
-              offset : 0,
-              limit: 50
-            };
 
             /**************** infinite scroll implementation *******************/
-            var table_dom = table[0];
-            var postion = 0; // scroll postion (between 0 and 1)
-            $.fn.dataTable.ext.search.push(
-                function( settings, data, dataIndex ) {
-                    if(settings.nTable !== table_dom)
-                      return true;
-                    // console.warn(dataIndex);
-                    // return dataIndex + 50 >= total_rows;
-                    console.warn(dataIndex + 30 >= total_rows, dataIndex,total_rows, postion);
-                    return dataIndex + 30 >= total_rows;
-                }
-            );
-
+            refreshTable();
             statement.scroll(function(){
-              var scrollTop = statement.scrollTop();
-              var innerHeight = statement.innerHeight();
-              var scrollHeight = statement[0].scrollHeight;
-              postion = (scrollTop + innerHeight) / scrollHeight;
-              if(postion > 0.75 && !loading){
-                console.warn('refreshing!');
-                refreshTable(options);
+              var scrollTop = statement.scrollTop(),
+                  innerHeight = statement.innerHeight(),
+                  scrollHeight = statement[0].scrollHeight,
+                  postion = (scrollTop + innerHeight) / scrollHeight;
+              if(postion > 0.75 && !loading && !is_specific_date_shown){
+                refreshTable();
               }
             });
         });
