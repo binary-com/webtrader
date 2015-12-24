@@ -40,21 +40,22 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         });
       }, /* end of => bind() */
       routine: function(el, ticks){
+        var model = this.model;
         var addPlotLineX = function(chart, options) {
           chart.xAxis[0].addPlotLine({
              value: options.value,
-             id: options.id || options.label,
+             id: options.id || options.value,
              label: {text: options.label || 'label'},
              color: options.color || '#e98024',
              width: options.width || 2,
           });
         };
 
-        var addPlotLineY = function(chart,tick) {
+        var addPlotLineY = function(chart,options) {
           chart.yAxis[0].addPlotLine({
-            id: 'tick-barrier',
-            value: tick.quote*1,
-            label: {text: 'Barrier ('+tick.quote+')', align: 'center'},
+            id: options.id || options.label,
+            value: options.value,
+            label: {text: options.label, align: 'center'},
             color: 'green',
             width: 2,
           });
@@ -66,13 +67,12 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         var tick = _.last(ticks);
         el.chart.series[0].addPoint([index, tick.quote*1]);
 
-        if(index === 1) {
-           addPlotLineX(el.chart, {value: index, label: 'Entry Spot'});
-           addPlotLineY(el.chart, tick);
-        }
-        if(index === el.getAttribute('tick-count')*1) {
-          addPlotLineX(el.chart, {value:index, label: 'Exit Spot'});
-        }
+        var plot_x = model.getPlotX(); // could return null
+        plot_x && addPlotLineX(el.chart,plot_x);
+        var plot_y = model.getPlotY(); // could return null
+        plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
+        plot_y && addPlotLineY(el.chart, plot_y);
+
       } /* end of routine() */
     };
 
@@ -136,6 +136,18 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         },
         ticks: {
             array: [],
+            getPlotX: function(){
+              var inx = this.array.length;
+              if(inx === 1) return {value: inx, label: 'Entry Spot'};
+              if(inx === this.tick_count) return {value:inx, label: 'Exit Spot'}
+              return null;
+            },
+            getPlotY: function(){
+              var inx = this.array.length;
+              if(inx !== 1) return null;
+              var tick = this.array[inx-1];
+              return {value: tick.quote*1, label:'Barrier ('+tick.quote+')', id: 'plot-barrier-y'};
+            },
             tick_count: passthrough.tick_count,
             value: (passthrough.digits_value || '0') + '', // last digit value selected by the user
             category: passthrough.category,
