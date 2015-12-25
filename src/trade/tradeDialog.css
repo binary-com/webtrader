@@ -39,6 +39,7 @@
   min-width: 60px;
   border-radius: 5px;
   padding:3px;
+  color: white;
 }
 .trade-fields .categories-row li.tick-quote span.down { background: #c03; }
 
