@@ -184,7 +184,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           perv_quote: '0',
           down: function(){
             var ans= this.quote*1 < this.perv_quote*1;
-            console.warn(this.quote, this.perv_quote, ans);
             return ans;
           }
         },
