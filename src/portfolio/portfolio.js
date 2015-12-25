@@ -8,6 +8,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     var portfolioWin = null;
     var table = null;
     var registered_contracts = {};
+    var balance_span = null;
 
     function init(li) {
         li.click(function () {
@@ -17,6 +18,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 portfolioWin.moveToTop();
         });
     }
+
     function update_indicative(data) {
         var contract = data.proposal_open_contract;
         var id = contract.contract_id,
@@ -29,6 +31,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         if (table) {
             var row = table.api().row('#' + id);
             var cols = row.data();
+            if(!cols) return; /* table might be empty */
             var perv_indicative = cols[3];
             cols[3] = indicative; /* update the indicative column */
             row.data(cols);
@@ -37,6 +40,19 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             var span = $('#' + id).find('td:nth-child(4)').find('span');
             span.removeClass('red green').addClass((perv_indicative*1) <= (indicative*1) ? 'green' : 'red');
         }
+    }
+
+    function update_balance() {
+        liveapi.send({ balance: 1 })
+            .then(function (data) {
+                var currency = data.balance.currency;
+                var balance = data.balance.balance;
+                balance_span.html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>');
+            })
+            .catch(function (err) {
+                console.error(err);
+                $.growl.error({ message: err.message });
+            });
     }
 
     function initPortfolioWin() {
@@ -80,14 +96,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     }
                 });
 
-                var currency = data.balance.currency;
-                var balance = data.balance.balance;
                 var header = portfolioWin.parent().find('.ui-dialog-title').css('width', '25%');
-
-                $('<span class="span-in-dialog-header" />')
-                    .html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>')
+                balance_span = $('<span class="span-in-dialog-header" />')
                     .insertAfter(header);
 
+                var currency = data.balance.currency;
                 table = $("<table width='100%' class='display compact'/>");
                 table.appendTo(portfolioWin);
                 table = table.dataTable({
@@ -124,6 +137,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     }
 
     function update_table(){
+        update_balance();
         var processing_msg = $('#' + table.attr('id') + '_processing').show();
         liveapi.send({ portfolio: 1 })
             .then(function (data) {
