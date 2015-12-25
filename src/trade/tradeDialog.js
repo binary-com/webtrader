@@ -180,7 +180,13 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         },
         tick: {
           epoch: '0',
-          quote:'0'
+          quote:'0',
+          perv_quote: '0',
+          down: function(){
+            var ans= this.quote*1 < this.perv_quote*1;
+            console.warn(this.quote, this.perv_quote, ans);
+            return ans;
+          }
         },
         ticks: {
           array: [], /* ticks for sparkline chart */
@@ -563,6 +569,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
               // if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
+              state.tick.perv_quote = state.tick.quote;
               state.tick.epoch = data.tick.epoch;
               state.tick.quote = data.tick.quote;
               state.ticks.loading = false;

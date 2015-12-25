@@ -29,9 +29,18 @@
 
 .trade-fields .ui-selectmenu-button { border-radius: 5px !important; }
 
-.trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 150px !important; }
+.trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 160px !important; }
 
-.trade-fields .categories-row li.tick-quote { padding-left: 30px; }
+.trade-fields .categories-row li.tick-quote { padding:4px 0 0 40px; }
+.trade-fields .categories-row li.tick-quote span {
+  background: #29ABE2;
+  text-align: center;
+  display: inline-block;
+  min-width: 60px;
+  border-radius: 5px;
+  padding:3px;
+}
+.trade-fields .categories-row li.tick-quote span.down { background: #c03; }
 
 /* style elments in the drop down*/
 .trade-dialog-date-start-ul li {
