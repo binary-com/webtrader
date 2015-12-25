@@ -97,7 +97,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           });
           --tick_count;
           if(tick_count === 0) {
-              state.buy.update_balance();
               state.ticks.update_status();
               state.buy.update(); /* show buy-price final and profit & update title */
               state.back.visible = true; /* show back button */
@@ -186,6 +185,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           state.buy.payout = 0;
           state.buy.potential_profit_text = 'Lost';
         }
+        if(status === 'won') {
+            state.buy.balance_after = buy.balance_after*1 + state.buy.payout*1;
+        }
         state.buy.show_result = true;
       }
       state.ticks.update_status = function() {
@@ -216,18 +218,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           /* set the css class */
           state.ticks.status = css[category][display] ? 'won' : 'lost';
       }
-      state.buy.update_balance = function() {
-          /* TODO: */
-          // liveapi.send({ balance: 1 })
-          //   .then(function (data) {
-          //       console.warn(data.balance, state.buy.balance_after);
-          //       state.buy.balance_after = data.balance.balance;
-          //   })
-          //   .catch(function (err) {
-          //       console.error(err);
-          //       $.growl.error({ message: err.message });
-          //   });
-      };
 
       state.back.onclick = function(){ hide_callback(root); }
       state.arrow.onclick = function() { $.growl.error({ message: 'Not implement yet!' }); };
