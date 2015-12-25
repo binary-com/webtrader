@@ -9,8 +9,6 @@
 }
 
 .ui-dialog-titlebar .ui-dialog-title {
-    min-width:120px;
-    width: 20%;
     padding-bottom: 5px;
 }
 
@@ -25,8 +23,9 @@
 
 .ui-dialog-titlebar .ui-datepicker-trigger { position: absolute; }
 
-    /* use a maximum height for jq-ui dropdowns */
-    ul.ui-menu { max-height: 320px !important; }
+/* use a maximum height for jq-ui dropdowns */
+ul.ui-menu { max-height: 320px !important; }
+
 /* hide the search section from jq-datatables if hide-search-input is set */
 .hide-search-input .dataTables_filter {
     display:none;
