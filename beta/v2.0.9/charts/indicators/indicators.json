@@ -251,24 +251,45 @@
     "ohlcOnly" : true
   },
 
-   "dema": {
+  "dema": {
     "id": "dema",
     "long_display_name": "Double Exponential Moving Average",
     "short_display_name": "DEMA",
-	"ohlcOnly" : false
+    "ohlcOnly" : false
   },
-  
-   "kama": {
+
+  "kama": {
     "id": "kama",
     "long_display_name": "Kaufman's Adaptive Moving Average",
     "short_display_name": "KAMA",
-	"ohlcOnly" : false
+    "ohlcOnly" : false
   },
 
-   "t3": {
+  "t3": {
     "id": "t3",
     "long_display_name": "Triple Exponential Moving Average (T3)",
     "short_display_name": "T3",
-	"ohlcOnly" : false
+    "ohlcOnly" : false
+  },
+
+   "hma": {
+    "id": "hma",
+    "long_display_name": "Hull Moving Average",
+    "short_display_name": "HMA",
+    "ohlcOnly" : false
+  },
+
+   "lwma": {
+    "id": "lwma",
+    "long_display_name": "Linearly Weighted Moving Average",
+    "short_display_name": "LWMA",
+    "ohlcOnly" : false
+  },
+
+    "smma": {
+    "id": "smma",
+    "long_display_name": "Smoothed Moving Average",
+    "short_display_name": "SMMA",
+    "ohlcOnly" : false
   }
 }
