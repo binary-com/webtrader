@@ -32,7 +32,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             },
             yAxis: {
                 labels: { align: 'left', x: 0, },
-                title: ''
+                title: '',
+                gridLineWidth: 0,
             },
             series: [{ data: [] }],
             exporting: {enabled: false, enableImages: false},
