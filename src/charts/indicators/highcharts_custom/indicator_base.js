@@ -236,6 +236,20 @@ define(['jquery'], function ($) {
                 }
                 return (sum / maOptions.period);
             }
+//            else {
+//                //var price = this.getPrice(data, index, appliedTo, type);
+//                //var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+//                //preSma = preSma ? preSma : null;
+//                //return (preSma * (period - 1) + price) / period;
+//                var price = this.getPrice(data, index, appliedTo, type);
+//                var dropPrice = this.getPrice(data, index - period, appliedTo, type);
+//                var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+//                preSma = preSma ? preSma : null;
+//                return preSma + (price / period) - (dropPrice / period);
+//=======
+//                return (sum / maOptions.period);
+//>>>>>>> upstream/development
+//            }
         },
 
         //*************************EMA***************************************
