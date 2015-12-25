@@ -3,7 +3,7 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, navigation) {
+define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation) {
 
     var closeAllObject = null;
     var dialogCounter = 0;
@@ -485,7 +485,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             blankWindow.addDateToHeader = addDateToHeader;
 
             /* set data-* attributes on created dialog */
-            var attributes = Object.keys(options).filter(function(key) { return key.startsWith('data-'); } );
+            var attributes = Object.keys(options).filter(function(key) { return _.startsWith(key, 'data-'); } );
             attributes.forEach(function(key) { return blankWindow.attr(key, options[key]); } );
 
             /* check and add the refresh button if needed */

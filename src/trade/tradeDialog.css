@@ -31,7 +31,11 @@
 
 .trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 160px !important; }
 
-.trade-fields .categories-row li.tick-quote { padding:4px 0 0 40px; }
+.trade-fields .categories-row li.tick-quote {
+  position: relative;
+  top: 4px;
+  left: 40px;
+}
 .trade-fields .categories-row li.tick-quote span {
   background: #29ABE2;
   text-align: center;

@@ -56,6 +56,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     }
 
     function initPortfolioWin() {
+        require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
             .then(function (data) {
                 var portfolio_refresh_interval = null;
@@ -101,7 +102,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     .insertAfter(header);
 
                 var currency = data.balance.currency;
-                table = $("<table width='100%' class='display compact'/>");
+                table = $("<table width='100%' class='portfolio-dialog display compact'/>");
                 table.appendTo(portfolioWin);
                 table = table.dataTable({
                     data: [],

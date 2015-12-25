@@ -300,9 +300,10 @@
 #nav-container .authentication button {
   display: inline-block;
   margin-left: 10px;
-  height: 2em;
+  /*height: 2em;*/
   font-size: larger;
   min-width:80px;
+  line-height: 2em;
   border: none;
   border-radius: 5px;
   outline: 0;
