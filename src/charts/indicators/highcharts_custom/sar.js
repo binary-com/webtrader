@@ -250,7 +250,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     var chart = this.chart;
                     sarOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    chart.get('sar' + uniqueID).remove(false);
                     sarSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     indicatorBase.recalculate(chart);
