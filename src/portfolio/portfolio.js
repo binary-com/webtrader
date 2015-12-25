@@ -96,7 +96,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     }
                 });
 
-                var header = portfolioWin.parent().find('.ui-dialog-title').css('width', '25%');
+                var header = portfolioWin.parent().find('.ui-dialog-title').addClass('with-content');
                 balance_span = $('<span class="span-in-dialog-header" />')
                     .insertAfter(header);
 

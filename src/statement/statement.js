@@ -23,8 +23,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         });
     };
 
-    function refreshTable (yyyy_mm_dd) {
+    var loading = false;
+    var options = { offset : 0, limit: 50 };
+    var is_specific_date_shown = false; /* is data for a specific date is shown */
+
+    function refreshTable (yyy_mm_dd) {
         var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
+        loading = true;
 
         var request = {
             statement: 1,
@@ -32,13 +37,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         };
 
         /* if a date is specified get the transactions for that date */
-        if (yyyy_mm_dd) {
-            request.date_from = yyyy_mm_dd_to_epoch(yyyy_mm_dd, { utc: true });
+        if (typeof yyy_mm_dd === 'string') {
+            request.date_from = yyyy_mm_dd_to_epoch(yyy_mm_dd, { utc: true });
             var one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
             request.date_to = request.date_from + one_day_utc;
+            table.api().rows().remove();
+            is_specific_date_shown = true;
         }
-        else /* otherwise get the most recent 50 transactions */
+        else  { /* request the next 50 items for live scroll */
             request.limit = 50;
+            if(is_specific_date_shown) {
+                table.api().rows().remove();
+                is_specific_date_shown = false;
+            }
+            request.offset = table.api().column(0).data().length;
+        }
 
         /* refresh the table with result of { profit_table:1 } from WS */
         var refresh = function (data) {
@@ -56,9 +69,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     '<b>' + formatPrice(trans.balance_after) + '</b>'
                 ];
             });
-            table.api().rows().remove();
             table.api().rows.add(rows);
             table.api().draw();
+            loading = false;
             processing_msg.hide();
         };
 
@@ -97,7 +110,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 paging: false,
                 ordering: false,
                 searching: true,
-                processing: true
+                processing: true,
             });
 
             table.parent().addClass('hide-search-input');
@@ -111,7 +124,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 });
             });
 
-            refreshTable();
+
             datepicker = statement.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
@@ -120,6 +133,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
 
             statement.dialog('open');
+
+
+            /**************** infinite scroll implementation *******************/
+            refreshTable();
+            statement.scroll(function(){
+              var scrollTop = statement.scrollTop(),
+                  innerHeight = statement.innerHeight(),
+                  scrollHeight = statement[0].scrollHeight,
+                  postion = (scrollTop + innerHeight) / scrollHeight;
+              if(postion > 0.75 && !loading && !is_specific_date_shown){
+                refreshTable();
+              }
+            });
         });
 
     };

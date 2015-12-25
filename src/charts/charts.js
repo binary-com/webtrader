@@ -199,7 +199,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 title: {
-                    text: options.instrumentName + " (" + options.timePeriod + ")"//name to display
+                    text: getParameterByName("affiliates") === 'true' ? options.instrumentName + " (" + options.timePeriod + ")" : "" //name to display
                 },
 
                 credits: {

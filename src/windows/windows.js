@@ -129,7 +129,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             cleared: function() { }
         },options);
 
-        var header = this.parent().find('.ui-dialog-title');
+        var header = this.parent().find('.ui-dialog-title').addClass('with-content');
 
 
         /* options: {date: date, onchange: fn } */
