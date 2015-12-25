@@ -291,5 +291,12 @@
     "long_display_name": "Smoothed Moving Average",
     "short_display_name": "SMMA",
     "ohlcOnly" : false
+  },
+
+    "mama": {
+    "id": "mama",
+    "long_display_name": "Mesa Adaptive Moving Average",
+    "short_display_name": "MAMA",
+    "ohlcOnly" : false
   }
 }
