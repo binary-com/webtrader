@@ -31,35 +31,42 @@ define(["jquery", "datatables"], function ($) {
               buttons: [{
                   text: "Remove Selected",
                   click: function() {
-                    require(["currentPriceIndicator"], function(currentPriceIndicator) {
+                      var rowCount = table.rows('.selected').data().length;
+                      if (rowCount > 0) {
+                          require(["currentPriceIndicator"], function (currentPriceIndicator) {
 
-                      var containerIDWithHash = $(".overlay_dialog_remove").data('refererChartID');
-                        table
-                            .rows( '.selected' )
-                            .nodes()
-                            .to$().each(function () {
-                                var seriesID = $(this).data('id');
-                                var chart = $(containerIDWithHash).highcharts();
-                                if (chart && seriesID)
-                                {
-                                  var series = chart.get(seriesID);
-                                  if (series) {
-                                    //Remove the current price indicator first
-                                    $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
-                                        if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
-                                            series.removeCurrentPrice(key);
-                                            return false;
-                                        }
-                                    });
+                              var containerIDWithHash = $(".overlay_dialog_remove").data('refererChartID');
+                              table
+                                  .rows('.selected')
+                                  .nodes()
+                                  .to$().each(function () {
+                                  var seriesID = $(this).data('id');
+                                  var chart = $(containerIDWithHash).highcharts();
+                                  if (chart && seriesID) {
+                                      var series = chart.get(seriesID);
+                                      if (series) {
+                                          //Remove the current price indicator first
+                                          $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
+                                              if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
+                                                  series.removeCurrentPrice(key);
+                                                  return false;
+                                              }
+                                          });
 
-                                    //Then remove the series
-                                    series.remove();
+                                          //Then remove the series
+                                          series.remove();
+                                      }
                                   }
-                                }
-                            });
-                        $( ".overlay_dialog_remove" ).dialog('close');
-                      
-                    });
+                                  table.row($(this)).remove().draw();
+                              });
+
+                              //Feature request https://trello.com/c/ZxZzlKfe/198-test-overlaying-tick-charts
+                              //$( ".overlay_dialog_remove" ).dialog('close');
+
+                          });
+                      } else {
+                          $.growl.error({ message: "Please select instruments to remove" });
+                      }
                   }
               },{
                   text: "Cancel",
