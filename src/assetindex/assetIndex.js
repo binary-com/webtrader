@@ -11,9 +11,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
         li.click(function () {
             if (!assetWin) {
                 assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750 });
+                assetWin.dialog('open'); /* bring winodw to front */
                 require(['text!assetindex/assetIndex.html'], initAssetWin);
             }
-            assetWin.dialog('open'); /* bring winodw to front */
+            else
+                assetWin.moveToTop();
         });
     }
 

@@ -222,6 +222,13 @@
     "short_display_name": "SAR",
     "ohlcOnly" : true
   },
+
+   "macd": {
+    "id": "macd",
+    "long_display_name": "Moving Average Convergence/Divergence",
+    "short_display_name": "MACD",
+    "ohlcOnly" : true
+  },
   
   "cdlengulfing": {
     "id": "cdlengulfing",
@@ -235,5 +242,33 @@
     "long_display_name": "Weighted Close Price",
     "short_display_name": "WCLPRICE",
     "ohlcOnly" : true
+  },
+   
+  "cci": {
+    "id": "cci",
+    "long_display_name": "Commodity Channel Index",
+    "short_display_name": "CCI",
+    "ohlcOnly" : true
+  },
+
+   "hma": {
+    "id": "hma",
+    "long_display_name": "Hull Moving Average",
+    "short_display_name": "HMA",
+    "ohlcOnly" : false
+  },
+
+   "lwma": {
+    "id": "lwma",
+    "long_display_name": "Linearly Weighted Moving Average",
+    "short_display_name": "LWMA",
+    "ohlcOnly" : false
+  },
+
+    "smma": {
+    "id": "smma",
+    "long_display_name": "Smoothed Moving Average",
+    "short_display_name": "SMMA",
+    "ohlcOnly" : false
   }
 }

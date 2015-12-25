@@ -37,7 +37,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             if (index >= period) {
                 var natrValue = (atrData[index - 1][1] * (period - 1) + tr[index]) / period;
                 if (isFinite(natrValue) && !isNaN(natrValue)) {
-                    atrData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(natrValue, 2)]);
+                    atrData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(natrValue, 4)]);
                 }
             }
             else {
@@ -88,15 +88,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         var natrData = [], atrData = initATR.call(this, data, natrOptions.period);
                         for (var index = 0; index < atrData.length; index++) {
                             var time = atrData[index][0];
-                            var price = 0.0;
-                            if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                                price = indicatorBase.extractPrice(data, index);
-                            }
-                            else {
-                                price = data[index].y ? data[index].y : data[index][1];
-                            }
+                            var price = indicatorBase.extractPrice(data, index);
                             if (atrData[index][1]) {
-                                natrData[index] = [time, indicatorBase.toFixed(atrData[index][1] / price * 100, 2) ];
+                                natrData[index] = [time, indicatorBase.toFixed(atrData[index][1] / price * 100, 4) ];
                             } else {
                                 natrData[index] = [time, null];
                             }
@@ -242,16 +236,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     tr = Math.abs(priceNow - pricePrev);
                                 }
 
-                                var price = 0.0;
-                                if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                                    price = indicatorBase.extractPrice(data, dataPointIndex);
-                                }
-                                else {
-                                    price = data[dataPointIndex].y ? data[dataPointIndex].y : data[dataPointIndex][1];
-                                }
-
-                                var atrVal = indicatorBase.toFixed(( atr[key][dataPointIndex - 1][1] * (n - 1) + tr ) / n, 2) ;
-                                var natr = indicatorBase.toFixed(atrVal /  price * 100, 2);
+                                var price = indicatorBase.extractPrice(data, dataPointIndex);
+                                var atrVal = indicatorBase.toFixed(( atr[key][dataPointIndex - 1][1] * (n - 1) + tr ) / n, 4) ;
+                                var natr = indicatorBase.toFixed(atrVal /  price * 100, 4);
                                 if (!$.isNumeric(natr)) continue;
 
                                 var time = (data[dataPointIndex].x || data[dataPointIndex][0]);

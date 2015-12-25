@@ -325,6 +325,17 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
     return {
 
         init: function( $parentObj ) {
+            /* wrap jquery ui dialog('destory') to fire an event */
+            var original = $.fn.dialog;
+            $.fn.dialog = function(cmd) {
+
+              if(cmd === 'destroy') {
+                this.trigger('dialogdestroy');
+                return original.call(this, 'destroy'); // destroy and remove from dom
+              }
+              return original.apply(this, arguments);
+            }
+
             $menuUL = $parentObj.find("ul");
 
             tileObject = $menuUL.find(".tile");
@@ -392,12 +403,14 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                                 resize:fn, // callabak for dialog resize event
                                 close: fn, // callback for dialog close event
                                 open: fn,  // callback for dialog open event
+                                destroy: fn, // callback for dialog destroy event
                                 autoOpen: false,
                                 resizeable:true,
                                 collapsable:true,
                                 minimizable: true,
                                 maximizable: true,
                                 closable:true
+                                data-*: 'value' // add arbitary data-* attributes to the dialog.('data-authorized' for exmaple)
                               }
            notes:
                 1- get generated dialog id via createBlankWindow(...).attr('id')
@@ -430,15 +443,23 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 .dialog(options)
                 .dialogExtend(options);
 
+            if(options.destroy) { /* register for destroy event which have been patched */
+              blankWindow.on('dialogdestroy', options.destroy);
+            }
+
+            blankWindow.moveToTop = function () {
+                blankWindow.dialog('open');
+                blankWindow.dialogExtend('restore');
+                blankWindow.dialog('moveToTop')
+                     .parent().effect("bounce", { times: 2, distance: 15 }, 450);
+            };
+
             // add an item to window menu
             var li = null;
             var add_to_windows_menu = function () {
                 var link = $("<a href='#'>" + options.title + "</a>");
                 // bring window to top on click
-                link.click(function () {
-                    blankWindow.dialog('moveToTop')
-                         .parent().effect("bounce", { times: 2, distance: 15 }, 450);
-                });
+                link.click(blankWindow.moveToTop);
                 li = $('<li />').addClass(id + 'LI').html(link);
                 $menuUL.append(li);
             };
@@ -456,6 +477,10 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             if (options.resize)
                 options.resize.call($html[0]);
             blankWindow.addDateToHeader = addDateToHeader;
+
+            /* set data-* attributes on created dialog */
+            var attributes = Object.keys(options).filter(function(key) { return key.startsWith('data-'); } );
+            attributes.forEach(function(key) { return blankWindow.attr(key, options[key]); } );
 
             return blankWindow;
         },
