@@ -251,13 +251,6 @@
     "ohlcOnly" : true
   },
 
-  "mama": {
-    "id": "mama",
-    "long_display_name": "MESA Adaptive Moving Average",
-    "short_display_name": "MAMA",
-    "ohlcOnly" : false
-  },
-
    "hma": {
     "id": "hma",
     "long_display_name": "Hull Moving Average",
