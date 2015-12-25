@@ -123,7 +123,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           purchase_time: buy.purchase_time,
           start_time: buy.start_time,
           transaction_id: buy.transaction_id,
-          payout: buy.payout,
+          final_price: buy.payout,
           currency: passthrough.currency,
           potential_profit : buy.payout - buy.buy_price,
           potential_profit_text : 'Profit',
@@ -181,7 +181,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                               lost: 'This contract lost'
                             }[status];
         if(status === 'lost') {
-          state.buy.potential_profit = -state.buy.potential_profit;
+          state.buy.potential_profit = -state.buy.buy_price;
+          state.buy.final_price = 0;
           state.buy.potential_profit_text = 'Lost';
         }
         state.buy.show_result = true;

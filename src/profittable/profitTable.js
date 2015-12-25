@@ -51,7 +51,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     trans.buy_price,
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
-                    (parseFloat(trans.buy_price) - parseFloat(trans.sell_price)).toFixed(2) /* 2 decimal points */
+                    (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2) /* 2 decimal points */
                 ];
             });
             table.api().rows().remove();
