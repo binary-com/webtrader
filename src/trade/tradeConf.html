@@ -68,7 +68,7 @@
   </ul>
 
   <div class='tick-chart'
-       rv-if="ticks.category | one-of 'Up/Down' 'Asians'"
+       rv-if="arrow.visible | eq false"
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
        rv-class-won="ticks.status | eq 'won'"

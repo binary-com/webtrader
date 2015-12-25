@@ -220,7 +220,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       }
 
       state.back.onclick = function(){ hide_callback(root); }
-      state.arrow.onclick = function() { $.growl.error({ message: 'Not implement yet!' }); };
+      state.arrow.onclick = function() { $.growl.error({ message: 'Work in progress, check back soon!!!!' }); };
 
 
       if(!state.arrow.visible) { register_ticks(state,passthrough); }
