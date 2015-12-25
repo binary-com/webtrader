@@ -125,7 +125,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         },
         date_expiry: {
           value_date: new Date().toISOString().split('T')[0], /* today utc in yyyy-mm-dd format */
-          value_hour: new Date().toISOString().split('T')[1].slice(0,5), /* now utc in hh:mm format */
+          value_hour: new Date(new Date().getTime() + (10 * 60 * 1000)).toISOString().split('T')[1].slice(0,5), /* now utc in hh:mm format */
           value: 0,    /* epoch value of date+hour */
         },
         categories: {
