@@ -251,6 +251,27 @@
     "ohlcOnly" : true
   },
 
+  "dema": {
+    "id": "dema",
+    "long_display_name": "Double Exponential Moving Average",
+    "short_display_name": "DEMA",
+    "ohlcOnly" : false
+  },
+
+  "kama": {
+    "id": "kama",
+    "long_display_name": "Kaufman's Adaptive Moving Average",
+    "short_display_name": "KAMA",
+    "ohlcOnly" : false
+  },
+
+  "t3": {
+    "id": "t3",
+    "long_display_name": "Triple Exponential Moving Average (T3)",
+    "short_display_name": "T3",
+    "ohlcOnly" : false
+  },
+
    "hma": {
     "id": "hma",
     "long_display_name": "Hull Moving Average",

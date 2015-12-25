@@ -219,7 +219,6 @@ define(['jquery'], function ($) {
                 First day of 5-day SMA: (11 + 12 + 13 + 14 + 15) / 5 = 13
                 Second day of 5-day SMA: (12 + 13 + 14 + 15 + 16) / 5 = 14
                 Third day of 5-day SMA: (13 + 14 + 15 + 16 + 17) / 5 = 15
-
                 Do not fill any value in smaData from 0 index to options.period-1 index
              */
             if (maOptions.index < maOptions.period - 1) {
@@ -231,9 +230,9 @@ define(['jquery'], function ($) {
                 var sum = 0.0;
                 for (var i = maOptions.period - 1; i >= 0; i--) {
                     if (maOptions.isIndicatorData)
-                        sum += this.getIndicatorData(maOptions.data, maOptions.index-i);
+                        sum += this.getIndicatorData(maOptions.data, maOptions.index - i);
                     else
-                        sum += this.getPrice(maOptions.data, maOptions.index-i, maOptions.appliedTo, maOptions.type);
+                        sum += this.getPrice(maOptions.data, maOptions.index - i, maOptions.appliedTo, maOptions.type);
                 }
                 return (sum / maOptions.period);
             }
@@ -343,7 +342,7 @@ define(['jquery'], function ($) {
             else {
                 ema2[maOptions.key].push([time, ema2Value]);
             }
-
+                  
             var ma3Options = {
                 data: ema2[maOptions.key],
                 maData: ema3[maOptions.key],
@@ -399,17 +398,13 @@ define(['jquery'], function ($) {
         calculateTRIMAValue: function (maOptions) {
             //Calculate TRIMA data
             /*
-
                  MA = ( SMA ( SMAm, Nm ) ) / Nm
-
                  Where:
-
                  N = Time periods + 1
                  Nm = Round ( N / 2 )
                  SMAm = ( Sum ( Price, Nm ) ) / Nm
              *
              *  Do not fill any value in trimaData from 0 index to options.period-1 index
-
              */
             var Nm = Math.round((maOptions.period + 1) / 2);
             if (maOptions.index < (Nm - 1)) {
