@@ -4,7 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var mamaOptionsMap = {}, mamaSeriesMap = {};
-    var smooth = [], detrender = [], period = [], I1 = [], Q1 = [], I2 = [], Q2 = [], Re = [], Im = [], smoothPeriod = [], phase=[];
+    var smooth = {}, detrender = {}, period = {}, I1 = {}, Q1 = {}, I2 = {}, Q2 = {}, Re = {}, Im = {}, smoothPeriod = {}, phase = {};
     function calculateMamaValue(options) {
 
         var data = options.data,
@@ -13,6 +13,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             fastLimit = options.fastLimit,
             slowLimit = options.slowLimit,
             type = options.type,
+            key = options.key,
             appliedTo = options.appliedTo;
 
         /*FORMULA
@@ -53,83 +54,96 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             MAMA = alpha*Price + (1 - alpha)*MAMA[1];       
             FAMA = .5*alpha*MAMA + (1 - .5*alpha)*FAMA[1];    
         End; */
-
+        var time = (data[index].x || data[index][0]);
         var mamaValue = indicatorBase.getPrice(data, index, appliedTo, type);
-        if (index > 10) {
-            //var smoothValue = (4 * price[index] + 3 * price[index - 1] + 2 * price[index - 2] + 1 * price[index - 3] + 0 * price[index - 4]) / 10;
-            smooth[index] = (4 * indicatorBase.getPrice(data, index, appliedTo, type)
+        if (index <= 10) {
+            smooth[key][index] = [time, 0];
+            detrender[key][index] = [time, 0];
+            I1[key][index] = [time, 0];
+            Q1[key][index] = [time, 0];
+            I2[key][index] = [time, 0];
+            Q2[key][index] = [time, 0];
+            Re[key][index] = [time, 0];
+            Im[key][index] = [time, 0];
+            period[key][index] = [time, 0];
+            smoothPeriod[key][index] = [time, 0];
+            phase[key][index] = [time, 0];
+        }
+
+        else if (index > 10) {
+            smooth[key][index] = [time, ((4 * indicatorBase.getPrice(data, index, appliedTo, type)
                 + 3 * indicatorBase.getPrice(data, index - 1, appliedTo, type)
                 + 2 * indicatorBase.getPrice(data, index - 2, appliedTo, type)
-                + 1 * indicatorBase.getPrice(data, index - 3, appliedTo, type)) / 10;
+                + 1 * indicatorBase.getPrice(data, index - 3, appliedTo, type)) / 10)];
 
-            detrender[index] = (0.0962 * smooth[index]
-                                    + 0.5769 * ~~smooth[index - 2]
-                                    + 0.5769 * ~~smooth[index - 4]
-                                    + 0.0962 * ~~smooth[index - 6]) * (0.075 * ~~period[index - 1] + 0.054);
+            detrender[key][index] = [time, ((0.0962 * smooth[key][index][1]
+                                    + 0.5769 * smooth[key][index - 2][1]
+                                    + 0.5769 * smooth[key][index - 4][1]
+                                    + 0.0962 * smooth[key][index - 6][1]) * (0.075 * period[key][index - 1][1] + 0.054))];
 
             //Compute InPhase and Quadrature components
-            Q1[index] = (0.0962 * detrender[index]
-                            + 0.5769 * ~~detrender[index - 2]
-                            + 0.5769 * ~~detrender[index - 4]
-                            + 0.0962 * ~~detrender[index - 6]) * (0.075 * ~~period[index - 1] + 0.054);
-            I1[index] = ~~detrender[index - 3];
+            Q1[key][index] = [time, ((0.0962 * detrender[key][index][1]
+                            + 0.5769 * detrender[key][index - 2][1]
+                            + 0.5769 * detrender[key][index - 4][1]
+                            + 0.0962 * detrender[key][index - 6][1]) * (0.075 * period[key][index - 1][1] + 0.054))];
+            I1[key][index] = [time, (detrender[key][index - 3][1])];
 
             //Advance the phase of I1 and Q1 by 90º
-            var jI = (0.0962 * I1[index]
-                        + 0.5769 * ~~I1[index - 2]
-                        + 0.5769 * ~~I1[index - 4]
-                        + 0.0962 * ~~I1[index - 6]) * (0.075 * ~~period[index - 1] + 0.054);
-            var jQ = (0.0962 * Q1[index]
-                        + 0.5769 * ~~Q1[index - 2]
-                        + 0.5769 * ~~Q1[index - 4]
-                        + 0.0962 * ~~Q1[index - 6]) * (0.075 * ~~period[index - 1] + 0.054);
+            var jI = (0.0962 * I1[key][index][1]
+                        + 0.5769 * I1[key][index - 2][1]
+                        + 0.5769 * I1[key][index - 4][1]
+                        + 0.0962 * I1[key][index - 6][1]) * (0.075 * period[key][index - 1][1] + 0.054);
+            var jQ = (0.0962 * Q1[key][index][1]
+                        + 0.5769 * Q1[key][index - 2][1]
+                        + 0.5769 * Q1[key][index - 4][1]
+                        + 0.0962 * Q1[key][index - 6][1]) * (0.075 * period[key][index - 1][1] + 0.054);
 
             //Phasor addition for 3 bar averaging
-            I2[index] = I1[index] + jQ;
-            Q2[index] = Q1[index] + jI;
+            I2[key][index] = [time, (I1[key][index][1] - jQ)];
+            Q2[key][index] = [time, (Q1[key][index][1] + jI)];
 
             //Smooth the I and Q components before applying the discriminator
-            I2[index] = 0.2 * I2[index] + 0.8 * ~~I2[index - 1];
-            Q2[index] = 0.2 * Q2[index] + 0.8 * ~~Q2[index - 1];
+            I2[key][index] = [time, (0.2 * I2[key][index][1] + 0.8 * I2[key][index - 1][1])];
+            Q2[key][index] = [time, (0.2 * Q2[key][index][1] + 0.8 * Q2[key][index - 1][1])];
 
             //{Homodyne Discriminator} 
-            Re[index] = I2[index] * ~~I2[index - 1] + Q2[index] * ~~Q2[index - 1];
-            Im[index] = I2[index] * ~~Q2[index - 1] + Q2[index] * ~~I2[index - 1];
+            Re[key][index] = [time, (I2[key][index][1] * I2[key][index - 1][1] + Q2[key][index][1] * Q2[key][index - 1][1])];
+            Im[key][index] = [time, (I2[key][index][1] * Q2[key][index - 1][1] - Q2[key][index][1] * I2[key][index - 1][1])];
 
-            Re[index] = 0.2 * Re[index] + 0.8 * ~~Re[index - 1];
-            Im[index] = 0.2 * Im[index] + 0.8 * ~~Im[index - 1];
+            Re[key][index] = [time, (0.2 * Re[key][index][1] + 0.8 * Re[key][index - 1][1])];
+            Im[key][index] = [time, (0.2 * Im[key][index][1] + 0.8 * Im[key][index - 1][1])];
 
-            if (Im[index] != 0.0 && Re[index] != 0.0)
-                period[index] = 360 / Math.atan(Im[index] / Re[index]);
-            if (period[index] > 1.5 * ~~period[index - 1])
-                period[index] = 1.5 * ~~period[index - 1];
-            if (period[index] < 0.67 * ~~period[index - 1])
-                period[index] = 0.67 * ~~period[index - 1];
-            if (period[index] < 6)
-                period[index] = 6;
-            if (period[index] > 50)
-                period[index] = 50;
-            period[index] = 0.2 * period[index] + 0.8 * ~~period[index - 1];
-            smoothPeriod[index] = 0.88 * period[index] + 0.67 * ~~smoothPeriod[index - 1];
+            period[key][index] = [time, 0];
+            if (Im[key][index][1] !== 0.0 && Re[key][index][1] !== 0.0)
+                period[key][index] = [time, (360 / (Math.atan(Im[key][index][1] / Re[key][index][1]) * (180.0 / 3.14159265359)))];
+            if (period[key][index][1] > 1.5 * period[key][index - 1][1])
+                period[key][index] = [time, (1.5 * period[key][index - 1][1])];
+            if (period[key][index][1] < 0.67 * period[key][index - 1][1])
+                period[key][index] = [time, (0.67 * period[key][index - 1][1])];
+            if (period[key][index][1] < 6)
+                period[key][index] = [time, 6];
+            if (period[key][index][1] > 50)
+                period[key][index] = [time, 50];
+            period[key][index] = [time, (0.2 * period[key][index][1] + 0.8 * period[key][index - 1][1])];
+            smoothPeriod[key][index] = [time, (0.33 * period[key][index][1] + 0.67 * smoothPeriod[key][index - 1][1])];
 
-            if (I1[index] != 0.0)
-                phase[index] = Math.atan(Q1[index] / I1[index]);
-            var deltaPhase = ~~phase[index - 1] - ~~phase[index];
+            phase[key][index] = [time, 0];
+            if (I1[key][index][1] !== 0.0)
+                phase[key][index] = [time, (Math.atan(Q1[key][index][1] / I1[key][index][1]) * (180.0 / 3.14159265359))];
+            var deltaPhase = phase[key][index - 1][1] - phase[key][index][1];
             if (deltaPhase < 1)
                 deltaPhase = 1;
-            var alpha = ~~(fastLimit / deltaPhase);
+            var alpha = (fastLimit / deltaPhase);
             if (alpha < slowLimit)
                 alpha = slowLimit;
             if (alpha > fastLimit)
                 alpha = fastLimit;
-            mamaValue = alpha * indicatorBase.getPrice(data, index, appliedTo, type) + (1 - alpha) * ~~indicatorBase.getIndicatorData(mamaData[index - 1]);
+            mamaValue = alpha * indicatorBase.getPrice(data, index, appliedTo, type) + (1 - alpha) * indicatorBase.getIndicatorData(mamaData, index - 1);
         }
-        //FAMA = 0.5*alpha*MAMA + (1 - 0.5*alpha)*FAMA[1];
 
         return mamaValue;
-     
     }
-
+    
     return {
         init: function () {
 
@@ -162,32 +176,22 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     if (data && data.length > 0) {
 
                         //Calculate MAMA data
-                        /*  mama(t) = p(t) * 2/(T+1) + mama(t-1) * (1 - 2 / (T+1))
-                         */
                         var mamaData = [];
+                        smooth[uniqueID] = [], detrender[uniqueID] = [], period[uniqueID] = [],
+                        I1[uniqueID] = [], Q1[uniqueID] = [], I2[uniqueID] = [], Q2[uniqueID] = [],
+                        Re[uniqueID] = [], Im[uniqueID] = [], smoothPeriod[uniqueID] = [], phase[uniqueID] = [];
                         for (var index = 0; index < data.length; index++) {
                             var maValue = calculateMamaValue({
-                                data : data,
-                                mamaData : mamaData,
-                                index : index,
-                                fastLimit : mamaOptions.fastLimit,
-                                slowLimit : mamaOptions.slowLimit,
-                                type : this.options.type,
-                                appliedTo : mamaOptions.appliedTo
+                                data: data,
+                                mamaData: mamaData,
+                                index: index,
+                                fastLimit: mamaOptions.fastLimit,
+                                slowLimit: mamaOptions.slowLimit,
+                                type: this.options.type,
+                                key:uniqueID,
+                                appliedTo: mamaOptions.appliedTo
                             });
-                            if (!smooth[index]) {
-                                smooth[index] = maValue;
-                                detrender[index] = maValue;
-                                I1[index] = maValue;
-                                Q1[index] = maValue;
-                                I2[index] = maValue;
-                                Q2[index] = maValue;
-                                Re[index] = maValue;
-                                Im[index] = maValue;
-                                period[index] = 360 / Math.atan(Im[index] / Re[index]);
-                                smoothPeriod[index] = period[index];
-                                phase[index] = Math.atan(Q1[index] / I1[index]);
-                            }
+
                             mamaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
@@ -202,7 +206,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             data: mamaData,
                             type: 'line',
                             dataGrouping: series.options.dataGrouping,
-                            //yAxis: 'mama'+ uniqueID,
                             opposite: series.options.opposite,
                             color: mamaOptions.stroke,
                             lineWidth: mamaOptions.strokeWidth,
@@ -232,6 +235,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     mamaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     mamaSeriesMap[uniqueID] = null;
+                    smooth[uniqueID] = [], detrender[uniqueID] = [], period[uniqueID] = [],
+                    I1[uniqueID] = [], Q1[uniqueID] = [], I2[uniqueID] = [], Q2[uniqueID] = [],
+                    Re[uniqueID] = [], Im[uniqueID] = [], smoothPeriod[uniqueID] = [], phase[uniqueID] = [];
                 };
 
                 H.Series.prototype.preRemovalCheckMAMA = function (uniqueID) {
@@ -288,13 +294,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             if (dataPointIndex >= 1) {
 
                                 var mamaValue = calculateMamaValue({
-                                    data : data,
-                                    mamaData : mamaData,
-                                    index : dataPointIndex,
-                                    fastLimit : mamaOptions.fastLimit,
-                                    slowLimit : mamaOptions.slowLimit,
-                                    type : this.options.type,
-                                    appliedTo : mamaOptions.appliedTo
+                                    data: data,
+                                    mamaData: mamaData,
+                                    index: dataPointIndex,
+                                    fastLimit: mamaOptions.fastLimit,
+                                    slowLimit: mamaOptions.slowLimit,
+                                    type: this.options.type,
+                                    key: key,
+                                    appliedTo: mamaOptions.appliedTo
                                 });
 
                                 if (isPointUpdate) {
