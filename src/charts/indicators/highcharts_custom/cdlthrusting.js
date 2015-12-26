@@ -189,7 +189,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDLTHRUSTING data point
                     for (var key in cdlthrustingSeriesMap) {
                         if (cdlthrustingSeriesMap[key] && cdlthrustingSeriesMap[key].options && cdlthrustingSeriesMap[key].options.data && cdlthrustingSeriesMap[key].options.data.length > 0
-                            && cdlthrustingOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdlthrustingOptionsMap[key].parentSeriesID == series.options.id
+                            && cdlthrustingSeriesMap[key].chart === chart
+                        ) {
                             //This is CDLTHRUSTING series. Add one more CDLTHRUSTING point
                             //Calculate CDLTHRUSTING data
                             //Find the data point

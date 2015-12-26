@@ -190,7 +190,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL3OUTSIDE data point
                     for (var key in cdl3outsideSeriesMap) {
                         if (cdl3outsideSeriesMap[key] && cdl3outsideSeriesMap[key].options && cdl3outsideSeriesMap[key].options.data && cdl3outsideSeriesMap[key].options.data.length > 0
-                            && cdl3outsideOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl3outsideOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl3outsideSeriesMap[key].chart === chart
+						) {
                             //This is CDL3OUTSIDE series. Add one more CDL3OUTSIDE point
                             //Calculate CDL3OUTSIDE data
                             //Find the data point

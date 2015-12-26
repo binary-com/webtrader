@@ -180,7 +180,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new WILLR data point
                     for (var key in willrSeriesMap) {
                         if (willrSeriesMap[key] && willrSeriesMap[key].options && willrSeriesMap[key].options.data && willrSeriesMap[key].options.data.length > 0
-                            && willrOptionsMap[key].parentSeriesID == series.options.id) {
+                            && willrOptionsMap[key].parentSeriesID == series.options.id
+                            && willrSeriesMap[key].chart === chart
+                        ) {
                             //This is WILLR series. Add one more WILLR point
                             //Calculate WILLR data
                             /*

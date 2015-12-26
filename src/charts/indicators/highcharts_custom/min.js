@@ -160,7 +160,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new MIN data point
                     for (var key in minSeriesMap) {
                         if (minSeriesMap[key] && minSeriesMap[key].options && minSeriesMap[key].options.data && minSeriesMap[key].options.data.length > 0
-                            && minOptionsMap[key].parentSeriesID == series.options.id) {
+                            && minOptionsMap[key].parentSeriesID == series.options.id
+                            && minSeriesMap[key].chart === chart
+                        ) {
                             //This is MIN series. Add one more MIN point
                             //Calculate MIN data
                             /*

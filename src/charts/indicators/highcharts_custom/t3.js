@@ -284,7 +284,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new T3 data point
                     for (var key in t3SeriesMap) {
                         if (t3SeriesMap[key] && t3SeriesMap[key].options && t3SeriesMap[key].options.data && t3SeriesMap[key].options.data.length > 0
-                            && t3OptionsMap[key].parentSeriesID == series.options.id) {
+                            && t3OptionsMap[key].parentSeriesID == series.options.id
+                            && t3SeriesMap[key].chart === chart
+                        ) {
                             //This is T3 series. Add one more T3 point
                             //Calculate T3 data
                             /*

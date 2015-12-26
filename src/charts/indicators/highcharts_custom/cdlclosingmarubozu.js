@@ -172,7 +172,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDLCLOSINGMARUBOZU data point
                     for (var key in cdlclosingmarubozuSeriesMap) {
                         if (cdlclosingmarubozuSeriesMap[key] && cdlclosingmarubozuSeriesMap[key].options && cdlclosingmarubozuSeriesMap[key].options.data && cdlclosingmarubozuSeriesMap[key].options.data.length > 0
-                            && cdlclosingmarubozuOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdlclosingmarubozuOptionsMap[key].parentSeriesID == series.options.id
+                            && cdlclosingmarubozuSeriesMap[key].chart === chart
+                        ) {
                             //This is CDLCLOSINGMARUBOZU series. Add one more CDLCLOSINGMARUBOZU point
                             //Calculate CDLCLOSINGMARUBOZU data
                             //Find the data point

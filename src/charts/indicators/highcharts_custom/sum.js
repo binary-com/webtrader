@@ -171,7 +171,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new SUM data point
                     for (var key in sumSeriesMap) {
                         if (sumSeriesMap[key] && sumSeriesMap[key].options && sumSeriesMap[key].options.data && sumSeriesMap[key].options.data.length > 0
-                            && sumOptionsMap[key].parentSeriesID == series.options.id) {
+                            && sumOptionsMap[key].parentSeriesID == series.options.id
+                            && sumSeriesMap[key].chart === chart
+                        ) {
                             //This is SUM series. Add one more SUM point
                             //Calculate SUM data
                             /*

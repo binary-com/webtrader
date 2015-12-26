@@ -192,7 +192,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL2CROWS data point
                     for (var key in cdl2crowsSeriesMap) {
                         if (cdl2crowsSeriesMap[key] && cdl2crowsSeriesMap[key].options && cdl2crowsSeriesMap[key].options.data && cdl2crowsSeriesMap[key].options.data.length > 0
-                            && cdl2crowsOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl2crowsOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl2crowsSeriesMap[key].chart === chart
+						) {
                             //This is CDL2CROWS series. Add one more CDL2CROWS point
                             //Calculate CDL2CROWS data
                             //Find the data point

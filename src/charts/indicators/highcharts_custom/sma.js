@@ -160,7 +160,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new SMA data point
                     for (var key in smaSeriesMap) {
                         if (smaSeriesMap[key] && smaSeriesMap[key].options && smaSeriesMap[key].options.data && smaSeriesMap[key].options.data.length > 0
-                            && smaOptionsMap[key].parentSeriesID == series.options.id) {
+                            && smaOptionsMap[key].parentSeriesID == series.options.id
+                            && smaSeriesMap[key].chart === chart
+                        ) {
                             //This is SMA series. Add one more SMA point
                             //Calculate SMA data
                             /*

@@ -294,7 +294,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                     //Add a new data point
                     for (var key in macdSeriesMap) {
                         if (macdSeriesMap[key] && macdSeriesMap[key].options && macdSeriesMap[key].options.data && macdSeriesMap[key].options.data.length > 0
-                            && macdOptionsMap[key].parentSeriesID == series.options.id) {
+                            && macdOptionsMap[key].parentSeriesID == series.options.id
+                            && macdSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var macdOptions=macdOptionsMap[key];
@@ -321,7 +323,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                     //Add a new data point
                     for (var key in signalSeriesMap) {
                         if (signalSeriesMap[key] && signalSeriesMap[key].options && signalSeriesMap[key].options.data && signalSeriesMap[key].options.data.length > 0
-                            && macdOptionsMap[key].parentSeriesID == series.options.id) {
+                            && macdOptionsMap[key].parentSeriesID == series.options.id
+                            && signalSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var macdOptions=macdOptionsMap[key];
@@ -366,7 +370,9 @@ define(['indicator_base', 'highstock'],function(indicatorBase){
                     //Add a new data point
                     for (var key in histogramSeriesMap) {
                         if (histogramSeriesMap[key] && histogramSeriesMap[key].options && histogramSeriesMap[key].options.data && histogramSeriesMap[key].options.data.length > 0
-                            && macdOptionsMap[key].parentSeriesID == series.options.id) {
+                            && macdOptionsMap[key].parentSeriesID == series.options.id
+                            && histogramSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var macdKey=key.replace('h','m');

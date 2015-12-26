@@ -111,7 +111,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new data point
                     for (var key in wclpriceSeriesMap) {
                         if (wclpriceSeriesMap[key] && wclpriceSeriesMap[key].options && wclpriceSeriesMap[key].options.data && wclpriceSeriesMap[key].options.data.length > 0
-                            && wclpriceOptionsMap[key].parentSeriesID === series.options.id) {
+                            && wclpriceOptionsMap[key].parentSeriesID === series.options.id
+                            && wclpriceSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var wclpriceOptions = wclpriceOptionsMap[key];

@@ -168,7 +168,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new ROCR data point
                     for (var key in rocrSeriesMap) {
                         if (rocrSeriesMap[key] && rocrSeriesMap[key].options && rocrSeriesMap[key].options.data && rocrSeriesMap[key].options.data.length > 0
-                            && rocrOptionsMap[key].parentSeriesID == series.options.id) {
+                            && rocrOptionsMap[key].parentSeriesID == series.options.id
+                            && rocrSeriesMap[key].chart === chart
+                        ) {
                             //This is ROCR series. Add one more ROCR point
                             //Calculate ROCR data
                             /*
