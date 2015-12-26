@@ -168,6 +168,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             category: passthrough.category,
             category_display: passthrough.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
+            chart_visible: _(['Up/Down','Asians']).contains(passthrough.category) && passthrough.duration_unit === 'ticks',
         },
         arrow: {
           visible:!(_(['Digits','Up/Down','Asians']).contains(passthrough.category) && passthrough.duration_unit === 'ticks'),

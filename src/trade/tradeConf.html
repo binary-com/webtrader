@@ -68,7 +68,7 @@
   </ul>
 
   <div class='tick-chart'
-       rv-if="arrow.visible | eq false"
+       rv-if="ticks.chart_visible"
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
        rv-class-won="ticks.status | eq 'won'"
