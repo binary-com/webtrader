@@ -5,7 +5,8 @@
   "authors": [
     "Armin Zia",
     "Amin Roosta",
-    "Arnab Karmakar"
+    "Arnab Karmakar",
+    "Mahboobeh Mohammadi"
   ],
   "description": "This is a WebTrader project for binary.com",
   "main": "Gruntfile.js",
