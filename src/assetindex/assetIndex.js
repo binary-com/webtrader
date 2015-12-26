@@ -71,6 +71,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
             try {
                 assets = results[1].asset_index;
                 markets = processMarketSubmarkets(results[0]);
+                var header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 var dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
 
                 var market_names = windows

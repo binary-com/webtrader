@@ -3,10 +3,12 @@
  */
 
 define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui', 'datatables','jquery-growl'], function ($, windows, liveapi) {
+    'use strict';
 
     var portfolioWin = null;
     var table = null;
     var registered_contracts = {};
+    var balance_span = null;
 
     function init(li) {
         li.click(function () {
@@ -16,6 +18,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 portfolioWin.moveToTop();
         });
     }
+
     function update_indicative(data) {
         var contract = data.proposal_open_contract;
         var id = contract.contract_id,
@@ -28,6 +31,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         if (table) {
             var row = table.api().row('#' + id);
             var cols = row.data();
+            if(!cols) return; /* table might be empty */
             var perv_indicative = cols[3];
             cols[3] = indicative; /* update the indicative column */
             row.data(cols);
@@ -38,7 +42,21 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         }
     }
 
+    function update_balance() {
+        liveapi.send({ balance: 1 })
+            .then(function (data) {
+                var currency = data.balance.currency;
+                var balance = data.balance.balance;
+                balance_span.html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>');
+            })
+            .catch(function (err) {
+                console.error(err);
+                $.growl.error({ message: err.message });
+            });
+    }
+
     function initPortfolioWin() {
+        require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
             .then(function (data) {
                 var portfolio_refresh_interval = null;
@@ -68,18 +86,23 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                       portfolioWin = null;
                       portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
                       portfolio_refresh_interval = null;
+                    },
+                    refresh: function() {
+                      if(portfolioWin.dialogExtend('state') === 'minimized') {
+                          portfolioWin.dialogExtend('restore');
+                      }
+                      portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
+                      portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                      update_table();
                     }
                 });
 
-                var currency = data.balance.currency;
-                var balance = data.balance.balance;
-                var header = portfolioWin.parent().find('.ui-dialog-title').css('width', '25%');
-
-                $('<span class="span-in-dialog-header" />')
-                    .html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>')
+                var header = portfolioWin.parent().find('.ui-dialog-title').addClass('with-content');
+                balance_span = $('<span class="span-in-dialog-header" />')
                     .insertAfter(header);
 
-                table = $("<table width='100%' class='display compact'/>");
+                var currency = data.balance.currency;
+                table = $("<table width='100%' class='portfolio-dialog display compact'/>");
                 table.appendTo(portfolioWin);
                 table = table.dataTable({
                     data: [],
@@ -103,17 +126,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 });
                 table.parent().addClass('hide-search-input');
 
-                var header = portfolioWin.parent().find('.ui-dialog-title');
-                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
-                refresh.on('click',function(){
-                    if(portfolioWin.dialogExtend('state') === 'minimized') {
-                        portfolioWin.dialogExtend('restore');
-                    }
-                    portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
-                    portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
-                    update_table();
-                });
-
                 portfolioWin.dialog('open');
             })
             .catch(function (err) {
@@ -126,6 +138,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     }
 
     function update_table(){
+        update_balance();
         var processing_msg = $('#' + table.attr('id') + '_processing').show();
         liveapi.send({ portfolio: 1 })
             .then(function (data) {

@@ -8,7 +8,9 @@
     overflow: hidden;
 }
 
-.ui-dialog-titlebar .ui-dialog-title {
+.ui-dialog-titlebar .ui-dialog-title.with-content {
+    min-width:200px;
+    width: 20%;
     padding-bottom: 5px;
 }
 

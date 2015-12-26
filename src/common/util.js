@@ -141,13 +141,13 @@ function load_ondemand(element, event_name,msg, module_name, callback) {
             require(["jquery", "jquery-growl"], function($) {
                 $.growl.notice({ message: msg });
             });
-            
+
             callback && callback(module);
         });
     });
 }
 
-/* convert epoch to stirng yyyy:mm:ss format 
+/* convert epoch to stirng yyyy-mm-dd hh:mm:ss format
    options: { utc: true/false } */
 function epoch_to_string(epoch, options) {
     var prefix = (options && options.utc) ? "getUTC" : "get"; // Local or UTC time
@@ -203,4 +203,3 @@ function sortAlphaNum(property) {
         }
     };
 }
-

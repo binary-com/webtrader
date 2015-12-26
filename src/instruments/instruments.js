@@ -77,20 +77,17 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "j
 
     return {
         init: function() {
-            if ($.isEmptyObject(markets)) {
-                require(["css!instruments/instruments.css"]);
-                /* cache the result of trading_times call, because assetIndex needs the same data */
-                liveapi
-                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                    .then(function (data) {
-                            markets = menu.extractChartableMarkets(data);
-                            var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
-                            menu.sortMenu(markets);
-                            menu.refreshMenu(rootUL,markets,onMenuItemClick);
-                        }
-                    ).catch(console.error.bind(console));
-            }
-
+            require(["css!instruments/instruments.css"]);
+            /* cache the result of trading_times call, because assetIndex needs the same data */
+            liveapi
+                .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                .then(function (data) {
+                        markets = menu.extractChartableMarkets(data);
+                        var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
+                        menu.sortMenu(markets);
+                        menu.refreshMenu(rootUL,markets,onMenuItemClick);
+                    }
+                ).catch(console.error.bind(console));
         },
 
         getMarketData : function() {
