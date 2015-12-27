@@ -211,6 +211,19 @@ define(['jquery'], function ($) {
       });
     }
 
+    /* the current websocket api (v3) does not return a result for closed markets,
+       use this a a temporary workaround to timeout 'ticks_history' api call while laoding charts,
+       TODO: wait for backend to fix this! */
+    var timeout_promise = function(key, milliseconds) {
+       setTimeout(function() {
+         var promise = unresolved_promises[key];
+         if (promise) {
+             delete unresolved_promises[key];
+             promise.reject({message: 'timeout for websocket request'});
+         }
+       },milliseconds);
+    };
+
     var api = {
         events: {
             on: function (name, cb) {
@@ -273,12 +286,15 @@ define(['jquery'], function ($) {
             }
         },
         /* sends a request and returns an es6-promise */
-        send: function (data) {
+        send: function (data, timeout) {
             if (data && needs_authentication(data))
                 return authentication_deps.then(function () {
                     return send_authenticated_request(data);
                 });
-            return send_request(data);
+
+            var promise = send_request(data);
+            if(timeout) timeout_promise(data.passthrough.uid, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
+            return promise;
         },
         /* whether currenct session is authenticated or not */
         is_authenticated: function () {
