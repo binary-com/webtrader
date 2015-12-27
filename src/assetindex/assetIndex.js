@@ -10,7 +10,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
         require(['css!assetindex/assetIndex.css']);
         li.click(function () {
             if (!assetWin) {
-                assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750 });
+                assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750, minHeight:70 });
                 assetWin.dialog('open'); /* bring winodw to front */
                 require(['text!assetindex/assetIndex.html'], initAssetWin);
             }

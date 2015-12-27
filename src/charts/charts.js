@@ -22,7 +22,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
         //granularity will be 0 for tick timePeriod
         var granularity = convertToTimeperiodObject(timePeriod).timeInSeconds();
-        var key = (instrumentCode + granularity).toUpperCase();
+        var key = chartingRequestMap.keyFor(instrumentCode, granularity);
         if (chartingRequestMap[key]) {
             for (var index in chartingRequestMap[key].chartIDs) {
                 var chartID = chartingRequestMap[key].chartIDs[index];
@@ -31,15 +31,15 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     break;
                 }
             }
-            if ($.isEmptyObject(chartingRequestMap[key].chartIDs)) {
+            if (chartingRequestMap[key].chartIDs.length === 0) {
                 var requestObject = {
                     "ticks_history": instrumentCode,
-                    "granularity" : granularity,
                     "end": 'latest',
                     "count": 1,
                     "subscribe": 0
                 };
-                liveapi.send(requestObject);
+                liveapi.send(requestObject)
+                       .catch(function(err){console.error(err);});
 
                 if (chartingRequestMap[key].timerHandler) {
                     clearInterval(chartingRequestMap[key].timerHandler);

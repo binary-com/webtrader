@@ -416,7 +416,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 destroy: fn, // callback for dialog destroy event
                                 refresh: fn, // callback for refresh button click
                                 autoOpen: false,
-                                resizeable:true,
+                                resizable:true,
                                 collapsable:true,
                                 minimizable: true,
                                 maximizable: true,

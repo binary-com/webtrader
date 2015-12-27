@@ -17,7 +17,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 liveapi.cached.authorize()
                     .then(initProfitWin)
                     .catch(function (err) {
-                        $.growl.error({ message: err.message });
                         console.error(err);
                     });
             else
@@ -73,6 +72,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         profitWin = windows.createBlankWindow($('<div/>'), {
             title: 'Profit Table',
             width: 900,
+            minHeight:90,
             destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
             refresh: function() { datepicker.clear(); refreshTable(); },
             'data-authorized': 'true'

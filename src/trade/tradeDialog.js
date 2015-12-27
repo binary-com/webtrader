@@ -142,9 +142,9 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         },
         barriers: {
           barrier_count: 0,
-          barrier : '+0.00000',
-          high_barrier: '+0.00000',
-          low_barrier: '-0.00000',
+          barrier : '',
+          high_barrier: '',
+          low_barrier: '',
           barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; },
           high_barrier_live: function() { return this.high_barrier * 1 + state.tick.quote * 1; },
           low_barrier_live: function() { return this.low_barrier * 1 + state.tick.quote * 1; },
@@ -407,9 +407,9 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         if (!barriers)
           return;
 
-        state.barriers.barrier = '+' + (barriers.barrier || '+0.00000') * 1;
-        state.barriers.high_barrier = '+' + (barriers.high_barrier || '+0.00000') * 1;
-        state.barriers.low_barrier = (barriers.low_barrier || '-0.00000') * 1;
+        if(barriers.barrier) state.barriers.barrier = '+' + (state.barriers.barrier || barriers.barrier) * 1;
+        if(barriers.high_barrier) state.barriers.high_barrier = '+' + (state.barriers.high_barrier || barriers.high_barrier) * 1;
+        if(barriers.low_barrier) state.barriers.low_barrier = (state.barriers.low_barrier || barriers.low_barrier) * 1;
       };
 
       state.basis.update_limit = function () {
@@ -498,15 +498,18 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         var show = function(div){
           div.appendTo(root);
 
-          root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
-          root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
+          root.find('.trade-fields').css({ left : '350px'});
+          root.find('.trade-conf').css({ left : '0'});
+          // root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
+          // root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
         };
         var hide = function(div){
-          root.find('.trade-fields').animate({ left : '-=350'}, 500, 'linear');
-          root.find('.trade-conf').animate({ left : '-=350'}, 500, 'linear', function(){
-            state.purchase.loading = false;
-            div.remove();
-          });
+          root.find('.trade-fields').css({ left : '0'});
+          root.find('.trade-conf').css({ left : '-350px'});
+          // root.find('.trade-fields').animate({ left : '-=350'}, 500, 'linear');
+          // root.find('.trade-conf').animate({ left : '-=350'}, 500, 'linear', function(){ ... });
+          state.purchase.loading = false;
+          div.remove();
           /* trigger a new proposal stream */
           state.proposal.onchange();
         }
@@ -631,8 +634,6 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
 
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
-        window.state = state; // TODO: remove this
-        window.ava = available;
 
         dialog.dialog('open');
     }

@@ -230,7 +230,7 @@ define(['lokijs', 'jquery', 'websockets/binary_websockets', 'common/util'],funct
 
             var key = this.keyFor(options.symbol, granularity);
             this[key] = { symbol: options.symbol, granularity: granularity, chartIDs: [] };
-            return liveapi.send(req);
+            return liveapi.send(req, /*timeout:*/ 30*1000); // 30 second timeout
 
         }
     };

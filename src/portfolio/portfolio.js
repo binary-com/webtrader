@@ -63,6 +63,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
                     width: 700,
+                    minHeight: 60,
                     'data-authorized': 'true',
                     close: function () {
                         portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
@@ -130,7 +131,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             })
             .catch(function (err) {
                 console.error(err);
-                $.growl.error({ message: err.message });
             });
 
         /* register handler to update indicative value */
