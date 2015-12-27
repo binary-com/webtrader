@@ -130,7 +130,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             })
             .catch(function (err) {
                 console.error(err);
-                $.growl.error({ message: err.message });
             });
 
         /* register handler to update indicative value */

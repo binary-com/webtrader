@@ -15,7 +15,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 liveapi.cached.authorize()
                     .then(initStatement)
                     .catch(function (err) {
-                        $.growl.error({ message: err.message });
                         console.error(err);
                     });
             else

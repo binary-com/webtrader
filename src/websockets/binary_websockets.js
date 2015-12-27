@@ -197,6 +197,10 @@ define(['jquery'], function ($) {
             return tokenWin
                 .getTokenAsync()
                 .then(authenticate)
+                .catch(function(up){
+                  require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
+                  throw up;
+                })
                 .then(send);
     };
 
@@ -281,7 +285,12 @@ define(['jquery'], function ($) {
                         return cached_promises[key];
 
                     return token ? authenticate(token) : /* we have a token => autheticate */
-                                      tokenWin.getTokenAsync().then(authenticate); /* get the token from user and authenticate */
+                                      tokenWin.getTokenAsync()
+                                      .then(authenticate) /* get the token from user and authenticate */
+                                      .catch(function(up){
+                                        require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
+                                        throw up;
+                                      });
                 })
             }
         },
