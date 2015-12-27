@@ -96,7 +96,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                  var msg = "Error getting data for " + instrumentName + "";
                  require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: msg }); });
                  var chart = $(containerIDWithHash).highcharts();
-                 chart.showLoading(msg);
+                 chart && chart.showLoading(msg);
                  console.error(err);
             })
             .then(function(data) {
