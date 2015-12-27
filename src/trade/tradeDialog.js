@@ -498,15 +498,18 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         var show = function(div){
           div.appendTo(root);
 
-          root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
-          root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
+          root.find('.trade-fields').css({ left : '350px'});
+          root.find('.trade-conf').css({ left : '0'});
+          // root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
+          // root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
         };
         var hide = function(div){
-          root.find('.trade-fields').animate({ left : '-=350'}, 500, 'linear');
-          root.find('.trade-conf').animate({ left : '-=350'}, 500, 'linear', function(){
-            state.purchase.loading = false;
-            div.remove();
-          });
+          root.find('.trade-fields').css({ left : '0'});
+          root.find('.trade-conf').css({ left : '-350px'});
+          // root.find('.trade-fields').animate({ left : '-=350'}, 500, 'linear');
+          // root.find('.trade-conf').animate({ left : '-=350'}, 500, 'linear', function(){ ... });
+          state.purchase.loading = false;
+          div.remove();
           /* trigger a new proposal stream */
           state.proposal.onchange();
         }
