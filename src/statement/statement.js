@@ -87,6 +87,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         statement = windows.createBlankWindow($('<div/>'), {
             title: 'Statement',
             width: 900 ,
+            minHeight:100,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
             refresh: function() { datepicker.clear(); refreshTable(); },
             'data-authorized' :'true'
