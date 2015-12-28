@@ -97,7 +97,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                  require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: msg }); });
                  var chart = $(containerIDWithHash).highcharts();
                  chart && chart.showLoading(msg);
-                 console.error(err);
+                 console.error(err.message);
             })
             .then(function(data) {
                 if (data && !data.error && options.delayAmount > 0) {
