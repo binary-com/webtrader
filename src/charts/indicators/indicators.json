@@ -298,5 +298,34 @@
     "long_display_name": "Mesa Adaptive Moving Average",
     "short_display_name": "MAMA",
     "ohlcOnly" : false
-  }
+  },
+  
+   "cdlupsidegap2crows": {
+    "id": "cdlupsidegap2crows",
+    "long_display_name": "Upside/Downside Gap Two Crows",
+    "short_display_name": "CDLUPSIDEGAP2CROWS",
+    "ohlcOnly" :  true
+  },
+   
+   "cdlxsidegap3methods":{
+    "id": "cdlxsidegap3methods",
+    "long_display_name": "Upside/Downside Gap Three Methods",
+    "short_display_name": "CDLXSIDEGAP3METHODS",
+    "ohlcOnly" :  true
+   },
+   
+   "cdltasukigap":{
+    "id": "cdltasukigap",
+    "long_display_name": "Tasuki Gap",
+    "short_display_name": "CDLTASUKIGAP",
+    "ohlcOnly" :  true
+   },
+
+   "cdlpiercing":{
+    "id": "cdlpiercing",
+    "long_display_name": "Piercing Pattern",
+    "short_display_name": "CDLPIERCING",
+    "ohlcOnly" :  true
+   }
+   
 }
