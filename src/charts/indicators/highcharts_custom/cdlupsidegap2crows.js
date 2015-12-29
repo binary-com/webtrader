@@ -28,7 +28,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
        
         var isBullishContinuation = isCandleThree_Bullish
-                                    && isCandleTwo_Bearish && candleTwo_Close > candleThree_Close //gaps below 1st day
+                                    && isCandleTwo_Bearish && candleTwo_Close > Math.max(candleThree_Close, candleThree_Open) && candleTwo_Open > Math.max(candleThree_Close, candleThree_Open)// black candle with a body gapping above the prior candle's body.
                                     && isCandleOne_Bearish && candleOne_Close < candleTwo_Close && candleOne_Open > candleTwo_Open //opening higher than the Day 2 open, but closing below the Day 2 close
                                     && candleOne_Close > candleThree_Close;// and above the Day 1 close
 
@@ -39,7 +39,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         //                           && candleOne_Close < candleThree_Close;
 
         return {
-            isBullishContinuation:index== isBullishContinuation,
+            isBullishContinuation: isBullishContinuation,
             //isBearishContinuation: isBearishContinuation
         };
     }

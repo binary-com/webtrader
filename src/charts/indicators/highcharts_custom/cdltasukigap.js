@@ -38,7 +38,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     && candleOne_Close < candleThree_Close && candleOne_Close > candleTwo_Open;//closes within the gap between the first two bars.
 
         return {
-            isBullishContinuation: index == isBullishContinuation,
+            isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
         };
     }
@@ -81,14 +81,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 cdltasukigapData.push({
                                     x: data[index].x || data[index][0],
                                     title: '<span style="color : blue">TG</span>',
-                                    text: 'Upside Gap Two Crows : Bull'
+                                    text: 'Tasuki Gap : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
                                 cdltasukigapData.push({
                                     x: data[index].x || data[index][0],
                                     title: '<span style="color : red">TG</span>',
-                                    text: 'Upside Gap Two Crows : Bear'
+                                    text: 'Tasuki Gap : Bear'
                                 });
                             }
                             //Calculate CDLTASUKIGAP - end

@@ -40,7 +40,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     && candleOne_Close > candleThree_Close && candleOne_Close < candleThree_Open;
 
         return {
-            isBullishContinuation: index == isBullishContinuation,
+            isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
         };
     }
@@ -83,14 +83,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 cdlxsidegap3methodsData.push({
                                     x: data[index].x || data[index][0],
                                     title: '<span style="color : blue">GTM</span>',
-                                    text: 'Upside Gap Two Crows : Bull'
+                                    text: 'Upside/Downside Gap Three Methods : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
                                 cdlxsidegap3methodsData.push({
                                     x: data[index].x || data[index][0],
                                     title: '<span style="color : red">GTM</span>',
-                                    text: 'Upside Gap Two Crows : Bear'
+                                    text: 'Upside/Downside Gap Three Methods : Bear'
                                 });
                             }
                             //Calculate CDLXSIDEGAP3METHODS - end
