@@ -33,8 +33,8 @@
     }
 */
 
-define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
-    function (_, $, windows, rv, liveapi, chartingRequestMap, html) {
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
+    function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
 
@@ -124,9 +124,24 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           visible: false,
         },
         date_expiry: {
-          value_date: new Date().toISOString().split('T')[0], /* today utc in yyyy-mm-dd format */
-          value_hour: new Date(new Date().getTime() + (10 * 60 * 1000)).toISOString().split('T')[1].slice(0,5), /* now utc in hh:mm format */
+          value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
+          value_hour: moment.utc().format('HH:mm'), /* now utc in hh:mm format */
           value: 0,    /* epoch value of date+hour */
+          today_times: { open: '--', close: '--' }, /* trading times for today */
+          onHourShow: function(hour) { /* for timepicker */
+            var times = state.date_expiry.today_times;
+            if(times.open === '--') return true;
+            var open_hour = moment(times.open, "HH:mm:ss").hour();
+            var close_hour = moment(times.close, "HH:mm:ss").hour();
+            return (hour >= open_hour && hour <= close_hour) || hour <= close_hour || hour >= open_hour;
+          },
+          onMinuteShow: function(hour,minute){
+            var times = this.today_times;
+            if(times.open === '--') return true;
+            if(times.open_hour === hour) return minute >= moment(times.open, "HH:mm:ss").minute();
+            if(times.close_hour === hour) return minute <= moment(times.open, "HH:mm:ss").minute();
+            return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
+          }
         },
         categories: {
           array: [],
@@ -265,16 +280,21 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       };
 
       state.date_expiry.update = function () {
-        var yyyy_mm_dd = state.date_expiry.value_date,
-        hh_mm = state.date_expiry.value_hour;
-        var ymd = yyyy_mm_dd.split('-'),
-        hm = hh_mm.split(':'),
-        year = ymd[0] * 1,
-        month = ymd[1] * 1 - 1,
-        day = ymd[2] * 1,
-        hour = hm[0] * 1,
-        minute = hm[1] * 1;
-        state.date_expiry.value = Date.UTC(year, month, day, hour, minute) / 1000;
+        var yyyy_mm_dd = state.date_expiry.value_date;
+        var hh_mm = state.date_expiry.value_hour;
+        if(moment(yyyy_mm_dd).isAfter(moment(),'day')){
+          liveapi.cached.send({trading_times: yyyy_mm_dd })
+                 .then(function(data){
+                    console.warn(data);
+                 })
+                 .catch(function(err) { console.error(err.message); });
+          hh_mm = "00:00"; // contracts with duration more than 24 hours must end at the end of trading day
+        }
+        else {
+            state.date_expiry.value = moment.utc(yyyy_mm_dd + " " + hh_mm).unix();
+            state.proposal.onchange();
+        }
+
       }
 
       state.duration.update = function () {
@@ -636,6 +656,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
+        window.state = state; window.av = available; window.moment = moment;
     }
 
     return {

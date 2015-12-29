@@ -86,12 +86,12 @@
         <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="datepicker date-expiry-date" readonly
                    numberOfMonths="1" marginTop="0px" marginLeft="-100px"
-                   rv-datepicker="date_expiry.value_date | notify date_expiry.update | debounce proposal.onchange" />
+                   rv-datepicker="date_expiry.value_date | notify date_expiry.update" />
         </li>
-        <li rv-show="duration.value | eq 'End Time' ">
+        <li rv-if="duration.value | eq 'End Time' ">
             <input type="text" class="timepicker date-expiry-hour"
                    marginTop="0px" marginLeft="-255px"
-                   rv-timepicker="date_expiry.value_hour | notify date_expiry.update | debounce proposal.onchange" />
+                   rv-timepicker="date_expiry.value_hour | notify date_expiry.update" />
         </li>
     </ul>
 
