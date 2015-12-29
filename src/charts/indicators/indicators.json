@@ -361,6 +361,13 @@
     "long_display_name": "Harami Pattern",
     "short_display_name": "CDLHARAMI",
     "ohlcOnly" :  true
+   },
+
+   "cdlhammer":{
+    "id": "cdlhammer",
+    "long_display_name": "Hammer",
+    "short_display_name": "CDLHAMMER",
+    "ohlcOnly" :  true
    }
 
 }

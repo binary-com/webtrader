@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
     function init(containerIDWithHash, _callback) {
 
-        require(['text!charts/indicators/cdlbelthold/cdlbelthold.html'], function ($html) {
+        require(['text!charts/indicators/cdlhammer/cdlhammer.html'], function ($html) {
 
             $html = $($html);
 
@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlbelthold'], function (cdlbelthold) {
-                                cdlbelthold.init();
-                                //Add CDLBELTHOLD for the main series
-                                $($(".cdlbelthold").data('refererChartID')).highcharts().series[0].addCDLBELTHOLD();
+                            require(['charts/indicators/highcharts_custom/cdlhammer'], function (cdlhammer) {
+                                cdlhammer.init();
+                                //Add CDLHAMMER for the main series
+                                $($(".cdlhammer").data('refererChartID')).highcharts().series[0].addCDLHAMMER();
                             });
 
                             closeDialog.call($html);
@@ -60,12 +60,12 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
         open: function (containerIDWithHash) {
 
-            if ($(".cdlbelthold").length == 0) {
+            if ($(".cdlhammer").length == 0) {
                 init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".cdlbelthold").data('refererChartID', containerIDWithHash).dialog("open");
+            $(".cdlhammer").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 
