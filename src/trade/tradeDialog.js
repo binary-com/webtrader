@@ -101,6 +101,29 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         return available;
     }
 
+    /* get open and close time for a symbol trading_times */
+    function trading_times_for(yyyy_mm_dd, symbol) {
+        return liveapi.cached
+               .send({trading_times: yyyy_mm_dd})
+               .then(function(data){
+                  var times = { open : '--', close: '--'};
+                  data.trading_times.markets.forEach(function(market){
+                      market.submarkets.forEach(function(sub){
+                        sub.symbols.forEach(function(sym){
+                          if(sym.symbol === symbol) {
+                            times = {open: sym.times.open[0], close: sym.times.close[0]};
+                          }
+                        });
+                      });
+                  });
+                  return times;
+               })
+               .catch(function(err){
+                 console.error(err);
+                 return { open : '--', close: '--'};
+               });
+    }
+
     function init_state(available,root){
 
       var state = {
@@ -136,10 +159,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             return (hour >= open_hour && hour <= close_hour) || hour <= close_hour || hour >= open_hour;
           },
           onMinuteShow: function(hour,minute){
-            var times = this.today_times;
+            var times = state.date_expiry.today_times;
             if(times.open === '--') return true;
-            if(times.open_hour === hour) return minute >= moment(times.open, "HH:mm:ss").minute();
-            if(times.close_hour === hour) return minute <= moment(times.open, "HH:mm:ss").minute();
+            var open_hour = moment(times.open, "HH:mm:ss").hour();
+            var close_hour = moment(times.close, "HH:mm:ss").hour();
+            if(open_hour === hour) return minute >= moment(times.open, "HH:mm:ss").minute();
+            if(close_hour === hour) return minute <= moment(times.open, "HH:mm:ss").minute();
             return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
           }
         },
@@ -238,6 +263,17 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         },
       };
       state.barriers.root = state; // reference to root object for computed properties
+      state.date_expiry.update_times = function(){
+          trading_times_for(state.date_expiry.value_date, state.proposal.symbol)
+            .then(function(times) {
+              state.date_expiry.today_times.open = times.open;
+              state.date_expiry.today_times.close = times.close;
+              var range = _(state.duration_unit.ranges).filter({'type': 'minutes'}).first();
+              state.date_expiry.today_times.disabled = !range;
+              console.warn(range, state.date_expiry.today_times);
+              state.date_expiry.value_hour = moment.utc().add(range ? range.min+1 : 0, 'm').format('HH:mm');
+          });
+      }
 
       state.categories.update = function () {
         var name = state.categories.value;
@@ -378,6 +414,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
         state.duration_count.update();
         state.barriers.update();
+        state.date_expiry.update_times();
       };
 
       state.duration_count.update = function () {
@@ -607,6 +644,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           var proposal_id = _.last(state.proposal.ids);
           if (data.proposal.id !== proposal_id) return;
           if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
+          if(data.error){
+            console.error(data.error);
+            state.proposal.error = data.error.message;
+            state.proposal.message = '';
+          }
           /* update fields */
           var proposal = data.proposal;
           state.proposal.ask_price = proposal.ask_price;
