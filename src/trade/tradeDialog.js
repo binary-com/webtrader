@@ -33,8 +33,8 @@
     }
 */
 
-define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
-    function (_, $, windows, rv, liveapi, chartingRequestMap, html) {
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
+    function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
 
@@ -101,6 +101,29 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         return available;
     }
 
+    /* get open and close time for a symbol trading_times */
+    function trading_times_for(yyyy_mm_dd, symbol) {
+        return liveapi.cached
+               .send({trading_times: yyyy_mm_dd})
+               .then(function(data){
+                  var times = { open : '--', close: '--'};
+                  data.trading_times.markets.forEach(function(market){
+                      market.submarkets.forEach(function(sub){
+                        sub.symbols.forEach(function(sym){
+                          if(sym.symbol === symbol) {
+                            times = {open: sym.times.open[0], close: sym.times.close[0]};
+                          }
+                        });
+                      });
+                  });
+                  return times;
+               })
+               .catch(function(err){
+                 console.error(err);
+                 return { open : '--', close: '--'};
+               });
+    }
+
     function init_state(available,root){
 
       var state = {
@@ -124,15 +147,43 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           visible: false,
         },
         date_expiry: {
-          value_date: new Date().toISOString().split('T')[0], /* today utc in yyyy-mm-dd format */
-          value_hour: new Date(new Date().getTime() + (10 * 60 * 1000)).toISOString().split('T')[1].slice(0,5), /* now utc in hh:mm format */
+          value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
+          value_hour: moment.utc().format('HH:mm'), /* now utc in hh:mm format */
           value: 0,    /* epoch value of date+hour */
+          today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
+          onHourShow: function(hour) { /* for timepicker */
+            var times = state.date_expiry.today_times;
+            if(times.open === '--') return true;
+            var now = moment.utc();
+            var close_hour = moment(times.close, "HH:mm:ss").hour();
+            var open_hour = moment(times.open, "HH:mm:ss").hour();
+            if(now.hour() >= open_hour && now.hour() <= close_hour ) { open_hour =  now.hour(); }
+            return (hour >= open_hour && hour <= close_hour) ||
+                   (hour <= close_hour && close_hour <= open_hour) ||
+                   (hour >= open_hour && open_hour >= close_hour);
+          },
+          onMinuteShow: function(hour,minute){
+            var times = state.date_expiry.today_times;
+            if(times.open === '--') return true;
+            var now = moment.utc();
+            var close_hour = moment(times.close, "HH:mm:ss").hour(),
+                close_minute = moment(times.close, "HH:mm:ss").minute();
+            var open_hour = moment(times.open, "HH:mm:ss").hour(),
+                open_minute = moment(times.open, "HH:mm:ss").minute();
+            if(now.hour() >= open_hour && now.hour() <= close_hour ) {
+              open_hour =  now.hour();
+              open_minute = now.minute();
+            }
+            if(open_hour === hour) return minute >= open_minute;
+            if(close_hour === hour) return minute <= close_minute;
+            return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
+          }
         },
         categories: {
           array: [],
           value: '',
           paddingTop: function(){
-            var paddings = { "Asians" : '19px', "Up/Down" : '12px', "Digits" : '14px', "In/Out" : '2px', "Touch/No Touch" : '16px' , "Spreads":'5px' };
+            var paddings = { "Asians" : '26px', "Up/Down" : '16px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '16px' , "Spreads":'5px' };
             return paddings[state.categories.value] || '3px';
           }
         },
@@ -224,6 +275,19 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
       };
       state.barriers.root = state; // reference to root object for computed properties
 
+      state.date_expiry.update_times = function(){
+          trading_times_for(state.date_expiry.value_date, state.proposal.symbol)
+            .then(function(times) {
+              var expiry = state.date_expiry;
+              expiry.today_times.open = times.open;
+              expiry.today_times.close = times.close;
+              var range = _(state.duration_unit.ranges).filter({'type': 'minutes'}).first();
+              expiry.today_times.disabled = !range;
+              var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
+              expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
+          });
+      }
+
       state.categories.update = function () {
         var name = state.categories.value;
         state.category_displays.array = _(available).filter('contract_category_display', name).map('contract_display').uniq().run();
@@ -264,17 +328,25 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         _.assign(state.date_start, { value: 'now', array: array, visible: true });
       };
 
-      state.date_expiry.update = function () {
-        var yyyy_mm_dd = state.date_expiry.value_date,
-        hh_mm = state.date_expiry.value_hour;
-        var ymd = yyyy_mm_dd.split('-'),
-        hm = hh_mm.split(':'),
-        year = ymd[0] * 1,
-        month = ymd[1] * 1 - 1,
-        day = ymd[2] * 1,
-        hour = hm[0] * 1,
-        minute = hm[1] * 1;
-        state.date_expiry.value = Date.UTC(year, month, day, hour, minute) / 1000;
+      state.date_expiry.update = function (date_or_hour) {
+        var expiry = state.date_expiry;
+        /* contracts that are more not today must end at the market close time */
+        var is_today = !moment.utc(expiry.value_date).isAfter(moment.utc(),'day');
+        if(!is_today){
+            expiry.today_times.disabled = true;
+            trading_times_for(expiry.value_date, state.proposal.symbol)
+              .then(function(times){
+                var value_hour = times.close !== '--' ? times.close : '00:00:00';
+                expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
+                expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
+                state.proposal.onchange();
+              });
+        }
+        else {
+            if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
+            expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
+            state.proposal.onchange();
+        }
       }
 
       state.duration.update = function () {
@@ -358,6 +430,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
         state.duration_count.update();
         state.barriers.update();
+        state.date_expiry.update_times();
       };
 
       state.duration_count.update = function () {
@@ -587,6 +660,11 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
           var proposal_id = _.last(state.proposal.ids);
           if (data.proposal.id !== proposal_id) return;
           if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
+          if(data.error){
+            console.error(data.error);
+            state.proposal.error = data.error.message;
+            state.proposal.message = '';
+          }
           /* update fields */
           var proposal = data.proposal;
           state.proposal.ask_price = proposal.ask_price;
@@ -636,6 +714,7 @@ define(['lodash', 'jquery', 'windows/windows', 'common/rivetsExtra', 'websockets
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
+        window.state = state; window.av = available; window.moment = moment;
     }
 
     return {

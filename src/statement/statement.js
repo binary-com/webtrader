@@ -45,7 +45,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         }
         else  { /* request the next 50 items for live scroll */
             request.limit = 50;
-            if(is_specific_date_shown) {
+            if(is_specific_date_shown || yyy_mm_dd.clear) {
                 table.api().rows().remove();
                 is_specific_date_shown = false;
             }
@@ -89,7 +89,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             width: 900 ,
             minHeight:100,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
-            refresh: function() { datepicker.clear(); refreshTable(); },
+            refresh: function() {
+              datepicker.clear();
+              refreshTable({clear:true});
+            },
             'data-authorized' :'true'
         });
         require(['text!statement/statement.html'], function (html) {
@@ -136,14 +139,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
 
 
             /**************** infinite scroll implementation *******************/
-            refreshTable();
+            refreshTable({clear:true});
             statement.scroll(function(){
               var scrollTop = statement.scrollTop(),
                   innerHeight = statement.innerHeight(),
                   scrollHeight = statement[0].scrollHeight,
                   postion = (scrollTop + innerHeight) / scrollHeight;
               if(postion > 0.75 && !loading && !is_specific_date_shown){
-                refreshTable();
+                refreshTable({clear:false});
               }
             });
         });

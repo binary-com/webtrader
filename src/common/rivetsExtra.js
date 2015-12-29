@@ -290,13 +290,14 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
                 showPeriod: model.showPeriod || false,
                 showLeadingZero: model.showLeadingZero || true,
                 showCloseButton: model.showCloseButton || true,
-                showNowButton: model.showNowButton || true,
+                showNowButton: model.showNowButton || false,
                 onHourShow: model.onHourShow || allways_ok,
                 onMinuteShow: model.onMinuteShow || allways_ok,
                 beforeShow: function (input, inst) {
                     inst.tpDiv.css(styles);
                 },
-                onClose: update
+                onClose: update,
+                onSelect: update,
             });
         },
         unbind: function (el) {
