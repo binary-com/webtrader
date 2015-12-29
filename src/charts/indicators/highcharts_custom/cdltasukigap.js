@@ -193,14 +193,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
                                         title: '<span style="color : blue">TG</span>',
-                                        text: 'Upside Gap Two Crows : Bull'
+                                        text: 'Tasuki Gap : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
                                         title: '<span style="color : red">TG</span>',
-                                        text: 'Upside Gap Two Crows : Bear'
+                                        text: 'Tasuki Gap : Bear'
                                     }
                                 };
 

@@ -1,9 +1,9 @@
 ﻿/**
- * Created by Mahboob.M on 12/28/15
+ * Created by Mahboob.M on 12/29/15
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdlxsidegap3methodsOptionsMap = {}, cdlxsidegap3methodsSeriesMap = {};
+    var cdlgapsidesidewhiteOptionsMap = {}, cdlgapsidesidewhiteSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -17,9 +17,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
 
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
-            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
-            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index);
+			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
 
         var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
 			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
@@ -29,22 +27,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
 
-        var isBullishContinuation = isCandleThree_Bullish
-                                    && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //gaps above 1st day
-                                    && isCandleOne_Bearish && candleOne_Open > candleTwo_Open && candleOne_Open < candleTwo_Close //The third day opens lower, into the body of the top white (or green) candle 
-                                    && candleOne_Close < candleThree_Close && candleOne_Close > candleThree_Open;//and closes into the body of the first white (or green) candle.
+        var isBullishContinuation = isCandleThree_Bullish  //the first candlestick is upward 
+                                    && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //followed by another upward that opens above  the first (gap up), 
+                                    && isCandleOne_Bullish && candleOne_Open < candleTwo_Close;// followed by a third upward candlestick that opens below the close of the second (gap down)
 
-        var isBearishContinuation = isCandleThree_Bearish
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //gaps below 1st day
-                                    && isCandleOne_Bullish && candleOne_Open < candleTwo_Open && candleOne_Open > candleTwo_Close
-                                    && candleOne_Close > candleThree_Close && candleOne_Close < candleThree_Open;
-
+        var isBearishContinuation = isCandleThree_Bearish  //the first candlestick is downward
+                                    && isCandleTwo_Bullish && candleTwo_Close < candleThree_Close//followed by an upward candlestick that opens below the  first one (gap down),
+                                    && isCandleOne_Bullish && candleOne_Open < candleTwo_Close;// followed by an upward candlestick that opens below the close of the second one
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
         };
     }
-    
+
     return {
         init: function () {
 
@@ -52,69 +47,69 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLXSIDEGAP3METHODS) return;
+                if (!H || H.Series.prototype.addCDLGAPSIDESIDEWHITE) return;
 
-                H.Series.prototype.addCDLXSIDEGAP3METHODS = function (cdlxsidegap3methodsOptions) {
+                H.Series.prototype.addCDLGAPSIDESIDEWHITE = function (cdlgapsidesidewhiteOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdlxsidegap3methodsOptions = $.extend({
+                    cdlgapsidesidewhiteOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdlxsidegap3methodsOptions);
+                    }, cdlgapsidesidewhiteOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLXSIDEGAP3METHODS series to the chart
+                    //If this series has data, add CDLGAPSIDESIDEWHITE series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLXSIDEGAP3METHODS data
+                        //Calculate CDLGAPSIDESIDEWHITE data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdlxsidegap3methodsData = [];
+                        var cdlgapsidesidewhiteData = [];
                         for (var index = 2 ; index < data.length; index++) {
 
-                            //Calculate CDLXSIDEGAP3METHODS - start
+                            //Calculate CDLGAPSIDESIDEWHITE - start
                             var bull_bear = calculateIndicatorValue(data, index);
 
                             if (bull_bear.isBullishContinuation) {
-                                cdlxsidegap3methodsData.push({
+                                cdlgapsidesidewhiteData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">GTM</span>',
-                                    text: 'Upside/Downside Gap Three Methods : Bull'
+                                    title: '<span style="color : blue">SSWL</span>',
+                                    text: 'Up/Down-Gap Side-By-Side White Lines : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
-                                cdlxsidegap3methodsData.push({
+                                cdlgapsidesidewhiteData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">GTM</span>',
-                                    text: 'Upside/Downside Gap Three Methods : Bear'
+                                    title: '<span style="color : red">SSWL</span>',
+                                    text: 'Up/Down-Gap Side-By-Side White Lines : Bear'
                                 });
                             }
-                            //Calculate CDLXSIDEGAP3METHODS - end
+                            //Calculate CDLGAPSIDESIDEWHITE - end
                         };
 
                         var chart = this.chart;
 
-                        cdlxsidegap3methodsOptionsMap[uniqueID] = cdlxsidegap3methodsOptions;
+                        cdlgapsidesidewhiteOptionsMap[uniqueID] = cdlgapsidesidewhiteOptions;
 
                         var series = this;
-                        cdlxsidegap3methodsSeriesMap[uniqueID] = chart.addSeries({
+                        cdlgapsidesidewhiteSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLXSIDEGAP3METHODS',
-                            data: cdlxsidegap3methodsData,
+                            name: 'CDLGAPSIDESIDEWHITE',
+                            data: cdlgapsidesidewhiteData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdlxsidegap3methodsSeriesMap[uniqueID]).data({
+                        $(cdlgapsidesidewhiteSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdlxsidegap3methods',
-                            parentSeriesID: cdlxsidegap3methodsOptions.parentSeriesID
+                            indicatorID: 'cdlgapsidesidewhite',
+                            parentSeriesID: cdlgapsidesidewhiteOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -126,30 +121,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLXSIDEGAP3METHODS = function (uniqueID) {
+                H.Series.prototype.removeCDLGAPSIDESIDEWHITE = function (uniqueID) {
                     var chart = this.chart;
-                    cdlxsidegap3methodsOptionsMap[uniqueID] = null;
+                    cdlgapsidesidewhiteOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdlxsidegap3methodsSeriesMap[uniqueID] = null;
+                    cdlgapsidesidewhiteSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLXSIDEGAP3METHODS = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLGAPSIDESIDEWHITE = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdlxsidegap3methodsOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlgapsidesidewhiteOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdlxsidegap3methodseed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdlgapsidesidewhiteeed, options, redraw, shift, animation) {
 
-                    pcdlxsidegap3methodseed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlxsidegap3methodsOptionsMap, this.options.id)) {
-                        updateCDLXSIDEGAP3METHODSSeries.call(this, options[0]);
+                    pcdlgapsidesidewhiteeed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlgapsidesidewhiteOptionsMap, this.options.id)) {
+                        updateCDLGAPSIDESIDEWHITESeries.call(this, options[0]);
                     }
 
                 });
@@ -157,59 +152,59 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdlxsidegap3methodseed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdlgapsidesidewhiteeed, options, redraw, animation) {
 
-                    pcdlxsidegap3methodseed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlxsidegap3methodsOptionsMap, this.series.options.id)) {
-                        updateCDLXSIDEGAP3METHODSSeries.call(this.series, this.x, true);
+                    pcdlgapsidesidewhiteeed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlgapsidesidewhiteOptionsMap, this.series.options.id)) {
+                        updateCDLGAPSIDESIDEWHITESeries.call(this.series, this.x, true);
                     }
 
                 });
-                
+
 
                 /**
                  * This function should be called in the context of series object
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLXSIDEGAP3METHODSSeries(time, isPointUpdate) {
+                function updateCDLGAPSIDESIDEWHITESeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLUPSIDEGAP2CROWS data point
-                    for (var key in cdlxsidegap3methodsSeriesMap) {
-                        if (cdlxsidegap3methodsSeriesMap[key] && cdlxsidegap3methodsSeriesMap[key].options && cdlxsidegap3methodsSeriesMap[key].options.data && cdlxsidegap3methodsSeriesMap[key].options.data.length > 0
-                            && cdlxsidegap3methodsOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLUPSIDEGAP2CROWS series. Add one more CDLUPSIDEGAP2CROWS point
-                            //Calculate CDLUPSIDEGAP2CROWS data
+                    //Add a new CDLGAPSIDESIDEWHITE data point
+                    for (var key in cdlgapsidesidewhiteSeriesMap) {
+                        if (cdlgapsidesidewhiteSeriesMap[key] && cdlgapsidesidewhiteSeriesMap[key].options && cdlgapsidesidewhiteSeriesMap[key].options.data && cdlgapsidesidewhiteSeriesMap[key].options.data.length > 0
+                            && cdlgapsidesidewhiteOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLGAPSIDESIDEWHITE series. Add one more CDLGAPSIDESIDEWHITE point
+                            //Calculate CDLGAPSIDESIDEWHITE data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                               
-                                //Calculate CDLUPSIDEGAP2CROWS - start
+
+                                //Calculate CDLGAPSIDESIDEWHITE - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLUPSIDEGAP2CROWS - end
+                                //Calculate CDLGAPSIDESIDEWHITE - end
                                 var bullBearData = null;
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">GTM</span>',
-                                        text: 'Upside/Downside Gap Three Methods : Bull'
+                                        title: '<span style="color : blue">SSWL</span>',
+                                        text: 'Up/Down-Gap Side-By-Side White Lines : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">GTM</span>',
-                                        text: 'Upside/Downside Gap Three Methods : Bear'
+                                        title: '<span style="color : red">SSWL</span>',
+                                        text: 'Up/Down-Gap Side-By-Side White Lines : Bear'
                                     }
                                 };
 
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdlxsidegap3methodsSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdlxsidegap3methodsSeriesMap[key].data[sIndx].x || cdlxsidegap3methodsSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdlgapsidesidewhiteSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlgapsidesidewhiteSeriesMap[key].data[sIndx].x || cdlgapsidesidewhiteSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -217,10 +212,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdlxsidegap3methodsSeriesMap[key].data[whereToUpdate].remove();
+                                            cdlgapsidesidewhiteSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdlxsidegap3methodsSeriesMap[key].addPoint(bullBearData);
+                                    cdlgapsidesidewhiteSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
                                         cdlshootingstarSeriesMap[key].data[whereToUpdate].remove();

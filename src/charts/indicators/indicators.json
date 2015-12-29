@@ -326,6 +326,27 @@
     "long_display_name": "Piercing Pattern",
     "short_display_name": "CDLPIERCING",
     "ohlcOnly" :  true
+   },
+
+   "cdlbelthold":{
+    "id": "cdlbelthold",
+    "long_display_name": "Belt-hold ",
+    "short_display_name": "CDLBELTHOLD",
+    "ohlcOnly" :  true
+   },
+
+   "cdldarkcloudcover":{
+    "id": "cdldarkcloudcover",
+    "long_display_name": "Dark Cloud Cover ",
+    "short_display_name": "CDLDARKCLOUDCOVER",
+    "ohlcOnly" :  true
+   },
+
+   "cdlgapsidesidewhite":{
+    "id": "cdlgapsidesidewhite",
+    "long_display_name": "Up/Down-Gap Side-By-Side White Lines",
+    "short_display_name": "CDLGAPSIDESIDEWHITE",
+    "ohlcOnly" :  true
    }
    
 }

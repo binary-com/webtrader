@@ -1,9 +1,9 @@
 ﻿/**
- * Created by Mahboob.M on 12/28/15
+ * Created by Mahboob.M on 12/29/15
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdlxsidegap3methodsOptionsMap = {}, cdlxsidegap3methodsSeriesMap = {};
+    var cdlbeltholdOptionsMap = {}, cdlbeltholdSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -29,22 +29,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
 
-        var isBullishContinuation = isCandleThree_Bullish
-                                    && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //gaps above 1st day
-                                    && isCandleOne_Bearish && candleOne_Open > candleTwo_Open && candleOne_Open < candleTwo_Close //The third day opens lower, into the body of the top white (or green) candle 
-                                    && candleOne_Close < candleThree_Close && candleOne_Close > candleThree_Open;//and closes into the body of the first white (or green) candle.
+        var isBullishContinuation = isCandleThree_Bearish  //After a stretch of bearish candlestick
+                                    && isCandleTwo_Bearish //After a stretch of bearish candlestick
+                                    && isCandleOne_Bullish && candleOne_Open === candleOne_Low && candleOne_Open < candleTwo_Close;// a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price.
 
-        var isBearishContinuation = isCandleThree_Bearish
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //gaps below 1st day
-                                    && isCandleOne_Bullish && candleOne_Open < candleTwo_Open && candleOne_Open > candleTwo_Close
-                                    && candleOne_Close > candleThree_Close && candleOne_Close < candleThree_Open;
-
+        var isBearishContinuation = isCandleThree_Bullish  //After a stretch of bullish candlestick
+                                    && isCandleTwo_Bullish //After a stretch of bullish candlestick
+                                    && isCandleOne_Bearish && candleOne_Open === candleOne_High && candleOne_Open > candleTwo_Close;// a bearish or black candlestick forms. the opening price, which becomes the high for the day, is higher than the close of the previous day.
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
         };
     }
-    
+
     return {
         init: function () {
 
@@ -52,69 +49,69 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLXSIDEGAP3METHODS) return;
+                if (!H || H.Series.prototype.addCDLBELTHOLD) return;
 
-                H.Series.prototype.addCDLXSIDEGAP3METHODS = function (cdlxsidegap3methodsOptions) {
+                H.Series.prototype.addCDLBELTHOLD = function (cdlbeltholdOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdlxsidegap3methodsOptions = $.extend({
+                    cdlbeltholdOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdlxsidegap3methodsOptions);
+                    }, cdlbeltholdOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLXSIDEGAP3METHODS series to the chart
+                    //If this series has data, add CDLBELTHOLD series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLXSIDEGAP3METHODS data
+                        //Calculate CDLBELTHOLD data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdlxsidegap3methodsData = [];
+                        var cdlbeltholdData = [];
                         for (var index = 2 ; index < data.length; index++) {
 
-                            //Calculate CDLXSIDEGAP3METHODS - start
+                            //Calculate CDLBELTHOLD - start
                             var bull_bear = calculateIndicatorValue(data, index);
 
                             if (bull_bear.isBullishContinuation) {
-                                cdlxsidegap3methodsData.push({
+                                cdlbeltholdData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">GTM</span>',
-                                    text: 'Upside/Downside Gap Three Methods : Bull'
+                                    title: '<span style="color : blue">BH</span>',
+                                    text: 'Belt-hold : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
-                                cdlxsidegap3methodsData.push({
+                                cdlbeltholdData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">GTM</span>',
-                                    text: 'Upside/Downside Gap Three Methods : Bear'
+                                    title: '<span style="color : red">BH</span>',
+                                    text: 'Belt-hold : Bear'
                                 });
                             }
-                            //Calculate CDLXSIDEGAP3METHODS - end
+                            //Calculate CDLBELTHOLD - end
                         };
 
                         var chart = this.chart;
 
-                        cdlxsidegap3methodsOptionsMap[uniqueID] = cdlxsidegap3methodsOptions;
+                        cdlbeltholdOptionsMap[uniqueID] = cdlbeltholdOptions;
 
                         var series = this;
-                        cdlxsidegap3methodsSeriesMap[uniqueID] = chart.addSeries({
+                        cdlbeltholdSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLXSIDEGAP3METHODS',
-                            data: cdlxsidegap3methodsData,
+                            name: 'CDLBELTHOLD',
+                            data: cdlbeltholdData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdlxsidegap3methodsSeriesMap[uniqueID]).data({
+                        $(cdlbeltholdSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdlxsidegap3methods',
-                            parentSeriesID: cdlxsidegap3methodsOptions.parentSeriesID
+                            indicatorID: 'cdlbelthold',
+                            parentSeriesID: cdlbeltholdOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -126,30 +123,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLXSIDEGAP3METHODS = function (uniqueID) {
+                H.Series.prototype.removeCDLBELTHOLD = function (uniqueID) {
                     var chart = this.chart;
-                    cdlxsidegap3methodsOptionsMap[uniqueID] = null;
+                    cdlbeltholdOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdlxsidegap3methodsSeriesMap[uniqueID] = null;
+                    cdlbeltholdSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLXSIDEGAP3METHODS = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLBELTHOLD = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdlxsidegap3methodsOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlbeltholdOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdlxsidegap3methodseed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdlbeltholdeed, options, redraw, shift, animation) {
 
-                    pcdlxsidegap3methodseed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlxsidegap3methodsOptionsMap, this.options.id)) {
-                        updateCDLXSIDEGAP3METHODSSeries.call(this, options[0]);
+                    pcdlbeltholdeed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlbeltholdOptionsMap, this.options.id)) {
+                        updateCDLBELTHOLDSeries.call(this, options[0]);
                     }
 
                 });
@@ -157,59 +154,59 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdlxsidegap3methodseed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdlbeltholdeed, options, redraw, animation) {
 
-                    pcdlxsidegap3methodseed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlxsidegap3methodsOptionsMap, this.series.options.id)) {
-                        updateCDLXSIDEGAP3METHODSSeries.call(this.series, this.x, true);
+                    pcdlbeltholdeed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlbeltholdOptionsMap, this.series.options.id)) {
+                        updateCDLBELTHOLDSeries.call(this.series, this.x, true);
                     }
 
                 });
-                
+
 
                 /**
                  * This function should be called in the context of series object
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLXSIDEGAP3METHODSSeries(time, isPointUpdate) {
+                function updateCDLBELTHOLDSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLUPSIDEGAP2CROWS data point
-                    for (var key in cdlxsidegap3methodsSeriesMap) {
-                        if (cdlxsidegap3methodsSeriesMap[key] && cdlxsidegap3methodsSeriesMap[key].options && cdlxsidegap3methodsSeriesMap[key].options.data && cdlxsidegap3methodsSeriesMap[key].options.data.length > 0
-                            && cdlxsidegap3methodsOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLUPSIDEGAP2CROWS series. Add one more CDLUPSIDEGAP2CROWS point
-                            //Calculate CDLUPSIDEGAP2CROWS data
+                    //Add a new CDLBELTHOLD data point
+                    for (var key in cdlbeltholdSeriesMap) {
+                        if (cdlbeltholdSeriesMap[key] && cdlbeltholdSeriesMap[key].options && cdlbeltholdSeriesMap[key].options.data && cdlbeltholdSeriesMap[key].options.data.length > 0
+                            && cdlbeltholdOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLBELTHOLD series. Add one more CDLBELTHOLD point
+                            //Calculate CDLBELTHOLD data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                               
-                                //Calculate CDLUPSIDEGAP2CROWS - start
+
+                                //Calculate CDLBELTHOLD - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLUPSIDEGAP2CROWS - end
+                                //Calculate CDLBELTHOLD - end
                                 var bullBearData = null;
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">GTM</span>',
-                                        text: 'Upside/Downside Gap Three Methods : Bull'
+                                        title: '<span style="color : blue">BH</span>',
+                                        text: 'Belt-hold : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">GTM</span>',
-                                        text: 'Upside/Downside Gap Three Methods : Bear'
+                                        title: '<span style="color : red">BH</span>',
+                                        text: 'Belt-hold : Bear'
                                     }
                                 };
 
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdlxsidegap3methodsSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdlxsidegap3methodsSeriesMap[key].data[sIndx].x || cdlxsidegap3methodsSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdlbeltholdSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlbeltholdSeriesMap[key].data[sIndx].x || cdlbeltholdSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -217,10 +214,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdlxsidegap3methodsSeriesMap[key].data[whereToUpdate].remove();
+                                            cdlbeltholdSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdlxsidegap3methodsSeriesMap[key].addPoint(bullBearData);
+                                    cdlbeltholdSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
                                         cdlshootingstarSeriesMap[key].data[whereToUpdate].remove();
