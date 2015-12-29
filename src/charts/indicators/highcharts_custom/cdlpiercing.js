@@ -24,12 +24,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     && isCandleOne_Bullish && candleOne_Open < candleTwo_Close //white candlestick must open below the previous close.
                                     && candleOne_Close > (Math.abs(candleTwo_Open - candleTwo_Close) / 2);//close above the midpoint of the black candlestick's body.
 
-        var isBearishContinuation = isCandleTwo_Bullish 
-                                    && isCandleOne_Bearish && candleOne_Open > candleTwo_Close //white candlestick must open above the previous close.
-                                    && candleOne_Close < (Math.abs(candleTwo_Open - candleTwo_Close) / 2);//close bellow the midpoint of the black candlestick's body. 
+        var isBearishContinuation = false;//Piercing Pattern is bullish pattern ONLY
 
         return {
-            isBullishContinuation: index == isBullishContinuation,
+            isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
         };
     } 
@@ -72,16 +70,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 cdlpiercingData.push({
                                     x: data[index].x || data[index][0],
                                     title: '<span style="color : blue">PP</span>',
-                                    text: 'Upside Gap Two Crows : Bull'
+                                    text: 'Piercing Pattern'
                                 });
-                            }
-                            if (bull_bear.isBearishContinuation) {
-                                cdlpiercingData.push({
-                                    x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">PP</span>',
-                                    text: 'Upside Gap Two Crows : Bear'
-                                });
-                            }
+                            } //Piercing Pattern is bullish pattern ONLY
+                            //if (bull_bear.isBearishContinuation) {
+                            //    cdlpiercingData.push({
+                            //        x: data[index].x || data[index][0],
+                            //        title: '<span style="color : red">PP</span>',
+                            //        text: 'Upside Gap Two Crows : Bear'
+                            //    });
+                            //}
                             //Calculate CDLPIERCING - end
                         };
 
