@@ -150,21 +150,32 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
           value_hour: moment.utc().format('HH:mm'), /* now utc in hh:mm format */
           value: 0,    /* epoch value of date+hour */
-          today_times: { open: '--', close: '--' }, /* trading times for today */
+          today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
           onHourShow: function(hour) { /* for timepicker */
             var times = state.date_expiry.today_times;
             if(times.open === '--') return true;
-            var open_hour = moment(times.open, "HH:mm:ss").hour();
+            var now = moment.utc();
             var close_hour = moment(times.close, "HH:mm:ss").hour();
-            return (hour >= open_hour && hour <= close_hour) || hour <= close_hour || hour >= open_hour;
+            var open_hour = moment(times.open, "HH:mm:ss").hour();
+            if(now.hour() >= open_hour && now.hour() <= close_hour ) { open_hour =  now.hour(); }
+            return (hour >= open_hour && hour <= close_hour) ||
+                   (hour <= close_hour && close_hour <= open_hour) ||
+                   (hour >= open_hour && open_hour >= close_hour);
           },
           onMinuteShow: function(hour,minute){
             var times = state.date_expiry.today_times;
             if(times.open === '--') return true;
-            var open_hour = moment(times.open, "HH:mm:ss").hour();
-            var close_hour = moment(times.close, "HH:mm:ss").hour();
-            if(open_hour === hour) return minute >= moment(times.open, "HH:mm:ss").minute();
-            if(close_hour === hour) return minute <= moment(times.open, "HH:mm:ss").minute();
+            var now = moment.utc();
+            var close_hour = moment(times.close, "HH:mm:ss").hour(),
+                close_minute = moment(times.close, "HH:mm:ss").minute();
+            var open_hour = moment(times.open, "HH:mm:ss").hour(),
+                open_minute = moment(times.open, "HH:mm:ss").minute();
+            if(now.hour() >= open_hour && now.hour() <= close_hour ) {
+              open_hour =  now.hour();
+              open_minute = now.minute();
+            }
+            if(open_hour === hour) return minute >= open_minute;
+            if(close_hour === hour) return minute <= close_minute;
             return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
           }
         },
@@ -263,15 +274,17 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         },
       };
       state.barriers.root = state; // reference to root object for computed properties
+
       state.date_expiry.update_times = function(){
           trading_times_for(state.date_expiry.value_date, state.proposal.symbol)
             .then(function(times) {
-              state.date_expiry.today_times.open = times.open;
-              state.date_expiry.today_times.close = times.close;
+              var expiry = state.date_expiry;
+              expiry.today_times.open = times.open;
+              expiry.today_times.close = times.close;
               var range = _(state.duration_unit.ranges).filter({'type': 'minutes'}).first();
-              state.date_expiry.today_times.disabled = !range;
-              console.warn(range, state.date_expiry.today_times);
-              state.date_expiry.value_hour = moment.utc().add(range ? range.min+1 : 0, 'm').format('HH:mm');
+              expiry.today_times.disabled = !range;
+              var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
+              expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
           });
       }
 
@@ -315,22 +328,25 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         _.assign(state.date_start, { value: 'now', array: array, visible: true });
       };
 
-      state.date_expiry.update = function () {
-        var yyyy_mm_dd = state.date_expiry.value_date;
-        var hh_mm = state.date_expiry.value_hour;
-        if(moment(yyyy_mm_dd).isAfter(moment(),'day')){
-          liveapi.cached.send({trading_times: yyyy_mm_dd })
-                 .then(function(data){
-                    console.warn(data);
-                 })
-                 .catch(function(err) { console.error(err.message); });
-          hh_mm = "00:00"; // contracts with duration more than 24 hours must end at the end of trading day
+      state.date_expiry.update = function (date_or_hour) {
+        var expiry = state.date_expiry;
+        /* contracts that are more not today must end at the market close time */
+        var is_today = !moment.utc(expiry.value_date).isAfter(moment.utc(),'day');
+        if(!is_today){
+            expiry.today_times.disabled = true;
+            trading_times_for(expiry.value_date, state.proposal.symbol)
+              .then(function(times){
+                var value_hour = times.close !== '--' ? times.close : '00:00:00';
+                expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
+                expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
+                state.proposal.onchange();
+              });
         }
         else {
-            state.date_expiry.value = moment.utc(yyyy_mm_dd + " " + hh_mm).unix();
+            if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
+            expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
             state.proposal.onchange();
         }
-
       }
 
       state.duration.update = function () {
