@@ -1,9 +1,9 @@
 ﻿/**
- * Created by Mahboob.M on 12/28/15
+ * Created by Mahboob.M on 12/29/15
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdltasukigapOptionsMap = {}, cdltasukigapSeriesMap = {};
+    var cdltakuriOptionsMap = {}, cdltakuriSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -17,7 +17,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
 
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
+			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
+            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
+			candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
 
         var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
 			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
@@ -27,16 +29,22 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
 
-        var isBullishContinuation = isCandleThree_Bullish
-                                    && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //gaps above 1st day
-                                    && isCandleOne_Bearish && candleOne_Open > candleTwo_Open && candleOne_Open < candleTwo_Close //open inside the red 2day candle's real body.
-                                    && candleOne_Close < candleTwo_Open && candleOne_Close > candleThree_Close;//closes within the gap between the first two bars. 
+        var response = indicatorBase.isDoji({
+            open: candleOne_Open,
+            high: candleOne_High,
+            low: candleOne_Low,
+            close: candleOne_Close
+        }) || {};
 
-        var isBearishContinuation = isCandleThree_Bearish
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //gaps below 1st day
-                                    && isCandleOne_Bullish && candleOne_Open > candleTwo_Close && candleOne_Open < candleTwo_Open //open inside the red candle's real body.
-                                    && candleOne_Close < candleThree_Close && candleOne_Close > candleTwo_Open;//closes within the gap between the first two bars.
+        var isBullishContinuation = isCandleThree_Bearish  //the first candlestick is downward 
+                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //followed by another downward that opens bellow  the first (gap down), 
+                                    && response.isBear && candleOne_Open > candleTwo_Close
+                                    && (Math.abs(candleOne_Open - candleOne_Low)) >= (Math.abs(candleOne_Low - candleOne_High) * 0.60);// The most important part of the Dragonfly Doji is the long lower shadow.
 
+        var isBearishContinuation = isCandleThree_Bullish  //the first candlestick is upward
+                                    && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close//followed by an upward candlestick that opens above the  first one (gap up),
+                                    && response.isBear && candleOne_Open < candleTwo_Close
+                                    && (Math.abs(candleOne_Open - candleOne_Low)) >= (Math.abs(candleOne_Low - candleOne_High) * 0.60);// The most important part of the Dragonfly Doji is the long lower shadow.
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
@@ -50,69 +58,69 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLTASUKIGAP) return;
+                if (!H || H.Series.prototype.addCDLTAKURI) return;
 
-                H.Series.prototype.addCDLTASUKIGAP = function (cdltasukigapOptions) {
+                H.Series.prototype.addCDLTAKURI = function (cdltakuriOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdltasukigapOptions = $.extend({
+                    cdltakuriOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdltasukigapOptions);
+                    }, cdltakuriOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLTASUKIGAP series to the chart
+                    //If this series has data, add CDLTAKURI series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLTASUKIGAP data
+                        //Calculate CDLTAKURI data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdltasukigapData = [];
+                        var cdltakuriData = [];
                         for (var index = 2 ; index < data.length; index++) {
 
-                            //Calculate CDLTASUKIGAP - start
+                            //Calculate CDLTAKURI - start
                             var bull_bear = calculateIndicatorValue(data, index);
 
                             if (bull_bear.isBullishContinuation) {
-                                cdltasukigapData.push({
+                                cdltakuriData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">TG</span>',
-                                    text: 'Tasuki Gap : Bull'
+                                    title: '<span style="color : blue">DD</span>',
+                                    text: 'Dragonfly Doji : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
-                                cdltasukigapData.push({
+                                cdltakuriData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">TG</span>',
-                                    text: 'Tasuki Gap : Bear'
+                                    title: '<span style="color : red">DD</span>',
+                                    text: 'Dragonfly Doji : Bear'
                                 });
                             }
-                            //Calculate CDLTASUKIGAP - end
+                            //Calculate CDLTAKURI - end
                         };
 
                         var chart = this.chart;
 
-                        cdltasukigapOptionsMap[uniqueID] = cdltasukigapOptions;
+                        cdltakuriOptionsMap[uniqueID] = cdltakuriOptions;
 
                         var series = this;
-                        cdltasukigapSeriesMap[uniqueID] = chart.addSeries({
+                        cdltakuriSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLTASUKIGAP',
-                            data: cdltasukigapData,
+                            name: 'CDLTAKURI',
+                            data: cdltakuriData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdltasukigapSeriesMap[uniqueID]).data({
+                        $(cdltakuriSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdltasukigap',
-                            parentSeriesID: cdltasukigapOptions.parentSeriesID
+                            indicatorID: 'cdltakuri',
+                            parentSeriesID: cdltakuriOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -124,30 +132,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLTASUKIGAP = function (uniqueID) {
+                H.Series.prototype.removeCDLTAKURI = function (uniqueID) {
                     var chart = this.chart;
-                    cdltasukigapOptionsMap[uniqueID] = null;
+                    cdltakuriOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdltasukigapSeriesMap[uniqueID] = null;
+                    cdltakuriSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLTASUKIGAP = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLTAKURI = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdltasukigapOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdltakuriOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdltasukigapeed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdltakurieed, options, redraw, shift, animation) {
 
-                    pcdltasukigapeed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltasukigapOptionsMap, this.options.id)) {
-                        updateCDLTASUKIGAPSeries.call(this, options[0]);
+                    pcdltakurieed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltakuriOptionsMap, this.options.id)) {
+                        updateCDLTAKURISeries.call(this, options[0]);
                     }
 
                 });
@@ -155,59 +163,59 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdltasukigapeed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdltakurieed, options, redraw, animation) {
 
-                    pcdltasukigapeed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltasukigapOptionsMap, this.series.options.id)) {
-                        updateCDLTASUKIGAPSeries.call(this.series, this.x, true);
+                    pcdltakurieed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltakuriOptionsMap, this.series.options.id)) {
+                        updateCDLTAKURISeries.call(this.series, this.x, true);
                     }
 
-                });
-
+                }); 
+                
 
                 /**
                  * This function should be called in the context of series object
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLTASUKIGAPSeries(time, isPointUpdate) {
+                function updateCDLTAKURISeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLUPSIDEGAP2CROWS data point
-                    for (var key in cdltasukigapSeriesMap) {
-                        if (cdltasukigapSeriesMap[key] && cdltasukigapSeriesMap[key].options && cdltasukigapSeriesMap[key].options.data && cdltasukigapSeriesMap[key].options.data.length > 0
-                            && cdltasukigapOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLUPSIDEGAP2CROWS series. Add one more CDLUPSIDEGAP2CROWS point
-                            //Calculate CDLUPSIDEGAP2CROWS data
+                    //Add a new CDLTAKURI data point
+                    for (var key in cdltakuriSeriesMap) {
+                        if (cdltakuriSeriesMap[key] && cdltakuriSeriesMap[key].options && cdltakuriSeriesMap[key].options.data && cdltakuriSeriesMap[key].options.data.length > 0
+                            && cdltakuriOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLTAKURI series. Add one more CDLTAKURI point
+                            //Calculate CDLTAKURI data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLUPSIDEGAP2CROWS - start
+                                //Calculate CDLTAKURI - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLUPSIDEGAP2CROWS - end
+                                //Calculate CDLTAKURI - end
                                 var bullBearData = null;
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">TG</span>',
-                                        text: 'Tasuki Gap : Bull'
+                                        title: '<span style="color : blue">DD</span>',
+                                        text: 'Dragonfly Doji : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">TG</span>',
-                                        text: 'Tasuki Gap : Bear'
+                                        title: '<span style="color : red">DD</span>',
+                                        text: 'Dragonfly Doji : Bear'
                                     }
                                 };
 
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdltasukigapSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdltasukigapSeriesMap[key].data[sIndx].x || cdltasukigapSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdltakuriSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdltakuriSeriesMap[key].data[sIndx].x || cdltakuriSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -215,13 +223,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdltasukigapSeriesMap[key].data[whereToUpdate].remove();
+                                            cdltakuriSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdltasukigapSeriesMap[key].addPoint(bullBearData);
+                                    cdltakuriSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdltasukigapSeriesMap[key].data[whereToUpdate].remove();
+                                        cdltakuriSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

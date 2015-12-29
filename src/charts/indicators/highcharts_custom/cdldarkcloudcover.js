@@ -198,7 +198,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     cdldarkcloudcoverSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlshootingstarSeriesMap[key].data[whereToUpdate].remove();
+                                        cdldarkcloudcoverSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

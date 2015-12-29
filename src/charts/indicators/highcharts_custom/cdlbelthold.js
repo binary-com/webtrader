@@ -220,7 +220,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     cdlbeltholdSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlshootingstarSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlbeltholdSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

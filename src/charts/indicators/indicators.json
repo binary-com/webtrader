@@ -347,6 +347,20 @@
     "long_display_name": "Up/Down-Gap Side-By-Side White Lines",
     "short_display_name": "CDLGAPSIDESIDEWHITE",
     "ohlcOnly" :  true
+   },
+
+   "cdltakuri":{
+    "id": "cdltakuri",
+    "long_display_name": "Takuri (Dragonfly Doji with very long lower shadow)",
+    "short_display_name": "CDLTAKURI",
+    "ohlcOnly" :  true
+   },
+
+   "cdlharami":{
+    "id": "cdlharami",
+    "long_display_name": "Harami Pattern",
+    "short_display_name": "CDLHARAMI",
+    "ohlcOnly" :  true
    }
-   
+
 }

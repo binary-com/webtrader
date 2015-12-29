@@ -218,7 +218,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     cdlgapsidesidewhiteSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlshootingstarSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlgapsidesidewhiteSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

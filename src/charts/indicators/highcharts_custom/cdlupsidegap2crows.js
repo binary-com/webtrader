@@ -223,7 +223,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     cdlupsidegap2crowsSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlshootingstarSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlupsidegap2crowsSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

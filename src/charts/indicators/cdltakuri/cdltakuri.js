@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
     function init(containerIDWithHash, _callback) {
 
-        require(['text!charts/indicators/cdlgapsidesidewhite/cdlgapsidesidewhite.html'], function ($html) {
+        require(['text!charts/indicators/cdltakuri/cdltakuri.html'], function ($html) {
 
             $html = $($html);
 
@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlgapsidesidewhite'], function (cdlgapsidesidewhite) {
-                                cdlgapsidesidewhite.init();
-                                //Add CDLGAPSIDESIDEWHITE for the main series
-                                $($(".cdlgapsidesidewhite").data('refererChartID')).highcharts().series[0].addCDLGAPSIDESIDEWHITE();
+                            require(['charts/indicators/highcharts_custom/cdltakuri'], function (cdltakuri) {
+                                cdltakuri.init();
+                                //Add CDLTAKURI for the main series
+                                $($(".cdltakuri").data('refererChartID')).highcharts().series[0].addCDLTAKURI();
                             });
 
                             closeDialog.call($html);
@@ -60,12 +60,12 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
         open: function (containerIDWithHash) {
 
-            if ($(".cdlgapsidesidewhite").length == 0) {
+            if ($(".cdltakuri").length == 0) {
                 init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".cdlgapsidesidewhite").data('refererChartID', containerIDWithHash).dialog("open");
+            $(".cdltakuri").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 
