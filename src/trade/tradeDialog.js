@@ -700,6 +700,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             collapsable: true,
             minimizable: true,
             maximizable: false,
+            'data-authorized': 'true',
             /* forget proposal streams on close,
               TODO: figure out if/when we should close tick stream */
             close: function() {
