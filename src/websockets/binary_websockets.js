@@ -143,9 +143,10 @@ define(['jquery'], function ($) {
 
         return new Promise(function (resolve,reject) {
             unresolved_promises[data.passthrough.uid] = { resolve: resolve, reject: reject, data: data };
-            if (is_connected())
+            if (is_connected()) {
+                console.log('Request object : ', JSON.stringify(data));
                 socket.send(JSON.stringify(data));
-            else
+            } else
                 buffered_sends.push(data);
         });
     };

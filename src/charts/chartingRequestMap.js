@@ -197,9 +197,14 @@ define(['lokijs', 'jquery', 'websockets/binary_websockets', 'common/util'],funct
             var style = options.style || 'ticks';
 
             var is_tick = true;
-            if(typeof granularity === 'string'){
-              is_tick = false;
-              granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+            if(typeof granularity === 'string') {
+                if ($.trim(granularity) === '0') {
+                } else if($.trim(granularity).toLowerCase() === '1t') {
+                    granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+                } else {
+                    is_tick = false;
+                    granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+                }
             }
 
             var req = {
