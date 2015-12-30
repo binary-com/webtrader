@@ -403,5 +403,12 @@
     "long_display_name": "Stalled Pattern",
     "short_display_name": "CDLSTALLEDPATTERN",
     "ohlcOnly" :  true
+   },
+
+   "cdleveningstar":{
+    "id": "cdleveningstar",
+    "long_display_name": "Evening Star",
+    "short_display_name": "CDLEVENINGSTAR",
+    "ohlcOnly" :  true
    }
 }
