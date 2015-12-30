@@ -124,7 +124,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_state(available,root){
+    function init_state(available,root, dialog){
 
       var state = {
         duration: {
@@ -638,7 +638,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             granularity: 0,
             count: 1,
             style: 'ticks'
-          }).catch(function (err) { console.error(err); });
+          }).catch(function (err) {
+            $.growl.error({ message: err.message });
+            _.delay(function(){ dialog.dialog('close'); },2000);
+            console.error(err);
+          });
       }
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
@@ -692,7 +696,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
     function init(symbol, contracts_for) {
         var root = $(html);
         var available = apply_fixes(contracts_for.available);
-        var state = init_state(available,root);
 
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
@@ -711,11 +714,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             }
         });
 
+        var state = init_state(available,root,dialog);
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        window.state = state; window.av = available; window.moment = moment;
+        window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
     }
 
     return {
