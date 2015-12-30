@@ -368,6 +368,40 @@
     "long_display_name": "Hammer",
     "short_display_name": "CDLHAMMER",
     "ohlcOnly" :  true
-   }
+   },
 
+   "cdlhangingman":{
+    "id": "cdlhangingman",
+    "long_display_name": "Hanging Man",
+    "short_display_name": "CDLHANGINGMAN",
+    "ohlcOnly" :  true
+   },
+
+   "cdlinvertedhammer":{
+    "id": "cdlinvertedhammer",
+    "long_display_name": "Inverted Hammer",
+    "short_display_name": "CDLINVERTEDHAMMER",
+    "ohlcOnly" :  true
+   },
+
+   "cdlgravestonedoji":{
+    "id": "cdlgravestonedoji",
+    "long_display_name": "Gravestone Doji",
+    "short_display_name": "CDLGRAVESTONEDOJI",
+    "ohlcOnly" :  true
+   },
+
+   "cdlharamicross":{
+    "id": "cdlharamicross",
+    "long_display_name": "Harami Cross Pattern",
+    "short_display_name": "CDLHARAMICROSS",
+    "ohlcOnly" :  true
+   },
+
+   "cdlstalledpattern":{
+    "id": "cdlstalledpattern",
+    "long_display_name": "Stalled Pattern",
+    "short_display_name": "CDLSTALLEDPATTERN",
+    "ohlcOnly" :  true
+   }
 }

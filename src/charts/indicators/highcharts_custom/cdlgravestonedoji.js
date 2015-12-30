@@ -3,7 +3,7 @@
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdltakuriOptionsMap = {}, cdltakuriSeriesMap = {};
+    var cdlgravestonedojiOptionsMap = {}, cdlgravestonedojiSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -20,19 +20,20 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
 
-        var lowWick = Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close)),
+         
+        var highWick = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
             candleBodySize = Math.abs(candleOne_Low - candleOne_High),
-            isOpenCloseHighAlmostSame = ((candleOne_Open === candleOne_Close) || ((candleBodySize * 0.05) >= Math.abs(candleOne_Open - candleOne_Close)))
-            && (candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || ((candleBodySize * 0.05) >= Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close))),
-            isLowerShadowLong = lowWick >= (candleBodySize * 0.80);
+            isOpenCloseLowAlmostSame = ((candleOne_Open === candleOne_Close) || ((candleBodySize * 0.05) >= Math.abs(candleOne_Open - candleOne_Close)))
+            && (candleOne_Low === Math.min(candleOne_Open, candleOne_Close)) || ((candleBodySize * 0.05) >= Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close))),
+            isUpperShadowLong = highWick >= (candleBodySize * 0.80);
 
-        var isBullishContinuation = isCandleTwo_Bearish //occurs at the bottom of downtrends.
-                                    && isOpenCloseHighAlmostSame //the open, high, and close are the same or about the same price
-                                    && isLowerShadowLong;// The most important part of the Dragonfly Doji is the long lower shadow.
+        var isBullishContinuation = isCandleTwo_Bearish //occurs at the top of downtrend
+                                    && isOpenCloseLowAlmostSame //the open, high, and close are the same or about the same price
+                                    && isUpperShadowLong;// The most important part of the Graveston Doji is the long upper shadow..
 
         var isBearishContinuation = isCandleTwo_Bullish //occurs at the top of uptrends
-                                    && isOpenCloseHighAlmostSame //the open, high, and close are the same or about the same price
-                                    && isLowerShadowLong;// The most important part of the Dragonfly Doji is the long lower shadow.
+                                    && isOpenCloseLowAlmostSame //the open, high, and close are the same or about the same price
+                                    && isUpperShadowLong;// The most important part of the Graveston Doji is the long upper shadow..
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
@@ -46,69 +47,69 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLTAKURI) return;
+                if (!H || H.Series.prototype.addCDLGRAVESTONEDOJI) return;
 
-                H.Series.prototype.addCDLTAKURI = function (cdltakuriOptions) {
+                H.Series.prototype.addCDLGRAVESTONEDOJI = function (cdlgravestonedojiOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdltakuriOptions = $.extend({
+                    cdlgravestonedojiOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdltakuriOptions);
+                    }, cdlgravestonedojiOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLTAKURI series to the chart
+                    //If this series has data, add CDLGRAVESTONEDOJI series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLTAKURI data
+                        //Calculate CDLGRAVESTONEDOJI data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdltakuriData = [];
+                        var cdlgravestonedojiData = [];
                         for (var index = 1 ; index < data.length; index++) {
 
-                            //Calculate CDLTAKURI - start
+                            //Calculate CDLGRAVESTONEDOJI - start
                             var bull_bear = calculateIndicatorValue(data, index);
 
                             if (bull_bear.isBullishContinuation) {
-                                cdltakuriData.push({
+                                cdlgravestonedojiData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">DD</span>',
-                                    text: 'Dragonfly Doji : Bull'
+                                    title: '<span style="color : blue">GSD</span>',
+                                    text: 'Gravestone Doji : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
-                                cdltakuriData.push({
+                                cdlgravestonedojiData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">DD</span>',
-                                    text: 'Dragonfly Doji : Bear'
+                                    title: '<span style="color : red">GSD</span>',
+                                    text: 'Gravestone Doji : Bear'
                                 });
                             }
-                            //Calculate CDLTAKURI - end
+                            //Calculate CDLGRAVESTONEDOJI - end
                         };
 
                         var chart = this.chart;
 
-                        cdltakuriOptionsMap[uniqueID] = cdltakuriOptions;
+                        cdlgravestonedojiOptionsMap[uniqueID] = cdlgravestonedojiOptions;
 
                         var series = this;
-                        cdltakuriSeriesMap[uniqueID] = chart.addSeries({
+                        cdlgravestonedojiSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLTAKURI',
-                            data: cdltakuriData,
+                            name: 'CDLGRAVESTONEDOJI',
+                            data: cdlgravestonedojiData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdltakuriSeriesMap[uniqueID]).data({
+                        $(cdlgravestonedojiSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdltakuri',
-                            parentSeriesID: cdltakuriOptions.parentSeriesID
+                            indicatorID: 'cdlgravestonedoji',
+                            parentSeriesID: cdlgravestonedojiOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -120,30 +121,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLTAKURI = function (uniqueID) {
+                H.Series.prototype.removeCDLGRAVESTONEDOJI = function (uniqueID) {
                     var chart = this.chart;
-                    cdltakuriOptionsMap[uniqueID] = null;
+                    cdlgravestonedojiOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdltakuriSeriesMap[uniqueID] = null;
+                    cdlgravestonedojiSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLTAKURI = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLGRAVESTONEDOJI = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdltakuriOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlgravestonedojiOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdltakurieed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdlgravestonedojieed, options, redraw, shift, animation) {
 
-                    pcdltakurieed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltakuriOptionsMap, this.options.id)) {
-                        updateCDLTAKURISeries.call(this, options[0]);
+                    pcdlgravestonedojieed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlgravestonedojiOptionsMap, this.options.id)) {
+                        updateCDLGRAVESTONEDOJISeries.call(this, options[0]);
                     }
 
                 });
@@ -151,11 +152,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdltakurieed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdlgravestonedojieed, options, redraw, animation) {
 
-                    pcdltakurieed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltakuriOptionsMap, this.series.options.id)) {
-                        updateCDLTAKURISeries.call(this.series, this.x, true);
+                    pcdlgravestonedojieed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlgravestonedojiOptionsMap, this.series.options.id)) {
+                        updateCDLGRAVESTONEDOJISeries.call(this.series, this.x, true);
                     }
 
                 }); 
@@ -166,44 +167,44 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLTAKURISeries(time, isPointUpdate) {
+                function updateCDLGRAVESTONEDOJISeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLTAKURI data point
-                    for (var key in cdltakuriSeriesMap) {
-                        if (cdltakuriSeriesMap[key] && cdltakuriSeriesMap[key].options && cdltakuriSeriesMap[key].options.data && cdltakuriSeriesMap[key].options.data.length > 0
-                            && cdltakuriOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLTAKURI series. Add one more CDLTAKURI point
-                            //Calculate CDLTAKURI data
+                    //Add a new CDLGRAVESTONEDOJI data point
+                    for (var key in cdlgravestonedojiSeriesMap) {
+                        if (cdlgravestonedojiSeriesMap[key] && cdlgravestonedojiSeriesMap[key].options && cdlgravestonedojiSeriesMap[key].options.data && cdlgravestonedojiSeriesMap[key].options.data.length > 0
+                            && cdlgravestonedojiOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLGRAVESTONEDOJI series. Add one more CDLGRAVESTONEDOJI point
+                            //Calculate CDLGRAVESTONEDOJI data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLTAKURI - start
+                                //Calculate CDLGRAVESTONEDOJI - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLTAKURI - end
+                                //Calculate CDLGRAVESTONEDOJI - end
                                 var bullBearData = null;
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">DD</span>',
-                                        text: 'Dragonfly Doji : Bull'
+                                        title: '<span style="color : blue">GSD</span>',
+                                        text: 'Gravestone Doji : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">DD</span>',
-                                        text: 'Dragonfly Doji : Bear'
+                                        title: '<span style="color : red">GSD</span>',
+                                        text: 'Gravestone Doji : Bear'
                                     }
                                 };
 
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdltakuriSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdltakuriSeriesMap[key].data[sIndx].x || cdltakuriSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdlgravestonedojiSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlgravestonedojiSeriesMap[key].data[sIndx].x || cdlgravestonedojiSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -211,13 +212,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdltakuriSeriesMap[key].data[whereToUpdate].remove();
+                                            cdlgravestonedojiSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdltakuriSeriesMap[key].addPoint(bullBearData);
+                                    cdlgravestonedojiSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdltakuriSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlgravestonedojiSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

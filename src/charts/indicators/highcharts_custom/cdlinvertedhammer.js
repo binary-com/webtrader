@@ -1,9 +1,9 @@
 ﻿/**
- * Created by Mahboob.M on 12/29/15
+ * Created by Mahboob.M on 12/30/15
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdlhammerOptionsMap = {}, cdlhammerSeriesMap = {};
+    var cdlinvertedhammerOptionsMap = {}, cdlinvertedhammerSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -15,7 +15,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
-       
+
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
 			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
@@ -26,28 +26,26 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
 
-
         var perctDiff_openToClose = Math.abs((candleOne_Open - candleOne_Close) * 100.0 / candleOne_Open);
-        var perctDiff_openToHigh = Math.abs((candleOne_Open - candleOne_High) * 100.0 / candleOne_Open);
-        var perctDiff_closeToHigh = Math.abs((candleOne_Close - candleOne_High) * 100.0 / candleOne_Close);
+        var perctDiff_openToLow = Math.abs((candleOne_Open - candleOne_Low) * 100.0 / candleOne_Open);
+        var perctDiff_closeToLow = Math.abs((candleOne_Close - candleOne_Low) * 100.0 / candleOne_Close);
         var body = Math.abs(candleOne_Open - candleOne_Close);
-        var lowWick = Math.abs(candleOne_Low - Math.max(candleOne_Open, candleOne_Close));
-        var isLowerShadowTwiceBody = lowWick >= (2.0 * body);
-        var isOpenCloseHighAlmostSame = perctDiff_openToClose <= 1.0
-                                        && perctDiff_openToHigh <= 1.0
-                                        && perctDiff_closeToHigh <= 0.5;
+        var wick = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close));
+        var isUpperShadowTwiceBody = wick >= (2.0 * body);
+        var isOpenCloseLowAlmostSame = perctDiff_openToClose <= 1.0
+                                        && perctDiff_openToLow <= 1.0
+                                        && perctDiff_closeToLow <= 0.5;
 
-      
-        var isBullishContinuation = isCandleThree_Bearish //a downward trend indicating a bullish reversal, it is a hammer
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //a downward trend indicating a bullish reversal, it is a hammer
-                                    && isOpenCloseHighAlmostSame //the open, high, and close are roughly the same price. means it has a small body.
-                                    && isLowerShadowTwiceBody; //there is a long lower shadow, twice the length as the real body.
+        var isBullishContinuation = isCandleThree_Bearish //a downward trend indicating a bullish reversal, it is a inverted hammer
+                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //a downward trend indicating a bullish reversal, it is a inverted hammer
+                                    && isOpenCloseLowAlmostSame //the open, high, and close are roughly the same price. means it has a small body.
+                                    && isUpperShadowTwiceBody; //there is a long upper shadow, which should be at least twice the length of the real body.
 
-        //Hammer is bullish only
+        //Inverted Hammer is bullish only
         var isBearishContinuation = false;
         return {
             isBullishContinuation: isBullishContinuation,
-            isBearishContinuation: isBearishContinuation    
+            isBearishContinuation: isBearishContinuation
         };
     }
 
@@ -58,61 +56,61 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLHAMMER) return;
+                if (!H || H.Series.prototype.addCDLINVERTEDHAMMER) return;
 
-                H.Series.prototype.addCDLHAMMER = function (cdlhammerOptions) {
+                H.Series.prototype.addCDLINVERTEDHAMMER = function (cdlinvertedhammerOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdlhammerOptions = $.extend({
+                    cdlinvertedhammerOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdlhammerOptions);
+                    }, cdlinvertedhammerOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLHAMMER series to the chart
+                    //If this series has data, add CDLINVERTEDHAMMER series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLHAMMER data
+                        //Calculate CDLINVERTEDHAMMER data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdlhammerData = [];
+                        var cdlinvertedhammerData = [];
                         for (var index = 2 ; index < data.length; index++) {
 
-                            //Calculate CDLHAMMER - start
+                            //Calculate CDLINVERTEDHAMMER - start
                             var bull_bear = calculateIndicatorValue(data, index);
-                            //Hammer is bullish only
+                            //upperShadow is bullish only
                             if (bull_bear.isBullishContinuation) {
-                                cdlhammerData.push({
+                                cdlinvertedhammerData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">H</span>',
-                                    text: 'Hammer : Bull'
+                                    title: '<span style="color : blue">IH</span>',
+                                    text: 'Inverted Hammer : Bull'
                                 });
                             };
                         };
 
                         var chart = this.chart;
 
-                        cdlhammerOptionsMap[uniqueID] = cdlhammerOptions;
+                        cdlinvertedhammerOptionsMap[uniqueID] = cdlinvertedhammerOptions;
 
                         var series = this;
-                        cdlhammerSeriesMap[uniqueID] = chart.addSeries({
+                        cdlinvertedhammerSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLHAMMER',
-                            data: cdlhammerData,
+                            name: 'CDLINVERTEDHAMMER',
+                            data: cdlinvertedhammerData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdlhammerSeriesMap[uniqueID]).data({
+                        $(cdlinvertedhammerSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdlhammer',
-                            parentSeriesID: cdlhammerOptions.parentSeriesID
+                            indicatorID: 'cdlinvertedhammer',
+                            parentSeriesID: cdlinvertedhammerOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -124,30 +122,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLHAMMER = function (uniqueID) {
+                H.Series.prototype.removeCDLINVERTEDHAMMER = function (uniqueID) {
                     var chart = this.chart;
-                    cdlhammerOptionsMap[uniqueID] = null;
+                    cdlinvertedhammerOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdlhammerSeriesMap[uniqueID] = null;
+                    cdlinvertedhammerSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLHAMMER = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLINVERTEDHAMMER = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdlhammerOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlinvertedhammerOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdlhammereed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdlinvertedhammereed, options, redraw, shift, animation) {
 
-                    pcdlhammereed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhammerOptionsMap, this.options.id)) {
-                        updateCDLHAMMERSeries.call(this, options[0]);
+                    pcdlinvertedhammereed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlinvertedhammerOptionsMap, this.options.id)) {
+                        updateCDLINVERTEDHAMMERSeries.call(this, options[0]);
                     }
 
                 });
@@ -155,11 +153,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdlhammereed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdlinvertedhammereed, options, redraw, animation) {
 
-                    pcdlhammereed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhammerOptionsMap, this.series.options.id)) {
-                        updateCDLHAMMERSeries.call(this.series, this.x, true);
+                    pcdlinvertedhammereed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlinvertedhammerOptionsMap, this.series.options.id)) {
+                        updateCDLINVERTEDHAMMERSeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -170,37 +168,37 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLHAMMERSeries(time, isPointUpdate) {
+                function updateCDLINVERTEDHAMMERSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLHAMMER data point
-                    for (var key in cdlhammerSeriesMap) {
-                        if (cdlhammerSeriesMap[key] && cdlhammerSeriesMap[key].options && cdlhammerSeriesMap[key].options.data && cdlhammerSeriesMap[key].options.data.length > 0
-                            && cdlhammerOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLHAMMER series. Add one more CDLHAMMER point
-                            //Calculate CDLHAMMER data
+                    //Add a new CDLINVERTEDHAMMER data point
+                    for (var key in cdlinvertedhammerSeriesMap) {
+                        if (cdlinvertedhammerSeriesMap[key] && cdlinvertedhammerSeriesMap[key].options && cdlinvertedhammerSeriesMap[key].options.data && cdlinvertedhammerSeriesMap[key].options.data.length > 0
+                            && cdlinvertedhammerOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLINVERTEDHAMMER series. Add one more CDLINVERTEDHAMMER point
+                            //Calculate CDLINVERTEDHAMMER data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLHAMMER - start
+                                //Calculate CDLINVERTEDHAMMER - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLHAMMER - end
+                                //Calculate CDLINVERTEDHAMMER - end
                                 var bullBearData = null;
-                                //Hammer is bullish only
+                                //upperShadow is bullish only
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">H</span>',
-                                        text: 'Hammer : Bull'
+                                        title: '<span style="color : blue">IH</span>',
+                                        text: 'Inverted Hammer : Bull'
                                     }
                                 };
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdlhammerSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdlhammerSeriesMap[key].data[sIndx].x || cdlhammerSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdlinvertedhammerSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlinvertedhammerSeriesMap[key].data[sIndx].x || cdlinvertedhammerSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -208,13 +206,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdlhammerSeriesMap[key].data[whereToUpdate].remove();
+                                            cdlinvertedhammerSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdlhammerSeriesMap[key].addPoint(bullBearData);
+                                    cdlinvertedhammerSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlhammerSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlinvertedhammerSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

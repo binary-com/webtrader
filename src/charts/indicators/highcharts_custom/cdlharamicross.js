@@ -1,9 +1,9 @@
 ﻿/**
- * Created by Mahboob.M on 12/29/15
+ * Created by Mahboob.M on 12/30/15
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdlharamiOptionsMap = {}, cdlharamiSeriesMap = {};
+    var cdlharamicrossOptionsMap = {}, cdlharamicrossSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -13,21 +13,28 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
 
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
-
+            candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
+            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
+            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
+        
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-        var isBullishContinuation = isCandleTwo_Bearish  //the first candlestick is upward
-                                 && isCandleOne_Bullish && candleOne_Open > candleTwo_Close && candleOne_Close < candleTwo_Open// followed by a smaller candlestick whose body is located within the vertical range of the larger body
-                                 && (Math.abs(candleOne_Open - candleOne_Close) < (Math.abs(candleTwo_Open - candleTwo_Close) * 0.60)); //Must be smaller than prevoius day
+        var response = indicatorBase.isDoji({
+            open: candleOne_Open,
+            high: candleOne_High,
+            low: candleOne_Low,
+            close: candleOne_Close
+        }) || {};
 
-        var isBearishContinuation = isCandleTwo_Bullish  // a large bullish green candle on Day 1
-                                   && isCandleOne_Bearish && candleOne_Open < candleTwo_Close && candleOne_Close > candleTwo_Open// followed by a smaller candlestick whose body is located within the vertical range of the larger body
-                                   && (Math.abs(candleOne_Open - candleOne_Close) < (Math.abs(candleTwo_Open - candleTwo_Close) * 0.60));//Must be smaller than prevoius day
+        var isBullishContinuation = isCandleTwo_Bearish //the first candlestick is upward
+                                    && response.isBull && candleOne_Low > candleTwo_Close && candleOne_High < candleTwo_Open; //followed by a doji that is located within the top and bottom of the candlestick's body. 
 
+        var isBearishContinuation = isCandleTwo_Bullish // a large bullish green candle on Day 1
+                                    && response.isBear && candleOne_Low > candleTwo_Open && candleOne_High < candleTwo_Close; //followed by a doji that is located within the top and bottom of the candlestick's body. 
+                                
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
@@ -41,69 +48,69 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLHARAMI) return;
+                if (!H || H.Series.prototype.addCDLHARAMICROSS) return;
 
-                H.Series.prototype.addCDLHARAMI = function (cdlharamiOptions) {
+                H.Series.prototype.addCDLHARAMICROSS = function (cdlharamicrossOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdlharamiOptions = $.extend({
+                    cdlharamicrossOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdlharamiOptions);
+                    }, cdlharamicrossOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLHARAMI series to the chart
+                    //If this series has data, add CDLHARAMICROSS series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLHARAMI data
+                        //Calculate CDLHARAMICROSS data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdlharamiData = [];
+                        var cdlharamicrossData = [];
                         for (var index = 1 ; index < data.length; index++) {
 
-                            //Calculate CDLHARAMI - start
+                            //Calculate CDLHARAMICROSS - start
                             var bull_bear = calculateIndicatorValue(data, index);
 
                             if (bull_bear.isBullishContinuation) {
-                                cdlharamiData.push({
+                                cdlharamicrossData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">DD</span>',
-                                    text: 'Dragonfly Doji : Bull'
+                                    title: '<span style="color : blue">HCP</span>',
+                                    text: 'Harami Cross Pattern : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
-                                cdlharamiData.push({
+                                cdlharamicrossData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">DD</span>',
-                                    text: 'Dragonfly Doji : Bear'
+                                    title: '<span style="color : red">HCP</span>',
+                                    text: 'Harami Cross Pattern : Bear'
                                 });
                             }
-                            //Calculate CDLHARAMI - end
+                            //Calculate CDLHARAMICROSS - end
                         };
 
                         var chart = this.chart;
 
-                        cdlharamiOptionsMap[uniqueID] = cdlharamiOptions;
+                        cdlharamicrossOptionsMap[uniqueID] = cdlharamicrossOptions;
 
                         var series = this;
-                        cdlharamiSeriesMap[uniqueID] = chart.addSeries({
+                        cdlharamicrossSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLHARAMI',
-                            data: cdlharamiData,
+                            name: 'CDLHARAMICROSS',
+                            data: cdlharamicrossData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdlharamiSeriesMap[uniqueID]).data({
+                        $(cdlharamicrossSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdlharami',
-                            parentSeriesID: cdlharamiOptions.parentSeriesID
+                            indicatorID: 'cdlharamicross',
+                            parentSeriesID: cdlharamicrossOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -115,30 +122,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLHARAMI = function (uniqueID) {
+                H.Series.prototype.removeCDLHARAMICROSS = function (uniqueID) {
                     var chart = this.chart;
-                    cdlharamiOptionsMap[uniqueID] = null;
+                    cdlharamicrossOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdlharamiSeriesMap[uniqueID] = null;
+                    cdlharamicrossSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLHARAMI = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLHARAMICROSS = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdlharamiOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlharamicrossOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdlharamieed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdlharamicrosseed, options, redraw, shift, animation) {
 
-                    pcdlharamieed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlharamiOptionsMap, this.options.id)) {
-                        updateCDLHARAMISeries.call(this, options[0]);
+                    pcdlharamicrosseed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlharamicrossOptionsMap, this.options.id)) {
+                        updateCDLHARAMICROSSSeries.call(this, options[0]);
                     }
 
                 });
@@ -146,11 +153,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdlharamieed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdlharamicrosseed, options, redraw, animation) {
 
-                    pcdlharamieed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlharamiOptionsMap, this.series.options.id)) {
-                        updateCDLHARAMISeries.call(this.series, this.x, true);
+                    pcdlharamicrosseed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlharamicrossOptionsMap, this.series.options.id)) {
+                        updateCDLHARAMICROSSSeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -161,44 +168,44 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLHARAMISeries(time, isPointUpdate) {
+                function updateCDLHARAMICROSSSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLHARAMI data point
-                    for (var key in cdlharamiSeriesMap) {
-                        if (cdlharamiSeriesMap[key] && cdlharamiSeriesMap[key].options && cdlharamiSeriesMap[key].options.data && cdlharamiSeriesMap[key].options.data.length > 0
-                            && cdlharamiOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLHARAMI series. Add one more CDLHARAMI point
-                            //Calculate CDLHARAMI data
+                    //Add a new CDLHARAMICROSS data point
+                    for (var key in cdlharamicrossSeriesMap) {
+                        if (cdlharamicrossSeriesMap[key] && cdlharamicrossSeriesMap[key].options && cdlharamicrossSeriesMap[key].options.data && cdlharamicrossSeriesMap[key].options.data.length > 0
+                            && cdlharamicrossOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLHARAMICROSS series. Add one more CDLHARAMICROSS point
+                            //Calculate CDLHARAMICROSS data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLHARAMI - start
+                                //Calculate CDLHARAMICROSS - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLHARAMI - end
+                                //Calculate CDLHARAMICROSS - end
                                 var bullBearData = null;
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">DD</span>',
-                                        text: 'Dragonfly Doji : Bull'
+                                        title: '<span style="color : blue">HCP</span>',
+                                        text: 'Harami Cross Pattern : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">DD</span>',
-                                        text: 'Dragonfly Doji : Bear'
+                                        title: '<span style="color : red">HCP</span>',
+                                        text: 'Harami Cross Pattern : Bear'
                                     }
                                 };
 
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdlharamiSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdlharamiSeriesMap[key].data[sIndx].x || cdlharamiSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdlharamicrossSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlharamicrossSeriesMap[key].data[sIndx].x || cdlharamicrossSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -206,13 +213,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdlharamiSeriesMap[key].data[whereToUpdate].remove();
+                                            cdlharamicrossSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdlharamiSeriesMap[key].addPoint(bullBearData);
+                                    cdlharamicrossSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlharamiSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlharamicrossSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

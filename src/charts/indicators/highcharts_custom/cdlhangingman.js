@@ -1,9 +1,9 @@
 ﻿/**
- * Created by Mahboob.M on 12/29/15
+ * Created by Mahboob.M on 12/30/15
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdlhammerOptionsMap = {}, cdlhammerSeriesMap = {};
+    var cdlhangingmanOptionsMap = {}, cdlhangingmanSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -15,7 +15,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
-       
+
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
 			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
@@ -25,8 +25,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
-
-
+    
         var perctDiff_openToClose = Math.abs((candleOne_Open - candleOne_Close) * 100.0 / candleOne_Open);
         var perctDiff_openToHigh = Math.abs((candleOne_Open - candleOne_High) * 100.0 / candleOne_Open);
         var perctDiff_closeToHigh = Math.abs((candleOne_Close - candleOne_High) * 100.0 / candleOne_Close);
@@ -37,17 +36,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                         && perctDiff_openToHigh <= 1.0
                                         && perctDiff_closeToHigh <= 0.5;
 
-      
-        var isBullishContinuation = isCandleThree_Bearish //a downward trend indicating a bullish reversal, it is a hammer
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //a downward trend indicating a bullish reversal, it is a hammer
+        var isBullishContinuation = false;
+        //Hammer is bearish only
+        var isBearishContinuation = isCandleThree_Bullish //A bearish candlestick pattern that forms at the end of an uptrend
+                                    && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //A bearish candlestick pattern that forms at the end of an uptrend
                                     && isOpenCloseHighAlmostSame //the open, high, and close are roughly the same price. means it has a small body.
                                     && isLowerShadowTwiceBody; //there is a long lower shadow, twice the length as the real body.
 
-        //Hammer is bullish only
-        var isBearishContinuation = false;
         return {
             isBullishContinuation: isBullishContinuation,
-            isBearishContinuation: isBearishContinuation    
+            isBearishContinuation: isBearishContinuation
         };
     }
 
@@ -58,61 +56,61 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLHAMMER) return;
+                if (!H || H.Series.prototype.addCDLHANGINGMAN) return;
 
-                H.Series.prototype.addCDLHAMMER = function (cdlhammerOptions) {
+                H.Series.prototype.addCDLHANGINGMAN = function (cdlhangingmanOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdlhammerOptions = $.extend({
+                    cdlhangingmanOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdlhammerOptions);
+                    }, cdlhangingmanOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLHAMMER series to the chart
+                    //If this series has data, add CDLHANGINGMAN series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLHAMMER data
+                        //Calculate CDLHANGINGMAN data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdlhammerData = [];
+                        var cdlhangingmanData = [];
                         for (var index = 2 ; index < data.length; index++) {
 
-                            //Calculate CDLHAMMER - start
+                            //Calculate CDLHANGINGMAN - start
                             var bull_bear = calculateIndicatorValue(data, index);
-                            //Hammer is bullish only
-                            if (bull_bear.isBullishContinuation) {
-                                cdlhammerData.push({
+                            //Hammer is bearish only
+                            if (bull_bear.isBearishContinuation) {
+                                cdlhangingmanData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">H</span>',
-                                    text: 'Hammer : Bull'
+                                    title: '<span style="color : red">HM</span>',
+                                    text: 'Hanging Man : Bear'
                                 });
                             };
                         };
 
                         var chart = this.chart;
 
-                        cdlhammerOptionsMap[uniqueID] = cdlhammerOptions;
+                        cdlhangingmanOptionsMap[uniqueID] = cdlhangingmanOptions;
 
                         var series = this;
-                        cdlhammerSeriesMap[uniqueID] = chart.addSeries({
+                        cdlhangingmanSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLHAMMER',
-                            data: cdlhammerData,
+                            name: 'CDLHANGINGMAN',
+                            data: cdlhangingmanData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdlhammerSeriesMap[uniqueID]).data({
+                        $(cdlhangingmanSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdlhammer',
-                            parentSeriesID: cdlhammerOptions.parentSeriesID
+                            indicatorID: 'cdlhangingman',
+                            parentSeriesID: cdlhangingmanOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -124,30 +122,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLHAMMER = function (uniqueID) {
+                H.Series.prototype.removeCDLHANGINGMAN = function (uniqueID) {
                     var chart = this.chart;
-                    cdlhammerOptionsMap[uniqueID] = null;
+                    cdlhangingmanOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdlhammerSeriesMap[uniqueID] = null;
+                    cdlhangingmanSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLHAMMER = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLHANGINGMAN = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdlhammerOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlhangingmanOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdlhammereed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdlhangingmaneed, options, redraw, shift, animation) {
 
-                    pcdlhammereed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhammerOptionsMap, this.options.id)) {
-                        updateCDLHAMMERSeries.call(this, options[0]);
+                    pcdlhangingmaneed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhangingmanOptionsMap, this.options.id)) {
+                        updateCDLHANGINGMANSeries.call(this, options[0]);
                     }
 
                 });
@@ -155,11 +153,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdlhammereed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdlhangingmaneed, options, redraw, animation) {
 
-                    pcdlhammereed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhammerOptionsMap, this.series.options.id)) {
-                        updateCDLHAMMERSeries.call(this.series, this.x, true);
+                    pcdlhangingmaneed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhangingmanOptionsMap, this.series.options.id)) {
+                        updateCDLHANGINGMANSeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -170,37 +168,37 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLHAMMERSeries(time, isPointUpdate) {
+                function updateCDLHANGINGMANSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLHAMMER data point
-                    for (var key in cdlhammerSeriesMap) {
-                        if (cdlhammerSeriesMap[key] && cdlhammerSeriesMap[key].options && cdlhammerSeriesMap[key].options.data && cdlhammerSeriesMap[key].options.data.length > 0
-                            && cdlhammerOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLHAMMER series. Add one more CDLHAMMER point
-                            //Calculate CDLHAMMER data
+                    //Add a new CDLHANGINGMAN data point
+                    for (var key in cdlhangingmanSeriesMap) {
+                        if (cdlhangingmanSeriesMap[key] && cdlhangingmanSeriesMap[key].options && cdlhangingmanSeriesMap[key].options.data && cdlhangingmanSeriesMap[key].options.data.length > 0
+                            && cdlhangingmanOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLHANGINGMAN series. Add one more CDLHANGINGMAN point
+                            //Calculate CDLHANGINGMAN data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLHAMMER - start
+                                //Calculate CDLHANGINGMAN - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLHAMMER - end
+                                //Calculate CDLHANGINGMAN - end
                                 var bullBearData = null;
-                                //Hammer is bullish only
-                                if (bull_bear.isBullishContinuation) {
+                                //Hammer is bearish only
+                                if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">H</span>',
-                                        text: 'Hammer : Bull'
+                                        title: '<span style="color : red">HM</span>',
+                                        text: 'Hanging Man : Bear'
                                     }
                                 };
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdlhammerSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdlhammerSeriesMap[key].data[sIndx].x || cdlhammerSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdlhangingmanSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlhangingmanSeriesMap[key].data[sIndx].x || cdlhangingmanSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -208,13 +206,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdlhammerSeriesMap[key].data[whereToUpdate].remove();
+                                            cdlhangingmanSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdlhammerSeriesMap[key].addPoint(bullBearData);
+                                    cdlhangingmanSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlhammerSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlhangingmanSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

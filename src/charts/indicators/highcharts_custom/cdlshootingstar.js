@@ -7,12 +7,25 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
 	function calculateIndicatorValue(data, index) {
 		var candleOne_Index = index;
+		var candleTwo_Index = index - 1;
+		var candleThree_Index = index - 2;
+
+		var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
+			candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index);
+
+		var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
+			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
 
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
             candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
             candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index)
           ;
+
+        var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
+            isCandleThree_Bearish = candleThree_Close < candleThree_Open;
+        var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
 
         var perctDiff_openToClose = Math.abs((candleOne_Open - candleOne_Close) * 100.0 / candleOne_Open);
         var perctDiff_openToLow = Math.abs((candleOne_Open - candleOne_Low) * 100.0 / candleOne_Open);
@@ -24,7 +37,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                         && perctDiff_openToLow <= 1.0
                                         && perctDiff_closeToLow <= 0.5;
 
-		return isShadowTwiceBody && isOpenCloseLowAlmostSame;
+        return isCandleThree_Bullish && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //Upward trend
+               && isShadowTwiceBody && isOpenCloseLowAlmostSame;
 	}
 
     return {
