@@ -109,7 +109,7 @@ define(['jquery'], function ($) {
           },0);
         });
 
-        var key = data && data.echo_req && data.echo_req.passthrough && data.echo_req.passthrough.uid;
+        var key = data.req_id;
         var promise = unresolved_promises[key];
         if (promise) {
             delete unresolved_promises[key];
@@ -137,12 +137,12 @@ define(['jquery'], function ($) {
     };
 
     /* send a raw request and return a promise */
+    var req_id_counter = 0;
     var send_request = function (data) {
-        data.passthrough = data.passthrough || { };
-        data.passthrough.uid =  (Math.random() * 1e17).toString();
+        data.req_id = ++req_id_counter;
 
         return new Promise(function (resolve,reject) {
-            unresolved_promises[data.passthrough.uid] = { resolve: resolve, reject: reject, data: data };
+            unresolved_promises[data.req_id] = { resolve: resolve, reject: reject, data: data };
             if (is_connected()) {
                 console.log('Request object : ', JSON.stringify(data));
                 socket.send(JSON.stringify(data));
@@ -303,7 +303,7 @@ define(['jquery'], function ($) {
                 });
 
             var promise = send_request(data);
-            if(timeout) timeout_promise(data.passthrough.uid, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
+            if(timeout) timeout_promise(data.req_id, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
             return promise;
         },
         /* whether currenct session is authenticated or not */

@@ -77,9 +77,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       } /* end of routine() */
     };
 
-    function register_ticks(state, passthrough){
-      var tick_count = passthrough.tick_count * 1,
-          symbol = passthrough.symbol,
+    function register_ticks(state, extra){
+      var tick_count = extra.tick_count * 1,
+          symbol = extra.symbol,
           purchase_epoch = state.buy.purchase_time * 1;
 
       /* TODO: if the connection get closed while we are adding new ticks,
@@ -109,10 +109,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       });
     }
 
-    function init(data, show_callback, hide_callback){
+    function init(data, extra, show_callback, hide_callback){
       var root = $(html);
-      var buy = data.buy,
-          passthrough = data.echo_req.passthrough;
+      var buy = data.buy;
       var state = {
         title: {
           text: 'Contract Confirmation',
@@ -125,7 +124,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           start_time: buy.start_time,
           transaction_id: buy.transaction_id,
           payout: buy.payout,
-          currency: passthrough.currency,
+          currency: extra.currency,
           potential_profit : buy.payout - buy.buy_price,
           potential_profit_text : 'Profit',
           show_result: false,
@@ -163,15 +162,15 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               }
               return null;
             },
-            tick_count: passthrough.tick_count,
-            value: (passthrough.digits_value || '0') + '', // last digit value selected by the user
-            category: passthrough.category,
-            category_display: passthrough.category_display,
+            tick_count: extra.tick_count,
+            value: (extra.digits_value || '0') + '', // last digit value selected by the user
+            category: extra.category,
+            category_display: extra.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
-            chart_visible: _(['Up/Down','Asians']).contains(passthrough.category) && passthrough.duration_unit === 'ticks',
+            chart_visible: _(['Up/Down','Asians']).contains(extra.category) && extra.duration_unit === 'ticks',
         },
         arrow: {
-          visible:!(_(['Digits','Up/Down','Asians']).contains(passthrough.category) && passthrough.duration_unit === 'ticks'),
+          visible:!(_(['Digits','Up/Down','Asians']).contains(extra.category) && extra.duration_unit === 'ticks'),
         },
         back: { visible: false }, /* back buttom */
       };
@@ -227,7 +226,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
 
       fire_event('open', buy);
-      if(!state.arrow.visible) { register_ticks(state,passthrough); }
+      if(!state.arrow.visible) { register_ticks(state, extra); }
       else { state.back.visible = true; }
 
 

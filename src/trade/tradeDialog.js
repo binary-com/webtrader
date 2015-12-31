@@ -590,7 +590,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
 
         /* workaround for api not providing this fields */
-        var passthrough = {
+        var extra = {
             currency: state.currency.value,
             symbol: state.proposal.symbol,
             category: state.categories.value,
@@ -598,10 +598,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             duration_unit: state.duration_unit.value,
         };
         /* pass data which is needed to show live tick purchase results */
-        if(_(['Digits','Up/Down','Asians']).contains(passthrough.category) && passthrough.duration_unit === 'ticks') {
-            passthrough.digits_value = state.digits.value;
-            passthrough.tick_count = state.duration_count.value*1;
-            // passthrough.tick_count += passthrough.category !== 'Digits' ? 1 : 0; /*TODO: (is this right) Up/Down & Asians trades need one extra tick for entry spot */
+        if(_(['Digits','Up/Down','Asians']).contains(extra.category) && extra.duration_unit === 'ticks') {
+            extra.digits_value = state.digits.value;
+            extra.tick_count = state.duration_count.value*1;
         }
 
         // manually check to see if the user is authenticated or not,
@@ -614,11 +613,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             liveapi.send({
                   buy: _(state.proposal.ids).last(),
                   price: state.proposal.ask_price * 1,
-                  passthrough: passthrough
                })
                .then(function(data){
                   require(['trade/tradeConf'], function(tradeConf){
-                      tradeConf.init(data, show, hide);
+                      tradeConf.init(data, extra, show, hide);
                   });
                })
                .catch(function(err){
