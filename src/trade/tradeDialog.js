@@ -684,23 +684,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var root = $(html);
         var available = apply_fixes(contracts_for.available);
 
-        var key = chartingRequestMap.keyFor(state.proposal.symbol, /* granularity = */ 0);
-        if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
-            chartingRequestMap.register({
-              symbol: state.proposal.symbol,
-              subscribe: 1,
-              granularity: 0,
-              count: 1,
-              style: 'ticks'
-            }).catch(function (err) {
-              $.growl.error({ message: err.message });
-              _.delay(function(){ dialog.dialog('close'); },2000);
-              console.error(err);
-            });
-        }
-        else {
-          chartingRequestMap.subscribe(key);
-        }
 
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
@@ -720,6 +703,24 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               view.unbind();
             }
         });
+
+        /********************** register for ticks_streams **********************/
+        var symbol = _(available).first().underlying_symbol;
+        var key = chartingRequestMap.keyFor(symbol, /* granularity = */ 0);
+        if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
+            chartingRequestMap.register({
+              symbol: symbol,
+              subscribe: 1,
+              granularity: 0,
+              count: 1000, /* this will be for the case that the user opens a the same tick chart later */
+              style: 'ticks'
+            }).catch(function (err) {
+              $.growl.error({ message: err.message });
+              _.delay(function(){ dialog.dialog('close'); },2000);
+              console.error(err);
+            });
+        }
+        else { chartingRequestMap.subscribe(key); }
 
         var state = init_state(available,root,dialog);
         var view = rv.bind(root[0],state)

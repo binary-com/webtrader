@@ -83,7 +83,6 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                 chartingRequestMap.barsLoaded(key);
                 return;
             }
-            else { chartingRequest.subscribe(key); }
 
             chartingRequestMap.register({
               symbol: instrumentCode,
