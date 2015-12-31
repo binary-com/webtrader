@@ -60,12 +60,29 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         liveapi.send({ balance: 1 })
             .then(function (data) {
                 var portfolio_refresh_interval = null;
+                var refresh = function() {
+                  if(portfolioWin.dialogExtend('state') === 'minimized') {
+                      portfolioWin.dialogExtend('restore');
+                  }
+                  portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
+                  portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                  update_table();
+                };
+                /* refresh portfolio when a new contract is added or closed */
+                require(['trade/tradeConf'], function(trade_conf){
+                    trade_conf.events.on('open',refresh);
+                    trade_conf.events.on('close',refresh);
+                });
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
                     width: 700,
                     minHeight: 60,
                     'data-authorized': 'true',
                     close: function () {
+                        require(['trade/tradeConf'], function(trade_conf){
+                            trade_conf.events.off('open',refresh);
+                            trade_conf.events.off('close',refresh);
+                        });
                         portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
                         portfolio_refresh_interval = null;
 
@@ -88,14 +105,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                       portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
                       portfolio_refresh_interval = null;
                     },
-                    refresh: function() {
-                      if(portfolioWin.dialogExtend('state') === 'minimized') {
-                          portfolioWin.dialogExtend('restore');
-                      }
-                      portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
-                      portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
-                      update_table();
-                    }
+                    refresh: refresh
                 });
 
                 var header = portfolioWin.parent().find('.ui-dialog-title').addClass('with-content');
