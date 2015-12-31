@@ -12,7 +12,6 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
     }
 
     liveapi.events.on('tick', function (data) {
-        console.warn(data.tick);
         var key = data.echo_req.ticks_history + data.echo_req.granularity;
         if (key && chartingRequestMap[key.toUpperCase()]) {
             key = key.toUpperCase();
