@@ -233,9 +233,14 @@ define(['lokijs', 'jquery', 'websockets/binary_websockets', 'common/util'],funct
               req.adjust_start_time = options.adjust_start_time || 1;
             }
 
-            var key = this.keyFor(options.symbol, granularity);
-            this[key] = { symbol: options.symbol, granularity: granularity, chartIDs: [] };
-            return liveapi.send(req, /*timeout:*/ 30*1000); // 30 second timeout
+            var map = this;
+            var key = map.keyFor(options.symbol, granularity);
+            map[key] = { symbol: options.symbol, granularity: granularity, chartIDs: [] };
+            return liveapi.send(req, /*timeout:*/ 30*1000) // 30 second timeout
+                   .catch(function(up){
+                      delete map[key];
+                      throw up;
+                   });
 
         }
     };

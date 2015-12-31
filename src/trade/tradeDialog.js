@@ -37,6 +37,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
     function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
+    var debounce = rv.formatters.debounce;
 
     rv.binders['trade-dialog-sparkline'] = function(el, ticks) {
       var chart = $(el);
@@ -124,7 +125,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_state(available,root){
+    function init_state(available,root, dialog){
 
       var state = {
         duration: {
@@ -339,13 +340,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                 var value_hour = times.close !== '--' ? times.close : '00:00:00';
                 expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
                 expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
-                state.proposal.onchange();
+                debounce(expiry.value, state.proposal.onchange);
               });
         }
         else {
             if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
             expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
-            state.proposal.onchange();
+            debounce(expiry.value, state.proposal.onchange);
         }
       }
 
@@ -424,11 +425,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
 
         state.duration_unit.ranges = ranges;
+        if(!_.contains(array,state.duration_unit.value)){
+          state.duration_unit.value = _.first(array);
+        }
         state.duration_unit.array = array;
-        state.duration_unit.value = _.first(array);
 
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
-        state.duration_count.update();
         state.barriers.update();
         state.date_expiry.update_times();
       };
@@ -611,7 +613,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         else {
             liveapi.send({
                   buy: _(state.proposal.ids).last(),
-                  price: state.proposal.ask_price,
+                  price: state.proposal.ask_price * 1,
                   passthrough: passthrough
                })
                .then(function(data){
@@ -638,7 +640,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             granularity: 0,
             count: 1,
             style: 'ticks'
-          }).catch(function (err) { console.error(err); });
+          }).catch(function (err) {
+            $.growl.error({ message: err.message });
+            _.delay(function(){ dialog.dialog('close'); },2000);
+            console.error(err);
+          });
       }
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
@@ -658,13 +664,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
           var proposal_id = _.last(state.proposal.ids);
-          if (data.proposal.id !== proposal_id) return;
-          if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
           if(data.error){
             console.error(data.error);
             state.proposal.error = data.error.message;
             state.proposal.message = '';
+            return;
           }
+          if (data.proposal.id !== proposal_id) return;
+          if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
           /* update fields */
           var proposal = data.proposal;
           state.proposal.ask_price = proposal.ask_price;
@@ -682,8 +689,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       /* change currency on user login */
       liveapi.events.on('login', function(data){
+          state.currency.value = data.authorize.currency;
           state.currency.array = [data.authorize.currency];
-          state.currency.value = state.currency.value;
       });
 
       return state;
@@ -692,7 +699,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
     function init(symbol, contracts_for) {
         var root = $(html);
         var available = apply_fixes(contracts_for.available);
-        var state = init_state(available,root);
 
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
@@ -700,6 +706,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             collapsable: true,
             minimizable: true,
             maximizable: false,
+            'data-authorized': 'true',
             /* forget proposal streams on close,
               TODO: figure out if/when we should close tick stream */
             close: function() {
@@ -707,14 +714,16 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                 var id = state.proposal.ids.shift();
                 liveapi.send({ forget: id });
               }
+              view.unbind();
             }
         });
 
+        var state = init_state(available,root,dialog);
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        window.state = state; window.av = available; window.moment = moment;
+        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
     }
 
     return {
