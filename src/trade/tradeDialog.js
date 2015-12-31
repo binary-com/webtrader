@@ -37,6 +37,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
     function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
+    var debounce = rv.formatters.debounce;
 
     rv.binders['trade-dialog-sparkline'] = function(el, ticks) {
       var chart = $(el);
@@ -339,13 +340,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                 var value_hour = times.close !== '--' ? times.close : '00:00:00';
                 expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
                 expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
-                state.proposal.onchange();
+                debounce(expiry.value, state.proposal.onchange);
               });
         }
         else {
             if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
             expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
-            state.proposal.onchange();
+            debounce(expiry.value, state.proposal.onchange);
         }
       }
 
@@ -662,13 +663,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
           var proposal_id = _.last(state.proposal.ids);
-          if (data.proposal.id !== proposal_id) return;
-          if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
           if(data.error){
             console.error(data.error);
             state.proposal.error = data.error.message;
             state.proposal.message = '';
+            return;
           }
+          if (data.proposal.id !== proposal_id) return;
+          if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
           /* update fields */
           var proposal = data.proposal;
           state.proposal.ask_price = proposal.ask_price;
