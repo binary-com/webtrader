@@ -40,7 +40,10 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
     rv.formatters['or'] = function (value, other) {
         return value || other;
     };
-
+    /* rivets formatter to replace a true value with a default one */
+    rv.formatters['and'] = function (vlaue, other){
+      return vlaue && other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -141,8 +144,11 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
     /* refersh the selectmenu on array changes */
     rv.binders.selectrefresh = {
         priority: 99,
-        routine: function(el,array) {
-            $(el).selectmenu('refresh');
+        routine: function(el,array_or_value) {
+          el = $(el);
+          if(typeof array_or_value === 'string')
+            el.val(array_or_value);
+          el.selectmenu('refresh');
         }
     }
 

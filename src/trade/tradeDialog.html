@@ -78,7 +78,7 @@
         <li rv-show="duration.value | eq 'Duration' ">
             <select class="duration-unit"
                     rv-selectmenu="duration_unit.value | notify duration_count.update | debounce proposal.onchange"
-                    rv-selectrefresh="duration_unit.array" >
+                    rv-selectrefresh="duration_unit.array | and duration_unit.value" >
 
                 <option rv-each-row="duration_unit.array" rv-value="row">{row}</option>
            </select>

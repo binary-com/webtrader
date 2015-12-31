@@ -425,8 +425,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
 
         state.duration_unit.ranges = ranges;
+        if(!_.contains(array,state.duration_unit.value)){
+          state.duration_unit.value = _.first(array);
+        }
         state.duration_unit.array = array;
-        state.duration_unit.value = _.first(array);
 
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
         state.barriers.update();
