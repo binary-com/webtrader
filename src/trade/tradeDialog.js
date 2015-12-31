@@ -689,8 +689,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       /* change currency on user login */
       liveapi.events.on('login', function(data){
+          state.currency.value = data.authorize.currency;
           state.currency.array = [data.authorize.currency];
-          state.currency.value = state.currency.value;
       });
 
       return state;
@@ -714,6 +714,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                 var id = state.proposal.ids.shift();
                 liveapi.send({ forget: id });
               }
+              view.unbind();
             }
         });
 

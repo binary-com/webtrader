@@ -200,7 +200,7 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
             });
         },
         unbind: function (el) {
-            $(el).spinner('destroy');
+            $(el).webtrader_spinner('destroy');
         },
         routine: function(el,value){
             $(el).webtrader_spinner('value', value*1);
@@ -220,7 +220,7 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
             $(el).tooltip();
         },
         unbind: function (el) {
-            $(el).tooltip('destory');
+            $(el).tooltip('destroy');
         },
         routine: function (el, value) {
             $(el).tooltip('option', 'content', value);
