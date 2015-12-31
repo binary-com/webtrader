@@ -429,7 +429,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.duration_unit.value = _.first(array);
 
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
-        state.duration_count.update();
         state.barriers.update();
         state.date_expiry.update_times();
       };
