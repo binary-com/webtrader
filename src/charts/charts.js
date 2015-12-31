@@ -20,39 +20,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
     function destroy(options) {
         var containerIDWithHash = options.containerIDWithHash,
             timePeriod = options.timePeriod,
-            instrumentCode = options.instrumentCode,
-            dontStopStreaming = options.dontStopStreaming || false;
-        console.log('Destroy called!');
+            instrumentCode = options.instrumentCode;
         if (!timePeriod || !instrumentCode) return;
 
         //granularity will be 0 for tick timePeriod
-        var granularity = convertToTimeperiodObject(timePeriod).timeInSeconds();
-        var key = chartingRequestMap.keyFor(instrumentCode, granularity);
-        if (chartingRequestMap[key]) {
-            for (var index in chartingRequestMap[key].chartIDs) {
-                var chartID = chartingRequestMap[key].chartIDs[index];
-                if (chartID.containerIDWithHash == containerIDWithHash) {
-                    chartingRequestMap[key].chartIDs.splice(index, 1);
-                    break;
-                }
-            }
-            //Send request to unsubscribe when there are no charts to display the streaming
-            if (chartingRequestMap[key].chartIDs.length === 0 && !dontStopStreaming) {
-                var requestObject = {
-                    "ticks_history": instrumentCode,
-                    "end": 'latest',
-                    "count": 1,
-                    "subscribe": 0
-                };
-                liveapi.send(requestObject)
-                       .catch(function(err){console.error(err);});
-
-                if (chartingRequestMap[key].timerHandler) {
-                    clearInterval(chartingRequestMap[key].timerHandler);
-                }
-                delete chartingRequestMap[key];
-            }
-        }
+        var key = chartingRequestMap.keyFor(instrumentCode, timePeriod);
+        chartingRequestMap.unregister(key, containerIDWithHash);
     }
 
     return {
@@ -72,12 +45,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
-                this.destroy({
-                    containerIDWithHash : containerIDWithHash,
-                    timePeriod : options.timePeriod,
-                    instrumentCode : options.instrumentCode,
-                    dontStopStreaming : true
-                });
+                var key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
+                chartingRequestMap.removeChart(key, containerIDWithHash);
                 $(containerIDWithHash).highcharts().destroy();
             }
 

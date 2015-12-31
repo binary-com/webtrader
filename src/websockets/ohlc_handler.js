@@ -72,17 +72,18 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                 /* Since streaming for this instrument+timePeriod has already been requested,
                    we just take note of containerIDWithHash so that once the data is received, we will just
                    call refresh for all registered charts */
-                chartingRequestMap[key].chartIDs.push({
-                        containerIDWithHash : containerIDWithHash,
-                        series_compare : series_compare,
-                        instrumentCode : instrumentCode,
-                        instrumentName : instrumentName
-                    });
+                chartingRequestMap.subscribe(key, {
+                    containerIDWithHash : containerIDWithHash,
+                    series_compare : series_compare,
+                    instrumentCode : instrumentCode,
+                    instrumentName : instrumentName
+                });
                 /* We still need to call refresh the chart with data we already received
                    Use local caching to retrieve that data.*/
                 chartingRequestMap.barsLoaded(key);
                 return;
             }
+            else { chartingRequest.subscribe(key); }
 
             chartingRequestMap.register({
               symbol: instrumentCode,
