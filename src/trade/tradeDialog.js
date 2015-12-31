@@ -720,7 +720,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
+        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
     }
 
     return {
