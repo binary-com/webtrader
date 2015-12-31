@@ -613,7 +613,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         else {
             liveapi.send({
                   buy: _(state.proposal.ids).last(),
-                  price: state.proposal.ask_price,
+                  price: state.proposal.ask_price * 1,
                   passthrough: passthrough
                })
                .then(function(data){
