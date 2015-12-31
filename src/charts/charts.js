@@ -17,7 +17,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     });
 
-    function destroy(containerIDWithHash, timePeriod, instrumentCode) {
+    function destroy(options) {
+        var containerIDWithHash = options.containerIDWithHash,
+            timePeriod = options.timePeriod,
+            instrumentCode = options.instrumentCode,
+            dontStopStreaming = options.dontStopStreaming || false;
+        console.log('Destroy called!');
         if (!timePeriod || !instrumentCode) return;
 
         //granularity will be 0 for tick timePeriod
@@ -31,7 +36,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     break;
                 }
             }
-            if (chartingRequestMap[key].chartIDs.length === 0) {
+            //Send request to unsubscribe when there are no charts to display the streaming
+            if (chartingRequestMap[key].chartIDs.length === 0 && !dontStopStreaming) {
                 var requestObject = {
                     "ticks_history": instrumentCode,
                     "end": 'latest',
@@ -66,7 +72,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
-                this.destroy(containerIDWithHash, options.timePeriod, options.instrumentCode);
+                this.destroy({
+                    containerIDWithHash : containerIDWithHash,
+                    timePeriod : options.timePeriod,
+                    instrumentCode : options.instrumentCode,
+                    dontStopStreaming : true
+                });
                 $(containerIDWithHash).highcharts().destroy();
             }
 
@@ -168,7 +179,11 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                                 if (Date.now() > ((endTime + 1) * 1000)) { //Keep rendering atleast 1 second after the end time
                                                     var ourData = $(series.chart.options.chart.renderTo).data();
                                                     console.log('Stopping feed based off timer : ', containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
-                                                    referenceToChartsJSObject.destroy(containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
+                                                    referenceToChartsJSObject.destroy({
+                                                        containerIDWithHash : containerIDWithHash,
+                                                        timePeriod : ourData.timePeriod,
+                                                        instrumentCode : ourData.instrumentCode
+                                                    });
                                                     clearInterval(interval);
                                                 }
                                             }, 500);
