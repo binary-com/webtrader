@@ -24,7 +24,7 @@
         <li> <span>Potential Profit</span> <span rv-text='buy.potential_profit | to-fixed 2' /> </li>
       </ul>
 
-      <ul class='payout-row'
+      <ul class='payout-row spreads-result'
           rv-if="ticks.category | eq 'Spreads'">
         <li> <span>Stop-loss</span> <span rv-text='spreads.stop_loss_level' /> </li>
         <li class='amount-per-point'> <span>Amount per point</span> <span rv-text='spreads.amount_per_point' /> </li>
