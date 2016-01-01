@@ -37,6 +37,9 @@
   font-size: 1.2em;
   font-weight: bold;
 }
+.trade-conf .payout-row.spreads-result li {
+  width: auto !important; /* fix for IE broken flexbox implementation */
+}
 .trade-conf .payout-row li:not(:first-child) {
   border-left: 1px solid #ccc;
 }

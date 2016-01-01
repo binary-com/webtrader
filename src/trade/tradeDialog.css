@@ -237,7 +237,7 @@
 
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px !important; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
-.trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px;}
+.trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip !important;}
 
 /* ********************* Animated checkbox with CSS3 ****************/
 label.checkbox {
