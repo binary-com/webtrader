@@ -459,6 +459,13 @@
     "long_display_name": "Marubozu",
     "short_display_name": "CDLMARUBOZU",
     "ohlcOnly" :  true
+   },
+
+    "cdlkicking":{
+    "id": "cdlkicking",
+    "long_display_name": "Kicking",
+    "short_display_name": "CDLKICKING",
+    "ohlcOnly" :  true
    }
 
 }
