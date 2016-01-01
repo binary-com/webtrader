@@ -51,7 +51,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
                         ]
                     */
                     var props = asset[2] /* asset.props */
-                        .map(function (prop) { return prop[2] + '-' + prop[3]; }); /* for each property extract a string */
+                        .map(function (prop) { return prop[2] + ' - ' + prop[3]; }); /* for each property extract a string */
                     props.unshift(asset[1]); /* add asset.name to the beginning of array */
 
                     return props;
