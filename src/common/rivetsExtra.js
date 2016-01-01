@@ -136,8 +136,10 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
             $(el).selectmenu( "destroy" )
         },
         routine: function (el, value) {
-            $(el).val(value);
-            $(el).selectmenu('refresh');
+            el = $(el);
+            el.val(value);
+            if(el.find("option[value='" + value + "']").length > 0)
+              el.selectmenu('refresh');
         }
     };
 
@@ -146,8 +148,11 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
         priority: 99,
         routine: function(el,array_or_value) {
           el = $(el);
-          if(typeof array_or_value === 'string')
+          if(typeof array_or_value === 'string') {
             el.val(array_or_value);
+            if(el.find("option[value='" + array_or_value+ "']").length === 0)
+              return;
+          }
           el.selectmenu('refresh');
         }
     }
