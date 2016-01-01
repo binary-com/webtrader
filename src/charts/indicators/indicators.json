@@ -452,5 +452,13 @@
     "long_display_name": "Short Line Candle",
     "short_display_name": "CDLSHORTLINE",
     "ohlcOnly" :  true
+   },
+
+    "cdlmarubozu":{
+    "id": "cdlmarubozu",
+    "long_display_name": "Marubozu",
+    "short_display_name": "CDLMARUBOZU",
+    "ohlcOnly" :  true
    }
+
 }
