@@ -17,9 +17,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
 
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
-            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
-            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index);
+			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
 
         var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
 			isCandleThree_Bearish = candleThree_Close < candleThree_Open;

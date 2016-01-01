@@ -410,5 +410,47 @@
     "long_display_name": "Evening Star",
     "short_display_name": "CDLEVENINGSTAR",
     "ohlcOnly" :  true
+   },
+
+   "cdlhighwave":{
+    "id": "cdlhighwave",
+    "long_display_name": "High-Wave Candle",
+    "short_display_name": "CDLHIGHWAVE",
+    "ohlcOnly" :  true
+   },
+
+   "cdlhikkake":{
+    "id": "cdlhikkake",
+    "long_display_name": "Hikkake Pattern",
+    "short_display_name": "CDLHIKKAKE",
+    "ohlcOnly" :  true
+   },
+
+   "cdlhomingpigeon":{
+    "id": "cdlhomingpigeon",
+    "long_display_name": "Homing Pigeon",
+    "short_display_name": "CDLHOMINGPIGEON",
+    "ohlcOnly" :  true
+   },
+
+   "cdltristar":{
+    "id": "cdltristar",
+    "long_display_name": "Tristar Pattern",
+    "short_display_name": "CDLTRISTAR",
+    "ohlcOnly" :  true
+   },
+
+   "cdllongline":{
+    "id": "cdllongline",
+    "long_display_name": "Long Line Candle",
+    "short_display_name": "CDLLONGLINE",
+    "ohlcOnly" :  true
+   },
+
+   "cdlshortline":{
+    "id": "cdlshortline",
+    "long_display_name": "Short Line Candle",
+    "short_display_name": "CDLSHORTLINE",
+    "ohlcOnly" :  true
    }
 }
