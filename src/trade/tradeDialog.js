@@ -463,8 +463,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             over: 'Last Digit is Over'
           }[subcat];
 
+          if(!_.contains(array, state.digits.value)){
+            state.digits.value = array[0];
+          }
           state.digits.array = array;
-          state.digits.value = array[0];
           state.digits.text = text;
           state.digits.visible = true;
       };
