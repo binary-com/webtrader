@@ -487,5 +487,26 @@
     "long_display_name": "Rising/Falling Three Methods",
     "short_display_name": "CDLRISEFALL3METHODS",
     "ohlcOnly" :  true
+   },
+
+    "cdlidentical3crows":{
+    "id": "cdlidentical3crows",
+    "long_display_name": "Identical Three Crows",
+    "short_display_name": "CDLIDENTICAL3CROWS",
+    "ohlcOnly" :  true
+   },
+
+    "cdlmorningstar":{
+    "id": "cdlmorningstar",
+    "long_display_name": "Morning Star",
+    "short_display_name": "CDLMORNINGSTAR",
+    "ohlcOnly" :  true
+   },
+
+    "cdlspinningtop":{
+    "id": "cdlspinningtop",
+    "long_display_name": "Spinning Top",
+    "short_display_name": "CDLSPINNINGTOP",
+    "ohlcOnly" :  true
    }
 }
