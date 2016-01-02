@@ -466,6 +466,26 @@
     "long_display_name": "Kicking",
     "short_display_name": "CDLKICKING",
     "ohlcOnly" :  true
-   }
+   },
 
+    "cdlmatchinglow":{
+    "id": "cdlmatchinglow",
+    "long_display_name": "Matching Low",
+    "short_display_name": "CDLMATCHINGLOW",
+    "ohlcOnly" :  true
+   },
+
+    "cdlladderbottom":{
+    "id": "cdlladderbottom",
+    "long_display_name": "Ladder Bottom",
+    "short_display_name": "CDLLADDERBOTTOM",
+    "ohlcOnly" :  true
+   },
+
+    "cdlrisefall3methods":{
+    "id": "cdlrisefall3methods",
+    "long_display_name": "Rising/Falling Three Methods",
+    "short_display_name": "CDLRISEFALL3METHODS",
+    "ohlcOnly" :  true
+   }
 }

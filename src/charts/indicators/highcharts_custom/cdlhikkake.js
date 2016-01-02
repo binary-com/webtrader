@@ -186,7 +186,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">Hk</span>',
+                                        title: '<span style="color : blue">HK</span>',
                                         text: 'Hikkake Pattern : Bull'
                                     }
                                 }
