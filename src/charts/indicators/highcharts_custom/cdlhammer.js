@@ -32,7 +32,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var perctDiff_closeToHigh = Math.abs((candleOne_Close - candleOne_High) * 100.0 / candleOne_Close);
         var body = Math.abs(candleOne_Open - candleOne_Close);
         var lowWick = Math.abs(candleOne_Low - Math.max(candleOne_Open, candleOne_Close));
-        var isLowerShadowTwiceBody = lowWick >= (2.0 * body);
+        var isLowerShadowTwiceBody = (lowWick > body) && (lowWick <= (2.0 * body)); //lower shadow length cannot exceed more than twice its body length
         var isOpenCloseHighAlmostSame = perctDiff_openToClose <= 1.0
                                         && perctDiff_openToHigh <= 1.0
                                         && perctDiff_closeToHigh <= 0.5;

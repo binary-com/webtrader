@@ -1,9 +1,9 @@
 ﻿/**
- * Created by Mahboob.M on 12/29/15
+ * Created by Mahboob.M on 1/3/16
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdltakuriOptionsMap = {}, cdltakuriSeriesMap = {};
+    var cdldragonflydojiOptionsMap = {}, cdldragonflydojiSeriesMap = {};
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -24,17 +24,17 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             highWick = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
             candleBodySize = Math.abs(candleOne_Low - candleOne_High),
             realBodySize = Math.abs(candleOne_Open - candleOne_Close),
-            isOpenCloseHighAlmostSame = ((candleOne_Open === candleOne_Close) || (realBodySize < (candleBodySize * 0.20)))
-             && ((candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || (highWick < (candleBodySize * 0.20))),
-            isLowerShadowLong = lowWick!==0 && lowWick >= (candleBodySize * 0.80) ;
+            isOpenCloseHighAlmostSame = ((candleOne_Open === candleOne_Close) || (realBodySize < (candleBodySize * 0.1)))
+             && ((candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || (highWick < (candleBodySize * 0.1))),
+            isLowerShadowLong =lowWick!==0 && lowWick >= (candleBodySize * 0.60);
 
         var isBullishContinuation = isCandleTwo_Bearish //occurs at the bottom of downtrends.
                                     && isOpenCloseHighAlmostSame //the open, high, and close are the same or about the same price
-                                    && isLowerShadowLong;// with a Lower Shadow that is long at least three times the Real Body of the Candle; 
+                                    && isLowerShadowLong;// The most important part of the Dragonfly Doji is the long lower shadow.
 
         var isBearishContinuation = isCandleTwo_Bullish //occurs at the top of uptrends
                                     && isOpenCloseHighAlmostSame //the open, high, and close are the same or about the same price
-                                    && isLowerShadowLong;// with a Lower Shadow that is long at least three times the Real Body of the Candle; 
+                                    && isLowerShadowLong;// The most important part of the Dragonfly Doji is the long lower shadow.
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
@@ -48,69 +48,69 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLTAKURI) return;
+                if (!H || H.Series.prototype.addCDLDRAGONFLYDOJI) return;
 
-                H.Series.prototype.addCDLTAKURI = function (cdltakuriOptions) {
+                H.Series.prototype.addCDLDRAGONFLYDOJI = function (cdldragonflydojiOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdltakuriOptions = $.extend({
+                    cdldragonflydojiOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdltakuriOptions);
+                    }, cdldragonflydojiOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLTAKURI series to the chart
+                    //If this series has data, add CDLDRAGONFLYDOJI series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLTAKURI data
+                        //Calculate CDLDRAGONFLYDOJI data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
-                        var cdltakuriData = [];
+                        var cdldragonflydojiData = [];
                         for (var index = 1 ; index < data.length; index++) {
 
-                            //Calculate CDLTAKURI - start
+                            //Calculate CDLDRAGONFLYDOJI - start
                             var bull_bear = calculateIndicatorValue(data, index);
 
                             if (bull_bear.isBullishContinuation) {
-                                cdltakuriData.push({
+                                cdldragonflydojiData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">TK</span>',
-                                    text: 'Takuri : Bull'
+                                    title: '<span style="color : blue">DD</span>',
+                                    text: 'Dragonfly Doji : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
-                                cdltakuriData.push({
+                                cdldragonflydojiData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">TK</span>',
-                                    text: 'Takuri : Bear'
+                                    title: '<span style="color : red">DD</span>',
+                                    text: 'Dragonfly Doji : Bear'
                                 });
                             }
-                            //Calculate CDLTAKURI - end
+                            //Calculate CDLDRAGONFLYDOJI - end
                         };
 
                         var chart = this.chart;
 
-                        cdltakuriOptionsMap[uniqueID] = cdltakuriOptions;
+                        cdldragonflydojiOptionsMap[uniqueID] = cdldragonflydojiOptions;
 
                         var series = this;
-                        cdltakuriSeriesMap[uniqueID] = chart.addSeries({
+                        cdldragonflydojiSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLTAKURI',
-                            data: cdltakuriData,
+                            name: 'CDLDRAGONFLYDOJI',
+                            data: cdldragonflydojiData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdltakuriSeriesMap[uniqueID]).data({
+                        $(cdldragonflydojiSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdltakuri',
-                            parentSeriesID: cdltakuriOptions.parentSeriesID
+                            indicatorID: 'cdldragonflydoji',
+                            parentSeriesID: cdldragonflydojiOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -122,30 +122,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLTAKURI = function (uniqueID) {
+                H.Series.prototype.removeCDLDRAGONFLYDOJI = function (uniqueID) {
                     var chart = this.chart;
-                    cdltakuriOptionsMap[uniqueID] = null;
+                    cdldragonflydojiOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdltakuriSeriesMap[uniqueID] = null;
+                    cdldragonflydojiSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLTAKURI = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLDRAGONFLYDOJI = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdltakuriOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdldragonflydojiOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdltakurieed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdldragonflydojieed, options, redraw, shift, animation) {
 
-                    pcdltakurieed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltakuriOptionsMap, this.options.id)) {
-                        updateCDLTAKURISeries.call(this, options[0]);
+                    pcdldragonflydojieed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdldragonflydojiOptionsMap, this.options.id)) {
+                        updateCDLDRAGONFLYDOJISeries.call(this, options[0]);
                     }
 
                 });
@@ -153,59 +153,59 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdltakurieed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdldragonflydojieed, options, redraw, animation) {
 
-                    pcdltakurieed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdltakuriOptionsMap, this.series.options.id)) {
-                        updateCDLTAKURISeries.call(this.series, this.x, true);
+                    pcdldragonflydojieed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdldragonflydojiOptionsMap, this.series.options.id)) {
+                        updateCDLDRAGONFLYDOJISeries.call(this.series, this.x, true);
                     }
 
-                }); 
-                
+                });
+
 
                 /**
                  * This function should be called in the context of series object
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLTAKURISeries(time, isPointUpdate) {
+                function updateCDLDRAGONFLYDOJISeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLTAKURI data point
-                    for (var key in cdltakuriSeriesMap) {
-                        if (cdltakuriSeriesMap[key] && cdltakuriSeriesMap[key].options && cdltakuriSeriesMap[key].options.data && cdltakuriSeriesMap[key].options.data.length > 0
-                            && cdltakuriOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLTAKURI series. Add one more CDLTAKURI point
+                    //Add a new CDLDRAGONFLYDOJI data point
+                    for (var key in cdldragonflydojiSeriesMap) {
+                        if (cdldragonflydojiSeriesMap[key] && cdldragonflydojiSeriesMap[key].options && cdldragonflydojiSeriesMap[key].options.data && cdldragonflydojiSeriesMap[key].options.data.length > 0
+                            && cdldragonflydojiOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLDRAGONFLYDOJI series. Add one more CDLDRAGONFLYDOJI point
                             //Calculate CDLTAKURI data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLTAKURI - start
+                                //Calculate CDLDRAGONFLYDOJI - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLTAKURI - end
+                                //Calculate CDLDRAGONFLYDOJI - end
                                 var bullBearData = null;
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">TK</span>',
-                                        text: 'Takuri : Bull'
+                                        title: '<span style="color : blue">DD</span>',
+                                        text: 'Dragonfly Doji : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">TK</span>',
-                                        text: 'Takuri : Bear'
+                                        title: '<span style="color : red">DD</span>',
+                                        text: 'Dragonfly Doji : Bear'
                                     }
                                 };
 
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdltakuriSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdltakuriSeriesMap[key].data[sIndx].x || cdltakuriSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdldragonflydojiSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdldragonflydojiSeriesMap[key].data[sIndx].x || cdldragonflydojiSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -213,13 +213,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdltakuriSeriesMap[key].data[whereToUpdate].remove();
+                                            cdldragonflydojiSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdltakuriSeriesMap[key].addPoint(bullBearData);
+                                    cdldragonflydojiSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdltakuriSeriesMap[key].data[whereToUpdate].remove();
+                                        cdldragonflydojiSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

@@ -508,5 +508,12 @@
     "long_display_name": "Spinning Top",
     "short_display_name": "CDLSPINNINGTOP",
     "ohlcOnly" :  true
+   },
+
+    "cdldragonflydoji":{
+    "id": "cdldragonflydoji",
+    "long_display_name": "Dragonfly Doji",
+    "short_display_name": "CDLDRAGONFLYDOJI",
+    "ohlcOnly" :  true
    }
 }
