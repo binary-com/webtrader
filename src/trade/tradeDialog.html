@@ -52,7 +52,7 @@
             <select class="digits-select"
                     rv-jq-class="'trade-dialog-digits-select-ul'"
                     rv-selectmenu="digits.value | debounce proposal.onchange"
-                    rv-selectrefresh="digits.array">
+                    rv-selectrefresh="digits.array | and digits.value">
 
                 <option rv-each-row="digits.array" rv-value="row">{row}</option>
            </select>
