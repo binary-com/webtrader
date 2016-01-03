@@ -260,23 +260,29 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
           var map = this;
           if(!map[key]) { return; }
           if(containerIDWithHash) {
-            _.remove(map[key], {containerIDWithHash: containerIDWithHash});
+            _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
           }
           map[key].subscribers -= 1;
-          if(map[key].subscribers === 0 && map[key].id) { /* id is set in stream_handler.js */
-              liveapi.send({forget: map[key].id})
-                     .catch(function(err){console.error(err);});
-           }
           if (map[key].chartIDs.length === 0 && map[key].timerHandler) {
               clearInterval(map[key].timerHandler);
               map[key].timerHandler = null;
+          }
+          if(map[key].subscribers === 0 && map[key].id) { /* id is set in stream_handler.js */
+              liveapi.send({forget: map[key].id})
+                     .catch(function(err){console.error(err);});
+          }
+          if(map[key].subscribers === 0) {
+            delete map[key];
           }
         },
         /* this will be use for charts.drawCharts method which wants to : Just make sure that everything has been cleared out before starting a new thread! */
         removeChart: function(key,containerIDWithHash){
           var map = this;
           if(!map[key]) return;
-          _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
+          if(_(map[key].chartIDs).map('containerIDWithHash').contains(containerIDWithHash)) {
+            map[key].subscribers -= 1;
+            _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
+          }
         }
     };
 
