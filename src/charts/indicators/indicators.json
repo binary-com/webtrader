@@ -550,5 +550,19 @@
     "long_display_name": "Counterattack",
     "short_display_name": "CDLCOUNTERATTACK",
     "ohlcOnly" :  true
+   },
+
+    "cdlmorningdojistar":{
+    "id": "cdlmorningdojistar",
+    "long_display_name": "Morning Doji Star",
+    "short_display_name": "CDLMORNINGDOJISTAR",
+    "ohlcOnly" :  true
+   },
+
+    "cdlcounterattack":{
+    "id": "cdlcounterattack",
+    "long_display_name": "Counterattack",
+    "short_display_name": "CDLCOUNTERATTACK",
+    "ohlcOnly" :  true
    }
 }

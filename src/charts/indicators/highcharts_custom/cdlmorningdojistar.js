@@ -3,7 +3,7 @@
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdleveningdojistarOptionsMap = {}, cdleveningdojistarSeriesMap = {};
+    var cdlmorningdojistarOptionsMap = {}, cdlmorningdojistarSeriesMap = {};
     var candleMediumHeight = 0;
 
     function calculateIndicatorValue(data, index) {
@@ -26,25 +26,27 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
 			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
 
-        var isCandleFor_Bullish = candleFor_Close > candleFor_Open;
+        var isCandleFor_Bearish = candleFor_Close < candleFor_Open;
 
-        var isCandleThree_Bullish = candleThree_Close > candleThree_Open;
+        var isCandleThree_Bearish = candleThree_Close < candleThree_Open;
 
-        var isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+        var isCandleOne_Bullish = candleOne_Close > candleOne_Open;
 
         var candleOneBody = Math.abs(candleOne_Open - candleOne_Close),
          candleThreeBody = Math.abs(candleThree_Open - candleThree_Close),
          candleTwoBody = Math.abs(candleTwo_Low - candleTwo_High),
          iscandleTwoDoji = candleTwo_Open === candleTwo_Close || ((candleTwoBody * 0.10) >= Math.abs(candleTwo_Open - candleTwo_Close));
 
-        var isBullishContinuation = false;
+      
+        //Morning Doji Star is bullish only
+        var isBullishContinuation = isCandleFor_Bearish  //occurs within a defined downtrend.
+                                    && isCandleThree_Bearish && (candleThreeBody > candleMediumHeight)  //The first part of an Evening Star reversal pattern is a large bullish green candle.
+                                    && iscandleTwoDoji && (Math.max(candleTwo_Open, candleTwo_Close) < candleThree_Close) //The second day begins with a gap down and it is quite small and can be bullish or bearish.
+                                    && isCandleOne_Bullish && (candleOneBody > candleMediumHeight) && (candleOne_Open > Math.max(candleTwo_Open, candleTwo_Close))//a large Bullish Candle with gap up.
+                                    && candleOne_Close < candleThree_Open && candleOne_Close > candleThree_Close; //closes well within the body of the first candle
 
-        //Evening Doji Star is bearish only
-        var isBearishContinuation = isCandleFor_Bullish  //occurs at the top of an uptrend.
-                                    && isCandleThree_Bullish && (candleThreeBody > candleMediumHeight)  //The first part of an Evening Star reversal pattern is a large bullish green candle.
-                                    && iscandleTwoDoji && (Math.min(candleTwo_Open, candleTwo_Close) > candleThree_Close) //The second day begins with a gap up and it is quite small and can be bullish or bearish.
-                                    && isCandleOne_Bearish && (candleOneBody > candleMediumHeight) && (candleOne_Open < Math.min(candleTwo_Open, candleTwo_Close))//a large Bearish Candle with gap down.
-                                    && candleOne_Close > candleThree_Open && candleOne_Close < candleThree_Close; //closes well within the body of the first candle
+        var isBearishContinuation = false;
+
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
@@ -58,62 +60,62 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLEVENINGDOJISTAR) return;
+                if (!H || H.Series.prototype.addCDLMORNINGDOJISTAR) return;
 
-                H.Series.prototype.addCDLEVENINGDOJISTAR = function (cdleveningdojistarOptions) {
+                H.Series.prototype.addCDLMORNINGDOJISTAR = function (cdlmorningdojistarOptions) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdleveningdojistarOptions = $.extend({
+                    cdlmorningdojistarOptions = $.extend({
                         parentSeriesID: seriesID
-                    }, cdleveningdojistarOptions);
+                    }, cdlmorningdojistarOptions);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLEVENINGDOJISTAR series to the chart
+                    //If this series has data, add CDLMORNINGDOJISTAR series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLEVENINGDOJISTAR data
+                        //Calculate CDLMORNINGDOJISTAR data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
                         candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
-                        var cdleveningdojistarData = [];
+                        var cdlmorningdojistarData = [];
                         for (var index = 3 ; index < data.length; index++) {
 
-                            //Calculate CDLEVENINGDOJISTAR - start
+                            //Calculate CDLMORNINGDOJISTAR - start
                             var bull_bear = calculateIndicatorValue(data, index);
-                            //Evening Doji Star is bearish only
-                            if (bull_bear.isBearishContinuation) {
-                                cdleveningdojistarData.push({
+                            //Morning Doji Star is bullish only
+                            if (bull_bear.isBullishContinuation) {
+                                cdlmorningdojistarData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">EDS</span>',
-                                    text: 'Evening Doji Star : Bear'
+                                    title: '<span style="color : blue">MDS</span>',
+                                    text: 'Morning Doji Star : Bull'
                                 });
                             }
                         };
 
                         var chart = this.chart;
 
-                        cdleveningdojistarOptionsMap[uniqueID] = cdleveningdojistarOptions;
+                        cdlmorningdojistarOptionsMap[uniqueID] = cdlmorningdojistarOptions;
 
                         var series = this;
-                        cdleveningdojistarSeriesMap[uniqueID] = chart.addSeries({
+                        cdlmorningdojistarSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLEVENINGDOJISTAR',
-                            data: cdleveningdojistarData,
+                            name: 'CDLMORNINGDOJISTAR',
+                            data: cdlmorningdojistarData,
                             type: 'flags',
                             onSeries: seriesID,
                             shape: 'flag',
                             turboThreshold: 0
                         }, false, false);
 
-                        $(cdleveningdojistarSeriesMap[uniqueID]).data({
+                        $(cdlmorningdojistarSeriesMap[uniqueID]).data({
                             isIndicator: true,
-                            indicatorID: 'cdleveningdojistar',
-                            parentSeriesID: cdleveningdojistarOptions.parentSeriesID
+                            indicatorID: 'cdlmorningdojistar',
+                            parentSeriesID: cdlmorningdojistarOptions.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -125,30 +127,30 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLEVENINGDOJISTAR = function (uniqueID) {
+                H.Series.prototype.removeCDLMORNINGDOJISTAR = function (uniqueID) {
                     var chart = this.chart;
-                    cdleveningdojistarOptionsMap[uniqueID] = null;
+                    cdlmorningdojistarOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
-                    cdleveningdojistarSeriesMap[uniqueID] = null;
+                    cdlmorningdojistarSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLEVENINGDOJISTAR = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLMORNINGDOJISTAR = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdleveningdojistarOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlmorningdojistarOptionsMap[uniqueID] != null
                     };
                 };
 
                 /*
                  *  Wrap HC's Series.addPoint
                  */
-                H.wrap(H.Series.prototype, 'addPoint', function (pcdleveningdojistareed, options, redraw, shift, animation) {
+                H.wrap(H.Series.prototype, 'addPoint', function (pcdlmorningdojistareed, options, redraw, shift, animation) {
 
-                    pcdleveningdojistareed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdleveningdojistarOptionsMap, this.options.id)) {
-                        updateCDLEVENINGDOJISTARSeries.call(this, options[0]);
+                    pcdlmorningdojistareed.call(this, options, redraw, shift, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlmorningdojistarOptionsMap, this.options.id)) {
+                        updateCDLMORNINGDOJISTARSeries.call(this, options[0]);
                     }
 
                 });
@@ -156,11 +158,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 /*
                  *  Wrap HC's Point.update
                  */
-                H.wrap(H.Point.prototype, 'update', function (pcdleveningdojistareed, options, redraw, animation) {
+                H.wrap(H.Point.prototype, 'update', function (pcdlmorningdojistareed, options, redraw, animation) {
 
-                    pcdleveningdojistareed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdleveningdojistarOptionsMap, this.series.options.id)) {
-                        updateCDLEVENINGDOJISTARSeries.call(this.series, this.x, true);
+                    pcdlmorningdojistareed.call(this, options, redraw, animation);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlmorningdojistarOptionsMap, this.series.options.id)) {
+                        updateCDLMORNINGDOJISTARSeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -171,37 +173,37 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLEVENINGDOJISTARSeries(time, isPointUpdate) {
+                function updateCDLMORNINGDOJISTARSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLEVENINGDOJISTAR data point
-                    for (var key in cdleveningdojistarSeriesMap) {
-                        if (cdleveningdojistarSeriesMap[key] && cdleveningdojistarSeriesMap[key].options && cdleveningdojistarSeriesMap[key].options.data && cdleveningdojistarSeriesMap[key].options.data.length > 0
-                            && cdleveningdojistarOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLEVENINGDOJISTAR series. Add one more CDLEVENINGDOJISTAR point
-                            //Calculate CDLEVENINGDOJISTAR data
+                    //Add a new CDLMORNINGDOJISTAR data point
+                    for (var key in cdlmorningdojistarSeriesMap) {
+                        if (cdlmorningdojistarSeriesMap[key] && cdlmorningdojistarSeriesMap[key].options && cdlmorningdojistarSeriesMap[key].options.data && cdlmorningdojistarSeriesMap[key].options.data.length > 0
+                            && cdlmorningdojistarOptionsMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLMORNINGDOJISTAR series. Add one more CDLMORNINGDOJISTAR point
+                            //Calculate CDLMORNINGDOJISTAR data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLEVENINGDOJISTAR - start
+                                //Calculate CDLMORNINGDOJISTAR - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLEVENINGDOJISTAR - end
+                                //Calculate CDLMORNINGDOJISTAR - end
                                 var bullBearData = null;
-                                //Evening Doji Star is bearish only
-                                if (bull_bear.isBearishContinuation) {
+                                //Morning Doji Star is bullish only
+                                if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">EDS</span>',
-                                        text: 'Evening Doji Star : Bear'
+                                        title: '<span style="color : blue">MDJ</span>',
+                                        text: 'Morning Doji Star : Bull'
                                     }
                                 };
 
                                 var whereToUpdate = -1;
-                                for (var sIndx = cdleveningdojistarSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
-                                    if ((cdleveningdojistarSeriesMap[key].data[sIndx].x || cdleveningdojistarSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
+                                for (var sIndx = cdlmorningdojistarSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
+                                    if ((cdlmorningdojistarSeriesMap[key].data[sIndx].x || cdlmorningdojistarSeriesMap[key].data[sIndx][0]) == (data[dataPointIndex].x || data[dataPointIndex][0])) {
                                         whereToUpdate = sIndx;
                                         break;
                                     }
@@ -209,13 +211,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bullBearData) {
                                     if (isPointUpdate) {
                                         if (whereToUpdate >= 0) {
-                                            cdleveningdojistarSeriesMap[key].data[whereToUpdate].remove();
+                                            cdlmorningdojistarSeriesMap[key].data[whereToUpdate].remove();
                                         }
                                     }
-                                    cdleveningdojistarSeriesMap[key].addPoint(bullBearData);
+                                    cdlmorningdojistarSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdleveningdojistarSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlmorningdojistarSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }
