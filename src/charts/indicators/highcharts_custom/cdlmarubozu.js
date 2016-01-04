@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlmarubozuOptionsMap = {}, cdlmarubozuSeriesMap = {};
+    var candleMediumHeight = 0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -16,9 +17,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isBearish = candleOne_Open > candleOne_Close;
         var isBullish = candleOne_Open < candleOne_Close;
 
+        var lowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close)),
+            upperShadow = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
+            candleBodySize = Math.abs(candleOne_Low - candleOne_High),
+            realBodySize = Math.abs(candleOne_Close - candleOne_Open),
+            isLowerShadowShort = lowerShadow === 0 || lowerShadow <= (candleBodySize * 0.05),
+            isUpperShadowShort = upperShadow === 0 || upperShadow <= (candleBodySize * 0.05);
+
         return {
-            isBearishContinuation: isBearish && candleOne_Low === candleOne_Close && candleOne_High === candleOne_Open,
-            isBullishContinuation: isBullish && candleOne_Low === candleOne_Open && candleOne_High === candleOne_Close
+            isBearishContinuation: isBearish && realBodySize > candleMediumHeight && isUpperShadowShort && isLowerShadowShort,
+            isBullishContinuation: isBullish && realBodySize > candleMediumHeight && isUpperShadowShort && isLowerShadowShort
         };
     }
 
@@ -51,8 +59,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                             Refer to dl2crows.html for detailed information on this indicator
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlmarubozuData = [];
-                        for (var index = 1; index < data.length; index++) {
+                        for (var index = 0; index < data.length; index++) {
 
                             //Calculate CDLMARUBOZU - start
                             var bull_bear = calculateIndicatorValue(data, index);

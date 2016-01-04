@@ -515,5 +515,40 @@
     "long_display_name": "Dragonfly Doji",
     "short_display_name": "CDLDRAGONFLYDOJI",
     "ohlcOnly" :  true
+   },
+
+    "cdllongleggeddoji":{
+    "id": "cdllongleggeddoji",
+    "long_display_name": "Long Legged Doji",
+    "short_display_name": "CDLLONGLEGGEDDOJI",
+    "ohlcOnly" :  true
+   },
+
+    "cdleveningdojistar":{
+    "id": "cdleveningdojistar",
+    "long_display_name": "Evening Doji Star",
+    "short_display_name": "CDLEVENINGDOJISTAR",
+    "ohlcOnly" :  true
+   },
+
+    "cdlbreakaway":{
+    "id": "cdlbreakaway",
+    "long_display_name": "Breakaway",
+    "short_display_name": "CDLBREAKAWAY",
+    "ohlcOnly" :  true
+   },
+
+    "cdladvanceblock":{
+    "id": "cdladvanceblock",
+    "long_display_name": "Advance Block",
+    "short_display_name": "CDLADVANCEBLOCK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlcounterattack":{
+    "id": "cdlcounterattack",
+    "long_display_name": "Counterattack",
+    "short_display_name": "CDLCOUNTERATTACK",
+    "ohlcOnly" :  true
    }
 }
