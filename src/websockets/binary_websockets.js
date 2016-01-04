@@ -33,7 +33,7 @@ define(['jquery'], function ($) {
         ws.addEventListener('error', function(event) {
             console.log('WS connection error : ', event);
             // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
-            $(document).trigger("feedTypeNotification", [key, "noconnection-feed"]);
+            $(document).trigger("feedTypeNotification", ['websocket-error', "noconnection-feed"]);
             $.growl.error({message: "Connection error. Refresh page!"});
             //Clear everything. No more changes on chart. Refresh of page is needed!
         });
@@ -53,27 +53,14 @@ define(['jquery'], function ($) {
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
                     var req = chartingRequestMap[key];
-                    var instrumentCode = req && req.chartIDs && req.chartIDs[0] && req.chartIDs[0].instrumentCode;
-                    var granularity = parseInt(key.replace(instrumentCode, "")) | 0;
-                    /* resubscribe */
-                    if (req && instrumentCode) {
-                        if (req.timerHandler) {return;} //just ignore timer cases
-
-                        var requestObject = {
-                            "ticks_history": instrumentCode,
-                            "granularity": granularity,
-                            "end": 'latest',
-                            "count": 1,
-                            "subscribe": 1
-                        };
-                        if (granularity > 0) {
-                            requestObject.style = 'candles';
-                        }
-                        console.log('Sending new streaming request after connection close', requestObject);
-                        api.send(requestObject)
-                            .catch(function (err) {
-                                console.error(err);
-                            });
+                    if (req && req.symbol && !req.timerHandler) { /* resubscribe */
+                        chartingRequestMap.register({
+                          symbol: req.symbol,
+                          granularity: req.granularity,
+                          subscribe: 1,
+                          count: 1,
+                          style: req.granularity > 0 ? 'candles' : 'ticks'
+                        }).catch(function (err) { console.error(err); });
                     }
                 });
             });
@@ -94,6 +81,18 @@ define(['jquery'], function ($) {
         while (buffered_sends.length > 0) {
             socket.send(JSON.stringify(buffered_sends.shift()));
         }
+        /* if the connection got closed while the result of an unresolved request
+           is not back yet, issue the same request again */
+        for(var key in unresolved_promises) {
+          var promise = unresolved_promises[key];
+          if(!promise) continue;
+          if(promise.sent_before) { /* reject if sent once before */
+              promise.reject({message: 'connection closed'});
+          } else { /* send */
+              promise.sent_before = true;
+              socket.send(JSON.stringify(promise.data));
+          }
+        }
         while (buffered_execs.length > 0)
             buffered_execs.shift()();
     }
@@ -104,10 +103,13 @@ define(['jquery'], function ($) {
         var data = JSON.parse(message.data);
 
         (callbacks[data.msg_type] || []).forEach(function (cb) {
+          /* do not block the main thread */
+          setTimeout(function(){
             cb(data);
+          },0);
         });
 
-        var key = data && data.echo_req && data.echo_req.passthrough && data.echo_req.passthrough.uid;
+        var key = data.req_id;
         var promise = unresolved_promises[key];
         if (promise) {
             delete unresolved_promises[key];
@@ -135,15 +137,16 @@ define(['jquery'], function ($) {
     };
 
     /* send a raw request and return a promise */
+    var req_id_counter = 0;
     var send_request = function (data) {
-        data.passthrough = data.passthrough || { };
-        data.passthrough.uid =  (Math.random() * 1e17).toString();
+        data.req_id = ++req_id_counter;
 
         return new Promise(function (resolve,reject) {
-            unresolved_promises[data.passthrough.uid] = { resolve: resolve, reject: reject };
-            if (is_connected())
+            unresolved_promises[data.req_id] = { resolve: resolve, reject: reject, data: data };
+            if (is_connected()) {
+                console.log('Request object : ', JSON.stringify(data));
                 socket.send(JSON.stringify(data));
-            else
+            } else
                 buffered_sends.push(data);
         });
     };
@@ -195,6 +198,10 @@ define(['jquery'], function ($) {
             return tokenWin
                 .getTokenAsync()
                 .then(authenticate)
+                .catch(function(up){
+                  require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
+                  throw up;
+                })
                 .then(send);
     };
 
@@ -209,10 +216,30 @@ define(['jquery'], function ($) {
       });
     }
 
+    /* the current websocket api (v3) does not return a result for closed markets,
+       use this a a temporary workaround to timeout 'ticks_history' api call while laoding charts,
+       TODO: wait for backend to fix this! */
+    var timeout_promise = function(key, milliseconds) {
+       setTimeout(function() {
+         var promise = unresolved_promises[key];
+         if (promise) {
+             delete unresolved_promises[key];
+             promise.reject({message: 'timeout for websocket request'});
+         }
+       },milliseconds);
+    };
+
     var api = {
         events: {
             on: function (name, cb) {
                 (callbacks[name] = callbacks[name] || []).push(cb);
+                return cb;
+            },
+            off: function(name, cb){
+                if(callbacks[name]) {
+                  var index = callbacks[name].indexOf(cb);
+                  index !== -1 && callbacks[name].splice(index, 1);
+                }
             }
         },
         /* execute callback when the connection is ready */
@@ -259,17 +286,29 @@ define(['jquery'], function ($) {
                         return cached_promises[key];
 
                     return token ? authenticate(token) : /* we have a token => autheticate */
-                                      tokenWin.getTokenAsync().then(authenticate); /* get the token from user and authenticate */
+                                      tokenWin.getTokenAsync()
+                                      .then(authenticate) /* get the token from user and authenticate */
+                                      .catch(function(up){
+                                        require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
+                                        throw up;
+                                      });
                 })
             }
         },
         /* sends a request and returns an es6-promise */
-        send: function (data) {
+        send: function (data, timeout) {
             if (data && needs_authentication(data))
                 return authentication_deps.then(function () {
                     return send_authenticated_request(data);
                 });
-            return send_request(data);
+
+            var promise = send_request(data);
+            if(timeout) timeout_promise(data.req_id, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
+            return promise;
+        },
+        /* whether currenct session is authenticated or not */
+        is_authenticated: function () {
+          return is_authenitcated_session;
         }
     }
     return api;

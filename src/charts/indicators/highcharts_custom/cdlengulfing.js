@@ -185,7 +185,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDLENGULFING data point
                     for (var key in cdlengulfingSeriesMap) {
                         if (cdlengulfingSeriesMap[key] && cdlengulfingSeriesMap[key].options && cdlengulfingSeriesMap[key].options.data && cdlengulfingSeriesMap[key].options.data.length > 0
-                            && cdlengulfingOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdlengulfingOptionsMap[key].parentSeriesID == series.options.id
+                            && cdlengulfingSeriesMap[key].chart === chart
+                        ) {
                             //This is CDLENGULFING series. Add one more CDLENGULFING point
                             //Calculate CDLENGULFING data
                             //Find the data point

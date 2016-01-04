@@ -210,7 +210,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     for (var key in atrSeriesMap) {
                         if (atrSeriesMap[key] && atrSeriesMap[key].options && atrSeriesMap[key].options.data
                                             && atrSeriesMap[key].options.data.length > 0
-                                            && atrOptionsMap[key].parentSeriesID == series.options.id) {
+                                            && atrOptionsMap[key].parentSeriesID == series.options.id
+                                            && atrSeriesMap[key].chart === chart) {
                             //This is ATR series. Add one more ATR point
                             //Calculate ATR data
                             /*

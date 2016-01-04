@@ -53,47 +53,22 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          *  Do not fill any value in trimaData from 0 index to options.period-1 index
 
                          */
-                        var trimaData = [], sum = 0.0, N = trimaOptions.period + 1,
-                                                        Nm = Math.round( N / 2 );
-                        for (var index = 0; index < Nm; index++)
-                        {
-                            if (indicatorBase.isOHLCorCandlestick(this.options.type))
-                            {
-                                sum += indicatorBase.extractPriceForAppliedTO(trimaOptions.appliedTo, data, index);
-                            }
-                            else
-                            {
-                                sum += indicatorBase.extractPrice(data, index);
-                            }
-                            if (index == (Nm - 1))
-                            {
-                                trimaData.push([data[Nm - 1].x ? data[Nm - 1].x : data[Nm - 1][0], sum / Nm]);
-                            }
-                            else
-                            {
-                                trimaData.push([data[index].x ? data[index].x : data[index][0], null]);
-                            }
+                       
+                        var trimaData = [];
+                        for (var index = 0; index < data.length; index++) {
+                            var maOptions = {
+                                data: data,
+                                maData: trimaData,
+                                index: index,
+                                period: trimaOptions.period,
+                                type: this.options.type,
+                                appliedTo: trimaOptions.appliedTo,
+                            };
+                            var maValue = indicatorBase.calculateTRIMAValue(maOptions);
+
+                            trimaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
                         }
 
-                        for (var index = Nm; index < data.length; index++)
-                        {
-
-                            var price = 0.0;
-                            if (indicatorBase.isOHLCorCandlestick(this.options.type))
-                            {
-                                price = indicatorBase.extractPriceForAppliedTO(trimaOptions.appliedTo, data, index);
-                            }
-                            else
-                            {
-                                price = data[index].y ? data[index].y : data[index][1];
-                            }
-
-                            //Calculate TRIMA - start
-                            var trimaValue = (trimaData[index - 1][1] * (Nm - 1) + price) / Nm;
-                            trimaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(trimaValue , 4)]);
-                            //Calculate TRIMA - end
-
-                        }
 
                         var chart = this.chart;
 
@@ -184,7 +159,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new TRIMA data point
                     for (var key in trimaSeriesMap) {
                         if (trimaSeriesMap[key] && trimaSeriesMap[key].options && trimaSeriesMap[key].options.data && trimaSeriesMap[key].options.data.length > 0
-                            && trimaOptionsMap[key].parentSeriesID == series.options.id) {
+                            && trimaOptionsMap[key].parentSeriesID == series.options.id
+                            && trimaSeriesMap[key].chart === chart
+                        ) {
                             //This is TRIMA series. Add one more TRIMA point
                             //Calculate TRIMA data
                             /*
@@ -200,28 +177,26 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             //Find the data point
                             var data = series.options.data;
                             var trimaData = trimaSeriesMap[key].options.data;
-                            var N = trimaOptionsMap[key].period + 1, Nm = Math.round( N / 2 );
+                            var trimaOptions = trimaOptionsMap[key];
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
-                                var price = 0.0;
-                                if (indicatorBase.isOHLCorCandlestick(this.options.type))
-                                {
-                                    price = indicatorBase.extractPriceForAppliedTO(trimaOptionsMap[key].appliedTo, data, dataPointIndex);
-                                }
-                                else
-                                {
-                                    price = data[dataPointIndex].y ? data[dataPointIndex].y : data[dataPointIndex][1];
-                                }
+                                var maOptions = {
+                                    data: data,
+                                    maData: trimaData,
+                                    index: dataPointIndex,
+                                    period: trimaOptions.period,
+                                    type: this.options.type,
+                                    appliedTo: trimaOptions.appliedTo,
+                                };
+                                var maValue = indicatorBase.calculateTRIMAValue(maOptions);
 
-                                //Calculate TRIMA - start
-                                var trimaValue = indicatorBase.toFixed(((trimaData[dataPointIndex - 1].y || trimaData[dataPointIndex - 1][1]) * (Nm - 1) + price) / Nm, 4);
                                 if (isPointUpdate)
                                 {
-                                    trimaSeriesMap[key].data[dataPointIndex].update({ y : trimaValue});
+                                    trimaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else
                                 {
-                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), trimaValue], true, true, false);
+                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
                                 }
                             }
                         }

@@ -177,7 +177,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDLDOJI data point
                     for (var key in cdldojiSeriesMap) {
                         if (cdldojiSeriesMap[key] && cdldojiSeriesMap[key].options && cdldojiSeriesMap[key].options.data && cdldojiSeriesMap[key].options.data.length > 0
-                            && cdldojiOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdldojiOptionsMap[key].parentSeriesID == series.options.id
+                            && cdldojiSeriesMap[key].chart === chart
+                        ) {
                             //This is CDLDOJI series. Add one more CDLDOJI point
                             //Calculate CDLDOJI data
                             //Find the data point

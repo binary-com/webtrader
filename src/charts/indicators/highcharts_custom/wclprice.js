@@ -5,24 +5,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var wclpriceOptionsMap = {}, wclpriceSeriesMap = {};
 
-    //******************************Get Price******************************
-    function getPrice(data, index, appliedTo, type) {
-        var price = 0.0;
-        if (indicatorBase.isOHLCorCandlestick(type)) {
-            price = indicatorBase.extractPriceForAppliedTO(appliedTo, data, index);
-        }
-        else
-        {
-            throw new Error("This indicator is only for OHLC charts!")
-        }
-        return price;
-    }
-
     //*************************WCLPRIC***************************************
     function calculateWCLPRICEValue(data, index, type) {
-        var closePeice = getPrice(data, index, indicatorBase.CLOSE, type);
-        var highPeice = getPrice(data, index, indicatorBase.HIGH, type);
-        var lowPeice = getPrice(data, index, indicatorBase.LOW, type);
+        var closePeice =indicatorBase.getPrice(data, index, indicatorBase.CLOSE, type);
+        var highPeice =indicatorBase.getPrice(data, index, indicatorBase.HIGH, type);
+        var lowPeice =indicatorBase.getPrice(data, index, indicatorBase.LOW, type);
         //((Close * 2)+High + Low) / 4
         return ((closePeice * 2) + highPeice + lowPeice) / 4
     }
@@ -124,7 +111,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new data point
                     for (var key in wclpriceSeriesMap) {
                         if (wclpriceSeriesMap[key] && wclpriceSeriesMap[key].options && wclpriceSeriesMap[key].options.data && wclpriceSeriesMap[key].options.data.length > 0
-                            && wclpriceOptionsMap[key].parentSeriesID === series.options.id) {
+                            && wclpriceOptionsMap[key].parentSeriesID === series.options.id
+                            && wclpriceSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var wclpriceOptions = wclpriceOptionsMap[key];

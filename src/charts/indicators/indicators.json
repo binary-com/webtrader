@@ -222,6 +222,13 @@
     "short_display_name": "SAR",
     "ohlcOnly" : true
   },
+
+   "macd": {
+    "id": "macd",
+    "long_display_name": "Moving Average Convergence/Divergence",
+    "short_display_name": "MACD",
+    "ohlcOnly" : true
+  },
   
   "cdlengulfing": {
     "id": "cdlengulfing",
@@ -235,5 +242,90 @@
     "long_display_name": "Weighted Close Price",
     "short_display_name": "WCLPRICE",
     "ohlcOnly" : true
-  }
+  },
+   
+  "cci": {
+    "id": "cci",
+    "long_display_name": "Commodity Channel Index",
+    "short_display_name": "CCI",
+    "ohlcOnly" : true
+  },
+
+  "dema": {
+    "id": "dema",
+    "long_display_name": "Double Exponential Moving Average",
+    "short_display_name": "DEMA",
+    "ohlcOnly" : false
+  },
+
+  "kama": {
+    "id": "kama",
+    "long_display_name": "Kaufman's Adaptive Moving Average",
+    "short_display_name": "KAMA",
+    "ohlcOnly" : false
+  },
+
+  "t3": {
+    "id": "t3",
+    "long_display_name": "Triple Exponential Moving Average (T3)",
+    "short_display_name": "T3",
+    "ohlcOnly" : false
+  },
+
+   "hma": {
+    "id": "hma",
+    "long_display_name": "Hull Moving Average",
+    "short_display_name": "HMA",
+    "ohlcOnly" : false
+  },
+
+   "lwma": {
+    "id": "lwma",
+    "long_display_name": "Linearly Weighted Moving Average",
+    "short_display_name": "LWMA",
+    "ohlcOnly" : false
+  },
+
+    "smma": {
+    "id": "smma",
+    "long_display_name": "Smoothed Moving Average",
+    "short_display_name": "SMMA",
+    "ohlcOnly" : false
+  },
+
+    "mama": {
+    "id": "mama",
+    "long_display_name": "Mesa Adaptive Moving Average",
+    "short_display_name": "MAMA",
+    "ohlcOnly" : false
+  },
+  
+   "cdlupsidegap2crows": {
+    "id": "cdlupsidegap2crows",
+    "long_display_name": "Upside/Downside Gap Two Crows",
+    "short_display_name": "CDLUPSIDEGAP2CROWS",
+    "ohlcOnly" :  true
+  },
+   
+   "cdlxsidegap3methods":{
+    "id": "cdlxsidegap3methods",
+    "long_display_name": "Upside/Downside Gap Three Methods",
+    "short_display_name": "CDLXSIDEGAP3METHODS",
+    "ohlcOnly" :  true
+   },
+   
+   "cdltasukigap":{
+    "id": "cdltasukigap",
+    "long_display_name": "Tasuki Gap",
+    "short_display_name": "CDLTASUKIGAP",
+    "ohlcOnly" :  true
+   },
+
+   "cdlpiercing":{
+    "id": "cdlpiercing",
+    "long_display_name": "Piercing Pattern",
+    "short_display_name": "CDLPIERCING",
+    "ohlcOnly" :  true
+   }
+   
 }

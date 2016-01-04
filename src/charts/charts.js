@@ -17,12 +17,17 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     });
 
-    function destroy(containerIDWithHash, timePeriod, instrumentCode) {
+    function destroy(options) {
+        var containerIDWithHash = options.containerIDWithHash,
+            timePeriod = options.timePeriod,
+            instrumentCode = options.instrumentCode,
+            dontStopStreaming = options.dontStopStreaming || false;
+        console.log('Destroy called!');
         if (!timePeriod || !instrumentCode) return;
 
         //granularity will be 0 for tick timePeriod
         var granularity = convertToTimeperiodObject(timePeriod).timeInSeconds();
-        var key = (instrumentCode + granularity).toUpperCase();
+        var key = chartingRequestMap.keyFor(instrumentCode, granularity);
         if (chartingRequestMap[key]) {
             for (var index in chartingRequestMap[key].chartIDs) {
                 var chartID = chartingRequestMap[key].chartIDs[index];
@@ -31,15 +36,16 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     break;
                 }
             }
-            if ($.isEmptyObject(chartingRequestMap[key].chartIDs)) {
+            //Send request to unsubscribe when there are no charts to display the streaming
+            if (chartingRequestMap[key].chartIDs.length === 0 && !dontStopStreaming) {
                 var requestObject = {
                     "ticks_history": instrumentCode,
-                    "granularity" : granularity,
                     "end": 'latest',
                     "count": 1,
                     "subscribe": 0
                 };
-                liveapi.send(requestObject);
+                liveapi.send(requestObject)
+                       .catch(function(err){console.error(err);});
 
                 if (chartingRequestMap[key].timerHandler) {
                     clearInterval(chartingRequestMap[key].timerHandler);
@@ -66,7 +72,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
-                this.destroy(containerIDWithHash, options.timePeriod, options.instrumentCode);
+                this.destroy({
+                    containerIDWithHash : containerIDWithHash,
+                    timePeriod : options.timePeriod,
+                    instrumentCode : options.instrumentCode,
+                    dontStopStreaming : true
+                });
                 $(containerIDWithHash).highcharts().destroy();
             }
 
@@ -168,7 +179,11 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                                 if (Date.now() > ((endTime + 1) * 1000)) { //Keep rendering atleast 1 second after the end time
                                                     var ourData = $(series.chart.options.chart.renderTo).data();
                                                     console.log('Stopping feed based off timer : ', containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
-                                                    referenceToChartsJSObject.destroy(containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
+                                                    referenceToChartsJSObject.destroy({
+                                                        containerIDWithHash : containerIDWithHash,
+                                                        timePeriod : ourData.timePeriod,
+                                                        instrumentCode : ourData.instrumentCode
+                                                    });
                                                     clearInterval(interval);
                                                 }
                                             }, 500);
@@ -199,7 +214,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 title: {
-                    text: options.instrumentName + " (" + options.timePeriod + ")"//name to display
+                    //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
+                    text: getParameterByName("affiliates") === 'true' ? options.instrumentName + " (" + options.timePeriod + ")" : "" //name to display
                 },
 
                 credits: {

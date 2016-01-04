@@ -10,10 +10,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
         require(['css!assetindex/assetIndex.css']);
         li.click(function () {
             if (!assetWin) {
-                assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750 });
+                assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750, minHeight:70 });
+                assetWin.dialog('open'); /* bring winodw to front */
                 require(['text!assetindex/assetIndex.html'], initAssetWin);
             }
-            assetWin.dialog('open'); /* bring winodw to front */
+            else
+                assetWin.moveToTop();
         });
     }
 
@@ -49,7 +51,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
                         ]
                     */
                     var props = asset[2] /* asset.props */
-                        .map(function (prop) { return prop[2] + '-' + prop[3]; }); /* for each property extract a string */
+                        .map(function (prop) { return prop[2] + ' - ' + prop[3]; }); /* for each property extract a string */
                     props.unshift(asset[1]); /* add asset.name to the beginning of array */
 
                     return props;
@@ -69,6 +71,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/men
             try {
                 assets = results[1].asset_index;
                 markets = processMarketSubmarkets(results[0]);
+                var header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 var dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
 
                 var market_names = windows

@@ -219,3 +219,35 @@ button.ui-button-text-only .ui-menu {
 input::-ms-clear {
     display: none;
 }
+
+/* CSS3 shine effects for buttons */
+.shine {
+  position: relative;
+}
+/* sine effect, hover style if required */
+.shine:hover { }
+/* generated element for shine effect. normal state is semi-transparent
+ * white but with zero width. Set no transition here for no mouse-leave
+ * animations. Otherwise the effect will play in reverse when your mouse
+ * leaves the element */
+.shine:not([disabled=disabled]):after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    transition: none;
+}
+/* on hover we animate the width to 100% and opacity to 0 so the element
+ * grows and fades out */
+.shine:not([disabled=disabled]):hover:after {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+    transition: all 1s ease-out;
+}
+
+#growls.default {
+  top: 45px !important; /* show growl notifictions below the navigation-bar */
+}

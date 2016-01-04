@@ -163,7 +163,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new BOP data point
                     for (var key in bopSeriesMap) {
                         if (bopSeriesMap[key] && bopSeriesMap[key].options && bopSeriesMap[key].options.data && bopSeriesMap[key].options.data.length > 0
-                            && bopOptionsMap[key].parentSeriesID == series.options.id) {
+                            && bopOptionsMap[key].parentSeriesID == series.options.id
+                            && bopSeriesMap[key].chart === chart
+                        ) {
                             //This is BOP series. Add one more BOP point
                             //Calculate BOP data
                             /*

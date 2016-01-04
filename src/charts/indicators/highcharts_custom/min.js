@@ -6,21 +6,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
     var minOptionsMap = {}, minSeriesMap = {};
 
     function calculateIndicatorValue(minOptions, data, index) {
-        var minValue = 0.0;
-        if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-            minValue = indicatorBase.extractPriceForAppliedTO(minOptions.appliedTo, data, index);
-        }
-        else {
-            minValue = indicatorBase.extractPrice(data, index);
-        }
+        var minValue = indicatorBase.getPrice(data, index, minOptions.appliedTo, this.options.type);
         for (var j = index, count = 1; j >= 0 && count <= minOptions.period; j--, count++) {
-            var tempValue = 0.0;
-            if (indicatorBase.isOHLCorCandlestick(this.options.type)) {
-                tempValue = indicatorBase.extractPriceForAppliedTO(minOptions.appliedTo, data, j);
-            }
-            else {
-                tempValue = indicatorBase.extractPrice(data, j);
-            }
+            var tempValue = indicatorBase.getPrice(data, j, minOptions.appliedTo, this.options.type);
             if (minValue > tempValue || minValue == 0.0) {
                 minValue = tempValue;
             }
@@ -172,7 +160,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new MIN data point
                     for (var key in minSeriesMap) {
                         if (minSeriesMap[key] && minSeriesMap[key].options && minSeriesMap[key].options.data && minSeriesMap[key].options.data.length > 0
-                            && minOptionsMap[key].parentSeriesID == series.options.id) {
+                            && minOptionsMap[key].parentSeriesID == series.options.id
+                            && minSeriesMap[key].chart === chart
+                        ) {
                             //This is MIN series. Add one more MIN point
                             //Calculate MIN data
                             /*

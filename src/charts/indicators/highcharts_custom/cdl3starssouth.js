@@ -197,7 +197,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL3STARSSOUTH data point
                     for (var key in cdl3starssouthSeriesMap) {
                         if (cdl3starssouthSeriesMap[key] && cdl3starssouthSeriesMap[key].options && cdl3starssouthSeriesMap[key].options.data && cdl3starssouthSeriesMap[key].options.data.length > 0
-                            && cdl3starssouthOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl3starssouthOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl3starssouthSeriesMap[key].chart === chart
+						) {
                             //This is CDL3STARSSOUTH series. Add one more CDL3STARSSOUTH point
                             //Calculate CDL3STARSSOUTH data
                             //Find the data point

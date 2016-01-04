@@ -93,7 +93,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  */
                 function updateCurrentPriceSeries(time, isPointUpdate) {
                     //if this is CurrentPrice series, ignore
-                    if (this.options.name.indexOf('CurrentPrice') == -1) {
+                    if (this.options && this.options.name && this.options.name.indexOf('CurrentPrice') == -1) {
                         var series = this;
                         var lastData = series.options.data[series.data.length - 1];
                         var yAxis = this.yAxis;

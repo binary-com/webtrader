@@ -23,7 +23,13 @@ requirejs.config({
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
-        'js-cookie':'lib/js-cookie/src/js.cookie'
+        'rivets': 'lib/rivets/dist/rivets.min',
+        'sightglass': 'lib/sightglass/index',
+        'timepicker': 'lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker',
+        'js-cookie':'lib/js-cookie/src/js.cookie',
+        'lodash': 'lib/lodash/lodash.min',
+        'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
+        'moment': 'lib/moment/min/moment.min',
     },
     map: {
         '*': {
@@ -35,6 +41,9 @@ requirejs.config({
     "shim": {
         "websockets/binary_websockets": {
           deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
+        },
+        "timepicker": {
+            deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']
         },
         "jquery-ui": {
             deps: ["jquery"]
@@ -56,6 +65,13 @@ requirejs.config({
         },
         "currentPriceIndicator": {
             deps: ["highstock"]
+        },
+        sightglass : { //fix for rivets not playing nice with requriejs (https://github.com/mikeric/rivets/issues/427)
+            exports: 'sightglass'
+        },
+        rivets : {
+            deps : ['sightglass'],
+            exports : 'rivets'
         },
         "highcharts-more": {
             deps: ["highstock"]
@@ -148,14 +164,13 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
              * will assume an initialized top menu */
             $("#menu").menu();
 
-            //Trigger async loading of instruments and refresh menu
-            require(["instruments/instruments"], function(instrumentsMod) {
-                    require(["jquery", "jquery-growl"], function($) {
-                        $.growl.notice({ message: "Loading chart menu!" });
-                    });
+            //Trigger async loading of instruments and trade menu and refresh
+            require(["instruments/instruments", "trade/tradeMenu", "jquery-growl"], function (instruments, trade) {
+                $.growl.notice({ message: "Loading chart and trade menus ..." });
 
-                    instrumentsMod.init();
-                });
+                instruments.init();
+                trade.init();
+            });
 
             //Trigger async loading of window sub-menu
             require(["windows/windows"], function( windows ) {

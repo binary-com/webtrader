@@ -16,7 +16,7 @@
             ]
         }
 **/
-define(['lokijs', 'jquery', 'common/util'],function(loki, $){
+define(['lokijs', 'jquery', 'websockets/binary_websockets', 'common/util'],function(loki, $, liveapi){
 
     var db = new loki();
     var barsTable = db.addCollection('bars_table');
@@ -27,7 +27,7 @@ define(['lokijs', 'jquery', 'common/util'],function(loki, $){
     function barsLoaded(instrumentCdAndTp) {
 
         var key = instrumentCdAndTp;
-        if (!this[key]) return;
+        if (!this[key] || !this[key].chartIDs) return;
 
         var chartIDList = this[key].chartIDs;
         var processOHLC = this.processOHLC;
@@ -156,8 +156,7 @@ define(['lokijs', 'jquery', 'common/util'],function(loki, $){
 
     return {
         barsTable: barsTable,
-        processOHLC: function(open, high, low, close, time, type, dataInHighChartsFormat)
-        {
+        processOHLC: function(open, high, low, close, time, type, dataInHighChartsFormat) {
             //Ignore if last known bar time is greater than this new bar time
             if (dataInHighChartsFormat.length > 0 && dataInHighChartsFormat[dataInHighChartsFormat.length - 1][0] > time) return;
 
@@ -172,8 +171,78 @@ define(['lokijs', 'jquery', 'common/util'],function(loki, $){
                 dataInHighChartsFormat.push([time, open, high, low, close]);
             }
         },
-        barsLoaded : barsLoaded
+        barsLoaded : barsLoaded,
 
+        keyFor: function(symbol, granularity_or_timeperiod) {
+            var granularity = granularity_or_timeperiod || 0;
+            if(typeof granularity === 'string') {
+                granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+            }
+            return (symbol + granularity).toUpperCase();
+        },
+
+        /*  options: {
+              symbol,
+              granularity: // could be a number or a string in 1t, 2m, 3h, 4d format.
+                           // if a string is present it will be converted to seconds
+              subscribe: // default = 1,
+              style: // default = 'ticks',
+              count: // default = 1,
+              adjust_start_time?: // only will be added to the request if present
+            }
+            will return a promise
+        */
+        register: function(options) {
+            var granularity = options.granularity || 0;
+            var style = options.style || 'ticks';
+
+            var is_tick = true;
+            if(typeof granularity === 'string') {
+                if ($.trim(granularity) === '0') {
+                } else if($.trim(granularity).toLowerCase() === '1t') {
+                    granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+                } else {
+                    is_tick = false;
+                    granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+                }
+            }
+
+            var req = {
+                "ticks_history": options.symbol,
+                "granularity": granularity,
+                "subscribe": options.subscribe || 0,
+                "count": options.count || 1,
+                "end": 'latest',
+                "style": style
+            };
+
+            if(!is_tick) {
+              var count = options.count || 1;
+              var start = (new Date().getTime() / 1000 - count * granularity) | 0;
+
+              //If the start time is less than 3 years, adjust the start time
+              var _3YearsBack = new Date();
+              _3YearsBack.setUTCFullYear(_3YearsBack.getUTCFullYear() - 3);
+              //Going back exactly 3 years fails. I am adding 1 day
+              _3YearsBack.setDate(_3YearsBack.getDate() + 1);
+
+              if ((start * 1000) < _3YearsBack.getTime()) { start = (_3YearsBack.getTime() / 1000) | 0; }
+
+              req.style = 'candles';
+              req.start = start;
+              req.adjust_start_time = options.adjust_start_time || 1;
+            }
+
+            var map = this;
+            var key = map.keyFor(options.symbol, granularity);
+            map[key] = { symbol: options.symbol, granularity: granularity, chartIDs: [] };
+            return liveapi.send(req, /*timeout:*/ 30*1000) // 30 second timeout
+                   .catch(function(up){
+                      delete map[key];
+                      throw up;
+                   });
+
+        }
     };
 
 });
