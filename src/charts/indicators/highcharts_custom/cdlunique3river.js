@@ -3,44 +3,54 @@
  */
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
-    var cdlhammerOptionsMap = {}, cdlhammerSeriesMap = {};
-    var candleMediumHeight = 0.0;
+    var cdlunique3riverMap = {}, cdlhammerSeriesMap = {};
+    var candleMediumHeight = 0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
         var candleTwo_Index = index - 1;
         var candleThree_Index = index - 2;
+        var candleFor_Index = index - 3;
+
+        var candleFor_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleFor_Index),
+            candleFor_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleFor_Index);
 
         var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
-			candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index);
+			candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index),
+            candleThree_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleThree_Index);
 
         var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
-			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
-       
+			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index),
+            candleTwo_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleTwo_Index),
+			candleTwo_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleTwo_Index);
+
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
-            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
-			candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
+			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
 
-        var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
-			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
-        var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
-			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+        var isCandleFor_Bearish = candleFor_Close < candleFor_Open;
+		var	isCandleThree_Bearish = candleThree_Close < candleThree_Open;
+        var isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+        var isCandleOne_Bullish = candleOne_Close > candleOne_Open;
 
-        var candleOneUpperShadow = Math.abs(Math.max(candleOne_Open,candleOne_Close) - candleOne_High);
-        var candleOneBody = Math.abs(candleOne_Open - candleOne_Close);
-        var candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close,candleOne_Open));
 
-        var isBullishContinuation = isCandleThree_Bearish //a downward trend indicating a bullish reversal, it is a hammer
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //a downward trend indicating a bullish reversal, it is a hammer
-                                    && (candleOneUpperShadow <= (candleOneBody * 0.10)) && (candleOneBody < candleMediumHeight) //the open, high, and close are roughly the same price. means it has a small body.
-                                    && candleOneLowerShadow >= (2.0 * candleOneBody); //there is a long lower shadow, twice the length as the real body.
+        var candleTwoUpperShadow = Math.abs(candleTwo_Open - candleTwo_High);
+        var candleTwoBody = Math.abs(candleTwo_Open - candleTwo_Close);
+        var candleTwoLowerShadow = Math.abs(candleTwo_Low - candleTwo_Close);
+        var isCandleTwoHammer = (candleTwoLowerShadow >= (2.0 * candleTwoBody)) && (candleTwoUpperShadow <= (candleTwoBody * 0.10)) && (candleTwoBody < candleMediumHeight);
 
-        //Hammer is bullish only
+        var candleThreeBody = Math.abs(candleThree_Close - candleThree_Open);
+
+        var isBullishContinuation = isCandleFor_Bearish
+                                    && isCandleThree_Bearish && candleThreeBody > candleMediumHeight && candleThree_Close < candleFor_Close//The 1st candle has a long and bearish body
+                                    && isCandleTwo_Bearish && isCandleTwoHammer && candleTwo_Close > candleThree_Close && candleTwo_Open < candleThree_Open && candleTwo_Low < candleThree_Low //The 2nd candle is a hammer, and its body is inside the 1st bar's body;
+                                    && isCandleOne_Bullish && candleOne_Close < candleTwo_Close; //tThe 3rd candle is small and bullish, its Close price is lower than 2nd bar's.
+
+
+        //Unique 3 River is bullish only
         var isBearishContinuation = false;
         return {
             isBullishContinuation: isBullishContinuation,
-            isBearishContinuation: isBearishContinuation    
+            isBearishContinuation: isBearishContinuation
         };
     }
 
@@ -51,51 +61,51 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addCDLHAMMER) return;
+                if (!H || H.Series.prototype.addCDLUNIQUE3RIVER) return;
 
-                H.Series.prototype.addCDLHAMMER = function (cdlhammerOptions) {
+                H.Series.prototype.addCDLUNIQUE3RIVER = function (cdlunique3river) {
 
                     //Check for undefined
                     //Merge the options
                     var seriesID = this.options.id;
-                    cdlhammerOptions = $.extend({
+                    cdlunique3river = $.extend({
                         parentSeriesID: seriesID
-                    }, cdlhammerOptions);
+                    }, cdlunique3river);
 
                     var uniqueID = '_' + new Date().getTime();
 
-                    //If this series has data, add CDLHAMMER series to the chart
+                    //If this series has data, add CDLUNIQUE3RIVER series to the chart
                     var data = this.options.data || [];
                     if (data && data.length > 0) {
 
-                        //Calculate CDLHAMMER data
+                        //Calculate CDLUNIQUE3RIVER data
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
                         candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlhammerData = [];
-                        for (var index = 2 ; index < data.length; index++) {
+                        for (var index = 3 ; index < data.length; index++) {
 
-                            //Calculate CDLHAMMER - start
+                            //Calculate CDLUNIQUE3RIVER - start
                             var bull_bear = calculateIndicatorValue(data, index);
-                            //Hammer is bullish only
+                            //Unique 3 River is bullish only
                             if (bull_bear.isBullishContinuation) {
                                 cdlhammerData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">H</span>',
-                                    text: 'Hammer : Bull'
+                                    title: '<span style="color : blue">U3R</span>',
+                                    text: 'Unique 3 River : Bull'
                                 });
                             };
                         };
 
                         var chart = this.chart;
 
-                        cdlhammerOptionsMap[uniqueID] = cdlhammerOptions;
+                        cdlunique3riverMap[uniqueID] = cdlunique3river;
 
                         var series = this;
                         cdlhammerSeriesMap[uniqueID] = chart.addSeries({
                             id: uniqueID,
-                            name: 'CDLHAMMER',
+                            name: 'CDLUNIQUE3RIVER',
                             data: cdlhammerData,
                             type: 'flags',
                             onSeries: seriesID,
@@ -106,7 +116,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         $(cdlhammerSeriesMap[uniqueID]).data({
                             isIndicator: true,
                             indicatorID: 'cdlhammer',
-                            parentSeriesID: cdlhammerOptions.parentSeriesID
+                            parentSeriesID: cdlunique3river.parentSeriesID
                         });
 
                         //We are update everything in one shot
@@ -118,19 +128,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                 };
 
-                H.Series.prototype.removeCDLHAMMER = function (uniqueID) {
+                H.Series.prototype.removeCDLUNIQUE3RIVER = function (uniqueID) {
                     var chart = this.chart;
-                    cdlhammerOptionsMap[uniqueID] = null;
+                    cdlunique3riverMap[uniqueID] = null;
                     chart.get(uniqueID).remove(false);
                     cdlhammerSeriesMap[uniqueID] = null;
                     //Recalculate the heights and position of yAxes
                     chart.redraw();
                 };
 
-                H.Series.prototype.preRemovalCheckCDLHAMMER = function (uniqueID) {
+                H.Series.prototype.preRemovalCheckCDLUNIQUE3RIVER = function (uniqueID) {
                     return {
                         isMainIndicator: true,
-                        isValidUniqueID: cdlhammerOptionsMap[uniqueID] != null
+                        isValidUniqueID: cdlunique3riverMap[uniqueID] != null
                     };
                 };
 
@@ -140,8 +150,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 H.wrap(H.Series.prototype, 'addPoint', function (pcdlhammereed, options, redraw, shift, animation) {
 
                     pcdlhammereed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhammerOptionsMap, this.options.id)) {
-                        updateCDLHAMMERSeries.call(this, options[0]);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlunique3riverMap, this.options.id)) {
+                        updateCDLUNIQUE3RIVERSeries.call(this, options[0]);
                     }
 
                 });
@@ -152,8 +162,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                 H.wrap(H.Point.prototype, 'update', function (pcdlhammereed, options, redraw, animation) {
 
                     pcdlhammereed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlhammerOptionsMap, this.series.options.id)) {
-                        updateCDLHAMMERSeries.call(this.series, this.x, true);
+                    if (indicatorBase.checkCurrentSeriesHasIndicator(cdlunique3riverMap, this.series.options.id)) {
+                        updateCDLUNIQUE3RIVERSeries.call(this.series, this.x, true);
                     }
 
                 });
@@ -164,31 +174,31 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                  * @param time - The data update values
                  * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
                  */
-                function updateCDLHAMMERSeries(time, isPointUpdate) {
+                function updateCDLUNIQUE3RIVERSeries(time, isPointUpdate) {
                     var series = this;
                     var chart = series.chart;
 
-                    //Add a new CDLHAMMER data point
+                    //Add a new CDLUNIQUE3RIVER data point
                     for (var key in cdlhammerSeriesMap) {
                         if (cdlhammerSeriesMap[key] && cdlhammerSeriesMap[key].options && cdlhammerSeriesMap[key].options.data && cdlhammerSeriesMap[key].options.data.length > 0
-                            && cdlhammerOptionsMap[key].parentSeriesID == series.options.id) {
-                            //This is CDLHAMMER series. Add one more CDLHAMMER point
-                            //Calculate CDLHAMMER data
+                            && cdlunique3riverMap[key].parentSeriesID == series.options.id) {
+                            //This is CDLUNIQUE3RIVER series. Add one more CDLUNIQUE3RIVER point
+                            //Calculate CDLUNIQUE3RIVER data
                             //Find the data point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
                             if (dataPointIndex >= 1) {
 
-                                //Calculate CDLHAMMER - start
+                                //Calculate CDLUNIQUE3RIVER - start
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //Calculate CDLHAMMER - end
+                                //Calculate CDLUNIQUE3RIVER - end
                                 var bullBearData = null;
-                                //Hammer is bullish only
+                                //Unique 3 River is bullish only
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">H</span>',
-                                        text: 'Hammer : Bull'
+                                        title: '<span style="color : blue">U3R</span>',
+                                        text: 'Unique 3 River : Bull'
                                     }
                                 };
 

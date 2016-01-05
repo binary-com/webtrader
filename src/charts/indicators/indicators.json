@@ -564,5 +564,47 @@
     "long_display_name": "Counterattack",
     "short_display_name": "CDLCOUNTERATTACK",
     "ohlcOnly" :  true
+   },
+
+    "cdlinneck":{
+    "id": "cdlinneck",
+    "long_display_name": "In-Neck Pattern",
+    "short_display_name": "CDLINNECK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlonneck":{
+    "id": "cdlonneck",
+    "long_display_name": "On-Neck Pattern",
+    "short_display_name": "CDLONNECK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlrickshawman":{
+    "id": "cdlrickshawman",
+    "long_display_name": "Rickshaw Man",
+    "short_display_name": "CDLRICKSHAWMAN",
+    "ohlcOnly" :  true
+   },
+
+    "cdlunique3river":{
+    "id": "cdlunique3river",
+    "long_display_name": "Unique 3 River",
+    "short_display_name": "CDLUNIQUE3RIVER",
+    "ohlcOnly" :  true
+   },
+
+    "cdlseparatinglines":{
+    "id": "cdlseparatinglines",
+    "long_display_name": "Separating Lines",
+    "short_display_name": "CDLSEPARATINGLINES",
+    "ohlcOnly" :  true
+   },
+
+   "cdlfractals":{
+    "id": "cdlfractals",
+    "long_display_name": "Fractal",
+    "short_display_name": "CDLFRACTALS",
+    "ohlcOnly" :  true
    }
 }
