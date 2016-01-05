@@ -632,20 +632,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       state.categories.array = _(available).map('contract_category_display').uniq().run();
       state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 
-      var key = chartingRequestMap.keyFor(state.proposal.symbol, 0);
-      if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
-          chartingRequestMap.register({
-            symbol: state.proposal.symbol,
-            subscribe: 1,
-            granularity: 0,
-            count: 1,
-            style: 'ticks'
-          }).catch(function (err) {
-            $.growl.error({ message: err.message });
-            _.delay(function(){ dialog.dialog('close'); },2000);
-            console.error(err);
-          });
-      }
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
@@ -700,6 +686,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var root = $(html);
         var available = apply_fixes(contracts_for.available);
 
+
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
             resizable: false,
@@ -714,9 +701,28 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                 var id = state.proposal.ids.shift();
                 liveapi.send({ forget: id });
               }
+              chartingRequestMap.unregister(key);
               view.unbind();
             }
         });
+
+        /********************** register for ticks_streams **********************/
+        var symbol = _(available).first().underlying_symbol;
+        var key = chartingRequestMap.keyFor(symbol, /* granularity = */ 0);
+        if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
+            chartingRequestMap.register({
+              symbol: symbol,
+              subscribe: 1,
+              granularity: 0,
+              count: 1000, /* this will be for the case that the user opens a the same tick chart later */
+              style: 'ticks'
+            }).catch(function (err) {
+              $.growl.error({ message: err.message });
+              _.delay(function(){ dialog.dialog('close'); },2000);
+              console.error(err);
+            });
+        }
+        else { chartingRequestMap.subscribe(key); }
 
         var state = init_state(available,root,dialog);
         var view = rv.bind(root[0],state)

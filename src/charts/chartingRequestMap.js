@@ -16,7 +16,7 @@
             ]
         }
 **/
-define(['lokijs', 'jquery', 'websockets/binary_websockets', 'common/util'],function(loki, $, liveapi){
+define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/util'],function(loki, _, $, liveapi){
 
     var db = new loki();
     var barsTable = db.addCollection('bars_table');
@@ -193,6 +193,9 @@ define(['lokijs', 'jquery', 'websockets/binary_websockets', 'common/util'],funct
             will return a promise
         */
         register: function(options) {
+            var map = this;
+            var key = map.keyFor(options.symbol, options.granularity);
+
             var granularity = options.granularity || 0;
             var style = options.style || 'ticks';
 
@@ -233,15 +236,53 @@ define(['lokijs', 'jquery', 'websockets/binary_websockets', 'common/util'],funct
               req.adjust_start_time = options.adjust_start_time || 1;
             }
 
-            var map = this;
-            var key = map.keyFor(options.symbol, granularity);
-            map[key] = { symbol: options.symbol, granularity: granularity, chartIDs: [] };
+            map[key] = { symbol: options.symbol, granularity: granularity, subscribers: 0, chartIDs: [] };
+            if(req.subscribe) map[key].subscribers = 1; // how many charts have subscribed for a stream
             return liveapi.send(req, /*timeout:*/ 30*1000) // 30 second timeout
                    .catch(function(up){
                       delete map[key];
                       throw up;
                    });
-
+        },
+        /* use this method if there is already a stream with this key registered,
+          if you are counting on a registered stream and don't call this method that stream might be removed,
+          when all dependent modules call unregister function.
+          you should also make sure to call unregister when you no longer need the stream to avoid "stream leack!" */
+        subscribe: function(key, chartID){
+          var map = this;
+          if(!map[key]) { return; }
+          map[key].subscribers += 1;
+          if(chartID) {
+            map[key].chartIDs.push(chartID);
+          }
+        },
+        unregister: function(key, containerIDWithHash) {
+          var map = this;
+          if(!map[key]) { return; }
+          if(containerIDWithHash) {
+            _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
+          }
+          map[key].subscribers -= 1;
+          if (map[key].chartIDs.length === 0 && map[key].timerHandler) {
+              clearInterval(map[key].timerHandler);
+              map[key].timerHandler = null;
+          }
+          if(map[key].subscribers === 0 && map[key].id) { /* id is set in stream_handler.js */
+              liveapi.send({forget: map[key].id})
+                     .catch(function(err){console.error(err);});
+          }
+          if(map[key].subscribers === 0) {
+            delete map[key];
+          }
+        },
+        /* this will be use for charts.drawCharts method which wants to : Just make sure that everything has been cleared out before starting a new thread! */
+        removeChart: function(key,containerIDWithHash){
+          var map = this;
+          if(!map[key]) return;
+          if(_(map[key].chartIDs).map('containerIDWithHash').contains(containerIDWithHash)) {
+            map[key].subscribers -= 1;
+            _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
+          }
         }
     };
 
