@@ -674,10 +674,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       });
 
       /* change currency on user login */
-      liveapi.events.on('login', function(data){
-          state.currency.value = data.authorize.currency;
-          state.currency.array = [data.authorize.currency];
-      });
+      if(liveapi.is_authenticated()) {
+        liveapi.send({balance: 1})
+               .then(function(data){
+                 state.currency.value = data.balance.currency;
+                 state.currency.array = [data.balance.currency];
+               })
+               .catch(function(err) { console.error(err); });
+      }
 
       return state;
     }
