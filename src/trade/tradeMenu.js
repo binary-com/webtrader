@@ -54,8 +54,8 @@ define(["jquery", "lodash", "websockets/binary_websockets", "common/menu", "jque
           liveapi.events.on('login', refresh_active_symbols);
           liveapi.events.on('logout', refresh_active_symbols);
         });
-        /* refresh menu on mouse enter */
-        var trade = $("#nav-menu").find(".trade").on('mouseenter', refresh_active_symbols);
+        /* refresh menu on mouse leave */
+        var trade = $("#nav-menu").find(".trade").on('mouseleave', refresh_active_symbols);
     }
 
     return {
