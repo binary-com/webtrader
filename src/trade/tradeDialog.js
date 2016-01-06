@@ -515,6 +515,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }).first();
         var request = {
           proposal: 1,
+          subscribe: 1,
           contract_type: row.contract_type,
           currency: state.currency.value, /* This can only be the account-holder's currency */
           symbol: state.proposal.symbol, /* Symbol code */
@@ -645,7 +646,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             style: 'ticks'
           }).catch(function (err) {
             $.growl.error({ message: err.message });
-            _.delay(function(){ dialog.dialog('close'); },2000);
+            var has_digits = _(available).map('min_contract_duration')
+                              .any(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
+            /* if this contract does not offer tick trades, then its fine let the user trade! */
+            if(!has_digits) {
+              state.ticks.loading = false;
+            } else {
+              _.delay(function(){ dialog.dialog('close'); },2000);
+            }
             console.error(err);
           });
       }
