@@ -213,7 +213,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new data point
                     for (var key in cciSeriesMap) {
                         if (cciSeriesMap[key] && cciSeriesMap[key].options && cciSeriesMap[key].options.data && cciSeriesMap[key].options.data.length > 0
-                            && cciOptionsMap[key].parentSeriesID === series.options.id) {
+                            && cciOptionsMap[key].parentSeriesID === series.options.id
+                            && cciSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var cciOptions = cciOptionsMap[key];

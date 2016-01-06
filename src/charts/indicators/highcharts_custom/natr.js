@@ -207,8 +207,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new NATR data point
                     for (var key in natrSeriesMap) {
                         if (natrSeriesMap[key] && natrSeriesMap[key].options && natrSeriesMap[key].options.data
-                                            && natrSeriesMap[key].options.data.length > 0
-                                            && natrOptionsMap[key].parentSeriesID == series.options.id) {
+                            && natrSeriesMap[key].options.data.length > 0
+                            && natrOptionsMap[key].parentSeriesID == series.options.id
+                            && natrSeriesMap[key].chart === chart
+                        ) {
                             //This is NATR series. Add one more NATR point
                             //Calculate NATR data
                             /*

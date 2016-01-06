@@ -69,7 +69,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
         require(["css!tradingtimes/tradingTimes.css"]);
         $menuLink.click(function () {
             if (!tradingWin) {
-                tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700 });
+                tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700, minHeight:110 });
                 tradingWin.dialog('open');
                 require(['text!tradingtimes/tradingTimes.html'], initTradingWin);
             }

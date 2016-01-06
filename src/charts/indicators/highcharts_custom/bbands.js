@@ -305,8 +305,12 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
 
                     //Add a new data point
                     for (var key in bbandsMdlSeriesMap) {
-                        if (bbandsMdlSeriesMap[key] && bbandsMdlSeriesMap[key].options && bbandsMdlSeriesMap[key].options.data && bbandsMdlSeriesMap[key].options.data.length > 0
-                            && bbandsOptionsMap[key].parentSeriesID == series.options.id) {
+                        if (bbandsMdlSeriesMap[key] && bbandsMdlSeriesMap[key].options
+                            && bbandsMdlSeriesMap[key].options.data
+                            && bbandsMdlSeriesMap[key].options.data.length > 0
+                            && bbandsOptionsMap[key].parentSeriesID == series.options.id
+                            && bbandsMdlSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var maData = bbandsMdlSeriesMap[key].options.data;
@@ -347,7 +351,9 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                     //Add a new  data point
                     for (var key in bbandsUprSeriesMap) {
                         if (bbandsUprSeriesMap[key] && bbandsUprSeriesMap[key].options && bbandsUprSeriesMap[key].options.data && bbandsUprSeriesMap[key].options.data.length > 0
-                            && bbandsOptionsMap[key].parentSeriesID == series.options.id) {
+                            && bbandsOptionsMap[key].parentSeriesID == series.options.id
+                            && bbandsUprSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var upperBandData = bbandsUprSeriesMap[key].options.data;
@@ -383,7 +389,9 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                     //Add a new  data point
                     for (var key in bbandsLwrSeriesMap) {
                         if (bbandsLwrSeriesMap[key] && bbandsLwrSeriesMap[key].options && bbandsLwrSeriesMap[key].options.data && bbandsLwrSeriesMap[key].options.data.length > 0
-                            && bbandsOptionsMap[key].parentSeriesID == series.options.id) {
+                            && bbandsOptionsMap[key].parentSeriesID == series.options.id
+                            && bbandsLwrSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var upperBandData = bbandsLwrSeriesMap[key].options.data;
@@ -418,7 +426,9 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                     //Add a new  data point
                     for (var key in bbandsUprSeriesMap) {
                         if (bbandsUprSeriesMap[key] && bbandsUprSeriesMap[key].options && bbandsUprSeriesMap[key].options.data && bbandsUprSeriesMap[key].options.data.length > 0
-                            && bbandsOptionsMap[key].parentSeriesID == series.options.id) {
+                            && bbandsOptionsMap[key].parentSeriesID == series.options.id
+                            && bbandsUprSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var upperBandData = bbandsUprSeriesMap[key].options.data;

@@ -3,7 +3,7 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, navigation) {
+define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation) {
 
     var closeAllObject = null;
     var dialogCounter = 0;
@@ -129,7 +129,7 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             cleared: function() { }
         },options);
 
-        var header = this.parent().find('.ui-dialog-title');
+        var header = this.parent().find('.ui-dialog-title').addClass('with-content');
 
 
         /* options: {date: date, onchange: fn } */
@@ -320,6 +320,10 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
         });
 
         $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
+
+        return {
+          clear: function() { dropdonws.clear(); }
+        };
     }
 
     return {
@@ -389,6 +393,12 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                     });
             });
 
+            /* automatically log the user in if there is a token in browser cookies*/
+            require(['websockets/binary_websockets', 'js-cookie'], function(liveapi, Cookies) {
+              if(Cookies.get('webtrader_token')) {
+                liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
+              }
+            });
             return this;
         },
 
@@ -404,8 +414,9 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                                 close: fn, // callback for dialog close event
                                 open: fn,  // callback for dialog open event
                                 destroy: fn, // callback for dialog destroy event
+                                refresh: fn, // callback for refresh button click
                                 autoOpen: false,
-                                resizeable:true,
+                                resizable:true,
                                 collapsable:true,
                                 minimizable: true,
                                 maximizable: true,
@@ -429,7 +440,8 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
                 my: 'center',
                 at: 'center',
                 of: window,
-                title: 'blank window'
+                title: 'blank window',
+                hide: 'fade'
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;
@@ -479,9 +491,15 @@ define(['jquery', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', '
             blankWindow.addDateToHeader = addDateToHeader;
 
             /* set data-* attributes on created dialog */
-            var attributes = Object.keys(options).filter(function(key) { return key.startsWith('data-'); } );
+            var attributes = Object.keys(options).filter(function(key) { return _.startsWith(key, 'data-'); } );
             attributes.forEach(function(key) { return blankWindow.attr(key, options[key]); } );
 
+            /* check and add the refresh button if needed */
+            if(options.refresh){
+                var header = blankWindow.parent().find('.ui-dialog-title');
+                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
+                refresh.on('click',options.refresh);
+            }
             return blankWindow;
         },
 

@@ -155,7 +155,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new TEMA data point
                     for (var key in temaSeriesMap) {
                         if (temaSeriesMap[key] && temaSeriesMap[key].options && temaSeriesMap[key].options.data && temaSeriesMap[key].options.data.length > 0
-                                && temaOptionsMap[key].parentSeriesID == series.options.id) {
+                                && temaOptionsMap[key].parentSeriesID == series.options.id
+                            && temaSeriesMap[key].chart === chart
+                        ) {
                             //This is TEMA series. Add one more TEMA point
                             //Calculate TEMA data
                             /*

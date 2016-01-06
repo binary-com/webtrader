@@ -197,7 +197,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL3BLACKCROWS data point
                     for (var key in cdl3blackcrowsSeriesMap) {
                         if (cdl3blackcrowsSeriesMap[key] && cdl3blackcrowsSeriesMap[key].options && cdl3blackcrowsSeriesMap[key].options.data && cdl3blackcrowsSeriesMap[key].options.data.length > 0
-                            && cdl3blackcrowsOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl3blackcrowsOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl3blackcrowsSeriesMap[key].chart === chart
+						) {
                             //This is CDL3BLACKCROWS series. Add one more CDL3BLACKCROWS point
                             //Calculate CDL3BLACKCROWS data
                             //Find the data point

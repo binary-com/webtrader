@@ -206,7 +206,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDLABANDONEDBABY data point
                     for (var key in cdlabandonedbabySeriesMap) {
                         if (cdlabandonedbabySeriesMap[key] && cdlabandonedbabySeriesMap[key].options && cdlabandonedbabySeriesMap[key].options.data && cdlabandonedbabySeriesMap[key].options.data.length > 0
-                            && cdlabandonedbabyOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdlabandonedbabyOptionsMap[key].parentSeriesID == series.options.id
+							&& cdlabandonedbabySeriesMap[key].chart === chart
+						) {
                             //This is CDLABANDONEDBABY series. Add one more CDLABANDONEDBABY point
                             //Calculate CDLABANDONEDBABY data
                             //Find the data point

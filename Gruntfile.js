@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         //Executing this task will populate grunt.config.gitinfo with repository data below
-        gitinfo: { 
+        gitinfo: {
             local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
             remote: { origin: { url: "" } }
         },
@@ -57,9 +57,9 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {
-                        expand: true, 
-                        cwd: 'src/', 
-                        src: ['**'], 
+                        expand: true,
+                        cwd: 'src/',
+                        src: ['**'],
                         dest: 'dist/uncompressed/v<%=pkg.version%>'
                     }
                 ]
@@ -67,15 +67,16 @@ module.exports = function (grunt) {
             copyLibraries: {
                 files: [
                     {
-                        expand: true, 
-                        cwd: 'bower_components/', 
+                        expand: true,
+                        cwd: 'bower_components/',
                         src: [
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             '!colorpicker/**', 'colorpicker/jquery.colorpicker.js', 'colorpicker/images/**', 'colorpicker/jquery.colorpicker.css',
-                            '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css', 
-                            '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css', 
+                            '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
+                            '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
                             '!jquery-ui/**', 'jquery-ui/themes/smoothness/images/**', 'jquery-ui/jquery-ui.min.js', 'jquery-ui/themes/smoothness/jquery-ui.min.css',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js', 'highstock/highcharts-more.js',
+                            'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
@@ -86,9 +87,14 @@ module.exports = function (grunt) {
                             'js-cookie/src/js.cookie.js',
                             'require-css/css.min.js',
                             'text/text.js',
+                            'lodash/lodash.min.js',
                             'underscore/underscore-min.js',
+                            'rivets/dist/rivets.min.js',
+                            'sightglass/index.js',
+                            'jquery-sparkline/dist/jquery.sparkline.min.js',
+                            'moment/min/moment.min.js',
                             '!**/**/favicon.ico'
-                        ], 
+                        ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
                     }
                 ]
@@ -96,7 +102,7 @@ module.exports = function (grunt) {
             copy_AfterCompression: {
                 files: [
                     {
-                        expand: true, 
+                        expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
                             '**', '!**/*.js', '!**/*.css', '!**/*.html'
@@ -284,25 +290,25 @@ module.exports = function (grunt) {
         },
         if: {
             live: {
-                // Target-specific file lists and/or options go here. 
+                // Target-specific file lists and/or options go here.
                 options: {
-                    // execute test function(s) 
-                    test: function() { 
-                        return process.env.TRAVIS_BRANCH === 'master'; 
+                    // execute test function(s)
+                    test: function() {
+                        return process.env.TRAVIS_BRANCH === 'master';
                     }
                 },
-                //array of tasks to execute if all tests pass 
+                //array of tasks to execute if all tests pass
                 ifTrue: [ 'gh-pages:travis-deploy' ]
             },
             beta: {
-                // Target-specific file lists and/or options go here. 
+                // Target-specific file lists and/or options go here.
                 options: {
-                    // execute test function(s) 
-                    test: function() { 
-                        return process.env.TRAVIS_BRANCH === 'development'; 
+                    // execute test function(s)
+                    test: function() {
+                        return process.env.TRAVIS_BRANCH === 'development';
                     }
                 },
-                //array of tasks to execute if all tests pass 
+                //array of tasks to execute if all tests pass
                 ifTrue: [ 'shell:moveEverythingToBETA_folder', 'gh-pages:travis-deploy' ]
             }
         }

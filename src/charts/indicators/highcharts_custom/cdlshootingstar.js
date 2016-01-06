@@ -180,7 +180,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDLSHOOTINGSTAR data point
                     for (var key in cdlshootingstarSeriesMap) {
                         if (cdlshootingstarSeriesMap[key] && cdlshootingstarSeriesMap[key].options && cdlshootingstarSeriesMap[key].options.data && cdlshootingstarSeriesMap[key].options.data.length > 0
-                            && cdlshootingstarOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdlshootingstarOptionsMap[key].parentSeriesID == series.options.id
+                            && cdlshootingstarSeriesMap[key].chart === chart
+                        ) {
                             //This is CDLSHOOTINGSTAR series. Add one more CDLSHOOTINGSTAR point
                             //Calculate CDLSHOOTINGSTAR data
                             //Find the data point

@@ -159,7 +159,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new TRIMA data point
                     for (var key in trimaSeriesMap) {
                         if (trimaSeriesMap[key] && trimaSeriesMap[key].options && trimaSeriesMap[key].options.data && trimaSeriesMap[key].options.data.length > 0
-                            && trimaOptionsMap[key].parentSeriesID == series.options.id) {
+                            && trimaOptionsMap[key].parentSeriesID == series.options.id
+                            && trimaSeriesMap[key].chart === chart
+                        ) {
                             //This is TRIMA series. Add one more TRIMA point
                             //Calculate TRIMA data
                             /*

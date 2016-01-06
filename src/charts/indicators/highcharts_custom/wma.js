@@ -154,7 +154,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new WMA data point
                     for (var key in wmaSeriesMap) {
                         if (wmaSeriesMap[key] && wmaSeriesMap[key].options && wmaSeriesMap[key].options.data && wmaSeriesMap[key].options.data.length > 0
-                                        && wmaOptionsMap[key].parentSeriesID == series.options.id) {
+                            && wmaOptionsMap[key].parentSeriesID == series.options.id
+                            && wmaSeriesMap[key].chart === chart
+                        ) {
                             //This is WMA series. Add one more WMA point
                             //Calculate WMA data
                             /*

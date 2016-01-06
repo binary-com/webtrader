@@ -142,7 +142,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new data point
                     for (var key in smmaSeriesMap) {
                         if (smmaSeriesMap[key] && smmaSeriesMap[key].options && smmaSeriesMap[key].options.data && smmaSeriesMap[key].options.data.length > 0
-                            && smmaOptionsMap[key].parentSeriesID === series.options.id) {
+                            && smmaOptionsMap[key].parentSeriesID === series.options.id
+                            && smmaSeriesMap[key].chart === chart
+                        ) {
                             //Find the data point
                             var data = series.options.data;
                             var smmaData = smmaSeriesMap[key].options.data;

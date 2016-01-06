@@ -168,7 +168,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new ROC data point
                     for (var key in rocSeriesMap) {
                         if (rocSeriesMap[key] && rocSeriesMap[key].options && rocSeriesMap[key].options.data && rocSeriesMap[key].options.data.length > 0
-                                && rocOptionsMap[key].parentSeriesID == series.options.id) {
+                            && rocOptionsMap[key].parentSeriesID == series.options.id
+                            && rocSeriesMap[key].chart === chart
+                        ) {
                             //This is ROC series. Add one more ROC point
                             //Calculate ROC data
                             /*

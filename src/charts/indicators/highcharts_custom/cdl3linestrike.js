@@ -197,7 +197,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL3LINESTRIKE data point
                     for (var key in cdl3linestrikeSeriesMap) {
                         if (cdl3linestrikeSeriesMap[key] && cdl3linestrikeSeriesMap[key].options && cdl3linestrikeSeriesMap[key].options.data && cdl3linestrikeSeriesMap[key].options.data.length > 0
-                            && cdl3linestrikeOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl3linestrikeOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl3linestrikeSeriesMap[key].chart === chart
+						) {
                             //This is CDL3LINESTRIKE series. Add one more CDL3LINESTRIKE point
                             //Calculate CDL3LINESTRIKE data
                             //Find the data point

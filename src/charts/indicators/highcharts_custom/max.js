@@ -158,7 +158,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new MAX data point
                     for (var key in maxSeriesMap) {
                         if (maxSeriesMap[key] && maxSeriesMap[key].options && maxSeriesMap[key].options.data && maxSeriesMap[key].options.data.length > 0
-                            && maxOptionsMap[key].parentSeriesID == series.options.id) {
+                            && maxOptionsMap[key].parentSeriesID == series.options.id
+                            && maxSeriesMap[key].chart === chart
+                        ) {
                             //This is MAX series. Add one more MAX point
                             //Calculate MAX data
                             /*

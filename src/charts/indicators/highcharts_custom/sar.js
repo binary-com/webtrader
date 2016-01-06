@@ -301,7 +301,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new sar data point
                     for (var key in sarSeriesMap) {
                         if (sarSeriesMap[key] && sarSeriesMap[key].options && sarSeriesMap[key].options.data && sarSeriesMap[key].options.data.length > 0
-                            && sarOptionsMap[key].parentSeriesID == series.options.id) {
+                            && sarOptionsMap[key].parentSeriesID == series.options.id
+                            && sarSeriesMap[key].chart === chart
+                        ) {
                             //This is sar series. Add one more sar point
                             var data = series.options.data;
                             var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);

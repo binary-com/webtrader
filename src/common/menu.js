@@ -13,14 +13,14 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
             var caretHtml = "<span class='nav-submenu-caret'></span>";
             var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
             var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
+            if(value.is_disabled)  $menuLink.addClass('disabled');
             if(isDropdownMenu) {
                 $menuLink.addClass("nav-dropdown-toggle");
             }
 
             var newLI = $("<li>").append($menuLink);
             if(!isDropdownMenu) {
-                newLI.data("symbol", value.symbol)
-                     .data("delay_amount", value.delay_amount)
+                newLI.data(value); /* example use => newLI.data('symbol'), newLI.data('delay_amount'), newLI.data('display_name') */
             }
             newLI.appendTo( root);
 
@@ -29,7 +29,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                 newUL.appendTo(newLI);
                 refreshMenu( newUL, value.submarkets || value.instruments, on_click );
             }
-            else if(on_click )
+            else if(on_click && !value.is_disabled)
                 $menuLink.click(function () {
                     /* pass the <li> not the <a> tag */
                     var li = $(this).parent();
@@ -104,6 +104,7 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
                     }
                 });
             }
+            return markets;
         },
 
         refreshMenu: function (root,data,on_click) {
