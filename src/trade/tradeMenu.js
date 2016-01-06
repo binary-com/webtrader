@@ -28,9 +28,11 @@ define(["jquery", "lodash", "websockets/binary_websockets", "common/menu", "jque
                   market.is_disabled = _.all(market.submarkets, 'is_disabled');
                   return market;
               }).run();
-
-              var root = $("<ul>").appendTo($("#nav-menu").find(".trade")); /* add to trade menu */
               menu.sortMenu(markets);
+
+              var trade = $("#nav-menu").find(".trade");
+              trade.find('> ul').remove();
+              var root = $("<ul>").appendTo(trade); /* add to trade menu */
               menu.refreshMenu(root, markets, function (li) {
                   var data = li.data();
                   liveapi
@@ -48,7 +50,12 @@ define(["jquery", "lodash", "websockets/binary_websockets", "common/menu", "jque
     function init() {
         require(['trade/tradeDialog']); // Trigger loading of tradeDialog
         refresh_active_symbols();
-        setInterval(refresh_active_symbols, 60*1000); // refersh active symbols every minute
+        require(['websockets/binary_websockets'],function(liveapi) {
+          liveapi.events.on('login', refresh_active_symbols);
+          liveapi.events.on('logout', refresh_active_symbols);
+        });
+        /* refresh menu on mouse leave */
+        var trade = $("#nav-menu").find(".trade").on('mouseleave', refresh_active_symbols);
     }
 
     return {

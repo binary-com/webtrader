@@ -176,6 +176,7 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
               loginid.fadeOut();
           });
           liveapi.events.on('login', function(data){
+              $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
               login_btn.removeClass('login').addClass('logout')
                 .removeAttr('disabled').text('Logout');
               loginid.text(data.authorize.loginid).fadeIn();
@@ -190,7 +191,6 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
             else {
               liveapi.cached.authorize().catch(function(err) {
                 login_btn.removeAttr('disabled');
-                console.warn(err.message)
               });
             }
           });
