@@ -191,7 +191,6 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
             else {
               liveapi.cached.authorize().catch(function(err) {
                 login_btn.removeAttr('disabled');
-                console.warn(err.message)
               });
             }
           });
