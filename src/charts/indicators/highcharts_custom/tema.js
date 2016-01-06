@@ -106,17 +106,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     temaOptionsMap[uniqueID] = null;
                     chart.get(uniqueID).remove();
                     temaSeriesMap[uniqueID] = null;
-                    ema1[uniqueID] = [];
-                    ema2[uniqueID] = [];
-                    ema3[uniqueID] = [];
+
+                    indicatorBase.EMA1[uniqueID] = [];
+                    indicatorBase.EMA2[uniqueID] = [];
+                    indicatorBase.EMA3[uniqueID] = [];
                 };
 
-                H.Series.prototype.preRemovalCheckTEMA = function(uniqueID) {
+                H.Series.prototype.preRemovalCheckTEMA = function (uniqueID) {
                     return {
-                        isMainIndicator : true,
-                        period : !temaOptionsMap[uniqueID] ? undefined : temaOptionsMap[uniqueID].period,
-                        appliedTo : !temaOptionsMap[uniqueID] ? undefined : temaOptionsMap[uniqueID].appliedTo,
-                        isValidUniqueID : temaOptionsMap[uniqueID] != null
+                        isMainIndicator: true,
+                        period: !temaOptionsMap[uniqueID] ? undefined : temaOptionsMap[uniqueID].period,
+                        appliedTo: !temaOptionsMap[uniqueID] ? undefined : temaOptionsMap[uniqueID].appliedTo,
+                        isValidUniqueID: temaOptionsMap[uniqueID] != null
                     };
                 };
 
@@ -155,9 +156,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new TEMA data point
                     for (var key in temaSeriesMap) {
                         if (temaSeriesMap[key] && temaSeriesMap[key].options && temaSeriesMap[key].options.data && temaSeriesMap[key].options.data.length > 0
-                                && temaOptionsMap[key].parentSeriesID == series.options.id
-                            && temaSeriesMap[key].chart === chart
-                        ) {
+                                && temaOptionsMap[key].parentSeriesID == series.options.id) {
                             //This is TEMA series. Add one more TEMA point
                             //Calculate TEMA data
                             /*

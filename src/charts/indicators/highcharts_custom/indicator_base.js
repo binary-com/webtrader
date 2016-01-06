@@ -4,13 +4,12 @@
 
 define(['jquery'], function ($) {
 
-    var ema1 = [], ema2 = [], ema3 = [];
 
     var indicatorBase = {
 
         OPEN: 0, HIGH: 1, LOW: 2, CLOSE: 3,
         SMA: "SMA", EMA: "EMA", WMA: "WMA", TEMA: "TEMA", TRIMA: "TRIMA",
-
+        EMA1: {}, EMA2: {}, EMA3: {},
         /*
          * Function to find out if it contains OHLC values
          */
@@ -162,7 +161,6 @@ define(['jquery'], function ($) {
             };
         },
 
-
         //**Moving Average Types Calculations
         getPrice: function (data, index, appliedTo, type) {
             if (this.isOHLCorCandlestick(type)) {
@@ -236,20 +234,20 @@ define(['jquery'], function ($) {
                 }
                 return (sum / maOptions.period);
             }
-//            else {
-//                //var price = this.getPrice(data, index, appliedTo, type);
-//                //var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
-//                //preSma = preSma ? preSma : null;
-//                //return (preSma * (period - 1) + price) / period;
-//                var price = this.getPrice(data, index, appliedTo, type);
-//                var dropPrice = this.getPrice(data, index - period, appliedTo, type);
-//                var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
-//                preSma = preSma ? preSma : null;
-//                return preSma + (price / period) - (dropPrice / period);
-//=======
-//                return (sum / maOptions.period);
-//>>>>>>> upstream/development
-//            }
+            //            else {
+            //                //var price = this.getPrice(data, index, appliedTo, type);
+            //                //var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+            //                //preSma = preSma ? preSma : null;
+            //                //return (preSma * (period - 1) + price) / period;
+            //                var price = this.getPrice(data, index, appliedTo, type);
+            //                var dropPrice = this.getPrice(data, index - period, appliedTo, type);
+            //                var preSma = typeof maData[index - 1] === "number" ? maData[index - 1] : (maData[index - 1][1] || maData[index - 1].y);
+            //                preSma = preSma ? preSma : null;
+            //                return preSma + (price / period) - (dropPrice / period);
+            //=======
+            //                return (sum / maOptions.period);
+            //>>>>>>> upstream/development
+            //            }
         },
 
         //*************************EMA***************************************
@@ -296,21 +294,21 @@ define(['jquery'], function ($) {
              * Do not fill any value in temaData from 0 index to options.period-1 index
              */
             var time = (maOptions.data[maOptions.index].x || maOptions.data[maOptions.index][0]);
-            if (!ema1[maOptions.key]) {
-                ema1[maOptions.key] = [], ema2[maOptions.key] = [], ema3[maOptions.key] = [];
+            if (!this.EMA1[maOptions.key]) {
+                this.EMA1[maOptions.key] = [], this.EMA2[maOptions.key] = [], this.EMA3[maOptions.key] = [];
                 //*If it hasn't been called for index zero to period-1
                 if (maOptions.index === maOptions.period - 1) {
                     for (var i = 0; i < maOptions.period - 1; i++) {
-                        ema1[maOptions.key].push([time, null]);
-                        ema2[maOptions.key].push([time, null]);
-                        ema3[maOptions.key].push([time, null]);
+                        this.EMA1[maOptions.key].push([time, null]);
+                        this.EMA2[maOptions.key].push([time, null]);
+                        this.EMA3[maOptions.key].push([time, null]);
                     }
                 }
             };
 
             var ma1Options = {
                 data: maOptions.data,
-                maData: ema1[maOptions.key],
+                maData: this.EMA1[maOptions.key],
                 index: maOptions.index,
                 period: maOptions.period,
                 type: maOptions.type,
@@ -319,15 +317,15 @@ define(['jquery'], function ($) {
             };
             var ema1Value = this.calculateEMAValue(ma1Options);
             if (maOptions.isPointUpdate) {
-                ema1[maOptions.key][maOptions.index] = [time, ema1Value];
+                this.EMA1[maOptions.key][maOptions.index] = [time, ema1Value];
             }
             else {
-                ema1[maOptions.key].push([time, ema1Value]);
+                this.EMA1[maOptions.key].push([time, ema1Value]);
             }
 
             var ma2Options = {
-                data: ema1[maOptions.key],
-                maData: ema2[maOptions.key],
+                data: this.EMA1[maOptions.key],
+                maData: this.EMA2[maOptions.key],
                 index: maOptions.index,
                 period: maOptions.period,
                 type: maOptions.type,
@@ -337,15 +335,15 @@ define(['jquery'], function ($) {
             var ema2Value = this.calculateEMAValue(ma2Options);
 
             if (maOptions.isPointUpdate) {
-                ema2[maOptions.key][maOptions.index] = [time, ema2Value];
+                this.EMA2[maOptions.key][maOptions.index] = [time, ema2Value];
             }
             else {
-                ema2[maOptions.key].push([time, ema2Value]);
+                this.EMA2[maOptions.key].push([time, ema2Value]);
             }
-                  
+
             var ma3Options = {
-                data: ema2[maOptions.key],
-                maData: ema3[maOptions.key],
+                data: this.EMA2[maOptions.key],
+                maData: this.EMA3[maOptions.key],
                 index: maOptions.index,
                 period: maOptions.period,
                 type: maOptions.type,
@@ -355,10 +353,10 @@ define(['jquery'], function ($) {
             var ema3Value = this.calculateEMAValue(ma3Options);
 
             if (maOptions.isPointUpdate) {
-                ema3[maOptions.key][maOptions.index] = [time, ema3Value];
+                this.EMA3[maOptions.key][maOptions.index] = [time, ema3Value];
             }
             else {
-                ema3[maOptions.key].push([time, ema3Value]);
+                this.EMA3[maOptions.key].push([time, ema3Value]);
             }
 
             var temaValue = 3 * ema1Value - 3 * ema2Value + ema3Value;

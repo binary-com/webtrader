@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 3/1/15.
  */
-
+    
 define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     function closeDialog() {
