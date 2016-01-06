@@ -246,6 +246,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         proposal: {
           symbol: _(available).first().underlying_symbol,
           ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
+          req_id: -1, /* id of last request sent */
 
           ask_price: "0.0",
           date_start: 0,
@@ -514,6 +515,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }).first();
         var request = {
           proposal: 1,
+          subscribe: 1,
           contract_type: row.contract_type,
           currency: state.currency.value, /* This can only be the account-holder's currency */
           symbol: state.proposal.symbol, /* Symbol code */
@@ -557,11 +559,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           liveapi.send({ forget: id });
         }
 
+
         liveapi.send(request)
         .then(function (data) {
           var id = data.proposal.id;
           state.proposal.ids.push(id);
           state.proposal.error = '';
+          state.proposal.req_id = data.req_id;
         })
         .catch(function (err) {
           console.error(err);
@@ -632,6 +636,28 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       state.categories.array = _(available).map('contract_category_display').uniq().run();
       state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 
+      var key = chartingRequestMap.keyFor(state.proposal.symbol, 0);
+      if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
+          chartingRequestMap.register({
+            symbol: state.proposal.symbol,
+            subscribe: 1,
+            granularity: 0,
+            count: 1,
+            style: 'ticks'
+          }).catch(function (err) {
+            $.growl.error({ message: err.message });
+            var has_digits = _(available).map('min_contract_duration')
+                              .any(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
+            /* if this contract does not offer tick trades, then its fine let the user trade! */
+            if(!has_digits) {
+              state.ticks.loading = false;
+            } else {
+              _.delay(function(){ dialog.dialog('close'); },2000);
+            }
+            console.error(err);
+          });
+      }
+      
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
@@ -649,14 +675,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       });
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
-          var proposal_id = _.last(state.proposal.ids);
+          if (data.req_id !== state.proposal.req_id) return;
           if(data.error){
             console.error(data.error);
             state.proposal.error = data.error.message;
             state.proposal.message = '';
             return;
           }
-          if (data.proposal.id !== proposal_id) return;
           if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
           /* update fields */
           var proposal = data.proposal;

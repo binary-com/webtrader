@@ -115,6 +115,7 @@ define(['jquery'], function ($) {
             delete unresolved_promises[key];
             if (data.error) {
                 data.error.echo_req = data.echo_req;
+                data.error.req_id = data.req_id;
                 promise.reject(data.error);
             }
             else
@@ -280,7 +281,7 @@ define(['jquery'], function ($) {
             authorize: function () {
                 return authentication_deps.then(function () {
                     var token = Cookies.get('webtrader_token'),
-                        key = JSON.stringify({ token: token });
+                        key = JSON.stringify({ authorize: token });
 
                     if (is_authenitcated_session && token && cached_promises[key])
                         return cached_promises[key];
