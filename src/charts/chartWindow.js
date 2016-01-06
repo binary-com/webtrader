@@ -33,7 +33,11 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
                     var instrumentCode = container.data('instrumentCode');
                     $(this).dialog('destroy');//completely remove this dialog
                     require(["charts/charts"], function (charts) {
-                        charts.destroy("#" + id + "_chart", timePeriod, instrumentCode);
+                        charts.destroy({
+                            containerIDWithHash : "#" + id + "_chart",
+                            timePeriod : timePeriod,
+                            instrumentCode : instrumentCode
+                        });
                     });
                 },
                 resize: _trigger_Resize_Effects

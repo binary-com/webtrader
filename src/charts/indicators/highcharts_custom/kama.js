@@ -194,7 +194,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new KAMA data point
                     for (var key in kamaSeriesMap) {
                         if (kamaSeriesMap[key] && kamaSeriesMap[key].options && kamaSeriesMap[key].options.data && kamaSeriesMap[key].options.data.length > 0
-                            && kamaOptionsMap[key].parentSeriesID == series.options.id) {
+                            && kamaOptionsMap[key].parentSeriesID == series.options.id
+                            && kamaSeriesMap[key].chart === chart
+                        ) {
                             //Calculate KAMA data
                             //Change = ABS(Close - Close (10 periods ago))
                             //Volatility = Sum10(ABS(Close - Prior Close))

@@ -197,7 +197,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL3WHITESOLDIERS data point
                     for (var key in cdl3whitesoldiersSeriesMap) {
                         if (cdl3whitesoldiersSeriesMap[key] && cdl3whitesoldiersSeriesMap[key].options && cdl3whitesoldiersSeriesMap[key].options.data && cdl3whitesoldiersSeriesMap[key].options.data.length > 0
-                            && cdl3whitesoldiersOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl3whitesoldiersOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl3whitesoldiersSeriesMap[key].chart === chart
+						) {
                             //This is CDL3WHITESOLDIERS series. Add one more CDL3WHITESOLDIERS point
                             //Calculate CDL3WHITESOLDIERS data
                             //Find the data point

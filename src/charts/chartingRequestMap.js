@@ -16,7 +16,7 @@
             ]
         }
 **/
-define(['lokijs', 'jquery', 'common/util'],function(loki, $){
+define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/util'],function(loki, _, $, liveapi){
 
     var db = new loki();
     var barsTable = db.addCollection('bars_table');
@@ -27,7 +27,7 @@ define(['lokijs', 'jquery', 'common/util'],function(loki, $){
     function barsLoaded(instrumentCdAndTp) {
 
         var key = instrumentCdAndTp;
-        if (!this[key]) return;
+        if (!this[key] || !this[key].chartIDs) return;
 
         var chartIDList = this[key].chartIDs;
         var processOHLC = this.processOHLC;
@@ -156,8 +156,7 @@ define(['lokijs', 'jquery', 'common/util'],function(loki, $){
 
     return {
         barsTable: barsTable,
-        processOHLC: function(open, high, low, close, time, type, dataInHighChartsFormat)
-        {
+        processOHLC: function(open, high, low, close, time, type, dataInHighChartsFormat) {
             //Ignore if last known bar time is greater than this new bar time
             if (dataInHighChartsFormat.length > 0 && dataInHighChartsFormat[dataInHighChartsFormat.length - 1][0] > time) return;
 
@@ -172,8 +171,119 @@ define(['lokijs', 'jquery', 'common/util'],function(loki, $){
                 dataInHighChartsFormat.push([time, open, high, low, close]);
             }
         },
-        barsLoaded : barsLoaded
+        barsLoaded : barsLoaded,
 
+        keyFor: function(symbol, granularity_or_timeperiod) {
+            var granularity = granularity_or_timeperiod || 0;
+            if(typeof granularity === 'string') {
+                granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+            }
+            return (symbol + granularity).toUpperCase();
+        },
+
+        /*  options: {
+              symbol,
+              granularity: // could be a number or a string in 1t, 2m, 3h, 4d format.
+                           // if a string is present it will be converted to seconds
+              subscribe: // default = 1,
+              style: // default = 'ticks',
+              count: // default = 1,
+              adjust_start_time?: // only will be added to the request if present
+            }
+            will return a promise
+        */
+        register: function(options) {
+            var map = this;
+            var key = map.keyFor(options.symbol, options.granularity);
+
+            var granularity = options.granularity || 0;
+            var style = options.style || 'ticks';
+
+            var is_tick = true;
+            if(typeof granularity === 'string') {
+                if ($.trim(granularity) === '0') {
+                } else if($.trim(granularity).toLowerCase() === '1t') {
+                    granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+                } else {
+                    is_tick = false;
+                    granularity = convertToTimeperiodObject(granularity).timeInSeconds();
+                }
+            }
+
+            var req = {
+                "ticks_history": options.symbol,
+                "granularity": granularity,
+                "subscribe": options.subscribe || 0,
+                "count": options.count || 1,
+                "end": 'latest',
+                "style": style
+            };
+
+            if(!is_tick) {
+              var count = options.count || 1;
+              var start = (new Date().getTime() / 1000 - count * granularity) | 0;
+
+              //If the start time is less than 3 years, adjust the start time
+              var _3YearsBack = new Date();
+              _3YearsBack.setUTCFullYear(_3YearsBack.getUTCFullYear() - 3);
+              //Going back exactly 3 years fails. I am adding 1 day
+              _3YearsBack.setDate(_3YearsBack.getDate() + 1);
+
+              if ((start * 1000) < _3YearsBack.getTime()) { start = (_3YearsBack.getTime() / 1000) | 0; }
+
+              req.style = 'candles';
+              req.start = start;
+              req.adjust_start_time = options.adjust_start_time || 1;
+            }
+
+            map[key] = { symbol: options.symbol, granularity: granularity, subscribers: 0, chartIDs: [] };
+            if(req.subscribe) map[key].subscribers = 1; // how many charts have subscribed for a stream
+            return liveapi.send(req, /*timeout:*/ 30*1000) // 30 second timeout
+                   .catch(function(up){
+                      delete map[key];
+                      throw up;
+                   });
+        },
+        /* use this method if there is already a stream with this key registered,
+          if you are counting on a registered stream and don't call this method that stream might be removed,
+          when all dependent modules call unregister function.
+          you should also make sure to call unregister when you no longer need the stream to avoid "stream leack!" */
+        subscribe: function(key, chartID){
+          var map = this;
+          if(!map[key]) { return; }
+          map[key].subscribers += 1;
+          if(chartID) {
+            map[key].chartIDs.push(chartID);
+          }
+        },
+        unregister: function(key, containerIDWithHash) {
+          var map = this;
+          if(!map[key]) { return; }
+          if(containerIDWithHash) {
+            _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
+          }
+          map[key].subscribers -= 1;
+          if (map[key].chartIDs.length === 0 && map[key].timerHandler) {
+              clearInterval(map[key].timerHandler);
+              map[key].timerHandler = null;
+          }
+          if(map[key].subscribers === 0 && map[key].id) { /* id is set in stream_handler.js */
+              liveapi.send({forget: map[key].id})
+                     .catch(function(err){console.error(err);});
+          }
+          if(map[key].subscribers === 0) {
+            delete map[key];
+          }
+        },
+        /* this will be use for charts.drawCharts method which wants to : Just make sure that everything has been cleared out before starting a new thread! */
+        removeChart: function(key,containerIDWithHash){
+          var map = this;
+          if(!map[key]) return;
+          if(_(map[key].chartIDs).map('containerIDWithHash').contains(containerIDWithHash)) {
+            map[key].subscribers -= 1;
+            _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
+          }
+        }
     };
 
 });

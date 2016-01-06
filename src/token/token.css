@@ -16,12 +16,6 @@
     margin: 0 auto;
 }
 
-.token-dialog p,
-.token-dialog li {
-    color: rgba(0,0,0,0.6);
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
-}
-
 .token-dialog ul li {
     margin-top:10px;
     font-weight: bold;
@@ -29,8 +23,6 @@
 
 .token-dialog ul, .token-dialog img {
     float: left;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .token-dialog ul {

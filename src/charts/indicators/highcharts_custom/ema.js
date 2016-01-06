@@ -147,7 +147,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new EMA data point
                     for (var key in emaSeriesMap) {
                         if (emaSeriesMap[key] && emaSeriesMap[key].options && emaSeriesMap[key].options.data && emaSeriesMap[key].options.data.length > 0
-                                && emaOptionsMap[key].parentSeriesID == series.options.id) {
+                            && emaOptionsMap[key].parentSeriesID == series.options.id
+                            && emaSeriesMap[key].chart === chart
+                        ) {
                             //This is EMA series. Add one more EMA point
                             //Calculate EMA data
                             /*

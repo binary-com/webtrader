@@ -170,12 +170,13 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
       var loginid = root.find('.authentication span.loginid').hide();
       require(['websockets/binary_websockets'],function(liveapi) {
           liveapi.events.on('logout', function(){
-              $('.webtrader-dialog[data-authorized=true]').dialog('destroy').remove(); /* destroy all authorized dialogs */
+              $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
               login_btn.removeClass('logout').addClass('login')
                 .removeAttr('disabled').text('Login');
               loginid.fadeOut();
           });
           liveapi.events.on('login', function(data){
+              $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
               login_btn.removeClass('login').addClass('logout')
                 .removeAttr('disabled').text('Logout');
               loginid.text(data.authorize.loginid).fadeIn();

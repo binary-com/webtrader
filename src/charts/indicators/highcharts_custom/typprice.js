@@ -150,7 +150,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new TYPPRICE data point
                     for (var key in typpriceSeriesMap) {
                         if (typpriceSeriesMap[key] && typpriceSeriesMap[key].options && typpriceSeriesMap[key].options.data && typpriceSeriesMap[key].options.data.length > 0
-                            && typpriceOptionsMap[key].parentSeriesID == series.options.id) {
+                            && typpriceOptionsMap[key].parentSeriesID == series.options.id
+                            && typpriceSeriesMap[key].chart === chart
+                        ) {
                             //This is TYPPRICE series. Add one more TYPPRICE point
                             //Calculate TYPPRICE data
                             /*

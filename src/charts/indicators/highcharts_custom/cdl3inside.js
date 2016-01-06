@@ -190,7 +190,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL3INSIDE data point
                     for (var key in cdl3insideSeriesMap) {
                         if (cdl3insideSeriesMap[key] && cdl3insideSeriesMap[key].options && cdl3insideSeriesMap[key].options.data && cdl3insideSeriesMap[key].options.data.length > 0
-                            && cdl3insideOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl3insideOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl3insideSeriesMap[key].chart === chart
+						) {
                             //This is CDL3INSIDE series. Add one more CDL3INSIDE point
                             //Calculate CDL3INSIDE data
                             //Find the data point

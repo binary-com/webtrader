@@ -25,16 +25,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 			
 		var isBearishContinuation = isCandleThree_Bullish 
-					&& isCandleTwo_Bearish && (candleTwo_Open > candleThree_Close /*&& candleTwo_Close > candleThree_Close*/)
-					&& isCandleOne_Bearish && (candleOne_Close < candleTwo_Close && candleOne_Open > candleTwo_Open
-											&& candleOne_Close > candleOne_Close)
+					&& isCandleTwo_Bearish && (candleTwo_Open > candleThree_Close && candleTwo_Close > candleThree_Close)
+					&& isCandleOne_Bearish
+						&& (candleOne_Open < candleTwo_Open && candleOne_Open > candleTwo_Close) //opens within the prior candle's body
+						&& (candleOne_Close < candleThree_Close && candleOne_Close > candleThree_Open) //and closes within the body of the first candle in the pattern
 					;
 											
 		var isBullishContinuation = isCandleThree_Bearish
-					&& isCandleTwo_Bullish && (candleTwo_Open < candleThree_Close /*&& candleTwo_Close < candleThree_Close*/)
-					&& isCandleOne_Bullish && (candleOne_Close > candleTwo_Close && candleOne_Open < candleTwo_Open
-											&& candleOne_Close < candleOne_Close)
-					;
+				&& isCandleTwo_Bullish && (candleTwo_Open < candleThree_Close && candleTwo_Close < candleThree_Close)
+				&& isCandleOne_Bullish
+				&& (candleOne_Open > candleTwo_Open && candleOne_Open < candleTwo_Close) //opens within the prior candle's body
+				&& (candleOne_Close > candleThree_Close && candleOne_Close < candleThree_Open) //and closes within the body of the first candle in the pattern
+			;
 		
 		return {
 			isBullishContinuation : isBullishContinuation,
@@ -192,7 +194,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new CDL2CROWS data point
                     for (var key in cdl2crowsSeriesMap) {
                         if (cdl2crowsSeriesMap[key] && cdl2crowsSeriesMap[key].options && cdl2crowsSeriesMap[key].options.data && cdl2crowsSeriesMap[key].options.data.length > 0
-                            && cdl2crowsOptionsMap[key].parentSeriesID == series.options.id) {
+                            && cdl2crowsOptionsMap[key].parentSeriesID == series.options.id
+							&& cdl2crowsSeriesMap[key].chart === chart
+						) {
                             //This is CDL2CROWS series. Add one more CDL2CROWS point
                             //Calculate CDL2CROWS data
                             //Find the data point

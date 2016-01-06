@@ -209,7 +209,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Add a new DEMA data point
                     for (var key in demaSeriesMap) {
                         if (demaSeriesMap[key] && demaSeriesMap[key].options && demaSeriesMap[key].options.data && demaSeriesMap[key].options.data.length > 0
-                            && demaOptionsMap[key].parentSeriesID == series.options.id) {
+                            && demaOptionsMap[key].parentSeriesID == series.options.id
+                            && demaSeriesMap[key].chart === chart
+                        ) {
                             //This is DEMA series. Add one more DEMA point
                             //Calculate DEMA data
                             /*
