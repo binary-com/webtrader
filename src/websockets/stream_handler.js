@@ -23,6 +23,7 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
             var time = parseInt(data.tick.epoch) * 1000;
 
             var chartingRequest = chartingRequestMap[key];
+            chartingRequest.id = chartingRequest.id || data.tick.id;
             if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
                 return;
             var timePeriod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timePeriod');
@@ -72,6 +73,7 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
             var time = parseInt(data.ohlc.open_time) * 1000;
 
             var chartingRequest = chartingRequestMap[key];
+            chartingRequest.id = chartingRequest.id || data.ohlc.id;
             if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
                 return;
             var timePeriod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timePeriod');
