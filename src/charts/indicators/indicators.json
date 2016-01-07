@@ -606,5 +606,26 @@
     "long_display_name": "Fractal",
     "short_display_name": "CDLFRACTALS",
     "ohlcOnly" :  true
+   },
+
+   "cdlmathold":{
+    "id": "cdlmathold",
+    "long_display_name": "Mat Hold",
+    "short_display_name": "CDLMATHOLD",
+    "ohlcOnly" :  true
+   },
+
+   "cdlsticksandwich":{
+    "id": "cdlsticksandwich",
+    "long_display_name": "Stick Sandwich",
+    "short_display_name": "CDLSTICKSANDWICH",
+    "ohlcOnly" :  true
+   },
+
+   "cdlkickingbylength":{
+    "id": "cdlkickingbylength",
+    "long_display_name": "Kicking - bull/bear determined by the longer marubozu",
+    "short_display_name": "CDLKICKINGBYLENGTH",
+    "ohlcOnly" :  true
    }
 }
