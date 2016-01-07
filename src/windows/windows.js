@@ -17,6 +17,11 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
 
         if (isSmallView()) //For small size screens
             rows = cols = 1;
+        /**** limi the number of charts to 4 ****/
+        if(rows * cols > 4) {
+          rows = 1;
+          cols = 4;
+        };
         return {
             rows: rows,
             cols: cols,
