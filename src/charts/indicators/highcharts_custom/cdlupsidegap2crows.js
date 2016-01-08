@@ -28,9 +28,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
        
         var isBullishContinuation = isCandleThree_Bullish
-                                    && isCandleTwo_Bearish && candleTwo_Close > Math.max(candleThree_Close, candleThree_Open) && candleTwo_Open > Math.max(candleThree_Close, candleThree_Open)// black candle with a body gapping above the prior candle's body.
-                                    && isCandleOne_Bearish && candleOne_Close < candleTwo_Close && candleOne_Open > candleTwo_Open //opening higher than the Day 2 open, but closing below the Day 2 close
-                                    && candleOne_Close > candleThree_Close;// and above the Day 1 close
+                                    && isCandleTwo_Bearish && (candleTwo_Close > Math.max(candleThree_Close, candleThree_Open)) && (candleTwo_Open > Math.max(candleThree_Close, candleThree_Open))// black candle with a body gapping above the prior candle's body.
+                                    && isCandleOne_Bearish && (candleOne_Close < candleTwo_Close && candleOne_Open > candleTwo_Open) //opening higher than the Day 2 open, but closing below the Day 2 close
+                                    && (candleOne_Close > candleThree_Close);// and above the Day 1 close
 
 
         //var isBearishContinuation = isCandleThree_Bearish
@@ -73,27 +73,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                          */
                         var cdlupsidegap2crowsData = [];
-                        for (var index =2 ; index < data.length; index++) {
-                            
+                        for (var index = 2 ; index < data.length; index++) {
+
                             //Calculate CDLUPSIDEGAP2CROWS - start
                             var bull_bear = calculateIndicatorValue(data, index);
-							
+
                             if (bull_bear.isBullishContinuation) {
                                 cdlupsidegap2crowsData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">GTC</span>',
+                                    title: '<span style="color : blue">UGTC</span>',
                                     text: 'Upside Gap Two Crows : Bull'
                                 });
                             };
-                            //if (bull_bear.isBearishContinuation) {
-                            //    cdlupsidegap2crowsData.push({
-                            //        x : data[index].x || data[index][0],
-                            //        title: '<span style="color : red">GTC</span>',
-                            //        text : 'Upside Gap Two Crows : Bear'
-                            //    });
-                            //}
-                            //Calculate CDLUPSIDEGAP2CROWS - end
-
                         }
 
                         var chart = this.chart;
@@ -194,18 +185,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">GTC</span>',
+                                        title: '<span style="color : blue">UGTC</span>',
                                         text: 'Upside Gap Two Crows : Bull'
                                     }
                                 };
-                                //if (bull_bear.isBearishContinuation) {
-                                //    bullBearData = {
-                                //        x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                //        title: '<span style="color : red">GTC</span>',
-                                //        text: 'Upside Gap Two Crows : Bear'
-                                //    }
-                                //};
-
 
                                 var whereToUpdate = -1;
                                 for (var sIndx = cdlupsidegap2crowsSeriesMap[key].data.length - 1; sIndx >= 0 ; sIndx--) {
