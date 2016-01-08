@@ -636,28 +636,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       state.categories.array = _(available).map('contract_category_display').uniq().run();
       state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
 
-      var key = chartingRequestMap.keyFor(state.proposal.symbol, 0);
-      if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
-          chartingRequestMap.register({
-            symbol: state.proposal.symbol,
-            subscribe: 1,
-            granularity: 0,
-            count: 1,
-            style: 'ticks'
-          }).catch(function (err) {
-            $.growl.error({ message: err.message });
-            var has_digits = _(available).map('min_contract_duration')
-                              .any(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
-            /* if this contract does not offer tick trades, then its fine let the user trade! */
-            if(!has_digits) {
-              state.ticks.loading = false;
-            } else {
-              _.delay(function(){ dialog.dialog('close'); },2000);
-            }
-            console.error(err);
-          });
-      }
-      
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
@@ -747,7 +725,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               style: 'ticks'
             }).catch(function (err) {
               $.growl.error({ message: err.message });
-              _.delay(function(){ dialog.dialog('close'); },2000);
+              var has_digits = _(available).map('min_contract_duration')
+                                .any(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
+              /* if this contract does not offer tick trades, then its fine let the user trade! */
+              if(!has_digits) {
+                state.ticks.loading = false;
+              } else {
+                _.delay(function(){ dialog.dialog('close'); },2000);
+              }
               console.error(err);
             });
         }
