@@ -16,8 +16,10 @@
 #nav-container .nav-logo {
     position: absolute;
     margin-top: 6px;
-    width: 40px;
     left: 10px;
+}
+#nav-container .nav-logo img {
+    width: 40px;
 }
 
 /** normal menu (desktop/tablet) **/
