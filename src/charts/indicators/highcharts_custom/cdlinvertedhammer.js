@@ -22,27 +22,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
 			candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
 
-        var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
-			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
-
-        //var perctDiff_openToClose = Math.abs((candleOne_Open - candleOne_Close) * 100.0 / candleOne_Open);
-        //var perctDiff_openToLow = Math.abs((candleOne_Open - candleOne_Low) * 100.0 / candleOne_Open);
-        //var perctDiff_closeToLow = Math.abs((candleOne_Close - candleOne_Low) * 100.0 / candleOne_Close);
-        //var body = Math.abs(candleOne_Open - candleOne_Close);
-        //var wick = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close));
-        //var isUpperShadowTwiceBody = wick >= (2.0 * body);
-        //var isOpenCloseLowAlmostSame = perctDiff_openToClose <= 1.0
-        //                                && perctDiff_openToLow <= 1.0
-        //                                && perctDiff_closeToLow <= 0.5;
 
         var candleOneUpperShadow = Math.abs(Math.max(candleOne_Open, candleOne_Close) - candleOne_High);
         var candleOneBody = Math.abs(candleOne_Open - candleOne_Close);
         var candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close, candleOne_Open));
 
-        var isBullishContinuation = isCandleThree_Bearish //a downward trend indicating a bullish reversal, it is a inverted hammer
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //a downward trend indicating a bullish reversal, it is a inverted hammer
+        var isBullishContinuation =  isCandleTwo_Bearish && (candleTwo_Open < Math.min(candleThree_Close, candleThree_Open))  //a downward trend indicating a bullish reversal, it is a inverted hammer
                                     && (candleOneLowerShadow <= (candleOneBody * 0.10)) && (candleOneBody < candleMediumHeight) //the open, low, and close are roughly the same price. means it has a small body.
                                     && (candleOneUpperShadow >= (2.0 * candleOneBody)); //there is a long upper shadow, which should be at least twice the length of the real body.
 

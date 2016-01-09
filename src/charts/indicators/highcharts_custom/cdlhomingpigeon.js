@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlhomingpigeonOptionsMap = {}, cdlhomingpigeonSeriesMap = {};
+    var candleMediumHeight = 0.0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -24,9 +25,12 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
+        var candleOneBody = Math.abs(candleOne_Close - candleOne_Open);
+
         //is bullish only
         var isBullishContinuation = isCandleTwo_Bearish // First candle is a long black candle.
-                                    && isCandleOne_Bearish && candleOne_Low > candleTwo_Low && candleOne_Close > candleTwo_Close // Second candle is an inside bar, which is also a black candle. Second candle closes inside the body of the first candle.
+                                    && isCandleOne_Bearish && (candleOneBody >= candleMediumHeight)
+                                    && candleOne_Low > candleTwo_Low && candleOne_Close > candleTwo_Close // Second candle is an inside bar, which is also a black candle. Second candle closes inside the body of the first candle.
                                     && candleOne_High < candleTwo_High && candleOne_Open < candleTwo_Open;
 
         var isBearishContinuation = false;
@@ -64,6 +68,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlhomingpigeonData = [];
                         for (var index = 1 ; index < data.length; index++) {
 

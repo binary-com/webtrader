@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlidentical3crowsOptionsMap = {}, cdlidentical3crowsSeriesMap = {};
+    var candleMediumHeight = 0.0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index,
@@ -26,14 +27,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
         var candleThreeBodySize = Math.abs(candleThree_Close - candleThree_Open),
-            candleTwoBodySize = Math.abs(candleTwo_Close - candleTwo_Open);
+            candleTwoBodySize = Math.abs(candleTwo_Close - candleTwo_Open),
+            candleOneBodySize = Math.abs(candleOne_Close - candleOne_Open);
 
         var isBullishContinuation = false;
         //Is bearish only
         var isBearishContinuation = isCandleFour_Bullish
-                                 && isCandleThree_Bearish
-				                 && isCandleTwo_Bearish && (candleTwo_Open === candleThree_Close || (Math.abs(candleThree_Close - candleTwo_Open) < (candleThreeBodySize * .01))) && candleTwo_Close < candleThree_Close //Three consecutive long red days with lower closes each day
-					             && isCandleOne_Bearish && (candleOne_Open === candleTwo_Close || (Math.abs(candleTwo_Close - candleOne_Open) < (candleTwoBodySize * .01))) && candleOne_Close < candleTwo_Close;  //and Each day opens at or near the previous day's close.
+                                 && isCandleThree_Bearish && (candleThreeBodySize > candleMediumHeight)
+				                 && isCandleTwo_Bearish && (candleTwoBodySize > candleMediumHeight) && (candleTwo_Open === candleThree_Close || (Math.abs(candleThree_Close - candleTwo_Open) < (candleThreeBodySize * .1))) && candleTwo_Close < candleThree_Close //Three consecutive long red days with lower closes each day
+					             && isCandleOne_Bearish && (candleOneBodySize > candleMediumHeight) && (candleOne_Open === candleTwo_Close || (Math.abs(candleTwo_Close - candleOne_Open) < (candleTwoBodySize * .1))) && candleOne_Close < candleTwo_Close;  //and Each day opens at or near the previous day's close.
 
 
         return {
@@ -71,6 +73,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                             Refer to dl2crows.html for detailed information on this indicator
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlidentical3crowsData = [];
                         for (var index = 3; index < data.length; index++) {
 

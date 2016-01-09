@@ -8,28 +8,42 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
         var candleTwo_Index = index - 1;
+        var candleThree_Index = index - 2;
+        var candleFor_Index = index - 3;
+        var candleFive_Index = index - 4;
+
+        var candleFive_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleFive_Index),
+            candleFive_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleFive_Index);
+
+        var candleFor_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleFor_Index),
+            candleFor_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleFor_Index);
+
+        var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
+            candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index);
 
         var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
-			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index),
-            candleTwo_Low= indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleTwo_Index),
-            candleTwo_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleTwo_Index);
+            candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
 
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
-            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
-            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
+			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
 
-        var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
-			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
 
-        var isBullishContinuation =  isCandleTwo_Bearish
-                                    && isCandleOne_Bearish && candleOne_Low < candleTwo_Low && candleOne_High < candleTwo_High;// the next bar must have both a lower-low and a lower-high
+        var isBullishContinuation = Math.max(candleFive_Close, candleFive_Open) > Math.max(candleFor_Close, candleFor_Open)
+                                  && Math.min(candleFive_Close, candleFive_Open) < Math.min(candleFor_Close, candleFor_Open)
+                                  && Math.max(candleFive_Close, candleFive_Open) > Math.max(candleThree_Close, candleThree_Open)
+                                  && Math.max(candleFive_Close, candleFive_Open) > Math.max(candleTwo_Close, candleTwo_Open)
+                                  && isCandleOne_Bullish
+                                  && (candleOne_Close > Math.max(candleFive_Close, candleFive_Open));// reaches above the range of the three preceding ,
 
-        var isBearishContinuation = isCandleTwo_Bullish
-                                    && isCandleOne_Bullish && candleOne_Low > candleTwo_Low && candleOne_High > candleTwo_High;// the next bar must have both a higher-low and a higher-high
+        var isBearishContinuation = Math.max(candleFive_Close, candleFive_Open) > Math.max(candleFor_Close, candleFor_Open)
+                                  && Math.min(candleFive_Close, candleFive_Open) < Math.min(candleFor_Close, candleFor_Open)
+                                  && Math.min(candleFive_Close, candleFive_Open) < Math.min(candleThree_Close, candleThree_Open)
+                                  && Math.min(candleFive_Close, candleFive_Open) < Math.min(candleTwo_Close, candleTwo_Open)
+                                  && isCandleOne_Bearish
+                                  && (candleOne_Close < Math.min(candleFive_Close, candleFive_Open));
 
         return {
             isBullishContinuation: isBullishContinuation,
@@ -66,7 +80,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                          */
                         var cdlhikkakeData = [];
-                        for (var index = 1 ; index < data.length; index++) {
+                        for (var index = 4 ; index < data.length; index++) {
 
                             //Calculate CDLHIKKAKE - start
                             var bull_bear = calculateIndicatorValue(data, index);
@@ -74,14 +88,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             if (bull_bear.isBullishContinuation) {
                                 cdlhikkakeData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">HK</span>',
+                                    title: '<span style="color : blue">HKP</span>',
                                     text: 'Hikkake Pattern : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
                                 cdlhikkakeData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">HK</span>',
+                                    title: '<span style="color : red">HKP</span>',
                                     text: 'Hikkake Pattern : Bear'
                                 });
                             }
@@ -186,14 +200,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">HK</span>',
+                                        title: '<span style="color : blue">HKP</span>',
                                         text: 'Hikkake Pattern : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">HK</span>',
+                                        title: '<span style="color : red">HKP</span>',
                                         text: 'Hikkake Pattern : Bear'
                                     }
                                 };

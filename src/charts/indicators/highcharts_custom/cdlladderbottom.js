@@ -99,14 +99,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     text: 'Ladder Bottom : Bull'
                                 });
                             };
-                            //if (bull_bear.isBearishContinuation) {
-                            //    cdlladderbottomData.push({
-                            //        x: data[index].x || data[index][0],
-                            //        title: '<span style="color : red">HK</span>',
-                            //        text: 'Hikkake Pattern : Bear'
-                            //    });
-                            //}
-                            //Calculate CDLLADDERBOTTOM - end
                         };
 
                         var chart = this.chart;
@@ -211,13 +203,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                         text: 'Ladder Bottom : Bull'
                                     }
                                 };
-                                //else if (bull_bear.isBearishContinuation) {
-                                //    bullBearData = {
-                                //        x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                //        title: '<span style="color : red">HK</span>',
-                                //        text: 'Ladder Bottom : Bear'
-                                //    }
-                                //};
 
 
                                 var whereToUpdate = -1;

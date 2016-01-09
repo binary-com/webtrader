@@ -16,7 +16,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
             candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
-        
+
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
@@ -30,11 +30,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         }) || {};
 
         var isBullishContinuation = isCandleTwo_Bearish //the first candlestick is upward
-                                    && response.isBull && candleOne_Low > candleTwo_Close && candleOne_High < candleTwo_Open; //followed by a doji that is located within the top and bottom of the candlestick's body. 
+                                    && response.isBull && (Math.min(candleOne_Close, candleOne_Open) > candleTwo_Close) && (Math.max(candleOne_Close, candleOne_Open) < candleTwo_Open); //followed by a doji that is located within the top and bottom of the candlestick's body. 
 
         var isBearishContinuation = isCandleTwo_Bullish // a large bullish green candle on Day 1
-                                    && response.isBear && candleOne_Low > candleTwo_Open && candleOne_High < candleTwo_Close; //followed by a doji that is located within the top and bottom of the candlestick's body. 
-                                
+                                    && response.isBear && (Math.min(candleOne_Close, candleOne_Open) > candleTwo_Open) && (Math.max(candleOne_Close, candleOne_Open) < candleTwo_Close); //followed by a doji that is located within the top and bottom of the candlestick's body. 
+
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation

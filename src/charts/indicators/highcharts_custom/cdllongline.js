@@ -21,9 +21,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var lowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close)),
             upperShadow = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
             candleBodySize = Math.abs(candleOne_Low - candleOne_High),
-            realBodySize =Math.abs(candleOne_Close-candleOne_Open),
-            isLowerShadowShort =lowerShadow === 0 || lowerShadow < (candleBodySize * 0.10),
-            isUpperShadowShort =upperShadow ===0 || upperShadow < (candleBodySize * 0.10);
+            realBodySize = Math.abs(candleOne_Close - candleOne_Open),
+            isLowerShadowShort = (lowerShadow === 0) || (lowerShadow < (candleBodySize * 0.10)),
+            isUpperShadowShort = (upperShadow === 0) || (upperShadow < (candleBodySize * 0.10));
 
         var isBullishContinuation = isCandleOne_Bullish 
                                     && realBodySize > candleMediumHeight
