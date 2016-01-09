@@ -29,11 +29,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         var isBullishContinuation = isCandleThree_Bullish  //the first candlestick is upward 
                                     && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //followed by another upward that opens above  the first (gap up), 
-                                    && isCandleOne_Bullish && candleOne_Open < candleTwo_Close;// followed by a third upward candlestick that opens below the close of the second (gap down)
+                                    && isCandleOne_Bullish && candleOne_Open > candleThree_Close && candleOne_Open < candleTwo_Close// followed by a third upward candlestick that opens below the close of the second (gap down)
+                                    && candleOne_Close <= (candleTwo_Close + (Math.abs(candleTwo_Close - candleTwo_Open) * 0.10));
 
         var isBearishContinuation = isCandleThree_Bearish  //the first candlestick is downward
                                     && isCandleTwo_Bullish && candleTwo_Close < candleThree_Close//followed by an upward candlestick that opens below the  first one (gap down),
-                                    && isCandleOne_Bullish && candleOne_Open < candleTwo_Close;// followed by an upward candlestick that opens below the close of the second one
+                                    && isCandleOne_Bullish && candleOne_Close < candleThree_Close && candleOne_Open < candleTwo_Close// followed by an upward candlestick that opens below the close of the second one
+                                    && candleOne_Close <= (candleTwo_Close + (Math.abs(candleTwo_Close - candleTwo_Open) * 0.10));
+
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation

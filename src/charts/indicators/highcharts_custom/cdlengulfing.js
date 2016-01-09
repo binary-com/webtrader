@@ -25,9 +25,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 		var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-		var isBearishContinuation = isCandleOne_Bearish && isCandleTwo_Bullish && candleTwo_Close < candleOne_Open && candleTwo_Open > candleOne_Close;
+		var isBearishContinuation =isCandleTwo_Bullish && isCandleOne_Bearish  && candleTwo_Close < candleOne_Open && candleTwo_Open > candleOne_Close;
 
-		var isBullishContinuation = isCandleOne_Bullish && isCandleTwo_Bearish && candleTwo_Close > candleOne_Open && candleTwo_Open < candleOne_Close;
+		var isBullishContinuation =isCandleTwo_Bearish && isCandleOne_Bullish  && candleTwo_Close > candleOne_Open && candleTwo_Open < candleOne_Close;
 
 		return {
 			isBullishContinuation : isBullishContinuation,

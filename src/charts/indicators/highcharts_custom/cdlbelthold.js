@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlbeltholdOptionsMap = {}, cdlbeltholdSeriesMap = {};
+    var candleMediumHeight = 0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -31,11 +32,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         var isBullishContinuation = isCandleThree_Bearish  //After a stretch of bearish candlestick
                                     && isCandleTwo_Bearish //After a stretch of bearish candlestick
-                                    && isCandleOne_Bullish && candleOne_Open === candleOne_Low && candleOne_Open < candleTwo_Close;// a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price.
+                                    && isCandleOne_Bullish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight) //Long candle
+                                    && (candleOne_Open === candleOne_Low) && (candleOne_Open < candleTwo_Close);// a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price.
 
         var isBearishContinuation = isCandleThree_Bullish  //After a stretch of bullish candlestick
                                     && isCandleTwo_Bullish //After a stretch of bullish candlestick
-                                    && isCandleOne_Bearish && candleOne_Open === candleOne_High && candleOne_Open > candleTwo_Close;// a bearish or black candlestick forms. the opening price, which becomes the high for the day, is higher than the close of the previous day.
+                                    && isCandleOne_Bearish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight) //Long candle
+                                    && (candleOne_Open === candleOne_High) && (candleOne_Open > candleTwo_Close);// a bearish or black candlestick forms. the opening price, which becomes the high for the day, is higher than the close of the previous day.
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
@@ -70,6 +73,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlbeltholdData = [];
                         for (var index = 2 ; index < data.length; index++) {
 

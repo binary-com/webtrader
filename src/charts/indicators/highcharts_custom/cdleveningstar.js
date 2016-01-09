@@ -44,7 +44,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     && isCandleThree_Bullish && (candleThreeBody > candleMediumHeight) //The first part of an Evening Star reversal pattern is a large bullish green candle.
                                     && (candleTwoBody < candleMediumHeight) && (candleTwoBody >= candleTwoSize * 0.10) && (Math.min(candleTwo_Open, candleTwo_Close) > candleThree_Close) //The second day begins with a gap up and it is quite small and can be bullish or bearish.
                                     && isCandleOne_Bearish && (candleOneBody > candleMediumHeight) && (candleOne_Open < Math.min(candleTwo_Open, candleTwo_Close))//a large Bearish Candle with gap down.
-                                    && candleOne_Close > candleThree_Open;
+                                    && candleOne_Close > candleThree_Open && candleOne_Close < candleThree_Close;
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation

@@ -26,7 +26,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             realBodySize = Math.abs(candleOne_Open - candleOne_Close),
             isOpenCloseHighAlmostSame = ((candleOne_Open === candleOne_Close) || (realBodySize < (candleBodySize * 0.1)))
              && ((candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || (highWick < (candleBodySize * 0.1))),
-            isLowerShadowLong =lowWick!==0 && lowWick >= (candleBodySize * 0.60);
+            isLowerShadowLong = (lowWick >= (candleBodySize * 0.60));
 
         var isBullishContinuation = isCandleTwo_Bearish //occurs at the bottom of downtrends.
                                     && isOpenCloseHighAlmostSame //the open, high, and close are the same or about the same price

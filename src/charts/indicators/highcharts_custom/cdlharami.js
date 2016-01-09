@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlharamiOptionsMap = {}, cdlharamiSeriesMap = {};
+    var candleMediumHeight = 0.0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -20,11 +21,11 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-        var isBullishContinuation = isCandleTwo_Bearish  //the first candlestick is upward
+        var isBullishContinuation = isCandleTwo_Bearish && (Math.abs(candleTwo_Open - candleTwo_Close) > candleMediumHeight)//the first candlestick is upward
                                  && isCandleOne_Bullish && candleOne_Open > candleTwo_Close && candleOne_Close < candleTwo_Open// followed by a smaller candlestick whose body is located within the vertical range of the larger body
                                  && (Math.abs(candleOne_Open - candleOne_Close) < (Math.abs(candleTwo_Open - candleTwo_Close) * 0.60)); //Must be smaller than prevoius day
 
-        var isBearishContinuation = isCandleTwo_Bullish  // a large bullish green candle on Day 1
+        var isBearishContinuation = isCandleTwo_Bullish && (Math.abs(candleTwo_Open - candleTwo_Close) > candleMediumHeight)// a large bullish green candle on Day 1
                                    && isCandleOne_Bearish && candleOne_Open < candleTwo_Close && candleOne_Close > candleTwo_Open// followed by a smaller candlestick whose body is located within the vertical range of the larger body
                                    && (Math.abs(candleOne_Open - candleOne_Close) < (Math.abs(candleTwo_Open - candleTwo_Close) * 0.60));//Must be smaller than prevoius day
 
@@ -62,6 +63,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlharamiData = [];
                         for (var index = 1 ; index < data.length; index++) {
 
@@ -71,15 +73,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             if (bull_bear.isBullishContinuation) {
                                 cdlharamiData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">DD</span>',
-                                    text: 'Dragonfly Doji : Bull'
+                                    title: '<span style="color : blue">HP</span>',
+                                    text: 'Harami Pattern : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
                                 cdlharamiData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">DD</span>',
-                                    text: 'Dragonfly Doji : Bear'
+                                    title: '<span style="color : red">HP</span>',
+                                    text: 'Harami Pattern : Bear'
                                 });
                             }
                             //Calculate CDLHARAMI - end
@@ -183,15 +185,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">DD</span>',
-                                        text: 'Dragonfly Doji : Bull'
+                                        title: '<span style="color : blue">HP</span>',
+                                        text: 'Harami Pattern : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">DD</span>',
-                                        text: 'Dragonfly Doji : Bear'
+                                        title: '<span style="color : red">HP</span>',
+                                        text: 'Harami Pattern : Bear'
                                     }
                                 };
 

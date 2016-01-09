@@ -43,22 +43,25 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-        var candleFiveBody=Math.abs(candleFive_Close - candleFive_Open);
+        var candleFiveBody = Math.abs(candleFive_Close - candleFive_Open);
+        var shortCandleSize = candleFiveBody / 2;
 
-        var isBullishContinuation = isCandleFive_Bearish && (candleFiveBody > candleMediumHeight) 
-                                  && isCandleFor_Bearish && (Math.abs(candleFor_Close - candleFor_Open) < (candleFiveBody / 2)) && (candleFor_Open < candleFive_Close)
-                                  && (Math.abs(candleThree_Close - candleThree_Open) < (candleFiveBody / 2)) && (candleThree_Close < candleFor_Close)
-                                  && isCandleTwo_Bearish && (Math.abs(candleTwo_Close - candleTwo_Open) < (candleFiveBody / 2)) && (candleTwo_Close < candleThree_Close)
-                                  && isCandleOne_Bullish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight)//The fifth day is a long blue day 
-                                  && (candleOne_Open > candleTwo_Close) && (candleOne_Close < candleFive_Open);//that closes into the body of the first or second days.
+        var isBullishContinuation = isCandleFive_Bearish && (candleFiveBody > candleMediumHeight)
+                                  && isCandleFor_Bearish && (Math.abs(candleFor_Close - candleFor_Open) < shortCandleSize) && (candleFor_Open < candleFive_Close)
+                                  && (Math.abs(candleThree_Close - candleThree_Open) < shortCandleSize) && (Math.min(candleThree_Close, candleThree_Open) < candleFor_Close)
+                                  && (Math.abs(candleTwo_Close - candleTwo_Open) < shortCandleSize) && (Math.min(candleTwo_Close, candleTwo_Open) < Math.min(candleThree_Close, candleThree_Open))
+                                  && isCandleOne_Bullish //The fifth day is a long blue day 
+                                  && (candleOne_Open > (Math.min(candleTwo_Close, candleTwo_Open)))
+                                  && (candleOne_Close > candleFor_Open) && (candleOne_Close < candleFive_Open);//closes inside the gap formed between the first two days..
 
 
-        var isBearishContinuation = isCandleFive_Bullish && (candleFiveBody > candleMediumHeight)  
-                                  && isCandleFor_Bullish && (Math.abs(candleFor_Close - candleFor_Open) < (candleFiveBody / 2)) && (candleFor_Open > candleFive_Close)
-                                  && (Math.abs(candleThree_Close - candleThree_Open) < (candleFiveBody / 2)) && (candleThree_Close > candleFor_Close)
-                                  && isCandleTwo_Bullish && (Math.abs(candleTwo_Close - candleTwo_Open) < (candleFiveBody / 2)) && (candleTwo_Close > candleThree_Close)
-                                  && isCandleOne_Bearish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight)//The fifth day is a long red day 
-                                  && (candleOne_Open < candleTwo_Close) && (candleOne_Close < candleFor_Open) && (candleOne_Close > candleFive_Open);//that closes inside of the gap between the first and second candle
+        var isBearishContinuation = isCandleFive_Bullish && (candleFiveBody > candleMediumHeight)
+                                  && isCandleFor_Bullish && (Math.abs(candleFor_Close - candleFor_Open) < shortCandleSize) && (candleFor_Open > candleFive_Close)
+                                  && (Math.abs(candleThree_Close - candleThree_Open) < shortCandleSize) && (Math.max(candleThree_Close, candleThree_Open) > candleFor_Close)
+                                  && (Math.abs(candleTwo_Close - candleTwo_Open) < shortCandleSize) && (Math.max(candleTwo_Close, candleTwo_Open) > Math.max(candleThree_Close, candleThree_Open))
+                                  && isCandleOne_Bearish //The fifth day is a long red day 
+                                  && (candleOne_Open < (Math.max(candleTwo_Close, candleTwo_Open)))
+                                  && (candleOne_Close < candleFor_Open) && (candleOne_Close > candleFive_Close);//that closes inside of the gap between the first and second candle
 
 
         return {

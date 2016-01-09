@@ -24,7 +24,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         var isBearishContinuation = isCandleTwo_Bullish
                                     && isCandleOne_Bearish && candleOne_Open > candleTwo_Close //Black candlestick must open above the previous close.
-                                    && candleOne_Close < (Math.abs(candleTwo_Open + candleTwo_Close) / 2) //closes below the middle of day 1 bullish candlestick.
+                                    && candleOne_Close < (candleTwo_Open + (Math.abs(candleTwo_Open - candleTwo_Close) / 2)) //closes below the middle of day 1 bullish candlestick.
                                     && candleOne_Close > candleTwo_Open;//close within the price range of the previous day
         return {
             isBullishContinuation: isBullishContinuation,

@@ -4,40 +4,44 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdldojistarOptionsMap = {}, cdldojistarSeriesMap = {};
+    var candleMediumHeight = 0;
 
-	function calculateIndicatorValue(data, index) {
-		var candleOne_Index = index;
-		var candleTwo_Index = index - 1;
+    function calculateIndicatorValue(data, index) {
+        var candleOne_Index = index;
+        var candleTwo_Index = index - 1;
 
-		var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
+        var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
-    var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-        candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
-        candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
-        candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index)
-      ;
+        var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
+            candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
+            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
+            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
 
-    var response = indicatorBase.isDoji({
-      open: candleOne_Open,
-      high: candleOne_High,
-      low: candleOne_Low,
-      close: candleOne_Close
-    }) || {};
+        var response = indicatorBase.isDoji({
+            open: candleOne_Open,
+            high: candleOne_High,
+            low: candleOne_Low,
+            close: candleOne_Close
+        }) || {};
 
-		var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
-		var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-		var isBearishContinuation = isCandleTwo_Bullish && response.isBear;
+        var candleTwoBodySize = Math.abs(candleTwo_Close - candleTwo_Open);
 
-		var isBullishContinuation = isCandleTwo_Bearish && response.isBull;
+        var isBearishContinuation = isCandleTwo_Bullish && (candleTwoBodySize > candleMediumHeight)//The first day is long green day
+                                    && response.isBear && candleOne_Close >= candleTwo_Close; //Second day is a doji that opens at the previous day close
 
-		return {
-			isBullishContinuation : isBullishContinuation,
-			isBearishContinuation : isBearishContinuation
-		};
-	}
+        var isBullishContinuation = isCandleTwo_Bearish && (candleTwoBodySize > candleMediumHeight) //The first day is long red day
+                                    && response.isBull && candleOne_Close <= candleTwo_Close; //Second day is a doji that opens at the previous day close
+
+        return {
+            isBullishContinuation: isBullishContinuation,
+            isBearishContinuation: isBearishContinuation
+        };
+    }
 
     return {
         init: function() {
@@ -73,6 +77,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                             Refer to dl2crows.html for detailed information on this indicator
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdldojistarData = [];
                         for (var index = 2; index < data.length; index++)
                         {

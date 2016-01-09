@@ -22,8 +22,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
 			candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
 
-        var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
-			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
 
@@ -31,10 +29,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var candleOneBody = Math.abs(candleOne_Open - candleOne_Close);
         var candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close,candleOne_Open));
 
-        var isBullishContinuation = isCandleThree_Bearish //a downward trend indicating a bullish reversal, it is a hammer
-                                    && isCandleTwo_Bearish && candleTwo_Open < candleThree_Close //a downward trend indicating a bullish reversal, it is a hammer
+        var isBullishContinuation = isCandleTwo_Bearish && (candleTwo_Open < Math.min(candleThree_Close, candleThree_Open)) //a downward trend indicating a bullish reversal, it is a hammer
                                     && (candleOneUpperShadow <= (candleOneBody * 0.10)) && (candleOneBody < candleMediumHeight) //the open, high, and close are roughly the same price. means it has a small body.
-                                    && candleOneLowerShadow >= (2.0 * candleOneBody); //there is a long lower shadow, twice the length as the real body.
+                                    && candleOneLowerShadow >= (2.0 * candleOneBody) && (candleOne_Close < candleTwo_Close); //there is a long lower shadow, twice the length as the real body.
 
         //Hammer is bullish only
         var isBearishContinuation = false;

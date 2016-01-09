@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlhangingmanOptionsMap = {}, cdlhangingmanSeriesMap = {};
+    var candleMediumHeight = 0.0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -21,27 +22,19 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
 			candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
 
-        var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
-			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
     
-        var perctDiff_openToClose = Math.abs((candleOne_Open - candleOne_Close) * 100.0 / candleOne_Open);
-        var perctDiff_openToHigh = Math.abs((candleOne_Open - candleOne_High) * 100.0 / candleOne_Open);
-        var perctDiff_closeToHigh = Math.abs((candleOne_Close - candleOne_High) * 100.0 / candleOne_Close);
-        var body = Math.abs(candleOne_Open - candleOne_Close);
-        var lowWick = Math.abs(candleOne_Low - Math.max(candleOne_Open, candleOne_Close));
-        var isLowerShadowTwiceBody = lowWick >= (2.0 * body);
-        var isOpenCloseHighAlmostSame = perctDiff_openToClose <= 1.0
-                                        && perctDiff_openToHigh <= 1.0
-                                        && perctDiff_closeToHigh <= 0.5;
+        var candleOneUpperShadow = Math.abs(Math.max(candleOne_Open, candleOne_Close) - candleOne_High);
+        var candleOneBody = Math.abs(candleOne_Open - candleOne_Close);
+        var candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close, candleOne_Open));
 
+        var isBearishContinuation = isCandleTwo_Bullish && (candleTwo_Open > Math.max(candleThree_Close,candleThree_Open)) //a downward trend indicating a bullish reversal, it is a hammer
+                                  && (candleOneUpperShadow <= (candleOneBody * 0.10)) && (candleOneBody < candleMediumHeight) //the open, high, and close are roughly the same price. means it has a small body.
+                                  && candleOneLowerShadow >= (2.0 * candleOneBody) && (candleOne_Close > candleTwo_Close); //there is a long lower shadow, twice the length as the real body.
+
+        //hanging man is bearish only
         var isBullishContinuation = false;
-        //Hammer is bearish only
-        var isBearishContinuation = isCandleThree_Bullish //A bearish candlestick pattern that forms at the end of an uptrend
-                                    && isCandleTwo_Bullish && candleTwo_Open > candleThree_Close //A bearish candlestick pattern that forms at the end of an uptrend
-                                    && isOpenCloseHighAlmostSame //the open, high, and close are roughly the same price. means it has a small body.
-                                    && isLowerShadowTwiceBody; //there is a long lower shadow, twice the length as the real body.
 
         return {
             isBullishContinuation: isBullishContinuation,
@@ -77,6 +70,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlhangingmanData = [];
                         for (var index = 2 ; index < data.length; index++) {
 
