@@ -8,6 +8,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
         var candleTwo_Index = index - 1;
+        var candleThree_Index = index - 2;
+
+        var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
+          candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index);
 
         var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
@@ -30,14 +34,16 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             realBodySize = Math.abs(candleOne_Open - candleOne_Close);
 
 
-        var isBullishContinuation = isCandleTwo_Bearish
-                                  && isCandleOne_Bullish && (realBodySize <= (candleBodySize * 0.30)) //It is not too different to a Doji in structure, but rather than a flat body it has a small body between an open and close price
+        var isBullishContinuation = isCandleTwo_Bearish && (candleTwo_Close < (Math.min(candleThree_Open, candleThree_Close)))
+                                  && isCandleOne_Bullish && (candleOne_Open < candleTwo_Close)
+                                  && (realBodySize <= (candleBodySize * 0.30)) //It is not too different to a Doji in structure, but rather than a flat body it has a small body between an open and close price
                                   && (upperShadow > realBodySize) && (upperShadow < (candleBodySize * 0.50)) // The spinning top is composed of a small body with small upper and lower shadows.
                                   && (lowerShadow > realBodySize) && (lowerShadow < (candleBodySize * 0.50));
                                   
 
-        var isBearishContinuation = isCandleTwo_Bullish
-                                  && isCandleOne_Bearish && (realBodySize <= (candleBodySize * 0.30)) //It is not too different to a Doji in structure, but rather than a flat body it has a small body between an open and close price
+        var isBearishContinuation = isCandleTwo_Bullish && (candleTwo_Close > (Math.max(candleThree_Open, candleThree_Close)))
+                                  && isCandleOne_Bearish && (candleOne_Open > candleTwo_Close)
+                                  && (realBodySize <= (candleBodySize * 0.30)) //It is not too different to a Doji in structure, but rather than a flat body it has a small body between an open and close price
                                   && (upperShadow > realBodySize) && (upperShadow < (candleBodySize * 0.50)) // The spinning top is composed of a small body with small upper and lower shadows.
                                   && (lowerShadow > realBodySize) && (lowerShadow < (candleBodySize * 0.50));
 
@@ -77,7 +83,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             Refer to dl2crows.html for detailed information on this indicator
                          */
                         var cdlspinningtopData = [];
-                        for (var index = 1; index < data.length; index++) {
+                        for (var index = 2; index < data.length; index++) {
 
                             //Calculate CDLSPINNINGTOP - start
                             var bull_bear = calculateIndicatorValue(data, index);

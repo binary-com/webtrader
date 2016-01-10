@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlupsidegap2crowsOptionsMap = {}, cdlupsidegap2crowsSeriesMap = {};
+    var candleMediumHeight = 0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -26,21 +27,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-       
-        var isBullishContinuation = isCandleThree_Bullish
-                                    && isCandleTwo_Bearish && (candleTwo_Close > Math.max(candleThree_Close, candleThree_Open)) && (candleTwo_Open > Math.max(candleThree_Close, candleThree_Open))// black candle with a body gapping above the prior candle's body.
+
+
+        var isBullishContinuation = isCandleThree_Bullish && (Math.abs(candleThree_Close - candleThree_Open) > candleMediumHeight) //by a long white candlestick
+                                    && isCandleTwo_Bearish && (Math.abs(candleTwo_Close - candleTwo_Open) < (candleMediumHeight * 0.60)) //small black candle with a body
+                                    && (candleTwo_Close > candleThree_Close)//  gapping above the prior candle's body.
                                     && isCandleOne_Bearish && (candleOne_Close < candleTwo_Close && candleOne_Open > candleTwo_Open) //opening higher than the Day 2 open, but closing below the Day 2 close
                                     && (candleOne_Close > candleThree_Close);// and above the Day 1 close
 
 
-        //var isBearishContinuation = isCandleThree_Bearish
-        //                           && isCandleTwo_Bullish && candleTwo_Open < candleThree_Close //gaps above 1st day
-        //                           && isCandleOne_Bullish && candleOne_Close < candleTwo_Close && candleOne_Open > candleTwo_Open
-        //                           && candleOne_Close < candleThree_Close;
-
         return {
             isBullishContinuation: isBullishContinuation,
-            //isBearishContinuation: isBearishContinuation
+            isBearishContinuation: false
         };
     }
 
@@ -72,6 +70,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlupsidegap2crowsData = [];
                         for (var index = 2 ; index < data.length; index++) {
 

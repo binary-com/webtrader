@@ -44,13 +44,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     && isCandleFor_Bearish && (candleFor_Close > candleFive_Close) && (Math.abs(candleFor_Close-candleFor_Open) < candleMediumHeight)//The second day gaps up and is a black day
                                     && isCandleThree_Bearish && (candleThree_Close < candleFor_Close) && (Math.abs(candleThree_Close - candleThree_Open) < candleMediumHeight)//The second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day 
                                     && isCandleTwo_Bearish && (candleTwo_Close < candleThree_Close) && (Math.abs(candleTwo_Close - candleTwo_Open) < candleMediumHeight) && (candleTwo_Close > candleFive_Open) //  stay within the range of the first day 
-                                    && isCandleOne_Bullish && (Math.abs(candleOne_Close-candleOne_Open) > candleMediumHeight) && (candleOne_Close > candleFive_Close);// The fifth day is a long white day that closes above the close of the first day
+                                    && isCandleOne_Bullish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight) && (candleOne_Close > candleFor_Close);// The fifth day is a long white day that closes above the trading ranges of the previous four days
 
         var isBearishContinuation = isCandleFive_Bearish && (Math.abs(candleFive_Close - candleFive_Open) > candleMediumHeight)  //The first day is a long red day
                                     && isCandleFor_Bullish && (candleFor_Close < candleFive_Close) && (Math.abs(candleFor_Close - candleFor_Open) < candleMediumHeight)//The second day gaps up and is a black day
                                     && isCandleThree_Bullish && (candleThree_Close > candleFor_Close) && (Math.abs(candleThree_Close - candleThree_Open) < candleMediumHeight)//The second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day 
                                     && isCandleTwo_Bullish && (candleTwo_Close > candleThree_Close) && (Math.abs(candleTwo_Close - candleTwo_Open) < candleMediumHeight) && (candleTwo_Close < candleFive_Open) //  stay within the range of the first day 
-                                    && isCandleOne_Bearish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight) && (candleOne_Close < candleFive_Close);// The fifth day is a long white day that closes bellow the close of the first day
+                                    && isCandleOne_Bearish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight) && (candleOne_Close < candleFor_Close);// The fifth day is a long white day that closes bellow  the trading ranges of the previous four days
 
         return {
             isBullishContinuation: isBullishContinuation,

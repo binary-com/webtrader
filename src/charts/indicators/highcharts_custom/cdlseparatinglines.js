@@ -26,15 +26,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
         var candleTwoBody = Math.abs(candleTwo_Close - candleTwo_Open);
+        var candleOneBody = Math.abs(candleOne_Close - candleOne_Open);
 
         var isBullishContinuation = (candleOne_Open > Math.max(candleThree_Open, candleThree_Close)) //After an uptrend
-                                   && isCandleTwo_Bearish && (candleTwoBody > candleMediumHeight) // 1st day is a long red day
-                                   && isCandleOne_Bullish && candleOne_Open === candleTwo_Open; //2nd day is a white day that opens at the opening price of the 1st day.
+                                   && isCandleTwo_Bearish && (candleTwoBody >= candleMediumHeight) // 1st day is a long red day
+                                   && isCandleOne_Bullish && (candleOneBody >= candleMediumHeight)// 2nd day is a long white day
+                                   && (candleOne_Open === candleTwo_Open); //2nd day is a white day that opens at the opening price of the 1st day.
 
 
         var isBearishContinuation = (candleOne_Open < Math.min(candleThree_Open, candleThree_Close)) //After an downtrend
-                                   && isCandleTwo_Bullish && (candleTwoBody > candleMediumHeight)  // 1st day is a long white day
-                                   && isCandleOne_Bearish && candleOne_Open === candleTwo_Open; //2nd day is a red day that opens at the opening price of the 1st day.
+                                   && isCandleTwo_Bullish && (candleTwoBody >= candleMediumHeight)  // 1st day is a long white day
+                                   && isCandleOne_Bearish && (candleOneBody >= candleMediumHeight)// 2nd day is a long red day
+                                   && (candleOne_Open === candleTwo_Open); //2nd day is a red day that opens at the opening price of the 1st day.
 
 
         return {

@@ -28,9 +28,9 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
         var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
-           isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+            isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
         var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
-           isCandleThree_Bearish = candleThree_Close < candleThree_Open;
+            isCandleThree_Bearish = candleThree_Close < candleThree_Open;
          
         var candleThreebodySize=Math.abs(candleThree_Close-candleThree_Open);
         var isCanldeOneCloseSameAsCandleThreeClose = (candleOne_Close === candleThree_Close)

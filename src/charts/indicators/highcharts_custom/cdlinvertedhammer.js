@@ -22,14 +22,12 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
 			candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
 
-        var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
-			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
-
         var candleOneUpperShadow = Math.abs(Math.max(candleOne_Open, candleOne_Close) - candleOne_High);
         var candleOneBody = Math.abs(candleOne_Open - candleOne_Close);
         var candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close, candleOne_Open));
 
-        var isBullishContinuation =  isCandleTwo_Bearish && (candleTwo_Open < Math.min(candleThree_Close, candleThree_Open))  //a downward trend indicating a bullish reversal, it is a inverted hammer
+        var isBullishContinuation = (Math.min(candleTwo_Close, candleTwo_Open) < (Math.min(candleThree_Open, candleThree_Close)))
+                                    && (Math.min(candleOne_Close, candleOne_Open) < Math.min(candleTwo_Close, candleTwo_Open))  //a downward trend indicating a bullish reversal, it is a inverted hammer
                                     && (candleOneLowerShadow <= (candleOneBody * 0.10)) && (candleOneBody < candleMediumHeight) //the open, low, and close are roughly the same price. means it has a small body.
                                     && (candleOneUpperShadow >= (2.0 * candleOneBody)); //there is a long upper shadow, which should be at least twice the length of the real body.
 

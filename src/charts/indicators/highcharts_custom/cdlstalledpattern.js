@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlstalledpatternOptionsMap = {}, cdlstalledpatternSeriesMap = {};
+    var candleMediumHeight = 0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -26,15 +27,20 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
         var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-        var isBullishContinuation = isCandleThree_Bearish // three candlesticks in a downtrend
-                                   && isCandleTwo_Bearish && candleTwo_Open <= candleThree_Close //The second candlestick must open close to the close of the previous day. 
-                                   && isCandleOne_Bearish && candleOne_Open <= candleTwo_Close   //must open close to the close of the previous day.
-                                   && Math.abs(candleOne_Close - candleOne_Open) < Math.abs(candleTwo_Close - candleTwo_Open); //the last candlestick must be short
+        var candleThreeBodySize = Math.abs(candleThree_Close - candleThree_Open),
+            candleTwoBodySize = Math.abs(candleTwo_Close - candleTwo_Open),
+            candleOneBodySize = Math.abs(candleOne_Close - candleOne_Open);
 
-        var isBearishContinuation = isCandleThree_Bullish // three candlesticks in a downtrend
-                                   && isCandleTwo_Bullish && candleTwo_Open >= candleThree_Close //The second candlestick must open close to the close of the previous day. 
-                                   && isCandleOne_Bullish && candleOne_Open >= candleTwo_Close   //must open close to the close of the previous day.
-                                   && Math.abs(candleOne_Close - candleOne_Open) < Math.abs(candleTwo_Close - candleTwo_Open); //the last candlestick must be short
+
+        var isBullishContinuation = isCandleThree_Bearish && (candleThreeBodySize > candleMediumHeight)// three candlesticks in a downtrend
+                                   && isCandleTwo_Bearish && (candleTwoBodySize > candleMediumHeight) && (candleTwo_Open <= candleThree_Open) //The second candlestick must open close to the close of the previous day. 
+                                   && isCandleOne_Bearish && (candleOne_Open < candleTwo_Close)   //must open close to the close of the previous day.
+                                   && (candleOneBodySize < candleMediumHeight * 0.60); //the last candlestick must be short
+
+        var isBearishContinuation = isCandleThree_Bullish && (candleThreeBodySize > candleMediumHeight) // three candlesticks in a downtrend
+                                   && isCandleTwo_Bullish && (candleTwoBodySize > candleMediumHeight) && (candleTwo_Open >= candleThree_Open) //The second candlestick must open close to the close of the previous day. 
+                                   && isCandleOne_Bullish && (candleOne_Open > candleTwo_Close)   //must open close to the close of the previous day.
+                                   && (candleOneBodySize < candleMediumHeight * 0.60); //the last candlestick must be short
 
 
         return {
@@ -71,6 +77,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlstalledpatternData = [];
                         for (var index = 2 ; index < data.length; index++) {
 

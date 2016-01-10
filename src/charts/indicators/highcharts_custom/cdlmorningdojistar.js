@@ -39,7 +39,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
       
         //Morning Doji Star is bullish only
-        var isBullishContinuation = isCandleFor_Bearish  //occurs within a defined downtrend.
+        var isBullishContinuation = (candleThree_Close < Math.min(candleFor_Close, candleFor_Open))  //occurs within a defined downtrend.
                                     && isCandleThree_Bearish && (candleThreeBody > candleMediumHeight)  //The first part of an Evening Star reversal pattern is a large bullish green candle.
                                     && iscandleTwoDoji && (Math.max(candleTwo_Open, candleTwo_Close) < candleThree_Close) //The second day begins with a gap down and it is quite small and can be bullish or bearish.
                                     && isCandleOne_Bullish && (candleOneBody > candleMediumHeight) && (candleOne_Open > Math.max(candleTwo_Open, candleTwo_Close))//a large Bullish Candle with gap up.

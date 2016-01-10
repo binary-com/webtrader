@@ -4,6 +4,7 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlrisefall3methodsOptionsMap = {}, cdlrisefall3methodsSeriesMap = {};
+    var candleMediumHeight = 0;
 
     function calculateIndicatorValue(data, index) {
         var candleOne_Index = index;
@@ -55,12 +56,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
 
-        var isBullishContinuation = isCandleFive_Bullish
+        var isBullishContinuation = isCandleFive_Bullish && (Math.abs(candleFive_Close - candleFive_Open) > candleMediumHeight) //The first candlestick in this pattern is a light bullish candlestick with a large real body
                                     && isCandleFor_Bearish && candleFor_Low > candleFive_Low && candleFor_High < candleFive_High // it should be within the high and low of the first candlestick. 
                                     && isCandleThree_Bearish && candleThree_Low > candleFive_Low && candleThree_High < candleFive_High // it should be within the high and low of the first candlestick. 
                                     && isCandleTwo_Bearish && candleTwo_Low > candleFive_Low && candleTwo_High < candleFive_High // it should be within the high and low of the first candlestick. 
                                     && isCandleOne_Bullish && candleOne_Open > candleTwo_Close && candleOne_Close > candleFive_Close;//he last candlestick that completes the pattern should open higher than the close of its preceding candlestick and should close above the close of the first candlestick.
-        var isBearishContinuation = isCandleFive_Bearish
+
+        var isBearishContinuation = isCandleFive_Bearish && (Math.abs(candleFive_Close - candleFive_Open) > candleMediumHeight)
                                     && isCandleFor_Bullish && candleFor_Low > candleFive_Low && candleFor_High < candleFive_High // it should be within the high and low of the first candlestick. 
                                     && isCandleThree_Bullish && candleThree_Low > candleFive_Low && candleThree_High < candleFive_High // it should be within the high and low of the first candlestick. 
                                     && isCandleTwo_Bullish && candleTwo_Low > candleFive_Low && candleTwo_High < candleFive_High // it should be within the high and low of the first candlestick. 
@@ -101,6 +103,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                         /*
                          * Formula(OHLC or Candlestick) -
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlrisefall3methodsData = [];
                         for (var index = 4 ; index < data.length; index++) {
 
@@ -110,14 +113,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             if (bull_bear.isBullishContinuation) {
                                 cdlrisefall3methodsData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">RTM</span>',
+                                    title: '<span style="color : blue">RFTM</span>',
                                     text: 'Rising Three Methods : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
                                 cdlrisefall3methodsData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">FTM</span>',
+                                    title: '<span style="color : red">RFTM</span>',
                                     text: 'Falling Three Methods : Bear'
                                 });
                             }
@@ -222,14 +225,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">RTM</span>',
+                                        title: '<span style="color : blue">RFTM</span>',
                                         text: 'Rising Three Methods : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">FTM</span>',
+                                        title: '<span style="color : red">RFTM</span>',
                                         text: 'Falling Three Methods : Bear'
                                     }
                                 };

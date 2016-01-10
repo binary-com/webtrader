@@ -22,22 +22,21 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
             upperShadow = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
             candleBodySize = Math.abs(candleOne_Low - candleOne_High),
             realBodySize = Math.abs(candleOne_Close - candleOne_Open),
-            isLowerShadowShort = lowerShadow === 0 || lowerShadow <= (candleBodySize * 0.20),
-            isUpperShadowShort = upperShadow === 0 || upperShadow <= (candleBodySize * 0.20);
+            isLowerShadowShort = (lowerShadow === 0) || (lowerShadow <= (candleBodySize * 0.20)),
+            isUpperShadowShort = (upperShadow === 0) || (upperShadow <= (candleBodySize * 0.20));
 
         var isBullishContinuation = isCandleOne_Bullish
-                                    && realBodySize < candleMediumHeight && realBodySize > (candleMediumHeight * 0.20)
+                                    && realBodySize <= (candleMediumHeight * 0.60) && realBodySize > (candleMediumHeight * 0.20)
                                     && isLowerShadowShort && isUpperShadowShort;
 
         var isBearishContinuation = isCandleOne_Bearish
-                                    && realBodySize < candleMediumHeight && realBodySize > (candleMediumHeight * 0.20)
+                                    && realBodySize <= (candleMediumHeight * 0.60) && realBodySize > (candleMediumHeight * 0.20)
                                     && isLowerShadowShort && isUpperShadowShort;
 
         return {
             isBullishContinuation: isBullishContinuation,
             isBearishContinuation: isBearishContinuation
         };
-
     }
 
     return {

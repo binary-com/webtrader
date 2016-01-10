@@ -100,14 +100,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             if (bull_bear.isBullishContinuation) {
                                 cdltristarData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : blue">TP</span>',
+                                    title: '<span style="color : blue">TSP</span>',
                                     text: 'Tristar Pattern : Bull'
                                 });
                             }
                             if (bull_bear.isBearishContinuation) {
                                 cdltristarData.push({
                                     x: data[index].x || data[index][0],
-                                    title: '<span style="color : red">TP</span>',
+                                    title: '<span style="color : red">TSP</span>',
                                     text: 'Tristar Pattern : Bear'
                                 });
                             }
@@ -212,14 +212,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : blue">TP</span>',
+                                        title: '<span style="color : blue">TSP</span>',
                                         text: 'Tristar Pattern : Bull'
                                     }
                                 }
                                 else if (bull_bear.isBearishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">TP</span>',
+                                        title: '<span style="color : red">TSP</span>',
                                         text: 'Tristar Pattern : Bear'
                                     }
                                 };
