@@ -182,13 +182,12 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     isIndicatorData: false
                                 };
                                 var maValue = indicatorBase.calculateTEMAValue(maOptions);
-                                //var temaValue = indicatorBase.calculateTEMAValue(data, dataPointIndex, temaOptions.period, this.options.type, key, isPointUpdate, temaOptions.appliedTo);
 
                                 if (isPointUpdate) {
                                     temaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else {
-                                    temaSeriesMap[key].addPoint([time, indicatorBase.toFixed(maValue, 4)], true, true, false);
+                                    temaSeriesMap[key].addPoint([time, indicatorBase.toFixed(maValue, 4)], true, false, false);
                                 }
                             }
                         }
