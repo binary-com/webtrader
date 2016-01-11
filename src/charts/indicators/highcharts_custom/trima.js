@@ -196,7 +196,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 }
                                 else
                                 {
-                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
+                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, false, false);
                                 }
                             }
                         }

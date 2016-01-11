@@ -184,7 +184,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 }
                                 else
                                 {
-                                    wmaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
+                                    wmaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, false, false);
                                 }
                             }
                         }

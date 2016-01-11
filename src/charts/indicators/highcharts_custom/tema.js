@@ -187,7 +187,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     temaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
                                 }
                                 else {
-                                    temaSeriesMap[key].addPoint([time, indicatorBase.toFixed(maValue, 4)], true, false, false);
+                                    temaSeriesMap[key].addPoint([time, indicatorBase.toFixed(maValue, 4)], false, false, false);
+                                    chart.redraw();
                                 }
                             }
                         }
