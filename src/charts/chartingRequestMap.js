@@ -213,11 +213,13 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
             var req = {
                 "ticks_history": options.symbol,
                 "granularity": granularity,
-                "subscribe": options.subscribe || 0,
                 "count": options.count || 1,
                 "end": 'latest',
                 "style": style
             };
+            if (options.subscribe === 1) {
+                req.subscribe = 1;
+            }
 
             if(!is_tick) {
               var count = options.count || 1;
