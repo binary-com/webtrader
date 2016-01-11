@@ -22,8 +22,8 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         var isBullishContinuation = isCandleTwo_Bearish
                                     && isCandleOne_Bullish && candleOne_Open < candleTwo_Close //white candlestick must open below the previous close.
-                                    && candleOne_Close > (Math.abs(candleTwo_Open - candleTwo_Close) / 2);//close above the midpoint of the black candlestick's body.
-
+                                    && candleOne_Close > (Math.abs(candleTwo_Open + candleTwo_Close) / 2)//close above the midpoint of the black candlestick's body.
+                                    && candleOne_Close < candleTwo_Open;//close within the price range of the previous day
         var isBearishContinuation = false;//Piercing Pattern is bullish pattern ONLY
 
         return {
@@ -65,21 +65,14 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                             //Calculate CDLPIERCING - start
                             var bull_bear = calculateIndicatorValue(data, index);
-
+                            //Piercing Pattern is bullish pattern ONLY
                             if (bull_bear.isBullishContinuation) {
                                 cdlpiercingData.push({
                                     x: data[index].x || data[index][0],
                                     title: '<span style="color : blue">PP</span>',
-                                    text: 'Piercing Pattern'
+                                    text: 'Piercing Pattern : Bull'
                                 });
-                            } //Piercing Pattern is bullish pattern ONLY
-                            //if (bull_bear.isBearishContinuation) {
-                            //    cdlpiercingData.push({
-                            //        x: data[index].x || data[index][0],
-                            //        title: '<span style="color : red">PP</span>',
-                            //        text: 'Upside Gap Two Crows : Bear'
-                            //    });
-                            //}
+                            };
                             //Calculate CDLPIERCING - end
                         };
 
@@ -178,20 +171,15 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 var bull_bear = calculateIndicatorValue(data, dataPointIndex);
                                 //Calculate CDLPIERCING - end
                                 var bullBearData = null;
+                                //Piercing Pattern is bullish pattern ONLY
                                 if (bull_bear.isBullishContinuation) {
                                     bullBearData = {
                                         x: data[dataPointIndex].x || data[dataPointIndex][0],
                                         title: '<span style="color : blue">PP</span>',
-                                        text: 'Upside Gap Two Crows : Bull'
-                                    }
-                                }
-                                else if (bull_bear.isBearishContinuation) {
-                                    bullBearData = {
-                                        x: data[dataPointIndex].x || data[dataPointIndex][0],
-                                        title: '<span style="color : red">PP</span>',
-                                        text: 'Upside Gap Two Crows : Bear'
+                                        text: 'Piercing Pattern : Bull'
                                     }
                                 };
+                                //Calculate CDLPIERCING - end
 
 
                                 var whereToUpdate = -1;
@@ -210,7 +198,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                     cdlpiercingSeriesMap[key].addPoint(bullBearData);
                                 } else {
                                     if (whereToUpdate >= 0) {
-                                        cdlshootingstarSeriesMap[key].data[whereToUpdate].remove();
+                                        cdlpiercingSeriesMap[key].data[whereToUpdate].remove();
                                     }
                                 }
                             }

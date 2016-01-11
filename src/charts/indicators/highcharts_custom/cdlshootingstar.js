@@ -4,28 +4,33 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdlshootingstarOptionsMap = {}, cdlshootingstarSeriesMap = {};
+    var candleMediumHeight = 0.0;
 
-	function calculateIndicatorValue(data, index) {
-		var candleOne_Index = index;
+    function calculateIndicatorValue(data, index) {
+        var candleOne_Index = index;
+        var candleTwo_Index = index - 1;
+        var candleThree_Index = index - 2;
+
+        var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
+			candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index);
+
+        var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
+			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index);
 
         var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
             candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
             candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
-            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index)
-          ;
+            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
 
-        var perctDiff_openToClose = Math.abs((candleOne_Open - candleOne_Close) * 100.0 / candleOne_Open);
-        var perctDiff_openToLow = Math.abs((candleOne_Open - candleOne_Low) * 100.0 / candleOne_Open);
-        var perctDiff_closeToLow = Math.abs((candleOne_Close - candleOne_Low) * 100.0 / candleOne_Close);
-        var body = Math.abs(candleOne_Open - candleOne_Close);
-        var wick = candleOne_High - Math.max(candleOne_Open, candleOne_Close);
-        var isShadowTwiceBody = wick >= (2.0 * body);
-        var isOpenCloseLowAlmostSame = perctDiff_openToClose <= 1.0
-                                        && perctDiff_openToLow <= 1.0
-                                        && perctDiff_closeToLow <= 0.5;
+        var candleOneUpperShadow = Math.abs(Math.max(candleOne_Open, candleOne_Close) - candleOne_High);
+        var candleOneBody = Math.abs(candleOne_Open - candleOne_Close);
+        var candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close, candleOne_Open));
 
-		return isShadowTwiceBody && isOpenCloseLowAlmostSame;
-	}
+        return (Math.max(candleTwo_Close, candleTwo_Open) > (Math.max(candleThree_Open, candleThree_Close)))
+               && (Math.max(candleOne_Close, candleOne_Open) > Math.max(candleTwo_Close, candleTwo_Open))
+               && (candleOneLowerShadow <= (candleOneBody * 0.10)) && (candleOneBody < candleMediumHeight) //the open, low, and close are roughly the same price. means it has a small body.
+               && (candleOneUpperShadow >= (2.0 * candleOneBody)); //there is a long upper shadow, which should be at least twice the length of the real body.
+    }
 
     return {
         init: function() {
@@ -61,6 +66,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                             Refer to dl2crows.html for detailed information on this indicator
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdlshootingstarData = [];
                         for (var index = 2; index < data.length; index++)
                         {

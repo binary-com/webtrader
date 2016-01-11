@@ -162,6 +162,19 @@ define(['jquery'], function ($) {
             };
         },
 
+        
+        getCandleMediumHeight: function (data) {
+            //Get the meduim candle height for each chart
+            //It will be used to recognize long and short candles in a pattern
+            var sum = 0.0, count = 0;
+            for (var index = 0; index < 1000; index += 2) {
+                if (index >= data.length) { break; }
+                sum += Math.abs(indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, index)
+                  - indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, index));
+                count++;
+            }
+            return sum / count;
+        },
 
         //**Moving Average Types Calculations
         getPrice: function (data, index, appliedTo, type) {
