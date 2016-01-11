@@ -326,6 +326,299 @@
     "long_display_name": "Piercing Pattern",
     "short_display_name": "CDLPIERCING",
     "ohlcOnly" :  true
+   },
+
+   "cdlbelthold":{
+    "id": "cdlbelthold",
+    "long_display_name": "Belt-hold ",
+    "short_display_name": "CDLBELTHOLD",
+    "ohlcOnly" :  true
+   },
+
+   "cdldarkcloudcover":{
+    "id": "cdldarkcloudcover",
+    "long_display_name": "Dark Cloud Cover ",
+    "short_display_name": "CDLDARKCLOUDCOVER",
+    "ohlcOnly" :  true
+   },
+
+   "cdlgapsidesidewhite":{
+    "id": "cdlgapsidesidewhite",
+    "long_display_name": "Up/Down-Gap Side-By-Side White Lines",
+    "short_display_name": "CDLGAPSIDESIDEWHITE",
+    "ohlcOnly" :  true
+   },
+
+   "cdltakuri":{
+    "id": "cdltakuri",
+    "long_display_name": "Takuri (Dragonfly Doji with very long lower shadow)",
+    "short_display_name": "CDLTAKURI",
+    "ohlcOnly" :  true
+   },
+
+   "cdlharami":{
+    "id": "cdlharami",
+    "long_display_name": "Harami Pattern",
+    "short_display_name": "CDLHARAMI",
+    "ohlcOnly" :  true
+   },
+
+   "cdlhammer":{
+    "id": "cdlhammer",
+    "long_display_name": "Hammer",
+    "short_display_name": "CDLHAMMER",
+    "ohlcOnly" :  true
+   },
+
+   "cdlhangingman":{
+    "id": "cdlhangingman",
+    "long_display_name": "Hanging Man",
+    "short_display_name": "CDLHANGINGMAN",
+    "ohlcOnly" :  true
+   },
+
+   "cdlinvertedhammer":{
+    "id": "cdlinvertedhammer",
+    "long_display_name": "Inverted Hammer",
+    "short_display_name": "CDLINVERTEDHAMMER",
+    "ohlcOnly" :  true
+   },
+
+   "cdlgravestonedoji":{
+    "id": "cdlgravestonedoji",
+    "long_display_name": "Gravestone Doji",
+    "short_display_name": "CDLGRAVESTONEDOJI",
+    "ohlcOnly" :  true
+   },
+
+   "cdlharamicross":{
+    "id": "cdlharamicross",
+    "long_display_name": "Harami Cross Pattern",
+    "short_display_name": "CDLHARAMICROSS",
+    "ohlcOnly" :  true
+   },
+
+   "cdlstalledpattern":{
+    "id": "cdlstalledpattern",
+    "long_display_name": "Stalled Pattern",
+    "short_display_name": "CDLSTALLEDPATTERN",
+    "ohlcOnly" :  true
+   },
+
+   "cdleveningstar":{
+    "id": "cdleveningstar",
+    "long_display_name": "Evening Star",
+    "short_display_name": "CDLEVENINGSTAR",
+    "ohlcOnly" :  true
+   },
+
+   "cdlhighwave":{
+    "id": "cdlhighwave",
+    "long_display_name": "High-Wave Candle",
+    "short_display_name": "CDLHIGHWAVE",
+    "ohlcOnly" :  true
+   },
+
+   "cdlhikkake":{
+    "id": "cdlhikkake",
+    "long_display_name": "Hikkake Pattern",
+    "short_display_name": "CDLHIKKAKE",
+    "ohlcOnly" :  true
+   },
+
+   "cdlhomingpigeon":{
+    "id": "cdlhomingpigeon",
+    "long_display_name": "Homing Pigeon",
+    "short_display_name": "CDLHOMINGPIGEON",
+    "ohlcOnly" :  true
+   },
+
+   "cdltristar":{
+    "id": "cdltristar",
+    "long_display_name": "Tristar Pattern",
+    "short_display_name": "CDLTRISTAR",
+    "ohlcOnly" :  true
+   },
+
+   "cdllongline":{
+    "id": "cdllongline",
+    "long_display_name": "Long Line Candle",
+    "short_display_name": "CDLLONGLINE",
+    "ohlcOnly" :  true
+   },
+
+   "cdlshortline":{
+    "id": "cdlshortline",
+    "long_display_name": "Short Line Candle",
+    "short_display_name": "CDLSHORTLINE",
+    "ohlcOnly" :  true
+   },
+
+    "cdlmarubozu":{
+    "id": "cdlmarubozu",
+    "long_display_name": "Marubozu",
+    "short_display_name": "CDLMARUBOZU",
+    "ohlcOnly" :  true
+   },
+
+    "cdlkicking":{
+    "id": "cdlkicking",
+    "long_display_name": "Kicking",
+    "short_display_name": "CDLKICKING",
+    "ohlcOnly" :  true
+   },
+
+    "cdlmatchinglow":{
+    "id": "cdlmatchinglow",
+    "long_display_name": "Matching Low",
+    "short_display_name": "CDLMATCHINGLOW",
+    "ohlcOnly" :  true
+   },
+
+    "cdlladderbottom":{
+    "id": "cdlladderbottom",
+    "long_display_name": "Ladder Bottom",
+    "short_display_name": "CDLLADDERBOTTOM",
+    "ohlcOnly" :  true
+   },
+
+    "cdlrisefall3methods":{
+    "id": "cdlrisefall3methods",
+    "long_display_name": "Rising/Falling Three Methods",
+    "short_display_name": "CDLRISEFALL3METHODS",
+    "ohlcOnly" :  true
+   },
+
+    "cdlidentical3crows":{
+    "id": "cdlidentical3crows",
+    "long_display_name": "Identical Three Crows",
+    "short_display_name": "CDLIDENTICAL3CROWS",
+    "ohlcOnly" :  true
+   },
+
+    "cdlmorningstar":{
+    "id": "cdlmorningstar",
+    "long_display_name": "Morning Star",
+    "short_display_name": "CDLMORNINGSTAR",
+    "ohlcOnly" :  true
+   },
+
+    "cdlspinningtop":{
+    "id": "cdlspinningtop",
+    "long_display_name": "Spinning Top",
+    "short_display_name": "CDLSPINNINGTOP",
+    "ohlcOnly" :  true
+   },
+
+    "cdldragonflydoji":{
+    "id": "cdldragonflydoji",
+    "long_display_name": "Dragonfly Doji",
+    "short_display_name": "CDLDRAGONFLYDOJI",
+    "ohlcOnly" :  true
+   },
+
+    "cdllongleggeddoji":{
+    "id": "cdllongleggeddoji",
+    "long_display_name": "Long Legged Doji",
+    "short_display_name": "CDLLONGLEGGEDDOJI",
+    "ohlcOnly" :  true
+   },
+
+    "cdleveningdojistar":{
+    "id": "cdleveningdojistar",
+    "long_display_name": "Evening Doji Star",
+    "short_display_name": "CDLEVENINGDOJISTAR",
+    "ohlcOnly" :  true
+   },
+
+    "cdlbreakaway":{
+    "id": "cdlbreakaway",
+    "long_display_name": "Breakaway",
+    "short_display_name": "CDLBREAKAWAY",
+    "ohlcOnly" :  true
+   },
+
+    "cdladvanceblock":{
+    "id": "cdladvanceblock",
+    "long_display_name": "Advance Block",
+    "short_display_name": "CDLADVANCEBLOCK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlcounterattack":{
+    "id": "cdlcounterattack",
+    "long_display_name": "Counterattack",
+    "short_display_name": "CDLCOUNTERATTACK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlmorningdojistar":{
+    "id": "cdlmorningdojistar",
+    "long_display_name": "Morning Doji Star",
+    "short_display_name": "CDLMORNINGDOJISTAR",
+    "ohlcOnly" :  true
+   },
+
+    "cdlcounterattack":{
+    "id": "cdlcounterattack",
+    "long_display_name": "Counterattack",
+    "short_display_name": "CDLCOUNTERATTACK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlinneck":{
+    "id": "cdlinneck",
+    "long_display_name": "In-Neck Pattern",
+    "short_display_name": "CDLINNECK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlonneck":{
+    "id": "cdlonneck",
+    "long_display_name": "On-Neck Pattern",
+    "short_display_name": "CDLONNECK",
+    "ohlcOnly" :  true
+   },
+
+    "cdlrickshawman":{
+    "id": "cdlrickshawman",
+    "long_display_name": "Rickshaw Man",
+    "short_display_name": "CDLRICKSHAWMAN",
+    "ohlcOnly" :  true
+   },
+
+    "cdlunique3river":{
+    "id": "cdlunique3river",
+    "long_display_name": "Unique 3 River",
+    "short_display_name": "CDLUNIQUE3RIVER",
+    "ohlcOnly" :  true
+   },
+
+    "cdlseparatinglines":{
+    "id": "cdlseparatinglines",
+    "long_display_name": "Separating Lines",
+    "short_display_name": "CDLSEPARATINGLINES",
+    "ohlcOnly" :  true
+   },
+
+   "cdlmathold":{
+    "id": "cdlmathold",
+    "long_display_name": "Mat Hold",
+    "short_display_name": "CDLMATHOLD",
+    "ohlcOnly" :  true
+   },
+
+   "cdlsticksandwich":{
+    "id": "cdlsticksandwich",
+    "long_display_name": "Stick Sandwich",
+    "short_display_name": "CDLSTICKSANDWICH",
+    "ohlcOnly" :  true
+   },
+
+   "cdlkickingbylength":{
+    "id": "cdlkickingbylength",
+    "long_display_name": "Kicking - bull/bear determined by the longer marubozu",
+    "short_display_name": "CDLKICKINGBYLENGTH",
+    "ohlcOnly" :  true
    }
-   
 }
