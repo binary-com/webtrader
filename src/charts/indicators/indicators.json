@@ -601,13 +601,6 @@
     "ohlcOnly" :  true
    },
 
-   "cdlfractals":{
-    "id": "cdlfractals",
-    "long_display_name": "Fractal",
-    "short_display_name": "CDLFRACTALS",
-    "ohlcOnly" :  true
-   },
-
    "cdlmathold":{
     "id": "cdlmathold",
     "long_display_name": "Mat Hold",
