@@ -24,19 +24,18 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 		var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 			
-		var isBearishContinuation = isCandleThree_Bullish 
-					&& isCandleTwo_Bearish && (candleTwo_Open > candleThree_Close && candleTwo_Close > candleThree_Close)
-					&& isCandleOne_Bearish
-						&& (candleOne_Open < candleTwo_Open && candleOne_Open > candleTwo_Close) //opens within the prior candle's body
-						&& (candleOne_Close < candleThree_Close && candleOne_Close > candleThree_Open) //and closes within the body of the first candle in the pattern
-					;
+		var isBearishContinuation = isCandleThree_Bullish
+					                && isCandleTwo_Bearish && (candleTwo_Open > candleThree_Close && candleTwo_Close > candleThree_Close)
+					                && isCandleOne_Bearish
+						            && (candleOne_Open < candleTwo_Open && candleOne_Open > candleTwo_Close) //opens within the prior candle's body
+						            && (candleOne_Close < candleThree_Close && candleOne_Close > candleThree_Open); //and closes within the body of the first candle in the pattern
 											
 		var isBullishContinuation = isCandleThree_Bearish
-				&& isCandleTwo_Bullish && (candleTwo_Open < candleThree_Close && candleTwo_Close < candleThree_Close)
-				&& isCandleOne_Bullish
-				&& (candleOne_Open > candleTwo_Open && candleOne_Open < candleTwo_Close) //opens within the prior candle's body
-				&& (candleOne_Close > candleThree_Close && candleOne_Close < candleThree_Open) //and closes within the body of the first candle in the pattern
-			;
+				                    && isCandleTwo_Bullish && (candleTwo_Open < candleThree_Close && candleTwo_Close < candleThree_Close)
+				                    && isCandleOne_Bullish
+				                    && (candleOne_Open > candleTwo_Open && candleOne_Open < candleTwo_Close) //opens within the prior candle's body
+				                    && (candleOne_Close > candleThree_Close && candleOne_Close < candleThree_Open); //and closes within the body of the first candle in the pattern
+			
 		
 		return {
 			isBullishContinuation : isBullishContinuation,
