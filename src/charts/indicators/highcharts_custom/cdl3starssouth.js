@@ -4,48 +4,62 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdl3starssouthOptionsMap = {}, cdl3starssouthSeriesMap = {};
+    var candleMediumHeight = 0;
 
-	function calculateIndicatorValue(data, index) {
-		var candleOne_Index = index;
-		var candleTwo_Index = index - 1;
-		var candleThree_Index = index - 2;
+    function calculateIndicatorValue(data, index) {
+        var candleOne_Index = index;
+        var candleTwo_Index = index - 1;
+        var candleThree_Index = index - 2;
 
-		var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
+        var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
   			candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index),
-        candleThree_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleThree_Index)
-      ;
-		var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
-        candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index),
-        candleTwo_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleTwo_Index)
-      ;
-		var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
-  			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
-        candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
-        candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index)
-      ;
+            candleThree_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleThree_Index),
+            candleThree_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleThree_Index);
+        
+        var candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
+            candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index),
+            candleTwo_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleTwo_Index),
+            candleTwo_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleTwo_Index);
 
-		var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
+        var candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
+  			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index),
+            candleOne_Low = indicatorBase.extractPriceForAppliedTO(indicatorBase.LOW, data, candleOne_Index),
+            candleOne_High = indicatorBase.extractPriceForAppliedTO(indicatorBase.HIGH, data, candleOne_Index);
+            
+
+        var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
 			isCandleThree_Bearish = candleThree_Close < candleThree_Open;
-		var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
-		var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 
-		var isBearishContinuation = isCandleThree_Bullish
-					&& isCandleTwo_Bullish && (candleTwo_Low < candleThree_Low)
-					&& isCandleOne_Bullish && candleOne_Open == candleOne_Low && candleOne_High == candleOne_Close
-					;
+        var candleThreeBodySize = Math.abs(candleThree_Close - candleThree_Open),
+            candleTwoBodySize = Math.abs(candleTwo_Close - candleTwo_Open),
+            candleOneBodySize = Math.abs(candleOne_Close - candleOne_Open);
 
-		var isBullishContinuation = isCandleThree_Bearish
-					&& isCandleTwo_Bearish && (candleTwo_Low > candleThree_Low)
-					&& isCandleOne_Bearish && candleOne_Open == candleOne_High && candleOne_Low == candleOne_Close
-					;
+        var candleThreeLowerShadow = Math.abs(candleOne_Low - Math.min(candleThree_Close, candleThree_Open)),
+	       candleThreeUpperShadow = Math.abs(candleOne_High - Math.max(candleThree_Close, candleThree_Open));
 
-		return {
-			isBullishContinuation : isBullishContinuation,
-			isBearishContinuation : isBearishContinuation
-		};
-	}
+        var isBullishContinuation = isCandleThree_Bearish
+                    && (candleThreeBodySize >= candleMediumHeight) && (candleThreeLowerShadow >= (candleMediumHeight / 2)) && (candleThreeUpperShadow < (candleThreeBodySize * 0.1)) //A black candlestick with almost no upper shadow and a long lower shadow appears on the first day.
+					&& isCandleTwo_Bearish && (candleTwo_Low > candleThree_Low) && (candleTwo_Open < candleThree_Open) && (candleTwo_Close < candleThree_Close) && (candleTwoBodySize < candleThreeBodySize) // The next day is another black candlestick closing below the previous day’s close and having an opening in the range of the previous day’s body. However, it has a higher low.
+					&& isCandleOne_Bearish && (candleOne_Low > candleTwo_Low) && (candleOne_Open === candleOne_High) && (candleOne_Low === candleOne_Close) && (candleOneBodySize < candleTwoBodySize);//The last day is a small black Marubozu with a higher low
+
+
+        //var isBearishContinuation = isCandleThree_Bullish
+        //            && (candleThreeBodySize >= candleMediumHeight) && (candleThreeUpperShadow >= (candleMediumHeight / 2)) && (candleThreeLowerShadow <= (candleThreeBodySize * 0.1))
+		//			&& isCandleTwo_Bullish && (candleTwo_High < candleThree_High) && (candleTwo_Open > candleThree_Open) && (candleTwo_Close > candleThree_Close) && (candleTwoBodySize < candleThreeBodySize) 
+		//			&& isCandleOne_Bullish && (candleOne_High < candleTwo_High) && (candleOne_Open === candleOne_Low) && (candleOne_High === candleOne_Close) && (candleOneBodySize < candleTwoBodySize);
+
+        //Its a bullish only,the reverse is calling Three Stars In The North
+        var isBearishContinuation = false;
+
+        return {
+            isBullishContinuation: isBullishContinuation,
+            isBearishContinuation: isBearishContinuation
+        };
+    }
 
     return {
         init: function() {
@@ -81,6 +95,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                             Refer to dl2crows.html for detailed information on this indicator
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdl3starssouthData = [];
                         for (var index = 2; index < data.length; index++)
                         {

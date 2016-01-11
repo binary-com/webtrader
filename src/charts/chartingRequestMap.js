@@ -36,6 +36,8 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
 
             if (!chartID) return;
 
+            if (!$(chartID.containerIDWithHash) || !$(chartID.containerIDWithHash).highcharts()) return;
+
             var series = $(chartID.containerIDWithHash).highcharts().get(key),
                 type = $(chartID.containerIDWithHash).data('type');
 

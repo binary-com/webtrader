@@ -182,37 +182,37 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                          * Following series is just to show the colored range
                          * @type {Array}
                          */
-                        var seriesAreaData = [];
-                        bbandsLowerBandData.forEach(function(eachLwr, index) {
-                            var data = [eachLwr[0], eachLwr[1], bbandsUperBandData[index][1]];
-                            seriesAreaData.push(data);
-                        });
-                        chart.addSeries({
-                            id: rangeUniqueID,
-                            data: seriesAreaData,
-                            name: "BBANDS Range",
-                            type: 'arearange',
-                            dataGrouping: series.options.dataGrouping,
-                            opposite: series.options.opposite,
-                            color: 'white',
-                            fillColor: 'rgba(28,28,28,0.5)',
-                            connectNulls: true,
-                            compare: series.options.compare,
-                            //Following properties, states, events, dataLabels, point are needed. Otherwise higcharts-more throws error
-                            states: {
-                                hover: {
-                                    enabled: false
-                                }
-                            },
-                            events : {},
-                            dataLabels : {
-                                enabled : false
-                            },
-                            point: {
-                                events: {}
-                            },
-                            enableMouseTracking: false
-                        }, false, false);
+                        //var seriesAreaData = [];
+                        //bbandsLowerBandData.forEach(function(eachLwr, index) {
+                        //    var data = [eachLwr[0], eachLwr[1], bbandsUperBandData[index][1]];
+                        //    seriesAreaData.push(data);
+                        //});
+                        //chart.addSeries({
+                        //    id: rangeUniqueID,
+                        //    data: seriesAreaData,
+                        //    name: "BBANDS Range",
+                        //    type: 'arearange',
+                        //    dataGrouping: series.options.dataGrouping,
+                        //    opposite: series.options.opposite,
+                        //    color: 'white',
+                        //    fillColor: 'rgba(28,28,28,0.5)',
+                        //    connectNulls: true,
+                        //    compare: series.options.compare,
+                        //    //Following properties, states, events, dataLabels, point are needed. Otherwise higcharts-more throws error
+                        //    states: {
+                        //        hover: {
+                        //            enabled: false
+                        //        }
+                        //    },
+                        //    events : {},
+                        //    dataLabels : {
+                        //        enabled : false
+                        //    },
+                        //    point: {
+                        //        events: {}
+                        //    },
+                        //    enableMouseTracking: false
+                        //}, false, false);
 
                         $(bbandsMdlSeriesMap[mdlUniqueID]).data({
                             onChartIndicator: true,
@@ -248,9 +248,9 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                         chart.get(key).remove();
                         if (eachSeriesType !== 'range') {
                             if (bbandsOptionsMap[key].maType === "TEMA") {
-                                ema1[key] = [];
-                                ema2[key] = [];
-                                ema3[key] = [];
+                                indicatorBase.EMA1[uniqueID] = [];
+                                indicatorBase.EMA2[uniqueID] = [];
+                                indicatorBase.EMA3[uniqueID] = [];
                             }
                             bbandsOptionsMap[key] = null;
                             bbandsMdlSeriesMap[key] = null;
@@ -284,7 +284,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                         updateBBANDSMDLBNDSeries.call(this, options[0]);
                         updateBBANDSUPRBNDSeries.call(this, options[0]);
                         updateBBANDSLWRBNDSeries.call(this, options[0]);
-                        updateBBANDS_range.call(this, options[0]);
+                        //updateBBANDS_range.call(this, options[0]);
                     }
                 });
 
@@ -295,7 +295,7 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                         updateBBANDSMDLBNDSeries.call(this.series, this.x, true);
                         updateBBANDSUPRBNDSeries.call(this.series, this.x, true);
                         updateBBANDSLWRBNDSeries.call(this.series, this.x, true);
-                        updateBBANDS_range.call(this.series, this.x, true);
+                        //updateBBANDS_range.call(this.series, this.x, true);
                     }
                 });
 
