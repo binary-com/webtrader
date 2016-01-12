@@ -192,10 +192,13 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 if (isPointUpdate)
                                 {
                                     smaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(smaValue, 4) });
+                                    console.info('update', data.length, dataPointIndex, smaValue);
                                 }
                                 else
                                 {
-                                    smaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(smaValue, 4)], true, false, false);
+                                    smaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(smaValue, 4)], false, false, false);
+                                    chart.redraw();
+                                    console.info('add', data.length, dataPointIndex, smaValue);
                                 }
                             }
                         }
