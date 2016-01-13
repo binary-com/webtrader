@@ -20,7 +20,7 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
 
     var db = new loki();
     var barsTable = db.addCollection('bars_table');
-    // TODO: add common tasks for chartingRequestMap to this module
+    // TODO: add common tasks for   to this module
     //       move code from charts.js, ohlc_handler.js, stream_handler.js and symbol_handler.js
 
 
@@ -215,11 +215,14 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
             var req = {
                 "ticks_history": options.symbol,
                 "granularity": granularity,
-                "subscribe": options.subscribe || 0,
                 "count": options.count || 1,
                 "end": 'latest',
                 "style": style
             };
+
+            if (options.subscribe === 1) {
+                req.subscribe = 1;
+            }
 
             if(!is_tick) {
               var count = options.count || 1;

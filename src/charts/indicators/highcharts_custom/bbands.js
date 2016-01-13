@@ -182,34 +182,32 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                             seriesAreaData.push(data);
                         });
 
-                        // TO DO
-                        //bbandsAvrgSeriesMap[rangeUniqueID] = chart.addSeries({
-                        //    id: rangeUniqueID,
-                        //    data: seriesAreaData,
-                        //    name: "BBANDS Range",
-                        //    type: 'arearange',
-                        //    dataGrouping: series.options.dataGrouping,
-                        //    opposite: series.options.opposite,
-                        //    color: 'white',
-                        //    fillColor: 'rgba(28,28,28,0.5)',
-                        //    connectNulls: false,
-                        //    compare: series.options.compare,
-                        //    //Following properties, states, events, dataLabels, point are needed. Otherwise higcharts-more throws error
-                        //    states: {
-                        //        hover: {
-                        //            enabled: false
-                        //        }
-                        //    },
-                        //    events : {},
-                        //    dataLabels : {
-                        //        enabled : false
-                        //    },
-                        //    point: {
-                        //        events: {}
-                        //    },
-                        //    zIndex: 1,
-                        //    enableMouseTracking: false
-                        //}, false, false);
+                        bbandsAvrgSeriesMap[rangeUniqueID] = chart.addSeries({
+                            id: rangeUniqueID,
+                            data: seriesAreaData,
+                            name: "BBANDS Range",
+                            type: 'arearange',
+                            dataGrouping: series.options.dataGrouping,
+                            opposite: series.options.opposite,
+                            color: 'white',
+                            fillColor: 'rgba(28,28,28,0.5)',
+                            connectNulls: false,
+                            compare: series.options.compare,
+                            //Following properties, states, events, dataLabels, point are needed. Otherwise higcharts-more throws error
+                            states: {
+                                hover: {
+                                    enabled: false
+                                }
+                            },
+                            events : {},
+                            dataLabels : {
+                                enabled : false
+                            },
+                            point: {
+                                events: {}
+                            },
+                            enableMouseTracking: false
+                        }, false, false);
 
                         $(bbandsMdlSeriesMap[mdlUniqueID]).data({
                             onChartIndicator: true,
@@ -232,14 +230,14 @@ define(['jquery', 'indicator_base', 'highcharts-more'],function($, indicatorBase
                             parentSeriesID: bbandsOptions.parentSeriesID,
                             period: bbandsOptions.period
                         });
-                        // TO DO
-                        //$(bbandsAvrgSeriesMap[rangeUniqueID]).data({
-                        //    onChartIndicator: true,
-                        //    indicatorID: 'bbands',
-                        //    isIndicator: true,
-                        //    parentSeriesID: bbandsOptions.parentSeriesID,
-                        //    period: bbandsOptions.period
-                        //});
+
+                        $(bbandsAvrgSeriesMap[rangeUniqueID]).data({
+                            onChartIndicator: true,
+                            indicatorID: 'bbands',
+                            isIndicator: true,
+                            parentSeriesID: bbandsOptions.parentSeriesID,
+                            period: bbandsOptions.period
+                        });
                         chart.redraw();
                     }
                 };
