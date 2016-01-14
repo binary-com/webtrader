@@ -190,7 +190,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             state.buy.balance_after = buy.balance_after*1 + state.buy.payout*1;
         }
         state.buy.show_result = true;
-        fire_event(2*1000, 'close', buy, status); // portfolio has a delay when contracts are done
       }
       state.ticks.update_status = function() {
         var first_quote = _.first(state.ticks.array).quote + '',
@@ -225,7 +224,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       state.arrow.onclick = function() { $.growl.error({ message: 'Work in progress, check back soon!!!!' }); };
 
 
-      fire_event('open', buy);
       if(!state.arrow.visible) { register_ticks(state, extra); }
       else { state.back.visible = true; }
 
@@ -234,34 +232,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       show_callback(root);
     }
 
-    var callbacks = {};
-    var fire_event = function(timeout, name /*, args */){
-      var args = [].slice.call(arguments,1);
-      if(typeof timeout === 'number') { args.splice(1); }
-      else {
-        name = timeout;
-        timeout = 0;
-      }
-      var fns = callbacks[name] || [];
-      fns.forEach(function (cb) {
-          setTimeout(function(){
-            cb.apply(undefined, args);
-          },timeout);
-      });
-    }
     return {
-      events: {
-        on: function(name, cb){
-          (callbacks[name] = callbacks[name] || []).push(cb);
-          return cb;
-        },
-        off: function(cb){
-          if(callbacks[name]) {
-            var index = callbacks[name].indexOf(cb);
-            index !== -1 && callbacks[name].splice(index, 1);
-          }
-        }
-      },
       init: init
     }
 });
