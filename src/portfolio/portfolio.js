@@ -69,9 +69,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                   update_table();
                 };
                 /* refresh portfolio when a new contract is added or closed */
-                require(['trade/tradeConf'], function(trade_conf){
-                    trade_conf.events.on('open',refresh);
-                    trade_conf.events.on('close',refresh);
+                liveapi.events.on('transaction', function(data){
+                    var transaction = data.transaction;
+                    /* TODO: once the api provoided "longcode" use it to update
+                      the table and do not issue another {portfolio:1} call */
+                    update_table();
                 });
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
