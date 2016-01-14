@@ -30,16 +30,17 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             var cols = row.data();
             if(!cols)
               return; /* table might be empty */
+            var perv_indicative = cols[3];
+            cols[3] = bid_price; /* update the indicative column */
+            row.data(cols);
+
+            /* colorize indicative column on change */
+            var span = $('#' + id).find('td:nth-child(4)').find('span');
             if(contract.is_valid_to_sell === 0) {
               table.find('#' + id + ' > td:nth-child(4)').addClass('resale-not-offered');
-            }
-            else {
-              var perv_indicative = cols[3];
-              cols[3] = bid_price; /* update the indicative column */
-              row.data(cols);
-
-              /* colorize indicative column on change */
-              var span = $('#' + id).find('td:nth-child(4)').find('span');
+              span.removeClass('red green');
+            } else {
+              table.find('#' + id + ' > td:nth-child(4)').removeClass('resale-not-offered');
               span.removeClass('red green').addClass((perv_indicative*1) <= (bid_price*1) ? 'green' : 'red');
             }
         }
