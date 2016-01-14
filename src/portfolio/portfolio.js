@@ -181,7 +181,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     var id = contract.contract_id;
                     if (registered_contracts[id] !== true) {
                         registered_contracts[id] = true;
-                        liveapi.send({ proposal_open_contract: 1, contract_id: id })
+                        liveapi.send({ proposal_open_contract: 1, contract_id: id, subscribe: 1 })
                             .catch(function (err) {
                                 /* show a tooltip on indicative column mouseover */
                                 td = $('#' + id).find('td:nth-child(4)');
