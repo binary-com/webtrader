@@ -386,8 +386,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           if (_(['tick', 'daily']).contains(d.type)) {
             array.push({ tick: 'ticks', daily: 'days' }[d.type]);
             ranges.push({
-              min: d.min.replace('d', '') | 0,
-              max: d.max.replace('d', '') | 0,
+              min: d.min.replace('d', '').replace('t','') | 0,
+              max: d.max.replace('d', '').replace('t','') | 0,
               type: { tick: 'ticks', daily: 'days' }[d.type]
             });
             return;
