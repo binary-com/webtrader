@@ -79,7 +79,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
       var tr = e.target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
-      console.warn(transaction);
+      require(['viewtransaction/viewTransaction'], function(viewTransaction){
+          var symbol = transaction.shortcode.split('_')[1]; /* TODO: remove this when backend provided symbol */
+          viewTransaction.init({
+              symbol: symbol,
+              contract_id: transaction.contract_id,
+              longcode: transaction.longcode,
+              sell_time: transaction.sell_time,
+              purchase_time: transaction.purchase_time,
+              buy_price: transaction.buy_price,
+              sell_price: transaction.sell_price
+          });
+      })
     }
 
     function initProfitWin() {
