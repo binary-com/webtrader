@@ -1,8 +1,8 @@
 ﻿/**
  * Created by amin on October 29, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl", 'common/util'],
-    function ($, windows, liveapi) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl", 'common/util'],
+    function ($, windows, liveapi, _) {
     'use strict';
 
     var profitWin = null,
@@ -53,7 +53,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     trans.buy_price,
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
-                    profit
+                    profit,
+                    trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
             table.api().rows().remove();
@@ -76,13 +77,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
       if(e.target.tagName !== 'IMG')
         return;
       var tr = e.target.parentElement.parentElement;
-      console.warn(tr);
+      var transaction = table.api().row(tr).data();
+      transaction = _.last(transaction);
+      console.warn(transaction);
     }
 
     function initProfitWin() {
         profitWin = windows.createBlankWindow($('<div/>'), {
             title: 'Profit Table',
-            width: 900,
+            width: 750,
+            minWidth:700,
             minHeight:90,
             destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
             refresh: function() { datepicker.clear(); refreshTable(); },

@@ -2,31 +2,36 @@
  * Created by amin on 10/5/15.
  */
 
-table.profit-table-dialog {
-    /*table-layout:fixed;*/
-}
-
-table.profit-table-dialog th {
-    padding: 5px 5px !important;
-}
-table.profit-table-dialog td {
-    padding: 0 5px !important;
-}
-table.profit-table-dialog th,
-table.profit-table-dialog td
- {
-    text-align:center;
-    width: 12% !important; /* make important: jQ-datatables overrides this */
-}
-    table.profit-table-dialog span {
-        margin-bottom: 5px;
+table.profit-table-dialog th span {
+        height:2.5em !important;
         display:block;
         font-size:90%;
-    }
+    /*padding: 5px 5px !important;*/
+}
+table.profit-table-dialog th,
+table.profit-table-dialog td {
+    padding: 0 5px !important;
+    text-align:center;
+}
+table.profit-table-dialog th:nth-child(4),
+table.profit-table-dialog th:nth-child(7) {
+    width: 8% !important;
+}
+table.profit-table-dialog th:nth-child(6) {
+    width: 9% !important;
+}
+table.profit-table-dialog th:nth-child(1),
+table.profit-table-dialog th:nth-child(2),
+table.profit-table-dialog th:nth-child(5) {
+    width: 13% !important;
+}
+table.profit-table-dialog th:nth-child(3) {
+    width: 36% !important;
+}
+table.profit-table-dialog tr td:nth-child(3){
+    text-align: left;
+}
 
-    table.profit-table-dialog th.wide-column{
-        width: 28% !important;
-    }
 
     table.profit-table-dialog th > .search-input {
         text-align:center;
@@ -51,7 +56,9 @@ table.profit-table-dialog + div {
 table.profit-table-dialog img.arrow {
     width: 20px;
     height: 20px;
-    margin: 10px 0;
     cursor: pointer;
     float: right;
+    position: relative;
+    right: -5px;
+    top: 5px;
 }
