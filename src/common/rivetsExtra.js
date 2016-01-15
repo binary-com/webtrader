@@ -77,6 +77,10 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
         return value ? first : second;
       }
     }
+    /* rv binder to bind a given function to a value */
+    rv.formatters['bind'] = function(fn, value){
+      return fn.bind(undefined, value);
+    }
 
     /* ternary operator (condition ? first : second) */
     rv.formatters['ternary'] = function(condition, first, second){

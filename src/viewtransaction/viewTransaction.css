@@ -1,21 +1,35 @@
-.view-transaction-dialog { padding: 0 !important; }
+.view-transaction-dialog {
+  padding: 0 !important;
+  background: #fff !important;
+}
 .view-transaction-dialog * { margin: 0; padding: 0; }
 
 .view-transaction-dialog p {
   padding: 5px 0 2px 5px;
-  background: #fff;
 }
 .view-transaction-dialog ul {
   list-style: none;
-  height: 2em;
-  padding-left: 5px;
+  height: 2.5em;
   background: #eee;
 }
 .view-transaction-dialog ul li {
   display: inline-block;
-  width: 100px;
-  line-height: 2em;
+  padding-left: 15px;
+  line-height: 2.5em;
+  cursor: pointer;
+  transition:color 0.3s;
 }
 .view-transaction-dialog ul li.active {
-  color: orange;
+  color: #E98024;
+  position: relative;
+}
+.view-transaction-dialog ul li.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-width: 0  8px  8px;
+  border-style: solid;
+  border-color: #fff transparent;
 }

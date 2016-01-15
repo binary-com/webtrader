@@ -33,13 +33,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       var state = {
           route: {
               value: 'explanation',
+              update: function(value) { state.route.value = value; }
           },
           longcode: params.longcode,
-      };
-
-      state.route.update = function(value) {
-        console.warn(value);
-        state.route.value = value;
       };
 
       return state;
