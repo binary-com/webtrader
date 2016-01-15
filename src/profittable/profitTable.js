@@ -43,14 +43,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         var refresh = function (data) {
             var transactions = (data.profit_table && data.profit_table.transactions) || [];
             var rows = transactions.map(function (trans) {
+                var profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
+                var svg = profit > 0 ? 'up' : profit < 0 ? 'down' : 'equal';
+                var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
                 return [
                     epoch_to_string(trans.purchase_time, { utc: true }),
                     trans.transaction_id,
-                    trans.longcode,
+                    img + trans.longcode,
                     trans.buy_price,
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
-                    (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2) /* 2 decimal points */
+                    profit
                 ];
             });
             table.api().rows().remove();
