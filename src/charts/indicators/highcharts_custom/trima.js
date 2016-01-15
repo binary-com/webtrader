@@ -196,7 +196,10 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                                 }
                                 else
                                 {
-                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, false, false);
+                                    var shift = false;
+                                    if (indicatorBase.isOHLCorCandlestick(this.options.type))
+                                        shift = true;
+                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, shift, false);
                                 }
                             }
                         }
