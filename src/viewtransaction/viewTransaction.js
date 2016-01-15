@@ -14,7 +14,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
     require(['text!viewtransaction/viewTransaction.html'],function(html){
         var root = $(html);
         var transWin = windows.createBlankWindow(root, {
-            title: params.longcode,
+            title: 'Transaction ' + params.contract_id, /* TODO: use symbol_name instead */
             width: 700,
             minHeight:90,
             destroy: function() { },
@@ -33,7 +33,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       var state = {
           route: {
               value: 'explanation',
-          }
+          },
+          longcode: params.longcode,
       };
 
       state.route.update = function(value) {

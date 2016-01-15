@@ -1,0 +1,21 @@
+.view-transaction-dialog { padding: 0 !important; }
+.view-transaction-dialog * { margin: 0; padding: 0; }
+
+.view-transaction-dialog p {
+  padding: 5px 0 2px 5px;
+  background: #fff;
+}
+.view-transaction-dialog ul {
+  list-style: none;
+  height: 2em;
+  padding-left: 5px;
+  background: #eee;
+}
+.view-transaction-dialog ul li {
+  display: inline-block;
+  width: 100px;
+  line-height: 2em;
+}
+.view-transaction-dialog ul li.active {
+  color: orange;
+}
