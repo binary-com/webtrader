@@ -2,8 +2,12 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
-  function ( $,chartingRequestMap, liveapi, ohlc_handler,currentPrice ) {
+define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
+        "websockets/ohlc_handler","currentPriceIndicator",
+        "charts/indicators/highcharts_custom/indicators",
+        "highcharts-exporting", "common/util"
+        ],
+  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators ) {
 
     "use strict";
 
@@ -16,6 +20,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         });
 
     });
+
+    indicators.initHighchartIndicators(chartingRequestMap.barsTable);
 
     function destroy(options) {
         var containerIDWithHash = options.containerIDWithHash,

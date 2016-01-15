@@ -67,18 +67,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/sma'], function ( sma ) {
-                                sma.init();
-                                var options = {
-                                    period : parseInt($html.find(".sma_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#sma_strokeWidth").val()),
-                                    dashStyle : $html.find("#sma_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#sma_appliedTo").val())
-                                }
-                                //Add SMA for the main series
-                                $($(".sma").data('refererChartID')).highcharts().series[0].addSMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".sma_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#sma_strokeWidth").val()),
+                                dashStyle : $html.find("#sma_dashStyle").val(),
+                                appliedTo: parseInt($html.find("#sma_appliedTo").val())
+                            }
+                            //Add SMA for the main series
+                            $($(".sma").data('refererChartID')).highcharts().series[0].addIndicator('sma', options);
 
                             closeDialog.call($html);
                         }

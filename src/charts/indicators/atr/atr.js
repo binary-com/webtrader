@@ -115,33 +115,30 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/atr'], function (atr) {
-                                atr.init();
-                                var levels = [];
-                                $.each(table.rows().nodes(), function () {
-                                    var data = $(this).data('level');
-                                    if (data) {
-                                        levels.push({
-                                            color: data.stroke,
-                                            dashStyle: data.dashStyle,
-                                            width: data.strokeWidth,
-                                            value: data.level,
-                                            label: {
-                                                text: data.level
-                                            }
-                                        });
-                                    }
-                                });
-                                var options = {
-                                    period: parseInt($html.find(".atr_input_width_for_period").val()),
-                                    stroke: defaultStrokeColor,
-                                    strokeWidth: parseInt($html.find("#atr_strokeWidth").val()),
-                                    dashStyle: $html.find("#atr_dashStyle").val(),
-                                    levels: levels
-                                };
-                                //Add ATR for the main series
-                                $($(".atr").data('refererChartID')).highcharts().series[0].addATR(options);
+                            var levels = [];
+                            $.each(table.rows().nodes(), function () {
+                                var data = $(this).data('level');
+                                if (data) {
+                                    levels.push({
+                                        color: data.stroke,
+                                        dashStyle: data.dashStyle,
+                                        width: data.strokeWidth,
+                                        value: data.level,
+                                        label: {
+                                            text: data.level
+                                        }
+                                    });
+                                }
                             });
+                            var options = {
+                                period: parseInt($html.find(".atr_input_width_for_period").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#atr_strokeWidth").val()),
+                                dashStyle: $html.find("#atr_dashStyle").val(),
+                                levels: levels
+                            };
+                            //Add ATR for the main series
+                            $($(".atr").data('refererChartID')).highcharts().series[0].addIndicator('atr', options);
 
                             closeDialog.call($html);
 

@@ -67,18 +67,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/ema'], function ( ema ) {
-                                ema.init();
-                                var options = {
-                                    period : parseInt($html.find(".ema_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#ema_strokeWidth").val()),
-                                    dashStyle : $html.find("#ema_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#ema_appliedTo").val())
-                                }
-                                //Add EMA for the main series
-                                $($(".ema").data('refererChartID')).highcharts().series[0].addEMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".ema_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#ema_strokeWidth").val()),
+                                dashStyle : $html.find("#ema_dashStyle").val(),
+                                appliedTo: parseInt($html.find("#ema_appliedTo").val())
+                            }
+                            //Add EMA for the main series
+                            $($(".ema").data('refererChartID')).highcharts().series[0].addIndicator('ema', options);
 
                             closeDialog.call($html);
                         }
