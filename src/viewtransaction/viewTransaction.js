@@ -3,6 +3,11 @@
  */
 
 define(["jquery", "windows/windows", "websockets/binary_websockets", "jquery-growl", 'common/util'], function($, windows, liveapi){
+  require(['css!viewtransaction/viewTransaction.css']);
 
-  return { };
+  function init() {
+
+  }
+
+  return { init: init };
 });

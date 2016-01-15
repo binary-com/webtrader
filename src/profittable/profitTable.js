@@ -71,6 +71,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         });
     }
 
+
+    var on_arrow_click = function(e){
+      if(e.target.tagName !== 'IMG')
+        return;
+      var tr = e.target.parentElement.parentElement;
+      console.warn(tr);
+    }
+
     function initProfitWin() {
         profitWin = windows.createBlankWindow($('<div/>'), {
             title: 'Profit Table',
@@ -120,6 +128,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
 
             profitWin.dialog('open');
+            profitWin.on('click', on_arrow_click);
         });
     }
 
