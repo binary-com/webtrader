@@ -13,7 +13,6 @@
 /*************** tabbar ******************/
 .view-transaction-dialog ul {
   list-style: none;
-  height: 2.5em;
   background: #eee;
 }
 .view-transaction-dialog ul li {
@@ -33,16 +32,19 @@
   display: block;
   position: absolute;
   bottom: -3px;;
-  left: 18px;
-  border-width: 0  10px  10px;
+  left: 50%;
+  border-width: 0  8px  8px;
   border-style: solid;
   border-color: #fff transparent;
 }
 .view-transaction-dialog ul li.active::before {
-  left: 14px;
-  border-width: 0  14px  14px;
+  left: -webkit-calc(50% - 2px);
+  left: -moz-calc(50% - 2px);
+  left: calc(50% - 4px);
+  border-width: 0  12px  12px;
   border-color: #ddd transparent;
 }
+
 /***************** table tab *******************/
 .view-transaction-dialog .content {
     flex: 1 1 100%;
@@ -62,6 +64,15 @@
   margin: 2px;
   background: #fff;
 }
+.view-transaction-dialog .content .table div p {
+  padding: 5px 0;
+  margin-left: 15%;
+  font-weight: bold;
+}
+.view-transaction-dialog .content .table div span {
+  margin-left: 15%;
+}
+
 /******************* chart tab ******************/
 .view-transaction-dialog .content .chart,
 .view-transaction-dialog .content .explanation {

@@ -97,7 +97,9 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
         'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
         'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
       };
-      return (currency_symbols[currency] || currency) + value;
+      if(value)
+        return (currency_symbols[currency] || currency) + value;
+      return value;
     }
     /* formatter to convert epoch to utc-time in hh:mm:ss format */
     rv.formatters['utc-time'] = function(epoch){
