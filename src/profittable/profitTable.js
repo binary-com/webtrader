@@ -80,7 +80,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
-          var symbol = transaction.shortcode.split('_')[1]; /* TODO: remove this when backend provided symbol */
+          var splits = transaction.shortcode.split('_'); /* TODO: remove this when backend provided symbol */
+          var symbol = splits[1] !== 'R' ? splits[1] : 'R_' + splits[2];
           viewTransaction.init({
               symbol: symbol,
               contract_id: transaction.contract_id,
