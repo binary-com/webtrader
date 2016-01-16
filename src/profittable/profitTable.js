@@ -99,7 +99,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             width: 750,
             minWidth:700,
             minHeight:90,
-            destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
+            destroy: function() { table && table.DataTable().destroy(true); },
+            close: function() {  profitWin = null; },
             refresh: function() { datepicker.clear(); refreshTable(); },
             'data-authorized': 'true'
         });

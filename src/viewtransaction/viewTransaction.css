@@ -31,7 +31,7 @@
   content: "";
   display: block;
   position: absolute;
-  bottom: -3px;;
+  bottom: -2px;;
   left: 50%;
   border-width: 0  8px  8px;
   border-style: solid;
@@ -40,8 +40,8 @@
 .view-transaction-dialog ul li.active::before {
   left: -webkit-calc(50% - 2px);
   left: -moz-calc(50% - 2px);
-  left: calc(50% - 4px);
-  border-width: 0  12px  12px;
+  left: calc(50% - 2px);
+  border-width: 0  10px  10px;
   border-color: #ddd transparent;
 }
 
@@ -57,13 +57,17 @@
   min-height: 200px;
   display: flex;
   flex-flow: row wrap;
-  margin: 1px;
+  margin: 1px 0;
 }
 .view-transaction-dialog .content .table div {
   flex: 1 1 30%;
-  margin: 2px;
   background: #fff;
+  margin: 0;
 }
+.view-transaction-dialog .content .table div:nth-child(3n + 1) { margin: 1px 2px 1px 0; }
+.view-transaction-dialog .content .table div:nth-child(3n + 2) { margin: 1px 0; }
+.view-transaction-dialog .content .table div:nth-child(3n) { margin: 1px 0 1px 2px; }
+
 .view-transaction-dialog .content .table div p {
   padding: 5px 0;
   margin-left: 15%;
@@ -78,12 +82,12 @@
 .view-transaction-dialog .content .explanation {
   width: 100%;
   background: #fff;
-  margin: 3px;
+  margin: 2px 0;
 }
 
 /************* footer *************************/
 .view-transaction-dialog .footer {
   line-height: 2em;
   background:  #eee;
-  padding-left: 10px;
+  text-align: center;;
 }

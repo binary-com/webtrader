@@ -31,13 +31,13 @@
       </div>
 
       <div> <p>Purchase Price</p>
-          <span rv-text="table.purchase_price | currency table.currency"></span>
+          <span rv-text="table.purchase_price | prepend table.currency | or '-'"></span>
       </div>
       <div> <p>Indicative Price</p>
-          <span rv-text="table.indicative_price | currency table.currency | or '-'"></span>
+          <span rv-text="table.indicative_price | prepend table.currency | or '-'"></span>
       </div>
       <div> <p>Final Price</p>
-          <span rv-text="table.final_price | currency table.currency | or '-'"></span>
+          <span rv-text="table.final_price | prepend table.currency | or '-'"></span>
       </div>
     </div>
 
@@ -47,6 +47,6 @@
 
   </div>
   <div class="footer">
-    footer here
+    <span rv-text="validation"></span>
   </div>
 </div>

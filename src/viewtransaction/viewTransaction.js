@@ -36,8 +36,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
               update: function(value) { state.route.value = value; }
           },
           longcode: params.longcode,
+          validation: '-',
           table: {
-            currency: params.currency || 'USD',
+            currency: params.currency ? params.currency + ' ' : 'USD ',
             purchase_time: params.purchase_time && moment.utc(params.purchase_time).format('YYYY-MM-DD HH:mm:ss'),
             now: moment.utc().format('YYYY-MM-DD HH:mm:ss'),
             sell_time: params.sell_time && moment.utc(params.sell_time).format('YYYY-MM-DD HH:mm:ss'),
@@ -46,11 +47,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
             current_spot: undefined,
             exit_spot: undefined,
 
-            purchase_price: params.purchase_price,
+            purchase_price: params.buy_price && (params.buy_price*1).toFixed(2),
             indicative_price: undefined,
-            final_price: params.final_price,
+            final_price: params.sell_price && (params.sell_price*1).toFixed(2),
           },
+
       };
+
+      liveapi.send({proposal_open_contract: 1, contract_id: params.contract_id})
+             .then(function(data){
+               // TODO: fix this
+               state.validation = 'This contract has expired';
+             })
+             .catch(function(err){
+               console.error(err);
+             });
 
       return state;
   }
