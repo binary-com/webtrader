@@ -17,20 +17,24 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           title: '',
           credits: {enabled: false},
           chart: {
-              type: 'line',
+              type: 'datetime',
               renderTo: el,
               backgroundColor: null, /* make background transparent */
               width: (el.getAttribute('width') || 350)*1,
               height: (el.getAttribute('height') || 120)*1,
           },
           tooltip: { formatter: function () {
-              var tick = model.array[this.x-1];
-              return (tick && tick.tooltip) || false;
+            return 'tooltip';
+              // var tick = model.array[this.x-1];
+              // return (tick && tick.tooltip) || false;
           }},
           xAxis: {
               type: 'linear',
-              min: 1,
-              max: el.getAttribute('tick-count')*1 + 1 /* exist spot vertical plot will not be at the end */,
+              min: 0,
+              startOnTick: true,
+              endOnTick: true,
+              // min: el.getAttribute('start')*1,
+              // max: el.getAttribute('end')*1 + 1 /* exist spot vertical plot will not be at the end */,
               labels: { enabled: false, }
           },
           yAxis: {
@@ -65,17 +69,29 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         });
       };
 
-      var index = ticks.length;
-      if(index == 0) return;
+      /* if its an array then we will show a live view and only update the last element */
+      if(Array.isArray(ticks)) {
+        var index = ticks.length;
+        if(index == 0) return;
 
-      var tick = _.last(ticks);
-      el.chart.series[0].addPoint([index, tick.quote*1]);
+        var tick = _.last(ticks);
+        el.chart.series[0].addPoint([index, tick.quote*1]);
 
-      var plot_x = model.getPlotX(); // could return null
-      plot_x && addPlotLineX(el.chart,plot_x);
-      var plot_y = model.getPlotY(); // could return null
-      plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
-      plot_y && addPlotLineY(el.chart, plot_y);
+        var plot_x = model.getPlotX(); // could return null
+        plot_x && addPlotLineX(el.chart,plot_x);
+        var plot_y = model.getPlotY(); // could return null
+        plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
+        plot_y && addPlotLineY(el.chart, plot_y);
+      }
+      else { /* ticks : { times: [], prices: []}, */
+          var points = [];
+          for(var i = 0, len = ticks.times.length; i < len; ++i) {
+            points.push([ticks.times[i],ticks.prices[i]])
+            el.chart.series[0].addPoint([ticks.times[i],ticks.prices[i]]);
+          }
+        // el.chart.addSeries({data: points});
+        console.warn(points);
+      }
 
     } /* end of routine() */
   };
@@ -128,6 +144,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
               prices: [],
               times: []
             },
+            purchase_time: params.purchase_price,
+            sell_time: params.sell_time,
             loading: 'Loading ' + params.symbol + ' ...',
           }
       };
@@ -142,7 +160,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                state.validation = err.message;
                console.error(err);
              });
-             
+
       /* TODO: use the loading message in the chart */
       liveapi.send({ticks_history: params.symbol, start: params.purchase_time, end: params.sell_time, count: 10*1000 /* no limit */})
              .then(function(data){

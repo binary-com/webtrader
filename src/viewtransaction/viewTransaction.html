@@ -42,7 +42,12 @@
     </div>
 
     <div class="chart" rv-show="route.value | eq 'chart'">
-      chart!
+        <div class='transaction-chart'
+             rv-if="chart.loading | eq ''"
+             rv-transaction-chart='chart.history'
+             rv-attr-min='chart.purchase_time'
+             rv-attr-max='chart.sell_time'
+             > </div>
     </div>
 
   </div>
