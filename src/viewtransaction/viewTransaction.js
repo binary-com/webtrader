@@ -32,7 +32,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   function init_state(params){
       var state = {
           route: {
-              value: 'explanation',
+              value: 'table',
               update: function(value) { state.route.value = value; }
           },
           longcode: params.longcode,

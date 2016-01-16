@@ -5,4 +5,30 @@
       <li rv-class-active="route.value | eq 'chart'" rv-on-click="route.update | bind 'chart'"> Chart </li>
       <li rv-class-active="route.value | eq 'explanation'" rv-on-click="route.update | bind 'explanation'"> Explanation </li>
   </ul>
+  <div class="content">
+
+    <div class="explanation" rv-show="route.value | eq 'explanation'"> TODO: explanation </div>
+
+    <div class="table" rv-show="route.value | eq 'table'">
+      <div>a</div>
+      <div>b</div>
+      <div>c</div>
+
+      <div>d</div>
+      <div>e</div>
+      <div>f</div>
+
+      <div>g</div>
+      <div>h</div>
+      <div>i</div>
+    </div>
+
+    <div class="chart" rv-show="route.value | eq 'chart'">
+      chart!
+    </div>
+
+  </div>
+  <div class="footer">
+    footer here
+  </div>
 </div>

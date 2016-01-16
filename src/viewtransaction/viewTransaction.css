@@ -1,12 +1,16 @@
 .view-transaction-dialog {
   padding: 0 !important;
   background: #fff !important;
+  display: flex !important;
+  flex-flow: column;
 }
 .view-transaction-dialog * { margin: 0; padding: 0; }
 
 .view-transaction-dialog p {
   padding: 5px 0 2px 5px;
 }
+
+/*************** tabbar ******************/
 .view-transaction-dialog ul {
   list-style: none;
   height: 2.5em;
@@ -23,13 +27,52 @@
   color: #E98024;
   position: relative;
 }
+.view-transaction-dialog ul li.active::before,
 .view-transaction-dialog ul li.active::after {
   content: "";
   display: block;
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  border-width: 0  8px  8px;
+  bottom: -3px;;
+  left: 18px;
+  border-width: 0  10px  10px;
   border-style: solid;
   border-color: #fff transparent;
+}
+.view-transaction-dialog ul li.active::before {
+  left: 14px;
+  border-width: 0  14px  14px;
+  border-color: #ddd transparent;
+}
+/***************** table tab *******************/
+.view-transaction-dialog .content {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    background: #ddd;
+}
+.view-transaction-dialog .content .table {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1px;
+}
+.view-transaction-dialog .content .table div {
+  flex: 1 1 30%;
+  margin: 2px;
+  background: #fff;
+}
+/******************* chart tab ******************/
+.view-transaction-dialog .content .chart,
+.view-transaction-dialog .content .explanation {
+  width: 100%;
+  background: #fff;
+  margin: 3px;
+}
+
+/************* footer *************************/
+.view-transaction-dialog .footer {
+  line-height: 2em;
+  background:  #eee;
+  padding-left: 10px;
 }
