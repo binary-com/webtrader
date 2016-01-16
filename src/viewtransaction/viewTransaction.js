@@ -8,54 +8,45 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
-  /* rv binder to show tick chart for this confirmation dialog */
-  rv.binders['transaction-chart'] = {
-    priority: 64, /* a low priority to apply last */
-    bind: function(el) {
-      var model = this.model;
-      console.warn(model.ticks);
+  function init_chart(root, ticks) {
+      var el = root.find('.transaction-chart')[0];
       var options = {
         title: '',
-        credits: {enabled: false},
+        credits: { href: 'https://www.binary.com', text: 'Binary.com' },
         chart: {
           type: 'live',
           renderTo: el,
           backgroundColor: null, /* make background transparent */
-          width: (el.getAttribute('width') || 700)*1,
-          height: (el.getAttribute('height') || 300)*1,
+          width: 0,
+          height: 0,
         },
-        // tooltip: { formatter: function () {
-        //   return 'tooltip';
-        //   // var tick = model.array[this.x-1];
-        //   // return (tick && tick.tooltip) || false;
-        // }},
+        tooltip: { formatter: function () { return moment.utc(this.x*1000).format("dddd, MMM D, HH:mm:ss"); } },
         xAxis: {
           type: 'datetime',
           categories:null,
           startOnTick: false,
           endOnTick: false,
-          min: _.first(model.ticks)[0],
-          max: _.last(model.ticks)[0],
+          min: _.first(ticks)[0],
+          max: _.last(ticks)[0],
           labels: { overflow:"justify", format:"{value:%H:%M:%S}" },
         },
         yAxis: {
           labels: { align: 'left', x: 0, y: -2 },
           title: '',
-          gridLineWidth: 0,
+          // gridLineWidth: 0,
         },
         series: [{
-          id: 'main-series',
-          data: model.ticks,
-          tooltip:{ 'xDateFormat':'%A, %b %e, %H:%M:%S GMT' },
+          data: ticks,
           type:'line'
         }],
         exporting: {enabled: false, enableImages: false},
-        // legend: {enabled: false},
-      }
-      el.chart = new Highcharts.Chart(options);
-    }, /* end of => bind() */
-    routine: function(el, ticks){
-      return;
+        legend: {enabled: false},
+        navigator: { enabled: true },
+      };
+      return el.chart = new Highcharts.Chart(options);
+  };
+
+  function update_chart(el, chart, ticks){
       var model = this.model;
       var addPlotLineX = function(chart, options) {
         chart.xAxis[0].addPlotLine({
@@ -90,30 +81,33 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       plot_y && addPlotLineY(el.chart, plot_y);
 
     } /* end of routine() */
-  };
 
   /* params : { symbol: ,contract_id: ,longcode: ,sell_time: ,
                 purchase_time: ,buy_price: ,sell_price:, currency:, } */
   function init(params) {
     require(['text!viewtransaction/viewTransaction.html'],function(html){
         var root = $(html);
+        var state = init_state(params, root);
         var transWin = windows.createBlankWindow(root, {
             title: 'Transaction ' + params.contract_id, /* TODO: use symbol_name instead */
             width: 700,
             minHeight:90,
             destroy: function() { },
+            resize: function() {
+              state.chart.manual_reflow();
+              // state.chart.chart && state.chart.chart.reflow();
+            },
             close: function() { view.unbind(); },
             'data-authorized': 'true'
         });
 
-        var state = init_state(params);
         var view = rv.bind(root[0],state)
 
         transWin.dialog('open');
     })
   }
 
-  function init_state(params){
+  function init_state(params, root){
       var state = {
           route: {
               // value: 'table',
@@ -137,11 +131,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
             final_price: params.sell_price && (params.sell_price*1).toFixed(2),
           },
           chart: {
-            ticks: [/* epoch, price */],
-            purchase_time: params.purchase_time,
-            sell_time: params.sell_time,
-            loading: 'Loading ' + params.symbol + ' ...',
+            chart: null, /* highchar object */
+            loading: 'Loading ' + params.symbol + ' ...',/* TODO: show this loading message in the chart */
           }
+      };
+
+      state.chart.manual_reflow = function(w, h) {
+        w  = w || 0;
+        h = h || -90;
+        if(!state.chart.chart) return;
+        var container = root;// root.find('.chart-container');
+        var width = container.width(), height = container.height();
+        state.chart.chart.setSize(width + w, height +h , false);
+        state.chart.chart.hasUserSize = null;
       };
 
       /* TODO: register for the stream and update the status */
@@ -154,17 +156,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                console.error(err);
              });
 
-      /* TODO: use the loading message in the chart */
       liveapi.send({ticks_history: params.symbol, start: params.purchase_time, end: params.sell_time, count: 10*1000 /* no limit */})
              .then(function(data){
-               var times = data.history.times;
-               var prices = data.history.prices;
+               var times = data.history.times, prices = data.history.prices;
                var ticks = [];
                for(var i = 0; i < times.length; ++i) {
                  ticks.push([times[i]*1, prices[i]*1]);
                }
-               state.chart.ticks = ticks;
                state.chart.loading = '';
+               state.chart.chart = init_chart(root, ticks);
+               state.chart.manual_reflow();
              })
              .catch(function(err) {
                chart.loading = err.message;
@@ -172,6 +173,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
              });
 
       window.state = state; /* TODO: remove this when you are done!*/
+      window.root = root;
       return state;
   }
 

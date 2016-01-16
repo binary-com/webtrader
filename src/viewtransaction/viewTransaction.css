@@ -3,6 +3,7 @@
   background: #fff !important;
   display: flex !important;
   flex-flow: column;
+  overflow: hidden !important;
 }
 .view-transaction-dialog * { margin: 0; padding: 0; }
 
@@ -47,13 +48,14 @@
 
 /***************** table tab *******************/
 .view-transaction-dialog .content {
-    flex: 1 1 100%;
+    flex: 1 1 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background: #ddd;
 }
 .view-transaction-dialog .content .table {
-  width: 100%;
+  flex: 1 1 auto;
   min-height: 200px;
   display: flex;
   flex-flow: row wrap;
@@ -78,9 +80,15 @@
 }
 
 /******************* chart tab ******************/
-.view-transaction-dialog .content .chart,
+.view-transaction-dialog .content .transaction-chart {
+    /*width: 100%;*/
+}
+
+.view-transaction-dialog .content .chart-container,
 .view-transaction-dialog .content .explanation {
-  width: 100%;
+  height: calc(100% - 86px);
+  /*height: 100%;*/
+  flex: 1 1 auto;
   background: #fff;
   margin: 2px 0;
 }
