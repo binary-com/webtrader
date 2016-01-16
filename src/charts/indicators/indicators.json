@@ -52,567 +52,490 @@
   "rocr": {
     "id": "rocr",
     "long_display_name": "Rate Of Change Ratio",
-    "short_display_name": "ROCR",
-	  "ohlcOnly" : false
+    "short_display_name": "ROCR"
   },
 
   "min": {
     "id": "min",
     "long_display_name": "Minimum",
-    "short_display_name": "MIN",
-	  "ohlcOnly" : false
+    "short_display_name": "MIN"
   },
 
   "max": {
     "id": "max",
     "long_display_name": "Maximum",
-    "short_display_name": "MAX",
-	  "ohlcOnly" : false
+    "short_display_name": "MAX"
   },
 
   "sum": {
     "id": "sum",
     "long_display_name": "Summation",
-    "short_display_name": "SUM",
-	  "ohlcOnly" : false
+    "short_display_name": "SUM"
   },
 
   "wma": {
     "id": "wma",
     "long_display_name": "Weighted Moving Average",
     "short_display_name": "WMA",
-	  "ohlcOnly" : false
+    "onChartIndicator": true
   },
 
   "tema": {
     "id": "tema",
     "long_display_name": "Triple Exponential Moving Average",
     "short_display_name": "TEMA",
-    "onChartIndicator" : true
+    "onChartIndicator": true
   },
 
   "trima": {
     "id": "trima",
     "long_display_name": "Triangular Moving Average",
     "short_display_name": "TRIMA",
-	  "ohlcOnly" : false
+    "onChartIndicator": true
   },
 
   "natr": {
     "id": "natr",
     "long_display_name": "Normalized Average True Range",
-    "short_display_name": "NATR",
-	  "ohlcOnly" : false
+    "short_display_name": "NATR"
   },
 
   "bop": {
     "id": "bop",
     "long_display_name": "Balance of Power",
-    "short_display_name": "BOP",
-    "ohlcOnly" : true
+    "short_display_name": "BOP"
   },
 
   "cdl2crows": {
     "id": "cdl2crows",
     "long_display_name": "Two Crows",
-    "short_display_name": "CDL2CROWS",
-    "ohlcOnly" : true
+    "short_display_name": "CDL2CROWS"
   },
 
   "cdl3blackcrows": {
     "id": "cdl3blackcrows",
     "long_display_name": "Three Black Crows",
-    "short_display_name": "CDL3BLACKCROWS",
-    "ohlcOnly" : true
+    "short_display_name": "CDL3BLACKCROWS"
   },
 
   "cdl3inside": {
     "id": "cdl3inside",
     "long_display_name": "Three Inside Up/Down",
-    "short_display_name": "CDL3INSIDE",
-    "ohlcOnly" : true
+    "short_display_name": "CDL3INSIDE"
   },
 
   "cdl3linestrike": {
     "id": "cdl3linestrike",
     "long_display_name": "Three-Line Strike",
-    "short_display_name": "CDL3LINESTRIKE",
-    "ohlcOnly" : true
+    "short_display_name": "CDL3LINESTRIKE"
   },
 
   "cdl3outside": {
     "id": "cdl3outside",
     "long_display_name": "Three Outside Up/Down",
-    "short_display_name": "CDL3OUTSIDE",
-    "ohlcOnly" : true
+    "short_display_name": "CDL3OUTSIDE"
   },
 
   "cdl3starssouth": {
     "id": "cdl3starssouth",
     "long_display_name": "Three Stars In The South",
-    "short_display_name": "CDL3STARSSOUTH",
-    "ohlcOnly" : true
+    "short_display_name": "CDL3STARSSOUTH"
   },
 
   "cdl3whitesoldiers": {
     "id": "cdl3whitesoldiers",
     "long_display_name": "Three Advancing White Soldiers",
-    "short_display_name": "CDL3WHITESOLDIERS",
-    "ohlcOnly" : true
+    "short_display_name": "CDL3WHITESOLDIERS"
   },
 
   "cdldoji": {
     "id": "cdldoji",
     "long_display_name": "Doji",
-    "short_display_name": "CDLDOJI",
-    "ohlcOnly" : true
+    "short_display_name": "CDLDOJI"
   },
 
   "cdlabandonedbaby": {
     "id": "cdlabandonedbaby",
     "long_display_name": "Abandoned Baby",
-    "short_display_name": "CDLABANDONEDBABY",
-    "ohlcOnly" : true
+    "short_display_name": "CDLABANDONEDBABY"
   },
 
   "cdlclosingmarubozu": {
     "id": "cdlclosingmarubozu",
     "long_display_name": "Closing Marubozu",
-    "short_display_name": "CDLCLOSINGMARUBOZU",
-    "ohlcOnly" : true
+    "short_display_name": "CDLCLOSINGMARUBOZU"
   },
 
   "cdldojistar": {
     "id": "cdldojistar",
     "long_display_name": "Doji Star",
-    "short_display_name": "CDLDOJISTAR",
-    "ohlcOnly" : true
+    "short_display_name": "CDLDOJISTAR"
   },
 
   "cdlthrusting": {
     "id": "cdlthrusting",
     "long_display_name": "Thrusting Pattern",
-    "short_display_name": "CDLTHRUSTING",
-    "ohlcOnly" : true
+    "short_display_name": "CDLTHRUSTING"
   },
   
  "bbands": {
     "id": "bbands",
     "long_display_name": "Bollinger Bands",
-    "short_display_name": "BBANDS",
-    "ohlcOnly" : false
+    "short_display_name": "BBANDS"
   },
 
   "cdlshootingstar": {
     "id": "cdlshootingstar",
     "long_display_name": "Shooting Star",
-    "short_display_name": "CDLSHOOTINGSTAR",
-    "ohlcOnly" : true
+    "short_display_name": "CDLSHOOTINGSTAR"
   },
 
   "sar": {
     "id": "sar",
     "long_display_name": "Parabolic SAR",
-    "short_display_name": "SAR",
-    "ohlcOnly" : true
+    "short_display_name": "SAR"
   },
 
    "macd": {
     "id": "macd",
     "long_display_name": "Moving Average Convergence/Divergence",
-    "short_display_name": "MACD",
-    "ohlcOnly" : true
+    "short_display_name": "MACD"
   },
   
   "cdlengulfing": {
     "id": "cdlengulfing",
     "long_display_name": "Engulfing Pattern",
-    "short_display_name": "CDLENGULFING",
-    "ohlcOnly" : true
+    "short_display_name": "CDLENGULFING"
   },
   
   "wclprice": {
     "id": "wclprice",
     "long_display_name": "Weighted Close Price",
-    "short_display_name": "WCLPRICE",
-    "ohlcOnly" : true
+    "short_display_name": "WCLPRICE"
   },
    
   "cci": {
     "id": "cci",
     "long_display_name": "Commodity Channel Index",
-    "short_display_name": "CCI",
-    "ohlcOnly" : true
+    "short_display_name": "CCI"
   },
 
   "dema": {
     "id": "dema",
     "long_display_name": "Double Exponential Moving Average",
-    "short_display_name": "DEMA",
-    "onChartIndicator" : true
+    "short_display_name": "DEMA"
   },
 
   "kama": {
     "id": "kama",
     "long_display_name": "Kaufman's Adaptive Moving Average",
-    "short_display_name": "KAMA",
-    "ohlcOnly" : false
+    "short_display_name": "KAMA"
   },
 
   "t3": {
     "id": "t3",
     "long_display_name": "Triple Exponential Moving Average (T3)",
-    "short_display_name": "T3",
-    "ohlcOnly" : false
+    "short_display_name": "T3"
   },
 
    "hma": {
     "id": "hma",
     "long_display_name": "Hull Moving Average",
     "short_display_name": "HMA",
-     "onChartIndicator" : true
+     "onChartIndicator": true
   },
 
    "lwma": {
     "id": "lwma",
     "long_display_name": "Linearly Weighted Moving Average",
-    "short_display_name": "LWMA",
-    "ohlcOnly" : false
+    "short_display_name": "LWMA"
   },
 
   "smma": {
     "id": "smma",
     "long_display_name": "Smoothed Moving Average",
-    "short_display_name": "SMMA",
-    "ohlcOnly" : false
+    "short_display_name": "SMMA"
   },
 
     "mama": {
     "id": "mama",
     "long_display_name": "Mesa Adaptive Moving Average",
-    "short_display_name": "MAMA",
-    "ohlcOnly" : false
+    "short_display_name": "MAMA"
   },
   
    "cdlupsidegap2crows": {
     "id": "cdlupsidegap2crows",
     "long_display_name": "Upside/Downside Gap Two Crows",
-    "short_display_name": "CDLUPSIDEGAP2CROWS",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLUPSIDEGAP2CROWS"
   },
    
    "cdlxsidegap3methods":{
     "id": "cdlxsidegap3methods",
     "long_display_name": "Upside/Downside Gap Three Methods",
-    "short_display_name": "CDLXSIDEGAP3METHODS",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLXSIDEGAP3METHODS"
    },
    
    "cdltasukigap":{
     "id": "cdltasukigap",
     "long_display_name": "Tasuki Gap",
-    "short_display_name": "CDLTASUKIGAP",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLTASUKIGAP"
    },
 
    "cdlpiercing":{
     "id": "cdlpiercing",
     "long_display_name": "Piercing Pattern",
-    "short_display_name": "CDLPIERCING",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLPIERCING"
    },
 
    "cdlbelthold":{
     "id": "cdlbelthold",
     "long_display_name": "Belt-hold ",
-    "short_display_name": "CDLBELTHOLD",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLBELTHOLD"
    },
 
    "cdldarkcloudcover":{
     "id": "cdldarkcloudcover",
     "long_display_name": "Dark Cloud Cover ",
-    "short_display_name": "CDLDARKCLOUDCOVER",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLDARKCLOUDCOVER"
    },
 
    "cdlgapsidesidewhite":{
     "id": "cdlgapsidesidewhite",
     "long_display_name": "Up/Down-Gap Side-By-Side White Lines",
-    "short_display_name": "CDLGAPSIDESIDEWHITE",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLGAPSIDESIDEWHITE"
    },
 
    "cdltakuri":{
     "id": "cdltakuri",
     "long_display_name": "Takuri (Dragonfly Doji with very long lower shadow)",
-    "short_display_name": "CDLTAKURI",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLTAKURI"
    },
 
    "cdlharami":{
     "id": "cdlharami",
     "long_display_name": "Harami Pattern",
-    "short_display_name": "CDLHARAMI",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLHARAMI"
    },
 
    "cdlhammer":{
     "id": "cdlhammer",
     "long_display_name": "Hammer",
-    "short_display_name": "CDLHAMMER",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLHAMMER"
    },
 
    "cdlhangingman":{
     "id": "cdlhangingman",
     "long_display_name": "Hanging Man",
-    "short_display_name": "CDLHANGINGMAN",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLHANGINGMAN"
    },
 
    "cdlinvertedhammer":{
     "id": "cdlinvertedhammer",
     "long_display_name": "Inverted Hammer",
-    "short_display_name": "CDLINVERTEDHAMMER",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLINVERTEDHAMMER"
    },
 
    "cdlgravestonedoji":{
     "id": "cdlgravestonedoji",
     "long_display_name": "Gravestone Doji",
-    "short_display_name": "CDLGRAVESTONEDOJI",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLGRAVESTONEDOJI"
    },
 
    "cdlharamicross":{
     "id": "cdlharamicross",
     "long_display_name": "Harami Cross Pattern",
-    "short_display_name": "CDLHARAMICROSS",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLHARAMICROSS"
    },
 
    "cdlstalledpattern":{
     "id": "cdlstalledpattern",
     "long_display_name": "Stalled Pattern",
-    "short_display_name": "CDLSTALLEDPATTERN",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLSTALLEDPATTERN"
    },
 
    "cdleveningstar":{
     "id": "cdleveningstar",
     "long_display_name": "Evening Star",
-    "short_display_name": "CDLEVENINGSTAR",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLEVENINGSTAR"
    },
 
    "cdlhighwave":{
     "id": "cdlhighwave",
     "long_display_name": "High-Wave Candle",
-    "short_display_name": "CDLHIGHWAVE",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLHIGHWAVE"
    },
 
    "cdlhikkake":{
     "id": "cdlhikkake",
     "long_display_name": "Hikkake Pattern",
-    "short_display_name": "CDLHIKKAKE",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLHIKKAKE"
    },
 
    "cdlhomingpigeon":{
     "id": "cdlhomingpigeon",
     "long_display_name": "Homing Pigeon",
-    "short_display_name": "CDLHOMINGPIGEON",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLHOMINGPIGEON"
    },
 
    "cdltristar":{
     "id": "cdltristar",
     "long_display_name": "Tristar Pattern",
-    "short_display_name": "CDLTRISTAR",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLTRISTAR"
    },
 
    "cdllongline":{
     "id": "cdllongline",
     "long_display_name": "Long Line Candle",
-    "short_display_name": "CDLLONGLINE",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLLONGLINE"
    },
 
    "cdlshortline":{
     "id": "cdlshortline",
     "long_display_name": "Short Line Candle",
-    "short_display_name": "CDLSHORTLINE",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLSHORTLINE"
    },
 
     "cdlmarubozu":{
     "id": "cdlmarubozu",
     "long_display_name": "Marubozu",
-    "short_display_name": "CDLMARUBOZU",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLMARUBOZU"
    },
 
     "cdlkicking":{
     "id": "cdlkicking",
     "long_display_name": "Kicking",
-    "short_display_name": "CDLKICKING",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLKICKING"
    },
 
     "cdlmatchinglow":{
     "id": "cdlmatchinglow",
     "long_display_name": "Matching Low",
-    "short_display_name": "CDLMATCHINGLOW",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLMATCHINGLOW"
    },
 
     "cdlladderbottom":{
     "id": "cdlladderbottom",
     "long_display_name": "Ladder Bottom",
-    "short_display_name": "CDLLADDERBOTTOM",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLLADDERBOTTOM"
    },
 
     "cdlrisefall3methods":{
     "id": "cdlrisefall3methods",
     "long_display_name": "Rising/Falling Three Methods",
-    "short_display_name": "CDLRISEFALL3METHODS",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLRISEFALL3METHODS"
    },
 
     "cdlidentical3crows":{
     "id": "cdlidentical3crows",
     "long_display_name": "Identical Three Crows",
-    "short_display_name": "CDLIDENTICAL3CROWS",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLIDENTICAL3CROWS"
    },
 
     "cdlmorningstar":{
     "id": "cdlmorningstar",
     "long_display_name": "Morning Star",
-    "short_display_name": "CDLMORNINGSTAR",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLMORNINGSTAR"
    },
 
     "cdlspinningtop":{
     "id": "cdlspinningtop",
     "long_display_name": "Spinning Top",
-    "short_display_name": "CDLSPINNINGTOP",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLSPINNINGTOP"
    },
 
     "cdldragonflydoji":{
     "id": "cdldragonflydoji",
     "long_display_name": "Dragonfly Doji",
-    "short_display_name": "CDLDRAGONFLYDOJI",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLDRAGONFLYDOJI"
    },
 
     "cdllongleggeddoji":{
     "id": "cdllongleggeddoji",
     "long_display_name": "Long Legged Doji",
-    "short_display_name": "CDLLONGLEGGEDDOJI",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLLONGLEGGEDDOJI"
    },
 
     "cdleveningdojistar":{
     "id": "cdleveningdojistar",
     "long_display_name": "Evening Doji Star",
-    "short_display_name": "CDLEVENINGDOJISTAR",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLEVENINGDOJISTAR"
    },
 
     "cdlbreakaway":{
     "id": "cdlbreakaway",
     "long_display_name": "Breakaway",
-    "short_display_name": "CDLBREAKAWAY",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLBREAKAWAY"
    },
 
     "cdladvanceblock":{
     "id": "cdladvanceblock",
     "long_display_name": "Advance Block",
-    "short_display_name": "CDLADVANCEBLOCK",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLADVANCEBLOCK"
    },
 
     "cdlcounterattack":{
     "id": "cdlcounterattack",
     "long_display_name": "Counterattack",
-    "short_display_name": "CDLCOUNTERATTACK",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLCOUNTERATTACK"
    },
 
     "cdlmorningdojistar":{
     "id": "cdlmorningdojistar",
     "long_display_name": "Morning Doji Star",
-    "short_display_name": "CDLMORNINGDOJISTAR",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLMORNINGDOJISTAR"
    },
 
     "cdlcounterattack":{
     "id": "cdlcounterattack",
     "long_display_name": "Counterattack",
-    "short_display_name": "CDLCOUNTERATTACK",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLCOUNTERATTACK"
    },
 
     "cdlinneck":{
     "id": "cdlinneck",
     "long_display_name": "In-Neck Pattern",
-    "short_display_name": "CDLINNECK",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLINNECK"
    },
 
     "cdlonneck":{
     "id": "cdlonneck",
     "long_display_name": "On-Neck Pattern",
-    "short_display_name": "CDLONNECK",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLONNECK"
    },
 
     "cdlrickshawman":{
     "id": "cdlrickshawman",
     "long_display_name": "Rickshaw Man",
-    "short_display_name": "CDLRICKSHAWMAN",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLRICKSHAWMAN"
    },
 
     "cdlunique3river":{
     "id": "cdlunique3river",
     "long_display_name": "Unique 3 River",
-    "short_display_name": "CDLUNIQUE3RIVER",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLUNIQUE3RIVER"
    },
 
     "cdlseparatinglines":{
     "id": "cdlseparatinglines",
     "long_display_name": "Separating Lines",
-    "short_display_name": "CDLSEPARATINGLINES",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLSEPARATINGLINES"
    },
 
    "cdlmathold":{
     "id": "cdlmathold",
     "long_display_name": "Mat Hold",
-    "short_display_name": "CDLMATHOLD",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLMATHOLD"
    },
 
    "cdlsticksandwich":{
     "id": "cdlsticksandwich",
     "long_display_name": "Stick Sandwich",
-    "short_display_name": "CDLSTICKSANDWICH",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLSTICKSANDWICH"
    },
 
    "cdlkickingbylength":{
     "id": "cdlkickingbylength",
     "long_display_name": "Kicking - bull/bear determined by the longer marubozu",
-    "short_display_name": "CDLKICKINGBYLENGTH",
-    "ohlcOnly" :  true
+    "short_display_name": "CDLKICKINGBYLENGTH"
    }
 }

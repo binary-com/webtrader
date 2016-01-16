@@ -9,13 +9,15 @@ EMA = function(data, options, indicators) {
     this.uniqueID = uuid();
     this.indicators = indicators;
 
+    /*  ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
+     *  Do not fill any value in emaData from 0 index to options.period-1 index
+     */
     for (var index = 0; index < data.length; index++) {
         if (index === (this.options.period - 1)) {
             var sum = 0.0;
             for (var i = this.options.period - 1; i >= 0; i--) {
                 sum += indicators.getIndicatorOrPriceValue(data[index - i], this.options.appliedTo);
             }
-            console.log('sum : ', sum);
             var sma = toFixed(sum / this.options.period, 4);
             this.indicatorData.push({ time : data[index].time, value : sma });
         } else if(index > (this.options.period - 1)) {

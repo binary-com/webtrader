@@ -10,6 +10,13 @@ SMA = function(data, options, indicators) {
     this.indicators = indicators;
     this.priceData = [];
 
+    /*
+     Daily Closing Prices: 11,12,13,14,15,16,17
+     First day of 5-day SMA: (11 + 12 + 13 + 14 + 15) / 5 = 13
+     Second day of 5-day SMA: (12 + 13 + 14 + 15 + 16) / 5 = 14
+     Third day of 5-day SMA: (13 + 14 + 15 + 16 + 17) / 5 = 15
+     Do not fill any value in smaData from 0 index to options.period-1 index
+     */
     for (var index = 0; index < data.length; index++) {
         if (index >= (this.options.period - 1)) {
             var sum = 0.0;

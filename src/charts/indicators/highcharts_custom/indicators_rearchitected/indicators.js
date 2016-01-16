@@ -11,7 +11,6 @@ define(['jquery', 'lodash', 'common/util', 'highstock'], function ($, _) {
     var indicators = {
 
         OPEN: 0, HIGH: 1, LOW: 2, CLOSE: 3,
-        SMA: "SMA", EMA: "EMA", WMA: "WMA", TEMA: "TEMA", TRIMA: "TRIMA",
 
         initHighchartIndicators : function(barsTable) {
             Highcharts.Series.prototype.addIndicator = function(indicatorID, options) {

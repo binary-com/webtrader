@@ -67,18 +67,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/tema'], function ( tema ) {
-                                tema.init();
-                                var options = {
-                                    period : parseInt($html.find(".tema_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#tema_strokeWidth").val()),
-                                    dashStyle : $html.find("#tema_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#tema_appliedTo").val())
-                                }
-                                //Add TEMA for the main series
-                                $($(".tema").data('refererChartID')).highcharts().series[0].addTEMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".tema_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#tema_strokeWidth").val()),
+                                dashStyle : $html.find("#tema_dashStyle").val(),
+                                appliedTo: parseInt($html.find("#tema_appliedTo").val())
+                            }
+                            //Add TEMA for the main series
+                            $($(".tema").data('refererChartID')).highcharts().series[0].addIndicator('tema', options);
 
                             closeDialog.call($html);
                         }

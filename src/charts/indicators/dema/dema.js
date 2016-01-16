@@ -68,18 +68,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/dema'], function (dema) {
-                                dema.init();
-                                var options = {
-                                    period: parseInt($html.find(".dema_input_width_for_period").val()),
-                                    stroke: defaultStrokeColor,
-                                    strokeWidth: parseInt($html.find("#dema_strokeWidth").val()),
-                                    dashStyle: $html.find("#dema_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#dema_appliedTo").val())
-                                }
-                                //Add DEMA for the main series
-                                $($(".dema").data('refererChartID')).highcharts().series[0].addDEMA(options);
-                            });
+                            var options = {
+                                period: parseInt($html.find(".dema_input_width_for_period").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#dema_strokeWidth").val()),
+                                dashStyle: $html.find("#dema_dashStyle").val(),
+                                appliedTo: parseInt($html.find("#dema_appliedTo").val())
+                            }
+                            //Add DEMA for the main series
+                            $($(".dema").data('refererChartID')).highcharts().series[0].addIndicator('dema', options);
 
                             closeDialog.call($html);
                         }

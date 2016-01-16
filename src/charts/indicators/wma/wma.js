@@ -67,18 +67,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/wma'], function ( wma ) {
-                                wma.init();
-                                var options = {
-                                    period : parseInt($html.find(".wma_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#wma_strokeWidth").val()),
-                                    dashStyle : $html.find("#wma_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#wma_appliedTo").val())
-                                }
-                                //Add WMA for the main series
-                                $($(".wma").data('refererChartID')).highcharts().series[0].addWMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".wma_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#wma_strokeWidth").val()),
+                                dashStyle : $html.find("#wma_dashStyle").val(),
+                                appliedTo: parseInt($html.find("#wma_appliedTo").val())
+                            }
+                            //Add WMA for the main series
+                            $($(".wma").data('refererChartID')).highcharts().series[0].addIndicator('wma', options);
 
                             closeDialog.call($html);
                         }

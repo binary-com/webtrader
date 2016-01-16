@@ -2,6 +2,4 @@ Changes to consider
 > 1M chart with overlay and indicator running in live mode
 > Indicator in Overlay mode (series type percent)
     > Make sure that its associated onChartIndicator is set properly
-> Update indicators.json
-    > We dont need ohlc indicator
 > Make sure that indicators work for tick chart

@@ -13,6 +13,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
         require(['text!charts/indicators/hma/hma.html'], function ($html) {
 
+            var defaultStrokeColor = '#cd0a0a';
+
             $html = $($html);
 
             $html.appendTo("body");
@@ -27,13 +29,13 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         $(this).css({
                             background: '#' + color.formatted
                         }).val('');
-                        $(this).data("color", '#' + color.formatted);
+                        defaultStrokeColor = '#' + color.formatted;
                     },
                     ok: function (event, color) {
                         $(this).css({
                             background: '#' + color.formatted
                         }).val('');
-                        $(this).data("color", '#' + color.formatted);
+                        defaultStrokeColor = '#' + color.formatted;
                     }
                 });
             });
@@ -63,20 +65,17 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					            return;
 					        }
 
-					        require(['charts/indicators/highcharts_custom/hma'], function (hma) {
-					            hma.init();
-					            var options = {
-					                period: parseInt($("#hma_period").val()),
-					                maType: $("#hma_ma_type").val(),
-					                strokeColor: $("#hma_stroke_color").css("background-color"),
-					                strokeWidth: parseInt($("#hma_stroke_width").val()),
-					                dashStyle: $("#hma_dash_style").val(),
-					                appliedTo: parseInt($html.find("#hma_appliedTo").val())
-					            }
+                            var options = {
+                                period: parseInt($("#hma_period").val()),
+                                maType: $("#hma_ma_type").val(),
+                                stroke : defaultStrokeColor,
+                                strokeWidth: parseInt($("#hma_stroke_width").val()),
+                                dashStyle: $("#hma_dash_style").val(),
+                                appliedTo: parseInt($html.find("#hma_appliedTo").val())
+                            }
 
-					            //Add HMA to the main series
-					            $($(".hma").data('refererChartID')).highcharts().series[0].addHMA(options);
-					        });
+                            //Add HMA to the main series
+                            $($(".hma").data('refererChartID')).highcharts().series[0].addIndicator('hma', options);
 
 					        closeDialog.call($html);
 					    }
