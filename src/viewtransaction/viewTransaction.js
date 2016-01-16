@@ -2,8 +2,8 @@
  * Created by amin on January 14, 2016.
  */
 
-define(["jquery", "windows/windows", "websockets/binary_websockets", "common/rivetsExtra", "moment", "jquery-growl", 'common/util'],
-  function($, windows, liveapi, rv, moment){
+define(["jquery", "windows/windows", "websockets/binary_websockets", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
+  function($, windows, liveapi, rv, moment, _){
 
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
@@ -12,42 +12,50 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   rv.binders['transaction-chart'] = {
     priority: 64, /* a low priority to apply last */
     bind: function(el) {
-        var model = this.model;
-        el.chart = new Highcharts.Chart({
+      var model = this.model;
+      console.warn(model.ticks);
+      var options = {
+        title: '',
+        credits: {enabled: false},
+        chart: {
+          type: 'live',
+          renderTo: el,
+          backgroundColor: null, /* make background transparent */
+          width: (el.getAttribute('width') || 700)*1,
+          height: (el.getAttribute('height') || 300)*1,
+        },
+        // tooltip: { formatter: function () {
+        //   return 'tooltip';
+        //   // var tick = model.array[this.x-1];
+        //   // return (tick && tick.tooltip) || false;
+        // }},
+        xAxis: {
+          type: 'datetime',
+          categories:null,
+          startOnTick: false,
+          endOnTick: false,
+          min: _.first(model.ticks)[0],
+          max: _.last(model.ticks)[0],
+          labels: { overflow:"justify", format:"{value:%H:%M:%S}" },
+        },
+        yAxis: {
+          labels: { align: 'left', x: 0, y: -2 },
           title: '',
-          credits: {enabled: false},
-          chart: {
-              type: 'datetime',
-              renderTo: el,
-              backgroundColor: null, /* make background transparent */
-              width: (el.getAttribute('width') || 350)*1,
-              height: (el.getAttribute('height') || 120)*1,
-          },
-          tooltip: { formatter: function () {
-            return 'tooltip';
-              // var tick = model.array[this.x-1];
-              // return (tick && tick.tooltip) || false;
-          }},
-          xAxis: {
-              type: 'linear',
-              min: 0,
-              startOnTick: true,
-              endOnTick: true,
-              // min: el.getAttribute('start')*1,
-              // max: el.getAttribute('end')*1 + 1 /* exist spot vertical plot will not be at the end */,
-              labels: { enabled: false, }
-          },
-          yAxis: {
-              labels: { align: 'left', x: 0, },
-              title: '',
-              gridLineWidth: 0,
-          },
-          series: [{ data: [] }],
-          exporting: {enabled: false, enableImages: false},
-          legend: {enabled: false},
-      });
+          gridLineWidth: 0,
+        },
+        series: [{
+          id: 'main-series',
+          data: model.ticks,
+          tooltip:{ 'xDateFormat':'%A, %b %e, %H:%M:%S GMT' },
+          type:'line'
+        }],
+        exporting: {enabled: false, enableImages: false},
+        // legend: {enabled: false},
+      }
+      el.chart = new Highcharts.Chart(options);
     }, /* end of => bind() */
     routine: function(el, ticks){
+      return;
       var model = this.model;
       var addPlotLineX = function(chart, options) {
         chart.xAxis[0].addPlotLine({
@@ -69,29 +77,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         });
       };
 
-      /* if its an array then we will show a live view and only update the last element */
-      if(Array.isArray(ticks)) {
-        var index = ticks.length;
-        if(index == 0) return;
+      var index = ticks.length;
+      if(index == 0) return;
 
-        var tick = _.last(ticks);
-        el.chart.series[0].addPoint([index, tick.quote*1]);
+      var tick = _.last(ticks);
+      el.chart.series[0].addPoint([index, tick.quote*1]);
 
-        var plot_x = model.getPlotX(); // could return null
-        plot_x && addPlotLineX(el.chart,plot_x);
-        var plot_y = model.getPlotY(); // could return null
-        plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
-        plot_y && addPlotLineY(el.chart, plot_y);
-      }
-      else { /* ticks : { times: [], prices: []}, */
-          var points = [];
-          for(var i = 0, len = ticks.times.length; i < len; ++i) {
-            points.push([ticks.times[i],ticks.prices[i]])
-            el.chart.series[0].addPoint([ticks.times[i],ticks.prices[i]]);
-          }
-        // el.chart.addSeries({data: points});
-        console.warn(points);
-      }
+      var plot_x = model.getPlotX(); // could return null
+      plot_x && addPlotLineX(el.chart,plot_x);
+      var plot_y = model.getPlotY(); // could return null
+      plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
+      plot_y && addPlotLineY(el.chart, plot_y);
 
     } /* end of routine() */
   };
@@ -120,7 +116,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   function init_state(params){
       var state = {
           route: {
-              value: 'table',
+              // value: 'table',
+              value: 'chart',
               update: function(value) { state.route.value = value; }
           },
           longcode: params.longcode,
@@ -140,11 +137,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
             final_price: params.sell_price && (params.sell_price*1).toFixed(2),
           },
           chart: {
-            history: {
-              prices: [],
-              times: []
-            },
-            purchase_time: params.purchase_price,
+            ticks: [/* epoch, price */],
+            purchase_time: params.purchase_time,
             sell_time: params.sell_time,
             loading: 'Loading ' + params.symbol + ' ...',
           }
@@ -153,7 +147,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       /* TODO: register for the stream and update the status */
       liveapi.send({proposal_open_contract: 1, contract_id: params.contract_id})
              .then(function(data){
-               console.warn(data.proposal_open_contract);
                state.validation = data.validation_error || 'This contract has expired';
              })
              .catch(function(err){
@@ -164,7 +157,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       /* TODO: use the loading message in the chart */
       liveapi.send({ticks_history: params.symbol, start: params.purchase_time, end: params.sell_time, count: 10*1000 /* no limit */})
              .then(function(data){
-               state.chart.history = data.history;
+               var times = data.history.times;
+               var prices = data.history.prices;
+               var ticks = [];
+               for(var i = 0; i < times.length; ++i) {
+                 ticks.push([times[i]*1, prices[i]*1]);
+               }
+               state.chart.ticks = ticks;
                state.chart.loading = '';
              })
              .catch(function(err) {
@@ -172,6 +171,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                console.error(err);
              });
 
+      window.state = state; /* TODO: remove this when you are done!*/
       return state;
   }
 

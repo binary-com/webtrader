@@ -42,12 +42,13 @@
     </div>
 
     <div class="chart" rv-show="route.value | eq 'chart'">
+      <div rv-if="chart.loading | eq ''" >
         <div class='transaction-chart'
-             rv-if="chart.loading | eq ''"
-             rv-transaction-chart='chart.history'
+             rv-transaction-chart='chart.ticks'
              rv-attr-min='chart.purchase_time'
              rv-attr-max='chart.sell_time'
              > </div>
+      </div>
     </div>
 
   </div>
