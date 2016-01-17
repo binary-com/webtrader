@@ -65,7 +65,7 @@ module.exports = function (grunt) {
                             'js-cookie/src/js.cookie.js',
                             'require-css/css.min.js',
                             'text/text.js',
-                            'lodash/lodash.min.js',
+                            'lodash/dist/lodash.min.js',
                             'underscore/underscore-min.js',
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',

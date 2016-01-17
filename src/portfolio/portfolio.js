@@ -7,8 +7,8 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
     var portfolioWin = null;
     var table = null;
-    var registered_contracts = {};
     var balance_span = null;
+    var currency = 'USD';
 
     function init(li) {
         li.click(function () {
@@ -22,32 +22,36 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     function update_indicative(data) {
         var contract = data.proposal_open_contract;
         var id = contract.contract_id,
-            indicative = contract.ask_price,
             bid_price = contract.bid_price;
-        if (!id) {
-            return;
-        }
+        if (!id) { return; }
 
         if (table) {
             var row = table.api().row('#' + id);
             var cols = row.data();
-            if(!cols) return; /* table might be empty */
+            if(!cols)
+              return; /* table might be empty */
             var perv_indicative = cols[3];
-            cols[3] = indicative; /* update the indicative column */
+            cols[3] = bid_price; /* update the indicative column */
             row.data(cols);
 
             /* colorize indicative column on change */
             var span = $('#' + id).find('td:nth-child(4)').find('span');
-            span.removeClass('red green').addClass((perv_indicative*1) <= (indicative*1) ? 'green' : 'red');
+            if(contract.is_valid_to_sell === 0) {
+              table.find('#' + id + ' > td:nth-child(4)').addClass('resale-not-offered');
+              span.removeClass('red green');
+            } else {
+              table.find('#' + id + ' > td:nth-child(4)').removeClass('resale-not-offered');
+              span.removeClass('red green').addClass((perv_indicative*1) <= (bid_price*1) ? 'green' : 'red');
+            }
         }
     }
 
     function update_balance() {
         liveapi.send({ balance: 1 })
             .then(function (data) {
-                var currency = data.balance.currency;
+                currency = data.balance.currency;
                 var balance = data.balance.balance;
-                balance_span.html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>');
+                balance_span.update(balance);
             })
             .catch(function (err) {
                 console.error(err);
@@ -59,51 +63,51 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
             .then(function (data) {
-                var portfolio_refresh_interval = null;
                 var refresh = function() {
                   if(portfolioWin.dialogExtend('state') === 'minimized') {
                       portfolioWin.dialogExtend('restore');
                   }
-                  portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
-                  portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                  update_balance();
                   update_table();
                 };
+
                 /* refresh portfolio when a new contract is added or closed */
-                require(['trade/tradeConf'], function(trade_conf){
-                    trade_conf.events.on('open',refresh);
-                    trade_conf.events.on('close',refresh);
+                liveapi.events.on('transaction', function(data){
+                    var transaction = data.transaction;
+                    /* TODO: once the api provoided "longcode" use it to update
+                      the table and do not issue another {portfolio:1} call */
+                    balance_span.update(transaction.balance);
+                    update_table();
                 });
+
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
                     width: 700,
                     minHeight: 60,
                     'data-authorized': 'true',
                     close: function () {
-                        require(['trade/tradeConf'], function(trade_conf){
-                            trade_conf.events.off('open',refresh);
-                            trade_conf.events.off('close',refresh);
-                        });
-                        portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
-                        portfolio_refresh_interval = null;
-
                         liveapi.send({ forget_all: 'proposal_open_contract' })
-                                .then(function () {
-                                    registered_contracts = {};
-                                })
                                 .catch(function (err) {
                                     console.error(err.message);
                                 });
+                        /* un-register proposal_open_contract handler */
+                        liveapi.events.on('proposal_open_contract', update_indicative);
                     },
                     open: function () {
-                        /* update table every 1 minute */
+                        update_balance();
                         update_table();
-                        portfolio_refresh_interval = setInterval(update_table, 60 * 1000);
+                        /* suscribe to all open contracts */
+                        liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
+                            .catch(function (err) {
+                              console.error(err);
+                              $.growl.error({ message: err.message });
+                            });
+                        /* register handler for proposal_open_contract */
+                        liveapi.events.on('proposal_open_contract', update_indicative);
                     },
                     destroy: function() {
                       table && table.DataTable().destroy(true);
                       portfolioWin = null;
-                      portfolio_refresh_interval && clearInterval(portfolio_refresh_interval);
-                      portfolio_refresh_interval = null;
                     },
                     refresh: refresh
                 });
@@ -111,6 +115,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 var header = portfolioWin.parent().find('.ui-dialog-title').addClass('with-content');
                 balance_span = $('<span class="span-in-dialog-header" />')
                     .insertAfter(header);
+                balance_span.update = function(balance) {
+                    balance_span.html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>');
+                };
 
                 var currency = data.balance.currency;
                 table = $("<table width='100%' class='portfolio-dialog display compact'/>");
@@ -143,12 +150,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 console.error(err);
             });
 
-        /* register handler to update indicative value */
-        liveapi.events.on('proposal_open_contract', update_indicative);
     }
 
     function update_table(){
-        update_balance();
         var processing_msg = $('#' + table.attr('id') + '_processing').show();
         liveapi.send({ portfolio: 1 })
             .then(function (data) {
@@ -177,21 +181,13 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 table.api().draw();
                 processing_msg.hide();
 
-                var register = function (contract) {
-                    var id = contract.contract_id;
-                    if (registered_contracts[id] !== true) {
-                        registered_contracts[id] = true;
-                        liveapi.send({ proposal_open_contract: 1, contract_id: id })
-                            .catch(function (err) {
-                                /* show a tooltip on indicative column mouseover */
-                                td = $('#' + id).find('td:nth-child(4)');
-                                td.attr('title', '').tooltip({ content: err.message });
-                                registered_contracts[id] = false;
-                            });
-                    }
-                }
-                /* register to the stream of proposal_open_contract to get indicative values */
-                contracts.forEach(register);
+                /* contracts with is_valid_to_sell:0 are returned only once in the stream of proposal_open_contract,
+                   we need to manualy check each contract to see if it is offered or not */
+                contracts.forEach(function(contract){
+                  liveapi.send({proposal_open_contract: 1, contract_id: contract.contract_id})
+                     .catch(function(err) { console.error(err); })
+                })
+
             })
             .catch(function (err) {
                 console.error(err);

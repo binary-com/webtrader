@@ -281,7 +281,7 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
         removeChart: function(key,containerIDWithHash){
           var map = this;
           if(!map[key]) return;
-          if(_(map[key].chartIDs).map('containerIDWithHash').contains(containerIDWithHash)) {
+          if(_(map[key].chartIDs).map('containerIDWithHash').includes(containerIDWithHash)) {
             map[key].subscribers -= 1;
             _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
           }
