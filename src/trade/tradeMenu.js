@@ -10,10 +10,10 @@ define(["jquery", "lodash", "websockets/binary_websockets", "common/menu", "jque
             .then(function (data) {
               /* clean up the data! */
               var markets = _(data.active_symbols).groupBy('market').map(function(symbols){
-                  var sym = _.first(symbols);
+                  var sym = _.head(symbols);
                   market = { name: sym.market, display_name: sym.market_display_name};
                   market.submarkets = _(symbols).groupBy('submarket').map(function(symbols){
-                    var sym = _.first(symbols);
+                    var sym = _.head(symbols);
                     var submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
                     submarket.instruments = _.map(symbols, function(sym){
                         return  {
@@ -22,12 +22,12 @@ define(["jquery", "lodash", "websockets/binary_websockets", "common/menu", "jque
                           is_disabled: sym.is_trading_suspended || !sym.exchange_is_open
                         };
                       });
-                    submarket.is_disabled = _.all(submarket.instruments, 'is_disabled');
+                    submarket.is_disabled = _.every(submarket.instruments, 'is_disabled');
                     return submarket;
-                  }).run();
-                  market.is_disabled = _.all(market.submarkets, 'is_disabled');
+                  }).value();
+                  market.is_disabled = _.every(market.submarkets, 'is_disabled');
                   return market;
-              }).run();
+              }).value();
               menu.sortMenu(markets);
 
               var trade = $("#nav-menu").find(".trade");
