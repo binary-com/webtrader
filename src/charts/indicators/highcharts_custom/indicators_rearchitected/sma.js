@@ -3,11 +3,7 @@
  */
 SMA = function(data, options, indicators) {
 
-    this.options = options;
-    //Calculate the initial value and store locally
-    this.indicatorData = [];
-    this.uniqueID = uuid();
-    this.indicators = indicators;
+    IndicatorBase.call(this, data, options, indicators);
     this.priceData = [];
 
     /*
@@ -33,6 +29,9 @@ SMA = function(data, options, indicators) {
     console.log('Last price data : ', this.priceData[this.priceData.length - 1]);
 
 };
+
+SMA.prototype = Object.create(IndicatorBase.prototype);
+SMA.prototype.constructor = SMA;
 
 SMA.prototype.addPoint = function(data) {
     console.log('Adding SMA data point : ', data);
@@ -69,31 +68,4 @@ SMA.prototype.update = function(data) {
 
 SMA.prototype.toString = function() {
     return 'SMA (' + this.options.period  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
-};
-
-SMA.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var data = [];
-    //Prepare the data before sending a configuration
-    this.indicatorData.forEach(function(e) {
-        data.push([e.time, e.value]);
-    });
-    return [{
-        seriesConf : {
-            id: this.uniqueID,
-            name: this.toString(),
-            data: data,
-            type: 'line',
-            color: this.options.stroke,
-            lineWidth: this.options.strokeWidth,
-            dashStyle: this.options.dashStyle
-        }
-    }];
-};
-
-SMA.prototype.getIDs = function() {
-    return [this.uniqueID];
-};
-
-SMA.prototype.isSameInstance = function(uniqueIDArr) {
-    return _.isEqual(uniqueIDArr.sort(), [this.uniqueID]);
 };

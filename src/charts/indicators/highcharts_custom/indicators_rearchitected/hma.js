@@ -3,12 +3,8 @@
  */
 HMA = function(data, options, indicators) {
 
-    this.options = options;
-    //Calculate the initial value and store locally
-    this.indicatorData = [];
+    IndicatorBase.call(this, data, options, indicators);
     this.someTypeOfMa1 = null, this.someTypeOfMa2 = null, this.someTypeOfMa3 = null;
-    this.uniqueID = uuid();
-    this.indicators = indicators;
 
     // HMA(n) = WMA(2*WMA(n/2) – WMA(n)),sqrt(n))
     var maClassName = (options.maType || 'sma').toUpperCase();
@@ -38,6 +34,9 @@ HMA = function(data, options, indicators) {
 
 };
 
+HMA.prototype = Object.create(IndicatorBase.prototype);
+HMA.prototype.constructor = HMA;
+
 HMA.prototype.addPoint = function(data) {
     var ma1Value = this.someTypeOfMa1.addPoint(data)[0].value;
     var ma2Value = this.someTypeOfMa2.addPoint(data)[0].value;
@@ -64,33 +63,6 @@ HMA.prototype.update = function(data) {
 
 HMA.prototype.toString = function() {
     return 'HMA (' + this.options.period  + ', '
-                    + this.indicators.appliedPriceString(this.options.appliedTo) + ', '
-                    + this.options.maType + ')';
-};
-
-HMA.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var data = [];
-    //Prepare the data before sending a configuration
-    this.indicatorData.forEach(function(e) {
-        data.push([e.time, e.value]);
-    });
-    return [{
-        seriesConf : {
-            id: this.uniqueID,
-            name: this.toString(),
-            data: data,
-            type: 'line',
-            color: this.options.stroke,
-            lineWidth: this.options.strokeWidth,
-            dashStyle: this.options.dashStyle
-        }
-    }];
-};
-
-HMA.prototype.getIDs = function() {
-    return [this.uniqueID];
-};
-
-HMA.prototype.isSameInstance = function(uniqueIDArr) {
-    return _.isEqual(uniqueIDArr.sort(), [this.uniqueID]);
+        + this.indicators.appliedPriceString(this.options.appliedTo) + ', '
+        + this.options.maType + ')';
 };

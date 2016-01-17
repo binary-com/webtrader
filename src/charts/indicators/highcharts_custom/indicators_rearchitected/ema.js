@@ -3,11 +3,7 @@
  */
 EMA = function(data, options, indicators) {
 
-    this.options = options;
-    //Calculate the initial value and store locally
-    this.indicatorData = [];
-    this.uniqueID = uuid();
-    this.indicators = indicators;
+    IndicatorBase.call(this, data, options, indicators);
 
     /*  ema(t) = p(t) * 2/(T+1) + ema(t-1) * (1 - 2 / (T+1))
      *  Do not fill any value in emaData from 0 index to options.period-1 index
@@ -32,6 +28,9 @@ EMA = function(data, options, indicators) {
     }
 
 };
+
+EMA.prototype = Object.create(IndicatorBase.prototype);
+EMA.prototype.constructor = EMA;
 
 EMA.prototype.addPoint = function(data) {
     var index = this.indicatorData.length - 1;
@@ -61,31 +60,4 @@ EMA.prototype.update = function(data) {
 
 EMA.prototype.toString = function() {
     return 'EMA (' + this.options.period  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
-};
-
-EMA.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var data = [];
-    //Prepare the data before sending a configuration
-    this.indicatorData.forEach(function(e) {
-        data.push([e.time, e.value]);
-    });
-    return [{
-        seriesConf : {
-            id: this.uniqueID,
-            name: this.toString(),
-            data: data,
-            type: 'line',
-            color: this.options.stroke,
-            lineWidth: this.options.strokeWidth,
-            dashStyle: this.options.dashStyle
-        }
-    }];
-};
-
-EMA.prototype.getIDs = function() {
-    return [this.uniqueID];
-};
-
-EMA.prototype.isSameInstance = function(uniqueIDArr) {
-    return _.isEqual(uniqueIDArr.sort(), [this.uniqueID]);
 };

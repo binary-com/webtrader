@@ -66,8 +66,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             	}
 
-							    require(['charts/indicators/highcharts_custom/bbands'], function ( bbands ) {
-                                bbands.init();
                                 var options = {
                                     period : parseInt($("#bbands_time_period").val()),
                                     devUp:parseInt($("#bbands_dev_up").val()),
@@ -81,8 +79,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                     appliedTo: parseInt($("#bbands_appliedTo").val())
                                 }
                                 //Add Bollinger for the main series
-                                $($(".bbands").data('refererChartID')).highcharts().series[0].addBBANDS(options);
-                            });
+                                $($(".bbands").data('refererChartID')).highcharts().series[0].addIndicator('bbands', options);
 
                             closeDialog.call($html);
 						}

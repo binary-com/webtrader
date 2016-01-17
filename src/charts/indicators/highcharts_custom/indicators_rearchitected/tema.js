@@ -3,12 +3,8 @@
  */
 TEMA = function(data, options, indicators) {
 
-    this.options = options;
-    //Calculate the initial value and store locally
-    this.indicatorData = [];
+    IndicatorBase.call(this, data, options, indicators);
     this.ema1 = null, this.ema2 = null, this.ema3 = null;
-    this.uniqueID = uuid();
-    this.indicators = indicators;
 
     /*
      The Triple Exponential Moving Average (TEMA) of time series 't' is:
@@ -49,6 +45,9 @@ TEMA = function(data, options, indicators) {
 
 };
 
+TEMA.prototype = Object.create(IndicatorBase.prototype);
+TEMA.prototype.constructor = TEMA;
+
 TEMA.prototype.addPoint = function(data) {
     var tema1Value = this.ema1.addPoint(data)[0].value;
     var tema2Value = this.ema2.addPoint({ time : data.time, close : tema1Value})[0].value;
@@ -76,31 +75,4 @@ TEMA.prototype.update = function(data) {
 
 TEMA.prototype.toString = function() {
     return 'TEMA (' + this.options.period  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
-};
-
-TEMA.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var data = [];
-    //Prepare the data before sending a configuration
-    this.indicatorData.forEach(function(e) {
-        data.push([e.time, e.value]);
-    });
-    return [{
-        seriesConf : {
-            id: this.uniqueID,
-            name: this.toString(),
-            data: data,
-            type: 'line',
-            color: this.options.stroke,
-            lineWidth: this.options.strokeWidth,
-            dashStyle: this.options.dashStyle
-        }
-    }];
-};
-
-TEMA.prototype.getIDs = function() {
-    return [this.uniqueID];
-};
-
-TEMA.prototype.isSameInstance = function(uniqueIDArr) {
-    return _.isEqual(uniqueIDArr.sort(), [this.uniqueID]);
 };

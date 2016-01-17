@@ -3,11 +3,7 @@
  */
 TRIMA = function(data, options, indicators) {
 
-    this.options = options;
-    //Calculate the initial value and store locally
-    this.indicatorData = [];
-    this.uniqueID = uuid();
-    this.indicators = indicators;
+    IndicatorBase.call(this, data, options, indicators);
 
     /*
      MA = ( SMA ( SMAm, Nm ) ) / Nm
@@ -37,6 +33,9 @@ TRIMA = function(data, options, indicators) {
     }
 
 };
+
+TRIMA.prototype = Object.create(IndicatorBase.prototype);
+TRIMA.prototype.constructor = TRIMA;
 
 TRIMA.prototype.addPoint = function(data) {
     var Nm = Math.round((this.options.period + 1) / 2) | 0;
@@ -68,31 +67,4 @@ TRIMA.prototype.update = function(data) {
 
 TRIMA.prototype.toString = function() {
     return 'TRIMA (' + this.options.period  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
-};
-
-TRIMA.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var data = [];
-    //Prepare the data before sending a configuration
-    this.indicatorData.forEach(function(e) {
-        data.push([e.time, e.value]);
-    });
-    return [{
-        seriesConf : {
-            id: this.uniqueID,
-            name: this.toString(),
-            data: data,
-            type: 'line',
-            color: this.options.stroke,
-            lineWidth: this.options.strokeWidth,
-            dashStyle: this.options.dashStyle
-        }
-    }];
-};
-
-TRIMA.prototype.getIDs = function() {
-    return [this.uniqueID];
-};
-
-TRIMA.prototype.isSameInstance = function(uniqueIDArr) {
-    return _.isEqual(uniqueIDArr.sort(), [this.uniqueID]);
 };

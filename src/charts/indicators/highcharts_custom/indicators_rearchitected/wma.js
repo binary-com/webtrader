@@ -3,11 +3,7 @@
  */
 WMA = function(data, options, indicators) {
 
-    this.options = options;
-    //Calculate the initial value and store locally
-    this.indicatorData = [];
-    this.uniqueID = uuid();
-    this.indicators = indicators;
+    IndicatorBase.call(this, data, options, indicators);
     this.priceData = [];
 
     /*
@@ -33,6 +29,9 @@ WMA = function(data, options, indicators) {
     }
 
 };
+
+WMA.prototype = Object.create(IndicatorBase.prototype);
+WMA.prototype.constructor = WMA;
 
 WMA.prototype.addPoint = function(data) {
     this.priceData.push(data);
@@ -74,31 +73,4 @@ WMA.prototype.update = function(data) {
 
 WMA.prototype.toString = function() {
     return 'WMA (' + this.options.period  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
-};
-
-WMA.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var data = [];
-    //Prepare the data before sending a configuration
-    this.indicatorData.forEach(function(e) {
-        data.push([e.time, e.value]);
-    });
-    return [{
-        seriesConf : {
-            id: this.uniqueID,
-            name: this.toString(),
-            data: data,
-            type: 'line',
-            color: this.options.stroke,
-            lineWidth: this.options.strokeWidth,
-            dashStyle: this.options.dashStyle
-        }
-    }];
-};
-
-WMA.prototype.getIDs = function() {
-    return [this.uniqueID];
-};
-
-WMA.prototype.isSameInstance = function(uniqueIDArr) {
-    return _.isEqual(uniqueIDArr.sort(), [this.uniqueID]);
 };

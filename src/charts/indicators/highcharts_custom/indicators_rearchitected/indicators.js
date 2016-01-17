@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 3/30/15.
  */
-define(['jquery', 'lodash', 'common/util', 'highstock'], function ($, _) {
+define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
 
     var indicatorsMetaData = [];
     require(['text!charts/indicators/indicators.json'], function (indicatorsJSON) {
@@ -35,7 +35,7 @@ define(['jquery', 'lodash', 'common/util', 'highstock'], function ($, _) {
                                 dataGrouping : series.options.dataGrouping,
                                 opposite : series.options.opposite
                             });
-                            if (!indicatorMetadata.onChartIndicator) {
+                            if (indicatorMetadata.onChartIndicator) {
                                 conf = _.extend(conf, {
                                     compare : series.options.compare
                                 });
@@ -105,9 +105,11 @@ define(['jquery', 'lodash', 'common/util', 'highstock'], function ($, _) {
                                 series[each.id].forEach(function (eachInstanceOfTheIndicator) {
                                     var indicatorUpdated = eachInstanceOfTheIndicator.addPoint(bar);
                                     indicatorUpdated.forEach(function(iu) {
-                                        series.chart
-                                                .get(iu.id)
-                                                .addPoint([time,iu.value]);
+                                        if (_.isArray(iu.value)) {
+                                            series.chart.get(iu.id).addPoint(_.flattenDeep([time, iu.value]));
+                                        } else {
+                                            series.chart.get(iu.id).addPoint([time, iu.value]);
+                                        }
                                     });
                                 });
                             }
@@ -139,10 +141,15 @@ define(['jquery', 'lodash', 'common/util', 'highstock'], function ($, _) {
                                     indicatorUpdated.forEach(function(iu) {
                                         var indicatorSeries = series.chart.get(iu.id);
                                         var seriesData = indicatorSeries.data;
-                                        seriesData[seriesData.length - 1]
-                                            .update({
-                                                y: iu.value
-                                            });
+                                        if (_.isArray(iu.value)) {
+                                            seriesData[seriesData.length - 1]
+                                                .update(_.flattenDeep([time, iu.value]));
+                                        } else {
+                                            seriesData[seriesData.length - 1]
+                                                .update({
+                                                    y: iu.value
+                                                });
+                                        }
                                     });
                                 });
                             }

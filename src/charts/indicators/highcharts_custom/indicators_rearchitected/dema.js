@@ -3,12 +3,8 @@
  */
 DEMA = function(data, options, indicators) {
 
-    this.options = options;
-    //Calculate the initial value and store locally
-    this.indicatorData = [];
+    IndicatorBase.call(this, data, options, indicators);
     this.ema1 = null, this.ema2 = null;
-    this.uniqueID = uuid();
-    this.indicators = indicators;
 
     /*
      The Double Exponential Moving Average (DEMA) of time series 't' is:
@@ -39,6 +35,9 @@ DEMA = function(data, options, indicators) {
 
 };
 
+DEMA.prototype = Object.create(IndicatorBase.prototype);
+DEMA.prototype.constructor = DEMA;
+
 DEMA.prototype.addPoint = function(data) {
     var dema1Value = this.ema1.addPoint(data)[0].value;
     var dema2Value = this.ema2.addPoint({ time : data.time, close : dema1Value})[0].value;
@@ -65,31 +64,4 @@ DEMA.prototype.update = function(data) {
 
 DEMA.prototype.toString = function() {
     return 'DEMA (' + this.options.period  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
-};
-
-DEMA.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var data = [];
-    //Prepare the data before sending a configuration
-    this.indicatorData.forEach(function(e) {
-        data.push([e.time, e.value]);
-    });
-    return [{
-        seriesConf : {
-            id: this.uniqueID,
-            name: this.toString(),
-            data: data,
-            type: 'line',
-            color: this.options.stroke,
-            lineWidth: this.options.strokeWidth,
-            dashStyle: this.options.dashStyle
-        }
-    }];
-};
-
-DEMA.prototype.getIDs = function() {
-    return [this.uniqueID];
-};
-
-DEMA.prototype.isSameInstance = function(uniqueIDArr) {
-    return _.isEqual(uniqueIDArr.sort(), [this.uniqueID]);
 };

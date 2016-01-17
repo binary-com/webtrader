@@ -336,21 +336,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                 for (var index = 0; index < chart.series.length; index++) {
                     //console.log('Instrument name : ' + chart.series[index].name);
                     var series = chart.series[index];
-                    if (series.options.isInstrument) {
-                        var data = series.options.data;
-                        series.setData([]);
-                        for (var i = 0; i < data.length; i++) {
-                            if (data[i].x && data[i].y) {
-                                data[i] = [data[i].x, data[i].y];
-                            }
-                        }
-                        series.update({
-                            compare: 'percent'
-                        });
-                        series.setData(data);
-                        series.options.isInstrument = true;
-                    }
-                    else if ($(series).data('onChartIndicator')) {
+                    if (series.options.isInstrument || series.options.onChartIndicator) {
                         series.update({
                             compare: 'percent'
                         });

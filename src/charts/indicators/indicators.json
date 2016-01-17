@@ -181,7 +181,8 @@
  "bbands": {
     "id": "bbands",
     "long_display_name": "Bollinger Bands",
-    "short_display_name": "BBANDS"
+    "short_display_name": "BBANDS",
+   "onChartIndicator": true
   },
 
   "cdlshootingstar": {
@@ -223,7 +224,8 @@
   "dema": {
     "id": "dema",
     "long_display_name": "Double Exponential Moving Average",
-    "short_display_name": "DEMA"
+    "short_display_name": "DEMA",
+    "onChartIndicator": true
   },
 
   "kama": {
@@ -537,5 +539,11 @@
     "id": "cdlkickingbylength",
     "long_display_name": "Kicking - bull/bear determined by the longer marubozu",
     "short_display_name": "CDLKICKINGBYLENGTH"
-   }
+   },
+
+  "stddev": {
+    "id": "stddev",
+    "long_display_name": "Standard Deviation",
+    "short_display_name": "STDDEV"
+  }
 }

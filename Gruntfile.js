@@ -2,38 +2,15 @@
 
 module.exports = function (grunt) {
 
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-text-replace');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-jasmine');
-    grunt.loadNpmTasks("grunt-remove-logging");
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    /*
-        "loc": 72,    //physical lines
-        "sloc": 45,   //lines of source code
-        "cloc": 10,   //total comment
-        "scloc": 10,  //singleline
-        "mcloc": 0,   //multiline
-        "nloc": 17,   //multiline
-        "file": 22,   //empty
-    */
-    grunt.loadNpmTasks('grunt-sloc');
-    grunt.loadNpmTasks('grunt-bump');
-    grunt.loadNpmTasks('grunt-if');
-    grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-gitinfo');
-    grunt.loadNpmTasks('grunt-rename');
-    grunt.loadNpmTasks('grunt-gh-pages');
+    var pkg = grunt.file.readJSON('package.json');
+    for (var key in pkg.devDependencies) {
+        if (key.indexOf('grunt') !== -1) {
+            grunt.loadNpmTasks(key);
+        }
+    }
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: pkg,
         //Executing this task will populate grunt.config.gitinfo with repository data below
         gitinfo: {
             local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
@@ -314,14 +291,23 @@ module.exports = function (grunt) {
             }
         },
         concat: {
-            bundle_indicators: {
-                src: ['src/charts/indicators/highcharts_custom/indicators_rearchitected/**/*.js'],
+            concat_indicators: {
+                //Define the sequence here, indicators which require other indicators to be built first, should be explicitly listed here
+                src: ['src/charts/indicators/highcharts_custom/indicators_rearchitected/IndicatorBase.js',
+                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/WMA.js',
+                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/SMA.js',
+                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/EMA.js',
+                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/TEMA.js',
+                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/TRIMA.js',
+                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/STDDEV.js',
+                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/**/*.js'
+                    ],
                 dest: 'dist/uncompressed/v<%=pkg.version%>/charts/indicators/highcharts_custom/indicators.js'
             }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:bundle_indicators', 'copy:copyLibraries', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify', 'copy:copy_AfterCompression']);
 	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
