@@ -80,9 +80,20 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
-          var splits = transaction.shortcode.split('_'); /* TODO: remove this when backend provided symbol */
+
+          /* TODO: remove this hack when backend provided symbol */
+          var splits = transaction.shortcode.split('_');
           var symbol = splits[1] !== 'R' ? splits[1] : 'R_' + splits[2];
+
+          /* TODO: remove this hack when backend provided duration */
+          var longcode = transaction.longcode.split(' ');
+          var duration_type = ['ticks', 'seconds', 'minutes', 'hours', 'days'].filter(function(t){ return _.includes(longcode, t) })[0];
+          var duration = longcode[longcode.indexOf(duration_type) - 1];
+
+          console.warn(duration,duration_type);
           viewTransaction.init({
+              duration: duration,
+              duration_type: duration_type,
               symbol: symbol,
               contract_id: transaction.contract_id,
               longcode: transaction.longcode,
