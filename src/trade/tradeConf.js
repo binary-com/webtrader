@@ -167,10 +167,10 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             category: extra.category,
             category_display: extra.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
-            chart_visible: _(['Up/Down','Asians']).contains(extra.category) && extra.duration_unit === 'ticks',
+            chart_visible: _(['Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks',
         },
         arrow: {
-          visible:!(_(['Digits','Up/Down','Asians']).contains(extra.category) && extra.duration_unit === 'ticks'),
+          visible:!(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks'),
         },
         back: { visible: false }, /* back buttom */
       };
@@ -192,7 +192,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         state.buy.show_result = true;
       }
       state.ticks.update_status = function() {
-        var first_quote = _.first(state.ticks.array).quote + '',
+        var first_quote = _.head(state.ticks.array).quote + '',
             last_quote = _.last(state.ticks.array).quote + '',
             digits_value = state.ticks.value + '',
             average = state.ticks.average().toFixed(5);
