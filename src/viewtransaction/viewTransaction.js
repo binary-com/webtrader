@@ -22,7 +22,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           width: 0,
           height: 0,
         },
-        tooltip: { formatter: function () { return moment.utc(this.x*1000).format("dddd, MMM D, HH:mm:ss"); } },
+        tooltip: { formatter: function () {
+            return moment.utc(this.x*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" + this.y;
+        } },
         xAxis: {
           type: 'datetime',
           categories:null,

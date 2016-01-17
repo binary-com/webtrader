@@ -88,8 +88,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
           var longcode = transaction.longcode.split(' ');
           var duration_type = ['ticks', 'ticks.', 'seconds', 'minutes', 'hours', 'days'].filter(function(t){ return _.includes(longcode, t) })[0];
           var duration = longcode[longcode.indexOf(duration_type) - 1];
-          console.warn(transaction)
-          console.warn(duration, duration_type);
 
           viewTransaction.init({
               duration: duration,
