@@ -44,6 +44,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         exporting: {enabled: false, enableImages: false},
         legend: {enabled: false},
         navigator: { enabled: true },
+        plotOptions: { line: { marker: { radius: 2 } } },
       };
       var chart = new Highcharts.Chart(options);
 
@@ -51,7 +52,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         chart.xAxis[0].addPlotLine({
            value: options.value,
            id: options.id || options.value,
-           label: {text: options.label || 'label'},
+           label: {text: options.label || 'label', x: options.text_left ? -15 : 5},
            color: options.color || '#e98024',
            width: options.width || 2,
         });
@@ -69,44 +70,73 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       return el.chart = chart;
   };
 
-  /* options: { purchase_time:, sell_time: },
-    history: { ticks: [], prices: [] } */
-  function update_chart(chart, history, options) {
+  function get_chart_data(state, root, params) {
+      var start_time = params.purchase_time*1;
+      var end_time = null;
+      var request = { ticks_history: params.symbol };
+      if(params.duration_type === 'ticks'){
+          request.start = start_time - 3; /* load around 2 more thicks before start */
+          request.end = start_time +  params.duration*2 + 3;
+      }
+      else {
+        var priod = {'s': 1, 'm': 60, 'h': 60*60, 'd': 60*60*24 }[params.duration_type[0]];
+        var seconds = params.duration * priod;
+        var margin = {'s': 4, 'm': 4, 'h': 60, 'd': 60*60 }[params.duration_type[0]];
+        request.start = start_time - margin;
+        request.end = start_time + seconds + margin;
+        request.count = 1000*1000; /* no limit  */
+        end_time = start_time + seconds;
+      }
 
-      var start_time = options.purchase_time;
-      var entry_spot = _.first(history.times);
-      var exit_spot = _.last(history.times);
+      liveapi.send(request)
+             .then(function(data){
+               var history = data.history;
+               var times = history.times, prices = history.prices;
+               var ticks = [];
+               for(var i = 0; i < times.length; ++i) {
+                 ticks.push([times[i]*1, prices[i]*1]);
+               }
+               state.chart.loading = '';
 
-      addPlotLineX({ value: start_time, label: 'Start Time'});
-      addPlotLineX({ value: entry_spot, label: 'Entry Spot'});
-      addPlotLineX({ value: exit_spot, label: 'Exit Spot'});
-      return;
+               /* TODO: tell backend they are returning the wrong sell time */
+               var sell_time = params.sell_time;
 
-      // var index = ticks.length;
-      // if(index == 0) return;
-      //
-      // var tick = _.last(ticks);
-      // el.chart.series[0].addPoint([index, tick.quote*1]);
-      //
-      // var plot_x = model.getPlotX(); // could return null
-      // plot_x && addPlotLineX(el.chart,plot_x);
-      // var plot_y = model.getPlotY(); // could return null
-      // plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
-      // plot_y && addPlotLineY(el.chart, plot_y);
+               var chart = init_chart(root, ticks);
+               var entry_spot = history.times.filter(function(t){ return t*1 >= start_time })[0];
+               var exit_spot =  null;
+               if(params.duration_type === 'ticks') {
+                  exit_spot = history.times[history.times.indexOf(entry_spot) + params.duration*1];
+               }
+               exit_spot = exit_spot || exit_spot*1;
+               entry_spot = entry_spot*1;
 
-    } /* end of routine() */
+               (start_time !== entry_spot) && chart.addPlotLineX({ value: start_time, label: 'Start Time' ,text_left: true });
+               entry_spot && chart.addPlotLineX({ value: entry_spot, label: 'Entry Spot'});
+               exit_spot && chart.addPlotLineX({ value: exit_spot, label: 'Exit Spot'});
+               sell_time && chart.addPlotLineX({ value: sell_time*1, label: 'Sell Time'});
+               end_time && chart.addPlotLineX({ value: end_time, label: 'End Time'});
+
+               state.chart.chart = chart;
+               state.chart.manual_reflow();
+             })
+             .catch(function(err) {
+               chart.loading = err.message;
+               console.error(err);
+             });
+  }
 
   /* params : { symbol: ,contract_id: ,longcode: ,sell_time: ,
                 purchase_time: ,buy_price: ,sell_price:, currency:,
                 duration: , duration_type: 'ticks/seconds/...' } */
   function init(params) {
-    require(['text!viewtransaction/viewTransaction.html'],function(html){
+    require(['text!viewtransaction/viewTransaction.html'],function(html) {
         var root = $(html);
         var state = init_state(params, root);
         var transWin = windows.createBlankWindow(root, {
             title: 'Transaction ' + params.contract_id, /* TODO: use symbol_name instead */
             width: 700,
-            minHeight:90,
+            minWidth: 350,
+            minHeight:350,
             destroy: function() { },
             resize: function() {
               state.chart.manual_reflow();
@@ -116,9 +146,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
             'data-authorized': 'true'
         });
 
-        var view = rv.bind(root[0],state)
-
         transWin.dialog('open');
+        var view = rv.bind(root[0],state)
     })
   }
 
@@ -151,13 +180,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           }
       };
 
-      state.chart.manual_reflow = function(w, h) {
-        w  = w || 0;
-        h = h || -90;
+      state.chart.manual_reflow = function() {
+        /* TODO: find a better solution for resizing the chart  :/ */
+        var h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
         if(!state.chart.chart) return;
         var container = root;// root.find('.chart-container');
         var width = container.width(), height = container.height();
-        state.chart.chart.setSize(width + w, height +h , false);
+        state.chart.chart.setSize(width, height + h , false);
         state.chart.chart.hasUserSize = null;
       };
 
@@ -171,53 +200,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                console.error(err);
              });
 
-      var start_time = params.purchase_time*1;
-      var end_time = null;
-      var request = { ticks_history: params.symbol };
-      if(params.duration_type === 'ticks'){
-          request.start = start_time - 3; /* load around 2 more thicks before start */
-          request.count = params.duration*1 + 5 /* use count to limit the number of ticks returned */
-      }
-      else {
-        var priod = {'s': 1, 'm': 60, 'h': 60*60, 'd': 60*60*24 }[params.duration_type[0]];
-        var seconds = params.duration * priod;
-        var margin = {'s': 4, 'm': 24, 'h': 60*4, 'd': 60*60*4 }[params.duration_type[0]];
-        request.start = start_time - margin;
-        request.end = start_time + seconds + margin;
-        request.count = 1000*1000; /* no limit  */
-        end_time = start_time + seconds;
-      }
-
-      liveapi.send(request)
-             .then(function(data){
-               var history = data.history;
-               var times = history.times, prices = history.prices;
-               var ticks = [];
-               for(var i = 0; i < times.length; ++i) {
-                 ticks.push([times[i]*1, prices[i]*1]);
-               }
-               state.chart.loading = '';
-
-               var chart = init_chart(root, ticks);
-               var entry_spot = _.first(history.times)*1;
-
-               var exit_spot = _.last(history.times)*1;
-               console.warn(start_time, entry_spot,exit_spot);
-
-               chart.addPlotLineX({ value: start_time, label: 'Start Time'});
-               chart.addPlotLineX({ value: entry_spot, label: 'Entry Spot'});
-               chart.addPlotLineX({ value: exit_spot, label: 'Exit Spot'});
-
-               state.chart.chart = chart;
-               state.chart.manual_reflow();
-             })
-             .catch(function(err) {
-               chart.loading = err.message;
-               console.error(err);
-             });
+      get_chart_data(state, root, params);
 
       window.state = state; /* TODO: remove this when you are done!*/
       window.root = root;
+      window.params = params;
       return state;
   }
 

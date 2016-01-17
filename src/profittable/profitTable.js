@@ -72,7 +72,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
         });
     }
 
-
     var on_arrow_click = function(e){
       if(e.target.tagName !== 'IMG')
         return;
@@ -90,7 +89,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
           var duration_type = ['ticks', 'seconds', 'minutes', 'hours', 'days'].filter(function(t){ return _.includes(longcode, t) })[0];
           var duration = longcode[longcode.indexOf(duration_type) - 1];
 
-          console.warn(duration,duration_type);
           viewTransaction.init({
               duration: duration,
               duration_type: duration_type,

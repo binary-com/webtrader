@@ -81,13 +81,13 @@
 
 /******************* chart tab ******************/
 .view-transaction-dialog .content .transaction-chart {
-    /*width: 100%;*/
+  padding-top: 5px;
 }
 
 .view-transaction-dialog .content .chart-container,
 .view-transaction-dialog .content .explanation {
   height: calc(100% - 86px);
-  /*height: 100%;*/
+  min-height: 200px;
   flex: 1 1 auto;
   background: #fff;
   margin: 2px 0;
