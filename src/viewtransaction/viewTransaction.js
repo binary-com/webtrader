@@ -109,14 +109,27 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                if(params.duration_type[0] === 't') {
                   exit_spot = history.times[history.times.indexOf(entry_spot) + params.duration*1];
                }
-               exit_spot = exit_spot || exit_spot*1;
-               entry_spot = entry_spot*1;
+               if(params.duration_type[0] !== 't' && end_time) {
+                  exit_spot = _(history.times).filter(function(t) { return t*1 <= end_time; }).last();
+               }
 
-               (start_time !== entry_spot) && chart.addPlotLineX({ value: start_time, label: 'Start Time' ,text_left: true });
-               entry_spot && chart.addPlotLineX({ value: entry_spot, label: 'Entry Spot'});
-               exit_spot && chart.addPlotLineX({ value: exit_spot, label: 'Exit Spot'});
-               (sell_time < exit_spot) && chart.addPlotLineX({ value: sell_time*1, label: 'Sell Time'});
+               (start_time*1 !== entry_spot*1) && chart.addPlotLineX({ value: start_time*1, label: 'Start Time' ,text_left: true });
+               entry_spot && chart.addPlotLineX({ value: entry_spot*1, label: 'Entry Spot'});
+               exit_spot && chart.addPlotLineX({ value: exit_spot*1, label: 'Exit Spot', text_left: true});
+               (sell_time*1 < exit_spot*1) && chart.addPlotLineX({ value: sell_time*1, label: 'Sell Time'});
                end_time && chart.addPlotLineX({ value: end_time, label: 'End Time'});
+
+               if(entry_spot) {
+                 var entry_spot_value = history.prices[history.times.indexOf(entry_spot)];
+                 state.table.entry_spot = entry_spot_value;
+               }
+               if(exit_spot) {
+                 var exit_spot_value = history.prices[history.times.indexOf(exit_spot)];
+                 state.table.exit_spot = exit_spot_value;
+               }
+               if(end_time) {
+                  state.table.end_time = moment.utc(end_time*1000).format('YYYY-MM-DD HH:mm:ss');
+               }
 
                state.chart.chart = chart;
                state.chart.manual_reflow();
@@ -164,8 +177,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           table: {
             currency: params.currency ? params.currency + ' ' : 'USD ',
             now: moment.utc().format('YYYY-MM-DD HH:mm:ss'),
-            purchase_time: params.purchase_time && moment.utc(params.purchase_time).format('YYYY-MM-DD HH:mm:ss'),
-            sell_time: params.sell_time && moment.utc(params.sell_time).format('YYYY-MM-DD HH:mm:ss'),
+            purchase_time: params.purchase_time && moment.utc(params.purchase_time*1000).format('YYYY-MM-DD HH:mm:ss'),
+            end_time: undefined,
 
             entry_spot: undefined,
             current_spot: undefined,
