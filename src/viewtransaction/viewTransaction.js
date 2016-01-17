@@ -135,7 +135,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         var transWin = windows.createBlankWindow(root, {
             title: 'Transaction ' + params.contract_id, /* TODO: use symbol_name instead */
             width: 700,
-            minWidth: 350,
+            minWidth: 300,
             minHeight:350,
             destroy: function() { },
             resize: function() {
@@ -154,8 +154,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   function init_state(params, root){
       var state = {
           route: {
-              // value: 'table',
-              value: 'chart',
+              value: 'table',
               update: function(value) { state.route.value = value; }
           },
           longcode: params.longcode,
@@ -202,9 +201,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
 
       get_chart_data(state, root, params);
 
-      window.state = state; /* TODO: remove this when you are done!*/
-      window.root = root;
-      window.params = params;
       return state;
   }
 

@@ -59,6 +59,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 var amount = trans.amount * 1;
                 var svg = amount > 0 ? 'up' : amount < 0 ? 'down' : 'equal';
                 var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
+                img = ''; /* TODO: removed the arrow image for now */
                 return [
                     epoch_to_string(trans.transaction_time, { utc: true }),
                     trans.transaction_id,
