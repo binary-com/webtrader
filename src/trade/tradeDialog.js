@@ -607,6 +607,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks') {
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
+            if(extra.category !== 'Digits')
+              extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
         }
 
         // manually check to see if the user is authenticated or not,
@@ -726,7 +728,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             }).catch(function (err) {
               $.growl.error({ message: err.message });
               var has_digits = _(available).map('min_contract_duration')
-                                .any(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
+                                .some(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
               /* if this contract does not offer tick trades, then its fine let the user trade! */
               if(!has_digits) {
                 state.ticks.loading = false;
