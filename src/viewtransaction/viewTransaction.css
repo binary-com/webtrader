@@ -19,7 +19,7 @@
 .view-transaction-dialog ul li {
   display: inline-block;
   padding-left: 15px;
-  line-height: 2.5em;
+  line-height: 2em;
   cursor: pointer;
   transition:color 0.3s;
 }
@@ -93,6 +93,16 @@
   margin: 2px 0;
 }
 
+.view-transaction-dialog .content .explanation {
+  margin-left: 2px;
+  display: flex;
+  flex-flow: row;
+}
+.view-transaction-dialog .content .explanation div {
+    flex: 1 1 auto;
+    border-right: 2px solid #ddd;
+    padding-left: 5px;
+}
 /************* footer *************************/
 .view-transaction-dialog .footer {
   line-height: 2em;

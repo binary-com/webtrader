@@ -3,7 +3,7 @@
  */
 
 define(["jquery", "windows/windows", "websockets/binary_websockets", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
-  function($, windows, liveapi, rv, moment, _){
+  function($, windows, liveapi, rv, moment, _) {
 
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
@@ -74,7 +74,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       var start_time = params.purchase_time*1;
       var end_time = null;
       var request = { ticks_history: params.symbol };
-      if(params.duration_type === 'ticks'){
+      if(params.duration_type[0] === 't'){
           request.start = start_time - 3; /* load around 2 more thicks before start */
           request.end = start_time +  params.duration*2 + 3;
       }
@@ -102,9 +102,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                var sell_time = params.sell_time;
 
                var chart = init_chart(root, ticks);
-               var entry_spot = history.times.filter(function(t){ return t*1 >= start_time })[0];
+               var entry_spot = history.times.filter(function(t){ return t*1 > start_time })[0];
                var exit_spot =  null;
-               if(params.duration_type === 'ticks') {
+               if(params.duration_type[0] === 't') {
                   exit_spot = history.times[history.times.indexOf(entry_spot) + params.duration*1];
                }
                exit_spot = exit_spot || exit_spot*1;
@@ -113,14 +113,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                (start_time !== entry_spot) && chart.addPlotLineX({ value: start_time, label: 'Start Time' ,text_left: true });
                entry_spot && chart.addPlotLineX({ value: entry_spot, label: 'Entry Spot'});
                exit_spot && chart.addPlotLineX({ value: exit_spot, label: 'Exit Spot'});
-               sell_time && chart.addPlotLineX({ value: sell_time*1, label: 'Sell Time'});
+               (sell_time < exit_spot) && chart.addPlotLineX({ value: sell_time*1, label: 'Sell Time'});
                end_time && chart.addPlotLineX({ value: end_time, label: 'End Time'});
 
                state.chart.chart = chart;
                state.chart.manual_reflow();
              })
              .catch(function(err) {
-               chart.loading = err.message;
+               state.chart.loading = err.message;
                console.error(err);
              });
   }
