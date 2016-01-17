@@ -82,10 +82,21 @@
 /******************* chart tab ******************/
 .view-transaction-dialog .content .transaction-chart {
   padding-top: 5px;
+  height: 100%;
+}
+
+.view-transaction-dialog .content .chart-container .loading {
+  text-align: center;
+  position: absolute;
+  left: 0; right: 0; bottom: 0; top:0;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
 }
 
 .view-transaction-dialog .content .chart-container,
 .view-transaction-dialog .content .explanation {
+  position: relative;
   height: calc(100% - 86px);
   min-height: 200px;
   flex: 1 1 auto;
@@ -93,6 +104,7 @@
   margin: 2px 0;
 }
 
+/******************** explanation tab ************/
 .view-transaction-dialog .content .explanation {
   margin-left: 2px;
   display: flex;

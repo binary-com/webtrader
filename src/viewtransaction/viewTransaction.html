@@ -62,7 +62,11 @@
     </div>
 
     <div class="chart-container" rv-show="route.value | eq 'chart'">
-      <div class='transaction-chart'> </div>
+      <div class='transaction-chart' rv-show="chart.loading | eq ''"> </div>
+
+      <div class='loading' rv-show="chart.loading | not-eq ''">
+        <span rv-text="chart.loading"></span>
+      </div>
     </div>
 
   </div>
