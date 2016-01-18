@@ -1,6 +1,6 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.css"], function ($, $navHtml) {
+define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/navigation.css"], function ($, moment, $navHtml) {
     "use strict";
 
 	$(window).resize(function () {
@@ -168,18 +168,25 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
   function initLoginButton(root){
       var login_btn = root.find('.authentication button');
       var loginid = root.find('.authentication span.loginid').hide();
+      var time = root.find('.authentication span.time').hide();
+      var balance = root.find('.authentication span.balance').hide();
       require(['websockets/binary_websockets'],function(liveapi) {
           liveapi.events.on('logout', function(){
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
               login_btn.removeClass('logout').addClass('login')
                 .removeAttr('disabled').text('Login');
               loginid.fadeOut();
+              time.fadeOut();
+              balance.fadeOut();
           });
           liveapi.events.on('login', function(data){
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
               login_btn.removeClass('login').addClass('logout')
                 .removeAttr('disabled').text('Logout');
+
               loginid.text(data.authorize.loginid).fadeIn();
+              balance.text(data.authorize.currency + ' ' + data.authorize.balance).fadeIn();
+              time.fadeIn();
           });
 
           login_btn.on('click', function(){
@@ -195,6 +202,10 @@ define(["jquery", "text!navigation/navigation.html", "css!navigation/navigation.
             }
           });
       });
+
+      /* update time every one minute */
+      time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT');
+      setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT'); },30*1000);
   }
 
 	return {

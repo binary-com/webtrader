@@ -300,7 +300,7 @@
 }
 #nav-container .authentication button {
   display: inline-block;
-  color: white;
+  color: #eee;
   line-height: 2em;
   font-size: larger;
   min-width:80px;
@@ -312,18 +312,26 @@
 #nav-container .authentication div {
   display: inline-block;
   position: relative;
-  color: white;
+  color: #eee;
+}
+
+#nav-container .authentication span {
+  text-align: left;
+  display: inline-block;
 }
 #nav-container .authentication span.loginid {
-  font-size: 14px;
-  width: 100px;
+  width: 110px;
+  font-size: 16px;
   position: relative;
   bottom: -10px;
 }
 #nav-container .authentication span.time {
-  font-size: 12px;
+  width: 110px;
+  font-size: 10px;
   position: absolute;
-  top: -15px;
+  right: 0;
+  top: -10px;
+
 }
 #nav-container .authentication span.balance {
   position: relative;
@@ -331,7 +339,7 @@
   font-size: 14px;
   padding-right: 10px;
   margin-right: 10px;
-  height: 2em;
+  line-height: 1.4em;
   border-right: 2px solid gray;
 }
 
