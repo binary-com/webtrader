@@ -4,6 +4,7 @@
 
 define(["jquery", "windows/windows", "websockets/binary_websockets", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
   function($, windows, liveapi, rv, moment, _) {
+  'use strict';
 
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
@@ -102,7 +103,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
 
                /* TODO: tell backend they are returning the wrong sell time */
                var sell_time = params.sell_time;
-               console.warn(sell_time);
 
                var chart = init_chart(root, ticks);
                var entry_spot = history.times.filter(function(t){ return t*1 > start_time })[0];
@@ -141,30 +141,47 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
              });
   }
 
+  /* returns a promise */
+  function get_symbol_name(symbol){
+    return liveapi.cached.send({trading_times: new Date().toISOString().slice(0, 10)})
+                  .then(function(data){
+                    var markets = data.trading_times.markets;
+                    for(var i  = 0; i < markets.length; ++i)
+                      for(var smarket = markets[i].submarkets, j = 0; j < smarket.length; ++j)
+                        for(var symbols = smarket[j].symbols, k = 0; k < symbols.length; ++k)
+                          if(symbols[k].symbol === symbol)
+                            return symbols[k].name;
+                    return 'Transaction';
+                  });
+  }
   /* params : { symbol: ,contract_id: ,longcode: ,sell_time: ,
                 purchase_time: ,buy_price: ,sell_price:, currency:,
                 duration: , duration_type: 'ticks/seconds/...' } */
   function init(params) {
-    require(['text!viewtransaction/viewTransaction.html'],function(html) {
-        var root = $(html);
-        var state = init_state(params, root);
-        var transWin = windows.createBlankWindow(root, {
-            title: 'Transaction ' + params.contract_id, /* TODO: use symbol_name instead */
-            width: 700,
-            minWidth: 300,
-            minHeight:350,
-            destroy: function() { },
-            resize: function() {
-              state.chart.manual_reflow();
-              // state.chart.chart && state.chart.chart.reflow();
-            },
-            close: function() { view.unbind(); },
-            'data-authorized': 'true'
-        });
+    require(['text!viewtransaction/viewTransaction.html']);
+    get_symbol_name(params.symbol).then(function(symbol_name){
+        params.symbol_name = symbol_name;
+        require(['text!viewtransaction/viewTransaction.html'],function(html) {
+            var root = $(html);
+            var state = init_state(params, root);
+            var transWin = windows.createBlankWindow(root, {
+                title: params.symbol_name + ' (' + params.transaction_id + ')',
+                width: 700,
+                minWidth: 300,
+                minHeight:350,
+                destroy: function() { },
+                resize: function() {
+                  state.chart.manual_reflow();
+                  // state.chart.chart && state.chart.chart.reflow();
+                },
+                close: function() { view.unbind(); },
+                'data-authorized': 'true'
+            });
 
-        transWin.dialog('open');
-        var view = rv.bind(root[0],state)
-    })
+            transWin.dialog('open');
+            var view = rv.bind(root[0],state)
+        });
+    });
   }
 
   function init_state(params, root){
