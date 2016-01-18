@@ -77,7 +77,15 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
         return value ? first : second;
       }
     }
+    /* rv formmatter to bind a given function to a value */
+    rv.formatters['bind'] = function(fn, value){
+      return fn.bind(undefined, value);
+    }
 
+    /* rv formatter to prepend a value */
+    rv.formatters['prepend'] = function(value, other){
+      return (other && value) ? other + value : value;
+    }
     /* ternary operator (condition ? first : second) */
     rv.formatters['ternary'] = function(condition, first, second){
       return condition ? first : second;
@@ -93,7 +101,9 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
         'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
         'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
       };
-      return (currency_symbols[currency] || currency) + value;
+      if(value)
+        return (currency_symbols[currency] || currency) + value;
+      return value;
     }
     /* formatter to convert epoch to utc-time in hh:mm:ss format */
     rv.formatters['utc-time'] = function(epoch){
