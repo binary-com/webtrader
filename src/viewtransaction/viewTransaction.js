@@ -27,9 +27,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           style: { fontSize:'16px' }
         },
         tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
-        // tooltip: { formatter: function () {
-        //     return moment.utc(this.x).format("dddd, MMM D, HH:mm:ss") + "<br/>" + this.y;
-        // } },
         xAxis: {
           type: 'datetime',
           categories:null,
