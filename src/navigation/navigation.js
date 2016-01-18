@@ -206,6 +206,15 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
       /* update time every one minute */
       time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT');
       setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT'); },30*1000);
+
+      /* update balance on change */
+      require(['websockets/binary_websockets'], function(liveapi){
+        liveapi.events.on('balance',function(data){
+            balance.text(data.balance.currency + ' ' + data.balance.balance);
+            balance.removeClass('color-change').addClass('color-change');
+            // balance.effect('pulsate',{duration: 25});
+        });
+      });
   }
 
 	return {

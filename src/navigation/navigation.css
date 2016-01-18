@@ -343,7 +343,6 @@
   border-right: 2px solid gray;
 }
 
-
 #nav-container .authentication button[disabled] { opacity: 0.5;}
 #nav-container .authentication button.login { background: #2e8836; }
 #nav-container .authentication button.logout { background: #4F577E; }
