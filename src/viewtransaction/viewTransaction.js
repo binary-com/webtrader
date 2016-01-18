@@ -9,9 +9,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
-  function init_chart(root, ticks) {
+  function init_chart(root, ticks, symbol_name) {
       var el = root.find('.transaction-chart')[0];
-
 
       var options = {
         title: '',
@@ -23,9 +22,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           width: 0,
           height: 0,
         },
-        tooltip: { formatter: function () {
-            return moment.utc(this.x).format("dddd, MMM D, HH:mm:ss") + "<br/>" + this.y;
-        } },
+        title:{
+          text: symbol_name,
+          style: { fontSize:'16px' }
+        },
+        tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
+        // tooltip: { formatter: function () {
+        //     return moment.utc(this.x).format("dddd, MMM D, HH:mm:ss") + "<br/>" + this.y;
+        // } },
         xAxis: {
           type: 'datetime',
           categories:null,
@@ -41,6 +45,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           // gridLineWidth: 0,
         },
         series: [{
+          name: symbol_name,
           data: ticks,
           type:'line'
         }],
@@ -104,7 +109,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                /* TODO: tell backend they are returning the wrong sell time */
                var sell_time = params.sell_time;
 
-               var chart = init_chart(root, ticks);
+               var chart = init_chart(root, ticks, params.symbol_name);
                var entry_spot = history.times.filter(function(t){ return t*1 > start_time })[0];
                var exit_spot =  null;
                if(params.duration_type[0] === 't') {
@@ -154,6 +159,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                     return 'Transaction';
                   });
   }
+
   /* params : { symbol: ,contract_id: ,longcode: ,sell_time: ,
                 purchase_time: ,buy_price: ,sell_price:, currency:,
                 duration: , duration_type: 'ticks/seconds/...' } */
