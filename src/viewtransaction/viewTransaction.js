@@ -23,7 +23,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           height: 0,
         },
         tooltip: { formatter: function () {
-            return moment.utc(this.x*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" + this.y;
+            return moment.utc(this.x).format("dddd, MMM D, HH:mm:ss") + "<br/>" + this.y;
         } },
         xAxis: {
           type: 'datetime',
@@ -96,12 +96,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                var times = history.times, prices = history.prices;
                var ticks = [];
                for(var i = 0; i < times.length; ++i) {
-                 ticks.push([times[i]*1, prices[i]*1]);
+                 ticks.push([times[i]*1000, prices[i]*1]);
                }
                state.chart.loading = '';
 
                /* TODO: tell backend they are returning the wrong sell time */
                var sell_time = params.sell_time;
+               console.warn(sell_time);
 
                var chart = init_chart(root, ticks);
                var entry_spot = history.times.filter(function(t){ return t*1 > start_time })[0];
@@ -113,11 +114,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                   exit_spot = _(history.times).filter(function(t) { return t*1 <= end_time; }).last();
                }
 
-               (start_time*1 !== entry_spot*1) && chart.addPlotLineX({ value: start_time*1, label: 'Start Time' ,text_left: true });
-               entry_spot && chart.addPlotLineX({ value: entry_spot*1, label: 'Entry Spot'});
-               exit_spot && chart.addPlotLineX({ value: exit_spot*1, label: 'Exit Spot', text_left: true});
-               (sell_time*1 < exit_spot*1) && chart.addPlotLineX({ value: sell_time*1, label: 'Sell Time'});
-               end_time && chart.addPlotLineX({ value: end_time, label: 'End Time'});
+               (start_time*1 !== entry_spot*1) && chart.addPlotLineX({ value: start_time*1000, label: 'Start Time' ,text_left: true });
+               entry_spot && chart.addPlotLineX({ value: entry_spot*1000, label: 'Entry Spot'});
+               exit_spot && chart.addPlotLineX({ value: exit_spot*1000, label: 'Exit Spot', text_left: true});
+               (sell_time*1 < exit_spot*1) && chart.addPlotLineX({ value: sell_time*1000, label: 'Sell Time'});
+               end_time && chart.addPlotLineX({ value: end_time*1000, label: 'End Time'});
 
                if(entry_spot) {
                  var entry_spot_value = history.prices[history.times.indexOf(entry_spot)];
