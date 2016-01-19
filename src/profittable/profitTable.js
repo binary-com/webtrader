@@ -107,8 +107,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     function initProfitWin() {
         profitWin = windows.createBlankWindow($('<div/>'), {
             title: 'Profit Table',
-            width: 750,
-            minWidth:700,
+            width: 700,
             minHeight:90,
             destroy: function() { table && table.DataTable().destroy(true); },
             close: function() {  profitWin = null; },

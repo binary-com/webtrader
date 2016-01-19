@@ -87,7 +87,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
             title: 'Statement',
-            width: 900 ,
+            width: 700 ,
             minHeight:100,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
             refresh: function() {
