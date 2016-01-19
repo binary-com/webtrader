@@ -18,14 +18,20 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     .then(initProfitWin)
                     .catch(function (err) {
                         console.error(err);
+                        $.growl.error({ message: err.message });
                     });
             else
                 profitWin.moveToTop();
         });
     }
 
+    var loading = false;
+    var options = { offset : 0, limit: 200 };
+    var is_specific_date_shown = false; /* is data for a specific date is shown */
+
     var refreshTable = function (yyyy_mm_dd) {
         var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
+        loading = true;
 
         var request = {
             profit_table: 1,
@@ -34,10 +40,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
         };
 
         /* if a date is specified get the transactions for that date */
-        if (yyyy_mm_dd)
-            request.date_from = request.date_to = yyyy_mm_dd;
-        else /* otherwise get the most recent 50 transactions */
+        if (typeof yyyy_mm_dd === 'string') {
+            request.date_from = yyyy_mm_dd_to_epoch(yyyy_mm_dd, { utc: true });
+            var one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
+            request.date_to = request.date_from + one_day_utc;
+            table.api().rows().remove();
+            is_specific_date_shown = true;
+        }
+        else  { /* request the next 50 items for live scroll */
             request.limit = 50;
+            if(is_specific_date_shown || yyyy_mm_dd.clear) {
+                table.api().rows().remove();
+                is_specific_date_shown = false;
+            }
+            request.offset = table.api().column(0).data().length;
+        }
 
         /* refresh the table with result of { profit_table:1 } from WS */
         var refresh = function (data) {
@@ -57,9 +74,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
-            table.api().rows().remove();
             table.api().rows.add(rows);
             table.api().draw();
+            loading = false;
             processing_msg.hide();
         };
 
@@ -110,9 +127,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             width: 750,
             minWidth:700,
             minHeight:90,
-            destroy: function() { table && table.DataTable().destroy(true); },
-            close: function() {  profitWin = null; },
-            refresh: function() { datepicker.clear(); refreshTable(); },
+            destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
+            refresh: function() {
+              datepicker.clear();
+              refreshTable({clear:true});
+            },
             'data-authorized': 'true'
         });
         require(['text!profittable/profitTable.html'], function (html) {
@@ -146,7 +165,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                 });
             });
 
-            refreshTable();
+            refreshTable({clear: true});
             datepicker = profitWin.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
@@ -156,6 +175,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             profitWin.dialog('open');
             profitWin.on('click', on_arrow_click);
+
+            /**************** infinite scroll implementation *******************/
+            refreshTable({clear:true});
+            profitWin.scroll(function() {
+              var scrollTop = profitWin.scrollTop(),
+                  innerHeight = profitWin.innerHeight(),
+                  scrollHeight = profitWin[0].scrollHeight,
+                  postion = (scrollTop + innerHeight) / scrollHeight;
+              if(postion > 0.75 && !loading && !is_specific_date_shown){
+                refreshTable({clear:false});
+              }
+            });
         });
     }
 
