@@ -46,19 +46,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         }
     }
 
-    function update_balance() {
-        liveapi.send({ balance: 1 })
-            .then(function (data) {
-                currency = data.balance.currency;
-                var balance = data.balance.balance;
-                balance_span.update(balance);
-            })
-            .catch(function (err) {
-                console.error(err);
-                $.growl.error({ message: err.message });
-            });
-    }
-
     function initPortfolioWin() {
         require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
