@@ -67,16 +67,20 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                   if(portfolioWin.dialogExtend('state') === 'minimized') {
                       portfolioWin.dialogExtend('restore');
                   }
-                  update_balance();
+                  liveapi.send({ balance: 1 }).catch(function (err) { console.error(err); $.growl.error({ message: err.message }); });
                   update_table();
                 };
 
+                /* refresh blance on blance change */
+                liveapi.events.on('balance',function(data){
+                    currency = data.balance.currency;
+                    balance_span.update(data.balance.balance);
+                });
                 /* refresh portfolio when a new contract is added or closed */
                 liveapi.events.on('transaction', function(data){
                     var transaction = data.transaction;
                     /* TODO: once the api provoided "longcode" use it to update
                       the table and do not issue another {portfolio:1} call */
-                    balance_span.update(transaction.balance);
                     update_table();
                 });
 
@@ -94,8 +98,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         liveapi.events.on('proposal_open_contract', update_indicative);
                     },
                     open: function () {
-                        update_balance();
-                        update_table();
+                        refresh();
                         /* suscribe to all open contracts */
                         liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
                             .catch(function (err) {
