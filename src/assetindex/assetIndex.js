@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on October 19, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "common/menu", "datatables", "jquery-growl"], function ($, windows, liveapi, menu) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation/menu", "datatables", "jquery-growl"], function ($, windows, liveapi, menu) {
 
     var table = null;
     var assetWin = null;

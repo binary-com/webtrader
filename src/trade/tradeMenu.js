@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on October 30, 2015.
  */
-define(["jquery", "lodash", "websockets/binary_websockets", "common/menu", "jquery-growl"], function ($, lodash, liveapi, menu) {
+define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "jquery-growl"], function ($, lodash, liveapi, menu) {
 
     var show_error = function (err) { $.growl.error({ message: err.message }); console.error(err); };
     function refresh_active_symbols() {

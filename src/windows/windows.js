@@ -362,7 +362,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 }
             });
 
-            require(["charts/chartWindow","websockets/binary_websockets", "common/menu"], function (chartWindowObj,liveapi, menu) {
+            require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], function (chartWindowObj,liveapi, menu) {
 
 
                 //Attach click listener for tile menu
