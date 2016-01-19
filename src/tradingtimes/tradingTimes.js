@@ -155,7 +155,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
                 processing_msg.hide();
             };
 
-            liveapi.send({ trading_times: yyyy_mm_dd })
+            liveapi.cached.send({ trading_times: yyyy_mm_dd })
             .then(refresh)
             .catch(function (error) {
                 $.growl.error({ message: error.message });

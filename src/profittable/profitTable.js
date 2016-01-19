@@ -94,6 +94,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
               duration_type: duration_type,
               symbol: symbol,
               contract_id: transaction.contract_id,
+              transaction_id: transaction.transaction_id,
               longcode: transaction.longcode,
               sell_time: transaction.sell_time,
               purchase_time: transaction.purchase_time,

@@ -317,5 +317,10 @@ define(['jquery'], function ($) {
       api.send({transaction: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
     });
+    /* always register for balance stream */
+    api.events.on('login', function() {
+      api.send({balance: 1, subscribe:1})
+         .catch(function(err){ console.error(err); });
+    });
     return api;
 });
