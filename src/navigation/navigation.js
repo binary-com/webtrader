@@ -170,22 +170,46 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
       var loginid = root.find('.authentication span.loginid').hide();
       var time = root.find('.authentication span.time').hide();
       var balance = root.find('.authentication span.balance').hide();
+      var currency = ''; /* will get this from payout_currencies api on login */
       require(['websockets/binary_websockets'],function(liveapi) {
-          liveapi.events.on('logout', function(){
+
+          function update_balance(data) {
+              if(!currency) {
+                liveapi.send({payout_currencies: 1})
+                       .then(function(_data){
+                            currency = _data.payout_currencies[0];
+                            setTimeout(function() { update_balance(data); }, 0); /* now that we have currency update balance */
+                       }).catch(function(err){ console.error(err);})
+                  return;
+               }
+               
+              var value = '0';
+              if(data.authorize) value = data.authorize.balance;
+              else value = data.balance.balance;
+
+              balance.text(currency + ' ' + value).fadeIn();
+          };
+
+          /* update balance on change */
+          liveapi.events.on('balance', update_balance);
+
+          liveapi.events.on('logout', function() {
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
               login_btn.removeClass('logout').addClass('login')
                 .removeAttr('disabled').text('Login');
               loginid.fadeOut();
               time.fadeOut();
               balance.fadeOut();
+              currency = '';
           });
+
           liveapi.events.on('login', function(data){
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
               login_btn.removeClass('login').addClass('logout')
                 .removeAttr('disabled').text('Logout');
 
+              update_balance(data);
               loginid.text(data.authorize.loginid).fadeIn();
-              balance.text(data.authorize.currency + ' ' + data.authorize.balance).fadeIn();
               time.fadeIn();
           });
 
@@ -206,15 +230,6 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
       /* update time every one minute */
       time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT');
       setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT'); },30*1000);
-
-      /* update balance on change */
-      require(['websockets/binary_websockets'], function(liveapi){
-        liveapi.events.on('balance',function(data){
-            balance.text(data.balance.currency + ' ' + data.balance.balance);
-            balance.removeClass('color-change').addClass('color-change');
-            // balance.effect('pulsate',{duration: 25});
-        });
-      });
   }
 
 	return {
