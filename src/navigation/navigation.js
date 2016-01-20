@@ -231,8 +231,8 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
       });
 
       /* update time every one minute */
-      time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT');
-      setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD hh:mm') + ' GMT'); },30*1000);
+      time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
+      setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'); },30*1000);
   }
 
 	return {
