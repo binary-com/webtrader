@@ -30,6 +30,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-if');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-gitinfo');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.registerTask('default', ['imagemin']);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -87,7 +89,7 @@ module.exports = function (grunt) {
                             'js-cookie/src/js.cookie.js',
                             'require-css/css.min.js',
                             'text/text.js',
-                            'lodash/lodash.min.js',
+                            'lodash/dist/lodash.min.js',
                             'underscore/underscore-min.js',
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',
@@ -105,7 +107,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html'
+                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -158,6 +160,23 @@ module.exports = function (grunt) {
                 src: ['**/*.html'],
                 dest: 'dist/compressed'
             }
+        },
+        imagemin: {
+          static: {
+            options: {
+              optimizationLevel: 3,
+              svgoPlugins: [{ removeViewBox: false }],
+              use: []
+            }
+          },
+          dynamic: {
+            files: [{
+              expand: true,
+              cwd: 'dist/uncompressed/',
+              src: ['**/*.{png,jpg,gif,svg}'],
+              dest: 'dist/compressed/'
+            }]
+          }
         },
         uglify: {
             minify: {
@@ -315,8 +334,8 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'copy:copyLibraries', 'rename', 'replace']);
-    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify', 'copy:copy_AfterCompression']);
-	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'copy:copy_AfterCompression']);
+  	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */

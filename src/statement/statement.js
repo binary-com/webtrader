@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on November 9, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl"], function ($, windows, liveapi, _) {
 
     var statement = null,
         table = null,
@@ -23,7 +23,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     };
 
     var loading = false;
-    var options = { offset : 0, limit: 50 };
+    var options = { offset : 0, limit: 200 };
     var is_specific_date_shown = false; /* is data for a specific date is shown */
 
     function refreshTable (yyy_mm_dd) {
@@ -59,10 +59,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 var amount = trans.amount * 1;
                 var svg = amount > 0 ? 'up' : amount < 0 ? 'down' : 'equal';
                 var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
+                img = ''; /* TODO: removed the arrow image for now */
                 return [
                     epoch_to_string(trans.transaction_time, { utc: true }),
                     trans.transaction_id,
-                    capitalizeFirstLetter(trans.action_type),
+                    _.capitalize(trans.action_type),
                      img + trans.longcode ,
                     (trans.amount * 1).toFixed(2),
                     '<b>' + formatPrice(trans.balance_after) + '</b>'
@@ -86,7 +87,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
             title: 'Statement',
-            width: 900 ,
+            width: 700 ,
             minHeight:100,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
             refresh: function() {

@@ -362,7 +362,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 }
             });
 
-            require(["charts/chartWindow","websockets/binary_websockets", "common/menu"], function (chartWindowObj,liveapi, menu) {
+            require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], function (chartWindowObj,liveapi, menu) {
 
 
                 //Attach click listener for tile menu
@@ -459,6 +459,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 .addClass('webtrader-dialog')
                 .dialog(options)
                 .dialogExtend(options);
+            /* allow dialogs to be moved though the bottom of the page */
+            blankWindow.dialog('widget').draggable( "option", "containment", false );
+            blankWindow.dialog('widget').draggable( "option", "scroll", true );
 
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);

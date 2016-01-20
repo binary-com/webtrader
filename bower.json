@@ -1,6 +1,6 @@
 {
   "name": "webtrader",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "homepage": "https://github.com/binary-com/webtrader.git",
   "authors": [
     "Armin Zia",
@@ -42,7 +42,7 @@
     "text": "~2.0.14",
     "rivets": "~0.8.1",
     "binary-com-jquery-ui-timepicker": "*",
-    "lodash": "~3.10.1",
+    "lodash": "~4.0.0",
     "moment": "~2.10.6",
     "jquery-sparkline": "~2.1.3"
   }

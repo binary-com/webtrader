@@ -1,4 +1,4 @@
-define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'], function( $, liveapi, menu ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util'], function( $, liveapi, menu ) {
 	return {
 		init: function() {
 			// get chart window html.
@@ -20,7 +20,7 @@ define(['jquery', "websockets/binary_websockets", 'common/menu', 'common/util'],
 	            liveapi
 	              .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
 	              .then(function (_instrumentJSON) {
-                    
+
                     _instrumentJSON = menu.extractChartableMarkets(_instrumentJSON);
 	                if (!$.isEmptyObject(_instrumentJSON)) {
 	                    var instrumentCode = getParameterByName('instrument');

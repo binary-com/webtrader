@@ -66,28 +66,28 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           'contract_category_display': 'Up/Down',
           'barrier_category' : 'euro_atm',
           'contract_display' : 'higher'
-        }).each(replacer('contract_display', 'rise')).run();
+        }).each(replacer('contract_display', 'rise')).value()
 
         _(available).filter({
           'contract_category_display':'Up/Down',
           'barrier_category': 'euro_atm',
           'contract_display': 'lower',
-        }).each(replacer('contract_display','fall')).run();
+        }).each(replacer('contract_display','fall')).value()
         /* fix for server side api, returning two different contract_category_displays for In/Out */
-        _(available).filter('contract_category_display', 'Stays In/Goes Out')
-                    .each(replacer('contract_category_display', 'In/Out')).run();
-        _(available).filter('contract_category_display', 'Ends In/Out')
-                    .each(replacer('contract_category_display', 'In/Out')).run();
+        _(available).filter(['contract_category_display', 'Stays In/Goes Out'])
+                    .each(replacer('contract_category_display', 'In/Out')).value();
+        _(available).filter(['contract_category_display', 'Ends In/Out'])
+                    .each(replacer('contract_category_display', 'In/Out')).value();
         /* fix for websocket having a useless barrier value for digits */
-        _(available).filter('contract_category_display', 'Digits')
-                    .each(replacer('barriers', 0)).run();
+        _(available).filter(['contract_category_display', 'Digits'])
+                    .each(replacer('barriers', 0)).value();
         /* fix for contract_display text in In/Out menue */
-        _(available).filter('contract_display', 'ends outside').each(replacer('contract_display', 'ends out')).run();
-        _(available).filter('contract_display', 'ends between').each(replacer('contract_display', 'ends in')).run();
-        _(available).filter('contract_display', 'stays between').each(replacer('contract_display', 'stays in')).run();
-        _(available).filter('contract_display', 'goes outside').each(replacer('contract_display', 'goes out')).run();
-        _(available).filter('contract_display', 'touches').each(replacer('contract_display', 'touch')).run();
-        _(available).filter('contract_display', 'does not touch').each(replacer('contract_display', 'no touch')).run();
+        _(available).filter(['contract_display', 'ends outside']).each(replacer('contract_display', 'ends out')).value();
+        _(available).filter(['contract_display', 'ends between']).each(replacer('contract_display', 'ends in')).value();
+        _(available).filter(['contract_display', 'stays between']).each(replacer('contract_display', 'stays in')).value();
+        _(available).filter(['contract_display', 'goes outside']).each(replacer('contract_display', 'goes out')).value();
+        _(available).filter(['contract_display', 'touches']).each(replacer('contract_display', 'touch')).value();
+        _(available).filter(['contract_display', 'does not touch']).each(replacer('contract_display', 'no touch')).value();
 
         /* sort the items in the array according to the way we want to show them */
         available = _.sortBy(available,function(row){
@@ -244,7 +244,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           loading: true,
         },
         proposal: {
-          symbol: _(available).first().underlying_symbol,
+          symbol: _(available).head().underlying_symbol,
           ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
           req_id: -1, /* id of last request sent */
 
@@ -283,7 +283,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               var expiry = state.date_expiry;
               expiry.today_times.open = times.open;
               expiry.today_times.close = times.close;
-              var range = _(state.duration_unit.ranges).filter({'type': 'minutes'}).first();
+              var range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
               expiry.today_times.disabled = !range;
               var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
               expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
@@ -292,8 +292,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       state.categories.update = function () {
         var name = state.categories.value;
-        state.category_displays.array = _(available).filter('contract_category_display', name).map('contract_display').uniq().run();
-        state.category_displays.selected = _.first(state.category_displays.array);
+        state.category_displays.array = _(available).filter(['contract_category_display', name]).map('contract_display').uniq().value();
+        state.category_displays.selected = _.head(state.category_displays.array);
       };
 
       state.category_displays.onclick = function (e) {
@@ -305,7 +305,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           'contract_category_display': state.categories.value,
           'contract_display': state.category_displays.selected,
           'start_type': 'forward'
-        }).first();
+        }).head();
 
         if (!forward_starting_options) {
           _.assign(state.date_start, { visible: false, array: [], value: 'now' });
@@ -353,7 +353,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       state.duration.update = function () {
         var category = state.categories.value;
-        if (_(["Up/Down", "In/Out", "Touch/No Touch"]).contains(category)) {
+        if (_(["Up/Down", "In/Out", "Touch/No Touch"]).includes(category)) {
           if(state.duration.array.length !== 2)
             state.duration.array = ['Duration', 'End Time'];
         }
@@ -378,16 +378,16 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             max: r.max_contract_duration + '',
             type: r.expiry_type
           }
-        }).run();
+        }).value();
 
         var array = [];
         var ranges = [];
         _.each(durations, function (d) {
-          if (_(['tick', 'daily']).contains(d.type)) {
+          if (_(['tick', 'daily']).includes(d.type)) {
             array.push({ tick: 'ticks', daily: 'days' }[d.type]);
             ranges.push({
-              min: d.min.replace('d', '') | 0,
-              max: d.max.replace('d', '') | 0,
+              min: d.min.replace('d', '').replace('t','') | 0,
+              max: d.max.replace('d', '').replace('t','') | 0,
               type: { tick: 'ticks', daily: 'days' }[d.type]
             });
             return;
@@ -405,11 +405,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             array.push('seconds');
             ranges.push({ min: min, max: max, type: 'seconds'});
           }
-          if(_(['s', 'm']).contains(min_unit) && max >= 60) {
+          if(_(['s', 'm']).includes(min_unit) && max >= 60) {
             array.push('minutes');
             ranges.push({ min: Math.max(min / 60, 1), max: max / 60, type: 'minutes' });
           }
-          if(_(['s', 'm', 'h']).contains(min_unit) && max >= 3600) {
+          if(_(['s', 'm', 'h']).includes(min_unit) && max >= 3600) {
             array.push('hours');
             ranges.push({ min: Math.max(min / 3600, 1), max: max / 3600, type: 'hours' });
           }
@@ -426,8 +426,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
 
         state.duration_unit.ranges = ranges;
-        if(!_.contains(array,state.duration_unit.value)){
-          state.duration_unit.value = _.first(array);
+        if(!_.includes(array,state.duration_unit.value)){
+          state.duration_unit.value = _.head(array);
         }
         state.duration_unit.array = array;
 
@@ -437,7 +437,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       };
 
       state.duration_count.update = function () {
-        var range = _(state.duration_unit.ranges).filter({'type': state.duration_unit.value}).first();
+        var range = _(state.duration_unit.ranges).filter({'type': state.duration_unit.value}).head();
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;
@@ -464,7 +464,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             over: 'Last Digit is Over'
           }[subcat];
 
-          if(!_.contains(array, state.digits.value)){
+          if(!_.includes(array, state.digits.value)){
             state.digits.value = array[0];
           }
           state.digits.array = array;
@@ -474,12 +474,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       state.barriers.update = function () {
         var unit = state.duration_unit.value;
-        var expiry_type = _(['seconds', 'minutes', 'hours']).contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+        var expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
         var barriers = _(available).filter({
           'contract_category_display': state.categories.value,
           'contract_display': state.category_displays.selected,
           'expiry_type':expiry_type
-        }).filter(function (r) { return r.barriers >= 1; }).first();
+        }).filter(function (r) { return r.barriers >= 1; }).head();
 
         state.barriers.barrier_count = barriers ? barriers.barriers : 0;
         if (!barriers)
@@ -495,7 +495,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var limit = _(available).filter({
           'contract_category_display': state.categories.value,
           'contract_display': state.category_displays.selected
-        }).first();
+        }).head();
 
         limit = (limit && limit.payout_limit) || null;
         basis.limit = limit ? (limit * 1) : null;
@@ -506,13 +506,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       state.proposal.onchange = function () {
         var unit = state.duration_unit.value;
-        var expiry_type = _(['seconds', 'minutes', 'hours']).contains(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+        var expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
         if(state.categories.value === 'Spreads') expiry_type = 'intraday';
         var row = _(available).filter({
           'contract_category_display': state.categories.value,
           'contract_display': state.category_displays.selected,
           'expiry_type': expiry_type
-        }).first();
+        }).head();
         var request = {
           proposal: 1,
           subscribe: 1,
@@ -545,7 +545,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         /* set value for duration or date_expiry */
         if (state.duration.value === 'Duration') {
-          request.duration_unit = _(state.duration_unit.value).first(); //  (d|h|m|s|t), Duration unit is s(seconds), m(minutes), h(hours), d(days), t(ticks)
+          request.duration_unit = _(state.duration_unit.value).head(); //  (d|h|m|s|t), Duration unit is s(seconds), m(minutes), h(hours), d(days), t(ticks)
           request.duration = state.duration_count.value * 1;
         }
         else {
@@ -604,7 +604,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             duration_unit: state.duration_unit.value,
         };
         /* pass data which is needed to show live tick purchase results */
-        if(_(['Digits','Up/Down','Asians']).contains(extra.category) && extra.duration_unit === 'ticks') {
+        if(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks') {
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
             if(extra.category !== 'Digits')
@@ -631,12 +631,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                  state.purchase.loading = false;
                  $.growl.error({ message: err.message });
                  console.error(err);
+                /* trigger a new proposal stream */
+                state.proposal.onchange();
                });
          }
       };
 
-      state.categories.array = _(available).map('contract_category_display').uniq().run();
-      state.categories.value = _(state.categories.array).contains('Up/Down') ? 'Up/Down' : _(state.categories.array).first(); // TODO: show first tab
+      state.categories.array = _(available).map('contract_category_display').uniq().value();
+      state.categories.value = _(state.categories.array).includes('Up/Down') ? 'Up/Down' : _(state.categories.array).head(); // TODO: show first tab
 
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
@@ -680,10 +682,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       /* change currency on user login */
       if(liveapi.is_authenticated()) {
-        liveapi.send({balance: 1})
+        liveapi.send({payout_currencies: 1})
                .then(function(data){
-                 state.currency.value = data.balance.currency;
-                 state.currency.array = [data.balance.currency];
+                 state.currency.value = data.payout_currencies[0];
+                 state.currency.array = data.payout_currencies;
                })
                .catch(function(err) { console.error(err); });
       }
@@ -716,7 +718,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         });
 
         /********************** register for ticks_streams **********************/
-        var symbol = _(available).first().underlying_symbol;
+        var symbol = _(available).head().underlying_symbol;
         var key = chartingRequestMap.keyFor(symbol, /* granularity = */ 0);
         if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
             chartingRequestMap.register({
@@ -728,7 +730,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             }).catch(function (err) {
               $.growl.error({ message: err.message });
               var has_digits = _(available).map('min_contract_duration')
-                                .any(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
+                                .some(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
               /* if this contract does not offer tick trades, then its fine let the user trade! */
               if(!has_digits) {
                 state.ticks.loading = false;

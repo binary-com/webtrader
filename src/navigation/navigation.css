@@ -298,18 +298,49 @@
   line-height: 52px;
   right: 20px;
 }
-#nav-container .authentication span,
 #nav-container .authentication button {
   display: inline-block;
-  margin-left: 10px;
-  /*height: 2em;*/
+  color: #eee;
+  line-height: 2em;
   font-size: larger;
   min-width:80px;
-  line-height: 2em;
   border: none;
   border-radius: 5px;
+  margin-left: 10px;
   outline: 0;
-  color: white;
+}
+#nav-container .authentication div {
+  display: inline-block;
+  position: relative;
+  color: #eee;
+}
+
+#nav-container .authentication span {
+  text-align: left;
+  display: inline-block;
+}
+#nav-container .authentication span.loginid {
+  width: 110px;
+  font-size: 14px;
+  position: relative;
+  bottom: -10px;
+}
+#nav-container .authentication span.time {
+  width: 110px;
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+  top: -10px;
+
+}
+#nav-container .authentication span.balance {
+  position: relative;
+  top: 10px;
+  font-size: 14px;
+  padding-right: 10px;
+  margin-right: 10px;
+  line-height: 1.4em;
+  border-right: 2px solid gray;
 }
 
 #nav-container .authentication button[disabled] { opacity: 0.5;}

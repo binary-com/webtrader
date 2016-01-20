@@ -4,42 +4,30 @@
 define(['indicator_base', 'highstock'], function (indicatorBase) {
 
     var cdl3blackcrowsOptionsMap = {}, cdl3blackcrowsSeriesMap = {};
-	
+    var candleMediumHeight = 0;
+
 	function calculateIndicatorValue(data, index) {
-		var candleOne_Index = index, 
+	    var candleOne_Index = index,
 			candleTwo_Index = index - 1,
-			candleThree_Index = index - 2,
-			candleFour_Index = index - 3;
+			candleThree_Index = index - 2;
 		
-		var candleFour_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleFour_Index),
-			candleFour_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleFour_Index),
-			candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
+		var candleThree_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleThree_Index),
 			candleThree_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleThree_Index),
 			candleTwo_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleTwo_Index),
 			candleTwo_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleTwo_Index),
 			candleOne_Open = indicatorBase.extractPriceForAppliedTO(indicatorBase.OPEN, data, candleOne_Index),
 			candleOne_Close = indicatorBase.extractPriceForAppliedTO(indicatorBase.CLOSE, data, candleOne_Index);
 		
-		var isCandleFour_Bullish = candleFour_Close > candleFour_Open,
-			isCandleFour_Bearish = candleFour_Close < candleFour_Open,
-			isCandleThree_Bullish = candleThree_Close > candleThree_Open,
-			isCandleThree_Bearish = candleThree_Close < candleThree_Open,
-			isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+		var	isCandleThree_Bearish = candleThree_Close < candleThree_Open,
 			isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open,
-			isCandleOne_Bullish = candleOne_Close > candleOne_Open,
 			isCandleOne_Bearish = candleOne_Close < candleOne_Open;
 			
-		var isBearishContinuation = isCandleFour_Bullish
-					&& isCandleThree_Bearish 
-					&& isCandleTwo_Bearish && (candleTwo_Open > candleThree_Close && candleTwo_Open < candleThree_Open && candleTwo_Close < candleThree_Close)
-					&& isCandleOne_Bearish && (candleOne_Open > candleTwo_Close && candleOne_Open < candleTwo_Open && candleOne_Close < candleTwo_Close)
-					;
-											
-		var isBullishContinuation = isCandleFour_Bearish
-					&& isCandleThree_Bullish 
-					&& isCandleTwo_Bullish && (candleTwo_Open < candleThree_Close && candleTwo_Open > candleThree_Open && candleTwo_Close > candleThree_Close)
-					&& isCandleOne_Bullish && (candleOne_Open < candleTwo_Close && candleOne_Open > candleTwo_Open && candleOne_Close > candleTwo_Close)
-					;
+		var isBearishContinuation = isCandleThree_Bearish && (Math.abs(candleThree_Close - candleThree_Open) > candleMediumHeight)
+					                && isCandleTwo_Bearish && (Math.abs(candleTwo_Close - candleTwo_Open) > candleMediumHeight) && (candleTwo_Open >= candleThree_Close && candleTwo_Open < candleThree_Open && candleTwo_Close < candleThree_Close)
+					                && isCandleOne_Bearish && (Math.abs(candleOne_Close - candleOne_Open) > candleMediumHeight) && (candleOne_Open >= candleTwo_Close && candleOne_Open < candleTwo_Open && candleOne_Close < candleTwo_Close);
+
+        //It's a bearish cadnlestick
+		var isBullishContinuation = false
 		
 		return {
 			isBullishContinuation : isBullishContinuation,
@@ -62,10 +50,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     //Merge the options
                     var seriesID = this.options.id;
                     cdl3blackcrowsOptions = $.extend({
-                        //stroke : 'red',
-                        //strokeWidth : 2,
-                        //dashStyle : 'line',
-                        //levels : [],
                         parentSeriesID : seriesID
                     }, cdl3blackcrowsOptions);
 
@@ -81,6 +65,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                          * Formula(OHLC or Candlestick) -
                             Refer to dl2crows.html for detailed information on this indicator
                          */
+                        candleMediumHeight = indicatorBase.getCandleMediumHeight(data);
                         var cdl3blackcrowsData = [];
                         for (var index = 3; index < data.length; index++)
                         {
@@ -119,12 +104,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             name: 'CDL3BLACKCROWS',
                             data: cdl3blackcrowsData,
                             type: 'flags',
-                            //dataGrouping: series.options.dataGrouping,
-                            //yAxis: 'cdl3blackcrows'+ uniqueID,
-                            //opposite: series.options.opposite,
-                            //color: cdl3blackcrowsOptions.stroke,
-                            //lineWidth: cdl3blackcrowsOptions.strokeWidth,
-                            //dashStyle: cdl3blackcrowsOptions.dashStyle,
 							onSeries: seriesID,
 							shape: 'flag',
 							turboThreshold: 0
@@ -209,7 +188,6 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                             if (dataPointIndex >= 1) {
                                 //Calculate CDL3BLACKCROWS - start
 								var bull_bear = calculateIndicatorValue(data, dataPointIndex);
-                                //console.log('Roc : ' + cdl3blackcrowsValue);
                                 //Calculate CDL3BLACKCROWS - end
 								var bullBearData = null;
 								if (bull_bear.isBullishContinuation) {
