@@ -631,6 +631,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                  state.purchase.loading = false;
                  $.growl.error({ message: err.message });
                  console.error(err);
+                /* trigger a new proposal stream */
+                state.proposal.onchange();
                });
          }
       };
@@ -680,10 +682,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       /* change currency on user login */
       if(liveapi.is_authenticated()) {
-        liveapi.send({balance: 1})
+        liveapi.send({payout_currencies: 1})
                .then(function(data){
-                 state.currency.value = data.balance.currency;
-                 state.currency.array = [data.balance.currency];
+                 state.currency.value = data.payout_currencies[0];
+                 state.currency.array = data.payout_currencies;
                })
                .catch(function(err) { console.error(err); });
       }
