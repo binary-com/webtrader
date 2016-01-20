@@ -35,13 +35,15 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
             row.data(cols);
 
             /* colorize indicative column on change */
-            var span = $('#' + id).find('td:nth-child(4)').find('span');
-            if(contract.is_valid_to_sell === 0) {
-              table.find('#' + id + ' > td:nth-child(4)').addClass('resale-not-offered');
-              span.removeClass('red green');
+            var tr = table.find('#' + id);
+            if(!contract.is_valid_to_sell) {
+              tr.removeClass('indicative-red indicative-green').addClass('resale-not-offered');
             } else {
-              table.find('#' + id + ' > td:nth-child(4)').removeClass('resale-not-offered');
-              span.removeClass('red green').addClass((perv_indicative*1) <= (bid_price*1) ? 'green' : 'red');
+              tr.removeClass('resale-not-offered');
+              if(perv_indicative !== bid_price) {
+                tr.removeClass('indicative-red indicative-green')
+                  .addClass((perv_indicative*1 < bid_price*1) ? 'indicative-green' : 'indicative-red');
+              }
             }
         }
     }

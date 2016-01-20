@@ -5,13 +5,18 @@
 .portfolio-dialog td:nth-child(4) {
   text-align: center;
 }
-.portfolio-dialog td.resale-not-offered {
+.portfolio-dialog tr.resale-not-offered > td:nth-child(4) {
+/*.portfolio-dialog td.resale-not-offered {*/
   opacity: 0.5;
   position: relative;
 }
-.portfolio-dialog td.resale-not-offered::after {
+.portfolio-dialog tr.resale-not-offered > td:nth-child(4)::after {
+/*.portfolio-dialog td.resale-not-offered::after {*/
   content: 'Resale not offered';
   display: block;
   font-size: .6em;
   position: absolute;
 }
+
+.portfolio-dialog tr.indicative-red > td:nth-child(4) span { color: #d71818; }
+.portfolio-dialog tr.indicative-green > td:nth-child(4) span { color: #02920e; }
