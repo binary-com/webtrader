@@ -607,6 +607,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if(_(['Digits','Up/Down','Asians']).contains(extra.category) && extra.duration_unit === 'ticks') {
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
+            if(extra.category !== 'Digits')
+              extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
         }
 
         // manually check to see if the user is authenticated or not,
