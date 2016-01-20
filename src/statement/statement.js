@@ -23,7 +23,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     };
 
     var loading = false;
-    var options = { offset : 0, limit: 50 };
+    var options = { offset : 0, limit: 200 };
     var is_specific_date_shown = false; /* is data for a specific date is shown */
 
     function refreshTable (yyy_mm_dd) {
@@ -87,7 +87,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
             title: 'Statement',
-            width: 900 ,
+            width: 700 ,
             minHeight:100,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
             refresh: function() {
