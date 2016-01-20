@@ -52,12 +52,14 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
             require(["charts/chartOptions"], function (chartOptions) {
                 chartOptions.init(id, options.timePeriod, options.type);
             });
-            require(["charts/chartExport"], function (chartExport) {
-              chartExport.init(id);
-            });
 
             require(["charts/charts"], function (charts) {
                 charts.drawChart("#" + id + "_chart", options, options.resize.bind(dialog));
+
+                /* after the chart is rendered initialize the export module */
+                require(["charts/chartExport"], function (chartExport) {
+                  chartExport.init(id);
+                });
             });
 
             dialog.dialog('open');
