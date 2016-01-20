@@ -122,18 +122,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     }
 
     function initProfitWin() {
-        profitWin = windows.createBlankWindow($('<div/>'), {
-            title: 'Profit Table',
-            width: 700,
-            minHeight:90,
-            destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
-            refresh: function() {
-              datepicker.clear();
-              refreshTable({clear:true});
-            },
-            'data-authorized': 'true'
-        });
         require(['text!profittable/profitTable.html'], function (html) {
+          profitWin = windows.createBlankWindow($('<div/>'), {
+              title: 'Profit Table',
+              width: 700,
+              minHeight:90,
+              destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
+              refresh: function() {
+                datepicker.clear();
+                refreshTable({clear:true});
+              },
+              'data-authorized': 'true'
+          });
 
             table = $(html);
             table.appendTo(profitWin);
