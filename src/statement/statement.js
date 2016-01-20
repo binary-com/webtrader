@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on November 9, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl"], function ($, windows, liveapi) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl"], function ($, windows, liveapi, _) {
 
     var statement = null,
         table = null,
@@ -63,7 +63,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 return [
                     epoch_to_string(trans.transaction_time, { utc: true }),
                     trans.transaction_id,
-                    capitalizeFirstLetter(trans.action_type),
+                    _.capitalize(trans.action_type),
                      img + trans.longcode ,
                     (trans.amount * 1).toFixed(2),
                     '<b>' + formatPrice(trans.balance_after) + '</b>'

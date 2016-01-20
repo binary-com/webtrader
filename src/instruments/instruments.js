@@ -2,7 +2,7 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", "websockets/binary_websockets", "common/menu", "jquery-growl","common/util"],
+define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu", "jquery-growl","common/util"],
     function ($, $ui, liveapi, menu) {
 
     "use strict";
