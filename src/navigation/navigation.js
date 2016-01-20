@@ -182,12 +182,15 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                        }).catch(function(err){ console.error(err);})
                   return;
                }
-               
+
               var value = '0';
               if(data.authorize) value = data.authorize.balance;
               else value = data.balance.balance;
 
-              balance.text(currency + ' ' + value).fadeIn();
+              if(value === '0' || value === 0)
+                balance.fadeOut();
+              else
+                balance.text(currency + ' ' + value).fadeIn();
           };
 
           /* update balance on change */
