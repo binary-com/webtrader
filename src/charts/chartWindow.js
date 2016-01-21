@@ -47,15 +47,14 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
             dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()
                 .find('div.chartSubContainer').attr('id', id + "_chart").end();
 
-            require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
-                tableView.init(dialog);
-                chartOptions.init(id, options.timePeriod, options.type, function() {
-                   tableView.show(dialog);
-                });
-            });
-
             require(["charts/charts"], function (charts) {
                 charts.drawChart("#" + id + "_chart", options, options.resize.bind(dialog));
+
+                /* initialize chartOptions & table-view once chart is rendered */
+                require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
+                    var table_view = tableView.init(dialog);
+                    chartOptions.init(id, options.timePeriod, options.type, table_view.show);
+                });
 
                 /* after the chart is rendered initialize the export module */
                 require(["charts/chartExport"], function (chartExport) {

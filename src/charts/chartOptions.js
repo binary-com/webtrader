@@ -56,8 +56,9 @@ define(["charts/chartWindow", "common/util"], function() {
 
                         var type = $(this).attr("class").split(" ")[0].replace(".", "").trim();
                         if(type === 'table'){
-                          if(tableViewCb)
+                          if(tableViewCb) {
                             tableViewCb();
+                          }
                         }
                         else {
                           // Remove tick mark from other types and add it to this one.
