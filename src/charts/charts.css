@@ -21,6 +21,10 @@
   left: 100%;
 }
 
+.chart-dialog .table-view table {
+  padding-top: 15px;
+}
+
 .chart-dialog .table-view .close {
   position: absolute;
   z-index: +1;
@@ -30,6 +34,6 @@
   border-radius: 0 0 0 4px;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0px 10px;
 }

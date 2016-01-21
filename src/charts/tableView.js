@@ -2,7 +2,7 @@
  * Created by amin january 21, 2016.
  */
 
-define([ ], function() {
+define(['jquery', 'moment', 'datatables' ], function($, moment) {
 
   var show_table_view = function(dialog){
     var table = dialog.find('.table-view');
@@ -18,9 +18,30 @@ define([ ], function() {
   }
 
   function init(dialog){
-    var table = dialog.find('.table-view');
-    var close = table.find('span.close');
+    var container = dialog.find('.table-view');
+    var close = container.find('span.close');
     close.on('click', hide_table_view.bind(null, dialog)); /* hide the dialog on close icon click */
+
+    var table = $("<table width='100%' class='portfolio-dialog display compact'/>");
+    table.appendTo(container);
+    table = table.dataTable({
+        data: [],
+        columns: [
+            { title: 'Date',
+              render: function(val) { return val + ' formatted' }
+            },
+            { title: 'Open' },
+            { title: 'High' },
+            { title: 'Low' },
+            { title: 'Close' },
+        ],
+        rowId : '4',
+        paging: false,
+        ordering: false,
+        info: false,
+        // processing: true
+    });
+    table.parent().addClass('hide-search-input');
   }
 
   return {
