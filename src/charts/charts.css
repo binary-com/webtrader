@@ -8,7 +8,7 @@
 
 .chartSubContainer {
     position: relative;
-    padding: 3px 0 0 3px;
+    padding: 15px 0 0 3px;
 }
 
 .chart-dialog .chart-view,
@@ -26,10 +26,18 @@
 }
 .chart-dialog .table-view table th,
 .chart-dialog .table-view table td {
-  text-align: center;
+  text-align: left;
   padding: 1px 3px !important;
 }
-.chart-dialog .table-view table th:nth-child(1) {
+.chart-dialog .table-view table th {
+  text-align: center;
+}
+.chart-dialog .table-view table td {
+  font-size: 14px;
+}
+.chart-dialog .table-view table th:nth-child(1),
+.chart-dialog .table-view table td:nth-child(1) {
+  text-align: center;
   min-width: 75px;
 }
 

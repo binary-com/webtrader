@@ -2,7 +2,8 @@
  * Created by amin january 21, 2016.
  */
 
-define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'datatables'], function($, moment, loki, chartingRequestMap) {
+define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/stream_handler', 'datatables'],
+  function($, moment, loki, chartingRequestMap, stream_handler) {
   var barsTable = chartingRequestMap.barsTable;
 
   var show_table_view = function(dialog, key){
@@ -10,15 +11,27 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'datatables']
     var chart = dialog.find('.chart-view');
     table.animate({left: '0'}, 250);
     chart.animate({left: '-100%'}, 250);
+    refresh_table(dialog, key); /* clear table and fill it again */
+    dialog.view_table_visible = true; /* let stream_handler new ohlc or ticks update the table */
+  }
+  var hide_table_view = function(dialog){
+    var table = dialog.find('.table-view');
+    var chart = dialog.find('.chart-view');
+    table.animate({left: '100%'}, 250);
+    chart.animate({left: '0'}, 250);
+    dialog.view_table_visible = false;
+  }
 
+  var refresh_table = function(dialog,key) {
+    var table = dialog.find('.table-view');
     var bars = barsTable
                     .chain()
                     .find({instrumentCdAndTp: key})
-                    .simplesort('time', false)
+                    .simplesort('time', true)
                     .data();
     var rows = bars.map(function(bar) {
       return [
-        moment.utc(bar.time).format('YYYY-MM-DD HH:mm:ss'),
+        bar.time,
         bar.open,
         bar.high,
         bar.low,
@@ -29,13 +42,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'datatables']
     api.rows().remove();
     api.rows.add(rows);
     api.draw();
-  }
-  var hide_table_view = function(dialog){
-    var table = dialog.find('.table-view');
-    var chart = dialog.find('.chart-view');
-    table.animate({left: '100%'}, 250);
-    chart.animate({left: '0'}, 250);
-  }
+  };
 
   function init(dialog){
     var container = dialog.find('.table-view');
@@ -49,7 +56,9 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'datatables']
     table = table.dataTable({
         data: [],
         columns: [
-            { title: 'Date' },
+            { title: 'Date',
+              render: function(epoch) { return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss'); }
+            },
             { title: 'Open' },
             { title: 'High' },
             { title: 'Low' },
@@ -63,9 +72,47 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'datatables']
     });
     table.parent().addClass('hide-search-input');
 
+    var on_tick = stream_handler.events.on('tick', function(data){
+      if(data.key !== key) return;
+      if(!dialog.view_table_visible) return;
+      var tick = data.tick;
+      var row = [
+        tick.time,
+        tick.open,
+        tick.high,
+        tick.low,
+        tick.close
+      ];
+      console.warn(data);
+      table.api().row.add(row);
+      table.api().draw();
+    });
+
+    var on_ohlc = stream_handler.events.on('ohlc', function(data){
+      if(data.key !== key) return;
+      if(!dialog.view_table_visible) return;
+      var ohlc = data.ohlc;
+      var row = [
+        ohlc.time,
+        ohlc.open,
+        ohlc.high,
+        ohlc.low,
+        ohlc.close
+      ];
+      console.warn(data);
+      if(data.is_new) { table.api().row.add(row); }
+      else { table.api().row(0).data(row); }
+      table.api().draw();
+    });
+
+    dialog.on('dialogdestroy', function(){
+      stream_handler.events.off('tick', on_tick);
+      stream_handler.events.off('ohld', on_ohlc);
+    });
+
     return {
         show: show_table_view.bind(null, dialog, key),
-        hide: hide_table_view.bind(null, dialog, key)
+        hide: hide_table_view.bind(null, dialog)
     }
   }
 
