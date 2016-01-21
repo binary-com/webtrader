@@ -12,8 +12,8 @@ define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], func
             require(['text!token/token.html'], function ($html) {
                 $html = $($html);
                 tokenWin = windows.createBlankWindow($html, {
-                    width: 605,
-                    height: 380,
+                    width: 500,
+                    height: 335,
                     title: 'Authentication Token',
                     resizable: false,
                     collapsable: false,
@@ -27,7 +27,7 @@ define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], func
                 });
 
                 var input = $html.find('input');
-                
+
                 $html.find("button")
                     .first()
                     .button()
