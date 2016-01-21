@@ -31,15 +31,17 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 return;
 
             if (isTick(timePeriod)) { //Update OHLC with same value in DB
-
-                barsTable.insert({
-                    instrumentCdAndTp: key,
-                    time: time,
-                    open: price,
-                    high: price,
-                    low: price,
-                    close: price
-                });
+                var tick = {
+                  instrumentCdAndTp: key,
+                  time: time,
+                  open: price,
+                  high: price,
+                  low: price,
+                  close: price
+                }
+                barsTable.insert(tick);
+                /* notify subscribers */
+                fire_event('tick', {tick: tick, key: key});
 
                 //notify all registered charts
                 chartingRequest.chartIDs.forEach(function (chartID) {
@@ -105,6 +107,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 bar.close = close;
                 barsTable.update(bar);
             }
+            /* notify subscribers */
+            fire_event('ohlc', {ohlc: bar, is_new: isNew, key: key });
 
             //notify all registered charts
             chartingRequest.chartIDs.forEach(function (chartID) {
@@ -153,5 +157,30 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
         }
     });
 
-    return {};
+    var callbacks = { };
+    /* fire a custom event and call registered callbacks(api.events.on(name)) */
+    var fire_event = function(name /*, args */){
+      var args = [].slice.call(arguments,1);
+      var fns = callbacks[name] || [];
+      fns.forEach(function (cb) {
+          setTimeout(function(){
+            cb.apply(undefined, args);
+          },0);
+      });
+    };
+
+    return {
+        events: {
+            on: function (name, cb) {
+                (callbacks[name] = callbacks[name] || []).push(cb);
+                return cb;
+            },
+            off: function(name, cb){
+                if(callbacks[name]) {
+                  var index = callbacks[name].indexOf(cb);
+                  index !== -1 && callbacks[name].splice(index, 1);
+                }
+            }
+        },
+    };
 });
