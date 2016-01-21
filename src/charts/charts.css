@@ -3,6 +3,7 @@
     min-height: 400px;
     background-color: white !important;
     padding: 0 !important;
+    overflow: hidden !important;
 }
 
 .chartSubContainer {
@@ -18,4 +19,17 @@
 }
 .chart-dialog .table-view {
   left: 100%;
+}
+
+.chart-dialog .table-view .close {
+  position: absolute;
+  z-index: +1;
+  right: 0;
+  background: #e98024;
+  border: 1px solid #e98024;
+  border-radius: 0 0 0 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0px 10px;
 }

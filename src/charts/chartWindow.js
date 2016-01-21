@@ -6,7 +6,6 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
 
     "use strict";
 
-
     function _trigger_Resize_Effects() {
         $(this).find(".chartSubContainer").width($(this).width() - 20);
         $(this).find(".chartSubContainer").height($(this).height() - 10);
@@ -43,14 +42,16 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
                 resize: _trigger_Resize_Effects
             }, options );
 
-
             var dialog = windows.createBlankWindow($chartWindowHtml, options),
                 id = dialog.attr('id');
             dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()
                 .find('div.chartSubContainer').attr('id', id + "_chart").end();
 
-            require(["charts/chartOptions"], function (chartOptions) {
-                chartOptions.init(id, options.timePeriod, options.type);
+            require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
+                tableView.init(dialog);
+                chartOptions.init(id, options.timePeriod, options.type, function() {
+                   tableView.show(dialog);
+                });
             });
 
             require(["charts/charts"], function (charts) {
