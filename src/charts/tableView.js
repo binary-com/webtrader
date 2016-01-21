@@ -73,7 +73,6 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     });
     table.parent().addClass('hide-search-input');
 
-    window.api = table.api();
     var on_tick = stream_handler.events.on('tick', function(data){
       if(data.key !== key) return;
       if(!dialog.view_table_visible) return;
