@@ -43,6 +43,9 @@ define(["charts/chartWindow", "common/util"], function() {
                 if (isTick(timePeriod)) {
                     $html.find(".candlestick, .ohlc").addClass('ui-state-disabled');
                 }
+                if(!tableViewCb) {
+                  $html.find('.chartType li.table').hide();
+                }
 
                 // Add a tick mark to initial chart type
                 $html.find('.chartType li.' + chartType).find('span:first').addClass('ui-icon ui-icon-check');
@@ -55,10 +58,9 @@ define(["charts/chartWindow", "common/util"], function() {
                         }
 
                         var type = $(this).attr("class").split(" ")[0].replace(".", "").trim();
+
                         if(type === 'table'){
-                          if(tableViewCb) {
                             tableViewCb();
-                          }
                         }
                         else {
                           // Remove tick mark from other types and add it to this one.

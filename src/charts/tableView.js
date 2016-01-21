@@ -56,22 +56,24 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     table = table.dataTable({
         data: [],
         columns: [
-            { title: 'Date',
+            { title: 'Date', orderable: false,
               render: function(epoch) { return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss'); }
             },
-            { title: 'Open' },
-            { title: 'High' },
-            { title: 'Low' },
-            { title: 'Close' },
+            { title: 'Open', orderable: false, },
+            { title: 'High', orderable: false, },
+            { title: 'Low', orderable: false, },
+            { title: 'Close', orderable: false, },
         ],
         rowId : '4',
         paging: false,
-        ordering: false,
+        ordering: true,
         info: false,
+        order: [0, 'desc'],
         // processing: true
     });
     table.parent().addClass('hide-search-input');
 
+    window.api = table.api();
     var on_tick = stream_handler.events.on('tick', function(data){
       if(data.key !== key) return;
       if(!dialog.view_table_visible) return;
@@ -83,7 +85,6 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
         tick.low,
         tick.close
       ];
-      console.warn(data);
       table.api().row.add(row);
       table.api().draw();
     });
@@ -99,7 +100,6 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
         ohlc.low,
         ohlc.close
       ];
-      console.warn(data);
       if(data.is_new) { table.api().row.add(row); }
       else { table.api().row(0).data(row); }
       table.api().draw();
