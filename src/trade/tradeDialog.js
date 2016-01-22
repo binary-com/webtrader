@@ -216,6 +216,21 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           value: 'payout',
           amount: 10,
           limit: null,
+          up: function() {
+            var value = state.basis.amount*1;
+            value = value < 1 ? value + 0.1 : value + 1;
+            if((value | 0) !== value)
+              value = value.toFixed(2);
+            state.basis.amount = value;
+          },
+          down: function() {
+            var value = state.basis.amount*1;
+            value = value > 1 ? value - 1 : value - 0.1;
+            if((value | 0) !== value) /* is float */
+              value = value.toFixed(2);
+            if(value > 0)
+              state.basis.amount = value;
+          },
         },
         spreads: {
           amount_per_point: 1,
@@ -429,6 +444,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if(!_.includes(array,state.duration_unit.value)){
           state.duration_unit.value = _.head(array);
         }
+        else {
+          state.duration_count.update(true);
+        }
+
         state.duration_unit.array = array;
 
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
@@ -436,12 +455,17 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.date_expiry.update_times();
       };
 
-      state.duration_count.update = function () {
+      state.duration_count.update = function (try_to_keep_value) {
         var range = _(state.duration_unit.ranges).filter({'type': state.duration_unit.value}).head();
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;
-        state.duration_count.value = range.min;
+        if(try_to_keep_value !== true) {
+          state.duration_count.value = range.min;
+        }
+        else if(state.duration_count.value < range.min || state.duration_count.value > range.max) {
+          state.duration_count.value = range.min;
+        }
       };
 
       state.digits.update = function() {
