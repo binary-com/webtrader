@@ -72,7 +72,7 @@
            </select>
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
-            <input class="duration-count" type="number" step="1" min="1"
+            <input class="duration-count" type="number" step="1" min="1" max="100000000"
                    rv-spinner="duration_count.value | debounce proposal.onchange" />
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
@@ -174,7 +174,7 @@
            </select>
         </li>
         <li>
-            <input class="basis-amount" type="number" min="1" step=".01" step-big="1"
+            <input class="basis-amount" type="number" min="1" step=".01" step-big="1" max="100000000"
                    rv-spinner="basis.amount | debounce proposal.onchange" />
         </li>
     </ul>
@@ -194,7 +194,7 @@
            </select>
         </li>
         <li>
-            <input class="amount-per-point" type="number" min="1" step=".01" step-big="1"
+            <input class="amount-per-point" type="number" min="1" step=".01" step-big="1" max="100000000"
                    rv-spinner="spreads.amount_per_point | debounce proposal.onchange" />
         </li>
     </ul>
@@ -228,7 +228,7 @@
         rv-css-padding-top="categories.paddingTop < value">
       <li><span class="text-vertical-align">Stop-loss</span></li>
       <li>
-            <input class="stop-loss" type="number" min="1" step=".01" step-big="1"
+            <input class="stop-loss" type="number" min="1" step=".01" step-big="1" max="100000000"
                    rv-spinner="spreads.stop_loss | debounce proposal.onchange" />
       </li>
       <li></li>
@@ -238,7 +238,7 @@
         rv-show="categories.value | eq 'Spreads'">
       <li><span class="text-vertical-align">Stop-profit</span></li>
       <li>
-            <input class="stop-profit" type="number" min="1" step=".01" step-big="1"
+            <input class="stop-profit" type="number" min="1" step=".01" step-big="1" max="100000000"
                    rv-spinner="spreads.stop_profit | debounce proposal.onchange" />
       </li>
       <li></li>
