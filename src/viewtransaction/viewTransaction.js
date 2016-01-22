@@ -13,7 +13,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       var el = root.find('.transaction-chart')[0];
 
       var options = {
-        title: '',
         credits: { href: 'https://www.binary.com', text: 'Binary.com' },
         chart: {
           type: 'live',
