@@ -103,7 +103,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
           /* TODO: remove this hack when backend provided duration */
           var longcode = transaction.longcode.split(' ');
-          var duration_type = ['ticks', 'ticks.', 'seconds', 'minutes', 'hours', 'days'].filter(function(t){ return _.includes(longcode, t) })[0];
+          var duration_type = ['tick','second', 'minute', 'hour', 'day'].filter(function(t){
+              return _.includes(longcode, t) || _.includes(longcode, t + 's') ||  _.includes(longcode, t + '.');
+          })[0];
           var duration = longcode[longcode.indexOf(duration_type) - 1];
 
           viewTransaction.init({
