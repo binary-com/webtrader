@@ -14,13 +14,26 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
 
       var options = {
         title: '',
-        credits: { href: 'https://www.binary.com', text: 'Binary.com' },
+        credits: {
+            href: 'https://www.binary.com',
+            text: 'Binary.com'
+        },
         chart: {
           type: 'live',
           renderTo: el,
           backgroundColor: null, /* make background transparent */
           width: 0,
           height: 0,
+          events: {
+              load: function() {
+                  this.credits.element.onclick = function() {
+                      window.open(
+                          'http://www.binary.com',
+                          '_blank'
+                      );
+                  }
+              }
+          }
         },
         title:{
           text: symbol_name,
