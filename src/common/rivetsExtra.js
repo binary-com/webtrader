@@ -388,6 +388,8 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
                 val = Math.abs(val);
                 if(val) {
                   var symbol = input.attr('max') ? '-' : '+';
+                  if(input.attr('no-symbol'))
+                    symbol = '';
                   input.val(symbol + val + dot);
                 }
             })
