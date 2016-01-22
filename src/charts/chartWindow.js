@@ -7,8 +7,8 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
     "use strict";
 
     function _trigger_Resize_Effects() {
-        $(this).find(".chartSubContainer").width($(this).width() - 20);
-        $(this).find(".chartSubContainer").height($(this).height() - 10);
+        $(this).find(".chartSubContainer").width($(this).width() - 10);
+        $(this).find(".chartSubContainer").height($(this).height() - 15);
 
         var containerIDWithHash = "#" + $(this).find(".chartSubContainer").attr("id");
         require(["charts/charts"], function(charts) {
