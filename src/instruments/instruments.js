@@ -78,16 +78,23 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
     return {
         init: function() {
             require(["css!instruments/instruments.css"]);
-            /* cache the result of trading_times call, because assetIndex needs the same data */
-            liveapi
-                .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                .then(function (data) {
+            return new Promise(function(resolve, reject) {
+                /* cache the result of trading_times call, because assetIndex needs the same data */
+                liveapi
+                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                    .then(function (data) {
                         markets = menu.extractChartableMarkets(data);
-                        var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments")); /* add to instruments menu */
-                        menu.sortMenu(markets);
-                        menu.refreshMenu(rootUL,markets,onMenuItemClick);
-                    }
-                ).catch(console.error.bind(console));
+                        if ($("#nav-menu").length > 0) {
+                            var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments"));
+                            /* add to instruments menu */
+                            menu.sortMenu(markets);
+                            menu.refreshMenu(rootUL, markets, onMenuItemClick);
+                        }
+                        resolve(markets);
+                    }).catch(function(e) {
+                        reject(e);
+                    });
+            });
         },
 
         getMarketData : function() {
