@@ -8,12 +8,10 @@ define(["charts/chartWindow", "common/util"], function() {
 
     function disableEnableOverlay(newTabId, chartType) {
       var overlay = $("#" + newTabId + "_header").find('li.overlay');
-      if (isDataTypeClosePriceOnly(chartType))
-      {
+      if (isDataTypeClosePriceOnly(chartType)) {
         overlay.removeClass('ui-state-disabled');
       }
-      else
-      {
+      else {
         overlay.addClass('ui-state-disabled');
       }
       overlay.closest("ul.ui-menu").menu("refresh");
@@ -21,7 +19,7 @@ define(["charts/chartWindow", "common/util"], function() {
 
     return {
 
-        init : function (newTabId, timePeriod, chartType) {
+        init : function (newTabId, timePeriod, chartType, tableViewCb) {
 
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function($html) {
                 //attach different button actions
@@ -42,9 +40,11 @@ define(["charts/chartWindow", "common/util"], function() {
                 $html.find("ul:first").menu(); //convert these to JQuery UI menus
 
                 //Disable candlestick and OHLC if it is a tick chart
-                if (isTick(timePeriod))
-                {
+                if (isTick(timePeriod)) {
                     $html.find(".candlestick, .ohlc").addClass('ui-state-disabled');
+                }
+                if(!tableViewCb) {
+                  $html.find('.chartType li.table').hide();
                 }
 
                 // Add a tick mark to initial chart type
@@ -53,20 +53,25 @@ define(["charts/chartWindow", "common/util"], function() {
                 $html.find('.chartType li').click(function () {
 
                         //If disabled, ignore this click
-                        if ($(this).hasClass('ui-state-disabled'))
-                        {
+                        if ($(this).hasClass('ui-state-disabled')) {
                             return;
                         }
 
-                        // Remove tick mark from other types and add it to this one.
-                        $html.find('.chartType li span').removeClass('ui-icon ui-icon-check');
-                        $(this).find('span:first').addClass('ui-icon ui-icon-check');
-
                         var type = $(this).attr("class").split(" ")[0].replace(".", "").trim();
-                        $("#" + newTabId + "_chart").data('type', type);
-                        require(["charts/charts"], function( charts ) {
-                            charts.refresh( '#' + newTabId + '_chart' );
-                        });
+
+                        if(type === 'table'){
+                            tableViewCb();
+                        }
+                        else {
+                          // Remove tick mark from other types and add it to this one.
+                          $html.find('.chartType li span').removeClass('ui-icon ui-icon-check');
+                          $(this).find('span:first').addClass('ui-icon ui-icon-check');
+
+                          $("#" + newTabId + "_chart").data('type', type);
+                          require(["charts/charts"], function( charts ) {
+                              charts.refresh( '#' + newTabId + '_chart' );
+                          });
+                        }
 
                         //Toggle overlay menu
                         disableEnableOverlay(newTabId, type);

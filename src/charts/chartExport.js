@@ -1,13 +1,15 @@
 /**
  * Created by amin january 20, 2016.
  */
-define(['charts/chartingRequestMap', 'moment', "css!charts/chartExport.css", "common/util"], function(chartingRequestMap, moment) {
+define(['jquery', 'charts/chartingRequestMap', 'moment', 'jquery-ui', "css!charts/chartExport.css", "common/util"], function($, chartingRequestMap, moment) {
   var barsTable = chartingRequestMap.barsTable;
 
   function init(dialogid){
     var btn = $('<img />')
     .attr('src', 'images/download.svg')
-    .addClass('export-btn');
+    .addClass('export-btn')
+    .attr('title', 'Download CSV')
+    .tooltip({position: { my: "left-120 top", at: "left top", collision: "flipfit" }});
 
     var header = $("#" + dialogid + "_header");
     header.prepend(btn);
