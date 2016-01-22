@@ -1,6 +1,6 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/navigation.css"], function ($, moment, $navHtml) {
+define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, $navHtml) {
     "use strict";
 
 	$(window).resize(function () {
@@ -190,7 +190,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               if(value === '0' || value === 0)
                 balance.fadeOut();
               else
-                balance.text(currency + ' ' + value).fadeIn();
+                balance.text(currency + ' ' + formatPrice(value)).fadeIn();
           };
 
           /* update balance on change */
