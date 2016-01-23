@@ -83,7 +83,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html'
+                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -136,6 +136,23 @@ module.exports = function (grunt) {
                 src: ['**/*.html'],
                 dest: 'dist/compressed'
             }
+        },
+        imagemin: {
+          static: {
+            options: {
+              optimizationLevel: 3,
+              svgoPlugins: [{ removeViewBox: false }],
+              use: []
+            }
+          },
+          dynamic: {
+            files: [{
+              expand: true,
+              cwd: 'dist/uncompressed/',
+              src: ['**/*.{png,jpg,gif,svg}'],
+              dest: 'dist/compressed/'
+            }]
+          }
         },
         uglify: {
             minify: {
@@ -308,7 +325,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'rename', 'replace']);
-    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'uglify', 'copy:copy_AfterCompression']);
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'copy:copy_AfterCompression']);
 	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks

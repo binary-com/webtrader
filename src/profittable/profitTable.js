@@ -1,8 +1,8 @@
 ﻿/**
  * Created by amin on October 29, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables", "jquery-growl", 'common/util'],
-    function ($, windows, liveapi) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl", 'common/util'],
+    function ($, windows, liveapi, _) {
     'use strict';
 
     var profitWin = null,
@@ -18,14 +18,20 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                     .then(initProfitWin)
                     .catch(function (err) {
                         console.error(err);
+                        $.growl.error({ message: err.message });
                     });
             else
                 profitWin.moveToTop();
         });
     }
 
+    var loading = false;
+    var options = { offset : 0, limit: 200 };
+    var is_specific_date_shown = false; /* is data for a specific date is shown */
+
     var refreshTable = function (yyyy_mm_dd) {
         var processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
+        loading = true;
 
         var request = {
             profit_table: 1,
@@ -34,28 +40,43 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         };
 
         /* if a date is specified get the transactions for that date */
-        if (yyyy_mm_dd)
-            request.date_from = request.date_to = yyyy_mm_dd;
-        else /* otherwise get the most recent 50 transactions */
+        if (typeof yyyy_mm_dd === 'string') {
+            request.date_from = yyyy_mm_dd_to_epoch(yyyy_mm_dd, { utc: true });
+            var one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
+            request.date_to = request.date_from + one_day_utc;
+            table.api().rows().remove();
+            is_specific_date_shown = true;
+        }
+        else  { /* request the next 50 items for live scroll */
             request.limit = 50;
+            if(is_specific_date_shown || yyyy_mm_dd.clear) {
+                table.api().rows().remove();
+                is_specific_date_shown = false;
+            }
+            request.offset = table.api().column(0).data().length;
+        }
 
         /* refresh the table with result of { profit_table:1 } from WS */
         var refresh = function (data) {
             var transactions = (data.profit_table && data.profit_table.transactions) || [];
             var rows = transactions.map(function (trans) {
+                var profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
+                var svg = profit > 0 ? 'up' : profit < 0 ? 'down' : 'equal';
+                var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
                 return [
                     epoch_to_string(trans.purchase_time, { utc: true }),
                     trans.transaction_id,
-                    trans.longcode,
+                    img + trans.longcode,
                     trans.buy_price,
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
-                    (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2) /* 2 decimal points */
+                    profit,
+                    trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
-            table.api().rows().remove();
             table.api().rows.add(rows);
             table.api().draw();
+            loading = false;
             processing_msg.hide();
         };
 
@@ -68,16 +89,51 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
         });
     }
 
+    var on_arrow_click = function(e){
+      if(e.target.tagName !== 'IMG')
+        return;
+      var tr = e.target.parentElement.parentElement;
+      var transaction = table.api().row(tr).data();
+      transaction = _.last(transaction);
+      require(['viewtransaction/viewTransaction'], function(viewTransaction){
+
+          /* TODO: remove this hack when backend provided symbol */
+          var splits = transaction.shortcode.split('_');
+          var symbol = splits[1] !== 'R' ? splits[1] : 'R_' + splits[2];
+
+          /* TODO: remove this hack when backend provided duration */
+          var longcode = transaction.longcode.split(' ');
+          var duration_type = ['ticks', 'ticks.', 'seconds', 'minutes', 'hours', 'days'].filter(function(t){ return _.includes(longcode, t) })[0];
+          var duration = longcode[longcode.indexOf(duration_type) - 1];
+
+          viewTransaction.init({
+              duration: duration,
+              duration_type: duration_type,
+              symbol: symbol,
+              contract_id: transaction.contract_id,
+              transaction_id: transaction.transaction_id,
+              longcode: transaction.longcode,
+              sell_time: transaction.sell_time,
+              purchase_time: transaction.purchase_time,
+              buy_price: transaction.buy_price,
+              sell_price: transaction.sell_price
+          });
+      })
+    }
+
     function initProfitWin() {
-        profitWin = windows.createBlankWindow($('<div/>'), {
-            title: 'Profit Table',
-            width: 900,
-            minHeight:90,
-            destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
-            refresh: function() { datepicker.clear(); refreshTable(); },
-            'data-authorized': 'true'
-        });
         require(['text!profittable/profitTable.html'], function (html) {
+          profitWin = windows.createBlankWindow($('<div/>'), {
+              title: 'Profit Table',
+              width: 700,
+              minHeight:90,
+              destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
+              refresh: function() {
+                datepicker.clear();
+                refreshTable({clear:true});
+              },
+              'data-authorized': 'true'
+          });
 
             table = $(html);
             table.appendTo(profitWin);
@@ -108,7 +164,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
                 });
             });
 
-            refreshTable();
+            refreshTable({clear: true});
             datepicker = profitWin.addDateToHeader({
                 title: 'Jump to: ',
                 date: null, /* set date to null */
@@ -117,6 +173,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "datatables
             });
 
             profitWin.dialog('open');
+            profitWin.on('click', on_arrow_click);
+
+            /**************** infinite scroll implementation *******************/
+            refreshTable({clear:true});
+            profitWin.scroll(function() {
+              var scrollTop = profitWin.scrollTop(),
+                  innerHeight = profitWin.innerHeight(),
+                  scrollHeight = profitWin[0].scrollHeight,
+                  postion = (scrollTop + innerHeight) / scrollHeight;
+              if(postion > 0.75 && !loading && !is_specific_date_shown){
+                refreshTable({clear:false});
+              }
+            });
         });
     }
 

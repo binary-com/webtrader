@@ -2,23 +2,19 @@
  * Created by arnab on 2/12/15.
  */
 
-function isTick(ohlc)
-{
+function isTick(ohlc) {
     return ohlc.indexOf('t') != -1;
 }
 
-function isMinute(ohlc)
-{
+function isMinute(ohlc) {
     return ohlc.indexOf('m') != -1;
 }
 
-function isHourly(ohlc)
-{
+function isHourly(ohlc) {
     return ohlc.indexOf('h') != -1;
 }
 
-function isDaily(ohlc)
-{
+function isDaily(ohlc) {
     return ohlc.indexOf('d') != -1;
 }
 
@@ -35,8 +31,7 @@ function isNumericBetween(value, min, max) {
     return isNumeric && Math.floor(value) == value && min <= value && max >= value;
 };
 
-function convertToTimeperiodObject(timePeriodInStringFormat)
-{
+function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {
             return parseInt(timePeriodInStringFormat.toLowerCase().replace("t", "").replace("h", "").replace("d", "").trim())
@@ -72,8 +67,7 @@ function convertToTimeperiodObject(timePeriodInStringFormat)
     }
 }
 
-function isDataTypeClosePriceOnly( type )
-{
+function isDataTypeClosePriceOnly( type ) {
     return !(type === 'candlestick' || type === 'ohlc')
 }
 
@@ -172,11 +166,6 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
     if (options && options.utc)
         return Date.UTC(y, m - 1, d) / 1000;
     return new Date(y, m - 1, d).getTime() / 1000;
-}
-
-/* capitalize the first letter of a string */
-function capitalizeFirstLetter(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */

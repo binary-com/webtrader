@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on 10/5/15.
  */
-define(["jquery", "windows/windows","websockets/binary_websockets","common/menu", "datatables","jquery-growl"], function ($,windows,liveapi, menu) {
+define(["jquery", "windows/windows","websockets/binary_websockets","navigation/menu", "datatables","jquery-growl"], function ($,windows,liveapi, menu) {
 
 
     var table = null;
@@ -155,7 +155,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","common/menu"
                 processing_msg.hide();
             };
 
-            liveapi.send({ trading_times: yyyy_mm_dd })
+            liveapi.cached.send({ trading_times: yyyy_mm_dd })
             .then(refresh)
             .catch(function (error) {
                 $.growl.error({ message: error.message });

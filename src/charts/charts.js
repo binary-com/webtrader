@@ -72,6 +72,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                 chart: {
                     events: {
                         load: function () {
+
                             this.showLoading();
                             console.log('Calling render chart for the first time for the instrument : ', options.instrumentCode);
                             currentPrice.init();
@@ -89,6 +90,14 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             if ($.isFunction(onload)) {
                                 onload();
                             }
+
+                            this.credits.element.onclick = function() {
+                                window.open(
+                                    'http://www.binary.com',
+                                    '_blank'
+                                );
+                            }
+
                         }
                     },
                     spacingLeft: 0,
@@ -195,7 +204,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
 
                 credits: {
                     href: 'http://www.binary.com',
-                    text: 'Binary.com'
+                    text: 'Binary.com',
+
                 },
 
                 xAxis: {

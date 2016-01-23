@@ -33,31 +33,11 @@
     }
 */
 
-define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
     function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
     var debounce = rv.formatters.debounce;
-
-    rv.binders['trade-dialog-sparkline'] = function(el, ticks) {
-      var chart = $(el);
-      var spots = _.map(ticks,'quote');
-      var config = {
-        type: 'line',
-        lineColor: '#606060',
-        fillColor: false,
-        spotColor: '#00f000',
-        minSpotColor: '#f00000',
-        maxSpotColor: '#0000f0',
-        highlightSpotColor: '#ffff00',
-        highlightLineColor: '#000000',
-        spotRadius: 1.25
-      };
-      setTimeout(function(){
-        chart.sparkline(spots, config);
-        spots.length ? chart.show() : chart.hide();
-      },0);
-    }
 
     function apply_fixes(available){
         /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
@@ -97,7 +77,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           }
           return rank
         });
-
 
         return available;
     }
@@ -216,6 +195,21 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           value: 'payout',
           amount: 10,
           limit: null,
+          up: function() {
+            var value = state.basis.amount*1;
+            value = value < 1 ? value + 0.1 : value + 1;
+            if((value | 0) !== value)
+              value = value.toFixed(2);
+            state.basis.amount = value;
+          },
+          down: function() {
+            var value = state.basis.amount*1;
+            value = value > 1 ? value - 1 : value - 0.1;
+            if((value | 0) !== value) /* is float */
+              value = value.toFixed(2);
+            if(value > 0)
+              state.basis.amount = value;
+          },
         },
         spreads: {
           amount_per_point: 1,
@@ -429,6 +423,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if(!_.includes(array,state.duration_unit.value)){
           state.duration_unit.value = _.head(array);
         }
+        else {
+          state.duration_count.update(true);
+        }
+
         state.duration_unit.array = array;
 
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
@@ -436,12 +434,17 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.date_expiry.update_times();
       };
 
-      state.duration_count.update = function () {
+      state.duration_count.update = function (try_to_keep_value) {
         var range = _(state.duration_unit.ranges).filter({'type': state.duration_unit.value}).head();
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;
-        state.duration_count.value = range.min;
+        if(try_to_keep_value !== true) {
+          state.duration_count.value = range.min;
+        }
+        else if(state.duration_count.value < range.min || state.duration_count.value > range.max) {
+          state.duration_count.value = range.min;
+        }
       };
 
       state.digits.update = function() {
@@ -607,6 +610,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks') {
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
+            if(extra.category !== 'Digits')
+              extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
         }
 
         // manually check to see if the user is authenticated or not,
@@ -629,6 +634,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                  state.purchase.loading = false;
                  $.growl.error({ message: err.message });
                  console.error(err);
+                /* trigger a new proposal stream */
+                state.proposal.onchange();
                });
          }
       };
@@ -678,10 +685,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
       /* change currency on user login */
       if(liveapi.is_authenticated()) {
-        liveapi.send({balance: 1})
+        liveapi.send({payout_currencies: 1})
                .then(function(data){
-                 state.currency.value = data.balance.currency;
-                 state.currency.array = [data.balance.currency];
+                 state.currency.value = data.payout_currencies[0];
+                 state.currency.array = data.payout_currencies;
                })
                .catch(function(err) { console.error(err); });
       }
@@ -726,7 +733,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             }).catch(function (err) {
               $.growl.error({ message: err.message });
               var has_digits = _(available).map('min_contract_duration')
-                                .any(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
+                                .some(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
               /* if this contract does not offer tick trades, then its fine let the user trade! */
               if(!has_digits) {
                 state.ticks.loading = false;
