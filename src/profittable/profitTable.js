@@ -191,7 +191,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             profitWin.on('click', on_arrow_click);
 
             /**************** infinite scroll implementation *******************/
-            refreshTable({clear:true});
             profitWin.scroll(function() {
               var scrollTop = profitWin.scrollTop(),
                   innerHeight = profitWin.innerHeight(),
