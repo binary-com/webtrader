@@ -33,31 +33,11 @@
     }
 */
 
-define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
     function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
     var debounce = rv.formatters.debounce;
-
-    rv.binders['trade-dialog-sparkline'] = function(el, ticks) {
-      var chart = $(el);
-      var spots = _.map(ticks,'quote');
-      var config = {
-        type: 'line',
-        lineColor: '#606060',
-        fillColor: false,
-        spotColor: '#00f000',
-        minSpotColor: '#f00000',
-        maxSpotColor: '#0000f0',
-        highlightSpotColor: '#ffff00',
-        highlightLineColor: '#000000',
-        spotRadius: 1.25
-      };
-      setTimeout(function(){
-        chart.sparkline(spots, config);
-        spots.length ? chart.show() : chart.hide();
-      },0);
-    }
 
     function apply_fixes(available){
         /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
@@ -97,7 +77,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           }
           return rank
         });
-
 
         return available;
     }
