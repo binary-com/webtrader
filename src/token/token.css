@@ -1,8 +1,9 @@
 .token-dialog a, .token-dialog a:visited {
-    color: #2a3052;
-    font-weight: bold;
+    color: #273051;
     outline:0;
+    transition: color .3s;
 }
+.token-dialog a:hover { color: #E98024; }
 
 .token-dialog p {
     font-size: large;
@@ -13,7 +14,6 @@
 
 .token-dialog ul li {
     margin-top:10px;
-    font-weight: bold;
 }
 
 .token-dialog ul {
