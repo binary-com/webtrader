@@ -6,10 +6,9 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
 
     "use strict";
 
-
     function _trigger_Resize_Effects() {
-        $(this).find(".chartSubContainer").width($(this).width() - 20);
-        $(this).find(".chartSubContainer").height($(this).height() - 10);
+        $(this).find(".chartSubContainer").width($(this).width() - 10);
+        $(this).find(".chartSubContainer").height($(this).height() - 15);
 
         var containerIDWithHash = "#" + $(this).find(".chartSubContainer").attr("id");
         require(["charts/charts"], function(charts) {
@@ -43,18 +42,19 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
                 resize: _trigger_Resize_Effects
             }, options );
 
-
             var dialog = windows.createBlankWindow($chartWindowHtml, options),
                 id = dialog.attr('id');
             dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()
                 .find('div.chartSubContainer').attr('id', id + "_chart").end();
 
-            require(["charts/chartOptions"], function (chartOptions) {
-                chartOptions.init(id, options.timePeriod, options.type);
-            });
-
             require(["charts/charts"], function (charts) {
                 charts.drawChart("#" + id + "_chart", options, options.resize.bind(dialog));
+
+                /* initialize chartOptions & table-view once chart is rendered */
+                require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
+                    var table_view = tableView.init(dialog);
+                    chartOptions.init(id, options.timePeriod, options.type, table_view.show);
+                });
 
                 /* after the chart is rendered initialize the export module */
                 require(["charts/chartExport"], function (chartExport) {
