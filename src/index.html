@@ -12,12 +12,12 @@
 	<script>
       var affiliates = getParameterByName('affiliates') || 'false';
       var suffix = "";
-      
+
       if (affiliates === 'true') {
           var url = window.location.href;
           suffix = url.substring(url.indexOf('?')); //Pass all parameters
       }
-      
+
       window.location.href = '<verrsion>/main.html' + suffix;
     </script>
 </body>
