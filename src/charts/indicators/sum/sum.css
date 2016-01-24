@@ -20,6 +20,6 @@
     border-radius: 5px;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
-     overflow : visible;
+.sum-ui-dialog, .sum.ui-dialog-content, .sum_level.ui-dialog-content {
+    overflow: visible;
 }

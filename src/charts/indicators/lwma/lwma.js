@@ -58,6 +58,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 my: "center",
                 at: "center",
                 of: window,
+                dialogClass: 'lwma-ui-dialog',
                 buttons: [
 					{
 					    text: "OK",

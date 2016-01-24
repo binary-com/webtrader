@@ -15,6 +15,6 @@
 	width: 50%;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
+.mama-ui-dialog , .mama.ui-dialog-content {
      overflow : visible;
 }

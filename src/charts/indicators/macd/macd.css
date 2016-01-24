@@ -6,6 +6,6 @@
     width: 145px;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
-     overflow : visible;
+.macd-ui-dialog, .macd.ui-dialog-content {
+    overflow: visible;
 }

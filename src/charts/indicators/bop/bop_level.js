@@ -69,6 +69,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'bop-ui-dialog',
                 buttons: [
                     {
                         text: "OK",

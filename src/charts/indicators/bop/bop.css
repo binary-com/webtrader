@@ -17,6 +17,6 @@
 }
 
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
-     overflow : visible;
+.bop-ui-dialog, .bop.ui-dialog-content, .bop_level.ui-dialog-content {
+    overflow: visible;
 }

@@ -20,6 +20,6 @@
     border-radius: 5px;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
-     overflow : visible;
+.rocp-ui-dialog, .rocp.ui-dialog-content, .rocp_level.ui-dialog-content {
+    overflow: visible;
 }

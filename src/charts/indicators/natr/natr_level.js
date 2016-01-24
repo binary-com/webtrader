@@ -68,6 +68,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'natr-ui-dialog',
                 buttons: [
                     {
                         text: "OK",

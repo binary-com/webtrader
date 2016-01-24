@@ -10,6 +10,6 @@
     display: block;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
-     overflow : visible;
+.wma-ui-dialog, .wma.ui-dialog-content {
+    overflow: visible;
 }

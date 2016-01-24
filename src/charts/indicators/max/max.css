@@ -14,6 +14,6 @@
     white-space: nowrap;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
+.max-ui-dialog , .max.ui-dialog-content {
      overflow : visible;
 }

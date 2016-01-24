@@ -20,6 +20,6 @@
     border-radius: 5px;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
-     overflow : visible;
+.natr-ui-dialog, .natr.ui-dialog-content, .natr_level.ui-dialog-content {
+    overflow: visible;
 }

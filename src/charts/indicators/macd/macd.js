@@ -62,7 +62,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 				modal:true,
 				my:"center",
 				at:"center",
-				of:window,
+				of: window,
+				dialogClass: 'macd-ui-dialog',
 				buttons:[
 					{
 						text: "OK",

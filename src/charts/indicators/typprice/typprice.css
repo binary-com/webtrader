@@ -6,6 +6,6 @@
     display: block;
 }
 
-.ui-dialog , .ui-dialog .ui-dialog-content {
-     overflow : visible;
+.typprice-ui-dialog, .typprice.ui-dialog-content {
+    overflow: visible;
 }
