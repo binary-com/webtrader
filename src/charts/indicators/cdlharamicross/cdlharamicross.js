@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlharamicross'], function (cdlharamicross) {
-                                cdlharamicross.init();
-                                //Add CDLHARAMICROSS for the main series
-                                $($(".cdlharamicross").data('refererChartID')).highcharts().series[0].addCDLHARAMICROSS();
+                            var series = $($(".cdlharamicross").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlharamicross', {
+                                cdlIndicatorCode : 'cdlharamicross',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

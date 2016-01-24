@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                         text: "OK",
                         click: function() {
 
-                            require(['charts/indicators/highcharts_custom/cdlengulfing'], function ( cdlengulfing ) {
-                                cdlengulfing.init();
-                                //Add CDLENGULFING for the main series
-                                $($(".cdlengulfing").data('refererChartID')).highcharts().series[0].addCDLENGULFING();
+                            var series = $($(".cdlengulfing").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlengulfing', {
+                                cdlIndicatorCode : 'cdlengulfing',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

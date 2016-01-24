@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdldarkcloudcover'], function (cdldarkcloudcover) {
-                                cdldarkcloudcover.init();
-                                //Add CDLDARKCLOUDCOVER for the main series
-                                $($(".cdldarkcloudcover").data('refererChartID')).highcharts().series[0].addCDLDARKCLOUDCOVER();
+                            var series = $($(".cdldarkcloudcover").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdldarkcloudcover', {
+                                cdlIndicatorCode : 'cdldarkcloudcover',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

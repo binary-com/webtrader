@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlmorningstar'], function (cdlmorningstar) {
-                                cdlmorningstar.init();
-                                //Add CDLMORNINGSTAR for the main series
-                                $($(".cdlmorningstar").data('refererChartID')).highcharts().series[0].addCDLMORNINGSTAR();
+                            var series = $($(".cdlmorningstar").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlmorningstar', {
+                                cdlIndicatorCode : 'cdlmorningstar',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

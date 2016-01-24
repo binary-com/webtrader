@@ -31,10 +31,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                         text: "OK",
                         click: function() {
 
-                            require(['charts/indicators/highcharts_custom/cdlshootingstar'], function ( cdlshootingstar ) {
-                                cdlshootingstar.init();
-                                //Add CDLSHOOTINGSTAR for the main series
-                                $($(".cdlshootingstar").data('refererChartID')).highcharts().series[0].addCDLSHOOTINGSTAR();
+                            var series = $($(".cdlshootingstar").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlshootingstar', {
+                                cdlIndicatorCode : 'cdlshootingstar',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

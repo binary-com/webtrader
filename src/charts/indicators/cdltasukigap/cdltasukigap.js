@@ -29,10 +29,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdltasukigap'], function (cdltasukigap) {
-                                cdltasukigap.init();
-                                //Add CDLTASUKIGAP for the main series
-                                $($(".cdltasukigap").data('refererChartID')).highcharts().series[0].addCDLTASUKIGAP();
+                            var series = $($(".cdltasukigap").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdltasukigap', {
+                                cdlIndicatorCode : 'cdltasukigap',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

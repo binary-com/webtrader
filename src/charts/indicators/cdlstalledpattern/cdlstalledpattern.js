@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlstalledpattern'], function (cdlstalledpattern) {
-                                cdlstalledpattern.init();
-                                //Add CDLSTALLEDPATTERN for the main series
-                                $($(".cdlstalledpattern").data('refererChartID')).highcharts().series[0].addCDLSTALLEDPATTERN();
+                            var series = $($(".cdlstalledpattern").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlstalledpattern', {
+                                cdlIndicatorCode : 'cdlstalledpattern',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

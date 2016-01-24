@@ -29,13 +29,12 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "OK",
                         click: function() {
-
-                            require(['charts/indicators/highcharts_custom/cdldoji'], function ( cdldoji ) {
-                                cdldoji.init();
-                                //Add CDLDOJI for the main series
-                                $($(".cdldoji").data('refererChartID')).highcharts().series[0].addCDLDOJI();
+                            //Add CDLDOJI for the main series
+                            var series = $($(".cdldoji").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdldoji', {
+                                cdlIndicatorCode : 'cdldoji',
+                                onSeriesID : series.options.id
                             });
-
                             closeDialog.call($html);
                         }
                     },

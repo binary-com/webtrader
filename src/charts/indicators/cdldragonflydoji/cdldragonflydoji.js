@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdldragonflydoji'], function (cdldragonflydoji) {
-                                cdldragonflydoji.init();
-                                //Add CDLDRAGONFLYDOJI for the main series
-                                $($(".cdldragonflydoji").data('refererChartID')).highcharts().series[0].addCDLDRAGONFLYDOJI();
+                            var series = $($(".cdldragonflydoji").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdldragonflydoji', {
+                                cdlIndicatorCode : 'cdldragonflydoji',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

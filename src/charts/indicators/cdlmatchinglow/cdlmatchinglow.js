@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlmatchinglow'], function (cdlmatchinglow) {
-                                cdlmatchinglow.init();
-                                //Add CDLMATCHINGLOW for the main series
-                                $($(".cdlmatchinglow").data('refererChartID')).highcharts().series[0].addCDLMATCHINGLOW();
+                            var series = $($(".cdlmatchinglow").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlmatchinglow', {
+                                cdlIndicatorCode : 'cdlmatchinglow',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

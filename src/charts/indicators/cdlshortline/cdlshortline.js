@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlshortline'], function (cdlshortline) {
-                                cdlshortline.init();
-                                //Add CDLSHORTLINE for the main series
-                                $($(".cdlshortline").data('refererChartID')).highcharts().series[0].addCDLSHORTLINE();
+                            var series = $($(".cdlshortline").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlshortline', {
+                                cdlIndicatorCode : 'cdlshortline',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

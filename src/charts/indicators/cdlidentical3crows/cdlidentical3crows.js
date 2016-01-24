@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlidentical3crows'], function (cdlidentical3crows) {
-                                cdlidentical3crows.init();
-                                //Add CDLIDENTICAL3CROWS for the main series
-                                $($(".cdlidentical3crows").data('refererChartID')).highcharts().series[0].addCDLIDENTICAL3CROWS();
+                            var series = $($(".cdlidentical3crows").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlidentical3crows', {
+                                cdlIndicatorCode : 'cdlidentical3crows',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

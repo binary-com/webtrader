@@ -12,6 +12,9 @@ IndicatorBase = function(data, options, indicators) {
     this.options = options;
     //Calculate the initial value and store locally
     this.indicatorData = [];
+    /*
+        This variable can also contain array of IDs, for example BBANDs indicator
+     */
     this.uniqueID = uuid();
     this.indicators = indicators;
 
@@ -19,6 +22,9 @@ IndicatorBase = function(data, options, indicators) {
 
 /**
  * Adds a new Indicator point at the end
+ * This can return [ { time : , value : []}] - Meaning, the value can also return array of
+ *                                              values, for example BBANDS indicator
+ *                                              Value can also be an instance of CDLUpdateObject, for example all the CDL indicators
  * @param data
  * @returns {*[]}
  */
@@ -28,6 +34,9 @@ IndicatorBase.prototype.addPoint = function(data) {
 
 /**
  * Updates the last Indicator point
+ * This can return [ { time : , value : []}] - Meaning, the value can also return array of
+ *                                              values, for example BBANDS indicator
+ *                                              Value can also be an instance of CDLUpdateObject, for example all the CDL indicators
  * @param data
  * @returns {*[]}
  */

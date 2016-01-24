@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlrisefall3methods'], function (cdlrisefall3methods) {
-                                cdlrisefall3methods.init();
-                                //Add CDLRISEFALL3METHODS for the main series
-                                $($(".cdlrisefall3methods").data('refererChartID')).highcharts().series[0].addCDLRISEFALL3METHODS();
+                            var series = $($(".cdlrisefall3methods").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlrisefall3methods', {
+                                cdlIndicatorCode : 'cdlrisefall3methods',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

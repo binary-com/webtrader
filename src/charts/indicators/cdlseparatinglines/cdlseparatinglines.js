@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlseparatinglines'], function (cdlseparatinglines) {
-                                cdlseparatinglines.init();
-                                //Add CDLSEPARATINGLINES for the main series
-                                $($(".cdlseparatinglines").data('refererChartID')).highcharts().series[0].addCDLSEPARATINGLINES();
+                            var series = $($(".cdlseparatinglines").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlseparatinglines', {
+                                cdlIndicatorCode : 'cdlseparatinglines',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

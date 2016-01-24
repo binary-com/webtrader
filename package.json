@@ -4,7 +4,6 @@
   "description": "This is a WebTrader project for binary.com",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "grunt": "^0.4.5",
     "grunt-bump": "^0.3.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",

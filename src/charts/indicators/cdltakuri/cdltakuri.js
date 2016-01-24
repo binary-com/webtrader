@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdltakuri'], function (cdltakuri) {
-                                cdltakuri.init();
-                                //Add CDLTAKURI for the main series
-                                $($(".cdltakuri").data('refererChartID')).highcharts().series[0].addCDLTAKURI();
+                            var series = $($(".cdltakuri").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdltakuri', {
+                                cdlIndicatorCode : 'cdltakuri',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

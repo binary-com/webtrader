@@ -19,7 +19,8 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                             .find({instrumentCdAndTp: this.options.id})
                             .simplesort('time', false)
                             .data();
-                var indicatorObject = new window[indicatorID.toUpperCase()](data, options, indicators);
+                //Class name for all CDL type of indicators is CDL
+                var indicatorObject = new window[_.startsWith(indicatorID.toUpperCase(), 'CDL') ? 'CDL' : indicatorID.toUpperCase()](data, options, indicators);
                 var series = this;
                 var chart = series.chart;
                 var indicatorMetadata = indicatorsMetaData[indicatorID];
@@ -107,6 +108,10 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                     indicatorUpdated.forEach(function(iu) {
                                         if (_.isArray(iu.value)) {
                                             series.chart.get(iu.id).addPoint(_.flattenDeep([time, iu.value]));
+                                        } else if (iu.value instanceof CDLUpdateObject) {
+                                            if (_.isNumber(iu.value.x) && iu.value.x > 0) {
+                                                series.chart.get(iu.id).addPoint(iu.value.toJSObject());
+                                            }
                                         } else {
                                             series.chart.get(iu.id).addPoint([time, iu.value]);
                                         }
@@ -144,6 +149,16 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                         if (_.isArray(iu.value)) {
                                             seriesData[seriesData.length - 1]
                                                 .update(_.flattenDeep([time, iu.value]));
+                                        } else if (iu.value instanceof CDLUpdateObject) {
+                                            var renderingData = iu.value.toJSObject();
+                                            var x = renderingData.x;
+                                            var matchingSeriesData = _.find(seriesData, function(ee) {
+                                                return _.isNumber(x) && x > 0 && x === ee.x;
+                                            });
+                                            if (matchingSeriesData) matchingSeriesData.remove();
+                                            if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
+                                                indicatorSeries.addPoint(renderingData);
+                                            }
                                         } else {
                                             seriesData[seriesData.length - 1]
                                                 .update({

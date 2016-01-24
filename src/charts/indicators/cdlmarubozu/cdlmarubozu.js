@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlmarubozu'], function (cdlmarubozu) {
-                                cdlmarubozu.init();
-                                //Add CDLMARUBOZU for the main series
-                                $($(".cdlmarubozu").data('refererChartID')).highcharts().series[0].addCDLMARUBOZU();
+                            var series = $($(".cdlmarubozu").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlmarubozu', {
+                                cdlIndicatorCode : 'cdlmarubozu',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);
