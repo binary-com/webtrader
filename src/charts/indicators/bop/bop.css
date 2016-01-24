@@ -15,3 +15,8 @@
     width: 100%;
     border-radius: 5px;
 }
+
+
+.ui-dialog , .ui-dialog .ui-dialog-content {
+     overflow : visible;
+}

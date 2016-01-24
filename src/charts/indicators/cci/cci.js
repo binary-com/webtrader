@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/16/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -38,6 +38,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 });
             });
 
+            var selectedDashStyle = "Solid";
+            $('#cci_dash_style').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#cci_dash_style .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#cci_dash_style .dd-option-image').css('max-width', '115px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -58,7 +70,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					                maType:$("#cci_ma_type").val(),
 					                strokeColor: $("#cci_stroke_color").css("background-color"),
 					                strokeWidth: parseInt($("#cci_stroke_width").val()),
-					                dashStyle: $("#cci_dash_style").val()
+					                dashStyle: selectedDashStyle
 					            }
 					            //Add CCI to the main series
 					            $($(".cci").data('refererChartID')).highcharts().series[0].addCCI(options);

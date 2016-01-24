@@ -14,3 +14,7 @@
 {
 	width: 50%;
 }
+
+.ui-dialog , .ui-dialog .ui-dialog-content {
+     overflow : visible;
+}

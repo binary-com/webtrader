@@ -1,7 +1,7 @@
 ﻿/**
 Created By Mahboob.M on 12/20/2015
 */
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -37,6 +37,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 });
             });
 
+            var selectedDashStyle = "Solid";
+            $('#t3_dash_style').ddslick({
+                imagePosition: "left",
+                width: 158,
+                background: "white",
+                onSelected: function (data) {
+                    $('#t3_dash_style .dd-selected-image').css('max-width', '125px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#t3_dash_style .dd-option-image').css('max-width', '125px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -70,7 +82,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					                vFactor: parseFloat($("#t3_volume_factor").val()),
 					                stroke: $("#t3_stroke").css("background-color"),
 					                strokeWidth: parseInt($("#t3_stroke_width").val()),
-					                dashStyle: $("#t3_dash_style").val(),
+					                dashStyle: selectedDashStyle,
 					                appliedTo: parseInt($("#t3_applied_to").val())
 					            }
 					            //Add Bollinger for the main series

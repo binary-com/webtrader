@@ -5,3 +5,7 @@
 .macd_input_width_for_period {
     width: 145px;
 }
+
+.ui-dialog , .ui-dialog .ui-dialog-content {
+     overflow : visible;
+}

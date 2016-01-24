@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/22/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -40,6 +40,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 });
             });
 
+            var selectedDashStyle = "Solid";
+            $('#hma_dash_style').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#hma_dash_style .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#hma_dash_style .dd-option-image').css('max-width', '115px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -70,7 +82,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                                 maType: $("#hma_ma_type").val(),
                                 stroke : defaultStrokeColor,
                                 strokeWidth: parseInt($("#hma_stroke_width").val()),
-                                dashStyle: $("#hma_dash_style").val(),
+                                dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#hma_appliedTo").val())
                             }
 

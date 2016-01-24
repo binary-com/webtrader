@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -42,6 +42,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#max_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 138,
+                background: "white",
+                onSelected: function (data) {
+                    $('#max_dashStyle .dd-selected-image').css('max-width', '105px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#max_dashStyle .dd-option-image').css('max-width', '105px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -73,7 +85,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                     period : parseInt($html.find(".max_input_width_for_period").val()),
                                     stroke : defaultStrokeColor,
                                     strokeWidth : parseInt($html.find("#max_strokeWidth").val()),
-                                    dashStyle : $html.find("#max_dashStyle").val(),
+                                    dashStyle: selectedDashStyle,
                                     appliedTo: parseInt($html.find("#max_appliedTo").val())
                                 }
                                 //Add MAX for the main series

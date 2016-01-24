@@ -30,6 +30,7 @@ requirejs.config({
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
+        'ddslick': 'lib/ddslick/jquery.ddslick.min'
     },
     map: {
         '*': {

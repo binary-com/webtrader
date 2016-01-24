@@ -2,7 +2,7 @@
 Created By Mahboob.M on 24/11/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
 	function closeDialog()
 	{
@@ -38,7 +38,20 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 	                    $(this).data("color",'#' + color.formatted);
 	                }
    				 });
-			});
+            });
+
+            var selectedDashStyle = "Solid";
+            $('#bbands_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#bbands_dashStyle .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#bbands_dashStyle .dd-option-image').css('max-width', '115px');
+
             
 			$html.dialog({
 				autoOpen:false,
@@ -75,7 +88,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                     uprBndStroke : $("#bbands_up_stroke").css('background-color'),
                                     lwrBndStroke : $("#bbands_lwr_stroke").css('background-color'),
                                     strokeWidth : parseInt($("#bbands_strokeWidth").val()),
-                                    dashStyle : $("#bbands_dashStyle").val(),
+                                    dashStyle: selectedDashStyle,
                                     appliedTo: parseInt($("#bbands_appliedTo").val())
                                 }
                                 //Add Bollinger for the main series

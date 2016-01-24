@@ -9,3 +9,7 @@
 .dema label {
     display: block;
 }
+
+.ui-dialog , .ui-dialog .ui-dialog-content {
+     overflow : visible;
+}

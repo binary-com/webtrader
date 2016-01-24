@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -42,6 +42,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#typprice_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 138,
+                background: "white",
+                onSelected: function (data) {
+                    $('#typprice_dashStyle .dd-selected-image').css('max-width', '105px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#typprice_dashStyle .dd-option-image').css('max-width', '105px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -60,7 +72,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 var options = {
                                     stroke : defaultStrokeColor,
                                     strokeWidth : parseInt($html.find("#typprice_strokeWidth").val()),
-                                    dashStyle : $html.find("#typprice_dashStyle").val()
+                                    dashStyle: selectedDashStyle
                                 }
                                 //Add TYPPRICE for the main series
                                 $($(".typprice").data('refererChartID')).highcharts().series[0].addTYPPRICE(options);

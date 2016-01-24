@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -41,6 +41,17 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     defaultStrokeColor = '#' + color.formatted;
                 }
             });
+            var selectedDashStyle = "Solid";
+            $('#sma_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 138,
+                background: "white",
+                onSelected: function (data) {
+                    $('#sma_dashStyle .dd-selected-image').css('max-width', '105px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#sma_dashStyle .dd-option-image').css('max-width', '105px');
 
             $html.dialog({
                 autoOpen: false,
@@ -71,7 +82,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 period : parseInt($html.find(".sma_input_width_for_period").val()),
                                 stroke : defaultStrokeColor,
                                 strokeWidth : parseInt($html.find("#sma_strokeWidth").val()),
-                                dashStyle : $html.find("#sma_dashStyle").val(),
+                                dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#sma_appliedTo").val())
                             }
                             //Add SMA for the main series

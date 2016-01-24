@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 12/21/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -42,6 +42,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#mama_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#mama_dashStyle .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#mama_dashStyle .dd-option-image').css('max-width', '115px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -61,7 +73,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                                     slowLimt: parseFloat($html.find("#mama_slow_limit").val()),
                                     stroke: defaultStrokeColor,
                                     strokeWidth: parseInt($html.find("#mama_strokeWidth").val()),
-                                    dashStyle: $html.find("#mama_dashStyle").val(),
+                                    dashStyle: selectedDashStyle,
                                     appliedTo: parseInt($html.find("#mama_appliedTo").val())
                                 }
                                 //Add MAMA for the main series
