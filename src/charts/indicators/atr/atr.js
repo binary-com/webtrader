@@ -71,8 +71,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 info: false,
                 "columnDefs": [
                    { className: "dt-center", "targets": [0,1,2,3] }
-                ],
-                searching: false,
+                ]
             });
 
             $.each(defaultLevels, function (index, value) {
