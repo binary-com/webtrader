@@ -7,11 +7,6 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 				var table_view = tableView.init(dialog);
 				chartOptions.init(id, timePeriod, type, table_view.show);
 			});
-
-      /* after the chart is rendered initialize the export module */
-      require(["charts/chartExport"], function (chartExport) {
-        chartExport.init(id);
-      });
 	};
 
 	return {

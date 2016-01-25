@@ -2,9 +2,9 @@
  * Created by arnab on 2/16/15.
  */
 
-define(["charts/chartWindow", "common/util"], function() {
-
+define(['jquery', 'charts/chartingRequestMap', 'moment', "charts/chartWindow", "common/util"], function($, chartingRequestMap, moment) {
     "use strict";
+    var barsTable = chartingRequestMap.barsTable;
 
     function disableEnableOverlay(newTabId, chartType) {
       var overlay = $("#" + newTabId + "_header").find('li.overlay');
@@ -16,6 +16,39 @@ define(["charts/chartWindow", "common/util"], function() {
       }
       overlay.closest("ul.ui-menu").menu("refresh");
     };
+
+    function generate_csv(data){
+      var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
+      var filename = data.instrumentName + ' (' +  data.timePeriod + ')' + '.csv';
+      var bars = barsTable
+                      .chain()
+                      .find({instrumentCdAndTp: key})
+                      .simplesort('time', false)
+                      .data();
+      var lines = bars.map(function(bar){
+          return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
+                 bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
+      });
+      var csv = 'Date,Open,High,Low,Close\n' + lines.join('\n');
+
+
+      var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      if (navigator.msSaveBlob) { // IE 10+
+        navigator.msSaveBlob(blob, filename);
+      }
+      else {
+        var link = document.createElement("a");
+        if (link.download !== undefined) {  /* Evergreen Browsers :) */
+          var url = URL.createObjectURL(blob);
+          link.setAttribute("href", url);
+          link.setAttribute("download", filename);
+          link.style.visibility = 'hidden';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+      }
+    }
 
     return {
 
@@ -61,6 +94,10 @@ define(["charts/chartWindow", "common/util"], function() {
 
                         if(type === 'table'){
                             tableViewCb();
+                        }
+                        else if(type === 'export'){
+                          var data = $("#" + newTabId + "_chart").data();
+                          generate_csv(data);
                         }
                         else {
                           // Remove tick mark from other types and add it to this one.
