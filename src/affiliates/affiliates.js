@@ -1,4 +1,14 @@
 define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util'], function( $, liveapi, menu ) {
+
+	var init_chart_options = function (dialog, timePeriod, type){
+			var id = dialog.attr('id');
+			/* initialize chartOptions & table-view once chart is rendered */
+			require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
+				var table_view = tableView.init(dialog);
+				chartOptions.init(id, timePeriod, type, table_view.show);
+			});
+	};
+
 	return {
 		init: function() {
 			// get chart window html.
@@ -12,11 +22,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 	                .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
 	                .find('div.chartSubContainer').attr('id', newTabId + "_chart").end();
 
-	            require(["charts/chartOptions"], function(chartOptions) {
-	                chartOptions.init(newTabId, timePeriod, type);
-	            });
-
-	            // load market information (instruments) from API.
+        // load market information (instruments) from API.
 				//Trigger async loading of instruments and trade menu and refresh
 				require(["instruments/instruments", "jquery-growl"], function (instruments) {
 					instruments
@@ -62,6 +68,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 														type : type,
 														delayAmount : delayAmount
 													});
+													init_chart_options($html, timePeriod, type);
 												});
 											}
 
@@ -76,6 +83,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 													type : type,
 													delayAmount : delayAmount
 												});
+												init_chart_options($html, timePeriod, type);
 											});
 
 										}
