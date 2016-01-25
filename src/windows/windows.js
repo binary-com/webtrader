@@ -470,8 +470,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             blankWindow.moveToTop = function () {
                 blankWindow.dialog('open');
                 blankWindow.dialogExtend('restore');
-                blankWindow.dialog('moveToTop')
-                     .parent().effect("bounce", { times: 2, distance: 15 }, 450);
+                blankWindow.dialog('widget').effect("bounce", { times: 2, distance: 15 }, 450);
             };
 
             // add an item to window menu
@@ -492,6 +491,30 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             });
             blankWindow.on('dialogopen', function () {
                 !li && add_to_windows_menu();
+            });
+            var last_document_size = { };
+            blankWindow.on('dialogextendbeforerestore', function(){
+              var doc = $(document);
+              last_document_size = {
+                height: doc.height(),
+                width: doc.width()
+              };
+            });
+            blankWindow.on('dialogextendrestore', function() {
+              var dialog = blankWindow.dialog('widget');
+              var pos = dialog.offset();
+              var new_pos = { };
+              var dim = { width: dialog.width(), height: dialog.height() };
+              var doc_size = last_document_size;
+              new_pos.left = (pos.left + dim.width) > doc_size.width ? (doc_size.width - dim.width - 5) : pos.left;
+              new_pos.top = (pos.top + dim.height) > doc_size.height ? (doc_size.height - dim.height - 5) : pos.top;
+              if(new_pos.left !== pos.left || new_pos.top !== pos.top) {
+                dialog.animate({
+                  left: new_pos.left + 'px',
+                  top: new_pos.top + 'px'
+                }, 500);
+              }
+              blankWindow.dialog('moveToTop');
             });
 
             if (options.resize)

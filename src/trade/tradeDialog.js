@@ -104,7 +104,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_state(available,root, dialog){
+    function init_state(available,root, dialog, symbol){
 
       var state = {
         duration: {
@@ -238,7 +238,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           loading: true,
         },
         proposal: {
-          symbol: _(available).head().underlying_symbol,
+          symbol: symbol.symbol,
+          symbol_name: symbol.display_name,
           ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
           req_id: -1, /* id of last request sent */
 
@@ -602,6 +603,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var extra = {
             currency: state.currency.value,
             symbol: state.proposal.symbol,
+            symbol_name: state.proposal.symbol_name,
             category: state.categories.value,
             category_display: state.category_displays.selected,
             duration_unit: state.duration_unit.value,
@@ -721,11 +723,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         });
 
         /********************** register for ticks_streams **********************/
-        var symbol = _(available).head().underlying_symbol;
-        var key = chartingRequestMap.keyFor(symbol, /* granularity = */ 0);
+        var key = chartingRequestMap.keyFor(symbol.symbol, /* granularity = */ 0);
         if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
             chartingRequestMap.register({
-              symbol: symbol,
+              symbol: symbol.symbol,
               subscribe: 1,
               granularity: 0,
               count: 1000, /* this will be for the case that the user opens a the same tick chart later */
@@ -745,7 +746,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         else { chartingRequestMap.subscribe(key); }
 
-        var state = init_state(available,root,dialog);
+        var state = init_state(available,root,dialog, symbol);
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
 
