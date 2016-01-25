@@ -14,3 +14,7 @@
 {
 	width: 50%;
 }
+
+.bbands-ui-dialog, .bbands.ui-dialog-content {
+    overflow: visible;
+}

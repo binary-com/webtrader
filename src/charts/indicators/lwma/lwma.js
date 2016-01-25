@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/22/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -38,6 +38,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 });
             });
 
+            var selectedDashStyle = "Solid";
+            $('#lwma_dash_style').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#lwma_dash_style .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#lwma_dash_style .dd-option-image').css('max-width', '115px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -46,6 +58,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 my: "center",
                 at: "center",
                 of: window,
+                dialogClass: 'lwma-ui-dialog',
                 buttons: [
 					{
 					    text: "OK",
@@ -69,7 +82,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					                period: parseInt($("#lwma_period").val()),
 					                strokeColor: $("#lwma_stroke_color").css("background-color"),
 					                strokeWidth: parseInt($("#lwma_stroke_width").val()),
-					                dashStyle: $("#lwma_dash_style").val(),
+					                dashStyle: selectedDashStyle,
 					                appliedTo: parseInt($html.find("#lwma_appliedTo").val())
 					            }
 

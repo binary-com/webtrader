@@ -5,3 +5,7 @@
 .typprice label {
     display: block;
 }
+
+.typprice-ui-dialog, .typprice.ui-dialog-content {
+    overflow: visible;
+}

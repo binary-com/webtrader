@@ -19,3 +19,7 @@
     width: 100%;
     border-radius: 5px;
 }
+
+.natr-ui-dialog, .natr.ui-dialog-content, .natr_level.ui-dialog-content {
+    overflow: visible;
+}

@@ -9,3 +9,7 @@
 .sma label {
     display: block;
 }
+
+.sma-ui-dialog, .sma.ui-dialog-content {
+    overflow: visible;
+}

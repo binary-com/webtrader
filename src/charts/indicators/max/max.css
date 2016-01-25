@@ -13,3 +13,7 @@
 .max td {
     white-space: nowrap;
 }
+
+.max-ui-dialog , .max.ui-dialog-content {
+     overflow : visible;
+}

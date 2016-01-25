@@ -9,3 +9,7 @@
 .wma label {
     display: block;
 }
+
+.wma-ui-dialog, .wma.ui-dialog-content {
+    overflow: visible;
+}

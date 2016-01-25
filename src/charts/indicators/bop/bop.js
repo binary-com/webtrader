@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -50,6 +50,19 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#bop_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 118,
+                background: "white",
+                onSelected: function (data) {
+                    $('#bop_dashStyle .dd-selected-image').css('max-width', '85px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#bop_dashStyle .dd-option-image').css('max-width', '85px');
+
+
             var table = $html.find('#bop_levels').DataTable({
                 paging: false,
                 scrollY: 100,
@@ -58,7 +71,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 info: false
             });
             $.each(defaultLevels, function (index, value) {
-                $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
+                '<div style="width:50px;overflow:hidden;margin-left: -10px;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
                     .data("level", value)
                     .on('click', function () {
                         $(this).toggleClass('selected');
@@ -77,7 +91,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 require(["charts/indicators/bop/bop_level"], function(bop_level) {
                     bop_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
-                            $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                            $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
+                                '<div style="width:50px;overflow:hidden;margin-left: -10px;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
                                 .data("level", value)
                                 .on('click', function () {
                                     $(this).toggleClass('selected');
@@ -96,6 +111,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'bop-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -119,7 +135,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                             var options = {
                                 stroke : defaultStrokeColor,
                                 strokeWidth : parseInt($html.find("#bop_strokeWidth").val()),
-                                dashStyle : $html.find("#bop_dashStyle").val(),
+                                dashStyle: selectedDashStyle,
                                 levels : levels
                             };
                             //Add BOP for the main series

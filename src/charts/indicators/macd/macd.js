@@ -1,7 +1,7 @@
 /**
 Created By Mahboob.M on 12/12/2015
 */
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
 	function closeDialog()
 	{
@@ -37,7 +37,19 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 	                    $(this).data("color",'#' + color.formatted);
 	                }
    				 });
-			});
+            });
+
+            var selectedDashStyle = "Solid";
+            $('#macd_dash_style').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#macd_dash_style .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#macd_dash_style .dd-option-image').css('max-width', '115px');
             
             $("#macd_line_stroke").css("background", '#2a277a');
             $("#signal_line_stroke").css("background", 'red');
@@ -50,7 +62,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 				modal:true,
 				my:"center",
 				at:"center",
-				of:window,
+				of: window,
+				dialogClass: 'macd-ui-dialog',
 				buttons:[
 					{
 						text: "OK",
@@ -88,7 +101,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                     signalLineStroke : $("#signal_line_stroke").css('background-color'),
                                     macdHstgrmColor : $("#macd_hstgrm_color").css('background-color'),
                                     strokeWidth : parseInt($("#macd_stroke_width").val()),
-                                    dashStyle : $("#macd_dash_style").val(),
+                                    dashStyle: selectedDashStyle,
                                     appliedTo: parseInt($("#macd_applied_to").val())
                                 }
                                 //Add Bollinger for the main series

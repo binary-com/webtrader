@@ -71,6 +71,7 @@ module.exports = function (grunt) {
                             'sightglass/index.js',
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
                             'moment/min/moment.min.js',
+                            'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
