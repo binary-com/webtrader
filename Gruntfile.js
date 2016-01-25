@@ -31,7 +31,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-gitinfo');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.registerTask('default', ['imagemin']);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),

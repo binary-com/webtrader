@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
+define(['lodash', 'jquery', 'rivets', 'jquery-ui', 'jquery-sparkline'], function (_, $, rv) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -388,6 +388,8 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
                 val = Math.abs(val);
                 if(val) {
                   var symbol = input.attr('max') ? '-' : '+';
+                  if(input.attr('no-symbol'))
+                    symbol = '';
                   input.val(symbol + val + dot);
                 }
             })
@@ -402,5 +404,27 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui'], function (_, $, rv) {
         el.setAttribute(this.args[0],value);
       }
     }
+
+    /* ticks: [ {quote: ''} ] */
+    rv.binders['sparkline'] = function(el, ticks) {
+      var chart = $(el);
+      var spots = _.map(ticks,'quote');
+      var config = {
+        type: 'line',
+        lineColor: '#606060',
+        fillColor: false,
+        spotColor: '#00f000',
+        minSpotColor: '#f00000',
+        maxSpotColor: '#0000f0',
+        highlightSpotColor: '#ffff00',
+        highlightLineColor: '#000000',
+        spotRadius: 1.25
+      };
+      setTimeout(function(){
+        chart.sparkline(spots, config);
+        spots.length ? chart.show() : chart.hide();
+      },0);
+    }
+
     return rv;
 });

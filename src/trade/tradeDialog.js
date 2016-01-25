@@ -33,31 +33,11 @@
     }
 */
 
-define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'jquery-sparkline', 'timepicker', 'jquery-ui'],
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
     function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
     var debounce = rv.formatters.debounce;
-
-    rv.binders['trade-dialog-sparkline'] = function(el, ticks) {
-      var chart = $(el);
-      var spots = _.map(ticks,'quote');
-      var config = {
-        type: 'line',
-        lineColor: '#606060',
-        fillColor: false,
-        spotColor: '#00f000',
-        minSpotColor: '#f00000',
-        maxSpotColor: '#0000f0',
-        highlightSpotColor: '#ffff00',
-        highlightLineColor: '#000000',
-        spotRadius: 1.25
-      };
-      setTimeout(function(){
-        chart.sparkline(spots, config);
-        spots.length ? chart.show() : chart.hide();
-      },0);
-    }
 
     function apply_fixes(available){
         /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
@@ -98,7 +78,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           return rank
         });
 
-
         return available;
     }
 
@@ -125,7 +104,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_state(available,root, dialog){
+    function init_state(available,root, dialog, symbol){
 
       var state = {
         duration: {
@@ -216,6 +195,21 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           value: 'payout',
           amount: 10,
           limit: null,
+          up: function() {
+            var value = state.basis.amount*1;
+            value = value < 1 ? value + 0.1 : value + 1;
+            if((value | 0) !== value)
+              value = value.toFixed(2);
+            state.basis.amount = value;
+          },
+          down: function() {
+            var value = state.basis.amount*1;
+            value = value > 1 ? value - 1 : value - 0.1;
+            if((value | 0) !== value) /* is float */
+              value = value.toFixed(2);
+            if(value > 0)
+              state.basis.amount = value;
+          },
         },
         spreads: {
           amount_per_point: 1,
@@ -244,7 +238,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           loading: true,
         },
         proposal: {
-          symbol: _(available).head().underlying_symbol,
+          symbol: symbol.symbol,
+          symbol_name: symbol.display_name,
           ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
           req_id: -1, /* id of last request sent */
 
@@ -429,6 +424,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if(!_.includes(array,state.duration_unit.value)){
           state.duration_unit.value = _.head(array);
         }
+        else {
+          state.duration_count.update(true);
+        }
+
         state.duration_unit.array = array;
 
         /* manualy notify 'duration_count' and 'barriers' to update themselves */
@@ -436,12 +435,17 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.date_expiry.update_times();
       };
 
-      state.duration_count.update = function () {
+      state.duration_count.update = function (try_to_keep_value) {
         var range = _(state.duration_unit.ranges).filter({'type': state.duration_unit.value}).head();
         if (!range) return;
         state.duration_count.min = range.min;
         state.duration_count.max = range.max;
-        state.duration_count.value = range.min;
+        if(try_to_keep_value !== true) {
+          state.duration_count.value = range.min;
+        }
+        else if(state.duration_count.value < range.min || state.duration_count.value > range.max) {
+          state.duration_count.value = range.min;
+        }
       };
 
       state.digits.update = function() {
@@ -599,6 +603,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var extra = {
             currency: state.currency.value,
             symbol: state.proposal.symbol,
+            symbol_name: state.proposal.symbol_name,
             category: state.categories.value,
             category_display: state.category_displays.selected,
             duration_unit: state.duration_unit.value,
@@ -718,11 +723,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         });
 
         /********************** register for ticks_streams **********************/
-        var symbol = _(available).head().underlying_symbol;
-        var key = chartingRequestMap.keyFor(symbol, /* granularity = */ 0);
+        var key = chartingRequestMap.keyFor(symbol.symbol, /* granularity = */ 0);
         if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
             chartingRequestMap.register({
-              symbol: symbol,
+              symbol: symbol.symbol,
               subscribe: 1,
               granularity: 0,
               count: 1000, /* this will be for the case that the user opens a the same tick chart later */
@@ -742,7 +746,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         else { chartingRequestMap.subscribe(key); }
 
-        var state = init_state(available,root,dialog);
+        var state = init_state(available,root,dialog, symbol);
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
 

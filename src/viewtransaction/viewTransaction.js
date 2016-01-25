@@ -13,7 +13,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       var el = root.find('.transaction-chart')[0];
 
       var options = {
-        title: '',
         credits: { href: 'https://www.binary.com', text: 'Binary.com' },
         chart: {
           type: 'live',
@@ -21,6 +20,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           backgroundColor: null, /* make background transparent */
           width: 0,
           height: 0,
+          events: {
+              load: function() {
+                  this.credits.element.onclick = function() {
+                      window.open(
+                          'http://www.binary.com',
+                          '_blank'
+                      );
+                  }
+              }
+          }
         },
         title:{
           text: symbol_name,
