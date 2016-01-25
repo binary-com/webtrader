@@ -96,6 +96,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
+          viewTransaction.init(transaction.contract_id, transaction.transaction_id);
+          return;
 
           /* TODO: remove this hack when backend provided symbol */
           var splits = transaction.shortcode.split('_');
