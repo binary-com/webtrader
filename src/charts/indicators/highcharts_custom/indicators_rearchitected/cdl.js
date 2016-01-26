@@ -690,6 +690,410 @@ CDL.prototype.CDL3WHITESOLDIERS = function() {
     };
 };
 
+CDL.prototype.CDLDRAGONFLYDOJI = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_Low = this.priceData[candleOne_Index].low,
+        candleOne_High = this.priceData[candleOne_Index].high;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+    var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+    var lowWick = Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close)),
+        highWick = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
+        candleBodySize = Math.abs(candleOne_Low - candleOne_High),
+        realBodySize = Math.abs(candleOne_Open - candleOne_Close),
+        isOpenCloseHighAlmostSame = ((candleOne_Open === candleOne_Close) || (realBodySize < (candleBodySize * 0.1)))
+        && ((candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || (highWick < (candleBodySize * 0.1))),
+        isLowerWickLong = (lowWick >= (candleBodySize * 0.60));
+
+    var isBullishContinuation = isCandleTwo_Bearish //occurs at the bottom of downtrends.
+                                && isOpenCloseHighAlmostSame //the open, high, and close are the same or about the same price
+                                && isLowerWickLong;// The most important part of the Dragonfly Doji is the long lower shadow.
+
+    var isBearishContinuation = isCandleTwo_Bullish //occurs at the top of uptrends
+                                && isOpenCloseHighAlmostSame //the open, high, and close are the same or about the same price
+                                && isLowerWickLong;// The most important part of the Dragonfly Doji is the long lower shadow.
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+};
+
+CDL.prototype.CDLENGULFING = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_Low = this.priceData[candleOne_Index].low,
+        candleOne_High = this.priceData[candleOne_Index].high;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+    var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+    var lowWick = Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close)),
+        highWick = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
+        candleBodySize = Math.abs(candleOne_Low - candleOne_High),
+        realBodySize = Math.abs(candleOne_Open - candleOne_Close),
+        isOpenCloseHighAlmostSame = ((candleOne_Open === candleOne_Close) || (realBodySize < (candleBodySize * 0.1)))
+        && ((candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || (highWick < (candleBodySize * 0.1))),
+        isLowerWickLong = (lowWick >= (candleBodySize * 0.60));
+
+    var isBearishContinuation = isCandleTwo_Bullish && isCandleOne_Bearish && candleTwo_Close < candleOne_Open && candleTwo_Open > candleOne_Close;
+
+    var isBullishContinuation = isCandleTwo_Bearish && isCandleOne_Bullish && candleTwo_Close > candleOne_Open && candleTwo_Open < candleOne_Close;
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+};
+
+CDL.prototype.CDLEVENINGDOJISTAR = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+    var candleThree_Index = candleOne_Index - 2;
+    var candleFour_Index = candleOne_Index - 3;
+
+    var isBullishContinuation = false, isBearishContinuation = false;
+
+    if (candleFour_Index >= 0) {
+        var candleFour_Open = this.priceData[candleFour_Index].open,
+            candleFour_Close = this.priceData[candleFour_Index].close;
+        var candleThree_Open = this.priceData[candleThree_Index].open,
+            candleThree_Close = this.priceData[candleThree_Index].close,
+            candleThree_High = this.priceData[candleTwo_Index].high,
+            candleThree_Low = this.priceData[candleTwo_Index].low;
+        var candleTwo_Open = this.priceData[candleTwo_Index].open,
+            candleTwo_Low = this.priceData[candleTwo_Index].low,
+            candleTwo_High = this.priceData[candleTwo_Index].high,
+            candleTwo_Close = this.priceData[candleTwo_Index].close;
+        var candleOne_Open = this.priceData[candleOne_Index].open,
+            candleOne_Close = this.priceData[candleOne_Index].close,
+            candleOne_High = this.priceData[candleOne_Index].high,
+            candleOne_Low = this.priceData[candleOne_Index].low;
+
+        var isCandleFour_Bullish = candleFour_Close > candleFour_Open;
+        var isCandleThree_Bullish = candleThree_Close > candleThree_Open;
+        var isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+        var candleOneBody = Math.abs(candleOne_Open - candleOne_Close),
+          candleThreeBody = Math.abs(candleThree_Open - candleThree_Close),
+          candleTwoBody = Math.abs(candleTwo_Low - candleTwo_High),
+          iscandleTwoDoji = (candleTwo_Open === candleTwo_Close) || ((candleTwoBody * 0.10) >= Math.abs(candleTwo_Open - candleTwo_Close));
+
+        //It's a bearish candlestick
+        var isBullishContinuation = false;
+
+        var isBearishContinuation = isCandleFour_Bullish  //occurs at the top of an uptrend.
+                                    && isCandleThree_Bullish && (this.indicators.isLongCandle(candleThree_Open, candleThree_High, candleThree_Low, candleThree_Close))  //The first part of an Evening Star reversal pattern is a large bullish green candle.
+                                    && iscandleTwoDoji && (Math.min(candleTwo_Open, candleTwo_Close) > candleThree_Close) //The second day begins with a gap up and it is quite small and can be bullish or bearish.
+                                    && isCandleOne_Bearish && (this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close)) && (candleOne_Open < Math.min(candleTwo_Open, candleTwo_Close))//a large Bearish Candle with gap down.
+                                    && (candleOne_Close > candleThree_Open) && (candleOne_Close < candleThree_Close); //closes well within the body of the first candle
+    }
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+};
+
+CDL.prototype.CDLEVENINGSTAR = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+    var candleThree_Index = candleOne_Index - 2;
+    var candleFour_Index = candleOne_Index - 3;
+
+    var isBullishContinuation = false, isBearishContinuation = false;
+
+    if (candleFour_Index >= 0) {
+        var candleFour_Open = this.priceData[candleFour_Index].open,
+            candleFour_Close = this.priceData[candleFour_Index].close;
+        var candleThree_Open = this.priceData[candleThree_Index].open,
+            candleThree_Close = this.priceData[candleThree_Index].close,
+            candleThree_High = this.priceData[candleTwo_Index].high,
+            candleThree_Low = this.priceData[candleTwo_Index].low;
+        var candleTwo_Open = this.priceData[candleTwo_Index].open,
+            candleTwo_Low = this.priceData[candleTwo_Index].low,
+            candleTwo_High = this.priceData[candleTwo_Index].high,
+            candleTwo_Close = this.priceData[candleTwo_Index].close;
+        var candleOne_Open = this.priceData[candleOne_Index].open,
+            candleOne_Close = this.priceData[candleOne_Index].close,
+            candleOne_High = this.priceData[candleOne_Index].high,
+            candleOne_Low = this.priceData[candleOne_Index].low;
+
+        var isCandleFour_Bullish = candleFour_Close > candleFour_Open;
+        var isCandleThree_Bullish = candleThree_Close > candleThree_Open;
+        var isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+        var candleOneBody = Math.abs(candleOne_Open - candleOne_Close);
+        var candleTwoBody = Math.abs(candleTwo_Open - candleTwo_Close);
+        var candleTwoSize = Math.abs(candleTwo_Low - candleTwo_High);
+        var candleThreeBody = Math.abs(candleThree_Open - candleThree_Close);
+
+        var isBullishContinuation = false;
+
+        //Evening Star is bearish only
+        var isBearishContinuation = isCandleFour_Bullish  //occurs at the top of an uptrend.
+                                    && isCandleThree_Bullish && (this.indicators.isLongCandle(candleThree_Open, candleThree_High, candleThree_Low, candleThree_Close))//The first part of an Evening Star reversal pattern is a large bullish green candle.
+                                    && (candleTwoBody >= candleTwoSize * 0.10) && (Math.min(candleTwo_Open, candleTwo_Close) > candleThree_Close) //The second day begins with a gap up and it is quite small and can be bullish or bearish.
+                                    && isCandleOne_Bearish && (this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close)) && (candleOne_Open < Math.min(candleTwo_Open, candleTwo_Close))//a large Bearish Candle with gap down.
+                                    && (candleOne_Close > candleThree_Open) && (candleOne_Close < candleThree_Close);
+    }
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+};
+
+CDL.prototype.CDLGAPSIDESIDEWHITE = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+    var candleThree_Index = candleOne_Index - 2;
+
+    var candleThree_Open = this.priceData[candleTwo_Index].open,
+        candleThree_Close = this.priceData[candleTwo_Index].close;
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close;
+
+    var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
+	    isCandleThree_Bearish = candleThree_Close < candleThree_Open;
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+    var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+    var isBullishContinuation = isCandleThree_Bullish  //the first candlestick is upward 
+                                && isCandleTwo_Bullish && (candleTwo_Open > candleThree_Close) //followed by another upward that opens above  the first (gap up), 
+                                && isCandleOne_Bullish && (candleOne_Open > candleThree_Close) && (candleOne_Open < candleTwo_Close)// followed by a third upward candlestick that opens below the close of the second (gap down)
+                                && (candleOne_Close <= (candleTwo_Close + (Math.abs(candleTwo_Close - candleTwo_Open) * 0.10)));
+
+    var isBearishContinuation = isCandleThree_Bearish  //the first candlestick is downward
+                                && isCandleTwo_Bullish && (candleTwo_Close < candleThree_Close)//followed by an upward candlestick that opens below the  first one (gap down),
+                                && isCandleOne_Bullish && (candleOne_Close < candleThree_Close) && (candleOne_Open < candleTwo_Close)// followed by an upward candlestick that opens below the close of the second one
+                                && (candleOne_Close <= (candleTwo_Close + (Math.abs(candleTwo_Close - candleTwo_Open) * 0.10)));
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
+CDL.prototype.CDLGRAVESTONEDOJI = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_High = this.priceData[candleOne_Index].high,
+        candleOne_Low = this.priceData[candleOne_Index].low;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+
+    var highWick = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
+        candleBodySize = Math.abs(candleOne_Low - candleOne_High),
+        isOpenCloseLowAlmostSame = ((candleOne_Open === candleOne_Close) || ((candleBodySize * 0.05) >= Math.abs(candleOne_Open - candleOne_Close)))
+        && (candleOne_Low === Math.min(candleOne_Open, candleOne_Close)) || ((candleBodySize * 0.05) >= Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close))),
+        isUpperShadowLong = (highWick >= (candleBodySize * 0.80));
+
+    var isBullishContinuation = isCandleTwo_Bearish //occurs at the top of downtrend
+                                && isOpenCloseLowAlmostSame //the open, high, and close are the same or about the same price
+                                && isUpperShadowLong;// The most important part of the Graveston Doji is the long upper shadow..
+
+    var isBearishContinuation = isCandleTwo_Bullish //occurs at the top of uptrends
+                                && isOpenCloseLowAlmostSame //the open, high, and close are the same or about the same price
+                                && isUpperShadowLong;// The most important part of the Graveston Doji is the long upper shadow..
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
+CDL.prototype.CDLHAMMER = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+    var candleThree_Index = candleOne_Index - 2;
+
+    var candleThree_Open = this.priceData[candleThree_Index].open,
+        candleThree_Close = this.priceData[candleThree_Index].close;
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_Low = this.priceData[candleOne_Index].low,
+        candleOne_High = this.priceData[candleOne_Index].high;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+		isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+
+    var candleOneUpperShadow = Math.abs(Math.max(candleOne_Open, candleOne_Close) - candleOne_High),
+        candleOneBody = Math.abs(candleOne_Open - candleOne_Close),
+        candleBodySize = Math.abs(candleOne_Low - candleOne_High),
+        candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close, candleOne_Open)),
+        isOpenCloseHighAlmostSame = (candleOneBody < (candleBodySize * 0.40))
+        && ((candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || (candleOneUpperShadow < (candleBodySize * 0.10)));
+
+    var isBullishContinuation = isCandleTwo_Bearish && (candleTwo_Open < Math.min(candleThree_Close, candleThree_Open)) //a downward trend indicating a bullish reversal, it is a hammer
+                                && isOpenCloseHighAlmostSame  //the open, high, and close are roughly the same price. means it has a small body.
+                                && (candleOneLowerShadow >= (2.0 * candleOneBody)) && (candleOne_Close < candleTwo_Close); //there is a long lower shadow, twice the length as the real body.
+
+    //It's a bullish candlestick
+    var isBearishContinuation = false;
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
+CDL.prototype.CDLHANGINGMAN = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+    var candleThree_Index = candleOne_Index - 2;
+
+    var candleThree_Open = this.priceData[candleThree_Index].open,
+        candleThree_Close = this.priceData[candleThree_Index].close;
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_Low = this.priceData[candleOne_Index].low,
+        candleOne_High = this.priceData[candleOne_Index].high;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+		isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+
+    var candleOneUpperShadow = Math.abs(Math.max(candleOne_Open, candleOne_Close) - candleOne_High),
+        candleOneBody = Math.abs(candleOne_Open - candleOne_Close),
+        candleBodySize = Math.abs(candleOne_Low - candleOne_High),
+        candleOneLowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Close, candleOne_Open)),
+        isOpenCloseHighAlmostSame = (candleOneBody < (candleBodySize * 0.40))
+        && ((candleOne_High === Math.max(candleOne_Open, candleOne_Close)) || (candleOneUpperShadow < (candleBodySize * 0.10)));
+
+    var isBearishContinuation = isCandleTwo_Bullish && (candleTwo_Open > Math.max(candleThree_Close, candleThree_Open)) //a downward trend indicating a bullish reversal, it is a hammer
+                              && isOpenCloseHighAlmostSame //the open, high, and close are roughly the same price. means it has a small body.
+                              && (candleOneLowerShadow >= (2.0 * candleOneBody) && (candleOne_Close > candleTwo_Close)); //there is a long lower shadow, twice the length as the real body.
+
+    //It's a bearish candlestick
+    var isBullishContinuation = false;
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
+CDL.prototype.CDLHARAMI = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close,
+        candleTwo_Low = this.priceData[candleTwo_Index].low,
+        candleTwo_High = this.priceData[candleTwo_Index].high;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+    var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+    var isBullishContinuation = isCandleTwo_Bearish && (this.indicators.isLongCandle(candleTwo_Open, candleTwo_High, candleTwo_Low, candleTwo_Close))//the first candlestick is upward
+                                && isCandleOne_Bullish && (candleOne_Open > candleTwo_Close) && (candleOne_Close < candleTwo_Open)// followed by a smaller candlestick whose body is located within the vertical range of the larger body
+                                && (Math.abs(candleOne_Open - candleOne_Close) < (Math.abs(candleTwo_Open - candleTwo_Close) * 0.60)); //Must be smaller than prevoius day
+
+    var isBearishContinuation = isCandleTwo_Bullish && (this.indicators.isLongCandle(candleTwo_Open, candleTwo_High, candleTwo_Low, candleTwo_Close))// a large bullish green candle on Day 1
+                               && isCandleOne_Bearish && (candleOne_Open < candleTwo_Close) && (candleOne_Close > candleTwo_Open)// followed by a smaller candlestick whose body is located within the vertical range of the larger body
+                               && (Math.abs(candleOne_Open - candleOne_Close) < (Math.abs(candleTwo_Open - candleTwo_Close) * 0.60));//Must be smaller than prevoius day
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
+CDL.prototype.CDLHARAMICROSS = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_Low = this.priceData[candleOne_Index].low,
+        candleOne_High = this.priceData[candleOne_Index].high;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+
+    var dojiResponse_candleOne = this.CDLDOJI(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close);
+
+    var isBullishContinuation = isCandleTwo_Bearish //the first candlestick is upward
+                                && dojiResponse_candleOne.isBull && (Math.min(candleOne_Close, candleOne_Open) > candleTwo_Close) && (Math.max(candleOne_Close, candleOne_Open) < candleTwo_Open); //followed by a doji that is located within the top and bottom of the candlestick's body. 
+
+    var isBearishContinuation = isCandleTwo_Bullish // a large bullish green candle on Day 1
+                                && dojiResponse_candleOne.isBear && (Math.min(candleOne_Close, candleOne_Open) > candleTwo_Open) && (Math.max(candleOne_Close, candleOne_Open) < candleTwo_Close); //followed by a doji that is located within the top and bottom of the candlestick's body. 
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
+CDL.prototype.CDLHOMINGPIGEON = function () {
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close,
+        candleTwo_Low = this.priceData[candleTwo_Index].low,
+        candleTwo_High = this.priceData[candleTwo_Index].high;
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_Low = this.priceData[candleOne_Index].low,
+        candleOne_High = this.priceData[candleOne_Index].high;
+
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+    var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+    var candleOneBody = Math.abs(candleOne_Close - candleOne_Open);
+
+    var isBullishContinuation = isCandleTwo_Bearish && (this.indicators.isLongCandle(candleTwo_Open, candleTwo_High, candleTwo_Low, candleTwo_Close))// First candle is a long black candle.
+                                && isCandleOne_Bearish 
+                                && (candleOne_Low > candleTwo_Low) && (candleOne_Close > candleTwo_Close) // Second candle is an inside bar, which is also a black candle. Second candle closes inside the body of the first candle.
+                                && (candleOne_High < candleTwo_High) && (candleOne_Open < candleTwo_Open);
+    //It's a bullish candlestick
+    var isBearishContinuation = false;
+
+    return {
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
 CDL.prototype.calculateIndicatorValue = function(cdlPatternCode) {
     var ret;
     var time = this.priceData[this.priceData.length - 1].time;
@@ -762,6 +1166,50 @@ CDL.prototype.calculateIndicatorValue = function(cdlPatternCode) {
         case 'CDLDOJISTAR':
             var cdlObject = this.CDLDOJISTAR();
             ret = CDLADDFLAGINFO(cdlObject, time, 'DS', 'Doji Star');
+            break;
+        case 'CDLDRAGONFLYDOJI':
+            var cdlObject = this.CDLDRAGONFLYDOJI();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'DD', 'Dragonfly Doji');
+            break;
+        case 'CDLENGULFING':
+            var cdlObject = this.CDLENGULFING();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'EP', 'Engulfing Pattern');
+            break;
+        case 'CDLEVENINGDOJISTAR':
+            var cdlObject = this.CDLEVENINGDOJISTAR();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'EDS', 'Evening Doji Star');
+            break;
+        case 'CDLEVENINGSTAR':
+            var cdlObject = this.CDLEVENINGSTAR();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'ES', 'Evening Star');
+            break;
+        case 'CDLGAPSIDESIDEWHITE':
+            var cdlObject = this.CDLGAPSIDESIDEWHITE();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'SSWL', 'Up/Down-Gap Side-By-Side White Lines');
+            break;
+        case 'CDLGRAVESTONEDOJI':
+            var cdlObject = this.CDLGRAVESTONEDOJI();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'GSD', 'Gravestone Doji');
+            break;
+        case 'CDLHAMMER':
+            var cdlObject = this.CDLHAMMER();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'H', 'Hammer');
+            break;
+        case 'CDLHANGINGMAN':
+            var cdlObject = this.CDLHANGINGMAN();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'HM', 'Hanging Man');
+            break;
+        case 'CDLHARAMI':
+            var cdlObject = this.CDLHARAMI();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'HP', 'Harami Pattern');
+            break;
+        case 'CDLHARAMICROSS':
+            var cdlObject = this.CDLHARAMICROSS();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'HCP', 'Harami Cross Pattern');
+            break;
+        case 'CDLHOMINGPIGEON':
+            var cdlObject = this.CDLHOMINGPIGEON();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'HP', 'Homing Pigeon');
             break;
     }
     return ret;
