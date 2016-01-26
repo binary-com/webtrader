@@ -137,22 +137,37 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             table = $(html);
             table.appendTo(profitWin);
+            var footer = $('<div/>').addClass('profit-table-info');
 
             table = table.dataTable({
                 data: [],
-                "columnDefs": [ {
-                    "targets": 6,
-                    "createdCell": function (td, cellData) {
+                columnDefs: [ {
+                    targets: 6,
+                    createdCell: function (td, cellData) {
                         var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
                         if (css_class)
                             $(td).addClass(css_class);
                     }
                 }],
+                info: false,
+                footerCallback: function ( row, data, start, end, display ) {
+                  var api = this.api(), data;
+
+                  var total = api.column(6).data()
+                    .reduce(function(a, b) { return a*1 + b*1; }, 0);
+
+                  var css = 'total ' + (total >= 0 ? 'green' : 'red');
+                  footer.html(
+                    '<span class="title">Total Profit/Loss<span>' +
+                    '<span class="' + css + '">'+ formatPrice(total) +'</span>'
+                  );
+                },
                 paging: false,
                 ordering: false,
                 searching: true,
                 processing: true
             });
+            footer.appendTo(table.parent());
             table.parent().addClass('hide-search-input');
 
             // Apply the a search on each column input change
@@ -176,7 +191,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             profitWin.on('click', on_arrow_click);
 
             /**************** infinite scroll implementation *******************/
-            refreshTable({clear:true});
             profitWin.scroll(function() {
               var scrollTop = profitWin.scrollTop(),
                   innerHeight = profitWin.innerHeight(),

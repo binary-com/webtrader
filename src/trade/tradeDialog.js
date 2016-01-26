@@ -46,28 +46,28 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           'contract_category_display': 'Up/Down',
           'barrier_category' : 'euro_atm',
           'contract_display' : 'higher'
-        }).each(replacer('contract_display', 'rise')).value()
+        }).each(replacer('contract_display', 'rise'));
 
         _(available).filter({
           'contract_category_display':'Up/Down',
           'barrier_category': 'euro_atm',
           'contract_display': 'lower',
-        }).each(replacer('contract_display','fall')).value()
+        }).each(replacer('contract_display','fall'));
         /* fix for server side api, returning two different contract_category_displays for In/Out */
         _(available).filter(['contract_category_display', 'Stays In/Goes Out'])
-                    .each(replacer('contract_category_display', 'In/Out')).value();
+                    .each(replacer('contract_category_display', 'In/Out'));
         _(available).filter(['contract_category_display', 'Ends In/Out'])
-                    .each(replacer('contract_category_display', 'In/Out')).value();
+                    .each(replacer('contract_category_display', 'In/Out'));
         /* fix for websocket having a useless barrier value for digits */
         _(available).filter(['contract_category_display', 'Digits'])
-                    .each(replacer('barriers', 0)).value();
+                    .each(replacer('barriers', 0));
         /* fix for contract_display text in In/Out menue */
-        _(available).filter(['contract_display', 'ends outside']).each(replacer('contract_display', 'ends out')).value();
-        _(available).filter(['contract_display', 'ends between']).each(replacer('contract_display', 'ends in')).value();
-        _(available).filter(['contract_display', 'stays between']).each(replacer('contract_display', 'stays in')).value();
-        _(available).filter(['contract_display', 'goes outside']).each(replacer('contract_display', 'goes out')).value();
-        _(available).filter(['contract_display', 'touches']).each(replacer('contract_display', 'touch')).value();
-        _(available).filter(['contract_display', 'does not touch']).each(replacer('contract_display', 'no touch')).value();
+        _(available).filter(['contract_display', 'ends outside']).each(replacer('contract_display', 'ends out'));
+        _(available).filter(['contract_display', 'ends between']).each(replacer('contract_display', 'ends in'));
+        _(available).filter(['contract_display', 'stays between']).each(replacer('contract_display', 'stays in'));
+        _(available).filter(['contract_display', 'goes outside']).each(replacer('contract_display', 'goes out'));
+        _(available).filter(['contract_display', 'touches']).each(replacer('contract_display', 'touch'));
+        _(available).filter(['contract_display', 'does not touch']).each(replacer('contract_display', 'no touch'));
 
         /* sort the items in the array according to the way we want to show them */
         available = _.sortBy(available,function(row){
@@ -104,7 +104,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_state(available,root, dialog){
+    function init_state(available,root, dialog, symbol){
 
       var state = {
         duration: {
@@ -238,7 +238,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           loading: true,
         },
         proposal: {
-          symbol: _(available).head().underlying_symbol,
+          symbol: symbol.symbol,
+          symbol_name: symbol.display_name,
           ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
           req_id: -1, /* id of last request sent */
 
@@ -602,6 +603,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var extra = {
             currency: state.currency.value,
             symbol: state.proposal.symbol,
+            symbol_name: state.proposal.symbol_name,
             category: state.categories.value,
             category_display: state.category_displays.selected,
             duration_unit: state.duration_unit.value,
@@ -721,11 +723,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         });
 
         /********************** register for ticks_streams **********************/
-        var symbol = _(available).head().underlying_symbol;
-        var key = chartingRequestMap.keyFor(symbol, /* granularity = */ 0);
+        var key = chartingRequestMap.keyFor(symbol.symbol, /* granularity = */ 0);
         if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
             chartingRequestMap.register({
-              symbol: symbol,
+              symbol: symbol.symbol,
               subscribe: 1,
               granularity: 0,
               count: 1000, /* this will be for the case that the user opens a the same tick chart later */
@@ -745,7 +746,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         else { chartingRequestMap.subscribe(key); }
 
-        var state = init_state(available,root,dialog);
+        var state = init_state(available,root,dialog, symbol);
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
 
