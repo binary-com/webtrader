@@ -46,28 +46,28 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           'contract_category_display': 'Up/Down',
           'barrier_category' : 'euro_atm',
           'contract_display' : 'higher'
-        }).each(replacer('contract_display', 'rise')).value()
+        }).each(replacer('contract_display', 'rise'));
 
         _(available).filter({
           'contract_category_display':'Up/Down',
           'barrier_category': 'euro_atm',
           'contract_display': 'lower',
-        }).each(replacer('contract_display','fall')).value()
+        }).each(replacer('contract_display','fall'));
         /* fix for server side api, returning two different contract_category_displays for In/Out */
         _(available).filter(['contract_category_display', 'Stays In/Goes Out'])
-                    .each(replacer('contract_category_display', 'In/Out')).value();
+                    .each(replacer('contract_category_display', 'In/Out'));
         _(available).filter(['contract_category_display', 'Ends In/Out'])
-                    .each(replacer('contract_category_display', 'In/Out')).value();
+                    .each(replacer('contract_category_display', 'In/Out'));
         /* fix for websocket having a useless barrier value for digits */
         _(available).filter(['contract_category_display', 'Digits'])
-                    .each(replacer('barriers', 0)).value();
+                    .each(replacer('barriers', 0));
         /* fix for contract_display text in In/Out menue */
-        _(available).filter(['contract_display', 'ends outside']).each(replacer('contract_display', 'ends out')).value();
-        _(available).filter(['contract_display', 'ends between']).each(replacer('contract_display', 'ends in')).value();
-        _(available).filter(['contract_display', 'stays between']).each(replacer('contract_display', 'stays in')).value();
-        _(available).filter(['contract_display', 'goes outside']).each(replacer('contract_display', 'goes out')).value();
-        _(available).filter(['contract_display', 'touches']).each(replacer('contract_display', 'touch')).value();
-        _(available).filter(['contract_display', 'does not touch']).each(replacer('contract_display', 'no touch')).value();
+        _(available).filter(['contract_display', 'ends outside']).each(replacer('contract_display', 'ends out'));
+        _(available).filter(['contract_display', 'ends between']).each(replacer('contract_display', 'ends in'));
+        _(available).filter(['contract_display', 'stays between']).each(replacer('contract_display', 'stays in'));
+        _(available).filter(['contract_display', 'goes outside']).each(replacer('contract_display', 'goes out'));
+        _(available).filter(['contract_display', 'touches']).each(replacer('contract_display', 'touch'));
+        _(available).filter(['contract_display', 'does not touch']).each(replacer('contract_display', 'no touch'));
 
         /* sort the items in the array according to the way we want to show them */
         available = _.sortBy(available,function(row){
@@ -751,7 +751,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
+        window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
     }
 
     return {
