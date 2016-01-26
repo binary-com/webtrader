@@ -71,7 +71,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 info: false,
                 "columnDefs": [
                    { className: "dt-center", "targets": [0, 1, 2, 3] }
-                ]
+                ],
+                "aoColumnDefs": [{ "bSortable": false, "aTargets": [1, 3] }]
             });
             $.each(defaultLevels, function (index, value) {
                 $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
