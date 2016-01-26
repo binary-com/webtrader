@@ -66,7 +66,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 scrollY: 100,
                 autoWidth: true,
                 searching: false,
-                info: false
+                info: false,
+                "columnDefs": [
+                   { className: "dt-center", "targets": [0, 1, 2, 3] }
+                ]
             });
             $html.find('#stddev_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
@@ -82,7 +85,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     stddev_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
-                                '<div style="width:50px;overflow:hidden;margin-left: -10px;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
+                                '<div style="width:50px;overflow:hidden;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
                                 .data("level", value)
                                 .on('click', function () {
                                     $(this).toggleClass('selected');
