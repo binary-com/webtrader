@@ -94,7 +94,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             quote: tick.quote,
             epoch: tick.epoch,
             number: state.ticks.array.length+1,
-            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss")
+            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
+                     extra.symbol_name + " " + tick.quote,
           });
           --tick_count;
           if(tick_count === 0) {
