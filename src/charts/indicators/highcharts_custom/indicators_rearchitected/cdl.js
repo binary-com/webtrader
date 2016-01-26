@@ -290,6 +290,55 @@ CDL.prototype.CDL3OUTSIDE = function() {
     };
 };
 
+CDL.prototype.CDL3WHITESOLDIERS = function() {
+    var candleOne_Index         = this.priceData.length - 1;
+    var candleTwo_Index         = candleOne_Index - 1;
+    var candleThree_Index       = candleOne_Index - 2;
+    var candleFour_Index        = candleOne_Index - 3;
+    var isBullishContinuation = false, isBearishContinuation = false;
+
+    if (candleFour_Index >= 0) {
+        var candleFour_Open = this.priceData[candleFour_Index].open,
+            candleFour_Low = this.priceData[candleFour_Index].low,
+            candleFour_High = this.priceData[candleFour_Index].high,
+            candleFour_Close = this.priceData[candleFour_Index].close;
+        var candleThree_Open = this.priceData[candleThree_Index].open,
+            candleThree_Low = this.priceData[candleThree_Index].low,
+            candleThree_High = this.priceData[candleThree_Index].high,
+            candleThree_Close = this.priceData[candleThree_Index].close;
+        var candleTwo_Open = this.priceData[candleTwo_Index].open,
+            candleTwo_Low = this.priceData[candleTwo_Index].low,
+            candleTwo_High = this.priceData[candleTwo_Index].high,
+            candleTwo_Close = this.priceData[candleTwo_Index].close;
+        var candleOne_Open = this.priceData[candleOne_Index].open,
+            candleOne_Low = this.priceData[candleOne_Index].low,
+            candleOne_High = this.priceData[candleOne_Index].high,
+            candleOne_Close = this.priceData[candleOne_Index].close;
+
+        var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
+            isCandleThree_Bearish = candleThree_Close < candleThree_Open,
+            isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+            isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open,
+            isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+            isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+        isBullishContinuation = isCandleThree_Bullish && candleThree_Close > candleFour_Close && this.indicators.isLongCandle(candleThree_Open, candleThree_High, candleThree_Low, candleThree_Close)
+            && isCandleTwo_Bullish && candleTwo_Close > candleThree_Close && this.indicators.isLongCandle(candleTwo_Open, candleTwo_High, candleTwo_Low, candleTwo_Close)
+            && isCandleOne_Bullish && candleOne_Close > candleTwo_Close && this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close)
+        ;
+
+        isBearishContinuation = isCandleThree_Bearish && candleThree_Close < candleFour_Close && this.indicators.isLongCandle(candleThree_Open, candleThree_High, candleThree_Low, candleThree_Close)
+            && isCandleTwo_Bearish && candleTwo_Close < candleThree_Close && this.indicators.isLongCandle(candleTwo_Open, candleTwo_High, candleTwo_Low, candleTwo_Close)
+            && isCandleOne_Bearish && candleOne_Close < candleTwo_Close && this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close)
+        ;
+    }
+
+    return {
+        isBear : isBullishContinuation,
+        isBull : isBearishContinuation
+    };
+};
+
 CDL.prototype.calculateIndicatorValue = function(cdlPatternCode) {
     var ret;
     var time = this.priceData[this.priceData.length - 1].time;
@@ -398,6 +447,23 @@ CDL.prototype.calculateIndicatorValue = function(cdlPatternCode) {
                     x : time,
                     title : '<span style="color : red">TOUD</span>',
                     text : 'Three Outside Up/Down : Bear'
+                };
+            }
+            break;
+        case 'CDL3WHITESOLDIERS':
+            var cdlObject = this.CDL3WHITESOLDIERS();
+            if (cdlObject.isBull) {
+                ret = {
+                    x : time,
+                    title : '<span style="color : blue">TWS</span>',
+                    text : 'Three Advancing White Soldiers : Bull'
+                };
+            }
+            else if (cdlObject.isBear) {
+                ret = {
+                    x : time,
+                    title : '<span style="color : red">TWS</span>',
+                    text : 'Three Advancing White Soldiers : Bear'
                 };
             }
             break;

@@ -245,6 +245,20 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                 case this.LOW: price  = data.low; break;
             }
             return price;
+        },
+
+        /**
+         * Long candle is "candle body" = "80% of Math.abs(high - low)"
+         * @param open
+         * @param high
+         * @param low
+         * @param close
+         * @returns {boolean}
+         */
+        isLongCandle : function(open, high, low, close) {
+            var bodySize = Math.abs(open - close);
+            var candleSize = Math.abs(high - low);
+            return bodySize >= (.7 * candleSize);
         }
     };
 
