@@ -69,7 +69,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 info: false,
                 "columnDefs": [
                    { className: "dt-center", "targets": [0, 1, 2, 3] }
-                ]
+                ],
+                "aoColumnDefs": [{ "bSortable": false, "aTargets": [1, 3] }]
             });
             $html.find('#stddev_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
