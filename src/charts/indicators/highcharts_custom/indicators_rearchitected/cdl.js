@@ -202,8 +202,8 @@ CDL.prototype.CDL3INSIDE = function() {
         && isCandleOne_Bullish && (candleOne_Close > candleTwo_Close);
 
     return {
-        isBear : isBullishContinuation,
-        isBull : isBearishContinuation
+        isBear : isBearishContinuation,
+        isBull : isBullishContinuation
     };
 };
 
@@ -250,8 +250,8 @@ CDL.prototype.CDL3LINESTRIKE = function() {
     }
 
     return {
-        isBear : isBullishContinuation,
-        isBull : isBearishContinuation
+        isBear : isBearishContinuation,
+        isBull : isBullishContinuation
     };
 };
 
@@ -285,8 +285,8 @@ CDL.prototype.CDL3OUTSIDE = function() {
         ;
 
     return {
-        isBear : isBullishContinuation,
-        isBull : isBearishContinuation
+        isBear : isBearishContinuation,
+        isBull : isBullishContinuation
     };
 };
 
@@ -333,8 +333,8 @@ CDL.prototype.CDL3STARSSOUTH = function () {
     var isBearishContinuation = false;
 
     return {
-        isBear: isBullishContinuation,
-        isBull: isBearishContinuation
+        isBear : isBearishContinuation,
+        isBull : isBullishContinuation
     };
 };
 
@@ -362,8 +362,52 @@ CDL.prototype.CDL3WHITESOLDIERS = function () {
     var isBearishContinuation = false;
 
     return {
-        isBear: isBullishContinuation,
-        isBull: isBearishContinuation
+        isBear: isBearishContinuation,
+        isBull: isBullishContinuation
+    };
+}
+
+CDL.prototype.CDLABANDONEDBABY = function ()
+{
+    var candleOne_Index = this.priceData.length - 1;
+    var candleTwo_Index = candleOne_Index - 1;
+    var candleThree_Index = candleOne_Index - 2;
+
+    var candleThree_Open = this.priceData[candleThree_Index].open,
+        candleThree_Close = this.priceData[candleThree_Index].close,
+        candleThree_Low = this.priceData[candleThree_Index].low,
+        candleThree_High = this.priceData[candleThree_Index].high;
+
+    var candleTwo_Open = this.priceData[candleTwo_Index].open,
+        candleTwo_Close = this.priceData[candleTwo_Index].close,
+        candleTwo_Low = this.priceData[candleTwo_Index].low,
+        candleTwo_High = this.priceData[candleTwo_Index].high;
+
+    var candleOne_Open = this.priceData[candleOne_Index].open,
+        candleOne_Close = this.priceData[candleOne_Index].close,
+        candleOne_Low = this.priceData[candleOne_Index].low,
+        candleOne_High = this.priceData[candleOne_Index].high;
+
+    var isCandleThree_Bullish = candleThree_Close > candleThree_Open,
+        isCandleThree_Bearish = candleThree_Close < candleThree_Open;
+    var isCandleTwo_Bullish = candleTwo_Close > candleTwo_Open,
+        isCandleTwo_Bearish = candleTwo_Close < candleTwo_Open;
+    var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
+        isCandleOne_Bearish = candleOne_Close < candleOne_Open;
+
+    var dojiResponse_candleTwo = this.CDLDOJI(candleTwo_Open, candleTwo_High, candleTwo_Low, candleTwo_Close);
+
+    var isBearishContinuation = isCandleThree_Bullish
+                                && dojiResponse_candleTwo.isBear && (candleTwo_Low > candleThree_High)
+                                && isCandleOne_Bearish && (candleOne_High < candleTwo_Low);
+
+    var isBullishContinuation = isCandleThree_Bearish 
+                                && dojiResponse_candleTwo.isBull && (candleTwo_High < candleThree_Low)
+                                && isCandleOne_Bullish && (candleOne_Low > candleTwo_High);
+
+    return {
+        isBear : isBearishContinuation,
+        isBull : isBullishContinuation
     };
 }
 
@@ -407,6 +451,10 @@ CDL.prototype.calculateIndicatorValue = function(cdlPatternCode) {
         case 'CDL3WHITESOLDIERS':
             var cdlObject = this.CDL3WHITESOLDIERS();
             ret = CDLADDFLAGINFO(cdlObject, time, 'TWS', 'Three Advancing White Soldiers');
+            break;
+        case 'CDLABANDONEDBABY':
+            var cdlObject = this.CDLABANDONEDBABY();
+            ret = CDLADDFLAGINFO(cdlObject, time, 'AB', 'Abandoned Baby');
             break;
     }
     return ret;
