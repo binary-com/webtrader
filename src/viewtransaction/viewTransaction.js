@@ -214,11 +214,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         ticks_history: state.chart.symbol,
         start: state.table.date_start - margin, /* load around 2 more thicks before start */
         end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
-        count: 1000*1000*1000, /* no limit */
+        count: 4999, /* maximum number of ticks possible */
+        style: 'ticks'
      };
+     console.warn(request);
 
       liveapi.send(request)
              .then(function(data){
+               console.warn(data);
                var history = data.history;
                var times = history.times;
                var prices = history.prices;
@@ -235,7 +238,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
 
                state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'});
                state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time' ,text_left: true });
-               console.warn(_.first(ticks)[0], state.table.date_start*1000);
+               console.warn(_.first(ticks)[0] - state.table.date_start*1000);
 
                state.chart.chart = chart;
                state.chart.manual_reflow();
