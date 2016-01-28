@@ -260,6 +260,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
             var candleSize = Math.abs(high - low);
             return bodySize >= (.7 * candleSize);
         }
+
     };
 
     return indicators;
