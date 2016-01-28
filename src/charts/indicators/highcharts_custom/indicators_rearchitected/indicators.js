@@ -248,7 +248,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
         },
 
         /**
-         * Long candle is "candle body" = "80% of Math.abs(high - low)"
+         * Long candle is "candle body" = "70% of Math.abs(high - low)"
          * @param open
          * @param high
          * @param low

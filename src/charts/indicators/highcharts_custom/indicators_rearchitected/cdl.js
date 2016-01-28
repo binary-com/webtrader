@@ -323,7 +323,7 @@ CDL.prototype.CDL3STARSSOUTH = function () {
 
     var isBullishContinuation = isCandleThree_Bearish && (this.indicators.isLongCandle(candleThree_Open, candleThree_High, candleThree_Low, candleThree_Close))
                 && (candleThreeLowerShadow >= (candleThreeBodySize * 2)) && (candleThreeUpperShadow < (candleThreeBodySize * 0.1)) //A black candlestick with almost no upper shadow and a long lower shadow appears on the first day.
-                && isCandleTwo_Bearish && (candleTwo_Low > candleThree_Low) && (candleTwo_Open < candleThree_Open) && (candleTwo_Close < candleThree_Close) && (candleTwoBodySize < candleThreeBodySize) // The next day is another black candlestick closing below the previous day’s close and having an opening in the range of the previous day’s body. However, it has a higher low.
+                && isCandleTwo_Bearish && (candleTwo_Low > candleThree_Low) && (candleTwo_Open < candleThree_Open) && (candleTwo_Close < candleThree_Close) && (candleTwoBodySize < candleThreeBodySize) // The next day is another black candlestick closing below the previous dayï¿½s close and having an opening in the range of the previous dayï¿½s body. However, it has a higher low.
                 && isCandleOne_Bearish && (candleOne_Low > candleTwo_Low) && (candleOne_Open === candleOne_High) && (candleOne_Low === candleOne_Close) && (candleOneBodySize < candleTwoBodySize);//The last day is a small black Marubozu with a higher low
 
     //It's a bullish candlestick
@@ -1933,43 +1933,6 @@ CDL.prototype.CDLSHOOTINGSTAR = function () {
     };
 }
 
-CDL.prototype.CDLSHORTLINE = function () {
-    var candleOne_Index = this.priceData.length - 1;
-
-    var candleOne_Open = this.priceData[candleOne_Index].open,
-        candleOne_Close = this.priceData[candleOne_Index].close,
-        candleOne_Low = this.priceData[candleOne_Index].low,
-        candleOne_High = this.priceData[candleOne_Index].high;
-
-    var isCandleOne_Bullish = candleOne_Close > candleOne_Open,
-        isCandleOne_Bearish = candleOne_Close < candleOne_Open;
-
-    var lowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close)),
-        upperShadow = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
-        candleBodySize = Math.abs(candleOne_Low - candleOne_High),
-        realBodySize = Math.abs(candleOne_Close - candleOne_Open),
-        isLowerShadowShort = (lowerShadow === 0) || (lowerShadow <= (candleBodySize * 0.20)),
-        isUpperShadowShort = (upperShadow === 0) || (upperShadow <= (candleBodySize * 0.20));
-
-    //TODO
-    //Its not woring because the short candles have short upper and lower shadows so they have short candlesizes.
-    //var bodySize = Math.abs(open - close);
-    //var candleSize = Math.abs(high - low);
-    //var isShortCandle= bodySize <= (.3 * candleSize);
-    var isBullishContinuation = isCandleOne_Bullish
-                                && !(this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close))
-                                && isLowerShadowShort && isUpperShadowShort;
-
-    var isBearishContinuation = isCandleOne_Bearish
-                                && !(this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close))
-                                && isLowerShadowShort && isUpperShadowShort;
-
-    return {
-        isBull: isBullishContinuation,
-        isBear: isBearishContinuation
-    };
-}
-
 CDL.prototype.CDLSPINNINGTOP = function () {
     var candleOne_Index = this.priceData.length - 1;
     var candleTwo_Index = candleOne_Index - 1;
@@ -2405,10 +2368,10 @@ CDL.prototype.CDLHIGHWAVE = function () {
     var lowerShadow = Math.abs(Math.min(candleOne_Open, candleOne_Close) - candleOne_Low);
 
     var isBearishContinuation = isCandleOne_Bearish && (bodySize > (Math.max(upperShadow, lowerShadow) * 0.05))
-                                && ((bodySize < (lowerShadow / 3)) && (bodySize < (upperShadow / 3)));//“High Wave” is a candlestick with a small body and long shadows.
+                                && ((bodySize < (lowerShadow / 3)) && (bodySize < (upperShadow / 3)));//ï¿½High Waveï¿½ is a candlestick with a small body and long shadows.
 
     var isBullishContinuation = isCandleOne_Bullish && (bodySize > (Math.max(upperShadow, lowerShadow) * 0.05))
-                                && ((bodySize < (lowerShadow / 3)) && (bodySize < (upperShadow / 3)));//“High Wave” is a candlestick with a small body and long shadows.
+                                && ((bodySize < (lowerShadow / 3)) && (bodySize < (upperShadow / 3)));//ï¿½High Waveï¿½ is a candlestick with a small body and long shadows.
 
     return {
         isBear: isBearishContinuation,
@@ -2616,10 +2579,6 @@ CDL.prototype.calculateIndicatorValue = function(cdlPatternCode) {
         case 'CDLSHOOTINGSTAR':
             var cdlObject = this.CDLSHOOTINGSTAR();
             ret = CDLADDFLAGINFO(cdlObject, time, 'SS', 'Shooting Star');
-            break;
-        case 'CDLSHORTLINE':
-            var cdlObject = this.CDLSHORTLINE();
-            ret = CDLADDFLAGINFO(cdlObject, time, 'SLC', 'Short Line Candle');
             break;
         case 'CDLSPINNINGTOP':
             var cdlObject = this.CDLSPINNINGTOP();
