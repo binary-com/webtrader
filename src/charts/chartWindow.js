@@ -55,11 +55,6 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
                     var table_view = tableView.init(dialog);
                     chartOptions.init(id, options.timePeriod, options.type, table_view.show);
                 });
-
-                /* after the chart is rendered initialize the export module */
-                require(["charts/chartExport"], function (chartExport) {
-                  chartExport.init(id);
-                });
             });
 
             dialog.dialog('open');

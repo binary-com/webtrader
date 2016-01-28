@@ -23,7 +23,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         var contract = data.proposal_open_contract;
         var id = contract.contract_id,
             bid_price = contract.bid_price;
-        if (!id) { return; }
 
         if (table) {
             var row = table.api().row('#' + id);
@@ -48,6 +47,32 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         }
     }
 
+    var subscribed_before = false;
+    function resubscribe_proposal_open_contract() {
+        /* suscribe to all open contracts */
+        if(!subscribed_before) {
+          liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
+              .then(function(data){ subscribed_before = true; })
+              .catch(function (err) {
+                console.error(err);
+                $.growl.error({ message: err.message });
+              });
+        }
+        /* first forget then subscribe */
+        else {
+          liveapi.send({ forget_all: 'proposal_open_contract' })
+              .then(function(data){
+                subscribed_before = false;
+                resubscribe_proposal_open_contract();
+              })
+              .catch(function (err) {
+                subscribed_before = false;
+                resubscribe_proposal_open_contract();
+                console.error(err.message);
+              });
+        }
+    }
+
     function initPortfolioWin() {
         require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
@@ -58,6 +83,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                   }
                   liveapi.send({ balance: 1 }).catch(function (err) { console.error(err); $.growl.error({ message: err.message }); });
                   update_table();
+                  resubscribe_proposal_open_contract();
                 };
 
                 /* refresh blance on blance change */
@@ -71,6 +97,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     /* TODO: once the api provoided "longcode" use it to update
                       the table and do not issue another {portfolio:1} call */
                     update_table();
+                    resubscribe_proposal_open_contract();
                 });
 
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
@@ -84,16 +111,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                                     console.error(err.message);
                                 });
                         /* un-register proposal_open_contract handler */
-                        liveapi.events.on('proposal_open_contract', update_indicative);
+                        liveapi.events.off('proposal_open_contract', update_indicative);
                     },
                     open: function () {
                         refresh();
-                        /* suscribe to all open contracts */
-                        liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
-                            .catch(function (err) {
-                              console.error(err);
-                              $.growl.error({ message: err.message });
-                            });
                         /* register handler for proposal_open_contract */
                         liveapi.events.on('proposal_open_contract', update_indicative);
                     },
@@ -172,14 +193,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 table.api().rows.add(rows);
                 table.api().draw();
                 processing_msg.hide();
-
-                /* contracts with is_valid_to_sell:0 are returned only once in the stream of proposal_open_contract,
-                   we need to manualy check each contract to see if it is offered or not */
-                contracts.forEach(function(contract){
-                  liveapi.send({proposal_open_contract: 1, contract_id: contract.contract_id})
-                     .catch(function(err) { console.error(err); })
-                })
-
             })
             .catch(function (err) {
                 console.error(err);

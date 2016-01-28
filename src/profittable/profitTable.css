@@ -62,3 +62,18 @@ table.profit-table-dialog img.arrow {
     right: -5px;
     top: 5px;
 }
+
+div.profit-table-info {
+  display: block;
+  height: 1em;
+}
+
+.profit-table-info,
+.profit-table-info .total {
+  font-weight: bold;
+  font-size: 15px;
+}
+.profit-table-info .total {
+   float: right;
+   padding-right: 15px;
+}
