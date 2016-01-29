@@ -20,7 +20,7 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
 
     var db = new loki();
     var barsTable = db.addCollection('bars_table');
-    // TODO: add common tasks for chartingRequestMap to this module
+    // TODO: add common tasks for   to this module
     //       move code from charts.js, ohlc_handler.js, stream_handler.js and symbol_handler.js
 
 
@@ -35,6 +35,8 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
         chartIDList.forEach(function(chartID) {
 
             if (!chartID) return;
+
+            if (!$(chartID.containerIDWithHash) || !$(chartID.containerIDWithHash).highcharts()) return;
 
             var series = $(chartID.containerIDWithHash).highcharts().get(key),
                 type = $(chartID.containerIDWithHash).data('type');
@@ -217,6 +219,7 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                 "end": 'latest',
                 "style": style
             };
+
             if (options.subscribe === 1) {
                 req.subscribe = 1;
             }
