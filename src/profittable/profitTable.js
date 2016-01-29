@@ -96,29 +96,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
-
-          /* TODO: remove this hack when backend provided symbol */
-          var splits = transaction.shortcode.split('_');
-          var symbol = splits[1] !== 'R' ? splits[1] : 'R_' + splits[2];
-
-          /* TODO: remove this hack when backend provided duration */
-          var longcode = transaction.longcode.split(' ');
-          var duration_type = ['ticks', 'ticks.', 'seconds', 'minutes', 'hours', 'days'].filter(function(t){ return _.includes(longcode, t) })[0];
-          var duration = longcode[longcode.indexOf(duration_type) - 1];
-
-          viewTransaction.init({
-              duration: duration,
-              duration_type: duration_type,
-              symbol: symbol,
-              contract_id: transaction.contract_id,
-              transaction_id: transaction.transaction_id,
-              longcode: transaction.longcode,
-              sell_time: transaction.sell_time,
-              purchase_time: transaction.purchase_time,
-              buy_price: transaction.buy_price,
-              sell_price: transaction.sell_price
-          });
-      })
+        viewTransaction.init(transaction.contract_id, transaction.transaction_id);
+      });
     }
 
     function initProfitWin() {
