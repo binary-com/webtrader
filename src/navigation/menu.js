@@ -90,9 +90,11 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
             var sort_fn = sortAlphaNum('display_name');
             //Sort market
             if($.isArray(markets)) {
+
                 markets.sort(function(a,b) {
                   var rank = { "Forex": 1, "Indices": 2, "Stocks": 3, "Commodities": 4, "Randoms": 5 };
-                  return rank[a.display_name] > rank[b.display_name];
+                  return rank[a.display_name] > rank[b.display_name] ? 1 :
+                         rank[a.display_name] < rank[b.display_name] ? -1 : 0;
                 });
                 markets.forEach(function (market) {
                     if($.isArray(market.submarkets)) {
