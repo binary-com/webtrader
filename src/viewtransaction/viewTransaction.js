@@ -9,7 +9,25 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
-  function init_chart(root, ticks, symbol_name) {
+  function init_chart(root, options) {
+      var data = [];
+      var type = '';
+      if(options.history){
+        type = 'line';
+        var history = options.history;
+        var times = history.times;
+        var prices = history.prices;
+        for(var i = 0; i < times.length; ++i) {
+          data.push([times[i]*1000, prices[i]*1]);
+        }
+      }
+      if(options.candles) {
+        type = 'candlestick';
+        data = options.candles.map(function(c){
+          return [c.epoch*1000, c.open*1, c.high*1, c.low*1, c.close*1];
+        })
+      }
+      var title = options.title;
       var el = root.find('.transaction-chart')[0];
 
       var options = {
@@ -32,7 +50,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           }
         },
         title:{
-          text: symbol_name,
+          text: title,
           style: { fontSize:'16px' }
         },
         tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
@@ -41,8 +59,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           categories:null,
           startOnTick: false,
           endOnTick: false,
-          min: _.first(ticks)[0],
-          max: _.last(ticks)[0],
+          min: _.first(data)[0],
+          max: _.last(data)[0],
           labels: { overflow:"justify", format:"{value:%H:%M:%S}" },
         },
         yAxis: {
@@ -51,14 +69,26 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           // gridLineWidth: 0,
         },
         series: [{
-          name: symbol_name,
-          data: ticks,
-          type:'line'
+          name: title,
+          data: data,
+          type: type,
         }],
         exporting: {enabled: false, enableImages: false},
         legend: {enabled: false},
         navigator: { enabled: true },
-        plotOptions: { line: { marker: { radius: 2 } } },
+        plotOptions: {
+          line: {
+            marker: { radius: 2 }
+          },
+          candlestick: {
+            lineColor: 'black',
+            color: 'red',
+            upColor: 'green',
+            upLineColor: 'black',
+            shadow: true
+          },
+        },
+        rangeSelector: { enabled: false },
       };
       var chart = new Highcharts.Chart(options);
 
@@ -110,7 +140,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
               proposal.symbol = proposal.underlying;
               get_symbol_name(proposal.symbol).then(function(symbol_name){
                 proposal.symbol_name = symbol_name;
-                console.warn(proposal);
                 init_dialog(proposal);
               }).catch(function(err) { console.error(err); })
            })
@@ -208,45 +237,60 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
   }
 
   function get_chart_data(state, root) {
-      var table = state.table;
-      var margin = state.chart.tick_count ? 3 : 60;
-      var request = {
-        ticks_history: state.chart.symbol,
-        start: state.table.date_start - margin, /* load around 2 more thicks before start */
-        end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
-        count: 4999, /* maximum number of ticks possible */
-        style: 'ticks'
-     };
-     console.warn(request);
+    var table = state.table;
+    var duration = state.table.date_expiry - state.table.date_start;
+    var granularity = 0;
+    var margin = 0; // time margin
+    if(duration < 60*60) { granularity = 0; } // 1 hour
+    else if(duration <= 2*60*60) { granularity = 60; } // 6 hours
+    else if(duration <= 6*60*60) { granularity = 120; } // 6 hours
+    else if(duration <= 24*60*60) { granularity = 300; } // 1 day
+    else { granularity = 3600 } // more than 1 day
+    margin = granularity === 0 ? 3 : 3*granularity;
+    var request = {
+      ticks_history: state.chart.symbol,
+      start: state.table.date_start - margin, /* load around 2 more thicks before start */
+      end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
+      style: granularity === 0 ? 'ticks' : 'candles',
+      count: 4999, /* maximum number of ticks possible */
+    };
 
-      liveapi.send(request)
-             .then(function(data){
-               console.warn(data);
-               var history = data.history;
-               var times = history.times;
-               var prices = history.prices;
-               var ticks = [];
-               for(var i = 0; i < times.length; ++i) {
-                 ticks.push([times[i]*1000, prices[i]*1]);
-               }
-               state.chart.loading = '';
+    liveapi.send(request)
+      .then(function(data) {
+        state.chart.loading = '';
 
-               var chart = init_chart(root, ticks, state.chart.symbol_name);
+        var options = { title: state.chart.symbol_name };
+        if(data.history) options.history = data.history;
+        if(data.candles) options.candles = data.candles;
+        var chart = init_chart(root, options);
 
-               state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
-               state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
+        if(data.history && !state.table.entry_tick_time) {
+          state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 >= state.table.date_start*1 })[0];
+        }
+        /* TODO: see if back-end is going to give uss (entry/exit)_tick and (entry/exit)_tick_time fileds or not! */
+        // if(data.candles && !state.table.entry_tick_time) {
+        //   state.table.entry_tick_time = data.candles.filter(function(c) { return c.epoch*1 >= state.table.date_start*1 })[0].epoch *1;
+        // }
+        if(data.history && !state.table.exit_tick_time) {
+          state.table.exit_tick_time = data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 })[0];
+        }
+        // if(data.candles && !state.table.exit_tick_time) {
+        //   state.table.exit_tick_time = data.candles.filter(function(c) { return c.epoch*1 <= state.table.date_expiry*1 })[0].epoch *1;
+        // }
 
-               state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'});
-               state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time' ,text_left: true });
-               console.warn(_.first(ticks)[0] - state.table.date_start*1000);
+        state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
+        state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
 
-               state.chart.chart = chart;
-               state.chart.manual_reflow();
-             })
-             .catch(function(err) {
-               state.chart.loading = err.message;
-               console.error(err);
-             });
+        state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'});
+        state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time' ,text_left: true });
+
+        state.chart.chart = chart;
+        state.chart.manual_reflow();
+      })
+      .catch(function(err) {
+        state.chart.loading = err.message;
+        console.error(err);
+      });
   }
 
   return { init: init };
