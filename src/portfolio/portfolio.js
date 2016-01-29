@@ -73,6 +73,17 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         }
     }
 
+    function on_arrow_click(e) {
+      if(e.target.tagName !== 'IMG')
+        return;
+      var tr = e.target.parentElement.parentElement;
+      var data = table.api().row(tr).data();
+      var contract = _.last(data);
+      require(['viewtransaction/viewTransaction'], function(viewTransaction){
+          console.warn(contract);
+      });
+    }
+
     function initPortfolioWin() {
         require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
@@ -157,6 +168,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 });
                 table.parent().addClass('hide-search-input');
 
+                portfolioWin.on('click', on_arrow_click);
                 portfolioWin.dialog('open');
             })
             .catch(function (err) {
@@ -179,12 +191,15 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
 
                 var rows = contracts.map(function (contract) {
+                    var svg = 'up'; // TODO: when to show 'up','down' or 'equal'?
+                    var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
                     return [
                         contract.transaction_id,
-                        contract.longcode,
+                        img + contract.longcode,
                         formatPrice(contract.buy_price),
                         '0.00',
                         contract.contract_id, /* for jq-datatables rowId */
+                        contract, /* data for view transaction dailog - when clicking on arrows */
                     ];
                 });
 
