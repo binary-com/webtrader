@@ -107,7 +107,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           id: options.id || options.label,
           value: options.value,
           label: {text: options.label, align: 'center'},
-          color: 'green',
+          color: options.color || 'green',
           width: 2,
         });
       };
@@ -206,6 +206,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
             chart: null, /* highchart object */
             symbol: proposal.symbol,
             symbol_name: proposal.symbol_name,
+            barrier: proposal.barrier,
+            high_barrier: proposal.high_barrier,
+            low_barrier: proposal.low_barrier,
             loading: 'Loading ' + proposal.symbol_name + ' ...',
           }
       };
@@ -272,7 +275,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         //   state.table.entry_tick_time = data.candles.filter(function(c) { return c.epoch*1 >= state.table.date_start*1 })[0].epoch *1;
         // }
         if(data.history && !state.table.exit_tick_time) {
-          state.table.exit_tick_time = data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 })[0];
+          state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
         }
         // if(data.candles && !state.table.exit_tick_time) {
         //   state.table.exit_tick_time = data.candles.filter(function(c) { return c.epoch*1 <= state.table.date_expiry*1 })[0].epoch *1;
@@ -283,6 +286,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
 
         state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'});
         state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time' ,text_left: true });
+
+        state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
+        state.chart.high_barrier && chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
+        state.chart.low_barrier && chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
 
         state.chart.chart = chart;
         state.chart.manual_reflow();
