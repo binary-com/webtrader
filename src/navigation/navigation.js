@@ -69,7 +69,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
             if ($li.hasClass('update-list-item-handlers'))
                 return;
             $li.addClass('update-list-item-handlers');
-            $li.on("click", function clickHandler() {
+            $li.on("click", function() {
                 var normal_class = "nav-normal-menu";
                 var mobile_class = "nav-mobile-menu";
                 var $elem = $(this);
