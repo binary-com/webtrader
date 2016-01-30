@@ -85,20 +85,17 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
                             if (!isValid) return;
 
-                            require(['charts/indicators/highcharts_custom/kama'], function (kama) {
-                                kama.init();
-                                var options = {
-                                    period: parseInt($html.find("#kama_period").val()),
-                                    fastPeriod: parseInt($html.find("#kama_fast_period").val()),
-                                    slowPeriod: parseInt($html.find("#kama_slow_period").val()),
-                                    stroke: defaultStrokeColor,
-                                    strokeWidth: parseInt($html.find("#kama_strokeWidth").val()),
-                                    dashStyle: selectedDashStyle,
-                                    appliedTo: parseInt($html.find("#kama_appliedTo").val())
-                                }
-                                //Add KAMA for the main series
-                                $($(".kama").data('refererChartID')).highcharts().series[0].addKAMA(options);
-                            });
+                            var options = {
+                                period: parseInt($html.find("#kama_period").val()),
+                                fastPeriod: parseInt($html.find("#kama_fast_period").val()),
+                                slowPeriod: parseInt($html.find("#kama_slow_period").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#kama_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#kama_appliedTo").val())
+                            }
+                            //Add KAMA for the main series
+                            $($(".kama").data('refererChartID')).highcharts().series[0].addIndicator('kama', options);
 
                             closeDialog.call($html);
                         }

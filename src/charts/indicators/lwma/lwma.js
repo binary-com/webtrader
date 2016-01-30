@@ -76,19 +76,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					            return;
 					        }
 
-					        require(['charts/indicators/highcharts_custom/lwma'], function (lwma) {
-					            lwma.init();
-					            var options = {
-					                period: parseInt($("#lwma_period").val()),
-					                strokeColor: $("#lwma_stroke_color").css("background-color"),
-					                strokeWidth: parseInt($("#lwma_stroke_width").val()),
-					                dashStyle: selectedDashStyle,
-					                appliedTo: parseInt($html.find("#lwma_appliedTo").val())
-					            }
+					        var options = {
+					            period: parseInt($("#lwma_period").val()),
+					            stroke: $("#lwma_stroke_color").css("background-color"),
+					            strokeWidth: parseInt($("#lwma_stroke_width").val()),
+					            dashStyle: selectedDashStyle,
+					            appliedTo: parseInt($html.find("#lwma_appliedTo").val())
+					        }
 
-					            //Add LWMA to the main series
-					            $($(".lwma").data('refererChartID')).highcharts().series[0].addLWMA(options);
-					        });
+					        //Add LWMA to the main series
+					        $($(".lwma").data('refererChartID')).highcharts().series[0].addIndicator('lwma', options);
 
 					        closeDialog.call($html);
 					    }

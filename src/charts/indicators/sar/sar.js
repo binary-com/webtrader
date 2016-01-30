@@ -2,18 +2,18 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function init( containerIDWithHash, _callback ) {
+    function init(containerIDWithHash, _callback) {
 
         require(['css!charts/indicators/sar/sar.css']);
 
-        require(['text!charts/indicators/sar/sar.html'], function ( $html ) {
+        require(['text!charts/indicators/sar/sar.html'], function ($html) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -24,17 +24,17 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#sar_stroke").colorpicker({
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+                part: {
+                    map: { size: 128 },
+                    bar: { size: 128 }
                 },
-                select:			function(event, color) {
+                select: function (event, color) {
                     $("#sar_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok: function (event, color) {
                     $("#sar_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
@@ -53,13 +53,12 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 buttons: [
                     {
                         text: "OK",
-                        click: function() {
+                        click: function () {
 
                             var isValid = true;
-                            $('.sar_input_width_for_period').each(function()
-                            {
+                            $('.sar_input_width_for_period').each(function () {
                                 if (!$.isNumeric($(this).val())) {
-                                    require(["jquery", "jquery-growl"], function($) {
+                                    require(["jquery", "jquery-growl"], function ($) {
                                         $.growl.error({ message: "Only numeric value allowed!" });
                                     });
                                     isValid = false;
@@ -68,34 +67,30 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                             });
                             if (!isValid) return;
 
-                            require(['charts/indicators/highcharts_custom/sar'], function ( sar ) {
-                                sar.init();
-                                var options = {
-                                    acceleration :  parseFloat($html.find("#sar_acceleration").val()),
-                                    maximum :  parseFloat($html.find("#sar_maximum").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#sar_strokeWidth").val()),
-                                    dashStyle : 'line'
-                                }
-                                //Add sar for the main series
-                                $($(".sar").data('refererChartID')).highcharts().series[0].addSAR(options);
-                            });
+                            var options = {
+                                acceleration: parseFloat($html.find("#sar_acceleration").val()),
+                                maximum: parseFloat($html.find("#sar_maximum").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#sar_strokeWidth").val()),
+                                dashStyle: 'line'
+                            }
+                            //Add sar for the main series
+                            $($(".sar").data('refererChartID')).highcharts().series[0].addIndicator('sar', options);
 
                             closeDialog.call($html);
                         }
                     },
                     {
                         text: "Cancel",
-                        click: function() {
+                        click: function () {
                             closeDialog.call(this);
                         }
                     }
                 ]
             });
 
-            if ($.isFunction(_callback))
-            {
-                _callback( containerIDWithHash );
+            if ($.isFunction(_callback)) {
+                _callback(containerIDWithHash);
             }
 
         });
@@ -104,15 +99,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
+        open: function (containerIDWithHash) {
 
-            if ($(".sar").length == 0)
-            {
-                init( containerIDWithHash, this.open );
+            if ($(".sar").length == 0) {
+                init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".sar").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".sar").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 

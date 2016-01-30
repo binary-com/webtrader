@@ -64,18 +64,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					    text: "OK",
 					    click: function () {
 
-					        require(['charts/indicators/highcharts_custom/cci'], function (cci) {
-					            cci.init();
-					            var options = {
-					                period: parseInt($("#cci_period").val()),
-					                maType:$("#cci_ma_type").val(),
-					                strokeColor: $("#cci_stroke_color").css("background-color"),
-					                strokeWidth: parseInt($("#cci_stroke_width").val()),
-					                dashStyle: selectedDashStyle
-					            }
-					            //Add CCI to the main series
-					            $($(".cci").data('refererChartID')).highcharts().series[0].addCCI(options);
-					        });
+					        var options = {
+					            period: parseInt($("#cci_period").val()),
+					            maType: $("#cci_ma_type").val(),
+					            stroke: $("#cci_stroke_color").css("background-color"),
+					            strokeWidth: parseInt($("#cci_stroke_width").val()),
+					            dashStyle: selectedDashStyle
+					        }
+					        //Add CCI to the main series
+					        $($(".cci").data('refererChartID')).highcharts().series[0].addIndicator('cci', options);
 
 					        closeDialog.call($html);
 					    }

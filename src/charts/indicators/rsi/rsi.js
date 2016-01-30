@@ -9,7 +9,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function init( containerIDWithHash, _callback ) {
+    function init(containerIDWithHash, _callback) {
 
         require(['css!charts/indicators/rsi/rsi.css']);
 
@@ -21,7 +21,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/rsi/rsi.html'], function ( $html ) {
+        require(['text!charts/indicators/rsi/rsi.html'], function ($html) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -32,17 +32,17 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#rsi_stroke").colorpicker({
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+                part: {
+                    map: { size: 128 },
+                    bar: { size: 128 }
                 },
-                select:			function(event, color) {
+                select: function (event, color) {
                     $("#rsi_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok: function (event, color) {
                     $("#rsi_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
@@ -79,11 +79,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     .data("level", value)
                     .on('click', function () {
                         $(this).toggleClass('selected');
-                    } );
+                    });
             });
             $html.find('#rsi_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
-                    require(["jquery", "jquery-growl"], function($) {
+                    require(["jquery", "jquery-growl"], function ($) {
                         $.growl.error({ message: "Select levels to delete!" });
                     });
                 } else {
@@ -91,7 +91,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 }
             });
             $html.find('#rsi_level_add').click(function () {
-                require(["charts/indicators/rsi/rsi_level"], function(rsi_level) {
+                require(["charts/indicators/rsi/rsi_level"], function (rsi_level) {
                     rsi_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
@@ -99,7 +99,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 .data("level", value)
                                 .on('click', function () {
                                     $(this).toggleClass('selected');
-                                } );
+                                });
                         });
                     });
                 });
@@ -118,21 +118,22 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 buttons: [
                     {
                         text: "OK",
-                        click: function() {
+                        click: function () {
 
                             if (!isNumericBetween($html.find(".rsi_input_width_for_period").val(),
                                             parseInt($html.find(".rsi_input_width_for_period").attr("min")),
-                                            parseInt($html.find(".rsi_input_width_for_period").attr("max"))))
-                            {
-                                require(["jquery", "jquery-growl"], function($) {
-                                    $.growl.error({ message: "Only numbers between " + $html.find(".rsi_input_width_for_period").attr("min")
-                                            + " to " + $html.find(".rsi_input_width_for_period").attr("max")
-                                            + " is allowed for " + $html.find(".rsi_input_width_for_period").closest('tr').find('td:first').text() + "!" });
+                                            parseInt($html.find(".rsi_input_width_for_period").attr("max")))) {
+                                require(["jquery", "jquery-growl"], function ($) {
+                                    $.growl.error({
+                                        message: "Only numbers between " + $html.find(".rsi_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".rsi_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".rsi_input_width_for_period").closest('tr').find('td:first').text() + "!"
+                                    });
                                 });
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/rsi'], function ( rsi ) {
+                            require(['charts/indicators/highcharts_custom/rsi'], function (rsi) {
                                 rsi.init();
                                 var levels = [];
                                 $.each(table.rows().nodes(), function () {
@@ -150,14 +151,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                     }
                                 });
                                 var options = {
-                                    period : parseInt($html.find(".rsi_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#rsi_strokeWidth").val()),
+                                    period: parseInt($html.find(".rsi_input_width_for_period").val()),
+                                    stroke: defaultStrokeColor,
+                                    strokeWidth: parseInt($html.find("#rsi_strokeWidth").val()),
                                     dashStyle: selectedDashStyle,
-                                    levels : levels
+                                    levels: levels
                                 };
                                 //Add RSI for the main series
-                                $($(".rsi").data('refererChartID')).highcharts().series[0].addRSI(options);
+                                $($(".rsi").data('refererChartID')).highcharts().series[0].addIndicator('rsi', options);
                             });
 
                             closeDialog.call($html);
@@ -165,16 +166,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     },
                     {
                         text: "Cancel",
-                        click: function() {
+                        click: function () {
                             closeDialog.call(this);
                         }
                     }
                 ]
             });
 
-            if (typeof _callback == "function")
-            {
-                _callback( containerIDWithHash );
+            if (typeof _callback == "function") {
+                _callback(containerIDWithHash);
             }
 
         });
@@ -183,15 +183,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
+        open: function (containerIDWithHash) {
 
-            if ($(".rsi").length == 0)
-            {
-                init( containerIDWithHash, this.open );
+            if ($(".rsi").length == 0) {
+                init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".rsi").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".rsi").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 

@@ -77,19 +77,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					            return;
 					        }
 
-					        require(['charts/indicators/highcharts_custom/smma'], function (smma) {
-					            smma.init();
-					            var options = {
-					                period: parseInt($("#smma_period").val()),
-					                strokeColor: $("#smma_stroke_color").css("background-color"),
-					                strokeWidth: parseInt($("#smma_stroke_width").val()),
-					                dashStyle: selectedDashStyle,
-					                appliedTo: parseInt($html.find("#smma_appliedTo").val())
-					            }
+					        var options = {
+					            period: parseInt($("#smma_period").val()),
+					            stroke: $("#smma_stroke_color").css("background-color"),
+					            strokeWidth: parseInt($("#smma_stroke_width").val()),
+					            dashStyle: selectedDashStyle,
+					            appliedTo: parseInt($html.find("#smma_appliedTo").val())
+					        }
 
-					            //Add SMMA to the main series
-					            $($(".smma").data('refererChartID')).highcharts().series[0].addSMMA(options);
-					        });
+					        //Add SMMA to the main series
+					        $($(".smma").data('refererChartID')).highcharts().series[0].addIndicator('smma', options);
 
 					        closeDialog.call($html);
 					    }

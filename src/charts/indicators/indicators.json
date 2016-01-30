@@ -34,7 +34,8 @@
   "typprice": {
     "id": "typprice",
     "long_display_name": "Typical Price",
-    "short_display_name": "TYPPRICE"
+    "short_display_name": "TYPPRICE",
+	"onChartIndicator" : true
   },
 
   "willr": {
@@ -58,13 +59,15 @@
   "min": {
     "id": "min",
     "long_display_name": "Minimum",
-    "short_display_name": "MIN"
+    "short_display_name": "MIN",
+	"onChartIndicator" : true
   },
 
   "max": {
     "id": "max",
     "long_display_name": "Maximum",
-    "short_display_name": "MAX"
+    "short_display_name": "MAX",
+	"onChartIndicator" : true
   },
 
   "sum": {
@@ -194,7 +197,8 @@
   "sar": {
     "id": "sar",
     "long_display_name": "Parabolic SAR",
-    "short_display_name": "SAR"
+    "short_display_name": "SAR",
+	"onChartIndicator" : true
   },
 
    "macd": {
@@ -212,7 +216,8 @@
   "wclprice": {
     "id": "wclprice",
     "long_display_name": "Weighted Close Price",
-    "short_display_name": "WCLPRICE"
+    "short_display_name": "WCLPRICE",
+	"onChartIndicator" : true
   },
    
   "cci": {
@@ -231,13 +236,15 @@
   "kama": {
     "id": "kama",
     "long_display_name": "Kaufman's Adaptive Moving Average",
-    "short_display_name": "KAMA"
+    "short_display_name": "KAMA",
+	 "onChartIndicator" : true
   },
 
   "t3": {
     "id": "t3",
     "long_display_name": "Triple Exponential Moving Average (T3)",
-    "short_display_name": "T3"
+    "short_display_name": "T3",
+	"onChartIndicator" : true
   },
 
    "hma": {
@@ -250,19 +257,22 @@
    "lwma": {
     "id": "lwma",
     "long_display_name": "Linearly Weighted Moving Average",
-    "short_display_name": "LWMA"
+    "short_display_name": "LWMA",
+	"onChartIndicator": true
   },
 
   "smma": {
     "id": "smma",
     "long_display_name": "Smoothed Moving Average",
-    "short_display_name": "SMMA"
+    "short_display_name": "SMMA",
+	 "onChartIndicator" : true
   },
 
     "mama": {
     "id": "mama",
     "long_display_name": "Mesa Adaptive Moving Average",
-    "short_display_name": "MAMA"
+    "short_display_name": "MAMA",
+	"onChartIndicator": true
   },
   
    "cdlupsidegap2crows": {
