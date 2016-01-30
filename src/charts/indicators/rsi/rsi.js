@@ -133,8 +133,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/rsi'], function (rsi) {
-                                rsi.init();
                                 var levels = [];
                                 $.each(table.rows().nodes(), function () {
                                     var data = $(this).data('level');
@@ -159,7 +157,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 };
                                 //Add RSI for the main series
                                 $($(".rsi").data('refererChartID')).highcharts().series[0].addIndicator('rsi', options);
-                            });
 
                             closeDialog.call($html);
                         }
