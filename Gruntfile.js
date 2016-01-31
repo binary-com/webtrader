@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'src/',
-                        src: ['**', '!charts/indicators/highcharts_custom/indicators_rearchitected/**'],
+                        src: ['**', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
                         dest: 'dist/uncompressed/v<%=pkg.version%>'
                     }
                 ]
@@ -311,14 +311,15 @@ module.exports = function (grunt) {
         concat: {
             concat_indicators: {
                 //Define the sequence here, indicators which require other indicators to be built first, should be explicitly listed here
-                src: ['src/charts/indicators/highcharts_custom/indicators_rearchitected/IndicatorBase.js',
-                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/WMA.js',
-                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/SMA.js',
-                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/EMA.js',
-                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/TEMA.js',
-                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/TRIMA.js',
-                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/STDDEV.js',
-                        'src/charts/indicators/highcharts_custom/indicators_rearchitected/**/*.js'
+                src: ['src/charts/indicators/highcharts_custom/IndicatorBase.js',
+                        'src/charts/indicators/highcharts_custom/WMA.js',
+                        'src/charts/indicators/highcharts_custom/SMA.js',
+                        'src/charts/indicators/highcharts_custom/EMA.js',
+                        'src/charts/indicators/highcharts_custom/TEMA.js',
+                        'src/charts/indicators/highcharts_custom/TRIMA.js',
+                        'src/charts/indicators/highcharts_custom/STDDEV.js',
+                        'src/charts/indicators/highcharts_custom/**/*.js',
+                        '!src/charts/indicators/highcharts_custom/currentprice.js'
                     ],
                 dest: 'dist/uncompressed/v<%=pkg.version%>/charts/indicators/highcharts_custom/indicators.js'
             }
