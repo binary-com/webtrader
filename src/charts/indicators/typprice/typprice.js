@@ -2,18 +2,18 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function init( containerIDWithHash, _callback ) {
+    function init(containerIDWithHash, _callback) {
 
         require(['css!charts/indicators/typprice/typprice.css']);
 
-        require(['text!charts/indicators/typprice/typprice.html'], function ( $html ) {
+        require(['text!charts/indicators/typprice/typprice.html'], function ($html) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -24,23 +24,35 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#typprice_stroke").colorpicker({
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+                part: {
+                    map: { size: 128 },
+                    bar: { size: 128 }
                 },
-                select:			function(event, color) {
+                select: function (event, color) {
                     $("#typprice_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok: function (event, color) {
                     $("#typprice_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 }
             });
+
+            var selectedDashStyle = "Solid";
+            $('#typprice_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 138,
+                background: "white",
+                onSelected: function (data) {
+                    $('#typprice_dashStyle .dd-selected-image').css('max-width', '105px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#typprice_dashStyle .dd-option-image').css('max-width', '105px');
 
             $html.dialog({
                 autoOpen: false,
@@ -50,37 +62,34 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'typprice-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
-                        click: function() {
+                        click: function () {
                             //console.log('Ok button is clicked!');
-                            require(['charts/indicators/highcharts_custom/typprice'], function ( typprice ) {
-                                typprice.init();
-                                var options = {
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#typprice_strokeWidth").val()),
-                                    dashStyle : $html.find("#typprice_dashStyle").val()
-                                }
-                                //Add TYPPRICE for the main series
-                                $($(".typprice").data('refererChartID')).highcharts().series[0].addTYPPRICE(options);
-                            });
+                            var options = {
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#typprice_strokeWidth").val()),
+                                dashStyle: selectedDashStyle
+                            }
+                            //Add TYPPRICE for the main series
+                            $($(".typprice").data('refererChartID')).highcharts().series[0].addIndicator('typprice', options);
 
                             closeDialog.call($html);
                         }
                     },
                     {
                         text: "Cancel",
-                        click: function() {
+                        click: function () {
                             closeDialog.call(this);
                         }
                     }
                 ]
             });
 
-            if (typeof _callback == "function")
-            {
-                _callback( containerIDWithHash );
+            if (typeof _callback == "function") {
+                _callback(containerIDWithHash);
             }
 
         });
@@ -89,15 +98,14 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
+        open: function (containerIDWithHash) {
 
-            if ($(".typprice").length == 0)
-            {
-                init( containerIDWithHash, this.open );
+            if ($(".typprice").length == 0) {
+                init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".typprice").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".typprice").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 

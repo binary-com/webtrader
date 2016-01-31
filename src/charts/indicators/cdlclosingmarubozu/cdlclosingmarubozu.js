@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                         text: "OK",
                         click: function() {
 
-                            require(['charts/indicators/highcharts_custom/cdlclosingmarubozu'], function ( cdlclosingmarubozu ) {
-                                cdlclosingmarubozu.init();
-                                //Add CDLCLOSINGMARUBOZU for the main series
-                                $($(".cdlclosingmarubozu").data('refererChartID')).highcharts().series[0].addCDLCLOSINGMARUBOZU();
+                            var series = $($(".cdlclosingmarubozu").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlclosingmarubozu', {
+                                cdlIndicatorCode : 'cdlclosingmarubozu',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

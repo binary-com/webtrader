@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlpiercing'], function (cdlpiercing) {
-                                cdlpiercing.init();
-                                //Add CDLPIERCING for the main series
-                                $($(".cdlpiercing").data('refererChartID')).highcharts().series[0].addCDLPIERCING();
+                            var series = $($(".cdlpiercing").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlpiercing', {
+                                cdlIndicatorCode : 'cdlpiercing',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

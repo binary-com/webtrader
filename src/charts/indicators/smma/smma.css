@@ -14,3 +14,7 @@
 {
 	width: 50%;
 }
+
+.smma-ui-dialog, .smma.ui-dialog-content {
+    overflow: visible;
+}

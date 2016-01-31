@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlhikkake'], function (cdlhikkake) {
-                                cdlhikkake.init();
-                                //Add CDLHIKKAKE for the main series
-                                $($(".cdlhikkake").data('refererChartID')).highcharts().series[0].addCDLHIKKAKE();
+                            var series = $($(".cdlhikkake").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlhikkake', {
+                                cdlIndicatorCode : 'cdlhikkake',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

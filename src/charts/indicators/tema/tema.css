@@ -9,3 +9,7 @@
 .tema label {
     display: block;
 }
+
+.tema-ui-dialog, .tema.ui-dialog-content {
+    overflow: visible;
+}

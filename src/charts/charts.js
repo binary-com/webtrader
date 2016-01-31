@@ -2,8 +2,12 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator", "common/util", "highstock", "highcharts-exporting"],
-  function ( $,chartingRequestMap, liveapi, ohlc_handler,currentPrice ) {
+define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
+        "websockets/ohlc_handler","currentPriceIndicator",
+        "charts/indicators/highcharts_custom/indicators",
+        "highcharts-exporting", "common/util"
+        ],
+  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators ) {
 
     "use strict";
 
@@ -16,6 +20,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         });
 
     });
+
+    indicators.initHighchartIndicators(chartingRequestMap.barsTable);
 
     function destroy(options) {
         var containerIDWithHash = options.containerIDWithHash,
@@ -340,21 +346,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 for (var index = 0; index < chart.series.length; index++) {
                     //console.log('Instrument name : ' + chart.series[index].name);
                     var series = chart.series[index];
-                    if (series.options.isInstrument) {
-                        var data = series.options.data;
-                        series.setData([]);
-                        for (var i = 0; i < data.length; i++) {
-                            if (data[i].x && data[i].y) {
-                                data[i] = [data[i].x, data[i].y];
-                            }
-                        }
-                        series.update({
-                            compare: 'percent'
-                        });
-                        series.setData(data);
-                        series.options.isInstrument = true;
-                    }
-                    else if ($(series).data('onChartIndicator')) {
+                    if (series.options.isInstrument || series.options.onChartIndicator) {
                         series.update({
                             compare: 'percent'
                         });

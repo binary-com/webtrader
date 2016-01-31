@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlladderbottom'], function (cdlladderbottom) {
-                                cdlladderbottom.init();
-                                //Add CDLLADDERBOTTOM for the main series
-                                $($(".cdlladderbottom").data('refererChartID')).highcharts().series[0].addCDLLADDERBOTTOM();
+                            var series = $($(".cdlladderbottom").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlladderbottom', {
+                                cdlIndicatorCode : 'cdlladderbottom',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

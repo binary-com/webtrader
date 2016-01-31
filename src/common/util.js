@@ -68,7 +68,7 @@ function convertToTimeperiodObject(timePeriodInStringFormat) {
 }
 
 function isDataTypeClosePriceOnly( type ) {
-    return !(type == 'candlestick' || type == 'ohlc')
+    return !(type === 'candlestick' || type === 'ohlc')
 }
 
 function isSmallView() {
@@ -193,4 +193,24 @@ function sortAlphaNum(property) {
             return aA > bA ? 1 : -1;
         }
     };
+}
+
+/**
+ * Reduces decimal places
+ * @param value
+ * @param precision
+ * @returns Number
+ */
+function toFixed(value, precision) {
+    if ($.isNumeric(value)) {
+        value = Math.round(value * Math.pow(10, precision)) / Math.pow(10, precision);
+    }
+    return value;
+}
+
+function uuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
 }

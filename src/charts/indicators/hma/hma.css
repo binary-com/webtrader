@@ -14,3 +14,7 @@
 {
 	width: 50%;
 }
+
+.hma-ui-dialog, .hma.ui-dialog-content {
+    overflow: visible;
+}

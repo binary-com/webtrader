@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlkickingbylength'], function (cdlkickingbylength) {
-                                cdlkickingbylength.init();
-                                //Add CDLKICKINGBYLENGTH for the main series
-                                $($(".cdlkickingbylength").data('refererChartID')).highcharts().series[0].addCDLKICKINGBYLENGTH();
+                            var series = $($(".cdlkickingbylength").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlkickingbylength', {
+                                cdlIndicatorCode : 'cdlkickingbylength',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

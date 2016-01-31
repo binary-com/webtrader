@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlunique3river'], function (cdlunique3river) {
-                                cdlunique3river.init();
-                                //Add CDLUNIQUE3RIVER for the main series
-                                $($(".cdlunique3river").data('refererChartID')).highcharts().series[0].addCDLUNIQUE3RIVER();
+                            var series = $($(".cdlunique3river").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlunique3river', {
+                                cdlIndicatorCode : 'cdlunique3river',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

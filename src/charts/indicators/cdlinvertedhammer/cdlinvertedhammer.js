@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlinvertedhammer'], function (cdlinvertedhammer) {
-                                cdlinvertedhammer.init();
-                                //Add CDLINVERTEDHAMMER for the main series
-                                $($(".cdlinvertedhammer").data('refererChartID')).highcharts().series[0].addCDLINVERTEDHAMMER();
+                            var series = $($(".cdlinvertedhammer").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlinvertedhammer', {
+                                cdlIndicatorCode : 'cdlinvertedhammer',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

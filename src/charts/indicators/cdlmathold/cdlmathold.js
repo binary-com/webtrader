@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlmathold'], function (cdlmathold) {
-                                cdlmathold.init();
-                                //Add CDLMATHOLD for the main series
-                                $($(".cdlmathold").data('refererChartID')).highcharts().series[0].addCDLMATHOLD();
+                            var series = $($(".cdlmathold").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlmathold', {
+                                cdlIndicatorCode : 'cdlmathold',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

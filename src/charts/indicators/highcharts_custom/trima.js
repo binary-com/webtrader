@@ -1,211 +1,70 @@
 /**
- * Created by arnab on 3/22/15.
+ * Created by Arnab Karmakar on 1/15/16.
  */
-define(['indicator_base', 'highstock'], function (indicatorBase) {
+TRIMA = function(data, options, indicators) {
 
-    var trimaOptionsMap = {}, trimaSeriesMap = {};
-    
-    return {
-        init: function() {
+    IndicatorBase.call(this, data, options, indicators);
 
-            (function(H,$,indicatorBase) {
-
-                //Make sure that HighStocks have been loaded
-                //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addTRIMA) return;
-
-                H.Series.prototype.addTRIMA = function ( trimaOptions ) {
-
-                    //Check for undefined
-                    //Merge the options
-                    var seriesID = this.options.id;
-                    trimaOptions = $.extend({
-                        period : 21,
-                        stroke : 'red',
-                        strokeWidth : 2,
-                        dashStyle : 'line',
-                        levels : [],
-                        appliedTo: indicatorBase.CLOSE,
-                        parentSeriesID : seriesID
-                    }, trimaOptions);
-
-                    var uniqueID = '_' + new Date().getTime();
-
-                    //If this series has data, add ATR series to the chart
-                    var data = this.options.data || [];
-                    //If period is higher than data.length, we cannot calculate TRIMA. Return from here
-                    if (trimaOptions.period >= data.length) return;
-
-                    if (data && data.length > 0)
-                    {
-
-                        //Calculate TRIMA data
-                        /*
-
-                             MA = ( SMA ( SMAm, Nm ) ) / Nm
-
-                             Where:
-
-                             N = Time periods + 1
-                             Nm = Round ( N / 2 )
-                             SMAm = ( Sum ( Price, Nm ) ) / Nm
-                         *
-                         *  Do not fill any value in trimaData from 0 index to options.period-1 index
-
-                         */
-                       
-                        var trimaData = [];
-                        for (var index = 0; index < data.length; index++) {
-                            var maOptions = {
-                                data: data,
-                                maData: trimaData,
-                                index: index,
-                                period: trimaOptions.period,
-                                type: this.options.type,
-                                appliedTo: trimaOptions.appliedTo,
-                            };
-                            var maValue = indicatorBase.calculateTRIMAValue(maOptions);
-
-                            trimaData.push([(data[index].x || data[index][0]), indicatorBase.toFixed(maValue, 4)]);
-                        }
-
-
-                        var chart = this.chart;
-
-                        trimaOptionsMap[uniqueID] = trimaOptions;
-
-                        var series = this;
-                        trimaSeriesMap[uniqueID] = chart.addSeries({
-                            id: uniqueID,
-                            name: 'TRIMA (' + trimaOptions.period  + ', ' + indicatorBase.appliedPriceString(trimaOptions.appliedTo) + ')',
-                            data: trimaData,
-                            type: 'line',
-                            dataGrouping: series.options.dataGrouping,
-                            //yAxis: 'trima'+ uniqueID,
-                            opposite: series.options.opposite,
-                            color: trimaOptions.stroke,
-                            lineWidth: trimaOptions.strokeWidth,
-                            dashStyle: trimaOptions.dashStyle,
-                            compare: series.options.compare
-                        }, false, false);
-
-                        //This is a on chart indicator
-                        $(trimaSeriesMap[uniqueID]).data({
-                            onChartIndicator: true,
-                            indicatorID: 'trima',
-                            isIndicator: true,
-                            parentSeriesID: trimaOptions.parentSeriesID,
-                            period: trimaOptions.period
-                        });
-
-                        //We are update everything in one shot
-                        chart.redraw();
-
-                    }
-
-                    return uniqueID;
-
-                };
-
-                H.Series.prototype.removeTRIMA = function (uniqueID) {
-                    var chart = this.chart;
-                    trimaOptionsMap[uniqueID] = null;
-                    chart.get(uniqueID).remove();
-                    trimaSeriesMap[uniqueID] = null;
-                };
-
-                H.Series.prototype.preRemovalCheckTRIMA = function(uniqueID) {
-                    return {
-                        isMainIndicator : true,
-                        period : !trimaOptionsMap[uniqueID] ? undefined : trimaOptionsMap[uniqueID].period,
-                        appliedTo : !trimaOptionsMap[uniqueID] ? undefined : trimaOptionsMap[uniqueID].appliedTo,
-                        isValidUniqueID : trimaOptionsMap[uniqueID] != null
-                    };
-                };
-
-                /*
-                 *  Wrap HC's Series.addPoint
-                 */
-                H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
-
-                    proceed.call(this, options, redraw, shift, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(trimaOptionsMap, this.options.id)) {
-                        updateTRIMASeries.call(this, options[0]);
-                    }
-
-                });
-
-                /*
-                 *  Wrap HC's Point.update
-                 */
-                H.wrap(H.Point.prototype, 'update', function(proceed, options, redraw, animation) {
-
-                    proceed.call(this, options, redraw, animation);
-                    if (indicatorBase.checkCurrentSeriesHasIndicator(trimaOptionsMap, this.series.options.id)) {
-                        updateTRIMASeries.call(this.series, this.x, true);
-                    }
-
-                });
-
-                /**
-                 * This function should be called in the context of series object
-                 * @param time - The data update values
-                 */
-                function updateTRIMASeries(time, isPointUpdate) {
-                    //if this is TRIMA series, ignore
-                    var series = this;
-                    var chart = series.chart;
-
-                    //Add a new TRIMA data point
-                    for (var key in trimaSeriesMap) {
-                        if (trimaSeriesMap[key] && trimaSeriesMap[key].options && trimaSeriesMap[key].options.data && trimaSeriesMap[key].options.data.length > 0
-                            && trimaOptionsMap[key].parentSeriesID == series.options.id
-                            && trimaSeriesMap[key].chart === chart
-                        ) {
-                            //This is TRIMA series. Add one more TRIMA point
-                            //Calculate TRIMA data
-                            /*
-                               Formula ->
-                                 MA = ( SMA ( SMAm, Nm ) ) / Nm
-
-                                 Where:
-
-                                 N = Time periods + 1
-                                 Nm = Round ( N / 2 )
-                                 SMAm = ( Sum ( Price, Nm ) ) / Nm
-                             */
-                            //Find the data point
-                            var data = series.options.data;
-                            var trimaData = trimaSeriesMap[key].options.data;
-                            var trimaOptions = trimaOptionsMap[key];
-                            var dataPointIndex = indicatorBase.findIndexInDataForTime(data, time);
-                            if (dataPointIndex >= 1) {
-                                var maOptions = {
-                                    data: data,
-                                    maData: trimaData,
-                                    index: dataPointIndex,
-                                    period: trimaOptions.period,
-                                    type: this.options.type,
-                                    appliedTo: trimaOptions.appliedTo,
-                                };
-                                var maValue = indicatorBase.calculateTRIMAValue(maOptions);
-
-                                if (isPointUpdate)
-                                {
-                                    trimaSeriesMap[key].data[dataPointIndex].update({ y: indicatorBase.toFixed(maValue, 4) });
-                                }
-                                else
-                                {
-                                    trimaSeriesMap[key].addPoint([(data[dataPointIndex].x || data[dataPointIndex][0]), indicatorBase.toFixed(maValue, 4)], true, true, false);
-                                }
-                            }
-                        }
-                    }
-                }
-
-            })(Highcharts, jQuery, indicatorBase);
-
+    /*
+     MA = ( SMA ( SMAm, Nm ) ) / Nm
+     Where:
+     N = Time periods + 1
+     Nm = Round ( N / 2 )
+     SMAm = ( Sum ( Price, Nm ) ) / Nm
+     *
+     *  Do not fill any value in trimaData from 0 index to options.period-1 index
+     */
+    var Nm = Math.round((this.options.period + 1) / 2) | 0;
+    for (var index = 0; index < data.length; index++) {
+        if (index === (Nm - 1)) {
+            var sum = 0.0;
+            for (var i = Nm - 1; i >= 0; i--) {
+                sum += indicators.getIndicatorOrPriceValue(data[index - i], this.options.appliedTo);
+            }
+            this.indicatorData.push({ time : data[index].time, value : toFixed(sum / Nm, 4) });
+        } else if(index > (Nm - 1)) {
+            var preTrima = this.indicatorData[index - 1].value;
+            var price = indicators.getIndicatorOrPriceValue(data[index], this.options.appliedTo);
+            var trima = (preTrima * (Nm - 1) + price) / Nm;
+            this.indicatorData.push({ time : data[index].time, value : toFixed(trima, 4) });
+        } else {
+            this.indicatorData.push({ time : data[index].time, value : 0.0 });
         }
     }
 
-});
+};
+
+TRIMA.prototype = Object.create(IndicatorBase.prototype);
+TRIMA.prototype.constructor = TRIMA;
+
+TRIMA.prototype.addPoint = function(data) {
+    var Nm = Math.round((this.options.period + 1) / 2) | 0;
+    var index = this.indicatorData.length - 1;
+    var preTrima = this.indicatorData[index].value;
+    var price = this.indicators.getIndicatorOrPriceValue(data, this.options.appliedTo);
+    var trima = (preTrima * (Nm - 1) + price) / Nm;
+    trima = toFixed(trima, 4);
+    this.indicatorData.push({ time : data.time, value : trima });
+    return [{
+        id : this.uniqueID,
+        value : trima
+    }];
+};
+
+TRIMA.prototype.update = function(data) {
+    var Nm = Math.round((this.options.period + 1) / 2) | 0;
+    var index = this.indicatorData.length - 1;
+    var preTrima = this.indicatorData[index - 1].value;
+    var price = this.indicators.getIndicatorOrPriceValue(data, this.options.appliedTo);
+    var trima = (preTrima * (Nm - 1) + price) / Nm;
+    trima = toFixed(trima, 4);
+    this.indicatorData[index].value = trima;
+    return [{
+        id : this.uniqueID,
+        value : trima
+    }];
+};
+
+TRIMA.prototype.toString = function() {
+    return 'TRIMA (' + this.options.period  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
+};

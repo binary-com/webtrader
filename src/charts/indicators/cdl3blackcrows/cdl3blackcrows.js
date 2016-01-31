@@ -30,13 +30,11 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "OK",
                         click: function() {
-
-                            require(['charts/indicators/highcharts_custom/cdl3blackcrows'], function ( cdl3blackcrows ) {
-                                cdl3blackcrows.init();
-                                //Add CDL3BLACKCROWS for the main series
-                                $($(".cdl3blackcrows").data('refererChartID')).highcharts().series[0].addCDL3BLACKCROWS();
+                            var series = $($(".cdl3blackcrows").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdl3blackcrows', {
+                                cdlIndicatorCode : 'cdl3blackcrows',
+                                onSeriesID : series.options.id
                             });
-
                             closeDialog.call($html);
                         }
                     },

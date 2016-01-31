@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/22/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -12,6 +12,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
         require(['css!charts/indicators/hma/hma.css']);
 
         require(['text!charts/indicators/hma/hma.html'], function ($html) {
+
+            var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
 
@@ -27,16 +29,28 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         $(this).css({
                             background: '#' + color.formatted
                         }).val('');
-                        $(this).data("color", '#' + color.formatted);
+                        defaultStrokeColor = '#' + color.formatted;
                     },
                     ok: function (event, color) {
                         $(this).css({
                             background: '#' + color.formatted
                         }).val('');
-                        $(this).data("color", '#' + color.formatted);
+                        defaultStrokeColor = '#' + color.formatted;
                     }
                 });
             });
+
+            var selectedDashStyle = "Solid";
+            $('#hma_dash_style').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#hma_dash_style .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#hma_dash_style .dd-option-image').css('max-width', '115px');
 
             $html.dialog({
                 autoOpen: false,
@@ -46,6 +60,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 my: "center",
                 at: "center",
                 of: window,
+                dialogClass: 'hma-ui-dialog',
                 buttons: [
 					{
 					    text: "OK",
@@ -63,20 +78,17 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					            return;
 					        }
 
-					        require(['charts/indicators/highcharts_custom/hma'], function (hma) {
-					            hma.init();
-					            var options = {
-					                period: parseInt($("#hma_period").val()),
-					                maType: $("#hma_ma_type").val(),
-					                strokeColor: $("#hma_stroke_color").css("background-color"),
-					                strokeWidth: parseInt($("#hma_stroke_width").val()),
-					                dashStyle: $("#hma_dash_style").val(),
-					                appliedTo: parseInt($html.find("#hma_appliedTo").val())
-					            }
+                            var options = {
+                                period: parseInt($("#hma_period").val()),
+                                maType: $("#hma_ma_type").val(),
+                                stroke : defaultStrokeColor,
+                                strokeWidth: parseInt($("#hma_stroke_width").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#hma_appliedTo").val())
+                            }
 
-					            //Add HMA to the main series
-					            $($(".hma").data('refererChartID')).highcharts().series[0].addHMA(options);
-					        });
+                            //Add HMA to the main series
+                            $($(".hma").data('refererChartID')).highcharts().series[0].addIndicator('hma', options);
 
 					        closeDialog.call($html);
 					    }

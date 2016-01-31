@@ -9,3 +9,7 @@
 .ema label {
     display: block;
 }
+
+.ema-ui-dialog, .ema.ui-dialog-content {
+    overflow: visible;
+}

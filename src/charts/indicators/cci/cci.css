@@ -14,3 +14,7 @@
 {
 	width: 50%;
 }
+
+.cci-ui-dialog, .cci.ui-dialog-content {
+    overflow: visible;
+}
