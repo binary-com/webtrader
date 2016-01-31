@@ -5,9 +5,21 @@
 WILLR = function (data, options, indicators) {
     IndicatorBase.call(this, data, options, indicators);
     this.priceData = [];
+    this.calculateWILLRValue = function (data, index) {
+        /* WILLR :
+         %R = -100 * ( ( Highest High - Close) / (Highest High - Lowest Low ) )*/
+        var highestHigh = data[index].high;
+        var lowestLow = data[index].close;
+        for (var i = 0; i < this.options.period; i++) {
+            highestHigh = Math.max(highestHigh, data[index - i].high);
+            lowestLow = Math.min(lowestLow, data[index - i].low);
+        }
+        var willr = (-100 * (highestHigh - data[index].close)) / (highestHigh - lowestLow);
+        return toFixed(willr, 4);;
+    };
     for (var index = 0; index < data.length; index++) {
         if (index >= this.options.period) {
-            var willr = CalculateWILLRValue.call(this, data, index);
+            var willr = this.calculateWILLRValue(data, index);
             this.indicatorData.push({ time: data[index].time, value: willr });
         } else {
             this.indicatorData.push({ time: data[index].time, value: 0.0 });
@@ -16,26 +28,13 @@ WILLR = function (data, options, indicators) {
     }
 };
 
-CalculateWILLRValue = function (data, index) {
-    /* WILLR :
-    %R = -100 * ( ( Highest High - Close) / (Highest High - Lowest Low ) )*/
-    var highestHigh = data[index].high;
-    var lowestLow = data[index].close;
-    for (var i = 0; i < this.options.period; i++) {
-        highestHigh = Math.max(highestHigh, data[index - i].high);
-        lowestLow = Math.min(lowestLow, data[index - i].low);
-    }
-    var willr = (-100 * (highestHigh - data[index].close)) / (highestHigh - lowestLow);
-    return toFixed(willr, 4);;
-};
-
 WILLR.prototype = Object.create(IndicatorBase.prototype);
 WILLR.prototype.constructor = WILLR;
 
 WILLR.prototype.addPoint = function (data) {
     console.log('Adding WILLR data point : ', data);
     this.priceData.push(data);
-    var willr = CalculateWILLRValue.call(this, this.priceData, this.priceData.length - 1);
+    var willr = this.calculateWILLRValue(this.priceData, this.priceData.length - 1);
     this.indicatorData.push({ time: data.time, value: willr });
     return [{
         id: this.uniqueID,
@@ -50,7 +49,7 @@ WILLR.prototype.update = function (data) {
     this.priceData[index].high = data.high;
     this.priceData[index].low = data.low;
     this.priceData[index].close = data.close;
-    var willr = CalculateWILLRValue.call(this, this.priceData, index);
+    var willr = this.calculateWILLRValue(this.priceData, index);
     this.indicatorData[index].value = willr;
     return [{
         id: this.uniqueID,

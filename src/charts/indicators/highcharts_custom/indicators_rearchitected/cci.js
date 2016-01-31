@@ -8,6 +8,29 @@ CCI = function (data, options, indicators) {
     IndicatorBase.call(this, data, options, indicators);
     this.tpData = [];
     this.priceData = [];
+    this.CalculateCCIValue = function (data, index) {
+        /* Calculate CCI
+         CCI = ( M - A ) / ( 0.015 * D )
+         Where:
+         M = ( H + L + C ) / 3
+         H = Highest price for the period
+         L = Lowest price for the period
+         C = Closing price for the period
+         A = n period moving average of M
+         D = mean deviation of the absolute value of the difference between the mean price and the moving average of mean prices, M - A
+         */
+
+        //*mean deviation of the absolute value of the difference between the mean price and  the moving average of mean prices, M - A
+        var sum = 0;
+        for (var i = 0; i < this.options.period - 1; i++) {
+            sum += Math.abs(this.tpMa.indicatorData[index].value - this.tpData[index - i].close);
+        }
+        var mDevValue = sum / this.options.period;
+        //* Calculate CCI
+        //* CCI = ( M - A ) / ( 0.015 * D )
+        var cciValue = toFixed(((this.tpData[index].close - this.tpMa.indicatorData[index].value) / (.015 * mDevValue)), 4);
+        return cciValue;
+    };
 
     //*Calculate Mean Deviation
     //*the moving average of mean prices
@@ -20,7 +43,7 @@ CCI = function (data, options, indicators) {
 
     for (var index = 0; index < data.length; index++) {
         if (index >= (this.options.period - 1)) {
-            var cci = CalculateCCIValue.call(this, data, index, false);
+            var cci = this.CalculateCCIValue(data, index, false);
             this.indicatorData.push({ time: data[index].time, value: cci });
         } else {
             this.indicatorData.push({ time: data[index].time, value: 0.0 });
@@ -29,29 +52,7 @@ CCI = function (data, options, indicators) {
     }
 };
 
-CalculateCCIValue = function (data, index) {
-    /* Calculate CCI 
-    CCI = ( M - A ) / ( 0.015 * D )
-    Where:
-    M = ( H + L + C ) / 3
-    H = Highest price for the period
-    L = Lowest price for the period
-    C = Closing price for the period
-    A = n period moving average of M
-    D = mean deviation of the absolute value of the difference between the mean price and the moving average of mean prices, M - A
-    */
 
-    //*mean deviation of the absolute value of the difference between the mean price and  the moving average of mean prices, M - A
-    var sum = 0;
-    for (var i = 0; i < this.options.period - 1; i++) {
-        sum += Math.abs(this.tpMa.indicatorData[index].value - this.tpData[index - i].close);
-    }
-    var mDevValue = sum / this.options.period;
-    //* Calculate CCI 
-    //* CCI = ( M - A ) / ( 0.015 * D )
-    var cciValue = toFixed(((this.tpData[index].close - this.tpMa.indicatorData[index].value) / (.015 * mDevValue)), 4);
-    return cciValue;
-};
 
 
 CCI.prototype = Object.create(IndicatorBase.prototype);
@@ -64,7 +65,7 @@ CCI.prototype.addPoint = function (data) {
     var tpValue = (this.priceData[index].high + this.priceData[index].low + this.priceData[index].close) / 3;
     this.tpData.push({ time: data.time, close: tpValue });
     this.tpMa.addPoint(this.tpData[index]);
-    var cci = CalculateCCIValue.call(this, this.priceData, this.priceData.length - 1 ,false);
+    var cci = this.CalculateCCIValue(this.priceData, this.priceData.length - 1 ,false);
     this.indicatorData.push({ time: data.time, value: cci });
     return [{
         id: this.uniqueID,
@@ -82,7 +83,7 @@ CCI.prototype.update = function (data) {
     var tpValue = (this.priceData[index].high + this.priceData[index].low + this.priceData[index].close) / 3;
     this.tpData[index].close = tpValue;
     this.tpMa.update(this.tpData[index]);
-    var cci = CalculateCCIValue.call(this, this.priceData, index, false);
+    var cci = this.CalculateCCIValue(this.priceData, index, false);
     this.indicatorData[index].value = cci;
     return [{
         id: this.uniqueID,
