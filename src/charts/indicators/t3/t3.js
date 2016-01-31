@@ -76,19 +76,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					            return;
 					        }
 
-					        require(['charts/indicators/highcharts_custom/t3'], function (t3) {
-					            t3.init();
-					            var options = {
-					                period: parseInt($("#t3_period").val()),
-					                vFactor: parseFloat($("#t3_volume_factor").val()),
-					                stroke: $("#t3_stroke").css("background-color"),
-					                strokeWidth: parseInt($("#t3_stroke_width").val()),
-					                dashStyle: selectedDashStyle,
-					                appliedTo: parseInt($("#t3_applied_to").val())
-					            }
-					            //Add Bollinger for the main series
-					            $($(".t3").data('refererChartID')).highcharts().series[0].addT3(options);
-					        });
+					        var options = {
+					            period: parseInt($("#t3_period").val()),
+					            vFactor: parseFloat($("#t3_volume_factor").val()),
+					            stroke: $("#t3_stroke").css("background-color"),
+					            strokeWidth: parseInt($("#t3_stroke_width").val()),
+					            dashStyle: selectedDashStyle,
+					            appliedTo: parseInt($("#t3_applied_to").val())
+					        }
+					        //Add Bollinger for the main series
+					        $($(".t3").data('refererChartID')).highcharts().series[0].addIndicator('t3', options);
 
 					        closeDialog.call($html);
 					    }

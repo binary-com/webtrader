@@ -63,17 +63,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					{
 					    text: "OK",
 					    click: function () {
-					       
-					        require(['charts/indicators/highcharts_custom/wclprice'], function (wclprice) {
-					            wclprice.init();
-					            var options = {
-					                strokeColor: $("#wclprice_line_stroke").css("background-color"),
-					                strokeWidth: parseInt($("#wclprice_stroke_width").val()),
-					                dashStyle: selectedDashStyle
-					            }
-					            //Add WCLPRICE to the main series
-					            $($(".wclprice").data('refererChartID')).highcharts().series[0].addWCLPRICE(options);
-					        });
+					        var options = {
+					            stroke: $("#wclprice_line_stroke").css("background-color"),
+					            strokeWidth: parseInt($("#wclprice_stroke_width").val()),
+					            dashStyle: selectedDashStyle
+					        }
+					        //Add WCLPRICE to the main series
+					        $($(".wclprice").data('refererChartID')).highcharts().series[0].addIndicator('wclprice', options);
 
 					        closeDialog.call($html);
 					    }

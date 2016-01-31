@@ -67,19 +67,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     {
                         text: "OK",
                         click: function () {
-                            require(['charts/indicators/highcharts_custom/mama'], function (mama) {
-                                mama.init();
-                                var options = {
-                                    fastLimit: parseFloat($html.find("#mama_fast_limit").val()),
-                                    slowLimt: parseFloat($html.find("#mama_slow_limit").val()),
-                                    stroke: defaultStrokeColor,
-                                    strokeWidth: parseInt($html.find("#mama_strokeWidth").val()),
-                                    dashStyle: selectedDashStyle,
-                                    appliedTo: parseInt($html.find("#mama_appliedTo").val())
-                                }
-                                //Add MAMA for the main series
-                                $($(".mama").data('refererChartID')).highcharts().series[0].addMAMA(options);
-                            });
+                            var options = {
+                                fastLimit: parseFloat($html.find("#mama_fast_limit").val()),
+                                slowLimt: parseFloat($html.find("#mama_slow_limit").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#mama_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#mama_appliedTo").val())
+                            }
+                            //Add MAMA for the main series
+                            $($(".mama").data('refererChartID')).highcharts().series[0].addIndicator('mama', options);
 
                             closeDialog.call($html);
                         }
