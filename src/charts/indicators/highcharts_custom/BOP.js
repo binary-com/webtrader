@@ -57,7 +57,7 @@ BOP.prototype.update = function(data) {
     var highPrice = data.high;
     var lowPrice = data.low;
     var bopValue = (closePrice - openPrice) / (highPrice - lowPrice);
-    this.indicatorData[this.indicatorData.length - 1].value = atr;
+    this.indicatorData[this.indicatorData.length - 1].value = bopValue;
     return [{
         id : this.uniqueID,
         value : bopValue
