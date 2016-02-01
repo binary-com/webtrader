@@ -152,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#natr_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#natr_appliedTo").val()),
                                 levels: levels
                             };
                             //Add NATR for the main series

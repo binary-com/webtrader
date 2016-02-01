@@ -152,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#sum_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#sum_appliedTo").val()),
                                 levels: levels
                             };
                             //Add SUM for the main series

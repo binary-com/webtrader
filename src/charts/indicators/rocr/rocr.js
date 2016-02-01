@@ -152,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#rocr_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#rocr_appliedTo").val()),
                                 levels: levels
                             };
                             //Add ROCR for the main series

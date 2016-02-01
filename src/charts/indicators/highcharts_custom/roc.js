@@ -12,7 +12,9 @@ ROC = function (data, options, indicators) {
     */
     for (var index = 0; index < data.length; index++) {
         if (index >= (this.options.period)) {
-            var roc = toFixed((((data[index].close - data[index - this.options.period].close) / data[index - this.options.period].close) * 100), 4);
+            var price = this.indicators.getIndicatorOrPriceValue(data[index], this.options.appliedTo);
+            var nPrePrice = this.indicators.getIndicatorOrPriceValue(data[index - this.options.period], this.options.appliedTo);
+            var roc = toFixed((((price - nPrePrice) / nPrePrice) * 100), 4);
             this.indicatorData.push({ time: data[index].time, value: roc });
         } else {
             this.indicatorData.push({ time: data[index].time, value: 0.0 });
@@ -28,7 +30,9 @@ ROC.prototype.addPoint = function (data) {
     console.log('Adding ROC data point : ', data);
     this.priceData.push(data);
     var index = this.priceData.length - 1;
-    var roc = toFixed((((this.priceData[index].close - this.priceData[index - this.options.period].close) / this.priceData[index - this.options.period].close) * 100), 4);
+    var price = this.indicators.getIndicatorOrPriceValue(this.priceData[index], this.options.appliedTo);
+    var nPrePrice = this.indicators.getIndicatorOrPriceValue(this.priceData[index - this.options.period], this.options.appliedTo);
+    var roc = toFixed((((price - nPrePrice) / nPrePrice) * 100), 4);
     this.indicatorData.push({ time: data.time, value: roc });
     return [{
         id: this.uniqueID,
@@ -43,7 +47,9 @@ ROC.prototype.update = function (data) {
     this.priceData[index].high = data.high;
     this.priceData[index].low = data.low;
     this.priceData[index].close = data.close;
-    var roc = toFixed((((this.priceData[index].close - this.priceData[index - this.options.period].close) / this.priceData[index - this.options.period].close) * 100), 4);
+    var price = this.indicators.getIndicatorOrPriceValue(this.priceData[index], this.options.appliedTo);
+    var nPrePrice = this.indicators.getIndicatorOrPriceValue(this.priceData[index - this.options.period], this.options.appliedTo);
+    var roc = toFixed((((price - nPrePrice) / nPrePrice) * 100), 4);
     this.indicatorData[index].value = roc;
     return [{
         id: this.uniqueID,

@@ -153,6 +153,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#willr_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#willr_appliedTo").val()),
                                 levels: levels
                             };
                             //Add WILLR for the main series

@@ -152,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#roc_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#roc_appliedTo").val()),
                                 levels: levels
                             };
                             //Add ROC for the main series

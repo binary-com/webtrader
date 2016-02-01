@@ -152,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                     stroke: defaultStrokeColor,
                                     strokeWidth: parseInt($html.find("#rsi_strokeWidth").val()),
                                     dashStyle: selectedDashStyle,
+                                    appliedTo: parseInt($html.find("#rsi_appliedTo").val()),
                                     levels: levels
                                 };
                                 //Add RSI for the main series
