@@ -110,7 +110,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
 
     return [{
             axisConf: { // Secondary yAxis
-                id: indicatorMetadata.id + '-' + this.uniqueID,
+                id: indicatorMetadata.id + '-' + this.uniqueID[0],
                 title: {
                     text: this.toString(),
                     align: 'high',
@@ -129,7 +129,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  name: 'Histogram - ' + this.toString(),
                  data: histogramData,
                  type: 'column',
-                 yAxis: indicatorMetadata.id + '-' + this.uniqueID,
+                 yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
                  color: this.options.stroke,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
@@ -142,7 +142,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  name: 'MACD - ' + this.toString(),
                  data: macdData,
                  type: 'line',
-                 yAxis: indicatorMetadata.id + '-' + this.uniqueID,
+                 yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
                  color: this.options.stroke,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
@@ -155,7 +155,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  name: 'SIGNAL - ' + this.toString(),
                  data: signaldata,
                  type: 'line',
-                 yAxis: indicatorMetadata.id + '-' + this.uniqueID,
+                 yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
                  color: this.options.stroke,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
