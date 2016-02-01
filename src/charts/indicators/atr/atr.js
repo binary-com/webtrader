@@ -155,6 +155,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#atr_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#atr_appliedTo").val()),
                                 levels: levels
                             };
                             //Add ATR for the main series

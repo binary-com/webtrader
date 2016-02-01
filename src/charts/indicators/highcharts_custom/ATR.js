@@ -34,10 +34,11 @@ ATR = function(data, options, indicators) {
         }
         else
         {
+            var price = indicators.getIndicatorOrPriceValue(data[index - 1], this.options.appliedTo);
             this.tr.push({
                 time: data[index].time,
-                value: Math.max(Math.max(data[index].high - data[index].low, Math.abs(data[index].high - data[index - 1].close))
-                    , data[index].low - data[index - 1].close
+                value: Math.max(Math.max(data[index].high - data[index].low, Math.abs(data[index].high - price))
+                    , data[index].low - price
                 )
             });
         }
@@ -77,8 +78,8 @@ ATR.prototype.addPoint = function (data) {
     var index = this.priceData.length - 1;
     /*tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
     atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n*/
-    var preClose = this.priceData[index - 1].close;
-    var trValue = Math.max(Math.max(data.high - data.low, Math.abs(data.high - preClose)), (data.low - preClose));
+    var prePrice = this.indicators.getIndicatorOrPriceValue(this.priceData[index - 1], this.options.appliedTo);
+    var trValue = Math.max(Math.max(data.high - data.low, Math.abs(data.high - prePrice)), (data.low - prePrice));
     var atrValue = toFixed(((this.indicatorData[index - 1].value * (this.options.period - 1) + trValue) / this.options.period), 4);
     this.indicatorData.push({
         time : data.time,
@@ -107,8 +108,8 @@ ATR.prototype.update = function (data) {
     this.priceData[index].close = data.close;
     /*tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
     atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n*/
-    var preClose = this.priceData[index - 1].close;
-    var trValue = Math.max(Math.max(data.high - data.low, Math.abs(data.high - preClose)), (data.low - preClose));
+    var prePrice = this.indicators.getIndicatorOrPriceValue(this.priceData[index - 1], this.options.appliedTo);
+    var trValue = Math.max(Math.max(data.high - data.low, Math.abs(data.high - prePrice)), (data.low - prePrice));
     var atrValue = toFixed(((this.indicatorData[index - 1].value * (this.options.period - 1) + trValue) / this.options.period), 4);
     this.indicatorData[this.indicatorData.length - 1].value = atrValue;
     this.tr[this.indicatorData.length - 1].value = trValue;
