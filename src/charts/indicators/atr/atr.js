@@ -28,7 +28,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#atr_stroke").colorpicker({
@@ -156,6 +155,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#atr_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#atr_appliedTo").val()),
                                 levels: levels
                             };
                             //Add ATR for the main series
@@ -173,6 +173,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if (typeof _callback == "function")
             {

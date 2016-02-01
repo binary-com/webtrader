@@ -16,7 +16,8 @@ BOP = function(data, options, indicators) {
         var openPrice = data[index].open;
         var highPrice = data[index].high;
         var lowPrice = data[index].low;
-        var bopValue = (closePrice - openPrice) / (highPrice - lowPrice);
+        var bopValue = 0;
+        if ((highPrice - lowPrice) !== 0) { bopValue = (closePrice - openPrice) / (highPrice - lowPrice); };
         this.indicatorData.push({
             time: data[index].time,
             value: toFixed(bopValue, 4)
@@ -36,7 +37,8 @@ BOP.prototype.addPoint = function(data) {
     var openPrice = data.open;
     var highPrice = data.high;
     var lowPrice = data.low;
-    var bopValue = (closePrice - openPrice) / (highPrice - lowPrice);
+    var bopValue = 0;
+    if ((highPrice - lowPrice) !== 0) { bopValue = (closePrice - openPrice) / (highPrice - lowPrice) };
     this.indicatorData.push({
         time : data.time,
         value : bopValue
@@ -56,8 +58,9 @@ BOP.prototype.update = function(data) {
     var openPrice = data.open;
     var highPrice = data.high;
     var lowPrice = data.low;
-    var bopValue = (closePrice - openPrice) / (highPrice - lowPrice);
-    this.indicatorData[this.indicatorData.length - 1].value = atr;
+    var bopValue = 0;
+    if ((highPrice - lowPrice) !== 0) { bopValue = (closePrice - openPrice) / (highPrice - lowPrice) };
+    this.indicatorData[this.indicatorData.length - 1].value = bopValue;
     return [{
         id : this.uniqueID,
         value : bopValue

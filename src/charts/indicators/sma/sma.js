@@ -20,7 +20,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#sma_stroke").colorpicker({
@@ -100,6 +99,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if (typeof _callback == "function")
             {

@@ -16,8 +16,8 @@ RSI = function (data, options, indicators) {
         var avgGain = 0, avgLoss = 0;
         //Calculate RS - start
         for (var i = 0 ; i < this.options.period; i++) {
-            var price1 = data[index - (i + 1)].close;
-            var price2 = data[index - i].close;
+            var price1 = this.indicators.getIndicatorOrPriceValue(data[index - (i + 1)], this.options.appliedTo);
+            var price2 = this.indicators.getIndicatorOrPriceValue(data[index - i], this.options.appliedTo);
             if (price2 > price1) avgGain += price2 - price1;
             if (price2 < price1) avgLoss += price1 - price2;
         }

@@ -549,5 +549,12 @@
     "id": "stddev",
     "long_display_name": "Standard Deviation",
     "short_display_name": "STDDEV"
+  },
+
+   "ppo": {
+    "id": "ppo",
+    "long_display_name": "Percentage Price Oscillator",
+    "short_display_name": "PPO"
   }
+  
 }

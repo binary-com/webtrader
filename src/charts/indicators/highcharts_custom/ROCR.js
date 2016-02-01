@@ -12,9 +12,9 @@ ROCR = function (data, options, indicators) {
     */
     for (var index = 0; index < data.length; index++) {
         if (index >= (this.options.period)) {
-            var close = data[index].close;
-            var closeNPeriodAgo = data[index - this.options.period].close;
-            var rocr = toFixed((close / closeNPeriodAgo), 4);
+            var price = this.indicators.getIndicatorOrPriceValue(data[index], this.options.appliedTo);
+            var nPrePrice = this.indicators.getIndicatorOrPriceValue(data[index - this.options.period], this.options.appliedTo);
+            var rocr = toFixed((price / nPrePrice), 4);
             this.indicatorData.push({ time: data[index].time, value: rocr });
         } else {
             this.indicatorData.push({ time: data[index].time, value: 0.0 });
@@ -30,7 +30,9 @@ ROCR.prototype.addPoint = function (data) {
     console.log('Adding ROCR data point : ', data);
     this.priceData.push(data);
     var index = this.priceData.length - 1;
-    var rocr = toFixed((this.priceData[index].close / this.priceData[index - this.options.period].close), 4);
+    var price = this.indicators.getIndicatorOrPriceValue(this.priceData[index], this.options.appliedTo);
+    var nPrePrice = this.indicators.getIndicatorOrPriceValue(this.priceData[index - this.options.period], this.options.appliedTo);
+    var rocr = toFixed((price / nPrePrice), 4);
     this.indicatorData.push({ time: data.time, value: rocr });
     return [{
         id: this.uniqueID,
@@ -45,7 +47,9 @@ ROCR.prototype.update = function (data) {
     this.priceData[index].high = data.high;
     this.priceData[index].low = data.low;
     this.priceData[index].close = data.close;
-    var rocr = toFixed((this.priceData[index].close / this.priceData[index - this.options.period].close), 4);
+    var price = this.indicators.getIndicatorOrPriceValue(this.priceData[index], this.options.appliedTo);
+    var nPrePrice = this.indicators.getIndicatorOrPriceValue(this.priceData[index - this.options.period], this.options.appliedTo);
+    var rocr = toFixed((price / nPrePrice), 4);
     this.indicatorData[index].value = rocr;
     return [{
         id: this.uniqueID,
