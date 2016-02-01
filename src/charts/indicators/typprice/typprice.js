@@ -86,6 +86,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if (typeof _callback == "function") {
                 _callback(containerIDWithHash);
