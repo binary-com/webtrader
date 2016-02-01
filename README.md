@@ -14,20 +14,20 @@ The goal of this project is to create a full-screen trading interface for [Binar
         $ sudo apt-get install node npm
         $ sudo apt-get install nodejs-legacy
         $ sudo npm install -g grunt-cli
+        $ sudo npm install -g bower
         $ npm install
         $ bower install
     
 ####Windows Users
-1.  Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
-2. Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
-3. Open Git Bash and run the following commands:
-```
-$ git clone https://github.com/binary-com/webtrader.git
-$ cd webtrader
-$ install -g grunt-cli
-$ npm install
-$ bower install
-```
+    * Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
+    * Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
+    * Open Git Bash and run the following commands:
+        $ git clone https://github.com/binary-com/webtrader.git
+        $ cd webtrader
+        $ install -g grunt-cli
+        $ install -g bower
+        $ npm install
+        $ bower install
 These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from `package.json` and `bower.json` files.
 
 At this point, your project is properly setup. You can now run following command to start a local server

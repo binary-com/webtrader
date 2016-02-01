@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlspinningtop'], function (cdlspinningtop) {
-                                cdlspinningtop.init();
-                                //Add CDLSPINNINGTOP for the main series
-                                $($(".cdlspinningtop").data('refererChartID')).highcharts().series[0].addCDLSPINNINGTOP();
+                            var series = $($(".cdlspinningtop").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlspinningtop', {
+                                cdlIndicatorCode : 'cdlspinningtop',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

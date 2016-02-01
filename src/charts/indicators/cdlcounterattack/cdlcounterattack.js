@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlcounterattack'], function (cdlcounterattack) {
-                                cdlcounterattack.init();
-                                //Add CDLCOUNTERATTACK for the main series
-                                $($(".cdlcounterattack").data('refererChartID')).highcharts().series[0].addCDLCOUNTERATTACK();
+                            var series = $($(".cdlcounterattack").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlcounterattack', {
+                                cdlIndicatorCode : 'cdlcounterattack',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

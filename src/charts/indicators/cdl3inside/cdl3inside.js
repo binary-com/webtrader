@@ -30,13 +30,11 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "OK",
                         click: function() {
-
-                            require(['charts/indicators/highcharts_custom/cdl3inside'], function ( cdl3inside ) {
-                                cdl3inside.init();
-                                //Add CDL3INSIDE for the main series
-                                $($(".cdl3inside").data('refererChartID')).highcharts().series[0].addCDL3INSIDE();
+                            var series = $($(".cdl3inside").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdl3inside', {
+                                cdlIndicatorCode : 'cdl3inside',
+                                onSeriesID : series.options.id
                             });
-
                             closeDialog.call($html);
                         }
                     },

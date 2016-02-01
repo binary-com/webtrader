@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlgapsidesidewhite'], function (cdlgapsidesidewhite) {
-                                cdlgapsidesidewhite.init();
-                                //Add CDLGAPSIDESIDEWHITE for the main series
-                                $($(".cdlgapsidesidewhite").data('refererChartID')).highcharts().series[0].addCDLGAPSIDESIDEWHITE();
+                            var series = $($(".cdlgapsidesidewhite").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlgapsidesidewhite', {
+                                cdlIndicatorCode : 'cdlgapsidesidewhite',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

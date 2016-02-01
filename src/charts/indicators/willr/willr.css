@@ -19,3 +19,7 @@
     width: 100%;
     border-radius: 5px;
 }
+
+.willr-ui-dialog, .willr.ui-dialog-content, .willr_level.ui-dialog-content {
+    overflow: visible;
+}

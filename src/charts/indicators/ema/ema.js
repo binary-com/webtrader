@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -42,6 +42,19 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#ema_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 158,
+                background: "white",
+                onSelected: function (data) {
+                    $('#ema_dashStyle .dd-selected-image').css('max-width', '125px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#ema_dashStyle .dd-option-image').css('max-width', '125px');
+
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -50,6 +63,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'ema-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -67,18 +81,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/ema'], function ( ema ) {
-                                ema.init();
-                                var options = {
-                                    period : parseInt($html.find(".ema_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#ema_strokeWidth").val()),
-                                    dashStyle : $html.find("#ema_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#ema_appliedTo").val())
-                                }
-                                //Add EMA for the main series
-                                $($(".ema").data('refererChartID')).highcharts().series[0].addEMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".ema_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#ema_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#ema_appliedTo").val())
+                            }
+                            //Add EMA for the main series
+                            $($(".ema").data('refererChartID')).highcharts().series[0].addIndicator('ema', options);
 
                             closeDialog.call($html);
                         }

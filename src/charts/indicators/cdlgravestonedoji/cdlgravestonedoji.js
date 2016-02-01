@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlgravestonedoji'], function (cdlgravestonedoji) {
-                                cdlgravestonedoji.init();
-                                //Add CDLGRAVESTONEDOJI for the main series
-                                $($(".cdlgravestonedoji").data('refererChartID')).highcharts().series[0].addCDLGRAVESTONEDOJI();
+                            var series = $($(".cdlgravestonedoji").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlgravestonedoji', {
+                                cdlIndicatorCode : 'cdlgravestonedoji',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

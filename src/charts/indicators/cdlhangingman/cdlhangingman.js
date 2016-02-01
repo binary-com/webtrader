@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlhangingman'], function (cdlhangingman) {
-                                cdlhangingman.init();
-                                //Add CDLHANGINGMAN for the main series
-                                $($(".cdlhangingman").data('refererChartID')).highcharts().series[0].addCDLHANGINGMAN();
+                            var series = $($(".cdlhangingman").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlhangingman', {
+                                cdlIndicatorCode : 'cdlhangingman',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

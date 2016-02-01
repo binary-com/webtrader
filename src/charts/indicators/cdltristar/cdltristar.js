@@ -29,11 +29,11 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                     {
                         text: "OK",
                         click: function () {
-                            
-                            require(['charts/indicators/highcharts_custom/cdltristar'], function (cdltristar) {
-                                cdltristar.init();
-                                //Add CDLTRISTAR for the main series
-                                $($(".cdltristar").data('refererChartID')).highcharts().series[0].addCDLTRISTAR();
+
+                            var series = $($(".cdltristar").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdltristar', {
+                                cdlIndicatorCode : 'cdltristar',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

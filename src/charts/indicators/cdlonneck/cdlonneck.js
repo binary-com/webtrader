@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlonneck'], function (cdlonneck) {
-                                cdlonneck.init();
-                                //Add CDLONNECK for the main series
-                                $($(".cdlonneck").data('refererChartID')).highcharts().series[0].addCDLONNECK();
+                            var series = $($(".cdlonneck").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlonneck', {
+                                cdlIndicatorCode : 'cdlonneck',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

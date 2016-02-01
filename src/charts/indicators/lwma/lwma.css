@@ -14,3 +14,7 @@
 {
 	width: 50%;
 }
+
+.lwma-ui-dialog, .lwma.ui-dialog-content {
+    overflow: visible;
+}

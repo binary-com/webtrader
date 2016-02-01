@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdleveningdojistar'], function (cdleveningdojistar) {
-                                cdleveningdojistar.init();
-                                //Add CDLEVENINGDOJISTAR for the main series
-                                $($(".cdleveningdojistar").data('refererChartID')).highcharts().series[0].addCDLEVENINGDOJISTAR();
+                            var series = $($(".cdleveningdojistar").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdleveningdojistar', {
+                                cdlIndicatorCode : 'cdleveningdojistar',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

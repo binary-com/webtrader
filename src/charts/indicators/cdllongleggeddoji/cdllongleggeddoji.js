@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdllongleggeddoji'], function (cdllongleggeddoji) {
-                                cdllongleggeddoji.init();
-                                //Add CDLLONGLEGGEDDOJI for the main series
-                                $($(".cdllongleggeddoji").data('refererChartID')).highcharts().series[0].addCDLLONGLEGGEDDOJI();
+                            var series = $($(".cdllongleggeddoji").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdllongleggeddoji', {
+                                cdlIndicatorCode : 'cdllongleggeddoji',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

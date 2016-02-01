@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -42,6 +42,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#trima_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 138,
+                background: "white",
+                onSelected: function (data) {
+                    $('#trima_dashStyle .dd-selected-image').css('max-width', '105px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#trima_dashStyle .dd-option-image').css('max-width', '105px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -50,6 +62,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'trima-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -67,18 +80,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/trima'], function ( trima ) {
-                                trima.init();
-                                var options = {
-                                    period : parseInt($html.find(".trima_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#trima_strokeWidth").val()),
-                                    dashStyle : $html.find("#trima_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#trima_appliedTo").val())
-                                }
-                                //Add TRIMA for the main series
-                                $($(".trima").data('refererChartID')).highcharts().series[0].addTRIMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".trima_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#trima_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#trima_appliedTo").val())
+                            }
+                            //Add TRIMA for the main series
+                            $($(".trima").data('refererChartID')).highcharts().series[0].addIndicator('trima', options);
 
                             closeDialog.call($html);
                         }

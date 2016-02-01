@@ -23,6 +23,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   }
 
   var refresh_table = function(dialog,key) {
+    var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
+    var is_tick = isTick(data.timePeriod);
     var table = dialog.find('.table-view');
     var bars = barsTable
                     .chain()
@@ -30,6 +32,9 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                     .simplesort('time', true)
                     .data();
     var rows = bars.map(function(bar) {
+      if(is_tick) {
+        return [ bar.time, bar.open ];
+      }
       return [
         bar.time,
         bar.open,
@@ -47,29 +52,38 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   function init(dialog){
     var container = dialog.find('.table-view');
     var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
+    var is_tick = isTick(data.timePeriod);
     var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
     var close = container.find('span.close');
     close.on('click', hide_table_view.bind(null, dialog)); /* hide the dialog on close icon click */
 
     var table = $("<table width='100%' class='portfolio-dialog display compact'/>");
     table.appendTo(container);
-    table = table.dataTable({
-        data: [],
-        columns: [
+    var columns = [
+          { title: 'Date', orderable: false,
+            render: function(epoch) { return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss'); }
+          },
+          { title: 'Open', orderable: false, },
+          { title: 'High', orderable: false, },
+          { title: 'Low', orderable: false, },
+          { title: 'Close', orderable: false, },
+    ];
+    if(is_tick) { /* for tick charts only show Date,Tick */
+      columns = [
             { title: 'Date', orderable: false,
               render: function(epoch) { return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss'); }
             },
-            { title: 'Open', orderable: false, },
-            { title: 'High', orderable: false, },
-            { title: 'Low', orderable: false, },
-            { title: 'Close', orderable: false, },
-        ],
-        rowId : '4',
+            { title: 'Tick', orderable: false, },
+      ];
+    }
+
+    table = table.dataTable({
+        data: [],
+        columns: columns,
         paging: false,
         ordering: true,
         info: false,
         order: [0, 'desc'],
-        // processing: true
     });
     table.parent().addClass('hide-search-input');
 
@@ -77,13 +91,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
       if(data.key !== key) return;
       if(!dialog.view_table_visible) return;
       var tick = data.tick;
-      var row = [
-        tick.time,
-        tick.open,
-        tick.high,
-        tick.low,
-        tick.close
-      ];
+      var row = [ tick.time, tick.open ];
       table.api().row.add(row);
       table.api().draw();
     });

@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlharami'], function (cdlharami) {
-                                cdlharami.init();
-                                //Add CDLHARAMI for the main series
-                                $($(".cdlharami").data('refererChartID')).highcharts().series[0].addCDLHARAMI();
+                            var series = $($(".cdlharami").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlharami', {
+                                cdlIndicatorCode : 'cdlharami',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

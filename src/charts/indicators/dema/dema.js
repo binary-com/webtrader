@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 12/20/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -42,6 +42,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#dema_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 158,
+                background: "white",
+                onSelected: function (data) {
+                    $('#dema_dashStyle .dd-selected-image').css('max-width', '125px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#dema_dashStyle .dd-option-image').css('max-width', '125px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -50,6 +62,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'dema-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -68,18 +81,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/dema'], function (dema) {
-                                dema.init();
-                                var options = {
-                                    period: parseInt($html.find(".dema_input_width_for_period").val()),
-                                    stroke: defaultStrokeColor,
-                                    strokeWidth: parseInt($html.find("#dema_strokeWidth").val()),
-                                    dashStyle: $html.find("#dema_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#dema_appliedTo").val())
-                                }
-                                //Add DEMA for the main series
-                                $($(".dema").data('refererChartID')).highcharts().series[0].addDEMA(options);
-                            });
+                            var options = {
+                                period: parseInt($html.find(".dema_input_width_for_period").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#dema_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#dema_appliedTo").val())
+                            }
+                            //Add DEMA for the main series
+                            $($(".dema").data('refererChartID')).highcharts().series[0].addIndicator('dema', options);
 
                             closeDialog.call($html);
                         }

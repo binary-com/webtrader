@@ -6,3 +6,7 @@
 .wclprice label {
     display: block;
 }
+
+.wclprice-ui-dialog, .wclprice.ui-dialog-content {
+    overflow: visible;
+}

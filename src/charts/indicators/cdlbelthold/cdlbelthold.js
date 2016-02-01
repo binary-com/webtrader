@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlbelthold'], function (cdlbelthold) {
-                                cdlbelthold.init();
-                                //Add CDLBELTHOLD for the main series
-                                $($(".cdlbelthold").data('refererChartID')).highcharts().series[0].addCDLBELTHOLD();
+                            var series = $($(".cdlbelthold").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlbelthold', {
+                                cdlIndicatorCode : 'cdlbelthold',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

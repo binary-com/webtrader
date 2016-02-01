@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -50,15 +50,33 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#bop_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 118,
+                background: "white",
+                onSelected: function (data) {
+                    $('#bop_dashStyle .dd-selected-image').css('max-width', '85px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#bop_dashStyle .dd-option-image').css('max-width', '85px');
+
+
             var table = $html.find('#bop_levels').DataTable({
                 paging: false,
                 scrollY: 100,
                 autoWidth: true,
                 searching: false,
-                info: false
+                info: false,
+                "columnDefs": [
+                   { className: "dt-center", "targets": [0, 1, 2, 3] }
+                ],
+                "aoColumnDefs": [{ "bSortable": false, "aTargets": [1, 3] }]
             });
             $.each(defaultLevels, function (index, value) {
-                $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
+                '<div style="width:50px;overflow:hidden;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
                     .data("level", value)
                     .on('click', function () {
                         $(this).toggleClass('selected');
@@ -77,7 +95,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 require(["charts/indicators/bop/bop_level"], function(bop_level) {
                     bop_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
-                            $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth, value.dashStyle]).draw().node())
+                            $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
+                                '<div style="width:50px;overflow:hidden;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
                                 .data("level", value)
                                 .on('click', function () {
                                     $(this).toggleClass('selected');
@@ -96,37 +115,35 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'bop-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
                         click: function() {
 
-                            require(['charts/indicators/highcharts_custom/bop'], function ( bop ) {
-                                bop.init();
-                                var levels = [];
-                                $.each(table.rows().nodes(), function () {
-                                    var data = $(this).data('level');
-                                    if (data) {
-                                        levels.push({
-                                            color: data.stroke,
-                                            dashStyle: data.dashStyle,
-                                            width: data.strokeWidth,
-                                            value: data.level,
-                                            label: {
-                                                text: data.level
-                                            }
-                                        });
-                                    }
-                                });
-                                var options = {
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#bop_strokeWidth").val()),
-                                    dashStyle : $html.find("#bop_dashStyle").val(),
-                                    levels : levels
-                                };
-                                //Add BOP for the main series
-                                $($(".bop").data('refererChartID')).highcharts().series[0].addBOP(options);
+                            var levels = [];
+                            $.each(table.rows().nodes(), function () {
+                                var data = $(this).data('level');
+                                if (data) {
+                                    levels.push({
+                                        color: data.stroke,
+                                        dashStyle: data.dashStyle,
+                                        width: data.strokeWidth,
+                                        value: data.level,
+                                        label: {
+                                            text: data.level
+                                        }
+                                    });
+                                }
                             });
+                            var options = {
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#bop_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                levels : levels
+                            };
+                            //Add BOP for the main series
+                            $($(".bop").data('refererChartID')).highcharts().series[0].addIndicator('bop', options);
 
                             closeDialog.call($html);
                         }

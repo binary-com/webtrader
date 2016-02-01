@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlupsidegap2crows'], function (cdlupsidegap2crows) {
-                                cdlupsidegap2crows.init();
-                                //Add CDLUPSIDEGAP2CROWS for the main series
-                                $($(".cdlupsidegap2crows").data('refererChartID')).highcharts().series[0].addCDLUPSIDEGAP2CROWS();
+                            var series = $($(".cdlupsidegap2crows").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlupsidegap2crows', {
+                                cdlIndicatorCode : 'cdlupsidegap2crows',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);
