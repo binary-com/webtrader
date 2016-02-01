@@ -12,7 +12,7 @@ ATR = function(data, options, indicators) {
 
     IndicatorBase.call(this, data, options, indicators);
     this.tr = [];
-
+    this.priceData = [];
     /*
      * Formula -
      * 	tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
@@ -60,7 +60,7 @@ ATR = function(data, options, indicators) {
             this.indicatorData.push({ time : data[index].time, value : 0.0 });
         }
         //Calculate ATR - end
-
+         this.priceData.push(data[index]);
     }
 };
 
@@ -72,23 +72,25 @@ ATR.prototype.constructor = ATR;
  * @param data
  * @returns {*[]}
  */
-ATR.prototype.addPoint = function(data) {
-    var highValue = data.high;
-    var lowValue = data.low;
-    var closeValue = data.close;
-    var tr = Math.max(Math.max(highValue - lowValue, Math.abs(highValue - closeValue)), (lowValue - closeValue));
-    var atr = toFixed(( this.indicatorData[this.indicatorData.length - 1].value * (this.options.period - 1) + tr ) / this.options.period, 4) ;
+ATR.prototype.addPoint = function (data) {
+    this.priceData.push(data);
+    var index = this.priceData.length - 1;
+    /*tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
+    atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n*/
+    var preClose = this.priceData[index - 1].close;
+    var trValue = Math.max(Math.max(data.high - data.low, Math.abs(data.high - preClose)), (data.low - preClose));
+    var atrValue = toFixed(((this.indicatorData[index - 1].value * (this.options.period - 1) + trValue) / this.options.period), 4);
     this.indicatorData.push({
         time : data.time,
-        value : atr
+        value : atrValue
     });
     this.tr.push({
         time : data.time,
-        value : tr
+        value : trValue
     });
     return [{
         id : this.uniqueID,
-        value : atr
+        value : atrValue
     }];
 };
 
@@ -97,18 +99,22 @@ ATR.prototype.addPoint = function(data) {
  * @param data
  * @returns {*[]}
  */
-ATR.prototype.update = function(data) {
-    var highValue = data.high;
-    var lowValue = data.low;
-    var closeValue = data.close;
-    var tr = Math.max(Math.max(highValue - lowValue, Math.abs(highValue - closeValue)), (lowValue - closeValue));
-    //I am updating this.atr[this.atr.length - 1]. So have to consider this.atr[this.atr.length - 2] for calculation
-    var atr = toFixed(( this.indicatorData[this.indicatorData.length - 2].value * (this.options.period - 1) + tr ) / this.options.period, 4) ;
-    this.indicatorData[this.indicatorData.length - 1].value = atr;
-    this.tr[this.indicatorData.length - 1].value = tr;
+ATR.prototype.update = function (data) {
+    var index = this.priceData.length - 1;
+    this.priceData[index].open = data.open;
+    this.priceData[index].high = data.high;
+    this.priceData[index].low = data.low;
+    this.priceData[index].close = data.close;
+    /*tr(t) = max[(high - low), abs(high - close(t - 1)), abs(low - close(t - 1))]
+    atr(t) = (atr(t-1) x (n - 1) + tr(t)) / n*/
+    var preClose = this.priceData[index - 1].close;
+    var trValue = Math.max(Math.max(data.high - data.low, Math.abs(data.high - preClose)), (data.low - preClose));
+    var atrValue = toFixed(((this.indicatorData[index - 1].value * (this.options.period - 1) + trValue) / this.options.period), 4);
+    this.indicatorData[this.indicatorData.length - 1].value = atrValue;
+    this.tr[this.indicatorData.length - 1].value = trValue;
     return [{
         id : this.uniqueID,
-        value : atr
+        value : atrValue
     }];
 };
 
