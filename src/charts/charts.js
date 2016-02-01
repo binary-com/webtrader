@@ -254,7 +254,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 exporting: {
-                    enabled: false //TODO work on this later
+                    enabled: true
                 }
 
             });
