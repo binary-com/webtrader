@@ -74,18 +74,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         text: "OK",
                         click: function() {
 
-                            if (!isNumericBetween($html.find(".bop_level_input_width_for_level").val(),
-                                    parseInt($html.find(".bop_level_input_width_for_level").attr("min")),
-                                    parseInt($html.find(".bop_level_input_width_for_level").attr("max"))))
-                            {
-                                require(["jquery", "jquery-growl"], function($) {
-                                    $.growl.error({ message: "Only numbers between " + $html.find(".bop_level_input_width_for_level").attr("min")
-                                    + " to " + $html.find(".bop_level_input_width_for_level").attr("max")
-                                    + " is allowed for " + $html.find(".bop_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
-                                });
-                                return;
-                            }
-
                             if (callBackAfterOKPressed) {
                                 callBackAfterOKPressed([new Level(parseFloat($html.find(".bop_level_input_width_for_level").val()),
                                     defaultStrokeColor, parseInt($html.find("#bop_level_strokeWidth").val()),
