@@ -260,7 +260,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                 },
 
                 exporting: {
-                    enabled: false //TODO work on this later
+                    enabled: true
                 }
 
             });

@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['lodash', 'jquery', 'rivets', 'jquery-ui', 'jquery-sparkline'], function (_, $, rv) {
+define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline'], function (_, $, rv, moment) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -111,6 +111,10 @@ define(['lodash', 'jquery', 'rivets', 'jquery-ui', 'jquery-sparkline'], function
       return ("00" + d.getUTCHours()).slice(-2) + ":" +
              ("00" + d.getUTCMinutes()).slice(-2) + ":" +
              ("00" + d.getUTCSeconds()).slice(-2);
+    }
+    rv.formatters['moment'] = function(epoch, format){
+      format = format || 'YYYY-MM-DD HH:mm:ss';
+      return epoch && moment.utc(epoch*1000).format(format);
     }
     /* formatter to bold last character */
     rv.formatters['bold-last-character'] = function(str){
