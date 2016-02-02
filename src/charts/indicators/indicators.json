@@ -555,6 +555,11 @@
     "id": "ppo",
     "long_display_name": "Percentage Price Oscillator",
     "short_display_name": "PPO"
-  }
+  },
   
+  "trange": {
+    "id": "trange",
+    "long_display_name": "True Range",
+    "short_display_name": "TRANGE"
+  }
 }
