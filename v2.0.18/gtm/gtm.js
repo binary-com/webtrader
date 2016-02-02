@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return{init:function(){require(["text!gtm/gtm.html"],function(b){a("body").append(b)})}}});
