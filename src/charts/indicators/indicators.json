@@ -573,6 +573,13 @@
     "id": "mom",
     "long_display_name": "Momentum",
     "short_display_name": "MOM"
+  },
+
+  "alma": {
+    "id": "alma",
+    "long_display_name": "Arnaud Legoux Moving Average",
+    "short_display_name": "ALMA",
+	 "onChartIndicator" : true
   }
 
 }
