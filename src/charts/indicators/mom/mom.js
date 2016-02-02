@@ -1,5 +1,5 @@
 ﻿/**
- * Created by Mahboob.M on 2/2/15.
+ * Created by Majboob.M on 2/2/16.
  */
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function init(containerIDWithHash, _callback) {
 
-        require(['css!charts/indicators/stochrsi/stochrsi.css']);
+        require(['css!charts/indicators/mom/mom.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -19,9 +19,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             this.strokeWidth = strokeWidth;
             this.dashStyle = dashStyle;
         };
-        var defaultLevels = [new Level(0.30, 'red', 1, 'Dash'), new Level(0.70, 'red', 1, 'Dash')];
+        var defaultLevels = [];
 
-        require(['text!charts/indicators/stochrsi/stochrsi.html'], function ($html) {
+        require(['text!charts/indicators/mom/mom.html'], function ($html) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -30,19 +30,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.appendTo("body");
             $html.find("input[type='button']").button();
 
-            $html.find("#stochrsi_stroke").colorpicker({
+            $html.find("#mom_stroke").colorpicker({
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
                 },
                 select: function (event, color) {
-                    $("#stochrsi_stroke").css({
+                    $("#mom_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok: function (event, color) {
-                    $("#stochrsi_stroke").css({
+                    $("#mom_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
@@ -50,18 +50,18 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             var selectedDashStyle = "Solid";
-            $('#stochrsi_dashStyle').ddslick({
+            $('#mom_dashStyle').ddslick({
                 imagePosition: "left",
                 width: 118,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#mom_dashStyle .dd-selected-image').css('max-width', '85px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#mom_dashStyle .dd-option-image').css('max-width', '85px');
 
-            var table = $html.find('#stochrsi_levels').DataTable({
+            var table = $html.find('#mom_levels').DataTable({
                 paging: false,
                 scrollY: 100,
                 autoWidth: true,
@@ -80,7 +80,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         $(this).toggleClass('selected');
                     });
             });
-            $html.find('#stochrsi_level_delete').click(function () {
+            $html.find('#mom_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
                     require(["jquery", "jquery-growl"], function ($) {
                         $.growl.error({ message: "Select levels to delete!" });
@@ -89,9 +89,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     table.rows('.selected').remove().draw();
                 }
             });
-            $html.find('#stochrsi_level_add').click(function () {
-                require(["charts/indicators/stochrsi/stochrsi_level"], function (stochrsi_level) {
-                    stochrsi_level.open(containerIDWithHash, function (levels) {
+            $html.find('#mom_level_add').click(function () {
+                require(["charts/indicators/mom/mom_level"], function (mom_level) {
+                    mom_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
                                 '<div style="width:50px;overflow:hidden;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
@@ -113,50 +113,50 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 my: 'center',
                 at: 'center',
                 of: window,
-                dialogClass: 'stochrsi-ui-dialog',
+                dialogClass: 'mom-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
                         click: function () {
 
-                            if (!isNumericBetween($html.find(".stochrsi_input_width_for_period").val(),
-                                            parseInt($html.find(".stochrsi_input_width_for_period").attr("min")),
-                                            parseInt($html.find(".stochrsi_input_width_for_period").attr("max")))) {
+                            if (!isNumericBetween($html.find(".mom_input_width_for_period").val(),
+                                            parseInt($html.find(".mom_input_width_for_period").attr("min")),
+                                            parseInt($html.find(".mom_input_width_for_period").attr("max")))) {
                                 require(["jquery", "jquery-growl"], function ($) {
                                     $.growl.error({
-                                        message: "Only numbers between " + $html.find(".stochrsi_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".stochrsi_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".stochrsi_input_width_for_period").closest('tr').find('td:first').text() + "!"
+                                        message: "Only numbers between " + $html.find(".mom_input_width_for_period").attr("min")
+                                                + " to " + $html.find(".mom_input_width_for_period").attr("max")
+                                                + " is allowed for " + $html.find(".mom_input_width_for_period").closest('tr').find('td:first').text() + "!"
                                     });
                                 });
                                 return;
                             }
 
-                                var levels = [];
-                                $.each(table.rows().nodes(), function () {
-                                    var data = $(this).data('level');
-                                    if (data) {
-                                        levels.push({
-                                            color: data.stroke,
-                                            dashStyle: data.dashStyle,
-                                            width: data.strokeWidth,
-                                            value: data.level,
-                                            label: {
-                                                text: data.level
-                                            }
-                                        });
-                                    }
-                                });
-                                var options = {
-                                    period: parseInt($html.find(".stochrsi_input_width_for_period").val()),
-                                    stroke: defaultStrokeColor,
-                                    strokeWidth: parseInt($html.find("#stochrsi_strokeWidth").val()),
-                                    dashStyle: selectedDashStyle,
-                                    appliedTo: parseInt($html.find("#stochrsi_appliedTo").val()),
-                                    levels: levels
-                                };
-                                //Add STOCHRSI for the main series
-                                $($(".stochrsi").data('refererChartID')).highcharts().series[0].addIndicator('stochrsi', options);
+                            var levels = [];
+                            $.each(table.rows().nodes(), function () {
+                                var data = $(this).data('level');
+                                if (data) {
+                                    levels.push({
+                                        color: data.stroke,
+                                        dashStyle: data.dashStyle,
+                                        width: data.strokeWidth,
+                                        value: data.level,
+                                        label: {
+                                            text: data.level
+                                        }
+                                    });
+                                }
+                            });
+                            var options = {
+                                period: parseInt($html.find(".mom_input_width_for_period").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#mom_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#mom_appliedTo").val()),
+                                levels: levels
+                            };
+                            //Add MOM for the main series
+                            $($(".mom").data('refererChartID')).highcharts().series[0].addIndicator('mom', options);
 
                             closeDialog.call($html);
                         }
@@ -183,12 +183,12 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
         open: function (containerIDWithHash) {
 
-            if ($(".stochrsi").length == 0) {
+            if ($(".mom").length == 0) {
                 init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".stochrsi").data('refererChartID', containerIDWithHash).dialog("open");
+            $(".mom").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 

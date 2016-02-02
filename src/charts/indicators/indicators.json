@@ -567,6 +567,12 @@
     "id": "stochrsi",
     "long_display_name": "Stochastic Relative Strength Index",
     "short_display_name": "STOCHRSI"
+  },
+
+  "mom": {
+    "id": "mom",
+    "long_display_name": "Momentum",
+    "short_display_name": "MOM"
   }
 
 }
