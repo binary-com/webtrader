@@ -14,7 +14,8 @@ WILLR = function (data, options, indicators) {
             highestHigh = Math.max(highestHigh, data[index - i].high);
             lowestLow = Math.min(lowestLow, data[index - i].low);
         }
-        var willr = (-100 * (highestHigh - data[index].close)) / (highestHigh - lowestLow);
+        var price = this.indicators.getIndicatorOrPriceValue(data[index], this.options.appliedTo);
+        var willr = (-100 * (highestHigh - price)) / (highestHigh - lowestLow);
         return toFixed(willr, 4);;
     };
     for (var index = 0; index < data.length; index++) {

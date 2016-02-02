@@ -27,8 +27,11 @@ CDL.prototype.constructor = CDL;
 
 CDL.prototype.addPoint = function(data) {
     this.priceData.push(data);
-    var ret = this.calculateIndicatorValue(this.options.cdlIndicatorCode) || {};
-    this.indicatorData.push(ret);
+    var ret = this.calculateIndicatorValue(this.options.cdlIndicatorCode)|| {};
+    if(ret.text)
+    {
+        this.indicatorData.push(ret);
+    }
     return [{
         id : this.uniqueID,
         value : new CDLUpdateObject(ret.x || data.time, ret.title, ret.text)
@@ -42,7 +45,10 @@ CDL.prototype.update = function(data) {
     this.priceData[index].low   = data.low;
     this.priceData[index].close = data.close;
     var ret = this.calculateIndicatorValue(this.options.cdlIndicatorCode) || {};
-    this.indicatorData[index] = ret;
+    if(ret.text)
+    {
+        this.indicatorData[index] = ret;
+    }
     return [{
         id : this.uniqueID,
         value : new CDLUpdateObject(ret.x || data.time, ret.title, ret.text)

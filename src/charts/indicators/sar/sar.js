@@ -20,7 +20,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#sar_stroke").colorpicker({
@@ -88,6 +87,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);

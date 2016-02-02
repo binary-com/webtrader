@@ -1,7 +1,7 @@
 ﻿/**
- * Created by Mahboob.M on 1/30/16.
+ * Created by Mahboob.M on 2/1/16.
  */
-MACD = function (data, options, indicators) {
+PPO = function (data, options, indicators) {
 
     options.fastMaType = (options.fastMaType || 'SMA').toUpperCase();
     options.slowMaType = (options.slowMaType || 'SMA').toUpperCase();
@@ -14,18 +14,22 @@ MACD = function (data, options, indicators) {
     this.slowMa = new window[options.slowMaType](data, slowOptions, indicators);
     this.histogramData = [];
     //3 unique IDs for 3 series to be rendered
-    //macd, signal, histogarm
+    //ppo, signal, histogarm
     this.uniqueID = [uuid(), uuid(), uuid()];
 
     /*
-    MACD 
-    *MACD Line: (12-day EMA - 26-day EMA)
-    * Signal Line: 9-day EMA of MACD Line
-    * MACD Histogram: MACD Line - Signal Line
+    PPO 
+    *PPO Line: ((12-day EMA - 26-day EMA)/26-day EMA) x 100
+    * Signal Line: 9-day EMA of PPO 
+    * PPO Histogram: PPO Line - Signal Line
     */
     for (var index = 0; index < data.length; index++) {
-        var macdValue = toFixed((this.fastMa.indicatorData[index].value - this.slowMa.indicatorData[index].value), 4);
-        this.indicatorData.push({ time: data[index].time, value: macdValue ,close :macdValue});
+        var ppoValue = 0;
+        if (this.slowMa.indicatorData[index].value !== 0)
+        {
+            ppoValue = toFixed((((this.fastMa.indicatorData[index].value - this.slowMa.indicatorData[index].value) / this.slowMa.indicatorData[index].value) * 100), 4)
+        };
+        this.indicatorData.push({ time: data[index].time, value: ppoValue ,close :ppoValue});
     }
     this.signalMa = new window[options.signalMaType](this.indicatorData, signalOptions, indicators);
     this.signalData = this.signalMa.indicatorData;
@@ -39,21 +43,25 @@ MACD = function (data, options, indicators) {
     });
 };
 
-MACD.prototype = Object.create(IndicatorBase.prototype);
-MACD.prototype.constructor = MACD;
+PPO.prototype = Object.create(IndicatorBase.prototype);
+PPO.prototype.constructor = PPO;
 
-MACD.prototype.addPoint = function (data) {
+PPO.prototype.addPoint = function (data) {
     var fastMa = this.fastMa.addPoint(data)[0].value;
     var slowMa = this.slowMa.addPoint(data)[0].value;
-    var macdValue = toFixed((fastMa - slowMa), 4);
-    var signalMa = this.signalMa.addPoint({ time: data.time, close: macdValue })[0].value;
-    var histogramValue = toFixed((macdValue - signalMa), 4);
+    var ppoValue = 0;
+    if (slowMa !== 0)
+    {
+        ppoValue = toFixed((((fastMa - slowMa) / slowMa) * 100), 4);
+    };
+    var signalMa = this.signalMa.addPoint({ time: data.time, close: ppoValue })[0].value;
+    var histogramValue = toFixed((ppoValue - signalMa), 4);
     this.signalData = this.signalMa.indicatorData;
     this.histogramData.push({ time: data.time, value: histogramValue });
-    this.indicatorData.push({ time: data.time, value: macdValue });
+    this.indicatorData.push({ time: data.time, value: ppoValue });
     return [{
         id: this.uniqueID[0],
-        value: macdValue
+        value: ppoValue
     }, {
         id: this.uniqueID[1],
         value: signalMa
@@ -63,19 +71,23 @@ MACD.prototype.addPoint = function (data) {
     }];
 };
 
-MACD.prototype.update = function (data) {
+PPO.prototype.update = function (data) {
     var index = this.indicatorData.length - 1;
     var fastMa = this.fastMa.update(data)[0].value;
     var slowMa = this.slowMa.update(data)[0].value;
-    var macdValue = toFixed((fastMa - slowMa), 4);
-    var signalMa = this.signalMa.update({ time: data.time, close: macdValue })[0].value;
-    var histogramValue = toFixed((macdValue - signalMa), 4);
+    var ppoValue = 0;
+    if (slowMa !== 0)
+    {
+        ppoValue = toFixed((((fastMa - slowMa) / slowMa) * 100), 4);
+    };
+    var signalMa = this.signalMa.update({ time: data.time, close: ppoValue })[0].value;
+    var histogramValue = toFixed((ppoValue - signalMa), 4);
     this.signalData = this.signalMa.indicatorData;
     this.histogramData[index].value = histogramValue;
-    this.indicatorData[index].value = macdValue;
+    this.indicatorData[index].value = ppoValue;
     return [{
         id: this.uniqueID[0],
-        value: macdValue
+        value: ppoValue
     }, {
         id: this.uniqueID[1],
         value: signalMa
@@ -85,19 +97,19 @@ MACD.prototype.update = function (data) {
     }];
 };
 
-MACD.prototype.toString = function () {
-    return 'MACD (' + this.options.fastPeriod + ', ' + this.options.slowPeriod + ', ' + this.options.signalPeriod + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
+PPO.prototype.toString = function () {
+    return 'PPO (' + this.options.fastPeriod + ', ' + this.options.slowPeriod + ', ' + this.options.signalPeriod + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
 
 /**
  * @param indicatorMetadata
  * @returns {*[]}
  */
-MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
-    var macdData = [];
+PPO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
+    var ppoData = [];
     //Prepare the data before sending a configuration
     this.indicatorData.forEach(function (e) {
-        macdData.push([e.time, e.value]);
+        ppoData.push([e.time, e.value]);
     });
     var signaldata = [];
     this.signalData.forEach(function (e) {
@@ -130,7 +142,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: histogramData,
                  type: 'column',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
-                 color: this.options.stroke,
+                 color: this.options.ppoHstgrmColor,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
                  onChartIndicator: false
@@ -139,11 +151,11 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
          {
              seriesConf: {
                  id: this.uniqueID[0],
-                 name: 'MACD - ' + this.toString(),
-                 data: macdData,
+                 name: 'PPO - ' + this.toString(),
+                 data: ppoData,
                  type: 'line',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
-                 color: this.options.stroke,
+                 color: this.options.ppoStroke,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
                  onChartIndicator: false
@@ -156,7 +168,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: signaldata,
                  type: 'line',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
-                 color: this.options.stroke,
+                 color: this.options.signalLineStroke,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
                  onChartIndicator: false
@@ -169,7 +181,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
  * in the buildSeriesAndAxisConfFromData method.
  * @returns {*[]}
  */
-MACD.prototype.getIDs = function () {
+PPO.prototype.getIDs = function () {
     return this.uniqueID;
 };
 
@@ -179,6 +191,6 @@ MACD.prototype.getIDs = function () {
  * @param uniqueIDArr
  * @returns {boolean}
  */
-MACD.prototype.isSameInstance = function (uniqueIDArr) {
+PPO.prototype.isSameInstance = function (uniqueIDArr) {
     return _.isEqual(uniqueIDArr.sort(), this.uniqueID);
 };

@@ -109,7 +109,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                         if (_.isArray(iu.value)) {
                                             series.chart.get(iu.id).addPoint(_.flattenDeep([time, iu.value]));
                                         } else if (iu.value instanceof CDLUpdateObject) {
-                                            if (_.isNumber(iu.value.x) && iu.value.x > 0) {
+                                            if (_.isNumber(iu.value.x) && iu.value.x > 0 &&  !_.isEmpty(iu.value.text)) {
                                                 series.chart.get(iu.id).addPoint(iu.value.toJSObject());
                                             }
                                         } else {

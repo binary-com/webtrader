@@ -19,6 +19,8 @@ TYPPRICE.prototype.constructor = TYPPRICE;
 TYPPRICE.prototype.addPoint = function (data) {
     console.log('Adding TYPPRICE data point : ', data);
     this.priceData.push(data);
+     /* TYPPRICE :
+     typprice =  (High + Low + Close) / 3 */
     var typprice = toFixed(((data.high + data.low + data.close) / 3), 4);
     this.indicatorData.push({ time: data.time, value: typprice });
     return [{
