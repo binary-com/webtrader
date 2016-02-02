@@ -9,3 +9,7 @@
 .trima label {
     display: block;
 }
+
+.trima-ui-dialog, .trima.ui-dialog-content {
+    overflow: visible;
+}

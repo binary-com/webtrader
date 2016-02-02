@@ -29,13 +29,12 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "OK",
                         click: function() {
-
-                            require(['charts/indicators/highcharts_custom/cdl2crows'], function ( cdl2crows ) {
-                                cdl2crows.init();
-                                //Add CDL2CROWS for the main series
-                                $($(".cdl2crows").data('refererChartID')).highcharts().series[0].addCDL2CROWS();
+                            //Add CDL2CROWS for the main series
+                            var series = $($(".cdl2crows").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdl2crows', {
+                                cdlIndicatorCode : 'cdl2crows',
+                                onSeriesID : series.options.id
                             });
-
                             closeDialog.call($html);
                         }
                     },

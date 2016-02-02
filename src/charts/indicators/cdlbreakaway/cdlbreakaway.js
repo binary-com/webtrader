@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlbreakaway'], function (cdlbreakaway) {
-                                cdlbreakaway.init();
-                                //Add CDLBREAKAWAY for the main series
-                                $($(".cdlbreakaway").data('refererChartID')).highcharts().series[0].addCDLBREAKAWAY();
+                            var series = $($(".cdlbreakaway").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlbreakaway', {
+                                cdlIndicatorCode : 'cdlbreakaway',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

@@ -5,6 +5,9 @@
 define(["jquery", "datatables", 'charts/charts'], function ($) {
 
     var table = undefined, indicatorsJSON = undefined;
+    require(['text!charts/indicators/indicators.json'], function (json) {
+        indicatorsJSON = JSON.parse(json);
+    });
 
     function init( containerIDWithHash, _callback ) {
 
@@ -34,15 +37,11 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                             .rows( '.selected' )
                             .nodes()
                             .to$().each(function () {
-                                var seriesID = $(this).data('seriesID');
-                                var parentSeriesID = $(this).data('parentSeriesID');
-                                var indicatorID = $(this).data('id');
+                                var seriesIDs = $(this).data('seriesIDs');
                                 var chart = $(containerIDWithHash).highcharts();
-                                $.each(chart.series, function (index, series) {
-                                    if (series.options.id == parentSeriesID) {
-                                        var functionName = series['remove' + $.trim(indicatorID).toUpperCase()];
-                                        functionName.call(series, seriesID);
-                                        return false;
+                                chart.series.forEach(function(series) {
+                                    if (series.options.isInstrument) {
+                                        series.removeIndicator(seriesIDs);
                                     }
                                 });
                                 table.row($(this)).remove().draw();
@@ -85,20 +84,19 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
             var chart = $(containerIDWithHash).highcharts();
             if (!chart) return;
             chart.series.forEach(function (series) {
-                if ($(series).data('isIndicator')) {
-                    for(var eachKey in series) {
-                        if ($.isFunction(series[eachKey]) && eachKey.indexOf("preRemovalCheck") === 0) {
-                            var parameters = series[eachKey].call(series, series.options.id);
-                            if (parameters && parameters.isValidUniqueID && parameters.isMainIndicator) {
-                                $(table.row.add([parameters.indicatorName || series.options.name]).draw().node())
+                if (series.options.isInstrument) {
+                    for (var key in indicatorsJSON) {
+                        var each = indicatorsJSON[key];
+                        if (series[each.id]) {//This is a check to find out, if this indicator was loaded for this chart
+                            series[each.id].forEach(function (eachInstanceOfTheIndicator) {
+                                var indicatorNameWithParams = eachInstanceOfTheIndicator.toString();
+                                $(table.row.add([indicatorNameWithParams]).draw().node())
                                     .click(function () {
                                         $(this).toggleClass('selected');
                                     }).data({
-                                        'id': eachKey.replace('preRemovalCheck' , '').toUpperCase(),
-                                        'seriesID': series.options.id,
-                                        'parentSeriesID': $(series).data('parentSeriesID')
+                                        'seriesIDs': eachInstanceOfTheIndicator.getIDs()
                                     });
-                            }
+                            });
                         }
                     }
                 }

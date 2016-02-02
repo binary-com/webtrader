@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -20,7 +20,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#tema_stroke").colorpicker({
@@ -42,6 +41,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#tema_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 158,
+                background: "white",
+                onSelected: function (data) {
+                    $('#tema_dashStyle .dd-selected-image').css('max-width', '125px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#tema_dashStyle .dd-option-image').css('max-width', '125px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -50,6 +61,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'tema-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -67,18 +79,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/tema'], function ( tema ) {
-                                tema.init();
-                                var options = {
-                                    period : parseInt($html.find(".tema_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#tema_strokeWidth").val()),
-                                    dashStyle : $html.find("#tema_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#tema_appliedTo").val())
-                                }
-                                //Add TEMA for the main series
-                                $($(".tema").data('refererChartID')).highcharts().series[0].addTEMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".tema_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#tema_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#tema_appliedTo").val())
+                            }
+                            //Add TEMA for the main series
+                            $($(".tema").data('refererChartID')).highcharts().series[0].addIndicator('tema', options);
 
                             closeDialog.call($html);
                         }
@@ -91,6 +100,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if (typeof _callback == "function")
             {

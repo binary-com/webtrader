@@ -13,3 +13,7 @@
 .min td {
     white-space: nowrap;
 }
+
+.min-ui-dialog, .min.ui-dialog-content {
+    overflow: visible;
+}

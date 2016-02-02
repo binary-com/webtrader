@@ -29,13 +29,11 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                     {
                         text: "OK",
                         click: function () {
-
-                            require(['charts/indicators/highcharts_custom/cdlxsidegap3methods'], function (cdlxsidegap3methods) {
-                                cdlxsidegap3methods.init();
-                                //Add CDLXSIDEGAP3METHODS for the main series
-                                $($(".cdlxsidegap3methods").data('refererChartID')).highcharts().series[0].addCDLXSIDEGAP3METHODS();
+                            var series = $($(".cdlxsidegap3methods").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlxsidegap3methods', {
+                                cdlIndicatorCode : 'cdlxsidegap3methods',
+                                onSeriesID : series.options.id
                             });
-
                             closeDialog.call($html);
                         }
                     },

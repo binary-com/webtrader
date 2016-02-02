@@ -21,7 +21,6 @@ requirejs.config({
         //TODO find out whats the advantage of using datatables-jquery-ui
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
-        'indicator_base': 'charts/indicators/highcharts_custom/indicator_base',
         'es6-promise':'lib/es6-promise/promise.min',
         'rivets': 'lib/rivets/dist/rivets.min',
         'sightglass': 'lib/sightglass/index',
@@ -30,6 +29,7 @@ requirejs.config({
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
+        'ddslick': 'lib/ddslick/jquery.ddslick.min'
     },
     map: {
         '*': {

@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 12/20/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -20,7 +20,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#kama_stroke").colorpicker({
@@ -42,6 +41,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#kama_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 158,
+                background: "white",
+                onSelected: function (data) {
+                    $('#kama_dashStyle .dd-selected-image').css('max-width', '125px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#kama_dashStyle .dd-option-image').css('max-width', '125px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -50,6 +61,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'kama-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -72,20 +84,17 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
                             if (!isValid) return;
 
-                            require(['charts/indicators/highcharts_custom/kama'], function (kama) {
-                                kama.init();
-                                var options = {
-                                    period: parseInt($html.find("#kama_period").val()),
-                                    fastPeriod: parseInt($html.find("#kama_fast_period").val()),
-                                    slowPeriod: parseInt($html.find("#kama_slow_period").val()),
-                                    stroke: defaultStrokeColor,
-                                    strokeWidth: parseInt($html.find("#kama_strokeWidth").val()),
-                                    dashStyle: $html.find("#kama_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#kama_appliedTo").val())
-                                }
-                                //Add KAMA for the main series
-                                $($(".kama").data('refererChartID')).highcharts().series[0].addKAMA(options);
-                            });
+                            var options = {
+                                period: parseInt($html.find("#kama_period").val()),
+                                fastPeriod: parseInt($html.find("#kama_fast_period").val()),
+                                slowPeriod: parseInt($html.find("#kama_slow_period").val()),
+                                stroke: defaultStrokeColor,
+                                strokeWidth: parseInt($html.find("#kama_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#kama_appliedTo").val())
+                            }
+                            //Add KAMA for the main series
+                            $($(".kama").data('refererChartID')).highcharts().series[0].addIndicator('kama', options);
 
                             closeDialog.call($html);
                         }
@@ -98,6 +107,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);

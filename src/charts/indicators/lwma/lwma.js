@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/22/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -38,6 +38,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 });
             });
 
+            var selectedDashStyle = "Solid";
+            $('#lwma_dash_style').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#lwma_dash_style .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#lwma_dash_style .dd-option-image').css('max-width', '115px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -46,6 +58,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 my: "center",
                 at: "center",
                 of: window,
+                dialogClass: 'lwma-ui-dialog',
                 buttons: [
 					{
 					    text: "OK",
@@ -63,19 +76,16 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					            return;
 					        }
 
-					        require(['charts/indicators/highcharts_custom/lwma'], function (lwma) {
-					            lwma.init();
-					            var options = {
-					                period: parseInt($("#lwma_period").val()),
-					                strokeColor: $("#lwma_stroke_color").css("background-color"),
-					                strokeWidth: parseInt($("#lwma_stroke_width").val()),
-					                dashStyle: $("#lwma_dash_style").val(),
-					                appliedTo: parseInt($html.find("#lwma_appliedTo").val())
-					            }
+					        var options = {
+					            period: parseInt($("#lwma_period").val()),
+					            stroke: $("#lwma_stroke_color").css("background-color"),
+					            strokeWidth: parseInt($("#lwma_stroke_width").val()),
+					            dashStyle: selectedDashStyle,
+					            appliedTo: parseInt($html.find("#lwma_appliedTo").val())
+					        }
 
-					            //Add LWMA to the main series
-					            $($(".lwma").data('refererChartID')).highcharts().series[0].addLWMA(options);
-					        });
+					        //Add LWMA to the main series
+					        $($(".lwma").data('refererChartID')).highcharts().series[0].addIndicator('lwma', options);
 
 					        closeDialog.call($html);
 					    }
@@ -88,6 +98,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					}
                 ]
             });
+            $html.find('select').selectmenu();
 
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);

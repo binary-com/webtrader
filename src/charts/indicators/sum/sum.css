@@ -19,3 +19,7 @@
     width: 100%;
     border-radius: 5px;
 }
+
+.sum-ui-dialog, .sum.ui-dialog-content, .sum_level.ui-dialog-content {
+    overflow: visible;
+}

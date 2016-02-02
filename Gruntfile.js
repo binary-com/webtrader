@@ -2,38 +2,15 @@
 
 module.exports = function (grunt) {
 
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-rename');
-    grunt.loadNpmTasks('grunt-text-replace');
-    grunt.loadNpmTasks('grunt-gh-pages');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    /*
-        "loc": 72,    //physical lines
-        "sloc": 45,   //lines of source code
-        "cloc": 10,   //total comment
-        "scloc": 10,  //singleline
-        "mcloc": 0,   //multiline
-        "nloc": 17,   //multiline
-        "file": 22,   //empty
-    */
-    grunt.loadNpmTasks('grunt-sloc');
-    grunt.loadNpmTasks('grunt-bump');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-jasmine');
-    grunt.loadNpmTasks("grunt-remove-logging");
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-if');
-    grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-gitinfo');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    var pkg = grunt.file.readJSON('package.json');
+    for (var key in pkg.devDependencies) {
+        if (key.indexOf('grunt') !== -1) {
+            grunt.loadNpmTasks(key);
+        }
+    }
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: pkg,
         //Executing this task will populate grunt.config.gitinfo with repository data below
         gitinfo: {
             local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
@@ -60,7 +37,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'src/',
-                        src: ['**'],
+                        src: ['**', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
                         dest: 'dist/uncompressed/v<%=pkg.version%>'
                     }
                 ]
@@ -94,6 +71,7 @@ module.exports = function (grunt) {
                             'sightglass/index.js',
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
                             'moment/min/moment.min.js',
+                            'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
@@ -329,12 +307,28 @@ module.exports = function (grunt) {
                 //array of tasks to execute if all tests pass
                 ifTrue: [ 'shell:moveEverythingToBETA_folder', 'gh-pages:travis-deploy' ]
             }
+        },
+        concat: {
+            concat_indicators: {
+                //Define the sequence here, indicators which require other indicators to be built first, should be explicitly listed here
+                src: ['src/charts/indicators/highcharts_custom/IndicatorBase.js',
+                        'src/charts/indicators/highcharts_custom/WMA.js',
+                        'src/charts/indicators/highcharts_custom/SMA.js',
+                        'src/charts/indicators/highcharts_custom/EMA.js',
+                        'src/charts/indicators/highcharts_custom/TEMA.js',
+                        'src/charts/indicators/highcharts_custom/TRIMA.js',
+                        'src/charts/indicators/highcharts_custom/STDDEV.js',
+                        'src/charts/indicators/highcharts_custom/**/*.js',
+                        '!src/charts/indicators/highcharts_custom/currentprice.js'
+                    ],
+                dest: 'dist/uncompressed/v<%=pkg.version%>/charts/indicators/highcharts_custom/indicators.js'
+            }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'copy:copyLibraries', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'copy:copy_AfterCompression']);
-  	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
+	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */

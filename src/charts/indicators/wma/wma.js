@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -20,7 +20,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#wma_stroke").colorpicker({
@@ -42,6 +41,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#wma_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 138,
+                background: "white",
+                onSelected: function (data) {
+                    $('#wma_dashStyle .dd-selected-image').css('max-width', '105px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#wma_dashStyle .dd-option-image').css('max-width', '105px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -50,6 +61,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'wma-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -67,18 +79,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                                 return;
                             }
 
-                            require(['charts/indicators/highcharts_custom/wma'], function ( wma ) {
-                                wma.init();
-                                var options = {
-                                    period : parseInt($html.find(".wma_input_width_for_period").val()),
-                                    stroke : defaultStrokeColor,
-                                    strokeWidth : parseInt($html.find("#wma_strokeWidth").val()),
-                                    dashStyle : $html.find("#wma_dashStyle").val(),
-                                    appliedTo: parseInt($html.find("#wma_appliedTo").val())
-                                }
-                                //Add WMA for the main series
-                                $($(".wma").data('refererChartID')).highcharts().series[0].addWMA(options);
-                            });
+                            var options = {
+                                period : parseInt($html.find(".wma_input_width_for_period").val()),
+                                stroke : defaultStrokeColor,
+                                strokeWidth : parseInt($html.find("#wma_strokeWidth").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($html.find("#wma_appliedTo").val())
+                            }
+                            //Add WMA for the main series
+                            $($(".wma").data('refererChartID')).highcharts().series[0].addIndicator('wma', options);
 
                             closeDialog.call($html);
                         }
@@ -91,6 +100,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if (typeof _callback == "function")
             {

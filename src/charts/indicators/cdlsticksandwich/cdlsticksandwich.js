@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlsticksandwich'], function (cdlsticksandwich) {
-                                cdlsticksandwich.init();
-                                //Add CDLSTICKSANDWICH for the main series
-                                $($(".cdlsticksandwich").data('refererChartID')).highcharts().series[0].addCDLSTICKSANDWICH();
+                            var series = $($(".cdlsticksandwich").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlsticksandwich', {
+                                cdlIndicatorCode : 'cdlsticksandwich',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

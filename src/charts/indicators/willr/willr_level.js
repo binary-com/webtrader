@@ -2,7 +2,7 @@
  * Created by arnab on 3/29/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     var callBackAfterOKPressed = undefined;
     function closeDialog() {
@@ -26,7 +26,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#willr_level_stroke").colorpicker({
@@ -48,6 +47,19 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 }
             });
 
+            var selectedDashStyle = "Solid";
+            $('#willr_level_dashStyle').ddslick({
+                imagePosition: "left",
+                width: 118,
+                background: "white",
+                onSelected: function (data) {
+                    $('#willr_level_dashStyle .dd-selected-image').css('max-width', '85px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#willr_level_dashStyle .dd-option-image').css('max-width', '85px');
+
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -56,27 +68,16 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
+                dialogClass: 'willr-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
                         click: function() {
 
-                            if (!isNumericBetween($html.find(".willr_level_input_width_for_level").val(),
-                                    parseInt($html.find(".willr_level_input_width_for_level").attr("min")),
-                                    parseInt($html.find(".willr_level_input_width_for_level").attr("max"))))
-                            {
-                                require(["jquery", "jquery-growl"], function($) {
-                                    $.growl.error({ message: "Only numbers between " + $html.find(".willr_level_input_width_for_level").attr("min")
-                                    + " to " + $html.find(".willr_level_input_width_for_level").attr("max")
-                                    + " is allowed for " + $html.find(".willr_level_input_width_for_level").closest('tr').find('td:first').text() + "!" });
-                                });
-                                return;
-                            }
-
                             if (callBackAfterOKPressed) {
                                 callBackAfterOKPressed([new Level(parseFloat($html.find(".willr_level_input_width_for_level").val()),
                                     defaultStrokeColor, parseInt($html.find("#willr_level_strokeWidth").val()),
-                                    $html.find("#willr_level_dashStyle").val())]);
+                                    selectedDashStyle)]);
                             }
 
                             closeDialog.call($html);
@@ -90,6 +91,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if ($.isFunction(_callback))
             {

@@ -34,8 +34,9 @@ define(["jquery", "datatables", "common/util"], function ($) {
                           var chart = $(refererChartID).highcharts();
                           var series = chart.series[0];//This is the main series
                           var type = series.options.type;
+                          var timePeriod = $(refererChartID).data('timePeriod');
 
-                          if (indicatorData && indicatorData.ohlcOnly && isDataTypeClosePriceOnly(type)) {
+                          if (indicatorData && indicatorData.isTickChartNotAllowed && isTick(timePeriod)) {
                             $(this).hide();
                           } else {
                             $(this).show();

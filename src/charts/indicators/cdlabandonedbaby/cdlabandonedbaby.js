@@ -16,7 +16,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
 
             $html.dialog({
                 autoOpen: false,
@@ -31,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                         text: "OK",
                         click: function() {
 
-                            require(['charts/indicators/highcharts_custom/cdlabandonedbaby'], function ( cdlabandonedbaby ) {
-                                cdlabandonedbaby.init();
-                                //Add CDLABANDONEDBABY for the main series
-                                $($(".cdlabandonedbaby").data('refererChartID')).highcharts().series[0].addCDLABANDONEDBABY();
+                            var series = $($(".cdlabandonedbaby").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlabandonedbaby', {
+                                cdlIndicatorCode : 'cdlabandonedbaby',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

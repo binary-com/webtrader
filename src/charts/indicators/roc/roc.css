@@ -19,3 +19,7 @@
     width: 100%;
     border-radius: 5px;
 }
+
+.roc-ui-dialog, .roc.ui-dialog-content, .roc_level.ui-dialog-content {
+    overflow: visible;
+}

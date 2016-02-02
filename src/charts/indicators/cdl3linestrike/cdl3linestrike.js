@@ -16,7 +16,6 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
 
             $html.dialog({
                 autoOpen: false,
@@ -30,13 +29,11 @@ define(["jquery", "jquery-ui", 'color-picker'], function($) {
                     {
                         text: "OK",
                         click: function() {
-
-                            require(['charts/indicators/highcharts_custom/cdl3linestrike'], function ( cdl3linestrike ) {
-                                cdl3linestrike.init();
-                                //Add CDL3LINESTRIKE for the main series
-                                $($(".cdl3linestrike").data('refererChartID')).highcharts().series[0].addCDL3LINESTRIKE();
+                            var series = $($(".cdl3linestrike").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdl3linestrike', {
+                                cdlIndicatorCode : 'cdl3linestrike',
+                                onSeriesID : series.options.id
                             });
-
                             closeDialog.call($html);
                         }
                     },

@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlhighwave'], function (cdlhighwave) {
-                                cdlhighwave.init();
-                                //Add CDLHIGHWAVE for the main series
-                                $($(".cdlhighwave").data('refererChartID')).highcharts().series[0].addCDLHIGHWAVE();
+                            var series = $($(".cdlhighwave").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlhighwave', {
+                                cdlIndicatorCode : 'cdlhighwave',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

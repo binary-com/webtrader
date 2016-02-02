@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdladvanceblock'], function (cdladvanceblock) {
-                                cdladvanceblock.init();
-                                //Add CDLADVANCEBLOCK for the main series
-                                $($(".cdladvanceblock").data('refererChartID')).highcharts().series[0].addCDLADVANCEBLOCK();
+                            var series = $($(".cdladvanceblock").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdladvanceblock', {
+                                cdlIndicatorCode : 'cdladvanceblock',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

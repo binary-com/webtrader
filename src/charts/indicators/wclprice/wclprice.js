@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/16/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -38,6 +38,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 });
             });
 
+            var selectedDashStyle = "Solid";
+            $('#wclprice_dash_style').ddslick({
+                imagePosition: "left",
+                width: 148,
+                background: "white",
+                onSelected: function (data) {
+                    $('#wclprice_dash_style .dd-selected-image').css('max-width', '115px');
+                    selectedDashStyle = data.selectedData.value
+                }
+            });
+            $('#wclprice_dash_style .dd-option-image').css('max-width', '115px');
+
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -46,21 +58,18 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 my: "center",
                 at: "center",
                 of: window,
+                dialogClass: 'wclprice-ui-dialog',
                 buttons: [
 					{
 					    text: "OK",
 					    click: function () {
-					       
-					        require(['charts/indicators/highcharts_custom/wclprice'], function (wclprice) {
-					            wclprice.init();
-					            var options = {
-					                strokeColor: $("#wclprice_line_stroke").css("background-color"),
-					                strokeWidth: parseInt($("#wclprice_stroke_width").val()),
-					                dashStyle: $("#wclprice_dash_style").val()
-					            }
-					            //Add WCLPRICE to the main series
-					            $($(".wclprice").data('refererChartID')).highcharts().series[0].addWCLPRICE(options);
-					        });
+					        var options = {
+					            stroke: $("#wclprice_line_stroke").css("background-color"),
+					            strokeWidth: parseInt($("#wclprice_stroke_width").val()),
+					            dashStyle: selectedDashStyle
+					        }
+					        //Add WCLPRICE to the main series
+					        $($(".wclprice").data('refererChartID')).highcharts().series[0].addIndicator('wclprice', options);
 
 					        closeDialog.call($html);
 					    }
@@ -73,6 +82,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 					}
                 ]
             });
+            $html.find('select').selectmenu();
 
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);

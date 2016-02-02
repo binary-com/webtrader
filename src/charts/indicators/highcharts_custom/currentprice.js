@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 3/22/15.
  */
-define(['indicator_base', 'highstock'], function (indicatorBase) {
+define(['common/util', 'highstock'], function () {
 
     /*
         This is a map storing information as -
@@ -18,7 +18,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         init: function() {
 
-            (function(H,$,indicatorBase){
+            (function(H,$){
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
@@ -121,7 +121,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
                     if ($.isNumeric(this.data[this.data.length - 1].change)) {
                         isChange = true;
-                        price = indicatorBase.toFixed(this.data[this.data.length - 1].change, 2);
+                        price = toFixed(this.data[this.data.length - 1].change, 2);
                     }
                     //console.log('Series name : ', this.options.name, ",", "Unique ID : ", uniqueID);
                     this.yAxis.addPlotLine({
@@ -142,7 +142,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     });
                 }
 
-            }(Highcharts, jQuery, indicatorBase));
+            }(Highcharts, jQuery));
 
         },
 

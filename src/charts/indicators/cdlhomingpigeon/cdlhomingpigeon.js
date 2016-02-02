@@ -30,10 +30,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                         text: "OK",
                         click: function () {
 
-                            require(['charts/indicators/highcharts_custom/cdlhomingpigeon'], function (cdlhomingpigeon) {
-                                cdlhomingpigeon.init();
-                                //Add CDLHOMINGPIGEON for the main series
-                                $($(".cdlhomingpigeon").data('refererChartID')).highcharts().series[0].addCDLHOMINGPIGEON();
+                            var series = $($(".cdlhomingpigeon").data('refererChartID')).highcharts().series[0];
+                            series.addIndicator('cdlhomingpigeon', {
+                                cdlIndicatorCode : 'cdlhomingpigeon',
+                                onSeriesID : series.options.id
                             });
 
                             closeDialog.call($html);

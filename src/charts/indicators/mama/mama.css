@@ -14,3 +14,7 @@
 {
 	width: 50%;
 }
+
+.mama-ui-dialog , .mama.ui-dialog-content {
+     overflow : visible;
+}

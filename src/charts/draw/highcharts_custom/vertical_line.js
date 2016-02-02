@@ -1,7 +1,7 @@
 /**
  * Created by Arnab Karmakar on 12/7/15.
  */
-define(['indicator_base', 'highstock'], function (indicatorBase) {
+define(['highstock', 'common/util'], function () {
 
     /*
      This is a map storing information as -
@@ -18,7 +18,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
 
         init: function() {
 
-            (function(H,$,indicatorBase){
+            (function(H,$){
 
                 //Make sure that HighStocks have been loaded
                 //If we already loaded this, ignore further execution
@@ -100,7 +100,7 @@ define(['indicator_base', 'highstock'], function (indicatorBase) {
                     });
                 }
 
-            }(Highcharts, jQuery, indicatorBase));
+            }(Highcharts, jQuery));
 
         },
 
