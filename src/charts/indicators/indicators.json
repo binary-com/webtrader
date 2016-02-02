@@ -561,5 +561,12 @@
     "id": "trange",
     "long_display_name": "True Range",
     "short_display_name": "TRANGE"
+  },
+
+  "stochrsi": {
+    "id": "stochrsi",
+    "long_display_name": "Stochastic Relative Strength Index",
+    "short_display_name": "STOCHRSI"
   }
+
 }
