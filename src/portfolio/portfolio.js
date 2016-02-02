@@ -48,9 +48,16 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     }
 
     var subscribed_before = false;
-    function resubscribe_proposal_open_contract() {
+    var subscribers = 0;
+    /* command could be 'subscribe','forget' and 'resubscribe'. */
+    function resubscribe_proposal_open_contract(command) {
+        if(command === 'subscribe') { ++subscribers; }
+        else if(command === 'forget') { --subscribers; }
+        else if( command === 'resubscribe' ) { /* no change */ }
+        else { console.error('wrong command!'); return; }
+
         /* suscribe to all open contracts */
-        if(!subscribed_before) {
+        if(!subscribed_before && subscribers > 0) {
           liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
               .then(function(data){ subscribed_before = true; })
               .catch(function (err) {
@@ -58,16 +65,16 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 $.growl.error({ message: err.message });
               });
         }
-        /* first forget then subscribe */
-        else {
+        /* forget then if needed, subscribe again*/
+        else if(subscribed_before) {
           liveapi.send({ forget_all: 'proposal_open_contract' })
               .then(function(data){
                 subscribed_before = false;
-                resubscribe_proposal_open_contract();
+                resubscribe_proposal_open_contract('resubscribe');
               })
               .catch(function (err) {
                 subscribed_before = false;
-                resubscribe_proposal_open_contract();
+                resubscribe_proposal_open_contract('resubscribe');
                 console.error(err.message);
               });
         }
@@ -80,7 +87,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
       var data = table.api().row(tr).data();
       var contract = _.last(data);
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
-          console.warn(contract);
+          viewTransaction.init(contract.contract_id, contract.transaction_id);
       });
     }
 
@@ -219,6 +226,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     }
 
     return {
+        proposal_open_contract: {
+          subscribe: resubscribe_proposal_open_contract.bind(null, 'subscribe'),
+          forget: resubscribe_proposal_open_contract.bind(null, 'forget'),
+        },
         init: init
     }
 });

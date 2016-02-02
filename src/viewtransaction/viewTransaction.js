@@ -132,7 +132,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                 purchase_time: ,buy_price: ,sell_price:, currency:,
                 duration: , duration_type: 'ticks/seconds/...' } */
   function init(contract_id, transaction_id){
-    require(['text!viewtransaction/viewTransaction.html']);
     liveapi.cached.send({proposal_open_contract: 1, contract_id: contract_id})
            .then(function(data){
               var proposal = data.proposal_open_contract;
