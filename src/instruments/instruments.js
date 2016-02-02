@@ -78,9 +78,8 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
     return {
         init: function() {
             require(["css!instruments/instruments.css"]);
-            return new Promise(function(resolve, reject) {
-                /* cache the result of trading_times call, because assetIndex needs the same data */
-                liveapi
+            /* cache the result of trading_times call, because assetIndex needs the same data */
+            return liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (data) {
                         markets = menu.extractChartableMarkets(data);
@@ -90,11 +89,8 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
                             menu.sortMenu(markets);
                             menu.refreshMenu(rootUL, markets, onMenuItemClick);
                         }
-                        resolve(markets);
-                    }).catch(function(e) {
-                        reject(e);
+                        return markets;
                     });
-            });
         },
 
         getMarketData : function() {
