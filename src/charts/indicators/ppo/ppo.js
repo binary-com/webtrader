@@ -1,5 +1,5 @@
-/**
-Created By Mahboob.M on 12/12/2015
+﻿/**
+Created By Mahboob.M on 2/1/2015
 */
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
@@ -8,15 +8,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
     }
 
     function init(containerIDWithHash, _callback) {
-        require(['css!charts/indicators/macd/macd.css']);
+        require(['css!charts/indicators/ppo/ppo.css']);
 
-        require(['text!charts/indicators/macd/macd.html'], function ($html) {
+        require(['text!charts/indicators/ppo/ppo.html'], function ($html) {
 
             $html = $($html);
 
             $html.appendTo("body");
 
-            $html.find("#macd_line_stroke,#signal_line_stroke,#macd_hstgrm_color").each(function () {
+            $html.find("#ppo_line_stroke,#signal_line_stroke,#ppo_hstgrm_color").each(function () {
                 $(this).colorpicker({
                     part: {
                         map: { size: 128 },
@@ -38,20 +38,20 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             var selectedDashStyle = "Solid";
-            $('#macd_dash_style').ddslick({
+            $('#ppo_dash_style').ddslick({
                 imagePosition: "left",
                 width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#macd_dash_style .dd-selected-image').css('max-width', '115px');
+                    $('#ppo_dash_style .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#macd_dash_style .dd-option-image').css('max-width', '115px');
+            $('#ppo_dash_style .dd-option-image').css('max-width', '115px');
 
-            $("#macd_line_stroke").css("background", '#2a277a');
+            $("#ppo_line_stroke").css("background", '#2a277a');
             $("#signal_line_stroke").css("background", 'red');
-            $("#macd_hstgrm_color").css("background", '#7e9fc9');
+            $("#ppo_hstgrm_color").css("background", '#7e9fc9');
 
             $html.dialog({
                 autoOpen: false,
@@ -61,14 +61,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 my: "center",
                 at: "center",
                 of: window,
-                dialogClass: 'macd-ui-dialog',
+                dialogClass: 'ppo-ui-dialog',
                 buttons: [
 					{
 					    text: "OK",
 					    click: function () {
 					        //Check validation
 					        var isValid = true;
-					        $(".macd_input_width_for_period").each(function () {
+					        $(".ppo_input_width_for_period").each(function () {
 					            if (!isNumericBetween(parseInt($(this).val()), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
 					                var $elem = $(this);
 					                require(["jquery", "jquery-growl"], function ($) {
@@ -87,21 +87,21 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
 
 					        var options = {
-					            fastPeriod: parseInt($("#macd_fast_period").val()),
-					            slowPeriod: parseInt($("#macd_slow_period").val()),
-					            signalPeriod: parseInt($("#macd_signal_period").val()),
-					            fastMaType: $("#macd_fast_ma_type").val(),
-					            slowMaType: $("#macd_slow_ma_type").val(),
-					            signalMaType: $("#macd_signal_ma_type").val(),
-					            macdStroke: $("#macd_line_stroke").css("background-color"),
+					            fastPeriod: parseInt($("#ppo_fast_period").val()),
+					            slowPeriod: parseInt($("#ppo_slow_period").val()),
+					            signalPeriod: parseInt($("#ppo_signal_period").val()),
+					            fastMaType: $("#ppo_fast_ma_type").val(),
+					            slowMaType: $("#ppo_slow_ma_type").val(),
+					            signalMaType: $("#ppo_signal_ma_type").val(),
+					            ppoStroke: $("#ppo_line_stroke").css("background-color"),
 					            signalLineStroke: $("#signal_line_stroke").css('background-color'),
-					            macdHstgrmColor: $("#macd_hstgrm_color").css('background-color'),
-					            strokeWidth: parseInt($("#macd_stroke_width").val()),
+					            ppoHstgrmColor: $("#ppo_hstgrm_color").css('background-color'),
+					            strokeWidth: parseInt($("#ppo_stroke_width").val()),
 					            dashStyle: selectedDashStyle,
-					            appliedTo: parseInt($("#macd_applied_to").val())
+					            appliedTo: parseInt($("#ppo_applied_to").val())
 					        }
 					        //Add Bollinger for the main series
-					        $($(".macd").data('refererChartID')).highcharts().series[0].addIndicator('macd', options);
+					        $($(".ppo").data('refererChartID')).highcharts().series[0].addIndicator('ppo', options);
 
 					        closeDialog.call($html);
 					    }
@@ -125,12 +125,12 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     return {
         open: function (containerIDWithHash) {
-            if ($(".macd").length === 0) {
+            if ($(".ppo").length === 0) {
                 init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".macd").data('refererChartID', containerIDWithHash).dialog("open");
+            $(".ppo").data('refererChartID', containerIDWithHash).dialog("open");
         }
     };
 });
