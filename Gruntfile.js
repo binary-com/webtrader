@@ -72,6 +72,7 @@ module.exports = function (grunt) {
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
                             'moment/min/moment.min.js',
                             'ddslick/jquery.ddslick.min.js',
+                            'highcharts-export-csv/export-csv.js',
                             '!**/**/favicon.ico'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
