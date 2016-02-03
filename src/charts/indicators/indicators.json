@@ -604,6 +604,13 @@
     "id": "var",
     "long_display_name": "Variance",
     "short_display_name": "VAR"
+  },
+
+   "cks": {
+    "id": "cks",
+    "long_display_name": "Chande Kroll Stop",
+    "short_display_name": "CKS",
+	"onChartIndicator" : true
   }
 
 }
