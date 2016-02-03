@@ -50,13 +50,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     var subscribed_before = false;
     var subscribers = 0;
     /* command could be 'subscribe','forget' and 'resubscribe'. */
-    function resubscribe_proposal_open_contract(command) {
-        if(command === 'subscribe') { ++subscribers; }
-        else if(command === 'forget') { --subscribers; }
-        else if( command === 'resubscribe' ) { /* no change */ }
-        else { console.error('wrong command!'); return; }
-
-        /* suscribe to all open contracts */
+    function proposal_open_contract(command) {
+      if(command === 'subscribe') {
+        ++subscribers;
         if(!subscribed_before && subscribers > 0) {
           liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
               .then(function(data){ subscribed_before = true; })
@@ -65,19 +61,35 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 $.growl.error({ message: err.message });
               });
         }
-        /* forget then if needed, subscribe again*/
-        else if(subscribed_before) {
+      }
+      else if(command === 'forget') {
+        --subscribers;
+        if(subscribed_before && subscribers === 0) {
           liveapi.send({ forget_all: 'proposal_open_contract' })
               .then(function(data){
                 subscribed_before = false;
-                resubscribe_proposal_open_contract('resubscribe');
               })
               .catch(function (err) {
                 subscribed_before = false;
-                resubscribe_proposal_open_contract('resubscribe');
                 console.error(err.message);
               });
         }
+      }
+      else if( command === 'resubscribe' ) {
+        liveapi.send({ forget_all: 'proposal_open_contract' })
+          .then(function(data) {
+            subscribed_before = false;
+            return liveapi.send({ proposal_open_contract: 1,subscribe: 1 }); /* subscribe again */
+          })
+          .catch(function (err) {
+            subscribed_before = false;
+            console.error(err.message);
+          });
+      }
+      else {
+        console.error('wrong command!');
+        return;
+      }
     }
 
     function on_arrow_click(e) {
@@ -95,13 +107,13 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
             .then(function (data) {
-                var refresh = function() {
+                var refresh = function(subscribe) {
                   if(portfolioWin.dialogExtend('state') === 'minimized') {
                       portfolioWin.dialogExtend('restore');
                   }
                   liveapi.send({ balance: 1 }).catch(function (err) { console.error(err); $.growl.error({ message: err.message }); });
                   update_table();
-                  resubscribe_proposal_open_contract();
+                  proposal_open_contract( subscribe === true? 'subscribe' : 'resubscribe');
                 };
 
                 /* refresh blance on blance change */
@@ -115,7 +127,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     /* TODO: once the api provoided "longcode" use it to update
                       the table and do not issue another {portfolio:1} call */
                     update_table();
-                    resubscribe_proposal_open_contract();
+                    proposal_open_contract('resubscribe');
                 });
 
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
@@ -124,15 +136,12 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     minHeight: 60,
                     'data-authorized': 'true',
                     close: function () {
-                        liveapi.send({ forget_all: 'proposal_open_contract' })
-                                .catch(function (err) {
-                                    console.error(err.message);
-                                });
+                        proposal_open_contract('forget');
                         /* un-register proposal_open_contract handler */
                         liveapi.events.off('proposal_open_contract', update_indicative);
                     },
                     open: function () {
-                        refresh();
+                        refresh(true /* subscribe to proposal_open_contract */);
                         /* register handler for proposal_open_contract */
                         liveapi.events.on('proposal_open_contract', update_indicative);
                     },
@@ -227,8 +236,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
     return {
         proposal_open_contract: {
-          subscribe: resubscribe_proposal_open_contract.bind(null, 'subscribe'),
-          forget: resubscribe_proposal_open_contract.bind(null, 'forget'),
+          subscribe: function(){ proposal_open_contract('subscribe'); },
+          forget: function() { proposal_open_contract('forget'); },
+          resubscribe: function() { proposal_open_contract('resubscribe'); }
         },
         init: init
     }
