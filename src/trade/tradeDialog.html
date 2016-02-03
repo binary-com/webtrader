@@ -31,7 +31,7 @@
         <li class='text-align-center bold'>
             <span class="text-vertical-align">Start time </span>
         </li>
-        <li>
+        <li rv-on-click="date_start.update">
             <select class="date-start-select"
                     rv-jq-class="'trade-dialog-date-start-ul'"
                     rv-selectmenu="date_start.value | notify duration_unit.update | debounce proposal.onchange"
