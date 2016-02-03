@@ -27,7 +27,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
-            //$html.find('select').selectmenu(); TODO for some reason, this does not work
             $html.find("input[type='button']").button();
 
             $html.find("#stddev_stroke").colorpicker({
@@ -163,6 +162,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 ]
             });
 
+            $html.find('select').selectmenu({
+                width : 120
+            });
             if (typeof _callback == "function")
             {
                 _callback( containerIDWithHash );
