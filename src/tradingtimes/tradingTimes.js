@@ -49,7 +49,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     sym.display_name,
                     sym.times.open[0],
                     sym.times.close[0],
-                    sym.settlement || '-',
+                    sym.times.settlement || sym.settlement || '-',
                     sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
                 ];
             });
