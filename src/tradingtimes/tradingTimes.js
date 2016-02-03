@@ -9,7 +9,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
     /* data: result of trading_times api */
     function processData(markets){
-        var markets = markets || [];
+        markets = markets || [];
         //    || [{
         //    display_name: 'Forex',
         //    submarkets: [{
@@ -43,7 +43,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             // TODO: comeback and use lodash once 'trade module' changes got merged.
             var market = markets.filter(function (m) { return m.display_name == marketname; })[0];
             var symbols = market && market.submarkets.filter(function (s) { return s.display_name == submarket_name; })[0].instruments;
-            console.log(symbols);
 
             var rows = (symbols || []).map(function (sym) {
                 return [
@@ -54,7 +53,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
                 ];
             });
-            console.log(rows);
             return rows;
         }
 
