@@ -29,7 +29,8 @@ requirejs.config({
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
-        'ddslick': 'lib/ddslick/jquery.ddslick.min'
+        'ddslick': 'lib/ddslick/jquery.ddslick.min',
+        'export-csv': 'lib/highcharts-export-csv/export-csv'
     },
     map: {
         '*': {
@@ -74,6 +75,9 @@ requirejs.config({
             exports : 'rivets'
         },
         "highcharts-more": {
+            deps: ["highstock"]
+        },
+        "export-csv": {
             deps: ["highstock"]
         }
     }
@@ -153,6 +157,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 function (statement) {
                     var elem = $navMenu.find("a.statement");
                     statement.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of download dialog
+            load_ondemand($navMenu.find("a.download"), 'click', 'loading Download/View Data ...', 'download/download',
+                function (download) {
+                    var elem = $navMenu.find("a.download");
+                    download.init(elem);
                     elem.click();
                 });
         }

@@ -87,7 +87,9 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu();
+            $html.find('select').selectmenu({
+                width : 140
+            });
 
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);
