@@ -49,6 +49,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
     var subscribed_before = false;
     var subscribers = 0;
+    liveapi.events.on('logout', function(){
+        subscribed_before = false;
+        subscribers = 0;
+    });
     /* command could be 'subscribe','forget' and 'resubscribe'. */
     function proposal_open_contract(command) {
       if(command === 'subscribe') {

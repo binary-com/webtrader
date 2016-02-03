@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div class="chart-container" rv-show="route.value | eq 'chart'">
+    <div class="chart-container" rv-show="route.value | notify chart.manual_reflow | eq 'chart'">
       <div class='transaction-chart' rv-show="chart.loading | eq ''"> </div>
 
       <div class='loading' rv-show="chart.loading | not-eq ''">

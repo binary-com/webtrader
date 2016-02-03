@@ -2,8 +2,8 @@
  * Created by amin on January 14, 2016.
  */
 
-define(["jquery", "windows/windows", "websockets/binary_websockets", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
-  function($, windows, liveapi, rv, moment, _) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/portfolio", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
+  function($, windows, liveapi, portfolio, rv, moment, _) {
   'use strict';
 
   require(['css!viewtransaction/viewTransaction.css']);
@@ -148,22 +148,46 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
            });
   }
 
+  function update_indicative(data, state){
+      var contract = data.proposal_open_contract;
+      var id = contract.contract_id,
+          bid_price = contract.bid_price;
+      if(id !== state.contract_id) { return; }
+
+      console.warn(contract);
+
+      if(contract.validation_error)
+        state.validation = contract.validation_error;
+      else if(contract.is_expired)
+        state.validation = 'This contract has expired';
+      else if(contract.is_valid_to_sell)
+        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
+  }
+
   function init_dialog(proposal) {
     require(['text!viewtransaction/viewTransaction.html'],function(html) {
         var root = $(html);
         var state = init_state(proposal, root);
+        var on_proposal_open_contract = function(data) { update_indicative(data, state); };
+
         var transWin = windows.createBlankWindow(root, {
             title: proposal.symbol_name + ' (' + proposal.transaction_id + ')',
             width: 700,
             minWidth: 300,
             minHeight:350,
             destroy: function() { },
-            close: function() { view && view.unbind(); },
+            close: function() {
+              view && view.unbind();
+              liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+            },
+            open: function() {
+              portfolio.proposal_open_contract.subscribe();
+              liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
+            },
             resize: function() {
               state.chart.manual_reflow();
               // state.chart.chart && state.chart.chart.reflow();
             },
-            close: function() { view.unbind(); },
             'data-authorized': 'true'
         });
 
@@ -178,6 +202,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
               value: 'table',
               update: function(value) { state.route.value = value; }
           },
+          contract_id: proposal.contract_id,
           longcode: proposal.longcode,
           validation: proposal.validation_error
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
@@ -222,19 +247,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         state.chart.chart.hasUserSize = null;
       };
 
-      /* TODO: register for the stream and update the status */
-      if(false)
-      liveapi.send({proposal_open_contract: 1, contract_id: proposal.contract_id})
-             .then(function(data){
-               state.validation = data.validation_error || 'This contract has expired';
-             })
-             .catch(function(err){
-               state.validation = err.message;
-               console.error(err);
-             });
-
       get_chart_data(state, root);
 
+      // window.state = state;
       return state;
   }
 
@@ -253,9 +268,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       ticks_history: state.chart.symbol,
       start: state.table.date_start - margin, /* load around 2 more thicks before start */
       end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
-      style: granularity === 0 ? 'ticks' : 'candles',
+      style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
+    if(granularity !== 0){
+      request.granularity = granularity;
+      request.style = 'candles';
+    }
 
     liveapi.send(request)
       .then(function(data) {
