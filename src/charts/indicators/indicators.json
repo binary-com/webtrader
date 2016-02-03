@@ -592,6 +592,12 @@
     "id": "aroonosc",
     "long_display_name": "Aroon Oscillator",
     "short_display_name": "AROONOSC"
+  },
+
+   "ao": {
+    "id": "ao",
+    "long_display_name": "Awesome Oscillator",
+    "short_display_name": "AO"
   }
 
 }
