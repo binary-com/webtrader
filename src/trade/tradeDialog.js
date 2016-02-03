@@ -609,11 +609,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             duration_unit: state.duration_unit.value,
         };
         /* pass data which is needed to show live tick purchase results */
-        if(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks') {
+        extra.show_tick_chart = false;
+        if(_(['Digits','Up/Down','Asians']).includes(extra.category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
             if(extra.category !== 'Digits')
               extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
+            extra.show_tick_chart = true;
         }
 
         // manually check to see if the user is authenticated or not,

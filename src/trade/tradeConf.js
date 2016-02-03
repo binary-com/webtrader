@@ -168,10 +168,10 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             category: extra.category,
             category_display: extra.category_display,
             status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
-            chart_visible: _(['Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks',
+            chart_visible: extra.show_tick_chart,
         },
         arrow: {
-          visible:!(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks'),
+          visible: !extra.show_tick_chart,
         },
         back: { visible: false }, /* back buttom */
       };
