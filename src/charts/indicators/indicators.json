@@ -580,6 +580,18 @@
     "long_display_name": "Arnaud Legoux Moving Average",
     "short_display_name": "ALMA",
 	 "onChartIndicator" : true
+  },
+
+   "aroon": {
+    "id": "aroon",
+    "long_display_name": "Aroon",
+    "short_display_name": "AROON"
+  },
+
+   "aroonosc": {
+    "id": "aroonosc",
+    "long_display_name": "Aroon Oscillator",
+    "short_display_name": "AROONOSC"
   }
 
 }
