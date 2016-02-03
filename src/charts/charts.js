@@ -260,7 +260,47 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                 },
 
                 exporting: {
-                    enabled: true
+                    enabled: true,
+                    //Explicity mentioning what buttons to show otherwise this chart will
+                    //also show Download CSV and Download XLS options. We do not want to
+                    //show those options because highchart's implementation do not download
+                    //all data from the chart. It only downloads the visible part of the chart.
+                    //We have implemented Charts -> Download as CSV to download all data from
+                    //chart
+                    buttons: {
+                        contextButton: {
+                            menuItems: [{
+                                text: 'Download PNG',
+                                onclick: function () {
+                                    this.exportChart();
+                                }
+                            }, {
+                                text: 'Download JPEG',
+                                onclick: function () {
+                                    this.exportChart({
+                                        type: 'image/jpeg'
+                                    });
+                                },
+                                separator: false
+                            }, {
+                                text: 'Download PDF',
+                                onclick: function () {
+                                    this.exportChart({
+                                        type: 'application/pdf'
+                                    });
+                                },
+                                separator: false
+                            }, {
+                                text: 'Download SVG',
+                                onclick: function () {
+                                    this.exportChart({
+                                        type: 'image/svg+xml'
+                                    });
+                                },
+                                separator: false
+                            }]
+                        }
+                    }
                 }
 
             });

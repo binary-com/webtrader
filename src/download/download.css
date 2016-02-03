@@ -1,0 +1,51 @@
+.download {
+    text-align: center;
+}
+.download_frmDate, .download_toDate {
+    width: 110px;
+}
+
+.download_frmTime {
+    margin-right: 40px;
+}
+
+.download_timePeriod_label {
+    margin-left: 40px;
+    margin-right: 7px;
+}
+
+.download_frmTime, .download_toTime {
+    width : 60px;
+}
+
+.download > div > div {
+    margin-bottom : 10px;
+}
+
+.downloadChart {
+    width : 637px;
+    height: 367px;
+}
+
+.download_show {
+    margin-left : 7px !important;
+}
+
+#download_instrument_menu {
+    width: 150px;
+}
+
+#download_instrument_menu li {
+    text-align: left;
+    white-space: nowrap;
+    background: #273051;
+    color: white;
+}
+
+#download_instrument_menu li.ui-state-focus, #download_instrument_menu li.ui-state-active {
+    background: #3F476E !important;
+}
+
+.download_table td {
+    text-align: left;
+}

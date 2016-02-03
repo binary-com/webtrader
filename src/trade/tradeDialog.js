@@ -310,9 +310,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         forward_starting_options = forward_starting_options.forward_starting_options
         var model = state.date_start;
         var array = [{ text: 'Now', value: 'now' }];
+        var later = (new Date().getTime() + 5*60*1000)/1000; // 5 minute from now
         _.each(forward_starting_options, function (row) {
           var step = 5 * 60; // 5 minutes step
-          var from = Math.ceil(Math.max(new Date().getTime() / 1000, row.open) / step) * step;
+          var from = Math.ceil(Math.max(later, row.open) / step) * step;
           to = row.close;
           for (var epoch = from; epoch < to; epoch += step) {
             var d = new Date(epoch * 1000);
@@ -322,7 +323,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             array.push({ text: text, value: epoch });
           }
         });
-        _.assign(state.date_start, { value: 'now', array: array, visible: true });
+        var options = { value: 'now', array: array, visible: true };
+        if(_.some(array, {value: state.date_start.value*1})) {
+          options.value = state.date_start.value;
+        }
+        _.assign(state.date_start, options);
       };
 
       state.date_expiry.update = function (date_or_hour) {
@@ -609,11 +614,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             duration_unit: state.duration_unit.value,
         };
         /* pass data which is needed to show live tick purchase results */
-        if(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks') {
+        extra.show_tick_chart = false;
+        if(_(['Digits','Up/Down','Asians']).includes(extra.category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
             if(extra.category !== 'Digits')
               extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
+            extra.show_tick_chart = true;
         }
 
         // manually check to see if the user is authenticated or not,
