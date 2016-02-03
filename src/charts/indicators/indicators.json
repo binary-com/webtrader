@@ -598,6 +598,12 @@
     "id": "ao",
     "long_display_name": "Awesome Oscillator",
     "short_display_name": "AO"
+  },
+
+   "var": {
+    "id": "var",
+    "long_display_name": "Variance",
+    "short_display_name": "VAR"
   }
 
 }
