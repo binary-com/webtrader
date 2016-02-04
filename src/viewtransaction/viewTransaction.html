@@ -71,6 +71,15 @@
 
   </div>
   <div class="footer">
-    <span rv-text="validation"></span>
+    <div class="sell-at-market">
+      <span class="bid-price"> USD 4.36 </span>
+      <span rv-b-sparkline="sell.ticks"> ABC</span>
+      <span>
+        <button rv-on-click="sell.onclick"
+                rv-disabled="sell.is_valid_to_sell"
+                class="sell-button shine">Sell At Market</button>
+      </span>
+    </div>
+    <span class='validation' rv-text="validation"></span>
   </div>
 </div>
