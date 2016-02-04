@@ -72,7 +72,9 @@
   </div>
   <div class="footer">
     <div class="sell-at-market">
-      <span class="bid-price" rv-text="sell.bid_price | prepend 'USD '"> USD 4.36 </span>
+      <span class="bid-price"
+            rv-text="sell.bid_price | prepend table.currency"
+            rv-indicative-color="sell.bid_price"> - </span>
       <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
       <span>
         <button rv-on-click="sell.sell"

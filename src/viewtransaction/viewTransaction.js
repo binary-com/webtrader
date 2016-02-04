@@ -163,6 +163,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.table.bid_price = contract.bid_price;
 
       state.sell.bid_price = contract.bid_price;
+      if(state.sell.bid_prices.length > 40) {
+        state.sell.bid_prices.shift();
+      }
       state.sell.bid_prices.push(contract.bid_price)
   }
 
@@ -175,8 +178,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var transWin = windows.createBlankWindow(root, {
             title: proposal.symbol_name + ' (' + proposal.transaction_id + ')',
             width: 700,
-            minWidth: 300,
-            minHeight:350,
+            minWidth: 490,
+            minHeight:370,
             destroy: function() { },
             close: function() {
               view && view.unbind();

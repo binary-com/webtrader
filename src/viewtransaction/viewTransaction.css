@@ -117,22 +117,23 @@
 }
 /************* footer *************************/
 .view-transaction-dialog .footer {
-  background:  #f5f5f5;
+  background: linear-gradient(#fff, #eee);
   text-align: center;
 }
+
+.view-transaction-dialog .footer .sell-at-market .sparkline,
 .view-transaction-dialog .footer .validation {
   text-align: left;
 }
+
 .view-transaction-dialog .footer .sell-at-market {
   display: flex;
   padding: 5px 5px 0 5px;
 }
+
 .view-transaction-dialog .footer .sell-at-market span {
     flex: 1 1 33%;
     line-height: 2em;
-}
-.view-transaction-dialog .footer .sell-at-market .sparkline {
-  text-align: left;
 }
 
 .view-transaction-dialog .footer .sell-at-market .sell-button {
