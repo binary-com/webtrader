@@ -244,8 +244,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             if (!downloadWin) {
                 downloadWin = windows.createBlankWindow($('<div/>'),
                     {
-                        title: 'Download/View Data',
-                        width: 650,
+                        title: 'View Historical Data',
+                        width: 700,
                         minHeight:500,
                         height : 500,
                         resize : function() {
