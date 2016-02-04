@@ -113,7 +113,16 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                 series.chart.get(iu.id).addPoint(iu.value.toJSObject());
                                             }
                                         } else {
-                                            series.chart.get(iu.id).addPoint([time, iu.value]);
+                                            if (iu.color) {
+                                                series.chart.get(iu.id).addPoint([time, iu.value]);
+                                                var seriesData = series.chart.get(iu.id).data;
+                                                seriesData[seriesData.length - 1].update({
+                                                    color: iu.color
+                                                });
+                                            }
+                                            else {
+                                                 series.chart.get(iu.id).addPoint([time, iu.value]);
+                                            }
                                         }
                                     });
                                 });

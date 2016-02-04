@@ -1,25 +1,24 @@
-<div class="sma" title="Simple Moving Average (SMA)">
+﻿<div class="stochrsi" title="Relative Strength Index (STOCHRSI)">
     <table width="100%">
         <tr>
-          <td colspan="2">
-            The Simple Moving Average (SMA) is calculated by adding the price of an instrument over
-            a number of time periods and then dividing the sum by the number of time periods. The
-            SMA is basically the average price of the given time period, with equal weighting given
-            to the price of each period.
-          </td>
+            <td colspan="2">
+                The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar Chande and Stanley Kroll, StochRSI is an oscillator that measures the level of RSI 
+                relative to its high-low range over a set time period. StochRSI applies the Stochastics formula to RSI values, instead of price values. This makes it an
+                indicator of an indicator. The result is an oscillator that fluctuates between 0 and 1.
+            </td>
         </tr>
         <tr>
             <td><strong>Period</strong></td>
-            <td><input value="21" min="1" max="200" class="sma_input_width_for_period"/></td>
+            <td><input value="14" min="1" max="200" class="stochrsi_input_width_for_period" /></td>
         </tr>
         <tr>
             <td><strong>Stroke</strong></td>
-            <td><input value="" id="sma_stroke" type="button" class="sma_input_width" style="background: #cd0a0a;"/></td>
+            <td><input value="" id="stochrsi_stroke" type="button" class="stochrsi_input_width" style="background: #cd0a0a;" /></td>
         </tr>
         <tr>
             <td><strong>Stroke width</strong></td>
             <td>
-                <select id="sma_strokeWidth" class="sma_input_width">
+                <select id="stochrsi_strokeWidth" class="stochrsi_input_width">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -36,7 +35,7 @@
         <tr>
             <td><strong>Dash style</strong></td>
             <td>
-                <select id="sma_dashStyle" class="sma_input_width">
+                <select id="stochrsi_dashStyle" class="stochrsi_input_width">
                     <option value="Solid" data-imagesrc="images/dashstyle/Solid.svg" title="Solid"></option>
                     <option value="ShortDash" data-imagesrc="images/dashstyle/ShortDash.svg"></option>
                     <option value="ShortDot" data-imagesrc="images/dashstyle/ShortDot.svg"></option>
@@ -54,12 +53,31 @@
         <tr>
             <td><strong>Applied to</strong></td>
             <td>
-                <select id="sma_appliedTo" class="sma_input_width">
+                <select id="stochrsi_appliedTo" class="stochrsi_input_width">
                     <option value="0">OPEN</option>
                     <option value="1">HIGH</option>
                     <option value="2">LOW</option>
                     <option value="3" selected>CLOSE</option>
                 </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input value="Delete level(s)" id="stochrsi_level_delete" type="button" class="stochrsi_input_width" /></td>
+            <td><input value="Add level" id="stochrsi_level_add" type="button" class="stochrsi_input_width" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table id="stochrsi_levels" class="display">
+                    <thead>
+                        <tr>
+                            <td>Level</td>
+                            <td>Stroke</td>
+                            <td>Stroke width</td>
+                            <td>Dash style</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </td>
         </tr>
     </table>

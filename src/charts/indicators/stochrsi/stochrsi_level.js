@@ -1,5 +1,5 @@
-/**
- * Created by arnab on 3/29/15.
+﻿/**
+ * Created by Mahboob.M on 6/6/16.
  */
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
@@ -19,7 +19,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             this.dashStyle = dashStyle;
         };
 
-        require(['text!charts/indicators/stddev/stddev_level.html'], function ( $html ) {
+        require(['text!charts/indicators/stochrsi/stochrsi_level.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -28,37 +28,36 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.appendTo("body");
             $html.find("input[type='button']").button();
 
-            $html.find("#stddev_level_stroke").colorpicker({
+            $html.find("#stochrsi_level_stroke").colorpicker({
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:			function(event, color) {
-                    $("#stddev_level_stroke").css({
+                    $("#stochrsi_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok:             			function(event, color) {
-                    $("#stddev_level_stroke").css({
+                    $("#stochrsi_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 }
             });
 
-
             var selectedDashStyle = "Solid";
-            $('#stddev_level_dashStyle').ddslick({
+            $('#stochrsi_level_dashStyle').ddslick({
                 imagePosition: "left",
                 width: 118,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stddev_level_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#stochrsi_level_dashStyle .dd-selected-image').css('max-width', '85px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stddev_level_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#stochrsi_level_dashStyle .dd-option-image').css('max-width', '85px');
 
             $html.dialog({
                 autoOpen: false,
@@ -68,15 +67,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 my: 'center',
                 at: 'center',
                 of: window,
-                dialogClass: 'stddev-ui-dialog',
+                dialogClass: 'stochrsi-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
                         click: function() {
 
                             if (callBackAfterOKPressed) {
-                                callBackAfterOKPressed([new Level(parseFloat($html.find(".stddev_level_input_width_for_level").val()),
-                                    defaultStrokeColor, parseInt($html.find("#stddev_level_strokeWidth").val()),
+                                callBackAfterOKPressed([new Level(parseFloat($html.find(".stochrsi_level_input_width_for_level").val()),
+                                    defaultStrokeColor, parseInt($html.find("#stochrsi_level_strokeWidth").val()),
                                     selectedDashStyle)]);
                             }
 
@@ -91,6 +90,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
+            $html.find('select').selectmenu();
 
             if ($.isFunction(_callback))
             {
@@ -106,13 +106,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
         open : function ( containerIDWithHash, _callback ) {
 
             callBackAfterOKPressed = _callback;
-            if ($(".stddev_level").length == 0)
+            if ($(".stochrsi_level").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".stddev_level").dialog( "open" );
+            $(".stochrsi_level").dialog( "open" );
 
         }
 

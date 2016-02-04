@@ -555,6 +555,62 @@
     "id": "ppo",
     "long_display_name": "Percentage Price Oscillator",
     "short_display_name": "PPO"
-  }
+  },
   
+  "trange": {
+    "id": "trange",
+    "long_display_name": "True Range",
+    "short_display_name": "TRANGE"
+  },
+
+  "stochrsi": {
+    "id": "stochrsi",
+    "long_display_name": "Stochastic Relative Strength Index",
+    "short_display_name": "STOCHRSI"
+  },
+
+  "mom": {
+    "id": "mom",
+    "long_display_name": "Momentum",
+    "short_display_name": "MOM"
+  },
+
+  "alma": {
+    "id": "alma",
+    "long_display_name": "Arnaud Legoux Moving Average",
+    "short_display_name": "ALMA",
+	 "onChartIndicator" : true
+  },
+
+   "aroon": {
+    "id": "aroon",
+    "long_display_name": "Aroon",
+    "short_display_name": "AROON"
+  },
+
+   "aroonosc": {
+    "id": "aroonosc",
+    "long_display_name": "Aroon Oscillator",
+    "short_display_name": "AROONOSC"
+  },
+
+   "ao": {
+    "id": "ao",
+    "long_display_name": "Awesome Oscillator",
+    "short_display_name": "AO"
+  },
+
+   "var": {
+    "id": "var",
+    "long_display_name": "Variance",
+    "short_display_name": "VAR"
+  },
+
+   "cks": {
+    "id": "cks",
+    "long_display_name": "Chande Kroll Stop",
+    "short_display_name": "CKS",
+	"onChartIndicator" : true
+  }
+
 }
