@@ -1,25 +1,35 @@
-<div class="sma" title="Simple Moving Average (SMA)">
+﻿<div class="cks" title="Chande Kroll Stop (cks)">
     <table width="100%">
         <tr>
-          <td colspan="2">
-            The Simple Moving Average (SMA) is calculated by adding the price of an instrument over
-            a number of time periods and then dividing the sum by the number of time periods. The
-            SMA is basically the average price of the given time period, with equal weighting given
-            to the price of each period.
-          </td>
+            <td colspan="2">
+                The Double Exponential Moving Average (CKS) by Patrick Mulloy
+                attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values.
+            </td>
         </tr>
         <tr>
             <td><strong>Period</strong></td>
-            <td><input value="21" min="1" max="200" class="sma_input_width_for_period"/></td>
+            <td><input id="cks_period" value="10" min="1" max="200" class="cks_input_width_for_period" /></td>
         </tr>
         <tr>
-            <td><strong>Stroke</strong></td>
-            <td><input value="" id="sma_stroke" type="button" class="sma_input_width" style="background: #cd0a0a;"/></td>
+            <td><strong>Max/Min Period</strong></td>
+            <td><input id="cks_max_min_period" value="20" min="1" max="200" class="cks_input_width_for_period" /></td>
+        </tr>
+        <tr>
+            <td><strong>Multiplier</strong></td>
+            <td><input id="cks_multiplier" value="3" min="1" max="50" class="cks_input_width_for_period" /></td>
+        </tr>
+        <tr>
+            <td><strong>Long Stop Line Stroke</strong></td>
+            <td><input value="" id="cks_long_stop_stroke" type="button" class="cks_input_width" style="background: #57a125;" /></td>
+        </tr>
+        <tr>
+            <td><strong>Short Stop Line Stroke</strong></td>
+            <td><input value="" id="cks_short_stop_stroke" type="button" class="cks_input_width" style="background: #cd0a0a;" /></td>
         </tr>
         <tr>
             <td><strong>Stroke width</strong></td>
             <td>
-                <select id="sma_strokeWidth" class="sma_input_width">
+                <select id="cks_strokeWidth" class="cks_input_width">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -36,7 +46,7 @@
         <tr>
             <td><strong>Dash style</strong></td>
             <td>
-                <select id="sma_dashStyle" class="sma_input_width">
+                <select id="cks_dashStyle" class="cks_input_width">
                     <option value="Solid" data-imagesrc="images/dashstyle/Solid.svg" title="Solid"></option>
                     <option value="ShortDash" data-imagesrc="images/dashstyle/ShortDash.svg"></option>
                     <option value="ShortDot" data-imagesrc="images/dashstyle/ShortDot.svg"></option>
@@ -48,17 +58,6 @@
                     <option value="DashDot" data-imagesrc="images/dashstyle/DashDot.svg"></option>
                     <option value="LongDashDot" data-imagesrc="images/dashstyle/LongDashDot.svg"></option>
                     <option value="LongDashDotDot" data-imagesrc="images/dashstyle/LongDashDotDot.svg"></option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><strong>Applied to</strong></td>
-            <td>
-                <select id="sma_appliedTo" class="sma_input_width">
-                    <option value="0">OPEN</option>
-                    <option value="1">HIGH</option>
-                    <option value="2">LOW</option>
-                    <option value="3" selected>CLOSE</option>
                 </select>
             </td>
         </tr>
