@@ -154,14 +154,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           bid_price = contract.bid_price;
       if(id !== state.contract_id) { return; }
 
-      console.warn(contract);
-
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
         state.validation = 'This contract has expired';
       else if(contract.is_valid_to_sell)
         state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
+
+      state.table.current_spot = contract.current_spot;
+      state.table.current_spot_time = contract.current_spot_time;
+      state.table.bid_price = contract.bid_price;
   }
 
   function init_dialog(proposal) {
@@ -209,15 +211,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                 || (proposal.is_expired && 'This contract has expired') || '-',
           table: {
             currency: (proposal.currency ||  'USD') + ' ',
-            now: moment.utc().unix(),
+            current_spot_time: undefined,
+            current_spot: undefined,
+            current_spot_green: true,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
 
-            entry_tick: proposal.entry_tick,
+            entry_tick: proposal.entry_tick || proposal.entry_spot,
             entry_tick_time: proposal.entry_tick_time,
             exit_tick: proposal.exit_tick,
             exit_tick_time: proposal.exit_tick_time,
-            current_tick: undefined,
 
             buy_price: proposal.buy_price && formatPrice(proposal.buy_price),
             bid_price: undefined, // proposal.bid_price && formatPrice(proposal.bid_price),
