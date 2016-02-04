@@ -72,11 +72,10 @@
   </div>
   <div class="footer">
     <div class="sell-at-market">
-      <span class="bid-price"> USD 4.36 </span>
-      <span rv-b-sparkline="sell.ticks"> ABC</span>
+      <span class="bid-price" rv-text="sell.bid_price | prepend 'USD '"> USD 4.36 </span>
+      <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
       <span>
-        <button rv-on-click="sell.onclick"
-                rv-disabled="sell.is_valid_to_sell"
+        <button rv-on-click="sell.sell"
                 class="sell-button shine">Sell At Market</button>
       </span>
     </div>

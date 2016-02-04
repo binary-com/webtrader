@@ -161,6 +161,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.table.current_spot = contract.current_spot;
       state.table.current_spot_time = contract.current_spot_time;
       state.table.bid_price = contract.bid_price;
+
+      state.sell.bid_price = contract.bid_price;
+      state.sell.bid_prices.push(contract.bid_price)
   }
 
   function init_dialog(proposal) {
@@ -237,8 +240,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             loading: 'Loading ' + proposal.symbol_name + ' ...',
             type: 'ticks', // could be 'tick' or 'ohlc'
           },
+          sell: {
+            bid_prices: [],
+            bid_price: undefined,
+            is_valid_to_sell: false,
+          },
           onclose: undefined, /* cleanup callback when dialog is closed */
       };
+
+      state.sell.sell = function() {
+        console.warn('Todo: sell the contract');
+      }
 
       state.chart.manual_reflow = function() {
         /* TODO: find a better solution for resizing the chart  :/ */

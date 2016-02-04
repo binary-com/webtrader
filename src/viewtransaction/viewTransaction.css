@@ -127,9 +127,12 @@
   display: flex;
   padding: 5px 5px 0 5px;
 }
-.view-transaction-dialog .footer .sell-at-market span{
+.view-transaction-dialog .footer .sell-at-market span {
     flex: 1 1 33%;
     line-height: 2em;
+}
+.view-transaction-dialog .footer .sell-at-market .sparkline {
+  text-align: left;
 }
 
 .view-transaction-dialog .footer .sell-at-market .sell-button {
