@@ -67,7 +67,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
             title: {
                 //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
-                text: findInstrumentObject($(".download_instruments span").data("symbol")).display_name + " (" + $(".download_timePeriod").val() + ")" //name to display
+                text: findInstrumentObject($(".download_instruments").data("symbol")).display_name + " (" + $(".download_timePeriod").val() + ")" //name to display
             },
 
             credits: {
@@ -321,14 +321,14 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                         instruments.data('symbol', value.symbol);
                                         instruments.append(value.display_name);
                                         instruments.click(function() {
-                                            $(".download_instruments span")
+                                            $(".download_instruments")
                                                 .data("symbol", $(this).data("symbol"))
+                                                .find("span")
                                                 .html($(this).html());
+                                            $(".download_instruments_container > ul").toggle();
                                         });
-                                        //optionGrp.append($("<option value='" + value.symbol + "'>").append(value.display_name));
                                         subMarket.append(instruments);
                                         if (_.isEmpty(defaultInstrumentCode)) {
-                                            console.log(2222, value.symbol);
                                             defaultInstrumentCode = value.symbol;
                                             defaultInstrumentName = value.display_name;
                                         }
@@ -337,10 +337,13 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 });
                                 rootUL.append($("<li>").append(value.name).append(mainMarket));
                             });
-                            $(".download_instruments").append(rootUL);
-                            $("#download_instrument_menu").menu().menu('refresh');
+                            $(".download_instruments_container").append(rootUL);
+                            rootUL.menu().toggle();
+                            $(".download_instruments").click(function() {
+                                $(".download_instruments_container > ul").toggle();
+                            });
 
-                            $(".download_instruments span").data("symbol", defaultInstrumentCode);
+                            $(".download_instruments").data("symbol", defaultInstrumentCode);
                             $(".download_instruments span").html(defaultInstrumentName);
                             renderChart(defaultInstrumentCode, $(".download_timePeriod").val());
 
@@ -355,7 +358,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         if (to < from) {
                             $.growl.error({message : 'To date is less than From date'});
                         } else {
-                            renderChart($(".download_instruments span").data("symbol"), $(".download_timePeriod").val());
+                            renderChart($(".download_instruments").data("symbol"), $(".download_timePeriod").val());
                         }
                     });
 

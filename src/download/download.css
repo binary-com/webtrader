@@ -31,21 +31,22 @@
     margin-left : 7px !important;
 }
 
-#download_instrument_menu {
-    width: 150px;
-}
-
-#download_instrument_menu li {
+.download_instruments_container li {
     text-align: left;
     white-space: nowrap;
     background: #273051;
     color: white;
 }
 
-#download_instrument_menu li.ui-state-focus, #download_instrument_menu li.ui-state-active {
+.download_instruments_container li.ui-state-focus, .download_instruments_container li.ui-state-active {
     background: #3F476E !important;
 }
 
 .download_table td {
     text-align: left;
+}
+
+.download_instruments_container > ul {
+    position: absolute;
+    z-index: 1001;
 }
