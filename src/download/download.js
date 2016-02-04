@@ -90,7 +90,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     formatter: function () {
                         return this.value;
                     }
-                }
+                },
+                offset : -4
             }],
 
             tooltip: {
