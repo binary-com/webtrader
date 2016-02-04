@@ -2,8 +2,8 @@
  * Created by amin on January 14, 2016.
  */
 
-define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/portfolio", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
-  function($, windows, liveapi, portfolio, rv, moment, _) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/portfolio", "charts/chartingRequestMap", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
+  function($, windows, liveapi, portfolio, chartingRequestMap, rv, moment, _) {
   'use strict';
 
   require(['css!viewtransaction/viewTransaction.css']);
@@ -33,7 +33,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       var options = {
         credits: { href: 'https://www.binary.com', text: 'Binary.com' },
         chart: {
-          type: 'live',
+          type: 'line',
           renderTo: el,
           backgroundColor: null, /* make background transparent */
           width: 0,
@@ -41,10 +41,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           events: {
               load: function() {
                   this.credits.element.onclick = function() {
-                      window.open(
-                          'http://www.binary.com',
-                          '_blank'
-                      );
+                      window.open( 'https://www.binary.com', '_blank' );
                   }
               }
           }
@@ -181,6 +178,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             close: function() {
               view && view.unbind();
               liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+              state.onclose && state.onclose();
             },
             open: function() {
               portfolio.proposal_open_contract.subscribe();
@@ -210,10 +208,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
                 || (proposal.is_expired && 'This contract has expired') || '-',
           table: {
+            is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
             current_spot_time: undefined,
             current_spot: undefined,
-            current_spot_green: true,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
 
@@ -237,7 +235,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             high_barrier: proposal.high_barrier,
             low_barrier: proposal.low_barrier,
             loading: 'Loading ' + proposal.symbol_name + ' ...',
-          }
+            type: 'ticks', // could be 'tick' or 'ohlc'
+          },
+          onclose: undefined, /* cleanup callback when dialog is closed */
       };
 
       state.chart.manual_reflow = function() {
@@ -256,13 +256,75 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       return state;
   }
 
+  function update_live_chart(state, granularity){
+      var key = chartingRequestMap.keyFor(state.chart.symbol, granularity);
+      if(!chartingRequestMap[key]){
+          var req = {
+              symbol: state.chart.symbol,
+              subscribe: 1,
+              granularity: granularity,
+              style: granularity === 0 ? 'ticks' : 'candles',
+          };
+          chartingRequestMap.register(req)
+              .catch(function (err) {
+                $.growl.error({ message: err.message });
+                console.error(err);
+              });
+      }
+      /* don't register if already someone else has registered for this symbol */
+      else { chartingRequestMap.subscribe(key); }
+
+      var on_tick = undefined;
+      var on_candles = undefined;
+
+      if(granularity === 0) {
+        on_tick = liveapi.events.on('tick', function(data){
+            if (!data.tick || data.tick.symbol !== state.chart.symbol)
+              return;
+            var chart = state.chart.chart;
+            var tick = data.tick;
+            chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
+        });
+      }
+      else {
+        on_candles = liveapi.events.on('ohlc', function(data){
+          var data_key = chartingRequestMap.keyFor(data.ohlc.symbol, data.ohlc.granularity);
+          if(key != data_key)
+            return;
+          var chart = state.chart.chart;
+          if(!chart)
+            return;
+
+          var series = chart.series[0];
+          var last = series.data[series.data.length - 1];
+
+          var c = data.ohlc;
+          var ohlc = [c.open_time*1000, c.open*1, c.high*1, c.low*1, c.close*1];
+
+          if(last.x != ohlc[0]) {
+            series.addPoint(ohlc, true, true);
+          }
+          else {
+            last.update(ohlc,true);
+          }
+        });
+      }
+
+      /* cleanup */
+      state.onclose = function() {
+        chartingRequestMap.unregister(key);
+        on_tick && liveapi.events.off('tick', on_tick);
+        on_candles && liveapi.events.off('candles', on_candles);
+      };
+  }
+
   function get_chart_data(state, root) {
     var table = state.table;
     var duration = state.table.date_expiry - state.table.date_start;
     var granularity = 0;
     var margin = 0; // time margin
     if(duration < 60*60) { granularity = 0; } // 1 hour
-    else if(duration <= 2*60*60) { granularity = 60; } // 6 hours
+    else if(duration <= 2*60*60) { granularity = 60; } // 2 hours
     else if(duration <= 6*60*60) { granularity = 120; } // 6 hours
     else if(duration <= 24*60*60) { granularity = 300; } // 1 day
     else { granularity = 3600 } // more than 1 day
@@ -277,6 +339,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     if(granularity !== 0){
       request.granularity = granularity;
       request.style = 'candles';
+      state.chart.type = 'candles';
     }
 
     liveapi.send(request)
@@ -295,7 +358,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         // if(data.candles && !state.table.entry_tick_time) {
         //   state.table.entry_tick_time = data.candles.filter(function(c) { return c.epoch*1 >= state.table.date_start*1 })[0].epoch *1;
         // }
-        if(data.history && !state.table.exit_tick_time) {
+        if(data.history && !state.table.exit_tick_time && state.table.is_expired) {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
         }
         // if(data.candles && !state.table.exit_tick_time) {
@@ -319,6 +382,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.chart.loading = err.message;
         console.error(err);
       });
+
+
+    if(!state.table.is_expired) {
+      update_live_chart(state, granularity);
+    }
   }
 
   return { init: init };
