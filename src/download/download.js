@@ -167,6 +167,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         var chart = $(".downloadChart").highcharts();
 
         chart.showLoading();
+        //Disable show button
+        $(".download_show").attr("disabled", true);
+
         var from = moment.utc($(".download_frmDate").val() + " " + $(".download_frmTime").val(), "DD/MM/YYYY HH:mm").unix();
         var to = moment.utc($(".download_toDate").val() + " " + $(".download_toTime").val(), "DD/MM/YYYY HH:mm").unix();
         var req = {
@@ -181,6 +184,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         liveapi.send(req).then(function(data) {
 
             var dataInHighChartsFormat = [];
+            console.log(data);
 
             if (isTick(timePeriod)) {
                 data.history.times.forEach(function(time, index) {
@@ -229,13 +233,15 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
             chart.addSeries(seriesConf);
             chart.hideLoading();
+            $(".download_show").removeAttr("disabled");
 
         })
         .catch(function(err) {
-                console.error(err);
-                $.growl.error({ message: err.message });
-                chart.hideLoading();
-            });
+            console.error(err);
+            $.growl.error({ message: err.message });
+            chart.hideLoading();
+            $(".download_show").removeAttr("disabled");
+        });
     }
 
     function init($menuLink) {
