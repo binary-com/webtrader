@@ -323,7 +323,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     var duration = state.table.date_expiry - state.table.date_start;
     var granularity = 0;
     var margin = 0; // time margin
-    if(duration < 60*60) { granularity = 0; } // 1 hour
+    if(duration <= 60*60) { granularity = 0; } // 1 hour
     else if(duration <= 2*60*60) { granularity = 60; } // 2 hours
     else if(duration <= 6*60*60) { granularity = 120; } // 6 hours
     else if(duration <= 24*60*60) { granularity = 300; } // 1 day
@@ -336,7 +336,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
-    if(granularity !== 0){
+    if(granularity !== 0) {
       request.granularity = granularity;
       request.style = 'candles';
       state.chart.type = 'candles';
@@ -352,7 +352,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var chart = init_chart(root, options);
 
         if(data.history && !state.table.entry_tick_time) {
-          state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 >= state.table.date_start*1 })[0];
+          state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 > state.table.date_start*1 })[0];
+          if(!state.table.entry_tick) {
+            state.table.entry_tick = data.history.prices.filter(function(p,inx){ return data.history.times[inx]*1 > state.table.date_start*1 })[0];
+          }
         }
         /* TODO: see if back-end is going to give uss (entry/exit)_tick and (entry/exit)_tick_time fileds or not! */
         // if(data.candles && !state.table.entry_tick_time) {
@@ -360,6 +363,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         // }
         if(data.history && !state.table.exit_tick_time && state.table.is_expired) {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
+          state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
         // if(data.candles && !state.table.exit_tick_time) {
         //   state.table.exit_tick_time = data.candles.filter(function(c) { return c.epoch*1 <= state.table.date_expiry*1 })[0].epoch *1;
