@@ -271,9 +271,15 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             showButtonPanel : true,
                             minDate : moment.utc().subtract(1, "years").toDate(),
                             maxDate : moment.utc().toDate()
+                        })
+                        .click(function() {
+                            $(this).datepicker("show");
                         });
                     $html.find('.download_frmTime').timepicker({
                         showCloseButton : true
+                    })
+                    .click(function() {
+                        $(this).timepicker("show");
                     });
                     $html.find('.download_toDate')
                         .datepicker({
@@ -283,9 +289,15 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             showButtonPanel : true,
                             minDate : moment.utc().subtract(1, "years").toDate(),
                             maxDate : moment.utc().toDate()
+                        })
+                        .click(function() {
+                            $(this).datepicker("show");
                         });
                     $html.find('.download_toTime').timepicker({
                         showCloseButton : true
+                    })
+                    .click(function() {
+                        $(this).timepicker("show");
                     });
                     $html.appendTo(downloadWin);
                     $html.find("select").selectmenu({width : 'auto'});
