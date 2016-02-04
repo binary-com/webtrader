@@ -9,6 +9,13 @@ AO = function (data, options, indicators) {
     var shortOptions = { maType: options.shortMaType, period: options.shortPeriod },
         longOprions = { maType: options.longMaType, period: options.longPeriod };
    
+    this.getBarColor = function (index) {
+        var color = this.options.aoHighStroke;
+        if (index > 1 && this.indicatorData[index].value < this.indicatorData[index - 1].value) {
+            color = this.options.aoLowStroke;
+        };
+        return color;
+    };
     /*
     AO = SMA(High+Low)/2, 5 Periods) - SMA(High+Low/2, 34 Periods)
     */
@@ -41,17 +48,16 @@ AO.prototype.addPoint = function (data) {
     this.indicatorData.push({ time: data.time, value: aoValue });
     return [{
         id: this.uniqueID,
-        value: aoValue
-        //TODO
-        //color:'#57a125'
+        value: aoValue,
+        color: this.getBarColor(this.indicatorData.length - 1)
     }];
 };
 
 AO.prototype.update = function (data) {
     var index = this.indicatorData.length - 1;
     var medVAlue = (data.high + data.low) / 2;
-    var shortMa = this.shortMa.addPoint({ time: data.time, close: medVAlue })[0].value;
-    var longMa = this.longMa.addPoint({ time: data.time, close: medVAlue })[0].value;
+    var shortMa = this.shortMa.update({ time: data.time, close: medVAlue })[0].value;
+    var longMa = this.longMa.update({ time: data.time, close: medVAlue })[0].value;
     var aoValue = toFixed((shortMa - longMa), 4);
     this.indicatorData[index].value = aoValue;
     return [{
@@ -70,20 +76,19 @@ AO.prototype.toString = function () {
  */
 AO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
     var aoData = [];
+    var colors = [];
     //TODO
     //Prepare the data before sending a configuration
-    //for (var index = 0; index < this.indicatorData.length; index++) {
-    //    var data = this.indicatorData[index];
-    //    var color = this.options.aoHighStroke;
-    //    if (index > 1 && data.value < this.indicatorData[index - 1].value) {
-    //        color = this.options.aoLowStroke;
-    //    };
-    //    aoData.push({ x: data.time, y: data.value, marker: { fillColor: color } });
-    //};
+    for (var index = 0; index < this.indicatorData.length; index++) {
+        var data = this.indicatorData[index];
+        var color = this.getBarColor(index);
+        aoData.push([data.time, data.value]);
+        colors.push(color);
+    };
 
-    this.indicatorData.forEach(function (e) {
-        aoData.push([e.time, e.value]);
-    });
+    //this.indicatorData.forEach(function (e) {
+    //    aoData.push([e.time, e.value]);
+    //});
 
     return [{
         axisConf: { // Secondary yAxis
@@ -93,7 +98,7 @@ AO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                 align: 'high',
                 offset: 0,
                 rotation: 0,
-                y: 10, //Trying to show title inside the indicator chart
+                y: 10, 
                 x: 50
             },
             lineWidth: 2,
@@ -107,13 +112,11 @@ AO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: aoData,
                  type: 'column',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID,
-                 color: this.options.aoHighStroke,
-                 lineWidth: this.options.strokeWidth,
-                 dashStyle: this.options.dashStyle,
+                 //color: this.options.aoHighStroke,
                  onChartIndicator: false,
-                 marker: {
-                            enabled: true
-                        }
+                 colorByPoint:true,
+                 colors: colors
              }
         }];
 };
+
