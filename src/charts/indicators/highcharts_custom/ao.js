@@ -77,18 +77,12 @@ AO.prototype.toString = function () {
 AO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
     var aoData = [];
     var colors = [];
-    //TODO
     //Prepare the data before sending a configuration
     for (var index = 0; index < this.indicatorData.length; index++) {
         var data = this.indicatorData[index];
-        var color = this.getBarColor(index);
         aoData.push([data.time, data.value]);
-        colors.push(color);
+        colors.push(this.getBarColor(index));
     };
-
-    //this.indicatorData.forEach(function (e) {
-    //    aoData.push([e.time, e.value]);
-    //});
 
     return [{
         axisConf: { // Secondary yAxis
@@ -112,7 +106,6 @@ AO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: aoData,
                  type: 'column',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID,
-                 //color: this.options.aoHighStroke,
                  onChartIndicator: false,
                  colorByPoint:true,
                  colors: colors
