@@ -67,7 +67,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
             title: {
                 //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
-                text: findInstrumentObject($(".download_instruments span").data("symbol")).display_name + " (" + $(".download_timePeriod").val() + ")" //name to display
+                text: findInstrumentObject($(".download_instruments").data("symbol")).display_name + " (" + $(".download_timePeriod").val() + ")" //name to display
             },
 
             credits: {
@@ -90,7 +90,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     formatter: function () {
                         return this.value;
                     }
-                }
+                },
+                offset : -4
             }],
 
             tooltip: {
@@ -166,6 +167,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         var chart = $(".downloadChart").highcharts();
 
         chart.showLoading();
+        //Disable show button
+        $(".download_show").attr("disabled", true);
+
         var from = moment.utc($(".download_frmDate").val() + " " + $(".download_frmTime").val(), "DD/MM/YYYY HH:mm").unix();
         var to = moment.utc($(".download_toDate").val() + " " + $(".download_toTime").val(), "DD/MM/YYYY HH:mm").unix();
         var req = {
@@ -180,6 +184,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         liveapi.send(req).then(function(data) {
 
             var dataInHighChartsFormat = [];
+            console.log(data);
 
             if (isTick(timePeriod)) {
                 data.history.times.forEach(function(time, index) {
@@ -228,13 +233,15 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
             chart.addSeries(seriesConf);
             chart.hideLoading();
+            $(".download_show").removeAttr("disabled");
 
         })
         .catch(function(err) {
-                console.error(err);
-                $.growl.error({ message: err.message });
-                chart.hideLoading();
-            });
+            console.error(err);
+            $.growl.error({ message: err.message });
+            chart.hideLoading();
+            $(".download_show").removeAttr("disabled");
+        });
     }
 
     function init($menuLink) {
@@ -243,8 +250,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             if (!downloadWin) {
                 downloadWin = windows.createBlankWindow($('<div/>'),
                     {
-                        title: 'Download/View Data',
-                        width: 650,
+                        title: 'View Historical Data',
+                        width: 700,
                         minHeight:500,
                         height : 500,
                         resize : function() {
@@ -271,9 +278,15 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             showButtonPanel : true,
                             minDate : moment.utc().subtract(1, "years").toDate(),
                             maxDate : moment.utc().toDate()
+                        })
+                        .click(function() {
+                            $(this).datepicker("show");
                         });
                     $html.find('.download_frmTime').timepicker({
                         showCloseButton : true
+                    })
+                    .click(function() {
+                        $(this).timepicker("show");
                     });
                     $html.find('.download_toDate')
                         .datepicker({
@@ -283,9 +296,15 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             showButtonPanel : true,
                             minDate : moment.utc().subtract(1, "years").toDate(),
                             maxDate : moment.utc().toDate()
+                        })
+                        .click(function() {
+                            $(this).datepicker("show");
                         });
                     $html.find('.download_toTime').timepicker({
                         showCloseButton : true
+                    })
+                    .click(function() {
+                        $(this).timepicker("show");
                     });
                     $html.appendTo(downloadWin);
                     $html.find("select").selectmenu({width : 'auto'});
@@ -308,14 +327,14 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                         instruments.data('symbol', value.symbol);
                                         instruments.append(value.display_name);
                                         instruments.click(function() {
-                                            $(".download_instruments span")
+                                            $(".download_instruments")
                                                 .data("symbol", $(this).data("symbol"))
+                                                .find("span")
                                                 .html($(this).html());
+                                            $(".download_instruments_container > ul").toggle();
                                         });
-                                        //optionGrp.append($("<option value='" + value.symbol + "'>").append(value.display_name));
                                         subMarket.append(instruments);
                                         if (_.isEmpty(defaultInstrumentCode)) {
-                                            console.log(2222, value.symbol);
                                             defaultInstrumentCode = value.symbol;
                                             defaultInstrumentName = value.display_name;
                                         }
@@ -324,10 +343,13 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 });
                                 rootUL.append($("<li>").append(value.name).append(mainMarket));
                             });
-                            $(".download_instruments").append(rootUL);
-                            $("#download_instrument_menu").menu().menu('refresh');
+                            $(".download_instruments_container").append(rootUL);
+                            rootUL.menu().toggle();
+                            $(".download_instruments").click(function() {
+                                $(".download_instruments_container > ul").toggle();
+                            });
 
-                            $(".download_instruments span").data("symbol", defaultInstrumentCode);
+                            $(".download_instruments").data("symbol", defaultInstrumentCode);
                             $(".download_instruments span").html(defaultInstrumentName);
                             renderChart(defaultInstrumentCode, $(".download_timePeriod").val());
 
@@ -342,7 +364,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         if (to < from) {
                             $.growl.error({message : 'To date is less than From date'});
                         } else {
-                            renderChart($(".download_instruments span").data("symbol"), $(".download_timePeriod").val());
+                            renderChart($(".download_instruments").data("symbol"), $(".download_timePeriod").val());
                         }
                     });
 
