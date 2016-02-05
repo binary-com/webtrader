@@ -222,7 +222,12 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       }
 
       state.back.onclick = function(){ hide_callback(root); }
-      state.arrow.onclick = function() { $.growl.error({ message: 'Work in progress, check back soon!!!!' }); };
+      state.arrow.onclick = function() {
+        require(['viewtransaction/viewTransaction'], function(viewTransaction){
+            viewTransaction.init(extra.contract_id, extra.transaction_id);
+        });
+        // $.growl.error({ message: 'Work in progress, check back soon!!!!' });
+      };
 
 
       if(!state.arrow.visible) { register_ticks(state, extra); }
