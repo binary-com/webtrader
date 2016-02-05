@@ -237,7 +237,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             {
                                 return this.value;
                             }
-                        }
+                        },
+                        align:'center'
                     }
                 }],
 

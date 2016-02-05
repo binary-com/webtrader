@@ -89,9 +89,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 labels: {
                     formatter: function () {
                         return this.value;
-                    }
-                },
-                offset : -4
+                    },
+                    align:'center'
+                }
             }],
 
             tooltip: {
