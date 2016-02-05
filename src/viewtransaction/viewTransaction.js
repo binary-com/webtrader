@@ -156,7 +156,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       else if(contract.is_expired)
         state.validation = 'This contract has expired';
       else if(contract.is_valid_to_sell)
-        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
+        state.validation = '-';
+        // TODO:
+        //state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
 
       state.table.current_spot = contract.current_spot;
       state.table.current_spot_time = contract.current_spot_time;
@@ -170,7 +172,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.sell.bid_price.value = contract.bid_price;
       state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
       state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
-      state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+      state.sell.is_valid_to_sell = false;
+      // TODO: 
+      //state.sell.is_valid_to_sell = contract.is_valid_to_sell;
       state.chart.manual_reflow();
   }
 
