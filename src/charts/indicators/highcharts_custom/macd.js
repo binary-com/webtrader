@@ -7,8 +7,8 @@ MACD = function (data, options, indicators) {
     options.slowMaType = (options.slowMaType || 'SMA').toUpperCase();
     options.signalMaType = (options.signalMaType || 'SMA').toUpperCase();
     IndicatorBase.call(this, data, options, indicators);
-    var slowOptions = { maType: options.slowMaType, period: options.slowPeriod },
-        fastOprions = { maType: options.fastMaType, period: options.fastPeriod },
+    var slowOptions = { maType: options.slowMaType, period: options.slowPeriod, appliedTo: options.appliedTo },
+        fastOprions = { maType: options.fastMaType, period: options.fastPeriod, appliedTo: options.appliedTo },
         signalOptions = { maType: options.signalMaType, period: options.signalPeriod + options.slowPeriod - 1 };
     this.fastMa = new window[options.fastMaType](data, fastOprions, indicators);
     this.slowMa = new window[options.slowMaType](data, slowOptions, indicators);
