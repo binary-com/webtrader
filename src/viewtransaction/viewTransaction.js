@@ -2,8 +2,8 @@
  * Created by amin on January 14, 2016.
  */
 
-define(["jquery", "windows/windows", "websockets/binary_websockets", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
-  function($, windows, liveapi, rv, moment, _) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/portfolio", "charts/chartingRequestMap", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
+  function($, windows, liveapi, portfolio, chartingRequestMap, rv, moment, _) {
   'use strict';
 
   require(['css!viewtransaction/viewTransaction.css']);
@@ -33,7 +33,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       var options = {
         credits: { href: 'https://www.binary.com', text: 'Binary.com' },
         chart: {
-          type: 'live',
+          type: 'line',
           renderTo: el,
           backgroundColor: null, /* make background transparent */
           width: 0,
@@ -41,10 +41,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
           events: {
               load: function() {
                   this.credits.element.onclick = function() {
-                      window.open(
-                          'http://www.binary.com',
-                          '_blank'
-                      );
+                      window.open( 'https://www.binary.com', '_blank' );
                   }
               }
           }
@@ -132,7 +129,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
                 purchase_time: ,buy_price: ,sell_price:, currency:,
                 duration: , duration_type: 'ticks/seconds/...' } */
   function init(contract_id, transaction_id){
-    require(['text!viewtransaction/viewTransaction.html']);
     liveapi.cached.send({proposal_open_contract: 1, contract_id: contract_id})
            .then(function(data){
               var proposal = data.proposal_open_contract;
@@ -149,22 +145,49 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
            });
   }
 
+  function update_indicative(data, state){
+      var contract = data.proposal_open_contract;
+      var id = contract.contract_id,
+          bid_price = contract.bid_price;
+      if(id !== state.contract_id) { return; }
+
+      if(contract.validation_error)
+        state.validation = contract.validation_error;
+      else if(contract.is_expired)
+        state.validation = 'This contract has expired';
+      else if(contract.is_valid_to_sell)
+        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
+
+      state.table.current_spot = contract.current_spot;
+      state.table.current_spot_time = contract.current_spot_time;
+      state.table.bid_price = contract.bid_price;
+  }
+
   function init_dialog(proposal) {
     require(['text!viewtransaction/viewTransaction.html'],function(html) {
         var root = $(html);
         var state = init_state(proposal, root);
+        var on_proposal_open_contract = function(data) { update_indicative(data, state); };
+
         var transWin = windows.createBlankWindow(root, {
             title: proposal.symbol_name + ' (' + proposal.transaction_id + ')',
             width: 700,
             minWidth: 300,
             minHeight:350,
             destroy: function() { },
-            close: function() { view && view.unbind(); },
+            close: function() {
+              view && view.unbind();
+              liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+              state.onclose && state.onclose();
+            },
+            open: function() {
+              portfolio.proposal_open_contract.subscribe();
+              liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
+            },
             resize: function() {
               state.chart.manual_reflow();
               // state.chart.chart && state.chart.chart.reflow();
             },
-            close: function() { view.unbind(); },
             'data-authorized': 'true'
         });
 
@@ -179,21 +202,23 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
               value: 'table',
               update: function(value) { state.route.value = value; }
           },
+          contract_id: proposal.contract_id,
           longcode: proposal.longcode,
           validation: proposal.validation_error
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
                 || (proposal.is_expired && 'This contract has expired') || '-',
           table: {
+            is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
-            now: moment.utc().unix(),
+            current_spot_time: undefined,
+            current_spot: undefined,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
 
-            entry_tick: proposal.entry_tick,
+            entry_tick: proposal.entry_tick || proposal.entry_spot,
             entry_tick_time: proposal.entry_tick_time,
             exit_tick: proposal.exit_tick,
             exit_tick_time: proposal.exit_tick_time,
-            current_tick: undefined,
 
             buy_price: proposal.buy_price && formatPrice(proposal.buy_price),
             bid_price: undefined, // proposal.bid_price && formatPrice(proposal.bid_price),
@@ -210,7 +235,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
             high_barrier: proposal.high_barrier,
             low_barrier: proposal.low_barrier,
             loading: 'Loading ' + proposal.symbol_name + ' ...',
-          }
+            type: 'ticks', // could be 'tick' or 'ohlc'
+          },
+          onclose: undefined, /* cleanup callback when dialog is closed */
       };
 
       state.chart.manual_reflow = function() {
@@ -223,20 +250,72 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         state.chart.chart.hasUserSize = null;
       };
 
-      /* TODO: register for the stream and update the status */
-      if(false)
-      liveapi.send({proposal_open_contract: 1, contract_id: proposal.contract_id})
-             .then(function(data){
-               state.validation = data.validation_error || 'This contract has expired';
-             })
-             .catch(function(err){
-               state.validation = err.message;
-               console.error(err);
-             });
-
       get_chart_data(state, root);
 
+      // window.state = state;
       return state;
+  }
+
+  function update_live_chart(state, granularity){
+      var key = chartingRequestMap.keyFor(state.chart.symbol, granularity);
+      if(!chartingRequestMap[key]){
+          var req = {
+              symbol: state.chart.symbol,
+              subscribe: 1,
+              granularity: granularity,
+              style: granularity === 0 ? 'ticks' : 'candles',
+          };
+          chartingRequestMap.register(req)
+              .catch(function (err) {
+                $.growl.error({ message: err.message });
+                console.error(err);
+              });
+      }
+      /* don't register if already someone else has registered for this symbol */
+      else { chartingRequestMap.subscribe(key); }
+
+      var on_tick = undefined;
+      var on_candles = undefined;
+
+      if(granularity === 0) {
+        on_tick = liveapi.events.on('tick', function(data){
+            if (!data.tick || data.tick.symbol !== state.chart.symbol)
+              return;
+            var chart = state.chart.chart;
+            var tick = data.tick;
+            chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
+        });
+      }
+      else {
+        on_candles = liveapi.events.on('ohlc', function(data){
+          var data_key = chartingRequestMap.keyFor(data.ohlc.symbol, data.ohlc.granularity);
+          if(key != data_key)
+            return;
+          var chart = state.chart.chart;
+          if(!chart)
+            return;
+
+          var series = chart.series[0];
+          var last = series.data[series.data.length - 1];
+
+          var c = data.ohlc;
+          var ohlc = [c.open_time*1000, c.open*1, c.high*1, c.low*1, c.close*1];
+
+          if(last.x != ohlc[0]) {
+            series.addPoint(ohlc, true, true);
+          }
+          else {
+            last.update(ohlc,true);
+          }
+        });
+      }
+
+      /* cleanup */
+      state.onclose = function() {
+        chartingRequestMap.unregister(key);
+        on_tick && liveapi.events.off('tick', on_tick);
+        on_candles && liveapi.events.off('candles', on_candles);
+      };
   }
 
   function get_chart_data(state, root) {
@@ -244,8 +323,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
     var duration = state.table.date_expiry - state.table.date_start;
     var granularity = 0;
     var margin = 0; // time margin
-    if(duration < 60*60) { granularity = 0; } // 1 hour
-    else if(duration <= 2*60*60) { granularity = 60; } // 6 hours
+    if(duration <= 60*60) { granularity = 0; } // 1 hour
+    else if(duration <= 2*60*60) { granularity = 60; } // 2 hours
     else if(duration <= 6*60*60) { granularity = 120; } // 6 hours
     else if(duration <= 24*60*60) { granularity = 300; } // 1 day
     else { granularity = 3600 } // more than 1 day
@@ -254,9 +333,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
       ticks_history: state.chart.symbol,
       start: state.table.date_start - margin, /* load around 2 more thicks before start */
       end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
-      style: granularity === 0 ? 'ticks' : 'candles',
+      style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
+    if(granularity !== 0) {
+      request.granularity = granularity;
+      request.style = 'candles';
+      state.chart.type = 'candles';
+    }
 
     liveapi.send(request)
       .then(function(data) {
@@ -268,14 +352,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         var chart = init_chart(root, options);
 
         if(data.history && !state.table.entry_tick_time) {
-          state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 >= state.table.date_start*1 })[0];
+          state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 > state.table.date_start*1 })[0];
+          if(!state.table.entry_tick) {
+            state.table.entry_tick = data.history.prices.filter(function(p,inx){ return data.history.times[inx]*1 > state.table.date_start*1 })[0];
+          }
         }
         /* TODO: see if back-end is going to give uss (entry/exit)_tick and (entry/exit)_tick_time fileds or not! */
         // if(data.candles && !state.table.entry_tick_time) {
         //   state.table.entry_tick_time = data.candles.filter(function(c) { return c.epoch*1 >= state.table.date_start*1 })[0].epoch *1;
         // }
-        if(data.history && !state.table.exit_tick_time) {
+        if(data.history && !state.table.exit_tick_time && state.table.is_expired) {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
+          state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
         // if(data.candles && !state.table.exit_tick_time) {
         //   state.table.exit_tick_time = data.candles.filter(function(c) { return c.epoch*1 <= state.table.date_expiry*1 })[0].epoch *1;
@@ -298,6 +386,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "common/riv
         state.chart.loading = err.message;
         console.error(err);
       });
+
+
+    if(!state.table.is_expired) {
+      update_live_chart(state, granularity);
+    }
   }
 
   return { init: init };

@@ -33,8 +33,8 @@
       <div> <p>Start Time</p>
           <span rv-text="table.date_start | moment | or '-'"></span>
       </div>
-      <div> <p>Now</p>
-          <span rv-text="table.now | moment | or '-'"></span>
+      <div> <p>Current Spot Time</p>
+          <span rv-text="table.current_spot_time | moment | or '-'"></span>
       </div>
       <div> <p>End Time</p>
           <span rv-text="table.date_expiry | moment | or '-'"></span>
@@ -44,7 +44,7 @@
           <span rv-text="table.entry_tick | or '-'"></span>
       </div>
       <div> <p>Current Spot</p>
-          <span rv-text="table.current_tick | or '-'"></span>
+          <span rv-text="table.current_spot | or '-'" rv-indicative-color="table.current_spot"></span>
       </div>
       <div> <p>Exit Spot</p>
           <span rv-text="table.exit_tick | or '-'"></span>
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div class="chart-container" rv-show="route.value | eq 'chart'">
+    <div class="chart-container" rv-show="route.value | notify chart.manual_reflow | eq 'chart'">
       <div class='transaction-chart' rv-show="chart.loading | eq ''"> </div>
 
       <div class='loading' rv-show="chart.loading | not-eq ''">

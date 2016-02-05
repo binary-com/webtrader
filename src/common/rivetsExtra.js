@@ -430,5 +430,14 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       },0);
     }
 
+    /* rv binder for indicative color change logic */
+    rv.binders['indicative-color'] = function(el, value) {
+        var perv = (el._perv_indicative_color || 0)*1;
+        var red = '#d71818';
+        var green = '#02920e';
+        if(perv !== value*1)
+          $(el).css({color: perv < value*1 ? green : red});
+        el._perv_indicative_color = value;
+    }
     return rv;
 });
