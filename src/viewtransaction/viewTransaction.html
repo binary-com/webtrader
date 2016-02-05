@@ -71,7 +71,7 @@
 
   </div>
   <div class="footer">
-    <div class="sell-at-market">
+    <div class="sell-at-market" rv-if="sell.is_valid_to_sell">
 
       <span>
         <span class="bid-price" rv-indicative-color="sell.bid_price.value">
@@ -85,6 +85,7 @@
 
       <span>
         <button rv-on-click="sell.sell"
+                rv-disabled="sell.sell_at_market_enabled | eq false"
                 class="sell-button shine">Sell At Market</button>
       </span>
 
