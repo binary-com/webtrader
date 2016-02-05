@@ -173,7 +173,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
       state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
       state.sell.is_valid_to_sell = false;
-      // TODO: 
+      // TODO:
       //state.sell.is_valid_to_sell = contract.is_valid_to_sell;
       state.chart.manual_reflow();
   }
@@ -342,6 +342,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             var chart = state.chart.chart;
             var tick = data.tick;
             chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
+            /* stop updating when contract is expired */
+            if(tick.epoch*1 > state.table.date_expiry*1) {
+              clean_up();
+            }
         });
       }
       else {
@@ -365,15 +369,22 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           else {
             last.update(ohlc,true);
           }
+          /* stop updating when contract is expired */
+          if(c.epoch*1 > state.table.date_expiry*1) {
+            clean_up();
+          }
         });
       }
 
-      /* cleanup */
-      state.onclose.push(function() {
+      var clean_up_done = false;
+      var clean_up = function() {
+        if(clean_up_done) return;
+        clean_up_done = true;
         chartingRequestMap.unregister(key);
         on_tick && liveapi.events.off('tick', on_tick);
         on_candles && liveapi.events.off('candles', on_candles);
-      });
+      };
+      state.onclose.push(clean_up); /* clean up */
   }
 
   function get_chart_data(state, root) {
