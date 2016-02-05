@@ -187,7 +187,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             close: function() {
               view && view.unbind();
               liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
-              state.onclose && state.onclose();
+              for(var i = 0; i < state.onclose.length; ++i)
+                state.onclose[i]();
             },
             open: function() {
               portfolio.proposal_open_contract.subscribe();
@@ -255,10 +256,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             },
             is_valid_to_sell: false,
           },
-          onclose: undefined, /* cleanup callback when dialog is closed */
+          onclose: [], /* cleanup callback array when dialog is closed */
       };
 
       state.sell.sell = function() {
+        if(false)
         liveapi.send({sell: proposal.contract_id, price: 0 /* to sell at market */})
                .then(function(data){
                  var sell = data.sell;
@@ -268,6 +270,24 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                  $.growl.error({ message: err.message });
                  console.error(err);
                });
+        require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'], function(html){
+            var state_confirm = {
+                longcode: state.longcode,
+                buy_price: state.table.buy_price,
+                sell_price: '???',
+                return_percent: '???%',
+                transaction_id: proposal.transaction_id,
+                balance: '???',
+                currency: state.table.currency,
+            };
+            var $html = $(html);
+            root.after($html);
+            var view_confirm = rv.bind($html[0], state_confirm);
+            state.onclose.push(function(){
+                view_confirm && view_confirm.unbind();
+            });
+            console.warn($html);
+        });
       }
 
       state.chart.manual_reflow = function() {
@@ -341,11 +361,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       }
 
       /* cleanup */
-      state.onclose = function() {
+      state.onclose.push(function() {
         chartingRequestMap.unregister(key);
         on_tick && liveapi.events.off('tick', on_tick);
         on_candles && liveapi.events.off('candles', on_candles);
-      };
+      });
   }
 
   function get_chart_data(state, root) {
