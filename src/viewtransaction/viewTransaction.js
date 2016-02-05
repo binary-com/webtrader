@@ -259,7 +259,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       };
 
       state.sell.sell = function() {
-        console.warn('Todo: sell the contract');
+        liveapi.send({sell: proposal.contract_id, price: 0 /* to sell at market */})
+               .then(function(data){
+                 var sell = data.sell;
+                 console.warn(sell);
+               })
+               .catch(function(err){
+                 $.growl.error({ message: err.message });
+                 console.error(err);
+               });
       }
 
       state.chart.manual_reflow = function() {
