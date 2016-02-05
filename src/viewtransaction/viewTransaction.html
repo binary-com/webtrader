@@ -72,14 +72,22 @@
   </div>
   <div class="footer">
     <div class="sell-at-market">
-      <span class="bid-price"
-            rv-text="sell.bid_price | prepend table.currency"
-            rv-indicative-color="sell.bid_price"> - </span>
+
+      <span>
+        <span class="bid-price" rv-indicative-color="sell.bid_price.value">
+          <span class="currency" rv-text="table.currency"></span>
+          <span class="unit" rv-text="sell.bid_price.unit"></span>
+          <span class="cent" rv-text="sell.bid_price.cent | prepend '.'"></span>
+        </span>
+      </span>
+
       <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
+
       <span>
         <button rv-on-click="sell.sell"
                 class="sell-button shine">Sell At Market</button>
       </span>
+
     </div>
     <span class='validation' rv-text="validation"></span>
   </div>

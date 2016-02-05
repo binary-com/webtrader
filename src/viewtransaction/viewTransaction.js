@@ -162,11 +162,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.table.current_spot_time = contract.current_spot_time;
       state.table.bid_price = contract.bid_price;
 
-      state.sell.bid_price = contract.bid_price;
       if(state.sell.bid_prices.length > 40) {
         state.sell.bid_prices.shift();
       }
       state.sell.bid_prices.push(contract.bid_price)
+
+      state.sell.bid_price.value = contract.bid_price;
+      state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
+      state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
   }
 
   function init_dialog(proposal) {
@@ -245,7 +248,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           },
           sell: {
             bid_prices: [],
-            bid_price: undefined,
+            bid_price: {
+                unit: undefined,
+                cent: undefined,
+                value: undefined,
+            },
             is_valid_to_sell: false,
           },
           onclose: undefined, /* cleanup callback when dialog is closed */
