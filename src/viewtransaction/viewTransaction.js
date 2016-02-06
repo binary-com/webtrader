@@ -151,14 +151,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           bid_price = contract.bid_price;
       if(id !== state.contract_id) { return; }
 
+      /* fix for backend wrong is_valid_to_sell field :( */
+      if(state.is_sold_at_market) {
+        contract.is_expired = 1;
+        contract.is_valid_to_sell = 0;
+      }
+
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
         state.validation = 'This contract has expired';
       else if(contract.is_valid_to_sell)
-        state.validation = '-';
-        // TODO:
-        //state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
+        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
 
       state.table.current_spot = contract.current_spot;
       state.table.current_spot_time = contract.current_spot_time;
@@ -173,8 +177,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
       state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
       state.sell.is_valid_to_sell = false;
-      // TODO:
-      //state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+      state.sell.is_valid_to_sell = contract.is_valid_to_sell;
       state.chart.manual_reflow();
   }
 
@@ -213,6 +216,37 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     });
   }
 
+  function sell_at_market(state, root) {
+    state.sell.sell_at_market_enabled = false; /* disable button */
+    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
+    liveapi.send({sell: state.contract_id, price: 0 /* to sell at market */})
+          .then(function(data){
+              var sell = data.sell;
+              require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'], function(html){
+                  var buy_price = state.table.buy_price;
+                  var state_confirm = {
+                    longcode: state.longcode,
+                    buy_price: buy_price,
+                    sell_price: sell.sold_for,
+                    return_percent: (100*(sell.sold_for - buy_price)/buy_price).toFixed(2)+'%',
+                    transaction_id: sell.transaction_id,
+                    balance: sell.balance_after,
+                    currency: state.table.currency,
+                  };
+                  var $html = $(html);
+                  root.after($html);
+                  var view_confirm = rv.bind($html[0], state_confirm);
+                  state.onclose.push(function(){
+                    view_confirm && view_confirm.unbind();
+                  });
+              });
+          })
+          .catch(function(err){
+              $.growl.error({ message: err.message });
+              console.error(err);
+          });
+  }
+
   function init_state(proposal, root){
       var state = {
           route: {
@@ -239,10 +273,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
             buy_price: proposal.buy_price && formatPrice(proposal.buy_price),
             bid_price: undefined,
-            sell_price: proposal.sell_price && formatPrice(proposal.sell_price),
+            final_price: proposal.sell_price && formatPrice(proposal.sell_price),
 
             tick_count: proposal.tick_count,
             prediction: proposal.prediction,
+
+            sell_time: undefined,
+            sell_spot: undefined,
+            sell_price: undefined,
+            is_sold_at_market: false,
           },
           chart: {
             chart: null, /* highchart object */
@@ -266,37 +305,27 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           },
           onclose: [], /* cleanup callback array when dialog is closed */
       };
+      /* back-end is not returning sell_time field, worse its returning wrong sell_price vlaue */
+      liveapi.send({profit_table: 1, date_from: proposal.date_start, date_to: proposal.date_start+1})
+             .then(function(data) {
+               var transactions = data.profit_table.transactions || [];
+               transactions = transactions.filter(function(t) { return t.contract_id+'' === proposal.contract_id+''; });
 
-      state.sell.sell = function() {
-        state.sell.sell_at_market_enabled = false; /* disable button */
-        require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
-        liveapi.send({sell: proposal.contract_id, price: 0 /* to sell at market */})
-              .then(function(data){
-                  var sell = data.sell;
-                  require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'], function(html){
-                      var buy_price = state.table.buy_price;
-                      var state_confirm = {
-                        longcode: state.longcode,
-                        buy_price: buy_price,
-                        sell_price: sell.sold_for,
-                        return_percent: (100*(sell.sold_for - buy_price)/buy_price).toFixed(2)+'%',
-                        transaction_id: sell.transaction_id,
-                        balance: sell.balance_after,
-                        currency: state.table.currency,
-                      };
-                      var $html = $(html);
-                      root.after($html);
-                      var view_confirm = rv.bind($html[0], state_confirm);
-                      state.onclose.push(function(){
-                        view_confirm && view_confirm.unbind();
-                      });
-                  });
-              })
-              .catch(function(err){
-                  $.growl.error({ message: err.message });
-                  console.error(err);
-              });
-      }
+               if(!transactions || transactions.length !== 1) { return; } /* so contract is not finished yet */
+               var trans = transactions[0];
+               if(trans.sell_time >= proposal.date_expiry) { return; } /* so contract is not sold at market */
+
+               state.table.sell_time = trans.sell_time;
+               state.table.sell_price = trans.sell_price;
+               state.table.sell_spot = '-'; // TODO: find a way to get sell spot
+               state.table.final_price = undefined; // TODO: find a way to get final price
+               state.table.is_sold_at_market = true;
+             })
+             .catch(function(err){
+               console.error(err);
+             });
+
+      state.sell.sell = function() { sell_at_market(state, root); }
 
       state.chart.manual_reflow = function() {
         /* TODO: find a better solution for resizing the chart  :/ */
