@@ -230,6 +230,7 @@ define(['jquery'], function ($) {
        },milliseconds);
     };
 
+    var sell_expired_timeouts = {};
     var api = {
         events: {
             on: function (name, cb) {
@@ -310,6 +311,15 @@ define(['jquery'], function ($) {
         /* whether currenct session is authenticated or not */
         is_authenticated: function () {
           return is_authenitcated_session;
+        },
+        sell_expired: function(epoch){
+            var now = (new Date().getTime())/1000 | 0;
+            if(!sell_expired_timeouts[epoch] && epoch*1 > now) {
+              sell_expired_timeouts[epoch] = setTimeout(function(){
+                sell_expired_timeouts[epoch] = undefined;
+                api.send({sell_expired:1}).catch(function(err){ console.error(err);});
+              }, (epoch+2 - now)*1000);
+            }
         }
     }
     /* always register for transaction stream */
