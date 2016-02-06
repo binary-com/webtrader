@@ -124,6 +124,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                     return 'Transaction';
                   });
   }
+  /* get the tick value for a given epoch */
+  function get_tick_value(symbol, epoch){
+    return liveapi.send({ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end:epoch+2, count: 1})
+                  .catch(function(err) { console.error(err); });
+  }
 
   /* params : { symbol: ,contract_id: ,longcode: ,sell_time: ,
                 purchase_time: ,buy_price: ,sell_price:, currency:,
@@ -339,11 +344,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                chart_data_promise.then(function(){
                   state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'});
                });
+               get_tick_value(state.chart.symbol, state.table.sell_time -2).then(function(data){
+                 var history = data.history;
+                 if(history.times.length !== 1) return;
+                 state.table.sell_spot = history.prices[0];
+               });
              })
              .catch(function(err){
                console.error(err);
              });
-      // window.state = state;
+
       return state;
   }
 
@@ -430,7 +440,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     else if(duration <= 6*60*60) { granularity = 120; } // 6 hours
     else if(duration <= 24*60*60) { granularity = 300; } // 1 day
     else { granularity = 3600 } // more than 1 day
-    margin = granularity === 0 ? 3 : 3*granularity;
+    margin = granularity === 0 ? Math.max(3, 30*duration/(60*60) | 0) : 3*granularity;
     var request = {
       ticks_history: state.chart.symbol,
       start: state.table.date_start - margin, /* load around 2 more thicks before start */
@@ -463,16 +473,27 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           }
         }
         /* TODO: see if back-end is going to give uss (entry/exit)_tick and (entry/exit)_tick_time fileds or not! */
-        // if(data.candles && !state.table.entry_tick_time) {
-        //   state.table.entry_tick_time = data.candles.filter(function(c) { return c.epoch*1 >= state.table.date_start*1 })[0].epoch *1;
-        // }
+        if(data.candles && !state.table.entry_tick_time) {
+          get_tick_value(state.chart.symbol, state.table.date_start).then(function(data){
+            var history = data.history;
+            if(history.times.length !== 1) return;
+            state.table.entry_tick_time = history.times[0];
+            chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
+          });
+        }
         if(data.history && !state.table.exit_tick_time && state.table.is_expired) {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
-        // if(data.candles && !state.table.exit_tick_time) {
-        //   state.table.exit_tick_time = data.candles.filter(function(c) { return c.epoch*1 <= state.table.date_expiry*1 })[0].epoch *1;
-        // }
+        if(data.candles && !state.table.exit_tick_time) {
+          get_tick_value(state.chart.symbol, state.table.date_expiry -2).then(function(data){
+            var history = data.history;
+            if(history.times.length !== 1) return;
+            state.table.exit_tick_time = history.times[0];
+            state.table.exit_tick = history.prices[0];
+            chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
+          });
+        }
 
         state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
         state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});

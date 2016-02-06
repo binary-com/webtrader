@@ -134,7 +134,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             ret += " " + moment.duration(duration.hours(), 'hours').humanize()
         if (duration.minutes() > 0)
             ret += " " + moment.duration(duration.minutes(), 'minutes').humanize()
-        if (duration.seconds() > 0 && seconds < 10*60) 
+        if (duration.seconds() > 0 && seconds < 10*60)
             ret += " " + duration.seconds() + " second" + (duration.seconds() > 1 ? 's' : '');
 
         return _.trim(ret);
@@ -268,7 +268,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             $(el).tooltip();
         },
         unbind: function (el) {
-            $(el).tooltip('destroy');
+            $(el).tooltip().tooltip('destroy');
         },
         routine: function (el, value) {
             $(el).tooltip('option', 'content', value);
