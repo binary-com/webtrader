@@ -119,10 +119,36 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       format = format || 'YYYY-MM-DD HH:mm:ss';
       return epoch && moment.utc(epoch*1000).format(format);
     }
+    /* human readable difference of two epoch values */
+    rv.formatters['moment-humanize'] = function(from_epoch, till_epoch){
+        if(!from_epoch || !till_epoch) {
+          return undefined;
+        }
+
+        var ret = '';
+        var seconds = till_epoch - from_epoch;
+        var duration = moment.duration(seconds, 'seconds');
+        if (duration.days() > 0)
+            ret += " " + moment.duration(duration.days(), 'days').humanize()
+        if (duration.hours() > 0)
+            ret += " " + moment.duration(duration.hours(), 'hours').humanize()
+        if (duration.minutes() > 0)
+            ret += " " + moment.duration(duration.minutes(), 'minutes').humanize()
+        if (duration.seconds() > 0 && seconds < 10*60) 
+            ret += " " + duration.seconds() + " second" + (duration.seconds() > 1 ? 's' : '');
+
+        return _.trim(ret);
+    }
     /* formatter to bold last character */
     rv.formatters['bold-last-character'] = function(str){
       str = str + '';
       return str.substring(0, str.length - 1) + '<strong>' + _.last(str) + '</strong>';
+    }
+    /* formatter to calcualte the percent of a value of another value */
+    rv.formatters['percent-of'] = function(changed, original) {
+      if(changed === undefined || !original)
+        return undefined;
+      return (100*(changed - original)/original).toFixed(2)+'%';
     }
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
