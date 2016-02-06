@@ -155,14 +155,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
     };
 
-    function on_arrow_click(e) {
-      if(e.target.tagName !== 'IMG')
+    var on_arrow_click = function(e){
+      var target = e.target;
+      var $target = $(target);
+      if(target.tagName !== 'IMG' || $target.hasClass('disabled'))
         return;
-      var tr = e.target.parentElement.parentElement;
-      var data = table.api().row(tr).data();
-      var transaction = _.last(data);
+      var tr = target.parentElement.parentElement;
+      var transaction = table.api().row(tr).data();
+      transaction = _.last(transaction);
+      $target.addClass('disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
-          viewTransaction.init(transaction.contract_id, transaction.transaction_id);
+        viewTransaction.init(transaction.contract_id, transaction.transaction_id)
+                       .then(function(){ $target.removeClass('disabled'); });
       });
     }
 
