@@ -257,7 +257,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           longcode: proposal.longcode,
           validation: proposal.validation_error
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
-                || (proposal.is_expired && 'This contract has expired') || 'Loading ...',
+                || (proposal.is_expired && 'This contract has expired') || '-',
           table: {
             is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
@@ -305,6 +305,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           },
           onclose: [], /* cleanup callback array when dialog is closed */
       };
+
+      state.sell.sell = function() { sell_at_market(state, root); }
+
+      state.chart.manual_reflow = function() {
+        /* TODO: find a better solution for resizing the chart  :/ */
+        var h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
+        if(!state.chart.chart) return;
+        var container = root;// root.find('.chart-container');
+        var width = container.width(), height = container.height();
+        state.chart.chart.setSize(width, height + h , false);
+        state.chart.chart.hasUserSize = null;
+      };
+
+      var chart_data_promise = get_chart_data(state, root);
+
       /* back-end is not returning sell_time field, worse its returning wrong sell_price vlaue */
       liveapi.send({profit_table: 1, date_from: proposal.date_start, date_to: proposal.date_start+1})
              .then(function(data) {
@@ -320,25 +335,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                state.table.sell_spot = '-'; // TODO: find a way to get sell spot
                state.table.final_price = undefined; // TODO: find a way to get final price
                state.table.is_sold_at_market = true;
+               state.validation = 'This contract has expired';
+               chart_data_promise.then(function(){
+                  state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'});
+               });
              })
              .catch(function(err){
                console.error(err);
              });
-
-      state.sell.sell = function() { sell_at_market(state, root); }
-
-      state.chart.manual_reflow = function() {
-        /* TODO: find a better solution for resizing the chart  :/ */
-        var h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
-        if(!state.chart.chart) return;
-        var container = root;// root.find('.chart-container');
-        var width = container.width(), height = container.height();
-        state.chart.chart.setSize(width, height + h , false);
-        state.chart.chart.hasUserSize = null;
-      };
-
-      get_chart_data(state, root);
-
       // window.state = state;
       return state;
   }
@@ -440,8 +444,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.chart.type = 'candles';
     }
 
-    liveapi.send(request)
-      .then(function(data) {
+    if(!state.table.is_expired) {
+      update_live_chart(state, granularity);
+    }
+
+    return liveapi.send(request).then(function(data) {
         state.chart.loading = '';
 
         var options = { title: state.chart.symbol_name };
@@ -484,11 +491,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.chart.loading = err.message;
         console.error(err);
       });
-
-
-    if(!state.table.is_expired) {
-      update_live_chart(state, granularity);
-    }
   }
 
   return { init: init };
