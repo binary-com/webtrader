@@ -617,6 +617,12 @@
     "id": "cc",
     "long_display_name": "Coppock Curve",
     "short_display_name": "CC"
+  },
+
+   "chop": {
+    "id": "chop",
+    "long_display_name": "Choppiness Index",
+    "short_display_name": "CHOP"
   }
 
 }

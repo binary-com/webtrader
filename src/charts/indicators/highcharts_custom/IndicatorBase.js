@@ -73,7 +73,8 @@ IndicatorBase.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetad
                 x: 50
             },
             lineWidth: 2,
-            plotLines: this.options.levels
+            plotLines: this.options.levels,
+            plotBands :this.options.plotBands
         },
         seriesConf : {
             id: this.uniqueID,
