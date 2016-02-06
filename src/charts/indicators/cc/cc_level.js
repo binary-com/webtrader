@@ -1,5 +1,5 @@
 ﻿/**
- * Created by Mahboob.M on 2/3/16.
+ * Created by Mahboob>M on 2/5/16.
  */
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
@@ -19,28 +19,27 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             this.dashStyle = dashStyle;
         };
 
-        require(['text!charts/indicators/aroon/aroon_level.html'], function ( $html ) {
+        require(['text!charts/indicators/cc/cc_level.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
-            //$html.hide();
             $html.appendTo("body");
             $html.find("input[type='button']").button();
 
-            $html.find("#aroon_level_stroke").colorpicker({
+            $html.find("#cc_level_stroke").colorpicker({
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:			function(event, color) {
-                    $("#aroon_level_stroke").css({
+                    $("#cc_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok:             			function(event, color) {
-                    $("#aroon_level_stroke").css({
+                    $("#cc_level_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
@@ -48,16 +47,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             var selectedDashStyle = "Solid";
-            $('#aroon_level_dashStyle').ddslick({
+            $('#cc_level_dashStyle').ddslick({
                 imagePosition: "left",
                 width: 118,
                 background: "white",
                 onSelected: function (data) {
-                    $('#aroon_level_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#cc_level_dashStyle .dd-selected-image').css('max-width', '85px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#aroon_level_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#cc_level_dashStyle .dd-option-image').css('max-width', '85px');
 
 
             $html.dialog({
@@ -68,15 +67,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 my: 'center',
                 at: 'center',
                 of: window,
-                dialogClass: 'aroon-ui-dialog',
+                dialogClass: 'cc-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
                         click: function() {
 
                             if (callBackAfterOKPressed) {
-                                callBackAfterOKPressed([new Level(parseFloat($html.find(".aroon_level_input_width_for_level").val()),
-                                    defaultStrokeColor, parseInt($html.find("#aroon_level_strokeWidth").val()),
+                                callBackAfterOKPressed([new Level(parseFloat($html.find(".cc_level_input_width_for_level").val()),
+                                    defaultStrokeColor, parseInt($html.find("#cc_level_strokeWidth").val()),
                                     selectedDashStyle)]);
                             }
 
@@ -109,13 +108,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
         open : function ( containerIDWithHash, _callback ) {
 
             callBackAfterOKPressed = _callback;
-            if ($(".aroon_level").length == 0)
+            if ($(".cc_level").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".aroon_level").dialog( "open" );
+            $(".cc_level").dialog( "open" );
 
         }
 
