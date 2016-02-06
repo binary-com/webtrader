@@ -611,6 +611,12 @@
     "long_display_name": "Chande Kroll Stop",
     "short_display_name": "CKS",
 	"onChartIndicator" : true
+  },
+
+   "cc": {
+    "id": "cc",
+    "long_display_name": "Coppock Curve",
+    "short_display_name": "CC"
   }
 
 }
