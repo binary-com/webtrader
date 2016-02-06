@@ -8,11 +8,11 @@ T3 = function (data, options, indicators) {
     this.gd1 = [], this.gd2 = [], this.gd3 = [];
     this.priceData = [];
 
-    this.CalculateGD =function(data ,key, gd)
+    this.CalculateGD =function(data ,key, gd ,appliedTo)
     {
         this.ema1[key] = new EMA(data, {
             period: this.options.period,
-            appliedTo: this.options.appliedTo
+            appliedTo: appliedTo 
         }, this.indicators);
         var ema1Data = [];
         this.ema1[key].indicatorData.forEach(function (e) {
@@ -52,9 +52,9 @@ T3 = function (data, options, indicators) {
     Tim Tillson advised or preferred a value of 0.7.
     //T3 = GD(GD(GD(t, Period, vFactor), Period, vFactor), Period, vFactor);
     */
-    this.CalculateGD(data,'gd1', this.gd1);
-    this.CalculateGD(this.gd1,'gd2', this.gd2);
-    this.CalculateGD(this.gd2,'gd3', this.gd3);
+    this.CalculateGD(data,'gd1', this.gd1 ,this.options.appliedTo);
+    this.CalculateGD(this.gd1,'gd2', this.gd2 ,this.indicators.CLOSE);
+    this.CalculateGD(this.gd2,'gd3', this.gd3 ,this.indicators.CLOSE);
 
     for (var index = 0; index < data.length; index++) {
         this.indicatorData.push({ time: this.gd3[index].time, value: toFixed(this.gd3[index].close, 4) });
