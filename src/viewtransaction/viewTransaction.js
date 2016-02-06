@@ -130,11 +130,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                   .catch(function(err) { console.error(err); });
   }
 
-  /* params : { symbol: ,contract_id: ,longcode: ,sell_time: ,
-                purchase_time: ,buy_price: ,sell_price:, currency:,
-                duration: , duration_type: 'ticks/seconds/...' } */
   function init(contract_id, transaction_id){
-    liveapi.cached.send({proposal_open_contract: 1, contract_id: contract_id})
+    return new Promise(function(resolve, reject){
+      liveapi.cached.send({proposal_open_contract: 1, contract_id: contract_id})
            .then(function(data){
               var proposal = data.proposal_open_contract;
               proposal.transaction_id = transaction_id;
@@ -142,12 +140,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               get_symbol_name(proposal.symbol).then(function(symbol_name){
                 proposal.symbol_name = symbol_name;
                 init_dialog(proposal);
-              }).catch(function(err) { console.error(err); })
+                resolve();
+              }).catch(function(err) { console.error(err); reject(); })
            })
            .catch(function(err){
              console.error(err);
              $.growl.error({ message: err.message });
+             reject();
            });
+    });
   }
 
   function update_indicative(data, state){
