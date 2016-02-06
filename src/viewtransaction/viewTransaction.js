@@ -151,6 +151,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           bid_price = contract.bid_price;
       if(id !== state.contract_id) { return; }
 
+      /* fix for backend wrong is_valid_to_sell field :( */
+      if(state.is_sold_at_market) {
+        contract.is_expired = 1;
+        contract.is_valid_to_sell = 0;
+      }
+
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
@@ -161,6 +167,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       state.table.current_spot = contract.current_spot;
       state.table.current_spot_time = contract.current_spot_time;
       state.table.bid_price = contract.bid_price;
+
+      if(state.sell.bid_prices.length > 40) {
+        state.sell.bid_prices.shift();
+      }
+      state.sell.bid_prices.push(contract.bid_price)
+
+      state.sell.bid_price.value = contract.bid_price;
+      state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
+      state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+      state.sell.is_valid_to_sell = false;
+      state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+      state.chart.manual_reflow();
   }
 
   function init_dialog(proposal) {
@@ -172,13 +190,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var transWin = windows.createBlankWindow(root, {
             title: proposal.symbol_name + ' (' + proposal.transaction_id + ')',
             width: 700,
-            minWidth: 300,
-            minHeight:350,
+            minWidth: 490,
+            minHeight:370,
             destroy: function() { },
             close: function() {
               view && view.unbind();
               liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
-              state.onclose && state.onclose();
+              for(var i = 0; i < state.onclose.length; ++i)
+                state.onclose[i]();
+              $(this).dialog('destroy').remove();
             },
             open: function() {
               portfolio.proposal_open_contract.subscribe();
@@ -196,6 +216,37 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     });
   }
 
+  function sell_at_market(state, root) {
+    state.sell.sell_at_market_enabled = false; /* disable button */
+    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
+    liveapi.send({sell: state.contract_id, price: 0 /* to sell at market */})
+          .then(function(data){
+              var sell = data.sell;
+              require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'], function(html){
+                  var buy_price = state.table.buy_price;
+                  var state_confirm = {
+                    longcode: state.longcode,
+                    buy_price: buy_price,
+                    sell_price: sell.sold_for,
+                    return_percent: (100*(sell.sold_for - buy_price)/buy_price).toFixed(2)+'%',
+                    transaction_id: sell.transaction_id,
+                    balance: sell.balance_after,
+                    currency: state.table.currency,
+                  };
+                  var $html = $(html);
+                  root.after($html);
+                  var view_confirm = rv.bind($html[0], state_confirm);
+                  state.onclose.push(function(){
+                    view_confirm && view_confirm.unbind();
+                  });
+              });
+          })
+          .catch(function(err){
+              $.growl.error({ message: err.message });
+              console.error(err);
+          });
+  }
+
   function init_state(proposal, root){
       var state = {
           route: {
@@ -206,7 +257,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           longcode: proposal.longcode,
           validation: proposal.validation_error
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
-                || (proposal.is_expired && 'This contract has expired') || '-',
+                || (proposal.is_expired && 'This contract has expired') || 'Loading ...',
           table: {
             is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
@@ -221,11 +272,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             exit_tick_time: proposal.exit_tick_time,
 
             buy_price: proposal.buy_price && formatPrice(proposal.buy_price),
-            bid_price: undefined, // proposal.bid_price && formatPrice(proposal.bid_price),
-            sell_price: proposal.sell_price && formatPrice(proposal.sell_price),
+            bid_price: undefined,
+            final_price: proposal.sell_price && formatPrice(proposal.sell_price),
 
             tick_count: proposal.tick_count,
             prediction: proposal.prediction,
+
+            sell_time: undefined,
+            sell_spot: undefined,
+            sell_price: undefined,
+            is_sold_at_market: false,
           },
           chart: {
             chart: null, /* highchart object */
@@ -237,8 +293,39 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             loading: 'Loading ' + proposal.symbol_name + ' ...',
             type: 'ticks', // could be 'tick' or 'ohlc'
           },
-          onclose: undefined, /* cleanup callback when dialog is closed */
+          sell: {
+            bid_prices: [],
+            bid_price: {
+                unit: undefined,
+                cent: undefined,
+                value: undefined,
+            },
+            sell_at_market_enabled: true,
+            is_valid_to_sell: false,
+          },
+          onclose: [], /* cleanup callback array when dialog is closed */
       };
+      /* back-end is not returning sell_time field, worse its returning wrong sell_price vlaue */
+      liveapi.send({profit_table: 1, date_from: proposal.date_start, date_to: proposal.date_start+1})
+             .then(function(data) {
+               var transactions = data.profit_table.transactions || [];
+               transactions = transactions.filter(function(t) { return t.contract_id+'' === proposal.contract_id+''; });
+
+               if(!transactions || transactions.length !== 1) { return; } /* so contract is not finished yet */
+               var trans = transactions[0];
+               if(trans.sell_time >= proposal.date_expiry) { return; } /* so contract is not sold at market */
+
+               state.table.sell_time = trans.sell_time;
+               state.table.sell_price = trans.sell_price;
+               state.table.sell_spot = '-'; // TODO: find a way to get sell spot
+               state.table.final_price = undefined; // TODO: find a way to get final price
+               state.table.is_sold_at_market = true;
+             })
+             .catch(function(err){
+               console.error(err);
+             });
+
+      state.sell.sell = function() { sell_at_market(state, root); }
 
       state.chart.manual_reflow = function() {
         /* TODO: find a better solution for resizing the chart  :/ */
@@ -284,6 +371,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             var chart = state.chart.chart;
             var tick = data.tick;
             chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
+            /* stop updating when contract is expired */
+            if(tick.epoch*1 > state.table.date_expiry*1) {
+              clean_up();
+            }
         });
       }
       else {
@@ -307,20 +398,27 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           else {
             last.update(ohlc,true);
           }
+          /* stop updating when contract is expired */
+          if(c.epoch*1 > state.table.date_expiry*1) {
+            clean_up();
+          }
         });
       }
 
-      /* cleanup */
-      state.onclose = function() {
+      var clean_up_done = false;
+      var clean_up = function() {
+        if(clean_up_done) return;
+        clean_up_done = true;
         chartingRequestMap.unregister(key);
         on_tick && liveapi.events.off('tick', on_tick);
         on_candles && liveapi.events.off('candles', on_candles);
       };
+      state.onclose.push(clean_up); /* clean up */
   }
 
   function get_chart_data(state, root) {
     var table = state.table;
-    var duration = state.table.date_expiry - state.table.date_start;
+    var duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - state.table.date_start;
     var granularity = 0;
     var margin = 0; // time margin
     if(duration <= 60*60) { granularity = 0; } // 1 hour

@@ -117,6 +117,41 @@
 }
 /************* footer *************************/
 .view-transaction-dialog .footer {
-  background:  #eee;
-  text-align: center;;
+  background: linear-gradient(#fff, #eee);
+  text-align: center;
 }
+
+/*.view-transaction-dialog .footer .sell-at-market .sparkline,*/
+.view-transaction-dialog .footer .validation { text-align: left; }
+
+.view-transaction-dialog .footer .sell-at-market {
+  display: flex;
+  padding: 5px 5px 0 5px;
+}
+.view-transaction-dialog .footer .bid-price {
+  display: inline-block;
+  height: 2em;
+  margin-right: 5px;
+  max-width: 200px;
+}
+.view-transaction-dialog .footer .bid-price > span { position: relative; top: -5px; }
+.view-transaction-dialog .footer .bid-price .currency { font-size: 16px; }
+.view-transaction-dialog .footer .bid-price .unit { font-size: 20px; }
+.view-transaction-dialog .footer .bid-price .cent { vertical-align: top; }
+
+.view-transaction-dialog .footer .sell-at-market > span {
+    flex: 1 1 33%;
+    line-height: 2em;
+}
+
+.view-transaction-dialog .footer .sell-at-market .sell-button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+}
+.view-transaction-dialog .footer .sell-at-market .sell-button[disabled] { opacity: 0.5; }

@@ -636,6 +636,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                })
                .then(function(data){
                   require(['trade/tradeConf'], function(tradeConf){
+                      extra.contract_id = data.buy.contract_id;
+                      extra.transaction_id = data.buy.transaction_id;
                       tradeConf.init(data, extra, show, hide);
                   });
                })

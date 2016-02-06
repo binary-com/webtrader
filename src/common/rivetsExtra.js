@@ -82,6 +82,9 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       return fn.bind(undefined, value);
     }
 
+    rv.formatters['map'] = function(array, field){
+      return _.map(array, field);
+    }
     /* rv formatter to prepend a value */
     rv.formatters['prepend'] = function(value, other){
       return (other && value) ? other + value : value;
@@ -410,9 +413,8 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /* ticks: [ {quote: ''} ] */
-    rv.binders['sparkline'] = function(el, ticks) {
+    rv.binders['sparkline'] = function(el, spots) {
       var chart = $(el);
-      var spots = _.map(ticks,'quote');
       var config = {
         type: 'line',
         lineColor: '#606060',
