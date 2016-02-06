@@ -629,6 +629,12 @@
     "id": "adx",
     "long_display_name": "Average Directional Movement Index",
     "short_display_name": "ADX"
+  },
+
+   "dx": {
+    "id": "dx",
+    "long_display_name": "Directional Movement Index",
+    "short_display_name": "DX"
   }
 
 }
