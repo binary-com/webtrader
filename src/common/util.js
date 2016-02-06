@@ -2,6 +2,26 @@
  * Created by arnab on 2/12/15.
  */
 
+/*
+* patch for jquery growl functions.
+* do not to show multiple growls with the same content.
+* add more info to messages realted to websocket 'rate limit'
+*/
+require(['jquery', 'jquery-growl'], function($){
+  ['error', 'notice', 'warning'].forEach(function(name){
+      var perv = $.growl[name].bind($.growl);
+      $.growl[name] = function(options){
+        if(options.message.indexOf('rate limit') > -1) {
+          options.message += ' Please try again after 1 minute.';
+        }
+        if(!options.title) options.title = ''; /* remove title */
+        /* remove current growl with the same message */
+        $('#growls .growl:contains("' + options.message + '")').remove();
+        perv(options);
+      }
+  });
+});
+
 function isTick(ohlc) {
     return ohlc.indexOf('t') != -1;
 }
