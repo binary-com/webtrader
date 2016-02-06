@@ -226,6 +226,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];
                 });
+                /* register callback to sell contract on expiration */
+                contracts.forEach(function(contract){
+                  liveapi.sell_expired(contract.expiry_time);
+                });
 
                 /* update the table */
                 table.api().rows().remove();
