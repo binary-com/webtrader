@@ -14,7 +14,7 @@
                   rv-class-down="tick.down < quote"></span>
         </li>
         <li class='sparkline-chart'>
-            <span rv-sparkline="ticks.array"></span>
+            <span rv-sparkline="ticks.array | map 'quote'"></span>
         </li>
     </ul>
 

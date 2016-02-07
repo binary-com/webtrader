@@ -96,14 +96,18 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
       }
     }
 
-    function on_arrow_click(e) {
-      if(e.target.tagName !== 'IMG')
+    var on_arrow_click = function(e){
+      var target = e.target;
+      var $target = $(target);
+      if(target.tagName !== 'IMG' || $target.hasClass('disabled'))
         return;
-      var tr = e.target.parentElement.parentElement;
-      var data = table.api().row(tr).data();
-      var contract = _.last(data);
+      var tr = target.parentElement.parentElement;
+      var transaction = table.api().row(tr).data();
+      transaction = _.last(transaction);
+      $target.addClass('disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
-          viewTransaction.init(contract.contract_id, contract.transaction_id);
+        viewTransaction.init(transaction.contract_id, transaction.transaction_id)
+                       .then(function(){ $target.removeClass('disabled'); });
       });
     }
 
@@ -221,6 +225,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         contract.contract_id, /* for jq-datatables rowId */
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];
+                });
+                /* register callback to sell contract on expiration */
+                contracts.forEach(function(contract){
+                  liveapi.sell_expired(contract.expiry_time);
                 });
 
                 /* update the table */
