@@ -1,13 +1,13 @@
 ﻿.adx_input_width {
-    width: 120px;
+    width: 160px;
 }
 
 .adx_input_width_for_period {
-    width: 115px;
+    width: 155px;
 }
 
 .adx_level_input_width_for_level {
-  width: 115px;
+  width: 155px;
 }
 
 .adx label {
@@ -21,5 +21,9 @@
 }
 
 .adx-ui-dialog, .adx.ui-dialog-content, .adx_level.ui-dialog-content {
+    overflow: visible;
+}
+
+.adxr-ui-dialog, .adxr.ui-dialog-content {
     overflow: visible;
 }

@@ -30,7 +30,7 @@ ADX = function (data, options, indicators) {
     };
 
     this.calculateDMData = function (data) {
-        var plusDMData = [], minusDMData = [];
+        var plusDMData = [{ time: data[0].time, close: 0 }], minusDMData = [{ time: data[0].time, close: 0 }];
         for (var index = 1; index < data.length; index++) {
             var Dm = this.calculateDMValue(data, index);
             if (this.atr.indicatorData[index].value === 0) {
@@ -55,7 +55,12 @@ ADX = function (data, options, indicators) {
     var maData = [];
     var index = 0, _this=this;
     this.PlusDI.indicatorData.forEach(function (plusDI) {
-        maData.push({ time: plusDI.time, close: ((plusDI.value - _this.MinusDI.indicatorData[index].value) / (plusDI.value + _this.MinusDI.indicatorData[index].value)) });
+        var minusDI = _this.MinusDI.indicatorData[index];
+        if ((plusDI.value + minusDI.value) === 0) {
+            maData.push({ time: plusDI.time, close: 0 });
+        } else {
+            maData.push({ time: plusDI.time, close: Math.abs((plusDI.value - minusDI.value) / (plusDI.value + minusDI.value)) });
+        };
         _this.priceData.push(data[index]);
         index++;
     });
@@ -73,9 +78,10 @@ ADX.prototype.addPoint = function (data) {
     var index = this.priceData.length - 1;
     var atr = this.atr.addPoint(data)[0].value;
     var DM = this.calculateDMValue(this.priceData, index);
-    var plusDI = this.PlusDI.addPoint({ time: data.time, close: DM.plusDm / atr })[0].value;
-    var minusDI = this.MinusDI.addPoint({ time: data.time, close: DM.minusDM / atr })[0].value;
-    var adx = this.adxdata.addPoint({ time: data.time, close: ((plusDI - minusDI) / (plusDI + minusDI)) })[0].value;
+    var plusDI = this.PlusDI.addPoint({ time: data.time, close: (atr === 0 ? 0 : DM.plusDm / atr) })[0].value;
+    var minusDI = this.MinusDI.addPoint({ time: data.time, close: (atr === 0 ? 0 : DM.minusDM / atr) })[0].value;
+    var adxValue = (plusDI + minusDI) === 0 ? 0 : Math.abs((plusDI - minusDI) / (plusDI + minusDI));
+    var adx = this.adxdata.addPoint({ time: data.time, close: adxValue })[0].value;
     this.indicatorData = this.adxdata.indicatorData;
     return [{
         id: this.uniqueID,
@@ -92,9 +98,10 @@ ADX.prototype.update = function (data) {
     this.priceData[index].close = data.close;
     var atr = this.atr.update(data)[0].value;
     var DM = this.calculateDMValue(this.priceData, index);
-    var plusDI = this.PlusDI.update({ time: data.time, close: DM.plusDm / atr })[0].value;
-    var minusDI = this.MinusDI.update({ time: data.time, close: DM.minusDM / atr })[0].value;
-    var adx = this.adxdata.update({ time: data.time, close: ((plusDI - minusDI) / (plusDI + minusDI)) })[0].value;
+    var plusDI = this.PlusDI.update({ time: data.time, close: (atr === 0 ? 0 : DM.plusDm / atr) })[0].value;
+    var minusDI = this.MinusDI.update({ time: data.time, close: (atr === 0 ? 0 : DM.minusDM / atr) })[0].value;
+    var adxValue = (plusDI + minusDI) === 0 ? 0 : Math.abs((plusDI - minusDI) / (plusDI + minusDI));
+    var adx = this.adxdata.update({ time: data.time, close: adxValue })[0].value;
     this.indicatorData = this.adxdata.indicatorData;
     return [{
         id: this.uniqueID,

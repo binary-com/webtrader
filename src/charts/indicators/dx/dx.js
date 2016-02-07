@@ -19,7 +19,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             this.strokeWidth = strokeWidth;
             this.dashStyle = dashStyle;
         };
-        var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
+        var defaultLevels = [new Level(0.3, 'red', 1, 'Dash'), new Level(0.7, 'red', 1, 'Dash')];
 
         require(['text!charts/indicators/dx/dx.html'], function ( $html ) {
 
@@ -63,14 +63,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#dx_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 158,
                 background: "white",
                 onSelected: function (data) {
-                    $('#dx_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#dx_dashStyle .dd-selected-image').css('max-width', '125px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#dx_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#dx_dashStyle .dd-option-image').css('max-width', '125px');
 
 
             var table = $html.find('#dx_levels').DataTable({
@@ -121,7 +121,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 350,
+                width: 450,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -186,7 +186,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 ]
             });
             $html.find('select').selectmenu({
-                width : 120
+                width : 160
             });
 
             if (typeof _callback == "function")

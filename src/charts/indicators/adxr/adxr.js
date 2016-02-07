@@ -21,28 +21,27 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(0.3, 'red', 1, 'Dash'), new Level(0.7, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/adx/adx.html'], function ( $html ) {
+        require(['text!charts/indicators/adxr/adxr.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
-            //$html.hide();
             $html.appendTo("body");
             $html.find("input[type='button']").button();
 
-            $html.find("#adx_stroke").colorpicker({
+            $html.find("#adxr_stroke").colorpicker({
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:			function(event, color) {
-                    $("#adx_stroke").css({
+                    $("#adxr_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok:             			function(event, color) {
-                    $("#adx_stroke").css({
+                    $("#adxr_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
@@ -50,16 +49,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             });
 
             var selectedDashStyle = "Solid";
-            $('#adx_dashStyle').ddslick({
+            $('#adxr_dashStyle').ddslick({
                 imagePosition: "left",
                 width: 158,
                 background: "white",
                 onSelected: function (data) {
-                    $('#adx_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#adxr_dashStyle .dd-selected-image').css('max-width', '125px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#adx_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#adxr_dashStyle .dd-option-image').css('max-width', '125px');
 
 
             var table = $html.find('#adx_levels').DataTable({
@@ -115,7 +114,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
-                dialogClass:'adx-ui-dialog',
+                dialogClass:'adxr-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -152,15 +151,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                             });
                             var options = {
                                 period: parseInt($html.find(".adx_input_width_for_period").val()),
-                                maType: $html.find("#adx_ma_type").val(),
+                                maType: $html.find("#adxr_ma_type").val(),
                                 stroke: defaultStrokeColor,
-                                strokeWidth: parseInt($html.find("#adx_strokeWidth").val()),
+                                strokeWidth: parseInt($html.find("#adxr_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
-                                appliedTo: parseInt($html.find("#adx_appliedTo").val()),
+                                appliedTo: parseInt($html.find("#adxr_appliedTo").val()),
                                 levels: levels
                             };
-                            //Add ADX for the main series
-                            $($(".adx").data('refererChartID')).highcharts().series[0].addIndicator('adx', options);
+                            //Add ADXR for the main series
+                            $($(".adxr").data('refererChartID')).highcharts().series[0].addIndicator('adxr', options);
 
                             closeDialog.call($html);
 
@@ -191,13 +190,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
         open : function ( containerIDWithHash ) {
 
-            if ($(".adx").length == 0)
+            if ($(".adxr").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".adx").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".adxr").data('refererChartID', containerIDWithHash).dialog( "open" );
 
         }
 

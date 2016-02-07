@@ -1,9 +1,8 @@
-﻿<div class="adx" title="Average Directional Movement Index (ADX)">
+﻿<div class="adxr" title="Average Directional Movement Rating (ADXR)">
     <table width="100%">
         <tr>
             <td colspan="2">
-                The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument
-                ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength.
+                Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two.
             </td>
         </tr>
         <tr>
@@ -11,9 +10,9 @@
             <td><input value="14" min="1" max="200" class="adx_input_width_for_period" /></td>
         </tr>
         <tr>
-            <td><strong>ADX MA Type</strong></td>
+            <td><strong>MA Type</strong></td>
             <td>
-                <select id="adx_ma_type" class="ao_input_width" autofocus>
+                <select id="adxr_ma_type" class="ao_input_width" autofocus>
                     <option value="SMA">SMA</option>
                     <option value="WMA">WMA</option>
                     <option value="EMA">EMA</option>
@@ -24,12 +23,12 @@
         </tr>
         <tr>
             <td><strong>Stroke</strong></td>
-            <td><input value="" id="adx_stroke" type="button" class="adx_input_width" style="background: #cd0a0a;" /></td>
+            <td><input value="" id="adxr_stroke" type="button" class="adx_input_width" style="background: #cd0a0a;" /></td>
         </tr>
         <tr>
             <td><strong>Stroke width</strong></td>
             <td>
-                <select id="adx_strokeWidth" class="adx_input_width">
+                <select id="adxr_strokeWidth" class="adx_input_width">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -46,7 +45,7 @@
         <tr>
             <td><strong>Dash style</strong></td>
             <td>
-                <select id="adx_dashStyle" class="adx_input_width">
+                <select id="adxr_dashStyle" class="adx_input_width">
                     <option value="Solid" data-imagesrc="images/dashstyle/Solid.svg" title="Solid"></option>
                     <option value="ShortDash" data-imagesrc="images/dashstyle/ShortDash.svg"></option>
                     <option value="ShortDot" data-imagesrc="images/dashstyle/ShortDot.svg"></option>
@@ -64,7 +63,7 @@
         <tr>
             <td><strong>Applied to</strong></td>
             <td>
-                <select id="adx_appliedTo" class="adx_input_width">
+                <select id="adxr_appliedTo" class="adx_input_width">
                     <option value="0">OPEN</option>
                     <option value="1">HIGH</option>
                     <option value="2">LOW</option>

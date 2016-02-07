@@ -5,7 +5,6 @@
 DX = function (data, options, indicators) {
 
     IndicatorBase.call(this, data, options, indicators);
-    this.priceData = [];
     /*Current High - Previous High = UpMove
     Current Low - Previous Low = DownMove
     If UpMove > DownMove and UpMove > 0, then +DM = UpMove, else +DM = 0
@@ -25,7 +24,6 @@ DX.prototype.constructor = DX;
 
 DX.prototype.addPoint = function (data) {
     console.log('Adding DX data point : ', data);
-    this.priceData.push(data);
     var adx = this.adx.addPoint(data)[0].value;
     this.plusDIData = this.adx.PlusDI.indicatorData;
     this.minusData = this.adx.MinusDI.indicatorData;

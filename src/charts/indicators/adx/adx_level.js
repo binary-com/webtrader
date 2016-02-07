@@ -49,14 +49,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#adx_level_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 158,
                 background: "white",
                 onSelected: function (data) {
-                    $('#adx_level_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#adx_level_dashStyle .dd-selected-image').css('max-width', '125px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#adx_level_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#adx_level_dashStyle .dd-option-image').css('max-width', '125px');
 
 
             $html.dialog({
@@ -91,7 +91,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 ]
             });
             $html.find('select').selectmenu({
-                width : 120
+                width : 160
             });
 
             if ($.isFunction(_callback))
