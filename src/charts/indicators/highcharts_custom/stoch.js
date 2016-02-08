@@ -3,7 +3,7 @@
  */
 STOCH = function(data, options, indicators) {
 
-    options.maType = (options.fastDMaType || 'SMA').toUpperCase();
+    options.fastDMaType = (options.fastDMaType || 'SMA').toUpperCase();
     IndicatorBase.call(this, data, options, indicators);
     this.priceData = [];
     //2 unique IDs for 2 series to be rendered
@@ -42,7 +42,7 @@ STOCH = function(data, options, indicators) {
         this.priceData.push(data[index]);
     };
 
-    this.dData = new window[options.maType](this.indicatorData, { period: this.options.fastDPeriod, maType: this.options.fastDMaType }, indicators);
+    this.dData = new window[options.fastDMaType](this.indicatorData, { period: this.options.fastDPeriod, maType: this.options.fastDMaType }, indicators);
 
 };
 

@@ -659,6 +659,12 @@
   "id": "stochf",
   "long_display_name": "Stochastic Fast",
   "short_display_name": "STOCHF"
+  },
+  
+  "stochs": {
+  "id": "stochs",
+  "long_display_name": "Stochastic Slow",
+  "short_display_name": "STOCHS"
   }
 
 }
