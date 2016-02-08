@@ -641,6 +641,37 @@
     "id": "adxr",
     "long_display_name": "Average Directional Movement Index Rating",
     "short_display_name": "ADXR"
+  },
+
+   "apo": {
+    "id": "apo",
+    "long_display_name": "Absolute Price Oscillator",
+    "short_display_name": "APO"
+  },
+
+  "stoch": {
+  "id": "stoch",
+  "long_display_name": "Stochastic",
+  "short_display_name": "STOCH  "
+  },
+  
+  "stochf": {
+  "id": "stochf",
+  "long_display_name": "Stochastic Fast",
+  "short_display_name": "STOCHF"
+  },
+  
+  "stochs": {
+  "id": "stochs",
+  "long_display_name": "Stochastic Slow",
+  "short_display_name": "STOCHS"
+  },
+
+  "dc": {
+    "id": "dc",
+    "long_display_name": "Donchian Channel",
+    "short_display_name": "DC",
+    "onChartIndicator": true
   }
 
 }
