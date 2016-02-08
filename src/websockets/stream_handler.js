@@ -23,14 +23,16 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
             var time = parseInt(data.tick.epoch) * 1000;
 
             var chartingRequest = chartingRequestMap[key];
-            chartingRequest.id = chartingRequest.id || data.tick.id;
-            if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
-                return;
-            var timePeriod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timePeriod');
-            if (!timePeriod)
-                return;
+            var granularity = data.echo_req.granularity || 0;
+            // chartingRequest.id = chartingRequest.id || data.tick.id;
+            // if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
+                // return;
+            // var timePeriod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timePeriod');
+            // if (!timePeriod)
+                // return;
 
-            if (isTick(timePeriod)) { //Update OHLC with same value in DB
+            // if (isTick(timePeriod)) { //Update OHLC with same value in DB
+            if(granularity === 0) {
                 var tick = {
                   instrumentCdAndTp: key,
                   time: time,
@@ -43,6 +45,9 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 /* notify subscribers */
                 fire_event('tick', {tick: tick, key: key});
 
+                if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0)) {
+                    return;
+                }
                 //notify all registered charts
                 chartingRequest.chartIDs.forEach(function (chartID) {
                     var chart = $(chartID.containerIDWithHash).highcharts();

@@ -162,6 +162,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         contract.is_expired = 1;
         contract.is_valid_to_sell = 0;
       }
+      if(contract.is_expired)
+        contract.is_valid_to_sell = 0;
 
       if(contract.validation_error)
         state.validation = contract.validation_error;
