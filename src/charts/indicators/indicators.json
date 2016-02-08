@@ -647,6 +647,18 @@
     "id": "apo",
     "long_display_name": "Absolute Price Oscillator",
     "short_display_name": "APO"
+  },
+
+  "stoch": {
+  "id": "stoch",
+  "long_display_name": "Stochastic",
+  "short_display_name": "STOCH  "
+  },
+  
+  "stochf": {
+  "id": "stochf",
+  "long_display_name": "Stochastic Fast",
+  "short_display_name": "STOCHF"
   }
 
 }
