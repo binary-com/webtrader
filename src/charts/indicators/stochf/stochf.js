@@ -21,13 +21,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/stoch/stoch.html'], function ( $html ) {
+        require(['text!charts/indicators/stochf/stochf.html'], function ( $html ) {
 
             $html = $($html);
             $html.appendTo("body");
             $html.find("input[type='button']").button();
 
-            $html.find("#stoch_k_stroke,#stoch_d_stroke").each(function () {
+            $html.find("#stochf_k_stroke,#stochf_d_stroke").each(function () {
                 $(this).colorpicker({
                     part: {
                         map: { size: 128 },
@@ -48,23 +48,23 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 });
             });
 
-            $("#stoch_k_stroke").css("background", '#1c1010');
-            $("#stoch_d_stroke").css("background", '#cd0a0a');
+            $("#stochf_k_stroke").css("background", '#1c1010');
+            $("#stochf_d_stroke").css("background", '#cd0a0a');
 
             var selectedDashStyle = "Solid";
-            $('#stoch_dashStyle').ddslick({
+            $('#stochf_dashStyle').ddslick({
                 imagePosition: "left",
                 width: 158,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stoch_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#stochf_dashStyle .dd-selected-image').css('max-width', '125px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stoch_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#stochf_dashStyle .dd-option-image').css('max-width', '125px');
 
 
-            var table = $html.find('#stoch_levels').DataTable({
+            var table = $html.find('#stochf_levels').DataTable({
                 paging: false,
                 scrollY: 100,
                 autoWidth: true,
@@ -85,7 +85,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                         $(this).toggleClass('selected');
                     });
             });
-            $html.find('#stoch_level_delete').click(function () {
+            $html.find('#stochf_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
                     require(["jquery", "jquery-growl"], function($) {
                         $.growl.error({ message: "Select levels to delete!" });
@@ -94,7 +94,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     table.rows('.selected').remove().draw();
                 }
             });
-            $html.find('#stoch_level_add').click(function () {
+            $html.find('#stochf_level_add').click(function () {
                 require(["charts/indicators/level/level"], function(level) {
                     level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
@@ -117,7 +117,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 my: 'center',
                 at: 'center',
                 of: window,
-                dialogClass: 'stoch-ui-dialog',
+                dialogClass: 'stochf-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
@@ -139,7 +139,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 					            }
 					        });
 
-
+					        if (!isValid) return;
                             var levels = [];
                             $.each(table.rows().nodes(), function () {
                                 var data = $(this).data('level');
@@ -157,19 +157,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                             });
 
                             var options = {
-                                fastKPeriod: parseInt($("#stoch_k_period").val()),
-                                fastDPeriod: parseInt($("#stoch_d_period").val()),
-                                //fastKMaType: $("#stoch_fast_ma_type").val(),
-                                fastDMaType: $("#stoch_d_ma_type").val(),
-                                stroke: $("#stoch_k_stroke").css("background-color"),
-                                dStroke:$("#stoch_d_stroke").css("background-color"),
-                                strokeWidth: parseInt($("#stoch_stroke_width").val()),
+                                fastKPeriod: parseInt($("#stochf_k_period").val()),
+                                fastDPeriod: parseInt($("#stochf_d_period").val()),
+                                fastKMaType: $("#stochf_k_ma_type").val(),
+                                fastDMaType: $("#stochf_d_ma_type").val(),
+                                stroke: $("#stochf_k_stroke").css("background-color"),
+                                dStroke:$("#stochf_d_stroke").css("background-color"),
+                                strokeWidth: parseInt($("#stochf_stroke_width").val()),
                                 dashStyle: selectedDashStyle,
-                                appliedTo: parseInt($("#stoch_applied_to").val()),
+                                appliedTo: parseInt($("#stochf_applied_to").val()),
                                 levels:levels
                             }
                             //Add STOCH for the main series
-                            $($(".stoch").data('refererChartID')).highcharts().series[0].addIndicator('stoch', options);
+                            $($(".stochf").data('refererChartID')).highcharts().series[0].addIndicator('stochf', options);
 
                             closeDialog.call($html);
 
@@ -200,13 +200,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
         open : function ( containerIDWithHash ) {
 
-            if ($(".stoch").length == 0)
+            if ($(".stochf").length == 0)
             {
                 init( containerIDWithHash, this.open );
                 return;
             }
 
-            $(".stoch").data('refererChartID', containerIDWithHash).dialog( "open" );
+            $(".stochf").data('refererChartID', containerIDWithHash).dialog( "open" );
 
         }
 

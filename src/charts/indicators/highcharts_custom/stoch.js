@@ -3,7 +3,7 @@
  */
 STOCH = function(data, options, indicators) {
 
-    options.maType = (options.maType || 'SMA').toUpperCase();
+    options.maType = (options.fastDMaType || 'SMA').toUpperCase();
     IndicatorBase.call(this, data, options, indicators);
     this.priceData = [];
     //2 unique IDs for 2 series to be rendered
@@ -18,7 +18,7 @@ STOCH = function(data, options, indicators) {
       %K is multiplied by 100 to move the decimal point two places
       */
         var lowestLow = data[index].low, hiestHigh = data[index].high;
-        for (var i = 0; i < this.options.period; i++) {
+        for (var i = 0; i < this.options.fastKPeriod; i++) {
             lowestLow = Math.min(data[index - i].low, lowestLow);
             hiestHigh = Math.max(data[index - i].high, hiestHigh);
         };
@@ -31,7 +31,7 @@ STOCH = function(data, options, indicators) {
     };
    
     for (var index = 0; index < data.length; index++) {
-        if (index >= this.options.period) {
+        if (index >= this.options.fastKPeriod) {
             var kValue = this.calculateStochValue(data, index);
             this.indicatorData.push({ time: data[index].time, value: kValue, close: kValue });
         }
@@ -42,7 +42,7 @@ STOCH = function(data, options, indicators) {
         this.priceData.push(data[index]);
     };
 
-    this.dData = new window[options.maType](this.indicatorData, { period: this.options.period, maType: this.options.maType }, indicators);
+    this.dData = new window[options.maType](this.indicatorData, { period: this.options.fastDPeriod, maType: this.options.fastDMaType }, indicators);
 
 };
 
@@ -83,7 +83,7 @@ STOCH.prototype.update = function (data) {
 };
 
 STOCH.prototype.toString = function() {
-    return 'STOCH (' + this.options.period  + ', ' + this.options.maType  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
+    return 'STOCH (' + this.options.fastKPeriod  + ', ' + this.options.fastDPeriod  + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
 
 /**
