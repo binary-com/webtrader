@@ -691,6 +691,12 @@
     "id": "mass",
     "long_display_name": "Mass Index",
     "short_display_name": "MASS"
+  },
+
+  "cmo": {
+    "id": "cmo",
+    "long_display_name": "Chande Momentum Oscillator",
+    "short_display_name": "CMO"
   }
 
 }
