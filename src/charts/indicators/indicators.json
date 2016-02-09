@@ -672,6 +672,12 @@
     "long_display_name": "Donchian Channel",
     "short_display_name": "DC",
     "onChartIndicator": true
+  },
+
+  "ultosc": {
+    "id": "ultosc",
+    "long_display_name": "Ultimate Oscillator",
+    "short_display_name": "ULTOSC"
   }
 
 }
