@@ -33,7 +33,9 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                   open: price,
                   high: price,
                   low: price,
-                  close: price
+                  close: price,
+                  /* this will be used from trade confirmation dialog */
+                  price: data.tick.quote, /* we need the original value for tick trades */
                 }
                 barsTable.insert(tick);
                 /* notify subscribers */

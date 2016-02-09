@@ -102,11 +102,13 @@ define(['jquery'], function ($) {
         console.log('Server response : ', message);
         var data = JSON.parse(message.data);
 
-        (callbacks[data.msg_type] || []).forEach(function (cb) {
-          /* do not block the main thread */
-          setTimeout(function(){
-            cb(data);
-          },0);
+        /* do not block the main thread */
+        /* note: this will prevent subscribers from altering callbacks[data.msg_type] array
+           while we are iterating on it. this is especially important for tick trades */
+        (callbacks[data.msg_type] || []).forEach(function(cb) {
+            setTimeout(function(){
+                cb(data);
+            }, 0);
         });
 
         var key = data.req_id;
