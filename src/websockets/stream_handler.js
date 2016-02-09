@@ -24,14 +24,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
 
             var chartingRequest = chartingRequestMap[key];
             var granularity = data.echo_req.granularity || 0;
-            // chartingRequest.id = chartingRequest.id || data.tick.id;
-            // if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
-                // return;
-            // var timePeriod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timePeriod');
-            // if (!timePeriod)
-                // return;
+            chartingRequest.id = chartingRequest.id || data.tick.id;
 
-            // if (isTick(timePeriod)) { //Update OHLC with same value in DB
             if(granularity === 0) {
                 var tick = {
                   instrumentCdAndTp: key,
