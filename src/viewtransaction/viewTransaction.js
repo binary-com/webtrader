@@ -132,7 +132,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
   function init(contract_id, transaction_id){
     return new Promise(function(resolve, reject){
-      liveapi.cached.send({proposal_open_contract: 1, contract_id: contract_id})
+      liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
            .then(function(data){
               var proposal = data.proposal_open_contract;
               proposal.transaction_id = transaction_id;
