@@ -530,7 +530,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           symbol: state.proposal.symbol, /* Symbol code */
         };
         if(state.categories.value !== 'Spreads') {
-          request.amount = state.basis.amount; /* Proposed payout or stake value */
+          request.amount = state.basis.amount*1; /* Proposed payout or stake value */
           request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
         } else {
           request.amount_per_point = state.spreads.amount_per_point;
