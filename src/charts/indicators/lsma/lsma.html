@@ -1,30 +1,22 @@
-﻿<div class="ultosc" title="Ultimate Oscillator (ULTOSC)">
+﻿<div class="lsma" title="Least Squares Moving Average (LSMA)">
     <table width="100%">
         <tr>
             <td colspan="2">
-                A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period.
+                The Least Squares Moving Average first calculates a least squares regression line over the preceding time periods, then projects it forward to the current period. In essence, it calculates what the value would be if the regression line continued.
             </td>
         </tr>
         <tr>
-            <td><strong>Period 1</strong></td>
-            <td><input value="7" min="1" max="50" id="ultosc_first_period" class="ultosc_input_width_for_period" /></td>
+            <td><strong>Period</strong></td>
+            <td><input value="21" min="1" max="200" class="lsma_input_width_for_period" /></td>
         </tr>
         <tr>
-            <td><strong>Period 2</strong></td>
-            <td><input value="14" min="1" max="50" id="ultosc_second_period" class="ultosc_input_width_for_period" /></td>
-        </tr>
-        <tr>
-            <td><strong>Period 3</strong></td>
-            <td><input value="28" min="1" max="50" id="ultosc_third_period" class="ultosc_input_width_for_period" /></td>
-        </tr>
-        <tr>
-            <td class="ultosc_td_width"><strong>Stroke</strong></td>
-            <td><input value="" id="ultosc_stroke" type="button" class="ultosc_input_width" style="background: #cd0a0a;" /></td>
+            <td><strong>Stroke</strong></td>
+            <td><input value="" id="lsma_stroke" type="button" class="lsma_input_width" style="background: #cd0a0a;" /></td>
         </tr>
         <tr>
             <td><strong>Stroke width</strong></td>
             <td>
-                <select id="ultosc_stroke_width" class="ultosc_input_width" autofocus>
+                <select id="lsma_strokeWidth" class="lsma_input_width">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -41,7 +33,7 @@
         <tr>
             <td><strong>Dash style</strong></td>
             <td>
-                <select id="ultosc_dashStyle" class="ultosc_input_width">
+                <select id="lsma_dashStyle" class="lsma_input_width">
                     <option value="Solid" data-imagesrc="images/dashstyle/Solid.svg" title="Solid"></option>
                     <option value="ShortDash" data-imagesrc="images/dashstyle/ShortDash.svg"></option>
                     <option value="ShortDot" data-imagesrc="images/dashstyle/ShortDot.svg"></option>
@@ -59,31 +51,12 @@
         <tr>
             <td><strong>Applied to</strong></td>
             <td>
-                <select id="ultosc_applied_to" class="ultosc_input_width">
+                <select id="lsma_appliedTo" class="lsma_input_width">
                     <option value="0">OPEN</option>
                     <option value="1">HIGH</option>
                     <option value="2">LOW</option>
                     <option value="3" selected>CLOSE</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td><input value="Delete level(s)" id="ultosc_level_delete" type="button" class="ultosc_input_width" /></td>
-            <td><input value="Add level" id="ultosc_level_add" type="button" class="ultosc_input_width" /></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <table id="ultosc_levels" class="display">
-                    <thead>
-                        <tr>
-                            <td>Level</td>
-                            <td>Stroke</td>
-                            <td>Stroke width</td>
-                            <td>Dash style</td>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
             </td>
         </tr>
     </table>
