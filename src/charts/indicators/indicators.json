@@ -685,6 +685,12 @@
     "long_display_name": "Least Squares Moving Average",
     "short_display_name": "LSMA",
     "onChartIndicator" : true
+  },
+
+  "mass": {
+    "id": "mass",
+    "long_display_name": "Mass Index",
+    "short_display_name": "MASS"
   }
 
 }
