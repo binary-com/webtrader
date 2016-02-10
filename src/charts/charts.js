@@ -16,7 +16,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         Highcharts.setOptions({
             global: {
                 useUTC: true
-            }
+            },
+            lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
         });
 
     });
