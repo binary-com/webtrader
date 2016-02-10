@@ -129,13 +129,13 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         var seconds = till_epoch - from_epoch;
         var duration = moment.duration(seconds, 'seconds');
         if (duration.days() > 0)
-            ret += " " + moment.duration(duration.days(), 'days').humanize()
+            ret += ' ' + duration.days() + ' ' + (duration.days() > 1 ? 'days' : 'day');
         if (duration.hours() > 0)
-            ret += " " + moment.duration(duration.hours(), 'hours').humanize()
+            ret += ' ' + duration.hours() + ' ' + (duration.hours() > 1 ? 'hours' : 'hour');
         if (duration.minutes() > 0)
-            ret += " " + moment.duration(duration.minutes(), 'minutes').humanize()
+            ret += ' ' + duration.minutes() + ' ' + (duration.minutes() > 1 ? 'minutes' : 'minute');
         if (duration.seconds() > 0 && seconds < 10*60)
-            ret += " " + duration.seconds() + " second" + (duration.seconds() > 1 ? 's' : '');
+            ret += ' ' + duration.seconds() + ' ' + (duration.seconds() > 1 ? 'seconds' : 'second');
 
         return _.trim(ret);
     }
@@ -463,8 +463,13 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         var perv = (el._perv_indicative_color || 0)*1;
         var red = '#d71818';
         var green = '#02920e';
-        if(perv !== value*1)
+        var black = 'black';
+        if(!$.isNumeric(value)) {
+          $(el).css({color: black});
+        }
+        else if(perv !== value*1) {
           $(el).css({color: perv < value*1 ? green : red});
+        }
         el._perv_indicative_color = value;
     }
     return rv;

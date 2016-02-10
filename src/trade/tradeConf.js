@@ -2,9 +2,11 @@
  * Created by amin on December 4, 2015.
  */
 
-define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/rivetsExtra', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
-  function(_, $, moment, liveapi, rv, html){
+define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/rivetsExtra', 'charts/chartingRequestMap', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
+  function(_, $, moment, liveapi, rv, chartingRequestMap, html){
 
+    require(['websockets/stream_handler']);
+    var barsTable = chartingRequestMap.barsTable;
     /* rv binder to show tick chart for this confirmation dialog */
     rv.binders['tick-chart'] = {
       priority: 65, /* a low priority to apply last */
@@ -86,10 +88,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                although we will automatically resubscribe (in binary_websockets),
                BUT we will also lose some ticks in between!
                which means we ware showing the wrong ticks to the user! FIX THIS*/
-      var fn = liveapi.events.on('tick', function (data) {
-          if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
-            return;
-          var tick = data.tick;
+      function add_tick(tick){
           state.ticks.array.push({
             quote: tick.quote,
             epoch: tick.epoch,
@@ -107,6 +106,20 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           /* update state for each new tick in Up/Down && Asians contracts */
           if(state.ticks.category !== 'Digits')
               state.ticks.update_status();
+      }
+      var key = chartingRequestMap.keyFor(symbol, 0);
+      var ticks  = barsTable.find({instrumentCdAndTp: key});
+      var start_time = state.buy.start_time*1000;
+      ticks = ticks.filter(function(tick) { return tick.time > start_time; })
+                   .map(function(tick) { return {quote: tick.price, epoch: tick.time/1000 }; })
+                   .sort(function(a,b) { return a.epoch - b.epoch; });
+      // console.warn(ticks);
+      ticks.forEach(add_tick); /* add existing ticks */
+
+      var fn = liveapi.events.on('tick', function (data) {
+          if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
+            return;
+          add_tick(data.tick);
       });
     }
 
@@ -171,7 +184,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             chart_visible: extra.show_tick_chart,
         },
         arrow: {
-          visible: !extra.show_tick_chart,
+          visible: !extra.show_tick_chart && extra.category !== 'Digits',
         },
         back: { visible: false }, /* back buttom */
       };

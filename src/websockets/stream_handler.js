@@ -23,26 +23,27 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
             var time = parseInt(data.tick.epoch) * 1000;
 
             var chartingRequest = chartingRequestMap[key];
+            var granularity = data.echo_req.granularity || 0;
             chartingRequest.id = chartingRequest.id || data.tick.id;
-            if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
-                return;
-            var timePeriod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timePeriod');
-            if (!timePeriod)
-                return;
 
-            if (isTick(timePeriod)) { //Update OHLC with same value in DB
+            if(granularity === 0) {
                 var tick = {
                   instrumentCdAndTp: key,
                   time: time,
                   open: price,
                   high: price,
                   low: price,
-                  close: price
+                  close: price,
+                  /* this will be used from trade confirmation dialog */
+                  price: data.tick.quote, /* we need the original value for tick trades */
                 }
                 barsTable.insert(tick);
                 /* notify subscribers */
                 fire_event('tick', {tick: tick, key: key});
 
+                if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0)) {
+                    return;
+                }
                 //notify all registered charts
                 chartingRequest.chartIDs.forEach(function (chartID) {
                     var chart = $(chartID.containerIDWithHash).highcharts();
