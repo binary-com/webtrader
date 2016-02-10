@@ -382,6 +382,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       var on_candles = undefined;
 
       if(granularity === 0) {
+        var perv_tick = null;
         on_tick = liveapi.events.on('tick', function(data){
             if (!data.tick || data.tick.symbol !== state.chart.symbol)
               return;
@@ -390,8 +391,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
             /* stop updating when contract is expired */
             if(tick.epoch*1 > state.table.date_expiry*1) {
+              if(perv_tick) {
+                state.table.exit_tick = perv_tick.quote;
+                state.table.exit_tick_time = perv_tick.epoch*1;
+              }
               clean_up();
             }
+            perv_tick = tick;
         });
       }
       else {
