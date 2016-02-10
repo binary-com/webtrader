@@ -463,6 +463,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             blankWindow.dialog('widget').draggable( "option", "containment", false );
             blankWindow.dialog('widget').draggable( "option", "scroll", true );
 
+            blankWindow.dialog('widget').on('dragstop', function() {
+                $('.footer').height(document.body.scrollHeight)
+            });
+
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);
             }

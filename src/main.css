@@ -6,12 +6,12 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
     font-size: 80%;
     position:relative;
-    height: 100%;
 }
 .mainContainer {
     width: 100%;
@@ -23,11 +23,19 @@ body {
     left: 0;
     right: 0;
     text-align: center;
+    height: 100%;
+    z-index: -1;
+}
+.footer-inner {
+  height: 100%;
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: center;
 }
 .footer .addiction-warning {
     text-align: center;
     display: inline-block;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 
