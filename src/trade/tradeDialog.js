@@ -221,7 +221,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           spot: '0.0',
           spot_time: '0',
           deposit_: function(){
-            return this.stop_loss * this.amount_per_point;
+            if(this.stop_type === 'point')
+              return this.stop_loss * this.amount_per_point;
+            else // 'dollar'
+              return this.stop_loss;
           }
         },
         tick: {
