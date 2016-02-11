@@ -256,6 +256,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   }
 
   function init_state(proposal, root){
+      console.warn(proposal);
       var state = {
           route: {
               value: 'table',
@@ -357,6 +358,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                console.error(err);
              });
 
+      window.state = state; // TODO: remove this line :)
       return state;
   }
 
@@ -495,7 +497,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
-        if(data.candles && !state.table.exit_tick_time) {
+        if(data.candles && !state.table.exit_tick_time && state.table.is_expired) {
           get_tick_value(state.chart.symbol, state.table.date_expiry -2).then(function(data){
             var history = data.history;
             if(history.times.length !== 1) return;
