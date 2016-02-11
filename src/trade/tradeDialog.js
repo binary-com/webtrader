@@ -195,21 +195,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           value: 'payout',
           amount: 10,
           limit: null,
-          up: function() {
-            var value = state.basis.amount*1;
-            value = value < 1 ? value + 0.1 : value + 1;
-            if((value | 0) !== value)
-              value = value.toFixed(2);
-            state.basis.amount = value;
-          },
-          down: function() {
-            var value = state.basis.amount*1;
-            value = value > 1 ? value - 1 : value - 0.1;
-            if((value | 0) !== value) /* is float */
-              value = value.toFixed(2);
-            if(value > 0)
-              state.basis.amount = value;
-          },
         },
         spreads: {
           amount_per_point: 1,
@@ -221,7 +206,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           spot: '0.0',
           spot_time: '0',
           deposit_: function(){
-            return this.stop_loss * this.amount_per_point;
+            if(this.stop_type === 'point')
+              return this.stop_loss * this.amount_per_point;
+            else // 'dollar'
+              return this.stop_loss;
           }
         },
         tick: {

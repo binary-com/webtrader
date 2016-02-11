@@ -173,21 +173,8 @@
                 <option rv-each-row="currency.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li>
-            <span class="ui-spinner ui-widget ui-widget-content ui-corner-all">
-
-            <input class="basis-amount" type="text" min="1" rv-decimal-round="2" no-symbol="true"
-                   rv-value="basis.amount | debounce proposal.onchange" />
-
-              <!-- markup from jquery ui -->
-              <button rv-on-click="basis.up" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">
-                <span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>
-              </button>
-              <button rv-on-click="basis.down" step="-1" class="ui-spinner-button ui-spinner-down ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 0 5px 0" tabindex="-1" role="button">
-                <span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-s">▲</span> </span>
-              </button>
-
-            </span>
+        <li rv-attr-dummy="basis.amount | debounce proposal.onchange">
+            <price-spinner class="basis-amount" value="basis.amount" min='0' decimals='2' />
         </li>
     </ul>
 
@@ -239,9 +226,8 @@
         rv-show="categories.value | eq 'Spreads'"
         rv-css-padding-top="categories.paddingTop < value">
       <li><span class="text-vertical-align">Stop-loss</span></li>
-      <li>
-            <input class="stop-loss" type="number" min="1" step=".01" step-big="1" max="100000000"
-                   rv-spinner="spreads.stop_loss | debounce proposal.onchange" />
+      <li rv-attr-dummy="spreads.stop_loss | debounce proposal.onchange">
+          <price-spinner class="stop-loss" value="spreads.stop_loss" min='0' decimals='2' />
       </li>
       <li></li>
     </ul>
@@ -249,9 +235,8 @@
     <ul class="stop-profit-row"
         rv-show="categories.value | eq 'Spreads'">
       <li><span class="text-vertical-align">Stop-profit</span></li>
-      <li>
-            <input class="stop-profit" type="number" min="1" step=".01" step-big="1" max="100000000"
-                   rv-spinner="spreads.stop_profit | debounce proposal.onchange" />
+      <li rv-attr-dummy="spreads.stop_profit | debounce proposal.onchange">
+          <price-spinner class="stop-profit" value="spreads.stop_profit" min='0' decimals='2' />
       </li>
       <li></li>
     </ul>
@@ -274,7 +259,7 @@
         rv-if="categories.value | eq 'Spreads'"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
       <li rv-if="categories.value | eq 'Spreads'">
-        Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss | to-fixed 2 "> </span>
+        Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss stop_type | to-fixed 2 "> </span>
         is required. Current spread: <span rv-text="spreads.spread" > </span> points
       </li>
     </ul>
