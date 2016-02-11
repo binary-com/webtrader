@@ -259,7 +259,7 @@
         rv-if="categories.value | eq 'Spreads'"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
       <li rv-if="categories.value | eq 'Spreads'">
-        Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss | to-fixed 2 "> </span>
+        Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss stop_type | to-fixed 2 "> </span>
         is required. Current spread: <span rv-text="spreads.spread" > </span> points
       </li>
     </ul>
