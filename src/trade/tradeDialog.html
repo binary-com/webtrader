@@ -174,7 +174,7 @@
            </select>
         </li>
         <li rv-attr-dummy="basis.amount | debounce proposal.onchange">
-            <price-spinner class="basis-amount" value="basis.amount" />
+            <price-spinner class="basis-amount" value="basis.amount" min='0' decimals='2' />
         </li>
     </ul>
 
@@ -226,9 +226,8 @@
         rv-show="categories.value | eq 'Spreads'"
         rv-css-padding-top="categories.paddingTop < value">
       <li><span class="text-vertical-align">Stop-loss</span></li>
-      <li>
-            <input class="stop-loss" type="number" min="1" step=".01" step-big="1" max="100000000"
-                   rv-spinner="spreads.stop_loss | debounce proposal.onchange" />
+      <li rv-attr-dummy="spreads.stop_loss | debounce proposal.onchange">
+          <price-spinner class="stop-loss" value="spreads.stop_loss" min='0' decimals='2' />
       </li>
       <li></li>
     </ul>
@@ -236,9 +235,8 @@
     <ul class="stop-profit-row"
         rv-show="categories.value | eq 'Spreads'">
       <li><span class="text-vertical-align">Stop-profit</span></li>
-      <li>
-            <input class="stop-profit" type="number" min="1" step=".01" step-big="1" max="100000000"
-                   rv-spinner="spreads.stop_profit | debounce proposal.onchange" />
+      <li rv-attr-dummy="spreads.stop_profit | debounce proposal.onchange">
+          <price-spinner class="stop-profit" value="spreads.stop_profit" min='0' decimals='2' />
       </li>
       <li></li>
     </ul>

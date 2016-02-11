@@ -474,15 +474,15 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /******************************** components *****************************/
-    function component_twoway_bind(self, el, prefix) {
-        prefix = prefix || '';
+    function component_twoway_bind(self, keypathes) {
         /* make sure to call async */
         setTimeout(function() {
-          for(var i = 0; i < el.attributes.length; ++i){
-              var attr = el.attributes[i];
-              var observer = self.observers[attr.name];
+          for(var i = 0; i < keypathes.length; ++i){
+              var keypath = keypathes[i];
+              var key = _.last(keypath.split('.'));
+              var observer = self.observers[key];
               if(observer) {
-                self.componentView.observe(prefix + attr.name, function(value){
+                self.componentView.observe(keypath, function(value){
                     observer.setValue(value);
                 });
               }
@@ -490,12 +490,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }, 0);
     }
     rivets.components['price-spinner'] = {
-      static: ['class'],
+      static: ['class', 'min', 'decimals'],
       template: function() {
         return '<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">' +
-                  '<input rv-class="data.class" type="text" rv-attr-min="data.min | or 1"' +
-                         'rv-decimal-round="data.decimal_round | or 2" no-symbol="true"' +
-                         'rv-value="data.value" />' +
+                  '<input rv-class="data.class" type="text" rv-value="data.value" />' +
 
                     '<button rv-on-click="increment" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">' +
                       '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>' +
@@ -506,24 +504,29 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 '</span>';
       },
       initialize: function(el, data) {
-        component_twoway_bind(this, el, 'data.');
+        var decimals = (data.decimals || 2)*1;
+        var min = (data.min || 0)*1;
+        component_twoway_bind(this, ['data.value']);
 
         return {
           data: data,
           increment: function (e,scope) {
             var value = data.value*1;
             value = value < 1 ? value + 0.1 : value + 1;
-            if((value | 0) !== value)
-            value = value.toFixed(2);
+            if((value | 0) !== value) {
+              value = value.toFixed(decimals);
+            }
             data.value = value;
           },
           decrement: function () {
             var value = data.value*1;
             value = value > 1 ? value - 1 : value - 0.1;
-            if((value | 0) !== value) /* is float */
-            value = value.toFixed(2);
-            if(value > 0)
-            data.value = value;
+            if((value | 0) !== value) { /* is float */
+              value = value.toFixed(decimals);
+            }
+            if(value > min) {
+              data.value = value;
+            }
           }
         };
       },
