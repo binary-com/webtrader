@@ -388,14 +388,17 @@ CDL.prototype.CDL3WHITESOLDIERS = function() {
     var isBullishContinuation = false, isBearishContinuation = false;
 
     if (params.candleFour_Index >= 0) {
-        isBullishContinuation = params.isCandleThree_Bullish && params.candleThree_Close > params.candleFour_Close && this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close)
-            && params.isCandleTwo_Bullish && params.candleTwo_Close > params.candleThree_Close && this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)
-            && params.isCandleOne_Bullish && params.candleOne_Close > params.candleTwo_Close && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
+        isBullishContinuation = params.isCandleThree_Bullish && params.candleThree_Close >= params.candleFour_Close
+            && this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close)
+            && params.isCandleTwo_Bullish && params.candleTwo_Open >= params.candleThree_Open
+            && params.candleTwo_Open <= params.candleThree_Close && params.candleTwo_Close >= params.candleThree_Close
+            && this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)
+            && params.isCandleOne_Bullish && params.candleOne_Open >= params.candleTwo_Open
+            && params.candleOne_Open <= params.candleTwo_Close && params.candleOne_Close >= params.candleTwo_Close
+            && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
 
-        isBearishContinuation = params.isCandleThree_Bearish && params.candleThree_Close < params.candleFour_Close && this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close)
-            && params.isCandleTwo_Bearish && params.candleTwo_Close < params.candleThree_Close && this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)
-            && params.isCandleOne_Bearish && params.candleOne_Close < params.candleTwo_Close && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
-        
+        //It's a bullish candlestick
+        isBearishContinuation = false;
     }
 
     return {
