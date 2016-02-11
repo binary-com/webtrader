@@ -65,7 +65,7 @@
         rv-show="categories.value | not-eq 'Spreads'">
         <li>
             <select class="duration-select"
-                    rv-selectmenu="duration.value | debounce proposal.onchange"
+                    rv-selectmenu="duration.value | notify date_expiry.update | debounce proposal.onchange"
                     rv-selectrefresh="duration.array">
 
                 <option rv-each-row="duration.array" rv-value="row">{row}</option>
