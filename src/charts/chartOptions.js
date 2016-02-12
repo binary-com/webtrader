@@ -168,11 +168,11 @@ define(['jquery', 'charts/chartingRequestMap', 'moment', "charts/chartWindow", "
                                     });
                                     if (!removed) {
                                         //Means this is not a remove case, we have to add the indicator
-                                        chart.series(function(series) {
+                                        chart.series.forEach(function(series){
                                             if (series.options.isInstrument) {
                                                 series.addCurrentPrice();
                                             }
-                                        });
+                                        })
                                     }
                                 });
                                 $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
