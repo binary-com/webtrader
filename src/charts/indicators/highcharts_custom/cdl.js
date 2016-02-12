@@ -741,14 +741,16 @@ CDL.prototype.CDLINVERTEDHAMMER = function () {
 
 CDL.prototype.CDLKICKING = function () {
     var params = CDLGETPARAMS(this.priceData);
+    var candleOneObejct = this.CDLMARUBOZU(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
+    var candleTwoObejct = this.CDLMARUBOZU(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close);
 
-    var isBullishContinuation = params.isCandleTwo_Bearish && (params.candleTwo_Low === params.candleTwo_Close) && (params.candleTwo_High === params.candleTwo_Open)  // a black or filled candlestick without any wicks (shadows)
-                               && params.isCandleOne_Bullish && (params.candleOne_Low === params.candleOne_Open) && (params.candleOne_High === params.candleOne_Close) //followed by a gap higher with a white or hollow candlestick that is also without wicks.
-                               && (params.candleOne_Open > params.candleTwo_Open); //Gap up
+    var isBullishContinuation = candleTwoObejct.isBear  // a black or filled candlestick without any wicks (shadows)
+                               && candleOneObejct.isBull //followed by a gap higher with a white or hollow candlestick that is also without wicks.
+                               && (params.candleOne_Close > params.candleTwo_Open); //Gap up
 
-    var isBearishContinuation = params.isCandleTwo_Bullish && (params.candleTwo_Low === params.candleTwo_Open) && (params.candleTwo_High === params.candleTwo_Close)  // a black or filled candlestick without any wicks (shadows)
-                               && params.isCandleOne_Bearish && (params.candleOne_Low === params.candleOne_Close) && (params.candleOne_High === params.candleOne_Open) //followed by a gap higher with a white or hollow candlestick that is also without wicks.
-                               && (params.candleOne_Open < params.candleTwo_Open); //Gap down
+    var isBearishContinuation = candleTwoObejct.isBull  // a black or filled candlestick without any wicks (shadows)
+                               && candleOneObejct.isBear //followed by a gap higher with a white or hollow candlestick that is also without wicks.
+                               && (params.candleOne_Close < params.candleTwo_Open); //Gap down
 
     return {
         isBull: isBullishContinuation,
@@ -779,15 +781,16 @@ CDL.prototype.CDLLADDERBOTTOM = function () {
 
 CDL.prototype.CDLKICKINGBYLENGTH = function () {
     var params = CDLGETPARAMS(this.priceData);
+    var candleOneObejct = this.CDLMARUBOZU(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
+    var candleTwoObejct = this.CDLMARUBOZU(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close);
 
-    var isBullishContinuation = params.isCandleTwo_Bearish && (this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)) && (params.candleTwo_Low === params.candleTwo_Close) && (params.candleTwo_High === params.candleTwo_Open)  // a black or filled candlestick without any wicks (shadows)
-                               && params.isCandleOne_Bullish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) && (params.candleOne_Low === params.candleOne_Open) && (params.candleOne_High === params.candleOne_Close) //followed by a gap higher with a white or hollow candlestick that is also without wicks.
-                               && (params.candleOne_Open > params.candleTwo_Open); //Gap up
+    var isBullishContinuation = candleTwoObejct.isBear && (this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)) // a black or filled candlestick without any wicks (shadows)
+                              && candleOneObejct.isBull && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close))//followed by a gap higher with a white or hollow candlestick that is also without wicks.
+                              && (params.candleOne_Close > params.candleTwo_Open); //Gap up
 
-
-    var isBearishContinuation = params.isCandleTwo_Bullish && (this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)) && (params.candleTwo_Low === params.candleTwo_Open) && (params.candleTwo_High === params.candleTwo_Close)  // a black or filled candlestick without any wicks (shadows)
-                               && params.isCandleOne_Bearish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) && (params.candleOne_Low === params.candleOne_Close) && (params.candleOne_High === params.candleOne_Open) //followed by a gap higher with a white or hollow candlestick that is also without wicks.
-                               && (params.candleOne_Open < params.candleTwo_Open); //Gap down
+    var isBearishContinuation = candleTwoObejct.isBull && (this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)) // a black or filled candlestick without any wicks (shadows)
+                               && candleOneObejct.isBear && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) //followed by a gap higher with a white or hollow candlestick that is also without wicks.
+                               && (params.candleOne_Close < params.candleTwo_Open); //Gap down
 
     return {
         isBull: isBullishContinuation,
@@ -846,22 +849,24 @@ CDL.prototype.CDLLONGLINE = function () {
     };
 }
 
-CDL.prototype.CDLMARUBOZU = function () {
+CDL.prototype.CDLMARUBOZU = function (candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close) {
     var params = CDLGETPARAMS(this.priceData);
 
-    var lowerShadow = Math.abs(params.candleOne_Low - Math.min(params.candleOne_Open, params.candleOne_Close)),
-        upperShadow = Math.abs(params.candleOne_High - Math.max(params.candleOne_Open, params.candleOne_Close)),
-        candleBodySize = Math.abs(params.candleOne_Low - params.candleOne_High),
-        realBodySize = Math.abs(params.candleOne_Close - params.candleOne_Open),
+    var lowerShadow = Math.abs(candleOne_Low - Math.min(candleOne_Open, candleOne_Close)),
+        upperShadow = Math.abs(candleOne_High - Math.max(candleOne_Open, candleOne_Close)),
+        candleBodySize = Math.abs(candleOne_Low - candleOne_High),
+        realBodySize = Math.abs(candleOne_Close - candleOne_Open),
         isLowerShadowShort = (lowerShadow === 0) || (lowerShadow <= (candleBodySize * 0.05)),
         isUpperShadowShort = (upperShadow === 0) || (upperShadow <= (candleBodySize * 0.05));
+    var isCandleOne_Bearish = candleOne_Close > candleOne_Open,
+        isCandleOne_Bullish = candleOne_Close < candleOne_Open;
 
-    isBearishContinuation = params.isCandleOne_Bearish
-                              && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)
-                              && (isUpperShadowShort && isLowerShadowShort),
-    isBullishContinuation = params.isCandleOne_Bullish
-                          && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)
-                          && isUpperShadowShort && isLowerShadowShort
+    isBearishContinuation = isCandleOne_Bearish
+                          && this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close)
+                          && (isUpperShadowShort && isLowerShadowShort);
+    isBullishContinuation = isCandleOne_Bullish
+                          && this.indicators.isLongCandle(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close)
+                          && isUpperShadowShort && isLowerShadowShort;
 
     return {
         isBull: isBullishContinuation,
@@ -1500,7 +1505,12 @@ CDL.prototype.calculateIndicatorValue = function(cdlPatternCode) {
             ret = CDLADDFLAGINFO(cdlObject, time, 'LLC', 'Long Line Candle');
             break;
         case 'CDLMARUBOZU':
-            var cdlObject = this.CDLMARUBOZU();
+            var candleOne_Index = this.priceData.length - 1;
+            var candleOne_Open = this.priceData[candleOne_Index].open,
+                candleOne_High = this.priceData[candleOne_Index].high,
+                candleOne_Low = this.priceData[candleOne_Index].low,
+                candleOne_Close = this.priceData[candleOne_Index].close;
+            var cdlObject = this.CDLMARUBOZU(candleOne_Open, candleOne_High, candleOne_Low, candleOne_Close);
             ret = CDLADDFLAGINFO(cdlObject, time, 'MZ', 'Marubozu');
             break;
         case 'CDLMATCHINGLOW':
