@@ -55,6 +55,7 @@
 
       <div> <p>Entry Spot</p>
           <span rv-tooltip="table.entry_tick_time | moment | or '-'"
+                rv-if="table.entry_tick_time"
                 rv-text="table.entry_tick | or '-'"
                 class="dotted-underline"></span>
       </div>
