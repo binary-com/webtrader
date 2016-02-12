@@ -79,7 +79,10 @@ define(['jquery'], function ($) {
     var onopen = function () {
         /* send buffered sends */
         while (buffered_sends.length > 0) {
-            socket.send(JSON.stringify(buffered_sends.shift()));
+            var data = buffered_sends.shift();
+            if(!unresolved_promises[data.req_id]) {
+              socket.send(JSON.stringify(data));
+            }
         }
         /* if the connection got closed while the result of an unresolved request
            is not back yet, issue the same request again */
