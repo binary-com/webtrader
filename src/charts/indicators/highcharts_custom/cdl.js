@@ -492,7 +492,7 @@ CDL.prototype.CDLEVENINGSTAR = function () {
         var isBullishContinuation = false;
 
         //Evening Star is bearish only
-        var isBearishContinuation = params.isCandleFour_Bullish  //occurs at the top of an uptrend.
+        var isBearishContinuation = (params.candleThree_Close >= Math.max(params.candleFour_Close, params.candleFour_Open))  //occurs at the top of an uptrend.
                                     && params.isCandleThree_Bullish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))//The first part of an Evening Star reversal pattern is a large bullish green candle.
                                     && (candleTwoBody >= candleTwoSize * 0.10) && (Math.min(params.candleTwo_Open, params.candleTwo_Close) > params.candleThree_Close) //The second day begins with a gap up and it is quite small and can be bullish or bearish.
                                     && params.isCandleOne_Bearish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) && (params.candleOne_Open < Math.min(params.candleTwo_Open, params.candleTwo_Close))//a large Bearish Candle with gap down.
