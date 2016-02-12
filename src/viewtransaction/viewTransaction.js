@@ -129,6 +129,25 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     return liveapi.send({ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end:epoch+2, count: 1})
                   .catch(function(err) { console.error(err); });
   }
+  /* websocket is not returning purchase_time, query portfolio to find this field */
+  function get_purchase_time(proposal) {
+      return new Promise(function(resolve, reject){
+        if(!proposal.is_forward_starting || moment.utc().unix() > proposal.date_start*1) {
+          resolve(undefined);
+          return;
+        }
+
+        liveapi.send({portfolio: 1})
+           .then(function(data){
+              var contracts = data.portfolio.contracts;
+              var contract = contracts.filter(function(c) { return c.contract_id === proposal.contract_id;})[0];
+              resolve(contract && contract.purchase_time); /* if not found, purchase_time is undefined */
+           }).catch(function(err){
+             console.error(err);
+             resolve(undefined);
+           });
+      })
+  }
 
   function init(contract_id, transaction_id){
     return new Promise(function(resolve, reject){
@@ -289,6 +308,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             sell_time: undefined,
             sell_spot: undefined,
             sell_price: undefined,
+            purchase_time: undefined,
             is_sold_at_market: false,
           },
           chart: {
@@ -326,7 +346,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.chart.chart.hasUserSize = null;
       };
 
-      var chart_data_promise = get_chart_data(state, root);
+      var purchase_time_promise = get_purchase_time(proposal);
+      var chart_data_promise = purchase_time_promise.then(function(purchase_time){
+        state.table.purchase_time = purchase_time;
+        return get_chart_data(state, root);
+      });
 
       /* back-end is not returning sell_time field, worse its returning wrong sell_price vlaue */
       liveapi.send({profit_table: 1, date_from: proposal.date_start, date_to: proposal.date_start+1})
@@ -442,7 +466,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
   function get_chart_data(state, root) {
     var table = state.table;
-    var duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - state.table.date_start;
+    var duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
     var granularity = 0;
     var margin = 0; // time margin
     if(duration <= 60*60) { granularity = 0; } // 1 hour
@@ -453,7 +477,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     margin = granularity === 0 ? Math.max(3, 30*duration/(60*60) | 0) : 3*granularity;
     var request = {
       ticks_history: state.chart.symbol,
-      start: state.table.date_start - margin, /* load around 2 more thicks before start */
+      start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
       end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
@@ -495,7 +519,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
-        if(data.candles && !state.table.exit_tick_time) {
+        if(data.candles && !state.table.exit_tick_time && state.table.is_expired) {
           get_tick_value(state.chart.symbol, state.table.date_expiry -2).then(function(data){
             var history = data.history;
             if(history.times.length !== 1) return;
@@ -504,6 +528,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
           });
         }
+
+        state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'});
 
         state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
         state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
