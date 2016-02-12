@@ -388,14 +388,17 @@ CDL.prototype.CDL3WHITESOLDIERS = function() {
     var isBullishContinuation = false, isBearishContinuation = false;
 
     if (params.candleFour_Index >= 0) {
-        isBullishContinuation = params.isCandleThree_Bullish && params.candleThree_Close > params.candleFour_Close && this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close)
-            && params.isCandleTwo_Bullish && params.candleTwo_Close > params.candleThree_Close && this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)
-            && params.isCandleOne_Bullish && params.candleOne_Close > params.candleTwo_Close && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
+        isBullishContinuation = params.isCandleThree_Bullish && params.candleThree_Close >= params.candleFour_Close
+            && this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close)
+            && params.isCandleTwo_Bullish && params.candleTwo_Open >= params.candleThree_Open
+            && params.candleTwo_Open <= params.candleThree_Close && params.candleTwo_Close >= params.candleThree_Close
+            && this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)
+            && params.isCandleOne_Bullish && params.candleOne_Open >= params.candleTwo_Open
+            && params.candleOne_Open <= params.candleTwo_Close && params.candleOne_Close >= params.candleTwo_Close
+            && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
 
-        isBearishContinuation = params.isCandleThree_Bearish && params.candleThree_Close < params.candleFour_Close && this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close)
-            && params.isCandleTwo_Bearish && params.candleTwo_Close < params.candleThree_Close && this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)
-            && params.isCandleOne_Bearish && params.candleOne_Close < params.candleTwo_Close && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
-        
+        //It's a bullish candlestick
+        isBearishContinuation = false;
     }
 
     return {
@@ -463,7 +466,7 @@ CDL.prototype.CDLEVENINGDOJISTAR = function () {
         //It's a bearish candlestick
         var isBullishContinuation = false;
 
-        var isBearishContinuation = params.isCandleFour_Bullish  //occurs at the top of an uptrend.
+        var isBearishContinuation = (params.candleThree_Close >= Math.max(params.candleFour_Close, params.candleFour_Open))  //occurs at the top of an uptrend.
                                     && params.isCandleThree_Bullish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))  //The first part of an Evening Star reversal pattern is a large bullish green candle.
                                     && iscandleTwoDoji && (Math.min(params.candleTwo_Open, params.candleTwo_Close) > params.candleThree_Close) //The second day begins with a gap up and it is quite small and can be bullish or bearish.
                                     && params.isCandleOne_Bearish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) && (params.candleOne_Open < Math.min(params.candleTwo_Open, params.candleTwo_Close))//a large Bearish Candle with gap down.
@@ -489,7 +492,7 @@ CDL.prototype.CDLEVENINGSTAR = function () {
         var isBullishContinuation = false;
 
         //Evening Star is bearish only
-        var isBearishContinuation = params.isCandleFour_Bullish  //occurs at the top of an uptrend.
+        var isBearishContinuation = (params.candleThree_Close >= Math.max(params.candleFour_Close, params.candleFour_Open))  //occurs at the top of an uptrend.
                                     && params.isCandleThree_Bullish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))//The first part of an Evening Star reversal pattern is a large bullish green candle.
                                     && (candleTwoBody >= candleTwoSize * 0.10) && (Math.min(params.candleTwo_Open, params.candleTwo_Close) > params.candleThree_Close) //The second day begins with a gap up and it is quite small and can be bullish or bearish.
                                     && params.isCandleOne_Bearish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) && (params.candleOne_Open < Math.min(params.candleTwo_Open, params.candleTwo_Close))//a large Bearish Candle with gap down.
@@ -853,14 +856,12 @@ CDL.prototype.CDLMARUBOZU = function () {
         isLowerShadowShort = (lowerShadow === 0) || (lowerShadow <= (candleBodySize * 0.05)),
         isUpperShadowShort = (upperShadow === 0) || (upperShadow <= (candleBodySize * 0.05));
 
-    return {
-        isBearishContinuation: params.isCandleOne_Bearish
+    isBearishContinuation = params.isCandleOne_Bearish
                               && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)
                               && (isUpperShadowShort && isLowerShadowShort),
-        isBullishContinuation: params.isCandleOne_Bullish
-                              && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)
-                              && isUpperShadowShort && isLowerShadowShort
-    };
+    isBullishContinuation = params.isCandleOne_Bullish
+                          && this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)
+                          && isUpperShadowShort && isLowerShadowShort
 
     return {
         isBull: isBullishContinuation,
