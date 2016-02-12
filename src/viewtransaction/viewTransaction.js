@@ -129,7 +129,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     return liveapi.send({ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end:epoch+2, count: 1})
                   .catch(function(err) { console.error(err); });
   }
-
   /* websocket is not returning purchase_time, query portfolio to find this field */
   function get_purchase_time(proposal) {
       return new Promise(function(resolve, reject){
