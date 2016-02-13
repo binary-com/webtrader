@@ -1034,15 +1034,15 @@ CDL.prototype.CDLRISEFALL3METHODS = function () {
 
     if (params.candleFour_Index >= 0 && params.candleFive_Index > 0) {
         var isBullishContinuation = params.isCandleFive_Bullish && (this.indicators.isLongCandle(params.candleFive_Open, params.candleFive_High, params.candleFive_Low, params.candleFive_Close)) //The first candlestick in this pattern is a light bullish candlestick with a large real body
-                                    && params.isCandleFour_Bearish && params.candleFour_Low > params.candleFive_Low && params.candleFour_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
-                                    && params.isCandleThree_Bearish && params.candleThree_Low > params.candleFive_Low && params.candleThree_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
-                                    && params.isCandleTwo_Bearish && params.candleTwo_Low > params.candleFive_Low && params.candleTwo_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
+                                    && params.candleFour_Low > params.candleFive_Low && params.candleFour_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
+                                    && params.candleThree_Low > params.candleFive_Low && params.candleThree_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
+                                    && params.candleTwo_Low > params.candleFive_Low && params.candleTwo_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
                                     && params.isCandleOne_Bullish && params.candleOne_Open > params.candleTwo_Close && params.candleOne_Close > params.candleFive_Close;//he last candlestick that completes the pattern should open higher than the close of its preceding candlestick and should close above the close of the first candlestick.
 
         var isBearishContinuation = params.isCandleFive_Bearish && (this.indicators.isLongCandle(params.candleFive_Open, params.candleFive_High, params.candleFive_Low, params.candleFive_Close))
-                                    && params.isCandleFour_Bullish && params.candleFour_Low > params.candleFive_Low && params.candleFour_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
-                                    && params.isCandleThree_Bullish && params.candleThree_Low > params.candleFive_Low && params.candleThree_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
-                                    && params.isCandleTwo_Bullish && params.candleTwo_Low > params.candleFive_Low && params.candleTwo_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
+                                    && params.candleFour_Low > params.candleFive_Low && params.candleFour_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
+                                    && params.candleThree_Low > params.candleFive_Low && params.candleThree_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
+                                    && params.candleTwo_Low > params.candleFive_Low && params.candleTwo_High < params.candleFive_High // it should be within the high and low of the first candlestick. 
                                     && params.isCandleOne_Bearish && params.candleOne_Open < params.candleTwo_Close && params.candleOne_Close < params.candleFive_Close;//The last candlestick that completes the pattern should below the close of its preceding candlestick and should close lower that the close of the first candlestick.
 
     }
