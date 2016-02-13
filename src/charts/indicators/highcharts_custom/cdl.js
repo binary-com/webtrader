@@ -120,9 +120,13 @@ CDL.prototype.CDLDOJI = function(open, high, low, close) {
 
     var isBullishContinuation = (isOpenCloseSame || ((candleBodySize * 0.05) >= Math.abs(open - close)))
         && differenceBet_Open_High > differenceBet_Open_Low;
+
+    var isDoji = isOpenCloseSame || ((candleBodySize * 0.05) >= Math.abs(open - close));
+
     return {
         isBull: isBullishContinuation,
-        isBear: isBearishContinuation
+        isBear: isBearishContinuation,
+        isDoji:isDoji
     };
 };
 
@@ -1248,17 +1252,17 @@ CDL.prototype.CDLTRISTAR = function () {
 
     var candleOneDoji = this.CDLDOJI(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
 
-    var isBullishContinuation = candleThreeDoji.isBull
-                                && candleTwoDoji.isBull
+    var isBullishContinuation = candleThreeDoji.isDoji
+                                && candleTwoDoji.isDoji
                                 && Math.max(params.candleTwo_Close, params.candleTwo_Open) < Math.min(params.candleThree_Close, params.candleThree_Open)
                                 && Math.max(params.candleTwo_Close, params.candleTwo_Open) < Math.min(params.candleOne_Close, params.candleOne_Open)
-                                && candleOneDoji.isBull;
+                                && candleOneDoji.isDoji;
 
-    var isBearishContinuation = candleThreeDoji.isBear
-                                && candleTwoDoji.isBear
+    var isBearishContinuation = candleThreeDoji.isDoji
+                                && candleTwoDoji.isDoji
                                 && Math.min(params.candleTwo_Close, params.candleTwo_Open) > Math.max(params.candleThree_Close, params.candleThree_Open)
                                 && Math.min(params.candleTwo_Close, params.candleTwo_Open) > Math.max(params.candleOne_Close, params.candleOne_Open)
-                                && candleOneDoji.isBear;
+                                && candleOneDoji.isDoji;
     return {
         isBear: isBearishContinuation,
         isBull: isBullishContinuation
