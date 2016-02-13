@@ -1249,11 +1249,15 @@ CDL.prototype.CDLTRISTAR = function () {
     var candleOneDoji = this.CDLDOJI(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
 
     var isBullishContinuation = candleThreeDoji.isBull
-                                && candleTwoDoji.isBull && params.candleTwo_Low < params.candleOne_Low && params.candleTwo_Low < params.candleThree_Low //The Day 2 Doji has a gap bellow the first and third.
+                                && candleTwoDoji.isBull
+                                && Math.max(params.candleTwo_Close, params.candleTwo_Open) < Math.min(params.candleThree_Close, params.candleThree_Open)
+                                && Math.max(params.candleTwo_Close, params.candleTwo_Open) < Math.min(params.candleOne_Close, params.candleOne_Open)
                                 && candleOneDoji.isBull;
 
     var isBearishContinuation = candleThreeDoji.isBear
-                                && candleTwoDoji.isBear && params.candleTwo_High > params.candleOne_High && params.candleTwo_High > params.candleThree_High //The Day 2 Doji has a gap above the first and third.
+                                && candleTwoDoji.isBear
+                                && Math.min(params.candleTwo_Close, params.candleTwo_Open) > Math.max(params.candleThree_Close, params.candleThree_Open)
+                                && Math.min(params.candleTwo_Close, params.candleTwo_Open) > Math.max(params.candleOne_Close, params.candleOne_Open)
                                 && candleOneDoji.isBear;
     return {
         isBear: isBearishContinuation,
