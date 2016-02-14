@@ -112,16 +112,17 @@ CDL.prototype.CDLDOJI = function(open, high, low, close) {
     var isOpenCloseSame = (open === close),
         differenceBet_Open_High = Math.abs(open - high),
         differenceBet_Open_Low = Math.abs(open - low),
-        candleBodySize = Math.abs(low - high);
+        candleBodySize = Math.abs(low - high),
+        realBodySize = Math.abs(open - close);
 
     //Either open and close is same or difference between Open and Close is 1% of the total size of candle
-    var isBearishContinuation = (isOpenCloseSame || ((candleBodySize * 0.05) >= Math.abs(open - close)))
+    var isBearishContinuation = (isOpenCloseSame || ((candleBodySize * 0.05) >= realBodySize))
         && differenceBet_Open_High < differenceBet_Open_Low;
 
-    var isBullishContinuation = (isOpenCloseSame || ((candleBodySize * 0.05) >= Math.abs(open - close)))
+    var isBullishContinuation = (isOpenCloseSame || ((candleBodySize * 0.05) >= realBodySize))
         && differenceBet_Open_High > differenceBet_Open_Low;
 
-    var isDoji = isOpenCloseSame || ((candleBodySize * 0.05) >= Math.abs(open - close));
+    var isDoji = (isOpenCloseSame || ((candleBodySize * 0.05) >= realBodySize)) && (differenceBet_Open_High > realBodySize) && (differenceBet_Open_Low > realBodySize);
 
     return {
         isBull: isBullishContinuation,
