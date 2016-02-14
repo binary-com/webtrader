@@ -253,9 +253,10 @@ CDL.prototype.CDLADVANCEBLOCK = function () {
     var isBullishContinuation = false;
 
     var isBearishContinuation = params.isCandleThree_Bullish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close)) //Three long white days occur, each with a higher close than the previous day
-                                && params.isCandleTwo_Bullish && (this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close))
-                                && (candleTwoBody <= candleThreeBody) && (params.candleTwo_Close > params.candleThree_Close) && (params.candleTwo_Open <= params.candleThree_Close) && (params.candleTwo_Open > params.candleThree_Open) //Each day opens within the body of the previous day 
-                                && params.isCandleOne_Bullish && (candleOneBody <= candleTwoBody) && (params.candleOne_Close > params.candleTwo_Close) && (params.candleOne_Open <= params.candleTwo_Close) && (params.candleOne_Open > params.candleTwo_Open) //Each day opens within the body of the previous day
+                                && params.isCandleTwo_Bullish && (candleTwoBody <= candleThreeBody) && (params.candleTwo_Close > params.candleThree_Close)
+                                && (params.candleTwo_Open <= params.candleThree_Close) && (params.candleTwo_Open > params.candleThree_Open) //Each day opens within the body of the previous day 
+                                && params.isCandleOne_Bullish && (candleOneBody <= candleTwoBody) && (params.candleOne_Close > params.candleTwo_Close)
+                                && (params.candleOne_Open <= params.candleTwo_Close) && (params.candleOne_Open > params.candleTwo_Open) //Each day opens within the body of the previous day
                                 && (candleTwoUpperShadow > candleThreeUpperShadow) && (candleOneUpperShadow > candleThreeUpperShadow); //The second and third days should also show long upper wicks
 
     return {
