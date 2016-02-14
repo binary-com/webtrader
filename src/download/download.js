@@ -267,7 +267,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         require(["css!download/download.css"]);
         $menuLink.click(function () {
             if (!downloadWin) {
-                downloadWin = windows.createBlankWindow($('<div/>'),
+                downloadWin = windows.createBlankWindow($('<div class="download_window"/>'),
                     {
                         title: 'View Historical Data',
                         width: 700,
@@ -275,8 +275,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         height : 460,
                         resize : function() {
                             var chart = $(".downloadChart")
-                                                .width($(this).width() + 2)
-                                                .height($(this).height() - 35)
+                                                .width($(this).width())
+                                                .height($(this).height() - 40)
                                                 .highcharts();
                             if (chart) {
                                 chart.reflow();
@@ -284,7 +284,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }
                     });
                 downloadWin.dialog('open');
-                downloadWin.css("overflow", "inherit");
                 downloadWin.closest("div.ui-dialog").css("overflow", "visible");
                 require(['text!download/download.html'], function($html) {
 
