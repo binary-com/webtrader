@@ -206,9 +206,8 @@ CDL.prototype.CDL3STARSSOUTH = function () {
 
     var candleOneObejct = this.CDLMARUBOZU(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close);
 
-    var isBullishContinuation = params.isCandleThree_Bearish
-                && (candleThreeLowerShadow >= candleThreeBodySize) //A black candlestick with almost no upper shadow and a long lower shadow appears on the first day.
-                && params.isCandleTwo_Bearish && (params.candleTwo_Low > params.candleThree_Low) && (params.candleTwo_Open < params.candleThree_Open) && (params.candleTwo_Close < params.candleThree_Close) && (candleTwoBodySize < candleThreeBodySize) // The next day is another black candlestick closing below the previous day�s close and having an opening in the range of the previous day�s body. However, it has a higher low.
+    var isBullishContinuation = params.isCandleThree_Bearish && (candleThreeLowerShadow >= candleThreeBodySize) //A black candlestick with almost no upper shadow and a long lower shadow appears on the first day.
+                && params.isCandleTwo_Bearish && (params.candleTwo_Low > params.candleThree_Low) && (params.candleTwo_Open < params.candleThree_Open) && (candleTwoBodySize < candleThreeBodySize) // The next day is another black candlestick closing below the previous day�s close and having an opening in the range of the previous day�s body. However, it has a higher low.
                 && candleOneObejct.isBear && (params.candleOne_Low > params.candleTwo_Low) && (candleOneBodySize < candleTwoBodySize);//The last day is a small black Marubozu with a higher low
    
     //It's a bullish candlestick
