@@ -1277,7 +1277,6 @@ CDL.prototype.CDLUNIQUE3RIVER = function () {
         var candleTwoUpperShadow = Math.abs(params.candleTwo_Open - params.candleTwo_High);
         var candleTwoBody = Math.abs(params.candleTwo_Open - params.candleTwo_Close);
         var candleTwoLowerShadow = Math.abs(params.candleTwo_Low - params.candleTwo_Close);
-        var isCandleTwoHammer = (candleTwoLowerShadow >= (2.0 * candleTwoBody)) && (candleTwoUpperShadow <= (candleTwoBody * 0.10));
         var candleThreeBody = Math.abs(params.candleThree_Close - params.candleThree_Open);
 
         var isBullishContinuation = params.isCandleThree_Bearish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))//The 1st candle has a long and bearish body
