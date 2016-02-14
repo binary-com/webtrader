@@ -1274,22 +1274,19 @@ CDL.prototype.CDLUNIQUE3RIVER = function () {
     var params = CDLGETPARAMS(this.priceData);
     var isBullishContinuation = false, isBearishContinuation = false;
 
-    if (params.candleFour_Index >= 0 ) {
         var candleTwoUpperShadow = Math.abs(params.candleTwo_Open - params.candleTwo_High);
         var candleTwoBody = Math.abs(params.candleTwo_Open - params.candleTwo_Close);
         var candleTwoLowerShadow = Math.abs(params.candleTwo_Low - params.candleTwo_Close);
         var isCandleTwoHammer = (candleTwoLowerShadow >= (2.0 * candleTwoBody)) && (candleTwoUpperShadow <= (candleTwoBody * 0.10));
         var candleThreeBody = Math.abs(params.candleThree_Close - params.candleThree_Open);
 
-        var isBullishContinuation = params.isCandleFour_Bearish
-                                    && params.isCandleThree_Bearish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))
-                                    && params.candleThree_Close < params.candleFour_Close//The 1st candle has a long and bearish body
-                                    && params.isCandleTwo_Bearish && isCandleTwoHammer && params.candleTwo_Close > params.candleThree_Close && params.candleTwo_Open < params.candleThree_Open && params.candleTwo_Low < params.candleThree_Low //The 2nd candle is a hammer, and its body is inside the 1st bar's body;
+        var isBullishContinuation = params.isCandleThree_Bearish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))//The 1st candle has a long and bearish body
+                                    && params.isCandleTwo_Bearish && params.candleTwo_Close > params.candleThree_Close && params.candleTwo_Open < params.candleThree_Open && params.candleTwo_Low < params.candleThree_Low //The 2nd candle is a hammer, and its body is inside the 1st bar's body;
                                     && params.isCandleOne_Bullish && params.candleOne_Close < params.candleTwo_Close; //tThe 3rd candle is small and bullish, its Close price is lower than 2nd bar's.
 
         //It's a bullish candlestick
         var isBearishContinuation = false;
-    }
+    
     return {
         isBull: isBullishContinuation,
         isBear: isBearishContinuation
