@@ -224,13 +224,13 @@ CDL.prototype.CDLABANDONEDBABY = function () {
 
     var dojiResponse_candleTwo = this.CDLDOJI(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close);
 
-    var isBearishContinuation = params.isCandleThree_Bullish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))
-                                && dojiResponse_candleTwo.isBear && (params.candleTwo_Low > params.candleThree_High)
-                                && params.isCandleOne_Bearish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) && (params.candleOne_High < params.candleTwo_Low);
+    var isBearishContinuation = params.isCandleThree_Bullish
+                                && dojiResponse_candleTwo.isDoji && (params.candleTwo_Low > params.candleThree_High)
+                                && params.isCandleOne_Bearish && (params.candleTwo_Low > params.candleOne_High);
 
-    var isBullishContinuation = params.isCandleThree_Bearish && (this.indicators.isLongCandle(params.candleThree_Open, params.candleThree_High, params.candleThree_Low, params.candleThree_Close))
-                                && dojiResponse_candleTwo.isBull && (params.candleTwo_High < params.candleThree_Low)
-                                && params.isCandleOne_Bullish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) && (params.candleOne_Low > params.candleTwo_High);
+    var isBullishContinuation = params.isCandleThree_Bearish
+                                && dojiResponse_candleTwo.isDoji && (params.candleTwo_High < params.candleThree_Low)
+                                && params.isCandleOne_Bullish && (params.candleTwo_High < params.candleOne_Low);
 
     return {
         isBear : isBearishContinuation,
