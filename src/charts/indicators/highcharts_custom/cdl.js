@@ -342,13 +342,15 @@ CDL.prototype.CDLCOUNTERATTACK = function () {
 
     var candleTwoBody = Math.abs(params.candleTwo_Close - params.candleTwo_Open);
 
-    var isBullishContinuation = params.isCandleTwo_Bearish && (this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close)) // bearish counterattack is a long black candle in an uptrend
-                                && params.isCandleOne_Bullish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close)) //followed by a long white candle.
-                                && (params.candleOne_Close <= (params.candleTwo_Close + (candleTwoBody * 0.1))) && (params.candleOne_Close >= (params.candleTwo_Close - (candleTwoBody * 0.1)))// Closing prices of both candles are at the same price level.
+    var isBullishContinuation = params.isCandleTwo_Bearish // bearish counterattack is a long black candle in an uptrend
+                                && params.isCandleOne_Bullish  //followed by a long white candle.
+                                && (params.candleOne_Close <= (params.candleTwo_Close + (candleTwoBody * 0.05)))
+                                && (params.candleOne_Close >= (params.candleTwo_Close - (candleTwoBody * 0.05)));// Closing prices of both candles are at the same price level.
 
-    var isBearishContinuation = params.isCandleTwo_Bullish && (this.indicators.isLongCandle(params.candleTwo_Open, params.candleTwo_High, params.candleTwo_Low, params.candleTwo_Close))// bullish counterattack is a long white candle in an uptrend level.
-                                && params.isCandleOne_Bearish && (this.indicators.isLongCandle(params.candleOne_Open, params.candleOne_High, params.candleOne_Low, params.candleOne_Close))//followed by a long white candle.
-                                && (params.candleOne_Close <= (params.candleTwo_Close + (candleTwoBody * 0.1))) && (params.candleOne_Close >= (params.candleTwo_Close - (candleTwoBody * 0.1)))// Closing prices of both candles are at the same price level.
+    var isBearishContinuation = params.isCandleTwo_Bullish // bullish counterattack is a long white candle in an uptrend level.
+                                && params.isCandleOne_Bearish //followed by a long white candle.
+                                && (params.candleOne_Close <= (params.candleTwo_Close + (candleTwoBody * 0.05)))
+                                && (params.candleOne_Close >= (params.candleTwo_Close - (candleTwoBody * 0.05)));// Closing prices of both candles are at the same price level.
 
     return {
         isBear: isBearishContinuation,
