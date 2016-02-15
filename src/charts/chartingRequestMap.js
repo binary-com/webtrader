@@ -106,7 +106,6 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
 
                 var instrumentName = chartID.instrumentName;
                 var series_compare = chartID.series_compare;
-                console.log('Rendering for : ', key, instrumentName, series_compare);
 
                 //Find out how many instrument series are loaded on chart
                 var countInstrumentCharts = 0;

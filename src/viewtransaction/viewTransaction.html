@@ -55,6 +55,7 @@
 
       <div> <p>Entry Spot</p>
           <span rv-tooltip="table.entry_tick_time | moment | or '-'"
+                rv-if="table.entry_tick_time"
                 rv-text="table.entry_tick | or '-'"
                 class="dotted-underline"></span>
       </div>
@@ -67,7 +68,7 @@
       <div> <p>Exit Spot</p>
           <span rv-tooltip="table.exit_tick_time | moment | or '-'"
                 rv-text="table.exit_tick | or '-'"
-                class="dotted-underline"></span>
+                rv-class-dotted-underline="table.exit_tick"></span>
       </div>
 
       <div> <p>Purchase Price</p>

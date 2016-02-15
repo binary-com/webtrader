@@ -111,8 +111,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       var ticks  = barsTable.find({instrumentCdAndTp: key});
       var start_time = state.buy.start_time*1000;
       ticks = ticks.filter(function(tick) { return tick.time > start_time; })
-                   .map(function(tick) { return {quote: tick.open, epoch: tick.time/1000 }; })
+                   .map(function(tick) { return {quote: tick.price, epoch: tick.time/1000 }; })
                    .sort(function(a,b) { return a.epoch - b.epoch; });
+      // console.warn(ticks);
       ticks.forEach(add_tick); /* add existing ticks */
 
       var fn = liveapi.events.on('tick', function (data) {

@@ -130,12 +130,16 @@ define(['jquery', 'charts/chartingRequestMap', 'moment', "charts/chartWindow", "
 
                             if ($(this).hasClass('logScaleLI')) {
                                 var series = $("#" + newTabId + "_chart").highcharts().series[0];
+                                var is_checked = $(this).find('span:first').hasClass('ui-icon-check');
                                 //TODO review log scale - its not matching with Java charts
                                 series.yAxis.update({
-                                    type : series.yAxis.options.type == 'logarithmic' ? 'linear' : 'logarithmic'
+                                    type : is_checked ? 'linear' : 'logarithmic'
                                 });
                                 $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
-                                $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
+                                var hamburger_menu = $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu');
+                                if(hamburger_menu.hasClass('active')) {
+                                  hamburger_menu.click();
+                                }
                             }
                             else if ($(this).hasClass('crosshairLI')) {
                                 //$(this).val(!$(this).is(":selected"));
@@ -168,11 +172,11 @@ define(['jquery', 'charts/chartingRequestMap', 'moment', "charts/chartWindow", "
                                     });
                                     if (!removed) {
                                         //Means this is not a remove case, we have to add the indicator
-                                        chart.series(function(series) {
+                                        chart.series.forEach(function(series){
                                             if (series.options.isInstrument) {
                                                 series.addCurrentPrice();
                                             }
-                                        });
+                                        })
                                     }
                                 });
                                 $(this).find('span:first').toggleClass('ui-icon ui-icon-check');

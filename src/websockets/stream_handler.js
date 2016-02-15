@@ -4,7 +4,6 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
 
     function setExtremePointsForXAxis(chart, startTime, endTime) {
         chart.xAxis.forEach(function (xAxis) {
-            console.log(xAxis);
             if (!startTime) startTime = xAxis.getExtremes().min;
             if (!endTime) endTime = xAxis.getExtremes().max;
             xAxis.setExtremes(startTime, endTime);
@@ -33,7 +32,9 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                   open: price,
                   high: price,
                   low: price,
-                  close: price
+                  close: price,
+                  /* this will be used from trade confirmation dialog */
+                  price: data.tick.quote, /* we need the original value for tick trades */
                 }
                 barsTable.insert(tick);
                 /* notify subscribers */
@@ -121,13 +122,11 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 var type = $(chartID.containerIDWithHash).data('type');
 
                 var last = series.data[series.data.length - 1];
-                console.log(bar.time, last.time, series.options.data.length, series.data.length, series.points.length);
                 if (series.options.data.length != series.data.length) {
                     //TODO - This is an error situation
                     setExtremePointsForXAxis(chart, null, bar.time);
                     return;
                 }
-                console.log('Series data length : ', series.options.name, series.data.length);
 
                 if (type && isDataTypeClosePriceOnly(type)) {//Only update when its not in loading mode
                     if (isNew) {
@@ -139,10 +138,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                     }
                 } else {
                     if (isNew) {
-                        console.log('Inserting : ', [time, open, high, low, close]);
                         series.addPoint([time, open, high, low, close], true, true, false);
                     } else {
-                        console.log('Updating : ', last);
                         last.update({
                             open : open,
                             high : high,
