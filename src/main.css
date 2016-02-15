@@ -17,8 +17,8 @@ body {
     width: 100%;
 }
 
-body > .footer.hide { display: none; }
 body > .footer {
+    position: relative;
     transition: height .3s linear;
     position: absolute;
     width: 100%;
@@ -26,16 +26,26 @@ body > .footer {
     text-align: center;
     z-index: -1;
 }
-body > .footer .footer-inner {
-  height: 100%;
-  display: flex;
-  flex-flow: column-reverse;
-  align-items: center;
-}
-body > .footer .footer-inner .addiction-warning {
+body > .footer .addiction-warning {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     display: inline-block;
-    max-width: 900px;
+    background: #2a3052;
+}
+body > .footer .addiction-warning span {
+  color: white;
+  text-align: left;
+  display: inline-block;
+  max-width: 900px;
+}
+body > .footer .addiction-warning a,
+body > .footer .addiction-warning a:visited,
+body > .footer .addiction-warning a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 

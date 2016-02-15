@@ -342,10 +342,15 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         bottoms.push($('body').height());
         var scroll_height = Math.max.apply(null, bottoms);
         var footer_height = $('.addiction-warning').height();
-        footer_height = footer_height > 45 ? footer_height - 45 : 0;
         $('body > .footer').height(scroll_height + footer_height);
         $('body > .footer').width($('body').width());
+        fixMinimizedDialogsPosition();
     };
+    function fixMinimizedDialogsPosition() {
+        var footer_height = $('.addiction-warning').height();
+        var scroll_bottom = $(document).height() - $(window).height() - $(window).scrollTop();
+        $("#dialog-extend-fixed-container").css("bottom", Math.max(0, footer_height - scroll_bottom));
+    }
 
     return {
 
@@ -421,6 +426,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
               }
             });
             $(window).resize(fixFooterPostion);
+            $(window).scroll(fixMinimizedDialogsPosition);
             return this;
         },
 
