@@ -270,9 +270,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               expiry.today_times.disabled = !range;
               var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
               expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
-              /* avoid 'Contract may not expire within the last 1 minute of trading.' */
-              value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
-              expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
+              // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
+              // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
+              // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
           });
       }
 
