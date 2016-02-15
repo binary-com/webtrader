@@ -48,7 +48,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         // get array of dialogs
         var dialogs = $('.webtrader-dialog').filter(function (inx, d) {
             /* check to see if initialized and is visible */
-            return $(d).hasClass("ui-dialog-content") && $(d).dialog("isOpen");
+            var $d = $(d);
+            return $d.hasClass("ui-dialog-content") && $d.dialog("isOpen") && !$d.hasClass('ui-dialog-minimized');
         });
 
 
