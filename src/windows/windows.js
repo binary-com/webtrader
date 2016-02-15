@@ -82,7 +82,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 /* divide the vertical space equally between dialogs. */
                 var free_space = x < max_x ? (max_x - x) : 0;
                 var margin_left = x < max_x ? (max_x - x) / (inx - inx_start + 1) : 0; /* the current window might be wider than screen width */
-                total_free_space += free_space;
+                if(inx != dialogs.length) { /* we don't care about extra space at last row */
+                  total_free_space += free_space;
+                }
 
                 x = 0;
                 for (var j = inx_start; j < inx; ++j) {
@@ -335,17 +337,24 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         };
     }
 
-    function fixFooterPostion() {
+    function getScrollHeight() {
         var bottoms = $('.ui-dialog').map(function(inx, d){
-          var offset = $(d).offset();
-          return (offset && (offset.top + $(d).height())) || 0;
+          var $d = $(d);
+          var $w = $d.find('.webtrader-dialog');
+          if($w && $w.hasClass("ui-dialog-content") && !$w.hasClass('ui-dialog-minimized')) {
+            var offset = $d.offset();
+            return (offset && (offset.top + $d.height())) || 0;
+          }
+          return 0;
         });
         bottoms.push($('body').height());
-        var scroll_height = Math.max.apply(null, bottoms);
+        return  Math.max.apply(null, bottoms);
+    }
+    function fixFooterPostion() {
+        var scroll_height = getScrollHeight();
         var footer_height = $('.addiction-warning').height();
         $('body > .footer').height(scroll_height + footer_height);
         $('body > .footer').width($('body').width());
-        fixMinimizedDialogsPosition();
     };
     function fixMinimizedDialogsPosition() {
         var footer_height = $('.addiction-warning').height();
@@ -497,6 +506,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             });
 
             blankWindow.dialog('widget').on('dragstop', fixFooterPostion);
+            blankWindow.on('dialogextendminimize', fixFooterPostion);
 
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);
@@ -531,7 +541,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             blankWindow.on('dialogextendbeforerestore', function(){
               var doc = $(document);
               last_document_size = {
-                height: doc.height(),
+                height: getScrollHeight(),
                 width: doc.width()
               };
             });
