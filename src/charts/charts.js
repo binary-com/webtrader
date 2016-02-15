@@ -16,7 +16,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         Highcharts.setOptions({
             global: {
                 useUTC: true
-            }
+            },
+            lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
         });
 
     });
@@ -56,7 +57,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                 $(containerIDWithHash).highcharts().destroy();
             }
 
-            console.log('Delay amount : ', options.delayAmount);
             //Save some data in DOM
             $(containerIDWithHash).data({
                 instrumentCode : options.instrumentCode,
@@ -74,7 +74,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                         load: function () {
 
                             this.showLoading();
-                            console.log('Calling render chart for the first time for the instrument : ', options.instrumentCode);
                             currentPrice.init();
                             liveapi.execute(function () {
                                 ohlc_handler.retrieveChartDataAndRender({
@@ -125,7 +124,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                         events: {
                             afterAnimate: function () {
                                 if (this.options.isInstrument && this.options.id !== "navigator") {
-                                    console.log('Series finished rendering!', this.options);
                                     //this.isDirty = true;
                                     //this.isDirtyData = true;
 

@@ -79,7 +79,10 @@ define(['jquery'], function ($) {
     var onopen = function () {
         /* send buffered sends */
         while (buffered_sends.length > 0) {
-            socket.send(JSON.stringify(buffered_sends.shift()));
+            var data = buffered_sends.shift();
+            if(!unresolved_promises[data.req_id]) {
+              socket.send(JSON.stringify(data));
+            }
         }
         /* if the connection got closed while the result of an unresolved request
            is not back yet, issue the same request again */
@@ -99,7 +102,6 @@ define(['jquery'], function ($) {
 
     /* execute buffered executes */
     var onmessage = function (message) {
-        console.log('Server response : ', message);
         var data = JSON.parse(message.data);
 
         /* do not block the main thread */
@@ -147,7 +149,6 @@ define(['jquery'], function ($) {
         return new Promise(function (resolve,reject) {
             unresolved_promises[data.req_id] = { resolve: resolve, reject: reject, data: data };
             if (is_connected()) {
-                console.log('Request object : ', JSON.stringify(data));
                 socket.send(JSON.stringify(data));
             } else
                 buffered_sends.push(data);

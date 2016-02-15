@@ -476,9 +476,18 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 .addClass('webtrader-dialog')
                 .dialog(options)
                 .dialogExtend(options);
+
+
+            var dialog = blankWindow.dialog('widget');
             /* allow dialogs to be moved though the bottom of the page */
-            blankWindow.dialog('widget').draggable( "option", "containment", false );
-            blankWindow.dialog('widget').draggable( "option", "scroll", true );
+            dialog.draggable( "option", "containment", false );
+            dialog.draggable( "option", "scroll", true );
+            dialog.on('dragstop', function() {
+                var top = dialog.offset().top;
+                if(top < 0) {
+                  dialog.animate({ top: '0px' }, 300);
+                }
+            });
 
             blankWindow.dialog('widget').on('dragstop', fixFooterPostion);
 
@@ -520,7 +529,6 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
               };
             });
             blankWindow.on('dialogextendrestore', function() {
-              var dialog = blankWindow.dialog('widget');
               var pos = dialog.offset();
               var new_pos = { };
               var dim = { width: dialog.width(), height: dialog.height() };

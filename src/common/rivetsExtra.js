@@ -472,5 +472,65 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }
         el._perv_indicative_color = value;
     }
+
+    /******************************** components *****************************/
+    function component_twoway_bind(self, keypathes) {
+        /* make sure to call async */
+        setTimeout(function() {
+          for(var i = 0; i < keypathes.length; ++i){
+              var keypath = keypathes[i];
+              var key = _.last(keypath.split('.'));
+              var observer = self.observers[key];
+              if(observer) {
+                self.componentView.observe(keypath, function(value){
+                    observer.setValue(value);
+                });
+              }
+          }
+        }, 0);
+    }
+    rivets.components['price-spinner'] = {
+      static: ['class', 'min', 'decimals'],
+      template: function() {
+        return '<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">' +
+                  '<input rv-class="data.class" type="text" rv-value="data.value" />' +
+
+                    '<button rv-on-click="increment" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">' +
+                      '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>' +
+                    '</button>' +
+                    '<button rv-on-click="decrement" step="-1" class="ui-spinner-button ui-spinner-down ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 0 5px 0" tabindex="-1" role="button">' +
+                      '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-s">▼</span> </span>' +
+                    '</button>' +
+                '</span>';
+      },
+      initialize: function(el, data) {
+        var decimals = (data.decimals || 2)*1;
+        var min = (data.min || 0)*1;
+        component_twoway_bind(this, ['data.value']);
+
+        return {
+          data: data,
+          increment: function (e,scope) {
+            var value = data.value*1;
+            value = value < 1 ? value + 0.1 : value + 1;
+            if((value | 0) !== value) {
+              value = value.toFixed(decimals);
+            }
+            data.value = value;
+          },
+          decrement: function () {
+            var value = data.value*1;
+            value = value > 1 ? value - 1 : value - 0.1;
+            if((value | 0) !== value) { /* is float */
+              value = value.toFixed(decimals);
+            }
+            if(value > min) {
+              data.value = value;
+            }
+          }
+        };
+      },
+    };
+
     return rv;
 });
