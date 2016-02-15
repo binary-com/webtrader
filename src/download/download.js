@@ -251,16 +251,37 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 }
 
                 chart.addSeries(seriesConf);
+
+                //Add flag on chart indicating the date selected
+                var time = data.candles[data.candles.length - 2].epoch;
+                /*
+                    TODO
+                    Add a check to see if time is same as what was entered by user
+                    Also discard time when Day is selected.
+                    When user selects Day from instrument menu, time selection should be hidden
+                 */
+                chart.addSeries({
+                    type : 'flags',
+                    data : [{
+                        x: time * 1000,
+                        text: ""
+                    }],
+                    onSeries : seriesConf.id,
+                    shape: 'circlepin',
+                    shadow: true,
+                    color: 'red'
+                });
+
                 chart.hideLoading();
                 $(".download_show").removeAttr("disabled");
 
             })
             .catch(function(err) {
-            console.error(err);
-            $.growl.error({ message: err.message });
-            chart.hideLoading();
-            $(".download_show").removeAttr("disabled");
-        });
+                console.error(err);
+                $.growl.error({ message: err.message });
+                chart.hideLoading();
+                $(".download_show").removeAttr("disabled");
+            });
     }
 
     function init($menuLink) {
