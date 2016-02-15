@@ -101,6 +101,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
 
                 y += row_height + 20;
             }
+            if(perform) { // fix footer postion on tile action
+              setTimeout(fixFooterPostion, 1500 + 100);
+            }
             return total_free_space;
         }
 
@@ -331,6 +334,19 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         };
     }
 
+    function fixFooterPostion() {
+        var bottoms = $('.ui-dialog').map(function(inx, d){
+          var offset = $(d).offset();
+          return (offset && (offset.top + $(d).height())) || 0;
+        });
+        bottoms.push($('body').height());
+        var scroll_height = Math.max.apply(null, bottoms);
+        var footer_height = $('.addiction-warning').height();
+        footer_height = footer_height > 45 ? footer_height - 45 : 0;
+        $('body > .footer').height(scroll_height + footer_height);
+        $('body > .footer').width($('body').width());
+    };
+
     return {
 
         init: function( $parentObj ) {
@@ -404,6 +420,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
               }
             });
+            $(window).resize(fixFooterPostion);
             return this;
         },
 
@@ -463,9 +480,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             blankWindow.dialog('widget').draggable( "option", "containment", false );
             blankWindow.dialog('widget').draggable( "option", "scroll", true );
 
-            blankWindow.dialog('widget').on('dragstop', function() {
-                $('.footer').height(document.body.scrollHeight)
-            });
+            blankWindow.dialog('widget').on('dragstop', fixFooterPostion);
 
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);

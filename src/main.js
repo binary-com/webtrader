@@ -191,6 +191,8 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 // hide the main loading spinner,
                 // after the `last module` has been loaded.
                 $(".sk-spinner-container").hide();
+                // show the footer
+                $('body > .footer').show();
             });
         });
     }
