@@ -270,6 +270,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               expiry.today_times.disabled = !range;
               var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
               expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
+              // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
+              // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
+              // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
           });
       }
 
@@ -560,7 +563,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           liveapi.send({ forget: id });
         }
 
-
         liveapi.send(request)
         .then(function (data) {
           var id = data.proposal.id;
@@ -647,9 +649,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       state.categories.array = _(available).map('contract_category_display').uniq().value();
       state.categories.value = _(state.categories.array).includes('Up/Down') ? 'Up/Down' : _(state.categories.array).head(); // TODO: show first tab
 
+      var tick_stream_alive = false;
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
+              tick_stream_alive = true;
               // if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
               state.tick.perv_quote = state.tick.quote;
               state.tick.epoch = data.tick.epoch;
@@ -685,6 +689,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           state.spreads.spot = proposal.spot || '0.0';
           state.spreads.spot_time = proposal.spot_time || '0';
           state.proposal.loading = false;
+          if(!tick_stream_alive) { /* for contracts that don't have live qoute data */
+            state.tick.epoch = proposal.spot_time;
+            state.tick.quote = proposal.spot;
+          }
       });
 
       /* change currency on user login */
@@ -726,6 +734,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
         /********************** register for ticks_streams **********************/
         var key = chartingRequestMap.keyFor(symbol.symbol, /* granularity = */ 0);
+        var has_digits = _(available).map('min_contract_duration')
+                          .some(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
         if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
             chartingRequestMap.register({
               symbol: symbol.symbol,
@@ -734,13 +744,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               count: 1000, /* this will be for the case that the user opens a the same tick chart later */
               style: 'ticks'
             }).catch(function (err) {
-              $.growl.error({ message: err.message });
-              var has_digits = _(available).map('min_contract_duration')
-                                .some(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
-              /* if this contract does not offer tick trades, then its fine let the user trade! */
-              if(!has_digits) {
-                state.ticks.loading = false;
-              } else {
+              /* if this contract offers tick trades, prevent user from trading */
+              if(has_digits) {
+                $.growl.error({ message: err.message });
                 _.delay(function(){ dialog.dialog('close'); },2000);
               }
               console.error(err);
@@ -749,11 +755,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         else { chartingRequestMap.subscribe(key); }
 
         var state = init_state(available,root,dialog, symbol);
+        if(!has_digits) { state.ticks.loading = false; }
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
+        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
     }
 
     return {
