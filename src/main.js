@@ -29,8 +29,7 @@ requirejs.config({
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
-        'ddslick': 'lib/ddslick/jquery.ddslick.min',
-        'export-csv': 'lib/highcharts-export-csv/export-csv'
+        'ddslick': 'lib/ddslick/jquery.ddslick.min'
     },
     map: {
         '*': {
@@ -75,9 +74,6 @@ requirejs.config({
             exports : 'rivets'
         },
         "highcharts-more": {
-            deps: ["highstock"]
-        },
-        "export-csv": {
             deps: ["highstock"]
         }
     }

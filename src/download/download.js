@@ -159,16 +159,17 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download CSV',
                             onclick: function () {
-                                console.log(this);
-                                console.log(this.series);
-                                /*var is_tick = isTick(data.timePeriod);
-                                var filename = data.instrumentName + ' (' +  data.timePeriod + ')' + '.csv';
-                                var lines = bars.map(function(bar){
+                                var series = this.series[0]; //Main series
+                                var is_tick = isTick(timePeriod);
+                                var filename = series.options.name + ' (' +  timePeriod + ')' + '.csv';
+                                var lines = series.options.data.map(function(bar){
+                                    var time = bar[0], open = bar[1];
                                     if(is_tick){
-                                        return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /!* Date *!/ + bar.open; /!* Price *!/
+                                        return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ + open; /* Price */
                                     }
-                                    return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/!* Date *!/
-                                        bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
+                                    var high = bar[2], low = bar[3], close = bar[4];
+                                    return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
+                                        open + ',' + high + ',' + low + ',' + close;
                                 });
                                 var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
 
@@ -178,7 +179,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 }
                                 else {
                                     var link = document.createElement("a");
-                                    if (link.download !== undefined) {  /!* Evergreen Browsers :) *!/
+                                    if (link.download !== undefined) {  /* Evergreen Browsers :) */
                                         var url = URL.createObjectURL(blob);
                                         link.setAttribute("href", url);
                                         link.setAttribute("download", filename);
@@ -187,7 +188,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                         link.click();
                                         document.body.removeChild(link);
                                     }
-                                }*/
+                                }
                             },
                             separator: false
                         }]
