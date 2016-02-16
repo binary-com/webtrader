@@ -104,7 +104,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_state(available,root, dialog, symbol){
+    function init_state(available,root, dialog, symbol, contracts_for_spot){
 
       var state = {
         duration: {
@@ -214,7 +214,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         },
         tick: {
           epoch: '0',
-          quote:'0',
+          quote: contracts_for_spot,
           perv_quote: '0',
           down: function(){
             var ans= this.quote*1 < this.perv_quote*1;
@@ -689,7 +689,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           state.spreads.spot = proposal.spot || '0.0';
           state.spreads.spot_time = proposal.spot_time || '0';
           state.proposal.loading = false;
-          if(!tick_stream_alive) { /* for contracts that don't have live qoute data */
+          if(!tick_stream_alive && proposal.spot) { /* for contracts that don't have live qoute data */
             state.tick.epoch = proposal.spot_time;
             state.tick.quote = proposal.spot;
           }
@@ -754,7 +754,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         else { chartingRequestMap.subscribe(key); }
 
-        var state = init_state(available,root,dialog, symbol);
+        var state = init_state(available,root,dialog, symbol, contracts_for.spot);
         if(!has_digits) { state.ticks.loading = false; }
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
