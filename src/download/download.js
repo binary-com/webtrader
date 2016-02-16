@@ -47,7 +47,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         $downloadChart.highcharts('StockChart', {
 
             chart: {
-                zoomType: 'x',
                 events: {
                     load: function () {
                         this.credits.element.onclick = function() {
@@ -63,11 +62,10 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             },
 
             navigator: {
-                enabled : true
-            },
-
-            scrollbar: {
-                liveRedraw: false
+                enabled : true,
+                series: {
+                    id: 'navigator'
+                }
             },
 
             //This will be updated when 'Settings' button is implemented
@@ -184,30 +182,29 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
         chart.showLoading();
         //Disable show button
-        $(".download_show").attr("disabled", true);
+        $(".download_show").prop("disabled", true);
 
-        var to = moment.utc(toDateWithTime, "DD/MM/YYYY HH:mm").unix();
-        var from = to - 30 * 60; //By default getting 30 minutes of data (for tick charts)
+        var from = moment.utc(toDateWithTime, "DD/MM/YYYY HH:mm").unix();
+        var to = from + 30 * 60; //By default getting 30 minutes of data (for tick charts)
         var req = {
             "ticks_history": instrumentObject.symbol,
-            "end": to,
             "start" : from
         };
         if (!isTick(timePeriod)) {
             req.granularity = convertToTimeperiodObject(timePeriod).timeInSeconds();
             req.style = 'candles';
-            to += req.granularity; //Add one more to future
-            req.end = to;
-            from = to - req.granularity * 1000;
+            to = from + req.granularity * 1000;
         }
-        req.start = from;
+        if (moment.utc().unix() < to) {
+            to = moment.utc().unix();
+        }
+        req.end = to;
 
         console.log("View Historical data [request] ", JSON.stringify(req));
         liveapi
             .send(req).then(function(data) {
 
                 var dataInHighChartsFormat = [];
-                console.log(data);
 
                 if (isTick(timePeriod)) {
                     data.history.times.forEach(function(time, index) {
@@ -224,8 +221,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 }
 
                 var totalLength = dataInHighChartsFormat.length;
-                var endIndex = dataInHighChartsFormat.length > 100 ? totalLength - 100 : 0;
-                chart.xAxis[0].range = dataInHighChartsFormat[totalLength - 1][0] - dataInHighChartsFormat[endIndex][0]; //show 30 bars
+                var endIndex = totalLength > 100 ? 100 : totalLength - 1;
+                chart.xAxis[0].setExtremes(dataInHighChartsFormat[0][0], dataInHighChartsFormat[endIndex][0]); //show 100 bars
 
                 var name = instrumentObject.display_name;
 
@@ -251,29 +248,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 }
 
                 chart.addSeries(seriesConf);
-
-                //Add flag on chart indicating the date selected
-                var time = data.candles[data.candles.length - 2].epoch;
-                /*
-                    TODO
-                    Add a check to see if time is same as what was entered by user
-                    Also discard time when Day is selected.
-                    When user selects Day from instrument menu, time selection should be hidden
-                 */
-                chart.addSeries({
-                    type : 'flags',
-                    data : [{
-                        x: time * 1000,
-                        text: ""
-                    }],
-                    onSeries : seriesConf.id,
-                    shape: 'circlepin',
-                    shadow: true,
-                    color: 'red'
-                });
-
                 chart.hideLoading();
-                $(".download_show").removeAttr("disabled");
+                $(".download_show").prop("disabled", false);
 
             })
             .catch(function(err) {
@@ -311,7 +287,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     $html = $($html);
                     $html.find("button, input[type=button]").button();
                     $html
-                        .find('.download_toDate')
+                        .find('.download_fromDate')
                         .datepicker({
                             changeMonth : true,
                             changeYear : true,
@@ -324,7 +300,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             $(this).datepicker("show");
                         });
                     $html
-                        .find('.download_toTime').timepicker({
+                        .find('.download_fromTime').timepicker({
                             showCloseButton : true
                         })
                         .click(function() {
@@ -338,78 +314,105 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             markets = menu.extractChartableMarkets(data);
                             /* add to instruments menu */
                             markets = menu.sortMenu(markets);
-                            var rootUL = $("<ul>");
+                            var rootULForInstruments = $("<ul>");
                             var defaultInstrumentObject = undefined;
                             markets.forEach(function(value) {
                                 var mainMarket = $("<ul>");
                                 value.submarkets.forEach(function(value) {
                                     var subMarket = $("<ul>");
                                     value.instruments.forEach(function(value) {
-                                        var instruments = $("<ul>");
-                                        timePeriods.forEach(function (eTP) {
-                                            var eTPObjects = $("<ul>");
-                                            eTP.timePeriods.forEach(function(eachTimePeriod) {
-                                                var timePeriodElement = $("<li>");
-                                                timePeriodElement.append(eachTimePeriod.name);
-                                                timePeriodElement.data({
-                                                    "instrumentObject" : value,
-                                                    "timePeriodObject" : eachTimePeriod
-                                                });
-                                                timePeriodElement.click(function() {
-                                                    $(".download_instruments")
-                                                        .data({
-                                                            instrumentObject : $(this).data("instrumentObject"),
-                                                            timePeriodObject : $(this).data("timePeriodObject")
-                                                        })
-                                                        .find("span")
-                                                        .html($(this).data("instrumentObject").display_name);
-                                                    $(".download_instruments_container > ul").menu().toggle();
-                                                });
-                                                eTPObjects.append(timePeriodElement);
-                                            });
-                                            instruments.append($("<li>").append(eTP.name).append(eTPObjects));
+                                        var instrument = $("<li>");
+                                        instrument.append(value.display_name);
+                                        instrument.data("instrumentObject", value);
+                                        instrument.click(function() {
+                                            $(".download_instruments")
+                                                .data("instrumentObject", $(this).data("instrumentObject"))
+                                                .find("span")
+                                                .html($(this).data("instrumentObject").display_name);
+                                            $(".download_instruments_container > ul").toggle();
                                         });
-                                        subMarket.append($("<li>").append(value.display_name).append(instruments));
                                         if (_.isUndefined(defaultInstrumentObject)) {
                                             defaultInstrumentObject = value;
                                         }
+                                        subMarket.append(instrument);
                                     });
                                     mainMarket.append($("<li>").append(value.name).append(subMarket));
                                 });
-                                rootUL.append($("<li>").append(value.name).append(mainMarket));
+                                rootULForInstruments.append($("<li>").append(value.name).append(mainMarket));
                             });
-                            $(".download_instruments_container").append(rootUL);
-                            rootUL.menu().toggle();
-                            var $downloadInstruments = $(".download_instruments");
-                            $downloadInstruments.click(function() {
-                                $(".download_instruments_container > ul").toggle();
-                            });
+                            $(".download_instruments_container").append(rootULForInstruments);
+                            rootULForInstruments.menu().toggle();
 
-                            $downloadInstruments.data({
-                                "instrumentObject" : defaultInstrumentObject,
-                                "timePeriodObject" : {
-                                    name : "1 day", code : "1d"
-                                }
-                            });
-                            $(".download_instruments span").html(defaultInstrumentObject.display_name);
-                            renderChart(defaultInstrumentObject, "1d",
-                                $(".download_toDate").val() + " " + $(".download_toTime").val());
+                            var $downloadInstruments = $(".download_instruments");
+                            $downloadInstruments
+                                .click(function() {
+                                    $(".download_instruments_container > ul").toggle();
+                                })
+                                .blur(function () {
+                                    $(".download_instruments_container > ul").hide();
+                                });
+                            $downloadInstruments.data("instrumentObject", defaultInstrumentObject);
+                            $downloadInstruments.find("span").html(defaultInstrumentObject.display_name);
+
+                            $(".download_show").click();
 
                         }).catch(function(e) {
                             console.error(e);
                             $.growl.error({ message: e.message });
                         });
 
+                    //Init the time period drop down
+                    var $download_timePeriod = $(".download_timePeriod");
+                    var rootUL_timePeriod = $("<ul>");
+                    timePeriods.forEach(function(timePeriodParent) {
+                        var subMenu = $("<ul>");
+                        timePeriodParent.timePeriods.forEach(function(timePeriod) {
+                            var tp = $("<li>");
+                            tp.append(timePeriod.name);
+                            tp.data("timePeriodObject", timePeriod);
+                            tp.click(function() {
+                                var timePeriodObject = $(this).data("timePeriodObject");
+                                $(".download_timePeriod")
+                                    .data("timePeriodObject", timePeriodObject)
+                                    .find("span")
+                                    .html($(this).data("timePeriodObject").name);
+                                $(".download_timePeriod_container > ul").toggle();
+                                var isDayCandles = timePeriodObject.code === '1d';
+                                var $download_fromTime = $html.find(".download_fromTime");
+                                $download_fromTime.attr("disabled", isDayCandles);
+                                if (isDayCandles) {
+                                    $download_fromTime.val("00:00");
+                                }
+                            });
+                            subMenu.append(tp);
+                        });
+                        rootUL_timePeriod.append($("<li>").append(timePeriodParent.name).append(subMenu));
+                    });
+                    $(".download_timePeriod_container").append(rootUL_timePeriod);
+                    rootUL_timePeriod.menu().toggle();
+                    $download_timePeriod
+                        .click(function() {
+                            $(".download_timePeriod_container > ul").toggle();
+                        })
+                        .blur(function() {
+                            $(".download_timePeriod_container > ul").hide();
+                        });
+                    $download_timePeriod.data("timePeriodObject", {
+                        name : "1 day", code : "1d"
+                    });
+                    $download_timePeriod.find("span").html("1 day");
+                    $(".download_fromTime").prop("disabled", true);
+
                     $html.find(".download_show").click(function() {
                         var $downloadInstruments = $(".download_instruments");
+                        var $download_timePeriod = $(".download_timePeriod");
                         var instrumentObject = $downloadInstruments.data("instrumentObject");
-                        var timePeriod = $downloadInstruments.data("timePeriodObject").code;
-                        renderChart(instrumentObject,
-                            timePeriod,
-                            $(".download_toDate").val() + " " + $(".download_toTime").val());
+                        var timePeriodObject = $download_timePeriod.data("timePeriodObject");
+                        renderChart(instrumentObject, timePeriodObject.code,
+                                        $(".download_fromDate").val() + " " + $(".download_fromTime").val());
                     });
 
-                    $html.find(".download_toDate").val(moment.utc().format("DD/MM/YYYY"));
+                    $html.find(".download_fromDate").val(moment.utc().subtract(1, "years").format("DD/MM/YYYY"));
 
                 });
             }

@@ -7,13 +7,13 @@
     text-align: center;
 }
 
-.download_toDate {
+.download_fromDate {
     width: 110px;
     position: relative;
     top: -3px;
 }
 
-.download_toTime {
+.download_fromTime {
     width : 60px;
     position: relative;
     top: -3px;
@@ -29,18 +29,23 @@
     height: 370px;
 }
 
-.download_instruments_container li {
+.download_instruments_container li, .download_timePeriod_container li {
     text-align: left;
     white-space: nowrap;
     background: #273051;
     color: white;
 }
 
-.download_instruments_container li.ui-state-focus, .download_instruments_container li.ui-state-active {
+.download_instruments_container li.ui-state-focus, .download_instruments_container li.ui-state-active,
+.download_timePeriod_container li.ui-state-focus, .download_timePeriod_container li.ui-state-active {
     background: #3F476E !important;
     color: white;
 }
 
-.download_instruments_container > ul {
+.download_instruments_container > ul, .download_timePeriod_container > ul {
     position: absolute;
+}
+
+.download_fromTime:disabled {
+    background-color: #dde0ee;
 }
