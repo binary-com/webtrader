@@ -1,7 +1,7 @@
 /**
  * Created by Arnab Karmakar on 1/28/16.
  */
-define(["jquery", "windows/windows","websockets/binary_websockets","navigation/menu", "moment", "lodash", "jquery-growl", "common/util", "highstock", "highcharts-exporting", "export-csv"], function ($,windows,liveapi, menu, moment, _) {
+define(["jquery", "windows/windows","websockets/binary_websockets","navigation/menu", "moment", "lodash", "jquery-growl", "common/util", "highstock", "highcharts-exporting"], function ($,windows,liveapi, menu, moment, _) {
 
     var downloadWin = null, markets = [], timePeriods = [
         {
@@ -159,13 +159,35 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download CSV',
                             onclick: function () {
-                                this.downloadCSV();
-                            },
-                            separator: false
-                        }, {
-                            text: 'Download XLS',
-                            onclick: function () {
-                                this.downloadXLS();
+                                console.log(this);
+                                console.log(this.series);
+                                /*var is_tick = isTick(data.timePeriod);
+                                var filename = data.instrumentName + ' (' +  data.timePeriod + ')' + '.csv';
+                                var lines = bars.map(function(bar){
+                                    if(is_tick){
+                                        return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /!* Date *!/ + bar.open; /!* Price *!/
+                                    }
+                                    return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/!* Date *!/
+                                        bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
+                                });
+                                var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
+
+                                var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                                if (navigator.msSaveBlob) { // IE 10+
+                                    navigator.msSaveBlob(blob, filename);
+                                }
+                                else {
+                                    var link = document.createElement("a");
+                                    if (link.download !== undefined) {  /!* Evergreen Browsers :) *!/
+                                        var url = URL.createObjectURL(blob);
+                                        link.setAttribute("href", url);
+                                        link.setAttribute("download", filename);
+                                        link.style.visibility = 'hidden';
+                                        document.body.appendChild(link);
+                                        link.click();
+                                        document.body.removeChild(link);
+                                    }
+                                }*/
                             },
                             separator: false
                         }]
@@ -256,7 +278,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 console.error(err);
                 $.growl.error({ message: err.message });
                 chart.hideLoading();
-                $(".download_show").removeAttr("disabled");
+                $(".download_show").prop("disabled", false);
             });
     }
 
@@ -379,9 +401,11 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 $(".download_timePeriod_container > ul").toggle();
                                 var isDayCandles = timePeriodObject.code === '1d';
                                 var $download_fromTime = $html.find(".download_fromTime");
-                                $download_fromTime.attr("disabled", isDayCandles);
                                 if (isDayCandles) {
                                     $download_fromTime.val("00:00");
+                                    $download_fromTime.hide()
+                                } else {
+                                    $download_fromTime.show();
                                 }
                             });
                             subMenu.append(tp);
@@ -401,7 +425,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         name : "1 day", code : "1d"
                     });
                     $download_timePeriod.find("span").html("1 day");
-                    $(".download_fromTime").prop("disabled", true);
+                    $(".download_fromTime").hide();
 
                     $html.find(".download_show").click(function() {
                         var $downloadInstruments = $(".download_instruments");
