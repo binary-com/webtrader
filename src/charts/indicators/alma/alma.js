@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/2/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -82,7 +82,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					        });
 					        if (!isValid) return;
 
-                            if (!isFloatBetween($html.find("#alma_offset").val(),
+                            if (!_.inRange($html.find("#alma_offset").val(),
                                             parseInt($html.find("#alma_offset").attr("min")),
                                             parseInt($html.find("#alma_offset").attr("max")))) {
                                 require(["jquery", "jquery-growl"], function ($) {
