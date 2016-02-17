@@ -67,6 +67,24 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     {
                         text: "OK",
                         click: function () {
+                            //Check validation
+					        var isValid = true;
+					        $(".mama_input_width_for_period").each(function () {
+					            if (!isFloatBetween($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+					                var $elem = $(this);
+					                require(["jquery", "jquery-growl"], function ($) {
+					                    $.growl.error({
+					                        message: "Only numbers between " + $elem.attr("min")
+                                                    + " to " + $elem.attr("max")
+                                                    + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+					                    });
+					                });
+					                isValid = false;
+					                return;
+					            }
+					        });;
+					        if (!isValid) return;
+
                             var options = {
                                 fastLimit: parseFloat($html.find("#mama_fast_limit").val()),
                                 slowLimt: parseFloat($html.find("#mama_slow_limit").val()),
