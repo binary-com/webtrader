@@ -46,10 +46,6 @@ function isLineDotType(type) {
     return type === 'linedot';
 }
 
-function isNumericBetween(value, min, max) {
-    var isNumeric = !isNaN(parseFloat(value)) && isFinite(value)
-    return isNumeric && Math.floor(value) == value && min <= value && max >= value;
-};
 
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {

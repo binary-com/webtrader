@@ -123,7 +123,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                             //Check validation
 					        var isValid = true;
 					        $(".cc_input_width_for_period").each(function () {
-					            if (!isNumericBetween(parseInt($(this).val()), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+					            if (!_.inRange($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
 					                var $elem = $(this);
 					                require(["jquery", "jquery-growl"], function ($) {
 					                    $.growl.error({

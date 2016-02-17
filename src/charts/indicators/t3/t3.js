@@ -63,18 +63,22 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					    text: "OK",
 					    click: function () {
 					        //Check validation
-					        if (!isNumericBetween($html.find("#t3_period").val(),
-                                            parseInt($html.find("#t3_period").attr("min")),
-                                            parseInt($html.find("#t3_period").attr("max")))) {
-					            require(["jquery", "jquery-growl"], function ($) {
-					                $.growl.error({
-					                    message: "Only numbers between " + $html.find("#t3_period").attr("min")
-                                                + " to " + $html.find("#t3_period").attr("max")
-                                                + " is allowed for " + $html.find("#t3_period").closest('tr').find('td:first').text() + "!"
+					        var isValid = true;
+					        $(".t3_input_width_for_period").each(function () {
+					            if (!_.inRange($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+					                var $elem = $(this);
+					                require(["jquery", "jquery-growl"], function ($) {
+					                    $.growl.error({
+					                        message: "Only numbers between " + $elem.attr("min")
+                                                    + " to " + $elem.attr("max")
+                                                    + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+					                    });
 					                });
-					            });
-					            return;
-					        }
+					                isValid = false;
+					                return;
+					            }
+					        });
+					        if (!isValid) return;
 
 					        var options = {
 					            period: parseInt($("#t3_period").val()),

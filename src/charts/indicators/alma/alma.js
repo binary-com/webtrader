@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/2/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -56,7 +56,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                width: 280,
+                width: 350,
                 my: 'center',
                 at: 'center',
                 of: window,
@@ -66,22 +66,34 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         text: "OK",
                         click: function() {
                             var isValid = true;
-                            $(".alma_input_width_for_period").each(function () {
-                                if (!isNumericBetween(parseInt($(this).val()), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
-                                    var $elem = $(this);
-                                    require(["jquery", "jquery-growl"], function ($) {
-                                        $.growl.error({
-                                            message: "Only numbers between " + $elem.attr("min")
+					        $("#alma_period,#alma_sigma").each(function () {
+					            if (!_.inRange($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+					                var $elem = $(this);
+					                require(["jquery", "jquery-growl"], function ($) {
+					                    $.growl.error({
+					                        message: "Only numbers between " + $elem.attr("min")
                                                     + " to " + $elem.attr("max")
                                                     + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-                                        });
-                                    });
-                                    isValid = false;
-                                    return;
-                                }
-                            });;
+					                    });
+					                });
+					                isValid = false;
+					                return;
+					            }
+					        });
+					        if (!isValid) return;
 
-                            if (!isValid) return;
+                            if (!_.inRange($html.find("#alma_offset").val(),
+                                            parseInt($html.find("#alma_offset").attr("min")),
+                                            parseInt($html.find("#alma_offset").attr("max")))) {
+                                require(["jquery", "jquery-growl"], function ($) {
+                                    $.growl.error({
+                                        message: "Only numbers between " + $html.find("#alma_offset").attr("min")
+                                                + " to " + $html.find("#alma_offset").attr("max")
+                                                + " is allowed for " + $html.find("#alma_offset").closest('tr').find('td:first').text() + "!"
+                                    });
+                                });
+                                return;
+                            };
 
                             var options = {
                                 period: parseInt($html.find("#alma_period").val()),
