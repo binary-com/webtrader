@@ -68,7 +68,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         text: "OK",
                         click: function() {
 
-                            if (!isNumericBetween($html.find(".dc_input_width_for_period").val(),
+                            if (!_.inRange($html.find(".dc_input_width_for_period").val(),
                                             parseInt($html.find(".dc_input_width_for_period").attr("min")),
                                             parseInt($html.find(".dc_input_width_for_period").attr("max"))))
                             {

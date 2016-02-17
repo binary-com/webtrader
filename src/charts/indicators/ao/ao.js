@@ -143,7 +143,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                         click: function() {
                             var isValid = true;
                             $(".ao_input_width_for_period").each(function () {
-                                if (!isNumericBetween($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+                                if (!_.inRange($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
                                     var $elem = $(this);
                                     require(["jquery", "jquery-growl"], function ($) {
                                         $.growl.error({

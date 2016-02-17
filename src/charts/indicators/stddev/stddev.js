@@ -111,7 +111,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         click: function() {
                             //console.log('Ok button is clicked!');
 
-                            if (!isNumericBetween($html.find(".stddev_input_width_for_period").val(),
+                            if (!_.inRange($html.find(".stddev_input_width_for_period").val(),
                                             parseInt($html.find(".stddev_input_width_for_period").attr("min")),
                                             parseInt($html.find(".stddev_input_width_for_period").attr("max")))) {
                                 require(["jquery", "jquery-growl"], function ($) {
