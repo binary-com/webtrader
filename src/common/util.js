@@ -51,6 +51,11 @@ function isNumericBetween(value, min, max) {
     return isNumeric && Math.floor(value) == value && min <= value && max >= value;
 };
 
+function isFloatBetween(value, min, max) {
+    var isNumeric = !isNaN(parseFloat(value)) && isFinite(value)
+    return isNumeric && min <= value && max >= value;
+};
+
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {
