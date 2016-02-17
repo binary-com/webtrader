@@ -119,18 +119,23 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     {
                         text: "OK",
                         click: function () {
-                            if (!isNumericBetween($html.find(".apo_input_width_for_period").val(),
-                                            parseInt($html.find(".apo_input_width_for_period").attr("min")),
-                                            parseInt($html.find(".apo_input_width_for_period").attr("max")))) {
-                                require(["jquery", "jquery-growl"], function ($) {
-                                    $.growl.error({
-                                        message: "Only numbers between " + $html.find(".apo_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".apo_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".apo_input_width_for_period").closest('tr').find('td:first').text() + "!"
-                                    });
-                                });
-                                return;
-                            }
+                           //Check validation
+					        var isValid = true;
+					        $(".apo_input_width_for_period").each(function () {
+					            if (!isNumericBetween($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+					                var $elem = $(this);
+					                require(["jquery", "jquery-growl"], function ($) {
+					                    $.growl.error({
+					                        message: "Only numbers between " + $elem.attr("min")
+                                                    + " to " + $elem.attr("max")
+                                                    + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+					                    });
+					                });
+					                isValid = false;
+					                return;
+					            }
+					        });
+					        if (!isValid) return;
 
                             var levels = [];
                             $.each(table.rows().nodes(), function () {
