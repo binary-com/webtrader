@@ -18,8 +18,8 @@ body {
 }
 
 body > .footer {
-    position: relative;
-    transition: height .3s linear;
+    transition: height .2s linear;
+    top:0;
     position: absolute;
     width: 100%;
     height: 100%;
