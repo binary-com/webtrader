@@ -337,7 +337,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         };
     }
 
-    function getScrollHeight() {
+    function getScrollHeight(without_body) {
         var bottoms = $('.ui-dialog').map(function(inx, d){
           var $d = $(d);
           var $w = $d.find('.webtrader-dialog');
@@ -347,14 +347,22 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
           }
           return 0;
         });
-        bottoms.push($('body').height());
+        if(!without_body) {
+          bottoms.push($('body').height());
+        }
         return  Math.max.apply(null, bottoms);
     }
-    function fixFooterPostion() {
-        var scroll_height = getScrollHeight();
-        var footer_height = $('.addiction-warning').height();
-        $('body > .footer').height(scroll_height + footer_height);
+    function fixFooterPostion(only_on_expand) {
         $('body > .footer').width($('body').width());
+        var scroll_height = getScrollHeight(true);
+        var body_height = $('body').height();
+        var footer_height = $('.addiction-warning').height();
+        var current_height = $('body > .footer').height();
+        var new_height = Math.max(scroll_height + footer_height + 15, body_height);
+        if(current_height > new_height && only_on_expand === true) {
+          return;
+        }
+        $('body > .footer').height(new_height);
     };
     function fixMinimizedDialogsPosition() {
         var footer_height = $('.addiction-warning').height();
@@ -505,7 +513,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 }
             });
 
-            blankWindow.dialog('widget').on('dragstop', fixFooterPostion);
+            dialog.on('dragstop', fixFooterPostion);
+            dialog.on('drag', function() { fixFooterPostion(true); });
             blankWindow.on('dialogextendminimize', fixFooterPostion);
 
             if(options.destroy) { /* register for destroy event which have been patched */
