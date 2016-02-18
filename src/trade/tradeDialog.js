@@ -485,9 +485,18 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if (!barriers)
           return;
 
-        if(barriers.barrier) state.barriers.barrier = '+' + (state.barriers.barrier || barriers.barrier) * 1;
-        if(barriers.high_barrier) state.barriers.high_barrier = '+' + (state.barriers.high_barrier || barriers.high_barrier) * 1;
-        if(barriers.low_barrier) state.barriers.low_barrier = (state.barriers.low_barrier || barriers.low_barrier) * 1;
+        if(barriers.barrier) {
+          var barrier = (state.barriers.barrier || barriers.barrier) * 1;
+          state.barriers.barrier = (barrier >= 0 ? '+' : '') + barrier;
+        }
+        if(barriers.high_barrier){
+          var high_barrier = (state.barriers.high_barrier || barriers.high_barrier) * 1;
+          state.barriers.high_barrier = (high_barrier >= 0 ? '+' : '') + high_barrier;
+        }
+        if(barriers.low_barrier){
+          var low_barrier = (state.barriers.low_barrier || barriers.low_barrier) * 1;
+          state.barriers.low_barrier = (low_barrier >= 0 ? '-' : '') + low_barrier;
+        }
       };
 
       state.basis.update_limit = function () {
