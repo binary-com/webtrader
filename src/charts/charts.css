@@ -45,3 +45,7 @@
   font-size: 14px;
   padding: 0px 10px;
 }
+
+.dataTables_processing {
+  z-index: 1; /* fix for processing message wile refreshing databases */
+}
