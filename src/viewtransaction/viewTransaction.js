@@ -229,6 +229,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             destroy: function() { },
             close: function() {
               view && view.unbind();
+              portfolio.proposal_open_contract.forget();
               liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
               for(var i = 0; i < state.onclose.length; ++i)
                 state.onclose[i]();
