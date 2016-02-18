@@ -44,6 +44,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['and'] = function (vlaue, other){
       return vlaue && other;
     }
+    /* rivets formatter for > operator  */
+    rv.formatters['gt'] = function (vlaue, other){
+      return vlaue > other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
