@@ -9,7 +9,9 @@
         <span rv-text="buy_price | formatPrice"></span>
       </div>
       <div class="sell-price"> <p><strong>Sale Price</strong></p>
-        <span rv-text="sell_price | formatPrice"></span>
+        <span rv-text="sell_price | formatPrice"
+              rv-class-red="buy_price | gt sell_price"
+              rv-class-green="sell_price | gt buy_price"></span>
       </div>
 
       <div> <p>Return</p>

@@ -44,6 +44,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['and'] = function (vlaue, other){
       return vlaue && other;
     }
+    /* rivets formatter for > operator  */
+    rv.formatters['gt'] = function (vlaue, other){
+      return vlaue > other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -493,7 +497,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       static: ['class', 'min', 'decimals'],
       template: function() {
         return '<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">' +
-                  '<input rv-class="data.class" type="text" rv-value="data.value" />' +
+                  '<input rv-class="data.class" type="text" rv-value="data.value" rv-decimal-round="data.decimals | or 5" no-symbol="no-symbol" />' +
 
                     '<button rv-on-click="increment" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">' +
                       '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>' +
