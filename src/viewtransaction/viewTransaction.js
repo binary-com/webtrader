@@ -97,6 +97,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
            id: options.id || options.value,
            label: {text: options.label || 'label', x: options.text_left ? -15 : 5},
            color: options.color || '#e98024',
+           zIndex: 4,
            width: options.width || 2,
         });
       };
@@ -107,6 +108,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           value: options.value,
           label: {text: options.label, align: 'center'},
           color: options.color || 'green',
+          zIndex: 4,
           width: 2,
         });
       };
