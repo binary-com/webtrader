@@ -6,6 +6,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   function($, windows, liveapi, portfolio, chartingRequestMap, rv, moment, _) {
   'use strict';
 
+  var open_dialogs = {};
+
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
@@ -151,6 +153,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
   function init(contract_id, transaction_id){
     return new Promise(function(resolve, reject){
+      if(open_dialogs[transaction_id]) {
+        open_dialogs[transaction_id].moveToTop();
+        resolve();
+        return;
+      }
       liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
            .then(function(data){
               var proposal = data.proposal_open_contract;
@@ -226,6 +233,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               for(var i = 0; i < state.onclose.length; ++i)
                 state.onclose[i]();
               $(this).dialog('destroy').remove();
+              open_dialogs[proposal.transaction_id] = undefined;
             },
             open: function() {
               portfolio.proposal_open_contract.subscribe();
@@ -240,6 +248,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
         transWin.dialog('open');
         var view = rv.bind(root[0],state)
+        open_dialogs[proposal.transaction_id] = transWin;
     });
   }
 
