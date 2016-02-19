@@ -120,6 +120,8 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                     color: iu.color
                                                 });
                                             }
+                                            else if (iu.value.shape)
+                                                    series.chart.get(iu.id).addPoint({ x: iu.value.x, title: iu.value.title, text: iu.value.text, shape: iu.value.shape });
                                             else {
                                                  series.chart.get(iu.id).addPoint([time, iu.value]);
                                             }

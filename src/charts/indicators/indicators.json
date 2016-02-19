@@ -697,6 +697,13 @@
     "id": "cmo",
     "long_display_name": "Chande Momentum Oscillator",
     "short_display_name": "CMO"
+  },
+
+  "fractal": {
+    "id": "fractal",
+    "long_display_name": "Fractal",
+    "short_display_name": "FRACTAL",
+	"onChartIndicator" : true
   }
 
 }
