@@ -7,5 +7,9 @@
   "launch_path": "/index.html",
   "description": "This is a WebTrader project for binary.com",
   "version": "2.0.20",
-  "developer": "Arnab Karmakar"
+  "developer": {
+    "name": "Arnab Karmakar",
+    "email": "arnab@binary.com",
+    "url": "http://webtrader.binary.com/"
+  }
 }
