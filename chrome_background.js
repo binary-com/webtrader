@@ -1,0 +1,1 @@
+chrome.browserAction.onClicked.addListener(function(){var a="https://webtrader.binary.com/";chrome.tabs.create({url:a})});
