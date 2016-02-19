@@ -100,6 +100,17 @@ module.exports = function (grunt) {
                         dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
                     }
                 ]
+            },
+            copyChromeManifest: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        cwd: '.',
+                        src: ["chrome_extension/*"],
+                        dest: 'dist/uncompressed/'
+                    }
+                ]
             }
         },
         rename: {
@@ -110,11 +121,17 @@ module.exports = function (grunt) {
         },
         replace: {
             version: {
-                src: ['dist/uncompressed/index.html'],
+                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml'],
                 overwrite: true,
                 replacements: [{
-                    from: '<verrsion>', //TODO, not working
-                    to: 'v<%=pkg.version%>'
+                    from: '<version>',
+                    to: '<%=pkg.version%>'
+                }, {
+                    from: '<package-name>',
+                    to: "<%=pkg.name.replace(/_/g, ' ')%>"
+                }, {
+                    from: '<description>',
+                    to: "<%=pkg.description%>"
                 }]
             }
         },
@@ -323,11 +340,33 @@ module.exports = function (grunt) {
                     ],
                 dest: 'dist/uncompressed/v<%=pkg.version%>/charts/indicators/highcharts_custom/indicators.js'
             }
+        },
+        firefoxManifest: {
+            options: {
+                packageJson: 'package.json',
+                manifest: 'dist/uncompressed/manifest.webapp'
+            },
+            target: {}
+        },
+        compress: {
+            main: {
+                options: {
+                    archive: 'dist/uncompressed/chrome_extension.zip'
+                },
+                files:
+                    [
+                        {
+                            expand: true,
+                            cwd: 'dist/uncompressed/',
+                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js', 'v<%=pkg.version%>/images/webtrader_16px.png', 'v<%=pkg.version%>/images/webtrader_128px.png']
+                        }
+                    ]
+            }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'rename', 'replace']);
-    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'copy:copy_AfterCompression']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'firefoxManifest', 'rename', 'replace']);
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
 	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
