@@ -49,7 +49,11 @@
     "highcharts",
     "binary.com"
   ],
-  "author": "Arnab Karmakar",
+  "author": {
+    "name": "Arnab Karmakar",
+    "email": "arnab@binary.com",
+    "url": "http://webtrader.binary.com/"
+  },
   "license": "CC-BY-NC-ND-4.0",
   "bugs": {
     "url": "https://github.com/binary-com/webtrader/issues"
