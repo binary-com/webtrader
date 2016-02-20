@@ -5,7 +5,6 @@
 FRACTAL = function (data, options, indicators) {
     IndicatorBase.call(this, data, options, indicators);
     this.priceData = [];
-    this.uniqueID = [uuid(), uuid()];
 
     this.CalculateFRACTALValue = function (data, index) {
         /* FRACTAL :
@@ -108,21 +107,23 @@ FRACTALADDFLAGINFO = function (cdlObject, time, value) {
     if (cdlObject.isBull) {
         ret = {
             x: time,
-            shape: 'url(images/indicators/up_fractal.png)',
+             marker: {
+                symbol: 'url(images/indicators/up_fractal.png)',
+            },
             title: ' ',
-            //y:value,
-            text: 'Fractal: ' + value,
-            isUp:true
+            y:value ,
+            text: 'Fractal: ' + value
         };
     }
     else if (cdlObject.isBear) {
         ret = {
             x: time,
-            shape: 'url(images/indicators/down_fractal.png)',
+             marker: {
+                symbol: 'url(images/indicators/down_fractal.png)',
+            },
             title: ' ',
-            //y:value,
-            text: 'Fractal: ' + value,
-            isUp:false
+            y:value,
+            text: 'Fractal: ' + value
         };
     }
     return ret;
@@ -130,47 +131,16 @@ FRACTALADDFLAGINFO = function (cdlObject, time, value) {
 
 
 FRACTAL.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    var upData = [],downData=[];
-    this.indicatorData.forEach(function (e) {
-        if (e.isUp)
-            upData.push(e);
-        else
-            downData.push(e);
-    });
-    return [
+     return [
         {
             seriesConf: {
-                id: this.uniqueID[0],
+                id: this.uniqueID,
                 name: this.toString(),
-                data: upData,
-                type: 'flags',
+                data: this.indicatorData,
+                type: 'scatter',
                 onChartIndicator: true,
                 onSeries: this.options.onSeriesID, //Series ID on which this flags will be rendered
-                y: -20,
-                turboThreshold: 0
             }
-        },
-        {
-            seriesConf: {
-                id: this.uniqueID[1],
-                name: this.toString(),
-                data: downData,
-                type: 'flags',
-                onChartIndicator: true,
-                onSeries: this.options.onSeriesID, //Series ID on which this flags will be rendered
-                y: 50,
-                turboThreshold: 0
-            }
-        },
+        }
     ];
-};
-
-
-/**
- * This method will return all IDs that are used to identify data series configuration
- * in the buildSeriesAndAxisConfFromData method.
- * @returns {*[]}
- */
-FRACTAL.prototype.getIDs = function() {
-    return this.uniqueID;
 };
