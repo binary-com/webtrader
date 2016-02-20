@@ -1,0 +1,702 @@
+{
+  "atr": {
+    "id": "atr",
+    "long_display_name": "Average True Range",
+    "short_display_name": "ATR"
+  },
+
+  "ema": {
+    "id": "ema",
+    "long_display_name": "Exponential Moving Average",
+    "short_display_name": "EMA",
+    "onChartIndicator" : true
+  },
+
+  "rsi": {
+    "id": "rsi",
+    "long_display_name": "Relative Strength Index",
+    "short_display_name": "RSI"
+  },
+
+  "sma": {
+    "id": "sma",
+    "long_display_name": "Simple Moving Average",
+    "short_display_name": "SMA",
+    "onChartIndicator" : true
+  },
+
+  "roc": {
+    "id": "roc",
+    "long_display_name": "Rate Of Change",
+    "short_display_name": "ROC"
+  },
+
+  "typprice": {
+    "id": "typprice",
+    "long_display_name": "Typical Price",
+    "short_display_name": "TYPPRICE",
+	"onChartIndicator" : true
+  },
+
+  "willr": {
+    "id": "willr",
+    "long_display_name": "Williams' %R",
+    "short_display_name": "WILLR"
+  },
+
+  "rocp": {
+    "id": "rocp",
+    "long_display_name": "Rate Of Change Percentage",
+    "short_display_name": "ROCP"
+  },
+
+  "rocr": {
+    "id": "rocr",
+    "long_display_name": "Rate Of Change Ratio",
+    "short_display_name": "ROCR"
+  },
+
+  "min": {
+    "id": "min",
+    "long_display_name": "Minimum",
+    "short_display_name": "MIN",
+	"onChartIndicator" : true
+  },
+
+  "max": {
+    "id": "max",
+    "long_display_name": "Maximum",
+    "short_display_name": "MAX",
+	"onChartIndicator" : true
+  },
+
+  "sum": {
+    "id": "sum",
+    "long_display_name": "Summation",
+    "short_display_name": "SUM"
+  },
+
+  "wma": {
+    "id": "wma",
+    "long_display_name": "Weighted Moving Average",
+    "short_display_name": "WMA",
+    "onChartIndicator": true
+  },
+
+  "tema": {
+    "id": "tema",
+    "long_display_name": "Triple Exponential Moving Average",
+    "short_display_name": "TEMA",
+    "onChartIndicator": true
+  },
+
+  "trima": {
+    "id": "trima",
+    "long_display_name": "Triangular Moving Average",
+    "short_display_name": "TRIMA",
+    "onChartIndicator": true
+  },
+
+  "natr": {
+    "id": "natr",
+    "long_display_name": "Normalized Average True Range",
+    "short_display_name": "NATR"
+  },
+
+  "bop": {
+    "id": "bop",
+    "long_display_name": "Balance of Power",
+    "short_display_name": "BOP"
+  },
+
+  "cdl2crows": {
+    "id": "cdl2crows",
+    "long_display_name": "Two Crows",
+    "short_display_name": "CDL2CROWS"
+  },
+
+  "cdl3blackcrows": {
+    "id": "cdl3blackcrows",
+    "long_display_name": "Three Black Crows",
+    "short_display_name": "CDL3BLACKCROWS"
+  },
+
+  "cdl3inside": {
+    "id": "cdl3inside",
+    "long_display_name": "Three Inside Up/Down",
+    "short_display_name": "CDL3INSIDE"
+  },
+
+  "cdl3linestrike": {
+    "id": "cdl3linestrike",
+    "long_display_name": "Three-Line Strike",
+    "short_display_name": "CDL3LINESTRIKE"
+  },
+
+  "cdl3outside": {
+    "id": "cdl3outside",
+    "long_display_name": "Three Outside Up/Down",
+    "short_display_name": "CDL3OUTSIDE"
+  },
+
+  "cdl3starssouth": {
+    "id": "cdl3starssouth",
+    "long_display_name": "Three Stars In The South",
+    "short_display_name": "CDL3STARSSOUTH"
+  },
+
+  "cdl3whitesoldiers": {
+    "id": "cdl3whitesoldiers",
+    "long_display_name": "Three Advancing White Soldiers",
+    "short_display_name": "CDL3WHITESOLDIERS"
+  },
+
+  "cdldoji": {
+    "id": "cdldoji",
+    "long_display_name": "Doji",
+    "short_display_name": "CDLDOJI"
+  },
+
+  "cdlabandonedbaby": {
+    "id": "cdlabandonedbaby",
+    "long_display_name": "Abandoned Baby",
+    "short_display_name": "CDLABANDONEDBABY"
+  },
+
+  "cdlclosingmarubozu": {
+    "id": "cdlclosingmarubozu",
+    "long_display_name": "Closing Marubozu",
+    "short_display_name": "CDLCLOSINGMARUBOZU"
+  },
+
+  "cdldojistar": {
+    "id": "cdldojistar",
+    "long_display_name": "Doji Star",
+    "short_display_name": "CDLDOJISTAR"
+  },
+
+  "cdlthrusting": {
+    "id": "cdlthrusting",
+    "long_display_name": "Thrusting Pattern",
+    "short_display_name": "CDLTHRUSTING"
+  },
+  
+ "bbands": {
+    "id": "bbands",
+    "long_display_name": "Bollinger Bands",
+    "short_display_name": "BBANDS",
+   "onChartIndicator": true
+  },
+
+  "cdlshootingstar": {
+    "id": "cdlshootingstar",
+    "long_display_name": "Shooting Star",
+    "short_display_name": "CDLSHOOTINGSTAR"
+  },
+
+  "sar": {
+    "id": "sar",
+    "long_display_name": "Parabolic SAR",
+    "short_display_name": "SAR",
+	"onChartIndicator" : true
+  },
+
+   "macd": {
+    "id": "macd",
+    "long_display_name": "Moving Average Convergence/Divergence",
+    "short_display_name": "MACD"
+  },
+  
+  "cdlengulfing": {
+    "id": "cdlengulfing",
+    "long_display_name": "Engulfing Pattern",
+    "short_display_name": "CDLENGULFING"
+  },
+  
+  "wclprice": {
+    "id": "wclprice",
+    "long_display_name": "Weighted Close Price",
+    "short_display_name": "WCLPRICE",
+	"onChartIndicator" : true
+  },
+   
+  "cci": {
+    "id": "cci",
+    "long_display_name": "Commodity Channel Index",
+    "short_display_name": "CCI"
+  },
+
+  "dema": {
+    "id": "dema",
+    "long_display_name": "Double Exponential Moving Average",
+    "short_display_name": "DEMA",
+    "onChartIndicator": true
+  },
+
+  "kama": {
+    "id": "kama",
+    "long_display_name": "Kaufman's Adaptive Moving Average",
+    "short_display_name": "KAMA",
+	 "onChartIndicator" : true
+  },
+
+  "t3": {
+    "id": "t3",
+    "long_display_name": "Triple Exponential Moving Average (T3)",
+    "short_display_name": "T3",
+	"onChartIndicator" : true
+  },
+
+   "hma": {
+    "id": "hma",
+    "long_display_name": "Hull Moving Average",
+    "short_display_name": "HMA",
+     "onChartIndicator": true
+  },
+
+   "lwma": {
+    "id": "lwma",
+    "long_display_name": "Linearly Weighted Moving Average",
+    "short_display_name": "LWMA",
+	"onChartIndicator": true
+  },
+
+  "smma": {
+    "id": "smma",
+    "long_display_name": "Smoothed Moving Average",
+    "short_display_name": "SMMA",
+	 "onChartIndicator" : true
+  },
+
+    "mama": {
+    "id": "mama",
+    "long_display_name": "Mesa Adaptive Moving Average",
+    "short_display_name": "MAMA",
+	"onChartIndicator": true
+  },
+  
+   "cdlupsidegap2crows": {
+    "id": "cdlupsidegap2crows",
+    "long_display_name": "Upside/Downside Gap Two Crows",
+    "short_display_name": "CDLUPSIDEGAP2CROWS"
+  },
+   
+   "cdlxsidegap3methods":{
+    "id": "cdlxsidegap3methods",
+    "long_display_name": "Upside/Downside Gap Three Methods",
+    "short_display_name": "CDLXSIDEGAP3METHODS"
+   },
+   
+   "cdltasukigap":{
+    "id": "cdltasukigap",
+    "long_display_name": "Tasuki Gap",
+    "short_display_name": "CDLTASUKIGAP"
+   },
+
+   "cdlpiercing":{
+    "id": "cdlpiercing",
+    "long_display_name": "Piercing Pattern",
+    "short_display_name": "CDLPIERCING"
+   },
+
+   "cdlbelthold":{
+    "id": "cdlbelthold",
+    "long_display_name": "Belt-hold ",
+    "short_display_name": "CDLBELTHOLD"
+   },
+
+   "cdldarkcloudcover":{
+    "id": "cdldarkcloudcover",
+    "long_display_name": "Dark Cloud Cover ",
+    "short_display_name": "CDLDARKCLOUDCOVER"
+   },
+
+   "cdlgapsidesidewhite":{
+    "id": "cdlgapsidesidewhite",
+    "long_display_name": "Up/Down-Gap Side-By-Side White Lines",
+    "short_display_name": "CDLGAPSIDESIDEWHITE"
+   },
+
+   "cdltakuri":{
+    "id": "cdltakuri",
+    "long_display_name": "Takuri (Dragonfly Doji with very long lower shadow)",
+    "short_display_name": "CDLTAKURI"
+   },
+
+   "cdlharami":{
+    "id": "cdlharami",
+    "long_display_name": "Harami Pattern",
+    "short_display_name": "CDLHARAMI"
+   },
+
+   "cdlhammer":{
+    "id": "cdlhammer",
+    "long_display_name": "Hammer",
+    "short_display_name": "CDLHAMMER"
+   },
+
+   "cdlhangingman":{
+    "id": "cdlhangingman",
+    "long_display_name": "Hanging Man",
+    "short_display_name": "CDLHANGINGMAN"
+   },
+
+   "cdlinvertedhammer":{
+    "id": "cdlinvertedhammer",
+    "long_display_name": "Inverted Hammer",
+    "short_display_name": "CDLINVERTEDHAMMER"
+   },
+
+   "cdlgravestonedoji":{
+    "id": "cdlgravestonedoji",
+    "long_display_name": "Gravestone Doji",
+    "short_display_name": "CDLGRAVESTONEDOJI"
+   },
+
+   "cdlharamicross":{
+    "id": "cdlharamicross",
+    "long_display_name": "Harami Cross Pattern",
+    "short_display_name": "CDLHARAMICROSS"
+   },
+
+   "cdlstalledpattern":{
+    "id": "cdlstalledpattern",
+    "long_display_name": "Stalled Pattern",
+    "short_display_name": "CDLSTALLEDPATTERN"
+   },
+
+   "cdleveningstar":{
+    "id": "cdleveningstar",
+    "long_display_name": "Evening Star",
+    "short_display_name": "CDLEVENINGSTAR"
+   },
+
+   "cdlhighwave":{
+    "id": "cdlhighwave",
+    "long_display_name": "High-Wave Candle",
+    "short_display_name": "CDLHIGHWAVE"
+   },
+
+   "cdlhikkake":{
+    "id": "cdlhikkake",
+    "long_display_name": "Hikkake Pattern",
+    "short_display_name": "CDLHIKKAKE"
+   },
+
+   "cdlhomingpigeon":{
+    "id": "cdlhomingpigeon",
+    "long_display_name": "Homing Pigeon",
+    "short_display_name": "CDLHOMINGPIGEON"
+   },
+
+   "cdltristar":{
+    "id": "cdltristar",
+    "long_display_name": "Tristar Pattern",
+    "short_display_name": "CDLTRISTAR"
+   },
+
+   "cdllongline":{
+    "id": "cdllongline",
+    "long_display_name": "Long Line Candle",
+    "short_display_name": "CDLLONGLINE"
+   },
+
+    "cdlmarubozu":{
+    "id": "cdlmarubozu",
+    "long_display_name": "Marubozu",
+    "short_display_name": "CDLMARUBOZU"
+   },
+
+    "cdlkicking":{
+    "id": "cdlkicking",
+    "long_display_name": "Kicking",
+    "short_display_name": "CDLKICKING"
+   },
+
+    "cdlmatchinglow":{
+    "id": "cdlmatchinglow",
+    "long_display_name": "Matching Low",
+    "short_display_name": "CDLMATCHINGLOW"
+   },
+
+    "cdlladderbottom":{
+    "id": "cdlladderbottom",
+    "long_display_name": "Ladder Bottom",
+    "short_display_name": "CDLLADDERBOTTOM"
+   },
+
+    "cdlrisefall3methods":{
+    "id": "cdlrisefall3methods",
+    "long_display_name": "Rising/Falling Three Methods",
+    "short_display_name": "CDLRISEFALL3METHODS"
+   },
+
+    "cdlidentical3crows":{
+    "id": "cdlidentical3crows",
+    "long_display_name": "Identical Three Crows",
+    "short_display_name": "CDLIDENTICAL3CROWS"
+   },
+
+    "cdlmorningstar":{
+    "id": "cdlmorningstar",
+    "long_display_name": "Morning Star",
+    "short_display_name": "CDLMORNINGSTAR"
+   },
+
+    "cdlspinningtop":{
+    "id": "cdlspinningtop",
+    "long_display_name": "Spinning Top",
+    "short_display_name": "CDLSPINNINGTOP"
+   },
+
+    "cdldragonflydoji":{
+    "id": "cdldragonflydoji",
+    "long_display_name": "Dragonfly Doji",
+    "short_display_name": "CDLDRAGONFLYDOJI"
+   },
+
+    "cdllongleggeddoji":{
+    "id": "cdllongleggeddoji",
+    "long_display_name": "Long Legged Doji",
+    "short_display_name": "CDLLONGLEGGEDDOJI"
+   },
+
+    "cdleveningdojistar":{
+    "id": "cdleveningdojistar",
+    "long_display_name": "Evening Doji Star",
+    "short_display_name": "CDLEVENINGDOJISTAR"
+   },
+
+    "cdlbreakaway":{
+    "id": "cdlbreakaway",
+    "long_display_name": "Breakaway",
+    "short_display_name": "CDLBREAKAWAY"
+   },
+
+    "cdladvanceblock":{
+    "id": "cdladvanceblock",
+    "long_display_name": "Advance Block",
+    "short_display_name": "CDLADVANCEBLOCK"
+   },
+
+    "cdlcounterattack":{
+    "id": "cdlcounterattack",
+    "long_display_name": "Counterattack",
+    "short_display_name": "CDLCOUNTERATTACK"
+   },
+
+    "cdlmorningdojistar":{
+    "id": "cdlmorningdojistar",
+    "long_display_name": "Morning Doji Star",
+    "short_display_name": "CDLMORNINGDOJISTAR"
+   },
+
+    "cdlcounterattack":{
+    "id": "cdlcounterattack",
+    "long_display_name": "Counterattack",
+    "short_display_name": "CDLCOUNTERATTACK"
+   },
+
+    "cdlinneck":{
+    "id": "cdlinneck",
+    "long_display_name": "In-Neck Pattern",
+    "short_display_name": "CDLINNECK"
+   },
+
+    "cdlonneck":{
+    "id": "cdlonneck",
+    "long_display_name": "On-Neck Pattern",
+    "short_display_name": "CDLONNECK"
+   },
+
+    "cdlrickshawman":{
+    "id": "cdlrickshawman",
+    "long_display_name": "Rickshaw Man",
+    "short_display_name": "CDLRICKSHAWMAN"
+   },
+
+    "cdlunique3river":{
+    "id": "cdlunique3river",
+    "long_display_name": "Unique 3 River",
+    "short_display_name": "CDLUNIQUE3RIVER"
+   },
+
+    "cdlseparatinglines":{
+    "id": "cdlseparatinglines",
+    "long_display_name": "Separating Lines",
+    "short_display_name": "CDLSEPARATINGLINES"
+   },
+
+   "cdlmathold":{
+    "id": "cdlmathold",
+    "long_display_name": "Mat Hold",
+    "short_display_name": "CDLMATHOLD"
+   },
+
+   "cdlsticksandwich":{
+    "id": "cdlsticksandwich",
+    "long_display_name": "Stick Sandwich",
+    "short_display_name": "CDLSTICKSANDWICH"
+   },
+
+   "cdlkickingbylength":{
+    "id": "cdlkickingbylength",
+    "long_display_name": "Kicking - bull/bear determined by the longer marubozu",
+    "short_display_name": "CDLKICKINGBYLENGTH"
+   },
+
+  "stddev": {
+    "id": "stddev",
+    "long_display_name": "Standard Deviation",
+    "short_display_name": "STDDEV"
+  },
+
+   "ppo": {
+    "id": "ppo",
+    "long_display_name": "Percentage Price Oscillator",
+    "short_display_name": "PPO"
+  },
+  
+  "trange": {
+    "id": "trange",
+    "long_display_name": "True Range",
+    "short_display_name": "TRANGE"
+  },
+
+  "stochrsi": {
+    "id": "stochrsi",
+    "long_display_name": "Stochastic Relative Strength Index",
+    "short_display_name": "STOCHRSI"
+  },
+
+  "mom": {
+    "id": "mom",
+    "long_display_name": "Momentum",
+    "short_display_name": "MOM"
+  },
+
+  "alma": {
+    "id": "alma",
+    "long_display_name": "Arnaud Legoux Moving Average",
+    "short_display_name": "ALMA",
+	 "onChartIndicator" : true
+  },
+
+   "aroon": {
+    "id": "aroon",
+    "long_display_name": "Aroon",
+    "short_display_name": "AROON"
+  },
+
+   "aroonosc": {
+    "id": "aroonosc",
+    "long_display_name": "Aroon Oscillator",
+    "short_display_name": "AROONOSC"
+  },
+
+   "ao": {
+    "id": "ao",
+    "long_display_name": "Awesome Oscillator",
+    "short_display_name": "AO"
+  },
+
+   "var": {
+    "id": "var",
+    "long_display_name": "Variance",
+    "short_display_name": "VAR"
+  },
+
+   "cks": {
+    "id": "cks",
+    "long_display_name": "Chande Kroll Stop",
+    "short_display_name": "CKS",
+	"onChartIndicator" : true
+  },
+
+   "cc": {
+    "id": "cc",
+    "long_display_name": "Coppock Curve",
+    "short_display_name": "CC"
+  },
+
+   "chop": {
+    "id": "chop",
+    "long_display_name": "Choppiness Index",
+    "short_display_name": "CHOP"
+  },
+
+   "adx": {
+    "id": "adx",
+    "long_display_name": "Average Directional Movement Index",
+    "short_display_name": "ADX"
+  },
+
+   "dx": {
+    "id": "dx",
+    "long_display_name": "Directional Movement Index",
+    "short_display_name": "DX"
+  },
+
+   "adxr": {
+    "id": "adxr",
+    "long_display_name": "Average Directional Movement Index Rating",
+    "short_display_name": "ADXR"
+  },
+
+   "apo": {
+    "id": "apo",
+    "long_display_name": "Absolute Price Oscillator",
+    "short_display_name": "APO"
+  },
+
+  "stoch": {
+  "id": "stoch",
+  "long_display_name": "Stochastic",
+  "short_display_name": "STOCH  "
+  },
+  
+  "stochf": {
+  "id": "stochf",
+  "long_display_name": "Stochastic Fast",
+  "short_display_name": "STOCHF"
+  },
+  
+  "stochs": {
+  "id": "stochs",
+  "long_display_name": "Stochastic Slow",
+  "short_display_name": "STOCHS"
+  },
+
+  "dc": {
+    "id": "dc",
+    "long_display_name": "Donchian Channel",
+    "short_display_name": "DC",
+    "onChartIndicator": true
+  },
+
+  "ultosc": {
+    "id": "ultosc",
+    "long_display_name": "Ultimate Oscillator",
+    "short_display_name": "ULTOSC"
+  },
+
+  "lsma": {
+    "id": "lsma",
+    "long_display_name": "Least Squares Moving Average",
+    "short_display_name": "LSMA",
+    "onChartIndicator" : true
+  },
+
+  "mass": {
+    "id": "mass",
+    "long_display_name": "Mass Index",
+    "short_display_name": "MASS"
+  },
+
+  "cmo": {
+    "id": "cmo",
+    "long_display_name": "Chande Momentum Oscillator",
+    "short_display_name": "CMO"
+  }
+
+}
