@@ -31,8 +31,10 @@ FRACTAL = function (data, options, indicators) {
             isBull = isBull && candleMiddle_High > candleNext_High && candleMiddle_High > candlePre_High;
             isBear = isBear && candleMiddle_Low < candleNext_Low && candleMiddle_Low < candlePre_Low;
         };
+        var posDiff = (Math.abs(data[index].high - data[index].low) * 0.30);
+        var pos = isBull ? candleMiddle_High + posDiff : candleMiddle_Low - posDiff;
         var value = isBull ? candleMiddle_High : candleMiddle_Low;
-        return FRACTALADDFLAGINFO({ isBull: isBull, isBear: isBear }, data[index].time, value);
+        return FRACTALADDFLAGINFO({ isBull: isBull, isBear: isBear }, data[index].time, value, pos);
     };
 
     for (var i = 0; i < data.length - 1; i++) {
@@ -91,7 +93,7 @@ FRACTAL.prototype.toString = function () {
     return 'FRACTAL (' + this.options.numberOfBars + ')';
 };
 
-FRACTALADDFLAGINFO = function (cdlObject, time, value) {
+FRACTALADDFLAGINFO = function (cdlObject, time, value, pos) {
     var ret;
     if (cdlObject.isBull) {
         ret = {
@@ -100,7 +102,7 @@ FRACTALADDFLAGINFO = function (cdlObject, time, value) {
                 symbol: 'url(images/indicators/up_fractal.png)',
             },
             title: ' ',
-            y:value ,
+            y:pos ,
             text: 'Fractal: ' + value
         };
     }
@@ -111,7 +113,7 @@ FRACTALADDFLAGINFO = function (cdlObject, time, value) {
                 symbol: 'url(images/indicators/down_fractal.png)',
             },
             title: ' ',
-            y:value,
+            y:pos,
             text: 'Fractal: ' + value
         };
     }
