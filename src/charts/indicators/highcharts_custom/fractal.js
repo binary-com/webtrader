@@ -14,12 +14,16 @@ FRACTAL = function (data, options, indicators) {
 
         var middleBar = Math.floor(this.options.numberOfBars / 2);
         var candleMiddle_High = data[index].high,
-           candleMiddle_Low = data[index].low;
+            candleMiddle_Low = data[index].low;
         var isBear = true, isBull = true;
         for (var i = 1; i <= middleBar ; i++) {
             var nextIndex = index + i;
             var preIndex = index - i;
-            if (nextIndex >= data.length || preIndex < 0) { isBear = false; isBear = false; break; };
+            if (nextIndex >= data.length || preIndex < 0) {
+                isBear = false;
+                isBear = false;
+                break;
+            };
             var candleNext_High = data[nextIndex].high,
                 candleNext_Low = data[nextIndex].low;
             var candlePre_High = data[preIndex].high,
@@ -38,7 +42,7 @@ FRACTAL = function (data, options, indicators) {
     var middleBar = Math.floor(this.options.numberOfBars / 2);
 
     for (var index = middleBar; index < data.length - (middleBar + 1) ; index++) {
-        var ret = this.CalculateFRACTALValue(this.priceData, index, this.options.numberOfBars);
+        var ret = this.CalculateFRACTALValue(data, index);
         if (ret) {
             this.indicatorData.push(ret);
         }
@@ -52,51 +56,36 @@ FRACTAL.prototype.addPoint = function (data) {
     console.log('Adding FRACTAL data point : ', data);
     this.priceData.push(data);
     var middleBar = Math.floor(this.options.numberOfBars / 2);
-    index = this.priceData.length - (middleBar + 2);
-    var fractal = this.CalculateFRACTALValue(this.priceData, index) || {};
-    if (fractal.text) {
-        this.indicatorData.push({ time: fractal.x, value: fractal });
+    //The fractal needs two next data for each point to find the pattern,so when a new data is added, we should check if the second previous data is going to be fractal or not based on new data.
+    index = this.priceData.length - (middleBar + 1);
+    var ret = this.CalculateFRACTALValue(this.priceData, index) || {};
+    if (ret.text) {
+        this.indicatorData.push(ret);
     };
-    if (fractal.isUp) {
-        return [{
-            id: this.uniqueID[0],
-            value: {x:fractal.x, title:fractal.title, text:fractal.text,shape: 'url(images/indicators/up_fractal.png)'}
-        }];
-    }
-    else {
-        return [{
-            id: this.uniqueID[1],
-            value: {x:fractal.x, title:fractal.title, text:fractal.text,shape: 'url(images/indicators/down_fractal.png)'}
-        }];
-    };
+    return [{
+        id: this.uniqueID,
+        value: ret
+    }];
 };
 
-//FRACTAL.prototype.update = function (data) {
-//    console.log('Updating FRACTAL data point : ', data);
-//    var index = this.priceData.length - 1;
-//    this.priceData[index].open = data.open;
-//    this.priceData[index].high = data.high;
-//    this.priceData[index].low = data.low;
-//    this.priceData[index].close = data.close;
-//    var middleBar = Math.floor(this.options.numberOfBars / 2);
-//    index = this.priceData.length - (middleBar + 1);
-//    var fractal = this.CalculateFRACTALValue(this.priceData, index) || {};
-//    if (fractal) {
-//        this.indicatorData[index].value = fractal;
-//    };
-//    if (fractal.isUp) {
-//        return [{
-//            id: this.uniqueID[0],
-//            value: {x:fractal.x, title:fractal.title, text:fractal.text,shape: 'url(images/indicators/up_fractal.png)'}
-//        }];
-//    }
-//    else {
-//        return [{
-//            id: this.uniqueID[1],
-//            value: {x:fractal.x, title:fractal.title, text:fractal.text,shape: 'url(images/indicators/down_fractal.png)'}
-//        }];
-//    };
-//};
+FRACTAL.prototype.update = function (data) {
+    console.log('Updating FRACTAL data point : ', data);
+    var index = this.priceData.length - 1;
+    this.priceData[index].open = data.open;
+    this.priceData[index].high = data.high;
+    this.priceData[index].low = data.low;
+    this.priceData[index].close = data.close;
+    var middleBar = Math.floor(this.options.numberOfBars / 2);
+    index = this.priceData.length - (middleBar + 1);
+    var ret = this.CalculateFRACTALValue(this.priceData, index) || {};
+    if (ret.text) {
+        this.indicatorData[this.indicatorData.length - 1] = ret;
+    };
+    return [{
+        id: this.uniqueID,
+        value: ret
+    }];
+};
 
 FRACTAL.prototype.toString = function () {
     return 'FRACTAL (' + this.options.numberOfBars + ')';

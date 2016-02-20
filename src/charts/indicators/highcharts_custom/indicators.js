@@ -120,8 +120,8 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                     color: iu.color
                                                 });
                                             }
-                                            else if (iu.value.shape)
-                                                    series.chart.get(iu.id).addPoint({ x: iu.value.x, title: iu.value.title, text: iu.value.text, shape: iu.value.shape });
+                                            else if (iu.value.marker)
+                                                series.chart.get(iu.id).addPoint({ x: iu.value.x, title: iu.value.title, text: iu.value.text, marker: iu.value.marker });
                                             else {
                                                  series.chart.get(iu.id).addPoint([time, iu.value]);
                                             }
@@ -170,7 +170,9 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                             if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
                                                 indicatorSeries.addPoint(renderingData);
                                             }
-                                        } else {
+                                        } else if (iu.value.marker)
+                                                series.chart.get(iu.id).addPoint({ x: iu.value.x, title: iu.value.title, text: iu.value.text, marker: iu.value.marker });
+                                         else {
                                             seriesData[seriesData.length - 1]
                                                 .update({
                                                     y: iu.value
