@@ -90,7 +90,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 }
             });
             $html.find('#rocp_level_add').click(function () {
-                require(["charts/indicators/rocp/rocp_level"], function (rocp_level) {
+                require(["charts/indicators/level/level"], function (rocp_level) {
                     rocp_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,

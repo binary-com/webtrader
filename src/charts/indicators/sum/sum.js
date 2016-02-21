@@ -90,7 +90,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 }
             });
             $html.find('#sum_level_add').click(function () {
-                require(["charts/indicators/sum/sum_level"], function (sum_level) {
+                require(["charts/indicators/level/level"], function (sum_level) {
                     sum_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
