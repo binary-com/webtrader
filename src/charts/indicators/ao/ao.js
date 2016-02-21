@@ -73,14 +73,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#ao_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 158,
                 background: "white",
                 onSelected: function (data) {
-                    $('#ao_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#ao_dashStyle .dd-selected-image').css('max-width', '125px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#ao_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#ao_dashStyle .dd-option-image').css('max-width', '125px');
 
 
             var table = $html.find('#ao_levels').DataTable({
@@ -131,7 +131,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 350,
+                width: 450,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -199,7 +199,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 ]
             });
             $html.find('select').selectmenu({
-                width : 120
+                width : 160
             });
 
             if (typeof _callback == "function")
