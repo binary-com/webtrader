@@ -49,3 +49,8 @@
 .dataTables_processing {
   z-index: 1; /* fix for processing message wile refreshing databases */
 }
+
+.table-view .arrow-images {
+    margin-bottom: -2px;
+    margin-left: -5px;
+}

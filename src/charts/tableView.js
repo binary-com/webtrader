@@ -12,14 +12,16 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     table.animate({left: '0'}, 250);
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
+    dialog.parent().css('width', 520);
     dialog.view_table_visible = true; /* let stream_handler new ohlc or ticks update the table */
   }
   var hide_table_view = function(dialog){
     var table = dialog.find('.table-view');
     var chart = dialog.find('.chart-view');
     table.animate({left: '100%'}, 250);
-    chart.animate({left: '0'}, 250);
+    chart.animate({ left: '0' }, 250);
     dialog.view_table_visible = false;
+    dialog.parent().css('width', 350);
   }
 
   var refresh_table = function(dialog,key) {
@@ -58,17 +60,17 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
 
   var calculatePercentageDiff = function (firstNumber, secondNumber) {
       /*Calculation = ( | V1 - V2 | / ((V1 + V2)/2) ) * 100 */
-      diff = toFixed(Math.abs(firstNumber - secondNumber), 4);
-      PercentageDiff = toFixed((Math.abs(firstNumber - secondNumber) / ((firstNumber + secondNumber) / 2)) * 100, 2);
+      var diff = toFixed(Math.abs(firstNumber - secondNumber), 4);
+      var Percentage_diff = toFixed((Math.abs(firstNumber - secondNumber) / ((firstNumber + secondNumber) / 2)) * 100, 2);
       if (firstNumber <= secondNumber)
           return {
-              value: diff + '(' + PercentageDiff + '%)',
-              image: diff === 0 ? '' : '<img src="images/green_up_arrow.svg" style="margin-bottom: -2px; margin-left:-5px;"/>'
+              value: diff + '(' + Percentage_diff + '%)',
+              image: diff === 0 ? '' : '<img src="images/green_up_arrow.svg" class="arrow-images"/>'
           };
       else
           return {
-              value: '<span style="color:brown">' + diff + '(' + PercentageDiff + '%) </span>',
-              image: diff === 0 ? '' : '<img src="images/red_down_arrow.svg"  style="margin-bottom: -2px; margin-left:-5px;"/>'
+              value: '<span style="color:brown">' + diff + '(' + Percentage_diff + '%) </span>',
+              image: diff === 0 ? '' : '<img src="images/red_down_arrow.svg" class="arrow-images"/>'
           };
   };
 
