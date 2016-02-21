@@ -31,22 +31,45 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                     .find({instrumentCdAndTp: key})
                     .simplesort('time', true)
                     .data();
-    var rows = bars.map(function(bar) {
+    var index = 0;
+    var rows = bars.map(function (bar) {
+      var preBar = index == 0 ? bars[index] : bars[index - 1];
+      index++;
       if(is_tick) {
-        return [ bar.time, bar.open ];
+        var diff = calculatePercentageDiff(preBar.open, bar.open);
+        return [bar.time, bar.open, diff.value, diff.image];
       }
+      var diff = calculatePercentageDiff(preBar.close, bar.close);
       return [
         bar.time,
         bar.open,
         bar.high,
         bar.low,
-        bar.close
+        bar.close,
+        diff.value,
+        diff.image
       ];
     });
     var api = table.find('table').DataTable();
     api.rows().remove();
     api.rows.add(rows);
     api.draw();
+  };
+
+  var calculatePercentageDiff = function (firstNumber, secondNumber) {
+      /*Calculation = ( | V1 - V2 | / ((V1 + V2)/2) ) * 100 */
+      diff = toFixed(Math.abs(firstNumber - secondNumber), 4);
+      PercentageDiff = toFixed((Math.abs(firstNumber - secondNumber) / ((firstNumber + secondNumber) / 2)) * 100, 2);
+      if (firstNumber <= secondNumber)
+          return {
+              value: diff + '(' + PercentageDiff + '%)',
+              image: diff === 0 ? '' : '<img src="images/green_up_arrow.svg" style="margin-bottom: -2px; margin-left:-5px;"/>'
+          };
+      else
+          return {
+              value: '<span style="color:brown">' + diff + '(' + PercentageDiff + '%) </span>',
+              image: diff === 0 ? '' : '<img src="images/red_down_arrow.svg"  style="margin-bottom: -2px; margin-left:-5px;"/>'
+          };
   };
 
   function init(dialog){
@@ -67,6 +90,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
           { title: 'High', orderable: false, },
           { title: 'Low', orderable: false, },
           { title: 'Close', orderable: false, },
+          { title: 'Change', orderable: false, },
+          { title: '', orderable: false, }
     ];
     if(is_tick) { /* for tick charts only show Date,Tick */
       columns = [
@@ -74,6 +99,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
               render: function(epoch) { return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss'); }
             },
             { title: 'Tick', orderable: false, },
+            { title: 'Change', orderable: false, },
+            { title: '', orderable: false, }
       ];
     }
 
@@ -91,7 +118,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
       if(data.key !== key) return;
       if(!dialog.view_table_visible) return;
       var tick = data.tick;
-      var row = [ tick.time, tick.open ];
+      var diff = calculatePercentageDiff(data.preTick.open, tick.open);
+      var row = [tick.time, tick.open, diff.value, diff.image];
       table.api().row.add(row);
       table.api().draw();
     });
@@ -100,12 +128,15 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
       if(data.key !== key) return;
       if(!dialog.view_table_visible) return;
       var ohlc = data.ohlc;
+      var diff = calculatePercentageDiff(data.preOhlc.close, ohlc.close);
       var row = [
         ohlc.time,
         ohlc.open,
         ohlc.high,
         ohlc.low,
-        ohlc.close
+        ohlc.close,
+        diff.value,
+        diff.image
       ];
       if(data.is_new) { table.api().row.add(row); }
       else { table.api().row(0).data(row); }
