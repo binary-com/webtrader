@@ -5,6 +5,7 @@
 define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/stream_handler', 'datatables'],
   function($, moment, loki, chartingRequestMap, stream_handler) {
   var barsTable = chartingRequestMap.barsTable;
+  var dialogOldWidth;
 
   var show_table_view = function(dialog, key){
     var table = dialog.find('.table-view');
@@ -12,7 +13,14 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     table.animate({left: '0'}, 250);
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
-    dialog.parent().css('width', 520);
+    dialogOldWidth = dialog.parent().width();
+    if (dialogOldWidth < 520) {
+        dialog.parent().width(520);
+        dialog.width('100%');
+    };
+    //Adjust table column size
+    var tbl = table.find('table').DataTable();
+    tbl.columns.adjust().draw();
     dialog.view_table_visible = true; /* let stream_handler new ohlc or ticks update the table */
   }
   var hide_table_view = function(dialog){
@@ -21,7 +29,18 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     table.animate({left: '100%'}, 250);
     chart.animate({ left: '0' }, 250);
     dialog.view_table_visible = false;
-    dialog.parent().css('width', 350);
+    //Return dialog size to old size
+    if (dialog.parent().width() !== dialogOldWidth) {
+        dialog.parent().width(dialogOldWidth);
+        dialog.width('100%');
+        var $chartSubContainer = dialog.find(".chartSubContainer");
+        $chartSubContainer.width(dialog.width() - 10);
+        $chartSubContainer.height(dialog.height() - 15);
+        var containerIDWithHash = "#" + $chartSubContainer.attr("id");
+        require(["charts/charts"], function (charts) {
+            charts.triggerReflow(containerIDWithHash);
+        });
+    };
   }
 
   var refresh_table = function(dialog,key) {
