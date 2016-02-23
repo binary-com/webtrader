@@ -19,7 +19,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             this.strokeWidth = strokeWidth;
             this.dashStyle = dashStyle;
         };
-        var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
+        var defaultLevels = [];
 
         require(['text!charts/indicators/cc/cc.html'], function ( $html ) {
 
@@ -93,7 +93,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 }
             });
             $html.find('#cc_level_add').click(function () {
-                require(["charts/indicators/cc/cc_level"], function(cc_level) {
+                require(["charts/indicators/level/level"], function(cc_level) {
                     cc_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
