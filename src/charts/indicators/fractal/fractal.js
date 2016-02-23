@@ -2,7 +2,7 @@
  * Created by Maahboob.M on 2/18/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($, _) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -97,7 +97,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 ]
             });
 
-            if (typeof _callback == "function") {
+            if (_.isFunction(_callback)) {
                 _callback(containerIDWithHash);
             }
 

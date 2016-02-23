@@ -120,9 +120,14 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                     color: iu.color
                                                 });
                                             }
-                                            else if (iu.value.marker)
-                                                series.chart.get(iu.id).addPoint({ x: iu.value.x, title: iu.value.title, text: iu.value.text, marker: iu.value.marker });
-                                            else {
+                                            else if (iu.value.marker) {
+                                                series.chart.get(iu.id).addPoint({
+                                                    x: iu.value.x,
+                                                    title: iu.value.title,
+                                                    text: iu.value.text,
+                                                    marker: iu.value.marker
+                                                });
+                                            } else {
                                                  series.chart.get(iu.id).addPoint([time, iu.value]);
                                             }
                                         }
@@ -158,21 +163,29 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                         var indicatorSeries = series.chart.get(iu.id);
                                         var seriesData = indicatorSeries.data;
                                         if (_.isArray(iu.value)) {
-                                            seriesData[seriesData.length - 1]
-                                                .update(_.flattenDeep([time, iu.value]));
-                                        } else if (iu.value instanceof CDLUpdateObject) {
-                                            var renderingData = iu.value.toJSObject();
-                                            var x = renderingData.x;
-                                            var matchingSeriesData = _.find(seriesData, function(ee) {
-                                                return _.isNumber(x) && x > 0 && x === ee.x;
-                                            });
-                                            if (matchingSeriesData) matchingSeriesData.remove();
-                                            if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
-                                                indicatorSeries.addPoint(renderingData);
+                                            seriesData[seriesData.length - 1].update(_.flattenDeep([time, iu.value]));
+                                        } else if (iu.value instanceof CDLUpdateObject || iu.value.marker) {
+                                            if (iu.value && _.isFunction(iu.value.toJSObject)) {
+                                                var renderingData = iu.value.toJSObject();
+                                                var x = renderingData.x;
+                                                var matchingSeriesData = _.find(seriesData, function (ee) {
+                                                    return _.isNumber(x) && x > 0 && x === ee.x;
+                                                });
+                                                if (matchingSeriesData) matchingSeriesData.remove();
+                                                if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
+                                                    if (iu.value instanceof CDLUpdateObject) {
+                                                        indicatorSeries.addPoint(renderingData);
+                                                    } else if (iu.value.marker) {
+                                                        series.chart.get(iu.id).addPoint({
+                                                            x: iu.value.x,
+                                                            title: iu.value.title,
+                                                            text: iu.value.text,
+                                                            marker: iu.value.marker
+                                                        });
+                                                    }
+                                                }
                                             }
-                                        } else if (iu.value.marker)
-                                                series.chart.get(iu.id).addPoint({ x: iu.value.x, title: iu.value.title, text: iu.value.text, marker: iu.value.marker });
-                                         else {
+                                        } else {
                                             seriesData[seriesData.length - 1]
                                                 .update({
                                                     y: iu.value

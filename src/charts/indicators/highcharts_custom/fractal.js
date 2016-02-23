@@ -6,49 +6,80 @@ FRACTAL = function (data, options, indicators) {
     IndicatorBase.call(this, data, options, indicators);
     this.priceData = [];
 
-    this.CalculateFRACTALValue = function (data, index) {
+    var fractalAddFlagInfo = function (cdlObject, time, value) {
+        var ret;
+        if (cdlObject.isBull) {
+            ret = {
+                x: time,
+                marker: {
+                    symbol: 'url(images/indicators/up_fractal.png)',
+                },
+                title: ' ',
+                y:value ,
+                text: 'Fractal: ' + value
+            };
+        }
+        else if (cdlObject.isBear) {
+            ret = {
+                x: time,
+                marker: {
+                    symbol: 'url(images/indicators/down_fractal.png)',
+                },
+                title: ' ',
+                y:value,
+                text: 'Fractal: ' + value
+            };
+        }
+        return ret;
+    };
+
+    this.middleBar_shift = Math.floor(this.options.numberOfBars / 2) | 0;
+
+    this.CalculateFRACTALValue = function (middleBarIndex) {
         /* FRACTAL :
          Two candles marking lower highs / higher lows to the left
          The fractal over the higher high / under the lower low
          Two candles marking lower highs / higher lows to the right*/
+        if ((middleBarIndex - this.middleBar_shift) < 0
+            || (middleBarIndex + this.middleBar_shift) > this.priceData.length) {
+            return undefined;
+        }
 
-        var middleBar = Math.floor(this.options.numberOfBars / 2);
-        var candleMiddle_High = data[index].high,
-            candleMiddle_Low = data[index].low;
-        var isBear = true, isBull = true;
-        for (var i = 1; i <= middleBar ; i++) {
-            var nextIndex = index + i;
-            var preIndex = index - i;
-            if (nextIndex >= data.length || preIndex < 0) {
-                isBear = false;
-                isBear = false;
-                break;
-            };
-            var candleNext_High = data[nextIndex].high,
-                candleNext_Low = data[nextIndex].low;
-            var candlePre_High = data[preIndex].high,
-                candlePre_Low = data[preIndex].low;
-            isBull = isBull && candleMiddle_High > candleNext_High && candleMiddle_High > candlePre_High;
-            isBear = isBear && candleMiddle_Low < candleNext_Low && candleMiddle_Low < candlePre_Low;
-        };
-        var posDiff = (Math.abs(data[index].high - data[index].low) * 0.30);
-        var pos = isBull ? candleMiddle_High + posDiff : candleMiddle_Low - posDiff;
-        var value = isBull ? candleMiddle_High : candleMiddle_Low;
-        return FRACTALADDFLAGINFO({ isBull: isBull, isBear: isBear }, data[index].time, value, pos);
+        var candleMiddle_High = this.priceData[middleBarIndex].high,
+            candleMiddle_Low = data[middleBarIndex].low;
+
+        var that = this;
+        var prices = _.range(middleBarIndex - this.middleBar_shift, middleBarIndex + this.middleBar_shift)
+            .map(function(index) {
+                return that.priceData[index];
+            });
+        var lowPrices = prices.map(function(val) {
+            return val.low;
+        });
+        var highPrices = prices.map(function(val) {
+            return val.high;
+        });
+        var lowestPrice = _.min(lowPrices);
+        var highestPrice = _.max(highPrices);
+        var isBull = lowestPrice === candleMiddle_Low;
+        var isBear = highestPrice === candleMiddle_High;
+        var pos = lowestPrice;
+        if (isBear) pos = highestPrice;
+
+        return fractalAddFlagInfo({
+                isBull: isBull,
+                isBear: isBear
+            }, data[middleBarIndex].time, pos);
     };
 
-    for (var i = 0; i < data.length - 1; i++) {
-        this.priceData.push(data[i]);
-    };
-
-    var middleBar = Math.floor(this.options.numberOfBars / 2);
-
-    for (var index = middleBar; index < data.length - (middleBar + 1) ; index++) {
-        var ret = this.CalculateFRACTALValue(data, index);
+    for (var index = 0; index < data.length - 1; index++) {
+        this.priceData.push(data[index]);
+        var ret = this.CalculateFRACTALValue(index - this.middleBar_shift);
         if (ret) {
             this.indicatorData.push(ret);
         }
     };
+
 };
 
 FRACTAL.prototype = Object.create(IndicatorBase.prototype);
@@ -57,10 +88,9 @@ FRACTAL.prototype.constructor = FRACTAL;
 FRACTAL.prototype.addPoint = function (data) {
     console.log('Adding FRACTAL data point : ', data);
     this.priceData.push(data);
-    var middleBar = Math.floor(this.options.numberOfBars / 2);
     //The fractal needs two next data for each point to find the pattern,so when a new data is added, we should check if the second previous data is going to be fractal or not based on new data.
-    index = this.priceData.length - (middleBar + 1);
-    var ret = this.CalculateFRACTALValue(this.priceData, index) || {};
+    var index = this.priceData.length - this.middleBar_shift;
+    var ret = this.CalculateFRACTALValue(index) || {};
     if (ret.text) {
         this.indicatorData.push(ret);
     };
@@ -77,9 +107,8 @@ FRACTAL.prototype.update = function (data) {
     this.priceData[index].high = data.high;
     this.priceData[index].low = data.low;
     this.priceData[index].close = data.close;
-    var middleBar = Math.floor(this.options.numberOfBars / 2);
-    index = this.priceData.length - (middleBar + 1);
-    var ret = this.CalculateFRACTALValue(this.priceData, index) || {};
+    index = this.priceData.length - this.middleBar_shift;
+    var ret = this.CalculateFRACTALValue(index) || {};
     if (ret.text) {
         this.indicatorData[this.indicatorData.length - 1] = ret;
     };
@@ -93,34 +122,6 @@ FRACTAL.prototype.toString = function () {
     return 'FRACTAL (' + this.options.numberOfBars + ')';
 };
 
-FRACTALADDFLAGINFO = function (cdlObject, time, value, pos) {
-    var ret;
-    if (cdlObject.isBull) {
-        ret = {
-            x: time,
-             marker: {
-                symbol: 'url(images/indicators/up_fractal.png)',
-            },
-            title: ' ',
-            y:pos ,
-            text: 'Fractal: ' + value
-        };
-    }
-    else if (cdlObject.isBear) {
-        ret = {
-            x: time,
-             marker: {
-                symbol: 'url(images/indicators/down_fractal.png)',
-            },
-            title: ' ',
-            y:pos,
-            text: 'Fractal: ' + value
-        };
-    }
-    return ret;
-};
-
-
 FRACTAL.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
      return [
         {
@@ -130,7 +131,7 @@ FRACTAL.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
                 data: this.indicatorData,
                 type: 'scatter',
                 onChartIndicator: true,
-                onSeries: this.options.onSeriesID, //Series ID on which this flags will be rendered
+                onSeries: this.options.onSeriesID //Series ID on which this flags will be rendered
             }
         }
     ];
