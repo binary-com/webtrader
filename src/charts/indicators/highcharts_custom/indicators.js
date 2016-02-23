@@ -270,7 +270,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
             return bodySize >= (.7 * candleSize);
         },
         /*Return indicators.json data*/ 
-        getJsonData :function()
+        getIndicatorsJSONData :function()
         {
             return indicatorsMetaData;
         }

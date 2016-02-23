@@ -56,7 +56,7 @@ CDL.prototype.update = function(data) {
 };
 
 CDL.prototype.toString = function() {
-    return this.indicators.getJsonData()[this.options.cdlIndicatorCode].long_display_name;
+    return this.indicators.getIndicatorsJSONData()[this.options.cdlIndicatorCode].long_display_name;
 };
 
 CDL.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
