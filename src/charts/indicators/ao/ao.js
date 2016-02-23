@@ -114,7 +114,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 }
             });
             $html.find('#ao_level_add').click(function () {
-                require(["charts/indicators/level/level"], function(ao_level) {
+                require(["indicator_levels"], function(ao_level) {
                     ao_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,

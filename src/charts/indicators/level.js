@@ -19,9 +19,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             this.dashStyle = dashStyle;
         };
 
-        require(['css!charts/indicators/level/level.css']);
+        require(['css!charts/indicators/level.css']);
 
-        require(['text!charts/indicators/level/level.html'], function ( $html ) {
+        require(['text!charts/indicators/level.html'], function ( $html ) {
 
             var defaultStrokeColor = '#cd0a0a';
 

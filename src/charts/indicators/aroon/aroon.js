@@ -114,7 +114,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 }
             });
             $html.find('#aroon_level_add').click(function () {
-                require(["charts/indicators/level/level"], function(aroon_level) {
+                require(["indicator_levels"], function(aroon_level) {
                     aroon_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
