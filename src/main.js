@@ -29,7 +29,8 @@ requirejs.config({
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
-        'ddslick': 'lib/ddslick/jquery.ddslick.min'
+        'ddslick': 'lib/ddslick/jquery.ddslick.min',
+        "indicator_levels" : 'charts/indicators/level' 
     },
     map: {
         '*': {
