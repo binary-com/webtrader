@@ -90,7 +90,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 }
             });
             $html.find('#mom_level_add').click(function () {
-                require(["charts/indicators/mom/mom_level"], function (mom_level) {
+                require(["indicator_levels"], function (mom_level) {
                     mom_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,

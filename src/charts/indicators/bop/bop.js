@@ -91,7 +91,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 }
             });
             $html.find('#bop_level_add').click(function () {
-                require(["charts/indicators/bop/bop_level"], function(bop_level) {
+                require(["indicator_levels"], function(bop_level) {
                     bop_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,

@@ -7,7 +7,7 @@
         </tr>
         <tr>
             <td><strong>Short Term Period</strong></td>
-            <td><input value="5" min="5" max="35" id="ao_short_term_period" class="ao_input_width_for_period" /></td>
+            <td><input value="5" min="5" max="36" id="ao_short_term_period" class="ao_input_width_for_period" /></td>
         </tr>
         <tr>
             <td><strong>Short MA Type</strong></td>
@@ -23,7 +23,7 @@
         </tr>
         <tr>
             <td><strong>Long Term Period</strong></td>
-            <td><input value="35" min="5" max="35" id="ao_long_term_period" class="ao_input_width_for_period" /></td>
+            <td><input value="35" min="5" max="36" id="ao_long_term_period" class="ao_input_width_for_period" /></td>
         </tr>
         <tr>
             <td><strong>Long MA Type</strong></td>
@@ -44,6 +44,25 @@
         <tr>
             <td class="ao_td_width"><strong>Histogram Color For Lower Values</strong></td>
             <td><input value="" id="ao_low_hstgrm_color" type="button" class="ao_input_width" style="background: #cd0a0a;" /></td>
+        </tr>
+        <tr>
+            <td><input value="Delete level(s)" id="ao_level_delete" type="button" class="ao_input_width" /></td>
+            <td><input value="Add level" id="ao_level_add" type="button" class="ao_input_width" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table id="ao_levels" class="display">
+                    <thead>
+                        <tr>
+                            <td>Level</td>
+                            <td>Stroke</td>
+                            <td>Stroke width</td>
+                            <td>Dash style</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </td>
         </tr>
     </table>
 </div>
