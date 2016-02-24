@@ -59,7 +59,7 @@ DX.prototype.update = function (data) {
 };
 
 DX.prototype.toString = function () {
-    return '(' + this.options.period + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
+    return 'DX (' + this.options.period + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
 
 

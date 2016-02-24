@@ -86,5 +86,5 @@ MASS.prototype.update = function (data) {
 };
 
 MASS.prototype.toString = function () {
-    return 'MASS (' + this.options.singlePeriod + ', ' + this.options.doublePeriod + ', ' + this.options.longPeriod + ')';
+    return 'MASS (' + this.options.singlePeriod + ', ' + this.options.doublePeriod + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
