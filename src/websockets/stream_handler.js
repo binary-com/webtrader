@@ -109,11 +109,11 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 barsTable.update(bar);
             }
             
-            var preOhlc = bar;
-            if (isNew && barsTable.data.length > 1)
-                // get the previous bar
-                preOhlc = barsTable.data[barsTable.data.length - 2];
             /* notify subscribers */
+            var bars = barsTable.chain().find({ '$and': [{ instrumentCdAndTp: key }] }).data();
+            var preOhlc = bar;
+            if (bars.length > 1)
+                preOhlc = bars[1];
             fire_event('ohlc', { ohlc: bar, is_new: isNew, key: key, preOhlc: preOhlc });
 
             //notify all registered charts
