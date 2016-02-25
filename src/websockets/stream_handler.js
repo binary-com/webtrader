@@ -38,7 +38,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 }
                 barsTable.insert(tick);
                 /* notify subscribers */
-                fire_event('tick', {tick: tick, key: key});
+                var preTick = barsTable.data[barsTable.data.length - 2];
+                fire_event('tick', { tick: tick, key: key, preTick: preTick });
 
                 if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0)) {
                     return;
@@ -107,8 +108,13 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 bar.close = close;
                 barsTable.update(bar);
             }
+            
+            var preOhlc = bar;
+            if (isNew && barsTable.data.length > 1)
+                // get the previous bar
+                preOhlc = barsTable.data[barsTable.data.length - 2];
             /* notify subscribers */
-            fire_event('ohlc', {ohlc: bar, is_new: isNew, key: key });
+            fire_event('ohlc', { ohlc: bar, is_new: isNew, key: key, preOhlc: preOhlc });
 
             //notify all registered charts
             chartingRequest.chartIDs.forEach(function (chartID) {
