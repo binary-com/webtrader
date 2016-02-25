@@ -38,7 +38,11 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 }
                 barsTable.insert(tick);
                 /* notify subscribers */
-                var preTick = barsTable.data[barsTable.data.length - 2];
+                var preTick = tick;
+                var bars = barsTable.chain().find({ instrumentCdAndTp: key }).data();
+                if (bars.length > 1)
+                    preTick = bars[1];
+                console.info(tick.close,preTick.close)
                 fire_event('tick', { tick: tick, key: key, preTick: preTick });
 
                 if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0)) {
@@ -110,7 +114,7 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
             }
             
             /* notify subscribers */
-            var bars = barsTable.chain().find({ '$and': [{ instrumentCdAndTp: key }] }).data();
+            var bars = barsTable.chain().find({ instrumentCdAndTp: key }).data();
             var preOhlc = bar;
             if (bars.length > 1)
                 preOhlc = bars[1];
