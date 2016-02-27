@@ -12,7 +12,7 @@ FRACTAL = function (data, options, indicators) {
             ret = {
                 x: time,
                 marker: {
-                    symbol: 'url(images/indicators/up_fractal.png)',
+                    symbol: 'url(images/indicators/down_fractal.svg)',
                 },
                 title: ' ',
                 y:value ,
@@ -23,7 +23,7 @@ FRACTAL = function (data, options, indicators) {
             ret = {
                 x: time,
                 marker: {
-                    symbol: 'url(images/indicators/down_fractal.png)',
+                    symbol: 'url(images/indicators/up_fractal.svg)',
                 },
                 title: ' ',
                 y:value,
