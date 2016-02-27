@@ -5,6 +5,7 @@
 define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/stream_handler', 'datatables'],
   function($, moment, loki, chartingRequestMap, stream_handler) {
   var barsTable = chartingRequestMap.barsTable;
+  var dialogOldWidth;
 
   var show_table_view = function(dialog, key){
     var table = dialog.find('.table-view');
@@ -12,14 +13,34 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     table.animate({left: '0'}, 250);
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
+    dialogOldWidth = dialog.parent().width();
+    if (dialogOldWidth < 520) {
+        dialog.parent().width(520);
+        dialog.width('100%');
+    };
+    //Adjust table column size
+    var tbl = table.find('table').DataTable();
+    tbl.columns.adjust().draw();
     dialog.view_table_visible = true; /* let stream_handler new ohlc or ticks update the table */
   }
   var hide_table_view = function(dialog){
     var table = dialog.find('.table-view');
     var chart = dialog.find('.chart-view');
     table.animate({left: '100%'}, 250);
-    chart.animate({left: '0'}, 250);
+    chart.animate({ left: '0' }, 250);
     dialog.view_table_visible = false;
+    //Return dialog size to old size
+    if (dialog.parent().width() !== dialogOldWidth) {
+        dialog.parent().width(dialogOldWidth);
+        dialog.width('100%');
+        var $chartSubContainer = dialog.find(".chartSubContainer");
+        $chartSubContainer.width(dialog.width() - 10);
+        $chartSubContainer.height(dialog.height() - 15);
+        var containerIDWithHash = "#" + $chartSubContainer.attr("id");
+        require(["charts/charts"], function (charts) {
+            charts.triggerReflow(containerIDWithHash);
+        });
+    };
   }
 
   var refresh_table = function(dialog,key) {
@@ -31,22 +52,45 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                     .find({instrumentCdAndTp: key})
                     .simplesort('time', true)
                     .data();
-    var rows = bars.map(function(bar) {
+    var index = 0;
+    var rows = bars.map(function (bar) {
+      var preBar = index == 0 ? bars[index] : bars[index - 1];
+      index++;
       if(is_tick) {
-        return [ bar.time, bar.open ];
+        var diff = calculatePercentageDiff(preBar.open, bar.open);
+        return [bar.time, bar.open, diff.value, diff.image];
       }
+      var diff = calculatePercentageDiff(preBar.close, bar.close);
       return [
         bar.time,
         bar.open,
         bar.high,
         bar.low,
-        bar.close
+        bar.close,
+        diff.value,
+        diff.image
       ];
     });
     var api = table.find('table').DataTable();
     api.rows().remove();
     api.rows.add(rows);
     api.draw();
+  };
+
+  var calculatePercentageDiff = function (firstNumber, secondNumber) {
+      /*Calculation = ( | V1 - V2 | / ((V1 + V2)/2) ) * 100 */
+      var diff = toFixed(Math.abs(firstNumber - secondNumber), 4);
+      var Percentage_diff = toFixed((Math.abs(firstNumber - secondNumber) / ((firstNumber + secondNumber) / 2)) * 100, 2);
+      if (firstNumber <= secondNumber)
+          return {
+              value: diff + '(' + Percentage_diff + '%)',
+              image: diff === 0 ? '' : '<img src="images/green_up_arrow.svg" class="arrow-images"/>'
+          };
+      else
+          return {
+              value: '<span style="color:brown">' + diff + '(' + Percentage_diff + '%) </span>',
+              image: diff === 0 ? '' : '<img src="images/red_down_arrow.svg" class="arrow-images"/>'
+          };
   };
 
   function init(dialog){
@@ -67,6 +111,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
           { title: 'High', orderable: false, },
           { title: 'Low', orderable: false, },
           { title: 'Close', orderable: false, },
+          { title: 'Change', orderable: false, },
+          { title: '', orderable: false, }
     ];
     if(is_tick) { /* for tick charts only show Date,Tick */
       columns = [
@@ -74,6 +120,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
               render: function(epoch) { return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss'); }
             },
             { title: 'Tick', orderable: false, },
+            { title: 'Change', orderable: false, },
+            { title: '', orderable: false, }
       ];
     }
 
@@ -91,7 +139,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
       if(data.key !== key) return;
       if(!dialog.view_table_visible) return;
       var tick = data.tick;
-      var row = [ tick.time, tick.open ];
+      var diff = calculatePercentageDiff(data.preTick.open, tick.open);
+      var row = [tick.time, tick.open, diff.value, diff.image];
       table.api().row.add(row);
       table.api().draw();
     });
@@ -100,12 +149,15 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
       if(data.key !== key) return;
       if(!dialog.view_table_visible) return;
       var ohlc = data.ohlc;
+      var diff = calculatePercentageDiff(data.preOhlc.close, ohlc.close);
       var row = [
         ohlc.time,
         ohlc.open,
         ohlc.high,
         ohlc.low,
-        ohlc.close
+        ohlc.close,
+        diff.value,
+        diff.image
       ];
       if(data.is_new) { table.api().row.add(row); }
       else { table.api().row(0).data(row); }
