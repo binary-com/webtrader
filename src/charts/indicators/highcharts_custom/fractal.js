@@ -35,23 +35,22 @@ FRACTAL = function (data, options, indicators) {
 
     this.middleBar_shift = Math.floor(this.options.numberOfBars / 2) | 0;
 
-    this.CalculateFRACTALValue = function (middleBarIndex) {
+    this.CalculateFRACTALValue = function (data,middleBarIndex) {
         /* FRACTAL :
          Two candles marking lower highs / higher lows to the left
          The fractal over the higher high / under the lower low
          Two candles marking lower highs / higher lows to the right*/
         if ((middleBarIndex - this.middleBar_shift) < 0
-            || (middleBarIndex + this.middleBar_shift) > this.priceData.length) {
+            || (middleBarIndex + this.middleBar_shift) > data.length - 1) {
             return undefined;
         }
 
-        var candleMiddle_High = this.priceData[middleBarIndex].high,
+        var candleMiddle_High = data[middleBarIndex].high,
             candleMiddle_Low = data[middleBarIndex].low;
 
-        var that = this;
-        var prices = _.range(middleBarIndex - this.middleBar_shift, middleBarIndex + this.middleBar_shift)
+        var prices = _.range(middleBarIndex - this.middleBar_shift, middleBarIndex + this.middleBar_shift + 1)
             .map(function(index) {
-                return that.priceData[index];
+                return data[index];
             });
         var lowPrices = prices.map(function(val) {
             return val.low;
@@ -74,7 +73,7 @@ FRACTAL = function (data, options, indicators) {
 
     for (var index = 0; index < data.length - 1; index++) {
         this.priceData.push(data[index]);
-        var ret = this.CalculateFRACTALValue(index - this.middleBar_shift);
+        var ret = this.CalculateFRACTALValue(data, index);
         if (ret) {
             this.indicatorData.push(ret);
         }
@@ -89,8 +88,9 @@ FRACTAL.prototype.addPoint = function (data) {
     console.log('Adding FRACTAL data point : ', data);
     this.priceData.push(data);
     //The fractal needs two next data for each point to find the pattern,so when a new data is added, we should check if the second previous data is going to be fractal or not based on new data.
-    var index = this.priceData.length - this.middleBar_shift;
-    var ret = this.CalculateFRACTALValue(index) || {};
+    var index = this.priceData.length - 1 - this.middleBar_shift;
+    var ret = this.CalculateFRACTALValue(this.priceData, index) || {};
+    console.info(ret.text);
     if (ret.text) {
         this.indicatorData.push(ret);
     };
@@ -107,8 +107,8 @@ FRACTAL.prototype.update = function (data) {
     this.priceData[index].high = data.high;
     this.priceData[index].low = data.low;
     this.priceData[index].close = data.close;
-    index = this.priceData.length - this.middleBar_shift;
-    var ret = this.CalculateFRACTALValue(index) || {};
+    index = this.priceData.length - 1 - this.middleBar_shift;
+    var ret = this.CalculateFRACTALValue(this.priceData,index) || {};
     if (ret.text) {
         this.indicatorData[this.indicatorData.length - 1] = ret;
     };

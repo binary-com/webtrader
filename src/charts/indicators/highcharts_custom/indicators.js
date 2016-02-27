@@ -120,13 +120,15 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                     color: iu.color
                                                 });
                                             }
-                                            else if (iu.value.marker) {
-                                                series.chart.get(iu.id).addPoint({
-                                                    x: iu.value.x,
-                                                    title: iu.value.title,
-                                                    text: iu.value.text,
-                                                    marker: iu.value.marker
-                                                });
+                                            else if (_.isObject(iu.value)){
+                                                if (iu.value.marker) {
+                                                    series.chart.get(iu.id).addPoint({
+                                                        x: iu.value.x,
+                                                        title: iu.value.title,
+                                                        text: iu.value.text,
+                                                        marker: iu.value.marker
+                                                    });
+                                                }
                                             } else {
                                                  series.chart.get(iu.id).addPoint([time, iu.value]);
                                             }
