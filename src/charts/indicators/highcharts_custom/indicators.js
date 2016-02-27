@@ -126,6 +126,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                         x: iu.value.x,
                                                         title: iu.value.title,
                                                         text: iu.value.text,
+                                                        y:iu.value.y,
                                                         marker: iu.value.marker
                                                     });
                                                 }
@@ -182,6 +183,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                             x: iu.value.x,
                                                             title: iu.value.title,
                                                             text: iu.value.text,
+                                                            y:iu.value.y,
                                                             marker: iu.value.marker
                                                         });
                                                     }
