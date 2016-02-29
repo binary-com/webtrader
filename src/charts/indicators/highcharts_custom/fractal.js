@@ -90,7 +90,6 @@ FRACTAL.prototype.addPoint = function (data) {
     //The fractal needs two next data for each point to find the pattern,so when a new data is added, we should check if the second previous data is going to be fractal or not based on new data.
     var index = this.priceData.length - 1 - this.middleBar_shift;
     var ret = this.CalculateFRACTALValue(this.priceData, index) || {};
-    console.info(ret.text);
     if (ret.text) {
         this.indicatorData.push(ret);
     };
@@ -131,6 +130,7 @@ FRACTAL.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
                 data: this.indicatorData,
                 type: 'scatter',
                 onChartIndicator: true,
+                enableMouseTracking:false,
                 onSeries: this.options.onSeriesID //Series ID on which this flags will be rendered
             }
         }
