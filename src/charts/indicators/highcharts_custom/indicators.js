@@ -167,7 +167,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                         var seriesData = indicatorSeries.data;
                                         if (_.isArray(iu.value)) {
                                             seriesData[seriesData.length - 1].update(_.flattenDeep([time, iu.value]));
-                                        } else if (iu.value instanceof CDLUpdateObject || iu.value.marker) {
+                                        } else if (iu.value instanceof CDLUpdateObject) {
                                             if (iu.value && _.isFunction(iu.value.toJSObject)) {
                                                 var renderingData = iu.value.toJSObject();
                                                 var x = renderingData.x;
@@ -178,7 +178,19 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                 if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
                                                     if (iu.value instanceof CDLUpdateObject) {
                                                         indicatorSeries.addPoint(renderingData);
-                                                    } else if (iu.value.marker) {
+                                                    } 
+                                                }
+                                            }
+                                        } else if (_.isObject(iu.value)) {
+                                            if (iu.value) {
+                                                var renderingData = iu.value;
+                                                var x = renderingData.x;
+                                                var matchingSeriesData = _.find(seriesData, function (ee) {
+                                                    return _.isNumber(x) && x > 0 && x === ee.x;
+                                                });
+                                                if (matchingSeriesData) matchingSeriesData.remove();
+                                                if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
+                                                   if (iu.value.marker) {
                                                         series.chart.get(iu.id).addPoint({
                                                             x: iu.value.x,
                                                             title: iu.value.title,
@@ -189,7 +201,8 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                     }
                                                 }
                                             }
-                                        } else {
+                                        }
+                                        else {
                                             seriesData[seriesData.length - 1]
                                                 .update({
                                                     y: iu.value
