@@ -117,7 +117,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 return;
             }
 
-            $(".level").dialog( "open" );
+            if (!$(".level").dialog("isOpen"))
+                $(".level").dialog("open");
 
         }
 
