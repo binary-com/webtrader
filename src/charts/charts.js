@@ -4,10 +4,10 @@
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators",
+        "charts/indicators/highcharts_custom/indicators","moment",
         "highcharts-exporting", "common/util"
         ],
-  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators ) {
+  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment ) {
 
     "use strict";
 
@@ -34,6 +34,43 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         var key = chartingRequestMap.keyFor(instrumentCode, timePeriod);
         chartingRequestMap.unregister(key, containerIDWithHash);
     }
+
+    function generate_csv(data) {
+        var is_tick = isTick(data.timePeriod);
+        var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
+        var filename = data.instrumentName + ' (' + data.timePeriod + ')' + '.csv';
+        var bars = chartingRequestMap.barsTable
+                        .chain()
+                        .find({ instrumentCdAndTp: key })
+                        .simplesort('time', false)
+                        .data();
+        var lines = bars.map(function (bar) {
+            if (is_tick) {
+                return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ +bar.open; /* Price */
+            }
+            return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
+            bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
+        });
+        var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
+
+
+        var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        }
+        else {
+            var link = document.createElement("a");
+            if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    };
 
     return {
 
@@ -295,6 +332,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                                     this.exportChart({
                                         type: 'image/svg+xml'
                                     });
+                                },
+                                separator: false
+                            }, {
+                                text: 'Download CSV',
+                                onclick: function () {
+                                    generate_csv($(containerIDWithHash).data());
                                 },
                                 separator: false
                             }]
