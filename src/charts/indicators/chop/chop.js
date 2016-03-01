@@ -58,13 +58,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 },
                 select: function (event, color) {
                     $("#chop_plot_color").css({
-                        background: '#' + color.formatted
+                        background: color.formatted
                     }).val('');
                     plotColor = color.formatted;
                 },
                 ok: function (event, color) {
                     $("#chop_plot_color").css({
-                        background: '#' + color.formatted
+                        background:  color.formatted
                     }).val('');
                     plotColor = color.formatted;
                 }
