@@ -1,0 +1,22 @@
+.bop_input_width {
+	width: 120px;
+}
+
+.bop_level_input_width_for_level {
+	width: 115px;
+}
+
+.lineDrawOptions label {
+	display: block;
+}
+
+#bop_levels_wrapper {
+	border: 1px solid #aaaaaa;
+	width: 100%;
+	border-radius: 5px;
+}
+
+
+.bop-ui-dialog, .bop.ui-dialog-content, .bop_level.ui-dialog-content {
+	overflow: visible;
+}

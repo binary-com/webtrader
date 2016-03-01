@@ -1,0 +1,12 @@
+{
+
+    "horizontalLine": {
+        "dialogID": "lineDrawOptions",
+        "hasDrawOptions": true
+    },
+    "verticalLine": {
+        "dialogID": "lineDrawOptions",
+        "hasDrawOptions": true
+
+    }
+}

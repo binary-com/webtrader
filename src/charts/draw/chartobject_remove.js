@@ -2,21 +2,39 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", 'charts/charts'], function ($) {
+define(["jquery", "datatables", 'charts/charts'], function($) {
 
-    var table = undefined, indicatorsJSON = undefined;
+    var table = undefined,
+        indicatorsJSON = undefined;
+    // This will hold the references of all the DrawTools Drawn on all the Charts on the current page
+    var drawToolMapping = {};
 
-    function init( containerIDWithHash, _callback ) {
+    // This will be called in the Context of the Jquery Row Object
+    function removeChartDrawTool() {
 
-        require(['text!charts/indicators/indicators_remove.html'], function($html) {
+        var drawToolID = $(this).data('id'),
+            chartID = $(this).data('chartID'),
+            drawToolOptions = $(this).data('drawToolOptions');
+
+
+        //Calling the destroy method to remove that DrawTool
+        (drawToolOptions.destroy) ? drawToolOptions.destroy(): null;
+
+    }
+
+    function init(containerIDWithHash, _callback) {
+
+        require(['text!charts/draw/chartobject_remove.html', 'charts/draw/chartobject_add'], function($html, chartDrawTools) {
+
             $html = $($html);
+            drawToolMapping = chartDrawTools.drawToolMapping;
             table = $html.hide().find('table').DataTable({
                 paging: false,
                 scrollY: 200,
                 info: false
             });
             $html.appendTo("body");
-            $( ".indicator_remove_dialog" ).dialog({
+            $(".chartobject_remove_dialog").dialog({
                 autoOpen: false,
                 modal: true,
                 my: 'center',
@@ -25,36 +43,35 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                 of: window,
                 resizable: false,
                 buttons: [{
+                    text: "Remove All",
+                    click: function() {
+
+                        var containerIDWithHash = $(".chartobject_remove_dialog").data('refererChartID');
+                        table
+                            .rows()
+                            .nodes()
+                            .to$().each(removeChartDrawTool);
+                        $(".chartobject_remove_dialog").dialog('close');
+                    }
+                }, {
                     text: "Remove Selected",
                     click: function() {
-                      var containerIDWithHash = $(".indicator_remove_dialog").data('refererChartID');
+                        var containerIDWithHash = $(".chartobject_remove_dialog").data('refererChartID');
                         table
-                            .rows( '.selected' )
+                            .rows('.selected')
                             .nodes()
-                            .to$().each(function () {
-                                var seriesID = $(this).data('seriesID');
-                                var parentSeriesID = $(this).data('parentSeriesID');
-                                var indicatorID = $(this).data('id');
-                                var chart = $(containerIDWithHash).highcharts();
-                                $.each(chart.series, function (index, series) {
-                                    if (series.options.id == parentSeriesID) {
-                                        var functionName = series['remove' + $.trim(indicatorID).toUpperCase()];
-                                        functionName.call(series, seriesID);
-                                        return false;
-                                    }
-                                });
-                            });
-                        $( ".indicator_remove_dialog" ).dialog('close');
+                            .to$().each(removeChartDrawTool);
+                        $(".chartobject_remove_dialog").dialog('close');
                     }
-                },{
+                }, {
                     text: "Cancel",
                     click: function() {
-                        $( ".indicator_remove_dialog" ).dialog('close');
+                        $(".chartobject_remove_dialog").dialog('close');
                     }
                 }]
             });
 
-            require(['text!charts/indicators/indicators.json'], function (jsonData) {
+            require(['text!charts/indicators/indicators.json'], function(jsonData) {
                 indicatorsJSON = jsonData;
                 if (typeof _callback == "function") {
                     _callback(containerIDWithHash);
@@ -63,14 +80,16 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
         });
     }
 
+
+    
+
     return {
 
-        openDialog : function( containerIDWithHash ) {
+        openDialog: function(containerIDWithHash) {
 
             //If it has not been initiated, then init it first
-            if ($(".indicator_remove_dialog").length == 0)
-            {
-                init( containerIDWithHash, this.openDialog);
+            if ($(".chartobject_remove_dialog").length == 0) {
+                init(containerIDWithHash, this.openDialog);
                 return;
             }
 
@@ -78,26 +97,40 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
             table.clear().draw();
             var chart = $(containerIDWithHash).highcharts();
             if (!chart) return;
-            $.each(chart.series, function (index, series) {
-                if ($(this).data('isIndicator')) {
-                    $.each(indicatorsJSON, function (indicatorDataKey, indicatorDataValue) {
-                        if (series.options.name.indexOf(indicatorDataValue.short_display_name) != -1) {
-                            var period_text = $(series).data('period') ? '(' + $(series).data('period') + ')' : '';
-                            $(table.row.add([indicatorDataValue.long_display_name + period_text]).draw().node())
-                                .click(function () {
+
+
+            // Loop through each unique DrawTool
+            $.each(drawToolMapping, function(drawToolName, chartObj) {
+
+                // Loop through each ChartID within the DrawTool
+                $.each(chartObj, function(chartID, drawInstances) {
+
+                    //True if ChartID matches the Current Chart on which the Remove is called
+                    if (chartID == containerIDWithHash) {
+
+                        // Loop / List through each instance of this DrawTool on this particular Chart
+                        $.each(drawInstances, function(idx, value, arr) {
+
+                            var drawToolID = value['uniqueName'],
+                                chartID = value['chartID'],
+                                drawToolOptions = value;
+
+                            $(table.row.add([drawToolID]).draw().node())
+                                .click(function() {
                                     $(this).toggleClass('selected');
                                 }).data({
-                                    'id': indicatorDataValue.id,
-                                    'seriesID': series.options.id,
-                                    'parentSeriesID': $(series).data('parentSeriesID')
+                                    'id': name,
+                                    'chartID': chartID,
+                                    'drawToolOptions': drawToolOptions
                                 });
-                            return false;
-                        }
-                    });
-                }
+
+                        });
+                    }
+
+                });
             });
 
-            $(".indicator_remove_dialog").data('refererChartID', containerIDWithHash).dialog("open");
+            $(".chartobject_remove_dialog").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 
