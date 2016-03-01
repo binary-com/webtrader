@@ -66,19 +66,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     {
                         text: "OK",
                         click: function () {
-
-                            if (!_.inRange($html.find(".min_input_width_for_period").val(),
-                                            parseInt($html.find(".min_input_width_for_period").attr("min")),
-                                            parseInt($html.find(".min_input_width_for_period").attr("max")))) {
+                            var $elem = $(".min_input_width_for_period");
+                            if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+                                            parseInt($elem.attr("min")),
+                                            parseInt($elem.attr("max")) + 1)) {
                                 require(["jquery", "jquery-growl"], function ($) {
                                     $.growl.error({
-                                        message: "Only numbers between " + $html.find(".min_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".min_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".min_input_width_for_period").closest('tr').find('td:first').text() + "!"
+                                        message: "Only numbers between " + $elem.attr("min")
+                                                + " to " + $elem.attr("max")
+                                                + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
                                 return;
-                            }
+                            };
 
                             var options = {
                                 period: parseInt($html.find(".min_input_width_for_period").val()),
