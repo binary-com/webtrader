@@ -70,7 +70,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
                             //Check validation
 					        var isValid = true;
 					        $(".mama_input_width_for_period").each(function () {
-					            if (!_.inRange($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
+					            if (!_.inRange($(this).val(), parseInt($(this).attr("min")), parseInt($(this).attr("max")) +.01)) {
 					                var $elem = $(this);
 					                require(["jquery", "jquery-growl"], function ($) {
 					                    $.growl.error({
@@ -82,7 +82,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
 					                isValid = false;
 					                return;
 					            }
-					        });;
+					        });
 					        if (!isValid) return;
 
                             var options = {
