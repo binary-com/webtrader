@@ -54,8 +54,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                     .data();
     var index = 0;
     var rows = bars.map(function (bar) {
-        //The bars list has been sotrted by time ,The previous value is in next index
-        var preBar = index == bars.length - 1 ? bars[index] : bars[index + 1];
+      var preBar = index == 0 ? bars[index] : bars[index - 1];
       index++;
       if(is_tick) {
         var diff = calculatePercentageDiff(preBar.open, bar.open);
