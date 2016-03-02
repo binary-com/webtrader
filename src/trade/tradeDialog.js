@@ -649,8 +649,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                  state.purchase.loading = false;
                  $.growl.error({ message: err.message });
                  console.error(err);
-                /* trigger a new proposal stream */
-                state.proposal.onchange();
+                 /*Logout if the error code is 42*/
+                 if (err.code === 'InvalidToken') {
+                   liveapi.invalidate();
+                 } else {
+                   /* trigger a new proposal stream */
+                   state.proposal.onchange();
+                 }
                });
          }
       };
