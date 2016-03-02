@@ -14,8 +14,10 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
     dialogOldWidth = dialog.parent().width();
-    if (dialogOldWidth < 520) {
-        dialog.parent().width(520);
+    var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
+    var width = isTick(data.timePeriod) ? 500 : 700;
+    if (dialogOldWidth < width) {
+        dialog.parent().width(width);
         dialog.width('100%');
     };
     //Adjust table column size
@@ -79,9 +81,9 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   };
 
   var calculatePercentageDiff = function (firstNumber, secondNumber) {
-      /*Calculation = ( | V1 - V2 | / ((V1 + V2)/2) ) * 100 */
+      /*Calculation = ( | V1 - V2 | / |V1| )* 100 */
       var diff = toFixed(Math.abs(firstNumber - secondNumber), 4);
-      var Percentage_diff = toFixed((Math.abs(firstNumber - secondNumber) / ((firstNumber + secondNumber) / 2)) * 100, 2);
+      var Percentage_diff = toFixed((Math.abs(firstNumber - secondNumber) / Math.abs(firstNumber)) * 100, 2);
       if (firstNumber <= secondNumber)
           return {
               value: diff + '(' + Percentage_diff + '%)',
