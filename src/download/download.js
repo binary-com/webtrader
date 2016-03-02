@@ -58,7 +58,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     }
                 },
                 spacingLeft: 0,
-                marginLeft: 40
+                marginLeft: 45
             },
 
             navigator: {
