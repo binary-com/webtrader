@@ -14,8 +14,10 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
     dialogOldWidth = dialog.parent().width();
-    if (dialogOldWidth < 520) {
-        dialog.parent().width(520);
+    var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
+    var width = isTick(data.timePeriod) ? 500 : 700;
+    if (dialogOldWidth < width) {
+        dialog.parent().width(width);
         dialog.width('100%');
     };
     //Adjust table column size
