@@ -79,9 +79,9 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   };
 
   var calculatePercentageDiff = function (firstNumber, secondNumber) {
-      /*Calculation = ( | V1 - V2 | / ((V1 + V2)/2) ) * 100 */
+      /*Calculation = ( | V1 - V2 | / |V1| )* 100 */
       var diff = toFixed(Math.abs(firstNumber - secondNumber), 4);
-      var Percentage_diff = toFixed((Math.abs(firstNumber - secondNumber) / ((firstNumber + secondNumber) / 2)) * 100, 2);
+      var Percentage_diff = toFixed((Math.abs(firstNumber - secondNumber) / Math.abs(firstNumber)) * 100, 2);
       if (firstNumber <= secondNumber)
           return {
               value: diff + '(' + Percentage_diff + '%)',
