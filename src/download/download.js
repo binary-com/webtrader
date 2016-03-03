@@ -244,6 +244,12 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 }
 
                 var totalLength = dataInHighChartsFormat.length;
+                if (totalLength === 0) {
+                    $.growl.error({ message: "There is no historical data available!" });
+                    chart.hideLoading();
+                    $(".download_show").prop("disabled", false);
+                    return;
+                };
                 var endIndex = totalLength > 100 ? 100 : totalLength - 1;
                 chart.xAxis[0].setExtremes(dataInHighChartsFormat[0][0], dataInHighChartsFormat[endIndex][0]); //show 100 bars
 
