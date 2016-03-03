@@ -117,7 +117,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
           { title: 'Change', orderable: false, },
           { title: '', orderable: false, }
     ];
-    var columnInexes = [0, 1, 2, 3, 4, 5];
+    var columnIndexes = [0, 1, 2, 3, 4, 5];
     if(is_tick) { /* for tick charts only show Date,Tick */
       columns = [
             { title: 'Date', orderable: false,
@@ -127,7 +127,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             { title: 'Change', orderable: false, },
             { title: '', orderable: false, }
       ];
-      columnInexes = [0, 1, 2];
+      columnIndexes = [0, 1, 2];
     }
     table = table.dataTable({
         data: [],
@@ -136,7 +136,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
         ordering: true,
         info: false,
         order: [0, 'desc'],
-        columnDefs: [{ className: "dt-head-center dt-body-center", "targets": columnInexes}]
+        columnDefs: [{ className: "dt-head-center dt-body-center", "targets": columnIndexes}]
     });
     table.parent().addClass('hide-search-input');
 
