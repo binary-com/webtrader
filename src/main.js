@@ -202,7 +202,6 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     //load all other .css files asynchronously
     require([
-        'css!lib/hamburger.css',
         'css!charts/charts.css',
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
