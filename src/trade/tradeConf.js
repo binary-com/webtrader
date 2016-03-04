@@ -109,8 +109,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       }
       var key = chartingRequestMap.keyFor(symbol, 0);
       var ticks  = barsTable.find({instrumentCdAndTp: key});
-      var start_time = state.buy.start_time*1000;
-      ticks = ticks.filter(function(tick) { return tick.time > start_time; })
+      var entry_tick_time = state.buy.entry_tick_time*1000;
+      ticks = ticks.filter(function(tick) { return tick.time >= entry_tick_time; })
                    .map(function(tick) { return {quote: tick.price, epoch: tick.time/1000 }; })
                    .sort(function(a,b) { return a.epoch - b.epoch; });
       // console.warn(ticks);
