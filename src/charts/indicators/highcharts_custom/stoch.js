@@ -110,7 +110,7 @@ STOCH.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
                 offset: 0,
                 rotation: 0,
                 y: 10,
-                x: 50
+                x: 120
             },
             lineWidth: 2,
             plotLines: this.options.levels
