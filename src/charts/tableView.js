@@ -10,6 +10,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   var show_table_view = function(dialog, key){
     var table = dialog.find('.table-view');
     var chart = dialog.find('.chart-view');
+    $('span.close').css('display', 'block');
     table.animate({left: '0'}, 250);
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
@@ -28,6 +29,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   var hide_table_view = function(dialog){
     var table = dialog.find('.table-view');
     var chart = dialog.find('.chart-view');
+    $('span.close').css('display', 'none');
     table.animate({left: '100%'}, 250);
     chart.animate({ left: '0' }, 250);
     dialog.view_table_visible = false;
@@ -101,7 +103,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
     var is_tick = isTick(data.timePeriod);
     var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
-    var close = container.find('span.close');
+    var close = dialog.find('span.close');
     close.on('click', hide_table_view.bind(null, dialog)); /* hide the dialog on close icon click */
 
     var table = $("<table width='100%' class='portfolio-dialog display compact'/>");
