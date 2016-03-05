@@ -33,7 +33,8 @@
 .chart-dialog .table-view table th:nth-child(1),
 .chart-dialog .table-view table td:nth-child(1) { text-align: center; min-width: 75px; }
 
-.chart-dialog .table-view .close {
+.chart-dialog .close {
+  display:none;
   position: absolute;
   z-index: +1;
   right: 0;
