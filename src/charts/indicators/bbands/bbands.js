@@ -40,6 +40,29 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
    				 });
             });
 
+            var backgroundColor = 'rgba(178, 191, 217, 0.20)';
+            $html.find("#bbands_background").colorpicker({
+                alpha: true,
+                colorFormat: 'RGBA',
+                part: {
+                    map: { size: 128 },
+                    bar: { size: 128 }
+                },
+                select: function (event, color) {
+                    $("#bbands_background").css({
+                        background: color.formatted
+                    }).val('');
+                    backgroundColor = color.formatted;
+                },
+                ok: function (event, color) {
+                    $("#bbands_background").css({
+                        background: color.formatted
+                    }).val('');
+                    backgroundColor = color.formatted;
+                    console.log(color.a);
+                }
+            });
+
             var selectedDashStyle = "Solid";
             $('#bbands_dashStyle').ddslick({
                 imagePosition: "left",
@@ -87,7 +110,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                     maType:$("#bbands_ma_type").val(),
                                     mdlBndStroke : $("#bbands_mdl_stroke").css("background-color"),
                                     uprBndStroke : $("#bbands_up_stroke").css('background-color'),
-                                    lwrBndStroke : $("#bbands_lwr_stroke").css('background-color'),
+                                    lwrBndStroke: $("#bbands_lwr_stroke").css('background-color'),
+                                    backgroundColor:backgroundColor,
                                     strokeWidth : parseInt($("#bbands_strokeWidth").val()),
                                     dashStyle: selectedDashStyle,
                                     appliedTo: parseInt($("#bbands_appliedTo").val())
