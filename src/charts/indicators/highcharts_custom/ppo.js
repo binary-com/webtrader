@@ -129,7 +129,7 @@ PPO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                     offset: 0,
                     rotation: 0,
                     y: 10, //Trying to show title inside the indicator chart
-                    x: 50
+                    x: 125
                 },
                 lineWidth: 2,
                 plotLines: this.options.levels

@@ -353,7 +353,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
         if(!state.chart.chart) return;
         var container = root;// root.find('.chart-container');
-        var width = container.width(), height = container.height();
+        var transactionChart = container.find(".transaction-chart");
+        var width = container.width() - 30, height = container.height();
         state.chart.chart.setSize(width, height + h , false);
         state.chart.chart.hasUserSize = null;
       };
