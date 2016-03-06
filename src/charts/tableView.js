@@ -10,7 +10,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   var show_table_view = function(dialog, key){
     var table = dialog.find('.table-view');
     var chart = dialog.find('.chart-view');
-    $('span.close').css('display', 'block');
+    dialog.find('span.close').css('display', 'block');
     table.animate({left: '0'}, 250);
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
@@ -29,7 +29,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
   var hide_table_view = function(dialog){
     var table = dialog.find('.table-view');
     var chart = dialog.find('.chart-view');
-    $('span.close').css('display', 'none');
+    dialog.find('span.close').css('display', 'none');
     table.animate({left: '100%'}, 250);
     chart.animate({ left: '0' }, 250);
     dialog.view_table_visible = false;
