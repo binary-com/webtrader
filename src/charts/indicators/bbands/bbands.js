@@ -59,7 +59,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         background: color.formatted
                     }).val('');
                     backgroundColor = color.formatted;
-                    console.log(color.a);
                 }
             });
 
