@@ -70,10 +70,11 @@ IndicatorBase.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetad
                 offset: 0,
                 rotation: 0,
                 y: 10, //Trying to show title inside the indicator chart
-                x: 50
+                x: this.toString().length * 6
             },
             lineWidth: 2,
-            plotLines: this.options.levels
+            plotLines: this.options.levels,
+            plotBands :this.options.plotBands
         },
         seriesConf : {
             id: this.uniqueID,

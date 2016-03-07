@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="13" width="10" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="0,0 5,10 10,0" style="fill:red;stroke:red;stroke-width:1" />
+ <line x1="0" y1="13" x2="10" y2="13" style="stroke:red;stroke-width:1" />
+  Sorry, your browser does not support inline SVG.
+</svg>

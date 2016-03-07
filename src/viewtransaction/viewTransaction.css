@@ -6,6 +6,8 @@
   overflow: hidden !important;
 }
 .view-transaction-dialog * { margin: 0; padding: 0; }
+.view-transaction-dialog .dotted-underline { border-bottom: 1px dotted black; }
+.view-transaction-dialog .smaller { font-size: 12px;}
 
 .view-transaction-dialog p {
   padding: 5px 0 2px 5px;
@@ -81,8 +83,10 @@
 
 /******************* chart tab ******************/
 .view-transaction-dialog .content .transaction-chart {
-  padding-top: 5px;
-  height: 100%;
+    padding-top: 5px;
+    height: 100%;
+    padding-left : 5px;
+    padding-right : 5px;
 }
 
 .view-transaction-dialog .content .chart-container .loading {
@@ -104,6 +108,11 @@
   margin: 2px 0;
 }
 
+.view-transaction-dialog .content .chart-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /******************** explanation tab ************/
 .view-transaction-dialog .content .explanation {
   margin-left: 2px;
@@ -117,7 +126,41 @@
 }
 /************* footer *************************/
 .view-transaction-dialog .footer {
-  line-height: 2em;
-  background:  #eee;
-  text-align: center;;
+  background: linear-gradient(#fff, #eee);
+  text-align: center;
 }
+
+/*.view-transaction-dialog .footer .sell-at-market .sparkline,*/
+.view-transaction-dialog .footer .validation { text-align: left; }
+
+.view-transaction-dialog .footer .sell-at-market {
+  display: flex;
+  padding: 5px 5px 0 5px;
+}
+.view-transaction-dialog .footer .bid-price {
+  display: inline-block;
+  height: 2em;
+  margin-right: 5px;
+  max-width: 200px;
+}
+.view-transaction-dialog .footer .bid-price > span { position: relative; top: -5px; }
+.view-transaction-dialog .footer .bid-price .currency { font-size: 16px; }
+.view-transaction-dialog .footer .bid-price .unit { font-size: 20px; }
+.view-transaction-dialog .footer .bid-price .cent { vertical-align: top; }
+
+.view-transaction-dialog .footer .sell-at-market > span {
+    flex: 1 1 33%;
+    line-height: 2em;
+}
+
+.view-transaction-dialog .footer .sell-at-market .sell-button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+}
+.view-transaction-dialog .footer .sell-at-market .sell-button[disabled] { opacity: 0.5; }

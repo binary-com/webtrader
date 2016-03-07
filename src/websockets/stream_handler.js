@@ -4,7 +4,6 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
 
     function setExtremePointsForXAxis(chart, startTime, endTime) {
         chart.xAxis.forEach(function (xAxis) {
-            console.log(xAxis);
             if (!startTime) startTime = xAxis.getExtremes().min;
             if (!endTime) endTime = xAxis.getExtremes().max;
             xAxis.setExtremes(startTime, endTime);
@@ -23,26 +22,34 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
             var time = parseInt(data.tick.epoch) * 1000;
 
             var chartingRequest = chartingRequestMap[key];
+            var granularity = data.echo_req.granularity || 0;
             chartingRequest.id = chartingRequest.id || data.tick.id;
-            if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0))
-                return;
-            var timePeriod = $(chartingRequest.chartIDs[0].containerIDWithHash).data('timePeriod');
-            if (!timePeriod)
-                return;
 
-            if (isTick(timePeriod)) { //Update OHLC with same value in DB
+            if(granularity === 0) {
                 var tick = {
                   instrumentCdAndTp: key,
                   time: time,
                   open: price,
                   high: price,
                   low: price,
-                  close: price
+                  close: price,
+                  /* this will be used from trade confirmation dialog */
+                  price: data.tick.quote, /* we need the original value for tick trades */
                 }
                 barsTable.insert(tick);
                 /* notify subscribers */
-                fire_event('tick', {tick: tick, key: key});
+                var preTick = tick;
+                var bars = barsTable.chain()
+                          .find({ instrumentCdAndTp: key })
+                          .simplesort('time', true)
+                          .limit(2).data();
+                if (bars.length > 1)
+                    preTick = bars[1];
+                fire_event('tick', { tick: tick, key: key, preTick: preTick });
 
+                if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0)) {
+                    return;
+                }
                 //notify all registered charts
                 chartingRequest.chartIDs.forEach(function (chartID) {
                     var chart = $(chartID.containerIDWithHash).highcharts();
@@ -107,8 +114,16 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 bar.close = close;
                 barsTable.update(bar);
             }
+            
+            var preOhlc = bar;
+            var bars = barsTable.chain()
+                .find({ instrumentCdAndTp: key })
+                .simplesort('time', true)
+                .limit(2).data();
+            if (bars.length > 1)
+                preOhlc = bars[1];
             /* notify subscribers */
-            fire_event('ohlc', {ohlc: bar, is_new: isNew, key: key });
+            fire_event('ohlc', { ohlc: bar, is_new: isNew, key: key, preOhlc: preOhlc });
 
             //notify all registered charts
             chartingRequest.chartIDs.forEach(function (chartID) {
@@ -122,13 +137,11 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 var type = $(chartID.containerIDWithHash).data('type');
 
                 var last = series.data[series.data.length - 1];
-                console.log(bar.time, last.time, series.options.data.length, series.data.length, series.points.length);
                 if (series.options.data.length != series.data.length) {
                     //TODO - This is an error situation
                     setExtremePointsForXAxis(chart, null, bar.time);
                     return;
                 }
-                console.log('Series data length : ', series.options.name, series.data.length);
 
                 if (type && isDataTypeClosePriceOnly(type)) {//Only update when its not in loading mode
                     if (isNew) {
@@ -140,10 +153,8 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                     }
                 } else {
                     if (isNew) {
-                        console.log('Inserting : ', [time, open, high, low, close]);
                         series.addPoint([time, open, high, low, close], true, true, false);
                     } else {
-                        console.log('Updating : ', last);
                         last.update({
                             open : open,
                             high : high,

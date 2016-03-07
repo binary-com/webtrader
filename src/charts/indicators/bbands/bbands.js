@@ -25,6 +25,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 	                    map:		{ size: 128 },
 	                    bar:		{ size: 128 }
 	                },
+                    open: function (event, color) {
+                        color.colorPicker.setColor($(this).css("background-color"));
+                    },
 	                select:	function(event, color) {
 	                    $(this).css({
 	                        background:'#' + color.formatted
@@ -38,6 +41,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 	                    $(this).data("color",'#' + color.formatted);
 	                }
    				 });
+            });
+
+            $html.find("#bbands_background").colorpicker({
+                alpha: true,
+                colorFormat: 'RGBA',
+                part: {
+                    map: { size: 128 },
+                    bar: { size: 128 }
+                },
+                open: function (event, color) {
+                    color.colorPicker.setColor($(this).css("background-color"));
+                },
+                select: function (event, color) {
+                    $(this).css({
+                        background: color.formatted
+                    }).val('');
+                },
+                ok: function (event, color) {
+                    $(this).css({
+                        background: color.formatted
+                    }).val('');
+                }
             });
 
             var selectedDashStyle = "Solid";
@@ -66,19 +91,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					{
 						text: "OK",
 						click: function() {
-							    //Check validation
-							    if (!isNumericBetween($html.find(".bbands_input_width_for_period").val(),
-                                            parseInt($html.find(".bbands_input_width_for_period").attr("min")),
-                                            parseInt($html.find(".bbands_input_width_for_period").attr("max")))) {
-                                require(["jquery", "jquery-growl"], function ($) {
-                                    $.growl.error({
-                                        message: "Only numbers between " + $html.find(".bbands_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".bbands_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".bbands_input_width_for_period").closest('tr').find('td:first').text() + "!"
-                                    });
-                                });
-                                return;
-                            	}
+							   var $elem = $(".bbands_input_width_for_period");
+							   if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+                                               parseInt($elem.attr("min")),
+                                               parseInt($elem.attr("max")) + 1)) {
+							       require(["jquery", "jquery-growl"], function ($) {
+							           $.growl.error({
+							               message: "Only numbers between " + $elem.attr("min")
+                                                   + " to " + $elem.attr("max")
+                                                   + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+							           });
+							       });
+							       return;
+							   };
 
                                 var options = {
                                     period : parseInt($("#bbands_time_period").val()),
@@ -87,7 +112,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                     maType:$("#bbands_ma_type").val(),
                                     mdlBndStroke : $("#bbands_mdl_stroke").css("background-color"),
                                     uprBndStroke : $("#bbands_up_stroke").css('background-color'),
-                                    lwrBndStroke : $("#bbands_lwr_stroke").css('background-color'),
+                                    lwrBndStroke: $("#bbands_lwr_stroke").css('background-color'),
+                                    backgroundColor:$("#bbands_background").css("background-color"),
                                     strokeWidth : parseInt($("#bbands_strokeWidth").val()),
                                     dashStyle: selectedDashStyle,
                                     appliedTo: parseInt($("#bbands_appliedTo").val())

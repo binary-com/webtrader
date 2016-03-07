@@ -69,6 +69,7 @@
   font-size: 1.4em;
 }
 .trade-conf .view-row .arrow {
+  cursor: pointer;
   width: 30px;
   height: 30px;
 }

@@ -6,11 +6,48 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
     font-size: 80%;
+    position:relative;
 }
+.mainContainer {
+    width: 100%;
+}
+
+body > .footer {
+    transition: height .2s linear;
+    top:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: -1;
+}
+body > .footer .addiction-warning {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: inline-block;
+    background: #2a3052;
+}
+body > .footer .addiction-warning span {
+  color: white;
+  text-align: left;
+  display: inline-block;
+  max-width: 900px;
+}
+body > .footer .addiction-warning a,
+body > .footer .addiction-warning a:visited,
+body > .footer .addiction-warning a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 
 body * {
     font-family: 'Roboto', sans-serif;
@@ -113,10 +150,6 @@ button.ui-button-text-only .ui-menu {
 .dataTables_filter label {
     position: relative;
     float: left;
-}
-
-.mainContainer {
-    width: 100%;
 }
 
 /* SK SPINNER STYLES

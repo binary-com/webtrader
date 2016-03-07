@@ -4,10 +4,10 @@
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators",
+        "charts/indicators/highcharts_custom/indicators","moment",
         "highcharts-exporting", "common/util"
         ],
-  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators ) {
+  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment ) {
 
     "use strict";
 
@@ -16,7 +16,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         Highcharts.setOptions({
             global: {
                 useUTC: true
-            }
+            },
+            lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
         });
 
     });
@@ -33,6 +34,43 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         var key = chartingRequestMap.keyFor(instrumentCode, timePeriod);
         chartingRequestMap.unregister(key, containerIDWithHash);
     }
+
+    function generate_csv(data) {
+        var is_tick = isTick(data.timePeriod);
+        var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
+        var filename = data.instrumentName + ' (' + data.timePeriod + ')' + '.csv';
+        var bars = chartingRequestMap.barsTable
+                        .chain()
+                        .find({ instrumentCdAndTp: key })
+                        .simplesort('time', false)
+                        .data();
+        var lines = bars.map(function (bar) {
+            if (is_tick) {
+                return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ +bar.open; /* Price */
+            }
+            return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
+            bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
+        });
+        var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
+
+
+        var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        }
+        else {
+            var link = document.createElement("a");
+            if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    };
 
     return {
 
@@ -56,7 +94,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                 $(containerIDWithHash).highcharts().destroy();
             }
 
-            console.log('Delay amount : ', options.delayAmount);
             //Save some data in DOM
             $(containerIDWithHash).data({
                 instrumentCode : options.instrumentCode,
@@ -74,7 +111,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                         load: function () {
 
                             this.showLoading();
-                            console.log('Calling render chart for the first time for the instrument : ', options.instrumentCode);
                             currentPrice.init();
                             liveapi.execute(function () {
                                 ohlc_handler.retrieveChartDataAndRender({
@@ -101,7 +137,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                         }
                     },
                     spacingLeft: 0,
-                    marginLeft: 40,  /* disable the auto size labels so the Y axes become aligned */
+                    marginLeft: 45,  /* disable the auto size labels so the Y axes become aligned */
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
                 },
 
@@ -125,7 +161,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                         events: {
                             afterAnimate: function () {
                                 if (this.options.isInstrument && this.options.id !== "navigator") {
-                                    console.log('Series finished rendering!', this.options);
                                     //this.isDirty = true;
                                     //this.isDirtyData = true;
 
@@ -237,7 +272,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             {
                                 return this.value;
                             }
-                        }
+                        },
+                        align:'center'
                     }
                 }],
 
@@ -260,7 +296,53 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                 },
 
                 exporting: {
-                    enabled: true
+                    enabled: true,
+                    //Explicity mentioning what buttons to show otherwise this chart will
+                    //also show Download CSV and Download XLS options. We do not want to
+                    //show those options because highchart's implementation do not download
+                    //all data from the chart. It only downloads the visible part of the chart.
+                    //We have implemented Charts -> Download as CSV to download all data from
+                    //chart
+                    buttons: {
+                        contextButton: {
+                            menuItems: [{
+                                text: 'Download PNG',
+                                onclick: function () {
+                                    this.exportChart();
+                                }
+                            }, {
+                                text: 'Download JPEG',
+                                onclick: function () {
+                                    this.exportChart({
+                                        type: 'image/jpeg'
+                                    });
+                                },
+                                separator: false
+                            }, {
+                                text: 'Download PDF',
+                                onclick: function () {
+                                    this.exportChart({
+                                        type: 'application/pdf'
+                                    });
+                                },
+                                separator: false
+                            }, {
+                                text: 'Download SVG',
+                                onclick: function () {
+                                    this.exportChart({
+                                        type: 'image/svg+xml'
+                                    });
+                                },
+                                separator: false
+                            }, {
+                                text: 'Download CSV',
+                                onclick: function () {
+                                    generate_csv($(containerIDWithHash).data());
+                                },
+                                separator: false
+                            }]
+                        }
+                    }
                 }
 
             });

@@ -2,7 +2,8 @@
   width: auto !important;
 }
 
-.portfolio-dialog td:nth-child(4) {
+.portfolio-dialog td:nth-child(n - 3),
+.portfolio-dialog th:nth-child(n - 3) {
   text-align: center;
 }
 .portfolio-dialog tr.resale-not-offered > td:nth-child(4) {
@@ -13,8 +14,15 @@
   content: 'Resale not offered';
   display: block;
   font-size: .6em;
-  position: absolute;
 }
 
 .portfolio-dialog tr.indicative-red > td:nth-child(4) span { color: #d71818; }
 .portfolio-dialog tr.indicative-green > td:nth-child(4) span { color: #02920e; }
+
+.portfolio-dialog img.arrow {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    float: right;
+    position: relative;
+}

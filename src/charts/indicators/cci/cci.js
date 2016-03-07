@@ -63,6 +63,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					{
 					    text: "OK",
 					    click: function () {
+                             var $elem = $(".cci_input_width_for_period");
+                             if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+                                             parseInt($elem.attr("min")),
+                                             parseInt($elem.attr("max")) + 1)) {
+                                 require(["jquery", "jquery-growl"], function ($) {
+                                     $.growl.error({
+                                         message: "Only numbers between " + $elem.attr("min")
+                                                 + " to " + $elem.attr("max")
+                                                 + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                     });
+                                 });
+                                 return;
+                             };
 
 					        var options = {
 					            period: parseInt($("#cci_period").val()),

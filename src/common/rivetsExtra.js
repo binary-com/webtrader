@@ -44,6 +44,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['and'] = function (vlaue, other){
       return vlaue && other;
     }
+    /* rivets formatter for > operator  */
+    rv.formatters['gt'] = function (vlaue, other){
+      return vlaue > other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -82,6 +86,9 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       return fn.bind(undefined, value);
     }
 
+    rv.formatters['map'] = function(array, field){
+      return _.map(array, field);
+    }
     /* rv formatter to prepend a value */
     rv.formatters['prepend'] = function(value, other){
       return (other && value) ? other + value : value;
@@ -116,10 +123,36 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       format = format || 'YYYY-MM-DD HH:mm:ss';
       return epoch && moment.utc(epoch*1000).format(format);
     }
+    /* human readable difference of two epoch values */
+    rv.formatters['moment-humanize'] = function(from_epoch, till_epoch){
+        if(!from_epoch || !till_epoch) {
+          return undefined;
+        }
+
+        var ret = '';
+        var seconds = till_epoch - from_epoch;
+        var duration = moment.duration(seconds, 'seconds');
+        if (duration.days() > 0)
+            ret += ' ' + duration.days() + ' ' + (duration.days() > 1 ? 'days' : 'day');
+        if (duration.hours() > 0)
+            ret += ' ' + duration.hours() + ' ' + (duration.hours() > 1 ? 'hours' : 'hour');
+        if (duration.minutes() > 0)
+            ret += ' ' + duration.minutes() + ' ' + (duration.minutes() > 1 ? 'minutes' : 'minute');
+        if (duration.seconds() > 0 && seconds < 10*60)
+            ret += ' ' + duration.seconds() + ' ' + (duration.seconds() > 1 ? 'seconds' : 'second');
+
+        return _.trim(ret);
+    }
     /* formatter to bold last character */
     rv.formatters['bold-last-character'] = function(str){
       str = str + '';
       return str.substring(0, str.length - 1) + '<strong>' + _.last(str) + '</strong>';
+    }
+    /* formatter to calcualte the percent of a value of another value */
+    rv.formatters['percent-of'] = function(changed, original) {
+      if(changed === undefined || !original)
+        return undefined;
+      return (100*(changed - original)/original).toFixed(2)+'%';
     }
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
@@ -239,7 +272,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             $(el).tooltip();
         },
         unbind: function (el) {
-            $(el).tooltip('destroy');
+            $(el).tooltip().tooltip('destroy');
         },
         routine: function (el, value) {
             $(el).tooltip('option', 'content', value);
@@ -410,9 +443,8 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /* ticks: [ {quote: ''} ] */
-    rv.binders['sparkline'] = function(el, ticks) {
+    rv.binders['sparkline'] = function(el, spots) {
       var chart = $(el);
-      var spots = _.map(ticks,'quote');
       var config = {
         type: 'line',
         lineColor: '#606060',
@@ -429,6 +461,80 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         spots.length ? chart.show() : chart.hide();
       },0);
     }
+
+    /* rv binder for indicative color change logic */
+    rv.binders['indicative-color'] = function(el, value) {
+        var perv = (el._perv_indicative_color || 0)*1;
+        var red = '#d71818';
+        var green = '#02920e';
+        var black = 'black';
+        if(!$.isNumeric(value)) {
+          $(el).css({color: black});
+        }
+        else if(perv !== value*1) {
+          $(el).css({color: perv < value*1 ? green : red});
+        }
+        el._perv_indicative_color = value;
+    }
+
+    /******************************** components *****************************/
+    function component_twoway_bind(self, keypathes) {
+        /* make sure to call async */
+        setTimeout(function() {
+          for(var i = 0; i < keypathes.length; ++i){
+              var keypath = keypathes[i];
+              var key = _.last(keypath.split('.'));
+              var observer = self.observers[key];
+              if(observer) {
+                self.componentView.observe(keypath, function(value){
+                    observer.setValue(value);
+                });
+              }
+          }
+        }, 0);
+    }
+    rivets.components['price-spinner'] = {
+      static: ['class', 'min', 'decimals'],
+      template: function() {
+        return '<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">' +
+                  '<input rv-class="data.class" type="text" rv-value="data.value" rv-decimal-round="data.decimals | or 5" no-symbol="no-symbol" />' +
+
+                    '<button rv-on-click="increment" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">' +
+                      '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>' +
+                    '</button>' +
+                    '<button rv-on-click="decrement" step="-1" class="ui-spinner-button ui-spinner-down ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 0 5px 0" tabindex="-1" role="button">' +
+                      '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-s">▼</span> </span>' +
+                    '</button>' +
+                '</span>';
+      },
+      initialize: function(el, data) {
+        var decimals = (data.decimals || 2)*1;
+        var min = (data.min || 0)*1;
+        component_twoway_bind(this, ['data.value']);
+
+        return {
+          data: data,
+          increment: function (e,scope) {
+            var value = data.value*1;
+            value = value < 1 ? value + 0.1 : value + 1;
+            if((value | 0) !== value) {
+              value = value.toFixed(decimals);
+            }
+            data.value = value;
+          },
+          decrement: function () {
+            var value = data.value*1;
+            value = value > 1 ? value - 1 : value - 0.1;
+            if((value | 0) !== value) { /* is float */
+              value = value.toFixed(decimals);
+            }
+            if(value > min) {
+              data.value = value;
+            }
+          }
+        };
+      },
+    };
 
     return rv;
 });

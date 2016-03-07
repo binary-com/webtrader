@@ -104,7 +104,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_state(available,root, dialog, symbol){
+    function init_state(available,root, dialog, symbol, contracts_for_spot){
 
       var state = {
         duration: {
@@ -195,21 +195,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           value: 'payout',
           amount: 10,
           limit: null,
-          up: function() {
-            var value = state.basis.amount*1;
-            value = value < 1 ? value + 0.1 : value + 1;
-            if((value | 0) !== value)
-              value = value.toFixed(2);
-            state.basis.amount = value;
-          },
-          down: function() {
-            var value = state.basis.amount*1;
-            value = value > 1 ? value - 1 : value - 0.1;
-            if((value | 0) !== value) /* is float */
-              value = value.toFixed(2);
-            if(value > 0)
-              state.basis.amount = value;
-          },
         },
         spreads: {
           amount_per_point: 1,
@@ -221,12 +206,15 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           spot: '0.0',
           spot_time: '0',
           deposit_: function(){
-            return this.stop_loss * this.amount_per_point;
+            if(this.stop_type === 'point')
+              return this.stop_loss * this.amount_per_point;
+            else // 'dollar'
+              return this.stop_loss;
           }
         },
         tick: {
           epoch: '0',
-          quote:'0',
+          quote: contracts_for_spot,
           perv_quote: '0',
           down: function(){
             var ans= this.quote*1 < this.perv_quote*1;
@@ -282,6 +270,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               expiry.today_times.disabled = !range;
               var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
               expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
+              // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
+              // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
+              // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
           });
       }
 
@@ -310,9 +301,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         forward_starting_options = forward_starting_options.forward_starting_options
         var model = state.date_start;
         var array = [{ text: 'Now', value: 'now' }];
+        var later = (new Date().getTime() + 5*60*1000)/1000; // 5 minute from now
         _.each(forward_starting_options, function (row) {
           var step = 5 * 60; // 5 minutes step
-          var from = Math.ceil(Math.max(new Date().getTime() / 1000, row.open) / step) * step;
+          var from = Math.ceil(Math.max(later, row.open) / step) * step;
           to = row.close;
           for (var epoch = from; epoch < to; epoch += step) {
             var d = new Date(epoch * 1000);
@@ -322,7 +314,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             array.push({ text: text, value: epoch });
           }
         });
-        _.assign(state.date_start, { value: 'now', array: array, visible: true });
+        var options = { value: 'now', array: array, visible: true };
+        if(_.some(array, {value: state.date_start.value*1})) {
+          options.value = state.date_start.value;
+        }
+        _.assign(state.date_start, options);
       };
 
       state.date_expiry.update = function (date_or_hour) {
@@ -489,9 +485,18 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if (!barriers)
           return;
 
-        if(barriers.barrier) state.barriers.barrier = '+' + (state.barriers.barrier || barriers.barrier) * 1;
-        if(barriers.high_barrier) state.barriers.high_barrier = '+' + (state.barriers.high_barrier || barriers.high_barrier) * 1;
-        if(barriers.low_barrier) state.barriers.low_barrier = (state.barriers.low_barrier || barriers.low_barrier) * 1;
+        if(barriers.barrier) {
+          var barrier = (state.barriers.barrier || barriers.barrier) * 1;
+          state.barriers.barrier = (barrier >= 0 ? '+' : '') + barrier;
+        }
+        if(barriers.high_barrier){
+          var high_barrier = (state.barriers.high_barrier || barriers.high_barrier) * 1;
+          state.barriers.high_barrier = (high_barrier >= 0 ? '+' : '') + high_barrier;
+        }
+        if(barriers.low_barrier){
+          var low_barrier = (state.barriers.low_barrier || barriers.low_barrier) * 1;
+          state.barriers.low_barrier = (low_barrier >= 0 ? '-' : '') + low_barrier;
+        }
       };
 
       state.basis.update_limit = function () {
@@ -525,7 +530,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           symbol: state.proposal.symbol, /* Symbol code */
         };
         if(state.categories.value !== 'Spreads') {
-          request.amount = state.basis.amount; /* Proposed payout or stake value */
+          request.amount = state.basis.amount*1; /* Proposed payout or stake value */
           request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
         } else {
           request.amount_per_point = state.spreads.amount_per_point;
@@ -550,6 +555,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         /* set value for duration or date_expiry */
         if (state.duration.value === 'Duration') {
           request.duration_unit = _(state.duration_unit.value).head(); //  (d|h|m|s|t), Duration unit is s(seconds), m(minutes), h(hours), d(days), t(ticks)
+          if(state.duration_count.value < 1) {
+            state.duration_count.value = 1;
+            return;
+          }
           request.duration = state.duration_count.value * 1;
         }
         else {
@@ -562,7 +571,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           var id = state.proposal.ids.shift();
           liveapi.send({ forget: id });
         }
-
 
         liveapi.send(request)
         .then(function (data) {
@@ -609,11 +617,16 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             duration_unit: state.duration_unit.value,
         };
         /* pass data which is needed to show live tick purchase results */
-        if(_(['Digits','Up/Down','Asians']).includes(extra.category) && extra.duration_unit === 'ticks') {
+        extra.show_tick_chart = false;
+        if(_(['Digits','Up/Down','Asians']).includes(extra.category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
-            if(extra.category !== 'Digits')
-              extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
+            if(extra.category !== 'Digits') {
+              if (extra.category !== 'Asians') {
+                extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
+              }
+              extra.show_tick_chart = true;
+            }
         }
 
         // manually check to see if the user is authenticated or not,
@@ -629,6 +642,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                })
                .then(function(data){
                   require(['trade/tradeConf'], function(tradeConf){
+                      extra.contract_id = data.buy.contract_id;
+                      extra.transaction_id = data.buy.transaction_id;
                       tradeConf.init(data, extra, show, hide);
                   });
                })
@@ -636,8 +651,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                  state.purchase.loading = false;
                  $.growl.error({ message: err.message });
                  console.error(err);
-                /* trigger a new proposal stream */
-                state.proposal.onchange();
+                 /*Logout if the error code is 42*/
+                 if (err.code === 'InvalidToken') {
+                   liveapi.invalidate();
+                 } else {
+                   /* trigger a new proposal stream */
+                   state.proposal.onchange();
+                 }
                });
          }
       };
@@ -645,9 +665,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       state.categories.array = _(available).map('contract_category_display').uniq().value();
       state.categories.value = _(state.categories.array).includes('Up/Down') ? 'Up/Down' : _(state.categories.array).head(); // TODO: show first tab
 
+      var tick_stream_alive = false;
       /* register for tick stream of the corresponding symbol */
       liveapi.events.on('tick', function (data) {
           if (data.tick && data.tick.symbol == state.proposal.symbol) {
+              tick_stream_alive = true;
               // if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
               state.tick.perv_quote = state.tick.quote;
               state.tick.epoch = data.tick.epoch;
@@ -683,6 +705,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           state.spreads.spot = proposal.spot || '0.0';
           state.spreads.spot_time = proposal.spot_time || '0';
           state.proposal.loading = false;
+          if(!tick_stream_alive && proposal.spot) { /* for contracts that don't have live qoute data */
+            state.tick.epoch = proposal.spot_time;
+            state.tick.quote = proposal.spot;
+          }
       });
 
       /* change currency on user login */
@@ -724,6 +750,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
         /********************** register for ticks_streams **********************/
         var key = chartingRequestMap.keyFor(symbol.symbol, /* granularity = */ 0);
+        var has_digits = _(available).map('min_contract_duration')
+                          .some(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
         if(!chartingRequestMap[key]){ /* don't register if already someone else has registered for this symbol */
             chartingRequestMap.register({
               symbol: symbol.symbol,
@@ -732,13 +760,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               count: 1000, /* this will be for the case that the user opens a the same tick chart later */
               style: 'ticks'
             }).catch(function (err) {
-              $.growl.error({ message: err.message });
-              var has_digits = _(available).map('min_contract_duration')
-                                .some(function(duration){ return /^\d+$/.test(duration) || (_.last(duration) === 't'); });
-              /* if this contract does not offer tick trades, then its fine let the user trade! */
-              if(!has_digits) {
-                state.ticks.loading = false;
-              } else {
+              /* if this contract offers tick trades, prevent user from trading */
+              if(has_digits) {
+                $.growl.error({ message: err.message });
                 _.delay(function(){ dialog.dialog('close'); },2000);
               }
               console.error(err);
@@ -746,12 +770,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         else { chartingRequestMap.subscribe(key); }
 
-        var state = init_state(available,root,dialog, symbol);
+        var state = init_state(available,root,dialog, symbol, contracts_for.spot);
+        if(!has_digits) { state.ticks.loading = false; }
         var view = rv.bind(root[0],state)
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog;
+        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
     }
 
     return {

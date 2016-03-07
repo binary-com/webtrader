@@ -59,14 +59,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                 var amount = trans.amount * 1;
                 var svg = amount > 0 ? 'up' : amount < 0 ? 'down' : 'equal';
                 var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
-                img = ''; /* TODO: removed the arrow image for now */
                 return [
                     epoch_to_string(trans.transaction_time, { utc: true }),
                     trans.transaction_id,
                     _.capitalize(trans.action_type),
                      img + trans.longcode ,
                     (trans.amount * 1).toFixed(2),
-                    '<b>' + formatPrice(trans.balance_after) + '</b>'
+                    '<b>' + formatPrice(trans.balance_after) + '</b>',
+                    trans, /* data for view transaction dailog - when clicking on arrows */
                 ];
             });
             table.api().rows.add(rows);
@@ -136,6 +136,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                 cleared: refreshTable
             });
 
+            statement.on('click', on_arrow_click);
             statement.dialog('open');
 
 
@@ -153,6 +154,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
         });
 
     };
+
+    var on_arrow_click = function(e){
+      var target = e.target;
+      var $target = $(target);
+      if(target.tagName !== 'IMG' || $target.hasClass('disabled'))
+        return;
+      var tr = target.parentElement.parentElement;
+      var transaction = table.api().row(tr).data();
+      transaction = _.last(transaction);
+      $target.addClass('disabled');
+      require(['viewtransaction/viewTransaction'], function(viewTransaction){
+        viewTransaction.init(transaction.contract_id, transaction.transaction_id)
+                       .then(function(){ $target.removeClass('disabled'); });
+      });
+    }
 
     return {
         init: init

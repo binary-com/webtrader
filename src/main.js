@@ -29,7 +29,8 @@ requirejs.config({
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
-        'ddslick': 'lib/ddslick/jquery.ddslick.min'
+        'ddslick': 'lib/ddslick/jquery.ddslick.min',
+        "indicator_levels" : 'charts/indicators/level' 
     },
     map: {
         '*': {
@@ -155,6 +156,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     statement.init(elem);
                     elem.click();
                 });
+
+            //Register async loading of download dialog
+            load_ondemand($navMenu.find("a.download"), 'click', 'loading Download/View Data ...', 'download/download',
+                function (download) {
+                    var elem = $navMenu.find("a.download");
+                    download.init(elem);
+                    elem.click();
+                });
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
@@ -179,6 +188,8 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 // hide the main loading spinner,
                 // after the `last module` has been loaded.
                 $(".sk-spinner-container").hide();
+                // show the footer
+                $('body > .footer').show();
             });
         });
     }

@@ -60,3 +60,5 @@ span.reload {
     height: 10px;
     width: 10px;
 }
+
+.webtrader-dialog img.disabled { opacity: 0.5; }

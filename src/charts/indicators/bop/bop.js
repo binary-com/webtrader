@@ -84,14 +84,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find('#bop_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
                     require(["jquery", "jquery-growl"], function($) {
-                        $.growl.error({ message: "Select levels to delete!" });
+                        $.growl.error({ message: "Select level(s) to delete!" });
                     });
                 } else {
                     table.rows('.selected').remove().draw();
                 }
             });
             $html.find('#bop_level_add').click(function () {
-                require(["charts/indicators/bop/bop_level"], function(bop_level) {
+                require(["indicator_levels"], function(bop_level) {
                     bop_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,

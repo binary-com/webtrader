@@ -79,7 +79,10 @@ define(['jquery'], function ($) {
     var onopen = function () {
         /* send buffered sends */
         while (buffered_sends.length > 0) {
-            socket.send(JSON.stringify(buffered_sends.shift()));
+            var data = buffered_sends.shift();
+            if(!unresolved_promises[data.req_id]) {
+              socket.send(JSON.stringify(data));
+            }
         }
         /* if the connection got closed while the result of an unresolved request
            is not back yet, issue the same request again */
@@ -99,14 +102,15 @@ define(['jquery'], function ($) {
 
     /* execute buffered executes */
     var onmessage = function (message) {
-        console.log('Server response : ', message);
         var data = JSON.parse(message.data);
 
-        (callbacks[data.msg_type] || []).forEach(function (cb) {
-          /* do not block the main thread */
-          setTimeout(function(){
-            cb(data);
-          },0);
+        /* do not block the main thread */
+        /* note: this will prevent subscribers from altering callbacks[data.msg_type] array
+           while we are iterating on it. this is especially important for tick trades */
+        (callbacks[data.msg_type] || []).forEach(function(cb) {
+            setTimeout(function(){
+                cb(data);
+            }, 0);
         });
 
         var key = data.req_id;
@@ -145,7 +149,6 @@ define(['jquery'], function ($) {
         return new Promise(function (resolve,reject) {
             unresolved_promises[data.req_id] = { resolve: resolve, reject: reject, data: data };
             if (is_connected()) {
-                console.log('Request object : ', JSON.stringify(data));
                 socket.send(JSON.stringify(data));
             } else
                 buffered_sends.push(data);
@@ -230,6 +233,7 @@ define(['jquery'], function ($) {
        },milliseconds);
     };
 
+    var sell_expired_timeouts = {};
     var api = {
         events: {
             on: function (name, cb) {
@@ -310,6 +314,15 @@ define(['jquery'], function ($) {
         /* whether currenct session is authenticated or not */
         is_authenticated: function () {
           return is_authenitcated_session;
+        },
+        sell_expired: function(epoch){
+            var now = (new Date().getTime())/1000 | 0;
+            if(!sell_expired_timeouts[epoch] && epoch*1 > now) {
+              sell_expired_timeouts[epoch] = setTimeout(function(){
+                sell_expired_timeouts[epoch] = undefined;
+                api.send({sell_expired:1}).catch(function(err){ console.error(err);});
+              }, (epoch+2 - now)*1000);
+            }
         }
     }
     /* always register for transaction stream */
