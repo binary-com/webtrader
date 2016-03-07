@@ -555,6 +555,148 @@
     "id": "ppo",
     "long_display_name": "Percentage Price Oscillator",
     "short_display_name": "PPO"
-  }
+  },
   
+  "trange": {
+    "id": "trange",
+    "long_display_name": "True Range",
+    "short_display_name": "TRANGE"
+  },
+
+  "stochrsi": {
+    "id": "stochrsi",
+    "long_display_name": "Stochastic Relative Strength Index",
+    "short_display_name": "STOCHRSI"
+  },
+
+  "mom": {
+    "id": "mom",
+    "long_display_name": "Momentum",
+    "short_display_name": "MOM"
+  },
+
+  "alma": {
+    "id": "alma",
+    "long_display_name": "Arnaud Legoux Moving Average",
+    "short_display_name": "ALMA",
+	 "onChartIndicator" : true
+  },
+
+   "aroon": {
+    "id": "aroon",
+    "long_display_name": "Aroon",
+    "short_display_name": "AROON"
+  },
+
+   "aroonosc": {
+    "id": "aroonosc",
+    "long_display_name": "Aroon Oscillator",
+    "short_display_name": "AROONOSC"
+  },
+
+   "ao": {
+    "id": "ao",
+    "long_display_name": "Awesome Oscillator",
+    "short_display_name": "AO"
+  },
+
+   "var": {
+    "id": "var",
+    "long_display_name": "Variance",
+    "short_display_name": "VAR"
+  },
+
+   "cks": {
+    "id": "cks",
+    "long_display_name": "Chande Kroll Stop",
+    "short_display_name": "CKS",
+	"onChartIndicator" : true
+  },
+
+   "cc": {
+    "id": "cc",
+    "long_display_name": "Coppock Curve",
+    "short_display_name": "CC"
+  },
+
+   "chop": {
+    "id": "chop",
+    "long_display_name": "Choppiness Index",
+    "short_display_name": "CHOP"
+  },
+
+   "adx": {
+    "id": "adx",
+    "long_display_name": "Average Directional Movement Index",
+    "short_display_name": "ADX"
+  },
+
+   "dx": {
+    "id": "dx",
+    "long_display_name": "Directional Movement Index",
+    "short_display_name": "DX"
+  },
+
+   "adxr": {
+    "id": "adxr",
+    "long_display_name": "Average Directional Movement Index Rating",
+    "short_display_name": "ADXR"
+  },
+
+   "apo": {
+    "id": "apo",
+    "long_display_name": "Absolute Price Oscillator",
+    "short_display_name": "APO"
+  },
+
+  "stoch": {
+  "id": "stoch",
+  "long_display_name": "Stochastic",
+  "short_display_name": "STOCH  "
+  },
+  
+  "stochf": {
+  "id": "stochf",
+  "long_display_name": "Stochastic Fast",
+  "short_display_name": "STOCHF"
+  },
+  
+  "stochs": {
+  "id": "stochs",
+  "long_display_name": "Stochastic Slow",
+  "short_display_name": "STOCHS"
+  },
+
+  "dc": {
+    "id": "dc",
+    "long_display_name": "Donchian Channel",
+    "short_display_name": "DC",
+    "onChartIndicator": true
+  },
+
+  "ultosc": {
+    "id": "ultosc",
+    "long_display_name": "Ultimate Oscillator",
+    "short_display_name": "ULTOSC"
+  },
+
+  "lsma": {
+    "id": "lsma",
+    "long_display_name": "Least Squares Moving Average",
+    "short_display_name": "LSMA",
+    "onChartIndicator" : true
+  },
+
+  "mass": {
+    "id": "mass",
+    "long_display_name": "Mass Index",
+    "short_display_name": "MASS"
+  },
+
+  "cmo": {
+    "id": "cmo",
+    "long_display_name": "Chande Momentum Oscillator",
+    "short_display_name": "CMO"
+  }
+
 }
