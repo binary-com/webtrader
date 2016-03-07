@@ -311,7 +311,7 @@ define(['jquery'], function ($) {
             if(timeout) timeout_promise(data.req_id, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
             return promise;
         },
-        /* whether currenct session is authenticated or not */
+        /* whether current session is authenticated or not */
         is_authenticated: function () {
           return is_authenitcated_session;
         },
