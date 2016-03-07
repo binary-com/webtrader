@@ -1,19 +1,19 @@
 {
   "name": "Webtrader",
   "short_name": "Webtrader",
-  "version": "2.0.21",
+  "version": "2.0.22",
   "manifest_version": 2,
   "description": "This is a Webtrader project for binary.com",
   "homepage_url": "https://www.binary.com",
   "icons": {
-    "16": "v2.0.21/images/webtrader_16px.png",
-    "128": "v2.0.21/images/webtrader_128px.png"
+    "16": "v2.0.22/images/webtrader_16px.png",
+    "128": "v2.0.22/images/webtrader_128px.png"
   },
   "background":{
     "scripts": ["chrome_background.js"]
   },
   "browser_action": {
-    "default_icon": "v2.0.21/images/webtrader_16px.png",
+    "default_icon": "v2.0.22/images/webtrader_16px.png",
     "default_title": "This is a Webtrader project for binary.com"
   },
   "permissions": [
