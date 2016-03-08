@@ -11,6 +11,7 @@
     background-color: #273051;
     height: 53px;
     text-align: center;
+    z-index:1000;
 }
 
 #nav-container .nav-logo {
