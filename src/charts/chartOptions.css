@@ -30,3 +30,96 @@
 {
     margin-left: 8px;
 }
+
+
+
+/* =============================================================================
+  MENU TOGGLE SWITCHES
+============================================================================= */
+/**
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `cmn-toggle-switch` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+ */
+.toggle-switch {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 36px;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    background-color: white;
+}
+
+.toggle-switch:focus {
+    outline: none;
+}
+
+.toggle-switch span {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    right: 10px;
+    height: 4px;
+    background: #273051;
+    border-radius: 5px;
+}
+
+.toggle-switch span::before,
+.toggle-switch span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #273051;
+    content: "";
+    border-radius: 5px;
+}
+
+.toggle-switch span::before {
+    top: 16px;
+}
+
+.toggle-switch span::after {
+    bottom: -8px;
+}
+
+/**
+ * Rotating icon (rot), that simply rotates 90 degrees when activated.
+ * Nothing too fancy, simple transition.
+ */
+.toggle-switch_rot span {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+/* active state, i.e. menu open */
+.toggle-switch_rot.active span {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-color: #273051;
+    top: 15px;
+    left: 30px;
+}
+
+.toggle-switch_rot.active span::before,
+.toggle-switch_rot.active span::after {
+    background-color: #273051;
+}
