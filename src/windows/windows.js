@@ -362,7 +362,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         if(current_height > new_height && only_on_expand === true) {
           return;
         }
-        $('body > .footer').height(new_height);
+        $('body > .footer').css("margin-top", new_height - 100);
     };
     function fixMinimizedDialogsPosition() {
         var footer_height = $('.addiction-warning').height();
