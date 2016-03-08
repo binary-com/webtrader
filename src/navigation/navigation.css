@@ -348,7 +348,7 @@
 #nav-container .authentication button.logout { background: #4F577E; }
 
 /** targets min-width requirement **/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .nav-normal-menu {
         display: inline-table;
     }
@@ -363,7 +363,7 @@
 }
 
 /** targets mobile devices **/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .nav-normal-menu {
         display: none;
     }
