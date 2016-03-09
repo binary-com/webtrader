@@ -130,6 +130,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   }
   /* get the tick value for a given epoch */
   function get_tick_value(symbol, epoch){
+    console.log('get_tick_value');
     return liveapi.send({ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end:epoch+2, count: 1})
                   .catch(function(err) { console.error(err); });
   }
@@ -200,28 +201,37 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       else if(contract.is_valid_to_sell)
         state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
 
-      state.table.current_spot = contract.current_spot;
-      state.table.current_spot_time = contract.current_spot_time;
-      state.table.bid_price = contract.bid_price;
+      /*Do not update the current_spot and current_spot_time if the contract has expired*/
+      if(state.table.date_expiry*1 >= contract.current_spot_time*1) {
+          state.table.current_spot = contract.current_spot;
+          state.table.current_spot_time = contract.current_spot_time;
+          state.table.bid_price = contract.bid_price;
+          if(state.sell.bid_prices.length > 40) {
+              state.sell.bid_prices.shift();
+          }
+          state.sell.bid_prices.push(contract.bid_price)
 
-      if(state.sell.bid_prices.length > 40) {
-        state.sell.bid_prices.shift();
+          state.sell.bid_price.value = contract.bid_price;
+          state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
+          state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+          state.sell.is_valid_to_sell = false;
+          state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+          state.chart.manual_reflow();
+      } else {
+          /*Just change the current_spot_time to date_expiry*/
+          state.table.current_spot_time = state.table.date_expiry;
       }
-      state.sell.bid_prices.push(contract.bid_price)
 
-      state.sell.bid_price.value = contract.bid_price;
-      state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
-      state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
-      state.sell.is_valid_to_sell = false;
-      state.sell.is_valid_to_sell = contract.is_valid_to_sell;
-      state.chart.manual_reflow();
   }
 
   function init_dialog(proposal) {
     require(['text!viewtransaction/viewTransaction.html'],function(html) {
         var root = $(html);
         var state = init_state(proposal, root);
-        var on_proposal_open_contract = function(data) { update_indicative(data, state); };
+        var on_proposal_open_contract = function(data) {
+            console.log('on_proposal_open_contract');
+            update_indicative(data, state);
+        };
 
         var transWin = windows.createBlankWindow(root, {
             title: proposal.symbol_name + ' (' + proposal.transaction_id + ')',
@@ -365,7 +375,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         return get_chart_data(state, root);
       });
 
-      /* back-end is not returning sell_time field, worse its returning wrong sell_price vlaue */
+      /* back-end is not returning sell_time field, worse its returning wrong sell_price value */
       liveapi.send({profit_table: 1, date_from: proposal.date_start, date_to: proposal.date_start+1})
              .then(function(data) {
                var transactions = data.profit_table.transactions || [];
@@ -429,6 +439,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             /* stop updating when contract is expired */
             if(tick.epoch*1 > state.table.date_expiry*1) {
               if(perv_tick) {
+                console.log('Stop changing time');
                 state.table.exit_tick = perv_tick.quote;
                 state.table.exit_tick_time = perv_tick.epoch*1;
                 state.validation = 'This contract has expired';
@@ -468,6 +479,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
       var clean_up_done = false;
       var clean_up = function() {
+        console.log('clean_up called!');
         if(clean_up_done) return;
         clean_up_done = true;
         chartingRequestMap.unregister(key);
@@ -502,6 +514,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     }
 
     if(!state.table.is_expired) {
+      console.log('State.table.is_expired', state.table.is_expired);
       update_live_chart(state, granularity);
     }
 
