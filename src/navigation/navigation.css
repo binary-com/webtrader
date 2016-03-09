@@ -303,16 +303,17 @@
   color: #eee;
   line-height: 2em;
   font-size: larger;
-  min-width:80px;
+  min-width:60px;
   border: none;
   border-radius: 5px;
-  margin-left: 10px;
   outline: 0;
+  margin-right:-10px;
 }
 #nav-container .authentication div {
   display: inline-block;
   position: relative;
   color: #eee;
+  margin-right:-5px;
 }
 
 #nav-container .authentication span {
@@ -321,9 +322,11 @@
 }
 #nav-container .authentication span.loginid {
   width: 110px;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
   bottom: -10px;
+  margin-right:8px;
+  text-align:right;
 }
 #nav-container .authentication span.time {
   width: 110px;
@@ -336,9 +339,9 @@
 #nav-container .authentication span.balance {
   position: relative;
   top: 10px;
-  font-size: 14px;
-  padding-right: 10px;
-  margin-right: 10px;
+  font-size: 12px;
+  padding-right: 2px;
+  margin-right: -33px;
   line-height: 1.4em;
   border-right: 2px solid gray;
 }
@@ -380,6 +383,6 @@
 }
 
 /** on very small screens **/
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 460px) {
     #nav-container .authentication { display: none;}
 }
