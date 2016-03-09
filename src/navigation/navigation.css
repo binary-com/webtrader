@@ -380,6 +380,6 @@
 }
 
 /** on very small screens **/
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 550px) {
     #nav-container .authentication { display: none;}
 }
