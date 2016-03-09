@@ -22,9 +22,8 @@ body > .footer {
     top:0;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100px;
     text-align: center;
-    z-index: -1;
 }
 body > .footer .addiction-warning {
     position: absolute;
