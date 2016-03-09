@@ -352,6 +352,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         }
         return  Math.max.apply(null, bottoms);
     }
+
     function fixFooterPostion(only_on_expand) {
         $('body > .footer').width($('body').width());
         var scroll_height = getScrollHeight(true);
@@ -455,6 +456,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             closeAllObject && closeAllObject.click();
         },
 
+        fixFooterPostion:function()
+        {
+            fixFooterPostion();
+        },
         /* important options: { title:'',
                                 resize:fn, // callabak for dialog resize event
                                 close: fn, // callback for dialog close event

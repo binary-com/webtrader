@@ -189,6 +189,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 // after the `last module` has been loaded.
                 $(".sk-spinner-container").hide();
                 // show the footer
+                windows.fixFooterPostion();
                 $('body > .footer').show();
             });
         });
