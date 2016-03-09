@@ -60,6 +60,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                                     require(["jquery", "jquery-growl"], function ($) {
                                         $.growl.error({ message: "Only numeric value allowed!" });
                                     });
+                                    $elem.val($elem.prop("defaultValue"));
                                     isValid = false;
                                     return isValid;
                                 }
