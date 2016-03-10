@@ -129,8 +129,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             var $d = $(d);
             return $d.hasClass("ui-dialog-content") && $d.dialog("isOpen") && !$d.hasClass('ui-dialog-minimized') && ($(window).width() < $d.dialog('option', 'width'));
         });
-        if (largeDialogs && largeDialogs.length > 0)
-            best.push(largeDialogs);
+        _(largeDialogs).forEach(function (d) {
+            best.push(d);
+        });
         arrange(best, true);
     }
 
