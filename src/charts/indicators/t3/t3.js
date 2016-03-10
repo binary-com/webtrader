@@ -73,6 +73,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                                 + " is allowed for " + $periodElem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
+                                $periodElem.val($periodElem.prop("defaultValue"));
                                 return;
                             };
                              var $vFactorElem = $("#t3_volume_factor");
@@ -86,6 +87,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                                 + " is allowed for " + $vFactorElem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
+                                $vFactorElem.val($vFactorElem.prop("defaultValue"));
                                 return;
                             };
 

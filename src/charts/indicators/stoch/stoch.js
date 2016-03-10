@@ -134,6 +134,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                                     + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
 					                    });
 					                });
+					                $elem.val($elem.prop("defaultValue"));
 					                isValid = false;
 					                return;
 					            }
