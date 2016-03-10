@@ -107,14 +107,14 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           if(state.ticks.category !== 'Digits')
               state.ticks.update_status();
       }
-      var key = chartingRequestMap.keyFor(symbol, 0);
-      var ticks  = barsTable.find({instrumentCdAndTp: key});
-      var entry_tick_time = state.buy.entry_tick_time*1000;
-      ticks = ticks.filter(function(tick) { return tick.time >= entry_tick_time; })
-                   .map(function(tick) { return {quote: tick.price, epoch: tick.time/1000 }; })
-                   .sort(function(a,b) { return a.epoch - b.epoch; });
+      //var key = chartingRequestMap.keyFor(symbol, 0);
+      //var ticks  = barsTable.find({instrumentCdAndTp: key});
+      //var start_time = state.buy.start_time*1000;
+      //ticks = ticks.filter(function(tick) { return tick.time > start_time; })
+      //             .map(function(tick) { return {quote: tick.price, epoch: tick.time/1000 }; })
+      //             .sort(function(a,b) { return a.epoch - b.epoch; });
       // console.warn(ticks);
-      ticks.forEach(add_tick); /* add existing ticks */
+      //ticks.forEach(add_tick); /* add existing ticks */
 
       var fn = liveapi.events.on('tick', function (data) {
           if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
