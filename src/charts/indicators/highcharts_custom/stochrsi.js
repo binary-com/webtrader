@@ -64,5 +64,5 @@ STOCHRSI.prototype.update = function (data) {
 };
 
 STOCHRSI.prototype.toString = function () {
-    return 'STOCHRSI (' + this.options.period + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
+    return ' STOCHRSI (' + this.options.period + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
