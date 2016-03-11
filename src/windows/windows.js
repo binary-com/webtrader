@@ -101,7 +101,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                             left: x + 'px',
                             top: y + 'px'
                         }, 1500);
-
+                    /* update dialog option.position */
+                    d.dialog("option", "position", { my: x, at: y });
                     x += w;
                 };
                 y += row_height + 20;
