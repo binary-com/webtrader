@@ -5,7 +5,6 @@
 define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/stream_handler', 'datatables'],
   function($, moment, loki, chartingRequestMap, stream_handler) {
   var barsTable = chartingRequestMap.barsTable;
-  var dialogOldWidth;
 
   var show_table_view = function(dialog, key){
     var table = dialog.find('.table-view');
@@ -14,12 +13,12 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     table.animate({left: '0'}, 250);
     chart.animate({left: '-100%'}, 250);
     refresh_table(dialog, key); /* clear table and fill it again */
-    dialogOldWidth = dialog.parent().width();
+    var dialogOldWidth = dialog.dialog("option", "width");
     var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
     var width = isTick(data.timePeriod) ? 500 : 700;
     if (dialogOldWidth < width) {
-        dialog.parent().width(width);
-        dialog.width('100%');
+        dialog.dialog("option", "minWidth", dialogOldWidth);
+        dialog.dialog("option", "width", width);
     };
     //Adjust table column size
     var tbl = table.find('table').DataTable();
@@ -34,9 +33,10 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     chart.animate({ left: '0' }, 250);
     dialog.view_table_visible = false;
     //Return dialog size to old size
+    var dialogOldWidth= dialog.dialog("option", "minWidth");
     if (dialog.parent().width() !== dialogOldWidth) {
-        dialog.parent().width(dialogOldWidth);
-        dialog.width('100%');
+        dialog.dialog("option", "width", dialogOldWidth);
+        dialog.dialog("option", "minWidth", 350);
         var $chartSubContainer = dialog.find(".chartSubContainer");
         $chartSubContainer.width(dialog.width() - 10);
         $chartSubContainer.height(dialog.height() - 15);
