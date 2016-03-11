@@ -163,7 +163,7 @@ define(['jquery'], function ($) {
 
         return promise
             .then(function (val) {
-                Cookies.set('webtrader_token', token, { expires: 1 }); /* never expiers */
+                Cookies.set('webtrader_token', token, { expires: 365 }); /* never expiers */
                 is_authenitcated_session = true;
                 fire_event('login', val);
                 auth_successfull = true;
