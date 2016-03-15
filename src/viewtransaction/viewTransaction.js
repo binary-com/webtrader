@@ -58,8 +58,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           categories:null,
           startOnTick: false,
           endOnTick: false,
-          min: _.first(data)[0],
-          max: _.last(data)[0],
+          min: data.length ? _.first(data)[0] : null,
+          max: data.length ? _.last(data)[0] : null,
           labels: { overflow:"justify", format:"{value:%H:%M:%S}" },
         },
         yAxis: {
