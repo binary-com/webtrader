@@ -367,6 +367,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var width = container.width() - 30, height = container.height();
         state.chart.chart.setSize(width, height + h , false);
         state.chart.chart.hasUserSize = null;
+        if (state.chart.chart.series[0] && state.chart.chart.series[0].data.length === 0)
+            state.chart.chart.showLoading();
+        else
+            state.chart.chart.hideLoading();
       };
 
       var purchase_time_promise = get_purchase_time(proposal);
