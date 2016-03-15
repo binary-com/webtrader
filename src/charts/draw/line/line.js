@@ -102,9 +102,9 @@ define(["jquery", "common/util", 'jquery-ui', 'color-picker', 'ddslick'], functi
 
         var self = this;
         //Fetching Horizontaline-options popup Styles
-        require(['css!charts/draw/horizontalLine/horizontalLine.css']);
+        require(['css!charts/draw/line/line.css']);
 
-        require(['text!charts/draw/horizontalLine/horizontalLine.html'], function($html) {
+        require(['text!charts/draw/line/line.html'], function($html) {
 
 
             self.$dialog = $($html);

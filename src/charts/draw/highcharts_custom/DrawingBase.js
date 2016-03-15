@@ -408,7 +408,7 @@ define(['highstock'], function() {
                 case 'linepath':
                     {
                         //Fetching Horizontaline-options popup Styles
-                        var filePath = 'charts/draw/horizontalLine/horizontalLine';
+                        var filePath = 'charts/draw/line/line';
                         break;
                     }
                 case 'rectangle':
