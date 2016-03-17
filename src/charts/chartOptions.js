@@ -23,7 +23,7 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
 
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function($html) {
                 //attach different button actions
-                $html = $($html); //HELLO HELLO
+                $html = $($html);
 
                 $html.find('.chartMenuHamburgerMenu').hover(function() {
                     $(this).toggleClass('ui-state-hover').toggleClass('ui-state-active');
