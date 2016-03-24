@@ -255,9 +255,13 @@ define(['highstock'], function() {
                 return;
             }
 
+            var point = self.getValueFromCoordinates(e.chartX, e.chartY);
+
             self.startPos = {
                 x: e.chartX,
-                y: e.chartY
+                y: e.chartY,
+                xValue: point.x,
+                yValue: point.y
             };
 
             //$(self.chartID).off('mousemove', self.mouseDrag);
@@ -280,9 +284,18 @@ define(['highstock'], function() {
 
             e = self.getHighchartNormalizedPoint(e);
 
+            //Ignore if dragged outside main chart area    
+            if (!self.isPointInsideChartArea(e.chartX, e.chartY)) {
+                return;
+            }
+
+            var point = self.getValueFromCoordinates(e.chartX, e.chartY);
+
             self.endPos = {
                 x: e.chartX,
-                y: e.chartY
+                y: e.chartY,
+                xValue: point.x,
+                yValue: point.y
             };
 
             $(container).one('mouseup', function() {
@@ -422,6 +435,15 @@ define(['highstock'], function() {
                         var filePath = 'charts/draw/text/text';
                         break;
                     }
+                case 'fibonacciretracement':
+                case 'fibonaccirearc':
+                case 'fibonaccirefans':
+                case 'fibonacciretimezone':
+                case 'fibonacci':
+                    {
+                        var filePath = 'charts/draw/fibonacci/fibonacci';
+                        break;
+                    }
                 default:
                     break;
             }
@@ -479,6 +501,23 @@ define(['highstock'], function() {
                             fontSize: 11,
                             text: 'Enter some text',
                             textColor: 'rgba(0,0,0,1)'
+                        };
+                        break;
+                    }
+                case 'fibonacciretracement':
+                case 'fibonaccirearc':
+                case 'fibonaccirefans':
+                case 'fibonacciretimezone':
+                case 'fibonacci':
+                    {
+                        var defaultOptions = {
+                            'fill': 'rgba(255,0,0,0.4)',
+                            'stroke': 'black',
+                            'stroke-width': 2,
+                            cursor: 'crosshair',
+                            zIndex: 100,
+                            fontSize: 12,
+                            textColor: '#a7a7a7'
                         };
                         break;
                     }

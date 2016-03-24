@@ -80,7 +80,7 @@ define(['highstock', 'charts/draw/highcharts_custom/ShapeBase'], function() {
                         var dY = this.dragEndPos.y - this.dragStartPos.y;
 
 
-                        console.log(dX, dY);
+                        //console.log(dX, dY);
 
                         //Setting the new start position
                         this.dragStartPos.x = this.dragEndPos.x;

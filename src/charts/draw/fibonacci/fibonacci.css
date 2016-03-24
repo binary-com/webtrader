@@ -1,0 +1,17 @@
+.fibonacci_input_width {
+    width: 120px;
+}
+
+.fibonacci_level_input_width_for_level {
+    width: 115px;
+}
+
+.fibonacciDrawOptions label {
+    display: block;
+}
+
+.fibonacci-ui-dialog,
+.fibonacciDrawOptions.ui-dialog-content,
+.fibonacci_level.ui-dialog-content {
+    overflow: visible;
+}
