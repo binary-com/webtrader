@@ -69,6 +69,19 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
         }];
     };
 
+    var mergeCustomInterval = function(fibonacciIntervals, customIntervals) {
+        var min = 0,
+            max = 5;
+
+        // Merging Custom Intervals with the Main Fibonacci Intervals
+        _.each(customIntervals, function(customInterval) {
+            if (customInterval.value > min && customInterval.value <= max) {
+                fibonacciIntervals.push(customInterval);
+            }
+        });
+        return _.sortBy(fibonacciIntervals, 'value');
+    };
+
 
     if (!window['Fibonacci']) {
 
@@ -94,6 +107,10 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
         Fibonacci.constructor = Fibonacci;
 
         Fibonacci.prototype.addEventhandlers = function(drawOptions) {
+
+            if (this.drawOptions.customIntervals) {
+                this.fibonacci_intervals = mergeCustomInterval(this.fibonacci_intervals, this.drawOptions.customIntervals);
+            }
             this.drawOptions = this.drawOptions || this.getDefaultDrawOptions();
             this.drawOptions.id = this.toolID;
             this.bindDrag(null, this.dragHandler);

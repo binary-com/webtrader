@@ -35,13 +35,28 @@ define(["jquery", "common/util", 'jquery-ui', 'color-picker', 'ddslick'], functi
                 defaultFontSize = parseInt($html.find("#text_fontsize").val()) || 11;
                 defaultTextColor = $html.find("#text_color").css("background-color") || 'rgba(0,0,0,1)';
 
+                // Custom Fibonacci Percentage & color
+                customPercentage = Number($html.find("#custom_percent_string").val()) || 0;
+                customColor = $html.find("#custom_percent_color").css("background-color") || '#a7a7a7';
+                customValue = Number((customPercentage / 100).toFixed(1));
+
+
                 var drawOptions = {
                     chartID: chartID,
                     seriesRef: $(chartID).highcharts().series[0],
                     'stroke-width': defaultStrokeWidth,
                     fontSize: defaultFontSize,
-                    textColor: defaultTextColor
+                    textColor: defaultTextColor,
+                    customIntervals: [{
+                        colour: customColor,
+                        text: customPercentage.toString() + '%',
+                        value: customValue
+                    }]
                 };
+
+
+
+
 
 
                 //CLOSING THE DRAW OPTIONS DIALOG
@@ -148,6 +163,27 @@ define(["jquery", "common/util", 'jquery-ui', 'color-picker', 'ddslick'], functi
                 defaultStrokeColor = '#' + color.formatted;
             }
         });
+
+        $html.find("#custom_percent_color").colorpicker({
+            part: {
+                map: { size: 128 },
+                bar: { size: 128 }
+            },
+            select: function(event, color) {
+                $("#custom_percent_color").css({
+                    background: '#' + color.formatted
+                }).val('');
+                defaultStrokeColor = '#' + color.formatted;
+            },
+            ok: function(event, color) {
+                $("#custom_percent_color").css({
+                    background: '#' + color.formatted
+                }).val('');
+                defaultStrokeColor = '#' + color.formatted;
+            }
+        });
+
+
         $html.dialog(dialogOptions);
 
     }
