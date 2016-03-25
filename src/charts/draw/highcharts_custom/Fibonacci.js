@@ -82,9 +82,10 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
             this.decimals = 4;
 
             // True if user selects a stock trend gaining momentum, false otherwise
-            this.isUpTrend = true;
+            this.upTrend = true;
+
             // True if EndDate is after Start Date
-            this.isForwardTrend = true;
+            this.forwardTrend = true;
 
             this.fibonacci_intervals = getFibonacciIntervals();
 
@@ -105,66 +106,13 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
             this.unBindClick(this.clickHandler);
         }
 
-        Fibonacci.prototype.draw = function() {
-            return;
+        Fibonacci.prototype.isUpTrend = function(startY, endY) {
+            return startY < endY;
         }
 
-        Fibonacci.prototype.updateCalculations = function() {
-
-            var self = this;
-
-
-
-            var end = {
-                    xPos: this.startPos.x,
-                    yPos: this.startPos.y,
-
-                    xValue: this.startPos.xValue | 0,
-                    yValue: this.startPos.yValue | 0
-                },
-                start = {
-                    xPos: this.endPos.x,
-                    yPos: this.endPos.y,
-
-                    xValue: this.endPos.xValue | 0,
-                    yValue: this.endPos.yValue | 0
-                };
-
-
-            this.isUpTrend = true;
-            if (start.yPos < end.yPos) {
-                this.isUpTrend = false;
-            }
-            
-            this.isForwardTrend = true;
-            if (start.xPos < end.xPos) {
-                this.isForwardTrend = false;
-            }
-
-            _(this.fibonacci_intervals).forEach(function(fibonacciPoint, idx) {
-
-                // LINE COORDINATES
-                fibonacciPoint.y1 = fibonacciPoint.y2 = start.yPos + (end.yPos - start.yPos) * fibonacciPoint.value;
-                fibonacciPoint.x1 = start.xPos;
-                fibonacciPoint.x2 = end.xPos;
-
-
-                var startPos = self.getValueFromCoordinates(fibonacciPoint.x1, fibonacciPoint.y1);
-                var endPos = self.getValueFromCoordinates(fibonacciPoint.x2, fibonacciPoint.y2);
-
-
-                // LINE VALUES
-                fibonacciPoint.x1Value = startPos.x;
-                fibonacciPoint.y1Value = startPos.y;
-                fibonacciPoint.x2Value = endPos.x;
-                fibonacciPoint.y2Value = endPos.y;
-
-            });
-
-            return this;
+        Fibonacci.prototype.isForwardTrend = function(startX, endX) {
+            return startX < endX;
         }
-
-
 
         /*    -----------------------------------------------Fibonacci----------------------------------------------------------*/
         window['Fibonacci'] = Fibonacci;

@@ -29,12 +29,62 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                     // Keeping bindOnce to true will limit the Drawing to One Instance per User-Interaction
                     this.drawOnce = true;
                     this.decimals = 4;
+
+                    // Show the Actual Value at the Fibonacci Interval  Example:-  "50% (1860.555)"
+                    this.displayIntervalValue = true;
+
                     this.textAlignRight = true;
                     this.textAboveLine = true;
 
                 };
                 FibonacciRetracement.prototype = Object.create(Fibonacci.prototype);
                 FibonacciRetracement.constructor = FibonacciRetracement;
+
+                FibonacciRetracement.prototype.updateCalculations = function() {
+                    var self = this;
+                    var end = {
+                            xPos: this.startPos.x,
+                            yPos: this.startPos.y,
+
+                            xValue: Math.round(this.startPos.xValue),
+                            yValue: Math.round(this.startPos.yValue)
+                        },
+                        start = {
+                            xPos: this.endPos.x,
+                            yPos: this.endPos.y,
+
+                            xValue: Math.round(this.endPos.xValue),
+                            yValue: Math.round(this.endPos.yValue)
+                        };
+
+                    this.upTrend = this.isUpTrend(start.yPos, end.yPos);
+                    this.forwardTrend = this.isForwardTrend(end.xPos, start.xPos);
+
+                    var dY = end.yPos - start.yPos;
+
+                    _(this.fibonacci_intervals).forEach(function(fibonacciPoint, idx) {
+
+                        // LINE COORDINATES
+                        fibonacciPoint.x1 = start.xPos;
+                        fibonacciPoint.x2 = end.xPos;
+                        fibonacciPoint.y1 = start.yPos + (dY) * fibonacciPoint.value;
+                        fibonacciPoint.y2 = fibonacciPoint.y1; // Both 'y' coordinates are same since Fibonacci Trendline is a Horizontal Line                  
+
+
+                        var startValues = self.getValueFromCoordinates(fibonacciPoint.x1, fibonacciPoint.y1);
+                        var endValues = self.getValueFromCoordinates(fibonacciPoint.x2, fibonacciPoint.y2);
+
+
+                        // LINE VALUES
+                        fibonacciPoint.x1Value = startValues.x;
+                        fibonacciPoint.x2Value = endValues.x;
+                        fibonacciPoint.y1Value = startValues.y;
+                        fibonacciPoint.y2Value = endValues.y;
+
+                    });
+
+                    return this;
+                }
 
                 FibonacciRetracement.prototype.draw = function() {
 
@@ -64,7 +114,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                 }
 
                 FibonacciRetracement.prototype.getTextString = function(opts) {
-                    return '<span style="color: ' + this.drawOptions.textColor + '"; font-weight:bold">' + opts.text + ' (' + opts.y1Value.toFixed(this.decimals) + ')' + '</span>'
+                    return '<span style="color: ' + this.drawOptions.textColor + '"; font-weight:bold">' + opts.text + ((this.displayIntervalValue) ? ' (' + opts.y1Value.toFixed(this.decimals) + ')' : '') + '</span>'
                 }
 
                 FibonacciRetracement.prototype.drawText = function(opts) {
@@ -75,7 +125,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
 
                     this.textAboveLine = true;
 
-                    if (this.isForwardTrend) {
+                    if (this.forwardTrend) {
                         textXPos = opts.x1;
                         textYPos += this.drawOptions['stroke-width'] + 1;
                         this.textAboveLine = false;
@@ -110,7 +160,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                             dashStyle: 'dot',
                             stroke: opts.colour || this.drawOptions.stroke,
                             'stroke-width': this.drawOptions['stroke-width'],
-                            zIndex: this.drawOptions.fill - 10
+                            zIndex: this.drawOptions.fill
                         }).add().toFront();
                 }
 

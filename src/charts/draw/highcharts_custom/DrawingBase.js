@@ -219,8 +219,8 @@ define(['highstock'], function() {
 
         DrawTool.prototype.getValueFromCoordinates = function(x, y) {
             return {
-                x: this.series.xAxis.toValue(x),
-                y: this.series.yAxis.toValue(y)
+                x: this.series.xAxis.toValue(x) || 0,
+                y: this.series.yAxis.toValue(y) || 0
             }
         }
 
@@ -436,9 +436,9 @@ define(['highstock'], function() {
                         break;
                     }
                 case 'fibonacciretracement':
-                case 'fibonaccirearc':
-                case 'fibonaccirefans':
-                case 'fibonacciretimezone':
+                case 'fibonacciarc':
+                case 'fibonaccefan':
+                case 'fibonaccitimezone':
                 case 'fibonacci':
                     {
                         var filePath = 'charts/draw/fibonacci/fibonacci';
@@ -505,9 +505,9 @@ define(['highstock'], function() {
                         break;
                     }
                 case 'fibonacciretracement':
-                case 'fibonaccirearc':
-                case 'fibonaccirefans':
-                case 'fibonacciretimezone':
+                case 'fibonacciarc ':
+                case 'fibonaccifans':
+                case 'fibonaccitimezone':
                 case 'fibonacci':
                     {
                         var defaultOptions = {
