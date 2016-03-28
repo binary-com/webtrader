@@ -1,12 +1,12 @@
 {
   "name": "Webtrader",
   "icons": {
-    "16": "v2.0.22/images/webtrader_16px.png",
-    "128": "v2.0.22/images/webtrader_128px.png"
+    "16": "v2.0.23/images/webtrader_16px.png",
+    "128": "v2.0.23/images/webtrader_128px.png"
   },
   "launch_path": "/index.html",
   "description": "This is a Webtrader project for binary.com",
-  "version": "2.0.22",
+  "version": "2.0.23",
   "developer": {
     "name": "Arnab Karmakar",
     "email": "arnab@binary.com",
