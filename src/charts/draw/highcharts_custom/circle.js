@@ -1,5 +1,9 @@
 /**
  * Created by arnab on 4/3/15.
+ *   Inheritence:-  DrawTool
+ *                           => Shape
+ *                                     => Circle
+
  */
 define(['highstock', 'charts/draw/highcharts_custom/ShapeBase'], function() {
 

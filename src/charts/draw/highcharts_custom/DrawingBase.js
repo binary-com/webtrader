@@ -233,6 +233,17 @@ define(['highstock'], function() {
 
         }
 
+        DrawTool.prototype.getPointDetailsFromCoordinates = function(x, y) {
+            var pointValues = this.getValueFromCoordinates(x, y);
+
+            return {
+                xPos: x,
+                yPos: y,
+                xValue: Math.round(pointValues.x),
+                yValue: Math.round(pointValues.y)
+            };
+        }
+
 
         DrawTool.prototype.startDrag = function(e) {
             // unbind 'click'
@@ -437,7 +448,7 @@ define(['highstock'], function() {
                     }
                 case 'fibonacciretracement':
                 case 'fibonacciarc':
-                case 'fibonaccefan':
+                case 'fibonaccifan':
                 case 'fibonaccitimezone':
                 case 'fibonacci':
                     {
