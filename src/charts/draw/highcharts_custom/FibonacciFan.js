@@ -48,6 +48,11 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                     // Draw the Gridlines which connects the Fibonacci intervals parellely
                     this.showGridlines = true;
 
+                    // Show Text indicating the Fibonacci interval
+                    this.showText = true;
+                    // Optionally Show the actual value of the Fibonacci Fan-Line
+                    this.displayIntervalValue = true;
+
                 };
                 FibonacciFan.prototype = Object.create(Fibonacci.prototype);
                 FibonacciFan.constructor = FibonacciFan;
@@ -109,7 +114,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                         // CALCULATE ALL FIBONACCI INTERVAL POINTS THAT ARE ON THE LINE VERTICAL TO ORIGIN
                         // fibonacciPoint.vertical.x1 = self.startPoint.xPos;
                         // fibonacciPoint.vertical.y1 = self.startPoint.yPos;
-                        var verticalX = self.startPoint.xPos + (dX) * fibonacciPoint.value,
+                        var verticalX = (self.forwardTrend) ? self.startPoint.xPos + (dX) * fibonacciPoint.value : self.startPoint.xPos - (dX) * fibonacciPoint.value,
                             verticalY = self.endPoint.yPos,
                             verticalPointValues = self.getValueFromCoordinates(verticalX, verticalY);
 
@@ -124,7 +129,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                         // fibonacciPoint.horizontal.x1 = self.startPoint.xPos;
                         // fibonacciPoint.horizontal.y1 = self.startPoint.yPos;
                         var horizontalX = self.endPoint.xPos,
-                            horizontalY = self.startPoint.yPos - (dY) * fibonacciPoint.value,
+                            horizontalY = (self.upTrend) ? self.startPoint.yPos - (dY) * fibonacciPoint.value : self.startPoint.yPos + (dY) * fibonacciPoint.value,
                             horizontalPointValues = self.getValueFromCoordinates(horizontalX, horizontalY);
 
                         fibonacciPoint.horizontalPoint.xPos = horizontalX;
@@ -144,7 +149,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
 
                     _(this.fibonacci_intervals).forEach(function(fibonacciPoint) {
 
-                        // Plot Both the Upper & lower Fibonacci lines
+                        // Plot Both the Upper & lower Fibonacci Fan lines
                         if (fibonacciPoint.horizontalPoint.lineRef && fibonacciPoint.verticalPoint.lineRef) {
                             self.updateFibonacciFanLines(fibonacciPoint);
                         } else {
@@ -154,12 +159,24 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
 
                         // Draw GridLines
                         if (self.showGridlines) {
-                            if (fibonacciPoint.verticalGridLineRef && fibonacciPoint.horizontalGridLineRef) {
+                            if (fibonacciPoint.horizontalGridLineRef && fibonacciPoint.verticalGridLineRef) {
                                 self.updateFibonacciGridLines(fibonacciPoint);
                             } else {
                                 self.drawFibonacciGridLines(fibonacciPoint);
                             }
                         }
+
+
+                        // Draw Text indicating Fibonacci Interval & Value
+                        if (self.showText) {
+                            if (fibonacciPoint.horizontalGridLineTextRef && fibonacciPoint.verticalGridLineTextRef) {
+                                self.updateText(fibonacciPoint).drawText(fibonacciPoint);
+                            } else {
+                                self.drawText(fibonacciPoint);
+                            }
+                        }
+
+
                     });
                     return this;
                 }
@@ -175,7 +192,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                         .attr({
                             name: this.toolID + "_" + opts.text + "_sub_horizontalLine",
                             id: this.toolID + "_" + opts.text + "_sub_horizontalLine",
-                            opacity: 0.5,
+                            opacity: 0.7,
                             dashStyle: 'dot',
                             stroke: opts.colour || this.drawOptions.stroke,
                             'stroke-width': this.drawOptions['stroke-width'],
@@ -187,7 +204,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                         .attr({
                             name: this.toolID + "_" + opts.text + "_sub_verticalLine",
                             id: this.toolID + "_" + opts.text + "_sub_verticalLine",
-                            opacity: 0.5,
+                            opacity: 0.7,
                             dashStyle: 'dot',
                             stroke: opts.colour || this.drawOptions.stroke,
                             'stroke-width': this.drawOptions['stroke-width'],
@@ -226,6 +243,36 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                         }).add().toFront();
                 }
 
+                FibonacciFan.prototype.drawText = function(opts) {
+
+                    var chartID = this.chartID,
+                        renderer = this.chartRef.renderer || $(chartID).highcharts().renderer;
+
+                    // Create the Text Annotation on the Horizontal Fibonacci interval point
+                    opts.horizontalGridLineTextRef = renderer.text(this.getTextString(opts, opts.horizontalPoint.yValue), opts.horizontalPoint.xPos, opts.horizontalPoint.yPos)
+                        .attr({
+                            zIndex: this.drawOptions.zIndex
+                        })
+                        .css({
+                            color: this.drawOptions.textColor || '#a7a7a7',
+                            fontSize: this.drawOptions.fontSize || 12
+                        }).add().toFront();
+
+
+                    // Create the Text Annotation on the Vertical Fibonacci interval point                        
+                    opts.verticalGridLineTextRef = renderer.text(this.getTextString(opts, opts.verticalPoint.yValue), opts.verticalPoint.xPos, opts.verticalPoint.yPos)
+                        .attr({
+                            zIndex: this.drawOptions.zIndex
+                        })
+                        .css({
+                            color: this.drawOptions.textColor || '#a7a7a7',
+                            fontSize: this.drawOptions.fontSize || 12
+                        }).add().toFront();
+
+
+                }
+
+
 
 
                 FibonacciFan.prototype.updateFibonacciFanLines = function(opts) {
@@ -238,41 +285,50 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                     opts.verticalGridLineRef.attr('d', 'M ' + opts.verticalPoint.xPos + ' ' + this.startPoint.yPos + ' L ' + opts.verticalPoint.xPos + ' ' + opts.verticalPoint.yPos);
                 }
 
-                FibonacciFan.prototype.getTextString = function(opts) {
-                    return '<span style="color: ' + this.drawOptions.textColor + '"; font-weight:bold">' + opts.text + ((this.displayIntervalValue) ? ' (' + opts.outerYValue.toFixed(this.decimals) + ')' : '') + '</span>'
-                }
-
-                FibonacciFan.prototype.drawText = function(opts) {
-                    var chartID = this.chartID,
-                        renderer = this.chartRef.renderer || $(chartID).highcharts().renderer,
-                        textXPos = opts.centerX,
-                        textYPos = opts.outerY;
-
-                    // Create the Text Annotation
-                    return renderer.text(this.getTextString(opts), textXPos, textYPos)
-                        .attr({
-                            zIndex: this.drawOptions.zIndex
-                        })
-                        .css({
-                            color: this.drawOptions.textColor || '#a7a7a7',
-                            fontSize: this.drawOptions.fontSize || 12
-                        }).add().toFront();
-                }
-
-
-
                 FibonacciFan.prototype.updateText = function(opts) {
-                    opts.textRef.destroy();
-                    return opts.textRef = this.drawText(opts);;
+                    opts.horizontalGridLineTextRef.destroy();
+                    opts.verticalGridLineTextRef.destroy();
+                    return this;
                 }
+
+                FibonacciFan.prototype.getTextString = function(opts, value) {
+                    return '<span style="color: ' + this.drawOptions.textColor + '"; font-weight:bold">' + opts.text + ((this.displayIntervalValue) ? ' (' + value.toFixed(this.decimals) + ')' : '') + '</span>'
+                }
+
+
 
                 FibonacciFan.prototype.remove = function(opts) {
+
+                    var self = this;
+
                     _(this.fibonacci_intervals).forEach(function(fibonacciPoint) {
-                        if (fibonacciPoint.arcRef) {
-                            fibonacciPoint.arcRef.destroy();
-                            fibonacciPoint.textRef.destroy();
+
+                        // Removing Both the Upper & lower Fibonacci Fan lines
+                        if (fibonacciPoint.horizontalPoint.lineRef && fibonacciPoint.verticalPoint.lineRef) {
+
+                            fibonacciPoint.horizontalPoint.lineRef.destroy();
+                            fibonacciPoint.verticalPoint.lineRef.destroy();
+                        }
+
+                        // Removing GridLines
+                        if (self.showGridlines) {
+                            if (fibonacciPoint.verticalGridLineRef && fibonacciPoint.horizontalGridLineRef) {
+
+                                fibonacciPoint.horizontalGridLineRef.destroy();
+                                fibonacciPoint.verticalGridLineRef.destroy();
+                            }
+                        }
+
+                        // Removing Text indicating Fibonacci Interval & Value
+                        if (self.showText) {
+                            if (fibonacciPoint.horizontalGridLineTextRef && fibonacciPoint.verticalGridLineTextRef) {
+
+                                fibonacciPoint.horizontalGridLineTextRef.destroy();
+                                fibonacciPoint.verticalGridLineTextRef.destroy();
+                            }
                         }
                     });
+
                     return this;
                 }
 

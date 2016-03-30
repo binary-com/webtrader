@@ -167,7 +167,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
 
                 FibonacciArc.prototype.updateText = function(opts) {
                     opts.textRef.destroy();
-                    return opts.textRef = this.drawText(opts);;
+                    return opts.textRef = this.drawText(opts);
                 }
 
                 FibonacciArc.prototype.remove = function(opts) {
