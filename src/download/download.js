@@ -16,8 +16,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 {name : "3 mins", code : "3m"},
                 {name : "5 mins", code : "5m"},
                 {name : "10 mins", code : "10m"},
-                {name : "15 min", code : "15m"},
-                {name : "30 min", code : "30m"}
+                {name : "15 mins", code : "15m"},
+                {name : "30 mins", code : "30m"}
             ]
         },
         {
@@ -392,67 +392,72 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
                     function toggleTimePeriods(delayPeriod) {
 
-                        var DELAY_PERIOD_IN_MINUTES = delayPeriod;
-                        var $OUTER_LI_ITEMS = $(".download_timePeriod + ul > li");
+                          var DELAY_PERIOD_IN_MINUTES = delayPeriod;
+                          var $OUTER_LI_ITEMS = $(".download_timePeriod + ul > li");
 
 
-                        _.each($OUTER_LI_ITEMS, function(listItemOuter) {
+                          _.each($OUTER_LI_ITEMS, function(listItemOuter) {
 
-                            var $INNER_LI_ITEMS = $(listItemOuter).find('li');
+                              var $INNER_LI_ITEMS = $(listItemOuter).find('li');
 
-                            _.each($INNER_LI_ITEMS, function(listItemInner) {
+                              _.each($INNER_LI_ITEMS, function(listItemInner) {
 
-                                var $LISTITEM=$(listItemInner);
-                                var listItemData = $LISTITEM.data();
+                                  var $LISTITEM = $(listItemInner);
+                                  var listItemData = $LISTITEM.data();
 
-                                if (listItemData.timePeriodObject) {
+                                  if (listItemData.timePeriodObject) {
 
-                                    var MINUTE = 1,
-                                        HOUR = 60 * MINUTE,
-                                        DAY = 24 * MINUTE;
+                                      var MINUTE = 1,
+                                          HOUR = 60 * MINUTE,
+                                          DAY = 24 * HOUR;
 
-                                    var data = listItemData.timePeriodObject,
-                                        timeFactor = data.code.slice(0,-1),
-                                        timePeriod = data.code.slice(-1);
+                                      var data = listItemData.timePeriodObject,
+                                          timeFactor = data.code.slice(0, -1),
+                                          timePeriod = data.code.slice(-1);
 
-                                    switch (timePeriod) {
-                                        case 't':
-                                            {
-                                                  $LISTITEM.removeClass('ui-state-disabled').on('click');
-                                                break;
-                                            }
-                                        case 'm':
-                                            {
-                                                if (timeFactor * MINUTE >= DELAY_PERIOD_IN_MINUTES) {
-                                                    $LISTITEM.removeClass('ui-state-disabled').on('click');
-                                                } else {
-                                                    $LISTITEM.addClass('ui-state-disabled').off('click');
-                                                }
-                                                break;
-                                            }
-                                        case 'h':
-                                            {
-                                                 if (timeFactor * HOUR >= DELAY_PERIOD_IN_MINUTES) {
-                                                    $LISTITEM.removeClass('ui-state-disabled').on('click');
-                                                } else {
-                                                    $LISTITEM.addClass('ui-state-disabled').off('click');
-                                                }
-                                                break;
-                                            }
-                                        case 'd':
-                                            {
-                                                 if (timeFactor * DAY >= DELAY_PERIOD_IN_MINUTES) {
-                                                    $LISTITEM.removeClass('ui-state-disabled').on('click');
-                                                } else {
-                                                    $LISTITEM.addClass('ui-state-disabled').off('click');
-                                                }
-                                                break;
-                                            }
-                                    }
-                                }
-                            });
-                        });
-                    }
+                                      switch (timePeriod) {
+                                          case 't':
+                                              {
+                                                  if (DELAY_PERIOD_IN_MINUTES == 0) {
+                                                      $LISTITEM.removeClass('ui-state-disabled');
+                                                  } else {
+                                                      $LISTITEM.addClass('ui-state-disabled');
+
+                                                  }
+                                                  break;
+                                              }
+                                          case 'm':
+                                              {
+                                                  if (timeFactor * MINUTE >= DELAY_PERIOD_IN_MINUTES) {
+                                                      $LISTITEM.removeClass('ui-state-disabled');
+                                                  } else {
+                                                      $LISTITEM.addClass('ui-state-disabled');
+                                                  }
+                                                  break;
+                                              }
+                                          case 'h':
+                                              {
+                                                  if (timeFactor * HOUR >= DELAY_PERIOD_IN_MINUTES) {
+                                                      $LISTITEM.removeClass('ui-state-disabled');
+                                                  } else {
+                                                      $LISTITEM.addClass('ui-state-disabled');
+                                                  }
+                                                  break;
+                                              }
+                                          case 'd':
+                                              {
+                                                  if (timeFactor * DAY >= DELAY_PERIOD_IN_MINUTES) {
+                                                      $LISTITEM.removeClass('ui-state-disabled');
+                                                  } else {
+                                                      $LISTITEM.addClass('ui-state-disabled');
+                                                  }
+                                                  break;
+                                              }
+                                      }
+                                  }
+                              });
+                          });
+                      }
 
 
                     //Init the time period drop down
