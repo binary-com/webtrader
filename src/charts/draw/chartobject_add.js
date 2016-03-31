@@ -2,9 +2,9 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables", "common/util"], function ($) {
+define(["jquery", "datatables", "common/util"], function($) {
 
-    function init( containerIDWithHash, _callback ) {
+    function init(containerIDWithHash, _callback) {
 
         require(['text!charts/draw/chartobject_add.html'], function($html) {
             $html = $($html);
@@ -16,17 +16,19 @@ define(["jquery", "datatables", "common/util"], function ($) {
 
             //Attach row click listener
             table.rows().nodes().to$().click(function() {
-              var className = $.trim(($(this).find('td').attr('class') || '').split(" ")[0]);
-              require(["charts/draw/highcharts_custom/" + className], function(draw) {
-                var refererChartID = $('.chartobject_add_dialog').data('refererChartID');
-                $(refererChartID).highcharts().annotate = true;
-                draw.init();
-                $('.chartobject_add_dialog').dialog('close');
-              });
+                var className = $.trim(($(this).find('td').attr('class') || '').split(" ")[0]);
+                require(["charts/draw/highcharts_custom/" + className, "charts/draw/highcharts_custom/DrawingBase"], function(drawTool, DrawingBase) {
+
+                    $('.chartobject_add_dialog').dialog('close');
+                    var refererChartID = $('.chartobject_add_dialog').data('refererChartID');
+
+                    drawTool.init(refererChartID);
+
+                });
             });
 
             $html.appendTo("body");
-            $( ".chartobject_add_dialog" ).dialog({
+            $(".chartobject_add_dialog").dialog({
                 autoOpen: false,
                 resizable: false,
                 modal: true,
@@ -36,9 +38,8 @@ define(["jquery", "datatables", "common/util"], function ($) {
                 buttons: []
             });
 
-            if (typeof _callback == "function")
-            {
-                _callback( containerIDWithHash );
+            if (typeof _callback == "function") {
+                _callback(containerIDWithHash);
             }
 
         });
@@ -46,12 +47,11 @@ define(["jquery", "datatables", "common/util"], function ($) {
 
     return {
 
-        openDialog : function( containerIDWithHash ) {
+        openDialog: function(containerIDWithHash) {
 
             //If it has not been initiated, then init it first
-            if ($(".chartobject_add_dialog").length == 0)
-            {
-                init( containerIDWithHash, this.openDialog);
+            if ($(".chartobject_add_dialog").length == 0) {
+                init(containerIDWithHash, this.openDialog);
                 return;
             }
 
