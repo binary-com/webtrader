@@ -23,24 +23,29 @@ define(['highstock'], function() {
         /*    -----------------------------------------------DrawTool (Base Constructor for all Drawing Tools)----------------------------------------------------------*/
 
         DrawTool = function(type, chartID, options) {
-            //type="circle"
-            this.drawTool = type;
-            this.toolID = this.generateUniqueToolID();
-            this.chartID = chartID;
-            this.drawOptions = null;
+            try {
+                //type="circle"
+                this.drawTool = type;
+                this.toolID = this.generateUniqueToolID();
+                this.chartID = chartID;
+                this.drawOptions = null;
 
-            this.chartRef = $(this.chartID).highcharts();
-            this.series = this.chartRef.series[0];
-            this.Renderer = Highcharts.Renderer;
-            this.self = this;
+                this.chartRef = $(this.chartID).highcharts();
+                this.series = this.chartRef.series[0];
+                this.Renderer = Highcharts.Renderer;
+                this.self = this;
 
-            //TODO SAVE TO CACHE ONCE DRAWTOOL IS DRAWN NOT ON INITIALIZATION 
-            this.cacheDrawTool();
+                //TODO SAVE TO CACHE ONCE DRAWTOOL IS DRAWN NOT ON INITIALIZATION 
+                this.cacheDrawTool();
 
-            H.wrap(this.chartRef, 'destroy', function(c, e) {
-                //alert("chartRef destroyed");
-                c.call(this, e);
-            });
+                H.wrap(this.chartRef, 'destroy', function(c, e) {
+                    //alert("chartRef destroyed");
+                    c.call(this, e);
+                });
+
+            } catch (ex) {
+                console.log("Error Initialising DrawTool");
+            }
         }
 
 
@@ -219,7 +224,7 @@ define(['highstock'], function() {
 
         DrawTool.prototype.getValueFromCoordinates = function(x, y) {
             return {
-                x: this.series.xAxis.toValue(x) || 0,
+                x: Math.round(this.series.xAxis.toValue(x)) || 0,
                 y: this.series.yAxis.toValue(y) || 0
             }
         }
@@ -240,9 +245,15 @@ define(['highstock'], function() {
                 xPos: x,
                 yPos: y,
                 xValue: Math.round(pointValues.x),
-                yValue: Math.round(pointValues.y)
+                yValue: pointValues.y
             };
         }
+
+        DrawTool.prototype.getDateTimeString = function(unixTimeStamp) {
+            var date = new Date(unixTimeStamp);
+            var dateArr = date.toString().split(' ').splice(0, 5);
+            return dateArr[0] + ", " + dateArr[1] + " " + dateArr[2] + " " + dateArr[3] + " " + dateArr[4];
+        };
 
 
         DrawTool.prototype.startDrag = function(e) {

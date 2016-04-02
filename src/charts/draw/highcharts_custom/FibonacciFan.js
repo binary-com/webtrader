@@ -55,11 +55,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
 
                 };
                 FibonacciFan.prototype = Object.create(Fibonacci.prototype);
-                FibonacciFan.constructor = FibonacciFan;
-
-                FibonacciFan.prototype.getDistance = function() {
-                    return Math.sqrt((this.startPos.x - this.endPos.x) * (this.startPos.x - this.endPos.x) + (this.startPos.y - this.endPos.y) * (this.startPos.y - this.endPos.y));
-                };
+                FibonacciFan.constructor = FibonacciFan;             
 
 
                 FibonacciFan.prototype.updateCalculations = function() {

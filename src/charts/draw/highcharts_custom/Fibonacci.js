@@ -69,6 +69,54 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
         }];
     };
 
+    var getFibonacciSequence = function() {
+        return [{
+            colour: '#857676',
+            text: '0',
+            value: 0
+        }, {
+            colour: '#c7392a',
+            text: '1',
+            value: 1
+        }, {
+            colour: '#8bcc29',
+            text: '2',
+            value: 2
+        }, {
+            colour: '#29cc34 ',
+            text: '3',
+            value: 3
+        }, {
+            colour: '#2ac79a',
+            text: '5',
+            value: 5
+        }, {
+            colour: '#3193c4',
+            text: '8',
+            value: 8
+        }, {
+            colour: '#767685',
+            text: '13',
+            value: 13
+        }, {
+            colour: '#5656d6',
+            text: '21',
+            value: 21
+        }, {
+            colour: '#d44a4a',
+            text: '34',
+            value: 34
+        }, {
+            colour: '#9329cc',
+            text: '55',
+            value: 55
+        }, {
+            colour: '#cc2993',
+            text: '89',
+            value: 89
+        }];
+    };
+
     var mergeCustomInterval = function(fibonacciIntervals, customIntervals) {
         var min = 0,
             max = 5;
@@ -106,6 +154,12 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
         Fibonacci.prototype = Object.create(DrawTool.prototype);
         Fibonacci.constructor = Fibonacci;
 
+        Fibonacci.prototype.getFibonacciSequence = function() {
+
+            return getFibonacciSequence();
+
+        };
+
         Fibonacci.prototype.addEventhandlers = function(drawOptions) {
 
             if (this.drawOptions.customIntervals) {
@@ -139,6 +193,10 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
         Fibonacci.prototype.removeEventhandlers = function() {
             this.unBindClick(this.clickHandler);
         }
+
+        Fibonacci.prototype.getDistance = function() {
+            return Math.sqrt((this.startPos.x - this.endPos.x) * (this.startPos.x - this.endPos.x) + (this.startPos.y - this.endPos.y) * (this.startPos.y - this.endPos.y));
+        };
 
         Fibonacci.prototype.isUpTrend = function(startY, endY) {
             return startY < endY;
