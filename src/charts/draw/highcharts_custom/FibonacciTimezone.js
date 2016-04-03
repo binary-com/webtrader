@@ -39,10 +39,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                     this.decimals = 4;
 
                     // Show the Actual Value at the Fibonacci Interval  Example:-  "50% (1860.555)"
-                    this.displayIntervalValue = true;
-
-                    this.textAlignRight = true;
-                    this.textAboveLine = true;
+                    this.displayIntervalValue = true;                   
 
                     // Overwriting the Default Fibonacci Sequence
                     this.fibonacci_intervals = this.getFibonacciSequence();

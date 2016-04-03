@@ -195,14 +195,6 @@ define(['highstock'], function() {
         }
 
 
-        DrawTool.prototype.bindDrag = function(container, callback) {
-            // unbind 'click'
-            // on chartID
-            var container = container || this.chartID;
-            $(container).on('mousedown', { ref: this, container: container, callback: callback }, this.startDrag);
-
-        }
-
 
         /**
          * Add crossbrowser support for chartX and chartY
@@ -256,6 +248,14 @@ define(['highstock'], function() {
         };
 
 
+        DrawTool.prototype.bindDrag = function(container, callback) {
+            // unbind 'click'
+            // on chartID
+            var container = container || this.chartID;
+            $(container).on('mousedown', { ref: this, container: container, callback: callback }, this.startDrag);
+
+        }
+
         DrawTool.prototype.startDrag = function(e) {
             // unbind 'click'
             // on chartID     
@@ -264,8 +264,6 @@ define(['highstock'], function() {
                 callback = e.data.callback,
                 container = e.data.container || self.chartID,
                 chartRef = self.chartRef || $(self.chartID).highcharts();
-
-
 
             e = self.getHighchartNormalizedPoint(e);
 
@@ -289,6 +287,15 @@ define(['highstock'], function() {
             //$(self.chartID).off('mousemove', self.mouseDrag);
             $(container).on('mousemove', { ref: self, container: container, callback: callback }, self.mouseDrag);
 
+
+            $(container).one('mouseup', function() {
+                console.info('DrawTool Created: ' + self.toolID);
+                self.unbindDrag(container);
+
+                if (self.bindNext) {
+                    self.bindNext();
+                }
+            });
 
             // e.preventDefault();
             // e.stopPropogation();
@@ -320,10 +327,6 @@ define(['highstock'], function() {
                 yValue: point.y
             };
 
-            $(container).one('mouseup', function() {
-                self.unbindDrag(container);
-            });
-
             // call the update / step function
             callback.call(self);
         }
@@ -331,7 +334,6 @@ define(['highstock'], function() {
         DrawTool.prototype.unbindDrag = function(container) {
 
             var container = this.chartID || container;
-
 
             //Re-Enable Chart Panning
             this.setChartPanning(true);
@@ -341,7 +343,7 @@ define(['highstock'], function() {
                 $(container).off('mousedown', this.startDrag);
             }
 
-            //Disble Mouse-move
+            //Disable Mouse-move
             $(container).off('mousemove', this.mouseDrag);
         }
 
@@ -461,6 +463,7 @@ define(['highstock'], function() {
                 case 'fibonacciarc':
                 case 'fibonaccifan':
                 case 'fibonaccitimezone':
+                case 'fibonaccitrendchannel':
                 case 'fibonacci':
                     {
                         var filePath = 'charts/draw/fibonacci/fibonacci';
@@ -530,6 +533,7 @@ define(['highstock'], function() {
                 case 'fibonacciarc ':
                 case 'fibonaccifans':
                 case 'fibonaccitimezone':
+                case 'fibonaccitrendchannel':
                 case 'fibonacci':
                     {
                         var defaultOptions = {

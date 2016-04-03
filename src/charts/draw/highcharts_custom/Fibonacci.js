@@ -170,22 +170,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/DrawingBase'], fun
             this.bindDrag(null, this.dragHandler);
         }
 
-        Fibonacci.prototype.drawLine = function(opts) {
-
-            var chartID = this.chartID,
-                renderer = this.chartRef.renderer || $(chartID).highcharts().renderer;
-
-            return renderer.path(['M', opts.x1, opts.y1, 'L', opts.x2, opts.y2])
-                .attr({
-                    name: this.toolID + "_" + opts.text,
-                    id: this.toolID + "_" + opts.text,
-                    opacity: 0.5,
-                    dashStyle: 'dot',
-                    stroke: opts.colour || this.drawOptions.stroke,
-                    'stroke-width': this.drawOptions['stroke-width'],
-                    zIndex: this.drawOptions.zIndex
-                }).add().toFront();
-        }
+ 
 
         Fibonacci.prototype.dragHandler = function() {
             this.updateCalculations().draw();

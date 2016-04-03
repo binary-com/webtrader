@@ -117,6 +117,23 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                     return '<span style="color: ' + this.drawOptions.textColor + '"; font-weight:bold">' + opts.text + ((this.displayIntervalValue) ? ' (' + opts.y1Value.toFixed(this.decimals) + ')' : '') + '</span>'
                 }
 
+                FibonacciRetracement.prototype.drawLine = function(opts) {
+
+                    var chartID = this.chartID,
+                        renderer = this.chartRef.renderer || $(chartID).highcharts().renderer;
+
+                    return renderer.path(['M', opts.x1, opts.y1, 'L', opts.x2, opts.y2])
+                        .attr({
+                            name: this.toolID + "_" + opts.text,
+                            id: this.toolID + "_" + opts.text,
+                            opacity: 0.5,
+                            dashStyle: 'dot',
+                            stroke: opts.colour || this.drawOptions.stroke,
+                            'stroke-width': this.drawOptions['stroke-width'],
+                            zIndex: this.drawOptions.zIndex
+                        }).add().toFront();
+                }
+
                 FibonacciRetracement.prototype.drawText = function(opts) {
                     var chartID = this.chartID,
                         renderer = this.chartRef.renderer || $(chartID).highcharts().renderer,
@@ -147,7 +164,7 @@ define(['lodash', 'highstock', 'charts/draw/highcharts_custom/Fibonacci'], funct
                         }).add().toFront();
                 }
 
-              
+
 
                 FibonacciRetracement.prototype.updateLine = function(opts) {
                     return opts.lineRef.attr('d', 'M ' + opts.x1 + ' ' + opts.y1 + ' L ' + opts.x2 + ' ' + opts.y2);
