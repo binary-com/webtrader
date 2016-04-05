@@ -25,6 +25,8 @@
 
 .chartOptions .addOverlay span,
 .chartOptions .removeOverlay span,
+.chartOptions .addChartObject span,
+.chartOptions .removeChartObject span,
 .chartOptions .addInidicators span,
 .chartOptions .removeIndicators span
 {

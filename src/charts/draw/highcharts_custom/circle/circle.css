@@ -1,0 +1,17 @@
+.shape_input_width {
+    width: 120px;
+}
+
+.shape_level_input_width_for_level {
+    width: 115px;
+}
+
+.shapeDrawOptions label {
+    display: block;
+}
+
+.shape-ui-dialog,
+.shapeDrawOptions.ui-dialog-content,
+.shape_level.ui-dialog-content {
+    overflow: visible;
+}
