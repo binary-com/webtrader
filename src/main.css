@@ -38,7 +38,8 @@ body > .footer .addiction-warning span {
   color: white;
   text-align: left;
   display: inline-block;
-  max-width: 900px;
+  /*max-width: 900px;*/
+    text-align: center;
 }
 body > .footer .addiction-warning a,
 body > .footer .addiction-warning a:visited,
