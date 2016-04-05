@@ -25,6 +25,9 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 	                    map:		{ size: 128 },
 	                    bar:		{ size: 128 }
 	                },
+                    open: function (event, color) {
+                        color.colorPicker.setColor($(this).css("background-color"));
+                    },
 	                select:	function(event, color) {
 	                    $(this).css({
 	                        background:'#' + color.formatted
@@ -38,6 +41,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 	                    $(this).data("color",'#' + color.formatted);
 	                }
    				 });
+            });
+
+            $html.find("#bbands_background").colorpicker({
+                alpha: true,
+                colorFormat: 'RGBA',
+                part: {
+                    map: { size: 128 },
+                    bar: { size: 128 }
+                },
+                open: function (event, color) {
+                    color.colorPicker.setColor($(this).css("background-color"));
+                },
+                select: function (event, color) {
+                    $(this).css({
+                        background: color.formatted
+                    }).val('');
+                },
+                ok: function (event, color) {
+                    $(this).css({
+                        background: color.formatted
+                    }).val('');
+                }
             });
 
             var selectedDashStyle = "Solid";
@@ -77,6 +102,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                                    + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
 							           });
 							       });
+                                   $elem.val($elem.prop("defaultValue"));
 							       return;
 							   };
 
@@ -87,7 +113,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                     maType:$("#bbands_ma_type").val(),
                                     mdlBndStroke : $("#bbands_mdl_stroke").css("background-color"),
                                     uprBndStroke : $("#bbands_up_stroke").css('background-color'),
-                                    lwrBndStroke : $("#bbands_lwr_stroke").css('background-color'),
+                                    lwrBndStroke: $("#bbands_lwr_stroke").css('background-color'),
+                                    backgroundColor:$("#bbands_background").css("background-color"),
                                     strokeWidth : parseInt($("#bbands_strokeWidth").val()),
                                     dashStyle: selectedDashStyle,
                                     appliedTo: parseInt($("#bbands_appliedTo").val())

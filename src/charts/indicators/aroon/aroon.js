@@ -107,7 +107,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find('#aroon_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
                     require(["jquery", "jquery-growl"], function($) {
-                        $.growl.error({ message: "Select levels to delete!" });
+                        $.growl.error({ message: "Select level(s) to delete!" });
                     });
                 } else {
                     table.rows('.selected').remove().draw();
@@ -152,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                                 + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
+                                $elem.val($elem.prop("defaultValue"));
                                 return;
                             };
 

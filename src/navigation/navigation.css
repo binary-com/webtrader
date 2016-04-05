@@ -303,16 +303,17 @@
   color: #eee;
   line-height: 2em;
   font-size: larger;
-  min-width:80px;
+  min-width:60px;
   border: none;
   border-radius: 5px;
-  margin-left: 10px;
   outline: 0;
+  margin-right:-10px;
 }
 #nav-container .authentication div {
   display: inline-block;
   position: relative;
   color: #eee;
+  margin-right:-5px;
 }
 
 #nav-container .authentication span {
@@ -321,9 +322,11 @@
 }
 #nav-container .authentication span.loginid {
   width: 110px;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
   bottom: -10px;
+  margin-right:8px;
+  text-align:right;
 }
 #nav-container .authentication span.time {
   width: 110px;
@@ -336,9 +339,9 @@
 #nav-container .authentication span.balance {
   position: relative;
   top: 10px;
-  font-size: 14px;
-  padding-right: 10px;
-  margin-right: 10px;
+  font-size: 12px;
+  padding-right: 2px;
+  margin-right: -33px;
   line-height: 1.4em;
   border-right: 2px solid gray;
 }
@@ -348,7 +351,7 @@
 #nav-container .authentication button.logout { background: #4F577E; }
 
 /** targets min-width requirement **/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .nav-normal-menu {
         display: inline-table;
     }
@@ -363,7 +366,7 @@
 }
 
 /** targets mobile devices **/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .nav-normal-menu {
         display: none;
     }

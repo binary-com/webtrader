@@ -622,7 +622,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             extra.digits_value = state.digits.value;
             extra.tick_count = state.duration_count.value*1;
             if(extra.category !== 'Digits') {
-              extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
+              if (extra.category !== 'Asians') {
+                extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
+              }
               extra.show_tick_chart = true;
             }
         }
@@ -630,7 +632,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         // manually check to see if the user is authenticated or not,
         // we should update state.currency from user profile first (not everyone is using USD)
         if(!liveapi.is_authenticated()) {
-            $.growl.warning({ message: 'Please login with real account in order to Purchase' });
+            $.growl.warning({ message: 'Please log in' });
             state.purchase.loading = false;
         }
         else {

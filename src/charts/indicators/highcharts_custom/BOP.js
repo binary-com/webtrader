@@ -71,7 +71,7 @@ BOP.prototype.update = function(data) {
  * @returns {string}
  */
 BOP.prototype.toString = function() {
-    return 'BOP';
+    return ' BOP';
 };
 
 BOP.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
