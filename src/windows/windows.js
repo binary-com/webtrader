@@ -49,7 +49,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         var dialogs = $('.webtrader-dialog').filter(function (inx, d) {
             /* check to see if initialized and is visible */
             var $d = $(d);
-            return $d.hasClass("ui-dialog-content") && $d.dialog("isOpen") && !$d.hasClass('ui-dialog-minimized');
+            return $d.hasClass("ui-dialog-content") && $d.dialog("isOpen") && !$d.hasClass('ui-dialog-minimized') && ($(window).width() >= $d.dialog('option', 'width'));
         });
 
 
@@ -85,7 +85,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 if(inx != dialogs.length) { /* we don't care about extra space at last row */
                   total_free_space += free_space;
                 }
-
+                if (x === 0 && $(dialogs[inx]).dialog('option', 'width') > max_x) {
+                    ++inx;
+                    margin_left = 0;
+                };
                 x = 0;
                 for (var j = inx_start; j < inx; ++j) {
                     x += margin_left;
@@ -98,14 +101,14 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                             left: x + 'px',
                             top: y + 'px'
                         }, 1500);
-
+                    /* update dialog option.position */
+                    d.dialog("option", "position", { my: x, at: y });
                     x += w;
                 };
-
                 y += row_height + 20;
             }
             if(perform) { // fix footer postion on tile action
-              setTimeout(fixFooterPostion, 1500 + 100);
+              setTimeout(fixFooterPosition, 1500 + 100);
             }
             return total_free_space;
         }
@@ -121,6 +124,15 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 best_free_space = total_free_space;
             }
         }
+        // get array of large dialogs (larger than window size)
+        var largeDialogs = $('.webtrader-dialog').filter(function (inx, d) {
+            /* check to see if initialized and is visible */
+            var $d = $(d);
+            return $d.hasClass("ui-dialog-content") && $d.dialog("isOpen") && !$d.hasClass('ui-dialog-minimized') && ($(window).width() < $d.dialog('option', 'width'));
+        });
+        _(largeDialogs).forEach(function (d) {
+            best.push(d);
+        });
         arrange(best, true);
     }
 
@@ -352,7 +364,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         }
         return  Math.max.apply(null, bottoms);
     }
-    function fixFooterPostion(only_on_expand) {
+
+    function fixFooterPosition(only_on_expand) {
         $('body > .footer').width($('body').width());
         var scroll_height = getScrollHeight(true);
         var body_height = $('body').height();
@@ -362,7 +375,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         if(current_height > new_height && only_on_expand === true) {
           return;
         }
-        $('body > .footer').height(new_height);
+        $('body > .footer').css("margin-top", new_height - 100);
     };
     function fixMinimizedDialogsPosition() {
         var footer_height = $('.addiction-warning').height();
@@ -443,7 +456,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
               }
             });
-            $(window).resize(fixFooterPostion);
+            $(window).resize(fixFooterPosition);
             $(window).scroll(fixMinimizedDialogsPosition);
             return this;
         },
@@ -454,6 +467,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             //Trigger close even on all dialogs
             closeAllObject && closeAllObject.click();
         },
+
+        fixFooterPosition: fixFooterPosition,
 
         /* important options: { title:'',
                                 resize:fn, // callabak for dialog resize event
@@ -513,9 +528,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 }
             });
 
-            dialog.on('dragstop', fixFooterPostion);
-            dialog.on('drag', function() { fixFooterPostion(true); });
-            blankWindow.on('dialogextendminimize', fixFooterPostion);
+            dialog.on('dragstop', fixFooterPosition);
+            dialog.on('drag', function() { fixFooterPosition(true); });
+            blankWindow.on('dialogextendminimize', fixFooterPosition);
 
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);

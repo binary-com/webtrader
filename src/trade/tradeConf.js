@@ -91,7 +91,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       function add_tick(tick){
           state.ticks.array.push({
             quote: tick.quote,
-            epoch: tick.epoch,
+            epoch: tick.epoch*1,
             number: state.ticks.array.length+1,
             tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
                      extra.symbol_name + " " + tick.quote,
@@ -114,7 +114,10 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                    .map(function(tick) { return {quote: tick.price, epoch: tick.time/1000 }; })
                    .sort(function(a,b) { return a.epoch - b.epoch; });
       // console.warn(ticks);
-      ticks.forEach(add_tick); /* add existing ticks */
+      /* Wait till the view is bound via rivetsjs */
+      setTimeout(function(){
+        ticks.forEach(add_tick); /* add existing ticks */
+      }, 0);
 
       var fn = liveapi.events.on('tick', function (data) {
           if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)

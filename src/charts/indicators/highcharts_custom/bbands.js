@@ -153,7 +153,7 @@ BBANDS.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
                 name: "BBANDS Range",
                 type: 'arearange',
                 color: 'white',
-                fillColor: 'rgba(28,28,28,0.5)',
+                fillColor: this.options.backgroundColor,
                 connectNulls: true,
                 //Following properties, states, events, dataLabels, point are needed. Otherwise higcharts-more throws error
                 states: {

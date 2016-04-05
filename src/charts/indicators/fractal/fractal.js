@@ -1,8 +1,8 @@
-/**
- * Created by arnab on 3/1/15.
+﻿/**
+ * Created by Maahboob.M on 2/18/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($, _) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -11,65 +11,52 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function init(containerIDWithHash, _callback) {
 
-        require(['css!charts/indicators/min/min.css']);
+        require(['css!charts/indicators/fractal/fractal.css']);
 
-        require(['text!charts/indicators/min/min.html'], function ($html) {
+        require(['text!charts/indicators/fractal/fractal.html'], function ($html) {
 
-            var defaultStrokeColor = '#cd0a0a';
+            var defaultColor = '#cd0a0a';
 
             $html = $($html);
-            //$html.hide();
             $html.appendTo("body");
             $html.find("input[type='button']").button();
 
-            $html.find("#min_stroke").colorpicker({
+            $html.find("#fractal_color").colorpicker({
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
                 },
                 select: function (event, color) {
-                    $("#min_stroke").css({
+                    $(this).css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
                 ok: function (event, color) {
-                    $("#min_stroke").css({
+                    $(this).css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 }
             });
 
-            var selectedDashStyle = "Solid";
-            $('#min_dashStyle').ddslick({
-                imagePosition: "left",
-                width: 138,
-                background: "white",
-                onSelected: function (data) {
-                    $('#min_dashStyle .dd-selected-image').css('max-width', '105px');
-                    selectedDashStyle = data.selectedData.value
-                }
-            });
-            $('#min_dashStyle .dd-option-image').css('max-width', '105px');
-
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
+                width: 315,
                 modal: true,
-                width: 280,
                 my: 'center',
                 at: 'center',
                 of: window,
-                dialogClass: 'min-ui-dialog',
+                dialogClass: 'fractal-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
                         click: function () {
-                            var $elem = $(".min_input_width_for_period");
-                            if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+                            var $elem = $('#number_of_bars');
+                            if (!_.inRange($elem.val(),
                                             parseInt($elem.attr("min")),
-                                            parseInt($elem.attr("max")) + 1)) {
+                                            parseInt($elem.attr("max")))) {
                                 require(["jquery", "jquery-growl"], function ($) {
                                     $.growl.error({
                                         message: "Only numbers between " + $elem.attr("min")
@@ -77,19 +64,26 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                                 + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
-                                $elem.val($elem.prop("defaultValue"));
                                 return;
                             };
 
+                            if (Math.abs(parseInt($elem.val() % 2)) === 0) {
+                                require(["jquery", "jquery-growl"], function ($) {
+                                    $.growl.error({
+                                        message: "The number of bars on sides should an odd number!"
+                                    });
+                                });
+                                return;
+                            };
+
+                            var series = $($(".fractal").data('refererChartID')).highcharts().series[0];
                             var options = {
-                                period: parseInt($html.find(".min_input_width_for_period").val()),
-                                stroke: defaultStrokeColor,
-                                strokeWidth: parseInt($html.find("#min_strokeWidth").val()),
-                                dashStyle: selectedDashStyle,
-                                appliedTo: parseInt($html.find("#min_appliedTo").val())
-                            }
-                            //Add MIN for the main series
-                            $($(".min").data('refererChartID')).highcharts().series[0].addIndicator('min', options);
+                                numberOfBars: parseInt($elem.val()),
+                                color: defaultColor,
+                                onSeriesID: series.options.id
+                            };
+                            //Add fractal for the main series
+                            series.addIndicator('fractal', options);
 
                             closeDialog.call($html);
                         }
@@ -102,11 +96,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 140
-            });
 
-            if (typeof _callback == "function") {
+            if (_.isFunction(_callback)) {
                 _callback(containerIDWithHash);
             }
 
@@ -118,12 +109,12 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
         open: function (containerIDWithHash) {
 
-            if ($(".min").length == 0) {
+            if ($(".fractal").length == 0) {
                 init(containerIDWithHash, this.open);
                 return;
             }
 
-            $(".min").data('refererChartID', containerIDWithHash).dialog("open");
+            $(".fractal").data('refererChartID', containerIDWithHash).dialog("open");
 
         }
 
