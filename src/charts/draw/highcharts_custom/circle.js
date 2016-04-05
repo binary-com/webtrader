@@ -1,128 +1,89 @@
 /**
  * Created by arnab on 4/3/15.
- *   Inheritence:-  DrawTool
- *                           => Shape
- *                                     => Circle
-
  */
-define(['highstock', 'charts/draw/highcharts_custom/ShapeBase'], function() {
+define(['highstock'], function () {
 
-    return {
-        init: function(chartID) {
+  var isLibraryLoaded = false, currentObject = null;
 
-            if (!window['Shape']) return;
+  return {
+      init: function() {
 
-            if (!window['Circle']) {
+        if (isLibraryLoaded) return;
 
-                /*    -----------------------------------------------CIRCLE----------------------------------------------------------*/
+          (function(H,$) {
 
-                Circle = function(chartID, options) {
-                    Shape.call(this, 'Circle', chartID, options);
-                    this.isDraggable = true;
-                };
-                Circle.prototype = Object.create(Shape.prototype);
-                Circle.prototype.constructor = Circle;
+            /*
+              - When not annnotating, allow dragging of chart or zooming
+              - Have to annotate chart where it got triggered from
+              TODO
+              - check if the drag is inside chart container
+              - Glow the object when hover over
+              - Should be able to hold and move the objects
+              - Change mouse cursor to square when inside the chart area
+              - Escape should remove the annotate mode
+            */
 
-                Circle.prototype.create = function() {
-                    try {
-                        var chartID = this.chartID,
-                            renderer = this.chartRef.renderer || $(chartID).highcharts().renderer,
-                            self = this;
+            // when drawing annotation, don't zoom/select place
+            H.wrap(H.Pointer.prototype, 'drag', function(c, e) {
+              var chart = this.chart;
+              var renderer = chart.renderer;
+              if (chart.annotate) {
+                var bbox = chart.container.getBoundingClientRect();
+                e = chart.pointer.normalize();
+                if (currentObject == null) {
 
-                        var drawOptions = $.extend({}, this.getDefaultDrawOptions(), this.drawOptions);
+                  var startX = e.chartX;
+                  // translate my coordinates to pixel values
+                  startX = chart.xAxis[0].toPixels(startX)
+                  var startY = e.chartY;
+                  startY = chart.yAxis[0].toPixels(startY);
+                  var endX = startX;
+                  var endY = startY;
+                  var radius = Math.sqrt(Math.pow(startX - endX, 2) + Math.pow(startY - endY, 2));
 
-                        var radius = Math.sqrt(Math.pow(this.startPos.x - this.endPos.x, 2) + Math.pow(this.startPos.y - this.endPos.y, 2));
+                  var seriesGroup = this.chart.series[0].group;
+                  currentObject = renderer.circle(startX, startY, radius).attr({
+                    'fill'        : 'rgba(255,0,0,0.4)',
+                    'stroke'      : 'black',
+                    'stroke-width': 2
+                  }).add(seriesGroup);
+                  $(chart.container).one("mouseup", function() {
+                    chart.annotate = false;
+                    currentObject = null;
+                  });
 
+                } else {
 
-                        //If Circle already drawn then update the radius
-                        if (this.circleRef) {
-                            this.updateRadius(radius);
-                            return;
-                        }
-
-                        // var shapeGroup = $(this.chartID).data('shapeGroup');
-                        // if (!shapeGroup) {
-                        //     $(this.chartID).data('shapeGroup', renderer.g().add());
-                        // }
-
-                        // Create the circle
-                        this.circleRef = renderer.circle(this.startPos.x, this.startPos.y, radius).attr(drawOptions).add( /*shapeGroup*/ ).toFront();
-
-
-                        // Adding drag Event on the SVG Circle Element
-                        if (this.isDraggable) {
-                            var circleSVG = this.circleRef.element;
-                            this.dragTool(circleSVG, this.dragCircle);
-
-                        }
-
-                    } catch (ex) {
-
-                        console.error('Error on Drawing Circle:' + ex.message);
-                    }
-
-                }
-
-                Circle.prototype.updateRadius = function(radius) {
-                    try {
-                        // update the circle size by updating it's Radius
-                        this.circleRef.attr({
-                            r: radius
-                        }).toFront();
-                    } catch (ex) {
-                        console.error('Error on Drawing Circle:' + ex.message);
-                    }
+                  var startX = currentObject.attr("cx");
+                  var startY = currentObject.attr("cy");
+                  var endX = e.chartX;
+                  endX = chart.xAxis[0].toPixels(endX);
+                  var endY = e.chartY;
+                  endY = chart.xAxis[0].toPixels(endY);
+                  var radius = Math.sqrt(Math.pow(startX - endX, 2) + Math.pow(startY - endY, 2));
+                  currentObject.attr({
+                    r : radius
+                  });
 
                 }
 
-                Circle.prototype.dragCircle = function() {
-                    try {
+                console.log('Its an annotate call from chart : ' + $(chart.container).attr("id"));
+              }
+            	else {
+            		c.call(this, e);
+            	}
+            });
 
+            // update annotations after chart redraw
+        		// Highcharts.addEvent(chart, 'redraw', function () {
+        		// 	console.log('Redraw called - I am in circle.js!');
+        		// });
 
-                        //Distance of the drag from previous position
-                        var dX = this.dragEndPos.x - this.dragStartPos.x;
-                        var dY = this.dragEndPos.y - this.dragStartPos.y;
+            isLibraryLoaded = true;
 
+          } (Highcharts,jQuery));
 
-                        //console.log(dX, dY);
-
-                        //Setting the new start position
-                        this.dragStartPos.x = this.dragEndPos.x;
-                        this.dragStartPos.y = this.dragEndPos.y;
-
-
-                        //Getting the Circle's Centre co-ordinates
-                        var circleX = this.circleRef.attr('x');
-                        var circleY = this.circleRef.attr('y');
-
-
-                        this.circleRef.attr({
-                            x: circleX + dX, //this.endPos.x, //currentX + newX,
-                            y: circleY + dY //this.endPos.y // currentY + newY
-                        }).toFront();
-
-                    } catch (ex) {
-
-                        console.error('Error on Drawing Circle:' + ex.message);
-                    }
-
-                }
-
-                Circle.prototype.remove = function() {
-                    this.circleRef.destroy();
-                };
-
-                /*    -----------------------------------------------CIRCLE----------------------------------------------------------*/
-
-                window['Circle'] = Circle;
-
-            }
-
-            var Circle = window['Circle'];
-            var circle = new Circle(chartID, {});
-            circle.openDialog();
-
-        }
-    }
+      }
+  }
 
 });
