@@ -18,7 +18,7 @@ define(["jquery", "datatables", "common/util"], function ($) {
             table.rows().nodes().to$().click(function() {
 
                 var className = $.trim(($(this).find('td').attr('class') || '').split(" ")[0]);
-                    require(["charts/draw/highcharts_custom/" + className], function(drawTool) {
+                    require(["charts/draw/highcharts_custom/" + className.toLowerCase()], function(drawTool) {
                     $('.chartobject_add_dialog').dialog('close');
                     var refererChartID = $('.chartobject_add_dialog').data('refererChartID');
 
