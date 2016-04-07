@@ -257,7 +257,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             var str = this.axis.defaultLabelFormatter.call(this);
                             return str.replace('.','');
                         }
-                    }
+                    },
+                    ordinal : false
                 },
 
                 yAxis: [{
