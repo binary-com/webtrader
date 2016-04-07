@@ -24,8 +24,8 @@ The goal of this project is to create a full-screen trading interface for [Binar
     * Open Git Bash and run the following commands:
         $ git clone https://github.com/binary-com/webtrader.git
         $ cd webtrader
-        $ install -g grunt-cli
-        $ install -g bower
+        $ npm install -g grunt-cli
+        $ npm install -g bower
         $ npm install
         $ bower install
 These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from `package.json` and `bower.json` files.
