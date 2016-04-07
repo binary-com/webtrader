@@ -30,7 +30,13 @@ The goal of this project is to create a full-screen trading interface for [Binar
         $ bower install
 These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from `package.json` and `bower.json` files.
 
-At this point, your project is properly setup. You can now run following command to start a local server
+At this point, your project is properly setup. 
+
+Run grunt to compile the project
+
+        $ grunt
+
+You can now run following command to start a local server
         
         $ grunt connect:compressed
         For compressed file serving
