@@ -164,6 +164,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     download.init(elem);
                     elem.click();
                 });
+
+            //Register async loading of self-exclusion dialog
+            load_ondemand($navMenu.find("a.selfexclusion"), 'click', 'loading Self-Exclusion ...', 'selfexclusion/selfexclusion',
+                function (selfexclusion) {
+                    var elem = $navMenu.find("a.selfexclusion");
+                    selfexclusion.init(elem);
+                    elem.click();
+                });
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
