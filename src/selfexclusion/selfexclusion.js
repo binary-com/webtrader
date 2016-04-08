@@ -31,36 +31,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                 "max_7day_turnover": scope.max_7day_turnover
             };
 
-            //Validate inputs
-            if (!_.isNumber(data.session_duration_limit)) {
-                $.growl.error({ message : "Number only for Session duration limit" });
-                return;
-            } else if (!_.isNumber(data.max_open_bets)) {
-                $.growl.error({ message : "Number only for Maximum number of open positions" });
-                return;
-            } else if (!_.isNumber(data.max_balance)) {
-                $.growl.error({ message : "Number only for Maximum account cash balance" });
-                return;
-            } else if (!_.isNumber(data.max_30day_losses)) {
-                $.growl.error({ message : "Number only for Maximum aggregate loss over a 30-day period" });
-                return;
-            } else if (!_.isNumber(data.max_turnover)) {
-                $.growl.error({ message : "Number only for Maximum aggregate contract purchases per day" });
-                return;
-            } else if (!_.isNumber(data.max_30day_turnover)) {
-                $.growl.error({ message : "Number only for Maximum aggregate contract purchases over a 30-day period" });
-                return;
-            } else if (!_.isNumber(data.max_7day_losses)) {
-                $.growl.error({ message : "Number only for Maximum aggregate contract purchases over a 7-day period" });
-                return;
-            } else if (!_.isNumber(data.max_losses)) {
-                $.growl.error({ message : "Number only for Maximum aggregate loss per day" });
-                return;
-            } else if (!_.isNumber(data.max_7day_turnover)) {
-                $.growl.error({ message : "Number only for Maximum aggregate contract purchases over a 7-day period" });
-                return;
-            }
-
             liveapi.send(data)
                 .then(function(response) {
                     $.growl.notice({ message : "Your changes have been updated" });
