@@ -355,17 +355,10 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                         instrument.data("instrumentObject", value);
                                         instrument.click(function() {
                                              var instrumentObject = $(this).data("instrumentObject");
-                                             
-                                                toggleTimePeriods(instrumentObject.delay_amount);
-
-                                                // Reset default TimePeriod
-                                                var $download_timePeriod = $(".download_timePeriod");
-                                                $download_timePeriod.find("span").html("1 day");
-
                                             $(".download_instruments")
                                                 .data("instrumentObject",instrumentObject)
                                                 .find("span")
-                                                .html($(this).data("instrumentObject").display_name);
+                                                .html(instrumentObject.display_name);
                                             $(".download_instruments_container > ul").toggle();
                                         });
                                         if (_.isUndefined(defaultInstrumentObject)) {
@@ -398,45 +391,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             $.growl.error({ message: e.message });
                         });
 
-
-                        function toggleTimePeriods(delayPeriod) {
-                             var delay_period_in_minutes = delayPeriod;
-                             var minute = 1,hour = 60 * minute,day = 24 * hour;
-
-                             $(".download_timePeriod + ul > li").each(function() {
-                                 $(this).find('li').each(function() {
-                                     var listItemData = $(this).data(),
-                                         timeObj = listItemData.timePeriodObject,
-                                         timeFactor = timeObj.code.slice(0, -1),
-                                         timePeriod = timeObj.code.slice(-1),
-                                         time_in_minutes = 0;
-
-                                     switch (timePeriod) {                                       
-                                         case 'm':
-                                             {
-                                                 time_in_minutes = timeFactor * minute;
-                                                 break;
-                                             }
-                                         case 'h':
-                                             {
-                                                 time_in_minutes = timeFactor * hour;
-                                                 break;
-                                             }
-                                         case 'd':
-                                             {
-                                                 time_in_minutes = timeFactor * day;
-                                                 break;
-                                             }
-                                     }
-
-                                     if (time_in_minutes >= delay_period_in_minutes || delay_period_in_minutes == 0) {
-                                         $(this).removeClass('ui-state-disabled');
-                                     } else {
-                                         $(this).addClass('ui-state-disabled');
-                                     }
-                                 });
-                             });
-                         }
 
                     //Init the time period drop down
                     var $download_timePeriod = $(".download_timePeriod");
