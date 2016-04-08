@@ -33,7 +33,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
             //Validate inputs
             if (!_.isNumber(data.session_duration_limit)) {
-                $.growl.error({ message : "Number only for You will be automatically logged out after such time" });
+                $.growl.error({ message : "Number only for Session duration limit" });
                 return;
             } else if (!_.isNumber(data.max_open_bets)) {
                 $.growl.error({ message : "Number only for Maximum number of open positions" });
