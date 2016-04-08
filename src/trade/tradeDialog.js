@@ -246,8 +246,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             return state.currency.value + ' ' + ((this.payout - this.ask_price) || 0).toFixed(2);
           },
           return_: function () {
-            var ret = (((this.payout - this.ask_price) / this.ask_price) || 0).toFixed(2) ;
-            return (ret* 100 | 0) + '%';
+            var ret = (((this.payout - this.ask_price) / this.ask_price) * 100).toFixed(0) | 0;
+            return ret + '%';
           }
         },
         purchase: {
