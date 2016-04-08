@@ -400,8 +400,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
 
                         function toggleTimePeriods(delayPeriod) {
-                             var DELAY_PERIOD_IN_MINUTES = delayPeriod;
-                             var MINUTE = 1,HOUR = 60 * MINUTE,DAY = 24 * HOUR;
+                             var delay_period_in_minutes = delayPeriod;
+                             var minute = 1,hour = 60 * minute,day = 24 * hour;
 
                              $(".download_timePeriod + ul > li").each(function() {
                                  $(this).find('li').each(function() {
@@ -414,22 +414,22 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                      switch (timePeriod) {                                       
                                          case 'm':
                                              {
-                                                 time_in_minutes = timeFactor * MINUTE;
+                                                 time_in_minutes = timeFactor * minute;
                                                  break;
                                              }
                                          case 'h':
                                              {
-                                                 time_in_minutes = timeFactor * HOUR;
+                                                 time_in_minutes = timeFactor * hour;
                                                  break;
                                              }
                                          case 'd':
                                              {
-                                                 time_in_minutes = timeFactor * DAY;
+                                                 time_in_minutes = timeFactor * day;
                                                  break;
                                              }
                                      }
 
-                                     if (time_in_minutes >= DELAY_PERIOD_IN_MINUTES || DELAY_PERIOD_IN_MINUTES == 0) {
+                                     if (time_in_minutes >= delay_period_in_minutes || delay_period_in_minutes == 0) {
                                          $(this).removeClass('ui-state-disabled');
                                      } else {
                                          $(this).addClass('ui-state-disabled');
