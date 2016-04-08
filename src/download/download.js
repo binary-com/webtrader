@@ -398,73 +398,46 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             $.growl.error({ message: e.message });
                         });
 
+
                         function toggleTimePeriods(delayPeriod) {
+                             var DELAY_PERIOD_IN_MINUTES = delayPeriod;
+                             var MINUTE = 1,HOUR = 60 * MINUTE,DAY = 24 * HOUR;
 
-                            var DELAY_PERIOD_IN_MINUTES = delayPeriod;
-                            var $OUTER_LI_ITEMS = $(".download_timePeriod + ul > li");
+                             $(".download_timePeriod + ul > li").each(function() {
+                                 $(this).find('li').each(function() {
+                                     var listItemData = $(this).data(),
+                                         timeObj = listItemData.timePeriodObject,
+                                         timeFactor = timeObj.code.slice(0, -1),
+                                         timePeriod = timeObj.code.slice(-1),
+                                         time_in_minutes = 0;
 
+                                     switch (timePeriod) {                                       
+                                         case 'm':
+                                             {
+                                                 time_in_minutes = timeFactor * MINUTE;
+                                                 break;
+                                             }
+                                         case 'h':
+                                             {
+                                                 time_in_minutes = timeFactor * HOUR;
+                                                 break;
+                                             }
+                                         case 'd':
+                                             {
+                                                 time_in_minutes = timeFactor * DAY;
+                                                 break;
+                                             }
+                                     }
 
-                            _.each($OUTER_LI_ITEMS, function(listItemOuter) {
+                                     if (time_in_minutes >= DELAY_PERIOD_IN_MINUTES || DELAY_PERIOD_IN_MINUTES == 0) {
+                                         $(this).removeClass('ui-state-disabled');
+                                     } else {
+                                         $(this).addClass('ui-state-disabled');
+                                     }
+                                 });
+                             });
+                         }
 
-                                var $INNER_LI_ITEMS = $(listItemOuter).find('li');
-
-                                _.each($INNER_LI_ITEMS, function(listItemInner) {
-
-                                    var $LISTITEM = $(listItemInner);
-                                    var listItemData = $LISTITEM.data();
-
-                                    if (listItemData.timePeriodObject) {
-
-                                        var MINUTE = 1,
-                                            HOUR = 60 * MINUTE,
-                                            DAY = 24 * HOUR;
-
-                                        var data = listItemData.timePeriodObject,
-                                            timeFactor = data.code.slice(0, -1),
-                                            timePeriod = data.code.slice(-1);
-
-                                        switch (timePeriod) {
-                                            case 't':
-                                                {
-                                                    if (DELAY_PERIOD_IN_MINUTES == 0) {
-                                                        $LISTITEM.removeClass('ui-state-disabled');
-                                                    } else {
-                                                        $LISTITEM.addClass('ui-state-disabled');
-                                                    }
-                                                    break;
-                                                }
-                                            case 'm':
-                                                {
-                                                    if (timeFactor * MINUTE >= DELAY_PERIOD_IN_MINUTES) {
-                                                        $LISTITEM.removeClass('ui-state-disabled');
-                                                    } else {
-                                                        $LISTITEM.addClass('ui-state-disabled');
-                                                    }
-                                                    break;
-                                                }
-                                            case 'h':
-                                                {
-                                                    if (timeFactor * HOUR >= DELAY_PERIOD_IN_MINUTES) {
-                                                        $LISTITEM.removeClass('ui-state-disabled');
-                                                    } else {
-                                                        $LISTITEM.addClass('ui-state-disabled');
-                                                    }
-                                                    break;
-                                                }
-                                            case 'd':
-                                                {
-                                                    if (timeFactor * DAY >= DELAY_PERIOD_IN_MINUTES) {
-                                                        $LISTITEM.removeClass('ui-state-disabled');
-                                                    } else {
-                                                        $LISTITEM.addClass('ui-state-disabled');
-                                                    }
-                                                    break;
-                                                }
-                                        }
-                                    }
-                                });
-                            });
-                        }
                     //Init the time period drop down
                     var $download_timePeriod = $(".download_timePeriod");
                     var rootUL_timePeriod = $("<ul>");
