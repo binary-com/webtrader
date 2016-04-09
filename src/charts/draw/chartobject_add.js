@@ -16,13 +16,15 @@ define(["jquery", "datatables", "common/util"], function ($) {
 
             //Attach row click listener
             table.rows().nodes().to$().click(function() {
-              var className = $.trim(($(this).find('td').attr('class') || '').split(" ")[0]);
-              require(["charts/draw/highcharts_custom/" + className], function(draw) {
-                var refererChartID = $('.chartobject_add_dialog').data('refererChartID');
-                $(refererChartID).highcharts().annotate = true;
-                draw.init();
-                $('.chartobject_add_dialog').dialog('close');
-              });
+
+                var className = $.trim(($(this).find('td').attr('class') || '').split(" ")[0]);
+                    require(["charts/draw/highcharts_custom/" + className.toLowerCase()], function(drawTool) {
+                    $('.chartobject_add_dialog').dialog('close');
+                    var refererChartID = $('.chartobject_add_dialog').data('refererChartID');
+
+                    var drawTool=new window[className](refererChartID);
+                    drawTool.openDialog();
+                });
             });
 
             $html.appendTo("body");
