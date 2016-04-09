@@ -89,6 +89,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     };
 
     var setOrRefreshTimer = function() {
+
+        if (_.isUndefined(settingsData.session_duration_limit)
+                || _.isNull(settingsData.session_duration_limit)
+                || !_.isNumber(settingsData.session_duration_limit)) return;
+
         if (timerHandler) clearTimeout(timerHandler);
         var logoutAfter_seconds = settingsData.session_duration_limit * 60 * 1000;
         timerHandler = setLongTimeout(function() {
