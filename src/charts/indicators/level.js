@@ -77,7 +77,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         click: function() {
 
                             var $elem = $('input.level_input_width_for_level');
-                            if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")) + 1)) {
+                            if (!_.isNumber(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")))) {
                                 require(["jquery", "jquery-growl"], function($) {
                                     $.growl.error({
                                         message: "Only numbers between " + $elem.attr("min") + " to " + $elem.attr("max") + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
