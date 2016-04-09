@@ -252,12 +252,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             menuItems: [{
                                 text: 'Download PNG',
                                 onclick: function () {
-                                    this.exportChart();
+                                    this.exportChartLocal();
                                 }
                             }, {
                                 text: 'Download JPEG',
                                 onclick: function () {
-                                    this.exportChart({
+                                    this.exportChartLocal({
                                         type: 'image/jpeg'
                                     });
                                 },
@@ -265,7 +265,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download PDF',
                                 onclick: function () {
-                                    this.exportChart({
+                                    this.exportChartLocal({
                                         type: 'application/pdf'
                                     });
                                 },
@@ -273,7 +273,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download SVG',
                                 onclick: function () {
-                                    this.exportChart({
+                                    this.exportChartLocal({
                                         type: 'image/svg+xml'
                                     });
                                 },

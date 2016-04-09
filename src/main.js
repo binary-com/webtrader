@@ -9,7 +9,7 @@ requirejs.config({
         'jquery-ui': "lib/jquery-ui/jquery-ui.min",
         'highstock': "lib/highstock/highstock",
         'highcharts-more': "lib/highstock/highcharts-more",
-        'highcharts-exporting': 'lib/highstock/modules/exporting',
+        'highcharts-exporting': 'lib/highstock/modules/offline-exporting',
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
         'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
@@ -53,7 +53,7 @@ requirejs.config({
             deps: ["jquery"]
         },
         "highcharts-exporting": {
-            deps: ["highstock"]
+            deps: ["highstock", 'lib/highstock/modules/exporting']
         },
         "highcharts-theme": {
             deps: ["highstock"]

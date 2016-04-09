@@ -130,12 +130,12 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         menuItems: [{
                             text: 'Download PNG',
                             onclick: function () {
-                                this.exportChart();
+                                this.exportChartLocal();
                             }
                         }, {
                             text: 'Download JPEG',
                             onclick: function () {
-                                this.exportChart({
+                                this.exportChartLocal({
                                     type: 'image/jpeg'
                                 });
                             },
@@ -143,7 +143,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download PDF',
                             onclick: function () {
-                                this.exportChart({
+                                this.exportChartLocal({
                                     type: 'application/pdf'
                                 });
                             },
@@ -151,7 +151,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download SVG',
                             onclick: function () {
-                                this.exportChart({
+                                this.exportChartLocal({
                                     type: 'image/svg+xml'
                                 });
                             },
