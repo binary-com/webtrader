@@ -190,7 +190,12 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               if(value === '0' || value === 0)
                 balance.fadeOut();
               else
-                balance.text(currency + ' ' + formatPrice(value)).fadeIn();
+                balance.text(currency + ' ' + formatPrice(value)).fadeIn({
+					always : function() {
+						//FadeIn assigns inline-block which is breaking account balance display like EUR5.0
+						$(this).css('display', 'inline');
+					}
+				});
           };
 
           /* update balance on change */
