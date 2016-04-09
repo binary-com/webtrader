@@ -286,7 +286,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                                 separator: false
                             }]
                         }
-                    }
+                    },
+                    // Naming the File                    
+                    filename:options.instrumentName.split(' ').join('_')+"("+options.timePeriod+")"
                 }
 
             });
