@@ -344,8 +344,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }]
                         }
                     },
-                    // Naming the File
-                    filename:options.instrumentName.split(' ').join('_')+"_"+options.timePeriod+"("+options.instrumentCode+")"
+                    // Naming the File                    
+                    filename:options.instrumentName.split(' ').join('_')+"("+options.timePeriod+")"
                 }
 
             });
