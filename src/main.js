@@ -206,8 +206,15 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
         handle_affiliate_route();
-    else //Our chart is accessed directly
+    else {
+
+        //Our chart is accessed directly
         handle_normal_route();
+
+        //load all other dependencies which should not be blocking and also should not be loaded in affiliate route
+        require(['selfexclusion/selfexclusion']);
+
+    }
 
     //load all other .css files asynchronously
     require([
