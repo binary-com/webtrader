@@ -1,7 +1,7 @@
 /**
  * Created by Arnab Karmakar on 1/28/16.
  */
-define(["jquery", "windows/windows","websockets/binary_websockets","navigation/menu", "moment", "lodash", "jquery-growl", "common/util", "highstock", "highcharts-exporting", "export-csv"], function ($,windows,liveapi, menu, moment, _) {
+define(["jquery", "windows/windows","websockets/binary_websockets","navigation/menu", "moment", "lodash", "jquery-growl", "common/util", "highstock", "highcharts-exporting"], function ($,windows,liveapi, menu, moment, _) {
 
     var downloadWin = null, markets = [], timePeriods = [
         {
@@ -16,8 +16,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 {name : "3 mins", code : "3m"},
                 {name : "5 mins", code : "5m"},
                 {name : "10 mins", code : "10m"},
-                {name : "15 min", code : "15m"},
-                {name : "30 min", code : "30m"}
+                {name : "15 mins", code : "15m"},
+                {name : "30 mins", code : "30m"}
             ]
         },
         {
@@ -58,7 +58,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     }
                 },
                 spacingLeft: 0,
-                marginLeft: 40
+                marginLeft: 45
             },
 
             navigator: {
@@ -130,12 +130,12 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         menuItems: [{
                             text: 'Download PNG',
                             onclick: function () {
-                                this.exportChart();
+                                this.exportChartLocal();
                             }
                         }, {
                             text: 'Download JPEG',
                             onclick: function () {
-                                this.exportChart({
+                                this.exportChartLocal({
                                     type: 'image/jpeg'
                                 });
                             },
@@ -143,7 +143,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download PDF',
                             onclick: function () {
-                                this.exportChart({
+                                this.exportChartLocal({
                                     type: 'application/pdf'
                                 });
                             },
@@ -151,7 +151,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download SVG',
                             onclick: function () {
-                                this.exportChart({
+                                this.exportChartLocal({
                                     type: 'image/svg+xml'
                                 });
                             },
@@ -159,13 +159,36 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download CSV',
                             onclick: function () {
-                                this.downloadCSV();
-                            },
-                            separator: false
-                        }, {
-                            text: 'Download XLS',
-                            onclick: function () {
-                                this.downloadXLS();
+                                var series = this.series[0]; //Main series
+                                var is_tick = isTick(timePeriod);
+                                var filename = series.options.name + ' (' +  timePeriod + ')' + '.csv';
+                                var lines = series.options.data.map(function(bar){
+                                    var time = bar[0], open = bar[1];
+                                    if(is_tick){
+                                        return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ + open; /* Price */
+                                    }
+                                    var high = bar[2], low = bar[3], close = bar[4];
+                                    return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
+                                        open + ',' + high + ',' + low + ',' + close;
+                                });
+                                var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
+
+                                var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                                if (navigator.msSaveBlob) { // IE 10+
+                                    navigator.msSaveBlob(blob, filename);
+                                }
+                                else {
+                                    var link = document.createElement("a");
+                                    if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                                        var url = URL.createObjectURL(blob);
+                                        link.setAttribute("href", url);
+                                        link.setAttribute("download", filename);
+                                        link.style.visibility = 'hidden';
+                                        document.body.appendChild(link);
+                                        link.click();
+                                        document.body.removeChild(link);
+                                    }
+                                }
                             },
                             separator: false
                         }]
@@ -221,6 +244,12 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 }
 
                 var totalLength = dataInHighChartsFormat.length;
+                if (totalLength === 0) {
+                    $.growl.error({ message: "There is no historical data available!" });
+                    chart.hideLoading();
+                    $(".download_show").prop("disabled", false);
+                    return;
+                };
                 var endIndex = totalLength > 100 ? 100 : totalLength - 1;
                 chart.xAxis[0].setExtremes(dataInHighChartsFormat[0][0], dataInHighChartsFormat[endIndex][0]); //show 100 bars
 
@@ -256,7 +285,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 console.error(err);
                 $.growl.error({ message: err.message });
                 chart.hideLoading();
-                $(".download_show").removeAttr("disabled");
+                $(".download_show").prop("disabled", false);
             });
     }
 
@@ -325,10 +354,11 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                         instrument.append(value.display_name);
                                         instrument.data("instrumentObject", value);
                                         instrument.click(function() {
+                                             var instrumentObject = $(this).data("instrumentObject");
                                             $(".download_instruments")
-                                                .data("instrumentObject", $(this).data("instrumentObject"))
+                                                .data("instrumentObject",instrumentObject)
                                                 .find("span")
-                                                .html($(this).data("instrumentObject").display_name);
+                                                .html(instrumentObject.display_name);
                                             $(".download_instruments_container > ul").toggle();
                                         });
                                         if (_.isUndefined(defaultInstrumentObject)) {
@@ -361,6 +391,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             $.growl.error({ message: e.message });
                         });
 
+
                     //Init the time period drop down
                     var $download_timePeriod = $(".download_timePeriod");
                     var rootUL_timePeriod = $("<ul>");
@@ -379,9 +410,11 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 $(".download_timePeriod_container > ul").toggle();
                                 var isDayCandles = timePeriodObject.code === '1d';
                                 var $download_fromTime = $html.find(".download_fromTime");
-                                $download_fromTime.attr("disabled", isDayCandles);
                                 if (isDayCandles) {
                                     $download_fromTime.val("00:00");
+                                    $download_fromTime.hide()
+                                } else {
+                                    $download_fromTime.show();
                                 }
                             });
                             subMenu.append(tp);
@@ -401,7 +434,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         name : "1 day", code : "1d"
                     });
                     $download_timePeriod.find("span").html("1 day");
-                    $(".download_fromTime").prop("disabled", true);
+                    $(".download_fromTime").hide();
 
                     $html.find(".download_show").click(function() {
                         var $downloadInstruments = $(".download_instruments");

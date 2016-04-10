@@ -4,10 +4,10 @@
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators",
+        "charts/indicators/highcharts_custom/indicators","moment",
         "highcharts-exporting", "common/util"
         ],
-  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators ) {
+  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment ) {
 
     "use strict";
 
@@ -34,6 +34,43 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         var key = chartingRequestMap.keyFor(instrumentCode, timePeriod);
         chartingRequestMap.unregister(key, containerIDWithHash);
     }
+
+    function generate_csv(data) {
+        var is_tick = isTick(data.timePeriod);
+        var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
+        var filename = data.instrumentName + ' (' + data.timePeriod + ')' + '.csv';
+        var bars = chartingRequestMap.barsTable
+                        .chain()
+                        .find({ instrumentCdAndTp: key })
+                        .simplesort('time', false)
+                        .data();
+        var lines = bars.map(function (bar) {
+            if (is_tick) {
+                return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ +bar.open; /* Price */
+            }
+            return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
+            bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
+        });
+        var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
+
+
+        var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        }
+        else {
+            var link = document.createElement("a");
+            if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    };
 
     return {
 
@@ -100,7 +137,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                         }
                     },
                     spacingLeft: 0,
-                    marginLeft: 40,  /* disable the auto size labels so the Y axes become aligned */
+                    marginLeft: 45,  /* disable the auto size labels so the Y axes become aligned */
                     //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
                 },
 
@@ -129,63 +166,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
 
                                     //Add current price indicator
                                     this.addCurrentPrice();
-
-                                    var series = this;
-                                    /**
-                                     * Add URL parameter based markers on chart
-                                     */
-                                    require(['charts/draw/highcharts_custom/horizontal_line', 'charts/draw/highcharts_custom/vertical_line'], function(horizontal_line, vertical_line) {
-
-                                        horizontal_line.init();
-                                        vertical_line.init();
-
-                                        var startTime = parseInt(getParameterByName('startTime'));
-                                        var endTime = parseInt(getParameterByName('endTime'));
-                                        var entrySpotTime = parseInt(getParameterByName('entrySpotTime'));
-                                        var barrierPrice = parseFloat(getParameterByName('barrierPrice'));
-                                        if (startTime > 0) {
-                                            //Draw vertical line
-                                            series.addVerticalLine({
-                                                value : startTime * 1000, //starTime is in millis
-                                                name : 'Start Time'
-                                            });
-                                        }
-                                        if (endTime > 0) {
-                                            //Draw vertical line
-                                            series.addVerticalLine({
-                                                value :endTime * 1000, //starTime is in millis
-                                                name : 'End Time'
-                                            });
-                                            //Start a timer which will stop chart feed
-                                            var interval = setInterval(function(){
-                                                if (Date.now() > ((endTime + 1) * 1000)) { //Keep rendering atleast 1 second after the end time
-                                                    var ourData = $(series.chart.options.chart.renderTo).data();
-                                                    console.log('Stopping feed based off timer : ', containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
-                                                    referenceToChartsJSObject.destroy({
-                                                        containerIDWithHash : containerIDWithHash,
-                                                        timePeriod : ourData.timePeriod,
-                                                        instrumentCode : ourData.instrumentCode
-                                                    });
-                                                    clearInterval(interval);
-                                                }
-                                            }, 500);
-                                        }
-                                        if (entrySpotTime > 0) {
-                                            //Draw vertical line
-                                            series.addVerticalLine({
-                                                value : entrySpotTime * 1000, //starTime is in millis
-                                                name : 'Entry Spot'
-                                            });
-                                        }
-                                        if (barrierPrice) {
-                                            //Draw horizontal line
-                                            series.addHorizontalLine({
-                                                value : barrierPrice,
-                                                name : 'Barrier'
-                                            });
-                                        }
-                                    });
-
                                 }
 
                                 this.chart.hideLoading();
@@ -220,7 +200,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             var str = this.axis.defaultLabelFormatter.call(this);
                             return str.replace('.','');
                         }
-                    }
+                    },
+                    ordinal : false
                 },
 
                 yAxis: [{
@@ -271,12 +252,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             menuItems: [{
                                 text: 'Download PNG',
                                 onclick: function () {
-                                    this.exportChart();
+                                    this.exportChartLocal();
                                 }
                             }, {
                                 text: 'Download JPEG',
                                 onclick: function () {
-                                    this.exportChart({
+                                    this.exportChartLocal({
                                         type: 'image/jpeg'
                                     });
                                 },
@@ -284,7 +265,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download PDF',
                                 onclick: function () {
-                                    this.exportChart({
+                                    this.exportChartLocal({
                                         type: 'application/pdf'
                                     });
                                 },
@@ -292,14 +273,22 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download SVG',
                                 onclick: function () {
-                                    this.exportChart({
+                                    this.exportChartLocal({
                                         type: 'image/svg+xml'
                                     });
                                 },
                                 separator: false
+                            }, {
+                                text: 'Download CSV',
+                                onclick: function () {
+                                    generate_csv($(containerIDWithHash).data());
+                                },
+                                separator: false
                             }]
                         }
-                    }
+                    },
+                    // Naming the File                    
+                    filename:options.instrumentName.split(' ').join('_')+"("+options.timePeriod+")"
                 }
 
             });

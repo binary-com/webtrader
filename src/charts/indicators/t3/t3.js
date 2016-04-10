@@ -62,19 +62,34 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					{
 					    text: "OK",
 					    click: function () {
-					        //Check validation
-					        if (!isNumericBetween($html.find("#t3_period").val(),
-                                            parseInt($html.find("#t3_period").attr("min")),
-                                            parseInt($html.find("#t3_period").attr("max")))) {
-					            require(["jquery", "jquery-growl"], function ($) {
-					                $.growl.error({
-					                    message: "Only numbers between " + $html.find("#t3_period").attr("min")
-                                                + " to " + $html.find("#t3_period").attr("max")
-                                                + " is allowed for " + $html.find("#t3_period").closest('tr').find('td:first').text() + "!"
-					                });
-					            });
-					            return;
-					        }
+					        var $periodElem = $("#t3_period");
+                            if (!_.isInteger(_.toNumber($periodElem.val())) || !_.inRange($periodElem.val(),
+                                            parseInt($periodElem.attr("min")),
+                                            parseInt($periodElem.attr("max")) + 1)) {
+                                require(["jquery", "jquery-growl"], function ($) {
+                                    $.growl.error({
+                                        message: "Only numbers between " + $periodElem.attr("min")
+                                                + " to " + $periodElem.attr("max")
+                                                + " is allowed for " + $periodElem.closest('tr').find('td:first').text() + "!"
+                                    });
+                                });
+                                $periodElem.val($periodElem.prop("defaultValue"));
+                                return;
+                            };
+                             var $vFactorElem = $("#t3_volume_factor");
+                            if (!_.inRange($vFactorElem.val(),
+                                            parseInt($vFactorElem.attr("min")),
+                                            parseInt($vFactorElem.attr("max")) + 0.01)) {
+                                require(["jquery", "jquery-growl"], function ($) {
+                                    $.growl.error({
+                                        message: "Only numbers between " + $vFactorElem.attr("min")
+                                                + " to " + $vFactorElem.attr("max")
+                                                + " is allowed for " + $vFactorElem.closest('tr').find('td:first').text() + "!"
+                                    });
+                                });
+                                $vFactorElem.val($vFactorElem.prop("defaultValue"));
+                                return;
+                            };
 
 					        var options = {
 					            period: parseInt($("#t3_period").val()),

@@ -46,6 +46,6 @@
     position: absolute;
 }
 
-.download_fromTime:disabled {
+.download_show:disabled {
     background-color: #dde0ee;
 }

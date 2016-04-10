@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                             '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
                             '!jquery-ui/**', 'jquery-ui/themes/smoothness/images/**', 'jquery-ui/jquery-ui.min.js', 'jquery-ui/themes/smoothness/jquery-ui.min.css',
-                            '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js', 'highstock/highcharts-more.js',
+                            '!highstock/**', 'highstock/highstock.js', 'highstock/themes/sand-signika.js', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
@@ -72,7 +72,6 @@ module.exports = function (grunt) {
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
                             'moment/min/moment.min.js',
                             'ddslick/jquery.ddslick.min.js',
-                            'highcharts-export-csv/export-csv.js',
                             '!**/**/favicon.ico'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
@@ -101,6 +100,17 @@ module.exports = function (grunt) {
                         dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
                     }
                 ]
+            },
+            copyChromeManifest: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        cwd: '.',
+                        src: ["chrome_extension/*"],
+                        dest: 'dist/uncompressed/'
+                    }
+                ]
             }
         },
         rename: {
@@ -111,11 +121,17 @@ module.exports = function (grunt) {
         },
         replace: {
             version: {
-                src: ['dist/uncompressed/index.html'],
+                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml'],
                 overwrite: true,
                 replacements: [{
-                    from: '<verrsion>', //TODO, not working
-                    to: 'v<%=pkg.version%>'
+                    from: '<version>',
+                    to: '<%=pkg.version%>'
+                }, {
+                    from: '<package-name>',
+                    to: "<%=pkg.name.replace(/_/g, ' ')%>"
+                }, {
+                    from: '<description>',
+                    to: "<%=pkg.description%>"
                 }]
             }
         },
@@ -324,11 +340,33 @@ module.exports = function (grunt) {
                     ],
                 dest: 'dist/uncompressed/v<%=pkg.version%>/charts/indicators/highcharts_custom/indicators.js'
             }
+        },
+        firefoxManifest: {
+            options: {
+                packageJson: 'package.json',
+                manifest: 'dist/uncompressed/manifest.webapp'
+            },
+            target: {}
+        },
+        compress: {
+            main: {
+                options: {
+                    archive: 'dist/uncompressed/chrome_extension.zip'
+                },
+                files:
+                    [
+                        {
+                            expand: true,
+                            cwd: 'dist/uncompressed/',
+                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js', 'v<%=pkg.version%>/images/webtrader_16px.png', 'v<%=pkg.version%>/images/webtrader_128px.png']
+                        }
+                    ]
+            }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'rename', 'replace']);
-    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'copy:copy_AfterCompression']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'firefoxManifest', 'rename', 'replace']);
+    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
 	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks

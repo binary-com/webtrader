@@ -46,10 +46,6 @@ function isLineDotType(type) {
     return type === 'linedot';
 }
 
-function isNumericBetween(value, min, max) {
-    var isNumeric = !isNaN(parseFloat(value)) && isFinite(value)
-    return isNumeric && Math.floor(value) == value && min <= value && max >= value;
-};
 
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
@@ -233,4 +229,32 @@ function uuid() {
         var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
         return v.toString(16);
     });
+}
+
+/**
+ * window.setTimeout alternative.
+ * window.setTimeout is 32 bit and so large value does not work
+ * http://stackoverflow.com/questions/16314750/settimeout-fires-immediately-if-the-delay-more-than-2147483648-milliseconds
+ * @param callback
+ * @param timeout_ms
+ * @param _callBackWithHandler
+ */
+function setLongTimeout(callback, timeout_ms, _callBackWithHandler) {
+
+    //if we have to wait more than max time, need to recursively call this function again
+    if(timeout_ms > 2147483647)
+    {    //now wait until the max wait time passes then call this function again with
+        //requested wait - max wait we just did, make sure and pass callback
+        var handle = setTimeout(function() {
+            setLongTimeout(callback, (timeout_ms - 2147483647), _callBackWithHandler);
+        }, 2147483647);
+        _callBackWithHandler(handle);
+    }
+    else  //if we are asking to wait less than max, finally just do regular seTimeout and call callback
+    {
+        var handle = setTimeout(callback, timeout_ms);
+        if (_callBackWithHandler) {
+            _callBackWithHandler(handle);
+        }
+    }
 }

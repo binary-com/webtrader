@@ -120,7 +120,17 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                     color: iu.color
                                                 });
                                             }
-                                            else {
+                                            else if (_.isObject(iu.value)){
+                                                if (iu.value.marker) {
+                                                    series.chart.get(iu.id).addPoint({
+                                                        x: iu.value.x,
+                                                        title: iu.value.title,
+                                                        text: iu.value.text,
+                                                        y:iu.value.y,
+                                                        marker: iu.value.marker
+                                                    });
+                                                }
+                                            } else {
                                                  series.chart.get(iu.id).addPoint([time, iu.value]);
                                             }
                                         }
@@ -156,19 +166,43 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                         var indicatorSeries = series.chart.get(iu.id);
                                         var seriesData = indicatorSeries.data;
                                         if (_.isArray(iu.value)) {
-                                            seriesData[seriesData.length - 1]
-                                                .update(_.flattenDeep([time, iu.value]));
+                                            seriesData[seriesData.length - 1].update(_.flattenDeep([time, iu.value]));
                                         } else if (iu.value instanceof CDLUpdateObject) {
-                                            var renderingData = iu.value.toJSObject();
-                                            var x = renderingData.x;
-                                            var matchingSeriesData = _.find(seriesData, function(ee) {
-                                                return _.isNumber(x) && x > 0 && x === ee.x;
-                                            });
-                                            if (matchingSeriesData) matchingSeriesData.remove();
-                                            if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
-                                                indicatorSeries.addPoint(renderingData);
+                                            if (iu.value && _.isFunction(iu.value.toJSObject)) {
+                                                var renderingData = iu.value.toJSObject();
+                                                var x = renderingData.x;
+                                                var matchingSeriesData = _.find(seriesData, function (ee) {
+                                                    return _.isNumber(x) && x > 0 && x === ee.x;
+                                                });
+                                                if (matchingSeriesData) matchingSeriesData.remove();
+                                                if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
+                                                    if (iu.value instanceof CDLUpdateObject) {
+                                                        indicatorSeries.addPoint(renderingData);
+                                                    } 
+                                                }
                                             }
-                                        } else {
+                                        } else if (_.isObject(iu.value)) {
+                                            if (iu.value) {
+                                                var renderingData = iu.value;
+                                                var x = renderingData.x;
+                                                var matchingSeriesData = _.find(seriesData, function (ee) {
+                                                    return _.isNumber(x) && x > 0 && x === ee.x;
+                                                });
+                                                if (matchingSeriesData) matchingSeriesData.remove();
+                                                if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
+                                                   if (iu.value.marker) {
+                                                        series.chart.get(iu.id).addPoint({
+                                                            x: iu.value.x,
+                                                            title: iu.value.title,
+                                                            text: iu.value.text,
+                                                            y:iu.value.y,
+                                                            marker: iu.value.marker
+                                                        });
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else {
                                             seriesData[seriesData.length - 1]
                                                 .update({
                                                     y: iu.value
@@ -268,6 +302,11 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
             var bodySize = Math.abs(open - close);
             var candleSize = Math.abs(high - low);
             return bodySize >= (.7 * candleSize);
+        },
+        /*Return indicators.json data*/ 
+        getIndicatorsJSONData :function()
+        {
+            return indicatorsMetaData;
         }
 
     };

@@ -59,7 +59,7 @@ DX.prototype.update = function (data) {
 };
 
 DX.prototype.toString = function () {
-    return '(' + this.options.period + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
+    return 'DX (' + this.options.period + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
 
 
@@ -93,7 +93,7 @@ DX.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                     offset: 0,
                     rotation: 0,
                     y: 10, //Trying to show title inside the indicator chart
-                    x: 50
+                    x: 90
                 },
                 lineWidth: 2,
                 plotLines: this.options.levels

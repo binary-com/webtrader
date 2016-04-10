@@ -48,7 +48,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         // get array of dialogs
         var dialogs = $('.webtrader-dialog').filter(function (inx, d) {
             /* check to see if initialized and is visible */
-            return $(d).hasClass("ui-dialog-content") && $(d).dialog("isOpen");
+            var $d = $(d);
+            return $d.hasClass("ui-dialog-content") && $d.dialog("isOpen") && !$d.hasClass('ui-dialog-minimized') && ($(window).width() >= $d.dialog('option', 'width'));
         });
 
 
@@ -81,8 +82,13 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 /* divide the vertical space equally between dialogs. */
                 var free_space = x < max_x ? (max_x - x) : 0;
                 var margin_left = x < max_x ? (max_x - x) / (inx - inx_start + 1) : 0; /* the current window might be wider than screen width */
-                total_free_space += free_space;
-
+                if(inx != dialogs.length) { /* we don't care about extra space at last row */
+                  total_free_space += free_space;
+                }
+                if (x === 0 && $(dialogs[inx]).dialog('option', 'width') > max_x) {
+                    ++inx;
+                    margin_left = 0;
+                };
                 x = 0;
                 for (var j = inx_start; j < inx; ++j) {
                     x += margin_left;
@@ -95,11 +101,14 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                             left: x + 'px',
                             top: y + 'px'
                         }, 1500);
-
+                    /* update dialog option.position */
+                    d.dialog("option", "position", { my: x, at: y });
                     x += w;
                 };
-
                 y += row_height + 20;
+            }
+            if(perform) { // fix footer postion on tile action
+              setTimeout(fixFooterPosition, 1500 + 100);
             }
             return total_free_space;
         }
@@ -115,6 +124,15 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 best_free_space = total_free_space;
             }
         }
+        // get array of large dialogs (larger than window size)
+        var largeDialogs = $('.webtrader-dialog').filter(function (inx, d) {
+            /* check to see if initialized and is visible */
+            var $d = $(d);
+            return $d.hasClass("ui-dialog-content") && $d.dialog("isOpen") && !$d.hasClass('ui-dialog-minimized') && ($(window).width() < $d.dialog('option', 'width'));
+        });
+        _(largeDialogs).forEach(function (d) {
+            best.push(d);
+        });
         arrange(best, true);
     }
 
@@ -331,6 +349,40 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         };
     }
 
+    function getScrollHeight(without_body) {
+        var bottoms = $('.ui-dialog').map(function(inx, d){
+          var $d = $(d);
+          var $w = $d.find('.webtrader-dialog');
+          if($w && $w.hasClass("ui-dialog-content") && !$w.hasClass('ui-dialog-minimized')) {
+            var offset = $d.offset();
+            return (offset && (offset.top + $d.height())) || 0;
+          }
+          return 0;
+        });
+        if(!without_body) {
+          bottoms.push($('body').height());
+        }
+        return  Math.max.apply(null, bottoms);
+    }
+
+    function fixFooterPosition(only_on_expand) {
+        $('body > .footer').width($('body').width());
+        var scroll_height = getScrollHeight(true);
+        var body_height = $('body').height();
+        var footer_height = $('.addiction-warning').height();
+        var current_height = $('body > .footer').height();
+        var new_height = Math.max(scroll_height + footer_height + 15, body_height);
+        if(current_height > new_height && only_on_expand === true) {
+          return;
+        }
+        $('body > .footer').css("margin-top", new_height - 100);
+    };
+    function fixMinimizedDialogsPosition() {
+        var footer_height = $('.addiction-warning').height();
+        var scroll_bottom = $(document).height() - $(window).height() - $(window).scrollTop();
+        $("#dialog-extend-fixed-container").css("bottom", Math.max(0, footer_height - scroll_bottom));
+    }
+
     return {
 
         init: function( $parentObj ) {
@@ -404,6 +456,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
               }
             });
+            $(window).resize(fixFooterPosition);
+            $(window).scroll(fixMinimizedDialogsPosition);
             return this;
         },
 
@@ -413,6 +467,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             //Trigger close even on all dialogs
             closeAllObject && closeAllObject.click();
         },
+
+        fixFooterPosition: fixFooterPosition,
 
         /* important options: { title:'',
                                 resize:fn, // callabak for dialog resize event
@@ -472,6 +528,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 }
             });
 
+            dialog.on('dragstop', fixFooterPosition);
+            dialog.on('drag', function() { fixFooterPosition(true); });
+            blankWindow.on('dialogextendminimize', fixFooterPosition);
+
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);
             }
@@ -505,7 +565,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             blankWindow.on('dialogextendbeforerestore', function(){
               var doc = $(document);
               last_document_size = {
-                height: doc.height(),
+                height: getScrollHeight(),
                 width: doc.width()
               };
             });

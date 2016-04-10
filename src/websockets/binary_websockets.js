@@ -135,7 +135,11 @@ define(['jquery'], function ($) {
 
     /* whether the given request needs authentication or not */
     var needs_authentication = function (data) {
-        for (var prop in { balance: 1, statement: 1, profit_table: 1, portfolio: 1, proposal_open_contract: 1, buy: 1, sell: 1 })
+        for (var prop in
+                    { balance: 1, statement: 1,
+                        profit_table: 1, portfolio: 1,
+                        proposal_open_contract: 1, buy: 1, sell: 1,
+                        get_self_exclusion : 1, set_self_exclusion : 1 })
             if (prop in data)
                 return true;
         return false;
@@ -163,7 +167,7 @@ define(['jquery'], function ($) {
 
         return promise
             .then(function (val) {
-                Cookies.set('webtrader_token', token); /* never expiers */
+                Cookies.set('webtrader_token', token, { expires: 365 }); /* never expiers */
                 is_authenitcated_session = true;
                 fire_event('login', val);
                 auth_successfull = true;
@@ -311,7 +315,7 @@ define(['jquery'], function ($) {
             if(timeout) timeout_promise(data.req_id, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
             return promise;
         },
-        /* whether currenct session is authenticated or not */
+        /* whether current session is authenticated or not */
         is_authenticated: function () {
           return is_authenitcated_session;
         },

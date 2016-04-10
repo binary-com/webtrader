@@ -84,14 +84,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find('#willr_level_delete').click(function () {
                 if (table.rows('.selected').indexes().length <= 0) {
                     require(["jquery", "jquery-growl"], function ($) {
-                        $.growl.error({ message: "Select levels to delete!" });
+                        $.growl.error({ message: "Select level(s) to delete!" });
                     });
                 } else {
                     table.rows('.selected').remove().draw();
                 }
             });
             $html.find('#willr_level_add').click(function () {
-                require(["charts/indicators/willr/willr_level"], function (willr_level) {
+                require(["indicator_levels"], function (willr_level) {
                     willr_level.open(containerIDWithHash, function (levels) {
                         $.each(levels, function (ind, value) {
                             $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
@@ -119,19 +119,20 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     {
                         text: "OK",
                         click: function () {
-
-                            if (!isNumericBetween($html.find(".willr_input_width_for_period").val(),
-                                            parseInt($html.find(".willr_input_width_for_period").attr("min")),
-                                            parseInt($html.find(".willr_input_width_for_period").attr("max")))) {
+                            var $elem = $(".willr_input_width_for_period");
+                            if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+                                            parseInt($elem.attr("min")),
+                                            parseInt($elem.attr("max")) + 1)) {
                                 require(["jquery", "jquery-growl"], function ($) {
                                     $.growl.error({
-                                        message: "Only numbers between " + $html.find(".willr_input_width_for_period").attr("min")
-                                                + " to " + $html.find(".willr_input_width_for_period").attr("max")
-                                                + " is allowed for " + $html.find(".willr_input_width_for_period").closest('tr').find('td:first').text() + "!"
+                                        message: "Only numbers between " + $elem.attr("min")
+                                                + " to " + $elem.attr("max")
+                                                + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
+                                $elem.val($elem.prop("defaultValue"));
                                 return;
-                            }
+                            };
 
                             var levels = [];
                             $.each(table.rows().nodes(), function () {

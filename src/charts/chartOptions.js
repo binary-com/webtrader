@@ -2,7 +2,7 @@
  * Created by arnab on 2/16/15.
  */
 
-define(['jquery', 'charts/chartingRequestMap', 'moment', "charts/chartWindow", "common/util"], function($, chartingRequestMap, moment) {
+define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/util"], function($, chartingRequestMap) {
     "use strict";
     var barsTable = chartingRequestMap.barsTable;
 
@@ -16,43 +16,6 @@ define(['jquery', 'charts/chartingRequestMap', 'moment', "charts/chartWindow", "
       }
       overlay.closest("ul.ui-menu").menu("refresh");
     };
-
-    function generate_csv(data){
-      var is_tick = isTick(data.timePeriod);
-      var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
-      var filename = data.instrumentName + ' (' +  data.timePeriod + ')' + '.csv';
-      var bars = barsTable
-                      .chain()
-                      .find({instrumentCdAndTp: key})
-                      .simplesort('time', false)
-                      .data();
-      var lines = bars.map(function(bar){
-        if(is_tick){
-          return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ + bar.open; /* Price */
-        }
-          return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
-          bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
-      });
-      var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
-
-
-      var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-      if (navigator.msSaveBlob) { // IE 10+
-        navigator.msSaveBlob(blob, filename);
-      }
-      else {
-        var link = document.createElement("a");
-        if (link.download !== undefined) {  /* Evergreen Browsers :) */
-          var url = URL.createObjectURL(blob);
-          link.setAttribute("href", url);
-          link.setAttribute("download", filename);
-          link.style.visibility = 'hidden';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        }
-      }
-    }
 
     return {
 
@@ -98,10 +61,6 @@ define(['jquery', 'charts/chartingRequestMap', 'moment', "charts/chartWindow", "
 
                         if(type === 'table'){
                             tableViewCb();
-                        }
-                        else if(type === 'export'){
-                          var data = $("#" + newTabId + "_chart").data();
-                          generate_csv(data);
                         }
                         else {
                           // Remove tick mark from other types and add it to this one.

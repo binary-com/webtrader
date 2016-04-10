@@ -38,7 +38,14 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 }
                 barsTable.insert(tick);
                 /* notify subscribers */
-                fire_event('tick', {tick: tick, key: key});
+                var preTick = tick;
+                var bars = barsTable.chain()
+                          .find({ instrumentCdAndTp: key })
+                          .simplesort('time', true)
+                          .limit(2).data();
+                if (bars.length > 1)
+                    preTick = bars[1];
+                fire_event('tick', { tick: tick, key: key, preTick: preTick });
 
                 if (!(chartingRequest.chartIDs && chartingRequest.chartIDs.length > 0)) {
                     return;
@@ -107,8 +114,16 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
                 bar.close = close;
                 barsTable.update(bar);
             }
+            
+            var preOhlc = bar;
+            var bars = barsTable.chain()
+                .find({ instrumentCdAndTp: key })
+                .simplesort('time', true)
+                .limit(2).data();
+            if (bars.length > 1)
+                preOhlc = bars[1];
             /* notify subscribers */
-            fire_event('ohlc', {ohlc: bar, is_new: isNew, key: key });
+            fire_event('ohlc', { ohlc: bar, is_new: isNew, key: key, preOhlc: preOhlc });
 
             //notify all registered charts
             chartingRequest.chartIDs.forEach(function (chartID) {

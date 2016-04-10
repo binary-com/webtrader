@@ -68,8 +68,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         click: function () {
                             var isValid = true;
                             $(".kama_input_width_for_period").each(function () {
-                                if (!isNumericBetween(parseInt($(this).val()), parseInt($(this).attr("min")), parseInt($(this).attr("max")))) {
-                                    var $elem = $(this);
+                                 var $elem = $(this);
+                                 if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")) + 1)) {
                                     require(["jquery", "jquery-growl"], function ($) {
                                         $.growl.error({
                                             message: "Only numbers between " + $elem.attr("min")
@@ -77,10 +77,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                                     + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                         });
                                     });
+                                    $elem.val($elem.prop("defaultValue"));
                                     isValid = false;
                                     return;
                                 }
-                            });;
+                            });
 
                             if (!isValid) return;
 
