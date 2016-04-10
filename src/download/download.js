@@ -135,7 +135,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download JPEG',
                             onclick: function () {
-                                this.exportChartLocal({
+                                this.exportChart({
                                     type: 'image/jpeg'
                                 });
                             },
@@ -143,7 +143,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         }, {
                             text: 'Download PDF',
                             onclick: function () {
-                                this.exportChartLocal({
+                                this.exportChart({
                                     type: 'application/pdf'
                                 });
                             },
@@ -193,7 +193,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             separator: false
                         }]
                     }
-                }
+                },
+                // Naming the File
+                filename:instrumentObject.display_name.split(' ').join('_')+"("+timePeriod+")"
             },
 
             rangeSelector: {
