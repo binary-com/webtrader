@@ -212,7 +212,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
         handle_normal_route();
 
         //load all other dependencies which should not be blocking and also should not be loaded in affiliate route
-        require(['selfexclusion/selfexclusion']);
+        require(['selfexclusion/selfexclusion', 'realitycheck/realitycheck']);
 
     }
 
