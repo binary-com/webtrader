@@ -1,62 +1,41 @@
 /**
  * Created by Arnab Karmakar on 1/28/16.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation/menu", "moment", "lodash", "jquery-growl", "common/util", "highstock", "highcharts-exporting"], function($, windows, liveapi, menu, moment, _) {
+define(["jquery", "windows/windows","websockets/binary_websockets","navigation/menu", "moment", "lodash", "jquery-growl", "common/util", "highstock", "highcharts-exporting"], function ($,windows,liveapi, menu, moment, _) {
 
-    var downloadWin = null,
-        markets = [],
-        timePeriods = [{
-            name: "Ticks",
-            timePeriods: [{
-                name: "1 Tick",
-                code: "1t"
-            }]
-        }, {
-            name: "Minutes",
-            timePeriods: [{
-                name: "1 min",
-                code: "1m"
-            }, {
-                name: "2 mins",
-                code: "2m"
-            }, {
-                name: "3 mins",
-                code: "3m"
-            }, {
-                name: "5 mins",
-                code: "5m"
-            }, {
-                name: "10 mins",
-                code: "10m"
-            }, {
-                name: "15 min",
-                code: "15m"
-            }, {
-                name: "30 min",
-                code: "30m"
-            }]
-        }, {
-            name: "Hours",
-            timePeriods: [{
-                name: "1 hour",
-                code: "1h"
-            }, {
-                name: "2 hours",
-                code: "2h"
-            }, {
-                name: "4 hours",
-                code: "4h"
-            }, {
-                name: "8 hours",
-                code: "8h"
-            }]
-        }, {
-            name: "Days",
-            timePeriods: [{
-                name: "1 day",
-                code: "1d"
-            }]
-        }];
+    var downloadWin = null, markets = [], timePeriods = [
+        {
+            name : "Ticks",
+            timePeriods : [{name : "1 Tick", code : "1t"}]
+        },
+        {
+            name : "Minutes",
+            timePeriods : [
+                {name : "1 min", code : "1m"},
+                {name : "2 mins", code : "2m"},
+                {name : "3 mins", code : "3m"},
+                {name : "5 mins", code : "5m"},
+                {name : "10 mins", code : "10m"},
+                {name : "15 mins", code : "15m"},
+                {name : "30 mins", code : "30m"}
+            ]
+        },
+        {
+            name : "Hours",
+            timePeriods : [
+                {name : "1 hour", code : "1h"},
+                {name : "2 hours", code : "2h"},
+                {name : "4 hours", code : "4h"},
+                {name : "8 hours", code : "8h"}
+            ]
+        },
+        {
+            name : "Days",
+            timePeriods : [
+                {name : "1 day", code : "1d"}
+            ]
+        }
+    ];
 
     function renderChart(instrumentObject, timePeriod, toDateWithTime) {
 
@@ -69,7 +48,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
 
             chart: {
                 events: {
-                    load: function() {
+                    load: function () {
                         this.credits.element.onclick = function() {
                             window.open(
                                 'http://www.binary.com',
@@ -83,7 +62,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
             },
 
             navigator: {
-                enabled: true,
+                enabled : true,
                 series: {
                     id: 'navigator'
                 }
@@ -112,9 +91,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
 
             xAxis: {
                 labels: {
-                    formatter: function() {
+                    formatter: function(){
                         var str = this.axis.defaultLabelFormatter.call(this);
-                        return str.replace('.', '');
+                        return str.replace('.','');
                     }
                 }
             },
@@ -122,10 +101,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
             yAxis: [{
                 opposite: false,
                 labels: {
-                    formatter: function() {
+                    formatter: function () {
                         return this.value;
                     },
-                    align: 'center'
+                    align:'center'
                 }
             }],
 
@@ -150,12 +129,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                     contextButton: {
                         menuItems: [{
                             text: 'Download PNG',
-                            onclick: function() {
-                                this.exportChart();
+                            onclick: function () {
+                                this.exportChartLocal();
                             }
                         }, {
                             text: 'Download JPEG',
-                            onclick: function() {
+                            onclick: function () {
                                 this.exportChart({
                                     type: 'image/jpeg'
                                 });
@@ -163,7 +142,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                             separator: false
                         }, {
                             text: 'Download PDF',
-                            onclick: function() {
+                            onclick: function () {
                                 this.exportChart({
                                     type: 'application/pdf'
                                 });
@@ -171,40 +150,36 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                             separator: false
                         }, {
                             text: 'Download SVG',
-                            onclick: function() {
-                                this.exportChart({
+                            onclick: function () {
+                                this.exportChartLocal({
                                     type: 'image/svg+xml'
                                 });
                             },
                             separator: false
                         }, {
                             text: 'Download CSV',
-                            onclick: function() {
+                            onclick: function () {
                                 var series = this.series[0]; //Main series
                                 var is_tick = isTick(timePeriod);
-                                var filename = series.options.name + ' (' + timePeriod + ')' + '.csv';
-                                var lines = series.options.data.map(function(bar) {
-                                    var time = bar[0],
-                                        open = bar[1];
-                                    if (is_tick) {
-                                        return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ +open; /* Price */
+                                var filename = series.options.name + ' (' +  timePeriod + ')' + '.csv';
+                                var lines = series.options.data.map(function(bar){
+                                    var time = bar[0], open = bar[1];
+                                    if(is_tick){
+                                        return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ + open; /* Price */
                                     }
-                                    var high = bar[2],
-                                        low = bar[3],
-                                        close = bar[4];
-                                    return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */
+                                    var high = bar[2], low = bar[3], close = bar[4];
+                                    return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
                                         open + ',' + high + ',' + low + ',' + close;
                                 });
                                 var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
 
-                                var blob = new Blob([csv], {
-                                    type: 'text/csv;charset=utf-8;'
-                                });
+                                var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
                                 if (navigator.msSaveBlob) { // IE 10+
                                     navigator.msSaveBlob(blob, filename);
-                                } else {
+                                }
+                                else {
                                     var link = document.createElement("a");
-                                    if (link.download !== undefined) { /* Evergreen Browsers :) */
+                                    if (link.download !== undefined) {  /* Evergreen Browsers :) */
                                         var url = URL.createObjectURL(blob);
                                         link.setAttribute("href", url);
                                         link.setAttribute("download", filename);
@@ -218,7 +193,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                             separator: false
                         }]
                     }
-                }
+                },
+                // Naming the File
+                filename:instrumentObject.display_name.split(' ').join('_')+"("+timePeriod+")"
             },
 
             rangeSelector: {
@@ -236,7 +213,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
         var to = from + 30 * 60; //By default getting 30 minutes of data (for tick charts)
         var req = {
             "ticks_history": instrumentObject.symbol,
-            "start": from
+            "start" : from
         };
         if (!isTick(timePeriod)) {
             req.granularity = convertToTimeperiodObject(timePeriod).timeInSeconds();
@@ -259,21 +236,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                         dataInHighChartsFormat.push([parseInt(time) * 1000, parseFloat(data.history.prices[index])]);
                     });
                 } else {
-                    data.candles.forEach(function(ohlc) {
+                    data.candles.forEach(function (ohlc) {
                         dataInHighChartsFormat.push([ohlc.epoch * 1000,
                             parseFloat(ohlc.open),
                             parseFloat(ohlc.high),
                             parseFloat(ohlc.low),
-                            parseFloat(ohlc.close)
-                        ]);
+                            parseFloat(ohlc.close)]);
                     });
                 }
 
                 var totalLength = dataInHighChartsFormat.length;
                 if (totalLength === 0) {
-                    $.growl.error({
-                        message: "There is no historical data available!"
-                    });
+                    $.growl.error({ message: "There is no historical data available!" });
                     chart.hideLoading();
                     $(".download_show").prop("disabled", false);
                     return;
@@ -311,9 +285,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
             })
             .catch(function(err) {
                 console.error(err);
-                $.growl.error({
-                    message: err.message
-                });
+                $.growl.error({ message: err.message });
                 chart.hideLoading();
                 $(".download_show").prop("disabled", false);
             });
@@ -321,23 +293,24 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
 
     function init($menuLink) {
         require(["css!download/download.css"]);
-        $menuLink.click(function() {
+        $menuLink.click(function () {
             if (!downloadWin) {
-                downloadWin = windows.createBlankWindow($('<div class="download_window"/>'), {
-                    title: 'View Historical Data',
-                    width: 700,
-                    minHeight: 460,
-                    height: 460,
-                    resize: function() {
-                        var chart = $(".downloadChart")
-                            .width($(this).width())
-                            .height($(this).height() - 40)
-                            .highcharts();
-                        if (chart) {
-                            chart.reflow();
+                downloadWin = windows.createBlankWindow($('<div class="download_window"/>'),
+                    {
+                        title: 'View Historical Data',
+                        width: 700,
+                        minHeight:460,
+                        height : 460,
+                        resize : function() {
+                            var chart = $(".downloadChart")
+                                                .width($(this).width())
+                                                .height($(this).height() - 40)
+                                                .highcharts();
+                            if (chart) {
+                                chart.reflow();
+                            }
                         }
-                    }
-                });
+                    });
                 downloadWin.dialog('open');
                 downloadWin.closest("div.ui-dialog").css("overflow", "visible");
                 require(['text!download/download.html'], function($html) {
@@ -347,19 +320,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                     $html
                         .find('.download_fromDate')
                         .datepicker({
-                            changeMonth: true,
-                            changeYear: true,
-                            dateFormat: 'dd/mm/yy',
-                            showButtonPanel: true,
-                            minDate: moment.utc().subtract(1, "years").toDate(),
-                            maxDate: moment.utc().toDate()
+                            changeMonth : true,
+                            changeYear : true,
+                            dateFormat : 'dd/mm/yy',
+                            showButtonPanel : true,
+                            minDate : moment.utc().subtract(1, "years").toDate(),
+                            maxDate : moment.utc().toDate()
                         })
                         .click(function() {
                             $(this).datepicker("show");
                         });
                     $html
                         .find('.download_fromTime').timepicker({
-                            showCloseButton: true
+                            showCloseButton : true
                         })
                         .click(function() {
                             $(this).timepicker("show");
@@ -367,10 +340,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                     $html.appendTo(downloadWin);
 
                     liveapi
-                        .cached.send({
-                            trading_times: new Date().toISOString().slice(0, 10)
-                        })
-                        .then(function(data) {
+                        .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
+                        .then(function (data) {
                             markets = menu.extractChartableMarkets(data);
                             /* add to instruments menu */
                             markets = menu.sortMenu(markets);
@@ -385,10 +356,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                                         instrument.append(value.display_name);
                                         instrument.data("instrumentObject", value);
                                         instrument.click(function() {
+                                             var instrumentObject = $(this).data("instrumentObject");
                                             $(".download_instruments")
-                                                .data("instrumentObject", $(this).data("instrumentObject"))
+                                                .data("instrumentObject",instrumentObject)
                                                 .find("span")
-                                                .html($(this).data("instrumentObject").display_name);
+                                                .html(instrumentObject.display_name);
                                             $(".download_instruments_container > ul").toggle();
                                             // Create a new drop down everytime market is changed
                                             createTimePeriodDropDown($(this).data("instrumentObject").delay_amount * 60, $html);
@@ -410,20 +382,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                                 .click(function() {
                                     $(".download_instruments_container > ul").toggle();
                                 })
-                                .blur(function() {
+                                .blur(function () {
                                     $(".download_instruments_container > ul").hide();
                                 });
                             $downloadInstruments.data("instrumentObject", defaultInstrumentObject);
                             $downloadInstruments.find("span").html(defaultInstrumentObject.display_name);
                             //Init the time period drop down
                             createTimePeriodDropDown($downloadInstruments.data("instrumentObject").delay_amount * 60, $html);
+
                             $(".download_show").click();
 
                         }).catch(function(e) {
                             console.error(e);
-                            $.growl.error({
-                                message: e.message
-                            });
+                            $.growl.error({ message: e.message });
                         });
 
                     var $download_timePeriod = $(".download_timePeriod");
@@ -435,8 +406,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                             $(".download_timePeriod_container > ul").hide();
                         });
                     $download_timePeriod.data("timePeriodObject", {
-                        name: "1 day",
-                        code: "1d"
+                        name : "1 day", code : "1d"
                     });
                     $download_timePeriod.find("span").html("1 day");
                     $(".download_fromTime").hide();
@@ -447,16 +417,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                         var instrumentObject = $downloadInstruments.data("instrumentObject");
                         var timePeriodObject = $download_timePeriod.data("timePeriodObject");
                         renderChart(instrumentObject, timePeriodObject.code,
-                            $(".download_fromDate").val() + " " + $(".download_fromTime").val());
+                                        $(".download_fromDate").val() + " " + $(".download_fromTime").val());
                     });
 
                     $html.find(".download_fromDate").val(moment.utc().subtract(1, "years").format("DD/MM/YYYY"));
+
                 });
-            } else {
+            }
+            else {
                 downloadWin.moveToTop();
             }
         });
     }
+
     /*
     * delay_amount is used for getting instrumentObjects delay_amount.
     * $html  contains html object of the download page.

@@ -9,7 +9,7 @@ requirejs.config({
         'jquery-ui': "lib/jquery-ui/jquery-ui.min",
         'highstock': "lib/highstock/highstock",
         'highcharts-more': "lib/highstock/highcharts-more",
-        'highcharts-exporting': 'lib/highstock/modules/exporting',
+        'highcharts-exporting': 'lib/highstock/modules/offline-exporting',
         'highcharts-theme': 'lib/highstock/themes/sand-signika',
         'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
@@ -53,7 +53,7 @@ requirejs.config({
             deps: ["jquery"]
         },
         "highcharts-exporting": {
-            deps: ["highstock"]
+            deps: ["highstock", 'lib/highstock/modules/exporting']
         },
         "highcharts-theme": {
             deps: ["highstock"]
@@ -164,6 +164,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     download.init(elem);
                     elem.click();
                 });
+
+            //Register async loading of self-exclusion dialog
+            load_ondemand($navMenu.find("a.selfexclusion"), 'click', 'loading Self-Exclusion ...', 'selfexclusion/selfexclusion',
+                function (selfexclusion) {
+                    var elem = $navMenu.find("a.selfexclusion");
+                    selfexclusion.init(elem);
+                    elem.click();
+                });
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
@@ -198,8 +206,15 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
         handle_affiliate_route();
-    else //Our chart is accessed directly
+    else {
+
+        //Our chart is accessed directly
         handle_normal_route();
+
+        //load all other dependencies which should not be blocking and also should not be loaded in affiliate route
+        require(['selfexclusion/selfexclusion']);
+
+    }
 
     //load all other .css files asynchronously
     require([

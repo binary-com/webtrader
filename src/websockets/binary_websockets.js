@@ -135,7 +135,11 @@ define(['jquery'], function ($) {
 
     /* whether the given request needs authentication or not */
     var needs_authentication = function (data) {
-        for (var prop in { balance: 1, statement: 1, profit_table: 1, portfolio: 1, proposal_open_contract: 1, buy: 1, sell: 1 })
+        for (var prop in
+                    { balance: 1, statement: 1,
+                        profit_table: 1, portfolio: 1,
+                        proposal_open_contract: 1, buy: 1, sell: 1,
+                        get_self_exclusion : 1, set_self_exclusion : 1 })
             if (prop in data)
                 return true;
         return false;
