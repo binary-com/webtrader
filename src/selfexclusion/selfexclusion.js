@@ -1,9 +1,9 @@
 /**
  * Created by arnab on 4/5/16.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', "jquery-growl", 'common/util'], function($, windows, liveapi, _, rv) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', 'moment', "jquery-growl", 'common/util'], function($, windows, liveapi, _, rv, moment) {
 
-    var win = null, timerHandler = null;
+    var win = null, timerHandlerForSessionTimeout = null, loginTime = null;
     var settingsData = {
         max_balance: null,
         max_turnover: null,
@@ -34,6 +34,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             liveapi.send(data)
                 .then(function(response) {
                     $.growl.notice({ message : "Your changes have been updated" });
+                    logoutBasedOnExcludeDate();
                     setOrRefreshTimer();
                 })
                 .catch(function (err) {
@@ -64,6 +65,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             });
         });
     };
+
+    function logoutBasedOnExcludeDate() {
+        if (settingsData.exclude_until) {
+            if (moment.utc(settingsData.exclude_until, 'YYYY-MM-DD').isBefore(moment.utc().startOf('day'))) {
+                _.defer(function () {
+                    liveapi.invalidate();
+                });
+            }
+        }
+    }
+
     var refreshData = function() {
         $.growl.notice({ message: "Loading self-exclusion settings!" });
         return liveapi
@@ -80,6 +92,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                         settingsData.max_open_bets = response.get_self_exclusion.max_open_bets;
                         settingsData.session_duration_limit = response.get_self_exclusion.session_duration_limit;
                         settingsData.exclude_until = response.get_self_exclusion.exclude_until;
+                        logoutBasedOnExcludeDate();
                     }
                 })
                 .catch(function (err) {
@@ -90,24 +103,31 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     var setOrRefreshTimer = function() {
 
+        console.log('before setting timer', settingsData);
         if (_.isUndefined(settingsData.session_duration_limit)
                 || _.isNull(settingsData.session_duration_limit)
-                || !_.isNumber(settingsData.session_duration_limit)) return;
+                || !_.isFinite(_.toNumber(settingsData.session_duration_limit))) return;
 
-        if (timerHandler) clearTimeout(timerHandler);
-        var logoutAfter_seconds = settingsData.session_duration_limit * 60 * 1000;
-        timerHandler = setLongTimeout(function() {
+        console.log('Setting timer now');
+        if (timerHandlerForSessionTimeout) clearTimeout(timerHandlerForSessionTimeout);
+        var logoutAfter_ms = settingsData.session_duration_limit * 60 * 1000;
+        //reduce time elapsed since login
+        logoutAfter_ms -= _.now() - loginTime;
+        //setTimeout works with 32 bit value. Anything more than that does not work. 32 bit value is around 49 days
+        //User cannot be active on website for 49 days, so we are setting the session time out to 49 days max
+        if (logoutAfter_ms > Math.pow(2, 32)) { logoutAfter_ms = Math.pow(2, 32); }
+        timerHandlerForSessionTimeout = setTimeout(function() {
             $.growl.warning({ message : 'Logging out because of self-exclusion session time out!' });
-            console.log('Logging out because of self-exclusion session time out, time elapsed (in ms) :', logoutAfter_seconds);
+            console.log('Logging out because of self-exclusion session time out, time elapsed (in ms) :', logoutAfter_ms);
             liveapi.invalidate();
-        }, logoutAfter_seconds, function(handle) {
-            timerHandler = handle;
-        });
+        }, logoutAfter_ms);
+
     };
 
     liveapi.events.on('login', function(data) {
         liveapi.cached.authorize()
             .then(function() {
+                loginTime = _.now();
                 refreshData()
                     .then(function() {
                         setOrRefreshTimer();
@@ -117,8 +137,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     liveapi.events.on('logout', function() {
         if (win) win.dialog('destroy');
         win = null;
-        if (timerHandler) clearTimeout(timerHandler)
-        timerHandler = null;
+        if (timerHandlerForSessionTimeout) clearTimeout(timerHandlerForSessionTimeout)
+        timerHandlerForSessionTimeout = null;
+        loginTime = null;
         settingsData.max_balance= null;
         settingsData.max_turnover= null;
         settingsData.max_losses= null;
