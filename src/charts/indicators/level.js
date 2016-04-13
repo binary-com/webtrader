@@ -77,7 +77,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         click: function() {
 
                             var $elem = $('input.level_input_width_for_level'),                             
-                                val = _.toNumber($elem.val());
+                                val = Math.round(_.toNumber($elem.val()) * 10000)/10000;   //Maximum upto 4 decimals rounding
                                                     
 
                             if (!_.isFinite(val) || !_.inRange(val, parseInt($elem.attr("min")), parseInt($elem.attr("max")))) {
@@ -94,7 +94,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
 
                             if (callBackAfterOKPressed) {
-                                callBackAfterOKPressed([new Level(parseFloat($html.find(".level_input_width_for_level").val()),
+                                callBackAfterOKPressed([new Level(val,
                                     defaultStrokeColor, parseInt($html.find("#level_strokeWidth").val()),
                                     selectedDashStyle)]);
                             }
