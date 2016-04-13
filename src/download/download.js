@@ -362,6 +362,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                                 .find("span")
                                                 .html(instrumentObject.display_name);
                                             $(".download_instruments_container > ul").toggle();
+                                            // Create a new drop down everytime market is changed
+                                            createTimePeriodDropDown($(this).data("instrumentObject").delay_amount * 60, $html);
                                         });
                                         if (_.isUndefined(defaultInstrumentObject)) {
                                             defaultInstrumentObject = value;
@@ -385,6 +387,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 });
                             $downloadInstruments.data("instrumentObject", defaultInstrumentObject);
                             $downloadInstruments.find("span").html(defaultInstrumentObject.display_name);
+                            //Init the time period drop down
+                            createTimePeriodDropDown($downloadInstruments.data("instrumentObject").delay_amount * 60, $html);
 
                             $(".download_show").click();
 
@@ -393,38 +397,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                             $.growl.error({ message: e.message });
                         });
 
-
-                    //Init the time period drop down
                     var $download_timePeriod = $(".download_timePeriod");
-                    var rootUL_timePeriod = $("<ul>");
-                    timePeriods.forEach(function(timePeriodParent) {
-                        var subMenu = $("<ul>");
-                        timePeriodParent.timePeriods.forEach(function(timePeriod) {
-                            var tp = $("<li>");
-                            tp.append(timePeriod.name);
-                            tp.data("timePeriodObject", timePeriod);
-                            tp.click(function() {
-                                var timePeriodObject = $(this).data("timePeriodObject");
-                                $(".download_timePeriod")
-                                    .data("timePeriodObject", timePeriodObject)
-                                    .find("span")
-                                    .html($(this).data("timePeriodObject").name);
-                                $(".download_timePeriod_container > ul").toggle();
-                                var isDayCandles = timePeriodObject.code === '1d';
-                                var $download_fromTime = $html.find(".download_fromTime");
-                                if (isDayCandles) {
-                                    $download_fromTime.val("00:00");
-                                    $download_fromTime.hide()
-                                } else {
-                                    $download_fromTime.show();
-                                }
-                            });
-                            subMenu.append(tp);
-                        });
-                        rootUL_timePeriod.append($("<li>").append(timePeriodParent.name).append(subMenu));
-                    });
-                    $(".download_timePeriod_container").append(rootUL_timePeriod);
-                    rootUL_timePeriod.menu().toggle();
                     $download_timePeriod
                         .click(function() {
                             $(".download_timePeriod_container > ul").toggle();
@@ -455,6 +428,67 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 downloadWin.moveToTop();
             }
         });
+    }
+
+    /*
+    * delay_amount is used for getting instrumentObjects delay_amount.
+    * $html  contains html object of the download page.
+    * $download_timePeriod is the current timePeriod object.
+    * timePeriodValue contains converted value for different timePeriod objects converted into seconds.
+    * baseValue contains value converted into seconds for particular timeperiod.name.
+    * isChecked is a flag used to identify If current timeObject is less than delay_amount and set the next closest one.
+    */
+    function createTimePeriodDropDown(delay_amount, $html) {
+        var $download_timePeriod = $(".download_timePeriod"),
+            timePeriodValue, baseValue, isChecked = false;
+        //removing any existing drop down.
+        if ($download_timePeriod.find("ul").length > 0) {
+            $download_timePeriod.find("ul")[0].remove();
+        }
+        var rootUL_timePeriod = $("<ul>");
+        timePeriods.forEach(function(timePeriodParent) {
+            var subMenu = $("<ul>");
+            timePeriodParent.timePeriods.forEach(function(timePeriod) {
+                var tp = $("<li>");
+                timePeriodValue = convertToTimeperiodObject(timePeriod.code).timeInSeconds();
+                tp.append(timePeriod.name);
+                if (delay_amount > timePeriodValue) {
+                    tp.addClass("ui-button-disabled ui-state-disabled");
+                } else {
+                    tp.data("timePeriodObject", timePeriod);
+                    tp.click(function() {
+                        var timePeriodObject = $(this).data("timePeriodObject");
+                        $(".download_timePeriod")
+                            .data("timePeriodObject", timePeriodObject)
+                            .find("span")
+                            .html($(this).data("timePeriodObject").name);
+                        $(".download_timePeriod_container > ul").toggle();
+                        var isDayCandles = timePeriodObject.code === '1d';
+                        var $download_fromTime = $html.find(".download_fromTime");
+                        if (isDayCandles) {
+                            $download_fromTime.val("00:00");
+                            $download_fromTime.hide()
+                        } else {
+                            $download_fromTime.show();
+                        }
+                    });
+                    if (!_.isUndefined($download_timePeriod.data("timePeriodObject")) && !isChecked) {
+                        var obj = $download_timePeriod.data("timePeriodObject");
+                        var value = convertToTimeperiodObject(obj.code).timeInSeconds();
+                        if(value < delay_amount){
+                            tp.click();
+                            $(".download_timePeriod_container > ul").toggle();
+                        }
+                        isChecked = true;
+                    }
+                }
+                subMenu.append(tp);
+
+            });
+            rootUL_timePeriod.append($("<li>").append(timePeriodParent.name).append(subMenu));
+        });
+        $(".download_timePeriod_container").append(rootUL_timePeriod);
+        rootUL_timePeriod.menu().toggle();
     }
 
     return {
