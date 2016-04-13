@@ -40,6 +40,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           backgroundColor: null, /* make background transparent */
           width: 0,
           height: 0,
+          marginLeft:20,
+          marginRight:20,         
           events: {
               load: function() {
                   this.credits.element.onclick = function() {
@@ -364,7 +366,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         if(!state.chart.chart) return;
         var container = root;// root.find('.chart-container');
         var transactionChart = container.find(".transaction-chart");
-        var width = container.width() - 30, height = container.height();
+        var width = container.width() - 10, height = container.height();
         state.chart.chart.setSize(width, height + h , false);
         state.chart.chart.hasUserSize = null;
         if (state.chart.chart.series[0] && state.chart.chart.series[0].data.length === 0)

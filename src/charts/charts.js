@@ -166,63 +166,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
 
                                     //Add current price indicator
                                     this.addCurrentPrice();
-
-                                    var series = this;
-                                    /**
-                                     * Add URL parameter based markers on chart
-                                     */
-                                    require(['charts/draw/highcharts_custom/horizontal_line', 'charts/draw/highcharts_custom/vertical_line'], function(horizontal_line, vertical_line) {
-
-                                        horizontal_line.init();
-                                        vertical_line.init();
-
-                                        var startTime = parseInt(getParameterByName('startTime'));
-                                        var endTime = parseInt(getParameterByName('endTime'));
-                                        var entrySpotTime = parseInt(getParameterByName('entrySpotTime'));
-                                        var barrierPrice = parseFloat(getParameterByName('barrierPrice'));
-                                        if (startTime > 0) {
-                                            //Draw vertical line
-                                            series.addVerticalLine({
-                                                value : startTime * 1000, //starTime is in millis
-                                                name : 'Start Time'
-                                            });
-                                        }
-                                        if (endTime > 0) {
-                                            //Draw vertical line
-                                            series.addVerticalLine({
-                                                value :endTime * 1000, //starTime is in millis
-                                                name : 'End Time'
-                                            });
-                                            //Start a timer which will stop chart feed
-                                            var interval = setInterval(function(){
-                                                if (Date.now() > ((endTime + 1) * 1000)) { //Keep rendering atleast 1 second after the end time
-                                                    var ourData = $(series.chart.options.chart.renderTo).data();
-                                                    console.log('Stopping feed based off timer : ', containerIDWithHash, ourData.timePeriod, ourData.instrumentCode);
-                                                    referenceToChartsJSObject.destroy({
-                                                        containerIDWithHash : containerIDWithHash,
-                                                        timePeriod : ourData.timePeriod,
-                                                        instrumentCode : ourData.instrumentCode
-                                                    });
-                                                    clearInterval(interval);
-                                                }
-                                            }, 500);
-                                        }
-                                        if (entrySpotTime > 0) {
-                                            //Draw vertical line
-                                            series.addVerticalLine({
-                                                value : entrySpotTime * 1000, //starTime is in millis
-                                                name : 'Entry Spot'
-                                            });
-                                        }
-                                        if (barrierPrice) {
-                                            //Draw horizontal line
-                                            series.addHorizontalLine({
-                                                value : barrierPrice,
-                                                name : 'Barrier'
-                                            });
-                                        }
-                                    });
-
                                 }
 
                                 this.chart.hideLoading();
@@ -257,7 +200,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             var str = this.axis.defaultLabelFormatter.call(this);
                             return str.replace('.','');
                         }
-                    }
+                    },
+                    ordinal : false
                 },
 
                 yAxis: [{
@@ -308,7 +252,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             menuItems: [{
                                 text: 'Download PNG',
                                 onclick: function () {
-                                    this.exportChart();
+                                    this.exportChartLocal();
                                 }
                             }, {
                                 text: 'Download JPEG',
@@ -329,7 +273,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download SVG',
                                 onclick: function () {
-                                    this.exportChart({
+                                    this.exportChartLocal({
                                         type: 'image/svg+xml'
                                     });
                                 },
@@ -342,7 +286,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                                 separator: false
                             }]
                         }
-                    }
+                    },
+                    // Naming the File                    
+                    filename:options.instrumentName.split(' ').join('_')+"("+options.timePeriod+")"
                 }
 
             });

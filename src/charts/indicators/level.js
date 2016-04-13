@@ -76,8 +76,25 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                         text: "OK",
                         click: function() {
 
+                            var $elem = $('input.level_input_width_for_level'),                             
+                                val = Math.round(_.toNumber($elem.val()) * 10000)/10000;   //Maximum upto 4 decimals rounding
+                                                    
+
+                            if (!_.isFinite(val) || !_.inRange(val, parseInt($elem.attr("min")), parseInt($elem.attr("max")))) {
+                                require(["jquery", "jquery-growl"], function($) {
+                                    $.growl.error({
+                                        message: "Only numbers between " + $elem.attr("min") + " to " + $elem.attr("max") + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                    });
+                                });
+                                $elem.val($elem.prop("defaultValue"));
+                                isValid = false;
+                                return;
+                            }
+
+
+
                             if (callBackAfterOKPressed) {
-                                callBackAfterOKPressed([new Level(parseFloat($html.find(".level_input_width_for_level").val()),
+                                callBackAfterOKPressed([new Level(val,
                                     defaultStrokeColor, parseInt($html.find("#level_strokeWidth").val()),
                                     selectedDashStyle)]);
                             }
