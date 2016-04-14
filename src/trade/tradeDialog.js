@@ -292,6 +292,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           'contract_display': state.category_displays.selected,
           'start_type': 'forward'
         }).head();
+        // For markets with spot start_type
+        var spot_starting_options = _(available).filter({
+          'contract_category_display': state.categories.value,
+          'contract_display': state.category_displays.selected,
+          'start_type': 'spot'
+        }).head();
 
         if (!forward_starting_options) {
           _.assign(state.date_start, { visible: false, array: [], value: 'now' });
@@ -300,7 +306,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
         forward_starting_options = forward_starting_options.forward_starting_options
         var model = state.date_start;
-        var array = [{ text: 'Now', value: 'now' }];
+        var array = [];
+        // Add 'NOW' to start time only if the market contains spot start_type.
+        if(spot_starting_options){
+          array = [{ text: 'Now', value: 'now' }];
+        }
         var later = (new Date().getTime() + 5*60*1000)/1000; // 5 minute from now
         _.each(forward_starting_options, function (row) {
           var step = 5 * 60; // 5 minutes step
@@ -314,7 +324,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             array.push({ text: text, value: epoch });
           }
         });
-        var options = { value: 'now', array: array, visible: true };
+        var options = { value: array[0].value, array: array, visible: true };
         if(_.some(array, {value: state.date_start.value*1})) {
           options.value = state.date_start.value;
         }
