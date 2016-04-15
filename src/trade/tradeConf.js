@@ -125,7 +125,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                 console.log('accepting ', data);
                 add_tick(data.tick);
             });
-          }, 0);
+          });
 
 
     }
