@@ -82,7 +82,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
     function register_ticks(state, extra){
       var tick_count = extra.tick_count * 1,
           symbol = extra.symbol,
-          purchase_epoch = state.buy.purchase_time * 1;
+          purchase_epoch = state.buy.purchase_time * 1,
+          fn = null;
 
       /* TODO: if the connection get closed while we are adding new ticks,
                although we will automatically resubscribe (in binary_websockets),
@@ -115,15 +116,18 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                    .sort(function(a,b) { return a.epoch - b.epoch; });
       // console.warn(ticks);
       /* Wait till the view is bound via rivetsjs */
-      setTimeout(function(){
-        ticks.forEach(add_tick); /* add existing ticks */
-      }, 0);
+        _.defer(function(){
+            ticks.forEach(add_tick); /* add existing ticks */
+            fn = liveapi.events.on('tick', function (data) {
+                console.log('tick trading, got ', data);
+                if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || (data.tick.epoch * 1000) <= start_time)
+                    return;
+                console.log('accepting ', data);
+                add_tick(data.tick);
+            });
+          }, 0);
 
-      var fn = liveapi.events.on('tick', function (data) {
-          if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || data.tick.epoch * 1 < purchase_epoch)
-            return;
-          add_tick(data.tick);
-      });
+
     }
 
     function init(data, extra, show_callback, hide_callback){
