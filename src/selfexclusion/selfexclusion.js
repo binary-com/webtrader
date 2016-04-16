@@ -17,6 +17,49 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         exclude_until: null,
         update : function(event, scope) {
             console.log('update self-exclusion : ', scope);
+
+            //validation
+            if (scope.session_duration_limit && !_.inRange(scope.session_duration_limit, 0, 99999)) {
+                $.growl.error({ message : 'Please enter value between 0 and 99999 for Session duration limit' });
+                return;
+            }
+            if (scope.exclude_until && moment.utc(scope.exclude_until, "YYYY-MM-DD").isBefore(moment.utc().startOf('day').add("months", 6))) {
+                $.growl.error({ message : 'Exclude time cannot be less than 6 months' });
+                return;
+            }
+            if (scope.max_open_bets && !_.inRange(scope.max_open_bets, 0, 9999)) {
+                $.growl.error({ message : 'Please enter positive integer value between 0 and 9999' });
+                return;
+            }
+            if (scope.max_balance && !_.inRange(scope.max_balance, 0, Number.MAX_VALUE)) {
+                $.growl.error({ message : 'Please enter positive integer value for Maximum number of open positions' });
+                return;
+            }
+            if (scope.max_30day_losses && !_.inRange(scope.max_30day_losses, 0, Number.MAX_VALUE)) {
+                $.growl.error({ message : 'Please enter positive integer value for 30-day limit on losses' });
+                return;
+            }
+            if (scope.max_turnover && !_.inRange(scope.max_turnover, 0, Number.MAX_VALUE)) {
+                $.growl.error({ message : 'Please enter positive integer value for Daily turnover limit' });
+                return;
+            }
+            if (scope.max_30day_turnover && !_.inRange(scope.max_30day_turnover, 0, Number.MAX_VALUE)) {
+                $.growl.error({ message : 'Please enter positive integer value for 30-day turnover limit' });
+                return;
+            }
+            if (scope.max_7day_losses && !_.inRange(scope.max_7day_losses, 0, Number.MAX_VALUE)) {
+                $.growl.error({ message : 'Please enter positive integer value for 7-day limit on losses' });
+                return;
+            }
+            if (scope.max_losses && !_.inRange(scope.max_losses, 0, Number.MAX_VALUE)) {
+                $.growl.error({ message : 'Please enter positive integer value for Daily limit on losses' });
+                return;
+            }
+            if (scope.max_7day_turnover && !_.inRange(scope.max_7day_turnover, 0, Number.MAX_VALUE)) {
+                $.growl.error({ message : 'Please enter positive integer value for 7-day turnover limit' });
+                return;
+            }
+
             var data = {
                 "set_self_exclusion": 1,
                 "session_duration_limit": scope.session_duration_limit,
@@ -68,8 +111,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     function logoutBasedOnExcludeDate() {
         if (settingsData.exclude_until) {
-            if (moment.utc(settingsData.exclude_until, 'YYYY-MM-DD').isBefore(moment.utc().startOf('day'))) {
+            if (moment.utc(settingsData.exclude_until, 'YYYY-MM-DD').isAfter(moment.utc().startOf('day'))) {
                 _.defer(function () {
+                    $.growl.error( { message : 'You have excluded yourself until ' + settingsData.exclude_until });
                     liveapi.invalidate();
                 });
             }
