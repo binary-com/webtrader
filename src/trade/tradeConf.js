@@ -115,8 +115,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                BUT we will also lose some ticks in between!
                which means we ware showing the wrong ticks to the user! FIX THIS*/
       function add_tick(tick){
-          if (_.findIndex(state.ticks.array, function(t) { return t.epoch === (tick.time / 1000)}) === -1) {
-              console.log(symbolData);
+          if (_.findIndex(state.ticks.array, function(t) { return t.epoch === (tick.time / 1000)}) === -1 && tick_count > 0) {
               state.ticks.array.push({
                   quote: tick.close,
                   epoch: (tick.time / 1000) | 0,
@@ -126,19 +125,19 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                   digitsAfterDecimal : digitsAfterDecimal(symbolData.pip, symbol)
               });
               --tick_count;
-              if (tick_count === 0) {
-                  state.ticks.update_status();
-                  state.buy.update();
-                  /* show buy-price final and profit & update title */
-                  state.back.visible = true;
-                  /* show back button */
-                  liveapi.events.off('tick', fn);
-                  /* unregister from tick stream */
-              }
-              /* update state for each new tick in Up/Down && Asians contracts */
-              if (state.ticks.category !== 'Digits')
-                  state.ticks.update_status();
           }
+          if (tick_count === 0) {
+              state.ticks.update_status();
+              state.buy.update();
+              /* show buy-price final and profit & update title */
+              state.back.visible = true;
+              /* show back button */
+              liveapi.events.off('tick', fn);
+              /* unregister from tick stream */
+          }
+          /* update state for each new tick in Up/Down && Asians contracts */
+          if (state.ticks.category !== 'Digits')
+              state.ticks.update_status();
       }
 
       /* Wait till the view is bound via rivetsjs */
