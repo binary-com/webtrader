@@ -79,8 +79,29 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       } /* end of routine() */
     };
 
-        function digitsAfterDecimal( pipValueInString ) {
-          return pipValueInString.substring(pipValueInString.indexOf(".") + 1).length;
+        function digitsAfterDecimal( pipValueInString, symbol ) {
+            if(!pipValueInString) {
+                console.error('pipValueInString is invalid', pipValueInString);
+                /**
+                 * This is disaster. If pip value is invalid, then it could several trade related issues.
+                 * Try to guess decimal places from whatever data we have from local database
+                 * (This is a fallback method. the execution never come here)
+                 * Technique -
+                 *      Fetch last 10 tick values
+                 *      Take the maximum decimal places all these ticks
+                 */
+                var key = chartingRequestMap.keyFor(symbol, 0);
+                var digitsAfterDec = 0;
+                barsTable.chain()
+                    .find({ instrumentCdAndTp : key })
+                    .simplesort("time", true).limit(10).data()
+                    .forEach(function (d) {
+                        var len = (d.close + "").substring((d.close + "").indexOf('.') + 1).length;
+                        if (digitsAfterDec < len) digitsAfterDec = len;
+                    });
+                return digitsAfterDec;
+            }
+            return pipValueInString.substring(pipValueInString.indexOf(".") + 1).length;
         }
 
     function register_ticks(state, extra, symbolData){
@@ -95,13 +116,14 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                which means we ware showing the wrong ticks to the user! FIX THIS*/
       function add_tick(tick){
           if (_.findIndex(state.ticks.array, function(t) { return t.epoch === (tick.time / 1000)}) === -1) {
+              console.log(symbolData);
               state.ticks.array.push({
                   quote: tick.close,
                   epoch: (tick.time / 1000) | 0,
                   number: state.ticks.array.length + 1,
                   tooltip: moment.utc(tick.time).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
                   extra.symbol_name + " " + tick.close,
-                  digitsAfterDecimal : digitsAfterDecimal(symbolData.pip)
+                  digitsAfterDecimal : digitsAfterDecimal(symbolData.pip, symbol)
               });
               --tick_count;
               if (tick_count === 0) {
@@ -237,7 +259,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       }
       state.ticks.update_status = function() {
 
-        var numberOfDigitsAfterDecimal = digitsAfterDecimal(symbolData.pip);
+        var numberOfDigitsAfterDecimal = digitsAfterDecimal(symbolData.pip, extra.symbol);
 
         var first_quote = _.head(state.ticks.array).quote.toFixed(numberOfDigitsAfterDecimal) + '',
             last_quote = _.last(state.ticks.array).quote.toFixed(numberOfDigitsAfterDecimal) + '',
