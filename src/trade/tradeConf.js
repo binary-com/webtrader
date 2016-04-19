@@ -5,10 +5,10 @@
 define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/rivetsExtra', 'charts/chartingRequestMap', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
   function(_, $, moment, liveapi, rv, chartingRequestMap, html){
 
-    require(['websockets/stream_handler']);
-    var barsTable = chartingRequestMap.barsTable;
-    /* rv binder to show tick chart for this confirmation dialog */
-    rv.binders['tick-chart'] = {
+        require(['websockets/stream_handler']);
+        var barsTable = chartingRequestMap.barsTable;
+        /* rv binder to show tick chart for this confirmation dialog */
+        rv.binders['tick-chart'] = {
       priority: 65, /* a low priority to apply last */
       bind: function(el) {
           var model = this.model;
@@ -79,7 +79,11 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       } /* end of routine() */
     };
 
-    function register_ticks(state, extra){
+        function digitsAfterDecimal( pipValueInString ) {
+          return pipValueInString.substring(pipValueInString.indexOf(".") + 1).length;
+        }
+
+    function register_ticks(state, extra, symbolData){
       var tick_count = extra.tick_count * 1,
           symbol = extra.symbol,
           purchase_epoch = state.buy.purchase_time * 1,
@@ -90,47 +94,66 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                BUT we will also lose some ticks in between!
                which means we ware showing the wrong ticks to the user! FIX THIS*/
       function add_tick(tick){
-          state.ticks.array.push({
-            quote: tick.quote,
-            epoch: tick.epoch*1,
-            number: state.ticks.array.length+1,
-            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
-                     extra.symbol_name + " " + tick.quote,
-          });
-          --tick_count;
-          if(tick_count === 0) {
-              state.ticks.update_status();
-              state.buy.update(); /* show buy-price final and profit & update title */
-              state.back.visible = true; /* show back button */
-              liveapi.events.off('tick',fn); /* unregister from tick stream */
+          if (_.findIndex(state.ticks.array, function(t) { return t.epoch === (tick.time / 1000)}) === -1) {
+              state.ticks.array.push({
+                  quote: tick.close,
+                  epoch: (tick.time / 1000) | 0,
+                  number: state.ticks.array.length + 1,
+                  tooltip: moment.utc(tick.time).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
+                  extra.symbol_name + " " + tick.close,
+                  digitsAfterDecimal : digitsAfterDecimal(symbolData.pip)
+              });
+              --tick_count;
+              if (tick_count === 0) {
+                  state.ticks.update_status();
+                  state.buy.update();
+                  /* show buy-price final and profit & update title */
+                  state.back.visible = true;
+                  /* show back button */
+                  liveapi.events.off('tick', fn);
+                  /* unregister from tick stream */
+              }
+              /* update state for each new tick in Up/Down && Asians contracts */
+              if (state.ticks.category !== 'Digits')
+                  state.ticks.update_status();
           }
-          /* update state for each new tick in Up/Down && Asians contracts */
-          if(state.ticks.category !== 'Digits')
-              state.ticks.update_status();
       }
-      /* Wait till the view is bound via rivetsjs */
-        _.defer(function(){
-            var key = chartingRequestMap.keyFor(symbol, 0);
-            var ticks  = barsTable.find({instrumentCdAndTp: key});
-            var start_time = state.buy.start_time*1000;
-            ticks = ticks.filter(function(tick) { return tick.time > start_time; })
-                .map(function(tick) { return {quote: tick.price, epoch: tick.time/1000 }; })
-                .sort(function(a,b) { return a.epoch - b.epoch; });
-            // console.warn(ticks);
-            ticks.forEach(add_tick); /* add existing ticks */
-            fn = liveapi.events.on('tick', function (data) {
-                console.log('tick trading, got ', data);
-                if (tick_count === 0 || !data.tick || data.tick.symbol !== symbol || (data.tick.epoch * 1000) <= start_time)
-                    return;
-                console.log('accepting ', data);
-                add_tick(data.tick);
-            });
-          });
 
+      /* Wait till the view is bound via rivetsjs */
+      _.defer(function() {
+            fn = liveapi.events.on('tick', function (data) {
+
+                if (data.tick.symbol != symbol) return;
+
+                var key = chartingRequestMap.keyFor(data.tick.symbol, 0);
+                var start_time = state.buy.start_time * 1000;
+                barsTable.chain()
+                    .find({'$and' : [{ time : { '$gt' : start_time }}, { instrumentCdAndTp : key }] })
+                    .simplesort("time", true).limit(5).data()
+                    .sort( function(a,b) { return a.time - b.time; } )
+                    .forEach(add_tick);
+            });
+      });
 
     }
 
-    function init(data, extra, show_callback, hide_callback){
+      /**
+       * @param data
+       * @param extra
+       * @param show_callback
+       * @param hide_callback
+       * @param symbolData - symbol = {
+                                symbol: "frxXAUUSD",
+                                display_name: "Gold/USD",
+                                delay_amount: 0,
+                                settlement: "",
+                                feed_license: "realtime",
+                                events: [{ dates: "Fridays", descrip: "Closes early (at 21:00)" }, { dates: "2015-11-26", descrip: "Closes early (at 18:00)" }],
+                                times: { open: ["00:00:00"], close: ["23:59:59"], settlement: "23:59:59" },
+                                pip: "0.001"
+                              }
+       */
+    function init(data, extra, show_callback, hide_callback, symbolData){
       var root = $(html);
       var buy = data.buy;
       var state = {
@@ -213,8 +236,11 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         state.buy.show_result = true;
       }
       state.ticks.update_status = function() {
-        var first_quote = _.head(state.ticks.array).quote + '',
-            last_quote = _.last(state.ticks.array).quote + '',
+
+        var numberOfDigitsAfterDecimal = digitsAfterDecimal(symbolData.pip);
+
+        var first_quote = _.head(state.ticks.array).quote.toFixed(numberOfDigitsAfterDecimal) + '',
+            last_quote = _.last(state.ticks.array).quote.toFixed(numberOfDigitsAfterDecimal) + '',
             digits_value = state.ticks.value + '',
             average = state.ticks.average().toFixed(5);
         var category = state.ticks.category,
@@ -252,7 +278,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       };
 
 
-      if(!state.arrow.visible) { register_ticks(state, extra); }
+      if(!state.arrow.visible) { register_ticks(state, extra, symbolData); }
       else { state.back.visible = true; }
 
 

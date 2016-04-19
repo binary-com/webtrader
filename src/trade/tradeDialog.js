@@ -10,7 +10,8 @@
         settlement: "",
         feed_license: "realtime",
         events: [{ dates: "Fridays", descrip: "Closes early (at 21:00)" }, { dates: "2015-11-26", descrip: "Closes early (at 18:00)" }],
-        times: { open: ["00:00:00"], close: ["23:59:59"], settlement: "23:59:59" }
+        times: { open: ["00:00:00"], close: ["23:59:59"], settlement: "23:59:59" },
+        pip: "0.001"
       },
 
   The contracts_for is in the following format:
@@ -654,7 +655,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                   require(['trade/tradeConf'], function(tradeConf){
                       extra.contract_id = data.buy.contract_id;
                       extra.transaction_id = data.buy.transaction_id;
-                      tradeConf.init(data, extra, show, hide);
+                      tradeConf.init(data, extra, show, hide, symbol);
                   });
                })
                .catch(function(err){
