@@ -297,6 +297,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   }
 
   function init_state(proposal, root){
+    console.log(proposal.sell_price && formatPrice(proposal.sell_price))
       var state = {
           route: {
               value: 'table',
@@ -392,7 +393,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                state.table.sell_time = trans.sell_time;
                state.table.sell_price = trans.sell_price;
                state.table.sell_spot = '-'; // TODO: find a way to get sell spot
-               state.table.final_price = undefined; // TODO: find a way to get final price
+               //state.table.final_price = undefined; // TODO: find a way to get final price
                state.table.is_sold_at_market = true;
                state.validation = 'This contract has expired';
                chart_data_promise.then(function(){
