@@ -11,7 +11,7 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
               /* clean up the data! */
               var markets = _(data.active_symbols).groupBy('market').map(function(symbols){
                   var sym = _.head(symbols);
-                  market = { name: sym.market, display_name: sym.market_display_name};
+                  var market = { name: sym.market, display_name: sym.market_display_name };
                   market.submarkets = _(symbols).groupBy('submarket').map(function(symbols){
                     var sym = _.head(symbols);
                     var submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
@@ -19,7 +19,8 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
                         return  {
                           symbol: sym.symbol,
                           display_name: sym.display_name,
-                          is_disabled: sym.is_trading_suspended || !sym.exchange_is_open
+                          is_disabled: sym.is_trading_suspended || !sym.exchange_is_open,
+                          pip: sym.pip
                         };
                       });
                     submarket.is_disabled = _.every(submarket.instruments, 'is_disabled');
