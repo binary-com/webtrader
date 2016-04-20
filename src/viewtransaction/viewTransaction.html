@@ -75,7 +75,7 @@
           <span rv-text="table.buy_price | prepend table.currency | or '-'"></span>
       </div>
       <div rv-if="table.sell_price | eq undefined"> <p>Indicative Price</p>
-          <span rv-text="table.bid_price | prepend table.currency | or '-'" rv-indicative-color="sell.bid_price.value"></span>
+          <span rv-text="table.bid_price | prepend table.currency | or '-'" ></span>
           <br />
           <span rv-text="table.bid_price | percent-of table.buy_price"
                 rv-tooltip='"return"'

@@ -296,8 +296,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           });
   }
 
-  function init_state(proposal, root){
-    console.log(proposal.sell_price && formatPrice(proposal.sell_price))
+  function init_state(proposal, root){  
       var state = {
           route: {
               value: 'table',
