@@ -13,12 +13,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
         require(['css!charts/indicators/mom/mom.css']);
 
-        var Level = function (level, stroke, strokeWidth, dashStyle) {
-            this.level = level;
-            this.stroke = stroke;
-            this.strokeWidth = strokeWidth;
-            this.dashStyle = dashStyle;
-        };
         var defaultLevels = [];
 
         require(['text!charts/indicators/mom/mom.html'], function ($html) {
@@ -61,50 +55,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
             $('#mom_dashStyle .dd-option-image').css('max-width', '85px');
 
-            var table = $html.find('#mom_levels').DataTable({
-                paging: false,
-                scrollY: 100,
-                autoWidth: true,
-                searching: false,
-                info: false,
-                "columnDefs": [
-                   { className: "dt-center", "targets": [0, 1, 2, 3] }
-                ],
-                "aoColumnDefs": [{ "bSortable": false, "aTargets": [1, 3] }]
-            });
-            $.each(defaultLevels, function (index, value) {
-                $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
-                    '<div style="width:50px;overflow:hidden;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
-                    .data("level", value)
-                    .on('click', function () {
-                        $(this).toggleClass('selected');
-                    });
-            });
-            $html.find('#mom_level_delete').click(function () {
-                if (table.rows('.selected').indexes().length <= 0) {
-                    require(["jquery", "jquery-growl"], function ($) {
-                        $.growl.error({ message: "Select level(s) to delete!" });
-                    });
-                } else {
-                    table.rows('.selected').remove().draw();
-                }
-            });
-            $html.find('#mom_level_add').click(function () {
-                require(["indicator_levels"], function (mom_level) {
-                    mom_level.open(containerIDWithHash, function (levels) {
-                        $.each(levels, function (ind, value) {
-                            $(table.row.add([value.level, '<div style="background-color: ' + value.stroke + ';width:100%;height:20px;"></div>', value.strokeWidth,
-                                '<div style="width:50px;overflow:hidden;"><img src="images/dashstyle/' + value.dashStyle + '.svg" /></div>']).draw().node())
-                                .data("level", value)
-                                .on('click', function () {
-                                    $(this).toggleClass('selected');
-                                });
-                        });
-                    });
-                });
-            });
-
-
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
@@ -133,28 +83,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                  return;
                              };
 
-                            var levels = [];
-                            $.each(table.rows().nodes(), function () {
-                                var data = $(this).data('level');
-                                if (data) {
-                                    levels.push({
-                                        color: data.stroke,
-                                        dashStyle: data.dashStyle,
-                                        width: data.strokeWidth,
-                                        value: data.level,
-                                        label: {
-                                            text: data.level
-                                        }
-                                    });
-                                }
-                            });
                             var options = {
                                 period: parseInt($html.find(".mom_input_width_for_period").val()),
                                 stroke: defaultStrokeColor,
                                 strokeWidth: parseInt($html.find("#mom_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#mom_appliedTo").val()),
-                                levels: levels
+                                levels: []
                             };
                             //Add MOM for the main series
                             $($(".mom").data('refererChartID')).highcharts().series[0].addIndicator('mom', options);
