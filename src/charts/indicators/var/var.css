@@ -6,18 +6,8 @@
     width: 115px;
 }
 
-.var_level_input_width_for_level {
-  width: 115px;
-}
-
 .var label {
     display: block;
-}
-
-#var_levels_wrapper {
-    border: 1px solid #aaaaaa;
-    width: 100%;
-    border-radius: 5px;
 }
 
 .var-ui-dialog, .var.ui-dialog-content, .var_level.ui-dialog-content {
