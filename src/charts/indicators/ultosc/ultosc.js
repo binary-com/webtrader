@@ -136,6 +136,36 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 					                return;
 					            }
 					        });
+
+                            //Bug Fix:- https://trello.com/c/1hIogAJe/87-ultimate-oscillator-ultosc-https-www-tradingtechnologies-com-help-xstudy-ultimate-oscillator-ultosc
+                            var firstPeriod= parseInt($("#ultosc_first_period").val()),
+                                secondPeriod= parseInt($("#ultosc_second_period").val()),
+                                thirdPeriod= parseInt($("#ultosc_third_period").val());
+
+                               if (firstPeriod > thirdPeriod) {
+                                var $firstPeriod=$("#ultosc_first_period");
+                                    require(["jquery", "jquery-growl"], function ($) {
+                                        $.growl.error({
+                                            message: " Period 1 cannot be more than Period 3" + "!"
+                                        });
+                                    });
+                                   
+                                    isValid = false;
+                                    return;
+                                }  
+
+                                if (secondPeriod > thirdPeriod) {
+                                var $secondPeriod=$("#ultosc_first_period");
+                                    require(["jquery", "jquery-growl"], function ($) {
+                                        $.growl.error({
+                                            message: " Period 2 cannot be more than Period 3" + "!"
+                                        });
+                                    });
+                                    isValid = false;
+                                    return;
+                                }   
+
+
 					        if (!isValid) return;
 
                             var levels = [];
