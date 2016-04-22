@@ -304,8 +304,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 changeMonth: model.changeMonth || true,
                 changeYear: model.changeYear || true,
                 onSelect: function () { $(this).change(); },
-                beforeShow: function (input, inst) { inst.dpDiv.css(styles); },
-                dateFormat: "yy-mm-dd"
+                beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
             };
 
             var dpicker = input.datepicker(options);

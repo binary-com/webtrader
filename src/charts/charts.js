@@ -257,7 +257,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download JPEG',
                                 onclick: function () {
-                                    this.exportChartLocal({
+                                    this.exportChart({
                                         type: 'image/jpeg'
                                     });
                                 },
@@ -265,7 +265,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download PDF',
                                 onclick: function () {
-                                    this.exportChartLocal({
+                                    this.exportChart({
                                         type: 'application/pdf'
                                     });
                                 },

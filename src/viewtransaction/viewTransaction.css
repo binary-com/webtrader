@@ -85,8 +85,8 @@
 .view-transaction-dialog .content .transaction-chart {
     padding-top: 5px;
     height: 100%;
-    padding-left : 5px;
-    padding-right : 5px;
+   /* padding-left : 5px;
+    padding-right : 5px;*/
 }
 
 .view-transaction-dialog .content .chart-container .loading {
@@ -109,8 +109,8 @@
 }
 
 .view-transaction-dialog .content .chart-container {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /******************** explanation tab ************/

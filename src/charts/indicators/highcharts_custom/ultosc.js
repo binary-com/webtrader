@@ -7,8 +7,8 @@ ULTOSC = function (data, options, indicators) {
     this.priceData = [];
     this.BP = [], this.TR = [];
     /* ULTOSC 
-    BP = Close - Minimum(Low or Prior Close).
-    TR = Maximum(High or Prior Close)  -  Minimum(Low or Prior Close)
+    BP(Buying Pressure) = Close - Minimum(Low or Prior Close).
+    TR(True Range) = Maximum(High or Prior Close)  -  Minimum(Low or Prior Close)
     Average7 = (7-period BP Sum) / (7-period TR Sum)
     Average14 = (14-period BP Sum) / (14-period TR Sum)
     Average28 = (28-period BP Sum) / (28-period TR Sum)
