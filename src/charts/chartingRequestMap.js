@@ -110,7 +110,6 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                 //Find out how many instrument series are loaded on chart
                 var countInstrumentCharts = 0;
                 chart.series.forEach(function(series) {
-                    console.log(series.options.isInstrument);
                     if (series.options.isInstrument && series.options.id !== "navigator") {
                         ++countInstrumentCharts;
                     }
