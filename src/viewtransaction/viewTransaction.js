@@ -54,7 +54,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           text: title,
           style: { fontSize:'16px' }
         },
-        tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
+        tooltip:{ valueDecimals: 3,xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
         xAxis: {
           type: 'datetime',
           categories:null,
