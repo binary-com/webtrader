@@ -2,7 +2,6 @@
  * Created by amin on October 22, 2015.
  */
 define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], function ($, windows) {
-    var $html = $('<div />');
     var callbacks = null;
     var promise = null;
     var tokenWin = null;
@@ -47,6 +46,12 @@ define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], func
                         callbacks = promise = null;
                         tokenWin.dialog('close');
                     });
+
+                require(['websockets/binary_websockets'],function(liveapi) {
+                    liveapi.events.on('logout', function() {
+                        $html.find('#token-dialog-input').val('');
+                    });
+                });
 
                 tokenWin.dialog('open');
             });
