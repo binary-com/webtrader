@@ -165,6 +165,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                                     //this.isDirtyData = true;
 
                                     //Add current price indicator
+                                    //If we already added currentPriceLine for this series, ignore it
+                                    console.log(this.options.id, this.yAxis.plotLinesAndBands);
+                                    this.removeCurrentPrice();
                                     this.addCurrentPrice();
                                 }
 
@@ -381,7 +384,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                     }
                 }
 
-                currentPrice.init();
                 liveapi.execute(function(){
                     ohlc_handler.retrieveChartDataAndRender({
                         timePeriod : mainSeries_timePeriod,
