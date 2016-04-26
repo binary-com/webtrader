@@ -36,6 +36,7 @@ define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], func
                         else callbacks.reject({ message: 'invalid token value' });
 
                         callbacks = promise = null;
+                        input.val(""); //Clear the token
                         tokenWin.dialog('close');
                     })
                     .next()
@@ -44,6 +45,7 @@ define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], func
                         callbacks && callbacks.reject({ message: "User didn't provide a token" });
 
                         callbacks = promise = null;
+                        input.val(""); //Clear the token
                         tokenWin.dialog('close');
                     });
 
