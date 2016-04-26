@@ -9,26 +9,6 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
     var dialogCounter = 0;
     var $menuUL = null;
 
-    /* options: { width: 350, height: 400 } */
-    function calculateChartCount(options) {
-        options = $.extend({ width: 350, height: 400 }, options);
-        var rows = Math.floor($(window).height() / options.height) || 1,
-            cols = Math.floor($(window).width() / options.width) || 1;
-
-        if (isSmallView()) //For small size screens
-            rows = cols = 1;
-        /**** limi the number of charts to 4 ****/
-        if(rows * cols > 4) {
-          rows = 1;
-          cols = 4;
-        };
-        return {
-            rows: rows,
-            cols: cols,
-            total: rows * cols
-        };
-    }
-
     /* shuffle the given array */
     function shuffle(array) {
         var temp, rand_inx;
@@ -420,32 +400,27 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 //Attach click listener for tile menu
                 tileObject.click(tileDialogs);
 
-                var counts = calculateChartCount();
                 liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (markets) {
-                        markets = menu.extractChartableMarkets(markets);
-                        /* return a random element of an array */
-                        var rand = function (arr) { return arr[ Math.floor(Math.random()*arr.length) ]; };
-                        var timePeriods = ['2h', '4h', '8h', '1d'];
-                        var chartTypes = ['candlestick', 'line', 'ohlc', 'spline']; //This is not the complete chart type list, however its good enough to randomly select one from this subset
-                        for (var inx = 0; inx < counts.total; ++inx){
-                            var submarkets = rand(markets).submarkets;
-                            var symbols = rand(submarkets).instruments;
-                            var sym = rand(symbols);
-                            var timePeriod = rand(timePeriods);
-                            var chart_type = rand(chartTypes);
-
+                        markets = menu.extractFilteredMarkets(markets, {
+                            filter: function (sym) { 
+                                return sym.symbol === 'frxUSDJPY';
+                            }
+                        });
+                        markets && markets[0] &&
+                        markets[0].submarkets && markets[0].submarkets[0] &&
+                        markets[0].submarkets[0].instruments &&
+                        markets[0].submarkets[0].instruments.forEach(function(sym) {
                             chartWindowObj
                                 .addNewWindow({
                                     instrumentCode : sym.symbol,
                                     instrumentName : sym.display_name,
-                                    timePeriod : timePeriod,
-                                    type : chart_type,
+                                    timePeriod : '1d',
+                                    type : 'candlestick',
                                     delayAmount : sym.delay_amount
                                 });
-                        }
-
+                        });
                         tileDialogs(); // Trigger tile action
                     });
             });
