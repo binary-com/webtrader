@@ -80,6 +80,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
     };
 
         function digitsAfterDecimal( pipValueInString, symbol ) {
+            //Don't trust backend. It has been found that "pip" values are sometimes Number and other times String.
+            //There is no consistency. It has been reported to backend
+            pipValueInString += "";
             if(!pipValueInString) {
                 console.error('pipValueInString is invalid', pipValueInString);
                 /**
