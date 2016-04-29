@@ -1,8 +1,6 @@
 git:
  depth: 1
 language: node_js
-node_js:
-- '0.12'
 notifications:
   email:
   - arnab@binary.com
@@ -11,6 +9,7 @@ branches:
   - master
   - development
 script:
+- npm install -g npm
 - npm install -g grunt-cli
 - npm install -g bower
 - npm install
