@@ -50,6 +50,8 @@ define(['jquery'], function ($) {
          **/
         setTimeout(function(){
             socket = connect();
+            if(Cookies && Cookies.get('webtrader_token'))
+              api.cached.authorize();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
                     var req = chartingRequestMap[key];
