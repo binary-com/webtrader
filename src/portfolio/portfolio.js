@@ -83,7 +83,8 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         liveapi.send({ forget_all: 'proposal_open_contract' })
           .then(function(data) {
             subscribed_before = false;
-            return liveapi.send({ proposal_open_contract: 1,subscribe: 1 }); /* subscribe again */
+            --subscribers;
+            proposal_open_contract('subscribe'); /* subscribe again */
           })
           .catch(function (err) {
             subscribed_before = false;

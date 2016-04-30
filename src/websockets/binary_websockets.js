@@ -249,6 +249,15 @@ define(['jquery'], function ($) {
                   var index = callbacks[name].indexOf(cb);
                   index !== -1 && callbacks[name].splice(index, 1);
                 }
+            },
+            /* callback function should return true to unsubscribe */
+            on_till: function(name, cb){
+              var once_cb = function(){
+                var done = cb.apply(this, arguments);
+                if(done)
+                  api.events.off(name,once_cb);
+              }
+              api.events.on(name, once_cb);
             }
         },
         /* execute callback when the connection is ready */
@@ -319,7 +328,7 @@ define(['jquery'], function ($) {
         is_authenticated: function () {
           return is_authenitcated_session;
         },
-        sell_expired: function(epoch){
+        sell_expired: function(epoch) {
             var now = (new Date().getTime())/1000 | 0;
             if(!sell_expired_timeouts[epoch] && epoch*1 > now) {
               sell_expired_timeouts[epoch] = setTimeout(function(){
