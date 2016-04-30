@@ -184,6 +184,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.table.sell_spot = contract.sell_spot;
         state.table.sell_time = contract.sell_time;
         state.table.sell_price = contract.sell_price;
+        state.table.final_price = formatPrice(contract.sell_price);
       }
   }
 
