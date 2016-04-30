@@ -119,7 +119,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
   /* get the tick value for a given epoch */
   function get_tick_value(symbol, epoch){
-    console.log('get_tick_value');
     return liveapi.send({ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end:epoch+2, count: 1})
                   .catch(function(err) { console.error(err); });
   }
@@ -186,7 +185,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.table.sell_time = contract.sell_time;
         state.table.sell_price = contract.sell_price;
       }
-
   }
 
   function init_dialog(proposal) {
@@ -340,6 +338,20 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       get_chart_data(state, root).then(function(){
           if(state.table.sell_time)
             state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'});
+      });
+
+      /* backend doesn't always retun the sell_price when contract is soled,
+         TODO: remove this when it does */
+      liveapi.events.on_till('transaction', function(data){
+        var transaction = data.transaction;
+        if(transaction.action === 'sell' && transaction.contract_id == state.contract_id) {
+          liveapi.send({proposal_open_contract: 1, contract_id: state.contract_id})
+                 .then(function(_data) {
+                    update_indicative(_data, state);
+                 })
+                 .catch(function(err) { console.error(err); });
+          return true; // unsubscribe
+        }
       });
 
       return state;
