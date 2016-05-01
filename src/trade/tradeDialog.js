@@ -229,7 +229,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         proposal: {
           symbol: symbol.symbol,
           symbol_name: symbol.display_name,
-          ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
+          last_promise: null,
           req_id: -1, /* id of last request sent */
 
           ask_price: "0.0",
@@ -577,28 +577,36 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
 
         state.proposal.loading = true;
-        /* forget requested streams */
-        while (state.proposal.ids.length) {
-          var id = state.proposal.ids.shift();
-          liveapi.send({ forget: id });
+        /* forget previous proposal request */
+        if(state.proposal.last_promise) {
+          state.proposal.last_promise.then(function(data){
+            var id = data.proposal && data.proposal.id;
+            id && liveapi.send({forget: id});
+          });
         }
 
-        liveapi.send(request)
-        .then(function (data) {
-          var id = data.proposal.id;
-          state.proposal.ids.push(id);
-          state.proposal.error = '';
-          state.proposal.req_id = data.req_id;
-        })
-        .catch(function (err) {
-          console.error(err);
-          state.proposal.error = err.message;
-          state.proposal.message = '';
-          if (err.echo_req && err.echo_req.proposal && err.details) {
-            state.proposal.ask_price = err.details.display_value;
-            state.proposal.message = err.details.longcode;
-          }
-        });
+        var new_proposal_promise = liveapi.send(request)
+          .then(function (data) {
+            /* OK, this is the last sent request */
+            if(new_proposal_promise === state.proposal.last_promise) {
+              var id = data.proposal && data.proposal.id;
+              state.proposal.error = '';
+              state.proposal.req_id = data.req_id;
+            }
+            return data;
+          })
+          .catch(function (err) {
+            console.error(err);
+            state.proposal.error = err.message;
+            state.proposal.message = '';
+            if (err.echo_req && err.echo_req.proposal && err.details) {
+              state.proposal.ask_price = err.details.display_value;
+              state.proposal.message = err.details.longcode;
+            }
+          });
+        /* update last_promise to invalidate previous requests */
+        state.proposal.last_promise = new_proposal_promise;
+        state.proposal.req_id = -1; /* invalidate last proposal.id */
       };
 
       state.purchase.onclick = function() {
