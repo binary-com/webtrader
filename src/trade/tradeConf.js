@@ -82,7 +82,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
     function digits_after_decimal( pip, symbol ) {
         pip += ''; // make sure pip is a string
-        if(!pip || true) {
+        if(!pip) {
             console.error('pip value is invalid', pip);
             /**
              * This is disaster. If pip value is invalid, then it could several trade related issues.
