@@ -192,6 +192,8 @@ define(['jquery'], function ($) {
         if(!is_authenitcated_session) { return; }
         Cookies.remove('webtrader_token');
         socket.close();
+        /* remove cached promises */
+        cached_promises = { };
     }
 
     /* first authenticate and then send the request */
