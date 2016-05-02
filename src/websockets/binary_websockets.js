@@ -72,8 +72,8 @@ define(['jquery'], function ($) {
     var callbacks = {};
     var buffered_execs = [];
     var buffered_sends = [];
-    var unresolved_promises = {};
-    var cached_promises = {}; /* requests that have been cached */
+    var unresolved_promises = { /* req_id: { resolve: resolve, reject: reject, data: data } */};
+    var cached_promises = { /* key: {data: data, promise: promise } */}; /* requests that have been cached */
     var is_connected = function () {
         return socket && socket.readyState === 1;
     }
@@ -164,8 +164,9 @@ define(['jquery'], function ($) {
     /* authenticate and return a promise */
     var authenticate = function (token) {
         var auth_successfull = false,
-            key = JSON.stringify({ authorize: token }),
-            promise = send_request({ authorize: token });
+            data = { authorize: token },
+            key = JSON.stringify(data),
+            promise = send_request(data);
 
         return promise
             .then(function (val) {
@@ -173,7 +174,7 @@ define(['jquery'], function ($) {
                 is_authenitcated_session = true;
                 fire_event('login', val);
                 auth_successfull = true;
-                cached_promises[key] = promise; /* cache successfull authentication */
+                cached_promises[key] = { data: data, promise: promise }; /* cache successfull authentication */
                 return val; /* pass the result */
             })
             .catch(function (up) {
@@ -192,6 +193,10 @@ define(['jquery'], function ($) {
         if(!is_authenitcated_session) { return; }
         Cookies.remove('webtrader_token');
         socket.close();
+        /* remove authenticated cached requests as well as authorize requests */
+        for(var i in cached_promises)
+          if(needs_authentication(cached_promises[i].data) || ('authorize' in cached_promises[i].data))
+            delete cached_promises[i];
     }
 
     /* first authenticate and then send the request */
@@ -282,10 +287,11 @@ define(['jquery'], function ($) {
                  * assume P is in pending state, when P is fullfiled all attached .then() calls will run.
                  * assume P is in rejected state (or in fullfiled state), the changed .then() calls will be immediately rejected(or fullfiled).  */
                 if (cached_promises[key])
-                    return cached_promises[key];
+                    return cached_promises[key].promise;
                 /* We don't want to cache promises that are rejected,
                    Clear the cache in case of promise rejection */
-                return cached_promises[key] = api.send(data)
+                cached_promises[key] = { data: data, promise: null };
+                return cached_promises[key].promise = api.send(data)
                     .then(
                         function (val) {
                             return val;
@@ -303,7 +309,7 @@ define(['jquery'], function ($) {
                         key = JSON.stringify({ authorize: token });
 
                     if (is_authenitcated_session && token && cached_promises[key])
-                        return cached_promises[key];
+                        return cached_promises[key].promise;
 
                     return token ? authenticate(token) : /* we have a token => autheticate */
                                       tokenWin.getTokenAsync()
