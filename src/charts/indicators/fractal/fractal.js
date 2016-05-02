@@ -77,6 +77,7 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
                             };
 
                             var series = $($(".fractal").data('refererChartID')).highcharts().series[0];
+                            console.log('Add fractal action');
                             var options = {
                                 numberOfBars: parseInt($elem.val()),
                                 color: defaultColor,

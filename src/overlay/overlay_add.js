@@ -39,7 +39,7 @@ define(["jquery", "datatables"], function ($) {
                                         chartOptions.disableEnableLogMenu( newTabId, false );
                                         chartOptions.disableEnableCandlestick( newTabId, false );
                                         chartOptions.disableEnableOHLC( newTabId, false );
-                                        charts.overlay(containerIDWithHash, symbol, displaySymbol);
+                                        charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount);
                                     });
                                 } else {
                                     require(["jquery", "jquery-growl"], function ($) {

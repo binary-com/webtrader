@@ -150,9 +150,11 @@ function validateParameters() {
 function load_ondemand(element, event_name,msg, module_name, callback) {
     element.one(event_name, function () {
         require([module_name], function (module) {
-            require(["jquery", "jquery-growl"], function($) {
-                $.growl.notice({ message: msg });
-            });
+            if (msg) {
+                require(["jquery", "jquery-growl"], function ($) {
+                    $.growl.notice({message: msg});
+                });
+            }
 
             callback && callback(module);
         });
@@ -258,3 +260,7 @@ function setLongTimeout(callback, timeout_ms, _callBackWithHandler) {
         }
     }
 }
+
+String.prototype.replaceAll = function(target, replacement) {
+    return this.split(target).join(replacement);
+};

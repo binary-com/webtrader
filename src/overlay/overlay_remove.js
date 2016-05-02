@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables"], function ($) {
+define(["jquery", 'lodash', "datatables"], function ($, _) {
 
   var table = undefined;
 
@@ -33,7 +33,6 @@ define(["jquery", "datatables"], function ($) {
                   click: function() {
                       var rowCount = table.rows('.selected').data().length;
                       if (rowCount > 0) {
-                          require(["currentPriceIndicator"], function (currentPriceIndicator) {
 
                               var containerIDWithHash = $(".overlay_dialog_remove").data('refererChartID');
                               table
@@ -45,16 +44,30 @@ define(["jquery", "datatables"], function ($) {
                                   if (chart && seriesID) {
                                       var series = chart.get(seriesID);
                                       if (series) {
-                                          //Remove the current price indicator first
-                                          $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
-                                              if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
-                                                  series.removeCurrentPrice(key);
-                                                  return false;
-                                              }
-                                          });
-
+                                          //Remove current price line first
+                                          series.removeCurrentPrice();
                                           //Then remove the series
                                           series.remove();
+                                          //Re-validate chart
+                                          _.defer(function () {
+                                              var countInstrumentSeries = 0;
+                                              chart.series.forEach(function (s) {
+                                                  if ((s.options.isInstrument || s.options.onChartIndicator) && s.options.id.indexOf('navigator') == -1) {
+                                                      ++countInstrumentSeries;
+                                                  }
+                                              });
+                                              if (countInstrumentSeries == 1) {
+                                                  chart.series.forEach(function (s) {
+                                                      if ((s.options.isInstrument || s.options.onChartIndicator) && s.options.id.indexOf('navigator') == -1) {
+                                                          s.update({
+                                                              compare: undefined
+                                                          });
+                                                          $(containerIDWithHash).data('overlayIndicator', null);
+                                                          return false;
+                                                      }
+                                                  });
+                                              }
+                                          });
                                       }
                                   }
                                   table.row($(this)).remove().draw();
@@ -63,7 +76,6 @@ define(["jquery", "datatables"], function ($) {
                               //Feature request https://trello.com/c/ZxZzlKfe/198-test-overlaying-tick-charts
                               //$( ".overlay_dialog_remove" ).dialog('close');
 
-                          });
                       } else {
                           $.growl.error({ message: "Please select instruments to remove" });
                       }

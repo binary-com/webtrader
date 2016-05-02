@@ -3,16 +3,15 @@
  */
 define(['common/util', 'highstock'], function () {
 
-    /*
-        This is a map storing information as -
-        currentPriceOptions[seriesID] = {
-                         stroke : 'red',
-                         strokeWidth : 1,
-                         dashStyle : 'dash',
-                         parentSeriesID : seriesID
-                     }
-     */
-    var currentPriceOptionsMap = {};
+    function removePlotLine() {
+        var series = this;
+        this.yAxis.plotLinesAndBands.forEach(function (plotLine) {
+            if (plotLine.options.id && plotLine.options.id.indexOf(series.options.id + '_CurrentPrice') == 0) {
+                series.yAxis.removePlotLine(plotLine.options.id);
+                return false;
+            }
+        });
+    }
 
     return {
 
@@ -36,31 +35,24 @@ define(['common/util', 'highstock'], function () {
                         parentSeriesID : seriesID
                     }, currentPriceOptions);
 
-                    var uniqueID = '_' + new Date().getTime();
-
                     //If this series has data, add CurrentPrice series to the chart
                     var data = this.data || [];
                     if (data && data.length > 0)
                     {
 
-                        currentPriceOptionsMap[uniqueID] = currentPriceOptions;
-
                         var lastData = data[data.length - 1];
                         var price = lastData.y || lastData.close || lastData[4];
                         if (price > 0.0) {
-                            addPlotLines.call(this, uniqueID, currentPriceOptions, price);
+                            addPlotLines.call(this, currentPriceOptions, price);
                         }
 
                     }
 
-                    return uniqueID;
-
                 };
 
-                H.Series.prototype.removeCurrentPrice = function (uniqueID) {
-                    currentPriceOptionsMap[uniqueID] = null;
+                H.Series.prototype.removeCurrentPrice = function () {
                     //console.log('Before>>' + $(this).data('isInstrument'));
-                    this.yAxis.removePlotLine('CurrentPrice' + uniqueID);
+                    removePlotLine.call(this);
                     //console.log('After>>' + $(this).data('isInstrument'));
                 };
 
@@ -93,28 +85,25 @@ define(['common/util', 'highstock'], function () {
                  */
                 function updateCurrentPriceSeries(time, isPointUpdate) {
                     //if this is CurrentPrice series, ignore
-                    if (this.options && this.options.name && this.options.name.indexOf('CurrentPrice') == -1) {
-                        var series = this;
-                        var lastData = series.options.data[series.data.length - 1];
-                        var yAxis = this.yAxis;
-                        $.each(yAxis.plotLinesAndBands, function (i, plotLine) {
+                    var series = this;
+                    var lastData = series.options.data[series.data.length - 1];
+                    var yAxis = this.yAxis;
+                    $.each(yAxis.plotLinesAndBands, function (i, plotLine) {
 
-                            var id = plotLine.options.id;
-                            if (!id) return;
+                        var options = plotLine.options;
 
-                            var currentPriceOptions = currentPriceOptionsMap[id.replace('CurrentPrice', '')];
-                            if (currentPriceOptions && currentPriceOptions.parentSeriesID == series.options.id) {
-                                yAxis.removePlotLine(id);
-                                //get close price from OHLC or the current price of line charts
-                                var price = lastData.y || lastData.close || lastData[4] || lastData[1];
-                                addPlotLines.call(series, id.replace('CurrentPrice', ''), currentPriceOptionsMap[id.replace('CurrentPrice', '')], price);
-                            }
-                        });
-                        return false;
-                    }
+                        if (options.id && options.id.indexOf(series.options.id + '_CurrentPrice') == 0) {
+                            series.yAxis.removePlotLine(options.id);
+                            //get close price from OHLC or the current price of line charts
+                            var price = lastData.y || lastData.close || lastData[4] || lastData[1];
+                            addPlotLines.call(series, options, price);
+                            return false;
+                        }
+
+                    });
                 }
 
-                function addPlotLines(uniqueID, currentPriceOptions, price) {
+                function addPlotLines(currentPriceOptions, price) {
                     var zIndex = this.chart.series.length + 1;
                     var isChange = false;
                     if (!this.data[this.data.length - 1]) return;
@@ -125,10 +114,10 @@ define(['common/util', 'highstock'], function () {
                     }
                     //console.log('Series name : ', this.options.name, ",", "Unique ID : ", uniqueID);
                     this.yAxis.addPlotLine({
-                        id: 'CurrentPrice' + uniqueID,
-                        color: currentPriceOptions.stroke,
+                        id: this.options.id + '_CurrentPrice_' + Date.now(),
+                        color: currentPriceOptions.stroke || currentPriceOptions.color,
                         dashStyle: currentPriceOptions.dashStyle,
-                        width: currentPriceOptions.strokeWidth,
+                        width: currentPriceOptions.strokeWidth || currentPriceOptions.width,
                         value: price,
                         zIndex: zIndex,
                         textAlign: 'left',
@@ -144,10 +133,6 @@ define(['common/util', 'highstock'], function () {
 
             }(Highcharts, jQuery));
 
-        },
-
-        getCurrentPriceOptions: function() {
-            return currentPriceOptionsMap;
         }
 
     };

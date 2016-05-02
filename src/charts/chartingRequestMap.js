@@ -37,7 +37,8 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
             if (!chartID) return;
 
             var series = $(chartID.containerIDWithHash).highcharts().get(key),
-                type = $(chartID.containerIDWithHash).data('type');
+                type = $(chartID.containerIDWithHash).data('type'),
+                timePeriod = $(chartID.containerIDWithHash).data('timePeriod');
 
             if (series) { //Update mode
 
@@ -101,8 +102,10 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                 if (!chart) return;
 
                 //set the range
+                var numberOfBarsToShow = 30;
+                if (isTick(timePeriod)) numberOfBarsToShow = 200;
                 var totalLength = dataInHighChartsFormat.length;
-                var endIndex = dataInHighChartsFormat.length > 30 ? totalLength - 30 : 0;
+                var endIndex = dataInHighChartsFormat.length > numberOfBarsToShow ? totalLength - numberOfBarsToShow : 0;
 
                 var instrumentName = chartID.instrumentName;
                 var series_compare = chartID.series_compare;
@@ -110,7 +113,6 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                 //Find out how many instrument series are loaded on chart
                 var countInstrumentCharts = 0;
                 chart.series.forEach(function(series) {
-                    console.log(series.options.isInstrument);
                     if (series.options.isInstrument && series.options.id !== "navigator") {
                         ++countInstrumentCharts;
                     }
