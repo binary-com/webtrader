@@ -228,9 +228,13 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               liveapi.invalidate();
             }
             else {
-              liveapi.cached.authorize().catch(function(err) {
+              require(['oauth/login'], function(login_win){
                 login_btn.removeAttr('disabled');
-              });
+                login_win.init();
+              })
+              // liveapi.cached.authorize().catch(function(err) {
+                // login_btn.removeAttr('disabled');
+              // });
             }
           });
       });
