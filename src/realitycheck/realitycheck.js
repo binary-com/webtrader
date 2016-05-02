@@ -1,11 +1,12 @@
 /**
  * Created by arnab on 4/9/16.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', "jquery-growl", 'common/util'], function($, windows, liveapi, _, rv) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', 'moment', 'jquery-growl', 'common/util'], function($, windows, liveapi, _, rv, moment) {
 
     var win = null, timerHandler = null;
     var settingsData = {
-        timeOutInMins: null,
+        timeOutInMins: 10,
+        timeOutMin: 10, timeOutMax: 120, 
         loginId: null,
         durationInMins: null,
         bought: null,
@@ -17,31 +18,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         open: null,
         potentialProfit: null,
         currency: null,
-        update : function(event, scope) {
-            console.log('update reality check time : ', scope);
-            var data = {
-                "set_self_exclusion": 1,
-                "session_duration_limit": scope.session_duration_limit,
-                "exclude_until": scope.exclude_until,
-                "max_open_bets": scope.max_open_bets,
-                "max_balance": scope.max_balance,
-                "max_30day_losses": scope.max_30day_losses,
-                "max_turnover": scope.max_turnover,
-                "max_30day_turnover": scope.max_30day_turnover,
-                "max_7day_losses": scope.max_7day_losses,
-                "max_losses": scope.max_losses,
-                "max_7day_turnover": scope.max_7day_turnover
-            };
-
-            liveapi.send(data)
-                .then(function(response) {
-                    $.growl.notice({ message : "Your changes have been updated" });
-                    setOrRefreshTimer();
-                })
-                .catch(function (err) {
-                    $.growl.error({ message: err.message });
-                    console.error(err);
-                });
+        continueTrading : function(event, scope) {
+            //Validate input
+            if (scope.timeOutInMins < scope.timeOutMin || scope.timeOutInMins > scope.timeOutMax) {
+                $.growl.error({ message : 'Please enter a number between ' + scope.timeOutMin + ' to ' + scope.timeOutMax });
+                return;
+            }
+            win.dialog('close');
+            setOrRefreshTimer(scope.timeOutInMins);
+        },
+        logout : function() {
+            liveapi.invalidate();
         }
     };
 
@@ -50,10 +37,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         return new Promise(function(res) {
             require(['text!realitycheck/realitycheck.html'], function(html) {
                 var div = $(html);
+                div.find('.realitycheck_firstscreen').show();
+                div.find('.realitycheck_secondscreen').hide();
                 win = windows.createBlankWindow($('<div/>'), {
                     title: 'Reality check',
-                    width: 700,
+                    width: 600,
                     minHeight:90,
+                    height: 300,
+                    resizable: false,
+                    collapsable: false,
+                    minimizable: false,
+                    maximizable: false,
+                    closable: false,
+                    modal: true,
+                    closeOnEscape: false,
+                    ignoreTileAction:true,
                     'data-authorized': 'true',
                     destroy: function() {
                         win = null;
@@ -61,99 +59,75 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                 });
                 div.appendTo(win);
                 rv.bind(div[0], settingsData);
-                refreshData();
                 res();
             });
         });
     };
-    var refreshData = function() {
-        return liveapi
-            .send({ get_self_exclusion : 1 })
-            .then(function(response) {
-                if (response.get_self_exclusion) {
-                    settingsData.bought = response.reality_check.buy_count;
-                    settingsData.sold = response.reality_check.sell_count;
-                    settingsData.loginTime = epoch_to_string(response.reality_check.start_time, {utc: true}) + " GMT";
-                    settingsData.max_7day_turnover = response.reality_check.sell_amount;
-                    settingsData.max_7day_losses = response.reality_check.buy_amount;
-                    settingsData.open = response.reality_check.open_contract_count;
-                    settingsData.max_30day_losses = response.reality_check.currency;
-                    settingsData.loginId = response.reality_check.loginid;
-                    settingsData.potentialProfit = response.reality_check.potential_profit;
-                }
-            })
-            .catch(function (err) {
-                $.growl.error({ message: err.message });
-                console.error(err);
-            });
-    };
 
-    var setOrRefreshTimer = function() {
-
-        if (_.isUndefined(settingsData.session_duration_limit)
-            || _.isNull(settingsData.session_duration_limit)
-            || !_.isNumber(settingsData.session_duration_limit)) return;
+    var setOrRefreshTimer = function(timeOutInMins) {
 
         if (timerHandler) clearTimeout(timerHandler);
-        var logoutAfter_seconds = settingsData.session_duration_limit * 60 * 1000;
-        timerHandler = setLongTimeout(function() {
-            $.growl.warning({ message : 'Logging out because of self-exclusion session time out!' });
-            console.log('Logging out because of self-exclusion session time out, time elapsed (in ms) :', logoutAfter_seconds);
-            liveapi.invalidate();
-        }, logoutAfter_seconds, function(handle) {
-            timerHandler = handle;
-        });
+        var logoutAfter_ms = timeOutInMins * 60 * 1000;
+        timerHandler = setTimeout(function() {
+            liveapi
+                .send({ reality_check : 1 })
+                .then(function(data) {
+                    settingsData.durationInMins = moment.duration(moment.utc().valueOf() - data.reality_check.start_time * 1000).humanize();
+                    settingsData.bought = data.reality_check.buy_count;
+                    settingsData.turnOver = data.reality_check.buy_amount;
+                    settingsData.loginTime = moment.unix(data.reality_check.start_time).format("MMM D, YYYY hh:mm") + " GMT";
+                    settingsData.sold = data.reality_check.sell_count;
+                    settingsData.pnl = data.reality_check.sell_amount - data.reality_check.buy_amount;
+                    settingsData.currentTime = moment.utc().format("MMM D, YYYY hh:mm") + " GMT";
+                    settingsData.open = data.reality_check.open_contract_count;
+                    settingsData.potentialProfit = data.reality_check.potential_profit;
+                    settingsData.currency = data.reality_check.currency;
+                    var $root = $('.realitycheck');
+                    $root.find('.realitycheck_firstscreen').hide();
+                    $root.find('.realitycheck_secondscreen').show();
+                    win.moveToTop();
+                });
+        }, logoutAfter_ms);
+
     };
 
     liveapi.events.on('login', function(data) {
-        liveapi.cached.authorize()
+        console.log('Reality check login event intercepted : ', data.authorize.loginid, data.authorize.landing_company_name);
+        liveapi
+            .cached
+            .authorize()
             .then(function() {
-                refreshData()
-                    .then(function() {
-                        setOrRefreshTimer();
+                settingsData.loginId = data.authorize.loginid;
+                liveapi
+                    .send({landing_company_details : data.authorize.landing_company_name})
+                    .then(function(data) {
+                        if (data && data.landing_company_details.has_reality_check) {
+                            if (win) win.dialog('destroy');
+                            init().then(function () { win.dialog('open'); });
+                        }
                     });
             });
     });
+
     liveapi.events.on('logout', function() {
         if (win) win.dialog('destroy');
         win = null;
         if (timerHandler) clearTimeout(timerHandler)
         timerHandler = null;
-        settingsData.max_balance= null;
-        settingsData.max_turnover= null;
-        settingsData.max_losses= null;
-        settingsData.max_7day_turnover= null;
-        settingsData.max_7day_losses= null;
-        settingsData.max_30day_turnover= null;
-        settingsData.max_30day_losses= null;
-        settingsData.max_open_bets= null;
-        settingsData.session_duration_limit= null;
-        settingsData.exclude_until= null;
+        settingsData.timeOutInMins= 10;
+        settingsData.loginId= null;
+        settingsData.durationInMins= null;
+        settingsData.bought= null;
+        settingsData.turnOver= null;
+        settingsData.loginTime= null;
+        settingsData.sold= null;
+        settingsData.pnl= null;
+        settingsData.currentTime= null;
+        settingsData.open= null;
+        settingsData.potentialProfit= null;
+        settingsData.currency= null;
     });
 
-    return {
-        /**
-         * This method will load the dialog HTML and show to user
-         * @param $menuLink
-         */
-        init : function($menuLink) {
-            $menuLink.click(function () {
-                liveapi.cached.authorize()
-                    .then(function() {
-                        if (!win) {
-                            init().then(function () {
-                                win.dialog('open');
-                            });
-                        } else {
-                            refreshData();
-                            win.moveToTop();
-                        }
-                    })
-                    .catch(function (err) {
-                        console.error(err);
-                    });
-            });
-        }
-    };
+    return {};
 
 });

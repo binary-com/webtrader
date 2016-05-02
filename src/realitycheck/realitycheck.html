@@ -8,12 +8,12 @@
             accounts on a regular basis.
         </div>
         <div class="realitcheck_firstscreen_body">
-            <div>
+            <div class="realitycheck_timeout">
                 Preferred reality-check interval:
-                <input type="number" value="100" rv-value="timeOutInMins"> minutes
+                <input type="number" rv-value="timeOutInMins"> minutes
             </div>
-            <div>
-                <button></button>
+            <div class="realitycheck_btnContainer">
+                <button class="button shine" rv-on-click="continueTrading">Continue Trading</button>
             </div>
         </div>
     </div>
@@ -55,12 +55,13 @@
                 <div class="realitycheck_col">Potential profit</div>
                 <div class="realitycheck_col">{potentialProfit}</div>
             </div>
-            <div>
+            <div class="realitycheck_timeout">
                 Preferred reality-check interval:
                 <input type="number" value="100" rv-value="timeOutInMins"> minutes
             </div>
-            <div>
-                <button></button>
+            <div class="realitycheck_btnContainer">
+                <button class="button shine" rv-on-click="continueTrading">Continue Trading</button>
+                <button class="button shine" rv-on-click="logout">Logout</button>
             </div>
         </div>
     </div>
