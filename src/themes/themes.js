@@ -10,12 +10,20 @@ define(['jquery', "charts/charts", 'highstock'], function($, charts) {
             require(['text!themes/themes.html', "jquery-growl"], function($html) {
                 $($html).dialog({
                         resizable: false,
-                        height:160,
+                        height:155,
+                        width: 320,
                         modal: true,
                         buttons: {
                             Apply: function() {
                                 $.growl.notice({message: 'Loading ' + $ele.text()});
-                                require(['lib/highstock/themes/' + $ele.attr('class').replace('theme_', '').replace('_', '-')], function() {
+                                var themeName_file = $ele.attr('class').replace('theme_', '').replace('_', '-');
+                                require(['lib/highstock/themes/' + themeName_file], function() {
+                                    if (themeName_file !== 'skies') { 
+                                        //Only slies theme has the background image
+                                        //https://github.com/highcharts/highcharts/issues/5272 
+                                        Highcharts.theme.chart.plotBackgroundImage = null;
+                                        Highcharts.setOptions(Highcharts.theme);
+                                    }
                                     $(".chartSubContainer").each(function() {
                                         charts.refresh( '#' + $(this).attr('id') );
                                     });

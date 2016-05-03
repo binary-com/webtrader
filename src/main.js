@@ -198,6 +198,9 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 $('body > .footer').show();
             });
         });
+        
+        /*Trigger T&C check*/
+        require(['tc/tc']);
     }
 
 

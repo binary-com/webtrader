@@ -424,7 +424,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                         tileDialogs(); // Trigger tile action
 
                         //If reality check is started before dialogs are rendered, it does not respect the modality of the reality check window
-                        require(['realitycheck/realitycheck']);
+                        require(['realitycheck/realitycheck'], function(realitycheck) {
+                            realitycheck.init();
+                        });
 
                     });
             });

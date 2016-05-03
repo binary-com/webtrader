@@ -20,15 +20,6 @@
 .realitycheck_secondscreen_body {
 }
 
-.realitycheck_row {
-    display: table-row;
-}
-
-.realitycheck_col {
-    display: table-cell;
-    padding: 5px 5px 10px 5px;
-}
-
 .realitycheck .button {
     background: #2e8836;
     border: none;
