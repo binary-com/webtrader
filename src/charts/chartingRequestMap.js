@@ -286,6 +286,33 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
             map[key].subscribers -= 1;
             _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
           }
+        },
+        digits_after_decimal: function ( pip, symbol ) {
+          pip = pip && pip+'';
+          if(!pip) {
+            console.warn();('pip value is invalid', pip);
+            /**
+            * This is disaster. If pip value is invalid, then it could several trade related issues.
+            * Try to guess decimal places from whatever data we have from local database
+            * (This is a fallback method. the execution never come here)
+            * Technique -
+            *      Fetch last 10 tick values
+            *      Take the maximum decimal places all these ticks
+            */
+            var key = this.keyFor(symbol, 0);
+            var decimal_digits = 0;
+            barsTable.chain()
+            .find({ instrumentCdAndTp : key })
+            .simplesort("time", true).limit(10).data()
+            .forEach(function (d) {
+              var quote = d.close + '';
+              var len = quote.substring(quote.indexOf('.') + 1).length;
+              if (len > decimal_digits)
+              decimal_digits = len;
+            });
+            return decimal_digits;
+          }
+          return pip.substring(pip.indexOf(".") + 1).length;
         }
     };
 
