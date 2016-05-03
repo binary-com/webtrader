@@ -10,7 +10,8 @@ define(['jquery', "charts/charts", 'highstock'], function($, charts) {
             require(['text!themes/themes.html', "jquery-growl"], function($html) {
                 $($html).dialog({
                         resizable: false,
-                        height:160,
+                        height:155,
+                        width: 320,
                         modal: true,
                         buttons: {
                             Apply: function() {
