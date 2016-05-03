@@ -19,7 +19,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets"], function($
                 var get_settings = data[2];
                 if (landing_company_details.landing_company_details && landing_company_details.landing_company_details.name
                         && website_status.website_status && get_settings.get_settings
-                        && website_status.website_status.terms_conditions_version === get_settings.get_settings.client_tnc_status) {
+                        && website_status.website_status.terms_conditions_version !== get_settings.get_settings.client_tnc_status) {
                     if (win) win.dialog('destroy');
                     require(['text!tc/tc.html', 'css!tc/tc.css'], function(html) {
                         var div = $(html);
