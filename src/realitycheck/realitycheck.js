@@ -103,6 +103,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             .then(function(data) {
                 settingsData.loginId = data.authorize.loginid;
                 liveapi
+                    .cached
                     .send({landing_company_details : data.authorize.landing_company_name})
                     .then(function(data) {
                         if (data && data.landing_company_details.has_reality_check) {
