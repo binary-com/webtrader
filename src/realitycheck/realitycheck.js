@@ -6,7 +6,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     var win = null, timerHandler = null;
     var settingsData = {
         timeOutInMins: 10,
-        timeOutMin: 10, timeOutMax: 120, 
+        timeOutMin: 1, timeOutMax: 120, //TODO
         loginId: null,
         durationInMins: null,
         bought: null,
@@ -43,7 +43,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                     title: 'Reality check',
                     width: 600,
                     minHeight:90,
-                    height: 300,
+                    height: 220,
                     resizable: false,
                     collapsable: false,
                     minimizable: false,
@@ -72,10 +72,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             liveapi
                 .send({ reality_check : 1 })
                 .then(function(data) {
-                    settingsData.durationInMins = moment.duration(moment.utc().valueOf() - data.reality_check.start_time * 1000).humanize();
+                    var durationIn_ms = moment.utc().valueOf() - data.reality_check.start_time * 1000;
+                    var max_durationIn_ms = 48 * 60 * 60 * 1000;
+                    if (durationIn_ms > max_durationIn_ms) durationIn_ms = max_durationIn_ms;
+                    settingsData.durationInMins = moment.duration(durationIn_ms).humanize();
                     settingsData.bought = data.reality_check.buy_count;
                     settingsData.turnOver = data.reality_check.buy_amount;
-                    settingsData.loginTime = moment.unix(data.reality_check.start_time).format("MMM D, YYYY hh:mm") + " GMT";
+                    settingsData.loginTime = moment.utc(data.reality_check.start_time * 1000).format("MMM D, YYYY hh:mm") + " GMT";
                     settingsData.sold = data.reality_check.sell_count;
                     settingsData.pnl = data.reality_check.sell_amount - data.reality_check.buy_amount;
                     settingsData.currentTime = moment.utc().format("MMM D, YYYY hh:mm") + " GMT";
@@ -85,18 +88,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                     var $root = $('.realitycheck');
                     $root.find('.realitycheck_firstscreen').hide();
                     $root.find('.realitycheck_secondscreen').show();
+                    win.dialog({ height : 300 });
                     win.moveToTop();
                 });
         }, logoutAfter_ms);
 
     };
-
-    liveapi.events.on('login', function(data) {
-        console.log('Reality check login event intercepted : ', data.authorize.loginid, data.authorize.landing_company_name);
+    
+    function initialRender() {
+        console.log('Reality check login event intercepted');
         liveapi
             .cached
             .authorize()
-            .then(function() {
+            .then(function(data) {
                 settingsData.loginId = data.authorize.loginid;
                 liveapi
                     .send({landing_company_details : data.authorize.landing_company_name})
@@ -107,7 +111,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                         }
                     });
             });
-    });
+    }
+
+    liveapi.events.on('login', initialRender);
 
     liveapi.events.on('logout', function() {
         if (win) win.dialog('destroy');
@@ -128,6 +134,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         settingsData.currency= null;
     });
 
-    return {};
+    return {
+        init : initialRender
+    };
 
 });
