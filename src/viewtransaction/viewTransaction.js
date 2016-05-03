@@ -11,9 +11,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
-  function init_chart(root, options) {
+  function init_chart(root, state, options) {
       var data = [];
       var type = '';
+      var decimal_digits = 0;
       if(options.history){
         type = 'line';
         var history = options.history;
@@ -21,6 +22,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var prices = history.prices;
         for(var i = 0; i < times.length; ++i) {
           data.push([times[i]*1000, prices[i]*1]);
+          decimal_digits = Math.max(decimal_digits, prices[i].substring(prices[i].indexOf('.') + 1).length);
         }
       }
       if(options.candles) {
@@ -54,7 +56,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           text: title,
           style: { fontSize:'16px' }
         },
-        tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
+        tooltip:{
+          xDateFormat:'%A, %b %e, %H:%M:%S GMT',
+          valueDecimals: decimal_digits || undefined,
+       },
         xAxis: {
           type: 'datetime',
           categories:null,
@@ -472,7 +477,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var options = { title: state.chart.display_name };
         if(data.history) options.history = data.history;
         if(data.candles) options.candles = data.candles;
-        var chart = init_chart(root, options);
+        var chart = init_chart(root, state, options);
 
         if(data.history && !state.table.entry_tick_time) {
           state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 > state.table.date_start*1 })[0];
