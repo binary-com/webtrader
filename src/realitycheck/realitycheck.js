@@ -88,7 +88,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                     var $root = $('.realitycheck');
                     $root.find('.realitycheck_firstscreen').hide();
                     $root.find('.realitycheck_secondscreen').show();
-                    win.dialog({ height : 300 });
+                    win.dialog({ height : 310 });
                     win.moveToTop();
                 });
         }, logoutAfter_ms);
