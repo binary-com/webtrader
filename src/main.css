@@ -53,9 +53,13 @@ body * {
     font-family: 'Roboto', sans-serif;
 }
 
-.ui-dialog .ui-dialog-titlebar-close {
+.ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
   width: 14px !important;
   height: 14px !important;
+}
+
+.ui-dialog { /* add boxshadow to dialgos*/
+  box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
 }
 
 .ui-dialog {
