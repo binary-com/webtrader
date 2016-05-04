@@ -404,7 +404,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (markets) {
                         markets = menu.extractFilteredMarkets(markets, {
-                            filter: function (sym) { 
+                            filter: function (sym) {
                                 return sym.symbol === 'frxUSDJPY';
                             }
                         });
@@ -461,7 +461,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 refresh: fn, // callback for refresh button click
                                 autoOpen: false,
                                 resizable:true,
-                                collapsable:true,
+                                collapsable:false,
                                 minimizable: true,
                                 maximizable: true,
                                 closable:true,
@@ -482,6 +482,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             options = $.extend({
                 autoOpen: false,
                 resizable: true,
+                collapsable: false,
                 width: 350,
                 height: 400,
                 my: 'center',
