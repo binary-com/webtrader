@@ -245,6 +245,7 @@ button.ui-button-text-only .ui-menu {
 
 .red { color: #d71818; }
 .green { color: #02920e; }
+.orange { color: #EA9800; }
 .bold { font-weight: bold }
 
 /* Remove IE10+ "clear field" X button on certain inputs
