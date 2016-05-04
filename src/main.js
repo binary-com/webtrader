@@ -29,7 +29,7 @@ requirejs.config({
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
-        "indicator_levels" : 'charts/indicators/level' 
+        "indicator_levels" : 'charts/indicators/level'
     },
     map: {
         '*': {
@@ -98,7 +98,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
+    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icons.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);
@@ -198,7 +198,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 $('body > .footer').show();
             });
         });
-        
+
         /*Trigger T&C check, self-exclusion*/
         require(['tc/tc', 'selfexclusion/selfexclusion']);
     }

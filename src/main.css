@@ -53,8 +53,9 @@ body * {
     font-family: 'Roboto', sans-serif;
 }
 
-.ui-icon {
-    background-image: url("images/ui-icons_ffffff_256x240.png")!important;
+.ui-dialog .ui-dialog-titlebar-close {
+  width: 14px !important;
+  height: 14px !important;
 }
 
 .ui-dialog {
