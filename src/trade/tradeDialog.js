@@ -229,9 +229,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         proposal: {
           symbol: symbol.symbol,
           symbol_name: symbol.display_name,
-          ids: [], /* Id of proposal stream, Must have only one stream, however use an array to handle multiple requested streams. */
-          req_id: -1, /* id of last request sent */
-
+          last_promise: null,
+          id: '', /* id of last proposal request sent */
           ask_price: "0.0",
           date_start: 0,
           display_value: "0.0",
@@ -577,28 +576,36 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
 
         state.proposal.loading = true;
-        /* forget requested streams */
-        while (state.proposal.ids.length) {
-          var id = state.proposal.ids.shift();
-          liveapi.send({ forget: id });
+        /* forget previous proposal request */
+        if(state.proposal.last_promise) {
+          state.proposal.last_promise.then(function(data){
+            var id = data.proposal && data.proposal.id;
+            id && liveapi.send({forget: id});
+          });
         }
 
-        liveapi.send(request)
-        .then(function (data) {
-          var id = data.proposal.id;
-          state.proposal.ids.push(id);
-          state.proposal.error = '';
-          state.proposal.req_id = data.req_id;
-        })
-        .catch(function (err) {
-          console.error(err);
-          state.proposal.error = err.message;
-          state.proposal.message = '';
-          if (err.echo_req && err.echo_req.proposal && err.details) {
-            state.proposal.ask_price = err.details.display_value;
-            state.proposal.message = err.details.longcode;
-          }
-        });
+        var new_proposal_promise = liveapi.send(request)
+          .then(function (data) {
+            /* OK, this is the last sent request */
+            if(new_proposal_promise === state.proposal.last_promise) {
+              var id = data.proposal && data.proposal.id;
+              state.proposal.error = '';
+              state.proposal.id = id;
+            }
+            return data;
+          })
+          .catch(function (err) {
+            console.error(err);
+            state.proposal.error = err.message;
+            state.proposal.message = '';
+            if (err.echo_req && err.echo_req.proposal && err.details) {
+              state.proposal.ask_price = err.details.display_value;
+              state.proposal.message = err.details.longcode;
+            }
+          });
+        /* update last_promise to invalidate previous requests */
+        state.proposal.last_promise = new_proposal_promise;
+        state.proposal.id = ''; /* invalidate last proposal.id */
       };
 
       state.purchase.onclick = function() {
@@ -630,6 +637,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             category: state.categories.value,
             category_display: state.category_displays.selected,
             duration_unit: state.duration_unit.value,
+            pip: symbol.pip,
         };
         /* pass data which is needed to show live tick purchase results */
         extra.show_tick_chart = false;
@@ -652,7 +660,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         else {
             liveapi.send({
-                  buy: _(state.proposal.ids).last(),
+                  buy: state.proposal.id,
                   price: state.proposal.ask_price * 1,
                })
                .then(function(data){
@@ -699,7 +707,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       });
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
-          if (data.req_id !== state.proposal.req_id) return;
+          if (!data.proposal || data.proposal.id !== state.proposal.id) return;
           if(data.error){
             console.error(data.error);
             state.proposal.error = data.error.message;
@@ -751,12 +759,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             minimizable: true,
             maximizable: false,
             'data-authorized': 'true',
-            /* forget proposal streams on close,
-              TODO: figure out if/when we should close tick stream */
             close: function() {
-              while (state.proposal.ids.length) {
-                var id = state.proposal.ids.shift();
-                liveapi.send({ forget: id });
+              /* forget last proposal stream on close */
+              if(state.proposal.last_promise) {
+                state.proposal.last_promise.then(function(data){
+                  var id = data.proposal && data.proposal.id;
+                  id && liveapi.send({forget: id});
+                });
               }
               chartingRequestMap.unregister(key);
               view.unbind();

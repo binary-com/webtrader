@@ -379,7 +379,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
 
             $menuUL = $parentObj.find("ul");
 
-            tileObject = $menuUL.find(".tile");
+            var tileObject = $menuUL.find(".tile");
 
             closeAllObject = $menuUL.find(".closeAll");
             closeAllObject.click(function () {
@@ -422,6 +422,14 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 });
                         });
                         tileDialogs(); // Trigger tile action
+
+                        //If reality check is started before dialogs are rendered, it does not respect the modality of the reality check window
+                        require(['realitycheck/realitycheck'], function (realitycheck) {
+                            if (liveapi.is_authenticated()) {
+                                realitycheck.init();
+                            }
+                        });
+
                     });
             });
 
@@ -456,7 +464,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 collapsable:true,
                                 minimizable: true,
                                 maximizable: true,
-                                closable:true
+                                closable:true,
+                                modal:true, // Whether to block base page and show it as blocking modal dialog
+                                closeOnEscape:true, // Respond to ESC key event
+                                ignoreTileAction:false, // Is this dialog going to take part in tile action
                                 data-*: 'value' // add arbitary data-* attributes to the dialog.('data-authorized' for exmaple)
                               }
            notes:
@@ -485,11 +496,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             if (options.resize)
                 options.maximize = options.minimize  = options.restore = options.resize;
 
-            var blankWindow = $html
-                .attr("id", id)
-                .addClass('webtrader-dialog')
-                .dialog(options)
-                .dialogExtend(options);
+            var blankWindow = $html.attr("id", id);
+            if (!options.ignoreTileAction) blankWindow.addClass('webtrader-dialog')
+            blankWindow.dialog(options).dialogExtend(options);
 
 
             var dialog = blankWindow.dialog('widget');

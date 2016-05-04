@@ -5,10 +5,11 @@
 define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/rivetsExtra', 'charts/chartingRequestMap', 'text!trade/tradeConf.html', 'css!trade/tradeConf.css' ],
   function(_, $, moment, liveapi, rv, chartingRequestMap, html){
 
-        require(['websockets/stream_handler']);
-        var barsTable = chartingRequestMap.barsTable;
-        /* rv binder to show tick chart for this confirmation dialog */
-        rv.binders['tick-chart'] = {
+    require(['websockets/stream_handler']);
+    var barsTable = chartingRequestMap.barsTable;
+
+    /* rv binder to show tick chart for this confirmation dialog */
+    rv.binders['tick-chart'] = {
       priority: 65, /* a low priority to apply last */
       bind: function(el) {
           var model = this.model;
@@ -79,35 +80,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       } /* end of routine() */
     };
 
-        function digitsAfterDecimal( pipValueInString, symbol ) {
-            //Don't trust backend. It has been found that "pip" values are sometimes Number and other times String.
-            //There is no consistency. It has been reported to backend
-            pipValueInString += "";
-            if(!pipValueInString) {
-                console.error('pipValueInString is invalid', pipValueInString);
-                /**
-                 * This is disaster. If pip value is invalid, then it could several trade related issues.
-                 * Try to guess decimal places from whatever data we have from local database
-                 * (This is a fallback method. the execution never come here)
-                 * Technique -
-                 *      Fetch last 10 tick values
-                 *      Take the maximum decimal places all these ticks
-                 */
-                var key = chartingRequestMap.keyFor(symbol, 0);
-                var digitsAfterDec = 0;
-                barsTable.chain()
-                    .find({ instrumentCdAndTp : key })
-                    .simplesort("time", true).limit(10).data()
-                    .forEach(function (d) {
-                        var len = (d.close + "").substring((d.close + "").indexOf('.') + 1).length;
-                        if (digitsAfterDec < len) digitsAfterDec = len;
-                    });
-                return digitsAfterDec;
-            }
-            return pipValueInString.substring(pipValueInString.indexOf(".") + 1).length;
-        }
-
-    function register_ticks(state, extra, symbolData){
+    function register_ticks(state, extra){
       var tick_count = extra.tick_count * 1,
           symbol = extra.symbol,
           purchase_epoch = state.buy.purchase_time * 1,
@@ -119,13 +92,14 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                which means we ware showing the wrong ticks to the user! FIX THIS*/
       function add_tick(tick){
           if (_.findIndex(state.ticks.array, function(t) { return t.epoch === (tick.time / 1000)}) === -1 && tick_count > 0) {
+              var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
               state.ticks.array.push({
                   quote: tick.close,
                   epoch: (tick.time / 1000) | 0,
                   number: state.ticks.array.length + 1,
                   tooltip: moment.utc(tick.time).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
-                  extra.symbol_name + " " + tick.close,
-                  digitsAfterDecimal : digitsAfterDecimal(symbolData.pip, symbol)
+                           extra.symbol_name + " " + tick.close,
+                  decimal_digits : decimal_digits
               });
               --tick_count;
           }
@@ -161,23 +135,20 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
     }
 
-      /**
-       * @param data
-       * @param extra
-       * @param show_callback
-       * @param hide_callback
-       * @param symbolData - symbol = {
-                                symbol: "frxXAUUSD",
-                                display_name: "Gold/USD",
-                                delay_amount: 0,
-                                settlement: "",
-                                feed_license: "realtime",
-                                events: [{ dates: "Fridays", descrip: "Closes early (at 21:00)" }, { dates: "2015-11-26", descrip: "Closes early (at 18:00)" }],
-                                times: { open: ["00:00:00"], close: ["23:59:59"], settlement: "23:59:59" },
-                                pip: "0.001"
-                              }
-       */
-    function init(data, extra, show_callback, hide_callback, symbolData){
+    /** @param data
+     *  @param extra = {
+     *    currency: ,
+     *    symbol: "frxXAUUSD",
+     *    symbol_name: "Gold/USD",
+     *    category: ,
+     *    category_display: ,
+     *    duration_unit: ,
+     *      pip: "0.001",
+     *   }
+     * @param show_callback
+     * @param hide_callback
+     **/
+    function init(data, extra, show_callback, hide_callback){
       var root = $(html);
       var buy = data.buy;
       var state = {
@@ -261,10 +232,10 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       }
       state.ticks.update_status = function() {
 
-        var numberOfDigitsAfterDecimal = digitsAfterDecimal(symbolData.pip, extra.symbol);
+        var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
 
-        var first_quote = _.head(state.ticks.array).quote.toFixed(numberOfDigitsAfterDecimal) + '',
-            last_quote = _.last(state.ticks.array).quote.toFixed(numberOfDigitsAfterDecimal) + '',
+        var first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
+            last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
             digits_value = state.ticks.value + '',
             average = state.ticks.average().toFixed(5);
         var category = state.ticks.category,
@@ -302,7 +273,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       };
 
 
-      if(!state.arrow.visible) { register_ticks(state, extra, symbolData); }
+      if(!state.arrow.visible) { register_ticks(state, extra); }
       else { state.back.visible = true; }
 
 

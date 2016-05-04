@@ -148,16 +148,24 @@ function validateParameters() {
 
 /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
 function load_ondemand(element, event_name,msg, module_name, callback) {
-    element.one(event_name, function () {
+        var func_name = null;
+        element.one(event_name, func_name = function () {
+
+        //Ignore click event, if it has disabled class
+        if (element.hasClass('disabled')) {
+            element.one(event_name, func_name);
+            return;
+        }
+
         require([module_name], function (module) {
             if (msg) {
                 require(["jquery", "jquery-growl"], function ($) {
                     $.growl.notice({message: msg});
                 });
             }
-
             callback && callback(module);
         });
+
     });
 }
 
