@@ -37,13 +37,35 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra']
     }
 
     function init_state(root) {
-      var state = {};
-      state.login = function() {
-        console.warn('login');
-      }
-      state.register = function() {
-        console.warn('register');
-      }
+      var state = {
+        route: {
+          value: 'login',
+          update: function(route){
+            var titles = {
+              login: 'Log in',
+              registeration: 'Registeration',
+              account: 'Account opening',
+              confirm: 'Confirm',
+              welcome: 'Welcome'
+            };
+            state.route.value = route;
+            var title = titles[route];
+            login_win.dialog('option', 'title', title);
+          }
+        },
+        login: {
+          login: function() {
+            console.warn('login');
+          }
+        },
+        registeration: {
+          email: '',
+          create: function(){
+            var email = state.registeration.email;
+            console.warn(email);
+          }
+        }
+      };
       login_win_view = rv.bind(root[0], state);
     }
 

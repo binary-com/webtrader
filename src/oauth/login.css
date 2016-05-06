@@ -1,20 +1,21 @@
-.login-dialog {
+.oauth-dialog {
   padding: 0 !important;
   background: white !important;
 }
-.login-dialog > div {
+
+/* login dialog styles */
+.oauth-dialog .login-dialog > div {
   line-height: 1.5em;
   box-sizing: border-box;
   padding: 10px;
 }
 
-.login-dialog > div > span {
+.oauth-dialog .login-dialog > div > span {
   display: block;
   margin-bottom: 10px;
 }
 
-
-.login-dialog > div > button {
+.oauth-dialog .login-dialog > div > button {
     background: #2e8836;
     border: none;
     border-radius: 5px;
@@ -24,13 +25,12 @@
     line-height: 25px;
 }
 
-
-.login-dialog .login-pane {
+.oauth-dialog .login-dialog .login-pane {
   float: left;
   width: 42%;
 }
 
-.login-dialog .register-pane {
+.oauth-dialog .login-dialog .register-pane {
   float: right;
   width: 58%;
 }
