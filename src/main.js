@@ -85,7 +85,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     //TODO if SVG, websockets are not allowed, then redirect to unsupported_browsers.html
     if (!Modernizr.svg || !Modernizr.websockets || Modernizr.touch) {
-      window.location.href = 'unsupported_browsers.html';
+      window.location.href = 'unsupported_browsers/unsupported_browsers.html';
       return;
     }
 
