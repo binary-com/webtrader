@@ -1,18 +1,19 @@
 .oauth-dialog {
   padding: 0 !important;
-  /*background: white !important;*/
+  background: white !important;
 }
 
 .oauth-dialog input {
-  padding: 10px;
+  padding: 10px 5px;
+  background: #eee;
   border: none;
-  border-bottom: solid 2px #c9c9c9;
+  border-bottom: solid 3px #c9c9c9;
   transition: border 0.3s;
   outline: 0;
   box-sizing: border-box;
 }
 .oauth-dialog input:focus {
-  border-bottom: solid 2px #969696;
+  border-bottom: solid 3px #909090;
 }
 
 /* login dialog styles */
@@ -67,7 +68,13 @@
   width: 100%;
   height: 24px;
   line-height: 24px;
-  margin:5px 10px 10px 0;
+  margin:5px 10px 5px 0;
+}
+
+.oauth-dialog .registeration-dialog span.email-validation {
+  color: red;
+  height: 16px;
+  padding-bottom: 5px;
 }
 
 .oauth-dialog .registeration-dialog > button {

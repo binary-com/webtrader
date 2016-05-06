@@ -2,7 +2,7 @@
  * Created by amin on May 1, 2016.
  */
 
-define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra'], function(liveapi, windows, rv) {
+define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash'], function(liveapi, windows, rv, _) {
     require(['text!oauth/login.html']);
     require(['css!oauth/login.css']);
     var login_win = null;
@@ -52,7 +52,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra']
               },
               registeration: {
                 title: 'Registeration',
-                height: 170,
+                height: 180,
               },
               account: {
                 title: 'Account opening',
@@ -81,8 +81,23 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra']
         },
         registeration: {
           email: '',
+          validation: '',
+          clear_validation: _.debounce(function(){
+            state.registeration.validation = '';
+          }, 2000),
           create: function(){
             var email = state.registeration.email;
+
+            if(email == '')
+              state.registeration.validation = '* Please enter you email.';
+            else if(!validateEmail(email))
+              state.registeration.validation = '* Email address is not valid.';
+
+            if(state.registeration.validation){
+              state.registeration.clear_validation();
+              return;
+            }
+
             console.warn(email);
           }
         }

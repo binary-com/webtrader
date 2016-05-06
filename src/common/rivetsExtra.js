@@ -397,6 +397,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         el.style.display = value ? '' : 'none';
         return value;
     };
+    rv.binders['visible'] = function(el, value) {
+        el.style.visibility = value ? 'visible' : 'hidden';
+        return value;
+    };
     /* binder to add or remove disabled attribute */
     rv.binders.disabled = function(el,value){
       if(value) $(el).attr('disabled', 'disabled');
