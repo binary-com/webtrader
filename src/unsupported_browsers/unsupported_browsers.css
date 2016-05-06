@@ -48,7 +48,7 @@ body * {
 	padding: 10px;
 	width:60%;
 	margin-top: 5%;
-	margin-top: 15%\9; /*for IE8 and below*/
+	top: 15%\9; /*for IE8 and below*/
   color: #2E2A2B;
 }
 #container .upgrade {
@@ -71,6 +71,9 @@ body * {
 	text-decoration: none;
 	color: #0C163A;
 	font-weight: bold;
+}
+.hidden {
+	display: none;
 }
 a img{
     border: 0;
