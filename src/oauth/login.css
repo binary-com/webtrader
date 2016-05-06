@@ -34,3 +34,17 @@
   float: right;
   width: 58%;
 }
+
+/* registeration dialog styles */
+.oauth-dialog .registeration-dialog { padding: 10px; }
+.oauth-dialog .registeration-dialog .email-back {
+  display:  block;
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+}
+.oauth-dialog .registeration-dialog .email-back > span {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
