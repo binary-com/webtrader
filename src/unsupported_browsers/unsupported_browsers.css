@@ -1,5 +1,5 @@
 @font-face {
-    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
     font-family: 'Roboto';
 }
 
@@ -48,6 +48,7 @@ body * {
 	padding: 10px;
 	width:60%;
 	margin-top: 5%;
+	margin-top: 15%\9; /*for IE8 and below*/
   color: #2E2A2B;
 }
 #container .upgrade {
@@ -71,8 +72,8 @@ body * {
 	color: #0C163A;
 	font-weight: bold;
 }
-.hidden {
-	display: none;
+a img{
+    border: 0;
 }
 #mobile-container .orange{
 	color: #E67E1F!important;
