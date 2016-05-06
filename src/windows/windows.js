@@ -489,7 +489,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 at: 'center',
                 of: window,
                 title: 'blank window',
-                hide: 'fade'
+                hide: 'fade',
+                icons: {
+                  close: 'ui-icon-close'
+                }
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;
