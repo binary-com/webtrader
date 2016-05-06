@@ -377,6 +377,15 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }
     }
 
+    /* rv binder to active click event on another button when Enter key is pressed */
+    rv.binders['input-default-btn'] = function(el, jquery_selector) {
+      $(el).keyup(function(event){
+          if(event.keyCode == 13){
+            $(jquery_selector).click();
+          }
+      });
+    }
+
     /* bindar for css attributes */
     rv.binders['css-*'] = function (el, value) {
         var style = {};

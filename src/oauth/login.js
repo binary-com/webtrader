@@ -33,6 +33,10 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra']
         });
         init_state(root);
         login_win.dialog('open');
+
+        /* update dialog position, this way when dialog is resized it will not move*/
+        var offset = login_win.dialog('widget').offset();
+        login_win.dialog("option", "position", { my: offset.left, at: offset.top });
       });
     }
 
@@ -41,16 +45,33 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra']
         route: {
           value: 'login',
           update: function(route){
-            var titles = {
-              login: 'Log in',
-              registeration: 'Registeration',
-              account: 'Account opening',
-              confirm: 'Confirm',
-              welcome: 'Welcome'
+            var routes = {
+              login: {
+                title: 'Log in',
+                height: 150
+              },
+              registeration: {
+                title: 'Registeration',
+                height: 170,
+              },
+              account: {
+                title: 'Account opening',
+                height: 400
+              },
+              confirm: {
+                title: 'Confirm',
+                height: 400
+              },
+              welcome: {
+                title: 'Welcome',
+                height: 400
+              }
             };
             state.route.value = route;
-            var title = titles[route];
+            var title = routes[route].title;
+            var height = routes[route].height;
             login_win.dialog('option', 'title', title);
+            login_win.dialog('option', 'height', height);
           }
         },
         login: {

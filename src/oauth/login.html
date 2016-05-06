@@ -16,8 +16,11 @@
       <span class='email-back' rv-on-click='route.update | bind "login"'>
         <span class='ui-icon ui-icon-triangle-1-w'></span> Back
       </span>
-      <span class='email-label'> Your Email </span>
-      <input class='email-input' rv-value='registeration.email' />
+      <span class='email-label'> Your email </span>
+      <input class='email-input'
+             placeholder="Your email"
+             rv-value='registeration.email'
+             rv-input-default-btn="'.oauth-dialog button.register-button'" />
       <span class='email-validation' rv-text='registeration.validation'></span>
       <button rv-on-click='registeration.create'
               class='register-button shine'>Register free account</button>
