@@ -1,0 +1,36 @@
+.login-dialog {
+  padding: 0 !important;
+  background: white !important;
+}
+.login-dialog > div {
+  line-height: 1.5em;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.login-dialog > div > span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.login-dialog > div > button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    width: 100%;
+    line-height: 25px;
+}
+
+
+.login-dialog .login-pane {
+  float: left;
+  width: 42%;
+}
+
+.login-dialog .register-pane {
+  float: right;
+  width: 58%;
+}

@@ -191,11 +191,11 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                 balance.fadeOut();
               else
                 balance.text(currency + ' ' + formatPrice(value)).fadeIn({
-					always : function() {
-						//FadeIn assigns inline-block which is breaking account balance display like EUR5.0
-						$(this).css('display', 'inline');
-					}
-				});
+        					always : function() {
+                    //FadeIn assigns inline-block which is breaking account balance display like EUR5.0
+        						$(this).css('display', 'inline');
+        					}
+        				});
           };
 
           /* update balance on change */
@@ -228,13 +228,13 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               liveapi.invalidate();
             }
             else {
-              // require(['oauth/login'], function(login_win){
-                // login_btn.removeAttr('disabled');
-                // login_win.init();
-              // })
-              liveapi.cached.authorize().catch(function(err) {
+              require(['oauth/login'], function(login_win){
                 login_btn.removeAttr('disabled');
-              });
+                login_win.init();
+              })
+              // liveapi.cached.authorize().catch(function(err) {
+                // login_btn.removeAttr('disabled');
+              // });
             }
           });
       });
