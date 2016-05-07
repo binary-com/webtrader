@@ -25,12 +25,12 @@
 
       <div class='validations'>
         <span rv-show='registeration.email | eq "" | and registeration.validate.value'
-              class='validation'> * Please enter your email</span>
+              class='validation'>* Please enter your email</span>
         <span rv-show='registeration.email | is-valid-email | eq false | and registeration.validate.value'
               class='validation' >* Please enter correct email</span>
       </div>
 
-      <button rv-on-click='registeration.create'
+      <button rv-on-click='registeration.create' rv-disabled='registeration.disabled'
               class='register-button shine'>Register free account</button>
   </div>
 
