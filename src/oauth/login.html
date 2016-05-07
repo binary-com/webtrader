@@ -3,6 +3,7 @@
     <div class='login-pane'>
       <span> Click to log in with your Binary.com account </span>
       <button rv-on-click="login.login"
+              rv-disabled='login.disabled' rv-css-opacity='login.disabled | ternary 0.5 1'
               class='login-button shine text-vertical-align'>Log in</button>
     </div>
     <div class='register-pane'>

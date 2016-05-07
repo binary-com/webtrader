@@ -4,6 +4,7 @@
 
 define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash'], function(liveapi, windows, rv, _) {
     require(['text!oauth/login.html']);
+    require(['text!oauth/app_id.json']);
     require(['css!oauth/login.css']);
     var login_win = null;
     var login_win_view = null; // rivets view
@@ -14,7 +15,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         return;
       }
 
-      require(['text!oauth/login.html'], function(root) {
+      require(['text!oauth/login.html', 'text!oauth/app_id.json'], function(root, app_id) {
+        app_id = JSON.parse(app_id);
         root = $(root);
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
@@ -36,7 +38,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             }
         });
         login_win.parent().css('overflow', 'visible');
-        init_state(root);
+        init_state(root, app_id.beta); // TODO: figure out if we are on main site
         login_win.dialog('open');
 
         /* update dialog position, this way when dialog is resized it will not move*/
@@ -50,26 +52,18 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       });
     }
 
-    function init_state(root) {
+    function init_state(root, app_id) {
       var state = {
-        route: {
-          value: 'login',
-        },
-        login: {
-          login: function() {
-            console.warn('login');
-          }
-        },
+        route: { value: 'login' },
+        login: { disabled: false },
         registeration: {
           email: '',
           disabled: false,
+          validate: { value: false },
           email_show_explanation: function() {
             var email = state.registeration.email;
             return (email === '' && !state.registeration.validate.value) || validateEmail(email);
           },
-          validate: {
-            value: false,
-          }
         },
         account: {
           empty_fields: {
@@ -102,6 +96,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           disabled: false, /* is button disabled */
         }
       };
+
+      state.login.login = function() {
+          state.login.disabled = true;
+          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + app_id + '&scope=read,trade,payments,admin';
+      }
 
       state.route.update = function(route){
         var routes = {
