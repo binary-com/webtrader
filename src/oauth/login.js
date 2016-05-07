@@ -63,7 +63,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         registeration: {
           email: '',
           disabled: false,
-          validate:{
+          email_show_explanation: function() {
+            var email = state.registeration.email;
+            return (email === '' && !state.registeration.validate.value) || validateEmail(email);
+          },
+          validate: {
             value: false,
           }
         },
@@ -95,8 +99,10 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           repeat_password:  '',
           residence: 'my',
           residence_list: [ { text: 'Malaysia', value: 'my'}],
+          disabled: false, /* is button disabled */
         }
       };
+
       state.route.update = function(route){
         var routes = {
           login: {
@@ -109,7 +115,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           },
           account: {
             title: 'Account opening',
-            height: 440
+            height: 470
           },
           confirm: {
             title: 'Confirm',
@@ -147,7 +153,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.registeration.disabled = true;
         liveapi.send({verify_email: email, type: 'account_opening'})
                 .then(function(data) {
-                  console.warn(data);
+                  state.registeration.disabled = false;
                   if(data.verify_email) {
                     $.growl.notice({ message: 'Verification code sent to ' + email });
                     state.route.update('account');
@@ -183,13 +189,16 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           residence: residence,
           // affilate_token: '???'
         };
+        state.account.disabled = true;
         liveapi.send(request)
                .then(function(data) {
                   console.warn(data);
+                  state.account.disabled = false;
                })
                .catch(function(err){
                   console.error(err);
                   $.growl.error({ message: err.message });
+                  state.account.disabled = false;
                });
       }
 
@@ -197,9 +206,10 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
+               console.warn(data);
                state.account.residence_list = data.residence_list;
                state.account.residence = data.residence_list[0].value;
-               _.defer(function() { state.account.residence = 'my' }, 0);
+               _.defer(function() { state.account.residence = 'us' }, 0);
              })
              .catch(function(err){
                 console.error(err);

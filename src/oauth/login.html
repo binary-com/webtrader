@@ -13,7 +13,7 @@
   </div>
 
   <div class='registeration-dialog'  rv-show='route.value |  eq "registeration"'>
-      <span class='email-back' rv-on-click='route.update | bind "login"'>
+      <span class='back-arrow' rv-on-click='route.update | bind "login"'>
         <span class='ui-icon ui-icon-triangle-1-w'></span> Back
       </span>
 
@@ -24,17 +24,22 @@
              rv-input-default-btn="'.oauth-dialog button.register-button'" />
 
       <div class='validations'>
+        <span rv-show='registeration.email_show_explanation < email validate.value'
+              class='explanation'>Enter you email address to get a vierfication code</span>
         <span rv-show='registeration.email | eq "" | and registeration.validate.value'
               class='validation'>* Please enter your email</span>
-        <span rv-show='registeration.email | is-valid-email | eq false | and registeration.validate.value'
+        <span rv-show='registeration.email | is-valid-email | eq false'
               class='validation' >* Please enter correct email</span>
       </div>
 
       <button rv-on-click='registeration.create' rv-disabled='registeration.disabled'
-              class='register-button shine'>Register free account</button>
+              class='register-button shine' rv-css-opacity='registeration.disabled | ternary 0.6 1'>Register free account</button>
   </div>
 
   <div class='account-dialog'  rv-show='route.value |  eq "account"'>
+    <span class='back-arrow' rv-on-click='route.update | bind "registeration"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span>
 
     <span>Country of residence</span>
     <select rv-jq-class='"residence-ul"'
@@ -83,7 +88,8 @@
             class='validation'>* Passwords didn't match. Please type them again</span>
     </div>
 
-      <button rv-on-click='account.open'
+      <button rv-on-click='account.open' rv-disabled='account.disabled'
+              rv-css-opacity='account.disabled | ternary 0.5 1'
               class='account-button shine'>Open account</button>
   </div>
 </div>

@@ -46,6 +46,19 @@
   /*box-shadow: inset 0 1px 2px rgba(0,0,100,.4);*/
 }
 
+
+.oauth-dialog span.back-arrow {
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.oauth-dialog .back-arrow > span {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
 /* login dialog styles */
 .oauth-dialog .login-dialog > div {
   line-height: 1.5em;
@@ -73,18 +86,6 @@
 /* registeration dialog styles */
 .oauth-dialog .registeration-dialog { padding: 10px;}
 .oauth-dialog .registeration-dialog > span { display:  block; }
-
-.oauth-dialog .registeration-dialog span.email-back {
-  color: #aaa;
-  font-size: 12px;
-  cursor: pointer;
-  padding-bottom: 10px;
-}
-.oauth-dialog .registeration-dialog .email-back > span {
-  display: inline-block;
-  position: relative;
-  top: 2px;
-}
 
 /* account openning dialog styles */
 .oauth-dialog .account-dialog { padding: 10px; }
