@@ -37,7 +37,12 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
         /* update dialog position, this way when dialog is resized it will not move*/
         var offset = login_win.dialog('widget').offset();
+        offset.top = 40;
         login_win.dialog("option", "position", { my: offset.left, at: offset.top });
+        login_win.dialog('widget').css({
+            left: offset.left + 'px',
+            top: offset.top + 'px'
+        });
       });
     }
 
