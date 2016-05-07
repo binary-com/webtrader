@@ -31,6 +31,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
               login_win_view = null;
             }
         });
+        login_win.parent().css('overflow', 'visible');
         init_state(root);
         login_win.dialog('open');
 
@@ -56,7 +57,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
               },
               account: {
                 title: 'Account opening',
-                height: 400
+                height: 440
               },
               confirm: {
                 title: 'Confirm',
@@ -81,28 +82,72 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         },
         registeration: {
           email: '',
-          validation: '',
-          clear_validation: _.debounce(function(){
-            state.registeration.validation = '';
-          }, 2000),
+          validate:{
+            value: false,
+            clear: _.debounce(function(){
+              state.registeration.validate.value = false;
+            }, 2000),
+            show: function() {
+              state.registeration.validate.value = true;
+              state.registeration.validate.clear();
+            }
+          } ,
           create: function(){
             var email = state.registeration.email;
-
-            if(email == '')
-              state.registeration.validation = '* Please enter you email.';
-            else if(!validateEmail(email))
-              state.registeration.validation = '* Email address is not valid.';
-
-            if(state.registeration.validation){
-              state.registeration.clear_validation();
+            if(email == '' || !validateEmail(email)) {
+              state.registeration.validate.show();
               return;
             }
 
-            console.warn(email);
+            state.route.update('account');
+          }
+        },
+        account: {
+          empty_fields: {
+            validate: false,
+            clear: _.debounce(function() {
+              state.account.empty_fields.validate = false;
+            }, 2000),
+            show: function() {
+              state.account.empty_fields.validate = true;
+              state.account.empty_fields.clear();
+            }
+          },
+          email_show_explanation: function() {
+            var email = state.account.email;
+            return (email === '' && !state.account.empty_fields.validate) || validateEmail(email);
+          },
+          password_error_message: function() {
+            var password = state.account.password;
+            if(password === '') return state.account.empty_fields.validate ? '* Please enter your password' : '';
+            if(password.length < 6) return '* Password must be 6 characters minimum';
+            if(! /\d/.test(password)) return '* Password must contain at least 1 digit';
+            return '';
+          },
+          email: '',
+          verification: '',
+          password: '',
+          repeat_password:  '',
+          residence: 'my',
+          residence_list: [ { text: 'Malaysia', value: 'my'}],
+          open: function() {
+            state.account.empty_fields.show();
           }
         }
       };
       login_win_view = rv.bind(root[0], state);
+      _.defer(function() { state.route.update('account'); }, 500);
+
+      liveapi.cached.send({residence_list: 1})
+             .then(function(data) {
+               state.account.residence_list = data.residence_list;
+               state.account.residence = data.residence_list[0].value;
+               _.defer(function() { state.account.residence = 'my' }, 0);
+             })
+             .catch(function(err){
+                console.error(err);
+                $.growl.error({ message: err.message });
+             });
     }
 
     return {

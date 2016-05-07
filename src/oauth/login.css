@@ -3,6 +3,31 @@
   background: white !important;
 }
 
+.oauth-dialog span.validation {
+  color: red;
+  font-size: 12px;
+}
+
+.oauth-dialog span.explanation {
+  font-size: 12px;
+  color: #c9c9c9;
+}
+
+.oauth-dialog div.validations {
+  height: 12px;
+  padding-bottom: 10px;
+}
+
+.oauth-dialog button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    width: 50%;
+    line-height: 25px;
+}
+
 .oauth-dialog input {
   padding: 10px 5px;
   background: #eee;
@@ -11,6 +36,10 @@
   transition: border 0.3s;
   outline: 0;
   box-sizing: border-box;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  margin:5px 10px 5px 0;
 }
 .oauth-dialog input:focus {
   border-bottom: solid 3px #909090;
@@ -28,15 +57,7 @@
   margin-bottom: 10px;
 }
 
-.oauth-dialog .login-dialog > div > button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    width: 100%;
-    line-height: 25px;
-}
+.oauth-dialog .login-dialog > div > button { width: 100%; }
 
 .oauth-dialog .login-dialog .login-pane {
   float: left;
@@ -64,25 +85,14 @@
   top: 2px;
 }
 
-.oauth-dialog .registeration-dialog input.email-input {
-  width: 100%;
-  height: 24px;
-  line-height: 24px;
-  margin:5px 10px 5px 0;
-}
+/* account openning dialog styles */
+.oauth-dialog .account-dialog { padding: 10px; }
+.oauth-dialog .account-dialog > span { display:  block; }
 
-.oauth-dialog .registeration-dialog span.email-validation {
-  color: red;
-  height: 16px;
-  padding-bottom: 5px;
-}
-
-.oauth-dialog .registeration-dialog > button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    width: 50%;
-    line-height: 25px;
+.oauth-dialog .account-dialog select + .ui-selectmenu-button {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px !important;
+  /*width: 70% !important;*/
+  z-index: 100;
 }

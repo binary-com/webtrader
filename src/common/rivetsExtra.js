@@ -40,9 +40,16 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['or'] = function (value, other) {
         return value || other;
     };
+    /* rivets formatter to replace a falsy value with a default one */
+    rv.formatters['or-not'] = function (value, other) {
+        return value || !other;
+    };
     /* rivets formatter to replace a true value with a default one */
     rv.formatters['and'] = function (vlaue, other){
       return vlaue && other;
+    }
+    rv.formatters['and-not'] = function (vlaue, other){
+      return vlaue && !other;
     }
     /* rivets formatter for > operator  */
     rv.formatters['gt'] = function (vlaue, other){
@@ -155,6 +162,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       return (100*(changed - original)/original).toFixed(2)+'%';
     }
 
+    rv.formatters['is-valid-email'] = function(email) {
+      return email === '' || validateEmail(email);
+    }
+
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
        As in "execute this function only if 100 milliseconds have passed without it being called." */
     rv.formatters.debounce = function(value, callback, timeout) {
@@ -189,6 +200,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
               el.selectmenu('refresh');
         }
     };
+    /* bindar for jqueyr ui selectmenu options */
+    rv.binders['selectmenu-*'] = function (el, value) {
+        $(el).selectmenu('option', this.args[0], value);
+    }
 
     /* refersh the selectmenu on array changes */
     rv.binders.selectrefresh = {

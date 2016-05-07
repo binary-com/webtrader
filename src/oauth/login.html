@@ -23,11 +23,67 @@
              rv-value='registeration.email'
              rv-input-default-btn="'.oauth-dialog button.register-button'" />
 
-      <span class='email-validation'
-            rv-visible='registeration.validation'
-            rv-text='registeration.validation'></span>
+      <div class='validations'>
+        <span rv-show='registeration.email | eq "" | and registeration.validate.value'
+              class='validation'> * Please enter your email</span>
+        <span rv-show='registeration.email | is-valid-email | eq false | and registeration.validate.value'
+              class='validation' >* Please enter correct email</span>
+      </div>
 
       <button rv-on-click='registeration.create'
               class='register-button shine'>Register free account</button>
+  </div>
+
+  <div class='account-dialog'  rv-show='route.value |  eq "account"'>
+
+    <span>Country of residence</span>
+    <select rv-jq-class='"residence-ul"'
+            rv-selectmenu-width='200'
+            rv-selectmenu="account.residence"
+            rv-selectrefresh="account.residence_list">
+
+        <option rv-each-row="account.residence_list" rv-value="row.value">{row.text}</option>
+    </select>
+
+    <span>Email</span>
+    <input placeholder='Email' rv-value='account.email' />
+    <div class='validations'>
+      <span rv-show='account.email_show_explanation < email empty_fields.validate'
+            class='explanation'>We ask for your email again to protect our customers' security</span>
+      <span rv-show='account.email | is-valid-email | eq false'
+            class='validation'>* Please enter correct email</span>
+      <span rv-show='account.email | eq "" | and account.empty_fields.validate'
+            class='validation'>* Please enter your email.</span>
+    </div>
+
+
+    <span>Verification token</span>
+    <input placeholder='Verification token' rv-value='account.verification' />
+    <div class='validations'>
+      <span rv-show='account.verification | not-eq "" | or-not account.empty_fields.validate'
+            class='explanation'>Verification code has been sent to your email</span>
+      <span rv-show='account.verification | eq "" | and account.empty_fields.validate'
+            class='validation'>* Please enter the verification code sent to your email.</span>
+    </div>
+
+    <span>Choose password</span>
+    <input type='password' placeholder='Password' rv-value='account.password' />
+    <div class='validations'>
+      <span rv-show='account.password_error_message < password empty_fields.validate | eq ""'
+            class='explanation'>Minimum 6 characters and must contain at least 1 digit</span>
+      <span rv-show='account.password_error_message < password empty_fields.validate'
+            rv-text='account.password_error_message < password empty_fields.validate'
+            class='validation'></span>
+    </div>
+
+    <span>Repeat password</span>
+    <input type='password' placeholder='Repeat password' rv-value='account.repeat_password' />
+    <div class='validations repeat-password-validations'>
+      <span rv-show='account.password | not-eq account.repeat_password | and account.empty_fields.validate'
+            class='validation'>* Passwords didn't match. Please type them again</span>
+    </div>
+
+      <button rv-on-click='account.open'
+              class='account-button shine'>Open account</button>
   </div>
 </div>
