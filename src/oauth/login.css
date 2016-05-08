@@ -100,4 +100,27 @@
 
 /* confirmation dialog styles */
 .oauth-dialog .confirm-dialog { padding: 10px;}
-.oauth-dialog .confirm-dialog > span { display:  block; }
+.oauth-dialog .confirm-dialog > span {
+  display:  block;
+  padding: 10px 8px;
+}
+
+.oauth-dialog .confirm-dialog .confirm-title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 0;
+}
+.oauth-dialog .confirm-dialog img {
+  width: 220px;
+  height: 200px;
+  float: right;
+}
+.oauth-dialog .confirm-dialog .confirm-grant {
+  width: 160px;
+  margin-top: 140px;
+}
+
+.oauth-dialog .confirm-dialog .confirm-button {
+  clear: both;
+  margin-top: 25px;
+}
