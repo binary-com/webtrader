@@ -53,10 +53,14 @@ This command will help to automatically run grunt task when files are changed un
 
 Since backend needs an https web address for **oauth app register** if you intend to debug oauth login on localhost,  you need to modify your `/etc/hosts` file. For example the `https://webtrader.local/` token in `src/oauth/app_id.josn` is registered to `https://webtrader.local/` address, you need to do the following in order to use it locally.
 
-        // add this line to your /etc/hosts file
+        // Add this line to your /etc/hosts file.
         127.0.0.1 webtrader.local
-        // use this command to run your local server
+        // Use this command to run your local server on https.
         $ sudo grunt connect:https
+        // Use this command to watch the files.
+        $ grunt && grunt watch:https
+        // Go to https://webtrader.local:35729 and accept the self signed ssl certificate for grunt livereload.
+        // Now you can debug your app on https://webtrader.local/ locally.
 
 In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
 

@@ -28,8 +28,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           }
         }
 
-        console.warn(window.location.href);
-
         root = $(root);
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',

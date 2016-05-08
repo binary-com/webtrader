@@ -305,6 +305,18 @@ module.exports = function (grunt) {
               livereload: true
             },
           },
+          https: {
+            files: ['src/**'],
+            tasks: ['mainTask'],
+            options: {
+              spawn: false,
+              interrupt : true,
+              livereload: {
+                key: grunt.file.read('grunt/livereload.key'),
+                cert: grunt.file.read('grunt/livereload.crt')
+              }
+            },
+          },
         },
         shell: {
             moveEverythingToBETA_folder: {
