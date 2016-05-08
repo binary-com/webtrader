@@ -5,7 +5,7 @@ This repository contains HTML, Javascript, CSS, and images for [WebTrader](http:
 ##Project goal
 The goal of this project is to create a full-screen trading interface for [Binary.com](https://www.binary.com) according to the following design:
 ![Webtrader](https://banners.binary.com/misc/webtrader-layout.jpg)
- 
+
 ##How to work with this project
 ####Linux Users
         $ sudo apt-get install git
@@ -17,7 +17,7 @@ The goal of this project is to create a full-screen trading interface for [Binar
         $ sudo npm install -g bower
         $ npm install
         $ bower install
-    
+
 ####Windows Users
     * Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
     * Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
@@ -30,14 +30,14 @@ The goal of this project is to create a full-screen trading interface for [Binar
         $ bower install
 These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from `package.json` and `bower.json` files.
 
-At this point, your project is properly setup. 
+At this point, your project is properly setup.
 
 Run grunt to compile the project
 
         $ grunt
 
 You can now run following command to start a local server
-        
+
         $ grunt connect:compressed
         For compressed file serving
 
@@ -46,10 +46,15 @@ You can now run following command to start a local server
 
 Running this command will launch local server at http://localhost:9001
 
-You should always combine the above command with 
-        
+You should always combine the above command with
+
         $ grunt watch
 This command will help to automatically run grunt task when files are changed under src directory
+
+Since backend needs an https web address for **oauth app register** if you intend to debug oauth login on localhost,  you need to modify your `/etc/hosts` file. For example the `localhost token` in `src/oauth/app_id.josn` is registered to `https://webtrader.binary`, you need to do the following in order to use it locally.
+
+        127.0.0.1 webtrader.binary // add this line to your /etc/hosts file
+        $ sudo grunt conncet:https // use this command to run your local server
 
 In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
 
@@ -74,7 +79,6 @@ Every checkin or merge of PR into development will trigger travis-ci build and d
 #####Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
-    
+
         $ grunt deploy
         For releasing compressed code
-

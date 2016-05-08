@@ -248,6 +248,16 @@ module.exports = function (grunt) {
                     keepalive: true,
                     livereload: true
                 }
+            },
+            https: {
+                options: {
+                    port: 443,
+                    protocol: 'https',
+                    base: 'dist/uncompressed',
+                    hostname: '0.0.0.0',
+                    keepalive: true,
+                    livereload: true
+                }
             }
         },
         sloc: {
