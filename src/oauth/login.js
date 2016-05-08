@@ -94,11 +94,17 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           residence: 'my',
           residence_list: [ { text: 'Malaysia', value: 'my'}],
           disabled: false, /* is button disabled */
-        }
+        },
+        confirm: { disabled: false }
       };
 
       state.login.login = function() {
           state.login.disabled = true;
+          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + app_id + '&scope=read,trade,payments,admin';
+      }
+
+      state.confirm.confirm = function() {
+          state.confirm.disabled = true;
           window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
 
@@ -117,11 +123,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             height: 470
           },
           confirm: {
-            title: 'Confirm',
-            height: 400
-          },
-          welcome: {
-            title: 'Welcome',
+            title: 'Account opening',
             height: 400
           }
         };
@@ -191,8 +193,13 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.account.disabled = true;
         liveapi.send(request)
                .then(function(data) {
-                  console.warn(data);
+                  var account = data.new_account_virtual;
+                  console.warn(account);
+                  localStorage.setItem('oauth_token', account.oauth_token);
+                  localStorage.setItem('client_id', account.client_id)
+                  liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
                   state.account.disabled = false;
+                  state.route.update('confirm');
                })
                .catch(function(err){
                   console.error(err);
@@ -202,6 +209,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       }
 
       login_win_view = rv.bind(root[0], state);
+      _.defer(function() { state.route.update('confirm'); });
 
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {

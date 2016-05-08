@@ -22,8 +22,9 @@
       var href = window.location.href;
       if(/#acct1=/.test(href) && /token1=/.test(href)) {
         var params = href.split('#')[1].split(/[=&]/);
-        localStorage.setItem(params[0], params[1]); // 'acct1'
-        localStorage.setItem(params[2], params[3]); // 'acct1'
+        var map = { token1: 'oauth_token', acct1: 'client_id' };
+        localStorage.setItem(map[params[0]], params[1]);
+        localStorage.setItem(map[params[2]], params[3]);
       }
 
       window.location.href = 'v<version>/main.html' + suffix;

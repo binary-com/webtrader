@@ -97,3 +97,7 @@
   border-radius: 5px !important;
   z-index: 100;
 }
+
+/* confirmation dialog styles */
+.oauth-dialog .confirm-dialog { padding: 10px;}
+.oauth-dialog .confirm-dialog > span { display:  block; }

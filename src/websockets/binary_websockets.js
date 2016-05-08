@@ -35,7 +35,7 @@ define(['jquery'], function ($) {
          **/
         setTimeout(function(){
             socket = connect();
-            if(localStorage.getItem('token1'))
+            if(localStorage.getItem('oauth_token'))
               api.cached.authorize();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
@@ -165,7 +165,7 @@ define(['jquery'], function ($) {
                 if (!auth_successfull) {    /* authentication request is failed, clear localStorage */
                     is_authenitcated_session = false;
                     fire_event('logout');
-                    localStorage.removeItem('token1');
+                    localStorage.removeItem('oauth_token');
                     localStorage.removeItem('acct1');
                 }
                 delete cached_promises[key];
@@ -176,7 +176,7 @@ define(['jquery'], function ($) {
     /* un-athenticate current session */
     var invalidate = function(){
         if(!is_authenitcated_session) { return; }
-        localStorage.removeItem('token1');
+        localStorage.removeItem('oauth_token');
         localStorage.removeItem('acct1');
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
@@ -197,8 +197,8 @@ define(['jquery'], function ($) {
 
         var send = send_request.bind(null,data);// function () { return send_request(data); };
 
-        if(localStorage.getItem('token1'))
-            return authenticate(localStorage.getItem('token1'))
+        if(localStorage.getItem('oauth_token'))
+            return authenticate(localStorage.getItem('oauth_token'))
                     .then(send);
         else
           return Promise.reject({ message: 'Please log in.'});
@@ -288,7 +288,7 @@ define(['jquery'], function ($) {
             /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
             authorize: function () {
-                var token = localStorage.getItem('token1');
+                var token = localStorage.getItem('oauth_token');
                     key = JSON.stringify({ authorize: token });
 
                 if (is_authenitcated_session && token && cached_promises[key])
