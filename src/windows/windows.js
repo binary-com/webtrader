@@ -433,9 +433,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                     });
             });
 
-            /* automatically log the user in if there is a token in browser cookies*/
-            require(['websockets/binary_websockets', 'js-cookie'], function(liveapi, Cookies) {
-              if(Cookies.get('webtrader_token')) {
+            /* automatically log the user in if we have token1 in localStorage */
+            require(['websockets/binary_websockets', ], function(liveapi) {
+              if(localStorage.getItem('token1')) {
                 liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
               }
             });

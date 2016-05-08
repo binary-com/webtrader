@@ -50,7 +50,8 @@ define(['jquery'], function ($) {
          **/
         setTimeout(function(){
             socket = connect();
-            if(Cookies && Cookies.get('webtrader_token'))
+            if(localStorage.getItem('token1'))
+            // if(Cookies && Cookies.get('webtrader_token'))
               api.cached.authorize();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
@@ -170,7 +171,7 @@ define(['jquery'], function ($) {
 
         return promise
             .then(function (val) {
-                Cookies.set('webtrader_token', token, { expires: 365 }); /* never expiers */
+                // Cookies.set('webtrader_token', token, { expires: 365 }); /* never expiers */
                 is_authenitcated_session = true;
                 fire_event('login', val);
                 auth_successfull = true;
@@ -178,10 +179,12 @@ define(['jquery'], function ($) {
                 return val; /* pass the result */
             })
             .catch(function (up) {
-                if (!auth_successfull) {    /* authentication request is failed, delete the cookie */
+                if (!auth_successfull) {    /* authentication request is failed, clear localStorage */
                     is_authenitcated_session = false;
                     fire_event('logout');
-                    Cookies.remove('webtrader_token');
+                    localStorage.removeItem('token1');
+                    localStorage.removeItem('acct1');
+                    // Cookies.remove('webtrader_token');
                 }
                 delete cached_promises[key];
                 throw up; /* pass the exception to next catch */
@@ -191,7 +194,9 @@ define(['jquery'], function ($) {
     /* un-athenticate current session */
     var invalidate = function(){
         if(!is_authenitcated_session) { return; }
-        Cookies.remove('webtrader_token');
+        // Cookies.remove('webtrader_token');
+        localStorage.removeItem('token1');
+        localStorage.removeItem('acct1');
         socket.close();
         /* remove authenticated cached requests as well as authorize requests */
         for(var i in cached_promises)
