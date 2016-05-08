@@ -85,7 +85,7 @@
           <span rv-text="table.sell_price | prepend table.currency | or '-'"></span>
           <br />
           <span rv-text="table.sell_price | percent-of table.buy_price"
-                rv-tooltip='"return"'
+                rv-tooltip='table.sell_time | moment | or "return"'
                 class="dotted-underline smaller"></span>
       </div>
       <div> <p>Final Price</p>
@@ -126,6 +126,8 @@
       </span>
 
     </div>
+    <span class='forward_starting orange' rv-text="fwd_starting"></span>
+    <br>
     <span class='validation' rv-text="validation"></span>
   </div>
 </div>

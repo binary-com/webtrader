@@ -197,7 +197,12 @@ define(['jquery'], function ($) {
         // Cookies.remove('webtrader_token');
         localStorage.removeItem('token1');
         localStorage.removeItem('acct1');
-        socket.close();
+
+        api.send({logout: 1}) /* try to logout and if it fails close the socket */
+          .catch(function(err){
+            $.growl.error({ message: err.message });
+            socket.close();
+          });
         /* remove authenticated cached requests as well as authorize requests */
         for(var i in cached_promises)
           if(needs_authentication(cached_promises[i].data) || ('authorize' in cached_promises[i].data))

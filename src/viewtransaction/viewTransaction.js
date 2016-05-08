@@ -163,7 +163,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.validation = 'This contract has expired';
       else if(contract.is_valid_to_sell)
         state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
-
+      if(contract.is_forward_starting){
+        if(contract.date_start > parseInt(contract.current_spot_time))
+          state.fwd_starting = '* Contract is not yet started.';
+        else
+          state.fwd_starting = '';
+      }
       /*Do not update the current_spot and current_spot_time if the contract has expired*/
       if(state.table.date_expiry*1 >= contract.current_spot_time*1) {
           state.table.current_spot = contract.current_spot;
