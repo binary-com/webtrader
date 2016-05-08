@@ -17,6 +17,19 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       require(['text!oauth/login.html', 'text!oauth/app_id.json'], function(root, app_id) {
         app_id = JSON.parse(app_id);
+
+        /* find the appropriate token */
+        var token = '';
+        var href = window.location.href;
+        for(var web_address in app_id) {
+          if(href.lastIndexOf(web_address,0) == 0) {
+            token = app_id[web_address];
+            break;
+          }
+        }
+
+        console.warn(window.location.href);
+
         root = $(root);
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
@@ -38,7 +51,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             }
         });
         login_win.parent().css('overflow', 'visible');
-        init_state(root, app_id['https://webtrader.local/']); // TODO: figure out if we are on main site
+        init_state(root, token);
         login_win.dialog('open');
 
         /* update dialog position, this way when dialog is resized it will not move*/
@@ -52,7 +65,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       });
     }
 
-    function init_state(root, app_id) {
+    function init_state(root, token) {
       var state = {
         route: { value: 'login' },
         login: { disabled: false },
@@ -100,12 +113,12 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       state.login.login = function() {
           state.login.disabled = true;
-          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + token + '&scope=read,trade,payments,admin';
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
-          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + token + '&scope=read,trade,payments,admin';
       }
 
       state.route.update = function(route){
@@ -208,7 +221,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       }
 
       login_win_view = rv.bind(root[0], state);
-      _.defer(function() { state.route.update('confirm'); });
 
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
