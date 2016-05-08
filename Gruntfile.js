@@ -63,7 +63,6 @@ module.exports = function (grunt) {
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
                             'requirejs/require.js',
-                            'js-cookie/src/js.cookie.js',
                             'require-css/css.min.js',
                             'text/text.js',
                             'lodash/dist/lodash.min.js',
