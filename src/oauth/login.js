@@ -38,7 +38,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             }
         });
         login_win.parent().css('overflow', 'visible');
-        init_state(root, app_id.beta); // TODO: figure out if we are on main site
+        init_state(root, app_id.localhost); // TODO: figure out if we are on main site
         login_win.dialog('open');
 
         /* update dialog position, this way when dialog is resized it will not move*/
