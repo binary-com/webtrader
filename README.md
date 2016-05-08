@@ -51,10 +51,12 @@ You should always combine the above command with
         $ grunt watch
 This command will help to automatically run grunt task when files are changed under src directory
 
-Since backend needs an https web address for **oauth app register** if you intend to debug oauth login on localhost,  you need to modify your `/etc/hosts` file. For example the `localhost token` in `src/oauth/app_id.josn` is registered to `https://webtrader.binary`, you need to do the following in order to use it locally.
+Since backend needs an https web address for **oauth app register** if you intend to debug oauth login on localhost,  you need to modify your `/etc/hosts` file. For example the `https://webtrader.local/` token in `src/oauth/app_id.josn` is registered to `https://webtrader.local/` address, you need to do the following in order to use it locally.
 
-        127.0.0.1 webtrader.binary // add this line to your /etc/hosts file
-        $ sudo grunt conncet:https // use this command to run your local server
+        // add this line to your /etc/hosts file
+        127.0.0.1 webtrader.local
+        // use this command to run your local server
+        $ sudo grunt connect:https
 
 In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
 

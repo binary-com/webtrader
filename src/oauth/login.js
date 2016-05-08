@@ -38,7 +38,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             }
         });
         login_win.parent().css('overflow', 'visible');
-        init_state(root, app_id.localhost); // TODO: figure out if we are on main site
+        init_state(root, app_id['https://webtrader.local/']); // TODO: figure out if we are on main site
         login_win.dialog('open');
 
         /* update dialog position, this way when dialog is resized it will not move*/
@@ -194,7 +194,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         liveapi.send(request)
                .then(function(data) {
                   var account = data.new_account_virtual;
-                  console.warn(account);
                   localStorage.setItem('oauth_token', account.oauth_token);
                   localStorage.setItem('client_id', account.client_id)
                   liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
@@ -213,7 +212,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
-               console.warn(data);
                state.account.residence_list = data.residence_list;
                state.account.residence = data.residence_list[0].value;
                _.defer(function() { state.account.residence = 'us' }, 0);
