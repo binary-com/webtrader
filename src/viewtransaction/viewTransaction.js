@@ -191,6 +191,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.table.sell_price = contract.sell_price;
         state.table.final_price = formatPrice(contract.sell_price);
       }
+
+        if(!state.chart.barrier && contract.barrier) {
+          state.chart.barrier = contract.barrier;
+          state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
+        }
+        if(!state.chart.high_barrier && contract.high_barrier) {
+          state.chart.high_barrier = contract.high_barrier;
+          state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
+        }
+        if(!state.chart.low_barrier && contract.low_barrier) {
+          state.chart.low_barrier = contract.low_barrier;
+          state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
+        }
   }
 
   function init_dialog(proposal) {
