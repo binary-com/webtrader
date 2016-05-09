@@ -168,7 +168,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
   function initLoginButton(root){
       var login_menu = root.find('.login');
       var account_menu = root.find('.account').hide();
-      var time = root.find('span.time').fadeOut();
+      var time = root.find('span.time');
       var login_btn = root.find('.login button');
       var logout_btn = root.find('.account .logout');
       var loginid = root.find('.account span.login-id');
@@ -210,7 +210,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               account_menu.fadeOut();
               login_menu.fadeIn();
               loginid.fadeOut();
-              time.fadeOut();
+              // time.fadeOut();
               balance.fadeOut();
               currency = '';
           });
@@ -222,7 +222,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
               update_balance(data);
               loginid.text('Account ' + data.authorize.loginid).fadeIn();
-              time.fadeIn();
+              // time.fadeIn();
           });
 
           login_btn.on('click', function(){
@@ -240,7 +240,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
       /* update time every one minute */
       time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
-      setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'); },30*1000);
+      setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'); }, 15*1000);
   }
 
 	return {

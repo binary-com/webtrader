@@ -7,7 +7,7 @@
 */
 
 body {
-  min-width: 650px !important;
+  min-width: 680px !important;
 }
 
 #nav-container {
@@ -320,11 +320,14 @@ body {
 #nav-container .account {
   position: absolute;
   right: 0px;
-  width: 210px;
+  width: 200px;
 }
 #nav-container .account > a {
-  padding-left: 20px;
+  cursor: default;
+  padding-left: 15px;
+  font-size: 15px;
 }
+#nav-container .account > ul > li > a { padding-left: 15px; }
 #nav-container .account .nav-dropdown-toggle {
   position: relative;
   top: -10px;
@@ -348,19 +351,20 @@ body {
   opacity: 0.5;
 }
 
-/*
-#nav-container .authentication span.time {
-  width: 110px;
-  font-size: 10px;
+#nav-container li.time-li {
   position: absolute;
-  right: 0;
-  top: -10px;
-
+  right: 205px;
+  cursor: default; background: #273051;
+  line-height: 50px;
 }
-*/
+#nav-container span.time { font-size: 10px; }
+#nav-container li.time-li > a {
+  cursor: default; background: #273051;
+  padding: 0;
+}
 
 /** targets min-width requirement **/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .nav-normal-menu {
         display: inline-table;
     }
@@ -373,6 +377,9 @@ body {
     .nav-normal-menu li > ul li a {
         padding: 10px 30px;
     }
+}
+@media screen and (max-width: 780px) {
+  #nav-container { text-align: left; }
 }
 
 /** TODO: implement browser not supported for mobile devices **/
