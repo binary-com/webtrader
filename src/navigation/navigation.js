@@ -166,10 +166,13 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 	}
 
   function initLoginButton(root){
-      var login_btn = root.find('.authentication button');
-      var loginid = root.find('.authentication span.loginid').hide();
-      var time = root.find('.authentication span.time').hide();
-      var balance = root.find('.authentication span.balance').hide();
+      var login_menu = root.find('.login');
+      var account_menu = root.find('.account').hide();
+      var login_btn = root.find('.login button');
+      var logout_btn = root.find('.account .logout');
+      var loginid = root.find('.account span.login-id');
+      var time = root.find('.account span.time');
+      var balance = root.find('.account span.balance').fadeOut();
       var currency = ''; /* will get this from payout_currencies api on login */
       require(['websockets/binary_websockets'],function(liveapi) {
 
@@ -203,8 +206,11 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
           liveapi.events.on('logout', function() {
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
-              login_btn.removeClass('logout').addClass('login')
-                .removeAttr('disabled').text('Login');
+              // login_btn.removeClass('logout').addClass('login')
+                // .removeAttr('disabled').text('Login');
+              logout_btn.removeAttr('disabled');
+              account_menu.fadeOut();
+              login_menu.fadeIn();
               loginid.fadeOut();
               time.fadeOut();
               balance.fadeOut();
@@ -213,29 +219,35 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
           liveapi.events.on('login', function(data){
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
-              login_btn.removeClass('login').addClass('logout')
-                .removeAttr('disabled').text('Logout');
+              // login_btn.removeClass('login').addClass('logout')
+                // .removeAttr('disabled').text('Logout');
+              login_menu.fadeOut();
+              account_menu.fadeIn();
 
               update_balance(data);
-              loginid.text(data.authorize.loginid).fadeIn();
+              loginid.text('Account ' + data.authorize.loginid).fadeIn();
               time.fadeIn();
           });
 
           login_btn.on('click', function(){
             login_btn.attr('disabled','disabled');
-            var logedin = login_btn.hasClass('logout');
-            if(logedin) {
-              liveapi.invalidate();
-            }
-            else {
+            // var logedin = login_btn.hasClass('logout');
+            // if(logedin) {
+              // liveapi.invalidate();
+            // }
+            // else {
               require(['oauth/login'], function(login_win){
                 login_btn.removeAttr('disabled');
                 login_win.init();
-              })
+              });
               // liveapi.cached.authorize().catch(function(err) {
                 // login_btn.removeAttr('disabled');
               // });
-            }
+            // }
+          });
+          logout_btn.on('click', function() {
+              liveapi.invalidate();
+              logout_btn.attr('disabled', 'disabled');
           });
       });
 

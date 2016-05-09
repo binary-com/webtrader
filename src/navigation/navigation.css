@@ -291,23 +291,61 @@
     text-shadow: 0 0 3px #333;
 }
 
-/* authentication button */
-#nav-container .authentication {
+/* login button */
+#nav-container .login {
+  position: absolute;
+  right: 5px;
+}
+
+#nav-container .login button {
+  color: #eee;
+  line-height: 2em;
+  font-size: larger;
+  width:90px;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  margin-top: 8px;
+}
+
+#nav-container .login button[disabled] { opacity: 0.5;}
+#nav-container .login button.login { background: #2e8836; }
+/*#nav-container .login button.logout { background: #4F577E; }*/
+
+/* account menu */
+#nav-container .account {
+  position: absolute;
+  right: 0px;
+  width: 220px;
+}
+#nav-container .account .nav-dropdown-toggle {
+  position: relative;
+  top: -10px;
+}
+
+#nav-container .account .nav-dropdown-toggle .nav-caret {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+}
+
+#nav-container .account .info {
+  border: none;
+  border-top: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  box-sizing: border-box;
+}
+
+#nav-container .account *[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/*#nav-container .authentication {
   display: inline-block;
   position: absolute;
   line-height: 52px;
   right: 20px;
-}
-#nav-container .authentication button {
-  display: inline-block;
-  color: #eee;
-  line-height: 2em;
-  font-size: larger;
-  min-width:60px;
-  border: none;
-  border-radius: 5px;
-  outline: 0;
-  margin-right:-10px;
 }
 #nav-container .authentication div {
   display: inline-block;
@@ -344,11 +382,8 @@
   margin-right: -33px;
   line-height: 1.4em;
   border-right: 2px solid gray;
-}
+}*/
 
-#nav-container .authentication button[disabled] { opacity: 0.5;}
-#nav-container .authentication button.login { background: #2e8836; }
-#nav-container .authentication button.logout { background: #4F577E; }
 
 /** targets min-width requirement **/
 @media screen and (max-width: 950px) {
