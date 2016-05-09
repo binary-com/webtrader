@@ -20,13 +20,12 @@
 
       <span class='email-label'> Your email </span>
       <input class='email-input'
-             placeholder="Your email"
              rv-value='registration.email'
              rv-input-default-btn="'.oauth-dialog button.register-button'" />
 
       <div class='validations'>
-        <span rv-show='registration.email_show_explanation < email validate.value'
-              class='explanation'>Enter you email address to get a vierfication code</span>
+        <!-- <span rv-show='registration.email_show_explanation < email validate.value'
+              class='explanation'>Enter you email address to get a vierfication code</span> -->
         <span rv-show='registration.email | eq "" | and registration.validate.value'
               class='validation'>* Please enter your email</span>
         <span rv-show='registration.email | is-valid-email | eq false'
@@ -42,7 +41,7 @@
       <span class='ui-icon ui-icon-triangle-1-w'></span> Back
     </span>
 
-    <span>Country of residence</span>
+    <span class='title'>Country of residence</span>
     <select rv-jq-class='"residence-ul"'
             rv-selectmenu-width='200'
             rv-selectmenu="account.residence"
@@ -51,20 +50,8 @@
         <option rv-each-row="account.residence_list" rv-value="row.value">{row.text}</option>
     </select>
 
-    <span>Email</span>
-    <input placeholder='Email' rv-value='account.email' />
-    <div class='validations'>
-      <span rv-show='account.email_show_explanation < email empty_fields.validate'
-            class='explanation'>We ask for your email again to protect our customers' security</span>
-      <span rv-show='account.email | is-valid-email | eq false'
-            class='validation'>* Please enter correct email</span>
-      <span rv-show='account.email | eq "" | and account.empty_fields.validate'
-            class='validation'>* Please enter your email.</span>
-    </div>
-
-
-    <span>Verification token</span>
-    <input placeholder='Verification token' rv-value='account.verification' />
+    <span class='title'>Verification token</span>
+    <input rv-value='account.verification' />
     <div class='validations'>
       <span rv-show='account.verification | not-eq "" | or-not account.empty_fields.validate'
             class='explanation'>Verification code has been sent to your email</span>
@@ -72,8 +59,8 @@
             class='validation'>* Please enter the verification code sent to your email.</span>
     </div>
 
-    <span>Choose password</span>
-    <input type='password' placeholder='Password' rv-value='account.password' />
+    <span class='title'>Choose password</span>
+    <input type='password' rv-value='account.password' />
     <div class='validations'>
       <span rv-show='account.password_error_message < password empty_fields.validate | eq ""'
             class='explanation'>Minimum 6 characters and must contain at least 1 digit</span>
@@ -82,8 +69,8 @@
             class='validation'></span>
     </div>
 
-    <span>Repeat password</span>
-    <input type='password' placeholder='Repeat password' rv-value='account.repeat_password' />
+    <span class='title'>Repeat password</span>
+    <input type='password' rv-value='account.repeat_password' />
     <div class='validations repeat-password-validations'>
       <span rv-show='account.password | not-eq account.repeat_password | and account.empty_fields.validate'
             class='validation'>* Passwords didn't match. Please type them again</span>

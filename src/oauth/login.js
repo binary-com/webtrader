@@ -87,10 +87,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
               state.account.empty_fields.clear();
             }
           },
-          email_show_explanation: function() {
-            var email = state.account.email;
-            return (email === '' && !state.account.empty_fields.validate) || validateEmail(email);
-          },
           password_error_message: function() {
             var password = state.account.password;
             if(password === '') return state.account.empty_fields.validate ? '* Please enter your password' : '';
@@ -98,7 +94,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers';
             return '';
           },
-          email: '',
           verification: '',
           password: '',
           repeat_password:  '',
@@ -127,11 +122,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           },
           registration: {
             title: 'Registration',
-            height: 180,
+            height: 190,
           },
           account: {
             title: 'Account opening',
-            height: 470
+            height: 420
           },
           confirm: {
             title: 'Account opening',
@@ -184,7 +179,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       /* { new_account_virtual: 1 } step */
       state.account.open = function() {
         state.account.empty_fields.show();
-        var email = state.account.email,
+        var email = state.registration.email,
             verification = state.account.verification,
             password = state.account.password,
             repeat_password = state.account.repeat_password,
@@ -224,7 +219,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
              .then(function(data) {
                state.account.residence_list = data.residence_list;
                state.account.residence = data.residence_list[0].value;
-               _.defer(function() { state.account.residence = 'us' }, 0);
+               _.defer(function() { state.account.residence = 'id' }, 0); // make indonesia default
              })
              .catch(function(err){
                 console.error(err);
