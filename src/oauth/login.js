@@ -54,7 +54,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
         /* update dialog position, this way when dialog is resized it will not move*/
         var offset = login_win.dialog('widget').offset();
-        offset.top = 40;
+        offset.top = 80;
         login_win.dialog("option", "position", { my: offset.left, at: offset.top });
         login_win.dialog('widget').css({
             left: offset.left + 'px',
@@ -67,13 +67,13 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       var state = {
         route: { value: 'login' },
         login: { disabled: false },
-        registeration: {
+        registration: {
           email: '',
           disabled: false,
           validate: { value: false },
           email_show_explanation: function() {
-            var email = state.registeration.email;
-            return (email === '' && !state.registeration.validate.value) || validateEmail(email);
+            var email = state.registration.email;
+            return (email === '' && !state.registration.validate.value) || validateEmail(email);
           },
         },
         account: {
@@ -125,8 +125,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             title: 'Log in',
             height: 150
           },
-          registeration: {
-            title: 'Registeration',
+          registration: {
+            title: 'Registration',
             height: 180,
           },
           account: {
@@ -145,27 +145,27 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         login_win.dialog('option', 'height', height);
       };
 
-      state.registeration.validate.clear = _.debounce(function(){
-        state.registeration.validate.value = false;
+      state.registration.validate.clear = _.debounce(function(){
+        state.registration.validate.value = false;
       }, 2000);
 
-      state.registeration.validate.show = function() {
-        state.registeration.validate.value = true;
-        state.registeration.validate.clear();
+      state.registration.validate.show = function() {
+        state.registration.validate.value = true;
+        state.registration.validate.clear();
       }
 
       /* { verify_email: 'emial' } step */
-      state.registeration.create = function() {
-        var email = state.registeration.email;
+      state.registration.create = function() {
+        var email = state.registration.email;
         if(email == '' || !validateEmail(email)) {
-          state.registeration.validate.show();
+          state.registration.validate.show();
           return;
         }
 
-        state.registeration.disabled = true;
+        state.registration.disabled = true;
         liveapi.send({verify_email: email, type: 'account_opening'})
                 .then(function(data) {
-                  state.registeration.disabled = false;
+                  state.registration.disabled = false;
                   if(data.verify_email) {
                     $.growl.notice({ message: 'Verification code sent to ' + email });
                     state.route.update('account');
@@ -177,7 +177,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                 .catch(function(err) {
                   console.error(err);
                   $.growl.error({ message: err.message });
-                  state.registeration.disabled = false;
+                  state.registration.disabled = false;
                 });
       }
 

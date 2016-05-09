@@ -123,6 +123,10 @@ body * {
     padding: .5em .5em;
     padding-bottom: 0;
 }
+.ui-dialog-titlebar-buttonpane {
+  height: 14px !important;
+  margin-top: -7px !important;
+}
 
 .gtm_data_layer {
     display: none;

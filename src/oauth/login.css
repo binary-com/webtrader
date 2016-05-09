@@ -83,9 +83,9 @@
   width: 58%;
 }
 
-/* registeration dialog styles */
-.oauth-dialog .registeration-dialog { padding: 10px;}
-.oauth-dialog .registeration-dialog > span { display:  block; }
+/* registration dialog styles */
+.oauth-dialog .registration-dialog { padding: 10px;}
+.oauth-dialog .registration-dialog > span { display:  block; }
 
 /* account openning dialog styles */
 .oauth-dialog .account-dialog { padding: 10px; }

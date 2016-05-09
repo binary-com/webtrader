@@ -168,10 +168,10 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
   function initLoginButton(root){
       var login_menu = root.find('.login');
       var account_menu = root.find('.account').hide();
+      var time = root.find('span.time').fadeOut();
       var login_btn = root.find('.login button');
       var logout_btn = root.find('.account .logout');
       var loginid = root.find('.account span.login-id');
-      var time = root.find('.account span.time');
       var balance = root.find('.account span.balance').fadeOut();
       var currency = ''; /* will get this from payout_currencies api on login */
       require(['websockets/binary_websockets'],function(liveapi) {
