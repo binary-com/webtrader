@@ -206,8 +206,6 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
           liveapi.events.on('logout', function() {
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
-              // login_btn.removeClass('logout').addClass('login')
-                // .removeAttr('disabled').text('Login');
               logout_btn.removeAttr('disabled');
               account_menu.fadeOut();
               login_menu.fadeIn();
@@ -219,8 +217,6 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
           liveapi.events.on('login', function(data){
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
-              // login_btn.removeClass('login').addClass('logout')
-                // .removeAttr('disabled').text('Logout');
               login_menu.fadeOut();
               account_menu.fadeIn();
 
@@ -231,19 +227,10 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
           login_btn.on('click', function(){
             login_btn.attr('disabled','disabled');
-            // var logedin = login_btn.hasClass('logout');
-            // if(logedin) {
-              // liveapi.invalidate();
-            // }
-            // else {
-              require(['oauth/login'], function(login_win){
-                login_btn.removeAttr('disabled');
-                login_win.init();
-              });
-              // liveapi.cached.authorize().catch(function(err) {
-                // login_btn.removeAttr('disabled');
-              // });
-            // }
+            require(['oauth/login'], function(login_win){
+              login_btn.removeAttr('disabled');
+              login_win.init();
+            });
           });
           logout_btn.on('click', function() {
               liveapi.invalidate();
@@ -261,10 +248,9 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
             var root = $($navHtml);
             $("body").prepend(root);
 
+      initLoginButton(root);
 			//Theme settings
 			require(['themes/themes']);
-
-            initLoginButton(root);
 
             $("#nav-toggle").on("click", function (e) {
                 $("#nav-toggle").toggleClass("nav-toggle-active");
@@ -279,6 +265,6 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                 _callback($("#nav-menu"));
             }
 		},
-        updateDropdownToggles : updateDropdownToggleHandlers
+    updateDropdownToggles : updateDropdownToggleHandlers
 	};
 });

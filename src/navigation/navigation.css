@@ -6,6 +6,10 @@
    menu active: #222A47;
 */
 
+body {
+  min-width: 650px !important;
+}
+
 #nav-container {
     position: relative;
     background-color: #273051;
@@ -316,7 +320,10 @@
 #nav-container .account {
   position: absolute;
   right: 0px;
-  width: 220px;
+  width: 210px;
+}
+#nav-container .account > a {
+  padding-left: 20px;
 }
 #nav-container .account .nav-dropdown-toggle {
   position: relative;
@@ -341,31 +348,7 @@
   opacity: 0.5;
 }
 
-/*#nav-container .authentication {
-  display: inline-block;
-  position: absolute;
-  line-height: 52px;
-  right: 20px;
-}
-#nav-container .authentication div {
-  display: inline-block;
-  position: relative;
-  color: #eee;
-  margin-right:-5px;
-}
-
-#nav-container .authentication span {
-  text-align: left;
-  display: inline-block;
-}
-#nav-container .authentication span.loginid {
-  width: 110px;
-  font-size: 12px;
-  position: relative;
-  bottom: -10px;
-  margin-right:8px;
-  text-align:right;
-}
+/*
 #nav-container .authentication span.time {
   width: 110px;
   font-size: 10px;
@@ -374,25 +357,17 @@
   top: -10px;
 
 }
-#nav-container .authentication span.balance {
-  position: relative;
-  top: 10px;
-  font-size: 12px;
-  padding-right: 2px;
-  margin-right: -33px;
-  line-height: 1.4em;
-  border-right: 2px solid gray;
-}*/
-
+*/
 
 /** targets min-width requirement **/
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
     .nav-normal-menu {
         display: inline-table;
     }
 
     .nav-normal-menu li a {
-        padding: 16px 8px;
+        padding: 16px 6px;
+        font-size: 14px;
     }
 
     .nav-normal-menu li > ul li a {
@@ -400,24 +375,10 @@
     }
 }
 
-/** targets mobile devices **/
-@media screen and (max-width: 800px) {
-    .nav-normal-menu {
-        display: none;
-    }
-
-    #mobile-menu-heading {
-        display: block;
-    }
-
-    #nav-toggle {
-        display: block;
-    }
-
+/** TODO: implement browser not supported for mobile devices **/
+/*@media screen and (max-width: 800px) {
+    .nav-normal-menu { display: none; }
+    #mobile-menu-heading { display: block; }
+    #nav-toggle { display: block; }
     #nav-container .authentication { right: 60px; }
-}
-
-/** on very small screens **/
-@media screen and (max-width: 460px) {
-    #nav-container .authentication { display: none;}
-}
+}*/
