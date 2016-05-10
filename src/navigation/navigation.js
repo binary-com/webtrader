@@ -220,7 +220,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                 if(account.id !== data.authorize.loginid) {
                   var a = $('<a href="#"></a>').text(account.id);
                   var li = $('<li/>').append(a).addClass('info');
-                  console.warn(li); // TODO: ... 
+                  // console.warn(li); // TODO: ... 
                 }
               });
           });

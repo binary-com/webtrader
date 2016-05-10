@@ -26,7 +26,7 @@
         for(var i = 0; i < params.length; i+=2){
           var id = params[i].split('=')[1];
           var token = params[i+1].split('=')[1];
-          oauth.push({ id: account, token: token });
+          oauth.push({ id: id, token: token });
         }
         localStorage.setItem('oauth', JSON.stringify(oauth));
         localStorage.setItem('oauth-login', true); /* used to fire oauth-login event in binary_websockets.js */
