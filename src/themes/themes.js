@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 4/24/16.
  */
-define(['jquery', "charts/charts", 'windows/windows', 'highstock', "jquery-growl"], function($, charts, windows) {
+define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, windows) {
 
     var win = null;
 
