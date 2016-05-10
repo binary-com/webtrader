@@ -2,6 +2,8 @@
  * Created by arnab on 2/12/15.
  */
 
+/* index.html uses the same file without amd-module convetion */
+var require = require || function() { };
 /*
 * patch for jquery growl functions.
 * do not to show multiple growls with the same content.

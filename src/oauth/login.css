@@ -27,7 +27,7 @@
     color: white;
     outline: 0;
     width: 50%;
-    line-height: 25px;
+    line-height: 27px;
 }
 
 .oauth-dialog input {
@@ -61,6 +61,7 @@
 }
 
 /* login dialog styles */
+.oauth-dialog .login-dialog { box-sizing: border-box; }
 .oauth-dialog .login-dialog > div {
   line-height: 1.5em;
   box-sizing: border-box;

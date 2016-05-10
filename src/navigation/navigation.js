@@ -190,15 +190,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               if(data.authorize) value = data.authorize.balance;
               else value = data.balance.balance;
 
-              if(value === '0' || value === 0)
-                balance.fadeOut();
-              else
-                balance.text(currency + ' ' + formatPrice(value)).fadeIn({
-        					always : function() {
-                    //FadeIn assigns inline-block which is breaking account balance display like EUR5.0
-        						$(this).css('display', 'inline');
-        					}
-        				});
+              balance.text(currency + ' ' + formatPrice(value)).fadeIn();
           };
 
           /* update balance on change */
@@ -222,7 +214,15 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
               update_balance(data);
               loginid.text('Account ' + data.authorize.loginid).fadeIn();
-              // time.fadeIn();
+
+              var oauth = JSON.parse(localStorage.getItem('oauth') || "[]");
+              oauth.forEach(function(account) {
+                if(account.id !== data.authorize.loginid) {
+                  var a = $('<a href="#"></a>').text(account.id);
+                  var li = $('<li/>').append(a).addClass('info');
+                  console.warn(li); // TODO: ... 
+                }
+              });
           });
 
           login_btn.on('click', function(){

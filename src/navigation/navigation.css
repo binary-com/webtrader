@@ -339,11 +339,9 @@ body {
   right: 10px;
 }
 
+#nav-container .account .logout,
 #nav-container .account .info {
-  border: none;
   border-top: 2px solid #aaa;
-  border-bottom: 2px solid #aaa;
-  box-sizing: border-box;
 }
 
 #nav-container .account *[disabled] {

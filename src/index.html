@@ -21,10 +21,15 @@
       /* oauth login ? */
       var href = window.location.href;
       if(/#acct1=/.test(href) && /token1=/.test(href)) {
-        var params = href.split('#')[1].split(/[=&]/);
-        var map = { token1: 'oauth_token', acct1: 'client_id' };
-        localStorage.setItem(map[params[0]], params[1]);
-        localStorage.setItem(map[params[2]], params[3]);
+        var params = href.split('#')[1].split('&');
+        var oauth = [ ];
+        for(var i = 0; i < params.length; i+=2){
+          var id = params[i].split('=')[1];
+          var token = params[i+1].split('=')[1];
+          oauth.push({ id: account, token: token });
+        }
+        localStorage.setItem('oauth', JSON.stringify(oauth));
+        localStorage.setItem('oauth-login', true); /* used to fire oauth-login event in binary_websockets.js */
       }
 
       window.location.href = 'v<version>/main.html' + suffix;

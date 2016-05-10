@@ -435,8 +435,11 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
 
             /* automatically log the user in if we have oauth_token in localStorage */
             require(['websockets/binary_websockets', ], function(liveapi) {
-              if(localStorage.getItem('oauth_token')) {
-                liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
+              if(localStorage.getItem('oauth')) {
+                liveapi.cached.authorize().catch(function(err) {
+                  console.error(err.message);
+                  $.growl.error({message: err.message});
+                 });
               }
             });
             $(window).resize(fixFooterPosition);

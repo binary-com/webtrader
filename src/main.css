@@ -263,6 +263,9 @@ input::-ms-clear {
     display: none;
 }
 
+/* Remove dotted-underline around buttons in FF */
+button::-moz-focus-inner { border: 0; }
+
 /* CSS3 shine effects for buttons */
 .shine {
   position: relative;
