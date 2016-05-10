@@ -83,7 +83,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     "use strict";
 
-    if (!Modernizr.svg || !Modernizr.websockets || Modernizr.touch) {
+    if (!Modernizr.svg || !Modernizr.websockets || Modernizr.touch || !Modernizr.localstorage) {
       window.location.href = 'unsupported_browsers/unsupported_browsers.html';
       return;
     }
