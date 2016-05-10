@@ -56,7 +56,7 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
                             var $elem = $('#number_of_bars');
                             if (!_.inRange($elem.val(),
                                             parseInt($elem.attr("min")),
-                                            parseInt($elem.attr("max")))) {
+                                            parseInt($elem.attr("max")) + 1)) {
                                 require(["jquery", "jquery-growl"], function ($) {
                                     $.growl.error({
                                         message: "Only numbers between " + $elem.attr("min")
@@ -77,6 +77,7 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
                             };
 
                             var series = $($(".fractal").data('refererChartID')).highcharts().series[0];
+                            console.log('Add fractal action');
                             var options = {
                                 numberOfBars: parseInt($elem.val()),
                                 color: defaultColor,

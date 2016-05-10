@@ -8,6 +8,29 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
         indicatorsMetaData = _.cloneDeep(JSON.parse(indicatorsJSON));
     });
 
+    function updateOrAddScatterOrFlagSeriesData(iu, indicatorSeries) {
+        var seriesData = indicatorSeries.data;
+        if (iu.value && _.isFunction(iu.value.toJSObject)) {
+            var x = iu.value.x;
+            var matchingSeriesData = _.find(seriesData, function (ee) {
+                var isTrue = _.isNumber(x) && x > 0 && x === ee.x;
+                if (isTrue && iu.value.marker) {
+                    isTrue = iu.value.marker.symbol === ee.marker.symbol;
+                }
+                return isTrue;
+            });
+            if (matchingSeriesData) {
+                console.log('[remove] series name', indicatorSeries.options.name, matchingSeriesData.x);
+                matchingSeriesData.remove();
+            }
+            //console.log('renderingData', renderingData);
+            if (_.isNumber(x) && x > 0 && !_.isEmpty(iu.value.text) && !_.isEmpty(iu.value.title)) {
+                console.log('Adding, series length', indicatorSeries.data.length, iu.value.text, x);
+                indicatorSeries.addPoint(iu.value);
+            }
+        }
+    }
+
     var indicators = {
 
         OPEN: 0, HIGH: 1, LOW: 2, CLOSE: 3,
@@ -26,6 +49,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                 var indicatorMetadata = indicatorsMetaData[indicatorID];
                 if (indicatorMetadata) {
                     var seriesAndAxisConfArr = indicatorObject.buildSeriesAndAxisConfFromData(indicatorMetadata);
+                    //console.log('seriesAndAxisConfArr', seriesAndAxisConfArr);
                     seriesAndAxisConfArr.forEach(function(seriesAndAxisConfArr) {
                         if (seriesAndAxisConfArr.axisConf) {
                             chart.addAxis(seriesAndAxisConfArr.axisConf, false, false, false);
@@ -41,6 +65,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                     compare : series.options.compare
                                 });
                             }
+                            console.log('total series before adding indicator series', chart.series.length, ' new series conf', conf);
                             chart.addSeries(conf, false, false);
                         }
                     });
@@ -53,7 +78,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
             };
             Highcharts.Series.prototype.removeIndicator = function(indicatorSeriesIDArr) {
                 var series = this;
-                if (series.options.isInstrument) {
+                if (series.options.isInstrument && series.options.id !== 'navigator') {
                     for (var key in indicatorsMetaData) {
                         var each = indicatorsMetaData[key];
                         if (series[each.id]) {//This is a check to find out, if this indicator was loaded for this chart
@@ -92,7 +117,8 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
             Highcharts.wrap(Highcharts.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
                 proceed.call(this, options, redraw, shift, animation);
                 var series = this;
-                if (series.options.isInstrument) {
+                console.log('Addpoint called!', series.options.id, series.options.name, series.options.isInstrument);
+                if (series.options.isInstrument && series.options.id !== 'navigator') {
                     var time = options[0];
                     var bar = (barsTable.chain()
                         .find({'$and': [{instrumentCdAndTp: series.options.id}, {time: time}]})
@@ -106,32 +132,20 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                 series[each.id].forEach(function (eachInstanceOfTheIndicator) {
                                     var indicatorUpdated = eachInstanceOfTheIndicator.addPoint(bar);
                                     indicatorUpdated.forEach(function(iu) {
+                                        var indicatorSeries = series.chart.get(iu.id);
                                         if (_.isArray(iu.value)) {
-                                            series.chart.get(iu.id).addPoint(_.flattenDeep([time, iu.value]));
-                                        } else if (iu.value instanceof CDLUpdateObject) {
-                                            if (_.isNumber(iu.value.x) && iu.value.x > 0 &&  !_.isEmpty(iu.value.text)) {
-                                                series.chart.get(iu.id).addPoint(iu.value.toJSObject());
-                                            }
+                                            indicatorSeries.addPoint(_.flattenDeep([time, iu.value]));
+                                        } else if (iu.value instanceof CDLUpdateObject || iu.value instanceof FractalUpdateObject) {
+                                            updateOrAddScatterOrFlagSeriesData(iu, indicatorSeries);
                                         } else {
+                                            //iu.color is used by Awesome indicator
                                             if (iu.color) {
-                                                series.chart.get(iu.id).addPoint([time, iu.value]);
-                                                var seriesData = series.chart.get(iu.id).data;
-                                                seriesData[seriesData.length - 1].update({
+                                                indicatorSeries.addPoint([time, iu.value]);
+                                                indicatorSeries.data[indicatorSeries.data.length - 1].update({
                                                     color: iu.color
                                                 });
-                                            }
-                                            else if (_.isObject(iu.value)){
-                                                if (iu.value.marker) {
-                                                    series.chart.get(iu.id).addPoint({
-                                                        x: iu.value.x,
-                                                        title: iu.value.title,
-                                                        text: iu.value.text,
-                                                        y:iu.value.y,
-                                                        marker: iu.value.marker
-                                                    });
-                                                }
                                             } else {
-                                                 series.chart.get(iu.id).addPoint([time, iu.value]);
+                                                indicatorSeries.addPoint([time, iu.value]);
                                             }
                                         }
                                     });
@@ -141,6 +155,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                     }
                 }
             });
+            
             /*
              * Update will be called for all series
              * We do not have to worry about indicator series, because they will not have instance of indicator Classes
@@ -149,7 +164,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
             Highcharts.wrap(Highcharts.Point.prototype, 'update', function(proceed, options, redraw, animation) {
                 proceed.call(this, options, redraw, animation);
                 var series = this.series;
-                if (series.options.isInstrument) {
+                if (series.options.isInstrument && series.options.id !== 'navigator') {
                     var time = this.x || this.time;
                     var bar = (barsTable.chain()
                         .find({'$and': [{instrumentCdAndTp: series.options.id}, {time: time}]})
@@ -166,43 +181,11 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                         var indicatorSeries = series.chart.get(iu.id);
                                         var seriesData = indicatorSeries.data;
                                         if (_.isArray(iu.value)) {
+                                            //e.g, dc indicator
                                             seriesData[seriesData.length - 1].update(_.flattenDeep([time, iu.value]));
-                                        } else if (iu.value instanceof CDLUpdateObject) {
-                                            if (iu.value && _.isFunction(iu.value.toJSObject)) {
-                                                var renderingData = iu.value.toJSObject();
-                                                var x = renderingData.x;
-                                                var matchingSeriesData = _.find(seriesData, function (ee) {
-                                                    return _.isNumber(x) && x > 0 && x === ee.x;
-                                                });
-                                                if (matchingSeriesData) matchingSeriesData.remove();
-                                                if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
-                                                    if (iu.value instanceof CDLUpdateObject) {
-                                                        indicatorSeries.addPoint(renderingData);
-                                                    } 
-                                                }
-                                            }
-                                        } else if (_.isObject(iu.value)) {
-                                            if (iu.value) {
-                                                var renderingData = iu.value;
-                                                var x = renderingData.x;
-                                                var matchingSeriesData = _.find(seriesData, function (ee) {
-                                                    return _.isNumber(x) && x > 0 && x === ee.x;
-                                                });
-                                                if (matchingSeriesData) matchingSeriesData.remove();
-                                                if (_.isNumber(x) && x > 0 && !_.isEmpty(renderingData.text)) {
-                                                   if (iu.value.marker) {
-                                                        series.chart.get(iu.id).addPoint({
-                                                            x: iu.value.x,
-                                                            title: iu.value.title,
-                                                            text: iu.value.text,
-                                                            y:iu.value.y,
-                                                            marker: iu.value.marker
-                                                        });
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        else {
+                                        } else if (iu.value instanceof CDLUpdateObject || iu.value instanceof FractalUpdateObject) {
+                                            updateOrAddScatterOrFlagSeriesData(iu, indicatorSeries);
+                                        } else {
                                             seriesData[seriesData.length - 1]
                                                 .update({
                                                     y: iu.value

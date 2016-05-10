@@ -10,7 +10,6 @@ requirejs.config({
         'highstock': "lib/highstock/highstock",
         'highcharts-more': "lib/highstock/highcharts-more",
         'highcharts-exporting': 'lib/highstock/modules/offline-exporting',
-        'highcharts-theme': 'lib/highstock/themes/sand-signika',
         'jquery.dialogextend' : "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
@@ -54,9 +53,6 @@ requirejs.config({
         },
         "highcharts-exporting": {
             deps: ["highstock", 'lib/highstock/modules/exporting']
-        },
-        "highcharts-theme": {
-            deps: ["highstock"]
         },
         "jquery-growl": {
             deps: ["jquery"]
@@ -172,6 +168,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     selfexclusion.init(elem);
                     elem.click();
                 });
+
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
@@ -201,19 +198,17 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 $('body > .footer').show();
             });
         });
+        
+        /*Trigger T&C check, self-exclusion*/
+        require(['tc/tc', 'selfexclusion/selfexclusion']);
     }
 
 
     if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
         handle_affiliate_route();
     else {
-
         //Our chart is accessed directly
         handle_normal_route();
-
-        //load all other dependencies which should not be blocking and also should not be loaded in affiliate route
-        require(['selfexclusion/selfexclusion']);
-
     }
 
     //load all other .css files asynchronously

@@ -86,7 +86,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
                         if ($("#nav-menu").length > 0) {
                             var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments"));
                             /* add to instruments menu */
-                            menu.sortMenu(markets);
+                            markets = menu.sortMenu(markets);
                             menu.refreshMenu(rootUL, markets, onMenuItemClick);
                         }
                         return markets;

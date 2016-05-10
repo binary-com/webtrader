@@ -2,7 +2,7 @@
  * Created by amin on October 30, 2015.
  */
 
-define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigation) {
+define(['jquery', 'navigation/navigation', 'lodash', 'common/util'], function ($, navigation, _) {
     'use strict';
 
     /* recursively creates menu into root element, set on_click to register menu item clicks */
@@ -91,10 +91,9 @@ define(['jquery', 'navigation/navigation', 'common/util'], function ($, navigati
             //Sort market
             if($.isArray(markets)) {
 
-                markets.sort(function(a,b) {
-                  var rank = { "Forex": 1, "Indices": 2, "Stocks": 3, "Commodities": 4, "Randoms": 5 };
-                  return rank[a.display_name] > rank[b.display_name] ? 1 :
-                         rank[a.display_name] < rank[b.display_name] ? -1 : 0;
+                var rank = { "forex": 1, "indices": 2, "stocks": 3, "commodities": 4, "volidx": 5 };
+                markets = _.sortBy(markets, function(o) {
+                    return rank[o.name.toLowerCase()];
                 });
                 markets.forEach(function (market) {
                     if($.isArray(market.submarkets)) {

@@ -37,7 +37,8 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
             if (!chartID) return;
 
             var series = $(chartID.containerIDWithHash).highcharts().get(key),
-                type = $(chartID.containerIDWithHash).data('type');
+                type = $(chartID.containerIDWithHash).data('type'),
+                timePeriod = $(chartID.containerIDWithHash).data('timePeriod');
 
             if (series) { //Update mode
 
@@ -101,8 +102,10 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                 if (!chart) return;
 
                 //set the range
+                var numberOfBarsToShow = 30;
+                if (isTick(timePeriod)) numberOfBarsToShow = 200;
                 var totalLength = dataInHighChartsFormat.length;
-                var endIndex = dataInHighChartsFormat.length > 30 ? totalLength - 30 : 0;
+                var endIndex = dataInHighChartsFormat.length > numberOfBarsToShow ? totalLength - numberOfBarsToShow : 0;
 
                 var instrumentName = chartID.instrumentName;
                 var series_compare = chartID.series_compare;
@@ -110,7 +113,6 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                 //Find out how many instrument series are loaded on chart
                 var countInstrumentCharts = 0;
                 chart.series.forEach(function(series) {
-                    console.log(series.options.isInstrument);
                     if (series.options.isInstrument && series.options.id !== "navigator") {
                         ++countInstrumentCharts;
                     }
@@ -284,6 +286,33 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
             map[key].subscribers -= 1;
             _.remove(map[key].chartIDs, {containerIDWithHash: containerIDWithHash});
           }
+        },
+        digits_after_decimal: function ( pip, symbol ) {
+          pip = pip && pip+'';
+          if(!pip) {
+            console.warn();('pip value is invalid', pip);
+            /**
+            * This is disaster. If pip value is invalid, then it could several trade related issues.
+            * Try to guess decimal places from whatever data we have from local database
+            * (This is a fallback method. the execution never come here)
+            * Technique -
+            *      Fetch last 10 tick values
+            *      Take the maximum decimal places all these ticks
+            */
+            var key = this.keyFor(symbol, 0);
+            var decimal_digits = 0;
+            barsTable.chain()
+            .find({ instrumentCdAndTp : key })
+            .simplesort("time", true).limit(10).data()
+            .forEach(function (d) {
+              var quote = d.close + '';
+              var len = quote.substring(quote.indexOf('.') + 1).length;
+              if (len > decimal_digits)
+              decimal_digits = len;
+            });
+            return decimal_digits;
+          }
+          return pip.substring(pip.indexOf(".") + 1).length;
         }
     };
 

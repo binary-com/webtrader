@@ -29,7 +29,7 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
                   market.is_disabled = _.every(market.submarkets, 'is_disabled');
                   return market;
               }).value();
-              menu.sortMenu(markets);
+              markets = menu.sortMenu(markets);
 
               var trade = $("#nav-menu").find(".trade");
               trade.find('> ul').remove();

@@ -2,7 +2,6 @@
  * Created by amin on October 22, 2015.
  */
 define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], function ($, windows) {
-    var $html = $('<div />');
     var callbacks = null;
     var promise = null;
     var tokenWin = null;
@@ -37,6 +36,7 @@ define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], func
                         else callbacks.reject({ message: 'invalid token value' });
 
                         callbacks = promise = null;
+                        input.val(""); //Clear the token
                         tokenWin.dialog('close');
                     })
                     .next()
@@ -45,8 +45,15 @@ define(["jquery", "windows/windows","jquery-growl", "css!token/token.css"], func
                         callbacks && callbacks.reject({ message: "User didn't provide a token" });
 
                         callbacks = promise = null;
+                        input.val(""); //Clear the token
                         tokenWin.dialog('close');
                     });
+
+                require(['websockets/binary_websockets'],function(liveapi) {
+                    liveapi.events.on('logout', function() {
+                        $html.find('#token-dialog-input').val('');
+                    });
+                });
 
                 tokenWin.dialog('open');
             });

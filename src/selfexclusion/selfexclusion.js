@@ -170,12 +170,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     liveapi.events.on('login', function(data) {
         liveapi.cached.authorize()
-            .then(function() {
-                loginTime = _.now();
-                refreshData()
-                    .then(function() {
+            .then(function(data) {
+                if (!data.authorize.is_virtual) {
+                    loginTime = _.now();
+                    refreshData().then(function () {
                         setOrRefreshTimer();
                     });
+                    $("#nav-container a.selfexclusion").removeClass('disabled');
+                }
             });
     });
     liveapi.events.on('logout', function() {
@@ -194,6 +196,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         settingsData.max_open_bets= null;
         settingsData.session_duration_limit= null;
         settingsData.exclude_until= null;
+        $("#nav-container a.selfexclusion").addClass('disabled');
     });
 
     return {
@@ -203,20 +206,22 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
          */
         init : function($menuLink) {
             $menuLink.click(function () {
-                liveapi.cached.authorize()
-                    .then(function() {
-                        if (!win) {
-                            init().then(function () {
-                                win.dialog('open');
-                            });
-                        } else {
-                            refreshData();
-                            win.moveToTop();
-                        }
-                    })
-                    .catch(function (err) {
-                        console.error(err);
-                    });
+                if(!$(this).hasClass('disabled')) {
+                    liveapi.cached.authorize()
+                        .then(function () {
+                            if (!win) {
+                                init().then(function () {
+                                    win.dialog('open');
+                                });
+                            } else {
+                                refreshData();
+                                win.moveToTop();
+                            }
+                        })
+                        .catch(function (err) {
+                            console.error(err);
+                        });
+                }
             });
         }
     };

@@ -11,9 +11,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
-  function init_chart(root, options) {
+  function init_chart(root, state, options) {
       var data = [];
       var type = '';
+      var decimal_digits = 0;
       if(options.history){
         type = 'line';
         var history = options.history;
@@ -21,6 +22,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var prices = history.prices;
         for(var i = 0; i < times.length; ++i) {
           data.push([times[i]*1000, prices[i]*1]);
+          decimal_digits = Math.max(decimal_digits, prices[i].substring(prices[i].indexOf('.') + 1).length);
         }
       }
       if(options.candles) {
@@ -41,7 +43,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           width: 0,
           height: 0,
           marginLeft:20,
-          marginRight:20,         
+          marginRight:20,
           events: {
               load: function() {
                   this.credits.element.onclick = function() {
@@ -54,7 +56,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           text: title,
           style: { fontSize:'16px' }
         },
-        tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
+        tooltip:{
+          xDateFormat:'%A, %b %e, %H:%M:%S GMT',
+          valueDecimals: decimal_digits || undefined,
+       },
         xAxis: {
           type: 'datetime',
           categories:null,
@@ -117,43 +122,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       return el.chart = chart;
   };
 
-  /* returns a promise */
-  function get_symbol_name(symbol){
-    return liveapi.cached.send({trading_times: new Date().toISOString().slice(0, 10)})
-                  .then(function(data){
-                    var markets = data.trading_times.markets;
-                    for(var i  = 0; i < markets.length; ++i)
-                      for(var smarket = markets[i].submarkets, j = 0; j < smarket.length; ++j)
-                        for(var symbols = smarket[j].symbols, k = 0; k < symbols.length; ++k)
-                          if(symbols[k].symbol === symbol)
-                            return symbols[k].name;
-                    return 'Transaction';
-                  });
-  }
   /* get the tick value for a given epoch */
   function get_tick_value(symbol, epoch){
-    console.log('get_tick_value');
     return liveapi.send({ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end:epoch+2, count: 1})
                   .catch(function(err) { console.error(err); });
-  }
-  /* websocket is not returning purchase_time, query portfolio to find this field */
-  function get_purchase_time(proposal) {
-      return new Promise(function(resolve, reject){
-        if(!proposal.is_forward_starting || moment.utc().unix() > proposal.date_start*1) {
-          resolve(undefined);
-          return;
-        }
-
-        liveapi.send({portfolio: 1})
-           .then(function(data){
-              var contracts = data.portfolio.contracts;
-              var contract = contracts.filter(function(c) { return c.contract_id === proposal.contract_id;})[0];
-              resolve(contract && contract.purchase_time); /* if not found, purchase_time is undefined */
-           }).catch(function(err){
-             console.error(err);
-             resolve(undefined);
-           });
-      })
   }
 
   function init(contract_id, transaction_id){
@@ -168,11 +140,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               var proposal = data.proposal_open_contract;
               proposal.transaction_id = transaction_id;
               proposal.symbol = proposal.underlying;
-              get_symbol_name(proposal.symbol).then(function(symbol_name){
-                proposal.symbol_name = symbol_name;
-                init_dialog(proposal);
-                resolve();
-              }).catch(function(err) { console.error(err); reject(); })
+              init_dialog(proposal);
+              resolve();
            })
            .catch(function(err){
              console.error(err);
@@ -188,21 +157,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           bid_price = contract.bid_price;
       if(id !== state.contract_id) { return; }
 
-      /* fix for backend wrong is_valid_to_sell field :( */
-      if(state.is_sold_at_market) {
-        contract.is_expired = 1;
-        contract.is_valid_to_sell = 0;
-      }
-      if(contract.is_expired)
-        contract.is_valid_to_sell = 0;
-
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
         state.validation = 'This contract has expired';
       else if(contract.is_valid_to_sell)
         state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
-
+      if(contract.is_forward_starting){
+        if(contract.date_start > parseInt(contract.current_spot_time))
+          state.fwd_starting = '* Contract is not yet started.';
+        else
+          state.fwd_starting = '';
+      }
       /*Do not update the current_spot and current_spot_time if the contract has expired*/
       if(state.table.date_expiry*1 >= contract.current_spot_time*1) {
           state.table.current_spot = contract.current_spot;
@@ -224,6 +190,25 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           state.table.current_spot_time = state.table.date_expiry;
       }
 
+      if(contract.sell_price){
+        state.table.sell_spot = contract.sell_spot;
+        state.table.sell_time = contract.sell_time;
+        state.table.sell_price = contract.sell_price;
+        state.table.final_price = formatPrice(contract.sell_price);
+      }
+
+        if(!state.chart.barrier && contract.barrier) {
+          state.chart.barrier = contract.barrier;
+          state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
+        }
+        if(!state.chart.high_barrier && contract.high_barrier) {
+          state.chart.high_barrier = contract.high_barrier;
+          state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
+        }
+        if(!state.chart.low_barrier && contract.low_barrier) {
+          state.chart.low_barrier = contract.low_barrier;
+          state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
+        }
   }
 
   function init_dialog(proposal) {
@@ -231,12 +216,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var root = $(html);
         var state = init_state(proposal, root);
         var on_proposal_open_contract = function(data) {
-            console.log('on_proposal_open_contract');
             update_indicative(data, state);
         };
 
         var transWin = windows.createBlankWindow(root, {
-            title: proposal.symbol_name + ' (' + proposal.transaction_id + ')',
+            title: proposal.display_name + ' (' + proposal.transaction_id + ')',
             width: 700,
             minWidth: 490,
             minHeight:370,
@@ -324,25 +308,25 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
             buy_price: proposal.buy_price && formatPrice(proposal.buy_price),
             bid_price: undefined,
-            final_price: proposal.sell_price && formatPrice(proposal.sell_price),
+            final_price: proposal.is_sold ? proposal.sell_price && formatPrice(proposal.sell_price) : undefined,
 
             tick_count: proposal.tick_count,
             prediction: proposal.prediction,
 
-            sell_time: undefined,
-            sell_spot: undefined,
-            sell_price: undefined,
-            purchase_time: undefined,
+            sell_time: proposal.sell_spot_time * 1 || undefined,
+            sell_spot: proposal.sell_spot,
+            sell_price: proposal.is_sold ? proposal.sell_price : undefined,
+            purchase_time: proposal.purchase_time,
             is_sold_at_market: false,
           },
           chart: {
             chart: null, /* highchart object */
             symbol: proposal.symbol,
-            symbol_name: proposal.symbol_name,
+            display_name: proposal.display_name,
             barrier: proposal.barrier,
             high_barrier: proposal.high_barrier,
             low_barrier: proposal.low_barrier,
-            loading: 'Loading ' + proposal.symbol_name + ' ...',
+            loading: 'Loading ' + proposal.display_name + ' ...',
             type: 'ticks', // could be 'tick' or 'ohlc'
           },
           sell: {
@@ -375,40 +359,24 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             state.chart.chart.hideLoading();
       };
 
-      var purchase_time_promise = get_purchase_time(proposal);
-      var chart_data_promise = purchase_time_promise.then(function(purchase_time){
-        state.table.purchase_time = purchase_time;
-        return get_chart_data(state, root);
+      get_chart_data(state, root).then(function(){
+          if(state.table.sell_time)
+            state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'});
       });
 
-      /* back-end is not returning sell_time field, worse its returning wrong sell_price value */
-      liveapi.send({profit_table: 1, date_from: proposal.date_start, date_to: proposal.date_start+1})
-             .then(function(data) {
-               var transactions = data.profit_table.transactions || [];
-               transactions = transactions.filter(function(t) { return t.contract_id+'' === proposal.contract_id+''; });
-
-               if(!transactions || transactions.length !== 1) { return; } /* so contract is not finished yet */
-               var trans = transactions[0];
-               if(trans.sell_time >= proposal.date_expiry) { return; } /* so contract is not sold at market */
-
-               state.table.sell_time = trans.sell_time;
-               state.table.sell_price = trans.sell_price;
-               state.table.sell_spot = '-'; // TODO: find a way to get sell spot
-               state.table.final_price = undefined; // TODO: find a way to get final price
-               state.table.is_sold_at_market = true;
-               state.validation = 'This contract has expired';
-               chart_data_promise.then(function(){
-                  state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'});
-               });
-               get_tick_value(state.chart.symbol, state.table.sell_time -2).then(function(data){
-                 var history = data.history;
-                 if(history.times.length !== 1) return;
-                 state.table.sell_spot = history.prices[0];
-               });
-             })
-             .catch(function(err){
-               console.error(err);
-             });
+      /* backend doesn't always retun the sell_price when contract is soled,
+         TODO: remove this when it does */
+      liveapi.events.on_till('transaction', function(data){
+        var transaction = data.transaction;
+        if(transaction.action === 'sell' && transaction.contract_id == state.contract_id) {
+          liveapi.send({proposal_open_contract: 1, contract_id: state.contract_id})
+                 .then(function(_data) {
+                    update_indicative(_data, state);
+                 })
+                 .catch(function(err) { console.error(err); });
+          return true; // unsubscribe
+        }
+      });
 
       return state;
   }
@@ -445,7 +413,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             /* stop updating when contract is expired */
             if(tick.epoch*1 > state.table.date_expiry*1) {
               if(perv_tick) {
-                console.log('Stop changing time');
                 state.table.exit_tick = perv_tick.quote;
                 state.table.exit_tick_time = perv_tick.epoch*1;
                 state.validation = 'This contract has expired';
@@ -485,7 +452,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
       var clean_up_done = false;
       var clean_up = function() {
-        console.log('clean_up called!');
         if(clean_up_done) return;
         clean_up_done = true;
         chartingRequestMap.unregister(key);
@@ -520,17 +486,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
     }
 
     if(!state.table.is_expired) {
-      console.log('State.table.is_expired', state.table.is_expired);
       update_live_chart(state, granularity);
     }
 
     return liveapi.send(request).then(function(data) {
         state.chart.loading = '';
 
-        var options = { title: state.chart.symbol_name };
+        var options = { title: state.chart.display_name };
         if(data.history) options.history = data.history;
         if(data.candles) options.candles = data.candles;
-        var chart = init_chart(root, options);
+        var chart = init_chart(root, state, options);
 
         if(data.history && !state.table.entry_tick_time) {
           state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 > state.table.date_start*1 })[0];

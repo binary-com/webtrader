@@ -244,6 +244,10 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 		init: function(_callback) {
             var root = $($navHtml);
             $("body").prepend(root);
+
+			//Theme settings
+			require(['themes/themes']);
+
             initLoginButton(root);
 
             $("#nav-toggle").on("click", function (e) {
