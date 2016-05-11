@@ -123,7 +123,9 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                                     var removed = false;
                                     $.each(chart.series, function(index, series) {
                                         $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
+                                            console.log(value);
                                             if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
+                                                console.log("condition true");
                                                 series.removeCurrentPrice(key);
                                                 removed = true;
                                             }
