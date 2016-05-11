@@ -265,6 +265,38 @@ define(['jquery'], function ($) {
         },
         /* remove token, and reopen current socket */
         invalidate: invalidate,
+        /* switch account */
+        switch_account: function(id) {
+          if(!is_authenitcated_session) {
+            return Promise.reject({message: 'Session is not authenticated.'})
+          }
+          var oauth = localStorage.getItem('oauth');
+          if(!oauth) {
+            return promise.reject({ message: 'Account token not found.' });
+          }
+          oauth = JSON.parse(oauth);
+
+          var inx = oauth.map(function(acc) { return acc.id; }).indexOf(id);
+          if(inx === -1) {
+            return promise.reject({ message: 'Account id not found.' });
+          }
+
+          /* move the new account to the front of oauth array */
+          var account = oauth[inx];
+          oauth.splice(inx,1);
+          oauth.unshift(account);
+          localStorage.setItem('oauth', JSON.stringify(oauth));
+
+          /* remove authenticated cached requests as well as authorize requests */
+          for(var i in cached_promises)
+            if(needs_authentication(cached_promises[i].data) || ('authorize' in cached_promises[i].data))
+              delete cached_promises[i];
+          /* back removes all tokens on {logout: 1} request, so we simply reauthenticate
+             with the new token without logging out first! ot switch accounts */
+          is_authenitcated_session = false;
+
+          return api.cached.authorize();
+        },
         /* if you want a request to be cached, that is when multiple modules request
            the same data or a module request a data multiple times, instead of calling
            liveapi.send can liveapi.cached.send.

@@ -215,12 +215,22 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               update_balance(data);
               loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
+              /* switch between account on user click */
               var oauth = JSON.parse(localStorage.getItem('oauth') || "[]");
               oauth.forEach(function(account) {
                 if(account.id !== data.authorize.loginid) {
                   var a = $('<a href="#"></a>').text(account.id);
                   var li = $('<li/>').append(a).addClass('info');
-                  // console.warn(li); // TODO: ... 
+                  li.data(account);
+                  li.click(function() {
+                    var data = $(this).data();
+                    $('.account li.info').remove();
+                    liveapi.switch_account(data.id)
+                           .catch(function(err){
+                              $.growl.error({ message: err.message });
+                           })
+                  })
+                  li.insertBefore(logout_btn.parent());
                 }
               });
           });
