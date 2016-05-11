@@ -216,6 +216,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
               /* switch between account on user click */
+              $('.account li.info').remove();
               var oauth = JSON.parse(localStorage.getItem('oauth') || "[]");
               oauth.forEach(function(account) {
                 if(account.id !== data.authorize.loginid) {
