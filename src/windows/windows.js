@@ -93,10 +93,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             return total_free_space;
         }
 
-        /* we will try 1000 different arrangements and pick the best one */
+        /* we will try 100 different arrangements and pick the best one */
         var best = null,
             best_free_space = 1000*1000;
-        for (var i = 0; i < 1000; ++i) {
+        for (var i = 0; i < 100; ++i) {
             shuffle(dialogs); // shuffle dialogs
             var total_free_space = arrange(dialogs, false);
             if (total_free_space < best_free_space) {

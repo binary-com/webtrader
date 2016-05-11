@@ -227,6 +227,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         }
         if(status === 'won') {
             state.buy.balance_after = buy.balance_after*1 + state.buy.payout*1;
+            liveapi.sell_expired(); // to update balance immediately 
         }
         state.buy.show_result = true;
       }

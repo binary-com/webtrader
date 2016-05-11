@@ -295,6 +295,13 @@ define(['jquery'], function ($) {
              with the new token without logging out first! ot switch accounts */
           is_authenitcated_session = false;
 
+          /* backend doesn't respect registered authenticated streams :/ */
+          api.send({forget_all: 'transaction'})
+             .catch(function(err){ console.error(err); });
+
+          api.send({forget_all: 'balance'})
+             .catch(function(err){ console.error(err); });
+
           return api.cached.authorize();
         },
         /* if you want a request to be cached, that is when multiple modules request
@@ -351,6 +358,7 @@ define(['jquery'], function ($) {
         },
         sell_expired: function(epoch) {
             var now = (new Date().getTime())/1000 | 0;
+            epoch = epoch || now+1; // if epoch is undefined will try to sell expired contract 3 seconds later.
             if(!sell_expired_timeouts[epoch] && epoch*1 > now) {
               sell_expired_timeouts[epoch] = setTimeout(function(){
                 sell_expired_timeouts[epoch] = undefined;
@@ -359,13 +367,11 @@ define(['jquery'], function ($) {
             }
         }
     }
-    /* always register for transaction stream */
+    /* always register for transaction & balance streams */
     api.events.on('login', function() {
       api.send({transaction: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
-    });
-    /* always register for balance stream */
-    api.events.on('login', function() {
+
       api.send({balance: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
     });
