@@ -265,11 +265,13 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       state.back.onclick = function(){ hide_callback(root); }
       state.arrow.onclick = function(e) {
         var $target = $(e.target);
+        if(!$target.hasClass('disabled')) {
         $target.addClass('disabled');
-        require(['viewtransaction/viewTransaction'], function(viewTransaction){
-            viewTransaction.init(extra.contract_id, extra.transaction_id)
-                           .then(function(){ $target.removeClass('disabled'); });
-        });
+          require(['viewtransaction/viewTransaction'], function(viewTransaction){
+              viewTransaction.init(extra.contract_id, extra.transaction_id)
+                             .then(function(){ $target.removeClass('disabled'); });
+          });
+        }
       };
 
 

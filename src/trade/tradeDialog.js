@@ -579,7 +579,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         /* forget previous proposal request */
         if(state.proposal.last_promise) {
           state.proposal.last_promise.then(function(data){
-            var id = data.proposal && data.proposal.id;
+            var id = data && data.proposal && data.proposal.id;
             id && liveapi.send({forget: id});
           });
         }
@@ -602,6 +602,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               state.proposal.ask_price = err.details.display_value;
               state.proposal.message = err.details.longcode;
             }
+            return err;
           });
         /* update last_promise to invalidate previous requests */
         state.proposal.last_promise = new_proposal_promise;
