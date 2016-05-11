@@ -29,7 +29,7 @@ requirejs.config({
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
-        "indicator_levels" : 'charts/indicators/level' 
+        "indicator_levels" : 'charts/indicators/level'
     },
     map: {
         '*': {
@@ -198,7 +198,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 $('body > .footer').show();
             });
         });
-        
+
         /*Trigger T&C check, self-exclusion*/
         require(['tc/tc', 'selfexclusion/selfexclusion']);
     }
@@ -230,4 +230,48 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     });
 
+});
+
+
+/* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
+function load_ondemand(element, event_name,msg, module_name, callback) {
+        var func_name = null;
+        element.one(event_name, func_name = function () {
+
+        //Ignore click event, if it has disabled class
+        if (element.hasClass('disabled')) {
+            element.one(event_name, func_name);
+            return;
+        }
+
+        require([module_name], function (module) {
+            if (msg) {
+                require(["jquery", "jquery-growl"], function ($) {
+                    $.growl.notice({message: msg});
+                });
+            }
+            callback && callback(module);
+        });
+
+    });
+}
+
+/*
+* patch for jquery growl functions.
+* do not to show multiple growls with the same content.
+* add more info to messages realted to websocket 'rate limit'
+*/
+require(['jquery', 'jquery-growl'], function($){
+  ['error', 'notice', 'warning'].forEach(function(name){
+      var perv = $.growl[name].bind($.growl);
+      $.growl[name] = function(options){
+        if(options.message.indexOf('rate limit') > -1) {
+          options.message += ' Please try again after 1 minute.';
+        }
+        if(!options.title) options.title = ''; /* remove title */
+        /* remove current growl with the same message */
+        $('#growls .growl:contains("' + options.message + '")').remove();
+        perv(options);
+      }
+  });
 });
