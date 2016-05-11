@@ -2,28 +2,6 @@
  * Created by arnab on 2/12/15.
  */
 
-/* index.html uses the same file without amd-module convetion */
-var require = require || function() { };
-/*
-* patch for jquery growl functions.
-* do not to show multiple growls with the same content.
-* add more info to messages realted to websocket 'rate limit'
-*/
-require(['jquery', 'jquery-growl'], function($){
-  ['error', 'notice', 'warning'].forEach(function(name){
-      var perv = $.growl[name].bind($.growl);
-      $.growl[name] = function(options){
-        if(options.message.indexOf('rate limit') > -1) {
-          options.message += ' Please try again after 1 minute.';
-        }
-        if(!options.title) options.title = ''; /* remove title */
-        /* remove current growl with the same message */
-        $('#growls .growl:contains("' + options.message + '")').remove();
-        perv(options);
-      }
-  });
-});
-
 function isTick(ohlc) {
     return ohlc.indexOf('t') != -1;
 }
@@ -146,29 +124,6 @@ function validateParameters() {
       var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() === 1;
       console.log('isValidTickTF : ', isValidTickTF, ', isValidMinTF : ', isValidMinTF, ', isValidHourTF : ', isValidHourTF, ', isValidDayTF : ', isValidDayTF);
       return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
-}
-
-/* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
-function load_ondemand(element, event_name,msg, module_name, callback) {
-        var func_name = null;
-        element.one(event_name, func_name = function () {
-
-        //Ignore click event, if it has disabled class
-        if (element.hasClass('disabled')) {
-            element.one(event_name, func_name);
-            return;
-        }
-
-        require([module_name], function (module) {
-            if (msg) {
-                require(["jquery", "jquery-growl"], function ($) {
-                    $.growl.notice({message: msg});
-                });
-            }
-            callback && callback(module);
-        });
-
-    });
 }
 
 /* convert epoch to stirng yyyy-mm-dd hh:mm:ss format
