@@ -270,6 +270,36 @@ button::-moz-focus-inner { border: 0; }
 .shine {
   position: relative;
 }
+/* default style for green button */
+.green-button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* default style for inputs */
+input {
+  border: none;
+  border: 1px solid gray;
+  outline: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 2px rgba(0,0,100,.10);
+  transition: box-shadow 0.3s;
+  width: 100%;
+  height: 26px;
+  line-height: 26px;
+}
+input:focus {
+  box-shadow: inset 0 2px 2px rgba(0,0,120,.25);
+}
+
+
 /* sine effect, hover style if required */
 .shine:hover { }
 /* generated element for shine effect. normal state is semi-transparent
