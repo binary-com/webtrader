@@ -115,22 +115,21 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                                 $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                             }
                             else if ($(this).hasClass('currentPriceLI')) {
-                                require(["currentPriceIndicator"], function(currentPriceIndicator) {
+                                var clickedLI = $(this);
+                                require(["currentPriceIndicator"], function() {
                                     var chartIDWithHash = '#' + newTabId + '_chart';
                                     var chart = $(chartIDWithHash).highcharts();
-                                    //Find currentPriceOptions prop for each series on chart. This prop will contain list of unique IDs that
-                                    //should be removed
-                                    var removed = false;
-                                    $.each(chart.series, function(index, series) {
-                                        $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
-                                            if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
-                                                series.removeCurrentPrice(key);
-                                                removed = true;
+                                    var remove = !clickedLI.find('span:first').hasClass('ui-icon-check');
+                                    if (remove) {
+                                        console.log('Remove current line');
+                                        $.each(chart.series, function (index, series) {
+                                            if (series.options.isInstrument) {
+                                                series.removeCurrentPrice();
                                             }
                                         });
-                                    });
-                                    if (!removed) {
+                                    } else {
                                         //Means this is not a remove case, we have to add the indicator
+                                        console.log('Add current line');
                                         chart.series.forEach(function(series){
                                             if (series.options.isInstrument) {
                                                 series.addCurrentPrice();
