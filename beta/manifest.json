@@ -17,7 +17,7 @@
     "default_title": "This is a Webtrader project for binary.com"
   },
   "permissions": [
-    "cookies",
+    "cookies", "tabs",
     "https://*.binary.com/*"
   ]
 }
