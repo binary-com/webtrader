@@ -429,6 +429,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 realitycheck.init();
                             }
                         });
+                        
+                        //Load check for chrome extension installation
+                        require(['chrome/chrome']);
 
                     });
             });

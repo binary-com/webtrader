@@ -17,7 +17,7 @@
     "default_title": "<description>"
   },
   "permissions": [
-    "cookies",
+    "cookies", "tabs",
     "https://*.binary.com/*"
   ]
 }
