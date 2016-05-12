@@ -24,7 +24,6 @@ requirejs.config({
         'rivets': 'lib/rivets/dist/rivets.min',
         'sightglass': 'lib/sightglass/index',
         'timepicker': 'lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker',
-        'js-cookie':'lib/js-cookie/src/js.cookie',
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
@@ -98,7 +97,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
+    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icons.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);

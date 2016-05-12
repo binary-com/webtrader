@@ -53,8 +53,13 @@ body * {
     font-family: 'Roboto', sans-serif;
 }
 
-.ui-icon {
-    background-image: url("images/ui-icons_ffffff_256x240.png")!important;
+.ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.ui-dialog { /* add boxshadow to dialgos*/
+  box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
 }
 
 .ui-dialog {
@@ -117,6 +122,10 @@ body * {
 .ui-dialog .ui-dialog-content {
     padding: .5em .5em;
     padding-bottom: 0;
+}
+.ui-dialog-titlebar-buttonpane {
+  height: 14px !important;
+  margin-top: -7px !important;
 }
 
 .gtm_data_layer {
@@ -253,6 +262,9 @@ button.ui-button-text-only .ui-menu {
 input::-ms-clear {
     display: none;
 }
+
+/* Remove dotted-underline around buttons in FF */
+button::-moz-focus-inner { border: 0; }
 
 /* CSS3 shine effects for buttons */
 .shine {

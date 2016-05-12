@@ -93,10 +93,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             return total_free_space;
         }
 
-        /* we will try 1000 different arrangements and pick the best one */
+        /* we will try 100 different arrangements and pick the best one */
         var best = null,
             best_free_space = 1000*1000;
-        for (var i = 0; i < 1000; ++i) {
+        for (var i = 0; i < 100; ++i) {
             shuffle(dialogs); // shuffle dialogs
             var total_free_space = arrange(dialogs, false);
             if (total_free_space < best_free_space) {
@@ -404,7 +404,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
                     .then(function (markets) {
                         markets = menu.extractFilteredMarkets(markets, {
-                            filter: function (sym) { 
+                            filter: function (sym) {
                                 return sym.symbol === 'frxUSDJPY';
                             }
                         });
@@ -433,10 +433,13 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                     });
             });
 
-            /* automatically log the user in if there is a token in browser cookies*/
-            require(['websockets/binary_websockets', 'js-cookie'], function(liveapi, Cookies) {
-              if(Cookies.get('webtrader_token')) {
-                liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
+            /* automatically log the user in if we have oauth_token in localStorage */
+            require(['websockets/binary_websockets', ], function(liveapi) {
+              if(localStorage.getItem('oauth')) {
+                liveapi.cached.authorize().catch(function(err) {
+                  console.error(err.message);
+                  $.growl.error({message: err.message});
+                 });
               }
             });
             $(window).resize(fixFooterPosition);
@@ -461,7 +464,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 refresh: fn, // callback for refresh button click
                                 autoOpen: false,
                                 resizable:true,
-                                collapsable:true,
+                                collapsable:false,
                                 minimizable: true,
                                 maximizable: true,
                                 closable:true,
@@ -482,13 +485,17 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             options = $.extend({
                 autoOpen: false,
                 resizable: true,
+                collapsable: false,
                 width: 350,
                 height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,
                 title: 'blank window',
-                hide: 'fade'
+                hide: 'fade',
+                icons: {
+                  close: 'ui-icon-close'
+                }
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;

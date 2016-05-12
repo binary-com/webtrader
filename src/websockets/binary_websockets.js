@@ -4,22 +4,7 @@
 
 define(['jquery'], function ($) {
 
-    var Cookies = null,
-        tokenWin = null;
-    /* these dependencies are only need for authenticated api sends.
-       load them on demand, so websocket can start before loading them.  */
-    var authentication_deps = new Promise(function (resolve, reject) {
-        require(['js-cookie', 'token/token'], function (_cookies, _tokenwin) {
-            Cookies = _cookies;
-            tokenWin = _tokenwin;
-            resolve();
-        });
-    });
-    /* don't wait for an authenticated request, trigger loading these now */
-    require(['js-cookie', 'token/token']);
-
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
-
     var socket = null;
 
     var connect = function () {
@@ -50,7 +35,7 @@ define(['jquery'], function ($) {
          **/
         setTimeout(function(){
             socket = connect();
-            if(Cookies && Cookies.get('webtrader_token'))
+            if(localStorage.getItem('oauth'))
               api.cached.authorize();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
@@ -170,18 +155,21 @@ define(['jquery'], function ($) {
 
         return promise
             .then(function (val) {
-                Cookies.set('webtrader_token', token, { expires: 365 }); /* never expiers */
                 is_authenitcated_session = true;
                 fire_event('login', val);
+                if(localStorage.getItem('oauth-login')) {
+                  localStorage.removeItem('oauth-login');
+                  fire_event('oauth-login', val);
+                }
                 auth_successfull = true;
                 cached_promises[key] = { data: data, promise: promise }; /* cache successfull authentication */
                 return val; /* pass the result */
             })
             .catch(function (up) {
-                if (!auth_successfull) {    /* authentication request is failed, delete the cookie */
+                if (!auth_successfull) {    /* authentication request is failed, clear localStorage */
                     is_authenitcated_session = false;
                     fire_event('logout');
-                    Cookies.remove('webtrader_token');
+                    localStorage.removeItem('oauth');
                 }
                 delete cached_promises[key];
                 throw up; /* pass the exception to next catch */
@@ -191,7 +179,7 @@ define(['jquery'], function ($) {
     /* un-athenticate current session */
     var invalidate = function(){
         if(!is_authenitcated_session) { return; }
-        Cookies.remove('webtrader_token');
+        localStorage.removeItem('oauth');
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){
@@ -211,18 +199,14 @@ define(['jquery'], function ($) {
 
         var send = send_request.bind(null,data);// function () { return send_request(data); };
 
-        if (Cookies.get('webtrader_token'))     /* we have a cookie for the token */
-            return authenticate(Cookies.get('webtrader_token'))
+        if(localStorage.getItem('oauth')) {
+            var oauth = JSON.parse(localStorage.getItem('oauth'));
+            var token = oauth[0].token;
+            return authenticate(token)
                     .then(send);
-        else                                    /* get the token from user */
-            return tokenWin
-                .getTokenAsync()
-                .then(authenticate)
-                .catch(function(up){
-                  require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
-                  throw up;
-                })
-                .then(send);
+        }
+        else
+          return Promise.reject({ message: 'Please log in.'});
     };
 
     /* fire a custom event and call registered callbacks(api.events.on(name)) */
@@ -281,6 +265,45 @@ define(['jquery'], function ($) {
         },
         /* remove token, and reopen current socket */
         invalidate: invalidate,
+        /* switch account */
+        switch_account: function(id) {
+          if(!is_authenitcated_session) {
+            return Promise.reject({message: 'Session is not authenticated.'})
+          }
+          var oauth = localStorage.getItem('oauth');
+          if(!oauth) {
+            return promise.reject({ message: 'Account token not found.' });
+          }
+          oauth = JSON.parse(oauth);
+
+          var inx = oauth.map(function(acc) { return acc.id; }).indexOf(id);
+          if(inx === -1) {
+            return promise.reject({ message: 'Account id not found.' });
+          }
+
+          /* move the new account to the front of oauth array */
+          var account = oauth[inx];
+          oauth.splice(inx,1);
+          oauth.unshift(account);
+          localStorage.setItem('oauth', JSON.stringify(oauth));
+
+          /* remove authenticated cached requests as well as authorize requests */
+          for(var i in cached_promises)
+            if(needs_authentication(cached_promises[i].data) || ('authorize' in cached_promises[i].data))
+              delete cached_promises[i];
+          /* back removes all tokens on {logout: 1} request, so we simply reauthenticate
+             with the new token without logging out first! ot switch accounts */
+          is_authenitcated_session = false;
+
+          /* backend doesn't respect registered authenticated streams :/ */
+          api.send({forget_all: 'transaction'})
+             .catch(function(err){ console.error(err); });
+
+          api.send({forget_all: 'balance'})
+             .catch(function(err){ console.error(err); });
+
+          return api.cached.authorize();
+        },
         /* if you want a request to be cached, that is when multiple modules request
            the same data or a module request a data multiple times, instead of calling
            liveapi.send can liveapi.cached.send.
@@ -309,29 +332,21 @@ define(['jquery'], function ($) {
             /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
             authorize: function () {
-                return authentication_deps.then(function () {
-                    var token = Cookies.get('webtrader_token'),
-                        key = JSON.stringify({ authorize: token });
+                var oauth = JSON.parse(localStorage.getItem('oauth'));
+                var token = oauth[0].token,
+                    key = JSON.stringify({ authorize: token });
 
-                    if (is_authenitcated_session && token && cached_promises[key])
-                        return cached_promises[key].promise;
+                if (is_authenitcated_session && token && cached_promises[key])
+                    return cached_promises[key].promise;
 
-                    return token ? authenticate(token) : /* we have a token => autheticate */
-                                      tokenWin.getTokenAsync()
-                                      .then(authenticate) /* get the token from user and authenticate */
-                                      .catch(function(up){
-                                        require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
-                                        throw up;
-                                      });
-                })
+                return token ? authenticate(token) : /* we have a token => autheticate */
+                               Promise.reject('Please log in.');
             }
         },
         /* sends a request and returns an es6-promise */
         send: function (data, timeout) {
             if (data && needs_authentication(data))
-                return authentication_deps.then(function () {
-                    return send_authenticated_request(data);
-                });
+                return send_authenticated_request(data);
 
             var promise = send_request(data);
             if(timeout) timeout_promise(data.req_id, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
@@ -343,6 +358,7 @@ define(['jquery'], function ($) {
         },
         sell_expired: function(epoch) {
             var now = (new Date().getTime())/1000 | 0;
+            epoch = epoch || now+1; // if epoch is undefined will try to sell expired contract 3 seconds later.
             if(!sell_expired_timeouts[epoch] && epoch*1 > now) {
               sell_expired_timeouts[epoch] = setTimeout(function(){
                 sell_expired_timeouts[epoch] = undefined;
@@ -351,13 +367,11 @@ define(['jquery'], function ($) {
             }
         }
     }
-    /* always register for transaction stream */
+    /* always register for transaction & balance streams */
     api.events.on('login', function() {
       api.send({transaction: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
-    });
-    /* always register for balance stream */
-    api.events.on('login', function() {
+
       api.send({balance: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
     });

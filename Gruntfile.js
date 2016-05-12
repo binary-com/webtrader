@@ -55,6 +55,7 @@ module.exports = function (grunt) {
                             '!jquery-ui/**', 'jquery-ui/themes/smoothness/images/**', 'jquery-ui/jquery-ui.min.js', 'jquery-ui/themes/smoothness/jquery-ui.min.css',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
+                            'jquery-ui-iconfont/jquery-ui.icons.css', 'jquery-ui-iconfont/fonts/*',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
@@ -62,7 +63,6 @@ module.exports = function (grunt) {
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
                             'requirejs/require.js',
-                            'js-cookie/src/js.cookie.js',
                             'require-css/css.min.js',
                             'text/text.js',
                             'lodash/dist/lodash.min.js',
@@ -247,6 +247,16 @@ module.exports = function (grunt) {
                     keepalive: true,
                     livereload: true
                 }
+            },
+            https: {
+                options: {
+                    port: 443,
+                    protocol: 'https',
+                    base: 'dist/uncompressed',
+                    hostname: '0.0.0.0',
+                    keepalive: true,
+                    livereload: true
+                }
             }
         },
         sloc: {
@@ -293,6 +303,18 @@ module.exports = function (grunt) {
               spawn: false,
               interrupt : true,
               livereload: true
+            },
+          },
+          https: {
+            files: ['src/**'],
+            tasks: ['mainTask'],
+            options: {
+              spawn: false,
+              interrupt : true,
+              livereload: {
+                key: grunt.file.read('grunt/livereload.key'),
+                cert: grunt.file.read('grunt/livereload.crt')
+              }
             },
           },
         },
