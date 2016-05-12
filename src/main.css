@@ -270,6 +270,19 @@ button::-moz-focus-inner { border: 0; }
 .shine {
   position: relative;
 }
+/* default style for green button */
+.green-button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+    cursor: pointer;
+}
+
 /* sine effect, hover style if required */
 .shine:hover { }
 /* generated element for shine effect. normal state is semi-transparent
