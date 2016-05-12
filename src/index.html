@@ -28,8 +28,8 @@
           var token = params[i+1].split('=')[1];
           oauth.push({ id: id, token: token });
         }
-        localStorage.setItem('oauth', JSON.stringify(oauth));
-        localStorage.setItem('oauth-login', true); /* used to fire oauth-login event in binary_websockets.js */
+        local_storage.set('oauth', oauth);
+        local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
       }
 
       window.location.href = 'v<version>/main.html' + suffix;
