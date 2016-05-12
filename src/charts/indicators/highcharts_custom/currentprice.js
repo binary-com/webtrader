@@ -2,6 +2,8 @@
  * Created by arnab on 3/22/15.
  */
 define(['common/util', 'highstock'], function () {
+    // This variable is for getCurrentPriceOptions()
+    var currentPriceOptionsMap = {};
 
     function removePlotLine() {
         var series = this;
@@ -39,7 +41,7 @@ define(['common/util', 'highstock'], function () {
                     var data = this.data || [];
                     if (data && data.length > 0)
                     {
-
+                        currentPriceOptionsMap[currentPriceOptions.parentSeriesID] = currentPriceOptions;
                         var lastData = data[data.length - 1];
                         var price = lastData.y || lastData.close || lastData[4];
                         if (price > 0.0) {
@@ -133,6 +135,10 @@ define(['common/util', 'highstock'], function () {
 
             }(Highcharts, jQuery));
 
+        },
+
+        getCurrentPriceOptions: function() {
+            return currentPriceOptionsMap;
         }
 
     };
