@@ -429,16 +429,16 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 realitycheck.init();
                             }
                         });
-                        
+
                         //Load check for chrome extension installation
                         require(['chrome/chrome']);
 
                     });
             });
 
-            /* automatically log the user in if we have oauth_token in localStorage */
+            /* automatically log the user in if we have oauth_token in local_storage */
             require(['websockets/binary_websockets', ], function(liveapi) {
-              if(localStorage.getItem('oauth')) {
+              if(local_storage.get('oauth')) {
                 liveapi.cached.authorize().catch(function(err) {
                   console.error(err.message);
                   $.growl.error({message: err.message});
