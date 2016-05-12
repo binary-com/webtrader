@@ -62,6 +62,7 @@ Since backend needs an https web address for **oauth app register** if you inten
         $ sudo grunt connect:https
 
 *Use this command to watch the files.*
+
         $ grunt && grunt watch:https
         
 Go to https://webtrader.local:35729 and accept the self signed ssl certificate for grunt livereload.
