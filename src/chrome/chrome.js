@@ -3,9 +3,9 @@
  */
 define(['jquery', 'windows/windows'], function($, windows) {
     var win = null;
-    if (chrome && chrome.webstore && $('#webtrader-extension-is-installed').length <= 0) {
-        //Trigger after 1 second
-        setTimeout(function() {
+    //Trigger after 1 second
+    setTimeout(function() {
+        if (chrome && chrome.webstore && $('#webtrader-extension-is-installed').length <= 0) {
             if (!win) {
                 win = windows.createBlankWindow($('<div class="chrome_extension"/>'),
                     {
@@ -24,6 +24,7 @@ define(['jquery', 'windows/windows'], function($, windows) {
                         },
                         buttons: {
                             Apply: function() {
+                                $( this ).dialog( 'close' );
                                 $( this ).dialog( "destroy" );
                                 try {
                                     chrome.webstore.install();
@@ -33,6 +34,7 @@ define(['jquery', 'windows/windows'], function($, windows) {
                                 }
                             },
                             Cancel: function() {
+                                $( this ).dialog( 'close' );
                                 $( this ).dialog( "destroy" );
                             }
                         }
@@ -43,7 +45,7 @@ define(['jquery', 'windows/windows'], function($, windows) {
             } else {
                 win.moveToTop();
             }
-        }, 1000);
-    }
+        }
+    }, 1000);
     return {}
 });
