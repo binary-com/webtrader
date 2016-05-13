@@ -243,8 +243,8 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
 /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
 function load_ondemand(element, event_name,msg, module_name, callback) {
-        var func_name = null;
-        element.one(event_name, func_name = function () {
+    var func_name = null;
+    element.one(event_name, func_name = function () {
 
         //Ignore click event, if it has disabled class
         if (element.hasClass('disabled')) {
