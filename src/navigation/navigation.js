@@ -259,7 +259,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
             var root = $($navHtml);
             $("body").prepend(root);
 
-      initLoginButton(root);
+      		initLoginButton(root);
 			//Theme settings
 			require(['themes/themes']);
 
@@ -275,7 +275,13 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
             if(_callback) {
                 _callback($("#nav-menu"));
             }
+			
+			//Hide wschange <LI> if its production and not BETA
+			if (!is_beta()) {
+				$("#nav-container li.resources a.wschange").closest('li').hide();
+			}
+			
 		},
-    updateDropdownToggles : updateDropdownToggleHandlers
+    	updateDropdownToggles : updateDropdownToggleHandlers
 	};
 });

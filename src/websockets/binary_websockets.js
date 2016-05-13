@@ -2,13 +2,14 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['jquery'], function ($) {
+define(['jquery', 'common/util'], function ($) {
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
     var socket = null;
 
     var connect = function () {
-        var api_url = 'wss://ws.binaryws.com/websockets/v3?l=EN';
+        var storedWsURL = local_storage.get('websocket_url');
+        var api_url = (storedWsURL && storedWsURL.url)  || 'wss://ws.binaryws.com/websockets/v3?l=EN';
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
