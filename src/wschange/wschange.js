@@ -8,7 +8,7 @@ define(['jquery', 'windows/windows', 'lodash', 'common/util'], function($, windo
             $menuLink.click(function() {
                 if (!win) {
                     win = windows.createBlankWindow($('<div style="padding: 10px;" class="wschange"><div>Web Socket URL</div><input></div>'), {
-                        title: 'Change Web Socket URL',
+                        title: 'Change Backend Server',
                         width: 300,
                         height:160,
                         resizable: false,
