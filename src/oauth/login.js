@@ -200,8 +200,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         liveapi.send(request)
                .then(function(data) {
                   var account = data.new_account_virtual;
-                  localStorage.setItem('oauth_token', account.oauth_token);
-                  localStorage.setItem('client_id', account.client_id)
+                  var oauth = [{id: account.client_id, token: account.oauth_token }];
+                  local_storage.set('oauth', oauth);
                   liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
                   state.account.disabled = false;
                   state.route.update('confirm');

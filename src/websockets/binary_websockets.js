@@ -35,7 +35,7 @@ define(['jquery'], function ($) {
          **/
         setTimeout(function(){
             socket = connect();
-            if(localStorage.getItem('oauth'))
+            if(local_storage.get('oauth'))
               api.cached.authorize();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
@@ -157,19 +157,20 @@ define(['jquery'], function ($) {
             .then(function (val) {
                 is_authenitcated_session = true;
                 fire_event('login', val);
-                if(localStorage.getItem('oauth-login')) {
-                  localStorage.removeItem('oauth-login');
-                  fire_event('oauth-login', val);
+                if(local_storage.get('oauth-login')) {
+                  var ok = local_storage.get('oauth-login').value;
+                  local_storage.remove('oauth-login');
+                  ok && fire_event('oauth-login', val);
                 }
                 auth_successfull = true;
                 cached_promises[key] = { data: data, promise: promise }; /* cache successfull authentication */
                 return val; /* pass the result */
             })
             .catch(function (up) {
-                if (!auth_successfull) {    /* authentication request is failed, clear localStorage */
+                if (!auth_successfull) {    /* authentication request is failed, clear local_storage */
                     is_authenitcated_session = false;
                     fire_event('logout');
-                    localStorage.removeItem('oauth');
+                    local_storage.remove('oauth');
                 }
                 delete cached_promises[key];
                 throw up; /* pass the exception to next catch */
@@ -179,7 +180,7 @@ define(['jquery'], function ($) {
     /* un-athenticate current session */
     var invalidate = function(){
         if(!is_authenitcated_session) { return; }
-        localStorage.removeItem('oauth');
+        local_storage.remove('oauth');
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){
@@ -199,8 +200,8 @@ define(['jquery'], function ($) {
 
         var send = send_request.bind(null,data);// function () { return send_request(data); };
 
-        if(localStorage.getItem('oauth')) {
-            var oauth = JSON.parse(localStorage.getItem('oauth'));
+        if(local_storage.get('oauth')) {
+            var oauth = local_storage.get('oauth');
             var token = oauth[0].token;
             return authenticate(token)
                     .then(send);
@@ -270,11 +271,10 @@ define(['jquery'], function ($) {
           if(!is_authenitcated_session) {
             return Promise.reject({message: 'Session is not authenticated.'})
           }
-          var oauth = localStorage.getItem('oauth');
+          var oauth = local_storage.get('oauth');
           if(!oauth) {
             return promise.reject({ message: 'Account token not found.' });
           }
-          oauth = JSON.parse(oauth);
 
           var inx = oauth.map(function(acc) { return acc.id; }).indexOf(id);
           if(inx === -1) {
@@ -285,7 +285,7 @@ define(['jquery'], function ($) {
           var account = oauth[inx];
           oauth.splice(inx,1);
           oauth.unshift(account);
-          localStorage.setItem('oauth', JSON.stringify(oauth));
+          local_storage.set('oauth', oauth);
 
           /* remove authenticated cached requests as well as authorize requests */
           for(var i in cached_promises)
@@ -332,7 +332,7 @@ define(['jquery'], function ($) {
             /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
             authorize: function () {
-                var oauth = JSON.parse(localStorage.getItem('oauth'));
+                var oauth = local_storage.get('oauth');
                 var token = oauth[0].token,
                     key = JSON.stringify({ authorize: token });
 

@@ -17,6 +17,14 @@ body {
     text-align: center;
 }
 
+#nav-container span.ui-icon {
+  display: inline-block;
+  padding-right: 10px;
+  margin-left: -25px;
+  position: relative;
+  top: 2px;
+}
+
 #nav-container .nav-logo {
     position: absolute;
     margin-top: 6px;
@@ -301,6 +309,10 @@ body {
   right: 5px;
 }
 
+#nav-container .login span.ui-icon {
+  margin-left: -10px;
+}
+
 #nav-container .login button {
   color: #eee;
   line-height: 2em;
@@ -328,6 +340,9 @@ body {
   font-size: 15px;
 }
 #nav-container .account > ul > li > a { padding-left: 15px; }
+#nav-container .account > ul > li > a > span.ui-icon {
+  margin-left: 0;
+}
 #nav-container .account .nav-dropdown-toggle {
   position: relative;
   top: -10px;

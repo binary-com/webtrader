@@ -217,10 +217,10 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
               /* switch between account on user click */
               $('.account li.info').remove();
-              var oauth = JSON.parse(localStorage.getItem('oauth') || "[]");
+              var oauth = local_storage.get('oauth') || [];
               oauth.forEach(function(account) {
                 if(account.id !== data.authorize.loginid) {
-                  var a = $('<a href="#"></a>').text(account.id);
+                  var a = $('<a href="#"></a>').html('<span class="ui-icon ui-icon-login"></span>' + account.id);
                   var li = $('<li/>').append(a).addClass('info');
                   li.data(account);
                   li.click(function() {

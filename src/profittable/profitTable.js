@@ -61,16 +61,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             var transactions = (data.profit_table && data.profit_table.transactions) || [];
             var rows = transactions.map(function (trans) {
                 var profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
-                var svg = profit > 0 ? 'up' : profit < 0 ? 'down' : 'equal';
-                var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
                 return [
                     epoch_to_string(trans.purchase_time, { utc: true }),
                     trans.transaction_id,
-                    img + trans.longcode,
+                    trans.longcode,
                     trans.buy_price,
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
                     profit,
+                    '<button class="green-button shine">View</button>',
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
@@ -92,7 +91,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'IMG' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();

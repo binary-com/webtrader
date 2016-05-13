@@ -18,7 +18,7 @@ table.profit-table-dialog th:nth-child(7) {
     width: 8% !important;
 }
 table.profit-table-dialog th:nth-child(6) {
-    width: 9% !important;
+    width: 8% !important;
 }
 table.profit-table-dialog th:nth-child(1),
 table.profit-table-dialog th:nth-child(2),
@@ -28,25 +28,13 @@ table.profit-table-dialog th:nth-child(5) {
 table.profit-table-dialog th:nth-child(3) {
     width: 36% !important;
 }
-table.profit-table-dialog tr td:nth-child(3){
-    text-align: left;
-}
 
 
     table.profit-table-dialog th > .search-input {
         text-align:center;
-        width: 100%;
         box-sizing: border-box;
-        -webkit-box-sizing:border-box;
-        -moz-box-sizing: border-box;
-        border-radius:10px;
-        font-family: 'Roboto', sans-serif !important;
         font-size: 90%;
-    }
-
-    table.profit-table-dialog th > .search-input:focus {
-        box-shadow: 3px -1px 8px 1pt lightblue;
-        outline: 0;
+        margin-bottom: 3px;
     }
 
 table.profit-table-dialog + div {
