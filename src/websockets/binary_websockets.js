@@ -35,7 +35,7 @@ define(['jquery'], function ($) {
          **/
         setTimeout(function(){
             socket = connect();
-            if(local_storage.getItem('oauth'))
+            if(local_storage.get('oauth'))
               api.cached.authorize();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
