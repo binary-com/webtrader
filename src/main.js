@@ -119,6 +119,13 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 elem.click();
             });
 
+            //Register async loading of token-management sub-menu
+            load_ondemand($navMenu.find("a.token-management"), 'click','Loading Token management ...', 'token/token', function (tokenMangement) {
+                var elem = $navMenu.find("a.token-management");
+                tokenMangement.init(elem);
+                elem.click();
+            });
+
             //Register async loading of window asset-index
             load_ondemand($navMenu.find("a.assetIndex"), 'click', 'loading Asset Index ...', 'assetindex/assetIndex',
                 function (assetIndex) {
