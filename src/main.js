@@ -166,9 +166,9 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     selfexclusion.init(elem);
                     elem.click();
                 });
-            
+
             //Register async loading of wschange dialog
-            load_ondemand($navMenu.find("a.wschange"), 'click', 'loading WS Change URL ...', 'wschange/wschange',
+            load_ondemand($navMenu.find("a.wschange"), 'click', 'loading Change Backend Server ...', 'wschange/wschange',
                 function (wschange) {
                     var elem = $navMenu.find("a.wschange");
                     wschange.init(elem);

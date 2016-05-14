@@ -256,32 +256,32 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
 	return {
 		init: function(_callback) {
-            var root = $($navHtml);
-            $("body").prepend(root);
+      var root = $($navHtml);
+      $("body").prepend(root);
 
-      		initLoginButton(root);
+  		initLoginButton(root);
 			//Theme settings
 			require(['themes/themes']);
 
-            $("#nav-toggle").on("click", function (e) {
-                $("#nav-toggle").toggleClass("nav-toggle-active");
-                toggleMenuStyle();
+      $("#nav-toggle").on("click", function (e) {
+          $("#nav-toggle").toggleClass("nav-toggle-active");
+          toggleMenuStyle();
 
-                e.preventDefault();
-            });
+          e.preventDefault();
+      });
 
-            updateDropdownToggleHandlers();
+      updateDropdownToggleHandlers();
 
-            if(_callback) {
-                _callback($("#nav-menu"));
-            }
-			
-			//Hide wschange <LI> if its production and not BETA
-			if (!is_beta()) {
-				$("#nav-container li.resources a.wschange").closest('li').hide();
-			}
-			
+      if(_callback) {
+        _callback($("#nav-menu"));
+      }
+
+      //Show wschange <LI> if its production and not BETA
+      if (is_beta()) {
+        root.find("a.wschange").closest('li').show();
+      }
+
 		},
-    	updateDropdownToggles : updateDropdownToggleHandlers
+  	updateDropdownToggles : updateDropdownToggleHandlers
 	};
 });

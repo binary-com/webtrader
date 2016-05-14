@@ -1,0 +1,20 @@
+.wschange-dialog {
+  padding: 10px;
+  background: white !important;
+}
+.wschange-dialog + .ui-dialog-buttonpane {
+  margin: 0;
+  padding: 0;
+}
+
+.wschange-dialog input {
+  margin: 5px 0;
+}
+.wschange-dialog span.explanation {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4em;
+  color: #797979;
+  height: 3em;
+  padding: 5px 0;
+}
