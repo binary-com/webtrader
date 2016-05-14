@@ -100,6 +100,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['prepend'] = function(value, other){
       return (other && value) ? other + value : value;
     }
+    /* rv formatter to append a value */
+    rv.formatters['append'] = function(value, other){
+      return (other && value) ? value + other : value;
+    }
     /* ternary operator (condition ? first : second) */
     rv.formatters['ternary'] = function(condition, first, second){
       return condition ? first : second;
