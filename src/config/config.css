@@ -12,9 +12,8 @@
 }
 .config-dialog span.explanation {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.4em;
-  color: #797979;
-  height: 3em;
+  color: #273051;
   padding: 5px 0;
 }
