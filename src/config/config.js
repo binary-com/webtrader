@@ -2,15 +2,15 @@
 * Created by arnab on 5/12/16.
 */
 define(['jquery', 'windows/windows', 'lodash', 'common/util'], function($, windows, _) {
-  require(['text!wschange/wschange.html']);
-  require(['css!wschange/wschange.css']);
+  require(['text!config/config.html']);
+  require(['css!config/config.css']);
 
   var win = null, confirm = null;
 
   function apply() {  }
   function reset() { }
 
-  function initWsChangeWindow(root) {
+  function initConfigWindow(root) {
     root = $(root);
 
     win = windows.createBlankWindow(root, {
@@ -52,7 +52,7 @@ define(['jquery', 'windows/windows', 'lodash', 'common/util'], function($, windo
   function init($menuLink) {
     $menuLink.click(function() {
       if (!win)
-        require(['text!wschange/wschange.html'], initWsChangeWindow);
+        require(['text!config/config.html'], initConfigWindow);
       else
         win.moveToTop();
     });

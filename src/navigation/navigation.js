@@ -276,9 +276,9 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
         _callback($("#nav-menu"));
       }
 
-      //Show wschange <LI> if its production and not BETA
+      //Show config <LI> if its production and not BETA
       if (is_beta()) {
-        root.find("a.wschange").closest('li').show();
+        root.find("a.config").closest('li').show();
       }
 
 		},

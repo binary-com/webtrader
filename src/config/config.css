@@ -1,16 +1,16 @@
-.wschange-dialog {
+.config-dialog {
   padding: 10px;
   background: white !important;
 }
-.wschange-dialog + .ui-dialog-buttonpane {
+.config-dialog + .ui-dialog-buttonpane {
   margin: 0;
   padding: 0;
 }
 
-.wschange-dialog input {
+.config-dialog input {
   margin: 5px 0;
 }
-.wschange-dialog span.explanation {
+.config-dialog span.explanation {
   display: block;
   font-size: 14px;
   line-height: 1.4em;
