@@ -30,7 +30,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             trade: false,
             payments: false,
             admin: false
-          }
+          },
+          btn_disabled: false,
         }
       };
 
@@ -62,7 +63,20 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           return;
         }
 
-        console.warn(request);
+        state.token.btn_disabled = true;
+        liveapi.send(request)
+               .then(function(data){
+                  console.warn(data.api_token);
+                  state.token.btn_disabled = false;
+                  state.tokens = data.api_token.tokens;
+                  $.growl.notice({ message: 'Successfully added new token "' + request.new_token + '"'});
+                  state.change_route('token-list');
+               })
+               .catch(function (err) {
+                  state.token.btn_disabled = false;
+                  $.growl.error({ message: err.message });
+                  console.error(err);
+               });
       }
 
       token_win_view = rv.bind(root[0], state);

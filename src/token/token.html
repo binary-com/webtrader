@@ -32,6 +32,8 @@
       </div>
 
       <button class='green-button shine'
+              rv-disabled='token.btn_disabled'
+              rv-css-opacity='token.btn_disabled | ternary 0.5 1'
               rv-on-click='token.add'>Create</button>
   </div>
 </div>
