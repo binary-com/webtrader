@@ -10,7 +10,29 @@
   </div>
 
   <div rv-show='route | eq "token-list" | and tokens | prop "length" | gt 0' class='token-list-pane'>
-    <p> list of tokens<p>
+    <span class='ui-icon ui-icon-search'></span>
+    <input class='token-search' />
+    <table>
+      <thead> <tr>
+        <th>Name</th>
+        <th>Token</th>
+        <th>Permissions</th>
+        <th>Last used</th>
+        <th>Action</th>
+      </tr> </thead>
+      <tbody>
+        <tr rv-each-token='tokens'>
+          <td rv-text='token.display_name'></td>
+          <td rv-text='token.token'></td>
+          <td rv-text='token.permissions'></td>
+          <td rv-text='token.last_used | or -'></td>
+          <td>
+            <span rv-on-click='copy | bind token' class='ui-icon ui-icon-copy' rv-tooltip='"Copy"'></span>
+            <span rv-on-click='remove | bind token' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div  rv-show='route | eq "create-token"' class='create-token-pane'>

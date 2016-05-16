@@ -1,5 +1,5 @@
 
-define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash'], function(liveapi, windows, rv, _) {
+define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'moment', 'clipboard'], function(liveapi, windows, rv, moment, clipboard) {
     require(['text!token/token.html']);
     require(['css!token/token.css']);
     var token_win = null;
@@ -15,16 +15,17 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     }
 
     function init_state(root){
-      var state = {
-        route: 'token-list',
-        tokens: [],
-        tooltip: "Note that tokens can possess one or more of these scopes: <br/>" +
+      var tooltip = "Note that tokens can possess one or more of these scopes: <br/>" +
                              "<b>read</b> - for API calls that only read client data<br/>" +
                              "<b>trade</b> - for API calls that can create trades in the client account<br/>" +
                              "<b>payments</b> - for API calls that can access the cashier<br/>" +
-                             "<b>admin</b> - for API calls that change client settings",
+                             "<b>admin</b> - for API calls that change client settings";
+      var state = {
+        route: 'token-list',
+        tokens: [],
+        tooltip: tooltip,
         token: {
-          name,
+          name: '',
           scopes: {
             read: true,
             trade: false,
@@ -35,8 +36,25 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         }
       };
 
+      state.copy = function(token){
+        console.warn(token);
+      }
+      state.remove = function(token){
+        console.warn(token);
+      }
+
       state.change_route = function(route){
         state.route = route;
+      }
+      state.update_tokens = function(tokens){
+         tokens.forEach(function(token) {
+           var scopes = token.scopes;
+           token.permissions = scopes.length == 4 ? 'All' : scopes.join(', ');
+
+           console.warn(token.last_used);
+           token.last_used = token.last_used ? moment.utc(token.last_used, 'YYYY-MM-DD HH:mm:ss').fromNow() : '-';
+         });
+         state.tokens = tokens;
       }
 
       state.token.add = function(){
@@ -66,10 +84,12 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.token.btn_disabled = true;
         liveapi.send(request)
                .then(function(data){
-                  console.warn(data.api_token);
                   state.token.btn_disabled = false;
-                  state.tokens = data.api_token.tokens;
                   $.growl.notice({ message: 'Successfully added new token "' + request.new_token + '"'});
+
+                  var tokens = (data.api_token && data.api_token.tokens) || [];
+                  state.update_tokens(tokens);
+
                   state.change_route('token-list');
                })
                .catch(function (err) {
@@ -79,6 +99,15 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                });
       }
 
+      liveapi.send({api_token: 1})
+             .then(function(data){
+               var tokens = (data.api_token && data.api_token.tokens) || [];
+               state.update_tokens(tokens);
+             })
+             .catch(function (err) {
+                $.growl.error({ message: err.message });
+                console.error(err);
+             });
       token_win_view = rv.bind(root[0], state);
     }
 

@@ -28,6 +28,7 @@ requirejs.config({
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
+        'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level'
     },
     map: {
