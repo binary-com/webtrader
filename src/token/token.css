@@ -1,0 +1,64 @@
+.token-dialog {
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  background: white !important;
+  position: relative;
+}
+
+.token-dialog > button {
+  position: absolute;
+  width: 120px;
+  right: 10px;
+}
+.token-dialog .empty-pane > span {
+  display:  block;
+  width: 440px;
+  margin-bottom: 40px;
+}
+
+/* create token pane */
+.token-dialog .create-token-pane > span {
+  display: block;
+}
+
+.token-dialog .create-token-pane span.back-arrow {
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.token-dialog .create-token-pane .back-arrow > span {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.token-dialog .create-token-pane input:not([type='checkbox'])  {
+  width: 50%;
+  margin-top: 5px;
+}
+
+.token-dialog .create-token-pane span.explanation {
+  color: #aaa;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 3px;
+}
+
+.token-dialog .create-token-pane .token-scopes { margin-top: 10px; }
+.token-dialog .create-token-pane .question-mark {
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.token-dialog .create-token-pane .token-scopes > label {
+  width: 120px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.token-dialog .create-token-pane > button {
+  width: 120px;
+}

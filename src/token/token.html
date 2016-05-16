@@ -1,3 +1,37 @@
-<div class="token-management">
-  <p> hello world! </p>
+<div class="token-dialog">
+  <button class='blue-button shine'
+          rv-show='route | not-eq "create-token"'
+          rv-on-click='change_route | bind "create-token"'>Create token</button>
+
+  <div rv-show='route | eq "token-list" | and tokens | prop "length" | eq 0' class='empty-pane'>
+    <span>Tokens are special codes for accessing Binary mobile applications
+          and third party tools.</span>
+    <span>Press “Create token” button on the right to create your first token.</span>
+  </div>
+
+  <div rv-show='route | eq "token-list" | and tokens | prop "length" | gt 0' class='token-list-pane'>
+    <p> list of tokens<p>
+  </div>
+
+  <div  rv-show='route | eq "create-token"' class='create-token-pane'>
+    <span class='back-arrow' rv-on-click='change_route | bind "token-list"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back to list
+    </span>
+
+      <span> Token name </span>
+      <input class='token-input'
+             rv-value='token.name' />
+      <span class='explanation'>Describe what this token is for to find it later.</span>
+
+      <span> Token permissions <span class='question-mark' rv-tooltip='tooltip'> ? </span> </span>
+      <div class='token-scopes'>
+        <label> <input type='checkbox' rv-checked='token.scopes.read' /> Read </label>
+        <label> <input type='checkbox' rv-checked='token.scopes.trade' /> Trade </label>
+        <label> <input type='checkbox' rv-checked='token.scopes.payments' /> Payments </label>
+        <label> <input type='checkbox' rv-checked='token.scopes.admin' /> Admin </label>
+      </div>
+
+      <button class='green-button shine'
+              rv-on-click='token.add'>Create</button>
+  </div>
 </div>

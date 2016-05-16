@@ -14,6 +14,60 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       });
     }
 
+    function init_state(root){
+      var state = {
+        route: 'token-list',
+        tokens: [],
+        tooltip: "Note that tokens can possess one or more of these scopes: <br/>" +
+                             "<b>read</b> - for API calls that only read client data<br/>" +
+                             "<b>trade</b> - for API calls that can create trades in the client account<br/>" +
+                             "<b>payments</b> - for API calls that can access the cashier<br/>" +
+                             "<b>admin</b> - for API calls that change client settings",
+        token: {
+          name,
+          scopes: {
+            read: true,
+            trade: false,
+            payments: false,
+            admin: false
+          }
+        }
+      };
+
+      state.change_route = function(route){
+        state.route = route;
+      }
+
+      state.token.add = function(){
+        var request = {
+          api_token: 1,
+          new_token: state.token.name,
+          new_token_scopes: []
+        };
+
+        state.token.scopes.read && request.new_token_scopes.push('read');
+        state.token.scopes.trade && request.new_token_scopes.push('trade');
+        state.token.scopes.payments && request.new_token_scopes.push('payments');
+        state.token.scopes.admin && request.new_token_scopes.push('admin');
+
+        var error_msg = '';
+
+        if(!request.new_token_scopes.length)
+          error_msg = 'Please choose at least one token scope';
+        if(!request.new_token || !request.new_token.length)
+          error_msg = 'Please enter the token name';
+
+        if(error_msg) {
+          $.growl.error({ message: error_msg });
+          return;
+        }
+
+        console.warn(request);
+      }
+
+      token_win_view = rv.bind(root[0], state);
+    }
+
     function initTokenWin(root) {
       root = $(root);
       token_win = windows.createBlankWindow(root, {
@@ -31,6 +85,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             token_win_view = null;
           }
       });
+      init_state(root);
       token_win.dialog('open');
       window.tkn = token_win;
     }
