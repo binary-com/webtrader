@@ -1,6 +1,7 @@
 .oauth-dialog {
   padding: 0 !important;
   background: white !important;
+  overflow: hidden !important;
 }
 
 .oauth-dialog span.validation {
@@ -51,7 +52,10 @@
 }
 
 /* login dialog styles */
-.oauth-dialog .login-dialog { box-sizing: border-box; }
+.oauth-dialog .login-dialog {
+  box-sizing: border-box;
+  overflow: hidden !important;
+}
 .oauth-dialog .login-dialog > div {
   line-height: 1.5em;
   box-sizing: border-box;
