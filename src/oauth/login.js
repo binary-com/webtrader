@@ -226,7 +226,15 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
              .then(function(data) {
                state.account.residence_list = data.residence_list;
                state.account.residence = data.residence_list[0].value;
-               _.defer(function() { state.account.residence = 'id' }, 0); // make indonesia default
+               liveapi.cached.send({website_status: 1})
+                    .then(function(data){
+                        var residence = data.website_status && data.website_status.clients_country;
+                        state.account.residence = residence || 'id';
+                    })
+                    .catch(function(err){
+                      console.error(err);
+                      state.account.residence = 'id'; // make indonesia default
+                    })
              })
              .catch(function(err){
                 console.error(err);
