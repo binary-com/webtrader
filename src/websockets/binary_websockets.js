@@ -8,8 +8,8 @@ define(['jquery', 'common/util'], function ($) {
     var socket = null;
 
     var connect = function () {
-        var storedWsURL = local_storage.get('websocket_url');
-        var api_url = (storedWsURL && storedWsURL.url)  || 'wss://ws.binaryws.com/websockets/v3?l=EN';
+        var config = local_storage.get('config');
+        var api_url = (config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l=EN';
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);

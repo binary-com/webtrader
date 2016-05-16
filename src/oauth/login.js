@@ -15,16 +15,19 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         return;
       }
 
-      require(['text!oauth/login.html', 'text!oauth/app_id.json'], function(root, app_id) {
-        app_id = JSON.parse(app_id);
+      require(['text!oauth/login.html', 'text!oauth/app_id.json'], function(root, app_ids) {
+        app_ids = JSON.parse(app_ids);
 
-        /* find the appropriate token */
-        var token = '';
-        var href = window.location.href;
-        for(var web_address in app_id) {
-          if(href.lastIndexOf(web_address,0) == 0) {
-            token = app_id[web_address];
-            break;
+        var config = local_storage.get('config');
+        var token = (config && config.app_id) || '';
+
+        if(!token) { /* find the appropriate token */
+          var href = window.location.href;
+          for(var web_address in app_ids) {
+            if(href.lastIndexOf(web_address,0) == 0) {
+              token = app_ids[web_address];
+              break;
+            }
           }
         }
 
@@ -106,12 +109,16 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       state.login.login = function() {
           state.login.disabled = true;
-          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + token + '&scope=read,trade,payments,admin';
+          var config = local_storage.get('config');
+          var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
+          window.location =  oauth_url + '?app_id=' + token + '&scope=read,trade,payments,admin';
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
-          window.location = 'https://www.binary.com/oauth2/authorize?app_id=' + token + '&scope=read,trade,payments,admin';
+          var config = local_storage.get('config');
+          var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
+          window.location =  oauth_url + '?app_id=' + token + '&scope=read,trade,payments,admin';
       }
 
       state.route.update = function(route){

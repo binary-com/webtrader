@@ -173,12 +173,12 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     selfexclusion.init(elem);
                     elem.click();
                 });
-            
-            //Register async loading of wschange dialog
-            load_ondemand($navMenu.find("a.wschange"), 'click', 'loading WS Change URL ...', 'wschange/wschange',
-                function (wschange) {
-                    var elem = $navMenu.find("a.wschange");
-                    wschange.init(elem);
+
+            //Register async loading of config dialog
+            load_ondemand($navMenu.find("a.config"), 'click', 'loading Configurations ...', 'config/config',
+                function (config) {
+                    var elem = $navMenu.find("a.config");
+                    config.init(elem);
                     elem.click();
                 });
 

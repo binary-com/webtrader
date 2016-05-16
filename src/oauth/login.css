@@ -67,12 +67,12 @@
 
 .oauth-dialog .login-dialog .login-pane {
   float: left;
-  width: 42%;
+  width: 168px;
 }
 
 .oauth-dialog .login-dialog .register-pane {
   float: right;
-  width: 58%;
+  width: 240px;
 }
 
 /* registration dialog styles */
