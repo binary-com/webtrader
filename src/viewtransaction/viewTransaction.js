@@ -11,6 +11,34 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
+  var market_data_disruption_win = null;
+  function show_market_data_disruption_win(proposal) {
+    if(market_data_disruption_win){
+       market_data_disruption_win.moveToTop();
+       return;
+    }
+    var msg = "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.";
+    // var msg = proposal.validation_error;
+    var root = $('<div class="data-disruption-dialog">' + msg + '</div>');
+
+    market_data_disruption_win = windows.createBlankWindow(root, {
+        title: ' There was an error ',
+        height: 200,
+        resizable:false,
+        collapsable:false,
+        minimizable: false,
+        maximizable: false,
+        destroy: function() {
+          market_data_disruption_win && market_data_disruption_win.dialog('destroy').remove();
+          market_data_disruption_win = null;
+        },
+        'data-authorized': 'true'
+    });
+
+    market_data_disruption_win.dialog('open');
+    window.dd = market_data_disruption_win;
+  }
+
   function init_chart(root, state, options) {
       var data = [];
       var type = '';
@@ -138,6 +166,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
            .then(function(data){
               var proposal = data.proposal_open_contract;
+              /* check for market data disruption error */
+              if(proposal.symbol === undefined || proposal.longcode === undefined) {
+                show_market_data_disruption_win(proposal);
+                return;
+              }
               proposal.transaction_id = transaction_id;
               proposal.symbol = proposal.underlying;
               init_dialog(proposal);
