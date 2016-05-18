@@ -60,7 +60,14 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       };
 
       state.remove = function(token){
-        console.warn(token);
+        liveapi.send({api_token:1, delete_token: token.token })
+               .then(function(data){
+                 var tokens = (data.api_token && data.api_token.tokens) || [];
+                 state.update_tokens(tokens);
+               })
+               .catch(function(err){
+                 $.growl.error({ message: err.message });
+               });
       }
 
       state.change_route = function(route){
