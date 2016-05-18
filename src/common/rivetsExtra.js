@@ -19,6 +19,11 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     };
 
     /************************************* formatters ***************************************/
+
+    /* rivets formatter to get the property value of an object */
+    rv.formatters['prop'] = function(value, prop) {
+      return value && value[prop];
+    };
     /* rivets formatter to check if a value is one of the given arguments */
     rv.formatters['one-of'] = function() {
         var args = [].slice.call(arguments, 0),

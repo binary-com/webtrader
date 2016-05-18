@@ -98,6 +98,11 @@ body * {
     font-weight: normal!important;
 }
 
+div.ui-tooltip { /* override default jquery ui max tooltip width */
+    max-width: 400px;
+    line-height: 1.2em;
+}
+
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
@@ -282,9 +287,21 @@ button::-moz-focus-inner { border: 0; }
     width: 100%;
     cursor: pointer;
 }
+/* default style for blue button */
+.blue-button {
+    background: #273051;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+    cursor: pointer;
+}
 
 /* default style for inputs */
-input {
+input:not([type='checkbox']) {
   border: none;
   border: 1px solid gray;
   outline: 0;

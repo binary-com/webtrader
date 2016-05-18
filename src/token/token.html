@@ -1,0 +1,61 @@
+<div class="token-dialog">
+  <button class='blue-button shine'
+          rv-show='route | not-eq "create-token"'
+          rv-on-click='change_route | bind "create-token"'>Create token</button>
+
+  <div rv-show='route | eq "token-list" | and tokens | prop "length" | eq 0' class='empty-pane'>
+    <span>Tokens are special codes for accessing Binary mobile applications
+          and third party tools.</span>
+    <span>Press “Create token” button on the right to create your first token.</span>
+  </div>
+
+  <div rv-show='route | eq "token-list" | and tokens | prop "length" | gt 0' class='token-list-pane'>
+    <span class='ui-icon ui-icon-search'></span>
+    <input class='token-search' />
+    <table>
+      <thead> <tr>
+        <th>Name</th>
+        <th>Token</th>
+        <th>Permissions</th>
+        <th>Last used</th>
+        <th>Action</th>
+      </tr> </thead>
+      <tbody>
+        <tr rv-each-token='tokens'>
+          <td rv-text='token.display_name'></td>
+          <td rv-text='token.token'></td>
+          <td rv-text='token.permissions'></td>
+          <td rv-text='token.last_used | or -'></td>
+          <td>
+            <span rv-clipboard='token.token' class='ui-icon ui-icon-copy' rv-tooltip='"Copy"'></span>
+            <span rv-on-click='remove | bind token' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div  rv-show='route | eq "create-token"' class='create-token-pane'>
+    <span class='back-arrow' rv-on-click='change_route | bind "token-list"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back to list
+    </span>
+
+      <span> Token name </span>
+      <input class='token-input'
+             rv-value='token.name' />
+      <span class='explanation'>Describe what this token is for to find it later.</span>
+
+      <span> Token permissions <span class='question-mark' rv-tooltip='tooltip'> ? </span> </span>
+      <div class='token-scopes'>
+        <label> <input type='checkbox' rv-checked='token.scopes.read' /> Read </label>
+        <label> <input type='checkbox' rv-checked='token.scopes.trade' /> Trade </label>
+        <label> <input type='checkbox' rv-checked='token.scopes.payments' /> Payments </label>
+        <label> <input type='checkbox' rv-checked='token.scopes.admin' /> Admin </label>
+      </div>
+
+      <button class='green-button shine'
+              rv-disabled='token.btn_disabled'
+              rv-css-opacity='token.btn_disabled | ternary 0.5 1'
+              rv-on-click='token.add'>Create</button>
+  </div>
+</div>

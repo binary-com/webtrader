@@ -167,7 +167,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
            .then(function(data){
               var proposal = data.proposal_open_contract;
               /* check for market data disruption error */
-              if(proposal.symbol === undefined || proposal.longcode === undefined) {
+              if(proposal.underlying === undefined && proposal.longcode === undefined) {
                 show_market_data_disruption_win(proposal);
                 return;
               }
