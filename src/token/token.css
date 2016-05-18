@@ -1,0 +1,94 @@
+.token-dialog {
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  background: white !important;
+  position: relative;
+}
+
+.token-dialog > button {
+  position: absolute;
+  width: 120px;
+  right: 10px;
+  line-height: 23px;
+}
+.token-dialog .empty-pane > span {
+  display:  block;
+  width: 440px;
+  margin-bottom: 40px;
+}
+
+/* token list pane */
+.token-dialog .token-list-pane > span {
+  display: inline;
+  position: relative;
+  left: 10px;
+  top: 3px;
+  color: #aaa;
+}
+.token-dialog .token-list-pane input.token-search {
+  display:  inline;
+  padding-left: 20px;
+  width: 200px;
+  line-height: 28px;
+}
+.token-dialog .token-list-pane table {
+  border-collapse: collapse;
+  margin-top: 15px;
+  line-height: 22px;
+  width: 100%;
+}
+.token-dialog .token-list-pane table thead { line-height: 30px; }
+.token-dialog .token-list-pane table tbody tr:nth-child(odd) { background: #eee; }
+.token-dialog .token-list-pane table tbody td:last-child { text-align: right; }
+.token-dialog .token-list-pane table tbody td span {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* create token pane */
+.token-dialog .create-token-pane > span {
+  display: block;
+}
+
+.token-dialog .create-token-pane span.back-arrow {
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.token-dialog .create-token-pane .back-arrow > span {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.token-dialog .create-token-pane input:not([type='checkbox'])  {
+  width: 50%;
+  margin-top: 5px;
+}
+
+.token-dialog .create-token-pane span.explanation {
+  color: #aaa;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 3px;
+}
+
+.token-dialog .create-token-pane .token-scopes { margin-top: 10px; }
+.token-dialog .create-token-pane .question-mark {
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.token-dialog .create-token-pane .token-scopes > label {
+  width: 120px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.token-dialog .create-token-pane > button {
+  width: 120px;
+}

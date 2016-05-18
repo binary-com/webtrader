@@ -28,6 +28,7 @@ requirejs.config({
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
+        'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level'
     },
     map: {
@@ -116,6 +117,13 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
             load_ondemand($navMenu.find("a.tradingTimes"), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
                 var elem = $navMenu.find("a.tradingTimes");
                 tradingTimes.init(elem);
+                elem.click();
+            });
+
+            //Register async loading of token-management sub-menu
+            load_ondemand($navMenu.find("a.token-management"), 'click','Loading Token management ...', 'token/token', function (tokenMangement) {
+                var elem = $navMenu.find("a.token-management");
+                tokenMangement.init(elem);
                 elem.click();
             });
 
