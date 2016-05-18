@@ -51,7 +51,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
            var scopes = token.scopes;
            token.permissions = scopes.length == 4 ? 'All' : scopes.join(', ');
 
-           console.warn(token.last_used);
            token.last_used = token.last_used ? moment.utc(token.last_used, 'YYYY-MM-DD HH:mm:ss').fromNow() : '-';
          });
          state.tokens = tokens;
@@ -99,7 +98,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                });
       }
 
-      liveapi.send({api_token: 1})
+      token_win_view = rv.bind(root[0], state);
+      return liveapi.send({api_token: 1})
              .then(function(data){
                var tokens = (data.api_token && data.api_token.tokens) || [];
                state.update_tokens(tokens);
@@ -108,7 +108,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                 $.growl.error({ message: err.message });
                 console.error(err);
              });
-      token_win_view = rv.bind(root[0], state);
     }
 
     function initTokenWin(root) {
@@ -121,6 +120,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           maximizable: false,
           width: 700,
           minHeight: 60,
+          'data-authorized': true,
           close: function () { },
           open: function () { },
           destroy: function() {
@@ -128,9 +128,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             token_win_view = null;
           }
       });
-      init_state(root);
-      token_win.dialog('open');
-      window.tkn = token_win;
+      init_state(root).then(function(){
+        token_win.dialog('open');
+      })
     }
 
     return {
