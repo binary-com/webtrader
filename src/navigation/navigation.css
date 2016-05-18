@@ -306,7 +306,8 @@ body {
 /* login button */
 #nav-container .login {
   position: absolute;
-  right: 5px;
+  top: 8px;
+  right: 10px;
 }
 
 #nav-container .login span.ui-icon {
@@ -321,11 +322,10 @@ body {
   border: none;
   border-radius: 5px;
   outline: 0;
-  margin-top: 8px;
 }
 
 #nav-container .login button[disabled] { opacity: 0.5;}
-#nav-container .login button.login { background: #2e8836; }
+#nav-container .login button { background: #2e8836; }
 /*#nav-container .login button.logout { background: #4F577E; }*/
 
 /* account menu */
