@@ -205,8 +205,8 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
             });
         });
 
-        /*Trigger T&C check, self-exclusion*/
-        require(['tc/tc', 'selfexclusion/selfexclusion']);
+        /*Trigger T&C check, self-exclusion, reality check, chrome extension check*/
+        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'tc/tc', 'realitycheck/realitycheck']);
     }
 
 

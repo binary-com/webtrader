@@ -5,9 +5,7 @@
 
 define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation) {
 
-    var closeAllObject = null;
-    var dialogCounter = 0;
-    var $menuUL = null;
+    var closeAllObject = null, dialogCounter = 0, $menuUL = null;
 
     /* shuffle the given array */
     function shuffle(array) {
@@ -421,23 +419,14 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                     delayAmount : sym.delay_amount
                                 });
                         });
+                        
                         tileDialogs(); // Trigger tile action
-
-                        //If reality check is started before dialogs are rendered, it does not respect the modality of the reality check window
-                        require(['realitycheck/realitycheck'], function (realitycheck) {
-                            if (liveapi.is_authenticated()) {
-                                realitycheck.init();
-                            }
-                        });
-
-                        //Load check for chrome extension installation
-                        require(['chrome/chrome']);
-
+                        
                     });
             });
 
             /* automatically log the user in if we have oauth_token in local_storage */
-            require(['websockets/binary_websockets', ], function(liveapi) {
+            require(['websockets/binary_websockets' ], function(liveapi) {
               if(local_storage.get('oauth')) {
                 liveapi.cached.authorize().catch(function(err) {
                   console.error(err.message);
@@ -545,15 +534,15 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 li = $('<li />').addClass(id + 'LI').html(link);
                 $menuUL.append(li);
             };
-            add_to_windows_menu();
+            if(!options.ignoreTileAction) add_to_windows_menu();
 
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
-                li.remove();
+                if (li) li.remove();
                 li = null;
             });
             blankWindow.on('dialogopen', function () {
-                !li && add_to_windows_menu();
+                !li && !options.ignoreTileAction && add_to_windows_menu();
             });
             var last_document_size = { };
             blankWindow.on('dialogextendbeforerestore', function(){
