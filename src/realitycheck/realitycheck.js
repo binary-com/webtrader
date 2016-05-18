@@ -6,7 +6,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     var win = null, timerHandler = null;
     var settingsData = {
         timeOutInMins: (local_storage.get("realitycheck") || {}).timeOutInMins || 10,
-        timeOutMin: 1, timeOutMax: 120, //TODO
+        timeOutMin: 10, timeOutMax: 120,
         loginId: null,
         durationInMins: null,
         bought: null,
@@ -142,11 +142,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         var realityCheck_fromStorage = local_storage.get("realitycheck");
         console.log('realityCheck_fromStorage', realityCheck_fromStorage);
         if (!realityCheck_fromStorage) {
-            init().then(function() { win.dialog('open'); });
+            init().then(function() {
+                var $root = win.dialog('widget');
+                $root.find('.realitycheck_firstscreen').show();
+                $root.find('.realitycheck_secondscreen').hide();
+                win.dialog('open');
+            });
         } else {
             var durationInMins = (moment.utc().valueOf() - (realityCheck_fromStorage.accepted_time)) / 60 / 1000;
             if (durationInMins >= realityCheck_fromStorage.timeOutInMins) {
-                init().then(function() { win.dialog('open'); });
+                init().then(function() {
+                    var $root = win.dialog('widget');
+                    $root.find('.realitycheck_firstscreen').show();
+                    $root.find('.realitycheck_secondscreen').hide();
+                    win.dialog('open');
+                });
             } else {
                 init().then(function() { setOrRefreshTimer(Math.abs(realityCheck_fromStorage.timeOutInMins - durationInMins)) });
             }
