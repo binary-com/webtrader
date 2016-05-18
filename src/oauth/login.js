@@ -23,8 +23,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
         if(!token) { /* find the appropriate token */
           var href = window.location.href;
+          var https_href = href.replace('http://', 'https://'); // IE11 opens webtrader on http://
           for(var web_address in app_ids) {
-            if(href.lastIndexOf(web_address,0) == 0) {
+            if(href.lastIndexOf(web_address,0) == 0 || https_href.lastIndexOf(web_address,0) == 0) {
               token = app_ids[web_address];
               break;
             }
