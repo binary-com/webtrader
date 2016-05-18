@@ -14,7 +14,7 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
                 show = !accepted_or_cancel_time;
                 if (!show) {
                     var diff = (moment.utc().valueOf() - accepted_or_cancel_time);
-                    show = (diff >= (24 * 60 * 60 * 1000));//if one day elapsed
+                    show = (diff >= (7 * 24 * 60 * 60 * 1000));//if one week elapsed
                 }
             }
             return show;
