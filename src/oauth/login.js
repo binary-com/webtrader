@@ -40,6 +40,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             maximizable: false,
             width: 408,
             height: 150,
+            'data-authorized': true,
             close: function () {
               login_win.dialog('destroy');
               login_win.remove();

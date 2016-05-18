@@ -5,6 +5,29 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     var token_win = null;
     var token_win_view = null;
 
+    /* rivetjs clipboard copy binder */
+    rv.binders['clipboard'] = {
+        routine: function (el, text) {
+          var clip = new clipboard(el, {
+              text: function(trigger) { return text; }
+          });
+
+          clip.on('success', function() {
+              $.growl.notice({ message: 'Copied "' + text + '"' });
+          });
+
+          clip.on('error', function() {
+            $.growl.error({ message: 'Your browser doesn\'t support copy to clipboard' });
+          });
+
+          el._rv_clipboard_ && el._rv_clipboard_.destroy();
+          el._rv_clipboard_ = clip;
+        },
+        unbind: function (el) {
+          el._rv_clipboard_.destroy();
+        }
+    };
+
     function init($menuLink) {
       $menuLink.click(function () {
           if (!token_win)
@@ -36,9 +59,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         }
       };
 
-      state.copy = function(token){
-        console.warn(token);
-      }
       state.remove = function(token){
         console.warn(token);
       }
@@ -121,12 +141,12 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           width: 700,
           minHeight: 60,
           'data-authorized': true,
-          close: function () { },
-          open: function () { },
-          destroy: function() {
+          close: function () {
             token_win_view && token_win_view.unbind();
             token_win_view = null;
-          }
+            token_win = null;
+          },
+          open: function () { },
       });
       init_state(root).then(function(){
         token_win.dialog('open');

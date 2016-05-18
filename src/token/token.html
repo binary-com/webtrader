@@ -27,7 +27,7 @@
           <td rv-text='token.permissions'></td>
           <td rv-text='token.last_used | or -'></td>
           <td>
-            <span rv-on-click='copy | bind token' class='ui-icon ui-icon-copy' rv-tooltip='"Copy"'></span>
+            <span rv-clipboard='token.token' class='ui-icon ui-icon-copy' rv-tooltip='"Copy"'></span>
             <span rv-on-click='remove | bind token' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
           </td>
         </tr>
