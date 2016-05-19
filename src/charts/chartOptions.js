@@ -2,20 +2,7 @@
  * Created by arnab on 2/16/15.
  */
 
-define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/util"], function($, chartingRequestMap) {
-    "use strict";
-    var barsTable = chartingRequestMap.barsTable;
-
-    function disableEnableOverlay(newTabId, chartType) {
-      var overlay = $("#" + newTabId + "_header").find('li.overlay');
-      if (isDataTypeClosePriceOnly(chartType)) {
-        overlay.removeClass('ui-state-disabled');
-      }
-      else {
-        overlay.addClass('ui-state-disabled');
-      }
-      overlay.closest("ul.ui-menu").menu("refresh");
-    };
+define(['jquery', "charts/chartWindow", "common/util"], function($) {
 
     return {
 
@@ -73,8 +60,6 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                           });
                         }
 
-                        //Toggle overlay menu
-                        disableEnableOverlay(newTabId, type);
                         $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                     });
 
@@ -189,8 +174,6 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                 });
 
                 $("#" + newTabId + "_header").prepend($html);
-                //Enable/disable overlay menu based on chart type
-                disableEnableOverlay(newTabId, chartType);
             });
 
         },
@@ -229,10 +212,6 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
             } else {
                 logMenuObj.addClass('ui-state-disabled');
             }
-        },
-
-        disableEnableOverlay : function(newTabId, chartType) {
-          disableEnableOverlay(newTabId, chartType);
         }
 
     };
