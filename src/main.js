@@ -127,6 +127,13 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 elem.click();
             });
 
+            //Register async loading of change-password sub-menu
+            load_ondemand($navMenu.find("a.change-password"), 'click','Loading Password dialog ...', 'password/password', function (password) {
+                var elem = $navMenu.find("a.change-password");
+                password.init(elem);
+                elem.click();
+            });
+
             //Register async loading of window asset-index
             load_ondemand($navMenu.find("a.assetIndex"), 'click', 'loading Asset Index ...', 'assetindex/assetIndex',
                 function (assetIndex) {
