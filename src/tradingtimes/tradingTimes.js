@@ -66,8 +66,27 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
     function init($menuLink) {
         require(["css!tradingtimes/tradingTimes.css"]);
         $menuLink.click(function () {
+            //Store this new window in local_storage
+            var windows_ls = local_storage.get('windows') || {};
+            windows_ls.windows = (windows_ls.windows || []);
+            if (_.findIndex(windows_ls.windows, function(ew) { return ew.isTradingTimes; }) == -1) {
+                windows_ls.windows.push({isTradingTimes: true});
+                local_storage.set('windows', windows_ls);
+            }
             if (!tradingWin) {
-                tradingWin = windows.createBlankWindow($('<div/>'), { title: 'Trading Times', width: 700, minHeight:110 });
+                tradingWin = windows.createBlankWindow($('<div/>'), {
+                    title: 'Trading Times',
+                    width: 700,
+                    minHeight:110,
+                    close: function () {
+                        windows_ls = local_storage.get('windows') || {};
+                        var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isTradingTimes; });
+                        if (storeIndex >= 0) {
+                            windows_ls.windows.splice(storeIndex, 1);
+                            local_storage.set('windows', windows_ls);
+                        }
+                    }
+                });
                 tradingWin.dialog('open');
                 require(['text!tradingtimes/tradingTimes.html'], initTradingWin);
             }

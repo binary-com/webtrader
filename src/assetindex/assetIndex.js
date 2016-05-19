@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on October 19, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation/menu", "datatables", "jquery-growl"], function ($, windows, liveapi, menu) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation/menu", 'lodash', "datatables", "jquery-growl"], function ($, windows, liveapi, menu, _) {
 
     var table = null;
     var assetWin = null;
@@ -9,9 +9,28 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
     function init(li) {
         require(['css!assetindex/assetIndex.css']);
         li.click(function () {
+            //Store this new window in local_storage
+            var windows_ls = local_storage.get('windows') || {};
+            windows_ls.windows = (windows_ls.windows || []);
+            if (_.findIndex(windows_ls.windows, function(ew) { return ew.isAsset; }) == -1) {
+                windows_ls.windows.push({isAsset: true});
+                local_storage.set('windows', windows_ls);
+            }
             if (!assetWin) {
-                assetWin = windows.createBlankWindow($('<div/>'), { title: 'Asset Index', width: 750, minHeight:70 });
-                assetWin.dialog('open'); /* bring winodw to front */
+                assetWin = windows.createBlankWindow($('<div/>'), {
+                    title: 'Asset Index',
+                    width: 750,
+                    minHeight:70,
+                    close: function () {
+                        windows_ls = local_storage.get('windows') || {};
+                        var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isAsset; });
+                        if (storeIndex >= 0) {
+                            windows_ls.windows.splice(storeIndex, 1);
+                            local_storage.set('windows', windows_ls);
+                        }
+                    }
+                });
+                assetWin.dialog('open'); /* bring window to front */
                 require(['text!assetindex/assetIndex.html'], initAssetWin);
             }
             else

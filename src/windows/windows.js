@@ -7,6 +7,26 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
 
     var closeAllObject = null, dialogCounter = 0, $menuUL = null;
 
+    /* options: { width: 350, height: 400 } */
+    function calculateChartCount(options) {
+        options = $.extend({ width: 350, height: 400 }, options);
+        var rows = Math.floor($(window).height() / options.height) || 1,
+            cols = Math.floor($(window).width() / options.width) || 1;
+
+        if (isSmallView()) //For small size screens
+            rows = cols = 1;
+        /**** limi the number of charts to 4 ****/
+        if(rows * cols > 4) {
+          rows = 1;
+          cols = 4;
+        };
+        return {
+            rows: rows,
+            cols: cols,
+            total: rows * cols
+        };
+    }
+
     /* shuffle the given array */
     function shuffle(array) {
         var temp, rand_inx;
@@ -354,7 +374,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
           return;
         }
         $('body > .footer').css("margin-top", new_height - 100);
-    };
+    }
+
     function fixMinimizedDialogsPosition() {
         var footer_height = $('.addiction-warning').height();
         var scroll_bottom = $(document).height() - $(window).height() - $(window).scrollTop();
@@ -398,31 +419,76 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 //Attach click listener for tile menu
                 tileObject.click(tileDialogs);
 
-                liveapi
-                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                    .then(function (markets) {
-                        markets = menu.extractFilteredMarkets(markets, {
-                            filter: function (sym) {
-                                return sym.symbol === 'frxUSDJPY';
+                //If user close/opened some charts, then open them else, open random charts
+                var windows_ls = local_storage.get('windows');
+                if (windows_ls) {
+                    (windows_ls.windows || []).forEach(function (eWindow) {
+                        if (eWindow) {
+                            if (eWindow.isChart) {
+                                chartWindowObj
+                                    .addNewWindow({
+                                        instrumentCode: eWindow.instrumentCode,
+                                        instrumentName: eWindow.instrumentName,
+                                        timePeriod: eWindow.timePeriod,
+                                        type: eWindow.type,
+                                        delayAmount: eWindow.delayAmount
+                                    });
+                            } else if (eWindow.isTrade) {
+                                liveapi
+                                    .send({contracts_for: eWindow.symbol})
+                                    .then(function (res) {
+                                        require(['trade/tradeDialog'], function (tradeDialog) {
+                                            _.unset(eWindow, 'isTrade');
+                                            tradeDialog.init(eWindow, res.contracts_for);
+                                        });
+                                    }).catch(function (err) {
+                                        require(['jquery-growl'], function() {
+                                            $.growl.error({ message: err.message }); console.error(err);
+                                        });
+                                    });
+                            } else if (eWindow.isAsset) {
+                                $("#nav-container .assetIndex").click();
+                            } else if (eWindow.isTradingTimes) {
+                                $("#nav-container .tradingTimes").click();
+                            } else if (eWindow.isViewHistorical) {
+                                $("#nav-container .download").click();
                             }
-                        });
-                        markets && markets[0] &&
-                        markets[0].submarkets && markets[0].submarkets[0] &&
-                        markets[0].submarkets[0].instruments &&
-                        markets[0].submarkets[0].instruments.forEach(function(sym) {
-                            chartWindowObj
-                                .addNewWindow({
-                                    instrumentCode : sym.symbol,
-                                    instrumentName : sym.display_name,
-                                    timePeriod : '1d',
-                                    type : 'candlestick',
-                                    delayAmount : sym.delay_amount
-                                });
-                        });
-                        
-                        tileDialogs(); // Trigger tile action
-                        
+                        }
                     });
+                    _.delay(tileDialogs, 1000); // Trigger tile action
+                } else {
+                    var counts = calculateChartCount();
+                    liveapi
+                        .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
+                        .then(function (markets) {
+                            markets = menu.extractChartableMarkets(markets);
+                            /* return a random element of an array */
+                            var rand = function (arr) {
+                                return arr[Math.floor(Math.random() * arr.length)];
+                            };
+                            var timePeriods = ['2h', '4h', '8h', '1d'];
+                            var chartTypes = ['candlestick', 'line', 'ohlc', 'spline']; //This is not the complete chart type list, however its good enough to randomly select one from this subset
+                            for (var inx = 0; inx < counts.total; ++inx) {
+                                var submarkets = rand(markets).submarkets;
+                                var symbols = rand(submarkets).instruments;
+                                var sym = rand(symbols);
+                                var timePeriod = rand(timePeriods);
+                                var chart_type = rand(chartTypes);
+
+                                chartWindowObj
+                                    .addNewWindow({
+                                        instrumentCode: sym.symbol,
+                                        instrumentName: sym.display_name,
+                                        timePeriod: timePeriod,
+                                        type: chart_type,
+                                        delayAmount: sym.delay_amount
+                                    });
+                            }
+
+                            tileDialogs(); // Trigger tile action
+                        });
+                }
+
             });
 
             /* automatically log the user in if we have oauth_token in local_storage */
