@@ -461,6 +461,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                     liveapi
                         .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
                         .then(function (markets) {
+
+                            windows_ls = local_storage.get('windows') || {};
+                            windows_ls.windows = (windows_ls.windows || []);
+
                             markets = menu.extractChartableMarkets(markets);
                             /* return a random element of an array */
                             var rand = function (arr) {
@@ -475,15 +479,24 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 var timePeriod = rand(timePeriods);
                                 var chart_type = rand(chartTypes);
 
-                                chartWindowObj
-                                    .addNewWindow({
-                                        instrumentCode: sym.symbol,
-                                        instrumentName: sym.display_name,
-                                        timePeriod: timePeriod,
-                                        type: chart_type,
-                                        delayAmount: sym.delay_amount
-                                    });
+                                chartWindowObj.addNewWindow({
+                                                instrumentCode: sym.symbol,
+                                                instrumentName: sym.display_name,
+                                                timePeriod: timePeriod,
+                                                type: chart_type,
+                                                delayAmount: sym.delay_amount
+                                            });
+
+                                windows_ls.windows.push({
+                                    instrumentCode: sym.symbol,
+                                    instrumentName: sym.display_name,
+                                    timePeriod: timePeriod,
+                                    type: chart_type,
+                                    delayAmount: sym.delay_amount,
+                                    isChart: true
+                                });
                             }
+                            local_storage.set('windows', windows_ls);
 
                             tileDialogs(); // Trigger tile action
                         });
