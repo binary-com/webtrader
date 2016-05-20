@@ -9,28 +9,36 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     var login_win = null;
     var login_win_view = null; // rivets view
 
+    /* returns a promise, an empty token will be returned if not token found. */
+    function get_token() {
+
+      return new Promise(function(resolve, reject){
+        require(['text!oauth/app_id.json'], function(app_ids) {
+            app_ids = JSON.parse(app_ids);
+            var config = local_storage.get('config');
+            var token = (config && config.app_id) || '';
+
+            if(!token) { /* find the appropriate token */
+              var href = window.location.href;
+              for(var web_address in app_ids) {
+                if(href.lastIndexOf(web_address,0) == 0) {
+                  token = app_ids[web_address];
+                  break;
+                }
+              }
+            }
+            resolve(token);
+        });
+      });
+    }
+
     function init() {
       if(login_win){
         login_win.moveToTop();
         return;
       }
 
-      require(['text!oauth/login.html', 'text!oauth/app_id.json'], function(root, app_ids) {
-        app_ids = JSON.parse(app_ids);
-
-        var config = local_storage.get('config');
-        var token = (config && config.app_id) || '';
-
-        if(!token) { /* find the appropriate token */
-          var href = window.location.href;
-          for(var web_address in app_ids) {
-            if(href.lastIndexOf(web_address,0) == 0) {
-              token = app_ids[web_address];
-              break;
-            }
-          }
-        }
-
+      require(['text!oauth/login.html'], function(root) {
         root = $(root);
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
@@ -53,16 +61,19 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             }
         });
         login_win.parent().css('overflow', 'visible');
-        init_state(root, token);
-        login_win.dialog('open');
 
-        /* update dialog position, this way when dialog is resized it will not move*/
-        var offset = login_win.dialog('widget').offset();
-        offset.top = 80;
-        login_win.dialog("option", "position", { my: offset.left, at: offset.top });
-        login_win.dialog('widget').css({
-            left: offset.left + 'px',
-            top: offset.top + 'px'
+        get_token().then(function(token){
+          init_state(root, token);
+          login_win.dialog('open');
+
+          /* update dialog position, this way when dialog is resized it will not move*/
+          var offset = login_win.dialog('widget').offset();
+          offset.top = 80;
+          login_win.dialog("option", "position", { my: offset.left, at: offset.top });
+          login_win.dialog('widget').css({
+              left: offset.left + 'px',
+              top: offset.top + 'px'
+          });
         });
       });
     }
@@ -244,6 +255,13 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     }
 
     return {
-      init: init
+      init: init,
+      login: function() {
+          get_token().then(function(token){
+            var config = local_storage.get('config');
+            var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
+            window.location =  oauth_url + '?app_id=' + token + '&scope=read,trade,payments,admin';
+          });
+      }
     }
 });
