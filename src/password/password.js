@@ -96,6 +96,12 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                  }
                  state.btn.disabled = false;
                  $.growl.notice({ message: 'Password successfully updated.'});
+                 $.growl.notice({ message: 'Redirecting to oauth login page,<br/>Please use your new password to login.'});
+                 require(['oauth/login'], function(login){
+                   _.defer(function(){
+                     login.login();
+                   },1000);
+                 });
                  password_win.dialog('close');
                })
                .catch(function(err){
