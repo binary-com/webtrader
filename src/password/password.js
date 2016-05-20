@@ -2,7 +2,7 @@
  * Created by amin on May 19, 2016.
  */
 
-define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra'], function(liveapi, windows, rv) {
+define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash'], function(liveapi, windows, rv, _) {
     require(['text!password/password.html']);
     require(['css!password/password.css']);
     var password_win = null;
@@ -46,8 +46,39 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra']
 
     function init_state(root) {
       var state = {
+        empty_fields: {
+          validate: false,
+          clear: _.debounce(function() {
+            state.empty_fields.validate = false;
+          }, 2000),
+          show: function() {
+            state.empty_fields.validate = true;
+            state.empty_fields.clear();
+          }
+        },
+        account: {
+          password: '',
+          new_password: '',
+          verify_password: ''
+        },
+        btn: {
+          disabled: false,
+        },
 
       };
+
+      state.password_error_message = function() {
+        var password = state.account.new_password;
+        if(password === '') return state.account.empty_fields.validate ? '* Please enter your new password' : '';
+        if(password.length < 6) return '* Password must be 6 characters minimum';
+        if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers';
+        return '';
+      };
+
+      state.btn.change = function() {
+        state.btn.disabled = true;
+        console.warn('change');
+      }
 
       password_win_view = rv.bind(root[0], state);
     }
