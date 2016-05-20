@@ -11,13 +11,13 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     function init($menuLink) {
       $menuLink.click(function () {
         if (!password_win)
-          require(['text!password/password.html'], init_passowrd_win);
+          require(['text!password/password.html'], init_password_win);
         else
           password_win.moveToTop();
       });
     }
 
-    function init_passowrd_win(root) {
+    function init_password_win(root) {
       root = $(root);
       password_win = windows.createBlankWindow(root, {
           title: 'Change password',
@@ -26,7 +26,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           minimizable: false,
           maximizable: false,
           // width: 408,
-          // height: 150,
+          height: 320,
           'data-authorized': true,
           close: function () {
             password_win.dialog('destroy');
@@ -69,15 +69,39 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       state.password_error_message = function() {
         var password = state.account.new_password;
-        if(password === '') return state.account.empty_fields.validate ? '* Please enter your new password' : '';
+        if(password === '') return state.empty_fields.validate ? '* Please enter your new password' : '';
         if(password.length < 6) return '* Password must be 6 characters minimum';
-        if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers';
+        if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain uppercase letters and numbers';
         return '';
       };
 
       state.btn.change = function() {
+        state.empty_fields.show();
+        var account = state.account;
+        if(state.account.password === ''
+            || state.password_error_message() !== ''
+            || state.account.new_password !== state.account.verify_password) {
+            return;
+        }
+        var request = {
+          change_password: 1,
+          old_password: state.account.password,
+          new_password: state.account.new_password
+        };
         state.btn.disabled = true;
-        console.warn('change');
+        liveapi.send(request)
+               .then(function(data){
+                 if(data.change_password !== 1){
+                   throw { message: 'Failed to update the password'};
+                 }
+                 state.btn.disabled = false;
+                 $.growl.notice({ message: 'Password successfully updated.'});
+                 password_win.dialog('close');
+               })
+               .catch(function(err){
+                 state.btn.disabled = false;
+                 $.growl.error({ message: err.message});
+               })
       }
 
       password_win_view = rv.bind(root[0], state);
