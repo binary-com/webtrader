@@ -136,34 +136,34 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         settingsData.currency= null;
     };
 
-    var login = function () {
-        console.log('Reality check login called');
+    var oauthLogin = function() {
         logout();
-        var realityCheck_fromStorage = local_storage.get("realitycheck");
-        console.log('realityCheck_fromStorage', realityCheck_fromStorage);
-        if (!realityCheck_fromStorage) {
-            init().then(function() {
-                var $root = win.dialog('widget');
-                $root.find('.realitycheck_firstscreen').show();
-                $root.find('.realitycheck_secondscreen').hide();
-                win.dialog('open');
-            });
-        } else {
-            var durationInMins = (moment.utc().valueOf() - (realityCheck_fromStorage.accepted_time)) / 60 / 1000;
-            if (durationInMins >= realityCheck_fromStorage.timeOutInMins) {
-                init().then(function() {
-                    var $root = win.dialog('widget');
-                    $root.find('.realitycheck_firstscreen').show();
-                    $root.find('.realitycheck_secondscreen').hide();
-                    win.dialog('open');
-                });
-            } else {
-                init().then(function() { setOrRefreshTimer(Math.abs(realityCheck_fromStorage.timeOutInMins - durationInMins)) });
-            }
-        }
+        init().then(function() {
+            var $root = win.dialog('widget');
+            $root.find('.realitycheck_firstscreen').show();
+            $root.find('.realitycheck_secondscreen').hide();
+            win.dialog('open');
+        });
     };
 
-    liveapi.events.on('login', login);
+    liveapi.events.on('oauth-login', oauthLogin);
+    liveapi.events.on('login', function (data) {
+
+        if (settingsData.loginId != data.authorize.loginid) {
+            logout();
+        }
+
+        var realityCheck_fromStorage = local_storage.get("realitycheck");
+        if (realityCheck_fromStorage) {
+            var durationInMins = (moment.utc().valueOf() - (realityCheck_fromStorage.accepted_time)) / 60 / 1000;
+            init().then(function () {
+                setOrRefreshTimer(durationInMins >= realityCheck_fromStorage.timeOutInMins ? 0 : Math.abs(realityCheck_fromStorage.timeOutInMins - durationInMins))
+            });
+        } else {
+            oauthLogin();
+        }
+
+    });
 
     liveapi.events.on('logout', function() {
         console.log('Reality check logout called');

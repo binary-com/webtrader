@@ -58,6 +58,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets"], function($
 
     });
 
+    liveapi.events.on("login", function(data) {
+        if (win) win.dialog('close');
+    });
+
     return {};
     
 });
