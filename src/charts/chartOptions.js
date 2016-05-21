@@ -61,6 +61,19 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                         }
 
                         $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
+
+                        /*
+                            If there are more than one charts with same instrument and timePeriod, then all of them are going to be changed
+                         */
+                        var instrumentCode = $('#' + newTabId + '_chart').data("instrumentCode");
+                        var windows_ls = local_storage.get('windows') || {};
+                        (windows_ls.windows || []).forEach(function (ew) {
+                            if (ew.isChart && ew.instrumentCode === instrumentCode && ew.timePeriod === timePeriod) {
+                                ew.type = type;
+                            }
+                        });
+                        local_storage.set('windows', windows_ls);
+
                     });
 
                 $html.find('ul:first > li').each(function () {
