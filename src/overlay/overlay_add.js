@@ -26,9 +26,9 @@ define(["jquery", 'lodash', "datatables"], function ($, _) {
 
                         //validate time period of the main series
                         require(['charts/chartOptions', "charts/charts", "common/util"], function (chartOptions, charts) {
+                            var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
                             var fn = function () {
                                 $(containerIDWithHash).data("overlayIndicator", true);
-                                var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
                                 if (chartOptions.isCurrentViewInLogScale(newTabId))
                                 {
                                     chartOptions.triggerToggleLogScale(newTabId);
@@ -41,6 +41,7 @@ define(["jquery", 'lodash', "datatables"], function ($, _) {
                             if (type === 'candlestick' || type == 'ohlc') {
                                 $(containerIDWithHash).data('type', 'line');
                                 charts.refresh( containerIDWithHash );
+                                chartOptions.selectChartType(newTabId, 'line', false);
                                 _.defer(fn);
                             } else { fn(); }
 

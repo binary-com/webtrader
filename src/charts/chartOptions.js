@@ -142,9 +142,7 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                         });
                     });
 
-                $html
-                    .find('.indicators li').click(function () {
-
+                $html.find('.indicators li').click(function () {
                         //If disabled, ignore this click
                         if ($(this).hasClass('addInidicators'))
                         {
@@ -224,6 +222,19 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                 logMenuObj.removeClass('ui-state-disabled');
             } else {
                 logMenuObj.addClass('ui-state-disabled');
+            }
+        },
+
+        /**
+         * Supported chartTypes are - candlestick, dot, line, dotline, ohlc, spline, table
+         * @param newTabId
+         * @param chartType
+         */
+        selectChartType: function(newTabId, chartType, generateEvent) {
+            if (generateEvent)  $("#" + newTabId + "_header").find('.chartType li.' + chartType).click();
+            else {
+                $("#" + newTabId + "_header").find('.chartType li span').removeClass('ui-icon ui-icon-check');
+                $("#" + newTabId + "_header").find('.chartType li.' + chartType).find('span:first').addClass('ui-icon ui-icon-check');
             }
         }
 
