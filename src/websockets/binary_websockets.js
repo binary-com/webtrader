@@ -2,14 +2,32 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['jquery', 'common/util'], function ($) {
+define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids_json) {
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
     var socket = null;
 
+    function get_app_id() {
+      var app_ids = JSON.parse(app_ids_json);
+      var config = local_storage.get('config');
+      var token = (config && config.app_id) || '';
+
+      if(!token) { /* find the appropriate token */
+        var href = window.location.href;
+        for(var web_address in app_ids) {
+          if(href.lastIndexOf(web_address, 0) == 0) {
+            token = app_ids[web_address];
+            break;
+          }
+        }
+      }
+      return token;
+    }
+    var app_id = get_app_id();
+
     var connect = function () {
         var config = local_storage.get('config');
-        var api_url = (config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l=EN';
+        var api_url = (config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?app_id=' + app_id + '&l=EN';
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
@@ -115,7 +133,7 @@ define(['jquery', 'common/util'], function ($) {
         }
     }
 
-    socket = connect();
+    socket = connect(); // connect
 
     //This is triggering asycn loading of tick_handler.
     //The module will automatically start working as soon as its loaded
@@ -366,7 +384,8 @@ define(['jquery', 'common/util'], function ($) {
                 api.send({sell_expired:1}).catch(function(err){ console.error(err);});
               }, (epoch+2 - now)*1000);
             }
-        }
+        },
+        app_id: app_id
     }
     /* always register for transaction & balance streams */
     api.events.on('login', function() {
