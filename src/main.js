@@ -77,7 +77,7 @@ requirejs.config({
 });
 
 /* Initialize the websocket as soon as posssilbe */
-require(['websockets/binary_websockets']);
+require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
 require(["jquery", "modernizr", "common/util"], function( $ ) {
 
