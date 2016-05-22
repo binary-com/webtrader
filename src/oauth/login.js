@@ -4,33 +4,9 @@
 
 define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash'], function(liveapi, windows, rv, _) {
     require(['text!oauth/login.html']);
-    require(['text!oauth/app_id.json']);
     require(['css!oauth/login.css']);
     var login_win = null;
     var login_win_view = null; // rivets view
-
-    /* returns a promise, an empty token will be returned if not token found. */
-    function get_token() {
-
-      return new Promise(function(resolve, reject){
-        require(['text!oauth/app_id.json'], function(app_ids) {
-            app_ids = JSON.parse(app_ids);
-            var config = local_storage.get('config');
-            var token = (config && config.app_id) || '';
-
-            if(!token) { /* find the appropriate token */
-              var href = window.location.href;
-              for(var web_address in app_ids) {
-                if(href.lastIndexOf(web_address,0) == 0) {
-                  token = app_ids[web_address];
-                  break;
-                }
-              }
-            }
-            resolve(token);
-        });
-      });
-    }
 
     function init() {
       if(login_win){
@@ -62,23 +38,22 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         });
         login_win.parent().css('overflow', 'visible');
 
-        get_token().then(function(token){
-          init_state(root, token);
-          login_win.dialog('open');
+        init_state(root);
+        login_win.dialog('open');
 
-          /* update dialog position, this way when dialog is resized it will not move*/
-          var offset = login_win.dialog('widget').offset();
-          offset.top = 80;
-          login_win.dialog("option", "position", { my: offset.left, at: offset.top });
-          login_win.dialog('widget').css({
-              left: offset.left + 'px',
-              top: offset.top + 'px'
-          });
+        /* update dialog position, this way when dialog is resized it will not move*/
+        var offset = login_win.dialog('widget').offset();
+        offset.top = 80;
+        login_win.dialog("option", "position", { my: offset.left, at: offset.top });
+        login_win.dialog('widget').css({
+            left: offset.left + 'px',
+            top: offset.top + 'px'
         });
       });
     }
 
-    function init_state(root, token) {
+    function init_state(root) {
+      var app_id = liveapi.app_id;
       var state = {
         route: { value: 'login' },
         login: { disabled: false },
@@ -123,14 +98,14 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           state.login.disabled = true;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + token + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + token + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
 
       state.route.update = function(route){
@@ -257,11 +232,10 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     return {
       init: init,
       login: function() {
-          get_token().then(function(token){
-            var config = local_storage.get('config');
-            var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
-            window.location =  oauth_url + '?app_id=' + token + '&scope=read,trade,payments,admin';
-          });
+          var app_id = liveapi.app_id;
+          var config = local_storage.get('config');
+          var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
+          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
     }
 });
