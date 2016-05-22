@@ -45,6 +45,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                              "<b>admin</b> - for API calls that change client settings";
       var state = {
         route: 'token-list',
+        search_input: '',
         tokens: [],
         tooltip: tooltip,
         token: {
@@ -58,6 +59,15 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           btn_disabled: false,
         }
       };
+
+      state.tokens_filtered = function() {
+        var txt = state.search_input;
+        return state.tokens.filter(function(token){
+          return txt === ''
+                || token.display_name.indexOf(txt) !== -1
+                || token.token.indexOf(txt) !== -1;
+        });
+      }
 
       state.remove = function(token){
         liveapi.send({api_token:1, delete_token: token.token })

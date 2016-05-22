@@ -11,7 +11,7 @@
 
   <div rv-show='route | eq "token-list" | and tokens | prop "length" | gt 0' class='token-list-pane'>
     <span class='ui-icon ui-icon-search'></span>
-    <input class='token-search' />
+    <input class='token-search' rv-value='search_input' />
     <table>
       <thead> <tr>
         <th>Name</th>
@@ -21,7 +21,7 @@
         <th>Action</th>
       </tr> </thead>
       <tbody>
-        <tr rv-each-token='tokens'>
+        <tr rv-each-token='tokens_filtered < search_input tokens'>
           <td rv-text='token.display_name'></td>
           <td rv-text='token.token'></td>
           <td rv-text='token.permissions'></td>
