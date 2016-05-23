@@ -19,6 +19,11 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     };
 
     /************************************* formatters ***************************************/
+
+    /* rivets formatter to get the property value of an object */
+    rv.formatters['prop'] = function(value, prop) {
+      return value && value[prop];
+    };
     /* rivets formatter to check if a value is one of the given arguments */
     rv.formatters['one-of'] = function() {
         var args = [].slice.call(arguments, 0),
@@ -40,9 +45,16 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['or'] = function (value, other) {
         return value || other;
     };
+    /* rivets formatter to replace a falsy value with a default one */
+    rv.formatters['or-not'] = function (value, other) {
+        return value || !other;
+    };
     /* rivets formatter to replace a true value with a default one */
     rv.formatters['and'] = function (vlaue, other){
       return vlaue && other;
+    }
+    rv.formatters['and-not'] = function (vlaue, other){
+      return vlaue && !other;
     }
     /* rivets formatter for > operator  */
     rv.formatters['gt'] = function (vlaue, other){
@@ -92,6 +104,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     /* rv formatter to prepend a value */
     rv.formatters['prepend'] = function(value, other){
       return (other && value) ? other + value : value;
+    }
+    /* rv formatter to append a value */
+    rv.formatters['append'] = function(value, other){
+      return (other && value) ? value + other : value;
     }
     /* ternary operator (condition ? first : second) */
     rv.formatters['ternary'] = function(condition, first, second){
@@ -155,6 +171,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       return (100*(changed - original)/original).toFixed(2)+'%';
     }
 
+    rv.formatters['is-valid-email'] = function(email) {
+      return email === '' || validateEmail(email);
+    }
+
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
        As in "execute this function only if 100 milliseconds have passed without it being called." */
     rv.formatters.debounce = function(value, callback, timeout) {
@@ -189,6 +209,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
               el.selectmenu('refresh');
         }
     };
+    /* bindar for jqueyr ui selectmenu options */
+    rv.binders['selectmenu-*'] = function (el, value) {
+        $(el).selectmenu('option', this.args[0], value);
+    }
 
     /* refersh the selectmenu on array changes */
     rv.binders.selectrefresh = {
@@ -377,6 +401,15 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }
     }
 
+    /* rv binder to active click event on another button when Enter key is pressed */
+    rv.binders['input-default-btn'] = function(el, jquery_selector) {
+      $(el).keyup(function(event){
+          if(event.keyCode == 13){
+            $(jquery_selector).click();
+          }
+      });
+    }
+
     /* bindar for css attributes */
     rv.binders['css-*'] = function (el, value) {
         var style = {};
@@ -386,6 +419,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
 
     rv.binders['show'] = function(el, value) {
         el.style.display = value ? '' : 'none';
+        return value;
+    };
+    rv.binders['visible'] = function(el, value) {
+        el.style.visibility = value ? 'visible' : 'hidden';
         return value;
     };
     /* binder to add or remove disabled attribute */

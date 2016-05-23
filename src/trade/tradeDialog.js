@@ -770,6 +770,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               }
               chartingRequestMap.unregister(key);
               view.unbind();
+
+              var windows_ls = local_storage.get('windows') || {};
+              var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isTrade && ew.symbol === symbol.symbol; });
+              if (storeIndex >= 0) {
+                windows_ls.windows.splice(storeIndex, 1);
+                local_storage.set('windows', windows_ls);
+              }
+
             }
         });
 

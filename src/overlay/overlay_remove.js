@@ -63,6 +63,14 @@ define(["jquery", 'lodash', "datatables"], function ($, _) {
                                                               compare: undefined
                                                           });
                                                           $(containerIDWithHash).data('overlayIndicator', null);
+                                                          require(['charts/chartOptions'], function (chartOptions) {
+                                                              var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
+                                                              chartOptions.disableEnableCandlestick(newTabId, true);
+                                                              chartOptions.disableEnableOHLC(newTabId, true);
+                                                          });
+                                                          _.defer(function () {
+                                                              chart.redraw();
+                                                          })
                                                           return false;
                                                       }
                                                   });

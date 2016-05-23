@@ -295,6 +295,13 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
     function init($menuLink) {
         require(["css!download/download.css"]);
         $menuLink.click(function () {
+            //Store this new window in local_storage
+            var windows_ls = local_storage.get('windows') || {};
+            windows_ls.windows = (windows_ls.windows || []);
+            if (_.findIndex(windows_ls.windows, function(ew) { return ew.isViewHistorical; }) == -1) {
+                windows_ls.windows.push({isViewHistorical: true});
+                local_storage.set('windows', windows_ls);
+            }
             if (!downloadWin) {
                 downloadWin = windows.createBlankWindow($('<div class="download_window"/>'),
                     {
@@ -309,6 +316,14 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                                 .highcharts();
                             if (chart) {
                                 chart.reflow();
+                            }
+                        },
+                        close: function () {
+                            windows_ls = local_storage.get('windows') || {};
+                            var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isViewHistorical; });
+                            if (storeIndex >= 0) {
+                                windows_ls.windows.splice(storeIndex, 1);
+                                local_storage.set('windows', windows_ls);
                             }
                         }
                     });

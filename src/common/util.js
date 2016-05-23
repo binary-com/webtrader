@@ -226,6 +226,37 @@ function setLongTimeout(callback, timeout_ms, _callBackWithHandler) {
     }
 }
 
+/* source: http://stackoverflow.com/questions/46155 */
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 String.prototype.replaceAll = function(target, replacement) {
     return this.split(target).join(replacement);
 };
+
+/* are we in webtrader.binary.com or webtrader.binary.com/beta */
+var is_beta = (function() {
+  var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
+  return function() {
+    return _is_beta_;
+  };
+})();
+
+/* simple localStorage cache to differentiate between live and beta */
+var local_storage = {
+  get: function(name){
+    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    var ret = localStorage.getItem(name);
+    return ret && JSON.parse(ret);
+  },
+  set: function(name, obj){
+    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    return localStorage.setItem(name, JSON.stringify(obj));
+  },
+  remove: function(name) {
+    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    return localStorage.removeItem(name);
+  }
+}

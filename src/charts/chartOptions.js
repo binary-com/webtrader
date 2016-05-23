@@ -2,20 +2,7 @@
  * Created by arnab on 2/16/15.
  */
 
-define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/util"], function($, chartingRequestMap) {
-    "use strict";
-    var barsTable = chartingRequestMap.barsTable;
-
-    function disableEnableOverlay(newTabId, chartType) {
-      var overlay = $("#" + newTabId + "_header").find('li.overlay');
-      if (isDataTypeClosePriceOnly(chartType)) {
-        overlay.removeClass('ui-state-disabled');
-      }
-      else {
-        overlay.addClass('ui-state-disabled');
-      }
-      overlay.closest("ul.ui-menu").menu("refresh");
-    };
+define(['jquery', "charts/chartWindow", "common/util"], function($) {
 
     return {
 
@@ -73,9 +60,20 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                           });
                         }
 
-                        //Toggle overlay menu
-                        disableEnableOverlay(newTabId, type);
                         $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
+
+                        /*
+                            If there are more than one charts with same instrument and timePeriod, then all of them are going to be changed
+                         */
+                        var instrumentCode = $('#' + newTabId + '_chart').data("instrumentCode");
+                        var windows_ls = local_storage.get('windows') || {};
+                        (windows_ls.windows || []).forEach(function (ew) {
+                            if (ew.isChart && ew.instrumentCode === instrumentCode && ew.timePeriod === timePeriod) {
+                                ew.type = type;
+                            }
+                        });
+                        local_storage.set('windows', windows_ls);
+
                     });
 
                 $html.find('ul:first > li').each(function () {
@@ -115,22 +113,21 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                                 $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                             }
                             else if ($(this).hasClass('currentPriceLI')) {
-                                require(["currentPriceIndicator"], function(currentPriceIndicator) {
+                                var clickedLI = $(this);
+                                require(["currentPriceIndicator"], function() {
                                     var chartIDWithHash = '#' + newTabId + '_chart';
                                     var chart = $(chartIDWithHash).highcharts();
-                                    //Find currentPriceOptions prop for each series on chart. This prop will contain list of unique IDs that
-                                    //should be removed
-                                    var removed = false;
-                                    $.each(chart.series, function(index, series) {
-                                        $.each(currentPriceIndicator.getCurrentPriceOptions(), function (key, value) {
-                                            if (value && series.options && series.options.id && value.parentSeriesID == series.options.id) {
-                                                series.removeCurrentPrice(key);
-                                                removed = true;
+                                    var remove = !clickedLI.find('span:first').hasClass('ui-icon-check');
+                                    if (remove) {
+                                        console.log('Remove current line');
+                                        $.each(chart.series, function (index, series) {
+                                            if (series.options.isInstrument) {
+                                                series.removeCurrentPrice();
                                             }
                                         });
-                                    });
-                                    if (!removed) {
+                                    } else {
                                         //Means this is not a remove case, we have to add the indicator
+                                        console.log('Add current line');
                                         chart.series.forEach(function(series){
                                             if (series.options.isInstrument) {
                                                 series.addCurrentPrice();
@@ -145,9 +142,7 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                         });
                     });
 
-                $html
-                    .find('.indicators li').click(function () {
-
+                $html.find('.indicators li').click(function () {
                         //If disabled, ignore this click
                         if ($(this).hasClass('addInidicators'))
                         {
@@ -190,8 +185,6 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                 });
 
                 $("#" + newTabId + "_header").prepend($html);
-                //Enable/disable overlay menu based on chart type
-                disableEnableOverlay(newTabId, chartType);
             });
 
         },
@@ -232,8 +225,17 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
             }
         },
 
-        disableEnableOverlay : function(newTabId, chartType) {
-          disableEnableOverlay(newTabId, chartType);
+        /**
+         * Supported chartTypes are - candlestick, dot, line, dotline, ohlc, spline, table
+         * @param newTabId
+         * @param chartType
+         */
+        selectChartType: function(newTabId, chartType, generateEvent) {
+            if (generateEvent)  $("#" + newTabId + "_header").find('.chartType li.' + chartType).click();
+            else {
+                $("#" + newTabId + "_header").find('.chartType li span').removeClass('ui-icon ui-icon-check');
+                $("#" + newTabId + "_header").find('.chartType li.' + chartType).find('span:first').addClass('ui-icon ui-icon-check');
+            }
         }
 
     };

@@ -151,6 +151,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
     function init(data, extra, show_callback, hide_callback){
       var root = $(html);
       var buy = data.buy;
+      var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       var state = {
         title: {
           text: 'Contract Confirmation',
@@ -196,7 +197,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                 return {value: tick.quote*1, label:'Barrier ('+tick.quote+')', id: 'plot-barrier-y'};
 
               if(this.category === 'Asians') {
-                var avg = this.average().toFixed(5);
+                //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
+                var avg = this.average().toFixed(decimal_digits + 1);
                 return {value: avg, label:'Average ('+ avg +')', id: 'plot-barrier-y'};
               }
               return null;
@@ -227,6 +229,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         }
         if(status === 'won') {
             state.buy.balance_after = buy.balance_after*1 + state.buy.payout*1;
+            liveapi.sell_expired(); // to update balance immediately 
         }
         state.buy.show_result = true;
       }

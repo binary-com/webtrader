@@ -57,15 +57,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             var transactions = (data.statement && data.statement.transactions) || [];
             var rows = transactions.map(function (trans) {
                 var amount = trans.amount * 1;
-                var svg = amount > 0 ? 'up' : amount < 0 ? 'down' : 'equal';
-                var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
                 return [
                     epoch_to_string(trans.transaction_time, { utc: true }),
                     trans.transaction_id,
                     _.capitalize(trans.action_type),
-                     img + trans.longcode ,
+                     trans.longcode ,
                     (trans.amount * 1).toFixed(2),
                     '<b>' + formatPrice(trans.balance_after) + '</b>',
+                    '<button class="green-button shine">View</button>',
                     trans, /* data for view transaction dailog - when clicking on arrows */
                 ];
             });
@@ -158,7 +157,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'IMG' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();

@@ -24,11 +24,11 @@ requirejs.config({
         'rivets': 'lib/rivets/dist/rivets.min',
         'sightglass': 'lib/sightglass/index',
         'timepicker': 'lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker',
-        'js-cookie':'lib/js-cookie/src/js.cookie',
         'lodash': 'lib/lodash/dist/lodash.min',
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
+        'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level'
     },
     map: {
@@ -77,15 +77,14 @@ requirejs.config({
 });
 
 /* Initialize the websocket as soon as posssilbe */
-require(['websockets/binary_websockets']);
+require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
 require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     "use strict";
 
-    //TODO if SVG, websockets are not allowed, then redirect to unsupported_browsers.html
-    if (!Modernizr.svg) {
-      window.location.href = 'unsupported_browsers.html';
+    if (!Modernizr.svg || !Modernizr.websockets || Modernizr.touch || !Modernizr.localstorage) {
+      window.location.href = 'unsupported_browsers/unsupported_browsers.html';
       return;
     }
 
@@ -98,7 +97,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css','css!main.css'])
+    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icons.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);
@@ -118,6 +117,20 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
             load_ondemand($navMenu.find("a.tradingTimes"), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
                 var elem = $navMenu.find("a.tradingTimes");
                 tradingTimes.init(elem);
+                elem.click();
+            });
+
+            //Register async loading of token-management sub-menu
+            load_ondemand($navMenu.find("a.token-management"), 'click','Loading Token management ...', 'token/token', function (tokenMangement) {
+                var elem = $navMenu.find("a.token-management");
+                tokenMangement.init(elem);
+                elem.click();
+            });
+
+            //Register async loading of change-password sub-menu
+            load_ondemand($navMenu.find("a.change-password"), 'click','Loading Password dialog ...', 'password/password', function (password) {
+                var elem = $navMenu.find("a.change-password");
+                password.init(elem);
                 elem.click();
             });
 
@@ -169,6 +182,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     elem.click();
                 });
 
+            //Register async loading of config dialog
+            load_ondemand($navMenu.find("a.config"), 'click', 'loading Configurations ...', 'config/config',
+                function (config) {
+                    var elem = $navMenu.find("a.config");
+                    config.init(elem);
+                    elem.click();
+                });
+
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
@@ -199,8 +220,8 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
             });
         });
 
-        /*Trigger T&C check, self-exclusion*/
-        require(['tc/tc', 'selfexclusion/selfexclusion']);
+        /*Trigger T&C check, self-exclusion, reality check, chrome extension check*/
+        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'tc/tc', 'realitycheck/realitycheck']);
     }
 
 
@@ -235,8 +256,8 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
 /* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
 function load_ondemand(element, event_name,msg, module_name, callback) {
-        var func_name = null;
-        element.one(event_name, func_name = function () {
+    var func_name = null;
+    element.one(event_name, func_name = function () {
 
         //Ignore click event, if it has disabled class
         if (element.hasClass('disabled')) {

@@ -6,12 +6,13 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
     var win = null;
 
     /*Set theme from local storage*/
-    var themeName = localStorage.getItem("webtrader_theme");
+    var themeName = local_storage.get("theme");
+    themeName = themeName && themeName.name;
     if (themeName) {
         require(['lib/highstock/themes/' + themeName]);
     }
 
-    $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' + 
+    $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
             'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default')
         .off('click')
         .on('click', function () {
@@ -39,10 +40,11 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
                                 $.growl.notice({message: 'Loading ' + $ele.text()});
                                 var themeName_file = $ele.attr('class').replace('theme_', '').replace('_', '-');
                                 (themeName_file === 'default') ?
-                                    localStorage.removeItem("webtrader_theme") : localStorage.setItem("webtrader_theme", themeName_file);
+                                    local_storage.remove("theme") : local_storage.set("theme", {name: themeName_file});
                                 location.reload();
                             },
                             Cancel: function() {
+                                $( this ).dialog( 'close' );
                                 $( this ).dialog( "destroy" );
                             }
                         }

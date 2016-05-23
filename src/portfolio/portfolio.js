@@ -100,7 +100,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'IMG' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
@@ -127,8 +127,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
                 /* refresh blance on blance change */
                 liveapi.events.on('balance',function(data){
+                  if(data.balance !== undefined && data.balance.currency !== undefined) {
                     currency = data.balance.currency;
                     balance_span.update(data.balance.balance);
+                  }
                 });
                 /* refresh portfolio when a new contract is added or closed */
                 liveapi.events.on('transaction', function(data){
@@ -183,9 +185,10 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         {
                           title: 'Indicative',
                           render: function(val) { return currency + ' ' + '<span class="bold">' + val + '</span>'; }
-                        }
+                        },
+                        { title: '' }
                     ],
-                    rowId : '4', /* jQ datatables support selecting rows based on rowId https://datatables.net/reference/type/row-selector
+                    rowId : '5', /* jQ datatables support selecting rows based on rowId https://datatables.net/reference/type/row-selector
                                     we want not to query rows everytime we update the indicative column */
                     paging: false,
                     ordering: false,
@@ -216,13 +219,12 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
 
                 var rows = contracts.map(function (contract) {
-                    var svg = 'up'; // TODO: when to show 'up','down' or 'equal'?
-                    var img = '<img class="arrow" src="images/' + svg + '-arrow.svg"/>';
                     return [
                         contract.transaction_id,
-                        img + contract.longcode,
+                        contract.longcode,
                         formatPrice(contract.buy_price),
                         '0.00',
+                        '<button class="green-button shine">View</button>',
                         contract.contract_id, /* for jq-datatables rowId */
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];

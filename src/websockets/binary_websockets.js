@@ -2,28 +2,32 @@
  * Created by arnab on 2/24/15.
  */
 
-define(['jquery'], function ($) {
-
-    var Cookies = null,
-        tokenWin = null;
-    /* these dependencies are only need for authenticated api sends.
-       load them on demand, so websocket can start before loading them.  */
-    var authentication_deps = new Promise(function (resolve, reject) {
-        require(['js-cookie', 'token/token'], function (_cookies, _tokenwin) {
-            Cookies = _cookies;
-            tokenWin = _tokenwin;
-            resolve();
-        });
-    });
-    /* don't wait for an authenticated request, trigger loading these now */
-    require(['js-cookie', 'token/token']);
+define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids_json) {
 
     var is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
-
     var socket = null;
 
+    function get_app_id() {
+      var app_ids = JSON.parse(app_ids_json);
+      var config = local_storage.get('config');
+      var token = (config && config.app_id) || '';
+
+      if(!token) { /* find the appropriate token */
+        var href = window.location.href;
+        for(var web_address in app_ids) {
+          if(href.lastIndexOf(web_address, 0) == 0) {
+            token = app_ids[web_address];
+            break;
+          }
+        }
+      }
+      return token;
+    }
+    var app_id = get_app_id();
+
     var connect = function () {
-        var api_url = 'wss://ws.binaryws.com/websockets/v3?l=EN';
+        var config = local_storage.get('config');
+        var api_url = (config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?app_id=' + app_id + '&l=EN';
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
@@ -50,7 +54,7 @@ define(['jquery'], function ($) {
          **/
         setTimeout(function(){
             socket = connect();
-            if(Cookies && Cookies.get('webtrader_token'))
+            if(local_storage.get('oauth'))
               api.cached.authorize();
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
@@ -129,7 +133,7 @@ define(['jquery'], function ($) {
         }
     }
 
-    socket = connect();
+    socket = connect(); // connect
 
     //This is triggering asycn loading of tick_handler.
     //The module will automatically start working as soon as its loaded
@@ -170,18 +174,22 @@ define(['jquery'], function ($) {
 
         return promise
             .then(function (val) {
-                Cookies.set('webtrader_token', token, { expires: 365 }); /* never expiers */
                 is_authenitcated_session = true;
                 fire_event('login', val);
+                if(local_storage.get('oauth-login')) {
+                  var ok = local_storage.get('oauth-login').value;
+                  local_storage.remove('oauth-login');
+                  ok && fire_event('oauth-login', val);
+                }
                 auth_successfull = true;
                 cached_promises[key] = { data: data, promise: promise }; /* cache successfull authentication */
                 return val; /* pass the result */
             })
             .catch(function (up) {
-                if (!auth_successfull) {    /* authentication request is failed, delete the cookie */
+                if (!auth_successfull) {    /* authentication request is failed, clear local_storage */
                     is_authenitcated_session = false;
                     fire_event('logout');
-                    Cookies.remove('webtrader_token');
+                    local_storage.remove('oauth');
                 }
                 delete cached_promises[key];
                 throw up; /* pass the exception to next catch */
@@ -191,7 +199,7 @@ define(['jquery'], function ($) {
     /* un-athenticate current session */
     var invalidate = function(){
         if(!is_authenitcated_session) { return; }
-        Cookies.remove('webtrader_token');
+        local_storage.remove('oauth');
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){
@@ -211,18 +219,14 @@ define(['jquery'], function ($) {
 
         var send = send_request.bind(null,data);// function () { return send_request(data); };
 
-        if (Cookies.get('webtrader_token'))     /* we have a cookie for the token */
-            return authenticate(Cookies.get('webtrader_token'))
+        if(local_storage.get('oauth')) {
+            var oauth = local_storage.get('oauth');
+            var token = oauth[0].token;
+            return authenticate(token)
                     .then(send);
-        else                                    /* get the token from user */
-            return tokenWin
-                .getTokenAsync()
-                .then(authenticate)
-                .catch(function(up){
-                  require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
-                  throw up;
-                })
-                .then(send);
+        }
+        else
+          return Promise.reject({ message: 'Please log in.'});
     };
 
     /* fire a custom event and call registered callbacks(api.events.on(name)) */
@@ -281,6 +285,44 @@ define(['jquery'], function ($) {
         },
         /* remove token, and reopen current socket */
         invalidate: invalidate,
+        /* switch account */
+        switch_account: function(id) {
+          if(!is_authenitcated_session) {
+            return Promise.reject({message: 'Session is not authenticated.'})
+          }
+          var oauth = local_storage.get('oauth');
+          if(!oauth) {
+            return promise.reject({ message: 'Account token not found.' });
+          }
+
+          var inx = oauth.map(function(acc) { return acc.id; }).indexOf(id);
+          if(inx === -1) {
+            return promise.reject({ message: 'Account id not found.' });
+          }
+
+          /* move the new account to the front of oauth array */
+          var account = oauth[inx];
+          oauth.splice(inx,1);
+          oauth.unshift(account);
+          local_storage.set('oauth', oauth);
+
+          /* remove authenticated cached requests as well as authorize requests */
+          for(var i in cached_promises)
+            if(needs_authentication(cached_promises[i].data) || ('authorize' in cached_promises[i].data))
+              delete cached_promises[i];
+          /* back removes all tokens on {logout: 1} request, so we simply reauthenticate
+             with the new token without logging out first! ot switch accounts */
+          is_authenitcated_session = false;
+
+          /* backend doesn't respect registered authenticated streams :/ */
+          api.send({forget_all: 'transaction'})
+             .catch(function(err){ console.error(err); });
+
+          api.send({forget_all: 'balance'})
+             .catch(function(err){ console.error(err); });
+
+          return api.cached.authorize();
+        },
         /* if you want a request to be cached, that is when multiple modules request
            the same data or a module request a data multiple times, instead of calling
            liveapi.send can liveapi.cached.send.
@@ -309,29 +351,21 @@ define(['jquery'], function ($) {
             /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
             authorize: function () {
-                return authentication_deps.then(function () {
-                    var token = Cookies.get('webtrader_token'),
-                        key = JSON.stringify({ authorize: token });
+                var oauth = local_storage.get('oauth');
+                var token = oauth[0].token,
+                    key = JSON.stringify({ authorize: token });
 
-                    if (is_authenitcated_session && token && cached_promises[key])
-                        return cached_promises[key].promise;
+                if (is_authenitcated_session && token && cached_promises[key])
+                    return cached_promises[key].promise;
 
-                    return token ? authenticate(token) : /* we have a token => autheticate */
-                                      tokenWin.getTokenAsync()
-                                      .then(authenticate) /* get the token from user and authenticate */
-                                      .catch(function(up){
-                                        require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: up.message });});
-                                        throw up;
-                                      });
-                })
+                return token ? authenticate(token) : /* we have a token => autheticate */
+                               Promise.reject('Please log in.');
             }
         },
         /* sends a request and returns an es6-promise */
         send: function (data, timeout) {
             if (data && needs_authentication(data))
-                return authentication_deps.then(function () {
-                    return send_authenticated_request(data);
-                });
+                return send_authenticated_request(data);
 
             var promise = send_request(data);
             if(timeout) timeout_promise(data.req_id, timeout); //NOTE: "timeout" is a temporary fix for backend, try not to use it.
@@ -343,21 +377,21 @@ define(['jquery'], function ($) {
         },
         sell_expired: function(epoch) {
             var now = (new Date().getTime())/1000 | 0;
+            epoch = epoch || now+1; // if epoch is undefined will try to sell expired contract 3 seconds later.
             if(!sell_expired_timeouts[epoch] && epoch*1 > now) {
               sell_expired_timeouts[epoch] = setTimeout(function(){
                 sell_expired_timeouts[epoch] = undefined;
                 api.send({sell_expired:1}).catch(function(err){ console.error(err);});
               }, (epoch+2 - now)*1000);
             }
-        }
+        },
+        app_id: app_id
     }
-    /* always register for transaction stream */
+    /* always register for transaction & balance streams */
     api.events.on('login', function() {
       api.send({transaction: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
-    });
-    /* always register for balance stream */
-    api.events.on('login', function() {
+
       api.send({balance: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
     });

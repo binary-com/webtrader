@@ -6,11 +6,23 @@
    menu active: #222A47;
 */
 
+body {
+  min-width: 680px !important;
+}
+
 #nav-container {
     position: relative;
     background-color: #273051;
     height: 53px;
     text-align: center;
+}
+
+#nav-container span.ui-icon {
+  display: inline-block;
+  padding-right: 10px;
+  margin-left: -25px;
+  position: relative;
+  top: 2px;
 }
 
 #nav-container .nav-logo {
@@ -291,98 +303,102 @@
     text-shadow: 0 0 3px #333;
 }
 
-/* authentication button */
-#nav-container .authentication {
-  display: inline-block;
+/* login button */
+#nav-container .login {
   position: absolute;
-  line-height: 52px;
-  right: 20px;
+  top: 8px;
+  right: 10px;
 }
-#nav-container .authentication button {
-  display: inline-block;
+
+#nav-container .login span.ui-icon {
+  margin-left: -10px;
+}
+
+#nav-container .login button {
   color: #eee;
   line-height: 2em;
   font-size: larger;
-  min-width:60px;
+  width:90px;
   border: none;
   border-radius: 5px;
   outline: 0;
-  margin-right:-10px;
-}
-#nav-container .authentication div {
-  display: inline-block;
-  position: relative;
-  color: #eee;
-  margin-right:-5px;
 }
 
-#nav-container .authentication span {
-  text-align: left;
-  display: inline-block;
-}
-#nav-container .authentication span.loginid {
-  width: 110px;
-  font-size: 12px;
-  position: relative;
-  bottom: -10px;
-  margin-right:8px;
-  text-align:right;
-}
-#nav-container .authentication span.time {
-  width: 110px;
-  font-size: 10px;
+#nav-container .login button[disabled] { opacity: 0.5;}
+#nav-container .login button { background: #2e8836; }
+/*#nav-container .login button.logout { background: #4F577E; }*/
+
+/* account menu */
+#nav-container .account {
   position: absolute;
-  right: 0;
-  top: -10px;
-
+  right: 0px;
+  width: 200px;
 }
-#nav-container .authentication span.balance {
+#nav-container .account > a {
+  cursor: default;
+  padding-left: 15px;
+  font-size: 15px;
+}
+#nav-container .account > ul > li > a { padding-left: 15px; }
+#nav-container .account > ul > li > a > span.ui-icon {
+  margin-left: 0;
+}
+#nav-container .account .nav-dropdown-toggle {
   position: relative;
-  top: 10px;
-  font-size: 12px;
-  padding-right: 2px;
-  margin-right: -33px;
-  line-height: 1.4em;
-  border-right: 2px solid gray;
+  top: -10px;
 }
 
-#nav-container .authentication button[disabled] { opacity: 0.5;}
-#nav-container .authentication button.login { background: #2e8836; }
-#nav-container .authentication button.logout { background: #4F577E; }
+#nav-container .account .nav-dropdown-toggle .nav-caret {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+}
+
+#nav-container .account .logout,
+#nav-container .account .info {
+  border-top: 2px solid #aaa;
+}
+
+#nav-container .account *[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#nav-container li.time-li {
+  position: absolute;
+  right: 205px;
+  cursor: default; background: #273051;
+  line-height: 50px;
+}
+#nav-container span.time { font-size: 10px; }
+#nav-container li.time-li > a {
+  cursor: default; background: #273051;
+  padding: 0;
+}
 
 /** targets min-width requirement **/
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
     .nav-normal-menu {
         display: inline-table;
     }
 
     .nav-normal-menu li a {
-        padding: 16px 8px;
+        padding: 16px 6px;
+        font-size: 14px;
     }
 
     .nav-normal-menu li > ul li a {
         padding: 10px 30px;
     }
 }
+@media screen and (max-width: 780px) {
+  #nav-container { text-align: left; }
+}
 
-/** targets mobile devices **/
-@media screen and (max-width: 800px) {
-    .nav-normal-menu {
-        display: none;
-    }
-
-    #mobile-menu-heading {
-        display: block;
-    }
-
-    #nav-toggle {
-        display: block;
-    }
-
+/** TODO: implement browser not supported for mobile devices **/
+/*@media screen and (max-width: 800px) {
+    .nav-normal-menu { display: none; }
+    #mobile-menu-heading { display: block; }
+    #nav-toggle { display: block; }
     #nav-container .authentication { right: 60px; }
-}
-
-/** on very small screens **/
-@media screen and (max-width: 460px) {
-    #nav-container .authentication { display: none;}
-}
+}*/

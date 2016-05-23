@@ -48,12 +48,18 @@ define(["jquery", "windows/windows", "websockets/binary_websockets"], function($
                                 }
                             });
                             div.appendTo(win);
+                            //This helps in showing multiple dialog windows in modal form
+                            $('body').append(win.dialog('widget'));
                             win.dialog('open');
                         });
                     }
                 });
         }
 
+    });
+
+    liveapi.events.on("login", function(data) {
+        if (win) win.dialog('close');
     });
 
     return {};

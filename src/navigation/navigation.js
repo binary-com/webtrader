@@ -166,10 +166,13 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 	}
 
   function initLoginButton(root){
-      var login_btn = root.find('.authentication button');
-      var loginid = root.find('.authentication span.loginid').hide();
-      var time = root.find('.authentication span.time').hide();
-      var balance = root.find('.authentication span.balance').hide();
+      var login_menu = root.find('.login');
+      var account_menu = root.find('.account').hide();
+      var time = root.find('span.time');
+      var login_btn = root.find('.login button');
+      var logout_btn = root.find('.account .logout');
+      var loginid = root.find('.account span.login-id');
+      var balance = root.find('.account span.balance').fadeOut();
       var currency = ''; /* will get this from payout_currencies api on login */
       require(['websockets/binary_websockets'],function(liveapi) {
 
@@ -187,15 +190,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
               if(data.authorize) value = data.authorize.balance;
               else value = data.balance.balance;
 
-              if(value === '0' || value === 0)
-                balance.fadeOut();
-              else
-                balance.text(currency + ' ' + formatPrice(value)).fadeIn({
-					always : function() {
-						//FadeIn assigns inline-block which is breaking account balance display like EUR5.0
-						$(this).css('display', 'inline');
-					}
-				});
+              balance.text(currency + ' ' + formatPrice(value)).fadeIn();
           };
 
           /* update balance on change */
@@ -203,66 +198,90 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
 
           liveapi.events.on('logout', function() {
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
-              login_btn.removeClass('logout').addClass('login')
-                .removeAttr('disabled').text('Login');
+              logout_btn.removeAttr('disabled');
+              account_menu.fadeOut();
+              login_menu.fadeIn();
               loginid.fadeOut();
-              time.fadeOut();
+              // time.fadeOut();
               balance.fadeOut();
               currency = '';
           });
 
           liveapi.events.on('login', function(data){
               $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove(); /* destroy all authorized dialogs */
-              login_btn.removeClass('login').addClass('logout')
-                .removeAttr('disabled').text('Logout');
+              login_menu.fadeOut();
+              account_menu.fadeIn();
 
               update_balance(data);
-              loginid.text(data.authorize.loginid).fadeIn();
-              time.fadeIn();
+              loginid.text('Account ' + data.authorize.loginid).fadeIn();
+
+              /* switch between account on user click */
+              $('.account li.info').remove();
+              var oauth = local_storage.get('oauth') || [];
+              oauth.forEach(function(account) {
+                if(account.id !== data.authorize.loginid) {
+                  var a = $('<a href="#"></a>').html('<span class="ui-icon ui-icon-login"></span>' + account.id);
+                  var li = $('<li/>').append(a).addClass('info');
+                  li.data(account);
+                  li.click(function() {
+                    var data = $(this).data();
+                    $('.account li.info').remove();
+                    liveapi.switch_account(data.id)
+                           .catch(function(err){
+                              $.growl.error({ message: err.message });
+                           })
+                  })
+                  li.insertBefore(logout_btn.parent());
+                }
+              });
           });
 
           login_btn.on('click', function(){
             login_btn.attr('disabled','disabled');
-            var logedin = login_btn.hasClass('logout');
-            if(logedin) {
+            require(['oauth/login'], function(login_win){
+              login_btn.removeAttr('disabled');
+              login_win.init();
+            });
+          });
+          logout_btn.on('click', function() {
               liveapi.invalidate();
-            }
-            else {
-              liveapi.cached.authorize().catch(function(err) {
-                login_btn.removeAttr('disabled');
-              });
-            }
+              logout_btn.attr('disabled', 'disabled');
           });
       });
 
       /* update time every one minute */
       time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
-      setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'); },30*1000);
+      setInterval(function(){ time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'); }, 15*1000);
   }
 
 	return {
 		init: function(_callback) {
-            var root = $($navHtml);
-            $("body").prepend(root);
+      var root = $($navHtml);
+      $("body").prepend(root);
 
+  		initLoginButton(root);
 			//Theme settings
 			require(['themes/themes']);
 
-            initLoginButton(root);
+      $("#nav-toggle").on("click", function (e) {
+          $("#nav-toggle").toggleClass("nav-toggle-active");
+          toggleMenuStyle();
 
-            $("#nav-toggle").on("click", function (e) {
-                $("#nav-toggle").toggleClass("nav-toggle-active");
-                toggleMenuStyle();
+          e.preventDefault();
+      });
 
-                e.preventDefault();
-            });
+      updateDropdownToggleHandlers();
 
-            updateDropdownToggleHandlers();
+      if(_callback) {
+        _callback($("#nav-menu"));
+      }
 
-            if(_callback) {
-                _callback($("#nav-menu"));
-            }
+      //Show config <LI> if its production and not BETA
+      if (is_beta()) {
+        root.find("a.config").closest('li').show();
+      }
+
 		},
-        updateDropdownToggles : updateDropdownToggleHandlers
+  	updateDropdownToggles : updateDropdownToggleHandlers
 	};
 });

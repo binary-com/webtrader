@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "datatables"], function ($) {
+define(["jquery", 'lodash', "datatables"], function ($, _) {
 
     function _refreshInstruments( table, data, containerIDWithHash ) {
 
@@ -25,39 +25,26 @@ define(["jquery", "datatables"], function ($) {
                         var type = $(containerIDWithHash).data("type");
 
                         //validate time period of the main series
-                        require(["common/util"], function () {
-                            if (isDataTypeClosePriceOnly(type)) {
-                                var timePeriodObject = convertToTimeperiodObject(mainSeries_timePeriod);
-                                if (delay_amount <= (timePeriodObject.timeInSeconds() / 60)) {
-                                    require(['charts/chartOptions', "charts/charts"], function (chartOptions, charts) {
-                                        $(containerIDWithHash).data("overlayIndicator", true);
-                                        var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
-                                        if (chartOptions.isCurrentViewInLogScale(newTabId))
-                                        {
-                                            chartOptions.triggerToggleLogScale(newTabId);
-                                        }
-                                        chartOptions.disableEnableLogMenu( newTabId, false );
-                                        chartOptions.disableEnableCandlestick( newTabId, false );
-                                        chartOptions.disableEnableOHLC( newTabId, false );
-                                        charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount);
-                                    });
-                                } else {
-                                    require(["jquery", "jquery-growl"], function ($) {
-                                        $("#timePeriod").addClass('ui-state-error');
-                                        $.growl.error({
-                                            message: displaySymbol
-                                            + " is not allowed to overlay on this chart!"
-                                        });
-                                    });
+                        require(['charts/chartOptions', "charts/charts", "common/util"], function (chartOptions, charts) {
+                            var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
+                            var fn = function () {
+                                $(containerIDWithHash).data("overlayIndicator", true);
+                                if (chartOptions.isCurrentViewInLogScale(newTabId))
+                                {
+                                    chartOptions.triggerToggleLogScale(newTabId);
                                 }
-                            } else {
-                                require(["jquery", "jquery-growl"], function ($) {
-                                    $("#timePeriod").addClass('ui-state-error');
-                                    $.growl.error({
-                                        message: "Overlaying on " + type + " chart type is not allowed!"
-                                    });
-                                });
-                            }
+                                chartOptions.disableEnableLogMenu( newTabId, false );
+                                chartOptions.disableEnableCandlestick( newTabId, false );
+                                chartOptions.disableEnableOHLC( newTabId, false );
+                                charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount);
+                            };
+                            if (type === 'candlestick' || type == 'ohlc') {
+                                $(containerIDWithHash).data('type', 'line');
+                                charts.refresh( containerIDWithHash );
+                                chartOptions.selectChartType(newTabId, 'line', false);
+                                _.defer(fn);
+                            } else { fn(); }
+
                         });
                     });
             }
