@@ -313,7 +313,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or "engulfs" the small white one."
+    "description": "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one."
   },
   "wclprice": {
     "id": "wclprice",
