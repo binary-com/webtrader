@@ -1,9 +1,23 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Highcharts implementation for Binary.com</title><script src="v2.0.29/common/util.js"></script></head><body><script>var affiliates = getParameterByName('affiliates') || 'false';
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Highcharts implementation for Binary.com</title><script src="v2.1.0/common/util.js"></script></head><body><script>var affiliates = getParameterByName('affiliates') || 'false';
       var suffix = "";
-      
+
       if (affiliates === 'true') {
           var url = window.location.href;
           suffix = url.substring(url.indexOf('?')); //Pass all parameters
       }
-      
-      window.location.href = 'v2.0.29/main.html' + suffix;</script></body></html>
+
+      /* oauth login ? */
+      var href = window.location.href;
+      if(/#acct1=/.test(href) && /token1=/.test(href)) {
+        var params = href.split('#')[1].split('&');
+        var oauth = [ ];
+        for(var i = 0; i < params.length; i+=2){
+          var id = params[i].split('=')[1];
+          var token = params[i+1].split('=')[1];
+          oauth.push({ id: id, token: token });
+        }
+        local_storage.set('oauth', oauth);
+        local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
+      }
+
+      window.location.href = 'v2.1.0/main.html' + suffix;</script></body></html>
