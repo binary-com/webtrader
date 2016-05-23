@@ -306,6 +306,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.binders['tooltip-*'] = function (el, value) {
         $(el).tooltip('option', this.args[0], value);
     }
+    /* bindar for jqueyr ui dialog options */
+    rv.binders['dialog-*'] = function (el, value) {
+        $(el).dialog('option', this.args[0], value);
+    }
 
     /* trun input element in jquery-ui-datepicker */
     rv.binders.datepicker = {

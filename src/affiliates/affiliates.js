@@ -1,11 +1,11 @@
 define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util'], function( $, liveapi, menu ) {
 
-	var init_chart_options = function (dialog, timePeriod, type){
+	var init_chart_options = function (dialog, timePeriod, type, instrumentName){
 			var id = dialog.attr('id');
 			/* initialize chartOptions & table-view once chart is rendered */
 			require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
 				var table_view = tableView.init(dialog);
-				chartOptions.init(id, timePeriod, type, table_view.show);
+				chartOptions.init(id, timePeriod, type, table_view.show, instrumentName);
 			});
 	};
 
@@ -68,7 +68,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 														type : type,
 														delayAmount : delayAmount
 													});
-													init_chart_options($html, timePeriod, type);
+													init_chart_options($html, timePeriod, type, instrumentName);
 												});
 											}
 
@@ -83,7 +83,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 													type : type,
 													delayAmount : delayAmount
 												});
-												init_chart_options($html, timePeriod, type);
+												init_chart_options($html, timePeriod, type, instrumentName);
 											});
 
 										}

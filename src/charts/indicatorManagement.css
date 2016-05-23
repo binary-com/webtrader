@@ -1,0 +1,46 @@
+.indicator-dialog {
+  background: white;
+}
+.indicator-dialog span.title-big {
+  display: block;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.indicator-dialog span.title {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.indicator-dialog div.category > div span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.indicator-dialog div.category > div > span:nth-child(1) {
+  width: 180px;
+  font-size: 0.925em;
+}
+.indicator-dialog div.category > div {
+  height: 45px;
+  width: 210px;
+  display: inline-block;
+  margin-right: 18px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.indicator-dialog div.category > div > span:nth-child(1) { transition: all 0.3s; }
+.indicator-dialog div.category > div > span:nth-child(1):hover { color: #3F476E; font-size: 0.95em; }
+
+.indicator-dialog div.category > div > span.question-mark,
+.indicator-dialog div.category > div > span.remove {
+  color: #777;
+  font-size: 1.1em;
+}
+
+.indicator-dialog .favorite span.ui-icon {
+  color: #E98024;
+}
