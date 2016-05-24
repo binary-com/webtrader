@@ -42,6 +42,18 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         return array;
     }
 
+    var callbacks = {};
+    /* fire a custom event and call registered callbacks(api.events.on(name)) */
+    var fire_event = function(name /*, args */){
+        var args = [].slice.call(arguments,1);
+        var fns = callbacks[name] || [];
+        fns.forEach(function (cb) {
+            setTimeout(function(){
+                cb.apply(undefined, args);
+            },0);
+        });
+    }
+
     function tileDialogs() {
         // get array of dialogs
         var dialogs = $('.webtrader-dialog').filter(function (inx, d) {
@@ -132,6 +144,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             best.push(d);
         });
         arrange(best, true);
+
+        //Trigger tile
+        fire_event("tile");
+        
     }
 
     /*
@@ -708,7 +724,19 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 select.selectmenu('refresh');
             }
             return select;
+        },
+
+        event_on: function (name, cb) {
+            (callbacks[name] = callbacks[name] || []).push(cb);
+            return cb;
+        },
+        event_off: function(name, cb){
+            if(callbacks[name]) {
+                var index = callbacks[name].indexOf(cb);
+                index !== -1 && callbacks[name].splice(index, 1);
+            }
         }
+        
     };
 
 });
