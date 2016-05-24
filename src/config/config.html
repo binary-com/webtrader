@@ -1,14 +1,19 @@
 <div class="config-dialog">
 
-      <span> Server </span>
-      <input rv-value='server_url' />
+      <span> Websocket Server </span>
+      <input rv-value='websocket_url' />
 
       <span class='explanation'>
             e.g, www2.binary.com, www.binaryqa36.com. <br/>
-            websocket : <b rv-text="server_url | prepend 'wss://' | append '/websockets/v3'"></b><br/>
-            aouth : <b rv-text="server_url | prepend 'https://' | append '/oauth2/authorize'"></b> <br/>
+            websocket : <b rv-text="websocket_url | prepend 'wss://' | append '/websockets/v3'"></b><br/>
       </span>
 
+      <span> OAuth Server </span>
+      <input rv-value='oauth_url' />
+
+      <span class='explanation'>
+            oauth : <b rv-text="oauth_url | prepend 'https://' | append '/oauth2/authorize'"></b> <br/>
+      </span>
 
       <span> OAuth App ID (Optional) </span>
       <input rv-value='app_id' />
