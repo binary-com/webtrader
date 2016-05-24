@@ -176,6 +176,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
       });
     }
 
+    var first_time = true;
     return {
       openDialog : function( containerIDWithHash, title ) {
         init().then(function(){
@@ -188,7 +189,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             var series = $(containerIDWithHash).highcharts().series;
             series = _.filter(series, 'options.isInstrument');
             update_indicators(series);
-            ind_win.dialog('open');
+            var normal_open = first_time || getParameterByName("affiliates") == 'true';
+            normal_open ? ind_win.dialog('open') : ind_win.moveToTop();
+            first_time = false;
         }).catch(console.error.bind(console));
       }
     }
