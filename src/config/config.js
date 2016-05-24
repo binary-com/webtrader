@@ -49,15 +49,16 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
 
   function init_state(root) {
     var state = {
-      server_url: 'ws.binaryws.com',
+      websocket_url: 'ws.binaryws.com',
+      oauth_url: 'oauth.binary.com',
       app_id: ''
     };
 
     state.apply = function() {
       var config = {
         server_url: state.server_url,
-        websocket_url: 'wss://' + state.server_url + '/websockets/v3?l=EN',
-        oauth_url: 'https://' + state.server_url + '/oauth2/authorize',
+        websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN',
+        oauth_url: 'https://' + state.oauth_url + '/oauth2/authorize',
         app_id: state.app_id
       }
       local_storage.set('config', config);
