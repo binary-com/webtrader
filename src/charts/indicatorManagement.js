@@ -12,12 +12,20 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
       search = search && search.toLowerCase();
       return array && array.filter(function(ind){
         return ind.category.indexOf(cat) !== -1 && ind.long_display_name.toLowerCase().indexOf(search) !== -1;
+      }).sort(function(a,b){
+        if(a.long_display_name < b.long_display_name) return -1;
+        if(a.long_display_name > b.long_display_name) return +1;
+        return 0;
       });
     };
     rv.formatters['indicators-favorites-filter'] = function(array, search) {
       search = search && search.toLowerCase();
       return array && array.filter(function(ind){
         return ind.long_display_name.toLowerCase().indexOf(search) !== -1;
+      }).sort(function(a,b){
+        if(a.long_display_name < b.long_display_name) return -1;
+        if(a.long_display_name > b.long_display_name) return +1;
+        return 0;
       });
     };
     /* rviets formatter to extract and filter categories */
