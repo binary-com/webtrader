@@ -474,7 +474,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day."
   },
   "cdlharami": {
     "id": "cdlharami",
@@ -483,7 +483,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend."
   },
   "cdlhammer": {
     "id": "cdlhammer",
@@ -492,7 +492,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Hammer formation is created when the open, high, and close are roughly the same price.Also, there is a long lower shadow, twice the length as the real body."
   },
   "cdlhangingman": {
     "id": "cdlhangingman",
@@ -501,7 +501,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Hanging Man formation, just like the Hammer, is created when the open, high, and close are roughly the same price. Also, there is a long lower shadow, which should be at least twice the length of the real body."
   },
   "cdlinvertedhammer": {
     "id": "cdlinvertedhammer",
@@ -510,7 +510,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Inverted Hammer occurs mainly at the bottom of downtrends when the open, low, and close are roughly the same price. Also, there is a long upper shadow, which should be at least twice the length of the real body."
   },
   "cdlgravestonedoji": {
     "id": "cdlgravestonedoji",
@@ -519,7 +519,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow."
   },
   "cdlharamicross": {
     "id": "cdlharamicross",
@@ -528,7 +528,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse."
   },
   "cdlstalledpattern": {
     "id": "cdlstalledpattern",
@@ -537,7 +537,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend."
   },
   "cdleveningstar": {
     "id": "cdleveningstar",
@@ -546,7 +546,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body."
   },
   "cdlhighwave": {
     "id": "cdlhighwave",
@@ -555,7 +555,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared."
   },
   "cdlhikkake": {
     "id": "cdlhikkake",
@@ -564,7 +564,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move."
   },
   "cdlhomingpigeon": {
     "id": "cdlhomingpigeon",
@@ -573,7 +573,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle."
   },
   "cdltristar": {
     "id": "cdltristar",
@@ -582,7 +582,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Bullish Three Star appears after a downtrend and it consists of three consecutive Doji, in which the second Doji gaps below the other two Doji. The Bearish Three Star appears after a uptrend and it consists of three consecutive Doji, in which the second Doji gaps above the other two Doji."
   },
   "cdllongline": {
     "id": "cdllongline",
@@ -591,7 +591,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high."
   },
   "cdlmarubozu": {
     "id": "cdlmarubozu",
@@ -600,7 +600,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows."
   },
   "cdlkicking": {
     "id": "cdlkicking",
@@ -609,7 +609,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks."
   },
   "cdlmatchinglow": {
     "id": "cdlmatchinglow",
@@ -618,7 +618,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price."
   },
   "cdlladderbottom": {
     "id": "cdlladderbottom",
@@ -627,7 +627,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day."
   },
   "cdlrisefall3methods": {
     "id": "cdlrisefall3methods",
@@ -636,7 +636,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks."
   },
   "cdlidentical3crows": {
     "id": "cdlidentical3crows",
@@ -645,7 +645,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern."
   },
   "cdlmorningstar": {
     "id": "cdlmorningstar",
@@ -654,7 +654,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body."
   },
   "cdlspinningtop": {
     "id": "cdlspinningtop",
@@ -663,7 +663,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched."
   },
   "cdldragonflydoji": {
     "id": "cdldragonflydoji",
@@ -672,7 +672,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow."
   },
   "cdllongleggeddoji": {
     "id": "cdllongleggeddoji",
@@ -681,7 +681,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open."
   },
   "cdleveningdojistar": {
     "id": "cdleveningdojistar",
@@ -690,7 +690,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern."
   },
   "cdlbreakaway": {
     "id": "cdlbreakaway",
@@ -699,7 +699,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day’s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area."
   },
   "cdladvanceblock": {
     "id": "cdladvanceblock",
@@ -708,7 +708,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "Three white days occur. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer."
   },
   "cdlcounterattack": {
     "id": "cdlcounterattack",
@@ -717,7 +717,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level."
   },
   "cdlmorningdojistar": {
     "id": "cdlmorningdojistar",
@@ -726,16 +726,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
-  },
-  "cdlcounterattack": {
-    "id": "cdlcounterattack",
-    "long_display_name": "Counterattack",
-    "short_display_name": "CDLCOUNTERATTACK",
-    "category": [
-      "Pattern Recognition"
-    ],
-    "description": ""
+    "description": "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body."
   },
   "cdlinneck": {
     "id": "cdlinneck",
@@ -744,7 +735,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day."
   },
   "cdlonneck": {
     "id": "cdlonneck",
@@ -753,7 +744,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Bearish On-Neck Pattern occurs after a downtrend when a long black day is followed by a long white day that gaps down at the open and closes below the close of the black day."
   },
   "cdlrickshawman": {
     "id": "cdlrickshawman",
@@ -762,7 +753,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "The Rickshaw Man has unusually tall upper and lower shadows, a body in which the opening and closing prices are about the same, and the body is near the middle of the candlestick."
   },
   "cdlunique3river": {
     "id": "cdlunique3river",
@@ -771,7 +762,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's."
   },
   "cdlseparatinglines": {
     "id": "cdlseparatinglines",
@@ -780,7 +771,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A bearish separating line is a bearish continuation pattern.  It is the exact opposite of the bullish separating line.  There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly."
   },
   "cdlmathold": {
     "id": "cdlmathold",
@@ -789,7 +780,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day."
   },
   "cdlsticksandwich": {
     "id": "cdlsticksandwich",
@@ -798,7 +789,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications."
   },
   "cdlkickingbylength": {
     "id": "cdlkickingbylength",
@@ -807,7 +798,7 @@
     "category": [
       "Pattern Recognition"
     ],
-    "description": ""
+    "description": "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks."
   },
   "stddev": {
     "id": "stddev",
@@ -816,7 +807,7 @@
     "category": [
       "Statistical Functions"
     ],
-    "description": ""
+    "description": "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values."
   },
   "ppo": {
     "id": "ppo",
@@ -825,7 +816,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average."
   },
   "trange": {
     "id": "trange",
@@ -834,7 +825,7 @@
     "category": [
       "Volatility Indicators"
     ],
-    "description": ""
+    "description": "The Average True Range (TRANGE) study measures the size of the period’s range, and takes into account any gap from the close of the previous period."
   },
   "stochrsi": {
     "id": "stochrsi",
@@ -843,7 +834,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar Chande and Stanley Kroll, StochRSI is an oscillator that measures the level of RSI relative to its high-low range over a set time period. StochRSI applies the Stochastics formula to RSI values, instead of price values. This makes it an indicator of an indicator. The result is an oscillator that fluctuates between 0 and 1."
   },
   "mom": {
     "id": "mom",
@@ -852,7 +843,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
   },
   "alma": {
     "id": "alma",
@@ -862,7 +853,7 @@
     "category": [
       "Overlap Studies"
     ],
-    "description": ""
+    "description": "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients."
   },
   "aroon": {
     "id": "aroon",
@@ -871,7 +862,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low."
   },
   "aroonosc": {
     "id": "aroonosc",
@@ -880,7 +871,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line."
   },
   "ao": {
     "id": "ao",
@@ -889,7 +880,7 @@
     "category": [
       "Bill Williams"
     ],
-    "description": ""
+    "description": "The Awesome Oscillator is an indicator used to measure market momentum. AO calculates the difference of a 34 Period and 5 Period Simple Moving Averages. The Simple Moving Averages that are used are not calculated using closing price but rather each bar's midpoints. AO is generally used to affirm trends or to anticipate possible reversals."
   },
   "var": {
     "id": "var",
@@ -898,7 +889,7 @@
     "category": [
       "Statistical Functions"
     ],
-    "description": ""
+    "description": "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean."
   },
   "cks": {
     "id": "cks",
@@ -908,7 +899,7 @@
     "category": [
       "Volatility Indicators"
     ],
-    "description": ""
+    "description": "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values."
   },
   "cc": {
     "id": "cc",
@@ -917,7 +908,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The indicator is designed for use on a monthly time scale. It is the sum of a 14-month rate of change and 11-month rate of change, smoothed by a 10-period weighted moving average."
   },
   "chop": {
     "id": "chop",
@@ -926,7 +917,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only."
   },
   "adx": {
     "id": "adx",
@@ -935,7 +926,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength."
   },
   "dx": {
     "id": "dx",
@@ -944,7 +935,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)."
   },
   "adxr": {
     "id": "adxr",
@@ -953,7 +944,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two."
   },
   "apo": {
     "id": "apo",
@@ -962,7 +953,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a ‘Fast’ and a ‘Slow’ moving average."
   },
   "stoch": {
     "id": "stoch",
@@ -971,7 +962,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result."
   },
   "stochf": {
     "id": "stochf",
@@ -980,7 +971,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K."
   },
   "stochs": {
     "id": "stochs",
@@ -989,7 +980,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K."
   },
   "dc": {
     "id": "dc",
@@ -999,7 +990,7 @@
     "category": [
       "Overlap Studies"
     ],
-    "description": ""
+    "description": "The Donchian Channel is an indicator used in market trading developed by Richard Donchian. It is formed by taking the highest high and the lowest low of the last n periods. The area between the high and the low is the channel for the period chosen."
   },
   "ultosc": {
     "id": "ultosc",
@@ -1008,7 +999,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period."
   },
   "lsma": {
     "id": "lsma",
@@ -1018,7 +1009,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The Least Squares Moving Average first calculates a least squares regression line over the preceding time periods, then projects it forward to the current period. In essence, it calculates what the value would be if the regression line continued."
   },
   "mass": {
     "id": "mass",
@@ -1027,7 +1018,7 @@
     "category": [
       "Volatility Indicators"
     ],
-    "description": ""
+    "description": "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend."
   },
   "cmo": {
     "id": "cmo",
@@ -1036,7 +1027,7 @@
     "category": [
       "Momentum Indicators"
     ],
-    "description": ""
+    "description": "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range."
   },
   "fractal": {
     "id": "fractal",
@@ -1046,6 +1037,6 @@
     "category": [
       "Bill Williams"
     ],
-    "description": ""
+    "description": "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart."
   }
 }
