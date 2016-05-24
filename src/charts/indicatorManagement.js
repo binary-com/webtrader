@@ -8,10 +8,25 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     var state = {};
 
     /* rviets formatter to filter indicators based on their category */
-    rv.formatters['indicators-filter'] = function(array, cat) {
+    rv.formatters['indicators-filter'] = function(array, cat, search) {
+      search = search && search.toLowerCase();
       return array && array.filter(function(ind){
-        return ind.category.indexOf(cat) !== -1;
+        return ind.category.indexOf(cat) !== -1 && ind.long_display_name.toLowerCase().indexOf(search) !== -1;
       });
+    };
+    rv.formatters['indicators-favorites-filter'] = function(array, search) {
+      search = search && search.toLowerCase();
+      return array && array.filter(function(ind){
+        return ind.long_display_name.toLowerCase().indexOf(search) !== -1;
+      });
+    };
+    /* rviets formatter to extract and filter categories */
+    rv.formatters['indicators-categories'] = function(array, search) {
+      search = search && search.toLowerCase();
+      var indicators = array && array.filter(function(ind){
+        return ind.long_display_name.toLowerCase().indexOf(search) !== -1;
+      });
+      return indicators && _(indicators).map('category').flatten().uniq().value();
     };
 
     function init() {
@@ -76,13 +91,15 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           container_id: '',
           is_tick_chart: false
         },
-        categories: [],
         indicators: {
+          search: '',
           array: [],
           current: [],
           favorites: []
         },
       };
+
+      state.indicators.clear_search = function() { state.indicators.search = ''; }
 
       state.indicators.add = function(indicator){
         var indicator_id = indicator.id;
@@ -120,6 +137,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
       }
 
       ind_win_view = rv.bind(root[0], state);
+      window.state = state;
     }
 
     function update_indicators(series) {
@@ -168,9 +186,3 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     }
 
 });
-
-/* TODO:
-* use serialized favorite array when opening the dialog
-// * serialize indicators for each dialog (remove then on dialog close)
-* update current array on change
-*/

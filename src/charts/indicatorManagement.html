@@ -9,10 +9,17 @@ rv-dialog-title='dialog.title'>
     </div>
   </div>
 
-  <!-- <span class='title-big'>Add indicator</span> -->
-  <div class='favorite category' rv-show='indicators.favorites | prop "length"'>
+  <div class='add-indicators'>
+    <span class='title-big'>Add indicator</span>
+    <input rv-value='indicators.search' placeholder=' &#x1F50E; Search' />
+    <span class='ui-icon ui-icon-circle-close'
+          rv-on-click='indicators.clear_search'
+          rv-show='indicators.search'></span>
+  </div>
+  <div class='favorite category'
+       rv-show='indicators.favorites | indicators-favorites-filter indicators.search | prop "length"'>
     <span class='title'>Favorites</span>
-    <div rv-each-ind='indicators.favorites'>
+    <div rv-each-ind='indicators.favorites | indicators-favorites-filter indicators.search'>
       <span rv-text='ind.long_display_name'
             rv-on-click='indicators.add | bind ind'></span>
       <span class='ui-icon ui-icon-star'
@@ -23,10 +30,10 @@ rv-dialog-title='dialog.title'>
     </div>
   </div>
 
-  <div class='categories' rv-each-cat='categories'>
+  <div class='categories' rv-each-cat='indicators.array | indicators-categories indicators.search'>
     <div class='category'>
       <span class='title' rv-text='cat'></span>
-      <div rv-each-ind='indicators.array | indicators-filter cat'>
+      <div rv-each-ind='indicators.array | indicators-filter cat indicators.search'>
         <span rv-text='ind.long_display_name'
               rv-on-click='indicators.add | bind ind'></span>
         <span class='ui-icon ui-icon-star-b'
