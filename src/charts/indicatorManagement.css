@@ -52,6 +52,8 @@
   top: 6px;
   cursor: pointer;
 }
+.indicator-dialog span.ui-icon-star-b:hover { color:#E98024; }
+.indicator-dialog span.ui-icon-star:hover::before { content: '\e6bb'; }
 .indicator-dialog .add-indicators input {
   max-width: 200px;
   padding-right: 25px;
