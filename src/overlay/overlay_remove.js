@@ -8,7 +8,7 @@ define(["jquery", 'lodash', "datatables"], function ($, _) {
 
     function init( containerIDWithHash, _callback ) {
 
-      require(['text!overlay/overlay_remove.html'], function($html) {
+      require(['text!overlay/overlay_remove.html', 'css!overlay/overlay_remove.css'], function($html) {
           $html = $($html);
           $html.hide();
           $html.appendTo("body");

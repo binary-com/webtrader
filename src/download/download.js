@@ -125,6 +125,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
             exporting: {
                 enabled: true,
+                url: 'https://export.highcharts.com', // Override for mixed content error
                 buttons: {
                     contextButton: {
                         menuItems: [{

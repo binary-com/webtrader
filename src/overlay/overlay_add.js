@@ -78,7 +78,7 @@ define(["jquery", 'lodash', "datatables"], function ($, _) {
             }
             else {
 
-                require(['text!overlay/overlay_add.html'], function($html) {
+                require(['text!overlay/overlay_add.html', 'css!overlay/overlay_add.css'], function($html) {
                     $html = $($html);
                     $html.hide();
                     $html.appendTo("body");
