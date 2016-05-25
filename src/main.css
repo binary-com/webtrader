@@ -53,8 +53,13 @@ body * {
     font-family: 'Roboto', sans-serif;
 }
 
-.ui-icon {
-    background-image: url("images/ui-icons_ffffff_256x240.png")!important;
+.ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.ui-dialog { /* add boxshadow to dialgos*/
+  box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
 }
 
 .ui-dialog {
@@ -93,6 +98,11 @@ body * {
     font-weight: normal!important;
 }
 
+div.ui-tooltip { /* override default jquery ui max tooltip width */
+    max-width: 400px;
+    line-height: 1.2em;
+}
+
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
@@ -117,6 +127,10 @@ body * {
 .ui-dialog .ui-dialog-content {
     padding: .5em .5em;
     padding-bottom: 0;
+}
+.ui-dialog-titlebar-buttonpane {
+  height: 14px !important;
+  margin-top: -7px !important;
 }
 
 .gtm_data_layer {
@@ -245,6 +259,7 @@ button.ui-button-text-only .ui-menu {
 
 .red { color: #d71818; }
 .green { color: #02920e; }
+.orange { color: #EA9800; }
 .bold { font-weight: bold }
 
 /* Remove IE10+ "clear field" X button on certain inputs
@@ -253,10 +268,55 @@ input::-ms-clear {
     display: none;
 }
 
+/* Remove dotted-underline around buttons in FF */
+button::-moz-focus-inner { border: 0; }
+
 /* CSS3 shine effects for buttons */
 .shine {
   position: relative;
 }
+/* default style for green button */
+.green-button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+    cursor: pointer;
+}
+/* default style for blue button */
+.blue-button {
+    background: #273051;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* default style for inputs */
+input:not([type='checkbox']) {
+  border: none;
+  border: 1px solid gray;
+  outline: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 2px rgba(0,0,100,.10);
+  transition: box-shadow 0.3s;
+  width: 100%;
+  height: 26px;
+  line-height: 26px;
+}
+input:focus {
+  box-shadow: inset 0 2px 2px rgba(0,0,120,.25);
+}
+
+
 /* sine effect, hover style if required */
 .shine:hover { }
 /* generated element for shine effect. normal state is semi-transparent
@@ -276,7 +336,7 @@ input::-ms-clear {
 /* on hover we animate the width to 100% and opacity to 0 so the element
  * grows and fades out */
 .shine:not([disabled=disabled]):hover:after {
-    width: 120%;
+    width: 110%;
     background-color: rgba(255,255,255,0);
     transition: all 1s ease-out;
 }

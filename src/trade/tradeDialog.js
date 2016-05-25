@@ -246,7 +246,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             return state.currency.value + ' ' + ((this.payout - this.ask_price) || 0).toFixed(2);
           },
           return_: function () {
-            var ret = (((this.payout - this.ask_price) / this.ask_price) * 100).toFixed(0) | 0;
+            var ret = (((this.payout - this.ask_price) / this.ask_price) * 100);
+            ret = (ret && ret.toFixed(1)) || 0;
             return ret + '%';
           }
         },
@@ -579,7 +580,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         /* forget previous proposal request */
         if(state.proposal.last_promise) {
           state.proposal.last_promise.then(function(data){
-            var id = data.proposal && data.proposal.id;
+            var id = data && data.proposal && data.proposal.id;
             id && liveapi.send({forget: id});
           });
         }
@@ -602,6 +603,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               state.proposal.ask_price = err.details.display_value;
               state.proposal.message = err.details.longcode;
             }
+            return err;
           });
         /* update last_promise to invalidate previous requests */
         state.proposal.last_promise = new_proposal_promise;
@@ -769,6 +771,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               }
               chartingRequestMap.unregister(key);
               view.unbind();
+
+              var windows_ls = local_storage.get('windows') || {};
+              var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isTrade && ew.symbol === symbol.symbol; });
+              if (storeIndex >= 0) {
+                windows_ls.windows.splice(storeIndex, 1);
+                local_storage.set('windows', windows_ls);
+              }
+
             }
         });
 

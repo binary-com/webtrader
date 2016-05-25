@@ -5,9 +5,27 @@
 
 define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation) {
 
-    var closeAllObject = null;
-    var dialogCounter = 0;
-    var $menuUL = null;
+    var closeAllObject = null, dialogCounter = 0, $menuUL = null;
+
+    /* options: { width: 350, height: 400 } */
+    function calculateChartCount(options) {
+        options = $.extend({ width: 350, height: 400 }, options);
+        var rows = Math.floor($(window).height() / options.height) || 1,
+            cols = Math.floor($(window).width() / options.width) || 1;
+
+        if (isSmallView()) //For small size screens
+            rows = cols = 1;
+        /**** limi the number of charts to 4 ****/
+        if(rows * cols > 4) {
+          rows = 1;
+          cols = 4;
+        };
+        return {
+            rows: rows,
+            cols: cols,
+            total: rows * cols
+        };
+    }
 
     /* shuffle the given array */
     function shuffle(array) {
@@ -22,6 +40,18 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         }
 
         return array;
+    }
+
+    var callbacks = {};
+    /* fire a custom event and call registered callbacks(api.events.on(name)) */
+    var fire_event = function(name /*, args */){
+        var args = [].slice.call(arguments,1);
+        var fns = callbacks[name] || [];
+        fns.forEach(function (cb) {
+            setTimeout(function(){
+                cb.apply(undefined, args);
+            },0);
+        });
     }
 
     function tileDialogs() {
@@ -93,10 +123,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             return total_free_space;
         }
 
-        /* we will try 1000 different arrangements and pick the best one */
+        /* we will try 100 different arrangements and pick the best one */
         var best = null,
             best_free_space = 1000*1000;
-        for (var i = 0; i < 1000; ++i) {
+        for (var i = 0; i < 100; ++i) {
             shuffle(dialogs); // shuffle dialogs
             var total_free_space = arrange(dialogs, false);
             if (total_free_space < best_free_space) {
@@ -114,6 +144,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             best.push(d);
         });
         arrange(best, true);
+
+        //Trigger tile
+        fire_event("tile");
+        
     }
 
     /*
@@ -356,7 +390,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
           return;
         }
         $('body > .footer').css("margin-top", new_height - 100);
-    };
+    }
+
     function fixMinimizedDialogsPosition() {
         var footer_height = $('.addiction-warning').height();
         var scroll_bottom = $(document).height() - $(window).height() - $(window).scrollTop();
@@ -400,41 +435,98 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 //Attach click listener for tile menu
                 tileObject.click(tileDialogs);
 
-                liveapi
-                    .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-                    .then(function (markets) {
-                        markets = menu.extractFilteredMarkets(markets, {
-                            filter: function (sym) { 
-                                return sym.symbol === 'frxUSDJPY';
+                //If user close/opened some charts, then open them else, open random charts
+                var windows_ls = local_storage.get('windows');
+                if (windows_ls) {
+                    (windows_ls.windows || []).forEach(function (eWindow) {
+                        if (eWindow) {
+                            if (eWindow.isChart) {
+                                chartWindowObj
+                                    .addNewWindow({
+                                        instrumentCode: eWindow.instrumentCode,
+                                        instrumentName: eWindow.instrumentName,
+                                        timePeriod: eWindow.timePeriod,
+                                        type: eWindow.type,
+                                        delayAmount: eWindow.delayAmount
+                                    });
+                            } else if (eWindow.isTrade) {
+                                liveapi
+                                    .send({contracts_for: eWindow.symbol})
+                                    .then(function (res) {
+                                        require(['trade/tradeDialog'], function (tradeDialog) {
+                                            _.unset(eWindow, 'isTrade');
+                                            tradeDialog.init(eWindow, res.contracts_for);
+                                        });
+                                    }).catch(function (err) {
+                                        require(['jquery-growl'], function() {
+                                            $.growl.error({ message: err.message }); console.error(err);
+                                        });
+                                    });
+                            } else if (eWindow.isAsset) {
+                                $("#nav-container .assetIndex").click();
+                            } else if (eWindow.isTradingTimes) {
+                                $("#nav-container .tradingTimes").click();
+                            } else if (eWindow.isViewHistorical) {
+                                $("#nav-container .download").click();
                             }
-                        });
-                        markets && markets[0] &&
-                        markets[0].submarkets && markets[0].submarkets[0] &&
-                        markets[0].submarkets[0].instruments &&
-                        markets[0].submarkets[0].instruments.forEach(function(sym) {
-                            chartWindowObj
-                                .addNewWindow({
-                                    instrumentCode : sym.symbol,
-                                    instrumentName : sym.display_name,
-                                    timePeriod : '1d',
-                                    type : 'candlestick',
-                                    delayAmount : sym.delay_amount
-                                });
-                        });
-                        tileDialogs(); // Trigger tile action
-
-                        //If reality check is started before dialogs are rendered, it does not respect the modality of the reality check window
-                        require(['realitycheck/realitycheck'], function(realitycheck) {
-                            realitycheck.init();
-                        });
-
+                        }
                     });
+                    _.delay(tileDialogs, 1000); // Trigger tile action
+                } else {
+                    var counts = calculateChartCount();
+                    liveapi
+                        .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
+                        .then(function (markets) {
+
+                            windows_ls = local_storage.get('windows') || {};
+                            windows_ls.windows = (windows_ls.windows || []);
+
+                            markets = menu.extractChartableMarkets(markets);
+                            /* return a random element of an array */
+                            var rand = function (arr) {
+                                return arr[Math.floor(Math.random() * arr.length)];
+                            };
+                            var timePeriods = ['2h', '4h', '8h', '1d'];
+                            var chartTypes = ['candlestick', 'line', 'ohlc', 'spline']; //This is not the complete chart type list, however its good enough to randomly select one from this subset
+                            for (var inx = 0; inx < counts.total; ++inx) {
+                                var submarkets = rand(markets).submarkets;
+                                var symbols = rand(submarkets).instruments;
+                                var sym = rand(symbols);
+                                var timePeriod = rand(timePeriods);
+                                var chart_type = rand(chartTypes);
+
+                                chartWindowObj.addNewWindow({
+                                                instrumentCode: sym.symbol,
+                                                instrumentName: sym.display_name,
+                                                timePeriod: timePeriod,
+                                                type: chart_type,
+                                                delayAmount: sym.delay_amount
+                                            });
+
+                                windows_ls.windows.push({
+                                    instrumentCode: sym.symbol,
+                                    instrumentName: sym.display_name,
+                                    timePeriod: timePeriod,
+                                    type: chart_type,
+                                    delayAmount: sym.delay_amount,
+                                    isChart: true
+                                });
+                            }
+                            local_storage.set('windows', windows_ls);
+
+                            tileDialogs(); // Trigger tile action
+                        });
+                }
+
             });
 
-            /* automatically log the user in if there is a token in browser cookies*/
-            require(['websockets/binary_websockets', 'js-cookie'], function(liveapi, Cookies) {
-              if(Cookies.get('webtrader_token')) {
-                liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
+            /* automatically log the user in if we have oauth_token in local_storage */
+            require(['websockets/binary_websockets' ], function(liveapi) {
+              if(local_storage.get('oauth')) {
+                liveapi.cached.authorize().catch(function(err) {
+                  console.error(err.message);
+                  $.growl.error({message: err.message});
+                 });
               }
             });
             $(window).resize(fixFooterPosition);
@@ -459,7 +551,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                 refresh: fn, // callback for refresh button click
                                 autoOpen: false,
                                 resizable:true,
-                                collapsable:true,
+                                collapsable:false,
                                 minimizable: true,
                                 maximizable: true,
                                 closable:true,
@@ -480,13 +572,17 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             options = $.extend({
                 autoOpen: false,
                 resizable: true,
+                collapsable: false,
                 width: 350,
                 height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,
                 title: 'blank window',
-                hide: 'fade'
+                hide: 'fade',
+                icons: {
+                  close: 'ui-icon-close'
+                }
             }, options || {});
             options.minWidth = options.minWidth || options.width;
             options.minHeight = options.minHeight || options.height;
@@ -533,15 +629,15 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 li = $('<li />').addClass(id + 'LI').html(link);
                 $menuUL.append(li);
             };
-            add_to_windows_menu();
+            if(!options.ignoreTileAction) add_to_windows_menu();
 
             // remove item from window menu on close
             blankWindow.on('dialogclose', function () {
-                li.remove();
+                if (li) li.remove();
                 li = null;
             });
             blankWindow.on('dialogopen', function () {
-                !li && add_to_windows_menu();
+                !li && !options.ignoreTileAction && add_to_windows_menu();
             });
             var last_document_size = { };
             blankWindow.on('dialogextendbeforerestore', function(){
@@ -628,7 +724,19 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 select.selectmenu('refresh');
             }
             return select;
+        },
+
+        event_on: function (name, cb) {
+            (callbacks[name] = callbacks[name] || []).push(cb);
+            return cb;
+        },
+        event_off: function(name, cb){
+            if(callbacks[name]) {
+                var index = callbacks[name].indexOf(cb);
+                index !== -1 && callbacks[name].splice(index, 1);
+            }
         }
+        
     };
 
 });

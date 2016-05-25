@@ -1,3 +1,8 @@
+.data-disruption-dialog {
+  text-align: center;
+  line-height: 1.6em;
+  background: #fef1cf !important;
+}
 .view-transaction-dialog {
   padding: 0 !important;
   background: #fff !important;
@@ -133,6 +138,9 @@
 /*.view-transaction-dialog .footer .sell-at-market .sparkline,*/
 .view-transaction-dialog .footer .validation { text-align: left; }
 
+.view-transaction-dialog .footer .forward_starting {
+  font-style: italic;
+}
 .view-transaction-dialog .footer .sell-at-market {
   display: flex;
   padding: 5px 5px 0 5px;

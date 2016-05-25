@@ -80,34 +80,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       } /* end of routine() */
     };
 
-    function digits_after_decimal( pip, symbol ) {
-        pip += ''; // make sure pip is a string
-        if(!pip) {
-            console.error('pip value is invalid', pip);
-            /**
-             * This is disaster. If pip value is invalid, then it could several trade related issues.
-             * Try to guess decimal places from whatever data we have from local database
-             * (This is a fallback method. the execution never come here)
-             * Technique -
-             *      Fetch last 10 tick values
-             *      Take the maximum decimal places all these ticks
-             */
-            var key = chartingRequestMap.keyFor(symbol, 0);
-            var decimal_digits = 0;
-            barsTable.chain()
-                .find({ instrumentCdAndTp : key })
-                .simplesort("time", true).limit(10).data()
-                .forEach(function (d) {
-                    var quote = d.close + '';
-                    var len = quote.substring(quote.indexOf('.') + 1).length;
-                    if (len > decimal_digits)
-                      decimal_digits = len;
-                });
-            return decimal_digits;
-        }
-        return pip.substring(pip.indexOf(".") + 1).length;
-    }
-
     function register_ticks(state, extra){
       var tick_count = extra.tick_count * 1,
           symbol = extra.symbol,
@@ -120,7 +92,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                which means we ware showing the wrong ticks to the user! FIX THIS*/
       function add_tick(tick){
           if (_.findIndex(state.ticks.array, function(t) { return t.epoch === (tick.time / 1000)}) === -1 && tick_count > 0) {
-              var decimal_digits = digits_after_decimal(extra.pip, symbol);
+              var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
               state.ticks.array.push({
                   quote: tick.close,
                   epoch: (tick.time / 1000) | 0,
@@ -179,6 +151,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
     function init(data, extra, show_callback, hide_callback){
       var root = $(html);
       var buy = data.buy;
+      var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       var state = {
         title: {
           text: 'Contract Confirmation',
@@ -224,7 +197,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                 return {value: tick.quote*1, label:'Barrier ('+tick.quote+')', id: 'plot-barrier-y'};
 
               if(this.category === 'Asians') {
-                var avg = this.average().toFixed(5);
+                //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
+                var avg = this.average().toFixed(decimal_digits + 1);
                 return {value: avg, label:'Average ('+ avg +')', id: 'plot-barrier-y'};
               }
               return null;
@@ -255,12 +229,13 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         }
         if(status === 'won') {
             state.buy.balance_after = buy.balance_after*1 + state.buy.payout*1;
+            liveapi.sell_expired(); // to update balance immediately 
         }
         state.buy.show_result = true;
       }
       state.ticks.update_status = function() {
 
-        var decimal_digits = digits_after_decimal(extra.pip, extra.symbol);
+        var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
 
         var first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
             last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
@@ -293,11 +268,13 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       state.back.onclick = function(){ hide_callback(root); }
       state.arrow.onclick = function(e) {
         var $target = $(e.target);
+        if(!$target.hasClass('disabled')) {
         $target.addClass('disabled');
-        require(['viewtransaction/viewTransaction'], function(viewTransaction){
-            viewTransaction.init(extra.contract_id, extra.transaction_id)
-                           .then(function(){ $target.removeClass('disabled'); });
-        });
+          require(['viewtransaction/viewTransaction'], function(viewTransaction){
+              viewTransaction.init(extra.contract_id, extra.transaction_id)
+                             .then(function(){ $target.removeClass('disabled'); });
+          });
+        }
       };
 
 

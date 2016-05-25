@@ -2,7 +2,7 @@
  * Created by arnab on 2/13/15.
  */
 
-define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dialogextend"], function ($,windows, $chartWindowHtml) {
+define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "jquery.dialogextend"], function ($,windows, $chartWindowHtml, _) {
 
     "use strict";
 
@@ -38,6 +38,13 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
                             instrumentCode : instrumentCode
                         });
                     });
+
+                    var windows_ls = local_storage.get('windows') || {};
+                    var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isChart && ew.instrumentCode === instrumentCode && ew.timePeriod === timePeriod; });
+                    if (storeIndex >= 0) {
+                        windows_ls.windows.splice(storeIndex, 1);
+                        local_storage.set('windows', windows_ls);
+                    }
                 },
                 resize: _trigger_Resize_Effects
             }, options );
@@ -53,7 +60,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", "jquery.dial
                 /* initialize chartOptions & table-view once chart is rendered */
                 require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
                     var table_view = tableView.init(dialog);
-                    chartOptions.init(id, options.timePeriod, options.type, table_view.show);
+                    chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName);
                 });
             });
 

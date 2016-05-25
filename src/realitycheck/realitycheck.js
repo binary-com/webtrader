@@ -5,8 +5,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     var win = null, timerHandler = null;
     var settingsData = {
-        timeOutInMins: 10,
-        timeOutMin: 1, timeOutMax: 120, //TODO
+        timeOutInMins: (local_storage.get("realitycheck") || {}).timeOutInMins || 10,
+        timeOutMin: 10, timeOutMax: 120,
         loginId: null,
         durationInMins: null,
         bought: null,
@@ -25,43 +25,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                 return;
             }
             win.dialog('close');
+            local_storage.set("realitycheck", { timeOutInMins : scope.timeOutInMins | 0, accepted_time : moment.utc().valueOf() });
             setOrRefreshTimer(scope.timeOutInMins);
         },
         logout : function() {
             liveapi.invalidate();
         }
-    };
-
-    var init = function() {
-        require(["css!realitycheck/realitycheck.css"]);
-        return new Promise(function(res) {
-            require(['text!realitycheck/realitycheck.html'], function(html) {
-                var div = $(html);
-                div.find('.realitycheck_firstscreen').show();
-                div.find('.realitycheck_secondscreen').hide();
-                win = windows.createBlankWindow($('<div/>'), {
-                    title: 'Reality check',
-                    width: 600,
-                    minHeight:90,
-                    height: 220,
-                    resizable: false,
-                    collapsable: false,
-                    minimizable: false,
-                    maximizable: false,
-                    closable: false,
-                    modal: true,
-                    closeOnEscape: false,
-                    ignoreTileAction:true,
-                    'data-authorized': 'true',
-                    destroy: function() {
-                        win = null;
-                    }
-                });
-                div.appendTo(win);
-                rv.bind(div[0], settingsData);
-                res();
-            });
-        });
     };
 
     var setOrRefreshTimer = function(timeOutInMins) {
@@ -85,41 +54,73 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                     settingsData.open = data.reality_check.open_contract_count;
                     settingsData.potentialProfit = data.reality_check.potential_profit;
                     settingsData.currency = data.reality_check.currency;
-                    var $root = $('.realitycheck');
+                    var $root = win.dialog('widget');
                     $root.find('.realitycheck_firstscreen').hide();
                     $root.find('.realitycheck_secondscreen').show();
-                    win.dialog({ height : 300 });
+                    win.dialog({ height : 310 });
                     win.moveToTop();
                 });
         }, logoutAfter_ms);
 
     };
     
-    function initialRender() {
+    function init() {
+
         console.log('Reality check login event intercepted');
-        liveapi
-            .cached
-            .authorize()
-            .then(function(data) {
-                settingsData.loginId = data.authorize.loginid;
-                liveapi
-                    .cached
-                    .send({landing_company_details : data.authorize.landing_company_name})
-                    .then(function(data) {
-                        if (data && data.landing_company_details.has_reality_check) {
-                            if (win) win.dialog('destroy');
-                            init().then(function () { win.dialog('open'); });
-                        }
-                    });
-            });
+        if (win) return Promise.resolve(true);
+
+        return new Promise(function(resolve) {
+            liveapi
+                .cached
+                .authorize()
+                .then(function(data) {
+                    settingsData.loginId = data.authorize.loginid;
+                    liveapi
+                        .cached
+                        .send({landing_company_details : data.authorize.landing_company_name})
+                        .then(function(data) {
+                            if (data && data.landing_company_details.has_reality_check) {
+
+                                require(['text!realitycheck/realitycheck.html', "css!realitycheck/realitycheck.css"], function(html) {
+                                    var div = $(html);
+                                    div.find('.realitycheck_firstscreen').show();
+                                    div.find('.realitycheck_secondscreen').hide();
+                                    win = windows.createBlankWindow($('<div/>'), {
+                                        title: 'Reality check',
+                                        width: 600,
+                                        minHeight:90,
+                                        height: 220,
+                                        resizable: false,
+                                        collapsable: false,
+                                        minimizable: false,
+                                        maximizable: false,
+                                        closable: false,
+                                        modal: true,
+                                        closeOnEscape: false,
+                                        ignoreTileAction:true,
+                                        'data-authorized': 'true'
+                                    });
+                                    div.appendTo(win);
+
+                                    //This helps in showing multiple dialog windows in modal form
+                                    $('body').append(win.dialog('widget'));
+
+                                    rv.bind(div[0], settingsData);
+
+                                    resolve();
+                                });
+
+                            } else {
+                                local_storage.remove('realitycheck');
+                            }
+                        });
+                });
+        });
     }
 
-    liveapi.events.on('login', initialRender);
-
-    liveapi.events.on('logout', function() {
-        if (win) win.dialog('destroy');
-        win = null;
-        if (timerHandler) clearTimeout(timerHandler)
+    var logout = function() {
+        if (win) win.dialog('close');
+        if (timerHandler) clearTimeout(timerHandler);
         timerHandler = null;
         settingsData.timeOutInMins= 10;
         settingsData.loginId= null;
@@ -133,10 +134,43 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         settingsData.open= null;
         settingsData.potentialProfit= null;
         settingsData.currency= null;
+    };
+
+    var oauthLogin = function() {
+        logout();
+        init().then(function() {
+            var $root = win.dialog('widget');
+            $root.find('.realitycheck_firstscreen').show();
+            $root.find('.realitycheck_secondscreen').hide();
+            win.dialog('open');
+        });
+    };
+
+    liveapi.events.on('oauth-login', oauthLogin);
+    liveapi.events.on('login', function (data) {
+
+        if (settingsData.loginId != data.authorize.loginid) {
+            logout();
+        }
+
+        var realityCheck_fromStorage = local_storage.get("realitycheck");
+        if (realityCheck_fromStorage) {
+            var durationInMins = (moment.utc().valueOf() - (realityCheck_fromStorage.accepted_time)) / 60 / 1000;
+            init().then(function () {
+                setOrRefreshTimer(durationInMins >= realityCheck_fromStorage.timeOutInMins ? 0 : Math.abs(realityCheck_fromStorage.timeOutInMins - durationInMins))
+            });
+        } else {
+            oauthLogin();
+        }
+
     });
 
-    return {
-        init : initialRender
-    };
+    liveapi.events.on('logout', function() {
+        console.log('Reality check logout called');
+        logout();
+        local_storage.remove('realitycheck');
+    });
+
+    return {};
 
 });

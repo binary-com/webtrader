@@ -36,6 +36,13 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
               var root = $("<ul>").appendTo(trade); /* add to trade menu */
               menu.refreshMenu(root, markets, function (li) {
                   var data = li.data();
+
+                  //Store this new window in local_storage
+                  var windows_ls = local_storage.get('windows') || {};
+                  windows_ls.windows = (windows_ls.windows || []);
+                  windows_ls.windows.push(lodash.extend(data, { isTrade: true   }));
+                  local_storage.set('windows', windows_ls);
+
                   liveapi
                     .send({ contracts_for: data.symbol })
                     .then(function (res) {

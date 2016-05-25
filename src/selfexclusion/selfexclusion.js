@@ -167,18 +167,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         }, logoutAfter_ms);
 
     };
-
-    liveapi.events.on('login', function(data) {
-        liveapi.cached.authorize()
-            .then(function() {
-                loginTime = _.now();
-                refreshData()
-                    .then(function() {
-                        setOrRefreshTimer();
-                    });
-            });
-    });
-    liveapi.events.on('logout', function() {
+    
+    var logout = function() {
+        console.log('Self exclusion logout called');
         if (win) win.dialog('destroy');
         win = null;
         if (timerHandlerForSessionTimeout) clearTimeout(timerHandlerForSessionTimeout)
@@ -194,7 +185,25 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         settingsData.max_open_bets= null;
         settingsData.session_duration_limit= null;
         settingsData.exclude_until= null;
+        $("#nav-container a.selfexclusion").addClass('disabled');
+    };
+
+    liveapi.events.on('login', function(data) {
+        console.log('Self exclusion login called');
+        liveapi.cached.authorize()
+            .then(function(data) {
+                if (!data.authorize.is_virtual) {
+                    loginTime = _.now();
+                    refreshData().then(function () {
+                        setOrRefreshTimer();
+                    });
+                    $("#nav-container a.selfexclusion").removeClass('disabled');
+                } else {
+                    logout();
+                }
+            });
     });
+    liveapi.events.on('logout', logout);
 
     return {
         /**
@@ -203,20 +212,22 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
          */
         init : function($menuLink) {
             $menuLink.click(function () {
-                liveapi.cached.authorize()
-                    .then(function() {
-                        if (!win) {
-                            init().then(function () {
-                                win.dialog('open');
-                            });
-                        } else {
-                            refreshData();
-                            win.moveToTop();
-                        }
-                    })
-                    .catch(function (err) {
-                        console.error(err);
-                    });
+                if(!$(this).hasClass('disabled')) {
+                    liveapi.cached.authorize()
+                        .then(function () {
+                            if (!win) {
+                                init().then(function () {
+                                    win.dialog('open');
+                                });
+                            } else {
+                                refreshData();
+                                win.moveToTop();
+                            }
+                        })
+                        .catch(function (err) {
+                            console.error(err);
+                        });
+                }
             });
         }
     };

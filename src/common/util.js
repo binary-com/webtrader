@@ -2,26 +2,6 @@
  * Created by arnab on 2/12/15.
  */
 
-/*
-* patch for jquery growl functions.
-* do not to show multiple growls with the same content.
-* add more info to messages realted to websocket 'rate limit'
-*/
-require(['jquery', 'jquery-growl'], function($){
-  ['error', 'notice', 'warning'].forEach(function(name){
-      var perv = $.growl[name].bind($.growl);
-      $.growl[name] = function(options){
-        if(options.message.indexOf('rate limit') > -1) {
-          options.message += ' Please try again after 1 minute.';
-        }
-        if(!options.title) options.title = ''; /* remove title */
-        /* remove current growl with the same message */
-        $('#growls .growl:contains("' + options.message + '")').remove();
-        perv(options);
-      }
-  });
-});
-
 function isTick(ohlc) {
     return ohlc.indexOf('t') != -1;
 }
@@ -146,21 +126,6 @@ function validateParameters() {
       return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
 }
 
-/* example: load_ondemand(li,'click','tradingtimes/tradingtimes',callback) */
-function load_ondemand(element, event_name,msg, module_name, callback) {
-    element.one(event_name, function () {
-        require([module_name], function (module) {
-            if (msg) {
-                require(["jquery", "jquery-growl"], function ($) {
-                    $.growl.notice({message: msg});
-                });
-            }
-
-            callback && callback(module);
-        });
-    });
-}
-
 /* convert epoch to stirng yyyy-mm-dd hh:mm:ss format
    options: { utc: true/false } */
 function epoch_to_string(epoch, options) {
@@ -261,6 +226,37 @@ function setLongTimeout(callback, timeout_ms, _callBackWithHandler) {
     }
 }
 
+/* source: http://stackoverflow.com/questions/46155 */
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 String.prototype.replaceAll = function(target, replacement) {
     return this.split(target).join(replacement);
 };
+
+/* are we in webtrader.binary.com or webtrader.binary.com/beta */
+var is_beta = (function() {
+  var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
+  return function() {
+    return _is_beta_;
+  };
+})();
+
+/* simple localStorage cache to differentiate between live and beta */
+var local_storage = {
+  get: function(name){
+    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    var ret = localStorage.getItem(name);
+    return ret && JSON.parse(ret);
+  },
+  set: function(name, obj){
+    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    return localStorage.setItem(name, JSON.stringify(obj));
+  },
+  remove: function(name) {
+    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    return localStorage.removeItem(name);
+  }
+}

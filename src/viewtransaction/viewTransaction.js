@@ -11,9 +11,38 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
   require(['css!viewtransaction/viewTransaction.css']);
   require(['text!viewtransaction/viewTransaction.html']);
 
-  function init_chart(root, options) {
+  var market_data_disruption_win = null;
+  function show_market_data_disruption_win(proposal) {
+    if(market_data_disruption_win){
+       market_data_disruption_win.moveToTop();
+       return;
+    }
+    var msg = "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.";
+    // var msg = proposal.validation_error;
+    var root = $('<div class="data-disruption-dialog">' + msg + '</div>');
+
+    market_data_disruption_win = windows.createBlankWindow(root, {
+        title: ' There was an error ',
+        height: 200,
+        resizable:false,
+        collapsable:false,
+        minimizable: false,
+        maximizable: false,
+        destroy: function() {
+          market_data_disruption_win && market_data_disruption_win.dialog('destroy').remove();
+          market_data_disruption_win = null;
+        },
+        'data-authorized': 'true'
+    });
+
+    market_data_disruption_win.dialog('open');
+    window.dd = market_data_disruption_win;
+  }
+
+  function init_chart(root, state, options) {
       var data = [];
       var type = '';
+      var decimal_digits = 0;
       if(options.history){
         type = 'line';
         var history = options.history;
@@ -21,6 +50,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var prices = history.prices;
         for(var i = 0; i < times.length; ++i) {
           data.push([times[i]*1000, prices[i]*1]);
+          decimal_digits = Math.max(decimal_digits, prices[i].substring(prices[i].indexOf('.') + 1).length);
         }
       }
       if(options.candles) {
@@ -54,7 +84,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           text: title,
           style: { fontSize:'16px' }
         },
-        tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
+        tooltip:{
+          xDateFormat:'%A, %b %e, %H:%M:%S GMT',
+          valueDecimals: decimal_digits || undefined,
+       },
         xAxis: {
           type: 'datetime',
           categories:null,
@@ -133,6 +166,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
            .then(function(data){
               var proposal = data.proposal_open_contract;
+              /* check for market data disruption error */
+              if(proposal.underlying === undefined && proposal.longcode === undefined) {
+                show_market_data_disruption_win(proposal);
+                return;
+              }
               proposal.transaction_id = transaction_id;
               proposal.symbol = proposal.underlying;
               init_dialog(proposal);
@@ -158,7 +196,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.validation = 'This contract has expired';
       else if(contract.is_valid_to_sell)
         state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
-
+      if(contract.is_forward_starting){
+        if(contract.date_start > parseInt(contract.current_spot_time))
+          state.fwd_starting = '* Contract is not yet started.';
+        else
+          state.fwd_starting = '';
+      }
       /*Do not update the current_spot and current_spot_time if the contract has expired*/
       if(state.table.date_expiry*1 >= contract.current_spot_time*1) {
           state.table.current_spot = contract.current_spot;
@@ -186,6 +229,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.table.sell_price = contract.sell_price;
         state.table.final_price = formatPrice(contract.sell_price);
       }
+
+        if(!state.chart.barrier && contract.barrier) {
+          state.chart.barrier = contract.barrier;
+          state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
+        }
+        if(!state.chart.high_barrier && contract.high_barrier) {
+          state.chart.high_barrier = contract.high_barrier;
+          state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
+        }
+        if(!state.chart.low_barrier && contract.low_barrier) {
+          state.chart.low_barrier = contract.low_barrier;
+          state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
+        }
   }
 
   function init_dialog(proposal) {
@@ -472,7 +528,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         var options = { title: state.chart.display_name };
         if(data.history) options.history = data.history;
         if(data.candles) options.candles = data.candles;
-        var chart = init_chart(root, options);
+        var chart = init_chart(root, state, options);
 
         if(data.history && !state.table.entry_tick_time) {
           state.table.entry_tick_time = data.history.times.filter(function(t){ return t*1 > state.table.date_start*1 })[0];
