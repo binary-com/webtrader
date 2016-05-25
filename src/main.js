@@ -84,7 +84,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
     "use strict";
 
     //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage) {
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage) {
       window.location.href = 'unsupported_browsers/unsupported_browsers.html';
       return;
     }
