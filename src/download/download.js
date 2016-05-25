@@ -332,7 +332,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 require(['text!download/download.html'], function($html) {
 
                     $html = $($html);
-                    $html.find("button, input[type=button]").button();
+                    //$html.find("button, input[type=button]").button();
                     $html
                         .find('.download_fromDate')
                         .datepicker({

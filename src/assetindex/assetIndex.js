@@ -7,7 +7,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
     var assetWin = null;
 
     function init(li) {
-        require(['css!assetindex/assetIndex.css']);
         li.click(function () {
             //Store this new window in local_storage
             var windows_ls = local_storage.get('windows') || {};

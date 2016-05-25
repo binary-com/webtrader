@@ -13,8 +13,9 @@ body {
 #nav-container {
     position: relative;
     background-color: #273051;
-    height: 53px;
+    height: 54px;
     text-align: center;
+    display: block;
 }
 
 #nav-container span.ui-icon {

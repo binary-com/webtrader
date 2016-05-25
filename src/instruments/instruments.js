@@ -51,8 +51,11 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
             /* disable or enable the buttons based on delay_amount */
             $("#instrumentsDialog").find('button').each(function () {
                 var btn = $(this); // button ids are    1m, 5m, 15m, 1h, 4h, 8h, 1d, 2d, ...
-                var act = convertToTimeperiodObject(btn.attr('id')).timeInSeconds() < delay_amount * 60 ? 'disable' : 'enable';
-                btn.button(act);
+                if (convertToTimeperiodObject(btn.attr('id')).timeInSeconds() < delay_amount * 60) {
+                    btn.attr('disabled', 'disabled');
+                } else {
+                    btn.removeAttr('disabled');
+                }
             });
 
         };
@@ -63,13 +66,12 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
                 $("#standardPeriodsButtonContainer").find("button")
                     .click(function () {
                         openNewChart($(this).attr('id'));
-                    })
-                    .button();
+                    });
 
                 $("#instrumentsDialog").dialog({
                     autoOpen: false,
                     resizable: false,
-                    width: 270,
+                    width: 277,
                     height: 250,
                     my: 'center',
                     at: 'center',

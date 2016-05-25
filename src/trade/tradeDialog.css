@@ -28,8 +28,6 @@
 
 .trade-fields .error { background: #fef1cf; }
 
-.trade-fields .ui-selectmenu-button { border-radius: 5px !important; }
-
 .trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 160px !important; }
 
 .trade-fields .categories-row {padding: 3px 5px; }
@@ -78,40 +76,6 @@
     padding:0;
 }
 
-/*#region input type=number */
-.trade-fields input[type="number"]::-webkit-outer-spin-button,
-.trade-fields [type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.trade-fields [type="number"] {
-    -moz-appearance: textfield;
-}
-
-.trade-fields span.ui-spinner {
-    background: none;
-    border:none;
-    margin-bottom:5px;
-}
-
-.trade-fields input[type=number],
-.trade-fields input[type=text] {
-    outline: 0;
-    border:none;
-    border-radius:5px;
-    height: 30px;
-    margin:0;
-    text-align:center;
-    background: #273051;
-    color:white;
-}
-.trade-fields input[step] {
-    padding-right: 15px;
-}
-
-.trade-fields .ui-spinner-button.ui-spinner-up {
-    margin-top: 0;
-}
 /*#endregion*/
 
 .trade-fields ul {
@@ -225,16 +189,8 @@
 
 .trade-fields .purchase-row { bottom: 5px;}
 .trade-fields .purchase-row li:nth-child(1) { position: absolute; left: 20px; width: 200px;}
-.trade-fields .purchase-row li:nth-child(2) { left:90px; position: relative;}
+.trade-fields .purchase-row li:nth-child(2) { left:160px; position: relative;}
 .trade-fields .purchase-row li span { font-weight: bolder; font-size: larger;}
-.trade-fields .purchase-button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    width: 120px;
-}
 
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px !important; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
