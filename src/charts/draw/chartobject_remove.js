@@ -99,8 +99,33 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
 
             $(".indicator_remove_dialog").data('refererChartID', containerIDWithHash).dialog("open");
 
-        }
+        },
 
+        showToast : function(containerIDWithHash){
+            var chart = $(containerIDWithHash).highcharts(),
+                middle = chart.chartWidth/2 - 130,
+                text = "Double click the object to remove.";
+            
+            chart.toast = chart.renderer.label(text, chart.plotLeft + middle, chart.plotTop)
+                .attr({
+                    fill: Highcharts.getOptions().colors[0],
+                    padding: 10,
+                    r: 5,
+                    zIndex: 8,
+                    opacity: 0.95
+                })
+                .css({
+                    color: '#FFFFFF'
+                })
+                .add();
+
+            setTimeout(function () {
+                chart.toast.fadeOut();
+            }, 2000);
+            setTimeout(function () {
+                chart.toast = chart.toast.destroy();
+            }, 2500);
+        }
     };
 
 });

@@ -20,7 +20,7 @@ define(["jquery", "datatables", "common/util"], function ($) {
               require(["charts/draw/highcharts_custom/" + className], function(draw) {
                 var refererChartID = $('.chartobject_add_dialog').data('refererChartID');
                 $(refererChartID).highcharts().annotate = true;
-                draw.init();
+                draw.init(refererChartID);
                 $('.chartobject_add_dialog').dialog('close');
               });
             });
