@@ -96,7 +96,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init_state(root){
       state = {
         dialog: {
-          title: 'Add/remove inidcators',
+          title: 'Add/remove indicators',
           container_id: '',
           is_tick_chart: false
         },
