@@ -56,7 +56,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             ind_win = $(root).dialog({
               autoOpen: false,
               resizable: false,
-              width: 480,
+              width: Math.min(480, $(window).width() - 10),
               height: 400,
               modal: true,
               my: 'center',
@@ -75,6 +75,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             ind_win = windows.createBlankWindow(root, {
                 title: 'Add/remove indicators',
                 width: 700,
+                modal: true,
                 // minHeight: 60,
                 destroy: function () {
                   ind_win_view && ind_win_view.unbind();
@@ -95,7 +96,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init_state(root){
       state = {
         dialog: {
-          title: 'Add/remove inidcators',
+          title: 'Add/remove indicators',
           container_id: '',
           is_tick_chart: false
         },
