@@ -1,6 +1,6 @@
 {
   "name": "Webtrader",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This is a Webtrader project for binary.com",
   "main": "Gruntfile.js",
   "engines": {

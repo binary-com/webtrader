@@ -1,3 +1,4 @@
+/* created by amin, on May 18, 2016 */
 
 define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'moment', 'clipboard'], function(liveapi, windows, rv, moment, clipboard) {
     require(['text!token/token.html']);

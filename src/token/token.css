@@ -38,6 +38,8 @@
   width: 100%;
 }
 .token-dialog .token-list-pane table thead { line-height: 30px; }
+.token-dialog .token-list-pane table thead th { text-align: left; font-weight: bold; }
+.token-dialog .token-list-pane table thead th:last-child { text-align: right; }
 .token-dialog .token-list-pane table tbody tr:nth-child(odd) { background: #eee; }
 .token-dialog .token-list-pane table tbody td:last-child { text-align: right; }
 .token-dialog .token-list-pane table tbody td span {

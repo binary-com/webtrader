@@ -6,7 +6,7 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
 
     return {
 
-        init : function (newTabId, timePeriod, chartType, tableViewCb) {
+        init : function (newTabId, timePeriod, chartType, tableViewCb, instrumentName) {
 
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function($html) {
                 //attach different button actions
@@ -142,21 +142,12 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                         });
                     });
 
-                $html.find('.indicators li').click(function () {
-                        //If disabled, ignore this click
-                        if ($(this).hasClass('addInidicators'))
-                        {
-                            require(["charts/indicators/indicators_add"], function( indicators ) {
-                                indicators.openDialog( '#' + newTabId + '_chart' );
-                            });
-                        }
-                        else if ($(this).hasClass('removeIndicators'))
-                        {
-                            require(["charts/indicators/indicators_remove"], function( indicators ) {
-                                indicators.openDialog( '#' + newTabId + '_chart' );
-                            });
-                        }
-                    });
+                $html.find("li.indicators-add-remove").click(function(){
+                      require(["charts/indicatorManagement"], function( indicatorManagement ) {
+                          var title = instrumentName + ' (' + timePeriod + ')';
+                          indicatorManagement.openDialog( '#' + newTabId + '_chart', title);
+                      });
+                });
 
                 $html.find(".overlay li").click(function () {
                   if ($(this).hasClass('addOverlay')) {

@@ -60,7 +60,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                 /* initialize chartOptions & table-view once chart is rendered */
                 require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
                     var table_view = tableView.init(dialog);
-                    chartOptions.init(id, options.timePeriod, options.type, table_view.show);
+                    chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName);
                 });
             });
 

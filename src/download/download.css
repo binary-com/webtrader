@@ -8,15 +8,19 @@
 }
 
 .download_fromDate {
-    width: 110px;
+    min-width: 110px;
+    max-width: 110px;
     position: relative;
     top: -3px;
+    line-height: 5px !important;
 }
 
 .download_fromTime {
-    width : 60px;
+    min-width: 60px;
+    max-width: 60px;
     position: relative;
     top: -3px;
+    line-height: 5px !important;
 }
 
 .download_table td {
