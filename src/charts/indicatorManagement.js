@@ -75,6 +75,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             ind_win = windows.createBlankWindow(root, {
                 title: 'Add/remove indicators',
                 width: 700,
+                modal: true,
                 // minHeight: 60,
                 destroy: function () {
                   ind_win_view && ind_win_view.unbind();
