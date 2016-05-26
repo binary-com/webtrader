@@ -56,7 +56,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             ind_win = $(root).dialog({
               autoOpen: false,
               resizable: false,
-              width: 480,
+              width: Math.min(480, $(window).width() - 10),
               height: 400,
               modal: true,
               my: 'center',
