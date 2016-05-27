@@ -53,7 +53,7 @@ define(['highstock', 'common/util'], function () {
                     var lineID = $(this).attr('id'),
                         line = verticalLineOptionsMap[lineID],
                         clickY,
-                        clickX = evt.pageX - line.translateX,
+                        clickX = evt.pageX - line.translateX - chart.plotLeft,
                         mouseUpEventAdded = false;
                     
                     H.wrap(H.Pointer.prototype, 'drag', function(c, e){
@@ -66,7 +66,7 @@ define(['highstock', 'common/util'], function () {
                                 });
                             }
                             if(chart.isInsidePlot(e.chartX -chart.plotLeft, e.chartY - chart.plotTop)){
-                                line.translate(e.pageX - clickX, e.pageY - clickY);
+                                line.translate(e.pageX - clickX - chart.plotLeft, e.pageY - clickY);
                             }
                             
                         } else{

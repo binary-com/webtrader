@@ -184,7 +184,7 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                   }
                   else if ($(this).hasClass('removeChartObject')) {
                       require(["charts/draw/chartobject_remove"], function( overlay ) {
-                          overlay.showToast( '#' + newTabId + '_chart' );
+                          overlay.showDialog( '#' + newTabId + '_chart' );
                       });
                         $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
                         $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();

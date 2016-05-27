@@ -101,7 +101,7 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
 
         },
 
-        showToast : function(containerIDWithHash){
+        showDialog : function(containerIDWithHash){
             var chart = $(containerIDWithHash).highcharts(),
                 middle = chart.chartWidth/2 - 130,
                 text = "Double click the object to remove.";
