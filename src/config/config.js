@@ -13,7 +13,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
     win_view = rv.bind(root[0], state);
 
     win = windows.createBlankWindow(root, {
-      title: 'Configurations',
+      title: 'Change Backend Server',
       resizable: false,
       collapsable: false,
       minimizable: false,
@@ -23,7 +23,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
       open: function () {
         var config = local_storage.get('config');
         if(config && config.app_id) state.app_id = config.app_id;
-        if(config && config.server_url) state.server_url = config.server_url;
+        if(config && config.websocket_url) state.websocket_url = _.replace(_.replace(config.websocket_url || '', 'wss://', ''), '/websockets/v3?l=EN', '');
+        if(config && config.oauth_url) state.oauth_url = _.replace(_.replace(config.oauth_url || '', 'https://', ''), '/oauth2/authorize', '');
       },
       close: function() {
         win_view && win_view.unbind();
@@ -56,7 +57,6 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
 
     state.apply = function() {
       var config = {
-        server_url: state.server_url,
         websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN',
         oauth_url: 'https://' + state.oauth_url + '/oauth2/authorize',
         app_id: state.app_id
@@ -71,7 +71,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
     }
 
     state.reload_page = function() {
-      $.growl.notice({message: 'Config changes successfull.<br/>Reloading page ...'});
+      $.growl.notice({message: 'Config changes successful.<br/>Reloading page ...'});
       setTimeout(function(){
         window.location.reload();
       }, 900);
