@@ -117,9 +117,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         liveapi.send({ balance: 1 })
             .then(function (data) {
                 var refresh = function(subscribe) {
-                  if(portfolioWin.dialogExtend('state') === 'minimized') {
-                      portfolioWin.dialogExtend('restore');
-                  }
                   liveapi.send({ balance: 1 }).catch(function (err) { console.error(err); $.growl.error({ message: err.message }); });
                   update_table();
                   proposal_open_contract( subscribe === true? 'subscribe' : 'resubscribe');
@@ -162,11 +159,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     },
                     refresh: refresh
                 });
-                portfolioWin.track({
-                  module_id: 'portfolio',
-                  is_unique: true,
-                  data: null
-                });
 
                 var header = portfolioWin.parent().find('.ui-dialog-title').addClass('with-content');
                 balance_span = $('<span class="span-in-dialog-header" />')
@@ -202,6 +194,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 table.parent().addClass('hide-search-input');
 
                 portfolioWin.on('click', on_arrow_click);
+                portfolioWin.track({
+                  module_id: 'portfolio',
+                  is_unique: true,
+                  data: null
+                });
                 portfolioWin.dialog('open');
             })
             .catch(function (err) {

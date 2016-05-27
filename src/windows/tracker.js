@@ -81,12 +81,22 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       pos.size && blankWindow.dialog('option', 'width', pos.size.width);
       pos.size && blankWindow.dialog('option', 'height', pos.size.height);
       state.position.size = pos.size;
-      save_states();
+      state.position.mode = pos.mode;
 
-      pos.offset && dialog.animate({
-        left: pos.offset.left + 'px',
-        top: pos.offset.top + 'px'
-      }, 0, dialog.trigger.bind(dialog, 'animated'));
+      if(pos.mode === 'maximized')
+        blankWindow.dialogExtend('maximize');
+      else if(pos.mode === 'minimized')
+        blankWindow.dialogExtend('minimize');
+
+      if(pos.offset) {
+         dialog.css({
+          left: pos.offset.left + 'px',
+          top: pos.offset.top + 'px'
+        });
+        state.position.offset = pos.offset;
+      }
+
+      save_states();
   }
 
   /* options: {

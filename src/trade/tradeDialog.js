@@ -757,7 +757,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
             resizable: false,
-            collapsable: true,
+            collapsable: false,
             minimizable: true,
             maximizable: false,
             'data-authorized': 'true',
