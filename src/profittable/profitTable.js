@@ -116,6 +116,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
               },
               'data-authorized': 'true'
           });
+          profitWin.track({
+            module_id: 'profitTable',
+            is_unique: true,
+            data: null
+          });
 
             table = $(html);
             table.appendTo(profitWin);

@@ -757,7 +757,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
             resizable: false,
-            collapsable: true,
+            collapsable: false,
             minimizable: true,
             maximizable: false,
             'data-authorized': 'true',
@@ -771,15 +771,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               }
               chartingRequestMap.unregister(key);
               view.unbind();
-
-              var windows_ls = local_storage.get('windows') || {};
-              var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isTrade && ew.symbol === symbol.symbol; });
-              if (storeIndex >= 0) {
-                windows_ls.windows.splice(storeIndex, 1);
-                local_storage.set('windows', windows_ls);
-              }
-
             }
+        });
+        dialog.track({
+          module_id: 'tradeDialog',
+          is_unique: false,
+          data: symbol
         });
 
         /********************** register for ticks_streams **********************/
