@@ -300,6 +300,18 @@ button::-moz-focus-inner { border: 0; }
     cursor: pointer;
 }
 
+.orange-button {
+  background: #e98024;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  outline: 0;
+  max-width: 200px;
+  line-height: 2em;
+  width: 100%;
+  cursor: pointer;
+}
+
 /* default style for inputs */
 input:not([type='checkbox']) {
   border: none;

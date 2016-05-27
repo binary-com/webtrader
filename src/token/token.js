@@ -58,6 +58,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             admin: false
           },
           btn_disabled: false,
+        },
+        confirm: {
+          visible: false,
+          top: '0px',
+          token: {}
         }
       };
 
@@ -65,12 +70,28 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         var txt = state.search_input;
         return state.tokens.filter(function(token){
           return txt === ''
-                || token.display_name.indexOf(txt) !== -1
-                || token.token.indexOf(txt) !== -1;
+                || token.display_name.toLowerCase().indexOf(txt) !== -1
+                || token.token.toLowerCase().indexOf(txt) !== -1
+                || token.permissions.toLowerCase().indexOf(txt) !== -1;
         });
       }
 
-      state.remove = function(token){
+      state.confirm.show = function(e){
+        var span = $(e.target);
+        var top = span.position().top - span.parent().parent().height();
+        var token = span.attr('token-id');
+        token = _.find(state.tokens, { token: token });
+        state.confirm.top = top + 'px';
+        state.confirm.visible = true;
+        state.confirm.token = token;
+
+      }
+      state.confirm.no = function() {
+        state.confirm.visible = false;
+      }
+      state.confirm.yes = function(){
+        var token = state.confirm.token;
+        state.confirm.visible = false;
         liveapi.send({api_token:1, delete_token: token.token })
                .then(function(data){
                  var tokens = (data.api_token && data.api_token.tokens) || [];
@@ -89,6 +110,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
            var scopes = token.scopes;
            token.permissions = scopes.length == 4 ? 'All' : scopes.join(', ');
 
+           token.last_used_tooltip = token.last_used;
            token.last_used = token.last_used ? moment.utc(token.last_used, 'YYYY-MM-DD HH:mm:ss').fromNow() : '-';
          });
          state.tokens = tokens;
@@ -121,6 +143,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.token.btn_disabled = true;
         liveapi.send(request)
                .then(function(data){
+                  state.token.name = '';
                   state.token.btn_disabled = false;
                   $.growl.notice({ message: 'Successfully added new token "' + request.new_token + '"'});
 
