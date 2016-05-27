@@ -22,11 +22,11 @@ rv-dialog-title='dialog.title'>
     <div rv-each-ind='indicators.favorites | indicators-favorites-filter indicators.search'>
       <span rv-text='ind.long_display_name'
             rv-on-click='indicators.add | bind ind'></span>
-      <span class='ui-icon ui-icon-star'
-            rv-on-click='indicators.favorite | bind ind'></span>
       <span class='question-mark'
             rv-show='ind.description'
             rv-tooltip='ind.description'> ? </span>
+      <span class='ui-icon ui-icon-star'
+            rv-on-click='indicators.favorite | bind ind'></span>
     </div>
   </div>
 
@@ -36,11 +36,11 @@ rv-dialog-title='dialog.title'>
       <div rv-each-ind='indicators.array | indicators-filter cat indicators.search'>
         <span rv-text='ind.long_display_name'
               rv-on-click='indicators.add | bind ind'></span>
-        <span class='ui-icon ui-icon-star-b'
-              rv-on-click='indicators.favorite | bind ind'></span>
         <span class='question-mark'
               rv-show='ind.description'
               rv-tooltip='ind.description'> ? </span>
+        <span class='ui-icon ui-icon-star-b'
+              rv-on-click='indicators.favorite | bind ind'></span>
       </div>
     </div>
   </div>

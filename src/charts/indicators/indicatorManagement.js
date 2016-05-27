@@ -160,7 +160,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           series.forEach(function(seri){
             seri[ind.id] && seri[ind.id].forEach(function(instance){
                 var ind_clone = _.cloneDeep(ind);
-                ind_clone.name = ind.long_display_name + " - " + instance.toString();
+                //Show suffix if it is different than the long_display_name
+                var show = ind.long_display_name !== instance.toString();
+                ind_clone.name = ind.long_display_name + (show ? " - " + instance.toString() : "");
                 ind_clone.series_ids = instance.getIDs()
                 current.push(ind_clone);
             });
