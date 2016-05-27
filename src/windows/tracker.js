@@ -13,12 +13,13 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
     save_states();
 
     var unique_modules = {
-      'statement/statement': function(data){
+      statement: function(data){
         $('#nav-container .statement').click();
       }
     };
 
-    _.forEach(saved_states, function(data, module_id) {
+    var counter = 0;
+    var reopen = function(data, module_id) {
       if(data.position.mode === 'closed') return;
 
       if(data.is_unique) {
@@ -28,28 +29,44 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
             return true; // unsubscribe from login event
           });
         }
-        else {
-            unique_modules[module_id](data);
-        }
+        else { unique_modules[module_id](data); }
+      }
+      else if(module_id === 'chartWindow') {
+        data.data.tracker_id = ++counter;
+        require(['charts/chartWindow'], function(chartWindow) {
+          chartWindow.addNewWindow(data.data);
+        });
       }
       else {
         console.error('unknown module_id ' + module_id);
       }
+    };
+    _.forEach(saved_states, function(data, module_id) {
+      if(_.isArray(data))
+        data.forEach(function(d){
+          reopen(d, module_id);
+        })
+      else
+        reopen(data, module_id);
     });
   }
 
-  /* avoid too many writes to local storage */
-  var save_states = _.debounce(function(){
+  // /* avoid too many writes to local storage */
+  // var save_states = _.debounce(function(){
+  //   console.warn(JSON.stringify(states));
+  //   local_storage.set('states', states);
+  // }, 10);
+  var save_states = function() {
     console.warn(JSON.stringify(states));
     local_storage.set('states', states);
-  }, 100);
+  };
 
   function apply_saved_state(dialog, blankWindow, state, saved_state){
       var pos = saved_state.position;
 
       pos.size && blankWindow.dialog('option', 'width', pos.size.width);
       pos.size && blankWindow.dialog('option', 'height', pos.size.height);
-      state.size = pos.size;
+      state.position.size = pos.size;
       save_states();
 
       pos.offset && dialog.animate({
@@ -85,7 +102,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       states[options.module_id] = state;
       saved_state = saved_states[options.module_id];
       if(saved_state){
-        if(saved_state.position.mode == 'closed')
+        if(saved_state.position.mode === 'closed')
           saved_state = null;
         delete saved_states[options.module_id];
       }
@@ -93,6 +110,18 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
     else {
       states[options.module_id] = states[options.module_id] || [];
       states[options.module_id].push(state);
+
+      if(saved_states[options.module_id] && state.data.tracker_id !== undefined) {
+        var inx = _.findIndex(saved_states[options.module_id], function(elem){
+          return elem.data.tracker_id === state.data.tracker_id;
+        });
+        if(inx !== -1) {
+          saved_state = saved_states[options.module_id][inx];
+          saved_states[options.module_id].splice(inx, 1);
+          if(saved_state.position.mode === 'closed')
+            saved_state = null;
+        }
+      }
     }
     save_states();
     dialog.on('dragstop', function(){
@@ -126,7 +155,10 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       }
       else{
         var inx = states[state.module_id].indexOf(state);
-        states[state.module_id].splice(inx, 1);
+        if(states[state.module_id].length == 1)
+          delete states[state.module_id];
+        else
+          states[state.module_id].splice(inx, 1);
       }
       save_states();
     });

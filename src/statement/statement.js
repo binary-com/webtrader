@@ -96,7 +96,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
             'data-authorized' :'true'
         });
         statement.track({
-          module_id: 'statement/statement',
+          module_id: 'statement',
           is_unique: true,
           data: null,
         });

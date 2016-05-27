@@ -22,7 +22,8 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
          * @param options
          * @returns {*}
          */
-        addNewWindow: function( options ) {
+        addNewWindow: function(options) {
+            var options_copy = options;
             options = $.extend({
                 title: options.instrumentName + " (" + options.timePeriod + ")",
                 close: function () {
@@ -62,6 +63,12 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                     var table_view = tableView.init(dialog);
                     chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName);
                 });
+            });
+
+            dialog.track({
+              module_id: 'chartWindow',
+              is_unique: false,
+              data: options_copy
             });
 
             dialog.dialog('open');
