@@ -143,23 +143,17 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                     });
 
                 $html.find("li.indicators-add-remove").click(function(){
-                      require(["charts/indicatorManagement"], function( indicatorManagement ) {
+                      require(["charts/indicators/indicatorManagement"], function( indicatorManagement ) {
                           var title = instrumentName + ' (' + timePeriod + ')';
                           indicatorManagement.openDialog( '#' + newTabId + '_chart', title);
                       });
                 });
 
-                $html.find(".overlay li").click(function () {
-                  if ($(this).hasClass('addOverlay')) {
-                      require(["overlay/overlay_add"], function( overlay ) {
-                          overlay.openDialog( '#' + newTabId + '_chart' );
-                      });
-                  }
-                  else if ($(this).hasClass('removeOverlay')) {
-                      require(["overlay/overlay_remove"], function( overlay ) {
-                          overlay.openDialog( '#' + newTabId + '_chart' );
-                      });
-                  }
+                $html.find("li.overlay-add-remove").click(function () {
+                    require(["charts/overlay/overlayManagement"], function(overlayManagement ) {
+                        var title = instrumentName + ' (' + timePeriod + ')';
+                        overlayManagement.openDialog( '#' + newTabId + '_chart', title);
+                    });
                 });
 
                 $html.find(".drawLI li").click(function () {

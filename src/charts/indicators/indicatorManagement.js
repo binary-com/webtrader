@@ -1,8 +1,6 @@
 /* created by amin, on May 20, 2016 */
 define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], function(liveapi, rv, _) {
-    require(['text!charts/indicatorManagement.html']);
-    require(['css!charts/indicatorManagement.css']);
-    require(['text!charts/indicators/indicators.json']);
+    require(['text!charts/indicators/indicatorManagement.html', 'css!charts/indicators/indicatorManagement.css', 'text!charts/indicators/indicators.json']);
     var ind_win = null;
     var ind_win_view = null;
     var state = {};
@@ -40,7 +38,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init() {
       if(!ind_win)
         return new Promise(function(resolve, reject){
-          require(['text!charts/indicatorManagement.html'], function(root){
+          require(['text!charts/indicators/indicatorManagement.html'], function(root){
             init_dialog_async(root).then(resolve);
           });
         });
@@ -146,7 +144,6 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
       }
 
       ind_win_view = rv.bind(root[0], state);
-      window.state = state;
     }
 
     function update_indicators(series) {
