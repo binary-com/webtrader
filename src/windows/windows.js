@@ -431,9 +431,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             //Attach click listener for tile menu
             tileObject.click(tileDialogs);
 
-            require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"],
-                    function (chartWindowObj,liveapi, menu) {
-
+            require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], function (chartWindowObj,liveapi, menu) {
 
                 if(!tracker.is_empty()) {
                   tracker.reopen();

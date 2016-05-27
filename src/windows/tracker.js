@@ -213,7 +213,10 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
     track: track,
     reopen: reopen_dialogs,
     is_empty: function(){
-      return _.size(states) === 0;
+      var ok = _.values(states).filter(function(s) {
+        return _.isArray(s) || s.position.mode !== 'closed';
+      });
+      return ok.length === 0;
     }
   }
 });
