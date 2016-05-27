@@ -37,6 +37,19 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
           chartWindow.addNewWindow(data.data);
         });
       }
+      else if(module_id === 'tradeDialog') {
+        liveapi.events.on_till('login', function() {
+          data.data.tracker_id = ++counter;
+          liveapi
+              .send({contracts_for: data.data.symbol})
+              .then(function (res) {
+                  require(['trade/tradeDialog'], function (tradeDialog) {
+                      tradeDialog.init(data.data, res.contracts_for);
+                  });
+              }).catch(console.error.bind(console));
+          return true; // unsubscribe from login event
+        });
+      }
       else {
         console.error('unknown module_id ' + module_id);
       }
@@ -52,14 +65,10 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
   }
 
   // /* avoid too many writes to local storage */
-  // var save_states = _.debounce(function(){
-  //   console.warn(JSON.stringify(states));
-  //   local_storage.set('states', states);
-  // }, 10);
-  var save_states = function() {
+  var save_states = _.debounce(function(){
     console.warn(JSON.stringify(states));
     local_storage.set('states', states);
-  };
+  }, 50);
 
   function apply_saved_state(dialog, blankWindow, state, saved_state){
       var pos = saved_state.position;
@@ -72,7 +81,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       pos.offset && dialog.animate({
         left: pos.offset.left + 'px',
         top: pos.offset.top + 'px'
-      }, 500, dialog.trigger.bind(dialog, 'animated'));
+      }, 0, dialog.trigger.bind(dialog, 'animated'));
   }
 
   /* options: {
