@@ -37,7 +37,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
           click: state.apply
         },
         {
-          text: 'Reset default',
+          text: 'Reset to Defaults',
           icons: { primary: 'ui-icon-refresh' },
           click: state.reset
         }
