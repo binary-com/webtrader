@@ -13,9 +13,8 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
     save_states();
 
     var unique_modules = {
-      statement: function(data){
-        $('#nav-container .statement').click();
-      }
+      assetIndex: '#nav-container .assetIndex',
+      statement: '#nav-container .statement'
     };
 
     var counter = 0;
@@ -25,11 +24,13 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       if(data.is_unique) {
         if(data.is_authorized) {
           liveapi.events.on_till('login', function(){
-            unique_modules[module_id](data);
+            $(unique_modules[module_id]).click();
             return true; // unsubscribe from login event
           });
         }
-        else { unique_modules[module_id](data); }
+        else {
+          $(unique_modules[module_id]).click();
+        }
       }
       else if(module_id === 'chartWindow') {
         data.data.tracker_id = ++counter;
@@ -143,6 +144,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
     });
     dialog.on('resizestop', function(e, ui){
       state.position.size = ui.size;
+      state.position.offset = dialog.offset();
       save_states();
     });
     blankWindow.on('dialogextendminimize', function(){

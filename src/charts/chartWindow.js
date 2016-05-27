@@ -65,13 +65,18 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                 });
             });
 
-            dialog.track({
+            var update_track = dialog.track({
               module_id: 'chartWindow',
               is_unique: false,
               data: options_copy
             });
+            dialog.on('chart-type-changed', function(e, type){
+              options_copy.type = type;
+              update_track(options_copy);
+            });
 
             dialog.dialog('open');
+            console.warn(dialog);
 
             return dialog;
         },
