@@ -1,4 +1,9 @@
 <div class="token-dialog">
+  <div class='confirm' rv-show='confirm.visible' rv-css-top='confirm.top'>
+    <span class='title'>Are you sure you want to delete this token?</span>
+    <button class='blue-button shine' rv-on-click='confirm.yes'>yes</button>
+    <button class='orange-button shine' rv-on-click='confirm.no'>No</button>
+  </div>
   <button class='blue-button shine'
           rv-show='route | not-eq "create-token"'
           rv-on-click='change_route | bind "create-token"'>Create token</button>
@@ -25,10 +30,10 @@
           <td rv-text='token.display_name'></td>
           <td rv-text='token.token'></td>
           <td rv-text='token.permissions'></td>
-          <td rv-text='token.last_used | or -'></td>
+          <td rv-text='token.last_used | or -' rv-tooltip='token.last_used_tooltip'></td>
           <td>
             <span rv-clipboard='token.token' class='ui-icon ui-icon-copy' rv-tooltip='"Copy"'></span>
-            <span rv-on-click='remove | bind token' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
+            <span rv-on-click='confirm.show' rv-attr-token-id='token.token' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
           </td>
         </tr>
       </tbody>
