@@ -437,47 +437,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
 
                 if(!tracker.is_empty()) {
                   tracker.reopen();
-                  setTimeout(fixFooterPosition, 500);
-
-                // }
-                //
-                // //If user close/opened some charts, then open them else, open random charts
-                // var windows_ls = local_storage.get('windows');
-                // if (windows_ls) {
-                //     (windows_ls.windows || []).forEach(function (eWindow) {
-                //         if (eWindow) {
-                //             if (eWindow.isChart) {
-                //                 chartWindowObj
-                //                     .addNewWindow({
-                //                         instrumentCode: eWindow.instrumentCode,
-                //                         instrumentName: eWindow.instrumentName,
-                //                         timePeriod: eWindow.timePeriod,
-                //                         type: eWindow.type,
-                //                         delayAmount: eWindow.delayAmount
-                //                     });
-                //             } else if (eWindow.isTrade) {
-                //                 liveapi
-                //                     .send({contracts_for: eWindow.symbol})
-                //                     .then(function (res) {
-                //                         require(['trade/tradeDialog'], function (tradeDialog) {
-                //                             _.unset(eWindow, 'isTrade');
-                //                             tradeDialog.init(eWindow, res.contracts_for);
-                //                         });
-                //                     }).catch(function (err) {
-                //                         require(['jquery-growl'], function() {
-                //                             $.growl.error({ message: err.message }); console.error(err);
-                //                         });
-                //                     });
-                //             } else if (eWindow.isAsset) {
-                //                 $("#nav-container .assetIndex").click();
-                //             } else if (eWindow.isTradingTimes) {
-                //                 $("#nav-container .tradingTimes").click();
-                //             } else if (eWindow.isViewHistorical) {
-                //                 $("#nav-container .download").click();
-                //             }
-                //         }
-                //     });
-                //     _.delay(tileDialogs, 1000); // Trigger tile action
+                  setTimeout(fixFooterPosition, 200);
                 } else {
                     var counts = calculateChartCount();
                     liveapi

@@ -166,6 +166,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           },
           open: function () { },
       });
+      token_win.track({
+        module_id: 'token',
+        is_unique: true,
+        data: null
+      });
       init_state(root).then(function(){
         token_win.dialog('open');
       })

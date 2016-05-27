@@ -14,7 +14,12 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
 
     var unique_modules = {
       assetIndex: '#nav-container .assetIndex',
-      statement: '#nav-container .statement'
+      statement: '#nav-container .statement',
+      tradingTimes: '#nav-container .tradingTimes',
+      download: '#nav-container .download', // view historical data
+      portfolio: '#nav-container .portfolio',
+      profitTable: '#nav-container .profitTable',
+      token: '#nav-container .token-management',
     };
 
     var counter = 0;
@@ -67,7 +72,6 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
 
   // /* avoid too many writes to local storage */
   var save_states = _.debounce(function(){
-    console.warn(JSON.stringify(states));
     local_storage.set('states', states);
   }, 50);
 

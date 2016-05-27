@@ -162,6 +162,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     },
                     refresh: refresh
                 });
+                portfolioWin.track({
+                  module_id: 'portfolio',
+                  is_unique: true,
+                  data: null
+                });
 
                 var header = portfolioWin.parent().find('.ui-dialog-title').addClass('with-content');
                 balance_span = $('<span class="span-in-dialog-header" />')
