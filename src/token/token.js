@@ -103,6 +103,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       }
 
       state.change_route = function(route){
+        if(route !== 'token-list')
+          state.confirm.visible = false;
         state.route = route;
       }
       state.update_tokens = function(tokens){
