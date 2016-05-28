@@ -134,22 +134,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 this.exportChartLocal();
                             }
                         }, {
-                            text: 'Download JPEG',
-                            onclick: function () {
-                                this.exportChart({
-                                    type: 'image/jpeg'
-                                });
-                            },
-                            separator: false
-                        }, {
-                            text: 'Download PDF',
-                            onclick: function () {
-                                this.exportChart({
-                                    type: 'application/pdf'
-                                });
-                            },
-                            separator: false
-                        }, {
                             text: 'Download SVG',
                             onclick: function () {
                                 this.exportChartLocal({

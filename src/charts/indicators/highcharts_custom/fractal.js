@@ -52,7 +52,9 @@ FRACTAL = function (data, options, indicators) {
                         'Fractal: ' + pos,
                         {
                             symbol: checkFor === this.BULL? this.BULL_IMAGE_URL : (checkFor === this.BEAR? this.BEAR_IMAGE_URL : null)
-                        }
+                        },
+                        (isBull && checkFor === this.BULL),
+                        (isBear && checkFor === this.BEAR)
                     );
 
     };
@@ -104,12 +106,14 @@ FRACTAL = function (data, options, indicators) {
 
 };
 
-FractalUpdateObject = function(x, y, title, text, marker) {
+FractalUpdateObject = function(x, y, title, text, marker, isBull, isBear) {
     this.y = y;
     this.x = x;
     this.title = title;
     this.text = text;
     this.marker = marker;
+    this.isBull = isBull;
+    this.isBear = isBear;
     this.toJSObject = function() {
         return {
             x : x,

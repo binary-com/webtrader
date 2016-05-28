@@ -2,12 +2,11 @@
  * Created by arnab on 2/11/15.
  */
 
-define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
-        "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators","moment",
-        "highcharts-exporting", "common/util"
+define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
+        "charts/indicators/highcharts_custom/indicators","moment", "lodash",
+        "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
         ],
-  function ( $,chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment ) {
+  function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _ ) {
 
     "use strict";
 
@@ -35,42 +34,102 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
         chartingRequestMap.unregister(key, containerIDWithHash);
     }
 
-    function generate_csv(data) {
-        var is_tick = isTick(data.timePeriod);
-        var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
+    function generate_csv(chart, data) {
         var filename = data.instrumentName + ' (' + data.timePeriod + ')' + '.csv';
-        var bars = chartingRequestMap.barsTable
-                        .chain()
-                        .find({ instrumentCdAndTp: key })
-                        .simplesort('time', false)
-                        .data();
-        var lines = bars.map(function (bar) {
-            if (is_tick) {
-                return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ +bar.open; /* Price */
+
+        var lines = [], dataToBeProcessTolines = [];
+        var flattenData = function(d) {
+            var ret = null;
+            if (_.isArray(d) && d.length > 3) {
+                var time = d[0];
+                ret = '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' + d.slice(1, d.length).join(',');
+            } //OHLC case
+            else if (_.isNumber(d.high)) ret = '"' + moment.utc(d.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + d.open + ',' + d.high + ',' + d.low + ',' + d.close;
+            else if (_.isArray(d) && d.length > 1) ret = '"' + moment.utc(d[0]).format('YYYY-MM-DD HH:mm') + '"' + ',' + d[1]; //Tick chart case
+            else if (_.isObject(d) && d.title && d.text) {
+                if (d instanceof FractalUpdateObject) {
+                    ret = '"' + moment.utc(d.x || d.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + (d.isBull ? 'UP' : d.isBear ? 'DOWN' : ' ');
+                } else ret = '"' + moment.utc(d.x || d.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + (d.text);
             }
-            return '"' + moment.utc(bar.time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
-            bar.open + ',' + bar.high + ',' + bar.low + ',' + bar.close;
+            else if (_.isNumber(d.y)) ret = '"' + moment.utc(d.x || d.time).format('YYYY-MM-DD HH:mm') + '"' + ',' + (d.y || d.close);
+            else ret = d.toString(); //Unknown case
+            return ret;
+        };
+        chart.series.forEach(function(series, index) {
+            if (series.options.id === 'navigator') return true;
+            var newDataLines = series.options.data.map(function(d) {  return flattenData(d);  }) || [];
+            if (index == 0) {
+                var ohlc = newDataLines[0].split(',').length > 2;
+                if (ohlc) lines.push('Date,Open,High,Low,Close');
+                else lines.push('Date,"' + series.options.name + '"');
+                //newDataLines is incorrect - get it from lokijs
+                var key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
+                var bars = chartingRequestMap.barsTable
+                    .chain()
+                    .find({ instrumentCdAndTp: key })
+                    .simplesort('time', false)
+                    .data();
+                lines = lines.concat(bars.map(function (b) {
+                    return ohlc ? ['"' + moment.utc(b.time).format('YYYY-MM-DD HH:mm') + '"', b.open, b.high, b.low, b.close].join(',') : ['"' + moment.utc(b.time).format('YYYY-MM-DD HH:mm') + '"', b.close].join(',');
+                }));
+            }
+            else {
+                lines[0] += ',"' + series.options.name + '"'; //Add header
+                dataToBeProcessTolines.push(newDataLines);
+            }
         });
-        var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
 
+        $.growl.notice({ message : 'Downloading CSV' });
+        //merge here
+        new Parallel([lines, dataToBeProcessTolines])
+            .spawn(function(data) {
+                var l = data[0];
+                var d = data[1];
+                l = l.map(function(line, index) {
 
-        var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        if (navigator.msSaveBlob) { // IE 10+
-            navigator.msSaveBlob(blob, filename);
-        }
-        else {
-            var link = document.createElement("a");
-            if (link.download !== undefined) {  /* Evergreen Browsers :) */
-                var url = URL.createObjectURL(blob);
-                link.setAttribute("href", url);
-                link.setAttribute("download", filename);
-                link.style.visibility = 'hidden';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }
-        }
-    };
+                    d.forEach(function(dd) {
+                        var added = false;
+                        dd.forEach(function(nDl) {
+                            if (nDl) {
+                                var temp = nDl.split(',');
+                                if (line.split(',')[0] === temp[0]) {
+                                    line += ',' + temp.slice(1, temp.length).join(',');
+                                    added = true;
+                                    return false;
+                                }
+                            }
+                        });
+                        if (line.indexOf('Date') == -1 && !added) line += ','; //Add a gap since we did not add a value
+                    });
+
+                    return line;
+                });
+                return l;
+            })
+            .then(function (data) {
+                var csv = data.join('\n'); //(is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
+                var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                if (navigator.msSaveBlob) { // IE 10+
+                    navigator.msSaveBlob(blob, filename);
+                }
+                else {
+                    var link = document.createElement("a");
+                    if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                        var url = URL.createObjectURL(blob);
+                        link.setAttribute("href", url);
+                        link.setAttribute("download", filename);
+                        link.style.visibility = 'hidden';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+                }
+            }, function(error) {
+                $.growl.error({ message : 'Error downloading CSV' });
+                console.error(error);
+            });
+
+    }
 
     return {
 
@@ -256,22 +315,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                                     this.exportChartLocal();
                                 }
                             }, {
-                                text: 'Download JPEG',
-                                onclick: function () {
-                                    this.exportChart({
-                                        type: 'image/jpeg'
-                                    });
-                                },
-                                separator: false
-                            }, {
-                                text: 'Download PDF',
-                                onclick: function () {
-                                    this.exportChart({
-                                        type: 'application/pdf'
-                                    });
-                                },
-                                separator: false
-                            }, {
                                 text: 'Download SVG',
                                 onclick: function () {
                                     this.exportChartLocal({
@@ -282,7 +325,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets",
                             }, {
                                 text: 'Download CSV',
                                 onclick: function () {
-                                    generate_csv($(containerIDWithHash).data());
+                                    generate_csv($(containerIDWithHash).highcharts(), $(containerIDWithHash).data());
                                 },
                                 separator: false
                             }]
