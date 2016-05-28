@@ -299,7 +299,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             $(el).tooltip().tooltip('destroy');
         },
         routine: function (el, value) {
-            $(el).tooltip('option', 'content', value);
+          if(value)
+            $(el).tooltip('enable').tooltip('option', 'content', value);
+          else
+            $(el).tooltip('disable');
         }
     }
     /* bindar for jqueyr ui tooltip options */
