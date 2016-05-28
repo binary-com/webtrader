@@ -104,7 +104,7 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >Barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="text" min="0" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
                    rv-value="barriers.barrier | debounce proposal.onchange" />
         </li>
         <li>
@@ -123,7 +123,7 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >High barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="text" min="0" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
                    rv-value="barriers.high_barrier | debounce proposal.onchange" />
         </li>
         <li>
@@ -142,7 +142,7 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >Low barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="text" max="0" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" prefered-sign='-' rv-decimal-round="5"
                    rv-value="barriers.low_barrier | debounce proposal.onchange" />
         </li>
         <li>
