@@ -459,17 +459,22 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000}[places];
             input = $(input);
             input.on('input',function(){
+                var prefered_sign = input.attr('prefered-sign') || '';
+                var no_symbol = input.attr('no-symbol');
                 var val = input.val();
+                if(val === '') return;
+                if(val === '-' || val === '+' && !no_symbol) return;
                 var dps = decimalPlaces(val);
                 if(dps && dps <= places ) return;
                 var dot = val.endsWith('.') ? '.' : '';
+                var symbol = val[0];
+                symbol = (symbol === '+' || symbol === '-') ? symbol : '';
                 val = val.replace(/[^\d.-]/g,'');
                 val = (Math.round(val * mul) / mul);
                 val = Math.abs(val);
-                if(val) {
-                  var symbol = input.attr('max') ? '-' : '+';
-                  if(input.attr('no-symbol'))
-                    symbol = '';
+                if(!isNaN(val)) {
+                  if(prefered_sign && symbol === '') symbol = prefered_sign;
+                  if(no_symbol) symbol = '';
                   input.val(symbol + val + dot);
                 }
             })
