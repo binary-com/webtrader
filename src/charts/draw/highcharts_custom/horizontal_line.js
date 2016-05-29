@@ -53,10 +53,10 @@ define(['highstock', 'common/util'], function () {
                     chart.annotate = true;
                     var lineID = $(this).attr('id'),
                         line = horizontalLineOptionsMap[lineID],
-                        clickY = evt.pageY - line.translateY - chart.plotTop,
+                        clickY = evt.pageX - line.translateY,
                         clickX,
                         mouseUpEventAdded = false;
-                    
+                    console.log(line.translateY);
                     H.wrap(H.Pointer.prototype, 'drag', function(c, e){
                         if(chart.annotate){
                             if(!mouseUpEventAdded){
@@ -67,7 +67,7 @@ define(['highstock', 'common/util'], function () {
                                 });
                             }
                             if(chart.isInsidePlot(e.chartX -chart.plotLeft, e.chartY - chart.plotTop)){
-                                line.translate(e.pageX - clickX, e.pageY - clickY -chart.plotTop);
+                                line.translate(e.pageX - clickX - chart.plotLeft, e.pageY - clickY - chart.plotTop);
                             }
                         } else{
                             c.call(this, e);
