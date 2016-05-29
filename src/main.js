@@ -30,7 +30,7 @@ requirejs.config({
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level',
-        'paralleljs' : 'lib/parallel.js/lib/parallel'
+        'paralleljs' : 'lib/parallel_js/lib/parallel'
     },
     map: {
         '*': {

@@ -3,14 +3,35 @@
  */
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators","moment", "lodash",
+        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json',
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
         ],
-  function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _ ) {
+  function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json ) {
 
     "use strict";
 
     $(function () {
+
+        /* preserve added indicators while updating the chart */
+        var preserve = _(JSON.parse(indicators_json)).values().map('id').value();
+        preserve.push('data'); // preserve data as well
+
+        /* monkey-patching Hicharts.series.prototype.update() method.
+         * bacause according to the hicharts docs update() will reomve "all methods and elements from the series". */
+        var update_orginal = Highcharts.Series.prototype.update;
+        Highcharts.Series.prototype.update = function() {
+          var series = this;
+          var preserve = {};
+          _.each(preserve, function(id){
+            if(series[id])
+              preserve[id] = series[id];
+          });
+
+          update_orginal.apply(this, arguments);
+          _.each(preserve, function(ind, id){
+            series[id] = ind;
+          })
+        };
 
         Highcharts.setOptions({
             global: {
@@ -331,7 +352,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             }]
                         }
                     },
-                    // Naming the File                    
+                    // Naming the File
                     filename:options.instrumentName.split(' ').join('_')+"("+options.timePeriod+")"
                 }
 

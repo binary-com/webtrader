@@ -76,7 +76,11 @@ module.exports = function (grunt) {
                             '!**/**/favicon.ico',
                             'parallel.js/lib/**'
                         ],
-                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                        rename: function(dest, src) {
+                          // grunt uglify complains about folders anding with .js
+                          return dest + src.replace("parallel.js/", "parallel_js/");
+                        }
                     }
                 ]
             },
