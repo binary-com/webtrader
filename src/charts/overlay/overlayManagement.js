@@ -116,7 +116,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
 
               state.overlays.current.push(displaySymbol);
               ovlay.dont_show = true;
-              
+
           });
       }
 
@@ -174,10 +174,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                   });
                   return !break_loop;
               });
-              state.overlays.current.splice(_.findIndex(state.overlays.current, ovlay), 1);
-
+              state.overlays.current.splice(state.overlays.current.indexOf(ovlay), 1);
           }
-          
+
       }
 
       win_view = rv.bind(root[0], state);
