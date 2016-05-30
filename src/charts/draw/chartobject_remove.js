@@ -106,7 +106,7 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                 middle = chart.chartWidth/2 - 130,
                 text = "Double click the object to remove.";
             
-            chart.toast = chart.renderer.label(text, chart.plotLeft + middle, chart.plotTop)
+            chart.display = chart.renderer.label(text, chart.plotLeft + middle, chart.plotTop)
                 .attr({
                     fill: Highcharts.getOptions().colors[0],
                     padding: 10,
@@ -120,10 +120,10 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                 .add();
 
             setTimeout(function () {
-                chart.toast.fadeOut();
+                chart.display.fadeOut();
             }, 2000);
             setTimeout(function () {
-                chart.toast = chart.toast.destroy();
+                chart.display = chart.display.destroy();
             }, 2500);
         }
     };
