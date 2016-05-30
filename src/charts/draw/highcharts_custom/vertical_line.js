@@ -25,14 +25,12 @@ define(['highstock', 'common/util'], function () {
                 H.addEvent(chart,'click',function(evt){
                     if(chart.annotate){
                         chart.annotate = false;
-                        addPlotLines(chart, evt);
+                        addPlotLines(evt.xAxis[0].value, evt.xAxis[0].axis);
                         H.removeEvent(chart,'click');
                     }
                 });
 
-                function addPlotLines(chart, evt){
-                    var value = evt.xAxis[0].value;
-                    var axis = evt.xAxis[0].axis;
+                function addPlotLines(value, axis){
                     var uniqueID = 'verticalLine_' + new Date().getTime();
                     var line = axis.addPlotLine({
                         value: value,
@@ -46,14 +44,13 @@ define(['highstock', 'common/util'], function () {
                     .on('mousedown', updateverticalLine)
                     .on('dblclick', removeLine);
                     verticalLineOptionsMap[uniqueID] = line;
+                    return line;
                 }
 
                 function updateverticalLine(evt) {
                     chart.annotate = true;
                     var lineID = $(this).attr('id'),
                         line = verticalLineOptionsMap[lineID],
-                        clickY,
-                        clickX = evt.pageX - line.translateX,
                         mouseUpEventAdded = false;
                     
                     H.wrap(H.Pointer.prototype, 'drag', function(c, e){
@@ -66,7 +63,10 @@ define(['highstock', 'common/util'], function () {
                                 });
                             }
                             if(chart.isInsidePlot(e.chartX -chart.plotLeft, e.chartY - chart.plotTop)){
-                                line.translate(e.pageX - clickX, e.pageY - clickY);
+                                removeLineWithID(line.element.id);
+                                var value = chart.xAxis[0].toValue(e.chartX);
+                                var axis = chart.xAxis[0];
+                                line = addPlotLines(value, axis);
                             }
                             
                         } else{
@@ -77,9 +77,14 @@ define(['highstock', 'common/util'], function () {
 
                 function removeLine(evt){
                     var lineID = $(this).attr('id');
+                    removeLineWithID(lineID)
+                }
+
+                function removeLineWithID(lineID){
                     delete verticalLineOptionsMap[lineID];
                     chart.xAxis[0].removePlotLine(lineID);
                 }
+
             }(Highcharts, jQuery));
 
         }

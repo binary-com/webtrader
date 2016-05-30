@@ -26,14 +26,12 @@ define(['highstock', 'common/util'], function () {
                 H.addEvent(chart,'click',function(evt){
                     if(chart.annotate){
                         chart.annotate = false;
-                        addPlotLines(chart, evt);
+                        addPlotLines(evt.yAxis[0].value, evt.yAxis[0].axis);
                         H.removeEvent(chart,'click');
                     }
                 });
 
-                function addPlotLines(chart, evt){
-                    var value = evt.yAxis[0].value;
-                    var axis = evt.yAxis[0].axis;
+                function addPlotLines(value, axis){
                     var uniqueID = 'horizontalLine_' + new Date().getTime();
                     var line = axis.addPlotLine({
                         value: value,
@@ -47,16 +45,14 @@ define(['highstock', 'common/util'], function () {
                     .on('mousedown', updateHorizontalLine)
                     .on('dblclick', removeLine);
                     horizontalLineOptionsMap[uniqueID] = line;
+                    return line;
                 }
 
                 function updateHorizontalLine(evt) {
                     chart.annotate = true;
                     var lineID = $(this).attr('id'),
                         line = horizontalLineOptionsMap[lineID],
-                        clickY = evt.pageX - line.translateY,
-                        clickX,
                         mouseUpEventAdded = false;
-                    console.log(line.translateY);
                     H.wrap(H.Pointer.prototype, 'drag', function(c, e){
                         if(chart.annotate){
                             if(!mouseUpEventAdded){
@@ -64,10 +60,14 @@ define(['highstock', 'common/util'], function () {
                                 $(refererChartID).one("mouseup", function(){
                                     chart.annotate = false;
                                     mouseUpEventAdded = false;
+                                    H.removeEvent(chart, 'mousemove');
                                 });
                             }
                             if(chart.isInsidePlot(e.chartX -chart.plotLeft, e.chartY - chart.plotTop)){
-                                line.translate(e.pageX - clickX - chart.plotLeft, e.pageY - clickY - chart.plotTop);
+                                removeLineWithID(line.element.id);
+                                var value = chart.yAxis[0].toValue(e.chartY);
+                                var axis = chart.yAxis[0];
+                                line = addPlotLines(value, axis);
                             }
                         } else{
                             c.call(this, e);
@@ -77,6 +77,10 @@ define(['highstock', 'common/util'], function () {
 
                 function removeLine(evt){
                     var lineID = $(this).attr('id');
+                    removeLineWithID(lineID);
+                }
+
+                function removeLineWithID(lineID){
                     delete horizontalLineOptionsMap[lineID];
                     chart.yAxis[0].removePlotLine(lineID);
                 }
