@@ -157,8 +157,9 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                   }
                   else if ($(this).hasClass('removeChartObject')) {
                       require(["charts/draw/chartobject_remove"], function( overlay ) {
-                          overlay.openDialog( '#' + newTabId + '_chart' );
+                          overlay.showDialog( '#' + newTabId + '_chart' );
                       });
+                        $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                   }
                 });
 
