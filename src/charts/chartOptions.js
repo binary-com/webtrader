@@ -186,7 +186,6 @@ define(['jquery', 'charts/chartingRequestMap',  "charts/chartWindow", "common/ut
                       require(["charts/draw/chartobject_remove"], function( overlay ) {
                           overlay.showDialog( '#' + newTabId + '_chart' );
                       });
-                        $(this).find('span:first').toggleClass('ui-icon ui-icon-check');
                         $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                   }
                 });

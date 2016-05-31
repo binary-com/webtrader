@@ -102,29 +102,10 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
         },
 
         showDialog : function(containerIDWithHash){
-            var chart = $(containerIDWithHash).highcharts(),
-                middle = chart.chartWidth/2 - 130,
-                text = "Double click the object to remove.";
+            require(["jquery", "jquery-growl"], function($){
+                $.growl.warning({message:"Double click the object to remove."});
+            });
             
-            chart.display = chart.renderer.label(text, chart.plotLeft + middle, chart.plotTop)
-                .attr({
-                    fill: Highcharts.getOptions().colors[0],
-                    padding: 10,
-                    r: 5,
-                    zIndex: 8,
-                    opacity: 0.95
-                })
-                .css({
-                    color: '#FFFFFF'
-                })
-                .add();
-
-            setTimeout(function () {
-                chart.display.fadeOut();
-            }, 2000);
-            setTimeout(function () {
-                chart.display = chart.display.destroy();
-            }, 2500);
         }
     };
 

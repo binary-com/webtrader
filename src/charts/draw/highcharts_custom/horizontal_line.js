@@ -64,10 +64,12 @@ define(['highstock', 'common/util'], function () {
                                 });
                             }
                             if(chart.isInsidePlot(e.chartX -chart.plotLeft, e.chartY - chart.plotTop)){
-                                removeLineWithID(line.element.id);
-                                var value = chart.yAxis[0].toValue(e.chartY);
-                                var axis = chart.yAxis[0];
-                                line = addPlotLines(value, axis);
+                                if(line.element){
+                                    removeLineWithID(line.element.id);
+                                    var value = chart.yAxis[0].toValue(e.chartY);
+                                    var axis = chart.yAxis[0];
+                                    line = addPlotLines(value, axis);
+                                }
                             }
                         } else{
                             c.call(this, e);
@@ -81,6 +83,8 @@ define(['highstock', 'common/util'], function () {
                 }
 
                 function removeLineWithID(lineID){
+                    // Remove all associated events.
+                    $("#"+lineID).off();
                     delete horizontalLineOptionsMap[lineID];
                     chart.yAxis[0].removePlotLine(lineID);
                 }
