@@ -38,6 +38,7 @@
 .indicator-dialog div.category > div > span.remove {
   color: #777;
   font-size: 1.1em;
+  line-height : 1.1em;
 }
 
 .indicator-dialog .favorite span.ui-icon {

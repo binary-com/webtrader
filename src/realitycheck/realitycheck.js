@@ -33,6 +33,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         }
     };
 
+    function resetWindow(showFirstScreen) {
+        if(win) {
+            var winWidget = win.dialog('widget');
+            if (showFirstScreen) {
+                win.dialog({height: 220});
+                winWidget.find('.realitycheck_firstscreen').show();
+                winWidget.find('.realitycheck_secondscreen').hide();
+            } else {
+                win.dialog({height: 310});
+                winWidget.find('.realitycheck_firstscreen').hide();
+                winWidget.find('.realitycheck_secondscreen').show();
+            }
+        }
+    }
+
     var setOrRefreshTimer = function(timeOutInMins) {
 
         if (timerHandler) clearTimeout(timerHandler);
@@ -54,16 +69,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                     settingsData.open = data.reality_check.open_contract_count;
                     settingsData.potentialProfit = data.reality_check.potential_profit;
                     settingsData.currency = data.reality_check.currency;
-                    var $root = win.dialog('widget');
-                    $root.find('.realitycheck_firstscreen').hide();
-                    $root.find('.realitycheck_secondscreen').show();
-                    win.dialog({ height : 310 });
+                    resetWindow(false);
                     win.moveToTop();
                 });
         }, logoutAfter_ms);
 
     };
-    
+
     function init() {
 
         console.log('Reality check login event intercepted');
@@ -83,8 +95,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
                                 require(['text!realitycheck/realitycheck.html', "css!realitycheck/realitycheck.css"], function(html) {
                                     var div = $(html);
-                                    div.find('.realitycheck_firstscreen').show();
-                                    div.find('.realitycheck_secondscreen').hide();
                                     win = windows.createBlankWindow($('<div/>'), {
                                         title: 'Reality check',
                                         width: 600,
@@ -104,6 +114,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
                                     //This helps in showing multiple dialog windows in modal form
                                     $('body').append(win.dialog('widget'));
+                                    resetWindow(true);
 
                                     rv.bind(div[0], settingsData);
 
@@ -139,9 +150,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     var oauthLogin = function() {
         logout();
         init().then(function() {
-            var $root = win.dialog('widget');
-            $root.find('.realitycheck_firstscreen').show();
-            $root.find('.realitycheck_secondscreen').hide();
+            resetWindow(true);
             win.dialog('open');
         });
     };
