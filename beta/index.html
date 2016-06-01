@@ -8,8 +8,9 @@
 
       /* oauth login ? */
       var href = window.location.href;
-      if(/#acct1=/.test(href) && /token1=/.test(href)) {
-        var params = href.split('#')[1].split('&');
+      if(/acct1=/.test(href) && /token1=/.test(href)) {
+        //Remove the '#' check later once the backend changes are released TODO
+        var params = href.indexOf('#') != -1 ? href.split('#')[1].split('&') : href.split('?')[1].split('&');
         var oauth = [ ];
         for(var i = 0; i < params.length; i+=2){
           var id = params[i].split('=')[1];
