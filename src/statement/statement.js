@@ -1,7 +1,7 @@
 ﻿/**
  * Created by amin on November 9, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl"], function ($, windows, liveapi, _) {
+define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl"], function (module, $, windows, liveapi, _) {
 
     var statement = null,
         table = null,
@@ -94,6 +94,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
               refreshTable({clear:true});
             },
             'data-authorized' :'true'
+        });
+        statement.track({
+          module_id: 'statement',
+          is_unique: true,
+          data: null,
         });
         require(['text!statement/statement.html'], function (html) {
 
