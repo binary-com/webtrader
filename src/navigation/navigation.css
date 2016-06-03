@@ -1,18 +1,18 @@
 /* Created by Armin on 10/17/2015 */
 
-/* Binary standard colors
-   menu normal: #273051;
-   menu hover: #3F476E;
-   menu active: #222A47;
-*/
-
 body {
   min-width: 1000px !important;
 }
 
 #topbar {
-    background: #15212d;
+    width: 100%;
+    color: #fff;
+    line-height: 1;
+    font-size: 100%;
+    text-align: right;
+    padding: 3px 0;
     height: 20px;
+    background: #15212d;
 }
 
 #header {
@@ -20,6 +20,10 @@ body {
     border-top: 2px solid #394171;
     border-bottom: 4px solid #e98024;
     height: 75px;
+}
+
+#nav-container {
+    text-align: center;
 }
 
 #nav-container span.ui-icon {
@@ -52,9 +56,8 @@ body {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 16px 20px;
+    padding: 16px 20px 20px 30px;
     transition: padding .5s;
-    font-size: 16px;
     white-space: nowrap;
     text-align: left;
     outline: none;
@@ -218,12 +221,17 @@ body {
     margin : 0 0 0;
 }
 
+#header .logo {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+}
+
 #header .logo div:nth-child(1) {
     display: inline-block;
     margin: 10px 10px;
-    vertical-align: bottom;
 }
 #header .logo div:nth-child(2) {
     display: inline-block;
-    vertical-align: text-bottom;
+    margin: -12px;
 }

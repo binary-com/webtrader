@@ -1,8 +1,3 @@
-@font-face {
-    src: url('fonts/Roboto-Regular.ttf') format('truetype');
-    font-family: 'Roboto';
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -325,6 +320,7 @@ input:focus {
 }
 
 
-#growls.default {
-  top: 45px !important; /* show growl notifictions below the navigation-bar */
+.growl.growl-notice {
+    background: #fef1cf !important;
+    color: black !important;
 }
