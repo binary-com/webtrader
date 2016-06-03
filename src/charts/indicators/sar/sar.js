@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function ($, rv) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -13,13 +13,22 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
         require(['css!charts/indicators/sar/sar.css']);
 
-        require(['text!charts/indicators/sar/sar.html'], function ($html) {
+        require(['text!charts/indicators/sar/sar.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.sar;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
+
             $html.find("input[type='button']").button();
 
             $html.find("#sar_stroke").colorpicker({

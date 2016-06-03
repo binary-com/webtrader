@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/3/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -13,13 +13,22 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
         require(['css!charts/indicators/cks/cks.css']);
 
-        require(['text!charts/indicators/cks/cks.html'], function ( $html ) {
+        require(['text!charts/indicators/cks/cks.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultShortStroke = '#cd0a0a';
             var defaultLongStroke = '#57a125';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.cks;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
+
             $html.find("input[type='button']").button();
 
             $html.find("#cks_short_stop_stroke").colorpicker({
