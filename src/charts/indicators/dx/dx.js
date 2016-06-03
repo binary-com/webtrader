@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/6/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -21,12 +21,21 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(0.3, 'red', 1, 'Dash'), new Level(0.7, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/dx/dx.html'], function ( $html ) {
+        require(['text!charts/indicators/dx/dx.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var dxStroke = '#0026ff', plusDIStroke = '#00ff21', minusDIStroke = '#ff0000';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.dx;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
+
             $html.find("input[type='button']").button();
 
             $(".dx_stroke").each(function () {

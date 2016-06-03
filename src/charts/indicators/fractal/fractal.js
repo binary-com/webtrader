@@ -2,7 +2,7 @@
  * Created by Maahboob.M on 2/18/16.
  */
 
-define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($, _) {
+define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, _, rv) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -13,12 +13,21 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
 
         require(['css!charts/indicators/fractal/fractal.css']);
 
-        require(['text!charts/indicators/fractal/fractal.html'], function ($html) {
+        require(['text!charts/indicators/fractal/fractal.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             var defaultColor = '#cd0a0a';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.fractal;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
+
             $html.find("input[type='button']").button();
 
             $html.find("#fractal_color").colorpicker({

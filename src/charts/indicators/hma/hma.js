@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/22/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -11,13 +11,21 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
     function init(containerIDWithHash, _callback) {
         require(['css!charts/indicators/hma/hma.css']);
 
-        require(['text!charts/indicators/hma/hma.html'], function ($html) {
+        require(['text!charts/indicators/hma/hma.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
 
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.hma;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
 
             $html.find("#hma_stroke_color").each(function () {
                 $(this).colorpicker({
