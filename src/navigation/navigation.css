@@ -7,15 +7,19 @@
 */
 
 body {
-  min-width: 680px !important;
+  min-width: 1000px !important;
 }
 
-#nav-container {
-    position: relative;
-    background-color: #273051;
-    height: 54px;
-    text-align: center;
-    display: block;
+#topbar {
+    background: #15212d;
+    height: 20px;
+}
+
+#header {
+    background: #2a3052;
+    border-top: 2px solid #394171;
+    border-bottom: 4px solid #e98024;
+    height: 75px;
 }
 
 #nav-container span.ui-icon {
@@ -26,22 +30,10 @@ body {
   top: 2px;
 }
 
-#nav-container .nav-logo {
-    position: absolute;
-    margin-top: 6px;
-    left: 10px;
-}
-#nav-container .nav-logo img {
-    width: 40px;
-}
-
 /** normal menu (desktop/tablet) **/
 .nav-normal-menu {
-    margin: 0 220px 0 60px;
-    padding: 0;
     list-style: none outside none;
     display: inline-table;
-    background-color: #273051;
 }
 
 .nav-normal-menu li {
@@ -132,83 +124,6 @@ body {
     background-color: #273051;
 }
 
-/** responsive menu (mobile/handheld) **/
-#mobile-nav {
-    position: absolute;
-    left: -280px;
-    top: 53px;
-    width: 280px;
-    min-height: 100%;
-    background-color: #273051;
-    /* nothing should exceed this max value.
-       navigation menu should be on top of everything.
-    */
-    z-index: 999999;
-}
-
-.nav-mobile-menu {
-    display: block;
-}
-
-.nav-mobile-menu {
-    margin: 0;
-    padding: 0;
-    list-style: none outside none;
-    display: block;
-    /*background-color: #273051;*/
-}
-
-.nav-mobile-menu li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 16px 30px;
-    font-size: 16px;
-    white-space: nowrap;
-    text-align: left;
-    outline: none;
-}
-
-.nav-mobile-menu li a:hover {
-    background-color: #3F476E;
-}
-
-.nav-mobile-menu li a.disabled,
-.nav-mobile-menu li a.disabled:hover {
-  opacity: 0.5;
-  background-color: #273051;
-}
-
-.nav-mobile-menu li > ul {
-    display: none;
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-mobile-menu li ul li a {
-    font-size: 14px;
-    padding: 10px 45px;
-    background-color: #3F476E;
-}
-
-.nav-mobile-menu li ul li ul li a {
-    padding: 10px 60px;
-}
-
-.nav-mobile-menu li ul li ul li ul li a {
-    padding: 10px 75px;
-}
-
-.nav-mobile-menu li > ul li a:hover {
-    /*background-color: #273051;*/
-    background-color: #222A47;
-}
-
-.nav-mobile-menu .nav-toggle-active {
-    background-color: #222A47;
-}
-
 /** carets **/
 .nav-caret {
     display: inline-block;
@@ -233,81 +148,9 @@ body {
     content: '»';
 }
 
-.nav-mobile-menu .nav-submenu-caret {
-    top: inherit;
-}
-
-/** menu toggle **/
-#nav-toggle {
-    display: none;
-    position: absolute;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding: 12px 0;
-    right: 10px;
-    top: 12px;
-    outline: none;
-}
-
-#nav-toggle:active {
-    background-color: transparent;
-}
-
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: white;
-  position: relative;
-  display: block;
-  content: '';
-  transition: all 500ms ease-in-out;
-}
-
-#nav-toggle span:before {
-  top: -10px;
-}
-
-#nav-toggle span:after {
-  bottom: -5px;
-}
-
-#nav-toggle.nav-toggle-active span {
-  background-color: transparent;
-}
-
-#nav-toggle.nav-toggle-active span:before, #nav-toggle.nav-toggle-active span:after {
-  top: 0;
-}
-
-#nav-toggle.nav-toggle-active span:before {
-  transform: rotate(45deg);
-}
-
-#nav-toggle.nav-toggle-active span:after {
-  transform: rotate(-45deg);
-  top: -5px;
-}
-
-/** mobile menu heading **/
-#mobile-menu-heading {
-    display: none;
-    position: absolute;
-    color: white;
-    font-size: 24px;
-    left: 60px;
-    top: 12px;
-    text-shadow: 0 0 3px #333;
-}
-
 /* login button */
 #nav-container .login {
   position: absolute;
-  top: 8px;
   right: 10px;
 }
 
@@ -365,41 +208,22 @@ body {
   opacity: 0.5;
 }
 
-#nav-container li.time-li {
-  position: absolute;
-  right: 205px;
-  cursor: default; background: #273051;
-  line-height: 50px;
-}
-#nav-container span.time { font-size: 10px; }
-#nav-container li.time-li > a {
-  cursor: default; background: #273051;
-  padding: 0;
+#topbar span.time {
+    color: white;
+    float: right;
+    padding: 2px 2px 5px 5px;
 }
 
-/** targets min-width requirement **/
-@media screen and (max-width: 900px) {
-    .nav-normal-menu {
-        display: inline-table;
-    }
-
-    .nav-normal-menu li a {
-        padding: 16px 6px;
-        font-size: 14px;
-    }
-
-    .nav-normal-menu li > ul li a {
-        padding: 10px 30px;
-    }
-}
-@media screen and (max-width: 780px) {
-  #nav-container { text-align: left; }
+#nav-menu li {
+    margin : 0 0 0;
 }
 
-/** TODO: implement browser not supported for mobile devices **/
-/*@media screen and (max-width: 800px) {
-    .nav-normal-menu { display: none; }
-    #mobile-menu-heading { display: block; }
-    #nav-toggle { display: block; }
-    #nav-container .authentication { right: 60px; }
-}*/
+#header .logo div:nth-child(1) {
+    display: inline-block;
+    margin: 10px 10px;
+    vertical-align: bottom;
+}
+#header .logo div:nth-child(2) {
+    display: inline-block;
+    vertical-align: text-bottom;
+}

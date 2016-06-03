@@ -69,7 +69,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
                     profit,
-                    '<button class="green-button shine">View</button>',
+                    '<button class="green-button">View</button>',
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });

@@ -64,7 +64,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
                      trans.longcode ,
                     (trans.amount * 1).toFixed(2),
                     '<b>' + formatPrice(trans.balance_after) + '</b>',
-                    '<button class="green-button shine">View</button>',
+                    '<button class="green-button">View</button>',
                     trans, /* data for view transaction dailog - when clicking on arrows */
                 ];
             });

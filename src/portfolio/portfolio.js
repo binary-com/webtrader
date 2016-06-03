@@ -226,7 +226,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         contract.longcode,
                         formatPrice(contract.buy_price),
                         '0.00',
-                        '<button class="green-button shine">View</button>',
+                        '<button class="green-button">View</button>',
                         contract.contract_id, /* for jq-datatables rowId */
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];

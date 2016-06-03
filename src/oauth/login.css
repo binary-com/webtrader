@@ -22,7 +22,13 @@
 }
 
 .oauth-dialog button {
+    background: #2e8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
     width: 50%;
+    line-height: 27px;
 }
 
 /* default style for inputs */
@@ -86,6 +92,7 @@
 .oauth-dialog .account-dialog select + .ui-selectmenu-button {
   margin-top: 5px;
   margin-bottom: 10px;
+  border-radius: 5px !important;
   z-index: 100;
 }
 

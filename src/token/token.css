@@ -9,6 +9,7 @@
   position: absolute;
   width: 120px;
   right: 10px;
+  line-height: 23px;
 }
 .token-dialog .empty-pane > span {
   display:  block;

@@ -1,3 +1,8 @@
+@font-face {
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-family: 'Roboto';
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -6,11 +11,10 @@ html, body {
 
 body {
     font-size: 80%;
+    position:relative;
 }
-
 .mainContainer {
-    display: flex;
-    height: 100%;
+    width: 100%;
 }
 
 body > .footer {
@@ -45,6 +49,10 @@ body > .footer .addiction-warning a:hover {
 }
 
 
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
   width: 14px !important;
   height: 14px !important;
@@ -54,11 +62,32 @@ body > .footer .addiction-warning a:hover {
   box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
 }
 
+.ui-dialog {
+    padding: 0!important;
+}
+
+.ui-dialog-content {
+    background-color: #F5F6F8!important;
+}
+
 .ui-corner-all {
     border-bottom-right-radius: 0!important;
     border-bottom-left-radius: 0!important;
     border-top-right-radius: 0!important;
     border-top-left-radius: 0!important;
+}
+
+.ui-priority-secondary {
+    opacity: 1!important;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: 0px solid #273051;
+    background: #273051;
+    font-weight: normal;
+    color: #FFFFFF;
 }
 
 .ui-widget-header {
@@ -74,8 +103,25 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
     line-height: 1.2em;
 }
 
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: 'Roboto'!important;
+}
+
 .ui-widget {
     outline: 0;
+}
+
+.ui-button {
+    margin-top: 5px;
+}
+
+.ui-button-text-only.ui-state-hover,
+.ui-button-text-only.ui-button:hover {
+    color: #FFFFFF!important;
+    background: #3F476E!important;
 }
 
 .ui-dialog .ui-dialog-content {
@@ -96,6 +142,10 @@ button.ui-button-text-only {
     /*height: 46px;*/
     margin: 0;
     padding: 0;
+}
+
+button.ui-button-text-only .ui-menu {
+    border-color: #3F476E;
 }
 
 .ui-menu {
@@ -221,9 +271,29 @@ input::-ms-clear {
 /* Remove dotted-underline around buttons in FF */
 button::-moz-focus-inner { border: 0; }
 
-/* CSS3 shine effects for buttons */
-.shine {
-  position: relative;
+/* default style for green button */
+.green-button {
+    background: #2E8836;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+    cursor: pointer;
+}
+/* default style for blue button */
+button, button.blue-button {
+    background: #273051;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: 0;
+    max-width: 200px;
+    line-height: 2em;
+    width: 100%;
+    cursor: pointer;
 }
 
 .orange-button {
@@ -254,30 +324,6 @@ input:focus {
   box-shadow: inset 0 2px 2px rgba(0,0,120,.25);
 }
 
-
-/* sine effect, hover style if required */
-.shine:hover { }
-/* generated element for shine effect. normal state is semi-transparent
- * white but with zero width. Set no transition here for no mouse-leave
- * animations. Otherwise the effect will play in reverse when your mouse
- * leaves the element */
-.shine:not([disabled=disabled]):after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 0%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.4);
-    transition: none;
-}
-/* on hover we animate the width to 100% and opacity to 0 so the element
- * grows and fades out */
-.shine:not([disabled=disabled]):hover:after {
-    width: 110%;
-    background-color: rgba(255,255,255,0);
-    transition: all 1s ease-out;
-}
 
 #growls.default {
   top: 45px !important; /* show growl notifictions below the navigation-bar */
