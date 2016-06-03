@@ -99,8 +99,14 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
 
             $(".indicator_remove_dialog").data('refererChartID', containerIDWithHash).dialog("open");
 
-        }
+        },
 
+        showDialog : function(containerIDWithHash){
+            require(["jquery", "jquery-growl"], function($){
+                $.growl.warning({message:"Double click the object to remove."});
+            });
+            
+        }
     };
 
 });

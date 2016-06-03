@@ -73,9 +73,14 @@ module.exports = function (grunt) {
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
                             'moment/min/moment.min.js',
                             'ddslick/jquery.ddslick.min.js',
-                            '!**/**/favicon.ico'
+                            '!**/**/favicon.ico',
+                            'parallel.js/lib/**'
                         ],
-                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                        rename: function(dest, src) {
+                          // grunt uglify complains about folders anding with .js
+                          return dest + src.replace("parallel.js/", "parallel_js/");
+                        }
                     }
                 ]
             },

@@ -62,18 +62,11 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
 
                         $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
 
-                        /*
-                            If there are more than one charts with same instrument and timePeriod, then all of them are going to be changed
-                         */
-                        var instrumentCode = $('#' + newTabId + '_chart').data("instrumentCode");
-                        var windows_ls = local_storage.get('windows') || {};
-                        (windows_ls.windows || []).forEach(function (ew) {
-                            if (ew.isChart && ew.instrumentCode === instrumentCode && ew.timePeriod === timePeriod) {
-                                ew.type = type;
-                            }
-                        });
-                        local_storage.set('windows', windows_ls);
 
+                        /* trigger an event on the chart dialog, so we can listen on type changes,
+                         * note: this will be use to update chart state for tracker.js */
+                        var dialog = $('#' + newTabId + '_chart');
+                        dialog.trigger('chart-type-changed', type);
                     });
 
                 $html.find('ul:first > li').each(function () {
@@ -143,23 +136,17 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                     });
 
                 $html.find("li.indicators-add-remove").click(function(){
-                      require(["charts/indicatorManagement"], function( indicatorManagement ) {
+                      require(["charts/indicators/indicatorManagement"], function( indicatorManagement ) {
                           var title = instrumentName + ' (' + timePeriod + ')';
                           indicatorManagement.openDialog( '#' + newTabId + '_chart', title);
                       });
                 });
 
-                $html.find(".overlay li").click(function () {
-                  if ($(this).hasClass('addOverlay')) {
-                      require(["overlay/overlay_add"], function( overlay ) {
-                          overlay.openDialog( '#' + newTabId + '_chart' );
-                      });
-                  }
-                  else if ($(this).hasClass('removeOverlay')) {
-                      require(["overlay/overlay_remove"], function( overlay ) {
-                          overlay.openDialog( '#' + newTabId + '_chart' );
-                      });
-                  }
+                $html.find("li.overlay-add-remove").click(function () {
+                    require(["charts/overlay/overlayManagement"], function(overlayManagement ) {
+                        var title = instrumentName + ' (' + timePeriod + ')';
+                        overlayManagement.openDialog( '#' + newTabId + '_chart', title);
+                    });
                 });
 
                 $html.find(".drawLI li").click(function () {
@@ -170,8 +157,9 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                   }
                   else if ($(this).hasClass('removeChartObject')) {
                       require(["charts/draw/chartobject_remove"], function( overlay ) {
-                          overlay.openDialog( '#' + newTabId + '_chart' );
+                          overlay.showDialog( '#' + newTabId + '_chart' );
                       });
+                        $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
                   }
                 });
 

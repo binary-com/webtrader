@@ -22,7 +22,9 @@
 .chartOptions .addOverlay span,
 .chartOptions .removeOverlay span,
 .chartOptions .addInidicators span,
-.chartOptions .removeIndicators span
+.chartOptions .removeIndicators span,
+.chartOptions .addChartObject span,
+.chartOptions .removeChartObject span
 {
     margin-left: 8px;
 }
