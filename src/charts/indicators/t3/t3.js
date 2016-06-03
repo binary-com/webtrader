@@ -1,7 +1,7 @@
 ﻿/**
 Created By Mahboob.M on 12/20/2015
 */
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -10,11 +10,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
     function init(containerIDWithHash, _callback) {
         require(['css!charts/indicators/t3/t3.css']);
 
-        require(['text!charts/indicators/t3/t3.html'], function ($html) {
+        require(['text!charts/indicators/t3/t3.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             $html = $($html);
 
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.t3;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
 
             $html.find("#t3_stroke").each(function () {
                 $(this).colorpicker({

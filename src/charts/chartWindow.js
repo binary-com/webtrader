@@ -22,7 +22,8 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
          * @param options
          * @returns {*}
          */
-        addNewWindow: function( options ) {
+        addNewWindow: function(options) {
+            var options_copy = options;
             options = $.extend({
                 title: options.instrumentName + " (" + options.timePeriod + ")",
                 close: function () {
@@ -38,13 +39,6 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                             instrumentCode : instrumentCode
                         });
                     });
-
-                    var windows_ls = local_storage.get('windows') || {};
-                    var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isChart && ew.instrumentCode === instrumentCode && ew.timePeriod === timePeriod; });
-                    if (storeIndex >= 0) {
-                        windows_ls.windows.splice(storeIndex, 1);
-                        local_storage.set('windows', windows_ls);
-                    }
                 },
                 resize: _trigger_Resize_Effects
             }, options );
@@ -62,6 +56,16 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                     var table_view = tableView.init(dialog);
                     chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName);
                 });
+            });
+
+            var update_track = dialog.track({
+              module_id: 'chartWindow',
+              is_unique: false,
+              data: options_copy
+            });
+            dialog.on('chart-type-changed', function(e, type){
+              options_copy.type = type;
+              update_track(options_copy);
             });
 
             dialog.dialog('open');

@@ -29,7 +29,8 @@ requirejs.config({
         'moment': 'lib/moment/min/moment.min',
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
-        "indicator_levels" : 'charts/indicators/level'
+        "indicator_levels" : 'charts/indicators/level',
+        'paralleljs' : 'lib/parallel_js/lib/parallel'
     },
     map: {
         '*': {
@@ -84,7 +85,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
     "use strict";
 
     //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage) {
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {
       window.location.href = 'unsupported_browsers/unsupported_browsers.html';
       return;
     }

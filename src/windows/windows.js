@@ -3,7 +3,7 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation) {
+define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation, tracker) {
 
     var closeAllObject = null, dialogCounter = 0, $menuUL = null;
 
@@ -110,7 +110,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                         d.dialog('widget').animate({
                             left: x + 'px',
                             top: y + 'px'
-                        }, 1500);
+                        }, 1500, d.trigger.bind(d, 'animated'));
                     /* update dialog option.position */
                     d.dialog("option", "position", { my: x, at: y });
                     x += w;
@@ -145,9 +145,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         });
         arrange(best, true);
 
-        //Trigger tile
-        fire_event("tile");
-        
+        //Trigger tile when the animation is done
+        setTimeout(function () { fire_event("tile"); }, 1500 + 100);
     }
 
     /*
@@ -429,57 +428,19 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 }
             });
 
+            //Attach click listener for tile menu
+            tileObject.click(tileDialogs);
+
             require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], function (chartWindowObj,liveapi, menu) {
 
-
-                //Attach click listener for tile menu
-                tileObject.click(tileDialogs);
-
-                //If user close/opened some charts, then open them else, open random charts
-                var windows_ls = local_storage.get('windows');
-                if (windows_ls) {
-                    (windows_ls.windows || []).forEach(function (eWindow) {
-                        if (eWindow) {
-                            if (eWindow.isChart) {
-                                chartWindowObj
-                                    .addNewWindow({
-                                        instrumentCode: eWindow.instrumentCode,
-                                        instrumentName: eWindow.instrumentName,
-                                        timePeriod: eWindow.timePeriod,
-                                        type: eWindow.type,
-                                        delayAmount: eWindow.delayAmount
-                                    });
-                            } else if (eWindow.isTrade) {
-                                liveapi
-                                    .send({contracts_for: eWindow.symbol})
-                                    .then(function (res) {
-                                        require(['trade/tradeDialog'], function (tradeDialog) {
-                                            _.unset(eWindow, 'isTrade');
-                                            tradeDialog.init(eWindow, res.contracts_for);
-                                        });
-                                    }).catch(function (err) {
-                                        require(['jquery-growl'], function() {
-                                            $.growl.error({ message: err.message }); console.error(err);
-                                        });
-                                    });
-                            } else if (eWindow.isAsset) {
-                                $("#nav-container .assetIndex").click();
-                            } else if (eWindow.isTradingTimes) {
-                                $("#nav-container .tradingTimes").click();
-                            } else if (eWindow.isViewHistorical) {
-                                $("#nav-container .download").click();
-                            }
-                        }
-                    });
-                    _.delay(tileDialogs, 1000); // Trigger tile action
+                if(!tracker.is_empty()) {
+                  tracker.reopen();
+                  setTimeout(fixFooterPosition, 200);
                 } else {
                     var counts = calculateChartCount();
                     liveapi
                         .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
                         .then(function (markets) {
-
-                            windows_ls = local_storage.get('windows') || {};
-                            windows_ls.windows = (windows_ls.windows || []);
 
                             markets = menu.extractChartableMarkets(markets);
                             /* return a random element of an array */
@@ -502,17 +463,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                                 type: chart_type,
                                                 delayAmount: sym.delay_amount
                                             });
-
-                                windows_ls.windows.push({
-                                    instrumentCode: sym.symbol,
-                                    instrumentName: sym.display_name,
-                                    timePeriod: timePeriod,
-                                    type: chart_type,
-                                    delayAmount: sym.delay_amount,
-                                    isChart: true
-                                });
                             }
-                            local_storage.set('windows', windows_ls);
 
                             tileDialogs(); // Trigger tile action
                         });
@@ -602,7 +553,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             dialog.on('dragstop', function() {
                 var top = dialog.offset().top;
                 if(top < 0) {
-                  dialog.animate({ top: '0px' }, 300);
+                  dialog.animate({ top: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
                 }
             });
 
@@ -658,7 +609,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 dialog.animate({
                   left: new_pos.left + 'px',
                   top: new_pos.top + 'px'
-                }, 500);
+                }, 500, dialog.trigger.bind(dialog, 'aminated'));
               }
               blankWindow.dialog('moveToTop');
             });
@@ -677,9 +628,17 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
                 refresh.on('click',options.refresh);
             }
+
+           /* options: {
+            *    module_id: 'statement/statement'  // require js module id
+            *    is_unique: true/false // is this dialog instance unique or not,
+            *    data: { } // arbitary data object for this dialog
+            * } */
+            blankWindow.track = function(options){
+              return tracker.track(options, blankWindow);
+            }
             return blankWindow;
         },
-
 
         /*
             Uses a jquery-ui spinner to display a list of strings.
@@ -736,7 +695,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 index !== -1 && callbacks[name].splice(index, 1);
             }
         }
-        
+
     };
 
 });

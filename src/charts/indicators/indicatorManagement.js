@@ -1,8 +1,6 @@
 /* created by amin, on May 20, 2016 */
 define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], function(liveapi, rv, _) {
-    require(['text!charts/indicatorManagement.html']);
-    require(['css!charts/indicatorManagement.css']);
-    require(['text!charts/indicators/indicators.json']);
+    require(['text!charts/indicators/indicatorManagement.html', 'css!charts/indicators/indicatorManagement.css', 'text!charts/indicators/indicators.json']);
     var ind_win = null;
     var ind_win_view = null;
     var state = {};
@@ -40,7 +38,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init() {
       if(!ind_win)
         return new Promise(function(resolve, reject){
-          require(['text!charts/indicatorManagement.html'], function(root){
+          require(['text!charts/indicators/indicatorManagement.html'], function(root){
             init_dialog_async(root).then(resolve);
           });
         });
@@ -56,7 +54,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             ind_win = $(root).dialog({
               autoOpen: false,
               resizable: false,
-              width: 480,
+              width: Math.min(480, $(window).width() - 10),
               height: 400,
               modal: true,
               my: 'center',
@@ -75,6 +73,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             ind_win = windows.createBlankWindow(root, {
                 title: 'Add/remove indicators',
                 width: 700,
+                modal: true,
                 // minHeight: 60,
                 destroy: function () {
                   ind_win_view && ind_win_view.unbind();
@@ -95,7 +94,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init_state(root){
       state = {
         dialog: {
-          title: 'Add/remove inidcators',
+          title: 'Add/remove indicators',
           container_id: '',
           is_tick_chart: false
         },
@@ -145,7 +144,6 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
       }
 
       ind_win_view = rv.bind(root[0], state);
-      window.state = state;
     }
 
     function update_indicators(series) {
@@ -162,7 +160,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           series.forEach(function(seri){
             seri[ind.id] && seri[ind.id].forEach(function(instance){
                 var ind_clone = _.cloneDeep(ind);
-                ind_clone.name = ind.long_display_name + " - " + instance.toString();
+                //Show suffix if it is different than the long_display_name
+                var show = ind.long_display_name !== instance.toString();
+                ind_clone.name = ind.long_display_name + (show ? " - " + instance.toString() : "");
                 ind_clone.series_ids = instance.getIDs()
                 current.push(ind_clone);
             });
