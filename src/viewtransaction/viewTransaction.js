@@ -256,7 +256,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             title: proposal.display_name + ' (' + proposal.transaction_id + ')',
             width: 700,
             minWidth: 490,
-            minHeight:370,
+            minHeight:520,
             destroy: function() { },
             close: function() {
               view && view.unbind();

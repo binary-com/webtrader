@@ -161,16 +161,6 @@ body {
   margin-left: -10px;
 }
 
-#nav-container .login button {
-  color: #eee;
-  line-height: 2em;
-  font-size: larger;
-  width:90px;
-  border: none;
-  border-radius: 5px;
-  outline: 0;
-}
-
 #nav-container .login button[disabled] { opacity: 0.5;}
 #nav-container .login button { background: #2e8836; }
 /*#nav-container .login button.logout { background: #4F577E; }*/
@@ -214,7 +204,9 @@ body {
 #topbar span.time {
     color: white;
     float: right;
-    padding: 2px 2px 5px 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-size: 12px;
 }
 
 #nav-menu li {

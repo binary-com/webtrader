@@ -4,10 +4,6 @@ html, body {
     height: 100%;
 }
 
-body {
-    font-size: 80%;
-    position:relative;
-}
 .mainContainer {
     width: 100%;
 }
@@ -19,6 +15,7 @@ body > .footer {
     width: 100%;
     height: 100px;
     text-align: center;
+    font-size: 13px;
 }
 body > .footer .addiction-warning {
     position: absolute;
@@ -43,10 +40,6 @@ body > .footer .addiction-warning a:hover {
   text-decoration: underline;
 }
 
-
-body * {
-    font-family: 'Roboto', sans-serif;
-}
 
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
   width: 14px !important;
@@ -266,41 +259,9 @@ input::-ms-clear {
 /* Remove dotted-underline around buttons in FF */
 button::-moz-focus-inner { border: 0; }
 
-/* default style for green button */
-.green-button {
-    background: #2E8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    max-width: 200px;
-    line-height: 2em;
-    width: 100%;
-    cursor: pointer;
-}
-/* default style for blue button */
-button, button.blue-button {
-    background: #273051;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    max-width: 200px;
-    line-height: 2em;
-    width: 100%;
-    cursor: pointer;
-}
-
 .orange-button {
   background: #e98024;
-  border: none;
-  border-radius: 5px;
   color: white;
-  outline: 0;
-  max-width: 200px;
-  line-height: 2em;
-  width: 100%;
-  cursor: pointer;
 }
 
 /* default style for inputs */

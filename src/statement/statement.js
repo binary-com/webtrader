@@ -64,7 +64,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
                      trans.longcode ,
                     (trans.amount * 1).toFixed(2),
                     '<b>' + formatPrice(trans.balance_after) + '</b>',
-                    '<button class="green-button">View</button>',
+                    '<button>View</button>',
                     trans, /* data for view transaction dailog - when clicking on arrows */
                 ];
             });
@@ -86,8 +86,9 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
             title: 'Statement',
-            width: 700 ,
-            minHeight:100,
+            width: 800 ,
+            minHeight:600,
+            height: 600,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
             refresh: function() {
               datepicker.clear();

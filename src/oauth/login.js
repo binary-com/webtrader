@@ -22,8 +22,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             collapsable:false,
             minimizable: false,
             maximizable: false,
-            width: 408,
-            height: 150,
+            width: 548,
+            height: 180,
             'data-authorized': true,
             close: function () {
               login_win.dialog('destroy');
@@ -43,7 +43,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
         /* update dialog position, this way when dialog is resized it will not move*/
         var offset = login_win.dialog('widget').offset();
-        offset.top = 80;
+        offset.top = 120;
         login_win.dialog("option", "position", { my: offset.left, at: offset.top });
         login_win.dialog('widget').css({
             left: offset.left + 'px',
@@ -112,19 +112,19 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         var routes = {
           login: {
             title: 'Log in',
-            height: 150
+            height: 180
           },
           registration: {
             title: 'Registration',
-            height: 190,
+            height: 220,
           },
           account: {
             title: 'Account opening',
-            height: 420
+            height: 465
           },
           confirm: {
             title: 'Account opening',
-            height: 400
+            height: 435
           }
         };
         state.route.value = route;
@@ -143,7 +143,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.registration.validate.clear();
       }
 
-      /* { verify_email: 'emial' } step */
+      /* { verify_email: 'email' } step */
       state.registration.create = function() {
         var email = state.registration.email;
         if(email == '' || !validateEmail(email)) {

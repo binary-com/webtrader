@@ -140,8 +140,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
-                    width: 700,
-                    minHeight: 60,
+                    width: 800 ,
+                    minHeight:600,
+                    height: 600,
                     'data-authorized': 'true',
                     close: function () {
                         proposal_open_contract('forget');
@@ -226,7 +227,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         contract.longcode,
                         formatPrice(contract.buy_price),
                         '0.00',
-                        '<button class="green-button">View</button>',
+                        '<button>View</button>',
                         contract.contract_id, /* for jq-datatables rowId */
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];
