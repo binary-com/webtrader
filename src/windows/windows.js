@@ -211,6 +211,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             var year = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
             var month = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
             var day = $('<select />').insertAfter(header).selectmenu({ width: 'auto'});
+            day.selectmenu( "menuWidget" ).addClass('date-day');
             year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
             month = update(month, {
                 min: 0, max: 11, initial: dt.getMonth(),

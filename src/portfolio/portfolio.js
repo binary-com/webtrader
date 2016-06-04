@@ -140,9 +140,9 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
-                    width: 800 ,
-                    minHeight:600,
-                    height: 600,
+                    width: 900 ,
+                    minHeight:500,
+                    height: 500,
                     'data-authorized': 'true',
                     close: function () {
                         proposal_open_contract('forget');

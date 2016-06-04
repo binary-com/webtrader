@@ -24,20 +24,8 @@
     font-weight: bold;
 }
 
-.realitycheck .button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    width: 140px;
-    height: 30px;
-    margin-top: 10px;
-    line-height:2em;
-}
-
 .realitycheck input {
-    width: 50px;
+    width: 60px;
     height: 25px;
 }
 

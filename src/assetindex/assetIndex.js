@@ -11,8 +11,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
             if (!assetWin) {
                 assetWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Asset Index',
-                    width: 750,
-                    minHeight:70,
+                    width: 900 ,
+                    minHeight:500,
+                    height: 500
                 });
                 assetWin.track({
                   module_id: 'assetIndex',
@@ -91,7 +92,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                             submarket_names.update_list(list);
                             updateTable(market_names.val(), submarket_names.val());
                         },
-                        width: '120px'
+                        width: '200px'
                     });
                 market_names.selectmenu('widget').addClass('asset-index-selectmenu');
 
@@ -102,7 +103,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                         changed: function (val) {
                             updateTable(market_names.val(), submarket_names.val());
                         },
-                        width: '135px'
+                        width: '220px'
                     });
                 submarket_names.selectmenu('widget').addClass('asset-index-selectmenu');
 

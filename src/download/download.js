@@ -36,6 +36,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             ]
         }
     ];
+    var WIDTH = 900, HEIGHT = 500;
 
     function renderChart(instrumentObject, timePeriod, toDateWithTime) {
 
@@ -267,6 +268,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 chart.hideLoading();
                 $(".download_show").prop("disabled", false);
 
+                resizeDialog();
+
             })
             .catch(function(err) {
                 console.error(err);
@@ -274,7 +277,19 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 chart.hideLoading();
                 $(".download_show").prop("disabled", false);
             });
+
     }
+
+    var resizeDialog = function() {
+        console.log('resize called');
+        if(downloadWin) {
+            var $dialog = downloadWin.dialog('widget');
+            var chart = $(".downloadChart")
+                .height($dialog.height() - 100)
+                .highcharts();
+            if (chart) chart.reflow();
+        }
+    };
 
     function init($menuLink) {
         require(["css!download/download.css"]);
@@ -283,18 +298,11 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 downloadWin = windows.createBlankWindow($('<div class="download_window"/>'),
                     {
                         title: 'View Historical Data',
-                        width: 700,
-                        minHeight:460,
-                        height : 460,
-                        resize : function() {
-                            var chart = $(".downloadChart")
-                                                .width($(this).width())
-                                                .height($(this).height() - 40)
-                                                .highcharts();
-                            if (chart) {
-                                chart.reflow();
-                            }
-                        }
+                        width: WIDTH ,
+                        minWidth: WIDTH ,
+                        minHeight: HEIGHT ,
+                        height: HEIGHT ,
+                        resize : resizeDialog
                     });
                 downloadWin.track({
                   module_id: 'download',
@@ -349,7 +357,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                              var instrumentObject = $(this).data("instrumentObject");
                                             $(".download_instruments")
                                                 .data("instrumentObject",instrumentObject)
-                                                .find("span")
                                                 .html(instrumentObject.display_name);
                                             $(".download_instruments_container > ul").toggle();
                                             // Create a new drop down everytime market is changed
@@ -376,7 +383,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                     $(".download_instruments_container > ul").hide();
                                 });
                             $downloadInstruments.data("instrumentObject", defaultInstrumentObject);
-                            $downloadInstruments.find("span").html(defaultInstrumentObject.display_name);
+                            $downloadInstruments.html(defaultInstrumentObject.display_name);
                             //Init the time period drop down
                             createTimePeriodDropDown($downloadInstruments.data("instrumentObject").delay_amount * 60, $html);
 
@@ -398,7 +405,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     $download_timePeriod.data("timePeriodObject", {
                         name : "1 day", code : "1d"
                     });
-                    $download_timePeriod.find("span").html("1 day");
+                    $download_timePeriod.html("1 day");
                     $(".download_fromTime").hide();
 
                     $html.find(".download_show").click(function() {
@@ -450,7 +457,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                         var timePeriodObject = $(this).data("timePeriodObject");
                         $(".download_timePeriod")
                             .data("timePeriodObject", timePeriodObject)
-                            .find("span")
                             .html($(this).data("timePeriodObject").name);
                         $(".download_timePeriod_container > ul").toggle();
                         var isDayCandles = timePeriodObject.code === '1d';

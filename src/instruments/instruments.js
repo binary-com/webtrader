@@ -59,7 +59,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
                     autoOpen: false,
                     resizable: false,
                     width: 277,
-                    height: 250,
+                    height: 320,
                     my: 'center',
                     at: 'center',
                     of: window,

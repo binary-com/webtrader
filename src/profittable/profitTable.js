@@ -107,9 +107,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
         require(['text!profittable/profitTable.html'], function (html) {
           profitWin = windows.createBlankWindow($('<div/>'), {
               title: 'Profit Table',
-              width: 800 ,
-              minHeight:600,
-              height: 600,
+              width: 900 ,
+              minHeight:500,
+              height: 500,
               destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
               refresh: function() {
                 datepicker.clear();

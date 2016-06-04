@@ -7,6 +7,9 @@
     text-align: center;
 }
 
+.download .ui-menu {
+}
+
 .download_fromDate {
     min-width: 110px;
     max-width: 110px;
@@ -28,7 +31,25 @@
     vertical-align: middle;
 }
 
+.download_inst_time_cont {
+    display: flex;
+}
+
+.download_instruments_container li, .download_timePeriod_container li {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.download_timePeriod_container {
+    margin-left: 5px;
+}
+
+.download_instruments_container > ul, .download_timePeriod_container > ul {
+    position: absolute;
+    display: block;
+    list-style: none outside none;
+}
+
 .downloadChart {
-    width : 687px;
-    height: 370px;
+    height: 100%;
 }

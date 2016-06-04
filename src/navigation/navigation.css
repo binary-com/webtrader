@@ -162,8 +162,6 @@ body {
 }
 
 #nav-container .login button[disabled] { opacity: 0.5;}
-#nav-container .login button { background: #2e8836; }
-/*#nav-container .login button.logout { background: #4F577E; }*/
 
 /* account menu */
 #nav-container .account {

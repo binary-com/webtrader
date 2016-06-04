@@ -91,25 +91,8 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
     line-height: 1.2em;
 }
 
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-    font-family: 'Roboto'!important;
-}
-
 .ui-widget {
     outline: 0;
-}
-
-.ui-button {
-    margin-top: 5px;
-}
-
-.ui-button-text-only.ui-state-hover,
-.ui-button-text-only.ui-button:hover {
-    color: #FFFFFF!important;
-    background: #3F476E!important;
 }
 
 .ui-dialog .ui-dialog-content {
@@ -280,8 +263,12 @@ input:focus {
   box-shadow: inset 0 2px 2px rgba(0,0,120,.25);
 }
 
-
 .growl.growl-notice {
     background: #fef1cf !important;
     color: black !important;
+}
+
+button {
+    font-size: 14px !important;
+    font-weight: normal !important;
 }

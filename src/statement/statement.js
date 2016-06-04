@@ -86,9 +86,9 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
             title: 'Statement',
-            width: 800 ,
-            minHeight:600,
-            height: 600,
+            width: 900 ,
+            minHeight:500,
+            height: 500,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
             refresh: function() {
               datepicker.clear();
