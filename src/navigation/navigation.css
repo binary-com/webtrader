@@ -61,6 +61,8 @@ body {
     white-space: nowrap;
     text-align: left;
     outline: none;
+    font-size: 1.4em;
+    font-weight: 400;
 }
 
 .nav-normal-menu li a:hover {
@@ -71,6 +73,11 @@ body {
 .nav-normal-menu li a.disabled:hover {
   opacity: 0.5;
   background-color: #273051;
+}
+
+.nav-normal-menu > li > a {
+    display: inline;
+    font-size: 1.1em;
 }
 
 .nav-normal-menu li > ul {
