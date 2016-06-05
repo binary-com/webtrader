@@ -760,6 +760,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             collapsable: false,
             minimizable: true,
             maximizable: false,
+            height: 500,
+            width: 450,
             'data-authorized': 'true',
             close: function() {
               /* forget last proposal stream on close */
