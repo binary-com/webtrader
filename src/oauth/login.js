@@ -124,7 +124,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           },
           confirm: {
             title: 'Account opening',
-            height: 435
+            height: 415
           }
         };
         state.route.value = route;
@@ -196,7 +196,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                   var account = data.new_account_virtual;
                   var oauth = [{id: account.client_id, token: account.oauth_token }];
                   local_storage.set('oauth', oauth);
-                  liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
+                  //liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
                   state.account.disabled = false;
                   state.route.update('confirm');
                })

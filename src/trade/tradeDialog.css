@@ -30,7 +30,9 @@
 
 .trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 160px !important; }
 
-.trade-fields .categories-row {padding: 3px 5px; }
+.trade-fields .categories-row {
+    padding-bottom: 20px;
+}
 
 .trade-fields .duration-row li,
 .trade-fields .date-start-row li,
@@ -39,7 +41,6 @@
 .trade-fields .categories-row li.tick-quote {
   position: relative;
   top: 4px;
-  left: 35px;
   height: 30px;
 }
 .trade-fields .categories-row li.tick-quote span {
@@ -88,16 +89,15 @@
     justify-content: center;
 }
 
-.trade-fields ul li { text-align: left;}
-.trade-fields ul li:nth-child(1) { width:130px; }
-.trade-fields ul li:nth-child(2n) { width:110px; }
-.trade-fields ul li:nth-child(2n+3) { width:100px; }
-.trade-fields .ui-selectmenu-button { height: 30px !important; }
+.trade-fields ul li {
+    text-align: left;
+    padding-left: 5px;
+}
 
-.trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { min-width: 120px !important; }
+.trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { min-width: 130px !important; }
 
 .trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { width: 100px !important; }
-.trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 100px !important; }
+.trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 120px !important; }
 
 .trade-fields ul li:nth-child(2) input { width: 85px !important; }
 .trade-fields ul li:nth-child(3) input { width: 85px !important; }
@@ -167,7 +167,7 @@
 
 .trade-fields .proposal-message {
     border-top: 1px solid #c2c1c1;
-    bottom: 80px;
+    bottom: 130px;
 }
 
 .trade-fields ul.message-row {

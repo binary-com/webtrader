@@ -168,6 +168,7 @@ body {
 #nav-container .login {
   position: absolute;
   right: 10px;
+    top: 40px;
 }
 
 #nav-container .login span.ui-icon {
