@@ -19,8 +19,8 @@
         <div class='categories' rv-each-subcat='cat.submarkets' rv-show='cat.submarkets | prop "length"'>
             <div class='category'>
                 <span class='title-sub' rv-text='subcat.display_name'></span>
-                <div rv-each-ind='subcat.instruments | overlays-filter overlays.search'>
-                    <span rv-text='ind.display_name' rv-on-click='overlays.add | bind ind' class="overlay_symbol" rv-hide="ind.dont_show"/>
+                <div rv-each-ind='subcat.instruments | overlays-filter overlays.search' rv-hide="ind.dont_show">
+                    <span rv-text='ind.display_name' rv-on-click='overlays.add | bind ind' class="overlay_symbol"/>
                 </div>
             </div>
         </div>
