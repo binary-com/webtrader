@@ -76,8 +76,14 @@ body {
 }
 
 .nav-normal-menu > li > a {
-    display: inline;
     font-size: 1.1em;
+    height: 30px;
+}
+.nav-normal-menu > li {
+    position: relative;
+    top: -20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .nav-normal-menu li > ul {
@@ -174,6 +180,7 @@ body {
 #nav-container .account {
   position: absolute;
   right: 0px;
+  top: 27px;
   width: 200px;
 }
 #nav-container .account > a {
@@ -193,7 +200,6 @@ body {
 #nav-container .account .nav-dropdown-toggle .nav-caret {
   position: absolute;
   top: 35px;
-  right: 10px;
 }
 
 #nav-container .account .logout,
@@ -231,4 +237,10 @@ body {
 #header .logo div:nth-child(2) {
     display: inline-block;
     margin: -12px;
+}
+
+.nav-normal-menu .resources > ul > li,
+.nav-normal-menu .windows > ul > li
+{
+    padding-left: 5px;
 }
