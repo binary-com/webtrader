@@ -271,4 +271,9 @@ input:focus {
 button {
     font-size: 14px !important;
     font-weight: normal !important;
+    outline: 0 !important;
+}
+
+table {
+  line-height: 1em !important;
 }
