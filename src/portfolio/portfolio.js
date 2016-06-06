@@ -100,15 +100,15 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
-      $target.addClass('disabled');
+      $target.addClass('button-disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
         viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                       .then(function(){ $target.removeClass('disabled'); });
+                       .then(function(){ $target.removeClass('button-disabled'); });
       });
     }
 

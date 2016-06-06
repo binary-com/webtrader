@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-size: 16px !important;
 }
 
 .mainContainer {
@@ -269,11 +270,9 @@ input:focus {
 }
 
 button {
-    font-size: 14px !important;
-    font-weight: normal !important;
     outline: 0 !important;
 }
 
 table {
-  line-height: 1em !important;
+  line-height: 1.2em !important;
 }
