@@ -1,7 +1,13 @@
 ﻿.trade-dialog {
+    line-height: 1em !important;
     padding: 0 !important;
     position: relative;
     overflow-x: hidden !important;
+    font-size: 14px !important;
+}
+.trade-dialog ul li {
+  line-height: 1em;
+  margin: 0;
 }
 .trade-dialog .text-align-center { text-align: center; }
 .trade-dialog .bold { font-weight: bold; }
@@ -30,19 +36,12 @@
 
 .trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 160px !important; }
 
-.trade-fields .categories-row {
-    padding-bottom: 20px;
-}
-
 .trade-fields .duration-row li,
 .trade-fields .date-start-row li,
 .trade-fields .categories-row li {height: 30px; }
-
-.trade-fields .categories-row li.tick-quote {
-  position: relative;
-  top: 4px;
-  height: 30px;
-}
+.trade-fields .categories-row { justify-content: space-between; }
+.trade-fields .contract-displays { justify-content: center; }
+.trade-fields .categories-row li.sparkline-chart { min-width: 95px;}
 .trade-fields .categories-row li.tick-quote span {
   background: #29ABE2;
   text-align: center;
@@ -51,6 +50,7 @@
   border-radius: 5px;
   padding:3px;
   color: white;
+  margin-top: 5px;
 }
 .trade-fields .categories-row li.tick-quote span.down { background: #c03; }
 
@@ -83,15 +83,15 @@
     transition: padding-top 0.5s ease;
     list-style:none;
     margin: 0;
-    padding: 3px 5px 0 5px;
+    padding: 2px 5px 2px 5px;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.trade-fields ul li {
-    text-align: left;
-    padding-left: 5px;
+/* for empty third columns */
+.trade-fields ul li:last-child {
+  min-width: 10px;
 }
 
 .trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { min-width: 130px !important; }

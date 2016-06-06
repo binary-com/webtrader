@@ -272,6 +272,10 @@ input:focus {
 button {
     outline: 0 !important;
 }
+button.button-disabled,
+button[disabled] {
+  opacity: 0.5;
+}
 
 table {
   line-height: 1.2em !important;
