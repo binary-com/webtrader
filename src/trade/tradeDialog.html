@@ -39,14 +39,14 @@
                     <option rv-each-row="date_start.array" rv-value="row.value">{row.text}</option>
            </select>
         </li>
-        <li></li>
+        <li><span></span></li>
     </ul>
 
     <ul class="digits-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="digits.visible">
         <li>
-            <span class="text-vertical-align">{digits.text}</span>
+            <span class="text-vertical-align bold">{digits.text}</span>
         </li>
         <li>
             <select class="digits-select"
@@ -57,7 +57,7 @@
                 <option rv-each-row="digits.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li></li>
+        <li><span></span></li>
     </ul>
 
     <ul class="duration-row"
@@ -192,9 +192,9 @@
                 <option rv-each-row="currency.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li>
-            <input class="amount-per-point" type="number" min="1" step=".01" step-big="1" max="100000000"
-                   rv-spinner="spreads.amount_per_point | debounce proposal.onchange" />
+        <li rv-attr-dummy="spreads.amount_per_point | debounce proposal.onchange">
+            <price-spinner class="amount_per_point" value="spreads.amount_per_point"
+                           min='1' decimals='0' />
         </li>
     </ul>
 

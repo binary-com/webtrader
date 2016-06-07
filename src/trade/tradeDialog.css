@@ -40,7 +40,6 @@
 .trade-fields .date-start-row li,
 .trade-fields .categories-row li {height: 30px; }
 .trade-fields .categories-row { justify-content: space-between; }
-.trade-fields .contract-displays { justify-content: center; }
 .trade-fields .categories-row li.sparkline-chart { min-width: 95px;}
 .trade-fields .categories-row li.tick-quote span {
   background: #29ABE2;
@@ -56,13 +55,13 @@
 
 /* style elments in the drop down*/
 .trade-dialog-date-start-ul li {
-    height:10px;
+    height:12px;
     font-size:13px;
     text-align:center;
 }
 /* this will be added to jquery ui widget which is outside of the .trade-fields container */
 .trade-dialog-date-start-ul {
-    height: 240px;
+    height: 250px;
 }
 /* this will be added to jquery ui widget which is outside of the .trade-fields container */
 .trade-dialog-digits-select-ul:hover { margin-top: -20px; }
@@ -89,24 +88,34 @@
     justify-content: space-between;
 }
 
-/* for empty third columns */
-.trade-fields ul li:last-child {
-  min-width: 10px;
+.trade-fields ul li:nth-child(1) > span { min-width: 130px !important; display: inline-block;}
+.trade-fields ul.digits-row li:nth-child(1) > span { min-width: 140px !important; display: inline-block;}
+.trade-fields ul li:nth-child(3) > span {
+  min-width: 100px !important; display: inline-block;
+  box-sizing: border-box;
+  line-height: 30px;
 }
+.trade-fields ul.date-start-row li:nth-child(3) > span { min-width: 85px !important }
 
 .trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { min-width: 130px !important; }
-
 .trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { width: 100px !important; }
-.trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 120px !important; }
+.trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 100px !important; }
 
-.trade-fields ul li:nth-child(2) input { width: 85px !important; }
+.trade-fields ul li span.ui-spinner { border: 0; }
+.trade-fields ul li input {
+  border: none;
+  background: #273051;
+  color: white;
+  margin: 0;
+  height: 30px;
+  padding-left: 10px;
+}
+.trade-fields ul li:nth-child(2) input { width: 100px !important; }
 .trade-fields ul li:nth-child(3) input { width: 85px !important; }
 
 .trade-fields ul li:nth-child(2n) input:not([step]),
 .trade-fields ul li:nth-child(2n+3) input:not([step]) {
   width: 100px !important;
-  padding:0;
-  height: 30px;
 }
 
 .trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px !important }
@@ -114,8 +123,9 @@
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
         background: #c2c1c1;
+        justify-content: center;
         padding: 10px 0;
-        margin: 0;
+        margin-bottom: 2px;
     }
 
     .trade-fields ul.contract-displays li {
@@ -154,10 +164,6 @@
     text-align:center;
 }
 
-.trade-fields .amount-per-point {
-  width: 70px;
-}
-
 /* for elements that should stick to the buttom of dialog */
 .trade-fields .stick-to-bottom {
   position: absolute;
@@ -166,11 +172,16 @@
 }
 
 .trade-fields .proposal-message {
+    padding-top: 5px;
     border-top: 1px solid #c2c1c1;
-    bottom: 130px;
+    bottom: 85px;
+}
+.trade-fields .proposal-message li {
+    line-height: 1.2em;
 }
 
 .trade-fields ul.message-row {
+  justify-content: center;
   bottom: 50px;
   padding: 2px 0;
 }
@@ -179,6 +190,7 @@
   text-align: center;
   width:auto;
 }
+.trade-fields ul.message-row li span { display: inline; }
 
 .trade-fields .netprofit { background: #c2c1c1; }
 .trade-fields .spread-deposit {
