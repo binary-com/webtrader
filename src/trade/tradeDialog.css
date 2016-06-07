@@ -200,9 +200,9 @@
 }
 
 .trade-fields .purchase-row { bottom: 5px;}
-.trade-fields .purchase-row li:nth-child(1) { position: absolute; left: 20px; width: 200px;}
-.trade-fields .purchase-row li:nth-child(2) { left:160px; position: relative;}
-.trade-fields .purchase-row li span { font-weight: bolder; font-size: larger;}
+.trade-fields .purchase-row li:nth-child(1) { position: absolute; left: 20px; width: 200px; line-height: 34px;}
+.trade-fields .purchase-row li:nth-child(2) { left:230px; position: relative;}
+.trade-fields .purchase-row li span { font-weight: bolder; font-size: larger; text-overflow: ellipsis; overflow: hidden; width: 205px;}
 
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px !important; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
