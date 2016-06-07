@@ -111,6 +111,13 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
     }
 
     function handle_normal_route() {
+
+        /* We do not allow entire webtrader.binary.com to be included in IFRAME */
+        if (self !== top) {
+            top.location = self.location;
+            return;
+        }
+
         /* this callback is executed right after the navigation module
            has been loaded & initialized. register your menu click handlers here */
         var registerMenusCallback = function ($navMenu) {
