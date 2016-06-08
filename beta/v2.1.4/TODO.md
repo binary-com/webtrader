@@ -25,5 +25,3 @@
         not be frozen too. It might be something to do with server EventSource connection which is held by server, but it is not sending
         any data. A proper way of capturing needs to be done in order to point out who the real culprit is in this issue (whether server
         or client side code)
-    * Push the y axis labels inside the indicator area. Right now one indicator label is overlapping with others(continued)
-    * Do not show gaps for weekends
