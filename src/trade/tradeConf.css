@@ -65,8 +65,7 @@
   background: #c2c1c1;
 }
 .trade-conf .view-row .view {
-  padding-right: 30px;
-  font-size: 1.4em;
+    padding-bottom: 3px;
 }
 .trade-conf .view-row .arrow {
   cursor: pointer;

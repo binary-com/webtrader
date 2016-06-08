@@ -45,13 +45,9 @@
     </li>
   </ul>
 
-  <ul class='view-row'
-    rv-if="arrow.visible">
+  <ul class='view-row' rv-if="arrow.visible">
     <li class="view">
-      View
-    </li>
-    <li rv-on-click='arrow.onclick'>
-      <img class="arrow" src="images/up-arrow.svg"/>
+      <button rv-on-click='arrow.onclick'>View</button>
     </li>
   </ul>
 
