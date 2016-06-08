@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-size: 16px !important;
 }
 
 .mainContainer {
@@ -267,8 +268,16 @@ input:focus {
     background: #fef1cf !important;
     color: black !important;
 }
+#growls { top: 110px !important; }
 
 button {
-    font-size: 14px !important;
-    font-weight: normal !important;
+    outline: 0 !important;
+}
+button.button-disabled,
+button[disabled] {
+  opacity: 0.5;
+}
+
+table {
+  line-height: 1.2em !important;
 }
