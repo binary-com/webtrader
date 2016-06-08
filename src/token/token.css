@@ -7,9 +7,7 @@
 
 .token-dialog > button {
   position: absolute;
-  width: 120px;
   right: 10px;
-  line-height: 23px;
 }
 .token-dialog .empty-pane > span {
   display:  block;
@@ -33,7 +31,7 @@
 }
 .token-dialog .token-list-pane table {
   border-collapse: collapse;
-  margin-top: 15px;
+  margin-top: 20px;
   line-height: 22px;
   width: 100%;
 }
@@ -96,7 +94,7 @@
 }
 
 .token-dialog .confirm {
-  width: 150px;
+  width: 250px;
   text-align: center;
   position: absolute;
   background: white;
@@ -119,10 +117,4 @@
 .token-dialog .confirm .title {
   display: block;
   margin-bottom: 5px;
-}
-.token-dialog .confirm button {
-  width: 70px;
-  line-height: 1.5em;
-  font-size: 16px;
-  padding: 0;
 }

@@ -94,8 +94,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                 var div = $(html);
                 win = windows.createBlankWindow($('<div/>'), {
                     title: 'Self-Exclusion Facilities',
-                    width: 700,
-                    minHeight:90,
+                    width: 900 ,
+                    minHeight:500,
+                    height: 500,
                     'data-authorized': 'true',
                     destroy: function() {
                         win = null;

@@ -12,9 +12,7 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                 //attach different button actions
                 $html = $($html);
 
-                $html.find('.chartMenuHamburgerMenu').hover(function() {
-                    $(this).toggleClass('ui-state-hover').toggleClass('ui-state-active');
-                }).click(function (e) {
+                $html.find('.chartMenuHamburgerMenu').click(function (e) {
                     $(this).toggleClass('active')
                            .next('ul:first').toggle();
                     return false;

@@ -26,7 +26,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           minimizable: false,
           maximizable: false,
           // width: 408,
-          height: 320,
+          height: 350,
           'data-authorized': true,
           close: function () {
             password_win.dialog('destroy');

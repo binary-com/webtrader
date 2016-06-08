@@ -18,3 +18,10 @@
 .instruments_fixed_width {
     width: 80px;
 }
+
+#instrumentsDialog button {
+    width : 80px;
+    height : 40px;
+    display: inline;
+    font-size: 13px;
+}
