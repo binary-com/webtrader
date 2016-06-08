@@ -26,8 +26,8 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
                 win = windows.createBlankWindow($('<div class="chrome_extension"/>'),
                     {
                         title: 'Chrome Extension',
-                        width: 340,
-                        height: 150,
+                        width: 350,
+                        height: 200,
                         resizable: false,
                         collapsable: false,
                         minimizable: false,

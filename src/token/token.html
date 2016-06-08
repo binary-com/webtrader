@@ -1,10 +1,10 @@
 <div class="token-dialog">
   <div class='confirm' rv-show='confirm.visible' rv-css-top='confirm.top'>
     <span class='title'>Are you sure you want to delete this token?</span>
-    <button class='blue-button shine' rv-on-click='confirm.yes'>yes</button>
-    <button class='orange-button shine' rv-on-click='confirm.no'>No</button>
+    <button rv-on-click='confirm.yes'>yes</button>
+    <button class='orange-button' rv-on-click='confirm.no'>No</button>
   </div>
-  <button class='blue-button shine'
+  <button
           rv-show='route | not-eq "create-token"'
           rv-on-click='change_route | bind "create-token"'>Create token</button>
 
@@ -58,7 +58,7 @@
         <label> <input type='checkbox' rv-checked='token.scopes.admin' /> Admin </label>
       </div>
 
-      <button class='green-button shine'
+      <button
               rv-disabled='token.btn_disabled'
               rv-css-opacity='token.btn_disabled | ternary 0.5 1'
               rv-on-click='token.add'>Create</button>

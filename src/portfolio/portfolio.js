@@ -100,15 +100,15 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
-      $target.addClass('disabled');
+      $target.addClass('button-disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
         viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                       .then(function(){ $target.removeClass('disabled'); });
+                       .then(function(){ $target.removeClass('button-disabled'); });
       });
     }
 
@@ -140,8 +140,8 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Portfolio',
-                    width: 700,
-                    minHeight: 60,
+                    width: 700 ,
+                    height: 400,
                     'data-authorized': 'true',
                     close: function () {
                         proposal_open_contract('forget');
@@ -226,7 +226,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         contract.longcode,
                         formatPrice(contract.buy_price),
                         '0.00',
-                        '<button class="green-button shine">View</button>',
+                        '<button>View</button>',
                         contract.contract_id, /* for jq-datatables rowId */
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];

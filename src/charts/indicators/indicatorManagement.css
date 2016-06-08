@@ -26,12 +26,12 @@
   font-size: 0.925em;
 }
 .indicator-dialog div.category > div {
-  height: 45px;
-  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: inline-block;
   margin-right: 18px;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: pointer
 }
 
 .indicator-dialog div.category > div > span.question-mark,

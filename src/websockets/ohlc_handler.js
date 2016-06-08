@@ -81,10 +81,10 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                 /* We still need to call refresh the chart with data we already received
                    Use local caching to retrieve that data.*/
                 chartingRequestMap.barsLoaded(key);
-                return;
+                return Promise.resolve();
             }
 
-            chartingRequestMap.register({
+            var done_promise = chartingRequestMap.register({
               symbol: instrumentCode,
               granularity: timePeriod,
               subscribe: options.delayAmount === 0 ? 1 : 0,
@@ -135,6 +135,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                         instrumentCode : instrumentCode,
                         instrumentName : instrumentName
             });
+            return done_promise;
         }
     };
 

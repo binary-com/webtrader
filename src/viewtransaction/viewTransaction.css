@@ -162,13 +162,7 @@
 }
 
 .view-transaction-dialog .footer .sell-at-market .sell-button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
     max-width: 200px;
-    line-height: 2em;
     width: 100%;
 }
 .view-transaction-dialog .footer .sell-at-market .sell-button[disabled] { opacity: 0.5; }

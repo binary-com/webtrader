@@ -69,7 +69,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
                     profit,
-                    '<button class="green-button shine">View</button>',
+                    '<button>View</button>',
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
@@ -91,15 +91,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
-      $target.addClass('disabled');
+      $target.addClass('button-disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
         viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                       .then(function(){ $target.removeClass('disabled'); });
+                       .then(function(){ $target.removeClass('button-disabled'); });
       });
     }
 
@@ -107,8 +107,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
         require(['text!profittable/profitTable.html'], function (html) {
           profitWin = windows.createBlankWindow($('<div/>'), {
               title: 'Profit Table',
-              width: 700,
-              minHeight:90,
+              width: 700 ,
+              height: 400,
               destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
               refresh: function() {
                 datepicker.clear();

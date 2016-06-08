@@ -22,7 +22,7 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
                     {
                         title: 'Apply new theme?',
                         width: 360,
-                        height: 170,
+                        height: 240,
                         resizable: false,
                         collapsable: false,
                         minimizable: false,

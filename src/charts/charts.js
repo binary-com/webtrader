@@ -164,12 +164,20 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
          * @param onload // optional onload callback
          */
         drawChart: function (containerIDWithHash, options, onload) {
+            var indicators = [];
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
                 var key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
                 chartingRequestMap.removeChart(key, containerIDWithHash);
-                $(containerIDWithHash).highcharts().destroy();
+                var chart = $(containerIDWithHash).highcharts();
+                if(chart.series.length > 0){
+                  var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
+                  indicator_ids.forEach(function(id){
+                    chart.series[0][id] && indicators.push({id: id, options: chart.series[0][id][0].options})
+                  });
+                }
+                chart.destroy();
             }
 
             //Save some data in DOM
@@ -199,8 +207,14 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     instrumentName : options.instrumentName,
                                     series_compare : options.series_compare,
                                     delayAmount : options.delayAmount
+                                }).then(function() {
+                                  // put back removed indicators
+                                  var chart = $(containerIDWithHash).highcharts();
+                                  indicators.forEach(function(ind) {
+                                    chart.series[0].addIndicator(ind.id, ind.options);
+                                  });
                                 });
-                            });
+                            })
                             if ($.isFunction(onload)) {
                                 onload();
                             }
@@ -357,8 +371,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 }
 
             });
-
-
         },
 
         destroy : destroy,

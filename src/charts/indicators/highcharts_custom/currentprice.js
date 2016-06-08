@@ -123,7 +123,11 @@ define(['common/util', 'highstock'], function () {
                         textAlign: 'left',
                         label: {
                             text:  price + (isChange ? '%' : ''),
-                            style: { 'background': '#2ECC71'},
+                            style: {
+                                'background': '#2E8836',
+                                'color' : 'white',
+                                'padding' : '2px 2px 2px 2px'
+                            },
                             x: -40,
                             y: 4,
                             useHTML: true,
