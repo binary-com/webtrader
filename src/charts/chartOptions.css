@@ -17,6 +17,7 @@
 .chartOptions li {
     text-align: left;
     white-space: nowrap;
+    font-size: 12px;
 }
 
 .chartOptions .addOverlay span,

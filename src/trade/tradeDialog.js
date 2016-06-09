@@ -164,7 +164,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           array: [],
           value: '',
           paddingTop: function(){
-            var paddings = { "Asians" : '26px', "Up/Down" : '16px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '16px' , "Spreads":'5px' };
+            var paddings = { "Asians" : '26px', "Up/Down" : '8px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '16px' , "Spreads":'5px' };
             return paddings[state.categories.value] || '3px';
           }
         },

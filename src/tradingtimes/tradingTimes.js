@@ -69,8 +69,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             if (!tradingWin) {
                 tradingWin = windows.createBlankWindow($('<div/>'), {
                     title: 'Trading Times',
-                    width: 700,
-                    minHeight:110,
+                    width: 700 ,
+                    height: 400
                 });
                 tradingWin.track({
                   module_id: 'tradingTimes',

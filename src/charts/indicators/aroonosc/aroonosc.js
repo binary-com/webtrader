@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/3/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -21,13 +21,22 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/aroonosc/aroonosc.html'], function ( $html ) {
+        require(['text!charts/indicators/aroonosc/aroonosc.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.aroonosc;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
+
             $html.find("input[type='button']").button();
 
             $html.find("#aroonosc_stroke").colorpicker({

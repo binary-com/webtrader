@@ -1,7 +1,7 @@
 /**
 Created By Mahboob.M on 12/12/2015
 */
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
 
     function closeDialog() {
         $(this).dialog('close');
@@ -10,11 +10,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
     function init(containerIDWithHash, _callback) {
         require(['css!charts/indicators/macd/macd.css']);
 
-        require(['text!charts/indicators/macd/macd.html'], function ($html) {
+        require(['text!charts/indicators/macd/macd.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             $html = $($html);
 
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.macd;
+            var state = {
+                "title": current_indicator_data.long_display_name,
+                "description": current_indicator_data.description
+            }
+            rv.bind($html[0], state);
 
             $html.find("#macd_line_stroke,#signal_line_stroke,#macd_hstgrm_color").each(function () {
                 $(this).colorpicker({

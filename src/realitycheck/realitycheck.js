@@ -3,7 +3,7 @@
  */
 define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', 'moment', 'jquery-growl', 'common/util'], function($, windows, liveapi, _, rv, moment) {
 
-    var win = null, timerHandler = null;
+    var win = null, timerHandler = null, FIRST_SCREEN_HEIGHT = 260, SECOND_SCREEN_HEIGHT = 310;
     var settingsData = {
         timeOutInMins: (local_storage.get("realitycheck") || {}).timeOutInMins || 10,
         timeOutMin: 10, timeOutMax: 120,
@@ -37,11 +37,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         if(win) {
             var winWidget = win.dialog('widget');
             if (showFirstScreen) {
-                win.dialog({height: 220});
+                win.dialog({height: FIRST_SCREEN_HEIGHT});
                 winWidget.find('.realitycheck_firstscreen').show();
                 winWidget.find('.realitycheck_secondscreen').hide();
             } else {
-                win.dialog({height: 310});
+                win.dialog({height: SECOND_SCREEN_HEIGHT});
                 winWidget.find('.realitycheck_firstscreen').hide();
                 winWidget.find('.realitycheck_secondscreen').show();
             }
@@ -98,8 +98,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                                     win = windows.createBlankWindow($('<div/>'), {
                                         title: 'Reality check',
                                         width: 600,
-                                        minHeight:90,
-                                        height: 220,
+                                        minHeight: FIRST_SCREEN_HEIGHT,
+                                        height: FIRST_SCREEN_HEIGHT,
                                         resizable: false,
                                         collapsable: false,
                                         minimizable: false,

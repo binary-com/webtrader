@@ -38,7 +38,9 @@
 }
 
 .overlay-dialog div.categories div.category > div {
-  display: inline;
+  display: inline-block;
+  width: 150px;
+  vertical-align: text-top;
 }
 
 .overlay-dialog div.category > div > span.remove {

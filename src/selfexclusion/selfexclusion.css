@@ -30,15 +30,6 @@
     line-height:2em;
 }
 
-.selfexclusion .update-button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    width: 120px;
-}
-
 .selfexclusion_input {
     width : 270px;
 }

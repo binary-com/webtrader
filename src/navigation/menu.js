@@ -14,9 +14,6 @@ define(['jquery', 'navigation/navigation', 'lodash', 'common/util'], function ($
             var menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
             var $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
             if(value.is_disabled)  $menuLink.addClass('disabled');
-            if(isDropdownMenu) {
-                $menuLink.addClass("nav-dropdown-toggle");
-            }
 
             var newLI = $("<li>").append($menuLink);
             if(!isDropdownMenu) {

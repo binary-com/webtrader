@@ -99,7 +99,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icons.css', 'css!main.css'])
+    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icons.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);
@@ -111,6 +111,13 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
     }
 
     function handle_normal_route() {
+
+        /* We do not allow entire webtrader.binary.com to be included in IFRAME */
+        if (self !== top) {
+            top.location = self.location;
+            return;
+        }
+
         /* this callback is executed right after the navigation module
            has been loaded & initialized. register your menu click handlers here */
         var registerMenusCallback = function ($navMenu) {
