@@ -2,14 +2,6 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
 
     var barsTable = chartingRequestMap.barsTable;
 
-    function setExtremePointsForXAxis(chart, startTime, endTime) {
-        chart.xAxis.forEach(function (xAxis) {
-            if (!startTime) startTime = xAxis.getExtremes().min;
-            if (!endTime) endTime = xAxis.getExtremes().max;
-            xAxis.setExtremes(startTime, endTime);
-        });
-    }
-
     liveapi.events.on('tick', function (data) {
         var key = data.echo_req.ticks_history + data.echo_req.granularity;
         if (key && chartingRequestMap[key.toUpperCase()]) {
@@ -136,31 +128,28 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
 
                 var type = $(chartID.containerIDWithHash).data('type');
 
-                var last = series.data[series.data.length - 1];
-                if (series.options.data.length != series.data.length) {
-                    //TODO - This is an error situation
-                    setExtremePointsForXAxis(chart, null, bar.time);
-                    return;
-                }
+                var len = chart.series[0].options.data.length - 1,
+                    last = chart.series[0].options.data[len];
 
                 if (type && isDataTypeClosePriceOnly(type)) {//Only update when its not in loading mode
                     if (isNew) {
                         series.addPoint([time, close], true, true, false);
                     } else {
-                        last.update({
-                            y : close
-                        });
+                        last[1] = close;
+                        chart.series[0].options.data[len] = last;
+                        // Redrawing the chart to update new point.
+                        chart.series[0].setData(chart.series[0].options.data, true);
                     }
                 } else {
                     if (isNew) {
                         series.addPoint([time, open, high, low, close], true, true, false);
                     } else {
-                        last.update({
-                            open : open,
-                            high : high,
-                            low : low,
-                            close : close
-                        });
+                        last[1] = open,
+                        last[2] = high,
+                        last[3] = low,
+                        last[4] = close;
+                        chart.series[0].options.data[len] = last;
+                        chart.series[0].setData(chart.series[0].options.data, true);
                     }
                 }
             });
