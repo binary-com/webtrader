@@ -12,6 +12,9 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
         require(['lib/highstock/themes/' + themeName]);
     }
 
+    //For custom theme.
+    require(['themes/custom_theme/custom_theme']);
+
     $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
             'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default')
         .off('click')

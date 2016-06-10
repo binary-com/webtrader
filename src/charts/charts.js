@@ -165,7 +165,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
          */
         drawChart: function (containerIDWithHash, options, onload) {
             var indicators = [];
-
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
                 var key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
