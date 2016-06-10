@@ -2,70 +2,12 @@
  * Created by apoorv on 9/06/16.
  */
 define(['jquery', 'windows/windows', 'text!themes/preview_theme/preview_theme.html', 'highstock'], function($, windows, $html){
-	
-	function getThemeConfig(themeConf){
-		var theme = {};
-		if(themeConf["background"]){
-			$.extend(theme,{
-				chart:{
-					backgroundColor: '#' + themeConf["background"]
-				}
-			});
-		}
-		if(themeConf["indicator"]){
-			$.extend(theme,{
-				colors: ['#' + themeConf['indicator']]
-			});
-		}
-		if(themeConf["xAxis"]){
-			$.extend(theme,{
-				xAxis: {
-					lineColor: '#' + themeConf["xAxis"]
-				}
-			});
-		}
-		if(themeConf["xAxis-gridline"]){
-			$.extend(theme,{
-				xAxis: {
-					gridLineColor: '#' + themeConf["xAxis-gridline"]
-				}
-			});
-		}
-		if(themeConf["yAxis"]){
-			$.extend(theme,{
-				yAxis: {
-					lineColor: '#' + themeConf["yAxis"]
-				}
-			});
-		}
-		if(themeConf["yAxis-gridline"]){
-			$.extend(theme,{
-				yAxis: {
-					gridLineColor: '#' + themeConf["yAxis-gridline"]
-				}
-			});
-		}
-		if(themeConf["tooltip"]){
-			$.extend(theme,{
-				backgroundColor: '#' + themeConf["tooltip"]
-			});
-		}
-		if(themeConf["tooltip-text"]){
-			$.extend(theme,{
-				style: {
-					color: '#' + themeConf["tooltip-text"]
-				}
-			});
-		}
-
-		return theme;
-	}
 
 	return{
 		open: function(){
-			var themeConf = local_storage.get('custom_theme_preview');
+			var theme = local_storage.get('custom_theme_preview');
 			local_storage.remove('custom_theme_preview');
-			var theme = getThemeConfig(themeConf);
+			console.log(theme);
 			Highcharts.setOptions(theme);
 			var win = windows.createBlankWindow($html,{
 				title:"Preview", 

@@ -6,6 +6,35 @@ define(['jquery', 'windows/windows', 'themes/preview_theme/preview_theme', 'high
 	var win = null,
 		themeConf = {};
 
+	function createThemeObject(id, value){
+		var rgba = [];
+		console.log(value.substring(0,2));
+		rgba[0] = parseInt(value.substring(0,2),16),
+		rgba[1] = parseInt(value.substring(2,4),16),
+		rgba[2] = parseInt(value.substring(4,6),16),
+		rgba[3] = 1;
+		console.log(rgba);
+		var temp = "",
+				end = "";
+		var propertyNames = id.split("_");
+		propertyNames.forEach(function(property, index, arr){
+			// For creating array.
+			if(property === "arr"){
+				temp = temp + "[" + "\"rgba(" + rgba.join(", ") + ")\"" + "]";
+				return;
+			}
+			end = end + "}";
+			if(index === arr.length - 1){
+				temp = temp + "{" + "\"" + property + "\"" + ":" + "\"rgba(" + rgba.join(", ") + ")\"";
+				return;
+			}
+			temp = temp + "{" + "\"" + property + "\"" + ":";
+		});
+		temp = temp + end;
+		$.extend(themeConf, JSON.parse(temp));
+		console.log(themeConf);
+	}
+
 	$('a.theme_custom')
     .off('click')
     .on('click', function(){
@@ -28,12 +57,14 @@ define(['jquery', 'windows/windows', 'themes/preview_theme/preview_theme', 'high
 	                    $(value).css({
 	                        background: '#' + color.formatted
 	                    }).val('');
+	                    console.log(color);
+	                    createThemeObject(id, color.formatted);
 	                },
 	                ok: function(event, color) {
 	                    $(value).css({
 	                        background: '#' + color.formatted
 	                    }).val('');
-	                    themeConf[id] = color.formatted;
+	                    createThemeObject(id, color.formatted);
 	                }
         		});
         	});
