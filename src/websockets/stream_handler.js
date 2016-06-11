@@ -15,9 +15,6 @@ define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/uti
         if (key && chartingRequestMap[key.toUpperCase()]) {
             key = key.toUpperCase();
 
-            // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
-            $(document).trigger("feedTypeNotification", [key, "realtime-feed"]);
-
             var price = parseFloat(data.tick.quote);
             var time = parseInt(data.tick.epoch) * 1000;
 
