@@ -12,26 +12,26 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     $(function () {
 
-        /* preserve added indicators while updating the chart */
-        var preserve = _(JSON.parse(indicators_json)).values().map('id').value();
-        preserve.push('data'); // preserve data as well
+        var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
+        Highcharts.Chart.prototype.get_indicators = function() {
+          var chart = this;
+          var indicators = [];
+          if(chart.series.length > 0){
+              indicator_ids.forEach(function(id){
+                chart.series[0][id] && indicators.push({id: id, options: chart.series[0][id][0].options})
+              });
+          }
+          return indicators;
+        }
 
-        /* monkey-patching Hicharts.series.prototype.update() method.
-         * bacause according to the hicharts docs update() will reomve "all methods and elements from the series". */
-        var update_orginal = Highcharts.Series.prototype.update;
-        Highcharts.Series.prototype.update = function() {
-          var series = this;
-          var preserve = {};
-          _.each(preserve, function(id){
-            if(series[id])
-              preserve[id] = series[id];
-          });
-
-          update_orginal.apply(this, arguments);
-          _.each(preserve, function(ind, id){
-            series[id] = ind;
-          })
-        };
+        Highcharts.Chart.prototype.set_indicators = function(indicators){
+            var chart = this;
+            if(chart.series[0]) {
+              indicators.forEach(function(ind) {
+                 chart.series[0].addIndicator(ind.id, ind.options);
+              });
+            }
+        }
 
         Highcharts.setOptions({
             global: {
@@ -171,12 +171,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 var key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
                 chartingRequestMap.removeChart(key, containerIDWithHash);
                 var chart = $(containerIDWithHash).highcharts();
-                if(chart.series.length > 0){
-                  var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
-                  indicator_ids.forEach(function(id){
-                    chart.series[0][id] && indicators.push({id: id, options: chart.series[0][id][0].options})
-                  });
-                }
+                indicators = chart.get_indicators();
                 chart.destroy();
             }
 
@@ -208,11 +203,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     series_compare : options.series_compare,
                                     delayAmount : options.delayAmount
                                 }).then(function() {
-                                  // put back removed indicators
                                   var chart = $(containerIDWithHash).highcharts();
-                                  indicators.forEach(function(ind) {
-                                    chart.series[0].addIndicator(ind.id, ind.options);
-                                  });
+                                  chart.set_indicators(indicators); // put back removed indicators
                                 });
                             })
                             if ($.isFunction(onload)) {
@@ -439,6 +431,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         overlay : function( containerIDWithHash, overlayInsCode, overlayInsName, delayAmount ) {
             if($(containerIDWithHash).highcharts()) {
                 var chart = $(containerIDWithHash).highcharts();
+                var indicators = chart.get_indicators();
                 //var mainSeries_instCode     = $(containerIDWithHash).data("instrumentCode");
                 //var mainSeries_instName     = $(containerIDWithHash).data("instrumentName");
                 /*
@@ -467,6 +460,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                         instrumentName : overlayInsName,
                         series_compare : 'percent',
                         delayAmount : delayAmount
+                    }).then(function() {
+                        chart.set_indicators(indicators);
                     });
                 });
             }
