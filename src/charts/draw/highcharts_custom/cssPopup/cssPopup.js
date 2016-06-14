@@ -49,8 +49,8 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
 			win = windows.createBlankWindow($html,
                 {
                     title: options.title,
-                    width: 350,
-                    height: 240,
+                    width: 200,
+                    height: 200,
                     resizable: false,
                     collapsable: false,
                     minimizable: false,
