@@ -204,7 +204,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     delayAmount : options.delayAmount
                                 }).then(function() {
                                   var chart = $(containerIDWithHash).highcharts();
-                                  chart.set_indicators(indicators); // put back removed indicators
+                                  chart && chart.set_indicators(indicators); // put back removed indicators
                                 });
                             })
                             if ($.isFunction(onload)) {
@@ -461,7 +461,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                         series_compare : 'percent',
                         delayAmount : delayAmount
                     }).then(function() {
-                        chart.set_indicators(indicators);
+                        chart && chart.set_indicators(indicators);
                     });
                 });
             }
