@@ -174,6 +174,14 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['is-valid-email'] = function(email) {
       return email === '' || validateEmail(email);
     }
+    rv.formatters['is-valid-date'] = function(date, format) {
+      format = format || 'YYYY-MM-DD';
+      return moment(date, format, true).isValid()
+    }
+    rv.formatters['is-valid-regex'] = function(str, regex) {
+      regex = new RegExp(regex);
+      return regex.test(str);
+    }
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
        As in "execute this function only if 100 milliseconds have passed without it being called." */

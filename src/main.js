@@ -159,6 +159,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     elem.click();
                 });
 
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.real-account"), 'click', 'loading Real account openning ...', 'real/real',
+                function (real) {
+                    var elem = $navMenu.find("a.real-account");
+                    real.init(elem);
+                    elem.click();
+                });
+
             //Register async loading of window profit-table
             load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
                 function (profitTable) {

@@ -1,0 +1,110 @@
+<div class='real'>
+  <div class='user'  rv-show='route.value |  eq "user"'>
+    <!-- <span class='back-arrow' rv-on-click='route.update | bind "registration"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span> -->
+
+    <span class="title-big">Personal Details</span>
+
+    <span class='title'>Title</span>
+    <select rv-jq-class='"salutation-ul"'
+            rv-selectmenu-width='100'
+            rv-selectmenu="user.salutation"
+            rv-selectrefresh="account.salutation_array">
+
+        <option rv-each-row="user.salutation_array" rv-value="row">{row}</option>
+    </select>
+
+    <span class='title'>First name</span>
+    <input rv-value='user.first_name' />
+    <div class='validations'>
+      <span rv-show='user.first_name | eq "" | and empty_fields.validate'
+            class='validation'>* Please enter your first name.</span>
+    </div>
+
+    <span class='title'>Family name</span>
+    <input rv-value='user.last_name' />
+    <div class='validations'>
+      <span rv-show='user.last_name | eq "" | and empty_fields.validate'
+            class='validation'>* Please enter your family name.</span>
+    </div>
+
+    <span class='title'>Date of birth</span>
+    <input rv-value='user.date_of_birth' />
+    <div class='validations'>
+      <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false'
+            class='validation'>* Please enter a valid date in yyyy-mm-dd format.</span>
+    </div>
+
+    <span class='title'>Country of residence</span>
+    <span class='residence' rv-text='user.residence_name'></span>
+    <div class='validations'>
+      <span class='explanation'>
+        Please <a href="https://binary.com/contact" target="_blank">contact support</a>
+        if this is not your country of residence.
+      </span>
+    </div>
+
+
+    <span class="title-big">Home Address</span>
+
+    <span class='title'>Street address</span>
+    <input rv-value='user.address_line_1' />
+    <input rv-value='user.address_line_2' />
+    <div class='validations'>
+      <span rv-show='user.address_line_1 | eq "" | and empty_fields.validate'
+            class='validation'>* Please enter your street address.</span>
+    </div>
+
+    <span class='title'>Town/City</span>
+    <input rv-value='user.city_address' />
+    <div class='validations'>
+      <span rv-show='user.city_address | eq "" | and empty_fields.validate'
+            class='validation'>* Please enter your city address.</span>
+    </div>
+
+    <span class='title'>State/province/region</span>
+    <select rv-jq-class='"state-ul"'
+            rv-selectmenu-width='100%'
+            rv-selectmenu="user.state_address"
+            rv-selectrefresh="user.state_address_array">
+
+        <option rv-each-row="user.state_address_array" rv-value="row">{row}</option>
+    </select>
+
+    <span class='title'>Postal code/ZIP</span>
+    <input rv-value='user.address_postcode' />
+    <div class='validations'>
+      <span rv-show='user.address_postcode | is-valid-regex "^[^+]{0,20}$" | eq false'
+            class='validation'>* Optional field, within 20 characters and may not contain '+'.</span>
+    </div>
+
+    <span class='title'>Phone</span>
+    <input rv-value='user.phone' />
+    <!-- <div class='validations'>
+      <span rv-show='user.phone | is-valid-regex "^\+?[0-9\s]{6,35}$" | eq false'
+            class='validation'>* Please enter a vlaid phone number.</span>
+    </div> -->
+
+    <span class="title-big">Security</span>
+
+    <span class='title'>Security question</span>
+    <select rv-jq-class='"secuirty-ul"'
+            rv-selectmenu-width='100%'
+            rv-selectmenu="user.secret_question"
+            rv-selectrefresh="user.secret_question_array">
+
+        <option rv-each-row="user.secret_question_array" rv-value="row">{row}</option>
+    </select>
+
+    <span class='title'>Answer</span>
+    <input rv-value='user.secret_answer' />
+    <div class='validations'>
+      <span rv-show='user.secret_answer | is-valid-regex ".{4,8}$" | eq false | and empty_fields.validate'
+            class='validation'>* Please answer to secret question, within 4-50 characters.</span>
+    </div>
+
+    <button rv-on-click='user.new_account_real' rv-disabled='user.disabled'
+            rv-css-opacity='user.disabled | ternary 0.5 1'>Continue</button>
+  </div>
+</div>
