@@ -23,7 +23,7 @@ define(['highstock', 'common/util'], function () {
                 if (!H) return;
 
                 var chart = $(refererChartID).highcharts();
-                require(["charts/draw/highcharts_custom/cssPopup/cssPopup"], function(popup){
+                require(["charts/draw/properties_selector/properties_selector"], function(popup){
                     var options = {};
                     options.title = "Horizontal Line";
                     options.inputValues = [

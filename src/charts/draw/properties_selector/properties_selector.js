@@ -5,8 +5,8 @@
 define(["jquery", "windows/windows", "color-picker"], function($, windows){
 
 	function createWindow(options, callback){
-		require(["text!charts/draw/highcharts_custom/cssPopup/cssPopup.css"]);
-		require(["text!charts/draw/highcharts_custom/cssPopup/cssPopup.html"], function($html){
+		require(["text!charts/draw/properties_selector/properties_selector.css"]);
+		require(["text!charts/draw/properties_selector/properties_selector.html"], function($html){
 			$html = $($html);
 			var table = $html.find("table");
 			options.inputValues.forEach(function(input){
