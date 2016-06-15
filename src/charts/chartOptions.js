@@ -56,15 +56,14 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                           require(["charts/charts"], function( charts ) {
                               charts.refresh( '#' + newTabId + '_chart' );
                           });
+
+                          /* trigger an event on the chart dialog, so we can listen on type changes,
+                           * note: this will be use to update chart state for tracker.js */
+                          var dialog = $('#' + newTabId + '_chart');
+                          dialog.trigger('chart-type-changed', type);
                         }
 
                         $(this).closest('.chartOptions').find('.chartMenuHamburgerMenu').click();
-
-
-                        /* trigger an event on the chart dialog, so we can listen on type changes,
-                         * note: this will be use to update chart state for tracker.js */
-                        var dialog = $('#' + newTabId + '_chart');
-                        dialog.trigger('chart-type-changed', type);
                     });
 
                 $html.find('ul:first > li').each(function () {

@@ -126,6 +126,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           if (chart && ovlay) {
               var series = _.find(chart.series, function(s) { return s.options.name === ovlay && s.options.id !== 'navigator'; });
               if (series) {
+                  var indicators = chart.get_indicators();
                   //Remove current price line first
                   series.removeCurrentPrice();
                   //Then remove the series
@@ -157,6 +158,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                               }
                           });
                       }
+                      chart.set_indicators(indicators);
                   });
               }
 
