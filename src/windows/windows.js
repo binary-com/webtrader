@@ -556,11 +556,11 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                   dialog.animate({ top: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
                 }
             });
-            dialog.on('dialogclose', fixFooterPosition);
 
             dialog.on('dragstop', fixFooterPosition);
             dialog.on('drag', function() { fixFooterPosition(true); });
             blankWindow.on('dialogextendminimize', fixFooterPosition);
+            dialog.on('dialogresizestop', fixFooterPosition);
 
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);
@@ -587,6 +587,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             blankWindow.on('dialogclose', function () {
                 if (li) li.remove();
                 li = null;
+                fixFooterPosition();
             });
             blankWindow.on('dialogopen', function () {
                 !li && !options.ignoreTileAction && add_to_windows_menu();

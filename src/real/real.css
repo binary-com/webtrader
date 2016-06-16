@@ -11,7 +11,7 @@
 
 .real-dialog span.explanation {
   font-size: 11px;
-  color: #c9c9c9;
+  color: #aaa;
 }
 
 .real-dialog div.validations {
@@ -68,4 +68,22 @@
 
 .real-dialog a {
   color: #EA9800;
+}
+
+/* financial step styles */
+.real-dialog span.back-arrow {
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.real-dialog .back-arrow > span {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.real-dialog .financial .title-big + div {
+  height: auto;
+  margin-bottom: 10px;
 }

@@ -29,6 +29,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           height: 920,
           close: function () {
             real_win.dialog('destroy');
+            real_win.trigger('dialogclose'); // TODO: figure out why event is not fired.
             real_win.remove();
             real_win = null;
           },
@@ -91,6 +92,37 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           ],
           secret_answer: '',
         },
+        financial: {
+          experience_array:  ['0-1 year', '1-2 years', 'Over 3 years'],
+          frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
+
+          forex_trading_experience: '',
+          forex_trading_frequency: '',
+          indices_trading_experience: '',
+          indices_trading_frequency: '',
+          commodities_trading_experience: '',
+          commodities_trading_frequency: '',
+          stocks_trading_experience: '',
+          stocks_trading_frequency: '',
+          other_derivatives_trading_experience: '',
+          other_derivatives_trading_frequency: '',
+          other_instruments_trading_experience: '',
+          other_instruments_trading_frequency: '',
+
+          employment_industry_array: ['Construction', 'Education', 'Finance', 'Health', 'Tourism', 'Other'],
+          employment_industry: '',
+          education_level_array: ['Primary', 'Secondary', 'Tertiary'],
+          education_level: '',
+
+          income_source_array: ['Salaried Employee', 'Self-Employed', 'Investments & Dividends', 'Pension', 'Other'],
+          income_source: '',
+
+          net_income_array: ['Less than $25,000', '$25,000 - $50,000', '$50,001 - $100,000', '$100,001 - $500,000', 'Over $500,000'],
+          net_income: '',
+
+          estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
+          estimated_worth: ''
+        }
       };
 
       state.user.is_valid = function() {
@@ -146,13 +178,15 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       state.route.update = function(route){
         var routes = {
           'user' : 920,
-          'financial': 700
+          'financial': 1350,
         };
         state.route.value = route;
         real_win.dialog('option', 'height', routes[route]);
+        real_win.dialog('widget').trigger('dialogresizestop');
       };
 
       real_win_view = rv.bind(root[0], state);
+      setTimeout(() => state.route.update('financial')); // TODO: remove
 
       liveapi.send({get_settings: 1})
              .then(function(data){

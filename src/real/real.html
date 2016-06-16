@@ -1,9 +1,5 @@
 <div class='real-dialog'>
   <div class='user'  rv-show='route.value |  eq "user"'>
-    <!-- <span class='back-arrow' rv-on-click='route.update | bind "registration"'>
-      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
-    </span> -->
-
     <span class="title-big">Personal Details</span>
 
     <span class='title'>Title</span>
@@ -109,4 +105,183 @@
     <button rv-on-click='user.new_account_real' rv-disabled='user.disabled'
             rv-css-opacity='user.disabled | ternary 0.5 1'>Continue</button>
   </div>
+
+
+  <div class='financial' rv-show='route.value |  eq "financial"'>
+    <span class='back-arrow' rv-on-click='route.update | bind "user"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span>
+
+    <span class='title-big'>Financial information</span>
+    <div class='validations'>
+      <span class='explanation'>
+        Current regulations require that you provide us the following<br/>
+        information about your trading exprience and personal finance.
+      </span>
+    </div>
+
+    <span class='title'>Forex trading experience</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.forex_trading_experience"
+            rv-selectrefresh="financial.experience_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.experience_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Forex trading frequency</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.forex_trading_frequency"
+            rv-selectrefresh="financial.frequency_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.frequency_array" rv-value="{row}">{row}</option>
+    </select>
+
+    <span class='title'>Indices trading experience</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.indices_trading_experience"
+            rv-selectrefresh="financial.experience_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.experience_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Indices trading frequency</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.indices_trading_frequency"
+            rv-selectrefresh="financial.frequency_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.frequency_array" rv-value="{row}">{row}</option>
+    </select>
+
+    <span class='title'>Commodities trading experience</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.commodities_trading_experience"
+            rv-selectrefresh="financial.experience_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.experience_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Commodities trading frequency</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.commodities_trading_frequency"
+            rv-selectrefresh="financial.frequency_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.frequency_array" rv-value="{row}">{row}</option>
+    </select>
+
+    <span class='title'>Stocks trading experience</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.stocks_trading_experience"
+            rv-selectrefresh="financial.experience_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.experience_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Stocks trading frequency</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.stocks_trading_frequency"
+            rv-selectrefresh="financial.frequency_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.frequency_array" rv-value="{row}">{row}</option>
+    </select>
+
+    <span class='title'>Binary options or other financial derivatives<br/>trading experience</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.other_derivatives_trading_experience"
+            rv-selectrefresh="financial.experience_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.experience_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Binary options or other financial derivatives<br/>trading frequency</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.stocks_trading_frequency"
+            rv-selectrefresh="financial.frequency_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.frequency_array" rv-value="{row}">{row}</option>
+    </select>
+
+
+    <span class='title'>Other financial instruments trading experience</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.other_instruments_trading_experience"
+            rv-selectrefresh="financial.experience_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.experience_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Other financial instruments trading frequency</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.other_instruments_trading_frequency"
+            rv-selectrefresh="financial.frequency_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.frequency_array" rv-value="{row}">{row}</option>
+    </select>
+
+    <span class='title'>Industry of Employment</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.employment_industry"
+            rv-selectrefresh="financial.employment_industry_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.employment_industry_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Level of Education</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.education_level"
+            rv-selectrefresh="financial.education_level_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.education_level_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Income Source</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.income_source"
+            rv-selectrefresh="financial.income_source_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.income_source_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Net Annual Income</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.net_income"
+            rv-selectrefresh="financial.net_income_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.net_income_array" rv-value="{row}">{row}</option>
+    </select>
+    <span class='title'>Estimated Net Worth</span>
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.estimated_worth"
+            rv-selectrefresh="financial.estimated_worth_array">
+
+        <option value="" selected="selected" disabled="disabled">Please select</option>
+        <option rv-each-row="financial.estimated_worth_array" rv-value="{row}">{row}</option>
+    </select>
+
+
+  </div>
+
 </div>
