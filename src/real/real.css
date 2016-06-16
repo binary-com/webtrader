@@ -1,0 +1,63 @@
+.real-dialog {
+  padding: 0 10px !important;
+  background: white !important;
+  overflow: hidden !important;
+}
+
+.real-dialog span.validation {
+  color: red;
+  font-size: 11px;
+}
+
+.real-dialog span.explanation {
+  font-size: 11px;
+  color: #c9c9c9;
+}
+
+.real-dialog div.validations {
+  height: 18px;
+  margin-top: -2px;
+}
+
+
+.real-dialog select + .ui-selectmenu-button {
+  margin-bottom: 10px;
+  border-radius: 5px !important;
+  font-size: 14px;
+  z-index: 100;
+}
+
+.real-dialog-ul { font-size: 14px; } /* for jq select menu */
+
+.real-dialog > div > span {
+  display:  block;
+}
+
+.real-dialog span.title {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.real-dialog span.title-big {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 3px 0;
+}
+
+.real-dialog span.residence {
+  margin-left: 10px;
+}
+.real-dialog span.residence + .validations {
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.real-dialog input {
+  font-size: 14px;
+}
+.real-dialog input + input {
+  margin-top: 5px;
+}
+
+.real-dialog a {
+  color: #EA9800;
+}

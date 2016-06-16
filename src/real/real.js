@@ -26,7 +26,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           minimizable: true,
           maximizable: false,
           width: 350,
-          height: 350*2,
+          height: 900,
           'data-authorized': true,
           close: function () {
             real_win.dialog('destroy');
@@ -45,12 +45,13 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       /* update dialog position, this way when dialog is resized it will not move*/
       var offset = real_win.dialog('widget').offset();
-      offset.top = 120;
+      offset.top = 110;
       real_win.dialog("option", "position", { my: offset.left, at: offset.top });
       real_win.dialog('widget').css({
           left: offset.left + 'px',
           top: offset.top + 'px'
       });
+      real_win.fixFooterPosition();
     }
 
     function init_state(root) {
@@ -75,7 +76,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           last_name: '',
           date_of_birth: moment().format('YYYY-MM-DD'),
           residence: '',
-          residence_name: '',
+          residence_name: 'Indonesia',
           address_line_1: '',
           address_line_2: '',
           city_address: '',

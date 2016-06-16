@@ -1,4 +1,4 @@
-<div class='real'>
+<div class='real-dialog'>
   <div class='user'  rv-show='route.value |  eq "user"'>
     <!-- <span class='back-arrow' rv-on-click='route.update | bind "registration"'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> Back
@@ -7,7 +7,7 @@
     <span class="title-big">Personal Details</span>
 
     <span class='title'>Title</span>
-    <select rv-jq-class='"salutation-ul"'
+    <select rv-jq-class='"real-dialog-ul"'
             rv-selectmenu-width='100'
             rv-selectmenu="user.salutation"
             rv-selectrefresh="account.salutation_array">
@@ -40,7 +40,7 @@
     <span class='residence' rv-text='user.residence_name'></span>
     <div class='validations'>
       <span class='explanation'>
-        Please <a href="https://binary.com/contact" target="_blank">contact support</a>
+        Please <a href="https://binary.com/en/contact" target="_blank">contact support</a>
         if this is not your country of residence.
       </span>
     </div>
@@ -64,8 +64,8 @@
     </div>
 
     <span class='title'>State/province/region</span>
-    <select rv-jq-class='"state-ul"'
-            rv-selectmenu-width='100%'
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='200'
             rv-selectmenu="user.state_address"
             rv-selectrefresh="user.state_address_array">
 
@@ -89,8 +89,8 @@
     <span class="title-big">Security</span>
 
     <span class='title'>Security question</span>
-    <select rv-jq-class='"secuirty-ul"'
-            rv-selectmenu-width='100%'
+    <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
             rv-selectmenu="user.secret_question"
             rv-selectrefresh="user.secret_question_array">
 

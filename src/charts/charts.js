@@ -204,7 +204,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     delayAmount : options.delayAmount
                                 }).then(function() {
                                   var chart = $(containerIDWithHash).highcharts();
-                                  chart && chart.set_indicators(indicators); // put back removed indicators
+                                  chart && chart.set_indicators && chart.set_indicators(indicators); // put back removed indicators
                                 });
                             })
                             if ($.isFunction(onload)) {
