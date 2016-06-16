@@ -281,7 +281,22 @@
         <option rv-each-row="financial.estimated_worth_array" rv-value="{row}">{row}</option>
     </select>
 
+    <span class='financial-explanation'>
+      The financial trading services contained within this site are only suitable for customers
+      who are able to bear the loss of all the money they invest and who understand and have experience
+      of the risk involved in the aquistion of financial contracts. Transactions in financial contracts
+      carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss
+      of your investment, which consists of the contract permium.
+    </span>
 
+    <label>
+      <input type='checkbox' rv-checked='financial.accepted' />
+      I have read and agree to Binary.com <br/>
+      <a href="https://www.binary.com/en/terms-and-conditions.html" target="_blank">terms and conditions</a>.
+    </label>
+
+    <button rv-on-click='financial.open_account' rv-disabled='financial.disabled'
+            rv-css-opacity='financial.disabled | ternary 0.5 1'>Open Account</button>
   </div>
 
 </div>

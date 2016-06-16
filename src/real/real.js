@@ -121,7 +121,10 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           net_income: '',
 
           estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
-          estimated_worth: ''
+          estimated_worth: '',
+
+          accepted: false,
+          disabled: false
         }
       };
 
@@ -175,10 +178,15 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                });
       };
 
+      state.financial.open_account = function() {
+        console.warn(state.financial.estimated_worth);
+        console.warn(JSON.parse(JSON.stringify(state.financial)));
+      }
+
       state.route.update = function(route){
         var routes = {
           'user' : 920,
-          'financial': 1350,
+          'financial': 1370,
         };
         state.route.value = route;
         real_win.dialog('option', 'height', routes[route]);

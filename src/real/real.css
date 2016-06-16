@@ -68,6 +68,8 @@
 
 .real-dialog a {
   color: #EA9800;
+  font-weight: normal;
+  text-decoration: underline;
 }
 
 /* financial step styles */
@@ -86,4 +88,19 @@
 .real-dialog .financial .title-big + div {
   height: auto;
   margin-bottom: 10px;
+}
+
+.real-dialog .financial .financial-explanation {
+  font-size: 12px;
+  display: block;
+}
+
+.real-dialog .financial label {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.real-dialog .financial label input {
+  float: left;
+  margin-bottom: 1em;
 }
