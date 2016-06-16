@@ -27,7 +27,11 @@
   z-index: 100;
 }
 
-.real-dialog-ul { font-size: 14px; } /* for jq select menu */
+/* for jq select menu */
+.real-dialog-ul {
+  font-size: 14px !important;
+  max-height: 100px;
+}
 
 .real-dialog > div > span {
   display:  block;
@@ -55,6 +59,10 @@
   font-size: 14px;
 }
 .real-dialog input + input {
+  margin-top: 5px;
+}
+
+.real-dialog button {
   margin-top: 5px;
 }
 

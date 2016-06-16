@@ -26,7 +26,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           minimizable: true,
           maximizable: false,
           width: 350,
-          height: 900,
+          height: 920,
           'data-authorized': true,
           close: function () {
             real_win.dialog('destroy');
@@ -61,11 +61,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         empty_fields: {
           validate: false,
           clear: _.debounce(function() {
-            state.account.empty_fields.validate = false;
-          }, 2000),
+            state.empty_fields.validate = false;
+          }, 3000),
           show: function() {
-            state.account.empty_fields.validate = true;
-            state.account.empty_fields.clear();
+            state.empty_fields.validate = true;
+            state.empty_fields.clear();
           }
         },
         user: {
@@ -75,45 +75,77 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           first_name: '',
           last_name: '',
           date_of_birth: moment().format('YYYY-MM-DD'),
-          residence: '',
-          residence_name: 'Indonesia',
+          residence: '-',
+          residence_name: '-',
           address_line_1: '',
           address_line_2: '',
           city_address: '',
           state_address: '-',
-          state_address_array: ['-'],
+          state_address_array: [{text: '-', value: '-'}],
           address_postcode: '',
           phone: '',
-          secret_question: 'Favourite dish',
+          secret_question_inx: 5,
           secret_question_array: [
-            "Mother's maiden name", "Name of your pet", "Name of first love",
-            "Memorable town/city", "Memorable date", "Favourite dish",
-            "Brand of first car", "Favourite artist"
+            'Mother\'s maiden name', 'Name of your pet', 'Name of first love',
+            'Memorable town/city', 'Memorable date', 'Favourite dish',
+            'Brand of first car', 'Favourite artist'
           ],
           secret_answer: '',
         },
       };
 
+      state.user.is_valid = function() {
+        var user = state.user;
+        return user.first_name !== '' && user.last_name !== '' &&
+          moment(user.date_of_birth, 'YYYY-MM-DD', true).isValid() &&
+          user.residence !== '-' && user.address_line_1 !== '' &&
+          user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
+          user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
+          user.secret_answer !== '';
+      };
+
+      state.user.new_account_real = function() {
+
+        var user = state.user;
+        var request = {
+          salutation: user.salutation,
+          first_name: user.first_name,
+          last_name: user.last_name,
+          date_of_birth: user.date_of_birth,
+          residence: user.residence,
+          address_line_1: user.address_line_1,
+          address_line_2: user.address_line_2 || undefined, // optional field
+          address_city: user.city_address,
+          address_state: user.state_address || undefined,
+          address_postcode: user.address_postcode || undefined,
+          phone: user.phone,
+          secret_question: user.secret_question_array[user.secret_question_inx],
+          secret_answer: user.secret_answer.replace('""', "'")
+        };
+
+        console.warn(request);
+        if(!state.user.is_valid()) {
+          state.empty_fields.show();
+          return;
+        }
+      };
+
 
       real_win_view = rv.bind(root[0], state);
-      // liveapi.cached.send({residence_list: 1})
-      //        .then(function(data) {
-      //          state.account.residence_list = data.residence_list;
-      //          state.account.residence = data.residence_list[0].value;
-      //          liveapi.cached.send({website_status: 1})
-      //               .then(function(data){
-      //                   var residence = data.website_status && data.website_status.clients_country;
-      //                   state.account.residence = residence || 'id';
-      //               })
-      //               .catch(function(err){
-      //                 console.error(err);
-      //                 state.account.residence = 'id'; // make indonesia default
-      //               })
-      //        })
-      //        .catch(function(err){
-      //           console.error(err);
-      //           $.growl.error({ message: err.message });
-      //        });
+
+      liveapi.send({get_settings: 1})
+             .then(function(data){
+               state.user.residence = data.get_settings.country_code;
+               state.user.residence_name = data.get_settings.country;
+               return liveapi.cached.send({states_list: state.user.residence })
+                             .then(function(data){
+                               state.user.state_address_array = data.states_list;
+                             });
+             })
+             .catch(function(err){
+               console.error(err);
+               $.growl.error({ message: err.message });
+             });
     }
 
     return {
