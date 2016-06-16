@@ -102,7 +102,7 @@
     <span class='title'>Answer</span>
     <input rv-value='user.secret_answer' />
     <div class='validations'>
-      <span rv-show='user.secret_answer | is-valid-regex ".{4,8}$" | eq false | and empty_fields.validate'
+      <span rv-if="empty_fields.validate" rv-show='user.secret_answer | is-valid-regex ".{4,8}$" | eq false'
             class='validation'>* Please answer to secret question, within 4-50 characters.</span>
     </div>
 

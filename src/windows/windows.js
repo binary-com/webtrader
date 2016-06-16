@@ -556,6 +556,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                   dialog.animate({ top: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
                 }
             });
+            dialog.on('dialogclose', fixFooterPosition);
 
             dialog.on('dragstop', fixFooterPosition);
             dialog.on('drag', function() { fixFooterPosition(true); });

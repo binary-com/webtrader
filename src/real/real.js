@@ -2,7 +2,7 @@
  * Created by amin on May June 14, 2016.
  */
 
-define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function(liveapi, windows, rv, _, moment) {
+define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, rv, _, moment) {
     require(['text!real/real.html']);
     require(['css!real/real.css']);
     var real_win = null;
@@ -27,7 +27,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           maximizable: false,
           width: 350,
           height: 920,
-          'data-authorized': true,
           close: function () {
             real_win.dialog('destroy');
             real_win.remove();
@@ -101,13 +100,18 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           user.residence !== '-' && user.address_line_1 !== '' &&
           user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
           user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
-          user.secret_answer !== '';
+          /.{4,8}$/.test(user.secret_answer);
       };
 
       state.user.new_account_real = function() {
+        if(!state.user.is_valid()) {
+          state.empty_fields.show();
+          return;
+        }
 
         var user = state.user;
         var request = {
+          new_account_real: 1,
           salutation: user.salutation,
           first_name: user.first_name,
           last_name: user.last_name,
@@ -123,13 +127,30 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           secret_answer: user.secret_answer.replace('""', "'")
         };
 
-        console.warn(request);
-        if(!state.user.is_valid()) {
-          state.empty_fields.show();
-          return;
-        }
+        liveapi.send(request)
+               .then(function(data){
+                 var info = data.new_account_real;
+                 oauth = local_storage.get('oauth');
+                 oauth.push({id: info.client_id, token: info.oauth_token});
+                 local_storage.set('oauth', oauth);
+                 /* login with the new account */
+                 return liveapi.switch_account(info.client_id)
+                               .then(state.route.update.bind('financial'));
+               })
+               .catch(function(err){
+                 console.error(err);
+                 $.growl.error({ message: err.message });
+               });
       };
 
+      state.route.update = function(route){
+        var routes = {
+          'user' : 920,
+          'financial': 700
+        };
+        state.route.value = route;
+        real_win.dialog('option', 'height', routes[route]);
+      };
 
       real_win_view = rv.bind(root[0], state);
 
@@ -140,6 +161,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                return liveapi.cached.send({states_list: state.user.residence })
                              .then(function(data){
                                state.user.state_address_array = data.states_list;
+                               state.user.state_address = data.states_list[0].value;
                              });
              })
              .catch(function(err){
