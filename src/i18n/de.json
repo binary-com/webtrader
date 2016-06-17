@@ -1,0 +1,18 @@
+{
+  "PROFIT_TABLE": {
+    "HEADER": {
+      "PURCHASE_DATE" : "Datum",
+      "REF": "Ref.",
+      "CONTRACT": "Kontrakt",
+      "PURCHASE_PRICE": "Kaufpreis",
+      "SALE_DATE": "Verkaufsdatum",
+      "SALE_PRICE": "Verkaufskurs",
+      "PROFIT_LOSS": "Gewinn/ Verlust"
+    },
+    "TITLE": "Gewinntabelle"
+  },
+  "COMMON": {
+    "VIEW": "Aussicht",
+    "SEARCH": "Suche"
+  }
+}

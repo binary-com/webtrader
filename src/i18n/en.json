@@ -1,0 +1,18 @@
+{
+  "PROFIT_TABLE": {
+    "HEADER": {
+      "PURCHASE_DATE" : "Purchase Date",
+      "REF": "Ref.",
+      "CONTRACT": "Contract",
+      "PURCHASE_PRICE": "Purchase Price",
+      "SALE_DATE": "Sale Date",
+      "SALE_PRICE": "Sale Price",
+      "PROFIT_LOSS": "Profit/ Loss"
+    },
+    "TITLE": "Profit Table"
+  },
+  "COMMON": {
+    "VIEW": "View",
+    "SEARCH": "Search"
+  }
+}

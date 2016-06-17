@@ -80,9 +80,34 @@ requirejs.config({
 /* Initialize the websocket as soon as posssilbe */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
-require(["jquery", "modernizr", "common/util"], function( $ ) {
+var i18n_name = (local_storage.get('i18n') || { value: 'de' }).value;
+require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
 
     "use strict";
+    var lang = JSON.parse(lang_json);
+    $.fn.i18n = function() {
+      var me = this.closest('[i18n]');
+      var key = me.attr('i18n');
+      var dictionary =  key ? lang[key] : lang;
+      dictionary.COMMON = lang.COMMON;
+      dictionary = flatten_object(dictionary);
+      var regexp = RegExp ('\\b(' + Object.keys (dictionary).join ('|') + ')\\b', 'g');
+      var replacer = function (_, word) { return dictionary[word]; };
+      me.find('*')
+          .each(function() {
+            if(this.hasAttribute('placeholder')){
+              var attr_value = this.getAttribute('placeholder').replace(regexp, replacer);
+              this.setAttribute('placeholder', attr_value);
+            }
+            this.childNodes.forEach(function(node){
+              if(node.nodeType !== 3) return; /*Oonly TEXT-NODES */
+              var text = node.nodeValue.replace(regexp, replacer);
+              if(text !== node.nodeValue)
+                node.nodeValue = text;
+            });
+          });
+      return this;
+    };
 
     //By pass touch check for affiliates=true(because they just embed our charts)
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {

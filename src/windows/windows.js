@@ -637,6 +637,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             blankWindow.track = function(options){
               return tracker.track(options, blankWindow);
             }
+            if(options.i18n) {
+              dialog.attr('i18n', options.i18n);
+            }
             return blankWindow;
         },
 

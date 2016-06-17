@@ -1,4 +1,4 @@
-define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','common/util'], function(liveapi, chartingRequestMap, $) {
+define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','jquery-growl', 'common/util'], function(liveapi, chartingRequestMap, $) {
 
     var barsTable = chartingRequestMap.barsTable;
 

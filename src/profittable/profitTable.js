@@ -105,8 +105,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
     function initProfitWin() {
         require(['text!profittable/profitTable.html'], function (html) {
-          profitWin = windows.createBlankWindow($('<div/>'), {
-              title: 'Profit Table',
+          profitWin = windows.createBlankWindow($('<div class="profit-table-container"/>'), {
+              title: 'TITLE',
               width: 700 ,
               height: 400,
               destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
@@ -114,6 +114,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                 datepicker.clear();
                 refreshTable({clear:true});
               },
+              i18n: 'PROFIT_TABLE',
               'data-authorized': 'true'
           });
           profitWin.track({
@@ -124,6 +125,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             table = $(html);
             table.appendTo(profitWin);
+            profitWin.i18n();
             var footer = $('<div/>').addClass('profit-table-info');
 
             table = table.dataTable({
