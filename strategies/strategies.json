@@ -1,0 +1,14 @@
+{
+	"strategy-1" : {
+		"name" : "Strategy 1",
+		"description" : "This is strategy 1"
+	},
+	"strategy-2" : {
+		"name" : "Strategy 2",
+		"description" : "This is strategy 2"
+	},
+	"strategy-3" : {
+		"name" : "Strategy 3",
+		"description" : "This is strategy 3"
+	}
+}
