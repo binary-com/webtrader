@@ -22,22 +22,51 @@ define(['highstock', 'common/util'], function () {
                 if (!H) return;
 
                 var chart = $(refererChartID).highcharts();
-                H.addEvent(chart,'click',function(evt){
-                    if(chart.annotate){
-                        chart.annotate = false;
-                        addPlotLines(evt.xAxis[0].value, evt.xAxis[0].axis);
-                        H.removeEvent(chart,'click');
-                    }
+
+                require(["charts/draw/properties_selector/properties_selector"], function(popup){
+                    var options = {};
+                    options.title = "Vertical Line";
+                    options.inputValues = [
+                    {
+                        name: 'Stroke width',
+                        type: 'number',
+                        id:'width',
+                        default: 2,
+                        min: 1,
+                        max: 5
+                    },
+                    {
+                        name: 'Stroke color',
+                        type: 'colorpicker',
+                        id:'color',
+                        default: '#ff0000'
+                    }];
+                    popup.open(options, addEvent);
                 });
 
-                function addPlotLines(value, axis){
+                function addEvent(css){
+                    H.addEvent(chart,'click',function(evt){
+                        if(chart.annotate){
+                            chart.annotate = false;
+                            addPlotLines(evt.xAxis[0].value, evt.xAxis[0].axis, css);
+                            H.removeEvent(chart,'click');
+                        }
+                    });
+                }
+
+                function addPlotLines(value, axis, css){
                     var uniqueID = 'verticalLine_' + new Date().getTime();
-                    var line = axis.addPlotLine({
+                    var options = {
                         value: value,
                         width: 2,
-                        color: 'red',
+                        color: '#ff0000',
+                        dashStyle: 'shortdash',
                         id: uniqueID
-                    }).svgElem
+                    };
+                    if(css){
+                        $.extend(options, css);
+                    }
+                    var line = axis.addPlotLine(options).svgElem
                     .css({'cursor':'pointer'})
                     .attr('id',uniqueID)
                     .translate(0,0)
@@ -64,10 +93,14 @@ define(['highstock', 'common/util'], function () {
                             }
                             if(chart.isInsidePlot(e.chartX -chart.plotLeft, e.chartY - chart.plotTop)){
                                 if(line.element){
+                                    var value = chart.xAxis[0].toValue(e.chartX),
+                                        axis = chart.xAxis[0],
+                                        css = {
+                                            color: line.stroke,
+                                            width: line["stroke-width"]
+                                        };
                                     removeLineWithID(line.element.id);
-                                    var value = chart.xAxis[0].toValue(e.chartX);
-                                    var axis = chart.xAxis[0];
-                                    line = addPlotLines(value, axis);   
+                                    line = addPlotLines(value, axis, css);   
                                 }
                             }
                             
