@@ -474,10 +474,28 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             /* automatically log the user in if we have oauth_token in local_storage */
             require(['websockets/binary_websockets' ], function(liveapi) {
               if(local_storage.get('oauth')) {
-                liveapi.cached.authorize().catch(function(err) {
-                  console.error(err.message);
-                  $.growl.error({message: err.message});
-                 });
+                /* query string parameters can tempered.
+                   make sure to get loginid from webapi instead */
+                var oauth = local_storage.get('oauth');
+                Promise.all(
+                  oauth.slice(1)
+                       .map(function(acc) { return { authorize: acc.token}; })
+                       .map(liveapi.send)
+                )
+                .then(function(results) {
+                  return liveapi.cached.authorize()
+                    .then(function(data) {
+                       results.unshift(data);
+                       for(var i = 0; i < results.length; ++i)
+                          oauth[i].id = results[i].authorize.loginid;
+                       local_storage.set('oauth', oauth);
+                       return data;
+                    });
+                })
+                .catch(function(err) {
+                      console.error(err.message);
+                      $.growl.error({message: err.message});
+                });
               }
             });
             $(window).resize(fixFooterPosition);
