@@ -42,7 +42,6 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                 },
                 resize: _trigger_Resize_Effects
             }, options );
-            console.log(options);
             var dialog = windows.createBlankWindow($chartWindowHtml, options),
                 id = dialog.attr('id');
             dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()

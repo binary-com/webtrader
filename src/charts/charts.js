@@ -187,7 +187,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 type : options.type,
                 delayAmount : options.delayAmount
             });
-
             // Create the chart
             $(containerIDWithHash).highcharts('StockChart', {
 

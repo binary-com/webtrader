@@ -6,10 +6,14 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
     var win = null;
 
     /*Set theme from local storage*/
-    var themeName = local_storage.get("theme");
+    var themeName = local_storage.get("theme"),
+        custom_theme = local_storage.get("custom_theme");
     themeName = themeName && themeName.name;
     if (themeName) {
         require(['lib/highstock/themes/' + themeName]);
+    } else if(custom_theme){
+        console.log(custom_theme);
+        Highcharts.setOptions(custom_theme);
     }
 
     //For custom theme.
@@ -42,8 +46,12 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
                             Apply: function() {
                                 $.growl.notice({message: 'Loading ' + $ele.text()});
                                 var themeName_file = $ele.attr('class').replace('theme_', '').replace('_', '-');
-                                (themeName_file === 'default') ?
-                                    local_storage.remove("theme") : local_storage.set("theme", {name: themeName_file});
+                                if(themeName_file === 'default') {
+                                    local_storage.remove("theme");
+                                    local_storage.remove("custom_theme");
+                                } else{
+                                    local_storage.set("theme", {name: themeName_file}); 
+                                }
                                 location.reload();
                             },
                             Cancel: function() {
