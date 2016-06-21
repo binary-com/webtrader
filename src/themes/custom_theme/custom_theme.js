@@ -3,31 +3,36 @@
  */
 define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker', 'jquery-growl'], function($, windows, charts){
 	
-	var chartData = [],
-			win = null,
+	var chartData = [[1452153600, 32.87, 33.75, 32.5 , 33.28],[1452168000, 33.27, 34.45, 32.81, 34.22], 
+			[1452182400, 34.23, 34.73, 33.72, 33.77], [1452240000, 34.23, 34.48, 33.73, 33.84],[1452254400, 33.84, 34.42, 33.2, 33.33],
+			[1452268800, 33.34, 33.73, 32.8, 33.55],[1452499200, 32.7, 33.22, 32.56, 32.91],[1452513600, 32.89, 33.38, 32.05, 32.17],
+      [1452528000, 32.16, 32.2, 31.21, 31.54],[1452585600, 30.8, 31.87, 30.76, 31.65],[1452600000, 31.66, 32.37, 30.88, 31.09],
+      [1452614400, 31.1, 31.27, 30.38, 30.84],[1452672000, 31.52, 31.84, 31.23, 31.48]],
+			prevTheme = $.extend(true, {}, Highcharts.getOptions(), {}),
+      win = null,
 			themeConf = {};
 
-	function createThemeObject(id, value, alpha){
-		if(!value)
+  function hexToRgb(value, alpha){
+    var rgba = [];
+    rgba[0] = parseInt(value.substring(0,2),16),
+    rgba[1] = parseInt(value.substring(2,4),16),
+    rgba[2] = parseInt(value.substring(4,6),16),
+    rgba[3] = alpha? parseFloat(alpha) : 1;
+
+    return "rgba(" + rgba.join(", ") + ")";
+  }
+
+	function createThemeObject(id, color){
+		if(!color)
 			return;
 
-		var rgba = [];
-		rgba[0] = parseInt(value.substring(0,2),16),
-		rgba[1] = parseInt(value.substring(2,4),16),
-		rgba[2] = parseInt(value.substring(4,6),16),
-		rgba[3] = alpha? parseFloat(alpha) : 1;
 		var temp = "",
 				end = "";
 		var propertyNames = id.split("_");
 		propertyNames.forEach(function(property, index, arr){
-			// For creating array.
-			if(property === "arr"){
-				temp = temp + "[" + "\"rgba(" + rgba.join(", ") + ")\"" + "]";
-				return;
-			}
 			end = end + "}";
 			if(index === arr.length - 1){
-				temp = temp + "{" + "\"" + property + "\"" + ":" + "\"rgba(" + rgba.join(", ") + ")\"";
+				temp = temp + "{" + "\"" + property + "\"" + ":" + "\"" + color + "\"";
 				return;
 			}
 			temp = temp + "{" + "\"" + property + "\"" + ":";
@@ -36,37 +41,43 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
 		$.extend(themeConf, JSON.parse(temp));
 	}
 
-	$('a.theme_custom')
-    .off('click')
-    .on('click', function(){
+	function init(confimationDialog){
 
     	var ele = $(this);
 
     	require(['css!themes/custom_theme/custom_theme.css']);
-
       require(['text!themes/custom_theme/custom_theme.html'], function($html){
       	$html = $($html);
+      	$html.find(".color_input_width").each(function(index, ele){
+      		var id = $(ele).attr("id").replace("theme_",""),
+      				alpha = $(ele).attr("alpha"),
+              val = getCurrentValue(id);
 
-      	$html.find(".color_input_width").each(function(index, value){
-      		var id = $(value).attr("id").replace("theme_",""),
-      				alpha = $(value).attr("alpha");
-      		$(value).colorpicker({
+          if(val){
+            $(ele).css({background: val});
+          } else{
+            var color = $(ele).css("background");
+            createThemeObject(id, color);
+            Highcharts.setOptions(themeConf);
+          }
+
+      		$(ele).colorpicker({
       			part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
                 },
                 select:	function(event, color) {
-                    $(value).css({
+                    $(ele).css({
                         background: '#' + color.formatted
                     }).val('');
-                    createThemeObject(id, color.formatted, alpha);
+                    createThemeObject(id, hexToRgb(color.formatted, alpha));
 										updateChart();
                 },
                 ok: function(event, color) {
-                    $(value).css({
+                    $(ele).css({
                         background: '#' + color.formatted
                     }).val('');
-                    createThemeObject(id, color.formatted, alpha);
+                    createThemeObject(id, hexToRgb(color.formatted, alpha));
                     updateChart();
                 }
       		});
@@ -85,52 +96,42 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
             height: 515,
             title: "Customize chart appearance",
             modal: true,
-            my: 'center',
-            at: 'center',
-            of: window,
             destroy: function() {
                 win = null;
             },
             buttons: {
               Apply: function() {
-              		openConfirmDialog();
+              		if(typeof confimationDialog === "function")
+              			confimationDialog(Highcharts.getOptions());
               },
               Cancel: function() {
                   $( this ).dialog( 'close' );
                   $( this ).dialog( "destroy" );
-                  var themeName = local_storage.get("theme");
-                  themeName = themeName && themeName.name;
-                  //Reseting charts to previous theme or default.
-							    if (themeName) {
-							        require(['lib/highstock/themes/' + themeName]);
-							    } else{
-							    	Highcharts.setOptions({});
-							    }
+                  resetTheme();
               }
             }
       		});
 
     		win.dialog('open');
-    		generateData();
     		createChart();
       });
-  });
+  }
 
-  function generateData() {
-	    // generate an array of random data
-	    var time = (new Date()).getTime(),
-	        i;
+  function getCurrentValue(id){
+    var value = prevTheme;
+    id.split("_").forEach(function(obj, index){
+      if(value)
+        value = value[obj];
+    });
+    return value;
+  }
 
-	    for (i = -999; i <= 0; i += 1) {
-	        var open = Math.round(Math.random() * 100),
-	            close = open - Math.round(Math.random() * 15),
-	            high = open + Math.round(Math.random() * 15),
-	            low = close - Math.round(Math.random() * 15);
-	        chartData.push([
-	            time + i * 1000 * 60,
-	            open, high, low, close
-	        ]);
-	    }
+  function resetTheme(){
+    var defaultOptions = Highcharts.getOptions();
+    for (var prop in defaultOptions) {
+        if (typeof defaultOptions[prop] !== 'function') delete defaultOptions[prop];
+    }
+    Highcharts.setOptions(prevTheme);
   }
 
   function createChart(){
@@ -141,6 +142,7 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
           //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
       },
       series: [{
+      		type: "candlestick",
           data: chartData
       }],
       navigator: {
@@ -164,12 +166,6 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
       title: {
           //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
           text: "Some random index"
-      },
-
-      credits: {
-          href: 'http://www.binary.com',
-          text: 'Binary.com',
-
       },
 
       xAxis: {
@@ -207,40 +203,7 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
   	createChart();
   }
 
-  function openConfirmDialog(){
-  	win = windows.createBlankWindow($('<div class="dialog-confirm-new-theme"/>'),
-	        {
-	            title: 'Apply new theme?',
-	            width: 360,
-	            height: 240,
-	            resizable: false,
-	            collapsable: false,
-	            minimizable: false,
-	            maximizable: false,
-	            closable: false,
-	            closeOnEscape: false,
-	            modal: true,
-	            ignoreTileAction:true,
-	            'data-authorized': 'true',
-	            destroy: function() {
-	                win = null;
-	            },
-	            buttons: {
-	                Apply: function() {    
-		                  $.growl.notice({message: 'Loading custom theme.'});
-		                  local_storage.remove('theme');
-		                  local_storage.set('custom_theme',Highcharts.getOptions());
-		                  location.reload();
-	                },
-	                Cancel: function() {
-	                    $( this ).dialog( 'close' );
-	                    $( this ).dialog( "destroy" );
-	                }
-	            }
-	        });
-	    var p = $('<p>In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?</p>');
-	    p.appendTo(win);
-	    win.dialog('open');
+  return{
+  	init: init
   }
-
 });

@@ -1,9 +1,9 @@
 /**
  * Created by arnab on 4/24/16.
  */
-define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, windows) {
+define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"], function($, windows) {
 
-    var win = null;
+    var win = null, elementText, elementClass;
 
     /*Set theme from local storage*/
     var themeName = local_storage.get("theme"),
@@ -16,14 +16,23 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
         Highcharts.setOptions(custom_theme);
     }
 
-    //For custom theme.
-    require(['themes/custom_theme/custom_theme']);
-
     $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
-            'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default')
+            'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default, a.theme_custom')
         .off('click')
         .on('click', function () {
             var $ele = $(this);
+            elementText = $ele.text();
+            elementClass = $ele.attr('class');
+            if($ele.attr('class') === "theme_custom"){
+                require(['themes/custom_theme/custom_theme'], function(customTheme){
+                    customTheme.init(confirmationDialog);
+                });
+            } else{
+                confirmationDialog();
+            }
+    });
+
+    function confirmationDialog(themeObj){
             if (!win) {
                 win = windows.createBlankWindow($('<div class="dialog-confirm-new-theme"/>'),
                     {
@@ -44,9 +53,13 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
                         },
                         buttons: {
                             Apply: function() {
-                                $.growl.notice({message: 'Loading ' + $ele.text()});
-                                var themeName_file = $ele.attr('class').replace('theme_', '').replace('_', '-');
-                                if(themeName_file === 'default') {
+                                $.growl.notice({message: 'Loading ' + elementText});
+                                var themeName_file = elementClass.replace('theme_', '').replace('_', '-');
+                                if(themeObj){
+                                    local_storage.remove("theme");
+                                    local_storage.set("custom_theme", themeObj);
+                                }
+                                else if(themeName_file === 'default') {
                                     local_storage.remove("theme");
                                     local_storage.remove("custom_theme");
                                 } else{
@@ -66,7 +79,7 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
             } else {
                 win.moveToTop();
             }
-    });
+        }
 
     return {};
 
