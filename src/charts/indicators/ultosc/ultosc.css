@@ -13,3 +13,7 @@
 .ultosc-ui-dialog, .ultosc.ui-dialog-content {
     overflow: visible;
 }
+
+.ultosc input {
+    line-height: 10px !important;
+}
