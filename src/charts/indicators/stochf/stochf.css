@@ -1,19 +1,19 @@
-﻿.stoch {
+.stochf {
     overflow-y: scroll;
 }
 
-.stoch_input_width {
+.stochf_input_width {
     width: 160px !important;
 }
 
-.stoch_input_width_for_period {
+.stochf_input_width_for_period {
     width: 160px !important;
 }
 
-.stoch label {
+.stochf label {
     display: block;
 }
 
-.stoch input {
+.stochf input {
     line-height: 10px !important;
 }

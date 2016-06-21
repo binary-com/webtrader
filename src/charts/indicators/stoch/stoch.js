@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/8/16
  */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -10,8 +10,6 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
     }
 
     function init( containerIDWithHash, _callback ) {
-
-        require(['css!charts/indicators/stoch/stoch.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -21,18 +19,14 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/stoch/stoch.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
+        require(['text!charts/indicators/stoch/stoch.html', 'text!charts/indicators/indicators.json', 'css!charts/indicators/stoch/stoch.css'], function ( $html, data ) {
 
             $html = $($html);
             $html.appendTo("body");
 
             data = JSON.parse(data);
             var current_indicator_data = data.stoch;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
 
             $html.find("input[type='button']").button();
 
@@ -121,7 +115,8 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 450,
+                width: 400,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
