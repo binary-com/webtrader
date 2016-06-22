@@ -3,11 +3,11 @@
  */
 define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker', 'jquery-growl'], function($, windows, charts){
 	
-	var chartData = [[1452153600, 32.87, 33.75, 32.5 , 33.28],[1452168000, 33.27, 34.45, 32.81, 34.22], 
-			[1452182400, 34.23, 34.73, 33.72, 33.77], [1452240000, 34.23, 34.48, 33.73, 33.84],[1452254400, 33.84, 34.42, 33.2, 33.33],
-			[1452268800, 33.34, 33.73, 32.8, 33.55],[1452499200, 32.7, 33.22, 32.56, 32.91],[1452513600, 32.89, 33.38, 32.05, 32.17],
-      [1452528000, 32.16, 32.2, 31.21, 31.54],[1452585600, 30.8, 31.87, 30.76, 31.65],[1452600000, 31.66, 32.37, 30.88, 31.09],
-      [1452614400, 31.1, 31.27, 30.38, 30.84],[1452672000, 31.52, 31.84, 31.23, 31.48]],
+	var chartData = [[1452412800, 32.87, 33.75, 32.5 , 33.28],[1452427200, 33.27, 34.45, 32.81, 34.22], 
+			[1452441600, 34.23, 34.73, 33.72, 33.77], [1452456000, 34.23, 34.48, 33.73, 33.84],[1452470400, 33.84, 34.42, 33.2, 33.33],
+			[1452484800, 33.34, 33.73, 32.8, 33.55],[1452499200, 32.7, 33.22, 32.56, 32.91],[1452513600, 32.89, 33.38, 32.05, 32.17],
+      [1452528000, 32.16, 32.2, 31.21, 31.54],[1452542400, 30.8, 31.87, 30.76, 31.65],[1452556800, 31.66, 32.37, 30.88, 31.09],
+      [1452571200, 31.1, 31.27, 30.38, 30.84],[1452585600, 31.52, 31.84, 31.23, 31.48]],
 			prevTheme = $.extend(true, {}, Highcharts.getOptions(), {}),
       win = null,
 			themeConf = {};
@@ -25,7 +25,7 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
 	function createThemeObject(id, color){
 		if(!color)
 			return;
-
+    color = color.substring(0, color.indexOf(')') + 1); //Fixing mozilla bug
 		var temp = "",
 				end = "";
 		var propertyNames = id.split("_");
@@ -79,6 +79,10 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
                     }).val('');
                     createThemeObject(id, hexToRgb(color.formatted, alpha));
                     updateChart();
+                },
+                cancel: function(event){
+                  createThemeObject(id, $(ele).css("background"));
+                  updateChart();
                 }
       		});
       	});
