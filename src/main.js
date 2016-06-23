@@ -199,6 +199,14 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                     elem.click();
                 });
 
+            //Register async loading of custom theme dialog
+            load_ondemand($navMenu.find("a.theme_custom"), 'click', 'loading custom theme configuration...', 'themes/custom_theme/custom_theme',
+                function (custom_theme) {
+                    var elem = $navMenu.find("a.theme_custom");
+                    custom_theme.init(elem);
+                    elem.click();
+                });
+
         }
 
         require(["navigation/navigation","jquery-ui"], function (navigation) {
