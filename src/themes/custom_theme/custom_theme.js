@@ -144,6 +144,16 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
           spacingLeft: 0,
           marginLeft: 45,  /* disable the auto size labels so the Y axes become aligned */
           //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
+          events: {
+            load: function(){
+              this.credits.element.onclick = function() {
+                  window.open(
+                      'http://www.binary.com',
+                      '_blank'
+                  );
+              }
+            }
+          }
       },
       series: [{
       		type: "candlestick",
@@ -170,6 +180,11 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
       title: {
           //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
           text: "Some random index"
+      },
+
+      credits: {
+          href: 'http://www.binary.com',
+          text: 'Binary.com',
       },
 
       xAxis: {
