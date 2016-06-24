@@ -10,28 +10,30 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     "use strict";
 
+    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
+    Highcharts.Chart.prototype.get_indicators = function() {
+      var chart = this;
+      var indicators = [];
+      if(chart.series.length > 0){
+          indicator_ids.forEach(function(id){
+            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, options: chart.series[0][id][0].options})
+          });
+      }
+      return indicators;
+    }
+
+    Highcharts.Chart.prototype.set_indicators = function(indicators){
+        var chart = this;
+        if(chart.series[0]) {
+          indicators.forEach(function(ind) {
+             require(["charts/indicators/" + ind.id + "/" + ind.id], function () {
+               chart.series[0].addIndicator(ind.id, ind.options);
+             });
+          });
+        }
+    }
+
     $(function () {
-
-        var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
-        Highcharts.Chart.prototype.get_indicators = function() {
-          var chart = this;
-          var indicators = [];
-          if(chart.series.length > 0){
-              indicator_ids.forEach(function(id){
-                chart.series[0][id] && indicators.push({id: id, options: chart.series[0][id][0].options})
-              });
-          }
-          return indicators;
-        }
-
-        Highcharts.Chart.prototype.set_indicators = function(indicators){
-            var chart = this;
-            if(chart.series[0]) {
-              indicators.forEach(function(ind) {
-                 chart.series[0].addIndicator(ind.id, ind.options);
-              });
-            }
-        }
 
         Highcharts.setOptions({
             global: {
@@ -174,6 +176,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 indicators = chart.get_indicators();
                 chart.destroy();
             }
+            else if(options.indicators) { /* this comes only from tracker.js */
+              indicators = options.indicators;
+            }
 
             //Save some data in DOM
             $(containerIDWithHash).data({
@@ -204,7 +209,11 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     delayAmount : options.delayAmount
                                 }).then(function() {
                                   var chart = $(containerIDWithHash).highcharts();
-                                  chart && chart.set_indicators(indicators); // put back removed indicators
+                                  /* the data is loaded but is not applied yet, its on the js event loop,
+                                     wait till the chart data is applied and then add the indicators */
+                                  setTimeout(function() {
+                                    chart && chart.set_indicators(indicators); // put back removed indicators
+                                  },0);
                                 });
                             })
                             if ($.isFunction(onload)) {
