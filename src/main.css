@@ -262,6 +262,28 @@ input:not([type='checkbox']) {
   height: 26px;
   line-height: 26px;
 }
+
+/*Overriding css for color-picker*/
+input[type="radio"].ui-colorpicker-mode {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+input[type="number"].ui-colorpicker-number {
+  box-shadow: none;
+  width: 60px;
+  height: auto;
+  line-height: normal;
+}
+input[type="text"].ui-colorpicker-hex-input {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+/*Ends here*/
+
 input:focus {
   box-shadow: inset 0 2px 2px rgba(0,0,120,.25);
 }
