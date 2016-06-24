@@ -33,6 +33,25 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         }
     }
 
+    Highcharts.Chart.prototype.get_indicator_series = function() {
+      var chart = this;
+      var series = [];
+      if(chart.series.length > 0){
+          indicator_ids.forEach(function(id){
+            chart.series[0][id] && chart.series[0][id][0] && series.push({id: id, series: chart.series[0][id] })
+          });
+      }
+      return series;
+    }
+
+    Highcharts.Chart.prototype.set_indicator_series = function(series) {
+      var chart = this;
+      if(chart.series.length == 0) { return ; }
+      series.forEach(function(seri) {
+        chart.series[0][seri.id] = seri.series;
+      });
+    }
+
     $(function () {
 
         Highcharts.setOptions({
@@ -440,7 +459,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         overlay : function( containerIDWithHash, overlayInsCode, overlayInsName, delayAmount ) {
             if($(containerIDWithHash).highcharts()) {
                 var chart = $(containerIDWithHash).highcharts();
-                var indicators = chart.get_indicators();
+                var indicator_series = chart.get_indicator_series();
                 //var mainSeries_instCode     = $(containerIDWithHash).data("instrumentCode");
                 //var mainSeries_instName     = $(containerIDWithHash).data("instrumentName");
                 /*
@@ -460,20 +479,24 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     }
                 }
 
-                liveapi.execute(function(){
-                    ohlc_handler.retrieveChartDataAndRender({
-                        timePeriod : mainSeries_timePeriod,
-                        instrumentCode : overlayInsCode,
-                        containerIDWithHash : containerIDWithHash,
-                        type : mainSeries_type,
-                        instrumentName : overlayInsName,
-                        series_compare : 'percent',
-                        delayAmount : delayAmount
-                    }).then(function() {
-                        chart && chart.set_indicators(indicators);
-                    });
+                return new Promise(function(resolve, reject){
+                  liveapi.execute(function() {
+                      ohlc_handler.retrieveChartDataAndRender({
+                          timePeriod : mainSeries_timePeriod,
+                          instrumentCode : overlayInsCode,
+                          containerIDWithHash : containerIDWithHash,
+                          type : mainSeries_type,
+                          instrumentName : overlayInsName,
+                          series_compare : 'percent',
+                          delayAmount : delayAmount
+                      }).then(function() {
+                          chart && chart.set_indicator_series(indicator_series);
+                          resolve();
+                      }).catch(resolve);
+                  });
                 });
             }
+            return Promise.resolve();
         }
 
     }
