@@ -75,6 +75,14 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
               options_copy.indicators = chart.get_indicators();
               update_track(options_copy);
             });
+            dialog.on('chart-overlay-add',function(e, overlay){
+              options_copy.overlays.push(overlay);
+              update_track(options_copy);
+            });
+            dialog.on('chart-overlay-remove',function(e, displaySymbol){
+              _.remove(options_copy.overlays, displaySymbol);
+              update_track(options_copy);
+            });
             dialog.dialog('open');
 
             return dialog;

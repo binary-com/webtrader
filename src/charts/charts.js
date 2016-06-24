@@ -173,7 +173,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     }
 
-    return {
+    var charts_functions = {
 
         /**
          * This method is the core and the starting point of highstock charts drawing
@@ -186,6 +186,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
          */
         drawChart: function (containerIDWithHash, options, onload) {
             var indicators = [];
+            var overlays = [];
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
@@ -197,6 +198,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             }
             else if(options.indicators) { /* this comes only from tracker.js */
               indicators = options.indicators;
+              overlays = options.overlays;
             }
 
             //Save some data in DOM
@@ -232,6 +234,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                      wait till the chart data is applied and then add the indicators */
                                   setTimeout(function() {
                                     chart && chart.set_indicators(indicators); // put back removed indicators
+                                    overlays.forEach(function(ovlay){
+                                      charts_functions.overlay(containerIDWithHash, ovlay.symbol, ovlay.displaySymbol, ovlay.delay_amount);
+                                    });
                                   },0);
                                 });
                             })
@@ -500,5 +505,5 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         }
 
     }
-
+    return charts_functions;
 });
