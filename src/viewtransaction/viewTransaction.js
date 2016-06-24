@@ -189,7 +189,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       var id = contract.contract_id,
           bid_price = contract.bid_price;
       if(id !== state.contract_id) { return; }
-
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
@@ -221,6 +220,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       } else {
           /*Just change the current_spot_time to date_expiry*/
           state.table.current_spot_time = state.table.date_expiry;
+      }
+      /*Required for spreads only*/
+      if(state.table.contract_type === "SPREAD"){
+        state.table.profit = contract.bid_price - contract.buy_price;
+        state.table.profit_text = state.table.profit.toFixed(2);
+        state.table.profit_point = state.table.profit / state.table.per_point;
+        state.table.profit_point_text = state.table.profit_point.toFixed(2);
+        if(state.table.entry_tick)
+          state.table.current_spot = (parseFloat(state.table.entry_tick) + state.table.profit_point * state.table.direction).toFixed(state.table.decPlaces);
       }
 
       if(contract.sell_price){
@@ -328,7 +336,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
                 || (proposal.is_expired && 'This contract has expired') || '-',
           table: {
-            is_expired: proposal.is_expired || proposal.is_sold,
+            is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
             current_spot_time: undefined,
             current_spot: undefined,
@@ -377,18 +385,25 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           onclose: [], /* cleanup callback array when dialog is closed */
       };
 
-      // This values are required for SPREADS
-      if(state.table.contract_type.indexOf("SPREAD") === 0){
+      // This values are required for SPREADS type contract.
+      if(proposal.contract_type.indexOf("SPREAD") === 0){
         var shortcode = proposal.shortcode.toUpperCase();
         var details   = shortcode.replace(proposal.underlying.toUpperCase() + '_', '').split('_');
+        state.table.contract_type = "SPREAD";
+        state.table.status = proposal.is_sold? "Closed": "Open";
         state.table.per_point = details[1];
         state.table.stop_loss = details[3];
         state.table.stop_profit = details[4];
         state.table.is_point = details[5] === 'POINT';
         state.table.is_up = proposal.shortcode['spread'.length] === 'U';
         state.table.direction = state.table.is_up ? 1 : -1;
+        state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
+        state.table.is_sold = proposal.is_sold;
         state.table.profit = parseFloat(proposal.sell_price ? proposal.sell_price : proposal.bid_price) - parseFloat(proposal.buy_price);
+        state.table.profit_text = state.table.profit.toFixed(2);
         state.table.profit_point = state.table.profit / state.table.per_point;
+        state.table.profit_point_text = state.table.profit_point.toFixed(2);
+        state.table.pro_los = "Profit/Loss (" + state.table.currency.replace(" ","") + ")";
         state.table.request ={
                 "proposal"        : 1,
                 "symbol"          : proposal.underlying,
@@ -400,6 +415,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                 "stop_type"       : details[5].toLowerCase()
         };
       }
+
       state.sell.sell = function() { sell_at_market(state, root); }
 
       state.chart.manual_reflow = function() {
@@ -572,10 +588,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             if(state.table.contract_type.indexOf("SPREAD") === 0){
               liveapi.send(state.table.request). then(function(_data){
                 state.table.spread = _data.proposal.spread;
-                var decPlaces = ((/^\d+(\.\d+)?$/).exec(history.prices[0])[1] || '-').length - 1;
-                state.table.entry_tick = parseFloat(history.prices[0]* 1 + state.table.direction * state.table.spread / 2).toFixed(decPlaces);
-                if(state.table.is_expired){
-                  state.table.exit_tick = parseFloat(parseFloat(state.table.entry_tick) + state.table.profit_point * state.table.direction).toFixed(decPlaces); // Above is here.
+                state.table.decPlaces = ((/^\d+(\.\d+)?$/).exec(history.prices[0])[1] || '-').length - 1;
+                state.table.entry_tick = parseFloat(history.prices[0]* 1 + state.table.direction * state.table.spread / 2).toFixed(state.table.decPlaces);
+                state.table.stop_loss_level = (parseFloat(state.table.entry_tick) + state.table.stop_loss / (state.table.is_point ? 1 : state.table.per_point) * (- state.table.direction)).toFixed(state.table.decPlaces);
+                state.table.stop_profit_level = (parseFloat(state.table.entry_tick) + state.table.stop_profit / (state.table.is_point ? 1 : state.table.per_point) * (state.table.direction)).toFixed(state.table.decPlaces);
+                if(state.table.is_sold){
+                  state.table.exit_tick = parseFloat(parseFloat(state.table.entry_tick) + state.table.profit_point * state.table.direction).toFixed(state.table.decPlaces); // Above is here.
                 }
                 // unsubscribe
                 liveapi.send({forget: _data.proposal.id});
@@ -585,7 +603,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
           });
         }
-        if(data.history && !state.table.exit_tick_time && state.table.is_expired) {
+        if(data.history && !state.table.exit_tick_time && state.table.is_expired && state.table.contract_type != "SPREAD") {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
