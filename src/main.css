@@ -47,10 +47,6 @@ body > .footer .addiction-warning a:hover {
   height: 14px !important;
 }
 
-.ui-dialog { /* add boxshadow to dialgos*/
-  box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
-}
-
 .ui-dialog {
     padding: 0!important;
 }
