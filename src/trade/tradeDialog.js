@@ -788,7 +788,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               symbol: symbol.symbol,
               subscribe: 1,
               granularity: 0,
-              count: 500, /* this will be for the case that the user opens a the same tick chart later */
+              count: 1000, /* this will be for the case that the user opens a the same tick chart later */
               style: 'ticks'
             }).catch(function (err) {
               /* if this contract offers tick trades, prevent user from trading */

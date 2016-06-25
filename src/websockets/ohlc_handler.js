@@ -89,7 +89,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
               granularity: timePeriod,
               subscribe: options.delayAmount === 0 ? 1 : 0,
               style: !isTick(timePeriod) ? 'candles' : 'ticks',
-              count: 500,          //We are only going to request 1000 bars if possible
+              count: 1000,          //We are only going to request 1000 bars if possible
               adjust_start_time: 1
             })
             .catch(function(err){
