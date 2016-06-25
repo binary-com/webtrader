@@ -7,8 +7,15 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     require(['css!real/real.css']);
     var real_win = null;
     var real_win_view = null; // rivets view
+    var real_win_li = null;
+
+    var error_handler = function(err) {
+      console.error(err);
+      $.growl.error({ message: err.message });
+    };
 
     function init(li) {
+      real_win_li = li;
       li.click(function () {
           if(!real_win)
             require(['text!real/real.html'], init_real_win);
@@ -67,6 +74,11 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             state.empty_fields.validate = true;
             state.empty_fields.clear();
           }
+        },
+        company: {
+          type: 'normal', // could be one of ['normal', 'maltainvest', 'japan']
+          financial: undefined,
+          gaming: undefined,
         },
         user: {
           disabled: false,
@@ -138,11 +150,20 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           /.{4,8}$/.test(user.secret_answer);
       };
 
-      state.user.new_account_real = function() {
+      state.user.click = function() {
         if(!state.user.is_valid()) {
           state.empty_fields.show();
           return;
         }
+
+        if(state.company.type === 'normal') {
+          state.user.new_account_real();
+          return;
+        }
+
+        state.route.update('financial');
+      }
+      state.user.new_account_real = function() {
 
         var user = state.user;
         var request = {
@@ -164,17 +185,23 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
         liveapi.send(request)
                .then(function(data){
+                 state.user.disabled = true;
                  var info = data.new_account_real;
                  oauth = local_storage.get('oauth');
                  oauth.push({id: info.client_id, token: info.oauth_token});
                  local_storage.set('oauth', oauth);
+                 $.growl.notice({ message: 'Account successfully created' });
+                 $.growl.notice({ message: 'Switching to your new account ...' });
                  /* login with the new account */
                  return liveapi.switch_account(info.client_id)
-                               .then(state.route.update.bind('financial'));
+                               .then(function() {
+                                 real_win.dialog('destroy');
+                                 real_win_li.hide();
+                               });
                })
                .catch(function(err){
-                 console.error(err);
-                 $.growl.error({ message: err.message });
+                 state.user.disabled = false;
+                 error_handler(err);
                });
       };
 
@@ -194,25 +221,52 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       };
 
       real_win_view = rv.bind(root[0], state);
-      setTimeout(() => state.route.update('financial')); // TODO: remove
 
-      liveapi.send({get_settings: 1})
+      /* get the residence field and its states */
+      var residence_promise = liveapi.send({get_settings: 1})
              .then(function(data){
                state.user.residence = data.get_settings.country_code;
                state.user.residence_name = data.get_settings.country;
-               return liveapi.cached.send({states_list: state.user.residence })
-                             .then(function(data){
-                               state.user.state_address_array = data.states_list;
-                               state.user.state_address = data.states_list[0].value;
-                             });
              })
-             .catch(function(err){
-               console.error(err);
-               $.growl.error({ message: err.message });
-             });
+             .catch(error_handler);
+
+       residence_promise
+             .then( function() { return liveapi.cached.send({states_list: state.user.residence }); } )
+             .then(function(data){
+               console.warn(data);
+               state.user.state_address_array = data.states_list;
+               state.user.state_address = data.states_list[0].value;
+             })
+             .catch(error_handler);
+
+       residence_promise
+             .then( function() { return liveapi.cached.send({landing_company: state.user.residence }); } )
+             .then(function(data) {
+               var financial = data.landing_company.financial_company;
+               var gaming = data.landing_company.gaming_company;
+               state.company.financial = financial;
+               state.company.gaming = gaming;
+               if(financial && !gaming && financial.shortcode === 'maltainvest')
+                  state.company.type = 'maltainvest';
+               else if(financial && !gaming && financial.shortcode === 'japan')
+                  state.company.type = 'japan';
+               else
+                  state.company.type = 'normal';
+
+              //  state.company.type = 'japan';
+             })
+             .catch(error_handler);
     }
 
     return {
       init: init
     }
 });
+
+/*
+* TODO:
+* add the datepicker
+* and +98 in phone number filed
+* implement maltainvest
+* implement japan
+*/

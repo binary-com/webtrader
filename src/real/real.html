@@ -102,8 +102,11 @@
             class='validation'>* Please answer to secret question, within 4-50 characters.</span>
     </div>
 
-    <button rv-on-click='user.new_account_real' rv-disabled='user.disabled'
-            rv-css-opacity='user.disabled | ternary 0.5 1'>Continue</button>
+    <button rv-on-click='user.click' rv-disabled='user.disabled'
+            rv-css-opacity='user.disabled | ternary 0.5 1'>
+              <span rv-if='company.type | eq "normal"'>Open Account</span>
+              <span rv-if='company.type | not-eq "normal"'>Continue</span>
+          </button>
   </div>
 
 
