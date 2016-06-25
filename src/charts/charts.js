@@ -247,7 +247,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                         color: 'red',
                         upColor: 'green',
                         upLineColor: 'black',
-                        shadow: true
+                        shadow: false
                     },
                     series: {
                         events: {
@@ -297,6 +297,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                         }
                     },
                     ordinal : false
+                },
+
+                scrollbar: {
+                  liveRedraw: false
                 },
 
                 yAxis: [{
