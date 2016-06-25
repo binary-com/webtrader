@@ -80,6 +80,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           financial: undefined,
           gaming: undefined,
         },
+        risk: {
+          visible: false,
+        },
         user: {
           disabled: false,
           salutation: 'Mr',
@@ -141,7 +144,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         }
       };
 
-      setTimeout(() => state.route.update('financial'), 100);
+      setTimeout(function(){ state.route.update('financial'); }, 100);
 
       state.user.is_valid = function() {
         var user = state.user;
@@ -241,7 +244,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         }
 
         if(state.company.type === 'maltainvest') {
-          state.financial.new_account_maltainvest();
+          state.risk.visible = true;
           return;
         }
         state.route.update('japan');
@@ -293,6 +296,13 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         console.warn(request);
       }
 
+      state.risk.accept = function() {
+        console.warn('accepted');
+      }
+      state.risk.decline = function(){
+        state.risk.visible = false;
+      }
+
       state.route.update = function(route){
         var routes = {
           'user' : 920,
@@ -313,31 +323,37 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
              })
              .catch(error_handler);
 
-       residence_promise
-             .then( function() { return liveapi.cached.send({states_list: state.user.residence }); } )
-             .then(function(data){
-               state.user.state_address_array = data.states_list;
-               state.user.state_address = data.states_list[0].value;
-             })
-             .catch(error_handler);
+     residence_promise
+           .then( function() { return liveapi.cached.send({residence_list: 1}); } )
+           .then(function(data){
+              var residence = _.find(data.residence_list, { value: state.user.residence });
+              state.user.phone = '+' + residence.phone_idd;
+           })
+           .catch(error_handler);
 
-       residence_promise
-             .then( function() { return liveapi.cached.send({landing_company: state.user.residence }); } )
-             .then(function(data) {
-               var financial = data.landing_company.financial_company;
-               var gaming = data.landing_company.gaming_company;
-               state.company.financial = financial;
-               state.company.gaming = gaming;
-               if(financial && !gaming && financial.shortcode === 'maltainvest')
-                  state.company.type = 'maltainvest';
-               else if(financial && !gaming && financial.shortcode === 'japan')
-                  state.company.type = 'japan';
-               else
-                  state.company.type = 'normal';
+     residence_promise
+           .then( function() { return liveapi.cached.send({states_list: state.user.residence }); } )
+           .then(function(data){
+             state.user.state_address_array = data.states_list;
+             state.user.state_address = data.states_list[0].value;
+           })
+           .catch(error_handler);
 
-              //  state.company.type = 'japan';
-             })
-             .catch(error_handler);
+     residence_promise
+           .then( function() { return liveapi.cached.send({landing_company: state.user.residence }); } )
+           .then(function(data) {
+             var financial = data.landing_company.financial_company;
+             var gaming = data.landing_company.gaming_company;
+             state.company.financial = financial;
+             state.company.gaming = gaming;
+             if(financial && !gaming && financial.shortcode === 'maltainvest')
+                state.company.type = 'maltainvest';
+             else if(financial && !gaming && financial.shortcode === 'japan')
+                state.company.type = 'japan';
+             else
+                state.company.type = 'normal';
+           })
+           .catch(error_handler);
     }
 
     return {
@@ -348,7 +364,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 /*
 * TODO:
 * add the datepicker
-* and +98 in phone number filed
 * implement maltainvest
 * implement japan
 */

@@ -113,3 +113,33 @@
   display: inline-block;
   text-align: right;
 }
+
+.real-dialog .disabled-form {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.real-dialog .risk span {
+  margin-bottom: 10px;
+}
+.real-dialog .risk {
+  width: 300px;
+  padding: 5px;
+  font-size: 15px;
+  position: absolute;
+  background: white;
+  z-index: 1000000000;
+  bottom: 65px;
+  right: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 6px 50px;
+}
+.real-dialog .risk:after {
+  border: 8px solid;
+  border-color: white transparent transparent transparent ;
+  content: "";
+  left: 33%;
+  margin-left: -8px;
+  position: absolute;
+  top: 100%;
+}

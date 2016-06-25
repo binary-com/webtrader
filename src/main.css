@@ -247,6 +247,9 @@ button::-moz-focus-inner { border: 0; }
   background: #e98024;
   color: white;
 }
+.orange-button:hover {
+  background: #984f0f;
+}
 
 /* default style for inputs */
 input:not([type='checkbox']) {

@@ -109,8 +109,7 @@
           </button>
   </div>
 
-
-  <div class='financial' rv-show='route.value |  eq "financial"'>
+  <div class='financial' rv-class-disabled-form='risk.visible' rv-show='route.value |  eq "financial"'>
     <span class='back-arrow' rv-on-click='route.update | bind "user"'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> Back
     </span>
@@ -320,6 +319,21 @@
               <span rv-if='company.type | eq "maltainvest"'>Open Account</span>
               <span rv-if='company.type | not-eq "maltainvest"'>Continue</span>
             </button>
+  </div>
+
+  <div class='risk' rv-show='risk.visible' >
+    <span>
+      <strong>Appropriateness Test: WARNING:</strong><br/> In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved).
+    </span>
+    <span>
+      On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you.
+    </span>
+    <span>
+      By clicking <strong>Accept</strong> below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate.
+    </span>
+
+    <button rv-on-click='risk.accept'>Accept</button>
+    <button rv-on-click='risk.decline' class='orange-button'>Decline</button>
   </div>
 
 </div>
