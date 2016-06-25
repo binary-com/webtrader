@@ -90,6 +90,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           first_name: '',
           last_name: '',
           date_of_birth: moment().format('YYYY-MM-DD'),
+          yearRange: "-100:+0", showButtonPanel: false, // for jquery ui datepicker
           residence: '-',
           residence_name: '-',
           address_line_1: '',
@@ -191,7 +192,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  state.user.disabled = true;
                  var info = data.new_account_real;
                  oauth = local_storage.get('oauth');
-                 oauth.push({id: info.client_id, token: info.oauth_token});
+                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: info.is_virtual});
                  local_storage.set('oauth', oauth);
                  $.growl.notice({ message: 'Account successfully created' });
                  $.growl.notice({ message: 'Switching to your new account ...' });
@@ -301,7 +302,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                .then(function(data){
                  var info = data.new_account_maltainvest;
                  oauth = local_storage.get('oauth');
-                 oauth.push({id: info.client_id, token: info.oauth_token});
+                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: info.is_virtual});
                  local_storage.set('oauth', oauth);
                  $.growl.notice({ message: 'Account successfully created' });
                  $.growl.notice({ message: 'Switching to your new account ...' });
@@ -378,10 +379,3 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       init: init
     }
 });
-
-/*
-* TODO:
-* add the datepicker
-* implement maltainvest
-* implement japan
-*/

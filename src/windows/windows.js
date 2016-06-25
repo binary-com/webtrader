@@ -486,8 +486,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                   return liveapi.cached.authorize()
                     .then(function(data) {
                        results.unshift(data);
-                       for(var i = 0; i < results.length; ++i)
+                       for(var i = 0; i < results.length; ++i) {
                           oauth[i].id = results[i].authorize.loginid;
+                          oauth[i].is_virtual = results[i].authorize.is_virtual;
+                       }
                        local_storage.set('oauth', oauth);
                        return data;
                     });

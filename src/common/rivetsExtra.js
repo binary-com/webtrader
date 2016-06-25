@@ -335,16 +335,20 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var options = {
                 showOn: model.showOn || 'focus',
                 numberOfMonths: input.attr('numberOfMonths')*1 || 2,
-                maxDate: model.maxDate || null,
-                minDate: model.minDate || 0,
                 dateFormat: model.dateFormat || 'yy-mm-dd',
                 showAnim: model.showAnim ||  'drop',
-                showButtonPanel: model.showButtonPanel || true,
+                showButtonPanel: model.showButtonPanel !== undefined ? model.showButtonPanel : true,
                 changeMonth: model.changeMonth || true,
                 changeYear: model.changeYear || true,
                 onSelect: function () { $(this).change(); },
                 beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
             };
+            if(model.yearRange)
+              options.yearRange = model.yearRange;
+            else {
+              options.maxDate = model.maxDate || null;
+              options.minDate = model.minDate || 0;
+            }
 
             var dpicker = input.datepicker(options);
             input.on('change', function () {

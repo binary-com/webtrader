@@ -26,7 +26,8 @@
     </div>
 
     <span class='title'>Date of birth</span>
-    <input rv-value='user.date_of_birth' />
+    <input type="text" rv-datepicker="user.date_of_birth" numberOfMonths="1">
+    <!-- <input rv-value='user.date_of_birth' /> -->
     <div class='validations'>
       <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false'
             class='validation'>* Please enter a valid date in yyyy-mm-dd format.</span>
