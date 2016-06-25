@@ -33,7 +33,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           minimizable: true,
           maximizable: false,
           width: 350,
-          height: 920,
+          height: 930,
           close: function () {
             real_win.dialog('destroy');
             real_win.trigger('dialogclose'); // TODO: figure out why event is not fired.
@@ -69,7 +69,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           validate: false,
           clear: _.debounce(function() {
             state.empty_fields.validate = false;
-          }, 3000),
+          }, 4000),
           show: function() {
             state.empty_fields.validate = true;
             state.empty_fields.clear();
@@ -137,14 +137,11 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
           estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
           estimated_worth: '',
-          accept_risk: 0,
 
           accepted: false,
           disabled: false
         }
       };
-
-      setTimeout(function(){ state.route.update('financial'); }, 100);
 
       state.user.is_valid = function() {
         var user = state.user;
@@ -287,7 +284,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           income_source: financial.income_source,
           net_income: financial.net_income,
           estimated_worth: financial.estimated_worth,
-          accept_risk: financial.accept_risk,
+          accept_risk: 1,
         };
         return request;
       };
@@ -297,7 +294,28 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       }
 
       state.risk.accept = function() {
-        console.warn('accepted');
+        var request = state.financial.create_request();
+        state.risk.visible = false;
+        state.financial.disabled = true;
+        liveapi.send(request)
+               .then(function(data){
+                 var info = data.new_account_maltainvest;
+                 oauth = local_storage.get('oauth');
+                 oauth.push({id: info.client_id, token: info.oauth_token});
+                 local_storage.set('oauth', oauth);
+                 $.growl.notice({ message: 'Account successfully created' });
+                 $.growl.notice({ message: 'Switching to your new account ...' });
+                 /* login with the new account */
+                 return liveapi.switch_account(info.client_id)
+                               .then(function() {
+                                 real_win.dialog('destroy');
+                                 real_win_li.hide();
+                               });
+               })
+               .catch(function(err){
+                 state.financial.disabled = false;
+                 error_handler(err);
+               });
       }
       state.risk.decline = function(){
         state.risk.visible = false;
@@ -305,7 +323,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
       state.route.update = function(route){
         var routes = {
-          'user' : 920,
+          'user' : 930,
           'financial': 1390,
         };
         state.route.value = route;
@@ -323,7 +341,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
              })
              .catch(error_handler);
 
-     residence_promise
+      residence_promise
            .then( function() { return liveapi.cached.send({residence_list: 1}); } )
            .then(function(data){
               var residence = _.find(data.residence_list, { value: state.user.residence });
@@ -331,7 +349,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
            })
            .catch(error_handler);
 
-     residence_promise
+      residence_promise
            .then( function() { return liveapi.cached.send({states_list: state.user.residence }); } )
            .then(function(data){
              state.user.state_address_array = data.states_list;
@@ -339,7 +357,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
            })
            .catch(error_handler);
 
-     residence_promise
+      residence_promise
            .then( function() { return liveapi.cached.send({landing_company: state.user.residence }); } )
            .then(function(data) {
              var financial = data.landing_company.financial_company;

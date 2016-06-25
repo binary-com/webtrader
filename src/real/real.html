@@ -78,7 +78,7 @@
     <span class='title'>Phone</span>
     <input rv-value='user.phone' />
     <div class='validations'>
-      <span rv-if='user.phone | not-eq ""' rv-show='user.phone | is-valid-regex "^\+?[0-9\s]{6,35}$" | eq false'
+      <span rv-if='user.phone | not-eq ""' rv-show='user.phone | is-valid-regex "^\+?[0-9\s]{6,35}$" | or-not empty_fields.validate | eq false'
             class='validation'>* Please enter a vlaid phone number.</span>
       <span rv-show='user.phone | eq "" | and empty_fields.validate'
             class='validation'>* Please enter your phone number.</span>
