@@ -58,6 +58,9 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                 });
             });
 
+            /* tracking the chart, includion indicators & overlyas */
+            options_copy.indicators = options_copy.indicators || [];
+            options_copy.overlays = options_copy.overlays || [];
             var update_track = dialog.track({
               module_id: 'chartWindow',
               is_unique: false,
@@ -68,6 +71,18 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
               update_track(options_copy);
             });
 
+            dialog.on('chart-indicators-changed',function(e, chart){
+              options_copy.indicators = chart.get_indicators();
+              update_track(options_copy);
+            });
+            dialog.on('chart-overlay-add',function(e, overlay){
+              options_copy.overlays.push(overlay);
+              update_track(options_copy);
+            });
+            dialog.on('chart-overlay-remove',function(e, displaySymbol){
+              _.remove(options_copy.overlays, displaySymbol);
+              update_track(options_copy);
+            });
             dialog.dialog('open');
 
             return dialog;

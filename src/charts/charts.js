@@ -10,28 +10,49 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     "use strict";
 
+    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
+    Highcharts.Chart.prototype.get_indicators = function() {
+      var chart = this;
+      var indicators = [];
+      if(chart.series.length > 0){
+          indicator_ids.forEach(function(id){
+            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, options: chart.series[0][id][0].options})
+          });
+      }
+      return indicators;
+    }
+
+    Highcharts.Chart.prototype.set_indicators = function(indicators){
+        var chart = this;
+        if(chart.series[0]) {
+          indicators.forEach(function(ind) {
+             require(["charts/indicators/" + ind.id + "/" + ind.id], function () {
+               chart.series[0].addIndicator(ind.id, ind.options);
+             });
+          });
+        }
+    }
+
+    Highcharts.Chart.prototype.get_indicator_series = function() {
+      var chart = this;
+      var series = [];
+      if(chart.series.length > 0){
+          indicator_ids.forEach(function(id){
+            chart.series[0][id] && chart.series[0][id][0] && series.push({id: id, series: chart.series[0][id] })
+          });
+      }
+      return series;
+    }
+
+    Highcharts.Chart.prototype.set_indicator_series = function(series) {
+      var chart = this;
+      if(chart.series.length == 0) { return ; }
+      series.forEach(function(seri) {
+        chart.series[0][seri.id] = seri.series;
+      });
+    }
+
     $(function () {
-
-        var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
-        Highcharts.Chart.prototype.get_indicators = function() {
-          var chart = this;
-          var indicators = [];
-          if(chart.series.length > 0){
-              indicator_ids.forEach(function(id){
-                chart.series[0][id] && indicators.push({id: id, options: chart.series[0][id][0].options})
-              });
-          }
-          return indicators;
-        }
-
-        Highcharts.Chart.prototype.set_indicators = function(indicators){
-            var chart = this;
-            if(chart.series[0]) {
-              indicators.forEach(function(ind) {
-                 chart.series[0].addIndicator(ind.id, ind.options);
-              });
-            }
-        }
 
         Highcharts.setOptions({
             global: {
@@ -152,7 +173,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     }
 
-    return {
+    var charts_functions = {
 
         /**
          * This method is the core and the starting point of highstock charts drawing
@@ -165,6 +186,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
          */
         drawChart: function (containerIDWithHash, options, onload) {
             var indicators = [];
+            var overlays = [];
 
             if ($(containerIDWithHash).highcharts()) {
                 //Just making sure that everything has been cleared out before starting a new thread
@@ -173,6 +195,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 var chart = $(containerIDWithHash).highcharts();
                 indicators = chart.get_indicators();
                 chart.destroy();
+            }
+            else if(options.indicators) { /* this comes only from tracker.js */
+              indicators = options.indicators;
+              overlays = options.overlays;
             }
 
             //Save some data in DOM
@@ -204,7 +230,14 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     delayAmount : options.delayAmount
                                 }).then(function() {
                                   var chart = $(containerIDWithHash).highcharts();
-                                  chart && chart.set_indicators && chart.set_indicators(indicators); // put back removed indicators
+                                  /* the data is loaded but is not applied yet, its on the js event loop,
+                                     wait till the chart data is applied and then add the indicators */
+                                  setTimeout(function() {
+                                    chart && chart.set_indicators(indicators); // put back removed indicators
+                                    overlays.forEach(function(ovlay){
+                                      charts_functions.overlay(containerIDWithHash, ovlay.symbol, ovlay.displaySymbol, ovlay.delay_amount);
+                                    });
+                                  },0);
                                 });
                             })
                             if ($.isFunction(onload)) {
@@ -431,7 +464,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         overlay : function( containerIDWithHash, overlayInsCode, overlayInsName, delayAmount ) {
             if($(containerIDWithHash).highcharts()) {
                 var chart = $(containerIDWithHash).highcharts();
-                var indicators = chart.get_indicators();
+                var indicator_series = chart.get_indicator_series();
                 //var mainSeries_instCode     = $(containerIDWithHash).data("instrumentCode");
                 //var mainSeries_instName     = $(containerIDWithHash).data("instrumentName");
                 /*
@@ -451,22 +484,26 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     }
                 }
 
-                liveapi.execute(function(){
-                    ohlc_handler.retrieveChartDataAndRender({
-                        timePeriod : mainSeries_timePeriod,
-                        instrumentCode : overlayInsCode,
-                        containerIDWithHash : containerIDWithHash,
-                        type : mainSeries_type,
-                        instrumentName : overlayInsName,
-                        series_compare : 'percent',
-                        delayAmount : delayAmount
-                    }).then(function() {
-                        chart && chart.set_indicators(indicators);
-                    });
+                return new Promise(function(resolve, reject){
+                  liveapi.execute(function() {
+                      ohlc_handler.retrieveChartDataAndRender({
+                          timePeriod : mainSeries_timePeriod,
+                          instrumentCode : overlayInsCode,
+                          containerIDWithHash : containerIDWithHash,
+                          type : mainSeries_type,
+                          instrumentName : overlayInsName,
+                          series_compare : 'percent',
+                          delayAmount : delayAmount
+                      }).then(function() {
+                          chart && chart.set_indicator_series(indicator_series);
+                          resolve();
+                      }).catch(resolve);
+                  });
                 });
             }
+            return Promise.resolve();
         }
 
     }
-
+    return charts_functions;
 });
