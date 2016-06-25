@@ -134,11 +134,14 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
           estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
           estimated_worth: '',
+          accept_risk: 0,
 
           accepted: false,
           disabled: false
         }
       };
+
+      setTimeout(() => state.route.update('financial'), 100);
 
       state.user.is_valid = function() {
         var user = state.user;
@@ -205,15 +208,95 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                });
       };
 
-      state.financial.open_account = function() {
-        console.warn(state.financial.estimated_worth);
-        console.warn(JSON.parse(JSON.stringify(state.financial)));
+      state.financial.all_selected = function() {
+        var financial = state.financial;
+        return financial.forex_trading_experience !== '' &&
+          financial.forex_trading_frequency !== '' &&
+          financial.indices_trading_experience !== '' &&
+          financial.indices_trading_frequency !== '' &&
+          financial.commodities_trading_experience !== '' &&
+          financial.commodities_trading_frequency !== '' &&
+          financial.stocks_trading_experience !== '' &&
+          financial.stocks_trading_frequency !== '' &&
+          financial.other_derivatives_trading_experience !== '' &&
+          financial.other_derivatives_trading_frequency !== '' &&
+          financial.other_instruments_trading_experience !== '' &&
+          financial.other_instruments_trading_frequency !== '' &&
+          financial.employment_industry !== '' &&
+          financial.education_level !== '' &&
+          financial.income_source !== '' &&
+          financial.net_income !== '' &&
+          financial.estimated_worth !== '';
+      };
+
+      state.financial.click = function() {
+        if(!state.financial.all_selected()) {
+          state.empty_fields.show();
+          $.growl.error({ message: 'Not all financial information are completed' });
+          return;
+        }
+        if(!state.financial.accepted) {
+          $.growl.error({ message: 'Binary.com terms and conditions unchecked.' });
+          return;
+        }
+
+        if(state.company.type === 'maltainvest') {
+          state.financial.new_account_maltainvest();
+          return;
+        }
+        state.route.update('japan');
+      };
+
+      state.financial.create_request = function() {
+        var user = state.user;
+        var financial = state.financial;
+        var request = {
+          new_account_maltainvest: 1,
+          salutation: user.salutation,
+          first_name: user.first_name,
+          last_name: user.last_name,
+          date_of_birth: user.date_of_birth,
+          residence: user.residence,
+          address_line_1: user.address_line_1,
+          address_line_2: user.address_line_2 || undefined, // optional field
+          address_city: user.city_address,
+          address_state: user.state_address || undefined,
+          address_postcode: user.address_postcode || undefined,
+          phone: user.phone,
+          secret_question: user.secret_question_array[user.secret_question_inx],
+          secret_answer: user.secret_answer.replace('""', "'"),
+
+          affiliate_token: '',
+          forex_trading_experience: financial.forex_trading_experience,
+          forex_trading_frequency: financial.forex_trading_frequency,
+          indices_trading_experience: financial.indices_trading_experience,
+          indices_trading_frequency: financial.indices_trading_frequency,
+          commodities_trading_experience: financial.commodities_trading_experience,
+          commodities_trading_frequency: financial.commodities_trading_frequency,
+          stocks_trading_experience: financial.stocks_trading_experience,
+          stocks_trading_frequency: financial.stocks_trading_frequency,
+          other_derivatives_trading_experience: financial.other_derivatives_trading_experience,
+          other_derivatives_trading_frequency: financial.other_derivatives_trading_frequency,
+          other_instruments_trading_experience: financial.other_instruments_trading_experience,
+          other_instruments_trading_frequency: financial.other_instruments_trading_frequency,
+          employment_industry: financial.employment_industry,
+          education_level: financial.education_level,
+          income_source: financial.income_source,
+          net_income: financial.net_income,
+          estimated_worth: financial.estimated_worth,
+          accept_risk: financial.accept_risk,
+        };
+        return request;
+      };
+      state.financial.new_account_maltainvest = function() {
+        var request = state.financial.create_request();
+        console.warn(request);
       }
 
       state.route.update = function(route){
         var routes = {
           'user' : 920,
-          'financial': 1370,
+          'financial': 1390,
         };
         state.route.value = route;
         real_win.dialog('option', 'height', routes[route]);
@@ -233,7 +316,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
        residence_promise
              .then( function() { return liveapi.cached.send({states_list: state.user.residence }); } )
              .then(function(data){
-               console.warn(data);
                state.user.state_address_array = data.states_list;
                state.user.state_address = data.states_list[0].value;
              })
