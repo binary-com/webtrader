@@ -3,8 +3,8 @@
  */
 
 define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, rv, _, moment) {
-    require(['text!real/real.html']);
-    require(['css!real/real.css']);
+    require(['text!realaccount/realaccount.html']);
+    require(['css!realaccount/realaccount.css']);
     var real_win = null;
     var real_win_view = null; // rivets view
     var real_win_li = null;
@@ -18,7 +18,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       real_win_li = li;
       li.click(function () {
           if(!real_win)
-            require(['text!real/real.html'], init_real_win);
+            require(['text!realaccount/realaccount.html'], init_real_win);
           else
             real_win.moveToTop();
       });
@@ -64,7 +64,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     function init_state(root) {
       var app_id = liveapi.app_id;
       var state = {
-        route: { value: 'user' }, // routes: ['user', 'financial', 'done']
+        route: { value: 'user' }, // routes: ['user', 'financial']
         empty_fields: {
           validate: false,
           clear: _.debounce(function() {
@@ -76,7 +76,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           }
         },
         company: {
-          type: 'normal', // could be one of ['normal', 'maltainvest', 'japan']
+          type: 'normal', // could be one of ['normal', 'maltainvest']
           financial: undefined,
           gaming: undefined,
         },
@@ -241,11 +241,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           return;
         }
 
-        if(state.company.type === 'maltainvest') {
-          state.risk.visible = true;
-          return;
-        }
-        state.route.update('japan');
+        state.risk.visible = true;
       };
 
       state.financial.create_request = function() {
@@ -367,8 +363,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
              state.company.gaming = gaming;
              if(financial && !gaming && financial.shortcode === 'maltainvest')
                 state.company.type = 'maltainvest';
-             else if(financial && !gaming && financial.shortcode === 'japan')
-                state.company.type = 'japan';
+            //  else if(financial && !gaming && financial.shortcode === 'japan')
+            //     state.company.type = 'japan';
              else
                 state.company.type = 'normal';
            })

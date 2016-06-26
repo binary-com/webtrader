@@ -160,7 +160,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 });
 
             //Register async loading of real account opening window
-            load_ondemand($navMenu.find("a.real-account"), 'click', 'loading Real account openning ...', 'real/real',
+            load_ondemand($navMenu.find("a.real-account"), 'click', 'loading Real account openning ...', 'realaccount/realaccount',
                 function (real) {
                     var elem = $navMenu.find("a.real-account");
                     real.init(elem);
