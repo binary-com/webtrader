@@ -91,7 +91,8 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           var displaySymbol = ovlay.display_name;
           var containerIDWithHash = state.dialog.container_id;
           var mainSeries_timePeriod = $(containerIDWithHash).data("timePeriod");
-          var type = $(containerIDWithHash).data("type");
+          var dialog = $(containerIDWithHash);
+          var type = dialog.data("type");
 
           //validate time period of the main series
           require(['charts/chartOptions', "charts/charts", "common/util"], function (chartOptions, charts) {
@@ -113,7 +114,8 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                         })
               };
               if (type === 'candlestick' || type == 'ohlc') {
-                  $(containerIDWithHash).data('type', 'line');
+                  dialog.data('type', 'line');
+                  dialog.trigger('chart-type-changed', 'line');
                   charts.refresh( containerIDWithHash );
                   chartOptions.selectChartType(newTabId, 'line', false);
                   _.defer(fn);

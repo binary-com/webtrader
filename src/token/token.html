@@ -2,7 +2,7 @@
   <div class='confirm' rv-show='confirm.visible' rv-css-top='confirm.top'>
     <span class='title'>Are you sure you want to delete this token?</span>
     <button rv-on-click='confirm.yes'>yes</button>
-    <button class='orange-button' rv-on-click='confirm.no'>No</button>
+    <button rv-on-click='confirm.no'>No</button>
   </div>
   <button
           rv-show='route | not-eq "create-token"'

@@ -486,8 +486,10 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                   return liveapi.cached.authorize()
                     .then(function(data) {
                        results.unshift(data);
-                       for(var i = 0; i < results.length; ++i)
+                       for(var i = 0; i < results.length; ++i) {
                           oauth[i].id = results[i].authorize.loginid;
+                          oauth[i].is_virtual = results[i].authorize.is_virtual;
+                       }
                        local_storage.set('oauth', oauth);
                        return data;
                     });
@@ -578,6 +580,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             dialog.on('dragstop', fixFooterPosition);
             dialog.on('drag', function() { fixFooterPosition(true); });
             blankWindow.on('dialogextendminimize', fixFooterPosition);
+            dialog.on('dialogresizestop', fixFooterPosition);
 
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);
@@ -604,33 +607,12 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             blankWindow.on('dialogclose', function () {
                 if (li) li.remove();
                 li = null;
+                fixFooterPosition();
             });
             blankWindow.on('dialogopen', function () {
                 !li && !options.ignoreTileAction && add_to_windows_menu();
             });
-            var last_document_size = { };
-            blankWindow.on('dialogextendbeforerestore', function(){
-              var doc = $(document);
-              last_document_size = {
-                height: getScrollHeight(),
-                width: doc.width()
-              };
-            });
-            blankWindow.on('dialogextendrestore', function() {
-              var pos = dialog.offset();
-              var new_pos = { };
-              var dim = { width: dialog.width(), height: dialog.height() };
-              var doc_size = last_document_size;
-              new_pos.left = (pos.left + dim.width) > doc_size.width ? (doc_size.width - dim.width - 5) : pos.left;
-              new_pos.top = (pos.top + dim.height) > doc_size.height ? (doc_size.height - dim.height - 5) : pos.top;
-              if(new_pos.left !== pos.left || new_pos.top !== pos.top) {
-                dialog.animate({
-                  left: new_pos.left + 'px',
-                  top: new_pos.top + 'px'
-                }, 500, dialog.trigger.bind(dialog, 'aminated'));
-              }
-              blankWindow.dialog('moveToTop');
-            });
+            blankWindow.on('dialogextendrestore', fixFooterPosition);
 
             if (options.resize)
                 options.resize.call($html[0]);
@@ -655,6 +637,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             blankWindow.track = function(options){
               return tracker.track(options, blankWindow);
             }
+            blankWindow.fixFooterPosition = fixFooterPosition;
             return blankWindow;
         },
 

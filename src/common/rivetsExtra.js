@@ -60,6 +60,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['gt'] = function (vlaue, other){
       return vlaue > other;
     }
+    /* rivets formatter for < operator  */
+    rv.formatters['lt'] = function (vlaue, other){
+      return vlaue < other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -71,6 +75,9 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     };
     /* call toFixed on a fload number */
     rv.formatters['to-fixed'] = function (value, digits) {
+        if(!$.isNumeric(value) || !$.isNumeric(digits)){
+            return;
+        }
         return (value * 1).toFixed(digits || 2);
     }
     /* notify another function on property changes */
@@ -173,6 +180,14 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
 
     rv.formatters['is-valid-email'] = function(email) {
       return email === '' || validateEmail(email);
+    }
+    rv.formatters['is-valid-date'] = function(date, format) {
+      format = format || 'YYYY-MM-DD';
+      return moment(date, format, true).isValid()
+    }
+    rv.formatters['is-valid-regex'] = function(str, regex) {
+      regex = new RegExp(regex);
+      return regex.test(str);
     }
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
@@ -327,16 +342,20 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var options = {
                 showOn: model.showOn || 'focus',
                 numberOfMonths: input.attr('numberOfMonths')*1 || 2,
-                maxDate: model.maxDate || null,
-                minDate: model.minDate || 0,
                 dateFormat: model.dateFormat || 'yy-mm-dd',
                 showAnim: model.showAnim ||  'drop',
-                showButtonPanel: model.showButtonPanel || true,
+                showButtonPanel: model.showButtonPanel !== undefined ? model.showButtonPanel : true,
                 changeMonth: model.changeMonth || true,
                 changeYear: model.changeYear || true,
                 onSelect: function () { $(this).change(); },
                 beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
             };
+            if(model.yearRange)
+              options.yearRange = model.yearRange;
+            else {
+              options.maxDate = model.maxDate || null;
+              options.minDate = model.minDate || 0;
+            }
 
             var dpicker = input.datepicker(options);
             input.on('change', function () {

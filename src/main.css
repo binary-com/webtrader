@@ -49,10 +49,6 @@ body > .footer .addiction-warning a:hover {
   height: 14px !important;
 }
 
-.ui-dialog { /* add boxshadow to dialgos*/
-  box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
-}
-
 .ui-dialog {
     padding: 0!important;
 }
@@ -244,11 +240,6 @@ input::-ms-clear {
 
 /* Remove dotted-underline around buttons in FF */
 button::-moz-focus-inner { border: 0; }
-
-.orange-button {
-  background: #e98024;
-  color: white;
-}
 
 /* default style for inputs */
 input:not([type='checkbox']) {

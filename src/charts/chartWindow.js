@@ -31,7 +31,8 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                     var container = $("#" + id + "_chart");
                     var timePeriod = container.data("timePeriod");
                     var instrumentCode = container.data('instrumentCode');
-                    $(this).dialog('destroy');//completely remove this dialog
+                    container.highcharts().destroy();
+                    $(this).dialog('destroy').remove(); //completely remove this dialog
                     require(["charts/charts"], function (charts) {
                         charts.destroy({
                             containerIDWithHash : "#" + id + "_chart",
