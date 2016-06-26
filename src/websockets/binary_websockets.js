@@ -27,7 +27,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
 
     var connect = function () {
         var config = local_storage.get('config');
-        var api_url = (config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?app_id=' + app_id + '&l=EN';
+        var api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l=EN') + '&app_id=' + app_id;
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);

@@ -1,15 +1,19 @@
 /**
  * Created by arnab on 4/24/16.
  */
-define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, windows) {
+define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"], function($, windows) {
 
     var win = null;
 
     /*Set theme from local storage*/
-    var themeName = local_storage.get("theme");
+    var themeName = local_storage.get("theme"),
+        custom_theme = local_storage.get("custom_theme");
     themeName = themeName && themeName.name;
     if (themeName) {
         require(['lib/highstock/themes/' + themeName]);
+    } else if(custom_theme){
+        console.log(custom_theme);
+        Highcharts.setOptions(custom_theme);
     }
 
     $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
@@ -17,6 +21,12 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
         .off('click')
         .on('click', function () {
             var $ele = $(this);
+            var elementText = $ele.text();
+            var elementClass = $ele.attr('class');
+            confirmationDialog(null, elementClass, elementText);
+    });
+
+    function confirmationDialog(themeObj, elementClass, elementText) {
             if (!win) {
                 win = windows.createBlankWindow($('<div class="dialog-confirm-new-theme"/>'),
                     {
@@ -37,10 +47,18 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
                         },
                         buttons: {
                             Apply: function() {
-                                $.growl.notice({message: 'Loading ' + $ele.text()});
-                                var themeName_file = $ele.attr('class').replace('theme_', '').replace('_', '-');
-                                (themeName_file === 'default') ?
-                                    local_storage.remove("theme") : local_storage.set("theme", {name: themeName_file});
+                                $.growl.notice({message: 'Loading ' + elementText});
+                                var themeName_file = elementClass.replace('theme_', '').replace('_', '-');
+                                if(themeObj){
+                                    local_storage.remove("theme");
+                                    local_storage.set("custom_theme", themeObj);
+                                }
+                                else if(themeName_file === 'default') {
+                                    local_storage.remove("theme");
+                                    local_storage.remove("custom_theme");
+                                } else{
+                                    local_storage.set("theme", {name: themeName_file}); 
+                                }
                                 location.reload();
                             },
                             Cancel: function() {
@@ -55,8 +73,10 @@ define(['jquery', 'windows/windows', 'highstock', "jquery-growl"], function($, w
             } else {
                 win.moveToTop();
             }
-    });
+        }
 
-    return {};
+    return {
+        confirmationDialog : confirmationDialog
+    };
 
 });
