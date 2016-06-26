@@ -84,7 +84,9 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       state.position.mode = pos.mode;
 
       if(pos.mode === 'maximized')
-        blankWindow.dialogExtend('maximize');
+        setTimeout(function(){
+          blankWindow.dialogExtend('maximize');
+        },0);
       else if(pos.mode === 'minimized')
         blankWindow.dialogExtend('minimize');
 

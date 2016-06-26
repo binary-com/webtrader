@@ -29,6 +29,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
     function initLoginButton(root) {
         var login_menu = root.find('.login');
         var account_menu = root.find('.account').hide();
+        var real_account_opening = account_menu.find('li.real-account-li').hide();
         var time = root.find('span.time');
         var login_btn = root.find('.login button');
         var logout_btn = root.find('.account .logout');
@@ -84,9 +85,16 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                 update_balance(data);
                 loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
+                var oauth = local_storage.get('oauth') || [];
+                var is_real = false;
+                for(var i = 0; i < oauth.length; ++i) {
+                  if(oauth[i].is_virtual === 0)
+                    is_real = true;
+                }
+                is_real ? real_account_opening.hide() : real_account_opening.show();
+
                 /* switch between account on user click */
                 $('.account li.info').remove();
-                var oauth = local_storage.get('oauth') || [];
                 oauth.forEach(function (account) {
                     if (account.id !== data.authorize.loginid) {
                         var a = $('<a href="#"></a>').html('<span class="ui-icon ui-icon-login"></span>' + account.id);
@@ -148,5 +156,5 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
         },
         updateDropdownToggles : updateListItemHandlers
     };
-    
+
 });
