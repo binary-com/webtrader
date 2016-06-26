@@ -224,11 +224,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       /*Required for spreads only*/
       if(state.table.contract_type === "SPREAD"){
         state.table.profit = contract.bid_price - contract.buy_price;
-        state.table.profit_text = state.table.profit.toFixed(2);
         state.table.profit_point = state.table.profit / state.table.per_point;
-        state.table.profit_point_text = state.table.profit_point.toFixed(2);
         if(state.table.entry_tick)
-          state.table.current_spot = (parseFloat(state.table.entry_tick) + state.table.profit_point * state.table.direction).toFixed(state.table.decPlaces);
+          state.table.current_spot = state.table.entry_tick + state.table.profit_point * state.table.direction;
       }
 
       if(contract.sell_price){
@@ -400,9 +398,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
         state.table.is_sold = proposal.is_sold;
         state.table.profit = parseFloat(proposal.sell_price ? proposal.sell_price : proposal.bid_price) - parseFloat(proposal.buy_price);
-        state.table.profit_text = state.table.profit.toFixed(2);
         state.table.profit_point = state.table.profit / state.table.per_point;
-        state.table.profit_point_text = state.table.profit_point.toFixed(2);
         state.table.pro_los = "Profit/Loss (" + state.table.currency.replace(" ","") + ")";
         state.table.request ={
                 "proposal"        : 1,
@@ -589,11 +585,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               liveapi.send(state.table.request). then(function(_data){
                 state.table.spread = _data.proposal.spread;
                 state.table.decPlaces = ((/^\d+(\.\d+)?$/).exec(history.prices[0])[1] || '-').length - 1;
-                state.table.entry_tick = parseFloat(history.prices[0]* 1 + state.table.direction * state.table.spread / 2).toFixed(state.table.decPlaces);
-                state.table.stop_loss_level = (parseFloat(state.table.entry_tick) + state.table.stop_loss / (state.table.is_point ? 1 : state.table.per_point) * (- state.table.direction)).toFixed(state.table.decPlaces);
-                state.table.stop_profit_level = (parseFloat(state.table.entry_tick) + state.table.stop_profit / (state.table.is_point ? 1 : state.table.per_point) * (state.table.direction)).toFixed(state.table.decPlaces);
+                state.table.entry_tick = parseFloat(history.prices[0]* 1 + state.table.direction * state.table.spread / 2);
+                state.table.stop_loss_level = state.table.entry_tick + state.table.stop_loss / (state.table.is_point ? 1 : state.table.per_point) * (- state.table.direction);
+                state.table.stop_profit_level = state.table.entry_tick + state.table.stop_profit / (state.table.is_point ? 1 : state.table.per_point) * (state.table.direction);
                 if(state.table.is_sold){
-                  state.table.exit_tick = parseFloat(parseFloat(state.table.entry_tick) + state.table.profit_point * state.table.direction).toFixed(state.table.decPlaces); // Above is here.
+                  state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction; // Above is here.
                 }
                 // unsubscribe
                 liveapi.send({forget: _data.proposal.id});

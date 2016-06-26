@@ -60,6 +60,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['gt'] = function (vlaue, other){
       return vlaue > other;
     }
+    /* rivets formatter for < operator  */
+    rv.formatters['lt'] = function (vlaue, other){
+      return vlaue < other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -71,6 +75,9 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     };
     /* call toFixed on a fload number */
     rv.formatters['to-fixed'] = function (value, digits) {
+        if(!$.isNumeric(value) || !$.isNumeric(digits)){
+            return;
+        }
         return (value * 1).toFixed(digits || 2);
     }
     /* notify another function on property changes */
