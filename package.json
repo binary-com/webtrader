@@ -4,8 +4,8 @@
   "description": "This is a Webtrader project for binary.com",
   "main": "Gruntfile.js",
   "engines": {
-    "node" : ">=0.10",
-    "npm" : ">=3.0"
+    "node": ">=0.10",
+    "npm": ">=3.0"
   },
   "devDependencies": {
     "grunt-bump": "^0.3.0",
@@ -52,5 +52,8 @@
   "license": "CC-BY-NC-ND-4.0",
   "bugs": {
     "url": "https://github.com/binary-com/webtrader/issues"
+  },
+  "dependencies": {
+    "jquery-ui-iconfont": "^2.1.0"
   }
 }

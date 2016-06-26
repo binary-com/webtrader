@@ -46,6 +46,14 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
+                        cwd: 'node_modules/',
+                        src: [
+                            'jquery-ui-iconfont/jquery-ui.icon-font.css', 'jquery-ui-iconfont/font/*',
+                        ],
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                    },
+                    {
+                        expand: true,
                         cwd: 'bower_components/',
                         src: [
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
@@ -55,7 +63,6 @@ module.exports = function (grunt) {
                             '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
-                            'jquery-ui-iconfont/jquery-ui.icons.css', 'jquery-ui-iconfont/fonts/*',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
