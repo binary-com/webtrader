@@ -1,0 +1,25 @@
+.custom_theme {
+	display: inline-block;
+}
+.custom_theme input {
+    width: 100px;
+}
+.custom_theme #properties {
+	float: right;
+	width: 250px;
+	margin-left: 10px;
+	max-height: 400px;
+	overflow: auto;
+}
+.custom_theme #preview-chart {
+	position: relative;																																							
+	float: left;
+	width: 350px;
+}
+.custom_theme #temp_box {
+	position: absolute;	
+	width: 0px;
+	height: 0px;
+	top: 10px;
+	left: 20px;
+}

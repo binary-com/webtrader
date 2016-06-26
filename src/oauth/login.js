@@ -3,8 +3,6 @@
  */
 
 define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash'], function(liveapi, windows, rv, _) {
-    require(['text!oauth/login.html']);
-    require(['css!oauth/login.css']);
     var login_win = null;
     var login_win_view = null; // rivets view
 
@@ -14,7 +12,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         return;
       }
 
-      require(['text!oauth/login.html'], function(root) {
+      require(['text!oauth/login.html', 'css!oauth/login.css'], function(root) {
         root = $(root);
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
@@ -49,6 +47,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             left: offset.left + 'px',
             top: offset.top + 'px'
         });
+        login_win.dialog('widget').find('.ui-selectmenu-menu ul').css('max-height', '320px');
       });
     }
 
