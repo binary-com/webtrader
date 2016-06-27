@@ -18,5 +18,5 @@
 
 
 .bop-ui-dialog, .bop.ui-dialog-content, .bop_level.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

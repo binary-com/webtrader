@@ -11,5 +11,5 @@
 }
 
 .apo-ui-dialog, .apo.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

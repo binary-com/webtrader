@@ -11,5 +11,5 @@
 }
 
 .alma-ui-dialog, .alma.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

@@ -16,5 +16,5 @@
 }
 
 .bbands-ui-dialog, .bbands.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

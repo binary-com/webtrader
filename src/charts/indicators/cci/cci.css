@@ -16,5 +16,5 @@
 }
 
 .cci-ui-dialog, .cci.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }
