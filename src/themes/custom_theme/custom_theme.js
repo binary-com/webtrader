@@ -16,18 +16,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
         win = null,
         themeConf = {};
 
-    function hexToRgb(value, alpha) {
-        var rgba = [];
-        rgba[0] = parseInt(value.substring(0, 2), 16),
-        rgba[1] = parseInt(value.substring(2, 4), 16),
-        rgba[2] = parseInt(value.substring(4, 6), 16),
-        rgba[3] = alpha ? parseFloat(alpha) : 1;
-
-        return "rgba(" + rgba.join(", ") + ")";
-    }
-
     function createThemeObject(id, color) {
-
         if (!color) return;
 
         color = color.substring(0, color.indexOf(')') + 1); //Fixing mozilla bug
@@ -58,32 +47,41 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                         if (val) {
                             $(ele).css({background: val});
                         } else {
-                            var color = $(ele).css("background");
-                            createThemeObject(id, color);
+                            val = $(ele).css("background");
+                            createThemeObject(id, val);
                             Highcharts.setOptions(themeConf);
                         }
-
+                        $(ele).data("prevColor",val);
                         $(ele).colorpicker({
                             part: {
                                 map: {size: 128},
                                 bar: {size: 128}
                             },
+                            alpha: alpha? true: false,
+                            colorFormat: "RGBA",
                             select: function (event, color) {
                                 $(ele).css({
-                                    background: '#' + color.formatted
+                                    background: color.formatted
                                 }).val('');
-                                createThemeObject(id, hexToRgb(color.formatted, alpha));
+                                createThemeObject(id, color.formatted);
                                 updateChart();
                             },
                             ok: function (event, color) {
+                                if(!color.formatted){
+                                    return;
+                                }
                                 $(ele).css({
-                                    background: '#' + color.formatted
+                                    background: color.formatted
                                 }).val('');
-                                createThemeObject(id, hexToRgb(color.formatted, alpha));
+                                $(ele).data("prevColor",$(ele).css("background"));
+                                createThemeObject(id, color.formatted);
                                 updateChart();
                             },
                             cancel: function (event) {
-                                createThemeObject(id, $(ele).css("background"));
+                                $(ele).css({
+                                    background: $(ele).data("prevColor")
+                                }).val('');
+                                createThemeObject(id, $(ele).data("prevColor"));
                                 updateChart();
                             }
                         });
