@@ -75,6 +75,9 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                 } else {
                     console.error('Unable to add indicator!');
                 }
+                var dialog_id = chart.renderTo.id.replace("_chart", "");
+                var dialog = $('#' + dialog_id);
+                dialog.trigger('chart-indicators-changed', chart);
             };
             Highcharts.Series.prototype.removeIndicator = function(indicatorSeriesIDArr) {
                 var series = this;
@@ -110,6 +113,9 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                     }
                 }
                 this.chart.redraw();
+                var dialog_id = this.chart.renderTo.id.replace("_chart", "");
+                var dialog = $('#' + dialog_id);
+                dialog.trigger('chart-indicators-changed', this.chart);
             };
             /*
              *  Wrap HC's Series.addPoint
@@ -155,7 +161,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                     }
                 }
             });
-            
+
             /*
              * Update will be called for all series
              * We do not have to worry about indicator series, because they will not have instance of indicator Classes
@@ -286,7 +292,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
             var candleSize = Math.abs(high - low);
             return bodySize >= (.7 * candleSize);
         },
-        /*Return indicators.json data*/ 
+        /*Return indicators.json data*/
         getIndicatorsJSONData :function()
         {
             return indicatorsMetaData;

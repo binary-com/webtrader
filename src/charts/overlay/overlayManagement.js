@@ -91,13 +91,15 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           var displaySymbol = ovlay.display_name;
           var containerIDWithHash = state.dialog.container_id;
           var mainSeries_timePeriod = $(containerIDWithHash).data("timePeriod");
-          var type = $(containerIDWithHash).data("type");
+          var dialog = $(containerIDWithHash);
+          var type = dialog.data("type");
 
           //validate time period of the main series
           require(['charts/chartOptions', "charts/charts", "common/util"], function (chartOptions, charts) {
               var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
+              var dialog = $(containerIDWithHash);
               var fn = function () {
-                  $(containerIDWithHash).data("overlayIndicator", true);
+                  dialog.data("overlayIndicator", true);
                   if (chartOptions.isCurrentViewInLogScale(newTabId))
                   {
                       chartOptions.triggerToggleLogScale(newTabId);
@@ -105,10 +107,15 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                   chartOptions.disableEnableLogMenu( newTabId, false );
                   chartOptions.disableEnableCandlestick( newTabId, false );
                   chartOptions.disableEnableOHLC( newTabId, false );
-                  charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount);
+                  charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount)
+                        .then(function() {
+                          var overlay = { symbol: symbol, displaySymbol: displaySymbol, delay_amount: delay_amount};
+                          dialog.trigger('chart-overlay-add', overlay);
+                        })
               };
               if (type === 'candlestick' || type == 'ohlc') {
-                  $(containerIDWithHash).data('type', 'line');
+                  dialog.data('type', 'line');
+                  dialog.trigger('chart-type-changed', 'line');
                   charts.refresh( containerIDWithHash );
                   chartOptions.selectChartType(newTabId, 'line', false);
                   _.defer(fn);
@@ -116,16 +123,17 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
 
               state.overlays.current.push(displaySymbol);
               ovlay.dont_show = true;
-
           });
       }
 
       state.overlays.remove = function(ovlay){
           var containerIDWithHash = state.dialog.container_id;
-          var chart = $(containerIDWithHash).highcharts();
+          var dialog = $(containerIDWithHash);
+          var chart = dialog.highcharts();
           if (chart && ovlay) {
               var series = _.find(chart.series, function(s) { return s.options.name === ovlay && s.options.id !== 'navigator'; });
               if (series) {
+                  var indicator_series = chart.get_indicator_series();
                   //Remove current price line first
                   series.removeCurrentPrice();
                   //Then remove the series
@@ -157,6 +165,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                               }
                           });
                       }
+                      chart.set_indicator_series(indicator_series);
                   });
               }
 
@@ -175,6 +184,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                   return !break_loop;
               });
               state.overlays.current.splice(state.overlays.current.indexOf(ovlay), 1);
+              dialog.trigger('chart-overlay-remove', {displaySymbol: ovlay});
           }
 
       }

@@ -3,7 +3,7 @@
  */
 define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"], function($, windows) {
 
-    var win = null, elementText, elementClass;
+    var win = null;
 
     /*Set theme from local storage*/
     var themeName = local_storage.get("theme"),
@@ -30,22 +30,16 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
     }
 
     $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
-            'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default, a.theme_custom')
+            'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default')
         .off('click')
         .on('click', function () {
             var $ele = $(this);
-            elementText = $ele.text();
-            elementClass = $ele.attr('class');
-            if($ele.attr('class') === "theme_custom"){
-                require(['themes/custom_theme/custom_theme'], function(customTheme){
-                    customTheme.init(confirmationDialog);
-                });
-            } else{
-                confirmationDialog();
-            }
+            var elementText = $ele.text();
+            var elementClass = $ele.attr('class');
+            confirmationDialog(null, elementClass, elementText);
     });
 
-    function confirmationDialog(themeObj){
+    function confirmationDialog(themeObj, elementClass, elementText) {
             if (!win) {
                 win = windows.createBlankWindow($('<div class="dialog-confirm-new-theme"/>'),
                     {
@@ -94,6 +88,8 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
             }
         }
 
-    return {};
+    return {
+        confirmationDialog : confirmationDialog
+    };
 
 });
