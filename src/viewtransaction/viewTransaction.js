@@ -227,6 +227,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.table.profit_point = state.table.profit / state.table.per_point;
         if(state.table.entry_tick)
           state.table.current_spot = state.table.entry_tick + state.table.profit_point * state.table.direction;
+        if(contract.is_sold){
+          state.table.status = "Closed";
+          state.table.is_sold = contract.is_sold;
+          state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction;
+          state.table.exit_tick_time = contract.sell_timeS;
+        }
       }
 
       if(contract.sell_price){
@@ -397,6 +403,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
         state.table.direction = state.table.is_up ? 1 : -1;
         state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
         state.table.is_sold = proposal.is_sold;
+        state.table.exit_tick_time = state.table.is_sold ? proposal.sell_time : undefined;
         state.table.profit = parseFloat(proposal.sell_price ? proposal.sell_price : proposal.bid_price) - parseFloat(proposal.buy_price);
         state.table.profit_point = state.table.profit / state.table.per_point;
         state.table.pro_los = "Profit/Loss (" + state.table.currency.replace(" ","") + ")";
