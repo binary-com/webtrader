@@ -53,12 +53,20 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                         }
                         $(ele).data("prevColor",val);
                         $(ele).colorpicker({
+                            position: {
+                                my: "left+50 bottom+100",
+                                of: "element",
+                                collision: "fit"
+                            },
                             part: {
                                 map: {size: 128},
                                 bar: {size: 128}
                             },
                             alpha: alpha? true: false,
                             colorFormat: "RGBA",
+                            open: function(event, color){
+                                color.colorPicker.setColor($(this).css("background-color"));
+                            },
                             select: function (event, color) {
                                 $(ele).css({
                                     background: color.formatted
