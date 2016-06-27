@@ -48,6 +48,7 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
     	require(['css!themes/custom_theme/custom_theme.css']);
       require(['text!themes/custom_theme/custom_theme.html'], function($html){
       	$html = $($html);
+        console.log(prevTheme);
       	$html.find(".color_input_width").each(function(index, ele){
       		var id = $(ele).attr("id").replace("theme_",""),
       				alpha = $(ele).attr("alpha"),
@@ -163,17 +164,6 @@ define(['jquery', 'windows/windows', 'charts/charts', 'highstock', 'color-picker
           enabled: true,
           series: {
               id: 'navigator'
-          }
-      },
-
-      //This will be updated when 'Settings' button is implemented
-      plotOptions: {
-          candlestick: {
-              lineColor: 'black',
-              color: 'red',
-              upColor: 'green',
-              upLineColor: 'black',
-              shadow: true
           }
       },
 

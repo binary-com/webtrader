@@ -242,13 +242,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                 //This will be updated when 'Settings' button is implemented
                 plotOptions: {
-                    candlestick: {
-                        lineColor: 'black',
-                        color: 'red',
-                        upColor: 'green',
-                        upLineColor: 'black',
-                        shadow: true
-                    },
                     series: {
                         events: {
                             afterAnimate: function () {
