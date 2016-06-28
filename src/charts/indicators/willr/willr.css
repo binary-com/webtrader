@@ -23,8 +23,3 @@
 .willr-ui-dialog, .willr.ui-dialog-content, .willr_level.ui-dialog-content {
     overflow: visible;
 }
-
-
-.willr input {
-    line-height: 10px !important;
-}
