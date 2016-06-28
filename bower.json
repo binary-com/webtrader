@@ -1,6 +1,6 @@
 {
   "name": "Webtrader",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "homepage": "https://github.com/binary-com/webtrader.git",
   "authors": [
     "Armin Zia",
@@ -8,7 +8,7 @@
     "Arnab Karmakar",
     "Mahboobeh Mohammadi"
   ],
-  "description": "This is a Webtrader project for binary.com",
+  "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
   "moduleType": [],
   "keywords": [
