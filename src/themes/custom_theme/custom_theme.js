@@ -31,7 +31,6 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
         });
         temp = temp + end;
         $.extend(themeConf, JSON.parse(temp));
-
     }
 
     function init($menuLink) {
@@ -47,7 +46,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                         if (val) {
                             $(ele).css({background: val});
                         } else {
-                            val = $(ele).css("background");
+                            val = $(ele).css("background-color");
                             createThemeObject(id, val);
                             Highcharts.setOptions(themeConf);
                         }
@@ -81,7 +80,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                                 $(ele).css({
                                     background: color.formatted
                                 }).val('');
-                                $(ele).data("prevColor",$(ele).css("background"));
+                                $(ele).data("prevColor",$(ele).css("background-color"));
                                 createThemeObject(id, color.formatted);
                                 updateChart();
                             },

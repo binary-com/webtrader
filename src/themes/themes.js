@@ -19,10 +19,10 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
             {
                 plotOptions: {
                     candlestick: {
-                        lineColor: 'black',
-                        color: 'red',
-                        upColor: 'green',
-                        upLineColor: 'black',
+                        lineColor: 'rgba(0,0,0,1)',
+                        color: 'rgba(215,24,24,1)',
+                        upColor: 'rgba(2,146,14,1)',
+                        upLineColor: 'rgba(0,0,0,1)',
                         shadow: true
                     }
                 }
