@@ -278,6 +278,12 @@ input[type="text"].ui-colorpicker-hex-input {
   height: auto;
   line-height: normal;
 }
+input[type="text"].ui-colorpicker-hex-alpha {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
 /*Ends here*/
 
 input:focus {
