@@ -56,7 +56,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
         Highcharts.setOptions({
             global: {
-                useUTC: true
+                useUTC: true,
+                canvasToolsURL: "https://code.highcharts.com/modules/canvas-tools.js"
             },
             lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
         });
