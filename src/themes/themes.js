@@ -12,8 +12,21 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
     if (themeName) {
         require(['lib/highstock/themes/' + themeName]);
     } else if(custom_theme){
-        console.log(custom_theme);
         Highcharts.setOptions(custom_theme);
+    } else{
+        // Setting candle-stick color incase there's no theme set.
+        Highcharts.setOptions(
+            {
+                plotOptions: {
+                    candlestick: {
+                        lineColor: 'rgba(0,0,0,1)',
+                        color: 'rgba(215,24,24,1)',
+                        upColor: 'rgba(2,146,14,1)',
+                        upLineColor: 'rgba(0,0,0,1)',
+                        shadow: true
+                    }
+                }
+            });
     }
 
     $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
