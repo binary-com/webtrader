@@ -32,6 +32,11 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             $html.find("input[type='button']").button();
 
             $html.find("#max_stroke").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -66,7 +71,8 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                width: 280,
+                width: 350,
+                height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,

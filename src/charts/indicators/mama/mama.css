@@ -1,5 +1,5 @@
 ﻿.mama_input_width {
-    width: 150px;
+    width: 155px;
 }
 
 .mama_input_width_for_period {
@@ -13,8 +13,4 @@
 .mama_td_width
 {
 	width: 50%;
-}
-
-.mama-ui-dialog , .mama.ui-dialog-content {
-     overflow : visible;
 }

@@ -150,7 +150,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 450,
+                width: 370,
                 height: 400,
                 modal: true,
                 my: 'center',

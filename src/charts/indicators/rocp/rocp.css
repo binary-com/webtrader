@@ -1,5 +1,5 @@
 .rocp_input_width {
-    width: 120px;
+    width: 155px;
 }
 
 .rocp_input_width_for_period {
@@ -18,8 +18,4 @@
     border: 1px solid #aaaaaa;
     width: 100%;
     border-radius: 5px;
-}
-
-.rocp-ui-dialog, .rocp.ui-dialog-content, .rocp_level.ui-dialog-content {
-    overflow: visible;
 }

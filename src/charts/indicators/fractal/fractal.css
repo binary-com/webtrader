@@ -1,5 +1,5 @@
 ﻿.fractal_input_width {
-    width: 120px;
+    width: 155px;
 }
 
 .fractal_input_width_for_period {
@@ -11,5 +11,5 @@
 }
 
 .fractal-ui-dialog, .fractal.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

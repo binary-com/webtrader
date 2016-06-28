@@ -1,5 +1,5 @@
 ﻿.smma_input_width {
-    width: 150px;
+    width: 155px;
 }
 
 .smma_input_width_for_period {
@@ -13,8 +13,4 @@
 .smma_td_width
 {
 	width: 50%;
-}
-
-.smma-ui-dialog, .smma.ui-dialog-content {
-    overflow: visible;
 }

@@ -1,5 +1,5 @@
 ﻿.ultosc_input_width {
-    width: 160px;
+    width: 155px;
 }
 
 .ultosc_input_width_for_period {
@@ -8,10 +8,6 @@
 
 .ultosc label {
     display: block;
-}
-
-.ultosc-ui-dialog, .ultosc.ui-dialog-content {
-    overflow: visible;
 }
 
 .ultosc input {

@@ -1,5 +1,5 @@
 ﻿.mom_input_width {
-    width: 120px;
+    width: 155px;
 }
 
 .mom_input_width_for_period {
@@ -8,8 +8,4 @@
 
 .mom label {
     display: block;
-}
-
-.mom-ui-dialog, .mom.ui-dialog-content, .mom_level.ui-dialog-content {
-    overflow: visible;
 }

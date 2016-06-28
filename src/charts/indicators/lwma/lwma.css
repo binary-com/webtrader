@@ -1,5 +1,5 @@
 ﻿.lwma_input_width {
-    width: 150px;
+    width: 155px;
 }
 
 .lwma_input_width_for_period {
@@ -16,5 +16,5 @@
 }
 
 .lwma-ui-dialog, .lwma.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

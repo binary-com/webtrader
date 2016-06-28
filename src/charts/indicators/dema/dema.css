@@ -1,5 +1,5 @@
 ﻿.dema_input_width {
-    width: 160px;
+    width: 155px;
 }
 
 .dema_input_width_for_period {
@@ -11,5 +11,5 @@
 }
 
 .dema-ui-dialog, .dema.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

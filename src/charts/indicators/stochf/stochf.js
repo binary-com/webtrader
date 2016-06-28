@@ -32,6 +32,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
             $html.find("#stochf_k_stroke,#stochf_d_stroke").each(function () {
                 $(this).colorpicker({
+                    position: {
+                        at: "right+100 bottom",
+                        of: "element",
+                        collision: "fit"
+                    },
                     part: {
                         map: { size: 128 },
                         bar: { size: 128 }
@@ -115,7 +120,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 400,
+                width: 370,
                 height: 400,
                 modal: true,
                 my: 'center',

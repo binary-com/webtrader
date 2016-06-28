@@ -1,5 +1,5 @@
 ﻿.t3_input_width {
-    width: 160px;
+    width: 155px;
 }
 
 .t3_input_width_for_period {
@@ -8,8 +8,4 @@
 
 .t3 label {
     display: block;
-}
-
-.t3-ui-dialog, .t3.ui-dialog-content {
-    overflow: visible;
 }

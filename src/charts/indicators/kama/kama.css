@@ -1,5 +1,5 @@
 ﻿.kama_input_width {
-    width: 160px;
+    width: 155px;
 }
 
 .kama_input_width_for_period {
@@ -11,5 +11,5 @@
 }
 
 .kama-ui-dialog, .kama.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

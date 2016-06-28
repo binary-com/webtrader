@@ -27,3 +27,6 @@
 .adxr-ui-dialog, .adxr.ui-dialog-content {
     overflow: auto;
 }
+#adx_dashStyle {
+	overflow: all;
+}

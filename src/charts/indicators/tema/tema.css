@@ -1,5 +1,5 @@
 .tema_input_width {
-    width: 160px;
+    width: 155px;
 }
 
 .tema_input_width_for_period {
@@ -8,8 +8,4 @@
 
 .tema label {
     display: block;
-}
-
-.tema-ui-dialog, .tema.ui-dialog-content {
-    overflow: visible;
 }
