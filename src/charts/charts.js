@@ -56,7 +56,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
         Highcharts.setOptions({
             global: {
-                useUTC: true
+                useUTC: true,
+                canvasToolsURL: "https://code.highcharts.com/modules/canvas-tools.js"
             },
             lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
         });
@@ -267,13 +268,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                 //This will be updated when 'Settings' button is implemented
                 plotOptions: {
-                    candlestick: {
-                        lineColor: 'black',
-                        color: 'red',
-                        upColor: 'green',
-                        upLineColor: 'black',
-                        shadow: false
-                    },
                     series: {
                         events: {
                             afterAnimate: function () {
