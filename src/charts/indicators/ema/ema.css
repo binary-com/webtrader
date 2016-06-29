@@ -1,9 +1,9 @@
 .ema_input_width {
-    width: 160px;
+    width: 150px !important;
 }
 
 .ema_input_width_for_period {
-    width: 155px;
+    width: 150px !important;
 }
 
 .ema label {
@@ -11,5 +11,5 @@
 }
 
 .ema-ui-dialog, .ema.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

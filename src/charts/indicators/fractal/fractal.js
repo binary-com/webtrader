@@ -31,6 +31,11 @@ define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', '
             $html.find("input[type='button']").button();
 
             $html.find("#fractal_color").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -52,7 +57,8 @@ define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', '
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 315,
+                width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',

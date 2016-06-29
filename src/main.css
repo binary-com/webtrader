@@ -121,7 +121,9 @@ button.ui-button-text-only .ui-menu {
 .ui-menu {
     z-Index: 1003;
 }
-
+.ui-selectmenu-menu .ui-menu {
+  max-height: 85px;
+}
 /*Overriding this class inheritted from dataTables jquery plugin*/
 
 .dataTables_scrollHeadInner,
@@ -252,11 +254,6 @@ input:not([type='checkbox']) {
   width: 100%;
   height: 26px;
   line-height: 26px;
-}
-
-input[type="button"].ui-button {
-  line-height: normal;
-  height: auto;
 }
 
 /*Overriding css for color-picker*/

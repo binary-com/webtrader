@@ -1,9 +1,9 @@
 .min_input_width {
-    width: 140px;
+    width: 150px !important;
 }
 
 .min_input_width_for_period {
-    width: 135px;
+    width: 150px !important;
 }
 
 .min label {
@@ -12,8 +12,4 @@
 
 .min td {
     white-space: nowrap;
-}
-
-.min-ui-dialog, .min.ui-dialog-content {
-    overflow: visible;
 }

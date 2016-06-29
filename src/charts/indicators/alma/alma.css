@@ -1,9 +1,9 @@
 ﻿.alma_input_width {
-    width: 140px;
+    width: 155px !important;
 }
 
 .alma_input_width_for_period {
-    width: 135px;
+    width: 155px !important;
 }
 
 .alma label {
@@ -11,5 +11,5 @@
 }
 
 .alma-ui-dialog, .alma.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

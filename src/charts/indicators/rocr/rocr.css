@@ -1,13 +1,13 @@
 .rocr_input_width {
-    width: 120px;
+    width: 150px !important;
 }
 
 .rocr_input_width_for_period {
-    width: 115px;
+    width: 150px !important;
 }
 
 .rocr_level_input_width_for_level {
-    width: 115px;
+    width: 150px !important;
 }
 
 .rocr label {
@@ -18,8 +18,4 @@
     border: 1px solid #aaaaaa;
     width: 100%;
     border-radius: 5px;
-}
-
-.rocr-ui-dialog, .rocr.ui-dialog-content, .rocr_level.ui-dialog-content {
-    overflow: visible;
 }
