@@ -104,7 +104,7 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function 
                 ]
             });
             $html.find('select').selectmenu({
-                width : 140
+                width : 150
             });
 
             if ($.isFunction(_callback)) {

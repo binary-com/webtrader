@@ -1,9 +1,9 @@
 .bop_input_width {
-    width: 155px;
+    width: 150px !important;
 }
 
 .bop_level_input_width_for_level {
-    width: 115px;
+    width: 150px !important;
 }
 
 .bop label {

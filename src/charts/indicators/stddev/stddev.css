@@ -1,13 +1,13 @@
 .stddev_input_width {
-    width: 155px;
+    width: 150px !important;
 }
 
 .stddev_input_width_for_period {
-    width: 115px;
+    width: 150px !important;
 }
 
 .stddev_level_input_width_for_level {
-  width: 115px;
+  width: 150px !important;
 }
 
 .stddev label {

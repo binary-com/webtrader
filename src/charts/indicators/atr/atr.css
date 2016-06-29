@@ -1,13 +1,13 @@
 .atr_input_width {
-    width: 120px;
+    width: 150px !important;
 }
 
 .atr_input_width_for_period {
-    width: 115px;
+    width: 150px !important;
 }
 
 .atr_level_input_width_for_level {
-  width: 115px;
+  width: 150px !important;
 }
 
 .atr label {

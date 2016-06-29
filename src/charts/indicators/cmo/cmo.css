@@ -1,9 +1,9 @@
 ﻿.cmo_input_width {
-    width: 155px;
+    width: 150px !important;
 }
 
 .cmo_input_width_for_period {
-    width: 135px;
+    width: 150px !important;
 }
 
 .cmo label {

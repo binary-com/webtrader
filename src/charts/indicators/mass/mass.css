@@ -1,9 +1,9 @@
 ﻿.mass_input_width {
-    width: 155px;
+    width: 155px !important;
 }
 
 .mass_input_width_for_period {
-    width: 155px;
+    width: 155px !important;
 }
 
 .mass label {

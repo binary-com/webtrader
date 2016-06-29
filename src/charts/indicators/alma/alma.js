@@ -57,14 +57,14 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'lodash', '
             var selectedDashStyle = "Solid";
             $('#alma_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 138,
+                width: 155,
                 background: "white",
                 onSelected: function (data) {
-                    $('#alma_dashStyle .dd-selected-image').css('max-width', '105px');
+                    $('#alma_dashStyle .dd-selected-image').css('max-width', '120px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#alma_dashStyle .dd-option-image').css('max-width', '105px');
+            $('#alma_dashStyle .dd-option-image').css('max-width', '120px');
 
             $html.dialog({
                 autoOpen: false,
@@ -136,7 +136,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'lodash', '
                 ]
             });
             $html.find('select').selectmenu({
-                width : 140
+                width : 155
             });
 
             if (typeof _callback == "function")

@@ -1,9 +1,9 @@
 .trima_input_width {
-    width: 155px;
+    width: 150px !important;
 }
 
 .trima_input_width_for_period {
-    width: 155px;
+    width: 150px !important;
 }
 
 .trima label {

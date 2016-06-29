@@ -65,14 +65,14 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#mass_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 155,
                 background: "white",
                 onSelected: function (data) {
-                    $('#mass_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#mass_dashStyle .dd-selected-image').css('max-width', '120px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#mass_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#mass_dashStyle .dd-option-image').css('max-width', '120px');
 
 
             var table = $html.find('#mass_levels').DataTable({
@@ -197,7 +197,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                 ]
             });
             $html.find('select').selectmenu({
-                width : 160
+                width : 155
             });
 
             if (typeof _callback == "function")

@@ -60,14 +60,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#stochrsi_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '115px');
 
             var table = $html.find('#stochrsi_levels').DataTable({
                 paging: false,
@@ -116,7 +116,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 370,
+                width: 350,
                 height: 400,
                 modal: true,
                 my: 'center',
@@ -180,7 +180,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 ]
             });
             $html.find('select').selectmenu({
-                width : 120
+                width : 150
             });
 
             if (typeof _callback == "function") {

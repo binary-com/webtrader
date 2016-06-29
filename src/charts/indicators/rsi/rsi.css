@@ -1,13 +1,13 @@
 .rsi_input_width {
-    width: 155px;
+    width: 150px !important;
 }
 
 .rsi_input_width_for_period {
-    width: 115px;
+    width: 150px !important;
 }
 
 .rsi_level_input_width_for_level {
-    width: 115px;
+    width: 150px !important;
 }
 
 .rsi label {

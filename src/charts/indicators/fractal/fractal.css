@@ -1,9 +1,9 @@
 ﻿.fractal_input_width {
-    width: 155px;
+    width: 150px !important;
 }
 
 .fractal_input_width_for_period {
-    width: 115px;
+    width: 150px !important;
 }
 
 .fractal label {

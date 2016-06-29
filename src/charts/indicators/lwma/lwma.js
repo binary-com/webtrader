@@ -54,7 +54,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#lwma_dash_style').ddslick({
                 imagePosition: "left",
-                width: 148,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
                     $('#lwma_dash_style .dd-selected-image').css('max-width', '115px');

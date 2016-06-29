@@ -66,7 +66,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#atr_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
                     $('#atr_dashStyle .dd-selected-image').css('max-width', '85px');
@@ -189,7 +189,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                 ]
             });
             $html.find('select').selectmenu({
-                width : 120
+                width : 150
             });
 
             if (typeof _callback == "function")

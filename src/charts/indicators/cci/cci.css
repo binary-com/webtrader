@@ -1,9 +1,9 @@
 ﻿.cci_input_width {
-    width: 155px;
+    width: 150px !important;
 }
 
 .cci_input_width_for_period {
-    width: 145px;
+    width: 150px !important;
 }
 
 .cci label {

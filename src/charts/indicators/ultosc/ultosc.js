@@ -65,14 +65,14 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#ultosc_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#ultosc_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#ultosc_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#ultosc_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#ultosc_dashStyle .dd-option-image').css('max-width', '115px');
 
 
             var table = $html.find('#ultosc_levels').DataTable({
@@ -123,7 +123,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 370,
+                width: 350,
                 height: 400,
                 modal: true,
                 my: 'center',
@@ -225,7 +225,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                 ]
             });
             $html.find('select').selectmenu({
-                width : 160
+                width : 150
             });
 
             if (typeof _callback == "function")
