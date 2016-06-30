@@ -2,7 +2,9 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+
+    var updatingSeriesIDs = undefined;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -31,11 +33,8 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.atr;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.atr-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
@@ -165,6 +164,19 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                                     });
                                 }
                             });
+
+                            /*
+                                Remove previous added indicator before adding a new one
+                             */
+                            if(updatingSeriesIDs) {
+                                var chart = $(containerIDWithHash).highcharts();
+                                chart.series.forEach(function(series) {
+                                    if (series.options.isInstrument) {
+                                        series.removeIndicator(updatingSeriesIDs);
+                                    }
+                                });
+                            }
+
                             var options = {
                                 period: parseInt($html.find(".atr_input_width_for_period").val()),
                                 stroke: defaultStrokeColor,
@@ -203,7 +215,13 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
     return {
 
-        open : function ( containerIDWithHash ) {
+        /**
+         * @param containerIDWithHash - containerId where indicator needs to be added
+         * @param series_ids - array of series IDs which should be edited
+         */
+        open : function ( containerIDWithHash, series_ids ) {
+
+            updatingSeriesIDs = series_ids
 
             if ($(".atr").length == 0)
             {

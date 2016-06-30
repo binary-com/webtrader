@@ -304,3 +304,13 @@ button[disabled] {
 table {
   line-height: 1.2em !important;
 }
+
+.table {
+    display: table;
+}
+.row {
+    display: table-row;
+}
+.cell {
+    display: table-cell;
+}
