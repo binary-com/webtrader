@@ -94,7 +94,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
             })
             .catch(function(err){
                  var msg = "Error getting data for " + instrumentName + "";
-                 require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: msg }); });
+                 require(["jquery-growl"], function($) { $.growl.error({ message: msg }); });
                  var chart = $(containerIDWithHash).highcharts();
                  chart && chart.showLoading(msg);
                  console.error(err);
@@ -102,9 +102,8 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
             .then(function(data) {
                 if (data && !data.error && options.delayAmount > 0) {
                     //start the timer
+                    require(["jquery-growl"], function() { $.growl.warning({ message: 'Feed for ' + instrumentName + ' is delayed by ' + options.delayAmount + ' minute(s)' }); });
                     chartingRequestMap[key].timerHandler = setInterval(function() {
-                      //TODO: Avoid global notification - TODO: Consume this notification
-                      $(document).trigger("feedTypeNotification", [key, "delayed-feed"]);
                       var lastBar = barsTable.chain()
                                               .find({instrumentCdAndTp : key})
                                               .simplesort('time', true)

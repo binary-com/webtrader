@@ -32,6 +32,11 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function 
             $html.find("input[type='button']").button();
 
             $html.find("#sar_stroke").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -54,7 +59,8 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function 
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                width: 280,
+                width: 350,
+                height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,
@@ -98,7 +104,7 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function 
                 ]
             });
             $html.find('select').selectmenu({
-                width : 140
+                width : 150
             });
 
             if ($.isFunction(_callback)) {

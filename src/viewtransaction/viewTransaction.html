@@ -29,7 +29,7 @@
       </div> -->
     </div>
 
-    <div class="table" rv-show="route.value | eq 'table'">
+    <div class="table" rv-unless="table.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
       <div> <p>Start Time</p>
           <span rv-text="table.date_start | moment | or '-'"></span>
       </div>
@@ -96,7 +96,42 @@
                 class="dotted-underline smaller"></span>
       </div>
     </div>
-
+    <div class="table" rv-if="table.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
+      <div> <p>Status</p>
+          <span rv-text="table.status" rv-class-green="table.is_sold | eq 0" rv-class-red="table.is_sold | eq 1"></span>
+      </div>
+      <div> <p>Entry Spot</p>
+          <span rv-tooltip="table.entry_tick_time | moment | or '-'"
+                rv-if="table.entry_tick_time"
+                rv-text="table.entry_tick | to-fixed table.decPlaces | or '-'"
+                class="dotted-underline"></span>
+      </div>
+      <div rv-if="table.is_sold | eq 1"> <p>Exit Spot</p>
+          <span rv-tooltip="table.exit_tick_time | moment | or '-'"
+                rv-text="table.exit_tick | to-fixed table.decPlaces | or '-'"
+                rv-class-dotted-underline="table.exit_tick"></span>
+      </div>
+      <div rv-if="table.is_sold | eq 0"> <p>Current Level</p>
+          <span rv-tooltip="table.current_spot_time | moment | or '-'"
+                rv-text="table.current_spot | to-fixed table.decPlaces | or '-'"
+                rv-class-dotted-underline="table.current_spot"></span>
+      </div>
+      <div> <p>Stop Loss Level</p>
+          <span rv-text="table.stop_loss_level | to-fixed table.decPlaces"></span>
+      </div>
+      <div> <p>Stop Profit Level</p>
+          <span rv-text="table.stop_profit_level | to-fixed table.decPlaces"></span>
+      </div>
+      <div> <p>Amount Per Point</p>
+          <span rv-text="table.amount_per_point"></span>
+      </div>
+      <div> <p rv-text="table.pro_los"></p>
+          <span rv-text="table.profit | to-fixed 2" rv-class-green="table.profit | gt -0.01" rv-class-red="table.profit | lt 0"></span>
+      </div>
+      <div> <p>Profit/Loss (points)</p>
+          <span rv-text="table.profit_point | to-fixed 2" rv-class-green="table.profit_point | gt -0.01" rv-class-red="table.profit_point | lt 0"></span>
+      </div>
+    </div>
     <div class="chart-container" rv-show="route.value | notify chart.manual_reflow | eq 'chart'">
       <div class='transaction-chart' rv-show="chart.loading | eq ''"> </div>
 
@@ -122,7 +157,7 @@
       <span>
         <button rv-on-click="sell.sell"
                 rv-disabled="sell.sell_at_market_enabled | eq false"
-                class="sell-button shine">Sell At Market</button>
+                class="sell-button">Sell At Market</button>
       </span>
 
     </div>

@@ -1,9 +1,9 @@
 ﻿.hma_input_width {
-    width: 150px;
+    width: 150px !important;
 }
 
 .hma_input_width_for_period {
-    width: 145px;
+    width: 150px !important;
 }
 
 .hma label {
@@ -16,5 +16,5 @@
 }
 
 .hma-ui-dialog, .hma.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

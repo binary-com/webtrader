@@ -76,7 +76,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                     color: 'red',
                     upColor: 'green',
                     upLineColor: 'black',
-                    shadow: true
+                    shadow: false
                 }
             },
 

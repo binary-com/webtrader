@@ -121,7 +121,9 @@ button.ui-button-text-only .ui-menu {
 .ui-menu {
     z-Index: 1003;
 }
-
+.ui-selectmenu-menu .ui-menu {
+  max-height: 85px;
+}
 /*Overriding this class inheritted from dataTables jquery plugin*/
 
 .dataTables_scrollHeadInner,
@@ -152,7 +154,7 @@ button.ui-button-text-only .ui-menu {
 .sk-spinner-container {
     width: 60px;
     height: 60px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 60px;
@@ -241,11 +243,6 @@ input::-ms-clear {
 /* Remove dotted-underline around buttons in FF */
 button::-moz-focus-inner { border: 0; }
 
-.orange-button {
-  background: #e98024;
-  color: white;
-}
-
 /* default style for inputs */
 input:not([type='checkbox']) {
   border: none;
@@ -258,6 +255,34 @@ input:not([type='checkbox']) {
   height: 26px;
   line-height: 26px;
 }
+
+/*Overriding css for color-picker*/
+input[type="radio"].ui-colorpicker-mode {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+input[type="number"].ui-colorpicker-number {
+  box-shadow: none;
+  width: 60px;
+  height: auto;
+  line-height: normal;
+}
+input[type="text"].ui-colorpicker-hex-input {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+input[type="text"].ui-colorpicker-hex-alpha {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+/*Ends here*/
+
 input:focus {
   box-shadow: inset 0 2px 2px rgba(0,0,120,.25);
 }

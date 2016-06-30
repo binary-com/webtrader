@@ -189,7 +189,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       var id = contract.contract_id,
           bid_price = contract.bid_price;
       if(id !== state.contract_id) { return; }
-
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
@@ -221,6 +220,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       } else {
           /*Just change the current_spot_time to date_expiry*/
           state.table.current_spot_time = state.table.date_expiry;
+      }
+      /*Required for spreads only*/
+      if(state.table.contract_type === "SPREAD"){
+        state.table.profit = contract.bid_price - contract.buy_price;
+        state.table.profit_point = state.table.profit / state.table.per_point;
+        if(state.table.entry_tick)
+          state.table.current_spot = state.table.entry_tick + state.table.profit_point * state.table.direction;
+        if(contract.is_sold){
+          state.table.status = "Closed";
+          state.table.is_sold = contract.is_sold;
+          state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction;
+          state.table.exit_tick_time = contract.sell_timeS;
+        }
       }
 
       if(contract.sell_price){
@@ -332,6 +344,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             currency: (proposal.currency ||  'USD') + ' ',
             current_spot_time: undefined,
             current_spot: undefined,
+            contract_type: proposal.contract_type,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
 
@@ -375,6 +388,36 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           },
           onclose: [], /* cleanup callback array when dialog is closed */
       };
+
+      // This values are required for SPREADS type contract.
+      if(proposal.contract_type.indexOf("SPREAD") === 0){
+        var shortcode = proposal.shortcode.toUpperCase();
+        var details   = shortcode.replace(proposal.underlying.toUpperCase() + '_', '').split('_');
+        state.table.contract_type = "SPREAD";
+        state.table.status = proposal.is_sold? "Closed": "Open";
+        state.table.per_point = details[1];
+        state.table.stop_loss = details[3];
+        state.table.stop_profit = details[4];
+        state.table.is_point = details[5] === 'POINT';
+        state.table.is_up = proposal.shortcode['spread'.length] === 'U';
+        state.table.direction = state.table.is_up ? 1 : -1;
+        state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
+        state.table.is_sold = proposal.is_sold;
+        state.table.exit_tick_time = state.table.is_sold ? proposal.sell_time : undefined;
+        state.table.profit = parseFloat(proposal.sell_price ? proposal.sell_price : proposal.bid_price) - parseFloat(proposal.buy_price);
+        state.table.profit_point = state.table.profit / state.table.per_point;
+        state.table.pro_los = "Profit/Loss (" + state.table.currency.replace(" ","") + ")";
+        state.table.request ={
+                "proposal"        : 1,
+                "symbol"          : proposal.underlying,
+                "currency"        : proposal.currency,
+                "contract_type"   : details[0],
+                "amount_per_point": state.table.per_point,
+                "stop_loss"       : state.table.stop_loss,
+                "stop_profit"     : state.table.stop_profit,
+                "stop_type"       : details[5].toLowerCase()
+        };
+      }
 
       state.sell.sell = function() { sell_at_market(state, root); }
 
@@ -538,15 +581,32 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           }
         }
         /* TODO: see if back-end is going to give uss (entry/exit)_tick and (entry/exit)_tick_time fileds or not! */
-        if(data.candles && !state.table.entry_tick_time) {
+        if((data.candles && !state.table.entry_tick_time) || state.table.contract_type.indexOf("SPREAD") === 0) {
+          state.table.entry_tick = undefined; // reseting value for calculation.
           get_tick_value(state.chart.symbol, state.table.date_start).then(function(data){
             var history = data.history;
             if(history.times.length !== 1) return;
             state.table.entry_tick_time = history.times[0];
+
+            if(state.table.contract_type.indexOf("SPREAD") === 0){
+              liveapi.send(state.table.request). then(function(_data){
+                state.table.spread = _data.proposal.spread;
+                state.table.decPlaces = ((/^\d+(\.\d+)?$/).exec(history.prices[0])[1] || '-').length - 1;
+                state.table.entry_tick = parseFloat(history.prices[0]* 1 + state.table.direction * state.table.spread / 2);
+                state.table.stop_loss_level = state.table.entry_tick + state.table.stop_loss / (state.table.is_point ? 1 : state.table.per_point) * (- state.table.direction);
+                state.table.stop_profit_level = state.table.entry_tick + state.table.stop_profit / (state.table.is_point ? 1 : state.table.per_point) * (state.table.direction);
+                if(state.table.is_sold){
+                  state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction; // Above is here.
+                }
+                // unsubscribe
+                liveapi.send({forget: _data.proposal.id});
+              }).catch(function(err) { console.error(err); });
+            }
+
             chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
           });
         }
-        if(data.history && !state.table.exit_tick_time && state.table.is_expired) {
+        if(data.history && !state.table.exit_tick_time && state.table.is_expired && state.table.contract_type != "SPREAD") {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
@@ -555,6 +615,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             var history = data.history;
             if(history.times.length !== 1) return;
             state.table.exit_tick_time = history.times[0];
+
+            // Already set the value for exit tick above.
+            if(state.table.contract_type.indexOf("SPREAD") === 0){
+              return;
+            }
+
             state.table.exit_tick = history.prices[0];
             chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
           });

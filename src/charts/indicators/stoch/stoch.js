@@ -32,6 +32,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
 
             $html.find("#stoch_k_stroke,#stoch_d_stroke").each(function () {
                 $(this).colorpicker({
+                    position: {
+                        at: "right+100 bottom",
+                        of: "element",
+                        collision: "fit"
+                    },
                     part: {
                         map: { size: 128 },
                         bar: { size: 128 }
@@ -57,14 +62,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
             var selectedDashStyle = "Solid";
             $('#stoch_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stoch_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#stoch_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stoch_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#stoch_dashStyle .dd-option-image').css('max-width', '115px');
 
 
             var table = $html.find('#stoch_levels').DataTable({
@@ -115,7 +120,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 400,
+                width: 350,
                 height: 400,
                 modal: true,
                 my: 'center',
@@ -189,7 +194,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
                 ]
             });
             $html.find('select').selectmenu({
-                width : 160
+                width : 150
             });
 
             if (typeof _callback == "function")
