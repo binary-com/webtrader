@@ -53,7 +53,20 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
     }
 
     $(function () {
-
+        if(getParameterByName("affiliates")==="true"){
+            Highcharts.setOptions(
+                {
+                    plotOptions: {
+                        candlestick: {
+                        lineColor: 'rgba(0,0,0,1)',
+                        color: 'rgba(215,24,24,1)',
+                        upColor: 'rgba(2,146,14,1)',
+                        upLineColor: 'rgba(0,0,0,1)',
+                        shadow: true
+                    }
+            }});
+        }
+        
         Highcharts.setOptions({
             global: {
                 useUTC: true,
