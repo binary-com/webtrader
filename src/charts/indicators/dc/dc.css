@@ -1,9 +1,9 @@
 ﻿.dc_input_width {
-    width: 140px;
+    width: 150px !important;
 }
 
 .dc_input_width_for_period {
-    width: 135px;
+    width: 150px !important;
 }
 
 .dc label {
@@ -11,5 +11,5 @@
 }
 
 .dc-ui-dialog, .dc.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

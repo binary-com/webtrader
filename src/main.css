@@ -49,10 +49,6 @@ body > .footer .addiction-warning a:hover {
   height: 14px !important;
 }
 
-.ui-dialog { /* add boxshadow to dialgos*/
-  box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
-}
-
 .ui-dialog {
     padding: 0!important;
 }
@@ -125,7 +121,9 @@ button.ui-button-text-only .ui-menu {
 .ui-menu {
     z-Index: 1003;
 }
-
+.ui-selectmenu-menu .ui-menu {
+  max-height: 85px;
+}
 /*Overriding this class inheritted from dataTables jquery plugin*/
 
 .dataTables_scrollHeadInner,
@@ -156,7 +154,7 @@ button.ui-button-text-only .ui-menu {
 .sk-spinner-container {
     width: 60px;
     height: 60px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 60px;
@@ -277,6 +275,12 @@ input[type="text"].ui-colorpicker-hex-input {
   height: auto;
   line-height: normal;
 }
+input[type="text"].ui-colorpicker-hex-alpha {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
 /*Ends here*/
 
 input:focus {
@@ -299,4 +303,14 @@ button[disabled] {
 
 table {
   line-height: 1.2em !important;
+}
+
+.table {
+    display: table;
+}
+.row {
+    display: table-row;
+}
+.cell {
+    display: table-cell;
 }

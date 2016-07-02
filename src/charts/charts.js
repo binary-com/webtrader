@@ -56,7 +56,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
         Highcharts.setOptions({
             global: {
-                useUTC: true
+                useUTC: true,
+                canvasToolsURL: "https://code.highcharts.com/modules/canvas-tools.js"
             },
             lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
         });
@@ -265,14 +266,13 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     }
                 },
 
-                //This will be updated when 'Settings' button is implemented
                 plotOptions: {
                     candlestick: {
                         lineColor: 'black',
                         color: 'red',
                         upColor: 'green',
                         upLineColor: 'black',
-                        shadow: true
+                        shadow: false
                     },
                     series: {
                         events: {
@@ -283,9 +283,15 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                                     //Add current price indicator
                                     //If we already added currentPriceLine for this series, ignore it
-                                    console.log(this.options.id, this.yAxis.plotLinesAndBands);
+                                    //console.log(this.options.id, this.yAxis.plotLinesAndBands);
                                     this.removeCurrentPrice();
                                     this.addCurrentPrice();
+                                    
+                                    //Add mouse wheel zooming
+                                    require(['common/highcharts.mousewheel'], function($Hmw) {
+                                        $Hmw.mousewheel(containerIDWithHash);
+                                    });
+                                    
                                 }
 
                                 this.chart.hideLoading();
@@ -322,6 +328,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                         }
                     },
                     ordinal : false
+                },
+
+                scrollbar: {
+                  liveRedraw: false
                 },
 
                 yAxis: [{

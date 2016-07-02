@@ -29,6 +29,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function (
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height:400,
                 modal: true,
                 my: 'center',
                 at: 'center',
