@@ -81,9 +81,8 @@ body {
 }
 .nav-normal-menu > li {
     position: relative;
-    top: -20px;
+    top: -17px;
     padding-top: 10px;
-    padding-bottom: 5px;
 }
 
 .nav-normal-menu li > ul {
@@ -185,7 +184,7 @@ body {
   position: absolute;
   right: 0px;
   top: 27px;
-  width: 200px;
+  width: 220px;
 }
 #nav-container .account > a {
   cursor: default;
@@ -204,6 +203,7 @@ body {
 #nav-container .account .nav-dropdown-toggle .nav-caret {
   position: absolute;
   top: 35px;
+  right: 30px;
 }
 
 #nav-container .account .logout,

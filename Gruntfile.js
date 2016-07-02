@@ -379,7 +379,8 @@ module.exports = function (grunt) {
                         {
                             expand: true,
                             cwd: 'dist/uncompressed/',
-                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js', 'v<%=pkg.version%>/images/webtrader_16px.png', 'v<%=pkg.version%>/images/webtrader_128px.png']
+                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js', 
+                                'v<%=pkg.version%>/images/favicons/**']
                         }
                     ]
             }

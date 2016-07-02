@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/2/15.
  */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -10,8 +10,6 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
     }
 
     function init(containerIDWithHash, _callback) {
-
-        require(['css!charts/indicators/stochrsi/stochrsi.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -21,7 +19,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
         };
         var defaultLevels = [new Level(0.30, 'red', 1, 'Dash'), new Level(0.70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/stochrsi/stochrsi.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
+        require(['text!charts/indicators/stochrsi/stochrsi.html', 'text!charts/indicators/indicators.json', 'css!charts/indicators/stochrsi/stochrsi.css'], function ($html, data) {
 
             var defaultStrokeColor = '#cd0a0a';
 
@@ -31,15 +29,16 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.stochrsi;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
 
             $html.find("input[type='button']").button();
 
             $html.find("#stochrsi_stroke").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -61,14 +60,14 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#stochrsi_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '115px');
 
             var table = $html.find('#stochrsi_levels').DataTable({
                 paging: false,
@@ -118,6 +117,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -180,7 +180,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                 ]
             });
             $html.find('select').selectmenu({
-                width : 120
+                width : 150
             });
 
             if (typeof _callback == "function") {

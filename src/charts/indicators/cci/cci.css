@@ -1,9 +1,9 @@
 ﻿.cci_input_width {
-    width: 150px;
+    width: 150px !important;
 }
 
 .cci_input_width_for_period {
-    width: 145px;
+    width: 150px !important;
 }
 
 .cci label {
@@ -16,5 +16,5 @@
 }
 
 .cci-ui-dialog, .cci.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

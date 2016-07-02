@@ -26,6 +26,11 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick']
 
             $html.find("#t3_stroke").each(function () {
                 $(this).colorpicker({
+                    position: {
+                        at: "right+100 bottom",
+                        of: "element",
+                        collision: "fit"
+                    },
                     part: {
                         map: { size: 128 },
                         bar: { size: 128 }
@@ -48,19 +53,20 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick']
             var selectedDashStyle = "Solid";
             $('#t3_dash_style').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#t3_dash_style .dd-selected-image').css('max-width', '125px');
+                    $('#t3_dash_style .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#t3_dash_style .dd-option-image').css('max-width', '125px');
+            $('#t3_dash_style .dd-option-image').css('max-width', '115px');
 
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height: 400,
                 modal: true,
                 my: "center",
                 at: "center",
@@ -122,7 +128,7 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick']
                 ]
             });
             $html.find('select').selectmenu({
-                width : 160
+                width : 150
             });
 
             if ($.isFunction(_callback)) {

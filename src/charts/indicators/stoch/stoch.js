@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/8/16
  */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -10,8 +10,6 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
     }
 
     function init( containerIDWithHash, _callback ) {
-
-        require(['css!charts/indicators/stoch/stoch.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -21,23 +19,24 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/stoch/stoch.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
+        require(['text!charts/indicators/stoch/stoch.html', 'text!charts/indicators/indicators.json', 'css!charts/indicators/stoch/stoch.css'], function ( $html, data ) {
 
             $html = $($html);
             $html.appendTo("body");
 
             data = JSON.parse(data);
             var current_indicator_data = data.stoch;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
 
             $html.find("input[type='button']").button();
 
             $html.find("#stoch_k_stroke,#stoch_d_stroke").each(function () {
                 $(this).colorpicker({
+                    position: {
+                        at: "right+100 bottom",
+                        of: "element",
+                        collision: "fit"
+                    },
                     part: {
                         map: { size: 128 },
                         bar: { size: 128 }
@@ -63,14 +62,14 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#stoch_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stoch_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#stoch_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stoch_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#stoch_dashStyle .dd-option-image').css('max-width', '115px');
 
 
             var table = $html.find('#stoch_levels').DataTable({
@@ -121,7 +120,8 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 450,
+                width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -194,7 +194,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                 ]
             });
             $html.find('select').selectmenu({
-                width : 160
+                width : 150
             });
 
             if (typeof _callback == "function")

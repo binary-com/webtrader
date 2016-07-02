@@ -2,6 +2,7 @@
   background: white;
   padding: 10px !important;
 }
+
 .indicator-dialog span.title-big {
   display: block;
   font-size: 1.4em;
@@ -16,22 +17,44 @@
   margin-bottom: 15px;
 }
 
-.indicator-dialog div.category > div span {
+.indicator-dialog div.current div.table div.table span {
+  padding-right: 5px;
+}
+
+.indicator-dialog div.current a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.indicator-dialog div.category > div span, .indicator-dialog div.current span {
   display: inline-block;
   vertical-align: top;
 }
 
-.indicator-dialog div.category > div > span:nth-child(1) {
+.indicator-dialog div.category > div > span:nth-child(1), .indicator-dialog div.current > div.table > div.row:nth-child(1) > div.cell:nth-child(1) {
   width: 170px;
   font-size: 0.925em;
 }
+
+.indicator-dialog div.current > div.table {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  margin-right: 18px;
+  vertical-align: middle;
+}
+
+.indicator-dialog div.current > div.table > div.row:nth-child(1) > div.cell:nth-child(2) {
+  cursor: pointer
+}
+
 .indicator-dialog div.category > div {
   padding-top: 10px;
   padding-bottom: 10px;
   display: inline-block;
   margin-right: 18px;
   vertical-align: middle;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .indicator-dialog div.category > div > span.question-mark,

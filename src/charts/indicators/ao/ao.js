@@ -41,6 +41,11 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             $html.find("input[type='button']").button();
 
             $html.find("#ao_high_hstgrm_color").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -60,6 +65,11 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             });
 
             $html.find("#ao_low_hstgrm_color").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -82,14 +92,14 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#ao_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#ao_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#ao_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#ao_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#ao_dashStyle .dd-option-image').css('max-width', '115px');
 
 
             var table = $html.find('#ao_levels').DataTable({
@@ -140,7 +150,8 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 450,
+                width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -209,7 +220,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                 ]
             });
             $html.find('select').selectmenu({
-                width : 160
+                width : 150
             });
 
             if (typeof _callback == "function")

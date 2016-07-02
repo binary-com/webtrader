@@ -184,6 +184,14 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
                     elem.click();
                 });
 
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.real-account"), 'click', 'loading Real account openning ...', 'realaccount/realaccount',
+                function (real) {
+                    var elem = $navMenu.find("a.real-account");
+                    real.init(elem);
+                    elem.click();
+                });
+
             //Register async loading of window profit-table
             load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
                 function (profitTable) {
@@ -221,6 +229,14 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
                 function (config) {
                     var elem = $navMenu.find("a.config");
                     config.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of custom theme dialog
+            load_ondemand($navMenu.find("a.theme_custom"), 'click', 'loading custom theme configuration...', 'themes/custom_theme/custom_theme',
+                function (custom_theme) {
+                    var elem = $navMenu.find("a.theme_custom");
+                    custom_theme.init(elem);
                     elem.click();
                 });
 

@@ -1,15 +1,11 @@
 .trima_input_width {
-    width: 140px;
+    width: 150px !important;
 }
 
 .trima_input_width_for_period {
-    width: 135px;
+    width: 150px !important;
 }
 
 .trima label {
     display: block;
-}
-
-.trima-ui-dialog, .trima.ui-dialog-content {
-    overflow: visible;
 }
