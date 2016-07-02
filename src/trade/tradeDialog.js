@@ -650,6 +650,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               if (extra.category !== 'Asians') {
                 extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
               }
+              /* for higher/lower final barrier value is entry_quote + barrrier */
+              if(extra.category === 'Up/Down' && _(['higher','lower']).includes(extra.category_display)) {
+                extra.barrier = state.barriers.barrier;
+              }
               extra.show_tick_chart = true;
             }
         }
