@@ -1,5 +1,6 @@
 {
   "PROFIT_TABLE": {
+    "TITLE": "Profit Table",
     "HEADER": {
       "PURCHASE_DATE" : "Purchase Date",
       "REF": "Ref.",
@@ -9,10 +10,13 @@
       "SALE_PRICE": "Sale Price",
       "PROFIT_LOSS": "Profit/ Loss"
     },
-    "TITLE": "Profit Table"
+    "FOOTER": {
+      "TOTAL_PROFIT_LOSS": "Total Profit/Loss"
+    }
   },
   "COMMON": {
     "VIEW": "View",
-    "SEARCH": "Search"
+    "SEARCH": "Search",
+    "JUMP_TO": "Jump to"
   }
 }

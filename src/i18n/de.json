@@ -1,5 +1,6 @@
 {
   "PROFIT_TABLE": {
+    "TITLE": "Gewinntabelle",
     "HEADER": {
       "PURCHASE_DATE" : "Datum",
       "REF": "Ref.",
@@ -9,10 +10,13 @@
       "SALE_PRICE": "Verkaufskurs",
       "PROFIT_LOSS": "Gewinn/ Verlust"
     },
-    "TITLE": "Gewinntabelle"
+    "FOOTER": {
+      "TOTAL_PROFIT_LOSS": "Gesamt Profiteinbuße"
+    }
   },
   "COMMON": {
     "VIEW": "Aussicht",
-    "SEARCH": "Suche"
+    "SEARCH": "Suche",
+    "JUMP_TO": "Springen zu"
   }
 }

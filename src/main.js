@@ -80,34 +80,30 @@ requirejs.config({
 /* Initialize the websocket as soon as posssilbe */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
-var i18n_name = (local_storage.get('i18n') || { value: 'de' }).value;
+var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
 require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
 
     "use strict";
     var lang = JSON.parse(lang_json);
-    $.fn.i18n = function() {
-      var me = this.closest('[i18n]');
-      var key = me.attr('i18n');
-      var dictionary =  key ? lang[key] : lang;
-      dictionary.COMMON = lang.COMMON;
-      dictionary = flatten_object(dictionary);
-      var regexp = RegExp ('\\b(' + Object.keys (dictionary).join ('|') + ')\\b', 'g');
-      var replacer = function (_, word) { return dictionary[word]; };
-      me.find('*')
-          .each(function() {
-            if(this.hasAttribute('placeholder')){
-              var attr_value = this.getAttribute('placeholder').replace(regexp, replacer);
-              this.setAttribute('placeholder', attr_value);
-            }
-            this.childNodes.forEach(function(node){
-              if(node.nodeType !== 3) return; /*Oonly TEXT-NODES */
-              var text = node.nodeValue.replace(regexp, replacer);
-              if(text !== node.nodeValue)
-                node.nodeValue = text;
-            });
-          });
-      return this;
-    };
+    var lang_flatten = flatten_object(lang);
+    var lang_keys = Object.keys(lang_flatten).join('|');
+    /* support translating string literals */
+    String.prototype.i18n = function(path) {
+      var keys = lang_keys;
+      if(path) {
+        path = path.endsWith('.') ? path : path + '.';
+        keys = keys.replace(new RegExp(path, 'g') , '');
+      }
+      var regexp = RegExp ('\\b(' + keys + ')\\b', 'g');
+
+      var replacer = function (_, word) {
+        if(path && !word.startsWith('COMMON.'))
+          word = path + word;
+        return lang_flatten[word];
+      };
+
+      return this.replace(regexp, replacer);
+    }
 
     //By pass touch check for affiliates=true(because they just embed our charts)
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {

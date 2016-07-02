@@ -638,10 +638,6 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
               return tracker.track(options, blankWindow);
             }
 
-            if(options.i18n) {
-              dialog.attr('i18n', options.i18n);
-            }
-
             blankWindow.fixFooterPosition = fixFooterPosition;
             return blankWindow;
         },
