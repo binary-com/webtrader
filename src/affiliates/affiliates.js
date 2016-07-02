@@ -1,4 +1,17 @@
-define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util'], function( $, liveapi, menu ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util', 'highstock'], function( $, liveapi, menu ) {
+
+	//Affiliates candles should be red and green candles
+	Highcharts.setOptions(
+	{
+		plotOptions: {
+			candlestick: {
+				lineColor: 'rgba(0,0,0,1)',
+				color: 'rgba(215,24,24,1)',
+				upColor: 'rgba(2,146,14,1)',
+				upLineColor: 'rgba(0,0,0,1)'
+			}
+		}
+	});
 
 	var init_chart_options = function (dialog, timePeriod, type, instrumentName){
 			var id = dialog.attr('id');
