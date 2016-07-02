@@ -637,7 +637,6 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             blankWindow.track = function(options){
               return tracker.track(options, blankWindow);
             }
-
             blankWindow.fixFooterPosition = fixFooterPosition;
             return blankWindow;
         },
