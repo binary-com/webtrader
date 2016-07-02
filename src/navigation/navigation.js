@@ -13,7 +13,10 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                 var $elem = $(this);
                 var hasSubMenus = $elem.find("ul").length > 0;
                 if (!hasSubMenus) {
-                    $elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");
+                    if(!$elem.parent("ul").hasClass("nav-closed")){
+                        $elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");    
+                    }
+                    
                 }
             });
         });
