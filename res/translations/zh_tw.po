@@ -226,6 +226,9 @@ msgstr ""
 msgid "Applied to"
 msgstr ""
 
+msgid "Apply"
+msgstr ""
+
 msgid "Appropriateness Test: WARNING:"
 msgstr ""
 
@@ -283,6 +286,9 @@ msgstr ""
 msgid "CLOSE"
 msgstr ""
 
+msgid "Cancel"
+msgstr ""
+
 msgid "Candlestick"
 msgstr ""
 
@@ -331,6 +337,9 @@ msgstr ""
 msgid "Chrome"
 msgstr ""
 
+msgid "Chrome Extension"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr ""
 
@@ -353,6 +362,9 @@ msgid "Commodities trading frequency"
 msgstr ""
 
 msgid "Conditions"
+msgstr ""
+
+msgid "Config changes successful"
 msgstr ""
 
 msgid "Continue"
@@ -460,6 +472,9 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+msgid "Do you want to install Webtrader chrome extension?"
+msgstr ""
+
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account."
 msgstr ""
 
@@ -472,7 +487,19 @@ msgstr ""
 msgid "Double MA Type"
 msgstr ""
 
-msgid "Downloading CSV"
+msgid "Double click the object to remove."
+msgstr ""
+
+msgid "Download CSV"
+msgstr ""
+
+msgid "Download PNG"
+msgstr ""
+
+msgid "Download SVG"
+msgstr ""
+
+msgid "Downloading .csv"
 msgstr ""
 
 msgid "Draw"
@@ -503,6 +530,9 @@ msgid "Entry Spot"
 msgstr ""
 
 msgid "Entry spot"
+msgstr ""
+
+msgid "Error downloading .csv"
 msgstr ""
 
 msgid "Estimated Net Worth"
@@ -893,6 +923,9 @@ msgstr ""
 msgid "Please"
 msgstr ""
 
+msgid "Please enter a value for"
+msgstr ""
+
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr ""
 
@@ -971,10 +1004,19 @@ msgstr ""
 msgid "Register free account"
 msgstr ""
 
+msgid "Reloading page"
+msgstr ""
+
 msgid "Remove"
 msgstr ""
 
+msgid "Remove Selected"
+msgstr ""
+
 msgid "Repeat password"
+msgstr ""
+
+msgid "Reset to Defaults"
 msgstr ""
 
 msgid "Resources"
@@ -1140,6 +1182,9 @@ msgid "Street address"
 msgstr ""
 
 msgid "Stroke"
+msgstr ""
+
+msgid "Stroke color"
 msgstr ""
 
 msgid "Stroke width"
@@ -1377,6 +1422,9 @@ msgstr ""
 msgid "Your transaction reference number is"
 msgstr ""
 
+msgid "and"
+msgstr ""
+
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
 "be exposing yourself to risks (which may be significant, including the risk "
@@ -1384,10 +1432,19 @@ msgid ""
 "experience to properly assess or mitigate."
 msgstr ""
 
+msgid "between"
+msgstr ""
+
 msgid "contact support"
 msgstr ""
 
 msgid "customer support"
+msgstr ""
+
+msgid "day"
+msgstr ""
+
+msgid "days"
 msgstr ""
 
 msgid "e.g,"
@@ -1409,6 +1466,12 @@ msgid "for mobile charts"
 msgstr ""
 
 msgid "has updated its"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "hours"
 msgstr ""
 
 msgid "https://developers.binary.com/"
@@ -1459,6 +1522,9 @@ msgstr ""
 msgid "main site"
 msgstr ""
 
+msgid "minute"
+msgstr ""
+
 msgid "minutes"
 msgstr ""
 
@@ -1475,6 +1541,12 @@ msgid "please play responsibly. Read about"
 msgstr ""
 
 msgid "points"
+msgstr ""
+
+msgid "second"
+msgstr ""
+
+msgid "seconds"
 msgstr ""
 
 msgid "session overview"
