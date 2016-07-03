@@ -1,12 +1,16 @@
 import subprocess, os, fnmatch, re
 from HTMLParser import HTMLParser
 
+# Unfortunately there are no easy way to extract strings from .js files
+# This array will be added to generator .po files regardless of contents in html files.
+static = [ 'View', 'Total Profit/Loss' ];
+
 # Parsing webtrader html files.
 class WebtraderParser(HTMLParser):
     def __init__(self):
         HTMLParser.__init__(self)
         self.is_script = False
-        self.texts = []
+        self.texts = static
     def handle_starttag(self, tag, attrs):
         if tag == 'script':
             self.is_script = True

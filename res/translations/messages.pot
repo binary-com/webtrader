@@ -1190,6 +1190,9 @@ msgstr ""
 msgid "Total Cost"
 msgstr "" 
 
+msgid "Total Profit/Loss"
+msgstr "" 
+
 msgid "Touch/No Touch"
 msgstr "" 
 
