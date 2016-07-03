@@ -164,7 +164,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         if (duration.seconds() > 0 && seconds < 10*60)
             ret += ' ' + duration.seconds() + ' ' + (duration.seconds() > 1 ? 'seconds' : 'second');
 
-        return _.trim(ret);
+        return _.trim(ret).i18n();
     }
     /* formatter to bold last character */
     rv.formatters['bold-last-character'] = function(str){
