@@ -7,6 +7,7 @@ static = [
     'View', 'Total Profit/Loss', 'Asset Index', 'Downloading .csv',
     'Error downloading .csv', 'Download PNG', 'Download SVG', 'Download CSV',
     'Remove Selected', 'Cancel', 'Double click the object to remove.',
+    'Horizontal Line', 'Stroke width', 'Stroke color', 
 ]
 
 # Parsing webtrader html files.
