@@ -11,6 +11,8 @@ static = [
     'Please enter a value for', 'between', 'and', 'Add/remove overlays',
     'Chrome Extension', 'Do you want to install Webtrader chrome extension?',
     'days', 'day', 'hours', 'hour', 'minutes', 'minute', 'seconds', 'second',
+    'Change Backend Server', 'Apply', 'Reset to Defaults', 'Config changes successful',
+    'Reloading page', 
 ]
 
 # Parsing webtrader html files.
