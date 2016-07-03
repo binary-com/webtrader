@@ -5,7 +5,8 @@ from HTMLParser import HTMLParser
 # This array will be added to generator .po files regardless of contents in html files.
 static = [
     'View', 'Total Profit/Loss', 'Asset Index', 'Downloading .csv',
-    'Error downloading .csv', 'Download PNG', 'Download SVG', 'Download CSV'
+    'Error downloading .csv', 'Download PNG', 'Download SVG', 'Download CSV',
+    'Remove Selected', 'Cancel', 'Double click the object to remove.',
 ]
 
 # Parsing webtrader html files.

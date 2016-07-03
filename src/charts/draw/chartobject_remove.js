@@ -25,7 +25,7 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                 of: window,
                 resizable: false,
                 buttons: [{
-                    text: "Remove Selected",
+                    text: 'Remove Selected'.i18n(),
                     click: function() {
                       var containerIDWithHash = $(".indicator_remove_dialog").data('refererChartID');
                         table
@@ -47,7 +47,7 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
                         $( ".indicator_remove_dialog" ).dialog('close');
                     }
                 },{
-                    text: "Cancel",
+                    text: 'Cancel'.i18n(),
                     click: function() {
                         $( ".indicator_remove_dialog" ).dialog('close');
                     }
@@ -103,9 +103,9 @@ define(["jquery", "datatables", 'charts/charts'], function ($) {
 
         showDialog : function(containerIDWithHash){
             require(["jquery", "jquery-growl"], function($){
-                $.growl.warning({message:"Double click the object to remove."});
+                $.growl.warning({message:'Double click the object to remove.'.i18n()});
             });
-            
+
         }
     };
 
