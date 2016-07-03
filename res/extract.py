@@ -9,7 +9,7 @@ static = [
     'Remove Selected', 'Cancel', 'Double click the object to remove.',
     'Horizontal Line', 'Stroke width', 'Stroke color', 'Vertical Line',
     'Please enter a value for', 'between', 'and', 'Add/remove overlays',
-    
+    'Chrome Extension', 'Do you want to install Webtrader chrome extension?',
 ]
 
 # Parsing webtrader html files.
