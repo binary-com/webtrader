@@ -1,0 +1,5120 @@
+msgid "All"
+msgstr ""
+
+msgid "Property"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Balance"
+msgstr ""
+
+msgid "Trade"
+msgstr ""
+
+msgid "Watchlist"
+msgstr ""
+
+msgid "Open Positions"
+msgstr ""
+
+msgid "Profit Table"
+msgstr ""
+
+msgid "Statement"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Sign Out"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "Ref."
+msgstr ""
+
+msgid "Purchase"
+msgstr ""
+
+msgid "Indicative"
+msgstr ""
+
+msgid "Purchase Date"
+msgstr ""
+
+msgid "Purchase Price"
+msgstr ""
+
+msgid "Sale Date"
+msgstr ""
+
+msgid "Sale Price"
+msgstr ""
+
+msgid "Profit/Loss"
+msgstr ""
+
+msgid "Total"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Trading Limits"
+msgstr ""
+
+msgid "Item"
+msgstr ""
+
+msgid "Limit ({currency})"
+msgstr ""
+
+msgid "Maximum number of open positions"
+msgstr ""
+
+msgid "Maximum account cash balance"
+msgstr ""
+
+msgid "Maximum daily turnover"
+msgstr ""
+
+msgid "Maximum aggregate payouts on open positions"
+msgstr ""
+
+msgid "Withdrawal limits"
+msgstr ""
+
+msgid "Your withdrawal limit is {limit} (or equivalent in other currency)."
+msgstr ""
+
+msgid "You have already withdrawn the equivalent of EUR {drawn}."
+msgstr ""
+
+msgid "An additional password can be used to restrict access to the cashier."
+msgstr ""
+
+msgid "Sign In"
+msgstr ""
+
+msgid "Get your API token"
+msgstr ""
+
+msgid "Create Account"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid "Credit/Debit"
+msgstr ""
+
+msgid "Purchase Time"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Place Order"
+msgstr ""
+
+msgid "{asset} will {type} over next {duration}"
+msgstr ""
+
+msgid "Price"
+msgstr ""
+
+msgid "Asset"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Ticks"
+msgstr ""
+
+msgid "Amount"
+msgstr ""
+
+msgid "Trade Confirmation"
+msgstr ""
+
+msgid "Entry spot"
+msgstr ""
+
+msgid "Exit spot"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Open Account"
+msgstr ""
+
+msgid "Upgrade to Real Money Account"
+msgstr ""
+
+msgid "Date of birth"
+msgstr ""
+
+msgid "Home Address"
+msgstr ""
+
+msgid "Security"
+msgstr ""
+
+msgid "Spot"
+msgstr ""
+
+msgid "Change"
+msgstr ""
+
+msgid "Chart"
+msgstr ""
+
+msgid "Purchase For"
+msgstr ""
+
+msgid "Rise"
+msgstr ""
+
+msgid "Stake"
+msgstr ""
+
+msgid "Payout"
+msgstr ""
+
+msgid "Deposit"
+msgstr ""
+
+msgid "Transactions"
+msgstr ""
+
+msgid "Opens"
+msgstr ""
+
+msgid "Closes"
+msgstr ""
+
+msgid "Personal"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Trading Times"
+msgstr ""
+
+msgid "Asset Index"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "Tomorrow"
+msgstr ""
+
+msgid "Takeout"
+msgstr ""
+
+msgid "News"
+msgstr ""
+
+msgid "Resources"
+msgstr ""
+
+msgid "Last 7 Days"
+msgstr ""
+
+msgid "Last 30 Days"
+msgstr ""
+
+msgid "Daily Report"
+msgstr ""
+
+msgid "Up/Down"
+msgstr ""
+
+msgid "Touch/No Touch"
+msgstr ""
+
+msgid "Ends In/Out"
+msgstr ""
+
+msgid "Stays In/Goes Out"
+msgstr ""
+
+msgid "Settles"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Color Theme"
+msgstr ""
+
+msgid "Light"
+msgstr ""
+
+msgid "Dark"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Date Of Birth"
+msgstr ""
+
+msgid "Country Of Residence"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "There are no transactions for selected period"
+msgstr ""
+
+msgid "Sell"
+msgstr ""
+
+msgid "Buy"
+msgstr ""
+
+msgid "Digit Even"
+msgstr ""
+
+msgid "Touches"
+msgstr ""
+
+msgid "Digit Over"
+msgstr ""
+
+msgid "Digit Match"
+msgstr ""
+
+msgid "Digit Under"
+msgstr ""
+
+msgid "Digit Odd"
+msgstr ""
+
+msgid "Digit Differs"
+msgstr ""
+
+msgid "No Touch"
+msgstr ""
+
+msgid "Fall"
+msgstr ""
+
+msgid "Asian Down"
+msgstr ""
+
+msgid "Asian Up"
+msgstr ""
+
+msgid "Search For Assets"
+msgstr ""
+
+msgid "Start times"
+msgstr ""
+
+msgid "Durations"
+msgstr ""
+
+msgid "Payout/Stake"
+msgstr ""
+
+msgid "Purchase for"
+msgstr ""
+
+msgid "payout"
+msgstr ""
+
+msgid "stake"
+msgstr ""
+
+msgid "Self Exclusion"
+msgstr ""
+
+msgid "Cashier Lock"
+msgstr ""
+
+msgid "Change Password"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Tick Trade"
+msgstr ""
+
+msgid "Full Trade"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Town/City"
+msgstr ""
+
+msgid "State/Province"
+msgstr ""
+
+msgid "Telephone"
+msgstr ""
+
+msgid "Postal Code / ZIP"
+msgstr ""
+
+msgid "Cashier password"
+msgstr ""
+
+msgid "Re-enter your password"
+msgstr ""
+
+msgid "Current password"
+msgstr ""
+
+msgid "New password"
+msgstr ""
+
+msgid "Verify new password"
+msgstr ""
+
+msgid "Change Password"
+msgstr ""
+
+msgid "Daily turnover limit"
+msgstr ""
+
+msgid "Once this limit is reached, you may no longer deposit."
+msgstr ""
+
+msgid "Maximum aggregate contract purchases per day."
+msgstr ""
+
+msgid "Daily limit on losses"
+msgstr ""
+
+msgid "Maximum aggregate loss per day."
+msgstr ""
+
+msgid "7-day turnover limit"
+msgstr ""
+
+msgid "Maximum aggregate contract purchases over a 7-day period."
+msgstr ""
+
+msgid "7-day limit on losses"
+msgstr ""
+
+msgid "Maximum aggregate loss over a 7-day period."
+msgstr ""
+
+msgid "30-day turnover limit"
+msgstr ""
+
+msgid "Maximum aggregate contract purchases over a 30-day period."
+msgstr ""
+
+msgid "30-day limit on losses"
+msgstr ""
+
+msgid "Maximum aggregate loss over a 30-day period."
+msgstr ""
+
+msgid "Maximum number of open positions"
+msgstr ""
+
+msgid "Session duration limit, in minutes"
+msgstr ""
+
+msgid "You will be automatically logged out after such time."
+msgstr ""
+
+msgid "Exclude me from the website until"
+msgstr ""
+
+msgid "Limits"
+msgstr ""
+
+msgid "Please enter date in the format YYYY-MM-DD."
+msgstr ""
+
+msgid "New Trade"
+msgstr ""
+
+msgid "Trade Type"
+msgstr ""
+
+msgid "Random 100 Index"
+msgstr ""
+
+msgid "Article"
+msgstr ""
+
+msgid "Start Later"
+msgstr ""
+
+msgid "Buy Price"
+msgstr ""
+
+msgid "Earning (%)"
+msgstr ""
+
+msgid "Profit"
+msgstr ""
+
+msgid "Entry Price"
+msgstr ""
+
+msgid "Exit Price"
+msgstr ""
+
+msgid "Indicative Price"
+msgstr ""
+
+msgid "Potential Profit"
+msgstr ""
+
+msgid "Sell at Market"
+msgstr ""
+
+msgid "Go back"
+msgstr ""
+
+msgid "You lost "
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Upcoming Events"
+msgstr ""
+
+msgid "Win"
+msgstr ""
+
+msgid "Loss"
+msgstr ""
+
+msgid "Full Screen"
+msgstr ""
+
+msgid "Start Now"
+msgstr ""
+
+msgid "Daily Prices"
+msgstr ""
+
+msgid "Spreads"
+msgstr ""
+
+msgid "Confirm new password"
+msgstr ""
+
+msgid "TICK"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Seconds"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "N/A"
+msgstr ""
+
+msgid "%D MA Type"
+msgstr "" 
+
+msgid "%D Period"
+msgstr "" 
+
+msgid "%D Stroke"
+msgstr "" 
+
+msgid "%K MA Type"
+msgstr "" 
+
+msgid "%K Period"
+msgstr "" 
+
+msgid "%K Stroke"
+msgstr "" 
+
+msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
+msgstr "" 
+
+msgid "* Optional field, within 20 characters and may not contain '+'."
+msgstr "" 
+
+msgid "* Passwords didn't match. Please type them again"
+msgstr "" 
+
+msgid "* Please answer to secret question, within 4-50 characters."
+msgstr "" 
+
+msgid "* Please enter a valid date in yyyy-mm-dd format."
+msgstr "" 
+
+msgid "* Please enter a vlaid phone number."
+msgstr "" 
+
+msgid "* Please enter correct email"
+msgstr "" 
+
+msgid "* Please enter the verification code sent to your email."
+msgstr "" 
+
+msgid "* Please enter your city address."
+msgstr "" 
+
+msgid "* Please enter your current password"
+msgstr "" 
+
+msgid "* Please enter your email"
+msgstr "" 
+
+msgid "* Please enter your family name."
+msgstr "" 
+
+msgid "* Please enter your first name."
+msgstr "" 
+
+msgid "* Please enter your phone number."
+msgstr "" 
+
+msgid "* Please enter your street address."
+msgstr "" 
+
+msgid "+DI Stroke"
+msgstr "" 
+
+msgid ", the"
+msgstr "" 
+
+msgid "-DI Stroke"
+msgstr "" 
+
+msgid ". By clicking OK, you confirm that you have read and accepted the updated"
+msgstr "" 
+
+msgid "1 Day"
+msgstr "" 
+
+msgid "1 Tick"
+msgstr "" 
+
+msgid "1 day"
+msgstr "" 
+
+msgid "1 hour"
+msgstr "" 
+
+msgid "1 min"
+msgstr "" 
+
+msgid "10"
+msgstr "" 
+
+msgid "10 mins"
+msgstr "" 
+
+msgid "10m"
+msgstr "" 
+
+msgid "15 mins"
+msgstr "" 
+
+msgid "15m"
+msgstr "" 
+
+msgid "1d"
+msgstr "" 
+
+msgid "1h"
+msgstr "" 
+
+msgid "1m"
+msgstr "" 
+
+msgid "2 hours"
+msgstr "" 
+
+msgid "2 mins"
+msgstr "" 
+
+msgid "2h"
+msgstr "" 
+
+msgid "2m"
+msgstr "" 
+
+msgid "3 mins"
+msgstr "" 
+
+msgid "30 mins"
+msgstr "" 
+
+msgid "30-day limit on losses"
+msgstr "" 
+
+msgid "30-day turnover limit"
+msgstr "" 
+
+msgid "30m"
+msgstr "" 
+
+msgid "3m"
+msgstr "" 
+
+msgid "4 hours"
+msgstr "" 
+
+msgid "4h"
+msgstr "" 
+
+msgid "5 mins"
+msgstr "" 
+
+msgid "5m"
+msgstr "" 
+
+msgid "7-day limit on losses"
+msgstr "" 
+
+msgid "7-day turnover limit"
+msgstr "" 
+
+msgid "8 hours"
+msgstr "" 
+
+msgid "8h"
+msgstr "" 
+
+msgid "ADX MA Type"
+msgstr "" 
+
+msgid "ADX Stroke"
+msgstr "" 
+
+msgid "ATR Period"
+msgstr "" 
+
+msgid "Acceleration"
+msgstr "" 
+
+msgid "Accept"
+msgstr "" 
+
+msgid "Account balance:"
+msgstr "" 
+
+msgid "Action"
+msgstr "" 
+
+msgid "Add"
+msgstr "" 
+
+msgid "Add indicator"
+msgstr "" 
+
+msgid "Add level"
+msgstr "" 
+
+msgid "Add overlays"
+msgstr "" 
+
+msgid "Add/remove indicators"
+msgstr "" 
+
+msgid "Add/remove overlays"
+msgstr "" 
+
+msgid "Admin"
+msgstr "" 
+
+msgid "All times are in GMT (Greenwich Mean Time)."
+msgstr "" 
+
+msgid "Amount Per Point"
+msgstr "" 
+
+msgid "Amount per point"
+msgstr "" 
+
+msgid "Answer"
+msgstr "" 
+
+msgid "Applied to"
+msgstr "" 
+
+msgid "Appropriateness Test: WARNING:"
+msgstr "" 
+
+msgid "Are you sure you want to delete this token?"
+msgstr "" 
+
+msgid "Aroon Down Stroke"
+msgstr "" 
+
+msgid "Aroon Up Stroke"
+msgstr "" 
+
+msgid "Asset"
+msgstr "" 
+
+msgid "Asset Index"
+msgstr "" 
+
+msgid "Back"
+msgstr "" 
+
+msgid "Back to list"
+msgstr "" 
+
+msgid "Background Color"
+msgstr "" 
+
+msgid "Barrier offset"
+msgstr "" 
+
+msgid "Binary options or other financial derivatives"
+msgstr "" 
+
+msgid "Binary.com"
+msgstr "" 
+
+msgid "Binary.com : Webtrader"
+msgstr "" 
+
+msgid "Bought"
+msgstr "" 
+
+msgid "Browser upgrade required"
+msgstr "" 
+
+msgid "Buy Price"
+msgstr "" 
+
+msgid "Buy price"
+msgstr "" 
+
+msgid "By clicking"
+msgstr "" 
+
+msgid "CLOSE"
+msgstr "" 
+
+msgid "Candlestick"
+msgstr "" 
+
+msgid "Candlestick down-color"
+msgstr "" 
+
+msgid "Candlestick down-line"
+msgstr "" 
+
+msgid "Candlestick up-color"
+msgstr "" 
+
+msgid "Candlestick up-line"
+msgstr "" 
+
+msgid "Cash Balance"
+msgstr "" 
+
+msgid "Change Backend Server"
+msgstr "" 
+
+msgid "Change password"
+msgstr "" 
+
+msgid "Chart"
+msgstr "" 
+
+msgid "Chart Objects"
+msgstr "" 
+
+msgid "Chart Themes"
+msgstr "" 
+
+msgid "Chart Type"
+msgstr "" 
+
+msgid "Chart background"
+msgstr "" 
+
+msgid "Chart menu"
+msgstr "" 
+
+msgid "Choose password"
+msgstr "" 
+
+msgid "Chrome"
+msgstr "" 
+
+msgid "Click Jacking test"
+msgstr "" 
+
+msgid "Click to log in with your Binary.com account"
+msgstr "" 
+
+msgid "Close Price"
+msgstr "" 
+
+msgid "Close all"
+msgstr "" 
+
+msgid "Closes"
+msgstr "" 
+
+msgid "Commodities trading experience"
+msgstr "" 
+
+msgid "Commodities trading frequency"
+msgstr "" 
+
+msgid "Conditions"
+msgstr "" 
+
+msgid "Continue"
+msgstr "" 
+
+msgid "Continue Trading"
+msgstr "" 
+
+msgid "Contracts"
+msgstr "" 
+
+msgid "Country of residence"
+msgstr "" 
+
+msgid "Create"
+msgstr "" 
+
+msgid "Create token"
+msgstr "" 
+
+msgid "Credit/Debit"
+msgstr "" 
+
+msgid "Crosshair"
+msgstr "" 
+
+msgid "Current Level"
+msgstr "" 
+
+msgid "Current Spot"
+msgstr "" 
+
+msgid "Current Spot Time"
+msgstr "" 
+
+msgid "Current indicators"
+msgstr "" 
+
+msgid "Current overlays"
+msgstr "" 
+
+msgid "Current password"
+msgstr "" 
+
+msgid "Current price"
+msgstr "" 
+
+msgid "Current regulations require that you provide us the following"
+msgstr "" 
+
+msgid "Current time"
+msgstr "" 
+
+msgid "Custom Theme"
+msgstr "" 
+
+msgid "DX MA Type"
+msgstr "" 
+
+msgid "Daily limit on losses"
+msgstr "" 
+
+msgid "Daily turnover limit"
+msgstr "" 
+
+msgid "Dark Blue"
+msgstr "" 
+
+msgid "Dark Green"
+msgstr "" 
+
+msgid "Dark Unica"
+msgstr "" 
+
+msgid "Dash style"
+msgstr "" 
+
+msgid "Date"
+msgstr "" 
+
+msgid "Date of birth"
+msgstr "" 
+
+msgid "Decline"
+msgstr "" 
+
+msgid "Default"
+msgstr "" 
+
+msgid "Delete level(s)"
+msgstr "" 
+
+msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgstr "" 
+
+msgid "Deposit of USD"
+msgstr "" 
+
+msgid "Describe what this token is for to find it later."
+msgstr "" 
+
+msgid "Description"
+msgstr "" 
+
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account."
+msgstr "" 
+
+msgid "Dot"
+msgstr "" 
+
+msgid "Double MA Period"
+msgstr "" 
+
+msgid "Double MA Type"
+msgstr "" 
+
+msgid "Draw"
+msgstr "" 
+
+msgid "Duration"
+msgstr "" 
+
+msgid "EMA"
+msgstr "" 
+
+msgid "Edge"
+msgstr "" 
+
+msgid "Edit"
+msgstr "" 
+
+msgid "End Time"
+msgstr "" 
+
+msgid "Ends In/Out"
+msgstr "" 
+
+msgid "Enter your current password"
+msgstr "" 
+
+msgid "Entry Spot"
+msgstr "" 
+
+msgid "Entry spot"
+msgstr "" 
+
+msgid "Estimated Net Worth"
+msgstr "" 
+
+msgid "Exclude me from the website until"
+msgstr "" 
+
+msgid "Exit Spot"
+msgstr "" 
+
+msgid "Exit spot"
+msgstr "" 
+
+msgid "Explanation"
+msgstr "" 
+
+msgid "Family name"
+msgstr "" 
+
+msgid "Fast %K MA Type"
+msgstr "" 
+
+msgid "Fast %K Period"
+msgstr "" 
+
+msgid "Fast Limit"
+msgstr "" 
+
+msgid "Fast MA Type"
+msgstr "" 
+
+msgid "Fast Period"
+msgstr "" 
+
+msgid "Favorites"
+msgstr "" 
+
+msgid "Final Price"
+msgstr "" 
+
+msgid "Final price"
+msgstr "" 
+
+msgid "Financial information"
+msgstr "" 
+
+msgid "Firefox"
+msgstr "" 
+
+msgid "First name"
+msgstr "" 
+
+msgid "Forex trading experience"
+msgstr "" 
+
+msgid "Forex trading frequency"
+msgstr "" 
+
+msgid "From"
+msgstr "" 
+
+msgid "Gray"
+msgstr "" 
+
+msgid "Grid"
+msgstr "" 
+
+msgid "Grid Light"
+msgstr "" 
+
+msgid "HEADER.CONTRACT"
+msgstr "" 
+
+msgid "HEADER.PROFIT_LOSS"
+msgstr "" 
+
+msgid "HEADER.PURCHASE_DATE"
+msgstr "" 
+
+msgid "HEADER.PURCHASE_PRICE"
+msgstr "" 
+
+msgid "HEADER.REF"
+msgstr "" 
+
+msgid "HEADER.SALE_DATE"
+msgstr "" 
+
+msgid "HEADER.SALE_PRICE"
+msgstr "" 
+
+msgid "HIGH"
+msgstr "" 
+
+msgid "High Price"
+msgstr "" 
+
+msgid "High Stroke"
+msgstr "" 
+
+msgid "High barrier offset"
+msgstr "" 
+
+msgid "Highcharts implementation for Binary.com"
+msgstr "" 
+
+msgid "Histogram Color"
+msgstr "" 
+
+msgid "Histogram Color For Higher Values"
+msgstr "" 
+
+msgid "Histogram Color For Lower Values"
+msgstr "" 
+
+msgid "Home Address"
+msgstr "" 
+
+msgid "Horizontal Line"
+msgstr "" 
+
+msgid "I have read and agree to Binary.com"
+msgstr "" 
+
+msgid "If you select a"
+msgstr "" 
+
+msgid "If you select a specific"
+msgstr "" 
+
+msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)."
+msgstr "" 
+
+msgid "In regards to binary options which are gambling products, remember that gambling can be addictive"
+msgstr "" 
+
+msgid "Income Source"
+msgstr "" 
+
+msgid "Indicative Price"
+msgstr "" 
+
+msgid "Indices trading experience"
+msgstr "" 
+
+msgid "Indices trading frequency"
+msgstr "" 
+
+msgid "Industry of Employment"
+msgstr "" 
+
+msgid "Instrument"
+msgstr "" 
+
+msgid "Instruments :"
+msgstr "" 
+
+msgid "Just click “Grant” button on the page you will now be taken to."
+msgstr "" 
+
+msgid "LOW"
+msgstr "" 
+
+msgid "Last used"
+msgstr "" 
+
+msgid "Let's do it"
+msgstr "" 
+
+msgid "Level"
+msgstr "" 
+
+msgid "Level of Education"
+msgstr "" 
+
+msgid "Line"
+msgstr "" 
+
+msgid "Line Dot"
+msgstr "" 
+
+msgid "Line Stroke"
+msgstr "" 
+
+msgid "Log Scale"
+msgstr "" 
+
+msgid "Log in"
+msgstr "" 
+
+msgid "Log in time"
+msgstr "" 
+
+msgid "Login"
+msgstr "" 
+
+msgid "Logout"
+msgstr "" 
+
+msgid "Long MA Type"
+msgstr "" 
+
+msgid "Long ROC Period"
+msgstr "" 
+
+msgid "Long Stop Line Stroke"
+msgstr "" 
+
+msgid "Long Term Period"
+msgstr "" 
+
+msgid "Low Price"
+msgstr "" 
+
+msgid "Low Stroke"
+msgstr "" 
+
+msgid "Low barrier offset"
+msgstr "" 
+
+msgid "Lower Band Stroke"
+msgstr "" 
+
+msgid "MA Type"
+msgstr "" 
+
+msgid "MACD Line Stroke"
+msgstr "" 
+
+msgid "Mass Period"
+msgstr "" 
+
+msgid "Max/Min Period"
+msgstr "" 
+
+msgid "Maximum"
+msgstr "" 
+
+msgid "Maximum account cash balance"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases over a 30-day period"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases over a 7-day period"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases per day"
+msgstr "" 
+
+msgid "Maximum aggregate loss over a 30-day period"
+msgstr "" 
+
+msgid "Maximum aggregate loss per day"
+msgstr "" 
+
+msgid "Maximum number of open positions"
+msgstr "" 
+
+msgid "Middle Band Stroke"
+msgstr "" 
+
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "" 
+
+msgid "Multiplier"
+msgstr "" 
+
+msgid "NB Dev Down"
+msgstr "" 
+
+msgid "NB Dev Up"
+msgstr "" 
+
+msgid "Name"
+msgstr "" 
+
+msgid "Navigator handles background"
+msgstr "" 
+
+msgid "Navigator handles border"
+msgstr "" 
+
+msgid "Navigator mask-fill"
+msgstr "" 
+
+msgid "Navigator outline"
+msgstr "" 
+
+msgid "Navigator series color"
+msgstr "" 
+
+msgid "Navigator series line"
+msgstr "" 
+
+msgid "Net Annual Income"
+msgstr "" 
+
+msgid "Net Profit:"
+msgstr "" 
+
+msgid "New password"
+msgstr "" 
+
+msgid "No"
+msgstr "" 
+
+msgid "Number of bars on sides"
+msgstr "" 
+
+msgid "OAuth App ID (Optional)"
+msgstr "" 
+
+msgid "OAuth Server"
+msgstr "" 
+
+msgid "OHLC"
+msgstr "" 
+
+msgid "OPEN"
+msgstr "" 
+
+msgid "Offset"
+msgstr "" 
+
+msgid "Ok"
+msgstr "" 
+
+msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you."
+msgstr "" 
+
+msgid "Once this limit is reached, you may no longer deposit."
+msgstr "" 
+
+msgid "One last step left"
+msgstr "" 
+
+msgid "Open"
+msgstr "" 
+
+msgid "Open Account"
+msgstr "" 
+
+msgid "Open Price"
+msgstr "" 
+
+msgid "Open account"
+msgstr "" 
+
+msgid "Open real money account"
+msgstr "" 
+
+msgid "Opens"
+msgstr "" 
+
+msgid "Opera"
+msgstr "" 
+
+msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
+msgstr "" 
+
+msgid "Other financial instruments trading experience"
+msgstr "" 
+
+msgid "Other financial instruments trading frequency"
+msgstr "" 
+
+msgid "PPO Line Stroke"
+msgstr "" 
+
+msgid "Payments"
+msgstr "" 
+
+msgid "Period"
+msgstr "" 
+
+msgid "Period 1"
+msgstr "" 
+
+msgid "Period 2"
+msgstr "" 
+
+msgid "Period 3"
+msgstr "" 
+
+msgid "Permissions"
+msgstr "" 
+
+msgid "Personal Details"
+msgstr "" 
+
+msgid "Phone"
+msgstr "" 
+
+msgid "Please"
+msgstr "" 
+
+msgid "Please enter date in the format YYYY-MM-DD"
+msgstr "" 
+
+msgid "Please install the latest version of one of these browsers:"
+msgstr "" 
+
+msgid "Please select"
+msgstr "" 
+
+msgid "Plot"
+msgstr "" 
+
+msgid "Plot Color"
+msgstr "" 
+
+msgid "Pofit/Loss"
+msgstr "" 
+
+msgid "Points"
+msgstr "" 
+
+msgid "Portfolio"
+msgstr "" 
+
+msgid "Postal code/ZIP"
+msgstr "" 
+
+msgid "Potential Payout"
+msgstr "" 
+
+msgid "Potential Profit"
+msgstr "" 
+
+msgid "Potential profit"
+msgstr "" 
+
+msgid "Pre-Defined"
+msgstr "" 
+
+msgid "Preferred reality-check interval:"
+msgstr "" 
+
+msgid "Press “Create token” button on the right to create your first token."
+msgstr "" 
+
+msgid "Price"
+msgstr "" 
+
+msgid "Profit table"
+msgstr "" 
+
+msgid "Profit/Loss (points)"
+msgstr "" 
+
+msgid "Purchase"
+msgstr "" 
+
+msgid "Purchase Price"
+msgstr "" 
+
+msgid "Read"
+msgstr "" 
+
+msgid "Ref."
+msgstr "" 
+
+msgid "Refresh"
+msgstr "" 
+
+msgid "Register free account"
+msgstr "" 
+
+msgid "Remove"
+msgstr "" 
+
+msgid "Repeat password"
+msgstr "" 
+
+msgid "Resources"
+msgstr "" 
+
+msgid "Responsible Trading"
+msgstr "" 
+
+msgid "Results"
+msgstr "" 
+
+msgid "Return"
+msgstr "" 
+
+msgid "SMA"
+msgstr "" 
+
+msgid "Safari"
+msgstr "" 
+
+msgid "Sale Price"
+msgstr "" 
+
+msgid "Sand Signika"
+msgstr "" 
+
+msgid "Security"
+msgstr "" 
+
+msgid "Security question"
+msgstr "" 
+
+msgid "Select Instrument"
+msgstr "" 
+
+msgid "Self-Exclusion"
+msgstr "" 
+
+msgid "Sell At Market"
+msgstr "" 
+
+msgid "Sell Price"
+msgstr "" 
+
+msgid "Sell Spot"
+msgstr "" 
+
+msgid "Sell Time"
+msgstr "" 
+
+msgid "Session"
+msgstr "" 
+
+msgid "Session duration limit, in minutes"
+msgstr "" 
+
+msgid "Settles"
+msgstr "" 
+
+msgid "Short MA Type"
+msgstr "" 
+
+msgid "Short ROC Period"
+msgstr "" 
+
+msgid "Short Stop Line Stroke"
+msgstr "" 
+
+msgid "Short Term Period"
+msgstr "" 
+
+msgid "Show"
+msgstr "" 
+
+msgid "Sigma"
+msgstr "" 
+
+msgid "Signal Line Stroke"
+msgstr "" 
+
+msgid "Signal MA Type"
+msgstr "" 
+
+msgid "Signal Period"
+msgstr "" 
+
+msgid "Single MA Period"
+msgstr "" 
+
+msgid "Single MA Type"
+msgstr "" 
+
+msgid "Slow %D MA Type"
+msgstr "" 
+
+msgid "Slow %D Period"
+msgstr "" 
+
+msgid "Slow %K MA Type"
+msgstr "" 
+
+msgid "Slow %K Period"
+msgstr "" 
+
+msgid "Slow Limit"
+msgstr "" 
+
+msgid "Slow MA Type"
+msgstr "" 
+
+msgid "Slow Period"
+msgstr "" 
+
+msgid "Sold"
+msgstr "" 
+
+msgid "Spline"
+msgstr "" 
+
+msgid "Start Time"
+msgstr "" 
+
+msgid "Start time"
+msgstr "" 
+
+msgid "State/province/region"
+msgstr "" 
+
+msgid "Statement"
+msgstr "" 
+
+msgid "Status"
+msgstr "" 
+
+msgid "Stays In/Goes Out"
+msgstr "" 
+
+msgid "Stocks trading experience"
+msgstr "" 
+
+msgid "Stocks trading frequency"
+msgstr "" 
+
+msgid "Stop Loss Level"
+msgstr "" 
+
+msgid "Stop Profit Level"
+msgstr "" 
+
+msgid "Stop-loss"
+msgstr "" 
+
+msgid "Stop-profit"
+msgstr "" 
+
+msgid "Stop-type"
+msgstr "" 
+
+msgid "Street address"
+msgstr "" 
+
+msgid "Stroke"
+msgstr "" 
+
+msgid "Stroke width"
+msgstr "" 
+
+msgid "TEMA"
+msgstr "" 
+
+msgid "TRIMA"
+msgstr "" 
+
+msgid "Table"
+msgstr "" 
+
+msgid "Terms"
+msgstr "" 
+
+msgid "The"
+msgstr "" 
+
+msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium."
+msgstr "" 
+
+msgid "Tick Trade app"
+msgstr "" 
+
+msgid "Tick {row.number}"
+msgstr "" 
+
+msgid "Tile"
+msgstr "" 
+
+msgid "Time Period"
+msgstr "" 
+
+msgid "Time period :"
+msgstr "" 
+
+msgid "Time periods"
+msgstr "" 
+
+msgid "Title"
+msgstr "" 
+
+msgid "Token"
+msgstr "" 
+
+msgid "Token management"
+msgstr "" 
+
+msgid "Token name"
+msgstr "" 
+
+msgid "Token permissions"
+msgstr "" 
+
+msgid "Tokens are special codes for accessing Binary mobile applications and third party tools."
+msgstr "" 
+
+msgid "Tooltip background"
+msgstr "" 
+
+msgid "Tooltip text"
+msgstr "" 
+
+msgid "Total Cost"
+msgstr "" 
+
+msgid "Touch/No Touch"
+msgstr "" 
+
+msgid "Town/City"
+msgstr "" 
+
+msgid "Trade"
+msgstr "" 
+
+msgid "Trade Confirmation"
+msgstr "" 
+
+msgid "Trade using"
+msgstr "" 
+
+msgid "Trading Times"
+msgstr "" 
+
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
+msgstr "" 
+
+msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgstr "" 
+
+msgid "Tradingview for Binary.com"
+msgstr "" 
+
+msgid "Try"
+msgstr "" 
+
+msgid "Turnover"
+msgstr "" 
+
+msgid "USD"
+msgstr "" 
+
+msgid "Unfortunately, your browser does not support them."
+msgstr "" 
+
+msgid "Up/Down"
+msgstr "" 
+
+msgid "Upcoming Events"
+msgstr "" 
+
+msgid "Update Settings"
+msgstr "" 
+
+msgid "Upper Band Stroke"
+msgstr "" 
+
+msgid "Use"
+msgstr "" 
+
+msgid "Verification code has been sent to your email"
+msgstr "" 
+
+msgid "Verification token"
+msgstr "" 
+
+msgid "Verify new password"
+msgstr "" 
+
+msgid "Vertical Line"
+msgstr "" 
+
+msgid "View"
+msgstr "" 
+
+msgid "View Historical Data"
+msgstr "" 
+
+msgid "Volume Factor"
+msgstr "" 
+
+msgid "WMA"
+msgstr "" 
+
+msgid "WMA Period"
+msgstr "" 
+
+msgid "Websocket Server"
+msgstr "" 
+
+msgid "Webtrader"
+msgstr "" 
+
+msgid "Webtrader uses new web technologies for rich and enjoyable trading experience."
+msgstr "" 
+
+msgid "While on the go, you can:"
+msgstr "" 
+
+msgid "Windows"
+msgstr "" 
+
+msgid "X-axis labels"
+msgstr "" 
+
+msgid "X-axis line"
+msgstr "" 
+
+msgid "X-axis tick"
+msgstr "" 
+
+msgid "Y-axis gridline"
+msgstr "" 
+
+msgid "Y-axis labels"
+msgstr "" 
+
+msgid "You have sold the following contract:"
+msgstr "" 
+
+msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
+msgstr "" 
+
+msgid "You pay:"
+msgstr "" 
+
+msgid "You will be automatically logged out after such time"
+msgstr "" 
+
+msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it."
+msgstr "" 
+
+msgid "Your browser is not supported"
+msgstr "" 
+
+msgid "Your email"
+msgstr "" 
+
+msgid "Your new account balance is"
+msgstr "" 
+
+msgid "Your transaction reference is"
+msgstr "" 
+
+msgid "Your transaction reference number is"
+msgstr "" 
+
+msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate."
+msgstr "" 
+
+msgid "contact support"
+msgstr "" 
+
+msgid "customer support"
+msgstr "" 
+
+msgid "e.g,"
+msgstr "" 
+
+msgid "e.g, www2.binary.com, www.binaryqa36.com."
+msgstr "" 
+
+msgid "end time"
+msgstr "" 
+
+msgid "entry spot"
+msgstr "" 
+
+msgid "exit spot"
+msgstr "" 
+
+msgid "for mobile charts"
+msgstr "" 
+
+msgid "has updated its"
+msgstr "" 
+
+msgid "https://developers.binary.com/"
+msgstr "" 
+
+msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+msgstr "" 
+
+msgid "if this is not your country of residence."
+msgstr "" 
+
+msgid "in the future, the"
+msgstr "" 
+
+msgid "information about your trading exprience and personal finance."
+msgstr "" 
+
+msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs."
+msgstr "" 
+
+msgid "is required. Current spread:"
+msgstr "" 
+
+msgid "is that which is selected and the"
+msgstr "" 
+
+msgid "is the"
+msgstr "" 
+
+msgid "is the price in effect at that time."
+msgstr "" 
+
+msgid "is the selected number of minutes/hours after the"
+msgstr "" 
+
+msgid "is the selected time."
+msgstr "" 
+
+msgid "is the spot at the"
+msgstr "" 
+
+msgid "is when the contract is processed by our servers and the"
+msgstr "" 
+
+msgid "main site"
+msgstr "" 
+
+msgid "minutes"
+msgstr "" 
+
+msgid "next tick"
+msgstr "" 
+
+msgid "oauth :"
+msgstr "" 
+
+msgid "of "Now", the"
+msgstr "" 
+
+msgid "please play responsibly. Read about"
+msgstr "" 
+
+msgid "points"
+msgstr "" 
+
+msgid "session overview"
+msgstr "" 
+
+msgid "start time"
+msgstr "" 
+
+msgid "terms and conditions"
+msgstr "" 
+
+msgid "thereafter."
+msgstr "" 
+
+msgid "trading experience"
+msgstr "" 
+
+msgid "trading frequency"
+msgstr "" 
+
+msgid "websocket :"
+msgstr "" 
+
+msgid "yes"
+msgstr "" 
+
+msgid "{bought}"
+msgstr "" 
+
+msgid "{currency}"
+msgstr "" 
+
+msgid "{currentTime}"
+msgstr "" 
+
+msgid "{description}"
+msgstr "" 
+
+msgid "{digits.text}"
+msgstr "" 
+
+msgid "{durationInMins}"
+msgstr "" 
+
+msgid "{loginId}"
+msgstr "" 
+
+msgid "{loginTime}"
+msgstr "" 
+
+msgid "{open}"
+msgstr "" 
+
+msgid "{pnl}"
+msgstr "" 
+
+msgid "{potentialProfit}"
+msgstr "" 
+
+msgid "{proposal.error}"
+msgstr "" 
+
+msgid "{proposal.message}"
+msgstr "" 
+
+msgid "{row | capitalize}"
+msgstr "" 
+
+msgid "{row.epoch | utc-time}"
+msgstr "" 
+
+msgid "{row.text}"
+msgstr "" 
+
+msgid "{row}"
+msgstr "" 
+
+msgid "{sold}"
+msgstr "" 
+
+msgid "{turnOver}"
+msgstr "" 
+
+msgid "| Return"
+msgstr "" 
+
+msgid "﻿"
+msgstr "" 
+
+msgid "%D MA Type"
+msgstr "" 
+
+msgid "%D Period"
+msgstr "" 
+
+msgid "%D Stroke"
+msgstr "" 
+
+msgid "%K MA Type"
+msgstr "" 
+
+msgid "%K Period"
+msgstr "" 
+
+msgid "%K Stroke"
+msgstr "" 
+
+msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
+msgstr "" 
+
+msgid "* Optional field, within 20 characters and may not contain '+'."
+msgstr "" 
+
+msgid "* Passwords didn't match. Please type them again"
+msgstr "" 
+
+msgid "* Please answer to secret question, within 4-50 characters."
+msgstr "" 
+
+msgid "* Please enter a valid date in yyyy-mm-dd format."
+msgstr "" 
+
+msgid "* Please enter a vlaid phone number."
+msgstr "" 
+
+msgid "* Please enter correct email"
+msgstr "" 
+
+msgid "* Please enter the verification code sent to your email."
+msgstr "" 
+
+msgid "* Please enter your city address."
+msgstr "" 
+
+msgid "* Please enter your current password"
+msgstr "" 
+
+msgid "* Please enter your email"
+msgstr "" 
+
+msgid "* Please enter your family name."
+msgstr "" 
+
+msgid "* Please enter your first name."
+msgstr "" 
+
+msgid "* Please enter your phone number."
+msgstr "" 
+
+msgid "* Please enter your street address."
+msgstr "" 
+
+msgid "+DI Stroke"
+msgstr "" 
+
+msgid ", the"
+msgstr "" 
+
+msgid "-DI Stroke"
+msgstr "" 
+
+msgid ". By clicking OK, you confirm that you have read and accepted the updated"
+msgstr "" 
+
+msgid "1 Day"
+msgstr "" 
+
+msgid "1 Tick"
+msgstr "" 
+
+msgid "1 day"
+msgstr "" 
+
+msgid "1 hour"
+msgstr "" 
+
+msgid "1 min"
+msgstr "" 
+
+msgid "10"
+msgstr "" 
+
+msgid "10 mins"
+msgstr "" 
+
+msgid "10m"
+msgstr "" 
+
+msgid "15 mins"
+msgstr "" 
+
+msgid "15m"
+msgstr "" 
+
+msgid "1d"
+msgstr "" 
+
+msgid "1h"
+msgstr "" 
+
+msgid "1m"
+msgstr "" 
+
+msgid "2 hours"
+msgstr "" 
+
+msgid "2 mins"
+msgstr "" 
+
+msgid "2h"
+msgstr "" 
+
+msgid "2m"
+msgstr "" 
+
+msgid "3 mins"
+msgstr "" 
+
+msgid "30 mins"
+msgstr "" 
+
+msgid "30-day limit on losses"
+msgstr "" 
+
+msgid "30-day turnover limit"
+msgstr "" 
+
+msgid "30m"
+msgstr "" 
+
+msgid "3m"
+msgstr "" 
+
+msgid "4 hours"
+msgstr "" 
+
+msgid "4h"
+msgstr "" 
+
+msgid "5 mins"
+msgstr "" 
+
+msgid "5m"
+msgstr "" 
+
+msgid "7-day limit on losses"
+msgstr "" 
+
+msgid "7-day turnover limit"
+msgstr "" 
+
+msgid "8 hours"
+msgstr "" 
+
+msgid "8h"
+msgstr "" 
+
+msgid "ADX MA Type"
+msgstr "" 
+
+msgid "ADX Stroke"
+msgstr "" 
+
+msgid "ATR Period"
+msgstr "" 
+
+msgid "Acceleration"
+msgstr "" 
+
+msgid "Accept"
+msgstr "" 
+
+msgid "Account balance:"
+msgstr "" 
+
+msgid "Action"
+msgstr "" 
+
+msgid "Add"
+msgstr "" 
+
+msgid "Add indicator"
+msgstr "" 
+
+msgid "Add level"
+msgstr "" 
+
+msgid "Add overlays"
+msgstr "" 
+
+msgid "Add/remove indicators"
+msgstr "" 
+
+msgid "Add/remove overlays"
+msgstr "" 
+
+msgid "Admin"
+msgstr "" 
+
+msgid "All times are in GMT (Greenwich Mean Time)."
+msgstr "" 
+
+msgid "Amount Per Point"
+msgstr "" 
+
+msgid "Amount per point"
+msgstr "" 
+
+msgid "Answer"
+msgstr "" 
+
+msgid "Applied to"
+msgstr "" 
+
+msgid "Appropriateness Test: WARNING:"
+msgstr "" 
+
+msgid "Are you sure you want to delete this token?"
+msgstr "" 
+
+msgid "Aroon Down Stroke"
+msgstr "" 
+
+msgid "Aroon Up Stroke"
+msgstr "" 
+
+msgid "Asset"
+msgstr "" 
+
+msgid "Asset Index"
+msgstr "" 
+
+msgid "Back"
+msgstr "" 
+
+msgid "Back to list"
+msgstr "" 
+
+msgid "Background Color"
+msgstr "" 
+
+msgid "Barrier offset"
+msgstr "" 
+
+msgid "Binary options or other financial derivatives"
+msgstr "" 
+
+msgid "Binary.com"
+msgstr "" 
+
+msgid "Binary.com : Webtrader"
+msgstr "" 
+
+msgid "Bought"
+msgstr "" 
+
+msgid "Browser upgrade required"
+msgstr "" 
+
+msgid "Buy Price"
+msgstr "" 
+
+msgid "Buy price"
+msgstr "" 
+
+msgid "By clicking"
+msgstr "" 
+
+msgid "CLOSE"
+msgstr "" 
+
+msgid "Candlestick"
+msgstr "" 
+
+msgid "Candlestick down-color"
+msgstr "" 
+
+msgid "Candlestick down-line"
+msgstr "" 
+
+msgid "Candlestick up-color"
+msgstr "" 
+
+msgid "Candlestick up-line"
+msgstr "" 
+
+msgid "Cash Balance"
+msgstr "" 
+
+msgid "Change Backend Server"
+msgstr "" 
+
+msgid "Change password"
+msgstr "" 
+
+msgid "Chart"
+msgstr "" 
+
+msgid "Chart Objects"
+msgstr "" 
+
+msgid "Chart Themes"
+msgstr "" 
+
+msgid "Chart Type"
+msgstr "" 
+
+msgid "Chart background"
+msgstr "" 
+
+msgid "Chart menu"
+msgstr "" 
+
+msgid "Choose password"
+msgstr "" 
+
+msgid "Chrome"
+msgstr "" 
+
+msgid "Click Jacking test"
+msgstr "" 
+
+msgid "Click to log in with your Binary.com account"
+msgstr "" 
+
+msgid "Close Price"
+msgstr "" 
+
+msgid "Close all"
+msgstr "" 
+
+msgid "Closes"
+msgstr "" 
+
+msgid "Commodities trading experience"
+msgstr "" 
+
+msgid "Commodities trading frequency"
+msgstr "" 
+
+msgid "Conditions"
+msgstr "" 
+
+msgid "Continue"
+msgstr "" 
+
+msgid "Continue Trading"
+msgstr "" 
+
+msgid "Contracts"
+msgstr "" 
+
+msgid "Country of residence"
+msgstr "" 
+
+msgid "Create"
+msgstr "" 
+
+msgid "Create token"
+msgstr "" 
+
+msgid "Credit/Debit"
+msgstr "" 
+
+msgid "Crosshair"
+msgstr "" 
+
+msgid "Current Level"
+msgstr "" 
+
+msgid "Current Spot"
+msgstr "" 
+
+msgid "Current Spot Time"
+msgstr "" 
+
+msgid "Current indicators"
+msgstr "" 
+
+msgid "Current overlays"
+msgstr "" 
+
+msgid "Current password"
+msgstr "" 
+
+msgid "Current price"
+msgstr "" 
+
+msgid "Current regulations require that you provide us the following"
+msgstr "" 
+
+msgid "Current time"
+msgstr "" 
+
+msgid "Custom Theme"
+msgstr "" 
+
+msgid "DX MA Type"
+msgstr "" 
+
+msgid "Daily limit on losses"
+msgstr "" 
+
+msgid "Daily turnover limit"
+msgstr "" 
+
+msgid "Dark Blue"
+msgstr "" 
+
+msgid "Dark Green"
+msgstr "" 
+
+msgid "Dark Unica"
+msgstr "" 
+
+msgid "Dash style"
+msgstr "" 
+
+msgid "Date"
+msgstr "" 
+
+msgid "Date of birth"
+msgstr "" 
+
+msgid "Decline"
+msgstr "" 
+
+msgid "Default"
+msgstr "" 
+
+msgid "Delete level(s)"
+msgstr "" 
+
+msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgstr "" 
+
+msgid "Deposit of USD"
+msgstr "" 
+
+msgid "Describe what this token is for to find it later."
+msgstr "" 
+
+msgid "Description"
+msgstr "" 
+
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account."
+msgstr "" 
+
+msgid "Dot"
+msgstr "" 
+
+msgid "Double MA Period"
+msgstr "" 
+
+msgid "Double MA Type"
+msgstr "" 
+
+msgid "Draw"
+msgstr "" 
+
+msgid "Duration"
+msgstr "" 
+
+msgid "EMA"
+msgstr "" 
+
+msgid "Edge"
+msgstr "" 
+
+msgid "Edit"
+msgstr "" 
+
+msgid "End Time"
+msgstr "" 
+
+msgid "Ends In/Out"
+msgstr "" 
+
+msgid "Enter your current password"
+msgstr "" 
+
+msgid "Entry Spot"
+msgstr "" 
+
+msgid "Entry spot"
+msgstr "" 
+
+msgid "Estimated Net Worth"
+msgstr "" 
+
+msgid "Exclude me from the website until"
+msgstr "" 
+
+msgid "Exit Spot"
+msgstr "" 
+
+msgid "Exit spot"
+msgstr "" 
+
+msgid "Explanation"
+msgstr "" 
+
+msgid "Family name"
+msgstr "" 
+
+msgid "Fast %K MA Type"
+msgstr "" 
+
+msgid "Fast %K Period"
+msgstr "" 
+
+msgid "Fast Limit"
+msgstr "" 
+
+msgid "Fast MA Type"
+msgstr "" 
+
+msgid "Fast Period"
+msgstr "" 
+
+msgid "Favorites"
+msgstr "" 
+
+msgid "Final Price"
+msgstr "" 
+
+msgid "Final price"
+msgstr "" 
+
+msgid "Financial information"
+msgstr "" 
+
+msgid "Firefox"
+msgstr "" 
+
+msgid "First name"
+msgstr "" 
+
+msgid "Forex trading experience"
+msgstr "" 
+
+msgid "Forex trading frequency"
+msgstr "" 
+
+msgid "From"
+msgstr "" 
+
+msgid "Gray"
+msgstr "" 
+
+msgid "Grid"
+msgstr "" 
+
+msgid "Grid Light"
+msgstr "" 
+
+msgid "HEADER.CONTRACT"
+msgstr "" 
+
+msgid "HEADER.PROFIT_LOSS"
+msgstr "" 
+
+msgid "HEADER.PURCHASE_DATE"
+msgstr "" 
+
+msgid "HEADER.PURCHASE_PRICE"
+msgstr "" 
+
+msgid "HEADER.REF"
+msgstr "" 
+
+msgid "HEADER.SALE_DATE"
+msgstr "" 
+
+msgid "HEADER.SALE_PRICE"
+msgstr "" 
+
+msgid "HIGH"
+msgstr "" 
+
+msgid "High Price"
+msgstr "" 
+
+msgid "High Stroke"
+msgstr "" 
+
+msgid "High barrier offset"
+msgstr "" 
+
+msgid "Highcharts implementation for Binary.com"
+msgstr "" 
+
+msgid "Histogram Color"
+msgstr "" 
+
+msgid "Histogram Color For Higher Values"
+msgstr "" 
+
+msgid "Histogram Color For Lower Values"
+msgstr "" 
+
+msgid "Home Address"
+msgstr "" 
+
+msgid "Horizontal Line"
+msgstr "" 
+
+msgid "I have read and agree to Binary.com"
+msgstr "" 
+
+msgid "If you select a"
+msgstr "" 
+
+msgid "If you select a specific"
+msgstr "" 
+
+msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)."
+msgstr "" 
+
+msgid "In regards to binary options which are gambling products, remember that gambling can be addictive"
+msgstr "" 
+
+msgid "Income Source"
+msgstr "" 
+
+msgid "Indicative Price"
+msgstr "" 
+
+msgid "Indices trading experience"
+msgstr "" 
+
+msgid "Indices trading frequency"
+msgstr "" 
+
+msgid "Industry of Employment"
+msgstr "" 
+
+msgid "Instrument"
+msgstr "" 
+
+msgid "Instruments :"
+msgstr "" 
+
+msgid "Just click “Grant” button on the page you will now be taken to."
+msgstr "" 
+
+msgid "LOW"
+msgstr "" 
+
+msgid "Last used"
+msgstr "" 
+
+msgid "Let's do it"
+msgstr "" 
+
+msgid "Level"
+msgstr "" 
+
+msgid "Level of Education"
+msgstr "" 
+
+msgid "Line"
+msgstr "" 
+
+msgid "Line Dot"
+msgstr "" 
+
+msgid "Line Stroke"
+msgstr "" 
+
+msgid "Log Scale"
+msgstr "" 
+
+msgid "Log in"
+msgstr "" 
+
+msgid "Log in time"
+msgstr "" 
+
+msgid "Login"
+msgstr "" 
+
+msgid "Logout"
+msgstr "" 
+
+msgid "Long MA Type"
+msgstr "" 
+
+msgid "Long ROC Period"
+msgstr "" 
+
+msgid "Long Stop Line Stroke"
+msgstr "" 
+
+msgid "Long Term Period"
+msgstr "" 
+
+msgid "Low Price"
+msgstr "" 
+
+msgid "Low Stroke"
+msgstr "" 
+
+msgid "Low barrier offset"
+msgstr "" 
+
+msgid "Lower Band Stroke"
+msgstr "" 
+
+msgid "MA Type"
+msgstr "" 
+
+msgid "MACD Line Stroke"
+msgstr "" 
+
+msgid "Mass Period"
+msgstr "" 
+
+msgid "Max/Min Period"
+msgstr "" 
+
+msgid "Maximum"
+msgstr "" 
+
+msgid "Maximum account cash balance"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases over a 30-day period"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases over a 7-day period"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases per day"
+msgstr "" 
+
+msgid "Maximum aggregate loss over a 30-day period"
+msgstr "" 
+
+msgid "Maximum aggregate loss per day"
+msgstr "" 
+
+msgid "Maximum number of open positions"
+msgstr "" 
+
+msgid "Middle Band Stroke"
+msgstr "" 
+
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "" 
+
+msgid "Multiplier"
+msgstr "" 
+
+msgid "NB Dev Down"
+msgstr "" 
+
+msgid "NB Dev Up"
+msgstr "" 
+
+msgid "Name"
+msgstr "" 
+
+msgid "Navigator handles background"
+msgstr "" 
+
+msgid "Navigator handles border"
+msgstr "" 
+
+msgid "Navigator mask-fill"
+msgstr "" 
+
+msgid "Navigator outline"
+msgstr "" 
+
+msgid "Navigator series color"
+msgstr "" 
+
+msgid "Navigator series line"
+msgstr "" 
+
+msgid "Net Annual Income"
+msgstr "" 
+
+msgid "Net Profit:"
+msgstr "" 
+
+msgid "New password"
+msgstr "" 
+
+msgid "No"
+msgstr "" 
+
+msgid "Number of bars on sides"
+msgstr "" 
+
+msgid "OAuth App ID (Optional)"
+msgstr "" 
+
+msgid "OAuth Server"
+msgstr "" 
+
+msgid "OHLC"
+msgstr "" 
+
+msgid "OPEN"
+msgstr "" 
+
+msgid "Offset"
+msgstr "" 
+
+msgid "Ok"
+msgstr "" 
+
+msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you."
+msgstr "" 
+
+msgid "Once this limit is reached, you may no longer deposit."
+msgstr "" 
+
+msgid "One last step left"
+msgstr "" 
+
+msgid "Open"
+msgstr "" 
+
+msgid "Open Account"
+msgstr "" 
+
+msgid "Open Price"
+msgstr "" 
+
+msgid "Open account"
+msgstr "" 
+
+msgid "Open real money account"
+msgstr "" 
+
+msgid "Opens"
+msgstr "" 
+
+msgid "Opera"
+msgstr "" 
+
+msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
+msgstr "" 
+
+msgid "Other financial instruments trading experience"
+msgstr "" 
+
+msgid "Other financial instruments trading frequency"
+msgstr "" 
+
+msgid "PPO Line Stroke"
+msgstr "" 
+
+msgid "Payments"
+msgstr "" 
+
+msgid "Period"
+msgstr "" 
+
+msgid "Period 1"
+msgstr "" 
+
+msgid "Period 2"
+msgstr "" 
+
+msgid "Period 3"
+msgstr "" 
+
+msgid "Permissions"
+msgstr "" 
+
+msgid "Personal Details"
+msgstr "" 
+
+msgid "Phone"
+msgstr "" 
+
+msgid "Please"
+msgstr "" 
+
+msgid "Please enter date in the format YYYY-MM-DD"
+msgstr "" 
+
+msgid "Please install the latest version of one of these browsers:"
+msgstr "" 
+
+msgid "Please select"
+msgstr "" 
+
+msgid "Plot"
+msgstr "" 
+
+msgid "Plot Color"
+msgstr "" 
+
+msgid "Pofit/Loss"
+msgstr "" 
+
+msgid "Points"
+msgstr "" 
+
+msgid "Portfolio"
+msgstr "" 
+
+msgid "Postal code/ZIP"
+msgstr "" 
+
+msgid "Potential Payout"
+msgstr "" 
+
+msgid "Potential Profit"
+msgstr "" 
+
+msgid "Potential profit"
+msgstr "" 
+
+msgid "Pre-Defined"
+msgstr "" 
+
+msgid "Preferred reality-check interval:"
+msgstr "" 
+
+msgid "Press “Create token” button on the right to create your first token."
+msgstr "" 
+
+msgid "Price"
+msgstr "" 
+
+msgid "Profit table"
+msgstr "" 
+
+msgid "Profit/Loss (points)"
+msgstr "" 
+
+msgid "Purchase"
+msgstr "" 
+
+msgid "Purchase Price"
+msgstr "" 
+
+msgid "Read"
+msgstr "" 
+
+msgid "Ref."
+msgstr "" 
+
+msgid "Refresh"
+msgstr "" 
+
+msgid "Register free account"
+msgstr "" 
+
+msgid "Remove"
+msgstr "" 
+
+msgid "Repeat password"
+msgstr "" 
+
+msgid "Resources"
+msgstr "" 
+
+msgid "Responsible Trading"
+msgstr "" 
+
+msgid "Results"
+msgstr "" 
+
+msgid "Return"
+msgstr "" 
+
+msgid "SMA"
+msgstr "" 
+
+msgid "Safari"
+msgstr "" 
+
+msgid "Sale Price"
+msgstr "" 
+
+msgid "Sand Signika"
+msgstr "" 
+
+msgid "Security"
+msgstr "" 
+
+msgid "Security question"
+msgstr "" 
+
+msgid "Select Instrument"
+msgstr "" 
+
+msgid "Self-Exclusion"
+msgstr "" 
+
+msgid "Sell At Market"
+msgstr "" 
+
+msgid "Sell Price"
+msgstr "" 
+
+msgid "Sell Spot"
+msgstr "" 
+
+msgid "Sell Time"
+msgstr "" 
+
+msgid "Session"
+msgstr "" 
+
+msgid "Session duration limit, in minutes"
+msgstr "" 
+
+msgid "Settles"
+msgstr "" 
+
+msgid "Short MA Type"
+msgstr "" 
+
+msgid "Short ROC Period"
+msgstr "" 
+
+msgid "Short Stop Line Stroke"
+msgstr "" 
+
+msgid "Short Term Period"
+msgstr "" 
+
+msgid "Show"
+msgstr "" 
+
+msgid "Sigma"
+msgstr "" 
+
+msgid "Signal Line Stroke"
+msgstr "" 
+
+msgid "Signal MA Type"
+msgstr "" 
+
+msgid "Signal Period"
+msgstr "" 
+
+msgid "Single MA Period"
+msgstr "" 
+
+msgid "Single MA Type"
+msgstr "" 
+
+msgid "Slow %D MA Type"
+msgstr "" 
+
+msgid "Slow %D Period"
+msgstr "" 
+
+msgid "Slow %K MA Type"
+msgstr "" 
+
+msgid "Slow %K Period"
+msgstr "" 
+
+msgid "Slow Limit"
+msgstr "" 
+
+msgid "Slow MA Type"
+msgstr "" 
+
+msgid "Slow Period"
+msgstr "" 
+
+msgid "Sold"
+msgstr "" 
+
+msgid "Spline"
+msgstr "" 
+
+msgid "Start Time"
+msgstr "" 
+
+msgid "Start time"
+msgstr "" 
+
+msgid "State/province/region"
+msgstr "" 
+
+msgid "Statement"
+msgstr "" 
+
+msgid "Status"
+msgstr "" 
+
+msgid "Stays In/Goes Out"
+msgstr "" 
+
+msgid "Stocks trading experience"
+msgstr "" 
+
+msgid "Stocks trading frequency"
+msgstr "" 
+
+msgid "Stop Loss Level"
+msgstr "" 
+
+msgid "Stop Profit Level"
+msgstr "" 
+
+msgid "Stop-loss"
+msgstr "" 
+
+msgid "Stop-profit"
+msgstr "" 
+
+msgid "Stop-type"
+msgstr "" 
+
+msgid "Street address"
+msgstr "" 
+
+msgid "Stroke"
+msgstr "" 
+
+msgid "Stroke width"
+msgstr "" 
+
+msgid "TEMA"
+msgstr "" 
+
+msgid "TRIMA"
+msgstr "" 
+
+msgid "Table"
+msgstr "" 
+
+msgid "Terms"
+msgstr "" 
+
+msgid "The"
+msgstr "" 
+
+msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium."
+msgstr "" 
+
+msgid "Tick Trade app"
+msgstr "" 
+
+msgid "Tick {row.number}"
+msgstr "" 
+
+msgid "Tile"
+msgstr "" 
+
+msgid "Time Period"
+msgstr "" 
+
+msgid "Time period :"
+msgstr "" 
+
+msgid "Time periods"
+msgstr "" 
+
+msgid "Title"
+msgstr "" 
+
+msgid "Token"
+msgstr "" 
+
+msgid "Token management"
+msgstr "" 
+
+msgid "Token name"
+msgstr "" 
+
+msgid "Token permissions"
+msgstr "" 
+
+msgid "Tokens are special codes for accessing Binary mobile applications and third party tools."
+msgstr "" 
+
+msgid "Tooltip background"
+msgstr "" 
+
+msgid "Tooltip text"
+msgstr "" 
+
+msgid "Total Cost"
+msgstr "" 
+
+msgid "Touch/No Touch"
+msgstr "" 
+
+msgid "Town/City"
+msgstr "" 
+
+msgid "Trade"
+msgstr "" 
+
+msgid "Trade Confirmation"
+msgstr "" 
+
+msgid "Trade using"
+msgstr "" 
+
+msgid "Trading Times"
+msgstr "" 
+
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
+msgstr "" 
+
+msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgstr "" 
+
+msgid "Tradingview for Binary.com"
+msgstr "" 
+
+msgid "Try"
+msgstr "" 
+
+msgid "Turnover"
+msgstr "" 
+
+msgid "USD"
+msgstr "" 
+
+msgid "Unfortunately, your browser does not support them."
+msgstr "" 
+
+msgid "Up/Down"
+msgstr "" 
+
+msgid "Upcoming Events"
+msgstr "" 
+
+msgid "Update Settings"
+msgstr "" 
+
+msgid "Upper Band Stroke"
+msgstr "" 
+
+msgid "Use"
+msgstr "" 
+
+msgid "Verification code has been sent to your email"
+msgstr "" 
+
+msgid "Verification token"
+msgstr "" 
+
+msgid "Verify new password"
+msgstr "" 
+
+msgid "Vertical Line"
+msgstr "" 
+
+msgid "View"
+msgstr "" 
+
+msgid "View Historical Data"
+msgstr "" 
+
+msgid "Volume Factor"
+msgstr "" 
+
+msgid "WMA"
+msgstr "" 
+
+msgid "WMA Period"
+msgstr "" 
+
+msgid "Websocket Server"
+msgstr "" 
+
+msgid "Webtrader"
+msgstr "" 
+
+msgid "Webtrader uses new web technologies for rich and enjoyable trading experience."
+msgstr "" 
+
+msgid "While on the go, you can:"
+msgstr "" 
+
+msgid "Windows"
+msgstr "" 
+
+msgid "X-axis labels"
+msgstr "" 
+
+msgid "X-axis line"
+msgstr "" 
+
+msgid "X-axis tick"
+msgstr "" 
+
+msgid "Y-axis gridline"
+msgstr "" 
+
+msgid "Y-axis labels"
+msgstr "" 
+
+msgid "You have sold the following contract:"
+msgstr "" 
+
+msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
+msgstr "" 
+
+msgid "You pay:"
+msgstr "" 
+
+msgid "You will be automatically logged out after such time"
+msgstr "" 
+
+msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it."
+msgstr "" 
+
+msgid "Your browser is not supported"
+msgstr "" 
+
+msgid "Your email"
+msgstr "" 
+
+msgid "Your new account balance is"
+msgstr "" 
+
+msgid "Your transaction reference is"
+msgstr "" 
+
+msgid "Your transaction reference number is"
+msgstr "" 
+
+msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate."
+msgstr "" 
+
+msgid "contact support"
+msgstr "" 
+
+msgid "customer support"
+msgstr "" 
+
+msgid "e.g,"
+msgstr "" 
+
+msgid "e.g, www2.binary.com, www.binaryqa36.com."
+msgstr "" 
+
+msgid "end time"
+msgstr "" 
+
+msgid "entry spot"
+msgstr "" 
+
+msgid "exit spot"
+msgstr "" 
+
+msgid "for mobile charts"
+msgstr "" 
+
+msgid "has updated its"
+msgstr "" 
+
+msgid "https://developers.binary.com/"
+msgstr "" 
+
+msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+msgstr "" 
+
+msgid "if this is not your country of residence."
+msgstr "" 
+
+msgid "in the future, the"
+msgstr "" 
+
+msgid "information about your trading exprience and personal finance."
+msgstr "" 
+
+msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs."
+msgstr "" 
+
+msgid "is required. Current spread:"
+msgstr "" 
+
+msgid "is that which is selected and the"
+msgstr "" 
+
+msgid "is the"
+msgstr "" 
+
+msgid "is the price in effect at that time."
+msgstr "" 
+
+msgid "is the selected number of minutes/hours after the"
+msgstr "" 
+
+msgid "is the selected time."
+msgstr "" 
+
+msgid "is the spot at the"
+msgstr "" 
+
+msgid "is when the contract is processed by our servers and the"
+msgstr "" 
+
+msgid "main site"
+msgstr "" 
+
+msgid "minutes"
+msgstr "" 
+
+msgid "next tick"
+msgstr "" 
+
+msgid "oauth :"
+msgstr "" 
+
+msgid "of "Now", the"
+msgstr "" 
+
+msgid "please play responsibly. Read about"
+msgstr "" 
+
+msgid "points"
+msgstr "" 
+
+msgid "session overview"
+msgstr "" 
+
+msgid "start time"
+msgstr "" 
+
+msgid "terms and conditions"
+msgstr "" 
+
+msgid "thereafter."
+msgstr "" 
+
+msgid "trading experience"
+msgstr "" 
+
+msgid "trading frequency"
+msgstr "" 
+
+msgid "websocket :"
+msgstr "" 
+
+msgid "yes"
+msgstr "" 
+
+msgid "{bought}"
+msgstr "" 
+
+msgid "{currency}"
+msgstr "" 
+
+msgid "{currentTime}"
+msgstr "" 
+
+msgid "{description}"
+msgstr "" 
+
+msgid "{digits.text}"
+msgstr "" 
+
+msgid "{durationInMins}"
+msgstr "" 
+
+msgid "{loginId}"
+msgstr "" 
+
+msgid "{loginTime}"
+msgstr "" 
+
+msgid "{open}"
+msgstr "" 
+
+msgid "{pnl}"
+msgstr "" 
+
+msgid "{potentialProfit}"
+msgstr "" 
+
+msgid "{proposal.error}"
+msgstr "" 
+
+msgid "{proposal.message}"
+msgstr "" 
+
+msgid "{row | capitalize}"
+msgstr "" 
+
+msgid "{row.epoch | utc-time}"
+msgstr "" 
+
+msgid "{row.text}"
+msgstr "" 
+
+msgid "{row}"
+msgstr "" 
+
+msgid "{sold}"
+msgstr "" 
+
+msgid "{turnOver}"
+msgstr "" 
+
+msgid "| Return"
+msgstr "" 
+
+msgid "﻿"
+msgstr "" 
+
+msgid "%D MA Type"
+msgstr "" 
+
+msgid "%D Period"
+msgstr "" 
+
+msgid "%D Stroke"
+msgstr "" 
+
+msgid "%K MA Type"
+msgstr "" 
+
+msgid "%K Period"
+msgstr "" 
+
+msgid "%K Stroke"
+msgstr "" 
+
+msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
+msgstr "" 
+
+msgid "* Optional field, within 20 characters and may not contain '+'."
+msgstr "" 
+
+msgid "* Passwords didn't match. Please type them again"
+msgstr "" 
+
+msgid "* Please answer to secret question, within 4-50 characters."
+msgstr "" 
+
+msgid "* Please enter a valid date in yyyy-mm-dd format."
+msgstr "" 
+
+msgid "* Please enter a vlaid phone number."
+msgstr "" 
+
+msgid "* Please enter correct email"
+msgstr "" 
+
+msgid "* Please enter the verification code sent to your email."
+msgstr "" 
+
+msgid "* Please enter your city address."
+msgstr "" 
+
+msgid "* Please enter your current password"
+msgstr "" 
+
+msgid "* Please enter your email"
+msgstr "" 
+
+msgid "* Please enter your family name."
+msgstr "" 
+
+msgid "* Please enter your first name."
+msgstr "" 
+
+msgid "* Please enter your phone number."
+msgstr "" 
+
+msgid "* Please enter your street address."
+msgstr "" 
+
+msgid "+DI Stroke"
+msgstr "" 
+
+msgid ", the"
+msgstr "" 
+
+msgid "-DI Stroke"
+msgstr "" 
+
+msgid ". By clicking OK, you confirm that you have read and accepted the updated"
+msgstr "" 
+
+msgid "1 Day"
+msgstr "" 
+
+msgid "1 Tick"
+msgstr "" 
+
+msgid "1 day"
+msgstr "" 
+
+msgid "1 hour"
+msgstr "" 
+
+msgid "1 min"
+msgstr "" 
+
+msgid "10"
+msgstr "" 
+
+msgid "10 mins"
+msgstr "" 
+
+msgid "10m"
+msgstr "" 
+
+msgid "15 mins"
+msgstr "" 
+
+msgid "15m"
+msgstr "" 
+
+msgid "1d"
+msgstr "" 
+
+msgid "1h"
+msgstr "" 
+
+msgid "1m"
+msgstr "" 
+
+msgid "2 hours"
+msgstr "" 
+
+msgid "2 mins"
+msgstr "" 
+
+msgid "2h"
+msgstr "" 
+
+msgid "2m"
+msgstr "" 
+
+msgid "3 mins"
+msgstr "" 
+
+msgid "30 mins"
+msgstr "" 
+
+msgid "30-day limit on losses"
+msgstr "" 
+
+msgid "30-day turnover limit"
+msgstr "" 
+
+msgid "30m"
+msgstr "" 
+
+msgid "3m"
+msgstr "" 
+
+msgid "4 hours"
+msgstr "" 
+
+msgid "4h"
+msgstr "" 
+
+msgid "5 mins"
+msgstr "" 
+
+msgid "5m"
+msgstr "" 
+
+msgid "7-day limit on losses"
+msgstr "" 
+
+msgid "7-day turnover limit"
+msgstr "" 
+
+msgid "8 hours"
+msgstr "" 
+
+msgid "8h"
+msgstr "" 
+
+msgid "ADX MA Type"
+msgstr "" 
+
+msgid "ADX Stroke"
+msgstr "" 
+
+msgid "ATR Period"
+msgstr "" 
+
+msgid "Acceleration"
+msgstr "" 
+
+msgid "Accept"
+msgstr "" 
+
+msgid "Account balance:"
+msgstr "" 
+
+msgid "Action"
+msgstr "" 
+
+msgid "Add"
+msgstr "" 
+
+msgid "Add indicator"
+msgstr "" 
+
+msgid "Add level"
+msgstr "" 
+
+msgid "Add overlays"
+msgstr "" 
+
+msgid "Add/remove indicators"
+msgstr "" 
+
+msgid "Add/remove overlays"
+msgstr "" 
+
+msgid "Admin"
+msgstr "" 
+
+msgid "All times are in GMT (Greenwich Mean Time)."
+msgstr "" 
+
+msgid "Amount Per Point"
+msgstr "" 
+
+msgid "Amount per point"
+msgstr "" 
+
+msgid "Answer"
+msgstr "" 
+
+msgid "Applied to"
+msgstr "" 
+
+msgid "Appropriateness Test: WARNING:"
+msgstr "" 
+
+msgid "Are you sure you want to delete this token?"
+msgstr "" 
+
+msgid "Aroon Down Stroke"
+msgstr "" 
+
+msgid "Aroon Up Stroke"
+msgstr "" 
+
+msgid "Asset"
+msgstr "" 
+
+msgid "Asset Index"
+msgstr "" 
+
+msgid "Back"
+msgstr "" 
+
+msgid "Back to list"
+msgstr "" 
+
+msgid "Background Color"
+msgstr "" 
+
+msgid "Barrier offset"
+msgstr "" 
+
+msgid "Binary options or other financial derivatives"
+msgstr "" 
+
+msgid "Binary.com"
+msgstr "" 
+
+msgid "Binary.com : Webtrader"
+msgstr "" 
+
+msgid "Bought"
+msgstr "" 
+
+msgid "Browser upgrade required"
+msgstr "" 
+
+msgid "Buy Price"
+msgstr "" 
+
+msgid "Buy price"
+msgstr "" 
+
+msgid "By clicking"
+msgstr "" 
+
+msgid "CLOSE"
+msgstr "" 
+
+msgid "Candlestick"
+msgstr "" 
+
+msgid "Candlestick down-color"
+msgstr "" 
+
+msgid "Candlestick down-line"
+msgstr "" 
+
+msgid "Candlestick up-color"
+msgstr "" 
+
+msgid "Candlestick up-line"
+msgstr "" 
+
+msgid "Cash Balance"
+msgstr "" 
+
+msgid "Change Backend Server"
+msgstr "" 
+
+msgid "Change password"
+msgstr "" 
+
+msgid "Chart"
+msgstr "" 
+
+msgid "Chart Objects"
+msgstr "" 
+
+msgid "Chart Themes"
+msgstr "" 
+
+msgid "Chart Type"
+msgstr "" 
+
+msgid "Chart background"
+msgstr "" 
+
+msgid "Chart menu"
+msgstr "" 
+
+msgid "Choose password"
+msgstr "" 
+
+msgid "Chrome"
+msgstr "" 
+
+msgid "Click Jacking test"
+msgstr "" 
+
+msgid "Click to log in with your Binary.com account"
+msgstr "" 
+
+msgid "Close Price"
+msgstr "" 
+
+msgid "Close all"
+msgstr "" 
+
+msgid "Closes"
+msgstr "" 
+
+msgid "Commodities trading experience"
+msgstr "" 
+
+msgid "Commodities trading frequency"
+msgstr "" 
+
+msgid "Conditions"
+msgstr "" 
+
+msgid "Continue"
+msgstr "" 
+
+msgid "Continue Trading"
+msgstr "" 
+
+msgid "Contracts"
+msgstr "" 
+
+msgid "Country of residence"
+msgstr "" 
+
+msgid "Create"
+msgstr "" 
+
+msgid "Create token"
+msgstr "" 
+
+msgid "Credit/Debit"
+msgstr "" 
+
+msgid "Crosshair"
+msgstr "" 
+
+msgid "Current Level"
+msgstr "" 
+
+msgid "Current Spot"
+msgstr "" 
+
+msgid "Current Spot Time"
+msgstr "" 
+
+msgid "Current indicators"
+msgstr "" 
+
+msgid "Current overlays"
+msgstr "" 
+
+msgid "Current password"
+msgstr "" 
+
+msgid "Current price"
+msgstr "" 
+
+msgid "Current regulations require that you provide us the following"
+msgstr "" 
+
+msgid "Current time"
+msgstr "" 
+
+msgid "Custom Theme"
+msgstr "" 
+
+msgid "DX MA Type"
+msgstr "" 
+
+msgid "Daily limit on losses"
+msgstr "" 
+
+msgid "Daily turnover limit"
+msgstr "" 
+
+msgid "Dark Blue"
+msgstr "" 
+
+msgid "Dark Green"
+msgstr "" 
+
+msgid "Dark Unica"
+msgstr "" 
+
+msgid "Dash style"
+msgstr "" 
+
+msgid "Date"
+msgstr "" 
+
+msgid "Date of birth"
+msgstr "" 
+
+msgid "Decline"
+msgstr "" 
+
+msgid "Default"
+msgstr "" 
+
+msgid "Delete level(s)"
+msgstr "" 
+
+msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgstr "" 
+
+msgid "Deposit of USD"
+msgstr "" 
+
+msgid "Describe what this token is for to find it later."
+msgstr "" 
+
+msgid "Description"
+msgstr "" 
+
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account."
+msgstr "" 
+
+msgid "Dot"
+msgstr "" 
+
+msgid "Double MA Period"
+msgstr "" 
+
+msgid "Double MA Type"
+msgstr "" 
+
+msgid "Draw"
+msgstr "" 
+
+msgid "Duration"
+msgstr "" 
+
+msgid "EMA"
+msgstr "" 
+
+msgid "Edge"
+msgstr "" 
+
+msgid "Edit"
+msgstr "" 
+
+msgid "End Time"
+msgstr "" 
+
+msgid "Ends In/Out"
+msgstr "" 
+
+msgid "Enter your current password"
+msgstr "" 
+
+msgid "Entry Spot"
+msgstr "" 
+
+msgid "Entry spot"
+msgstr "" 
+
+msgid "Estimated Net Worth"
+msgstr "" 
+
+msgid "Exclude me from the website until"
+msgstr "" 
+
+msgid "Exit Spot"
+msgstr "" 
+
+msgid "Exit spot"
+msgstr "" 
+
+msgid "Explanation"
+msgstr "" 
+
+msgid "Family name"
+msgstr "" 
+
+msgid "Fast %K MA Type"
+msgstr "" 
+
+msgid "Fast %K Period"
+msgstr "" 
+
+msgid "Fast Limit"
+msgstr "" 
+
+msgid "Fast MA Type"
+msgstr "" 
+
+msgid "Fast Period"
+msgstr "" 
+
+msgid "Favorites"
+msgstr "" 
+
+msgid "Final Price"
+msgstr "" 
+
+msgid "Final price"
+msgstr "" 
+
+msgid "Financial information"
+msgstr "" 
+
+msgid "Firefox"
+msgstr "" 
+
+msgid "First name"
+msgstr "" 
+
+msgid "Forex trading experience"
+msgstr "" 
+
+msgid "Forex trading frequency"
+msgstr "" 
+
+msgid "From"
+msgstr "" 
+
+msgid "Gray"
+msgstr "" 
+
+msgid "Grid"
+msgstr "" 
+
+msgid "Grid Light"
+msgstr "" 
+
+msgid "HEADER.CONTRACT"
+msgstr "" 
+
+msgid "HEADER.PROFIT_LOSS"
+msgstr "" 
+
+msgid "HEADER.PURCHASE_DATE"
+msgstr "" 
+
+msgid "HEADER.PURCHASE_PRICE"
+msgstr "" 
+
+msgid "HEADER.REF"
+msgstr "" 
+
+msgid "HEADER.SALE_DATE"
+msgstr "" 
+
+msgid "HEADER.SALE_PRICE"
+msgstr "" 
+
+msgid "HIGH"
+msgstr "" 
+
+msgid "High Price"
+msgstr "" 
+
+msgid "High Stroke"
+msgstr "" 
+
+msgid "High barrier offset"
+msgstr "" 
+
+msgid "Highcharts implementation for Binary.com"
+msgstr "" 
+
+msgid "Histogram Color"
+msgstr "" 
+
+msgid "Histogram Color For Higher Values"
+msgstr "" 
+
+msgid "Histogram Color For Lower Values"
+msgstr "" 
+
+msgid "Home Address"
+msgstr "" 
+
+msgid "Horizontal Line"
+msgstr "" 
+
+msgid "I have read and agree to Binary.com"
+msgstr "" 
+
+msgid "If you select a"
+msgstr "" 
+
+msgid "If you select a specific"
+msgstr "" 
+
+msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)."
+msgstr "" 
+
+msgid "In regards to binary options which are gambling products, remember that gambling can be addictive"
+msgstr "" 
+
+msgid "Income Source"
+msgstr "" 
+
+msgid "Indicative Price"
+msgstr "" 
+
+msgid "Indices trading experience"
+msgstr "" 
+
+msgid "Indices trading frequency"
+msgstr "" 
+
+msgid "Industry of Employment"
+msgstr "" 
+
+msgid "Instrument"
+msgstr "" 
+
+msgid "Instruments :"
+msgstr "" 
+
+msgid "Just click “Grant” button on the page you will now be taken to."
+msgstr "" 
+
+msgid "LOW"
+msgstr "" 
+
+msgid "Last used"
+msgstr "" 
+
+msgid "Let's do it"
+msgstr "" 
+
+msgid "Level"
+msgstr "" 
+
+msgid "Level of Education"
+msgstr "" 
+
+msgid "Line"
+msgstr "" 
+
+msgid "Line Dot"
+msgstr "" 
+
+msgid "Line Stroke"
+msgstr "" 
+
+msgid "Log Scale"
+msgstr "" 
+
+msgid "Log in"
+msgstr "" 
+
+msgid "Log in time"
+msgstr "" 
+
+msgid "Login"
+msgstr "" 
+
+msgid "Logout"
+msgstr "" 
+
+msgid "Long MA Type"
+msgstr "" 
+
+msgid "Long ROC Period"
+msgstr "" 
+
+msgid "Long Stop Line Stroke"
+msgstr "" 
+
+msgid "Long Term Period"
+msgstr "" 
+
+msgid "Low Price"
+msgstr "" 
+
+msgid "Low Stroke"
+msgstr "" 
+
+msgid "Low barrier offset"
+msgstr "" 
+
+msgid "Lower Band Stroke"
+msgstr "" 
+
+msgid "MA Type"
+msgstr "" 
+
+msgid "MACD Line Stroke"
+msgstr "" 
+
+msgid "Mass Period"
+msgstr "" 
+
+msgid "Max/Min Period"
+msgstr "" 
+
+msgid "Maximum"
+msgstr "" 
+
+msgid "Maximum account cash balance"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases over a 30-day period"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases over a 7-day period"
+msgstr "" 
+
+msgid "Maximum aggregate contract purchases per day"
+msgstr "" 
+
+msgid "Maximum aggregate loss over a 30-day period"
+msgstr "" 
+
+msgid "Maximum aggregate loss per day"
+msgstr "" 
+
+msgid "Maximum number of open positions"
+msgstr "" 
+
+msgid "Middle Band Stroke"
+msgstr "" 
+
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "" 
+
+msgid "Multiplier"
+msgstr "" 
+
+msgid "NB Dev Down"
+msgstr "" 
+
+msgid "NB Dev Up"
+msgstr "" 
+
+msgid "Name"
+msgstr "" 
+
+msgid "Navigator handles background"
+msgstr "" 
+
+msgid "Navigator handles border"
+msgstr "" 
+
+msgid "Navigator mask-fill"
+msgstr "" 
+
+msgid "Navigator outline"
+msgstr "" 
+
+msgid "Navigator series color"
+msgstr "" 
+
+msgid "Navigator series line"
+msgstr "" 
+
+msgid "Net Annual Income"
+msgstr "" 
+
+msgid "Net Profit:"
+msgstr "" 
+
+msgid "New password"
+msgstr "" 
+
+msgid "No"
+msgstr "" 
+
+msgid "Number of bars on sides"
+msgstr "" 
+
+msgid "OAuth App ID (Optional)"
+msgstr "" 
+
+msgid "OAuth Server"
+msgstr "" 
+
+msgid "OHLC"
+msgstr "" 
+
+msgid "OPEN"
+msgstr "" 
+
+msgid "Offset"
+msgstr "" 
+
+msgid "Ok"
+msgstr "" 
+
+msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you."
+msgstr "" 
+
+msgid "Once this limit is reached, you may no longer deposit."
+msgstr "" 
+
+msgid "One last step left"
+msgstr "" 
+
+msgid "Open"
+msgstr "" 
+
+msgid "Open Account"
+msgstr "" 
+
+msgid "Open Price"
+msgstr "" 
+
+msgid "Open account"
+msgstr "" 
+
+msgid "Open real money account"
+msgstr "" 
+
+msgid "Opens"
+msgstr "" 
+
+msgid "Opera"
+msgstr "" 
+
+msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
+msgstr "" 
+
+msgid "Other financial instruments trading experience"
+msgstr "" 
+
+msgid "Other financial instruments trading frequency"
+msgstr "" 
+
+msgid "PPO Line Stroke"
+msgstr "" 
+
+msgid "Payments"
+msgstr "" 
+
+msgid "Period"
+msgstr "" 
+
+msgid "Period 1"
+msgstr "" 
+
+msgid "Period 2"
+msgstr "" 
+
+msgid "Period 3"
+msgstr "" 
+
+msgid "Permissions"
+msgstr "" 
+
+msgid "Personal Details"
+msgstr "" 
+
+msgid "Phone"
+msgstr "" 
+
+msgid "Please"
+msgstr "" 
+
+msgid "Please enter date in the format YYYY-MM-DD"
+msgstr "" 
+
+msgid "Please install the latest version of one of these browsers:"
+msgstr "" 
+
+msgid "Please select"
+msgstr "" 
+
+msgid "Plot"
+msgstr "" 
+
+msgid "Plot Color"
+msgstr "" 
+
+msgid "Pofit/Loss"
+msgstr "" 
+
+msgid "Points"
+msgstr "" 
+
+msgid "Portfolio"
+msgstr "" 
+
+msgid "Postal code/ZIP"
+msgstr "" 
+
+msgid "Potential Payout"
+msgstr "" 
+
+msgid "Potential Profit"
+msgstr "" 
+
+msgid "Potential profit"
+msgstr "" 
+
+msgid "Pre-Defined"
+msgstr "" 
+
+msgid "Preferred reality-check interval:"
+msgstr "" 
+
+msgid "Press “Create token” button on the right to create your first token."
+msgstr "" 
+
+msgid "Price"
+msgstr "" 
+
+msgid "Profit table"
+msgstr "" 
+
+msgid "Profit/Loss (points)"
+msgstr "" 
+
+msgid "Purchase"
+msgstr "" 
+
+msgid "Purchase Price"
+msgstr "" 
+
+msgid "Read"
+msgstr "" 
+
+msgid "Ref."
+msgstr "" 
+
+msgid "Refresh"
+msgstr "" 
+
+msgid "Register free account"
+msgstr "" 
+
+msgid "Remove"
+msgstr "" 
+
+msgid "Repeat password"
+msgstr "" 
+
+msgid "Resources"
+msgstr "" 
+
+msgid "Responsible Trading"
+msgstr "" 
+
+msgid "Results"
+msgstr "" 
+
+msgid "Return"
+msgstr "" 
+
+msgid "SMA"
+msgstr "" 
+
+msgid "Safari"
+msgstr "" 
+
+msgid "Sale Price"
+msgstr "" 
+
+msgid "Sand Signika"
+msgstr "" 
+
+msgid "Security"
+msgstr "" 
+
+msgid "Security question"
+msgstr "" 
+
+msgid "Select Instrument"
+msgstr "" 
+
+msgid "Self-Exclusion"
+msgstr "" 
+
+msgid "Sell At Market"
+msgstr "" 
+
+msgid "Sell Price"
+msgstr "" 
+
+msgid "Sell Spot"
+msgstr "" 
+
+msgid "Sell Time"
+msgstr "" 
+
+msgid "Session"
+msgstr "" 
+
+msgid "Session duration limit, in minutes"
+msgstr "" 
+
+msgid "Settles"
+msgstr "" 
+
+msgid "Short MA Type"
+msgstr "" 
+
+msgid "Short ROC Period"
+msgstr "" 
+
+msgid "Short Stop Line Stroke"
+msgstr "" 
+
+msgid "Short Term Period"
+msgstr "" 
+
+msgid "Show"
+msgstr "" 
+
+msgid "Sigma"
+msgstr "" 
+
+msgid "Signal Line Stroke"
+msgstr "" 
+
+msgid "Signal MA Type"
+msgstr "" 
+
+msgid "Signal Period"
+msgstr "" 
+
+msgid "Single MA Period"
+msgstr "" 
+
+msgid "Single MA Type"
+msgstr "" 
+
+msgid "Slow %D MA Type"
+msgstr "" 
+
+msgid "Slow %D Period"
+msgstr "" 
+
+msgid "Slow %K MA Type"
+msgstr "" 
+
+msgid "Slow %K Period"
+msgstr "" 
+
+msgid "Slow Limit"
+msgstr "" 
+
+msgid "Slow MA Type"
+msgstr "" 
+
+msgid "Slow Period"
+msgstr "" 
+
+msgid "Sold"
+msgstr "" 
+
+msgid "Spline"
+msgstr "" 
+
+msgid "Start Time"
+msgstr "" 
+
+msgid "Start time"
+msgstr "" 
+
+msgid "State/province/region"
+msgstr "" 
+
+msgid "Statement"
+msgstr "" 
+
+msgid "Status"
+msgstr "" 
+
+msgid "Stays In/Goes Out"
+msgstr "" 
+
+msgid "Stocks trading experience"
+msgstr "" 
+
+msgid "Stocks trading frequency"
+msgstr "" 
+
+msgid "Stop Loss Level"
+msgstr "" 
+
+msgid "Stop Profit Level"
+msgstr "" 
+
+msgid "Stop-loss"
+msgstr "" 
+
+msgid "Stop-profit"
+msgstr "" 
+
+msgid "Stop-type"
+msgstr "" 
+
+msgid "Street address"
+msgstr "" 
+
+msgid "Stroke"
+msgstr "" 
+
+msgid "Stroke width"
+msgstr "" 
+
+msgid "TEMA"
+msgstr "" 
+
+msgid "TRIMA"
+msgstr "" 
+
+msgid "Table"
+msgstr "" 
+
+msgid "Terms"
+msgstr "" 
+
+msgid "The"
+msgstr "" 
+
+msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium."
+msgstr "" 
+
+msgid "Tick Trade app"
+msgstr "" 
+
+msgid "Tick {row.number}"
+msgstr "" 
+
+msgid "Tile"
+msgstr "" 
+
+msgid "Time Period"
+msgstr "" 
+
+msgid "Time period :"
+msgstr "" 
+
+msgid "Time periods"
+msgstr "" 
+
+msgid "Title"
+msgstr "" 
+
+msgid "Token"
+msgstr "" 
+
+msgid "Token management"
+msgstr "" 
+
+msgid "Token name"
+msgstr "" 
+
+msgid "Token permissions"
+msgstr "" 
+
+msgid "Tokens are special codes for accessing Binary mobile applications and third party tools."
+msgstr "" 
+
+msgid "Tooltip background"
+msgstr "" 
+
+msgid "Tooltip text"
+msgstr "" 
+
+msgid "Total Cost"
+msgstr "" 
+
+msgid "Touch/No Touch"
+msgstr "" 
+
+msgid "Town/City"
+msgstr "" 
+
+msgid "Trade"
+msgstr "" 
+
+msgid "Trade Confirmation"
+msgstr "" 
+
+msgid "Trade using"
+msgstr "" 
+
+msgid "Trading Times"
+msgstr "" 
+
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
+msgstr "" 
+
+msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgstr "" 
+
+msgid "Tradingview for Binary.com"
+msgstr "" 
+
+msgid "Try"
+msgstr "" 
+
+msgid "Turnover"
+msgstr "" 
+
+msgid "USD"
+msgstr "" 
+
+msgid "Unfortunately, your browser does not support them."
+msgstr "" 
+
+msgid "Up/Down"
+msgstr "" 
+
+msgid "Upcoming Events"
+msgstr "" 
+
+msgid "Update Settings"
+msgstr "" 
+
+msgid "Upper Band Stroke"
+msgstr "" 
+
+msgid "Use"
+msgstr "" 
+
+msgid "Verification code has been sent to your email"
+msgstr "" 
+
+msgid "Verification token"
+msgstr "" 
+
+msgid "Verify new password"
+msgstr "" 
+
+msgid "Vertical Line"
+msgstr "" 
+
+msgid "View"
+msgstr "" 
+
+msgid "View Historical Data"
+msgstr "" 
+
+msgid "Volume Factor"
+msgstr "" 
+
+msgid "WMA"
+msgstr "" 
+
+msgid "WMA Period"
+msgstr "" 
+
+msgid "Websocket Server"
+msgstr "" 
+
+msgid "Webtrader"
+msgstr "" 
+
+msgid "Webtrader uses new web technologies for rich and enjoyable trading experience."
+msgstr "" 
+
+msgid "While on the go, you can:"
+msgstr "" 
+
+msgid "Windows"
+msgstr "" 
+
+msgid "X-axis labels"
+msgstr "" 
+
+msgid "X-axis line"
+msgstr "" 
+
+msgid "X-axis tick"
+msgstr "" 
+
+msgid "Y-axis gridline"
+msgstr "" 
+
+msgid "Y-axis labels"
+msgstr "" 
+
+msgid "You have sold the following contract:"
+msgstr "" 
+
+msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
+msgstr "" 
+
+msgid "You pay:"
+msgstr "" 
+
+msgid "You will be automatically logged out after such time"
+msgstr "" 
+
+msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it."
+msgstr "" 
+
+msgid "Your browser is not supported"
+msgstr "" 
+
+msgid "Your email"
+msgstr "" 
+
+msgid "Your new account balance is"
+msgstr "" 
+
+msgid "Your transaction reference is"
+msgstr "" 
+
+msgid "Your transaction reference number is"
+msgstr "" 
+
+msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate."
+msgstr "" 
+
+msgid "contact support"
+msgstr "" 
+
+msgid "customer support"
+msgstr "" 
+
+msgid "e.g,"
+msgstr "" 
+
+msgid "e.g, www2.binary.com, www.binaryqa36.com."
+msgstr "" 
+
+msgid "end time"
+msgstr "" 
+
+msgid "entry spot"
+msgstr "" 
+
+msgid "exit spot"
+msgstr "" 
+
+msgid "for mobile charts"
+msgstr "" 
+
+msgid "has updated its"
+msgstr "" 
+
+msgid "https://developers.binary.com/"
+msgstr "" 
+
+msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+msgstr "" 
+
+msgid "if this is not your country of residence."
+msgstr "" 
+
+msgid "in the future, the"
+msgstr "" 
+
+msgid "information about your trading exprience and personal finance."
+msgstr "" 
+
+msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs."
+msgstr "" 
+
+msgid "is required. Current spread:"
+msgstr "" 
+
+msgid "is that which is selected and the"
+msgstr "" 
+
+msgid "is the"
+msgstr "" 
+
+msgid "is the price in effect at that time."
+msgstr "" 
+
+msgid "is the selected number of minutes/hours after the"
+msgstr "" 
+
+msgid "is the selected time."
+msgstr "" 
+
+msgid "is the spot at the"
+msgstr "" 
+
+msgid "is when the contract is processed by our servers and the"
+msgstr "" 
+
+msgid "main site"
+msgstr "" 
+
+msgid "minutes"
+msgstr "" 
+
+msgid "next tick"
+msgstr "" 
+
+msgid "oauth :"
+msgstr "" 
+
+msgid "of "Now", the"
+msgstr "" 
+
+msgid "please play responsibly. Read about"
+msgstr "" 
+
+msgid "points"
+msgstr "" 
+
+msgid "session overview"
+msgstr "" 
+
+msgid "start time"
+msgstr "" 
+
+msgid "terms and conditions"
+msgstr "" 
+
+msgid "thereafter."
+msgstr "" 
+
+msgid "trading experience"
+msgstr "" 
+
+msgid "trading frequency"
+msgstr "" 
+
+msgid "websocket :"
+msgstr "" 
+
+msgid "yes"
+msgstr "" 
+
+msgid "{bought}"
+msgstr "" 
+
+msgid "{currency}"
+msgstr "" 
+
+msgid "{currentTime}"
+msgstr "" 
+
+msgid "{description}"
+msgstr "" 
+
+msgid "{digits.text}"
+msgstr "" 
+
+msgid "{durationInMins}"
+msgstr "" 
+
+msgid "{loginId}"
+msgstr "" 
+
+msgid "{loginTime}"
+msgstr "" 
+
+msgid "{open}"
+msgstr "" 
+
+msgid "{pnl}"
+msgstr "" 
+
+msgid "{potentialProfit}"
+msgstr "" 
+
+msgid "{proposal.error}"
+msgstr "" 
+
+msgid "{proposal.message}"
+msgstr "" 
+
+msgid "{row | capitalize}"
+msgstr "" 
+
+msgid "{row.epoch | utc-time}"
+msgstr "" 
+
+msgid "{row.text}"
+msgstr "" 
+
+msgid "{row}"
+msgstr "" 
+
+msgid "{sold}"
+msgstr "" 
+
+msgid "{turnOver}"
+msgstr "" 
+
+msgid "| Return"
+msgstr "" 
+
+msgid "﻿"
+msgstr "" 
