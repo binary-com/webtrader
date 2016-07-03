@@ -50,7 +50,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           /* normal route */
           require(['windows/windows'], function(windows){
             win = windows.createBlankWindow(root, {
-                title: 'Add/remove overlays',
+                title: 'Add/remove overlays'.i18n(),
                 width: 700,
                 modal: true,
                 // minHeight: 60,
@@ -73,7 +73,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init_state(root){
       state = {
         dialog: {
-          title: 'Add/remove overlays',
+          title: 'Add/remove overlays'.i18n(),
           container_id: ''
         },
         overlays: {
@@ -218,7 +218,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     return {
       openDialog : function( containerIDWithHash, title ) {
         init().then(function(){
-            state.dialog.title = 'Add/remove overlays' + (title ? ' - ' + title : '');
+            state.dialog.title = 'Add/remove overlays'.i18n() + (title ? ' - ' + title : '');
             state.dialog.container_id = containerIDWithHash;
             state.overlays.current = $(containerIDWithHash).data('overlays-current') || [];
 

@@ -8,7 +8,8 @@ static = [
     'Error downloading .csv', 'Download PNG', 'Download SVG', 'Download CSV',
     'Remove Selected', 'Cancel', 'Double click the object to remove.',
     'Horizontal Line', 'Stroke width', 'Stroke color', 'Vertical Line',
-    'Please enter a value for', 'between', 'and',  
+    'Please enter a value for', 'between', 'and', 'Add/remove overlays',
+    
 ]
 
 # Parsing webtrader html files.
