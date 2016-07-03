@@ -85,17 +85,27 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
     "use strict";
     /* setup translating string literals */
     (function(dict) {
-      var keys = Object.keys(dict).filter(function(key) { return !!key; });
+      var keys = Object.keys(dict).filter(function(key) { return key !== '' && key !== ' '; });
+      keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
       /* Escape keys for using them in regex. */
-      keys = keys.map(function(key) { return key.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"); });
-      var regexp = RegExp ('\\b(' + keys.join('|') + ')\\b', 'g');
+      var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
+      var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
 
       var replacer = function (_, word) {
+        if(word.includes('Token')) console.warn(word);
         return (dict[word] && dict[word][1]) || word;
       };
       String.prototype.i18n = function() {
         return this.replace(regexp, replacer);
       };
+
+      /* hook $(html) to automatically call .i18n() before creating DOM nodes */
+      var parseHTML = $.parseHTML.bind($);
+      $.parseHTML = function(data, context, keepScripts) {
+          if(typeof data === 'string')
+            data = data.i18n();
+          return parseHTML(data, context, keepScripts);
+      }
     })(JSON.parse(lang_json));
 
     //By pass touch check for affiliates=true(because they just embed our charts)
