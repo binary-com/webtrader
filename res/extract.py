@@ -3,7 +3,10 @@ from HTMLParser import HTMLParser
 
 # Unfortunately there are no easy way to extract strings from .js files
 # This array will be added to generator .po files regardless of contents in html files.
-static = [ 'View', 'Total Profit/Loss', 'Asset Index' ];
+static = [
+    'View', 'Total Profit/Loss', 'Asset Index', 'Downloading .csv',
+    'Error downloading .csv', 'Download PNG', 'Download SVG', 'Download CSV'
+]
 
 # Parsing webtrader html files.
 class WebtraderParser(HTMLParser):

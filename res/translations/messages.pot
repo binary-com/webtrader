@@ -470,6 +470,9 @@ msgstr ""
 msgid "Double MA Type"
 msgstr "" 
 
+msgid "Downloading CSV"
+msgstr "" 
+
 msgid "Draw"
 msgstr "" 
 

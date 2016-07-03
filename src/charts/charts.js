@@ -122,7 +122,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             }
         });
 
-        $.growl.notice({ message : 'Downloading CSV' });
+        $.growl.notice({ message : 'Downloading .csv'.i18n() });
         //merge here
         new Parallel([lines, dataToBeProcessTolines])
             .spawn(function(data) {
@@ -168,7 +168,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     }
                 }
             }, function(error) {
-                $.growl.error({ message : 'Error downloading CSV' });
+                $.growl.error({ message : 'Error downloading .csv'.i18n() });
                 console.error(error);
             });
 
@@ -286,12 +286,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     //console.log(this.options.id, this.yAxis.plotLinesAndBands);
                                     this.removeCurrentPrice();
                                     this.addCurrentPrice();
-                                    
+
                                     //Add mouse wheel zooming
                                     require(['common/highcharts.mousewheel'], function($Hmw) {
                                         $Hmw.mousewheel(containerIDWithHash);
                                     });
-                                    
+
                                 }
 
                                 this.chart.hideLoading();
@@ -380,12 +380,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     buttons: {
                         contextButton: {
                             menuItems: [{
-                                text: 'Download PNG',
+                                text: 'Download PNG'.i18n(),
                                 onclick: function () {
                                     this.exportChartLocal();
                                 }
                             }, {
-                                text: 'Download SVG',
+                                text: 'Download SVG'.i18n(),
                                 onclick: function () {
                                     this.exportChartLocal({
                                         type: 'image/svg+xml'
@@ -393,7 +393,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                 },
                                 separator: false
                             }, {
-                                text: 'Download CSV',
+                                text: 'Download CSV'.i18n(),
                                 onclick: function () {
                                     generate_csv($(containerIDWithHash).highcharts(), $(containerIDWithHash).data());
                                 },
