@@ -92,7 +92,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
       var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
 
       var replacer = function (_, word) {
-        if(word.includes('Token')) console.warn(word);
         return (dict[word] && dict[word][1]) || word;
       };
       String.prototype.i18n = function() {
