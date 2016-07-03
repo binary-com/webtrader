@@ -114,7 +114,6 @@ function validateParameters() {
       var timePeriod_Obj = null;
       try {
           timePeriod_Obj = convertToTimeperiodObject(timePeriod_param);
-          console.log('timePeriod param : ', timePeriod_param, ", intValue : ", timePeriod_Obj.intValue(), ", suffix : ", timePeriod_Obj.suffix());
       } catch(e) {}
       if (!timePeriod_Obj) return false;
 
@@ -122,7 +121,6 @@ function validateParameters() {
       var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 &&  [1,2,3,5,10,15,30].indexOf(timePeriod_Obj.intValue()) != -1;
       var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && [1,2,4,8].indexOf(timePeriod_Obj.intValue()) != -1;
       var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() === 1;
-      console.log('isValidTickTF : ', isValidTickTF, ', isValidMinTF : ', isValidMinTF, ', isValidHourTF : ', isValidHourTF, ', isValidDayTF : ', isValidDayTF);
       return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
 }
 
