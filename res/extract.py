@@ -17,6 +17,7 @@ class WebtraderParser(HTMLParser):
         if not self.is_script: # ignore script tags
             text = re.sub( '\s+', ' ', text).strip()
             if text != '' and len(text) > 1: # ignore empty and single character strings.
+                if text[0] == '{' and text[-1] == '}': return #ignore rivetsjs tags
                 self.texts.append(text)
     def parse_html_files(self, path):
         file_pattern = "*.html"
@@ -35,8 +36,13 @@ parser = WebtraderParser()
 parser.parse_html_files('../src')
 texts = parser.get_texts()
 
-with open('./translations/messages.pot', 'a+') as wf:
+messages_pot = './translations/messages.pot'
+
+os.remove(messages_pot);
+with open(messages_pot, 'a+') as wf:
     for text in texts:
+        text = text.replace('"', '\\"')
+        text = re.sub(r'[^\x00-\x7F]+',' ', text) # remove non aski characters
         wf.write('\n' + 'msgid "' + text + '"'      )
         wf.write('\nmsgstr "" \n')
 
