@@ -2,10 +2,6 @@
  * Created by amin on 10/5/15.
  */
 
-.profit-table-container {
-  padding:  0 !important;
-}
-
 table.profit-table-dialog th span {
     height: 2.5em !important;
     display: block;

@@ -359,6 +359,9 @@ msgstr ""
 msgid "Continue Trading"
 msgstr "" 
 
+msgid "Contract"
+msgstr "" 
+
 msgid "Contracts"
 msgstr "" 
 
@@ -564,27 +567,6 @@ msgid "Grid"
 msgstr "" 
 
 msgid "Grid Light"
-msgstr "" 
-
-msgid "HEADER.CONTRACT"
-msgstr "" 
-
-msgid "HEADER.PROFIT_LOSS"
-msgstr "" 
-
-msgid "HEADER.PURCHASE_DATE"
-msgstr "" 
-
-msgid "HEADER.PURCHASE_PRICE"
-msgstr "" 
-
-msgid "HEADER.REF"
-msgstr "" 
-
-msgid "HEADER.SALE_DATE"
-msgstr "" 
-
-msgid "HEADER.SALE_PRICE"
 msgstr "" 
 
 msgid "HIGH"
@@ -944,10 +926,16 @@ msgstr ""
 msgid "Profit table"
 msgstr "" 
 
+msgid "Profit/ Loss"
+msgstr "" 
+
 msgid "Profit/Loss (points)"
 msgstr "" 
 
 msgid "Purchase"
+msgstr "" 
+
+msgid "Purchase Date"
 msgstr "" 
 
 msgid "Purchase Price"
@@ -987,6 +975,9 @@ msgid "SMA"
 msgstr "" 
 
 msgid "Safari"
+msgstr "" 
+
+msgid "Sale Date"
 msgstr "" 
 
 msgid "Sale Price"

@@ -69,7 +69,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
                     profit,
-                    '<button>COMMON.VIEW</button>'.i18n(),
+                    '<button>View</button>',
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
@@ -105,9 +105,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
     function initProfitWin() {
         require(['text!profittable/profitTable.html'], function (html) {
-          html = html.i18n('PROFIT_TABLE');
-          profitWin = windows.createBlankWindow($('<div class="profit-table-container"/>'), {
-              title: 'PROFIT_TABLE.TITLE'.i18n(),
+          profitWin = windows.createBlankWindow($('<div/>'), {
+              title: 'Profit Table',
               width: 700 ,
               height: 400,
               destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
@@ -126,6 +125,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             table = $(html);
             table.appendTo(profitWin);
             var footer = $('<div/>').addClass('profit-table-info');
+
             table = table.dataTable({
                 data: [],
                 columnDefs: [ {
@@ -145,7 +145,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
                   var css = 'total ' + (total >= 0 ? 'green' : 'red');
                   footer.html(
-                    '<span class="title">TOTAL_PROFIT_LOSS<span>'.i18n('PROFIT_TABLE.FOOTER') +
+                    '<span class="title">Total Profit/Loss<span>' +
                     '<span class="' + css + '">'+ formatPrice(total) +'</span>'
                   );
                 },
@@ -168,7 +168,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             refreshTable({clear: true});
             datepicker = profitWin.addDateToHeader({
-                title: 'COMMON.JUMP_TO: '.i18n(),
+                title: 'Jump to: ',
                 date: null, /* set date to null */
                 changed: refreshTable,
                 cleared: refreshTable

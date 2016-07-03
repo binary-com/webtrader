@@ -82,28 +82,21 @@ require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
 var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
 require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
-
     "use strict";
-    var lang = JSON.parse(lang_json);
-    var lang_flatten = flatten_object(lang);
-    var lang_keys = Object.keys(lang_flatten).join('|');
-    /* support translating string literals */
-    String.prototype.i18n = function(path) {
-      var keys = lang_keys;
-      if(path) {
-        path = path.endsWith('.') ? path : path + '.';
-        keys = keys.replace(new RegExp(path, 'g') , '');
-      }
-      var regexp = RegExp ('\\b(' + keys + ')\\b', 'g');
+    /* setup translating string literals */
+    (function(dict) {
+      var keys = Object.keys(dict).filter(function(key) { return !!key; });
+      /* Escape keys for using them in regex. */
+      keys = keys.map(function(key) { return key.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"); });
+      var regexp = RegExp ('\\b(' + keys.join('|') + ')\\b', 'g');
 
       var replacer = function (_, word) {
-        if(path && !word.startsWith('COMMON.'))
-          word = path + word;
-        return lang_flatten[word];
+        return (dict[word] && dict[word][1]) || word;
       };
-
-      return this.replace(regexp, replacer);
-    }
+      String.prototype.i18n = function() {
+        return this.replace(regexp, replacer);
+      };
+    })(JSON.parse(lang_json));
 
     //By pass touch check for affiliates=true(because they just embed our charts)
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {
