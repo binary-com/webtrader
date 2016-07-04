@@ -39,6 +39,7 @@ static = [
     'Please enter positive integer value for Daily limit on losses',  'Please enter positive integer value for 7-day turnover limit',
     'Self-Exclusion Facilities', 'You have excluded yourself until ', 'Loading self-exclusion settings', 'Statement', 
     'Logging out because of self-exclusion session time out', 'Terms and Conditions',  'Customize chart appearance',  'Some random index', 
+    'Apply new theme?', 'In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?', 
 
 ]
 
