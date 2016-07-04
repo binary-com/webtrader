@@ -11,6 +11,9 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 
 	return {
 		init: function() {
+			/* when we are on affiliates route we need to disable overflow-x */
+			$('body').addClass('affiliates');
+
 			// get chart window html.
 	        require(['text!charts/chartWindow.html'], function(html) {
 	            var newTabId = "webtrader-dialog-1",

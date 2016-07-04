@@ -9,6 +9,10 @@ html, body {
     width: 100%;
 }
 
+body.affiliates {
+  overflow-x: hidden;
+}
+
 body > .footer {
     transition: height .2s linear;
     top:0;
