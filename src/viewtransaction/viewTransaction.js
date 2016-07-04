@@ -17,12 +17,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
        market_data_disruption_win.moveToTop();
        return;
     }
-    var msg = "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.";
+    var msg = 'There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.'.i18n();
     // var msg = proposal.validation_error;
     var root = $('<div class="data-disruption-dialog">' + msg + '</div>');
 
     market_data_disruption_win = windows.createBlankWindow(root, {
-        title: ' There was an error ',
+        title: ' There was an error '.i18n(),
         height: 200,
         resizable:false,
         collapsable:false,
@@ -192,12 +192,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
-        state.validation = 'This contract has expired';
+        state.validation = 'This contract has expired'.i18n();
       else if(contract.is_valid_to_sell)
-        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
+        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
       if(contract.is_forward_starting){
         if(contract.date_start > parseInt(contract.current_spot_time))
-          state.fwd_starting = '* Contract is not yet started.';
+          state.fwd_starting = '* Contract is not yet started.'.i18n();
         else
           state.fwd_starting = '';
       }
@@ -244,15 +244,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
         if(!state.chart.barrier && contract.barrier) {
           state.chart.barrier = contract.barrier;
-          state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
+          state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
         }
         if(!state.chart.high_barrier && contract.high_barrier) {
           state.chart.high_barrier = contract.high_barrier;
-          state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
+          state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier ('.i18n() + state.chart.high_barrier + ')'});
         }
         if(!state.chart.low_barrier && contract.low_barrier) {
           state.chart.low_barrier = contract.low_barrier;
-          state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
+          state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier ('.i18n() + state.chart.low_barrier + ')', color: 'red'});
         }
   }
 
@@ -337,8 +337,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           contract_id: proposal.contract_id,
           longcode: proposal.longcode,
           validation: proposal.validation_error
-                || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
-                || (proposal.is_expired && 'This contract has expired') || '-',
+                || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
+                || (proposal.is_expired && 'This contract has expired'.i18n()) || '-',
           table: {
             is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
@@ -438,7 +438,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
       get_chart_data(state, root).then(function(){
           if(state.table.sell_time)
-            state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'});
+            state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'.i18n()});
       });
 
       /* backend doesn't always retun the sell_price when contract is soled,
@@ -492,7 +492,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               if(perv_tick) {
                 state.table.exit_tick = perv_tick.quote;
                 state.table.exit_tick_time = perv_tick.epoch*1;
-                state.validation = 'This contract has expired';
+                state.validation = 'This contract has expired'.i18n();
               }
               clean_up();
             }
@@ -603,7 +603,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               }).catch(function(err) { console.error(err); });
             }
 
-            chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
+            chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
           });
         }
         if(data.history && !state.table.exit_tick_time && state.table.is_expired && state.table.contract_type != "SPREAD") {
@@ -622,21 +622,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             }
 
             state.table.exit_tick = history.prices[0];
-            chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
+            chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
           });
         }
 
-        state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'});
+        state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'.i18n()});
 
-        state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
-        state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
+        state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
+        state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
 
-        state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'});
-        state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time' ,text_left: true });
+        state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
+        state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
 
-        state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
-        state.chart.high_barrier && chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
-        state.chart.low_barrier && chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
+        state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
+        state.chart.high_barrier && chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier ('.i18n() + state.chart.high_barrier + ')'});
+        state.chart.low_barrier && chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier ('.i18n() + state.chart.low_barrier + ')', color: 'red'});
 
         state.chart.chart = chart;
         state.chart.manual_reflow();

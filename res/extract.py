@@ -46,7 +46,11 @@ static = [
     'Please enter the token name', 'Successfully added new token', 'Contract Confirmation', 'Profit', 'Entry Spot', 'Exit Spot', 'Barrier',
     'Average', 'This contract won', 'This contract lost', 'Last Digit Prediction', 'Loading',  'Last Digit is Under', 'Last Digit is Over', 
     'Please log in', 'Up/Down', 'Touch/No Touch', 'In/Out', 'Digits', 'Asians', 'Spreads', 'Rise', 'Fall', 'Higher', 'Lower',
-    'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Now','Duration', 'End Time', 'Payout', 'Stake', 'Trading Times', 
+    'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Now','Duration', 'End Time', 'Payout', 'Stake', 'Trading Times',
+    'There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded', ' There was an error ',  'This contract has expired',
+    'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price',
+    'Contract is not yet started',  'Barrier', 'High Barrier', 'Low Barrier', 'Resale of this contract is not offered', 'Sell Time', 'Purchase Time',
+    'End Time',  'Start Time',
 ]
 
 # Parsing webtrader html files.
