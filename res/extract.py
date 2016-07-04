@@ -12,7 +12,14 @@ static = [
     'Chrome Extension', 'Do you want to install Webtrader chrome extension?',
     'days', 'day', 'hours', 'hour', 'minutes', 'minute', 'seconds', 'second',
     'Change Backend Server', 'Apply', 'Reset to Defaults', 'Config changes successful',
-    'Reloading page',  'Ticks',  'Minutes',  'Hours',  'Days', 
+    'Reloading page',  'Ticks',  'Minutes',  'Hours',  'Days', 'Loading Trading Times',
+    'Loading Token management', 'Loading Password dialog',  'Loading Asset Index',
+    'Loading portfolio',  'Loading Real account openning',  'Loading Profit Table',
+    'Loading Statement Table',  'Loading Download/View Data',  'Loading Self-Exclusion',
+    'Loading Configurations',  'Loading custom theme configuration',  'Please try again after 1 minute',
+    'Loading chart and trade menus',  'Please enter your password',  'Password must be 6 characters minimum',
+    'Password must contain lower and uppercase letters with numbers',  'Log in',  'Registration',
+    'Account opening',  'Verification code sent to ',  'Email verification failed', 
 ]
 
 # Parsing webtrader html files.
