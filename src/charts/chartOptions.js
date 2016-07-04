@@ -109,7 +109,6 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                                     var chart = $(chartIDWithHash).highcharts();
                                     var remove = !clickedLI.find('span:first').hasClass('ui-icon-check');
                                     if (remove) {
-                                        console.log('Remove current line');
                                         $.each(chart.series, function (index, series) {
                                             if (series.options.isInstrument) {
                                                 series.removeCurrentPrice();
@@ -117,7 +116,6 @@ define(['jquery', "charts/chartWindow", "common/util"], function($) {
                                         });
                                     } else {
                                         //Means this is not a remove case, we have to add the indicator
-                                        console.log('Add current line');
                                         chart.series.forEach(function(series){
                                             if (series.options.isInstrument) {
                                                 series.addCurrentPrice();
