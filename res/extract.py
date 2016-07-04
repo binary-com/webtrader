@@ -46,7 +46,7 @@ static = [
     'Please enter the token name', 'Successfully added new token', 'Contract Confirmation', 'Profit', 'Entry Spot', 'Exit Spot', 'Barrier',
     'Average', 'This contract won', 'This contract lost', 'Last Digit Prediction', 'Loading',  'Last Digit is Under', 'Last Digit is Over', 
     'Please log in', 'Up/Down', 'Touch/No Touch', 'In/Out', 'Digits', 'Asians', 'Spreads', 'Rise', 'Fall', 'Higher', 'Lower',
-    'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Now','Duration', 'End Time', 'Payout', 'Stake',  
+    'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Now','Duration', 'End Time', 'Payout', 'Stake', 'Trading Times', 
 ]
 
 # Parsing webtrader html files.
