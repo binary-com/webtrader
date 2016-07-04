@@ -22,8 +22,7 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
                         lineColor: 'rgba(0,0,0,1)',
                         color: 'rgba(215,24,24,1)',
                         upColor: 'rgba(2,146,14,1)',
-                        upLineColor: 'rgba(0,0,0,1)',
-                        shadow: true
+                        upLineColor: 'rgba(0,0,0,1)'
                     }
                 }
             });
@@ -45,7 +44,7 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
                     {
                         title: 'Apply new theme?',
                         width: 360,
-                        height: 240,
+                        height: 220,
                         resizable: false,
                         collapsable: false,
                         minimizable: false,
