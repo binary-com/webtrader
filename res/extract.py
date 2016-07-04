@@ -43,7 +43,8 @@ static = [
     'Your browser doesn\'t support copy to clipboard' , 'Note that tokens can possess one or more of these scopes',
     'for API calls that only read client data', 'for API calls that can create trades in the client account',
     'for API calls that can access the cashier', 'for API calls that change client settings',  'Please choose at least one token scope',
-    'Please enter the token name',  'Successfully added new token', 
+    'Please enter the token name', 'Successfully added new token', 'Contract Confirmation', 'Profit', 'Entry Spot', 'Exit Spot', 'Barrier',
+    'Average', 'This contract won', 'This contract lost', 
 ]
 
 # Parsing webtrader html files.
