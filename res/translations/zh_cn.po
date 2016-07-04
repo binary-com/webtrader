@@ -184,7 +184,13 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
+msgid "Account balance"
+msgstr ""
+
 msgid "Account balance:"
+msgstr ""
+
+msgid "Account opening"
 msgstr ""
 
 msgid "Action"
@@ -269,6 +275,9 @@ msgid "Binary.com : Webtrader"
 msgstr ""
 
 msgid "Bought"
+msgstr ""
+
+msgid "Brand of first car"
 msgstr ""
 
 msgid "Browser upgrade required"
@@ -451,6 +460,9 @@ msgstr ""
 msgid "Date of birth"
 msgstr ""
 
+msgid "Days"
+msgstr ""
+
 msgid "Decline"
 msgstr ""
 
@@ -517,6 +529,9 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+msgid "Email verification failed"
+msgstr ""
+
 msgid "End Time"
 msgstr ""
 
@@ -550,6 +565,9 @@ msgstr ""
 msgid "Explanation"
 msgstr ""
 
+msgid "Failed to update the password"
+msgstr ""
+
 msgid "Family name"
 msgstr ""
 
@@ -569,6 +587,12 @@ msgid "Fast Period"
 msgstr ""
 
 msgid "Favorites"
+msgstr ""
+
+msgid "Favourite artist"
+msgstr ""
+
+msgid "Favourite dish"
 msgstr ""
 
 msgid "Final Price"
@@ -634,6 +658,9 @@ msgstr ""
 msgid "Horizontal Line"
 msgstr ""
 
+msgid "Hours"
+msgstr ""
+
 msgid "I have read and agree to Binary.com"
 msgstr ""
 
@@ -676,6 +703,9 @@ msgstr ""
 msgid "Instruments :"
 msgstr ""
 
+msgid "Jump to"
+msgstr ""
+
 msgid "Just click  Grant  button on the page you will now be taken to."
 msgstr ""
 
@@ -701,6 +731,45 @@ msgid "Line Dot"
 msgstr ""
 
 msgid "Line Stroke"
+msgstr ""
+
+msgid "Loading Asset Index"
+msgstr ""
+
+msgid "Loading Configurations"
+msgstr ""
+
+msgid "Loading Download/View Data"
+msgstr ""
+
+msgid "Loading Password dialog"
+msgstr ""
+
+msgid "Loading Profit Table"
+msgstr ""
+
+msgid "Loading Real account openning"
+msgstr ""
+
+msgid "Loading Self-Exclusion"
+msgstr ""
+
+msgid "Loading Statement Table"
+msgstr ""
+
+msgid "Loading Token management"
+msgstr ""
+
+msgid "Loading Trading Times"
+msgstr ""
+
+msgid "Loading chart and trade menus"
+msgstr ""
+
+msgid "Loading custom theme configuration"
+msgstr ""
+
+msgid "Loading portfolio"
 msgstr ""
 
 msgid "Log Scale"
@@ -778,10 +847,22 @@ msgstr ""
 msgid "Maximum number of open positions"
 msgstr ""
 
+msgid "Memorable date"
+msgstr ""
+
+msgid "Memorable town/city"
+msgstr ""
+
 msgid "Middle Band Stroke"
 msgstr ""
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Mother's maiden name"
 msgstr ""
 
 msgid "Multiplier"
@@ -794,6 +875,12 @@ msgid "NB Dev Up"
 msgstr ""
 
 msgid "Name"
+msgstr ""
+
+msgid "Name of first love"
+msgstr ""
+
+msgid "Name of your pet"
 msgstr ""
 
 msgid "Navigator handles background"
@@ -896,6 +983,18 @@ msgstr ""
 msgid "PPO Line Stroke"
 msgstr ""
 
+msgid "Password must be 6 characters minimum"
+msgstr ""
+
+msgid "Password must contain lower and uppercase letters with numbers"
+msgstr ""
+
+msgid "Password must contain uppercase letters and numbers"
+msgstr ""
+
+msgid "Password successfully updated."
+msgstr ""
+
 msgid "Payments"
 msgstr ""
 
@@ -929,10 +1028,22 @@ msgstr ""
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr ""
 
+msgid "Please enter your new password"
+msgstr ""
+
+msgid "Please enter your password"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers:"
 msgstr ""
 
 msgid "Please select"
+msgstr ""
+
+msgid "Please try again after 1 minute"
+msgstr ""
+
+msgid "Please use your new password to login"
 msgstr ""
 
 msgid "Plot"
@@ -974,6 +1085,9 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
+msgid "Profit Table"
+msgstr ""
+
 msgid "Profit table"
 msgstr ""
 
@@ -995,6 +1109,12 @@ msgstr ""
 msgid "Read"
 msgstr ""
 
+msgid "Real account opening"
+msgstr ""
+
+msgid "Redirecting to oauth login page"
+msgstr ""
+
 msgid "Ref."
 msgstr ""
 
@@ -1002,6 +1122,9 @@ msgid "Refresh"
 msgstr ""
 
 msgid "Register free account"
+msgstr ""
+
+msgid "Registration"
 msgstr ""
 
 msgid "Reloading page"
@@ -1220,6 +1343,9 @@ msgstr ""
 msgid "Tick {row.number}"
 msgstr ""
 
+msgid "Ticks"
+msgstr ""
+
 msgid "Tile"
 msgstr ""
 
@@ -1329,6 +1455,9 @@ msgid "Use"
 msgstr ""
 
 msgid "Verification code has been sent to your email"
+msgstr ""
+
+msgid "Verification code sent to "
 msgstr ""
 
 msgid "Verification token"

@@ -20,6 +20,11 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
 
     /************************************* formatters ***************************************/
 
+    /* rivets formatter to translate strings to 18n */
+    rv.formatters['i18n'] = function(value) {
+      if(typeof value === 'string') return value.i18n();
+      return value;
+    };
     /* rivets formatter to get the property value of an object */
     rv.formatters['prop'] = function(value, prop) {
       return value && value[prop];

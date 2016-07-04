@@ -24,7 +24,14 @@ static = [
     'Password must contain uppercase letters and numbers',  'Failed to update the password',
     'Password successfully updated.', 'Redirecting to oauth login page',
     'Please use your new password to login', 'Portfolio', 'Account balance', 'View',
-    'Profit Table', 'Total Profit/Loss',  'Jump to', 
+    'Profit Table', 'Total Profit/Loss',  'Jump to',  'Real account opening',
+    'Mother\'s maiden name', 'Name of your pet', 'Name of first love',
+    'Memorable town/city', 'Memorable date', 'Favourite dish', 'Brand of first car',
+    'Favourite artist','Mr', 'Mrs', 'Ms', 'Miss', '0-1 year', '1-2 years', 'Over 3 years',
+    '0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months',
+    'Construction', 'Education', 'Finance', 'Health', 'Tourism', 'Other','Primary', 'Secondary', 'Tertiary',
+    'Salaried Employee', 'Self-Employed', 'Investments & Dividends', 'Pension', 'Other', 'Less than', 'Over', 
+
 ]
 
 # Parsing webtrader html files.
