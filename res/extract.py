@@ -51,7 +51,7 @@ static = [
     'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price',
     'Contract is not yet started',  'Barrier', 'High Barrier', 'Low Barrier', 'Resale of this contract is not offered', 'Sell Time', 'Purchase Time',
     'End Time',  'Start Time', 'Connection error. Refresh the page.', 'Connection closed', 'Please log in', 'Timeout for websocket request',
-    'Session is not authenticated', 'Account id not found',
+    'Session is not authenticated', 'Account id not found', 'Error getting data for',  'feed is delayed by',
 ]
 
 # Parsing webtrader html files.
