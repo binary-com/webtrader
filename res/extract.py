@@ -6,11 +6,11 @@ from HTMLParser import HTMLParser
 static = [
     'View', 'Total Profit/Loss', 'Asset Index', 'Downloading .csv',
     'Error downloading .csv', 'Download PNG', 'Download SVG', 'Download CSV',
-    'Remove Selected', 'Cancel', 'Double click the object to remove.',
+    'Remove Selected', 'Cancel', 'Double click the object to remove',
     'Horizontal Line', 'Stroke width', 'Stroke color', 'Vertical Line',
     'Please enter a value for', 'between', 'and', 'Add/remove overlays', 'Reality check', 
     'Chrome Extension', 'Do you want to install Webtrader chrome extension?',
-    'days', 'day', 'hours', 'hour', 'minutes', 'minute', 'seconds', 'second',
+    'days', 'day', 'hours', 'hour', 'minutes', 'minute', 'seconds', 'second', 'tick', 'ticks',
     'Change Backend Server', 'Apply', 'Reset to Defaults', 'Config changes successful',
     'Reloading page', 'Ticks', 'Minutes', 'Hours', 'Days', 'Loading Trading Times',
     'Loading Token management', 'Loading Password dialog', 'Loading Asset Index',
@@ -22,7 +22,7 @@ static = [
     'Account opening', 'Verification code sent to ', 'Email verification failed', 'Change password',
     'Please enter your new password', 'Password must be 6 characters minimum',
     'Password must contain uppercase letters and numbers',  'Failed to update the password',
-    'Password successfully updated.', 'Redirecting to oauth login page',
+    'Password successfully updated', 'Redirecting to oauth login page',
     'Please use your new password to login', 'Portfolio', 'Account balance', 'View',
     'Profit Table', 'Total Profit/Loss',  'Jump to',  'Real account opening',
     'Mother\'s maiden name', 'Name of your pet', 'Name of first love',
@@ -44,7 +44,9 @@ static = [
     'for API calls that only read client data', 'for API calls that can create trades in the client account',
     'for API calls that can access the cashier', 'for API calls that change client settings',  'Please choose at least one token scope',
     'Please enter the token name', 'Successfully added new token', 'Contract Confirmation', 'Profit', 'Entry Spot', 'Exit Spot', 'Barrier',
-    'Average', 'This contract won', 'This contract lost', 
+    'Average', 'This contract won', 'This contract lost', 'Last Digit Prediction', 'Loading',  'Last Digit is Under', 'Last Digit is Over', 
+    'Please log in', 'Up/Down', 'Touch/No Touch', 'In/Out', 'Digits', 'Asians', 'Spreads', 'Rise', 'Fall', 'Higher', 'Lower',
+    'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Now','Duration', 'End Time', 'Payout', 'Stake',  
 ]
 
 # Parsing webtrader html files.
