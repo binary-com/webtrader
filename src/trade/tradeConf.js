@@ -178,6 +178,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           text: 'Contract Confirmation',
         },
         buy: {
+          barrier: null,
           message: buy.longcode,
           balance_after: buy.balance_after,
           buy_price: buy.buy_price,
@@ -216,6 +217,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               var tick = this.array[inx-1];
               if(this.category === 'Up/Down' && inx === 1) {
                 var barrier = extra.getbarrier(tick);
+                state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
                 return {value: barrier*1, label:'Barrier ('+barrier+')', id: 'plot-barrier-y'};
               }
 
