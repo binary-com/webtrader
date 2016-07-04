@@ -8,7 +8,7 @@ static = [
     'Error downloading .csv', 'Download PNG', 'Download SVG', 'Download CSV',
     'Remove Selected', 'Cancel', 'Double click the object to remove.',
     'Horizontal Line', 'Stroke width', 'Stroke color', 'Vertical Line',
-    'Please enter a value for', 'between', 'and', 'Add/remove overlays',
+    'Please enter a value for', 'between', 'and', 'Add/remove overlays', 'Reality check', 
     'Chrome Extension', 'Do you want to install Webtrader chrome extension?',
     'days', 'day', 'hours', 'hour', 'minutes', 'minute', 'seconds', 'second',
     'Change Backend Server', 'Apply', 'Reset to Defaults', 'Config changes successful',
@@ -31,7 +31,14 @@ static = [
     '0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months',
     'Construction', 'Education', 'Finance', 'Health', 'Tourism', 'Other','Primary', 'Secondary', 'Tertiary',
     'Salaried Employee', 'Self-Employed', 'Investments & Dividends', 'Pension', 'Other', 'Less than', 'Over', 
-
+    'Please enter a number between ',  'Please enter value between 0 and 99999 for Session duration limit',
+    'Exclude time cannot be less than 6 months',  'Please enter positive integer value between 0 and 9999',
+    'Please enter positive integer value for Maximum number of open positions', 'Your changes have been updated',
+    'Please enter positive integer value for 30-day limit on losses',  'Please enter positive integer value for Daily turnover limit',
+    'Please enter positive integer value for 30-day turnover limit',  'Please enter positive integer value for 7-day limit on losses',
+    'Please enter positive integer value for Daily limit on losses',  'Please enter positive integer value for 7-day turnover limit',
+    'Self-Exclusion Facilities', 'You have excluded yourself until ', 'Loading self-exclusion settings',
+    'Logging out because of self-exclusion session time out', 
 ]
 
 # Parsing webtrader html files.
