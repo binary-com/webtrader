@@ -3,6 +3,7 @@
     "id": "atr",
     "long_display_name": "Average True Range",
     "short_display_name": "ATR",
+    "editable": true,
     "category": [
       "Volatility Indicators"
     ],
@@ -13,6 +14,7 @@
     "long_display_name": "Exponential Moving Average",
     "short_display_name": "EMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -22,6 +24,7 @@
     "id": "rsi",
     "long_display_name": "Relative Strength Index",
     "short_display_name": "RSI",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -32,6 +35,7 @@
     "long_display_name": "Simple Moving Average",
     "short_display_name": "SMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -41,6 +45,7 @@
     "id": "roc",
     "long_display_name": "Rate Of Change",
     "short_display_name": "ROC",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -51,6 +56,7 @@
     "long_display_name": "Typical Price",
     "short_display_name": "TYPPRICE",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Price Transformation"
     ],
@@ -60,6 +66,7 @@
     "id": "willr",
     "long_display_name": "Williams' %R",
     "short_display_name": "WILLR",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -69,6 +76,7 @@
     "id": "rocp",
     "long_display_name": "Rate Of Change Percentage",
     "short_display_name": "ROCP",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -78,6 +86,7 @@
     "id": "rocr",
     "long_display_name": "Rate Of Change Ratio",
     "short_display_name": "ROCR",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -88,6 +97,7 @@
     "long_display_name": "Minimum",
     "short_display_name": "MIN",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Statistical Functions"
     ],
@@ -98,6 +108,7 @@
     "long_display_name": "Maximum",
     "short_display_name": "MAX",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Statistical Functions"
     ],
@@ -107,6 +118,7 @@
     "id": "sum",
     "long_display_name": "Summation",
     "short_display_name": "SUM",
+    "editable": true,
     "category": [
       "Statistical Functions"
     ],
@@ -117,6 +129,7 @@
     "long_display_name": "Weighted Moving Average",
     "short_display_name": "WMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -127,6 +140,7 @@
     "long_display_name": "Triple Exponential Moving Average",
     "short_display_name": "TEMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -137,6 +151,7 @@
     "long_display_name": "Triangular Moving Average",
     "short_display_name": "TRIMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -146,6 +161,7 @@
     "id": "natr",
     "long_display_name": "Normalized Average True Range",
     "short_display_name": "NATR",
+    "editable": true,
     "category": [
       "Volatility Indicators"
     ],
@@ -155,6 +171,7 @@
     "id": "bop",
     "long_display_name": "Balance of Power",
     "short_display_name": "BOP",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -273,6 +290,7 @@
     "long_display_name": "Bollinger Bands",
     "short_display_name": "BBANDS",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -292,6 +310,7 @@
     "long_display_name": "Parabolic SAR",
     "short_display_name": "SAR",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -301,6 +320,7 @@
     "id": "macd",
     "long_display_name": "Moving Average Convergence/Divergence",
     "short_display_name": "MACD",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -320,6 +340,7 @@
     "long_display_name": "Weighted Close Price",
     "short_display_name": "WCLPRICE",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Price Transformation"
     ],
@@ -329,6 +350,7 @@
     "id": "cci",
     "long_display_name": "Commodity Channel Index",
     "short_display_name": "CCI",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -339,6 +361,7 @@
     "long_display_name": "Double Exponential Moving Average",
     "short_display_name": "DEMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -349,6 +372,7 @@
     "long_display_name": "Kaufman's Adaptive Moving Average",
     "short_display_name": "KAMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -359,6 +383,7 @@
     "long_display_name": "Triple Exponential Moving Average (T3)",
     "short_display_name": "T3",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -369,6 +394,7 @@
     "long_display_name": "Hull Moving Average",
     "short_display_name": "HMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -379,6 +405,7 @@
     "long_display_name": "Linearly Weighted Moving Average",
     "short_display_name": "LWMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -389,6 +416,7 @@
     "long_display_name": "Smoothed Moving Average",
     "short_display_name": "SMMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -399,6 +427,7 @@
     "long_display_name": "Mesa Adaptive Moving Average",
     "short_display_name": "MAMA",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Overlap Studies"
     ],
@@ -804,6 +833,7 @@
     "id": "stddev",
     "long_display_name": "Standard Deviation",
     "short_display_name": "STDDEV",
+    "editable": true,
     "category": [
       "Statistical Functions"
     ],
@@ -813,6 +843,7 @@
     "id": "ppo",
     "long_display_name": "Percentage Price Oscillator",
     "short_display_name": "PPO",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -822,6 +853,7 @@
     "id": "trange",
     "long_display_name": "True Range",
     "short_display_name": "TRANGE",
+    "editable": true,
     "category": [
       "Volatility Indicators"
     ],
@@ -831,6 +863,7 @@
     "id": "stochrsi",
     "long_display_name": "Stochastic Relative Strength Index",
     "short_display_name": "STOCHRSI",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -840,6 +873,7 @@
     "id": "mom",
     "long_display_name": "Momentum",
     "short_display_name": "MOM",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -849,6 +883,7 @@
     "id": "alma",
     "long_display_name": "Arnaud Legoux Moving Average",
     "short_display_name": "ALMA",
+    "editable": true,
     "onChartIndicator": true,
     "category": [
       "Overlap Studies"
@@ -859,6 +894,7 @@
     "id": "aroon",
     "long_display_name": "Aroon",
     "short_display_name": "AROON",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -868,6 +904,7 @@
     "id": "aroonosc",
     "long_display_name": "Aroon Oscillator",
     "short_display_name": "AROONOSC",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -877,6 +914,7 @@
     "id": "ao",
     "long_display_name": "Awesome Oscillator",
     "short_display_name": "AO",
+    "editable": true,
     "category": [
       "Bill Williams"
     ],
@@ -886,6 +924,7 @@
     "id": "var",
     "long_display_name": "Variance",
     "short_display_name": "VAR",
+    "editable": true,
     "category": [
       "Statistical Functions"
     ],
@@ -896,6 +935,7 @@
     "long_display_name": "Chande Kroll Stop",
     "short_display_name": "CKS",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Volatility Indicators"
     ],
@@ -905,6 +945,7 @@
     "id": "cc",
     "long_display_name": "Coppock Curve",
     "short_display_name": "CC",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -914,6 +955,7 @@
     "id": "chop",
     "long_display_name": "Choppiness Index",
     "short_display_name": "CHOP",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -923,6 +965,7 @@
     "id": "adx",
     "long_display_name": "Average Directional Movement Index",
     "short_display_name": "ADX",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -932,6 +975,7 @@
     "id": "dx",
     "long_display_name": "Directional Movement Index",
     "short_display_name": "DX",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -941,6 +985,7 @@
     "id": "adxr",
     "long_display_name": "Average Directional Movement Index Rating",
     "short_display_name": "ADXR",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -950,6 +995,7 @@
     "id": "apo",
     "long_display_name": "Absolute Price Oscillator",
     "short_display_name": "APO",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -959,6 +1005,7 @@
     "id": "stoch",
     "long_display_name": "Stochastic",
     "short_display_name": "STOCH  ",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -968,6 +1015,7 @@
     "id": "stochf",
     "long_display_name": "Stochastic Fast",
     "short_display_name": "STOCHF",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -977,6 +1025,7 @@
     "id": "stochs",
     "long_display_name": "Stochastic Slow",
     "short_display_name": "STOCHS",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -986,6 +1035,7 @@
     "id": "dc",
     "long_display_name": "Donchian Channel",
     "short_display_name": "DC",
+    "editable": true,
     "onChartIndicator": true,
     "category": [
       "Overlap Studies"
@@ -996,6 +1046,7 @@
     "id": "ultosc",
     "long_display_name": "Ultimate Oscillator",
     "short_display_name": "ULTOSC",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -1005,6 +1056,7 @@
     "id": "lsma",
     "long_display_name": "Least Squares Moving Average",
     "short_display_name": "LSMA",
+    "editable": true,
     "onChartIndicator": true,
     "category": [
       "Momentum Indicators"
@@ -1015,6 +1067,7 @@
     "id": "mass",
     "long_display_name": "Mass Index",
     "short_display_name": "MASS",
+    "editable": true,
     "category": [
       "Volatility Indicators"
     ],
@@ -1024,6 +1077,7 @@
     "id": "cmo",
     "long_display_name": "Chande Momentum Oscillator",
     "short_display_name": "CMO",
+    "editable": true,
     "category": [
       "Momentum Indicators"
     ],
@@ -1034,6 +1088,7 @@
     "long_display_name": "Fractal",
     "short_display_name": "FRACTAL",
     "onChartIndicator": true,
+    "editable": true,
     "category": [
       "Bill Williams"
     ],
