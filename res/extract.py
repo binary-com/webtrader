@@ -40,7 +40,10 @@ static = [
     'Self-Exclusion Facilities', 'You have excluded yourself until ', 'Loading self-exclusion settings', 'Statement', 
     'Logging out because of self-exclusion session time out', 'Terms and Conditions',  'Customize chart appearance',  'Some random index', 
     'Apply new theme?', 'In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?', 
-
+    'Your browser doesn\'t support copy to clipboard' , 'Note that tokens can possess one or more of these scopes',
+    'for API calls that only read client data', 'for API calls that can create trades in the client account',
+    'for API calls that can access the cashier', 'for API calls that change client settings',  'Please choose at least one token scope',
+    'Please enter the token name',  'Successfully added new token', 
 ]
 
 # Parsing webtrader html files.
