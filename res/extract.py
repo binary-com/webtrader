@@ -68,7 +68,7 @@ class WebtraderParser(HTMLParser):
             self.is_script = False
     def handle_data(self, text):
         if not self.is_script: # ignore script tags
-            text = re.sub( '\s+', ' ', text).strip()
+            text = re.sub( '\s+', ' ', text).strip(' \t\r\n*,+.')
             if text != '' and len(text) > 1: # ignore empty and single character strings.
                 if text[0] == '{' and text[-1] == '}': return #ignore rivetsjs tags
                 self.texts.append(text)

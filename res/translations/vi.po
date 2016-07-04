@@ -1,3 +1,6 @@
+msgid " There was an error "
+msgstr ""
+
 msgid "%D MA Type"
 msgstr ""
 
@@ -18,62 +21,16 @@ msgstr ""
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
-"day or more in duration)."
-msgstr ""
-
-msgid "* Optional field, within 20 characters and may not contain '+'."
-msgstr ""
-
-msgid "* Passwords didn't match. Please type them again"
-msgstr ""
-
-msgid "* Please answer to secret question, within 4-50 characters."
-msgstr ""
-
-msgid "* Please enter a valid date in yyyy-mm-dd format."
-msgstr ""
-
-msgid "* Please enter a vlaid phone number."
-msgstr ""
-
-msgid "* Please enter correct email"
-msgstr ""
-
-msgid "* Please enter the verification code sent to your email."
-msgstr ""
-
-msgid "* Please enter your city address."
-msgstr ""
-
-msgid "* Please enter your current password"
-msgstr ""
-
-msgid "* Please enter your email"
-msgstr ""
-
-msgid "* Please enter your family name."
-msgstr ""
-
-msgid "* Please enter your first name."
-msgstr ""
-
-msgid "* Please enter your phone number."
-msgstr ""
-
-msgid "* Please enter your street address."
-msgstr ""
-
-msgid "+DI Stroke"
-msgstr ""
-
-msgid ", the"
+"day or more in duration)"
 msgstr ""
 
 msgid "-DI Stroke"
 msgstr ""
 
-msgid ""
-". By clicking OK, you confirm that you have read and accepted the updated"
+msgid "0-1 year"
+msgstr ""
+
+msgid "0-5 transactions in the past 12 months"
 msgstr ""
 
 msgid "1 Day"
@@ -89,6 +46,9 @@ msgid "1 hour"
 msgstr ""
 
 msgid "1 min"
+msgstr ""
+
+msgid "1-2 years"
 msgstr ""
 
 msgid "10"
@@ -148,6 +108,9 @@ msgstr ""
 msgid "4 hours"
 msgstr ""
 
+msgid "40 transactions or more in the past 12 months"
+msgstr ""
+
 msgid "4h"
 msgstr ""
 
@@ -155,6 +118,9 @@ msgid "5 mins"
 msgstr ""
 
 msgid "5m"
+msgstr ""
+
+msgid "6-10 transactions in the past 12 months"
 msgstr ""
 
 msgid "7-day limit on losses"
@@ -190,6 +156,9 @@ msgstr ""
 msgid "Account balance:"
 msgstr ""
 
+msgid "Account id not found"
+msgstr ""
+
 msgid "Account opening"
 msgstr ""
 
@@ -217,7 +186,7 @@ msgstr ""
 msgid "Admin"
 msgstr ""
 
-msgid "All times are in GMT (Greenwich Mean Time)."
+msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr ""
 
 msgid "Amount Per Point"
@@ -235,6 +204,9 @@ msgstr ""
 msgid "Apply"
 msgstr ""
 
+msgid "Apply new theme?"
+msgstr ""
+
 msgid "Appropriateness Test: WARNING:"
 msgstr ""
 
@@ -247,10 +219,16 @@ msgstr ""
 msgid "Aroon Up Stroke"
 msgstr ""
 
+msgid "Asians"
+msgstr ""
+
 msgid "Asset"
 msgstr ""
 
 msgid "Asset Index"
+msgstr ""
+
+msgid "Average"
 msgstr ""
 
 msgid "Back"
@@ -260,6 +238,9 @@ msgid "Back to list"
 msgstr ""
 
 msgid "Background Color"
+msgstr ""
+
+msgid "Barrier"
 msgstr ""
 
 msgid "Barrier offset"
@@ -272,6 +253,9 @@ msgid "Binary.com"
 msgstr ""
 
 msgid "Binary.com : Webtrader"
+msgstr ""
+
+msgid "Blank window"
 msgstr ""
 
 msgid "Bought"
@@ -290,6 +274,9 @@ msgid "Buy price"
 msgstr ""
 
 msgid "By clicking"
+msgstr ""
+
+msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
 
 msgid "CLOSE"
@@ -376,6 +363,15 @@ msgstr ""
 msgid "Config changes successful"
 msgstr ""
 
+msgid "Connection closed"
+msgstr ""
+
+msgid "Connection error. Refresh the page."
+msgstr ""
+
+msgid "Construction"
+msgstr ""
+
 msgid "Continue"
 msgstr ""
 
@@ -383,6 +379,12 @@ msgid "Continue Trading"
 msgstr ""
 
 msgid "Contract"
+msgstr ""
+
+msgid "Contract Confirmation"
+msgstr ""
+
+msgid "Contract is not yet started"
 msgstr ""
 
 msgid "Contracts"
@@ -433,6 +435,12 @@ msgstr ""
 msgid "Custom Theme"
 msgstr ""
 
+msgid "Customize chart appearance"
+msgstr ""
+
+msgid "DI Stroke"
+msgstr ""
+
 msgid "DX MA Type"
 msgstr ""
 
@@ -478,16 +486,19 @@ msgstr ""
 msgid "Deposit of USD"
 msgstr ""
 
-msgid "Describe what this token is for to find it later."
+msgid "Describe what this token is for to find it later"
 msgstr ""
 
 msgid "Description"
 msgstr ""
 
+msgid "Digits"
+msgstr ""
+
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr ""
 
-msgid "Don't have an account yet? Sign up and get a $10,000 virtual account."
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 
 msgid "Dot"
@@ -499,7 +510,7 @@ msgstr ""
 msgid "Double MA Type"
 msgstr ""
 
-msgid "Double click the object to remove."
+msgid "Double click the object to remove"
 msgstr ""
 
 msgid "Download CSV"
@@ -529,6 +540,9 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+msgid "Education"
+msgstr ""
+
 msgid "Email verification failed"
 msgstr ""
 
@@ -550,10 +564,16 @@ msgstr ""
 msgid "Error downloading .csv"
 msgstr ""
 
+msgid "Error getting data for"
+msgstr ""
+
 msgid "Estimated Net Worth"
 msgstr ""
 
 msgid "Exclude me from the website until"
+msgstr ""
+
+msgid "Exclude time cannot be less than 6 months"
 msgstr ""
 
 msgid "Exit Spot"
@@ -566,6 +586,9 @@ msgid "Explanation"
 msgstr ""
 
 msgid "Failed to update the password"
+msgstr ""
+
+msgid "Fall"
 msgstr ""
 
 msgid "Family name"
@@ -601,6 +624,9 @@ msgstr ""
 msgid "Final price"
 msgstr ""
 
+msgid "Finance"
+msgstr ""
+
 msgid "Financial information"
 msgstr ""
 
@@ -614,6 +640,9 @@ msgid "Forex trading experience"
 msgstr ""
 
 msgid "Forex trading frequency"
+msgstr ""
+
+msgid "Fri"
 msgstr ""
 
 msgid "From"
@@ -631,6 +660,12 @@ msgstr ""
 msgid "HIGH"
 msgstr ""
 
+msgid "Health"
+msgstr ""
+
+msgid "High Barrier"
+msgstr ""
+
 msgid "High Price"
 msgstr ""
 
@@ -641,6 +676,9 @@ msgid "High barrier offset"
 msgstr ""
 
 msgid "Highcharts implementation for Binary.com"
+msgstr ""
+
+msgid "Higher"
 msgstr ""
 
 msgid "Histogram Color"
@@ -671,15 +709,23 @@ msgid "If you select a specific"
 msgstr ""
 
 msgid ""
+"In order to properly apply theme, a full refresh of page is required. Are "
+"you sure you want to proceed?"
+msgstr ""
+
+msgid ""
 "In providing our services to you, we are required to obtain information from "
 "you in order to assess whether a given product or service is appropriate for "
 "you (that is, whether you possess the experience and knowledge to understand "
-"the risks involved)."
+"the risks involved)"
 msgstr ""
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
+msgstr ""
+
+msgid "In/Out"
 msgstr ""
 
 msgid "Income Source"
@@ -703,16 +749,31 @@ msgstr ""
 msgid "Instruments :"
 msgstr ""
 
+msgid "Investments & Dividends"
+msgstr ""
+
 msgid "Jump to"
 msgstr ""
 
-msgid "Just click  Grant  button on the page you will now be taken to."
+msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
 
 msgid "LOW"
 msgstr ""
 
+msgid "Last Digit Prediction"
+msgstr ""
+
+msgid "Last Digit is Over"
+msgstr ""
+
+msgid "Last Digit is Under"
+msgstr ""
+
 msgid "Last used"
+msgstr ""
+
+msgid "Less than"
 msgstr ""
 
 msgid "Let's do it"
@@ -731,6 +792,9 @@ msgid "Line Dot"
 msgstr ""
 
 msgid "Line Stroke"
+msgstr ""
+
+msgid "Loading"
 msgstr ""
 
 msgid "Loading Asset Index"
@@ -772,6 +836,9 @@ msgstr ""
 msgid "Loading portfolio"
 msgstr ""
 
+msgid "Loading self-exclusion settings"
+msgstr ""
+
 msgid "Log Scale"
 msgstr ""
 
@@ -779,6 +846,9 @@ msgid "Log in"
 msgstr ""
 
 msgid "Log in time"
+msgstr ""
+
+msgid "Logging out because of self-exclusion session time out"
 msgstr ""
 
 msgid "Login"
@@ -799,6 +869,9 @@ msgstr ""
 msgid "Long Term Period"
 msgstr ""
 
+msgid "Low Barrier"
+msgstr ""
+
 msgid "Low Price"
 msgstr ""
 
@@ -806,6 +879,9 @@ msgid "Low Stroke"
 msgstr ""
 
 msgid "Low barrier offset"
+msgstr ""
+
+msgid "Lower"
 msgstr ""
 
 msgid "Lower Band Stroke"
@@ -862,7 +938,22 @@ msgstr ""
 msgid "Minutes"
 msgstr ""
 
+msgid "Miss"
+msgstr ""
+
+msgid "Mon"
+msgstr ""
+
 msgid "Mother's maiden name"
+msgstr ""
+
+msgid "Mr"
+msgstr ""
+
+msgid "Mrs"
+msgstr ""
+
+msgid "Ms"
 msgstr ""
 
 msgid "Multiplier"
@@ -913,6 +1004,17 @@ msgstr ""
 msgid "No"
 msgstr ""
 
+msgid "Note that tokens can possess one or more of these scopes"
+msgstr ""
+
+msgid ""
+"Note: Contract will be sold at the prevailing market price when the request "
+"is received by our servers. This price may differ from the indicated price"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
 msgid "Number of bars on sides"
 msgstr ""
 
@@ -937,10 +1039,10 @@ msgstr ""
 msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
-"not appropriate for you."
+"not appropriate for you"
 msgstr ""
 
-msgid "Once this limit is reached, you may no longer deposit."
+msgid "Once this limit is reached, you may no longer deposit"
 msgstr ""
 
 msgid "One last step left"
@@ -970,14 +1072,25 @@ msgstr ""
 msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
-"check that gives you a summary of your trades and accounts on a regular "
-"basis."
+"check that gives you a summary of your trades and accounts on a regular basis"
+msgstr ""
+
+msgid "Optional field, within 20 characters and may not contain '+'"
+msgstr ""
+
+msgid "Other"
 msgstr ""
 
 msgid "Other financial instruments trading experience"
 msgstr ""
 
 msgid "Other financial instruments trading frequency"
+msgstr ""
+
+msgid "Over"
+msgstr ""
+
+msgid "Over 3 years"
 msgstr ""
 
 msgid "PPO Line Stroke"
@@ -992,10 +1105,19 @@ msgstr ""
 msgid "Password must contain uppercase letters and numbers"
 msgstr ""
 
-msgid "Password successfully updated."
+msgid "Password successfully updated"
+msgstr ""
+
+msgid "Passwords didn't match. Please type them again"
 msgstr ""
 
 msgid "Payments"
+msgstr ""
+
+msgid "Payout"
+msgstr ""
+
+msgid "Pension"
 msgstr ""
 
 msgid "Period"
@@ -1022,10 +1144,77 @@ msgstr ""
 msgid "Please"
 msgstr ""
 
+msgid "Please answer to secret question, within 4-50 characters"
+msgstr ""
+
+msgid "Please choose at least one token scope"
+msgstr ""
+
+msgid "Please enter a number between "
+msgstr ""
+
+msgid "Please enter a valid date in yyyy-mm-dd format"
+msgstr ""
+
 msgid "Please enter a value for"
 msgstr ""
 
+msgid "Please enter a vlaid phone number"
+msgstr ""
+
+msgid "Please enter correct email"
+msgstr ""
+
 msgid "Please enter date in the format YYYY-MM-DD"
+msgstr ""
+
+msgid "Please enter positive integer value between 0 and 9999"
+msgstr ""
+
+msgid "Please enter positive integer value for 30-day limit on losses"
+msgstr ""
+
+msgid "Please enter positive integer value for 30-day turnover limit"
+msgstr ""
+
+msgid "Please enter positive integer value for 7-day limit on losses"
+msgstr ""
+
+msgid "Please enter positive integer value for 7-day turnover limit"
+msgstr ""
+
+msgid "Please enter positive integer value for Daily limit on losses"
+msgstr ""
+
+msgid "Please enter positive integer value for Daily turnover limit"
+msgstr ""
+
+msgid ""
+"Please enter positive integer value for Maximum number of open positions"
+msgstr ""
+
+msgid "Please enter the token name"
+msgstr ""
+
+msgid "Please enter the verification code sent to your email"
+msgstr ""
+
+msgid "Please enter value between 0 and 99999 for Session duration limit"
+msgstr ""
+
+msgid "Please enter your city address"
+msgstr ""
+
+msgid "Please enter your current password"
+msgstr ""
+
+msgid "Please enter your email"
+msgstr ""
+
+msgid "Please enter your family name"
+msgstr ""
+
+msgid "Please enter your first name"
 msgstr ""
 
 msgid "Please enter your new password"
@@ -1034,7 +1223,16 @@ msgstr ""
 msgid "Please enter your password"
 msgstr ""
 
+msgid "Please enter your phone number"
+msgstr ""
+
+msgid "Please enter your street address"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers:"
+msgstr ""
+
+msgid "Please log in"
 msgstr ""
 
 msgid "Please select"
@@ -1079,10 +1277,16 @@ msgstr ""
 msgid "Preferred reality-check interval:"
 msgstr ""
 
-msgid "Press  Create token  button on the right to create your first token."
+msgid "Press  Create token  button on the right to create your first token"
 msgstr ""
 
 msgid "Price"
+msgstr ""
+
+msgid "Primary"
+msgstr ""
+
+msgid "Profit"
 msgstr ""
 
 msgid "Profit Table"
@@ -1106,16 +1310,22 @@ msgstr ""
 msgid "Purchase Price"
 msgstr ""
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr ""
 
 msgid "Real account opening"
 msgstr ""
 
+msgid "Reality check"
+msgstr ""
+
 msgid "Redirecting to oauth login page"
 msgstr ""
 
-msgid "Ref."
+msgid "Ref"
 msgstr ""
 
 msgid "Refresh"
@@ -1139,6 +1349,9 @@ msgstr ""
 msgid "Repeat password"
 msgstr ""
 
+msgid "Resale of this contract is not offered"
+msgstr ""
+
 msgid "Reset to Defaults"
 msgstr ""
 
@@ -1154,10 +1367,16 @@ msgstr ""
 msgid "Return"
 msgstr ""
 
+msgid "Rise"
+msgstr ""
+
 msgid "SMA"
 msgstr ""
 
 msgid "Safari"
+msgstr ""
+
+msgid "Salaried Employee"
 msgstr ""
 
 msgid "Sale Date"
@@ -1169,6 +1388,12 @@ msgstr ""
 msgid "Sand Signika"
 msgstr ""
 
+msgid "Sat"
+msgstr ""
+
+msgid "Secondary"
+msgstr ""
+
 msgid "Security"
 msgstr ""
 
@@ -1178,7 +1403,13 @@ msgstr ""
 msgid "Select Instrument"
 msgstr ""
 
+msgid "Self-Employed"
+msgstr ""
+
 msgid "Self-Exclusion"
+msgstr ""
+
+msgid "Self-Exclusion Facilities"
 msgstr ""
 
 msgid "Sell At Market"
@@ -1197,6 +1428,9 @@ msgid "Session"
 msgstr ""
 
 msgid "Session duration limit, in minutes"
+msgstr ""
+
+msgid "Session is not authenticated"
 msgstr ""
 
 msgid "Settles"
@@ -1259,7 +1493,16 @@ msgstr ""
 msgid "Sold"
 msgstr ""
 
+msgid "Some random index"
+msgstr ""
+
 msgid "Spline"
+msgstr ""
+
+msgid "Spreads"
+msgstr ""
+
+msgid "Stake"
 msgstr ""
 
 msgid "Start Time"
@@ -1313,6 +1556,12 @@ msgstr ""
 msgid "Stroke width"
 msgstr ""
 
+msgid "Successfully added new token"
+msgstr ""
+
+msgid "Sun"
+msgstr ""
+
 msgid "TEMA"
 msgstr ""
 
@@ -1325,6 +1574,12 @@ msgstr ""
 msgid "Terms"
 msgstr ""
 
+msgid "Terms and Conditions"
+msgstr ""
+
+msgid "Tertiary"
+msgstr ""
+
 msgid "The"
 msgstr ""
 
@@ -1334,7 +1589,26 @@ msgid ""
 "who understand and have experience of the risk involved in the aquistion of "
 "financial contracts. Transactions in financial contracts carry a high degree "
 "of risk. If purchased contracts expire worthless, you will suffer a total "
-"loss of your investment, which consists of the contract permium."
+"loss of your investment, which consists of the contract permium"
+msgstr ""
+
+msgid ""
+"There was a market data disruption during the contract period. For real-"
+"money accounts we will attempt to correct this and settle the contract "
+"properly, otherwise the contract will be cancelled and refunded. Virtual-"
+"money contracts will be cancelled and refunded"
+msgstr ""
+
+msgid "This contract has expired"
+msgstr ""
+
+msgid "This contract lost"
+msgstr ""
+
+msgid "This contract won"
+msgstr ""
+
+msgid "Thu"
 msgstr ""
 
 msgid "Tick Trade app"
@@ -1358,6 +1632,9 @@ msgstr ""
 msgid "Time periods"
 msgstr ""
 
+msgid "Timeout for websocket request"
+msgstr ""
+
 msgid "Title"
 msgstr ""
 
@@ -1375,7 +1652,7 @@ msgstr ""
 
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
-"party tools."
+"party tools"
 msgstr ""
 
 msgid "Tooltip background"
@@ -1391,6 +1668,9 @@ msgid "Total Profit/Loss"
 msgstr ""
 
 msgid "Touch/No Touch"
+msgstr ""
+
+msgid "Tourism"
 msgstr ""
 
 msgid "Town/City"
@@ -1412,7 +1692,7 @@ msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
 "that you fully understand the risks involved. Your losses can exceed your "
 "initial deposit and you do not own or have any interest in the underlying "
-"asset."
+"asset"
 msgstr ""
 
 msgid ""
@@ -1430,13 +1710,16 @@ msgstr ""
 msgid "Try"
 msgstr ""
 
+msgid "Tue"
+msgstr ""
+
 msgid "Turnover"
 msgstr ""
 
 msgid "USD"
 msgstr ""
 
-msgid "Unfortunately, your browser does not support them."
+msgid "Unfortunately, your browser does not support them"
 msgstr ""
 
 msgid "Up/Down"
@@ -1491,8 +1774,10 @@ msgid "Webtrader"
 msgstr ""
 
 msgid ""
-"Webtrader uses new web technologies for rich and enjoyable trading "
-"experience."
+"Webtrader uses new web technologies for rich and enjoyable trading experience"
+msgstr ""
+
+msgid "Wed"
 msgstr ""
 
 msgid "While on the go, you can:"
@@ -1516,6 +1801,9 @@ msgstr ""
 msgid "Y-axis labels"
 msgstr ""
 
+msgid "You have excluded yourself until "
+msgstr ""
+
 msgid "You have sold the following contract:"
 msgstr ""
 
@@ -1533,10 +1821,16 @@ msgstr ""
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
-"Webtrader access it."
+"Webtrader access it"
+msgstr ""
+
+msgid "Your browser doesn't support copy to clipboard"
 msgstr ""
 
 msgid "Your browser is not supported"
+msgstr ""
+
+msgid "Your changes have been updated"
 msgstr ""
 
 msgid "Your email"
@@ -1558,7 +1852,7 @@ msgid ""
 "below and proceeding with the Account Opening you should note that you may "
 "be exposing yourself to risks (which may be significant, including the risk "
 "of loss of the entire sum invested) that you may not have the knowledge and "
-"experience to properly assess or mitigate."
+"experience to properly assess or mitigate"
 msgstr ""
 
 msgid "between"
@@ -1576,10 +1870,10 @@ msgstr ""
 msgid "days"
 msgstr ""
 
-msgid "e.g,"
+msgid "e.g"
 msgstr ""
 
-msgid "e.g, www2.binary.com, www.binaryqa36.com."
+msgid "e.g, www2.binary.com, www.binaryqa36.com"
 msgstr ""
 
 msgid "end time"
@@ -1589,6 +1883,21 @@ msgid "entry spot"
 msgstr ""
 
 msgid "exit spot"
+msgstr ""
+
+msgid "feed is delayed by"
+msgstr ""
+
+msgid "for API calls that can access the cashier"
+msgstr ""
+
+msgid "for API calls that can create trades in the client account"
+msgstr ""
+
+msgid "for API calls that change client settings"
+msgstr ""
+
+msgid "for API calls that only read client data"
 msgstr ""
 
 msgid "for mobile charts"
@@ -1609,19 +1918,19 @@ msgstr ""
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 msgstr ""
 
-msgid "if this is not your country of residence."
+msgid "if this is not your country of residence"
 msgstr ""
 
 msgid "in the future, the"
 msgstr ""
 
-msgid "information about your trading exprience and personal finance."
+msgid "information about your trading exprience and personal finance"
 msgstr ""
 
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
-"on their desktop PCs."
+"on their desktop PCs"
 msgstr ""
 
 msgid "is required. Current spread:"
@@ -1633,13 +1942,13 @@ msgstr ""
 msgid "is the"
 msgstr ""
 
-msgid "is the price in effect at that time."
+msgid "is the price in effect at that time"
 msgstr ""
 
 msgid "is the selected number of minutes/hours after the"
 msgstr ""
 
-msgid "is the selected time."
+msgid "is the selected time"
 msgstr ""
 
 msgid "is the spot at the"
@@ -1687,7 +1996,16 @@ msgstr ""
 msgid "terms and conditions"
 msgstr ""
 
-msgid "thereafter."
+msgid "the"
+msgstr ""
+
+msgid "thereafter"
+msgstr ""
+
+msgid "tick"
+msgstr ""
+
+msgid "ticks"
 msgstr ""
 
 msgid "trading experience"
