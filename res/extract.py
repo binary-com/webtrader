@@ -23,7 +23,7 @@ static = [
     'Please enter your new password', 'Password must be 6 characters minimum',
     'Password must contain uppercase letters and numbers',  'Failed to update the password',
     'Password successfully updated.', 'Redirecting to oauth login page',
-    'Please use your new password to login', 
+    'Please use your new password to login', 'Portfolio', 'Account balance', 'View', 
 ]
 
 # Parsing webtrader html files.
