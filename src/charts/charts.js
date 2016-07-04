@@ -268,10 +268,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                 plotOptions: {
                     candlestick: {
-                        lineColor: 'black',
-                        color: 'red',
-                        upColor: 'green',
-                        upLineColor: 'black',
                         shadow: false
                     },
                     series: {
