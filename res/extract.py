@@ -37,7 +37,7 @@ static = [
     'Please enter positive integer value for 30-day limit on losses',  'Please enter positive integer value for Daily turnover limit',
     'Please enter positive integer value for 30-day turnover limit',  'Please enter positive integer value for 7-day limit on losses',
     'Please enter positive integer value for Daily limit on losses',  'Please enter positive integer value for 7-day turnover limit',
-    'Self-Exclusion Facilities', 'You have excluded yourself until ', 'Loading self-exclusion settings',
+    'Self-Exclusion Facilities', 'You have excluded yourself until ', 'Loading self-exclusion settings', 'Statement', 
     'Logging out because of self-exclusion session time out', 
 ]
 
