@@ -1,4 +1,4 @@
-define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util'], function( $, liveapi, menu ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util', 'highstock'], function( $, liveapi, menu ) {
 
 	var init_chart_options = function (dialog, timePeriod, type, instrumentName){
 			var id = dialog.attr('id');
@@ -9,8 +9,23 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 			});
 	};
 
+	Highcharts.setOptions(
+		{
+			plotOptions: {
+				candlestick: {
+					lineColor: 'rgba(0,0,0,1)',
+					color: 'rgba(215,24,24,1)',
+					upColor: 'rgba(2,146,14,1)',
+					upLineColor: 'rgba(0,0,0,1)'
+				}
+			}
+		});
+
 	return {
 		init: function() {
+			/* when we are on affiliates route we need to disable overflow-x */
+			$('body').addClass('affiliates');
+
 			// get chart window html.
 	        require(['text!charts/chartWindow.html'], function(html) {
 	            var newTabId = "webtrader-dialog-1",
