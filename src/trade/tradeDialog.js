@@ -200,8 +200,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         spreads: {
           amount_per_point: 1,
           stop_type: 'point', /* could be 'point' or 'dollar' */
-          stop_loss: 10,
-          stop_profit: 10,
+          stop_loss: _.find(available, 'stop_loss').stop_loss,
+          stop_profit: _.find(available, 'stop_profit').stop_profit,
           /* updated from #proposal websocket api */
           spread: 0.0,
           spot: '0.0',
@@ -811,7 +811,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
-        // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
+        window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
     }
 
     return {
