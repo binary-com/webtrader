@@ -119,7 +119,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
         state.indicators.edit = function(indicator){
             var indicator_id = indicator.id;
             require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
-                ind.open(state.dialog.container_id, indicator.series_ids);
+                ind.open(state.dialog.container_id, function() {
+                  state.indicators.remove(indicator);
+                });
             });
             ind_win.dialog('close');
         }
