@@ -11,7 +11,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function init( containerIDWithHash, _callback ) {
+    function init( containerIDWithHash, callback ) {
 
         require(['css!charts/indicators/atr/atr.css']);
 
@@ -195,11 +195,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 }).selectmenu("menuWidget").css("max-height","85px");
             });
 
-            if (typeof _callback == "function")
-            {
-                _callback( containerIDWithHash );
-            }
-
+            callback && callback();
         });
 
     }
@@ -211,16 +207,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
          * @param before_add_cb - callback that will be called just before adding the indicator
          */
         open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+              before_add_callback = before_add_cb;
+              $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
 
             if ($(".atr").length == 0)
-            {
-                init( containerIDWithHash, this.open );
-                before_add_callback = before_add_cb;
-                return;
-            }
-
-            $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+              init(containerIDWithHash, open);
+            else
+              open();
         }
 
     };
