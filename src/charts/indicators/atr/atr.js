@@ -4,7 +4,7 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
-    var updatingSeriesIDs = undefined;
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -165,18 +165,6 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 }
                             });
 
-                            /*
-                                Remove previous added indicator before adding a new one
-                             */
-                            if(updatingSeriesIDs) {
-                                var chart = $(containerIDWithHash).highcharts();
-                                chart.series.forEach(function(series) {
-                                    if (series.options.isInstrument) {
-                                        series.removeIndicator(updatingSeriesIDs);
-                                    }
-                                });
-                            }
-
                             var options = {
                                 period: parseInt($html.find(".atr_input_width_for_period").val()),
                                 stroke: defaultStrokeColor,
@@ -185,6 +173,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 appliedTo: parseInt($html.find("#atr_appliedTo").val()),
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add ATR for the main series
                             $($(".atr").data('refererChartID')).highcharts().series[0].addIndicator('atr', options);
 
@@ -219,15 +208,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
         /**
          * @param containerIDWithHash - containerId where indicator needs to be added
-         * @param series_ids - array of series IDs which should be edited
+         * @param before_add_cb - callback that will be called just before adding the indicator
          */
-        open : function ( containerIDWithHash, series_ids ) {
-
-            updatingSeriesIDs = series_ids
+        open : function ( containerIDWithHash, before_add_cb ) {
 
             if ($(".atr").length == 0)
             {
                 init( containerIDWithHash, this.open );
+                before_add_callback = before_add_cb;
                 return;
             }
 
