@@ -15,14 +15,6 @@ define(['jquery', 'lodash', 'moment', 'highstock', 'common/util'], function($) {
                 //console.log(noOfCandles);
                 //If its positive, then move up
                 if(noOfCandles > 0) {
-                    /*console.log('Min', moment(extremes.min).format("YYYY-MM-DD"),
-                                'Max', moment(extremes.max).format("YYYY-MM-DD"),
-                                'Data Min', moment(extremes.dataMin).format("YYYY-MM-DD"),
-                                'Data Max', moment(extremes.dataMax).format("YYYY-MM-DD"),
-                                'User Min', moment(extremes.userMin).format("YYYY-MM-DD"),
-                                'User Max', moment(extremes.userMax).format("YYYY-MM-DD"),
-                                '[0]', moment(data[0].time).format("YYYY-MM-DD"),
-                                '[data.length - 1]', moment(data[data.length - 1].time).format("YYYY-MM-DD"));*/
                     var newMin = extremes.min - convertToTimeperiodObject($(this).data('timePeriod')).timeInMillis() * Math.abs(noOfCandles);
                     if (newMin > extremes.dataMin) {
                         xAxis.setExtremes(newMin, extremes.max);
