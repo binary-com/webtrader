@@ -292,6 +292,9 @@ input:focus {
     background: #fef1cf !important;
     color: black !important;
 }
+.growl > .growl-close {
+  padding-left: 5px;
+}
 #growls { top: 110px !important; }
 
 button {
