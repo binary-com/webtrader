@@ -5,10 +5,10 @@
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector">
                     <span class="font-s vertical-bottom">{timePeriod}</span>
-                    <span class="ui-icon ui-icon-triangle-1-s vertical-bottom" />
+                    <span class="ui-icon ui-icon-triangle-1-s vertical-bottom"></span>
                 </div>
                 <div class="chartOptions_overlay table font-s timePeriodOverlay" rv-show="showTimePeriodSelector">
-                    <div class="chartoptions-horizontal-line" />
+                    <div class="chartoptions-horizontal-line"></div>
                     <div class="row">
                         <div class="cell">
                             <span>Ticks</span>
@@ -54,15 +54,15 @@
             </div>
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector">
-                    <span class="vertical-bottom"><img rv-src="chartType | append '.svg' | prepend 'images/'" /></span>
-                    <span class="ui-icon ui-icon-triangle-1-s vertical-bottom" />
+                    <span class="vertical-bottom"><img rv-src="chartType | append '.svg' | prepend 'images/'"></span>
+                    <span class="ui-icon ui-icon-triangle-1-s vertical-bottom"></span>
                 </div>
                 <div class="chartOptions_overlay chartTypeOverlay" rv-show="showChartTypeSelector">
-                    <div class="chartoptions-horizontal-line" />
+                    <div class="chartoptions-horizontal-line"></div>
                     <div class="table font-s">
                         <div class="row link" rv-on-click="changeChartType" rv-show="showCandlestickAndOHLC"  data-charttype="candlestick">
                             <div class="cell" data-charttype="candlestick">
-                                <span data-charttype="candlestick"><img src="images/candlestick.svg"  data-charttype="candlestick"/></span>
+                                <span data-charttype="candlestick"><img src="images/candlestick.svg"  data-charttype="candlestick"></span>
                             </div>
                             <div class="cell" data-charttype="candlestick">
                                 <span rv-class-bold="chartType | eq 'candlestick'" data-charttype="candlestick">Candles</span>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="row" rv-on-click="changeChartType" rv-show="showCandlestickAndOHLC">
                             <div class="cell">
-                                <span><img src="images/ohlc.svg" /></span>
+                                <span><img src="images/ohlc.svg"></span>
                             </div>
                             <div class="cell">
                                 <span rv-class-bold="chartType | eq 'ohlc'" data-charttype="ohlc">OHLC</span>
@@ -79,7 +79,7 @@
                         <div class="horizontal-line" rv-show="showCandlestickAndOHLC"></div>
                         <div class="row" rv-on-click="changeChartType">
                             <div class="cell">
-                                <span><img src="images/line.svg" /></span>
+                                <span><img src="images/line.svg"></span>
                             </div>
                             <div class="cell">
                                 <span rv-class-bold="chartType | eq 'line'" data-charttype="line">Line</span>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="row" rv-on-click="changeChartType">
                             <div class="cell">
-                                <span><img src="images/dot.svg" /></span>
+                                <span><img src="images/dot.svg"></span>
                             </div>
                             <div class="cell">
                                 <span rv-class-bold="chartType | eq 'dot'" data-charttype="dot">Dot</span>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="row" rv-on-click="changeChartType">
                             <div class="cell">
-                                <span><img src="images/linedot.svg" /></span>
+                                <span><img src="images/linedot.svg"></span>
                             </div>
                             <div class="cell">
                                 <span rv-class-bold="chartType | eq 'linedot'" data-charttype="linedot">Line Dot</span>
@@ -103,7 +103,7 @@
                         </div>
                         <div class="row" rv-on-click="changeChartType">
                             <div class="cell">
-                                <span><img src="images/spline.svg" /></span>
+                                <span><img src="images/spline.svg"></span>
                             </div>
                             <div class="cell">
                                 <span rv-class-bold="chartType | eq 'spline'" data-charttype="spline">Spline</span>
@@ -112,7 +112,7 @@
                         <div class="horizontal-line"></div>
                         <div class="row" rv-on-click="changeChartType">
                             <div class="cell">
-                                <span><img src="images/table.svg" /></span>
+                                <span><img src="images/table.svg"></span>
                             </div>
                             <div class="cell">
                                 <span rv-class-bold="chartType | eq 'table'" rv-show="showTableOption" data-charttype="table">Table</span>
@@ -121,7 +121,7 @@
                         <div class="horizontal-line"></div>
                         <div class="row" rv-on-click="toggleCrosshair">
                             <div class="cell">
-                                <span><img src="images/crosshair.svg" /></span>
+                                <span><img src="images/crosshair.svg"></span>
                             </div>
                             <div class="cell">
                                 <span rv-class-bold="enableCrosshair" data-charttype="spline">Crosshair</span>
@@ -137,26 +137,26 @@
         <div class="row">
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="addRemoveIndicator">
-                    <span><img src="images/indicators.svg" title="Indicators"/></span>
+                    <span><img src="images/indicators.svg" title="Indicators"></span>
                 </div>
             </div>
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="addRemoveOverlay">
-                    <span><img src="images/overlays.svg" title="Overlays" /></span>
+                    <span><img src="images/overlays.svg" title="Overlays"></span>
                 </div>
             </div>
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleDrawingToolSelector" rv-class-button_selected="showDrawingToolSelector">
-                    <span><img src="images/draw.svg" title="Drawings" /></span>
+                    <span><img src="images/draw.svg" title="Drawings"></span>
                 </div>
                 <div class="table chartOptions_overlay drawingToolOverlay" rv-show="showDrawingToolSelector">
                     <div class="chartoptions-horizontal-line" style="width : 52px; left : 28px;"></div>
                     <div class="row">
                         <div class="cell" rv-on-click="addDrawingTool">
-                            <img src="images/vertical_line.svg" data-drawingtool="vertical_line" />
+                            <img src="images/vertical_line.svg" data-drawingtool="vertical_line">
                         </div>
                         <div class="cell" rv-on-click="addDrawingTool">
-                            <img src="images/horizontal_line.svg" data-drawingtool="horizontal_line" />
+                            <img src="images/horizontal_line.svg" data-drawingtool="horizontal_line">
                         </div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
         <div class="row">
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleExportSelector" rv-class-button_selected="showExportSelector">
-                    <span><img src="images/export.svg" title="Export" /></span>
+                    <span><img src="images/export.svg" title="Export"></span>
                 </div>
                 <div class="table chartOptions_overlay exportOverlay font-s" rv-show="showExportSelector">
                     <div class="chartoptions-horizontal-line" style="width : 185px;"></div>
@@ -182,19 +182,19 @@
                             <div class="table">
                                 <div class="row">
                                     <div class="cell">
-                                        <a rv-href="fbShareLink" target="_blank"><img src="images/fb.svg" /></a>
+                                        <a rv-href="fbShareLink" target="_blank"><img src="images/fb.svg"></a>
                                     </div>
                                     <div class="cell">
-                                        <a rv-href="twitterShareLink" target="_blank"><img src="images/twitter.svg" /></a>
+                                        <a rv-href="twitterShareLink" target="_blank"><img src="images/twitter.svg"></a>
                                     </div>
                                     <div class="cell">
-                                        <a rv-href="gPlusShareLink" target="_blank"><img src="images/g-plus.svg" /></a>
+                                        <a rv-href="gPlusShareLink" target="_blank"><img src="images/g-plus.svg"></a>
                                     </div>
                                     <div class="cell">
-                                        <a rv-href="bloggerShareLink" target="_blank"><img src="images/blogger.svg" /></a>
+                                        <a rv-href="bloggerShareLink" target="_blank"><img src="images/blogger.svg"></a>
                                     </div>
                                     <div class="cell">
-                                        <a rv-href="vkShareLink" target="_blank"><img src="images/vk.svg" /></a>
+                                        <a rv-href="vkShareLink" target="_blank"><img src="images/vk.svg"></a>
                                     </div>
                                 </div>
                             </div>
