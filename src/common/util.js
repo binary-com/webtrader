@@ -154,10 +154,6 @@ function formatPrice(float) {
     return (float * 1).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
 
-function resizeElement(selector) {
-  $(selector).height($(window).height() - 10).width($(window).width() - 10);
-};
-
 function sortAlphaNum(property) {
     'use strict';
     var reA = /[^a-zA-Z]/g;
@@ -232,6 +228,15 @@ function validateEmail(email) {
 
 String.prototype.replaceAll = function(target, replacement) {
     return this.split(target).join(replacement);
+};
+String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) {
+        return typeof args[number] != 'undefined'
+            ? args[number]
+            : match
+            ;
+    });
 };
 
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */

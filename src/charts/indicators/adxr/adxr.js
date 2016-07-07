@@ -188,8 +188,10 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 155
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 155
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")

@@ -1,16 +1,31 @@
-define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util'], function( $, liveapi, menu ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util'], function( $, liveapi, menu, _ ) {
 
-	var init_chart_options = function (dialog, timePeriod, type, instrumentName){
+	var init_chart_options = function (dialog, timePeriod, type, instrumentName, instrumentCode){
 			var id = dialog.attr('id');
 			/* initialize chartOptions & table-view once chart is rendered */
 			require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
 				var table_view = tableView.init(dialog);
-				chartOptions.init(id, timePeriod, type, table_view.show, instrumentName);
+				chartOptions.init(id, timePeriod, type, table_view.show, instrumentName, instrumentCode);
 			});
 	};
 
+	Highcharts.setOptions(
+		{
+			plotOptions: {
+				candlestick: {
+					lineColor: 'rgba(0,0,0,1)',
+					color: 'rgba(215,24,24,1)',
+					upColor: 'rgba(2,146,14,1)',
+					upLineColor: 'rgba(0,0,0,1)'
+				}
+			}
+		});
+
 	return {
 		init: function() {
+			/* when we are on affiliates route we need to disable overflow-x */
+			$('body').addClass('affiliates');
+
 			// get chart window html.
 	        require(['text!charts/chartWindow.html'], function(html) {
 	            var newTabId = "webtrader-dialog-1",
@@ -22,7 +37,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 	                .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
 	                .find('div.chartSubContainer').attr('id', newTabId + "_chart").end();
 
-        // load market information (instruments) from API.
+        		// load market information (instruments) from API.
 				//Trigger async loading of instruments and trade menu and refresh
 				require(["instruments/instruments", "jquery-growl"], function (instruments) {
 					instruments
@@ -38,55 +53,20 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 										var instrumentName = instrumentObject[0].display_name;
 										var delayAmount = instrumentObject[0].delay_amount || 0;
 
-										/**
-										 * Additional requirements to render tick charts ONLY when following parameters are passed
-										 * 	startTime - optional
-										 * 	endTime - mandatory
-										 * 	entrySpotTime - mandatory
-										 * 	barrierPrice - mandatory
-										 */
-										var startTime = getParameterByName('startTime');
-										var endTime = getParameterByName('endTime');
-										var entrySpotTime = getParameterByName('entrySpotTime');
-										var barrierPrice = getParameterByName('barrierPrice');
-										if (endTime && entrySpotTime && barrierPrice) {
-
-											if (delayAmount > 0) {
-												$.growl.error({
-													message: "Delayed instruments cannot be rendered!"
-												});
-											} else if (timePeriod.toUpperCase() !== '1T') {
-												$.growl.error({
-													message: "Only tick charts are supported in this route!"
-												});
-											} else {
-												require(["charts/charts"], function(charts) {
-													charts.drawChart("#" + newTabId + "_chart", {
-														instrumentCode : instrumentCode,
-														instrumentName : instrumentName,
-														timePeriod : timePeriod,
-														type : type,
-														delayAmount : delayAmount
-													});
-													init_chart_options($html, timePeriod, type, instrumentName);
-												});
-											}
-
-										} else {
-
-											//Render in normal way
-											require(["charts/charts"], function(charts) {
-												charts.drawChart("#" + newTabId + "_chart", {
-													instrumentCode : instrumentCode,
-													instrumentName : instrumentName,
-													timePeriod : timePeriod,
-													type : type,
-													delayAmount : delayAmount
-												});
-												init_chart_options($html, timePeriod, type, instrumentName);
+										//Render in normal way
+										require(["charts/charts"], function(charts) {
+											charts.drawChart("#" + newTabId + "_chart", {
+												instrumentCode : instrumentCode,
+												instrumentName : instrumentName,
+												timePeriod : timePeriod,
+												type : type,
+												delayAmount : delayAmount
 											});
-
-										}
+											init_chart_options($html, timePeriod, type, instrumentName, instrumentCode);
+											_.defer(function() {
+												charts.triggerReflow("#" + newTabId + "_chart");
+											});
+										});
 
 									} else {
 										require(["jquery", "jquery-growl"], function($) {
@@ -117,11 +97,11 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 				});
 
 	            $(".mainContainer").append($html);
-	            resizeElement('#' + newTabId);
-	            resizeElement('#' + newTabId + " .chartSubContainer");
+				$('#' + newTabId + " .chartSubContainer").height($(window).height() - 50).width($(window).width());
+				$('#' + newTabId + " .table-view").width($(window).width());
 	            $(window).resize(function() {
-	                resizeElement('#' + newTabId);
-	                resizeElement('#' + newTabId + " .chartSubContainer");
+					$('#' + newTabId + " .chartSubContainer").height($(window).height() - 50).width($(window).width());
+					$('#' + newTabId + " .table-view").width($(window).width());
 	            });
 
 	        });

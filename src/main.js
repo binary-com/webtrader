@@ -282,7 +282,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
 
     //load all other .css files asynchronously
     require([
-        'css!lib/hamburger.css',
         'css!charts/charts.css',
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',

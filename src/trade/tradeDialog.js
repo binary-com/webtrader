@@ -200,8 +200,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         spreads: {
           amount_per_point: 1,
           stop_type: 'point', /* could be 'point' or 'dollar' */
-          stop_loss: 10,
-          stop_profit: 10,
+          stop_loss: (_.find(available, 'stop_loss') || { stop_loss: 10}).stop_loss,
+          stop_profit: (_.find(available, 'stop_profit') || { stop_profit: 10}).stop_profit,
           /* updated from #proposal websocket api */
           spread: 0.0,
           spot: '0.0',
@@ -649,6 +649,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             if(extra.category !== 'Digits') {
               if (extra.category !== 'Asians') {
                 extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
+              }
+              /* for higher/lower final barrier value is entry_quote + barrrier */
+              if(extra.category === 'Up/Down' && _(['higher','lower']).includes(extra.category_display)) {
+                extra.barrier = state.barriers.barrier;
               }
               extra.show_tick_chart = true;
             }

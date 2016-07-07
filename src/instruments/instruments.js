@@ -2,85 +2,31 @@
  * Created by arnab on 2/12/15.
  */
 
-define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu", "jquery-growl","common/util"],
-    function ($, $ui, liveapi, menu) {
+define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu", "charts/chartWindow", "jquery-growl","common/util"],
+    function ($, $ui, liveapi, menu, chartWindow) {
 
     "use strict";
 
-    function openNewChart(timePeriodInStringFormat) { //in 1m, 2m, 1d etc format
+    function onMenuItemClick(li) {
 
-        require(["charts/chartWindow"], function(chartWindow) {
-            //validate the selection
-            var displaySymbol = $("#instrumentsDialog").dialog('option', 'title');
-            var internalSymbol = $("#instrumentsDialog").data("symbol");
-            var delayAmount = $("#instrumentsDialog").data("delay_amount"); //this is in minutes
-            var type = isTick(timePeriodInStringFormat) ? 'line' : 'candlestick';
+        var delayAmount = li.data('delay_amount'), //this is in minutes
+            symbol = li.data('symbol'),
+            displaySymbol = li.data('display_name');
 
-            chartWindow.addNewWindow({
-                instrumentCode : internalSymbol,
-                instrumentName : displaySymbol,
-                timePeriod : timePeriodInStringFormat,
-                type : type,
-                delayAmount : delayAmount
-              });
-            $("#instrumentsDialog").dialog("close");
+        chartWindow.addNewWindow({
+            instrumentCode : symbol,
+            instrumentName : displaySymbol,
+            timePeriod : '1d',
+            type : 'candlestick',
+            delayAmount : delayAmount
         });
 
-    }
-
-    function onMenuItemClick(li) {
-        var update = function () {
-            var delay_amount = li.data('delay_amount');
-            $("#instrumentsDialog").dialog('option', 'title', li.find('a').text())
-                                        .data("symbol", li.data('symbol'))
-                                        .data("delay_amount", delay_amount)
-                                        .dialog("open");
-            /* disable or enable the buttons based on delay_amount */
-            $("#instrumentsDialog").find('button').each(function () {
-                var btn = $(this); // button ids are    1m, 5m, 15m, 1h, 4h, 8h, 1d, 2d, ...
-                if (convertToTimeperiodObject(btn.attr('id')).timeInSeconds() < delay_amount * 60) {
-                    btn.attr('disabled', 'disabled');
-                } else {
-                    btn.removeAttr('disabled');
-                }
-            });
-
-        };
-
-        if($("#instrumentsDialog").length == 0) {
-            require(['text!instruments/instruments.html'], function ($html) {
-                $($html).css("display", "none").appendTo("body");
-                $("#standardPeriodsButtonContainer").find("button")
-                    .click(function () {
-                        openNewChart($(this).attr('id'));
-                    });
-
-                $("#instrumentsDialog").dialog({
-                    autoOpen: false,
-                    resizable: false,
-                    width: 277,
-                    height: 320,
-                    my: 'center',
-                    at: 'center',
-                    of: window,
-                    buttons: []
-                });
-
-                update();
-            });
-        }
-        else {
-            update();
-        }
-
-        $(document).click();
     }
 
     var markets = [];
 
     return {
         init: function() {
-            require(["css!instruments/instruments.css"]);
             /* cache the result of trading_times call, because assetIndex needs the same data */
             return liveapi
                     .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })

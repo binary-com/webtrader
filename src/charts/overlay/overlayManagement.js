@@ -100,13 +100,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
               var dialog = $(containerIDWithHash);
               var fn = function () {
                   dialog.data("overlayIndicator", true);
-                  if (chartOptions.isCurrentViewInLogScale(newTabId))
-                  {
-                      chartOptions.triggerToggleLogScale(newTabId);
-                  }
-                  chartOptions.disableEnableLogMenu( newTabId, false );
-                  chartOptions.disableEnableCandlestick( newTabId, false );
-                  chartOptions.disableEnableOHLC( newTabId, false );
+                  chartOptions.disableEnableCandlestickAndOHLC( newTabId, false );
                   charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount)
                         .then(function() {
                           var overlay = { symbol: symbol, displaySymbol: displaySymbol, delay_amount: delay_amount};
@@ -155,8 +149,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                                   $(containerIDWithHash).data('overlayIndicator', null);
                                   require(['charts/chartOptions'], function (chartOptions) {
                                       var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
-                                      chartOptions.disableEnableCandlestick(newTabId, true);
-                                      chartOptions.disableEnableOHLC(newTabId, true);
+                                      chartOptions.disableEnableCandlestickAndOHLC(newTabId, true);
                                   });
                                   _.defer(function () {
                                       chart.redraw();

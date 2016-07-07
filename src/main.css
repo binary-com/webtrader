@@ -9,6 +9,10 @@ html, body {
     width: 100%;
 }
 
+body.affiliates {
+  overflow-x: hidden;
+}
+
 body > .footer {
     transition: height .2s linear;
     top:0;
@@ -120,9 +124,6 @@ button.ui-button-text-only .ui-menu {
 
 .ui-menu {
     z-Index: 1003;
-}
-.ui-selectmenu-menu .ui-menu {
-  max-height: 85px;
 }
 /*Overriding this class inheritted from dataTables jquery plugin*/
 
@@ -291,6 +292,9 @@ input:focus {
     background: #fef1cf !important;
     color: black !important;
 }
+.growl > .growl-close {
+  padding-left: 5px;
+}
 #growls { top: 110px !important; }
 
 button {
@@ -313,4 +317,10 @@ table {
 }
 .cell {
     display: table-cell;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
 }

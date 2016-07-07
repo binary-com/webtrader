@@ -247,7 +247,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                             this.credits.element.onclick = function() {
                                 window.open(
-                                    'http://www.binary.com',
+                                    'http://webtrader.binary.com',
                                     '_blank'
                                 );
                             }
@@ -268,10 +268,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                 plotOptions: {
                     candlestick: {
-                        lineColor: 'black',
-                        color: 'red',
-                        upColor: 'green',
-                        upLineColor: 'black',
                         shadow: false
                     },
                     series: {
@@ -307,8 +303,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 credits: {
-                    href: 'http://www.binary.com',
-                    text: 'Binary.com',
+                    href: 'http://webtrader.binary.com',
+                    text: 'Binary.com : Webtrader',
 
                 },
 
@@ -370,37 +366,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 exporting: {
-                    enabled: true,
-                    //Explicity mentioning what buttons to show otherwise this chart will
-                    //also show Download CSV and Download XLS options. We do not want to
-                    //show those options because highchart's implementation do not download
-                    //all data from the chart. It only downloads the visible part of the chart.
-                    //We have implemented Charts -> Download as CSV to download all data from
-                    //chart
-                    buttons: {
-                        contextButton: {
-                            menuItems: [{
-                                text: 'Download PNG'.i18n(),
-                                onclick: function () {
-                                    this.exportChartLocal();
-                                }
-                            }, {
-                                text: 'Download SVG'.i18n(),
-                                onclick: function () {
-                                    this.exportChartLocal({
-                                        type: 'image/svg+xml'
-                                    });
-                                },
-                                separator: false
-                            }, {
-                                text: 'Download CSV'.i18n(),
-                                onclick: function () {
-                                    generate_csv($(containerIDWithHash).highcharts(), $(containerIDWithHash).data());
-                                },
-                                separator: false
-                            }]
-                        }
-                    },
+                    enabled: false,
+                    url: 'https://export.highcharts.com',
                     // Naming the File
                     filename:options.instrumentName.split(' ').join('_')+"("+options.timePeriod+")"
                 }
@@ -417,7 +384,13 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             }
         },
 
-        refresh : function ( containerIDWithHash ) {
+        generate_csv : generate_csv,
+
+        refresh : function ( containerIDWithHash, newTimePeriod, newChartType ) {
+
+            if (newTimePeriod)  $(containerIDWithHash).data("timePeriod", newTimePeriod);
+            if(newChartType) $(containerIDWithHash).data("type", newChartType);
+
             //Get all series details from this chart
             var chart = $(containerIDWithHash).highcharts();
             var loadedMarketData = [], series_compare = undefined;
@@ -512,6 +485,11 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 });
             }
             return Promise.resolve();
+        },
+
+        changeTitle : function ( containerIDWithHash, newTitle ) {
+            var chart = $(containerIDWithHash).highcharts();
+            chart.setTitle(newTitle);
         }
 
     }
