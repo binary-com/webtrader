@@ -29,7 +29,8 @@ module.exports = function (grunt) {
             uncompressed: ['dist/uncompressed'],
             branches:[ 'dist/branches'],
             current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
-            dist: ['dist']
+            dist: ['dist'],
+            clean_src_i18n: ['src/i18n']
         },
         copy: {
             main: {
@@ -390,7 +391,7 @@ module.exports = function (grunt) {
             format: 'raw'
           },
           all: {
-            src: ['translation/i18n/*.po'],
+            src: ['translations/i18n/*.po'],
             dest: 'src/i18n/'
           }
         },
@@ -398,7 +399,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
-  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
+  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging', 'clean:clean_src_i18n']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
