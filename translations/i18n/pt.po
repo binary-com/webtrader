@@ -1,6 +1,3 @@
-msgid "There was an error"
-msgstr ""
-
 msgid "%D MA Type"
 msgstr ""
 
@@ -36,31 +33,16 @@ msgstr ""
 msgid "1 Day"
 msgstr ""
 
-msgid "1 Tick"
-msgstr ""
-
-msgid "1 day"
-msgstr ""
-
-msgid "1 hour"
-msgstr ""
-
-msgid "1 min"
-msgstr ""
-
 msgid "1-2 years"
 msgstr ""
 
 msgid "10"
 msgstr ""
 
-msgid "10 mins"
-msgstr ""
-
 msgid "10m"
 msgstr ""
 
-msgid "15 mins"
+msgid "15"
 msgstr ""
 
 msgid "15m"
@@ -75,22 +57,13 @@ msgstr ""
 msgid "1m"
 msgstr ""
 
-msgid "2 hours"
-msgstr ""
-
-msgid "2 mins"
-msgstr ""
-
 msgid "2h"
 msgstr ""
 
 msgid "2m"
 msgstr ""
 
-msgid "3 mins"
-msgstr ""
-
-msgid "30 mins"
+msgid "30"
 msgstr ""
 
 msgid "30-day limit on losses"
@@ -105,16 +78,10 @@ msgstr ""
 msgid "3m"
 msgstr ""
 
-msgid "4 hours"
-msgstr ""
-
 msgid "40 transactions or more in the past 12 months"
 msgstr ""
 
 msgid "4h"
-msgstr ""
-
-msgid "5 mins"
 msgstr ""
 
 msgid "5m"
@@ -127,9 +94,6 @@ msgid "7-day limit on losses"
 msgstr ""
 
 msgid "7-day turnover limit"
-msgstr ""
-
-msgid "8 hours"
 msgstr ""
 
 msgid "8h"
@@ -153,19 +117,16 @@ msgstr ""
 msgid "Account balance"
 msgstr ""
 
-msgid "Account balance:"
-msgstr ""
-
 msgid "Account id not found"
 msgstr ""
 
 msgid "Account opening"
 msgstr ""
 
-msgid "Action"
+msgid "Account token not found"
 msgstr ""
 
-msgid "Add"
+msgid "Action"
 msgstr ""
 
 msgid "Add indicator"
@@ -175,9 +136,6 @@ msgid "Add level"
 msgstr ""
 
 msgid "Add overlays"
-msgstr ""
-
-msgid "Add/remove indicators"
 msgstr ""
 
 msgid "Add/remove overlays"
@@ -207,7 +165,7 @@ msgstr ""
 msgid "Apply new theme?"
 msgstr ""
 
-msgid "Appropriateness Test: WARNING:"
+msgid "Appropriateness Test: WARNING"
 msgstr ""
 
 msgid "Are you sure you want to delete this token?"
@@ -282,10 +240,13 @@ msgstr ""
 msgid "CLOSE"
 msgstr ""
 
+msgid "CSV"
+msgstr ""
+
 msgid "Cancel"
 msgstr ""
 
-msgid "Candlestick"
+msgid "Candles"
 msgstr ""
 
 msgid "Candlestick down-color"
@@ -312,19 +273,10 @@ msgstr ""
 msgid "Chart"
 msgstr ""
 
-msgid "Chart Objects"
-msgstr ""
-
 msgid "Chart Themes"
 msgstr ""
 
-msgid "Chart Type"
-msgstr ""
-
 msgid "Chart background"
-msgstr ""
-
-msgid "Chart menu"
 msgstr ""
 
 msgid "Choose password"
@@ -366,7 +318,7 @@ msgstr ""
 msgid "Connection closed"
 msgstr ""
 
-msgid "Connection error. Refresh the page."
+msgid "Connection error. Refresh the page"
 msgstr ""
 
 msgid "Construction"
@@ -421,9 +373,6 @@ msgid "Current overlays"
 msgstr ""
 
 msgid "Current password"
-msgstr ""
-
-msgid "Current price"
 msgstr ""
 
 msgid "Current regulations require that you provide us the following"
@@ -522,10 +471,10 @@ msgstr ""
 msgid "Download SVG"
 msgstr ""
 
-msgid "Downloading .csv"
+msgid "Download as"
 msgstr ""
 
-msgid "Draw"
+msgid "Downloading .csv"
 msgstr ""
 
 msgid "Duration"
@@ -544,6 +493,9 @@ msgid "Education"
 msgstr ""
 
 msgid "Email verification failed"
+msgstr ""
+
+msgid "Embed code"
 msgstr ""
 
 msgid "End Time"
@@ -675,9 +627,6 @@ msgstr ""
 msgid "High barrier offset"
 msgstr ""
 
-msgid "Highcharts implementation for Binary.com"
-msgstr ""
-
 msgid "Higher"
 msgstr ""
 
@@ -746,7 +695,7 @@ msgstr ""
 msgid "Instrument"
 msgstr ""
 
-msgid "Instruments :"
+msgid "Instruments"
 msgstr ""
 
 msgid "Investments & Dividends"
@@ -794,6 +743,9 @@ msgstr ""
 msgid "Line Stroke"
 msgstr ""
 
+msgid "Link"
+msgstr ""
+
 msgid "Loading"
 msgstr ""
 
@@ -812,7 +764,7 @@ msgstr ""
 msgid "Loading Profit Table"
 msgstr ""
 
-msgid "Loading Real account openning"
+msgid "Loading Real account opening"
 msgstr ""
 
 msgid "Loading Self-Exclusion"
@@ -839,16 +791,13 @@ msgstr ""
 msgid "Loading self-exclusion settings"
 msgstr ""
 
-msgid "Log Scale"
-msgstr ""
-
 msgid "Log in"
 msgstr ""
 
 msgid "Log in time"
 msgstr ""
 
-msgid "Logging out because of self-exclusion session time out"
+msgid "Logging out because of self-exclusion session time out!"
 msgstr ""
 
 msgid "Login"
@@ -995,7 +944,7 @@ msgstr ""
 msgid "Net Annual Income"
 msgstr ""
 
-msgid "Net Profit:"
+msgid "Net Profit"
 msgstr ""
 
 msgid "New password"
@@ -1091,6 +1040,12 @@ msgid "Over"
 msgstr ""
 
 msgid "Over 3 years"
+msgstr ""
+
+msgid "PDF"
+msgstr ""
+
+msgid "PNG"
 msgstr ""
 
 msgid "PPO Line Stroke"
@@ -1229,7 +1184,7 @@ msgstr ""
 msgid "Please enter your street address"
 msgstr ""
 
-msgid "Please install the latest version of one of these browsers:"
+msgid "Please install the latest version of one of these browsers"
 msgstr ""
 
 msgid "Please log in"
@@ -1274,7 +1229,7 @@ msgstr ""
 msgid "Pre-Defined"
 msgstr ""
 
-msgid "Preferred reality-check interval:"
+msgid "Preferred reality-check interval"
 msgstr ""
 
 msgid "Press  Create token  button on the right to create your first token"
@@ -1328,9 +1283,6 @@ msgstr ""
 msgid "Ref"
 msgstr ""
 
-msgid "Refresh"
-msgstr ""
-
 msgid "Register free account"
 msgstr ""
 
@@ -1338,9 +1290,6 @@ msgid "Registration"
 msgstr ""
 
 msgid "Reloading page"
-msgstr ""
-
-msgid "Remove"
 msgstr ""
 
 msgid "Remove Selected"
@@ -1371,6 +1320,9 @@ msgid "Rise"
 msgstr ""
 
 msgid "SMA"
+msgstr ""
+
+msgid "SVG"
 msgstr ""
 
 msgid "Safari"
@@ -1434,6 +1386,9 @@ msgid "Session is not authenticated"
 msgstr ""
 
 msgid "Settles"
+msgstr ""
+
+msgid "Share"
 msgstr ""
 
 msgid "Short MA Type"
@@ -1599,6 +1554,9 @@ msgid ""
 "money contracts will be cancelled and refunded"
 msgstr ""
 
+msgid "There was an error"
+msgstr ""
+
 msgid "This contract has expired"
 msgstr ""
 
@@ -1626,10 +1584,7 @@ msgstr ""
 msgid "Time Period"
 msgstr ""
 
-msgid "Time period :"
-msgstr ""
-
-msgid "Time periods"
+msgid "Time period"
 msgstr ""
 
 msgid "Timeout for websocket request"
@@ -1780,7 +1735,7 @@ msgstr ""
 msgid "Wed"
 msgstr ""
 
-msgid "While on the go, you can:"
+msgid "While on the go, you can"
 msgstr ""
 
 msgid "Windows"
@@ -1804,7 +1759,7 @@ msgstr ""
 msgid "You have excluded yourself until"
 msgstr ""
 
-msgid "You have sold the following contract:"
+msgid "You have sold the following contract"
 msgstr ""
 
 msgid ""
@@ -1813,7 +1768,7 @@ msgid ""
 "on"
 msgstr ""
 
-msgid "You pay:"
+msgid "You pay"
 msgstr ""
 
 msgid "You will be automatically logged out after such time"
@@ -1843,6 +1798,9 @@ msgid "Your transaction reference is"
 msgstr ""
 
 msgid "Your transaction reference number is"
+msgstr ""
+
+msgid "admin"
 msgstr ""
 
 msgid "and"
@@ -1933,7 +1891,7 @@ msgid ""
 "on their desktop PCs"
 msgstr ""
 
-msgid "is required. Current spread:"
+msgid "is required. Current spread"
 msgstr ""
 
 msgid "is that which is selected and the"
@@ -1969,16 +1927,22 @@ msgstr ""
 msgid "next tick"
 msgstr ""
 
-msgid "oauth :"
+msgid "oauth"
 msgstr ""
 
 msgid "of \"Now\", the"
+msgstr ""
+
+msgid "payments"
 msgstr ""
 
 msgid "please play responsibly. Read about"
 msgstr ""
 
 msgid "points"
+msgstr ""
+
+msgid "read"
 msgstr ""
 
 msgid "second"
@@ -2008,13 +1972,16 @@ msgstr ""
 msgid "ticks"
 msgstr ""
 
+msgid "trade"
+msgstr ""
+
 msgid "trading experience"
 msgstr ""
 
 msgid "trading frequency"
 msgstr ""
 
-msgid "websocket :"
+msgid "websocket"
 msgstr ""
 
 msgid "yes"

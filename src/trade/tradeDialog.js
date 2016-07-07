@@ -185,7 +185,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           array: ['0', '1','2','3','4','5','6','7','8','9'],
           value: '0',
           visible: false,
-          text: 'Last Digit Prediction'
+          text: 'Last Digit Prediction'.i18n()
         },
         currency: {
           array: ['USD'],
@@ -469,10 +469,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             over: ['0','1','2','3','4','5','6','7','8'],
           }[subcat];
           var text = {
-            matches: 'Last Digit Prediction',
-            differs: 'Last Digit Prediction',
-            under: 'Last Digit is Under',
-            over: 'Last Digit is Over'
+            matches: 'Last Digit Prediction'.i18n(),
+            differs: 'Last Digit Prediction'.i18n(),
+            under: 'Last Digit is Under'.i18n(),
+            over: 'Last Digit is Over'.i18n()
           }[subcat];
 
           if(!_.includes(array, state.digits.value)){
