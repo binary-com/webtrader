@@ -116,7 +116,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     enableCrosshair : true,
                     showDrawingToolSelector : false,
                     showExportSelector : false,
-                    
+
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),
 
@@ -229,7 +229,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     hideOverlays(scope);
                     scope.showExportSelector = temp;
                 };
-                
+
                 state[m_newTabId].export = function(event, scope) {
                     var exportType = event.target.dataset.exporttype;
                     if (exportType) {
@@ -254,7 +254,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 $("#" + m_newTabId + "_header").prepend($html);
                 setTopHeaderPosAndWidth_timePeriodOvl(m_timePeriod);
                 setTopHeaderPosAndWith_chartType(m_chartType);
-                
+
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
 
             });
@@ -285,7 +285,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 view[newTabId].unbind();
                 delete view[newTabId];
                 delete state[newTabId];
-                console.log('Cleaned bindings for chart options!');
             }
         }
 

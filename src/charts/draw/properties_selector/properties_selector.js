@@ -12,7 +12,7 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
 			options.inputValues.forEach(function(input){
 				var ele, inputElement;
 				if(input.type==="colorpicker"){
-					inputElement = $("<input type='button' value='" + input.default + "' class='csspopup_input_width'" + 
+					inputElement = $("<input type='button' value='" + input.default + "' class='csspopup_input_width'" +
 						"id='" + input.id + "' style = 'background:"+ input.default + "; color:" + input.default + "' />");
 					inputElement.colorpicker({
 						part:{
@@ -35,7 +35,7 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
 		                }
 					});
 				} else{
-					inputElement = $("<input type='" + input.type + "' value='" + input.default + "' class='csspopup_input_width'" + 
+					inputElement = $("<input type='" + input.type + "' value='" + input.default + "' class='csspopup_input_width'" +
 						" id='" + input.id + "' name='" + input.name + "'/>");
 				}
 				if(input.min && input.max){
@@ -76,8 +76,8 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
                             			name = $(ele).attr('name');
                             		value = parseInt(value);
                             		if(value > max || value < min){
-                            			$.growl.error({message: "Please enter a value for \"" + name + "\" between "+
-                            				min + " and " + max + "."});
+                            			$.growl.error({message: 'Please enter a value for "'.i18n() + name + '" between '.i18n()+
+                            				min + ' and '.i18n() + max + "."});
                             			error = true;
                             		}
                             	}
