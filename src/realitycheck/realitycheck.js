@@ -21,7 +21,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         continueTrading : function(event, scope) {
             //Validate input
             if (scope.timeOutInMins < scope.timeOutMin || scope.timeOutInMins > scope.timeOutMax) {
-                $.growl.error({ message : 'Please enter a number between ' + scope.timeOutMin + ' to ' + scope.timeOutMax });
+                $.growl.error({ message : 'Please enter a number between '.i18n() + scope.timeOutMin + ' and '.i18n() + scope.timeOutMax });
                 return;
             }
             win.dialog('close');
@@ -78,7 +78,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     function init() {
 
-        console.log('Reality check login event intercepted');
         if (win) return Promise.resolve(true);
 
         return new Promise(function(resolve) {
@@ -96,7 +95,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                                 require(['text!realitycheck/realitycheck.html', "css!realitycheck/realitycheck.css"], function(html) {
                                     var div = $(html);
                                     win = windows.createBlankWindow($('<div/>'), {
-                                        title: 'Reality check',
+                                        title: 'Reality check'.i18n(),
                                         width: 600,
                                         minHeight: FIRST_SCREEN_HEIGHT,
                                         height: FIRST_SCREEN_HEIGHT,
@@ -175,7 +174,6 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     });
 
     liveapi.events.on('logout', function() {
-        console.log('Reality check logout called');
         logout();
         local_storage.remove('realitycheck');
     });

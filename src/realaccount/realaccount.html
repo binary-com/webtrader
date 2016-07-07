@@ -8,7 +8,7 @@
             rv-selectmenu="user.salutation"
             rv-selectrefresh="account.salutation_array">
 
-        <option rv-each-row="user.salutation_array" rv-value="row">{row}</option>
+        <option rv-each-row="user.salutation_array" rv-value="row">{row | i18n}</option>
     </select>
 
     <span class='title'>First name</span>
@@ -93,7 +93,7 @@
             rv-selectmenu="user.secret_question_inx"
             rv-selectrefresh="user.secret_question_array">
 
-        <option rv-each-row="user.secret_question_array" rv-value="index">{row}</option>
+        <option rv-each-row="user.secret_question_array" rv-value="index">{row | i18n}</option>
     </select>
 
     <span class='title'>Answer</span>
@@ -131,7 +131,7 @@
             rv-selectrefresh="financial.experience_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.experience_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Forex trading frequency</span>
     <span class="please-select" rv-show="financial.forex_trading_frequency | eq '' | and empty_fields.validate">*</span>
@@ -141,7 +141,7 @@
             rv-selectrefresh="financial.frequency_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.frequency_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
     </select>
 
     <span class='title'>Indices trading experience</span>
@@ -152,7 +152,7 @@
             rv-selectrefresh="financial.experience_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.experience_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Indices trading frequency</span>
     <span class="please-select" rv-show="financial.indices_trading_frequency | eq '' | and empty_fields.validate">*</span>
@@ -162,7 +162,7 @@
             rv-selectrefresh="financial.frequency_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.frequency_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
     </select>
 
     <span class='title'>Commodities trading experience</span>
@@ -173,7 +173,7 @@
             rv-selectrefresh="financial.experience_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.experience_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Commodities trading frequency</span>
     <span class="please-select" rv-show="financial.commodities_trading_frequency | eq '' | and empty_fields.validate">*</span>
@@ -183,7 +183,7 @@
             rv-selectrefresh="financial.frequency_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.frequency_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
     </select>
 
     <span class='title'>Stocks trading experience</span>
@@ -194,7 +194,7 @@
             rv-selectrefresh="financial.experience_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.experience_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Stocks trading frequency</span>
     <span class="please-select" rv-show="financial.stocks_trading_frequency | eq '' | and empty_fields.validate">*</span>
@@ -204,7 +204,7 @@
             rv-selectrefresh="financial.frequency_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.frequency_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
     </select>
 
     <span class='title'>Binary options or other financial derivatives<br/>trading experience</span>
@@ -215,7 +215,7 @@
             rv-selectrefresh="financial.experience_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.experience_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Binary options or other financial derivatives<br/>trading frequency</span>
     <span class="please-select" rv-show="financial.other_derivatives_trading_frequency | eq '' | and empty_fields.validate">*</span>
@@ -225,7 +225,7 @@
             rv-selectrefresh="financial.frequency_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.frequency_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
     </select>
 
 
@@ -237,7 +237,7 @@
             rv-selectrefresh="financial.experience_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.experience_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Other financial instruments trading frequency</span>
     <span class="please-select" rv-show="financial.other_instruments_trading_frequency | eq '' | and empty_fields.validate">*</span>
@@ -247,7 +247,7 @@
             rv-selectrefresh="financial.frequency_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.frequency_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
     </select>
 
     <span class='title'>Industry of Employment</span>
@@ -258,7 +258,7 @@
             rv-selectrefresh="financial.employment_industry_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.employment_industry_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.employment_industry_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Level of Education</span>
     <span class="please-select" rv-show="financial.education_level | eq '' | and empty_fields.validate">*</span>
@@ -268,7 +268,7 @@
             rv-selectrefresh="financial.education_level_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.education_level_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.education_level_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Income Source</span>
     <span class="please-select" rv-show="financial.income_source | eq '' | and empty_fields.validate">*</span>
@@ -278,7 +278,7 @@
             rv-selectrefresh="financial.income_source_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.income_source_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.income_source_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Net Annual Income</span>
     <span class="please-select" rv-show="financial.net_income | eq '' | and empty_fields.validate">*</span>
@@ -288,7 +288,7 @@
             rv-selectrefresh="financial.net_income_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.net_income_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.net_income_array" rv-value="row">{row | i18n}</option>
     </select>
     <span class='title'>Estimated Net Worth</span>
     <span class="please-select" rv-show="financial.estimated_worth | eq '' | and empty_fields.validate">*</span>
@@ -298,7 +298,7 @@
             rv-selectrefresh="financial.estimated_worth_array">
 
         <option value="" selected="selected" disabled="disabled">Please select</option>
-        <option rv-each-row="financial.estimated_worth_array" rv-value="row">{row}</option>
+        <option rv-each-row="financial.estimated_worth_array" rv-value="row">{row | i18n}</option>
     </select>
 
     <span class='financial-explanation'>

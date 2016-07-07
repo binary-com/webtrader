@@ -25,7 +25,7 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
             if (!win) {
                 win = windows.createBlankWindow($('<div class="chrome_extension"/>'),
                     {
-                        title: 'Chrome Extension',
+                        title: 'Chrome Extension'.i18n(),
                         width: 350,
                         height: 200,
                         resizable: false,
@@ -39,7 +39,6 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
                             Apply: function() {
                                 $( this ).dialog( 'close' );
                                 chrome.webstore.install();
-                                console.log('Chrome Install called!');
                                 local_storage.set("chrome", { accepted_or_cancel_time : moment.utc().valueOf() });
                             },
                             Cancel: function() {
@@ -62,7 +61,7 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
     /*
         This is needed in order to bring back the modality of the dialog when the page is loaded first time. Since this dialog might be loaded way before
         chart dialogs are loaded, what have been found that, when charts are loaded later(after this is shown), the modality of this dialog is lost. However,
-        if we close and reopen this dialog after tile is called, the modality is restored. In an ideal scenario, users won't be able to do anything when this 
+        if we close and reopen this dialog after tile is called, the modality is restored. In an ideal scenario, users won't be able to do anything when this
         dialog is shown because this is a blocking dialog.
      */
     windows.event_on("tile", function () {

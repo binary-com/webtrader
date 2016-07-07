@@ -30,7 +30,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets"], function($
                                 win.dialog('destroy');
                             });
                             win = windows.createBlankWindow($('<div/>'), {
-                                title: 'Terms & Conditions',
+                                title: 'Terms and Conditions'.i18n(),
                                 width: 580,
                                 minHeight: 90,
                                 height: 220,

@@ -185,7 +185,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           array: ['0', '1','2','3','4','5','6','7','8','9'],
           value: '0',
           visible: false,
-          text: 'Last Digit Prediction'
+          text: 'Last Digit Prediction'.i18n()
         },
         currency: {
           array: ['USD'],
@@ -234,7 +234,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           ask_price: "0.0",
           date_start: 0,
           display_value: "0.0",
-          message: 'Loading ...', /* longcode */
+          message: 'Loading ...'.i18n(), /* longcode */
           payout: 0,
           spot: "0.0",
           spot_time: "0",
@@ -469,10 +469,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             over: ['0','1','2','3','4','5','6','7','8'],
           }[subcat];
           var text = {
-            matches: 'Last Digit Prediction',
-            differs: 'Last Digit Prediction',
-            under: 'Last Digit is Under',
-            over: 'Last Digit is Over'
+            matches: 'Last Digit Prediction'.i18n(),
+            differs: 'Last Digit Prediction'.i18n(),
+            under: 'Last Digit is Under'.i18n(),
+            over: 'Last Digit is Over'.i18n()
           }[subcat];
 
           if(!_.includes(array, state.digits.value)){
@@ -661,7 +661,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         // manually check to see if the user is authenticated or not,
         // we should update state.currency from user profile first (not everyone is using USD)
         if(!liveapi.is_authenticated()) {
-            $.growl.warning({ message: 'Please log in' });
+            $.growl.warning({ message: 'Please log in'.i18n() });
             state.purchase.loading = false;
         }
         else {

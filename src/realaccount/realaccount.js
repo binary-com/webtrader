@@ -27,7 +27,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     function init_real_win(root) {
       root = $(root);
       real_win = windows.createBlankWindow(root, {
-          title: 'Real account opening',
+          title: 'Real account opening'.i18n(),
           resizable:false,
           collapsable:false,
           minimizable: true,
