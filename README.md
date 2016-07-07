@@ -94,9 +94,10 @@ Every checkin or merge of PR into development will trigger travis-ci build and d
 Translation related files are in `/translations` folder.
 to extract text for translation:
 
-`cd ./translations`
-`python extract.py` This will extract text from `../src/**/*.html` files.
-`extract.py` for merging `.po` files uses `msgmerge` command line tool.
+1- `cd ./translations`
+2- `python extract.py` This will extract text from `../src/**/*.html` files.
+`extract.py` runs `extract.js` which extracts string literals form `../src/**/*.js` files.
+3- `extract.py` for merging `.po` files uses `msgmerge` command line tool.
 
 The tool should be available on linux, if you are on Osx try `brew install gettext && brew link gettext --force`.
 to submit text to translators: push to *translation* branch, weblate hook will be triggered.
