@@ -21,4 +21,8 @@
         local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
       }
 
+      var lang = getParameterByName('lang') || 'en';
+      if (isLangSupported(lang)) {
+          local_storage.set('i18n', {value: lang});
+      }
       window.location.href = 'v2.1.9/main.html' + suffix;</script></body></html>
