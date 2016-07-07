@@ -71,7 +71,8 @@
     -moz-border-bottom-left-radius: 5px;
 }
 
-.chartOptions .chartOptions_overlay button {
+.chartOptions .chartOptions_overlay.exportOverlay button,
+.chartOptions .chartOptions_overlay.timePeriodOverlay button {
     width: 25px;
     height: 25px;
     padding: 1px 1px 1px 1px;
@@ -87,6 +88,20 @@
 }
 .chartOptions .chartOptions_overlay .cell:nth-child(1) {
     width: 12px;
+}
+
+.chartOptions .chartOptions_overlay.loadSaveOverlay {
+    left: 77px;
+    right: initial;
+}
+.chartOptions .chartOptions_overlay.loadSaveOverlay .cell {
+  width: auto;
+}
+.chartOptions .chartOptions_overlay.loadSaveOverlay .cell button {
+  background-color: #273051;
+}
+.chartOptions .chartOptions_overlay.loadSaveOverlay .chartoptions-horizontal-line {
+  width: 150px;
 }
 
 .chartOptions .chartOptions_overlay.exportOverlay {
