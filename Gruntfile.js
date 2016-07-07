@@ -390,7 +390,7 @@ module.exports = function (grunt) {
             format: 'raw'
           },
           all: {
-            src: ['res/translations/*.po'],
+            src: ['translation/i18n/*.po'],
             dest: 'src/i18n/'
           }
         },

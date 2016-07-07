@@ -1,4 +1,4 @@
-msgid " There was an error "
+msgid "There was an error"
 msgstr ""
 
 msgid "%D MA Type"
@@ -1150,7 +1150,7 @@ msgstr ""
 msgid "Please choose at least one token scope"
 msgstr ""
 
-msgid "Please enter a number between "
+msgid "Please enter a number between"
 msgstr ""
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
@@ -1740,7 +1740,7 @@ msgstr ""
 msgid "Verification code has been sent to your email"
 msgstr ""
 
-msgid "Verification code sent to "
+msgid "Verification code sent to"
 msgstr ""
 
 msgid "Verification token"
@@ -1801,7 +1801,7 @@ msgstr ""
 msgid "Y-axis labels"
 msgstr ""
 
-msgid "You have excluded yourself until "
+msgid "You have excluded yourself until"
 msgstr ""
 
 msgid "You have sold the following contract:"
@@ -2021,7 +2021,4 @@ msgid "yes"
 msgstr ""
 
 msgid "| Return"
-msgstr ""
-
-msgid " "
 msgstr ""

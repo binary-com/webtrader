@@ -91,10 +91,10 @@ Every checkin or merge of PR into development will trigger travis-ci build and d
 
 #####Translation-related command
 
-Translation related files are in `/res` folder.
+Translation related files are in `/translations` folder.
 to extract text for translation:
 
-`cd ./res`
+`cd ./translations`
 `python extract.py` This will extract text from `../src/**/*.html` files.
 `extract.py` for merging `.po` files uses `msgmerge` command line tool.
 

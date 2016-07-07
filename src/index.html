@@ -34,7 +34,9 @@
       }
 
       var lang = getParameterByName('lang') || 'en';
-      local_storage.set('i18n', { value: lang });
+      if (isLangSupported(lang)) {
+          local_storage.set('i18n', {value: lang});
+      }
       window.location.href = 'v<version>/main.html' + suffix;
     </script>
 </body>

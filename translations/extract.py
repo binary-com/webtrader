@@ -89,38 +89,39 @@ parser = WebtraderParser()
 parser.parse_html_files('../src')
 texts = parser.get_texts()
 
-messages_pot = './translations/messages.pot'
+messages_pot = './i18n/messages.pot'
 
 os.remove(messages_pot);
 with open(messages_pot, 'a+') as wf:
     for text in texts:
         text = text.replace('"', '\\"')
-        text = re.sub(r'[^\x00-\x7F]+',' ', text) # remove non aski characters
-        wf.write('\n' + 'msgid "' + text + '"'      )
-        wf.write('\nmsgstr "" \n')
+        text = re.sub(r'[^\x00-\x7F]+',' ', text).strip() # remove non aski characters
+        if text:
+            wf.write('\n' + 'msgid "' + text + '"'      )
+            wf.write('\nmsgstr "" \n')
 
 files = [
-    './translations/ar.po',
-    './translations/de.po',
-    './translations/en.po',
-    './translations/es.po',
-    './translations/fr.po',
-    './translations/id.po',
-    './translations/it.po',
-    './translations/ja.po',
-    './translations/pl.po',
-    './translations/pt.po',
-    './translations/ru.po',
-    './translations/vi.po',
-    './translations/zh_cn.po',
-    './translations/zh_tw.po',
+    './i18n/ar.po',
+    './i18n/de.po',
+    './i18n/en.po',
+    './i18n/es.po',
+    './i18n/fr.po',
+    './i18n/id.po',
+    './i18n/it.po',
+    './i18n/ja.po',
+    './i18n/pl.po',
+    './i18n/pt.po',
+    './i18n/ru.po',
+    './i18n/vi.po',
+    './i18n/zh_cn.po',
+    './i18n/zh_tw.po',
 ]
 
 # on OSX install the 'msgmerge' command via homebrow
 # brew install gettext
 # brew link gettext --force
 for f in files:
-    subprocess.call(['msgmerge', '--output-file=' + f, f, './translations/messages.pot'])
+    subprocess.call(['msgmerge', '--output-file=' + f, f, './i18n/messages.pot'])
 
 # to extract translated string from a to b
-# msgmerge -N -o translations/zh_tw.po temp/zh_tw.po ref/zh_tw.po
+# msgmerge -N -o i18n/zh_tw.po temp/zh_tw.po ref/zh_tw.po
