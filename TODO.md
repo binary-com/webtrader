@@ -1,12 +1,7 @@
 ## General TODO
-    * User should be able to change main candle color by double clicking on it
     * In general, users should be able to do following
-        * Change main series candle color
         * Change overlay series color
-        * Change indicator parameters including color settings
         * Change chart objects
-        * Delete overlay
-        * Delete indicators
         * Delete objects from chart
     * Use JSHint
     * Video detailing each and every features of the new charting software
@@ -16,10 +11,7 @@
     * https://www.npmjs.com/package/grunt-code-quality-report
 
 ## Charts TODO
-    * Logarithmic scale (review it again. Not matching with java charts)
     * A button to control whether to shift the chart with new data point or not
-    * Review scatter plot again. It is throwing error for tooltip
-    * Show indicators text on main chart left corner if the indicator is being show is on the main chart
     * The charts suddenly stops moving when you keep it running for more than 24 hours. There is no set time when it will stop.
         However, it looks like it completely stops working and there is no activity in console. There is no disconnection too. It has
         not be frozen too. It might be something to do with server EventSource connection which is held by server, but it is not sending
