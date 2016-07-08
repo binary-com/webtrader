@@ -4,7 +4,7 @@
 
 dist
 !/lib/*/*/dist
-src/i18n
+translations/i18n/json/
 
 node_modules
 bower_components
