@@ -42,7 +42,7 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
             if (!win) {
                 win = windows.createBlankWindow($('<div class="dialog-confirm-new-theme"/>'),
                     {
-                        title: 'Apply new theme?',
+                        title: 'Apply new theme?'.i18n(),
                         width: 360,
                         height: 220,
                         resizable: false,

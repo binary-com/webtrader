@@ -55,6 +55,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
         /* refresh the table with result of { profit_table:1 } from WS */
         var refresh = function (data) {
             var transactions = (data.statement && data.statement.transactions) || [];
+            var view_button = '<button>View</button>'.i18n();
             var rows = transactions.map(function (trans) {
                 var amount = trans.amount * 1;
                 return [
@@ -64,7 +65,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
                      trans.longcode ,
                     (trans.amount * 1).toFixed(2),
                     '<b>' + formatPrice(trans.balance_after) + '</b>',
-                    '<button>View</button>',
+                    view_button,
                     trans, /* data for view transaction dailog - when clicking on arrows */
                 ];
             });
@@ -85,7 +86,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
 
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
-            title: 'Statement',
+            title: 'Statement'.i18n(),
             width: 700 ,
             height: 400,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },

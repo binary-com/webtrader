@@ -25,10 +25,10 @@ define(['highstock', 'common/util'], function () {
 
                 require(["charts/draw/properties_selector/properties_selector"], function(popup){
                     var options = {};
-                    options.title = "Vertical Line";
+                    options.title = 'Vertical Line'.i18n();
                     options.inputValues = [
                     {
-                        name: 'Stroke width',
+                        name: 'Stroke width'.i18n(),
                         type: 'number',
                         id:'width',
                         default: 2,
@@ -36,7 +36,7 @@ define(['highstock', 'common/util'], function () {
                         max: 5
                     },
                     {
-                        name: 'Stroke color',
+                        name: 'Stroke color'.i18n(),
                         type: 'colorpicker',
                         id:'color',
                         default: '#ff0000'
@@ -81,7 +81,7 @@ define(['highstock', 'common/util'], function () {
                     var lineID = $(this).attr('id'),
                         line = verticalLineOptionsMap[lineID],
                         mouseUpEventAdded = false;
-                    
+
                     H.wrap(H.Pointer.prototype, 'drag', function(c, e){
                         if(chart.annotate){
                             if(!mouseUpEventAdded){
@@ -100,10 +100,10 @@ define(['highstock', 'common/util'], function () {
                                             width: line["stroke-width"]
                                         };
                                     removeLineWithID(line.element.id);
-                                    line = addPlotLines(value, axis, css);   
+                                    line = addPlotLines(value, axis, css);
                                 }
                             }
-                            
+
                         } else{
                             c.call(this, e);
                         }
