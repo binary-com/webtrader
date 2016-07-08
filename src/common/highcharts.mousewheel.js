@@ -13,7 +13,6 @@ define(['jquery', 'lodash', 'highstock', 'common/util'], function($, _) {
                 //Each turn is around 120. We will show one candle per 120
                 var noOfCandles = 4 * e.originalEvent.wheelDelta /120 | 0;
                 var timePeriodInMillis = convertToTimeperiodObject($(this).data('timePeriod')).timeInMillis() || 1000;
-                console.log(timePeriodInMillis);
                 //console.log(noOfCandles);
                 //If its positive, then move up
                 if(noOfCandles > 0) {
