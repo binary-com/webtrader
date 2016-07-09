@@ -1,11 +1,27 @@
-<div class='indicator-dialog'
-rv-dialog-title='dialog.title'>
+<div class='indicator-dialog' rv-dialog-title='dialog.title'>
 
-  <div class='current category' rv-show='indicators.current | prop "length"'>
+  <div class='current' rv-show='indicators.current | prop "length"'>
     <span class='title-big'>Current indicators </span>
-    <div rv-each-ind='indicators.current'>
-      <span rv-text='ind.name'></span>
-      <span class='remove' rv-on-click='indicators.remove | bind ind'> X </span>
+    <br />
+    <div rv-each-ind='indicators.current' class="table">
+      <div class="row">
+        <div class="cell">
+          <span rv-text='ind.name' />
+          <div class="table">
+            <div class="row">
+              <div class="cell">
+                <span rv-text='ind.shortName' />
+              </div>
+              <div class="cell">
+                <a href="#" rv-show='ind.showEdit' rv-on-click='indicators.edit | bind ind'>Edit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <span class='remove' rv-on-click='indicators.remove | bind ind'> X </span>
+        </div>
+      </div>
     </div>
   </div>
 

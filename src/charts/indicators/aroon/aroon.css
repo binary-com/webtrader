@@ -1,13 +1,13 @@
 ﻿.aroon_input_width {
-    width: 120px;
+    width: 150px !important;
 }
 
 .aroon_input_width_for_period {
-    width: 115px;
+    width: 150px !important;
 }
 
 .aroon_level_input_width_for_level {
-  width: 115px;
+  width: 150px !important;
 }
 
 .aroon label {
@@ -21,5 +21,5 @@
 }
 
 .aroon-ui-dialog, .aroon.ui-dialog-content, .aroon_level.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

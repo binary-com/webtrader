@@ -29,7 +29,8 @@ module.exports = function (grunt) {
             uncompressed: ['dist/uncompressed'],
             branches:[ 'dist/branches'],
             current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
-            dist: ['dist']
+            dist: ['dist'],
+            clean_src_i18n: ['src/i18n']
         },
         copy: {
             main: {
@@ -379,16 +380,26 @@ module.exports = function (grunt) {
                         {
                             expand: true,
                             cwd: 'dist/uncompressed/',
-                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js', 'v<%=pkg.version%>/images/webtrader_16px.png', 'v<%=pkg.version%>/images/webtrader_128px.png']
+                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js',
+                                'v<%=pkg.version%>/images/favicons/**']
                         }
                     ]
             }
-        }
+        },
+        po2json: {
+          options: {
+            format: 'raw'
+          },
+          all: {
+            src: ['translations/i18n/*.po'],
+            dest: 'src/i18n/'
+          }
+        },
     });
 
     grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
-	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
+  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging', 'clean:clean_src_i18n']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
@@ -398,5 +409,4 @@ module.exports = function (grunt) {
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
     /* clean all the files in gh-pages branch */
     grunt.registerTask('gh-pages-clean', ['gh-pages:clean']);
-
 };

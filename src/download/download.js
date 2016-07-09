@@ -5,11 +5,11 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
     var downloadWin = null, markets = [], timePeriods = [
         {
-            name : "Ticks",
+            name : 'Ticks'.i18n(),
             timePeriods : [{name : "1 Tick", code : "1t"}]
         },
         {
-            name : "Minutes",
+            name : 'Minutes'.i18n(),
             timePeriods : [
                 {name : "1 min", code : "1m"},
                 {name : "2 mins", code : "2m"},
@@ -21,7 +21,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             ]
         },
         {
-            name : "Hours",
+            name : 'Hours'.i18n(),
             timePeriods : [
                 {name : "1 hour", code : "1h"},
                 {name : "2 hours", code : "2h"},
@@ -30,7 +30,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             ]
         },
         {
-            name : "Days",
+            name : 'Days'.i18n(),
             timePeriods : [
                 {name : "1 day", code : "1d"}
             ]

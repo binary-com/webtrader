@@ -56,7 +56,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
         Highcharts.setOptions({
             global: {
-                useUTC: true
+                useUTC: true,
+                canvasToolsURL: "https://code.highcharts.com/modules/canvas-tools.js"
             },
             lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
         });
@@ -121,7 +122,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             }
         });
 
-        $.growl.notice({ message : 'Downloading CSV' });
+        $.growl.notice({ message : 'Downloading .csv'.i18n() });
         //merge here
         new Parallel([lines, dataToBeProcessTolines])
             .spawn(function(data) {
@@ -167,7 +168,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     }
                 }
             }, function(error) {
-                $.growl.error({ message : 'Error downloading CSV' });
+                $.growl.error({ message : 'Error downloading .csv'.i18n() });
                 console.error(error);
             });
 
@@ -246,7 +247,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                             this.credits.element.onclick = function() {
                                 window.open(
-                                    'http://www.binary.com',
+                                    'http://webtrader.binary.com',
                                     '_blank'
                                 );
                             }
@@ -265,14 +266,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     }
                 },
 
-                //This will be updated when 'Settings' button is implemented
                 plotOptions: {
                     candlestick: {
-                        lineColor: 'black',
-                        color: 'red',
-                        upColor: 'green',
-                        upLineColor: 'black',
-                        shadow: true
+                        shadow: false
                     },
                     series: {
                         events: {
@@ -283,9 +279,15 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
                                     //Add current price indicator
                                     //If we already added currentPriceLine for this series, ignore it
-                                    console.log(this.options.id, this.yAxis.plotLinesAndBands);
+                                    //console.log(this.options.id, this.yAxis.plotLinesAndBands);
                                     this.removeCurrentPrice();
                                     this.addCurrentPrice();
+
+                                    //Add mouse wheel zooming
+                                    require(['common/highcharts.mousewheel'], function($Hmw) {
+                                        $Hmw.mousewheel(containerIDWithHash);
+                                    });
+
                                 }
 
                                 this.chart.hideLoading();
@@ -301,8 +303,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 credits: {
-                    href: 'http://www.binary.com',
-                    text: 'Binary.com',
+                    href: 'http://webtrader.binary.com',
+                    text: 'Binary.com : Webtrader',
 
                 },
 
@@ -322,6 +324,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                         }
                     },
                     ordinal : false
+                },
+
+                scrollbar: {
+                  liveRedraw: false
                 },
 
                 yAxis: [{
@@ -360,37 +366,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 exporting: {
-                    enabled: true,
-                    //Explicity mentioning what buttons to show otherwise this chart will
-                    //also show Download CSV and Download XLS options. We do not want to
-                    //show those options because highchart's implementation do not download
-                    //all data from the chart. It only downloads the visible part of the chart.
-                    //We have implemented Charts -> Download as CSV to download all data from
-                    //chart
-                    buttons: {
-                        contextButton: {
-                            menuItems: [{
-                                text: 'Download PNG',
-                                onclick: function () {
-                                    this.exportChartLocal();
-                                }
-                            }, {
-                                text: 'Download SVG',
-                                onclick: function () {
-                                    this.exportChartLocal({
-                                        type: 'image/svg+xml'
-                                    });
-                                },
-                                separator: false
-                            }, {
-                                text: 'Download CSV',
-                                onclick: function () {
-                                    generate_csv($(containerIDWithHash).highcharts(), $(containerIDWithHash).data());
-                                },
-                                separator: false
-                            }]
-                        }
-                    },
+                    enabled: false,
+                    url: 'https://export.highcharts.com',
                     // Naming the File
                     filename:options.instrumentName.split(' ').join('_')+"("+options.timePeriod+")"
                 }
@@ -407,7 +384,13 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             }
         },
 
-        refresh : function ( containerIDWithHash ) {
+        generate_csv : generate_csv,
+
+        refresh : function ( containerIDWithHash, newTimePeriod, newChartType ) {
+
+            if (newTimePeriod)  $(containerIDWithHash).data("timePeriod", newTimePeriod);
+            if(newChartType) $(containerIDWithHash).data("type", newChartType);
+
             //Get all series details from this chart
             var chart = $(containerIDWithHash).highcharts();
             var loadedMarketData = [], series_compare = undefined;
@@ -502,6 +485,11 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 });
             }
             return Promise.resolve();
+        },
+
+        changeTitle : function ( containerIDWithHash, newTitle ) {
+            var chart = $(containerIDWithHash).highcharts();
+            chart.setTitle(newTitle);
         }
 
     }

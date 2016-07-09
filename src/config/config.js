@@ -13,7 +13,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
     win_view = rv.bind(root[0], state);
 
     win = windows.createBlankWindow(root, {
-      title: 'Change Backend Server',
+      title: 'Change Backend Server'.i18n(),
       resizable: false,
       collapsable: false,
       minimizable: false,
@@ -33,12 +33,12 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
       },
       buttons: [
         {
-          text: 'Apply',
+          text: 'Apply'.i18n(),
           icons: { primary: 'ui-icon-check' },
           click: state.apply
         },
         {
-          text: 'Reset to Defaults',
+          text: 'Reset to Defaults'.i18n(),
           icons: { primary: 'ui-icon-refresh' },
           click: state.reset
         }
@@ -71,7 +71,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
     }
 
     state.reload_page = function() {
-      $.growl.notice({message: 'Config changes successful.<br/>Reloading page ...'});
+      $.growl.notice({message: 'Config changes successful.<br/>Reloading page ...'.i18n()});
       setTimeout(function(){
         window.location.reload();
       }, 900);
