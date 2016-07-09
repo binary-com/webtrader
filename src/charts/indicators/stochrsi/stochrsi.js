@@ -34,6 +34,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#stochrsi_stroke").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -55,14 +60,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#stochrsi_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '115px');
 
             var table = $html.find('#stochrsi_levels').DataTable({
                 paging: false,
@@ -111,7 +116,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 400,
+                width: 350,
                 height: 400,
                 modal: true,
                 my: 'center',
@@ -174,8 +179,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function") {

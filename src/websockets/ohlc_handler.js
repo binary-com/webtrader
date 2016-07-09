@@ -1,4 +1,4 @@
-define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','common/util'], function(liveapi, chartingRequestMap, $) {
+define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','jquery-growl', 'common/util'], function(liveapi, chartingRequestMap, $) {
 
     var barsTable = chartingRequestMap.barsTable;
 
@@ -93,7 +93,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
               adjust_start_time: 1
             })
             .catch(function(err){
-                 var msg = "Error getting data for " + instrumentName + "";
+                 var msg = 'Error getting data for '.i18n() + instrumentName + "";
                  require(["jquery-growl"], function($) { $.growl.error({ message: msg }); });
                  var chart = $(containerIDWithHash).highcharts();
                  chart && chart.showLoading(msg);
@@ -102,7 +102,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
             .then(function(data) {
                 if (data && !data.error && options.delayAmount > 0) {
                     //start the timer
-                    require(["jquery-growl"], function() { $.growl.warning({ message: 'Feed for ' + instrumentName + ' is delayed by ' + options.delayAmount + ' minute(s)' }); });
+                    require(["jquery-growl"], function() { $.growl.warning({ message: instrumentName + ' feed is delayed by '.i18n() + options.delayAmount + ' minutes'.i18n() }); });
                     chartingRequestMap[key].timerHandler = setInterval(function() {
                       var lastBar = barsTable.chain()
                                               .find({instrumentCdAndTp : key})
@@ -111,7 +111,6 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                                               .data();
                       if (lastBar && lastBar.length > 0) {
                           lastBar = lastBar[0];
-                          console.log('LastBar : ', lastBar);
                           //requests new bars
                           //Send the WS request
                           var requestObject = {
@@ -121,7 +120,6 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','com
                               "start": (lastBar.time/1000) | 0,
                               "granularity":  convertToTimeperiodObject(timePeriod).timeInSeconds()
                           };
-                          console.log('Timer based request >> ', JSON.stringify(requestObject));
                           liveapi.send(requestObject);
                       }
                     }, 60*1000);

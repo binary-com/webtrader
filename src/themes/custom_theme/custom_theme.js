@@ -16,18 +16,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
         win = null,
         themeConf = {};
 
-    function hexToRgb(value, alpha) {
-        var rgba = [];
-        rgba[0] = parseInt(value.substring(0, 2), 16),
-        rgba[1] = parseInt(value.substring(2, 4), 16),
-        rgba[2] = parseInt(value.substring(4, 6), 16),
-        rgba[3] = alpha ? parseFloat(alpha) : 1;
-
-        return "rgba(" + rgba.join(", ") + ")";
-    }
-
     function createThemeObject(id, color) {
-
         if (!color) return;
 
         color = color.substring(0, color.indexOf(')') + 1); //Fixing mozilla bug
@@ -42,7 +31,6 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
         });
         temp = temp + end;
         $.extend(themeConf, JSON.parse(temp));
-
     }
 
     function init($menuLink) {
@@ -58,32 +46,49 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                         if (val) {
                             $(ele).css({background: val});
                         } else {
-                            var color = $(ele).css("background");
-                            createThemeObject(id, color);
+                            val = $(ele).css("background-color");
+                            createThemeObject(id, val);
                             Highcharts.setOptions(themeConf);
                         }
-
+                        $(ele).data("prevColor",val);
                         $(ele).colorpicker({
+                            position: {
+                                my: "left+50 bottom+100",
+                                of: "element",
+                                collision: "fit"
+                            },
                             part: {
                                 map: {size: 128},
                                 bar: {size: 128}
                             },
+                            alpha: alpha? true: false,
+                            colorFormat: "RGBA",
+                            open: function(event, color){
+                                color.colorPicker.setColor($(this).css("background-color"));
+                            },
                             select: function (event, color) {
                                 $(ele).css({
-                                    background: '#' + color.formatted
+                                    background: color.formatted
                                 }).val('');
-                                createThemeObject(id, hexToRgb(color.formatted, alpha));
+                                createThemeObject(id, color.formatted);
                                 updateChart();
                             },
                             ok: function (event, color) {
+                                if(!color.formatted){
+                                    return;
+                                }
                                 $(ele).css({
-                                    background: '#' + color.formatted
+                                    background: color.formatted
                                 }).val('');
-                                createThemeObject(id, hexToRgb(color.formatted, alpha));
+                                $(ele).data("prevColor",$(ele).css("background-color"));
+                                createThemeObject(id, color.formatted);
                                 updateChart();
                             },
                             cancel: function (event) {
-                                createThemeObject(id, $(ele).css("background"));
+                                $(ele).css({
+                                    background: $(ele).data("prevColor")
+                                }).val('');
+                                createThemeObject(id, $(ele).data("prevColor"));
                                 updateChart();
                             }
                         });
@@ -100,7 +105,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                             closeOnEscape: false,
                             width: 650,
                             height: 515,
-                            title: "Customize chart appearance",
+                            title: 'Customize chart appearance'.i18n(),
                             modal: true,
                             destroy: function () {
                                 win = null;
@@ -175,20 +180,9 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                 }
             },
 
-            //This will be updated when 'Settings' button is implemented
-            plotOptions: {
-                candlestick: {
-                    lineColor: 'black',
-                    color: 'red',
-                    upColor: 'green',
-                    upLineColor: 'black',
-                    shadow: true
-                }
-            },
-
             title: {
                 //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
-                text: "Some random index"
+                text: 'Some random index'.i18n()
             },
 
             credits: {

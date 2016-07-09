@@ -50,7 +50,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           /* normal route */
           require(['windows/windows'], function(windows){
             win = windows.createBlankWindow(root, {
-                title: 'Add/remove overlays',
+                title: 'Add/remove overlays'.i18n(),
                 width: 700,
                 modal: true,
                 // minHeight: 60,
@@ -73,7 +73,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init_state(root){
       state = {
         dialog: {
-          title: 'Add/remove overlays',
+          title: 'Add/remove overlays'.i18n(),
           container_id: ''
         },
         overlays: {
@@ -100,13 +100,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
               var dialog = $(containerIDWithHash);
               var fn = function () {
                   dialog.data("overlayIndicator", true);
-                  if (chartOptions.isCurrentViewInLogScale(newTabId))
-                  {
-                      chartOptions.triggerToggleLogScale(newTabId);
-                  }
-                  chartOptions.disableEnableLogMenu( newTabId, false );
-                  chartOptions.disableEnableCandlestick( newTabId, false );
-                  chartOptions.disableEnableOHLC( newTabId, false );
+                  chartOptions.disableEnableCandlestickAndOHLC( newTabId, false );
                   charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount)
                         .then(function() {
                           var overlay = { symbol: symbol, displaySymbol: displaySymbol, delay_amount: delay_amount};
@@ -155,8 +149,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                                   $(containerIDWithHash).data('overlayIndicator', null);
                                   require(['charts/chartOptions'], function (chartOptions) {
                                       var newTabId = containerIDWithHash.replace("#", "").replace("_chart", "");
-                                      chartOptions.disableEnableCandlestick(newTabId, true);
-                                      chartOptions.disableEnableOHLC(newTabId, true);
+                                      chartOptions.disableEnableCandlestickAndOHLC(newTabId, true);
                                   });
                                   _.defer(function () {
                                       chart.redraw();
@@ -218,7 +211,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     return {
       openDialog : function( containerIDWithHash, title ) {
         init().then(function(){
-            state.dialog.title = 'Add/remove overlays' + (title ? ' - ' + title : '');
+            state.dialog.title = 'Add/remove overlays'.i18n() + (title ? ' - ' + title : '');
             state.dialog.container_id = containerIDWithHash;
             state.overlays.current = $(containerIDWithHash).data('overlays-current') || [];
 

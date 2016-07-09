@@ -2,13 +2,14 @@
  * Created by arnab on 2/13/15.
  */
 
-define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "jquery.dialogextend"], function ($,windows, $chartWindowHtml, _) {
+define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "jquery.dialogextend", 'common/util'], function ($,windows, $chartWindowHtml, _) {
 
     "use strict";
 
     function _trigger_Resize_Effects() {
         $(this).find(".chartSubContainer").width($(this).width() - 10);
-        $(this).find(".chartSubContainer").height($(this).height() - 15);
+        //Because of title taking space, we have to reduce height
+        $(this).find(".chartSubContainer").height($(this).height() - 55);
 
         var containerIDWithHash = "#" + $(this).find(".chartSubContainer").attr("id");
         require(["charts/charts"], function(charts) {
@@ -40,8 +41,16 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                             instrumentCode : instrumentCode
                         });
                     });
+                    require(["charts/chartOptions"], function (chartOptions) {
+                        chartOptions.cleanBinding( id );
+                    });
                 },
-                resize: _trigger_Resize_Effects
+                resize: _trigger_Resize_Effects,
+                refresh: function() {
+                    require(["charts/charts"], function( charts ) {
+                        charts.refresh( '#' + id + '_chart' );
+                    });
+                }
             }, options );
 
             var dialog = windows.createBlankWindow($chartWindowHtml, options),
@@ -55,7 +64,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                 /* initialize chartOptions & table-view once chart is rendered */
                 require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
                     var table_view = tableView.init(dialog);
-                    chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName);
+                    chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName, options.instrumentCode);
                 });
             });
 
@@ -98,6 +107,10 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
          */
         triggerResizeEffects : function( callerContext ) {
             _trigger_Resize_Effects.call( callerContext );
+        },
+        
+        changeChartWindowTitle : function(dialogId, instrumentName, timePeriod) {
+            $('#' + dialogId).dialog('option', 'title', instrumentName + " (" + timePeriod + ")");
         }
     };
 

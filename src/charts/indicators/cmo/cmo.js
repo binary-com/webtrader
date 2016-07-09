@@ -60,14 +60,14 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#cmo_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 138,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#cmo_dashStyle .dd-selected-image').css('max-width', '105px');
+                    $('#cmo_dashStyle .dd-selected-image').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#cmo_dashStyle .dd-option-image').css('max-width', '105px');
+            $('#cmo_dashStyle .dd-option-image').css('max-width', '115px');
 
 
             var table = $html.find('#cmo_levels').DataTable({
@@ -119,6 +119,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -182,8 +183,10 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 140
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")

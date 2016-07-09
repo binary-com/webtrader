@@ -1,7 +1,7 @@
 {
   "name": "Webtrader",
-  "version": "2.1.5",
-  "description": "This is a Webtrader project for binary.com",
+  "version": "2.1.9",
+  "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
   "engines": {
     "node": ">=0.10",
@@ -23,6 +23,7 @@
     "grunt-gh-pages": "^0.10.0",
     "grunt-gitinfo": "^0.1.7",
     "grunt-if": "^0.1.5",
+    "grunt-po2json": "^0.3.0",
     "grunt-remove-logging": "git://github.com/ehynds/grunt-remove-logging.git",
     "grunt-rename": "^0.1.4",
     "grunt-shell": "^1.1.2",

@@ -38,7 +38,18 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                 title: '',
                 gridLineWidth: 0,
             },
-            series: [{ data: [] }],
+            series: [
+              { data: [] },
+              /* HighChart scales the y-axis automatically based on the maximum value of data.
+               * but it doesn't consider the plotLine's value in its calculations.
+               * We add an invisible seri and late plotline values to work around this issue. */
+               {
+                   type: 'scatter',
+                   marker: { enabled: false },
+                   data: []
+               }
+            ],
+            plotOptions: { scatter: { enableMouseTracking: false } },
             exporting: {enabled: false, enableImages: false},
             legend: {enabled: false},
         });
@@ -63,6 +74,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             color: 'green',
             width: 2,
           });
+
+           /* Add plotline value to invisible seri to make the plotline always visible. */
+           chart.series[1].addPoint([1, options.value]);
         };
 
         var index = ticks.length;
@@ -152,11 +166,19 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       var root = $(html);
       var buy = data.buy;
       var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+      extra.getbarrier = function(tick) {
+          var barrier = tick.quote*1;
+          if(extra.barrier && _(['higher','lower']).includes(extra.category_display)) {
+            barrier += extra.barrier*1;
+          }
+          return barrier.toFixed(decimal_digits);
+      }
       var state = {
         title: {
-          text: 'Contract Confirmation',
+          text: 'Contract Confirmation'.i18n(),
         },
         buy: {
+          barrier: null,
           message: buy.longcode,
           balance_after: buy.balance_after,
           buy_price: buy.buy_price,
@@ -166,7 +188,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           payout: buy.payout,
           currency: extra.currency,
           potential_profit : buy.payout - buy.buy_price,
-          potential_profit_text : 'Profit',
+          potential_profit_text : 'Profit'.i18n(),
           show_result: false,
         },
         spreads: {
@@ -186,20 +208,23 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             },
             getPlotX: function(){
               var inx = this.array.length;
-              if(inx === 1) return {value: inx, label: 'Entry Spot'};
-              if(inx === this.tick_count) return {value:inx, label: 'Exit Spot'}
+              if(inx === 1) return {value: inx, label: 'Entry Spot'.i18n()};
+              if(inx === this.tick_count) return {value:inx, label: 'Exit Spot'.i18n()}
               return null;
             },
             getPlotY: function(){
               var inx = this.array.length;
               var tick = this.array[inx-1];
-              if(this.category === 'Up/Down' && inx === 1)
-                return {value: tick.quote*1, label:'Barrier ('+tick.quote+')', id: 'plot-barrier-y'};
+              if(this.category === 'Up/Down' && inx === 1) {
+                var barrier = extra.getbarrier(tick);
+                state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
+                return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
+              }
 
               if(this.category === 'Asians') {
                 //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
                 var avg = this.average().toFixed(decimal_digits + 1);
-                return {value: avg, label:'Average ('+ avg +')', id: 'plot-barrier-y'};
+                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
               }
               return null;
             },
@@ -218,9 +243,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
       state.buy.update = function(){
         var status = state.ticks.status;
-        state.title.text = { waiting: 'Contract Confirmation',
-                              won : 'This contract won',
-                              lost: 'This contract lost'
+        state.title.text = { waiting: 'Contract Confirmation'.i18n(),
+                              won : 'This contract won'.i18n(),
+                              lost: 'This contract lost'.i18n()
                             }[status];
         if(status === 'lost') {
           state.buy.potential_profit = -state.buy.buy_price;
@@ -229,7 +254,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         }
         if(status === 'won') {
             state.buy.balance_after = buy.balance_after*1 + state.buy.payout*1;
-            liveapi.sell_expired(); // to update balance immediately 
+            liveapi.sell_expired(); // to update balance immediately
         }
         state.buy.show_result = true;
       }
@@ -239,6 +264,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
         var first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
             last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
+            barrier = extra.getbarrier(_.head(state.ticks.array)) + '',
             digits_value = state.ticks.value + '',
             average = state.ticks.average().toFixed(5);
         var category = state.ticks.category,
@@ -254,7 +280,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               },
               'Up/Down': {
                 rise: last_quote*1 > first_quote*1,
-                fall: last_quote*1 < first_quote*1
+                fall: last_quote*1 < first_quote*1,
+                higher: last_quote*1 > barrier*1,
+                lower: last_quote*1 < barrier*1,
               },
               Asians: {
                 'asian up': average < last_quote*1,

@@ -20,7 +20,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     function init_password_win(root) {
       root = $(root);
       password_win = windows.createBlankWindow(root, {
-          title: 'Change password',
+          title: 'Change password'.i18n(),
           resizable:false,
           collapsable:false,
           minimizable: false,
@@ -69,9 +69,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       state.password_error_message = function() {
         var password = state.account.new_password;
-        if(password === '') return state.empty_fields.validate ? '* Please enter your new password' : '';
-        if(password.length < 6) return '* Password must be 6 characters minimum';
-        if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain uppercase letters and numbers';
+        if(password === '') return state.empty_fields.validate ? '* Please enter your new password'.i18n() : '';
+        if(password.length < 6) return '* Password must be 6 characters minimum'.i18n();
+        if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain uppercase letters and numbers'.i18n();
         return '';
       };
 
@@ -92,11 +92,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         liveapi.send(request)
                .then(function(data){
                  if(data.change_password !== 1){
-                   throw { message: 'Failed to update the password'};
+                   throw { message: 'Failed to update the password'.i18n()};
                  }
                  state.btn.disabled = false;
-                 $.growl.notice({ message: 'Password successfully updated.'});
-                 $.growl.notice({ message: 'Redirecting to oauth login page,<br/>Please use your new password to login.'});
+                 $.growl.notice({ message: 'Password successfully updated.'.i18n()});
+                 $.growl.notice({ message: 'Redirecting to oauth login page,<br/>Please use your new password to login.'.i18n()});
                  require(['oauth/login'], function(login){
                    _.defer(function(){
                      login.login();

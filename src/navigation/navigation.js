@@ -13,7 +13,10 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                 var $elem = $(this);
                 var hasSubMenus = $elem.find("ul").length > 0;
                 if (!hasSubMenus) {
-                    $elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");
+                    if(!$elem.parent("ul").hasClass("nav-closed")){
+                        $elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");
+                    }
+
                 }
             });
         });
@@ -36,6 +39,9 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
         var loginid = root.find('.account span.login-id');
         var balance = root.find('.account span.balance').fadeOut();
         var currency = '';
+        /* don't show the login menu if redirecting from oauth */
+        local_storage.get('oauth') && login_menu.hide();
+
         /* will get this from payout_currencies api on login */
         require(['websockets/binary_websockets'], function (liveapi) {
 

@@ -2,14 +2,16 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function init( containerIDWithHash, _callback ) {
+    function init( containerIDWithHash, callback ) {
 
         require(['css!charts/indicators/atr/atr.css']);
 
@@ -31,15 +33,17 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.atr;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.atr-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#atr_stroke").colorpicker({
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -61,7 +65,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
             var selectedDashStyle = "Solid";
             $('#atr_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
                     $('#atr_dashStyle .dd-selected-image').css('max-width', '85px');
@@ -120,6 +124,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height:400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -159,6 +164,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                                     });
                                 }
                             });
+
                             var options = {
                                 period: parseInt($html.find(".atr_input_width_for_period").val()),
                                 stroke: defaultStrokeColor,
@@ -167,6 +173,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                                 appliedTo: parseInt($html.find("#atr_appliedTo").val()),
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add ATR for the main series
                             $($(".atr").data('refererChartID')).highcharts().series[0].addIndicator('atr', options);
 
@@ -182,31 +189,33 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
-            if (typeof _callback == "function")
-            {
-                _callback( containerIDWithHash );
-            }
-
+            callback && callback();
         });
 
     }
 
     return {
 
-        open : function ( containerIDWithHash ) {
+        /**
+         * @param containerIDWithHash - containerId where indicator needs to be added
+         * @param before_add_cb - callback that will be called just before adding the indicator
+         */
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+              before_add_callback = before_add_cb;
+              $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
 
             if ($(".atr").length == 0)
-            {
-                init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+              init(containerIDWithHash, open);
+            else
+              open();
         }
 
     };

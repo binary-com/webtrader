@@ -116,6 +116,16 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
         ind_win.dialog('close');
       }
 
+        state.indicators.edit = function(indicator){
+            var indicator_id = indicator.id;
+            require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
+                ind.open(state.dialog.container_id, function() {
+                  state.indicators.remove(indicator);
+                });
+            });
+            ind_win.dialog('close');
+        }
+
       state.indicators.remove = function(indicator){
         var inx = state.indicators.current.indexOf(indicator);
         inx !== -1 && state.indicators.current.splice(inx, 1);
@@ -162,7 +172,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                 var ind_clone = _.cloneDeep(ind);
                 //Show suffix if it is different than the long_display_name
                 var show = ind.long_display_name !== instance.toString();
-                ind_clone.name = ind.long_display_name + (show ? " - " + instance.toString() : "");
+                ind_clone.name = ind.long_display_name;
+                ind_clone.shortName = (show ? instance.toString() : "");
+                ind_clone.showEdit = ind.editable;
                 ind_clone.series_ids = instance.getIDs()
                 current.push(ind_clone);
             });
