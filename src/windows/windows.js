@@ -549,7 +549,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                 my: 'center',
                 at: 'center',
                 of: window,
-                title: 'blank window',
+                title: 'Blank window'.i18n(),
                 hide: 'fade',
                 icons: {
                   close: 'ui-icon-close'

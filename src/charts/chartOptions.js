@@ -293,7 +293,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 view[newTabId].unbind();
                 delete view[newTabId];
                 delete state[newTabId];
-                console.log('Cleaned bindings for chart options!');
             }
         }
 

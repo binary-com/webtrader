@@ -122,7 +122,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             }
         });
 
-        $.growl.notice({ message : 'Downloading CSV' });
+        $.growl.notice({ message : 'Downloading .csv'.i18n() });
         //merge here
         new Parallel([lines, dataToBeProcessTolines])
             .spawn(function(data) {
@@ -168,7 +168,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     }
                 }
             }, function(error) {
-                $.growl.error({ message : 'Error downloading CSV' });
+                $.growl.error({ message : 'Error downloading .csv'.i18n() });
                 console.error(error);
             });
 
@@ -282,12 +282,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     //console.log(this.options.id, this.yAxis.plotLinesAndBands);
                                     this.removeCurrentPrice();
                                     this.addCurrentPrice();
-                                    
+
                                     //Add mouse wheel zooming
                                     require(['common/highcharts.mousewheel'], function($Hmw) {
                                         $Hmw.mousewheel(containerIDWithHash);
                                     });
-                                    
+
                                 }
 
                                 this.chart.hideLoading();
@@ -383,7 +383,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 $(containerIDWithHash).highcharts().reflow();
             }
         },
-        
+
         generate_csv : generate_csv,
 
         refresh : function ( containerIDWithHash, newTimePeriod, newChartType ) {

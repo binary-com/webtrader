@@ -175,7 +175,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       }
       var state = {
         title: {
-          text: 'Contract Confirmation',
+          text: 'Contract Confirmation'.i18n(),
         },
         buy: {
           barrier: null,
@@ -188,7 +188,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           payout: buy.payout,
           currency: extra.currency,
           potential_profit : buy.payout - buy.buy_price,
-          potential_profit_text : 'Profit',
+          potential_profit_text : 'Profit'.i18n(),
           show_result: false,
         },
         spreads: {
@@ -208,8 +208,8 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             },
             getPlotX: function(){
               var inx = this.array.length;
-              if(inx === 1) return {value: inx, label: 'Entry Spot'};
-              if(inx === this.tick_count) return {value:inx, label: 'Exit Spot'}
+              if(inx === 1) return {value: inx, label: 'Entry Spot'.i18n()};
+              if(inx === this.tick_count) return {value:inx, label: 'Exit Spot'.i18n()}
               return null;
             },
             getPlotY: function(){
@@ -218,13 +218,13 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               if(this.category === 'Up/Down' && inx === 1) {
                 var barrier = extra.getbarrier(tick);
                 state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
-                return {value: barrier*1, label:'Barrier ('+barrier+')', id: 'plot-barrier-y'};
+                return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
               }
 
               if(this.category === 'Asians') {
                 //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
                 var avg = this.average().toFixed(decimal_digits + 1);
-                return {value: avg, label:'Average ('+ avg +')', id: 'plot-barrier-y'};
+                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
               }
               return null;
             },
@@ -243,9 +243,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
       state.buy.update = function(){
         var status = state.ticks.status;
-        state.title.text = { waiting: 'Contract Confirmation',
-                              won : 'This contract won',
-                              lost: 'This contract lost'
+        state.title.text = { waiting: 'Contract Confirmation'.i18n(),
+                              won : 'This contract won'.i18n(),
+                              lost: 'This contract lost'.i18n()
                             }[status];
         if(status === 'lost') {
           state.buy.potential_profit = -state.buy.buy_price;

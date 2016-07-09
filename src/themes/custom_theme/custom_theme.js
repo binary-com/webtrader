@@ -105,7 +105,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                             closeOnEscape: false,
                             width: 650,
                             height: 515,
-                            title: "Customize chart appearance",
+                            title: 'Customize chart appearance'.i18n(),
                             modal: true,
                             destroy: function () {
                                 win = null;
@@ -182,7 +182,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
 
             title: {
                 //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
-                text: "Some random index"
+                text: 'Some random index'.i18n()
             },
 
             credits: {

@@ -18,7 +18,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           });
 
           clip.on('error', function() {
-            $.growl.error({ message: 'Your browser doesn\'t support copy to clipboard' });
+            $.growl.error({ message: 'Your browser doesn\'t support copy to clipboard'.i18n() });
           });
 
           el._rv_clipboard_ && el._rv_clipboard_.destroy();
@@ -39,11 +39,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     }
 
     function init_state(root){
-      var tooltip = "Note that tokens can possess one or more of these scopes: <br/>" +
-                             "<b>read</b> - for API calls that only read client data<br/>" +
-                             "<b>trade</b> - for API calls that can create trades in the client account<br/>" +
-                             "<b>payments</b> - for API calls that can access the cashier<br/>" +
-                             "<b>admin</b> - for API calls that change client settings";
+      var tooltip = 'Note that tokens can possess one or more of these scopes: <br/>'.i18n() +
+                             '<b>read</b> - for API calls that only read client data<br/>'.i18n() +
+                             '<b>trade</b> - for API calls that can create trades in the client account<br/>'.i18n() +
+                             '<b>payments</b> - for API calls that can access the cashier<br/>'.i18n() +
+                             '<b>admin</b> - for API calls that change client settings'.i18n();
       var state = {
         route: 'token-list',
         search_input: '',
@@ -133,9 +133,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         var error_msg = '';
 
         if(!request.new_token_scopes.length)
-          error_msg = 'Please choose at least one token scope';
+          error_msg = 'Please choose at least one token scope'.i18n();
         if(!request.new_token || !request.new_token.length)
-          error_msg = 'Please enter the token name';
+          error_msg = 'Please enter the token name'.i18n();
 
         if(error_msg) {
           $.growl.error({ message: error_msg });
@@ -147,7 +147,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                .then(function(data){
                   state.token.name = '';
                   state.token.btn_disabled = false;
-                  $.growl.notice({ message: 'Successfully added new token "' + request.new_token + '"'});
+                  $.growl.notice({ message: 'Successfully added new token "'.i18n() + request.new_token + '"'});
 
                   var tokens = (data.api_token && data.api_token.tokens) || [];
                   state.update_tokens(tokens);

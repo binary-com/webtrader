@@ -35,8 +35,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         ws.addEventListener('message', onmessage);
 
         ws.addEventListener('error', function(event) {
-            console.log('WS connection error : ', event);
-            $.growl.error({message: "Connection error. Refresh page!"});
+            $.growl.error({message: 'Connection error. Refresh the page.'.i18n().i18n()});
             //Clear everything. No more changes on chart. Refresh of page is needed!
         });
 
@@ -94,7 +93,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
           var promise = unresolved_promises[key];
           if(!promise) continue;
           if(promise.sent_before) { /* reject if sent once before */
-              promise.reject({message: 'connection closed'});
+              promise.reject({message: 'Connection closed.'.i18n()});
           } else { /* send */
               promise.sent_before = true;
               socket.send(JSON.stringify(promise.data));
@@ -224,7 +223,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                     .then(send);
         }
         else
-          return Promise.reject({ message: 'Please log in.'});
+          return Promise.reject({ message: 'Please log in'.i18n()});
     };
 
     /* fire a custom event and call registered callbacks(api.events.on(name)) */
@@ -246,7 +245,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
          var promise = unresolved_promises[key];
          if (promise) {
              delete unresolved_promises[key];
-             promise.reject({message: 'timeout for websocket request'});
+             promise.reject({message: 'Timeout for websocket request'.i18n()});
          }
        },milliseconds);
     };
@@ -286,16 +285,16 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         /* switch account */
         switch_account: function(id) {
           if(!is_authenitcated_session) {
-            return Promise.reject({message: 'Session is not authenticated.'})
+            return Promise.reject({message: 'Session is not authenticated.'.i18n()})
           }
           var oauth = local_storage.get('oauth');
           if(!oauth) {
-            return promise.reject({ message: 'Account token not found.' });
+            return promise.reject({ message: 'Account token not found.'.i18n() });
           }
 
           var inx = oauth.map(function(acc) { return acc.id; }).indexOf(id);
           if(inx === -1) {
-            return promise.reject({ message: 'Account id not found.' });
+            return promise.reject({ message: 'Account id not found.'.i18n() });
           }
 
           /* move the new account to the front of oauth array */
@@ -357,7 +356,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                     return cached_promises[key].promise;
 
                 return token ? authenticate(token) : /* we have a token => autheticate */
-                               Promise.reject('Please log in.');
+                               Promise.reject('Please log in.'.i18n());
             }
         },
         /* sends a request and returns an es6-promise */

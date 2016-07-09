@@ -10,7 +10,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
         li.click(function () {
             if (!assetWin) {
                 assetWin = windows.createBlankWindow($('<div/>'), {
-                    title: 'Asset Index',
+                    title: 'Asset Index'.i18n(),
                     width: 700 ,
                     height: 400
                 });
