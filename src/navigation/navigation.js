@@ -166,6 +166,8 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
       };
       state.onclick = function(value) {
         var lang = _.find(state.languages, {value: value});
+        if(lang.value == state.lang.value)
+          return;
         state.perv_lang = state.lang;
         state.lang = lang;
         state.confirm.visible = true;
