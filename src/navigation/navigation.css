@@ -15,6 +15,72 @@ body {
     background: #15212d;
 }
 
+#topbar span.lang {
+    color: white;
+    float: right;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+#topbar div.languages {
+  width: 270px;
+  height: 190px;
+  position: absolute;
+  background: #f2f2f2;
+  z-index: +1;
+  right: 0;
+  top: 26px;
+  border-bottom: 5px solid #EA9800;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+#topbar span.lang:hover + div.languages,
+#topbar div.languages:hover {
+  opacity: 1;
+  pointer-events: all;
+}
+#topbar div.languages > span {
+  display: inline-block;
+  width: 135px;
+  color:#000;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#topbar div.confirm {
+  width: 270px;
+  height: 150px;
+  position: absolute;
+  background: #f2f2f2;
+  z-index: +1;
+  right: 0;
+  top: 26px;
+  border-bottom: 5px solid #EA9800;
+}
+#topbar div.confirm span.title {
+  color: #000;
+  display: block;
+  text-align: center;
+  line-height: 1.2em;
+  padding: 10px 0;
+}
+#topbar div.confirm div.buttons {
+  text-align: center;
+}
+#topbar span.time {
+    color: white;
+    float: right;
+    padding-right: 35px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+
 #header {
     background: #2a3052;
     border-top: 2px solid #394171;
@@ -214,14 +280,6 @@ body {
 #nav-container .account *[disabled] {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-#topbar span.time {
-    color: white;
-    float: right;
-    padding-right: 5px;
-    padding-top: 5px;
-    font-size: 12px;
 }
 
 #nav-menu li {

@@ -1,4 +1,18 @@
-<div id="topbar"><span class="time"></span></div>
+<div id="topbar">
+    <span class='lang'>{lang.name}</span>
+    <div class='languages' rv-if='confirm.visible | eq false'>
+      <span rv-each-lang='languages' rv-on-click='onclick | bind lang.value'>{lang.name}</span>
+    </div>
+    <div class="confirm" rv-if='confirm.visible'>
+      <span class="title">In order to properly apply this language, a full refresh of page is required.
+        Are you sure you want to proceed?</span>
+      <div class='buttons'>
+        <button rv-on-click='confirm.yes'>Yes</button>
+        <button rv-on-click='confirm.no'>No</button>
+      </div>
+    </div>
+    <span class="time"></span>
+</div>
 <div id="header">
     <nav id="nav-container">
 
