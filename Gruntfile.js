@@ -30,7 +30,6 @@ module.exports = function (grunt) {
             branches:[ 'dist/branches'],
             current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
             dist: ['dist'],
-            clean_src_i18n: ['src/i18n']
         },
         copy: {
             main: {
@@ -105,6 +104,16 @@ module.exports = function (grunt) {
                         cwd: 'dist/compressed',
                         src: [ '**'],
                         dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
+                    }
+                ]
+            },
+            copy_i18n: {
+                files: [
+                    {
+                        expand: true,
+                        src: [ '**'],
+                        cwd: 'translations/i18n/json',
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/i18n/'
                     }
                 ]
             },
@@ -392,14 +401,14 @@ module.exports = function (grunt) {
           },
           all: {
             src: ['translations/i18n/*.po'],
-            dest: 'src/i18n/'
+            dest: 'translations/i18n/json/'
           }
         },
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
-  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging', 'clean:clean_src_i18n']);
+  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
