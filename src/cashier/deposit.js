@@ -85,6 +85,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         },
         standard_methods: {
           iframe_visible: false,
+        },
+        payment_agents: {
+          list: []
         }
       };
 
@@ -98,6 +101,19 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         deposit_win.dialog('widget').trigger('dialogresizestop');
       };
 
+      state.standard_methods.iframe_loaded = function() {
+        if(state.user.cashier_url)
+          state.standard_methods.iframe_visible = true;
+      }
+
+      state.payment_agents.get_commission_text = function(agent) {
+        if(agent.deposit_commission === agent.withdrawal_commission) {
+            return agent.deposit_commission + '% ' + 'commission'.i18n();
+        }
+        return agent.deposit_commission + '% ' + 'deposits'.i18n() + ' / ' +
+               agent.withdrawal_commission + '% ' + 'withdrawals'.i18n();
+      }
+
       deposit_win_view = rv.bind(root[0], state);
 
       /* get the cashier_url */
@@ -107,11 +123,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           state.user.cashier_url = data.cashier;
       }).catch(error_handler);
 
-      state.standard_methods.iframe_loaded = function() {
-        if(state.user.cashier_url)
-          state.standard_methods.iframe_visible = true;
-      }
-
       /* get the residence field and its states */
       var residence_promise = liveapi.send({get_settings: 1})
              .then(function(data){
@@ -119,6 +130,19 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                state.user.residence_name = data.get_settings.country;
              })
              .catch(error_handler);
+
+      /* get payment agents list */
+      residence_promise.then(function() {
+        if(!state.user.residence)
+          return { paymentagent_list: { list: [] } };
+        return liveapi.send({paymentagent_list: state.user.residence });
+      }).then(function(data){
+        var list = data.paymentagent_list.list.map(function(agent){
+          agent.commission_text = state.payment_agents.get_commission_text(agent);
+          return agent;
+        })
+        state.payment_agents.list = list;
+      }).catch(error_handler);
     }
 
     return {
