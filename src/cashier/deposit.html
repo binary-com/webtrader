@@ -22,12 +22,17 @@
 			supported by Binary.com contact a payment agent.
 		</span>
 
-		<div class='agent' rv-each-agent='payment_agents.list'>
-			<div class='header'>
-				<span class='name'>{agent.name}</span>
-				<span class='commission'>{agent.commission_text}</span>
-				<span class='arrow'></span>
+		<div class="agents">
+			<div class='agent' rv-each-agent='payment_agents.list' rv-on-click='payment_agents.onclick | bind agent'>
+				<div class='header'>
+					<span class='name'>{agent.name}</span>
+					<span class='arrow ui-icon ui-icon-carat-1-e'
+								rv-class-ui-icon-carat-1-s='payment_agents.current.name | eq agent.name'></span>
+					<span class='commission'>{agent.commission_text}</span>
+				</div>
 			</div>
 		</div>
+
 	</div>
+
 </div>

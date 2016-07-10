@@ -1,6 +1,7 @@
 .deposit-dialog {
   background: #fff !important;
   padding: 0 !important;
+  overflow: hidden !important;
 }
 
 /* ------------------ TABS -------------------------- */
@@ -54,3 +55,46 @@
   background-size: 100% 100%;
   animation: deposit-rotate 1.4s linear infinite;
  }
+
+/* --------------------- PAYMENT-AGENTS -----------------------------------*/
+.deposit-dialog .payment-agents {
+  padding: 10px;
+  font-size: 15px;
+  height: calc(100% - 26px);
+  box-sizing: border-box;
+  overflow: scroll;
+}
+.deposit-dialog .payment-agents .title {
+  display: block;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+.deposit-dialog .payment-agents .agents {
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.deposit-dialog .payment-agents .agent {
+  border-top: 1px solid #aaa;
+}
+.deposit-dialog .payment-agents .agent:first-child { border-top: none; }
+
+.deposit-dialog .payment-agents .agent .header {
+  padding: 10px;
+  cursor: pointer;
+}
+.deposit-dialog .payment-agents .agent .header .name {
+  font-weight: bold;
+}
+.deposit-dialog .payment-agents .agent .header .commission {
+  float: right;
+  color: #aaa;
+  font-size: 14px;
+}
+.deposit-dialog .payment-agents .agent .header .arrow {
+    float: right;
+    color: #aaa;
+    height: 18px;
+    padding: 0 5px;
+}

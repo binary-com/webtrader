@@ -87,7 +87,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           iframe_visible: false,
         },
         payment_agents: {
-          list: []
+          list: [],
+          current: {}
         }
       };
 
@@ -112,6 +113,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         }
         return agent.deposit_commission + '% ' + 'deposits'.i18n() + ' / ' +
                agent.withdrawal_commission + '% ' + 'withdrawals'.i18n();
+      }
+      state.payment_agents.onclick = function(agent){
+        state.payment_agents.current = agent;
       }
 
       deposit_win_view = rv.bind(root[0], state);
