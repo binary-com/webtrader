@@ -1,3 +1,17 @@
 <div class='deposit-dialog'>
-  hello deposit dialog!
+	<div class='tabs'>
+		<span class='tab'
+					rv-class-active='route.value | eq "standard-methods"'
+					rv-on-click='route.update | bind "standard-methods"'>Standard methods</span>
+		<span class='tab'
+					rv-class-active='route.value | eq "payment-agents"'
+					rv-on-click='route.update | bind "payment-agents"'>Payment agents</span>
+	</div>
+
+	<div class='standard-methods' rv-show='route.value | eq "standard-methods" | and user.cashier_url'>
+		<div rv-if='standard_methods.iframe_visible | eq false' class='rotating-logo'></div>
+		<iframe rv-attr-src='user.cashier_url'
+						rv-show='standard_methods.iframe_visible'
+						rv-on-load='standard_methods.iframe_loaded'></iframe>
+	</div>
 </div>

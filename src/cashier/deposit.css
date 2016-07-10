@@ -1,0 +1,56 @@
+.deposit-dialog {
+  background: #fff !important;
+  padding: 0 !important;
+}
+
+/* ------------------ TABS -------------------------- */
+.deposit-dialog .tabs {
+  padding: 0;
+  line-height: 26px;
+  height: 26px;
+  background: #e0e0e0;
+  font-size: 0; /* fight the whitespace between inline-block elements */
+}
+
+.deposit-dialog .tabs .tab {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1px solid #aaa;
+  border-bottom:1px solid #aaa;
+  width: 200px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.deposit-dialog .tabs .tab.active {
+  background: #fff;
+}
+
+/* ------------------- STANDARD-METHODS IFRAME --------------------------*/
+.deposit-dialog .standard-methods {
+  height: 100%;
+  z-index: 0;
+}
+.deposit-dialog .standard-methods iframe {
+  width: 100%;
+  height: calc(100% - 26px);
+  border: none;
+}
+
+@keyframes deposit-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.deposit-dialog .standard-methods .rotating-logo {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  background:url(../images/binary-symbol-logo.svg) center center no-repeat;
+  background-size: 100% 100%;
+  animation: deposit-rotate 1.4s linear infinite;
+ }

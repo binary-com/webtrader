@@ -26,10 +26,10 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       root = $(root);
       deposit_win = windows.createBlankWindow(root, {
           title: 'Deposit funds',
-          resizable:false,
-          collapsable:false,
+          resizable: true,
+          collapsable: false,
           minimizable: true,
-          maximizable: false,
+          maximizable: true,
           width: 700,
           height: 800,
           close: function () {
@@ -57,12 +57,16 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           top: offset.top + 'px'
       });
       deposit_win.fixFooterPosition();
+      deposit_win.track({
+        module_id: 'deposit_win',
+        is_unique: true
+      });
     }
 
     function init_state(root) {
       var app_id = liveapi.app_id;
       var state = {
-        route: { value: 'standard-methods'}, // routes: ['standard-methods', 'payment-agents']
+        route: { value: 'standard-methods'},
         empty_fields: {
           validate: false,
           clear: _.debounce(function() {
@@ -74,10 +78,14 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           }
         },
         user: {
+          email: local_storage.get('authorize').email,
+          cashier_url:'',
           residence: '',
           residence_name: ''
+        },
+        standard_methods: {
+          iframe_visible: false,
         }
-
       };
 
       state.route.update = function(route){
@@ -92,12 +100,23 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
       deposit_win_view = rv.bind(root[0], state);
 
+      /* get the cashier_url */
+      liveapi.send({
+        cashier: 'deposit'
+      }).then(function(data) {
+          state.user.cashier_url = data.cashier;
+      }).catch(error_handler);
+
+      state.standard_methods.iframe_loaded = function() {
+        if(state.user.cashier_url)
+          state.standard_methods.iframe_visible = true;
+      }
+
       /* get the residence field and its states */
       var residence_promise = liveapi.send({get_settings: 1})
              .then(function(data){
                state.user.residence = data.get_settings.country_code;
                state.user.residence_name = data.get_settings.country;
-               console.warn(state.user.residence);
              })
              .catch(error_handler);
     }
