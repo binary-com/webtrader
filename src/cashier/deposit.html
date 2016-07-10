@@ -30,6 +30,23 @@
 								rv-class-ui-icon-carat-1-s='payment_agents.current.name | eq agent.name'></span>
 					<span class='commission'>{agent.commission_text}</span>
 				</div>
+				<div class='info' rv-class-active='agent.is_active'>
+					<ul class="banks">
+						<li rv-each-bankname='agent.supported_banks'>
+							<img rv-attr-src='bankname | prepend "images/payment_agent/banks/" | append ".png"' />
+						</li>
+					</ul>
+
+					<div class="summary">
+						<strong>{agent.summary | append "."}</strong> <span>{agent.further_information}</span>
+					</div>
+					<strong>To deposit money please contact the payment agent directly:</strong>
+					<div class="contact">
+						<a rv-attr-href='agent.url' target='_blank'>{agent.url}</a>
+						<a rv-attr-href='agent.email | prepend "mailto:"' target='_blank'>{agent.email}</a>
+						<span class="telephone"><span>Tel: </span><span>{agent.telephone}</span></span>
+					</div>
+				</div>
 			</div>
 		</div>
 

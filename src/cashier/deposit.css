@@ -82,6 +82,7 @@
 
 .deposit-dialog .payment-agents .agent .header {
   padding: 10px;
+  padding-bottom: 0;
   cursor: pointer;
 }
 .deposit-dialog .payment-agents .agent .header .name {
@@ -97,4 +98,43 @@
     color: #aaa;
     height: 18px;
     padding: 0 5px;
+}
+
+.deposit-dialog .payment-agents .agent .info {
+  padding: 10px;
+  overflow: hidden;
+  max-height: 0; /* fighting css3 not animating on height:auto!*/
+  height: auto;
+  transition: max-height 0.8s linear;
+}
+.deposit-dialog .payment-agents .agent .info.active {
+  max-height: 1000px; /* bigger than our box will ever get */
+  transition: max-height 0.8s linear;
+}
+.deposit-dialog .payment-agents .agent .info ul.banks {
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  justify-content: center;
+}
+.deposit-dialog .payment-agents .agent .info ul.banks li {
+    padding: 0 5px;
+}
+
+.deposit-dialog .payment-agents .agent .info .summary {
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+.deposit-dialog .payment-agents .agent .info .summary + strong {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.deposit-dialog .payment-agents .agent .info .contact {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.deposit-dialog .payment-agents .agent .info .contact a {
+  font-weight: normal;
+  color: #484A6D;
 }

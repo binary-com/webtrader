@@ -114,8 +114,15 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         return agent.deposit_commission + '% ' + 'deposits'.i18n() + ' / ' +
                agent.withdrawal_commission + '% ' + 'withdrawals'.i18n();
       }
-      state.payment_agents.onclick = function(agent){
-        state.payment_agents.current = agent;
+      state.payment_agents.onclick = function(agent, e){
+        state.payment_agents.current.is_active = false;
+        if(state.payment_agents.current === agent) {
+          state.payment_agents.current = {};
+        }
+        else {
+          state.payment_agents.current = agent;
+          agent.is_active = true;
+        }
       }
 
       deposit_win_view = rv.bind(root[0], state);
@@ -143,6 +150,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       }).then(function(data){
         var list = data.paymentagent_list.list.map(function(agent){
           agent.commission_text = state.payment_agents.get_commission_text(agent);
+          agent.supported_banks = agent.supported_banks.toLowerCase().split(',');
           return agent;
         })
         state.payment_agents.list = list;
