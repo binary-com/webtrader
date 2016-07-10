@@ -32,6 +32,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           maximizable: true,
           width: 700,
           height: 600,
+          'data-authorized': true,
           close: function () {
             deposit_win.dialog('destroy');
             deposit_win.trigger('dialogclose'); // TODO: figure out why event is not fired.
@@ -58,7 +59,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       });
       deposit_win.fixFooterPosition();
       deposit_win.track({
-        module_id: 'deposit_win',
+        module_id: 'deposit',
         is_unique: true
       });
     }
@@ -93,13 +94,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       };
 
       state.route.update = function(route){
-        var routes = {
-          'standard-methods' : 600,
-          'payment-agents': 600,
-        };
         state.route.value = route;
-        deposit_win.dialog('option', 'height', routes[route]);
-        deposit_win.dialog('widget').trigger('dialogresizestop');
       };
 
       state.standard_methods.iframe_loaded = function() {
@@ -115,12 +110,18 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                agent.withdrawal_commission + '% ' + 'withdrawals'.i18n();
       }
       state.payment_agents.onclick = function(agent, e){
+        console.warn(e.target);
+        var elem = $(e.target).next();
+        var cur_elem = state.payment_agents.elem;
+        cur_elem && cur_elem.css('max-height', '0');
         state.payment_agents.current.is_active = false;
         if(state.payment_agents.current === agent) {
           state.payment_agents.current = {};
         }
         else {
           state.payment_agents.current = agent;
+          state.payment_agents.elem = elem;
+          elem.css('max-height', elem[0].scrollHeight + 'px');
           agent.is_active = true;
         }
       }

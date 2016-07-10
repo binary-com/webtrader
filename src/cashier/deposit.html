@@ -23,11 +23,11 @@
 		</span>
 
 		<div class="agents">
-			<div class='agent' rv-each-agent='payment_agents.list' rv-on-click='payment_agents.onclick | bind agent'>
-				<div class='header'>
+			<div class='agent' rv-each-agent='payment_agents.list'>
+				<div class='header' rv-on-click='payment_agents.onclick | bind agent'>
 					<span class='name'>{agent.name}</span>
 					<span class='arrow ui-icon ui-icon-carat-1-e'
-								rv-class-ui-icon-carat-1-s='payment_agents.current.name | eq agent.name'></span>
+								rv-class-ui-icon-carat-1-s='agent.is_active'></span>
 					<span class='commission'>{agent.commission_text}</span>
 				</div>
 				<div class='info' rv-class-active='agent.is_active'>
@@ -49,7 +49,16 @@
 				</div>
 			</div>
 		</div>
-
+		<div class="apply">
+			Apply to become a Binary.com <a href='https://www.binary.com/en/payment-agent.html' target='_blank'>payment agent</a>.
+		</div>
+		<div class='disclaimer'>
+			IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above.
+			Each payment agent operates as an independent service provider and is not endorsed,
+			guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL.
+			Customers are advised to check the credentials of payment agents before sending them any money.
+			Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents.
+		</div>
 	</div>
 
 </div>

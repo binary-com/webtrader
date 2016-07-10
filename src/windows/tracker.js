@@ -20,6 +20,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       portfolio: '#nav-container .portfolio',
       profitTable: '#nav-container .profitTable',
       token: '#nav-container .token-management',
+      deposit: '#nav-container .deposit',
     };
 
     var counter = 0;

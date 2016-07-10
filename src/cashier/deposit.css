@@ -37,7 +37,7 @@
 }
 .deposit-dialog .standard-methods iframe {
   width: 100%;
-  height: calc(100% - 26px);
+  height: 100%;
   border: none;
 }
 
@@ -85,6 +85,7 @@
   padding-bottom: 0;
   cursor: pointer;
 }
+.deposit-dialog .payment-agents .agent .header * { pointer-events: none; }
 .deposit-dialog .payment-agents .agent .header .name {
   font-weight: bold;
 }
@@ -102,14 +103,11 @@
 
 .deposit-dialog .payment-agents .agent .info {
   padding: 10px;
+  padding-top: 0;
   overflow: hidden;
   max-height: 0; /* fighting css3 not animating on height:auto!*/
   height: auto;
-  transition: max-height 0.8s linear;
-}
-.deposit-dialog .payment-agents .agent .info.active {
-  max-height: 1000px; /* bigger than our box will ever get */
-  transition: max-height 0.8s linear;
+  transition: max-height 0.25s linear;
 }
 .deposit-dialog .payment-agents .agent .info ul.banks {
   display: flex;
@@ -137,4 +135,12 @@
 .deposit-dialog .payment-agents .agent .info .contact a {
   font-weight: normal;
   color: #484A6D;
+}
+
+.deposit-dialog .payment-agents .apply {
+  margin: 15px 0;
+}
+.deposit-dialog .payment-agents .disclaimer {
+  color: #999;
+  line-height: 1.4em;
 }
