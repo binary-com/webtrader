@@ -31,7 +31,7 @@
 
 /* ------------------- STANDARD-METHODS IFRAME --------------------------*/
 .deposit-dialog .standard-methods {
-  height: 100%;
+  height: calc(100% - 26px);
   z-index: 0;
 }
 .deposit-dialog .standard-methods iframe {

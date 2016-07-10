@@ -31,7 +31,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           minimizable: true,
           maximizable: true,
           width: 700,
-          height: 800,
+          height: 600,
           close: function () {
             deposit_win.dialog('destroy');
             deposit_win.trigger('dialogclose'); // TODO: figure out why event is not fired.
@@ -90,8 +90,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
       state.route.update = function(route){
         var routes = {
-          'standard-methods' : 800,
-          'payment-agents': 800,
+          'standard-methods' : 600,
+          'payment-agents': 600,
         };
         state.route.value = route;
         deposit_win.dialog('option', 'height', routes[route]);
