@@ -1,7 +1,9 @@
 ﻿/**
 Created By Mahboob.M on 2/1/2015
 */
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog('close');
@@ -18,11 +20,8 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.ppo;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.ppo-description').html(current_indicator_data.description);
 
             $html.find("#ppo_line_stroke,#signal_line_stroke,#ppo_hstgrm_color").each(function () {
                 $(this).colorpicker({
@@ -115,6 +114,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 					            dashStyle: selectedDashStyle,
 					            appliedTo: parseInt($("#ppo_applied_to").val())
 					        }
+                            before_add_callback && before_add_callback();
 					        //Add Bollinger for the main series
 					        $($(".ppo").data('refererChartID')).highcharts().series[0].addIndicator('ppo', options);
 
@@ -143,13 +143,15 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
     }
 
     return {
-        open: function (containerIDWithHash) {
-            if ($(".ppo").length === 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".ppo").data('refererChartID', containerIDWithHash).dialog("open");
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".ppo").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".ppo").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
     };
 });
