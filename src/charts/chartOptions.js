@@ -108,6 +108,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     tableViewCallback: m_tableViewCb, //Callback for table view
                     instrumentName : m_instrumentName,
                     instrumentCode : m_instrumentCode,
+                    indicatorsCount : 0,
 
                     showTimePeriodSelector : false,
                     showChartTypeSelector : false,
@@ -286,7 +287,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 delete view[newTabId];
                 delete state[newTabId];
             }
-        }
+        },
+
+        setIndicatorsCount: function(count, newTabId){
+            state[newTabId].indicatorsCount = count;
+        },
 
     };
 

@@ -5,6 +5,7 @@
 .chartOptions .table {
     display: inline-block;
     vertical-align: top;
+    margin-top: 5px;
 }
 
 .chartOptions .table .row .cell {
@@ -120,4 +121,17 @@
     background-color: darkgrey;
     height: 1px;
     position: relative;
+}
+.countBubl {
+    float: right;
+    position: absolute;
+    margin-left: -13px;
+    margin-top: -3px;
+    background: rgb(64, 68, 72);
+    color: #fff;
+    font-size: 0.55em;
+    border-radius: 10px;
+    padding: 1px;
+    min-width: 10px;
+    text-align: center;
 }
