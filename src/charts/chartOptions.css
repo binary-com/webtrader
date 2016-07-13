@@ -5,7 +5,6 @@
 .chartOptions .table {
     display: inline-block;
     vertical-align: top;
-    margin-top: 5px;
 }
 
 .chartOptions .table .row .cell {
