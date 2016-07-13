@@ -19,13 +19,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, options: chart.series[0][id][0].options})
           });
       }
-      
-      require(["charts/chartOptions"],function(chartOptions){
-        if(indicators && chart.renderTo)
-            chartOptions.setIndicatorsCount(indicators.length, chart.renderTo.id.replace("_chart",""));
 
-      });
-      
       return indicators;
     }
 

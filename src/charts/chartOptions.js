@@ -250,6 +250,9 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     }
                 };
 
+                $("#" + m_newTabId).on('chart-indicators-changed',function(e, chart){
+                  state[m_newTabId].indicatorsCount = chart.get_indicators().length;
+                });
                 var $html = $(html);
 
                 $("#" + m_newTabId + "_header").prepend($html);
