@@ -10,8 +10,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     "use strict";
 
-    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value(),
-        setIndCountCb = null;
+    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
     Highcharts.Chart.prototype.get_indicators = function() {
       var chart = this;
       var indicators = [];
@@ -20,10 +19,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, options: chart.series[0][id][0].options})
           });
       }
-      
-      if(indicators && chart.renderTo && typeof setIndCountCb === "function")
-          setIndCountCb(indicators.length, chart.renderTo.id.replace("_chart",""));
-      
+
       return indicators;
     }
 
@@ -495,10 +491,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         changeTitle : function ( containerIDWithHash, newTitle ) {
             var chart = $(containerIDWithHash).highcharts();
             chart.setTitle(newTitle);
-        },
-
-        setIndicatorsCount: function(callback){
-            setIndCountCb = callback;
         }
 
     }
