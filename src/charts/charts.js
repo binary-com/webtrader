@@ -3,14 +3,15 @@
  */
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', "charts/chartOptions",
+        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', 
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
         ],
-  function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json, chartOptions ) {
+  function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json ) {
 
     "use strict";
 
-    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
+    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value(),
+        setIndCountCb = null;
     Highcharts.Chart.prototype.get_indicators = function() {
       var chart = this;
       var indicators = [];
@@ -20,9 +21,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
           });
       }
       
-      if(indicators)
-        chartOptions.setIndicatorsCount(indicators.length, chart.container.parentElement.id.replace("_chart",""));
-
+      if(indicators && chart.renderTo && typeof setIndCountCb === "function")
+          setIndCountCb(indicators.length, chart.renderTo.id.replace("_chart",""));
+      
       return indicators;
     }
 
@@ -494,6 +495,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         changeTitle : function ( containerIDWithHash, newTitle ) {
             var chart = $(containerIDWithHash).highcharts();
             chart.setTitle(newTitle);
+        },
+
+        setIndicatorsCount: function(callback){
+            setIndCountCb = callback;
         }
 
     }
