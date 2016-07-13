@@ -3,10 +3,10 @@
  */
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', "charts/chartOptions",
+        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', 
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
         ],
-  function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json, chartOptions ) {
+  function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json ) {
 
     "use strict";
 
@@ -20,9 +20,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
           });
       }
       
-      if(indicators)
-        chartOptions.setIndicatorsCount(indicators.length, chart.container.parentElement.id.replace("_chart",""));
+      require(["charts/chartOptions"],function(chartOptions){
+        if(indicators && chart.renderTo)
+            chartOptions.setIndicatorsCount(indicators.length, chart.renderTo.id.replace("_chart",""));
 
+      });
+      
       return indicators;
     }
 
