@@ -35,8 +35,7 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
                         minimizable: false,
                         maximizable: false,
                         modal: true,
-                        ignoreTileAction:true,
-                        'data-authorized': 'true'
+                        ignoreTileAction:true
                     });
 
                     $html.find("#apply").on("click", function(){

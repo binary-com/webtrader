@@ -56,7 +56,6 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
                         closeOnEscape: false,
                         modal: true,
                         ignoreTileAction:true,
-                        'data-authorized': 'true',
                         destroy: function() {
                             win = null;
                         },
