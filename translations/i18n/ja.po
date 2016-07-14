@@ -1,17 +1,33 @@
-msgid "%D MA Type"
+msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-13 21:38+0200\n"
+"PO-Revision-Date: 2016-07-14 16:48+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.8-dev\n"
+
+msgid "%D MA Type"
+msgstr "%D MA タイプ"
 
 msgid "%D Period"
-msgstr ""
+msgstr "%D 期間"
 
 msgid "%D Stroke"
 msgstr ""
 
 msgid "%K MA Type"
-msgstr ""
+msgstr "%K MA タイプ"
 
 msgid "%K Period"
-msgstr ""
+msgstr "%K 期間"
 
 msgid "%K Stroke"
 msgstr ""
@@ -19,157 +35,157 @@ msgstr ""
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
 "day or more in duration)"
-msgstr ""
+msgstr "（取引期間が1日未満の場合）、または取引最終日（取引期間が1日以上の場合）"
 
 msgid "-DI Stroke"
 msgstr ""
 
 msgid "0-1 year"
-msgstr ""
+msgstr "0~1年"
 
 msgid "0-5 transactions in the past 12 months"
-msgstr ""
+msgstr "過去12ヶ月で0-5のお取引"
 
 msgid "1 Day"
-msgstr ""
+msgstr "1日"
 
 msgid "1-2 years"
-msgstr ""
+msgstr "1-2年"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10m"
-msgstr ""
+msgstr "10分"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15m"
-msgstr ""
+msgstr "15分"
 
 msgid "1d"
-msgstr ""
+msgstr "1日"
 
 msgid "1h"
-msgstr ""
+msgstr "1時間"
 
 msgid "1m"
-msgstr ""
+msgstr "1分"
 
 msgid "2h"
-msgstr ""
+msgstr "2時間"
 
 msgid "2m"
-msgstr ""
+msgstr "2分"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30-day limit on losses"
-msgstr ""
+msgstr "30日間の損失制限"
 
 msgid "30-day turnover limit"
-msgstr ""
+msgstr "30日の取引数量限度額"
 
 msgid "30m"
-msgstr ""
+msgstr "30分"
 
 msgid "3m"
-msgstr ""
+msgstr "3分"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr ""
+msgstr "過去12ヶ月で40以上のお取引"
 
 msgid "4h"
-msgstr ""
+msgstr "4時間"
 
 msgid "5m"
-msgstr ""
+msgstr "5分"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr ""
+msgstr "過去12ヶ月で6~10のお取引"
 
 msgid "7-day limit on losses"
-msgstr ""
+msgstr "7日間の損失制限"
 
 msgid "7-day turnover limit"
-msgstr ""
+msgstr "7日の取引数量限度額"
 
 msgid "8h"
-msgstr ""
+msgstr "8時間"
 
 msgid "ADX MA Type"
-msgstr ""
+msgstr "ADX MA タイプ"
 
 msgid "ADX Stroke"
 msgstr ""
 
 msgid "ATR Period"
-msgstr ""
+msgstr "ATR期間"
 
 msgid "Acceleration"
 msgstr ""
 
 msgid "Accept"
-msgstr ""
+msgstr "承諾"
 
 msgid "Account balance"
-msgstr ""
+msgstr "口座残高"
 
 msgid "Account id not found"
-msgstr ""
+msgstr "アカウントIDが見つかりません"
 
 msgid "Account opening"
-msgstr ""
+msgstr "口座開設"
 
 msgid "Account token not found"
-msgstr ""
+msgstr "アカウントトークンが見つかりません"
 
 msgid "Action"
-msgstr ""
+msgstr "売買"
 
 msgid "Add indicator"
-msgstr ""
+msgstr "指標を追加"
 
 msgid "Add level"
-msgstr ""
+msgstr "レベルを追加"
 
 msgid "Add overlays"
-msgstr ""
+msgstr "オーバーレイを追加"
 
 msgid "Add/remove overlays"
-msgstr ""
+msgstr "オーバーレイの追加/削除"
 
 msgid "Admin"
-msgstr ""
+msgstr "管理者"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
-msgstr ""
+msgstr "当社サイトの時間表示は全て、GMT（グリニッジ標準時）に基づきます。"
 
 msgid "Amount Per Point"
-msgstr ""
+msgstr "ポイントごとの金額"
 
 msgid "Amount per point"
-msgstr ""
+msgstr "ポイントごとの金額"
 
 msgid "Answer"
-msgstr ""
+msgstr "答え"
 
 msgid "Applied to"
-msgstr ""
+msgstr "適用する"
 
 msgid "Apply"
-msgstr ""
+msgstr "適用"
 
 msgid "Apply new theme?"
-msgstr ""
+msgstr "新しいテーマを適用しますか？"
 
 msgid "Appropriateness Test: WARNING"
-msgstr ""
+msgstr "適正テスト: 警告"
 
 msgid "Are you sure you want to delete this token?"
-msgstr ""
+msgstr "このトークンを完全に削除してもよろしいですか？"
 
 msgid "Aroon Down Stroke"
 msgstr ""
@@ -178,73 +194,75 @@ msgid "Aroon Up Stroke"
 msgstr ""
 
 msgid "Asians"
-msgstr ""
+msgstr "Asians"
 
 msgid "Asset"
-msgstr ""
+msgstr "資産"
 
 msgid "Asset Index"
-msgstr ""
+msgstr "取引期間データ"
 
 msgid "Average"
-msgstr ""
+msgstr "平均"
 
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 msgid "Back to list"
-msgstr ""
+msgstr "一覧へ戻る"
 
 msgid "Background Color"
-msgstr ""
+msgstr "背景カラー"
 
 msgid "Barrier"
-msgstr ""
+msgstr "バリア"
 
 msgid "Barrier offset"
 msgstr ""
 
 msgid "Binary options or other financial derivatives"
-msgstr ""
+msgstr "バイナリーオプション または その他金融派生商品"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : ウェブトレーダー"
 
 msgid "Blank window"
 msgstr ""
 
 msgid "Bought"
-msgstr ""
+msgstr "購入済"
 
 msgid "Brand of first car"
 msgstr ""
 
 msgid "Browser upgrade required"
-msgstr ""
+msgstr "ブラウザのアップデートが必要です"
 
 msgid "Buy Price"
-msgstr ""
+msgstr "購入"
 
 msgid "Buy price"
-msgstr ""
+msgstr "購入"
 
 msgid "By clicking"
-msgstr ""
+msgstr "クリックすると"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
+"当社でお取引なさっているお客さまにおいて、改定内容を必ずご確認いただく必要がございます。原則、改定後の書面の内容をご確認いただきOKボタンを押して頂くまで"
+"、お取引できなくなりますので、お取引の際ご注意ください。"
 
 msgid "CLOSE"
-msgstr ""
+msgstr "閉じる"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 msgid "Candles"
 msgstr ""
@@ -262,289 +280,289 @@ msgid "Candlestick up-line"
 msgstr ""
 
 msgid "Cash Balance"
-msgstr ""
+msgstr "口座預託額"
 
 msgid "Change Backend Server"
-msgstr ""
+msgstr "バックエンドサーバーの変更"
 
 msgid "Change password"
-msgstr ""
+msgstr "パスワード変更"
 
 msgid "Chart"
-msgstr ""
+msgstr "チャート"
 
 msgid "Chart Themes"
-msgstr ""
+msgstr "チャートのテーマ"
 
 msgid "Chart background"
-msgstr ""
+msgstr "チャート背景"
 
 msgid "Choose password"
-msgstr ""
+msgstr "パスワードを選択してください"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Chrome Extension"
-msgstr ""
+msgstr "Chrome 拡張機能"
 
 msgid "Click Jacking test"
-msgstr ""
+msgstr "ジャッキテストをクリック"
 
 msgid "Click to log in with your Binary.com account"
-msgstr ""
+msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
 msgid "Close Price"
 msgstr ""
 
 msgid "Close all"
-msgstr ""
+msgstr "全て閉じる"
 
 msgid "Closes"
-msgstr ""
+msgstr "閉じる"
 
 msgid "Commodities trading experience"
-msgstr ""
+msgstr "コモディティ取引の経験"
 
 msgid "Commodities trading frequency"
-msgstr ""
+msgstr "コモディティ取引の頻度"
 
 msgid "Conditions"
-msgstr ""
+msgstr "条件"
 
 msgid "Config changes successful"
-msgstr ""
+msgstr "設定が変更されました"
 
 msgid "Connection closed"
-msgstr ""
+msgstr "接続が切断されました"
 
 msgid "Connection error. Refresh the page"
-msgstr ""
+msgstr "接続エラー。ページを更新してください"
 
 msgid "Construction"
-msgstr ""
+msgstr "設営"
 
 msgid "Continue"
-msgstr ""
+msgstr "続行"
 
 msgid "Continue Trading"
-msgstr ""
+msgstr "取引を継続"
 
 msgid "Contract"
-msgstr ""
+msgstr "トレード"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "トレード確定"
 
 msgid "Contract is not yet started"
-msgstr ""
+msgstr "トレードはまだ開始していません"
 
 msgid "Contracts"
-msgstr ""
+msgstr "トレード"
 
 msgid "Country of residence"
-msgstr ""
+msgstr "居住国"
 
 msgid "Create"
-msgstr ""
+msgstr "作成"
 
 msgid "Create token"
-msgstr ""
+msgstr "トークンを作成"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "支払/受取"
 
 msgid "Crosshair"
-msgstr ""
+msgstr "クロスヘア"
 
 msgid "Current Level"
-msgstr ""
+msgstr "現在のレベル"
 
 msgid "Current Spot"
-msgstr ""
+msgstr "現在レート"
 
 msgid "Current Spot Time"
-msgstr ""
+msgstr "現在レート時間"
 
 msgid "Current indicators"
-msgstr ""
+msgstr "現在の指標"
 
 msgid "Current overlays"
-msgstr ""
+msgstr "現在のオーバーレイ"
 
 msgid "Current password"
-msgstr ""
+msgstr "現在のパスワード"
 
 msgid "Current regulations require that you provide us the following"
-msgstr ""
+msgstr "現在の規定により、以下の書類を提出いただく必要があります"
 
 msgid "Current time"
-msgstr ""
+msgstr "現在時刻："
 
 msgid "Custom Theme"
-msgstr ""
+msgstr "カスタムテーマ"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "チャートの外観をカスタマイズする"
 
 msgid "DI Stroke"
 msgstr ""
 
 msgid "DX MA Type"
-msgstr ""
+msgstr "DX MA タイプ"
 
 msgid "Daily limit on losses"
-msgstr ""
+msgstr "損失限度額（1日）"
 
 msgid "Daily turnover limit"
-msgstr ""
+msgstr "1日の取引数量限度額"
 
 msgid "Dark Blue"
-msgstr ""
+msgstr "ダークブルー"
 
 msgid "Dark Green"
-msgstr ""
+msgstr "ダークグリーン"
 
 msgid "Dark Unica"
 msgstr ""
 
 msgid "Dash style"
-msgstr ""
+msgstr "ダッシュ線スタイル"
 
 msgid "Date"
-msgstr ""
+msgstr "日付"
 
 msgid "Date of birth"
-msgstr ""
+msgstr "生年月日"
 
 msgid "Days"
-msgstr ""
+msgstr "日"
 
 msgid "Decline"
-msgstr ""
+msgstr "同意しない"
 
 msgid "Default"
-msgstr ""
+msgstr "規定"
 
 msgid "Delete level(s)"
-msgstr ""
+msgstr "レベルを削除"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr ""
+msgstr "IFRAME内のBinary.comチャートにアクセスするアフィリエイトデモ"
 
 msgid "Deposit of USD"
-msgstr ""
+msgstr "USDでのご入金"
 
 msgid "Describe what this token is for to find it later"
-msgstr ""
+msgstr "後で認識できるよう、このトークンの説明を記入してください"
 
 msgid "Description"
-msgstr ""
+msgstr "取引内容"
 
 msgid "Digits"
-msgstr ""
+msgstr "数字"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr ""
+msgstr "ウェブトレーダーのchrome拡張機能をインストールしますか？"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
-msgstr ""
+msgstr "まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマネーでお取引を始めましょう"
 
 msgid "Dot"
 msgstr ""
 
 msgid "Double MA Period"
-msgstr ""
+msgstr "ダブル MA 期間"
 
 msgid "Double MA Type"
-msgstr ""
+msgstr "ダブル MA タイプ"
 
 msgid "Double click the object to remove"
 msgstr ""
 
 msgid "Download CSV"
-msgstr ""
+msgstr "CSVでダウンロード"
 
 msgid "Download PNG"
-msgstr ""
+msgstr "PNGでダウンロード"
 
 msgid "Download SVG"
-msgstr ""
+msgstr "SVGでダウンロード"
 
 msgid "Download as"
-msgstr ""
+msgstr "xxxでダウンロード"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr ".csvファイルでダウンロード"
 
 msgid "Duration"
-msgstr ""
+msgstr "期間"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "Edge"
 msgstr ""
 
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 msgid "Education"
-msgstr ""
+msgstr "お役立ち情報"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Eメール認証に失敗しました"
 
 msgid "Embed code"
-msgstr ""
+msgstr "埋め込みコード"
 
 msgid "End Time"
-msgstr ""
+msgstr "終了時間"
 
 msgid "Ends In/Out"
-msgstr ""
+msgstr "END-IN/END-OUT"
 
 msgid "Enter your current password"
-msgstr ""
+msgstr "現在のパスワードを入力してください"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "取引時レート"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "取引時レート"
 
 msgid "Error downloading .csv"
-msgstr ""
+msgstr ".csvファイルのダウンロード中にエラーが発生しました"
 
 msgid "Error getting data for"
-msgstr ""
+msgstr "xxxのデータ取得中にエラーが発生しました"
 
 msgid "Estimated Net Worth"
-msgstr ""
+msgstr "推定純資産"
 
 msgid "Exclude me from the website until"
-msgstr ""
+msgstr "特定日まで利用禁止（日時単位）"
 
 msgid "Exclude time cannot be less than 6 months"
-msgstr ""
+msgstr "5ヶ月以下の除外時間を設定することはできません"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "判定時レート"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "判定時レート"
 
 msgid "Explanation"
-msgstr ""
+msgstr "取引概要"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "パスワードの変更に失敗しました"
 
 msgid "Fall"
-msgstr ""
+msgstr "Fall"
 
 msgid "Family name"
-msgstr ""
+msgstr "氏名(全角)"
 
 msgid "Fast %K MA Type"
 msgstr ""
