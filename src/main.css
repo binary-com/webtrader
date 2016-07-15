@@ -58,7 +58,7 @@ body > .footer .addiction-warning a:hover {
 }
 
 .ui-dialog-content {
-    background-color: #F5F6F8!important;
+    background-color: #f2f2f2!important;
 }
 
 .ui-corner-all {
@@ -323,4 +323,21 @@ table {
     width: 100%;
     height: 1px;
     background-color: black;
+}
+
+/* For confirmation dialogs */
+.dialog-confirm.ui-dialog  {
+    background: #f2f2f2;
+    border-bottom: 5px solid #EA9800;
+}
+
+.dialog-confirm.ui-dialog .ui-widget-content {
+    background: #f2f2f2;
+    border: none;
+    padding: 0.5em 1em 0em 1em;
+    text-align: center
+}
+/* Hide Dialog title-bar*/
+.dialog-confirm.ui-dialog .ui-dialog-titlebar {
+    display: none;
 }

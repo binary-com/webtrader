@@ -3,7 +3,7 @@
  */
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json',
+        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', 
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
         ],
   function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json ) {
@@ -19,6 +19,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, options: chart.series[0][id][0].options})
           });
       }
+
       return indicators;
     }
 

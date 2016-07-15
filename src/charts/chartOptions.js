@@ -108,6 +108,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     tableViewCallback: m_tableViewCb, //Callback for table view
                     instrumentName : m_instrumentName,
                     instrumentCode : m_instrumentCode,
+                    indicatorsCount : 0,
 
                     showTimePeriodSelector : false,
                     showChartTypeSelector : false,
@@ -249,6 +250,9 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     }
                 };
 
+                $("#" + m_newTabId).on('chart-indicators-changed',function(e, chart){
+                  state[m_newTabId].indicatorsCount = chart.get_indicators().length;
+                });
                 var $html = $(html);
 
                 $("#" + m_newTabId + "_header").prepend($html);
@@ -286,7 +290,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 delete view[newTabId];
                 delete state[newTabId];
             }
-        }
+        },
+
+        setIndicatorsCount: function(count, newTabId){
+            state[newTabId].indicatorsCount = count;
+        },
 
     };
 
