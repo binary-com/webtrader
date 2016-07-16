@@ -26,6 +26,7 @@
     "grunt-po2json": "^0.3.0",
     "grunt-remove-logging": "git://github.com/ehynds/grunt-remove-logging.git",
     "grunt-rename": "^0.1.4",
+    "grunt-sass": "^1.2.0",
     "grunt-shell": "^1.1.2",
     "grunt-sloc": "^0.6.0",
     "grunt-string-replace": "^1.0.0",
