@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'src/',
-                        src: ['**', '!**/*.scss', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
+                        src: ['**', '!**/*.scss','!**/*.es6', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
                         dest: 'dist/uncompressed/v<%=pkg.version%>'
                     }
                 ]
@@ -321,7 +321,7 @@ module.exports = function (grunt) {
         watch: {
           options: {
             spawn: true,
-            interrupt : true,
+            interrupt : false,
             livereload: {
               key: grunt.file.read('grunt/livereload.key'),
               cert: grunt.file.read('grunt/livereload.crt')
@@ -332,13 +332,19 @@ module.exports = function (grunt) {
             files: ['src/**/*.scss'],
             tasks: ['sass'],
           },
-          css: {
-            files: ['dist/uncompressed/v<%=pkg.version%>/**/*.css'],
+          es6: {
+            options: { livereload: false },
+            files: ['src/**/*.es6'],
+            tasks: ['babel'],
+          },
+          dist: {
+            files: ['dist/uncompressed/v<%=pkg.version%>/**/*.*'],
             tasks: []
           },
           scripts: {
-            files: ['src/**', '!src/**/*.scss'],
-            tasks: ['mainTask'],
+            options: { livereload: false },
+            files: ['src/**', '!src/**/*.scss', '!src/**/*.es6'],
+            tasks: [ 'copy:main', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyChromeManifest'],
           },
         },
         shell: {
@@ -424,10 +430,27 @@ module.exports = function (grunt) {
               }
             ]
           }
+        },
+        babel: {
+          options: {
+            sourceMap: true,
+            presets: ['es2015']
+          },
+          dist: {
+            files: [
+              {
+                expand: true,
+                cwd: 'src/',
+                src: ['**/*.es6'],
+                dest: 'dist/uncompressed/v<%=pkg.version%>',
+                ext: '.js'
+              }
+            ]
+          }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 

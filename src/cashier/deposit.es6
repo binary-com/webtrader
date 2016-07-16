@@ -14,7 +14,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     };
 
     function init(li) {
-      li.click(function () {
+      li.click(() => {
           if(!deposit_win)
             require(['text!cashier/deposit.html'], init_deposit_win);
           else
@@ -93,9 +93,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         }
       };
 
-      state.route.update = function(route){
-        state.route.value = route;
-      };
+      state.route.update = route => { state.route.value = route; };
 
       state.standard_methods.iframe_loaded = function() {
         if(state.user.cashier_url)
