@@ -86,8 +86,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           verification: '',
           password: '',
           repeat_password:  '',
-          residence: 'my',
-          residence_list: [ { text: 'Malaysia', value: 'my'}],
+          residence: 'af',
+          residence_list: [ { text: 'Afghanistan', value: 'af'}],
+          residence_unsupported: ["cr", "gg", "hk", "ir", "iq", "jp", "je", "kp", "my", "mt", "us", "um", "vi"],
           disabled: false, /* is button disabled */
         },
         confirm: { disabled: false }
@@ -210,12 +211,16 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
-               state.account.residence_list = data.residence_list;
+               state.account.residence_list = data.residence_list.map(function(r) {
+                 r.disabled = state.account.residence_unsupported.indexOf(r.value) !== -1;
+                 return r;
+               });
                state.account.residence = data.residence_list[0].value;
                liveapi.cached.send({website_status: 1})
                     .then(function(data){
                         var residence = data.website_status && data.website_status.clients_country;
-                        state.account.residence = residence || 'id';
+                        if(state.account.residence_unsupported.indexOf(residence) === -1)
+                          state.account.residence = residence || 'id';
                     })
                     .catch(function(err){
                       console.error(err);
