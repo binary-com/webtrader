@@ -330,12 +330,12 @@ module.exports = function (grunt) {
           scss: {
             options: { livereload: false },
             files: ['src/**/*.scss'],
-            tasks: ['sass'],
+            tasks: ['newer:sass'],
           },
           es6: {
             options: { livereload: false },
             files: ['src/**/*.es6'],
-            tasks: ['babel'],
+            tasks: ['newer:babel'],
           },
           dist: {
             files: ['dist/uncompressed/v<%=pkg.version%>/**/*.*'],
@@ -344,7 +344,7 @@ module.exports = function (grunt) {
           scripts: {
             options: { livereload: false },
             files: ['src/**', '!src/**/*.scss', '!src/**/*.es6'],
-            tasks: [ 'copy:main', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyChromeManifest'],
+            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest'],
           },
         },
         shell: {
