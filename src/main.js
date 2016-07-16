@@ -170,10 +170,18 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
                 });
 
             //Register async loading of real account opening window
-            load_ondemand($navMenu.find("a.deposit"), 'click', 'loading Deposit funds ...', 'cashier/deposit',
+            load_ondemand($navMenu.find("a.deposit"), 'click', 'Loading Deposit funds ...', 'cashier/deposit',
                 function (deposit) {
                     var elem = $navMenu.find("a.deposit");
                     deposit.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.withdraw"), 'click', 'Loading Withdraw funds ...', 'cashier/withdraw',
+                function (withdraw) {
+                    var elem = $navMenu.find("a.withdraw");
+                    withdraw.init(elem);
                     elem.click();
                 });
 
