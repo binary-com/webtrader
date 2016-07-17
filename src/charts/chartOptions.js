@@ -29,19 +29,19 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
     }
 
     //This is ugly, but doing it for now
-    function setTopHeaderPosAndWith_chartType(chartType) {
+    function setTopHeaderPosAndWith_chartType(chartType, newTabId) {
         switch (chartType) {
             case CANDLE_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '60px', left: '34px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '60px', left: '34px' }); break;
             case OHLC_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '58px', left: '36px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '58px', left: '36px' }); break;
             case LINE_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '52px', left: '41px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '52px', left: '41px' }); break;
             case DOT_TYPE:
             case LINEDOT_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '40px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '40px' }); break;
             case SPLINE_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '41px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '41px' }); break;
         }
     }
 
@@ -55,7 +55,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             /* trigger an event on the chart dialog, so we can listen on type changes,
              * note: this will be use to update chart state for tracker.js */
             $('#' + scope.newTabId).trigger('chart-type-changed', scope.chartType);
-            setTopHeaderPosAndWith_chartType(chartType);
+            setTopHeaderPosAndWith_chartType(chartType, scope.newTabId);
         }
         hideOverlays(scope);
     }
@@ -257,7 +257,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 $("#" + m_newTabId + "_header").prepend($html);
                 setTopHeaderPosAndWidth_timePeriodOvl(m_timePeriod);
-                setTopHeaderPosAndWith_chartType(m_chartType);
+                setTopHeaderPosAndWith_chartType(m_chartType, m_newTabId);
 
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
 
