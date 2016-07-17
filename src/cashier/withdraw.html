@@ -1,7 +1,31 @@
 <div class='withdraw-dialog'>
 
 	<div class='menu' rv-show='route.value | eq "menu"'>
+		<span class='title'>Choose your pereferred withdrawal method:</span>
+		<button rv-on-click='menu.button_click | bind "standard"'>Standard withdrawal</button>
+		<button rv-on-click='menu.button_click | bind "transfer"'>Transfer to another Binary account</button>
+		<button rv-on-click='menu.button_click | bind "agent"'>Withdrawal via payment agents</button>
+		<span class='explanation'>Note: withdrawal via payment agent is available only
+					if you deposit exclusively via payment agent.</span>
+	</div>
 
+	<div class='verify' rv-show='route.value | eq "verify"'>
+    <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span>
+		<span class='title'>To withdraw funds please enter the special verification token we have just emailed you.</span>
+
+		<span class='input-title'>Verification token</span>
+		<input></input>
+		<span class='error'>This field is required.</span>
+
+		<button>Unlock</button>
+	</div>
+
+	<div class='transfer' rv-show='route.value | eq "transfer"'>
+    <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span>
 	</div>
 
 </div>

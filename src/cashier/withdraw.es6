@@ -33,7 +33,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             minimizable: true,
             maximizable: true,
             width: 700,
-            height: 600,
+            height: 400,
             'data-authorized': true,
             close: () => {
               win.dialog('destroy');
@@ -77,10 +77,35 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
               state.empty_fields.clear();
             }
           },
-          menu: { },
+          menu: {
+            choice: ''
+          },
+        };
+        let {route, menu} = state;
+
+        let routes = { menu : 400, transfer: 400, standard: 400, agent: 400, verify: 400 };
+        route.update = r => {
+          route.value = r;
+          win.dialog('option', 'height', routes[r]);
         };
 
-        state.route.update = route => ( state.route.value = route );
+        menu.button_click = choice => { /* choice is 'transfer', 'agent' or 'standard' */
+          menu.choice = choice;
+          route.update(choice !== 'transfer' ? 'verify' : 'transfer');
+          if(choice === 'transfer')
+            return;
+          const email = local_storage.get('authorize').email;
+          const type = choice === 'agent' ? 'paymentagent_withdraw' : 'payment_withdraw';
+          liveapi.send({
+            verify_email: email,
+            type: type
+          })
+          .then(() => $.growl.notice({ message: 'Verification code sent to '.i18n() + email }))
+          .catch(err => {
+            error_handler(err);
+            route.update('menu');
+          });
+        };
 
         win_view = rv.bind(root[0], state);
       };
