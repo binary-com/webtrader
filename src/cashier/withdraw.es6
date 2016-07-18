@@ -89,17 +89,20 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             iframe_visible: false
           },
           agent: {
+            disabled: false,
             loginid: '',
             agents: [],
-            commission: '2% commssion',
+            commission: '',
             amount: 10,
-            currency: 'USD',
-            instructions: 'kdjaldk'
+            currency: local_storage.get('authorize').currency,
+            residence: '',
+            instructions: '',
+            amount_with_commission: 0
           }
         };
         let {route, menu, verify, empty_fields, standard, agent} = state;
 
-        let routes = { menu : 400, transfer: 400, standard: 400, agent: 400, verify: 400 };
+        let routes = { menu : 400, transfer: 400, standard: 400, agent: 550, verify: 400 };
         route.update = r => {
           route.value = r;
           win.dialog('option', 'height', routes[r]);
@@ -161,8 +164,31 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         };
 
         agent.onchanged = () => {
-          console.warn(agent.loginid);
+          if(agent.loginid) {
+            agent.commission
+              = agent.agents.find(a => a.paymentagent_loginid == agent.loginid).withdrawal_commission;
+          }
+          else {
+            agent.commission = '';
+          }
+          console.warn(agent.commission);
         }
+
+        agent.click = () => {
+          console.warn('clicked');
+        }
+
+        liveapi.send({get_settings: 1})
+               .then(data => {
+                 agent.residence = data.get_settings.country_code;
+                 return liveapi.cached.send({paymentagent_list: agent.residence });
+               })
+               .then(data => {
+                 agent.agents = data.paymentagent_list.list;
+                 console.warn(agent.agents);
+               })
+               .catch(error_handler);
+
         _.defer(() => route.update('agent'));
         win_view = rv.bind(root[0], state);
       };

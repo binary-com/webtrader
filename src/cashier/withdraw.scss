@@ -72,6 +72,7 @@ $size_tiny: 12px;
 
   .agent {
     padding: 10px;
+    overflow: scroll;
     .title {
       display: block;
       margin: 10px 0 5px 0;
@@ -86,15 +87,25 @@ $size_tiny: 12px;
       line-height: 2.2em;
       display: inline-block;
       vertical-align: top;
+      padding:0 0 0 5px;
     }
-    .currency {
+    .amount {
       font-size: $size_small;
-    }
-    input.amount {
-      font-size: $size_small;
-      display: inline-block;
-      width: 70px;
-      margin: 0 0 0 5px;
+      .titles{
+        margin: 10px 0 5px 0;
+        span {
+          display: inline-block;
+          width: 200px;
+        }
+      }
+      .fields {
+        input {
+          width: 50px;
+          display: inline-block;
+          margin: 0 117px 0 0;
+        }
+      }
+
     }
     .hint {
       display: block;
@@ -108,6 +119,15 @@ $size_tiny: 12px;
       width: 70%;
       border: 1px solid #ccc;
       resize: none;
+    }
+    button.submit {
+      margin: 20px 0 15px 0;
+    }
+    .disclaimer {
+      font-size: $size_tiny;
+      color: $gray;
+      display: block;
+      line-height: 1.5em;
     }
   }
 
@@ -126,6 +146,7 @@ $size_tiny: 12px;
 
 .withdraw-dialog-ul {
   font-size: $size_small !important;
+  max-height: 300px;
 }
 
 @keyframes withdraw-rotate {

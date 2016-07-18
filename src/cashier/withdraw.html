@@ -55,17 +55,36 @@
         <option value="" selected="selected" disabled="disabled">Choose your pereferred payment agent</option>
         <option rv-each-row="agent.agents" rv-value="row.paymentagent_loginid">{row.name}</option>
     </select>
-		<span class="commission" rv-show='agent.commission'>{agent.commission}</span>
+		<span class="commission" rv-show='agent.commission | not-eq ""'>{agent.commission}% <span>commission</span></span>
 
-		<span class='title'>Amount</span>
-		<span class='currency'>{agent.currency}</span>
-		<input class='amount' rv-value='agent.amount'/>
+		<div class='amount'>
+			<div class='titles'>
+				<span>Amount</span>
+				<span rv-visible='agent.amount'>Minus the agent's commission:</span>
+			</div>
+			<div class='fields'>
+				<span>{agent.currency}</span>
+				<input rv-value='agent.amount'/>
+
+				<span rv-visible='agent.amount'>{agent.currency}</span>
+				<span rv-visible='agent.amount'>{agent.amount_with_commission}</span>
+			</div>
+		</div>
 
 		<span class="hint">Min: 10 Max: 2000</span>
 
 		<span class='title'>Further instructions</span>
 		<textarea class='instructions' rows='8' rv-value='agent.instructions' />
 
+		<button class='submit' rv-on-click='agent.click' rv-css-opacity='agent.disabled | ternary 0.5 1'>Submit</button>
+
+		<span class='disclaimer'>
+			<strong>IMPORTANT DISCLAIMER </strong>- Binary.com is not affiliated with any of the Payment Agents listed above.
+			Each Payment Agent operates as an independent service provider and is not endorsed,
+			guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL.
+			Customers are advised to check the credentials of Payment Agents before sending them any money.
+			Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents.
+		</span>
 	</div>
 
 </div>

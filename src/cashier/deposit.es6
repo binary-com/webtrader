@@ -145,7 +145,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       residence_promise.then(function() {
         if(!state.user.residence)
           return { paymentagent_list: { list: [] } };
-        return liveapi.send({paymentagent_list: state.user.residence });
+        return liveapi.cached.send({paymentagent_list: state.user.residence });
       }).then(function(data){
         var list = data.paymentagent_list.list.map(function(agent){
           agent.commission_text = state.payment_agents.get_commission_text(agent);
