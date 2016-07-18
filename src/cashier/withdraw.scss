@@ -31,15 +31,83 @@ $size_tiny: 12px;
       margin: 10px 0 20px 0;
     }
     input {
-      margin: 5px 0;
+      margin: 5px 0 2px 0;
       width: 70%;
     }
     button {
       margin-top: 15px;
     }
-    .error {
+    .errors {
+      height: $size_tiny;
+      .error {
+        font-size: $size_tiny;
+        color: $red;
+      }
+    }
+  }
+
+  .standard {
+    height: calc(100% - 22px);
+    z-index: 0;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .rotating-logo {
+      position: absolute;
+      top: 100px;
+      left: calc(50% - 100px);
+      width: 200px;
+      height: 200px;
+      background:url(../images/binary-symbol-logo.svg) center center no-repeat;
+      background-size: 100% 100%;
+      animation: withdraw-rotate 1.4s linear infinite;
+    }
+    .back-arrow {
+      padding: 5px 0 0 5px;
+      display: inline-block;
+    }
+  }
+
+  .agent {
+    padding: 10px;
+    .title {
+      display: block;
+      margin: 10px 0 5px 0;
+    }
+    select + .ui-selectmenu-button {
+      font-size: $size_small;
+      width: 60% !important;
+    }
+    .commission {
+      color: $gray;
+      font-size: $size_small;
+      line-height: 2.2em;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .currency {
+      font-size: $size_small;
+    }
+    input.amount {
+      font-size: $size_small;
+      display: inline-block;
+      width: 70px;
+      margin: 0 0 0 5px;
+    }
+    .hint {
+      display: block;
+      color: $gray;
       font-size: $size_tiny;
-      color: $red;
+    }
+    textarea {
+      font-size: $size_small;
+      outline: 0;
+      display: block;
+      width: 70%;
+      border: 1px solid #ccc;
+      resize: none;
     }
   }
 
@@ -54,4 +122,13 @@ $size_tiny: 12px;
       top: 2px;
     }
   }
+}
+
+.withdraw-dialog-ul {
+  font-size: $size_small !important;
+}
+
+@keyframes withdraw-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
