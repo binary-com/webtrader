@@ -139,7 +139,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 });
 
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
-                    title: 'Portfolio',
+                    title: 'Portfolio'.i18n(),
                     width: 700 ,
                     height: 400,
                     'data-authorized': 'true',
@@ -164,7 +164,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 balance_span = $('<span class="span-in-dialog-header" />')
                     .insertAfter(header);
                 balance_span.update = function(balance) {
-                    balance_span.html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>');
+                    balance_span.html('Account balance: <strong>'.i18n() + currency + ' ' + formatPrice(balance) + '</strong>');
                 };
 
                 var currency = data.balance.currency;
@@ -220,13 +220,14 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     //];
 
 
+                var view_button = '<button>View</button>'.i18n();
                 var rows = contracts.map(function (contract) {
                     return [
                         contract.transaction_id,
                         contract.longcode,
                         formatPrice(contract.buy_price),
                         '0.00',
-                        '<button>View</button>',
+                        view_button,
                         contract.contract_id, /* for jq-datatables rowId */
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];

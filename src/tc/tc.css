@@ -1,13 +1,6 @@
 .tc .button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
     width: 100px;
-    height: 30px;
     margin-top: 10px;
-    line-height:2em;
 }
 
 .tc td p {

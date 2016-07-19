@@ -68,7 +68,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         $menuLink.click(function () {
             if (!tradingWin) {
                 tradingWin = windows.createBlankWindow($('<div/>'), {
-                    title: 'Trading Times',
+                    title: 'Trading Times'.i18n(),
                     width: 700 ,
                     height: 400
                 });

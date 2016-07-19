@@ -25,10 +25,10 @@ define(['highstock', 'common/util'], function () {
                 var chart = $(refererChartID).highcharts();
                 require(["charts/draw/properties_selector/properties_selector"], function(popup){
                     var options = {};
-                    options.title = "Horizontal Line";
+                    options.title = 'Horizontal Line'.i18n();
                     options.inputValues = [
                     {
-                        name: 'Stroke width',
+                        name: 'Stroke width'.i18n(),
                         type: 'number',
                         id:'width',
                         default: 2,
@@ -36,14 +36,14 @@ define(['highstock', 'common/util'], function () {
                         max: 5
                     },
                     {
-                        name: 'Stroke color',
+                        name: 'Stroke color'.i18n(),
                         type: 'colorpicker',
                         id:'color',
                         default: '#ff0000'
                     }];
                     popup.open(options, addEvent);
                 });
-                
+
                 function addEvent(css){
                     H.addEvent(chart,'click',function(evt){
                         if(chart.annotate){

@@ -78,9 +78,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           },
           password_error_message: function() {
             var password = state.account.password;
-            if(password === '') return state.account.empty_fields.validate ? '* Please enter your password' : '';
-            if(password.length < 6) return '* Password must be 6 characters minimum';
-            if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers';
+            if(password === '') return state.account.empty_fields.validate ? '* Please enter your password'.i18n() : '';
+            if(password.length < 6) return '* Password must be 6 characters minimum'.i18n();
+            if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers'.i18n();
             return '';
           },
           verification: '',
@@ -111,19 +111,19 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       state.route.update = function(route){
         var routes = {
           login: {
-            title: 'Log in',
+            title: 'Log in'.i18n(),
             height: 180
           },
           registration: {
-            title: 'Registration',
+            title: 'Registration'.i18n(),
             height: 220,
           },
           account: {
-            title: 'Account opening',
+            title: 'Account opening'.i18n(),
             height: 465
           },
           confirm: {
-            title: 'Account opening',
+            title: 'Account opening'.i18n(),
             height: 415
           }
         };
@@ -156,11 +156,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                 .then(function(data) {
                   state.registration.disabled = false;
                   if(data.verify_email) {
-                    $.growl.notice({ message: 'Verification code sent to ' + email });
+                    $.growl.notice({ message: 'Verification code sent to '.i18n() + email });
                     state.route.update('account');
                   }
                   else  {
-                    throw { message: 'Email verification failed (' + data.msg_type + ')' };
+                    throw { message: 'Email verification failed ('.i18n() + data.msg_type + ')' };
                   }
                 })
                 .catch(function(err) {

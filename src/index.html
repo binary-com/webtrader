@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Highcharts implementation for Binary.com</title>
+    <title>Binary.com : Webtrader</title>
     <script src="v<version>/common/util.js"></script>
 </head>
 <body>
@@ -33,6 +33,10 @@
         local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
       }
 
+      var lang = getParameterByName('lang') || 'en';
+      if (isLangSupported(lang)) {
+          local_storage.set('i18n', {value: lang});
+      }
       window.location.href = 'v<version>/main.html' + suffix;
     </script>
 </body>

@@ -58,7 +58,7 @@ define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', '
                 autoOpen: false,
                 resizable: false,
                 width: 350,
-                height: 400,
+                height: 260,
                 modal: true,
                 my: 'center',
                 at: 'center',

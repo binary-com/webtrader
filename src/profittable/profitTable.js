@@ -61,6 +61,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             var transactions = (data.profit_table && data.profit_table.transactions) || [];
             var rows = transactions.map(function (trans) {
                 var profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
+                var view_button = '<button>View</button>'.i18n();
                 return [
                     epoch_to_string(trans.purchase_time, { utc: true }),
                     trans.transaction_id,
@@ -69,7 +70,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     epoch_to_string(trans.sell_time, { utc: true }),
                     trans.sell_price,
                     profit,
-                    '<button>View</button>',
+                    view_button,
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
@@ -106,7 +107,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     function initProfitWin() {
         require(['text!profittable/profitTable.html'], function (html) {
           profitWin = windows.createBlankWindow($('<div/>'), {
-              title: 'Profit Table',
+              title: 'Profit Table'.i18n(),
               width: 700 ,
               height: 400,
               destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
@@ -168,7 +169,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             refreshTable({clear: true});
             datepicker = profitWin.addDateToHeader({
-                title: 'Jump to: ',
+                title: 'Jump to: '.i18n(),
                 date: null, /* set date to null */
                 changed: refreshTable,
                 cleared: refreshTable

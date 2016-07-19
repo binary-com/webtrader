@@ -114,7 +114,6 @@ function validateParameters() {
       var timePeriod_Obj = null;
       try {
           timePeriod_Obj = convertToTimeperiodObject(timePeriod_param);
-          console.log('timePeriod param : ', timePeriod_param, ", intValue : ", timePeriod_Obj.intValue(), ", suffix : ", timePeriod_Obj.suffix());
       } catch(e) {}
       if (!timePeriod_Obj) return false;
 
@@ -122,7 +121,6 @@ function validateParameters() {
       var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 &&  [1,2,3,5,10,15,30].indexOf(timePeriod_Obj.intValue()) != -1;
       var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && [1,2,4,8].indexOf(timePeriod_Obj.intValue()) != -1;
       var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() === 1;
-      console.log('isValidTickTF : ', isValidTickTF, ', isValidMinTF : ', isValidMinTF, ', isValidHourTF : ', isValidHourTF, ', isValidDayTF : ', isValidDayTF);
       return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
 }
 
@@ -155,10 +153,6 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 function formatPrice(float) {
     return (float * 1).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
-
-function resizeElement(selector) {
-  $(selector).height($(window).height() - 10).width($(window).width() - 10);
-};
 
 function sortAlphaNum(property) {
     'use strict';
@@ -235,6 +229,15 @@ function validateEmail(email) {
 String.prototype.replaceAll = function(target, replacement) {
     return this.split(target).join(replacement);
 };
+String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) {
+        return typeof args[number] != 'undefined'
+            ? args[number]
+            : match
+            ;
+    });
+};
 
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
@@ -259,4 +262,59 @@ var local_storage = {
     name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
     return localStorage.removeItem(name);
   }
+}
+
+function flatten_object(data) {
+    var result = {};
+    function recurse (cur, prop) {
+        if (Object(cur) !== cur) {
+            result[prop] = cur;
+        } else if (Array.isArray(cur)) {
+             for(var i=0, l=cur.length; i<l; i++)
+                 recurse(cur[i], prop + "[" + i + "]");
+            if (l == 0)
+                result[prop] = [];
+        } else {
+            var isEmpty = true;
+            for (var p in cur) {
+                isEmpty = false;
+                recurse(cur[p], prop ? prop+"."+p : p);
+            }
+            if (isEmpty && prop)
+                result[prop] = {};
+        }
+    }
+    recurse(data, "");
+    return result;
+}
+
+function isLangSupported(lang) {
+    lang = (lang || '').trim().toLowerCase();
+    return lang === 'ar' || lang === 'de' || lang === 'en' || lang === 'es' || lang === 'fr' || lang === 'id' || lang === 'it'
+            || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
+}
+
+
+/* setup translating string literals */
+function setup_i18n_translation(dict) {
+      var keys = Object.keys(dict).filter(function(key) { return key !== '' && key !== ' '; });
+      keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
+      /* Escape keys for using them in regex. */
+      var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
+      var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
+
+      var replacer = function (_, word) {
+        return (dict[word] && dict[word][1]) || word;
+      };
+      String.prototype.i18n = function() {
+        return this.replace(regexp, replacer);
+      };
+
+      /* hook $(html) to automatically call .i18n() before creating DOM nodes */
+      var parseHTML = $.parseHTML.bind($);
+      $.parseHTML = function(data, context, keepScripts) {
+          if(typeof data === 'string')
+            data = data.i18n();
+          return parseHTML(data, context, keepScripts);
+      }
 }

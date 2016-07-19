@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             uncompressed: ['dist/uncompressed'],
             branches:[ 'dist/branches'],
             current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
-            dist: ['dist']
+            dist: ['dist'],
         },
         copy: {
             main: {
@@ -104,6 +104,16 @@ module.exports = function (grunt) {
                         cwd: 'dist/compressed',
                         src: [ '**'],
                         dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
+                    }
+                ]
+            },
+            copy_i18n: {
+                files: [
+                    {
+                        expand: true,
+                        src: [ '**'],
+                        cwd: 'translations/i18n/json',
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/i18n/'
                     }
                 ]
             },
@@ -379,17 +389,26 @@ module.exports = function (grunt) {
                         {
                             expand: true,
                             cwd: 'dist/uncompressed/',
-                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js', 
+                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js',
                                 'v<%=pkg.version%>/images/favicons/**']
                         }
                     ]
             }
-        }
+        },
+        po2json: {
+          options: {
+            format: 'raw'
+          },
+          all: {
+            src: ['translations/i18n/*.po'],
+            dest: 'translations/i18n/json/'
+          }
+        },
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
-	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
+  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
@@ -399,5 +418,4 @@ module.exports = function (grunt) {
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
     /* clean all the files in gh-pages branch */
     grunt.registerTask('gh-pages-clean', ['gh-pages:clean']);
-
 };

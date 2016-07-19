@@ -66,8 +66,6 @@ define(['highstock'], function () {
                   });
 
                 }
-
-                console.log('Its an annotate call from chart : ' + $(chart.container).attr("id"));
               }
             	else {
             		c.call(this, e);

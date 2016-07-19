@@ -495,8 +495,11 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                     });
                 })
                 .catch(function(err) {
-                      console.error(err.message);
-                      $.growl.error({message: err.message});
+                    console.error(err.message);
+                    $.growl.error({message: err.message});
+                    //Remove token and trigger login-error event.
+                    local_storage.remove('oauth');
+                    $(".login").trigger("login-error");
                 });
               }
             });
@@ -549,7 +552,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                 my: 'center',
                 at: 'center',
                 of: window,
-                title: 'blank window',
+                title: 'Blank window'.i18n(),
                 hide: 'fade',
                 icons: {
                   close: 'ui-icon-close'
