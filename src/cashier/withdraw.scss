@@ -103,6 +103,10 @@ $size_tiny: 12px;
           width: 50px;
           display: inline-block;
           margin: 0 117px 0 0;
+          &[disabled] {
+            border-color: $gray;
+            color: $gray;
+          }
         }
       }
 
@@ -120,8 +124,14 @@ $size_tiny: 12px;
       border: 1px solid #ccc;
       resize: none;
     }
+    .error {
+      margin: 2px 0 0 0;
+      display: block;
+      font-size: $size_tiny;
+      color: $red;
+    }
     button.submit {
-      margin: 20px 0 15px 0;
+      margin: 15px 0 15px 0;
     }
     .disclaimer {
       font-size: $size_tiny;

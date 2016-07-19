@@ -64,10 +64,10 @@
 			</div>
 			<div class='fields'>
 				<span>{agent.currency}</span>
-				<input rv-value='agent.amount'/>
+				<input rv-disabled='agent.loginid | eq ""' rv-value='agent.amount'/>
 
 				<span rv-visible='agent.amount'>{agent.currency}</span>
-				<span rv-visible='agent.amount'>{agent.amount_with_commission}</span>
+				<span rv-visible='agent.amount' rv-text='agent.amount_with_commission < amount'></span>
 			</div>
 		</div>
 
@@ -75,6 +75,7 @@
 
 		<span class='title'>Further instructions</span>
 		<textarea class='instructions' rows='8' rv-value='agent.instructions' />
+		<span class='error' rv-visible='agent.instructions | eq "" | and empty_fields.validate'>This field is required.</span>
 
 		<button class='submit' rv-on-click='agent.click' rv-css-opacity='agent.disabled | ternary 0.5 1'>Submit</button>
 

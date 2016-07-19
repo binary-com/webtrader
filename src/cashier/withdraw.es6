@@ -93,11 +93,10 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             loginid: '',
             agents: [],
             commission: '',
-            amount: 10,
+            amount: '',
             currency: local_storage.get('authorize').currency,
             residence: '',
             instructions: '',
-            amount_with_commission: 0
           }
         };
         let {route, menu, verify, empty_fields, standard, agent} = state;
@@ -171,11 +170,36 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           else {
             agent.commission = '';
           }
-          console.warn(agent.commission);
+        }
+
+        agent.amount_with_commission = () => {
+            var with_commission = (agent.amount || 0)*(100 - agent.commission)/100;
+            return with_commission.toFixed(2);
         }
 
         agent.click = () => {
-          console.warn('clicked');
+          if(!agent.loginid) {
+            $.growl.error({message: 'Please select a payment agent'.i18n()});
+            return;
+          }
+          if(!(agent.amount >= 10 && agent.amount <= 2000)) {
+            $.growl.error({message: 'Amount Min: 10 Max: 2000'.i18n()});
+            return;
+          }
+          if(!agent.instructions) {
+            empty_fields.show();
+            return;
+          }
+
+          var request = {
+            paymentagent_withdraw: 1,
+            paymentagent_loginid: agent.loginid,
+            currency: agent.currency,
+            amount: agent.amount,
+            verification_code: verify.code
+          };
+          console.warn(request);
+          agent.disabled = true;
         }
 
         liveapi.send({get_settings: 1})
