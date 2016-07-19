@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-07-13 07:53+0000\n"
+"PO-Revision-Date: 2016-07-19 09:19+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
@@ -164,537 +164,537 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "所有时间均采用格林威治标准时间（GMT）"
 
 msgid "Amount Per Point"
-msgstr ""
+msgstr "每点之金额"
 
 msgid "Amount per point"
-msgstr ""
+msgstr "每点之金额"
 
 msgid "Answer"
-msgstr ""
+msgstr "答案"
 
 msgid "Applied to"
-msgstr ""
+msgstr "应用为"
 
 msgid "Apply"
-msgstr ""
+msgstr "申请"
 
 msgid "Apply new theme?"
-msgstr ""
+msgstr "使用新主题？"
 
 msgid "Appropriateness Test: WARNING"
-msgstr ""
+msgstr "合适性测试:警告"
 
 msgid "Are you sure you want to delete this token?"
-msgstr ""
+msgstr "确定删除此令牌？"
 
 msgid "Aroon Down Stroke"
-msgstr ""
+msgstr "阿隆下行线"
 
 msgid "Aroon Up Stroke"
-msgstr ""
+msgstr "阿隆上升线"
 
 msgid "Asians"
-msgstr ""
+msgstr "亚洲期权"
 
 msgid "Asset"
-msgstr ""
+msgstr "资产"
 
 msgid "Asset Index"
-msgstr ""
+msgstr "资产指数"
 
 msgid "Average"
-msgstr ""
+msgstr "平均"
 
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 msgid "Back to list"
-msgstr ""
+msgstr "返回列表"
 
 msgid "Background Color"
-msgstr ""
+msgstr "背景颜色"
 
 msgid "Barrier"
-msgstr ""
+msgstr "障碍"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "障碍位移"
 
 msgid "Binary options or other financial derivatives"
-msgstr ""
+msgstr "二元期权或其他金融衍生品"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : Webtrader"
 
 msgid "Blank window"
-msgstr ""
+msgstr "空白窗口"
 
 msgid "Bought"
-msgstr ""
+msgstr "购入"
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "第一辆车的品牌"
 
 msgid "Browser upgrade required"
-msgstr ""
+msgstr "需更新浏览器"
 
 msgid "Buy Price"
-msgstr ""
+msgstr "购入价"
 
 msgid "Buy price"
-msgstr ""
+msgstr "购入价"
 
 msgid "By clicking"
-msgstr ""
+msgstr "通过点击"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
-msgstr ""
+msgstr "通过点击OK键，您确认已经阅读并接受更新的"
 
 msgid "CLOSE"
-msgstr ""
+msgstr "关闭"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 msgid "Candles"
-msgstr ""
+msgstr "蜡烛"
 
 msgid "Candlestick down-color"
-msgstr ""
+msgstr "蜡烛指标下跌颜色"
 
 msgid "Candlestick down-line"
-msgstr ""
+msgstr "蜡烛指标下跌线"
 
 msgid "Candlestick up-color"
-msgstr ""
+msgstr "蜡烛指标上升颜色"
 
 msgid "Candlestick up-line"
-msgstr ""
+msgstr "蜡烛指标上升线"
 
 msgid "Cash Balance"
-msgstr ""
+msgstr "现金余额"
 
 msgid "Change Backend Server"
-msgstr ""
+msgstr "更换后端服务器"
 
 msgid "Change password"
-msgstr ""
+msgstr "更改密码"
 
 msgid "Chart"
-msgstr ""
+msgstr "图表"
 
 msgid "Chart Themes"
-msgstr ""
+msgstr "图表主题"
 
 msgid "Chart background"
-msgstr ""
+msgstr "图表背景"
 
 msgid "Choose password"
-msgstr ""
+msgstr "选择密码"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Chrome Extension"
-msgstr ""
+msgstr "Chrome 扩展程序"
 
 msgid "Click Jacking test"
-msgstr ""
+msgstr "点击劫持测试"
 
 msgid "Click to log in with your Binary.com account"
-msgstr ""
+msgstr "点击登录Binary.com账户"
 
 msgid "Close Price"
-msgstr ""
+msgstr ":收盘价"
 
 msgid "Close all"
-msgstr ""
+msgstr "全部关闭"
 
 msgid "Closes"
-msgstr ""
+msgstr "关"
 
 msgid "Commodities trading experience"
-msgstr ""
+msgstr "大宗商品交易经验"
 
 msgid "Commodities trading frequency"
-msgstr ""
+msgstr "大宗商品交易频率"
 
 msgid "Conditions"
-msgstr ""
+msgstr "条件"
 
 msgid "Config changes successful"
-msgstr ""
+msgstr "成功更改配置"
 
 msgid "Connection closed"
-msgstr ""
+msgstr "连接已关闭"
 
 msgid "Connection error. Refresh the page"
-msgstr ""
+msgstr "连接出错：请刷新页面"
 
 msgid "Construction"
-msgstr ""
+msgstr "建筑"
 
 msgid "Continue"
-msgstr ""
+msgstr "继续"
 
 msgid "Continue Trading"
-msgstr ""
+msgstr "继续交易"
 
 msgid "Contract"
-msgstr ""
+msgstr "合约"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "合约确认"
 
 msgid "Contract is not yet started"
-msgstr ""
+msgstr "合约还未开始生效"
 
 msgid "Contracts"
-msgstr ""
+msgstr "合约"
 
 msgid "Country of residence"
-msgstr ""
+msgstr "居住国"
 
 msgid "Create"
-msgstr ""
+msgstr "创建"
 
 msgid "Create token"
-msgstr ""
+msgstr "创建令牌"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "借方/贷方"
 
 msgid "Crosshair"
-msgstr ""
+msgstr "交叉线"
 
 msgid "Current Level"
-msgstr ""
+msgstr "当前价位"
 
 msgid "Current Spot"
-msgstr ""
+msgstr "当前现价"
 
 msgid "Current Spot Time"
-msgstr ""
+msgstr "当前现价时间"
 
 msgid "Current indicators"
-msgstr ""
+msgstr "当前指标"
 
 msgid "Current overlays"
-msgstr ""
+msgstr "当前叠加价格"
 
 msgid "Current password"
-msgstr ""
+msgstr "当前密码"
 
 msgid "Current regulations require that you provide us the following"
-msgstr ""
+msgstr "当前法规需要您向我们提供以下"
 
 msgid "Current time"
-msgstr ""
+msgstr "当前时间"
 
 msgid "Custom Theme"
-msgstr ""
+msgstr "自定义主题"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "自定义图表外观"
 
 msgid "DI Stroke"
-msgstr ""
+msgstr "DI举"
 
 msgid "DX MA Type"
-msgstr ""
+msgstr "DX MA 类型"
 
 msgid "Daily limit on losses"
-msgstr ""
+msgstr "每日损失限额"
 
 msgid "Daily turnover limit"
-msgstr ""
+msgstr "每日交易限额"
 
 msgid "Dark Blue"
-msgstr ""
+msgstr "深蓝"
 
 msgid "Dark Green"
-msgstr ""
+msgstr "深绿"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica 主题"
 
 msgid "Dash style"
-msgstr ""
+msgstr "虚线样式"
 
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 msgid "Date of birth"
-msgstr ""
+msgstr "出生日期"
 
 msgid "Days"
-msgstr ""
+msgstr "日"
 
 msgid "Decline"
-msgstr ""
+msgstr "拒绝"
 
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 msgid "Delete level(s)"
-msgstr ""
+msgstr "删除水平"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr ""
+msgstr "通过IFRAME演示联盟会员访问Binary.com图表"
 
 msgid "Deposit of USD"
-msgstr ""
+msgstr "美元存款"
 
 msgid "Describe what this token is for to find it later"
-msgstr ""
+msgstr "令牌用途说明以备稍后找寻"
 
 msgid "Description"
-msgstr ""
+msgstr "说明"
 
 msgid "Digits"
-msgstr ""
+msgstr "数字"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr ""
+msgstr "是否安装Webtrader chrome扩展程序？"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
-msgstr ""
+msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
 
 msgid "Dot"
-msgstr ""
+msgstr "点"
 
 msgid "Double MA Period"
-msgstr ""
+msgstr "双MA期限"
 
 msgid "Double MA Type"
-msgstr ""
+msgstr "双MA类型"
 
 msgid "Double click the object to remove"
-msgstr ""
+msgstr "双击对象执行删除"
 
 msgid "Download CSV"
-msgstr ""
+msgstr "下载CSV"
 
 msgid "Download PNG"
-msgstr ""
+msgstr "下载PNG"
 
 msgid "Download SVG"
-msgstr ""
+msgstr "下载SVG"
 
 msgid "Download as"
-msgstr ""
+msgstr "下载as"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "正在下载 .csv"
 
 msgid "Duration"
-msgstr ""
+msgstr "持续时间"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "Edge"
-msgstr ""
+msgstr "边缘"
 
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 msgid "Education"
-msgstr ""
+msgstr "教育"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "电子邮件验证失败"
 
 msgid "Embed code"
-msgstr ""
+msgstr "嵌入代码"
 
 msgid "End Time"
-msgstr ""
+msgstr "结束时间"
 
 msgid "Ends In/Out"
-msgstr ""
+msgstr "“范围之内/之外”收盘"
 
 msgid "Enter your current password"
-msgstr ""
+msgstr "输入当前密码"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "入市现价"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "入市现价"
 
 msgid "Error downloading .csv"
-msgstr ""
+msgstr "下载.csv时发生错误"
 
 msgid "Error getting data for"
-msgstr ""
+msgstr "获取以下数据时出错"
 
 msgid "Estimated Net Worth"
-msgstr ""
+msgstr "估计净值"
 
 msgid "Exclude me from the website until"
-msgstr ""
+msgstr "禁止我访问本网站直到"
 
 msgid "Exclude time cannot be less than 6 months"
-msgstr ""
+msgstr "禁止时间不能少于6个月"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "退市现价"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "退市现价"
 
 msgid "Explanation"
-msgstr ""
+msgstr "说明"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "密码更新失败"
 
 msgid "Fall"
-msgstr ""
+msgstr "下跌"
 
 msgid "Family name"
-msgstr ""
+msgstr "姓氏"
 
 msgid "Fast %K MA Type"
-msgstr ""
+msgstr "快捷 %K MA 类型"
 
 msgid "Fast %K Period"
-msgstr ""
+msgstr "快捷 %K 期限"
 
 msgid "Fast Limit"
-msgstr ""
+msgstr "快捷限值"
 
 msgid "Fast MA Type"
-msgstr ""
+msgstr "快捷 MA 类型"
 
 msgid "Fast Period"
-msgstr ""
+msgstr "快捷期限"
 
 msgid "Favorites"
-msgstr ""
+msgstr "收藏夹"
 
 msgid "Favourite artist"
-msgstr ""
+msgstr "最喜欢的艺术家"
 
 msgid "Favourite dish"
-msgstr ""
+msgstr "最喜欢的菜肴"
 
 msgid "Final Price"
-msgstr ""
+msgstr "最终价格"
 
 msgid "Final price"
-msgstr ""
+msgstr "最终价格"
 
 msgid "Finance"
-msgstr ""
+msgstr "金融"
 
 msgid "Financial information"
-msgstr ""
+msgstr "财务信息"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First name"
-msgstr ""
+msgstr "名字"
 
 msgid "Forex trading experience"
-msgstr ""
+msgstr "外汇交易经验"
 
 msgid "Forex trading frequency"
-msgstr ""
+msgstr "外汇交易频率"
 
 msgid "Fri"
-msgstr ""
+msgstr "星期五"
 
 msgid "From"
-msgstr ""
+msgstr "从"
 
 msgid "Gray"
-msgstr ""
+msgstr "灰色"
 
 msgid "Grid"
-msgstr ""
+msgstr "网格"
 
 msgid "Grid Light"
-msgstr ""
+msgstr "网格光照"
 
 msgid "HIGH"
-msgstr ""
+msgstr "高"
 
 msgid "Health"
-msgstr ""
+msgstr "健康状况"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "高障碍"
 
 msgid "High Price"
-msgstr ""
+msgstr "高价位"
 
 msgid "High Stroke"
-msgstr ""
+msgstr "高价举"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "高障碍位移"
 
 msgid "Higher"
-msgstr ""
+msgstr "较高"
 
 msgid "Histogram Color"
-msgstr ""
+msgstr "直方图颜色"
 
 msgid "Histogram Color For Higher Values"
-msgstr ""
+msgstr "较高数值的直方图颜色"
 
 msgid "Histogram Color For Lower Values"
-msgstr ""
+msgstr "较低数值的直方图颜色"
 
 msgid "Home Address"
-msgstr ""
+msgstr "家庭地址"
 
 msgid "Horizontal Line"
-msgstr ""
+msgstr "水平线"
 
 msgid "Hours"
-msgstr ""
+msgstr "小时"
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "本人已经阅读并同意Binary.com的"
 
 msgid "If you select a"
-msgstr ""
+msgstr "如您选择"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "如您选择特定的"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
-msgstr ""
+msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
 "you in order to assess whether a given product or service is appropriate for "
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
-msgstr ""
+msgstr "为了给您提供服务，我们必须向您获取信息，以便确定产品或服务是否适合您（也就是说，看您是否拥有足够经验和知识，以了解相关的风险）"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
-msgstr ""
+msgstr "在进行博彩产品交易的二元期权交易时，请务必记住博彩活动可能会上瘾"
 
 msgid "In/Out"
-msgstr ""
+msgstr "“范围之内/之外”"
 
 msgid "Income Source"
-msgstr ""
+msgstr "收入来源"
 
 msgid "Indicative Price"
 msgstr ""
