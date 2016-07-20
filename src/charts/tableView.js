@@ -119,12 +119,12 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             if (firstNumber <= secondNumber)
                 return {
                     value: diff + '(' + Percentage_diff + '%)',
-                    image: diff === 0 ? '' : '<img src="images/green_up_arrow.svg" class="arrow-images"/>'
+                    image: diff === 0 ? '' : '<img src="images/blue_up_arrow.svg" class="arrow-images"/>'
                 };
             else
                 return {
                     value: '<span style="color:brown">' + diff + '(' + Percentage_diff + '%) </span>',
-                    image: diff === 0 ? '' : '<img src="images/red_down_arrow.svg" class="arrow-images"/>'
+                    image: diff === 0 ? '' : '<img src="images/orange_down_arrow.svg" class="arrow-images"/>'
                 };
         };
 
