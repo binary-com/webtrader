@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-07-14 16:48+0000\n"
+"PO-Revision-Date: 2016-07-20 04:19+0000\n"
 "Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -218,7 +218,7 @@ msgid "Barrier"
 msgstr "バリア"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "追加バリア値"
 
 msgid "Binary options or other financial derivatives"
 msgstr "バイナリーオプション または その他金融派生商品"
@@ -230,7 +230,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : ウェブトレーダー"
 
 msgid "Blank window"
-msgstr ""
+msgstr "空白のウィンドウ"
 
 msgid "Bought"
 msgstr "購入済"
@@ -469,7 +469,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマネーでお取引を始めましょう"
 
 msgid "Dot"
-msgstr ""
+msgstr "ドット"
 
 msgid "Double MA Period"
 msgstr "ダブル MA 期間"
@@ -478,7 +478,7 @@ msgid "Double MA Type"
 msgstr "ダブル MA タイプ"
 
 msgid "Double click the object to remove"
-msgstr ""
+msgstr "削除するオブジェクトをダブルクリックしてください"
 
 msgid "Download CSV"
 msgstr "CSVでダウンロード"
@@ -565,76 +565,76 @@ msgid "Family name"
 msgstr "氏名(全角)"
 
 msgid "Fast %K MA Type"
-msgstr ""
+msgstr "高速 %K MA タイプ"
 
 msgid "Fast %K Period"
-msgstr ""
+msgstr "高速 %K 期間"
 
 msgid "Fast Limit"
-msgstr ""
+msgstr "高速 制限"
 
 msgid "Fast MA Type"
-msgstr ""
+msgstr "高速 MA タイプ"
 
 msgid "Fast Period"
-msgstr ""
+msgstr "高速 期間"
 
 msgid "Favorites"
-msgstr ""
+msgstr "お気に入り"
 
 msgid "Favourite artist"
-msgstr ""
+msgstr "好きなアーティスト"
 
 msgid "Favourite dish"
-msgstr ""
+msgstr "好きな料理"
 
 msgid "Final Price"
-msgstr ""
+msgstr "最終価格"
 
 msgid "Final price"
-msgstr ""
+msgstr "最終価格"
 
 msgid "Finance"
-msgstr ""
+msgstr "金融"
 
 msgid "Financial information"
-msgstr ""
+msgstr "金融情報"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First name"
-msgstr ""
+msgstr "名前（名）"
 
 msgid "Forex trading experience"
-msgstr ""
+msgstr "外国為替取引の経験"
 
 msgid "Forex trading frequency"
-msgstr ""
+msgstr "外国為替取引の頻度"
 
 msgid "Fri"
-msgstr ""
+msgstr "金曜日"
 
 msgid "From"
-msgstr ""
+msgstr "開始"
 
 msgid "Gray"
-msgstr ""
+msgstr "グレー"
 
 msgid "Grid"
-msgstr ""
+msgstr "グリッド"
 
 msgid "Grid Light"
-msgstr ""
+msgstr "グリッド ライト"
 
 msgid "HIGH"
-msgstr ""
+msgstr "HIGH"
 
 msgid "Health"
 msgstr ""
 
 msgid "High Barrier"
-msgstr ""
+msgstr "高限バリア"
 
 msgid "High Price"
 msgstr ""
@@ -643,42 +643,42 @@ msgid "High Stroke"
 msgstr ""
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "上限追加バリア値"
 
 msgid "Higher"
-msgstr ""
+msgstr "HIGH"
 
 msgid "Histogram Color"
-msgstr ""
+msgstr "ヒストグラム カラー"
 
 msgid "Histogram Color For Higher Values"
-msgstr ""
+msgstr "高い値のヒストグラムカラー"
 
 msgid "Histogram Color For Lower Values"
-msgstr ""
+msgstr "低い値のヒストグラムカラー"
 
 msgid "Home Address"
-msgstr ""
+msgstr "現住所"
 
 msgid "Horizontal Line"
 msgstr ""
 
 msgid "Hours"
-msgstr ""
+msgstr "時間"
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "よく読んだうえで、Binary.comに同意します"
 
 msgid "If you select a"
-msgstr ""
+msgstr "xxxを選択した場合"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "特定のxxxを選択した場合"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
-msgstr ""
+msgstr "テーマを適用するためには、ページの更新をする必要があります。続行してもよろしいですか？"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -686,6 +686,8 @@ msgid ""
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
 msgstr ""
+"当サービスでは、どの所定の製品またはサービスがお客様に適しているか評価するためにお客さまの情報を必要とします。（関連するリスクを理解する経験や知識があるか"
+"どうかがわかります。）"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
@@ -693,67 +695,67 @@ msgid ""
 msgstr ""
 
 msgid "In/Out"
-msgstr ""
+msgstr "In/Out"
 
 msgid "Income Source"
-msgstr ""
+msgstr "収入源"
 
 msgid "Indicative Price"
-msgstr ""
+msgstr "気配値"
 
 msgid "Indices trading experience"
-msgstr ""
+msgstr "インデックス取引の経験"
 
 msgid "Indices trading frequency"
-msgstr ""
+msgstr "インデックス取引の頻度"
 
 msgid "Industry of Employment"
-msgstr ""
+msgstr "雇用産業"
 
 msgid "Instrument"
-msgstr ""
+msgstr "商品"
 
 msgid "Instruments"
-msgstr ""
+msgstr "商品"
 
 msgid "Investments & Dividends"
-msgstr ""
+msgstr "投資と配当"
 
 msgid "Jump to"
-msgstr ""
+msgstr "xxxへ移動する"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
 
 msgid "LOW"
-msgstr ""
+msgstr "LOW"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "下一桁の数字を予想"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "下一桁の数字は予想値より上です"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "下一桁の数字は予想値より下です"
 
 msgid "Last used"
-msgstr ""
+msgstr "最後に使用したもの"
 
 msgid "Less than"
-msgstr ""
+msgstr "未満"
 
 msgid "Let's do it"
 msgstr ""
 
 msgid "Level"
-msgstr ""
+msgstr "レベル"
 
 msgid "Level of Education"
-msgstr ""
+msgstr "能力レベル"
 
 msgid "Line"
-msgstr ""
+msgstr "ライン"
 
 msgid "Line Dot"
 msgstr ""
@@ -762,82 +764,82 @@ msgid "Line Stroke"
 msgstr ""
 
 msgid "Link"
-msgstr ""
+msgstr "リンク"
 
 msgid "Loading"
-msgstr ""
+msgstr "読み込み中"
 
 msgid "Loading Asset Index"
-msgstr ""
+msgstr "資産インデックスの読み込み"
 
 msgid "Loading Configurations"
-msgstr ""
+msgstr "設定の読込み中"
 
 msgid "Loading Download/View Data"
 msgstr ""
 
 msgid "Loading Password dialog"
-msgstr ""
+msgstr "パスワードダイアログを読み込み中"
 
 msgid "Loading Profit Table"
 msgstr ""
 
 msgid "Loading Real account opening"
-msgstr ""
+msgstr "リアルマネー口座開設　読込み中"
 
 msgid "Loading Self-Exclusion"
-msgstr ""
+msgstr "取引制限の読込み中"
 
 msgid "Loading Statement Table"
 msgstr ""
 
 msgid "Loading Token management"
-msgstr ""
+msgstr "トークンの設定を読込み中"
 
 msgid "Loading Trading Times"
-msgstr ""
+msgstr "取引時間を読込み中"
 
 msgid "Loading chart and trade menus"
-msgstr ""
+msgstr "チャートと取引メニューを読込み中"
 
 msgid "Loading custom theme configuration"
-msgstr ""
+msgstr "カスタムテーマの設定を読込み中"
 
 msgid "Loading portfolio"
-msgstr ""
+msgstr "ポートフォリオを読込み中"
 
 msgid "Loading self-exclusion settings"
-msgstr ""
+msgstr "取引制限の設定を読込み中"
 
 msgid "Log in"
-msgstr ""
+msgstr "ログイン"
 
 msgid "Log in time"
-msgstr ""
+msgstr "ログイン時間"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "取引継続時間制限に達したためログアウトしました！"
 
 msgid "Login"
-msgstr ""
+msgstr "ログイン"
 
 msgid "Logout"
-msgstr ""
+msgstr "ログアウト"
 
 msgid "Long MA Type"
-msgstr ""
+msgstr "ロング MA タイプ"
 
 msgid "Long ROC Period"
-msgstr ""
+msgstr "ロング ROC 期間"
 
 msgid "Long Stop Line Stroke"
 msgstr ""
 
 msgid "Long Term Period"
-msgstr ""
+msgstr "長期"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "下限バリア"
 
 msgid "Low Price"
 msgstr ""
@@ -846,16 +848,16 @@ msgid "Low Stroke"
 msgstr ""
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "下限追加バリア値"
 
 msgid "Lower"
-msgstr ""
+msgstr "LOW"
 
 msgid "Lower Band Stroke"
 msgstr ""
 
 msgid "MA Type"
-msgstr ""
+msgstr "MA タイプ"
 
 msgid "MACD Line Stroke"
 msgstr ""
@@ -864,55 +866,55 @@ msgid "Mass Period"
 msgstr ""
 
 msgid "Max/Min Period"
-msgstr ""
+msgstr "最長/最短 期間"
 
 msgid "Maximum"
-msgstr ""
+msgstr "最大"
 
 msgid "Maximum account cash balance"
-msgstr ""
+msgstr "口座預託額の上限額"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
-msgstr ""
+msgstr "30日の最大取引数量 (半角)"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
-msgstr ""
+msgstr "7日間の最大取引数量 (半角)"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr ""
+msgstr "1日の最大取引数量 (半角)"
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr ""
+msgstr "30日間の最大損失 (半角)"
 
 msgid "Maximum aggregate loss per day"
-msgstr ""
+msgstr "1日の最大損失 (半角)"
 
 msgid "Maximum number of open positions"
-msgstr ""
+msgstr "最大保有ポジション"
 
 msgid "Memorable date"
-msgstr ""
+msgstr "思い出のある日時"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "思い出のある都市／街の名前"
 
 msgid "Middle Band Stroke"
 msgstr ""
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr ""
+msgstr "数字を含む6文字以上でご入力ください"
 
 msgid "Minutes"
-msgstr ""
+msgstr "分"
 
 msgid "Miss"
-msgstr ""
+msgstr "Miss"
 
 msgid "Mon"
-msgstr ""
+msgstr "月曜日"
 
 msgid "Mother's maiden name"
-msgstr ""
+msgstr "母親の旧姓"
 
 msgid "Mr"
 msgstr ""
@@ -998,7 +1000,7 @@ msgid "OPEN"
 msgstr ""
 
 msgid "Offset"
-msgstr ""
+msgstr "追加"
 
 msgid "Ok"
 msgstr ""
