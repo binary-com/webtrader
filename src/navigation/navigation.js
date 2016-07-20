@@ -130,6 +130,12 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
                 liveapi.invalidate();
                 logout_btn.attr('disabled', 'disabled');
             });
+
+            // Restore login-button in case of login-error
+            $('.login').on("login-error",function(e){
+                console.log("Encountered login error");
+                login_menu.fadeIn();
+            });
         });
 
         /* update time every one minute */

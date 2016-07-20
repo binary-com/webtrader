@@ -179,7 +179,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                     table.api().row.add(row);
                 }
                 else {
-                    table.api().row(0).data(row);
+                    var topRowIndex = table.api().rows()[0][0];
+                    table.api().row(topRowIndex).data(row);
                 }
                 table.api().draw();
             });
