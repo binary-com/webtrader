@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-21 10:26+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-07-21 11:56+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Weblate 2.8-dev\n"
 
 msgid "%D MA Type"
-msgstr ""
+msgstr "Тип СС %D"
 
 msgid "%D Period"
 msgstr ""
@@ -25,13 +25,13 @@ msgid "%D Stroke"
 msgstr ""
 
 msgid "%K MA Type"
-msgstr ""
+msgstr "Тип СС %K "
 
 msgid "%K Period"
-msgstr ""
+msgstr "Период %K"
 
 msgid "%K Stroke"
-msgstr ""
+msgstr "Величина %K"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -59,13 +59,13 @@ msgid "10"
 msgstr "10"
 
 msgid "10m"
-msgstr ""
+msgstr "10м"
 
 msgid "15"
 msgstr "15"
 
 msgid "15m"
-msgstr ""
+msgstr "15м"
 
 msgid "1d"
 msgstr "1д"
@@ -90,88 +90,88 @@ msgid "30-day limit on losses"
 msgstr ""
 
 msgid "30-day turnover limit"
-msgstr ""
+msgstr "30-дневный лимит на объём покупок"
 
 msgid "30m"
-msgstr ""
+msgstr "30м"
 
 msgid "3m"
-msgstr ""
+msgstr "3м"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr ""
+msgstr "40 или более транзакций за последние 12 мес"
 
 msgid "4h"
-msgstr ""
+msgstr "4ч"
 
 msgid "5m"
-msgstr ""
+msgstr "5м"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr ""
+msgstr "6-10 транзакций за последние 12 мес"
 
 msgid "7-day limit on losses"
 msgstr ""
 
 msgid "7-day turnover limit"
-msgstr ""
+msgstr "7-дневный лимит на объём покупок"
 
 msgid "8h"
-msgstr ""
+msgstr "8ч"
 
 msgid "ADX MA Type"
-msgstr ""
+msgstr "Тип СС ADX"
 
 msgid "ADX Stroke"
 msgstr ""
 
 msgid "ATR Period"
-msgstr ""
+msgstr "Период ATR"
 
 msgid "Acceleration"
-msgstr ""
+msgstr "Ускорение"
 
 msgid "Accept"
-msgstr ""
+msgstr "Принять"
 
 msgid "Account balance"
-msgstr ""
+msgstr "Баланс счёта"
 
 msgid "Account id not found"
-msgstr ""
+msgstr "ID счёта не найден"
 
 msgid "Account opening"
-msgstr ""
+msgstr "Открытие счёта"
 
 msgid "Account token not found"
-msgstr ""
+msgstr "Ключ счёта не найден"
 
 msgid "Action"
-msgstr ""
+msgstr "Действие"
 
 msgid "Add indicator"
-msgstr ""
+msgstr "Добавить индикатор"
 
 msgid "Add level"
-msgstr ""
+msgstr "Добавить уровень"
 
 msgid "Add overlays"
-msgstr ""
+msgstr "Добавить наложение"
 
 msgid "Add/remove overlays"
-msgstr ""
+msgstr "Добавить/удалить наложение"
 
 msgid "Admin"
-msgstr ""
+msgstr "Администратор"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
-msgstr ""
+msgstr "Всё время указано в GMT (по Гринвичу)"
 
 msgid "Amount Per Point"
-msgstr ""
+msgstr "Сумма за пункт"
 
 msgid "Amount per point"
-msgstr ""
+msgstr "Сумма за пункт"
 
 msgid "Answer"
 msgstr ""
@@ -180,214 +180,216 @@ msgid "Applied to"
 msgstr ""
 
 msgid "Apply"
-msgstr ""
+msgstr "Применить"
 
 msgid "Apply new theme?"
-msgstr ""
+msgstr "Применить новую тему?"
 
 msgid "Appropriateness Test: WARNING"
-msgstr ""
+msgstr "Тест на целесообразность: ПРЕДУПРЕЖДЕНИЕ"
 
 msgid "Are you sure you want to delete this token?"
-msgstr ""
+msgstr "Вы уверены, что хотите удалить этот ключ?"
 
 msgid "Aroon Down Stroke"
-msgstr ""
+msgstr "Период индикатора Арун (вниз)"
 
 msgid "Aroon Up Stroke"
-msgstr ""
+msgstr "Период индикатора Арун (вверх)"
 
 msgid "Asians"
-msgstr ""
+msgstr "Азиатские"
 
 msgid "Asset"
-msgstr ""
+msgstr "Актив"
 
 msgid "Asset Index"
-msgstr ""
+msgstr "Индекс активов"
 
 msgid "Average"
-msgstr ""
+msgstr "Среднее"
 
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 msgid "Back to list"
-msgstr ""
+msgstr "Вернуться к списку"
 
 msgid "Background Color"
-msgstr ""
+msgstr "Цвет фона"
 
 msgid "Barrier"
-msgstr ""
+msgstr "Барьер"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "Изменение барьера"
 
 msgid "Binary options or other financial derivatives"
-msgstr ""
+msgstr "Бинарные опционы и другие деривативы"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com: Webtrader"
 
 msgid "Blank window"
-msgstr ""
+msgstr "Пустое окно"
 
 msgid "Bought"
-msgstr ""
+msgstr "Куплено"
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "Марка первой машины"
 
 msgid "Browser upgrade required"
-msgstr ""
+msgstr "Необходимо обновление браузера"
 
 msgid "Buy Price"
-msgstr ""
+msgstr "Цена покупки"
 
 msgid "Buy price"
-msgstr ""
+msgstr "Цена покупки"
 
 msgid "By clicking"
-msgstr ""
+msgstr "Нажав"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
+"Нажав OK, Вы подтверждаете, что прочитали и согласились с обновлениями в "
+"документе"
 
 msgid "CLOSE"
-msgstr ""
+msgstr "ЗАКРЫТЬ"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 msgid "Candles"
-msgstr ""
+msgstr "Свечи"
 
 msgid "Candlestick down-color"
-msgstr ""
+msgstr "Цвет нисходящей свечи"
 
 msgid "Candlestick down-line"
-msgstr ""
+msgstr "Линия нисходящих свечей"
 
 msgid "Candlestick up-color"
-msgstr ""
+msgstr "Цвет восходящей свечи"
 
 msgid "Candlestick up-line"
-msgstr ""
+msgstr "Линия восходящих свечей"
 
 msgid "Cash Balance"
-msgstr ""
+msgstr "Баланс счёта"
 
 msgid "Change Backend Server"
-msgstr ""
+msgstr "Изменить сервер"
 
 msgid "Change password"
-msgstr ""
+msgstr "Изменить пароль"
 
 msgid "Chart"
-msgstr ""
+msgstr "График"
 
 msgid "Chart Themes"
 msgstr ""
 
 msgid "Chart background"
-msgstr ""
+msgstr "Фон графика"
 
 msgid "Choose password"
-msgstr ""
+msgstr "Выберите пароль"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Chrome Extension"
-msgstr ""
+msgstr "Расширение Chrome"
 
 msgid "Click Jacking test"
 msgstr ""
 
 msgid "Click to log in with your Binary.com account"
-msgstr ""
+msgstr "Нажмите, чтобы войти через счёт на Binary.com"
 
 msgid "Close Price"
-msgstr ""
+msgstr "Цена закрытия"
 
 msgid "Close all"
-msgstr ""
+msgstr "Закрыть всё"
 
 msgid "Closes"
 msgstr ""
 
 msgid "Commodities trading experience"
-msgstr ""
+msgstr "Опыт торговли сырьевыми товарами"
 
 msgid "Commodities trading frequency"
-msgstr ""
+msgstr "Частота торговли сырьевыми товарами"
 
 msgid "Conditions"
-msgstr ""
+msgstr "Условия"
 
 msgid "Config changes successful"
-msgstr ""
+msgstr "Конфигурация изменена успешно"
 
 msgid "Connection closed"
-msgstr ""
+msgstr "Соединение закрыто"
 
 msgid "Connection error. Refresh the page"
-msgstr ""
+msgstr "Ошибка соединения. Обновите страницу"
 
 msgid "Construction"
 msgstr ""
 
 msgid "Continue"
-msgstr ""
+msgstr "Продолжить"
 
 msgid "Continue Trading"
-msgstr ""
+msgstr "Продолжить торговлю"
 
 msgid "Contract"
-msgstr ""
+msgstr "Контракт"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Подтверждение контракта"
 
 msgid "Contract is not yet started"
-msgstr ""
+msgstr "Контракт ещё не начался"
 
 msgid "Contracts"
-msgstr ""
+msgstr "Контракты"
 
 msgid "Country of residence"
-msgstr ""
+msgstr "Страна проживания"
 
 msgid "Create"
-msgstr ""
+msgstr "Создать"
 
 msgid "Create token"
-msgstr ""
+msgstr "Создать ключ"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "Кредит/Дебет"
 
 msgid "Crosshair"
-msgstr ""
+msgstr "Линии пересечения"
 
 msgid "Current Level"
-msgstr ""
+msgstr "Текущий уровень"
 
 msgid "Current Spot"
-msgstr ""
+msgstr "Текущая спот-цена"
 
 msgid "Current Spot Time"
-msgstr ""
+msgstr "Текущее спот-время"
 
 msgid "Current indicators"
-msgstr ""
+msgstr "Текущие индикаторы"
 
 msgid "Current overlays"
 msgstr ""
