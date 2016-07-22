@@ -1,5 +1,6 @@
 <div id="topbar">
-    <span class='lang'>{lang.name}</span>
+    <!-- TODO Disable lang selection until all the translations are available -->
+    <span class='lang' style="display: none">{lang.name}</span>
     <div class='languages' rv-if='confirm.visible | eq false'>
       <span rv-each-lang='languages' rv-on-click='onclick | bind lang.value'>{lang.name}</span>
     </div>
