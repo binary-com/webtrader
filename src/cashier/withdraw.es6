@@ -82,6 +82,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           },
           verify: {
             token: '',
+            code: '',
             disabled: false,
           },
           standard: {
@@ -91,17 +92,18 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           agent: {
             disabled: false,
             loginid: '',
+            name: '',
             agents: [],
             commission: '',
             amount: '',
             currency: local_storage.get('authorize').currency,
             residence: '',
             instructions: '',
-          }
+          },
         };
         let {route, menu, verify, empty_fields, standard, agent} = state;
 
-        let routes = { menu : 400, transfer: 400, standard: 400, agent: 550, verify: 400 };
+        let routes = { menu : 400, verify: 400, transfer: 400, standard: 400, agent: 550, 'agent-confirm': 400, 'agent-done': 300 };
         route.update = r => {
           route.value = r;
           win.dialog('option', 'height', routes[r]);
@@ -125,6 +127,11 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           });
         };
 
+        verify.back = () => {
+          verify.token = verify.code = '';
+          route.update('menu');
+        };
+
         verify.unlock = () => {
           if(!verify.token) {
             empty_fields.show();
@@ -142,9 +149,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                 throw new Error(data.cashier);
               }
               standard.url = data.cashier;
-              console.warn(standard.url);
               verify.disabled = false;
               route.update('standard');
+              verify.code = verify.token;
               verify.token = '';
             })
             .catch(err => {
@@ -153,6 +160,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             });
           }
           else if(menu.choice == 'agent') {
+            verify.code = verify.token;
+            verify.token = '';
             route.update('agent');
           }
         };
@@ -164,11 +173,13 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
         agent.onchanged = () => {
           if(agent.loginid) {
-            agent.commission
-              = agent.agents.find(a => a.paymentagent_loginid == agent.loginid).withdrawal_commission;
+            let {withdrawal_commission, name} = agent.agents.find(a => a.paymentagent_loginid == agent.loginid);
+            agent.commission = withdrawal_commission;
+            agent.name = name;
           }
           else {
             agent.commission = '';
+            agent.name = '';
           }
         }
 
@@ -191,15 +202,28 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             return;
           }
 
+          route.update('agent-confirm');
+        }
+
+        agent.confirm_transfer = () => {
           var request = {
             paymentagent_withdraw: 1,
             paymentagent_loginid: agent.loginid,
             currency: agent.currency,
-            amount: agent.amount,
+            amount: agent.amount*1,
             verification_code: verify.code
           };
-          console.warn(request);
           agent.disabled = true;
+          liveapi.send(request)
+                 .then(data => {
+                   route.update('agent-done')
+                   agent.disabled = false;
+                 })
+                 .catch(err => {
+                    agent.disabled = false;
+                    route.update('menu') // because tokens are one time use.
+                    error_handler(err);
+                 });
         }
 
         liveapi.send({get_settings: 1})
@@ -209,11 +233,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                })
                .then(data => {
                  agent.agents = data.paymentagent_list.list;
-                 console.warn(agent.agents);
                })
                .catch(error_handler);
 
-        _.defer(() => route.update('agent'));
         win_view = rv.bind(root[0], state);
       };
     };

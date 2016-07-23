@@ -10,7 +10,7 @@
 	</div>
 
 	<div class='verify' rv-show='route.value | eq "verify"'>
-    <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
+    <span class='back-arrow' rv-on-click='verify.back'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> Back
     </span>
 		<span class='title'>To withdraw funds please enter the special verification token we have just emailed you.</span>
@@ -77,7 +77,7 @@
 		<textarea class='instructions' rows='8' rv-value='agent.instructions' />
 		<span class='error' rv-visible='agent.instructions | eq "" | and empty_fields.validate'>This field is required.</span>
 
-		<button class='submit' rv-on-click='agent.click' rv-css-opacity='agent.disabled | ternary 0.5 1'>Submit</button>
+		<button class='submit' rv-on-click='agent.click'>Submit</button>
 
 		<span class='disclaimer'>
 			<strong>IMPORTANT DISCLAIMER </strong>- Binary.com is not affiliated with any of the Payment Agents listed above.
@@ -88,4 +88,30 @@
 		</span>
 	</div>
 
+	<div class='agent-confirm' rv-show='route.value | eq "agent-confirm"'>
+    <span class='back-arrow' rv-on-click='route.update | bind "agent"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span>
+
+		<div><strong>Please confirm the following details in order to complete the transfer.</strong></div>
+		<div><strong>Payment agent: </strong><span>{agent.name}</span></div>
+		<div><strong>Amount: </strong><span>{agent.currency}</span> <span>{agent.amount}</span></div>
+		<div><strong>Further instructions: </strong><span>{agent.instructions}</span></div>
+
+		<button class='submit' rv-on-click='agent.confirm_transfer' rv-css-opacity='agent.disabled | ternary 0.5 1'>Confirm transfer</button>
+
+		<span class='disclaimer'>
+			Make sure that you have first agreed with the Agent on the terms of payment before submitting your request.
+			Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to
+			the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your
+			preferred payment method.
+		</span>
+	</div>
+
+	<div class='agent-done' rv-show='route.value | eq "agent-done"'>
+		<div><strong>Done. The funds are being transferred to the payment agent.</strong></div>
+		<div><strong>Payment agent: </strong><span>{agent.name}</span></div>
+		<div><strong>Amount: </strong><span>{agent.currency}</span> <span>{agent.amount}</span></div>
+		<div><strong>Further instructions: </strong><span>{agent.instructions}</span></div>
+	</div>
 </div>

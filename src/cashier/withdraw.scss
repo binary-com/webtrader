@@ -141,6 +141,33 @@ $size_tiny: 12px;
     }
   }
 
+  .agent-confirm {
+    padding: 10px;
+    div {
+      margin: 10px 0;
+    }
+    button {
+      display: block;
+      margin: 30px 0 15px 0;
+    }
+    .disclaimer {
+      font-size: $size_tiny;
+      color: $gray;
+      display: block;
+      line-height: 1.5em;
+    }
+  }
+
+  .agent-done {
+    padding: 10px;
+    div {
+      margin: 10px 0;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   .back-arrow {
     color: $gray;
     font-size: $size_tiny;
