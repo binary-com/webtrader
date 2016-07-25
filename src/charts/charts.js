@@ -53,6 +53,16 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
       });
     }
 
+    Highcharts.Chart.prototype.get_overlay_count =  function() {
+        var overlayCount = 0;
+        this.series.forEach(function(s){
+            if((s.options.isInstrument) && s.options.id.indexOf('navigator') == -1){
+                overlayCount++;
+            }
+        });
+        return overlayCount;
+    }
+
     $(function () {
 
         Highcharts.setOptions({
@@ -201,6 +211,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             else if(options.indicators) { /* this comes only from tracker.js */
               indicators = options.indicators;
               overlays = options.overlays;
+              $(containerIDWithHash).data("overlayCount", overlays.length);
             }
 
             //Save some data in DOM
@@ -253,6 +264,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                 );
                             }
 
+                        },
+
+                        addSeries: function(event){
+                            var count = this.get_overlay_count();
+                            console.log(count);
+                            $(containerIDWithHash.replace("_chart","")).trigger("overlay_added",count);
                         }
                     },
                     spacingLeft: 0,
@@ -492,7 +509,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
             var chart = $(containerIDWithHash).highcharts();
             chart.setTitle(newTitle);
         }
-
     }
     return charts_functions;
 });
