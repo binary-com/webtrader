@@ -120,7 +120,7 @@ CKS.prototype.update = function (data) {
 };
 
 CKS.prototype.toString = function () {
-    return 'CKS (' + this.options.period + ', ' + this.options.maxMinPeriod + ', ' + this.options.multiplier + ', ' + ')';
+    return 'CKS (' + this.options.period + ', ' + this.options.maxMinPeriod + ', ' + this.options.multiplier + ')';
 };
 
 
