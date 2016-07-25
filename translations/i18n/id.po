@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 06:12+0200\n"
-"PO-Revision-Date: 2016-07-21 10:16+0000\n"
+"PO-Revision-Date: 2016-07-25 08:15+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/id/>\n"
@@ -780,55 +780,55 @@ msgid "Loading Configurations"
 msgstr "Loading Konfigurasi"
 
 msgid "Loading Download/View Data"
-msgstr ""
+msgstr "Pemuatan Download/Lihat Data"
 
 msgid "Loading Password dialog"
-msgstr ""
+msgstr "Pemuatan dialog kata sandi"
 
 msgid "Loading Profit Table"
-msgstr ""
+msgstr "Pemuatan Profit Table"
 
 msgid "Loading Real account opening"
-msgstr ""
+msgstr "Pemuatan pendaftaran akun Riil"
 
 msgid "Loading Self-Exclusion"
-msgstr ""
+msgstr "Pemuatan Pengecualian Diri"
 
 msgid "Loading Statement Table"
-msgstr ""
+msgstr "Pemuatan Tabel Pernyataan"
 
 msgid "Loading Token management"
-msgstr ""
+msgstr "Pemuatan Token manajemen"
 
 msgid "Loading Trading Times"
-msgstr ""
+msgstr "Pemuatan Waktu Trading"
 
 msgid "Loading chart and trade menus"
-msgstr ""
+msgstr "Pemuatan grafik dan menu trading"
 
 msgid "Loading custom theme configuration"
-msgstr ""
+msgstr "Pemuatan konfigurasi tema khusus"
 
 msgid "Loading portfolio"
-msgstr ""
+msgstr "Pemuatan portopolio"
 
 msgid "Loading self-exclusion settings"
-msgstr ""
+msgstr "Memuat pengaturan pengecualian diri"
 
 msgid "Log in"
-msgstr ""
+msgstr "Masuk"
 
 msgid "Log in time"
-msgstr ""
+msgstr "Waktu masuk"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Logout karena pengecualian diri pada batas waktu sesi!"
 
 msgid "Login"
-msgstr ""
+msgstr "Masuk"
 
 msgid "Logout"
-msgstr ""
+msgstr "Keluar"
 
 msgid "Long MA Type"
 msgstr "Jenis MA Panjang"
@@ -843,19 +843,19 @@ msgid "Long Term Period"
 msgstr "Periode Long Term"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Batas Rendah"
 
 msgid "Low Price"
-msgstr ""
+msgstr "Harga Rendah"
 
 msgid "Low Stroke"
 msgstr "Stroke Low"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Batas offset rendah"
 
 msgid "Lower"
-msgstr ""
+msgstr "Lower"
 
 msgid "Lower Band Stroke"
 msgstr "Stroke Lower Band"
@@ -873,10 +873,10 @@ msgid "Max/Min Period"
 msgstr "Periode Maksimal/Minimal"
 
 msgid "Maximum"
-msgstr ""
+msgstr "Maksimum"
 
 msgid "Maximum account cash balance"
-msgstr ""
+msgstr "Maksimum saldo akun"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr "Total maksimal pembelian kontrak dalam periode 30 hari"
@@ -885,88 +885,88 @@ msgid "Maximum aggregate contract purchases over a 7-day period"
 msgstr "Total maksimal pembelian kontrak dalam periode 7 hari"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr ""
+msgstr "Maksimum jumlah total beli per hari"
 
 msgid "Maximum aggregate loss over a 30-day period"
 msgstr "Total maksimal kerugian dalam periode 30 hari"
 
 msgid "Maximum aggregate loss per day"
-msgstr ""
+msgstr "Maksimum jumlah kerugian per hari"
 
 msgid "Maximum number of open positions"
-msgstr ""
+msgstr "Maksimum jumlah posisi berjalan"
 
 msgid "Memorable date"
-msgstr ""
+msgstr "Tanggal bersejarah"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "Kota bersejarah"
 
 msgid "Middle Band Stroke"
 msgstr "Stroke Middle Band"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr ""
+msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
 
 msgid "Minutes"
-msgstr ""
+msgstr "Menit"
 
 msgid "Miss"
-msgstr ""
+msgstr "Nona"
 
 msgid "Mon"
-msgstr ""
+msgstr "Senin"
 
 msgid "Mother's maiden name"
-msgstr ""
+msgstr "Nama panggilan Ibu Anda"
 
 msgid "Mr"
-msgstr ""
+msgstr "Bapak"
 
 msgid "Mrs"
-msgstr ""
+msgstr "Ibu"
 
 msgid "Ms"
-msgstr ""
+msgstr "Nona"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Dikalikan"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev Down"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev Up"
 
 msgid "Name"
-msgstr ""
+msgstr "Nama"
 
 msgid "Name of first love"
-msgstr ""
+msgstr "Nama cinta pertama"
 
 msgid "Name of your pet"
-msgstr ""
+msgstr "Nama hewan peliharaan Anda"
 
 msgid "Navigator handles background"
-msgstr ""
+msgstr "Navigator menangani latar belakang"
 
 msgid "Navigator handles border"
-msgstr ""
+msgstr "Navigator menangani perbatasan"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "Navigator mask-fill"
 
 msgid "Navigator outline"
 msgstr "Garis navigator"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "Warna seri navigator"
 
 msgid "Navigator series line"
 msgstr "Seri garis navigator"
 
 msgid "Net Annual Income"
-msgstr ""
+msgstr "Pendapatan Bersih Tahunan"
 
 msgid "Net Profit"
 msgstr ""
