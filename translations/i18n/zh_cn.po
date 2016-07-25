@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-07-19 09:19+0000\n"
+"PO-Revision-Date: 2016-07-25 04:01+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
@@ -21,7 +21,7 @@ msgid "%D Period"
 msgstr "%D 期限"
 
 msgid "%D Stroke"
-msgstr "%D 举"
+msgstr "%D 波幅"
 
 msgid "%K MA Type"
 msgstr "%K MA 类型"
@@ -30,7 +30,7 @@ msgid "%K Period"
 msgstr "%K 期限"
 
 msgid "%K Stroke"
-msgstr "%K 举"
+msgstr "%K 波幅"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -38,7 +38,7 @@ msgid ""
 msgstr "（如期限不到一天），或于交易日结束时（如期限是一天或更长时间）"
 
 msgid "-DI Stroke"
-msgstr "-DI 举"
+msgstr "-DI 波幅"
 
 msgid "0-1 year"
 msgstr "0-1 年"
@@ -119,7 +119,7 @@ msgid "ADX MA Type"
 msgstr "ADX MA 类型"
 
 msgid "ADX Stroke"
-msgstr "ADX 举"
+msgstr "ADX 波幅"
 
 msgid "ATR Period"
 msgstr "ATR 期限"
@@ -188,10 +188,10 @@ msgid "Are you sure you want to delete this token?"
 msgstr "确定删除此令牌？"
 
 msgid "Aroon Down Stroke"
-msgstr "阿隆下行线"
+msgstr "阿隆下行线波幅"
 
 msgid "Aroon Up Stroke"
-msgstr "阿隆上升线"
+msgstr "阿隆上升线波幅"
 
 msgid "Asians"
 msgstr "亚洲期权"
@@ -404,7 +404,7 @@ msgid "Customize chart appearance"
 msgstr "自定义图表外观"
 
 msgid "DI Stroke"
-msgstr "DI举"
+msgstr "DI波幅"
 
 msgid "DX MA Type"
 msgstr "DX MA 类型"
@@ -638,7 +638,7 @@ msgid "High Price"
 msgstr "高价位"
 
 msgid "High Stroke"
-msgstr "高价举"
+msgstr "高价波幅"
 
 msgid "High barrier offset"
 msgstr "高障碍位移"
@@ -697,556 +697,556 @@ msgid "Income Source"
 msgstr "收入来源"
 
 msgid "Indicative Price"
-msgstr ""
+msgstr "指示性价格"
 
 msgid "Indices trading experience"
-msgstr ""
+msgstr "指数交易经验"
 
 msgid "Indices trading frequency"
-msgstr ""
+msgstr "指数交易频率"
 
 msgid "Industry of Employment"
-msgstr ""
+msgstr "职业领域"
 
 msgid "Instrument"
-msgstr ""
+msgstr "工具"
 
 msgid "Instruments"
-msgstr ""
+msgstr "工具"
 
 msgid "Investments & Dividends"
-msgstr ""
+msgstr "投资与分红"
 
 msgid "Jump to"
-msgstr ""
+msgstr "跳至"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr ""
+msgstr "仅须在您被将导入页面上点击 授予 按钮"
 
 msgid "LOW"
-msgstr ""
+msgstr "低"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "最后数字的预测"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "最后数字已超过"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "低于最后数字"
 
 msgid "Last used"
-msgstr ""
+msgstr "上一次使用"
 
 msgid "Less than"
-msgstr ""
+msgstr "少于"
 
 msgid "Let's do it"
-msgstr ""
+msgstr "开始操作"
 
 msgid "Level"
-msgstr ""
+msgstr "水平"
 
 msgid "Level of Education"
-msgstr ""
+msgstr "教育水平"
 
 msgid "Line"
-msgstr ""
+msgstr "行"
 
 msgid "Line Dot"
-msgstr ""
+msgstr "行点"
 
 msgid "Line Stroke"
-msgstr ""
+msgstr "线波幅"
 
 msgid "Link"
-msgstr ""
+msgstr "链接"
 
 msgid "Loading"
-msgstr ""
+msgstr "加载"
 
 msgid "Loading Asset Index"
-msgstr ""
+msgstr "加载资产指数"
 
 msgid "Loading Configurations"
-msgstr ""
+msgstr "加载配置"
 
 msgid "Loading Download/View Data"
-msgstr ""
+msgstr "加载下载/查看数据"
 
 msgid "Loading Password dialog"
-msgstr ""
+msgstr "加载密码对话"
 
 msgid "Loading Profit Table"
-msgstr ""
+msgstr "加载利润表"
 
 msgid "Loading Real account opening"
-msgstr ""
+msgstr "加载真实账户开立"
 
 msgid "Loading Self-Exclusion"
-msgstr ""
+msgstr "加载自我禁止"
 
 msgid "Loading Statement Table"
-msgstr ""
+msgstr "加载账目表"
 
 msgid "Loading Token management"
-msgstr ""
+msgstr "加载令牌管理"
 
 msgid "Loading Trading Times"
-msgstr ""
+msgstr "加载交易时间"
 
 msgid "Loading chart and trade menus"
-msgstr ""
+msgstr "加载图表与交易菜单"
 
 msgid "Loading custom theme configuration"
-msgstr ""
+msgstr "加载定制相主题配置"
 
 msgid "Loading portfolio"
-msgstr ""
+msgstr "加载投资组合"
 
 msgid "Loading self-exclusion settings"
-msgstr ""
+msgstr "加载自我禁止设置"
 
 msgid "Log in"
-msgstr ""
+msgstr "登录"
 
 msgid "Log in time"
-msgstr ""
+msgstr "登录时间"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "正在注销，因为自我禁止时段已到期！"
 
 msgid "Login"
-msgstr ""
+msgstr "登录"
 
 msgid "Logout"
-msgstr ""
+msgstr "注销"
 
 msgid "Long MA Type"
-msgstr ""
+msgstr "长移动平均线类型"
 
 msgid "Long ROC Period"
-msgstr ""
+msgstr "长相对强弱指标期限"
 
 msgid "Long Stop Line Stroke"
-msgstr ""
+msgstr "长止损线波幅"
 
 msgid "Long Term Period"
-msgstr ""
+msgstr "长久期限"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "低障碍"
 
 msgid "Low Price"
-msgstr ""
+msgstr "低价"
 
 msgid "Low Stroke"
-msgstr ""
+msgstr "低波幅"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "低障碍位移"
 
 msgid "Lower"
-msgstr ""
+msgstr "低于"
 
 msgid "Lower Band Stroke"
-msgstr ""
+msgstr "低价带波幅"
 
 msgid "MA Type"
-msgstr ""
+msgstr "移动平均线类型"
 
 msgid "MACD Line Stroke"
-msgstr ""
+msgstr "指数平滑异同平均线波幅"
 
 msgid "Mass Period"
-msgstr ""
+msgstr "梅斯线期限"
 
 msgid "Max/Min Period"
-msgstr ""
+msgstr "最大/最小期限"
 
 msgid "Maximum"
-msgstr ""
+msgstr "最大"
 
 msgid "Maximum account cash balance"
-msgstr ""
+msgstr "最大账户现金余额"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
-msgstr ""
+msgstr "30天期最大累计合约买入量"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
-msgstr ""
+msgstr "7天期最大累计合约买入量"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr ""
+msgstr "每天最大累计合约买入量"
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr ""
+msgstr "30天期最大累计损失量"
 
 msgid "Maximum aggregate loss per day"
-msgstr ""
+msgstr "每天最大累计损失量"
 
 msgid "Maximum number of open positions"
-msgstr ""
+msgstr "最大未平仓头寸数目"
 
 msgid "Memorable date"
-msgstr ""
+msgstr "难忘的日子"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "难忘的城镇/城市"
 
 msgid "Middle Band Stroke"
-msgstr ""
+msgstr "中价带波幅"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr ""
+msgstr "需至少6个字符与1个数字"
 
 msgid "Minutes"
-msgstr ""
+msgstr "分钟"
 
 msgid "Miss"
-msgstr ""
+msgstr "小姐"
 
 msgid "Mon"
-msgstr ""
+msgstr "周一"
 
 msgid "Mother's maiden name"
-msgstr ""
+msgstr "母亲婚前的姓氏"
 
 msgid "Mr"
-msgstr ""
+msgstr "先生"
 
 msgid "Mrs"
-msgstr ""
+msgstr "夫人"
 
 msgid "Ms"
-msgstr ""
+msgstr "女士"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "乘数"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev下跌"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev 上涨"
 
 msgid "Name"
-msgstr ""
+msgstr "名字"
 
 msgid "Name of first love"
-msgstr ""
+msgstr "初恋情人姓名"
 
 msgid "Name of your pet"
-msgstr ""
+msgstr "您宠物的名字"
 
 msgid "Navigator handles background"
-msgstr ""
+msgstr "导航器处理背景"
 
 msgid "Navigator handles border"
-msgstr ""
+msgstr "导航器处理边框"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "导航器蒙板填充"
 
 msgid "Navigator outline"
-msgstr ""
+msgstr "导航器框线"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "导航器系列颜色"
 
 msgid "Navigator series line"
-msgstr ""
+msgstr "导航器系列线"
 
 msgid "Net Annual Income"
-msgstr ""
+msgstr "年净收入"
 
 msgid "Net Profit"
-msgstr ""
+msgstr "净利"
 
 msgid "New password"
-msgstr ""
+msgstr "新密码"
 
 msgid "No"
-msgstr ""
+msgstr "否"
 
 msgid "Note that tokens can possess one or more of these scopes"
-msgstr ""
+msgstr "请注意，令牌可能拥有一或多个所述领域"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
-msgstr ""
+msgstr "请注意：合约将在我们服务器收到请求时，以当时的市场价格卖出。此价格可能与报价有差异"
 
 msgid "Now"
-msgstr ""
+msgstr "现在"
 
 msgid "Number of bars on sides"
-msgstr ""
+msgstr "两边条形数目"
 
 msgid "OAuth App ID (Optional)"
-msgstr ""
+msgstr "OAuth 应用 ID (可选)"
 
 msgid "OAuth Server"
-msgstr ""
+msgstr "OAuth 服务器"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC条形图"
 
 msgid "OPEN"
-msgstr ""
+msgstr "开盘"
 
 msgid "Offset"
-msgstr ""
+msgstr "位移"
 
 msgid "Ok"
-msgstr ""
+msgstr "确定"
 
 msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
 "not appropriate for you"
-msgstr ""
+msgstr "根据您所提供的知识和经验相关信息，我们认为此网站的投资活动对您来说并不合适"
 
 msgid "Once this limit is reached, you may no longer deposit"
-msgstr ""
+msgstr "达到此限额后，您不能再存款"
 
 msgid "One last step left"
-msgstr ""
+msgstr "剩下最后一步"
 
 msgid "Open"
-msgstr ""
+msgstr "开盘"
 
 msgid "Open Account"
-msgstr ""
+msgstr "开立账户"
 
 msgid "Open Price"
-msgstr ""
+msgstr "开盘价"
 
 msgid "Open account"
-msgstr ""
+msgstr "开立账户"
 
 msgid "Open real money account"
-msgstr ""
+msgstr "开立真实资金账户"
 
 msgid "Opens"
-msgstr ""
+msgstr "开盘"
 
 msgid "Opera"
-msgstr ""
+msgstr "操作"
 
 msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
-msgstr ""
+msgstr "二元期权交易和其他类似活动一样，过于沉迷可能会上瘾。为了避免这种风险，我们会定期向您提供交易和财务的实况简报"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr ""
+msgstr "可选字段，不超过 20 个字符，并且不能包含“+”"
 
 msgid "Other"
-msgstr ""
+msgstr "其它"
 
 msgid "Other financial instruments trading experience"
-msgstr ""
+msgstr "其他金融工具交易体验"
 
 msgid "Other financial instruments trading frequency"
-msgstr ""
+msgstr "其他金融工具交易频率"
 
 msgid "Over"
-msgstr ""
+msgstr "超过"
 
 msgid "Over 3 years"
-msgstr ""
+msgstr "3年以上"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "PPO Line Stroke"
-msgstr ""
+msgstr "PPO 线波幅"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "密码需至少6个字符"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "密码须包含大小写字母与数字"
 
 msgid "Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "密码须包含大写字母与数字"
 
 msgid "Password successfully updated"
-msgstr ""
+msgstr "密码已成功更新"
 
 msgid "Passwords didn't match. Please type them again"
-msgstr ""
+msgstr "密码不相符。请重新输入"
 
 msgid "Payments"
-msgstr ""
+msgstr "支付"
 
 msgid "Payout"
-msgstr ""
+msgstr "赔付"
 
 msgid "Pension"
-msgstr ""
+msgstr "养老金"
 
 msgid "Period"
-msgstr ""
+msgstr "周期"
 
 msgid "Period 1"
-msgstr ""
+msgstr "周期1"
 
 msgid "Period 2"
-msgstr ""
+msgstr "周期2"
 
 msgid "Period 3"
-msgstr ""
+msgstr "周期3"
 
 msgid "Permissions"
-msgstr ""
+msgstr "权限"
 
 msgid "Personal Details"
-msgstr ""
+msgstr "个人资料"
 
 msgid "Phone"
-msgstr ""
+msgstr "电话"
 
 msgid "Please"
-msgstr ""
+msgstr "请"
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr ""
+msgstr "请用4-50个字符提供密码提示问题的答案"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "请选择至少一个令牌范围"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "请输入以下范围之间的数字"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr ""
+msgstr "请输入有效日期，格式为年-月-日"
 
 msgid "Please enter a value for"
-msgstr ""
+msgstr "请为以下输入数值"
 
 msgid "Please enter a vlaid phone number"
-msgstr ""
+msgstr "请输入有效的电话号"
 
 msgid "Please enter correct email"
-msgstr ""
+msgstr "请输入正确的电子邮件"
 
 msgid "Please enter date in the format YYYY-MM-DD"
-msgstr ""
+msgstr "请输入日期，格式是年-月-日"
 
 msgid "Please enter positive integer value between 0 and 9999"
-msgstr ""
+msgstr "请输入0与9999之间的正整数"
 
 msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr ""
+msgstr "请输入30天损失限额正整数"
 
 msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
+msgstr "请输入30天交易限额 正整数"
 
 msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr ""
+msgstr "请输入7天损失限额正整数"
 
 msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr ""
+msgstr "请输入7天交易限额正整数"
 
 msgid "Please enter positive integer value for Daily limit on losses"
-msgstr ""
+msgstr "请输入每日损失限额正整数"
 
 msgid "Please enter positive integer value for Daily turnover limit"
-msgstr ""
+msgstr "请输入每日交易限额正整数"
 
 msgid ""
 "Please enter positive integer value for Maximum number of open positions"
-msgstr ""
+msgstr "请输入最大未平仓头寸数目正整数"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "请输入令牌名称"
 
 msgid "Please enter the verification code sent to your email"
-msgstr ""
+msgstr "请输入发送到您邮箱的验证码"
 
 msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
+msgstr "请输入交易期持续时间限制0至99999之间的数值"
 
 msgid "Please enter your city address"
-msgstr ""
+msgstr "请输入您的城市住址"
 
 msgid "Please enter your current password"
-msgstr ""
+msgstr "请输入当前密码"
 
 msgid "Please enter your email"
-msgstr ""
+msgstr "请输入电子邮件"
 
 msgid "Please enter your family name"
-msgstr ""
+msgstr "请输入您的姓氏"
 
 msgid "Please enter your first name"
-msgstr ""
+msgstr "请输入您的名字"
 
 msgid "Please enter your new password"
-msgstr ""
+msgstr "请输入新密码"
 
 msgid "Please enter your password"
-msgstr ""
+msgstr "请输入密码"
 
 msgid "Please enter your phone number"
-msgstr ""
+msgstr "请输入电话号"
 
 msgid "Please enter your street address"
-msgstr ""
+msgstr "请输入街道住址"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr ""
+msgstr "以下浏览器请选择一个并安装最新版本"
 
 msgid "Please log in"
-msgstr ""
+msgstr "请登录"
 
 msgid "Please select"
-msgstr ""
+msgstr "请选择"
 
 msgid "Please try again after 1 minute"
-msgstr ""
+msgstr "请于1分钟后重试"
 
 msgid "Please use your new password to login"
-msgstr ""
+msgstr "请用新密码登录"
 
 msgid "Plot"
-msgstr ""
+msgstr "绘图"
 
 msgid "Plot Color"
-msgstr ""
+msgstr "绘图颜色"
 
 msgid "Pofit/Loss"
-msgstr ""
+msgstr "利润/亏损"
 
 msgid "Points"
-msgstr ""
+msgstr "点"
 
 msgid "Portfolio"
-msgstr ""
+msgstr "投资组合"
 
 msgid "Postal code/ZIP"
-msgstr ""
+msgstr "邮编"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "可能的赔付额"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "潜在利润"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "潜在利润"
 
 msgid "Pre-Defined"
-msgstr ""
+msgstr "预定义"
 
 msgid "Preferred reality-check interval"
-msgstr ""
+msgstr "优选实况调查间隔时间"
 
 msgid "Press  Create token  button on the right to create your first token"
 msgstr ""
