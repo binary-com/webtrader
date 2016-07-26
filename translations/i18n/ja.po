@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-07-20 04:19+0000\n"
+"PO-Revision-Date: 2016-07-26 17:09+0000\n"
 "Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -322,7 +322,7 @@ msgid "Closes"
 msgstr "閉じる"
 
 msgid "Commodities trading experience"
-msgstr "コモディティ取引の経験"
+msgstr "コモディティ取引のご経験"
 
 msgid "Commodities trading frequency"
 msgstr "コモディティ取引の頻度"
@@ -607,7 +607,7 @@ msgid "First name"
 msgstr "名前（名）"
 
 msgid "Forex trading experience"
-msgstr "外国為替取引の経験"
+msgstr "外国為替取引のご経験"
 
 msgid "Forex trading frequency"
 msgstr "外国為替取引の頻度"
@@ -704,7 +704,7 @@ msgid "Indicative Price"
 msgstr "気配値"
 
 msgid "Indices trading experience"
-msgstr "インデックス取引の経験"
+msgstr "インデックス取引のご経験"
 
 msgid "Indices trading frequency"
 msgstr "インデックス取引の頻度"
@@ -917,16 +917,16 @@ msgid "Mother's maiden name"
 msgstr "母親の旧姓"
 
 msgid "Mr"
-msgstr ""
+msgstr "Mr"
 
 msgid "Mrs"
-msgstr ""
+msgstr "Mrs"
 
 msgid "Ms"
-msgstr ""
+msgstr "Ms"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "乗数"
 
 msgid "NB Dev Down"
 msgstr ""
@@ -935,13 +935,13 @@ msgid "NB Dev Up"
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "お名前"
 
 msgid "Name of first love"
-msgstr ""
+msgstr "初恋相手の名前"
 
 msgid "Name of your pet"
-msgstr ""
+msgstr "ペットの名前"
 
 msgid "Navigator handles background"
 msgstr ""
@@ -962,78 +962,79 @@ msgid "Navigator series line"
 msgstr ""
 
 msgid "Net Annual Income"
-msgstr ""
+msgstr "年間純収入"
 
 msgid "Net Profit"
-msgstr ""
+msgstr "純利益"
 
 msgid "New password"
-msgstr ""
+msgstr "新しいパスワード"
 
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 msgid "Note that tokens can possess one or more of these scopes"
-msgstr ""
+msgstr "トークンは複数の範囲を持つことができます"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
 msgstr ""
+"ご注意：当社のサーバでリクエストが受理された場合、その時点での市場価格でトレードを売ることができます。この価格は表示価格と異なる場合があります。"
 
 msgid "Now"
-msgstr ""
+msgstr "Now"
 
 msgid "Number of bars on sides"
 msgstr ""
 
 msgid "OAuth App ID (Optional)"
-msgstr ""
+msgstr "OAuth アプリ ID (任意)"
 
 msgid "OAuth Server"
-msgstr ""
+msgstr "OAuthサーバー"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
-msgstr ""
+msgstr "OPEN"
 
 msgid "Offset"
 msgstr "追加"
 
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
 "not appropriate for you"
-msgstr ""
+msgstr "知識や経験に関して提供いただいた情報に基づき、当ウェブサイトでの投資はお客さまには適していないと思います。"
 
 msgid "Once this limit is reached, you may no longer deposit"
-msgstr ""
+msgstr "上限額に達した場合、入金頂くことができません。"
 
 msgid "One last step left"
 msgstr ""
 
 msgid "Open"
-msgstr ""
+msgstr "Open"
 
 msgid "Open Account"
-msgstr ""
+msgstr "口座開設"
 
 msgid "Open Price"
 msgstr ""
 
 msgid "Open account"
-msgstr ""
+msgstr "口座開設"
 
 msgid "Open real money account"
-msgstr ""
+msgstr "リアル口座開設"
 
 msgid "Opens"
-msgstr ""
+msgstr "取引開始時間"
 
 msgid "Opera"
 msgstr ""
@@ -1048,203 +1049,203 @@ msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr ""
 
 msgid "Other"
-msgstr ""
+msgstr "その他"
 
 msgid "Other financial instruments trading experience"
-msgstr ""
+msgstr "その他金融商品取引のご経験"
 
 msgid "Other financial instruments trading frequency"
-msgstr ""
+msgstr "その他金融商品取引の頻度"
 
 msgid "Over"
-msgstr ""
+msgstr "オーバー"
 
 msgid "Over 3 years"
-msgstr ""
+msgstr "3年以上"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "PPO Line Stroke"
 msgstr ""
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "パスワードは6文字以上でご入力ください"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "パスワードには大文字と小文字を含む英字と数字を組み合わせてください"
 
 msgid "Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "パスワードに大文字の英字と数字を含めてください"
 
 msgid "Password successfully updated"
-msgstr ""
+msgstr "パスワードは正常に変更されました"
 
 msgid "Passwords didn't match. Please type them again"
-msgstr ""
+msgstr "パスワードが一致しませんでした。再度お試しください。"
 
 msgid "Payments"
-msgstr ""
+msgstr "アフィリエイト報酬の支払いについて"
 
 msgid "Payout"
-msgstr ""
+msgstr "ペイアウト"
 
 msgid "Pension"
-msgstr ""
+msgstr "年金"
 
 msgid "Period"
-msgstr ""
+msgstr "期間"
 
 msgid "Period 1"
-msgstr ""
+msgstr "期間 1"
 
 msgid "Period 2"
-msgstr ""
+msgstr "期間 2"
 
 msgid "Period 3"
-msgstr ""
+msgstr "期間 3"
 
 msgid "Permissions"
-msgstr ""
+msgstr "アクセス許可"
 
 msgid "Personal Details"
-msgstr ""
+msgstr "お客さま登録情報"
 
 msgid "Phone"
-msgstr ""
+msgstr "電話番号"
 
 msgid "Please"
 msgstr ""
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr ""
+msgstr "4-50文字以内で、秘密の質問にお答えください"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "1つ以上のトークン範囲をご選択ください"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "XXX間の数字をご入力ください"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr ""
+msgstr "有効な日付をご入力ください（年月日）"
 
 msgid "Please enter a value for"
-msgstr ""
+msgstr "XXXの値をご入力ください"
 
 msgid "Please enter a vlaid phone number"
-msgstr ""
+msgstr "有効な電話番号をご入力ください"
 
 msgid "Please enter correct email"
-msgstr ""
+msgstr "正しいメールアドレスをご入力ください"
 
 msgid "Please enter date in the format YYYY-MM-DD"
-msgstr ""
+msgstr "年月日の順で日付をご入力ください"
 
 msgid "Please enter positive integer value between 0 and 9999"
-msgstr ""
+msgstr "0から9999の間の正の整数値をご入力ください"
 
 msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr ""
+msgstr "30日間の損失制限は正の整数値でご入力ください"
 
 msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
+msgstr "30日の取引数量限度額 は正の整数値でご入力ください"
 
 msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr ""
+msgstr "7日間の損失制限は正の整数値でご入力ください"
 
 msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr ""
+msgstr "7日の取引数量限度額は正の整数値でご入力ください"
 
 msgid "Please enter positive integer value for Daily limit on losses"
-msgstr ""
+msgstr "1日の損失限度額は正の整数値でご入力ください"
 
 msgid "Please enter positive integer value for Daily turnover limit"
-msgstr ""
+msgstr "1日の取引数量限度額は正の整数値でご入力ください"
 
 msgid ""
 "Please enter positive integer value for Maximum number of open positions"
-msgstr ""
+msgstr "最大保有ポジション数は正の整数値でご入力ください"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "トークン名をご入力ください"
 
 msgid "Please enter the verification code sent to your email"
-msgstr ""
+msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
 
 msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
+msgstr "セッション期間制限は0から99999の間でご入力ください"
 
 msgid "Please enter your city address"
-msgstr ""
+msgstr "市区町村をご入力ください"
 
 msgid "Please enter your current password"
-msgstr ""
+msgstr "現在のパスワードをご入力ください"
 
 msgid "Please enter your email"
-msgstr ""
+msgstr "メールアドレスをご入力ください"
 
 msgid "Please enter your family name"
-msgstr ""
+msgstr "氏名（姓）をご入力ください"
 
 msgid "Please enter your first name"
-msgstr ""
+msgstr "氏名（名）をご入力ください"
 
 msgid "Please enter your new password"
-msgstr ""
+msgstr "新しいパスワードをご入力ください"
 
 msgid "Please enter your password"
-msgstr ""
+msgstr "パスワードをご入力ください"
 
 msgid "Please enter your phone number"
-msgstr ""
+msgstr "電話番号をご入力ください"
 
 msgid "Please enter your street address"
-msgstr ""
+msgstr "番地をご入力ください"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr ""
+msgstr "いずれかのブラウザをご利用の方は最新バージョンをインストールしてください"
 
 msgid "Please log in"
-msgstr ""
+msgstr "ログインしてください"
 
 msgid "Please select"
-msgstr ""
+msgstr "選択してください"
 
 msgid "Please try again after 1 minute"
-msgstr ""
+msgstr "1分後に再度お試しください"
 
 msgid "Please use your new password to login"
-msgstr ""
+msgstr "新しいパスワードでログインをしてください"
 
 msgid "Plot"
-msgstr ""
+msgstr "プロット"
 
 msgid "Plot Color"
-msgstr ""
+msgstr "プロットカラー"
 
 msgid "Pofit/Loss"
-msgstr ""
+msgstr "損益"
 
 msgid "Points"
-msgstr ""
+msgstr "ポイント"
 
 msgid "Portfolio"
-msgstr ""
+msgstr "ポジション一覧"
 
 msgid "Postal code/ZIP"
-msgstr ""
+msgstr "郵便番号"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "ペイアウト"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "期待利益"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "期待利益"
 
 msgid "Pre-Defined"
 msgstr ""
@@ -1253,163 +1254,163 @@ msgid "Preferred reality-check interval"
 msgstr ""
 
 msgid "Press  Create token  button on the right to create your first token"
-msgstr ""
+msgstr "最初のトークンを作成するには、右の トークン作成 ボタンを押してください"
 
 msgid "Price"
-msgstr ""
+msgstr "価格"
 
 msgid "Primary"
-msgstr ""
+msgstr "主要"
 
 msgid "Profit"
-msgstr ""
+msgstr "利益"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "取引明細"
 
 msgid "Profit table"
-msgstr ""
+msgstr "取引明細"
 
 msgid "Profit/ Loss"
-msgstr ""
+msgstr "損益"
 
 msgid "Profit/Loss (points)"
-msgstr ""
+msgstr "損益（ポイント）"
 
 msgid "Purchase"
-msgstr ""
+msgstr "購入"
 
 msgid "Purchase Date"
-msgstr ""
+msgstr "購入日時"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "購入金額"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "購入時間"
 
 msgid "Read"
-msgstr ""
+msgstr "読む"
 
 msgid "Real account opening"
-msgstr ""
+msgstr "リアル口座開設"
 
 msgid "Reality check"
-msgstr ""
+msgstr "リアリティチェック"
 
 msgid "Redirecting to oauth login page"
-msgstr ""
+msgstr "OAuthログインページヘリダイレクト"
 
 msgid "Ref"
 msgstr ""
 
 msgid "Register free account"
-msgstr ""
+msgstr "無料口座に登録"
 
 msgid "Registration"
-msgstr ""
+msgstr "登録"
 
 msgid "Reloading page"
-msgstr ""
+msgstr "ページを再度読み込む"
 
 msgid "Remove Selected"
-msgstr ""
+msgstr "選択項目を削除"
 
 msgid "Repeat password"
-msgstr ""
+msgstr "パスワード再入力"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "このトレードを売ることはできません"
 
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "既定にリセット"
 
 msgid "Resources"
-msgstr ""
+msgstr "取引参考情報"
 
 msgid "Responsible Trading"
-msgstr ""
+msgstr "健全なトレードのために"
 
 msgid "Results"
-msgstr ""
+msgstr "結果"
 
 msgid "Return"
-msgstr ""
+msgstr "リターン率"
 
 msgid "Rise"
-msgstr ""
+msgstr "RISE"
 
 msgid "SMA"
-msgstr ""
+msgstr "SMA"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
-msgstr ""
+msgstr "サラリーマン"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "約定日時"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "決済価格"
 
 msgid "Sand Signika"
 msgstr ""
 
 msgid "Sat"
-msgstr ""
+msgstr "土曜日"
 
 msgid "Secondary"
-msgstr ""
+msgstr "第二"
 
 msgid "Security"
-msgstr ""
+msgstr "セキュリティ"
 
 msgid "Security question"
-msgstr ""
+msgstr "セキュリティ保護用の質問"
 
 msgid "Select Instrument"
-msgstr ""
+msgstr "金融商品をご選択ください"
 
 msgid "Self-Employed"
-msgstr ""
+msgstr "自営業"
 
 msgid "Self-Exclusion"
-msgstr ""
+msgstr "取引制限"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "取引上限の設定"
 
 msgid "Sell At Market"
-msgstr ""
+msgstr "売却"
 
 msgid "Sell Price"
-msgstr ""
+msgstr "売却"
 
 msgid "Sell Spot"
 msgstr ""
 
 msgid "Sell Time"
-msgstr ""
+msgstr "売却時間"
 
 msgid "Session"
-msgstr ""
+msgstr "セッション"
 
 msgid "Session duration limit, in minutes"
-msgstr ""
+msgstr "取引継続時間の制限(分単位)"
 
 msgid "Session is not authenticated"
-msgstr ""
+msgstr "セッションが許可されていません"
 
 msgid "Settles"
-msgstr ""
+msgstr "約定時間"
 
 msgid "Share"
-msgstr ""
+msgstr "シェア"
 
 msgid "Short MA Type"
 msgstr ""
@@ -1466,7 +1467,7 @@ msgid "Slow Period"
 msgstr ""
 
 msgid "Sold"
-msgstr ""
+msgstr "売却"
 
 msgid "Some random index"
 msgstr ""
@@ -1475,49 +1476,49 @@ msgid "Spline"
 msgstr ""
 
 msgid "Spreads"
-msgstr ""
+msgstr "スプレッド"
 
 msgid "Stake"
-msgstr ""
+msgstr "購入価格"
 
 msgid "Start Time"
-msgstr ""
+msgstr "開始時間"
 
 msgid "Start time"
-msgstr ""
+msgstr "開始時間"
 
 msgid "State/province/region"
 msgstr ""
 
 msgid "Statement"
-msgstr ""
+msgstr "口座残高"
 
 msgid "Status"
-msgstr ""
+msgstr "金融資産"
 
 msgid "Stays In/Goes Out"
-msgstr ""
+msgstr "STAY-IN/BREAK-OUT"
 
 msgid "Stocks trading experience"
-msgstr ""
+msgstr "株取引の経験"
 
 msgid "Stocks trading frequency"
-msgstr ""
+msgstr "株取引の頻度"
 
 msgid "Stop Loss Level"
-msgstr ""
+msgstr "損切りレベル"
 
 msgid "Stop Profit Level"
-msgstr ""
+msgstr "利益ストップレベル"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "損切り"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "利益ストップ"
 
 msgid "Stop-type"
-msgstr ""
+msgstr "ストップタイプ"
 
 msgid "Street address"
 msgstr ""
@@ -1532,28 +1533,28 @@ msgid "Stroke width"
 msgstr ""
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "新しいトークンを追加しました"
 
 msgid "Sun"
-msgstr ""
+msgstr "日曜日"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
-msgstr ""
+msgstr "明細"
 
 msgid "Terms"
-msgstr ""
+msgstr "各種規約"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "利用規約"
 
 msgid "Tertiary"
-msgstr ""
+msgstr "第三"
 
 msgid "The"
 msgstr ""
@@ -1575,93 +1576,93 @@ msgid ""
 msgstr ""
 
 msgid "There was an error"
-msgstr ""
+msgstr "エラーが発生しました"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "このトレードは終了しています"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "トレードの条件が満たされませんでした"
 
 msgid "This contract won"
-msgstr ""
+msgstr "トレードの条件が満たされました"
 
 msgid "Thu"
-msgstr ""
+msgstr "木曜日"
 
 msgid "Tick Trade app"
-msgstr ""
+msgstr "Tickトレードアプリ"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Tick {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tile"
-msgstr ""
+msgstr "タイル表示"
 
 msgid "Time Period"
-msgstr ""
+msgstr "取引期間"
 
 msgid "Time period"
-msgstr ""
+msgstr "取引期間"
 
 msgid "Timeout for websocket request"
 msgstr ""
 
 msgid "Title"
-msgstr ""
+msgstr "敬称"
 
 msgid "Token"
-msgstr ""
+msgstr "トークン"
 
 msgid "Token management"
-msgstr ""
+msgstr "トークン設定"
 
 msgid "Token name"
-msgstr ""
+msgstr "トークン名"
 
 msgid "Token permissions"
-msgstr ""
+msgstr "トークンのアクセス許可"
 
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
-msgstr ""
+msgstr "トークンはBinary.comのアプリやサードパーティツールにアクセスするための特別なコードです"
 
 msgid "Tooltip background"
-msgstr ""
+msgstr "ツールチップ背景"
 
 msgid "Tooltip text"
-msgstr ""
+msgstr "ツールチップ テキスト"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "合計投資額"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "合計　損益"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "TOUCH/NO-TOUCH"
 
 msgid "Tourism"
-msgstr ""
+msgstr "ご利用方法"
 
 msgid "Town/City"
-msgstr ""
+msgstr "市区町村"
 
 msgid "Trade"
-msgstr ""
+msgstr "トレード"
 
 msgid "Trade Confirmation"
-msgstr ""
+msgstr "トレード確定"
 
 msgid "Trade using"
-msgstr ""
+msgstr "XXXでお取引"
 
 msgid "Trading Times"
-msgstr ""
+msgstr "取引時間"
 
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
@@ -1680,151 +1681,152 @@ msgid ""
 msgstr ""
 
 msgid "Tradingview for Binary.com"
-msgstr ""
+msgstr "Binary.comのTradingView"
 
 msgid "Try"
-msgstr ""
+msgstr "試してみる"
 
 msgid "Tue"
-msgstr ""
+msgstr "火曜日"
 
 msgid "Turnover"
-msgstr ""
+msgstr "取引数量"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr ""
+msgstr "残念ながら、お使いのブラウザは対応しておりません"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "ラダー"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "取引短縮日"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "設定内容を更新"
 
 msgid "Upper Band Stroke"
 msgstr ""
 
 msgid "Use"
-msgstr ""
+msgstr "使用する"
 
 msgid "Verification code has been sent to your email"
-msgstr ""
+msgstr "認証コードが送信されました"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "認証コードが送信されました"
 
 msgid "Verification token"
-msgstr ""
+msgstr "ワンタイムパスワード"
 
 msgid "Verify new password"
-msgstr ""
+msgstr "新しいパスワード（確認用）"
 
 msgid "Vertical Line"
-msgstr ""
+msgstr "垂直線"
 
 msgid "View"
-msgstr ""
+msgstr "表示"
 
 msgid "View Historical Data"
-msgstr ""
+msgstr "履歴データの表示"
 
 msgid "Volume Factor"
 msgstr ""
 
 msgid "WMA"
-msgstr ""
+msgstr "WMA"
 
 msgid "WMA Period"
-msgstr ""
+msgstr "WMA 期間"
 
 msgid "Websocket Server"
-msgstr ""
+msgstr "Websocket サーバー"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "ウェブトレーダー"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr ""
+msgstr "ウェブトレーダーは取引経験をより豊かに、より楽しめるものへとする全く新しいウェブテクノロジーを使用しています"
 
 msgid "Wed"
-msgstr ""
+msgstr "水曜日"
 
 msgid "While on the go, you can"
-msgstr ""
+msgstr "出先でもお取引が可能"
 
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 msgid "X-axis labels"
-msgstr ""
+msgstr "X 軸ラベル"
 
 msgid "X-axis line"
-msgstr ""
+msgstr "X 軸線"
 
 msgid "X-axis tick"
-msgstr ""
+msgstr "X軸目盛"
 
 msgid "Y-axis gridline"
-msgstr ""
+msgstr "Y 軸目盛線"
 
 msgid "Y-axis labels"
-msgstr ""
+msgstr "Y 軸のラベル"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "xxxまで自己制限としてアクセスを制限されています"
 
 msgid "You have sold the following contract"
-msgstr ""
+msgstr "以下のトレードを売却しました"
 
 msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
+"異なるOAuthのサーバーを認可に使用するためには、ウェブトレーダーにご登録いただき、アプリIDを取得いただく必要があります。OAuthに関する詳細は"
 
 msgid "You pay"
-msgstr ""
+msgstr "xxxを支払う"
 
 msgid "You will be automatically logged out after such time"
-msgstr ""
+msgstr "その時間が経過しますと、自動的にログアウトされます"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
-msgstr ""
+msgstr "お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダーのアクセスを許可頂く必要があります"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
 
 msgid "Your browser is not supported"
-msgstr ""
+msgstr "お使いのブラウザは対応しておりません"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "変更が更新されました"
 
 msgid "Your email"
-msgstr ""
+msgstr "メールアドレス"
 
 msgid "Your new account balance is"
-msgstr ""
+msgstr "最新の口座残高："
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "トレード参照番号："
 
 msgid "Your transaction reference number is"
-msgstr ""
+msgstr "トレード参照番号："
 
 msgid "admin"
-msgstr ""
+msgstr "管理者"
 
 msgid "and"
-msgstr ""
+msgstr "かつ"
 
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
@@ -1834,76 +1836,76 @@ msgid ""
 msgstr ""
 
 msgid "between"
-msgstr ""
+msgstr "間"
 
 msgid "contact support"
-msgstr ""
+msgstr "サポートへのお問い合わせ"
 
 msgid "customer support"
-msgstr ""
+msgstr "カスタマーサポート"
 
 msgid "day"
-msgstr ""
+msgstr "日"
 
 msgid "days"
-msgstr ""
+msgstr "日"
 
 msgid "e.g"
-msgstr ""
+msgstr "例"
 
 msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr ""
+msgstr "例：www2.binary.com, www.binaryqa36.com"
 
 msgid "end time"
-msgstr ""
+msgstr "終了時間"
 
 msgid "entry spot"
-msgstr ""
+msgstr "エントリー価格"
 
 msgid "exit spot"
-msgstr ""
+msgstr "終値"
 
 msgid "feed is delayed by"
-msgstr ""
+msgstr "xxxによりフィードに遅れが生じています"
 
 msgid "for API calls that can access the cashier"
-msgstr ""
+msgstr "入出金にアクセスするAPIを呼び出すために"
 
 msgid "for API calls that can create trades in the client account"
-msgstr ""
+msgstr "クライアントの口座でトレードを作成するAPIを呼び出すために"
 
 msgid "for API calls that change client settings"
-msgstr ""
+msgstr "クライアントの設定を変更するAPIを呼び出すために"
 
 msgid "for API calls that only read client data"
-msgstr ""
+msgstr "クライアントデータのみ閲覧するAPIを呼び出すために"
 
 msgid "for mobile charts"
-msgstr ""
+msgstr "モバイルチャート"
 
 msgid "has updated its"
 msgstr ""
 
 msgid "hour"
-msgstr ""
+msgstr "時間"
 
 msgid "hours"
-msgstr ""
+msgstr "時間"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
-msgstr ""
+msgstr "お住まいの国ではない場合"
 
 msgid "in the future, the"
 msgstr ""
 
 msgid "information about your trading exprience and personal finance"
-msgstr ""
+msgstr "取引経験及び個人的な財政に関する情報"
 
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
@@ -1912,7 +1914,7 @@ msgid ""
 msgstr ""
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "必要です。現在のスプレッド"
 
 msgid "is that which is selected and the"
 msgstr ""
@@ -1936,7 +1938,7 @@ msgid "is when the contract is processed by our servers and the"
 msgstr ""
 
 msgid "main site"
-msgstr ""
+msgstr "メインサイト"
 
 msgid "minute"
 msgstr ""
