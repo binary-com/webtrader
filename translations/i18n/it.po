@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2016-07-22 20:04+0000\n"
+"PO-Revision-Date: 2016-07-26 05:51+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/it/>\n"
@@ -1429,133 +1429,133 @@ msgid "Show"
 msgstr ""
 
 msgid "Sigma"
-msgstr ""
+msgstr "Sigma"
 
 msgid "Signal Line Stroke"
 msgstr ""
 
 msgid "Signal MA Type"
-msgstr ""
+msgstr "Tipologia del segnale MA"
 
 msgid "Signal Period"
-msgstr ""
+msgstr "Periodo del segnale"
 
 msgid "Single MA Period"
-msgstr ""
+msgstr "Periodo MA singolo"
 
 msgid "Single MA Type"
-msgstr ""
+msgstr "Tipologia MA singolo"
 
 msgid "Slow %D MA Type"
-msgstr ""
+msgstr "Tipologia %D MA lenta"
 
 msgid "Slow %D Period"
-msgstr ""
+msgstr "Periodo %D lento"
 
 msgid "Slow %K MA Type"
-msgstr ""
+msgstr "Tipologia %K MA lenta"
 
 msgid "Slow %K Period"
-msgstr ""
+msgstr "Periodo %K lento"
 
 msgid "Slow Limit"
-msgstr ""
+msgstr "Limite slow"
 
 msgid "Slow MA Type"
-msgstr ""
+msgstr "Tipologia MA lenta"
 
 msgid "Slow Period"
-msgstr ""
+msgstr "Periodo lento"
 
 msgid "Sold"
-msgstr ""
+msgstr "Venduto"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Alcuni indici random"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Spread"
 
 msgid "Stake"
-msgstr ""
+msgstr "Puntata"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Orario d'inizio"
 
 msgid "Start time"
-msgstr ""
+msgstr "Orario d'inizio"
 
 msgid "State/province/region"
-msgstr ""
+msgstr "Stato/provincia/regione"
 
 msgid "Statement"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Stays In/Goes Out"
-msgstr ""
+msgstr "Stays In/Goes Out"
 
 msgid "Stocks trading experience"
-msgstr ""
+msgstr "Esperienza di trading in azioni"
 
 msgid "Stocks trading frequency"
-msgstr ""
+msgstr "Frequenza del trading in azioni"
 
 msgid "Stop Loss Level"
-msgstr ""
+msgstr "Livello di stop loss"
 
 msgid "Stop Profit Level"
-msgstr ""
+msgstr "Livello di stop profit"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "Stop loss"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "Stop profit"
 
 msgid "Stop-type"
-msgstr ""
+msgstr "Tipologia di stop"
 
 msgid "Street address"
-msgstr ""
+msgstr "Indirizzo"
 
 msgid "Stroke"
-msgstr ""
+msgstr "Stroke"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Colore dello stroke"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Ampiezza dello stroke"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Nuovo token aggiunto con successo"
 
 msgid "Sun"
-msgstr ""
+msgstr "Dom"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
-msgstr ""
+msgstr "Tabella"
 
 msgid "Terms"
-msgstr ""
+msgstr "Termini"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Termini e condizioni"
 
 msgid "Tertiary"
-msgstr ""
+msgstr "Terziario"
 
 msgid "The"
 msgstr ""
@@ -1577,93 +1577,95 @@ msgid ""
 msgstr ""
 
 msgid "There was an error"
-msgstr ""
+msgstr "Si è verificato un errore"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Questo contratto è scaduto"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Questo contratto ha perso"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Questo contratto ha vinto"
 
 msgid "Thu"
-msgstr ""
+msgstr "Gio"
 
 msgid "Tick Trade app"
-msgstr ""
+msgstr "App Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Tick {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tile"
 msgstr ""
 
 msgid "Time Period"
-msgstr ""
+msgstr "Periodo di tempo"
 
 msgid "Time period"
-msgstr ""
+msgstr "Periodo di tempo"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Timeout per la richiesta di websocket"
 
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
-msgstr ""
+msgstr "Gestione dei token"
 
 msgid "Token name"
-msgstr ""
+msgstr "Nome del token"
 
 msgid "Token permissions"
-msgstr ""
+msgstr "Autorizzazioni dei token"
 
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
 msgstr ""
+"I token sono codici speciali per accedere alle applicazioni mobili di Binary "
+"e agli strumenti di terze parti"
 
 msgid "Tooltip background"
-msgstr ""
+msgstr "Sfondo della tooltip"
 
 msgid "Tooltip text"
-msgstr ""
+msgstr "Testo nella tooltip"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "Costo totale"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "Profitto/Perdita totale"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Touch/No Touch"
 
 msgid "Tourism"
-msgstr ""
+msgstr "Turismo"
 
 msgid "Town/City"
-msgstr ""
+msgstr "Città"
 
 msgid "Trade"
 msgstr ""
 
 msgid "Trade Confirmation"
-msgstr ""
+msgstr "Conferma del trade"
 
 msgid "Trade using"
-msgstr ""
+msgstr "Fai trading utilizzando"
 
 msgid "Trading Times"
-msgstr ""
+msgstr "Orari di trading"
 
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
@@ -1671,6 +1673,10 @@ msgid ""
 "initial deposit and you do not own or have any interest in the underlying "
 "asset"
 msgstr ""
+"Il trading in opzioni binarie può non essere adatto a tutti pertanto "
+"assicurati di aver pienamente compreso i rischi connessi. Le perdite possono "
+"superare il deposito iniziale e senza avere alcun interesse nell'asset "
+"sottostante"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -1680,48 +1686,55 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
+"Il trading nei mercati finanziari può creare dipendenza. Compila il modulo "
+"qui sotto per limitare la tua partecipazione al sito internet oppure invia "
+"una lettera firmata o un fax alla nostra assistenza clienti. Una volta "
+"impostato, puoi rimanere solo nei tuoi limiti. I limiti verranno rimossi o "
+"attenuati solo dopo 7 giorni ad esclusione della data di auto esclusione "
+"che, dopo essere stata confermata, non può essere rimossa o alterata. Per "
+"rimuovere o aumentare i tuoi limiti, contatta"
 
 msgid "Tradingview for Binary.com"
-msgstr ""
+msgstr "Tradingview per Binary.com"
 
 msgid "Try"
-msgstr ""
+msgstr "Prova"
 
 msgid "Tue"
-msgstr ""
+msgstr "Mar"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Turnover"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr ""
+msgstr "Purtroppo il tuo browser non li supporta"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Up/Down"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "Eventi in arrivo"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "Aggiorna impostazioni"
 
 msgid "Upper Band Stroke"
-msgstr ""
+msgstr "Stroke della banda superiore"
 
 msgid "Use"
-msgstr ""
+msgstr "Usa"
 
 msgid "Verification code has been sent to your email"
-msgstr ""
+msgstr "Il codice di verifica è stato inviato al tuo indirizzo email"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Codice di verifica inviato a"
 
 msgid "Verification token"
-msgstr ""
+msgstr "Token di verifica"
 
 msgid "Verify new password"
 msgstr "Verifica nuova password"
@@ -1730,13 +1743,13 @@ msgid "Vertical Line"
 msgstr "Linea verticale"
 
 msgid "View"
-msgstr ""
+msgstr "Mostra"
 
 msgid "View Historical Data"
 msgstr "Mostra dati storici"
 
 msgid "Volume Factor"
-msgstr ""
+msgstr "Fattore del volume"
 
 msgid "WMA"
 msgstr "WMA"
@@ -1753,6 +1766,8 @@ msgstr "Webtrader"
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr ""
+"Webtrader utilizza nuove tecnologie web per un'esperienza di trading ricca e "
+"piacevole"
 
 msgid "Wed"
 msgstr "Merc"
@@ -1764,7 +1779,7 @@ msgid "Windows"
 msgstr "Windows"
 
 msgid "X-axis labels"
-msgstr ""
+msgstr "Etichetta dell'asse delle X"
 
 msgid "X-axis line"
 msgstr "Linea sull'asse delle X"
@@ -1773,10 +1788,10 @@ msgid "X-axis tick"
 msgstr "Tick sull'asse delle X"
 
 msgid "Y-axis gridline"
-msgstr ""
+msgstr "Griglia dell'asse delle Y"
 
 msgid "Y-axis labels"
-msgstr ""
+msgstr "Etichetta dell'asse delle Y"
 
 msgid "You have excluded yourself until"
 msgstr "Ti sei escluso fino a"
@@ -1789,6 +1804,9 @@ msgid ""
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
+"Prima di poter utilizzare diversi server OAuth per l'autenticazione, devi "
+"registrarti su webtrader e ottenere l'ID dell'app. Per ulteriori "
+"informazioni, fare riferimento ai dettagli OAuth su"
 
 msgid "You pay"
 msgstr "Paghi"
@@ -1804,7 +1822,7 @@ msgstr ""
 "bisogna consentire a Webtrader di accedere"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Il tuo browser non supporta la copia negli appunti"
 
 msgid "Your browser is not supported"
 msgstr "Il tuo browser non è supportato"
@@ -1836,6 +1854,10 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
+"qui sotto e procedendo con l'Apertura di un account dovresti notare che "
+"potresti esporti a dei rischi (che possono essere cospicui, incluso il "
+"rischio di perdita dell'intera somma investita) senza avere la conoscenza e "
+"l'esperienza giusta per valutarli e attenuarli"
 
 msgid "between"
 msgstr "tra"
@@ -1880,7 +1902,7 @@ msgid "for API calls that change client settings"
 msgstr "per le richieste API che modificano le impostazioni dei clienti"
 
 msgid "for API calls that only read client data"
-msgstr ""
+msgstr "per le richieste API che leggono solo i dati dei clienti"
 
 msgid "for mobile charts"
 msgstr "per grafici mobili"
