@@ -109,6 +109,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     instrumentName : m_instrumentName,
                     instrumentCode : m_instrumentCode,
                     indicatorsCount : 0,
+                    overlayCount: 0,
 
                     showTimePeriodSelector : false,
                     showChartTypeSelector : false,
@@ -250,9 +251,23 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     }
                 };
 
+                // Listen for indicator changes.
                 $("#" + m_newTabId).on('chart-indicators-changed',function(e, chart){
                   state[m_newTabId].indicatorsCount = chart.get_indicators().length;
                 });
+
+                state[m_newTabId].overlayCount = $("#" + m_newTabId+"_chart").data('overlayCount');
+
+                // Listen for overlay changes.
+                $("#" + m_newTabId).on('overlay_added', function(e, count){
+                    state[m_newTabId].overlayCount = count;
+                
+                });
+                $("#" + m_newTabId).on('chart-overlay-remove', function(e, overlay){
+                    var chart = $("#" + m_newTabId + "_chart").highcharts();
+                    state[m_newTabId].overlayCount = chart.get_overlay_count()-1;
+                });
+
                 var $html = $(html);
 
                 $("#" + m_newTabId + "_header").prepend($html);
