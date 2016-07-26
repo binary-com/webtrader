@@ -151,7 +151,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 var lines = series.options.data.map(function(bar){
                                     var time = bar[0], open = bar[1];
                                     if(is_tick){
-                                        return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' + /* Date */ + open; /* Price */
+                                        return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm:ss') + '"' + ',' + /* Date */ + open; /* Price */
                                     }
                                     var high = bar[2], low = bar[3], close = bar[4];
                                     return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
