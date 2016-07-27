@@ -242,7 +242,13 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     instrumentName : options.instrumentName,
                                     series_compare : options.series_compare,
                                     delayAmount : options.delayAmount
-                                }).then(function() {
+                                }).catch(function(err){
+                                    var msg = 'Error getting data for '.i18n() + instrumentName + "";
+                                    require(["jquery-growl"], function($) { $.growl.error({ message: msg }); });
+                                    var chart = $(containerIDWithHash).highcharts();
+                                    chart && chart.showLoading(msg);
+                                    console.error(err);
+                                  }).then(function() {
                                   var chart = $(containerIDWithHash).highcharts();
                                   /* the data is loaded but is not applied yet, its on the js event loop,
                                      wait till the chart data is applied and then add the indicators */

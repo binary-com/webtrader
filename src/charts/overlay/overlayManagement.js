@@ -101,11 +101,14 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
               var fn = function () {
                   dialog.data("overlayIndicator", true);
                   chartOptions.disableEnableCandlestickAndOHLC( newTabId, false );
-                  charts.refresh( containerIDWithHash );
                   charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount)
                         .then(function() {
                           var overlay = { symbol: symbol, displaySymbol: displaySymbol, delay_amount: delay_amount};
                           dialog.trigger('chart-overlay-add', overlay);
+                          //Waiting for overlays to be applied.
+                          setTimeout(function(){
+                            charts.refresh( containerIDWithHash );
+                          },0);
                         })
               };
               if (type === 'candlestick' || type == 'ohlc') {
