@@ -206,6 +206,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 chartingRequestMap.removeChart(key, containerIDWithHash);
                 var chart = $(containerIDWithHash).highcharts();
                 indicators = chart.get_indicators();
+                overlays = options.overlays;
                 chart.destroy();
             }
             else if(options.indicators) { /* this comes only from tracker.js */
@@ -405,12 +406,18 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         generate_csv : generate_csv,
 
         refresh : function ( containerIDWithHash, newTimePeriod, newChartType ) {
-
-            if (newTimePeriod)  $(containerIDWithHash).data("timePeriod", newTimePeriod);
+            var instrumentCode = $(containerIDWithHash).data("instrumentCode");
+            if (newTimePeriod)  {
+                //Unsubscribe from tickstream.
+                var key = chartingRequestMap.keyFor(instrumentCode, $(containerIDWithHash).data("timePeriod"));
+                chartingRequestMap.unregister(key, containerIDWithHash);
+                $(containerIDWithHash).data("timePeriod", newTimePeriod);
+            }
             if(newChartType) $(containerIDWithHash).data("type", newChartType);
 
             //Get all series details from this chart
             var chart = $(containerIDWithHash).highcharts();
+            var chartObj = this;
             var loadedMarketData = [], series_compare = undefined;
             $(chart.series).each(function (index, series) {
                 console.log('Refreshing : ', series.options.isInstrument, series.options.name);
@@ -420,27 +427,31 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     series_compare = series.options.compare;
                 }
             });
-
-            this.drawChart( containerIDWithHash, {
-                instrumentCode : $(containerIDWithHash).data("instrumentCode"),
-                instrumentName : $(containerIDWithHash).data("instrumentName"),
-                timePeriod : $(containerIDWithHash).data("timePeriod"),
-                type : $(containerIDWithHash).data("type"),
-                series_compare : series_compare,
-                delayAmount : $(containerIDWithHash).data("delayAmount")
-            });
-
-            //Trigger overlay
-            var chartObj = this;
             require(['instruments/instruments'], function (ins) {
+                var overlays = [];
                 loadedMarketData.forEach(function (value) {
                     var marketDataObj = ins.getSpecificMarketData(value);
                     if (marketDataObj.symbol != undefined && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
                     {
-                        chartObj.overlay( containerIDWithHash, marketDataObj.symbol, value, marketDataObj.delay_amount);
+                        var overlay = {
+                            symbol: marketDataObj.symbol,
+                            displaySymbol: value,
+                            delay_amount: marketDataObj.delay_amount
+                        };
+                        overlays.push(overlay);
                     }
                 });
+                chartObj.drawChart( containerIDWithHash, {
+                    instrumentCode : instrumentCode,
+                    instrumentName : $(containerIDWithHash).data("instrumentName"),
+                    timePeriod : $(containerIDWithHash).data("timePeriod"),
+                    type : $(containerIDWithHash).data("type"),
+                    series_compare : series_compare,
+                    delayAmount : $(containerIDWithHash).data("delayAmount"),
+                    overlays: overlays
+                });
             });
+
         },
 
         addIndicator : function ( containerIDWithHash, options ) {
