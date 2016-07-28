@@ -104,9 +104,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                   charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount)
                         .then(function() {
                           var overlay = { symbol: symbol, displaySymbol: displaySymbol, delay_amount: delay_amount};
-                          dialog.trigger('chart-overlay-add', overlay);
                           //Waiting for overlays to be applied.
                           setTimeout(function(){
+                            dialog.trigger('chart-overlay-add', overlay);
                             charts.refresh( containerIDWithHash );
                           },0);
                         })
