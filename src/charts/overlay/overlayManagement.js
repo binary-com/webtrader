@@ -105,10 +105,10 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                         .then(function() {
                           var overlay = { symbol: symbol, displaySymbol: displaySymbol, delay_amount: delay_amount};
                           //Waiting for overlays to be applied.
-                          setTimeout(function(){
+                          _.defer(function(){
                             dialog.trigger('chart-overlay-add', overlay);
                             charts.refresh( containerIDWithHash );
-                          },0);
+                          });
                         })
               };
               if (type === 'candlestick' || type == 'ohlc') {
