@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-25 16:40+0000\n"
+"PO-Revision-Date: 2016-07-28 13:27+0000\n"
 "Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
@@ -19,7 +19,7 @@ msgid "%D MA Type"
 msgstr "Тип СС %D"
 
 msgid "%D Period"
-msgstr ""
+msgstr "Период %D"
 
 msgid "%D Stroke"
 msgstr ""
@@ -123,7 +123,7 @@ msgid "ADX MA Type"
 msgstr "Тип СС ADX"
 
 msgid "ADX Stroke"
-msgstr ""
+msgstr "Штрих ADX"
 
 msgid "ATR Period"
 msgstr "Период ATR"
@@ -177,7 +177,7 @@ msgid "Answer"
 msgstr ""
 
 msgid "Applied to"
-msgstr ""
+msgstr "Применимо для"
 
 msgid "Apply"
 msgstr "Применить"
@@ -192,10 +192,10 @@ msgid "Are you sure you want to delete this token?"
 msgstr "Вы уверены, что хотите удалить этот ключ?"
 
 msgid "Aroon Down Stroke"
-msgstr "Период индикатора Арун (вниз)"
+msgstr "Штрих индикатора Арун (вниз)"
 
 msgid "Aroon Up Stroke"
-msgstr "Период индикатора Арун (вверх)"
+msgstr "Штрих индикатора Арун (вверх)"
 
 msgid "Asians"
 msgstr "Азиатские"
@@ -323,7 +323,7 @@ msgid "Close all"
 msgstr "Закрыть всё"
 
 msgid "Closes"
-msgstr ""
+msgstr "Закрытие"
 
 msgid "Commodities trading experience"
 msgstr "Опыт торговли сырьевыми товарами"
@@ -344,7 +344,7 @@ msgid "Connection error. Refresh the page"
 msgstr "Ошибка соединения. Обновите страницу"
 
 msgid "Construction"
-msgstr ""
+msgstr "Строительство"
 
 msgid "Continue"
 msgstr "Продолжить"
@@ -377,7 +377,7 @@ msgid "Credit/Debit"
 msgstr "Кредит/Дебет"
 
 msgid "Crosshair"
-msgstr "Линии пересечения"
+msgstr "Пересечение"
 
 msgid "Current Level"
 msgstr "Текущий уровень"
@@ -404,10 +404,10 @@ msgid "Current time"
 msgstr "Текущее время"
 
 msgid "Custom Theme"
-msgstr "Настраиваемая тема"
+msgstr "Индивид. настройка"
 
 msgid "Customize chart appearance"
-msgstr "Настроить вид графика"
+msgstr "Настройка вида графика"
 
 msgid "DI Stroke"
 msgstr ""
@@ -422,37 +422,37 @@ msgid "Daily turnover limit"
 msgstr "Дневной лимит на объём покупок"
 
 msgid "Dark Blue"
-msgstr ""
+msgstr "Тёмно-синий"
 
 msgid "Dark Green"
-msgstr ""
+msgstr "Тёмно-зелёный"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica"
 
 msgid "Dash style"
-msgstr ""
+msgstr "Стиль штрихов"
 
 msgid "Date"
-msgstr ""
+msgstr "Дата"
 
 msgid "Date of birth"
-msgstr ""
+msgstr "Дата рождения"
 
 msgid "Days"
-msgstr ""
+msgstr "Дни"
 
 msgid "Decline"
-msgstr ""
+msgstr "Отклонить"
 
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 msgid "Delete level(s)"
-msgstr ""
+msgstr "Удалить уровень (уровни)"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr ""
+msgstr "Демо-ролик для партнёров о доступек графикам Binary.com в IFRAME"
 
 msgid "Deposit of USD"
 msgstr ""
