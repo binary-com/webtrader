@@ -2,7 +2,9 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($,rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -23,11 +25,8 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.tema;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.tema-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
@@ -37,17 +36,17 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                     of: "element",
                     collision: "fit"
                 },
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+                part:   {
+                    map:        { size: 128 },
+                    bar:        { size: 128 }
                 },
-                select:			function(event, color) {
+                select:         function(event, color) {
                     $("#tema_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok:                         function(event, color) {
                     $("#tema_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
@@ -103,6 +102,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#tema_appliedTo").val())
                             }
+                            before_add_callback && before_add_callback();
                             //Add TEMA for the main series
                             $($(".tema").data('refererChartID')).highcharts().series[0].addIndicator('tema', options);
 
@@ -134,16 +134,15 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".tema").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".tema").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".tema").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

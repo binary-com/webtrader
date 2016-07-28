@@ -2,7 +2,9 @@
  * Created by Mahboob.M on 2/6/16.
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -30,11 +32,8 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.adxr;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.adxr-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
@@ -173,6 +172,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                                 appliedTo: parseInt($html.find("#adxr_appliedTo").val()),
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add ADXR for the main series
                             $($(".adxr").data('refererChartID')).highcharts().series[0].addIndicator('adxr', options);
 
@@ -205,16 +205,15 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".adxr").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".adxr").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".adxr").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

@@ -1,7 +1,9 @@
 ﻿/**
 Created By Mahboob.M on 12/20/2015
 */
-define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
+define(["jquery",  "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog('close');
@@ -18,11 +20,8 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick']
 
             data = JSON.parse(data);
             var current_indicator_data = data.t3;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.t3-description').html(current_indicator_data.description);
 
             $html.find("#t3_stroke").each(function () {
                 $(this).colorpicker({
@@ -73,10 +72,10 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick']
                 of: window,
                 dialogClass: 't3-ui-dialog',
                 buttons: [
-					{
-					    text: "OK",
-					    click: function () {
-					        var $periodElem = $("#t3_period");
+                    {
+                        text: "OK",
+                        click: function () {
+                            var $periodElem = $("#t3_period");
                             if (!_.isInteger(_.toNumber($periodElem.val())) || !_.inRange($periodElem.val(),
                                             parseInt($periodElem.attr("min")),
                                             parseInt($periodElem.attr("max")) + 1)) {
@@ -105,26 +104,27 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick']
                                 return;
                             };
 
-					        var options = {
-					            period: parseInt($("#t3_period").val()),
-					            vFactor: parseFloat($("#t3_volume_factor").val()),
-					            stroke: $("#t3_stroke").css("background-color"),
-					            strokeWidth: parseInt($("#t3_stroke_width").val()),
-					            dashStyle: selectedDashStyle,
-					            appliedTo: parseInt($("#t3_applied_to").val())
-					        }
-					        //Add Bollinger for the main series
-					        $($(".t3").data('refererChartID')).highcharts().series[0].addIndicator('t3', options);
+                            var options = {
+                                period: parseInt($("#t3_period").val()),
+                                vFactor: parseFloat($("#t3_volume_factor").val()),
+                                stroke: $("#t3_stroke").css("background-color"),
+                                strokeWidth: parseInt($("#t3_stroke_width").val()),
+                                dashStyle: selectedDashStyle,
+                                appliedTo: parseInt($("#t3_applied_to").val())
+                            }
+                            before_add_callback && before_add_callback();
+                            //Add Bollinger for the main series
+                            $($(".t3").data('refererChartID')).highcharts().series[0].addIndicator('t3', options);
 
-					        closeDialog.call($html);
-					    }
-					},
-					{
-					    text: "Cancel",
-					    click: function () {
-					        closeDialog.call(this);
-					    }
-					}
+                            closeDialog.call($html);
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function () {
+                            closeDialog.call(this);
+                        }
+                    }
                 ]
             });
             $html.find('select').each(function(index, value){
@@ -141,13 +141,15 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick']
     }
 
     return {
-        open: function (containerIDWithHash) {
-            if ($(".t3").length === 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".t3").data('refererChartID', containerIDWithHash).dialog("open");
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".t3").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".t3").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
     };
 });
