@@ -84,28 +84,7 @@ var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
 require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
     "use strict";
     /* setup translating string literals */
-    (function(dict) {
-      var keys = Object.keys(dict).filter(function(key) { return key !== '' && key !== ' '; });
-      keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
-      /* Escape keys for using them in regex. */
-      var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
-      var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
-
-      var replacer = function (_, word) {
-        return (dict[word] && dict[word][1]) || word;
-      };
-      String.prototype.i18n = function() {
-        return this.replace(regexp, replacer);
-      };
-
-      /* hook $(html) to automatically call .i18n() before creating DOM nodes */
-      var parseHTML = $.parseHTML.bind($);
-      $.parseHTML = function(data, context, keepScripts) {
-          if(typeof data === 'string')
-            data = data.i18n();
-          return parseHTML(data, context, keepScripts);
-      }
-    })(JSON.parse(lang_json));
+    setup_i18n_translation(JSON.parse(lang_json));
 
     //By pass touch check for affiliates=true(because they just embed our charts)
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {

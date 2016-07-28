@@ -2,7 +2,9 @@
  * Created by Maahboob.M on 2/18/16.
  */
 
-define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, _, rv) {
+define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($, _) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -22,11 +24,8 @@ define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', '
 
             data = JSON.parse(data);
             var current_indicator_data = data.fractal;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.fractal-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
@@ -98,6 +97,7 @@ define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', '
                                 color: defaultColor,
                                 onSeriesID: series.options.id
                             };
+                            before_add_callback && before_add_callback();
                             //Add fractal for the main series
                             series.addIndicator('fractal', options);
 
@@ -123,15 +123,15 @@ define(["jquery", 'lodash', 'common/rivetsExtra', "jquery-ui", 'color-picker', '
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".fractal").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".fractal").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".fractal").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".fractal").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };
