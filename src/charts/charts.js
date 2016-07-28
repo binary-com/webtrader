@@ -55,8 +55,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
     Highcharts.Chart.prototype.get_overlay_count =  function() {
         var overlayCount = 0;
-        this.series.forEach(function(s){
-            if((s.options.isInstrument) && s.options.id.indexOf('navigator') == -1){
+        this.series.forEach(function(s, index){
+            if(s.options.isInstrument && s.options.id.indexOf('navigator') == -1 && index != 0){
                 overlayCount++;
             }
         });
@@ -271,12 +271,6 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                 );
                             }
 
-                        },
-
-                        addSeries: function(event){
-                            var count = this.get_overlay_count();
-                            console.log(count);
-                            $(containerIDWithHash.replace("_chart","")).trigger("overlay_added",count);
                         }
                     },
                     spacingLeft: 0,
