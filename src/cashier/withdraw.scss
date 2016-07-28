@@ -70,6 +70,30 @@ $size_tiny: 12px;
     }
   }
 
+  .transfer {
+    padding: 10px;
+    .title {
+      margin: 10px 0 2px 0;
+    }
+    input.account {
+      width: 50%;
+    }
+    input.amount {
+      width: 70px;
+    }
+
+    button {
+      display: block;
+      margin: 20px 0 0;
+    }
+    .error {
+      margin: 2px 0 0 0;
+      display: block;
+      font-size: $size_tiny;
+      color: $red;
+    }
+  }
+
   .agent {
     padding: 10px;
     overflow: scroll;
@@ -158,7 +182,7 @@ $size_tiny: 12px;
     }
   }
 
-  .agent-done {
+  .agent-done, .transfer-done {
     padding: 10px;
     div {
       margin: 10px 0;

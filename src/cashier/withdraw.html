@@ -29,6 +29,23 @@
     <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> Back
     </span>
+
+		<div class='title'>Send to account #</div>
+		<input class='account' rv-value='transfer.account' placeholder="E.g. MLT379421" />
+		<span class='error' rv-visible='transfer.account | eq "" | and empty_fields.validate'>This field is required.</span>
+
+		<div class='title'>Amount</div>
+		<span>{agent.currency}</span>
+		<input class='amount' rv-value='transfer.amount' />
+		<span class='error' rv-visible='transfer.amount | eq "" | and empty_fields.validate'>This field is required.</span>
+
+		<button class='submit' rv-on-click='transfer.submit' rv-css-opacity='transfer.disabled | ternary 0.5 1'>Submit</button>
+	</div>
+
+	<div class='transfer-done' rv-show='route.value | eq "transfer-done"'>
+		<div><strong>Done. The funds are transferred.</strong></div>
+		<div><strong>Sent to account: </strong><span>{transfer.account}</span></div>
+		<div><strong>Amount: </strong><span>{agent.currency}</span> <span>{agent.amount}</span></div>
 	</div>
 
 	<div class='standard' rv-show='route.value | eq "standard"'>

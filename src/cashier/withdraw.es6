@@ -85,6 +85,12 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             code: '',
             disabled: false,
           },
+          transfer: {
+            disabled: false,
+            account: '',
+            amount: '',
+            loginid: local_storage.get('authorize').loginid,
+          },
           standard: {
             url: '',
             iframe_visible: false
@@ -101,9 +107,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             instructions: '',
           },
         };
-        let {route, menu, verify, empty_fields, standard, agent} = state;
+        let {route, menu, verify, empty_fields, standard, agent, transfer} = state;
 
-        let routes = { menu : 400, verify: 400, transfer: 400, standard: 400, agent: 550, 'agent-confirm': 400, 'agent-done': 300 };
+        let routes = { menu : 400, verify: 400, transfer: 400, 'transfer-done': 300, standard: 400, agent: 550, 'agent-confirm': 400, 'agent-done': 300 };
         route.update = r => {
           route.value = r;
           win.dialog('option', 'height', routes[r]);
@@ -226,6 +232,33 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  });
         }
 
+        transfer.submit = () => {
+          if(transfer.account === '' || transfer.amount === '') {
+            empty_fields.show();
+            return;
+          }
+          var req = {
+            transfer_between_accounts: 1,
+            account_from: transfer.loginid,
+            account_to: transfer.account,
+            currency: agent.currency,
+            amount: transfer.amount
+          };
+          transfer.disabled = true;
+          liveapi.send(req)
+            .then(data => {
+              if(data.transfer_between_accounts === 0) {
+                $.growl.error({message: 'Transfering funds between accounts failed'.i18n() });
+                return;
+              }
+              route.update('transfer-done');
+            })
+            .catch(err => {
+              error_handler(err);
+              transfer.disabled = false;
+            });
+        }
+
         liveapi.send({get_settings: 1})
                .then(data => {
                  agent.residence = data.get_settings.country_code;
@@ -235,6 +268,11 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  agent.agents = data.paymentagent_list.list;
                })
                .catch(error_handler);
+
+        liveapi.send({payout_currencies: 1})
+            .then(data => {
+                agent.currency = data.payout_currencies[0];
+            }).catch(err => console.error(err));
 
         win_view = rv.bind(root[0], state);
       };
