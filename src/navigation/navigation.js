@@ -32,7 +32,8 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
     function initLoginButton(root) {
         var login_menu = root.find('.login');
         var account_menu = root.find('.account').hide();
-        var real_account_opening = account_menu.find('li.real-account-li').hide();
+        var real_accounts_only = account_menu.find('li.visible-on-real-accounts-only').hide();
+        var virtual_accounts_only = account_menu.find('li.visible-on-virtual-accounts-only').hide();
         var time = root.find('span.time');
         var login_btn = root.find('.login button');
         var logout_btn = root.find('.account .logout');
@@ -92,12 +93,14 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
                 loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
                 var oauth = local_storage.get('oauth') || [];
-                var is_real = false;
+                var has_real_account = false;
                 for(var i = 0; i < oauth.length; ++i) {
                   if(oauth[i].is_virtual === 0)
-                    is_real = true;
+                    has_real_account = true;
                 }
-                is_real ? real_account_opening.hide() : real_account_opening.show();
+                var is_current_account_real = data.authorize.is_virtual === 0;
+                is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
+                has_real_account ? virtual_accounts_only.hide() : virtual_accounts_only.show();
 
                 /* switch between account on user click */
                 $('.account li.info').remove();
