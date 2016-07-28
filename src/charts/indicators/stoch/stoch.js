@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -27,6 +29,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
             data = JSON.parse(data);
             var current_indicator_data = data.stoch;
             $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.stoch-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
@@ -178,6 +181,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
                                 appliedTo: parseInt($("#stoch_applied_to").val()),
                                 levels:levels
                             }
+                            before_add_callback && before_add_callback();
                             //Add STOCH for the main series
                             $($(".stoch").data('refererChartID')).highcharts().series[0].addIndicator('stoch', options);
 
@@ -210,16 +214,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".stoch").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".stoch").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".stoch").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

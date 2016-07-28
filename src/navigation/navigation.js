@@ -1,6 +1,6 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, $navHtml) {
+define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, rv, $navHtml) {
     "use strict";
 
     function updateListItemHandlers() {
@@ -130,6 +130,12 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
                 liveapi.invalidate();
                 logout_btn.attr('disabled', 'disabled');
             });
+
+            // Restore login-button in case of login-error
+            $('.login').on("login-error",function(e){
+                console.log("Encountered login error");
+                login_menu.fadeIn();
+            });
         });
 
         /* update time every one minute */
@@ -138,6 +144,55 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
             time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
         }, 15 * 1000);
     }
+    function initLangButton(root) {
+      root = root.find('#topbar').addBack('#topbar');
+      var state = {
+        perv_lang: null,
+        lang: {
+          value: 'en', name: 'English'
+        },
+        confirm: {
+          visible: false
+        },
+        languages: [
+            { value: 'en', name: 'English'},
+            { value: 'ar', name: 'Arabic'},
+            { value: 'de', name: 'Deutsch'},
+            { value: 'es', name: 'Español'},
+            { value: 'fr', name: 'Français'},
+            { value: 'id', name: 'Bahasa Indonesia'},
+            { value: 'it', name: 'Italiano'},
+            { value: 'pl', name: 'Polish'},
+            { value: 'pt', name: 'Português'},
+            { value: 'ru', name: 'Русский'},
+            { value: 'vi', name: 'Vietnamese'},
+            { value: 'zh_cn', name: '简体中文'},
+            { value: 'zh_tw', name: '繁體中文'},
+        ]
+      };
+      state.onclick = function(value) {
+        var lang = _.find(state.languages, {value: value});
+        if(lang.value == state.lang.value)
+          return;
+        state.perv_lang = state.lang;
+        state.lang = lang;
+        state.confirm.visible = true;
+      };
+      state.confirm.no = function() {
+        state.lang = state.perv_lang;
+        state.confirm.visible = false;
+      }
+      state.confirm.yes = function() {
+        local_storage.set('i18n', {value: state.lang.value});
+        window.location.reload();
+        state.confirm.visible = false;
+      }
+
+      var value = (local_storage.get('i18n') || {value: 'en'}).value;
+      state.lang = _.find(state.languages, {value: value}); // set the initial state.
+
+      rv.bind(root[0], state);
+    }
 
     return {
         init: function (_callback) {
@@ -145,6 +200,7 @@ define(["jquery", "moment", "text!navigation/navigation.html", "css!navigation/n
             $("body").prepend(root);
 
             initLoginButton(root);
+            initLangButton(root);
             //Theme settings
             require(['themes/themes']);
 
