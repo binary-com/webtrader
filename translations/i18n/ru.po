@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-28 14:47+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-07-28 14:54+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -22,7 +22,7 @@ msgid "%D Period"
 msgstr "Период %D"
 
 msgid "%D Stroke"
-msgstr ""
+msgstr "Штрих %D"
 
 msgid "%K MA Type"
 msgstr "Тип СС %K"
@@ -31,7 +31,7 @@ msgid "%K Period"
 msgstr "Период %K"
 
 msgid "%K Stroke"
-msgstr "Величина %K"
+msgstr "Штрих %K"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -41,7 +41,7 @@ msgstr ""
 "если длительность составляет один день или более)"
 
 msgid "-DI Stroke"
-msgstr ""
+msgstr "Штрих -DI"
 
 msgid "0-1 year"
 msgstr "0-1 года"
@@ -635,46 +635,46 @@ msgid "Grid Light"
 msgstr "Светлая сетка"
 
 msgid "HIGH"
-msgstr ""
+msgstr "ВЕРХНЕЕ ЗНАЧЕНИЕ"
 
 msgid "Health"
 msgstr ""
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Верхний барьер"
 
 msgid "High Price"
-msgstr ""
+msgstr "Верхняя цена"
 
 msgid "High Stroke"
-msgstr ""
+msgstr "Верхний штрих"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "Изменение верхнего барьера"
 
 msgid "Higher"
-msgstr ""
+msgstr "Выше"
 
 msgid "Histogram Color"
-msgstr ""
+msgstr "Цвет гистограммы"
 
 msgid "Histogram Color For Higher Values"
-msgstr ""
+msgstr "Цвет гистограммы для высоких значений"
 
 msgid "Histogram Color For Lower Values"
-msgstr ""
+msgstr "Цвет гистограммы для низких значений"
 
 msgid "Home Address"
-msgstr ""
+msgstr "Адрес"
 
 msgid "Horizontal Line"
-msgstr ""
+msgstr "Горизонтальная линия"
 
 msgid "Hours"
 msgstr ""
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "Я ознакомился и согласился с условиями Binary.com"
 
 msgid "If you select a"
 msgstr ""
