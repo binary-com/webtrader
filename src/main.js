@@ -101,7 +101,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
 
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icons.css', 'css!main.css'])
+    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);
@@ -166,6 +166,22 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
                 function (real) {
                     var elem = $navMenu.find("a.real-account");
                     real.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.deposit"), 'click', 'Loading Deposit funds ...', 'cashier/deposit',
+                function (deposit) {
+                    var elem = $navMenu.find("a.deposit");
+                    deposit.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.withdraw"), 'click', 'Loading Withdraw funds ...', 'cashier/withdraw',
+                function (withdraw) {
+                    var elem = $navMenu.find("a.withdraw");
+                    withdraw.init(elem);
                     elem.click();
                 });
 
