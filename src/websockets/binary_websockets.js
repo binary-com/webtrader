@@ -172,6 +172,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         return promise
             .then(function (val) {
                 is_authenitcated_session = true;
+                local_storage.set('authorize', val.authorize); /* we can use the 'email' field retruned later */
                 fire_event('login', val);
                 if(local_storage.get('oauth-login')) {
                   var ok = local_storage.get('oauth-login').value;

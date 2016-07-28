@@ -261,13 +261,14 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 state[m_newTabId].overlayCount = $("#" + m_newTabId+"_chart").data('overlayCount');
 
                 // Listen for overlay changes.
-                $("#" + m_newTabId).on('overlay_added', function(e, count){
-                    state[m_newTabId].overlayCount = count;
+                $("#" + m_newTabId).on('chart-overlay-add', function(e, overlay){
+                    var chart = $("#" + m_newTabId + "_chart").highcharts();
+                    state[m_newTabId].overlayCount = chart.get_overlay_count();
                 
                 });
                 $("#" + m_newTabId).on('chart-overlay-remove', function(e, overlay){
                     var chart = $("#" + m_newTabId + "_chart").highcharts();
-                    state[m_newTabId].overlayCount = chart.get_overlay_count()-1;
+                    state[m_newTabId].overlayCount = chart.get_overlay_count();
                 });
 
                 var $html = $(html);
