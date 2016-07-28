@@ -495,8 +495,11 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                     });
                 })
                 .catch(function(err) {
-                      console.error(err.message);
-                      $.growl.error({message: err.message});
+                    console.error(err.message);
+                    $.growl.error({message: err.message});
+                    //Remove token and trigger login-error event.
+                    local_storage.remove('oauth');
+                    $(".login").trigger("login-error");
                 });
               }
             });
