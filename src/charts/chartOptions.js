@@ -166,6 +166,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].changeTimePeriod = function(event, scope) {
                     var timePeriod = event.target.dataset.timeperiod;
+                    $("#"+m_newTabId+" .timePeriodOverlay [data-timeperiod="+scope.timePeriod+"]").removeAttr("disabled");
+                    $("#"+m_newTabId+" .timePeriodOverlay [data-timeperiod="+timePeriod+"]").attr("disabled","");
                     if (timePeriod) {
 
                         //Unregister previous subscription
@@ -271,6 +273,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 var $html = $(html);
 
                 $("#" + m_newTabId + "_header").prepend($html);
+                // Disable selected timeperiod.
+                $("#"+m_newTabId+" .timePeriodOverlay [data-timeperiod="+m_timePeriod+"]").attr("disabled","");
                 setTopHeaderPosAndWidth_timePeriodOvl(m_timePeriod);
                 setTopHeaderPosAndWith_chartType(m_chartType, m_newTabId);
 
