@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-28 13:34+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-07-28 14:43+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -500,124 +500,124 @@ msgid "Download as"
 msgstr ""
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Загружается в формате .csv"
 
 msgid "Duration"
-msgstr ""
+msgstr "Продолжит."
 
 msgid "EMA"
-msgstr ""
+msgstr "ЭСС"
 
 msgid "Edge"
-msgstr ""
+msgstr "Граница"
 
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 msgid "Education"
 msgstr ""
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Не удалось подтвердить эл. адрес"
 
 msgid "Embed code"
-msgstr ""
+msgstr "Код для вставки"
 
 msgid "End Time"
-msgstr ""
+msgstr "Окончание"
 
 msgid "Ends In/Out"
-msgstr ""
+msgstr "Заканчивается Внутри/Вне"
 
 msgid "Enter your current password"
-msgstr ""
+msgstr "Введите текущий пароль"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "Входная котировка"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "Входная котировка"
 
 msgid "Error downloading .csv"
-msgstr ""
+msgstr "Ошибка при загрузке файла в формате .csv"
 
 msgid "Error getting data for"
-msgstr ""
+msgstr "Ошибка в получении данных для"
 
 msgid "Estimated Net Worth"
 msgstr ""
 
 msgid "Exclude me from the website until"
-msgstr ""
+msgstr "Исключите меня с сайта до"
 
 msgid "Exclude time cannot be less than 6 months"
-msgstr ""
+msgstr "Время исключения не может быть менее 6 месяцев"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "Выходная котировка"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "Выходная котировка"
 
 msgid "Explanation"
-msgstr ""
+msgstr "Пояснение"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Не удалось изменить пароль"
 
 msgid "Fall"
-msgstr ""
+msgstr "Падение"
 
 msgid "Family name"
-msgstr ""
+msgstr "Фамилия"
 
 msgid "Fast %K MA Type"
-msgstr ""
+msgstr "Быстрый тип %K СС"
 
 msgid "Fast %K Period"
-msgstr ""
+msgstr "Быстрый период %K"
 
 msgid "Fast Limit"
-msgstr ""
+msgstr "Быстрый лимит"
 
 msgid "Fast MA Type"
-msgstr ""
+msgstr "Быстрый тип СС"
 
 msgid "Fast Period"
-msgstr ""
+msgstr "Быстрый период"
 
 msgid "Favorites"
-msgstr ""
+msgstr "Избранное"
 
 msgid "Favourite artist"
-msgstr ""
+msgstr "Любимый артист"
 
 msgid "Favourite dish"
-msgstr ""
+msgstr "Любимое блюдо"
 
 msgid "Final Price"
-msgstr ""
+msgstr "Цена продажи"
 
 msgid "Final price"
-msgstr ""
+msgstr "Цена продажи"
 
 msgid "Finance"
-msgstr ""
+msgstr "Финансы"
 
 msgid "Financial information"
-msgstr ""
+msgstr "Финансовая информация"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First name"
-msgstr ""
+msgstr "Имя"
 
 msgid "Forex trading experience"
-msgstr ""
+msgstr "Опыт торговли на Forex"
 
 msgid "Forex trading frequency"
-msgstr ""
+msgstr "Частотаторговли на Forex"
 
 msgid "Fri"
 msgstr ""
