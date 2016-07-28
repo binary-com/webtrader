@@ -12,13 +12,12 @@
 }
 
 .chartOptions .chartOptions_button {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     border: 1px solid darkgrey;
     background: white;
     padding: 5px 5px 5px 5px;
     height: 22px;
+    margin-bottom: 4px;
 }
 
 .chartOptions .button_selected {
@@ -26,20 +25,13 @@
     border-bottom-left-radius: 0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-bottom-right-radius: 0px;
-    -moz-border-bottom-left-radius: 0px;
-    -moz-border-top-left-radius: 5px;
-    -moz-border-top-right-radius: 5px;
 
     border-top: 1px solid darkgrey;
     border-left: 1px solid darkgrey;
     border-right: 1px solid darkgrey;
     border-bottom: none;
     height: 26px;
+    margin-bottom: 0px;
 }
 
 .chartOptions .chartOptions_button:hover,
@@ -48,9 +40,8 @@
     cursor: pointer;
 }
 
-.chartOptions .chartOptions_button span {
-    display: inline-block;
-}
+.chartOptions .chartOptions_button span { display: inline-block; }
+.chartOptions .chartOptions_button span img { max-height: 20px; }
 
 .chartOptions .chartOptions-export-table {
     float: right;
@@ -91,8 +82,7 @@
 }
 
 .chartOptions .chartOptions_overlay.loadSaveOverlay {
-    left: 77px;
-    right: initial;
+    left: 72px;
 }
 .chartOptions .chartOptions_overlay.loadSaveOverlay .cell {
   width: auto;
