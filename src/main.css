@@ -430,4 +430,30 @@ table {
   border-radius: 3px!important;
   height: 30px;
 }
-/*Ends here*/
+
+/* override table styles*/
+table.dataTable {
+  border-collapse: collapse!important;
+  line-height: 1.5em!important;
+}
+table.dataTable td {
+  vertical-align: middle;
+}
+table.dataTable.display tbody tr.odd {
+  background-color: #fff!important;
+}
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+  background-color: #f6f6f6!important;
+}
+table.dataTable thead th, table.dataTable thead td {
+  border-bottom: none!important;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+  background-color: #fff!important;
+}
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+  background-color: #fff!important;
+}
+table.dataTable.display tbody tr:hover>.sorting_1, table.dataTable.order-column.hover tbody tr:hover>.sorting_1 {
+  background-color: #f6f6f6!important;
+}
