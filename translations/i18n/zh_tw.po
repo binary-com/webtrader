@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-07-25 04:02+0000\n"
+"PO-Revision-Date: 2016-07-29 06:05+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -1249,310 +1249,310 @@ msgid "Preferred reality-check interval"
 msgstr "優選實況調查間隔時間"
 
 msgid "Press  Create token  button on the right to create your first token"
-msgstr ""
+msgstr "按右方 建立權杖 按鈕即可建立首個權杖"
 
 msgid "Price"
-msgstr ""
+msgstr "價格"
 
 msgid "Primary"
-msgstr ""
+msgstr "主要"
 
 msgid "Profit"
-msgstr ""
+msgstr "利潤"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "利潤表"
 
 msgid "Profit table"
-msgstr ""
+msgstr "利潤表"
 
 msgid "Profit/ Loss"
-msgstr ""
+msgstr "利潤/虧損"
 
 msgid "Profit/Loss (points)"
-msgstr ""
+msgstr "利潤/虧損(點)"
 
 msgid "Purchase"
-msgstr ""
+msgstr "買入"
 
 msgid "Purchase Date"
-msgstr ""
+msgstr "買入日期"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "買入價格"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "買入時間"
 
 msgid "Read"
-msgstr ""
+msgstr "閱讀"
 
 msgid "Real account opening"
-msgstr ""
+msgstr "開立真實帳戶"
 
 msgid "Reality check"
-msgstr ""
+msgstr "真實情況檢查"
 
 msgid "Redirecting to oauth login page"
-msgstr ""
+msgstr "重新導入oauth登入頁面"
 
 msgid "Ref"
-msgstr ""
+msgstr "參考"
 
 msgid "Register free account"
-msgstr ""
+msgstr "註冊免費帳戶"
 
 msgid "Registration"
-msgstr ""
+msgstr "註冊"
 
 msgid "Reloading page"
-msgstr ""
+msgstr "重新載入頁面"
 
 msgid "Remove Selected"
-msgstr ""
+msgstr "移除選定項目"
 
 msgid "Repeat password"
-msgstr ""
+msgstr "重覆輸入密碼"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "此合約不提供轉售"
 
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "重設為預設值"
 
 msgid "Resources"
-msgstr ""
+msgstr "資源"
 
 msgid "Responsible Trading"
-msgstr ""
+msgstr "負責任交易"
 
 msgid "Results"
-msgstr ""
+msgstr "成績"
 
 msgid "Return"
-msgstr ""
+msgstr "回報"
 
 msgid "Rise"
-msgstr ""
+msgstr "上漲"
 
 msgid "SMA"
-msgstr ""
+msgstr "簡單移動平均線"
 
 msgid "SVG"
-msgstr ""
+msgstr "聖文森特和格林納丁斯"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
-msgstr ""
+msgstr "支薪員工"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "賣出日期"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "賣出價格"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika圖表主題"
 
 msgid "Sat"
-msgstr ""
+msgstr "週六"
 
 msgid "Secondary"
-msgstr ""
+msgstr "次要"
 
 msgid "Security"
-msgstr ""
+msgstr "安全"
 
 msgid "Security question"
-msgstr ""
+msgstr "安全提示問題"
 
 msgid "Select Instrument"
-msgstr ""
+msgstr "選擇工具"
 
 msgid "Self-Employed"
-msgstr ""
+msgstr "自雇者"
 
 msgid "Self-Exclusion"
-msgstr ""
+msgstr "自我禁止"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "自我禁止工具"
 
 msgid "Sell At Market"
-msgstr ""
+msgstr "按市價賣出"
 
 msgid "Sell Price"
-msgstr ""
+msgstr "賣出價格"
 
 msgid "Sell Spot"
-msgstr ""
+msgstr "賣出現價"
 
 msgid "Sell Time"
-msgstr ""
+msgstr "賣出時間"
 
 msgid "Session"
-msgstr ""
+msgstr "工作階段"
 
 msgid "Session duration limit, in minutes"
-msgstr ""
+msgstr "交易期持續時間限制，以分鐘作單位"
 
 msgid "Session is not authenticated"
-msgstr ""
+msgstr "工作階段未經驗證"
 
 msgid "Settles"
-msgstr ""
+msgstr "結算"
 
 msgid "Share"
-msgstr ""
+msgstr "共享"
 
 msgid "Short MA Type"
-msgstr ""
+msgstr "短移動平均線類型"
 
 msgid "Short ROC Period"
-msgstr ""
+msgstr "短期價格變化率"
 
 msgid "Short Stop Line Stroke"
-msgstr ""
+msgstr "短止損線波幅"
 
 msgid "Short Term Period"
-msgstr ""
+msgstr "短交易期"
 
 msgid "Show"
-msgstr ""
+msgstr "顯示"
 
 msgid "Sigma"
-msgstr ""
+msgstr "西格瑪交易軟體"
 
 msgid "Signal Line Stroke"
-msgstr ""
+msgstr "訊號線波幅"
 
 msgid "Signal MA Type"
-msgstr ""
+msgstr "訊號移動平均線類型"
 
 msgid "Signal Period"
-msgstr ""
+msgstr "訊號期"
 
 msgid "Single MA Period"
-msgstr ""
+msgstr "單移動平均線期"
 
 msgid "Single MA Type"
-msgstr ""
+msgstr "單移動平均線類型"
 
 msgid "Slow %D MA Type"
-msgstr ""
+msgstr "慢速%D移動平均線類型"
 
 msgid "Slow %D Period"
-msgstr ""
+msgstr "慢速%D期"
 
 msgid "Slow %K MA Type"
-msgstr ""
+msgstr "慢速 %K移動平均線類型"
 
 msgid "Slow %K Period"
-msgstr ""
+msgstr "慢速%K期"
 
 msgid "Slow Limit"
-msgstr ""
+msgstr "慢速限額"
 
 msgid "Slow MA Type"
-msgstr ""
+msgstr "慢速移動平均線類型"
 
 msgid "Slow Period"
-msgstr ""
+msgstr "慢速期"
 
 msgid "Sold"
-msgstr ""
+msgstr "已賣出"
 
 msgid "Some random index"
-msgstr ""
+msgstr "部份隨機指數"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline法"
 
 msgid "Spreads"
-msgstr ""
+msgstr "價差交易"
 
 msgid "Stake"
-msgstr ""
+msgstr "投注資金"
 
 msgid "Start Time"
-msgstr ""
+msgstr "開始時間"
 
 msgid "Start time"
-msgstr ""
+msgstr "開始時間"
 
 msgid "State/province/region"
-msgstr ""
+msgstr "州/省/區"
 
 msgid "Statement"
-msgstr ""
+msgstr "帳單"
 
 msgid "Status"
-msgstr ""
+msgstr "狀況"
 
 msgid "Stays In/Goes Out"
-msgstr ""
+msgstr "「保持在範圍之內/超出範圍之外」"
 
 msgid "Stocks trading experience"
-msgstr ""
+msgstr "股票交易經驗"
 
 msgid "Stocks trading frequency"
-msgstr ""
+msgstr "股票交易頻率"
 
 msgid "Stop Loss Level"
-msgstr ""
+msgstr "止損價位"
 
 msgid "Stop Profit Level"
-msgstr ""
+msgstr "止盈價位"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "止損"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "止盈"
 
 msgid "Stop-type"
-msgstr ""
+msgstr "停止類型"
 
 msgid "Street address"
-msgstr ""
+msgstr "街道地址"
 
 msgid "Stroke"
-msgstr ""
+msgstr "波幅"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "波幅顏色"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "波幅寬度"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "成功新增權杖"
 
 msgid "Sun"
-msgstr ""
+msgstr "週日"
 
 msgid "TEMA"
-msgstr ""
+msgstr "三指數移動平均線"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "三角形移動平均線"
 
 msgid "Table"
-msgstr ""
+msgstr "表"
 
 msgid "Terms"
-msgstr ""
+msgstr "條款"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "條款和條件"
 
 msgid "Tertiary"
-msgstr ""
+msgstr "三級"
 
 msgid "The"
-msgstr ""
+msgstr "關於"
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -1562,109 +1562,111 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract permium"
 msgstr ""
+"本網站所涵蓋的金融交易服務僅適合這樣的客戶：能夠承受全部投入資金虧損的風險，了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風險。"
+"如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
 "money accounts we will attempt to correct this and settle the contract "
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
-msgstr ""
+msgstr "合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正並正確結算合約，否則合約將取消並退還投注金額。虛擬資金合約將取消並退還投注金額"
 
 msgid "There was an error"
-msgstr ""
+msgstr "出現錯誤"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "合約已過期"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "合約輸了"
 
 msgid "This contract won"
-msgstr ""
+msgstr "合約贏了"
 
 msgid "Thu"
-msgstr ""
+msgstr "週四"
 
 msgid "Tick Trade app"
-msgstr ""
+msgstr "跳動點交易應用程式"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "跳動點 {列.號}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "跳動點"
 
 msgid "Tile"
-msgstr ""
+msgstr "圖標"
 
 msgid "Time Period"
-msgstr ""
+msgstr "期限"
 
 msgid "Time period"
-msgstr ""
+msgstr "期限"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "websocket 請求已過期"
 
 msgid "Title"
-msgstr ""
+msgstr "職稱"
 
 msgid "Token"
-msgstr ""
+msgstr "權杖"
 
 msgid "Token management"
-msgstr ""
+msgstr "權杖管理"
 
 msgid "Token name"
-msgstr ""
+msgstr "權杖名稱"
 
 msgid "Token permissions"
-msgstr ""
+msgstr "權杖權限"
 
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
-msgstr ""
+msgstr "權杖是存取Binary行動應用程式和第三方工具的特殊代碼"
 
 msgid "Tooltip background"
-msgstr ""
+msgstr "工具提示背景"
 
 msgid "Tooltip text"
-msgstr ""
+msgstr "工具提示文字"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "成本總計"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "利潤/虧損合計"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "觸及/未觸及"
 
 msgid "Tourism"
-msgstr ""
+msgstr "旅遊"
 
 msgid "Town/City"
-msgstr ""
+msgstr "城鎮/城市"
 
 msgid "Trade"
-msgstr ""
+msgstr "交易"
 
 msgid "Trade Confirmation"
-msgstr ""
+msgstr "確認交易"
 
 msgid "Trade using"
-msgstr ""
+msgstr "交易方法為"
 
 msgid "Trading Times"
-msgstr ""
+msgstr "交易時間"
 
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
 "that you fully understand the risks involved. Your losses can exceed your "
 "initial deposit and you do not own or have any interest in the underlying "
 "asset"
-msgstr ""
+msgstr "二元期權交易不一定適合每一個人。因此，請確保您完全明白有關的風險。您的虧損可能會超越起始資金存款，而您並不擁有或占有任何標的資產"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -1674,334 +1676,336 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
+"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，或傳送簽名信或傳真到我們的客服團隊。一旦設定好後，您只能收緊限制。限制只能在7天后取消或放寬，"
+"而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
 
 msgid "Tradingview for Binary.com"
-msgstr ""
+msgstr "通過Binary.com使用Tradingview"
 
 msgid "Try"
-msgstr ""
+msgstr "嘗試"
 
 msgid "Tue"
-msgstr ""
+msgstr "週二"
 
 msgid "Turnover"
-msgstr ""
+msgstr "交易額"
 
 msgid "USD"
-msgstr ""
+msgstr "美元"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr ""
+msgstr "很遺憾。您的瀏覽器不支持這些程式"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "上漲/下跌"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "未來事件"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "更新設定"
 
 msgid "Upper Band Stroke"
-msgstr ""
+msgstr "上方帶狀波幅"
 
 msgid "Use"
-msgstr ""
+msgstr "使用"
 
 msgid "Verification code has been sent to your email"
-msgstr ""
+msgstr "驗證代碼已發送到您的郵箱"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "驗證代碼已發送到"
 
 msgid "Verification token"
-msgstr ""
+msgstr "驗證權杖"
 
 msgid "Verify new password"
-msgstr ""
+msgstr "驗證新密碼"
 
 msgid "Vertical Line"
-msgstr ""
+msgstr "垂直線"
 
 msgid "View"
-msgstr ""
+msgstr "檢視"
 
 msgid "View Historical Data"
-msgstr ""
+msgstr "檢視歷史資料"
 
 msgid "Volume Factor"
-msgstr ""
+msgstr "體積系數"
 
 msgid "WMA"
-msgstr ""
+msgstr "加權移動平均線"
 
 msgid "WMA Period"
-msgstr ""
+msgstr "加權移動平均線期限"
 
 msgid "Websocket Server"
-msgstr ""
+msgstr "Websocket 伺服器"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr ""
+msgstr "Webtrader採用新型網絡技術為您提供豐富與充滿樂趣的交易體驗"
 
 msgid "Wed"
-msgstr ""
+msgstr "週三"
 
 msgid "While on the go, you can"
-msgstr ""
+msgstr "出門在外時，您可"
 
 msgid "Windows"
-msgstr ""
+msgstr "視窗"
 
 msgid "X-axis labels"
-msgstr ""
+msgstr "X-軸標籤"
 
 msgid "X-axis line"
-msgstr ""
+msgstr "X-軸線"
 
 msgid "X-axis tick"
-msgstr ""
+msgstr "X-軸跳動點"
 
 msgid "Y-axis gridline"
-msgstr ""
+msgstr "Y-軸方格線"
 
 msgid "Y-axis labels"
-msgstr ""
+msgstr "Y-軸標籤"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "您已設定自我禁止，有效期至"
 
 msgid "You have sold the following contract"
-msgstr ""
+msgstr "您已賣出以下合約"
 
 msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
-msgstr ""
+msgstr "使用各OAuth伺服器進行驗證前須先註冊webtrader 並領取應用程式ID。欲知詳細資訊請前往此處參閱OAuth資料"
 
 msgid "You pay"
-msgstr ""
+msgstr "您支付"
 
 msgid "You will be automatically logged out after such time"
-msgstr ""
+msgstr "在該時間後您將自動退出登入"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
-msgstr ""
+msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "您的瀏覽器不支持剪貼簿複製操作"
 
 msgid "Your browser is not supported"
-msgstr ""
+msgstr "您的瀏覽器不受支持"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "您的更改已成功更新"
 
 msgid "Your email"
-msgstr ""
+msgstr "您的電子郵件"
 
 msgid "Your new account balance is"
-msgstr ""
+msgstr "您的新帳戶餘額是"
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "您的交易參考號是"
 
 msgid "Your transaction reference number is"
-msgstr ""
+msgstr "您的交易參考號是"
 
 msgid "admin"
-msgstr ""
+msgstr "管理中心"
 
 msgid "and"
-msgstr ""
+msgstr "以及"
 
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
 "be exposing yourself to risks (which may be significant, including the risk "
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
-msgstr ""
+msgstr "以下並繼續開立帳戶，請注意您可能讓自己冒一些風險（可能會很嚴重，包括損失整個投資資金的風險），而您可能缺乏正確評估或化解風險的知識或經驗"
 
 msgid "between"
-msgstr ""
+msgstr "之間"
 
 msgid "contact support"
-msgstr ""
+msgstr "聯繫客服部"
 
 msgid "customer support"
-msgstr ""
+msgstr "客服部"
 
 msgid "day"
-msgstr ""
+msgstr "日"
 
 msgid "days"
-msgstr ""
+msgstr "日"
 
 msgid "e.g"
-msgstr ""
+msgstr "例如"
 
 msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr ""
+msgstr "例如www2.binary.com， www.binaryqa36.com"
 
 msgid "end time"
-msgstr ""
+msgstr "結束時間"
 
 msgid "entry spot"
-msgstr ""
+msgstr "入市現價"
 
 msgid "exit spot"
-msgstr ""
+msgstr "退市現價"
 
 msgid "feed is delayed by"
-msgstr ""
+msgstr "資料源延遲的原因為"
 
 msgid "for API calls that can access the cashier"
-msgstr ""
+msgstr "可存取收銀台的API通話專用"
 
 msgid "for API calls that can create trades in the client account"
-msgstr ""
+msgstr "可為客戶帳戶創建交易的API通話專用"
 
 msgid "for API calls that change client settings"
-msgstr ""
+msgstr "更改客戶設定的API通話專用"
 
 msgid "for API calls that only read client data"
-msgstr ""
+msgstr "唯讀客戶資料的API通話專用"
 
 msgid "for mobile charts"
-msgstr ""
+msgstr "移動式圖表專用"
 
 msgid "has updated its"
-msgstr ""
+msgstr "已更新其"
 
 msgid "hour"
-msgstr ""
+msgstr "小時"
 
 msgid "hours"
-msgstr ""
+msgstr "小時"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
-msgstr ""
+msgstr "如不是您的居住國"
 
 msgid "in the future, the"
-msgstr ""
+msgstr "未來的"
 
 msgid "information about your trading exprience and personal finance"
-msgstr ""
+msgstr "您的交易經驗與個人財務資訊"
 
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
-msgstr ""
+msgstr "是Binary的先進桌面交易平台。其多視窗式介面提供最大彈性。可符合活躍交易員通過桌面電腦交易的需求"
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "是必須的。目前價差"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "就是您選擇的，而"
 
 msgid "is the"
-msgstr ""
+msgstr "是"
 
 msgid "is the price in effect at that time"
-msgstr ""
+msgstr "就是當時的實時價格"
 
 msgid "is the selected number of minutes/hours after the"
-msgstr ""
+msgstr "之後所選的分鐘數或小時數"
 
 msgid "is the selected time"
-msgstr ""
+msgstr "就是您選擇的時間"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "的現價"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr ""
+msgstr "就是我們的伺服器處理合約交易的時間"
 
 msgid "main site"
-msgstr ""
+msgstr "主要網站"
 
 msgid "minute"
-msgstr ""
+msgstr "分鐘"
 
 msgid "minutes"
-msgstr ""
+msgstr "分鐘"
 
 msgid "next tick"
-msgstr ""
+msgstr "下一個跳動點"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "是「現在」"
 
 msgid "payments"
-msgstr ""
+msgstr "付款"
 
 msgid "please play responsibly. Read about"
-msgstr ""
+msgstr "請在玩時提醒自己要承擔責任。請查閱"
 
 msgid "points"
-msgstr ""
+msgstr "點"
 
 msgid "read"
-msgstr ""
+msgstr "閱讀"
 
 msgid "second"
-msgstr ""
+msgstr "秒"
 
 msgid "seconds"
-msgstr ""
+msgstr "秒"
 
 msgid "session overview"
-msgstr ""
+msgstr "工作階段概觀"
 
 msgid "start time"
-msgstr ""
+msgstr "開始時間"
 
 msgid "terms and conditions"
-msgstr ""
+msgstr "條款和條件"
 
 msgid "the"
-msgstr ""
+msgstr "關於"
 
 msgid "thereafter"
-msgstr ""
+msgstr "其後"
 
 msgid "tick"
-msgstr ""
+msgstr "跳動點"
 
 msgid "ticks"
-msgstr ""
+msgstr "跳動點"
 
 msgid "trade"
-msgstr ""
+msgstr "交易"
 
 msgid "trading experience"
-msgstr ""
+msgstr "交易經驗"
 
 msgid "trading frequency"
-msgstr ""
+msgstr "交易頻率"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "yes"
-msgstr ""
+msgstr "是"
 
 msgid "| Return"
-msgstr ""
+msgstr "回報率"
