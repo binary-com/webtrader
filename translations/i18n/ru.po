@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-30 16:09+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-07-30 16:22+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -845,58 +845,62 @@ msgid "Long MA Type"
 msgstr ""
 
 msgid "Long ROC Period"
-msgstr ""
+msgstr "Длинный период ROC"
 
 msgid "Long Stop Line Stroke"
-msgstr ""
+msgstr "Штрих длинной стоп-линии"
 
 msgid "Long Term Period"
-msgstr ""
+msgstr "Долгосрочный период"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Нижний барьер"
 
 msgid "Low Price"
-msgstr ""
+msgstr "Нижняя цена"
 
 msgid "Low Stroke"
-msgstr ""
+msgstr "Нижний штрих"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Изменение нижнего барьера"
 
 msgid "Lower"
-msgstr ""
+msgstr "Ниже"
 
 msgid "Lower Band Stroke"
-msgstr ""
+msgstr "Штрих нижней полосы"
 
 msgid "MA Type"
-msgstr ""
+msgstr "Тип СС"
 
 msgid "MACD Line Stroke"
-msgstr ""
+msgstr "Штрих линии MACD"
 
 msgid "Mass Period"
 msgstr ""
 
 msgid "Max/Min Period"
-msgstr ""
+msgstr "Макс./мин. период"
 
 msgid "Maximum"
-msgstr ""
+msgstr "Максимум"
 
 msgid "Maximum account cash balance"
-msgstr ""
+msgstr "Максимальный баланс счёта"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr ""
+"Максимальная совокупная стоимость приобретённых контрактов за 30-дневный "
+"период"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
 msgstr ""
+"Максимальная совокупная стоимость приобретённых контрактов за 7-дневный "
+"период"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr ""
+msgstr "Максимальная совокупная стоимость приобретённых контрактов за день"
 
 msgid "Maximum aggregate loss over a 30-day period"
 msgstr ""
