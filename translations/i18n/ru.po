@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-30 16:27+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-07-30 16:36+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -911,43 +911,43 @@ msgid "Maximum aggregate loss per day"
 msgstr ""
 
 msgid "Maximum number of open positions"
-msgstr ""
+msgstr "Максимальное количество открытых позиций"
 
 msgid "Memorable date"
-msgstr ""
+msgstr "Важная дата"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "Любимый город"
 
 msgid "Middle Band Stroke"
-msgstr ""
+msgstr "Штрих средней линии"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr ""
+msgstr "Минимум 6 символов и минимум 1 цифра"
 
 msgid "Minutes"
-msgstr ""
+msgstr "Минуты"
 
 msgid "Miss"
-msgstr ""
+msgstr "Госпожа"
 
 msgid "Mon"
-msgstr ""
+msgstr "Пон"
 
 msgid "Mother's maiden name"
-msgstr ""
+msgstr "Девичья фамилия матери"
 
 msgid "Mr"
-msgstr ""
+msgstr "Господин"
 
 msgid "Mrs"
-msgstr ""
+msgstr "Госпожа"
 
 msgid "Ms"
-msgstr ""
+msgstr "Госпожа"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Коэффициент"
 
 msgid "NB Dev Down"
 msgstr ""
@@ -956,46 +956,47 @@ msgid "NB Dev Up"
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
 msgid "Name of first love"
-msgstr ""
+msgstr "Имя первой любви"
 
 msgid "Name of your pet"
-msgstr ""
+msgstr "Кличка домашнего животного"
 
 msgid "Navigator handles background"
-msgstr ""
+msgstr "Фон бегунков навигатора"
 
 msgid "Navigator handles border"
-msgstr ""
+msgstr "Граница бегунков навигатора"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "Фон навигатора"
 
 msgid "Navigator outline"
-msgstr ""
+msgstr "Рамка навигатора"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "Цвет элементов навигатора"
 
 msgid "Navigator series line"
-msgstr ""
+msgstr "Линия навигатора"
 
 msgid "Net Annual Income"
-msgstr ""
+msgstr "Чистый годовой доход"
 
 msgid "Net Profit"
-msgstr ""
+msgstr "Чистая прибыль"
 
 msgid "New password"
-msgstr ""
+msgstr "Новый пароль"
 
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr ""
+"Имейте ввиду, что ключи могут охватыватьодну или несколько данных областей"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
