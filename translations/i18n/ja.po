@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-07-28 04:53+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-07-30 09:42+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
 "Language: ja\n"
@@ -21,7 +21,7 @@ msgid "%D Period"
 msgstr "%D 期間"
 
 msgid "%D Stroke"
-msgstr ""
+msgstr "%D ストローク"
 
 msgid "%K MA Type"
 msgstr "%K MA タイプ"
@@ -30,7 +30,7 @@ msgid "%K Period"
 msgstr "%K 期間"
 
 msgid "%K Stroke"
-msgstr ""
+msgstr "%K ストローク"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -38,7 +38,7 @@ msgid ""
 msgstr "（取引期間が1日未満の場合）、または取引最終日（取引期間が1日以上の場合）"
 
 msgid "-DI Stroke"
-msgstr ""
+msgstr "-DI ストローク"
 
 msgid "0-1 year"
 msgstr "0~1年"
@@ -119,13 +119,13 @@ msgid "ADX MA Type"
 msgstr "ADX MA タイプ"
 
 msgid "ADX Stroke"
-msgstr ""
+msgstr "ADX ストローク"
 
 msgid "ATR Period"
 msgstr "ATR期間"
 
 msgid "Acceleration"
-msgstr ""
+msgstr "加速度"
 
 msgid "Accept"
 msgstr "承諾"
@@ -188,10 +188,10 @@ msgid "Are you sure you want to delete this token?"
 msgstr "このトークンを完全に削除してもよろしいですか？"
 
 msgid "Aroon Down Stroke"
-msgstr ""
+msgstr "アルーンダウン ストローク"
 
 msgid "Aroon Up Stroke"
-msgstr ""
+msgstr "アルーンアップ ストローク"
 
 msgid "Asians"
 msgstr "Asians"
@@ -236,7 +236,7 @@ msgid "Bought"
 msgstr "購入済"
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "最初の車のブランド"
 
 msgid "Browser upgrade required"
 msgstr "ブラウザのアップデートが必要です"
@@ -265,19 +265,19 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 msgid "Candles"
-msgstr ""
+msgstr "ローソク足"
 
 msgid "Candlestick down-color"
-msgstr ""
+msgstr "ローソク足 ダウンカラー"
 
 msgid "Candlestick down-line"
-msgstr ""
+msgstr "ローソク足 陰線"
 
 msgid "Candlestick up-color"
-msgstr ""
+msgstr "ローソク足 アップカラー"
 
 msgid "Candlestick up-line"
-msgstr ""
+msgstr "ローソク足 陽線"
 
 msgid "Cash Balance"
 msgstr "口座預託額"
@@ -313,7 +313,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
 msgid "Close Price"
-msgstr ""
+msgstr "：終値"
 
 msgid "Close all"
 msgstr "全て閉じる"
@@ -406,7 +406,7 @@ msgid "Customize chart appearance"
 msgstr "チャートの外観をカスタマイズする"
 
 msgid "DI Stroke"
-msgstr ""
+msgstr "DI ストローク"
 
 msgid "DX MA Type"
 msgstr "DX MA タイプ"
@@ -424,7 +424,7 @@ msgid "Dark Green"
 msgstr "ダークグリーン"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica テーマ"
 
 msgid "Dash style"
 msgstr "ダッシュ線スタイル"
@@ -502,7 +502,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "Edge"
-msgstr ""
+msgstr "エッジ"
 
 msgid "Edit"
 msgstr "編集"
@@ -631,16 +631,16 @@ msgid "HIGH"
 msgstr "HIGH"
 
 msgid "Health"
-msgstr ""
+msgstr "健全度"
 
 msgid "High Barrier"
 msgstr "高限バリア"
 
 msgid "High Price"
-msgstr ""
+msgstr "高値"
 
 msgid "High Stroke"
-msgstr ""
+msgstr "高ストローク"
 
 msgid "High barrier offset"
 msgstr "上限追加バリア値"
@@ -661,7 +661,7 @@ msgid "Home Address"
 msgstr "現住所"
 
 msgid "Horizontal Line"
-msgstr ""
+msgstr "水平線"
 
 msgid "Hours"
 msgstr "時間"
@@ -692,7 +692,7 @@ msgstr ""
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
-msgstr ""
+msgstr "賭博性のあるバイナリーオプションに関して、依存する可能性もありますのでご注意ください"
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -725,7 +725,7 @@ msgid "Jump to"
 msgstr "xxxへ移動する"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr ""
+msgstr "表示されるページの 承認 ボタンをクリックしてください"
 
 msgid "LOW"
 msgstr "LOW"
@@ -746,7 +746,7 @@ msgid "Less than"
 msgstr "未満"
 
 msgid "Let's do it"
-msgstr ""
+msgstr "はじめましょう"
 
 msgid "Level"
 msgstr "レベル"
@@ -758,10 +758,10 @@ msgid "Line"
 msgstr "ライン"
 
 msgid "Line Dot"
-msgstr ""
+msgstr "ラインドット"
 
 msgid "Line Stroke"
-msgstr ""
+msgstr "ラインストローク"
 
 msgid "Link"
 msgstr "リンク"
@@ -776,13 +776,13 @@ msgid "Loading Configurations"
 msgstr "設定の読込み中"
 
 msgid "Loading Download/View Data"
-msgstr ""
+msgstr "データのダウンロード/表示を読込み中"
 
 msgid "Loading Password dialog"
 msgstr "パスワードダイアログを読み込み中"
 
 msgid "Loading Profit Table"
-msgstr ""
+msgstr "取引明細を読込み中"
 
 msgid "Loading Real account opening"
 msgstr "リアルマネー口座開設　読込み中"
@@ -791,7 +791,7 @@ msgid "Loading Self-Exclusion"
 msgstr "取引制限の読込み中"
 
 msgid "Loading Statement Table"
-msgstr ""
+msgstr "残高明細を読込み中"
 
 msgid "Loading Token management"
 msgstr "トークンの設定を読込み中"
@@ -833,7 +833,7 @@ msgid "Long ROC Period"
 msgstr "ロング ROC 期間"
 
 msgid "Long Stop Line Stroke"
-msgstr ""
+msgstr "ロングストップ ラインストローク"
 
 msgid "Long Term Period"
 msgstr "長期"
@@ -842,10 +842,10 @@ msgid "Low Barrier"
 msgstr "下限バリア"
 
 msgid "Low Price"
-msgstr ""
+msgstr "安値"
 
 msgid "Low Stroke"
-msgstr ""
+msgstr "低ストローク"
 
 msgid "Low barrier offset"
 msgstr "下限追加バリア値"
@@ -854,16 +854,16 @@ msgid "Lower"
 msgstr "LOW"
 
 msgid "Lower Band Stroke"
-msgstr ""
+msgstr "ローバンド ストローク"
 
 msgid "MA Type"
 msgstr "MA タイプ"
 
 msgid "MACD Line Stroke"
-msgstr ""
+msgstr "MACD ラインストローク"
 
 msgid "Mass Period"
-msgstr ""
+msgstr "マスインデックス期間"
 
 msgid "Max/Min Period"
 msgstr "最長/最短 期間"
@@ -899,7 +899,7 @@ msgid "Memorable town/city"
 msgstr "思い出のある都市／街の名前"
 
 msgid "Middle Band Stroke"
-msgstr ""
+msgstr "ミドルバンド ストローク"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "数字を含む6文字以上でご入力ください"
@@ -929,10 +929,10 @@ msgid "Multiplier"
 msgstr "乗数"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev ダウン"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev アップ"
 
 msgid "Name"
 msgstr "お名前"
@@ -944,22 +944,22 @@ msgid "Name of your pet"
 msgstr "ペットの名前"
 
 msgid "Navigator handles background"
-msgstr ""
+msgstr "ナビゲーターバックグラント処理"
 
 msgid "Navigator handles border"
-msgstr ""
+msgstr "ナビゲーター ハンドルボーダー"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "マビゲーターマスク塗りつぶし"
 
 msgid "Navigator outline"
-msgstr ""
+msgstr "ナビゲーターアウトライン"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "ナビゲーターシリーズカラー"
 
 msgid "Navigator series line"
-msgstr ""
+msgstr "ナビゲーターシリーズライン"
 
 msgid "Net Annual Income"
 msgstr "年間純収入"
@@ -986,7 +986,7 @@ msgid "Now"
 msgstr "Now"
 
 msgid "Number of bars on sides"
-msgstr ""
+msgstr "サイドのバーの数"
 
 msgid "OAuth App ID (Optional)"
 msgstr "OAuth アプリ ID (任意)"
@@ -1016,7 +1016,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "上限額に達した場合、入金頂くことができません。"
 
 msgid "One last step left"
-msgstr ""
+msgstr "最後の1ステップが残っています"
 
 msgid "Open"
 msgstr "Open"
@@ -1025,7 +1025,7 @@ msgid "Open Account"
 msgstr "口座開設"
 
 msgid "Open Price"
-msgstr ""
+msgstr "始値"
 
 msgid "Open account"
 msgstr "口座開設"
@@ -1037,16 +1037,16 @@ msgid "Opens"
 msgstr "取引開始時間"
 
 msgid "Opera"
-msgstr ""
+msgstr "操作"
 
 msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
-msgstr ""
+msgstr "オプション取引は依存性があります。依存を防ぐために、当社ではお客様のお取引や口座の概要を定期的に提供するリアリティチェックを行っています"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr ""
+msgstr "任意の項目は、20字以内で'+'を含めないようにしてください"
 
 msgid "Other"
 msgstr "その他"
@@ -1070,7 +1070,7 @@ msgid "PNG"
 msgstr "PNG"
 
 msgid "PPO Line Stroke"
-msgstr ""
+msgstr "PPO ラインストローク"
 
 msgid "Password must be 6 characters minimum"
 msgstr "パスワードは6文字以上でご入力ください"
@@ -1118,7 +1118,7 @@ msgid "Phone"
 msgstr "電話番号"
 
 msgid "Please"
-msgstr ""
+msgstr "どうぞ"
 
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "4-50文字以内で、秘密の質問にお答えください"
@@ -1248,10 +1248,10 @@ msgid "Potential profit"
 msgstr "期待利益"
 
 msgid "Pre-Defined"
-msgstr ""
+msgstr "所定の"
 
 msgid "Preferred reality-check interval"
-msgstr ""
+msgstr "好ましいリアリティチェック実施間隔"
 
 msgid "Press  Create token  button on the right to create your first token"
 msgstr "最初のトークンを作成するには、右の トークン作成 ボタンを押してください"
@@ -1302,7 +1302,7 @@ msgid "Redirecting to oauth login page"
 msgstr "OAuthログインページヘリダイレクト"
 
 msgid "Ref"
-msgstr ""
+msgstr "参照"
 
 msgid "Register free account"
 msgstr "無料口座に登録"
@@ -1359,7 +1359,7 @@ msgid "Sale Price"
 msgstr "決済価格"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signikaテーマ"
 
 msgid "Sat"
 msgstr "土曜日"
@@ -1392,7 +1392,7 @@ msgid "Sell Price"
 msgstr "売却"
 
 msgid "Sell Spot"
-msgstr ""
+msgstr "売却レート"
 
 msgid "Sell Time"
 msgstr "売却時間"
@@ -1413,67 +1413,67 @@ msgid "Share"
 msgstr "シェア"
 
 msgid "Short MA Type"
-msgstr ""
+msgstr "ショート MA タイプ"
 
 msgid "Short ROC Period"
-msgstr ""
+msgstr "ショート ROC 期間"
 
 msgid "Short Stop Line Stroke"
-msgstr ""
+msgstr "ショートストップ ラインストローク"
 
 msgid "Short Term Period"
-msgstr ""
+msgstr "短期間"
 
 msgid "Show"
-msgstr ""
+msgstr "表示"
 
 msgid "Sigma"
-msgstr ""
+msgstr "シグマ"
 
 msgid "Signal Line Stroke"
-msgstr ""
+msgstr "シグナル ラインストローク"
 
 msgid "Signal MA Type"
-msgstr ""
+msgstr "シグナル MA タイプ"
 
 msgid "Signal Period"
-msgstr ""
+msgstr "シグナル期間"
 
 msgid "Single MA Period"
-msgstr ""
+msgstr "シングル MA 期間"
 
 msgid "Single MA Type"
-msgstr ""
+msgstr "シングル MA タイプ"
 
 msgid "Slow %D MA Type"
-msgstr ""
+msgstr "スロー %D MA タイプ"
 
 msgid "Slow %D Period"
-msgstr ""
+msgstr "スロー %D 期間"
 
 msgid "Slow %K MA Type"
-msgstr ""
+msgstr "スロー %K MA タイプ"
 
 msgid "Slow %K Period"
-msgstr ""
+msgstr "スロー %K 期間"
 
 msgid "Slow Limit"
-msgstr ""
+msgstr "スローリミット"
 
 msgid "Slow MA Type"
-msgstr ""
+msgstr "スロー MA タイプ"
 
 msgid "Slow Period"
-msgstr ""
+msgstr "スロー期間"
 
 msgid "Sold"
 msgstr "売却"
 
 msgid "Some random index"
-msgstr ""
+msgstr "スローランダムインデックス"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spreads"
 msgstr "スプレッド"
@@ -1488,7 +1488,7 @@ msgid "Start time"
 msgstr "開始時間"
 
 msgid "State/province/region"
-msgstr ""
+msgstr "都道府県名"
 
 msgid "Statement"
 msgstr "口座残高"
@@ -1521,16 +1521,16 @@ msgid "Stop-type"
 msgstr "ストップタイプ"
 
 msgid "Street address"
-msgstr ""
+msgstr "番地"
 
 msgid "Stroke"
-msgstr ""
+msgstr "ストローク"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "ストロークカラー"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "ストローク幅"
 
 msgid "Successfully added new token"
 msgstr "新しいトークンを追加しました"
@@ -1557,7 +1557,7 @@ msgid "Tertiary"
 msgstr "第三"
 
 msgid "The"
-msgstr ""
+msgstr "　"
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -1567,6 +1567,8 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract permium"
 msgstr ""
+"このサイトを含む金融取引サービスは、投資した全額の損失を負担することができ、金融トレードの売買に対するリスクに理解と経験があるお客様にのみ適しています。金"
+"融トレードの取引は高いリスクを伴います。購入したトレードに価値がなくなった場合、トレードのプレミアムを含む投資全額の損失を被ることになります。"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1574,6 +1576,8 @@ msgid ""
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
+"取引期間中に市場データが中断されました。リアル口座でお取引されたお客様に関しましては、これを修正し、適切にトレードを決済させていただきます。修正ができない"
+"場合は、トレードはキャンセルされ、投資額は返金されます。デモ口座の方のトレードはキャンセルされ、投資額が返金されます。"
 
 msgid "There was an error"
 msgstr "エラーが発生しました"
@@ -1609,7 +1613,7 @@ msgid "Time period"
 msgstr "取引期間"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "websocketリクエストの期限が切れています"
 
 msgid "Title"
 msgstr "敬称"
@@ -1670,6 +1674,8 @@ msgid ""
 "initial deposit and you do not own or have any interest in the underlying "
 "asset"
 msgstr ""
+"バイナリーオプションの取引は、全ての方に適しているわけではありません。そのため、考えられるリスクに関して十分に理解があることをご確認ください。損失額が入金"
+"額を超えることがあります。また、原資産を保有ことはありません。"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -1679,6 +1685,9 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
+"お客さまの過度な取引を防止するため、お客さま自身で下記の該当する取引上限設定を行えます。\n"
+"自動ログアウトと任意でログインしない以外の項目は1度設定されますと、次回からは設定した数値より低い数値以外は変更ができませんのでご注意下さい。制限の解除ま"
+"たは緩和をご希望の場合は、XXXまでご連絡ください。"
 
 msgid "Tradingview for Binary.com"
 msgstr "Binary.comのTradingView"
@@ -1708,7 +1717,7 @@ msgid "Update Settings"
 msgstr "設定内容を更新"
 
 msgid "Upper Band Stroke"
-msgstr ""
+msgstr "アッパーバンドストローク"
 
 msgid "Use"
 msgstr "使用する"
@@ -1735,7 +1744,7 @@ msgid "View Historical Data"
 msgstr "履歴データの表示"
 
 msgid "Volume Factor"
-msgstr ""
+msgstr "容積係数"
 
 msgid "WMA"
 msgstr "WMA"
@@ -1834,6 +1843,8 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
+"口座開設にお進みください。その際は、リスクを判断したり、軽減させるための知識や経験がないために、自信へ生じるリスク（投資全体の損失リスクを含むような重大に"
+"なりうるものなど）について注意していただく必要があります。"
 
 msgid "between"
 msgstr "間"
@@ -1884,7 +1895,7 @@ msgid "for mobile charts"
 msgstr "モバイルチャート"
 
 msgid "has updated its"
-msgstr ""
+msgstr "更新しました"
 
 msgid "hour"
 msgstr "時間"
@@ -1902,7 +1913,7 @@ msgid "if this is not your country of residence"
 msgstr "お住まいの国ではない場合"
 
 msgid "in the future, the"
-msgstr ""
+msgstr "将来"
 
 msgid "information about your trading exprience and personal finance"
 msgstr "取引経験及び個人的な財政に関する情報"
@@ -1912,102 +1923,104 @@ msgid ""
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
 msgstr ""
+"Binaryの高度なデスクトップ用取引プラットフォームです。マルチウィンドウインターフェースでは可能な限りの柔軟性を提供し、デスクトップPCでご利用いただ"
+"ける、トレーダーのニーズに適しています。"
 
 msgid "is required. Current spread"
 msgstr "必要です。現在のスプレッド"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "選択いただいたもの"
 
 msgid "is the"
-msgstr ""
+msgstr "それ"
 
 msgid "is the price in effect at that time"
-msgstr ""
+msgstr "その際に影響をうけている価格です"
 
 msgid "is the selected number of minutes/hours after the"
-msgstr ""
+msgstr "XXXの後に、分/時間の数字が選択されています"
 
 msgid "is the selected time"
-msgstr ""
+msgstr "選択された時間です"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "XXX時点のレートです"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr ""
+msgstr "トレードの際に、当サーバーにより処理されました"
 
 msgid "main site"
 msgstr "メインサイト"
 
 msgid "minute"
-msgstr ""
+msgstr "分"
 
 msgid "minutes"
-msgstr ""
+msgstr "分"
 
 msgid "next tick"
-msgstr ""
+msgstr "次のTick"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "「今」のXXX"
 
 msgid "payments"
-msgstr ""
+msgstr "アフィリエイト報酬の支払いについて"
 
 msgid "please play responsibly. Read about"
-msgstr ""
+msgstr "責任をもってお取引ください。XXXを読む"
 
 msgid "points"
-msgstr ""
+msgstr "ポイント"
 
 msgid "read"
-msgstr ""
+msgstr "読む"
 
 msgid "second"
-msgstr ""
+msgstr "秒"
 
 msgid "seconds"
-msgstr ""
+msgstr "秒"
 
 msgid "session overview"
-msgstr ""
+msgstr "セッション概要"
 
 msgid "start time"
-msgstr ""
+msgstr "開始時間"
 
 msgid "terms and conditions"
-msgstr ""
+msgstr "利用規約"
 
 msgid "the"
-msgstr ""
+msgstr "　"
 
 msgid "thereafter"
-msgstr ""
+msgstr "その後"
 
 msgid "tick"
-msgstr ""
+msgstr "tick"
 
 msgid "ticks"
-msgstr ""
+msgstr "tick"
 
 msgid "trade"
-msgstr ""
+msgstr "トレード"
 
 msgid "trading experience"
-msgstr ""
+msgstr "取引のご経験"
 
 msgid "trading frequency"
-msgstr ""
+msgstr "取引の頻度"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "yes"
-msgstr ""
+msgstr "はい"
 
 msgid "| Return"
-msgstr ""
+msgstr "| 戻る"
