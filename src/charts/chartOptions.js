@@ -272,7 +272,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 $("#" + m_newTabId).on('chart-overlay-add', function(e, overlay){
                     var chart = $("#" + m_newTabId + "_chart").highcharts();
                     state[m_newTabId].overlayCount = chart.get_overlay_count();
-                
+
                 });
                 $("#" + m_newTabId).on('chart-overlay-remove', function(e, overlay){
                     var chart = $("#" + m_newTabId + "_chart").highcharts();
@@ -288,6 +288,10 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 setTopHeaderPosAndWith_chartType(m_chartType, m_newTabId);
 
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
+                require(['charts/chartTemplateManager'], function(templateManager){
+                  var root = $html.find('chart-template-manager-root');
+                  templateManager.init(root);
+                })
 
             });
 

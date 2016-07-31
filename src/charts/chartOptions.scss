@@ -1,26 +1,24 @@
 .chartOptions {
-    padding: 5px;
-}
+  padding: 5px;
 
-.chartOptions .table {
+  .table {
     display: inline-block;
     vertical-align: top;
-}
+    .row .cell {
+      padding-right: 5px;
+    }
+  }
 
-.chartOptions .table .row .cell {
-    padding-right: 5px;
-}
-
-.chartOptions .chartOptions_button {
+  .chartOptions_button {
     border-radius: 5px;
     border: 1px solid darkgrey;
     background: white;
     padding: 5px 5px 5px 5px;
     height: 22px;
     margin-bottom: 4px;
-}
+  }
 
-.chartOptions .button_selected {
+  .button_selected {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 5px;
@@ -32,22 +30,24 @@
     border-bottom: none;
     height: 26px;
     margin-bottom: 0px;
-}
+  }
 
-.chartOptions .chartOptions_button:hover,
-.chartOptions .chartOptions_overlay.chartTypeOverlay > .table .row,
-.chartOptions .chartOptions_overlay.drawingToolOverlay .row .cell {
+  .chartOptions_button:hover,
+  .chartOptions_overlay.chartTypeOverlay > .table .row,
+  .chartOptions_overlay.drawingToolOverlay .row .cell {
     cursor: pointer;
-}
+  }
 
-.chartOptions .chartOptions_button span { display: inline-block; }
-.chartOptions .chartOptions_button span img { max-height: 20px; }
+  .chartOptions_button span {
+    display: inline-block;
+    img { max-height: 20px; }
+  }
 
-.chartOptions .chartOptions-export-table {
+  .chartOptions-export-table {
     float: right;
-}
+  }
 
-.chartOptions .chartOptions_overlay {
+  .chartOptions_overlay {
     position: absolute;
     z-index: +1;
     background-color: white;
@@ -60,74 +60,74 @@
     -webkit-border-bottom-left-radius: 5px;
     -moz-border-bottom-right-radius: 5px;
     -moz-border-bottom-left-radius: 5px;
-}
+  }
 
-.chartOptions .chartOptions_overlay.exportOverlay button,
-.chartOptions .chartOptions_overlay.timePeriodOverlay button {
+  .chartOptions_overlay.exportOverlay button,
+  .chartOptions_overlay.timePeriodOverlay button {
     width: 25px;
     height: 25px;
     padding: 1px 1px 1px 1px;
     line-height: 1px;
-}
+  }
 
-.chartOptions .chartOptions_overlay.chartTypeOverlay > .table .row:hover {
+  .chartOptions_overlay.chartTypeOverlay > .table .row:hover {
     background-color: darkgrey;
-}
+  }
 
-.chartOptions .chartOptions_overlay .cell {
+  .chartOptions_overlay .cell {
     padding: 5px;
-}
-.chartOptions .chartOptions_overlay .cell:nth-child(1) {
+  }
+  .chartOptions_overlay .cell:nth-child(1) {
     width: 12px;
-}
+  }
 
-.chartOptions .chartOptions_overlay.loadSaveOverlay {
+  .chartOptions_overlay.loadSaveOverlay {
     left: 72px;
-}
-.chartOptions .chartOptions_overlay.loadSaveOverlay .cell {
-  width: auto;
-}
-.chartOptions .chartOptions_overlay.loadSaveOverlay .cell button {
-  background-color: #273051;
-}
-.chartOptions .chartOptions_overlay.loadSaveOverlay .chartoptions-horizontal-line {
-  width: 150px;
-}
+  }
+  .chartOptions_overlay.loadSaveOverlay .cell {
+    width: auto;
+  }
+  .chartOptions_overlay.loadSaveOverlay .cell button {
+    background-color: #273051;
+  }
+  .chartOptions_overlay.loadSaveOverlay .chartoptions-horizontal-line {
+    width: 150px;
+  }
 
-.chartOptions .chartOptions_overlay.exportOverlay {
+  .chartOptions_overlay.exportOverlay {
     right: 10px;
     left: initial;
-}
+  }
 
-.chartOptions .chartOptions_overlay.exportOverlay > div.row > div.cell {
+  .chartOptions_overlay.exportOverlay > div.row > div.cell {
     padding-left: 5px;
     padding-top: 5px;
     padding-right: 5px;
-}
+  }
 
-.chartOptions .chartOptions_overlay.exportOverlay > .row > .cell {
+  .chartOptions_overlay.exportOverlay > .row > .cell {
     padding: 0px;
-}
+  }
 
-.chartOptions .padding-bottom-5 {
+  .padding-bottom-5 {
     padding-bottom: 5px !important;
-}
+  }
 
-.chartOptions .export-button {
+  .export-button {
     width: 35px !important;
-}
+  }
 
-.chartOptions .vertical-bottom {
+  .vertical-bottom {
     vertical-align: bottom;
-}
+  }
 
-.chartOptions .chartoptions-horizontal-line {
+  .chartoptions-horizontal-line {
     background-color: darkgrey;
     height: 1px;
     position: relative;
-}
+  }
 
-.countBubl {
+  .countBubl {
     float: right;
     position: absolute;
     margin-left: -13px;
@@ -139,4 +139,5 @@
     padding: 1px;
     min-width: 10px;
     text-align: center;
+  }
 }
