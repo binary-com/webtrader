@@ -168,7 +168,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 };
 
                 var currency = data.balance.currency;
-                table = $("<table width='100%' class='portfolio-dialog display compact'/>");
+                table = $("<table width='100%' class='portfolio-dialog hover'/>");
                 table.appendTo(portfolioWin);
                 table = table.dataTable({
                     data: [],

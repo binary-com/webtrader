@@ -30,15 +30,11 @@
   line-height: 28px;
 }
 .token-dialog .token-list-pane table {
-  border-collapse: collapse;
   margin-top: 20px;
-  line-height: 22px;
-  width: 100%;
 }
 .token-dialog .token-list-pane table thead { line-height: 30px; }
-.token-dialog .token-list-pane table thead th { text-align: left; font-weight: bold; }
+.token-dialog .token-list-pane table thead th { text-align: left; }
 .token-dialog .token-list-pane table thead th:last-child { text-align: right; }
-.token-dialog .token-list-pane table tbody tr:nth-child(odd) { background: #eee; }
 .token-dialog .token-list-pane table tbody td:last-child { text-align: right; }
 .token-dialog .token-list-pane table tbody td span {
   display: inline-block;
