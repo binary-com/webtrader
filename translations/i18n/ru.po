@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-30 16:50+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-07-31 10:44+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -515,7 +515,7 @@ msgid "Edit"
 msgstr "Редактировать"
 
 msgid "Education"
-msgstr ""
+msgstr "Образование"
 
 msgid "Email verification failed"
 msgstr "Не удалось подтвердить эл. адрес"
@@ -1039,130 +1039,134 @@ msgstr ""
 "что инвестиции, предоставляемые на данном сайте, не подходят для Вас"
 
 msgid "Once this limit is reached, you may no longer deposit"
-msgstr ""
+msgstr "Когда данный лимит будет достигнут, Вы не сможете вносить средства"
 
 msgid "One last step left"
-msgstr ""
+msgstr "Остался один шаг"
 
 msgid "Open"
-msgstr ""
+msgstr "Открытие"
 
 msgid "Open Account"
-msgstr ""
+msgstr "Открыть счёт"
 
 msgid "Open Price"
-msgstr ""
+msgstr "Цена открытия"
 
 msgid "Open account"
-msgstr ""
+msgstr "Открыть счёт"
 
 msgid "Open real money account"
-msgstr ""
+msgstr "Открыть реальный счёт"
 
 msgid "Opens"
-msgstr ""
+msgstr "Открывается"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
 msgstr ""
+"Торговля бинарными опционами может вызват зависимость, как и любая "
+"деятельность, доведённая до крайности. Чтобы избежать опасности "
+"возникновения подобной зависимости, мы проводим проверку реальности и "
+"предоставляем регулярный отчёт о Ваших сделках и счетах"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr ""
+msgstr "Опциональное поле (20 символов и не допускается '+')"
 
 msgid "Other"
-msgstr ""
+msgstr "Другое"
 
 msgid "Other financial instruments trading experience"
-msgstr ""
+msgstr "Опыт торговли другими финансовыми инструментами"
 
 msgid "Other financial instruments trading frequency"
-msgstr ""
+msgstr "Частота торговли другими финансовыми инструментами"
 
 msgid "Over"
-msgstr ""
+msgstr "Более"
 
 msgid "Over 3 years"
-msgstr ""
+msgstr "Более 3 лет"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "PPO Line Stroke"
-msgstr ""
+msgstr "Штрих линии ПЦО"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "Минимальная длина пароля: 6 знаков"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Пароль должен содержать заглавные, строчные буквы и цифры"
 
 msgid "Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "Пароль должен содержать заглавные буквы и цифры"
 
 msgid "Password successfully updated"
-msgstr ""
+msgstr "Пароль изменён успешно"
 
 msgid "Passwords didn't match. Please type them again"
-msgstr ""
+msgstr "Пароли не совпали. Пожалуйста, введите пароли снова"
 
 msgid "Payments"
-msgstr ""
+msgstr "Платежи"
 
 msgid "Payout"
-msgstr ""
+msgstr "Выплата"
 
 msgid "Pension"
-msgstr ""
+msgstr "Пенсия"
 
 msgid "Period"
-msgstr ""
+msgstr "Период"
 
 msgid "Period 1"
-msgstr ""
+msgstr "Период 1"
 
 msgid "Period 2"
-msgstr ""
+msgstr "Период 2"
 
 msgid "Period 3"
-msgstr ""
+msgstr "Период 3"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Разрешения"
 
 msgid "Personal Details"
-msgstr ""
+msgstr "Личные данные"
 
 msgid "Phone"
-msgstr ""
+msgstr "Телефон"
 
 msgid "Please"
-msgstr ""
+msgstr "Пожалуйста"
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr ""
+msgstr "Пожалуйста, ответьте на секретный вопрос (4-50 знаков)"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Пожалуйста, выберите минимум один уровень ключа"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Пожалуйста, введите число в следующем диапазоне:"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr ""
+msgstr "Пожалуйста, введите точную дату в формате: гггг-мм-дд"
 
 msgid "Please enter a value for"
-msgstr ""
+msgstr "Пожалуйста, введите значение для"
 
 msgid "Please enter a vlaid phone number"
-msgstr ""
+msgstr "Пожалуйста, введите правильный номер телефона"
 
 msgid "Please enter correct email"
 msgstr ""
