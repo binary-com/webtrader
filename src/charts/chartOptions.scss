@@ -82,32 +82,37 @@
   }
 
   .chartOptions_overlay.loadSaveOverlay {
-    left: 72px;
-  }
-  .chartOptions_overlay.loadSaveOverlay .cell {
-    width: auto;
-  }
-  .chartOptions_overlay.loadSaveOverlay .cell button {
-    background-color: #273051;
-  }
-  .chartOptions_overlay.loadSaveOverlay .chartoptions-horizontal-line {
-    width: 150px;
+    left: 10px;
+    width: 243px;
+    .chartoptions-horizontal-line {
+      width: 212px;
+    }
+    .chart-template-manager-root {
+      .menu {
+        button {
+          background-color: #273051;
+          margin: 5px;
+          padding: 10px 35px;
+        }
+      }
+
+    }
   }
 
   .chartOptions_overlay.exportOverlay {
     right: 10px;
     left: initial;
+    > .row > .cell {
+      padding: 0px;
+    }
+    .row > div.cell {
+      padding-left: 5px;
+      padding-top: 5px;
+      padding-right: 5px;
+    }
+
   }
 
-  .chartOptions_overlay.exportOverlay > div.row > div.cell {
-    padding-left: 5px;
-    padding-top: 5px;
-    padding-right: 5px;
-  }
-
-  .chartOptions_overlay.exportOverlay > .row > .cell {
-    padding: 0px;
-  }
 
   .padding-bottom-5 {
     padding-bottom: 5px !important;

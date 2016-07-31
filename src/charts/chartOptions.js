@@ -4,7 +4,7 @@
 
 define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, chartWindow, charts, moment, chartingRequestMap) {
 
-    var state = [], view = [];
+    var state = {}, view = {}, template_manager = {};
     var CANDLE_TYPE = 'candlestick',
         OHLC_TYPE = 'ohlc',
         LINE_TYPE = 'line',
@@ -130,7 +130,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     bloggerShareLink : bloggerShareTemplate.format(urlShareTemplate.format(m_instrumentCode, m_timePeriod), m_instrumentName + '(' + m_timePeriod + ')'),
                     vkShareLink : vkShareTemplate.format(urlShareTemplate.format(m_instrumentCode, m_timePeriod), m_instrumentName + '(' + m_timePeriod + ')')
 
-                }, view[m_newTabId] = null;
+                };
+                view[m_newTabId] = null;
 
                 state[m_newTabId].toggleTimerPeriodSelector = function(event, scope) {
                     var temp = !scope.showTimePeriodSelector;
@@ -289,8 +290,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
                 require(['charts/chartTemplateManager'], function(templateManager){
-                  var root = $html.find('chart-template-manager-root');
-                  templateManager.init(root);
+                  var root = $html.find('.chart-template-manager-root');
+                  template_manager[m_newTabId] = templateManager.init(root);
                 })
 
             });
@@ -319,6 +320,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         cleanBinding: function(newTabId) {
             if (view[newTabId]) {
                 view[newTabId].unbind();
+                template_manager[newTabId] && template_manager[newTabId].unbind();
+                delete template_manager[newTabId];
                 delete view[newTabId];
                 delete state[newTabId];
             }

@@ -1,0 +1,8 @@
+<div class='menu'>
+  <button rv-on-click='route.update | bind "templates"'>Load chart template</button>
+  <button>Save changes</button>
+  <button>Save as...</button>
+</div>
+<div class='templates' rv-if='route.value | eq "templates"'>
+  yey!
+</div>
