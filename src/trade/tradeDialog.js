@@ -713,31 +713,35 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       });
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
-          if (!data.proposal || data.proposal.id !== state.proposal.id) return;
-          if(data.error){
-            console.error(data.error);
-            state.proposal.error = data.error.message;
-            state.proposal.message = '';
-            return;
-          }
-          if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
-          /* update fields */
-          var proposal = data.proposal;
-          state.proposal.ask_price = proposal.ask_price;
-          state.proposal.date_start = proposal.date_start;
-          state.proposal.display_value = proposal.display_value;
-          state.proposal.message = proposal.longcode;
-          state.proposal.payout = proposal.payout;
-          state.proposal.spot = proposal.spot;
-          state.proposal.spot_time = proposal.spot_time;
-          state.spreads.spread = proposal.spread || 0.0;
-          state.spreads.spot = proposal.spot || '0.0';
-          state.spreads.spot_time = proposal.spot_time || '0';
-          state.proposal.loading = false;
-          if(!tick_stream_alive && proposal.spot) { /* for contracts that don't have live qoute data */
-            state.tick.epoch = proposal.spot_time;
-            state.tick.quote = proposal.spot;
-          }
+          // Specifically for microsoft products. Need to wait for other functions to finish
+          //We can move the code out of the defer function once windows becomes obsolete or if it stops making browsers. >.<
+          _.defer(function(){
+              if (!data.proposal || data.proposal.id !== state.proposal.id) return;
+              if(data.error){
+                console.error(data.error);
+                state.proposal.error = data.error.message;
+                state.proposal.message = '';
+                return;
+              }
+              if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
+              /* update fields */
+              var proposal = data.proposal;
+              state.proposal.ask_price = proposal.ask_price;
+              state.proposal.date_start = proposal.date_start;
+              state.proposal.display_value = proposal.display_value;
+              state.proposal.message = proposal.longcode;
+              state.proposal.payout = proposal.payout;
+              state.proposal.spot = proposal.spot;
+              state.proposal.spot_time = proposal.spot_time;
+              state.spreads.spread = proposal.spread || 0.0;
+              state.spreads.spot = proposal.spot || '0.0';
+              state.spreads.spot_time = proposal.spot_time || '0';
+              state.proposal.loading = false;
+              if(!tick_stream_alive && proposal.spot) { /* for contracts that don't have live qoute data */
+                state.tick.epoch = proposal.spot_time;
+                state.tick.quote = proposal.spot;
+              }
+          });
       });
 
       /* change currency on user login */
