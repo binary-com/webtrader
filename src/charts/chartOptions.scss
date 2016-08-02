@@ -95,7 +95,31 @@
           padding: 10px 35px;
         }
       }
+      .save-as, .rename {
+        padding: 5px;
 
+        .title { margin: 5px 0; }
+        button { margin-top: 5px; }
+      }
+
+    }
+    .errors {
+      height: 1em;
+      .error {
+        color: red;
+        font-size: 12px;
+      }
+    }
+    span.back-arrow {
+      color: #aaa;
+      font-size: 12px;
+      cursor: pointer;
+      padding-bottom: 10px;
+       & > span {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+      }
     }
   }
 

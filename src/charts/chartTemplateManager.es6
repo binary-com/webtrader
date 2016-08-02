@@ -21,6 +21,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           save_changes_disabled: true
         },
         templates: {
+          array: [],
           save_as_value: '',
           rename_value: '',
           current: null
@@ -39,6 +40,24 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
                       .concat(options.overlays.map(overlay => overlay.displaySymbol))
                       .join(' + ');
         route.update('save-as');
+      }
+
+      templates.save_as = function() {
+        const name = templates.save_as_value;
+        const options = chartWindow.get_chart_options(dialog_id);
+        if(options) {
+          options.instrumentCode = '';
+          options.instrumentName = '';
+          options.name = name;
+          if(templates.array.map(t => t.name).includes(name)) {
+            $.growl.error({message: 'Template name already exists'.i18n() });
+            return;
+          }
+          templates.array.push(options);
+          templates.current = options;
+          local_storage.set('templates', templates.array);
+          route.update('menu');
+        }
       }
 
       menu.save_changes = () => {

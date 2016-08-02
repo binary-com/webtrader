@@ -106,7 +106,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
 
         /* id of dialog. WITHOUT '#' prefix or '_chart' suffix */
         get_chart_options: function(dialog_id) {
-          return chart_options_store[dialog_id];
+          return _.cloneDeep(chart_options_store[dialog_id]);
         },
 
         /**
