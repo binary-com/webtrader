@@ -209,9 +209,11 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 var chart = $(containerIDWithHash).highcharts();
                 indicators = chart.get_indicators();
                 overlays = options.overlays;
+                console.warn('destroy');
                 chart.destroy();
             }
-            else if(options.indicators) { /* this comes only from tracker.js */
+            if(options.indicators) { /* this comes only from tracker.js & ChartTemplateManager.js */
+              console.warn(options.indicators, options.overlays);
               indicators = options.indicators;
               overlays = options.overlays;
               $(containerIDWithHash).data("overlayCount", overlays.length);
@@ -407,7 +409,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
         generate_csv : generate_csv,
 
-        refresh : function ( containerIDWithHash, newTimePeriod, newChartType ) {
+        refresh : function ( containerIDWithHash, newTimePeriod, newChartType, indicators, overlays ) {
             var instrumentCode = $(containerIDWithHash).data("instrumentCode");
             if (newTimePeriod)  {
                 //Unsubscribe from tickstream.
@@ -430,19 +432,21 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 }
             });
             require(['instruments/instruments'], function (ins) {
-                var overlays = [];
-                loadedMarketData.forEach(function (value) {
-                    var marketDataObj = ins.getSpecificMarketData(value);
-                    if (marketDataObj.symbol != undefined && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
-                    {
-                        var overlay = {
-                            symbol: marketDataObj.symbol,
-                            displaySymbol: value,
-                            delay_amount: marketDataObj.delay_amount
-                        };
-                        overlays.push(overlay);
-                    }
-                });
+                if(!overlays) {
+                  overlays = [];
+                  loadedMarketData.forEach(function (value) {
+                      var marketDataObj = ins.getSpecificMarketData(value);
+                      if (marketDataObj.symbol != undefined && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
+                      {
+                          var overlay = {
+                              symbol: marketDataObj.symbol,
+                              displaySymbol: value,
+                              delay_amount: marketDataObj.delay_amount
+                          };
+                          overlays.push(overlay);
+                      }
+                  });
+                }
                 chartObj.drawChart( containerIDWithHash, {
                     instrumentCode : instrumentCode,
                     instrumentName : $(containerIDWithHash).data("instrumentName"),
@@ -450,7 +454,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     type : $(containerIDWithHash).data("type"),
                     series_compare : series_compare,
                     delayAmount : $(containerIDWithHash).data("delayAmount"),
-                    overlays: overlays
+                    overlays: overlays,
+                    indicators: indicators
                 });
             });
 

@@ -46,6 +46,10 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       menu.save_as = () => {
         const options = chartWindow.get_chart_options(dialog_id) || {};
+        options.name = [`${options.timePeriod} ${options.type}`]
+                      .concat(options.indicators.map(ind => ind.name))
+                      .concat(options.overlays.map(overlay => overlay.displaySymbol))
+                      .join(' + ');
         templates.save_as_value = options.name;
         route.update('save-as');
       }
@@ -132,7 +136,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       templates.apply = tmpl => {
-        console.warn('apply', tmpl);
+        chartWindow.apply_chart_options(dialog_id, tmpl);
+        templates.current = tmpl;
       }
 
       return state;

@@ -194,6 +194,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         scope.vkShareLink = vkShareTemplate.format(encodeURIComponent(urlShareTemplate.format(m_instrumentCode, m_timePeriod)), m_instrumentName + '(' + m_timePeriod + ')');
                         setTopHeaderPosAndWidth_timePeriodOvl(timePeriod);
 
+                        $('#' + scope.newTabId).trigger('chart-time-period-changed', timePeriod);
                     }
                 };
 

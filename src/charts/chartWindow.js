@@ -18,7 +18,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
     }
 
     var options_store = {};
-    return {
+    var chart_window_functions = {
 
         /**
          * @param options
@@ -82,7 +82,10 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
               options_store[id].type = type;
               update_track(options_store[id]);
             });
-
+            dialog.on('chart-time-period-changed',function(e, timePeriod){
+              options_store[id].timePeriod = timePeriod;
+              update_track(options_store[id]);
+            });
             dialog.on('chart-indicators-changed',function(e, chart){
               options_store[id].indicators = chart.get_indicators();
               update_track(options_store[id]);
@@ -111,10 +114,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
         get_chart_options: function(dialog_id) {
           var options =  _.cloneDeep(options_store[dialog_id]);
           if(!options.name) {
-            options.name = [`${options.timePeriod} ${options.type}`]
-                          .concat(options.indicators.map(ind => ind.name))
-                          .concat(options.overlays.map(overlay => overlay.displaySymbol))
-                          .join(' + ');
+            options.name = '';
           }
           return options;
         },
@@ -123,6 +123,12 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
           options.instrumentName = options_store[dialog_id].instrumentName;
           options_store[dialog_id] = options;
           $('#'+ dialog_id).trigger('chart-options-changed');
+        },
+        apply_chart_options: function(dialog_id, options){
+          chart_window_functions.set_chart_options(dialog_id, options);
+          require(['charts/charts'], function(charts){
+            charts.refresh('#'+dialog_id + '_chart', options.timePeriod, options.type, options.indicators, options.overlays);
+          });
         },
 
         /**
@@ -136,5 +142,5 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
             $('#' + dialogId).dialog('option', 'title', instrumentName + " (" + timePeriod + ")");
         }
     };
-
+    return chart_window_functions;
 });
