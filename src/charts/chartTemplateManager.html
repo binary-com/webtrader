@@ -13,7 +13,7 @@
   </div>
   <div rv-if='templates.array | prop "length"'>
     <div rv-each-tmpl='templates.array' class='template'>
-      <div class='name' rv-on-click='templates.apply| bind tmpl'>{tmpl.name}</div>
+      <div class='name' rv-class-active='tmpl.name | eq templates.current.name' rv-on-click='templates.apply| bind tmpl'>{tmpl.name}</div>
       <a href="#" rv-on-click='templates.rename | bind tmpl'>Rename</a>
       <a href="#" rv-on-click='templates.remove | bind tmpl'>Delete</a>
     </div>

@@ -95,6 +95,9 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
               _.remove(options_store[id].overlays, displaySymbol);
               update_track(options_store[id]);
             });
+            dialog.on('chart-options-changed',function(e){
+              update_track(options_store[id]);
+            });
             dialog.dialog('open');
 
             return dialog;
@@ -116,7 +119,10 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
           return options;
         },
         set_chart_options: function(dialog_id, options){
+          options.instrumentCode = options_store[dialog_id].instrumentCode;
+          options.instrumentName = options_store[dialog_id].instrumentName;
           options_store[dialog_id] = options;
+          $('#'+ dialog_id).trigger('chart-options-changed');
         },
 
         /**

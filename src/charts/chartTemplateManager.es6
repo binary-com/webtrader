@@ -25,7 +25,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           save_changes_disabled: true
         },
         templates: {
-          array: [],
+          array: local_storage.get('templates'),
           save_as_value: '',
           rename_tmpl: null,
           rename_value: '',
@@ -33,6 +33,12 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         }
       };
       const {route, templates, menu} = state;
+
+      /* persist applied templates between page reloads */
+      const current_tmpl = chartWindow.get_chart_options(dialog_id);
+      if(_.findIndex(templates.array, t => t.name === current_tmpl.name) !== -1) {
+        templates.current = current_tmpl;
+      }
 
       route.update = value => {
         route.value = value;
@@ -63,14 +69,13 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         local_storage.set('templates', array);
         templates.array = array;
         templates.current = current;
+        $.growl.notice({message: 'Template changes saved '.i18n() + '(' + current.name + ')'});
       }
 
       templates.save_as = () => {
         const name = templates.save_as_value;
         const options = chartWindow.get_chart_options(dialog_id);
         if(options) {
-          options.instrumentCode = '';
-          options.instrumentName = '';
           options.name = name;
           const array = local_storage.get('templates');
           if(array.map(t => t.name).includes(name)) {
@@ -116,6 +121,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           /* update template name in chartWindow options */
           const current = chartWindow.get_chart_options(dialog_id);
           if(current.name == name) {
+            templates.current = current;
             current.name = new_name;
             chartWindow.set_chart_options(dialog_id, current);
           }
