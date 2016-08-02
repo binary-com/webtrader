@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-07-31 19:59+0000\n"
-"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"PO-Revision-Date: 2016-08-02 05:09+0000\n"
+"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -457,9 +457,8 @@ msgstr "Демо-ролик для партнёров о доступе к гр�
 msgid "Deposit of USD"
 msgstr "Депозит в USD"
 
-#, fuzzy
 msgid "Describe what this token is for to find it later"
-msgstr ""
+msgstr "Опишите, для чего нужен данный ключ, чтобы найти его позже"
 
 msgid "Description"
 msgstr "Описание"
@@ -467,9 +466,8 @@ msgstr "Описание"
 msgid "Digits"
 msgstr "Цифры"
 
-#, fuzzy
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr ""
+msgstr "Хотите установить расширение Webtrader для  Chrome?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
