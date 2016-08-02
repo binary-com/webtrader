@@ -17,6 +17,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
         });
     }
 
+    var chart_options_store = {};
     return {
 
         /**
@@ -69,6 +70,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
             });
 
             /* tracking the chart, includion indicators & overlyas */
+            chart_options_store[id] = options_copy;
             options_copy.indicators = options_copy.indicators || [];
             options_copy.overlays = options_copy.overlays || [];
             var update_track = dialog.track({
@@ -102,13 +104,18 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
             return $("div.webtrader-dialog").length;
         },
 
+        /* id of dialog. WITHOUT '#' prefix or '_chart' suffix */
+        get_chart_options: function(dialog_id) {
+          return chart_options_store[dialog_id];
+        },
+
         /**
          * @param callerContext - Should be the Jquery object for dialog
          */
         triggerResizeEffects : function( callerContext ) {
             _trigger_Resize_Effects.call( callerContext );
         },
-        
+
         changeChartWindowTitle : function(dialogId, instrumentName, timePeriod) {
             $('#' + dialogId).dialog('option', 'title', instrumentName + " (" + timePeriod + ")");
         }

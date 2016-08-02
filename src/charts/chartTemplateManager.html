@@ -1,8 +1,30 @@
-<div class='menu'>
+<div class='menu' rv-if='route.value | eq "menu"'>
   <button rv-on-click='route.update | bind "templates"'>Load chart template</button>
-  <button>Save changes</button>
-  <button>Save as...</button>
+  <button rv-on-click='menu.save_changes' rv-css-opacity='templates.current | ternary 0.5 1'>Save changes</button>
+  <button rv-on-click='menu.save_as'>Save as...</button>
 </div>
 <div class='templates' rv-if='route.value | eq "templates"'>
   yey!
+</div>
+
+<div class='save-as' rv-if='route.value | eq "save-as"'>
+    <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span>
+
+    <div class='title'>Name</div>
+    <input rv-value='templates.save_as_value' />
+
+    <button rv-on-click='templates.save_as'>Save as</button>
+</div>
+
+<div class='rename' rv-if='route.value | eq "rename"'>
+    <span class='back-arrow' rv-on-click='route.update | bind "templates"'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    </span>
+
+    <div class='title'>Template name</div>
+    <input rv-value='templates.rename_value' />
+
+    <button rv-on-click='templates.rename'>Save as</button>
 </div>

@@ -289,9 +289,9 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 setTopHeaderPosAndWith_chartType(m_chartType, m_newTabId);
 
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
-                require(['charts/chartTemplateManager'], function(templateManager){
+                require(['charts/chartTemplateManager'], function(templateManager) {
                   var root = $html.find('.chart-template-manager-root');
-                  template_manager[m_newTabId] = templateManager.init(root);
+                  template_manager[m_newTabId] = templateManager.init(root, m_newTabId);
                 })
 
             });

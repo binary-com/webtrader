@@ -3,20 +3,21 @@
  */
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', 
+        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json',
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
         ],
   function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json ) {
 
     "use strict";
 
-    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
+    var indicator_values = _(JSON.parse(indicators_json)).values().value();
     Highcharts.Chart.prototype.get_indicators = function() {
       var chart = this;
       var indicators = [];
       if(chart.series.length > 0){
-          indicator_ids.forEach(function(id){
-            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, options: chart.series[0][id][0].options})
+          indicator_values.forEach(function(ind){
+            var id = ind.id;
+            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, name: ind.long_display_name, options: chart.series[0][id][0].options})
           });
       }
 
@@ -38,7 +39,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
       var chart = this;
       var series = [];
       if(chart.series.length > 0){
-          indicator_ids.forEach(function(id){
+          indicator_values.forEach(function(ind){
+            var id = ind.id;
             chart.series[0][id] && chart.series[0][id][0] && series.push({id: id, series: chart.series[0][id] })
           });
       }
