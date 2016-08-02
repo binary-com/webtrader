@@ -1,10 +1,23 @@
 <div class='menu' rv-if='route.value | eq "menu"'>
-  <button rv-on-click='route.update | bind "templates"'>Load chart template</button>
+  <button rv-on-click='menu.templates'>Load chart template</button>
   <button rv-on-click='menu.save_changes' rv-disabled='templates.current | negate' rv-css-opacity='templates.current | ternary 1 0.5'>Save changes</button>
   <button rv-on-click='menu.save_as'>Save as...</button>
 </div>
-<div class='templates' rv-if='route.value | eq "templates"'>
-  yey!
+<div class='templates' rv-show='route.value | eq "templates"'>
+  <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
+    <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+  </span>
+  <div rv-if='templates.array | prop "length" | negate'>
+    <div>You haven't saved any templates yet.</div>
+    <div>Use the "Save as ..." button to save the chart settings: selected chart type and time period, indicators and comparisons.</div>
+  </div>
+  <div rv-if='templates.array | prop "length"'>
+    <div rv-each-tmpl='templates.array' class='template'>
+      <div class='name' rv-on-click='templates.apply| bind tmpl'>{tmpl.name}</div>
+      <a href="#" rv-on-click='templates.rename | bind tmpl'>Rename</a>
+      <a href="#" rv-on-click='templates.remove | bind tmpl'>Delete</a>
+    </div>
+  </div>
 </div>
 
 <div class='save-as' rv-if='route.value | eq "save-as"'>

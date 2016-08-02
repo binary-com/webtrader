@@ -4,6 +4,10 @@
 define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chartWindow, rv) {
   require(['text!charts/ChartTemplateManager.html']);
 
+  if(!local_storage.get('templates')) {
+    local_storage.set('templates', []);
+  }
+
   class ChartTemplateManager {
     constructor(root, dialog_id) {
       const state = this.init_state(root, dialog_id);
@@ -42,7 +46,16 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         route.update('save-as');
       }
 
-      templates.save_as = function() {
+      menu.templates = () => {
+        templates.array = local_storage.get('templates'); // it can be modified from other dialogs.
+        route.update('templates');
+      }
+
+      menu.save_changes = () => {
+        console.warn('save changes');
+      }
+
+      templates.save_as = () => {
         const name = templates.save_as_value;
         const options = chartWindow.get_chart_options(dialog_id);
         if(options) {
@@ -53,15 +66,27 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
             $.growl.error({message: 'Template name already exists'.i18n() });
             return;
           }
-          templates.array.push(options);
+          const array = local_storage.get('templates');
+          array.push(options);
           templates.current = options;
-          local_storage.set('templates', templates.array);
+          local_storage.set('templates', array);
+          templates.array = array;
           route.update('menu');
         }
       }
 
-      menu.save_changes = () => {
-        console.warn('save changes');
+      templates.remove = (tmpl) => {
+        let array = local_storage.get('templates');
+        templates.array = array.filter(t => t.name !== tmpl.name);
+        local_storage.set('templates', templates.array);
+      }
+
+      templates.rename = tmpl => {
+        console.warn('rename');
+      }
+
+      templates.apply = tmpl => {
+        console.warn('apply', tmpl);
       }
 
       return state;
