@@ -17,7 +17,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
         });
     }
 
-    var chart_options_store = {};
+    var options_store = {};
     return {
 
         /**
@@ -70,30 +70,30 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
             });
 
             /* tracking the chart, includion indicators & overlyas */
-            chart_options_store[id] = options_copy;
-            options_copy.indicators = options_copy.indicators || [];
-            options_copy.overlays = options_copy.overlays || [];
+            options_store[id] = options_copy;
+            options_store[id].indicators = options_store[id].indicators || [];
+            options_store[id].overlays = options_store[id].overlays || [];
             var update_track = dialog.track({
               module_id: 'chartWindow',
               is_unique: false,
-              data: options_copy
+              data: options_store[id]
             });
             dialog.on('chart-type-changed', function(e, type){
-              options_copy.type = type;
-              update_track(options_copy);
+              options_store[id].type = type;
+              update_track(options_store[id]);
             });
 
             dialog.on('chart-indicators-changed',function(e, chart){
-              options_copy.indicators = chart.get_indicators();
-              update_track(options_copy);
+              options_store[id].indicators = chart.get_indicators();
+              update_track(options_store[id]);
             });
             dialog.on('chart-overlay-add',function(e, overlay){
-              options_copy.overlays.push(overlay);
-              update_track(options_copy);
+              options_store[id].overlays.push(overlay);
+              update_track(options_store[id]);
             });
             dialog.on('chart-overlay-remove',function(e, displaySymbol){
-              _.remove(options_copy.overlays, displaySymbol);
-              update_track(options_copy);
+              _.remove(options_store[id].overlays, displaySymbol);
+              update_track(options_store[id]);
             });
             dialog.dialog('open');
 
@@ -106,7 +106,17 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
 
         /* id of dialog. WITHOUT '#' prefix or '_chart' suffix */
         get_chart_options: function(dialog_id) {
-          return _.cloneDeep(chart_options_store[dialog_id]);
+          var options =  _.cloneDeep(options_store[dialog_id]);
+          if(!options.name) {
+            options.name = [`${options.timePeriod} ${options.type}`]
+                          .concat(options.indicators.map(ind => ind.name))
+                          .concat(options.overlays.map(overlay => overlay.displaySymbol))
+                          .join(' + ');
+          }
+          return options;
+        },
+        set_chart_options: function(dialog_id, options){
+          options_store[dialog_id] = options;
         },
 
         /**
