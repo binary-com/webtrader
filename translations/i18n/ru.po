@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-08-02 05:09+0000\n"
-"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"PO-Revision-Date: 2016-08-02 05:20+0000\n"
+"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -493,9 +493,8 @@ msgstr "Загрузить в PNG"
 msgid "Download SVG"
 msgstr "Загрузить в SVG"
 
-#, fuzzy
 msgid "Download as"
-msgstr ""
+msgstr "Загрузить как"
 
 msgid "Downloading .csv"
 msgstr "Загружается в формате .csv"
@@ -680,11 +679,12 @@ msgstr "Если Вы выбираете"
 msgid "If you select a specific"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
 msgstr ""
+"Чтобы изменение темы вступило в силу, необходимо полное обновление страницы. "
+"Вы уверены, что хотите продолжить?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -697,11 +697,12 @@ msgstr ""
 "частности, узнать, обладаете ли Вы необходимым опытом и знаниями, чтобы "
 "понимать сопряжённые риски)"
 
-#, fuzzy
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
 msgstr ""
+"Помните, что некоторые виды бинарных опционов являются разновидностью "
+"азартных игр и могут вызывать привыкание."
 
 msgid "In/Out"
 msgstr "Внутри/Вне"
@@ -785,9 +786,8 @@ msgstr ""
 msgid "Loading Configurations"
 msgstr "Загрузка системных настроек"
 
-#, fuzzy
 msgid "Loading Download/View Data"
-msgstr ""
+msgstr "Идет загрузка/Обзор данных"
 
 msgid "Loading Password dialog"
 msgstr "Загружается диалоговое окно пароля"
@@ -804,9 +804,8 @@ msgstr "Загружается самоисключение"
 msgid "Loading Statement Table"
 msgstr "Загружается история счёта"
 
-#, fuzzy
 msgid "Loading Token management"
-msgstr ""
+msgstr "Загружается управление ключами"
 
 msgid "Loading Trading Times"
 msgstr "Загружается время открытия рынков"
@@ -838,9 +837,8 @@ msgstr "Вход"
 msgid "Logout"
 msgstr "Выход"
 
-#, fuzzy
 msgid "Long MA Type"
-msgstr ""
+msgstr "Тип длинной СС"
 
 msgid "Long ROC Period"
 msgstr "Длинный период ROC"
@@ -900,13 +898,11 @@ msgstr ""
 msgid "Maximum aggregate contract purchases per day"
 msgstr "Максимальная совокупная стоимость приобретённых контрактов за день"
 
-#, fuzzy
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr ""
+msgstr "Максимальная совокупная сумма убытков за 30-дневный период"
 
-#, fuzzy
 msgid "Maximum aggregate loss per day"
-msgstr ""
+msgstr "Максимальная совокупная сумма убытков за день"
 
 msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
@@ -1163,9 +1159,8 @@ msgstr "Пожалуйста, введите точную дату в форма
 msgid "Please enter a value for"
 msgstr "Пожалуйста, введите значение для"
 
-#, fuzzy
 msgid "Please enter a vlaid phone number"
-msgstr "Пожалуйста, введите правильный номер телефона"
+msgstr "Пожалуйста, введите действующий номер телефона"
 
 msgid "Please enter correct email"
 msgstr "Пожалуйста, введите правильный email"
@@ -1576,9 +1571,8 @@ msgstr "Ширина штриха"
 msgid "Successfully added new token"
 msgstr "Новый ключ добавлен успешно"
 
-#, fuzzy
 msgid "Sun"
-msgstr ""
+msgstr "Вск"
 
 msgid "TEMA"
 msgstr "ТЭСС"
@@ -1670,9 +1664,8 @@ msgstr "Заголовок"
 msgid "Token"
 msgstr "Ключ"
 
-#, fuzzy
 msgid "Token management"
-msgstr ""
+msgstr "Управление ключами"
 
 msgid "Token name"
 msgstr "Название ключа"
@@ -1753,9 +1746,8 @@ msgstr "Tradingview для Binary.com"
 msgid "Try"
 msgstr "Попробовать"
 
-#, fuzzy
 msgid "Tue"
-msgstr ""
+msgstr "Вт"
 
 msgid "Turnover"
 msgstr "Объём покупок"
