@@ -47,7 +47,7 @@
 			<span class='error' rv-show='templates.rename_value | trim | eq ""'>This field is required.</span>
 		</div>
 
-    <button rv-on-click='templates.rename'
+    <button rv-on-click='templates.do_rename'
             rv-disabled='templates.rename_value | trim | eq ""'
             rv-css-opacity='templates.rename_value | trim | eq "" | ternary 0.5 1' >Rename</button>
 </div>
