@@ -305,10 +305,6 @@ button[disabled] {
   opacity: 0.5;
 }
 
-table {
-  line-height: 1.2em !important;
-}
-
 .table {
     display: table;
 }
@@ -430,4 +426,8 @@ table {
   border-radius: 3px!important;
   height: 30px;
 }
-/*Ends here*/
+
+/* override table styles*/
+table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
+  border-bottom: none!important;
+}
