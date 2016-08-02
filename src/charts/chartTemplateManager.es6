@@ -95,6 +95,9 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         let array = local_storage.get('templates');
         templates.array = array.filter(t => t.name !== tmpl.name);
         local_storage.set('templates', templates.array);
+        if(templates.current && tmpl.name === templates.current.name) {
+          templates.current = null;
+        }
       }
 
       templates.rename = tmpl => {
