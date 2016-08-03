@@ -28,6 +28,19 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
             });
     }
 
+    // Localizing Highcharts.
+    var lang = Highcharts.getOptions().lang;
+    Object.keys(lang).map(
+        function(key){
+            if(typeof lang[key] === 'object'){
+                lang[key].forEach(function(value, index){
+                    lang[key][index] = value.i18n();
+                });
+                return;
+            }
+            lang[key] = lang[key].i18n();
+    });
+
     $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
             'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default')
         .off('click')

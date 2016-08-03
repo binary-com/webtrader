@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
 "PO-Revision-Date: 2016-07-31 04:04+0000\n"
 "Last-Translator: cameliagf <cameliagf@yahoo.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +39,16 @@ msgid ""
 msgstr ""
 "(si menos de un día de duración), o al final de la jornada bursátil (si un "
 "día o más de duración)"
+
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
 
 #, fuzzy
 msgid "-DI Stroke"
@@ -168,6 +178,9 @@ msgstr "Admin"
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todas las horas están en GMT (Greenwich Mean Time)"
 
+msgid "Amount"
+msgstr ""
+
 msgid "Amount Per Point"
 msgstr "Cantidad Por Punto"
 
@@ -183,11 +196,17 @@ msgstr "Aplicado a"
 msgid "Apply"
 msgstr "Aplicar"
 
-msgid "Apply new theme?"
-msgstr "¿Aplicar el nuevo tema?"
+msgid "Apply to become a Binary.com"
+msgstr ""
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Prueba de Idoneidad: ADVERTENCIA"
+
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
 
 msgid "Are you sure you want to delete this token?"
 msgstr "¿Está seguro de que desea eliminar este token?"
@@ -208,6 +227,12 @@ msgstr "Activo"
 
 msgid "Asset Index"
 msgstr "Índice de activos"
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
 
 msgid "Average"
 msgstr "Promedio"
@@ -304,14 +329,21 @@ msgstr "Temas del Gráfico"
 msgid "Chart background"
 msgstr "Fondo del Gráfico"
 
+#, fuzzy
+msgid "Chart context menu"
+msgstr "Temas del Gráfico"
+
 msgid "Choose password"
 msgstr "Elegir contraseña"
 
+msgid "Choose your pereferred payment agent"
+msgstr ""
+
+msgid "Choose your pereferred withdrawal method"
+msgstr ""
+
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Chrome Extension"
-msgstr "Extensión de Chrome"
 
 msgid "Click Jacking test"
 msgstr "Prueba Click Jacking"
@@ -339,6 +371,9 @@ msgstr "Condiciones"
 
 msgid "Config changes successful"
 msgstr "Configuración cambiada con exito"
+
+msgid "Confirm transfer"
+msgstr ""
 
 msgid "Connection closed"
 msgstr "Conexión cerrada"
@@ -447,6 +482,13 @@ msgstr "Fecha de nacimiento"
 msgid "Days"
 msgstr "Días"
 
+#, fuzzy
+msgid "Dec"
+msgstr "Disminución"
+
+msgid "December"
+msgstr ""
+
 msgid "Decline"
 msgstr "Disminución"
 
@@ -457,7 +499,12 @@ msgid "Delete level(s)"
 msgstr "Borrar nivel(es)"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "Demo para que los afiliados accedan a los gráficos Binary.com en IFRAME"
+msgstr ""
+"Demo para que los afiliados accedan a los gráficos Binary.com en IFRAME"
+
+#, fuzzy
+msgid "Deposit funds"
+msgstr "Depósito de USD"
 
 msgid "Deposit of USD"
 msgstr "Depósito de USD"
@@ -479,6 +526,12 @@ msgstr ""
 "¿Todavía no tiene una cuenta? Regístrese y obtenga una cuenta virtual de "
 "$10.000"
 
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr ""
+
+msgid "Done. The funds are transferred"
+msgstr ""
+
 msgid "Dot"
 msgstr "Punto"
 
@@ -494,10 +547,26 @@ msgstr "Haga doble clic en el objeto para quitar"
 msgid "Download CSV"
 msgstr "Descargar CSV"
 
+#, fuzzy
+msgid "Download JPEG image"
+msgstr "Descargar PNG"
+
+#, fuzzy
+msgid "Download PDF document"
+msgstr "Descargar PNG"
+
 msgid "Download PNG"
 msgstr "Descargar PNG"
 
+#, fuzzy
+msgid "Download PNG image"
+msgstr "Descargar PNG"
+
 msgid "Download SVG"
+msgstr "Descargar SVG"
+
+#, fuzzy
+msgid "Download SVG vector image"
 msgstr "Descargar SVG"
 
 msgid "Download as"
@@ -600,6 +669,12 @@ msgstr "Artista favorito"
 msgid "Favourite dish"
 msgstr "Plato favorito"
 
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
 msgid "Final Price"
 msgstr "Precio Final"
 
@@ -627,8 +702,15 @@ msgstr "Frecuencia de comercio con Forex"
 msgid "Fri"
 msgstr "Vie"
 
+msgid "Friday"
+msgstr ""
+
 msgid "From"
 msgstr "De"
+
+#, fuzzy
+msgid "Further instructions"
+msgstr "Construcción"
 
 msgid "Gray"
 msgstr "Gris"
@@ -683,6 +765,19 @@ msgstr "Horas"
 msgid "I have read and agree to Binary.com"
 msgstr "He leído y está de acuerdo con Binary.com"
 
+msgid "IMPORTANT DISCLAIMER"
+msgstr ""
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+
 msgid "If you select a"
 msgstr "Si selecciona un"
 
@@ -692,6 +787,14 @@ msgstr "Si  selecciona un"
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
+msgstr ""
+"Para aplicar correctamente el tema, se requiere una actualización completa "
+"de la página. ¿Está seguro que desea proceder?"
+
+#, fuzzy
+msgid ""
+"In order to properly apply this language, a full refresh of page is "
+"required. Are you sure you want to proceed?"
 msgstr ""
 "Para aplicar correctamente el tema, se requiere una actualización completa "
 "de la página. ¿Está seguro que desea proceder?"
@@ -741,8 +844,28 @@ msgstr "Instrumentos"
 msgid "Investments & Dividends"
 msgstr "Inversiones y Dividendos"
 
+#, fuzzy
+msgid "Jan"
+msgstr "y"
+
+msgid "January"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
 msgid "Jump to"
 msgstr "Saltar a"
+
+#, fuzzy
+msgid "Jun"
+msgstr "Dom"
+
+msgid "June"
+msgstr ""
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
@@ -833,6 +956,10 @@ msgstr "Cargando cartera"
 msgid "Loading self-exclusion settings"
 msgstr "Cargando ajustes de auto exclusión"
 
+#, fuzzy
+msgid "Loading..."
+msgstr "Cargando"
+
 msgid "Log in"
 msgstr "Iniciar sesión"
 
@@ -884,6 +1011,21 @@ msgstr "Tipo MA"
 msgid "MACD Line Stroke"
 msgstr "Stroke de Línea MACD"
 
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+
+#, fuzzy
+msgid "Mar"
+msgstr "Sr."
+
+msgid "March"
+msgstr ""
+
 msgid "Mass Period"
 msgstr "Período Total"
 
@@ -914,6 +1056,10 @@ msgstr "Pérdida total máxima por día"
 msgid "Maximum number of open positions"
 msgstr "Número máximo de posiciones abiertas"
 
+#, fuzzy
+msgid "May"
+msgstr "día"
+
 msgid "Memorable date"
 msgstr "Fecha memorable"
 
@@ -923,8 +1069,14 @@ msgstr "Ciudad memorable"
 msgid "Middle Band Stroke"
 msgstr "Stroke de Banda Media"
 
+msgid "Min: 10 Max: 2000"
+msgstr ""
+
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Mínimo de 6 caracteres y debe contener al menos 1 dígito"
+
+msgid "Minus the agent's commission"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minutos"
@@ -934,6 +1086,10 @@ msgstr "Fallido"
 
 msgid "Mon"
 msgstr "Lun"
+
+#, fuzzy
+msgid "Monday"
+msgstr "Secundario"
 
 msgid "Mother's maiden name"
 msgstr "Apellido de soltera de su madre"
@@ -996,7 +1152,8 @@ msgid "No"
 msgstr "Núm"
 
 msgid "Note that tokens can possess one or more of these scopes"
-msgstr "Tenga en cuenta que los tokens pueden poseer uno o más de estos ámbitos"
+msgstr ""
+"Tenga en cuenta que los tokens pueden poseer uno o más de estos ámbitos"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
@@ -1005,6 +1162,18 @@ msgstr ""
 "Nota: El contrato se venderá al precio de mercado que prevalece cuando la "
 "solicitud se reciba por nuestros servidores. Este precio puede diferir del "
 "precio indicado"
+
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr ""
+
+#, fuzzy
+msgid "Nov"
+msgstr "Núm"
+
+msgid "November"
+msgstr ""
 
 msgid "Now"
 msgstr "Ahora"
@@ -1023,6 +1192,12 @@ msgstr "OHLC"
 
 msgid "OPEN"
 msgstr "ABIERTO"
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
 
 msgid "Offset"
 msgstr "Offset"
@@ -1114,6 +1289,14 @@ msgstr "Contraseña actualizada correctamente"
 msgid "Passwords didn't match. Please type them again"
 msgstr "Las contraseñas no coinciden. Por favor, escríbalas otra vez"
 
+#, fuzzy
+msgid "Payment agent"
+msgstr "Pagos"
+
+#, fuzzy
+msgid "Payment agents"
+msgstr "Pagos"
+
 msgid "Payments"
 msgstr "Pagos"
 
@@ -1152,6 +1335,9 @@ msgstr "Por favor responda a la pregunta secreta, con 4-50 caracteres"
 
 msgid "Please choose at least one token scope"
 msgstr "Por favor, elija al menos un ámbito de token"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr ""
 
 msgid "Please enter a number between"
 msgstr "Por favor escriba un número entre"
@@ -1306,6 +1492,9 @@ msgstr "Precio"
 msgid "Primary"
 msgstr "Primario"
 
+msgid "Print chart"
+msgstr ""
+
 msgid "Profit"
 msgstr "Ganancia"
 
@@ -1369,6 +1558,12 @@ msgstr "La reventa de este contrato no se ofrece"
 msgid "Reset to Defaults"
 msgstr "Restablecer valores predeterminados"
 
+msgid "Reset zoom"
+msgstr ""
+
+msgid "Reset zoom level 1:1"
+msgstr ""
+
 msgid "Resources"
 msgstr "Recursos"
 
@@ -1408,6 +1603,9 @@ msgstr "Sand Signika"
 msgid "Sat"
 msgstr "Sáb"
 
+msgid "Saturday"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Secundario"
 
@@ -1440,6 +1638,20 @@ msgstr "Punto de Venta"
 
 msgid "Sell Time"
 msgstr "Tiempo de Venta"
+
+#, fuzzy
+msgid "Send to account #"
+msgstr "Abrir una cuenta"
+
+#, fuzzy
+msgid "Sent to account"
+msgstr "Abrir una cuenta"
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
+msgstr ""
 
 msgid "Session"
 msgstr "Sesión"
@@ -1525,6 +1737,12 @@ msgstr "Spreads"
 msgid "Stake"
 msgstr "Apuesta"
 
+msgid "Standard methods"
+msgstr ""
+
+msgid "Standard withdrawal"
+msgstr ""
+
 msgid "Start Time"
 msgstr "Hora de Inicio"
 
@@ -1576,11 +1794,17 @@ msgstr "Color de Stroke"
 msgid "Stroke width"
 msgstr "Anchura del stroke"
 
+msgid "Submit"
+msgstr ""
+
 msgid "Successfully added new token"
 msgstr "Nuevo token añadido con éxito"
 
 msgid "Sun"
 msgstr "Dom"
+
+msgid "Sunday"
+msgstr ""
 
 msgid "TEMA"
 msgstr "TEMA"
@@ -1590,6 +1814,10 @@ msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Tabla"
+
+#, fuzzy
+msgid "Tel"
+msgstr "El"
 
 msgid "Terms"
 msgstr "Términos"
@@ -1631,8 +1859,14 @@ msgstr "Este contrato perdió"
 msgid "This contract won"
 msgstr "Este contrato ganó"
 
+msgid "This field is required"
+msgstr ""
+
 msgid "Thu"
 msgstr "Jue"
+
+msgid "Thursday"
+msgstr ""
 
 msgid "Tick Trade app"
 msgstr "App Tick Trade"
@@ -1657,6 +1891,25 @@ msgstr "Solicitud de tiempo de espera para websocket"
 
 msgid "Title"
 msgstr "Título"
+
+msgid "To"
+msgstr ""
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr ""
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
+msgstr ""
+"Por favor introduzca el código de verificación enviado a su correo "
+"electrónico"
 
 msgid "Token"
 msgstr "Token"
@@ -1729,11 +1982,17 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview para Binary.com"
 
+msgid "Transfer to another Binary account"
+msgstr ""
+
 msgid "Try"
 msgstr "Pruebe"
 
 msgid "Tue"
 msgstr "Mar"
+
+msgid "Tuesday"
+msgstr ""
 
 msgid "Turnover"
 msgstr "Volumen de ventas"
@@ -1743,6 +2002,9 @@ msgstr "USD"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Desafortunadamente, su navegador no es compatible"
+
+msgid "Unlock"
+msgstr ""
 
 msgid "Up/Down"
 msgstr "Arriba/Abajo"
@@ -1804,11 +2066,20 @@ msgstr ""
 msgid "Wed"
 msgstr "Mié"
 
+msgid "Wednesday"
+msgstr ""
+
 msgid "While on the go, you can"
 msgstr "Mientras viaja, puede"
 
 msgid "Windows"
 msgstr "Windows"
+
+msgid "Withdraw funds"
+msgstr ""
+
+msgid "Withdrawal via payment agents"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "Etiquetas de eje-x"
@@ -1824,6 +2095,10 @@ msgstr "Cuadrícula del eje-y"
 
 msgid "Y-axis labels"
 msgstr "Etiquetas del eje-y"
+
+#, fuzzy
+msgid "Yes"
+msgstr "sí"
 
 msgid "You have excluded yourself until"
 msgstr "Se ha excluido a sí mismo hasta"
@@ -1871,6 +2146,9 @@ msgstr "Su referencia de transacción es"
 msgid "Your transaction reference number is"
 msgstr "Su número de referencia de la transacción es"
 
+msgid "Zoom"
+msgstr ""
+
 msgid "admin"
 msgstr "admin"
 
@@ -1886,6 +2164,10 @@ msgstr ""
 
 msgid "between"
 msgstr "entre"
+
+#, fuzzy
+msgid "commission"
+msgstr "Permisos"
 
 msgid "contact support"
 msgstr "contactar con ayuda al cliente"
@@ -2006,6 +2288,10 @@ msgstr "oauth"
 msgid "of \"Now\", the"
 msgstr "de \"Ahora\", el"
 
+#, fuzzy
+msgid "payment agent"
+msgstr "pagos"
+
 msgid "payments"
 msgstr "pagos"
 
@@ -2060,5 +2346,14 @@ msgstr "websocket"
 msgid "yes"
 msgstr "sí"
 
+msgid "{agent.commission}%"
+msgstr ""
+
 msgid "| Return"
 msgstr "| Retorno"
+
+#~ msgid "Apply new theme?"
+#~ msgstr "¿Aplicar el nuevo tema?"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "Extensión de Chrome"

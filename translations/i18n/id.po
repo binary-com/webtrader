@@ -39,6 +39,16 @@ msgstr ""
 "(jika durasi kurang dari satu hari), atau pada akhir hari trading (jika "
 "durasi satu hari atau lebih)"
 
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
+
 msgid "-DI Stroke"
 msgstr "Stroke -DI"
 
@@ -165,6 +175,9 @@ msgstr "Admin"
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Semua waktu dalam GMT (Greenwich Mean Time)"
 
+msgid "Amount"
+msgstr ""
+
 msgid "Amount Per Point"
 msgstr "Jumlah Per Poin"
 
@@ -180,11 +193,17 @@ msgstr "Diaplikasikan ke"
 msgid "Apply"
 msgstr "Menerapkan"
 
-msgid "Apply new theme?"
-msgstr "Terapkan tema baru?"
+msgid "Apply to become a Binary.com"
+msgstr ""
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Uji Kelayakan: PERINGATAN"
+
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Apakah Anda yakin ingin menghapus token ini?"
@@ -203,6 +222,12 @@ msgstr "Aset"
 
 msgid "Asset Index"
 msgstr "Indeks Aset"
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
 
 msgid "Average"
 msgstr "Rata-rata"
@@ -297,14 +322,21 @@ msgstr "Tema Grafik"
 msgid "Chart background"
 msgstr "Latar belakang grafik"
 
+#, fuzzy
+msgid "Chart context menu"
+msgstr "Tema Grafik"
+
 msgid "Choose password"
 msgstr "Pilih kata sandi"
 
+msgid "Choose your pereferred payment agent"
+msgstr ""
+
+msgid "Choose your pereferred withdrawal method"
+msgstr ""
+
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Chrome Extension"
-msgstr "Exstensi Chrome"
 
 msgid "Click Jacking test"
 msgstr "Klik Tes Jacking"
@@ -332,6 +364,9 @@ msgstr "Persyaratan"
 
 msgid "Config changes successful"
 msgstr "Perubahan konfigurasi sukses"
+
+msgid "Confirm transfer"
+msgstr ""
 
 msgid "Connection closed"
 msgstr "Koneksi ditutup"
@@ -438,6 +473,13 @@ msgstr "Tanggal lahir"
 msgid "Days"
 msgstr "Hari"
 
+#, fuzzy
+msgid "Dec"
+msgstr "Menurun"
+
+msgid "December"
+msgstr ""
+
 msgid "Decline"
 msgstr "Menurun"
 
@@ -449,6 +491,10 @@ msgstr "Hapus level"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr "Demo untuk affiliasi untuk mengakses grafik Binary.com dalam IFRAME"
+
+#, fuzzy
+msgid "Deposit funds"
+msgstr "Deposit sebesar USD"
 
 msgid "Deposit of USD"
 msgstr "Deposit sebesar USD"
@@ -468,6 +514,12 @@ msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr ""
+
+msgid "Done. The funds are transferred"
+msgstr ""
+
 msgid "Dot"
 msgstr "Dot"
 
@@ -483,10 +535,26 @@ msgstr "Klik dua kali untuk menghapus objek"
 msgid "Download CSV"
 msgstr "Download CSV"
 
+#, fuzzy
+msgid "Download JPEG image"
+msgstr "Download PNG"
+
+#, fuzzy
+msgid "Download PDF document"
+msgstr "Download PNG"
+
 msgid "Download PNG"
 msgstr "Download PNG"
 
+#, fuzzy
+msgid "Download PNG image"
+msgstr "Download PNG"
+
 msgid "Download SVG"
+msgstr "Download SVG"
+
+#, fuzzy
+msgid "Download SVG vector image"
 msgstr "Download SVG"
 
 msgid "Download as"
@@ -588,6 +656,12 @@ msgstr "Artis Favorit"
 msgid "Favourite dish"
 msgstr "Makanan Favorit"
 
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
 msgid "Final Price"
 msgstr "Harga Akhir"
 
@@ -615,8 +689,15 @@ msgstr "Frekuensi trading Forex"
 msgid "Fri"
 msgstr "Fri"
 
+msgid "Friday"
+msgstr ""
+
 msgid "From"
 msgstr "Dari"
+
+#, fuzzy
+msgid "Further instructions"
+msgstr "Konstruksi"
 
 msgid "Gray"
 msgstr "Abu-abu"
@@ -669,6 +750,19 @@ msgstr "Jam"
 msgid "I have read and agree to Binary.com"
 msgstr "Saya telah membaca dan menyetujui Binary.com"
 
+msgid "IMPORTANT DISCLAIMER"
+msgstr ""
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+
 msgid "If you select a"
 msgstr "Jika Anda memilih"
 
@@ -678,6 +772,14 @@ msgstr "Jika Anda memilih"
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
+msgstr ""
+"Untuk menggunakan tema dengan benar, merefresh halaman adalah penting. Apa "
+"Anda ingin melanjutkan?"
+
+#, fuzzy
+msgid ""
+"In order to properly apply this language, a full refresh of page is "
+"required. Are you sure you want to proceed?"
 msgstr ""
 "Untuk menggunakan tema dengan benar, merefresh halaman adalah penting. Apa "
 "Anda ingin melanjutkan?"
@@ -725,8 +827,26 @@ msgstr "Instrumen"
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
 
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
 msgid "Jump to"
 msgstr "Langsung ke"
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Cukup klik tombol  Hibah  pada halaman dan Anda akan dibawa ke"
@@ -815,6 +935,10 @@ msgstr "Pemuatan portopolio"
 msgid "Loading self-exclusion settings"
 msgstr "Memuat pengaturan pengecualian diri"
 
+#, fuzzy
+msgid "Loading..."
+msgstr "Loading"
+
 msgid "Log in"
 msgstr "Masuk"
 
@@ -866,6 +990,21 @@ msgstr "Jenis MA"
 msgid "MACD Line Stroke"
 msgstr "Garis Stroke MACD"
 
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+
+#, fuzzy
+msgid "Mar"
+msgstr "Bapak"
+
+msgid "March"
+msgstr ""
+
 msgid "Mass Period"
 msgstr "Periode Mass"
 
@@ -896,6 +1035,9 @@ msgstr "Maksimum jumlah kerugian per hari"
 msgid "Maximum number of open positions"
 msgstr "Maksimum jumlah posisi berjalan"
 
+msgid "May"
+msgstr ""
+
 msgid "Memorable date"
 msgstr "Tanggal bersejarah"
 
@@ -905,8 +1047,14 @@ msgstr "Kota bersejarah"
 msgid "Middle Band Stroke"
 msgstr "Stroke Middle Band"
 
+msgid "Min: 10 Max: 2000"
+msgstr ""
+
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
+
+msgid "Minus the agent's commission"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Menit"
@@ -916,6 +1064,9 @@ msgstr "Nona"
 
 msgid "Mon"
 msgstr "Senin"
+
+msgid "Monday"
+msgstr ""
 
 msgid "Mother's maiden name"
 msgstr "Nama panggilan Ibu Anda"
@@ -985,6 +1136,17 @@ msgid ""
 "is received by our servers. This price may differ from the indicated price"
 msgstr ""
 
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
 msgid "Now"
 msgstr ""
 
@@ -1001,6 +1163,12 @@ msgid "OHLC"
 msgstr ""
 
 msgid "OPEN"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
 msgstr ""
 
 msgid "Offset"
@@ -1090,6 +1258,12 @@ msgstr ""
 msgid "Passwords didn't match. Please type them again"
 msgstr "Kata sandi tidak cocok. Silahkan ketik ulang"
 
+msgid "Payment agent"
+msgstr ""
+
+msgid "Payment agents"
+msgstr ""
+
 msgid "Payments"
 msgstr ""
 
@@ -1127,6 +1301,9 @@ msgid "Please answer to secret question, within 4-50 characters"
 msgstr ""
 
 msgid "Please choose at least one token scope"
+msgstr ""
+
+msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
 
 msgid "Please enter a number between"
@@ -1265,6 +1442,9 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
+msgid "Print chart"
+msgstr ""
+
 msgid "Profit"
 msgstr ""
 
@@ -1328,6 +1508,12 @@ msgstr ""
 msgid "Reset to Defaults"
 msgstr ""
 
+msgid "Reset zoom"
+msgstr ""
+
+msgid "Reset zoom level 1:1"
+msgstr ""
+
 msgid "Resources"
 msgstr ""
 
@@ -1367,6 +1553,9 @@ msgstr ""
 msgid "Sat"
 msgstr ""
 
+msgid "Saturday"
+msgstr ""
+
 msgid "Secondary"
 msgstr ""
 
@@ -1398,6 +1587,18 @@ msgid "Sell Spot"
 msgstr ""
 
 msgid "Sell Time"
+msgstr ""
+
+msgid "Send to account #"
+msgstr ""
+
+msgid "Sent to account"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
 msgstr ""
 
 msgid "Session"
@@ -1484,6 +1685,12 @@ msgstr ""
 msgid "Stake"
 msgstr ""
 
+msgid "Standard methods"
+msgstr ""
+
+msgid "Standard withdrawal"
+msgstr ""
+
 msgid "Start Time"
 msgstr ""
 
@@ -1535,10 +1742,16 @@ msgstr "Warna Stroke"
 msgid "Stroke width"
 msgstr "Lebar Stroke"
 
+msgid "Submit"
+msgstr ""
+
 msgid "Successfully added new token"
 msgstr ""
 
 msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
 msgstr ""
 
 msgid "TEMA"
@@ -1548,6 +1761,9 @@ msgid "TRIMA"
 msgstr ""
 
 msgid "Table"
+msgstr ""
+
+msgid "Tel"
 msgstr ""
 
 msgid "Terms"
@@ -1595,7 +1811,13 @@ msgstr ""
 msgid "This contract won"
 msgstr ""
 
+msgid "This field is required"
+msgstr ""
+
 msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
 msgstr ""
 
 msgid "Tick Trade app"
@@ -1620,6 +1842,22 @@ msgid "Timeout for websocket request"
 msgstr ""
 
 msgid "Title"
+msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr ""
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
 msgstr ""
 
 msgid "Token"
@@ -1691,10 +1929,16 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr ""
 
+msgid "Transfer to another Binary account"
+msgstr ""
+
 msgid "Try"
 msgstr ""
 
 msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
 msgstr ""
 
 msgid "Turnover"
@@ -1704,6 +1948,9 @@ msgid "USD"
 msgstr ""
 
 msgid "Unfortunately, your browser does not support them"
+msgstr ""
+
+msgid "Unlock"
 msgstr ""
 
 msgid "Up/Down"
@@ -1764,10 +2011,19 @@ msgstr ""
 msgid "Wed"
 msgstr ""
 
+msgid "Wednesday"
+msgstr ""
+
 msgid "While on the go, you can"
 msgstr ""
 
 msgid "Windows"
+msgstr ""
+
+msgid "Withdraw funds"
+msgstr ""
+
+msgid "Withdrawal via payment agents"
 msgstr ""
 
 msgid "X-axis labels"
@@ -1783,6 +2039,9 @@ msgid "Y-axis gridline"
 msgstr "Garis grid Y-axis"
 
 msgid "Y-axis labels"
+msgstr ""
+
+msgid "Yes"
 msgstr ""
 
 msgid "You have excluded yourself until"
@@ -1829,6 +2088,9 @@ msgstr ""
 msgid "Your transaction reference number is"
 msgstr ""
 
+msgid "Zoom"
+msgstr ""
+
 msgid "admin"
 msgstr ""
 
@@ -1843,6 +2105,9 @@ msgid ""
 msgstr ""
 
 msgid "between"
+msgstr ""
+
+msgid "commission"
 msgstr ""
 
 msgid "contact support"
@@ -1962,6 +2227,9 @@ msgstr ""
 msgid "of \"Now\", the"
 msgstr ""
 
+msgid "payment agent"
+msgstr ""
+
 msgid "payments"
 msgstr ""
 
@@ -2016,5 +2284,14 @@ msgstr ""
 msgid "yes"
 msgstr ""
 
+msgid "{agent.commission}%"
+msgstr ""
+
 msgid "| Return"
 msgstr ""
+
+#~ msgid "Apply new theme?"
+#~ msgstr "Terapkan tema baru?"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "Exstensi Chrome"
