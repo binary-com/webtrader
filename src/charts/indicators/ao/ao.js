@@ -40,6 +40,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#ao_high_hstgrm_color").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -64,6 +65,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             });
 
             $html.find("#ao_low_hstgrm_color").colorpicker({
+						showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",

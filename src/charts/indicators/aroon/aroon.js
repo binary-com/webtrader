@@ -40,6 +40,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#aroon_up_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -64,6 +65,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             });
 
             $html.find("#aroon_down_stroke").colorpicker({
+						showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",

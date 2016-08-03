@@ -38,6 +38,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#cmo_stroke").colorpicker({
+				showOn: 'click',
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }

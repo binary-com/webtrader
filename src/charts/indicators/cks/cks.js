@@ -31,6 +31,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#cks_short_stop_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -55,6 +56,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             $html.find("#cks_long_stop_stroke").colorpicker({
+						showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",

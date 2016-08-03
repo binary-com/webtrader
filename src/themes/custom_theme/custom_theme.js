@@ -52,6 +52,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
                         }
                         $(ele).data("prevColor",val);
                         $(ele).colorpicker({
+						    showOn: 'click',
                             position: {
                                 my: "left+50 bottom+100",
                                 of: "element",
