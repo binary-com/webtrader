@@ -1,658 +1,679 @@
-msgid "%D MA Type"
+msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-21 12:21+0200\n"
+"PO-Revision-Date: 2016-08-02 09:56+0000\n"
+"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.8-dev\n"
+
+msgid "%D MA Type"
+msgstr "Тип СС %D"
 
 msgid "%D Period"
-msgstr ""
+msgstr "Период %D"
 
 msgid "%D Stroke"
-msgstr ""
+msgstr "Штрих %D"
 
 msgid "%K MA Type"
-msgstr ""
+msgstr "Тип СС %K"
 
 msgid "%K Period"
-msgstr ""
+msgstr "Период %K"
 
 msgid "%K Stroke"
-msgstr ""
+msgstr "Штрих %K"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
 "day or more in duration)"
 msgstr ""
+"(если длительность составляет менее одного дня) или в конце торгового дня ("
+"если длительность составляет один день или более)"
 
 msgid "-DI Stroke"
-msgstr ""
+msgstr "Штрих -DI"
 
 msgid "0-1 year"
-msgstr ""
+msgstr "0-1 года"
 
 msgid "0-5 transactions in the past 12 months"
-msgstr ""
+msgstr "0-5 сделок за последние 12 мес"
 
 msgid "1 Day"
-msgstr ""
+msgstr "1 день"
 
 msgid "1-2 years"
-msgstr ""
+msgstr "1-2 года"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10m"
-msgstr ""
+msgstr "10м"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15m"
-msgstr ""
+msgstr "15м"
 
 msgid "1d"
-msgstr ""
+msgstr "1д"
 
 msgid "1h"
-msgstr ""
+msgstr "1ч"
 
 msgid "1m"
-msgstr ""
+msgstr "1м"
 
 msgid "2h"
-msgstr ""
+msgstr "2ч"
 
 msgid "2m"
-msgstr ""
+msgstr "2м"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30-day limit on losses"
-msgstr ""
+msgstr "30-дневный лимит на проигрыш"
 
 msgid "30-day turnover limit"
-msgstr ""
+msgstr "30-дневный лимит на объём покупок"
 
 msgid "30m"
-msgstr ""
+msgstr "30м"
 
 msgid "3m"
-msgstr ""
+msgstr "3м"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr ""
+msgstr "40 или более транзакций за последние 12 мес"
 
 msgid "4h"
-msgstr ""
+msgstr "4ч"
 
 msgid "5m"
-msgstr ""
+msgstr "5м"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr ""
+msgstr "6-10 транзакций за последние 12 мес"
 
 msgid "7-day limit on losses"
-msgstr ""
+msgstr "7-дневный лимит на проигрыш"
 
 msgid "7-day turnover limit"
-msgstr ""
+msgstr "7-дневный лимит на объём покупок"
 
 msgid "8h"
-msgstr ""
+msgstr "8ч"
 
 msgid "ADX MA Type"
-msgstr ""
+msgstr "Тип СС ADX"
 
 msgid "ADX Stroke"
-msgstr ""
+msgstr "Штрих ADX"
 
 msgid "ATR Period"
-msgstr ""
+msgstr "Период ATR"
 
 msgid "Acceleration"
-msgstr ""
+msgstr "Ускорение"
 
 msgid "Accept"
-msgstr ""
+msgstr "Принять"
 
 msgid "Account balance"
-msgstr ""
+msgstr "Баланс счёта"
 
 msgid "Account id not found"
-msgstr ""
+msgstr "ID счёта не найден"
 
 msgid "Account opening"
-msgstr ""
+msgstr "Открытие счёта"
 
 msgid "Account token not found"
-msgstr ""
+msgstr "Ключ счёта не найден"
 
 msgid "Action"
-msgstr ""
+msgstr "Действие"
 
 msgid "Add indicator"
-msgstr ""
+msgstr "Добавить индикатор"
 
 msgid "Add level"
-msgstr ""
+msgstr "Добавить уровень"
 
 msgid "Add overlays"
-msgstr ""
+msgstr "Добавить наложение"
 
 msgid "Add/remove overlays"
-msgstr ""
+msgstr "Добавить/удалить наложение"
 
 msgid "Admin"
-msgstr ""
+msgstr "Администратор"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
-msgstr ""
+msgstr "Всё время указано в GMT (по Гринвичу)"
 
 msgid "Amount Per Point"
-msgstr ""
+msgstr "Сумма за пункт"
 
 msgid "Amount per point"
-msgstr ""
+msgstr "Сумма за пункт"
 
 msgid "Answer"
 msgstr ""
 
 msgid "Applied to"
-msgstr ""
+msgstr "Применимо для"
 
 msgid "Apply"
-msgstr ""
+msgstr "Применить"
 
 msgid "Apply new theme?"
-msgstr ""
+msgstr "Применить новую тему?"
 
 msgid "Appropriateness Test: WARNING"
-msgstr ""
+msgstr "Тест на целесообразность: ПРЕДУПРЕЖДЕНИЕ"
 
 msgid "Are you sure you want to delete this token?"
-msgstr ""
+msgstr "Вы уверены, что хотите удалить этот ключ?"
 
 msgid "Aroon Down Stroke"
-msgstr ""
+msgstr "Штрих индикатора Арун (вниз)"
 
 msgid "Aroon Up Stroke"
-msgstr ""
+msgstr "Штрих индикатора Арун (вверх)"
 
 msgid "Asians"
-msgstr ""
+msgstr "Азиатские"
 
 msgid "Asset"
-msgstr ""
+msgstr "Актив"
 
 msgid "Asset Index"
-msgstr ""
+msgstr "Индекс активов"
 
 msgid "Average"
-msgstr ""
+msgstr "Среднее"
 
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 msgid "Back to list"
-msgstr ""
+msgstr "Вернуться к списку"
 
 msgid "Background Color"
-msgstr ""
+msgstr "Цвет фона"
 
 msgid "Barrier"
-msgstr ""
+msgstr "Барьер"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "Изменение барьера"
 
 msgid "Binary options or other financial derivatives"
-msgstr ""
+msgstr "Бинарные опционы и другие деривативы"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com: Webtrader"
 
 msgid "Blank window"
-msgstr ""
+msgstr "Пустое окно"
 
 msgid "Bought"
-msgstr ""
+msgstr "Куплено"
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "Марка первой машины"
 
 msgid "Browser upgrade required"
-msgstr ""
+msgstr "Необходимо обновление браузера"
 
 msgid "Buy Price"
-msgstr ""
+msgstr "Цена покупки"
 
 msgid "Buy price"
-msgstr ""
+msgstr "Цена покупки"
 
 msgid "By clicking"
-msgstr ""
+msgstr "Нажав"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
+"Нажав OK, Вы подтверждаете, что прочитали и согласились с обновлениями в "
+"документе"
 
 msgid "CLOSE"
-msgstr ""
+msgstr "ЗАКРЫТЬ"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 msgid "Candles"
-msgstr ""
+msgstr "Свечи"
 
 msgid "Candlestick down-color"
-msgstr ""
+msgstr "Цвет нисходящей свечи"
 
 msgid "Candlestick down-line"
-msgstr ""
+msgstr "Линия нисходящих свечей"
 
 msgid "Candlestick up-color"
-msgstr ""
+msgstr "Цвет восходящей свечи"
 
 msgid "Candlestick up-line"
-msgstr ""
+msgstr "Линия восходящих свечей"
 
 msgid "Cash Balance"
-msgstr ""
+msgstr "Баланс счёта"
 
 msgid "Change Backend Server"
-msgstr ""
+msgstr "Изменить сервер"
 
 msgid "Change password"
-msgstr ""
+msgstr "Изменить пароль"
 
 msgid "Chart"
-msgstr ""
+msgstr "График"
 
 msgid "Chart Themes"
 msgstr ""
 
 msgid "Chart background"
-msgstr ""
+msgstr "Фон графика"
 
 msgid "Choose password"
-msgstr ""
+msgstr "Выберите пароль"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Chrome Extension"
-msgstr ""
+msgstr "Расширение Chrome"
 
 msgid "Click Jacking test"
 msgstr ""
 
 msgid "Click to log in with your Binary.com account"
-msgstr ""
+msgstr "Нажмите, чтобы войти через счёт на Binary.com"
 
 msgid "Close Price"
-msgstr ""
+msgstr "Цена закрытия"
 
 msgid "Close all"
-msgstr ""
+msgstr "Закрыть всё"
 
 msgid "Closes"
-msgstr ""
+msgstr "Закрытие"
 
 msgid "Commodities trading experience"
-msgstr ""
+msgstr "Опыт торговли сырьевыми товарами"
 
 msgid "Commodities trading frequency"
-msgstr ""
+msgstr "Частота торговли сырьевыми товарами"
 
 msgid "Conditions"
-msgstr ""
+msgstr "Условия"
 
 msgid "Config changes successful"
-msgstr ""
+msgstr "Конфигурация изменена успешно"
 
 msgid "Connection closed"
-msgstr ""
+msgstr "Соединение закрыто"
 
 msgid "Connection error. Refresh the page"
-msgstr ""
+msgstr "Ошибка соединения. Обновите страницу"
 
 msgid "Construction"
-msgstr ""
+msgstr "Строительство"
 
 msgid "Continue"
-msgstr ""
+msgstr "Продолжить"
 
 msgid "Continue Trading"
-msgstr ""
+msgstr "Продолжить торговлю"
 
 msgid "Contract"
-msgstr ""
+msgstr "Контракт"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Подтверждение контракта"
 
 msgid "Contract is not yet started"
-msgstr ""
+msgstr "Контракт ещё не начался"
 
 msgid "Contracts"
-msgstr ""
+msgstr "Контракты"
 
 msgid "Country of residence"
-msgstr ""
+msgstr "Страна проживания"
 
 msgid "Create"
-msgstr ""
+msgstr "Создать"
 
 msgid "Create token"
-msgstr ""
+msgstr "Создать ключ"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "Кредит/Дебет"
 
 msgid "Crosshair"
-msgstr ""
+msgstr "Пересечение"
 
 msgid "Current Level"
-msgstr ""
+msgstr "Текущий уровень"
 
 msgid "Current Spot"
-msgstr ""
+msgstr "Текущая спот-цена"
 
 msgid "Current Spot Time"
-msgstr ""
+msgstr "Текущее спот-время"
 
 msgid "Current indicators"
-msgstr ""
+msgstr "Текущие индикаторы"
 
 msgid "Current overlays"
-msgstr ""
+msgstr "Текущие наложения"
 
 msgid "Current password"
-msgstr ""
+msgstr "Текущий пароль"
 
 msgid "Current regulations require that you provide us the following"
-msgstr ""
+msgstr "Текущие правила требуют от Вас предоставить следующую информацию"
 
 msgid "Current time"
-msgstr ""
+msgstr "Текущее время"
 
 msgid "Custom Theme"
-msgstr ""
+msgstr "Индивид. настройка"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Настройка вида графика"
 
 msgid "DI Stroke"
 msgstr ""
 
 msgid "DX MA Type"
-msgstr ""
+msgstr "Тип СС DX"
 
 msgid "Daily limit on losses"
 msgstr ""
 
 msgid "Daily turnover limit"
-msgstr ""
+msgstr "Дневной лимит на объём покупок"
 
 msgid "Dark Blue"
-msgstr ""
+msgstr "Тёмно-синий"
 
 msgid "Dark Green"
-msgstr ""
+msgstr "Тёмно-зелёный"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica"
 
 msgid "Dash style"
-msgstr ""
+msgstr "Стиль штрихов"
 
 msgid "Date"
-msgstr ""
+msgstr "Дата"
 
 msgid "Date of birth"
-msgstr ""
+msgstr "Дата рождения"
 
 msgid "Days"
-msgstr ""
+msgstr "Дни"
 
 msgid "Decline"
-msgstr ""
+msgstr "Отклонить"
 
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 msgid "Delete level(s)"
-msgstr ""
+msgstr "Удалить уровень (уровни)"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr ""
+msgstr "Демо-ролик для партнёров о доступе к графикам Binary.com в IFRAME"
 
 msgid "Deposit of USD"
-msgstr ""
+msgstr "Депозит в USD"
 
 msgid "Describe what this token is for to find it later"
-msgstr ""
+msgstr "Опишите, для чего нужен данный ключ, чтобы найти его позже"
 
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 msgid "Digits"
-msgstr ""
+msgstr "Цифры"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr ""
+msgstr "Хотите установить расширение Webtrader для Chrome?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
-msgstr ""
+msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
 
 msgid "Dot"
-msgstr ""
+msgstr "Точечный"
 
 msgid "Double MA Period"
-msgstr ""
+msgstr "Двойной период СС"
 
 msgid "Double MA Type"
-msgstr ""
+msgstr "Тип двойной СС"
 
 msgid "Double click the object to remove"
-msgstr ""
+msgstr "Дважды нажмите на объект, чтобы удалить его"
 
 msgid "Download CSV"
-msgstr ""
+msgstr "Загрузить в CSV"
 
 msgid "Download PNG"
-msgstr ""
+msgstr "Загрузить в PNG"
 
 msgid "Download SVG"
-msgstr ""
+msgstr "Загрузить в SVG"
 
 msgid "Download as"
-msgstr ""
+msgstr "Загрузить как"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Загружается в формате .csv"
 
 msgid "Duration"
-msgstr ""
+msgstr "Продолжит."
 
 msgid "EMA"
-msgstr ""
+msgstr "ЭСС"
 
 msgid "Edge"
-msgstr ""
+msgstr "Граница"
 
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 msgid "Education"
-msgstr ""
+msgstr "Образование"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Не удалось подтвердить эл. адрес"
 
 msgid "Embed code"
-msgstr ""
+msgstr "Код для вставки"
 
 msgid "End Time"
-msgstr ""
+msgstr "Окончание"
 
 msgid "Ends In/Out"
-msgstr ""
+msgstr "Заканчивается Внутри/Вне"
 
 msgid "Enter your current password"
-msgstr ""
+msgstr "Введите текущий пароль"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "Входная котировка"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "Входная котировка"
 
 msgid "Error downloading .csv"
-msgstr ""
+msgstr "Ошибка при загрузке файла в формате .csv"
 
 msgid "Error getting data for"
-msgstr ""
+msgstr "Ошибка в получении данных для"
 
 msgid "Estimated Net Worth"
 msgstr ""
 
 msgid "Exclude me from the website until"
-msgstr ""
+msgstr "Исключите меня с сайта до"
 
 msgid "Exclude time cannot be less than 6 months"
-msgstr ""
+msgstr "Время исключения не может быть менее 6 месяцев"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "Выходная котировка"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "Выходная котировка"
 
 msgid "Explanation"
-msgstr ""
+msgstr "Пояснение"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Не удалось изменить пароль"
 
 msgid "Fall"
-msgstr ""
+msgstr "Падение"
 
 msgid "Family name"
-msgstr ""
+msgstr "Фамилия"
 
 msgid "Fast %K MA Type"
-msgstr ""
+msgstr "Быстрый тип %K СС"
 
 msgid "Fast %K Period"
-msgstr ""
+msgstr "Быстрый период %K"
 
 msgid "Fast Limit"
-msgstr ""
+msgstr "Быстрый лимит"
 
 msgid "Fast MA Type"
-msgstr ""
+msgstr "Быстрый тип СС"
 
 msgid "Fast Period"
-msgstr ""
+msgstr "Быстрый период"
 
 msgid "Favorites"
-msgstr ""
+msgstr "Избранное"
 
 msgid "Favourite artist"
-msgstr ""
+msgstr "Любимый артист"
 
 msgid "Favourite dish"
-msgstr ""
+msgstr "Любимое блюдо"
 
 msgid "Final Price"
-msgstr ""
+msgstr "Цена продажи"
 
 msgid "Final price"
-msgstr ""
+msgstr "Цена продажи"
 
 msgid "Finance"
-msgstr ""
+msgstr "Финансы"
 
 msgid "Financial information"
-msgstr ""
+msgstr "Финансовая информация"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First name"
-msgstr ""
+msgstr "Имя"
 
 msgid "Forex trading experience"
-msgstr ""
+msgstr "Опыт торговли на Forex"
 
 msgid "Forex trading frequency"
-msgstr ""
+msgstr "Частота торговли на Forex"
 
 msgid "Fri"
-msgstr ""
+msgstr "Пят"
 
 msgid "From"
-msgstr ""
+msgstr "От"
 
 msgid "Gray"
-msgstr ""
+msgstr "Серый"
 
 msgid "Grid"
-msgstr ""
+msgstr "Сетка"
 
 msgid "Grid Light"
-msgstr ""
+msgstr "Светлая сетка"
 
 msgid "HIGH"
-msgstr ""
+msgstr "ВЕРХНЕЕ ЗНАЧЕНИЕ"
 
 msgid "Health"
 msgstr ""
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Верхний барьер"
 
 msgid "High Price"
-msgstr ""
+msgstr "Верхняя цена"
 
 msgid "High Stroke"
-msgstr ""
+msgstr "Верхний штрих"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "Изменение верхнего барьера"
 
 msgid "Higher"
-msgstr ""
+msgstr "Выше"
 
 msgid "Histogram Color"
-msgstr ""
+msgstr "Цвет гистограммы"
 
 msgid "Histogram Color For Higher Values"
-msgstr ""
+msgstr "Цвет гистограммы для высоких значений"
 
 msgid "Histogram Color For Lower Values"
-msgstr ""
+msgstr "Цвет гистограммы для низких значений"
 
 msgid "Home Address"
-msgstr ""
+msgstr "Адрес"
 
 msgid "Horizontal Line"
-msgstr ""
+msgstr "Горизонтальная линия"
 
 msgid "Hours"
-msgstr ""
+msgstr "Часы"
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "Я ознакомился и согласился с условиями Binary.com"
 
 msgid "If you select a"
-msgstr ""
+msgstr "Если Вы выбираете"
 
 msgid "If you select a specific"
 msgstr ""
@@ -661,6 +682,8 @@ msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
 msgstr ""
+"Чтобы изменение темы вступило в силу, необходимо полное обновление страницы. "
+"Вы уверены, что хотите продолжить?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -668,245 +691,256 @@ msgid ""
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
 msgstr ""
+"В рамках предоставления Вам услуг, нам необходимо получить от Вас информацию "
+"с целью оценить, подходит ли Вам определённый продукт или услуга (в "
+"частности, узнать, обладаете ли Вы необходимым опытом и знаниями, чтобы "
+"понимать сопряжённые риски)"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
 msgstr ""
+"Помните, что некоторые виды бинарных опционов являются разновидностью "
+"азартных игр и могут вызывать привыкание."
 
 msgid "In/Out"
-msgstr ""
+msgstr "Внутри/Вне"
 
 msgid "Income Source"
-msgstr ""
+msgstr "Источник дохода"
 
 msgid "Indicative Price"
-msgstr ""
+msgstr "Ориентировочная цена"
 
 msgid "Indices trading experience"
-msgstr ""
+msgstr "Опыт торговли индексами"
 
 msgid "Indices trading frequency"
-msgstr ""
+msgstr "Частота торговли индексами"
 
 msgid "Industry of Employment"
-msgstr ""
+msgstr "Сфера занятости"
 
 msgid "Instrument"
-msgstr ""
+msgstr "Инструмент"
 
 msgid "Instruments"
-msgstr ""
+msgstr "Инструменты"
 
 msgid "Investments & Dividends"
-msgstr ""
+msgstr "Инвестиции и дивиденды"
 
 msgid "Jump to"
-msgstr ""
+msgstr "Перейти к"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr ""
+msgstr "Просто нажмите кнопку  Разрешить  на открывшейся странице"
 
 msgid "LOW"
-msgstr ""
+msgstr "НИЖНЕЕ ЗНАЧЕНИЕ"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Прогноз последней десятичной"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Последняя десятичная находится выше"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Последняя десятичная находится ниже"
 
 msgid "Last used"
-msgstr ""
+msgstr "Недавние"
 
 msgid "Less than"
-msgstr ""
+msgstr "Менее"
 
 msgid "Let's do it"
-msgstr ""
+msgstr "Приступим"
 
 msgid "Level"
-msgstr ""
+msgstr "Уровень"
 
 msgid "Level of Education"
-msgstr ""
+msgstr "Уровень образования"
 
 msgid "Line"
-msgstr ""
+msgstr "Линейный"
 
 msgid "Line Dot"
-msgstr ""
+msgstr "Линейно-точечн."
 
 msgid "Line Stroke"
-msgstr ""
+msgstr "Штрих линии"
 
 msgid "Link"
-msgstr ""
+msgstr "Ссылка"
 
 msgid "Loading"
-msgstr ""
+msgstr "Идёт загрузка"
 
+#, fuzzy
 msgid "Loading Asset Index"
 msgstr ""
 
 msgid "Loading Configurations"
-msgstr ""
+msgstr "Загрузка системных настроек"
 
 msgid "Loading Download/View Data"
-msgstr ""
+msgstr "Идет загрузка/Обзор данных"
 
 msgid "Loading Password dialog"
-msgstr ""
+msgstr "Загружается диалоговое окно пароля"
 
 msgid "Loading Profit Table"
-msgstr ""
+msgstr "Загружается анализ счёта"
 
 msgid "Loading Real account opening"
-msgstr ""
+msgstr "Загружается реальный счёт"
 
 msgid "Loading Self-Exclusion"
-msgstr ""
+msgstr "Загружается самоисключение"
 
 msgid "Loading Statement Table"
-msgstr ""
+msgstr "Загружается история счёта"
 
 msgid "Loading Token management"
-msgstr ""
+msgstr "Загружается управление ключами"
 
 msgid "Loading Trading Times"
-msgstr ""
+msgstr "Загружается время открытия рынков"
 
 msgid "Loading chart and trade menus"
-msgstr ""
+msgstr "Загружается график и торговое меню"
 
 msgid "Loading custom theme configuration"
-msgstr ""
+msgstr "Загрузка индивидуальных настроек"
 
 msgid "Loading portfolio"
-msgstr ""
+msgstr "Загрузка портфеля"
 
 msgid "Loading self-exclusion settings"
-msgstr ""
+msgstr "Загрузка настроек самоисключения"
 
 msgid "Log in"
-msgstr ""
+msgstr "Вход"
 
 msgid "Log in time"
-msgstr ""
+msgstr "Время входа"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Выход из системы на период самоисключения!"
 
 msgid "Login"
-msgstr ""
+msgstr "Вход"
 
 msgid "Logout"
-msgstr ""
+msgstr "Выход"
 
 msgid "Long MA Type"
-msgstr ""
+msgstr "Тип длинной СС"
 
 msgid "Long ROC Period"
-msgstr ""
+msgstr "Длинный период ROC"
 
 msgid "Long Stop Line Stroke"
-msgstr ""
+msgstr "Штрих длинной стоп-линии"
 
 msgid "Long Term Period"
-msgstr ""
+msgstr "Долгосрочный период"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Нижний барьер"
 
 msgid "Low Price"
-msgstr ""
+msgstr "Нижняя цена"
 
 msgid "Low Stroke"
-msgstr ""
+msgstr "Нижний штрих"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Изменение нижнего барьера"
 
 msgid "Lower"
-msgstr ""
+msgstr "Ниже"
 
 msgid "Lower Band Stroke"
-msgstr ""
+msgstr "Штрих нижней полосы"
 
 msgid "MA Type"
-msgstr ""
+msgstr "Тип СС"
 
 msgid "MACD Line Stroke"
-msgstr ""
+msgstr "Штрих линии MACD"
 
 msgid "Mass Period"
 msgstr ""
 
 msgid "Max/Min Period"
-msgstr ""
+msgstr "Макс./мин. период"
 
 msgid "Maximum"
-msgstr ""
+msgstr "Максимум"
 
 msgid "Maximum account cash balance"
-msgstr ""
+msgstr "Максимальный баланс счёта"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr ""
+"Максимальная совокупная стоимость приобретённых контрактов за 30-дневный "
+"период"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
 msgstr ""
+"Максимальная совокупная стоимость приобретённых контрактов за 7-дневный "
+"период"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr ""
+msgstr "Максимальная совокупная стоимость приобретённых контрактов за день"
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr ""
+msgstr "Максимальная совокупная сумма убытков за 30-дневный период"
 
 msgid "Maximum aggregate loss per day"
-msgstr ""
+msgstr "Максимальная совокупная сумма убытков за день"
 
 msgid "Maximum number of open positions"
-msgstr ""
+msgstr "Максимальное количество открытых позиций"
 
 msgid "Memorable date"
-msgstr ""
+msgstr "Важная дата"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "Любимый город"
 
 msgid "Middle Band Stroke"
-msgstr ""
+msgstr "Штрих средней линии"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr ""
+msgstr "Минимум 6 символов и минимум 1 цифра"
 
 msgid "Minutes"
-msgstr ""
+msgstr "Минуты"
 
 msgid "Miss"
-msgstr ""
+msgstr "Госпожа"
 
 msgid "Mon"
-msgstr ""
+msgstr "Пон"
 
 msgid "Mother's maiden name"
-msgstr ""
+msgstr "Девичья фамилия матери"
 
 msgid "Mr"
-msgstr ""
+msgstr "Господин"
 
 msgid "Mrs"
-msgstr ""
+msgstr "Госпожа"
 
 msgid "Ms"
-msgstr ""
+msgstr "Госпожа"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Коэффициент"
 
 msgid "NB Dev Down"
 msgstr ""
@@ -915,625 +949,648 @@ msgid "NB Dev Up"
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
 msgid "Name of first love"
-msgstr ""
+msgstr "Имя первой любви"
 
 msgid "Name of your pet"
-msgstr ""
+msgstr "Кличка домашнего животного"
 
 msgid "Navigator handles background"
-msgstr ""
+msgstr "Фон бегунков навигатора"
 
 msgid "Navigator handles border"
-msgstr ""
+msgstr "Граница бегунков навигатора"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "Фон навигатора"
 
 msgid "Navigator outline"
-msgstr ""
+msgstr "Рамка навигатора"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "Цвет элементов навигатора"
 
 msgid "Navigator series line"
-msgstr ""
+msgstr "Линия навигатора"
 
 msgid "Net Annual Income"
-msgstr ""
+msgstr "Чистый годовой доход"
 
 msgid "Net Profit"
-msgstr ""
+msgstr "Чистая прибыль"
 
 msgid "New password"
-msgstr ""
+msgstr "Новый пароль"
 
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr ""
+"Имейте ввиду, что ключи могут охватывать одну или несколько данных областей"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
 msgstr ""
+"Примечание: контракт будет продан по цене, действующей на момент получения "
+"запроса нашими серверами. Эта цена может отличаться от указанной в настоящее "
+"время цены"
 
 msgid "Now"
-msgstr ""
+msgstr "Сейчас"
 
 msgid "Number of bars on sides"
-msgstr ""
+msgstr "Количество столбцов по бокам"
 
 msgid "OAuth App ID (Optional)"
-msgstr ""
+msgstr "Номер приложения OAuth (опционально)"
 
 msgid "OAuth Server"
-msgstr ""
+msgstr "Сервер OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
-msgstr ""
+msgstr "ОТКРЫТИЕ"
 
 msgid "Offset"
-msgstr ""
+msgstr "Изменение"
 
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
 "not appropriate for you"
 msgstr ""
+"На основе предоставленной информации о Ваших знаниях и опыте, мы считаем, "
+"что инвестиции, предоставляемые на данном сайте, не подходят для Вас"
 
 msgid "Once this limit is reached, you may no longer deposit"
-msgstr ""
+msgstr "Когда данный лимит будет достигнут, Вы не сможете вносить средства"
 
 msgid "One last step left"
-msgstr ""
+msgstr "Остался один шаг"
 
 msgid "Open"
-msgstr ""
+msgstr "Открытие"
 
 msgid "Open Account"
-msgstr ""
+msgstr "Открыть счёт"
 
 msgid "Open Price"
-msgstr ""
+msgstr "Цена открытия"
 
 msgid "Open account"
-msgstr ""
+msgstr "Открыть счёт"
 
 msgid "Open real money account"
-msgstr ""
+msgstr "Открыть реальный счёт"
 
 msgid "Opens"
-msgstr ""
+msgstr "Открывается"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
 msgstr ""
+"Торговля бинарными опционами может вызват зависимость, как и любая "
+"деятельность, доведённая до крайности. Чтобы избежать опасности "
+"возникновения подобной зависимости, мы проводим проверку реальности и "
+"предоставляем регулярный отчёт о Ваших сделках и счетах"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr ""
+msgstr "Опциональное поле (20 символов и не допускается '+')"
 
 msgid "Other"
-msgstr ""
+msgstr "Другое"
 
 msgid "Other financial instruments trading experience"
-msgstr ""
+msgstr "Опыт торговли другими финансовыми инструментами"
 
 msgid "Other financial instruments trading frequency"
-msgstr ""
+msgstr "Частота торговли другими финансовыми инструментами"
 
 msgid "Over"
-msgstr ""
+msgstr "Более"
 
 msgid "Over 3 years"
-msgstr ""
+msgstr "Более 3 лет"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "PPO Line Stroke"
-msgstr ""
+msgstr "Штрих линии ПЦО"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "Минимальная длина пароля: 6 знаков"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Пароль должен содержать заглавные, строчные буквы и цифры"
 
 msgid "Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "Пароль должен содержать заглавные буквы и цифры"
 
 msgid "Password successfully updated"
-msgstr ""
+msgstr "Пароль изменён успешно"
 
 msgid "Passwords didn't match. Please type them again"
-msgstr ""
+msgstr "Пароли не совпали. Пожалуйста, введите пароли снова"
 
 msgid "Payments"
-msgstr ""
+msgstr "Платежи"
 
 msgid "Payout"
-msgstr ""
+msgstr "Выплата"
 
 msgid "Pension"
-msgstr ""
+msgstr "Пенсия"
 
 msgid "Period"
-msgstr ""
+msgstr "Период"
 
 msgid "Period 1"
-msgstr ""
+msgstr "Период 1"
 
 msgid "Period 2"
-msgstr ""
+msgstr "Период 2"
 
 msgid "Period 3"
-msgstr ""
+msgstr "Период 3"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Разрешения"
 
 msgid "Personal Details"
-msgstr ""
+msgstr "Личные данные"
 
 msgid "Phone"
-msgstr ""
+msgstr "Телефон"
 
 msgid "Please"
-msgstr ""
+msgstr "Пожалуйста"
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr ""
+msgstr "Пожалуйста, ответьте на секретный вопрос (4-50 знаков)"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Пожалуйста, выберите минимум один уровень ключа"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Пожалуйста, введите число в следующем диапазоне:"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr ""
+msgstr "Пожалуйста, введите точную дату в формате: гггг-мм-дд"
 
 msgid "Please enter a value for"
-msgstr ""
+msgstr "Пожалуйста, введите значение для"
 
 msgid "Please enter a vlaid phone number"
-msgstr ""
+msgstr "Пожалуйста, введите действующий номер телефона"
 
 msgid "Please enter correct email"
-msgstr ""
+msgstr "Пожалуйста, введите правильный email"
 
 msgid "Please enter date in the format YYYY-MM-DD"
-msgstr ""
+msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
 
 msgid "Please enter positive integer value between 0 and 9999"
-msgstr ""
+msgstr "Пожалуйста, введите положительное целое число от 0 до 9999"
 
 msgid "Please enter positive integer value for 30-day limit on losses"
 msgstr ""
+"Пожалуйста, введите положительное целое число для 30-дневного лимита на "
+"убыток"
 
 msgid "Please enter positive integer value for 30-day turnover limit"
 msgstr ""
+"Пожалуйста, введите положительное целое число для 30-дневного лимита на "
+"объём покупок"
 
 msgid "Please enter positive integer value for 7-day limit on losses"
 msgstr ""
+"Пожалуйста, введите положительное целое число для 7-дневного лимита на убыток"
 
 msgid "Please enter positive integer value for 7-day turnover limit"
 msgstr ""
+"Пожалуйста, введите положительное целое число для 7-дневного лимита на объём "
+"покупок"
 
 msgid "Please enter positive integer value for Daily limit on losses"
 msgstr ""
+"Пожалуйста, введите положительное целое число для дневного лимита на убыток"
 
 msgid "Please enter positive integer value for Daily turnover limit"
 msgstr ""
+"Пожалуйста, введите положительное целое число для дневного длимита на объём "
+"покупок"
 
 msgid ""
 "Please enter positive integer value for Maximum number of open positions"
 msgstr ""
+"Пожалуйста, введите положительное целое число для максимального числа "
+"открытых позиций"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Пожалуйста, введите название ключа"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
+"Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
 
 msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
+msgstr "Пожалуйста, укажите лимит продолжительности сессии: число от 0 до 99999"
 
 msgid "Please enter your city address"
-msgstr ""
+msgstr "Пожалуйста, введите адрес"
 
 msgid "Please enter your current password"
-msgstr ""
+msgstr "Пожалуйста, введите текущий пароль"
 
 msgid "Please enter your email"
-msgstr ""
+msgstr "Пожалуйста, введите Ваш эл. адрес"
 
 msgid "Please enter your family name"
-msgstr ""
+msgstr "Пожалуйста, введите фамилию"
 
 msgid "Please enter your first name"
-msgstr ""
+msgstr "Пожалуйста, введите имя"
 
 msgid "Please enter your new password"
-msgstr ""
+msgstr "Пожалуйста, введите новый пароль"
 
 msgid "Please enter your password"
-msgstr ""
+msgstr "Пожалуйста, введите пароль"
 
 msgid "Please enter your phone number"
-msgstr ""
+msgstr "Пожалуйста, введите номер телефона"
 
 msgid "Please enter your street address"
-msgstr ""
+msgstr "Пожалуйста, введите адрес"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr ""
+msgstr "Пожалуйста, установите последнюю версию одного из следующих браузеров"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Пожалуйста, войдите"
 
 msgid "Please select"
-msgstr ""
+msgstr "Пожалуйста, выберите"
 
 msgid "Please try again after 1 minute"
-msgstr ""
+msgstr "Пожалуйста, повторите попытку через 1 минуту"
 
 msgid "Please use your new password to login"
-msgstr ""
+msgstr "Пожалуйста, используйте для входа новый пароль"
 
 msgid "Plot"
-msgstr ""
+msgstr "Тема"
 
 msgid "Plot Color"
-msgstr ""
+msgstr "Цвет темы"
 
 msgid "Pofit/Loss"
-msgstr ""
+msgstr "Прибыль/Убытки"
 
 msgid "Points"
-msgstr ""
+msgstr "Пункты"
 
 msgid "Portfolio"
-msgstr ""
+msgstr "Портфель"
 
 msgid "Postal code/ZIP"
-msgstr ""
+msgstr "Почтовый код/индекс"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "Потенциальная выплата"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "Потенциальная прибыль"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "Потенциальная прибыль"
 
 msgid "Pre-Defined"
-msgstr ""
+msgstr "Стандартные"
 
 msgid "Preferred reality-check interval"
-msgstr ""
+msgstr "Желаемый интервал для проверки реальности"
 
 msgid "Press  Create token  button on the right to create your first token"
-msgstr ""
+msgstr "Нажмите кнопку  Создать ключ  справа, чтобы создать первый ключ"
 
 msgid "Price"
-msgstr ""
+msgstr "Цена"
 
 msgid "Primary"
-msgstr ""
+msgstr "Первичн."
 
 msgid "Profit"
-msgstr ""
+msgstr "Прибыль"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Анализ счёта"
 
 msgid "Profit table"
-msgstr ""
+msgstr "Анализ счёта"
 
 msgid "Profit/ Loss"
-msgstr ""
+msgstr "Прибыль/ Убытки"
 
 msgid "Profit/Loss (points)"
-msgstr ""
+msgstr "Прибыль/убытки (пункты)"
 
 msgid "Purchase"
-msgstr ""
+msgstr "Купить"
 
 msgid "Purchase Date"
-msgstr ""
+msgstr "Дата покупки"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "Цена покупки"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Время покупки"
 
 msgid "Read"
-msgstr ""
+msgstr "Читать"
 
 msgid "Real account opening"
-msgstr ""
+msgstr "Открытие реального счёта"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Проверка реальности"
 
 msgid "Redirecting to oauth login page"
-msgstr ""
+msgstr "Перенаправление на страницу входа в oauth"
 
 msgid "Ref"
-msgstr ""
+msgstr "Номер"
 
 msgid "Register free account"
-msgstr ""
+msgstr "Откройте бесплатный счёт"
 
 msgid "Registration"
-msgstr ""
+msgstr "Регистрация"
 
 msgid "Reloading page"
-msgstr ""
+msgstr "Перезагрузка страницы"
 
 msgid "Remove Selected"
-msgstr ""
+msgstr "Удалить выбранное"
 
 msgid "Repeat password"
-msgstr ""
+msgstr "Повторите пароль"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Повторная продажа данного контракта невозможна"
 
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "Возврат к настройкам по умолчанию"
 
 msgid "Resources"
-msgstr ""
+msgstr "Ресурсы"
 
 msgid "Responsible Trading"
-msgstr ""
+msgstr "Ответственная торговля"
 
 msgid "Results"
-msgstr ""
+msgstr "Результаты"
 
 msgid "Return"
-msgstr ""
+msgstr "Прибыль"
 
 msgid "Rise"
-msgstr ""
+msgstr "Повышение"
 
 msgid "SMA"
-msgstr ""
+msgstr "ПСС"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
-msgstr ""
+msgstr "Наёмный работник"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "Дата продажи"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "Цена продажи"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
-msgstr ""
+msgstr "Суб"
 
 msgid "Secondary"
-msgstr ""
+msgstr "Вторичн."
 
 msgid "Security"
-msgstr ""
+msgstr "Безопасность"
 
 msgid "Security question"
-msgstr ""
+msgstr "Секретный вопрос"
 
 msgid "Select Instrument"
-msgstr ""
+msgstr "Выбрать инструмент"
 
 msgid "Self-Employed"
-msgstr ""
+msgstr "Частный предприниматель"
 
 msgid "Self-Exclusion"
-msgstr ""
+msgstr "Самоисключение"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Услуги самоисключения"
 
 msgid "Sell At Market"
-msgstr ""
+msgstr "Продать по текущей цене"
 
 msgid "Sell Price"
-msgstr ""
+msgstr "Цена продажи"
 
 msgid "Sell Spot"
-msgstr ""
+msgstr "Котировка продажи"
 
 msgid "Sell Time"
-msgstr ""
+msgstr "Время продажи"
 
 msgid "Session"
-msgstr ""
+msgstr "Сессия"
 
 msgid "Session duration limit, in minutes"
-msgstr ""
+msgstr "Ограничение на продолжительность сессии, в минутах"
 
 msgid "Session is not authenticated"
-msgstr ""
+msgstr "Сессия не авторизована"
 
 msgid "Settles"
 msgstr ""
 
 msgid "Share"
-msgstr ""
+msgstr "Поделиться"
 
 msgid "Short MA Type"
-msgstr ""
+msgstr "Короткий тип СС"
 
 msgid "Short ROC Period"
-msgstr ""
+msgstr "Короткий период ROC"
 
 msgid "Short Stop Line Stroke"
-msgstr ""
+msgstr "Штрих короткой стоп-линии"
 
 msgid "Short Term Period"
-msgstr ""
+msgstr "Краткосрочный период"
 
 msgid "Show"
-msgstr ""
+msgstr "Показать"
 
 msgid "Sigma"
 msgstr ""
 
 msgid "Signal Line Stroke"
-msgstr ""
+msgstr "Штрих сигнальной линии"
 
 msgid "Signal MA Type"
-msgstr ""
+msgstr "Тип сигнальной СС"
 
 msgid "Signal Period"
-msgstr ""
+msgstr "Период сигнала"
 
 msgid "Single MA Period"
-msgstr ""
+msgstr "Единичный период СС"
 
 msgid "Single MA Type"
-msgstr ""
+msgstr "Единичный тип СС"
 
 msgid "Slow %D MA Type"
-msgstr ""
+msgstr "Медленный тип СС %D"
 
 msgid "Slow %D Period"
-msgstr ""
+msgstr "Медленный период %D"
 
 msgid "Slow %K MA Type"
-msgstr ""
+msgstr "Медленный тип СС %K"
 
 msgid "Slow %K Period"
-msgstr ""
+msgstr "Медленный период %K"
 
 msgid "Slow Limit"
-msgstr ""
+msgstr "Медленный лимит"
 
 msgid "Slow MA Type"
-msgstr ""
+msgstr "Медленный тип СС"
 
 msgid "Slow Period"
-msgstr ""
+msgstr "Медленный период"
 
 msgid "Sold"
-msgstr ""
+msgstr "Продано"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Случайный индекс"
 
 msgid "Spline"
-msgstr ""
+msgstr "Кривая"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Спреды"
 
 msgid "Stake"
-msgstr ""
+msgstr "Ставка"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Время начала"
 
 msgid "Start time"
-msgstr ""
+msgstr "Время начала"
 
 msgid "State/province/region"
-msgstr ""
+msgstr "Регион/область/край"
 
 msgid "Statement"
-msgstr ""
+msgstr "История счёта"
 
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 msgid "Stays In/Goes Out"
-msgstr ""
+msgstr "Останется Внутри/Выйдет за пределы"
 
 msgid "Stocks trading experience"
-msgstr ""
+msgstr "Опыт торговли акциями"
 
 msgid "Stocks trading frequency"
-msgstr ""
+msgstr "Частота торговли акциями"
 
 msgid "Stop Loss Level"
-msgstr ""
+msgstr "Уровень стоп-лосс"
 
 msgid "Stop Profit Level"
-msgstr ""
+msgstr "Уровень стоп-профит"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "Стоп-лосс"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "Стоп-профит"
 
 msgid "Stop-type"
-msgstr ""
+msgstr "Тип стопа"
 
 msgid "Street address"
-msgstr ""
+msgstr "Адрес"
 
 msgid "Stroke"
-msgstr ""
+msgstr "Штрих"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Цвет штриха"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Ширина штриха"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Новый ключ добавлен успешно"
 
 msgid "Sun"
-msgstr ""
+msgstr "Вск"
 
 msgid "TEMA"
-msgstr ""
+msgstr "ТЭСС"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "ТСС"
 
 msgid "Table"
-msgstr ""
+msgstr "Таблица"
 
 msgid "Terms"
-msgstr ""
+msgstr "Условия"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Правила и условия"
 
 msgid "Tertiary"
-msgstr ""
+msgstr "Третичн."
 
 msgid "The"
 msgstr ""
@@ -1546,6 +1603,12 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract permium"
 msgstr ""
+"Финансовые услуги, предоставляемые на данном сайте, подходят лишь для "
+"клиентов, готовых к возможной потере всех инвестированных финансовых "
+"средств, а также осознающих риск и имеющих опыт риска, связанного с "
+"приобретением финансовых контрактов. Сделки с финансовыми контрактами "
+"подразумевают высокую степень риска. Если купленный контракт истекает без "
+"выплаты, Вы теряете всю сумму инвестиции и возможную прибыль в сделке."
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1553,95 +1616,102 @@ msgid ""
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
+"Во время действия данного контракта произошло прерывание в получении "
+"котировок. Для реальных счетов: мы постараемся исправить проблему и позже "
+"рассчитать контракт правильно; в противном случае, мы отменим контракт и "
+"вернем его стоимость. Для демо-счетов: мы отменим Ваш контракт и вернем цену "
+"его покупки."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Произошла ошибка"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Время контракта истекло"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Контракт проиграл"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Контракт выиграл"
 
 msgid "Thu"
-msgstr ""
+msgstr "Чет"
 
 msgid "Tick Trade app"
-msgstr ""
+msgstr "Приложение Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Тик {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Тики"
 
 msgid "Tile"
-msgstr ""
+msgstr "Плитка"
 
 msgid "Time Period"
-msgstr ""
+msgstr "Период"
 
 msgid "Time period"
-msgstr ""
+msgstr "Период"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Перерыв по запросу Websocket"
 
 msgid "Title"
-msgstr ""
+msgstr "Заголовок"
 
 msgid "Token"
-msgstr ""
+msgstr "Ключ"
 
 msgid "Token management"
-msgstr ""
+msgstr "Управление ключами"
 
 msgid "Token name"
-msgstr ""
+msgstr "Название ключа"
 
 msgid "Token permissions"
-msgstr ""
+msgstr "Право доступа ключа"
 
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
 msgstr ""
+"Ключи представляют собой специальные коды доступа к мобильным приложениям "
+"Binary и инструментам от третьей стороны"
 
 msgid "Tooltip background"
-msgstr ""
+msgstr "Фон подсказки"
 
 msgid "Tooltip text"
-msgstr ""
+msgstr "Текст подсказки"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "Общая стоимость"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "Общая прибыль/убыток"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Касание/Нет касания"
 
 msgid "Tourism"
-msgstr ""
+msgstr "Туризм"
 
 msgid "Town/City"
-msgstr ""
+msgstr "Город"
 
 msgid "Trade"
-msgstr ""
+msgstr "Торговля"
 
 msgid "Trade Confirmation"
-msgstr ""
+msgstr "Подтверждение контракта"
 
 msgid "Trade using"
 msgstr ""
 
 msgid "Trading Times"
-msgstr ""
+msgstr "Торговые часы"
 
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
@@ -1649,6 +1719,10 @@ msgid ""
 "initial deposit and you do not own or have any interest in the underlying "
 "asset"
 msgstr ""
+"Торговля бинарными опционами подходит далеко не всем, поэтому, пожалуйста, "
+"убедитесь, что Вы полностью осознаёте все риски. Ваши потери могут превысить "
+"первоначальную инвестицию, а Вы не владеете и не получаете никакой доли от "
+"базового актива"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -1658,109 +1732,118 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
+"Торговля на финансовых рынках может перерасти в зависимость. Заполните форму "
+"для ограничения Вашего участия на сайте или отправьте службе поддержки "
+"подписанное письмо в отсканированном виде или по факсу. После установления "
+"ограничений Вы можете только усилить их. Ограничения могут быть сняты или "
+"смягчены по истечении 7 дней, за исключением даты самоисключения, которая не "
+"может быть изменена или отменена после её подтверждения. Для снятия или "
+"увеличения лимитов ограничения, пожалуйста, посетите страницу"
 
 msgid "Tradingview for Binary.com"
-msgstr ""
+msgstr "Tradingview для Binary.com"
 
 msgid "Try"
-msgstr ""
+msgstr "Попробовать"
 
 msgid "Tue"
-msgstr ""
+msgstr "Вт"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Объём покупок"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr ""
+msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Вверх/Вниз"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "Ближайшие события"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "Обновить настройки"
 
 msgid "Upper Band Stroke"
-msgstr ""
+msgstr "Штрих верхней полосы"
 
 msgid "Use"
-msgstr ""
+msgstr "Применить"
 
 msgid "Verification code has been sent to your email"
-msgstr ""
+msgstr "Проверочный код отправлен на Ваш эл. адрес"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Проверочный код отправлен"
 
 msgid "Verification token"
-msgstr ""
+msgstr "Проверочный ключ"
 
 msgid "Verify new password"
-msgstr ""
+msgstr "Подтвердите новый пароль"
 
 msgid "Vertical Line"
-msgstr ""
+msgstr "Вертикальная линия"
 
 msgid "View"
-msgstr ""
+msgstr "Обзор"
 
 msgid "View Historical Data"
-msgstr ""
+msgstr "Обзор истории"
 
 msgid "Volume Factor"
-msgstr ""
+msgstr "Фактор объёма"
 
 msgid "WMA"
-msgstr ""
+msgstr "ВСС"
 
 msgid "WMA Period"
-msgstr ""
+msgstr "Период ВСС"
 
 msgid "Websocket Server"
-msgstr ""
+msgstr "Сервер Websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr ""
+"Webtrader применяет новые веб технологии для приятного и полноценного "
+"торгового опыта"
 
 msgid "Wed"
-msgstr ""
+msgstr "Ср"
 
 msgid "While on the go, you can"
-msgstr ""
+msgstr "Прямо на ходу Вы можете"
 
 msgid "Windows"
-msgstr ""
+msgstr "Окна"
 
 msgid "X-axis labels"
-msgstr ""
+msgstr "Метки оси X"
 
 msgid "X-axis line"
-msgstr ""
+msgstr "Линия оси X"
 
 msgid "X-axis tick"
-msgstr ""
+msgstr "Тик на оси X"
 
 msgid "Y-axis gridline"
-msgstr ""
+msgstr "Сетка оси Y"
 
 msgid "Y-axis labels"
-msgstr ""
+msgstr "Метки оси Y"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Вы ограничили свою деятельность до"
 
 msgid "You have sold the following contract"
-msgstr ""
+msgstr "Вы продали следующий контракт"
 
 msgid ""
 "You have to register webtrader and get App ID before you can use different "
