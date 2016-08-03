@@ -299,6 +299,16 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
         },
 
+        /* allow settings to be updated when a new chart template is applied */
+        updateOptions: function(newTabId, chartType, timePeriod, indicatorsCount, overlayCount) {
+          var s = state[newTabId];
+          if(!s) return;
+          s.chartType = chartType;
+          s.timePeriod = timePeriod;
+          s.indicatorsCount = indicatorsCount;
+          s.overlayCount = overlayCount;
+        },
+
         disableEnableCandlestickAndOHLC : function (newTabId, enable) {
             if(state[newTabId]) {
                 state[newTabId].showCandlestickAndOHLC = enable;

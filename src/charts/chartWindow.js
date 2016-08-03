@@ -126,7 +126,9 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
         },
         apply_chart_options: function(dialog_id, options){
           chart_window_functions.set_chart_options(dialog_id, options);
-          require(['charts/charts'], function(charts){
+          require(['charts/charts', 'charts/chartOptions'], function(charts, chartOptions){
+            chartOptions.updateOptions( /* update the chart options settings */
+              dialog_id, options.type, options.timePeriod, options.indicators.length, options.overlays.length);
             charts.refresh('#'+dialog_id + '_chart', options.timePeriod, options.type, options.indicators, options.overlays);
           });
         },

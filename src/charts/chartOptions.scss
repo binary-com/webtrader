@@ -125,6 +125,7 @@
           .name {
             transition: color 0.2s;
             cursor: pointer;
+            margin-bottom: 3px;
             &.active {
               font-weight: bold;
             }
