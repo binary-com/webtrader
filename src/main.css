@@ -107,10 +107,6 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
   margin-top: -7px !important;
 }
 
-.gtm_data_layer {
-    display: none;
-}
-
 button.ui-button-text-only {
     margin-top: 15px;
     /*height: 46px;*/

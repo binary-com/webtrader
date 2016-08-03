@@ -13,7 +13,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         SPLINE_TYPE = 'spline',
         TABLE_TYPE = 'table',
         i18n_name = (local_storage.get('i18n') || { value: 'en' }).value,
-        urlShareTemplate = 'https://webtrader.binary.com?affiliates=true&instrument={0}&timePeriod={1}&gtm=true&lang=' + i18n_name,
+        urlShareTemplate = 'https://webtrader.binary.com?affiliates=true&instrument={0}&timePeriod={1}&lang=' + i18n_name,
         iframeShareTemplate = '<iframe src="' + urlShareTemplate + '" width="350" height="400" style="overflow-y : hidden;" scrolling="no" />',
         twitterShareTemplate = 'https://twitter.com/share?url={0}&text={1}',
         fbShareTemplate = 'https://facebook.com/sharer/sharer.php?u={0}',
