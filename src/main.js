@@ -281,17 +281,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
         'css!lib/colorpicker/jquery.colorpicker.css'
-    ], function() {
-
-        if (getParameterByName("gtm") === 'true'
-                            || getParameterByName("gtm") === undefined
-                            || $.trim(getParameterByName("gtm")).length <= 0) {
-            require(['gtm/gtm'], function (gtm) {
-                gtm.init();
-            });
-        }
-
-    });
+    ]);
 
 });
 
