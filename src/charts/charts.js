@@ -209,11 +209,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 var chart = $(containerIDWithHash).highcharts();
                 indicators = chart.get_indicators();
                 overlays = options.overlays;
-                console.warn('destroy');
                 chart.destroy();
             }
             if(options.indicators) { /* this comes only from tracker.js & ChartTemplateManager.js */
-              console.warn(options.indicators, options.overlays);
               indicators = options.indicators;
               overlays = options.overlays;
               $(containerIDWithHash).data("overlayCount", overlays.length);
@@ -418,19 +416,23 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 $(containerIDWithHash).data("timePeriod", newTimePeriod);
             }
             if(newChartType) $(containerIDWithHash).data("type", newChartType);
+            else newChartType = $(containerIDWithHash).data("type", newChartType);
 
             //Get all series details from this chart
             var chart = $(containerIDWithHash).highcharts();
             var chartObj = this;
             var loadedMarketData = [], series_compare = undefined;
-            $(chart.series).each(function (index, series) {
+            /* for ohlc and candlestick series_compare must NOT be percent */
+            if (newChartType !== 'ohlc' && newChartType !== 'candlestick') {
+              $(chart.series).each(function (index, series) {
                 console.log('Refreshing : ', series.options.isInstrument, series.options.name);
                 if (series.options.isInstrument) {
                     loadedMarketData.push(series.name);
                     //There could be one valid series_compare value per chart
                     series_compare = series.options.compare;
                 }
-            });
+              });
+            }
             require(['instruments/instruments'], function (ins) {
                 if(!overlays) {
                   overlays = [];
