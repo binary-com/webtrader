@@ -5,7 +5,6 @@
 define(["jquery", "windows/windows", "color-picker"], function($, windows){
 
 	function createWindow(options, callback){
-		require(["text!charts/draw/properties_selector/properties_selector.css"]);
 		require(["text!charts/draw/properties_selector/properties_selector.html"], function($html){
 			$html = $($html);
 			var table = $html.find("table");
@@ -13,29 +12,35 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
 				var ele, inputElement;
 				if(input.type==="colorpicker"){
 					inputElement = $("<input type='button' value='" + input.default + "' class='csspopup_input_width'" +
-						"id='" + input.id + "' style = 'background:"+ input.default + "; color:" + input.default + "' />");
+						"id='" + input.id + "' style = 'width:100px;background:"+ input.default + "; color:" + input.default + "' />");
 					inputElement.colorpicker({
+						showOn: 'click',
+						position: {
+                            at: "right+100 bottom",
+                            of: "element",
+                            collision: "fit"
+                        },
 						part:{
 							map: {size:128},
 							bar: {size:128}
 						},
 						select: function(event, color) {
 							var c = "#" + color.formatted;
-		                    $(inputElement).css({
-		                        background: c,
-		                        color:c
-		                    }).val(c);
-		                },
-		                ok: function(event, color) {
-		                    var c = "#" + color.formatted;
-		                    $(inputElement).css({
-		                        background: c,
-		                        color:c
-		                    }).val(c);
-		                }
+                            $(inputElement).css({
+                                background: c,
+                                color:c
+                            }).val(c);
+                        },
+                        ok: function(event, color) {
+                            var c = "#" + color.formatted;
+                            $(inputElement).css({
+                                background: c,
+                                color:c
+                            }).val(c);
+                        }
 					});
 				} else{
-					inputElement = $("<input type='" + input.type + "' value='" + input.default + "' class='csspopup_input_width'" +
+					inputElement = $("<input type='" + input.type + "' value='" + input.default + "' class='csspopup_input_width' style = 'width:100px;'" +
 						" id='" + input.id + "' name='" + input.name + "'/>");
 				}
 				if(input.min && input.max){
@@ -49,7 +54,7 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
 			win = windows.createBlankWindow($html,
                 {
                     title: options.title,
-                    width: 200,
+                    width: 240,
                     height: 200,
                     resizable: false,
                     collapsable: false,

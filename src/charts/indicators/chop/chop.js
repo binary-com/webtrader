@@ -39,6 +39,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#chop_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -63,6 +64,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             });
 
             $html.find("#chop_plot_color").colorpicker({
+						showOn: 'click',
                 alpha :true,
                 colorFormat:'RGBA',
                 position: {

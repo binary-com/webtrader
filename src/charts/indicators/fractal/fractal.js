@@ -30,6 +30,7 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
             $html.find("input[type='button']").button();
 
             $html.find("#fractal_color").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",

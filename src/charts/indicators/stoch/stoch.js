@@ -35,6 +35,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function() {
 
             $html.find("#stoch_k_stroke,#stoch_d_stroke").each(function () {
                 $(this).colorpicker({
+					showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
