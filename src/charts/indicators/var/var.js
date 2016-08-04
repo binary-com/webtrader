@@ -2,7 +2,9 @@
  * Created by Mahboob.M on 2/3/16.
  */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -23,31 +25,29 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.var;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.var-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#var_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
                     collision: "fit"
                 },
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+                part:   {
+                    map:        { size: 128 },
+                    bar:        { size: 128 }
                 },
-                select:			function(event, color) {
+                select:         function(event, color) {
                     $("#var_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok:                         function(event, color) {
                     $("#var_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
@@ -103,6 +103,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                                 dashStyle: selectedDashStyle,
                                 levels: []
                             };
+                            before_add_callback && before_add_callback();
                             //Add var for the main series
                             $($(".var").data('refererChartID')).highcharts().series[0].addIndicator('var', options);
 
@@ -135,16 +136,15 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".var").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".var").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".var").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

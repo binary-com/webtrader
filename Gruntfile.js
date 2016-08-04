@@ -30,7 +30,6 @@ module.exports = function (grunt) {
             branches:[ 'dist/branches'],
             current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
             dist: ['dist'],
-            clean_src_i18n: ['src/i18n']
         },
         copy: {
             main: {
@@ -38,13 +37,21 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'src/',
-                        src: ['**', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
+                        src: ['**', '!**/*.scss','!**/*.es6', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
                         dest: 'dist/uncompressed/v<%=pkg.version%>'
                     }
                 ]
             },
             copyLibraries: {
                 files: [
+                    {
+                        expand: true,
+                        cwd: 'node_modules/',
+                        src: [
+                            'jquery-ui-iconfont/jquery-ui.icon-font.css', 'jquery-ui-iconfont/font/*',
+                        ],
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                    },
                     {
                         expand: true,
                         cwd: 'bower_components/',
@@ -56,7 +63,6 @@ module.exports = function (grunt) {
                             '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
-                            'jquery-ui-iconfont/jquery-ui.icons.css', 'jquery-ui-iconfont/fonts/*',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
@@ -105,6 +111,16 @@ module.exports = function (grunt) {
                         cwd: 'dist/compressed',
                         src: [ '**'],
                         dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
+                    }
+                ]
+            },
+            copy_i18n: {
+                files: [
+                    {
+                        expand: true,
+                        src: [ '**'],
+                        cwd: 'translations/i18n/json',
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/i18n/'
                     }
                 ]
             },
@@ -303,26 +319,32 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-          scripts: {
-            files: ['src/**'],
-            tasks: ['mainTask'],
-            options: {
-              spawn: false,
-              interrupt : true,
-              livereload: true
-            },
+          options: {
+            spawn: true,
+            interrupt : false,
+            livereload: {
+              key: grunt.file.read('grunt/livereload.key'),
+              cert: grunt.file.read('grunt/livereload.crt')
+            }
           },
-          https: {
-            files: ['src/**'],
-            tasks: ['mainTask'],
-            options: {
-              spawn: false,
-              interrupt : true,
-              livereload: {
-                key: grunt.file.read('grunt/livereload.key'),
-                cert: grunt.file.read('grunt/livereload.crt')
-              }
-            },
+          scss: {
+            options: { livereload: false },
+            files: ['src/**/*.scss'],
+            tasks: ['newer:sass'],
+          },
+          es6: {
+            options: { livereload: false },
+            files: ['src/**/*.es6'],
+            tasks: ['newer:babel'],
+          },
+          dist: {
+            files: ['dist/uncompressed/v<%=pkg.version%>/**/*.*'],
+            tasks: []
+          },
+          scripts: {
+            options: { livereload: false },
+            files: ['src/**', '!src/**/*.scss', '!src/**/*.es6'],
+            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest'],
           },
         },
         shell: {
@@ -392,14 +414,45 @@ module.exports = function (grunt) {
           },
           all: {
             src: ['translations/i18n/*.po'],
-            dest: 'src/i18n/'
+            dest: 'translations/i18n/json/'
           }
         },
+        sass: {
+          // options: { sourceMap: true },
+          dist: {
+            files: [
+              {
+                expand: true,
+                cwd: 'src/',
+                src: ['**/*.scss'],
+                dest: 'dist/uncompressed/v<%=pkg.version%>',
+                ext: '.css'
+              }
+            ]
+          }
+        },
+        babel: {
+          options: {
+            sourceMap: true,
+            presets: ['es2015', 'stage-0']
+          },
+          dist: {
+            files: [
+              {
+                expand: true,
+                cwd: 'src/',
+                src: ['**/*.es6'],
+                dest: 'dist/uncompressed/v<%=pkg.version%>',
+                ext: '.js'
+              }
+            ]
+          }
+        }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
-  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging', 'clean:clean_src_i18n']);
+  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */

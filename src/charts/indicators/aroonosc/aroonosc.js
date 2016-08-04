@@ -2,7 +2,9 @@
  * Created by Mahboob.M on 2/3/16.
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -31,15 +33,13 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.aroonosc;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.aroonosc-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#aroonosc_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -172,6 +172,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                                 dashStyle: selectedDashStyle,
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add AROONOSC for the main series
                             $($(".aroonosc").data('refererChartID')).highcharts().series[0].addIndicator('aroonosc', options);
 
@@ -204,16 +205,15 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".aroonosc").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".aroonosc").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".aroonosc").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

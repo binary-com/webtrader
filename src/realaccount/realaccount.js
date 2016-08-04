@@ -1,5 +1,5 @@
 /*
- * Created by amin on May June 14, 2016.
+ * Created by amin on June 14, 2016.
  */
 
 define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, rv, _, moment) {

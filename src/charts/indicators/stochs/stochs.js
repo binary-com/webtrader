@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -27,11 +29,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             data = JSON.parse(data);
             var current_indicator_data = data.stochs;
             $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.stochs-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#stochs_k_stroke,#stochs_d_stroke").each(function () {
                 $(this).colorpicker({
+					showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -212,16 +216,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".stochs").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".stochs").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".stochs").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

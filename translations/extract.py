@@ -15,7 +15,11 @@ static = [
     'Mr', 'Download CSV', "Mother's maiden name", 'tick', 'Brand of first car', 'day', 'minute', 'Asians',
     'Name of first love', '1-2 years', 'Over 3 years', 'hour', 'Touch/No Touch', 'Memorable town/city',
     'Over', 'Total Profit/Loss', 'Stake', 'days', '0-1 year', 'Salaried Employee', '0-5 transactions in the past 12 months',
-    'Cancel', 'In/Out', 'Education', 'Miss', 'Tertiary', 'Sat'
+    'Cancel', 'In/Out', 'Education', 'Miss', 'Tertiary', 'Sat', 'Loading...', 'January', 'February', 'March', 'April', 
+    'June', 'July', 'August', 'September', 'October', 'November', 'December', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 
+    'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 
+    'Reset zoom', 'Reset zoom level 1:1', 'Zoom', 'From', 'To', 'Print chart', 'Download PNG image', 
+    'Download JPEG image', 'Download PDF document', 'Download SVG vector image', 'Chart context menu'
 ]
 
 # Parsing webtrader html files.

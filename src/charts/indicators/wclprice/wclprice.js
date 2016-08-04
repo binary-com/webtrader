@@ -2,7 +2,9 @@
 Created By Mahboob.M on 12/16/2015
 */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog('close');
@@ -19,14 +21,12 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.wclprice;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.wclprice-description').html(current_indicator_data.description);
 
             $html.find("#wclprice_line_stroke").each(function () {
                 $(this).colorpicker({
+					showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -67,33 +67,34 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                 autoOpen: false,
                 resizable: false,
                 width: 350,
-                height: 400,
+                height: 350,
                 modal: true,
                 my: "center",
                 at: "center",
                 of: window,
                 dialogClass: 'wclprice-ui-dialog',
                 buttons: [
-					{
-					    text: "OK",
-					    click: function () {
-					        var options = {
-					            stroke: $("#wclprice_line_stroke").css("background-color"),
-					            strokeWidth: parseInt($("#wclprice_stroke_width").val()),
-					            dashStyle: selectedDashStyle
-					        }
-					        //Add WCLPRICE to the main series
-					        $($(".wclprice").data('refererChartID')).highcharts().series[0].addIndicator('wclprice', options);
+                    {
+                        text: "OK",
+                        click: function () {
+                            var options = {
+                                stroke: $("#wclprice_line_stroke").css("background-color"),
+                                strokeWidth: parseInt($("#wclprice_stroke_width").val()),
+                                dashStyle: selectedDashStyle
+                            }
+                            before_add_callback && before_add_callback();
+                            //Add WCLPRICE to the main series
+                            $($(".wclprice").data('refererChartID')).highcharts().series[0].addIndicator('wclprice', options);
 
-					        closeDialog.call($html);
-					    }
-					},
-					{
-					    text: "Cancel",
-					    click: function () {
-					        closeDialog.call(this);
-					    }
-					}
+                            closeDialog.call($html);
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function () {
+                            closeDialog.call(this);
+                        }
+                    }
                 ]
             });
             $html.find('select').each(function(index, value){
@@ -110,13 +111,15 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
     }
 
     return {
-        open: function (containerIDWithHash) {
-            if ($(".wclprice").length === 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".wclprice").data('refererChartID', containerIDWithHash).dialog("open");
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".wclprice").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".wclprice").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
     };
 });

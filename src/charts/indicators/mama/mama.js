@@ -2,7 +2,9 @@
  * Created by Mahboob.M on 12/21/15.
  */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -23,15 +25,13 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'lodash', '
 
             data = JSON.parse(data);
             var current_indicator_data = data.mama;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.mama-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#mama_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -108,6 +108,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'lodash', '
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#mama_appliedTo").val())
                             }
+                            before_add_callback && before_add_callback();
                             //Add MAMA for the main series
                             $($(".mama").data('refererChartID')).highcharts().series[0].addIndicator('mama', options);
 
@@ -139,15 +140,15 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'lodash', '
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".mama").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".mama").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".mama").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".mama").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };

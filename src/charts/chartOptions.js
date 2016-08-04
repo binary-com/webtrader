@@ -13,7 +13,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         SPLINE_TYPE = 'spline',
         TABLE_TYPE = 'table',
         i18n_name = (local_storage.get('i18n') || { value: 'en' }).value,
-        urlShareTemplate = 'https://webtrader.binary.com?affiliates=true&instrument={0}&timePeriod={1}&gtm=true&lang=' + i18n_name,
+        urlShareTemplate = 'https://webtrader.binary.com?affiliates=true&instrument={0}&timePeriod={1}&lang=' + i18n_name,
         iframeShareTemplate = '<iframe src="' + urlShareTemplate + '" width="350" height="400" style="overflow-y : hidden;" scrolling="no" />',
         twitterShareTemplate = 'https://twitter.com/share?url={0}&text={1}',
         fbShareTemplate = 'https://facebook.com/sharer/sharer.php?u={0}',
@@ -29,19 +29,19 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
     }
 
     //This is ugly, but doing it for now
-    function setTopHeaderPosAndWith_chartType(chartType) {
+    function setTopHeaderPosAndWith_chartType(chartType, newTabId) {
         switch (chartType) {
             case CANDLE_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '60px', left: '34px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '60px', left: '34px' }); break;
             case OHLC_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '58px', left: '36px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '58px', left: '36px' }); break;
             case LINE_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '52px', left: '41px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '52px', left: '41px' }); break;
             case DOT_TYPE:
             case LINEDOT_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '40px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '40px' }); break;
             case SPLINE_TYPE:
-                $('.chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '41px' }); break;
+                $('#' + newTabId + ' .chartOptions .chartTypeOverlay > .chartoptions-horizontal-line:first-child').css({ width: '53px', left: '41px' }); break;
         }
     }
 
@@ -55,7 +55,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             /* trigger an event on the chart dialog, so we can listen on type changes,
              * note: this will be use to update chart state for tracker.js */
             $('#' + scope.newTabId).trigger('chart-type-changed', scope.chartType);
-            setTopHeaderPosAndWith_chartType(chartType);
+            setTopHeaderPosAndWith_chartType(chartType, scope.newTabId);
         }
         hideOverlays(scope);
     }
@@ -108,6 +108,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     tableViewCallback: m_tableViewCb, //Callback for table view
                     instrumentName : m_instrumentName,
                     instrumentCode : m_instrumentCode,
+                    indicatorsCount : 0,
+                    overlayCount: 0,
 
                     showTimePeriodSelector : false,
                     showChartTypeSelector : false,
@@ -164,6 +166,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].changeTimePeriod = function(event, scope) {
                     var timePeriod = event.target.dataset.timeperiod;
+                    $("#"+m_newTabId+" .timePeriodOverlay [data-timeperiod="+scope.timePeriod+"]").removeAttr("disabled");
+                    $("#"+m_newTabId+" .timePeriodOverlay [data-timeperiod="+timePeriod+"]").attr("disabled","");
                     if (timePeriod) {
 
                         //Unregister previous subscription
@@ -249,11 +253,31 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     }
                 };
 
+                // Listen for indicator changes.
+                $("#" + m_newTabId).on('chart-indicators-changed',function(e, chart){
+                  state[m_newTabId].indicatorsCount = chart.get_indicators().length;
+                });
+
+                state[m_newTabId].overlayCount = $("#" + m_newTabId+"_chart").data('overlayCount');
+
+                // Listen for overlay changes.
+                $("#" + m_newTabId).on('chart-overlay-add', function(e, overlay){
+                    var chart = $("#" + m_newTabId + "_chart").highcharts();
+                    state[m_newTabId].overlayCount = chart.get_overlay_count();
+                
+                });
+                $("#" + m_newTabId).on('chart-overlay-remove', function(e, overlay){
+                    var chart = $("#" + m_newTabId + "_chart").highcharts();
+                    state[m_newTabId].overlayCount = chart.get_overlay_count();
+                });
+
                 var $html = $(html);
 
                 $("#" + m_newTabId + "_header").prepend($html);
+                // Disable selected timeperiod.
+                $("#"+m_newTabId+" .timePeriodOverlay [data-timeperiod="+m_timePeriod+"]").attr("disabled","");
                 setTopHeaderPosAndWidth_timePeriodOvl(m_timePeriod);
-                setTopHeaderPosAndWith_chartType(m_chartType);
+                setTopHeaderPosAndWith_chartType(m_chartType, m_newTabId);
 
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
 
@@ -286,7 +310,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 delete view[newTabId];
                 delete state[newTabId];
             }
-        }
+        },
+
+        setIndicatorsCount: function(count, newTabId){
+            state[newTabId].indicatorsCount = count;
+        },
 
     };
 

@@ -2,12 +2,24 @@
  * Created by amin on May 27, 2016.
  */
 
-define(["windows/windows", "websockets/binary_websockets", "lodash"], function (windows, liveapi, lodash) {
+define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation/menu"], function (windows, liveapi, lodash, menu) {
 
   var states = local_storage.get('states') || { };
   var saved_states = { };
 
-  function reopen_dialogs(){
+  var symbols_promise = liveapi.cached
+      .send({ trading_times: new Date().toISOString().slice(0, 10) })
+      .then(function(data) {
+        var markets = menu.extractChartableMarkets(data);
+        var symbols = _(markets).map('submarkets').flatten().map('instruments').flatten().map('symbol').value();
+        return symbols;
+      })
+      .catch(function(err){
+        console.console(err);
+        return [];
+      });
+
+  function reopen_dialogs(symbols){
     saved_states = states;
     states = { };
     save_states();
@@ -20,6 +32,8 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
       portfolio: '#nav-container .portfolio',
       profitTable: '#nav-container .profitTable',
       token: '#nav-container .token-management',
+      deposit: '#nav-container .deposit',
+      withdraw: '#nav-container .withdraw',
     };
 
     var counter = 0;
@@ -38,6 +52,13 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
         }
       }
       else if(module_id === 'chartWindow') {
+        var symbol = data.data.instrumentCode;
+        if(symbols.length > 0 && symbols.indexOf(symbol) === -1) {
+         /* Since we get the list of ins from trading_times API,
+          * backend/quant might change the list of instruments they are offering.
+          * We just need to make sure that those charts are not getting restored. */
+          return ;
+        }
         data.data.tracker_id = ++counter;
         require(['charts/chartWindow'], function(chartWindow) {
           chartWindow.addNewWindow(data.data);
@@ -214,7 +235,9 @@ define(["windows/windows", "websockets/binary_websockets", "lodash"], function (
 
   return {
     track: track,
-    reopen: reopen_dialogs,
+    reopen: function() {
+      symbols_promise.then(reopen_dialogs);
+    },
     is_empty: function(){
       var ok = _.values(states).filter(function(s) {
         return _.isArray(s) || s.position.mode !== 'closed';

@@ -35,7 +35,18 @@ msgstr "%K ストローク"
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
 "day or more in duration)"
-msgstr "（取引期間が1日未満の場合）、または取引最終日（取引期間が1日以上の場合）"
+msgstr ""
+"（取引期間が1日未満の場合）、または取引最終日（取引期間が1日以上の場合）"
+
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
 
 msgid "-DI Stroke"
 msgstr "-DI ストローク"
@@ -163,6 +174,9 @@ msgstr "管理者"
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "当社サイトの時間表示は全て、GMT（グリニッジ標準時）に基づきます。"
 
+msgid "Amount"
+msgstr ""
+
 msgid "Amount Per Point"
 msgstr "ポイントごとの金額"
 
@@ -178,11 +192,17 @@ msgstr "適用する"
 msgid "Apply"
 msgstr "適用"
 
-msgid "Apply new theme?"
-msgstr "新しいテーマを適用しますか？"
+msgid "Apply to become a Binary.com"
+msgstr ""
 
 msgid "Appropriateness Test: WARNING"
 msgstr "適正テスト: 警告"
+
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
 
 msgid "Are you sure you want to delete this token?"
 msgstr "このトークンを完全に削除してもよろしいですか？"
@@ -201,6 +221,12 @@ msgstr "資産"
 
 msgid "Asset Index"
 msgstr "取引期間データ"
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
 
 msgid "Average"
 msgstr "平均"
@@ -252,8 +278,9 @@ msgstr "クリックすると"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
-"当社でお取引なさっているお客さまにおいて、改定内容を必ずご確認いただく必要がございます。原則、改定後の書面の内容をご確認いただきOKボタンを押して頂くまで"
-"、お取引できなくなりますので、お取引の際ご注意ください。"
+"当社でお取引なさっているお客さまにおいて、改定内容を必ずご確認いただく必要が"
+"ございます。原則、改定後の書面の内容をご確認いただきOKボタンを押して頂くま"
+"で、お取引できなくなりますので、お取引の際ご注意ください。"
 
 msgid "CLOSE"
 msgstr "閉じる"
@@ -297,14 +324,21 @@ msgstr "チャートのテーマ"
 msgid "Chart background"
 msgstr "チャート背景"
 
+#, fuzzy
+msgid "Chart context menu"
+msgstr "チャートのテーマ"
+
 msgid "Choose password"
 msgstr "パスワードを選択してください"
 
+msgid "Choose your pereferred payment agent"
+msgstr ""
+
+msgid "Choose your pereferred withdrawal method"
+msgstr ""
+
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Chrome Extension"
-msgstr "Chrome 拡張機能"
 
 msgid "Click Jacking test"
 msgstr "ジャッキテストをクリック"
@@ -332,6 +366,9 @@ msgstr "条件"
 
 msgid "Config changes successful"
 msgstr "設定が変更されました"
+
+msgid "Confirm transfer"
+msgstr ""
 
 msgid "Connection closed"
 msgstr "接続が切断されました"
@@ -438,6 +475,13 @@ msgstr "生年月日"
 msgid "Days"
 msgstr "日"
 
+#, fuzzy
+msgid "Dec"
+msgstr "同意しない"
+
+msgid "December"
+msgstr ""
+
 msgid "Decline"
 msgstr "同意しない"
 
@@ -449,6 +493,10 @@ msgstr "レベルを削除"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr "IFRAME内のBinary.comチャートにアクセスするアフィリエイトデモ"
+
+#, fuzzy
+msgid "Deposit funds"
+msgstr "USDでのご入金"
 
 msgid "Deposit of USD"
 msgstr "USDでのご入金"
@@ -466,7 +514,15 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "ウェブトレーダーのchrome拡張機能をインストールしますか？"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
-msgstr "まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマネーでお取引を始めましょう"
+msgstr ""
+"まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマ"
+"ネーでお取引を始めましょう"
+
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr ""
+
+msgid "Done. The funds are transferred"
+msgstr ""
 
 msgid "Dot"
 msgstr "ドット"
@@ -483,10 +539,26 @@ msgstr "削除するオブジェクトをダブルクリックしてください
 msgid "Download CSV"
 msgstr "CSVでダウンロード"
 
+#, fuzzy
+msgid "Download JPEG image"
+msgstr "PNGでダウンロード"
+
+#, fuzzy
+msgid "Download PDF document"
+msgstr "PNGでダウンロード"
+
 msgid "Download PNG"
 msgstr "PNGでダウンロード"
 
+#, fuzzy
+msgid "Download PNG image"
+msgstr "PNGでダウンロード"
+
 msgid "Download SVG"
+msgstr "SVGでダウンロード"
+
+#, fuzzy
+msgid "Download SVG vector image"
 msgstr "SVGでダウンロード"
 
 msgid "Download as"
@@ -588,6 +660,12 @@ msgstr "好きなアーティスト"
 msgid "Favourite dish"
 msgstr "好きな料理"
 
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
 msgid "Final Price"
 msgstr "最終価格"
 
@@ -615,8 +693,15 @@ msgstr "外国為替取引の頻度"
 msgid "Fri"
 msgstr "金曜日"
 
+msgid "Friday"
+msgstr ""
+
 msgid "From"
 msgstr "開始"
+
+#, fuzzy
+msgid "Further instructions"
+msgstr "設営"
 
 msgid "Gray"
 msgstr "グレー"
@@ -669,6 +754,19 @@ msgstr "時間"
 msgid "I have read and agree to Binary.com"
 msgstr "よく読んだうえで、Binary.comに同意します"
 
+msgid "IMPORTANT DISCLAIMER"
+msgstr ""
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+
 msgid "If you select a"
 msgstr "xxxを選択した場合"
 
@@ -678,7 +776,17 @@ msgstr "特定のxxxを選択した場合"
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
-msgstr "テーマを適用するためには、ページの更新をする必要があります。続行してもよろしいですか？"
+msgstr ""
+"テーマを適用するためには、ページの更新をする必要があります。続行してもよろし"
+"いですか？"
+
+#, fuzzy
+msgid ""
+"In order to properly apply this language, a full refresh of page is "
+"required. Are you sure you want to proceed?"
+msgstr ""
+"テーマを適用するためには、ページの更新をする必要があります。続行してもよろし"
+"いですか？"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -686,13 +794,16 @@ msgid ""
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
 msgstr ""
-"当サービスでは、どの所定の製品またはサービスがお客様に適しているか評価するためにお客さまの情報を必要とします。（関連するリスクを理解する経験や知識があるか"
-"どうかがわかります。）"
+"当サービスでは、どの所定の製品またはサービスがお客様に適しているか評価するた"
+"めにお客さまの情報を必要とします。（関連するリスクを理解する経験や知識がある"
+"かどうかがわかります。）"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
-msgstr "賭博性のあるバイナリーオプションに関して、依存する可能性もありますのでご注意ください"
+msgstr ""
+"賭博性のあるバイナリーオプションに関して、依存する可能性もありますのでご注意"
+"ください"
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -721,8 +832,28 @@ msgstr "商品"
 msgid "Investments & Dividends"
 msgstr "投資と配当"
 
+#, fuzzy
+msgid "Jan"
+msgstr "かつ"
+
+msgid "January"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
 msgid "Jump to"
 msgstr "xxxへ移動する"
+
+#, fuzzy
+msgid "Jun"
+msgstr "日曜日"
+
+msgid "June"
+msgstr ""
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "表示されるページの 承認 ボタンをクリックしてください"
@@ -811,6 +942,10 @@ msgstr "ポートフォリオを読込み中"
 msgid "Loading self-exclusion settings"
 msgstr "取引制限の設定を読込み中"
 
+#, fuzzy
+msgid "Loading..."
+msgstr "読み込み中"
+
 msgid "Log in"
 msgstr "ログイン"
 
@@ -862,6 +997,21 @@ msgstr "MA タイプ"
 msgid "MACD Line Stroke"
 msgstr "MACD ラインストローク"
 
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+
+#, fuzzy
+msgid "Mar"
+msgstr "Mr"
+
+msgid "March"
+msgstr ""
+
 msgid "Mass Period"
 msgstr "マスインデックス期間"
 
@@ -892,6 +1042,10 @@ msgstr "1日の最大損失 (半角)"
 msgid "Maximum number of open positions"
 msgstr "最大保有ポジション"
 
+#, fuzzy
+msgid "May"
+msgstr "日"
+
 msgid "Memorable date"
 msgstr "思い出のある日時"
 
@@ -901,8 +1055,14 @@ msgstr "思い出のある都市／街の名前"
 msgid "Middle Band Stroke"
 msgstr "ミドルバンド ストローク"
 
+msgid "Min: 10 Max: 2000"
+msgstr ""
+
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "数字を含む6文字以上でご入力ください"
+
+msgid "Minus the agent's commission"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分"
@@ -912,6 +1072,10 @@ msgstr "Miss"
 
 msgid "Mon"
 msgstr "月曜日"
+
+#, fuzzy
+msgid "Monday"
+msgstr "第二"
 
 msgid "Mother's maiden name"
 msgstr "母親の旧姓"
@@ -980,7 +1144,20 @@ msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
 msgstr ""
-"ご注意：当社のサーバでリクエストが受理された場合、その時点での市場価格でトレードを売ることができます。この価格は表示価格と異なる場合があります。"
+"ご注意：当社のサーバでリクエストが受理された場合、その時点での市場価格でト"
+"レードを売ることができます。この価格は表示価格と異なる場合があります。"
+
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr ""
+
+#, fuzzy
+msgid "Nov"
+msgstr "いいえ"
+
+msgid "November"
+msgstr ""
 
 msgid "Now"
 msgstr "Now"
@@ -1000,6 +1177,12 @@ msgstr "OHLC"
 msgid "OPEN"
 msgstr "OPEN"
 
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
 msgid "Offset"
 msgstr "追加"
 
@@ -1010,7 +1193,9 @@ msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
 "not appropriate for you"
-msgstr "知識や経験に関して提供いただいた情報に基づき、当ウェブサイトでの投資はお客さまには適していないと思います。"
+msgstr ""
+"知識や経験に関して提供いただいた情報に基づき、当ウェブサイトでの投資はお客さ"
+"まには適していないと思います。"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "上限額に達した場合、入金頂くことができません。"
@@ -1043,7 +1228,9 @@ msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
-msgstr "オプション取引は依存性があります。依存を防ぐために、当社ではお客様のお取引や口座の概要を定期的に提供するリアリティチェックを行っています"
+msgstr ""
+"オプション取引は依存性があります。依存を防ぐために、当社ではお客様のお取引や"
+"口座の概要を定期的に提供するリアリティチェックを行っています"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "任意の項目は、20字以内で'+'を含めないようにしてください"
@@ -1087,6 +1274,14 @@ msgstr "パスワードは正常に変更されました"
 msgid "Passwords didn't match. Please type them again"
 msgstr "パスワードが一致しませんでした。再度お試しください。"
 
+#, fuzzy
+msgid "Payment agent"
+msgstr "アフィリエイト報酬の支払いについて"
+
+#, fuzzy
+msgid "Payment agents"
+msgstr "アフィリエイト報酬の支払いについて"
+
 msgid "Payments"
 msgstr "アフィリエイト報酬の支払いについて"
 
@@ -1125,6 +1320,9 @@ msgstr "4-50文字以内で、秘密の質問にお答えください"
 
 msgid "Please choose at least one token scope"
 msgstr "1つ以上のトークン範囲をご選択ください"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr ""
 
 msgid "Please enter a number between"
 msgstr "XXX間の数字をご入力ください"
@@ -1206,7 +1404,8 @@ msgid "Please enter your street address"
 msgstr "番地をご入力ください"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr "いずれかのブラウザをご利用の方は最新バージョンをインストールしてください"
+msgstr ""
+"いずれかのブラウザをご利用の方は最新バージョンをインストールしてください"
 
 msgid "Please log in"
 msgstr "ログインしてください"
@@ -1261,6 +1460,9 @@ msgstr "価格"
 
 msgid "Primary"
 msgstr "主要"
+
+msgid "Print chart"
+msgstr ""
 
 msgid "Profit"
 msgstr "利益"
@@ -1325,6 +1527,12 @@ msgstr "このトレードを売ることはできません"
 msgid "Reset to Defaults"
 msgstr "既定にリセット"
 
+msgid "Reset zoom"
+msgstr ""
+
+msgid "Reset zoom level 1:1"
+msgstr ""
+
 msgid "Resources"
 msgstr "取引参考情報"
 
@@ -1364,6 +1572,9 @@ msgstr "Sand Signikaテーマ"
 msgid "Sat"
 msgstr "土曜日"
 
+msgid "Saturday"
+msgstr ""
+
 msgid "Secondary"
 msgstr "第二"
 
@@ -1396,6 +1607,20 @@ msgstr "売却レート"
 
 msgid "Sell Time"
 msgstr "売却時間"
+
+#, fuzzy
+msgid "Send to account #"
+msgstr "口座開設"
+
+#, fuzzy
+msgid "Sent to account"
+msgstr "口座開設"
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
+msgstr ""
 
 msgid "Session"
 msgstr "セッション"
@@ -1481,6 +1706,12 @@ msgstr "スプレッド"
 msgid "Stake"
 msgstr "購入価格"
 
+msgid "Standard methods"
+msgstr ""
+
+msgid "Standard withdrawal"
+msgstr ""
+
 msgid "Start Time"
 msgstr "開始時間"
 
@@ -1532,11 +1763,17 @@ msgstr "ストロークカラー"
 msgid "Stroke width"
 msgstr "ストローク幅"
 
+msgid "Submit"
+msgstr ""
+
 msgid "Successfully added new token"
 msgstr "新しいトークンを追加しました"
 
 msgid "Sun"
 msgstr "日曜日"
+
+msgid "Sunday"
+msgstr ""
 
 msgid "TEMA"
 msgstr "TEMA"
@@ -1546,6 +1783,10 @@ msgstr "TRIMA"
 
 msgid "Table"
 msgstr "明細"
+
+#, fuzzy
+msgid "Tel"
+msgstr "　"
 
 msgid "Terms"
 msgstr "各種規約"
@@ -1567,8 +1808,10 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract permium"
 msgstr ""
-"このサイトを含む金融取引サービスは、投資した全額の損失を負担することができ、金融トレードの売買に対するリスクに理解と経験があるお客様にのみ適しています。金"
-"融トレードの取引は高いリスクを伴います。購入したトレードに価値がなくなった場合、トレードのプレミアムを含む投資全額の損失を被ることになります。"
+"このサイトを含む金融取引サービスは、投資した全額の損失を負担することができ、"
+"金融トレードの売買に対するリスクに理解と経験があるお客様にのみ適しています。"
+"金融トレードの取引は高いリスクを伴います。購入したトレードに価値がなくなった"
+"場合、トレードのプレミアムを含む投資全額の損失を被ることになります。"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1576,8 +1819,10 @@ msgid ""
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
-"取引期間中に市場データが中断されました。リアル口座でお取引されたお客様に関しましては、これを修正し、適切にトレードを決済させていただきます。修正ができない"
-"場合は、トレードはキャンセルされ、投資額は返金されます。デモ口座の方のトレードはキャンセルされ、投資額が返金されます。"
+"取引期間中に市場データが中断されました。リアル口座でお取引されたお客様に関し"
+"ましては、これを修正し、適切にトレードを決済させていただきます。修正ができな"
+"い場合は、トレードはキャンセルされ、投資額は返金されます。デモ口座の方のト"
+"レードはキャンセルされ、投資額が返金されます。"
 
 msgid "There was an error"
 msgstr "エラーが発生しました"
@@ -1591,8 +1836,14 @@ msgstr "トレードの条件が満たされませんでした"
 msgid "This contract won"
 msgstr "トレードの条件が満たされました"
 
+msgid "This field is required"
+msgstr ""
+
 msgid "Thu"
 msgstr "木曜日"
+
+msgid "Thursday"
+msgstr ""
 
 msgid "Tick Trade app"
 msgstr "Tickトレードアプリ"
@@ -1618,6 +1869,23 @@ msgstr "websocketリクエストの期限が切れています"
 msgid "Title"
 msgstr "敬称"
 
+msgid "To"
+msgstr ""
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr ""
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
+msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
+
 msgid "Token"
 msgstr "トークン"
 
@@ -1633,7 +1901,9 @@ msgstr "トークンのアクセス許可"
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
-msgstr "トークンはBinary.comのアプリやサードパーティツールにアクセスするための特別なコードです"
+msgstr ""
+"トークンはBinary.comのアプリやサードパーティツールにアクセスするための特別な"
+"コードです"
 
 msgid "Tooltip background"
 msgstr "ツールチップ背景"
@@ -1674,8 +1944,9 @@ msgid ""
 "initial deposit and you do not own or have any interest in the underlying "
 "asset"
 msgstr ""
-"バイナリーオプションの取引は、全ての方に適しているわけではありません。そのため、考えられるリスクに関して十分に理解があることをご確認ください。損失額が入金"
-"額を超えることがあります。また、原資産を保有ことはありません。"
+"バイナリーオプションの取引は、全ての方に適しているわけではありません。そのた"
+"め、考えられるリスクに関して十分に理解があることをご確認ください。損失額が入"
+"金額を超えることがあります。また、原資産を保有ことはありません。"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -1685,18 +1956,26 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
-"お客さまの過度な取引を防止するため、お客さま自身で下記の該当する取引上限設定を行えます。\n"
-"自動ログアウトと任意でログインしない以外の項目は1度設定されますと、次回からは設定した数値より低い数値以外は変更ができませんのでご注意下さい。制限の解除ま"
+"お客さまの過度な取引を防止するため、お客さま自身で下記の該当する取引上限設定"
+"を行えます。\n"
+"自動ログアウトと任意でログインしない以外の項目は1度設定されますと、次回からは"
+"設定した数値より低い数値以外は変更ができませんのでご注意下さい。制限の解除ま"
 "たは緩和をご希望の場合は、XXXまでご連絡ください。"
 
 msgid "Tradingview for Binary.com"
 msgstr "Binary.comのTradingView"
+
+msgid "Transfer to another Binary account"
+msgstr ""
 
 msgid "Try"
 msgstr "試してみる"
 
 msgid "Tue"
 msgstr "火曜日"
+
+msgid "Tuesday"
+msgstr ""
 
 msgid "Turnover"
 msgstr "取引数量"
@@ -1706,6 +1985,9 @@ msgstr "USD"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
+
+msgid "Unlock"
+msgstr ""
 
 msgid "Up/Down"
 msgstr "ラダー"
@@ -1760,16 +2042,27 @@ msgstr "ウェブトレーダー"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr "ウェブトレーダーは取引経験をより豊かに、より楽しめるものへとする全く新しいウェブテクノロジーを使用しています"
+msgstr ""
+"ウェブトレーダーは取引経験をより豊かに、より楽しめるものへとする全く新しい"
+"ウェブテクノロジーを使用しています"
 
 msgid "Wed"
 msgstr "水曜日"
+
+msgid "Wednesday"
+msgstr ""
 
 msgid "While on the go, you can"
 msgstr "出先でもお取引が可能"
 
 msgid "Windows"
 msgstr "Windows"
+
+msgid "Withdraw funds"
+msgstr ""
+
+msgid "Withdrawal via payment agents"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "X 軸ラベル"
@@ -1786,6 +2079,10 @@ msgstr "Y 軸目盛線"
 msgid "Y-axis labels"
 msgstr "Y 軸のラベル"
 
+#, fuzzy
+msgid "Yes"
+msgstr "はい"
+
 msgid "You have excluded yourself until"
 msgstr "xxxまで自己制限としてアクセスを制限されています"
 
@@ -1797,7 +2094,8 @@ msgid ""
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
-"異なるOAuthのサーバーを認可に使用するためには、ウェブトレーダーにご登録いただき、アプリIDを取得いただく必要があります。OAuthに関する詳細は"
+"異なるOAuthのサーバーを認可に使用するためには、ウェブトレーダーにご登録いただ"
+"き、アプリIDを取得いただく必要があります。OAuthに関する詳細は"
 
 msgid "You pay"
 msgstr "xxxを支払う"
@@ -1808,7 +2106,9 @@ msgstr "その時間が経過しますと、自動的にログアウトされま
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
-msgstr "お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダーのアクセスを許可頂く必要があります"
+msgstr ""
+"お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダー"
+"のアクセスを許可頂く必要があります"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
@@ -1831,6 +2131,9 @@ msgstr "トレード参照番号："
 msgid "Your transaction reference number is"
 msgstr "トレード参照番号："
 
+msgid "Zoom"
+msgstr ""
+
 msgid "admin"
 msgstr "管理者"
 
@@ -1843,11 +2146,16 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
-"口座開設にお進みください。その際は、リスクを判断したり、軽減させるための知識や経験がないために、自信へ生じるリスク（投資全体の損失リスクを含むような重大に"
-"なりうるものなど）について注意していただく必要があります。"
+"口座開設にお進みください。その際は、リスクを判断したり、軽減させるための知識"
+"や経験がないために、自信へ生じるリスク（投資全体の損失リスクを含むような重大"
+"になりうるものなど）について注意していただく必要があります。"
 
 msgid "between"
 msgstr "間"
+
+#, fuzzy
+msgid "commission"
+msgstr "アクセス許可"
 
 msgid "contact support"
 msgstr "サポートへのお問い合わせ"
@@ -1923,8 +2231,9 @@ msgid ""
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
 msgstr ""
-"Binaryの高度なデスクトップ用取引プラットフォームです。マルチウィンドウインターフェースでは可能な限りの柔軟性を提供し、デスクトップPCでご利用いただ"
-"ける、トレーダーのニーズに適しています。"
+"Binaryの高度なデスクトップ用取引プラットフォームです。マルチウィンドウイン"
+"ターフェースでは可能な限りの柔軟性を提供し、デスクトップPCでご利用いただけ"
+"る、トレーダーのニーズに適しています。"
 
 msgid "is required. Current spread"
 msgstr "必要です。現在のスプレッド"
@@ -1967,6 +2276,10 @@ msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "「今」のXXX"
+
+#, fuzzy
+msgid "payment agent"
+msgstr "アフィリエイト報酬の支払いについて"
 
 msgid "payments"
 msgstr "アフィリエイト報酬の支払いについて"
@@ -2022,5 +2335,14 @@ msgstr "websocket"
 msgid "yes"
 msgstr "はい"
 
+msgid "{agent.commission}%"
+msgstr ""
+
 msgid "| Return"
 msgstr "| 戻る"
+
+#~ msgid "Apply new theme?"
+#~ msgstr "新しいテーマを適用しますか？"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "Chrome 拡張機能"

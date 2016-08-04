@@ -2,7 +2,9 @@
  * Created by Mahboob.M on 2/9/16
  */
 
-define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'], function($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -30,31 +32,29 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.ultosc;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.ultosc-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#ultosc_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
                     collision: "fit"
                 },
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+                part:   {
+                    map:        { size: 128 },
+                    bar:        { size: 128 }
                 },
-                select:			function(event, color) {
+                select:         function(event, color) {
                     $("#ultosc_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok:                         function(event, color) {
                     $("#ultosc_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
@@ -135,22 +135,22 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                         text: "OK",
                         click: function () {
                             //Check validation
-					        var isValid = true;
-					        $(".ultosc_input_width_for_period").each(function () {
-					            var $elem = $(this);
+                            var isValid = true;
+                            $(".ultosc_input_width_for_period").each(function () {
+                                var $elem = $(this);
                                 if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")) + 1)) {
-					                require(["jquery", "jquery-growl"], function ($) {
-					                    $.growl.error({
-					                        message: "Only numbers between " + $elem.attr("min")
+                                    require(["jquery", "jquery-growl"], function ($) {
+                                        $.growl.error({
+                                            message: "Only numbers between " + $elem.attr("min")
                                                     + " to " + $elem.attr("max")
                                                     + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-					                    });
-					                });
+                                        });
+                                    });
                                     $elem.val($elem.prop("defaultValue"));
-					                isValid = false;
-					                return;
-					            }
-					        });
+                                    isValid = false;
+                                    return;
+                                }
+                            });
 
                             //Bug Fix:- https://trello.com/c/1hIogAJe/87-ultimate-oscillator-ultosc-https-www-tradingtechnologies-com-help-xstudy-ultimate-oscillator-ultosc
                             var firstPeriod= parseInt($("#ultosc_first_period").val()),
@@ -181,7 +181,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                                 }   
 
 
-					        if (!isValid) return;
+                            if (!isValid) return;
 
                             var levels = [];
                             $.each(table.rows().nodes(), function () {
@@ -209,6 +209,7 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
                                 appliedTo: parseInt($("#ultosc_applied_to").val()),
                                 levels:levels
                             }
+                            before_add_callback && before_add_callback();
                             //Add ULTOSC for the main series
                             $($(".ultosc").data('refererChartID')).highcharts().series[0].addIndicator('ultosc', options);
 
@@ -241,16 +242,15 @@ define(["jquery", 'common/rivetsExtra', "jquery-ui", 'color-picker', 'ddslick'],
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".ultosc").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".ultosc").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".ultosc").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

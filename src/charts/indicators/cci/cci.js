@@ -2,7 +2,9 @@
 Created By Mahboob.M on 12/16/2015
 */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function ($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog('close');
@@ -19,14 +21,12 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.cci;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.cci-description').html(current_indicator_data.description);
 
             $html.find("#cci_stroke_color").each(function () {
                 $(this).colorpicker({
+					showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -99,6 +99,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 					            strokeWidth: parseInt($("#cci_stroke_width").val()),
 					            dashStyle: selectedDashStyle
 					        }
+                            before_add_callback && before_add_callback();
 					        //Add CCI to the main series
 					        $($(".cci").data('refererChartID')).highcharts().series[0].addIndicator('cci', options);
 
@@ -127,13 +128,15 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
     }
 
     return {
-        open: function (containerIDWithHash) {
-            if ($(".cci").length === 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".cci").data('refererChartID', containerIDWithHash).dialog("open");
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".cci").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".cci").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
     };
 });

@@ -52,4 +52,6 @@
 .table-view .arrow-images {
     margin-bottom: -2px;
     margin-left: -5px;
+    width: 10px;
+    height: 10px;
 }

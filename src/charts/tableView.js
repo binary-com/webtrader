@@ -119,12 +119,12 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             if (firstNumber <= secondNumber)
                 return {
                     value: diff + '(' + Percentage_diff + '%)',
-                    image: diff === 0 ? '' : '<img src="images/green_up_arrow.svg" class="arrow-images"/>'
+                    image: diff === 0 ? '' : '<img src="images/blue_up_arrow.svg" class="arrow-images"/>'
                 };
             else
                 return {
                     value: '<span style="color:brown">' + diff + '(' + Percentage_diff + '%) </span>',
-                    image: diff === 0 ? '' : '<img src="images/red_down_arrow.svg" class="arrow-images"/>'
+                    image: diff === 0 ? '' : '<img src="images/orange_down_arrow.svg" class="arrow-images"/>'
                 };
         };
 
@@ -136,7 +136,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             close.on('click', hide_table_view.bind(null, dialog));
             /* hide the dialog on close icon click */
 
-            var table = $("<table width='100%' class='portfolio-dialog display compact'/>");
+            var table = $("<table class='portfolio-dialog hover'/>");
             table.appendTo(container);
 
             var __ret = getColumns(is_tick);
@@ -179,7 +179,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                     table.api().row.add(row);
                 }
                 else {
-                    table.api().row(0).data(row);
+                    var topRowIndex = table.api().rows()[0][0];
+                    table.api().row(topRowIndex).data(row);
                 }
                 table.api().draw();
             });

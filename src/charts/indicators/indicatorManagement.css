@@ -22,6 +22,8 @@
 }
 
 .indicator-dialog div.current a {
+  position: relative;
+  left: 12px;
   font-weight: normal;
   text-decoration: underline;
 }
@@ -45,7 +47,7 @@
 }
 
 .indicator-dialog div.current > div.table > div.row:nth-child(1) > div.cell:nth-child(2) {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .indicator-dialog div.category > div {

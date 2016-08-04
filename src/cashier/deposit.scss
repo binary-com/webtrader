@@ -1,0 +1,144 @@
+.deposit-dialog {
+  background: #fff !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+
+  /* ------------------ TABS -------------------------- */
+  .tabs {
+    padding: 0;
+    line-height: 26px;
+    height: 26px;
+    background: #e0e0e0;
+    font-size: 0; /* fight the whitespace between inline-block elements */
+
+    .tab {
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      height: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      border-right: 1px solid #aaa;
+      border-bottom:1px solid #aaa;
+      width: 200px;
+      font-size: 16px;
+      cursor: pointer;
+      &.active {
+        background: #fff;
+      }
+    }
+  }
+
+  /* ------------------- STANDARD-METHODS IFRAME --------------------------*/
+  .standard-methods {
+    height: calc(100% - 26px);
+    z-index: 0;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .rotating-logo {
+      position: absolute;
+      top: 100px;
+      left: calc(50% - 100px);
+      width: 200px;
+      height: 200px;
+      background:url(../images/binary-symbol-logo.svg) center center no-repeat;
+      background-size: 100% 100%;
+      animation: deposit-rotate 1.4s linear infinite;
+    }
+  }
+
+  /* --------------------- PAYMENT-AGENTS -----------------------------------*/
+  .payment-agents {
+    padding: 10px;
+    font-size: 15px;
+    height: calc(100% - 26px);
+    box-sizing: border-box;
+    overflow: scroll;
+    .title {
+      display: block;
+      line-height: 1.2em;
+      margin-bottom: 10px;
+    }
+    .agents {
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+
+    .agent {
+      border-top: 1px solid #aaa;
+      &:first-child { border-top: none; }
+      .header {
+        padding: 10px;
+        padding-bottom: 0;
+        cursor: pointer;
+        * { pointer-events: none; }
+        .name {
+          font-weight: bold;
+        }
+        .commission {
+          float: right;
+          color: #aaa;
+          font-size: 14px;
+        }
+        .arrow {
+            float: right;
+            color: #aaa;
+            height: 18px;
+            padding: 0 5px;
+        }
+      }
+
+      .info {
+        padding: 10px;
+        padding-top: 0;
+        overflow: hidden;
+        max-height: 0; /* fighting css3 not animating on height:auto!*/
+        height: auto;
+        transition: max-height 0.25s linear;
+        ul.banks {
+          display: flex;
+          flex-flow: row;
+          padding: 0;
+          justify-content: center;
+        }
+        ul.banks li {
+            padding: 0 5px;
+        }
+
+        .summary {
+          line-height: 1.4em;
+          margin-bottom: 15px;
+        }
+        .summary + strong {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+        .contact {
+          display: flex;
+          flex-flow: row;
+          justify-content: space-between;
+          a {
+            font-weight: normal;
+            color: #484A6D;
+          }
+        }
+      }
+    }
+
+    .apply {
+      margin: 15px 0;
+    }
+    .disclaimer {
+      color: #999;
+      line-height: 1.4em;
+    }
+  }
+}
+
+@keyframes deposit-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

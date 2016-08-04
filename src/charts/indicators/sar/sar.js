@@ -2,7 +2,9 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function ($, rv) {
+define(["jquery",  "jquery-ui", 'color-picker'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -23,15 +25,13 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function 
 
             data = JSON.parse(data);
             var current_indicator_data = data.sar;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.sar-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#sar_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -89,6 +89,7 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function 
                                 strokeWidth: parseInt($html.find("#sar_strokeWidth").val()),
                                 dashStyle: 'line'
                             }
+                            before_add_callback && before_add_callback();
                             //Add sar for the main series
                             $($(".sar").data('refererChartID')).highcharts().series[0].addIndicator('sar', options);
 
@@ -119,15 +120,15 @@ define(["jquery",  'common/rivetsExtra', "jquery-ui", 'color-picker'], function 
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".sar").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".sar").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".sar").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".sar").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };

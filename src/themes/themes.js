@@ -28,6 +28,19 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
             });
     }
 
+    // Localizing Highcharts.
+    var lang = Highcharts.getOptions().lang;
+    Object.keys(lang).map(
+        function(key){
+            if(typeof lang[key] === 'object'){
+                lang[key].forEach(function(value, index){
+                    lang[key][index] = value.i18n();
+                });
+                return;
+            }
+            lang[key] = lang[key].i18n();
+    });
+
     $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
             'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default')
         .off('click')
@@ -40,11 +53,14 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
 
     function confirmationDialog(themeObj, elementClass, elementText) {
             if (!win) {
-                win = windows.createBlankWindow($('<div class="dialog-confirm-new-theme"/>'),
+                require(['text!themes/themes.html'], function($html){
+                    $html = $($html);
+
+                    win = windows.createBlankWindow($html,
                     {
-                        title: 'Apply new theme?'.i18n(),
+                        dialogClass: 'dialog-confirm',
                         width: 360,
-                        height: 220,
+                        height: 175,
                         resizable: false,
                         collapsable: false,
                         minimizable: false,
@@ -53,35 +69,31 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
                         closeOnEscape: false,
                         modal: true,
                         ignoreTileAction:true,
-                        'data-authorized': 'true',
                         destroy: function() {
                             win = null;
                         },
-                        buttons: {
-                            Apply: function() {
-                                $.growl.notice({message: 'Loading ' + elementText});
-                                var themeName_file = elementClass.replace('theme_', '').replace('_', '-');
-                                if(themeObj){
-                                    local_storage.remove("theme");
-                                    local_storage.set("custom_theme", themeObj);
-                                }
-                                else if(themeName_file === 'default') {
-                                    local_storage.remove("theme");
-                                    local_storage.remove("custom_theme");
-                                } else{
-                                    local_storage.set("theme", {name: themeName_file}); 
-                                }
-                                location.reload();
-                            },
-                            Cancel: function() {
-                                $( this ).dialog( 'close' );
-                                $( this ).dialog( "destroy" );
-                            }
-                        }
                     });
-                var p = $('<p>In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?</p>');
-                p.appendTo(win);
-                win.dialog('open');
+                    $html.find("#apply").on("click", function(){
+                        $.growl.notice({message: 'Loading ' + elementText});
+                        var themeName_file = elementClass.replace('theme_', '').replace('_', '-');
+                        if(themeObj){
+                            local_storage.remove("theme");
+                            local_storage.set("custom_theme", themeObj);
+                        }
+                        else if(themeName_file === 'default') {
+                            local_storage.remove("theme");
+                            local_storage.remove("custom_theme");
+                        } else{
+                            local_storage.set("theme", {name: themeName_file}); 
+                        }
+                        location.reload();
+                    });
+                    $html.find("#cancel").on("click", function(){
+                        win.dialog( 'close' );
+                        win.dialog( "destroy" );
+                    });
+                    win.dialog('open');
+                });
             } else {
                 win.moveToTop();
             }

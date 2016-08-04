@@ -2,7 +2,9 @@
  * Created by Mahboob.M on 12/20/15.
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'], function ($,rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -23,15 +25,13 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
             data = JSON.parse(data);
             var current_indicator_data = data.dema;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.dema-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#dema_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -103,6 +103,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#dema_appliedTo").val())
                             }
+                            before_add_callback && before_add_callback();
                             //Add DEMA for the main series
                             $($(".dema").data('refererChartID')).highcharts().series[0].addIndicator('dema', options);
 
@@ -117,10 +118,8 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
                     }
                 ]
             });
-            $html.find('select').each(function(index, value){
-                $(value).selectmenu({
-                    width : 150
-                }).selectmenu("menuWidget").css("max-height","85px");
+            $html.find('select').selectmenu({
+                width : 150
             });
 
             if ($.isFunction(_callback)) {
@@ -133,15 +132,15 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'ddslick'],
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".dema").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".dema").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".dema").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".dema").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };

@@ -104,13 +104,16 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                   charts.overlay(containerIDWithHash, symbol, displaySymbol, delay_amount)
                         .then(function() {
                           var overlay = { symbol: symbol, displaySymbol: displaySymbol, delay_amount: delay_amount};
-                          dialog.trigger('chart-overlay-add', overlay);
+                          //Waiting for overlays to be applied.
+                          _.defer(function(){
+                            dialog.trigger('chart-overlay-add', overlay);
+                            charts.refresh( containerIDWithHash );
+                          });
                         })
               };
               if (type === 'candlestick' || type == 'ohlc') {
                   dialog.data('type', 'line');
                   dialog.trigger('chart-type-changed', 'line');
-                  charts.refresh( containerIDWithHash );
                   chartOptions.selectChartType(newTabId, 'line', false);
                   _.defer(fn);
               } else { fn(); }

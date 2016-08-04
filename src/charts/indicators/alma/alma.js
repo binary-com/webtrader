@@ -2,7 +2,9 @@
  * Created by Mahboob.M on 2/2/16.
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($, rv) {
+define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -23,15 +25,13 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'lodash', '
 
             data = JSON.parse(data);
             var current_indicator_data = data.alma;
-            var state = {
-                "title": current_indicator_data.long_display_name,
-                "description": current_indicator_data.description
-            }
-            rv.bind($html[0], state);
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.alma-description').html(current_indicator_data.description);
 
             $html.find("input[type='button']").button();
 
             $html.find("#alma_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -121,6 +121,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'lodash', '
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#alma_appliedTo").val())
                             }
+                            before_add_callback && before_add_callback();
                             //Add ALMA for the main series
                             $($(".alma").data('refererChartID')).highcharts().series[0].addIndicator('alma', options);
 
@@ -152,16 +153,15 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker', 'lodash', '
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".alma").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".alma").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".alma").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

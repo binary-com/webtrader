@@ -293,3 +293,28 @@ function isLangSupported(lang) {
     return lang === 'ar' || lang === 'de' || lang === 'en' || lang === 'es' || lang === 'fr' || lang === 'id' || lang === 'it'
             || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
 }
+
+
+/* setup translating string literals */
+function setup_i18n_translation(dict) {
+      var keys = Object.keys(dict).filter(function(key) { return key !== '' && key !== ' '; });
+      keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
+      /* Escape keys for using them in regex. */
+      var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
+      var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
+
+      var replacer = function (_, word) {
+        return (dict[word] && dict[word][1]) || word;
+      };
+      String.prototype.i18n = function() {
+        return this.replace(regexp, replacer);
+      };
+
+      /* hook $(html) to automatically call .i18n() before creating DOM nodes */
+      var parseHTML = $.parseHTML.bind($);
+      $.parseHTML = function(data, context, keepScripts) {
+          if(typeof data === 'string')
+            data = data.i18n();
+          return parseHTML(data, context, keepScripts);
+      }
+}
