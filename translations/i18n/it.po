@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2016-07-26 05:51+0000\n"
+"PO-Revision-Date: 2016-08-01 20:28+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/binary-webtrader/"
 "translations/it/>\n"
@@ -1308,200 +1308,211 @@ msgid "Please enter a number between"
 msgstr ""
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr ""
+msgstr "Inserisci una data valida nel formato aaaa-mm-gg"
 
 msgid "Please enter a value for"
-msgstr ""
+msgstr "Inserisci un valore per"
 
 msgid "Please enter a vlaid phone number"
-msgstr ""
+msgstr "Inserisci un numero di telefono valido"
 
 msgid "Please enter correct email"
-msgstr ""
+msgstr "Inserisci l'indirizzo email corretto"
 
 msgid "Please enter date in the format YYYY-MM-DD"
-msgstr ""
+msgstr "Inserisci la data nel formato AAAA-MM-GG"
 
 msgid "Please enter positive integer value between 0 and 9999"
-msgstr ""
+msgstr "Inserisci un numero intero positivo compreso tra 0 e 9999"
 
 msgid "Please enter positive integer value for 30-day limit on losses"
 msgstr ""
+"Per il limite di perdite su 30 giorni inserisci un numero intero positivo"
 
 msgid "Please enter positive integer value for 30-day turnover limit"
 msgstr ""
+"Per il limite di turnover su 30 giorni inserisci un numero intero positivo"
 
 msgid "Please enter positive integer value for 7-day limit on losses"
 msgstr ""
+"Per il limite di perdite su 7 giorni inserisci un numero intero positivo"
 
 msgid "Please enter positive integer value for 7-day turnover limit"
 msgstr ""
+"Per il limite di turnover di 7 giorni inserisci un numero intero positivo"
 
 msgid "Please enter positive integer value for Daily limit on losses"
 msgstr ""
+"Per il limite giornaliero di perdite inserisci un numero intero positivo"
 
 msgid "Please enter positive integer value for Daily turnover limit"
 msgstr ""
+"Per il limite di turnover giornaliero inserisci un numero intero positivo"
 
 msgid ""
 "Please enter positive integer value for Maximum number of open positions"
 msgstr ""
+"Per il numero massimo di posizioni aperte, inserisci un numero intero "
+"positivo"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Inserisci il nome del token"
 
 msgid "Please enter the verification code sent to your email"
-msgstr ""
+msgstr "Inserisci il codice di verifica inviato al tuo indirizzo email"
 
 msgid "Please enter value between 0 and 99999 for Session duration limit"
 msgstr ""
+"Per il limite di durata della sessione inserisci un valore compreso tra 0 e "
+"99999"
 
 msgid "Please enter your city address"
-msgstr ""
+msgstr "Inserisci il tuo indirizzo"
 
 msgid "Please enter your current password"
-msgstr ""
+msgstr "Inserisci la tua password attuale"
 
 msgid "Please enter your email"
-msgstr ""
+msgstr "Inserisci il tuo indirizzo email"
 
 msgid "Please enter your family name"
-msgstr ""
+msgstr "Inserisci il tuo cognome"
 
 msgid "Please enter your first name"
-msgstr ""
+msgstr "Inserisci il tuo nome"
 
 msgid "Please enter your new password"
-msgstr ""
+msgstr "Inserisci la tua nuova password"
 
 msgid "Please enter your password"
-msgstr ""
+msgstr "Inserisci la tua password"
 
 msgid "Please enter your phone number"
-msgstr ""
+msgstr "Inserisci il tuo numero di telefono"
 
 msgid "Please enter your street address"
-msgstr ""
+msgstr "Inserisci il tuo indirizzo"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr ""
+msgstr "Installa l'ultima versione di uno di questi browser"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Accedi"
 
 msgid "Please select"
-msgstr ""
+msgstr "Seleziona"
 
 msgid "Please try again after 1 minute"
-msgstr ""
+msgstr "Riprova fra 1 minuto"
 
 msgid "Please use your new password to login"
-msgstr ""
+msgstr "Per accedere, utilizza la tua nuova password"
 
 msgid "Plot"
-msgstr ""
+msgstr "Grafico"
 
 msgid "Plot Color"
-msgstr ""
+msgstr "Colore del grafico"
 
 msgid "Pofit/Loss"
-msgstr ""
+msgstr "Profitto/Perdita"
 
 msgid "Points"
-msgstr ""
+msgstr "Punti"
 
 msgid "Portfolio"
-msgstr ""
+msgstr "Portafoglio"
 
 msgid "Postal code/ZIP"
-msgstr ""
+msgstr "Codice postale/CAP"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "Payout potenziale"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "Profitto potenziale"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "Profitto potenziale"
 
 msgid "Pre-Defined"
-msgstr ""
+msgstr "Predefinito"
 
 msgid "Preferred reality-check interval"
 msgstr ""
 
 msgid "Press  Create token  button on the right to create your first token"
 msgstr ""
+"Premi il pulsante  Crea token  sulla destra per creare il tuo primo token"
 
 msgid "Price"
-msgstr ""
+msgstr "Prezzo"
 
 msgid "Primary"
-msgstr ""
+msgstr "Primario"
 
 msgid "Print chart"
 msgstr ""
 
 msgid "Profit"
-msgstr ""
+msgstr "Profitto"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Tabella dei profitti"
 
 msgid "Profit table"
-msgstr ""
+msgstr "Tabella dei profitti"
 
 msgid "Profit/ Loss"
-msgstr ""
+msgstr "Profitto/Perdita"
 
 msgid "Profit/Loss (points)"
-msgstr ""
+msgstr "Profitto/Perdita (punti)"
 
 msgid "Purchase"
-msgstr ""
+msgstr "Acquisto"
 
 msgid "Purchase Date"
-msgstr ""
+msgstr "Data di acquisto"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "Prezzo d'acquisto"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Orario dell'acquisto"
 
 msgid "Read"
-msgstr ""
+msgstr "Leggi"
 
 msgid "Real account opening"
-msgstr ""
+msgstr "Apertura di un account vero"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Controllo della veridicità"
 
 msgid "Redirecting to oauth login page"
-msgstr ""
+msgstr "Reindirizzamento alla pagina d'accesso di oauth"
 
 msgid "Ref"
-msgstr ""
+msgstr "Rif"
 
 msgid "Register free account"
-msgstr ""
+msgstr "Registra un account gratis"
 
 msgid "Registration"
-msgstr ""
+msgstr "Registrazione"
 
 msgid "Reloading page"
-msgstr ""
+msgstr "Ricaricamento della pagina"
 
 msgid "Remove Selected"
 msgstr ""
 
 msgid "Repeat password"
-msgstr ""
+msgstr "Ripeti la password"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "La rivendita di questo contratto non è consentita"
 
 msgid "Reset to Defaults"
 msgstr ""
@@ -1513,79 +1524,79 @@ msgid "Reset zoom level 1:1"
 msgstr ""
 
 msgid "Resources"
-msgstr ""
+msgstr "Risorse"
 
 msgid "Responsible Trading"
-msgstr ""
+msgstr "Trading responsabile"
 
 msgid "Results"
-msgstr ""
+msgstr "Risultati"
 
 msgid "Return"
-msgstr ""
+msgstr "Rendimento"
 
 msgid "Rise"
-msgstr ""
+msgstr "Aumenta"
 
 msgid "SMA"
-msgstr ""
+msgstr "SMA"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
-msgstr ""
+msgstr "Impiegato"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "Data di vendita"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "Prezzo di vendita"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
-msgstr ""
+msgstr "Sab"
 
 msgid "Saturday"
 msgstr ""
 
 msgid "Secondary"
-msgstr ""
+msgstr "Secondario"
 
 msgid "Security"
-msgstr ""
+msgstr "Sicurezza"
 
 msgid "Security question"
-msgstr ""
+msgstr "Domanda di sicurezza"
 
 msgid "Select Instrument"
-msgstr ""
+msgstr "Seleziona strumento"
 
 msgid "Self-Employed"
-msgstr ""
+msgstr "Libero professionista"
 
 msgid "Self-Exclusion"
-msgstr ""
+msgstr "Auto esclusione"
 
 msgid "Self-Exclusion Facilities"
 msgstr ""
 
 msgid "Sell At Market"
-msgstr ""
+msgstr "Vendere sul mercato"
 
 msgid "Sell Price"
-msgstr ""
+msgstr "Prezzo di vendita"
 
 msgid "Sell Spot"
-msgstr ""
+msgstr "Spot di vendita"
 
 msgid "Sell Time"
-msgstr ""
+msgstr "Orario di vendita"
 
 msgid "Send to account #"
 msgstr ""
@@ -1600,13 +1611,13 @@ msgid "September"
 msgstr ""
 
 msgid "Session"
-msgstr ""
+msgstr "Sessione"
 
 msgid "Session duration limit, in minutes"
-msgstr ""
+msgstr "Limite di durata della sessione, in minuti"
 
 msgid "Session is not authenticated"
-msgstr ""
+msgstr "La sessione non è autenticata"
 
 msgid "Settles"
 msgstr ""
@@ -1615,19 +1626,19 @@ msgid "Share"
 msgstr ""
 
 msgid "Short MA Type"
-msgstr ""
+msgstr "Tipologia MA breve"
 
 msgid "Short ROC Period"
-msgstr ""
+msgstr "Periodo ROC breve"
 
 msgid "Short Stop Line Stroke"
 msgstr ""
 
 msgid "Short Term Period"
-msgstr ""
+msgstr "Periodo a breve termine"
 
 msgid "Show"
-msgstr ""
+msgstr "Mostra"
 
 msgid "Sigma"
 msgstr "Sigma"

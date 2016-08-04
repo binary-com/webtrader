@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-07-30 08:44+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"PO-Revision-Date: 2016-08-03 09:11+0000\n"
+"Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -35,7 +35,7 @@ msgstr "%K 波幅"
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
 "day or more in duration)"
-msgstr "（如期限不到一天），或于交易日结束时（如期限是一天或更长时间）"
+msgstr "（如期限不到一天），或于交易日结束时（如期限是一天及以上）"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -105,7 +105,7 @@ msgid "3m"
 msgstr "3分钟"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr "过去12月内40次交易或以上"
+msgstr "过去12月内交易40次及以上"
 
 msgid "4h"
 msgstr "4小时"
@@ -114,13 +114,13 @@ msgid "5m"
 msgstr "5分钟"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr "过去12月内6-10次交易"
+msgstr "过去12月内交易6-10次"
 
 msgid "7-day limit on losses"
-msgstr "7天期损失限额"
+msgstr "7天损失限额"
 
 msgid "7-day turnover limit"
-msgstr "7天期交易限额"
+msgstr "7天交易限额"
 
 msgid "8h"
 msgstr "8小时"
@@ -177,16 +177,16 @@ msgid "Amount"
 msgstr ""
 
 msgid "Amount Per Point"
-msgstr "每点之金额"
+msgstr "每个点的金额"
 
 msgid "Amount per point"
-msgstr "每点之金额"
+msgstr "每个点的金额"
 
 msgid "Answer"
 msgstr "答案"
 
 msgid "Applied to"
-msgstr "应用为"
+msgstr "应用到"
 
 msgid "Apply"
 msgstr "申请"
@@ -427,7 +427,7 @@ msgid "Current password"
 msgstr "当前密码"
 
 msgid "Current regulations require that you provide us the following"
-msgstr "当前法规需要您向我们提供以下"
+msgstr "依据当前法规，我们需要您提供以下资料"
 
 msgid "Current time"
 msgstr "当前时间"
@@ -488,7 +488,7 @@ msgid "Delete level(s)"
 msgstr "删除水平"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "通过IFRAME演示联盟会员访问Binary.com图表"
+msgstr "在IFRAME查看联盟会员访问Binary.com图表的演示"
 
 #, fuzzy
 msgid "Deposit funds"
@@ -498,7 +498,7 @@ msgid "Deposit of USD"
 msgstr "美元存款"
 
 msgid "Describe what this token is for to find it later"
-msgstr "令牌用途说明以备稍后找寻"
+msgstr "令牌用途说明，以便稍后查找"
 
 msgid "Description"
 msgstr "说明"
