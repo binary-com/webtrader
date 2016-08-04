@@ -480,7 +480,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                 Promise.all(
                   oauth.slice(1)
                        .map(function(acc) { return { authorize: acc.token}; })
-                       .map(liveapi.send)
+                       .map(function(req) { return liveapi.send(req); })
                 )
                 .then(function(results) {
                   return liveapi.cached.authorize()
