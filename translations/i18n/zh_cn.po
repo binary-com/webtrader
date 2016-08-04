@@ -37,6 +37,16 @@ msgid ""
 "day or more in duration)"
 msgstr "（如期限不到一天），或于交易日结束时（如期限是一天或更长时间）"
 
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
+
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
 
@@ -163,6 +173,9 @@ msgstr "管理中心"
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "所有时间均采用格林威治标准时间（GMT）"
 
+msgid "Amount"
+msgstr ""
+
 msgid "Amount Per Point"
 msgstr "每点之金额"
 
@@ -178,11 +191,17 @@ msgstr "应用为"
 msgid "Apply"
 msgstr "申请"
 
-msgid "Apply new theme?"
-msgstr "使用新主题？"
+msgid "Apply to become a Binary.com"
+msgstr ""
 
 msgid "Appropriateness Test: WARNING"
 msgstr "合适性测试:警告"
+
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
 
 msgid "Are you sure you want to delete this token?"
 msgstr "确定删除此令牌？"
@@ -201,6 +220,12 @@ msgstr "资产"
 
 msgid "Asset Index"
 msgstr "资产指数"
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
 
 msgid "Average"
 msgstr "平均"
@@ -295,14 +320,21 @@ msgstr "图表主题"
 msgid "Chart background"
 msgstr "图表背景"
 
+#, fuzzy
+msgid "Chart context menu"
+msgstr "图表主题"
+
 msgid "Choose password"
 msgstr "选择密码"
 
+msgid "Choose your pereferred payment agent"
+msgstr ""
+
+msgid "Choose your pereferred withdrawal method"
+msgstr ""
+
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Chrome Extension"
-msgstr "Chrome 扩展程序"
 
 msgid "Click Jacking test"
 msgstr "点击劫持测试"
@@ -330,6 +362,9 @@ msgstr "条件"
 
 msgid "Config changes successful"
 msgstr "成功更改配置"
+
+msgid "Confirm transfer"
+msgstr ""
 
 msgid "Connection closed"
 msgstr "连接已关闭"
@@ -436,6 +471,13 @@ msgstr "出生日期"
 msgid "Days"
 msgstr "日"
 
+#, fuzzy
+msgid "Dec"
+msgstr "拒绝"
+
+msgid "December"
+msgstr ""
+
 msgid "Decline"
 msgstr "拒绝"
 
@@ -447,6 +489,10 @@ msgstr "删除水平"
 
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr "通过IFRAME演示联盟会员访问Binary.com图表"
+
+#, fuzzy
+msgid "Deposit funds"
+msgstr "美元存款"
 
 msgid "Deposit of USD"
 msgstr "美元存款"
@@ -466,6 +512,12 @@ msgstr "是否安装Webtrader chrome扩展程序？"
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
 
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr ""
+
+msgid "Done. The funds are transferred"
+msgstr ""
+
 msgid "Dot"
 msgstr "点"
 
@@ -481,10 +533,26 @@ msgstr "双击对象执行删除"
 msgid "Download CSV"
 msgstr "下载CSV"
 
+#, fuzzy
+msgid "Download JPEG image"
+msgstr "下载PNG"
+
+#, fuzzy
+msgid "Download PDF document"
+msgstr "下载PNG"
+
 msgid "Download PNG"
 msgstr "下载PNG"
 
+#, fuzzy
+msgid "Download PNG image"
+msgstr "下载PNG"
+
 msgid "Download SVG"
+msgstr "下载SVG"
+
+#, fuzzy
+msgid "Download SVG vector image"
 msgstr "下载SVG"
 
 msgid "Download as"
@@ -586,6 +654,12 @@ msgstr "最喜欢的艺术家"
 msgid "Favourite dish"
 msgstr "最喜欢的菜肴"
 
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
 msgid "Final Price"
 msgstr "最终价格"
 
@@ -613,8 +687,15 @@ msgstr "外汇交易频率"
 msgid "Fri"
 msgstr "星期五"
 
+msgid "Friday"
+msgstr ""
+
 msgid "From"
 msgstr "从"
+
+#, fuzzy
+msgid "Further instructions"
+msgstr "建筑"
 
 msgid "Gray"
 msgstr "灰色"
@@ -667,6 +748,19 @@ msgstr "小时"
 msgid "I have read and agree to Binary.com"
 msgstr "本人已经阅读并同意Binary.com的"
 
+msgid "IMPORTANT DISCLAIMER"
+msgstr ""
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+
 msgid "If you select a"
 msgstr "如您选择"
 
@@ -678,12 +772,20 @@ msgid ""
 "you sure you want to proceed?"
 msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
 
+#, fuzzy
+msgid ""
+"In order to properly apply this language, a full refresh of page is "
+"required. Are you sure you want to proceed?"
+msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
+
 msgid ""
 "In providing our services to you, we are required to obtain information from "
 "you in order to assess whether a given product or service is appropriate for "
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
-msgstr "为了给您提供服务，我们必须向您获取信息，以便确定产品或服务是否适合您（也就是说，看您是否拥有足够经验和知识，以了解相关的风险）"
+msgstr ""
+"为了给您提供服务，我们必须向您获取信息，以便确定产品或服务是否适合您（也就是"
+"说，看您是否拥有足够经验和知识，以了解相关的风险）"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
@@ -717,8 +819,28 @@ msgstr "工具"
 msgid "Investments & Dividends"
 msgstr "投资与分红"
 
+#, fuzzy
+msgid "Jan"
+msgstr "以及"
+
+msgid "January"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
 msgid "Jump to"
 msgstr "跳至"
+
+#, fuzzy
+msgid "Jun"
+msgstr "周日"
+
+msgid "June"
+msgstr ""
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "仅须在您被将导入页面上点击 授予 按钮"
@@ -807,6 +929,10 @@ msgstr "加载投资组合"
 msgid "Loading self-exclusion settings"
 msgstr "加载自我禁止设置"
 
+#, fuzzy
+msgid "Loading..."
+msgstr "加载"
+
 msgid "Log in"
 msgstr "登录"
 
@@ -858,6 +984,21 @@ msgstr "移动平均线类型"
 msgid "MACD Line Stroke"
 msgstr "指数平滑异同平均线波幅"
 
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+
+#, fuzzy
+msgid "Mar"
+msgstr "先生"
+
+msgid "March"
+msgstr ""
+
 msgid "Mass Period"
 msgstr "梅斯线期限"
 
@@ -888,6 +1029,10 @@ msgstr "每天最大累计损失量"
 msgid "Maximum number of open positions"
 msgstr "最大未平仓头寸数目"
 
+#, fuzzy
+msgid "May"
+msgstr "日"
+
 msgid "Memorable date"
 msgstr "难忘的日子"
 
@@ -897,8 +1042,14 @@ msgstr "难忘的城镇/城市"
 msgid "Middle Band Stroke"
 msgstr "中价带波幅"
 
+msgid "Min: 10 Max: 2000"
+msgstr ""
+
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "需至少6个字符与1个数字"
+
+msgid "Minus the agent's commission"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分钟"
@@ -908,6 +1059,10 @@ msgstr "小姐"
 
 msgid "Mon"
 msgstr "周一"
+
+#, fuzzy
+msgid "Monday"
+msgstr "次要"
 
 msgid "Mother's maiden name"
 msgstr "母亲婚前的姓氏"
@@ -975,7 +1130,21 @@ msgstr "请注意，令牌可能拥有一或多个所述领域"
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
-msgstr "请注意：合约将在我们服务器收到请求时，以当时的市场价格卖出。此价格可能与报价有差异"
+msgstr ""
+"请注意：合约将在我们服务器收到请求时，以当时的市场价格卖出。此价格可能与报价"
+"有差异"
+
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr ""
+
+#, fuzzy
+msgid "Nov"
+msgstr "否"
+
+msgid "November"
+msgstr ""
 
 msgid "Now"
 msgstr "现在"
@@ -995,6 +1164,12 @@ msgstr "OHLC条形图"
 msgid "OPEN"
 msgstr "开盘"
 
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
 msgid "Offset"
 msgstr "位移"
 
@@ -1005,7 +1180,8 @@ msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
 "not appropriate for you"
-msgstr "根据您所提供的知识和经验相关信息，我们认为此网站的投资活动对您来说并不合适"
+msgstr ""
+"根据您所提供的知识和经验相关信息，我们认为此网站的投资活动对您来说并不合适"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "达到此限额后，您不能再存款"
@@ -1038,7 +1214,9 @@ msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
-msgstr "二元期权交易和其他类似活动一样，过于沉迷可能会上瘾。为了避免这种风险，我们会定期向您提供交易和财务的实况简报"
+msgstr ""
+"二元期权交易和其他类似活动一样，过于沉迷可能会上瘾。为了避免这种风险，我们会"
+"定期向您提供交易和财务的实况简报"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "可选字段，不超过 20 个字符，并且不能包含“+”"
@@ -1082,6 +1260,14 @@ msgstr "密码已成功更新"
 msgid "Passwords didn't match. Please type them again"
 msgstr "密码不相符。请重新输入"
 
+#, fuzzy
+msgid "Payment agent"
+msgstr "支付"
+
+#, fuzzy
+msgid "Payment agents"
+msgstr "支付"
+
 msgid "Payments"
 msgstr "支付"
 
@@ -1120,6 +1306,9 @@ msgstr "请用4-50个字符提供密码提示问题的答案"
 
 msgid "Please choose at least one token scope"
 msgstr "请选择至少一个令牌范围"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr ""
 
 msgid "Please enter a number between"
 msgstr "请输入以下范围之间的数字"
@@ -1257,6 +1446,9 @@ msgstr "价格"
 msgid "Primary"
 msgstr "主要"
 
+msgid "Print chart"
+msgstr ""
+
 msgid "Profit"
 msgstr "利润"
 
@@ -1320,6 +1512,12 @@ msgstr "此合约不提供转售"
 msgid "Reset to Defaults"
 msgstr "重设为默认值"
 
+msgid "Reset zoom"
+msgstr ""
+
+msgid "Reset zoom level 1:1"
+msgstr ""
+
 msgid "Resources"
 msgstr "资源"
 
@@ -1359,6 +1557,9 @@ msgstr "Sand Signika图表主题"
 msgid "Sat"
 msgstr "周六"
 
+msgid "Saturday"
+msgstr ""
+
 msgid "Secondary"
 msgstr "次要"
 
@@ -1391,6 +1592,20 @@ msgstr "卖出现价"
 
 msgid "Sell Time"
 msgstr "卖出时间"
+
+#, fuzzy
+msgid "Send to account #"
+msgstr "开立账户"
+
+#, fuzzy
+msgid "Sent to account"
+msgstr "开立账户"
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
+msgstr ""
 
 msgid "Session"
 msgstr "会话"
@@ -1476,6 +1691,12 @@ msgstr "价差交易"
 msgid "Stake"
 msgstr "投注资金"
 
+msgid "Standard methods"
+msgstr ""
+
+msgid "Standard withdrawal"
+msgstr ""
+
 msgid "Start Time"
 msgstr "开始时间"
 
@@ -1527,11 +1748,17 @@ msgstr "波幅颜色"
 msgid "Stroke width"
 msgstr "波幅宽度"
 
+msgid "Submit"
+msgstr ""
+
 msgid "Successfully added new token"
 msgstr "成功添加新令牌"
 
 msgid "Sun"
 msgstr "周日"
+
+msgid "Sunday"
+msgstr ""
 
 msgid "TEMA"
 msgstr "三指数移动平均线"
@@ -1541,6 +1768,10 @@ msgstr "三角形移动平均线"
 
 msgid "Table"
 msgstr "表"
+
+#, fuzzy
+msgid "Tel"
+msgstr "关于"
 
 msgid "Terms"
 msgstr "条款"
@@ -1562,15 +1793,18 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract permium"
 msgstr ""
-"本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约到"
-"期时一文不值，您将损失全部投资，包括合约费用"
+"本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了"
+"解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约"
+"到期时一文不值，您将损失全部投资，包括合约费用"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
 "money accounts we will attempt to correct this and settle the contract "
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
-msgstr "合约期间发生市场数据中断。我们将尝试为真实资金账户提供修正并正确结算合约，否则合约将取消并退还投注金额。虚拟资金合约将取消并退还投注金额"
+msgstr ""
+"合约期间发生市场数据中断。我们将尝试为真实资金账户提供修正并正确结算合约，否"
+"则合约将取消并退还投注金额。虚拟资金合约将取消并退还投注金额"
 
 msgid "There was an error"
 msgstr "出现错误"
@@ -1584,8 +1818,14 @@ msgstr "合约输了"
 msgid "This contract won"
 msgstr "合约赢了"
 
+msgid "This field is required"
+msgstr ""
+
 msgid "Thu"
 msgstr "周四"
+
+msgid "Thursday"
+msgstr ""
 
 msgid "Tick Trade app"
 msgstr "跳动点交易应用程序"
@@ -1610,6 +1850,23 @@ msgstr "websocket 请求已过期"
 
 msgid "Title"
 msgstr "职务"
+
+msgid "To"
+msgstr ""
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr ""
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
+msgstr "请输入发送到您邮箱的验证码"
 
 msgid "Token"
 msgstr "令牌"
@@ -1666,7 +1923,9 @@ msgid ""
 "that you fully understand the risks involved. Your losses can exceed your "
 "initial deposit and you do not own or have any interest in the underlying "
 "asset"
-msgstr "二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会超越起始资金存款，而您并不拥有或占有任何标的资产"
+msgstr ""
+"二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会"
+"超越起始资金存款，而您并不拥有或占有任何标的资产"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -1676,17 +1935,24 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
-"金融市场交易可能使人上瘾。请填写下表以限制您对本网站的参与。您也可发送签名信或传真到我们的客服团队。一旦设定好，您只能收紧您的限制。限制只能在 7 "
-"天后取消或放宽，自我禁止期在确认后不能取消或更改。若要解除或增加您的限制，请联系"
+"金融市场交易可能使人上瘾。请填写下表以限制您对本网站的参与。您也可发送签名信"
+"或传真到我们的客服团队。一旦设定好，您只能收紧您的限制。限制只能在 7 天后取消"
+"或放宽，自我禁止期在确认后不能取消或更改。若要解除或增加您的限制，请联系"
 
 msgid "Tradingview for Binary.com"
 msgstr "通过Binary.com使用Tradingview"
+
+msgid "Transfer to another Binary account"
+msgstr ""
 
 msgid "Try"
 msgstr "尝试"
 
 msgid "Tue"
 msgstr "周二"
+
+msgid "Tuesday"
+msgstr ""
 
 msgid "Turnover"
 msgstr "交易额"
@@ -1696,6 +1962,9 @@ msgstr "美元"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遗憾，您的浏览器不支持这些程序"
+
+msgid "Unlock"
+msgstr ""
 
 msgid "Up/Down"
 msgstr "上涨/下跌"
@@ -1755,11 +2024,20 @@ msgstr "Webtrader采用新型网络技术为您提供丰富与充满乐趣的交
 msgid "Wed"
 msgstr "周三"
 
+msgid "Wednesday"
+msgstr ""
+
 msgid "While on the go, you can"
 msgstr "出门在外时，您可"
 
 msgid "Windows"
 msgstr "窗口"
+
+msgid "Withdraw funds"
+msgstr ""
+
+msgid "Withdrawal via payment agents"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "X-轴标签"
@@ -1776,6 +2054,10 @@ msgstr "Y-轴网格线"
 msgid "Y-axis labels"
 msgstr "Y-轴标签"
 
+#, fuzzy
+msgid "Yes"
+msgstr "是"
+
 msgid "You have excluded yourself until"
 msgstr "您已设置自我禁止，有效期至"
 
@@ -1786,7 +2068,9 @@ msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
-msgstr "使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到此参阅 OAuth信息"
+msgstr ""
+"使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到"
+"此参阅 OAuth信息"
 
 msgid "You pay"
 msgstr "您支付"
@@ -1820,6 +2104,9 @@ msgstr "您的交易参考号是"
 msgid "Your transaction reference number is"
 msgstr "您的交易参考号是"
 
+msgid "Zoom"
+msgstr ""
+
 msgid "admin"
 msgstr "管理中心"
 
@@ -1832,11 +2119,16 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
-"以下并依照后续流程开立账户，您须注意，您可能承担一些风险（可能会很严重，包括损失整个投资资金的风险），而对于此类风险缺，你可能乏知识与经验以作出正确评估或"
-"化解"
+"以下并依照后续流程开立账户，您须注意，您可能承担一些风险（可能会很严重，包括"
+"损失整个投资资金的风险），而对于此类风险缺，你可能乏知识与经验以作出正确评估"
+"或化解"
 
 msgid "between"
 msgstr "之间"
+
+#, fuzzy
+msgid "commission"
+msgstr "权限"
 
 msgid "contact support"
 msgstr "联系客服部"
@@ -1911,7 +2203,9 @@ msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
-msgstr "是Binary的先进桌面交易平台。其多窗口界面提供最大弹性，可符合活跃交易员通过桌面电脑交易的需求"
+msgstr ""
+"是Binary的先进桌面交易平台。其多窗口界面提供最大弹性，可符合活跃交易员通过桌"
+"面电脑交易的需求"
 
 msgid "is required. Current spread"
 msgstr "是必须的。当前价差"
@@ -1954,6 +2248,10 @@ msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "是“现在”，"
+
+#, fuzzy
+msgid "payment agent"
+msgstr "付款"
 
 msgid "payments"
 msgstr "付款"
@@ -2009,5 +2307,14 @@ msgstr "websocket"
 msgid "yes"
 msgstr "是"
 
+msgid "{agent.commission}%"
+msgstr ""
+
 msgid "| Return"
 msgstr "回报率"
+
+#~ msgid "Apply new theme?"
+#~ msgstr "使用新主题？"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "Chrome 扩展程序"

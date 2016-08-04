@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-22 17:51+0200\n"
 "PO-Revision-Date: 2016-07-31 11:50+0000\n"
 "Last-Translator: Ahmed Kotb <ahmedmohamedkotp@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/ar/>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +39,16 @@ msgid ""
 msgstr ""
 "(إذا كانت المدة أقل من يوم واحد), أو بحلول نهاية تداولات اليوم (إذا كانت "
 "المدة يوم واحد أو أكثر)"
+
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
 
 msgid "-DI Stroke"
 msgstr "-DI ضربة"
@@ -166,6 +176,9 @@ msgstr "مشرف"
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "جميع الأوقات بتوقيت جرينتش (توقيت جرينتش)"
 
+msgid "Amount"
+msgstr ""
+
 msgid "Amount Per Point"
 msgstr "الكمية لكل نقطة"
 
@@ -181,11 +194,17 @@ msgstr "مطبق على"
 msgid "Apply"
 msgstr "تطبيق"
 
-msgid "Apply new theme?"
-msgstr "تطبيق موضوع جديد؟"
+msgid "Apply to become a Binary.com"
+msgstr ""
 
 msgid "Appropriateness Test: WARNING"
 msgstr "اختبار ملائمة: تحذير"
+
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
 
 msgid "Are you sure you want to delete this token?"
 msgstr "هل أنت متأكد من أنك تريد حذف هذا الرمز؟"
@@ -204,6 +223,12 @@ msgstr "أصل"
 
 msgid "Asset Index"
 msgstr "مؤشر الأصول"
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
 
 msgid "Average"
 msgstr "متوسط"
@@ -298,14 +323,21 @@ msgstr "مواضيع الرسم البياني"
 msgid "Chart background"
 msgstr "خلفية الرسم البياني"
 
+#, fuzzy
+msgid "Chart context menu"
+msgstr "مواضيع الرسم البياني"
+
 msgid "Choose password"
 msgstr "اختر كلمة سر"
 
+msgid "Choose your pereferred payment agent"
+msgstr ""
+
+msgid "Choose your pereferred withdrawal method"
+msgstr ""
+
 msgid "Chrome"
 msgstr "كروم"
-
-msgid "Chrome Extension"
-msgstr "إضافة كروم"
 
 msgid "Click Jacking test"
 msgstr "أنقر على اختبار الرفع"
@@ -333,6 +365,9 @@ msgstr "الظروف"
 
 msgid "Config changes successful"
 msgstr "تغيير تكوين ناجح"
+
+msgid "Confirm transfer"
+msgstr ""
 
 msgid "Connection closed"
 msgstr "اتصال مغلق"
@@ -439,6 +474,13 @@ msgstr "تاريخ الميلاد"
 msgid "Days"
 msgstr "أيام"
 
+#, fuzzy
+msgid "Dec"
+msgstr "هبوط"
+
+msgid "December"
+msgstr ""
+
 msgid "Decline"
 msgstr "هبوط"
 
@@ -451,6 +493,10 @@ msgstr "حذف مستوى (مستويات)"
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr ""
 "تجريبي للمنتسبين للوصول إلى الرسوم البيانية ل Binary.com في الإطار المضمن"
+
+#, fuzzy
+msgid "Deposit funds"
+msgstr "إيداع بالدولار"
 
 msgid "Deposit of USD"
 msgstr "إيداع بالدولار"
@@ -471,6 +517,12 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "إذا كان ليس لديك حساب حتى الآن؟ سجل وأحصل على حساب إفتراضي بقيمة 10.000 دولار"
 
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr ""
+
+msgid "Done. The funds are transferred"
+msgstr ""
+
 msgid "Dot"
 msgstr "نقطة"
 
@@ -486,10 +538,26 @@ msgstr "أنقر نقراً مزدوجاً على الموضوع للإزالة"
 msgid "Download CSV"
 msgstr "تحميل ملف CSV"
 
+#, fuzzy
+msgid "Download JPEG image"
+msgstr "تحميل ملف PNG"
+
+#, fuzzy
+msgid "Download PDF document"
+msgstr "تحميل ملف PNG"
+
 msgid "Download PNG"
 msgstr "تحميل ملف PNG"
 
+#, fuzzy
+msgid "Download PNG image"
+msgstr "تحميل ملف PNG"
+
 msgid "Download SVG"
+msgstr "تحميل ملف SVG"
+
+#, fuzzy
+msgid "Download SVG vector image"
 msgstr "تحميل ملف SVG"
 
 msgid "Download as"
@@ -591,6 +659,12 @@ msgstr "الفنان المفضل"
 msgid "Favourite dish"
 msgstr "الطبق المفضل"
 
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
 msgid "Final Price"
 msgstr "السعر النهائي"
 
@@ -618,8 +692,15 @@ msgstr "تكرار تداول العملات الأجنبية"
 msgid "Fri"
 msgstr "الجمعة"
 
+msgid "Friday"
+msgstr ""
+
 msgid "From"
 msgstr "من"
+
+#, fuzzy
+msgid "Further instructions"
+msgstr "الإنشاءات"
 
 msgid "Gray"
 msgstr "رمادي"
@@ -672,6 +753,19 @@ msgstr "ساعات"
 msgid "I have read and agree to Binary.com"
 msgstr "لقد قرأت وأوافق على Binary.com"
 
+msgid "IMPORTANT DISCLAIMER"
+msgstr ""
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+
 msgid "If you select a"
 msgstr "إذا قمت باختيار"
 
@@ -681,6 +775,14 @@ msgstr "إذا قمت باختيار محدد"
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
+msgstr ""
+"لتطبيق الموضوع بصورة صحيحة, لابد من إعادة تحميل الصفحة بشكل كامل. هل أنت "
+"متأكد من أنك تريد المتابعة؟"
+
+#, fuzzy
+msgid ""
+"In order to properly apply this language, a full refresh of page is "
+"required. Are you sure you want to proceed?"
 msgstr ""
 "لتطبيق الموضوع بصورة صحيحة, لابد من إعادة تحميل الصفحة بشكل كامل. هل أنت "
 "متأكد من أنك تريد المتابعة؟"
@@ -729,8 +831,26 @@ msgstr "صكوك"
 msgid "Investments & Dividends"
 msgstr "الاستثمارات وتوزيعات الأرباح"
 
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
 msgid "Jump to"
 msgstr "اقفز إلى"
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "فقط أنقر على زر منح في الصفحة التي سيتم تحويلك إليها"
@@ -819,6 +939,10 @@ msgstr "تحميل المحفظة"
 msgid "Loading self-exclusion settings"
 msgstr "تحميل إعدادات المنع الذاتي"
 
+#, fuzzy
+msgid "Loading..."
+msgstr "تحميل"
+
 msgid "Log in"
 msgstr "تسجيل الدخول"
 
@@ -870,6 +994,21 @@ msgstr "نوع موفينج أفاريج"
 msgid "MACD Line Stroke"
 msgstr "خط ماكد الضربة"
 
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+
+#, fuzzy
+msgid "Mar"
+msgstr "سيد"
+
+msgid "March"
+msgstr ""
+
 msgid "Mass Period"
 msgstr "فترة جماعية"
 
@@ -900,6 +1039,9 @@ msgstr "الحد الأقصى لإجمالي الخسارة ليوم واحد"
 msgid "Maximum number of open positions"
 msgstr "الحد الأقصى لعدد المناصب المفتوحة"
 
+msgid "May"
+msgstr ""
+
 msgid "Memorable date"
 msgstr "تاريخ لا ينسى"
 
@@ -909,8 +1051,14 @@ msgstr "بلدة/مدينة لا تنسى"
 msgid "Middle Band Stroke"
 msgstr "نطاق الضربة الأوسط"
 
+msgid "Min: 10 Max: 2000"
+msgstr ""
+
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "6 أحرف كحد أدنى ويجب أن يحتوى على رقم واحد على الأقل"
+
+msgid "Minus the agent's commission"
+msgstr ""
 
 msgid "Minutes"
 msgstr "دقيقة"
@@ -920,6 +1068,10 @@ msgstr "فات"
 
 msgid "Mon"
 msgstr "الإثنين"
+
+#, fuzzy
+msgid "Monday"
+msgstr "ثانوي"
 
 msgid "Mother's maiden name"
 msgstr "أسم الأم الأوسط"
@@ -991,6 +1143,18 @@ msgstr ""
 "ملاحظة: سيتم بيع العقد بسعر السوق السائد عند تلقي الطلب من قبل خوادمنا. قد "
 "يختلف هذا السعر عن السعر المشار إليه"
 
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr ""
+
+#, fuzzy
+msgid "Nov"
+msgstr "لا"
+
+msgid "November"
+msgstr ""
+
 msgid "Now"
 msgstr "الآن"
 
@@ -1008,6 +1172,12 @@ msgstr "افتتاح, ارتفاع, منخفض, إغلاق"
 
 msgid "OPEN"
 msgstr "فتح"
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
 
 msgid "Offset"
 msgstr "تعويضي"
@@ -1101,6 +1271,14 @@ msgstr "تم تحديث كلمة السر بنجاح"
 msgid "Passwords didn't match. Please type them again"
 msgstr "كلمتا السر غير متطابقتين. برجاء كتابتهم مرة أخرى"
 
+#, fuzzy
+msgid "Payment agent"
+msgstr "المدفوعات"
+
+#, fuzzy
+msgid "Payment agents"
+msgstr "المدفوعات"
+
 msgid "Payments"
 msgstr "المدفوعات"
 
@@ -1139,6 +1317,9 @@ msgstr "برجاء الإجابة على السؤال السري, من 4-50 حر
 
 msgid "Please choose at least one token scope"
 msgstr "برجاء اختيار نطاق رمزي واحد على الأقل"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr ""
 
 msgid "Please enter a number between"
 msgstr "برجاء إدخال رقم بين"
@@ -1276,6 +1457,9 @@ msgstr "سعر"
 msgid "Primary"
 msgstr "إبتدائي"
 
+msgid "Print chart"
+msgstr ""
+
 msgid "Profit"
 msgstr "ربح"
 
@@ -1339,6 +1523,12 @@ msgstr "إعادة بيع هذا العقد غير معروض"
 msgid "Reset to Defaults"
 msgstr "إعادة تعيين إلى الإعدادات الإفتراضية"
 
+msgid "Reset zoom"
+msgstr ""
+
+msgid "Reset zoom level 1:1"
+msgstr ""
+
 msgid "Resources"
 msgstr "المصادر"
 
@@ -1378,6 +1568,9 @@ msgstr "Sand Signika"
 msgid "Sat"
 msgstr "السبت"
 
+msgid "Saturday"
+msgstr ""
+
 msgid "Secondary"
 msgstr "ثانوي"
 
@@ -1410,6 +1603,20 @@ msgstr "موضع بيع"
 
 msgid "Sell Time"
 msgstr "وقت البيع"
+
+#, fuzzy
+msgid "Send to account #"
+msgstr "فتح حساب"
+
+#, fuzzy
+msgid "Sent to account"
+msgstr "فتح حساب"
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
+msgstr ""
 
 msgid "Session"
 msgstr "جلسة"
@@ -1495,6 +1702,12 @@ msgstr ""
 msgid "Stake"
 msgstr ""
 
+msgid "Standard methods"
+msgstr ""
+
+msgid "Standard withdrawal"
+msgstr ""
+
 msgid "Start Time"
 msgstr ""
 
@@ -1546,10 +1759,16 @@ msgstr ""
 msgid "Stroke width"
 msgstr ""
 
+msgid "Submit"
+msgstr ""
+
 msgid "Successfully added new token"
 msgstr ""
 
 msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
 msgstr ""
 
 msgid "TEMA"
@@ -1559,6 +1778,9 @@ msgid "TRIMA"
 msgstr ""
 
 msgid "Table"
+msgstr ""
+
+msgid "Tel"
 msgstr ""
 
 msgid "Terms"
@@ -1601,7 +1823,13 @@ msgstr ""
 msgid "This contract won"
 msgstr ""
 
+msgid "This field is required"
+msgstr ""
+
 msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
 msgstr ""
 
 msgid "Tick Trade app"
@@ -1627,6 +1855,23 @@ msgstr ""
 
 msgid "Title"
 msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr ""
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
+msgstr "برجاء إدخال كود التحقق المرسل إلى البريد الإلكتروني الخاص بك"
 
 msgid "Token"
 msgstr ""
@@ -1697,10 +1942,16 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr ""
 
+msgid "Transfer to another Binary account"
+msgstr ""
+
 msgid "Try"
 msgstr ""
 
 msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
 msgstr ""
 
 msgid "Turnover"
@@ -1710,6 +1961,9 @@ msgid "USD"
 msgstr ""
 
 msgid "Unfortunately, your browser does not support them"
+msgstr ""
+
+msgid "Unlock"
 msgstr ""
 
 msgid "Up/Down"
@@ -1770,10 +2024,19 @@ msgstr ""
 msgid "Wed"
 msgstr ""
 
+msgid "Wednesday"
+msgstr ""
+
 msgid "While on the go, you can"
 msgstr ""
 
 msgid "Windows"
+msgstr ""
+
+msgid "Withdraw funds"
+msgstr ""
+
+msgid "Withdrawal via payment agents"
 msgstr ""
 
 msgid "X-axis labels"
@@ -1789,6 +2052,9 @@ msgid "Y-axis gridline"
 msgstr ""
 
 msgid "Y-axis labels"
+msgstr ""
+
+msgid "Yes"
 msgstr ""
 
 msgid "You have excluded yourself until"
@@ -1835,6 +2101,9 @@ msgstr ""
 msgid "Your transaction reference number is"
 msgstr ""
 
+msgid "Zoom"
+msgstr ""
+
 msgid "admin"
 msgstr ""
 
@@ -1850,6 +2119,10 @@ msgstr ""
 
 msgid "between"
 msgstr ""
+
+#, fuzzy
+msgid "commission"
+msgstr "إذن"
 
 msgid "contact support"
 msgstr ""
@@ -1968,6 +2241,9 @@ msgstr ""
 msgid "of \"Now\", the"
 msgstr ""
 
+msgid "payment agent"
+msgstr ""
+
 msgid "payments"
 msgstr ""
 
@@ -2022,5 +2298,14 @@ msgstr ""
 msgid "yes"
 msgstr ""
 
+msgid "{agent.commission}%"
+msgstr ""
+
 msgid "| Return"
 msgstr ""
+
+#~ msgid "Apply new theme?"
+#~ msgstr "تطبيق موضوع جديد؟"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "إضافة كروم"
