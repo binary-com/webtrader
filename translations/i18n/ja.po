@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-07-30 09:42+0000\n"
+"PO-Revision-Date: 2016-08-05 14:34+0000\n"
 "Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -47,6 +47,9 @@ msgid ""
 "Binary.com shall not in any circumstance be held responsible for "
 "transactions made between customers and Payment Agents"
 msgstr ""
+"- Binary.comは上記の決済サービスとは提携しておりません。各決済サービスは、独立したサービスプロバイダーとして動作し、Binary.comによる"
+"承認、保証またはその他の許可がなされていません。お客さまは危険を承知で自信の責任をもって決済サービスに処断します。送金をされる前に、決済サービス会社の資格"
+"情報を確認されることをお勧めいたします。Binary.comはいかなる状況下においても、お客さまと決済サービス会社の間で生じた処理への責任は負いません。"
 
 msgid "-DI Stroke"
 msgstr "-DI ストローク"
@@ -175,7 +178,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "当社サイトの時間表示は全て、GMT（グリニッジ標準時）に基づきます。"
 
 msgid "Amount"
-msgstr ""
+msgstr "金額"
 
 msgid "Amount Per Point"
 msgstr "ポイントごとの金額"
@@ -193,16 +196,16 @@ msgid "Apply"
 msgstr "適用"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "Binary.comに申し込む"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "適正テスト: 警告"
 
 msgid "Apr"
-msgstr ""
+msgstr "4月"
 
 msgid "April"
-msgstr ""
+msgstr "4月"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "このトークンを完全に削除してもよろしいですか？"
@@ -223,10 +226,10 @@ msgid "Asset Index"
 msgstr "取引期間データ"
 
 msgid "Aug"
-msgstr ""
+msgstr "8月"
 
 msgid "August"
-msgstr ""
+msgstr "8月"
 
 msgid "Average"
 msgstr "平均"
@@ -324,18 +327,17 @@ msgstr "チャートのテーマ"
 msgid "Chart background"
 msgstr "チャート背景"
 
-#, fuzzy
 msgid "Chart context menu"
-msgstr "チャートのテーマ"
+msgstr "チャートコンテキストメニュー"
 
 msgid "Choose password"
 msgstr "パスワードを選択してください"
 
 msgid "Choose your pereferred payment agent"
-msgstr ""
+msgstr "ご希望の決済サービスをご選択ください"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr ""
+msgstr "ご希望の出金方法をご選択ください"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -368,7 +370,7 @@ msgid "Config changes successful"
 msgstr "設定が変更されました"
 
 msgid "Confirm transfer"
-msgstr ""
+msgstr "送金を実行する"
 
 msgid "Connection closed"
 msgstr "接続が切断されました"
@@ -475,12 +477,11 @@ msgstr "生年月日"
 msgid "Days"
 msgstr "日"
 
-#, fuzzy
 msgid "Dec"
 msgstr "同意しない"
 
 msgid "December"
-msgstr ""
+msgstr "12月"
 
 msgid "Decline"
 msgstr "同意しない"
@@ -494,9 +495,8 @@ msgstr "レベルを削除"
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr "IFRAME内のBinary.comチャートにアクセスするアフィリエイトデモ"
 
-#, fuzzy
 msgid "Deposit funds"
-msgstr "USDでのご入金"
+msgstr "資金のご入金"
 
 msgid "Deposit of USD"
 msgstr "USDでのご入金"
@@ -519,10 +519,10 @@ msgstr ""
 "ネーでお取引を始めましょう"
 
 msgid "Done. The funds are being transferred to the payment agent"
-msgstr ""
+msgstr "送金が完了しました。ご選択いただいた決済サービスへ資金が送金されました。"
 
 msgid "Done. The funds are transferred"
-msgstr ""
+msgstr "資金の送金が完了しました"
 
 msgid "Dot"
 msgstr "ドット"
@@ -539,25 +539,21 @@ msgstr "削除するオブジェクトをダブルクリックしてください
 msgid "Download CSV"
 msgstr "CSVでダウンロード"
 
-#, fuzzy
 msgid "Download JPEG image"
-msgstr "PNGでダウンロード"
+msgstr "JPEGでダウンロード"
 
-#, fuzzy
 msgid "Download PDF document"
-msgstr "PNGでダウンロード"
+msgstr "PDFでダウンロード"
 
 msgid "Download PNG"
 msgstr "PNGでダウンロード"
 
-#, fuzzy
 msgid "Download PNG image"
 msgstr "PNGでダウンロード"
 
 msgid "Download SVG"
 msgstr "SVGでダウンロード"
 
-#, fuzzy
 msgid "Download SVG vector image"
 msgstr "SVGでダウンロード"
 
@@ -661,10 +657,10 @@ msgid "Favourite dish"
 msgstr "好きな料理"
 
 msgid "Feb"
-msgstr ""
+msgstr "2月"
 
 msgid "February"
-msgstr ""
+msgstr "2月"
 
 msgid "Final Price"
 msgstr "最終価格"
@@ -694,14 +690,13 @@ msgid "Fri"
 msgstr "金曜日"
 
 msgid "Friday"
-msgstr ""
+msgstr "金曜日"
 
 msgid "From"
 msgstr "開始"
 
-#, fuzzy
 msgid "Further instructions"
-msgstr "設営"
+msgstr "詳細説明"
 
 msgid "Gray"
 msgstr "グレー"
@@ -755,7 +750,7 @@ msgid "I have read and agree to Binary.com"
 msgstr "よく読んだうえで、Binary.comに同意します"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr ""
+msgstr "重要な免責事項"
 
 msgid ""
 "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
@@ -766,6 +761,10 @@ msgid ""
 "sending them any money. Binary.com shall not in any circumstance be held "
 "responsible for transactions made between customers and payment agents"
 msgstr ""
+"重要な免責事項 -Binary.comは、上記の決済サービス会社と提携していません。各決済サービスは、独立したサービスプロバイダーとして動作し、Binar"
+"y.comによる承認、保証またはその他の許可がなされていません。お客さまは危険を承知で自信の責任をもって決済サービスに処断します。送金をされる前に、決済サ"
+"ービス会社の資格情報を確認されることをお勧めいたします。Binary.comはいかなる状況下においても、お客さまと決済サービス会社の間で生じた処理への責任"
+"は負いません。"
 
 msgid "If you select a"
 msgstr "xxxを選択した場合"
@@ -780,13 +779,10 @@ msgstr ""
 "テーマを適用するためには、ページの更新をする必要があります。続行してもよろし"
 "いですか？"
 
-#, fuzzy
 msgid ""
 "In order to properly apply this language, a full refresh of page is "
 "required. Are you sure you want to proceed?"
-msgstr ""
-"テーマを適用するためには、ページの更新をする必要があります。続行してもよろし"
-"いですか？"
+msgstr "この言語を適用するには、ページの更新をする必要があります。続行してもよろしいですか？"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -832,28 +828,26 @@ msgstr "商品"
 msgid "Investments & Dividends"
 msgstr "投資と配当"
 
-#, fuzzy
 msgid "Jan"
-msgstr "かつ"
+msgstr "1月"
 
 msgid "January"
-msgstr ""
+msgstr "1月"
 
 msgid "Jul"
-msgstr ""
+msgstr "7月"
 
 msgid "July"
-msgstr ""
+msgstr "7月"
 
 msgid "Jump to"
 msgstr "xxxへ移動する"
 
-#, fuzzy
 msgid "Jun"
-msgstr "日曜日"
+msgstr "6月"
 
 msgid "June"
-msgstr ""
+msgstr "6月"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "表示されるページの 承認 ボタンをクリックしてください"
@@ -942,9 +936,8 @@ msgstr "ポートフォリオを読込み中"
 msgid "Loading self-exclusion settings"
 msgstr "取引制限の設定を読込み中"
 
-#, fuzzy
 msgid "Loading..."
-msgstr "読み込み中"
+msgstr "読み込み中…"
 
 msgid "Log in"
 msgstr "ログイン"
@@ -1004,13 +997,15 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
+"リクエストを送信される前に、エージェントの支払規約に同意いただいてることをきちんと確認してください。「送金を実行する」ボタンをクリックされますと、資金はお"
+"客様のBinary口座から出金され、ご選択いただいた決済サービスエージェントに送金されます。エージェントは出金額（各エージェントの手数料が引かれます）をご"
+"希望の支払方法でお客様のアカウントへ送金します。"
 
-#, fuzzy
 msgid "Mar"
-msgstr "Mr"
+msgstr "3月"
 
 msgid "March"
-msgstr ""
+msgstr "3月"
 
 msgid "Mass Period"
 msgstr "マスインデックス期間"
@@ -1042,9 +1037,8 @@ msgstr "1日の最大損失 (半角)"
 msgid "Maximum number of open positions"
 msgstr "最大保有ポジション"
 
-#, fuzzy
 msgid "May"
-msgstr "日"
+msgstr "5月"
 
 msgid "Memorable date"
 msgstr "思い出のある日時"
@@ -1056,13 +1050,13 @@ msgid "Middle Band Stroke"
 msgstr "ミドルバンド ストローク"
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Min: 10 Max: 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "数字を含む6文字以上でご入力ください"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "決済サービスの手数料を引く"
 
 msgid "Minutes"
 msgstr "分"
@@ -1073,9 +1067,8 @@ msgstr "Miss"
 msgid "Mon"
 msgstr "月曜日"
 
-#, fuzzy
 msgid "Monday"
-msgstr "第二"
+msgstr "月曜日"
 
 msgid "Mother's maiden name"
 msgstr "母親の旧姓"
@@ -1150,14 +1143,13 @@ msgstr ""
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
-msgstr ""
+msgstr "ご注意：決済サービスでのご出金は、ご入金の際に決済サービスをご利用いただいた場合にのみご利用いただけます。"
 
-#, fuzzy
 msgid "Nov"
-msgstr "いいえ"
+msgstr "11月"
 
 msgid "November"
-msgstr ""
+msgstr "11月"
 
 msgid "Now"
 msgstr "Now"
@@ -1178,10 +1170,10 @@ msgid "OPEN"
 msgstr "OPEN"
 
 msgid "Oct"
-msgstr ""
+msgstr "10月"
 
 msgid "October"
-msgstr ""
+msgstr "10月"
 
 msgid "Offset"
 msgstr "追加"
@@ -1274,13 +1266,11 @@ msgstr "パスワードは正常に変更されました"
 msgid "Passwords didn't match. Please type them again"
 msgstr "パスワードが一致しませんでした。再度お試しください。"
 
-#, fuzzy
 msgid "Payment agent"
-msgstr "アフィリエイト報酬の支払いについて"
+msgstr "決済サービス"
 
-#, fuzzy
 msgid "Payment agents"
-msgstr "アフィリエイト報酬の支払いについて"
+msgstr "決済サービス"
 
 msgid "Payments"
 msgstr "アフィリエイト報酬の支払いについて"
@@ -1322,7 +1312,7 @@ msgid "Please choose at least one token scope"
 msgstr "1つ以上のトークン範囲をご選択ください"
 
 msgid "Please confirm the following details in order to complete the transfer"
-msgstr ""
+msgstr "送金を完了するために、下記詳細をご確認ください"
 
 msgid "Please enter a number between"
 msgstr "XXX間の数字をご入力ください"
@@ -1462,7 +1452,7 @@ msgid "Primary"
 msgstr "主要"
 
 msgid "Print chart"
-msgstr ""
+msgstr "チャートを印刷"
 
 msgid "Profit"
 msgstr "利益"
@@ -1528,10 +1518,10 @@ msgid "Reset to Defaults"
 msgstr "既定にリセット"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "ズームをリセット"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "1:1にズームをリセット"
 
 msgid "Resources"
 msgstr "取引参考情報"
@@ -1573,7 +1563,7 @@ msgid "Sat"
 msgstr "土曜日"
 
 msgid "Saturday"
-msgstr ""
+msgstr "土曜日"
 
 msgid "Secondary"
 msgstr "第二"
@@ -1608,19 +1598,17 @@ msgstr "売却レート"
 msgid "Sell Time"
 msgstr "売却時間"
 
-#, fuzzy
 msgid "Send to account #"
-msgstr "口座開設"
+msgstr "口座 #へ送金"
 
-#, fuzzy
 msgid "Sent to account"
-msgstr "口座開設"
+msgstr "口座に送金"
 
 msgid "Sep"
-msgstr ""
+msgstr "9月"
 
 msgid "September"
-msgstr ""
+msgstr "9月"
 
 msgid "Session"
 msgstr "セッション"
@@ -1707,10 +1695,10 @@ msgid "Stake"
 msgstr "購入価格"
 
 msgid "Standard methods"
-msgstr ""
+msgstr "標準方法"
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "スタンダード出金"
 
 msgid "Start Time"
 msgstr "開始時間"
@@ -1764,7 +1752,7 @@ msgid "Stroke width"
 msgstr "ストローク幅"
 
 msgid "Submit"
-msgstr ""
+msgstr "送信"
 
 msgid "Successfully added new token"
 msgstr "新しいトークンを追加しました"
@@ -1773,7 +1761,7 @@ msgid "Sun"
 msgstr "日曜日"
 
 msgid "Sunday"
-msgstr ""
+msgstr "日曜日"
 
 msgid "TEMA"
 msgstr "TEMA"
@@ -1784,9 +1772,8 @@ msgstr "TRIMA"
 msgid "Table"
 msgstr "明細"
 
-#, fuzzy
 msgid "Tel"
-msgstr "　"
+msgstr "電話番号"
 
 msgid "Terms"
 msgstr "各種規約"
@@ -1837,13 +1824,13 @@ msgid "This contract won"
 msgstr "トレードの条件が満たされました"
 
 msgid "This field is required"
-msgstr ""
+msgstr "この項目は必須です"
 
 msgid "Thu"
 msgstr "木曜日"
 
 msgid "Thursday"
-msgstr ""
+msgstr "木曜日"
 
 msgid "Tick Trade app"
 msgstr "Tickトレードアプリ"
@@ -1870,21 +1857,20 @@ msgid "Title"
 msgstr "敬称"
 
 msgid "To"
-msgstr ""
+msgstr "宛先"
 
 msgid "To deposit money please contact the payment agent directly"
-msgstr ""
+msgstr "ご入金いただくには、お手数ですが決済サービスエージェントまで直接ご連絡ください。"
 
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
-msgstr ""
+msgstr "こちらのお支払方法または現地通貨での入出金処理は、Binary.comでは対応しておりません。決済サービスエージェントまでご連絡ください。"
 
-#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
-msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
+msgstr "資金のご出金には、お客様のアドレスに只今送信されたワンタイムパスワードをご入力ください"
 
 msgid "Token"
 msgstr "トークン"
@@ -1966,7 +1952,7 @@ msgid "Tradingview for Binary.com"
 msgstr "Binary.comのTradingView"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "他のBinary口座へ送金する"
 
 msgid "Try"
 msgstr "試してみる"
@@ -1975,7 +1961,7 @@ msgid "Tue"
 msgstr "火曜日"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "火曜日"
 
 msgid "Turnover"
 msgstr "取引数量"
@@ -1987,7 +1973,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
 
 msgid "Unlock"
-msgstr ""
+msgstr "ロック解除"
 
 msgid "Up/Down"
 msgstr "ラダー"
@@ -2050,7 +2036,7 @@ msgid "Wed"
 msgstr "水曜日"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "水曜日"
 
 msgid "While on the go, you can"
 msgstr "出先でもお取引が可能"
@@ -2059,10 +2045,10 @@ msgid "Windows"
 msgstr "Windows"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "資金のご出金"
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "決済サービスでのご出金"
 
 msgid "X-axis labels"
 msgstr "X 軸ラベル"
@@ -2079,7 +2065,6 @@ msgstr "Y 軸目盛線"
 msgid "Y-axis labels"
 msgstr "Y 軸のラベル"
 
-#, fuzzy
 msgid "Yes"
 msgstr "はい"
 
@@ -2132,7 +2117,7 @@ msgid "Your transaction reference number is"
 msgstr "トレード参照番号："
 
 msgid "Zoom"
-msgstr ""
+msgstr "ズーム"
 
 msgid "admin"
 msgstr "管理者"
@@ -2153,9 +2138,8 @@ msgstr ""
 msgid "between"
 msgstr "間"
 
-#, fuzzy
 msgid "commission"
-msgstr "アクセス許可"
+msgstr "手数料"
 
 msgid "contact support"
 msgstr "サポートへのお問い合わせ"
@@ -2277,9 +2261,8 @@ msgstr "oauth"
 msgid "of \"Now\", the"
 msgstr "「今」のXXX"
 
-#, fuzzy
 msgid "payment agent"
-msgstr "アフィリエイト報酬の支払いについて"
+msgstr "決済サービス"
 
 msgid "payments"
 msgstr "アフィリエイト報酬の支払いについて"
@@ -2336,7 +2319,7 @@ msgid "yes"
 msgstr "はい"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| 戻る"
