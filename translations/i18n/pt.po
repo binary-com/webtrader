@@ -1,8 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-04 12:23+0200\n"
+"PO-Revision-Date: 2016-08-04 11:06+0000\n"
+"Last-Translator: Alcino Jorge <alcino@binary.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.8-dev\n"
+
 msgid "%D MA Type"
 msgstr ""
 
 msgid "%D Period"
-msgstr ""
+msgstr "Período de %D"
 
 msgid "%D Stroke"
 msgstr ""
@@ -20,6 +36,8 @@ msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
 "day or more in duration)"
 msgstr ""
+"(se menos de um dia de duração) ou no fim do dia de negociação (se um dia ou "
+"mais de duração)"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -35,79 +53,79 @@ msgid "-DI Stroke"
 msgstr ""
 
 msgid "0-1 year"
-msgstr ""
+msgstr "0 a 1 ano"
 
 msgid "0-5 transactions in the past 12 months"
-msgstr ""
+msgstr "0 a 5 transações nos últimos 12 meses"
 
 msgid "1 Day"
-msgstr ""
+msgstr "1 dia"
 
 msgid "1-2 years"
-msgstr ""
+msgstr "1 a 2 anos"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10m"
-msgstr ""
+msgstr "10m"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15m"
-msgstr ""
+msgstr "15m"
 
 msgid "1d"
-msgstr ""
+msgstr "1d"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1m"
 
 msgid "2h"
-msgstr ""
+msgstr "2h"
 
 msgid "2m"
-msgstr ""
+msgstr "2m"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30-day limit on losses"
-msgstr ""
+msgstr "Limite de perdas de 30 dias"
 
 msgid "30-day turnover limit"
-msgstr ""
+msgstr "Limite de volume de negócios de 30 dias"
 
 msgid "30m"
-msgstr ""
+msgstr "30m"
 
 msgid "3m"
-msgstr ""
+msgstr "3m"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr ""
+msgstr "40 transações ou mais nos últimos 12 meses"
 
 msgid "4h"
-msgstr ""
+msgstr "4h"
 
 msgid "5m"
-msgstr ""
+msgstr "5m"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr ""
+msgstr "6 a 10 transações nos últimos 12 meses"
 
 msgid "7-day limit on losses"
-msgstr ""
+msgstr "Limite de perdas de 7 dias"
 
 msgid "7-day turnover limit"
-msgstr ""
+msgstr "Limite de volume de negócios de 7 dias"
 
 msgid "8h"
-msgstr ""
+msgstr "8h"
 
 msgid "ADX MA Type"
 msgstr ""
@@ -116,46 +134,46 @@ msgid "ADX Stroke"
 msgstr ""
 
 msgid "ATR Period"
-msgstr ""
+msgstr "Período ATR"
 
 msgid "Acceleration"
-msgstr ""
+msgstr "Aceleração"
 
 msgid "Accept"
-msgstr ""
+msgstr "Aceitar"
 
 msgid "Account balance"
-msgstr ""
+msgstr "Saldo de conta"
 
 msgid "Account id not found"
-msgstr ""
+msgstr "ID de conta não encontrada"
 
 msgid "Account opening"
-msgstr ""
+msgstr "Abertura de conta"
 
 msgid "Account token not found"
-msgstr ""
+msgstr "Token de conta não encontrada"
 
 msgid "Action"
-msgstr ""
+msgstr "Ação"
 
 msgid "Add indicator"
-msgstr ""
+msgstr "Adicionar indicador"
 
 msgid "Add level"
-msgstr ""
+msgstr "Adicionar nível"
 
 msgid "Add overlays"
-msgstr ""
+msgstr "Adicionar sobreposições"
 
 msgid "Add/remove overlays"
-msgstr ""
+msgstr "Adicionar/remover sobreposições"
 
 msgid "Admin"
-msgstr ""
+msgstr "Administração"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
-msgstr ""
+msgstr "Todos os horários são exibidos em GMT (Greenwich Mean Time)"
 
 msgid "Amount"
 msgstr ""
