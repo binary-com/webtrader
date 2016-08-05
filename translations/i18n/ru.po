@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-08-02 09:56+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/ru/>\n"
+"PO-Revision-Date: 2016-08-04 05:04+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.8-dev\n"
 
 msgid "%D MA Type"
@@ -37,8 +37,8 @@ msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
 "day or more in duration)"
 msgstr ""
-"(если длительность составляет менее одного дня) или в конце торгового дня "
-"(если длительность составляет один день или более)"
+"(если длительность составляет менее одного дня) или в конце торгового дня ("
+"если длительность составляет один день или более)"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -96,7 +96,7 @@ msgid "30"
 msgstr "30"
 
 msgid "30-day limit on losses"
-msgstr "30-дневный лимит на проигрыш"
+msgstr "30-дневный лимит на убытки"
 
 msgid "30-day turnover limit"
 msgstr "30-дневный лимит на объём покупок"
@@ -120,7 +120,7 @@ msgid "6-10 transactions in the past 12 months"
 msgstr "6-10 транзакций за последние 12 мес"
 
 msgid "7-day limit on losses"
-msgstr "7-дневный лимит на проигрыш"
+msgstr "7-дневный лимит на убытки"
 
 msgid "7-day turnover limit"
 msgstr "7-дневный лимит на объём покупок"
@@ -194,8 +194,8 @@ msgstr "Применимо для"
 msgid "Apply"
 msgstr "Применить"
 
-msgid "Apply to become a Binary.com"
-msgstr ""
+msgid "Apply new theme?"
+msgstr "Применить новую тему?"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Тест на целесообразность: ПРЕДУПРЕЖДЕНИЕ"
@@ -320,7 +320,7 @@ msgid "Chart"
 msgstr "График"
 
 msgid "Chart Themes"
-msgstr ""
+msgstr "Виды графиков"
 
 msgid "Chart background"
 msgstr "Фон графика"
@@ -339,6 +339,9 @@ msgstr ""
 
 msgid "Chrome"
 msgstr "Chrome"
+
+msgid "Chrome Extension"
+msgstr "Расширение Chrome"
 
 msgid "Click Jacking test"
 msgstr ""
@@ -449,7 +452,7 @@ msgid "DX MA Type"
 msgstr "Тип СС DX"
 
 msgid "Daily limit on losses"
-msgstr ""
+msgstr "Дневной лимит на убытки"
 
 msgid "Daily turnover limit"
 msgstr "Дневной лимит на объём покупок"
@@ -714,7 +717,7 @@ msgid "HIGH"
 msgstr "ВЕРХНЕЕ ЗНАЧЕНИЕ"
 
 msgid "Health"
-msgstr ""
+msgstr "Здравоохранение"
 
 msgid "High Barrier"
 msgstr "Верхний барьер"
@@ -802,7 +805,7 @@ msgid ""
 "gambling can be addictive"
 msgstr ""
 "Помните, что некоторые виды бинарных опционов являются разновидностью "
-"азартных игр и могут вызывать привыкание."
+"азартных игр и могут вызывать привыкание"
 
 msgid "In/Out"
 msgstr "Внутри/Вне"
@@ -899,13 +902,13 @@ msgid "Loading"
 msgstr "Идёт загрузка"
 
 msgid "Loading Asset Index"
-msgstr ""
+msgstr "Загрузка индекса активов"
 
 msgid "Loading Configurations"
 msgstr "Загрузка системных настроек"
 
 msgid "Loading Download/View Data"
-msgstr "Идет загрузка/Обзор данных"
+msgstr "Идет Загрузка/Обзор данных"
 
 msgid "Loading Password dialog"
 msgstr "Загружается диалоговое окно пароля"
@@ -1180,12 +1183,6 @@ msgstr "OHLC"
 msgid "OPEN"
 msgstr "ОТКРЫТИЕ"
 
-msgid "Oct"
-msgstr ""
-
-msgid "October"
-msgstr ""
-
 msgid "Offset"
 msgstr "Изменение"
 
@@ -1279,14 +1276,6 @@ msgstr "Пароль изменён успешно"
 msgid "Passwords didn't match. Please type them again"
 msgstr "Пароли не совпали. Пожалуйста, введите пароли снова"
 
-#, fuzzy
-msgid "Payment agent"
-msgstr "Платежи"
-
-#, fuzzy
-msgid "Payment agents"
-msgstr "Платежи"
-
 msgid "Payments"
 msgstr "Платежи"
 
@@ -1326,9 +1315,6 @@ msgstr "Пожалуйста, ответьте на секретный вопр�
 msgid "Please choose at least one token scope"
 msgstr "Пожалуйста, выберите минимум один уровень ключа"
 
-msgid "Please confirm the following details in order to complete the transfer"
-msgstr ""
-
 msgid "Please enter a number between"
 msgstr "Пожалуйста, введите число в следующем диапазоне:"
 
@@ -1353,7 +1339,7 @@ msgstr "Пожалуйста, введите положительное цело
 msgid "Please enter positive integer value for 30-day limit on losses"
 msgstr ""
 "Пожалуйста, введите положительное целое число для 30-дневного лимита на "
-"убыток"
+"убытки"
 
 msgid "Please enter positive integer value for 30-day turnover limit"
 msgstr ""
@@ -1362,7 +1348,7 @@ msgstr ""
 
 msgid "Please enter positive integer value for 7-day limit on losses"
 msgstr ""
-"Пожалуйста, введите положительное целое число для 7-дневного лимита на убыток"
+"Пожалуйста, введите положительное целое число для 7-дневного лимита на убытки"
 
 msgid "Please enter positive integer value for 7-day turnover limit"
 msgstr ""
@@ -1371,7 +1357,7 @@ msgstr ""
 
 msgid "Please enter positive integer value for Daily limit on losses"
 msgstr ""
-"Пожалуйста, введите положительное целое число для дневного лимита на убыток"
+"Пожалуйста, введите положительное целое число для дневного лимита на убытки"
 
 msgid "Please enter positive integer value for Daily turnover limit"
 msgstr ""
@@ -1392,8 +1378,7 @@ msgstr ""
 "Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
 
 msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
-"Пожалуйста, укажите лимит продолжительности сессии: число от 0 до 99999"
+msgstr "Пожалуйста, укажите лимит продолжительности сессии: число от 0 до 99999"
 
 msgid "Please enter your city address"
 msgstr "Пожалуйста, введите адрес"
@@ -1479,9 +1464,6 @@ msgstr "Цена"
 msgid "Primary"
 msgstr "Первичн."
 
-msgid "Print chart"
-msgstr ""
-
 msgid "Profit"
 msgstr "Прибыль"
 
@@ -1545,12 +1527,6 @@ msgstr "Повторная продажа данного контракта не
 msgid "Reset to Defaults"
 msgstr "Возврат к настройкам по умолчанию"
 
-msgid "Reset zoom"
-msgstr ""
-
-msgid "Reset zoom level 1:1"
-msgstr ""
-
 msgid "Resources"
 msgstr "Ресурсы"
 
@@ -1590,9 +1566,6 @@ msgstr "Sand Signika"
 msgid "Sat"
 msgstr "Суб"
 
-msgid "Saturday"
-msgstr ""
-
 msgid "Secondary"
 msgstr "Вторичн."
 
@@ -1626,20 +1599,6 @@ msgstr "Котировка продажи"
 msgid "Sell Time"
 msgstr "Время продажи"
 
-#, fuzzy
-msgid "Send to account #"
-msgstr "Открыть счёт"
-
-#, fuzzy
-msgid "Sent to account"
-msgstr "Открыть счёт"
-
-msgid "Sep"
-msgstr ""
-
-msgid "September"
-msgstr ""
-
 msgid "Session"
 msgstr "Сессия"
 
@@ -1650,7 +1609,7 @@ msgid "Session is not authenticated"
 msgstr "Сессия не авторизована"
 
 msgid "Settles"
-msgstr ""
+msgstr "Заканч."
 
 msgid "Share"
 msgstr "Поделиться"
@@ -1724,12 +1683,6 @@ msgstr "Спреды"
 msgid "Stake"
 msgstr "Ставка"
 
-msgid "Standard methods"
-msgstr ""
-
-msgid "Standard withdrawal"
-msgstr ""
-
 msgid "Start Time"
 msgstr "Время начала"
 
@@ -1781,17 +1734,11 @@ msgstr "Цвет штриха"
 msgid "Stroke width"
 msgstr "Ширина штриха"
 
-msgid "Submit"
-msgstr ""
-
 msgid "Successfully added new token"
 msgstr "Новый ключ добавлен успешно"
 
 msgid "Sun"
 msgstr "Вск"
-
-msgid "Sunday"
-msgstr ""
 
 msgid "TEMA"
 msgstr "ТЭСС"
@@ -1801,10 +1748,6 @@ msgstr "ТСС"
 
 msgid "Table"
 msgstr "Таблица"
-
-#, fuzzy
-msgid "Tel"
-msgstr "Вт"
 
 msgid "Terms"
 msgstr "Условия"
@@ -1831,7 +1774,7 @@ msgstr ""
 "средств, а также осознающих риск и имеющих опыт риска, связанного с "
 "приобретением финансовых контрактов. Сделки с финансовыми контрактами "
 "подразумевают высокую степень риска. Если купленный контракт истекает без "
-"выплаты, Вы теряете всю сумму инвестиции и возможную прибыль в сделке."
+"выплаты, Вы теряете всю сумму инвестиции и возможную прибыль в сделке"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1843,7 +1786,7 @@ msgstr ""
 "котировок. Для реальных счетов: мы постараемся исправить проблему и позже "
 "рассчитать контракт правильно; в противном случае, мы отменим контракт и "
 "вернем его стоимость. Для демо-счетов: мы отменим Ваш контракт и вернем цену "
-"его покупки."
+"его покупки"
 
 msgid "There was an error"
 msgstr "Произошла ошибка"
@@ -1857,14 +1800,8 @@ msgstr "Контракт проиграл"
 msgid "This contract won"
 msgstr "Контракт выиграл"
 
-msgid "This field is required"
-msgstr ""
-
 msgid "Thu"
 msgstr "Чет"
-
-msgid "Thursday"
-msgstr ""
 
 msgid "Tick Trade app"
 msgstr "Приложение Tick Trade"
@@ -1889,24 +1826,6 @@ msgstr "Перерыв по запросу Websocket"
 
 msgid "Title"
 msgstr "Заголовок"
-
-msgid "To"
-msgstr ""
-
-msgid "To deposit money please contact the payment agent directly"
-msgstr ""
-
-msgid ""
-"To process deposits and withdrawals for payment methods or local currencies "
-"not supported by Binary.com contact a payment agent"
-msgstr ""
-
-#, fuzzy
-msgid ""
-"To withdraw funds please enter the special verification token we have just "
-"emailed you"
-msgstr ""
-"Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
 
 msgid "Token"
 msgstr "Ключ"
@@ -1990,17 +1909,11 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview для Binary.com"
 
-msgid "Transfer to another Binary account"
-msgstr ""
-
 msgid "Try"
 msgstr "Попробовать"
 
 msgid "Tue"
 msgstr "Вт"
-
-msgid "Tuesday"
-msgstr ""
 
 msgid "Turnover"
 msgstr "Объём покупок"
@@ -2010,9 +1923,6 @@ msgstr "USD"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"
-
-msgid "Unlock"
-msgstr ""
 
 msgid "Up/Down"
 msgstr "Вверх/Вниз"
@@ -2074,20 +1984,11 @@ msgstr ""
 msgid "Wed"
 msgstr "Ср"
 
-msgid "Wednesday"
-msgstr ""
-
 msgid "While on the go, you can"
 msgstr "Прямо на ходу Вы можете"
 
 msgid "Windows"
 msgstr "Окна"
-
-msgid "Withdraw funds"
-msgstr ""
-
-msgid "Withdrawal via payment agents"
-msgstr ""
 
 msgid "X-axis labels"
 msgstr "Метки оси X"
@@ -2104,9 +2005,6 @@ msgstr "Сетка оси Y"
 msgid "Y-axis labels"
 msgstr "Метки оси Y"
 
-msgid "Yes"
-msgstr ""
-
 msgid "You have excluded yourself until"
 msgstr "Вы ограничили свою деятельность до"
 
@@ -2118,26 +2016,31 @@ msgid ""
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
+"Чтобы использовать для авторизации различные сервера OAuth, Вы должны "
+"зарегистрироваться на Webtrader и получить ID приложения. Дополнительную "
+"информацию об OAuth можно получить на странице"
 
 msgid "You pay"
-msgstr ""
+msgstr "Вы платите"
 
 msgid "You will be automatically logged out after such time"
-msgstr ""
+msgstr "По истечении данного времени Вы автоматически выйдете из системы"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
 msgstr ""
+"Вы успешно открыли счёт на Binary.com, но для начала торговли Вы должны "
+"открыть Webtrader доступ к нему"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Ваш браузер не поддерживает копирование в буфер"
 
 msgid "Your browser is not supported"
-msgstr ""
+msgstr "Ваш браузер не поддерживается"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Ваши изменения обновлены успешно"
 
 msgid "Your email"
 msgstr ""
