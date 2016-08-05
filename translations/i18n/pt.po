@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-04 12:23+0200\n"
-"PO-Revision-Date: 2016-08-04 11:06+0000\n"
+"PO-Revision-Date: 2016-08-05 22:46+0000\n"
 "Last-Translator: Alcino Jorge <alcino@binary.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pt/>\n"
@@ -48,6 +48,14 @@ msgid ""
 "Binary.com shall not in any circumstance be held responsible for "
 "transactions made between customers and Payment Agents"
 msgstr ""
+"- a Binary.com não está afiliada com qualquer um dos agentes de pagamentos "
+"listados acima. Cada agente de pagamentos opera como um fornecedor de "
+"serviços independente e não é endossado, garantido ou de outra forma "
+"aprovado pela Binary.com. OS CLIENTES LIDAM COM AGENTES DE PAGAMENTOs POR "
+"SUA CONTA E RISCO. Recomenda-se que os clientes verifiquem as credenciais "
+"dos agentes de pagamentos antes de lhes enviar quaisquer fundos. A "
+"Binary.com não será responsável, em qualquer circunstância, pelas transações "
+"efetuadas entre clientes e agentes de pagamentos"
 
 msgid "-DI Stroke"
 msgstr ""
@@ -179,34 +187,34 @@ msgid "Amount"
 msgstr ""
 
 msgid "Amount Per Point"
-msgstr ""
+msgstr "Montante por ponto"
 
 msgid "Amount per point"
-msgstr ""
+msgstr "Montante por ponto"
 
 msgid "Answer"
-msgstr ""
+msgstr "Resposta"
 
 msgid "Applied to"
 msgstr ""
 
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 msgid "Apply to become a Binary.com"
 msgstr ""
 
 msgid "Appropriateness Test: WARNING"
-msgstr ""
+msgstr "Teste de adequação: AVISO"
 
 msgid "Apr"
 msgstr ""
 
 msgid "April"
-msgstr ""
+msgstr "Abril"
 
 msgid "Are you sure you want to delete this token?"
-msgstr ""
+msgstr "Tem certeza que deseja excluir este token?"
 
 msgid "Aroon Down Stroke"
 msgstr ""
@@ -215,82 +223,82 @@ msgid "Aroon Up Stroke"
 msgstr ""
 
 msgid "Asians"
-msgstr ""
+msgstr "Asiáticos"
 
 msgid "Asset"
-msgstr ""
+msgstr "Ativo"
 
 msgid "Asset Index"
-msgstr ""
+msgstr "Índice de ativos"
 
 msgid "Aug"
-msgstr ""
+msgstr "Ago"
 
 msgid "August"
-msgstr ""
+msgstr "Agosto"
 
 msgid "Average"
 msgstr ""
 
 msgid "Back"
-msgstr ""
+msgstr "Voltar"
 
 msgid "Back to list"
-msgstr ""
+msgstr "Voltar para a lista"
 
 msgid "Background Color"
-msgstr ""
+msgstr "Cor do plano de fundo"
 
 msgid "Barrier"
-msgstr ""
+msgstr "Barreira"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "Deslocação da barreira"
 
 msgid "Binary options or other financial derivatives"
-msgstr ""
+msgstr "Opções binárias ou outros derivados financeiros"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "BInary.com: Webtrader"
 
 msgid "Blank window"
-msgstr ""
+msgstr "Janela negra"
 
 msgid "Bought"
 msgstr ""
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "Marca do primeiro carro"
 
 msgid "Browser upgrade required"
-msgstr ""
+msgstr "Atualização de navegador necessária"
 
 msgid "Buy Price"
-msgstr ""
+msgstr "Preço de compra"
 
 msgid "Buy price"
-msgstr ""
+msgstr "Preço de compra"
 
 msgid "By clicking"
-msgstr ""
+msgstr "Ao clicar"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
 
 msgid "CLOSE"
-msgstr ""
+msgstr "FECHAR"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 msgid "Candles"
-msgstr ""
+msgstr "Velas"
 
 msgid "Candlestick down-color"
 msgstr ""
@@ -305,7 +313,7 @@ msgid "Candlestick up-line"
 msgstr ""
 
 msgid "Cash Balance"
-msgstr ""
+msgstr "Saldo de dinheiro"
 
 msgid "Change Backend Server"
 msgstr ""
