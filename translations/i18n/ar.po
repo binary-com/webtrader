@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-22 17:51+0200\n"
-"PO-Revision-Date: 2016-08-07 21:33+0000\n"
+"PO-Revision-Date: 2016-08-10 19:28+0000\n"
 "Last-Translator: Ahmed Kotb <ahmedmohamedkotp@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ar/>\n"
@@ -1820,6 +1820,11 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract permium"
 msgstr ""
+"تعد خدمات التداول الواردة في هذا الموقع منااسبة فقط للعملاء القادرين على "
+"تحمل خسارة جميع الأموال الذين يستثمرونها و الذين يفهمون و لديهم الخبرة "
+"والمعرفة بالمخاطر المترتبة على استحواذ العقود المالية. تحمل المعاملات على "
+"العقود المالية درجة عالية من المخاطر. إذا ما انتهت العقود المشتراه بلا قيمة, "
+"فسوف  تعاني من فقدان تام للإستثمار الخاص بك, والذي يتألف من العقود الممتازة"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1827,62 +1832,67 @@ msgid ""
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
+"يكون هناك خلل في بيانات السوق خلال فترة العقد. بالنسبة لحسابات الأموال "
+"الحقيقية, فسوف نعمل على تصحيحها وتسوية العقود بطريقة صحيحة, وإلا فسيتم إلغاء "
+"العقود وردها. كما سيتم رد عقود الأموال الإفتراضية وردها"
 
 msgid "There was an error"
-msgstr ""
+msgstr "كان هناك خطأ"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "لقد انتهى هذا العقد"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "هذا العقد مفقود"
 
 msgid "This contract won"
-msgstr ""
+msgstr "هذا العقد فائز"
 
 msgid "This field is required"
-msgstr ""
+msgstr "هذه الخانة مطلوبة"
 
 msgid "Thu"
-msgstr ""
+msgstr "الخميس"
 
 msgid "Thursday"
-msgstr ""
+msgstr "الخميس"
 
 msgid "Tick Trade app"
-msgstr ""
+msgstr "تطبيق تك تراد"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "علامة {صف. رقم}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "علامات"
 
 msgid "Tile"
-msgstr ""
+msgstr "بلاطة"
 
 msgid "Time Period"
-msgstr ""
+msgstr "فترة زمنية"
 
 msgid "Time period"
-msgstr ""
+msgstr "فترة زمنية"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "مهلة لطلب ويب سوكيت"
 
 msgid "Title"
-msgstr ""
+msgstr "عنوان"
 
 msgid "To"
-msgstr ""
+msgstr "إلى"
 
 msgid "To deposit money please contact the payment agent directly"
-msgstr ""
+msgstr "لإيداع الأموال يرجى الإتصال بوكيل الدفع مباشرة"
 
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
 msgstr ""
+"لإتمام عملية الدفع والسحب بطرق الدفع أو العملات المحلية الغير مدعومة من قبل "
+"Binary.com اتصل بوكيل الدفع"
 
 #, fuzzy
 msgid ""
@@ -1891,54 +1901,55 @@ msgid ""
 msgstr "برجاء إدخال كود التحقق المرسل إلى البريد الإلكتروني الخاص بك"
 
 msgid "Token"
-msgstr ""
+msgstr "رمز"
 
 msgid "Token management"
-msgstr ""
+msgstr "إدارة الرموز"
 
 msgid "Token name"
-msgstr ""
+msgstr "أسم الرمز"
 
 msgid "Token permissions"
-msgstr ""
+msgstr "أذونات رمزية"
 
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
 msgstr ""
+"الرموز هي أكواد خاصة للوصول إلى تطبيقات Binary للهاتف النقال وأدوات طرف ثالث"
 
 msgid "Tooltip background"
-msgstr ""
+msgstr "خلفية رسالة التلميح"
 
 msgid "Tooltip text"
-msgstr ""
+msgstr "نص رسالة التلميح"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "التكلفة الإجمالية"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "إجمالي الربح/الخسارة"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "يلمس/لن يلمس"
 
 msgid "Tourism"
-msgstr ""
+msgstr "سياحة"
 
 msgid "Town/City"
-msgstr ""
+msgstr "بلدة/مدينة"
 
 msgid "Trade"
-msgstr ""
+msgstr "تداول"
 
 msgid "Trade Confirmation"
-msgstr ""
+msgstr "تأكيد التداول"
 
 msgid "Trade using"
-msgstr ""
+msgstr "التداول باستخدام"
 
 msgid "Trading Times"
-msgstr ""
+msgstr "أوقات التداول"
 
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
@@ -1946,6 +1957,9 @@ msgid ""
 "initial deposit and you do not own or have any interest in the underlying "
 "asset"
 msgstr ""
+"تداول الخيارات الثنائية قد لا تكون مناسبة للجميع, لذلك يرجى التأكد من أنك "
+"على دراية كاملة بالمخاطر المنطوية على ذلك. قد تتجاوز خسائرك الإيداع الأولي "
+"الخاص بك في حين أنك لا تمتلك أو ليس لديك أي فائدة في الأصول الأساسية"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -1955,69 +1969,74 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
+"تداول الأسواق المالية قد يصبح إدمان. قم بملئ النموذج أدناه للحد من مشاركتك "
+"على الموقع أوأرسل رسالة موقعة أو فاكس لفريق دعم العملاء الخاص بنا. وبمجرد "
+"الإعداد, يمكنك فقط تضييق حدودك. سيتم إزالة أو تخفيف الحدود فقط بعد 7 أيام "
+"باستثناء تاريخ الإستبعاد الذاتي, والذي لا يمكن إزالته أو تغييره بمجرد تأكيدك "
+"عليه. لإزالة أو زيادة حدودك, يرجى الإتصال"
 
 msgid "Tradingview for Binary.com"
-msgstr ""
+msgstr "رؤية التداول ل Binary.com"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "النقل لحساب ثنائي آخر"
 
 msgid "Try"
-msgstr ""
+msgstr "حاول"
 
 msgid "Tue"
-msgstr ""
+msgstr "الثلاثاء"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "الثلاثاء"
 
 msgid "Turnover"
-msgstr ""
+msgstr "الدوران"
 
 msgid "USD"
-msgstr ""
+msgstr "دولار أمريكي"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr ""
+msgstr "للأسف متصفحك لا يدعمهم"
 
 msgid "Unlock"
-msgstr ""
+msgstr "فتح"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "أعلى/أسفل"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "الأحداث القادمة"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "تحديث الإعدادات"
 
 msgid "Upper Band Stroke"
-msgstr ""
+msgstr "ضربة نطاق علوي"
 
 msgid "Use"
-msgstr ""
+msgstr "استخدم"
 
 msgid "Verification code has been sent to your email"
-msgstr ""
+msgstr "تم إرسال كود التحقق للبريد الإلكتروني الخاص بك"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "تم إرسال كود التحقق إلى"
 
 msgid "Verification token"
-msgstr ""
+msgstr "رمز التحقق"
 
 msgid "Verify new password"
-msgstr ""
+msgstr "التحقق من كلمة المرور الجديدة"
 
 msgid "Vertical Line"
-msgstr ""
+msgstr "خط عمودي"
 
 msgid "View"
-msgstr ""
+msgstr "عرض"
 
 msgid "View Historical Data"
-msgstr ""
+msgstr "عرض البيانات التاريخية"
 
 msgid "Volume Factor"
 msgstr ""
