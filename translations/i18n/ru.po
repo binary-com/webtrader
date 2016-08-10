@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-08-10 09:41+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-08-10 09:42+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -1060,7 +1060,7 @@ msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
 
 msgid "May"
-msgstr ""
+msgstr "Май"
 
 msgid "Memorable date"
 msgstr "Важная дата"
@@ -1072,13 +1072,13 @@ msgid "Middle Band Stroke"
 msgstr "Штрих средней линии"
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Мин: 10; Макс: 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Минимум 6 символов и минимум 1 цифра"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "Минус комиссия агента"
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -1089,9 +1089,8 @@ msgstr "Госпожа"
 msgid "Mon"
 msgstr "Пон"
 
-#, fuzzy
 msgid "Monday"
-msgstr "Вторичн."
+msgstr "Понедельник"
 
 msgid "Mother's maiden name"
 msgstr "Девичья фамилия матери"
