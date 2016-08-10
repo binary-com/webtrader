@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-08-10 09:43+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-08-10 09:54+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -782,7 +782,7 @@ msgid "If you select a"
 msgstr "Если Вы выбираете"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "Если Вы выбираете определенное"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -1170,12 +1170,11 @@ msgid ""
 "exclusively via payment agent"
 msgstr ""
 
-#, fuzzy
 msgid "Nov"
-msgstr "Нет"
+msgstr "Ноя"
 
 msgid "November"
-msgstr ""
+msgstr "Ноябрь"
 
 msgid "Now"
 msgstr "Сейчас"
@@ -1771,7 +1770,7 @@ msgid "Tertiary"
 msgstr "Третичн."
 
 msgid "The"
-msgstr ""
+msgstr " "
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -2058,7 +2057,7 @@ msgid "Your email"
 msgstr "Ваш эл. адрес"
 
 msgid "Your new account balance is"
-msgstr ""
+msgstr "Новый баланс Вашего счёта"
 
 msgid "Your transaction reference is"
 msgstr "Ссылка на Вашу сделку"
@@ -2067,7 +2066,7 @@ msgid "Your transaction reference number is"
 msgstr "Номер Вашей сделки"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Приблизить"
 
 msgid "admin"
 msgstr "администратор"
@@ -2089,9 +2088,8 @@ msgstr ""
 msgid "between"
 msgstr "между"
 
-#, fuzzy
 msgid "commission"
-msgstr "Разрешения"
+msgstr "комиссия"
 
 msgid "contact support"
 msgstr "связаться со службой поддержки"
@@ -2171,10 +2169,10 @@ msgstr ""
 "интерфейс идеально пгодходит активным трейдерам для работы с настольных ПК"
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "является обязательным. Текущий спред"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "в выбранное время, а"
 
 msgid "is the"
 msgstr "является"
@@ -2210,10 +2208,10 @@ msgid "oauth"
 msgstr "OAuth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "\"Сейчас\","
 
 msgid "payment agent"
-msgstr ""
+msgstr "платёжный агент"
 
 msgid "payments"
 msgstr "выплаты"
@@ -2243,10 +2241,10 @@ msgid "terms and conditions"
 msgstr "правила и условия"
 
 msgid "the"
-msgstr ""
+msgstr " "
 
 msgid "thereafter"
-msgstr ""
+msgstr "после начала"
 
 msgid "tick"
 msgstr "тик(а)"
@@ -2255,7 +2253,7 @@ msgid "ticks"
 msgstr "тика(ов)"
 
 msgid "trade"
-msgstr ""
+msgstr "торговать"
 
 msgid "trading experience"
 msgstr "опыт торговли"
@@ -2270,7 +2268,7 @@ msgid "yes"
 msgstr "да"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Прибыль"
