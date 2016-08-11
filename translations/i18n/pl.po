@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 00:06+0200\n"
-"PO-Revision-Date: 2016-08-11 20:12+0000\n"
-"Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
+"PO-Revision-Date: 2016-08-11 22:53+0000\n"
+"Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pl/>\n"
 "Language: pl\n"
@@ -49,6 +49,13 @@ msgid ""
 "Binary.com shall not in any circumstance be held responsible for "
 "transactions made between customers and Payment Agents"
 msgstr ""
+"- Firma Binary.com nie jest związana z żadnym z pośredników płatności "
+"wymienionych powyżej. Każdy pośrednik płatności działa jako niezależny "
+"usługodawca i nie jest w żaden sposób zatwierdzony ani popierany przez "
+"Binary.com. KLIENCI KORZYSTAJĄ Z USŁUG POŚREDNIKÓW NA WŁASNE RYZYKO. Zaleca "
+"się sprawdzenie danych pośredników płatności przed wysłaniem do nich "
+"pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za transakcje "
+"zawarte między klientami a pośrednikami płatności"
 
 msgid "-DI Stroke"
 msgstr ""
@@ -69,28 +76,28 @@ msgid "10"
 msgstr "10"
 
 msgid "10m"
-msgstr ""
+msgstr "10 min"
 
 msgid "15"
 msgstr "15"
 
 msgid "15m"
-msgstr ""
+msgstr "15 min"
 
 msgid "1d"
-msgstr ""
+msgstr "1 dzień"
 
 msgid "1h"
-msgstr ""
+msgstr "1 godz."
 
 msgid "1m"
-msgstr ""
+msgstr "1 min"
 
 msgid "2h"
-msgstr ""
+msgstr "2 godz."
 
 msgid "2m"
-msgstr ""
+msgstr "2 min"
 
 msgid "30"
 msgstr "30"
@@ -102,19 +109,19 @@ msgid "30-day turnover limit"
 msgstr "30-dniowy limit obrotów"
 
 msgid "30m"
-msgstr ""
+msgstr "30 min"
 
 msgid "3m"
-msgstr ""
+msgstr "3 min"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "Co najmniej 40 transakcji w ciągu ostatnich 12 miesięcy"
 
 msgid "4h"
-msgstr ""
+msgstr "4 godz."
 
 msgid "5m"
-msgstr ""
+msgstr "5 min"
 
 msgid "6-10 transactions in the past 12 months"
 msgstr "6-10 transakcji w ciągu ostatnich 12 miesięcy"
@@ -126,7 +133,7 @@ msgid "7-day turnover limit"
 msgstr "7-dniowy limit obrotów"
 
 msgid "8h"
-msgstr ""
+msgstr "8 godz."
 
 msgid "ADX MA Type"
 msgstr "Rodzaj ADX MA"
@@ -177,7 +184,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Wszystkie godziny są podane według czasu GMT (Greenwich Mean Time)"
 
 msgid "Amount"
-msgstr ""
+msgstr "Kwota"
 
 msgid "Amount Per Point"
 msgstr "Kwota na punkt"
@@ -195,16 +202,16 @@ msgid "Apply"
 msgstr "Zastosuj"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "Aplikuj, by zostać"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Ocena zdolności: UWAGA"
 
 msgid "Apr"
-msgstr ""
+msgstr "Kwiecień"
 
 msgid "April"
-msgstr ""
+msgstr "Kwiecień"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Czy na pewno chcesz usunąć ten token?"
@@ -225,13 +232,13 @@ msgid "Asset Index"
 msgstr "Indeks kapitałowy"
 
 msgid "Aug"
-msgstr ""
+msgstr "Sierpień"
 
 msgid "August"
-msgstr ""
+msgstr "Sierpień"
 
 msgid "Average"
-msgstr ""
+msgstr "Średnia"
 
 msgid "Back"
 msgstr "Wróć"
@@ -324,18 +331,17 @@ msgstr "Motywy wykresu"
 msgid "Chart background"
 msgstr "Tło wykresu"
 
-#, fuzzy
 msgid "Chart context menu"
-msgstr "Motywy wykresu"
+msgstr "Menu kontekstowe wykresu"
 
 msgid "Choose password"
 msgstr "Wybierz hasło"
 
 msgid "Choose your pereferred payment agent"
-msgstr ""
+msgstr "Wybierz preferowanego pośrednika płatności"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr ""
+msgstr "Wybierz preferowaną metodę płatności"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -350,7 +356,7 @@ msgid "Close Price"
 msgstr "Cena końcowa"
 
 msgid "Close all"
-msgstr ""
+msgstr "Zamknij wszystko"
 
 msgid "Closes"
 msgstr "Zamknięcie"
@@ -368,7 +374,7 @@ msgid "Config changes successful"
 msgstr "Wprowadzono zmiany konfiguracji"
 
 msgid "Confirm transfer"
-msgstr ""
+msgstr "Potwierdź przelew"
 
 msgid "Connection closed"
 msgstr "Połączenie zakończone"
@@ -477,12 +483,11 @@ msgstr "Data urodzenia"
 msgid "Days"
 msgstr "Dni"
 
-#, fuzzy
 msgid "Dec"
-msgstr "Odrzuć"
+msgstr "Grudzień"
 
 msgid "December"
-msgstr ""
+msgstr "Grudzień"
 
 msgid "Decline"
 msgstr "Odrzuć"
@@ -496,9 +501,8 @@ msgstr "Usuń poziom(y)"
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr "Wersja demo dla partnerów umożliwiająca dostęp do wykresów w IFRAME"
 
-#, fuzzy
 msgid "Deposit funds"
-msgstr "Wpłata USD"
+msgstr "Wpłać środki"
 
 msgid "Deposit of USD"
 msgstr "Wpłata USD"
@@ -522,10 +526,10 @@ msgstr ""
 "koncie"
 
 msgid "Done. The funds are being transferred to the payment agent"
-msgstr ""
+msgstr "Gotowe. Trwa przelewanie środków do pośrednika płatności"
 
 msgid "Done. The funds are transferred"
-msgstr ""
+msgstr "Gotowe. Środki zostały przelane"
 
 msgid "Dot"
 msgstr "Kropka"
@@ -542,27 +546,23 @@ msgstr "Kliknij dwa razy na dany przedmiot, aby go usunąć"
 msgid "Download CSV"
 msgstr "Pobierz plik CSV"
 
-#, fuzzy
 msgid "Download JPEG image"
-msgstr "Pobierz plik PNG"
+msgstr "Pobierz obraz JPEG"
 
-#, fuzzy
 msgid "Download PDF document"
-msgstr "Pobierz plik PNG"
+msgstr "Pobierz dokument PDF"
 
 msgid "Download PNG"
 msgstr "Pobierz plik PNG"
 
-#, fuzzy
 msgid "Download PNG image"
-msgstr "Pobierz plik PNG"
+msgstr "Pobierz obraz PNG"
 
 msgid "Download SVG"
 msgstr "Pobierz plik SVG"
 
-#, fuzzy
 msgid "Download SVG vector image"
-msgstr "Pobierz plik SVG"
+msgstr "Pobierz obraz wektorowy SVG"
 
 msgid "Download as"
 msgstr "Pobierz jako"
@@ -664,10 +664,10 @@ msgid "Favourite dish"
 msgstr "Ulubione danie"
 
 msgid "Feb"
-msgstr ""
+msgstr "Luty"
 
 msgid "February"
-msgstr ""
+msgstr "Luty"
 
 msgid "Final Price"
 msgstr "Cena końcowa"
@@ -697,14 +697,13 @@ msgid "Fri"
 msgstr "Pt."
 
 msgid "Friday"
-msgstr ""
+msgstr "Piątek"
 
 msgid "From"
 msgstr "Od"
 
-#, fuzzy
 msgid "Further instructions"
-msgstr "Budownictwo"
+msgstr "Dalsze instrukcje"
 
 msgid "Gray"
 msgstr "Szary"
@@ -716,10 +715,10 @@ msgid "Grid Light"
 msgstr "Grid Light"
 
 msgid "HIGH"
-msgstr ""
+msgstr "WYSOKI"
 
 msgid "Health"
-msgstr ""
+msgstr "Sektor opieki zdrowotnej"
 
 msgid "High Barrier"
 msgstr "Górny limit"
@@ -734,7 +733,7 @@ msgid "High barrier offset"
 msgstr "Wyrównanie górnego limitu"
 
 msgid "Higher"
-msgstr ""
+msgstr "Wyższy"
 
 msgid "Histogram Color"
 msgstr "Kolor histogramu"
@@ -755,10 +754,10 @@ msgid "Hours"
 msgstr "Godziny"
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "Przeczytałem/am i akceptuję"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr ""
+msgstr "WAŻNE ZASTRZEŻENIE"
 
 msgid ""
 "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
@@ -769,6 +768,13 @@ msgid ""
 "sending them any money. Binary.com shall not in any circumstance be held "
 "responsible for transactions made between customers and payment agents"
 msgstr ""
+"WAŻNE ZASTRZEŻENIE - Firma Binary.com nie jest związana z żadnym z "
+"pośredników płatności wymienionych powyżej. Każdy pośrednik płatności działa "
+"jako niezależny usługodawca i nie jest w żaden sposób zatwierdzony ani "
+"popierany przez Binary.com. KLIENCI KORZYSTAJĄ Z USŁUG POŚREDNIKÓW NA WŁASNE "
+"RYZYKO. Zaleca się sprawdzenie danych pośredników płatności przed wysłaniem "
+"do nich pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za "
+"transakcje zawarte między klientami a pośrednikami płatności"
 
 msgid "If you select a"
 msgstr "Jeśli wybierzesz"
@@ -783,13 +789,12 @@ msgstr ""
 "W celu poprawnego zastosowania motywu niezbędne jest pełne odświeżenie "
 "strony. Czy chcesz kontynuować?"
 
-#, fuzzy
 msgid ""
 "In order to properly apply this language, a full refresh of page is "
 "required. Are you sure you want to proceed?"
 msgstr ""
-"W celu poprawnego zastosowania motywu niezbędne jest pełne odświeżenie "
-"strony. Czy chcesz kontynuować?"
+"Aby poprawnie zmienić język, niezbędne jest pełne odświeżenie strony. Czy "
+"chcesz kontynuować?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -836,28 +841,26 @@ msgstr "Instrumenty"
 msgid "Investments & Dividends"
 msgstr "Inwestycje i dywidenda"
 
-#, fuzzy
 msgid "Jan"
-msgstr "i"
+msgstr "Styczeń"
 
 msgid "January"
-msgstr ""
+msgstr "Styczeń"
 
 msgid "Jul"
-msgstr ""
+msgstr "Lipiec"
 
 msgid "July"
-msgstr ""
+msgstr "Lipiec"
 
 msgid "Jump to"
 msgstr "Przejdź do"
 
-#, fuzzy
 msgid "Jun"
-msgstr "Niedz."
+msgstr "Czerwiec"
 
 msgid "June"
-msgstr ""
+msgstr "Czerwiec"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
@@ -893,7 +896,7 @@ msgid "Line"
 msgstr "Linia"
 
 msgid "Line Dot"
-msgstr ""
+msgstr "Linia kropkowana"
 
 msgid "Line Stroke"
 msgstr ""
@@ -920,16 +923,16 @@ msgid "Loading Profit Table"
 msgstr "Ładowanie tabeli zysków"
 
 msgid "Loading Real account opening"
-msgstr ""
+msgstr "Ładowanie sekcji Otwieranie prawdziwego konta"
 
 msgid "Loading Self-Exclusion"
-msgstr ""
+msgstr "Ładowanie sekcji Samodzielne wyłączenie"
 
 msgid "Loading Statement Table"
 msgstr ""
 
 msgid "Loading Token management"
-msgstr ""
+msgstr "Ładowanie sekcji Zarządzanie tokenami"
 
 msgid "Loading Trading Times"
 msgstr "Ładowanie godzin handlu"
@@ -946,9 +949,8 @@ msgstr "Ładowanie portfolio"
 msgid "Loading self-exclusion settings"
 msgstr "Ładowanie ustawień samodzielnego wyłączenia"
 
-#, fuzzy
 msgid "Loading..."
-msgstr "Ładowanie"
+msgstr "Ładowanie..."
 
 msgid "Log in"
 msgstr "Zaloguj się"
@@ -968,10 +970,10 @@ msgid "Logout"
 msgstr "Wylogowywanie"
 
 msgid "Long MA Type"
-msgstr ""
+msgstr "Rodzaj długiej MA"
 
 msgid "Long ROC Period"
-msgstr ""
+msgstr "Długi okres ROC"
 
 msgid "Long Stop Line Stroke"
 msgstr ""
@@ -992,7 +994,7 @@ msgid "Low barrier offset"
 msgstr "Wyrównanie dolnego limitu"
 
 msgid "Lower"
-msgstr ""
+msgstr "Niższy"
 
 msgid "Lower Band Stroke"
 msgstr ""
@@ -1010,13 +1012,17 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
+"Upewnij się, że przez wysłaniem wniosku, zostały zaakceptowane warunki "
+"płatności stosowane przez pośrednika. Po kliknięciu przycisku „Potwierdź "
+"przelew” środki zostaną wypłacone z Twojego konta i wysłane do wybranego "
+"pośrednika płatności. Pośrednik prześle Ci określoną kwotę (po potrąceniu "
+"prowizji) wybraną przez Ciebie preferowaną metodą płatności"
 
-#, fuzzy
 msgid "Mar"
-msgstr "Pan"
+msgstr "Marzec"
 
 msgid "March"
-msgstr ""
+msgstr "Marzec"
 
 msgid "Mass Period"
 msgstr "Okres masowy"
@@ -1048,9 +1054,8 @@ msgstr "Maksymalna łączna strata dzienna"
 msgid "Maximum number of open positions"
 msgstr "Maksymalna dzienna liczba otwartych pozycji"
 
-#, fuzzy
 msgid "May"
-msgstr "dzień"
+msgstr "Maj"
 
 msgid "Memorable date"
 msgstr "Łatwa do zapamiętania data"
@@ -1062,13 +1067,13 @@ msgid "Middle Band Stroke"
 msgstr ""
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Min.: 10 Maks.: 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimum 6 znaków i przynajmniej jedna cyfra"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "Minus prowizja pośrednika"
 
 msgid "Minutes"
 msgstr "Minuty"
@@ -1080,7 +1085,7 @@ msgid "Mon"
 msgstr "Pon."
 
 msgid "Monday"
-msgstr ""
+msgstr "Poniedziałek"
 
 msgid "Mother's maiden name"
 msgstr "Nazwisko panieńskie matki"
@@ -1156,13 +1161,14 @@ msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
 msgstr ""
+"Uwaga: Wypłaty poprzez pośredników płatności są dostępne tylko w przypadku "
+"dokonania wpłaty poprzez pośrednika płatności"
 
-#, fuzzy
 msgid "Nov"
-msgstr "Nie"
+msgstr "Listopad"
 
 msgid "November"
-msgstr ""
+msgstr "Listopad"
 
 msgid "Now"
 msgstr "Teraz"
@@ -1183,10 +1189,10 @@ msgid "OPEN"
 msgstr ""
 
 msgid "Oct"
-msgstr ""
+msgstr "Październik"
 
 msgid "October"
-msgstr ""
+msgstr "Październik"
 
 msgid "Offset"
 msgstr "Wyrównanie"
@@ -1245,7 +1251,7 @@ msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "Pole opcjonalne: do 20 znaków, może zawierać „+”"
 
 msgid "Other"
-msgstr ""
+msgstr "Inne"
 
 msgid "Other financial instruments trading experience"
 msgstr "Doświadczenie w handlowaniu innymi instrumentami finansowymi"
@@ -1283,13 +1289,11 @@ msgstr "Hasło zostało zaktualizowane"
 msgid "Passwords didn't match. Please type them again"
 msgstr "Hasła nie zgadzają się. Wprowadź je ponownie"
 
-#, fuzzy
 msgid "Payment agent"
-msgstr "Płatności"
+msgstr "Pośrednik płatności"
 
-#, fuzzy
 msgid "Payment agents"
-msgstr "Płatności"
+msgstr "Pośrednicy płatności"
 
 msgid "Payments"
 msgstr "Płatności"
@@ -1331,7 +1335,7 @@ msgid "Please choose at least one token scope"
 msgstr "Wybierz przynajmniej jeden zakres tokenu"
 
 msgid "Please confirm the following details in order to complete the transfer"
-msgstr ""
+msgstr "Potwierdź następujące dane w celu dokonania przelewu"
 
 msgid "Please enter a number between"
 msgstr "Wpisz liczbę z przedziału"
@@ -1465,7 +1469,7 @@ msgid "Potential profit"
 msgstr "Możliwy zysk"
 
 msgid "Pre-Defined"
-msgstr ""
+msgstr "Domyślne"
 
 msgid "Preferred reality-check interval"
 msgstr "Preferowany odstęp czasu pomiędzy kontrolami konta"
@@ -1480,7 +1484,7 @@ msgid "Primary"
 msgstr ""
 
 msgid "Print chart"
-msgstr ""
+msgstr "Drukuj wykres"
 
 msgid "Profit"
 msgstr "Zysk"
@@ -1546,10 +1550,10 @@ msgid "Reset to Defaults"
 msgstr "Przywróć domyślne"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "Resetuj powiększenie"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "Resetuj rozmiar powiększenia 1:1"
 
 msgid "Resources"
 msgstr "Zasoby"
@@ -1558,7 +1562,7 @@ msgid "Responsible Trading"
 msgstr "Odpowiedzialne handlowanie"
 
 msgid "Results"
-msgstr ""
+msgstr "Wyniki"
 
 msgid "Return"
 msgstr "Zwrot"
@@ -1591,7 +1595,7 @@ msgid "Sat"
 msgstr "Sob."
 
 msgid "Saturday"
-msgstr ""
+msgstr "Sobota"
 
 msgid "Secondary"
 msgstr ""
@@ -1626,19 +1630,17 @@ msgstr ""
 msgid "Sell Time"
 msgstr "Czas sprzedaży"
 
-#, fuzzy
 msgid "Send to account #"
-msgstr "Otwórz konto"
+msgstr "Wyślij na konto #"
 
-#, fuzzy
 msgid "Sent to account"
-msgstr "Otwórz konto"
+msgstr "Wyślij na konto"
 
 msgid "Sep"
-msgstr ""
+msgstr "wrz."
 
 msgid "September"
-msgstr ""
+msgstr "Wrzesień"
 
 msgid "Session"
 msgstr "Sesja"
@@ -1725,10 +1727,10 @@ msgid "Stake"
 msgstr "Stawka"
 
 msgid "Standard methods"
-msgstr ""
+msgstr "Standardowe metody"
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "Standardowa wypłata"
 
 msgid "Start Time"
 msgstr "Czas rozpoczęcia"
@@ -1782,7 +1784,7 @@ msgid "Stroke width"
 msgstr ""
 
 msgid "Submit"
-msgstr ""
+msgstr "Wyślij"
 
 msgid "Successfully added new token"
 msgstr "Dodano nowy token"
@@ -1791,7 +1793,7 @@ msgid "Sun"
 msgstr "Niedz."
 
 msgid "Sunday"
-msgstr ""
+msgstr "Niedziela"
 
 msgid "TEMA"
 msgstr "TEMA"
@@ -1802,9 +1804,8 @@ msgstr "TRIMA"
 msgid "Table"
 msgstr "Tabela"
 
-#, fuzzy
 msgid "Tel"
-msgstr "Wt."
+msgstr "Tel."
 
 msgid "Terms"
 msgstr "Warunki"
@@ -1860,19 +1861,19 @@ msgid "This contract won"
 msgstr "Ten kontrakt wygrał"
 
 msgid "This field is required"
-msgstr ""
+msgstr "To pole jest wymagane"
 
 msgid "Thu"
 msgstr "Czw."
 
 msgid "Thursday"
-msgstr ""
+msgstr "Czwartek"
 
 msgid "Tick Trade app"
 msgstr "Aplikacja Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Najmniejsza zmiana ceny {row.number}"
 
 msgid "Ticks"
 msgstr "Najmniejsze zmiany ceny"
@@ -1893,21 +1894,25 @@ msgid "Title"
 msgstr "Tytuł"
 
 msgid "To"
-msgstr ""
+msgstr "Do"
 
 msgid "To deposit money please contact the payment agent directly"
 msgstr ""
+"Aby wpłacić pieniądze, skontaktuj się bezpośrednio z pośrednikiem płatności"
 
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
 msgstr ""
+"Możesz skorzystać z usług autoryzowanego pośrednika płatności oferującego "
+"metody płatności i lokalne waluty nieobsługiwane przez Binary.com"
 
-#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
-msgstr "Wpisz kod weryfikacyjny wysłany na Twój adres e-mail"
+msgstr ""
+"Aby wypłacić środki, wpisz specjalny kod weryfikacyjny wysłany na Twój adres "
+"e-mail"
 
 msgid "Token"
 msgstr "Token"
@@ -1992,7 +1997,7 @@ msgid "Tradingview for Binary.com"
 msgstr "Widok handlowy Binary.com"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "Przelew na inne konto Binary"
 
 msgid "Try"
 msgstr "Wypróbuj"
@@ -2001,7 +2006,7 @@ msgid "Tue"
 msgstr "Wt."
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Wtorek"
 
 msgid "Turnover"
 msgstr "Obrót"
@@ -2013,7 +2018,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "Niestety Twoja przeglądarka ich nie obsługuje"
 
 msgid "Unlock"
-msgstr ""
+msgstr "Odblokuj"
 
 msgid "Up/Down"
 msgstr "Góra/dół"
@@ -2022,7 +2027,7 @@ msgid "Upcoming Events"
 msgstr "Nadchodzące wydarzenia"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "Aktualizuj ustawienia"
 
 msgid "Upper Band Stroke"
 msgstr ""
@@ -2076,7 +2081,7 @@ msgid "Wed"
 msgstr "Śr."
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Środa"
 
 msgid "While on the go, you can"
 msgstr "Będąc w drodze, możesz"
@@ -2085,10 +2090,10 @@ msgid "Windows"
 msgstr "Windows"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "Wypłać środki"
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "Wypłata poprzez pośrednika płatności"
 
 msgid "X-axis labels"
 msgstr "Etykiety osi X"
@@ -2105,9 +2110,8 @@ msgstr "Linia siatki osi Y"
 msgid "Y-axis labels"
 msgstr "Etykiety osi Y"
 
-#, fuzzy
 msgid "Yes"
-msgstr "tak"
+msgstr "Tak"
 
 msgid "You have excluded yourself until"
 msgstr "Ustawiono samodzielne wyłączenie do"
@@ -2159,7 +2163,7 @@ msgid "Your transaction reference number is"
 msgstr "Numer referencyjny transakcji to"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Powiększenie"
 
 msgid "admin"
 msgstr "admin"
@@ -2182,9 +2186,8 @@ msgstr ""
 msgid "between"
 msgstr "pomiędzy"
 
-#, fuzzy
 msgid "commission"
-msgstr "Pozwolenia"
+msgstr "prowizja"
 
 msgid "contact support"
 msgstr "skontaktuj się z działem pomocy"
@@ -2308,9 +2311,8 @@ msgstr "oauth"
 msgid "of \"Now\", the"
 msgstr ""
 
-#, fuzzy
 msgid "payment agent"
-msgstr "płatności"
+msgstr "pośrednik płatności"
 
 msgid "payments"
 msgstr "płatności"
@@ -2367,7 +2369,7 @@ msgid "yes"
 msgstr "tak"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr ""
