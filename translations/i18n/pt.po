@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-04 12:23+0200\n"
 "PO-Revision-Date: 2016-08-11 22:22+0000\n"
-"Last-Translator: Alcino Jorge <alcino@binary.com>\n"
+"Last-Translator: Gabriela Balieiro Moreira <eusouagabi@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pt/>\n"
 "Language: pt\n"
@@ -1189,6 +1189,7 @@ msgstr ""
 msgid "OPEN"
 msgstr ""
 
+#, fuzzy
 msgid "Oct"
 msgstr "Oct"
 
