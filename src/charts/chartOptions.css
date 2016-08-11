@@ -1,136 +1,167 @@
-.chartOptions {
-    padding: 5px;
-}
-
 .chartOptions .table {
-    display: inline-block;
-    vertical-align: top;
+    margin: 5px auto;
 }
-
-.chartOptions .table .row .cell {
-    padding-right: 5px;
-}
-
 .chartOptions .chartOptions_button {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid darkgrey;
-    background: white;
-    padding: 5px 5px 5px 5px;
-    height: 22px;
+    background: #f3f1f2;
+    height: 30px;
+    margin-left: 5px!important; 
+    color: #2a3052;
+    border-radius: 3px;
 }
-
-.chartOptions .button_selected {
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-bottom-right-radius: 0px;
-    -moz-border-bottom-left-radius: 0px;
-    -moz-border-top-left-radius: 5px;
-    -moz-border-top-right-radius: 5px;
-
-    border-top: 1px solid darkgrey;
-    border-left: 1px solid darkgrey;
-    border-right: 1px solid darkgrey;
-    border-bottom: none;
-    height: 26px;
-}
-
-.chartOptions .chartOptions_button:hover,
-.chartOptions .chartOptions_overlay.chartTypeOverlay > .table .row,
-.chartOptions .chartOptions_overlay.drawingToolOverlay .row .cell {
+.chartOptions .chartOptions_button:hover {
+    background: #dedede;
     cursor: pointer;
 }
-
+.chartOptions .button_selected {
+    color: #ffffff;
+    background: #2a3052;
+}
+.chartOptions .button_selected:hover {
+    color: #ffffff;
+    background: #2a3052;
+}
 .chartOptions .chartOptions_button span {
     display: inline-block;
 }
 
-.chartOptions .chartOptions-export-table {
-    float: right;
+.timeperiod {
+    width: 74px;
 }
-
-.chartOptions .chartOptions_overlay {
-    position: absolute;
-    z-index: +1;
-    background-color: white;
-    border-left: 1px solid darkgrey;
-    border-right: 1px solid darkgrey;
-    border-bottom: 1px solid darkgrey;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -moz-border-bottom-right-radius: 5px;
-    -moz-border-bottom-left-radius: 5px;
-}
-
-.chartOptions .chartOptions_overlay button {
-    width: 25px;
-    height: 25px;
-    padding: 1px 1px 1px 1px;
-    line-height: 1px;
-}
-
-.chartOptions .chartOptions_overlay.chartTypeOverlay > .table .row:hover {
-    background-color: darkgrey;
-}
-
-.chartOptions .chartOptions_overlay .cell {
-    padding: 5px;
-}
-.chartOptions .chartOptions_overlay .cell:nth-child(1) {
-    width: 12px;
-}
-
-.chartOptions .chartOptions_overlay.exportOverlay {
-    right: 10px;
-    left: initial;
-}
-
-.chartOptions .chartOptions_overlay.exportOverlay > div.row > div.cell {
-    padding-left: 5px;
-    padding-top: 5px;
-    padding-right: 5px;
-}
-
-.chartOptions .chartOptions_overlay.exportOverlay > .row > .cell {
-    padding: 0px;
-}
-
-.chartOptions .padding-bottom-5 {
-    padding-bottom: 5px !important;
-}
-
-.chartOptions .export-button {
-    width: 35px !important;
-}
-
-.chartOptions .vertical-bottom {
-    vertical-align: bottom;
-}
-
-.chartOptions .chartoptions-horizontal-line {
-    background-color: darkgrey;
-    height: 1px;
-    position: relative;
-}
-.countBubl {
-    float: right;
-    position: absolute;
-    margin-left: -13px;
-    margin-top: -3px;
-    background: rgb(64, 68, 72);
-    color: #fff;
-    font-size: 0.55em;
-    border-radius: 10px;
-    padding: 1px;
-    min-width: 10px;
+.timeperiod .vertical-bottom{
     text-align: center;
 }
+.chart_type {
+    width: 97px;
+    display: inline-flex;
+}
+
+.img img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+.chart_type .name {
+    text-align: center;
+}
+
+.vertical-bottom {
+    font-size: 0.8em;
+    width: 100%;
+    margin-top: 7.5px;
+}
+.vertical-bottom.button {
+    padding: 4px 8px 2px 8px;
+    background: #f3f1f2;
+    width: auto;
+    margin-right: 5px;
+    border-radius: 3px;
+    height: 15px;
+}
+.timePeriodOverlay .vertical-bottom.button{
+    width: 15px;
+    height: 18px;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.vertical-bottom.time {
+    width: auto;
+    margin-left: 5px;
+    color: #2a3052;
+}
+
+.chartOptions_overlay {
+    position: absolute;
+    z-index: +1;
+    margin-top: 4px!important;
+    margin-left: 5px!important;
+    background: #fff;
+    border: 1px solid #c2c2c2;
+    color: #2a3052;
+}
+.timePeriodOverlay, .drawingToolOverlay {
+    margin-top: 0px!important;
+}
+.chartTypeOverlay {
+    width: 95px;
+    margin-top: 0px!important;
+}
+.chartTypeOverlay .row, .chartTypeOverlay .row .cell, .timePeriodOverlay .row, .timePeriodOverlay .row .cell, .drawingToolOverlay .row, .drawingToolOverlay .row .cell{
+    display: flex;
+}
+.chartTypeOverlay .row .cell{
+    width: 100%;
+}
+.exportOverlay .row, .exportOverlay .row .cell {
+    display: flex;
+    width: 100%
+}
+.timePeriodOverlay .row .cell:nth-child(odd) {
+    width: 65px;
+}
+.drawingToolOverlay .row:not(:last-child), .timePeriodOverlay .row:not(:last-child), .exportOverlay .row:nth-child(2n):not(:last-child) {
+    border-bottom: 1px solid #cccccc;
+}
+.drawingToolOverlay .img img {
+    margin: 4px;
+}
+.chartTypeOverlay .row:nth-last-child(2), .chartTypeOverlay .row:nth-last-child(3)  {
+    border-bottom: 1px solid #cccccc;
+}
+.chartTypeOverlay .row.showborder{
+    border-bottom: 1px solid #cccccc;
+}
+.chartTypeOverlay .row:hover, .drawingToolOverlay .row:hover {
+    background: #dedede;
+    cursor: pointer;
+}
+[data-balloon] {
+    border-bottom: 0px;
+    cursor: pointer;
+}
+[data-balloon]:before {
+    padding: 0.5em;
+    font-size: 0.8em;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.chartOptions .button_selected [data-balloon]:before, .chartOptions .button_selected [data-balloon]:after {
+    opacity: 0;
+}
+.exportOverlay {
+    margin-top: 0px!important;
+}
+a img {
+    width: 50px;
+    height: 50px;
+    margin-left: -8px;
+    margin-right: -3px;
+}
+.exportOverlay .vertical-bottom.share{
+    height: 7.5px;
+}
+.exportOverlay .vertical-bottom {
+    margin-left: 7.5px;
+    height: 22.5px;
+}
+.exportOverlay input {
+    margin-left: 7.5px;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    width: 93%;
+}
+.exportOverlay .table.share-button {
+    margin-left: 8px;
+    margin-bottom: 0px;
+}
+.exportOverlay .table.download {
+    margin:0px 4px 10px 4px;
+}
+
+.exportOverlay .table.download span {
+    padding-top: 7.5px;
+    margin: 0px 0px 0px 5px;
+}
+
