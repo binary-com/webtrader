@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2016-08-05 20:27+0000\n"
+"PO-Revision-Date: 2016-08-11 05:27+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/it/>\n"
@@ -1125,48 +1125,53 @@ msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
 msgstr ""
+"Nota: il prelievo tramite agente di pagamento è disponibile solo se depositi "
+"esclusivamente tramite un agente di pagamento"
 
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 msgid "November"
-msgstr ""
+msgstr "Novembre"
 
 msgid "Now"
-msgstr ""
+msgstr "Ora"
 
 msgid "Number of bars on sides"
 msgstr ""
 
 msgid "OAuth App ID (Optional)"
-msgstr ""
+msgstr "ID App OAuth (facoltativo)"
 
 msgid "OAuth Server"
-msgstr ""
+msgstr "Server OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
 msgstr ""
 
 msgid "Oct"
-msgstr ""
+msgstr "Ott"
 
 msgid "October"
-msgstr ""
+msgstr "Ottobre"
 
 msgid "Offset"
 msgstr ""
 
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
 "not appropriate for you"
 msgstr ""
+"Sulla base delle informazioni fornite in relazione alla tua conoscenza ed "
+"esperienza, riteniamo che gli investimenti disponibili su questo sito "
+"internet non sono adatti a te"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una volta raggiunto questo limite, non puoi più depositare"
@@ -1202,7 +1207,7 @@ msgid ""
 msgstr ""
 
 msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr ""
+msgstr "Campo facoltativo, entro 20 caratteri e non può contenere '+'"
 
 msgid "Other"
 msgstr ""
