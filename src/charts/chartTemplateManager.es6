@@ -2,7 +2,7 @@
  * Created by amin on July 31, 2016.
  */
 define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chartWindow, rv) {
-  require(['text!charts/ChartTemplateManager.html']);
+  require(['text!charts/chartTemplateManager.html']);
 
   if(!local_storage.get('templates')) {
     local_storage.set('templates', []);
@@ -11,7 +11,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
   class ChartTemplateManager {
     constructor(root, dialog_id) {
       const state = this.init_state(root, dialog_id);
-      require(['text!charts/ChartTemplateManager.html'], html => {
+      require(['text!charts/chartTemplateManager.html'], html => {
         root.append(html);
         this.view = rv.bind(root[0], state);
       });
