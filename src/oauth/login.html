@@ -47,7 +47,7 @@
             rv-selectmenu="account.residence"
             rv-selectrefresh="account.residence_list">
 
-        <option rv-each-row="account.residence_list" rv-value="row.value">{row.text}</option>
+        <option rv-each-row="account.residence_list" rv-value="row.value" rv-disabled="row.disabled">{row.text}</option>
     </select>
 
     <span class='title'>Verification token</span>
