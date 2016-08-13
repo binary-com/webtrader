@@ -8,8 +8,8 @@
     <span class='ui-icon ui-icon-triangle-1-w'></span> Back
   </span>
   <div rv-if='templates.array | prop "length" | negate'>
-    <div>You haven't saved any templates yet.</div>
-    <div>Use the "Save as ..." button to save the chart settings: selected chart type and time period, indicators and comparisons.</div>
+    <div>You haven't saved any templates yet.</div><br/>
+    <div>Use the "Save as ..." button to save the chart settings, type, time period, indicators and comparisons.</div>
   </div>
   <div rv-if='templates.array | prop "length"'>
     <div rv-each-tmpl='templates.array' class='template'>
