@@ -294,6 +294,10 @@ function isLangSupported(lang) {
             || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
 }
 
+function get_cookie(name) {
+  var res = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+  return res ? res.pop() : '';
+}
 
 /* setup translating string literals */
 function setup_i18n_translation(dict) {
