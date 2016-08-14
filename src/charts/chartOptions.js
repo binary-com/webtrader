@@ -294,7 +294,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 var affiliates = getParameterByName('affiliates') || 'false';
                 if(affiliates === "false"){
                     console.log("#" + m_newTabId + " .exportOverlay");
-                    $("#" + m_newTabId + " .exportOverlay").css("right", "6px");
+                    $("#" + m_newTabId + " .exportOverlay").css("right", "0px");
                 }
                 
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);

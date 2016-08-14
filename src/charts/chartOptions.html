@@ -4,6 +4,7 @@
             <div class="cell">
                 <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector">
                     <span class="vertical-bottom">{timePeriod.name}</span>
+                    <span class="nav-caret triangle"></span>
                 </div>
                 <div class="chartOptions_overlay table timePeriodOverlay" rv-show="showTimePeriodSelector">
                     <div class="row">
@@ -54,6 +55,7 @@
                 <div class="chartOptions_button chart_type" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector">
                     <div class="img"><img rv-src="chartType.value | append '.svg' | prepend 'images/'"></div>
                     <span class="vertical-bottom name">{chartType.name}</span>
+                    <span class="nav-caret triangle"></span>
                 </div>
                 <div class="chartOptions_overlay chartTypeOverlay table" rv-show="showChartTypeSelector">
                     <div class="row" rv-each-item="chartTypes" rv-class-showBorder="item.showBorder">

@@ -25,14 +25,20 @@
 }
 
 .timeperiod {
-    width: 74px;
+    width: 87px;
 }
 .timeperiod .vertical-bottom{
-    text-align: center;
+    padding-left: 5px;
 }
 .chart_type {
     width: 97px;
-    display: inline-flex;
+}
+.vertical-bottom.name {
+    margin-left: -5px;
+}
+
+.img {
+    display: inline;
 }
 
 .img img{
@@ -41,14 +47,10 @@
     margin: 5px;
 }
 
-.chart_type .name {
-    text-align: center;
-}
-
 .vertical-bottom {
     font-size: 0.8em;
-    width: 100%;
-    margin-top: 7.5px;
+    margin-top: 11px;
+    line-height: 8px;
 }
 .vertical-bottom.button {
     padding: 4px 8px 2px 8px;
@@ -64,11 +66,16 @@
     text-align: center;
     margin-top: 3px;
     margin-bottom: 3px;
+    padding-top: 11px;
+}
+.vertical-bottom.button:hover {
+    background: #dedede;
 }
 .vertical-bottom.time {
     width: auto;
     margin-left: 5px;
     color: #2a3052;
+    margin-top: 13px;
 }
 
 .chartOptions_overlay {
@@ -140,7 +147,7 @@ a img {
     margin-right: -3px;
 }
 .exportOverlay .vertical-bottom.share{
-    height: 7.5px;
+    height: 8px;
 }
 .exportOverlay .vertical-bottom {
     margin-left: 7.5px;
@@ -161,7 +168,12 @@ a img {
 }
 
 .exportOverlay .table.download span {
-    padding-top: 7.5px;
+    padding-top: 11px;
+    height: 19px;
     margin: 0px 0px 0px 5px;
 }
-
+.nav-caret.triangle {
+    float: right;
+    margin-top: 13px;
+    margin-right: 5px;
+}
