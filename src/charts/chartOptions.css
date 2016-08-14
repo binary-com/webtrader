@@ -158,6 +158,11 @@ a img {
     font-size: 0.8em;
     margin-bottom: 10px;
     width: 93%;
+    border: 1px solid #c2c2c2;
+    box-shadow: none;
+    color: #2a3052;
+    padding: 0px 5px 0px 5px;
+    font-weight: 600;
 }
 .exportOverlay .table.share-button {
     margin-left: 8px;
