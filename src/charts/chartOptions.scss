@@ -1,0 +1,205 @@
+.chartOptions {
+  padding: 5px;
+
+  .table {
+    display: inline-block;
+    vertical-align: top;
+    .row .cell {
+      padding-right: 5px;
+    }
+  }
+
+  .chartOptions_button {
+    border-radius: 5px;
+    border: 1px solid darkgrey;
+    background: white;
+    padding: 5px 5px 5px 5px;
+    height: 22px;
+    margin-bottom: 4px;
+  }
+
+  .button_selected {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-top: 1px solid darkgrey;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    border-bottom: none;
+    height: 26px;
+    margin-bottom: 0px;
+  }
+
+  .chartOptions_button:hover,
+  .chartOptions_overlay.chartTypeOverlay > .table .row,
+  .chartOptions_overlay.drawingToolOverlay .row .cell {
+    cursor: pointer;
+  }
+
+  .chartOptions_button span {
+    display: inline-block;
+    img { max-height: 20px; }
+  }
+
+  .chartOptions-export-table {
+    float: right;
+  }
+
+  .chartOptions_overlay {
+    position: absolute;
+    z-index: +1;
+    background-color: white;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+  }
+
+  .chartOptions_overlay.exportOverlay button,
+  .chartOptions_overlay.timePeriodOverlay button {
+    width: 25px;
+    height: 25px;
+    padding: 1px 1px 1px 1px;
+    line-height: 1px;
+  }
+
+  .chartOptions_overlay.chartTypeOverlay > .table .row:hover {
+    background-color: darkgrey;
+  }
+
+  .chartOptions_overlay .cell {
+    padding: 5px;
+  }
+  .chartOptions_overlay .cell:nth-child(1) {
+    width: 12px;
+  }
+
+  .chartOptions_overlay.loadSaveOverlay {
+    // left: 10px;
+    right: 42px;
+    max-width: 800px;
+    width: calc(100% - 50px);
+    .chartoptions-horizontal-line {
+      width: calc(100% - 31px);
+    }
+    .chart-template-manager-root {
+      max-height: 310px;
+      overflow: auto;
+      .menu {
+        button {
+          background-color: #273051;
+          margin: 5px;
+          padding: 10px 35px;
+          display: block;
+        }
+      }
+      .save-as, .rename {
+        padding: 5px;
+
+        .title { margin: 5px 0; }
+        button { margin-top: 5px; }
+      }
+      .templates {
+        padding: 5px;
+
+        & > div > div {
+          margin: 5px 0;
+        }
+
+        .template {
+          display: inline-block;
+          width: 260px;
+          a {
+            color: #aaa;
+            font-weight: normal;
+            text-decoration: underline;
+            font-size: 12px;
+          }
+          .name {
+            transition: color 0.2s;
+            cursor: pointer;
+            margin-bottom: 3px;
+            &.active {
+              font-weight: bold;
+            }
+            &:hover {
+              color: #e98024;
+            }
+          }
+        }
+      }
+    }
+    .errors {
+      height: 1em;
+      .error {
+        color: red;
+        font-size: 12px;
+      }
+    }
+    span.back-arrow {
+      color: #aaa;
+      font-size: 12px;
+      cursor: pointer;
+      padding-bottom: 10px;
+       & > span {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .chartOptions_overlay.exportOverlay {
+    right: 10px;
+    left: initial;
+    > .row > .cell {
+      padding: 0px;
+    }
+    .row > div.cell {
+      padding-left: 5px;
+      padding-top: 5px;
+      padding-right: 5px;
+    }
+
+  }
+
+
+  .padding-bottom-5 {
+    padding-bottom: 5px !important;
+  }
+
+  .export-button {
+    width: 35px !important;
+  }
+
+  .vertical-bottom {
+    vertical-align: bottom;
+  }
+
+  .chartoptions-horizontal-line {
+    background-color: darkgrey;
+    height: 1px;
+    position: relative;
+  }
+
+  .countBubl {
+    float: right;
+    position: absolute;
+    margin-left: -13px;
+    margin-top: -3px;
+    background: rgb(64, 68, 72);
+    color: #fff;
+    font-size: 0.55em;
+    border-radius: 10px;
+    padding: 1px;
+    min-width: 10px;
+    text-align: center;
+  }
+}

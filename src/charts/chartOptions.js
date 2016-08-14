@@ -4,7 +4,7 @@
 
 define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, chartWindow, charts, moment, chartingRequestMap) {
 
-    var state = [], view = [];
+    var state = {}, view = {}, template_manager = {};
     var CANDLE_TYPE = 'candlestick',
         OHLC_TYPE = 'ohlc',
         LINE_TYPE = 'line',
@@ -26,6 +26,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         scope.showChartTypeSelector     = false;
         scope.showDrawingToolSelector   = false;
         scope.showExportSelector        = false;
+        scope.showLoadSaveSelector      = false;
     }
 
     //This is ugly, but doing it for now
@@ -118,6 +119,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     enableCrosshair : true,
                     showDrawingToolSelector : false,
                     showExportSelector : false,
+                    showLoadSaveSelector: false,
 
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),
@@ -128,7 +130,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     bloggerShareLink : bloggerShareTemplate.format(urlShareTemplate.format(m_instrumentCode, m_timePeriod), m_instrumentName + '(' + m_timePeriod + ')'),
                     vkShareLink : vkShareTemplate.format(urlShareTemplate.format(m_instrumentCode, m_timePeriod), m_instrumentName + '(' + m_timePeriod + ')')
 
-                }, view[m_newTabId] = null;
+                };
+                view[m_newTabId] = null;
 
                 state[m_newTabId].toggleTimerPeriodSelector = function(event, scope) {
                     var temp = !scope.showTimePeriodSelector;
@@ -191,6 +194,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         scope.vkShareLink = vkShareTemplate.format(encodeURIComponent(urlShareTemplate.format(m_instrumentCode, m_timePeriod)), m_instrumentName + '(' + m_timePeriod + ')');
                         setTopHeaderPosAndWidth_timePeriodOvl(timePeriod);
 
+                        $('#' + scope.newTabId).trigger('chart-time-period-changed', timePeriod);
                     }
                 };
 
@@ -234,6 +238,12 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     scope.showExportSelector = temp;
                 };
 
+                state[m_newTabId].toggleLoadSaveSelector = function(event, scope) {
+                    var temp = !scope.showLoadSaveSelector;
+                    hideOverlays(scope);
+                    scope.showLoadSaveSelector = temp;
+                };
+
                 state[m_newTabId].export = function(event, scope) {
                     var exportType = event.target.dataset.exporttype;
                     if (exportType) {
@@ -264,7 +274,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 $("#" + m_newTabId).on('chart-overlay-add', function(e, overlay){
                     var chart = $("#" + m_newTabId + "_chart").highcharts();
                     state[m_newTabId].overlayCount = chart.get_overlay_count();
-                
+
                 });
                 $("#" + m_newTabId).on('chart-overlay-remove', function(e, overlay){
                     var chart = $("#" + m_newTabId + "_chart").highcharts();
@@ -280,9 +290,23 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 setTopHeaderPosAndWith_chartType(m_chartType, m_newTabId);
 
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
+                require(['charts/chartTemplateManager'], function(templateManager) {
+                  var root = $html.find('.chart-template-manager-root');
+                  template_manager[m_newTabId] = templateManager.init(root, m_newTabId);
+                })
 
             });
 
+        },
+
+        /* allow settings to be updated when a new chart template is applied */
+        updateOptions: function(newTabId, chartType, timePeriod, indicatorsCount, overlayCount) {
+          var s = state[newTabId];
+          if(!s) return;
+          s.chartType = chartType;
+          s.timePeriod = timePeriod;
+          s.indicatorsCount = indicatorsCount;
+          s.overlayCount = overlayCount;
         },
 
         disableEnableCandlestickAndOHLC : function (newTabId, enable) {
@@ -307,6 +331,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         cleanBinding: function(newTabId) {
             if (view[newTabId]) {
                 view[newTabId].unbind();
+                template_manager[newTabId] && template_manager[newTabId].unbind();
+                delete template_manager[newTabId];
                 delete view[newTabId];
                 delete state[newTabId];
             }

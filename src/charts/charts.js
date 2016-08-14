@@ -3,20 +3,21 @@
  */
 
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
-        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', 
+        "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json',
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
         ],
   function ( $, chartingRequestMap, liveapi, ohlc_handler, currentPrice, indicators, moment, _, indicators_json ) {
 
     "use strict";
 
-    var indicator_ids = _(JSON.parse(indicators_json)).values().map('id').value();
+    var indicator_values = _(JSON.parse(indicators_json)).values().value();
     Highcharts.Chart.prototype.get_indicators = function() {
       var chart = this;
       var indicators = [];
       if(chart.series.length > 0){
-          indicator_ids.forEach(function(id){
-            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, options: chart.series[0][id][0].options})
+          indicator_values.forEach(function(ind){
+            var id = ind.id;
+            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, name: ind.long_display_name, options: chart.series[0][id][0].options})
           });
       }
 
@@ -38,7 +39,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
       var chart = this;
       var series = [];
       if(chart.series.length > 0){
-          indicator_ids.forEach(function(id){
+          indicator_values.forEach(function(ind){
+            var id = ind.id;
             chart.series[0][id] && chart.series[0][id][0] && series.push({id: id, series: chart.series[0][id] })
           });
       }
@@ -209,10 +211,17 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 overlays = options.overlays;
                 chart.destroy();
             }
-            else if(options.indicators) { /* this comes only from tracker.js */
+            if(options.indicators) { /* this comes only from tracker.js & ChartTemplateManager.js */
               indicators = options.indicators;
               overlays = options.overlays;
               $(containerIDWithHash).data("overlayCount", overlays.length);
+            }
+
+            /* ingore overlays if chart type is candlestick or ohlc */
+            if ((options.type === 'candlestick' || options.type === 'ohlc') && overlays.length > 0) {
+              /* we should not come here, logging a warning as an alert if we somehow do */
+              console.warn("Ingoring overlays because chart type is " + options.type);
+              overlays = [];
             }
 
             //Save some data in DOM
@@ -405,7 +414,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
 
         generate_csv : generate_csv,
 
-        refresh : function ( containerIDWithHash, newTimePeriod, newChartType ) {
+        refresh : function ( containerIDWithHash, newTimePeriod, newChartType, indicators, overlays ) {
             var instrumentCode = $(containerIDWithHash).data("instrumentCode");
             if (newTimePeriod)  {
                 //Unsubscribe from tickstream.
@@ -414,33 +423,39 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 $(containerIDWithHash).data("timePeriod", newTimePeriod);
             }
             if(newChartType) $(containerIDWithHash).data("type", newChartType);
+            else newChartType = $(containerIDWithHash).data("type", newChartType);
 
             //Get all series details from this chart
             var chart = $(containerIDWithHash).highcharts();
             var chartObj = this;
             var loadedMarketData = [], series_compare = undefined;
-            $(chart.series).each(function (index, series) {
+            /* for ohlc and candlestick series_compare must NOT be percent */
+            if (newChartType !== 'ohlc' && newChartType !== 'candlestick') {
+              $(chart.series).each(function (index, series) {
                 console.log('Refreshing : ', series.options.isInstrument, series.options.name);
                 if (series.options.isInstrument) {
                     loadedMarketData.push(series.name);
                     //There could be one valid series_compare value per chart
                     series_compare = series.options.compare;
                 }
-            });
+              });
+            }
             require(['instruments/instruments'], function (ins) {
-                var overlays = [];
-                loadedMarketData.forEach(function (value) {
-                    var marketDataObj = ins.getSpecificMarketData(value);
-                    if (marketDataObj.symbol != undefined && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
-                    {
-                        var overlay = {
-                            symbol: marketDataObj.symbol,
-                            displaySymbol: value,
-                            delay_amount: marketDataObj.delay_amount
-                        };
-                        overlays.push(overlay);
-                    }
-                });
+                if(!overlays) {
+                  overlays = [];
+                  loadedMarketData.forEach(function (value) {
+                      var marketDataObj = ins.getSpecificMarketData(value);
+                      if (marketDataObj.symbol != undefined && $.trim(marketDataObj.symbol) != $(containerIDWithHash).data("instrumentCode"))
+                      {
+                          var overlay = {
+                              symbol: marketDataObj.symbol,
+                              displaySymbol: value,
+                              delay_amount: marketDataObj.delay_amount
+                          };
+                          overlays.push(overlay);
+                      }
+                  });
+                }
                 chartObj.drawChart( containerIDWithHash, {
                     instrumentCode : instrumentCode,
                     instrumentName : $(containerIDWithHash).data("instrumentName"),
@@ -448,7 +463,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     type : $(containerIDWithHash).data("type"),
                     series_compare : series_compare,
                     delayAmount : $(containerIDWithHash).data("delayAmount"),
-                    overlays: overlays
+                    overlays: overlays,
+                    indicators: indicators
                 });
             });
 
