@@ -10,7 +10,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
         $(this).find(".chartSubContainer").width($(this).width() - 10);
         //Because of title taking space, we have to reduce height
         $(this).find(".chartSubContainer").height($(this).height() - 55);
-
+        $(this).trigger("resize-event");
         var containerIDWithHash = "#" + $(this).find(".chartSubContainer").attr("id");
         require(["charts/charts"], function(charts) {
             charts.triggerReflow(containerIDWithHash);
@@ -51,9 +51,9 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                     require(["charts/charts"], function( charts ) {
                         charts.refresh( '#' + id + '_chart' );
                     });
-                }
+                },
+                width: 374,
             }, options );
-
             var dialog = windows.createBlankWindow($chartWindowHtml, options),
                 id = dialog.attr('id');
             dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()

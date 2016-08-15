@@ -1,41 +1,42 @@
 .chartOptions {
-  padding: 5px;
 
   .table {
-    display: inline-block;
-    vertical-align: top;
+    margin: 5px auto;
     .row .cell {
-      padding-right: 5px;
+
     }
   }
 
   .chartOptions_button {
-    border-radius: 5px;
-    border: 1px solid darkgrey;
-    background: white;
-    padding: 5px 5px 5px 5px;
-    height: 22px;
-    margin-bottom: 4px;
+    background: #f3f1f2;
+    height: 30px;
+    margin-left: 5px!important; 
+    color: #2a3052;
+    border-radius: 2px;
+    &:hover {
+      background: #dedede;
+      cursor: pointer;
+    }
   }
 
   .button_selected {
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-
-    border-top: 1px solid darkgrey;
-    border-left: 1px solid darkgrey;
-    border-right: 1px solid darkgrey;
-    border-bottom: none;
-    height: 26px;
-    margin-bottom: 0px;
+    color: #ffffff;
+    background: #2a3052;
+    &:hover {
+      color: #ffffff;
+      background: #2a3052;
+    }
+    [data-balloon] {
+      &:before, &:after {
+        opacity:0;
+      }
+    }
   }
 
-  .chartOptions_button:hover,
-  .chartOptions_overlay.chartTypeOverlay > .table .row,
-  .chartOptions_overlay.drawingToolOverlay .row .cell {
-    cursor: pointer;
+  .nav-caret.triangle {
+    float: right;
+    margin-top: 13px;
+    margin-right: 5px;
   }
 
   .chartOptions_button span {
@@ -43,49 +44,185 @@
     img { max-height: 20px; }
   }
 
-  .chartOptions-export-table {
-    float: right;
-  }
-
   .chartOptions_overlay {
+    margin-top: 0px;
     position: absolute;
     z-index: +1;
-    background-color: white;
-    border-left: 1px solid darkgrey;
-    border-right: 1px solid darkgrey;
-    border-bottom: 1px solid darkgrey;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -moz-border-bottom-right-radius: 5px;
-    -moz-border-bottom-left-radius: 5px;
+    margin-left: 5px!important;
+    background: #fff;
+    border: 1px solid #c2c2c2;
+    color: #2a3052;
   }
 
-  .chartOptions_overlay.exportOverlay button,
-  .chartOptions_overlay.timePeriodOverlay button {
-    width: 25px;
-    height: 25px;
-    padding: 1px 1px 1px 1px;
-    line-height: 1px;
+  .img {
+    display: inline;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+    }
   }
 
-  .chartOptions_overlay.chartTypeOverlay > .table .row:hover {
-    background-color: darkgrey;
+  .vertical-bottom {
+    font-size: 0.8em;
+    margin-top: 11px;
+    line-height: 8px;
+    &.name {
+      margin-left: -5px;
+    }
+    &.button {
+      padding: 4px 8px 2px 8px;
+      background: #f3f1f2;
+      width: auto;
+      margin-right: 5px;
+      border-radius: 3px;
+      height: 15px;
+      &:hover {
+        background: #dedede;
+      }
+    }
+    &.time {
+      width: auto;
+      margin-left: 5px;
+      color: #2a3052;
+      margin-top: 13px;
+    }
   }
 
-  .chartOptions_overlay .cell {
-    padding: 5px;
+  .timeperiod {
+    width: 87px;
+    .vertical-bottom{
+      padding-left: 5px;
+    }
   }
-  .chartOptions_overlay .cell:nth-child(1) {
-    width: 12px;
+
+  .timePeriodOverlay {
+    .vertical-bottom.button{
+      width: 15px;
+      height: 18px;
+      text-align: center;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      padding-top: 11px;
+    }
+    .row {
+      display: flex;
+      .cell {
+        display: flex;
+        &:nth-child(odd) {
+          width: 65px;
+        }
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid #c2c2c2;
+      }
+    }
+  }
+
+  .chart_type {
+      width: 97px;
+  }
+
+  .chartTypeOverlay {
+    width: 95px;
+
+    .row {
+      display: flex;
+      &:nth-last-child(2), &:nth-last-child(3), &.showborder{
+        border-bottom: 1px solid #c2c2c2;
+      }
+      &:hover {
+        background: #dedede;
+        cursor: pointer;
+      }
+      .cell {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+
+  [data-balloon] {
+    border-bottom: 0px;
+    cursor: pointer;
+    &:before {
+      padding: 0.5em;
+      font-size: 0.8em;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+    }
+  }
+
+  .drawingToolOverlay {
+    .row {
+      display: flex;
+      &:not(:last-child) {
+        border-bottom: 1px solid #c2c2c2;
+      }
+      :hover {
+        background: #dedede;
+        cursor: pointer;
+      }
+      .img img {
+        margin: 4px;
+      }
+    }
+  }
+
+  .exportOverlay {
+    .row {
+      display: flex;
+      width: 100%;
+      &:nth-child(2n):not(:last-child) {
+        border-bottom: 1px solid #c2c2c2;
+      }
+      .cell {
+        display: flex;
+        width: 100%;
+        a img {
+          width: 50px;
+          height: 50px;
+          margin-left: -8px;
+          margin-right: -3px;
+        }
+        .table.share-button {
+          margin-left: 8px;
+          margin-bottom: 0px;
+        }
+        .table.download {
+          margin:0px 4px 10px 4px;
+          span {
+            padding-top: 11px;
+            height: 19px;
+            margin: 0px 0px 0px 5px;
+          }
+        }
+        .vertical-bottom {
+          margin-left: 7.5px;
+          height: 22.5px;
+          &.share{
+            height: 8px;
+          }
+        }
+        input {
+          margin-left: 7.5px;
+          font-size: 0.8em;
+          margin-bottom: 10px;
+          width: 93%;
+          border: 1px solid #c2c2c2;
+          box-shadow: none;
+          color: #2a3052;
+          padding: 0px 5px 0px 5px;
+          font-weight: 600;
+        }
+      }
+    }
   }
 
   .chartOptions_overlay.loadSaveOverlay {
-    // left: 10px;
-    right: 42px;
     max-width: 800px;
-    width: calc(100% - 50px);
     .chartoptions-horizontal-line {
       width: calc(100% - 31px);
     }
@@ -154,52 +291,5 @@
         top: 2px;
       }
     }
-  }
-
-  .chartOptions_overlay.exportOverlay {
-    right: 10px;
-    left: initial;
-    > .row > .cell {
-      padding: 0px;
-    }
-    .row > div.cell {
-      padding-left: 5px;
-      padding-top: 5px;
-      padding-right: 5px;
-    }
-
-  }
-
-
-  .padding-bottom-5 {
-    padding-bottom: 5px !important;
-  }
-
-  .export-button {
-    width: 35px !important;
-  }
-
-  .vertical-bottom {
-    vertical-align: bottom;
-  }
-
-  .chartoptions-horizontal-line {
-    background-color: darkgrey;
-    height: 1px;
-    position: relative;
-  }
-
-  .countBubl {
-    float: right;
-    position: absolute;
-    margin-left: -13px;
-    margin-top: -3px;
-    background: rgb(64, 68, 72);
-    color: #fff;
-    font-size: 0.55em;
-    border-radius: 10px;
-    padding: 1px;
-    min-width: 10px;
-    text-align: center;
   }
 }
