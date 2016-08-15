@@ -34,7 +34,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
     function hideOverlays(scope) {
         scope.showTimePeriodSelector = false;
-        scope.showLoadSaveSelector = false;
+        scope.toggleLoadSaveSelector(null, scope);
         scope.toggleChartTypeSelector(null, scope);
         scope.toggleDrawingToolSelector(null, scope);
         scope.toggleExportSelector(null, scope);
@@ -110,6 +110,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         });
         new Image().src="images/share-w.svg";
         new Image().src="images/drawing-w.svg";
+        new Image().src="images/load-save-icon-w.svg";
     }
 
     return {
@@ -273,8 +274,15 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleLoadSaveSelector = function(event, scope) {
                     var temp = !scope.showLoadSaveSelector;
-                    hideOverlays(scope);
-                    scope.showLoadSaveSelector = temp;
+                    var ele = $("#" + scope.newTabId + " [data-balloon=Save] .img img")[0];
+                    if(temp==true && event){
+                        hideOverlays(scope);
+                        scope.showLoadSaveSelector = temp;
+                        ele.src = ele.src.replace(".svg","-w.svg");
+                    } else{
+                        scope.showLoadSaveSelector = false;
+                        ele.src = ele.src.replace("-w","");
+                    }
                 };
 
                 state[m_newTabId].export = function(event, scope) {
