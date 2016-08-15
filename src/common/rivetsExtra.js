@@ -38,6 +38,13 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             return true;
         return false;
     }
+    rv.formatters['trim'] = function (value) {
+        return _.trim(value);
+    };
+    /* rivets formatter to negate a value */
+    rv.formatters['negate'] = function (value) {
+        return !value;
+    };
     /* rivets formatter to check equallity of two values */
     rv.formatters.eq = function (value, other) {
         return value === other;
