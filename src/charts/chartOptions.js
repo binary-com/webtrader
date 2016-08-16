@@ -91,8 +91,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var shareButton = ele.find('[data-balloon="Share chart"]');
         var positionRight = ele.width() - (shareButton.offset().left + shareButton.outerWidth() - ele.offset().left) - 10;
         // Required for positioning chart overlay options if chart is not for affiliates.
-        var affiliates = getParameterByName('affiliates') || 'false';
-                    
+        var affiliates = getParameterByName('affiliates') || 'false';   
         if(positionRight > 0) {
             if(ele.width() > 420){
                 state[newTabId].showChartTypeLabel = true;
