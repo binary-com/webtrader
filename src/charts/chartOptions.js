@@ -93,7 +93,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         // Required for positioning chart overlay options if chart is not for affiliates.
         var affiliates = getParameterByName('affiliates') || 'false';
                     
-        if(positionRight > 0 && ele.width() > 373) {
+        if(positionRight > 0 && ele.width() > 420) {
             state[newTabId].showChartTypeLabel = true;
             state[newTabId].timePeriod_name = state[newTabId].timePeriod.name;
             timePeriodButton.css("width","87px");
