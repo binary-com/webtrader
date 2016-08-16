@@ -56,11 +56,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#macd_dash_style .dd-selected-image').css('max-width', '115px');
+                    $('#macd_dash_style .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#macd_dash_style .dd-option-image').css('max-width', '115px');
+            $('#macd_dash_style .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             $("#macd_line_stroke").css("background", '#2a277a');
             $("#signal_line_stroke").css("background", 'red');

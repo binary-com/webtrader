@@ -90,11 +90,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#bbands_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#bbands_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#bbands_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#bbands_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             
 			$html.dialog({

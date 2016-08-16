@@ -61,11 +61,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
                 width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#mama_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#mama_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#mama_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#mama_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             $html.dialog({
                 autoOpen: false,
