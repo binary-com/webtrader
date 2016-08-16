@@ -31,6 +31,11 @@
         opacity:0;
       }
     }
+    &[data-balloon] {
+      &:before, &:after {
+        opacity:0;
+      }
+    }
   }
 
   .nav-caret.triangle {
@@ -72,10 +77,10 @@
       margin-left: -5px;
     }
     &.button {
-      padding: 4px 8px 2px 8px;
+      padding: 4px 7px 2px 7px;
       background: #f3f1f2;
       width: auto;
-      margin-right: 5px;
+      margin-right: 4px;
       border-radius: 3px;
       height: 15px;
       &:hover {
@@ -91,7 +96,6 @@
   }
 
   .timeperiod {
-    width: 87px;
     .vertical-bottom{
       padding-left: 5px;
     }
@@ -111,17 +115,13 @@
       .cell {
         display: flex;
         &:nth-child(odd) {
-          width: 65px;
+          width: 60px;
         }
       }
       &:not(:last-child) {
         border-bottom: 1px solid #c2c2c2;
       }
     }
-  }
-
-  .chart_type {
-      width: 97px;
   }
 
   .chartTypeOverlay {

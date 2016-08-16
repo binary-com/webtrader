@@ -2,8 +2,8 @@
     <div class="table">
         <div class="row">
             <div class="cell">
-                <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector">
-                    <span class="vertical-bottom">{timePeriod.name}</span>
+                <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector" data-balloon="Time interval" data-balloon-pos="down">
+                    <span class="vertical-bottom" >{timePeriod_name}</span>
                     <span class="nav-caret triangle"></span>
                 </div>
                 <div class="chartOptions_overlay table timePeriodOverlay" rv-show="showTimePeriodSelector">
@@ -52,9 +52,9 @@
             </div>
             
             <div class="cell">
-                <div class="chartOptions_button chart_type" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector">
+                <div class="chartOptions_button chart_type" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector" data-balloon="Chart type" data-balloon-pos="down">
                     <div class="img"><img rv-src="chartType.value | append '.svg' | prepend 'images/'"></div>
-                    <span class="vertical-bottom name">{chartType.name}</span>
+                    <span class="vertical-bottom name" rv-show="showChartTypeLabel">{chartType.name}</span>
                     <span class="nav-caret triangle"></span>
                 </div>
                 <div class="chartOptions_overlay chartTypeOverlay table" rv-show="showChartTypeSelector">
@@ -91,7 +91,7 @@
 
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleDrawingToolSelector" rv-class-button_selected="showDrawingToolSelector">
-                    <span data-balloon="Drawings" data-balloon-pos="down">
+                    <span data-balloon="Drawing tools" data-balloon-pos="down">
                         <div class="img"><img src="images/drawing.svg"></div>
                     </span>
                 </div>
@@ -115,8 +115,8 @@
 
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleLoadSaveSelector" rv-class-button_selected="showLoadSaveSelector">
-                  <span data-balloon="Save" data-balloon-pos="down">
-                    <div class="img"><img src="images/load-save-icon.svg" title="LoadSave"></div>
+                  <span data-balloon="Chart template" data-balloon-pos="down">
+                    <div class="img"><img src="images/load-save-icon.svg"></div>
                   </span>
                 </div>
                 <div class="chartOptions_overlay table font-s loadSaveOverlay" rv-show="showLoadSaveSelector">
@@ -126,7 +126,7 @@
             </div>
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleExportSelector" rv-class-button_selected="showExportSelector">
-                    <span data-balloon="Share" data-balloon-pos="down">
+                    <span data-balloon="Share chart" data-balloon-pos="down">
                         <div class="img"><img src="images/share.svg"></div>
                     </span>
                 </div>

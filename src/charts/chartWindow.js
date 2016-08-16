@@ -51,8 +51,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                     require(["charts/charts"], function( charts ) {
                         charts.refresh( '#' + id + '_chart' );
                     });
-                },
-                width: 374,
+                }
             }, options );
             var dialog = windows.createBlankWindow($chartWindowHtml, options),
                 id = dialog.attr('id');
