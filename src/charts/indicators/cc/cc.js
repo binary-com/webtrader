@@ -69,11 +69,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#cc_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#cc_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#cc_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#cc_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#cc_levels').DataTable({

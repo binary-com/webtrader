@@ -69,11 +69,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#trange_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#trange_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#trange_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#trange_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#trange_levels').DataTable({
