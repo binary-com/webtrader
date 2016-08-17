@@ -188,7 +188,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       var contract = data.proposal_open_contract;
       var id = contract.contract_id,
           bid_price = contract.bid_price;
-      if(id !== state.contract_id) { return; }
+      if(id != state.contract_id) { return; }
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
@@ -342,8 +342,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           table: {
             is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
-            current_spot_time: undefined,
-            current_spot: undefined,
+            current_spot_time: proposal.current_spot_time,
+            current_spot: proposal.current_spot,
             contract_type: proposal.contract_type,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
