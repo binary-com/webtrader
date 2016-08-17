@@ -105,6 +105,29 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
             return dialog;
         },
 
+        // This is for affiliates. Hope it works. Fingers crossed.
+        add_chart_options: function(id, options) {
+          var dialog = $("#"+id);
+          options_store[id] = options;
+          options_store[id].indicators = options_store[id].indicators || [];
+          options_store[id].overlays = options_store[id].overlays || [];
+          dialog.on('chart-type-changed', function(e, type){
+            options_store[id].type = type;
+          });
+          dialog.on('chart-time-period-changed',function(e, timePeriod){
+            options_store[id].timePeriod = timePeriod;
+          });
+          dialog.on('chart-indicators-changed',function(e, chart){
+            options_store[id].indicators = chart.get_indicators();
+          });
+          dialog.on('chart-overlay-add',function(e, overlay){
+            options_store[id].overlays.push(overlay);
+          });
+          dialog.on('chart-overlay-remove',function(e, displaySymbol){
+            _.remove(options_store[id].overlays, displaySymbol);
+          });
+        },
+
         totalWindows : function() {
             return $("div.webtrader-dialog").length;
         },
