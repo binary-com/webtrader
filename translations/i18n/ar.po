@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-22 17:51+0200\n"
-"PO-Revision-Date: 2016-08-10 19:28+0000\n"
+"PO-Revision-Date: 2016-08-17 22:28+0000\n"
 "Last-Translator: Ahmed Kotb <ahmedmohamedkotp@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ar/>\n"
@@ -329,9 +329,8 @@ msgstr "مواضيع الرسم البياني"
 msgid "Chart background"
 msgstr "خلفية الرسم البياني"
 
-#, fuzzy
 msgid "Chart context menu"
-msgstr "مواضيع الرسم البياني"
+msgstr "قائمة سياق الرسم البياني"
 
 msgid "Choose password"
 msgstr "اختر كلمة سر"
@@ -480,9 +479,8 @@ msgstr "تاريخ الميلاد"
 msgid "Days"
 msgstr "أيام"
 
-#, fuzzy
 msgid "Dec"
-msgstr "هبوط"
+msgstr "ديسمبر"
 
 msgid "December"
 msgstr "ديسمبر"
@@ -500,9 +498,8 @@ msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr ""
 "تجريبي للمنتسبين للوصول إلى الرسوم البيانية ل Binary.com في الإطار المضمن"
 
-#, fuzzy
 msgid "Deposit funds"
-msgstr "إيداع بالدولار"
+msgstr "إيداع الأموال"
 
 msgid "Deposit of USD"
 msgstr "إيداع بالدولار"
@@ -544,27 +541,23 @@ msgstr "أنقر نقراً مزدوجاً على الموضوع للإزالة"
 msgid "Download CSV"
 msgstr "تحميل ملف CSV"
 
-#, fuzzy
 msgid "Download JPEG image"
-msgstr "تحميل ملف PNG"
+msgstr "تحميل صورة بصيغة JPEG"
 
-#, fuzzy
 msgid "Download PDF document"
-msgstr "تحميل ملف PNG"
+msgstr "تحميل ملف PDF"
 
 msgid "Download PNG"
 msgstr "تحميل ملف PNG"
 
-#, fuzzy
 msgid "Download PNG image"
-msgstr "تحميل ملف PNG"
+msgstr "تحميل صورة بصيغة PNG"
 
 msgid "Download SVG"
 msgstr "تحميل ملف SVG"
 
-#, fuzzy
 msgid "Download SVG vector image"
-msgstr "تحميل ملف SVG"
+msgstr "تحميل ناقل صورة بصيغة SVG"
 
 msgid "Download as"
 msgstr "تحميل بصيغة"
@@ -704,9 +697,8 @@ msgstr "الجمعة"
 msgid "From"
 msgstr "من"
 
-#, fuzzy
 msgid "Further instructions"
-msgstr "الإنشاءات"
+msgstr "مزيد من التعليمات"
 
 msgid "Gray"
 msgstr "رمادي"
@@ -791,13 +783,12 @@ msgstr ""
 "لتطبيق الموضوع بصورة صحيحة, لابد من إعادة تحميل الصفحة بشكل كامل. هل أنت "
 "متأكد من أنك تريد المتابعة؟"
 
-#, fuzzy
 msgid ""
 "In order to properly apply this language, a full refresh of page is "
 "required. Are you sure you want to proceed?"
 msgstr ""
-"لتطبيق الموضوع بصورة صحيحة, لابد من إعادة تحميل الصفحة بشكل كامل. هل أنت "
-"متأكد من أنك تريد المتابعة؟"
+"من أجل تطبيق هذه اللغة بصورة صحيحة, لابد من إعادة تحميل الصفحة بشكل كامل. هل "
+"أنت متأكد من أنك تريد المتابعة؟"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -951,9 +942,8 @@ msgstr "تحميل المحفظة"
 msgid "Loading self-exclusion settings"
 msgstr "تحميل إعدادات المنع الذاتي"
 
-#, fuzzy
 msgid "Loading..."
-msgstr "تحميل"
+msgstr "تحميل ..."
 
 msgid "Log in"
 msgstr "تسجيل الدخول"
@@ -1018,9 +1008,8 @@ msgstr ""
 "إرسالها إلى وكيل الدفع الذي اخترته. سيقوم وكيل الدفع بإرسال المبلغ المسحوب ("
 "بعد خصم العمولة) عن طريق وسيلة الدفع المفضلة لديك"
 
-#, fuzzy
 msgid "Mar"
-msgstr "سيد"
+msgstr "مارس"
 
 msgid "March"
 msgstr "مارس"
@@ -1085,9 +1074,8 @@ msgstr "فات"
 msgid "Mon"
 msgstr "الإثنين"
 
-#, fuzzy
 msgid "Monday"
-msgstr "ثانوي"
+msgstr "الإثنين"
 
 msgid "Mother's maiden name"
 msgstr "أسم الأم الأوسط"
@@ -1165,9 +1153,8 @@ msgid ""
 msgstr ""
 "ملاحظة: السحب عبر وكيل الدفع متاح فقط إذا قمت بالإيداع حصراً عبر وكيل الدفع"
 
-#, fuzzy
 msgid "Nov"
-msgstr "لا"
+msgstr "نوفمبر"
 
 msgid "November"
 msgstr "نوفمبر"
@@ -1288,13 +1275,11 @@ msgstr "تم تحديث كلمة السر بنجاح"
 msgid "Passwords didn't match. Please type them again"
 msgstr "كلمتا السر غير متطابقتين. برجاء كتابتهم مرة أخرى"
 
-#, fuzzy
 msgid "Payment agent"
-msgstr "المدفوعات"
+msgstr "وكيل الدفع"
 
-#, fuzzy
 msgid "Payment agents"
-msgstr "المدفوعات"
+msgstr "وكلاء الدفع"
 
 msgid "Payments"
 msgstr "المدفوعات"
@@ -1621,13 +1606,11 @@ msgstr "موضع بيع"
 msgid "Sell Time"
 msgstr "وقت البيع"
 
-#, fuzzy
 msgid "Send to account #"
-msgstr "فتح حساب"
+msgstr "أرسل إلى الحساب #"
 
-#, fuzzy
 msgid "Sent to account"
-msgstr "فتح حساب"
+msgstr "تم الإرسال إلى الحساب"
 
 msgid "Sep"
 msgstr "سبتمبر"
@@ -1894,11 +1877,10 @@ msgstr ""
 "لإتمام عملية الدفع والسحب بطرق الدفع أو العملات المحلية الغير مدعومة من قبل "
 "Binary.com اتصل بوكيل الدفع"
 
-#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
-msgstr "برجاء إدخال كود التحقق المرسل إلى البريد الإلكتروني الخاص بك"
+msgstr "لسحب الأموال برجاء إدخال كود التحقق الذي أرسلناه إلى بريدك الإلكتروني"
 
 msgid "Token"
 msgstr "رمز"
@@ -2039,112 +2021,117 @@ msgid "View Historical Data"
 msgstr "عرض البيانات التاريخية"
 
 msgid "Volume Factor"
-msgstr ""
+msgstr "عامل الحجم"
 
 msgid "WMA"
-msgstr ""
+msgstr "مستشار إدارة الثروات"
 
 msgid "WMA Period"
-msgstr ""
+msgstr "مدة مستشار إدارة الثروات"
 
 msgid "Websocket Server"
-msgstr ""
+msgstr "خادم بروتوكول الإتصالات و نقل المعلومات"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "ويب تريدر"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr ""
+msgstr "يستخدم ويب تريدر تكنولوجيات ويب جديدة لتجربة تداول غنية وممتعة"
 
 msgid "Wed"
-msgstr ""
+msgstr "الأربعاء"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "الأربعاء"
 
 msgid "While on the go, you can"
-msgstr ""
+msgstr "أثناء الذهاب, يمكنك"
 
 msgid "Windows"
-msgstr ""
+msgstr "نوافذ"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "سحب الأموال"
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "السحب عن طريق وكلاء الدفع"
 
 msgid "X-axis labels"
-msgstr ""
+msgstr "علامات المحور السيني"
 
 msgid "X-axis line"
-msgstr ""
+msgstr "خط المحور السيني"
 
 msgid "X-axis tick"
-msgstr ""
+msgstr "علامة المحور السيني"
 
 msgid "Y-axis gridline"
-msgstr ""
+msgstr "خطوط شبكة المحور الصادي"
 
 msgid "Y-axis labels"
-msgstr ""
+msgstr "علامات المحور الصادي"
 
 msgid "Yes"
-msgstr ""
+msgstr "نعم"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "لقد منعت نفسك حتى"
 
 msgid "You have sold the following contract"
-msgstr ""
+msgstr "لقد قمت ببيع العقد التالي"
 
 msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
+"عليك التسجيل في ويب تريدر و الحصول على معرف التطبيق قبل أن تتمكن من استخدام "
+"خادم قياسي مرخص مفتوح المصدر للمصادقة. لمزيد من المعلومات راجع تفاصيل "
+"التطبيقات القياسية المرخصة المفتوحة المصدر على"
 
 msgid "You pay"
-msgstr ""
+msgstr "أنت تدفع"
 
 msgid "You will be automatically logged out after such time"
-msgstr ""
+msgstr "سيتم تسجيل خروجك تلقائياً بعد هذا الوقت"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
 msgstr ""
+"لقد تم انشاء حسابك في Binary.com, ولكن لبدء التداول أنت بحاجة للسماح لويب "
+"تريدر للوصول إلى حسابك"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "متصفحك لا يدعم النسخ إلى الحافظة"
 
 msgid "Your browser is not supported"
-msgstr ""
+msgstr "متصفحك غير مدعوم"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "تم تحديث تغييراتك"
 
 msgid "Your email"
-msgstr ""
+msgstr "بريدك الإلكتروني"
 
 msgid "Your new account balance is"
-msgstr ""
+msgstr "رصيد حسابك الجديد هو"
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "مرجع معاملتك هو"
 
 msgid "Your transaction reference number is"
-msgstr ""
+msgstr "الرقم المرجعي لمعاملتك هو"
 
 msgid "Zoom"
-msgstr ""
+msgstr "تقريب"
 
 msgid "admin"
-msgstr ""
+msgstr "مشرف"
 
 msgid "and"
-msgstr ""
+msgstr "و"
 
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
@@ -2152,193 +2139,199 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
+"بالنظر إلى أدناه ولمواصلة إجراءات فتح الحساب يجب عليك ملاحظة أنك قد تعرض "
+"نفسك للمخاطر (والتي قد تكون كبيرة, بما في ذلك خسارة كامل المبلغ المستثمر) "
+"والتي قد لا يكون لديك المعرفة والخبرة لتقيمها أو التخفيف من حدتها بشكل صحيح"
 
 msgid "between"
-msgstr ""
+msgstr "بين"
 
-#, fuzzy
 msgid "commission"
-msgstr "إذن"
+msgstr "عمولة"
 
 msgid "contact support"
-msgstr ""
+msgstr "اتصل بالدعم"
 
 msgid "customer support"
-msgstr ""
+msgstr "دعم العملاء"
 
 msgid "day"
-msgstr ""
+msgstr "يوم"
 
 msgid "days"
-msgstr ""
+msgstr "أيام"
 
 msgid "e.g"
-msgstr ""
+msgstr "مثل"
 
 msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr ""
+msgstr "مثل www2.binary.com, www.binaryqa36.com"
 
 msgid "end time"
-msgstr ""
+msgstr "وقت النهاية"
 
 msgid "entry spot"
-msgstr ""
+msgstr "موضع دخول"
 
 msgid "exit spot"
-msgstr ""
+msgstr "موضع خروج"
 
 msgid "feed is delayed by"
-msgstr ""
+msgstr "تغذية متأخرة بواسطة"
 
 msgid "for API calls that can access the cashier"
-msgstr ""
+msgstr "لمكالمات واجهة برمجة التطبيقات التي يمكنها الوصول إلى صندوق الصراف"
 
 msgid "for API calls that can create trades in the client account"
 msgstr ""
+"لمكالمات واجهة برمجة التطبيقات التي يمكنها انشاء التداولات في حساب العميل"
 
 msgid "for API calls that change client settings"
-msgstr ""
+msgstr "لمكالمات واجهة برمجة التطبيقات التي تغير إعدادات العميل"
 
 msgid "for API calls that only read client data"
-msgstr ""
+msgstr "لمكالمات واجهة برمجة التطبيقات التي تقرأ بيانات العميل فقط"
 
 msgid "for mobile charts"
-msgstr ""
+msgstr "لرسوم المحمول البيانية"
 
 msgid "has updated its"
-msgstr ""
+msgstr "قامت بتحديث"
 
 msgid "hour"
-msgstr ""
+msgstr "ساعة"
 
 msgid "hours"
-msgstr ""
+msgstr "ساعات"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "/https://developers.binary.com"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "معرف الهوية-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
-msgstr ""
+msgstr "إذا لم يكن هذا البلد الذي تقيم فيه"
 
 msgid "in the future, the"
-msgstr ""
+msgstr "في المستقبل, ال"
 
 msgid "information about your trading exprience and personal finance"
-msgstr ""
+msgstr "معلومات عن تجربة التداول الخاصة بك وتمويلك الشخصي"
 
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
 msgstr ""
+"إنها منصة Binary لسطح المكتب المتطورة للتداول. حيث تقدم واجهتها ذات النوافذ "
+"المتعددة أقصى قدر من المرونة, كما أنها تناسب احتياجات المتداولين النشطين "
+"والذين يعملون على أجهزة الكمبيوترات لسطح المكتب الخاصة بهم."
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "مطلوب. فارق سعر البيع والشراء الحالي"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "هل هذا هو الذي تم تحديده و ال"
 
 msgid "is the"
-msgstr ""
+msgstr "هل ال"
 
 msgid "is the price in effect at that time"
-msgstr ""
+msgstr "هل كان هو السعر الساري في هذا الوقت"
 
 msgid "is the selected number of minutes/hours after the"
-msgstr ""
+msgstr "هل الرقم المحدد للدقائق/الساعات بعد ال"
 
 msgid "is the selected time"
-msgstr ""
+msgstr "هل هذا هو الوقت المحدد"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "هل الموضع عند ال"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr ""
+msgstr "هل عندما يتم معالجة العقد من قبل خوادمنا وال"
 
 msgid "main site"
-msgstr ""
+msgstr "الموقع الرئيسي"
 
 msgid "minute"
-msgstr ""
+msgstr "دقيقة"
 
 msgid "minutes"
-msgstr ""
+msgstr "دقائق"
 
 msgid "next tick"
-msgstr ""
+msgstr "العلامة القادمة"
 
 msgid "oauth"
-msgstr ""
+msgstr "ترخيص قياسي مفتوح"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "من \"الآن\", ال"
 
 msgid "payment agent"
-msgstr ""
+msgstr "وكيل الدفع"
 
 msgid "payments"
-msgstr ""
+msgstr "المدفوعات"
 
 msgid "please play responsibly. Read about"
-msgstr ""
+msgstr "برجاء اللعب بمسؤولية. أقرأ عن"
 
 msgid "points"
-msgstr ""
+msgstr "النقاط"
 
 msgid "read"
-msgstr ""
+msgstr "أقرأ"
 
 msgid "second"
-msgstr ""
+msgstr "ثانية"
 
 msgid "seconds"
-msgstr ""
+msgstr "ثواني"
 
 msgid "session overview"
-msgstr ""
+msgstr "نظرة عامة على الجلسة"
 
 msgid "start time"
-msgstr ""
+msgstr "وقت البداية"
 
 msgid "terms and conditions"
-msgstr ""
+msgstr "الشروط والأحكام"
 
 msgid "the"
-msgstr ""
+msgstr "ال"
 
 msgid "thereafter"
-msgstr ""
+msgstr "بعد ذلك"
 
 msgid "tick"
-msgstr ""
+msgstr "علامة"
 
 msgid "ticks"
-msgstr ""
+msgstr "علامات"
 
 msgid "trade"
-msgstr ""
+msgstr "تداول"
 
 msgid "trading experience"
-msgstr ""
+msgstr "تجربة التداول"
 
 msgid "trading frequency"
-msgstr ""
+msgstr "تردد التداول"
 
 msgid "websocket"
-msgstr ""
+msgstr "بروتوكول قنوات الإتصالات"
 
 msgid "yes"
-msgstr ""
+msgstr "نعم"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{وكيل.عمولة}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "عودة"
 
 #~ msgid "Apply new theme?"
 #~ msgstr "تطبيق موضوع جديد؟"
