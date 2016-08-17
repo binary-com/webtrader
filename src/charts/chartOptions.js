@@ -370,6 +370,9 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
           s.overlayCount = overlayCount;
           //Disable candlestick and OHLC if it is a tick chart or overlaid view
           showCandlestickAndOHLC(newTabId, !isTick(timePeriod) && overlayCount > 0);
+          responsiveButtons(newTabId,$("#" + newTabId));
+          if (getParameterByName('affiliates') === 'true') charts.changeTitle('#' + newTabId + '_chart', state[newTabId].instrumentName + " (" + timePeriod + ")")
+          else chartWindow.changeChartWindowTitle(newTabId, state[newTabId].instrumentName, timePeriod);
         },
 
         disableEnableCandlestickAndOHLC : function (newTabId, enable) {
