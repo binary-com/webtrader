@@ -89,9 +89,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var chartTypeButton = ele.find(".chart_type");
         // This is needed for calculating relative position.
         var shareButton = ele.find('[data-balloon="Share chart"]');
-        var positionRight = ele.width() - (shareButton.offset().left + shareButton.outerWidth() - ele.offset().left) - 10;
-        // Required for positioning chart overlay options if chart is not for affiliates.
-        var affiliates = getParameterByName('affiliates') || 'false';   
         if(ele.width() > 420){
             state[newTabId].showChartTypeLabel = true;
             state[newTabId].timePeriod_name = state[newTabId].timePeriod.name;
@@ -103,16 +100,16 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             timePeriodButton.css("width","50px");
             chartTypeButton.css("width","45px");
         }
-        if(positionRight > 0) {
-            if(affiliates === "false"){
-                loadSaveOverlay.css("right", positionRight+35+"px");
-                exportOverlay.css("right", positionRight+"px");
-            }
+
+        var positionRight = ele.width() - (shareButton.offset().left + shareButton.outerWidth() - ele.offset().left);
+
+        if(ele.width() <=730 ) {
+            positionRight = positionRight > 0 ? positionRight : 25;
+            exportOverlay.css("right", positionRight+"px");
+            loadSaveOverlay.css("right", positionRight+35+"px");
         } else {
-            if(affiliates === "false"){
-                loadSaveOverlay.css("right", "60px");
-                exportOverlay.css("right", "25px");
-            }
+            loadSaveOverlay.css("right", "auto");
+            exportOverlay.css("right", "auto");
         }
     }
 
@@ -213,7 +210,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         chartingRequestMap.unregister(chartingRequestMap.keyFor(scope.instrumentCode, scope.timePeriod.value), '#' + scope.newTabId + '_chart');
 
                         scope.timePeriod = timeperiod_arr.filter(function(obj){return timePeriod==obj.value})[0];
-                        responsiveButtons(scope.newTabId, $("#" + scope.newTabId));
+                        responsiveButtons(scope.newTabId, $("#" + scope.newTabId).find(".chart-view"));
                         var tick = isTick(timePeriod);
                         if(tick && (scope.chartType.value === 'candlestick' || scope.chartType.value === 'ohlc'))
                             changeChartType(scope,'line');
@@ -336,10 +333,16 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     state[m_newTabId].overlayCount = chart.get_overlay_count();
                 });
 
-                // Listen for dialog resize event
-                $("#" + m_newTabId).on('resize-event', function(e){
-                    responsiveButtons(m_newTabId, $(this));
-                });
+                // Listen for resize event
+                if(getParameterByName('affiliates')=='true'){
+                    $(window).resize(function(){
+                        responsiveButtons(m_newTabId, $("#" + m_newTabId).find(".chart-view"));
+                    });
+                } else {
+                    $("#" + m_newTabId).on('resize-event', function(e){
+                        responsiveButtons(m_newTabId, $(this).find(".chart-view"));
+                    });
+                }
 
                 // Preload images for better UI
                 preLoadImages();
@@ -348,7 +351,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 $("#" + m_newTabId + "_header").prepend($html);
 
-                responsiveButtons(m_newTabId, $("#" + m_newTabId));
+                responsiveButtons(m_newTabId, $("#" + m_newTabId).find(".chart-view"));
                                
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
                 require(['charts/chartTemplateManager'], function(templateManager) {
@@ -363,6 +366,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         /* allow settings to be updated when a new chart template is applied */
         updateOptions: function(newTabId, chartType, timePeriod, indicatorsCount, overlayCount) {
           var s = state[newTabId];
+          var margin;
           if(!s) return;
           s.chartType = chartType_arr.filter(function(chart){return chart.value==chartType})[0];
           s.timePeriod = timeperiod_arr.filter(function(tp){return timePeriod==tp.value})[0];
@@ -370,7 +374,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
           s.overlayCount = overlayCount;
           //Disable candlestick and OHLC if it is a tick chart or overlaid view
           showCandlestickAndOHLC(newTabId, !isTick(timePeriod) && overlayCount > 0);
-          responsiveButtons(newTabId,$("#" + newTabId));
+          responsiveButtons(newTabId,$("#" + newTabId).find(".chart-view"));
           if (getParameterByName('affiliates') === 'true') charts.changeTitle('#' + newTabId + '_chart', state[newTabId].instrumentName + " (" + timePeriod + ")")
           else chartWindow.changeChartWindowTitle(newTabId, state[newTabId].instrumentName, timePeriod);
         },
