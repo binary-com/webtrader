@@ -89,9 +89,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var chartTypeButton = ele.find(".chart_type");
         // This is needed for calculating relative position.
         var shareButton = ele.find('[data-balloon="Share chart"]');
-        var positionRight = ele.width() - (shareButton.offset().left + shareButton.outerWidth() - ele.offset().left) - 10;
-        // Required for positioning chart overlay options if chart is not for affiliates.
-        var affiliates = getParameterByName('affiliates') || 'false';   
         if(ele.width() > 420){
             state[newTabId].showChartTypeLabel = true;
             state[newTabId].timePeriod_name = state[newTabId].timePeriod.name;
@@ -103,16 +100,16 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             timePeriodButton.css("width","50px");
             chartTypeButton.css("width","45px");
         }
-        if(positionRight > 0) {
-            if(affiliates === "false"){
-                loadSaveOverlay.css("right", positionRight+35+"px");
-                exportOverlay.css("right", positionRight+"px");
-            }
+
+        var positionRight = ele.width() - (shareButton.offset().left + shareButton.outerWidth() - ele.offset().left) - 10;
+
+        if(ele.width() <=730 ) {
+            positionRight = positionRight > 0 ? positionRight : 25;
+            loadSaveOverlay.css("right", positionRight+35+"px");
+            exportOverlay.css("right", positionRight+"px");
         } else {
-            if(affiliates === "false"){
-                loadSaveOverlay.css("right", "60px");
-                exportOverlay.css("right", "25px");
-            }
+            loadSaveOverlay.css("right", "auto");
+            exportOverlay.css("right", "auto");
         }
     }
 
