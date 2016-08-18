@@ -211,9 +211,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
           }
           state.sell.bid_prices.push(contract.bid_price)
 
-          state.sell.bid_price.value = contract.bid_price;
-          state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
-          state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+          if(contract.bid_price !== undefined) {
+            state.sell.bid_price.value = contract.bid_price;
+            state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
+            state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+          }
           state.sell.is_valid_to_sell = false;
           state.sell.is_valid_to_sell = contract.is_valid_to_sell;
           state.chart.manual_reflow();
