@@ -231,7 +231,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     $.growl.error({ message: err.message });
                  });
         });
-        console.warn(subscribed_contracts);
     }
 
     function forget_the_contracts(contracts) {
@@ -246,7 +245,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         subscribed_contracts = subscribed_contracts.filter(function(contract) {
           return _.includes(ids, contract.contract_id) === false;
         });
-        console.warn(subscribed_contracts);
         return Promise.all(promises);
     }
 
