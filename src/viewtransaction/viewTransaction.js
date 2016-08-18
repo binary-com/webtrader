@@ -2,8 +2,8 @@
  * Created by amin on January 14, 2016.
  */
 
-define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/portfolio", "charts/chartingRequestMap", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
-  function($, windows, liveapi, portfolio, chartingRequestMap, rv, moment, _) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/chartingRequestMap", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
+  function($, windows, liveapi, chartingRequestMap, rv, moment, _) {
   'use strict';
 
   var open_dialogs = {};
@@ -273,7 +273,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             destroy: function() { },
             close: function() {
               view && view.unbind();
-              portfolio.proposal_open_contract.forget();
+              liveapi.proposal_open_contract.forget(proposal.contract_id);
               liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
               for(var i = 0; i < state.onclose.length; ++i)
                 state.onclose[i]();
@@ -281,7 +281,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               open_dialogs[proposal.transaction_id] = undefined;
             },
             open: function() {
-              portfolio.proposal_open_contract.subscribe();
+              liveapi.proposal_open_contract.subscribe(proposal.contract_id);
               liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
             },
             resize: function() {
