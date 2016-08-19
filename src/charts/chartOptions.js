@@ -120,7 +120,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         });
         new Image().src="images/share-w.svg";
         new Image().src="images/drawing-w.svg";
-        new Image().src="images/load-save-icon-w.svg";
+        new Image().src="images/chart_template-w.svg";
     }
 
     return {
