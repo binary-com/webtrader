@@ -264,11 +264,15 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                 onload();
                             }
 
-                            this.credits.element.onclick = function() {
-                                window.open(
-                                    'http://webtrader.binary.com',
-                                    '_blank'
-                                );
+                            if(getParameterByName("affiliates") === 'true' && getParameterByName('lang').toLowerCase() === 'jp'){
+                                this.credits.element.remove();
+                            } else {
+                                this.credits.element.onclick = function() {
+                                    window.open(
+                                        'http://webtrader.binary.com',
+                                        '_blank'
+                                    );
+                                }
                             }
 
                         },
