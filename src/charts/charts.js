@@ -1,7 +1,6 @@
 /**
  * Created by arnab on 2/11/15.
  */
-
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
         "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json', 
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
