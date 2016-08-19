@@ -12,13 +12,16 @@
         //Remove the '#' check later once the backend changes are released TODO
         var params = href.indexOf('#') != -1 ? href.split('#')[1].split('&') : href.split('?')[1].split('&');
         var oauth = [ ];
+        var is_jpy_account = false; /* japan accounts are not supported on webtrader */
         for(var i = 0; i < params.length; i+=2){
           var id = params[i].split('=')[1];
           var token = params[i+1].split('=')[1];
+          is_jpy_account = is_jpy_account || id.startsWith('JP');
           oauth.push({ id: id, token: token });
         }
         local_storage.set('oauth', oauth);
         local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
+        local_storage.set('oauth-is-jpy-account', {value: is_jpy_account})
       }
 
       var lang = getParameterByName('lang') || 'en';
