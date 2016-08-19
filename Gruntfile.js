@@ -337,13 +337,18 @@ module.exports = function (grunt) {
             files: ['src/**/*.es6'],
             tasks: ['newer:babel'],
           },
+          index: {
+              options: { livereload: false },
+              files: ['src/index.html'],
+              tasks: ['newer:copy:main', 'rename', 'replace']
+          },
           dist: {
-            files: ['dist/uncompressed/v<%=pkg.version%>/**/*.*'],
+            files: ['dist/uncompressed/v<%=pkg.version%>/**/*.*','!dist/uncompressed/v<%=pkg.version%>/index.html', 'dist/uncompressed/index.html'],
             tasks: []
           },
           scripts: {
             options: { livereload: false },
-            files: ['src/**', '!src/**/*.scss', '!src/**/*.es6'],
+            files: ['src/**','!src/index.html', '!src/**/*.scss', '!src/**/*.es6'],
             tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest'],
           },
         },
