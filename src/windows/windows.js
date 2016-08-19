@@ -474,6 +474,17 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             /* automatically log the user in if we have oauth_token in local_storage */
             require(['websockets/binary_websockets' ], function(liveapi) {
               if(local_storage.get('oauth')) {
+
+                /* Japan accounts should not be allowed to login to webtrader */
+                var is_jpy_account = local_storage.get('oauth-is-jpy-account');
+                if(is_jpy_account && is_jpy_account.value === true) {
+                  $.growl.error({message: 'Japan accounts are not supported.'.i18n() });
+                  local_storage.remove('oauth');
+                  local_storage.remove('oauth-login');
+                  local_storage.remove('oauth-is-jpy-account');
+                  $(".login").trigger("login-error");
+                  return;
+                }
                 /* query string parameters can tempered.
                    make sure to get loginid from webapi instead */
                 var oauth = local_storage.get('oauth');
