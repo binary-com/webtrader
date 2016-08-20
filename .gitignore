@@ -1,6 +1,7 @@
 .git
 .grunt
 .idea
+.tern-project
 
 dist
 !/lib/*/*/dist

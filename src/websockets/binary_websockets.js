@@ -252,6 +252,8 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
     };
 
     var sell_expired_timeouts = {};
+    var proposal_open_contract =  {/* contract_id: { subscribers: n, promise: promise, stream_id: '' } */};
+    var proposal_open_contract_forget =  {/* contract_id:  promise */};
     var api = {
         events: {
             on: function (name, cb) {
@@ -273,6 +275,66 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
               }
               api.events.on(name, once_cb);
             }
+        },
+        proposal_open_contract: {
+          subscribe: function(contract_id) {
+            /* already subscribed */
+            if(proposal_open_contract[contract_id] && proposal_open_contract[contract_id].subscribers > 0) {
+                proposal_open_contract[contract_id].subscribers++;
+                return proposal_open_contract[contract_id].promise;
+            }
+            /* subscribe and keep the promise */
+            var promise = api.send({proposal_open_contract: 1, contract_id: contract_id, subscribe: 1})
+              .then(function(data){
+                /* keep stream_id to easily forget */
+                proposal_open_contract[contract_id].stream_id = data.proposal_open_contract.id;
+                return data;
+              })
+              .catch(function(up) {
+                proposal_open_contract[contract_id] = undefined;
+                throw up;
+              });
+            proposal_open_contract[contract_id] = { subscribers: 1, promise: promise };
+            return promise;
+          },
+          forget: function (contract_id) {
+            var proposal = proposal_open_contract[contract_id];
+            var forget = proposal_open_contract_forget[contract_id];
+            if(!proposal) {
+              return forget || Promise.resolve(); /* contract is being forgetted or does not exit */
+            }
+            if(proposal.subscribers == 0) {
+              return forget; /* contract is being forgetted */
+            }
+            proposal.subscribers--;
+            if(proposal.subscribers > 0) { /* there are still subscribers to this contract_id */
+              return Promise.resolve();
+            }
+            var forgetter = function() {
+              proposal_open_contract[contract_id] = undefined;
+              return api.send({forget: proposal.stream_id})
+                .catch(function(up) {
+                  proposal_open_contract_forget[contract_id] = undefined;
+                  throw up;
+                })
+                .then(function(data){
+                  proposal_open_contract_forget[contract_id] = undefined;
+                  return data;
+                })
+            };
+            if(proposal.stream_id) {
+              proposal_open_contract_forget[contract_id] = forgetter();
+            } else {
+              proposal_open_contract_forget[contract_id] = proposal.promise
+                .catch(function(ex){ return; })
+                .then(function(data){
+                  if(proposal.stream_id) /* proposal request had not exceptions */
+                    return forgetter();
+                  else return; /* no stream, no need to forget */
+                });
+            }
+            return proposal_open_contract_forget[contract_id];
+          }
         },
         /* execute callback when the connection is ready */
         execute: function (cb) {
