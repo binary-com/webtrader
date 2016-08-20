@@ -239,6 +239,16 @@ String.prototype.format = function() {
     });
 };
 
+/* shim for missing functions in IE */
+if (typeof String.prototype.startsWith !== 'function') {
+    String.prototype.startsWith = function (str) {
+      return this.lastIndexOf(str, 0) === 0;
+    };
+    String.prototype.endsWith = function(str) {
+        return this.indexOf(str, this.length - str.length) !== -1;
+    };
+}
+
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
   var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
