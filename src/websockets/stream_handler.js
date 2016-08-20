@@ -1,4 +1,4 @@
-define(["websockets/binary_websockets", "charts/chartingRequestMap", "common/util"], function (liveapi, chartingRequestMap) {
+define(['jquery', "websockets/binary_websockets", "charts/chartingRequestMap", "common/util"], function ($, liveapi, chartingRequestMap) {
 
     var barsTable = chartingRequestMap.barsTable;
 
