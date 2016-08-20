@@ -173,14 +173,20 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
             .then(function (val) {
                 is_authenitcated_session = true;
                 local_storage.set('authorize', val.authorize); /* we can use the 'email' field retruned later */
-                fire_event('login', val);
+                var is_jpy_account = val.authorize.landing_company_name.indexOf('japan') !== -1;
+                if(!is_jpy_account) {
+                   fire_event('login', val);
+                }
                 if(local_storage.get('oauth-login')) {
                   var ok = local_storage.get('oauth-login').value;
                   local_storage.remove('oauth-login');
-                  ok && fire_event('oauth-login', val);
+                  if(ok && !is_jpy_account) {
+                    fire_event('oauth-login', val);
+                  }
                 }
                 auth_successfull = true;
                 cached_promises[key] = { data: data, promise: promise }; /* cache successfull authentication */
+
                 return val; /* pass the result */
             })
             .catch(function (up) {
@@ -350,7 +356,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                if the session is not already authorized will send an authentication request */
             authorize: function () {
                 var oauth = local_storage.get('oauth');
-                var token = oauth[0].token,
+                var token = oauth && oauth[0] && oauth[0].token,
                     key = JSON.stringify({ authorize: token });
 
                 if (is_authenitcated_session && token && cached_promises[key])
