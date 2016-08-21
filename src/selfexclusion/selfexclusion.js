@@ -165,7 +165,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         }, logoutAfter_ms);
 
     };
-    
+
     var logout = function() {
         if (win) win.dialog('destroy');
         win = null;
@@ -197,6 +197,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                 } else {
                     logout();
                 }
+            })
+            .catch(function(err){
+              logout();
             });
     });
     liveapi.events.on('logout', logout);
