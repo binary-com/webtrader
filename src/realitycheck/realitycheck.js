@@ -124,6 +124,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                                 local_storage.remove('realitycheck');
                             }
                         });
+                })
+                .catch(function(err) {
+                    local_storage.remove('realitycheck');
                 });
         });
     }
