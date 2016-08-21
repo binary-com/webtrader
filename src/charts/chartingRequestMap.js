@@ -99,7 +99,7 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                         db_bars[barIndex].time, type, dataInHighChartsFormat);
                 }
 
-                if (!chart) return;
+                if (!chart || dataInHighChartsFormat.length === 0) return;
 
                 //set the range
                 var numberOfBarsToShow = 30;
