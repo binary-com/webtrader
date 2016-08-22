@@ -294,9 +294,29 @@ function isLangSupported(lang) {
             || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
 }
 
-function get_cookie(name) {
-  var res = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-  return res ? res.pop() : '';
+var Cookies = {
+  get_by_name: function(name) {
+    var cookie = document.cookie;
+    var res = cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return res ? res.pop() : '';
+  },
+  loginids: function () {
+    var loginids = Cookies.get_by_name('loginid_list');
+    loginids = decodeURIComponent(loginids).split('+');
+    loginids = loginids.map(function(id){
+      var parts = id.split(':');
+      return {
+        id: parts[0],
+        is_real: parts[1] === 'R',
+        is_disabled: parts[2] === 'D',
+        is_financial: /MF/.test(parts[0])
+      };
+    });
+    return loginids;
+  },
+  residence: function() {
+    return Cookies.get_by_name('residence');
+  }
 }
 
 /* setup translating string literals */

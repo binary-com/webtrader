@@ -2,7 +2,8 @@
  * Created by amin on June 14, 2016.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, rv, _, moment) {
+define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment', 'text!navigation/countries.json'], function($, liveapi, windows, rv, _, moment, countries) {
+    countries = JSON.parse(countries);
     require(['text!realaccount/realaccount.html']);
     require(['css!realaccount/realaccount.css']);
     var real_win = null;
@@ -367,6 +368,21 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             //     state.company.type = 'japan';
              else
                 state.company.type = 'normal';
+
+             var loginids = Cookies.loginids();
+
+             /* if there is not finiancial account and there is already one real acount,
+              * allow UK MLT client to open MF account. */
+             if(_.every(loginids, {is_financial: false}) && _.some(loginids, {is_real: true})) {
+                var residence = Cookies.residence();
+                var authorize = local_storage.get('authorize');
+                var ok =
+                    (countries[residence] && countries[residence].financial_company === 'maltainvest') ||
+                    (Cookies.residence() === 'gb' && authorize && /^MLT/.test(authorize.loginid));
+                if(ok) {
+                  state.company.type = 'maltainvest';
+                }
+             }
            })
            .catch(error_handler);
     }
