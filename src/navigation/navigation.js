@@ -92,16 +92,24 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
                 update_balance(data);
                 loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
-                var oauth = local_storage.get('oauth') || [];
                 var has_real_account = false;
-                for(var i = 0; i < oauth.length; ++i) {
-                  if(oauth[i].is_virtual === 0)
+                var has_disabled_account = false;
+
+                var loginids = get_cookie('loginid_list');
+                loginids = decodeURIComponent(loginids).split('+');
+                loginids.forEach(function(id){
+                  var id = id.split(':');
+                  if(id[1] === 'R')
                     has_real_account = true;
-                }
+                  if(id[2] === 'D')
+                    has_disabled_account = true;
+                });
+
                 var is_current_account_real = data.authorize.is_virtual === 0;
                 is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
                 has_real_account ? virtual_accounts_only.hide() : virtual_accounts_only.show();
 
+                var oauth = local_storage.get('oauth') || [];
                 /* switch between account on user click */
                 $('.account li.info').remove();
                 oauth.forEach(function (account) {

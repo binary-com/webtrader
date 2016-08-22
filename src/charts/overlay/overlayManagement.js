@@ -214,14 +214,14 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     return {
       openDialog : function( containerIDWithHash, title ) {
         init().then(function(){
-            state.dialog.title = 'Add/remove overlays'.i18n() + (title ? ' - ' + title : '');
+            state.dialog.title = 'Add/remove comaprisons'.i18n() + (title ? ' - ' + title : '');
             state.dialog.container_id = containerIDWithHash;
             state.overlays.current = $(containerIDWithHash).data('overlays-current') || [];
 
             var chart = $(containerIDWithHash).highcharts();
             update_overlays(chart);
             var normal_open = first_time || getParameterByName("affiliates") == 'true';
-            normal_open ? win.dialog('open') : win.moveToTop();
+            win.dialog('open');
             first_time = false;
         }).catch(console.error.bind(console));
       }
