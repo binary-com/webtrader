@@ -239,6 +239,16 @@ String.prototype.format = function() {
     });
 };
 
+/* shim for missing functions in IE */
+if (typeof String.prototype.startsWith !== 'function') {
+    String.prototype.startsWith = function (str) {
+      return this.lastIndexOf(str, 0) === 0;
+    };
+    String.prototype.endsWith = function(str) {
+        return this.indexOf(str, this.length - str.length) !== -1;
+    };
+}
+
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
   var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
@@ -294,6 +304,10 @@ function isLangSupported(lang) {
             || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
 }
 
+function get_cookie(name) {
+  var res = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+  return res ? res.pop() : '';
+}
 
 /* setup translating string literals */
 function setup_i18n_translation(dict) {

@@ -96,11 +96,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#chop_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#chop_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#chop_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#chop_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#chop_levels').DataTable({

@@ -202,7 +202,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             series = _.filter(series, 'options.isInstrument');
             update_indicators(series);
             var normal_open = first_time || getParameterByName("affiliates") == 'true';
-            normal_open ? ind_win.dialog('open') : ind_win.moveToTop();
+            ind_win.dialog('open')
             first_time = false;
         }).catch(console.error.bind(console));
       }
