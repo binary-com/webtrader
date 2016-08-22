@@ -93,26 +93,27 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                 update_balance(data);
                 loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
+                var oauth = local_storage.get('oauth') || [];
                 var is_current_account_real = data.authorize.is_virtual === 0;
                 is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
 
                 var loginids = Cookies.loginids();
-                var has_real_account = _.some(loginids, {is_real: true});
+                var has_real_account = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
                 var has_disabled_account =  _.some(loginids, {is_disabled: true});
 
                 var show_financial_link = false;
-                if(_.every(loginids, {is_financial: false}) && is_current_account_real) {
+                if(_.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true}) && is_current_account_real) {
                   var residence = Cookies.residence();
                   show_financial_link =  /* allow UK MLT client to open MF account. */
                       (countries[residence] && countries[residence].financial_company === 'maltainvest') ||
                       (Cookies.residence() === 'gb' && /^MLT/.test(data.authorize.loginid));
                 }
 
-                upgrade_account_li.find('.upgrade-to-real-account-span').toggle(!show_financial_link);
-                upgrade_account_li.find('.open-financial-account-span').toggle(show_financial_link);
-                upgrade_account_li.toggle(!has_real_account || show_financial_link);
+                var toggle = function(show, el) { show ? el.show() : el.hide(); }
+                toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
+                toggle(show_financial_link, upgrade_account_li.find('.open-financial-account-span'));
+                toggle(!has_real_account || show_financial_link, upgrade_account_li);
 
-                var oauth = local_storage.get('oauth') || [];
                 /* switch between account on user click */
                 $('.account li.info').remove();
                 oauth.forEach(function (account) {
