@@ -24,7 +24,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         {value:'line', name:'Line'}, {value:'dot', name:'Dot'}, {value:'linedot', name:'Line Dot'}, 
         {value:'spline', name:'Spline'}, {value:'table', name:'Table'}];
         i18n_name = (local_storage.get('i18n') || { value: 'en' }).value,
-        urlShareTemplate = 'https://webtrader.binary.com?affiliates=true&instrument={0}&timePeriod={1}&lang=' + i18n_name,
+        appURL = getAppURL(); // Get current apps url.
+        urlShareTemplate = appURL + '?affiliates=true&instrument={0}&timePeriod={1}&lang=' + i18n_name,
         iframeShareTemplate = '<iframe src="' + urlShareTemplate + '" width="350" height="400" style="overflow-y : hidden;" scrolling="no" />',
         twitterShareTemplate = 'https://twitter.com/share?url={0}&text={1}',
         fbShareTemplate = 'https://facebook.com/sharer/sharer.php?u={0}',
