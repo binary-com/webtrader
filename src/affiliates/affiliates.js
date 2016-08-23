@@ -1,4 +1,4 @@
-define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util', 'touch-device-fix'], function( $, liveapi, menu, _ ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util', 'affiliates/touch-device-fix'], function( $, liveapi, menu, _ ) {
 
 	var init_chart_options = function (dialog, timePeriod, type, instrumentName, instrumentCode){
 			var id = dialog.attr('id');
