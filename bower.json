@@ -6,7 +6,8 @@
     "Armin Zia",
     "Amin Roosta",
     "Arnab Karmakar",
-    "Mahboobeh Mohammadi"
+    "Mahboobeh Mohammadi",
+    "Apoorv Joshi"
   ],
   "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
