@@ -1,4 +1,4 @@
-define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util'], function( $, liveapi, menu, _ ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util', 'touch-device-fix'], function( $, liveapi, menu, _ ) {
 
 	var init_chart_options = function (dialog, timePeriod, type, instrumentName, instrumentCode){
 			var id = dialog.attr('id');
@@ -8,6 +8,9 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 				chartOptions.init(id, timePeriod, type, table_view.show, instrumentName, instrumentCode);
 			});
 	};
+
+	//This fixed the chartX error. Should be removed with file touch-device-fix.
+	fixTouchEvent();
 
 	Highcharts.setOptions(
 		{
