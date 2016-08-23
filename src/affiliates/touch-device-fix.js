@@ -1,3 +1,6 @@
+/**
+ * This file should be removed when we upgrade to Highstocks 4.2.6
+ * */
 function fixTouchEvent() {
   "use strict";
   // Check if the touch event is for zooming.
