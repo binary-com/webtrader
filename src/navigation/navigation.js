@@ -64,7 +64,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
 
                 var value = '0';
                 if (data.authorize) value = data.authorize.balance;
-                else value = data.balance.balance;
+                else value = data.balance ? data.balance.balance : '0';
 
                 balance.text(currency + ' ' + formatPrice(value)).fadeIn();
             };
