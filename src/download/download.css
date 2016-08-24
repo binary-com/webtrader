@@ -53,3 +53,26 @@
 .downloadChart {
     height: 100%;
 }
+.download_table button.img {
+    padding: 4px;
+}
+
+.download_table .chartOptions_overlay {
+    margin-top: 0px;
+    position: absolute;
+    z-index: +1;
+    margin-left: 5px!important;
+    background: #fff;
+    border: 1px solid #c2c2c2;
+    color: #2a3052;
+}
+
+.download_table .img {
+    display: inline;
+}
+
+.download_table .img img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
