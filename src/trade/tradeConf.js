@@ -76,7 +76,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           });
 
            /* Add plotline value to invisible seri to make the plotline always visible. */
-           chart.series[1].addPoint([1, options.value]);
+           chart.series[1].addPoint([1, options.value*1]);
         };
 
         var index = ticks.length;
@@ -109,10 +109,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           purchase_epoch = state.buy.purchase_time * 1,
           fn = null;
 
-      /* TODO: if the connection get closed while we are adding new ticks,
-               although we will automatically resubscribe (in binary_websockets),
-               BUT we will also lose some ticks in between!
-               which means we ware showing the wrong ticks to the user! FIX THIS*/
+      /* No need to worry about WS connection getting closed, because the user will be logged out */
       function add_tick(tick){
           if (_.findIndex(state.ticks.array, function(t) { return t.epoch === tick.epoch }) === -1 && tick_count > 0) {
               var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
@@ -150,7 +147,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           }).forEach(add_tick);
           if(tick_count > 0) {
             tracking_timeout_set = true;
-            setTimeout(track_ticks, 500);
+            setTimeout(track_ticks, 300);
           }
       }
 
@@ -321,12 +318,11 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         }
       };
 
+      var view = rv.bind(root[0], state)
 
       if(!state.arrow.visible) { register_ticks(state, extra); }
       else { state.back.visible = true; }
 
-
-      var view = rv.bind(root[0], state)
       show_callback(root);
     }
 
