@@ -237,7 +237,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               if(this.category === 'Asians') {
                 //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
                 var avg = this.average().toFixed(decimal_digits + 1);
-                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
+                return {value: avg*1, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
               }
               return null;
             },
