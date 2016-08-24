@@ -352,3 +352,7 @@ function setup_i18n_translation(dict) {
           return parseHTML(data, context, keepScripts);
       }
 }
+
+function getAppURL() {
+  return window.location.href.split("/v")[0];
+}
