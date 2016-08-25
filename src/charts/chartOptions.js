@@ -89,7 +89,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var timePeriodButton = ele.find(".timeperiod");
         var chartTypeButton = ele.find(".chart_type");
         // This is needed for calculating relative position.
-        var shareButton = ele.find('[data-balloon="Share chart"]');
+        var shareButton = ele.find('.shareButton');
         if(ele.width() > 420){
             state[newTabId].showChartTypeLabel = true;
             state[newTabId].timePeriod_name = state[newTabId].timePeriod.name;
@@ -248,7 +248,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleDrawingToolSelector = function(event, scope) {
                     var temp = !scope.showDrawingToolSelector;
-                    var ele = $("#" + scope.newTabId + ' [data-balloon="Drawing tools"] .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .drawButton .img img')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showDrawingToolSelector = temp;
@@ -273,7 +273,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleExportSelector = function(event, scope) {
                     var temp = !scope.showExportSelector;
-                    var ele = $("#" + scope.newTabId + ' [data-balloon="Share chart"] .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .shareButton .img img')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showExportSelector = temp;
@@ -286,7 +286,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleLoadSaveSelector = function(event, scope) {
                     var temp = !scope.showLoadSaveSelector;
-                    var ele = $("#" + scope.newTabId + ' [data-balloon="Chart template"] .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .templateButton .img img')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showLoadSaveSelector = temp;
