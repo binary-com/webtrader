@@ -2263,3 +2263,6 @@ msgstr ""
 
 msgid "| Return"
 msgstr ""
+
+msgid "Comparisons"
+msgstr ""

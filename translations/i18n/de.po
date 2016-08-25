@@ -2397,3 +2397,6 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "Rendite"
+
+msgid "Comparisons"
+msgstr ""

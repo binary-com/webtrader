@@ -2359,3 +2359,6 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr ""
+
+msgid "Comparisons"
+msgstr ""

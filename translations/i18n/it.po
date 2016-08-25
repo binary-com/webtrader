@@ -2339,6 +2339,9 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Investimento"
 
+msgid "Comparisons"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "Richiedi nuovo argomento?"
 
