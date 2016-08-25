@@ -247,8 +247,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 .height($dialog.height() - 100)
                 .highcharts();
             if (chart) chart.reflow();
-            var shareButton = $(".share-button");
-            var overlay = $(".exportOverlay");
+            var shareButton = $(".download_window .share-button");
+            var overlay = $(".download_window .exportOverlay");
             var positionRight = $dialog.width() - (shareButton.offset().left + shareButton.outerWidth() - $dialog.offset().left) + 1;
             overlay.css("right",positionRight + "px");
         }
