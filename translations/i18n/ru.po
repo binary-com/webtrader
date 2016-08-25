@@ -2272,3 +2272,6 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Прибыль"
+
+msgid "Comparisons"
+msgstr ""

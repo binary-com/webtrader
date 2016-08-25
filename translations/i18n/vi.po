@@ -2394,6 +2394,9 @@ msgstr ""
 msgid "| Return"
 msgstr "| Quay trở lại"
 
+msgid "Comparisons"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "Áp dụng chủ đề mới?"
 

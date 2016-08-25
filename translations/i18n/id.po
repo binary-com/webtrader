@@ -2349,6 +2349,9 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Laba"
 
+msgid "Comparisons"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "Terapkan tema baru?"
 
