@@ -24,9 +24,9 @@
                 </td>
                 <td>
                     <span data-balloon="Share chart" data-balloon-pos="down">
-                        <button class="img"><img width="25px" height="25px" src="images/share-w.svg"></button>
+                        <button class="share-button img"><img width="24px" height="24px" src="images/share-w.svg"></button>
                     </span>
-                    <div class="table chartOptions_overlay exportOverlay" rv-show="showExportSelector">
+                    <div class="table overlay exportOverlay" rv-show="showExportSelector">
                         <div class="row">
                             <div class="cell">
                                 <span class="vertical-bottom share">Share</span>
@@ -37,19 +37,19 @@
                                 <div class="table share-button">
                                     <div class="row">
                                         <div class="cell">
-                                            <a rv-href="fbShareLink" target="_blank"><img src="images/fb.svg"></a>
+                                            <a class="fbShareLink" target="_blank"><img src="images/fb.svg"></a>
                                         </div>
                                         <div class="cell">
-                                            <a rv-href="twitterShareLink" target="_blank"><img src="images/twitter.svg"></a>
+                                            <a class="twitterShareLink" target="_blank"><img src="images/twitter.svg"></a>
                                         </div>
                                         <div class="cell">
-                                            <a rv-href="gPlusShareLink" target="_blank"><img src="images/g-plus.svg"></a>
+                                            <a class="gPlusShareLink" target="_blank"><img src="images/g-plus.svg"></a>
                                         </div>
                                         <div class="cell">
-                                            <a rv-href="bloggerShareLink" target="_blank"><img src="images/blogger.svg"></a>
+                                            <a class="bloggerShareLink" target="_blank"><img src="images/blogger.svg"></a>
                                         </div>
                                         <div class="cell">
-                                            <a rv-href="vkShareLink" target="_blank"><img src="images/vk.svg"></a>
+                                            <a class="vkShareLink" target="_blank"><img src="images/vk.svg"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="row">
                             <div class="cell">
-                                <input rv-value="exportChartURLShare" onClick="this.select()" readonly>
+                                <input class="exportChartURLShare" onClick="this.select()" readonly>
                             </div>
                         </div>
                         <div class="row">
@@ -72,7 +72,7 @@
                         </div>
                         <div class="row">
                             <div class="cell padding-bottom-5">
-                                <input rv-value="exportChartIframeShare" onClick="this.select()" readonly>
+                                <input class="exportChartIframeShare" onClick="this.select()" readonly>
                             </div>
                         </div>
                         <div class="row">
@@ -85,16 +85,16 @@
                                 <div class="table download">
                                     <div class="row">
                                         <div class="cell">
-                                            <span class="vertical-bottom button" rv-on-click="export" data-exporttype="png">PNG</span>
+                                            <span class="vertical-bottom button" rv-on-click="export" id="png">PNG</span>
                                         </div>
                                         <div class="cell">
-                                            <span class="vertical-bottom button" rv-on-click="export" data-exporttype="pdf">PDF</span>
+                                            <span class="vertical-bottom button" rv-on-click="export" id="pdf">PDF</span>
                                         </div>
                                         <div class="cell">
-                                            <span class="vertical-bottom button" rv-on-click="export" data-exporttype="csv">CSV</span>
+                                            <span class="vertical-bottom button" rv-on-click="export" id="csv">CSV</span>
                                         </div>
                                         <div class="cell">
-                                            <span class="vertical-bottom button" rv-on-click="export" data-exporttype="svg">SVG</span>
+                                            <span class="vertical-bottom button" rv-on-click="export" id="svg">SVG</span>
                                         </div>
                                     </div>
                                 </div>
