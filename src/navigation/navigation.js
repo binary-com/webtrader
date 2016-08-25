@@ -162,7 +162,6 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
     function initLangButton(root) {
       root = root.find('#topbar').addBack('#topbar');
       var state = {
-        perv_lang: null,
         lang: {
           value: 'en', name: 'English'
         },
@@ -189,19 +188,10 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
         var lang = _.find(state.languages, {value: value});
         if(lang.value == state.lang.value)
           return;
-        state.perv_lang = state.lang;
-        state.lang = lang;
-        state.confirm.visible = true;
-      };
-      state.confirm.no = function() {
-        state.lang = state.perv_lang;
-        state.confirm.visible = false;
-      }
-      state.confirm.yes = function() {
-        local_storage.set('i18n', {value: state.lang.value});
+
+        local_storage.set('i18n', {value: lang.value});
         window.location.reload();
-        state.confirm.visible = false;
-      }
+      };
 
       var value = (local_storage.get('i18n') || {value: 'en'}).value;
       state.lang = _.find(state.languages, {value: value}); // set the initial state.
