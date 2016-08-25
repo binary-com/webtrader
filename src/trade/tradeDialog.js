@@ -665,16 +665,18 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             state.purchase.loading = false;
         }
         else {
+          require(['trade/tradeConf'], function(tradeConf) {
             liveapi.send({
                   buy: state.proposal.id,
                   price: state.proposal.ask_price * 1,
                })
                .then(function(data){
-                  require(['trade/tradeConf'], function(tradeConf){
-                      extra.contract_id = data.buy.contract_id;
-                      extra.transaction_id = data.buy.transaction_id;
-                      tradeConf.init(data, extra, show, hide, symbol);
-                  });
+                    extra.contract_id = data.buy.contract_id;
+                    extra.transaction_id = data.buy.transaction_id;
+                    if(extra.show_tick_chart || extra.category === 'Digits') {
+                      liveapi.proposal_open_contract.subscribe(extra.contract_id);
+                    }
+                    tradeConf.init(data, extra, show, hide, symbol);
                })
                .catch(function(err){
                  state.purchase.loading = false;
@@ -688,6 +690,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                    state.proposal.onchange();
                  }
                });
+          });
          }
       };
 

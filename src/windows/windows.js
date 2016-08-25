@@ -474,6 +474,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             /* automatically log the user in if we have oauth_token in local_storage */
             require(['websockets/binary_websockets' ], function(liveapi) {
               if(local_storage.get('oauth')) {
+
                 /* query string parameters can tempered.
                    make sure to get loginid from webapi instead */
                 var oauth = local_storage.get('oauth');
@@ -486,13 +487,26 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                   return liveapi.cached.authorize()
                     .then(function(data) {
                        results.unshift(data);
+                       var is_jpy_account = false;
                        for(var i = 0; i < results.length; ++i) {
                           oauth[i].id = results[i].authorize.loginid;
                           oauth[i].is_virtual = results[i].authorize.is_virtual;
+                          if (results[i].authorize.landing_company_name.indexOf('japan') !== -1) {
+                            is_jpy_account = true;
+                          }
                        }
                        local_storage.set('oauth', oauth);
-                       return data;
+                       return is_jpy_account;
                     });
+                })
+                .then(function(is_jpy_account) {
+                   /* Japan accounts should not be allowed to login to webtrader */
+                   if(is_jpy_account && is_jpy_account === true) {
+                      liveapi.invalidate();
+                      $.growl.error({message: 'Japan accounts are not supported.'.i18n(), duration: 6000 });
+                      local_storage.remove('oauth');
+                      local_storage.remove('oauth-login');
+                   }
                 })
                 .catch(function(err) {
                     console.error(err.message);

@@ -1,7 +1,8 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, rv, $navHtml) {
+define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/countries.json", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, rv, countries, $navHtml) {
     "use strict";
+    countries = JSON.parse(countries);
 
     function updateListItemHandlers() {
         $("#nav-menu li > ul li").each(function () {
@@ -33,7 +34,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
         var login_menu = root.find('.login');
         var account_menu = root.find('.account').hide();
         var real_accounts_only = account_menu.find('li.visible-on-real-accounts-only').hide();
-        var virtual_accounts_only = account_menu.find('li.visible-on-virtual-accounts-only').hide();
+        var upgrade_account_li = account_menu.find('li.upgrade-account').hide();
         var time = root.find('span.time');
         var login_btn = root.find('.login button');
         var logout_btn = root.find('.account .logout');
@@ -63,7 +64,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
 
                 var value = '0';
                 if (data.authorize) value = data.authorize.balance;
-                else value = data.balance.balance;
+                else value = data.balance ? data.balance.balance : '0';
 
                 balance.text(currency + ' ' + formatPrice(value)).fadeIn();
             };
@@ -92,24 +93,27 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
                 update_balance(data);
                 loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
-                var has_real_account = false;
-                var has_disabled_account = false;
-
-                var loginids = get_cookie('loginid_list');
-                loginids = decodeURIComponent(loginids).split('+');
-                loginids.forEach(function(id){
-                  var id = id.split(':');
-                  if(id[1] === 'R')
-                    has_real_account = true;
-                  if(id[2] === 'D')
-                    has_disabled_account = true;
-                });
-
+                var oauth = local_storage.get('oauth') || [];
                 var is_current_account_real = data.authorize.is_virtual === 0;
                 is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
-                has_real_account ? virtual_accounts_only.hide() : virtual_accounts_only.show();
 
-                var oauth = local_storage.get('oauth') || [];
+                var loginids = Cookies.loginids();
+                var has_real_account = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
+                var has_disabled_account =  _.some(loginids, {is_disabled: true});
+
+                var show_financial_link = false;
+                if(_.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true}) && is_current_account_real) {
+                  var residence = Cookies.residence();
+                  show_financial_link =  /* allow UK MLT client to open MF account. */
+                      (countries[residence] && countries[residence].financial_company === 'maltainvest') ||
+                      (Cookies.residence() === 'gb' && /^MLT/.test(data.authorize.loginid));
+                }
+
+                var toggle = function(show, el) { show ? el.show() : el.hide(); }
+                toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
+                toggle(show_financial_link, upgrade_account_li.find('.open-financial-account-span'));
+                toggle(!has_real_account || show_financial_link, upgrade_account_li);
+
                 /* switch between account on user click */
                 $('.account li.info').remove();
                 oauth.forEach(function (account) {

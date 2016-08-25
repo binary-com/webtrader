@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-07-29 06:05+0000\n"
+"PO-Revision-Date: 2016-08-08 07:28+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -46,6 +46,9 @@ msgid ""
 "Binary.com shall not in any circumstance be held responsible for "
 "transactions made between customers and Payment Agents"
 msgstr ""
+"- Binary.com與上述所有支付代理不存在附屬關係。各支付代理均以獨立服務提供商的身份運營，未由Binary.com支持、擔保或經其它方式批准。客戶"
+"與支付代理的業務往來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情況下，Binary.com都不對客戶與支付代理之間的交易承擔"
+"責任"
 
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
@@ -174,7 +177,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "所有時間均採用格林威治標準時間（GMT）"
 
 msgid "Amount"
-msgstr ""
+msgstr "金額"
 
 msgid "Amount Per Point"
 msgstr "每點之金額"
@@ -192,16 +195,16 @@ msgid "Apply"
 msgstr "申請"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "申請成為Binary.com"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "合適性測試:警告"
 
 msgid "Apr"
-msgstr ""
+msgstr "四月"
 
 msgid "April"
-msgstr ""
+msgstr "四月"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "確定刪除此權杖?"
@@ -222,10 +225,10 @@ msgid "Asset Index"
 msgstr "資產指數"
 
 msgid "Aug"
-msgstr ""
+msgstr "八月"
 
 msgid "August"
-msgstr ""
+msgstr "八月"
 
 msgid "Average"
 msgstr "平均"
@@ -320,18 +323,17 @@ msgstr "圖表主題"
 msgid "Chart background"
 msgstr "圖表背景"
 
-#, fuzzy
 msgid "Chart context menu"
-msgstr "圖表主題"
+msgstr "圖表操作功能表"
 
 msgid "Choose password"
 msgstr "選擇密碼"
 
 msgid "Choose your pereferred payment agent"
-msgstr ""
+msgstr "選擇您較傾向的支付代理"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr ""
+msgstr "選擇您較傾向的取款方法"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -364,7 +366,7 @@ msgid "Config changes successful"
 msgstr "成功更改配置"
 
 msgid "Confirm transfer"
-msgstr ""
+msgstr "確認轉帳"
 
 msgid "Connection closed"
 msgstr "連結已關閉"
@@ -471,12 +473,11 @@ msgstr "出生日期"
 msgid "Days"
 msgstr "日"
 
-#, fuzzy
 msgid "Dec"
-msgstr "拒絕"
+msgstr "十二月"
 
 msgid "December"
-msgstr ""
+msgstr "十二月"
 
 msgid "Decline"
 msgstr "拒絕"
@@ -490,9 +491,8 @@ msgstr "刪除水平"
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr "採用IFRAME演示聯盟會員存取Binary.com圖表"
 
-#, fuzzy
 msgid "Deposit funds"
-msgstr "美元存款"
+msgstr "存入資金"
 
 msgid "Deposit of USD"
 msgstr "美元存款"
@@ -513,10 +513,10 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
 
 msgid "Done. The funds are being transferred to the payment agent"
-msgstr ""
+msgstr "已完成。資金已轉給支付代理"
 
 msgid "Done. The funds are transferred"
-msgstr ""
+msgstr "已完成。資金已轉入"
 
 msgid "Dot"
 msgstr "點"
@@ -533,27 +533,23 @@ msgstr "雙擊物件執行刪除"
 msgid "Download CSV"
 msgstr "下載CSV"
 
-#, fuzzy
 msgid "Download JPEG image"
-msgstr "下載PNG"
+msgstr "下載JPEG圖像"
 
-#, fuzzy
 msgid "Download PDF document"
-msgstr "下載PNG"
+msgstr "下載PDF文件"
 
 msgid "Download PNG"
 msgstr "下載PNG"
 
-#, fuzzy
 msgid "Download PNG image"
-msgstr "下載PNG"
+msgstr "下載PNG圖像"
 
 msgid "Download SVG"
 msgstr "下載SVG"
 
-#, fuzzy
 msgid "Download SVG vector image"
-msgstr "下載SVG"
+msgstr "下載SVG向量圖像"
 
 msgid "Download as"
 msgstr "下載as"
@@ -655,10 +651,10 @@ msgid "Favourite dish"
 msgstr "最愛的菜餚"
 
 msgid "Feb"
-msgstr ""
+msgstr "二月"
 
 msgid "February"
-msgstr ""
+msgstr "二月"
 
 msgid "Final Price"
 msgstr "最終價格"
@@ -688,14 +684,13 @@ msgid "Fri"
 msgstr "星期五"
 
 msgid "Friday"
-msgstr ""
+msgstr "週五"
 
 msgid "From"
 msgstr "從"
 
-#, fuzzy
 msgid "Further instructions"
-msgstr "建構"
+msgstr "詳細說明"
 
 msgid "Gray"
 msgstr "灰色"
@@ -749,7 +744,7 @@ msgid "I have read and agree to Binary.com"
 msgstr "本人已經閱讀並同意Binary.com的"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr ""
+msgstr "重要免責聲明"
 
 msgid ""
 "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
@@ -760,6 +755,9 @@ msgid ""
 "sending them any money. Binary.com shall not in any circumstance be held "
 "responsible for transactions made between customers and payment agents"
 msgstr ""
+"重要免責聲明 - Binary.com與上述所有支付代理不存在附屬關係。各支付代理均以獨立服務提供商的身份運營，未由Binary.com支持、擔保或經其它"
+"方式批准。客戶與支付代理的業務往來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情況下，Binary.com都不對客戶與支付代理"
+"之間的交易承擔責任"
 
 msgid "If you select a"
 msgstr "如您選擇"
@@ -772,11 +770,10 @@ msgid ""
 "you sure you want to proceed?"
 msgstr "必須完整重新整理頁面才能正確啟用主題。確定要繼續?"
 
-#, fuzzy
 msgid ""
 "In order to properly apply this language, a full refresh of page is "
 "required. Are you sure you want to proceed?"
-msgstr "必須完整重新整理頁面才能正確啟用主題。確定要繼續?"
+msgstr "必須完整重新整理頁面才能正確啟用此語言。確定要繼續?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -819,28 +816,26 @@ msgstr "工具"
 msgid "Investments & Dividends"
 msgstr "投資與分紅"
 
-#, fuzzy
 msgid "Jan"
-msgstr "以及"
+msgstr "一月"
 
 msgid "January"
-msgstr ""
+msgstr "一月"
 
 msgid "Jul"
-msgstr ""
+msgstr "七月"
 
 msgid "July"
-msgstr ""
+msgstr "七月"
 
 msgid "Jump to"
 msgstr "跳至"
 
-#, fuzzy
 msgid "Jun"
-msgstr "週日"
+msgstr "六月"
 
 msgid "June"
-msgstr ""
+msgstr "六月"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "僅須在您將被導入頁面上點擊 授予 按鈕"
@@ -929,9 +924,8 @@ msgstr "載入投資組合"
 msgid "Loading self-exclusion settings"
 msgstr "載入自我禁止設定"
 
-#, fuzzy
 msgid "Loading..."
-msgstr "載入"
+msgstr "正在載入..."
 
 msgid "Log in"
 msgstr "登入"
@@ -991,13 +985,14 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
+"在送出要求前，請確保您首先同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資金將從您的帳戶取出，並轉至您選擇的支付代理。代理將通過您的偏好支付方式將取款金"
+"額（扣除佣金）支付給您"
 
-#, fuzzy
 msgid "Mar"
-msgstr "先生"
+msgstr "三月"
 
 msgid "March"
-msgstr ""
+msgstr "三月"
 
 msgid "Mass Period"
 msgstr "梅斯線期限"
@@ -1029,9 +1024,8 @@ msgstr "每天最大累計虧損額"
 msgid "Maximum number of open positions"
 msgstr "最大未平倉頭寸數目"
 
-#, fuzzy
 msgid "May"
-msgstr "日"
+msgstr "五月"
 
 msgid "Memorable date"
 msgstr "難忘的日子"
@@ -1043,13 +1037,13 @@ msgid "Middle Band Stroke"
 msgstr "中價帶波幅"
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "最小: 10 最大: 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "需至少6個字元和1個數字"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "減去代理佣金"
 
 msgid "Minutes"
 msgstr "分鐘"
@@ -1060,9 +1054,8 @@ msgstr "小姐"
 msgid "Mon"
 msgstr "周一"
 
-#, fuzzy
 msgid "Monday"
-msgstr "次要"
+msgstr "週一"
 
 msgid "Mother's maiden name"
 msgstr "母親婚前的姓氏"
@@ -1137,14 +1130,13 @@ msgstr ""
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
-msgstr ""
+msgstr "注意:您必須完全通過付款代理存款才可使用付款代理提款"
 
-#, fuzzy
 msgid "Nov"
-msgstr "否"
+msgstr "十一月"
 
 msgid "November"
-msgstr ""
+msgstr "十一月"
 
 msgid "Now"
 msgstr "現在"
@@ -1165,10 +1157,10 @@ msgid "OPEN"
 msgstr "開盤"
 
 msgid "Oct"
-msgstr ""
+msgstr "十月"
 
 msgid "October"
-msgstr ""
+msgstr "十月"
 
 msgid "Offset"
 msgstr "位移"
@@ -1260,13 +1252,11 @@ msgstr "密碼已成功更新"
 msgid "Passwords didn't match. Please type them again"
 msgstr "密碼不相符。請重新輸入"
 
-#, fuzzy
 msgid "Payment agent"
-msgstr "支付"
+msgstr "支付代理"
 
-#, fuzzy
 msgid "Payment agents"
-msgstr "支付"
+msgstr "支付代理"
 
 msgid "Payments"
 msgstr "支付"
@@ -1308,7 +1298,7 @@ msgid "Please choose at least one token scope"
 msgstr "請選擇至少一個權杖範圍"
 
 msgid "Please confirm the following details in order to complete the transfer"
-msgstr ""
+msgstr "請確認以下詳細資料以完成轉帳"
 
 msgid "Please enter a number between"
 msgstr "請輸入以下範圍之間的數字"
@@ -1447,7 +1437,7 @@ msgid "Primary"
 msgstr "主要"
 
 msgid "Print chart"
-msgstr ""
+msgstr "列印圖表"
 
 msgid "Profit"
 msgstr "利潤"
@@ -1513,10 +1503,10 @@ msgid "Reset to Defaults"
 msgstr "重設為預設值"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "縮放重設"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "縮放等級1:1重設"
 
 msgid "Resources"
 msgstr "資源"
@@ -1558,7 +1548,7 @@ msgid "Sat"
 msgstr "週六"
 
 msgid "Saturday"
-msgstr ""
+msgstr "週六"
 
 msgid "Secondary"
 msgstr "次要"
@@ -1593,19 +1583,17 @@ msgstr "賣出現價"
 msgid "Sell Time"
 msgstr "賣出時間"
 
-#, fuzzy
 msgid "Send to account #"
-msgstr "開立帳戶"
+msgstr "傳送到帳戶#"
 
-#, fuzzy
 msgid "Sent to account"
-msgstr "開立帳戶"
+msgstr "傳送到帳戶"
 
 msgid "Sep"
-msgstr ""
+msgstr "九月"
 
 msgid "September"
-msgstr ""
+msgstr "九月"
 
 msgid "Session"
 msgstr "工作階段"
@@ -1692,10 +1680,10 @@ msgid "Stake"
 msgstr "投注資金"
 
 msgid "Standard methods"
-msgstr ""
+msgstr "標準方法"
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "標準提款方式"
 
 msgid "Start Time"
 msgstr "開始時間"
@@ -1749,7 +1737,7 @@ msgid "Stroke width"
 msgstr "波幅寬度"
 
 msgid "Submit"
-msgstr ""
+msgstr "提交"
 
 msgid "Successfully added new token"
 msgstr "成功新增權杖"
@@ -1758,7 +1746,7 @@ msgid "Sun"
 msgstr "週日"
 
 msgid "Sunday"
-msgstr ""
+msgstr "週日"
 
 msgid "TEMA"
 msgstr "三指數移動平均線"
@@ -1769,9 +1757,8 @@ msgstr "三角形移動平均線"
 msgid "Table"
 msgstr "表"
 
-#, fuzzy
 msgid "Tel"
-msgstr "關於"
+msgstr "電話"
 
 msgid "Terms"
 msgstr "條款"
@@ -1819,13 +1806,13 @@ msgid "This contract won"
 msgstr "合約贏了"
 
 msgid "This field is required"
-msgstr ""
+msgstr "此為必填欄位"
 
 msgid "Thu"
 msgstr "週四"
 
 msgid "Thursday"
-msgstr ""
+msgstr "週四"
 
 msgid "Tick Trade app"
 msgstr "跳動點交易應用程式"
@@ -1852,21 +1839,20 @@ msgid "Title"
 msgstr "職稱"
 
 msgid "To"
-msgstr ""
+msgstr "到"
 
 msgid "To deposit money please contact the payment agent directly"
-msgstr ""
+msgstr "如要存款請直接聯繫支付代理"
 
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
-msgstr ""
+msgstr "對於不受Binary.com支持的支付方式或本地貨幣， 您可聯繫支付代理處理存款和取款"
 
-#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
-msgstr "請輸入發送到您郵箱的驗證碼"
+msgstr "要提款前請輸入剛發送到您郵箱的特殊驗證權杖碼"
 
 msgid "Token"
 msgstr "權杖"
@@ -1943,7 +1929,7 @@ msgid "Tradingview for Binary.com"
 msgstr "通過Binary.com使用Tradingview"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "轉帳到另一個Binary帳戶"
 
 msgid "Try"
 msgstr "嘗試"
@@ -1952,7 +1938,7 @@ msgid "Tue"
 msgstr "週二"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "週二"
 
 msgid "Turnover"
 msgstr "交易額"
@@ -1964,7 +1950,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "很遺憾。您的瀏覽器不支持這些程式"
 
 msgid "Unlock"
-msgstr ""
+msgstr "解鎖"
 
 msgid "Up/Down"
 msgstr "上漲/下跌"
@@ -2025,7 +2011,7 @@ msgid "Wed"
 msgstr "週三"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "週三"
 
 msgid "While on the go, you can"
 msgstr "出門在外時，您可"
@@ -2034,10 +2020,10 @@ msgid "Windows"
 msgstr "視窗"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "取出資金"
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "通過支付代理提款"
 
 msgid "X-axis labels"
 msgstr "X-軸標籤"
@@ -2054,7 +2040,6 @@ msgstr "Y-軸方格線"
 msgid "Y-axis labels"
 msgstr "Y-軸標籤"
 
-#, fuzzy
 msgid "Yes"
 msgstr "是"
 
@@ -2105,7 +2090,7 @@ msgid "Your transaction reference number is"
 msgstr "您的交易參考號是"
 
 msgid "Zoom"
-msgstr ""
+msgstr "縮放"
 
 msgid "admin"
 msgstr "管理中心"
@@ -2125,9 +2110,8 @@ msgstr ""
 msgid "between"
 msgstr "之間"
 
-#, fuzzy
 msgid "commission"
-msgstr "權限"
+msgstr "佣金"
 
 msgid "contact support"
 msgstr "聯繫客服部"
@@ -2248,9 +2232,8 @@ msgstr "oauth"
 msgid "of \"Now\", the"
 msgstr "是「現在」"
 
-#, fuzzy
 msgid "payment agent"
-msgstr "付款"
+msgstr "支付代理"
 
 msgid "payments"
 msgstr "付款"
@@ -2307,7 +2290,7 @@ msgid "yes"
 msgstr "是"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回報率"

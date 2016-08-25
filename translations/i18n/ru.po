@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-08-04 05:04+0000\n"
+"PO-Revision-Date: 2016-08-10 10:44+0000\n"
 "Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
@@ -49,6 +49,14 @@ msgid ""
 "Binary.com shall not in any circumstance be held responsible for "
 "transactions made between customers and Payment Agents"
 msgstr ""
+"- Binary.com не является партнёром ни одного из вышеперечисленных платёжных "
+"агентов. Каждый платёжный агент действует в качестве независимого поставщика "
+"услуг и не получает поощрения, гарантий или иного одобрения от Binary.com. "
+"КЛИЕНТЫ СОТРУДНИЧАЮТ С ПЛАТЁЖНЫМИ АГЕНТАМИ НА СВОЙ СТРАХ И РИСК. Клиентам "
+"рекомендуется проверять рекомендации платёжных агентов перед отправкой им "
+"денег. Ни при каких обстоятельствах Binary.com не будет нести "
+"ответственности за транзакции, осуществляемые между клиентами и платёжными "
+"агентами"
 
 msgid "-DI Stroke"
 msgstr "Штрих -DI"
@@ -177,7 +185,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Всё время указано в GMT (по Гринвичу)"
 
 msgid "Amount"
-msgstr ""
+msgstr "Сумма"
 
 msgid "Amount Per Point"
 msgstr "Сумма за пункт"
@@ -186,7 +194,7 @@ msgid "Amount per point"
 msgstr "Сумма за пункт"
 
 msgid "Answer"
-msgstr ""
+msgstr "Ответ"
 
 msgid "Applied to"
 msgstr "Применимо для"
@@ -201,10 +209,10 @@ msgid "Appropriateness Test: WARNING"
 msgstr "Тест на целесообразность: ПРЕДУПРЕЖДЕНИЕ"
 
 msgid "Apr"
-msgstr ""
+msgstr "Апр"
 
 msgid "April"
-msgstr ""
+msgstr "Апрель"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Вы уверены, что хотите удалить этот ключ?"
@@ -225,10 +233,10 @@ msgid "Asset Index"
 msgstr "Индекс активов"
 
 msgid "Aug"
-msgstr ""
+msgstr "Авг"
 
 msgid "August"
-msgstr ""
+msgstr "Август"
 
 msgid "Average"
 msgstr "Среднее"
@@ -326,16 +334,16 @@ msgid "Chart background"
 msgstr "Фон графика"
 
 msgid "Chart context menu"
-msgstr ""
+msgstr "Контекстное меню графика"
 
 msgid "Choose password"
 msgstr "Выберите пароль"
 
 msgid "Choose your pereferred payment agent"
-msgstr ""
+msgstr "Выберите платёжного агента"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr ""
+msgstr "Выберите способ вывода средств"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -344,7 +352,7 @@ msgid "Chrome Extension"
 msgstr "Расширение Chrome"
 
 msgid "Click Jacking test"
-msgstr ""
+msgstr "Нажмите на Тест"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Нажмите, чтобы войти через счёт на Binary.com"
@@ -371,7 +379,7 @@ msgid "Config changes successful"
 msgstr "Конфигурация изменена успешно"
 
 msgid "Confirm transfer"
-msgstr ""
+msgstr "Подтвердить перевод"
 
 msgid "Connection closed"
 msgstr "Соединение закрыто"
@@ -446,7 +454,7 @@ msgid "Customize chart appearance"
 msgstr "Настройка вида графика"
 
 msgid "DI Stroke"
-msgstr ""
+msgstr "Штрих DI"
 
 msgid "DX MA Type"
 msgstr "Тип СС DX"
@@ -478,12 +486,11 @@ msgstr "Дата рождения"
 msgid "Days"
 msgstr "Дни"
 
-#, fuzzy
 msgid "Dec"
-msgstr "Отклонить"
+msgstr "Дек"
 
 msgid "December"
-msgstr ""
+msgstr "Декабрь"
 
 msgid "Decline"
 msgstr "Отклонить"
@@ -497,9 +504,8 @@ msgstr "Удалить уровень (уровни)"
 msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 msgstr "Демо-ролик для партнёров о доступе к графикам Binary.com в IFRAME"
 
-#, fuzzy
 msgid "Deposit funds"
-msgstr "Депозит в USD"
+msgstr "Пополнить счет"
 
 msgid "Deposit of USD"
 msgstr "Депозит в USD"
@@ -520,10 +526,10 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
 
 msgid "Done. The funds are being transferred to the payment agent"
-msgstr ""
+msgstr "Готово. Средства переведены платёжному агенту"
 
 msgid "Done. The funds are transferred"
-msgstr ""
+msgstr "Готово. Средства переведены"
 
 msgid "Dot"
 msgstr "Точечный"
@@ -540,27 +546,23 @@ msgstr "Дважды нажмите на объект, чтобы удалить
 msgid "Download CSV"
 msgstr "Загрузить в CSV"
 
-#, fuzzy
 msgid "Download JPEG image"
-msgstr "Загрузить в PNG"
+msgstr "Загрузить изображение в JPEG"
 
-#, fuzzy
 msgid "Download PDF document"
-msgstr "Загрузить в PNG"
+msgstr "Загрузить документ в PDF"
 
 msgid "Download PNG"
 msgstr "Загрузить в PNG"
 
-#, fuzzy
 msgid "Download PNG image"
-msgstr "Загрузить в PNG"
+msgstr "Загрузить изображение в PNG"
 
 msgid "Download SVG"
 msgstr "Загрузить в SVG"
 
-#, fuzzy
 msgid "Download SVG vector image"
-msgstr "Загрузить в SVG"
+msgstr "Загрузить векторное изображение в SVG"
 
 msgid "Download as"
 msgstr "Загрузить как"
@@ -611,7 +613,7 @@ msgid "Error getting data for"
 msgstr "Ошибка в получении данных для"
 
 msgid "Estimated Net Worth"
-msgstr ""
+msgstr "Собственный капитал"
 
 msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
@@ -662,10 +664,10 @@ msgid "Favourite dish"
 msgstr "Любимое блюдо"
 
 msgid "Feb"
-msgstr ""
+msgstr "Фев"
 
 msgid "February"
-msgstr ""
+msgstr "Февраль"
 
 msgid "Final Price"
 msgstr "Цена продажи"
@@ -695,14 +697,13 @@ msgid "Fri"
 msgstr "Пят"
 
 msgid "Friday"
-msgstr ""
+msgstr "Пятница"
 
 msgid "From"
 msgstr "От"
 
-#, fuzzy
 msgid "Further instructions"
-msgstr "Строительство"
+msgstr "Дальнейшие инструкции"
 
 msgid "Gray"
 msgstr "Серый"
@@ -756,7 +757,7 @@ msgid "I have read and agree to Binary.com"
 msgstr "Я ознакомился и согласился с условиями Binary.com"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr ""
+msgstr "ВАЖНАЯ ИНФОРМАЦИЯ"
 
 msgid ""
 "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
@@ -767,12 +768,20 @@ msgid ""
 "sending them any money. Binary.com shall not in any circumstance be held "
 "responsible for transactions made between customers and payment agents"
 msgstr ""
+"ВАЖНАЯ ИНФОРМАЦИЯ: Binary.com не является партнёром ни одного из "
+"вышеперечисленных платёжных агентов. Каждый платёжный агент действует в "
+"качестве независимого поставщика услуг и не получает поощрения, гарантий или "
+"иного одобрения от Binary.com. КЛИЕНТЫ СОТРУДНИЧАЮТ С ПЛАТЁЖНЫМИ АГЕНТАМИ НА "
+"СВОЙ СТРАХ И РИСК. Клиентам рекомендуется проверять рекомендации платёжных "
+"агентов перед отправкой им денег. Ни при каких обстоятельствах Binary.com не "
+"будет нести ответственности за транзакции, осуществляемые между клиентами и "
+"платёжными агентами"
 
 msgid "If you select a"
 msgstr "Если Вы выбираете"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "Если Вы выбираете определенное"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -781,13 +790,12 @@ msgstr ""
 "Чтобы изменение темы вступило в силу, необходимо полное обновление страницы. "
 "Вы уверены, что хотите продолжить?"
 
-#, fuzzy
 msgid ""
 "In order to properly apply this language, a full refresh of page is "
 "required. Are you sure you want to proceed?"
 msgstr ""
-"Чтобы изменение темы вступило в силу, необходимо полное обновление страницы. "
-"Вы уверены, что хотите продолжить?"
+"Чтобы применить данный язык, необходимо полное обновление страницы. Вы "
+"уверены, что хотите продолжить?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -835,26 +843,25 @@ msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"
 
 msgid "Jan"
-msgstr ""
+msgstr "Янв"
 
 msgid "January"
-msgstr ""
+msgstr "Январь"
 
 msgid "Jul"
-msgstr ""
+msgstr "Июль"
 
 msgid "July"
-msgstr ""
+msgstr "Июль"
 
 msgid "Jump to"
 msgstr "Перейти к"
 
-#, fuzzy
 msgid "Jun"
-msgstr "Вск"
+msgstr "Июнь"
 
 msgid "June"
-msgstr ""
+msgstr "Июнь"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Просто нажмите кнопку  Разрешить  на открывшейся странице"
@@ -943,9 +950,8 @@ msgstr "Загрузка портфеля"
 msgid "Loading self-exclusion settings"
 msgstr "Загрузка настроек самоисключения"
 
-#, fuzzy
 msgid "Loading..."
-msgstr "Идёт загрузка"
+msgstr "Идёт загрузка..."
 
 msgid "Log in"
 msgstr "Вход"
@@ -1005,16 +1011,20 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
+"Перед тем, как подтвердить запрос, убедитесь, что Вы предварительно "
+"оговорили с платёжным агентом все условия оплаты. Когда Вы нажмёте кнопку \""
+"Подтвердить перевод,\" средства будут выведены с Вашего счёта и отправлены "
+"выбранному Вами платёжному агенту. Агент переведёт Вам выведенную сумму (за "
+"вычетом комиссии) выбранным способом оплаты"
 
-#, fuzzy
 msgid "Mar"
-msgstr "Господин"
+msgstr "Мар"
 
 msgid "March"
-msgstr ""
+msgstr "Март"
 
 msgid "Mass Period"
-msgstr ""
+msgstr "период Индекса массы"
 
 msgid "Max/Min Period"
 msgstr "Макс./мин. период"
@@ -1048,7 +1058,7 @@ msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
 
 msgid "May"
-msgstr ""
+msgstr "Май"
 
 msgid "Memorable date"
 msgstr "Важная дата"
@@ -1060,13 +1070,13 @@ msgid "Middle Band Stroke"
 msgstr "Штрих средней линии"
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Мин: 10; Макс: 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Минимум 6 символов и минимум 1 цифра"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "Минус комиссия агента"
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -1077,9 +1087,8 @@ msgstr "Госпожа"
 msgid "Mon"
 msgstr "Пон"
 
-#, fuzzy
 msgid "Monday"
-msgstr "Вторичн."
+msgstr "Понедельник"
 
 msgid "Mother's maiden name"
 msgstr "Девичья фамилия матери"
@@ -1097,10 +1106,10 @@ msgid "Multiplier"
 msgstr "Коэффициент"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev вниз"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev вверх"
 
 msgid "Name"
 msgstr "Имя"
@@ -1157,13 +1166,15 @@ msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
 msgstr ""
+"Примечание: вывод средств через платёжного агента возможен лишь в том "
+"случае, когда Вы вносите средства исключительно через данного платёжного "
+"агента"
 
-#, fuzzy
 msgid "Nov"
-msgstr "Нет"
+msgstr "Ноя"
 
 msgid "November"
-msgstr ""
+msgstr "Ноябрь"
 
 msgid "Now"
 msgstr "Сейчас"
@@ -1630,7 +1641,7 @@ msgid "Show"
 msgstr "Показать"
 
 msgid "Sigma"
-msgstr ""
+msgstr "Сигма"
 
 msgid "Signal Line Stroke"
 msgstr "Штрих сигнальной линии"
@@ -1759,7 +1770,7 @@ msgid "Tertiary"
 msgstr "Третичн."
 
 msgid "The"
-msgstr ""
+msgstr " "
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -1874,7 +1885,7 @@ msgid "Trade Confirmation"
 msgstr "Подтверждение контракта"
 
 msgid "Trade using"
-msgstr ""
+msgstr "Торгуйте с помощью"
 
 msgid "Trading Times"
 msgstr "Торговые часы"
@@ -2043,25 +2054,25 @@ msgid "Your changes have been updated"
 msgstr "Ваши изменения обновлены успешно"
 
 msgid "Your email"
-msgstr ""
+msgstr "Ваш эл. адрес"
 
 msgid "Your new account balance is"
-msgstr ""
+msgstr "Новый баланс Вашего счёта"
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "Ссылка на Вашу сделку"
 
 msgid "Your transaction reference number is"
-msgstr ""
+msgstr "Номер Вашей сделки"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Приблизить"
 
 msgid "admin"
-msgstr ""
+msgstr "администратор"
 
 msgid "and"
-msgstr ""
+msgstr "и"
 
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
@@ -2069,196 +2080,195 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
+"ниже и переходя к открытию счёта, Вы должны принять во внимание, что "
+"подвергаете себя риску (который может оказаться весьма значительным и "
+"включать риск потери всей инвестиции), для оценки и смягчения которого у Вас "
+"может быть недостаточно знаний и опыта"
 
 msgid "between"
-msgstr ""
+msgstr "между"
 
-#, fuzzy
 msgid "commission"
-msgstr "Разрешения"
+msgstr "комиссия"
 
 msgid "contact support"
-msgstr ""
+msgstr "связаться со службой поддержки"
 
 msgid "customer support"
-msgstr ""
+msgstr "служба поддержки"
 
 msgid "day"
-msgstr ""
+msgstr "дн."
 
 msgid "days"
-msgstr ""
+msgstr "дн."
 
 msgid "e.g"
-msgstr ""
+msgstr "напр."
 
 msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr ""
+msgstr "напр., www2.binary.com, www.binaryqa36.com"
 
 msgid "end time"
-msgstr ""
+msgstr "окончание"
 
 msgid "entry spot"
-msgstr ""
+msgstr "котировка на входе"
 
 msgid "exit spot"
-msgstr ""
+msgstr "котировка на выходе"
 
 msgid "feed is delayed by"
-msgstr ""
+msgstr "котировки задерживаются"
 
 msgid "for API calls that can access the cashier"
-msgstr ""
+msgstr "для вызовов API, действующих для кассы"
 
 msgid "for API calls that can create trades in the client account"
-msgstr ""
+msgstr "для вызовов API, способных открыть сделки на счету клиента"
 
 msgid "for API calls that change client settings"
-msgstr ""
+msgstr "для вызовов API, способных изменить настройки клиента"
 
 msgid "for API calls that only read client data"
-msgstr ""
+msgstr "для вызовов API, способных считывать только данные клиента"
 
 msgid "for mobile charts"
-msgstr ""
+msgstr "для мобильных графиков"
 
 msgid "has updated its"
-msgstr ""
+msgstr "обновил"
 
 msgid "hour"
-msgstr ""
+msgstr "час."
 
 msgid "hours"
-msgstr ""
+msgstr "час."
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
-msgstr ""
+msgstr "если Вы живёте в другой стране"
 
 msgid "in the future, the"
-msgstr ""
+msgstr "в будущем,"
 
 msgid "information about your trading exprience and personal finance"
-msgstr ""
+msgstr "информация о Вашем опыте торговли и финансовых средствах"
 
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
 msgstr ""
+"– усовершенствованная торговая платформа Binary для ПК. Гибкий многооконный "
+"интерфейс идеально пгодходит активным трейдерам для работы с настольных ПК"
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "является обязательным. Текущий спред"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "в выбранное время, а"
 
 msgid "is the"
-msgstr ""
+msgstr "является"
 
 msgid "is the price in effect at that time"
-msgstr ""
+msgstr "будет ценой, действующей на тот момент"
 
 msgid "is the selected number of minutes/hours after the"
-msgstr ""
+msgstr "наступит через выбранное количество минут/часов после"
 
 msgid "is the selected time"
-msgstr ""
+msgstr "будет выбранное Вами время"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "является котировка на"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr ""
+msgstr "является момент, когда контракт был обработан нашим сервером и"
 
 msgid "main site"
-msgstr ""
+msgstr "основной сайт"
 
 msgid "minute"
-msgstr ""
+msgstr "мин."
 
 msgid "minutes"
-msgstr ""
+msgstr "мин."
 
 msgid "next tick"
-msgstr ""
+msgstr "следующий тик"
 
 msgid "oauth"
-msgstr ""
+msgstr "OAuth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "\"Сейчас\","
 
 msgid "payment agent"
-msgstr ""
+msgstr "платёжный агент"
 
 msgid "payments"
-msgstr ""
+msgstr "выплаты"
 
 msgid "please play responsibly. Read about"
-msgstr ""
+msgstr "пожалуйста, играйте ответственно. Подробнее о"
 
 msgid "points"
-msgstr ""
+msgstr "пункт."
 
 msgid "read"
-msgstr ""
+msgstr "прочитать"
 
 msgid "second"
-msgstr ""
+msgstr "сек."
 
 msgid "seconds"
-msgstr ""
+msgstr "сек."
 
 msgid "session overview"
-msgstr ""
+msgstr "обзор сессии"
 
 msgid "start time"
-msgstr ""
+msgstr "время начала"
 
 msgid "terms and conditions"
-msgstr ""
+msgstr "правила и условия"
 
 msgid "the"
-msgstr ""
+msgstr " "
 
 msgid "thereafter"
-msgstr ""
+msgstr "после начала"
 
 msgid "tick"
-msgstr ""
+msgstr "тик(а)"
 
 msgid "ticks"
-msgstr ""
+msgstr "тика(ов)"
 
 msgid "trade"
-msgstr ""
+msgstr "торговать"
 
 msgid "trading experience"
-msgstr ""
+msgstr "опыт торговли"
 
 msgid "trading frequency"
-msgstr ""
+msgstr "частота торговли"
 
 msgid "websocket"
-msgstr ""
+msgstr "Websocket"
 
 msgid "yes"
-msgstr ""
+msgstr "да"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
-
-#~ msgid "Apply new theme?"
-#~ msgstr "Применить новую тему?"
-
-#~ msgid "Chrome Extension"
-#~ msgstr "Расширение Chrome"
+msgstr "| Прибыль"

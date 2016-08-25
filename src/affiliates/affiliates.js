@@ -54,7 +54,16 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 										var delayAmount = instrumentObject[0].delay_amount || 0;
 
 										//Render in normal way
-										require(["charts/charts"], function(charts) {
+										require(["charts/charts", "charts/chartWindow"], function(charts, chartWindow) {
+											var options = {
+												instrumentCode : instrumentCode,
+												instrumentName : instrumentName,
+												timePeriod : timePeriod,
+												type : type,
+												delayAmount : delayAmount,
+												name: newTabId
+											};
+											chartWindow.add_chart_options(newTabId, options);
 											charts.drawChart("#" + newTabId + "_chart", {
 												instrumentCode : instrumentCode,
 												instrumentName : instrumentName,
