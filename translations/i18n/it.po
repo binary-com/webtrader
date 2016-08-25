@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2016-08-15 15:58+0000\n"
+"PO-Revision-Date: 2016-08-21 15:05+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/it/>\n"
@@ -469,7 +469,7 @@ msgid "Dark Unica"
 msgstr "Dark Unica"
 
 msgid "Dash style"
-msgstr ""
+msgstr "Stile trattino"
 
 msgid "Date"
 msgstr "Data"
@@ -573,7 +573,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "Edge"
-msgstr ""
+msgstr "Vantaggio"
 
 msgid "Edit"
 msgstr "Modifica"
@@ -630,7 +630,7 @@ msgid "Failed to update the password"
 msgstr "Aggiornamento della password non riuscito"
 
 msgid "Fall"
-msgstr ""
+msgstr "Ribasso"
 
 msgid "Family name"
 msgstr "Cognome"
@@ -783,11 +783,15 @@ msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
 msgstr ""
+"Per poter applicare lo sfondo in modo adeguato, è richiesto l'aggiornamento "
+"della pagina. Sei sicuro di voler procedere?"
 
 msgid ""
 "In order to properly apply this language, a full refresh of page is "
 "required. Are you sure you want to proceed?"
 msgstr ""
+"Per poter applicare questa lingua in modo adeguato, è richiesto "
+"l'aggiornamento della pagina. Sei sicuro di voler procedere?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -795,6 +799,9 @@ msgid ""
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
 msgstr ""
+"Per usufruire dei nostri servizi, richiediamo delle informazioni necessarie "
+"per valutare se un dato prodotto o servizio è adegutao a te (ossia se "
+"possiedi l'esperienza e la conoscenza per comprendere i rischi connessi)"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
@@ -819,7 +826,7 @@ msgid "Indices trading frequency"
 msgstr "Frequenza di trading sugli indici"
 
 msgid "Industry of Employment"
-msgstr ""
+msgstr "Settore lavorativo"
 
 msgid "Instrument"
 msgstr "Strumento"
@@ -852,7 +859,7 @@ msgid "June"
 msgstr "Giugno"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr ""
+msgstr "Basta cliccare sul pulsante Grant sulla pagina da adottare"
 
 msgid "LOW"
 msgstr "LOW"
@@ -867,13 +874,13 @@ msgid "Last Digit is Under"
 msgstr "L'ultima cifra è al di sotto"
 
 msgid "Last used"
-msgstr ""
+msgstr "Ultima volta"
 
 msgid "Less than"
 msgstr "Meno di"
 
 msgid "Let's do it"
-msgstr ""
+msgstr "Facciamolo"
 
 msgid "Level"
 msgstr "Livello"
@@ -885,7 +892,7 @@ msgid "Line"
 msgstr "Linea"
 
 msgid "Line Dot"
-msgstr ""
+msgstr "Punto linea"
 
 msgid "Line Stroke"
 msgstr ""
@@ -903,34 +910,34 @@ msgid "Loading Configurations"
 msgstr "Caricamento delle configurazioni"
 
 msgid "Loading Download/View Data"
-msgstr ""
+msgstr "Caricamento del download/Mostra dati"
 
 msgid "Loading Password dialog"
-msgstr ""
+msgstr "Caricamento della finestra di dialogo della password"
 
 msgid "Loading Profit Table"
 msgstr "Caricamento della tabella dei profitti"
 
 msgid "Loading Real account opening"
-msgstr ""
+msgstr "Caricamento dell'apertura di un conto reale"
 
 msgid "Loading Self-Exclusion"
-msgstr ""
+msgstr "Caricamento dell'auto esecuzione"
 
 msgid "Loading Statement Table"
-msgstr ""
+msgstr "Caricamento della tabella dell'estratto"
 
 msgid "Loading Token management"
-msgstr ""
+msgstr "Caricamento della gestione dei token"
 
 msgid "Loading Trading Times"
 msgstr "Caricamento degli orari di trading"
 
 msgid "Loading chart and trade menus"
-msgstr ""
+msgstr "Caricamento dei menu grafici e di trading"
 
 msgid "Loading custom theme configuration"
-msgstr ""
+msgstr "Caricamento della configurazione dello sfondo personalizzata"
 
 msgid "Loading portfolio"
 msgstr "Caricamento del portafoglio"
@@ -948,7 +955,7 @@ msgid "Log in time"
 msgstr "Orario di accesso"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Uscire perché la sessione di auto esclusione è scaduta!"
 
 msgid "Login"
 msgstr "Login"
@@ -978,10 +985,10 @@ msgid "Low Stroke"
 msgstr "Stroke inferiore"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Offset della barriera inferiore"
 
 msgid "Lower"
-msgstr ""
+msgstr "Inferiore"
 
 msgid "Lower Band Stroke"
 msgstr ""
@@ -1004,10 +1011,10 @@ msgid "Mar"
 msgstr "Mar"
 
 msgid "March"
-msgstr ""
+msgstr "Marzo"
 
 msgid "Mass Period"
-msgstr ""
+msgstr "Periodo di massa"
 
 msgid "Max/Min Period"
 msgstr "Periodo max/min"
@@ -1040,34 +1047,34 @@ msgid "May"
 msgstr "Maggio"
 
 msgid "Memorable date"
-msgstr ""
+msgstr "Data indimenticabile"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "Città indimenticabile"
 
 msgid "Middle Band Stroke"
 msgstr ""
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Min: 10 Max: 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimo 6 caratteri e deve contenere almeno 1 cifra"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "Meno la commissione dell'agente"
 
 msgid "Minutes"
 msgstr "Minuti"
 
 msgid "Miss"
-msgstr ""
+msgstr "Sig.ra"
 
 msgid "Mon"
 msgstr "Lun"
 
 msgid "Monday"
-msgstr ""
+msgstr "Lunedì"
 
 msgid "Mother's maiden name"
 msgstr "Cognome della madre"
@@ -1079,16 +1086,16 @@ msgid "Mrs"
 msgstr "Sig.ra"
 
 msgid "Ms"
-msgstr ""
+msgstr "Sig.ra"
 
 msgid "Multiplier"
 msgstr "Moltiplicatore"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev Down"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev Up"
 
 msgid "Name"
 msgstr "Nome"
@@ -1127,7 +1134,7 @@ msgid "New password"
 msgstr "Nuova password"
 
 msgid "No"
-msgstr ""
+msgstr "No"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr ""
@@ -1166,7 +1173,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OPEN"
-msgstr ""
+msgstr "APRI"
 
 msgid "Oct"
 msgstr "Ott"
@@ -1175,7 +1182,7 @@ msgid "October"
 msgstr "Ottobre"
 
 msgid "Offset"
-msgstr ""
+msgstr "Offset"
 
 msgid "Ok"
 msgstr "Ok"
