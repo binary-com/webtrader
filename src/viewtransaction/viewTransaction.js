@@ -495,6 +495,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
                 state.table.exit_tick = perv_tick.quote;
                 state.table.exit_tick_time = perv_tick.epoch*1;
                 state.validation = 'This contract has expired'.i18n();
+                state.table.is_expired = true;
               }
               clean_up();
             }
