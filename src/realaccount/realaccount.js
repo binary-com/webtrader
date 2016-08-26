@@ -35,6 +35,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           maximizable: false,
           width: 350,
           height: 930,
+          'data-authorized': true,
           close: function () {
             real_win.dialog('destroy');
             real_win.trigger('dialogclose'); // TODO: figure out why event is not fired.
