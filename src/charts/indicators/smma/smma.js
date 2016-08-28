@@ -26,6 +26,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
             $html.find("#smma_stroke_color").each(function () {
                 $(this).colorpicker({
+					showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -56,11 +57,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#smma_dash_style .dd-selected-image').css('max-width', '115px');
+                    $('#smma_dash_style .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#smma_dash_style .dd-option-image').css('max-width', '115px');
+            $('#smma_dash_style .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             $html.dialog({

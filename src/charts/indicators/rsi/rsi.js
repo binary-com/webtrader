@@ -39,6 +39,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#rsi_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -68,11 +69,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#rsi_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#rsi_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#rsi_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#rsi_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             var table = $html.find('#rsi_levels').DataTable({
                 paging: false,

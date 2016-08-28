@@ -1,4 +1,4 @@
-/* this file is called from extract.py file'
+/* this file is called from extract.py file'*/
 var esprima = require('./esprima.js')
 var fs = require('fs');
 

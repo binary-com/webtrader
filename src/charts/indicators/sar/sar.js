@@ -31,6 +31,7 @@ define(["jquery",  "jquery-ui", 'color-picker'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#sar_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",

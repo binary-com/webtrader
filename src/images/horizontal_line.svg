@@ -15,12 +15,12 @@
             <g id="2" transform="translate(367.000000, 13.000000)">
                 <g id="drawing-tools-1" transform="translate(44.000000, 79.000000)">
                     <g id="horizontal-line" transform="translate(34.000000, 0.000000)">
-                        <rect id="Rectangle-131" fill="#263051" x="0" y="0" width="30" height="30"></rect>
+                        <rect id="Rectangle-131" fill="none" x="0" y="0" width="30" height="30"></rect>
                         <g id="Group" transform="translate(1.000000, 14.000000)">
-                            <path d="M0.466666667,1.5 L27.5333333,1.5" id="Line-Copy-10" stroke="#FFFFFF" stroke-linecap="square"></path>
+                            <path d="M0.466666667,1.5 L27.5333333,1.5" id="Line-Copy-10" stroke="#263051" stroke-linecap="square"></path>
                             <g id="Rectangle-75-Copy-3">
-                                <use fill="#263051" fill-rule="evenodd" xlink:href="#path-1"></use>
-                                <use stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                                <use fill="none" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <use stroke="#263051" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
                             </g>
                         </g>
                     </g>

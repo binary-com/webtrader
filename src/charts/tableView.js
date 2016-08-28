@@ -136,7 +136,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             close.on('click', hide_table_view.bind(null, dialog));
             /* hide the dialog on close icon click */
 
-            var table = $("<table width='100%' class='portfolio-dialog display compact'/>");
+            var table = $("<table class='portfolio-dialog hover'/>");
             table.appendTo(container);
 
             var __ret = getColumns(is_tick);

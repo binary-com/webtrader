@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
-    <title>crosshair</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="all-chart-types" transform="translate(-7.000000, -226.000000)" fill="#404448">
-            <path d="M14.2797852,231.357849 L18.2797852,231.357849 L18.2797852,232.357849 L14.2797852,232.357849 L14.2797852,231.357849 Z M7.27978516,231.357849 L11.2797852,231.357849 L11.2797852,232.357849 L7.27978516,232.357849 L7.27978516,231.357849 Z M12.2797852,226.357849 L13.2797852,226.357849 L13.2797852,230.357849 L12.2797852,230.357849 L12.2797852,226.357849 Z M12.2797852,233.357849 L13.2797852,233.357849 L13.2797852,237.357849 L12.2797852,237.357849 L12.2797852,233.357849 Z" id="crosshair"></path>
-        </g>
-    </g>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#2a3052;stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>crosshair</title><line class="cls-1" x1="8.5" y1="25" x2="20.095" y2="25"/><line class="cls-1" x1="29.905" y1="25" x2="41.5" y2="25"/><line class="cls-1" x1="25" y1="8.5" x2="25" y2="20.095"/><line class="cls-1" x1="25" y1="29.905" x2="25" y2="41.5"/></svg>

@@ -38,6 +38,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#stddev_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -67,11 +68,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stddev_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#stddev_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stddev_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#stddev_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             var table = $html.find('#stddev_levels').DataTable({
                 paging: false,

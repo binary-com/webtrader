@@ -301,10 +301,6 @@ button[disabled] {
   opacity: 0.5;
 }
 
-table {
-  line-height: 1.2em !important;
-}
-
 .table {
     display: table;
 }
@@ -372,13 +368,7 @@ table {
 }
 .ui-datepicker-month, .ui-datepicker-year {
   margin-right:5px!important;
-  background: inherit;
-  color: inherit;
   border: 1px solid #273051;
-}
-.ui-datepicker-month:active, .ui-datepicker-month:hover, .ui-datepicker-year:active, .ui-datepicker-year:hover {
-  background: #394171!important;
-  border: 1px solid #273051!important;
 }
 #ui-datepicker-div.ui-datepicker .ui-datepicker-calendar {
   margin-left: 3.2px;
@@ -426,4 +416,8 @@ table {
   border-radius: 3px!important;
   height: 30px;
 }
-/*Ends here*/
+
+/* override table styles*/
+table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
+  border-bottom: none!important;
+}

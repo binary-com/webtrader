@@ -31,6 +31,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#cks_short_stop_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -55,6 +56,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             $html.find("#cks_long_stop_stroke").colorpicker({
+						showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -84,11 +86,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 158,
                 background: "white",
                 onSelected: function (data) {
-                    $('#cks_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#cks_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '125px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#cks_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#cks_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '125px');
 
 
             $html.dialog({

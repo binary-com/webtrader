@@ -1,16 +1,7 @@
 <div id="topbar">
-    <!-- TODO Disable lang selection until all the translations are available -->
-    <span class='lang' style="display: none">{lang.name}</span>
+    <span class='lang'>{lang.name}</span>
     <div class='languages' rv-if='confirm.visible | eq false'>
       <span rv-each-lang='languages' rv-on-click='onclick | bind lang.value'>{lang.name}</span>
-    </div>
-    <div class="confirm" rv-if='confirm.visible'>
-      <span class="title">In order to properly apply this language, a full refresh of page is required.
-        Are you sure you want to proceed?</span>
-      <div class='buttons'>
-        <button rv-on-click='confirm.yes'>Yes</button>
-        <button rv-on-click='confirm.no'>No</button>
-      </div>
     </div>
     <span class="time"></span>
 </div>
@@ -85,10 +76,17 @@
                                 <span class="balance"></span>
                             </a>
                             <ul>
-                                <li class='real-account-li'><a href="#" class="real-account"><span class="ui-icon ui-icon-arrowthick-1-e"></span>Open real money account</a></li>
+                                <li class='upgrade-account'>
+                                  <a href="#" class="real-account">
+                                    <span class="ui-icon ui-icon-arrowthick-1-e"></span>
+                                    <span class='upgrade-to-real-account-span'>Upgrade to a Real Account</span>
+                                    <span class='open-financial-account-span'>Open a Financial Account</span>
+                                </a></li>
                                 <li><a href="#" class="portfolio"><span class="ui-icon ui-icon-table"></span>Portfolio</a></li>
                                 <li><a href="#" class="statement"><span class="ui-icon ui-icon-note"></span>Statement</a></li>
                                 <li><a href="#" class="profitTable"><span class="ui-icon ui-icon-book"></span>Profit table</a></li>
+                                <li class='visible-on-real-accounts-only'><a href="#" class="deposit"><span class="ui-icon ui-icon-marker"></span>Deposit funds</a></li>
+                                <li class='visible-on-real-accounts-only'><a href="#" class="withdraw"><span class="ui-icon ui-icon-erase"></span>Withdraw funds</a></li>
                                 <li>
                                     <a href="#" class="token-management">
                                         <span class="ui-icon ui-icon-key"></span>Token management</a>
