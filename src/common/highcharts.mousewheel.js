@@ -6,6 +6,7 @@ define(['jquery', 'lodash', 'highstock', 'common/util'], function($, _) {
     return {
         mousewheel : function (containerIdWitHash) {
             $(containerIdWitHash).bind('DOMMouseScroll mousewheel', function(e){
+                e.preventDefault();
                 var chart = $(this).highcharts();
                 var xAxis = chart.xAxis[0];
                 var extremes = xAxis.getExtremes();
