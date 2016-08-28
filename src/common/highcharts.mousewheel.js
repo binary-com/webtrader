@@ -12,7 +12,8 @@ define(['jquery', 'lodash', 'highstock', 'common/util'], function($, _) {
                 var extremes = xAxis.getExtremes();
                 //console.log(e.originalEvent.wheelDelta);
                 //Each turn is around 120. We will show one candle per 120
-                var noOfCandles = 4 * e.originalEvent.wheelDelta /120 | 0;
+                //e.originalEvent.detail is for firefox.
+                var noOfCandles = 4 * e.originalEvent.wheelDelta /120 | e.originalEvent.detail | 0;
                 var timePeriodInMillis = convertToTimeperiodObject($(this).data('timePeriod')).timeInMillis() || 1000;
                 //console.log(noOfCandles);
                 //If its positive, then move up
