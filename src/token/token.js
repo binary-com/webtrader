@@ -67,7 +67,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       };
 
       state.tokens_filtered = function() {
-        var txt = state.search_input;
+        var txt = state.search_input.toLowerCase();
         return state.tokens.filter(function(token){
           return txt === ''
                 || token.display_name.toLowerCase().indexOf(txt) !== -1

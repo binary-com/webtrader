@@ -39,6 +39,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
             $(".dx_stroke").each(function () {
                 $(this).colorpicker({
+					showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -79,11 +80,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#dx_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#dx_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#dx_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#dx_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#dx_levels').DataTable({

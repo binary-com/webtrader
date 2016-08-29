@@ -1,7 +1,8 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, rv, $navHtml) {
+define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/countries.json", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, rv, countries, $navHtml) {
     "use strict";
+    countries = JSON.parse(countries);
 
     function updateListItemHandlers() {
         $("#nav-menu li > ul li").each(function () {
@@ -32,7 +33,8 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
     function initLoginButton(root) {
         var login_menu = root.find('.login');
         var account_menu = root.find('.account').hide();
-        var real_account_opening = account_menu.find('li.real-account-li').hide();
+        var real_accounts_only = account_menu.find('li.visible-on-real-accounts-only').hide();
+        var upgrade_account_li = account_menu.find('li.upgrade-account').hide();
         var time = root.find('span.time');
         var login_btn = root.find('.login button');
         var logout_btn = root.find('.account .logout');
@@ -62,7 +64,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
 
                 var value = '0';
                 if (data.authorize) value = data.authorize.balance;
-                else value = data.balance.balance;
+                else value = data.balance ? data.balance.balance : '0';
 
                 balance.text(currency + ' ' + formatPrice(value)).fadeIn();
             };
@@ -92,12 +94,25 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
                 loginid.text('Account ' + data.authorize.loginid).fadeIn();
 
                 var oauth = local_storage.get('oauth') || [];
-                var is_real = false;
-                for(var i = 0; i < oauth.length; ++i) {
-                  if(oauth[i].is_virtual === 0)
-                    is_real = true;
+                var is_current_account_real = data.authorize.is_virtual === 0;
+                is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
+
+                var loginids = Cookies.loginids();
+                var has_real_account = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
+                var has_disabled_account =  _.some(loginids, {is_disabled: true});
+
+                var show_financial_link = false;
+                if(_.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true}) && is_current_account_real) {
+                  var residence = Cookies.residence();
+                  show_financial_link =  /* allow UK MLT client to open MF account. */
+                      (countries[residence] && countries[residence].financial_company === 'maltainvest') ||
+                      (Cookies.residence() === 'gb' && /^MLT/.test(data.authorize.loginid));
                 }
-                is_real ? real_account_opening.hide() : real_account_opening.show();
+
+                var toggle = function(show, el) { show ? el.show() : el.hide(); }
+                toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
+                toggle(show_financial_link, upgrade_account_li.find('.open-financial-account-span'));
+                toggle(!has_real_account || show_financial_link, upgrade_account_li);
 
                 /* switch between account on user click */
                 $('.account li.info').remove();
@@ -147,7 +162,6 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
     function initLangButton(root) {
       root = root.find('#topbar').addBack('#topbar');
       var state = {
-        perv_lang: null,
         lang: {
           value: 'en', name: 'English'
         },
@@ -174,19 +188,10 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra", "text!navigation/nav
         var lang = _.find(state.languages, {value: value});
         if(lang.value == state.lang.value)
           return;
-        state.perv_lang = state.lang;
-        state.lang = lang;
-        state.confirm.visible = true;
-      };
-      state.confirm.no = function() {
-        state.lang = state.perv_lang;
-        state.confirm.visible = false;
-      }
-      state.confirm.yes = function() {
-        local_storage.set('i18n', {value: state.lang.value});
+
+        local_storage.set('i18n', {value: lang.value});
         window.location.reload();
-        state.confirm.visible = false;
-      }
+      };
 
       var value = (local_storage.get('i18n') || {value: 'en'}).value;
       state.lang = _.find(state.languages, {value: value}); // set the initial state.

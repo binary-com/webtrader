@@ -38,6 +38,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#mass_stroke").colorpicker({
+				showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -67,11 +68,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 width: 155,
                 background: "white",
                 onSelected: function (data) {
-                    $('#mass_dashStyle .dd-selected-image').css('max-width', '120px');
+                    $('#mass_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '120px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#mass_dashStyle .dd-option-image').css('max-width', '120px');
+            $('#mass_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '120px');
 
 
             var table = $html.find('#mass_levels').DataTable({

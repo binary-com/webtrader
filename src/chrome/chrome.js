@@ -20,6 +20,7 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
             }
             return show;
         };
+
         var show = check();
         if (show && window.chrome && chrome.webstore && $('#webtrader-extension-is-installed').length <= 0) {
             if (!win) {

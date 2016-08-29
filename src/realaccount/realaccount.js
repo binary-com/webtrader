@@ -1,8 +1,9 @@
 /*
- * Created by amin on May June 14, 2016.
+ * Created by amin on June 14, 2016.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, rv, _, moment) {
+define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment', 'text!navigation/countries.json'], function($, liveapi, windows, rv, _, moment, countries) {
+    countries = JSON.parse(countries);
     require(['text!realaccount/realaccount.html']);
     require(['css!realaccount/realaccount.css']);
     var real_win = null;
@@ -192,7 +193,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  state.user.disabled = true;
                  var info = data.new_account_real;
                  oauth = local_storage.get('oauth');
-                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: info.is_virtual});
+                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: 0});
                  local_storage.set('oauth', oauth);
                  $.growl.notice({ message: 'Account successfully created' });
                  $.growl.notice({ message: 'Switching to your new account ...' });
@@ -298,7 +299,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                .then(function(data){
                  var info = data.new_account_maltainvest;
                  oauth = local_storage.get('oauth');
-                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: info.is_virtual});
+                 /* when new accoutns are created document.cookie is not change, set is_financial: ture so
+                  * that navigation.js can hide the account promotion link */
+                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: 0, is_financial: true});
                  local_storage.set('oauth', oauth);
                  $.growl.notice({ message: 'Account successfully created' });
                  $.growl.notice({ message: 'Switching to your new account ...' });
@@ -367,6 +370,23 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             //     state.company.type = 'japan';
              else
                 state.company.type = 'normal';
+
+             /* if there is not finiancial account and there is already one real acount,
+              * allow UK MLT client to open MF account. */
+             var oauth = local_storage.get('oauth') || [];
+             var loginids = Cookies.loginids();
+             var no_financial_account_registered = _.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true});
+             var a_real_account_already_exists = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
+             if(no_financial_account_registered && a_real_account_already_exists) {
+                var residence = Cookies.residence();
+                var authorize = local_storage.get('authorize');
+                var ok =
+                    (countries[residence] && countries[residence].financial_company === 'maltainvest') ||
+                    (Cookies.residence() === 'gb' && authorize && /^MLT/.test(authorize.loginid));
+                if(ok) {
+                  state.company.type = 'maltainvest';
+                }
+             }
            })
            .catch(error_handler);
     }

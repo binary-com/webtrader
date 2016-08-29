@@ -142,7 +142,7 @@
 
   </div>
   <div class="footer">
-    <div class="sell-at-market" rv-if="sell.is_valid_to_sell">
+    <div class="sell-at-market" rv-if="sell.is_valid_to_sell | and-not table.is_expired">
 
       <span>
         <span class="bid-price" rv-indicative-color="sell.bid_price.value">

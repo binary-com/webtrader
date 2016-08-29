@@ -28,6 +28,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
             $html.find("#bbands_mdl_stroke,#bbands_up_stroke,#bbands_lwr_stroke").each(function(){
    				 $(this).colorpicker({
+					showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -56,6 +57,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             $html.find("#bbands_background").colorpicker({
+						showOn: 'click',
                 alpha: true,
                 colorFormat: 'RGBA',
                 position: {
@@ -88,11 +90,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#bbands_dashStyle .dd-selected-image').css('max-width', '115px');
+                    $('#bbands_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#bbands_dashStyle .dd-option-image').css('max-width', '115px');
+            $('#bbands_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             
 			$html.dialog({

@@ -6,7 +6,8 @@
     "Armin Zia",
     "Amin Roosta",
     "Arnab Karmakar",
-    "Mahboobeh Mohammadi"
+    "Mahboobeh Mohammadi",
+    "Apoorv Joshi"
   ],
   "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
@@ -28,7 +29,7 @@
     "jquery": "~2.1.4",
     "jquery-ui": "~1.11.4",
     "binary-com-jquery-dialogextended": "binary-com/jquery-dialogextend#master",
-    "highstock": "highslide-software/highstock-release#4.2.4",
+    "highstock": "highslide-software/highstock-release#4.2.6",
     "colorpicker": "vanderlee/colorpicker#~1.2.2",
     "growl": "ksylvest/jquery-growl#~1.3.1",
     "lokijs": "1.3.10",

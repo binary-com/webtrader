@@ -239,6 +239,16 @@ String.prototype.format = function() {
     });
 };
 
+/* shim for missing functions in IE */
+if (typeof String.prototype.startsWith !== 'function') {
+    String.prototype.startsWith = function (str) {
+      return this.lastIndexOf(str, 0) === 0;
+    };
+    String.prototype.endsWith = function(str) {
+        return this.indexOf(str, this.length - str.length) !== -1;
+    };
+}
+
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
   var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
@@ -294,6 +304,30 @@ function isLangSupported(lang) {
             || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
 }
 
+var Cookies = {
+  get_by_name: function(name) {
+    var cookie = document.cookie;
+    var res = cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return res ? res.pop() : '';
+  },
+  loginids: function () {
+    var loginids = Cookies.get_by_name('loginid_list');
+    loginids = decodeURIComponent(loginids).split('+');
+    loginids = loginids.map(function(id){
+      var parts = id.split(':');
+      return {
+        id: parts[0],
+        is_real: parts[1] === 'R',
+        is_disabled: parts[2] === 'D',
+        is_financial: /MF/.test(parts[0])
+      };
+    });
+    return loginids;
+  },
+  residence: function() {
+    return Cookies.get_by_name('residence');
+  }
+}
 
 /* setup translating string literals */
 function setup_i18n_translation(dict) {
@@ -317,4 +351,8 @@ function setup_i18n_translation(dict) {
             data = data.i18n();
           return parseHTML(data, context, keepScripts);
       }
+}
+
+function getAppURL() {
+  return window.location.href.split("/v")[0];
 }

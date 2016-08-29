@@ -1,4 +1,4 @@
-define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util'], function( $, liveapi, menu, _ ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util', 'affiliates/touch-device-fix'], function( $, liveapi, menu, _ ) {
 
 	var init_chart_options = function (dialog, timePeriod, type, instrumentName, instrumentCode){
 			var id = dialog.attr('id');
@@ -8,6 +8,9 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 				chartOptions.init(id, timePeriod, type, table_view.show, instrumentName, instrumentCode);
 			});
 	};
+
+	//This fixed the chartX error. Should be removed with file touch-device-fix.
+	fixTouchEvent();
 
 	Highcharts.setOptions(
 		{
@@ -54,7 +57,16 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 										var delayAmount = instrumentObject[0].delay_amount || 0;
 
 										//Render in normal way
-										require(["charts/charts"], function(charts) {
+										require(["charts/charts", "charts/chartWindow"], function(charts, chartWindow) {
+											var options = {
+												instrumentCode : instrumentCode,
+												instrumentName : instrumentName,
+												timePeriod : timePeriod,
+												type : type,
+												delayAmount : delayAmount,
+												name: newTabId
+											};
+											chartWindow.add_chart_options(newTabId, options);
 											charts.drawChart("#" + newTabId + "_chart", {
 												instrumentCode : instrumentCode,
 												instrumentName : instrumentName,
