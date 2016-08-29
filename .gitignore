@@ -2,6 +2,7 @@
 .grunt
 .idea
 .tern-project
+*.log
 
 dist
 !/lib/*/*/dist
