@@ -2295,6 +2295,9 @@ msgstr "{代理.佣金}%"
 msgid "| Return"
 msgstr "回報率"
 
+msgid "Comparisons"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "使用新主題?"
 

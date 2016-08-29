@@ -36,7 +36,17 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             ]
         }
     ];
-    var WIDTH = 900, HEIGHT = 500;
+    var WIDTH = 900, HEIGHT = 500, tp; // tp is timeperiod, required for exporting in csv format.
+    //Used in exportOverlay.
+    var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value,
+        appURL = getAppURL(); // Get current app's url.
+        urlShareTemplate = appURL + '?affiliates=true&instrument={0}&timePeriod={1}&lang=' + i18n_name,
+        iframeShareTemplate = '<iframe src="' + urlShareTemplate + '" width="350" height="400" style="overflow-y : hidden;" scrolling="no" />',
+        twitterShareTemplate = 'https://twitter.com/share?url={0}&text={1}',
+        fbShareTemplate = 'https://facebook.com/sharer/sharer.php?u={0}',
+        gPlusShareTemplate = 'https://plus.google.com/share?url={0}',
+        bloggerShareTemplate = 'https://www.blogger.com/blog-this.g?u={0}&n={1}',
+        vkShareTemplate = 'http://vk.com/share.php?url={0}&title={1}';
 
     function renderChart(instrumentObject, timePeriod, toDateWithTime) {
 
@@ -125,61 +135,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             },
 
             exporting: {
-                enabled: true,
+                enabled: false,
                 url: 'https://export.highcharts.com', // Override for mixed content error
-                buttons: {
-                    contextButton: {
-                        menuItems: [{
-                            text: 'Download PNG',
-                            onclick: function () {
-                                this.exportChartLocal();
-                            }
-                        }, {
-                            text: 'Download SVG',
-                            onclick: function () {
-                                this.exportChartLocal({
-                                    type: 'image/svg+xml'
-                                });
-                            },
-                            separator: false
-                        }, {
-                            text: 'Download CSV',
-                            onclick: function () {
-                                var series = this.series[0]; //Main series
-                                var is_tick = isTick(timePeriod);
-                                var filename = series.options.name + ' (' +  timePeriod + ')' + '.csv';
-                                var lines = series.options.data.map(function(bar){
-                                    var time = bar[0], open = bar[1];
-                                    if(is_tick){
-                                        return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm:ss') + '"' + ',' + /* Date */ + open; /* Price */
-                                    }
-                                    var high = bar[2], low = bar[3], close = bar[4];
-                                    return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
-                                        open + ',' + high + ',' + low + ',' + close;
-                                });
-                                var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
-
-                                var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-                                if (navigator.msSaveBlob) { // IE 10+
-                                    navigator.msSaveBlob(blob, filename);
-                                }
-                                else {
-                                    var link = document.createElement("a");
-                                    if (link.download !== undefined) {  /* Evergreen Browsers :) */
-                                        var url = URL.createObjectURL(blob);
-                                        link.setAttribute("href", url);
-                                        link.setAttribute("download", filename);
-                                        link.style.visibility = 'hidden';
-                                        document.body.appendChild(link);
-                                        link.click();
-                                        document.body.removeChild(link);
-                                    }
-                                }
-                            },
-                            separator: false
-                        }]
-                    }
-                },
                 // Naming the File
                 filename:instrumentObject.display_name.split(' ').join('_')+"("+timePeriod+")"
             },
@@ -277,6 +234,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 chart.hideLoading();
                 $(".download_show").prop("disabled", false);
             });
+        tp = timePeriod;
+        setShareURLs(instrumentObject, timePeriod);
 
     }
 
@@ -288,6 +247,10 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 .height($dialog.height() - 100)
                 .highcharts();
             if (chart) chart.reflow();
+            var shareButton = $(".download_window .share-button");
+            var overlay = $(".download_window .exportOverlay");
+            var positionRight = $dialog.width() - (shareButton.offset().left + shareButton.outerWidth() - $dialog.offset().left) + 1;
+            overlay.css("right",positionRight + "px");
         }
     };
 
@@ -419,6 +382,12 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
                     $html.find(".download_fromDate").val(moment.utc().subtract(1, "years").format("DD/MM/YYYY"));
 
+                    $html.find(".share-button").click(function(){
+                        $html.find(".overlay").toggle();
+                    });
+
+                    initDownloadChartOptions();
+
                 });
             }
             else {
@@ -485,6 +454,81 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         });
         $(".download_timePeriod_container").append(rootUL_timePeriod);
         rootUL_timePeriod.menu().toggle();
+    }
+
+    // This function is used to set various share urls in share button dropdown.
+    function setShareURLs(instrument, timePeriod) {
+        var fbShareLink = $(".download_table .fbShareLink"),
+            twitterShareLink = $(".download_table .twitterShareLink"),
+            bloggerShareLink = $(".download_table .bloggerShareLink"),
+            gPlusShareLink = $(".download_table .gPlusShareLink"),
+            vkShareLink = $(".download_table .vkShareLink"),
+            shareLink = $(".download_table .exportChartURLShare"),
+            embedCode = $(".download_table .exportChartIframeShare");
+        fbShareLink.attr("href", fbShareTemplate.format(encodeURIComponent(urlShareTemplate.format(instrument.symbol, timePeriod))));
+        twitterShareLink.attr("href", twitterShareTemplate.format(encodeURIComponent(urlShareTemplate.format(instrument.symbol, timePeriod)), instrument.display_name + '(' + timePeriod + ')'));
+        gPlusShareLink.attr("href", gPlusShareTemplate.format(encodeURIComponent(urlShareTemplate.format(instrument.symbol, timePeriod))));
+        bloggerShareLink.attr("href", bloggerShareTemplate.format(urlShareTemplate.format(instrument.symbol, timePeriod), instrument.display_name + '(' + timePeriod + ')'));
+        vkShareLink.attr("href", vkShareTemplate.format(urlShareTemplate.format(instrument.symbol, timePeriod), instrument.display_name + '(' + timePeriod + ')'));
+        shareLink.val(urlShareTemplate.format(instrument.symbol, timePeriod));
+        embedCode.val(iframeShareTemplate.format(instrument.symbol, timePeriod));
+    }
+
+    function initDownloadChartOptions() {
+        var png = $(".download_table #png"),
+            pdf = $(".download_table #pdf"),
+            csv = $(".download_table #csv"),
+            svg = $(".download_table #svg");
+
+        png.click(function(){
+            var chart = $(".downloadChart").highcharts();
+            chart.exportChartLocal();
+        });
+        pdf.click(function(){
+            var chart = $(".downloadChart").highcharts();
+            chart.exportChart({
+                type: 'application/pdf'
+            });
+        });
+        svg.click(function(){
+            var chart = $(".downloadChart").highcharts();
+            chart.exportChart({
+                type: 'image/svg+xml'
+            });
+        });
+        csv.click(function(){
+            var chart = $(".downloadChart").highcharts();
+            var series = chart.series[0]; //Main series
+            var is_tick = isTick(tp);
+            var filename = series.options.name + ' (' +  tp + ')' + '.csv';
+            var lines = series.options.data.map(function(bar){
+                var time = bar[0], open = bar[1];
+                if(is_tick){
+                    return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm:ss') + '"' + ',' + /* Date */ + open; /* Price */
+                }
+                var high = bar[2], low = bar[3], close = bar[4];
+                return '"' + moment.utc(time).format('YYYY-MM-DD HH:mm') + '"' + ',' +/* Date */
+                    open + ',' + high + ',' + low + ',' + close;
+            });
+            var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
+
+            var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            if (navigator.msSaveBlob) { // IE 10+
+                navigator.msSaveBlob(blob, filename);
+            }
+            else {
+                var link = document.createElement("a");
+                if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                    var url = URL.createObjectURL(blob);
+                    link.setAttribute("href", url);
+                    link.setAttribute("download", filename);
+                    link.style.visibility = 'hidden';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+        });
     }
 
     return {

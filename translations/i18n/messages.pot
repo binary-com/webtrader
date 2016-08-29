@@ -1,4 +1,3 @@
-
 msgid "%D MA Type"
 msgstr "" 
 
@@ -2167,3 +2166,6 @@ msgstr ""
 
 msgid "| Return"
 msgstr "" 
+
+msgid "Comparisons"
+msgstr ""

@@ -2324,6 +2324,9 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| 戻る"
 
+msgid "Comparisons"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "新しいテーマを適用しますか？"
 

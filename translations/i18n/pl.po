@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 00:06+0200\n"
-"PO-Revision-Date: 2016-08-11 22:53+0000\n"
+"PO-Revision-Date: 2016-08-22 18:43+0000\n"
 "Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pl/>\n"
@@ -22,7 +22,7 @@ msgid "%D Period"
 msgstr "Okres %D"
 
 msgid "%D Stroke"
-msgstr ""
+msgstr "Linia %D"
 
 msgid "%K MA Type"
 msgstr "Rodzaj %K MA"
@@ -31,7 +31,7 @@ msgid "%K Period"
 msgstr "Okres %K"
 
 msgid "%K Stroke"
-msgstr ""
+msgstr "Linia %K"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -58,7 +58,7 @@ msgstr ""
 "zawarte między klientami a pośrednikami płatności"
 
 msgid "-DI Stroke"
-msgstr ""
+msgstr "Linia -DI"
 
 msgid "0-1 year"
 msgstr "0-1 rok"
@@ -139,7 +139,7 @@ msgid "ADX MA Type"
 msgstr "Rodzaj ADX MA"
 
 msgid "ADX Stroke"
-msgstr ""
+msgstr "Linia ADX"
 
 msgid "ATR Period"
 msgstr "Okres ATR"
@@ -196,7 +196,7 @@ msgid "Answer"
 msgstr "Odpowiedź"
 
 msgid "Applied to"
-msgstr "Zastosowano do"
+msgstr "Zastosuj do"
 
 msgid "Apply"
 msgstr "Zastosuj"
@@ -217,10 +217,10 @@ msgid "Are you sure you want to delete this token?"
 msgstr "Czy na pewno chcesz usunąć ten token?"
 
 msgid "Aroon Down Stroke"
-msgstr ""
+msgstr "Linia Aroon spadkowa"
 
 msgid "Aroon Up Stroke"
-msgstr ""
+msgstr "Linia Aroon wzrostowa"
 
 msgid "Asians"
 msgstr "Azjatyckie"
@@ -347,7 +347,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Click Jacking test"
-msgstr ""
+msgstr "Test Clickjacking"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Kliknij, aby zalogować się przy użyciu konta na Binary.com"
@@ -451,7 +451,7 @@ msgid "Customize chart appearance"
 msgstr "Dostosuj wygląd wykresu"
 
 msgid "DI Stroke"
-msgstr ""
+msgstr "Linia DI"
 
 msgid "DX MA Type"
 msgstr "Rodzaj DX MA"
@@ -472,7 +472,7 @@ msgid "Dark Unica"
 msgstr "Dark Unica"
 
 msgid "Dash style"
-msgstr "Linia przerywana"
+msgstr "Styl linii"
 
 msgid "Date"
 msgstr "Data"
@@ -535,10 +535,10 @@ msgid "Dot"
 msgstr "Kropka"
 
 msgid "Double MA Period"
-msgstr ""
+msgstr "Okres DMA"
 
 msgid "Double MA Type"
-msgstr ""
+msgstr "Rodzaj DMA"
 
 msgid "Double click the object to remove"
 msgstr "Kliknij dwa razy na dany przedmiot, aby go usunąć"
@@ -727,7 +727,7 @@ msgid "High Price"
 msgstr "Wysoka cena"
 
 msgid "High Stroke"
-msgstr ""
+msgstr "Linia wysoka"
 
 msgid "High barrier offset"
 msgstr "Wyrównanie górnego limitu"
@@ -780,7 +780,7 @@ msgid "If you select a"
 msgstr "Jeśli wybierzesz"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "Jeśli wybierzesz określony"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -864,6 +864,8 @@ msgstr "Czerwiec"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
+"Po prostu kliknij przycisk udzielania dostępu na stronie, na którą "
+"zostaniesz teraz przekierowany"
 
 msgid "LOW"
 msgstr "NISKI"
@@ -899,7 +901,7 @@ msgid "Line Dot"
 msgstr "Linia kropkowana"
 
 msgid "Line Stroke"
-msgstr ""
+msgstr "Linia"
 
 msgid "Link"
 msgstr "Łącze"
@@ -929,7 +931,7 @@ msgid "Loading Self-Exclusion"
 msgstr "Ładowanie sekcji Samodzielne wyłączenie"
 
 msgid "Loading Statement Table"
-msgstr ""
+msgstr "Ładowanie tabeli stanu konta"
 
 msgid "Loading Token management"
 msgstr "Ładowanie sekcji Zarządzanie tokenami"
@@ -976,7 +978,7 @@ msgid "Long ROC Period"
 msgstr "Długi okres ROC"
 
 msgid "Long Stop Line Stroke"
-msgstr ""
+msgstr "Długa linia stop"
 
 msgid "Long Term Period"
 msgstr "Okres długoterminowy"
@@ -988,7 +990,7 @@ msgid "Low Price"
 msgstr "Niska cena"
 
 msgid "Low Stroke"
-msgstr ""
+msgstr "Linia niska"
 
 msgid "Low barrier offset"
 msgstr "Wyrównanie dolnego limitu"
@@ -997,13 +999,13 @@ msgid "Lower"
 msgstr "Niższy"
 
 msgid "Lower Band Stroke"
-msgstr ""
+msgstr "Niższa wstęga"
 
 msgid "MA Type"
 msgstr "Rodzaj MA"
 
 msgid "MACD Line Stroke"
-msgstr ""
+msgstr "Linia MACD"
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -1064,7 +1066,7 @@ msgid "Memorable town/city"
 msgstr "Łatwe do zapamiętania miasto"
 
 msgid "Middle Band Stroke"
-msgstr ""
+msgstr "Średnia wstęga"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min.: 10 Maks.: 2000"
@@ -1103,10 +1105,10 @@ msgid "Multiplier"
 msgstr "Mnożnik"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev spadek"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev wzrost"
 
 msgid "Name"
 msgstr "Imię"
@@ -1118,22 +1120,22 @@ msgid "Name of your pet"
 msgstr "Imię Twojego zwierzaka"
 
 msgid "Navigator handles background"
-msgstr ""
+msgstr "Tło uchwytów nawigatora"
 
 msgid "Navigator handles border"
-msgstr ""
+msgstr "Krawędzie uchwytów nawigatora"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "Maska nawigatora - wypełnienie"
 
 msgid "Navigator outline"
-msgstr ""
+msgstr "Kontur nawigatora"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "Kolor nawigatora"
 
 msgid "Navigator series line"
-msgstr ""
+msgstr "Linia nawigatora"
 
 msgid "Net Annual Income"
 msgstr "Roczny dochód netto"
@@ -1186,7 +1188,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OPEN"
-msgstr ""
+msgstr "OTWÓRZ"
 
 msgid "Oct"
 msgstr "Październik"
@@ -1195,7 +1197,7 @@ msgid "October"
 msgstr "Październik"
 
 msgid "Offset"
-msgstr "Wyrównanie"
+msgstr "Offset"
 
 msgid "Ok"
 msgstr "OK"
@@ -1272,7 +1274,7 @@ msgid "PNG"
 msgstr "PNG"
 
 msgid "PPO Line Stroke"
-msgstr ""
+msgstr "Linia PPO"
 
 msgid "Password must be 6 characters minimum"
 msgstr "Hasło musi składać się z co najmniej 6 znaków"
@@ -1442,10 +1444,10 @@ msgid "Please use your new password to login"
 msgstr "Użyj nowego hasła, aby się zalogować"
 
 msgid "Plot"
-msgstr ""
+msgstr "Motyw"
 
 msgid "Plot Color"
-msgstr ""
+msgstr "Kolor motywu"
 
 msgid "Pofit/Loss"
 msgstr "Zysk/strata"
@@ -1481,7 +1483,7 @@ msgid "Price"
 msgstr "Cena"
 
 msgid "Primary"
-msgstr ""
+msgstr "Podstawowe"
 
 msgid "Print chart"
 msgstr "Drukuj wykres"
@@ -1598,7 +1600,7 @@ msgid "Saturday"
 msgstr "Sobota"
 
 msgid "Secondary"
-msgstr ""
+msgstr "Średnie"
 
 msgid "Security"
 msgstr "Bezpieczeństwo"
@@ -1625,7 +1627,7 @@ msgid "Sell Price"
 msgstr "Cena sprzedaży"
 
 msgid "Sell Spot"
-msgstr ""
+msgstr "Cena sprzedaży"
 
 msgid "Sell Time"
 msgstr "Czas sprzedaży"
@@ -1661,10 +1663,10 @@ msgid "Short MA Type"
 msgstr "Rodzaj krótkiej MA"
 
 msgid "Short ROC Period"
-msgstr ""
+msgstr "Okres krótkoterminowego ROC"
 
 msgid "Short Stop Line Stroke"
-msgstr ""
+msgstr "Krótka linia stop"
 
 msgid "Short Term Period"
 msgstr "Okres krótkoterminowy"
@@ -1676,19 +1678,19 @@ msgid "Sigma"
 msgstr "Sigma"
 
 msgid "Signal Line Stroke"
-msgstr ""
+msgstr "Linia sygnałowa"
 
 msgid "Signal MA Type"
-msgstr ""
+msgstr "Rodzaj sygnałowej MA"
 
 msgid "Signal Period"
-msgstr ""
+msgstr "Okres sygnału"
 
 msgid "Single MA Period"
-msgstr ""
+msgstr "Okres pojedynczej MA"
 
 msgid "Single MA Type"
-msgstr ""
+msgstr "Rodzaj pojedynczej MA"
 
 msgid "Slow %D MA Type"
 msgstr "Rodzaj krótkiej %D MA"
@@ -1742,7 +1744,7 @@ msgid "State/province/region"
 msgstr "Region/województwo"
 
 msgid "Statement"
-msgstr ""
+msgstr "Stan konta"
 
 msgid "Status"
 msgstr "Status"
@@ -1769,19 +1771,19 @@ msgid "Stop-profit"
 msgstr "Stop zyskom"
 
 msgid "Stop-type"
-msgstr "Stop-typ"
+msgstr "Stop-rodzaj"
 
 msgid "Street address"
 msgstr "Ulica"
 
 msgid "Stroke"
-msgstr ""
+msgstr "Kolor"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Kolor"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Szerokość"
 
 msgid "Submit"
 msgstr "Wyślij"
@@ -1814,7 +1816,7 @@ msgid "Terms and Conditions"
 msgstr "Regulamin"
 
 msgid "Tertiary"
-msgstr "Trzeciorzędne"
+msgstr "Wyższe"
 
 msgid "The"
 msgstr ""
@@ -1879,7 +1881,7 @@ msgid "Ticks"
 msgstr "Najmniejsze zmiany ceny"
 
 msgid "Tile"
-msgstr ""
+msgstr "Zmień położenie"
 
 msgid "Time Period"
 msgstr "Okres czasu"
@@ -2030,7 +2032,7 @@ msgid "Update Settings"
 msgstr "Aktualizuj ustawienia"
 
 msgid "Upper Band Stroke"
-msgstr ""
+msgstr "Wyższa wstęga"
 
 msgid "Use"
 msgstr "Użyj"
@@ -2057,7 +2059,7 @@ msgid "View Historical Data"
 msgstr "Wyświetl dane historyczne"
 
 msgid "Volume Factor"
-msgstr ""
+msgstr "Czynnik wielkości"
 
 msgid "WMA"
 msgstr "WMA"
@@ -2217,25 +2219,25 @@ msgid "exit spot"
 msgstr "pozycja wyjściowa"
 
 msgid "feed is delayed by"
-msgstr ""
+msgstr "strumień jest opóźniony o"
 
 msgid "for API calls that can access the cashier"
-msgstr ""
+msgstr "wywoływania API z dostępem do sekcji Kasjer"
 
 msgid "for API calls that can create trades in the client account"
-msgstr ""
+msgstr "wywoływania API z możliwością tworzenia zakładów na koncie klienta"
 
 msgid "for API calls that change client settings"
-msgstr ""
+msgstr "wywoływania API zmieniające ustawienia klienta"
 
 msgid "for API calls that only read client data"
-msgstr ""
+msgstr "wywoływania API, które tylko odczytują dane klienta"
 
 msgid "for mobile charts"
 msgstr "dla wykresów na urządzenia mobilne"
 
 msgid "has updated its"
-msgstr ""
+msgstr "zaktualizował(a) swój"
 
 msgid "hour"
 msgstr "godzina"
@@ -2270,10 +2272,10 @@ msgstr ""
 "potrzebom aktywnych graczy pracujących na swoich komputerach PC"
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "jest wymagana. Obecny spread"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "jest czasem, który został wybrany"
 
 msgid "is the"
 msgstr "jest"
@@ -2288,10 +2290,10 @@ msgid "is the selected time"
 msgstr "to wybrany czas"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "jest pozycją w"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr ""
+msgstr "to moment przetworzenia kontraktu przez nasze serwery, a"
 
 msgid "main site"
 msgstr "strona główna"
@@ -2309,7 +2311,7 @@ msgid "oauth"
 msgstr "oauth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "jako „Teraz”,"
 
 msgid "payment agent"
 msgstr "pośrednik płatności"
@@ -2345,7 +2347,7 @@ msgid "the"
 msgstr ""
 
 msgid "thereafter"
-msgstr ""
+msgstr "po tym czasie"
 
 msgid "tick"
 msgstr "najmniejsza zmiana ceny"
@@ -2372,6 +2374,9 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
+msgstr "| Zwrot"
+
+msgid "Comparisons"
 msgstr ""
 
 #~ msgid "Apply new theme?"
