@@ -533,133 +533,133 @@ msgid "Download PNG"
 msgstr "Download PNG"
 
 msgid "Download PNG image"
-msgstr ""
+msgstr "Download PNG image"
 
 msgid "Download SVG"
-msgstr ""
+msgstr "Download SVG"
 
 msgid "Download SVG vector image"
-msgstr ""
+msgstr "Download SVG vector image"
 
 msgid "Download as"
-msgstr ""
+msgstr "Download as"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Downloading .csv"
 
 msgid "Duration"
-msgstr ""
+msgstr "Duration"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "Edge"
-msgstr ""
+msgstr "Edge"
 
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 msgid "Education"
-msgstr ""
+msgstr "Education"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Email verification failed"
 
 msgid "Embed code"
-msgstr ""
+msgstr "Embed code"
 
 msgid "End Time"
-msgstr ""
+msgstr "End Time"
 
 msgid "Ends In/Out"
-msgstr ""
+msgstr "Ends In/Out"
 
 msgid "Enter your current password"
-msgstr ""
+msgstr "Enter your current password"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "Entry Spot"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "Entry spot"
 
 msgid "Error downloading .csv"
-msgstr ""
+msgstr "Error downloading .csv"
 
 msgid "Error getting data for"
-msgstr ""
+msgstr "Error getting data for"
 
 msgid "Estimated Net Worth"
-msgstr ""
+msgstr "Estimated Net Worth"
 
 msgid "Exclude me from the website until"
-msgstr ""
+msgstr "Exclude me from the website until"
 
 msgid "Exclude time cannot be less than 6 months"
-msgstr ""
+msgstr "Exclude time cannot be less than 6 months"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "Exit Spot"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "Exit spot"
 
 msgid "Explanation"
-msgstr ""
+msgstr "Explanation"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Failed to update the password"
 
 msgid "Fall"
-msgstr ""
+msgstr "Fall"
 
 msgid "Family name"
-msgstr ""
+msgstr "Family name"
 
 msgid "Fast %K MA Type"
-msgstr ""
+msgstr "Fast %K MA Type"
 
 msgid "Fast %K Period"
-msgstr ""
+msgstr "Fast %K Period"
 
 msgid "Fast Limit"
-msgstr ""
+msgstr "Fast Limit"
 
 msgid "Fast MA Type"
-msgstr ""
+msgstr "Fast MA Type"
 
 msgid "Fast Period"
-msgstr ""
+msgstr "Fast Period"
 
 msgid "Favorites"
-msgstr ""
+msgstr "Favorites"
 
 msgid "Favourite artist"
-msgstr ""
+msgstr "Favourite artist"
 
 msgid "Favourite dish"
-msgstr ""
+msgstr "Favourite dish"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 msgid "February"
-msgstr ""
+msgstr "February"
 
 msgid "Final Price"
-msgstr ""
+msgstr "Final Price"
 
 msgid "Final price"
-msgstr ""
+msgstr "Final price"
 
 msgid "Finance"
-msgstr ""
+msgstr "Finance"
 
 msgid "Financial information"
-msgstr ""
+msgstr "Financial information"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First name"
 msgstr ""

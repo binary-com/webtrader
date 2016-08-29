@@ -1,6 +1,7 @@
 git:
  depth: 1
 language: node_js
+cache: false
 notifications:
   email:
   - arnab@binary.com
