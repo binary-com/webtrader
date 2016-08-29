@@ -662,79 +662,79 @@ msgid "Firefox"
 msgstr "Firefox"
 
 msgid "First name"
-msgstr ""
+msgstr "First name"
 
 msgid "Forex trading experience"
-msgstr ""
+msgstr "Forex trading experience"
 
 msgid "Forex trading frequency"
-msgstr ""
+msgstr "Forex trading frequency"
 
 msgid "Fri"
-msgstr ""
+msgstr "Fri"
 
 msgid "Friday"
-msgstr ""
+msgstr "Friday"
 
 msgid "From"
-msgstr ""
+msgstr "From"
 
 msgid "Further instructions"
-msgstr ""
+msgstr "Further instructions"
 
 msgid "Gray"
-msgstr ""
+msgstr "Gray"
 
 msgid "Grid"
-msgstr ""
+msgstr "Grid"
 
 msgid "Grid Light"
-msgstr ""
+msgstr "Grid Light"
 
 msgid "HIGH"
-msgstr ""
+msgstr "HIGH"
 
 msgid "Health"
-msgstr ""
+msgstr "Health"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "High Barrier"
 
 msgid "High Price"
-msgstr ""
+msgstr "High Price"
 
 msgid "High Stroke"
-msgstr ""
+msgstr "High Stroke"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "High barrier offset"
 
 msgid "Higher"
-msgstr ""
+msgstr "Higher"
 
 msgid "Histogram Color"
-msgstr ""
+msgstr "Histogram Color"
 
 msgid "Histogram Color For Higher Values"
-msgstr ""
+msgstr "Histogram Color For Higher Values"
 
 msgid "Histogram Color For Lower Values"
-msgstr ""
+msgstr "Histogram Color For Lower Values"
 
 msgid "Home Address"
-msgstr ""
+msgstr "Home Address"
 
 msgid "Horizontal Line"
-msgstr ""
+msgstr "Horizontal Line"
 
 msgid "Hours"
-msgstr ""
+msgstr "Hours"
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr " have read and agree to Binary.com"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr ""
+msgstr "IMPORTANT DISCLAIMER"
 
 msgid ""
 "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
@@ -745,22 +745,33 @@ msgid ""
 "sending them any money. Binary.com shall not in any circumstance be held "
 "responsible for transactions made between customers and payment agents"
 msgstr ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
 
 msgid "If you select a"
-msgstr ""
+msgstr "If you select a"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "If you select a specific"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
 msgstr ""
+"In order to properly apply theme, a full refresh of page is required. Are "
+"you sure you want to proceed?"
 
 msgid ""
 "In order to properly apply this language, a full refresh of page is "
 "required. Are you sure you want to proceed?"
 msgstr ""
+"In order to properly apply this language, a full refresh of page is "
+"required. Are you sure you want to proceed?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
