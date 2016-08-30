@@ -112,7 +112,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             loadSaveOverlay.css("right", "auto");
             exportOverlay.css("right", "auto");
         }
-        console.log(scope.timePeriod);
     }
 
     function preLoadImages(){
