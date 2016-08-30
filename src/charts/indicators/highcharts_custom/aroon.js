@@ -117,7 +117,7 @@ AROON.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                     offset: 0,
                     rotation: 0,
                     y: 10, 
-                    x: 110
+                    x: 30+ this.toString().length * 7.5
                 },
                 lineWidth: 2,
                 plotLines: this.options.levels
