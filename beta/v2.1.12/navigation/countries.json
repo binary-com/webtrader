@@ -1,0 +1,828 @@
+{
+  "ad": {
+    "name": "Andorra",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ae": {
+    "name": "United Arab Emirates",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "af": {
+    "name": "Afghanistan",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ag": {
+    "name": "Antigua and Barbuda",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ai": {
+    "name": "Anguilla",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "al": {
+    "name": "Albania",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "am": {
+    "name": "Armenia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "an": {
+    "name": "Netherlands Antilles",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ao": {
+    "name": "Angola",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "aq": {
+    "name": "Antarctica",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ar": {
+    "name": "Argentina",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "as": {
+    "name": "American Samoa",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "at": {
+    "name": "Austria",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "au": {
+    "name": "Australia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "aw": {
+    "name": "Aruba",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ax": {
+    "name": "Aland Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "az": {
+    "name": "Azerbaijan",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ba": {
+    "name": "Bosnia and Herzegovina",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bb": {
+    "name": "Barbados",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bd": {
+    "name": "Bangladesh",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "be": {
+    "name": "Belgium",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "bf": {
+    "name": "Burkina Faso",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bg": {
+    "name": "Bulgaria",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "bh": {
+    "name": "Bahrain",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bi": {
+    "name": "Burundi",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bj": {
+    "name": "Benin",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bl": {
+    "name": "Saint-Barthélemy",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bm": {
+    "name": "Bermuda",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bn": {
+    "name": "Brunei Darussalam",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bo": {
+    "name": "Bolivia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "br": {
+    "name": "Brazil",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bs": {
+    "name": "Bahamas",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bt": {
+    "name": "Bhutan",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bv": {
+    "name": "Bouvet Island",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bw": {
+    "name": "Botswana",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "by": {
+    "name": "Belarus",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "bz": {
+    "name": "Belize",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ca": {
+    "name": "Canada",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cc": {
+    "name": "Cocos (Keeling) Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cd": {
+    "name": "Congo, The Democratic Republic of the",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cf": {
+    "name": "Central African Republic",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cg": {
+    "name": "Congo",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ch": {
+    "name": "Switzerland",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ci": {
+    "name": "Cote D'Ivoire",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ck": {
+    "name": "Cook Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cl": {
+    "name": "Chile",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cm": {
+    "name": "Cameroon",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cn": {
+    "name": "China",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "co": {
+    "name": "Colombia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cr": {
+    "name": "Costa Rica",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "cu": {
+    "name": "Cuba",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cv": {
+    "name": "Cape Verde",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cx": {
+    "name": "Christmas Island",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "cy": {
+    "name": "Cyprus",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "cz": {
+    "name": "Czech Republic",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "de": {
+    "name": "Germany",
+    "gaming_company": "none",
+    "financial_company": "maltainvest"
+  },
+  "dj": {
+    "name": "Djibouti",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "dk": {
+    "name": "Denmark",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "dm": {
+    "name": "Dominica",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "do": {
+    "name": "Dominican Republic",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "dz": {
+    "name": "Algeria",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ec": {
+    "name": "Ecuador",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ee": {
+    "name": "Estonia",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "eg": {
+    "name": "Egypt",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "eh": {
+    "name": "Western Sahara",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "er": {
+    "name": "Eritrea",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "es": {
+    "name": "Spain",
+    "gaming_company": "none",
+    "financial_company": "maltainvest"
+  },
+  "et": {
+    "name": "Ethiopia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "fi": {
+    "name": "Finland",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "fj": {
+    "name": "Fiji",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "fk": {
+    "name": "Falkland Islands (Malvinas)",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "fm": {
+    "name": "Micronesia, Federated States of",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "fo": {
+    "name": "Faroe Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "fr": {
+    "name": "France",
+    "gaming_company": "none",
+    "financial_company": "maltainvest"
+  },
+  "ga": {
+    "name": "Gabon",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gb": {
+    "name": "United Kingdom",
+    "gaming_company": "iom",
+    "financial_company": "iom"
+  },
+  "gd": {
+    "name": "Grenada",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ge": {
+    "name": "Georgia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gf": {
+    "name": "French Guiana",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gg": {
+    "name": "Guernsey",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "gh": {
+    "name": "Ghana",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gi": {
+    "name": "Gibraltar",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gl": {
+    "name": "Greenland",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gm": {
+    "name": "Gambia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gn": {
+    "name": "Guinea",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gp": {
+    "name": "Guadeloupe",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gq": {
+    "name": "Equatorial Guinea",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gr": {
+    "name": "Greece",
+    "gaming_company": "none",
+    "financial_company": "maltainvest"
+  },
+  "gs": {
+    "name": "South Georgia and the South Sandwich Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gt": {
+    "name": "Guatemala",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gu": {
+    "name": "Guam",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gw": {
+    "name": "Guinea-Bissau",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "gy": {
+    "name": "Guyana",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "hk": {
+    "name": "Hong Kong",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "hm": {
+    "name": "Heard Island and McDonald Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "hn": {
+    "name": "Honduras",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "hr": {
+    "name": "Croatia",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "ht": {
+    "name": "Haiti",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "hu": {
+    "name": "Hungary",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "id": {
+    "name": "Indonesia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ie": {
+    "name": "Ireland",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "il": {
+    "name": "Israel",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "im": {
+    "name": "Isle of Man",
+    "gaming_company": "iom",
+    "financial_company": "iom"
+  },
+  "in": {
+    "name": "India",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "io": {
+    "name": "British Indian Ocean Territory",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "iq": {
+    "name": "Iraq",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "ir": {
+    "name": "Iran, Islamic Republic of",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "is": {
+    "name": "Iceland",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "it": {
+    "name": "Italy",
+    "gaming_company": "none",
+    "financial_company": "maltainvest"
+  },
+  "je": {
+    "name": "Jersey",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "jm": {
+    "name": "Jamaica",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "jo": {
+    "name": "Jordan",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "jp": {
+    "name": "Japan",
+    "gaming_company": "none",
+    "financial_company": "japan",
+    "virtual_company": "japan-virtual"
+  },
+  "ke": {
+    "name": "Kenya",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "kg": {
+    "name": "Kyrgyzstan",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "kh": {
+    "name": "Cambodia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ki": {
+    "name": "Kiribati",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "km": {
+    "name": "Comoros",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "kn": {
+    "name": "Saint Kitts and Nevis",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "kp": {
+    "name": "Korea, Democratic People's Republic of",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "kr": {
+    "name": "Korea, Republic of",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "kw": {
+    "name": "Kuwait",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ky": {
+    "name": "Cayman Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "kz": {
+    "name": "Kazakhstan",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "la": {
+    "name": "Lao People's Democratic Republic",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "lb": {
+    "name": "Lebanon",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "lc": {
+    "name": "Saint Lucia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "li": {
+    "name": "Liechtenstein",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "lk": {
+    "name": "Sri Lanka",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "lr": {
+    "name": "Liberia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ls": {
+    "name": "Lesotho",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "lt": {
+    "name": "Lithuania",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "lu": {
+    "name": "Luxembourg",
+    "gaming_company": "none",
+    "financial_company": "maltainvest"
+  },
+  "lv": {
+    "name": "Latvia",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  },
+  "ly": {
+    "name": "Libyan Arab Jamahiriya",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ma": {
+    "name": "Morocco",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mc": {
+    "name": "Monaco",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "md": {
+    "name": "Moldova, Republic of",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "me": {
+    "name": "Montenegro",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mf": {
+    "name": "Saint-Martin (French part)",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mg": {
+    "name": "Madagascar",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mh": {
+    "name": "Marshall Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mk": {
+    "name": "Macedonia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ml": {
+    "name": "Mali",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mm": {
+    "name": "Myanmar",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mn": {
+    "name": "Mongolia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mo": {
+    "name": "Macao",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mp": {
+    "name": "Northern Mariana Islands",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mq": {
+    "name": "Martinique",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mr": {
+    "name": "Mauritania",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ms": {
+    "name": "Montserrat",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mt": {
+    "name": "Malta",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "mu": {
+    "name": "Mauritius",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mv": {
+    "name": "Maldives",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mw": {
+    "name": "Malawi",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "mx": {
+    "name": "Mexico",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "my": {
+    "name": "Malaysia",
+    "gaming_company": "none",
+    "financial_company": "none"
+  },
+  "mz": {
+    "name": "Mozambique",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "na": {
+    "name": "Namibia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "nc": {
+    "name": "New Caledonia",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ne": {
+    "name": "Niger",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "nf": {
+    "name": "Norfolk Island",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ng": {
+    "name": "Nigeria",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "ni": {
+    "name": "Nicaragua",
+    "gaming_company": "costarica",
+    "financial_company": "costarica"
+  },
+  "nl": {
+    "name": "Netherlands",
+    "gaming_company": "malta",
+    "financial_company": "maltainvest"
+  }
+}
