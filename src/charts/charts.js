@@ -271,7 +271,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             if ($.isFunction(onload)) {
                                 onload();
                             }
-                            if(getParameterByName("affiliates") === 'true' && getParameterByName('lang').toLowerCase() === 'jp'){
+                            if(getParameterByName("affiliates") === 'true' && getParameterByName('lang').toLowerCase() === 'ja'){
                                 this.credits.element.remove();
                             } else {
                                 this.credits.element.onclick = function() {
