@@ -77,6 +77,16 @@ requirejs.config({
     }
 });
 
+requirejs.onError = function (err) {
+    //Avoiding script errors on timeout. Showing a warning so that developers can track wrong path errors on local servers.
+    if (err.requireType === 'scripterror') {
+        console.warn(err); 
+        return;
+    }
+
+    throw err;
+};
+
 /* Initialize the websocket as soon as posssilbe */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 

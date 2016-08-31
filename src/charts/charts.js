@@ -1,7 +1,6 @@
 /**
  * Created by arnab on 2/11/15.
  */
-
 define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "websockets/ohlc_handler","currentPriceIndicator",
         "charts/indicators/highcharts_custom/indicators","moment", "lodash", 'text!charts/indicators/indicators.json',
         "highcharts-exporting", "common/util", 'paralleljs', 'jquery-growl'
@@ -272,12 +271,15 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             if ($.isFunction(onload)) {
                                 onload();
                             }
-
-                            this.credits.element.onclick = function() {
-                                window.open(
-                                    'http://webtrader.binary.com',
-                                    '_blank'
-                                );
+                            if(getParameterByName("affiliates") === 'true' && getParameterByName('lang').toLowerCase() === 'ja'){
+                                this.credits.element.remove();
+                            } else {
+                                this.credits.element.onclick = function() {
+                                    window.open(
+                                        'http://webtrader.binary.com',
+                                        '_blank'
+                                    );
+                                }
                             }
 
                         }
