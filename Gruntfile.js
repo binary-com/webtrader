@@ -118,6 +118,10 @@ module.exports = function (grunt) {
             moveThis: {
                 src: 'dist/uncompressed/v<%=pkg.version%>/index.html',
                 dest: 'dist/uncompressed/index.html'
+            },
+            move404: {
+                src: 'dist/uncompressed/v<%=pkg.version%>/404.html',
+                dest: 'dist/uncompressed/404.html'
             }
         },
         replace: {
