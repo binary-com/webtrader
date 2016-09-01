@@ -5,7 +5,7 @@
 </div>
 <div class='templates' rv-show='route.value | eq "templates"'>
   <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
-    <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+    <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
   </span>
   <div rv-if='templates.array | prop "length" | negate'>
     <div>You haven't saved any templates yet.</div><br/>
@@ -14,19 +14,19 @@
   <div rv-if='templates.array | prop "length"'>
     <div rv-each-tmpl='templates.array' class='template'>
       <div class='name' rv-class-active='tmpl.name | eq templates.current.name' rv-on-click='templates.apply| bind tmpl'>{tmpl.name}</div>
-      <a href="#" rv-on-click='templates.rename | bind tmpl'>Rename</a>
-      <a href="#" rv-on-click='templates.remove | bind tmpl'>Delete</a>
+      <a class="options" href="#" rv-on-click='templates.rename | bind tmpl'>Rename</a>
+      <a class="options" href="#" rv-on-click='templates.remove | bind tmpl'>Delete</a>
     </div>
   </div>
 </div>
 
 <div class='save-as' rv-if='route.value | eq "save-as"'>
     <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
-      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+      <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
     </span>
 
     <div class='title'>Name</div>
-    <input rv-value='templates.save_as_value' />
+    <input rv-value='templates.save_as_value' maxlength="20" />
 		<div class='errors'>
 			<span class='error' rv-show='templates.save_as_value | trim | eq ""'>This field is required.</span>
 		</div>
@@ -38,11 +38,11 @@
 
 <div class='rename' rv-if='route.value | eq "rename"'>
     <span class='back-arrow' rv-on-click='route.update | bind "templates"'>
-      <span class='ui-icon ui-icon-triangle-1-w'></span> Back
+      <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
     </span>
 
     <div class='title'>Template name</div>
-    <input rv-value='templates.rename_value' />
+    <input rv-value='templates.rename_value' maxlength="20" />
 		<div class='errors'>
 			<span class='error' rv-show='templates.rename_value | trim | eq ""'>This field is required.</span>
 		</div>

@@ -50,7 +50,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
                       .concat(options.indicators.map(ind => ind.name))
                       .concat(options.overlays.map(overlay => overlay.displaySymbol))
                       .join(' + ');
-        templates.save_as_value = options.name;
+        templates.save_as_value = options.name.substring(0,20);
         route.update('save-as');
       }
 
@@ -77,7 +77,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       templates.save_as = () => {
-        const name = templates.save_as_value;
+        const name = templates.save_as_value.substring(0,20);
         const options = chartWindow.get_chart_options(dialog_id);
         if(options) {
           options.name = name;
@@ -112,7 +112,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       templates.do_rename = () => {
         const name = templates.rename_tmpl.name;
-        const new_name = templates.rename_value;
+        const new_name = templates.rename_value.substring(0,20);
         const array = local_storage.get('templates');
         if(array.map(t => t.name).includes(new_name)) {
             $.growl.error({message: 'Template name already exists'.i18n() });
