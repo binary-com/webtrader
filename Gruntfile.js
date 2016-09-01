@@ -97,7 +97,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
+                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}', '**/404.html'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -140,6 +140,10 @@ module.exports = function (grunt) {
             moveThis: {
                 src: 'dist/uncompressed/v<%=pkg.version%>/index.html',
                 dest: 'dist/uncompressed/index.html'
+            },
+            move404: {
+                src: 'dist/uncompressed/v<%=pkg.version%>/404.html',
+                dest: 'dist/uncompressed/404.html'
             }
         },
         replace: {
@@ -174,7 +178,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.html'],
+                src: ['**/*.html','!**/404.html'],
                 dest: 'dist/compressed'
             }
         },
