@@ -217,8 +217,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                             changeChartType(scope,'line');
                         showCandlestickAndOHLC(scope.newTabId, !tick && !isOverlaidView('#' + m_newTabId + '_chart'));
                         charts.refresh('#' + scope.newTabId + '_chart', timePeriod, scope.chartType.value);
-                        if (getParameterByName('affiliates') === 'true') charts.changeTitle('#' + scope.newTabId + '_chart', scope.instrumentName + " (" + timePeriod + ")")
-                        else chartWindow.changeChartWindowTitle(scope.newTabId, scope.instrumentName, timePeriod);
                         hideOverlays(scope);
                         scope.exportChartURLShare = urlShareTemplate.format(scope.instrumentCode, timePeriod);
                         scope.exportChartIframeShare = iframeShareTemplate.format(scope.instrumentCode, timePeriod);
@@ -381,8 +379,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
           //Disable candlestick and OHLC if it is a tick chart or overlaid view
           showCandlestickAndOHLC(newTabId, !isTick(timePeriod) && overlayCount > 0);
           responsiveButtons(s,$("#" + newTabId).find(".chart-view"));
-          if (getParameterByName('affiliates') === 'true') charts.changeTitle('#' + newTabId + '_chart', state[newTabId].instrumentName + " (" + timePeriod + ")")
-          else chartWindow.changeChartWindowTitle(newTabId, state[newTabId].instrumentName, timePeriod);
         },
 
         disableEnableCandlestickAndOHLC : function (newTabId, enable) {
