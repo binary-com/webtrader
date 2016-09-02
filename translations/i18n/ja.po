@@ -2327,6 +2327,9 @@ msgstr "| 戻る"
 msgid "Comparisons"
 msgstr ""
 
+msgid "Time interval"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "新しいテーマを適用しますか？"
 

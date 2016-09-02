@@ -2336,6 +2336,9 @@ msgstr "عودة"
 msgid "Comparisons"
 msgstr ""
 
+msgid "Time interval"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "تطبيق موضوع جديد؟"
 

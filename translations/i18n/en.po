@@ -2286,3 +2286,6 @@ msgstr "| Return"
 
 msgid "Comparisons"
 msgstr "Comparisons"
+
+msgid "Time interval"
+msgstr "Time interval"

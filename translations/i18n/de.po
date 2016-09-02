@@ -2400,3 +2400,6 @@ msgstr "Rendite"
 
 msgid "Comparisons"
 msgstr ""
+
+msgid "Time interval"
+msgstr ""
