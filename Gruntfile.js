@@ -148,7 +148,7 @@ module.exports = function (grunt) {
         },
         replace: {
             version: {
-                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml'],
+                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml', 'dist/uncompressed/404.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<version>',
