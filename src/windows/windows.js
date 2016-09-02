@@ -569,7 +569,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                 title: 'Blank window'.i18n(),
                 hide: 'fade',
                 icons: {
-                  close: 'ui-icon-close'
+                  close: 'custom-icon-close',
+                  minimize: 'custom-icon-minimize',
+                  maximize: 'custom-icon-maximize'
                 }
             }, options || {});
             options.minWidth = options.minWidth || options.width;
@@ -642,7 +644,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             /* check and add the refresh button if needed */
             if(options.refresh){
                 var header = blankWindow.parent().find('.ui-dialog-title');
-                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
+                var refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>");
                 refresh.on('click',options.refresh);
             }
 
