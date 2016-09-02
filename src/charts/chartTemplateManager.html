@@ -51,3 +51,15 @@
             rv-disabled='templates.rename_value | trim | eq ""'
             rv-css-opacity='templates.rename_value | trim | eq "" | ternary 0.5 1' >Rename</button>
 </div>
+<div class='confirm' rv-if='route.value | eq "confirm"'>
+    <span class='back-arrow' rv-on-click='route.update | bind confirm.prevMenu'>
+      <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
+    </span>
+
+    <div class='title'>Are you sure you want to {confirm.action}?</div>
+    <input rv-value='templates.save_as_value' maxlength="20" />
+
+    <button rv-on-click='templates.save_as'
+            rv-disabled='templates.save_as_value | trim | eq ""'
+            rv-css-opacity='templates.save_as_value | trim | eq "" | ternary 0.5 1' >Save</button>
+</div>

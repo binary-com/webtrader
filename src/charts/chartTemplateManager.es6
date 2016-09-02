@@ -73,7 +73,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         local_storage.set('templates', array);
         templates.array = array;
         templates.current = current;
-        $.growl.notice({message: 'Template changes saved '.i18n() + '(' + current.name + ')'});
+        $.growl.notice({message: $("<div/>").text('Template changes saved '.i18n() + '(' + current.name + ')').html()});
       }
 
       templates.save_as = () => {
