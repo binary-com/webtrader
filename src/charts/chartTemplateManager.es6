@@ -140,6 +140,23 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         templates.current = tmpl;
       }
 
+      templates.confirm = (tmpl, event) => {
+        route.update("confirm");
+        console.log(event);
+        const action = event.currentTarget.text;
+        templates.confirm_prevMenu = action === "Delete" ? "templates" : "menu";
+        templates.confirm_text = action === "Delete" ? "Are you sure you want to delete template?".i18n() : "Are you sure you want to overwrite current template?".i18n();
+        
+        templates.confirm_yes = () => {
+          action === "Delete"? templates.remove(tmpl) : menu.save_changes();
+          templates.confirm_no();
+        }
+
+        templates.confirm_no = () => {
+          route.update(templates.confirm_prevMenu);
+        }
+      }
+
       return state;
     }
 

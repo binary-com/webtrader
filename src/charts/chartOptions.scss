@@ -222,7 +222,7 @@
   }
 
   .chartOptions_overlay.loadSaveOverlay {
-    max-width: 250px;
+    max-width: 260px;
     font-size: 0.8em;
     .chart-template-manager-root {
       max-height: 310px;
@@ -235,11 +235,18 @@
           width: 95%;
         }
       }
-      .save-as, .rename {
+      .save-as, .rename, .confirm {
         padding: 5px;
 
         .title { margin: 5px 0; }
-        button { margin-top: 5px; }
+        button { margin-top: 5px;}
+        .button {
+          width: 100%;
+          text-align: center;
+          button {
+            margin-right: 5px;
+          }
+        }
       }
       .templates {
         padding: 5px;
