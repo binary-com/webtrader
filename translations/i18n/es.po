@@ -2385,6 +2385,9 @@ msgstr "| Retorno"
 msgid "Comparisons"
 msgstr ""
 
+msgid "Time interval"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "¿Aplicar el nuevo tema?"
 

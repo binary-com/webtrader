@@ -2342,6 +2342,9 @@ msgstr "| Investimento"
 msgid "Comparisons"
 msgstr ""
 
+msgid "Time interval"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "Richiedi nuovo argomento?"
 
