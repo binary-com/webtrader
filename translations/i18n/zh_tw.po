@@ -2298,6 +2298,9 @@ msgstr "回報率"
 msgid "Comparisons"
 msgstr "比較"
 
+msgid "Time interval"
+msgstr ""
+
 #~ msgid "Apply new theme?"
 #~ msgstr "使用新主題?"
 
