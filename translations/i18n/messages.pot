@@ -2169,3 +2169,6 @@ msgstr ""
 
 msgid "Comparisons"
 msgstr ""
+
+msgid "Time interval"
+msgstr ""

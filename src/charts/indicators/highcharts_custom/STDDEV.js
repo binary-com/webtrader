@@ -100,7 +100,7 @@ STDDEV.prototype.toString = function() {
 STDDEV.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
     var confObjects = IndicatorBase.prototype.buildSeriesAndAxisConfFromData.call(this, indicatorMetadata);
     confObjects.forEach(function(confObject) {
-        confObject.axisConf.title.x = 73;
+        confObject.axisConf.title.x = 30+ this.toString().length * 7.5;
     });
     return confObjects;
 };

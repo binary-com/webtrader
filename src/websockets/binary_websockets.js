@@ -358,7 +358,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
           }
           var oauth = local_storage.get('oauth');
           if(!oauth) {
-            return promise.reject({ message: 'Account token not found.'.i18n() });
+            return Promise.reject({ message: 'Account token not found.'.i18n() });
           }
 
           var inx = oauth.map(function(acc) { return acc.id; }).indexOf(id);

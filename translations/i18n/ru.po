@@ -2275,3 +2275,6 @@ msgstr "| Прибыль"
 
 msgid "Comparisons"
 msgstr "Сравнения"
+
+msgid "Time interval"
+msgstr ""

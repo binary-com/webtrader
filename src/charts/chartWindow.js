@@ -27,7 +27,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
         addNewWindow: function(options) {
             var options_copy = options;
             options = $.extend({
-                title: options.instrumentName + " (" + options.timePeriod + ")",
+                title: options.instrumentName,
                 close: function () {
                     var id = $(this).attr('id');
                     var container = $("#" + id + "_chart");
