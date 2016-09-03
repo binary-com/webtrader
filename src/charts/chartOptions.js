@@ -80,7 +80,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             state[newTabId].chartTypes = chartType_arr;
             state[newTabId].chartTypes[1].showBorder = true;
         }
-        
     }
 
     function responsiveButtons(scope, ele) {
@@ -209,8 +208,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     var timePeriod = event.target.dataset.timeperiod;
                     if (timePeriod) {
                         scope = state[scope.newTabId];
-                        //Unregister previous subscription
-                        chartingRequestMap.unregister(chartingRequestMap.keyFor(scope.instrumentCode, scope.timePeriod.value), '#' + scope.newTabId + '_chart');
                         scope.timePeriod = timeperiod_arr.filter(function(obj){return timePeriod==obj.value})[0];
                         responsiveButtons(scope, $("#" + scope.newTabId).find(".chart-view"));
                         var tick = isTick(timePeriod);
@@ -359,7 +356,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 rv.formatters['filter'] = function(arr, type) {
                     return arr.filter(function(item){return item.type.i18n() == type});
                 }
-                               
+
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
                 require(['charts/chartTemplateManager'], function(templateManager) {
                   var root = $html.find('.chart-template-manager-root');
