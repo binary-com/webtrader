@@ -82,8 +82,7 @@
   <ul class='balance-row'>
     <li>
       <span> Account balance: </span>
-      <span class="bold" rv-text="buy.currency"></span>
-      <span class="bold" rv-text="buy.balance_after | to-fixed 2"></span>
+      <span class="bold" rv-text="buy.balance_after | to-fixed 2 | format-price buy.currency"></span>
     </li>
   </ul>
 </div>

@@ -34,7 +34,7 @@
     }
 */
 
-define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui', 'common/util'],
     function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
@@ -243,7 +243,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
           /* computed properties */
           netprofit_: function () {
-            return state.currency.value + ' ' + ((this.payout - this.ask_price) || 0).toFixed(2);
+            return formatPrice(((this.payout - this.ask_price) || 0).toFixed(2), state.currency.value);
           },
           return_: function () {
             var ret = (((this.payout - this.ask_price) / this.ask_price) * 100);
