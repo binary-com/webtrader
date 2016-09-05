@@ -94,7 +94,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
     /* localise price format*/
     rv.formatters['format-price'] = function (value, currency){
-        var price = new Intl.NumberFormat(i18n_name ,{ style: 'currency', currency: currency.trim() }).format(value);
+        var price = new Intl.NumberFormat(i18n_name.replace("_","-") ,{ style: 'currency', currency: currency.trim()}).format(value);
         if(value)
             return price;
         return undefined;
