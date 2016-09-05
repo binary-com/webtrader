@@ -179,7 +179,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 balance_span = $('<span class="span-in-dialog-header" />')
                     .insertAfter(header);
                 balance_span.update = function(balance) {
-                    balance_span.html('Account balance: <strong>'.i18n() + currency + ' ' + formatPrice(balance) + '</strong>');
+                    balance_span.html('Account balance: <strong>'.i18n() +  formatPrice(balance, currency) + '</strong>');
                 };
 
                 var currency = data.balance.currency;
@@ -192,11 +192,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                         { title: 'Contract Details' },
                         {
                           title: 'Purchase',
-                          render: function(val) { return currency + ' ' + '<span class="bold">' + val + '</span>'; }
+                          render: function(val) { return '<span class="bold">' + formatPrice(val,currency) + '</span>'; }
                         },
                         {
                           title: 'Indicative',
-                          render: function(val) { return currency + ' ' + '<span class="bold">' + val + '</span>'; }
+                          render: function(val) { return '<span class="bold">' + formatPrice(val,currency) + '</span>'; }
                         },
                         { title: '' }
                     ],

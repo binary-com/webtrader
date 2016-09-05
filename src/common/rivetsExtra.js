@@ -92,6 +92,13 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }
         return (value * 1).toFixed(digits || 2);
     }
+    /* localise price format*/
+    rv.formatters['format-price'] = function (value, currency){
+        var price = new Intl.NumberFormat(i18n_name ,{ style: 'currency', currency: currency.trim() }).format(value);
+        if(value)
+            return price;
+        return undefined;
+    }
     /* notify another function on property changes */
     rv.formatters['notify'] = function() {
         var args = [].slice.call(arguments, 0);

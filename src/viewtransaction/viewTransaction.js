@@ -355,7 +355,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
             exit_tick: proposal.exit_tick,
             exit_tick_time: proposal.exit_tick_time,
 
-            buy_price: proposal.buy_price && formatPrice(proposal.buy_price),
+            buy_price: proposal.buy_price,
             bid_price: undefined,
             final_price: proposal.is_sold ? proposal.sell_price && formatPrice(proposal.sell_price) : undefined,
 
