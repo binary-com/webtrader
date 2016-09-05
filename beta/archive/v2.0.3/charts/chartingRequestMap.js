@@ -1,1 +1,0 @@
-define(["lokijs"],function(a){var b=new a,c=b.addCollection("bars_table");return{barsTable:c}});

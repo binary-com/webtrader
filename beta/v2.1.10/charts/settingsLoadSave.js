@@ -1,1 +1,0 @@
-define(["websockets/binary_websockets","windows/windows","common/rivetsExtra"],function(){require(["text!charts/settingsLoadSave.html"]),require(["css!charts/settingsLoadSave.css"])});

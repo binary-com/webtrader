@@ -1,1 +1,0 @@
-define(["jquery","jquery-growl"],function(a){"use strict";return{init:function(){a.get("gtm/gtm.html",function(b){a("body").append(b)})}}});

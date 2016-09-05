@@ -1,1 +1,0 @@
-define(["jquery","common/util"],function(a){"use strict";return{validateNumericBetween:function(b,c,d){return a.isNumeric(b)&&Math.floor(b)==b&&b>=c&&d>=b},validateIfNoOfChartsCrossingThreshold:function(a){var b=!0;return a+1>10?b=!1:isSmallView()&&a+1>1&&(b=!1),b}}});
