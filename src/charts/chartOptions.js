@@ -354,7 +354,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 // Used to filter timeperiod array.
                 rv.formatters['filter'] = function(arr, type) {
-                    return arr.filter(function(item){return item.type.i18n() == type});
+                    return arr.filter(function(item){return item.type == type});
                 }
                                
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);

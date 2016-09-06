@@ -41,7 +41,7 @@
                 rv-tooltip='"running"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-if="table.sell_time | not-eq undefined"> <p>Sell Time</p>
+      <div rv-if="table.sell_time | not-eq undefined"> <p rv-text="'Sell Time' | i18n"></p>
           <span rv-text="table.sell_time | moment | or '-'"></span>
       </div>
       <div> <p>End Time</p>
@@ -62,7 +62,7 @@
       <div rv-if="table.sell_spot | eq undefined"> <p>Current Spot</p>
           <span rv-text="table.current_spot | or '-'" rv-indicative-color="table.current_spot"></span>
       </div>
-      <div rv-if="table.sell_spot | not-eq undefined"> <p>Sell Spot</p>
+      <div rv-if="table.sell_spot | not-eq undefined"> <p rv-text="'Sell Spot' | i18n"></p>
           <span rv-text="table.sell_spot | or '-'"></span>
       </div>
       <div> <p>Exit Spot</p>
@@ -81,7 +81,7 @@
                 rv-tooltip='"return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-if="table.sell_price | not-eq undefined"> <p>Sell Price</p>
+      <div rv-if="table.sell_price | not-eq undefined"> <p rv-text="'Sell Price' | i18n"></p>
           <span rv-text="table.sell_price | prepend table.currency | or '-'"></span>
           <br />
           <span rv-text="table.sell_price | percent-of table.buy_price"
@@ -157,12 +157,12 @@
       <span>
         <button rv-on-click="sell.sell"
                 rv-disabled="sell.sell_at_market_enabled | eq false"
-                class="sell-button">Sell At Market</button>
+                class="sell-button" rv-text="'Sell At Market' | i18n"></button>
       </span>
 
     </div>
     <span class='forward_starting orange' rv-text="fwd_starting"></span>
     <br>
-    <span class='validation' rv-text="validation"></span>
+    <span class='validation' rv-text="validation | i18n"></span>
   </div>
 </div>

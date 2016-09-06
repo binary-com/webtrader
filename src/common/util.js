@@ -383,20 +383,52 @@ function setup_i18n_translation(dict) {
       /* Escape keys for using them in regex. */
       var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
       var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
-
-      var replacer = function (_, word) {
+      var replacer = function (_, word, index, data) {
         return (dict[word] && dict[word][1]) || word;
       };
       String.prototype.i18n = function() {
         return this.replace(regexp, replacer);
       };
 
-      /* hook $(html) to automatically call .i18n() before creating DOM nodes */
-      var parseHTML = $.parseHTML.bind($);
-      $.parseHTML = function(data, context, keepScripts) {
-          if(typeof data === 'string')
-            data = data.i18n();
-          return parseHTML(data, context, keepScripts);
+      var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+      var observer = new MutationObserver(function(mutations, observer) {
+          mutations.forEach(function(mutation) {
+              for(var i = 0; i < mutation.addedNodes.length; i++)
+                  localize(mutation.addedNodes[i]);
+          });
+      });
+
+      observer.observe(document.body, {
+        childList: true
+      });
+
+      function localize(node) {
+          var c = node.childNodes, l = c.length, i;
+          // Add node to observer for changes
+                //dialogClass: 'addToObserver', //So that any changes made to dialog like adding html will be added to observer.
+          if(node.className && node.className.indexOf("addToObserver") !==-1){
+            observer.observe(node, {
+              childList: true
+            });
+          }
+          for( i=0; i<l; i++) {
+              if( c[i].nodeType == 3) {
+                if(c[i].textContent){
+                  c[i].textContent = c[i].textContent.i18n();
+                }
+              }
+              if( c[i].nodeType == 1) {
+                if(c[i].getAttribute("data-balloon")){
+                  c[i].setAttribute("data-balloon",c[i].getAttribute("data-balloon").i18n());
+                }
+                //Skip translation for dialog title.
+                if(c[i].className.length > 0 && c[i].className.indexOf("ui-dialog-title")!==-1){
+                  continue;
+                }
+                localize(c[i]);
+              }
+          }
       }
 }
 

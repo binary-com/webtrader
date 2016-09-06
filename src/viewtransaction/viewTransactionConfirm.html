@@ -1,29 +1,29 @@
 <div class="view-transaction-confirm">
-    <h4>Trade Confirmation</h4>
-    <p>You have sold the following contract:</p>
+    <h4 rv-text="'Trade Confirmation' | i18n"></h4>
+    <p rv-text="'You have sold the following contract:' | i18n"></p>
     <div class="longcode">
         <span rv-text="longcode"></span>
     </div>
     <div class="confirm-row">
-      <div> <p>Buy Price</p>
+      <div> <p rv-text="'Buy Price' | i18n"></p>
         <span rv-text="buy_price | formatPrice"></span>
       </div>
-      <div class="sell-price"> <p><strong>Sale Price</strong></p>
+      <div class="sell-price"> <p><strong rv-text="'Sale Price' | i18n"></strong></p>
         <span rv-text="sell_price | formatPrice"
               rv-class-red="buy_price | gt sell_price"
               rv-class-green="sell_price | gt buy_price"></span>
       </div>
 
-      <div> <p>Return</p>
+      <div> <p rv-text="'Return' | i18n"></p>
         <span rv-text="return_percent"></span>
       </div>
     </div>
 
-    <div class="transaction-row">
-      Your transaction reference number is <span rv-text="transaction_id"></span>
+    <div class="transaction-row" rv-text="'Your transaction reference number is ' | i18n">
+      <span rv-text="transaction_id"></span>
     </div>
 
-    <div class="balance-row">
-        Your new account balance is&nbsp;<span rv-text="balance | formatPrice | prepend currency"></span>
+    <div class="balance-row" rv-text="'Your new account balance is' | i18n">
+        &nbsp;<span rv-text="balance | formatPrice | prepend currency"></span>
     </div>
 </div>
