@@ -150,8 +150,11 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 }
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
-function formatPrice(float) {
-    return (float * 1).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+function formatPrice(float,currency) {
+    if(currency){
+        return new Intl.NumberFormat(i18n_name.replace("_","-") ,{ style: 'currency', currency: currency.trim()}).format(float);
+    }
+    return new Intl.NumberFormat(i18n_name).format(float);
 }
 
 function sortAlphaNum(property) {
