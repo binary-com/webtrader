@@ -14,6 +14,9 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 
 	Highcharts.setOptions(
 		{
+			global: {
+            	timezoneOffset: getLang() == 'ja' ? -9 * 60 : 0 // Converting chart time to JST.
+        	},
 			plotOptions: {
 				candlestick: {
 					lineColor: 'rgba(0,0,0,1)',

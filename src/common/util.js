@@ -356,3 +356,7 @@ function setup_i18n_translation(dict) {
 function getAppURL() {
   return window.location.href.split("/v")[0];
 }
+
+function getLang() {
+  return getParameterByName('lang').toLowerCase();
+}
