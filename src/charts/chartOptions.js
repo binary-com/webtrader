@@ -346,7 +346,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 // Preload images for better UI
                 preLoadImages();
 
-                var $html = $(html);
+                var $html = $(html).i18n();
 
                 $("#" + m_newTabId + "_header").prepend($html);
 

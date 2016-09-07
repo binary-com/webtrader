@@ -103,7 +103,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
         });
         require(['text!statement/statement.html'], function (html) {
 
-            table = $(html);
+            table = $(html).i18n();
             table.appendTo(statement);
 
             table = table.dataTable({

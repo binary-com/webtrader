@@ -201,7 +201,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
 
     return {
         init: function (_callback) {
-            var root = $($navHtml);
+            var root = $($navHtml).i18n();
             $("body").prepend(root);
 
             initLoginButton(root);

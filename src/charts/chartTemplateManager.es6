@@ -12,7 +12,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
     constructor(root, dialog_id) {
       const state = this.init_state(root, dialog_id);
       require(['text!charts/chartTemplateManager.html'], html => {
-        root.append(html);
+        root.append(html.i18n());
         this.view = rv.bind(root[0], state);
       });
     }

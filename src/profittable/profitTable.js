@@ -123,7 +123,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             data: null
           });
 
-            table = $(html);
+            table = $(html).i18n();
             table.appendTo(profitWin);
             var footer = $('<div/>').addClass('profit-table-info');
 

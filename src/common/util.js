@@ -154,7 +154,7 @@ function formatPrice(float,currency) {
     if(currency){
         return new Intl.NumberFormat(i18n_name.replace("_","-") ,{ style: 'currency', currency: currency.trim()}).format(float);
     }
-    return new Intl.NumberFormat(i18n_name).format(float);
+    return new Intl.NumberFormat(i18n_name.replace("_","-")).format(float);
 }
 
 function sortAlphaNum(property) {
@@ -393,28 +393,13 @@ function setup_i18n_translation(dict) {
         return this.replace(regexp, replacer);
       };
 
-      var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-
-      var observer = new MutationObserver(function(mutations, observer) {
-          mutations.forEach(function(mutation) {
-              for(var i = 0; i < mutation.addedNodes.length; i++)
-                  localize(mutation.addedNodes[i]);
-          });
-      });
-
-      observer.observe(document.body, {
-        childList: true
-      });
+      $.fn.i18n = function(){
+        localize(this);
+        return this;
+      }
 
       function localize(node) {
-          var c = node.childNodes, l = c.length, i;
-          // Add node to observer for changes
-                //dialogClass: 'addToObserver', //So that any changes made to dialog like adding html will be added to observer.
-          if(node.className && node.className.indexOf("addToObserver") !==-1){
-            observer.observe(node, {
-              childList: true
-            });
-          }
+          var c = node.childNodes ? node.childNodes : node, l = c.length, i;
           for( i=0; i<l; i++) {
               if( c[i].nodeType == 3) {
                 if(c[i].textContent){
@@ -425,14 +410,13 @@ function setup_i18n_translation(dict) {
                 if(c[i].getAttribute("data-balloon")){
                   c[i].setAttribute("data-balloon",c[i].getAttribute("data-balloon").i18n());
                 }
-                //Skip translation for dialog title.
-                if(c[i].className.length > 0 && c[i].className.indexOf("ui-dialog-title")!==-1){
-                  continue;
-                }
                 localize(c[i]);
               }
           }
       }
+
+      // Translate main.html
+      localize(document.body);
 }
 
 function getAppURL() {
