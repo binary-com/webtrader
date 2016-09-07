@@ -97,7 +97,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                             if (data && data.landing_company_details.has_reality_check) {
 
                                 require(['text!realitycheck/realitycheck.html', "css!realitycheck/realitycheck.css"], function(html) {
-                                    var div = $(html);
+                                    var div = $(html).i18n();
                                     win = windows.createBlankWindow($('<div/>'), {
                                         title: 'Reality check'.i18n(),
                                         width: 600,

@@ -260,7 +260,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             if (!downloadWin) {
                 downloadWin = windows.createBlankWindow($('<div class="download_window"/>'),
                     {
-                        title: 'View Historical Data',
+                        title: 'View Historical Data'.i18n(),
                         width: WIDTH ,
                         minWidth: WIDTH ,
                         minHeight: HEIGHT ,
@@ -276,7 +276,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 downloadWin.closest("div.ui-dialog").css("overflow", "visible");
                 require(['text!download/download.html'], function($html) {
 
-                    $html = $($html);
+                    $html = $($html).i18n();
                     //$html.find("button, input[type=button]").button();
                     $html
                         .find('.download_fromDate')

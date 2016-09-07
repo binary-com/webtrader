@@ -761,7 +761,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
     }
 
     function init(symbol, contracts_for) {
-        var root = $(html);
+        var root = $(html).i18n();
         var available = apply_fixes(contracts_for.available);
 
 

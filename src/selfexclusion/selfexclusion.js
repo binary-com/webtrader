@@ -91,7 +91,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         require(["css!selfexclusion/selfexclusion.css"]);
         return new Promise(function(res) {
             require(['text!selfexclusion/selfexclusion.html'], function(html) {
-                var div = $(html);
+                var div = $(html).i18n();
                 win = windows.createBlankWindow($('<div/>'), {
                     title: 'Self-Exclusion Facilities'.i18n(),
                     width: 900 ,
