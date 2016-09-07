@@ -120,7 +120,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var longTp1 = timeperiod_arr.reduce(function(a,b){return a.value.i18n().length > b.value.i18n().length? a :b}),
             longTp2 = timeperiod_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a :b}),
             longCt = chartType_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a : b});
-        console.log(longCt,longTp1,longTp2);
         var getWidth = function(string) {
             var font = '0.8em roboto,sans-serif',
                 obj = $('<div>' + string.i18n() + '</div>')
@@ -148,8 +147,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
     return {
 
-        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode) {
-
+        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode , m_showOptions) {
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function(html) {
                 calculateStringWidth();
                 if (view[m_newTabId]) view[m_newTabId].unbind();
@@ -172,6 +170,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     showDrawingToolSelector : false,
                     showExportSelector : false,
                     showLoadSaveSelector: false,
+                    showOptions: typeof m_showOptions == 'undefined' ? true : m_showOptions,
 
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),

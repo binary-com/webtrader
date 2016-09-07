@@ -1,11 +1,11 @@
 define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util', 'affiliates/touch-device-fix'], function( $, liveapi, menu, _ ) {
-
-	var init_chart_options = function (dialog, timePeriod, type, instrumentName, instrumentCode){
+	//showOptions- used to hide/show share and comparison in chart options
+	var init_chart_options = function (dialog, timePeriod, type, instrumentName, instrumentCode, showOptions){
 			var id = dialog.attr('id');
 			/* initialize chartOptions & table-view once chart is rendered */
 			require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
 				var table_view = tableView.init(dialog);
-				chartOptions.init(id, timePeriod, type, table_view.show, instrumentName, instrumentCode);
+				chartOptions.init(id, timePeriod, type, table_view.show, instrumentName, instrumentCode, showOptions);
 			});
 	};
 
@@ -55,7 +55,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 										var instrumentCode = instrumentObject[0].symbol;
 										var instrumentName = instrumentObject[0].display_name;
 										var delayAmount = instrumentObject[0].delay_amount || 0;
-
+										var showOptions = !(getParameterByName("hideOptions").toLowerCase() == 'true');
 										//Render in normal way
 										require(["charts/charts", "charts/chartWindow"], function(charts, chartWindow) {
 											var options = {
@@ -74,7 +74,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 												type : type,
 												delayAmount : delayAmount
 											});
-											init_chart_options($html, timePeriod, type, instrumentName, instrumentCode);
+											init_chart_options($html, timePeriod, type, instrumentName, instrumentCode, showOptions);
 											_.defer(function() {
 												charts.triggerReflow("#" + newTabId + "_chart");
 											});
