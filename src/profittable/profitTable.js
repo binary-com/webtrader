@@ -155,7 +155,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                 searching: true,
                 processing: true
             });
-            footer.appendTo(table.parent());
+            footer.i18n().appendTo(table.parent());
             table.parent().addClass('hide-search-input');
 
             // Apply the a search on each column input change
