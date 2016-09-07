@@ -91,7 +91,7 @@
 		<span class="hint">Min: 10 Max: 2000</span>
 
 		<span class='title'>Further instructions</span>
-		<textarea class='instructions' rows='8' rv-value='agent.instructions' />
+		<textarea class='instructions' rows='8' rv-value='agent.instructions'></textarea>
 		<span class='error' rv-visible='agent.instructions | eq "" | and empty_fields.validate'>This field is required.</span>
 
 		<button class='submit' rv-on-click='agent.click'>Submit</button>
