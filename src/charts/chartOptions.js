@@ -147,7 +147,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
     return {
 
-        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode , m_showOptions) {
+        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode , m_showShare, m_showOverlay) {
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function(html) {
                 calculateStringWidth();
                 if (view[m_newTabId]) view[m_newTabId].unbind();
@@ -170,7 +170,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     showDrawingToolSelector : false,
                     showExportSelector : false,
                     showLoadSaveSelector: false,
-                    showOptions: typeof m_showOptions == 'undefined' ? true : m_showOptions,
+                    showShare: typeof m_showShare == 'undefined' ? true : m_showShare,
+                    showOverlay: typeof m_showOverlay == 'undefined' ? true : m_showOverlay,
 
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),
