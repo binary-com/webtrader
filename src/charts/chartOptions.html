@@ -73,7 +73,7 @@
                 <span class="countBubl" rv-show="indicatorsCount | gt 0" rv-text="indicatorsCount"></span>
             </div>
 
-            <div class="cell">
+            <div class="cell" rv-show="showOptions">
                 <div class="chartOptions_button" rv-on-click="addRemoveOverlay">
                     <span data-balloon="Comparisons" data-balloon-pos="down">
                         <div class="img"> <img src="images/comparison.svg" ></div>
@@ -117,7 +117,7 @@
                     <div class='chart-template-manager-root'><!-- chartTemplateManger.es6 will render here --></div>
                 </div>
             </div>
-            <div class="cell">
+            <div class="cell" rv-show="showOptions">
                 <div class="chartOptions_button" rv-on-click="toggleExportSelector" rv-class-button_selected="showExportSelector">
                     <span class = "shareButton" data-balloon="Share chart" data-balloon-pos="down">
                         <div class="img"><img src="images/share.svg"></div>
