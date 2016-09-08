@@ -260,7 +260,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
 
   function init_dialog(proposal) {
     require(['text!viewtransaction/viewTransaction.html'],function(html) {
-        var root = $(html);
+        var root = $(html).i18n();
         var state = init_state(proposal, root);
         var on_proposal_open_contract = function(data) {
             update_indicative(data, state);
@@ -316,7 +316,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
                     balance: sell.balance_after,
                     currency: state.table.currency,
                   };
-                  var $html = $(html);
+                  var $html = $(html).i18n();
                   root.after($html);
                   var view_confirm = rv.bind($html[0], state_confirm);
                   state.onclose.push(function(){

@@ -123,7 +123,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             data: null
           });
 
-            table = $(html);
+            table = $(html).i18n();
             table.appendTo(profitWin);
             var footer = $('<div/>').addClass('profit-table-info');
 
@@ -155,7 +155,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                 searching: true,
                 processing: true
             });
-            footer.appendTo(table.parent());
+            footer.i18n().appendTo(table.parent());
             table.parent().addClass('hide-search-input');
 
             // Apply the a search on each column input change

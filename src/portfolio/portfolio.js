@@ -188,14 +188,14 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 table = table.dataTable({
                     data: [],
                     columns: [
-                        { title: 'Ref.' },
-                        { title: 'Contract Details' },
+                        { title: 'Ref.'.i18n() },
+                        { title: 'Contract Details'.i18n() },
                         {
-                          title: 'Purchase',
+                          title: 'Purchase'.i18n(),
                           render: function(val) { return '<span class="bold">' + formatPrice(val,currency) + '</span>'; }
                         },
                         {
-                          title: 'Indicative',
+                          title: 'Indicative'.i18n(),
                           render: function(val) { return '<span class="bold">' + formatPrice(val,currency) + '</span>'; }
                         },
                         { title: '' }

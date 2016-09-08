@@ -13,7 +13,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       }
 
       require(['text!oauth/login.html', 'css!oauth/login.css'], function(root) {
-        root = $(root);
+        root = $(root).i18n();
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
             resizable:false,

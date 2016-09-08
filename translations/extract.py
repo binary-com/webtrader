@@ -29,16 +29,19 @@ class WebtraderParser(HTMLParser):
         self.is_script = False
         self.texts = list(static) # clone
     def handle_starttag(self, tag, attrs):
-        if tag == 'script':
+        if tag == 'script' or tag=='style':
             self.is_script = True
+        for attr in attrs:
+            if attr[0] == "data-balloon":
+                self.texts.append(attr[1]);
     def handle_endtag(self, tag):
-        if tag == 'script':
+        if tag == 'script' or tag=='style':
             self.is_script = False
     def handle_data(self, text):
-        if not self.is_script: # ignore script tags
+        if not self.is_script: # ignore script and style tags
             text = re.sub( '\s+', ' ', text).strip(' \t\r\n*,+.:')
             if text != '' and len(text) > 1: # ignore empty and single character strings.
-                if text[0] == '{' and text[-1] == '}': return #ignore rivetsjs tags
+                if (text[0] == '{' and text[-1] == '}') : return #ignore rivetsjs tags
                 self.texts.append(text)
     def parse_html_files(self, path):
         file_pattern = "*.html"

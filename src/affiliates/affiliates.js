@@ -35,7 +35,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 	                timePeriod = getParameterByName('timePeriod') || '1d',
 	                type = timePeriod == '1t' ? 'line' : 'candlestick';
 
-	            var $html = $(html);
+	            var $html = $(html).i18n();
 	            $html.attr("id", newTabId)
 	                .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
 	                .find('div.chartSubContainer').attr('id', newTabId + "_chart").end();
