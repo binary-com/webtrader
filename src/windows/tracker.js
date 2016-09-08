@@ -19,6 +19,17 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
         return [];
       });
 
+  function when_authenticated() {
+    return new Promise(function(res) {
+      if (liveapi.is_authenticated()) {
+        return res();
+      }
+      liveapi.events.on_till('login', function() {
+        res();
+        return true;
+      });
+    });
+  }
   function reopen_dialogs(symbols){
     saved_states = states;
     states = { };
@@ -42,7 +53,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
 
       if(data.is_unique) {
         if(data.is_authorized) {
-          liveapi.events.on_till('login', function(){
+          when_authenticated().then(function(){
             $(unique_modules[module_id]).click();
             return true; // unsubscribe from login event
           });
@@ -65,7 +76,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
         });
       }
       else if(module_id === 'tradeDialog') {
-        liveapi.events.on_till('login', function() {
+        when_authenticated().then(function() {
           data.data.tracker_id = ++counter;
           liveapi
               .send({contracts_for: data.data.symbol})
