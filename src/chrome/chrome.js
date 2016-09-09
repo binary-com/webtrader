@@ -25,7 +25,7 @@ define(['jquery', 'windows/windows', 'moment', 'common/util'], function($, windo
         if (show && window.chrome && chrome.webstore && $('#webtrader-extension-is-installed').length <= 0) {
             if (!win) {
                 require(['text!chrome/chrome.html'], function($html){
-                    $html = $($html);
+                    $html = $($html).i18n();
                     win = windows.createBlankWindow($html,
                     {
                         dialogClass: "dialog-confirm",

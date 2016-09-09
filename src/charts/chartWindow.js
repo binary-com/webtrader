@@ -53,7 +53,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                     });
                 }
             }, options );
-            var dialog = windows.createBlankWindow($chartWindowHtml, options),
+            var dialog = windows.createBlankWindow($($chartWindowHtml).i18n(), options),
                 id = dialog.attr('id');
             dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()
                 .find('div.chartSubContainer').attr('id', id + "_chart").end();

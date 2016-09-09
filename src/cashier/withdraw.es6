@@ -25,7 +25,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       }
 
       _init_win = root => {
-        root = $(root);
+        root = $(root).i18n();
         win = windows.createBlankWindow(root, {
             title: 'Withdraw funds',
             resizable: true,

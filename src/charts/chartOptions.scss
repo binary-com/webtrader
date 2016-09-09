@@ -222,10 +222,8 @@
   }
 
   .chartOptions_overlay.loadSaveOverlay {
-    max-width: 800px;
-    .chartoptions-horizontal-line {
-      width: calc(100% - 31px);
-    }
+    max-width: 260px;
+    font-size: 0.8em;
     .chart-template-manager-root {
       max-height: 310px;
       overflow: auto;
@@ -233,15 +231,22 @@
         button {
           background-color: #273051;
           margin: 5px;
-          padding: 10px 35px;
           display: block;
+          width: 95%;
         }
       }
-      .save-as, .rename {
+      .save-as, .rename, .confirm {
         padding: 5px;
 
         .title { margin: 5px 0; }
-        button { margin-top: 5px; }
+        button { margin-top: 5px;}
+        .button {
+          width: 100%;
+          text-align: center;
+          button {
+            margin-right: 5px;
+          }
+        }
       }
       .templates {
         padding: 5px;
@@ -252,12 +257,9 @@
 
         .template {
           display: inline-block;
-          width: 260px;
-          a {
-            color: #aaa;
-            font-weight: normal;
-            text-decoration: underline;
-            font-size: 12px;
+          width: 200px;
+          a.options:nth-child(2n) {
+            margin-right: 10px;
           }
           .name {
             transition: color 0.2s;
@@ -265,6 +267,7 @@
             margin-bottom: 3px;
             &.active {
               font-weight: bold;
+              color: #e98024
             }
             &:hover {
               color: #e98024;
@@ -277,14 +280,10 @@
       height: 1em;
       .error {
         color: red;
-        font-size: 12px;
       }
     }
     span.back-arrow {
-      color: #aaa;
-      font-size: 12px;
       cursor: pointer;
-      padding-bottom: 10px;
        & > span {
         display: inline-block;
         position: relative;

@@ -66,7 +66,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                 if (data.authorize) value = data.authorize.balance;
                 else value = data.balance ? data.balance.balance : '0';
 
-                balance.text(currency + ' ' + formatPrice(value)).fadeIn();
+                balance.text(formatPrice(value, currency)).fadeIn();
             };
 
             /* update balance on change */
@@ -201,7 +201,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
 
     return {
         init: function (_callback) {
-            var root = $($navHtml);
+            var root = $($navHtml).i18n();
             $("body").prepend(root);
 
             initLoginButton(root);

@@ -86,7 +86,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
     }
 
     function initTradingWin($html) {
-        $html = $($html);
+        $html = $($html).i18n();
         var subheader = $html.filter('.trading-times-sub-header');
         table = $html.filter('table');
         $html.appendTo(tradingWin);

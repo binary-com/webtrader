@@ -37,7 +37,7 @@ define(['jquery', 'windows/windows', 'highstock', 'color-picker'], function ($, 
         $menuLink.click(function () {
             if (!win) {
                 require(['text!themes/custom_theme/custom_theme.html', 'css!themes/custom_theme/custom_theme.css'], function ($html) {
-                    $html = $($html);
+                    $html = $($html).i18n();
                     $html.find(".color_input_width").each(function (index, ele) {
                         var id = $(ele).attr("id").replace("theme_", ""),
                             alpha = $(ele).attr("alpha"),
