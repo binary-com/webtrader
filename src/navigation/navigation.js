@@ -52,6 +52,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                     liveapi.send({payout_currencies: 1})
                         .then(function (_data) {
                             currency = _data.payout_currencies[0];
+                            local_storage.set("currency",currency);
                             setTimeout(function () {
                                 update_balance(data);
                             }, 0);
@@ -82,6 +83,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                 // time.fadeOut();
                 balance.fadeOut();
                 currency = '';
+                local_storage.remove("currency");
             });
 
             liveapi.events.on('login', function (data) {

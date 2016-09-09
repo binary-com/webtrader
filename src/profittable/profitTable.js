@@ -7,6 +7,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
     var profitWin = null,
         table = null,
+        currency = local_storage.get("currency"),
         datepicker = null;
 
     function init($menuLink) {
@@ -66,9 +67,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     epoch_to_string(trans.purchase_time, { utc: true }),
                     trans.transaction_id,
                     trans.longcode,
-                    trans.buy_price,
+                    formatPrice(trans.buy_price,currency),
                     epoch_to_string(trans.sell_time, { utc: true }),
-                    trans.sell_price,
+                    formatPrice(trans.sell_price,currency),
                     profit,
                     view_button,
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
@@ -129,25 +130,27 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             table = table.dataTable({
                 data: [],
-                columnDefs: [ {
+                columnDefs: [ 
+                {
                     targets: 6,
                     createdCell: function (td, cellData) {
                         var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
                         if (css_class)
                             $(td).addClass(css_class);
+                        $(td).attr("data-src", cellData);
+                        td.textContent = formatPrice(cellData,currency);
                     }
-                }],
+                }
+                ],
                 info: false,
                 footerCallback: function ( row, data, start, end, display ) {
                   var api = this.api(), data;
-
                   var total = api.column(6).data()
                     .reduce(function(a, b) { return a*1 + b*1; }, 0);
-
                   var css = 'total ' + (total >= 0 ? 'green' : 'red');
                   footer.html(
                     '<span class="title">Total Profit/Loss<span>' +
-                    '<span class="' + css + '">'+ formatPrice(total) +'</span>'
+                    '<span class="' + css + '">'+ formatPrice(total,currency) +'</span>'
                   );
                 },
                 paging: false,
