@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-04 12:23+0200\n"
-"PO-Revision-Date: 2016-08-12 13:40+0000\n"
-"Last-Translator: Gabriela Balieiro Moreira <eusouagabi@gmail.com>\n"
+"PO-Revision-Date: 2016-09-06 22:45+0000\n"
+"Last-Translator: Alcino Jorge <alcino@binary.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pt/>\n"
 "Language: pt\n"
@@ -12,25 +12,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.8-dev\n"
+"X-Generator: Weblate 2.8\n"
 
 msgid "%D MA Type"
-msgstr ""
+msgstr "Tipo de %D MA"
 
 msgid "%D Period"
 msgstr "Período de %D"
 
 msgid "%D Stroke"
-msgstr ""
+msgstr "Traço de %D"
 
 msgid "%K MA Type"
-msgstr ""
+msgstr "Tipo de %K MA"
 
 msgid "%K Period"
-msgstr ""
+msgstr "Período de %K"
 
 msgid "%K Stroke"
-msgstr ""
+msgstr "Traço de %K"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -58,7 +58,7 @@ msgstr ""
 "efetuadas entre clientes e agentes de pagamentos"
 
 msgid "-DI Stroke"
-msgstr ""
+msgstr "Traço de -DI"
 
 msgid "0-1 year"
 msgstr "0 a 1 ano"
@@ -136,10 +136,10 @@ msgid "8h"
 msgstr "8h"
 
 msgid "ADX MA Type"
-msgstr ""
+msgstr "Tipo de ADX MA"
 
 msgid "ADX Stroke"
-msgstr ""
+msgstr "Traço de ADX"
 
 msgid "ATR Period"
 msgstr "Período ATR"
@@ -160,7 +160,7 @@ msgid "Account opening"
 msgstr "Abertura de conta"
 
 msgid "Account token not found"
-msgstr "Token de conta não encontrada"
+msgstr "Token de conta não encontrado"
 
 msgid "Action"
 msgstr "Ação"
@@ -184,7 +184,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todos os horários são exibidos em GMT (Greenwich Mean Time)"
 
 msgid "Amount"
-msgstr ""
+msgstr "Valor"
 
 msgid "Amount Per Point"
 msgstr "Montante por ponto"
@@ -217,10 +217,10 @@ msgid "Are you sure you want to delete this token?"
 msgstr "Tem certeza que deseja excluir este token?"
 
 msgid "Aroon Down Stroke"
-msgstr ""
+msgstr "Traço para baixo aroon"
 
 msgid "Aroon Up Stroke"
-msgstr ""
+msgstr "Traço para cima aroon"
 
 msgid "Asians"
 msgstr "Asiáticos"
@@ -238,7 +238,7 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Average"
-msgstr ""
+msgstr "Média"
 
 msgid "Back"
 msgstr "Voltar"
@@ -301,16 +301,16 @@ msgid "Candles"
 msgstr "Velas"
 
 msgid "Candlestick down-color"
-msgstr ""
+msgstr "Cor da vela para baixo"
 
 msgid "Candlestick down-line"
-msgstr ""
+msgstr "Linha da vela para baixo"
 
 msgid "Candlestick up-color"
-msgstr ""
+msgstr "Cor da vela para cima"
 
 msgid "Candlestick up-line"
-msgstr ""
+msgstr "Linha da vela para cima"
 
 msgid "Cash Balance"
 msgstr "Saldo de dinheiro"
@@ -346,7 +346,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Click Jacking test"
-msgstr ""
+msgstr "Teste de clickjacking"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Clique para conectar-se com a sua conta Binary.com"
@@ -448,10 +448,10 @@ msgid "Customize chart appearance"
 msgstr "Personalizar aparência do gráfico"
 
 msgid "DI Stroke"
-msgstr ""
+msgstr "Traço de DI"
 
 msgid "DX MA Type"
-msgstr ""
+msgstr "Tipo de DX MA"
 
 msgid "Daily limit on losses"
 msgstr "Limite diário de perdas"
@@ -531,10 +531,10 @@ msgid "Dot"
 msgstr "Pontos"
 
 msgid "Double MA Period"
-msgstr ""
+msgstr "Período do MA duplo"
 
 msgid "Double MA Type"
-msgstr ""
+msgstr "Tipo de MA duplo"
 
 msgid "Double click the object to remove"
 msgstr "Clique duas vezes no objeto para removê-lo"
@@ -570,10 +570,10 @@ msgid "Duration"
 msgstr "Duração"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "Edge"
-msgstr ""
+msgstr "Borda"
 
 msgid "Edit"
 msgstr "Editar"
@@ -636,16 +636,16 @@ msgid "Family name"
 msgstr "Sobrenome"
 
 msgid "Fast %K MA Type"
-msgstr ""
+msgstr "Tipo de %K MA rápido"
 
 msgid "Fast %K Period"
-msgstr ""
+msgstr "Período do %K rápido"
 
 msgid "Fast Limit"
 msgstr "Limite rápido"
 
 msgid "Fast MA Type"
-msgstr ""
+msgstr "Tipo de MA rápido"
 
 msgid "Fast Period"
 msgstr "Período rápido"
@@ -723,7 +723,7 @@ msgid "High Price"
 msgstr "Preço alto"
 
 msgid "High Stroke"
-msgstr ""
+msgstr "Traço alto"
 
 msgid "High barrier offset"
 msgstr "Deslocamento da barreira alta"
@@ -921,7 +921,7 @@ msgid "Loading Profit Table"
 msgstr "Carregando tabela de lucros"
 
 msgid "Loading Real account opening"
-msgstr ""
+msgstr "Carregando a abertura de contas reais"
 
 msgid "Loading Self-Exclusion"
 msgstr "Carregando auto-exclusão"
@@ -966,16 +966,16 @@ msgid "Logout"
 msgstr "Sair"
 
 msgid "Long MA Type"
-msgstr ""
+msgstr "Tipo de MA longo"
 
 msgid "Long ROC Period"
-msgstr ""
+msgstr "Período do ROC longo"
 
 msgid "Long Stop Line Stroke"
-msgstr ""
+msgstr "Traço da linha de limitação longa"
 
 msgid "Long Term Period"
-msgstr ""
+msgstr "Período do termo longo"
 
 msgid "Low Barrier"
 msgstr "Barreira baixa"
@@ -984,7 +984,7 @@ msgid "Low Price"
 msgstr "Preço baixo"
 
 msgid "Low Stroke"
-msgstr ""
+msgstr "Traço baixo"
 
 msgid "Low barrier offset"
 msgstr "Deslocamento de barreira baixa"
@@ -996,10 +996,10 @@ msgid "Lower Band Stroke"
 msgstr ""
 
 msgid "MA Type"
-msgstr ""
+msgstr "Tipo de MA"
 
 msgid "MACD Line Stroke"
-msgstr ""
+msgstr "Traço de linha MACD"
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -1022,7 +1022,7 @@ msgid "March"
 msgstr "Março"
 
 msgid "Mass Period"
-msgstr ""
+msgstr "Período da massa"
 
 msgid "Max/Min Period"
 msgstr "Período mín/máx"
@@ -1101,10 +1101,10 @@ msgid "Multiplier"
 msgstr "Multiplicador"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev para baixo"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev para cima"
 
 msgid "Name"
 msgstr "Nome"
@@ -1125,7 +1125,7 @@ msgid "Navigator mask-fill"
 msgstr "Preenchimento da navegação"
 
 msgid "Navigator outline"
-msgstr "Contorna do navegador"
+msgstr "Contorno do navegador"
 
 msgid "Navigator series color"
 msgstr "Cor da série do navegador"
@@ -1182,7 +1182,7 @@ msgid "OAuth Server"
 msgstr "Servidor OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
 msgstr ""
@@ -1215,13 +1215,13 @@ msgid "One last step left"
 msgstr "Resta apenas uma etapa"
 
 msgid "Open"
-msgstr ""
+msgstr "Aberto"
 
 msgid "Open Account"
 msgstr "Conta aberta"
 
 msgid "Open Price"
-msgstr ""
+msgstr "Preço aberto"
 
 msgid "Open account"
 msgstr "Abrir conta"
@@ -1233,7 +1233,7 @@ msgid "Opens"
 msgstr "Abre"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
@@ -1267,10 +1267,10 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "PPO Line Stroke"
-msgstr ""
+msgstr "Traço da linha PPO"
 
 msgid "Password must be 6 characters minimum"
 msgstr "A senha deve conter no mínimo 6 caracteres"
@@ -1391,7 +1391,7 @@ msgid "Please enter value between 0 and 99999 for Session duration limit"
 msgstr "Insira um valor entre 0 e 99999 para o limite de duração de sessões"
 
 msgid "Please enter your city address"
-msgstr "Insira o seu endereço de cidade"
+msgstr "Insira o seu endereço"
 
 msgid "Please enter your current password"
 msgstr "Insira a sua senha atual"
@@ -1476,7 +1476,7 @@ msgid "Primary"
 msgstr ""
 
 msgid "Print chart"
-msgstr ""
+msgstr "Imprimir gráfico"
 
 msgid "Profit"
 msgstr "Lucro"
@@ -1563,10 +1563,10 @@ msgid "Rise"
 msgstr "Subir"
 
 msgid "SMA"
-msgstr ""
+msgstr "SMA"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
 msgstr "Safari"
@@ -1650,13 +1650,13 @@ msgid "Share"
 msgstr "Compartilhar"
 
 msgid "Short MA Type"
-msgstr ""
+msgstr "Tipo de MA curto"
 
 msgid "Short ROC Period"
-msgstr ""
+msgstr "Período de ROC curto"
 
 msgid "Short Stop Line Stroke"
-msgstr ""
+msgstr "Traço da linha de limitação curta"
 
 msgid "Short Term Period"
 msgstr "Período de curto prazo"
@@ -1668,40 +1668,40 @@ msgid "Sigma"
 msgstr "Sigma"
 
 msgid "Signal Line Stroke"
-msgstr ""
+msgstr "Traço da linha de sinais"
 
 msgid "Signal MA Type"
-msgstr ""
+msgstr "Tipo de MA de sinais"
 
 msgid "Signal Period"
 msgstr "Período do sinal"
 
 msgid "Single MA Period"
-msgstr ""
+msgstr "Período de MA singular"
 
 msgid "Single MA Type"
-msgstr ""
+msgstr "Tipo de MA singular"
 
 msgid "Slow %D MA Type"
-msgstr ""
+msgstr "Tipo de %D MA lento"
 
 msgid "Slow %D Period"
-msgstr ""
+msgstr "Período de %D lento"
 
 msgid "Slow %K MA Type"
-msgstr ""
+msgstr "Tipo de %K MA lento"
 
 msgid "Slow %K Period"
-msgstr ""
+msgstr "Período do %K lento"
 
 msgid "Slow Limit"
-msgstr ""
+msgstr "Limite lento"
 
 msgid "Slow MA Type"
-msgstr ""
+msgstr "Tipo de MA lento"
 
 msgid "Slow Period"
-msgstr ""
+msgstr "Período lento"
 
 msgid "Sold"
 msgstr "Vendido"
@@ -1743,7 +1743,7 @@ msgid "Stays In/Goes Out"
 msgstr "Fica dentro/Sai fora"
 
 msgid "Stocks trading experience"
-msgstr "Experiência com a negociação de ações"
+msgstr "Experiência com negociação de ações"
 
 msgid "Stocks trading frequency"
 msgstr "Frequência da negociação de ações"
@@ -1836,7 +1836,7 @@ msgstr ""
 "Houve uma interrupção nos dados do mercado durante o período do contrato. "
 "Para contas de dinheiro real, iremos tentar corrigir a situação e liquidar o "
 "contrato corretamente. Caso contrário, o contrato será cancelado e o valor "
-"reembolsado. Contratos de dinheiro virtual serão cancelados e reembolsados."
+"reembolsado. Contratos de dinheiro virtual serão cancelados e reembolsados"
 
 msgid "There was an error"
 msgstr "Houve um erro"
@@ -2049,10 +2049,10 @@ msgid "Volume Factor"
 msgstr "Fator de volume"
 
 msgid "WMA"
-msgstr ""
+msgstr "WMA"
 
 msgid "WMA Period"
-msgstr ""
+msgstr "Período do WMA"
 
 msgid "Websocket Server"
 msgstr "Servidor Websocket"
@@ -2361,7 +2361,7 @@ msgid "| Return"
 msgstr ""
 
 msgid "Comparisons"
-msgstr ""
+msgstr "Comparações"
 
 msgid "Time interval"
-msgstr ""
+msgstr "Intervalo de tempo"
