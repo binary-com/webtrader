@@ -76,7 +76,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         $.growl.notice({message: $("<div/>").text('Template changes saved '.i18n() + '(' + current.name + ')').html()});
       }
 
-      templates.save_as = () => {
+      templates.save_as = (event) => {
+        event.preventDefault();
         const name = templates.save_as_value.substring(0,20);
         const options = chartWindow.get_chart_options(dialog_id);
         if(options) {
@@ -110,7 +111,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         route.update('rename');
       }
 
-      templates.do_rename = () => {
+      templates.do_rename = (event) => {
+        event.preventDefault();
         const name = templates.rename_tmpl.name;
         const new_name = templates.rename_value.substring(0,20);
         const array = local_storage.get('templates');
