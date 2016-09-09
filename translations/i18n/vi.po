@@ -52,6 +52,9 @@ msgid ""
 "transactions made between customers and Payment Agents"
 msgstr ""
 
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr ""
+
 #, fuzzy
 msgid "-DI Stroke"
 msgstr "-DI Nét"
@@ -62,8 +65,24 @@ msgstr "0-1 năm"
 msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 giao dịch trong 12 tháng qua"
 
+#, fuzzy
+msgid "1"
+msgstr "10"
+
 msgid "1 Day"
 msgstr "1 ngày"
+
+#, fuzzy
+msgid "1 Hour"
+msgstr "Giờ"
+
+#, fuzzy
+msgid "1 Minute"
+msgstr "Phút"
+
+#, fuzzy
+msgid "1 Tick"
+msgstr "Đánh dấu"
 
 msgid "1-2 years"
 msgstr "1-2 năm"
@@ -71,11 +90,19 @@ msgstr "1-2 năm"
 msgid "10"
 msgstr "10"
 
+#, fuzzy
+msgid "10 Minutes"
+msgstr "Phút"
+
 msgid "10m"
 msgstr "10 tháng"
 
 msgid "15"
 msgstr "15"
+
+#, fuzzy
+msgid "15 Minutes"
+msgstr "Phút"
 
 msgid "15m"
 msgstr "15 tháng"
@@ -89,14 +116,41 @@ msgstr "1 giờ"
 msgid "1m"
 msgstr "1 tháng"
 
+msgid "1t"
+msgstr ""
+
+#, fuzzy
+msgid "2"
+msgstr "2 giờ"
+
+#, fuzzy
+msgid "2 Hours"
+msgstr "Giờ"
+
+#, fuzzy
+msgid "2 Minutes"
+msgstr "Phút"
+
 msgid "2h"
 msgstr "2 giờ"
 
 msgid "2m"
 msgstr "2 tháng"
 
+#, fuzzy
+msgid "3"
+msgstr "30"
+
+#, fuzzy
+msgid "3 Minutes"
+msgstr "Phút"
+
 msgid "30"
 msgstr "30"
+
+#, fuzzy
+msgid "30 Minutes"
+msgstr "Phút"
 
 msgid "30-day limit on losses"
 msgstr "30 ngày giới hạn cho thua"
@@ -110,11 +164,30 @@ msgstr "30 tháng"
 msgid "3m"
 msgstr "3 tháng"
 
+#, fuzzy
+msgid "4"
+msgstr "4 giờ"
+
+#, fuzzy
+msgid "4 Hours"
+msgstr "Giờ"
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 giao dịch hoặc hơn trong 12 tháng qua"
 
+msgid "404"
+msgstr ""
+
 msgid "4h"
 msgstr "4 giờ"
+
+#, fuzzy
+msgid "5"
+msgstr "15"
+
+#, fuzzy
+msgid "5 Minutes"
+msgstr "Phút"
 
 msgid "5m"
 msgstr "5 tháng"
@@ -127,6 +200,14 @@ msgstr "7-day giới hạn cho thua"
 
 msgid "7-day turnover limit"
 msgstr "7 ngày giới hạn cho doanh số"
+
+#, fuzzy
+msgid "8"
+msgstr "8 giờ"
+
+#, fuzzy
+msgid "8 Hours"
+msgstr "Giờ"
 
 msgid "8h"
 msgstr "8 giờ"
@@ -161,14 +242,18 @@ msgstr "Không tìm thấy token tài khoản"
 msgid "Action"
 msgstr "Hành động"
 
+msgid "Add comparisons"
+msgstr ""
+
 msgid "Add indicator"
 msgstr "Thêm chỉ dẫn"
 
 msgid "Add level"
 msgstr "Thêm cấp độ"
 
-msgid "Add overlays"
-msgstr "Thêm lớp phủ"
+#, fuzzy
+msgid "Add/remove comparisons"
+msgstr "Thêm/loại bỏ lớp phủ"
 
 msgid "Add/remove overlays"
 msgstr "Thêm/loại bỏ lớp phủ"
@@ -337,6 +422,14 @@ msgstr "Bảng nền"
 msgid "Chart context menu"
 msgstr "Bảng chủ đề"
 
+#, fuzzy
+msgid "Chart template"
+msgstr "Bảng chủ đề"
+
+#, fuzzy
+msgid "Chart type"
+msgstr "Bảng"
+
 msgid "Choose password"
 msgstr "Lựa chọn mật khẩu"
 
@@ -370,6 +463,9 @@ msgstr "Kinh nghiệm giao dịch hàng hóa"
 msgid "Commodities trading frequency"
 msgstr "Tần suất giao dịch hàng hóa"
 
+msgid "Comparisons"
+msgstr ""
+
 msgid "Conditions"
 msgstr "Điều kiện"
 
@@ -399,6 +495,10 @@ msgstr "Hợp đồng"
 
 msgid "Contract Confirmation"
 msgstr "Xác nhận hợp đồng"
+
+#, fuzzy
+msgid "Contract Details"
+msgstr "Hợp đồng"
 
 msgid "Contract is not yet started"
 msgstr "Hợp đồng chưa được bắt đầu"
@@ -431,11 +531,12 @@ msgstr "Vị trí hiện tại"
 msgid "Current Spot Time"
 msgstr "Thời gian vị trí hiện tại"
 
+#, fuzzy
+msgid "Current comparisons"
+msgstr "Mật khẩu hiện tại"
+
 msgid "Current indicators"
 msgstr "Chỉ số hiện tại"
-
-msgid "Current overlays"
-msgstr "Lớp phủ hiện tại"
 
 msgid "Current password"
 msgstr "Mật khẩu hiện tại"
@@ -499,6 +600,9 @@ msgstr "Từ chối"
 
 msgid "Default"
 msgstr "Mặc định"
+
+msgid "Delete"
+msgstr ""
 
 msgid "Delete level(s)"
 msgstr "Xóa level(s)"
@@ -576,6 +680,9 @@ msgstr "Tải xuống thành"
 
 msgid "Downloading .csv"
 msgstr "Đang tải .scv"
+
+msgid "Drawing tools"
+msgstr ""
 
 msgid "Duration"
 msgstr "Thời gian"
@@ -725,6 +832,9 @@ msgstr "Ô lưới nhẹ"
 msgid "HIGH"
 msgstr "CAO"
 
+msgid "Have better luck at trading!"
+msgstr ""
+
 msgid "Health"
 msgstr "Sức khỏe"
 
@@ -759,6 +869,10 @@ msgstr "Địa chỉ nhà"
 msgid "Horizontal Line"
 msgstr "Đường ngang"
 
+#, fuzzy
+msgid "Horizontal line"
+msgstr "Đường ngang"
+
 msgid "Hours"
 msgstr "Giờ"
 
@@ -778,6 +892,9 @@ msgid ""
 "responsible for transactions made between customers and payment agents"
 msgstr ""
 
+msgid "If the issue keeps happening, please contact"
+msgstr ""
+
 msgid "If you select a"
 msgstr "Nếu bạn chọn một"
 
@@ -787,14 +904,6 @@ msgstr "Nếu bạn chọn một cụ thể"
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
-msgstr ""
-"Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn "
-"muốn tiếp tục không?"
-
-#, fuzzy
-msgid ""
-"In order to properly apply this language, a full refresh of page is "
-"required. Are you sure you want to proceed?"
 msgstr ""
 "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn "
 "muốn tiếp tục không?"
@@ -823,8 +932,16 @@ msgstr "Vào/Ra"
 msgid "Income Source"
 msgstr "Nguồn thu nhập"
 
+#, fuzzy
+msgid "Indicative"
+msgstr "Giá biểu thị"
+
 msgid "Indicative Price"
 msgstr "Giá biểu thị"
+
+#, fuzzy
+msgid "Indicators"
+msgstr "Thêm chỉ dẫn"
 
 msgid "Indices trading experience"
 msgstr "Chỉ số kinh nghiệm giao dịch"
@@ -850,6 +967,10 @@ msgstr "và"
 
 msgid "January"
 msgstr ""
+
+#, fuzzy
+msgid "Japan accounts are not supported"
+msgstr "Trình duyệt của bạn không được hỗ trợ"
 
 msgid "Jul"
 msgstr ""
@@ -909,6 +1030,10 @@ msgstr "Đường nét"
 
 msgid "Link"
 msgstr "Liên kết"
+
+#, fuzzy
+msgid "Load chart template"
+msgstr "Đang tải bảng và mục lục giao dịch"
 
 msgid "Loading"
 msgstr "Đang tải"
@@ -1232,6 +1357,9 @@ msgstr "Một khi đã đạt đến giới hạn này, bạn sẽ không thể 
 msgid "One last step left"
 msgstr "Còn một bước cuối"
 
+msgid "Oops... Page Not Available"
+msgstr ""
+
 msgid "Open"
 msgstr "Mở"
 
@@ -1241,11 +1369,12 @@ msgstr "Mở tài khoản"
 msgid "Open Price"
 msgstr "Giá mở cửa"
 
-msgid "Open account"
+#, fuzzy
+msgid "Open a Financial Account"
 msgstr "Mở tài khoản"
 
-msgid "Open real money account"
-msgstr "Mở tài khoản tiền thật"
+msgid "Open account"
+msgstr "Mở tài khoản"
 
 msgid "Opens"
 msgstr "Mở"
@@ -1290,6 +1419,9 @@ msgstr "PNG"
 #, fuzzy
 msgid "PPO Line Stroke"
 msgstr "Đường nét PPO"
+
+msgid "Page Not Found"
+msgstr ""
 
 msgid "Password must be 6 characters minimum"
 msgstr "Mật khẩu phải từ tối thiểu 6 ký tự"
@@ -1549,6 +1681,10 @@ msgstr "Đang tải lại trang"
 msgid "Remove Selected"
 msgstr "Xóa Lựa Chọn"
 
+#, fuzzy
+msgid "Rename"
+msgstr "Tên Token"
+
 msgid "Repeat password"
 msgstr "Lặp lại mật khẩu"
 
@@ -1575,6 +1711,10 @@ msgstr "Kết quả"
 
 msgid "Return"
 msgstr "Quay trở lại"
+
+#, fuzzy
+msgid "Return to trading page"
+msgstr "Đang tải lại trang"
 
 msgid "Rise"
 msgstr "Tăng"
@@ -1604,6 +1744,15 @@ msgid "Sat"
 msgstr "Thứ bảy"
 
 msgid "Saturday"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Save as"
+msgstr ""
+
+msgid "Save changes"
 msgstr ""
 
 msgid "Secondary"
@@ -1666,6 +1815,10 @@ msgid "Settles"
 msgstr "Cài đặt"
 
 msgid "Share"
+msgstr "Chia sẻ"
+
+#, fuzzy
+msgid "Share chart"
 msgstr "Chia sẻ"
 
 msgid "Short MA Type"
@@ -1827,6 +1980,10 @@ msgstr "Bảng biểu"
 msgid "Tel"
 msgstr "Thứ Ba"
 
+#, fuzzy
+msgid "Template name"
+msgstr "Tên Token"
+
 msgid "Terms"
 msgstr "Điều khoản"
 
@@ -1855,6 +2012,11 @@ msgstr ""
 "chứa đựng một mức độ rủi ro cao. Nếu hợp đồng được mua bị hết thời hạn và "
 "trở nên vô giá trị, bạn sẽ bị mất toàn bộ khoản đầu tư cùng với lợi nhuận "
 "của hợp đồng"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
+msgstr ""
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1902,6 +2064,9 @@ msgstr "Kiểu xếp ngói"
 
 msgid "Time Period"
 msgstr "Thời hạn"
+
+msgid "Time interval"
+msgstr ""
 
 msgid "Time period"
 msgstr "Thời hạn"
@@ -2046,11 +2211,20 @@ msgid "Update Settings"
 msgstr "Cập Nhật cài đặt"
 
 #, fuzzy
+msgid "Upgrade to a Real Account"
+msgstr "Mở tài khoản"
+
+#, fuzzy
 msgid "Upper Band Stroke"
 msgstr "Nét lên"
 
 msgid "Use"
 msgstr "Sử dụng"
+
+msgid ""
+"Use the \"Save as ...\" button to save the chart settings, type, time "
+"period, indicators and comparisons"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Mã xác minh đã được gửi đến email của bạn"
@@ -2065,6 +2239,10 @@ msgid "Verify new password"
 msgstr "Xác nhận mật khẩu mới"
 
 msgid "Vertical Line"
+msgstr "Đường dọc"
+
+#, fuzzy
+msgid "Vertical line"
 msgstr "Đường dọc"
 
 msgid "View"
@@ -2145,6 +2323,9 @@ msgstr ""
 "Bạn phải đăng ký webtrader và cài App ID trước khi bạn có thể sử dụng các "
 "máy chủ OAuth khác nhau cho việc xác thực. Để biết thêm thông tin vui lòng "
 "tham khảo chi tiết OAuth trên"
+
+msgid "You haven't saved any templates yet"
+msgstr ""
 
 msgid "You pay"
 msgstr "Bạn trả"
@@ -2315,6 +2496,9 @@ msgstr "là khi hợp đồng được xử lý bởi các máy chủ của chú
 msgid "main site"
 msgstr "Trang web chính"
 
+msgid "market is presently closed"
+msgstr ""
+
 msgid "minute"
 msgstr "phút"
 
@@ -2394,11 +2578,22 @@ msgstr ""
 msgid "| Return"
 msgstr "| Quay trở lại"
 
-msgid "Comparisons"
-msgstr ""
+#~ msgid "Add overlays"
+#~ msgstr "Thêm lớp phủ"
 
-msgid "Time interval"
-msgstr ""
+#~ msgid "Current overlays"
+#~ msgstr "Lớp phủ hiện tại"
+
+#, fuzzy
+#~ msgid ""
+#~ "In order to properly apply this language, a full refresh of page is "
+#~ "required. Are you sure you want to proceed?"
+#~ msgstr ""
+#~ "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc "
+#~ "bạn muốn tiếp tục không?"
+
+#~ msgid "Open real money account"
+#~ msgstr "Mở tài khoản tiền thật"
 
 #~ msgid "Apply new theme?"
 #~ msgstr "Áp dụng chủ đề mới?"
