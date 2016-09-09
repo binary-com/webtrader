@@ -222,11 +222,12 @@
   }
 
   .chartOptions_overlay.loadSaveOverlay {
-    max-width: 260px;
+    max-width: 200px;
     font-size: 0.8em;
     .chart-template-manager-root {
       max-height: 310px;
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
       .menu {
         button {
           background-color: #273051;
@@ -250,14 +251,19 @@
       }
       .templates {
         padding: 5px;
-
+        width: 165px;
         & > div > div {
           margin: 5px 0;
         }
 
         .template {
           display: inline-block;
-          width: 200px;
+          width: 150px;
+          padding-bottom: 5px;
+          &:not(:last-child){
+            border-bottom: 1px solid #dedede;
+          }
+          word-wrap: break-word;
           a.options:nth-child(2n) {
             margin-right: 10px;
           }
@@ -275,6 +281,9 @@
           }
         }
       }
+    }
+    .confirm .title {
+      text-align: center;
     }
     .errors {
       height: 1em;
