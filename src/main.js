@@ -84,7 +84,7 @@ requirejs.onError = function (err) {
         return;
     }
 
-    console.error(err);
+    throw err;
 };
 
 /* Initialize the websocket as soon as posssilbe */

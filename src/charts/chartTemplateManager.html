@@ -24,32 +24,34 @@
     <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
     </span>
+    <form rv-on-submit="templates.save_as">
+      <div class='title'>Name</div>
+      <input rv-value='templates.save_as_value' maxlength="20" />
+      <div class='errors'>
+        <span class='error' rv-show='templates.save_as_value | trim | eq ""'>This field is required.</span>
+      </div>
 
-    <div class='title'>Name</div>
-    <input rv-value='templates.save_as_value' maxlength="20" />
-    <div class='errors'>
-      <span class='error' rv-show='templates.save_as_value | trim | eq ""'>This field is required.</span>
-    </div>
-
-    <button rv-on-click='templates.save_as'
-            rv-disabled='templates.save_as_value | trim | eq ""'
-            rv-css-opacity='templates.save_as_value | trim | eq "" | ternary 0.5 1' >Save</button>
+      <button type="submit"
+              rv-disabled='templates.save_as_value | trim | eq ""'
+              rv-css-opacity='templates.save_as_value | trim | eq "" | ternary 0.5 1' >Save</button>
+    </form>
 </div>
 
 <div class='rename' rv-if='route.value | eq "rename"'>
     <span class='back-arrow' rv-on-click='route.update | bind "templates"'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
     </span>
+    <form rv-on-submit="templates.do_rename">
+      <div class='title'>Template name</div>
+      <input rv-value='templates.rename_value' maxlength="20" />
+      <div class='errors'>
+        <span class='error' rv-show='templates.rename_value | trim | eq ""'>This field is required.</span>
+      </div>
 
-    <div class='title'>Template name</div>
-    <input rv-value='templates.rename_value' maxlength="20" />
-    <div class='errors'>
-      <span class='error' rv-show='templates.rename_value | trim | eq ""'>This field is required.</span>
-    </div>
-
-    <button rv-on-click='templates.do_rename'
-            rv-disabled='templates.rename_value | trim | eq ""'
-            rv-css-opacity='templates.rename_value | trim | eq "" | ternary 0.5 1' >Rename</button>
+      <button type="submit"
+              rv-disabled='templates.rename_value | trim | eq ""'
+              rv-css-opacity='templates.rename_value | trim | eq "" | ternary 0.5 1' >Rename</button>
+    </form>
 </div>
 <div class='confirm' rv-if='route.value | eq "confirm"'>
     <span class='back-arrow' rv-on-click='route.update | bind templates.confirm_prevMenu'>

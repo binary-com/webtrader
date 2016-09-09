@@ -130,8 +130,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             table = table.dataTable({
                 data: [],
-                columnDefs: [ 
-                {
+                columnDefs: [ {
                     targets: 6,
                     createdCell: function (td, cellData) {
                         var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
@@ -140,13 +139,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                         $(td).attr("data-src", cellData);
                         td.textContent = formatPrice(cellData,currency);
                     }
-                }
-                ],
+                }],
                 info: false,
                 footerCallback: function ( row, data, start, end, display ) {
                   var api = this.api(), data;
+
                   var total = api.column(6).data()
                     .reduce(function(a, b) { return a*1 + b*1; }, 0);
+                
                   var css = 'total ' + (total >= 0 ? 'green' : 'red');
                   footer.html(
                     '<span class="title">Total Profit/Loss<span>' +
