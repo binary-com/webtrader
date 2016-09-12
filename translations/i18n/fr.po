@@ -21,7 +21,7 @@ msgid "%D Period"
 msgstr "Période %D"
 
 msgid "%D Stroke"
-msgstr "Tracé %D"
+msgstr "Tracé %D "
 
 msgid "%K MA Type"
 msgstr "Type %K MA"
@@ -260,7 +260,7 @@ msgid "Add/remove comparisons"
 msgstr "Ajouter/supprimer des croisements"
 
 msgid "Add/remove overlays"
-msgstr "Ajouter/supprimer des croisements"
+msgstr "Ajouter/supprimer des superpositions"
 
 msgid "Admin"
 msgstr "Admin"
@@ -287,7 +287,7 @@ msgid "Apply"
 msgstr "Appliquer"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "Postulez pour devenir"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Test de pertinence : AVERTISSEMENT"
@@ -338,7 +338,7 @@ msgid "Barrier"
 msgstr "Barrière"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "Marge de barrière"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Options binaires ou autres produits financiers dérivés"
@@ -403,7 +403,7 @@ msgid "Cash Balance"
 msgstr "Solde financier"
 
 msgid "Change Backend Server"
-msgstr ""
+msgstr "Modifier le serveur principal"
 
 msgid "Change password"
 msgstr "Modifier le mot de passe"
@@ -453,7 +453,7 @@ msgid "Close all"
 msgstr "Fermer tout"
 
 msgid "Closes"
-msgstr ""
+msgstr "Fermetures"
 
 msgid "Commodities trading experience"
 msgstr "Expérience du trading sur matières premières"
@@ -462,7 +462,7 @@ msgid "Commodities trading frequency"
 msgstr "Fréquence de trading sur matières premières"
 
 msgid "Comparisons"
-msgstr ""
+msgstr "Comparaisons"
 
 msgid "Conditions"
 msgstr "Conditions"
@@ -523,10 +523,10 @@ msgid "Current Level"
 msgstr "Niveau actuel"
 
 msgid "Current Spot"
-msgstr "Valeur actuelle"
+msgstr "Prix spot actuel"
 
 msgid "Current Spot Time"
-msgstr ""
+msgstr "Heure spot actuelle"
 
 #, fuzzy
 msgid "Current comparisons"
@@ -686,7 +686,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "Edge"
-msgstr ""
+msgstr "Bord"
 
 msgid "Edit"
 msgstr "Édition"
@@ -698,7 +698,7 @@ msgid "Email verification failed"
 msgstr "La vérification de l'adresse e-mail a échoué"
 
 msgid "Embed code"
-msgstr "Insérer le code"
+msgstr "Intégrer le code"
 
 msgid "End Time"
 msgstr "Heure de fin"
@@ -773,7 +773,7 @@ msgid "Favourite dish"
 msgstr "Plat préféré"
 
 msgid "Feb"
-msgstr "fév."
+msgstr "févr."
 
 msgid "February"
 msgstr "février"
@@ -809,7 +809,7 @@ msgid "Friday"
 msgstr "vendredi"
 
 msgid "From"
-msgstr ""
+msgstr "De"
 
 msgid "Further instructions"
 msgstr "Instructions supplémentaires"
@@ -839,10 +839,10 @@ msgid "High Price"
 msgstr "Limite de prix supérieure"
 
 msgid "High Stroke"
-msgstr "Limite de prix supérieure"
+msgstr "Tracé supérieur"
 
 msgid "High barrier offset"
-msgstr "barrière supérieure"
+msgstr "Marge de barrière supérieure"
 
 msgid "Higher"
 msgstr "Supérieur"
@@ -870,7 +870,7 @@ msgid "Hours"
 msgstr "Heures"
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "J'ai lu et j'accepte les"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "CLAUSE DE NON-RESPONSABILITÉ IMPORTANTE"
@@ -890,7 +890,7 @@ msgstr ""
 "cas recommander, garantir ou approuver les services concernés. LES CLIENTS "
 "FONT APPEL AUX AGENTS DE PAIEMENT À LEURS RISQUES ET PÉRILS. Nous "
 "conseillons aux clients de vérifier les références des agents de paiement "
-"avant de leur envoyer toute somme d'argent. Binary.com ne pourra ne aucun "
+"avant de leur envoyer toute somme d'argent. Binary.com ne pourra en aucun "
 "cas être tenue responsable des transactions réalisées entre les clients et "
 "les agents de paiement."
 
@@ -901,7 +901,7 @@ msgid "If you select a"
 msgstr "Si vous sélectionnez une"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "Si vous sélectionnez une"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -1106,10 +1106,10 @@ msgid "Long ROC Period"
 msgstr "Période ROC longue"
 
 msgid "Long Stop Line Stroke"
-msgstr "Tracé ligne stop long"
+msgstr "Tracé ligne stop longue"
 
 msgid "Long Term Period"
-msgstr ""
+msgstr "Période à long terme"
 
 msgid "Low Barrier"
 msgstr "Barrière inférieure"
@@ -1121,7 +1121,7 @@ msgid "Low Stroke"
 msgstr "Tracé inférieur"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Marge de barrière inférieure"
 
 msgid "Lower"
 msgstr "Inférieur"
@@ -1142,6 +1142,12 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
+"Avant d'envoyer votre demande, veillez à vous mettre d'accord avec l'Agent "
+"concernant les conditions de paiement. Lorsque vous cliquerez sur le bouton «"
+" Confirmer le virement », les fonds seront prélevés sur votre compte et "
+"envoyés à l'Agent de paiement que vous avez choisi. L'Agent vous enverra le "
+"montant de retrait (après déduction de la commission) par le biais du moyen "
+"de paiement souhaité"
 
 msgid "Mar"
 msgstr "mars"
@@ -1150,7 +1156,7 @@ msgid "March"
 msgstr "mars"
 
 msgid "Mass Period"
-msgstr "Période"
+msgstr "Période de masse"
 
 msgid "Max/Min Period"
 msgstr "Période max./min."
@@ -1159,52 +1165,52 @@ msgid "Maximum"
 msgstr "Maximum"
 
 msgid "Maximum account cash balance"
-msgstr "solde financier"
+msgstr "Solde financier maximum du compte"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
-msgstr ""
+msgstr "Maximum global des achats de contrat sur une période de 30 jours"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
-msgstr ""
+msgstr "Maximum global des achats de contrat sur une période de 7 jours"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr ""
+msgstr "Maximum global des achats de contrat par jour"
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr ""
+msgstr "Maximum global des pertes sur une période de 30 jours"
 
 msgid "Maximum aggregate loss per day"
-msgstr ""
+msgstr "Maximum global des pertes par jour"
 
 msgid "Maximum number of open positions"
-msgstr ""
+msgstr "Nombre maximal de positions ouvertes"
 
 msgid "May"
 msgstr "mai"
 
 msgid "Memorable date"
-msgstr "Date"
+msgstr "Date mémorable"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "Ville mémorable"
 
 msgid "Middle Band Stroke"
-msgstr ""
+msgstr "Tracé de la bande médiane"
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Min : 10 Max : 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr ""
+msgstr "Au moins 6 caractères et au moins 1 chiffre"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "Moins la commission de l'agent"
 
 msgid "Minutes"
 msgstr "Minutes"
 
 msgid "Miss"
-msgstr ""
+msgstr "Mlle"
 
 msgid "Mon"
 msgstr "lun."
@@ -1222,16 +1228,16 @@ msgid "Mrs"
 msgstr "Mme"
 
 msgid "Ms"
-msgstr "Melle"
+msgstr "Mlle"
 
 msgid "Multiplier"
 msgstr "Multiplicateur"
 
 msgid "NB Dev Down"
-msgstr ""
+msgstr "NB Dev Down"
 
 msgid "NB Dev Up"
-msgstr ""
+msgstr "NB Dev Up"
 
 msgid "Name"
 msgstr "Nom"
@@ -1252,16 +1258,16 @@ msgid "Navigator mask-fill"
 msgstr "Remplissage du navigateur"
 
 msgid "Navigator outline"
-msgstr ""
+msgstr "Contour du navigateur"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "Série de couleurs pour navigateur"
 
 msgid "Navigator series line"
-msgstr ""
+msgstr "Série de lignes pour navigateur"
 
 msgid "Net Annual Income"
-msgstr ""
+msgstr "Revenu annuel net"
 
 msgid "Net Profit"
 msgstr "Bénéfice net"
@@ -1273,7 +1279,9 @@ msgid "No"
 msgstr "Non"
 
 msgid "Note that tokens can possess one or more of these scopes"
-msgstr "Sachez que les jetons peuvent "
+msgstr ""
+"Sachez que les jetons peuvent être associés à un ou plusieurs champs "
+"d'application"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
@@ -1320,7 +1328,7 @@ msgid "October"
 msgstr "octobre"
 
 msgid "Offset"
-msgstr ""
+msgstr "Marge"
 
 msgid "Ok"
 msgstr "OK"
@@ -1330,9 +1338,12 @@ msgid ""
 "experience, we consider that the investments available via this website are "
 "not appropriate for you"
 msgstr ""
+"Sur la base des informations fournies concernant vos connaissances et votre "
+"expérience, nous considérons que les options d'investissement disponibles "
+"sur ce site Web ne sont pas adaptées à votre profil"
 
 msgid "Once this limit is reached, you may no longer deposit"
-msgstr ""
+msgstr "Une fois cette limite atteinte, vous ne pouvez plus effectuer de dépôt"
 
 msgid "One last step left"
 msgstr "Une dernière étape est requise"
@@ -1357,7 +1368,7 @@ msgid "Open account"
 msgstr "Ouvrir un compte"
 
 msgid "Opens"
-msgstr ""
+msgstr "Ouvertures"
 
 msgid "Opera"
 msgstr "Opéra"
@@ -1367,9 +1378,14 @@ msgid ""
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
 msgstr ""
+"Le trading d'options binaires peut devenir une véritable addiction, au même "
+"titre que toute autre activité pratiquée de façon trop intensive. Pour "
+"éviter le danger d'une telle addiction, nous vous fournissons régulièrement "
+"un « relevé d'activité » vous permettant de suivre l'évolution de vos "
+"opérations et de vos comptes."
 
 msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr ""
+msgstr "Champ facultatif, capacité de 20 caractères, sans signe « + »"
 
 msgid "Other"
 msgstr "Autre"
@@ -1393,7 +1409,7 @@ msgid "PNG"
 msgstr "PNG"
 
 msgid "PPO Line Stroke"
-msgstr ""
+msgstr "Tracé de ligne PPO"
 
 msgid "Page Not Found"
 msgstr ""
@@ -1453,119 +1469,137 @@ msgid "Phone"
 msgstr "Téléphone"
 
 msgid "Please"
-msgstr ""
+msgstr "Veuillez"
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr ""
+msgstr "Veuillez répondre à la question secrète (réponse de 4 à 50 caractères)"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Veuillez sélectionner au moins un champ d'application de jeton"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
+"Veuillez confirmer les informations suivantes afin de procéder au transfert"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Veuillez saisir un chiffre entre"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr ""
+msgstr "Veuillez saisir une date valide, au format aaaa-mm-jj."
 
 msgid "Please enter a value for"
-msgstr ""
+msgstr "Veuillez saisir une valeur pour"
 
 msgid "Please enter a vlaid phone number"
-msgstr ""
+msgstr "Veuillez saisir un numéro de téléphone valide"
 
 msgid "Please enter correct email"
-msgstr ""
+msgstr "Veuillez saisir une adresse e-mail correcte"
 
 msgid "Please enter date in the format YYYY-MM-DD"
-msgstr ""
+msgstr "Veuillez saisir la date au format AAAA-MM-JJ."
 
 msgid "Please enter positive integer value between 0 and 9999"
-msgstr ""
+msgstr "Veuillez saisir une valeur entière positive comprise entre 0 et 9999"
 
 msgid "Please enter positive integer value for 30-day limit on losses"
 msgstr ""
+"Veuillez saisir une valeur entière positive pour la limite des pertes sur 30 "
+"jours"
 
 msgid "Please enter positive integer value for 30-day turnover limit"
 msgstr ""
+"Veuillez saisir une valeur entière positive pour la limite du volume de "
+"transactions sur 30 jours"
 
 msgid "Please enter positive integer value for 7-day limit on losses"
 msgstr ""
+"Veuillez saisir une valeur entière positive pour la limite des pertes sur 7 "
+"jours"
 
 msgid "Please enter positive integer value for 7-day turnover limit"
 msgstr ""
+"Veuillez saisir une valeur entière positive pour la limite du volume de "
+"transactions sur 7 jours"
 
 msgid "Please enter positive integer value for Daily limit on losses"
 msgstr ""
+"Veuillez saisir une valeur entière positive pour la limite des pertes sur un "
+"jour"
 
 msgid "Please enter positive integer value for Daily turnover limit"
 msgstr ""
+"Veuillez saisir une valeur entière positive pour la limite du volume de "
+"transactions sur un jour"
 
 msgid ""
 "Please enter positive integer value for Maximum number of open positions"
 msgstr ""
+"Veuillez saisir une valeur entière positive pour le nombre maximal de "
+"positions ouvertes"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Veuillez saisir le nom du jeton"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
+"Veuillez saisir le code de vérification envoyé par e-mail à votre adresse"
 
 msgid "Please enter value between 0 and 99999 for Session duration limit"
 msgstr ""
+"Veuillez saisir une valeur comprise entre 0 et 99999 pour la limite de durée "
+"de session"
 
 msgid "Please enter your city address"
-msgstr ""
+msgstr "Veuillez saisir votre ville"
 
 msgid "Please enter your current password"
-msgstr ""
+msgstr "Veuillez saisir votre mot de passe actuel."
 
 msgid "Please enter your email"
-msgstr ""
+msgstr "Veuillez saisir votre adresse e-mail"
 
 msgid "Please enter your family name"
-msgstr ""
+msgstr "Veuillez saisir votre nom de famille"
 
 msgid "Please enter your first name"
-msgstr ""
+msgstr "Veuillez saisir votre prénom"
 
 msgid "Please enter your new password"
-msgstr ""
+msgstr "Veuillez saisir votre nouveau mot de passe"
 
 msgid "Please enter your password"
-msgstr ""
+msgstr "Veuillez saisir votre mot de passe"
 
 msgid "Please enter your phone number"
-msgstr ""
+msgstr "Veuillez saisir votre numéro de téléphone"
 
 msgid "Please enter your street address"
-msgstr ""
+msgstr "Veuillez saisir votre adresse postale"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr ""
+msgstr "Veuillez installer la dernière version de l'un de ces navigateurs"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Veuillez vous connecter"
 
 msgid "Please select"
-msgstr ""
+msgstr "Sélection"
 
 msgid "Please try again after 1 minute"
-msgstr ""
+msgstr "Veuillez réessayer dans une minute"
 
 msgid "Please use your new password to login"
-msgstr ""
+msgstr "Veuillez utiliser votre nouveau mot de passe pour vous connecter"
 
 msgid "Plot"
-msgstr ""
+msgstr "Zone de traçage"
 
 msgid "Plot Color"
-msgstr ""
+msgstr "Couleur de la zone de traçage"
 
 msgid "Pofit/Loss"
-msgstr ""
+msgstr "Profits/Pertes"
 
 msgid "Points"
 msgstr "Points"
@@ -1589,22 +1623,24 @@ msgid "Pre-Defined"
 msgstr "Prédéfini"
 
 msgid "Preferred reality-check interval"
-msgstr "Périodicité souhaitée pour les avertissements de connexion"
+msgstr "Périodicité souhaitée pour les relevés d'activité"
 
 msgid "Press  Create token  button on the right to create your first token"
 msgstr ""
+"Cliquez sur le bouton « Créer un jeton » sur la droite pour créer votre "
+"premier jeton"
 
 msgid "Price"
-msgstr ""
+msgstr "Prix"
 
 msgid "Primary"
-msgstr ""
+msgstr "Principal"
 
 msgid "Print chart"
-msgstr ""
+msgstr "Imprimer le graphique"
 
 msgid "Profit"
-msgstr "Profit"
+msgstr "Profits"
 
 msgid "Profit Table"
 msgstr "Tableau des profits"
@@ -1637,44 +1673,44 @@ msgid "Real account opening"
 msgstr "Ouverture d'un compte réel"
 
 msgid "Reality check"
-msgstr "Chèque électronique"
+msgstr "Relevé d'activité"
 
 msgid "Redirecting to oauth login page"
-msgstr ""
+msgstr "Redirection vers la page de connexion oauth"
 
 msgid "Ref"
 msgstr "Réf."
 
 msgid "Register free account"
-msgstr "Ouvrir un compte gratuit"
+msgstr "Ouvrez un compte gratuit"
 
 msgid "Registration"
-msgstr ""
+msgstr "Inscription"
 
 msgid "Reloading page"
-msgstr ""
+msgstr "Rechargement de la page"
 
 msgid "Remove Selected"
-msgstr ""
+msgstr "Supprimer la sélection"
 
 #, fuzzy
 msgid "Rename"
 msgstr "Nom du jeton"
 
 msgid "Repeat password"
-msgstr ""
+msgstr "Répéter le mot de passe"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "La revente de ce contrat n'est pas disponible"
 
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "Réinitialiser la configuration par défaut"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "Réinitialiser le zoom"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "Réinitialiser le niveau de zoom 1:1"
 
 msgid "Resources"
 msgstr "Ressources"
@@ -1695,31 +1731,31 @@ msgid "Rise"
 msgstr "Hausse"
 
 msgid "SMA"
-msgstr ""
+msgstr "SMA"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
-msgstr ""
+msgstr "Employé salarié"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "Date de vente"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "Prix de vente"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
-msgstr ""
+msgstr "sam."
 
 msgid "Saturday"
-msgstr ""
+msgstr "samedi"
 
 msgid "Save"
 msgstr ""
@@ -1731,7 +1767,7 @@ msgid "Save changes"
 msgstr ""
 
 msgid "Secondary"
-msgstr ""
+msgstr "Secondaire"
 
 msgid "Security"
 msgstr "Sécurité"
@@ -1740,121 +1776,121 @@ msgid "Security question"
 msgstr "Question de sécurité"
 
 msgid "Select Instrument"
-msgstr ""
+msgstr "Sélection de l'instrument"
 
 msgid "Self-Employed"
-msgstr ""
+msgstr "Non-salarié"
 
 msgid "Self-Exclusion"
-msgstr ""
+msgstr "Auto-exclusion"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Fonctionnalités d'auto-exclusion"
 
 msgid "Sell At Market"
-msgstr ""
+msgstr "Vente au prix du marché"
 
 msgid "Sell Price"
-msgstr ""
+msgstr "Prix de vente"
 
 msgid "Sell Spot"
-msgstr ""
+msgstr "Prix spot de vente"
 
 msgid "Sell Time"
-msgstr ""
+msgstr "Heure de vente"
 
 msgid "Send to account #"
-msgstr ""
+msgstr "Envoyer vers le compte #"
 
 msgid "Sent to account"
-msgstr ""
+msgstr "Envoyer vers le compte"
 
 msgid "Sep"
-msgstr ""
+msgstr "sep."
 
 msgid "September"
-msgstr ""
+msgstr "septembre"
 
 msgid "Session"
-msgstr ""
+msgstr "Session"
 
 msgid "Session duration limit, in minutes"
-msgstr ""
+msgstr "Limite de durée de session, en minutes"
 
 msgid "Session is not authenticated"
-msgstr ""
+msgstr "La session n'est pas authentifiée"
 
 msgid "Settles"
-msgstr ""
+msgstr "Settles"
 
 msgid "Share"
-msgstr ""
+msgstr "Part"
 
 msgid "Share chart"
 msgstr ""
 
 msgid "Short MA Type"
-msgstr ""
+msgstr "Type MA court"
 
 msgid "Short ROC Period"
-msgstr ""
+msgstr "Période ROC courte"
 
 msgid "Short Stop Line Stroke"
-msgstr ""
+msgstr "Tracé ligne stop courte"
 
 msgid "Short Term Period"
-msgstr ""
+msgstr "Période à court terme"
 
 msgid "Show"
-msgstr ""
+msgstr "Afficher"
 
 msgid "Sigma"
-msgstr ""
+msgstr "Sigma"
 
 msgid "Signal Line Stroke"
-msgstr ""
+msgstr "Tracé en ligne signal"
 
 msgid "Signal MA Type"
-msgstr ""
+msgstr "Type MA signal"
 
 msgid "Signal Period"
-msgstr ""
+msgstr "Période du signal"
 
 msgid "Single MA Period"
-msgstr ""
+msgstr "Période MA individuelle"
 
 msgid "Single MA Type"
-msgstr ""
+msgstr "Période MA individuel"
 
 msgid "Slow %D MA Type"
-msgstr ""
+msgstr "Type %D MA lent"
 
 msgid "Slow %D Period"
-msgstr ""
+msgstr "Période %D lente"
 
 msgid "Slow %K MA Type"
-msgstr ""
+msgstr "Type %K MA lent"
 
 msgid "Slow %K Period"
-msgstr ""
+msgstr "Période %K lente"
 
 msgid "Slow Limit"
-msgstr ""
+msgstr "Limite lente"
 
 msgid "Slow MA Type"
-msgstr ""
+msgstr "Type MA lent"
 
 msgid "Slow Period"
-msgstr ""
+msgstr "Période lente"
 
 msgid "Sold"
-msgstr ""
+msgstr "Vendu"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Un indice aléatoire"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spreads"
 msgstr "Spreads"
@@ -1863,10 +1899,10 @@ msgid "Stake"
 msgstr "Investissement"
 
 msgid "Standard methods"
-msgstr ""
+msgstr "Méthodes standards"
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "Retrait standard"
 
 msgid "Start Time"
 msgstr "Heure de début"
@@ -1875,7 +1911,7 @@ msgid "Start time"
 msgstr "Heure de début"
 
 msgid "State/province/region"
-msgstr ""
+msgstr "État/province/région"
 
 msgid "Statement"
 msgstr "Relevé"
@@ -1887,10 +1923,10 @@ msgid "Stays In/Goes Out"
 msgstr "Reste dans/Sort de la zone"
 
 msgid "Stocks trading experience"
-msgstr ""
+msgstr "Expérience du trading sur actions"
 
 msgid "Stocks trading frequency"
-msgstr ""
+msgstr "Fréquence de trading sur actions"
 
 msgid "Stop Loss Level"
 msgstr "Niveau stop-loss"
@@ -1911,31 +1947,31 @@ msgid "Street address"
 msgstr "Adresse postale"
 
 msgid "Stroke"
-msgstr ""
+msgstr "Tracé"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Couleur du tracé"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Largeur du tracé"
 
 msgid "Submit"
 msgstr "Envoyer"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Le nouveau jeton a bien été ajouté"
 
 msgid "Sun"
-msgstr "Dim."
+msgstr "dim."
 
 msgid "Sunday"
 msgstr "Dimanche"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Tableau"
@@ -1957,7 +1993,7 @@ msgid "Tertiary"
 msgstr "Supérieur"
 
 msgid "The"
-msgstr ""
+msgstr "Le"
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -1986,6 +2022,11 @@ msgid ""
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
+"Une interruption s'est produite dans le flux des données de marché pendant "
+"la période du contrat. Pour les comptes réels, nous nous efforcerons de "
+"corriger le problème et de procéder au règlement adéquat des contrats. Si "
+"cela n'est pas possible, les contrats seront annulés et remboursés. Les "
+"contrats liés à des comptes virtuels seront annulés et remboursés"
 
 msgid "There was an error"
 msgstr "Une erreur s'est produite"
@@ -2018,38 +2059,44 @@ msgid "Ticks"
 msgstr "Ticks"
 
 msgid "Tile"
-msgstr ""
+msgstr "Titre"
 
 msgid "Time Period"
-msgstr ""
+msgstr "Période de temps"
 
 msgid "Time interval"
-msgstr ""
+msgstr "Intervalle de temps"
 
 msgid "Time period"
-msgstr ""
+msgstr "Période de temps"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Délai d'expiration des demandes websocket"
 
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 msgid "To"
-msgstr ""
+msgstr "à"
 
 msgid "To deposit money please contact the payment agent directly"
 msgstr ""
+"Pour effectuer un dépôt, veuillez contacter directement l'agent de paiement"
 
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
 msgstr ""
+"Pour effectuer des dépôts et retraits en utilisant des moyens de paiement ou "
+"des devises locales que Binary.com ne prend pas en charge, contactez un "
+"agent de paiement"
 
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
 msgstr ""
+"Pour retirer des fonds, veuillez saisir le jeton de vérification spécifique "
+"que nous venons de vous envoyer par e-mail"
 
 msgid "Token"
 msgstr "Jeton"
@@ -2067,15 +2114,17 @@ msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
 msgstr ""
+"Les jetons sont des codes spécifiques permettant d'accéder aux applications "
+"mobiles Binary.com et à des services tiers"
 
 msgid "Tooltip background"
-msgstr ""
+msgstr "Arrière-plan infobulle"
 
 msgid "Tooltip text"
-msgstr ""
+msgstr "Texte infobulle"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "Coût total"
 
 msgid "Total Profit/Loss"
 msgstr "Total des profits/pertes"
@@ -2093,10 +2142,10 @@ msgid "Trade"
 msgstr "Trading"
 
 msgid "Trade Confirmation"
-msgstr "Trading"
+msgstr "Confirmation de l'opération"
 
 msgid "Trade using"
-msgstr ""
+msgstr "Effectuez vos opérations en utilisant"
 
 msgid "Trading Times"
 msgstr "Horaires de trading"
@@ -2120,51 +2169,59 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
+"La spéculation financière peut s'avérer addictive. Veuillez remplir le "
+"formulaire ci-dessous pour limiter votre participation sur le site Web ou "
+"envoyer une lettre ou un fax signé à notre équipe du service clientèle. Une "
+"fois vos limites fixées, vous pourrez uniquement les restreindre. Elles ne "
+"pourront être supprimées ou élargies qu'au bout de 7 jours, sauf si une date "
+"d'auto-exclusion a été sélectionnée, laquelle ne peut être supprimée ou "
+"modifiée une fois confirmée. Pour supprimer ou augmenter vos limites, "
+"veuillez contacter"
 
 msgid "Tradingview for Binary.com"
-msgstr ""
+msgstr "Tradingview pour Binary.com"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "Transfert vers un autre compte Binary.com"
 
 msgid "Try"
-msgstr ""
+msgstr "Essayez"
 
 msgid "Tue"
-msgstr "Mar."
+msgstr "mar."
 
 msgid "Tuesday"
-msgstr ""
+msgstr "mardi"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Volume de transactions"
 
 msgid "USD"
 msgstr "USD"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr ""
+msgstr "Malheureusement, votre navigateur ne les prend pas en charge"
 
 msgid "Unlock"
-msgstr ""
+msgstr "Déverrouiller"
 
 msgid "Up/Down"
 msgstr "Hausse/Baisse"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "Évènements à venir"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "Mise à jour des paramètres"
 
 msgid "Upgrade to a Real Account"
 msgstr ""
 
 msgid "Upper Band Stroke"
-msgstr ""
+msgstr "Tracé de la bande supérieure"
 
 msgid "Use"
-msgstr ""
+msgstr "Utiliser"
 
 msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
@@ -2172,10 +2229,10 @@ msgid ""
 msgstr ""
 
 msgid "Verification code has been sent to your email"
-msgstr ""
+msgstr "Un code de vérification vous a été envoyé par e-mail"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Code de vérification envoyé à"
 
 msgid "Verification token"
 msgstr "Jeton de vérification"
@@ -2194,19 +2251,19 @@ msgid "View"
 msgstr "Affichage"
 
 msgid "View Historical Data"
-msgstr ""
+msgstr "Voir les données historiques"
 
 msgid "Volume Factor"
-msgstr ""
+msgstr "Facteur de volume"
 
 msgid "WMA"
-msgstr ""
+msgstr "WMA"
 
 msgid "WMA Period"
-msgstr ""
+msgstr "Période WMA"
 
 msgid "Websocket Server"
-msgstr ""
+msgstr "Serveur websocket"
 
 msgid "Webtrader"
 msgstr "Webtrader"
@@ -2214,74 +2271,82 @@ msgstr "Webtrader"
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr ""
+"Webtrader utilise les nouvelles technologies Web pour une expérience de "
+"trading riche et agréable"
 
 msgid "Wed"
-msgstr ""
+msgstr "mer."
 
 msgid "Wednesday"
-msgstr ""
+msgstr "mercredi"
 
 msgid "While on the go, you can"
-msgstr ""
+msgstr "Pendant vous déplacements, vous pouvez"
 
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "Retirer des fonds"
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "Retrait par agents de paiement"
 
 msgid "X-axis labels"
-msgstr ""
+msgstr "Valeurs de l'axe des X"
 
 msgid "X-axis line"
-msgstr ""
+msgstr "Ligne de l'axe des X"
 
 msgid "X-axis tick"
-msgstr ""
+msgstr "Tick de l'axe des X"
 
 msgid "Y-axis gridline"
-msgstr ""
+msgstr "Ligne de quadrillage de l'axe des Y"
 
 msgid "Y-axis labels"
-msgstr ""
+msgstr "Valeurs de l'axe des Y"
 
 msgid "Yes"
 msgstr "Oui"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Vous vous êtes auto-exclu(e) jusqu'au"
 
 msgid "You have sold the following contract"
-msgstr ""
+msgstr "Vous avez vendu le contrat suivant"
 
 msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
+"Vous devez enregistrer webtrader et obtenir un identifiant d'application "
+"avant de pouvoir utiliser un autre serveur OAuth pour l'authentification. "
+"Pour en savoir plus, consultez les informations concernant le protocole "
+"OAuth sur"
 
 msgid "You haven't saved any templates yet"
 msgstr ""
 
 msgid "You pay"
-msgstr ""
+msgstr "Vous payez"
 
 msgid "You will be automatically logged out after such time"
-msgstr ""
+msgstr "Vous compte sera automatiquement déconnecté après cette période"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
 msgstr ""
+"Votre compte Binary.com a été créé. Pour commencer à effectuer des "
+"opérations de trading, vous devez autoriser Webtrader à y accéder."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Votre navigateur ne prend pas en charge la copie dans le presse-papiers"
 
 msgid "Your browser is not supported"
-msgstr ""
+msgstr "Votre navigateur n'est pas pris en charge"
 
 msgid "Your changes have been updated"
 msgstr "Vos modifications ont été prises en compte"
@@ -2296,10 +2361,10 @@ msgid "Your transaction reference is"
 msgstr "Votre référence de transaction est"
 
 msgid "Your transaction reference number is"
-msgstr ""
+msgstr "Votre numéro de référence de transaction est le"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "admin"
 msgstr "admin"
@@ -2313,6 +2378,11 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
+"ci-dessous et de procéder à l'ouverture du compte, vous devez savoir que "
+"vous pourriez vous exposer à des risques (qui peuvent être importants, "
+"notamment la perte de toute la somme d'investissement) que vos connaissances "
+"et votre expérience ne vous permettent pas forcément d'évaluer ou de réduire "
+"efficacement"
 
 msgid "between"
 msgstr "entre"
@@ -2339,7 +2409,7 @@ msgid "e.g, www2.binary.com, www.binaryqa36.com"
 msgstr "ex. www2.binary.com, www.binaryqa36.com"
 
 msgid "end time"
-msgstr "heure de fin"
+msgstr "l'heure de fin"
 
 msgid "entry spot"
 msgstr "point d'entrée"
@@ -2348,19 +2418,21 @@ msgid "exit spot"
 msgstr "point de sortie"
 
 msgid "feed is delayed by"
-msgstr ""
+msgstr "flux subi un délai de"
 
 msgid "for API calls that can access the cashier"
-msgstr ""
+msgstr "pour les appels d'API qui peuvent accéder à la caisse"
 
 msgid "for API calls that can create trades in the client account"
 msgstr ""
+"pour les appels d'API qui peuvent créer des transactions dans le compte du "
+"client"
 
 msgid "for API calls that change client settings"
-msgstr ""
+msgstr "pour les appels d'API qui peuvent modifier les paramètres"
 
 msgid "for API calls that only read client data"
-msgstr ""
+msgstr "pour les appels d'API qui peuvent uniquement lire les données du client"
 
 msgid "for mobile charts"
 msgstr "pour les graphiques mobiles"
@@ -2384,43 +2456,48 @@ msgid "if this is not your country of residence"
 msgstr "s'il ne s'agit pas de votre pays de résidence"
 
 msgid "in the future, the"
-msgstr ""
+msgstr "ultérieure, l'"
 
 msgid "information about your trading exprience and personal finance"
 msgstr ""
+"informations sur votre expérience du trading et votre situation financière "
+"personnelle"
 
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
 msgstr ""
+"est la plateforme de trading de pointe de Binary.com. Son interface multi-"
+"fenêtres offre une polyvalence optimale et répond aux besoins des traders "
+"actifs travaillant sur leur PC"
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "est requis. Spread actuel"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "l'opération débute à l'heure sélectionnée et le"
 
 msgid "is the"
-msgstr ""
+msgstr "est le"
 
 msgid "is the price in effect at that time"
-msgstr ""
+msgstr "correspond au prix en vigueur à l'heure sélectionnée."
 
 msgid "is the selected number of minutes/hours after the"
-msgstr ""
+msgstr "correspondra au nombre sélectionné de minutes/heures après"
 
 msgid "is the selected time"
-msgstr ""
+msgstr "correspond à l'heure sélectionnée"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "est le prix spot à"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr ""
+msgstr "correspond au traitement de l'opération par nos serveurs et le"
 
 msgid "main site"
-msgstr ""
+msgstr "site principal"
 
 msgid "market is presently closed"
 msgstr ""
@@ -2438,10 +2515,10 @@ msgid "oauth"
 msgstr "oauth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "équivalente à « Maintenant », le"
 
 msgid "payment agent"
-msgstr ""
+msgstr "agent de paiement Binary.com"
 
 msgid "payments"
 msgstr "paiements"
@@ -2468,13 +2545,13 @@ msgid "start time"
 msgstr "heure de début"
 
 msgid "terms and conditions"
-msgstr "conditions générales"
+msgstr "conditions générales Binary.com"
 
 msgid "the"
-msgstr ""
+msgstr "le"
 
 msgid "thereafter"
-msgstr ""
+msgstr "suivant le traitement de l'opération"
 
 msgid "tick"
 msgstr "tick"
@@ -2486,25 +2563,25 @@ msgid "trade"
 msgstr "trading"
 
 msgid "trading experience"
-msgstr ""
+msgstr "expérience du trading"
 
 msgid "trading frequency"
-msgstr ""
+msgstr "fréquence de trading"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "yes"
 msgstr "oui"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Retours"
 
 #~ msgid "Add overlays"
-#~ msgstr "Ajouter des croisements"
+#~ msgstr "Ajouter des superpositions"
 
 #~ msgid ""
 #~ "In order to properly apply this language, a full refresh of page is "
