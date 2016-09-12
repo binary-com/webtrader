@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-09-04 18:14+0000\n"
+"PO-Revision-Date: 2016-09-12 07:25+0000\n"
 "Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.8\n"
 
 msgid "%D MA Type"
@@ -70,20 +70,17 @@ msgstr "0-1 года"
 msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 сделок за последние 12 мес"
 
-#, fuzzy
 msgid "1"
-msgstr "10"
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 день"
 
-#, fuzzy
 msgid "1 Hour"
-msgstr "Часы"
+msgstr "1 Час"
 
-#, fuzzy
 msgid "1 Minute"
-msgstr "Минуты"
+msgstr "1 Минута"
 
 #, fuzzy
 msgid "1 Tick"
@@ -95,9 +92,8 @@ msgstr "1-2 года"
 msgid "10"
 msgstr "10"
 
-#, fuzzy
 msgid "10 Minutes"
-msgstr "Минуты"
+msgstr "10 Минут"
 
 msgid "10m"
 msgstr "10м"
@@ -105,9 +101,8 @@ msgstr "10м"
 msgid "15"
 msgstr "15"
 
-#, fuzzy
 msgid "15 Minutes"
-msgstr "Минуты"
+msgstr "15 Минут"
 
 msgid "15m"
 msgstr "15м"
@@ -124,17 +119,14 @@ msgstr "1м"
 msgid "1t"
 msgstr ""
 
-#, fuzzy
 msgid "2"
-msgstr "2ч"
+msgstr "2"
 
-#, fuzzy
 msgid "2 Hours"
-msgstr "Часы"
+msgstr "2 Часа"
 
-#, fuzzy
 msgid "2 Minutes"
-msgstr "Минуты"
+msgstr "2 Минуты"
 
 msgid "2h"
 msgstr "2ч"
@@ -142,13 +134,11 @@ msgstr "2ч"
 msgid "2m"
 msgstr "2м"
 
-#, fuzzy
 msgid "3"
-msgstr "30"
+msgstr "3"
 
-#, fuzzy
 msgid "3 Minutes"
-msgstr "Минуты"
+msgstr "3 Минуты"
 
 msgid "30"
 msgstr "30"
