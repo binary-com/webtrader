@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
-"PO-Revision-Date: 2016-09-03 17:54+0000\n"
+"PO-Revision-Date: 2016-09-12 16:02+0000\n"
 "Last-Translator: Chloe Chevreton <chloe-che@hotmail.fr>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgid "%D Period"
 msgstr "Période %D"
 
 msgid "%D Stroke"
-msgstr "Tracé %D "
+msgstr "Tracé %D"
 
 msgid "%K MA Type"
 msgstr "Type %K MA"
@@ -58,7 +58,7 @@ msgstr ""
 "transactions réalisées entre les clients et les agents de paiement."
 
 msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr ""
+msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Tracé -DI"
@@ -69,24 +69,20 @@ msgstr "0-1 an"
 msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transaction(s) au cours des 12 derniers mois"
 
-#, fuzzy
 msgid "1"
-msgstr "10"
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 jour"
 
-#, fuzzy
 msgid "1 Hour"
-msgstr "Heures"
+msgstr "1 heure"
 
-#, fuzzy
 msgid "1 Minute"
-msgstr "Minutes"
+msgstr "1 minute"
 
-#, fuzzy
 msgid "1 Tick"
-msgstr "Ticks"
+msgstr "1 tick"
 
 msgid "1-2 years"
 msgstr "1-2 ans"
@@ -94,9 +90,8 @@ msgstr "1-2 ans"
 msgid "10"
 msgstr "10"
 
-#, fuzzy
 msgid "10 Minutes"
-msgstr "Minutes"
+msgstr "10 minutes"
 
 msgid "10m"
 msgstr "10m"
@@ -104,9 +99,8 @@ msgstr "10m"
 msgid "15"
 msgstr "15"
 
-#, fuzzy
 msgid "15 Minutes"
-msgstr "Minutes"
+msgstr "15 minutes"
 
 msgid "15m"
 msgstr "15m"
@@ -121,19 +115,16 @@ msgid "1m"
 msgstr "1m"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
-#, fuzzy
 msgid "2"
-msgstr "2h"
+msgstr "2"
 
-#, fuzzy
 msgid "2 Hours"
-msgstr "Heures"
+msgstr "2 heures"
 
-#, fuzzy
 msgid "2 Minutes"
-msgstr "Minutes"
+msgstr "2 minutes"
 
 msgid "2h"
 msgstr "2h"
@@ -141,20 +132,17 @@ msgstr "2h"
 msgid "2m"
 msgstr "2m"
 
-#, fuzzy
 msgid "3"
-msgstr "30"
+msgstr "3"
 
-#, fuzzy
 msgid "3 Minutes"
-msgstr "Minutes"
+msgstr "3 minutes"
 
 msgid "30"
 msgstr "30"
 
-#, fuzzy
 msgid "30 Minutes"
-msgstr "Minutes"
+msgstr "30 minutes"
 
 msgid "30-day limit on losses"
 msgstr "Limite des pertes sur 30 jours"
@@ -168,30 +156,26 @@ msgstr "30m"
 msgid "3m"
 msgstr "3m"
 
-#, fuzzy
 msgid "4"
-msgstr "4h"
+msgstr "4"
 
-#, fuzzy
 msgid "4 Hours"
-msgstr "Heures"
+msgstr "4 heures"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transactions ou plus au cours des 12 derniers mois"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "4h"
 msgstr "4h"
 
-#, fuzzy
 msgid "5"
-msgstr "15"
+msgstr "5"
 
-#, fuzzy
 msgid "5 Minutes"
-msgstr "Minutes"
+msgstr "5 minutes"
 
 msgid "5m"
 msgstr "5m"
@@ -205,13 +189,11 @@ msgstr "Limite des pertes sur 7 jours"
 msgid "7-day turnover limit"
 msgstr "Limite du volume des transactions sur 7 jours"
 
-#, fuzzy
 msgid "8"
-msgstr "8h"
+msgstr "8"
 
-#, fuzzy
 msgid "8 Hours"
-msgstr "Heures"
+msgstr "8 heures"
 
 msgid "8h"
 msgstr "8h"
@@ -247,7 +229,7 @@ msgid "Action"
 msgstr "Action"
 
 msgid "Add comparisons"
-msgstr ""
+msgstr "Ajouter des comparaisons"
 
 msgid "Add indicator"
 msgstr "Ajouter un indicateur"
@@ -255,9 +237,8 @@ msgstr "Ajouter un indicateur"
 msgid "Add level"
 msgstr "Ajouter un niveau"
 
-#, fuzzy
 msgid "Add/remove comparisons"
-msgstr "Ajouter/supprimer des croisements"
+msgstr "Ajouter/supprimer des comparaisons"
 
 msgid "Add/remove overlays"
 msgstr "Ajouter/supprimer des superpositions"
@@ -420,13 +401,11 @@ msgstr "Arrière-plan du graphique"
 msgid "Chart context menu"
 msgstr "Menu contextuel du graphique"
 
-#, fuzzy
 msgid "Chart template"
-msgstr "Thèmes graphiques"
+msgstr "Modèle graphique"
 
-#, fuzzy
 msgid "Chart type"
-msgstr "Graphique"
+msgstr "Type de graphique"
 
 msgid "Choose password"
 msgstr "Choisir un mot de passe"
@@ -494,9 +473,8 @@ msgstr "Contrat"
 msgid "Contract Confirmation"
 msgstr "Confirmation de contrat"
 
-#, fuzzy
 msgid "Contract Details"
-msgstr "Contrats"
+msgstr "Détails du contrat"
 
 msgid "Contract is not yet started"
 msgstr "Le contrat n'est pas encore actif"
@@ -528,9 +506,8 @@ msgstr "Prix spot actuel"
 msgid "Current Spot Time"
 msgstr "Heure spot actuelle"
 
-#, fuzzy
 msgid "Current comparisons"
-msgstr "Mot de passe actuel"
+msgstr "Comparaisons actuelles"
 
 msgid "Current indicators"
 msgstr "Indicateurs actuels"
@@ -598,7 +575,7 @@ msgid "Default"
 msgstr "Par défaut"
 
 msgid "Delete"
-msgstr ""
+msgstr "Supprimer"
 
 msgid "Delete level(s)"
 msgstr "Supprimer le(s) niveau(x)"
@@ -677,7 +654,7 @@ msgid "Downloading .csv"
 msgstr "Téléchargement du fichier .csv en cours"
 
 msgid "Drawing tools"
-msgstr ""
+msgstr "Outils graphiques"
 
 msgid "Duration"
 msgstr "Durée"
@@ -828,6 +805,7 @@ msgstr "PLUS HAUT"
 
 msgid "Have better luck at trading!"
 msgstr ""
+"Mettez toutes les chances de votre côté pour vos opérations de trading !"
 
 msgid "Health"
 msgstr "Santé"
@@ -862,7 +840,6 @@ msgstr "Adresse du domicile"
 msgid "Horizontal Line"
 msgstr "Ligne horizontale"
 
-#, fuzzy
 msgid "Horizontal line"
 msgstr "Ligne horizontale"
 
@@ -895,7 +872,7 @@ msgstr ""
 "les agents de paiement."
 
 msgid "If the issue keeps happening, please contact"
-msgstr ""
+msgstr "Si le problème se présente à nouveau, veuillez contacter"
 
 msgid "If you select a"
 msgstr "Si vous sélectionnez une"
@@ -935,16 +912,14 @@ msgstr "Zone In/Out"
 msgid "Income Source"
 msgstr "Source de revenus"
 
-#, fuzzy
 msgid "Indicative"
-msgstr "Prix indicatif"
+msgstr "Indicatif"
 
 msgid "Indicative Price"
 msgstr "Prix indicatif"
 
-#, fuzzy
 msgid "Indicators"
-msgstr "Ajouter un indicateur"
+msgstr "Indicateurs"
 
 msgid "Indices trading experience"
 msgstr "Expérience du trading sur indices"
@@ -971,7 +946,7 @@ msgid "January"
 msgstr "janvier"
 
 msgid "Japan accounts are not supported"
-msgstr ""
+msgstr "Le comptes basés au Japon ne sont pas pris en charge"
 
 msgid "Jul"
 msgstr "juill."
@@ -1032,9 +1007,8 @@ msgstr "Tracé en ligne"
 msgid "Link"
 msgstr "Lien"
 
-#, fuzzy
 msgid "Load chart template"
-msgstr "Chargement des menus graphiques et de trading"
+msgstr "Charger le modèle graphique"
 
 msgid "Loading"
 msgstr "Chargement"
@@ -1349,7 +1323,7 @@ msgid "One last step left"
 msgstr "Une dernière étape est requise"
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "Oups... Page indisponible"
 
 msgid "Open"
 msgstr "Ouvrir"
@@ -1360,9 +1334,8 @@ msgstr "Ouvrir un compte"
 msgid "Open Price"
 msgstr "Ouvrir un prix"
 
-#, fuzzy
 msgid "Open a Financial Account"
-msgstr "Ouvrir un compte"
+msgstr "Ouvrir un compte financier"
 
 msgid "Open account"
 msgstr "Ouvrir un compte"
@@ -1412,7 +1385,7 @@ msgid "PPO Line Stroke"
 msgstr "Tracé de ligne PPO"
 
 msgid "Page Not Found"
-msgstr ""
+msgstr "Page non trouvée"
 
 msgid "Password must be 6 characters minimum"
 msgstr "Le mot de passe doit contenir au moins 6 caractères"
@@ -1693,9 +1666,8 @@ msgstr "Rechargement de la page"
 msgid "Remove Selected"
 msgstr "Supprimer la sélection"
 
-#, fuzzy
 msgid "Rename"
-msgstr "Nom du jeton"
+msgstr "Renommer"
 
 msgid "Repeat password"
 msgstr "Répéter le mot de passe"
@@ -1725,7 +1697,7 @@ msgid "Return"
 msgstr "Retour"
 
 msgid "Return to trading page"
-msgstr ""
+msgstr "Revenir à la page de trading"
 
 msgid "Rise"
 msgstr "Hausse"
@@ -1758,13 +1730,13 @@ msgid "Saturday"
 msgstr "samedi"
 
 msgid "Save"
-msgstr ""
+msgstr "Sauvegarder"
 
 msgid "Save as"
-msgstr ""
+msgstr "Sauvegarder au format"
 
 msgid "Save changes"
-msgstr ""
+msgstr "Sauvegarder les changements"
 
 msgid "Secondary"
 msgstr "Secondaire"
@@ -1827,7 +1799,7 @@ msgid "Share"
 msgstr "Part"
 
 msgid "Share chart"
-msgstr ""
+msgstr "Partager le graphique"
 
 msgid "Short MA Type"
 msgstr "Type MA court"
@@ -1979,9 +1951,8 @@ msgstr "Tableau"
 msgid "Tel"
 msgstr "Tél."
 
-#, fuzzy
 msgid "Template name"
-msgstr "Nom du jeton"
+msgstr "Nom du modèle"
 
 msgid "Terms"
 msgstr "Conditions"
@@ -2015,6 +1986,8 @@ msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
 msgstr ""
+"La page que vous avez demandée est introuvable. Il est possible qu'elle "
+"n'existe plus ou que l'adresse soit erronée. Veuillez vérifier l'orthographe."
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -2215,7 +2188,7 @@ msgid "Update Settings"
 msgstr "Mise à jour des paramètres"
 
 msgid "Upgrade to a Real Account"
-msgstr ""
+msgstr "Ouvrir un compte réel"
 
 msgid "Upper Band Stroke"
 msgstr "Tracé de la bande supérieure"
@@ -2227,6 +2200,9 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr ""
+"Utilisez le bouton « Enregistrer sous... » pour sauvegarder les paramètres "
+"du graphique, le type, la période de temps, les indicateurs et les "
+"comparaisons."
 
 msgid "Verification code has been sent to your email"
 msgstr "Un code de vérification vous a été envoyé par e-mail"
@@ -2243,7 +2219,6 @@ msgstr "Vérifier le nouveau mot de passe"
 msgid "Vertical Line"
 msgstr "Ligne verticale"
 
-#, fuzzy
 msgid "Vertical line"
 msgstr "Ligne verticale"
 
@@ -2327,7 +2302,7 @@ msgstr ""
 "OAuth sur"
 
 msgid "You haven't saved any templates yet"
-msgstr ""
+msgstr "Vous n'avez sauvegardé aucun modèle pour le moment"
 
 msgid "You pay"
 msgstr "Vous payez"
@@ -2482,7 +2457,7 @@ msgid "is the"
 msgstr "est le"
 
 msgid "is the price in effect at that time"
-msgstr "correspond au prix en vigueur à l'heure sélectionnée."
+msgstr "correspond au prix en vigueur à l'heure sélectionnée"
 
 msgid "is the selected number of minutes/hours after the"
 msgstr "correspondra au nombre sélectionné de minutes/heures après"
@@ -2500,7 +2475,7 @@ msgid "main site"
 msgstr "site principal"
 
 msgid "market is presently closed"
-msgstr ""
+msgstr "le marché est actuellement fermé"
 
 msgid "minute"
 msgstr "minute"
