@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-09-09 02:17+0000\n"
+"PO-Revision-Date: 2016-09-12 02:36+0000\n"
 "Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -66,24 +66,20 @@ msgstr "0~1年"
 msgid "0-5 transactions in the past 12 months"
 msgstr "過去12ヶ月で0-5のお取引"
 
-#, fuzzy
 msgid "1"
-msgstr "10"
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1日"
 
-#, fuzzy
 msgid "1 Hour"
-msgstr "時間"
+msgstr "1時間"
 
-#, fuzzy
 msgid "1 Minute"
-msgstr "分"
+msgstr "1分"
 
-#, fuzzy
 msgid "1 Tick"
-msgstr "Tick"
+msgstr "1ティック"
 
 msgid "1-2 years"
 msgstr "1-2年"
@@ -91,9 +87,8 @@ msgstr "1-2年"
 msgid "10"
 msgstr "10"
 
-#, fuzzy
 msgid "10 Minutes"
-msgstr "分"
+msgstr "10分"
 
 msgid "10m"
 msgstr "10分"
@@ -101,9 +96,8 @@ msgstr "10分"
 msgid "15"
 msgstr "15"
 
-#, fuzzy
 msgid "15 Minutes"
-msgstr "分"
+msgstr "15分"
 
 msgid "15m"
 msgstr "15分"
@@ -120,17 +114,14 @@ msgstr "1分"
 msgid "1t"
 msgstr ""
 
-#, fuzzy
 msgid "2"
 msgstr "2時間"
 
-#, fuzzy
 msgid "2 Hours"
-msgstr "時間"
+msgstr "2時間"
 
-#, fuzzy
 msgid "2 Minutes"
-msgstr "分"
+msgstr "2分"
 
 msgid "2h"
 msgstr "2時間"
@@ -138,20 +129,17 @@ msgstr "2時間"
 msgid "2m"
 msgstr "2分"
 
-#, fuzzy
 msgid "3"
-msgstr "30"
+msgstr "3"
 
-#, fuzzy
 msgid "3 Minutes"
-msgstr "分"
+msgstr "3分"
 
 msgid "30"
 msgstr "30"
 
-#, fuzzy
 msgid "30 Minutes"
-msgstr "分"
+msgstr "30分"
 
 msgid "30-day limit on losses"
 msgstr "30日間の損失制限"
@@ -165,13 +153,11 @@ msgstr "30分"
 msgid "3m"
 msgstr "3分"
 
-#, fuzzy
 msgid "4"
 msgstr "4時間"
 
-#, fuzzy
 msgid "4 Hours"
-msgstr "時間"
+msgstr "4時間"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "過去12ヶ月で40以上のお取引"
@@ -182,13 +168,11 @@ msgstr ""
 msgid "4h"
 msgstr "4時間"
 
-#, fuzzy
 msgid "5"
-msgstr "15"
+msgstr "5"
 
-#, fuzzy
 msgid "5 Minutes"
-msgstr "分"
+msgstr "5分"
 
 msgid "5m"
 msgstr "5分"
@@ -202,13 +186,11 @@ msgstr "7日間の損失制限"
 msgid "7-day turnover limit"
 msgstr "7日の取引数量限度額"
 
-#, fuzzy
 msgid "8"
-msgstr "8時間"
+msgstr "8"
 
-#, fuzzy
 msgid "8 Hours"
-msgstr "時間"
+msgstr "8時間"
 
 msgid "8h"
 msgstr "8時間"
@@ -243,9 +225,8 @@ msgstr "アカウントトークンが見つかりません"
 msgid "Action"
 msgstr "売買"
 
-#, fuzzy
 msgid "Add comparisons"
-msgstr "比較"
+msgstr "比較チャート追加"
 
 msgid "Add indicator"
 msgstr "指標を追加（英語表示のみ）"
@@ -253,9 +234,8 @@ msgstr "指標を追加（英語表示のみ）"
 msgid "Add level"
 msgstr "レベルを追加"
 
-#, fuzzy
 msgid "Add/remove comparisons"
-msgstr "オーバーレイの追加/削除"
+msgstr "比較チャート追加/削除"
 
 msgid "Add/remove overlays"
 msgstr "オーバーレイの追加/削除"
@@ -419,13 +399,11 @@ msgstr "チャート背景"
 msgid "Chart context menu"
 msgstr "チャートコンテキストメニュー"
 
-#, fuzzy
 msgid "Chart template"
-msgstr "チャートのテーマ"
+msgstr "チャートテンプレート"
 
-#, fuzzy
 msgid "Chart type"
-msgstr "チャート"
+msgstr "チャートタイプ"
 
 msgid "Choose password"
 msgstr "パスワードを選択してください"
@@ -461,7 +439,7 @@ msgid "Commodities trading frequency"
 msgstr "コモディティ取引の頻度"
 
 msgid "Comparisons"
-msgstr "比較"
+msgstr "比較チャート"
 
 msgid "Conditions"
 msgstr "条件"
@@ -493,9 +471,8 @@ msgstr "取引内容"
 msgid "Contract Confirmation"
 msgstr "トレード確定"
 
-#, fuzzy
 msgid "Contract Details"
-msgstr "トレード"
+msgstr "トレードの詳細"
 
 msgid "Contract is not yet started"
 msgstr "トレードはまだ開始していません"
@@ -527,9 +504,8 @@ msgstr "現在レート"
 msgid "Current Spot Time"
 msgstr "現在レート時間"
 
-#, fuzzy
 msgid "Current comparisons"
-msgstr "比較"
+msgstr "現在使用中の比較チャート"
 
 msgid "Current indicators"
 msgstr "現在使用中の指標"
@@ -673,7 +649,7 @@ msgid "Downloading .csv"
 msgstr ".csvファイルでダウンロード"
 
 msgid "Drawing tools"
-msgstr ""
+msgstr "描画ツール"
 
 msgid "Duration"
 msgstr "期間"
@@ -858,7 +834,6 @@ msgstr "現住所"
 msgid "Horizontal Line"
 msgstr "水平線"
 
-#, fuzzy
 msgid "Horizontal line"
 msgstr "水平線"
 
@@ -926,14 +901,12 @@ msgstr "In/Out"
 msgid "Income Source"
 msgstr "収入源"
 
-#, fuzzy
 msgid "Indicative"
 msgstr "気配値"
 
 msgid "Indicative Price"
 msgstr "気配値"
 
-#, fuzzy
 msgid "Indicators"
 msgstr "指標を追加（英語表示のみ）"
 
@@ -961,9 +934,8 @@ msgstr "1月"
 msgid "January"
 msgstr "1月"
 
-#, fuzzy
 msgid "Japan accounts are not supported"
-msgstr "お使いのブラウザは対応しておりません"
+msgstr "日本のお客さまは、ご利用なれません。"
 
 msgid "Jul"
 msgstr "7月"
@@ -1022,9 +994,8 @@ msgstr "ラインストローク"
 msgid "Link"
 msgstr "リンク"
 
-#, fuzzy
 msgid "Load chart template"
-msgstr "チャートと取引メニューを読込み中"
+msgstr "チャートテンプレートを読み込む"
 
 msgid "Loading"
 msgstr "読み込み中"
@@ -1346,7 +1317,6 @@ msgstr "口座開設"
 msgid "Open Price"
 msgstr "始値"
 
-#, fuzzy
 msgid "Open a Financial Account"
 msgstr "口座開設"
 
@@ -1654,9 +1624,8 @@ msgstr "ページを再度読み込む"
 msgid "Remove Selected"
 msgstr "選択項目を削除"
 
-#, fuzzy
 msgid "Rename"
-msgstr "トークン名"
+msgstr "名前変更"
 
 msgid "Repeat password"
 msgstr "パスワード再入力"
@@ -1685,9 +1654,8 @@ msgstr "結果"
 msgid "Return"
 msgstr "リターン率"
 
-#, fuzzy
 msgid "Return to trading page"
-msgstr "ページを再度読み込む"
+msgstr "トレードページに戻る"
 
 msgid "Rise"
 msgstr "RISE"
@@ -1788,9 +1756,8 @@ msgstr "約定時間"
 msgid "Share"
 msgstr "シェア"
 
-#, fuzzy
 msgid "Share chart"
-msgstr "チャートを印刷"
+msgstr "チャートを共有"
 
 msgid "Short MA Type"
 msgstr "ショート MA タイプ"
@@ -1942,9 +1909,8 @@ msgstr "明細"
 msgid "Tel"
 msgstr "電話番号"
 
-#, fuzzy
 msgid "Template name"
-msgstr "トークン名"
+msgstr "テンプレート名"
 
 msgid "Terms"
 msgstr "各種規約"
@@ -2169,9 +2135,8 @@ msgstr "取引時間短縮日"
 msgid "Update Settings"
 msgstr "設定内容を更新"
 
-#, fuzzy
 msgid "Upgrade to a Real Account"
-msgstr "口座に送金"
+msgstr "リアル口座へアップグレード"
 
 msgid "Upper Band Stroke"
 msgstr "アッパーバンドストローク"
@@ -2199,7 +2164,6 @@ msgstr "新しいパスワード（確認用）"
 msgid "Vertical Line"
 msgstr "垂直線"
 
-#, fuzzy
 msgid "Vertical line"
 msgstr "垂直線"
 
