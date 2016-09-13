@@ -27,7 +27,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
         addNewWindow: function(options) {
             var options_copy = options;
             options = $.extend({
-                title: options.instrumentName + " (" + options.timePeriod + ")",
+                title: options.instrumentName,
                 close: function () {
                     var id = $(this).attr('id');
                     var container = $("#" + id + "_chart");
@@ -53,7 +53,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
                     });
                 }
             }, options );
-            var dialog = windows.createBlankWindow($chartWindowHtml, options),
+            var dialog = windows.createBlankWindow($($chartWindowHtml).i18n(), options),
                 id = dialog.attr('id');
             dialog.find('div.chartSubContainerHeader').attr('id', id + "_header").end()
                 .find('div.chartSubContainer').attr('id', id + "_chart").end();

@@ -6,7 +6,7 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
 
 	function createWindow(options, callback){
 		require(["text!charts/draw/properties_selector/properties_selector.html"], function($html){
-			$html = $($html);
+			$html = $($html).i18n();
 			var table = $html.find("table");
 			options.inputValues.forEach(function(input){
 				var ele, inputElement;
@@ -49,7 +49,7 @@ define(["jquery", "windows/windows", "color-picker"], function($, windows){
 				}
 				ele = $("<tr><td><strong>" + input.name + "</strong></td><td></td></tr>");
 				inputElement.appendTo(ele.find('td')[1]);
-				$(ele).appendTo(table);
+				$(ele).i18n().appendTo(table);
 			});
 			win = windows.createBlankWindow($html,
                 {

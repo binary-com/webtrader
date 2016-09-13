@@ -5,7 +5,8 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
 
     var statement = null,
         table = null,
-        datepicker = null;
+        datepicker = null,
+        currency=local_storage.get("currency");
 
     function init($menuLink) {
         require(['css!statement/statement.css']);
@@ -64,7 +65,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
                     _.capitalize(trans.action_type),
                      trans.longcode ,
                     (trans.amount * 1).toFixed(2),
-                    '<b>' + formatPrice(trans.balance_after) + '</b>',
+                    '<b>' + formatPrice(trans.balance_after,currency) + '</b>',
                     view_button,
                     trans, /* data for view transaction dailog - when clicking on arrows */
                 ];
@@ -103,7 +104,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
         });
         require(['text!statement/statement.html'], function (html) {
 
-            table = $(html);
+            table = $(html).i18n();
             table.appendTo(statement);
 
             table = table.dataTable({
@@ -114,6 +115,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
                         var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
                         if (css_class)
                             $(td).addClass(css_class);
+                        td.textContent = formatPrice(cellData, currency);
                     }
                 }],
                 paging: false,

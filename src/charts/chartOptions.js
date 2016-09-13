@@ -95,12 +95,12 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         if(ele.width() > minWidth){
             scope.showChartTypeLabel = true;
             scope.timePeriod_name = scope.timePeriod.name;
-            timePeriodButton.css("width",stringWidth.tp.max+25+"px");
-            chartTypeButton.css("width",stringWidth.ct+55+"px");
+            timePeriodButton.css("width","87px");
+            chartTypeButton.css("width","97px");
         } else {
             scope.showChartTypeLabel = false;
             scope.timePeriod_name = i18n_name =="en" ? scope.timePeriod.value.toUpperCase() : scope.timePeriod.value.i18n();
-            timePeriodButton.css("width",stringWidth.tp.min+27+"px");
+            timePeriodButton.css("width","50px");
             chartTypeButton.css("width","45px");
         }
 
@@ -237,8 +237,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                             changeChartType(scope,'line');
                         showCandlestickAndOHLC(scope.newTabId, !tick && !isOverlaidView('#' + m_newTabId + '_chart'));
                         charts.refresh('#' + scope.newTabId + '_chart', timePeriod, scope.chartType.value);
-                        if (getParameterByName('affiliates') === 'true') charts.changeTitle('#' + scope.newTabId + '_chart', scope.instrumentName + " (" + timePeriod + ")")
-                        else chartWindow.changeChartWindowTitle(scope.newTabId, scope.instrumentName, timePeriod);
                         hideOverlays(scope);
                         scope.exportChartURLShare = urlShareTemplate.format(scope.instrumentCode, timePeriod);
                         scope.exportChartIframeShare = iframeShareTemplate.format(scope.instrumentCode, timePeriod);
@@ -368,7 +366,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 // Preload images for better UI
                 preLoadImages();
 
-                var $html = $(html);
+                var $html = $(html).i18n();
 
                 $("#" + m_newTabId + "_header").prepend($html);
 
@@ -376,9 +374,9 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 // Used to filter timeperiod array.
                 rv.formatters['filter'] = function(arr, type) {
-                    return arr.filter(function(item){return item.type.i18n() == type});
+                    return arr.filter(function(item){return item.type == type});
                 }
-
+                               
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
                 require(['charts/chartTemplateManager'], function(templateManager) {
                   var root = $html.find('.chart-template-manager-root');
@@ -401,8 +399,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
           //Disable candlestick and OHLC if it is a tick chart or overlaid view
           showCandlestickAndOHLC(newTabId, !isTick(timePeriod) && overlayCount > 0);
           responsiveButtons(s,$("#" + newTabId).find(".chart-view"));
-          if (getParameterByName('affiliates') === 'true') charts.changeTitle('#' + newTabId + '_chart', state[newTabId].instrumentName + " (" + timePeriod + ")")
-          else chartWindow.changeChartWindowTitle(newTabId, state[newTabId].instrumentName, timePeriod);
         },
 
         disableEnableCandlestickAndOHLC : function (newTabId, enable) {

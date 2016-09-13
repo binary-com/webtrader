@@ -8,7 +8,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
   var win = null, win_view = null;
 
   function initConfigWindow(root) {
-    root = $(root);
+    root = $(root).i18n();
     var state = init_state(root);
     win_view = rv.bind(root[0], state);
 

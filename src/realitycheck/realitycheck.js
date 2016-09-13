@@ -56,6 +56,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             liveapi
                 .send({ reality_check : 1 })
                 .then(function(data) {
+                    /*
+                     * Showing the reality check popup only if the user is using his real account otherwise keeping it minimized.
+                     */
+                    if(local_storage.get("authorize").is_virtual) return;
                     var durationIn_ms = moment.utc().valueOf() - data.reality_check.start_time * 1000;
                     var max_durationIn_ms = 48 * 60 * 60 * 1000;
                     if (durationIn_ms > max_durationIn_ms) durationIn_ms = max_durationIn_ms;
@@ -93,7 +97,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                             if (data && data.landing_company_details.has_reality_check) {
 
                                 require(['text!realitycheck/realitycheck.html', "css!realitycheck/realitycheck.css"], function(html) {
-                                    var div = $(html);
+                                    var div = $(html).i18n();
                                     win = windows.createBlankWindow($('<div/>'), {
                                         title: 'Reality check'.i18n(),
                                         width: 600,
@@ -151,10 +155,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     var oauthLogin = function() {
         logout();
-        init().then(function() {
-            resetWindow(true);
-            win.dialog('open');
-        });
+        if(!local_storage.get("authorize").is_virtual)
+            init().then(function() {
+                resetWindow(true);
+                win.dialog('open');
+            });
     };
 
     liveapi.events.on('oauth-login', oauthLogin);
@@ -165,7 +170,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         }
 
         var realityCheck_fromStorage = local_storage.get("realitycheck");
-        if (realityCheck_fromStorage) {
+        if (realityCheck_fromStorage && !local_storage.get("authorize").is_virtual) {
             var durationInMins = (moment.utc().valueOf() - (realityCheck_fromStorage.accepted_time)) / 60 / 1000;
             init().then(function () {
                 setOrRefreshTimer(durationInMins >= realityCheck_fromStorage.timeOutInMins ? 0 : Math.abs(realityCheck_fromStorage.timeOutInMins - durationInMins))

@@ -23,7 +23,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     }
 
     function init_deposit_win(root) {
-      root = $(root);
+      root = $(root).i18n();
       deposit_win = windows.createBlankWindow(root, {
           title: 'Deposit funds',
           resizable: true,

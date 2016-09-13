@@ -210,11 +210,11 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
          * Function to recalculate heights of different sections in a chart
          */
         recalculate: function (chart) {
-            var GAP = 1;
+            var GAP = 5;
             var totalYAxes = chart.yAxis.length;
             totalYAxes--;//Excluding main chart
             totalYAxes--;//Excluding navigator chart
-            var heightOfEachSubWindow = Math.round(45 / totalYAxes);
+            var heightOfEachSubWindow = Math.round(45 / totalYAxes)-5;
             var topForNextSubWindow = 0;
 
             if (totalYAxes <= 0) {

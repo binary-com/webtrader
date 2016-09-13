@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-08-08 07:28+0000\n"
+"PO-Revision-Date: 2016-09-03 11:22+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.8-dev\n"
+"X-Generator: Weblate 2.8\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 类型"
@@ -46,9 +46,13 @@ msgid ""
 "Binary.com shall not in any circumstance be held responsible for "
 "transactions made between customers and Payment Agents"
 msgstr ""
-"- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户"
-"与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com "
-"都不对客户与支付代理之间的交易承担责任"
+"- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的"
+"身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往"
+"来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情"
+"况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
+
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr ""
 
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
@@ -59,8 +63,24 @@ msgstr "0-1 年"
 msgid "0-5 transactions in the past 12 months"
 msgstr "过去12月内0-5次交易"
 
+#, fuzzy
+msgid "1"
+msgstr "10"
+
 msgid "1 Day"
 msgstr "1 天"
+
+#, fuzzy
+msgid "1 Hour"
+msgstr "小时"
+
+#, fuzzy
+msgid "1 Minute"
+msgstr "分钟"
+
+#, fuzzy
+msgid "1 Tick"
+msgstr "跳动点"
 
 msgid "1-2 years"
 msgstr "1-2 年"
@@ -68,11 +88,19 @@ msgstr "1-2 年"
 msgid "10"
 msgstr "10"
 
+#, fuzzy
+msgid "10 Minutes"
+msgstr "分钟"
+
 msgid "10m"
 msgstr "10分钟"
 
 msgid "15"
 msgstr "15"
+
+#, fuzzy
+msgid "15 Minutes"
+msgstr "分钟"
 
 msgid "15m"
 msgstr "15分钟"
@@ -86,14 +114,41 @@ msgstr "1小时"
 msgid "1m"
 msgstr "1分钟"
 
+msgid "1t"
+msgstr ""
+
+#, fuzzy
+msgid "2"
+msgstr "2小时"
+
+#, fuzzy
+msgid "2 Hours"
+msgstr "小时"
+
+#, fuzzy
+msgid "2 Minutes"
+msgstr "分钟"
+
 msgid "2h"
 msgstr "2小时"
 
 msgid "2m"
 msgstr "2分钟"
 
+#, fuzzy
+msgid "3"
+msgstr "30"
+
+#, fuzzy
+msgid "3 Minutes"
+msgstr "分钟"
+
 msgid "30"
 msgstr "30"
+
+#, fuzzy
+msgid "30 Minutes"
+msgstr "分钟"
 
 msgid "30-day limit on losses"
 msgstr "30天损失限额"
@@ -107,11 +162,30 @@ msgstr "30分钟"
 msgid "3m"
 msgstr "3分钟"
 
+#, fuzzy
+msgid "4"
+msgstr "4小时"
+
+#, fuzzy
+msgid "4 Hours"
+msgstr "小时"
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "过去12月内交易40次及以上"
 
+msgid "404"
+msgstr ""
+
 msgid "4h"
 msgstr "4小时"
+
+#, fuzzy
+msgid "5"
+msgstr "15"
+
+#, fuzzy
+msgid "5 Minutes"
+msgstr "分钟"
 
 msgid "5m"
 msgstr "5分钟"
@@ -124,6 +198,14 @@ msgstr "7天损失限额"
 
 msgid "7-day turnover limit"
 msgstr "7天交易限额"
+
+#, fuzzy
+msgid "8"
+msgstr "8小时"
+
+#, fuzzy
+msgid "8 Hours"
+msgstr "小时"
 
 msgid "8h"
 msgstr "8小时"
@@ -158,14 +240,19 @@ msgstr "没找到账户令牌"
 msgid "Action"
 msgstr "操作"
 
+#, fuzzy
+msgid "Add comparisons"
+msgstr "比较"
+
 msgid "Add indicator"
 msgstr "添加指标"
 
 msgid "Add level"
 msgstr "添加价位"
 
-msgid "Add overlays"
-msgstr "添加覆盖"
+#, fuzzy
+msgid "Add/remove comparisons"
+msgstr "添加/删除覆盖"
 
 msgid "Add/remove overlays"
 msgstr "添加/删除覆盖"
@@ -326,6 +413,14 @@ msgstr "图表背景"
 msgid "Chart context menu"
 msgstr "图表上下文菜单"
 
+#, fuzzy
+msgid "Chart template"
+msgstr "图表主题"
+
+#, fuzzy
+msgid "Chart type"
+msgstr "图表"
+
 msgid "Choose password"
 msgstr "选择密码"
 
@@ -359,6 +454,9 @@ msgstr "大宗商品交易经验"
 msgid "Commodities trading frequency"
 msgstr "大宗商品交易频率"
 
+msgid "Comparisons"
+msgstr "比较"
+
 msgid "Conditions"
 msgstr "条件"
 
@@ -388,6 +486,10 @@ msgstr "合约"
 
 msgid "Contract Confirmation"
 msgstr "合约确认"
+
+#, fuzzy
+msgid "Contract Details"
+msgstr "合约"
 
 msgid "Contract is not yet started"
 msgstr "合约还未开始生效"
@@ -419,11 +521,12 @@ msgstr "当前现价"
 msgid "Current Spot Time"
 msgstr "当前现价时间"
 
+#, fuzzy
+msgid "Current comparisons"
+msgstr "比较"
+
 msgid "Current indicators"
 msgstr "当前指标"
-
-msgid "Current overlays"
-msgstr "当前叠加价格"
 
 msgid "Current password"
 msgstr "当前密码"
@@ -484,6 +587,9 @@ msgstr "拒绝"
 
 msgid "Default"
 msgstr "默认"
+
+msgid "Delete"
+msgstr ""
 
 msgid "Delete level(s)"
 msgstr "删除水平"
@@ -556,6 +662,9 @@ msgstr "下载as"
 
 msgid "Downloading .csv"
 msgstr "正在下载 .csv"
+
+msgid "Drawing tools"
+msgstr ""
 
 msgid "Duration"
 msgstr "持续时间"
@@ -704,6 +813,9 @@ msgstr "网格光照"
 msgid "HIGH"
 msgstr "高"
 
+msgid "Have better luck at trading!"
+msgstr ""
+
 msgid "Health"
 msgstr "健康状况"
 
@@ -737,6 +849,10 @@ msgstr "家庭地址"
 msgid "Horizontal Line"
 msgstr "水平线"
 
+#, fuzzy
+msgid "Horizontal line"
+msgstr "水平线"
+
 msgid "Hours"
 msgstr "小时"
 
@@ -755,9 +871,13 @@ msgid ""
 "sending them any money. Binary.com shall not in any circumstance be held "
 "responsible for transactions made between customers and payment agents"
 msgstr ""
-"重要免责声明 - Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他"
-"方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com都不对客户与支付代理"
-"之间的交易承担责任"
+"重要免责声明 - Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立"
+"服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代"
+"理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状"
+"况。在任何情况下，Binary.com都不对客户与支付代理之间的交易承担责任"
+
+msgid "If the issue keeps happening, please contact"
+msgstr ""
 
 msgid "If you select a"
 msgstr "如您选择"
@@ -769,11 +889,6 @@ msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
 msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
-
-msgid ""
-"In order to properly apply this language, a full refresh of page is "
-"required. Are you sure you want to proceed?"
-msgstr "必须完整更新页面才能正确启用此语言。确定要继续？"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -795,8 +910,16 @@ msgstr "“范围之内/之外”"
 msgid "Income Source"
 msgstr "收入来源"
 
+#, fuzzy
+msgid "Indicative"
+msgstr "指示性价格"
+
 msgid "Indicative Price"
 msgstr "指示性价格"
+
+#, fuzzy
+msgid "Indicators"
+msgstr "添加指标"
 
 msgid "Indices trading experience"
 msgstr "指数交易经验"
@@ -821,6 +944,10 @@ msgstr "一月"
 
 msgid "January"
 msgstr "一月"
+
+#, fuzzy
+msgid "Japan accounts are not supported"
+msgstr "您的浏览器不受支持"
 
 msgid "Jul"
 msgstr "七月"
@@ -878,6 +1005,10 @@ msgstr "线波幅"
 
 msgid "Link"
 msgstr "链接"
+
+#, fuzzy
+msgid "Load chart template"
+msgstr "加载图表与交易菜单"
 
 msgid "Loading"
 msgstr "加载"
@@ -985,8 +1116,9 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
-"在提交请求前，请确认同意代理的支付条款。一旦您点击“确认转账”按钮，资金将从您的账户转到您选择的支付代理处。代理将通过您的首选支付方式将取款金额（扣除佣金"
-"）支付给您"
+"在提交请求前，请确认同意代理的支付条款。一旦您点击“确认转账”按钮，资金将从您"
+"的账户转到您选择的支付代理处。代理将通过您的首选支付方式将取款金额（扣除佣"
+"金）支付给您"
 
 msgid "Mar"
 msgstr "三月"
@@ -1181,6 +1313,9 @@ msgstr "达到此限额后，您不能再存款"
 msgid "One last step left"
 msgstr "剩下最后一步"
 
+msgid "Oops... Page Not Available"
+msgstr ""
+
 msgid "Open"
 msgstr "开盘"
 
@@ -1190,11 +1325,12 @@ msgstr "开立账户"
 msgid "Open Price"
 msgstr "开盘价"
 
-msgid "Open account"
+#, fuzzy
+msgid "Open a Financial Account"
 msgstr "开立账户"
 
-msgid "Open real money account"
-msgstr "开立真实资金账户"
+msgid "Open account"
+msgstr "开立账户"
 
 msgid "Opens"
 msgstr "开盘"
@@ -1236,6 +1372,9 @@ msgstr "PNG"
 
 msgid "PPO Line Stroke"
 msgstr "PPO 线波幅"
+
+msgid "Page Not Found"
+msgstr ""
 
 msgid "Password must be 6 characters minimum"
 msgstr "密码需至少6个字符"
@@ -1493,6 +1632,10 @@ msgstr "重新载入页面"
 msgid "Remove Selected"
 msgstr "移除选定项目"
 
+#, fuzzy
+msgid "Rename"
+msgstr "令牌名称"
+
 msgid "Repeat password"
 msgstr "重复输入密码"
 
@@ -1519,6 +1662,10 @@ msgstr "成绩"
 
 msgid "Return"
 msgstr "回报"
+
+#, fuzzy
+msgid "Return to trading page"
+msgstr "重新载入页面"
 
 msgid "Rise"
 msgstr "上涨"
@@ -1549,6 +1696,15 @@ msgstr "周六"
 
 msgid "Saturday"
 msgstr "周六"
+
+msgid "Save"
+msgstr ""
+
+msgid "Save as"
+msgstr ""
+
+msgid "Save changes"
+msgstr ""
 
 msgid "Secondary"
 msgstr "次要"
@@ -1609,6 +1765,10 @@ msgstr "结算"
 
 msgid "Share"
 msgstr "分享"
+
+#, fuzzy
+msgid "Share chart"
+msgstr "打印图表"
 
 msgid "Short MA Type"
 msgstr "短移动平均线类型"
@@ -1760,6 +1920,10 @@ msgstr "表"
 msgid "Tel"
 msgstr "电话"
 
+#, fuzzy
+msgid "Template name"
+msgstr "令牌名称"
+
 msgid "Terms"
 msgstr "条款"
 
@@ -1783,6 +1947,11 @@ msgstr ""
 "本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了"
 "解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约"
 "到期时一文不值，您将损失全部投资，包括合约费用"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
+msgstr ""
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1829,6 +1998,9 @@ msgstr "图标"
 msgid "Time Period"
 msgstr "期限"
 
+msgid "Time interval"
+msgstr "时间间隔"
+
 msgid "Time period"
 msgstr "期限"
 
@@ -1847,7 +2019,8 @@ msgstr "如要存款请直接联系支付代理"
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
-msgstr "对于Binary.com不支持的支付方式或货币， 您可以联系支付代理处理存款和取款"
+msgstr ""
+"对于Binary.com不支持的支付方式或货币， 您可以联系支付代理处理存款和取款"
 
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
@@ -1961,11 +2134,20 @@ msgstr "未来事件"
 msgid "Update Settings"
 msgstr "更新设置"
 
+#, fuzzy
+msgid "Upgrade to a Real Account"
+msgstr "发送到账户"
+
 msgid "Upper Band Stroke"
 msgstr "上方带状波幅"
 
 msgid "Use"
 msgstr "使用"
+
+msgid ""
+"Use the \"Save as ...\" button to save the chart settings, type, time "
+"period, indicators and comparisons"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
@@ -1980,6 +2162,10 @@ msgid "Verify new password"
 msgstr "验证新密码"
 
 msgid "Vertical Line"
+msgstr "垂直线"
+
+#, fuzzy
+msgid "Vertical line"
 msgstr "垂直线"
 
 msgid "View"
@@ -2056,6 +2242,9 @@ msgid ""
 msgstr ""
 "使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到"
 "此参阅 OAuth信息"
+
+msgid "You haven't saved any templates yet"
+msgstr ""
 
 msgid "You pay"
 msgstr "您支付"
@@ -2218,6 +2407,9 @@ msgstr "就是我们的服务器处理合约交易的时间"
 msgid "main site"
 msgstr "主要网站"
 
+msgid "market is presently closed"
+msgstr ""
+
 msgid "minute"
 msgstr "分钟"
 
@@ -2296,8 +2488,19 @@ msgstr "{代理.佣金}%"
 msgid "| Return"
 msgstr "回报率"
 
-msgid "Comparisons"
-msgstr ""
+#~ msgid "Add overlays"
+#~ msgstr "添加覆盖"
+
+#~ msgid "Current overlays"
+#~ msgstr "当前叠加价格"
+
+#~ msgid ""
+#~ "In order to properly apply this language, a full refresh of page is "
+#~ "required. Are you sure you want to proceed?"
+#~ msgstr "必须完整更新页面才能正确启用此语言。确定要继续？"
+
+#~ msgid "Open real money account"
+#~ msgstr "开立真实资金账户"
 
 #~ msgid "Apply new theme?"
 #~ msgstr "使用新主题？"

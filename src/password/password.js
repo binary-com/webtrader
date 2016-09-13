@@ -18,7 +18,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     }
 
     function init_password_win(root) {
-      root = $(root);
+      root = $(root).i18n();
       password_win = windows.createBlankWindow(root, {
           title: 'Change password'.i18n(),
           resizable:false,

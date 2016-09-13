@@ -240,7 +240,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
     }
 
     var resizeDialog = function() {
-        console.log('resize called');
         if(downloadWin) {
             var $dialog = downloadWin.dialog('widget');
             var chart = $(".downloadChart")
@@ -260,7 +259,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             if (!downloadWin) {
                 downloadWin = windows.createBlankWindow($('<div class="download_window"/>'),
                     {
-                        title: 'View Historical Data',
+                        title: 'View Historical Data'.i18n(),
                         width: WIDTH ,
                         minWidth: WIDTH ,
                         minHeight: HEIGHT ,
@@ -276,7 +275,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 downloadWin.closest("div.ui-dialog").css("overflow", "visible");
                 require(['text!download/download.html'], function($html) {
 
-                    $html = $($html);
+                    $html = $($html).i18n();
                     //$html.find("button, input[type=button]").button();
                     $html
                         .find('.download_fromDate')
@@ -384,6 +383,12 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
                     $html.find(".share-button").click(function(){
                         $html.find(".overlay").toggle();
+                        img = $(this).find("img");
+                        if(img.attr("src").indexOf("-w")==-1){
+                            $(this).css("background","#2a3052").find("img").attr("src","images/share-w.svg");
+                        }else{
+                            $(this).css("background","#f3f1f2").find("img").attr("src","images/share.svg");
+                        }
                     });
 
                     initDownloadChartOptions();

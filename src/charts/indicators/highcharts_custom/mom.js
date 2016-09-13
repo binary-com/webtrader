@@ -60,11 +60,3 @@ MOM.prototype.update = function (data) {
 MOM.prototype.toString = function () {
     return 'MOM (' + this.options.period + ', ' + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
-
-MOM.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
-    var confObjects = IndicatorBase.prototype.buildSeriesAndAxisConfFromData.call(this, indicatorMetadata) || [];
-    confObjects.forEach(function (confObject) {
-        confObject.axisConf.title.x += 10;
-    });
-    return confObjects;
-};

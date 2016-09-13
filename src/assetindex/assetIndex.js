@@ -117,7 +117,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
     }
 
     function initAssetWin($html) {
-        $html = $($html);
+        $html = $($html).i18n();
         table = $html.filter('table');
         $html.appendTo(assetWin);
 

@@ -72,24 +72,24 @@
       </div>
 
       <div> <p>Purchase Price</p>
-          <span rv-text="table.buy_price | prepend table.currency | or '-'"></span>
+          <span rv-text="table.buy_price | format-price table.currency | or '-'"></span>
       </div>
       <div rv-if="table.sell_price | eq undefined"> <p>Indicative Price</p>
-          <span rv-text="table.bid_price | prepend table.currency | or '-'" rv-indicative-color="sell.bid_price.value"></span>
+          <span rv-text="table.bid_price | format-price table.currency | or '-'" rv-indicative-color="sell.bid_price.value"></span>
           <br />
           <span rv-text="table.bid_price | percent-of table.buy_price"
                 rv-tooltip='"return"'
                 class="dotted-underline smaller"></span>
       </div>
       <div rv-if="table.sell_price | not-eq undefined"> <p>Sell Price</p>
-          <span rv-text="table.sell_price | prepend table.currency | or '-'"></span>
+          <span rv-text="table.sell_price | format-price table.currency | or '-'"></span>
           <br />
           <span rv-text="table.sell_price | percent-of table.buy_price"
                 rv-tooltip='table.sell_time | moment | or "return"'
                 class="dotted-underline smaller"></span>
       </div>
       <div> <p>Final Price</p>
-          <span rv-text="table.final_price | prepend table.currency | or '-'"></span>
+          <span rv-text="table.final_price | format-price table.currency | or '-'"></span>
           <br/>
           <span rv-text="table.final_price | percent-of table.buy_price"
                 rv-tooltip='table.sell_time | moment | or "return"'
@@ -146,9 +146,7 @@
 
       <span>
         <span class="bid-price" rv-indicative-color="sell.bid_price.value">
-          <span class="currency" rv-text="table.currency"></span>
-          <span class="unit" rv-text="sell.bid_price.unit"></span>
-          <span class="cent" rv-text="sell.bid_price.cent | prepend '.'"></span>
+          <span class="unit" rv-text="sell.bid_price.value | format-price table.currency"></span>
         </span>
       </span>
 
@@ -163,6 +161,6 @@
     </div>
     <span class='forward_starting orange' rv-text="fwd_starting"></span>
     <br>
-    <span class='validation' rv-text="validation"></span>
+    <span class='validation' rv-text="validation | i18n"></span>
   </div>
 </div>

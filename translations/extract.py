@@ -19,7 +19,10 @@ static = [
     'June', 'July', 'August', 'September', 'October', 'November', 'December', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 
     'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 
     'Reset zoom', 'Reset zoom level 1:1', 'Zoom', 'From', 'To', 'Print chart', 'Download PNG image', 
-    'Download JPEG image', 'Download PDF document', 'Download SVG vector image', 'Chart context menu'
+    'Download JPEG image', 'Download PDF document', 'Download SVG vector image', 'Chart context menu',
+    '1 Tick', '1 Minute', '2 Minutes', '3 Minutes', '5 Minutes', '10 Minutes', '15 Minutes', '30 Minutes', '1 Hour', '2 Hours', 
+    '4 Hours', '8 Hours', '1 Day', 'Candles', 'OHLC', 'Line', 'Dot', 'Line Dot', 'Spline', 'Table', '1t', '1m', '2m', '3m', 
+    '5m', '10m', '15m', '30m', '1h', '2h', '4h', '8h', '1d', '1', '2', '3', '4', '5', '8', '10', '15', '30'
 ]
 
 # Parsing webtrader html files.
@@ -29,16 +32,19 @@ class WebtraderParser(HTMLParser):
         self.is_script = False
         self.texts = list(static) # clone
     def handle_starttag(self, tag, attrs):
-        if tag == 'script':
+        if tag == 'script' or tag=='style':
             self.is_script = True
+        for attr in attrs:
+            if attr[0] == "data-balloon":
+                self.texts.append(attr[1]);
     def handle_endtag(self, tag):
-        if tag == 'script':
+        if tag == 'script' or tag=='style':
             self.is_script = False
     def handle_data(self, text):
-        if not self.is_script: # ignore script tags
+        if not self.is_script: # ignore script and style tags
             text = re.sub( '\s+', ' ', text).strip(' \t\r\n*,+.:')
             if text != '' and len(text) > 1: # ignore empty and single character strings.
-                if text[0] == '{' and text[-1] == '}': return #ignore rivetsjs tags
+                if (text[0] == '{' and text[-1] == '}') : return #ignore rivetsjs tags
                 self.texts.append(text)
     def parse_html_files(self, path):
         file_pattern = "*.html"

@@ -177,7 +177,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
      * @param hide_callback
      **/
     function init(data, extra, show_callback, hide_callback){
-      var root = $(html);
+      var root = $(html).i18n();
       var buy = data.buy;
       var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       extra.getbarrier = function(tick) {
