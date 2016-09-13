@@ -1,4 +1,3 @@
-
 msgid "%D MA Type"
 msgstr "" 
 
