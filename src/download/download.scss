@@ -52,8 +52,11 @@
         vertical-align: middle;
     }
 
-    button.img {
+    button {
+      &.img{
+        background: #f3f1f2;
         padding: 5px;
+      }
     }
 
     .overlay {
