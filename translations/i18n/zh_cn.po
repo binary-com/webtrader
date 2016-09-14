@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-09-10 01:34+0000\n"
-"Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
+"PO-Revision-Date: 2016-09-14 01:05+0000\n"
+"Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -937,7 +937,7 @@ msgid "June"
 msgstr "六月"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "仅须在您被将导入页面上点击 授予 按钮"
+msgstr "仅须在您即将看到的页面上点击 授予 按钮"
 
 msgid "LOW"
 msgstr "低"
@@ -1000,7 +1000,7 @@ msgid "Loading Profit Table"
 msgstr "加载利润表"
 
 msgid "Loading Real account opening"
-msgstr "加载真实账户开立"
+msgstr "加载真实账户开立程序"
 
 msgid "Loading Self-Exclusion"
 msgstr "加载自我禁止"
@@ -1221,7 +1221,7 @@ msgid "No"
 msgstr "否"
 
 msgid "Note that tokens can possess one or more of these scopes"
-msgstr "请注意，令牌可能拥有一或多个所述领域"
+msgstr "请注意，令牌可能拥有一或多个领域"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
@@ -1401,7 +1401,7 @@ msgid "Please"
 msgstr "请"
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr "请用4-50个字符提供密码提示问题的答案"
+msgstr "请回答密码提示问题，限4-50个字符"
 
 msgid "Please choose at least one token scope"
 msgstr "请选择至少一个令牌范围"
@@ -1431,26 +1431,26 @@ msgid "Please enter positive integer value between 0 and 9999"
 msgstr "请输入0与9999之间的正整数"
 
 msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "请输入30天损失限额正整数"
+msgstr "请输入30天损失限额，限正整数"
 
 msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "请输入30天交易限额 正整数"
+msgstr "请输入30天交易限额，限正整数"
 
 msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "请输入7天损失限额正整数"
+msgstr "请输入7天损失限额，限正整数"
 
 msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "请输入7天交易限额正整数"
+msgstr "请输入7天交易限额，限正整数"
 
 msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "请输入每日损失限额正整数"
+msgstr "请输入每日损失限额，限正整数"
 
 msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "请输入每日交易限额正整数"
+msgstr "请输入每日交易限额，限正整数"
 
 msgid ""
 "Please enter positive integer value for Maximum number of open positions"
-msgstr "请输入最大未平仓头寸数目正整数"
+msgstr "请输入最大未平仓头寸数目，限正整数"
 
 msgid "Please enter the token name"
 msgstr "请输入令牌名称"
@@ -1917,7 +1917,7 @@ msgstr ""
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
-msgstr "找不到您請求的頁面。它不再存在或输入网址出錯。請檢查是否輸入錯誤"
+msgstr "找不到相关的页面。该页面已过期，或输入网址出错。请检查您的输入。"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1940,6 +1940,7 @@ msgstr "合约输了"
 msgid "This contract won"
 msgstr "合约赢了"
 
+#, fuzzy
 msgid "This field is required"
 msgstr "此字段为必填项"
 
@@ -2155,7 +2156,7 @@ msgstr "Webtrader"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr "Webtrader采用新型网络技术为您提供丰富与充满乐趣的交易体验"
+msgstr "Webtrader采用新型网络技术为您提供丰富且充满乐趣的交易体验"
 
 msgid "Wed"
 msgstr "周三"
@@ -2203,9 +2204,7 @@ msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
-msgstr ""
-"使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到"
-"此参阅 OAuth信息"
+msgstr "使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到此参阅OAuth信息"
 
 msgid "You haven't saved any templates yet"
 msgstr "您尚未保存任何模板"
@@ -2306,6 +2305,7 @@ msgstr "可为客户账户创建交易的API呼叫专用"
 msgid "for API calls that change client settings"
 msgstr "更改客户设置的API呼叫专用"
 
+#, fuzzy
 msgid "for API calls that only read client data"
 msgstr "唯读客户数据的API呼叫专用"
 
@@ -2336,13 +2336,12 @@ msgstr "未来的"
 msgid "information about your trading exprience and personal finance"
 msgstr "您的交易经验与个人财务信息"
 
+#, fuzzy
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
-msgstr ""
-"是Binary的先进桌面交易平台。其多窗口界面提供最大弹性，可符合活跃交易员通过桌"
-"面电脑交易的需求"
+msgstr "是Binary的先进桌面交易平台。其多窗口界面提供最大弹性，可符合活跃交易员通过桌面电脑交易的需求"
 
 msgid "is required. Current spread"
 msgstr "是必须的。当前价差"
