@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-09-14 01:05+0000\n"
-"Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
+"PO-Revision-Date: 2016-09-14 01:06+0000\n"
+"Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -1940,9 +1940,8 @@ msgstr "合约输了"
 msgid "This contract won"
 msgstr "合约赢了"
 
-#, fuzzy
 msgid "This field is required"
-msgstr "此字段为必填项"
+msgstr "此为必填项"
 
 msgid "Thu"
 msgstr "周四"
@@ -2305,9 +2304,8 @@ msgstr "可为客户账户创建交易的API呼叫专用"
 msgid "for API calls that change client settings"
 msgstr "更改客户设置的API呼叫专用"
 
-#, fuzzy
 msgid "for API calls that only read client data"
-msgstr "唯读客户数据的API呼叫专用"
+msgstr "只读客户数据的API呼叫专用"
 
 msgid "for mobile charts"
 msgstr "移动式图表专用"
@@ -2336,12 +2334,11 @@ msgstr "未来的"
 msgid "information about your trading exprience and personal finance"
 msgstr "您的交易经验与个人财务信息"
 
-#, fuzzy
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
-msgstr "是Binary的先进桌面交易平台。其多窗口界面提供最大弹性，可符合活跃交易员通过桌面电脑交易的需求"
+msgstr "是Binary的先进桌面交易平台。多窗口界面保证了最大的灵活性，可满足活跃交易员通过桌面电脑交易的需求"
 
 msgid "is required. Current spread"
 msgstr "是必须的。当前价差"
