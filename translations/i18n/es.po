@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
-"PO-Revision-Date: 2016-08-09 10:25+0000\n"
+"PO-Revision-Date: 2016-09-16 15:14+0000\n"
 "Last-Translator: cameliagf <cameliagf@yahoo.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.8-dev\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
 msgstr "Tipo %D MA"
@@ -58,7 +58,7 @@ msgstr ""
 "los agentes de pago"
 
 msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr ""
+msgstr "---título: Página no encontrada permalink: /404.html extracto: \"\"---"
 
 msgid "-DI Stroke"
 msgstr "-DI Stroke"
@@ -69,24 +69,20 @@ msgstr "0-1 año"
 msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transacciones en los últimos 12 meses"
 
-#, fuzzy
 msgid "1"
-msgstr "10"
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 Día"
 
-#, fuzzy
 msgid "1 Hour"
-msgstr "Horas"
+msgstr "1 Hora"
 
-#, fuzzy
 msgid "1 Minute"
-msgstr "Minutos"
+msgstr "1 Minuto"
 
-#, fuzzy
 msgid "1 Tick"
-msgstr "Ticks"
+msgstr "1 Tick"
 
 msgid "1-2 years"
 msgstr "1-2 años"
@@ -94,9 +90,8 @@ msgstr "1-2 años"
 msgid "10"
 msgstr "10"
 
-#, fuzzy
 msgid "10 Minutes"
-msgstr "Minutos"
+msgstr "10 Minutos"
 
 msgid "10m"
 msgstr "10m"
@@ -104,9 +99,8 @@ msgstr "10m"
 msgid "15"
 msgstr "15"
 
-#, fuzzy
 msgid "15 Minutes"
-msgstr "Minutos"
+msgstr "15 Minutos"
 
 msgid "15m"
 msgstr "15m"
@@ -121,15 +115,13 @@ msgid "1m"
 msgstr "1m"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
-#, fuzzy
 msgid "2"
-msgstr "2h"
+msgstr "2"
 
-#, fuzzy
 msgid "2 Hours"
-msgstr "Horas"
+msgstr "2 Horas"
 
 #, fuzzy
 msgid "2 Minutes"
