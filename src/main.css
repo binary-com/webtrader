@@ -5,6 +5,13 @@ html, body {
     font-size: 16px !important;
 }
 
+body.rtl-direction { /* for arabic language */
+    direction: rtl;
+}
+body.rtl-direction .ltr-direction { /* exception dialogs */
+    direction: ltr;
+}
+
 .mainContainer {
     width: 100%;
 }
