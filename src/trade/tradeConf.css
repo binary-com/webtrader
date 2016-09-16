@@ -43,8 +43,9 @@
 .trade-conf .payout-row.spreads-result li {
   width: auto !important; /* fix for IE broken flexbox implementation */
 }
-.trade-conf .payout-row li:not(:first-child) {
+.trade-conf .payout-row li:nth-child(2) {
   border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 .trade-conf .payout-row li.amount-per-point span:nth-child(1) {
   white-space: nowrap;

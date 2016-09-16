@@ -6,7 +6,12 @@
 .ui-dialog-titlebar {
     height:20px;
     overflow: hidden;
+    direction: ltr; /* .ltr-direction */
 }
+.rtl-direction .ui-dialog-titlebar .ui-selectmenu-text {
+  text-align: right;
+}
+
 
 .ui-dialog-titlebar .ui-dialog-title.with-content {
     min-width:200px;

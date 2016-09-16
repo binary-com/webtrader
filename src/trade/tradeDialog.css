@@ -17,6 +17,13 @@
 .trade-dialog .dotted-underline { border-bottom: 1px dotted #000; }
 .trade-dialog .box-shadow { box-shadow: 5px 5px 8px rgba(0,0,0,0.25); }
 
+.rtl-direction .trade-dialog .ui-selectmenu-text {
+  text-align: right;
+}
+.rtl-direction .trade-dialog input {
+  direction: ltr;
+}
+
 /* .trade-fields contains all the form fields */
 .trade-dialog .trade-fields {
   position: relative;

@@ -62,4 +62,9 @@
   padding-left: 5px;
   float: right;
 }
+.rtl-direction .overlay-dialog .add-overlays input {
+  float: left;
+  padding-right: 5px;
+  padding-left: 25px;
+}
 .overlay-dialog .add-overlays span { display: inline-block; }
