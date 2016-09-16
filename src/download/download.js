@@ -47,6 +47,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         gPlusShareTemplate = 'https://plus.google.com/share?url={0}',
         bloggerShareTemplate = 'https://www.blogger.com/blog-this.g?u={0}&n={1}',
         vkShareTemplate = 'http://vk.com/share.php?url={0}&title={1}';
+    var is_rtl_language = i18n_name === 'ar';
 
     function renderChart(instrumentObject, timePeriod, toDateWithTime) {
 
@@ -334,7 +335,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 rootULForInstruments.append($("<li>").append(value.name).append(mainMarket));
                             });
                             $(".download_instruments_container").append(rootULForInstruments);
-                            rootULForInstruments.menu().toggle();
+
+                            var menu_options = is_rtl_language ? {position: { my: "right top", at: "left top" }} : {};
+                            rootULForInstruments.menu(menu_options).toggle();
 
                             var $downloadInstruments = $(".download_instruments");
                             $downloadInstruments
@@ -458,7 +461,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             rootUL_timePeriod.append($("<li>").append(timePeriodParent.name).append(subMenu));
         });
         $(".download_timePeriod_container").append(rootUL_timePeriod);
-        rootUL_timePeriod.menu().toggle();
+        var menu_options = is_rtl_language ? {position: { my: "right top", at: "left top" }} : {};
+        rootUL_timePeriod.menu(menu_options).toggle();
     }
 
     // This function is used to set various share urls in share button dropdown.

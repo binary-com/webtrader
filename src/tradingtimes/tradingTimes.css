@@ -13,6 +13,10 @@
     color: rgba(0,0,0,0.7);
     font-size: 90%;
 }
+.rtl-direction .trading-times-sub-header .subheader-message {
+  float: left;
+  direction: ltr;
+}
 
 table.trading-times-dialog th,
 table.trading-times-dialog td {
