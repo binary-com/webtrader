@@ -782,6 +782,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               }
               chartingRequestMap.unregister(key);
               view.unbind();
+              dialog.destroy();
             }
         });
         dialog.track({
