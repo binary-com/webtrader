@@ -54,7 +54,7 @@ define(['jquery', 'windows/windows', 'common/util', 'highstock', "jquery-growl"]
     function confirmationDialog(themeObj, elementClass, elementText) {
             if (!win) {
                 require(['text!themes/themes.html'], function($html){
-                    $html = $($html);
+                    $html = $($html).i18n();
 
                     win = windows.createBlankWindow($html,
                     {

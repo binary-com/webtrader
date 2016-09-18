@@ -6,7 +6,12 @@
 .ui-dialog-titlebar {
     height:20px;
     overflow: hidden;
+    direction: ltr; /* .ltr-direction */
 }
+.rtl-direction .ui-dialog-titlebar .ui-selectmenu-text {
+  text-align: right;
+}
+
 
 .ui-dialog-titlebar .ui-dialog-title.with-content {
     min-width:200px;
@@ -36,32 +41,34 @@ ul.date-day.ui-menu { max-height: 320px !important; }
     display:none;
 }
 
-/* reload css3 icon */
-span.reload::before {
-    content: "";
-    box-sizing: border-box;
-    border-bottom: 3px solid transparent;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-style: solid;
-    border-width: 3px;
-    bottom: 0;
-    left: -4px;
-    position: absolute;
-    transform: rotate(135deg);
-}
-span.reload {
+img.reload {
     cursor: pointer;
-    transition: all 0.2s ease 0s;
-    display: inline-block;
     position: relative;
-    top: 10px;
-    border-left: 2px solid transparent;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 1px;
-    height: 10px;
-    width: 10px;
+    left: 7px;
+    bottom: 2px;
+    width: 14px;
+    height: 14px;
 }
 
 .webtrader-dialog img.disabled { opacity: 0.5; }
+
+.custom-icon-close {
+    cursor: pointer;
+    background-image: url('../images/close.svg')!important;
+}
+.custom-icon-maximize {
+    cursor: pointer;
+    background-image: url('../images/maximize.svg')!important;
+    position: relative;
+    right: 3px;
+}
+.custom-icon-minimize {
+    cursor: pointer;
+    background-image: url('../images/minimize.svg')!important;
+    position: relative;
+    right: 6px;
+}
+.ui-icon-newwin {
+    position: relative;
+    right: 3px;
+}

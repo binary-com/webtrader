@@ -92,6 +92,12 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }
         return (value * 1).toFixed(digits || 2);
     }
+    /* localise price format*/
+    rv.formatters['format-price'] = function (value, currency){
+        if(value)
+          return formatPrice(value, currency);
+        return undefined;
+    }
     /* notify another function on property changes */
     rv.formatters['notify'] = function() {
         var args = [].slice.call(arguments, 0);

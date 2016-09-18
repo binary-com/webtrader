@@ -52,6 +52,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                     liveapi.send({payout_currencies: 1})
                         .then(function (_data) {
                             currency = _data.payout_currencies[0];
+                            local_storage.set("currency",currency);
                             setTimeout(function () {
                                 update_balance(data);
                             }, 0);
@@ -66,7 +67,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                 if (data.authorize) value = data.authorize.balance;
                 else value = data.balance ? data.balance.balance : '0';
 
-                balance.text(currency + ' ' + formatPrice(value)).fadeIn();
+                balance.text(formatPrice(value, currency)).fadeIn();
             };
 
             /* update balance on change */
@@ -82,6 +83,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                 // time.fadeOut();
                 balance.fadeOut();
                 currency = '';
+                local_storage.remove("currency");
             });
 
             liveapi.events.on('login', function (data) {
@@ -201,7 +203,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
 
     return {
         init: function (_callback) {
-            var root = $($navHtml);
+            var root = $($navHtml).i18n();
             $("body").prepend(root);
 
             initLoginButton(root);

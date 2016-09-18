@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
 "PO-Revision-Date: 2016-08-09 10:25+0000\n"
 "Last-Translator: cameliagf <cameliagf@yahoo.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,6 +57,9 @@ msgstr ""
 "ninguna circunstancia por las transacciones realizadas entre los clientes y "
 "los agentes de pago"
 
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr ""
+
 msgid "-DI Stroke"
 msgstr "-DI Stroke"
 
@@ -66,8 +69,24 @@ msgstr "0-1 año"
 msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transacciones en los últimos 12 meses"
 
+#, fuzzy
+msgid "1"
+msgstr "10"
+
 msgid "1 Day"
 msgstr "1 Día"
+
+#, fuzzy
+msgid "1 Hour"
+msgstr "Horas"
+
+#, fuzzy
+msgid "1 Minute"
+msgstr "Minutos"
+
+#, fuzzy
+msgid "1 Tick"
+msgstr "Ticks"
 
 msgid "1-2 years"
 msgstr "1-2 años"
@@ -75,11 +94,19 @@ msgstr "1-2 años"
 msgid "10"
 msgstr "10"
 
+#, fuzzy
+msgid "10 Minutes"
+msgstr "Minutos"
+
 msgid "10m"
 msgstr "10m"
 
 msgid "15"
 msgstr "15"
+
+#, fuzzy
+msgid "15 Minutes"
+msgstr "Minutos"
 
 msgid "15m"
 msgstr "15m"
@@ -93,14 +120,41 @@ msgstr "1h"
 msgid "1m"
 msgstr "1m"
 
+msgid "1t"
+msgstr ""
+
+#, fuzzy
+msgid "2"
+msgstr "2h"
+
+#, fuzzy
+msgid "2 Hours"
+msgstr "Horas"
+
+#, fuzzy
+msgid "2 Minutes"
+msgstr "Minutos"
+
 msgid "2h"
 msgstr "2h"
 
 msgid "2m"
 msgstr "2m"
 
+#, fuzzy
+msgid "3"
+msgstr "30"
+
+#, fuzzy
+msgid "3 Minutes"
+msgstr "Minutos"
+
 msgid "30"
 msgstr "30"
+
+#, fuzzy
+msgid "30 Minutes"
+msgstr "Minutos"
 
 msgid "30-day limit on losses"
 msgstr "límite de 30 días en pérdidas"
@@ -114,11 +168,30 @@ msgstr "30m"
 msgid "3m"
 msgstr "3m"
 
+#, fuzzy
+msgid "4"
+msgstr "4h"
+
+#, fuzzy
+msgid "4 Hours"
+msgstr "Horas"
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transacciones o más en los últimos 12 meses"
 
+msgid "404"
+msgstr ""
+
 msgid "4h"
 msgstr "4h"
+
+#, fuzzy
+msgid "5"
+msgstr "15"
+
+#, fuzzy
+msgid "5 Minutes"
+msgstr "Minutos"
 
 msgid "5m"
 msgstr "5m"
@@ -131,6 +204,14 @@ msgstr "límite de 7 días para pérdidas"
 
 msgid "7-day turnover limit"
 msgstr "límite de volumen de negocios de 7 días"
+
+#, fuzzy
+msgid "8"
+msgstr "8h"
+
+#, fuzzy
+msgid "8 Hours"
+msgstr "Horas"
 
 msgid "8h"
 msgstr "8h"
@@ -165,14 +246,18 @@ msgstr "Token de la cuenta no encontrado"
 msgid "Action"
 msgstr "Acción"
 
+msgid "Add comparisons"
+msgstr ""
+
 msgid "Add indicator"
 msgstr "Añadir indicador"
 
 msgid "Add level"
 msgstr "Añadir nivel"
 
-msgid "Add overlays"
-msgstr "Añadir superposiciones"
+#, fuzzy
+msgid "Add/remove comparisons"
+msgstr "Añadir/quitar superposiciones"
 
 msgid "Add/remove overlays"
 msgstr "Añadir/quitar superposiciones"
@@ -335,6 +420,14 @@ msgstr "Fondo del Gráfico"
 msgid "Chart context menu"
 msgstr "Menú de contexto del gráfico"
 
+#, fuzzy
+msgid "Chart template"
+msgstr "Temas del Gráfico"
+
+#, fuzzy
+msgid "Chart type"
+msgstr "Gráfico"
+
 msgid "Choose password"
 msgstr "Elegir contraseña"
 
@@ -368,6 +461,9 @@ msgstr "Experiencia de comerciar con materias primas"
 msgid "Commodities trading frequency"
 msgstr "Frecuencia de comerciar con materias primas"
 
+msgid "Comparisons"
+msgstr ""
+
 msgid "Conditions"
 msgstr "Condiciones"
 
@@ -397,6 +493,10 @@ msgstr "Contrato"
 
 msgid "Contract Confirmation"
 msgstr "Confirmación del Contrato"
+
+#, fuzzy
+msgid "Contract Details"
+msgstr "Contratos"
 
 msgid "Contract is not yet started"
 msgstr "El contrato no ha comenzado todavía"
@@ -428,11 +528,12 @@ msgstr "Spot Actual"
 msgid "Current Spot Time"
 msgstr "Tiempo de Spot Actual"
 
+#, fuzzy
+msgid "Current comparisons"
+msgstr "Contraseña actual"
+
 msgid "Current indicators"
 msgstr "Indicadores actuales"
-
-msgid "Current overlays"
-msgstr "Superposiciones actuales"
 
 msgid "Current password"
 msgstr "Contraseña actual"
@@ -493,6 +594,9 @@ msgstr "Disminución"
 
 msgid "Default"
 msgstr "Predeterminado"
+
+msgid "Delete"
+msgstr ""
 
 msgid "Delete level(s)"
 msgstr "Borrar nivel(es)"
@@ -568,6 +672,9 @@ msgstr "Descargar como"
 
 msgid "Downloading .csv"
 msgstr "Descargando .csv"
+
+msgid "Drawing tools"
+msgstr ""
 
 msgid "Duration"
 msgstr "Duración"
@@ -716,6 +823,9 @@ msgstr "Luz de la Rejilla"
 msgid "HIGH"
 msgstr "ALTO"
 
+msgid "Have better luck at trading!"
+msgstr ""
+
 msgid "Health"
 msgstr "Salud"
 
@@ -749,6 +859,10 @@ msgstr "Domicilio"
 msgid "Horizontal Line"
 msgstr "Línea horizontal"
 
+#, fuzzy
+msgid "Horizontal line"
+msgstr "Línea horizontal"
+
 msgid "Hours"
 msgstr "Horas"
 
@@ -776,6 +890,9 @@ msgstr ""
 "será responsable en ninguna circunstancia por las transacciones realizadas "
 "entre los clientes y los agentes de pago"
 
+msgid "If the issue keeps happening, please contact"
+msgstr ""
+
 msgid "If you select a"
 msgstr "Si selecciona un"
 
@@ -788,13 +905,6 @@ msgid ""
 msgstr ""
 "Para aplicar correctamente el tema, se requiere una actualización completa "
 "de la página. ¿Está seguro que desea proceder?"
-
-msgid ""
-"In order to properly apply this language, a full refresh of page is "
-"required. Are you sure you want to proceed?"
-msgstr ""
-"Para aplicar correctamente este idioma, se requiere una actualización "
-"completa de la página. ¿Está seguro de que desea proceder?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -820,8 +930,16 @@ msgstr "Dentro/Fuera"
 msgid "Income Source"
 msgstr "Fuente de Ingresos"
 
+#, fuzzy
+msgid "Indicative"
+msgstr "Precio Indicativo"
+
 msgid "Indicative Price"
 msgstr "Precio Indicativo"
+
+#, fuzzy
+msgid "Indicators"
+msgstr "Añadir indicador"
 
 msgid "Indices trading experience"
 msgstr "Experiencia de comercio con índices"
@@ -846,6 +964,10 @@ msgstr "Ene"
 
 msgid "January"
 msgstr "Enero"
+
+#, fuzzy
+msgid "Japan accounts are not supported"
+msgstr "Su navegador no es compatible"
 
 msgid "Jul"
 msgstr "Jul"
@@ -905,6 +1027,10 @@ msgstr "Stroke de la Línea"
 
 msgid "Link"
 msgstr "Enlace"
+
+#, fuzzy
+msgid "Load chart template"
+msgstr "Cargando gráficos y menús de comercio"
 
 msgid "Loading"
 msgstr "Cargando"
@@ -1015,8 +1141,8 @@ msgstr ""
 "Asegúrese de que está de acuerdo con las condiciones de pago del agente "
 "antes de enviar su solicitud. Una vez que haga clic en el botón 'Confirmar "
 "transferencia' los fondos serán retirados de su cuenta y se enviarán al "
-"agente de pago que haya elegido. El agente le enviará la cantidad retirada ("
-"menos la comisión) a través de su método de pago preferido"
+"agente de pago que haya elegido. El agente le enviará la cantidad retirada "
+"(menos la comisión) a través de su método de pago preferido"
 
 msgid "Mar"
 msgstr "Mar"
@@ -1217,6 +1343,9 @@ msgstr "Una vez que se alcanza este límite, ya no puede depositar"
 msgid "One last step left"
 msgstr "Queda un último paso"
 
+msgid "Oops... Page Not Available"
+msgstr ""
+
 msgid "Open"
 msgstr "Abierto"
 
@@ -1226,11 +1355,12 @@ msgstr "Abrir una cuenta"
 msgid "Open Price"
 msgstr "Precio de apertura"
 
-msgid "Open account"
+#, fuzzy
+msgid "Open a Financial Account"
 msgstr "Abrir una cuenta"
 
-msgid "Open real money account"
-msgstr "Abrir cuenta de dinero real"
+msgid "Open account"
+msgstr "Abrir una cuenta"
 
 msgid "Opens"
 msgstr "Se abre"
@@ -1274,6 +1404,9 @@ msgstr "PNG"
 
 msgid "PPO Line Stroke"
 msgstr "Stroke de Linea PPO"
+
+msgid "Page Not Found"
+msgstr ""
 
 msgid "Password must be 6 characters minimum"
 msgstr "La contraseña debe tener 6 caracteres como mínimo"
@@ -1549,6 +1682,10 @@ msgstr "Recargando página"
 msgid "Remove Selected"
 msgstr "Quitar Seleccionado"
 
+#, fuzzy
+msgid "Rename"
+msgstr "Nombre de token"
+
 msgid "Repeat password"
 msgstr "Repetir contraseña"
 
@@ -1575,6 +1712,10 @@ msgstr "Resultados"
 
 msgid "Return"
 msgstr "Volver"
+
+#, fuzzy
+msgid "Return to trading page"
+msgstr "Recargando página"
 
 msgid "Rise"
 msgstr "Aumento"
@@ -1605,6 +1746,15 @@ msgstr "Sáb"
 
 msgid "Saturday"
 msgstr "Sábado"
+
+msgid "Save"
+msgstr ""
+
+msgid "Save as"
+msgstr ""
+
+msgid "Save changes"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Secundario"
@@ -1665,6 +1815,10 @@ msgstr "Se queda en"
 
 msgid "Share"
 msgstr "Compartir"
+
+#, fuzzy
+msgid "Share chart"
+msgstr "Imprimir gráfico"
 
 msgid "Short MA Type"
 msgstr "Tipo MA Corto"
@@ -1816,6 +1970,10 @@ msgstr "Tabla"
 msgid "Tel"
 msgstr "Tel"
 
+#, fuzzy
+msgid "Template name"
+msgstr "Nombre de token"
+
 msgid "Terms"
 msgstr "Términos"
 
@@ -1843,6 +2001,11 @@ msgstr ""
 "financieros conllevan un alto grado de riesgo. Si los contratos comprados "
 "caducan sin valor, usted sufrirá una pérdida total de su inversión, que "
 "consiste en el contrato permium"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
+msgstr ""
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1890,6 +2053,9 @@ msgstr "Mosaico"
 
 msgid "Time Period"
 msgstr "Período de Tiempo"
+
+msgid "Time interval"
+msgstr ""
 
 msgid "Time period"
 msgstr "Período de tiempo"
@@ -2038,11 +2204,20 @@ msgstr "Próximos Eventos"
 msgid "Update Settings"
 msgstr "Actualizar Configuración"
 
+#, fuzzy
+msgid "Upgrade to a Real Account"
+msgstr "Enviado a la cuenta"
+
 msgid "Upper Band Stroke"
 msgstr "Stroke de Banda Superior"
 
 msgid "Use"
 msgstr "Usar"
+
+msgid ""
+"Use the \"Save as ...\" button to save the chart settings, type, time "
+"period, indicators and comparisons"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "El código de verificación ha sido enviado a su correo electrónico"
@@ -2057,6 +2232,10 @@ msgid "Verify new password"
 msgstr "Verificar nueva contraseña"
 
 msgid "Vertical Line"
+msgstr "Línea Vertical"
+
+#, fuzzy
+msgid "Vertical line"
 msgstr "Línea Vertical"
 
 msgid "View"
@@ -2136,6 +2315,9 @@ msgstr ""
 "Tiene que registrar webtrader y obtene un App ID antes de utilizar otro "
 "servidor de OAuth para la autenticación. Para más información consulte los "
 "datos de OAuth en"
+
+msgid "You haven't saved any templates yet"
+msgstr ""
 
 msgid "You pay"
 msgstr "Usted paga"
@@ -2304,6 +2486,9 @@ msgstr "es cuando el contrato es procesado por nuestros servidores y el"
 msgid "main site"
 msgstr "sitio web principal"
 
+msgid "market is presently closed"
+msgstr ""
+
 msgid "minute"
 msgstr "minuto"
 
@@ -2382,8 +2567,21 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Retorno"
 
-msgid "Comparisons"
-msgstr ""
+#~ msgid "Add overlays"
+#~ msgstr "Añadir superposiciones"
+
+#~ msgid "Current overlays"
+#~ msgstr "Superposiciones actuales"
+
+#~ msgid ""
+#~ "In order to properly apply this language, a full refresh of page is "
+#~ "required. Are you sure you want to proceed?"
+#~ msgstr ""
+#~ "Para aplicar correctamente este idioma, se requiere una actualización "
+#~ "completa de la página. ¿Está seguro de que desea proceder?"
+
+#~ msgid "Open real money account"
+#~ msgstr "Abrir cuenta de dinero real"
 
 #~ msgid "Apply new theme?"
 #~ msgstr "¿Aplicar el nuevo tema?"

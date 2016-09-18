@@ -269,9 +269,9 @@
         <li>{proposal.error}</li>
     </ul>
 
-    <ul class="purchase-row stick-to-bottom"
+    <ul class="purchase-row stick-to-bottom ltr-direction"
         rv-css-opacity="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error | ternary 0.5 1">
-      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-text="proposal.ask_price | currency currency.value"> </span> </span> </li>
+      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-text="proposal.ask_price | format-price currency.value"> </span> </span> </li>
       <li> <button
               rv-on-click="purchase.onclick"
               rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">Purchase</button>

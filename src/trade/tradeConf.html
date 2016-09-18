@@ -69,7 +69,7 @@
       </li>
   </ul>
 
-  <div class='tick-chart'
+  <div class='tick-chart ltr-direction'
        rv-if="ticks.chart_visible"
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
@@ -82,8 +82,7 @@
   <ul class='balance-row'>
     <li>
       <span> Account balance: </span>
-      <span class="bold" rv-text="buy.currency"></span>
-      <span class="bold" rv-text="buy.balance_after | to-fixed 2"></span>
+      <span class="bold" rv-text="buy.balance_after | to-fixed 2 | format-price buy.currency"></span>
     </li>
   </ul>
 </div>

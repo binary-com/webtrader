@@ -47,6 +47,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
         gPlusShareTemplate = 'https://plus.google.com/share?url={0}',
         bloggerShareTemplate = 'https://www.blogger.com/blog-this.g?u={0}&n={1}',
         vkShareTemplate = 'http://vk.com/share.php?url={0}&title={1}';
+    var is_rtl_language = i18n_name === 'ar';
 
     function renderChart(instrumentObject, timePeriod, toDateWithTime) {
 
@@ -240,7 +241,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
     }
 
     var resizeDialog = function() {
-        console.log('resize called');
         if(downloadWin) {
             var $dialog = downloadWin.dialog('widget');
             var chart = $(".downloadChart")
@@ -260,7 +260,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             if (!downloadWin) {
                 downloadWin = windows.createBlankWindow($('<div class="download_window"/>'),
                     {
-                        title: 'View Historical Data',
+                        title: 'View Historical Data'.i18n(),
                         width: WIDTH ,
                         minWidth: WIDTH ,
                         minHeight: HEIGHT ,
@@ -276,7 +276,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 downloadWin.closest("div.ui-dialog").css("overflow", "visible");
                 require(['text!download/download.html'], function($html) {
 
-                    $html = $($html);
+                    $html = $($html).i18n();
                     //$html.find("button, input[type=button]").button();
                     $html
                         .find('.download_fromDate')
@@ -335,7 +335,9 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                                 rootULForInstruments.append($("<li>").append(value.name).append(mainMarket));
                             });
                             $(".download_instruments_container").append(rootULForInstruments);
-                            rootULForInstruments.menu().toggle();
+
+                            var menu_options = is_rtl_language ? {position: { my: "right top", at: "left top" }} : {};
+                            rootULForInstruments.menu(menu_options).toggle();
 
                             var $downloadInstruments = $(".download_instruments");
                             $downloadInstruments
@@ -384,6 +386,12 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
                     $html.find(".share-button").click(function(){
                         $html.find(".overlay").toggle();
+                        img = $(this).find("img");
+                        if(img.attr("src").indexOf("-w")==-1){
+                            $(this).css("background","#2a3052").find("img").attr("src","images/share-w.svg");
+                        }else{
+                            $(this).css("background","#f3f1f2").find("img").attr("src","images/share.svg");
+                        }
                     });
 
                     initDownloadChartOptions();
@@ -453,7 +461,8 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             rootUL_timePeriod.append($("<li>").append(timePeriodParent.name).append(subMenu));
         });
         $(".download_timePeriod_container").append(rootUL_timePeriod);
-        rootUL_timePeriod.menu().toggle();
+        var menu_options = is_rtl_language ? {position: { my: "right top", at: "left top" }} : {};
+        rootUL_timePeriod.menu(menu_options).toggle();
     }
 
     // This function is used to set various share urls in share button dropdown.

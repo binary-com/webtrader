@@ -9,6 +9,10 @@
   position: absolute;
   right: 10px;
 }
+.rtl-direction .token-dialog > button {
+  right: auto;
+  left: 10px;
+}
 .token-dialog .empty-pane > span {
   display:  block;
   width: 440px;

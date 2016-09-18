@@ -86,4 +86,10 @@
   padding-left: 5px;
   float: right;
 }
+.rtl-direction .indicator-dialog .add-indicators input {
+  float: left;
+  padding-left: 25px;
+  padding-right: 5px;
+}
+
 .indicator-dialog .add-indicators span { display: inline-block; }

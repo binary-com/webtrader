@@ -1,3 +1,4 @@
+
 msgid "%D MA Type"
 msgstr "" 
 
@@ -22,6 +23,9 @@ msgstr ""
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "" 
 
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr "" 
+
 msgid "-DI Stroke"
 msgstr "" 
 
@@ -31,7 +35,19 @@ msgstr ""
 msgid "0-5 transactions in the past 12 months"
 msgstr "" 
 
+msgid "1"
+msgstr "" 
+
 msgid "1 Day"
+msgstr "" 
+
+msgid "1 Hour"
+msgstr "" 
+
+msgid "1 Minute"
+msgstr "" 
+
+msgid "1 Tick"
 msgstr "" 
 
 msgid "1-2 years"
@@ -40,10 +56,16 @@ msgstr ""
 msgid "10"
 msgstr "" 
 
+msgid "10 Minutes"
+msgstr "" 
+
 msgid "10m"
 msgstr "" 
 
 msgid "15"
+msgstr "" 
+
+msgid "15 Minutes"
 msgstr "" 
 
 msgid "15m"
@@ -58,13 +80,34 @@ msgstr ""
 msgid "1m"
 msgstr "" 
 
+msgid "1t"
+msgstr "" 
+
+msgid "2"
+msgstr "" 
+
+msgid "2 Hours"
+msgstr "" 
+
+msgid "2 Minutes"
+msgstr "" 
+
 msgid "2h"
 msgstr "" 
 
 msgid "2m"
 msgstr "" 
 
+msgid "3"
+msgstr "" 
+
+msgid "3 Minutes"
+msgstr "" 
+
 msgid "30"
+msgstr "" 
+
+msgid "30 Minutes"
 msgstr "" 
 
 msgid "30-day limit on losses"
@@ -79,10 +122,25 @@ msgstr ""
 msgid "3m"
 msgstr "" 
 
+msgid "4"
+msgstr "" 
+
+msgid "4 Hours"
+msgstr "" 
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "" 
 
+msgid "404"
+msgstr "" 
+
 msgid "4h"
+msgstr "" 
+
+msgid "5"
+msgstr "" 
+
+msgid "5 Minutes"
 msgstr "" 
 
 msgid "5m"
@@ -95,6 +153,12 @@ msgid "7-day limit on losses"
 msgstr "" 
 
 msgid "7-day turnover limit"
+msgstr "" 
+
+msgid "8"
+msgstr "" 
+
+msgid "8 Hours"
 msgstr "" 
 
 msgid "8h"
@@ -130,13 +194,16 @@ msgstr ""
 msgid "Action"
 msgstr "" 
 
+msgid "Add comparisons"
+msgstr "" 
+
 msgid "Add indicator"
 msgstr "" 
 
 msgid "Add level"
 msgstr "" 
 
-msgid "Add overlays"
+msgid "Add/remove comparisons"
 msgstr "" 
 
 msgid "Add/remove overlays"
@@ -298,6 +365,12 @@ msgstr ""
 msgid "Chart context menu"
 msgstr "" 
 
+msgid "Chart template"
+msgstr "" 
+
+msgid "Chart type"
+msgstr "" 
+
 msgid "Choose password"
 msgstr "" 
 
@@ -331,6 +404,9 @@ msgstr ""
 msgid "Commodities trading frequency"
 msgstr "" 
 
+msgid "Comparisons"
+msgstr "" 
+
 msgid "Conditions"
 msgstr "" 
 
@@ -359,6 +435,9 @@ msgid "Contract"
 msgstr "" 
 
 msgid "Contract Confirmation"
+msgstr "" 
+
+msgid "Contract Details"
 msgstr "" 
 
 msgid "Contract is not yet started"
@@ -391,10 +470,10 @@ msgstr ""
 msgid "Current Spot Time"
 msgstr "" 
 
-msgid "Current indicators"
+msgid "Current comparisons"
 msgstr "" 
 
-msgid "Current overlays"
+msgid "Current indicators"
 msgstr "" 
 
 msgid "Current password"
@@ -455,6 +534,9 @@ msgid "Decline"
 msgstr "" 
 
 msgid "Default"
+msgstr "" 
+
+msgid "Delete"
 msgstr "" 
 
 msgid "Delete level(s)"
@@ -527,6 +609,9 @@ msgid "Download as"
 msgstr "" 
 
 msgid "Downloading .csv"
+msgstr "" 
+
+msgid "Drawing tools"
 msgstr "" 
 
 msgid "Duration"
@@ -676,6 +761,9 @@ msgstr ""
 msgid "HIGH"
 msgstr "" 
 
+msgid "Have better luck at trading!"
+msgstr "" 
+
 msgid "Health"
 msgstr "" 
 
@@ -709,6 +797,9 @@ msgstr ""
 msgid "Horizontal Line"
 msgstr "" 
 
+msgid "Horizontal line"
+msgstr "" 
+
 msgid "Hours"
 msgstr "" 
 
@@ -721,6 +812,9 @@ msgstr ""
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr "" 
 
+msgid "If the issue keeps happening, please contact"
+msgstr "" 
+
 msgid "If you select a"
 msgstr "" 
 
@@ -728,9 +822,6 @@ msgid "If you select a specific"
 msgstr "" 
 
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
-msgstr "" 
-
-msgid "In order to properly apply this language, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "" 
 
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
@@ -745,7 +836,13 @@ msgstr ""
 msgid "Income Source"
 msgstr "" 
 
+msgid "Indicative"
+msgstr "" 
+
 msgid "Indicative Price"
+msgstr "" 
+
+msgid "Indicators"
 msgstr "" 
 
 msgid "Indices trading experience"
@@ -770,6 +867,9 @@ msgid "Jan"
 msgstr "" 
 
 msgid "January"
+msgstr "" 
+
+msgid "Japan accounts are not supported"
 msgstr "" 
 
 msgid "Jul"
@@ -827,6 +927,9 @@ msgid "Line Stroke"
 msgstr "" 
 
 msgid "Link"
+msgstr "" 
+
+msgid "Load chart template"
 msgstr "" 
 
 msgid "Loading"
@@ -1114,6 +1217,9 @@ msgstr ""
 msgid "One last step left"
 msgstr "" 
 
+msgid "Oops... Page Not Available"
+msgstr "" 
+
 msgid "Open"
 msgstr "" 
 
@@ -1123,10 +1229,10 @@ msgstr ""
 msgid "Open Price"
 msgstr "" 
 
-msgid "Open account"
+msgid "Open a Financial Account"
 msgstr "" 
 
-msgid "Open real money account"
+msgid "Open account"
 msgstr "" 
 
 msgid "Opens"
@@ -1163,6 +1269,9 @@ msgid "PNG"
 msgstr "" 
 
 msgid "PPO Line Stroke"
+msgstr "" 
+
+msgid "Page Not Found"
 msgstr "" 
 
 msgid "Password must be 6 characters minimum"
@@ -1420,6 +1529,9 @@ msgstr ""
 msgid "Remove Selected"
 msgstr "" 
 
+msgid "Rename"
+msgstr "" 
+
 msgid "Repeat password"
 msgstr "" 
 
@@ -1445,6 +1557,9 @@ msgid "Results"
 msgstr "" 
 
 msgid "Return"
+msgstr "" 
+
+msgid "Return to trading page"
 msgstr "" 
 
 msgid "Rise"
@@ -1475,6 +1590,15 @@ msgid "Sat"
 msgstr "" 
 
 msgid "Saturday"
+msgstr "" 
+
+msgid "Save"
+msgstr "" 
+
+msgid "Save as"
+msgstr "" 
+
+msgid "Save changes"
 msgstr "" 
 
 msgid "Secondary"
@@ -1535,6 +1659,9 @@ msgid "Settles"
 msgstr "" 
 
 msgid "Share"
+msgstr "" 
+
+msgid "Share chart"
 msgstr "" 
 
 msgid "Short MA Type"
@@ -1687,6 +1814,9 @@ msgstr ""
 msgid "Tel"
 msgstr "" 
 
+msgid "Template name"
+msgstr "" 
+
 msgid "Terms"
 msgstr "" 
 
@@ -1700,6 +1830,9 @@ msgid "The"
 msgstr "" 
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+msgstr "" 
+
+msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos"
 msgstr "" 
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded"
@@ -1739,6 +1872,9 @@ msgid "Tile"
 msgstr "" 
 
 msgid "Time Period"
+msgstr "" 
+
+msgid "Time interval"
 msgstr "" 
 
 msgid "Time period"
@@ -1852,10 +1988,16 @@ msgstr ""
 msgid "Update Settings"
 msgstr "" 
 
+msgid "Upgrade to a Real Account"
+msgstr "" 
+
 msgid "Upper Band Stroke"
 msgstr "" 
 
 msgid "Use"
+msgstr "" 
+
+msgid "Use the \"Save as ...\" button to save the chart settings, type, time period, indicators and comparisons"
 msgstr "" 
 
 msgid "Verification code has been sent to your email"
@@ -1871,6 +2013,9 @@ msgid "Verify new password"
 msgstr "" 
 
 msgid "Vertical Line"
+msgstr "" 
+
+msgid "Vertical line"
 msgstr "" 
 
 msgid "View"
@@ -1940,6 +2085,9 @@ msgid "You have sold the following contract"
 msgstr "" 
 
 msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
+msgstr "" 
+
+msgid "You haven't saved any templates yet"
 msgstr "" 
 
 msgid "You pay"
@@ -2089,6 +2237,9 @@ msgstr ""
 msgid "main site"
 msgstr "" 
 
+msgid "market is presently closed"
+msgstr "" 
+
 msgid "minute"
 msgstr "" 
 
@@ -2166,6 +2317,3 @@ msgstr ""
 
 msgid "| Return"
 msgstr "" 
-
-msgid "Comparisons"
-msgstr ""

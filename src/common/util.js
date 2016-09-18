@@ -149,9 +149,25 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
     return new Date(y, m - 1, d).getTime() / 1000;
 }
 
+function formatNumber(number) {
+    return new Intl.NumberFormat(i18n_name.replace("_","-")).format(number);
+}
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
-function formatPrice(float) {
-    return (float * 1).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+function formatPrice(float,currency) {
+    var currency_symbols = {
+      'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
+      'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
+      'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
+      'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
+      'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
+      'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
+      'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
+    };
+    float = new Intl.NumberFormat(i18n_name.replace("_","-")).format(float);
+    if(currency){
+      float = (currency_symbols[currency] || currency) + float;
+    }
+    return float;
 }
 
 function sortAlphaNum(property) {
@@ -249,6 +265,53 @@ if (typeof String.prototype.startsWith !== 'function') {
     };
 }
 
+if (!String.prototype.includes) {
+  String.prototype.includes = function(search, start) {
+    'use strict';
+    if (typeof start !== 'number') {
+      start = 0;
+    }
+
+    if (start + search.length > this.length) {
+      return false;
+    } else {
+      return this.indexOf(search, start) !== -1;
+    }
+  };
+}
+
+if (!Array.prototype.includes) {
+  Array.prototype.includes = function(searchElement /*, fromIndex*/) {
+    'use strict';
+    if (this == null) {
+      throw new TypeError('Array.prototype.includes called on null or undefined');
+    }
+
+    var O = Object(this);
+    var len = parseInt(O.length, 10) || 0;
+    if (len === 0) {
+      return false;
+    }
+    var n = parseInt(arguments[1], 10) || 0;
+    var k;
+    if (n >= 0) {
+      k = n;
+    } else {
+      k = len + n;
+      if (k < 0) {k = 0;}
+    }
+    var currentElement;
+    while (k < len) {
+      currentElement = O[k];
+      if (searchElement === currentElement ||
+         (searchElement !== searchElement && currentElement !== currentElement)) { // NaN !== NaN
+        return true;
+      }
+      k++;
+    }
+    return false;
+  };
+}
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
   var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
@@ -336,21 +399,37 @@ function setup_i18n_translation(dict) {
       /* Escape keys for using them in regex. */
       var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
       var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
-
-      var replacer = function (_, word) {
+      var replacer = function (_, word, index, data) {
         return (dict[word] && dict[word][1]) || word;
       };
       String.prototype.i18n = function() {
         return this.replace(regexp, replacer);
       };
 
-      /* hook $(html) to automatically call .i18n() before creating DOM nodes */
-      var parseHTML = $.parseHTML.bind($);
-      $.parseHTML = function(data, context, keepScripts) {
-          if(typeof data === 'string')
-            data = data.i18n();
-          return parseHTML(data, context, keepScripts);
+      $.fn.i18n = function(){
+        localize(this);
+        return this;
       }
+
+      function localize(node) {
+          var c = node.childNodes ? node.childNodes : node, l = c.length, i;
+          for( i=0; i<l; i++) {
+              if( c[i].nodeType == 3) {
+                if(c[i].textContent){
+                  c[i].textContent = c[i].textContent.i18n();
+                }
+              }
+              if( c[i].nodeType == 1) {
+                if(c[i].getAttribute("data-balloon")){
+                  c[i].setAttribute("data-balloon",c[i].getAttribute("data-balloon").i18n());
+                }
+                localize(c[i]);
+              }
+          }
+      }
+
+      // Translate main.html
+      localize(document.body);
 }
 
 function getAppURL() {
