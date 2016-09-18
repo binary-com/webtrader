@@ -87,6 +87,21 @@
   top: 2px;
 }
 
+.real-dialog .user label {
+  display: block;
+  font-size: 12px;
+}
+.real-dialog .user label input {
+  float: left;
+  position: relative;
+  top: -2px;
+}
+
+.real-dialog .user button {
+  float: right;
+  margin-top: 10px;
+}
+
 .real-dialog .financial .title-big + div {
   height: auto;
   margin-bottom: 10px;

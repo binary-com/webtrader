@@ -28,13 +28,13 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     function init_real_win(root) {
       root = $(root).i18n();
       real_win = windows.createBlankWindow(root, {
-          title: 'Real account opening'.i18n(),
+          title: 'Real Money Account Opening'.i18n(),
           resizable:false,
           collapsable:false,
           minimizable: true,
           maximizable: false,
           width: 350,
-          height: 930,
+          height: 950,
           'data-authorized': true,
           close: function () {
             real_win.dialog('destroy');
@@ -87,11 +87,12 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         },
         user: {
           disabled: false,
+          accepted: false,
           salutation: 'Mr',
           salutation_array: ['Mr', 'Mrs', 'Ms', 'Miss'],
           first_name: '',
           last_name: '',
-          date_of_birth: moment().format('YYYY-MM-DD'),
+          date_of_birth: '',
           yearRange: "-100:+0", showButtonPanel: false, // for jquery ui datepicker
           residence: '-',
           residence_name: '-',
@@ -324,7 +325,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
       state.route.update = function(route){
         var routes = {
-          'user' : 930,
+          'user' : 950,
           'financial': 1390,
         };
         state.route.value = route;
@@ -365,12 +366,14 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
              var gaming = data.landing_company.gaming_company;
              state.company.financial = financial;
              state.company.gaming = gaming;
-             if(financial && !gaming && financial.shortcode === 'maltainvest')
+             if(financial && !gaming && financial.shortcode === 'maltainvest') {
                 state.company.type = 'maltainvest';
-            //  else if(financial && !gaming && financial.shortcode === 'japan')
-            //     state.company.type = 'japan';
-             else
+                state.user.accepted = true;
+            }
+             else {
                 state.company.type = 'normal';
+                state.user.accepted = false;
+            }
 
              /* if there is not finiancial account and there is already one real acount,
               * allow UK MLT client to open MF account. */
@@ -386,6 +389,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                     (Cookies.residence() === 'gb' && authorize && /^MLT/.test(authorize.loginid));
                 if(ok) {
                   state.company.type = 'maltainvest';
+                  state.user.accepted = true;
                 }
              }
            })
