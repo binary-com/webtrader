@@ -382,10 +382,28 @@ var Cookies = {
         id: parts[0],
         is_real: parts[1] === 'R',
         is_disabled: parts[2] === 'D',
-        is_financial: /MF/.test(parts[0])
+        is_mf: /MF/gi.test(parts[0]),
+        is_mlt: /MLT/gi.test(parts[0]),
+        is_mx: /MX/gi.test(parts[0]),
+        is_cr: /CR/gi.test(parts[0])
       };
     });
-    return loginids;
+   /* when new accounts are created document.cookie doesn't change,
+    * use local_storage to return the full list of loginids. */
+    var oauth_loginids = (local_storage.get('oauth') || []).map(function(id){
+      return {
+        id: id.id,
+        is_real: !id.is_virtual,
+        is_disabled: false,
+        is_mf: /MF/gi.test(id.id),
+        is_mlt: /MLT/gi.test(id.id),
+        is_mx: /MX/gi.test(id.id),
+        is_cr: /CR/gi.test(id.id)
+      }
+    }).filter(function(id) {
+      return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
+    });
+    return loginids.concat(oauth_loginids)
   },
   residence: function() {
     return Cookies.get_by_name('residence');

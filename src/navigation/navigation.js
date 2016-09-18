@@ -100,11 +100,11 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                 is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
 
                 var loginids = Cookies.loginids();
-                var has_real_account = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
+                var has_real_account = _.some(loginids, {is_real: true});
                 var has_disabled_account =  _.some(loginids, {is_disabled: true});
 
                 var show_financial_link = false;
-                if(_.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true}) && is_current_account_real) {
+                if(_.every(loginids, {is_mf: false}) && is_current_account_real) {
                   var residence = Cookies.residence();
                   show_financial_link =  /* allow UK MLT client to open MF account. */
                       (countries[residence] && countries[residence].financial_company === 'maltainvest') ||

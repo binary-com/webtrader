@@ -301,9 +301,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                .then(function(data){
                  var info = data.new_account_maltainvest;
                  oauth = local_storage.get('oauth');
-                 /* when new accoutns are created document.cookie is not change, set is_financial: ture so
-                  * that navigation.js can hide the account promotion link */
-                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: 0, is_financial: true});
+                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: 0});
                  local_storage.set('oauth', oauth);
                  $.growl.notice({ message: 'Account successfully created' });
                  $.growl.notice({ message: 'Switching to your new account ...' });
@@ -379,8 +377,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
               * allow UK MLT client to open MF account. */
              var oauth = local_storage.get('oauth') || [];
              var loginids = Cookies.loginids();
-             var no_financial_account_registered = _.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true});
-             var a_real_account_already_exists = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
+             var no_financial_account_registered = _.every(loginids, {is_mf: false});
+             var a_real_account_already_exists = _.some(loginids, {is_real: true});
              if(no_financial_account_registered && a_real_account_already_exists) {
                 var residence = Cookies.residence();
                 var authorize = local_storage.get('authorize');
@@ -394,6 +392,52 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
              }
            })
            .catch(error_handler);
+    }
+
+    /*
+      1: company = (gaming company) && (financial company && financial company shortcode = maltainvest)
+      	a: no MLT account  ==> upgrade to MLT
+       	b: has MLT account
+          	I:     upgrade to MF
+        c: has both MLT & MF ==> do nothing
+      2: company = financial company &&  financial company shortcode = maltainvest) && there is NO gaming company
+      	a: no MF account
+        		I: company = financial ==> upgrade to MF
+      	b: has MF account => do nothing
+      3: company & shortcode anything except above
+      	a: no MLT, MX, CR account ==> upgrade to MLT, MX or CR
+      	b: has MLT, MX, CR account ==> do nothing
+      4: company shortcode == japan
+        a: do nothing and show an error message
+
+      returns 'upgrade-mlt' | 'upgrade-mf' | 'do-nothing'
+    */
+    function getLadingCompany() {
+       return liveapi
+       .cached.send({landing_company: Cookies.residence() })
+        .then(function(data) {
+             var financial = data.landing_company.financial_company;
+             var gaming = data.landing_company.gaming_company;
+
+             var loginids = Cookies.loginids();
+             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
+                 if (_.some(loginids, {is_mlt: true}) && _.some({is_mf: true})) // 1-c
+                    return 'do-nothing';
+                 if (_.some(loginids, {is_mlt: true})) // 1-b
+                    return 'upgrade-mf';
+                 return 'upgrade-mlt'; // 1-a
+             }
+             if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
+                if (_.some(loginids, {is_mf: true})) // 2-b
+                  return 'do-nothing';
+                return 'upgrade-mf'; // 2-a
+             }
+             // 3:
+             if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
+                return 'do-nothing'; // 3-b
+             return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
+             // 4: never happens, japan accounts are not able to log into webtrader.
+        });
     }
 
     return {
