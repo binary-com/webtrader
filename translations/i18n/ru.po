@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-09-04 18:14+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/ru/>\n"
+"PO-Revision-Date: 2016-09-15 20:37+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
 msgstr "Тип СС %D"
@@ -59,7 +59,7 @@ msgstr ""
 "агентами"
 
 msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr ""
+msgstr "--- title: Страница не найдена permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Штрих -DI"
@@ -70,24 +70,20 @@ msgstr "0-1 года"
 msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 сделок за последние 12 мес"
 
-#, fuzzy
 msgid "1"
-msgstr "10"
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 день"
 
-#, fuzzy
 msgid "1 Hour"
-msgstr "Часы"
+msgstr "1 Час"
 
-#, fuzzy
 msgid "1 Minute"
-msgstr "Минуты"
+msgstr "1 Минута"
 
-#, fuzzy
 msgid "1 Tick"
-msgstr "Тики"
+msgstr "1 тик"
 
 msgid "1-2 years"
 msgstr "1-2 года"
@@ -95,9 +91,8 @@ msgstr "1-2 года"
 msgid "10"
 msgstr "10"
 
-#, fuzzy
 msgid "10 Minutes"
-msgstr "Минуты"
+msgstr "10 Минут"
 
 msgid "10m"
 msgstr "10м"
@@ -105,9 +100,8 @@ msgstr "10м"
 msgid "15"
 msgstr "15"
 
-#, fuzzy
 msgid "15 Minutes"
-msgstr "Минуты"
+msgstr "15 Минут"
 
 msgid "15m"
 msgstr "15м"
@@ -122,19 +116,16 @@ msgid "1m"
 msgstr "1м"
 
 msgid "1t"
-msgstr ""
+msgstr "1т"
 
-#, fuzzy
 msgid "2"
-msgstr "2ч"
+msgstr "2"
 
-#, fuzzy
 msgid "2 Hours"
-msgstr "Часы"
+msgstr "2 Часа"
 
-#, fuzzy
 msgid "2 Minutes"
-msgstr "Минуты"
+msgstr "2 Минуты"
 
 msgid "2h"
 msgstr "2ч"
@@ -142,20 +133,17 @@ msgstr "2ч"
 msgid "2m"
 msgstr "2м"
 
-#, fuzzy
 msgid "3"
-msgstr "30"
+msgstr "3"
 
-#, fuzzy
 msgid "3 Minutes"
-msgstr "Минуты"
+msgstr "3 Минуты"
 
 msgid "30"
 msgstr "30"
 
-#, fuzzy
 msgid "30 Minutes"
-msgstr "Минуты"
+msgstr "30 минут"
 
 msgid "30-day limit on losses"
 msgstr "30-дневный лимит на убытки"
@@ -169,30 +157,26 @@ msgstr "30м"
 msgid "3m"
 msgstr "3м"
 
-#, fuzzy
 msgid "4"
-msgstr "4ч"
+msgstr "4"
 
-#, fuzzy
 msgid "4 Hours"
-msgstr "Часы"
+msgstr "4 часа"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 или более транзакций за последние 12 мес"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "4h"
 msgstr "4ч"
 
-#, fuzzy
 msgid "5"
-msgstr "15"
+msgstr "5"
 
-#, fuzzy
 msgid "5 Minutes"
-msgstr "Минуты"
+msgstr "5 минут"
 
 msgid "5m"
 msgstr "5м"
@@ -206,13 +190,11 @@ msgstr "7-дневный лимит на убытки"
 msgid "7-day turnover limit"
 msgstr "7-дневный лимит на объём покупок"
 
-#, fuzzy
 msgid "8"
-msgstr "8ч"
+msgstr "8"
 
-#, fuzzy
 msgid "8 Hours"
-msgstr "Часы"
+msgstr "8 часов"
 
 msgid "8h"
 msgstr "8ч"
@@ -247,9 +229,8 @@ msgstr "Ключ счёта не найден"
 msgid "Action"
 msgstr "Действие"
 
-#, fuzzy
 msgid "Add comparisons"
-msgstr "Сравнения"
+msgstr "Добавить сравнения"
 
 msgid "Add indicator"
 msgstr "Добавить индикатор"
@@ -257,9 +238,8 @@ msgstr "Добавить индикатор"
 msgid "Add level"
 msgstr "Добавить уровень"
 
-#, fuzzy
 msgid "Add/remove comparisons"
-msgstr "Добавить/удалить наложение"
+msgstr "Добавить/удалить сравнения"
 
 msgid "Add/remove overlays"
 msgstr "Добавить/удалить наложение"
@@ -289,7 +269,7 @@ msgid "Apply"
 msgstr "Применить"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "Binary.com: Подайте заявку на получение статуса"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Тест на целесообразность: ПРЕДУПРЕЖДЕНИЕ"
@@ -422,13 +402,11 @@ msgstr "Фон графика"
 msgid "Chart context menu"
 msgstr "Контекстное меню графика"
 
-#, fuzzy
 msgid "Chart template"
-msgstr "Виды графиков"
+msgstr "Шаблон графика"
 
-#, fuzzy
 msgid "Chart type"
-msgstr "График"
+msgstr "Вид графика"
 
 msgid "Choose password"
 msgstr "Выберите пароль"
@@ -464,7 +442,7 @@ msgid "Commodities trading frequency"
 msgstr "Частота торговли сырьевыми товарами"
 
 msgid "Comparisons"
-msgstr "Сравнения"
+msgstr "Сравнение"
 
 msgid "Conditions"
 msgstr "Условия"
@@ -496,9 +474,8 @@ msgstr "Контракт"
 msgid "Contract Confirmation"
 msgstr "Подтверждение контракта"
 
-#, fuzzy
 msgid "Contract Details"
-msgstr "Контракты"
+msgstr "Детали контракта"
 
 msgid "Contract is not yet started"
 msgstr "Контракт ещё не начался"
@@ -530,9 +507,8 @@ msgstr "Текущая спот-цена"
 msgid "Current Spot Time"
 msgstr "Текущее спот-время"
 
-#, fuzzy
 msgid "Current comparisons"
-msgstr "Сравнения"
+msgstr "Текущие сравнения"
 
 msgid "Current indicators"
 msgstr "Текущие индикаторы"
@@ -598,7 +574,7 @@ msgid "Default"
 msgstr "По умолчанию"
 
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 msgid "Delete level(s)"
 msgstr "Удалить уровень (уровни)"
@@ -673,7 +649,7 @@ msgid "Downloading .csv"
 msgstr "Загружается в формате .csv"
 
 msgid "Drawing tools"
-msgstr ""
+msgstr "Ср-ва отображения"
 
 msgid "Duration"
 msgstr "Продолжит."
@@ -823,7 +799,7 @@ msgid "HIGH"
 msgstr "ВЕРХНЕЕ ЗНАЧЕНИЕ"
 
 msgid "Have better luck at trading!"
-msgstr ""
+msgstr "Удачи в торговле!"
 
 msgid "Health"
 msgstr "Здравоохранение"
@@ -858,7 +834,6 @@ msgstr "Адрес"
 msgid "Horizontal Line"
 msgstr "Горизонтальная линия"
 
-#, fuzzy
 msgid "Horizontal line"
 msgstr "Горизонтальная линия"
 
@@ -890,7 +865,7 @@ msgstr ""
 "платёжными агентами"
 
 msgid "If the issue keeps happening, please contact"
-msgstr ""
+msgstr "Если проблема повторится, пожалуйста свяжитесь с"
 
 msgid "If you select a"
 msgstr "Если Вы выбираете"
@@ -929,16 +904,14 @@ msgstr "Внутри/Вне"
 msgid "Income Source"
 msgstr "Источник дохода"
 
-#, fuzzy
 msgid "Indicative"
 msgstr "Ориентировочная цена"
 
 msgid "Indicative Price"
 msgstr "Ориентировочная цена"
 
-#, fuzzy
 msgid "Indicators"
-msgstr "Добавить индикатор"
+msgstr "Индикаторы"
 
 msgid "Indices trading experience"
 msgstr "Опыт торговли индексами"
@@ -964,9 +937,8 @@ msgstr "Янв"
 msgid "January"
 msgstr "Январь"
 
-#, fuzzy
 msgid "Japan accounts are not supported"
-msgstr "Ваш браузер не поддерживается"
+msgstr "Японские счета не поддерживаются"
 
 msgid "Jul"
 msgstr "Июль"
@@ -1025,9 +997,8 @@ msgstr "Штрих линии"
 msgid "Link"
 msgstr "Ссылка"
 
-#, fuzzy
 msgid "Load chart template"
-msgstr "Загружается график и торговое меню"
+msgstr "Загрузить шаблон графика"
 
 msgid "Loading"
 msgstr "Идёт загрузка"
@@ -1319,10 +1290,10 @@ msgid "OPEN"
 msgstr "ОТКРЫТИЕ"
 
 msgid "Oct"
-msgstr ""
+msgstr "Окт."
 
 msgid "October"
-msgstr ""
+msgstr "Октябрь"
 
 msgid "Offset"
 msgstr "Изменение"
@@ -1345,7 +1316,7 @@ msgid "One last step left"
 msgstr "Остался один шаг"
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "Упс... Страница недоступна"
 
 msgid "Open"
 msgstr "Открытие"
@@ -1356,9 +1327,8 @@ msgstr "Открыть счёт"
 msgid "Open Price"
 msgstr "Цена открытия"
 
-#, fuzzy
 msgid "Open a Financial Account"
-msgstr "Открыть счёт"
+msgstr "Открыть финансовый счёт"
 
 msgid "Open account"
 msgstr "Открыть счёт"
@@ -1407,7 +1377,7 @@ msgid "PPO Line Stroke"
 msgstr "Штрих линии ПЦО"
 
 msgid "Page Not Found"
-msgstr ""
+msgstr "Страница не найдена"
 
 msgid "Password must be 6 characters minimum"
 msgstr "Минимальная длина пароля: 6 знаков"
@@ -1424,13 +1394,11 @@ msgstr "Пароль изменён успешно"
 msgid "Passwords didn't match. Please type them again"
 msgstr "Пароли не совпали. Пожалуйста, введите пароли снова"
 
-#, fuzzy
 msgid "Payment agent"
-msgstr "платёжный агент"
+msgstr "Платёжный агент"
 
-#, fuzzy
 msgid "Payment agents"
-msgstr "платёжный агент"
+msgstr "Платёжные агенты"
 
 msgid "Payments"
 msgstr "Платежи"
@@ -1472,7 +1440,7 @@ msgid "Please choose at least one token scope"
 msgstr "Пожалуйста, выберите минимум один уровень ключа"
 
 msgid "Please confirm the following details in order to complete the transfer"
-msgstr ""
+msgstr "Пожалуйста, подтвердите следующие данные, чтобы завершить перевод"
 
 msgid "Please enter a number between"
 msgstr "Пожалуйста, введите число в следующем диапазоне:"
@@ -1625,7 +1593,7 @@ msgid "Primary"
 msgstr "Первичн."
 
 msgid "Print chart"
-msgstr ""
+msgstr "Напечатать график"
 
 msgid "Profit"
 msgstr "Прибыль"
@@ -1681,9 +1649,8 @@ msgstr "Перезагрузка страницы"
 msgid "Remove Selected"
 msgstr "Удалить выбранное"
 
-#, fuzzy
 msgid "Rename"
-msgstr "Название ключа"
+msgstr "Переименовать"
 
 msgid "Repeat password"
 msgstr "Повторите пароль"
@@ -1695,10 +1662,10 @@ msgid "Reset to Defaults"
 msgstr "Возврат к настройкам по умолчанию"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "Сбросить масштаб"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "Сбросить уровень масштаба 1:1"
 
 msgid "Resources"
 msgstr "Ресурсы"
@@ -1712,9 +1679,8 @@ msgstr "Результаты"
 msgid "Return"
 msgstr "Прибыль"
 
-#, fuzzy
 msgid "Return to trading page"
-msgstr "Перезагрузка страницы"
+msgstr "Вернуться к странице торговли"
 
 msgid "Rise"
 msgstr "Повышение"
@@ -1744,16 +1710,16 @@ msgid "Sat"
 msgstr "Суб"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Суббота"
 
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 msgid "Save as"
-msgstr ""
+msgstr "Сохранить как"
 
 msgid "Save changes"
-msgstr ""
+msgstr "Сохранить изменения"
 
 msgid "Secondary"
 msgstr "Вторичн."
@@ -1788,20 +1754,17 @@ msgstr "Котировка продажи"
 msgid "Sell Time"
 msgstr "Время продажи"
 
-#, fuzzy
 msgid "Send to account #"
-msgstr "Открыть счёт"
+msgstr "Отправить на счёт #"
 
-#, fuzzy
 msgid "Sent to account"
-msgstr "Открыть счёт"
+msgstr "Отправлено на счёт"
 
 msgid "Sep"
-msgstr ""
+msgstr "Сент"
 
-#, fuzzy
 msgid "September"
-msgstr "Декабрь"
+msgstr "Сентябрь"
 
 msgid "Session"
 msgstr "Сессия"
@@ -1818,9 +1781,8 @@ msgstr "Заканч."
 msgid "Share"
 msgstr "Поделиться"
 
-#, fuzzy
 msgid "Share chart"
-msgstr "Поделиться"
+msgstr "Поделиться графиком"
 
 msgid "Short MA Type"
 msgstr "Короткий тип СС"
@@ -1892,10 +1854,10 @@ msgid "Stake"
 msgstr "Ставка"
 
 msgid "Standard methods"
-msgstr ""
+msgstr "Стандартные методы"
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "Стандартный вывод"
 
 msgid "Start Time"
 msgstr "Время начала"
@@ -1949,7 +1911,7 @@ msgid "Stroke width"
 msgstr "Ширина штриха"
 
 msgid "Submit"
-msgstr ""
+msgstr "Подтвердить"
 
 msgid "Successfully added new token"
 msgstr "Новый ключ добавлен успешно"
@@ -1957,9 +1919,8 @@ msgstr "Новый ключ добавлен успешно"
 msgid "Sun"
 msgstr "Вск"
 
-#, fuzzy
 msgid "Sunday"
-msgstr "Понедельник"
+msgstr "Воскресенье"
 
 msgid "TEMA"
 msgstr "ТЭСС"
@@ -1970,13 +1931,11 @@ msgstr "ТСС"
 msgid "Table"
 msgstr "Таблица"
 
-#, fuzzy
 msgid "Tel"
-msgstr " "
+msgstr "Тел"
 
-#, fuzzy
 msgid "Template name"
-msgstr "Название ключа"
+msgstr "Название шаблона"
 
 msgid "Terms"
 msgstr "Условия"
@@ -2009,6 +1968,8 @@ msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
 msgstr ""
+"Страница не найдена. Данная страница не существует или Вы ввели неправильный "
+"адрес. Пожалуйста, проверьте, не допустили ли Вы опечатку"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -2035,13 +1996,13 @@ msgid "This contract won"
 msgstr "Контракт выиграл"
 
 msgid "This field is required"
-msgstr ""
+msgstr "Данное поле является обязательным"
 
 msgid "Thu"
 msgstr "Чет"
 
 msgid "Thursday"
-msgstr ""
+msgstr "Четверг"
 
 msgid "Tick Trade app"
 msgstr "Приложение Tick Trade"
@@ -2071,22 +2032,25 @@ msgid "Title"
 msgstr "Заголовок"
 
 msgid "To"
-msgstr ""
+msgstr "Чтобы"
 
 msgid "To deposit money please contact the payment agent directly"
 msgstr ""
+"Чтобы пополнить счёт, пожалуйста, свяжитесь напрямую с платёжным агентом"
 
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
 msgstr ""
+"Свяжитесь с платёжным агентом для определённых способов пополнений, вывода "
+"средств и отдельных валют, не поддержеваемых Binary.com"
 
-#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
 msgstr ""
-"Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
+"Чтобы вывести средства, пожалуйста, введите специальный проверочный код, "
+"отправленный на Ваш электронный адрес"
 
 msgid "Token"
 msgstr "Ключ"
@@ -2171,7 +2135,7 @@ msgid "Tradingview for Binary.com"
 msgstr "Tradingview для Binary.com"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "Перевести на другой счёт на Binary"
 
 msgid "Try"
 msgstr "Попробовать"
@@ -2180,7 +2144,7 @@ msgid "Tue"
 msgstr "Вт"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Вторник"
 
 msgid "Turnover"
 msgstr "Объём покупок"
@@ -2192,7 +2156,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"
 
 msgid "Unlock"
-msgstr ""
+msgstr "Разблокировать"
 
 msgid "Up/Down"
 msgstr "Вверх/Вниз"
@@ -2204,7 +2168,7 @@ msgid "Update Settings"
 msgstr "Обновить настройки"
 
 msgid "Upgrade to a Real Account"
-msgstr ""
+msgstr "Открыть Реальный счёт"
 
 msgid "Upper Band Stroke"
 msgstr "Штрих верхней полосы"
@@ -2216,6 +2180,8 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr ""
+"Нажмите на кнопку \"Сохранить как ...\", чтобы сохранить настройки графика, "
+"его вид, период времени, индикаторы и параметры сравнения"
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
@@ -2232,7 +2198,6 @@ msgstr "Подтвердите новый пароль"
 msgid "Vertical Line"
 msgstr "Вертикальная линия"
 
-#, fuzzy
 msgid "Vertical line"
 msgstr "Вертикальная линия"
 
@@ -2267,7 +2232,7 @@ msgid "Wed"
 msgstr "Ср"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Среда"
 
 msgid "While on the go, you can"
 msgstr "Прямо на ходу Вы можете"
@@ -2276,11 +2241,10 @@ msgid "Windows"
 msgstr "Окна"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "Вывести средства"
 
-#, fuzzy
 msgid "Withdrawal via payment agents"
-msgstr "платёжный агент"
+msgstr "Вывод через платёжных агентов"
 
 msgid "X-axis labels"
 msgstr "Метки оси X"
@@ -2297,9 +2261,8 @@ msgstr "Сетка оси Y"
 msgid "Y-axis labels"
 msgstr "Метки оси Y"
 
-#, fuzzy
 msgid "Yes"
-msgstr "да"
+msgstr "Да"
 
 msgid "You have excluded yourself until"
 msgstr "Вы ограничили свою деятельность до"
@@ -2317,7 +2280,7 @@ msgstr ""
 "информацию об OAuth можно получить на странице"
 
 msgid "You haven't saved any templates yet"
-msgstr ""
+msgstr "У Вас нет сохранённых шаблонов"
 
 msgid "You pay"
 msgstr "Вы платите"
@@ -2484,7 +2447,7 @@ msgid "main site"
 msgstr "основной сайт"
 
 msgid "market is presently closed"
-msgstr ""
+msgstr "рынок сейчас закрыт"
 
 msgid "minute"
 msgstr "мин."
