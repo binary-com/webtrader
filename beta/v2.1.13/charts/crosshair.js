@@ -1,0 +1,1 @@
+define(["charts/charts"],function(){var a=function(a){var b=$(a).highcharts();b&&(b.xAxis[0].crosshair=!b.xAxis[0].crosshair,b.yAxis[0].crosshair=!b.yAxis[0].crosshair,b.tooltip.options.formatter=b.yAxis[0].crosshair?null:function(){return!1})};return{toggleCrossHair:a}});
