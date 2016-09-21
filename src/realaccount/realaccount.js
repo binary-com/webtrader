@@ -301,9 +301,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                .then(function(data){
                  var info = data.new_account_maltainvest;
                  oauth = local_storage.get('oauth');
-                 /* when new accoutns are created document.cookie is not change, set is_financial: ture so
-                  * that navigation.js can hide the account promotion link */
-                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: 0, is_financial: true});
+                 oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: 0});
                  local_storage.set('oauth', oauth);
                  $.growl.notice({ message: 'Account successfully created' });
                  $.growl.notice({ message: 'Switching to your new account ...' });
@@ -379,8 +377,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
               * allow UK MLT client to open MF account. */
              var oauth = local_storage.get('oauth') || [];
              var loginids = Cookies.loginids();
-             var no_financial_account_registered = _.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true});
-             var a_real_account_already_exists = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
+             var no_financial_account_registered = _.every(loginids, {is_mf: false});
+             var a_real_account_already_exists = _.some(loginids, {is_real: true});
              if(no_financial_account_registered && a_real_account_already_exists) {
                 var residence = Cookies.residence();
                 var authorize = local_storage.get('authorize');
@@ -397,6 +395,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     }
 
     return {
-      init: init
+      init: init,
     }
 });
