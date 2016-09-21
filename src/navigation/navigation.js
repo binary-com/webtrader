@@ -108,6 +108,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
               toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
               toggle(show_financial_link, upgrade_account_li.find('.open-financial-account-span'));
               toggle(show_realaccount_link || show_financial_link, upgrade_account_li);
+              toggle(show_realaccount_link || show_financial_link, upgrade_account_li.find('a.real-account'));
             });
 
             /* switch between account on user click */
@@ -222,7 +223,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
 
              var loginids = Cookies.loginids();
              if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-                 if (_.some(loginids, {is_mlt: true}) && _.some({is_mf: true})) // 1-c
+                 if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
                     return 'do-nothing';
                  if (_.some(loginids, {is_mlt: true})) // 1-b
                     return 'upgrade-mf';

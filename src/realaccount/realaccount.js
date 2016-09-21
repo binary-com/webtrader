@@ -2,8 +2,7 @@
  * Created by amin on June 14, 2016.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment', 'text!navigation/countries.json'], function($, liveapi, windows, rv, _, moment, countries) {
-    countries = JSON.parse(countries);
+define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment', 'navigation/navigation'], function($, liveapi, windows, rv, _, moment, navigation) {
     require(['text!realaccount/realaccount.html']);
     require(['css!realaccount/realaccount.css']);
     var real_win = null;
@@ -19,16 +18,27 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       real_win_li = li;
       li.click(function () {
           if(!real_win)
-            require(['text!realaccount/realaccount.html'], init_real_win);
+            require(['text!realaccount/realaccount.html'], function(html) {
+              navigation.getLandingCompany()
+                .then(function(what_todo) {
+                  init_real_win(html, what_todo);
+                })
+                .catch(error_handler);
+            });
           else
             real_win.moveToTop();
       });
     }
 
-    function init_real_win(root) {
+    function init_real_win(root, what_todo) {
       root = $(root).i18n();
+      var _title = {
+        'upgrade-mlt': 'Real Money Account Opening'.i18n(),
+        'upgrade-mf': 'Financial Account Opening form'.i18n()
+      }[what_todo];
+
       real_win = windows.createBlankWindow(root, {
-          title: 'Real Money Account Opening'.i18n(),
+          title: _title,
           resizable:false,
           collapsable:false,
           minimizable: true,
@@ -49,7 +59,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           }
       });
 
-      init_state(root);
+      init_state(root, what_todo);
       real_win.dialog('open');
 
       /* update dialog position, this way when dialog is resized it will not move*/
@@ -63,7 +73,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       real_win.fixFooterPosition();
     }
 
-    function init_state(root) {
+    function init_state(root, what_todo) {
       var app_id = liveapi.app_id;
       var state = {
         route: { value: 'user' }, // routes: ['user', 'financial']
@@ -77,17 +87,13 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             state.empty_fields.clear();
           }
         },
-        company: {
-          type: 'normal', // could be one of ['normal', 'maltainvest']
-          financial: undefined,
-          gaming: undefined,
-        },
+        what_todo: what_todo,
         risk: {
           visible: false,
         },
         user: {
           disabled: false,
-          accepted: false,
+          accepted: what_todo === 'upgrade-mf',
           salutation: 'Mr',
           salutation_array: ['Mr', 'Mrs', 'Ms', 'Miss'],
           first_name: '',
@@ -163,7 +169,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           return;
         }
 
-        if(state.company.type === 'normal') {
+        if(state.what_todo === 'upgrade-mlt') {
           state.user.new_account_real();
           return;
         }
@@ -190,9 +196,10 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           secret_answer: user.secret_answer.replace('""', "'")
         };
 
+        state.user.disabled = true;
         liveapi.send(request)
                .then(function(data){
-                 state.user.disabled = true;
+                 state.user.disabled = false;
                  var info = data.new_account_real;
                  oauth = local_storage.get('oauth');
                  oauth.push({id: info.client_id, token: info.oauth_token, is_virtual: 0});
@@ -202,7 +209,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  /* login with the new account */
                  return liveapi.switch_account(info.client_id)
                                .then(function() {
-                                 real_win.dialog('destroy');
+                                 real_win.dialog('close');
                                  real_win_li.hide();
                                });
                })
@@ -308,7 +315,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  /* login with the new account */
                  return liveapi.switch_account(info.client_id)
                                .then(function() {
-                                 real_win.dialog('destroy');
+                                 real_win.dialog('close');
                                  real_win_li.hide();
                                });
                })
@@ -354,42 +361,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
            .then(function(data){
              state.user.state_address_array = data.states_list;
              state.user.state_address = data.states_list[0].value;
-           })
-           .catch(error_handler);
-
-      residence_promise
-           .then( function() { return liveapi.cached.send({landing_company: state.user.residence }); } )
-           .then(function(data) {
-             var financial = data.landing_company.financial_company;
-             var gaming = data.landing_company.gaming_company;
-             state.company.financial = financial;
-             state.company.gaming = gaming;
-             if(financial && !gaming && financial.shortcode === 'maltainvest') {
-                state.company.type = 'maltainvest';
-                state.user.accepted = true;
-            }
-             else {
-                state.company.type = 'normal';
-                state.user.accepted = false;
-            }
-
-             /* if there is not finiancial account and there is already one real acount,
-              * allow UK MLT client to open MF account. */
-             var oauth = local_storage.get('oauth') || [];
-             var loginids = Cookies.loginids();
-             var no_financial_account_registered = _.every(loginids, {is_mf: false});
-             var a_real_account_already_exists = _.some(loginids, {is_real: true});
-             if(no_financial_account_registered && a_real_account_already_exists) {
-                var residence = Cookies.residence();
-                var authorize = local_storage.get('authorize');
-                var ok =
-                    (countries[residence] && countries[residence].financial_company === 'maltainvest') ||
-                    (Cookies.residence() === 'gb' && authorize && /^MLT/.test(authorize.loginid));
-                if(ok) {
-                  state.company.type = 'maltainvest';
-                  state.user.accepted = true;
-                }
-             }
            })
            .catch(error_handler);
     }

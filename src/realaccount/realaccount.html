@@ -103,7 +103,7 @@
             class='validation'>* Please answer to secret question, within 4-50 characters.</span>
     </div>
 
-    <label rv-if='company.type | eq "normal"'>
+    <label rv-if='what_todo | eq "upgrade-mlt"'>
       <input type='checkbox' rv-checked='user.accepted' />
       I have read and agree to Binary.com
       <a href="https://staging.binary.com/en/terms-and-conditions.html" target="_blank">terms and conditions</a>.
@@ -111,10 +111,10 @@
 
     <button rv-on-click='user.click'
             rv-disabled='user.disabled | or-not user.accepted'
-            rv-css-margin-top='company.type | eq "normal" | ternary "10px" "25px"'
+            rv-css-margin-top='what_todo | eq "upgrade-mlt" | ternary "10px" "25px"'
             rv-css-opacity='user.disabled | or-not user.accepted| ternary 0.5 1'>
-              <span rv-if='company.type | eq "normal"'>Open Account</span>
-              <span rv-if='company.type | not-eq "normal"'>Continue</span>
+              <span rv-if='what_todo | eq "upgrade-mlt"'>Open Account</span>
+              <span rv-if='what_todo | not-eq "upgrade-mlt"'>Continue</span>
           </button>
   </div>
 
@@ -325,8 +325,8 @@
 
     <button rv-on-click='financial.click' rv-disabled='financial.disabled'
             rv-css-opacity='financial.disabled | ternary 0.5 1'>
-              <span rv-if='company.type | eq "maltainvest"'>Open Account</span>
-              <span rv-if='company.type | not-eq "maltainvest"'>Continue</span>
+              <span rv-if='what_todo | eq "upgrade-mf"'>Open Account</span>
+              <span rv-if='what_todo | not-eq "upgrade-mf"'>Continue</span>
             </button>
   </div>
 
