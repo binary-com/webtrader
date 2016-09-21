@@ -95,8 +95,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                     });
                 market_names.selectmenu('widget').addClass('asset-index-selectmenu');
 
+                var is_rtl_language = local_storage.get('i18n') && local_storage.get('i18n').value === 'ar';
                 var submarket_names = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
+                    .makeSelectmenu($('<select />').insertBefore(is_rtl_language ? market_names : dialog_buttons), {
                         list: Object.keys(markets[market_names.val()]),
                         inx: 0,
                         changed: function (val) {

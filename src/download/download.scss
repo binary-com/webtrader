@@ -5,35 +5,29 @@
 
 .download {
     text-align: center;
+    td {
+      white-space: nowrap;
+    }
+    td.fill-remaining-space {
+      width: 100%;
+    }
 }
 
-.download_fromDate {
-    min-width: 110px;
-    max-width: 110px;
+.download_fromDate, .download_fromTime {
+    display: inline-block;
     position: relative;
-    top: -3px;
     line-height: 5px !important;
 }
-
-.download_fromTime {
-    min-width: 60px;
-    max-width: 60px;
-    position: relative;
-    top: -3px;
-    line-height: 5px !important;
+.download_inst_time_cont div {
+    display: inline-block;
 }
 
-.download_inst_time_cont {
-    display: flex;
-}
-
-.download_instruments_container li, .download_timePeriod_container li {
-    text-align: left;
-    white-space: nowrap;
+.download_instruments_container, .download_timePeriod_container {
+  ul { direction: ltr; }
 }
 
 .download_timePeriod_container {
-    margin-left: 5px;
+    margin:0 5px;
 }
 
 .download_instruments_container > ul, .download_timePeriod_container > ul {
@@ -52,8 +46,11 @@
         vertical-align: middle;
     }
 
-    button.img {
+    button {
+      &.img{
+        background: #f3f1f2;
         padding: 5px;
+      }
     }
 
     .overlay {

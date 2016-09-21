@@ -26,7 +26,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
 
     function init_dialog_async(root) {
         return new Promise(function(resolve, reject){
-          root = $(root);
+          root = $(root).i18n();
 
           /* affiliates route */
           if (getParameterByName("affiliates") == 'true') {

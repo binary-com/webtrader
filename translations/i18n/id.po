@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 06:12+0200\n"
-"PO-Revision-Date: 2016-09-01 03:01+0000\n"
+"PO-Revision-Date: 2016-09-14 04:41+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/id/>\n"
@@ -54,6 +54,10 @@ msgstr ""
 "SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi "
 "Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka"
 
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr ""
+"--- judul: kutipan permalink Halaman Tidak Ditemukan: /404.html: \"\" ---"
+
 msgid "-DI Stroke"
 msgstr "Stroke -DI"
 
@@ -63,8 +67,20 @@ msgstr "0-1 tahun"
 msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transaksi pada 12 bulan terakhir"
 
+msgid "1"
+msgstr "1"
+
 msgid "1 Day"
 msgstr "1 Hari"
+
+msgid "1 Hour"
+msgstr "1 Jam"
+
+msgid "1 Minute"
+msgstr "1 Menit"
+
+msgid "1 Tick"
+msgstr "1 Tik"
 
 msgid "1-2 years"
 msgstr "1-2 tahun"
@@ -72,11 +88,17 @@ msgstr "1-2 tahun"
 msgid "10"
 msgstr "10"
 
+msgid "10 Minutes"
+msgstr "10 Menit"
+
 msgid "10m"
 msgstr "10m"
 
 msgid "15"
 msgstr "15"
+
+msgid "15 Minutes"
+msgstr "15 Menit"
 
 msgid "15m"
 msgstr "15m"
@@ -90,14 +112,35 @@ msgstr "1h"
 msgid "1m"
 msgstr "1m"
 
+msgid "1t"
+msgstr "1t"
+
+msgid "2"
+msgstr "2"
+
+msgid "2 Hours"
+msgstr "2 Jam"
+
+msgid "2 Minutes"
+msgstr "2 Menit"
+
 msgid "2h"
 msgstr "2h"
 
 msgid "2m"
 msgstr "2m"
 
+msgid "3"
+msgstr "3"
+
+msgid "3 Minutes"
+msgstr "3 Menit"
+
 msgid "30"
 msgstr "30"
+
+msgid "30 Minutes"
+msgstr "30 Menit"
 
 msgid "30-day limit on losses"
 msgstr "batas kerugian 30-hari"
@@ -111,11 +154,26 @@ msgstr "30m"
 msgid "3m"
 msgstr "3m"
 
+msgid "4"
+msgstr "4"
+
+msgid "4 Hours"
+msgstr "4 Jam"
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transaksi atau lebih dalam 12 bulan terakhir"
 
+msgid "404"
+msgstr "404"
+
 msgid "4h"
 msgstr "4h"
+
+msgid "5"
+msgstr "5"
+
+msgid "5 Minutes"
+msgstr "5 Menit"
 
 msgid "5m"
 msgstr "5m"
@@ -128,6 +186,12 @@ msgstr "batas kerugian 7-hari"
 
 msgid "7-day turnover limit"
 msgstr "batas pembelian 7-hari"
+
+msgid "8"
+msgstr "8"
+
+msgid "8 Hours"
+msgstr "8 Jam"
 
 msgid "8h"
 msgstr "8h"
@@ -162,14 +226,17 @@ msgstr "Token akun tidak ditemukan"
 msgid "Action"
 msgstr "Aksi"
 
+msgid "Add comparisons"
+msgstr "Tambah perbandingan"
+
 msgid "Add indicator"
 msgstr "Tambah indikator"
 
 msgid "Add level"
 msgstr "Tambah level"
 
-msgid "Add overlays"
-msgstr "Tambah overlays"
+msgid "Add/remove comparisons"
+msgstr "Tambah/hapus perbandingan"
 
 msgid "Add/remove overlays"
 msgstr "Tambah/hapus overlays"
@@ -330,6 +397,12 @@ msgstr "Latar belakang grafik"
 msgid "Chart context menu"
 msgstr "Menu konteks grafik"
 
+msgid "Chart template"
+msgstr "Template Grafik"
+
+msgid "Chart type"
+msgstr "Jenis grafik"
+
 msgid "Choose password"
 msgstr "Pilih kata sandi"
 
@@ -363,6 +436,9 @@ msgstr "Pengalaman trading komoditas"
 msgid "Commodities trading frequency"
 msgstr "Frekuensi trading komoditas"
 
+msgid "Comparisons"
+msgstr "Perbandingan"
+
 msgid "Conditions"
 msgstr "Persyaratan"
 
@@ -392,6 +468,9 @@ msgstr "Kontrak"
 
 msgid "Contract Confirmation"
 msgstr "Konfirmasi Kontrak"
+
+msgid "Contract Details"
+msgstr "Rincian Kontrak"
 
 msgid "Contract is not yet started"
 msgstr "Kontrak belum dimulai"
@@ -423,11 +502,11 @@ msgstr "Spot Terkini"
 msgid "Current Spot Time"
 msgstr "Waktu Spot Terkini"
 
+msgid "Current comparisons"
+msgstr "Perbandingan saat ini"
+
 msgid "Current indicators"
 msgstr "Indikator Terkini"
-
-msgid "Current overlays"
-msgstr "Overlays Terkini"
 
 msgid "Current password"
 msgstr "Kata sandi terkini"
@@ -488,6 +567,9 @@ msgstr "Menurun"
 
 msgid "Default"
 msgstr "Kelalaian"
+
+msgid "Delete"
+msgstr "Hapus"
 
 msgid "Delete level(s)"
 msgstr "Hapus level"
@@ -560,6 +642,9 @@ msgstr "Download dalam"
 
 msgid "Downloading .csv"
 msgstr "Downloading .csv"
+
+msgid "Drawing tools"
+msgstr "Alat gambar"
 
 msgid "Duration"
 msgstr "Durasi"
@@ -708,6 +793,9 @@ msgstr "Grid Muda"
 msgid "HIGH"
 msgstr "TINGGI"
 
+msgid "Have better luck at trading!"
+msgstr "Lebih beruntung pada trading!"
+
 msgid "Health"
 msgstr "Kesehatan"
 
@@ -741,6 +829,9 @@ msgstr "Alamat Rumah"
 msgid "Horizontal Line"
 msgstr "Garis Horisontal"
 
+msgid "Horizontal line"
+msgstr "Garis horisontal"
+
 msgid "Hours"
 msgstr "Jam"
 
@@ -766,6 +857,9 @@ msgstr ""
 "kredibilitas dan eksistensi Agen Pembayaran bersangkutan sebelum "
 "bertransaksi dengan mereka"
 
+msgid "If the issue keeps happening, please contact"
+msgstr "Jika masalah terus berlanjut, silahkan hubungi"
+
 msgid "If you select a"
 msgstr "Jika Anda memilih"
 
@@ -778,13 +872,6 @@ msgid ""
 msgstr ""
 "Untuk menggunakan tema dengan benar, merefresh halaman adalah penting. Apa "
 "Anda ingin melanjutkan?"
-
-msgid ""
-"In order to properly apply this language, a full refresh of page is "
-"required. Are you sure you want to proceed?"
-msgstr ""
-"Untuk menggunakan pilihan bahasa ini dengan benar, Anda perlu merefresh "
-"halaman. Apakah Anda yakin ingin melanjutkan?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -808,8 +895,14 @@ msgstr "In/Out"
 msgid "Income Source"
 msgstr "Sumber Pendapatan"
 
+msgid "Indicative"
+msgstr "Indikatif"
+
 msgid "Indicative Price"
 msgstr "Harga Indikatif"
+
+msgid "Indicators"
+msgstr "Indikator"
 
 msgid "Indices trading experience"
 msgstr "Pengalaman trading indeks"
@@ -834,6 +927,9 @@ msgstr "Jan"
 
 msgid "January"
 msgstr "Januari"
+
+msgid "Japan accounts are not supported"
+msgstr "Akun Jepang tidak tersedia"
 
 msgid "Jul"
 msgstr "Jul"
@@ -891,6 +987,9 @@ msgstr "Garis Stroke"
 
 msgid "Link"
 msgstr "Link"
+
+msgid "Load chart template"
+msgstr "Memuat template grafik"
 
 msgid "Loading"
 msgstr "Loading"
@@ -1202,6 +1301,9 @@ msgstr "Saat batasan ini tercapai, Anda tidak dapat mendeposit"
 msgid "One last step left"
 msgstr "Satu langkah terakhir"
 
+msgid "Oops... Page Not Available"
+msgstr "Maaf...Halaman Tidak Tersedia"
+
 msgid "Open"
 msgstr "Buka"
 
@@ -1211,11 +1313,11 @@ msgstr "Daftar Akun"
 msgid "Open Price"
 msgstr "Harga Awal"
 
+msgid "Open a Financial Account"
+msgstr "Daftar Akun Keuangan"
+
 msgid "Open account"
 msgstr "Daftar akun"
-
-msgid "Open real money account"
-msgstr "Daftar akun uang riil"
 
 msgid "Opens"
 msgstr "Buka"
@@ -1259,6 +1361,9 @@ msgstr "PNG"
 
 msgid "PPO Line Stroke"
 msgstr "Garis Stroke PPO"
+
+msgid "Page Not Found"
+msgstr "Halaman Tidak Tersedia"
 
 msgid "Password must be 6 characters minimum"
 msgstr "Kata sandi harus terdiri dari minimum 6 karakter"
@@ -1374,7 +1479,8 @@ msgid "Please enter the verification code sent to your email"
 msgstr "Silahkan masukkan kode verifikasi yang dikirim ke alamat email Anda"
 
 msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "Silahkan masukkan nilai antara 0 hingga 99999 untuk batasan sesi durasi"
+msgstr ""
+"Silahkan masukkan nilai antara 0 hingga 99999 untuk batasan sesi durasi"
 
 msgid "Please enter your city address"
 msgstr "Masukkan alamat kota Anda"
@@ -1519,6 +1625,9 @@ msgstr "Halaman reload"
 msgid "Remove Selected"
 msgstr "Hapus Pilihan"
 
+msgid "Rename"
+msgstr "Ganti nama"
+
 msgid "Repeat password"
 msgstr "Ulang kata sandi"
 
@@ -1545,6 +1654,9 @@ msgstr "Hasil"
 
 msgid "Return"
 msgstr "Laba"
+
+msgid "Return to trading page"
+msgstr "Kembali ke halaman trading"
 
 msgid "Rise"
 msgstr "Rise"
@@ -1575,6 +1687,15 @@ msgstr "Sab"
 
 msgid "Saturday"
 msgstr "Sabtu"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Save as"
+msgstr "Simpan sebagai"
+
+msgid "Save changes"
+msgstr "Simpan perubahan"
 
 msgid "Secondary"
 msgstr "Sekunder"
@@ -1635,6 +1756,9 @@ msgstr "Diselesaikan"
 
 msgid "Share"
 msgstr "Bagikan"
+
+msgid "Share chart"
+msgstr "Bagikan grafik"
 
 msgid "Short MA Type"
 msgstr "Jenis MA Pendek"
@@ -1786,6 +1910,9 @@ msgstr "Tabel"
 msgid "Tel"
 msgstr "Tel"
 
+msgid "Template name"
+msgstr "Nama template"
+
 msgid "Terms"
 msgstr "Syarat"
 
@@ -1813,6 +1940,14 @@ msgstr ""
 "adalah memiliki risiko tinggi. Jika prediksi Anda tidak tepat maka Anda akan "
 "kehilangan semua modal yang anda tanamkan berupa harga kontrak yang Anda "
 "bayarkan"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
+msgstr ""
+"Halaman yang Anda minta tidak dapat ditemukan. Mungkin berhubung sudah tidak "
+"tersedia lagi atau alamat salah. Silakan periksa jika terdapat salah "
+"pengetikkan"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1861,6 +1996,9 @@ msgstr "Tile"
 
 msgid "Time Period"
 msgstr "Periode Waktu"
+
+msgid "Time interval"
+msgstr "Interval waktu"
 
 msgid "Time period"
 msgstr "Periode Waktu"
@@ -2007,11 +2145,21 @@ msgstr "Acara Mendatang"
 msgid "Update Settings"
 msgstr "Pembaruan Pengaturan"
 
+msgid "Upgrade to a Real Account"
+msgstr "Mengupgrade ke Akun Riil"
+
 msgid "Upper Band Stroke"
 msgstr "Stroke Upper Band"
 
 msgid "Use"
 msgstr "Gunakan"
+
+msgid ""
+"Use the \"Save as ...\" button to save the chart settings, type, time "
+"period, indicators and comparisons"
+msgstr ""
+"Gunakan tombol \"Simpan sebagai...\" untuk menyimpan pengaturan grafik, "
+"jenis, periode waktu, indikator dan perbandingan"
 
 msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
@@ -2027,6 +2175,9 @@ msgstr "Verifikasi kata sandi baru"
 
 msgid "Vertical Line"
 msgstr "Garis Vertikal"
+
+msgid "Vertical line"
+msgstr "Garis vertikal"
 
 msgid "View"
 msgstr "Lihat"
@@ -2104,6 +2255,9 @@ msgid ""
 msgstr ""
 "Anda perlu mendaftar webtrader dan dapatkan ID App sebelum dapat menggunakan "
 "server OAuth lain. Untuk informasi lanjut silahkan lihat detail OAuth di"
+
+msgid "You haven't saved any templates yet"
+msgstr "Anda belum menyimpan template apa pun"
 
 msgid "You pay"
 msgstr "Anda membayar"
@@ -2271,6 +2425,9 @@ msgstr "adalah ketika kontrak diproses oleh server dan"
 msgid "main site"
 msgstr "situs utama"
 
+msgid "market is presently closed"
+msgstr "pasar saat ini ditutup"
+
 msgid "minute"
 msgstr "menit"
 
@@ -2349,11 +2506,21 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Laba"
 
-msgid "Comparisons"
-msgstr "Perbandingan"
+#~ msgid "Add overlays"
+#~ msgstr "Tambah overlays"
 
-msgid "Time interval"
-msgstr ""
+#~ msgid "Current overlays"
+#~ msgstr "Overlays Terkini"
+
+#~ msgid ""
+#~ "In order to properly apply this language, a full refresh of page is "
+#~ "required. Are you sure you want to proceed?"
+#~ msgstr ""
+#~ "Untuk menggunakan pilihan bahasa ini dengan benar, Anda perlu merefresh "
+#~ "halaman. Apakah Anda yakin ingin melanjutkan?"
+
+#~ msgid "Open real money account"
+#~ msgstr "Daftar akun uang riil"
 
 #~ msgid "Apply new theme?"
 #~ msgstr "Terapkan tema baru?"

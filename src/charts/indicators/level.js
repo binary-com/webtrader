@@ -25,7 +25,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
             var defaultStrokeColor = '#cd0a0a';
 
-            $html = $($html);
+            $html = $($html).i18n();
             //$html.hide();
             $html.appendTo("body");
             $html.find("input[type='button']").button();
