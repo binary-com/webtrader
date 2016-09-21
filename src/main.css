@@ -301,6 +301,11 @@ input:focus {
 }
 #growls { top: 110px !important; }
 
+.growl-error a {
+  color: white !important;
+  text-decoration: underline;
+}
+
 button {
     outline: 0 !important;
 }

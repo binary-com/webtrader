@@ -100,6 +100,14 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                 is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
 
                 var loginids = Cookies.loginids();
+                if(_.some(loginids, {is_disabled: true})) {
+                  $.growl.error({
+                    fixed: true,
+                    message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
+                            + "For Security reasons your account has been locked, please contact Helpdesk for further details".i18n()
+                            + "</a>"
+                  });
+                }
                 var has_real_account = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
                 var has_disabled_account =  _.some(loginids, {is_disabled: true});
 
