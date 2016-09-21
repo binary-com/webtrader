@@ -187,6 +187,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           close: function () {
             token_win_view && token_win_view.unbind();
             token_win_view = null;
+            token_win.destroy();
             token_win = null;
           },
           open: function () { },

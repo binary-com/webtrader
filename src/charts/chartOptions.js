@@ -80,6 +80,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             state[newTabId].chartTypes = chartType_arr;
             state[newTabId].chartTypes[1].showBorder = true;
         }
+        
     }
 
     function responsiveButtons(scope, ele) {
@@ -95,12 +96,12 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         if(ele.width() > minWidth){
             scope.showChartTypeLabel = true;
             scope.timePeriod_name = scope.timePeriod.name;
-            timePeriodButton.css("width","87px");
-            chartTypeButton.css("width","97px");
+            timePeriodButton.css("width",stringWidth.tp.max+25+"px");
+            chartTypeButton.css("width",stringWidth.ct+55+"px");
         } else {
             scope.showChartTypeLabel = false;
             scope.timePeriod_name = i18n_name =="en" ? scope.timePeriod.value.toUpperCase() : scope.timePeriod.value.i18n();
-            timePeriodButton.css("width","50px");
+            timePeriodButton.css("width",stringWidth.tp.min+27+"px");
             chartTypeButton.css("width","45px");
         }
 
@@ -120,6 +121,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var longTp1 = timeperiod_arr.reduce(function(a,b){return a.value.i18n().length > b.value.i18n().length? a :b}),
             longTp2 = timeperiod_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a :b}),
             longCt = chartType_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a : b});
+        console.log(longCt,longTp1,longTp2);
         var getWidth = function(string) {
             var font = '0.8em roboto,sans-serif',
                 obj = $('<div>' + string.i18n() + '</div>')
@@ -147,7 +149,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
     return {
 
-        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode , m_showShare, m_showOverlay) {
+        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode) {
+
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function(html) {
                 calculateStringWidth();
                 if (view[m_newTabId]) view[m_newTabId].unbind();
@@ -170,8 +173,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     showDrawingToolSelector : false,
                     showExportSelector : false,
                     showLoadSaveSelector: false,
-                    showShare: typeof m_showShare == 'undefined' ? true : m_showShare,
-                    showOverlay: typeof m_showOverlay == 'undefined' ? true : m_showOverlay,
 
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),
@@ -230,6 +231,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     var timePeriod = event.target.dataset.timeperiod;
                     if (timePeriod) {
                         scope = state[scope.newTabId];
+                        //Unregister previous subscription
+                        chartingRequestMap.unregister(chartingRequestMap.keyFor(scope.instrumentCode, scope.timePeriod.value), '#' + scope.newTabId + '_chart');
                         scope.timePeriod = timeperiod_arr.filter(function(obj){return timePeriod==obj.value})[0];
                         responsiveButtons(scope, $("#" + scope.newTabId).find(".chart-view"));
                         var tick = isTick(timePeriod);

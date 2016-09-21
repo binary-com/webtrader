@@ -1,6 +1,6 @@
 {
   "name": "Webtrader",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
   "engines": {
@@ -61,6 +61,7 @@
     "url": "https://github.com/binary-com/webtrader/issues"
   },
   "dependencies": {
-    "jquery-ui-iconfont": "^2.1.0"
+    "jquery-ui-iconfont": "^2.1.0",
+    "node-sass": "^3.10.0"
   }
 }

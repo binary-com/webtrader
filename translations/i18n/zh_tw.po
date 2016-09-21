@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-09-03 11:23+0000\n"
+"PO-Revision-Date: 2016-09-10 01:41+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -52,7 +52,7 @@ msgstr ""
 "況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
 
 msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr ""
+msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
@@ -63,24 +63,20 @@ msgstr "0-1 年"
 msgid "0-5 transactions in the past 12 months"
 msgstr "過去12月內0-5次交易"
 
-#, fuzzy
 msgid "1"
-msgstr "10"
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 天"
 
-#, fuzzy
 msgid "1 Hour"
-msgstr "小時"
+msgstr "1小時"
 
-#, fuzzy
 msgid "1 Minute"
-msgstr "分鐘"
+msgstr "1分鐘"
 
-#, fuzzy
 msgid "1 Tick"
-msgstr "跳動點"
+msgstr "1跳動點"
 
 msgid "1-2 years"
 msgstr "1-2 年"
@@ -88,9 +84,8 @@ msgstr "1-2 年"
 msgid "10"
 msgstr "10"
 
-#, fuzzy
 msgid "10 Minutes"
-msgstr "分鐘"
+msgstr "10分鐘"
 
 msgid "10m"
 msgstr "10分鐘"
@@ -98,9 +93,8 @@ msgstr "10分鐘"
 msgid "15"
 msgstr "15"
 
-#, fuzzy
 msgid "15 Minutes"
-msgstr "分鐘"
+msgstr "15分鐘"
 
 msgid "15m"
 msgstr "15分鐘"
@@ -115,19 +109,16 @@ msgid "1m"
 msgstr "1分鐘"
 
 msgid "1t"
-msgstr ""
+msgstr "1期"
 
-#, fuzzy
 msgid "2"
+msgstr "2"
+
+msgid "2 Hours"
 msgstr "2小時"
 
-#, fuzzy
-msgid "2 Hours"
-msgstr "小時"
-
-#, fuzzy
 msgid "2 Minutes"
-msgstr "分鐘"
+msgstr "2分鐘"
 
 msgid "2h"
 msgstr "2小時"
@@ -135,20 +126,17 @@ msgstr "2小時"
 msgid "2m"
 msgstr "2分鐘"
 
-#, fuzzy
 msgid "3"
-msgstr "30"
+msgstr "3"
 
-#, fuzzy
 msgid "3 Minutes"
-msgstr "分鐘"
+msgstr "3分鐘"
 
 msgid "30"
 msgstr "30"
 
-#, fuzzy
 msgid "30 Minutes"
-msgstr "分鐘"
+msgstr "30分鐘"
 
 msgid "30-day limit on losses"
 msgstr "30天期損失限額"
@@ -162,30 +150,26 @@ msgstr "30分鐘"
 msgid "3m"
 msgstr "3分鐘"
 
-#, fuzzy
 msgid "4"
-msgstr "4小時"
+msgstr "4"
 
-#, fuzzy
 msgid "4 Hours"
-msgstr "小時"
+msgstr "4小時"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "過去12月內40次交易或以上"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "4h"
 msgstr "4小時"
 
-#, fuzzy
 msgid "5"
-msgstr "15"
+msgstr "5"
 
-#, fuzzy
 msgid "5 Minutes"
-msgstr "分鐘"
+msgstr "5分鐘"
 
 msgid "5m"
 msgstr "5分鐘"
@@ -199,13 +183,11 @@ msgstr "7天期損失限額"
 msgid "7-day turnover limit"
 msgstr "7天期交易限額"
 
-#, fuzzy
 msgid "8"
-msgstr "8小時"
+msgstr "8"
 
-#, fuzzy
 msgid "8 Hours"
-msgstr "小時"
+msgstr "8小時"
 
 msgid "8h"
 msgstr "8小時"
@@ -240,9 +222,8 @@ msgstr "沒找到帳戶權杖"
 msgid "Action"
 msgstr "動作"
 
-#, fuzzy
 msgid "Add comparisons"
-msgstr "比較"
+msgstr "新增比較"
 
 msgid "Add indicator"
 msgstr "新增指標"
@@ -250,9 +231,8 @@ msgstr "新增指標"
 msgid "Add level"
 msgstr "新增價位"
 
-#, fuzzy
 msgid "Add/remove comparisons"
-msgstr "新增/移除重疊"
+msgstr "新增/移除比較"
 
 msgid "Add/remove overlays"
 msgstr "新增/移除重疊"
@@ -413,13 +393,11 @@ msgstr "圖表背景"
 msgid "Chart context menu"
 msgstr "圖表操作功能表"
 
-#, fuzzy
 msgid "Chart template"
-msgstr "圖表主題"
+msgstr "圖表範本"
 
-#, fuzzy
 msgid "Chart type"
-msgstr "圖表"
+msgstr "圖表類型"
 
 msgid "Choose password"
 msgstr "選擇密碼"
@@ -487,9 +465,8 @@ msgstr "合約"
 msgid "Contract Confirmation"
 msgstr "合約確認"
 
-#, fuzzy
 msgid "Contract Details"
-msgstr "合約"
+msgstr "合約詳細資料"
 
 msgid "Contract is not yet started"
 msgstr "合約還未開始生效"
@@ -521,9 +498,8 @@ msgstr "目前現價"
 msgid "Current Spot Time"
 msgstr "目前現價時間"
 
-#, fuzzy
 msgid "Current comparisons"
-msgstr "比較"
+msgstr "目前比較"
 
 msgid "Current indicators"
 msgstr "目前指標"
@@ -589,7 +565,7 @@ msgid "Default"
 msgstr "預設"
 
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 msgid "Delete level(s)"
 msgstr "刪除水平"
@@ -664,7 +640,7 @@ msgid "Downloading .csv"
 msgstr "正在下載.csv"
 
 msgid "Drawing tools"
-msgstr ""
+msgstr "繪圖工具"
 
 msgid "Duration"
 msgstr "期間"
@@ -814,7 +790,7 @@ msgid "HIGH"
 msgstr "高"
 
 msgid "Have better luck at trading!"
-msgstr ""
+msgstr "祝您好運!"
 
 msgid "Health"
 msgstr "健康情況"
@@ -849,7 +825,6 @@ msgstr "家庭地址"
 msgid "Horizontal Line"
 msgstr "水平線"
 
-#, fuzzy
 msgid "Horizontal line"
 msgstr "水平線"
 
@@ -877,7 +852,7 @@ msgstr ""
 "況。在任何情況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
 
 msgid "If the issue keeps happening, please contact"
-msgstr ""
+msgstr "如果這個問題持續發生，請聯繫"
 
 msgid "If you select a"
 msgstr "如您選擇"
@@ -910,16 +885,14 @@ msgstr "「範圍之內/之外」"
 msgid "Income Source"
 msgstr "收入來源"
 
-#, fuzzy
 msgid "Indicative"
-msgstr "指示性價格"
+msgstr "指示性"
 
 msgid "Indicative Price"
 msgstr "指示性價格"
 
-#, fuzzy
 msgid "Indicators"
-msgstr "新增指標"
+msgstr "指標"
 
 msgid "Indices trading experience"
 msgstr "指數交易經驗"
@@ -945,9 +918,8 @@ msgstr "一月"
 msgid "January"
 msgstr "一月"
 
-#, fuzzy
 msgid "Japan accounts are not supported"
-msgstr "您的瀏覽器不受支持"
+msgstr "日本帳戶不受支持"
 
 msgid "Jul"
 msgstr "七月"
@@ -1006,9 +978,8 @@ msgstr "線波幅"
 msgid "Link"
 msgstr "連結"
 
-#, fuzzy
 msgid "Load chart template"
-msgstr "載入圖表與交易功能表"
+msgstr "載入圖表範本"
 
 msgid "Loading"
 msgstr "載入"
@@ -1314,7 +1285,7 @@ msgid "One last step left"
 msgstr "剩下最後一步"
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "哎呀...頁面不可用"
 
 msgid "Open"
 msgstr "開盤"
@@ -1325,9 +1296,8 @@ msgstr "開立帳戶"
 msgid "Open Price"
 msgstr "開盤價"
 
-#, fuzzy
 msgid "Open a Financial Account"
-msgstr "開立帳戶"
+msgstr "開立金融帳戶"
 
 msgid "Open account"
 msgstr "開立帳戶"
@@ -1374,7 +1344,7 @@ msgid "PPO Line Stroke"
 msgstr "PPO 線波幅"
 
 msgid "Page Not Found"
-msgstr ""
+msgstr "找不到頁面"
 
 msgid "Password must be 6 characters minimum"
 msgstr "密碼需至少6個字元"
@@ -1632,9 +1602,8 @@ msgstr "重新載入頁面"
 msgid "Remove Selected"
 msgstr "移除選定項目"
 
-#, fuzzy
 msgid "Rename"
-msgstr "權杖名稱"
+msgstr "重命名"
 
 msgid "Repeat password"
 msgstr "重覆輸入密碼"
@@ -1663,9 +1632,8 @@ msgstr "成績"
 msgid "Return"
 msgstr "回報"
 
-#, fuzzy
 msgid "Return to trading page"
-msgstr "重新載入頁面"
+msgstr "返回交易頁面"
 
 msgid "Rise"
 msgstr "上漲"
@@ -1698,13 +1666,13 @@ msgid "Saturday"
 msgstr "週六"
 
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 msgid "Save as"
-msgstr ""
+msgstr "另存為"
 
 msgid "Save changes"
-msgstr ""
+msgstr "儲存更改"
 
 msgid "Secondary"
 msgstr "次要"
@@ -1766,9 +1734,8 @@ msgstr "結算"
 msgid "Share"
 msgstr "共享"
 
-#, fuzzy
 msgid "Share chart"
-msgstr "列印圖表"
+msgstr "共享圖表"
 
 msgid "Short MA Type"
 msgstr "短移動平均線類型"
@@ -1920,9 +1887,8 @@ msgstr "表"
 msgid "Tel"
 msgstr "電話"
 
-#, fuzzy
 msgid "Template name"
-msgstr "權杖名稱"
+msgstr "範本名稱"
 
 msgid "Terms"
 msgstr "條款"
@@ -1951,7 +1917,7 @@ msgstr ""
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
-msgstr ""
+msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查是否輸入錯誤"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -2134,9 +2100,8 @@ msgstr "未來事件"
 msgid "Update Settings"
 msgstr "更新設定"
 
-#, fuzzy
 msgid "Upgrade to a Real Account"
-msgstr "傳送到帳戶"
+msgstr "升級為真實帳戶"
 
 msgid "Upper Band Stroke"
 msgstr "上方帶狀波幅"
@@ -2147,7 +2112,7 @@ msgstr "使用"
 msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
-msgstr ""
+msgstr "使用「另存為...」按鈕儲存圖表設置、類型、時間段、指標和比較"
 
 msgid "Verification code has been sent to your email"
 msgstr "驗證代碼已發送到您的郵箱"
@@ -2164,7 +2129,6 @@ msgstr "驗證新密碼"
 msgid "Vertical Line"
 msgstr "垂直線"
 
-#, fuzzy
 msgid "Vertical line"
 msgstr "垂直線"
 
@@ -2244,7 +2208,7 @@ msgstr ""
 "前往此處參閱OAuth資料"
 
 msgid "You haven't saved any templates yet"
-msgstr ""
+msgstr "您尚未儲存任何範本"
 
 msgid "You pay"
 msgstr "您支付"
@@ -2407,7 +2371,7 @@ msgid "main site"
 msgstr "主要網站"
 
 msgid "market is presently closed"
-msgstr ""
+msgstr "市場現已關閉"
 
 msgid "minute"
 msgstr "分鐘"
