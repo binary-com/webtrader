@@ -394,53 +394,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
            .catch(error_handler);
     }
 
-    /*
-      1: company = (gaming company) && (financial company && financial company shortcode = maltainvest)
-      	a: no MLT account  ==> upgrade to MLT
-       	b: has MLT account
-          	I:     upgrade to MF
-        c: has both MLT & MF ==> do nothing
-      2: company = financial company &&  financial company shortcode = maltainvest) && there is NO gaming company
-      	a: no MF account
-        		I: company = financial ==> upgrade to MF
-      	b: has MF account => do nothing
-      3: company & shortcode anything except above
-      	a: no MLT, MX, CR account ==> upgrade to MLT, MX or CR
-      	b: has MLT, MX, CR account ==> do nothing
-      4: company shortcode == japan
-        a: do nothing and show an error message
-
-      returns 'upgrade-mlt' | 'upgrade-mf' | 'do-nothing'
-    */
-    function getLadingCompany() {
-       return liveapi
-       .cached.send({landing_company: Cookies.residence() })
-        .then(function(data) {
-             var financial = data.landing_company.financial_company;
-             var gaming = data.landing_company.gaming_company;
-
-             var loginids = Cookies.loginids();
-             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-                 if (_.some(loginids, {is_mlt: true}) && _.some({is_mf: true})) // 1-c
-                    return 'do-nothing';
-                 if (_.some(loginids, {is_mlt: true})) // 1-b
-                    return 'upgrade-mf';
-                 return 'upgrade-mlt'; // 1-a
-             }
-             if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
-                if (_.some(loginids, {is_mf: true})) // 2-b
-                  return 'do-nothing';
-                return 'upgrade-mf'; // 2-a
-             }
-             // 3:
-             if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
-                return 'do-nothing'; // 3-b
-             return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
-             // 4: never happens, japan accounts are not able to log into webtrader.
-        });
-    }
-
     return {
-      init: init
+      init: init,
     }
 });
