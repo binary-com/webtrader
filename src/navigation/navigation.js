@@ -104,7 +104,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
                   $.growl.error({
                     fixed: true,
                     message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
-                            + "For Security reasons your account has been locked, please contact Helpdesk for further details".i18n()
+                            + "Your account is locked, please contact customer support for more info."
                             + "</a>"
                   });
                 }
