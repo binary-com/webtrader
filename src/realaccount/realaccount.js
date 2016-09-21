@@ -33,7 +33,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           collapsable:false,
           minimizable: true,
           maximizable: false,
-          width: 350,
+          width: 360,
           height: 950,
           'data-authorized': true,
           close: function () {
