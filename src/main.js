@@ -83,7 +83,7 @@ requirejs.onError = function (err) {
         console.warn(err);
         return;
     }
-
+    console.error(err); // For more descriptive errors locally.
     throw err;
 };
 
