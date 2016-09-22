@@ -16,11 +16,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
       if(chart.series.length > 0){
           indicator_values.forEach(function(ind){
             var id = ind.id;
-            if(chart.series[0][id] && chart.series[0][id]){
-                chart.series[0][id].forEach(function(indicator){
-                    indicators.push({id: id, name: ind.long_display_name, options: indicator.options})
-                });
-            }
+            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, name: ind.long_display_name, options: chart.series[0][id][0].options})
           });
       }
 
@@ -275,7 +271,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             if ($.isFunction(onload)) {
                                 onload();
                             }
-                            if(getParameterByName("affiliates") === 'true' && getParameterByName("hideFooter").toLowerCase() === 'true'){
+                            if(getParameterByName("affiliates") === 'true' && getParameterByName('lang').toLowerCase() === 'ja'){
                                 this.credits.element.remove();
                             } else {
                                 this.credits.element.onclick = function() {

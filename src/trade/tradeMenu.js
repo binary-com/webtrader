@@ -31,7 +31,7 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
               }).value();
               markets = menu.sortMenu(markets);
 
-              var trade = $("#nav-menu").find(".trade_menu");
+              var trade = $("#nav-menu").find(".trade");
               trade.find('> ul').remove();
               var root = $("<ul>").appendTo(trade); /* add to trade menu */
               menu.refreshMenu(root, markets, function (li) {
@@ -56,7 +56,7 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
           liveapi.events.on('logout', refresh_active_symbols);
         });
         /* refresh menu on mouse leave */
-        var trade = $("#nav-menu").find(".trade_menu").on('mouseleave', refresh_active_symbols);
+        var trade = $("#nav-menu").find(".trade").on('mouseleave', refresh_active_symbols);
     }
 
     return {

@@ -98,7 +98,6 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
     liveapi.events.on('tick', function(data) {
       var tick = data.tick;
       tick.quote *= 1;
-      tick.epoch += '';
       last_1000_ticks.push(tick);
       if(last_1000_ticks.length > 1000)
         last_1000_ticks.shift();
