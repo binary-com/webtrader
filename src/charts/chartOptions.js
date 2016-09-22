@@ -121,7 +121,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var longTp1 = timeperiod_arr.reduce(function(a,b){return a.value.i18n().length > b.value.i18n().length? a :b}),
             longTp2 = timeperiod_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a :b}),
             longCt = chartType_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a : b});
-        console.log(longCt,longTp1,longTp2);
         var getWidth = function(string) {
             var font = '0.8em roboto,sans-serif',
                 obj = $('<div>' + string.i18n() + '</div>')
