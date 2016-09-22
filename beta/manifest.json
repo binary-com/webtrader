@@ -1,23 +1,23 @@
 {
   "name": "Webtrader",
   "short_name": "Webtrader",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "manifest_version": 2,
   "description": "Webtrader for Binary.com",
   "homepage_url": "https://www.binary.com",
   "icons": {
-    "16": "v2.1.14/images/favicons/favicon-16x16.png",
-    "32": "v2.1.14/images/favicons/favicon-32x32.png",
-    "96": "v2.1.14/images/favicons/favicon-96x96.png",
-    "128": "v2.1.14/images/favicons/favicon-128x128.png",
-    "160": "v2.1.14/images/favicons/favicon-160x160.png",
-    "192": "v2.1.14/images/favicons/favicon-192x192.png"
+    "16": "v2.1.15/images/favicons/favicon-16x16.png",
+    "32": "v2.1.15/images/favicons/favicon-32x32.png",
+    "96": "v2.1.15/images/favicons/favicon-96x96.png",
+    "128": "v2.1.15/images/favicons/favicon-128x128.png",
+    "160": "v2.1.15/images/favicons/favicon-160x160.png",
+    "192": "v2.1.15/images/favicons/favicon-192x192.png"
   },
   "background":{
     "scripts": ["chrome_background.js"]
   },
   "browser_action": {
-    "default_icon": "v2.1.14/images/favicons/favicon-128x128.png",
+    "default_icon": "v2.1.15/images/favicons/favicon-128x128.png",
     "default_title": "Webtrader for Binary.com"
   },
   "permissions": [
