@@ -205,6 +205,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
     var invalidate = function(){
         if(!is_authenitcated_session) { return; }
         local_storage.remove('oauth');
+        local_storage.remove('authorize');
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){
