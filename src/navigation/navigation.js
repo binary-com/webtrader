@@ -1,9 +1,7 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/rivetsExtra","text!navigation/countries.json", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, liveapi, rv, countries, $navHtml) {
-
+define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/rivetsExtra", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, liveapi, rv, $navHtml) {
     "use strict";
-    countries = JSON.parse(countries);
 
     function updateListItemHandlers() {
         $("#nav-menu li > ul li").each(function () {
@@ -103,6 +101,15 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
               var loginids = Cookies.loginids();
               var has_real_account = _.some(loginids, {is_real: true});
               var has_disabled_account =  _.some(loginids, {is_disabled: true});
+
+              if(_.some(loginids, {is_disabled: true})) {
+                $.growl.error({
+                  fixed: true,
+                  message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
+                          + "Your account is locked, please contact customer support for more info.".i18n()
+                          + "</a>"
+                });
+              }
 
               var toggle = function(show, el) { show ? el.show() : el.hide(); }
               toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
