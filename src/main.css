@@ -434,15 +434,3 @@ button[disabled] {
 table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
   border-bottom: none!important;
 }
-
-#doorbell-button  {
-    right: -37px;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    font-size: inherit;
-    background-color: #2E8836;
-    bottom: 100px;
-}
