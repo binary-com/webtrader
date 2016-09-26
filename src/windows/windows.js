@@ -644,7 +644,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             /* check and add the refresh button if needed */
             if(options.refresh){
                 var header = blankWindow.parent().find('.ui-dialog-title');
-                var refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>");
+                var refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>").find(".reload");
                 refresh.on('click',options.refresh);
             }
 
