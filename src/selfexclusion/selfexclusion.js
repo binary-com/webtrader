@@ -16,23 +16,23 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         session_duration_limit: null,
         exclude_until: null,
         update : function(event, scope) {
-            console.log('update self-exclusion : ', scope);
+            console.log('update self-exclusion : ', 0 < scope.max_balance , scope.max_balance <= 10000000000000000000);
 
             //validation
-            if (scope.session_duration_limit && !_.inRange(scope.session_duration_limit, 0, 99999)) {
-                $.growl.error({ message : 'Please enter value between 0 and 99999 for Session duration limit'.i18n() });
+            if (scope.session_duration_limit && !_.inRange(scope.session_duration_limit, 0, 60481)) {
+                $.growl.error({ message : 'Please enter value between 0 and 60480 for Session duration limit'.i18n() });
                 return;
             }
             if (scope.exclude_until && moment.utc(scope.exclude_until, "YYYY-MM-DD").isBefore(moment.utc().startOf('day').add("months", 6))) {
                 $.growl.error({ message : 'Exclude time cannot be less than 6 months'.i18n() });
                 return;
             }
-            if (scope.max_open_bets && !_.inRange(scope.max_open_bets, 0, 9999)) {
-                $.growl.error({ message : 'Please enter positive integer value between 0 and 9999'.i18n() });
+            if (scope.max_open_bets && !_.inRange(scope.max_open_bets, 0, 102)) {
+                $.growl.error({ message : 'Please enter positive integer value between 0 and 101 for maximum open positions'.i18n() });
                 return;
             }
-            if (scope.max_balance && !_.inRange(scope.max_balance, 0, Number.MAX_VALUE)) {
-                $.growl.error({ message : 'Please enter positive integer value for Maximum number of open positions'.i18n() });
+            if (scope.max_balance && ! (0 < scope.max_balance &&  scope.max_balance <= 10000000000000000000)) {
+                $.growl.error({ message : 'Please enter positive integer value between 0 and 10000000000000000000 for Maximum balance'.i18n() });
                 return;
             }
             if (scope.max_30day_losses && !_.inRange(scope.max_30day_losses, 0, Number.MAX_VALUE)) {
