@@ -343,8 +343,19 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       /* get the residence field and its states */
       var residence_promise = liveapi.send({get_settings: 1})
              .then(function(data){
-               state.user.residence = data.get_settings.country_code;
-               state.user.residence_name = data.get_settings.country;
+               data = data.get_settings;
+               state.user.salutation = data.salutation;
+               state.user.first_name = data.first_name;
+               state.user.last_name = data.last_name;
+               state.user.date_of_birth = moment.unix(data.date_of_birth).format("YYYY-MM-DD");
+               state.user.address_line_1 = data.address_line_1;
+               state.user.address_line_2 = data.address_line_2;
+               state.user.city_address = data.address_city;
+               state.user.state_address = data.address_state ;
+               state.user.address_postcode = data.address_postcode;
+               state.user.phone = data.phone;
+               state.user.residence = data.country_code;
+               state.user.residence_name = data.country;
              })
              .catch(error_handler);
 
@@ -352,7 +363,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
            .then( function() { return liveapi.cached.send({residence_list: 1}); } )
            .then(function(data){
               var residence = _.find(data.residence_list, { value: state.user.residence });
-              state.user.phone = '+' + residence.phone_idd;
+              state.user.phone = state.user.phone ? state.user.phone : '+' + residence.phone_idd;
            })
            .catch(error_handler);
 
