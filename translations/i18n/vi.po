@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-30 18:03+0200\n"
-"PO-Revision-Date: 2016-07-31 05:52+0000\n"
+"PO-Revision-Date: 2016-09-21 12:40+0000\n"
 "Last-Translator: Pham Minh Hieu <hphamv7@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/vi/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.8-dev\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
 msgstr "Kiểu %D MA"
@@ -51,9 +51,18 @@ msgid ""
 "Binary.com shall not in any circumstance be held responsible for "
 "transactions made between customers and Payment Agents"
 msgstr ""
+"-Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở "
+"trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập "
+"và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG "
+"LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách "
+"hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi "
+"gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều "
+"sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng "
+"và Đại Lý Thanh Toán"
 
 msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 msgstr ""
+"---tiêu đề: không tìm thấy trang permalink: /404.html trích dẫn: \"\"---"
 
 #, fuzzy
 msgid "-DI Stroke"
@@ -116,8 +125,9 @@ msgstr "1 giờ"
 msgid "1m"
 msgstr "1 tháng"
 
+#, fuzzy
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 #, fuzzy
 msgid "2"
@@ -176,7 +186,7 @@ msgid "40 transactions or more in the past 12 months"
 msgstr "40 giao dịch hoặc hơn trong 12 tháng qua"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "4h"
 msgstr "4 giờ"
@@ -243,7 +253,7 @@ msgid "Action"
 msgstr "Hành động"
 
 msgid "Add comparisons"
-msgstr ""
+msgstr "Thêm các so sánh"
 
 msgid "Add indicator"
 msgstr "Thêm chỉ dẫn"
@@ -265,7 +275,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tất cả thời gian ở GMT (Thời gian trung bình Greenwich )"
 
 msgid "Amount"
-msgstr ""
+msgstr "Tổng"
 
 msgid "Amount Per Point"
 msgstr "Số tiền cho mỗi điểm"
@@ -283,16 +293,16 @@ msgid "Apply"
 msgstr "Áp dụng"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "Đăng ký để để thành một Binary.com"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Bài kiểm tra sự thích hợp: CẢNH BÁO"
 
 msgid "Apr"
-msgstr ""
+msgstr "Tháng tư"
 
 msgid "April"
-msgstr ""
+msgstr "Tháng tư"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Bạn có chắc bạn muốn xóa token này?"
@@ -315,10 +325,10 @@ msgid "Asset Index"
 msgstr "Chỉ số Tài sản"
 
 msgid "Aug"
-msgstr ""
+msgstr "Tháng tám"
 
 msgid "August"
-msgstr ""
+msgstr "Tháng tám"
 
 msgid "Average"
 msgstr "Trung bình"
@@ -434,10 +444,10 @@ msgid "Choose password"
 msgstr "Lựa chọn mật khẩu"
 
 msgid "Choose your pereferred payment agent"
-msgstr ""
+msgstr "Chọn đại lý thanh toán ưa thích của bạn"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr ""
+msgstr "Lựa chọn phương pháp rút tiền ưa thích của bạn"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -464,7 +474,7 @@ msgid "Commodities trading frequency"
 msgstr "Tần suất giao dịch hàng hóa"
 
 msgid "Comparisons"
-msgstr ""
+msgstr "So sánh"
 
 msgid "Conditions"
 msgstr "Điều kiện"
@@ -473,7 +483,7 @@ msgid "Config changes successful"
 msgstr "Thay đổi cấu hình thành công"
 
 msgid "Confirm transfer"
-msgstr ""
+msgstr "Xác nhận chuyển khoản"
 
 msgid "Connection closed"
 msgstr "Kết nối đã đóng"
@@ -593,7 +603,7 @@ msgid "Dec"
 msgstr "Từ chối"
 
 msgid "December"
-msgstr ""
+msgstr "Tháng mười hai"
 
 msgid "Decline"
 msgstr "Từ chối"
@@ -602,7 +612,7 @@ msgid "Default"
 msgstr "Mặc định"
 
 msgid "Delete"
-msgstr ""
+msgstr "Xóa bỏ"
 
 msgid "Delete level(s)"
 msgstr "Xóa level(s)"
@@ -633,10 +643,10 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Chưa có tài khoản? Đăng ký và nhận $10,000 cho tài khoản ảo"
 
 msgid "Done. The funds are being transferred to the payment agent"
-msgstr ""
+msgstr "Đã hoàn tất. Tiền đang được chuyển giao cho đại lý thanh toán"
 
 msgid "Done. The funds are transferred"
-msgstr ""
+msgstr "Đã hoàn tất. Tiền đã được chuyển"
 
 msgid "Dot"
 msgstr "Dấu chấm"
@@ -682,7 +692,7 @@ msgid "Downloading .csv"
 msgstr "Đang tải .scv"
 
 msgid "Drawing tools"
-msgstr ""
+msgstr "Công cụ vẽ"
 
 msgid "Duration"
 msgstr "Thời gian"
@@ -778,10 +788,10 @@ msgid "Favourite dish"
 msgstr "Món ăn ưa thích"
 
 msgid "Feb"
-msgstr ""
+msgstr "Tháng hai"
 
 msgid "February"
-msgstr ""
+msgstr "Tháng hai"
 
 msgid "Final Price"
 msgstr "Giá cuối cùng"
@@ -811,7 +821,7 @@ msgid "Fri"
 msgstr "Thứ sáu"
 
 msgid "Friday"
-msgstr ""
+msgstr "Thứ sáu"
 
 msgid "From"
 msgstr "Từ"
@@ -833,7 +843,7 @@ msgid "HIGH"
 msgstr "CAO"
 
 msgid "Have better luck at trading!"
-msgstr ""
+msgstr "Chúc bạn may mắn trong giao dịch!"
 
 msgid "Health"
 msgstr "Sức khỏe"
@@ -880,7 +890,7 @@ msgid "I have read and agree to Binary.com"
 msgstr "Tôi đã đọc và đồng ý với Binary.com"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr ""
+msgstr "KHUYẾN CÁO QUAN TRỌNG"
 
 msgid ""
 "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
@@ -891,9 +901,17 @@ msgid ""
 "sending them any money. Binary.com shall not in any circumstance be held "
 "responsible for transactions made between customers and payment agents"
 msgstr ""
+"KHUYẾN CÁO QUAN TRỌNG - Binary.com không liên kết với bất kỳ Đại Lý Thanh "
+"Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà "
+"cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận "
+"bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI "
+"RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại "
+"Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong "
+"bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được "
+"thực hiện giữa khách hàng và Đại Lý Thanh Toán"
 
 msgid "If the issue keeps happening, please contact"
-msgstr ""
+msgstr "Nếu vấn đề tiếp tục xảy ra, xin vui lòng liên hệ"
 
 msgid "If you select a"
 msgstr "Nếu bạn chọn một"
@@ -966,17 +984,17 @@ msgid "Jan"
 msgstr "và"
 
 msgid "January"
-msgstr ""
+msgstr "Tháng một"
 
 #, fuzzy
 msgid "Japan accounts are not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
 
 msgid "Jul"
-msgstr ""
+msgstr "Tháng bảy"
 
 msgid "July"
-msgstr ""
+msgstr "Tháng bảy"
 
 msgid "Jump to"
 msgstr "Nhảy tới"
@@ -986,7 +1004,7 @@ msgid "Jun"
 msgstr "Chủ nhật"
 
 msgid "June"
-msgstr ""
+msgstr "Tháng sáu"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Chỉ cần nhấp vào nút Cấp trên trang và bạn sẽ được đưa đến"
@@ -1147,13 +1165,19 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
+"Đầu tiên hãy chắc chắn rằng bạn đã đồng ý với Đại Lý Thanh Toán về các điều "
+"khoản thanh toán trước khi gửi yêu cầu của bạn. Một khi bạn nhấp vào nút "
+"'Xác nhận chuyển khoản' thì các khoản tiền sẽ được rút ra từ tài khoản của "
+"bạn và chuyển đến cho Đại Lý Thanh Toán mà bạn đã chọn. Đại Lý sẽ gửi cho "
+"bạn số tiền thu được (trừ đi khoản hoa hồng) thông qua phương thức thanh "
+"toán ưa thích của bạn"
 
 #, fuzzy
 msgid "Mar"
 msgstr "Ông"
 
 msgid "March"
-msgstr ""
+msgstr "Tháng ba"
 
 msgid "Mass Period"
 msgstr "Thời lượng lớn"
@@ -1200,13 +1224,13 @@ msgid "Middle Band Stroke"
 msgstr "Nét trung"
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Tối thiểu 6 ký tự và phải có ít nhất 1 chữ số"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "Trừ đi Hoa hồng của đại lý"
 
 msgid "Minutes"
 msgstr "Phút"
@@ -1303,13 +1327,15 @@ msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
 msgstr ""
+"Lưu ý: Rút tiền thông qua đại lý thanh toán sẽ chỉ khả dụng nếu bạn gửi tiền "
+"duy nhất thông qua đại lý thanh toán"
 
 #, fuzzy
 msgid "Nov"
 msgstr "Không"
 
 msgid "November"
-msgstr ""
+msgstr "Tháng mười một"
 
 msgid "Now"
 msgstr "Bây giờ"
@@ -1331,10 +1357,10 @@ msgid "OPEN"
 msgstr "MỞ"
 
 msgid "Oct"
-msgstr ""
+msgstr "Tháng mười"
 
 msgid "October"
-msgstr ""
+msgstr "Tháng mười"
 
 msgid "Offset"
 msgstr "Bù đắp"
@@ -1358,7 +1384,7 @@ msgid "One last step left"
 msgstr "Còn một bước cuối"
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "Rất tiếc... Trang không tồn tại"
 
 msgid "Open"
 msgstr "Mở"
@@ -1421,7 +1447,7 @@ msgid "PPO Line Stroke"
 msgstr "Đường nét PPO"
 
 msgid "Page Not Found"
-msgstr ""
+msgstr "Trang không tìm thấy"
 
 msgid "Password must be 6 characters minimum"
 msgstr "Mật khẩu phải từ tối thiểu 6 ký tự"
@@ -1486,7 +1512,7 @@ msgid "Please choose at least one token scope"
 msgstr "Vui lòng chọn ít nhất một phạm vi token"
 
 msgid "Please confirm the following details in order to complete the transfer"
-msgstr ""
+msgstr "Vui lòng xác nhận các chi tiết sau để hoàn thành việc chuyển khoản"
 
 msgid "Please enter a number between"
 msgstr "Vui lòng nhập một số giữa"
@@ -1625,7 +1651,7 @@ msgid "Primary"
 msgstr "Chính"
 
 msgid "Print chart"
-msgstr ""
+msgstr "In biểu đồ"
 
 msgid "Profit"
 msgstr "Lợi nhuận"
@@ -1695,10 +1721,10 @@ msgid "Reset to Defaults"
 msgstr "Đặt lại về mặc định"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "Đặt lại phóng to"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "Đặt lại phóng to mức 1:1"
 
 msgid "Resources"
 msgstr "Tài nguyên"
@@ -1744,16 +1770,16 @@ msgid "Sat"
 msgstr "Thứ bảy"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Thứ bảy"
 
 msgid "Save"
-msgstr ""
+msgstr "Lưu lại"
 
 msgid "Save as"
-msgstr ""
+msgstr "Lưu lại thành"
 
 msgid "Save changes"
-msgstr ""
+msgstr "Lưu các thay đổi"
 
 msgid "Secondary"
 msgstr "Thứ cấp"
@@ -1797,10 +1823,10 @@ msgid "Sent to account"
 msgstr "Mở tài khoản"
 
 msgid "Sep"
-msgstr ""
+msgstr "Tháng chín"
 
 msgid "September"
-msgstr ""
+msgstr "Tháng chín"
 
 msgid "Session"
 msgstr "Phiên"
@@ -1896,10 +1922,10 @@ msgid "Stake"
 msgstr "Cổ phần"
 
 msgid "Standard methods"
-msgstr ""
+msgstr "Phương pháp tiêu chuẩn"
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "Rút tiền tiêu chuẩn"
 
 msgid "Start Time"
 msgstr "Thời gian bắt đầu"
@@ -1956,7 +1982,7 @@ msgid "Stroke width"
 msgstr "Độ rộng nét"
 
 msgid "Submit"
-msgstr ""
+msgstr "Gửi"
 
 msgid "Successfully added new token"
 msgstr "Thêm thành công token mới"
@@ -1965,7 +1991,7 @@ msgid "Sun"
 msgstr "Chủ nhật"
 
 msgid "Sunday"
-msgstr ""
+msgstr "Chủ Nhật"
 
 msgid "TEMA"
 msgstr "TEMA"
@@ -2017,6 +2043,8 @@ msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
 msgstr ""
+"Không tìm thấy trang bạn yêu cầu. Nó không còn tồn tại hoặc địa chỉ bị sai. "
+"Vui lòng kiểm tra lỗi chính tả nếu có"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -2042,13 +2070,13 @@ msgid "This contract won"
 msgstr "Hợp đồng này đã thắng"
 
 msgid "This field is required"
-msgstr ""
+msgstr "Trường này là bắt buộc"
 
 msgid "Thu"
 msgstr "Thứ năm"
 
 msgid "Thursday"
-msgstr ""
+msgstr "Thứ năm"
 
 msgid "Tick Trade app"
 msgstr "Đánh dấu app giao dịch"
@@ -2066,7 +2094,7 @@ msgid "Time Period"
 msgstr "Thời hạn"
 
 msgid "Time interval"
-msgstr ""
+msgstr "Khoảng thời gian"
 
 msgid "Time period"
 msgstr "Thời hạn"
@@ -2079,15 +2107,18 @@ msgid "Title"
 msgstr "Tiêu đề"
 
 msgid "To"
-msgstr ""
+msgstr "Tới"
 
 msgid "To deposit money please contact the payment agent directly"
-msgstr ""
+msgstr "Phải gửi tiền xin vui lòng liên hệ trực tiếp với đại lý thanh toán"
 
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
 msgstr ""
+"Để tiến hành gửi tiền và rút tiền cho các phương pháp thanh toán hoặc các "
+"loại tiền tệ địa phương mà không được hỗ trợ bởi Binary.com hãy liên hệ với "
+"một đại lý thanh toán"
 
 #, fuzzy
 msgid ""
@@ -2178,7 +2209,7 @@ msgid "Tradingview for Binary.com"
 msgstr "Xem giao dịch cho Binary.com"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "Chuyển khoản sang tài khoản nhị phân khác"
 
 msgid "Try"
 msgstr "Thử"
@@ -2187,7 +2218,7 @@ msgid "Tue"
 msgstr "Thứ Ba"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Thứ ba"
 
 msgid "Turnover"
 msgstr "Doanh số"
@@ -2199,7 +2230,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "Thật không may, trình duyệt của bạn không hỗ trợ họ"
 
 msgid "Unlock"
-msgstr ""
+msgstr "Mở khóa"
 
 msgid "Up/Down"
 msgstr "Lên/xuống"
@@ -2225,6 +2256,8 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr ""
+"Sử dụng nút \"Lưu lại thành...\" để lưu giữ lại các cài đặt biểu đồ, loại, "
+"thời gian, các chỉ số và so sánh"
 
 msgid "Verification code has been sent to your email"
 msgstr "Mã xác minh đã được gửi đến email của bạn"
@@ -2276,7 +2309,7 @@ msgid "Wed"
 msgstr "Thứ Tư"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Thứ tư"
 
 msgid "While on the go, you can"
 msgstr "Khi đang tiến hành, bạn có thể"
@@ -2285,10 +2318,10 @@ msgid "Windows"
 msgstr "Windows"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "Rút tiền tài khoản"
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "Rút tiền thông qua đại lý thanh toán"
 
 msgid "X-axis labels"
 msgstr "Nhãn X-axis"
@@ -2325,7 +2358,7 @@ msgstr ""
 "tham khảo chi tiết OAuth trên"
 
 msgid "You haven't saved any templates yet"
-msgstr ""
+msgstr "Bạn chưa lưu lại bất kỳ mẫu nào"
 
 msgid "You pay"
 msgstr "Bạn trả"
@@ -2362,7 +2395,7 @@ msgid "Your transaction reference number is"
 msgstr "Số tham chiếu giao dịch của bạn là"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Phóng to"
 
 msgid "admin"
 msgstr "admin"
@@ -2497,7 +2530,7 @@ msgid "main site"
 msgstr "Trang web chính"
 
 msgid "market is presently closed"
-msgstr ""
+msgstr "thị trường hiện đã đóng cửa"
 
 msgid "minute"
 msgstr "phút"
@@ -2573,7 +2606,7 @@ msgid "yes"
 msgstr "Có"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{hoa hồng cho đại lý}%"
 
 msgid "| Return"
 msgstr "| Quay trở lại"
