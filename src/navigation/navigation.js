@@ -96,7 +96,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
 
             getLandingCompany().then(function(what_todo){
-              var show_financial_link = is_current_account_real && (what_todo === 'upgrade-mf');
+              var show_financial_link = (what_todo === 'upgrade-mf');
               var show_realaccount_link = !is_current_account_real && (what_todo === 'upgrade-mlt');
               var loginids = Cookies.loginids();
               var has_real_account = _.some(loginids, {is_real: true});
