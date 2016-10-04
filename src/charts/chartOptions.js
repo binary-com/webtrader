@@ -4,7 +4,7 @@
 
 define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, chartWindow, charts, moment, chartingRequestMap) {
 
-    var state = [], view = [], template_manager = {};
+    var state = [], view = [], template_manager = {}, stringWidth= {};
 
     var timeperiod_arr = [{value: "1t", name: "1 Tick", digit: 1, type: "ticks"}, 
         {value: "1m", name: "1 Minute", digit: 1, type: "minutes"}, 
@@ -88,17 +88,20 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var exportOverlay = ele.find(".exportOverlay");
         var timePeriodButton = ele.find(".timeperiod");
         var chartTypeButton = ele.find(".chart_type");
+        ele.find(".chartTypeOverlay").css("width",stringWidth.ct+53+"px");
+
         // This is needed for calculating relative position.
-        var shareButton = ele.find('.shareButton');
-        if(ele.width() > 420){
+        var shareButton = ele.find('.shareButton'),
+            minWidth = 420 + ((stringWidth.tp.max + stringWidth.ct +65) - (97+87));
+        if(ele.width() > minWidth){
             scope.showChartTypeLabel = true;
             scope.timePeriod_name = scope.timePeriod.name;
-            timePeriodButton.css("width","87px");
-            chartTypeButton.css("width","97px");
+            timePeriodButton.css("width",stringWidth.tp.max+25+"px");
+            chartTypeButton.css("width",stringWidth.ct+55+"px");
         } else {
             scope.showChartTypeLabel = false;
             scope.timePeriod_name = i18n_name =="en" ? scope.timePeriod.value.toUpperCase() : scope.timePeriod.value.i18n();
-            timePeriodButton.css("width","50px");
+            timePeriodButton.css("width",stringWidth.tp.min+27+"px");
             chartTypeButton.css("width","45px");
         }
 
@@ -114,6 +117,25 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         }
     }
 
+    function calculateStringWidth() {
+        var longTp1 = timeperiod_arr.reduce(function(a,b){return a.value.i18n().length > b.value.i18n().length? a :b}),
+            longTp2 = timeperiod_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a :b}),
+            longCt = chartType_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a : b});
+        var getWidth = function(string) {
+            var font = '0.8em roboto,sans-serif',
+                obj = $('<div>' + string.i18n() + '</div>')
+                    .css({'position': 'absolute', 'float': 'left', 'white-space': 'nowrap', 'visibility': 'hidden', 'font': font})
+                    .appendTo($('body')),
+                width = obj.width();
+                obj.remove();
+            return width;
+        }
+        stringWidth.tp = {};
+        stringWidth.tp.min = getWidth(longTp1.value);
+        stringWidth.tp.max = getWidth(longTp2.name);
+        stringWidth.ct = getWidth(longCt.name);
+    }
+
     function preLoadImages(){
         chartType_arr.forEach(function(chartType){
             if(chartType.value !== "table")
@@ -126,10 +148,10 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
     return {
 
-        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode) {
-
+        init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode, m_showShare, m_showOverlay) {
+            
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function(html) {
-
+                calculateStringWidth();
                 if (view[m_newTabId]) view[m_newTabId].unbind();
                 state[m_newTabId] = {
                     //Input parameters
@@ -150,6 +172,8 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     showDrawingToolSelector : false,
                     showExportSelector : false,
                     showLoadSaveSelector: false,
+                    showShare: typeof m_showShare == 'undefined' ? true : m_showShare,
+                    showOverlay: typeof m_showOverlay == 'undefined' ? true : m_showOverlay,
 
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),

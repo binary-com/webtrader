@@ -1,4 +1,4 @@
-<div class='withdraw-dialog'>
+<div class='withdraw-dialog ltr-direction'>
 
 	<div class='menu' rv-show='route.value | eq "menu"'>
 		<span class='title'>Choose your pereferred withdrawal method:</span>
@@ -31,6 +31,7 @@
     </span>
 
 		<div class='title'>Send to account #</div>
+		<span class='explanation'>Ensure you are entering valid inputs else your account will get locked. </span>
 		<input class='account' rv-value='transfer.account' placeholder="E.g. MLT379421" />
 		<span class='error' rv-visible='transfer.account | eq "" | and empty_fields.validate'>This field is required.</span>
 
@@ -38,7 +39,6 @@
 		<span>{agent.currency}</span>
 		<input class='amount' rv-value='transfer.amount' />
 		<span class='error' rv-visible='transfer.amount | eq "" | and empty_fields.validate'>This field is required.</span>
-
 		<button class='submit' rv-on-click='transfer.submit' rv-css-opacity='transfer.disabled | ternary 0.5 1'>Submit</button>
 	</div>
 

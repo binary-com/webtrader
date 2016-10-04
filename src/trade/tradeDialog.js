@@ -316,8 +316,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         _.each(forward_starting_options, function (row) {
           var step = 5 * 60; // 5 minutes step
           var from = Math.ceil(Math.max(later, row.open) / step) * step;
-          to = row.close;
-          for (var epoch = from; epoch < to; epoch += step) {
+          for (var epoch = from; epoch < row.close; epoch += step) {
             var d = new Date(epoch * 1000);
             var text = ("00" + d.getUTCHours()).slice(-2) + ":" +
             ("00" + d.getUTCMinutes()).slice(-2) + ' ' +
@@ -782,6 +781,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               }
               chartingRequestMap.unregister(key);
               view.unbind();
+              dialog.destroy();
             }
         });
         dialog.track({

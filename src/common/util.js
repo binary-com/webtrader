@@ -149,12 +149,25 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
     return new Date(y, m - 1, d).getTime() / 1000;
 }
 
+function formatNumber(number) {
+    return new Intl.NumberFormat(i18n_name.replace("_","-")).format(number);
+}
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
+    var currency_symbols = {
+      'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
+      'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
+      'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
+      'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
+      'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
+      'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
+      'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
+    };
+    float = new Intl.NumberFormat(i18n_name.replace("_","-")).format(float);
     if(currency){
-        return new Intl.NumberFormat(i18n_name.replace("_","-") ,{ style: 'currency', currency: currency.trim()}).format(float);
+      float = (currency_symbols[currency] || currency) + float;
     }
-    return new Intl.NumberFormat(i18n_name.replace("_","-")).format(float);
+    return float;
 }
 
 function sortAlphaNum(property) {
@@ -258,7 +271,7 @@ if (!String.prototype.includes) {
     if (typeof start !== 'number') {
       start = 0;
     }
-    
+
     if (start + search.length > this.length) {
       return false;
     } else {
@@ -369,10 +382,28 @@ var Cookies = {
         id: parts[0],
         is_real: parts[1] === 'R',
         is_disabled: parts[2] === 'D',
-        is_financial: /MF/.test(parts[0])
+        is_mf: /MF/gi.test(parts[0]),
+        is_mlt: /MLT/gi.test(parts[0]),
+        is_mx: /MX/gi.test(parts[0]),
+        is_cr: /CR/gi.test(parts[0])
       };
     });
-    return loginids;
+   /* when new accounts are created document.cookie doesn't change,
+    * use local_storage to return the full list of loginids. */
+    var oauth_loginids = (local_storage.get('oauth') || []).map(function(id){
+      return {
+        id: id.id,
+        is_real: !id.is_virtual,
+        is_disabled: false,
+        is_mf: /MF/gi.test(id.id),
+        is_mlt: /MLT/gi.test(id.id),
+        is_mx: /MX/gi.test(id.id),
+        is_cr: /CR/gi.test(id.id)
+      }
+    }).filter(function(id) {
+      return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
+    });
+    return loginids.concat(oauth_loginids)
   },
   residence: function() {
     return Cookies.get_by_name('residence');

@@ -2,7 +2,7 @@
  * Created by amin on June 26, 2016.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, rv, _, moment) {
+define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'cashier/currency', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, currencyDialog, rv, _, moment) {
     require(['text!cashier/deposit.html']);
     require(['css!cashier/deposit.css']);
     var deposit_win = null;
@@ -15,8 +15,15 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
     function init(li) {
       li.click(() => {
-          if(!deposit_win)
-            require(['text!cashier/deposit.html'], init_deposit_win);
+          if(!deposit_win) {
+              liveapi.cached.authorize().then(data => {
+                if(!data.authorize.currency) // if currency is not set ask for currency
+                  return currencyDialog.check_currency();
+                return true; // OK
+              })
+              .then(() => require(['text!cashier/deposit.html'], init_deposit_win))
+              .catch(error_handler);
+          }
           else
             deposit_win.moveToTop();
       });
@@ -108,7 +115,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                agent.withdrawal_commission + '% ' + 'withdrawals'.i18n();
       }
       state.payment_agents.onclick = function(agent, e){
-        console.warn(e.target);
         var elem = $(e.target).next();
         var cur_elem = state.payment_agents.elem;
         cur_elem && cur_elem.css('max-height', '0');
@@ -145,7 +151,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       residence_promise.then(function() {
         if(!state.user.residence)
           return { paymentagent_list: { list: [] } };
-        return liveapi.cached.send({paymentagent_list: state.user.residence });
+        return liveapi.send({paymentagent_list: state.user.residence });
       }).then(function(data){
         var list = data.paymentagent_list.list.map(function(agent){
           agent.commission_text = state.payment_agents.get_commission_text(agent);

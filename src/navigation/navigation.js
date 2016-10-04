@@ -1,8 +1,7 @@
 /* Created by Armin on 10/17/2015 */
 
-define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/countries.json", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, rv, countries, $navHtml) {
+define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/rivetsExtra", "text!navigation/navigation.html", "css!navigation/navigation.css", "common/util"], function ($, moment, _, liveapi, rv, $navHtml) {
     "use strict";
-    countries = JSON.parse(countries);
 
     function updateListItemHandlers() {
         $("#nav-menu li > ul li").each(function () {
@@ -44,115 +43,117 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
         /* don't show the login menu if redirecting from oauth */
         local_storage.get('oauth') && login_menu.hide();
 
-        /* will get this from payout_currencies api on login */
-        require(['websockets/binary_websockets'], function (liveapi) {
+        function update_balance(data) {
+            if (!currency) {
+                liveapi.send({payout_currencies: 1})
+                    .then(function (_data) {
+                        currency = _data.payout_currencies[0];
+                        local_storage.set("currency",currency);
+                        setTimeout(function () {
+                            update_balance(data);
+                        }, 0);
+                        /* now that we have currency update balance */
+                    }).catch(function (err) {
+                    console.error(err);
+                })
+                return;
+            }
 
-            function update_balance(data) {
-                if (!currency) {
-                    liveapi.send({payout_currencies: 1})
-                        .then(function (_data) {
-                            currency = _data.payout_currencies[0];
-                            local_storage.set("currency",currency);
-                            setTimeout(function () {
-                                update_balance(data);
-                            }, 0);
-                            /* now that we have currency update balance */
-                        }).catch(function (err) {
-                        console.error(err);
+            var value = '0';
+            if (data.authorize) value = data.authorize.balance;
+            else value = data.balance ? data.balance.balance : '0';
+
+            balance.text(formatPrice(value, currency)).fadeIn();
+        };
+
+        /* update balance on change */
+        liveapi.events.on('balance', update_balance);
+
+        liveapi.events.on('logout', function () {
+            $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+            /* destroy all authorized dialogs */
+            logout_btn.removeAttr('disabled');
+            account_menu.fadeOut();
+            login_menu.fadeIn();
+            loginid.fadeOut();
+            // time.fadeOut();
+            balance.fadeOut();
+            currency = '';
+            local_storage.remove("currency");
+        });
+
+        liveapi.events.on('login', function (data) {
+            $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+            /* destroy all authorized dialogs */
+            login_menu.fadeOut();
+            account_menu.fadeIn();
+
+            update_balance(data);
+            loginid.text('Account ' + data.authorize.loginid).fadeIn();
+
+            var oauth = local_storage.get('oauth') || [];
+            var is_current_account_real = data.authorize.is_virtual === 0;
+            is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
+
+            getLandingCompany().then(function(what_todo){
+              var show_financial_link = (what_todo === 'upgrade-mf');
+              var show_realaccount_link = !is_current_account_real && (what_todo === 'upgrade-mlt');
+              var loginids = Cookies.loginids();
+              var has_real_account = _.some(loginids, {is_real: true});
+              var has_disabled_account =  _.some(loginids, {is_disabled: true});
+
+              if(_.some(loginids, {is_disabled: true})) {
+                $.growl.error({
+                  fixed: true,
+                  message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
+                          + "Your account is locked, please contact customer support for more info.".i18n()
+                          + "</a>"
+                });
+              }
+
+              var toggle = function(show, el) { show ? el.show() : el.hide(); }
+              toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
+              toggle(show_financial_link, upgrade_account_li.find('.open-financial-account-span'));
+              toggle(show_realaccount_link || show_financial_link, upgrade_account_li);
+              toggle(show_realaccount_link || show_financial_link, upgrade_account_li.find('a.real-account'));
+            });
+
+            /* switch between account on user click */
+            $('.account li.info').remove();
+            oauth.forEach(function (account) {
+                if (account.id !== data.authorize.loginid) {
+                    var a = $('<a href="#"></a>').html('<span class="ui-icon ui-icon-login"></span>' + account.id);
+                    var li = $('<li/>').append(a).addClass('info');
+                    li.data(account);
+                    li.click(function () {
+                        var data = $(this).data();
+                        $('.account li.info').remove();
+                        liveapi.switch_account(data.id)
+                            .catch(function (err) {
+                                $.growl.error({message: err.message});
+                            })
                     })
-                    return;
+                    li.insertBefore(logout_btn.parent());
                 }
-
-                var value = '0';
-                if (data.authorize) value = data.authorize.balance;
-                else value = data.balance ? data.balance.balance : '0';
-
-                balance.text(formatPrice(value, currency)).fadeIn();
-            };
-
-            /* update balance on change */
-            liveapi.events.on('balance', update_balance);
-
-            liveapi.events.on('logout', function () {
-                $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
-                /* destroy all authorized dialogs */
-                logout_btn.removeAttr('disabled');
-                account_menu.fadeOut();
-                login_menu.fadeIn();
-                loginid.fadeOut();
-                // time.fadeOut();
-                balance.fadeOut();
-                currency = '';
-                local_storage.remove("currency");
             });
+        });
 
-            liveapi.events.on('login', function (data) {
-                $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
-                /* destroy all authorized dialogs */
-                login_menu.fadeOut();
-                account_menu.fadeIn();
-
-                update_balance(data);
-                loginid.text('Account ' + data.authorize.loginid).fadeIn();
-
-                var oauth = local_storage.get('oauth') || [];
-                var is_current_account_real = data.authorize.is_virtual === 0;
-                is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
-
-                var loginids = Cookies.loginids();
-                var has_real_account = _.some(loginids, {is_real: true}) || _.some(oauth, {is_virtual: 0});
-                var has_disabled_account =  _.some(loginids, {is_disabled: true});
-
-                var show_financial_link = false;
-                if(_.every(loginids, {is_financial: false}) && !_.some(oauth, {is_financial: true}) && is_current_account_real) {
-                  var residence = Cookies.residence();
-                  show_financial_link =  /* allow UK MLT client to open MF account. */
-                      (countries[residence] && countries[residence].financial_company === 'maltainvest') ||
-                      (Cookies.residence() === 'gb' && /^MLT/.test(data.authorize.loginid));
-                }
-
-                var toggle = function(show, el) { show ? el.show() : el.hide(); }
-                toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
-                toggle(show_financial_link, upgrade_account_li.find('.open-financial-account-span'));
-                toggle(!has_real_account || show_financial_link, upgrade_account_li);
-
-                /* switch between account on user click */
-                $('.account li.info').remove();
-                oauth.forEach(function (account) {
-                    if (account.id !== data.authorize.loginid) {
-                        var a = $('<a href="#"></a>').html('<span class="ui-icon ui-icon-login"></span>' + account.id);
-                        var li = $('<li/>').append(a).addClass('info');
-                        li.data(account);
-                        li.click(function () {
-                            var data = $(this).data();
-                            $('.account li.info').remove();
-                            liveapi.switch_account(data.id)
-                                .catch(function (err) {
-                                    $.growl.error({message: err.message});
-                                })
-                        })
-                        li.insertBefore(logout_btn.parent());
-                    }
-                });
+        login_btn.on('click', function () {
+            login_btn.attr('disabled', 'disabled');
+            require(['oauth/login'], function (login_win) {
+                login_btn.removeAttr('disabled');
+                login_win.init();
             });
+        });
+        logout_btn.on('click', function () {
+            liveapi.invalidate();
+            logout_btn.attr('disabled', 'disabled');
+        });
 
-            login_btn.on('click', function () {
-                login_btn.attr('disabled', 'disabled');
-                require(['oauth/login'], function (login_win) {
-                    login_btn.removeAttr('disabled');
-                    login_win.init();
-                });
-            });
-            logout_btn.on('click', function () {
-                liveapi.invalidate();
-                logout_btn.attr('disabled', 'disabled');
-            });
-
-            // Restore login-button in case of login-error
-            $('.login').on("login-error",function(e){
-                console.log("Encountered login error");
-                login_menu.fadeIn();
-            });
+        // Restore login-button in case of login-error
+        $('.login').on("login-error",function(e) {
+            console.log("Encountered login error");
+            login_menu.fadeIn();
         });
 
         /* update time every one minute */
@@ -161,6 +162,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
             time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
         }, 15 * 1000);
     }
+
     function initLangButton(root) {
       root = root.find('#topbar').addBack('#topbar');
       var state = {
@@ -172,7 +174,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
         },
         languages: [
             { value: 'en', name: 'English'},
-            { value: 'ar', name: 'Arabic'},
+            // { value: 'ar', name: 'Arabic'},
             { value: 'de', name: 'Deutsch'},
             { value: 'es', name: 'Español'},
             { value: 'fr', name: 'Français'},
@@ -201,6 +203,52 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
       rv.bind(root[0], state);
     }
 
+    /*
+      1: company = (gaming company) && (financial company && financial company shortcode = maltainvest)
+      	a: no MLT account  ==> upgrade to MLT
+       	b: has MLT account
+          	I:     upgrade to MF
+        c: has both MLT & MF ==> do nothing
+      2: company = financial company &&  financial company shortcode = maltainvest) && there is NO gaming company
+      	a: no MF account
+        		I: company = financial ==> upgrade to MF
+      	b: has MF account => do nothing
+      3: company & shortcode anything except above
+      	a: no MLT, MX, CR account ==> upgrade to MLT, MX or CR
+      	b: has MLT, MX, CR account ==> do nothing
+      4: company shortcode == japan
+        a: do nothing and show an error message
+
+      returns 'upgrade-mlt' | 'upgrade-mf' | 'do-nothing'
+    */
+    function getLandingCompany() {
+       return liveapi
+       .cached.send({landing_company: Cookies.residence() })
+        .then(function(data) {
+             var financial = data.landing_company.financial_company;
+             var gaming = data.landing_company.gaming_company;
+
+             var loginids = Cookies.loginids();
+             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
+                 if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
+                    return 'do-nothing';
+                 if (_.some(loginids, {is_mlt: true})) // 1-b
+                    return 'upgrade-mf';
+                 return 'upgrade-mlt'; // 1-a
+             }
+             if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
+                if (_.some(loginids, {is_mf: true})) // 2-b
+                  return 'do-nothing';
+                return 'upgrade-mf'; // 2-a
+             }
+             // 3:
+             if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
+                return 'do-nothing'; // 3-b
+             return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
+             // 4: never happens, japan accounts are not able to log into webtrader.
+        });
+    }
+
     return {
         init: function (_callback) {
             var root = $($navHtml).i18n();
@@ -223,6 +271,7 @@ define(["jquery", "moment", "lodash", "common/rivetsExtra","text!navigation/coun
             }
 
         },
+        getLandingCompany: getLandingCompany,
         updateDropdownToggles : updateListItemHandlers
     };
 

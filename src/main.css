@@ -5,6 +5,13 @@ html, body {
     font-size: 16px !important;
 }
 
+body.rtl-direction { /* for arabic language */
+    direction: rtl;
+}
+body.rtl-direction .ltr-direction { /* exception dialogs */
+    direction: ltr;
+}
+
 .mainContainer {
     width: 100%;
 }
@@ -294,6 +301,11 @@ input:focus {
 }
 #growls { top: 110px !important; }
 
+.growl-error a {
+  color: white !important;
+  text-decoration: underline;
+}
+
 button {
     outline: 0 !important;
 }
@@ -421,4 +433,16 @@ button[disabled] {
 /* override table styles*/
 table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
   border-bottom: none!important;
+}
+
+#doorbell-button  {
+    right: -37px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    font-size: inherit;
+    background-color: #2E8836;
+    bottom: 100px;
 }

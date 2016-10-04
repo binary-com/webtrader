@@ -80,10 +80,10 @@ requirejs.config({
 requirejs.onError = function (err) {
     //Avoiding script errors on timeout. Showing a warning so that developers can track wrong path errors on local servers.
     if (err.requireType === 'scripterror') {
-        console.warn(err); 
+        console.warn(err);
         return;
     }
-
+    console.error(err); // For more descriptive errors locally.
     throw err;
 };
 
@@ -95,6 +95,9 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
     "use strict";
     /* setup translating string literals */
     setup_i18n_translation(JSON.parse(lang_json));
+    if (i18n_name == 'ar') {
+      $('body').addClass('rtl-direction');
+    }
 
     //By pass touch check for affiliates=true(because they just embed our charts)
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {

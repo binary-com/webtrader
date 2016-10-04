@@ -27,7 +27,8 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
 
     var connect = function () {
         var config = local_storage.get('config');
-        var api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l=EN') + '&app_id=' + app_id;
+        var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+        var api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l='+i18n_name) + '&app_id=' + app_id;
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
@@ -204,6 +205,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
     var invalidate = function(){
         if(!is_authenitcated_session) { return; }
         local_storage.remove('oauth');
+        local_storage.remove('authorize');
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){
