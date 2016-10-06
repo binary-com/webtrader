@@ -507,7 +507,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 for (var index = 0; index < chart.series.length; index++) {
                     //console.log('Instrument name : ' + chart.series[index].name);
                     var series = chart.series[index];
-                    if (series.options.isInstrument || series.options.onChartIndicator) {
+                    if (series.options.id != 'navigator' && (series.options.isInstrument || series.options.onChartIndicator)) {
                         series.update({
                             compare: 'percent'
                         });
