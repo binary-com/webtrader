@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-09-23 01:50+0000\n"
+"PO-Revision-Date: 2016-10-11 02:20+0000\n"
 "Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -682,10 +682,10 @@ msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
 
 msgid "Entry Spot"
-msgstr "取引時レート"
+msgstr "取引時刻直後のテック"
 
 msgid "Entry spot"
-msgstr "取引時レート"
+msgstr "取引時刻直後のテック"
 
 msgid "Error downloading .csv"
 msgstr ".csvファイルのダウンロード中にエラーが発生しました"
@@ -703,10 +703,10 @@ msgid "Exclude time cannot be less than 6 months"
 msgstr "5ヶ月以下の除外時間を設定することはできません"
 
 msgid "Exit Spot"
-msgstr "判定時レート"
+msgstr "終値"
 
 msgid "Exit spot"
-msgstr "判定時レート"
+msgstr "終値"
 
 msgid "Explanation"
 msgstr "取引概要"
@@ -1835,10 +1835,10 @@ msgid "Standard withdrawal"
 msgstr "スタンダード出金"
 
 msgid "Start Time"
-msgstr "開始時間"
+msgstr "取引時刻"
 
 msgid "Start time"
-msgstr "開始時間"
+msgstr "取引時刻"
 
 msgid "State/province/region"
 msgstr "都道府県名"
