@@ -4,14 +4,14 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
     }
 
     function init(containerIDWithHash, _callback) {
-
-        require(['css!charts/indicators/stochrsi/stochrsi.css']);
 
         var Level = function (level, stroke, strokeWidth, dashStyle) {
             this.level = level;
@@ -21,16 +21,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
         };
         var defaultLevels = [new Level(0.30, 'red', 1, 'Dash'), new Level(0.70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/stochrsi/stochrsi.html'], function ($html) {
+        require(['text!charts/indicators/stochrsi/stochrsi.html', 'text!charts/indicators/indicators.json', 'css!charts/indicators/stochrsi/stochrsi.css'], function ($html, data) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.stochrsi;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.stochrsi-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#stochrsi_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -52,14 +64,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#stochrsi_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#stochrsi_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#stochrsi_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#stochrsi_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#stochrsi_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             var table = $html.find('#stochrsi_levels').DataTable({
                 paging: false,
@@ -109,6 +121,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -156,6 +169,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                     appliedTo: parseInt($html.find("#stochrsi_appliedTo").val()),
                                     levels: levels
                                 };
+                                before_add_callback && before_add_callback();
                                 //Add STOCHRSI for the main series
                                 $($(".stochrsi").data('refererChartID')).highcharts().series[0].addIndicator('stochrsi', options);
 
@@ -170,8 +184,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function") {
@@ -184,15 +200,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".stochrsi").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".stochrsi").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".stochrsi").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".stochrsi").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };

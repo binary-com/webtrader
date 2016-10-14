@@ -1,28 +1,58 @@
-define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/util'], function( $, liveapi, menu ) {
+define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', 'common/util'], function( $, liveapi, menu, _ ) {
 
-	var init_chart_options = function (dialog, timePeriod, type){
-			var id = dialog.attr('id');
-			/* initialize chartOptions & table-view once chart is rendered */
-			require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
-				var table_view = tableView.init(dialog);
-				chartOptions.init(id, timePeriod, type, table_view.show);
-			});
+	var init_chart_options = function (dialog, timePeriod, type, instrumentName, instrumentCode, hideShare, hideOverlay){
+		var id = dialog.attr('id');
+		/* initialize chartOptions & table-view once chart is rendered */
+		require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
+			var table_view = tableView.init(dialog);
+			chartOptions.init(id, timePeriod, type, table_view.show, instrumentName, instrumentCode, !hideShare, !hideOverlay);
+		});
 	};
+
+	//Check for format of timezone eg: (GMT+5.30)
+	var formatCheck = new RegExp(/^(GMT[\+|-])\d{1,2}(\.\d{1,2})*$/),
+		offset = 0,
+		tzString = getParameterByName("timezone").toUpperCase().replace(" ","+");//Browsers change '+' in url to " "
+
+	if(formatCheck.test(tzString)){
+		var tzValue = tzString.split("GMT")[1],
+			hours = parseInt(tzValue.split(".")[0]),
+			minutes = tzValue.split(".")[1] ? hours > 0 ? parseInt(tzValue.split(".")[1]) : parseInt(tzValue.split(".")[1]) *-1 : 0;
+		offset = (-1) * (hours * 60 + minutes);
+	}
+
+	Highcharts.setOptions(
+		{
+			global: {
+				timezoneOffset: offset // Changing time zone.
+			},
+			plotOptions: {
+				candlestick: {
+					lineColor: 'rgba(0,0,0,1)',
+					color: 'rgba(215,24,24,1)',
+					upColor: 'rgba(2,146,14,1)',
+					upLineColor: 'rgba(0,0,0,1)'
+				}
+			}
+		});
 
 	return {
 		init: function() {
+			/* when we are on affiliates route we need to disable overflow-x */
+			$('body').addClass('affiliates');
+
 			// get chart window html.
-	        require(['text!charts/chartWindow.html'], function(html) {
-	            var newTabId = "webtrader-dialog-1",
-	                timePeriod = getParameterByName('timePeriod') || '1d',
-	                type = timePeriod == '1t' ? 'line' : 'candlestick';
+			require(['text!charts/chartWindow.html'], function(html) {
+				var newTabId = "webtrader-dialog-1",
+					timePeriod = getParameterByName('timePeriod') || '1d',
+					type = timePeriod == '1t' ? 'line' : 'candlestick';
 
-	            var $html = $(html);
-	            $html.attr("id", newTabId)
-	                .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
-	                .find('div.chartSubContainer').attr('id', newTabId + "_chart").end();
+				var $html = $(html).i18n();
+				$html.attr("id", newTabId)
+					.find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
+					.find('div.chartSubContainer').attr('id', newTabId + "_chart").end();
 
-        // load market information (instruments) from API.
+				// load market information (instruments) from API.
 				//Trigger async loading of instruments and trade menu and refresh
 				require(["instruments/instruments", "jquery-growl"], function (instruments) {
 					instruments
@@ -37,56 +67,37 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 										var instrumentCode = instrumentObject[0].symbol;
 										var instrumentName = instrumentObject[0].display_name;
 										var delayAmount = instrumentObject[0].delay_amount || 0;
-
-										/**
-										 * Additional requirements to render tick charts ONLY when following parameters are passed
-										 * 	startTime - optional
-										 * 	endTime - mandatory
-										 * 	entrySpotTime - mandatory
-										 * 	barrierPrice - mandatory
+										/* @@url-param
+										 * hideOverlay(boolean) - used for hiding comparison in chart options
+										 * hideShare(boolean) - used for hidinig share in chart options.
+										 * hideFooter(boolean) - used for hiding link in the footer
+										 * timezone(GMT+5.30) - get timezone.
 										 */
-										var startTime = getParameterByName('startTime');
-										var endTime = getParameterByName('endTime');
-										var entrySpotTime = getParameterByName('entrySpotTime');
-										var barrierPrice = getParameterByName('barrierPrice');
-										if (endTime && entrySpotTime && barrierPrice) {
-
-											if (delayAmount > 0) {
-												$.growl.error({
-													message: "Delayed instruments cannot be rendered!"
-												});
-											} else if (timePeriod.toUpperCase() !== '1T') {
-												$.growl.error({
-													message: "Only tick charts are supported in this route!"
-												});
-											} else {
-												require(["charts/charts"], function(charts) {
-													charts.drawChart("#" + newTabId + "_chart", {
-														instrumentCode : instrumentCode,
-														instrumentName : instrumentName,
-														timePeriod : timePeriod,
-														type : type,
-														delayAmount : delayAmount
-													});
-													init_chart_options($html, timePeriod, type);
-												});
-											}
-
-										} else {
-
-											//Render in normal way
-											require(["charts/charts"], function(charts) {
-												charts.drawChart("#" + newTabId + "_chart", {
-													instrumentCode : instrumentCode,
-													instrumentName : instrumentName,
-													timePeriod : timePeriod,
-													type : type,
-													delayAmount : delayAmount
-												});
-												init_chart_options($html, timePeriod, type);
+										var hideOverlay = (getParameterByName("hideOverlay").toLowerCase() == 'true'),
+											hideShare = (getParameterByName("hideShare").toLowerCase() == 'true');
+										//Render in normal way
+										require(["charts/charts", "charts/chartWindow"], function(charts, chartWindow) {
+											var options = {
+												instrumentCode : instrumentCode,
+												instrumentName : instrumentName,
+												timePeriod : timePeriod,
+												type : type,
+												delayAmount : delayAmount,
+												name: newTabId
+											};
+											chartWindow.add_chart_options(newTabId, options);
+											charts.drawChart("#" + newTabId + "_chart", {
+												instrumentCode : instrumentCode,
+												instrumentName : instrumentName,
+												timePeriod : timePeriod,
+												type : type,
+												delayAmount : delayAmount
 											});
-
-										}
+											init_chart_options($html, timePeriod, type, instrumentName, instrumentCode, hideShare, hideOverlay);
+											_.defer(function() {
+												charts.triggerReflow("#" + newTabId + "_chart");
+											});
+										});
 
 									} else {
 										require(["jquery", "jquery-growl"], function($) {
@@ -116,15 +127,15 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'common/uti
 						});
 				});
 
-	            $(".mainContainer").append($html);
-	            resizeElement('#' + newTabId);
-	            resizeElement('#' + newTabId + " .chartSubContainer");
-	            $(window).resize(function() {
-	                resizeElement('#' + newTabId);
-	                resizeElement('#' + newTabId + " .chartSubContainer");
-	            });
+				$(".mainContainer").append($html);
+				$('#' + newTabId + " .chartSubContainer").height($(window).height() - 50).width($(window).width());
+				$('#' + newTabId + " .table-view").width($(window).width());
+				$(window).resize(function() {
+					$('#' + newTabId + " .chartSubContainer").height($(window).height() - 50).width($(window).width());
+					$('#' + newTabId + " .table-view").width($(window).width());
+				});
 
-	        });
+			});
 		}
 	};
 });

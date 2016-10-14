@@ -4,12 +4,14 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
     }
 
-    function init( containerIDWithHash, _callback ) {
+    function init( containerIDWithHash, callback ) {
 
         require(['css!charts/indicators/atr/atr.css']);
 
@@ -21,16 +23,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/atr/atr.html'], function ( $html ) {
+        require(['text!charts/indicators/atr/atr.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.atr;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.atr-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#atr_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -52,14 +66,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#atr_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#atr_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#atr_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '85px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#atr_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#atr_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '85px');
 
 
             var table = $html.find('#atr_levels').DataTable({
@@ -111,6 +125,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height:400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -150,6 +165,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                     });
                                 }
                             });
+
                             var options = {
                                 period: parseInt($html.find(".atr_input_width_for_period").val()),
                                 stroke: defaultStrokeColor,
@@ -158,6 +174,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 appliedTo: parseInt($html.find("#atr_appliedTo").val()),
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add ATR for the main series
                             $($(".atr").data('refererChartID')).highcharts().series[0].addIndicator('atr', options);
 
@@ -173,31 +190,33 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
-            if (typeof _callback == "function")
-            {
-                _callback( containerIDWithHash );
-            }
-
+            callback && callback();
         });
 
     }
 
     return {
 
-        open : function ( containerIDWithHash ) {
+        /**
+         * @param containerIDWithHash - containerId where indicator needs to be added
+         * @param before_add_cb - callback that will be called just before adding the indicator
+         */
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+              before_add_callback = before_add_cb;
+              $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
 
             if ($(".atr").length == 0)
-            {
-                init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+              init(containerIDWithHash, open);
+            else
+              open();
         }
 
     };

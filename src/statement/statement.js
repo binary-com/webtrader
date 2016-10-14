@@ -1,11 +1,12 @@
 ﻿/**
  * Created by amin on November 9, 2015.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl"], function ($, windows, liveapi, _) {
+define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl"], function (module, $, windows, liveapi, _) {
 
     var statement = null,
         table = null,
-        datepicker = null;
+        datepicker = null,
+        currency=local_storage.get("currency");
 
     function init($menuLink) {
         require(['css!statement/statement.css']);
@@ -55,6 +56,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
         /* refresh the table with result of { profit_table:1 } from WS */
         var refresh = function (data) {
             var transactions = (data.statement && data.statement.transactions) || [];
+            var view_button = '<button>View</button>'.i18n();
             var rows = transactions.map(function (trans) {
                 var amount = trans.amount * 1;
                 return [
@@ -63,8 +65,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                     _.capitalize(trans.action_type),
                      trans.longcode ,
                     (trans.amount * 1).toFixed(2),
-                    '<b>' + formatPrice(trans.balance_after) + '</b>',
-                    '<button class="green-button shine">View</button>',
+                    '<b>' + formatPrice(trans.balance_after,currency) + '</b>',
+                    view_button,
                     trans, /* data for view transaction dailog - when clicking on arrows */
                 ];
             });
@@ -85,9 +87,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
     function initStatement() {
         statement = windows.createBlankWindow($('<div/>'), {
-            title: 'Statement',
+            title: 'Statement'.i18n(),
             width: 700 ,
-            minHeight:100,
+            height: 400,
             destroy: function() { table && table.DataTable().destroy(true); statement = null; },
             refresh: function() {
               datepicker.clear();
@@ -95,9 +97,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             },
             'data-authorized' :'true'
         });
+        statement.track({
+          module_id: 'statement',
+          is_unique: true,
+          data: null,
+        });
         require(['text!statement/statement.html'], function (html) {
 
-            table = $(html);
+            table = $(html).i18n();
             table.appendTo(statement);
 
             table = table.dataTable({
@@ -108,6 +115,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                         var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
                         if (css_class)
                             $(td).addClass(css_class);
+                        td.textContent = formatPrice(cellData, currency);
                     }
                 }],
                 paging: false,
@@ -157,15 +165,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
-      $target.addClass('disabled');
+      $target.addClass('button-disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
         viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                       .then(function(){ $target.removeClass('disabled'); });
+                       .then(function(){ $target.removeClass('button-disabled'); });
       });
     }
 

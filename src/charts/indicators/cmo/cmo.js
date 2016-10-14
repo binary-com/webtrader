@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -21,15 +23,22 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/cmo/cmo.html'], function ( $html ) {
+        require(['text!charts/indicators/cmo/cmo.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.cmo;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.cmo-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#cmo_stroke").colorpicker({
+				showOn: 'click',
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -51,14 +60,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#cmo_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 138,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#cmo_dashStyle .dd-selected-image').css('max-width', '105px');
+                    $('#cmo_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#cmo_dashStyle .dd-option-image').css('max-width', '105px');
+            $('#cmo_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#cmo_levels').DataTable({
@@ -110,6 +119,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -158,6 +168,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 appliedTo: parseInt($("#cmo_applied_to").val()),
                                 levels:levels
                             }
+                            before_add_callback && before_add_callback();
                             //Add CMO for the main series
                             $($(".cmo").data('refererChartID')).highcharts().series[0].addIndicator('cmo', options);
 
@@ -173,8 +184,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 140
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -188,16 +201,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".cmo").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".cmo").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".cmo").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

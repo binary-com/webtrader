@@ -9,6 +9,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     var table = null;
     var balance_span = null;
     var currency = 'USD';
+    var subscribed_contracts = [];
 
     function init(li) {
         li.click(function () {
@@ -100,15 +101,15 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
-      $target.addClass('disabled');
+      $target.addClass('button-disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
         viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                       .then(function(){ $target.removeClass('disabled'); });
+                       .then(function(){ $target.removeClass('button-disabled'); });
       });
     }
 
@@ -116,15 +117,6 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
         require(['css!portfolio/portfolio.css']);
         liveapi.send({ balance: 1 })
             .then(function (data) {
-                var refresh = function(subscribe) {
-                  if(portfolioWin.dialogExtend('state') === 'minimized') {
-                      portfolioWin.dialogExtend('restore');
-                  }
-                  liveapi.send({ balance: 1 }).catch(function (err) { console.error(err); $.growl.error({ message: err.message }); });
-                  update_table();
-                  proposal_open_contract( subscribe === true? 'subscribe' : 'resubscribe');
-                };
-
                 /* refresh blance on blance change */
                 liveapi.events.on('balance',function(data){
                   if(data.balance !== undefined && data.balance.currency !== undefined) {
@@ -135,24 +127,41 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 /* refresh portfolio when a new contract is added or closed */
                 liveapi.events.on('transaction', function(data){
                     var transaction = data.transaction;
-                    /* TODO: once the api provoided "longcode" use it to update
-                      the table and do not issue another {portfolio:1} call */
-                    update_table();
-                    proposal_open_contract('resubscribe');
+
+                    if(transaction.action === 'buy') {
+                      var view_button = '<button>View</button>'.i18n();
+                      var row = [
+                          transaction.transaction_id,
+                          transaction.longcode,
+                          formatPrice(Math.abs(transaction.amount)),
+                          '0.00',
+                          view_button,
+                          transaction.contract_id, /* for jq-datatables rowId */
+                          transaction, /* data for view transaction dailog - when clicking on arrows */
+                      ];
+                      table.api().rows.add([row]);
+                      table.api().draw();
+                      subscribe_to_contracts([transaction]);
+                    } else if (transaction.action === 'sell') {
+                      var tr = table.find('#' + transaction.contract_id)[0];
+                      table.api().row(tr).remove();
+                      table.api().draw();
+                      forget_the_contracts([transaction]);
+                    }
                 });
 
                 portfolioWin = windows.createBlankWindow($('<div/>'), {
-                    title: 'Portfolio',
-                    width: 700,
-                    minHeight: 60,
+                    title: 'Portfolio'.i18n(),
+                    width: 700 ,
+                    height: 400,
                     'data-authorized': 'true',
                     close: function () {
-                        proposal_open_contract('forget');
+                        forget_the_contracts(subscribed_contracts);
                         /* un-register proposal_open_contract handler */
                         liveapi.events.off('proposal_open_contract', update_indicative);
                     },
                     open: function () {
-                        refresh(true /* subscribe to proposal_open_contract */);
+                        init_table();
                         /* register handler for proposal_open_contract */
                         liveapi.events.on('proposal_open_contract', update_indicative);
                     },
@@ -160,31 +169,34 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                       table && table.DataTable().destroy(true);
                       portfolioWin = null;
                     },
-                    refresh: refresh
+                    refresh: function() {
+                      liveapi.send({ balance: 1 }).catch(function (err) { console.error(err); $.growl.error({ message: err.message }); });
+                      forget_the_contracts(subscribed_contracts).then(init_table);
+                    }
                 });
 
                 var header = portfolioWin.parent().find('.ui-dialog-title').addClass('with-content');
                 balance_span = $('<span class="span-in-dialog-header" />')
                     .insertAfter(header);
                 balance_span.update = function(balance) {
-                    balance_span.html('Account balance: <strong>' + currency + ' ' + formatPrice(balance) + '</strong>');
+                    balance_span.html('Account balance: <strong>'.i18n() +  formatPrice(balance, currency) + '</strong>');
                 };
 
                 var currency = data.balance.currency;
-                table = $("<table width='100%' class='portfolio-dialog display compact'/>");
+                table = $("<table width='100%' class='portfolio-dialog hover'/>");
                 table.appendTo(portfolioWin);
                 table = table.dataTable({
                     data: [],
                     columns: [
-                        { title: 'Ref.' },
-                        { title: 'Contract Details' },
+                        { title: 'Ref.'.i18n() },
+                        { title: 'Contract Details'.i18n() },
                         {
-                          title: 'Purchase',
-                          render: function(val) { return currency + ' ' + '<span class="bold">' + val + '</span>'; }
+                          title: 'Purchase'.i18n(),
+                          render: function(val) { return '<span class="bold">' + formatPrice(val,currency) + '</span>'; }
                         },
                         {
-                          title: 'Indicative',
-                          render: function(val) { return currency + ' ' + '<span class="bold">' + val + '</span>'; }
+                          title: 'Indicative'.i18n(),
+                          render: function(val) { return '<span class="bold">' + formatPrice(val,currency) + '</span>'; }
                         },
                         { title: '' }
                     ],
@@ -197,6 +209,11 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 table.parent().addClass('hide-search-input');
 
                 portfolioWin.on('click', on_arrow_click);
+                portfolioWin.track({
+                  module_id: 'portfolio',
+                  is_unique: true,
+                  data: null
+                });
                 portfolioWin.dialog('open');
             })
             .catch(function (err) {
@@ -205,7 +222,33 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
 
     }
 
-    function update_table(){
+    function subscribe_to_contracts(contracts) {
+        contracts.forEach(function(contract){
+          subscribed_contracts.push(contract);
+          liveapi.proposal_open_contract
+                 .subscribe(contract.contract_id)
+                 .catch(function(err) {
+                    $.growl.error({ message: err.message });
+                 });
+        });
+    }
+
+    function forget_the_contracts(contracts) {
+        var promises = contracts.map(function(contract){
+          return liveapi.proposal_open_contract
+                 .forget(contract.contract_id)
+                 .catch(function(err) {
+                    $.growl.error({ message: err.message });
+                 });
+        });
+        var ids = _.map(contracts, 'contract_id');
+        subscribed_contracts = subscribed_contracts.filter(function(contract) {
+          return _.includes(ids, contract.contract_id) === false;
+        });
+        return Promise.all(promises);
+    }
+
+    function init_table(){
         var processing_msg = $('#' + table.attr('id') + '_processing').show();
         liveapi.send({ portfolio: 1 })
             .then(function (data) {
@@ -217,14 +260,14 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     //    }
                     //];
 
-
+                var view_button = '<button>View</button>'.i18n();
                 var rows = contracts.map(function (contract) {
                     return [
                         contract.transaction_id,
                         contract.longcode,
                         formatPrice(contract.buy_price),
                         '0.00',
-                        '<button class="green-button shine">View</button>',
+                        view_button,
                         contract.contract_id, /* for jq-datatables rowId */
                         contract, /* data for view transaction dailog - when clicking on arrows */
                     ];
@@ -233,6 +276,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                 contracts.forEach(function(contract){
                   liveapi.sell_expired(contract.expiry_time);
                 });
+                subscribe_to_contracts(contracts);
 
                 /* update the table */
                 table.api().rows().remove();

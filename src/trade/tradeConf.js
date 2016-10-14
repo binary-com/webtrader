@@ -38,7 +38,18 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
                 title: '',
                 gridLineWidth: 0,
             },
-            series: [{ data: [] }],
+            series: [
+              { data: [] },
+              /* HighChart scales the y-axis automatically based on the maximum value of data.
+               * but it doesn't consider the plotLine's value in its calculations.
+               * We add an invisible seri and late plotline values to work around this issue. */
+               {
+                   type: 'scatter',
+                   marker: { enabled: false },
+                   data: []
+               }
+            ],
+            plotOptions: { scatter: { enableMouseTracking: false } },
             exporting: {enabled: false, enableImages: false},
             legend: {enabled: false},
         });
@@ -63,6 +74,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             color: 'green',
             width: 2,
           });
+
+           /* Add plotline value to invisible seri to make the plotline always visible. */
+           chart.series[1].addPoint([1, options.value*1]);
         };
 
         var index = ticks.length;
@@ -80,59 +94,72 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
       } /* end of routine() */
     };
 
-    function register_ticks(state, extra){
+    last_1000_ticks = []; /* record the last 1k ticks returned */
+    liveapi.events.on('tick', function(data) {
+      var tick = data.tick;
+      tick.quote *= 1;
+      last_1000_ticks.push(tick);
+      if(last_1000_ticks.length > 1000)
+        last_1000_ticks.shift();
+    });
+
+    function register_ticks(state, extra) {
       var tick_count = extra.tick_count * 1,
           symbol = extra.symbol,
           purchase_epoch = state.buy.purchase_time * 1,
           fn = null;
 
-      /* TODO: if the connection get closed while we are adding new ticks,
-               although we will automatically resubscribe (in binary_websockets),
-               BUT we will also lose some ticks in between!
-               which means we ware showing the wrong ticks to the user! FIX THIS*/
+      /* No need to worry about WS connection getting closed, because the user will be logged out */
       function add_tick(tick){
-          if (_.findIndex(state.ticks.array, function(t) { return t.epoch === (tick.time / 1000)}) === -1 && tick_count > 0) {
+          if (_.findIndex(state.ticks.array, function(t) { return t.epoch === tick.epoch }) === -1 && tick_count > 0) {
               var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
               state.ticks.array.push({
-                  quote: tick.close,
-                  epoch: (tick.time / 1000) | 0,
+                  quote: tick.quote,
+                  epoch: tick.epoch,
                   number: state.ticks.array.length + 1,
-                  tooltip: moment.utc(tick.time).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
-                           extra.symbol_name + " " + tick.close,
+                  tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
+                           extra.symbol_name + " " + tick.quote,
                   decimal_digits : decimal_digits
               });
               --tick_count;
+              if (tick_count === 0) {
+                  state.ticks.update_status();
+                  state.buy.update();
+                  /* show buy-price final and profit & update title */
+                  state.back.visible = true;
+                  /* show back button */
+                  liveapi.events.off('proposal_open_contract', fn);
+                  liveapi.proposal_open_contract.forget(extra.contract_id);
+                  /* unregister from proposal_open_contract stream */
+              }
+              /* update state for each new tick in Up/Down && Asians contracts */
+              if (state.ticks.category !== 'Digits')
+                  state.ticks.update_status();
           }
-          if (tick_count === 0) {
-              state.ticks.update_status();
-              state.buy.update();
-              /* show buy-price final and profit & update title */
-              state.back.visible = true;
-              /* show back button */
-              liveapi.events.off('tick', fn);
-              /* unregister from tick stream */
-          }
-          /* update state for each new tick in Up/Down && Asians contracts */
-          if (state.ticks.category !== 'Digits')
-              state.ticks.update_status();
       }
 
-      /* Wait till the view is bound via rivetsjs */
-      _.defer(function() {
-            fn = liveapi.events.on('tick', function (data) {
+      var entry = null, expiry = null;
+      var tracking_timeout_set = false;
+      var track_ticks = function() {
+          tracking_timeout_set = false;
+          last_1000_ticks.filter(function(tick) {
+            return tick.symbol === extra.symbol && tick.epoch*1 >= entry && tick.epoch*1 <= expiry;
+          }).forEach(add_tick);
+          if(tick_count > 0) {
+            tracking_timeout_set = true;
+            setTimeout(track_ticks, 300);
+          }
+      }
 
-                if (data.tick.symbol != symbol) return;
-
-                var key = chartingRequestMap.keyFor(data.tick.symbol, 0);
-                var start_time = state.buy.start_time * 1000;
-                barsTable.chain()
-                    .find({'$and' : [{ time : { '$gt' : start_time }}, { instrumentCdAndTp : key }] })
-                    .simplesort("time", true).limit(5).data()
-                    .sort( function(a,b) { return a.time - b.time; } )
-                    .forEach(add_tick);
-            });
+      fn = liveapi.events.on('proposal_open_contract', function (data) {
+          var contract = data.proposal_open_contract;
+          if(contract.contract_id !== extra.contract_id) return;
+          entry = contract.entry_tick_time * 1;
+          expiry = contract.date_expiry * 1; /* date_expiry gets updated when contract is settled !!! */
+          if(!tracking_timeout_set)
+            track_ticks();
+          return;
       });
-
     }
 
     /** @param data
@@ -149,14 +176,22 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
      * @param hide_callback
      **/
     function init(data, extra, show_callback, hide_callback){
-      var root = $(html);
+      var root = $(html).i18n();
       var buy = data.buy;
       var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+      extra.getbarrier = function(tick) {
+          var barrier = tick.quote*1;
+          if(extra.barrier && _(['higher','lower']).includes(extra.category_display)) {
+            barrier += extra.barrier*1;
+          }
+          return barrier.toFixed(decimal_digits);
+      }
       var state = {
         title: {
-          text: 'Contract Confirmation',
+          text: 'Contract Confirmation'.i18n(),
         },
         buy: {
+          barrier: null,
           message: buy.longcode,
           balance_after: buy.balance_after,
           buy_price: buy.buy_price,
@@ -166,7 +201,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
           payout: buy.payout,
           currency: extra.currency,
           potential_profit : buy.payout - buy.buy_price,
-          potential_profit_text : 'Profit',
+          potential_profit_text : 'Profit'.i18n(),
           show_result: false,
         },
         spreads: {
@@ -186,20 +221,23 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
             },
             getPlotX: function(){
               var inx = this.array.length;
-              if(inx === 1) return {value: inx, label: 'Entry Spot'};
-              if(inx === this.tick_count) return {value:inx, label: 'Exit Spot'}
+              if(inx === 1) return {value: inx, label: 'Entry Spot'.i18n()};
+              if(inx === this.tick_count) return {value:inx, label: 'Exit Spot'.i18n()}
               return null;
             },
             getPlotY: function(){
               var inx = this.array.length;
               var tick = this.array[inx-1];
-              if(this.category === 'Up/Down' && inx === 1)
-                return {value: tick.quote*1, label:'Barrier ('+tick.quote+')', id: 'plot-barrier-y'};
+              if(this.category === 'Up/Down' && inx === 1) {
+                var barrier = extra.getbarrier(tick);
+                state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
+                return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
+              }
 
               if(this.category === 'Asians') {
                 //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
                 var avg = this.average().toFixed(decimal_digits + 1);
-                return {value: avg, label:'Average ('+ avg +')', id: 'plot-barrier-y'};
+                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
               }
               return null;
             },
@@ -218,9 +256,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
       state.buy.update = function(){
         var status = state.ticks.status;
-        state.title.text = { waiting: 'Contract Confirmation',
-                              won : 'This contract won',
-                              lost: 'This contract lost'
+        state.title.text = { waiting: 'Contract Confirmation'.i18n(),
+                              won : 'This contract won'.i18n(),
+                              lost: 'This contract lost'.i18n()
                             }[status];
         if(status === 'lost') {
           state.buy.potential_profit = -state.buy.buy_price;
@@ -229,7 +267,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         }
         if(status === 'won') {
             state.buy.balance_after = buy.balance_after*1 + state.buy.payout*1;
-            liveapi.sell_expired(); // to update balance immediately 
+            liveapi.sell_expired(); // to update balance immediately
         }
         state.buy.show_result = true;
       }
@@ -239,6 +277,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
         var first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
             last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
+            barrier = extra.getbarrier(_.head(state.ticks.array)) + '',
             digits_value = state.ticks.value + '',
             average = state.ticks.average().toFixed(5);
         var category = state.ticks.category,
@@ -254,7 +293,9 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
               },
               'Up/Down': {
                 rise: last_quote*1 > first_quote*1,
-                fall: last_quote*1 < first_quote*1
+                fall: last_quote*1 < first_quote*1,
+                higher: last_quote*1 > barrier*1,
+                lower: last_quote*1 < barrier*1,
               },
               Asians: {
                 'asian up': average < last_quote*1,
@@ -277,12 +318,11 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
         }
       };
 
+      var view = rv.bind(root[0], state)
 
       if(!state.arrow.visible) { register_ticks(state, extra); }
       else { state.back.visible = true; }
 
-
-      var view = rv.bind(root[0], state)
       show_callback(root);
     }
 

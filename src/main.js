@@ -29,7 +29,8 @@ requirejs.config({
         'moment': 'lib/moment/min/moment.min',
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
-        "indicator_levels" : 'charts/indicators/level'
+        "indicator_levels" : 'charts/indicators/level',
+        'paralleljs' : 'lib/parallel_js/lib/parallel'
     },
     map: {
         '*': {
@@ -76,14 +77,30 @@ requirejs.config({
     }
 });
 
+requirejs.onError = function (err) {
+    //Avoiding script errors on timeout. Showing a warning so that developers can track wrong path errors on local servers.
+    if (err.requireType === 'scripterror') {
+        console.warn(err);
+        return;
+    }
+
+    throw err;
+};
+
 /* Initialize the websocket as soon as posssilbe */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
-require(["jquery", "modernizr", "common/util"], function( $ ) {
-
+var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
     "use strict";
+    /* setup translating string literals */
+    setup_i18n_translation(JSON.parse(lang_json));
+    if (i18n_name == 'ar') {
+      $('body').addClass('rtl-direction');
+    }
 
-    if (!Modernizr.svg || !Modernizr.websockets || Modernizr.touch || !Modernizr.localstorage) {
+    //By pass touch check for affiliates=true(because they just embed our charts)
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {
       window.location.href = 'unsupported_browsers/unsupported_browsers.html';
       return;
     }
@@ -97,7 +114,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/smoothness/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icons.css', 'css!main.css'])
+    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);
@@ -109,33 +126,40 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
     }
 
     function handle_normal_route() {
+
+        /* We do not allow entire webtrader.binary.com to be included in IFRAME */
+        if (self !== top) {
+            top.location = self.location;
+            return;
+        }
+
         /* this callback is executed right after the navigation module
            has been loaded & initialized. register your menu click handlers here */
         var registerMenusCallback = function ($navMenu) {
 
             //Register async loading of tradingTimes sub-menu
-            load_ondemand($navMenu.find("a.tradingTimes"), 'click','Loading Trading Times ...', 'tradingtimes/tradingTimes', function (tradingTimes) {
+            load_ondemand($navMenu.find("a.tradingTimes"), 'click','Loading Trading Times ...'.i18n(), 'tradingtimes/tradingTimes', function (tradingTimes) {
                 var elem = $navMenu.find("a.tradingTimes");
                 tradingTimes.init(elem);
                 elem.click();
             });
 
             //Register async loading of token-management sub-menu
-            load_ondemand($navMenu.find("a.token-management"), 'click','Loading Token management ...', 'token/token', function (tokenMangement) {
+            load_ondemand($navMenu.find("a.token-management"), 'click','Loading Token management ...'.i18n(), 'token/token', function (tokenMangement) {
                 var elem = $navMenu.find("a.token-management");
                 tokenMangement.init(elem);
                 elem.click();
             });
 
             //Register async loading of change-password sub-menu
-            load_ondemand($navMenu.find("a.change-password"), 'click','Loading Password dialog ...', 'password/password', function (password) {
+            load_ondemand($navMenu.find("a.change-password"), 'click','Loading Password dialog ...'.i18n(), 'password/password', function (password) {
                 var elem = $navMenu.find("a.change-password");
                 password.init(elem);
                 elem.click();
             });
 
             //Register async loading of window asset-index
-            load_ondemand($navMenu.find("a.assetIndex"), 'click', 'loading Asset Index ...', 'assetindex/assetIndex',
+            load_ondemand($navMenu.find("a.assetIndex"), 'click', 'Loading Asset Index ...'.i18n(), 'assetindex/assetIndex',
                 function (assetIndex) {
                     var elem = $navMenu.find("a.assetIndex");
                     assetIndex.init(elem);
@@ -143,15 +167,39 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 });
 
             //Register async loading of portfolio window
-            load_ondemand($navMenu.find("a.portfolio"), 'click', 'loading portfolio ...', 'portfolio/portfolio',
+            load_ondemand($navMenu.find("a.portfolio"), 'click', 'Loading portfolio ...'.i18n(), 'portfolio/portfolio',
                 function (portfolio) {
                     var elem = $navMenu.find("a.portfolio");
                     portfolio.init(elem);
                     elem.click();
                 });
 
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.real-account"), 'click', 'Loading Real account opening ...'.i18n(), 'realaccount/realaccount',
+                function (real) {
+                    var elem = $navMenu.find("a.real-account");
+                    real.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.deposit"), 'click', 'Loading Deposit funds ...', 'cashier/deposit',
+                function (deposit) {
+                    var elem = $navMenu.find("a.deposit");
+                    deposit.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of real account opening window
+            load_ondemand($navMenu.find("a.withdraw"), 'click', 'Loading Withdraw funds ...', 'cashier/withdraw',
+                function (withdraw) {
+                    var elem = $navMenu.find("a.withdraw");
+                    withdraw.init(elem);
+                    elem.click();
+                });
+
             //Register async loading of window profit-table
-            load_ondemand($navMenu.find("a.profitTable"), 'click', 'loading Profit Table ...', 'profittable/profitTable',
+            load_ondemand($navMenu.find("a.profitTable"), 'click', 'Loading Profit Table ...'.i18n(), 'profittable/profitTable',
                 function (profitTable) {
                     var elem = $navMenu.find("a.profitTable");
                     profitTable.init(elem);
@@ -159,7 +207,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 });
 
             //Register async loading of statement dialog
-            load_ondemand($navMenu.find("a.statement"), 'click', 'loading Statement Table ...', 'statement/statement',
+            load_ondemand($navMenu.find("a.statement"), 'click', 'Loading Statement Table ...'.i18n(), 'statement/statement',
                 function (statement) {
                     var elem = $navMenu.find("a.statement");
                     statement.init(elem);
@@ -167,7 +215,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 });
 
             //Register async loading of download dialog
-            load_ondemand($navMenu.find("a.download"), 'click', 'loading Download/View Data ...', 'download/download',
+            load_ondemand($navMenu.find("a.download"), 'click', 'Loading Download/View Data ...'.i18n(), 'download/download',
                 function (download) {
                     var elem = $navMenu.find("a.download");
                     download.init(elem);
@@ -175,7 +223,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 });
 
             //Register async loading of self-exclusion dialog
-            load_ondemand($navMenu.find("a.selfexclusion"), 'click', 'loading Self-Exclusion ...', 'selfexclusion/selfexclusion',
+            load_ondemand($navMenu.find("a.selfexclusion"), 'click', 'Loading Self-Exclusion ...'.i18n(), 'selfexclusion/selfexclusion',
                 function (selfexclusion) {
                     var elem = $navMenu.find("a.selfexclusion");
                     selfexclusion.init(elem);
@@ -183,10 +231,18 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
                 });
 
             //Register async loading of config dialog
-            load_ondemand($navMenu.find("a.config"), 'click', 'loading Configurations ...', 'config/config',
+            load_ondemand($navMenu.find("a.config"), 'click', 'Loading Configurations ...'.i18n(), 'config/config',
                 function (config) {
                     var elem = $navMenu.find("a.config");
                     config.init(elem);
+                    elem.click();
+                });
+
+            //Register async loading of custom theme dialog
+            load_ondemand($navMenu.find("a.theme_custom"), 'click', 'Loading custom theme configuration...'.i18n(), 'themes/custom_theme/custom_theme',
+                function (custom_theme) {
+                    var elem = $navMenu.find("a.theme_custom");
+                    custom_theme.init(elem);
                     elem.click();
                 });
 
@@ -201,7 +257,7 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
             //Trigger async loading of instruments and trade menu and refresh
             require(["instruments/instruments", "trade/tradeMenu", "jquery-growl"], function (instruments, trade) {
-                $.growl.notice({ message: "Loading chart and trade menus ..." });
+                $.growl.notice({ message: 'Loading chart and trade menus ...'.i18n() });
 
                 instruments.init();
                 trade.init();
@@ -234,22 +290,11 @@ require(["jquery", "modernizr", "common/util"], function( $ ) {
 
     //load all other .css files asynchronously
     require([
-        'css!lib/hamburger.css',
         'css!charts/charts.css',
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
         'css!lib/colorpicker/jquery.colorpicker.css'
-    ], function() {
-
-        if (getParameterByName("gtm") === 'true'
-                            || getParameterByName("gtm") === undefined
-                            || $.trim(getParameterByName("gtm")).length <= 0) {
-            require(['gtm/gtm'], function (gtm) {
-                gtm.init();
-            });
-        }
-
-    });
+    ]);
 
 });
 
@@ -287,7 +332,7 @@ require(['jquery', 'jquery-growl'], function($){
       var perv = $.growl[name].bind($.growl);
       $.growl[name] = function(options){
         if(options.message.indexOf('rate limit') > -1) {
-          options.message += ' Please try again after 1 minute.';
+          options.message += ' Please try again after 1 minute.'.i18n();
         }
         if(!options.title) options.title = ''; /* remove title */
         /* remove current growl with the same message */

@@ -1,15 +1,11 @@
 .wma_input_width {
-    width: 140px;
+    width: 150px !important;
 }
 
 .wma_input_width_for_period {
-    width: 135px;
+    width: 150px !important;
 }
 
 .wma label {
     display: block;
-}
-
-.wma-ui-dialog, .wma.ui-dialog-content {
-    overflow: visible;
 }

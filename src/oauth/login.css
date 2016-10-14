@@ -71,12 +71,12 @@
 
 .oauth-dialog .login-dialog .login-pane {
   float: left;
-  width: 168px;
+  width: 208px;
 }
 
 .oauth-dialog .login-dialog .register-pane {
   float: right;
-  width: 240px;
+  width: 340px;
 }
 
 /* registration dialog styles */
@@ -109,16 +109,16 @@
   padding-top: 0;
 }
 .oauth-dialog .confirm-dialog img {
-  width: 220px;
+  width: 260px;
   height: 200px;
   float: right;
 }
 .oauth-dialog .confirm-dialog .confirm-grant {
-  width: 160px;
-  margin-top: 140px;
+  margin-top: 40px;
 }
 
 .oauth-dialog .confirm-dialog .confirm-button {
   clear: both;
-  margin-top: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
 }

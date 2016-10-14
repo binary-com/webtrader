@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -21,26 +23,38 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/ultosc/ultosc.html'], function ( $html ) {
+        require(['text!charts/indicators/ultosc/ultosc.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.ultosc;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.ultosc-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#ultosc_stroke").colorpicker({
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
                 },
-                select:			function(event, color) {
+                part:   {
+                    map:        { size: 128 },
+                    bar:        { size: 128 }
+                },
+                select:         function(event, color) {
                     $("#ultosc_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok:                         function(event, color) {
                     $("#ultosc_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
@@ -51,14 +65,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#ultosc_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#ultosc_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#ultosc_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#ultosc_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#ultosc_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#ultosc_levels').DataTable({
@@ -109,7 +123,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 450,
+                width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -120,22 +135,22 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                         text: "OK",
                         click: function () {
                             //Check validation
-					        var isValid = true;
-					        $(".ultosc_input_width_for_period").each(function () {
-					            var $elem = $(this);
+                            var isValid = true;
+                            $(".ultosc_input_width_for_period").each(function () {
+                                var $elem = $(this);
                                 if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")) + 1)) {
-					                require(["jquery", "jquery-growl"], function ($) {
-					                    $.growl.error({
-					                        message: "Only numbers between " + $elem.attr("min")
+                                    require(["jquery", "jquery-growl"], function ($) {
+                                        $.growl.error({
+                                            message: "Only numbers between " + $elem.attr("min")
                                                     + " to " + $elem.attr("max")
                                                     + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-					                    });
-					                });
+                                        });
+                                    });
                                     $elem.val($elem.prop("defaultValue"));
-					                isValid = false;
-					                return;
-					            }
-					        });
+                                    isValid = false;
+                                    return;
+                                }
+                            });
 
                             //Bug Fix:- https://trello.com/c/1hIogAJe/87-ultimate-oscillator-ultosc-https-www-tradingtechnologies-com-help-xstudy-ultimate-oscillator-ultosc
                             var firstPeriod= parseInt($("#ultosc_first_period").val()),
@@ -166,7 +181,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 }   
 
 
-					        if (!isValid) return;
+                            if (!isValid) return;
 
                             var levels = [];
                             $.each(table.rows().nodes(), function () {
@@ -194,6 +209,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 appliedTo: parseInt($("#ultosc_applied_to").val()),
                                 levels:levels
                             }
+                            before_add_callback && before_add_callback();
                             //Add ULTOSC for the main series
                             $($(".ultosc").data('refererChartID')).highcharts().series[0].addIndicator('ultosc', options);
 
@@ -209,8 +225,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 160
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -224,16 +242,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".ultosc").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".ultosc").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".ultosc").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

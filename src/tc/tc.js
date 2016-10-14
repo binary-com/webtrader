@@ -23,14 +23,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets"], function($
                         && website_status.website_status.terms_conditions_version !== get_settings.get_settings.client_tnc_status) {
                         if (win) win.dialog('destroy');
                         require(['text!tc/tc.html', 'css!tc/tc.css'], function (html) {
-                            var div = $(html);
+                            var div = $(html).i18n();
                             div.find('.tc_landing_comp_name').html(landing_company_details.landing_company_details.name);
                             div.find('.button').click(function () {
                                 liveapi.send({"tnc_approval": 1});
                                 win.dialog('destroy');
                             });
                             win = windows.createBlankWindow($('<div/>'), {
-                                title: 'Terms & Conditions',
+                                title: 'Terms and Conditions'.i18n(),
                                 width: 580,
                                 minHeight: 90,
                                 height: 220,

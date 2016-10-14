@@ -1,0 +1,2469 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-13 08:49+0200\n"
+"PO-Revision-Date: 2016-09-14 01:06+0000\n"
+"Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
+"Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/zh_CN/>\n"
+"Language: zh_cn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.8\n"
+
+msgid "%D MA Type"
+msgstr "%D MA 类型"
+
+msgid "%D Period"
+msgstr "%D 期限"
+
+msgid "%D Stroke"
+msgstr "%D 波幅"
+
+msgid "%K MA Type"
+msgstr "%K MA 类型"
+
+msgid "%K Period"
+msgstr "%K 期限"
+
+msgid "%K Stroke"
+msgstr "%K 波幅"
+
+msgid ""
+"(if less than one day in duration), or at the end of the trading day (if one "
+"day or more in duration)"
+msgstr "（如期限不到一天），或于交易日结束时（如期限是一天及以上）"
+
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
+"- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的"
+"身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往"
+"来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情"
+"况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
+
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr "--- 标题：找不到页面的固定链接：/404.html 摘录: \"\" ---"
+
+msgid "-DI Stroke"
+msgstr "-DI 波幅"
+
+msgid "0-1 year"
+msgstr "0-1 年"
+
+msgid "0-5 transactions in the past 12 months"
+msgstr "过去12月内0-5次交易"
+
+msgid "1"
+msgstr "1"
+
+msgid "1 Day"
+msgstr "1 天"
+
+msgid "1 Hour"
+msgstr "1小时"
+
+msgid "1 Minute"
+msgstr "1分钟"
+
+msgid "1 Tick"
+msgstr "1跳动点"
+
+msgid "1-2 years"
+msgstr "1-2 年"
+
+msgid "10"
+msgstr "10"
+
+msgid "10 Minutes"
+msgstr "10分钟"
+
+msgid "10m"
+msgstr "10分钟"
+
+msgid "15"
+msgstr "15"
+
+msgid "15 Minutes"
+msgstr "15分钟"
+
+msgid "15m"
+msgstr "15分钟"
+
+msgid "1d"
+msgstr "1天"
+
+msgid "1h"
+msgstr "1小时"
+
+msgid "1m"
+msgstr "1分钟"
+
+msgid "1t"
+msgstr "1期"
+
+msgid "2"
+msgstr "2"
+
+msgid "2 Hours"
+msgstr "2小时"
+
+msgid "2 Minutes"
+msgstr "2分钟"
+
+msgid "2h"
+msgstr "2小时"
+
+msgid "2m"
+msgstr "2分钟"
+
+msgid "3"
+msgstr "3"
+
+msgid "3 Minutes"
+msgstr "3分钟"
+
+msgid "30"
+msgstr "30"
+
+msgid "30 Minutes"
+msgstr "30分钟"
+
+msgid "30-day limit on losses"
+msgstr "30天损失限额"
+
+msgid "30-day turnover limit"
+msgstr "30天交易限额"
+
+msgid "30m"
+msgstr "30分钟"
+
+msgid "3m"
+msgstr "3分钟"
+
+msgid "4"
+msgstr "4"
+
+msgid "4 Hours"
+msgstr "4小时"
+
+msgid "40 transactions or more in the past 12 months"
+msgstr "过去12月内交易40次及以上"
+
+msgid "404"
+msgstr "404"
+
+msgid "4h"
+msgstr "4小时"
+
+msgid "5"
+msgstr "5"
+
+msgid "5 Minutes"
+msgstr "5分钟"
+
+msgid "5m"
+msgstr "5分钟"
+
+msgid "6-10 transactions in the past 12 months"
+msgstr "过去12月内交易6-10次"
+
+msgid "7-day limit on losses"
+msgstr "7天损失限额"
+
+msgid "7-day turnover limit"
+msgstr "7天交易限额"
+
+msgid "8"
+msgstr "8"
+
+msgid "8 Hours"
+msgstr "8小时"
+
+msgid "8h"
+msgstr "8小时"
+
+msgid "ADX MA Type"
+msgstr "ADX MA 类型"
+
+msgid "ADX Stroke"
+msgstr "ADX 波幅"
+
+msgid "ATR Period"
+msgstr "ATR 期限"
+
+msgid "Acceleration"
+msgstr "加速"
+
+msgid "Accept"
+msgstr "接受"
+
+msgid "Account balance"
+msgstr "账户余额"
+
+msgid "Account id not found"
+msgstr "没找到账户ID"
+
+msgid "Account opening"
+msgstr "账户开立"
+
+msgid "Account token not found"
+msgstr "没找到账户令牌"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Add comparisons"
+msgstr "添加比较"
+
+msgid "Add indicator"
+msgstr "添加指标"
+
+msgid "Add level"
+msgstr "添加价位"
+
+msgid "Add/remove comparisons"
+msgstr "添加/删除比较"
+
+msgid "Add/remove overlays"
+msgstr "添加/删除覆盖"
+
+msgid "Admin"
+msgstr "管理中心"
+
+msgid "All times are in GMT (Greenwich Mean Time)"
+msgstr "所有时间均采用格林威治标准时间（GMT）"
+
+msgid "Amount"
+msgstr "金额"
+
+msgid "Amount Per Point"
+msgstr "每个点的金额"
+
+msgid "Amount per point"
+msgstr "每个点的金额"
+
+msgid "Answer"
+msgstr "答案"
+
+msgid "Applied to"
+msgstr "应用到"
+
+msgid "Apply"
+msgstr "申请"
+
+msgid "Apply to become a Binary.com"
+msgstr "申请成为Binary.com"
+
+msgid "Appropriateness Test: WARNING"
+msgstr "合适性测试:警告"
+
+msgid "Apr"
+msgstr "四月"
+
+msgid "April"
+msgstr "四月"
+
+msgid "Are you sure you want to delete this token?"
+msgstr "确定删除此令牌？"
+
+msgid "Aroon Down Stroke"
+msgstr "阿隆下行线波幅"
+
+msgid "Aroon Up Stroke"
+msgstr "阿隆上升线波幅"
+
+msgid "Asians"
+msgstr "亚洲期权"
+
+msgid "Asset"
+msgstr "资产"
+
+msgid "Asset Index"
+msgstr "资产指数"
+
+msgid "Aug"
+msgstr "八月"
+
+msgid "August"
+msgstr "八月"
+
+msgid "Average"
+msgstr "平均"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Back to list"
+msgstr "返回列表"
+
+msgid "Background Color"
+msgstr "背景颜色"
+
+msgid "Barrier"
+msgstr "障碍"
+
+msgid "Barrier offset"
+msgstr "障碍位移"
+
+msgid "Binary options or other financial derivatives"
+msgstr "二元期权或其他金融衍生品"
+
+msgid "Binary.com"
+msgstr "Binary.com"
+
+msgid "Binary.com : Webtrader"
+msgstr "Binary.com : Webtrader"
+
+msgid "Blank window"
+msgstr "空白窗口"
+
+msgid "Bought"
+msgstr "购入"
+
+msgid "Brand of first car"
+msgstr "第一辆车的品牌"
+
+msgid "Browser upgrade required"
+msgstr "需更新浏览器"
+
+msgid "Buy Price"
+msgstr "购入价"
+
+msgid "Buy price"
+msgstr "购入价"
+
+msgid "By clicking"
+msgstr "通过点击"
+
+msgid "By clicking OK, you confirm that you have read and accepted the updated"
+msgstr "通过点击OK键，您确认已经阅读并接受更新的"
+
+msgid "CLOSE"
+msgstr "关闭"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Candles"
+msgstr "蜡烛"
+
+msgid "Candlestick down-color"
+msgstr "蜡烛指标下跌颜色"
+
+msgid "Candlestick down-line"
+msgstr "蜡烛指标下跌线"
+
+msgid "Candlestick up-color"
+msgstr "蜡烛指标上升颜色"
+
+msgid "Candlestick up-line"
+msgstr "蜡烛指标上升线"
+
+msgid "Cash Balance"
+msgstr "现金余额"
+
+msgid "Change Backend Server"
+msgstr "更换后端服务器"
+
+msgid "Change password"
+msgstr "更改密码"
+
+msgid "Chart"
+msgstr "图表"
+
+msgid "Chart Themes"
+msgstr "图表主题"
+
+msgid "Chart background"
+msgstr "图表背景"
+
+msgid "Chart context menu"
+msgstr "图表上下文菜单"
+
+msgid "Chart template"
+msgstr "图表模板"
+
+msgid "Chart type"
+msgstr "图表类型"
+
+msgid "Choose password"
+msgstr "选择密码"
+
+msgid "Choose your pereferred payment agent"
+msgstr "选择您较倾向的支付代理"
+
+msgid "Choose your pereferred withdrawal method"
+msgstr "选择您较倾向的提款方法"
+
+msgid "Chrome"
+msgstr "Chrome"
+
+msgid "Click Jacking test"
+msgstr "点击劫持测试"
+
+msgid "Click to log in with your Binary.com account"
+msgstr "点击登录Binary.com账户"
+
+msgid "Close Price"
+msgstr ":收盘价"
+
+msgid "Close all"
+msgstr "全部关闭"
+
+msgid "Closes"
+msgstr "关"
+
+msgid "Commodities trading experience"
+msgstr "大宗商品交易经验"
+
+msgid "Commodities trading frequency"
+msgstr "大宗商品交易频率"
+
+msgid "Comparisons"
+msgstr "比较"
+
+msgid "Conditions"
+msgstr "条件"
+
+msgid "Config changes successful"
+msgstr "成功更改配置"
+
+msgid "Confirm transfer"
+msgstr "确认转账"
+
+msgid "Connection closed"
+msgstr "连接已关闭"
+
+msgid "Connection error. Refresh the page"
+msgstr "连接出错：请刷新页面"
+
+msgid "Construction"
+msgstr "建筑"
+
+msgid "Continue"
+msgstr "继续"
+
+msgid "Continue Trading"
+msgstr "继续交易"
+
+msgid "Contract"
+msgstr "合约"
+
+msgid "Contract Confirmation"
+msgstr "合约确认"
+
+msgid "Contract Details"
+msgstr "合约详情"
+
+msgid "Contract is not yet started"
+msgstr "合约还未开始生效"
+
+msgid "Contracts"
+msgstr "合约"
+
+msgid "Country of residence"
+msgstr "居住国"
+
+msgid "Create"
+msgstr "创建"
+
+msgid "Create token"
+msgstr "创建令牌"
+
+msgid "Credit/Debit"
+msgstr "借方/贷方"
+
+msgid "Crosshair"
+msgstr "交叉线"
+
+msgid "Current Level"
+msgstr "当前价位"
+
+msgid "Current Spot"
+msgstr "当前现价"
+
+msgid "Current Spot Time"
+msgstr "当前现价时间"
+
+msgid "Current comparisons"
+msgstr "当前比较"
+
+msgid "Current indicators"
+msgstr "当前指标"
+
+msgid "Current password"
+msgstr "当前密码"
+
+msgid "Current regulations require that you provide us the following"
+msgstr "依据当前法规，我们需要您提供以下资料"
+
+msgid "Current time"
+msgstr "当前时间"
+
+msgid "Custom Theme"
+msgstr "自定义主题"
+
+msgid "Customize chart appearance"
+msgstr "自定义图表外观"
+
+msgid "DI Stroke"
+msgstr "DI波幅"
+
+msgid "DX MA Type"
+msgstr "DX MA 类型"
+
+msgid "Daily limit on losses"
+msgstr "每日损失限额"
+
+msgid "Daily turnover limit"
+msgstr "每日交易限额"
+
+msgid "Dark Blue"
+msgstr "深蓝"
+
+msgid "Dark Green"
+msgstr "深绿"
+
+msgid "Dark Unica"
+msgstr "Dark Unica 主题"
+
+msgid "Dash style"
+msgstr "虚线样式"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Date of birth"
+msgstr "出生日期"
+
+msgid "Days"
+msgstr "日"
+
+msgid "Dec"
+msgstr "十二月"
+
+msgid "December"
+msgstr "十二月"
+
+msgid "Decline"
+msgstr "拒绝"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Delete level(s)"
+msgstr "删除水平"
+
+msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgstr "在IFRAME查看联盟会员访问Binary.com图表的演示"
+
+msgid "Deposit funds"
+msgstr "存入资金"
+
+msgid "Deposit of USD"
+msgstr "美元存款"
+
+msgid "Describe what this token is for to find it later"
+msgstr "令牌用途说明，以便稍后查找"
+
+msgid "Description"
+msgstr "说明"
+
+msgid "Digits"
+msgstr "数字"
+
+msgid "Do you want to install Webtrader chrome extension?"
+msgstr "是否安装Webtrader chrome扩展程序？"
+
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
+msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
+
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr "已完成。资金已转给支付代理"
+
+msgid "Done. The funds are transferred"
+msgstr "已完成。资金已转入"
+
+msgid "Dot"
+msgstr "点"
+
+msgid "Double MA Period"
+msgstr "双MA期限"
+
+msgid "Double MA Type"
+msgstr "双MA类型"
+
+msgid "Double click the object to remove"
+msgstr "双击对象执行删除"
+
+msgid "Download CSV"
+msgstr "下载CSV"
+
+msgid "Download JPEG image"
+msgstr "下载 JPEG 图像"
+
+msgid "Download PDF document"
+msgstr "下载PDF文档"
+
+msgid "Download PNG"
+msgstr "下载PNG"
+
+msgid "Download PNG image"
+msgstr "下载PNG图像"
+
+msgid "Download SVG"
+msgstr "下载SVG"
+
+msgid "Download SVG vector image"
+msgstr "下载SVG矢量图像"
+
+msgid "Download as"
+msgstr "下载as"
+
+msgid "Downloading .csv"
+msgstr "正在下载 .csv"
+
+msgid "Drawing tools"
+msgstr "绘图工具"
+
+msgid "Duration"
+msgstr "持续时间"
+
+msgid "EMA"
+msgstr "EMA"
+
+msgid "Edge"
+msgstr "边缘"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Education"
+msgstr "教育"
+
+msgid "Email verification failed"
+msgstr "电子邮件验证失败"
+
+msgid "Embed code"
+msgstr "嵌入代码"
+
+msgid "End Time"
+msgstr "结束时间"
+
+msgid "Ends In/Out"
+msgstr "“范围之内/之外”收盘"
+
+msgid "Enter your current password"
+msgstr "输入当前密码"
+
+msgid "Entry Spot"
+msgstr "入市现价"
+
+msgid "Entry spot"
+msgstr "入市现价"
+
+msgid "Error downloading .csv"
+msgstr "下载.csv时发生错误"
+
+msgid "Error getting data for"
+msgstr "获取以下数据时出错"
+
+msgid "Estimated Net Worth"
+msgstr "估计净值"
+
+msgid "Exclude me from the website until"
+msgstr "禁止我访问本网站直到"
+
+msgid "Exclude time cannot be less than 6 months"
+msgstr "禁止时间不能少于6个月"
+
+msgid "Exit Spot"
+msgstr "退市现价"
+
+msgid "Exit spot"
+msgstr "退市现价"
+
+msgid "Explanation"
+msgstr "说明"
+
+msgid "Failed to update the password"
+msgstr "密码更新失败"
+
+msgid "Fall"
+msgstr "下跌"
+
+msgid "Family name"
+msgstr "姓氏"
+
+msgid "Fast %K MA Type"
+msgstr "快捷 %K MA 类型"
+
+msgid "Fast %K Period"
+msgstr "快捷 %K 期限"
+
+msgid "Fast Limit"
+msgstr "快捷限值"
+
+msgid "Fast MA Type"
+msgstr "快捷 MA 类型"
+
+msgid "Fast Period"
+msgstr "快捷期限"
+
+msgid "Favorites"
+msgstr "收藏夹"
+
+msgid "Favourite artist"
+msgstr "最喜欢的艺术家"
+
+msgid "Favourite dish"
+msgstr "最喜欢的菜肴"
+
+msgid "Feb"
+msgstr "二月"
+
+msgid "February"
+msgstr "二月"
+
+msgid "Final Price"
+msgstr "最终价格"
+
+msgid "Final price"
+msgstr "最终价格"
+
+msgid "Finance"
+msgstr "金融"
+
+msgid "Financial information"
+msgstr "财务信息"
+
+msgid "Firefox"
+msgstr "Firefox"
+
+msgid "First name"
+msgstr "名字"
+
+msgid "Forex trading experience"
+msgstr "外汇交易经验"
+
+msgid "Forex trading frequency"
+msgstr "外汇交易频率"
+
+msgid "Fri"
+msgstr "星期五"
+
+msgid "Friday"
+msgstr "周五"
+
+msgid "From"
+msgstr "从"
+
+msgid "Further instructions"
+msgstr "详细说明"
+
+msgid "Gray"
+msgstr "灰色"
+
+msgid "Grid"
+msgstr "网格"
+
+msgid "Grid Light"
+msgstr "网格光照"
+
+msgid "HIGH"
+msgstr "高"
+
+msgid "Have better luck at trading!"
+msgstr "祝您好运！"
+
+msgid "Health"
+msgstr "健康状况"
+
+msgid "High Barrier"
+msgstr "高障碍"
+
+msgid "High Price"
+msgstr "高价位"
+
+msgid "High Stroke"
+msgstr "高价波幅"
+
+msgid "High barrier offset"
+msgstr "高障碍位移"
+
+msgid "Higher"
+msgstr "较高"
+
+msgid "Histogram Color"
+msgstr "直方图颜色"
+
+msgid "Histogram Color For Higher Values"
+msgstr "较高数值的直方图颜色"
+
+msgid "Histogram Color For Lower Values"
+msgstr "较低数值的直方图颜色"
+
+msgid "Home Address"
+msgstr "家庭地址"
+
+msgid "Horizontal Line"
+msgstr "水平线"
+
+msgid "Horizontal line"
+msgstr "水平线"
+
+msgid "Hours"
+msgstr "小时"
+
+msgid "I have read and agree to Binary.com"
+msgstr "本人已经阅读并同意Binary.com的"
+
+msgid "IMPORTANT DISCLAIMER"
+msgstr "重要免责声明"
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+"重要免责声明 - Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立"
+"服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代"
+"理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状"
+"况。在任何情况下，Binary.com都不对客户与支付代理之间的交易承担责任"
+
+msgid "If the issue keeps happening, please contact"
+msgstr "如果这个问题持续发生，请联系"
+
+msgid "If you select a"
+msgstr "如您选择"
+
+msgid "If you select a specific"
+msgstr "如您选择特定的"
+
+msgid ""
+"In order to properly apply theme, a full refresh of page is required. Are "
+"you sure you want to proceed?"
+msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
+
+msgid ""
+"In providing our services to you, we are required to obtain information from "
+"you in order to assess whether a given product or service is appropriate for "
+"you (that is, whether you possess the experience and knowledge to understand "
+"the risks involved)"
+msgstr ""
+"为了给您提供服务，我们必须向您获取信息，以便确定产品或服务是否适合您（也就是"
+"说，看您是否拥有足够经验和知识，以了解相关的风险）"
+
+msgid ""
+"In regards to binary options which are gambling products, remember that "
+"gambling can be addictive"
+msgstr "在进行博彩产品交易的二元期权交易时，请务必记住博彩活动可能会上瘾"
+
+msgid "In/Out"
+msgstr "“范围之内/之外”"
+
+msgid "Income Source"
+msgstr "收入来源"
+
+msgid "Indicative"
+msgstr "指示性"
+
+msgid "Indicative Price"
+msgstr "指示性价格"
+
+msgid "Indicators"
+msgstr "指标"
+
+msgid "Indices trading experience"
+msgstr "指数交易经验"
+
+msgid "Indices trading frequency"
+msgstr "指数交易频率"
+
+msgid "Industry of Employment"
+msgstr "职业领域"
+
+msgid "Instrument"
+msgstr "工具"
+
+msgid "Instruments"
+msgstr "工具"
+
+msgid "Investments & Dividends"
+msgstr "投资与分红"
+
+msgid "Jan"
+msgstr "一月"
+
+msgid "January"
+msgstr "一月"
+
+msgid "Japan accounts are not supported"
+msgstr "日本账户不受支持"
+
+msgid "Jul"
+msgstr "七月"
+
+msgid "July"
+msgstr "七月"
+
+msgid "Jump to"
+msgstr "跳至"
+
+msgid "Jun"
+msgstr "六月"
+
+msgid "June"
+msgstr "六月"
+
+msgid "Just click  Grant  button on the page you will now be taken to"
+msgstr "仅须在您即将看到的页面上点击 授予 按钮"
+
+msgid "LOW"
+msgstr "低"
+
+msgid "Last Digit Prediction"
+msgstr "最后数字的预测"
+
+msgid "Last Digit is Over"
+msgstr "最后数字已超过"
+
+msgid "Last Digit is Under"
+msgstr "低于最后数字"
+
+msgid "Last used"
+msgstr "上一次使用"
+
+msgid "Less than"
+msgstr "少于"
+
+msgid "Let's do it"
+msgstr "开始操作"
+
+msgid "Level"
+msgstr "水平"
+
+msgid "Level of Education"
+msgstr "教育水平"
+
+msgid "Line"
+msgstr "行"
+
+msgid "Line Dot"
+msgstr "行点"
+
+msgid "Line Stroke"
+msgstr "线波幅"
+
+msgid "Link"
+msgstr "链接"
+
+msgid "Load chart template"
+msgstr "加载图表模板"
+
+msgid "Loading"
+msgstr "加载"
+
+msgid "Loading Asset Index"
+msgstr "加载资产指数"
+
+msgid "Loading Configurations"
+msgstr "加载配置"
+
+msgid "Loading Download/View Data"
+msgstr "加载下载/查看数据"
+
+msgid "Loading Password dialog"
+msgstr "加载密码对话"
+
+msgid "Loading Profit Table"
+msgstr "加载利润表"
+
+msgid "Loading Real account opening"
+msgstr "加载真实账户开立程序"
+
+msgid "Loading Self-Exclusion"
+msgstr "加载自我禁止"
+
+msgid "Loading Statement Table"
+msgstr "加载账目表"
+
+msgid "Loading Token management"
+msgstr "加载令牌管理"
+
+msgid "Loading Trading Times"
+msgstr "加载交易时间"
+
+msgid "Loading chart and trade menus"
+msgstr "加载图表与交易菜单"
+
+msgid "Loading custom theme configuration"
+msgstr "加载定制相主题配置"
+
+msgid "Loading portfolio"
+msgstr "加载投资组合"
+
+msgid "Loading self-exclusion settings"
+msgstr "加载自我禁止设置"
+
+msgid "Loading..."
+msgstr "正在加载..."
+
+msgid "Log in"
+msgstr "登录"
+
+msgid "Log in time"
+msgstr "登录时间"
+
+msgid "Logging out because of self-exclusion session time out!"
+msgstr "正在注销，因为自我禁止时段已到期！"
+
+msgid "Login"
+msgstr "登录"
+
+msgid "Logout"
+msgstr "注销"
+
+msgid "Long MA Type"
+msgstr "长移动平均线类型"
+
+msgid "Long ROC Period"
+msgstr "长相对强弱指标期限"
+
+msgid "Long Stop Line Stroke"
+msgstr "长止损线行程"
+
+msgid "Long Term Period"
+msgstr "长久期限"
+
+msgid "Low Barrier"
+msgstr "低障碍"
+
+msgid "Low Price"
+msgstr "低价"
+
+msgid "Low Stroke"
+msgstr "低行程"
+
+msgid "Low barrier offset"
+msgstr "低障碍位移"
+
+msgid "Lower"
+msgstr "低于"
+
+msgid "Lower Band Stroke"
+msgstr "低价带波幅"
+
+msgid "MA Type"
+msgstr "移动平均线类型"
+
+msgid "MACD Line Stroke"
+msgstr "指数平滑异同平均线行程"
+
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+"在提交请求前，请确认同意代理的支付条款。一旦您点击“确认转账”按钮，资金将从您"
+"的账户转到您选择的支付代理处。代理将通过您的首选支付方式将取款金额（扣除佣"
+"金）支付给您"
+
+msgid "Mar"
+msgstr "三月"
+
+msgid "March"
+msgstr "三月"
+
+msgid "Mass Period"
+msgstr "梅斯线期限"
+
+msgid "Max/Min Period"
+msgstr "最大/最小期限"
+
+msgid "Maximum"
+msgstr "最大"
+
+msgid "Maximum account cash balance"
+msgstr "最大账户现金余额"
+
+msgid "Maximum aggregate contract purchases over a 30-day period"
+msgstr "30天期最大累计合约买入量"
+
+msgid "Maximum aggregate contract purchases over a 7-day period"
+msgstr "7天期最大累计合约买入量"
+
+msgid "Maximum aggregate contract purchases per day"
+msgstr "每天最大累计合约买入量"
+
+msgid "Maximum aggregate loss over a 30-day period"
+msgstr "30天期最大累计损失量"
+
+msgid "Maximum aggregate loss per day"
+msgstr "每天最大累计损失量"
+
+msgid "Maximum number of open positions"
+msgstr "最大未平仓头寸数目"
+
+msgid "May"
+msgstr "五月"
+
+msgid "Memorable date"
+msgstr "难忘的日子"
+
+msgid "Memorable town/city"
+msgstr "难忘的城镇/城市"
+
+msgid "Middle Band Stroke"
+msgstr "中价幅行程"
+
+msgid "Min: 10 Max: 2000"
+msgstr "最小: 10 最大: 2000"
+
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "需至少6个字符与1个数字"
+
+msgid "Minus the agent's commission"
+msgstr "减去代理佣金"
+
+msgid "Minutes"
+msgstr "分钟"
+
+msgid "Miss"
+msgstr "遗漏"
+
+msgid "Mon"
+msgstr "周一"
+
+msgid "Monday"
+msgstr "周一"
+
+msgid "Mother's maiden name"
+msgstr "母亲婚前的姓氏"
+
+msgid "Mr"
+msgstr "先生"
+
+msgid "Mrs"
+msgstr "夫人"
+
+msgid "Ms"
+msgstr "女士"
+
+msgid "Multiplier"
+msgstr "乘数"
+
+msgid "NB Dev Down"
+msgstr "NB Dev下跌"
+
+msgid "NB Dev Up"
+msgstr "NB Dev 上涨"
+
+msgid "Name"
+msgstr "名字"
+
+msgid "Name of first love"
+msgstr "初恋情人姓名"
+
+msgid "Name of your pet"
+msgstr "您宠物的名字"
+
+msgid "Navigator handles background"
+msgstr "导航器处理背景"
+
+msgid "Navigator handles border"
+msgstr "导航器处理边框"
+
+msgid "Navigator mask-fill"
+msgstr "导航器蒙板填充"
+
+msgid "Navigator outline"
+msgstr "导航器框线"
+
+msgid "Navigator series color"
+msgstr "导航器系列颜色"
+
+msgid "Navigator series line"
+msgstr "导航器系列线"
+
+msgid "Net Annual Income"
+msgstr "年净收入"
+
+msgid "Net Profit"
+msgstr "净利"
+
+msgid "New password"
+msgstr "新密码"
+
+msgid "No"
+msgstr "否"
+
+msgid "Note that tokens can possess one or more of these scopes"
+msgstr "请注意，令牌可能拥有一或多个领域"
+
+msgid ""
+"Note: Contract will be sold at the prevailing market price when the request "
+"is received by our servers. This price may differ from the indicated price"
+msgstr ""
+"请注意：合约将在我们服务器收到请求时，以当时的市场价格卖出。此价格可能与报价"
+"有差异"
+
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr "注意：您必须完全通过付款代理存款才可使用付款代理提款"
+
+msgid "Nov"
+msgstr "十一月"
+
+msgid "November"
+msgstr "十一月"
+
+msgid "Now"
+msgstr "现在"
+
+msgid "Number of bars on sides"
+msgstr "两边条形数目"
+
+msgid "OAuth App ID (Optional)"
+msgstr "OAuth 应用 ID (可选)"
+
+msgid "OAuth Server"
+msgstr "OAuth 服务器"
+
+msgid "OHLC"
+msgstr "OHLC条形图"
+
+msgid "OPEN"
+msgstr "开盘"
+
+msgid "Oct"
+msgstr "十月"
+
+msgid "October"
+msgstr "十月"
+
+msgid "Offset"
+msgstr "位移"
+
+msgid "Ok"
+msgstr "确定"
+
+msgid ""
+"On the basis of the information provided in relation to your knowledge and "
+"experience, we consider that the investments available via this website are "
+"not appropriate for you"
+msgstr ""
+"根据您所提供的知识和经验相关信息，我们认为此网站的投资活动对您来说并不合适"
+
+msgid "Once this limit is reached, you may no longer deposit"
+msgstr "达到此限额后，您不能再存款"
+
+msgid "One last step left"
+msgstr "剩下最后一步"
+
+msgid "Oops... Page Not Available"
+msgstr "哎呀...页面不可用"
+
+msgid "Open"
+msgstr "开盘"
+
+msgid "Open Account"
+msgstr "开立账户"
+
+msgid "Open Price"
+msgstr "开盘价"
+
+msgid "Open a Financial Account"
+msgstr "开立金融账户"
+
+msgid "Open account"
+msgstr "开立账户"
+
+msgid "Opens"
+msgstr "开盘"
+
+msgid "Opera"
+msgstr "操作"
+
+msgid ""
+"Option trading can become a real addiction, as can any other activity pushed "
+"to its limits. To avoid the danger of such addiction, we provide a reality-"
+"check that gives you a summary of your trades and accounts on a regular basis"
+msgstr ""
+"二元期权交易和其他类似活动一样，过于沉迷可能会上瘾。为了避免这种风险，我们会"
+"定期向您提供交易和财务的实况简报"
+
+msgid "Optional field, within 20 characters and may not contain '+'"
+msgstr "可选字段，不超过 20 个字符，并且不能包含“+”"
+
+msgid "Other"
+msgstr "其它"
+
+msgid "Other financial instruments trading experience"
+msgstr "其他金融工具交易体验"
+
+msgid "Other financial instruments trading frequency"
+msgstr "其他金融工具交易频率"
+
+msgid "Over"
+msgstr "超过"
+
+msgid "Over 3 years"
+msgstr "3年以上"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "PNG"
+msgstr "PNG"
+
+msgid "PPO Line Stroke"
+msgstr "PPO 线波幅"
+
+msgid "Page Not Found"
+msgstr "找不到页面"
+
+msgid "Password must be 6 characters minimum"
+msgstr "密码需至少6个字符"
+
+msgid "Password must contain lower and uppercase letters with numbers"
+msgstr "密码须包含大小写字母与数字"
+
+msgid "Password must contain uppercase letters and numbers"
+msgstr "密码须包含大写字母与数字"
+
+msgid "Password successfully updated"
+msgstr "密码已成功更新"
+
+msgid "Passwords didn't match. Please type them again"
+msgstr "密码不相符。请重新输入"
+
+msgid "Payment agent"
+msgstr "支付代理"
+
+msgid "Payment agents"
+msgstr "支付代理"
+
+msgid "Payments"
+msgstr "支付"
+
+msgid "Payout"
+msgstr "赔付"
+
+msgid "Pension"
+msgstr "养老金"
+
+msgid "Period"
+msgstr "周期"
+
+msgid "Period 1"
+msgstr "周期1"
+
+msgid "Period 2"
+msgstr "周期2"
+
+msgid "Period 3"
+msgstr "周期3"
+
+msgid "Permissions"
+msgstr "权限"
+
+msgid "Personal Details"
+msgstr "个人资料"
+
+msgid "Phone"
+msgstr "电话"
+
+msgid "Please"
+msgstr "请"
+
+msgid "Please answer to secret question, within 4-50 characters"
+msgstr "请回答密码提示问题，限4-50个字符"
+
+msgid "Please choose at least one token scope"
+msgstr "请选择至少一个令牌范围"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr "请确认以下详情以完成转账"
+
+msgid "Please enter a number between"
+msgstr "请输入以下范围之间的数字"
+
+msgid "Please enter a valid date in yyyy-mm-dd format"
+msgstr "请输入有效日期，格式为年-月-日"
+
+msgid "Please enter a value for"
+msgstr "请为以下输入数值"
+
+msgid "Please enter a vlaid phone number"
+msgstr "请输入有效的电话号"
+
+msgid "Please enter correct email"
+msgstr "请输入正确的电子邮件"
+
+msgid "Please enter date in the format YYYY-MM-DD"
+msgstr "请输入日期，格式是年-月-日"
+
+msgid "Please enter positive integer value between 0 and 9999"
+msgstr "请输入0与9999之间的正整数"
+
+msgid "Please enter positive integer value for 30-day limit on losses"
+msgstr "请输入30天损失限额，限正整数"
+
+msgid "Please enter positive integer value for 30-day turnover limit"
+msgstr "请输入30天交易限额，限正整数"
+
+msgid "Please enter positive integer value for 7-day limit on losses"
+msgstr "请输入7天损失限额，限正整数"
+
+msgid "Please enter positive integer value for 7-day turnover limit"
+msgstr "请输入7天交易限额，限正整数"
+
+msgid "Please enter positive integer value for Daily limit on losses"
+msgstr "请输入每日损失限额，限正整数"
+
+msgid "Please enter positive integer value for Daily turnover limit"
+msgstr "请输入每日交易限额，限正整数"
+
+msgid ""
+"Please enter positive integer value for Maximum number of open positions"
+msgstr "请输入最大未平仓头寸数目，限正整数"
+
+msgid "Please enter the token name"
+msgstr "请输入令牌名称"
+
+msgid "Please enter the verification code sent to your email"
+msgstr "请输入发送到您邮箱的验证码"
+
+msgid "Please enter value between 0 and 99999 for Session duration limit"
+msgstr "请输入交易期持续时间限制0至99999之间的数值"
+
+msgid "Please enter your city address"
+msgstr "请输入您的城市住址"
+
+msgid "Please enter your current password"
+msgstr "请输入当前密码"
+
+msgid "Please enter your email"
+msgstr "请输入电子邮件"
+
+msgid "Please enter your family name"
+msgstr "请输入您的姓氏"
+
+msgid "Please enter your first name"
+msgstr "请输入您的名字"
+
+msgid "Please enter your new password"
+msgstr "请输入新密码"
+
+msgid "Please enter your password"
+msgstr "请输入密码"
+
+msgid "Please enter your phone number"
+msgstr "请输入电话号"
+
+msgid "Please enter your street address"
+msgstr "请输入街道住址"
+
+msgid "Please install the latest version of one of these browsers"
+msgstr "以下浏览器请选择一个并安装最新版本"
+
+msgid "Please log in"
+msgstr "请登录"
+
+msgid "Please select"
+msgstr "请选择"
+
+msgid "Please try again after 1 minute"
+msgstr "请于1分钟后重试"
+
+msgid "Please use your new password to login"
+msgstr "请用新密码登录"
+
+msgid "Plot"
+msgstr "绘图"
+
+msgid "Plot Color"
+msgstr "绘图颜色"
+
+msgid "Pofit/Loss"
+msgstr "利润/亏损"
+
+msgid "Points"
+msgstr "点"
+
+msgid "Portfolio"
+msgstr "投资组合"
+
+msgid "Postal code/ZIP"
+msgstr "邮编"
+
+msgid "Potential Payout"
+msgstr "可能的赔付额"
+
+msgid "Potential Profit"
+msgstr "潜在利润"
+
+msgid "Potential profit"
+msgstr "潜在利润"
+
+msgid "Pre-Defined"
+msgstr "预定义"
+
+msgid "Preferred reality-check interval"
+msgstr "优选实况调查间隔时间"
+
+msgid "Press  Create token  button on the right to create your first token"
+msgstr "按右方 创建令牌 按钮即可创建首个令牌"
+
+msgid "Price"
+msgstr "价格"
+
+msgid "Primary"
+msgstr "主要"
+
+msgid "Print chart"
+msgstr "打印图表"
+
+msgid "Profit"
+msgstr "利润"
+
+msgid "Profit Table"
+msgstr "利润表"
+
+msgid "Profit table"
+msgstr "利润表"
+
+msgid "Profit/ Loss"
+msgstr "利润/亏损"
+
+msgid "Profit/Loss (points)"
+msgstr "利润/亏损（点）"
+
+msgid "Purchase"
+msgstr "买入"
+
+msgid "Purchase Date"
+msgstr "买入日期"
+
+msgid "Purchase Price"
+msgstr "买入价格"
+
+msgid "Purchase Time"
+msgstr "买入时间"
+
+msgid "Read"
+msgstr "阅读"
+
+msgid "Real account opening"
+msgstr "开立真实账户"
+
+msgid "Reality check"
+msgstr "真实情况检查"
+
+msgid "Redirecting to oauth login page"
+msgstr "重新导入oauth登录页面"
+
+msgid "Ref"
+msgstr "参考"
+
+msgid "Register free account"
+msgstr "注册免费账户"
+
+msgid "Registration"
+msgstr "注册"
+
+msgid "Reloading page"
+msgstr "重新载入页面"
+
+msgid "Remove Selected"
+msgstr "移除选定项目"
+
+msgid "Rename"
+msgstr "重命名"
+
+msgid "Repeat password"
+msgstr "重复输入密码"
+
+msgid "Resale of this contract is not offered"
+msgstr "此合约不提供转售"
+
+msgid "Reset to Defaults"
+msgstr "重设为默认值"
+
+msgid "Reset zoom"
+msgstr "缩放重设"
+
+msgid "Reset zoom level 1:1"
+msgstr "缩放等级1：1重设"
+
+msgid "Resources"
+msgstr "资源"
+
+msgid "Responsible Trading"
+msgstr "负责任交易"
+
+msgid "Results"
+msgstr "成绩"
+
+msgid "Return"
+msgstr "回报"
+
+msgid "Return to trading page"
+msgstr "返回交易页面"
+
+msgid "Rise"
+msgstr "上涨"
+
+msgid "SMA"
+msgstr "简单移动平均线"
+
+msgid "SVG"
+msgstr "圣文森特和格林纳丁斯"
+
+msgid "Safari"
+msgstr "Safari"
+
+msgid "Salaried Employee"
+msgstr "受薪雇员"
+
+msgid "Sale Date"
+msgstr "卖出日期"
+
+msgid "Sale Price"
+msgstr "卖出价格"
+
+msgid "Sand Signika"
+msgstr "Sand Signika图表主题"
+
+msgid "Sat"
+msgstr "周六"
+
+msgid "Saturday"
+msgstr "周六"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save as"
+msgstr "另存为"
+
+msgid "Save changes"
+msgstr "保存更改"
+
+msgid "Secondary"
+msgstr "次要"
+
+msgid "Security"
+msgstr "安全"
+
+msgid "Security question"
+msgstr "安全提示问题"
+
+msgid "Select Instrument"
+msgstr "选择工具"
+
+msgid "Self-Employed"
+msgstr "个体经营"
+
+msgid "Self-Exclusion"
+msgstr "自我禁止"
+
+msgid "Self-Exclusion Facilities"
+msgstr "自我禁止工具"
+
+msgid "Sell At Market"
+msgstr "按市价卖出"
+
+msgid "Sell Price"
+msgstr "卖出价格"
+
+msgid "Sell Spot"
+msgstr "卖出现价"
+
+msgid "Sell Time"
+msgstr "卖出时间"
+
+msgid "Send to account #"
+msgstr "发送到账户 #"
+
+msgid "Sent to account"
+msgstr "发送到账户"
+
+msgid "Sep"
+msgstr "九月"
+
+msgid "September"
+msgstr "九月"
+
+msgid "Session"
+msgstr "会话"
+
+msgid "Session duration limit, in minutes"
+msgstr "交易期持续时间限制，以分钟为单位"
+
+msgid "Session is not authenticated"
+msgstr "会话未经验证"
+
+msgid "Settles"
+msgstr "结算"
+
+msgid "Share"
+msgstr "分享"
+
+msgid "Share chart"
+msgstr "分享图表"
+
+msgid "Short MA Type"
+msgstr "短移动平均线类型"
+
+msgid "Short ROC Period"
+msgstr "短期价格变化率"
+
+msgid "Short Stop Line Stroke"
+msgstr "短止损线波幅"
+
+msgid "Short Term Period"
+msgstr "短交易期"
+
+msgid "Show"
+msgstr "显示"
+
+msgid "Sigma"
+msgstr "西格玛交易软件"
+
+msgid "Signal Line Stroke"
+msgstr "信号线波幅"
+
+msgid "Signal MA Type"
+msgstr "信号移动平均线类型"
+
+msgid "Signal Period"
+msgstr "信号期"
+
+msgid "Single MA Period"
+msgstr "单移动平均线期"
+
+msgid "Single MA Type"
+msgstr "单移动平均线类型"
+
+msgid "Slow %D MA Type"
+msgstr "慢速%D移动平均线类型"
+
+msgid "Slow %D Period"
+msgstr "慢速%D期"
+
+msgid "Slow %K MA Type"
+msgstr "慢速%K移动平均线类型"
+
+msgid "Slow %K Period"
+msgstr "慢速%K期"
+
+msgid "Slow Limit"
+msgstr "慢速限额"
+
+msgid "Slow MA Type"
+msgstr "慢速移动平均线类型"
+
+msgid "Slow Period"
+msgstr "慢速期"
+
+msgid "Sold"
+msgstr "已卖出"
+
+msgid "Some random index"
+msgstr "部分随机指数"
+
+msgid "Spline"
+msgstr "Spline法"
+
+msgid "Spreads"
+msgstr "价差交易"
+
+msgid "Stake"
+msgstr "投注资金"
+
+msgid "Standard methods"
+msgstr "标准方法"
+
+msgid "Standard withdrawal"
+msgstr "标准取款方式"
+
+msgid "Start Time"
+msgstr "开始时间"
+
+msgid "Start time"
+msgstr "开始时间"
+
+msgid "State/province/region"
+msgstr "州/省/区"
+
+msgid "Statement"
+msgstr "账单"
+
+msgid "Status"
+msgstr "统计"
+
+msgid "Stays In/Goes Out"
+msgstr "“保持在范围之内/超出范围之外”"
+
+msgid "Stocks trading experience"
+msgstr "股票交易经验"
+
+msgid "Stocks trading frequency"
+msgstr "股票交易频率"
+
+msgid "Stop Loss Level"
+msgstr "止损价位"
+
+msgid "Stop Profit Level"
+msgstr "止盈价位"
+
+msgid "Stop-loss"
+msgstr "止损"
+
+msgid "Stop-profit"
+msgstr "止盈"
+
+msgid "Stop-type"
+msgstr "停止类型"
+
+msgid "Street address"
+msgstr "街道地址"
+
+msgid "Stroke"
+msgstr "波幅"
+
+msgid "Stroke color"
+msgstr "波幅颜色"
+
+msgid "Stroke width"
+msgstr "波幅宽度"
+
+msgid "Submit"
+msgstr "提交"
+
+msgid "Successfully added new token"
+msgstr "成功添加新令牌"
+
+msgid "Sun"
+msgstr "周日"
+
+msgid "Sunday"
+msgstr "周日"
+
+msgid "TEMA"
+msgstr "三指数移动平均线"
+
+msgid "TRIMA"
+msgstr "三角形移动平均线"
+
+msgid "Table"
+msgstr "表"
+
+msgid "Tel"
+msgstr "电话"
+
+msgid "Template name"
+msgstr "模板名称"
+
+msgid "Terms"
+msgstr "条款"
+
+msgid "Terms and Conditions"
+msgstr "条款和条件"
+
+msgid "Tertiary"
+msgstr "三级"
+
+msgid "The"
+msgstr "关于"
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the aquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract permium"
+msgstr ""
+"本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了"
+"解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约"
+"到期时一文不值，您将损失全部投资，包括合约费用"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
+msgstr "找不到相关的页面。该页面已过期，或输入网址出错。请检查您的输入"
+
+msgid ""
+"There was a market data disruption during the contract period. For real-"
+"money accounts we will attempt to correct this and settle the contract "
+"properly, otherwise the contract will be cancelled and refunded. Virtual-"
+"money contracts will be cancelled and refunded"
+msgstr ""
+"合约期间发生市场数据中断。我们将尝试为真实资金账户提供修正并正确结算合约，否"
+"则合约将取消并退还投注金额。虚拟资金合约将取消并退还投注金额"
+
+msgid "There was an error"
+msgstr "出现错误"
+
+msgid "This contract has expired"
+msgstr "合约已过期"
+
+msgid "This contract lost"
+msgstr "合约输了"
+
+msgid "This contract won"
+msgstr "合约赢了"
+
+msgid "This field is required"
+msgstr "此为必填项"
+
+msgid "Thu"
+msgstr "周四"
+
+msgid "Thursday"
+msgstr "周四"
+
+msgid "Tick Trade app"
+msgstr "跳动点交易应用程序"
+
+msgid "Tick {row.number}"
+msgstr "跳动点 {行.号}"
+
+msgid "Ticks"
+msgstr "跳动点"
+
+msgid "Tile"
+msgstr "图标"
+
+msgid "Time Period"
+msgstr "期限"
+
+msgid "Time interval"
+msgstr "时间间隔"
+
+msgid "Time period"
+msgstr "期限"
+
+msgid "Timeout for websocket request"
+msgstr "websocket 请求已过期"
+
+msgid "Title"
+msgstr "职务"
+
+msgid "To"
+msgstr "到"
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr "如要存款请直接联系支付代理"
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+"对于Binary.com不支持的支付方式或货币， 您可以联系支付代理处理存款和取款"
+
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
+msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
+
+msgid "Token"
+msgstr "令牌"
+
+msgid "Token management"
+msgstr "令牌管理"
+
+msgid "Token name"
+msgstr "令牌名称"
+
+msgid "Token permissions"
+msgstr "令牌权限"
+
+msgid ""
+"Tokens are special codes for accessing Binary mobile applications and third "
+"party tools"
+msgstr "令牌是访问Binary移动应用程序和第三方工具的特殊代码"
+
+msgid "Tooltip background"
+msgstr "工具提示背景"
+
+msgid "Tooltip text"
+msgstr "工具提示文本"
+
+msgid "Total Cost"
+msgstr "成本总计"
+
+msgid "Total Profit/Loss"
+msgstr "利润/亏损合计"
+
+msgid "Touch/No Touch"
+msgstr "触及/未触及"
+
+msgid "Tourism"
+msgstr "旅游"
+
+msgid "Town/City"
+msgstr "城镇/城市"
+
+msgid "Trade"
+msgstr "交易"
+
+msgid "Trade Confirmation"
+msgstr "确认交易"
+
+msgid "Trade using"
+msgstr "交易方法为"
+
+msgid "Trading Times"
+msgstr "交易时间"
+
+msgid ""
+"Trading binary options may not be suitable for everyone, so please ensure "
+"that you fully understand the risks involved. Your losses can exceed your "
+"initial deposit and you do not own or have any interest in the underlying "
+"asset"
+msgstr ""
+"二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会"
+"超越起始资金存款，而您并不拥有或占有任何标的资产"
+
+msgid ""
+"Trading the financial markets can become addictive. Fill in the form below "
+"to limit your participation on the website or send a signed letter or fax to "
+"our customer support team. Once set, you can only tighten your limits. "
+"Limits will only be removed or loosened after 7 days with the exception of "
+"the self- exclusion date, which cannot be removed or altered once you have "
+"confirmed it. To remove or increase your limits, please contact"
+msgstr ""
+"金融市场交易可能使人上瘾。请填写下表以限制您对本网站的参与。您也可发送签名信"
+"或传真到我们的客服团队。一旦设定好，您只能收紧您的限制。限制只能在 7 天后取消"
+"或放宽，自我禁止期在确认后不能取消或更改。若要解除或增加您的限制，请联系"
+
+msgid "Tradingview for Binary.com"
+msgstr "通过Binary.com使用Tradingview"
+
+msgid "Transfer to another Binary account"
+msgstr "转账到另一个Binary账户"
+
+msgid "Try"
+msgstr "尝试"
+
+msgid "Tue"
+msgstr "周二"
+
+msgid "Tuesday"
+msgstr "周二"
+
+msgid "Turnover"
+msgstr "交易额"
+
+msgid "USD"
+msgstr "美元"
+
+msgid "Unfortunately, your browser does not support them"
+msgstr "很遗憾，您的浏览器不支持这些程序"
+
+msgid "Unlock"
+msgstr "解锁"
+
+msgid "Up/Down"
+msgstr "上涨/下跌"
+
+msgid "Upcoming Events"
+msgstr "未来事件"
+
+msgid "Update Settings"
+msgstr "更新设置"
+
+msgid "Upgrade to a Real Account"
+msgstr "升级为真实账户"
+
+msgid "Upper Band Stroke"
+msgstr "上方带状波幅"
+
+msgid "Use"
+msgstr "使用"
+
+msgid ""
+"Use the \"Save as ...\" button to save the chart settings, type, time "
+"period, indicators and comparisons"
+msgstr "使用\"另存为...\"按钮保存图表设置、类型、时间段、指标和比较"
+
+msgid "Verification code has been sent to your email"
+msgstr "验证代码已发送到您的邮箱"
+
+msgid "Verification code sent to"
+msgstr "验证代码已发送到"
+
+msgid "Verification token"
+msgstr "验证令牌"
+
+msgid "Verify new password"
+msgstr "验证新密码"
+
+msgid "Vertical Line"
+msgstr "垂直线"
+
+msgid "Vertical line"
+msgstr "垂直线"
+
+msgid "View"
+msgstr "查看"
+
+msgid "View Historical Data"
+msgstr "查看历史数据"
+
+msgid "Volume Factor"
+msgstr "体积系数"
+
+msgid "WMA"
+msgstr "加权移动平均线"
+
+msgid "WMA Period"
+msgstr "加权移动平均线期限"
+
+msgid "Websocket Server"
+msgstr "Websocket 服务器"
+
+msgid "Webtrader"
+msgstr "Webtrader"
+
+msgid ""
+"Webtrader uses new web technologies for rich and enjoyable trading experience"
+msgstr "Webtrader采用新型网络技术为您提供丰富且充满乐趣的交易体验"
+
+msgid "Wed"
+msgstr "周三"
+
+msgid "Wednesday"
+msgstr "周三"
+
+msgid "While on the go, you can"
+msgstr "出门在外时，您可"
+
+msgid "Windows"
+msgstr "窗口"
+
+msgid "Withdraw funds"
+msgstr "取出资金"
+
+msgid "Withdrawal via payment agents"
+msgstr "通过支付代理取款"
+
+msgid "X-axis labels"
+msgstr "X-轴标签"
+
+msgid "X-axis line"
+msgstr "X-轴线"
+
+msgid "X-axis tick"
+msgstr "X-轴跳动点"
+
+msgid "Y-axis gridline"
+msgstr "Y-轴网格线"
+
+msgid "Y-axis labels"
+msgstr "Y-轴标签"
+
+msgid "Yes"
+msgstr "是"
+
+msgid "You have excluded yourself until"
+msgstr "您已设置自我禁止，有效期至"
+
+msgid "You have sold the following contract"
+msgstr "您已卖出以下合约"
+
+msgid ""
+"You have to register webtrader and get App ID before you can use different "
+"OAuth server for authentication. For more information refer to OAuth details "
+"on"
+msgstr "使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到此参阅OAuth信息"
+
+msgid "You haven't saved any templates yet"
+msgstr "您尚未保存任何模板"
+
+msgid "You pay"
+msgstr "您支付"
+
+msgid "You will be automatically logged out after such time"
+msgstr "在该时间后您将自动退出登录"
+
+msgid ""
+"Your Binary.com account is created, but to start trading you need to allow "
+"Webtrader access it"
+msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
+
+msgid "Your browser doesn't support copy to clipboard"
+msgstr "您的浏览器不支持剪贴板复制操作"
+
+msgid "Your browser is not supported"
+msgstr "您的浏览器不受支持"
+
+msgid "Your changes have been updated"
+msgstr "您的更改已成功更新"
+
+msgid "Your email"
+msgstr "您的电子邮件"
+
+msgid "Your new account balance is"
+msgstr "您的新账户余额是"
+
+msgid "Your transaction reference is"
+msgstr "您的交易参考号是"
+
+msgid "Your transaction reference number is"
+msgstr "您的交易参考号是"
+
+msgid "Zoom"
+msgstr "缩放"
+
+msgid "admin"
+msgstr "管理中心"
+
+msgid "and"
+msgstr "以及"
+
+msgid ""
+"below and proceeding with the Account Opening you should note that you may "
+"be exposing yourself to risks (which may be significant, including the risk "
+"of loss of the entire sum invested) that you may not have the knowledge and "
+"experience to properly assess or mitigate"
+msgstr ""
+"以下并依照后续流程开立账户，您须注意，您可能承担一些风险（可能会很严重，包括"
+"损失整个投资资金的风险），而对于此类风险缺，你可能乏知识与经验以作出正确评估"
+"或化解"
+
+msgid "between"
+msgstr "之间"
+
+msgid "commission"
+msgstr "佣金"
+
+msgid "contact support"
+msgstr "联系客服部"
+
+msgid "customer support"
+msgstr "客服部"
+
+msgid "day"
+msgstr "日"
+
+msgid "days"
+msgstr "日"
+
+msgid "e.g"
+msgstr "例如"
+
+msgid "e.g, www2.binary.com, www.binaryqa36.com"
+msgstr "例如www2.binary.com, www.binaryqa36.com"
+
+msgid "end time"
+msgstr "结束时间"
+
+msgid "entry spot"
+msgstr "入市现价"
+
+msgid "exit spot"
+msgstr "退市现价"
+
+msgid "feed is delayed by"
+msgstr "数据源延迟的原因为"
+
+msgid "for API calls that can access the cashier"
+msgstr "可访问收银台的API呼叫专用"
+
+msgid "for API calls that can create trades in the client account"
+msgstr "可为客户账户创建交易的API呼叫专用"
+
+msgid "for API calls that change client settings"
+msgstr "更改客户设置的API呼叫专用"
+
+msgid "for API calls that only read client data"
+msgstr "只读客户数据的API呼叫专用"
+
+msgid "for mobile charts"
+msgstr "移动式图表专用"
+
+msgid "has updated its"
+msgstr "已更新其"
+
+msgid "hour"
+msgstr "小时"
+
+msgid "hours"
+msgstr "小时"
+
+msgid "https://developers.binary.com/"
+msgstr "https://developers.binary.com/"
+
+msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+
+msgid "if this is not your country of residence"
+msgstr "如不是您的居住国"
+
+msgid "in the future, the"
+msgstr "未来的"
+
+msgid "information about your trading exprience and personal finance"
+msgstr "您的交易经验与个人财务信息"
+
+msgid ""
+"is Binary's advanced desktop trading platform. Its multi-window interface "
+"provides maximum flexibility and suits the needs of active traders working "
+"on their desktop PCs"
+msgstr "是Binary的先进桌面交易平台。多窗口界面保证了最大的灵活性，可满足活跃交易员通过桌面电脑交易的需求"
+
+msgid "is required. Current spread"
+msgstr "是必须的。当前价差"
+
+msgid "is that which is selected and the"
+msgstr "就是您选择的，而"
+
+msgid "is the"
+msgstr "是"
+
+msgid "is the price in effect at that time"
+msgstr "就是当时的实时价格"
+
+msgid "is the selected number of minutes/hours after the"
+msgstr "之后所选的分钟数或小时数"
+
+msgid "is the selected time"
+msgstr "就是您选择的时间"
+
+msgid "is the spot at the"
+msgstr "的现价"
+
+msgid "is when the contract is processed by our servers and the"
+msgstr "就是我们的服务器处理合约交易的时间"
+
+msgid "main site"
+msgstr "主要网站"
+
+msgid "market is presently closed"
+msgstr "市场现已关闭"
+
+msgid "minute"
+msgstr "分钟"
+
+msgid "minutes"
+msgstr "分钟"
+
+msgid "next tick"
+msgstr "下一个跳动点"
+
+msgid "oauth"
+msgstr "oauth"
+
+msgid "of \"Now\", the"
+msgstr "是“现在”，"
+
+msgid "payment agent"
+msgstr "支付代理"
+
+msgid "payments"
+msgstr "付款"
+
+msgid "please play responsibly. Read about"
+msgstr "并提醒自己要承担责任。请查阅"
+
+msgid "points"
+msgstr "点"
+
+msgid "read"
+msgstr "阅读"
+
+msgid "second"
+msgstr "秒"
+
+msgid "seconds"
+msgstr "秒"
+
+msgid "session overview"
+msgstr "会话概观"
+
+msgid "start time"
+msgstr "开始时间"
+
+msgid "terms and conditions"
+msgstr "条款和条件"
+
+msgid "the"
+msgstr "关于"
+
+msgid "thereafter"
+msgstr "其后"
+
+msgid "tick"
+msgstr "跳动点"
+
+msgid "ticks"
+msgstr "跳动点"
+
+msgid "trade"
+msgstr "交易"
+
+msgid "trading experience"
+msgstr "交易经验"
+
+msgid "trading frequency"
+msgstr "交易频率"
+
+msgid "websocket"
+msgstr "websocket"
+
+msgid "yes"
+msgstr "是"
+
+msgid "{agent.commission}%"
+msgstr "{代理.佣金}%"
+
+msgid "| Return"
+msgstr "回报率"
+
+#~ msgid "Add overlays"
+#~ msgstr "添加覆盖"
+
+#~ msgid "Current overlays"
+#~ msgstr "当前叠加价格"
+
+#~ msgid ""
+#~ "In order to properly apply this language, a full refresh of page is "
+#~ "required. Are you sure you want to proceed?"
+#~ msgstr "必须完整更新页面才能正确启用此语言。确定要继续？"
+
+#~ msgid "Open real money account"
+#~ msgstr "开立真实资金账户"
+
+#~ msgid "Apply new theme?"
+#~ msgstr "使用新主题？"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "Chrome 扩展程序"

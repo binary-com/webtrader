@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -21,16 +23,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/chop/chop.html'], function ( $html ) {
+        require(['text!charts/indicators/chop/chop.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
             var plotColor = 'rgba(178, 191, 217, 0.20)';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.chop;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.chop-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#chop_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -50,8 +64,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             });
 
             $html.find("#chop_plot_color").colorpicker({
+						showOn: 'click',
                 alpha :true,
                 colorFormat:'RGBA',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -73,14 +93,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#chop_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#chop_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#chop_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#chop_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#chop_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#chop_levels').DataTable({
@@ -132,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height:400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -197,6 +218,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 levels: levels,
                                 plotBands: plotBands
                             };
+                            before_add_callback && before_add_callback();
                             //Add CHOP for the main series
                             $($(".chop").data('refererChartID')).highcharts().series[0].addIndicator('chop', options);
 
@@ -212,8 +234,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -227,16 +251,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".chop").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".chop").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".chop").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

@@ -6,18 +6,13 @@
     overflow-x: hidden !important;
 }
 
-.chartSubContainer {
-    position: relative;
-    padding: 12px 0 0 5px;
-}
-
 .chart-dialog .chart-view,
 .chart-dialog .table-view {
   height: 100%;
-  width: 100%;
   position: absolute;
 }
 .chart-dialog .table-view {
+  width: 100%;
   left: 100%;
   overflow-y: auto;
 }
@@ -37,7 +32,6 @@
   display:none;
   position: absolute;
   z-index: +1;
-  right: 0;
   background: #e98024;
   border: 1px solid #e98024;
   border-radius: 0 0 0 4px;
@@ -46,7 +40,9 @@
   font-size: 14px;
   padding: 0px 10px;
 }
-
+.chartSubContainerHeader {
+  margin-left: 10px;
+}
 .dataTables_processing {
   z-index: 1; /* fix for processing message wile refreshing databases */
 }
@@ -54,4 +50,6 @@
 .table-view .arrow-images {
     margin-bottom: -2px;
     margin-left: -5px;
+    width: 10px;
+    height: 10px;
 }

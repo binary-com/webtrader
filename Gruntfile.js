@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             uncompressed: ['dist/uncompressed'],
             branches:[ 'dist/branches'],
             current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
-            dist: ['dist']
+            dist: ['dist'],
         },
         copy: {
             main: {
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'src/',
-                        src: ['**', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
+                        src: ['**', '!**/*.scss','!**/*.es6', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
                         dest: 'dist/uncompressed/v<%=pkg.version%>'
                     }
                 ]
@@ -46,16 +46,23 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
+                        cwd: 'node_modules/',
+                        src: [
+                            'jquery-ui-iconfont/jquery-ui.icon-font.css', 'jquery-ui-iconfont/font/*',
+                        ],
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                    },
+                    {
+                        expand: true,
                         cwd: 'bower_components/',
                         src: [
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             '!colorpicker/**', 'colorpicker/jquery.colorpicker.js', 'colorpicker/images/**', 'colorpicker/jquery.colorpicker.css',
                             '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
-                            '!jquery-ui/**', 'jquery-ui/themes/smoothness/images/**', 'jquery-ui/jquery-ui.min.js', 'jquery-ui/themes/smoothness/jquery-ui.min.css',
+                            '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
-                            'jquery-ui-iconfont/jquery-ui.icons.css', 'jquery-ui-iconfont/fonts/*',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
@@ -73,9 +80,14 @@ module.exports = function (grunt) {
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
                             'moment/min/moment.min.js',
                             'ddslick/jquery.ddslick.min.js',
-                            '!**/**/favicon.ico'
+                            '!**/**/favicon.ico',
+                            'parallel.js/lib/**'
                         ],
-                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib'
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                        rename: function(dest, src) {
+                          // grunt uglify complains about folders anding with .js
+                          return dest + src.replace("parallel.js/", "parallel_js/");
+                        }
                     }
                 ]
             },
@@ -85,7 +97,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
+                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}', '**/404.html'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -99,6 +111,16 @@ module.exports = function (grunt) {
                         cwd: 'dist/compressed',
                         src: [ '**'],
                         dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
+                    }
+                ]
+            },
+            copy_i18n: {
+                files: [
+                    {
+                        expand: true,
+                        src: [ '**'],
+                        cwd: 'translations/i18n/json',
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/i18n/'
                     }
                 ]
             },
@@ -126,7 +148,7 @@ module.exports = function (grunt) {
         },
         replace: {
             version: {
-                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml'],
+                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml', 'dist/uncompressed/404.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<version>',
@@ -156,7 +178,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.html'],
+                src: ['**/*.html','!**/404.html'],
                 dest: 'dist/compressed'
             }
         },
@@ -301,26 +323,37 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-          scripts: {
-            files: ['src/**'],
-            tasks: ['mainTask'],
-            options: {
-              spawn: false,
-              interrupt : true,
-              livereload: true
-            },
+          options: {
+            spawn: true,
+            interrupt : false,
+            livereload: {
+              key: grunt.file.read('grunt/livereload.key'),
+              cert: grunt.file.read('grunt/livereload.crt')
+            }
           },
-          https: {
-            files: ['src/**'],
-            tasks: ['mainTask'],
-            options: {
-              spawn: false,
-              interrupt : true,
-              livereload: {
-                key: grunt.file.read('grunt/livereload.key'),
-                cert: grunt.file.read('grunt/livereload.crt')
-              }
-            },
+          scss: {
+            options: { livereload: false },
+            files: ['src/**/*.scss'],
+            tasks: ['newer:sass'],
+          },
+          es6: {
+            options: { livereload: false },
+            files: ['src/**/*.es6'],
+            tasks: ['newer:babel'],
+          },
+          index: {
+              options: { livereload: false },
+              files: ['src/index.html'],
+              tasks: ['newer:copy:main', 'rename', 'replace']
+          },
+          dist: {
+            files: ['dist/uncompressed/v<%=pkg.version%>/**/*.*','!dist/uncompressed/v<%=pkg.version%>/index.html', 'dist/uncompressed/index.html'],
+            tasks: []
+          },
+          scripts: {
+            options: { livereload: false },
+            files: ['src/**','!src/index.html', '!src/**/*.scss', '!src/**/*.es6'],
+            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest'],
           },
         },
         shell: {
@@ -378,16 +411,57 @@ module.exports = function (grunt) {
                         {
                             expand: true,
                             cwd: 'dist/uncompressed/',
-                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js', 'v<%=pkg.version%>/images/webtrader_16px.png', 'v<%=pkg.version%>/images/webtrader_128px.png']
+                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js',
+                                'v<%=pkg.version%>/images/favicons/**']
                         }
                     ]
             }
+        },
+        po2json: {
+          options: {
+            format: 'raw'
+          },
+          all: {
+            src: ['translations/i18n/*.po'],
+            dest: 'translations/i18n/json/'
+          }
+        },
+        sass: {
+          // options: { sourceMap: true },
+          dist: {
+            files: [
+              {
+                expand: true,
+                cwd: 'src/',
+                src: ['**/*.scss'],
+                dest: 'dist/uncompressed/v<%=pkg.version%>',
+                ext: '.css'
+              }
+            ]
+          }
+        },
+        babel: {
+          options: {
+            sourceMap: true,
+            presets: ['es2015', 'stage-0']
+          },
+          dist: {
+            files: [
+              {
+                expand: true,
+                cwd: 'src/',
+                src: ['**/*.es6'],
+                dest: 'dist/uncompressed/v<%=pkg.version%>',
+                ext: '.js'
+              }
+            ]
+          }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
-	grunt.registerTask('default', ['jshint', 'mainTask', 'compressionAndUglify', 'removelogging']);
+  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
@@ -397,5 +471,4 @@ module.exports = function (grunt) {
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
     /* clean all the files in gh-pages branch */
     grunt.registerTask('gh-pages-clean', ['gh-pages:clean']);
-
 };

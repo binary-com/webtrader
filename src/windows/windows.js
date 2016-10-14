@@ -3,7 +3,7 @@
  * Created by arnab on 2/18/15.
  */
 
-define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation) {
+define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation, tracker) {
 
     var closeAllObject = null, dialogCounter = 0, $menuUL = null;
 
@@ -42,6 +42,18 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         return array;
     }
 
+    var callbacks = {};
+    /* fire a custom event and call registered callbacks(api.events.on(name)) */
+    var fire_event = function(name /*, args */){
+        var args = [].slice.call(arguments,1);
+        var fns = callbacks[name] || [];
+        fns.forEach(function (cb) {
+            setTimeout(function(){
+                cb.apply(undefined, args);
+            },0);
+        });
+    }
+
     function tileDialogs() {
         // get array of dialogs
         var dialogs = $('.webtrader-dialog').filter(function (inx, d) {
@@ -54,8 +66,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
         var arrange = function (dialogs, perform) {
             var total_free_space = 0;
 
-            var max_x = $(window).width(),
-                y = isSmallView() ? 100 : 80; // position of the next window from top
+            var max_x = $(window).width(), y = 110; // position of the next window from top
 
             for (var inx = 0; inx < dialogs.length;) {
                 var inx_start = inx;
@@ -98,7 +109,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                         d.dialog('widget').animate({
                             left: x + 'px',
                             top: y + 'px'
-                        }, 1500);
+                        }, 1500, d.trigger.bind(d, 'animated'));
                     /* update dialog option.position */
                     d.dialog("option", "position", { my: x, at: y });
                     x += w;
@@ -132,6 +143,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             best.push(d);
         });
         arrange(best, true);
+
+        //Trigger tile when the animation is done
+        setTimeout(function () { fire_event("tile"); }, 1500 + 100);
     }
 
     /*
@@ -197,6 +211,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             var year = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
             var month = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
             var day = $('<select />').insertAfter(header).selectmenu({ width: 'auto'});
+            day.selectmenu( "menuWidget" ).addClass('date-day');
             year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
             month = update(month, {
                 min: 0, max: 11, initial: dt.getMonth(),
@@ -413,57 +428,19 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 }
             });
 
+            //Attach click listener for tile menu
+            tileObject.click(tileDialogs);
+
             require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], function (chartWindowObj,liveapi, menu) {
 
-
-                //Attach click listener for tile menu
-                tileObject.click(tileDialogs);
-
-                //If user close/opened some charts, then open them else, open random charts
-                var windows_ls = local_storage.get('windows');
-                if (windows_ls) {
-                    (windows_ls.windows || []).forEach(function (eWindow) {
-                        if (eWindow) {
-                            if (eWindow.isChart) {
-                                chartWindowObj
-                                    .addNewWindow({
-                                        instrumentCode: eWindow.instrumentCode,
-                                        instrumentName: eWindow.instrumentName,
-                                        timePeriod: eWindow.timePeriod,
-                                        type: eWindow.type,
-                                        delayAmount: eWindow.delayAmount
-                                    });
-                            } else if (eWindow.isTrade) {
-                                liveapi
-                                    .send({contracts_for: eWindow.symbol})
-                                    .then(function (res) {
-                                        require(['trade/tradeDialog'], function (tradeDialog) {
-                                            _.unset(eWindow, 'isTrade');
-                                            tradeDialog.init(eWindow, res.contracts_for);
-                                        });
-                                    }).catch(function (err) {
-                                        require(['jquery-growl'], function() {
-                                            $.growl.error({ message: err.message }); console.error(err);
-                                        });
-                                    });
-                            } else if (eWindow.isAsset) {
-                                $("#nav-container .assetIndex").click();
-                            } else if (eWindow.isTradingTimes) {
-                                $("#nav-container .tradingTimes").click();
-                            } else if (eWindow.isViewHistorical) {
-                                $("#nav-container .download").click();
-                            }
-                        }
-                    });
-                    _.delay(tileDialogs, 1000); // Trigger tile action
+                if(!tracker.is_empty()) {
+                  tracker.reopen();
+                  setTimeout(fixFooterPosition, 200);
                 } else {
                     var counts = calculateChartCount();
                     liveapi
                         .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
                         .then(function (markets) {
-
-                            windows_ls = local_storage.get('windows') || {};
-                            windows_ls.windows = (windows_ls.windows || []);
 
                             markets = menu.extractChartableMarkets(markets);
                             /* return a random element of an array */
@@ -486,17 +463,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                                                 type: chart_type,
                                                 delayAmount: sym.delay_amount
                                             });
-
-                                windows_ls.windows.push({
-                                    instrumentCode: sym.symbol,
-                                    instrumentName: sym.display_name,
-                                    timePeriod: timePeriod,
-                                    type: chart_type,
-                                    delayAmount: sym.delay_amount,
-                                    isChart: true
-                                });
                             }
-                            local_storage.set('windows', windows_ls);
 
                             tileDialogs(); // Trigger tile action
                         });
@@ -507,10 +474,47 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             /* automatically log the user in if we have oauth_token in local_storage */
             require(['websockets/binary_websockets' ], function(liveapi) {
               if(local_storage.get('oauth')) {
-                liveapi.cached.authorize().catch(function(err) {
-                  console.error(err.message);
-                  $.growl.error({message: err.message});
-                 });
+
+                /* query string parameters can tempered.
+                   make sure to get loginid from webapi instead */
+                var oauth = local_storage.get('oauth');
+                Promise.all(
+                  oauth.slice(1)
+                       .map(function(acc) { return { authorize: acc.token}; })
+                       .map(function(req) { return liveapi.send(req); })
+                )
+                .then(function(results) {
+                  return liveapi.cached.authorize()
+                    .then(function(data) {
+                       results.unshift(data);
+                       var is_jpy_account = false;
+                       for(var i = 0; i < results.length; ++i) {
+                          oauth[i].id = results[i].authorize.loginid;
+                          oauth[i].is_virtual = results[i].authorize.is_virtual;
+                          if (results[i].authorize.landing_company_name.indexOf('japan') !== -1) {
+                            is_jpy_account = true;
+                          }
+                       }
+                       local_storage.set('oauth', oauth);
+                       return is_jpy_account;
+                    });
+                })
+                .then(function(is_jpy_account) {
+                   /* Japan accounts should not be allowed to login to webtrader */
+                   if(is_jpy_account && is_jpy_account === true) {
+                      liveapi.invalidate();
+                      $.growl.error({message: 'Japan accounts are not supported.'.i18n(), duration: 6000 });
+                      local_storage.remove('oauth');
+                      local_storage.remove('oauth-login');
+                   }
+                })
+                .catch(function(err) {
+                    console.error(err.message);
+                    $.growl.error({message: err.message});
+                    //Remove token and trigger login-error event.
+                    local_storage.remove('oauth');
+                    $(".login").trigger("login-error");
+                });
               }
             });
             $(window).resize(fixFooterPosition);
@@ -562,10 +566,12 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 my: 'center',
                 at: 'center',
                 of: window,
-                title: 'blank window',
+                title: 'Blank window'.i18n(),
                 hide: 'fade',
                 icons: {
-                  close: 'ui-icon-close'
+                  close: 'custom-icon-close',
+                  minimize: 'custom-icon-minimize',
+                  maximize: 'custom-icon-maximize'
                 }
             }, options || {});
             options.minWidth = options.minWidth || options.width;
@@ -586,13 +592,14 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             dialog.on('dragstop', function() {
                 var top = dialog.offset().top;
                 if(top < 0) {
-                  dialog.animate({ top: '0px' }, 300);
+                  dialog.animate({ top: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
                 }
             });
 
             dialog.on('dragstop', fixFooterPosition);
             dialog.on('drag', function() { fixFooterPosition(true); });
             blankWindow.on('dialogextendminimize', fixFooterPosition);
+            dialog.on('dialogresizestop', fixFooterPosition);
 
             if(options.destroy) { /* register for destroy event which have been patched */
               blankWindow.on('dialogdestroy', options.destroy);
@@ -619,33 +626,12 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             blankWindow.on('dialogclose', function () {
                 if (li) li.remove();
                 li = null;
+                fixFooterPosition();
             });
             blankWindow.on('dialogopen', function () {
                 !li && !options.ignoreTileAction && add_to_windows_menu();
             });
-            var last_document_size = { };
-            blankWindow.on('dialogextendbeforerestore', function(){
-              var doc = $(document);
-              last_document_size = {
-                height: getScrollHeight(),
-                width: doc.width()
-              };
-            });
-            blankWindow.on('dialogextendrestore', function() {
-              var pos = dialog.offset();
-              var new_pos = { };
-              var dim = { width: dialog.width(), height: dialog.height() };
-              var doc_size = last_document_size;
-              new_pos.left = (pos.left + dim.width) > doc_size.width ? (doc_size.width - dim.width - 5) : pos.left;
-              new_pos.top = (pos.top + dim.height) > doc_size.height ? (doc_size.height - dim.height - 5) : pos.top;
-              if(new_pos.left !== pos.left || new_pos.top !== pos.top) {
-                dialog.animate({
-                  left: new_pos.left + 'px',
-                  top: new_pos.top + 'px'
-                }, 500);
-              }
-              blankWindow.dialog('moveToTop');
-            });
+            blankWindow.on('dialogextendrestore', fixFooterPosition);
 
             if (options.resize)
                 options.resize.call($html[0]);
@@ -658,12 +644,24 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
             /* check and add the refresh button if needed */
             if(options.refresh){
                 var header = blankWindow.parent().find('.ui-dialog-title');
-                var refresh = $("<span class='reload' style='position:absolute; right:85px' title='reload'/>").insertBefore(header);
+                var refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>");
                 refresh.on('click',options.refresh);
+            }
+
+           /* options: {
+            *    module_id: 'statement/statement'  // require js module id
+            *    is_unique: true/false // is this dialog instance unique or not,
+            *    data: { } // arbitary data object for this dialog
+            * } */
+            blankWindow.track = function(options){
+              return tracker.track(options, blankWindow);
+            }
+            blankWindow.fixFooterPosition = fixFooterPosition;
+            blankWindow.destroy = function() {
+              blankWindow.dialog('destroy').remove();
             }
             return blankWindow;
         },
-
 
         /*
             Uses a jquery-ui spinner to display a list of strings.
@@ -708,7 +706,19 @@ define(['jquery', 'lodash', 'navigation/navigation', 'jquery.dialogextend', 'mod
                 select.selectmenu('refresh');
             }
             return select;
+        },
+
+        event_on: function (name, cb) {
+            (callbacks[name] = callbacks[name] || []).push(cb);
+            return cb;
+        },
+        event_off: function(name, cb){
+            if(callbacks[name]) {
+                var index = callbacks[name].indexOf(cb);
+                index !== -1 && callbacks[name].splice(index, 1);
+            }
         }
+
     };
 
 });

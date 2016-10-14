@@ -16,106 +16,113 @@ define(['highstock', 'common/util'], function () {
 
     return {
 
-        init: function() {
+        init: function(refererChartID) {
 
             (function(H,$){
-
                 //Make sure that HighStocks have been loaded
-                //If we already loaded this, ignore further execution
-                if (!H || H.Series.prototype.addHorizontalLine) return;
+                if (!H) return;
 
-                H.Series.prototype.addHorizontalLine = function ( horizontalLineOptions ) {
+                var chart = $(refererChartID).highcharts();
+                require(["charts/draw/properties_selector/properties_selector"], function(popup){
+                    var options = {};
+                    options.title = 'Horizontal Line'.i18n();
+                    options.inputValues = [
+                    {
+                        name: 'Stroke width'.i18n(),
+                        type: 'number',
+                        id:'width',
+                        default: 2,
+                        min: 1,
+                        max: 5
+                    },
+                    {
+                        name: 'Stroke color'.i18n(),
+                        type: 'colorpicker',
+                        id:'color',
+                        default: '#ff0000'
+                    }];
+                    popup.open(options, addEvent);
+                });
 
-                    //Check for undefined
-                    //Merge the options
-                    var seriesID = this.options.id;
-                    horizontalLineOptions = $.extend({
-                        stroke : 'green',
-                        strokeWidth : 2,
-                        dashStyle : 'solid',
-                        parentSeriesID : seriesID
-                    }, horizontalLineOptions);
-
-                    var uniqueID = '_' + new Date().getTime();
-                    horizontalLineOptionsMap[uniqueID] = horizontalLineOptions;
-                    addPlotLines.call(this, uniqueID, horizontalLineOptions, horizontalLineOptions.value);
-
-                    return uniqueID;
-
-                };
-
-                H.Series.prototype.removeHorizontalLine = function (uniqueID) {
-                    horizontalLineOptionsMap[uniqueID] = null;
-                    //console.log('Before>>' + $(this).data('isInstrument'));
-                    this.yAxis.removePlotLine('HorizontalLine' + uniqueID);
-                    //console.log('After>>' + $(this).data('isInstrument'));
-                }
-
-                /**
-                 * TODO -> Review it
-                 * This function should be called in the context of series object
-                 * @param options - The data update values
-                 * @param isPointUpdate - true if the update call is from Point.update, false for Series.update call
-                 */
-                function updateHorizontalLineSeries(options, isPointUpdate) {
-                    //if this is HorizontalLine series, ignore
-                    if (this.options.name.indexOf('HorizontalLine') == -1) {
-                        var series = this;
-                        var lastData = series.options.data[series.data.length - 1];
-                        var yAxis = this.yAxis;
-                        $.each(yAxis.plotLinesAndBands, function (i, plotLine) {
-
-                            var id = plotLine.options.id;
-                            if (!id) return;
-
-                            var horizontalLineOptions = horizontalLineOptionsMap[id.replace('HorizontalLine', '')];
-                            if (horizontalLineOptions && horizontalLineOptions.parentSeriesID == series.options.id) {
-                                yAxis.removePlotLine(id);
-                                //get close price from OHLC or the current price of line charts
-                                var price = lastData.y || lastData.close || lastData[4] || lastData[1];
-                                addPlotLines.call(series, id.replace('HorizontalLine', ''), horizontalLineOptionsMap[id.replace('HorizontalLine', '')], price);
-                            }
-                        });
-                        return false;
-                    }
-                }
-
-                function addPlotLines(uniqueID, horizontalLineOptions, price) {
-                    var zIndex = this.chart.series.length + 1;
-                    var isChange = false;
-                    if (!this.data[this.data.length - 1]) return;
-
-                    if ($.isNumeric(this.data[this.data.length - 1].change)) {
-                        isChange = true;
-                        price = toFixed(this.data[this.data.length - 1].change, 2);
-                    }
-                    console.log('Series name : ', this.options.name, ",", "Unique ID : ", uniqueID);
-                    var name = horizontalLineOptions.name || (price + (isChange ? '%' : ''));
-                    this.yAxis.addPlotLine({
-                        id: 'HorizontalLine' + uniqueID,
-                        color: horizontalLineOptions.stroke,
-                        dashStyle: horizontalLineOptions.dashStyle,
-                        width: horizontalLineOptions.strokeWidth,
-                        value: price,
-                        zIndex: zIndex,
-                        label: {
-                            text: name,
-                            align: 'center'
+                function addEvent(css){
+                    H.addEvent(chart,'click',function(evt){
+                        if(chart.annotate){
+                            chart.annotate = false;
+                            addPlotLines(evt.yAxis[0].value, evt.yAxis[0].axis, css);
+                            H.removeEvent(chart,'click');
                         }
                     });
                 }
 
+                function addPlotLines(value, axis, css){
+                    var uniqueID = 'horizontalLine_' + new Date().getTime();
+                    var options = {
+                        value: value,
+                        width: 2,
+                        color: '#ff0000',
+                        dashStyle: 'shortdash',
+                        id: uniqueID
+                    };
+                    if(css){
+                        $.extend(options, css);
+                    }
+                    var line = axis.addPlotLine(options).svgElem
+                    .css({'cursor':'pointer'})
+                    .attr('id',uniqueID)
+                    .translate(0,0)
+                    .on('mousedown', updateHorizontalLine)
+                    .on('dblclick', removeLine);
+                    horizontalLineOptionsMap[uniqueID] = line;
+                    return line;
+                }
+
+                function updateHorizontalLine(evt) {
+                    chart.annotate = true;
+                    var lineID = $(this).attr('id'),
+                        line = horizontalLineOptionsMap[lineID],
+                        mouseUpEventAdded = false;
+                    H.wrap(H.Pointer.prototype, 'drag', function(c, e){
+                        if(chart.annotate){
+                            if(!mouseUpEventAdded){
+                                mouseUpEventAdded = true;
+                                $(refererChartID).one("mouseup", function(){
+                                    chart.annotate = false;
+                                    mouseUpEventAdded = false;
+                                    H.removeEvent(chart, 'mousemove');
+                                });
+                            }
+                            if(chart.isInsidePlot(e.chartX -chart.plotLeft, e.chartY - chart.plotTop)){
+                                if(line.element){
+                                    var value = chart.yAxis[0].toValue(e.chartY),
+                                        axis = chart.yAxis[0],
+                                        css = {
+                                            color: line.stroke,
+                                            width: line["stroke-width"]
+                                        };
+                                    removeLineWithID(line.element.id);
+                                    line = addPlotLines(value, axis, css);
+                                }
+                            }
+                        } else{
+                            c.call(this, e);
+                        }
+                    });
+                }
+
+                function removeLine(evt){
+                    var lineID = $(this).attr('id');
+                    removeLineWithID(lineID);
+                }
+
+                function removeLineWithID(lineID){
+                    // Remove all associated events.
+                    $("#"+lineID).off();
+                    delete horizontalLineOptionsMap[lineID];
+                    chart.yAxis[0].removePlotLine(lineID);
+                }
             }(Highcharts, jQuery));
 
-        },
-
-        //Fix this while working on draw module.
-        //This will be called/needed when lines on chart are going to be moved
-        // TODO
-        updateHorizontalLineSeries : function(series, options) {
-            updateHorizontalLineSeries.call(series, options, true);
         }
-
     };
 
 });

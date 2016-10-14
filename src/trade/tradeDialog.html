@@ -6,7 +6,7 @@
                     rv-selectmenu="categories.value | notify categories.update duration.update | debounce proposal.onchange"
                     rv-selectrefresh="categories.array" >
 
-                    <option rv-each-row="categories.array" rv-value="row">{row}</option>
+                    <option rv-each-row="categories.array" rv-value="row">{row | i18n}</option>
            </select>
         </li>
         <li class="tick-quote">
@@ -24,7 +24,7 @@
             rv-on-click="category_displays.onclick"
             rv-data="row"
             rv-class-active="category_displays.selected | eq row"
-            > {row | capitalize} </li>
+            > {row | capitalize | i18n} </li>
     </ul>
 
     <ul class="date-start-row" rv-show="date_start.visible">
@@ -36,17 +36,17 @@
                     rv-jq-class="'trade-dialog-date-start-ul'"
                     rv-selectmenu="date_start.value | notify duration_unit.update | debounce proposal.onchange"
                     rv-selectrefresh="date_start.array" >
-                    <option rv-each-row="date_start.array" rv-value="row.value">{row.text}</option>
+                    <option rv-each-row="date_start.array" rv-value="row.value">{row.text | i18n}</option>
            </select>
         </li>
-        <li></li>
+        <li><span></span></li>
     </ul>
 
     <ul class="digits-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="digits.visible">
         <li>
-            <span class="text-vertical-align">{digits.text}</span>
+            <span class="text-vertical-align bold">{digits.text}</span>
         </li>
         <li>
             <select class="digits-select"
@@ -57,7 +57,7 @@
                 <option rv-each-row="digits.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li></li>
+        <li><span></span></li>
     </ul>
 
     <ul class="duration-row"
@@ -68,7 +68,7 @@
                     rv-selectmenu="duration.value | notify date_expiry.update | debounce proposal.onchange"
                     rv-selectrefresh="duration.array">
 
-                <option rv-each-row="duration.array" rv-value="row">{row}</option>
+                <option rv-each-row="duration.array" rv-value="row">{row | i18n}</option>
            </select>
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
@@ -80,7 +80,7 @@
                     rv-selectmenu="duration_unit.value | notify duration_count.update | debounce proposal.onchange"
                     rv-selectrefresh="duration_unit.array | and duration_unit.value" >
 
-                <option rv-each-row="duration_unit.array" rv-value="row">{row}</option>
+                <option rv-each-row="duration_unit.array" rv-value="row">{row | i18n}</option>
            </select>
         </li>
         <li rv-show="duration.value | eq 'End Time' ">
@@ -104,7 +104,7 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >Barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="text" min="0" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
                    rv-value="barriers.barrier | debounce proposal.onchange" />
         </li>
         <li>
@@ -123,7 +123,7 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >High barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="text" min="0" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
                    rv-value="barriers.high_barrier | debounce proposal.onchange" />
         </li>
         <li>
@@ -142,7 +142,7 @@
                 rv-tooltip-position="tooltips.barrier_p"
                 >Low barrier offset</span> </li>
         <li>
-            <input class="barriers-barrier" type="text" max="0" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" prefered-sign='-' rv-decimal-round="5"
                    rv-value="barriers.low_barrier | debounce proposal.onchange" />
         </li>
         <li>
@@ -162,7 +162,7 @@
                     rv-selectmenu="basis.value | capitalize | debounce proposal.onchange"
                     rv-selectrefresh="basis.array">
 
-                <option rv-each-row="basis.array" rv-value="row">{row}</option>
+                <option rv-each-row="basis.array" rv-value="row">{row | i18n}</option>
            </select>
         </li>
         <li>
@@ -192,9 +192,9 @@
                 <option rv-each-row="currency.array" rv-value="row">{row}</option>
            </select>
         </li>
-        <li>
-            <input class="amount-per-point" type="number" min="1" step=".01" step-big="1" max="100000000"
-                   rv-spinner="spreads.amount_per_point | debounce proposal.onchange" />
+        <li rv-attr-dummy="spreads.amount_per_point | debounce proposal.onchange">
+            <price-spinner class="amount_per_point" value="spreads.amount_per_point"
+                           min='1' decimals='0' />
         </li>
     </ul>
 
@@ -269,13 +269,12 @@
         <li>{proposal.error}</li>
     </ul>
 
-    <ul class="purchase-row stick-to-bottom"
+    <ul class="purchase-row stick-to-bottom ltr-direction"
         rv-css-opacity="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error | ternary 0.5 1">
-      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-text="proposal.ask_price | currency currency.value"> </span> </span> </li>
+      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-text="proposal.ask_price | format-price currency.value"> </span> </span> </li>
       <li> <button
               rv-on-click="purchase.onclick"
-              rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error"
-              class="purchase-button shine text-vertical-align">Purchase</button>
+              rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">Purchase</button>
       </li>
     </ul>
   </div>

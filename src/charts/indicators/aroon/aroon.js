@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -21,7 +23,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(30, 'red', 1, 'Dash'), new Level(70, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/aroon/aroon.html'], function ( $html ) {
+        require(['text!charts/indicators/aroon/aroon.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultUpStrokeColor = '#57a125';
             var defaultDownStrokeColor = '#cd0a0a';
@@ -29,9 +31,21 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.aroon;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.aroon-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#aroon_up_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -51,6 +65,12 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             });
 
             $html.find("#aroon_down_stroke").colorpicker({
+						showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -73,14 +93,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#aroon_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#aroon_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#aroon_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#aroon_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#aroon_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#aroon_levels').DataTable({
@@ -132,6 +152,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -179,6 +200,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 dashStyle: selectedDashStyle,
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add AROON for the main series
                             $($(".aroon").data('refererChartID')).highcharts().series[0].addIndicator('aroon', options);
 
@@ -194,8 +216,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -209,16 +233,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".aroon").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".aroon").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".aroon").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -13,16 +15,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
 
         require(['css!charts/indicators/alma/alma.css']);
 
-        require(['text!charts/indicators/alma/alma.html'], function ( $html ) {
+        require(['text!charts/indicators/alma/alma.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.alma;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.alma-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#alma_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -43,20 +57,21 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
             var selectedDashStyle = "Solid";
             $('#alma_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 138,
+                width: 155,
                 background: "white",
                 onSelected: function (data) {
-                    $('#alma_dashStyle .dd-selected-image').css('max-width', '105px');
+                    $('#alma_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '120px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#alma_dashStyle .dd-option-image').css('max-width', '105px');
+            $('#alma_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '120px');
 
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
                 modal: true,
                 width: 350,
+                height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,
@@ -106,6 +121,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#alma_appliedTo").val())
                             }
+                            before_add_callback && before_add_callback();
                             //Add ALMA for the main series
                             $($(".alma").data('refererChartID')).highcharts().series[0].addIndicator('alma', options);
 
@@ -120,8 +136,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 140
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 155
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -135,16 +153,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".alma").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".alma").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".alma").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

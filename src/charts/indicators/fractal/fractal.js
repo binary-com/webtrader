@@ -4,6 +4,8 @@
 
 define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($, _) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -13,15 +15,27 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
 
         require(['css!charts/indicators/fractal/fractal.css']);
 
-        require(['text!charts/indicators/fractal/fractal.html'], function ($html) {
+        require(['text!charts/indicators/fractal/fractal.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             var defaultColor = '#cd0a0a';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.fractal;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.fractal-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#fractal_color").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -43,7 +57,8 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 315,
+                width: 350,
+                height: 260,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -83,6 +98,7 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
                                 color: defaultColor,
                                 onSeriesID: series.options.id
                             };
+                            before_add_callback && before_add_callback();
                             //Add fractal for the main series
                             series.addIndicator('fractal', options);
 
@@ -108,15 +124,15 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".fractal").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".fractal").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".fractal").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".fractal").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };

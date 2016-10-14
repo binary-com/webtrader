@@ -20,6 +20,11 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
 
     /************************************* formatters ***************************************/
 
+    /* rivets formatter to translate strings to 18n */
+    rv.formatters['i18n'] = function(value) {
+      if(typeof value === 'string') return value.i18n();
+      return value;
+    };
     /* rivets formatter to get the property value of an object */
     rv.formatters['prop'] = function(value, prop) {
       return value && value[prop];
@@ -33,6 +38,13 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             return true;
         return false;
     }
+    rv.formatters['trim'] = function (value) {
+        return _.trim(value);
+    };
+    /* rivets formatter to negate a value */
+    rv.formatters['negate'] = function (value) {
+        return !value;
+    };
     /* rivets formatter to check equallity of two values */
     rv.formatters.eq = function (value, other) {
         return value === other;
@@ -60,6 +72,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.formatters['gt'] = function (vlaue, other){
       return vlaue > other;
     }
+    /* rivets formatter for < operator  */
+    rv.formatters['lt'] = function (vlaue, other){
+      return vlaue < other;
+    }
     /* rivets formater to capitalize string */
     rv.formatters.capitalize = {
         read: function (value) {
@@ -71,7 +87,16 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     };
     /* call toFixed on a fload number */
     rv.formatters['to-fixed'] = function (value, digits) {
+        if(!$.isNumeric(value) || !$.isNumeric(digits)){
+            return;
+        }
         return (value * 1).toFixed(digits || 2);
+    }
+    /* localise price format*/
+    rv.formatters['format-price'] = function (value, currency){
+        if(value)
+          return formatPrice(value, currency);
+        return undefined;
     }
     /* notify another function on property changes */
     rv.formatters['notify'] = function() {
@@ -157,7 +182,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         if (duration.seconds() > 0 && seconds < 10*60)
             ret += ' ' + duration.seconds() + ' ' + (duration.seconds() > 1 ? 'seconds' : 'second');
 
-        return _.trim(ret);
+        return _.trim(ret).i18n();
     }
     /* formatter to bold last character */
     rv.formatters['bold-last-character'] = function(str){
@@ -173,6 +198,14 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
 
     rv.formatters['is-valid-email'] = function(email) {
       return email === '' || validateEmail(email);
+    }
+    rv.formatters['is-valid-date'] = function(date, format) {
+      format = format || 'YYYY-MM-DD';
+      return moment(date, format, true).isValid()
+    }
+    rv.formatters['is-valid-regex'] = function(str, regex) {
+      regex = new RegExp(regex);
+      return regex.test(str);
     }
 
     /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
@@ -299,12 +332,19 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             $(el).tooltip().tooltip('destroy');
         },
         routine: function (el, value) {
-            $(el).tooltip('option', 'content', value);
+          if(value)
+            $(el).tooltip('enable').tooltip('option', 'content', value);
+          else
+            $(el).tooltip('disable');
         }
     }
     /* bindar for jqueyr ui tooltip options */
     rv.binders['tooltip-*'] = function (el, value) {
         $(el).tooltip('option', this.args[0], value);
+    }
+    /* bindar for jqueyr ui dialog options */
+    rv.binders['dialog-*'] = function (el, value) {
+        $(el).dialog('option', this.args[0], value);
     }
 
     /* trun input element in jquery-ui-datepicker */
@@ -320,16 +360,20 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var options = {
                 showOn: model.showOn || 'focus',
                 numberOfMonths: input.attr('numberOfMonths')*1 || 2,
-                maxDate: model.maxDate || null,
-                minDate: model.minDate || 0,
                 dateFormat: model.dateFormat || 'yy-mm-dd',
                 showAnim: model.showAnim ||  'drop',
-                showButtonPanel: model.showButtonPanel || true,
+                showButtonPanel: model.showButtonPanel !== undefined ? model.showButtonPanel : true,
                 changeMonth: model.changeMonth || true,
                 changeYear: model.changeYear || true,
                 onSelect: function () { $(this).change(); },
                 beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
             };
+            if(model.yearRange)
+              options.yearRange = model.yearRange;
+            else {
+              options.maxDate = model.maxDate || null;
+              options.minDate = model.minDate || 0;
+            }
 
             var dpicker = input.datepicker(options);
             input.on('change', function () {
@@ -452,17 +496,22 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000}[places];
             input = $(input);
             input.on('input',function(){
+                var prefered_sign = input.attr('prefered-sign') || '';
+                var no_symbol = input.attr('no-symbol');
                 var val = input.val();
+                if(val === '') return;
+                if(val === '-' || val === '+' && !no_symbol) return;
                 var dps = decimalPlaces(val);
                 if(dps && dps <= places ) return;
                 var dot = val.endsWith('.') ? '.' : '';
+                var symbol = val[0];
+                symbol = (symbol === '+' || symbol === '-') ? symbol : '';
                 val = val.replace(/[^\d.-]/g,'');
                 val = (Math.round(val * mul) / mul);
                 val = Math.abs(val);
-                if(val) {
-                  var symbol = input.attr('max') ? '-' : '+';
-                  if(input.attr('no-symbol'))
-                    symbol = '';
+                if(!isNaN(val)) {
+                  if(prefered_sign && symbol === '') symbol = prefered_sign;
+                  if(no_symbol) symbol = '';
                   input.val(symbol + val + dot);
                 }
             })

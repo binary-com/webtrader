@@ -2,7 +2,9 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker'], function ($) {
+define(["jquery",  "jquery-ui", 'color-picker'], function ($) {
+
+    var before_add_callback = null;
 
     function closeDialog() {
         $(this).dialog("close");
@@ -13,16 +15,28 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
         require(['css!charts/indicators/sar/sar.css']);
 
-        require(['text!charts/indicators/sar/sar.html'], function ($html) {
+        require(['text!charts/indicators/sar/sar.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.sar;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.sar-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#sar_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -45,7 +59,8 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                width: 280,
+                width: 350,
+                height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,
@@ -74,6 +89,7 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                                 strokeWidth: parseInt($html.find("#sar_strokeWidth").val()),
                                 dashStyle: 'line'
                             }
+                            before_add_callback && before_add_callback();
                             //Add sar for the main series
                             $($(".sar").data('refererChartID')).highcharts().series[0].addIndicator('sar', options);
 
@@ -88,8 +104,10 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 140
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if ($.isFunction(_callback)) {
@@ -102,15 +120,15 @@ define(["jquery", "jquery-ui", 'color-picker'], function ($) {
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".sar").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".sar").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".sar").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".sar").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };

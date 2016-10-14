@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -13,27 +15,39 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
         require(['css!charts/indicators/trima/trima.css']);
 
-        require(['text!charts/indicators/trima/trima.html'], function ( $html ) {
+        require(['text!charts/indicators/trima/trima.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.trima;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.trima-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#trima_stroke").colorpicker({
-                part:	{
-                    map:		{ size: 128 },
-                    bar:		{ size: 128 }
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
                 },
-                select:			function(event, color) {
+                part:   {
+                    map:        { size: 128 },
+                    bar:        { size: 128 }
+                },
+                select:         function(event, color) {
                     $("#trima_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
                     defaultStrokeColor = '#' + color.formatted;
                 },
-                ok:             			function(event, color) {
+                ok:                         function(event, color) {
                     $("#trima_stroke").css({
                         background: '#' + color.formatted
                     }).val('');
@@ -44,20 +58,21 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#trima_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 138,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#trima_dashStyle .dd-selected-image').css('max-width', '105px');
+                    $('#trima_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#trima_dashStyle .dd-option-image').css('max-width', '105px');
+            $('#trima_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                width: 320,
+                width: 350,
+                height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,
@@ -88,6 +103,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#trima_appliedTo").val())
                             }
+                            before_add_callback && before_add_callback();
                             //Add TRIMA for the main series
                             $($(".trima").data('refererChartID')).highcharts().series[0].addIndicator('trima', options);
 
@@ -102,8 +118,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 140
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -117,16 +135,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".trima").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".trima").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".trima").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

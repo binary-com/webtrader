@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -21,16 +23,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [new Level(0.3, 'red', 1, 'Dash'), new Level(0.7, 'red', 1, 'Dash')];
 
-        require(['text!charts/indicators/adx/adx.html'], function ( $html ) {
+        require(['text!charts/indicators/adx/adx.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.adx;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.adx-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#adx_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -52,14 +66,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#adx_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 158,
+                width: 155,
                 background: "white",
                 onSelected: function (data) {
-                    $('#adx_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#adx_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '120px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#adx_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#adx_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '120px');
 
 
             var table = $html.find('#adx_levels').DataTable({
@@ -110,7 +124,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 450,
+                width: 350,
+                height:400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -159,6 +174,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 appliedTo: parseInt($html.find("#adx_appliedTo").val()),
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add ADX for the main series
                             $($(".adx").data('refererChartID')).highcharts().series[0].addIndicator('adx', options);
 
@@ -174,8 +190,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 160
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 155
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -189,16 +207,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".adx").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".adx").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".adx").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

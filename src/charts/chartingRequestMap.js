@@ -16,7 +16,7 @@
             ]
         }
 **/
-define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/util'],function(loki, _, $, liveapi){
+define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'jquery-growl', 'common/util'],function(loki, _, $, liveapi){
 
     var db = new loki();
     var barsTable = db.addCollection('bars_table');
@@ -99,7 +99,7 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
                         db_bars[barIndex].time, type, dataInHighChartsFormat);
                 }
 
-                if (!chart) return;
+                if (!chart || dataInHighChartsFormat.length === 0) return;
 
                 //set the range
                 var numberOfBarsToShow = 30;
@@ -243,6 +243,13 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'common/ut
             if(req.subscribe) map[key].subscribers = 1; // how many charts have subscribed for a stream
             return liveapi.send(req, /*timeout:*/ 30*1000) // 30 second timeout
                    .catch(function(up){
+                      /* if the market is closed try the same request without subscribing */
+                      if(req.subscribe && up.code == 'MarketIsClosed') {
+                         $.growl.notice({message: options.symbol + ' market is presently closed.'.i18n() });
+                         delete req.subscribe;
+                         map[key].subscribers -= 1;
+                         return liveapi.send(req, 30*1000);
+                      }
                       delete map[key];
                       throw up;
                    });

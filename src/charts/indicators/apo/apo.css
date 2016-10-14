@@ -1,9 +1,9 @@
 ﻿.apo_input_width {
-    width: 160px;
+    width: 150px !important;
 }
 
 .apo_input_width_for_period {
-    width: 155px;
+    width: 150px !important;
 }
 
 .apo label {
@@ -11,5 +11,5 @@
 }
 
 .apo-ui-dialog, .apo.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

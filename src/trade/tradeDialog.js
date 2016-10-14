@@ -34,7 +34,7 @@
     }
 */
 
-define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui'],
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui', 'common/util'],
     function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
@@ -164,7 +164,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           array: [],
           value: '',
           paddingTop: function(){
-            var paddings = { "Asians" : '26px', "Up/Down" : '16px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '16px' , "Spreads":'5px' };
+            var paddings = { "Asians" : '26px', "Up/Down" : '8px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '16px' , "Spreads":'5px' };
             return paddings[state.categories.value] || '3px';
           }
         },
@@ -185,7 +185,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           array: ['0', '1','2','3','4','5','6','7','8','9'],
           value: '0',
           visible: false,
-          text: 'Last Digit Prediction'
+          text: 'Last Digit Prediction'.i18n()
         },
         currency: {
           array: ['USD'],
@@ -200,8 +200,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         spreads: {
           amount_per_point: 1,
           stop_type: 'point', /* could be 'point' or 'dollar' */
-          stop_loss: 10,
-          stop_profit: 10,
+          stop_loss: (_.find(available, 'stop_loss') || { stop_loss: 10}).stop_loss,
+          stop_profit: (_.find(available, 'stop_profit') || { stop_profit: 10}).stop_profit,
           /* updated from #proposal websocket api */
           spread: 0.0,
           spot: '0.0',
@@ -234,7 +234,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           ask_price: "0.0",
           date_start: 0,
           display_value: "0.0",
-          message: 'Loading ...', /* longcode */
+          message: 'Loading ...'.i18n(), /* longcode */
           payout: 0,
           spot: "0.0",
           spot_time: "0",
@@ -243,10 +243,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
 
           /* computed properties */
           netprofit_: function () {
-            return state.currency.value + ' ' + ((this.payout - this.ask_price) || 0).toFixed(2);
+            return formatPrice(((this.payout - this.ask_price) || 0).toFixed(2), state.currency.value);
           },
           return_: function () {
-            var ret = (((this.payout - this.ask_price) / this.ask_price) * 100).toFixed(0) | 0;
+            var ret = (((this.payout - this.ask_price) / this.ask_price) * 100);
+            ret = (ret && ret.toFixed(1)) || 0;
             return ret + '%';
           }
         },
@@ -468,10 +469,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             over: ['0','1','2','3','4','5','6','7','8'],
           }[subcat];
           var text = {
-            matches: 'Last Digit Prediction',
-            differs: 'Last Digit Prediction',
-            under: 'Last Digit is Under',
-            over: 'Last Digit is Over'
+            matches: 'Last Digit Prediction'.i18n(),
+            differs: 'Last Digit Prediction'.i18n(),
+            under: 'Last Digit is Under'.i18n(),
+            over: 'Last Digit is Over'.i18n()
           }[subcat];
 
           if(!_.includes(array, state.digits.value)){
@@ -649,6 +650,10 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               if (extra.category !== 'Asians') {
                 extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
               }
+              /* for higher/lower final barrier value is entry_quote + barrrier */
+              if(extra.category === 'Up/Down' && _(['higher','lower']).includes(extra.category_display)) {
+                extra.barrier = state.barriers.barrier;
+              }
               extra.show_tick_chart = true;
             }
         }
@@ -656,20 +661,22 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         // manually check to see if the user is authenticated or not,
         // we should update state.currency from user profile first (not everyone is using USD)
         if(!liveapi.is_authenticated()) {
-            $.growl.warning({ message: 'Please log in' });
+            $.growl.warning({ message: 'Please log in'.i18n() });
             state.purchase.loading = false;
         }
         else {
+          require(['trade/tradeConf'], function(tradeConf) {
             liveapi.send({
                   buy: state.proposal.id,
                   price: state.proposal.ask_price * 1,
                })
                .then(function(data){
-                  require(['trade/tradeConf'], function(tradeConf){
-                      extra.contract_id = data.buy.contract_id;
-                      extra.transaction_id = data.buy.transaction_id;
-                      tradeConf.init(data, extra, show, hide, symbol);
-                  });
+                    extra.contract_id = data.buy.contract_id;
+                    extra.transaction_id = data.buy.transaction_id;
+                    if(extra.show_tick_chart || extra.category === 'Digits') {
+                      liveapi.proposal_open_contract.subscribe(extra.contract_id);
+                    }
+                    tradeConf.init(data, extra, show, hide, symbol);
                })
                .catch(function(err){
                  state.purchase.loading = false;
@@ -683,6 +690,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                    state.proposal.onchange();
                  }
                });
+          });
          }
       };
 
@@ -708,31 +716,35 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       });
       /* register for proposal event */
       liveapi.events.on('proposal', function (data) {
-          if (!data.proposal || data.proposal.id !== state.proposal.id) return;
-          if(data.error){
-            console.error(data.error);
-            state.proposal.error = data.error.message;
-            state.proposal.message = '';
-            return;
-          }
-          if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
-          /* update fields */
-          var proposal = data.proposal;
-          state.proposal.ask_price = proposal.ask_price;
-          state.proposal.date_start = proposal.date_start;
-          state.proposal.display_value = proposal.display_value;
-          state.proposal.message = proposal.longcode;
-          state.proposal.payout = proposal.payout;
-          state.proposal.spot = proposal.spot;
-          state.proposal.spot_time = proposal.spot_time;
-          state.spreads.spread = proposal.spread || 0.0;
-          state.spreads.spot = proposal.spot || '0.0';
-          state.spreads.spot_time = proposal.spot_time || '0';
-          state.proposal.loading = false;
-          if(!tick_stream_alive && proposal.spot) { /* for contracts that don't have live qoute data */
-            state.tick.epoch = proposal.spot_time;
-            state.tick.quote = proposal.spot;
-          }
+          // Specifically for microsoft products. Need to wait for other functions to finish
+          //We can move the code out of the defer function once windows becomes obsolete or if it stops making browsers. >.<
+          _.defer(function(){
+              if (!data.proposal || data.proposal.id !== state.proposal.id) return;
+              if(data.error){
+                console.error(data.error);
+                state.proposal.error = data.error.message;
+                state.proposal.message = '';
+                return;
+              }
+              if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
+              /* update fields */
+              var proposal = data.proposal;
+              state.proposal.ask_price = proposal.ask_price;
+              state.proposal.date_start = proposal.date_start;
+              state.proposal.display_value = proposal.display_value;
+              state.proposal.message = proposal.longcode;
+              state.proposal.payout = proposal.payout;
+              state.proposal.spot = proposal.spot;
+              state.proposal.spot_time = proposal.spot_time;
+              state.spreads.spread = proposal.spread || 0.0;
+              state.spreads.spot = proposal.spot || '0.0';
+              state.spreads.spot_time = proposal.spot_time || '0';
+              state.proposal.loading = false;
+              if(!tick_stream_alive && proposal.spot) { /* for contracts that don't have live qoute data */
+                state.tick.epoch = proposal.spot_time;
+                state.tick.quote = proposal.spot;
+              }
+          });
       });
 
       /* change currency on user login */
@@ -749,14 +761,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
     }
 
     function init(symbol, contracts_for) {
-        var root = $(html);
+        var root = $(html).i18n();
         var available = apply_fixes(contracts_for.available);
 
 
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
             resizable: false,
-            collapsable: true,
+            collapsable: false,
             minimizable: true,
             maximizable: false,
             'data-authorized': 'true',
@@ -770,15 +782,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               }
               chartingRequestMap.unregister(key);
               view.unbind();
-
-              var windows_ls = local_storage.get('windows') || {};
-              var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isTrade && ew.symbol === symbol.symbol; });
-              if (storeIndex >= 0) {
-                windows_ls.windows.splice(storeIndex, 1);
-                local_storage.set('windows', windows_ls);
-              }
-
+              dialog.destroy();
             }
+        });
+        dialog.track({
+          module_id: 'tradeDialog',
+          is_unique: false,
+          data: symbol
         });
 
         /********************** register for ticks_streams **********************/

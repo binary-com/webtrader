@@ -8,12 +8,12 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
   var win = null, win_view = null;
 
   function initConfigWindow(root) {
-    root = $(root);
+    root = $(root).i18n();
     var state = init_state(root);
     win_view = rv.bind(root[0], state);
 
     win = windows.createBlankWindow(root, {
-      title: 'Configurations',
+      title: 'Change Backend Server'.i18n(),
       resizable: false,
       collapsable: false,
       minimizable: false,
@@ -23,7 +23,8 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
       open: function () {
         var config = local_storage.get('config');
         if(config && config.app_id) state.app_id = config.app_id;
-        if(config && config.server_url) state.server_url = config.server_url;
+        if(config && config.websocket_url) state.websocket_url = _.replace(_.replace(config.websocket_url || '', 'wss://', ''), '/websockets/v3?l=EN', '');
+        if(config && config.oauth_url) state.oauth_url = _.replace(_.replace(config.oauth_url || '', 'https://', ''), '/oauth2/authorize', '');
       },
       close: function() {
         win_view && win_view.unbind();
@@ -32,12 +33,12 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
       },
       buttons: [
         {
-          text: 'Apply',
+          text: 'Apply'.i18n(),
           icons: { primary: 'ui-icon-check' },
           click: state.apply
         },
         {
-          text: 'Reset default',
+          text: 'Reset to Defaults'.i18n(),
           icons: { primary: 'ui-icon-refresh' },
           click: state.reset
         }
@@ -49,15 +50,15 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
 
   function init_state(root) {
     var state = {
-      server_url: 'ws.binaryws.com',
+      websocket_url: 'ws.binaryws.com',
+      oauth_url: 'oauth.binary.com',
       app_id: ''
     };
 
     state.apply = function() {
       var config = {
-        server_url: state.server_url,
-        websocket_url: 'wss://' + state.server_url + '/websockets/v3?l=EN',
-        oauth_url: 'https://' + state.server_url + '/oauth2/authorize',
+        websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN',
+        oauth_url: 'https://' + state.oauth_url + '/oauth2/authorize',
         app_id: state.app_id
       }
       local_storage.set('config', config);
@@ -70,7 +71,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
     }
 
     state.reload_page = function() {
-      $.growl.notice({message: 'Config changes successfull.<br/>Reloading page ...'});
+      $.growl.notice({message: 'Config changes successful.<br/>Reloading page ...'.i18n()});
       setTimeout(function(){
         window.location.reload();
       }, 900);

@@ -1,0 +1,313 @@
+.chartOptions {
+
+  .table {
+    margin: 5px auto;
+    .row .cell {
+
+    }
+  }
+
+  .chartOptions_button {
+    background: #f3f1f2;
+    height: 30px;
+    margin-left: 5px!important; 
+    color: #2a3052;
+    border-radius: 2px;
+    &:hover {
+      background: #dedede;
+      cursor: pointer;
+    }
+  }
+
+  .button_selected {
+    color: #ffffff;
+    background: #2a3052;
+    &:hover {
+      color: #ffffff;
+      background: #2a3052;
+    }
+    [data-balloon] {
+      &:before, &:after {
+        opacity:0;
+      }
+    }
+    &[data-balloon] {
+      &:before, &:after {
+        opacity:0;
+      }
+    }
+  }
+
+  .nav-caret.triangle {
+    float: right;
+    margin-top: 13px;
+    margin-right: 5px;
+  }
+
+  .chartOptions_button span {
+    display: inline-block;
+    img { max-height: 20px; }
+  }
+
+  .chartOptions_overlay {
+    margin-top: 0px;
+    position: absolute;
+    z-index: +1;
+    margin-left: 5px!important;
+    background: #fff;
+    border: 1px solid #c2c2c2;
+    color: #2a3052;
+  }
+
+  .img {
+    display: inline;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+    }
+  }
+
+  .vertical-bottom {
+    font-size: 0.8em;
+    margin-top: 11px;
+    line-height: 8px;
+    &.name {
+      margin-left: -5px;
+    }
+    &.button {
+      padding: 4px 7px 2px 7px;
+      background: #f3f1f2;
+      width: auto;
+      margin-right: 4px;
+      border-radius: 3px;
+      height: 15px;
+      &:hover {
+        background: #dedede;
+      }
+    }
+    &.time {
+      width: auto;
+      margin-left: 5px;
+      color: #2a3052;
+      margin-top: 13px;
+    }
+  }
+
+  .timeperiod {
+    .vertical-bottom{
+      padding-left: 5px;
+    }
+  }
+
+  .timePeriodOverlay {
+    .vertical-bottom.button{
+      width: 15px;
+      height: 18px;
+      text-align: center;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      padding-top: 11px;
+    }
+    .row {
+      display: flex;
+      .cell {
+        display: flex;
+        &:nth-child(odd) {
+          width: 60px;
+        }
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid #c2c2c2;
+      }
+    }
+  }
+
+  .chartTypeOverlay {
+    .row {
+      display: flex;
+      &:nth-last-child(2), &:nth-last-child(3), &.showborder{
+        border-bottom: 1px solid #c2c2c2;
+      }
+      &:hover {
+        background: #dedede;
+        cursor: pointer;
+      }
+      .cell {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+
+  [data-balloon] {
+    border-bottom: 0px;
+    cursor: pointer;
+    &:before {
+      padding: 0.5em;
+      font-size: 0.8em;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+    }
+  }
+
+  .drawingToolOverlay {
+    .row {
+      display: flex;
+      &:not(:last-child) {
+        border-bottom: 1px solid #c2c2c2;
+      }
+      :hover {
+        background: #dedede;
+        cursor: pointer;
+      }
+      .img img {
+        margin: 4px;
+      }
+    }
+  }
+
+  .exportOverlay {
+    .row {
+      display: flex;
+      width: 100%;
+      &:nth-child(2n):not(:last-child) {
+        border-bottom: 1px solid #c2c2c2;
+      }
+      .cell {
+        display: flex;
+        width: 100%;
+        a img {
+          width: 50px;
+          height: 50px;
+          margin-left: -8px;
+          margin-right: -3px;
+        }
+        .table.share-button {
+          margin-left: 8px;
+          margin-bottom: 0px;
+        }
+        .table.download {
+          margin:0px 4px 10px 4px;
+          span {
+            padding-top: 11px;
+            height: 19px;
+            margin: 0px 0px 0px 5px;
+          }
+        }
+        .vertical-bottom {
+          margin-left: 7.5px;
+          height: 22.5px;
+          &.share{
+            height: 8px;
+          }
+        }
+        input {
+          margin-left: 7.5px;
+          font-size: 0.8em;
+          margin-bottom: 10px;
+          width: 93%;
+          border: 1px solid #c2c2c2;
+          box-shadow: none;
+          color: #2a3052;
+          padding: 0px 5px 0px 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .chartOptions_overlay.loadSaveOverlay {
+    max-width: 200px;
+    font-size: 0.8em;
+    .chart-template-manager-root {
+      max-height: 310px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .menu {
+        button {
+          background-color: #273051;
+          margin: 5px;
+          display: block;
+          width: 95%;
+        }
+      }
+      .save-as, .rename, .confirm {
+        padding: 5px;
+
+        .title { margin: 5px 0; }
+        button { margin-top: 5px;}
+        .button {
+          width: 100%;
+          text-align: center;
+          button {
+            margin-right: 5px;
+          }
+        }
+      }
+      .templates {
+        padding: 5px;
+        width: 165px;
+        & > div > div {
+          margin: 5px 0;
+        }
+
+        .template {
+          display: inline-block;
+          width: 150px;
+          padding-bottom: 5px;
+          &:not(:last-child){
+            border-bottom: 1px solid #dedede;
+          }
+          word-wrap: break-word;
+          a.options:nth-child(2n) {
+            margin-right: 10px;
+          }
+          .name {
+            transition: color 0.2s;
+            cursor: pointer;
+            margin-bottom: 3px;
+            &.active {
+              font-weight: bold;
+              color: #e98024
+            }
+            &:hover {
+              color: #e98024;
+            }
+          }
+        }
+      }
+    }
+    .confirm .title {
+      text-align: center;
+    }
+    .errors {
+      height: 1em;
+      .error {
+        color: red;
+      }
+    }
+    span.back-arrow {
+      cursor: pointer;
+       & > span {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+  .countBubl {
+    position: absolute;
+    margin-left: 25px;
+    margin-top: -33px;
+    background: #e1812e;
+    color: #fff;
+    font-size: 0.55em;
+    border-radius: 10px;
+    padding: 1px 1px 1px 2px;
+    min-width: 10px;
+    text-align: center;
+  }
+}

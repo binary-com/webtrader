@@ -4,6 +4,8 @@ Created By Mahboob.M on 12/16/2015
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog('close');
     }
@@ -11,14 +13,25 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
     function init(containerIDWithHash, _callback) {
         require(['css!charts/indicators/cci/cci.css']);
 
-        require(['text!charts/indicators/cci/cci.html'], function ($html) {
+        require(['text!charts/indicators/cci/cci.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             $html = $($html);
 
             $html.appendTo("body");
 
+            data = JSON.parse(data);
+            var current_indicator_data = data.cci;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.cci-description').html(current_indicator_data.description);
+
             $html.find("#cci_stroke_color").each(function () {
                 $(this).colorpicker({
+					showOn: 'click',
+                    position: {
+                        at: "right+100 bottom",
+                        of: "element",
+                        collision: "fit"
+                    },
                     part: {
                         map: { size: 128 },
                         bar: { size: 128 }
@@ -41,19 +54,20 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#cci_dash_style').ddslick({
                 imagePosition: "left",
-                width: 148,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#cci_dash_style .dd-selected-image').css('max-width', '115px');
+                    $('#cci_dash_style .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#cci_dash_style .dd-option-image').css('max-width', '115px');
+            $('#cci_dash_style .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height:400,
                 modal: true,
                 my: "center",
                 at: "center",
@@ -85,6 +99,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					            strokeWidth: parseInt($("#cci_stroke_width").val()),
 					            dashStyle: selectedDashStyle
 					        }
+                            before_add_callback && before_add_callback();
 					        //Add CCI to the main series
 					        $($(".cci").data('refererChartID')).highcharts().series[0].addIndicator('cci', options);
 
@@ -99,8 +114,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					}
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 150
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if ($.isFunction(_callback)) {
@@ -111,13 +128,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
     }
 
     return {
-        open: function (containerIDWithHash) {
-            if ($(".cci").length === 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".cci").data('refererChartID', containerIDWithHash).dialog("open");
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".cci").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".cci").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
     };
 });

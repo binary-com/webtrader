@@ -2,8 +2,8 @@
  * Created by amin on January 14, 2016.
  */
 
-define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/portfolio", "charts/chartingRequestMap", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
-  function($, windows, liveapi, portfolio, chartingRequestMap, rv, moment, _) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/chartingRequestMap", "common/rivetsExtra", "moment", "lodash", "jquery-growl", 'common/util'],
+  function($, windows, liveapi, chartingRequestMap, rv, moment, _) {
   'use strict';
 
   var open_dialogs = {};
@@ -17,12 +17,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
        market_data_disruption_win.moveToTop();
        return;
     }
-    var msg = "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.";
+    var msg = 'There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.'.i18n();
     // var msg = proposal.validation_error;
     var root = $('<div class="data-disruption-dialog">' + msg + '</div>');
 
     market_data_disruption_win = windows.createBlankWindow(root, {
-        title: ' There was an error ',
+        title: ' There was an error '.i18n(),
         height: 200,
         resizable:false,
         collapsable:false,
@@ -188,17 +188,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
       var contract = data.proposal_open_contract;
       var id = contract.contract_id,
           bid_price = contract.bid_price;
-      if(id !== state.contract_id) { return; }
-
+      if(id != state.contract_id) { return; }
       if(contract.validation_error)
         state.validation = contract.validation_error;
       else if(contract.is_expired)
-        state.validation = 'This contract has expired';
+        state.validation = 'This contract has expired'.i18n();
       else if(contract.is_valid_to_sell)
-        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.';
+        state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
       if(contract.is_forward_starting){
         if(contract.date_start > parseInt(contract.current_spot_time))
-          state.fwd_starting = '* Contract is not yet started.';
+          state.fwd_starting = '* Contract is not yet started.'.i18n();
         else
           state.fwd_starting = '';
       }
@@ -212,15 +211,30 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           }
           state.sell.bid_prices.push(contract.bid_price)
 
-          state.sell.bid_price.value = contract.bid_price;
-          state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
-          state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+          if(contract.bid_price !== undefined) {
+            state.sell.bid_price.value = contract.bid_price;
+            state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
+            state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+          }
           state.sell.is_valid_to_sell = false;
           state.sell.is_valid_to_sell = contract.is_valid_to_sell;
           state.chart.manual_reflow();
       } else {
           /*Just change the current_spot_time to date_expiry*/
           state.table.current_spot_time = state.table.date_expiry;
+      }
+      /*Required for spreads only*/
+      if(state.table.contract_type === "SPREAD"){
+        state.table.profit = contract.bid_price - contract.buy_price;
+        state.table.profit_point = state.table.profit / state.table.per_point;
+        if(state.table.entry_tick)
+          state.table.current_spot = state.table.entry_tick + state.table.profit_point * state.table.direction;
+        if(contract.is_sold){
+          state.table.status = "Closed";
+          state.table.is_sold = contract.is_sold;
+          state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction;
+          state.table.exit_tick_time = contract.sell_timeS;
+        }
       }
 
       if(contract.sell_price){
@@ -232,21 +246,21 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
         if(!state.chart.barrier && contract.barrier) {
           state.chart.barrier = contract.barrier;
-          state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
+          state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
         }
         if(!state.chart.high_barrier && contract.high_barrier) {
           state.chart.high_barrier = contract.high_barrier;
-          state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
+          state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier ('.i18n() + state.chart.high_barrier + ')'});
         }
         if(!state.chart.low_barrier && contract.low_barrier) {
           state.chart.low_barrier = contract.low_barrier;
-          state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
+          state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier ('.i18n() + state.chart.low_barrier + ')', color: 'red'});
         }
   }
 
   function init_dialog(proposal) {
     require(['text!viewtransaction/viewTransaction.html'],function(html) {
-        var root = $(html);
+        var root = $(html).i18n();
         var state = init_state(proposal, root);
         var on_proposal_open_contract = function(data) {
             update_indicative(data, state);
@@ -256,11 +270,12 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             title: proposal.display_name + ' (' + proposal.transaction_id + ')',
             width: 700,
             minWidth: 490,
-            minHeight:370,
+            minHeight:480,
+            height:480,
             destroy: function() { },
             close: function() {
               view && view.unbind();
-              portfolio.proposal_open_contract.forget();
+              liveapi.proposal_open_contract.forget(proposal.contract_id);
               liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
               for(var i = 0; i < state.onclose.length; ++i)
                 state.onclose[i]();
@@ -268,7 +283,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               open_dialogs[proposal.transaction_id] = undefined;
             },
             open: function() {
-              portfolio.proposal_open_contract.subscribe();
+              liveapi.proposal_open_contract.subscribe(proposal.contract_id);
               liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
             },
             resize: function() {
@@ -301,7 +316,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
                     balance: sell.balance_after,
                     currency: state.table.currency,
                   };
-                  var $html = $(html);
+                  var $html = $(html).i18n();
                   root.after($html);
                   var view_confirm = rv.bind($html[0], state_confirm);
                   state.onclose.push(function(){
@@ -324,13 +339,14 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           contract_id: proposal.contract_id,
           longcode: proposal.longcode,
           validation: proposal.validation_error
-                || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered')
-                || (proposal.is_expired && 'This contract has expired') || '-',
+                || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
+                || (proposal.is_expired && 'This contract has expired'.i18n()) || '-',
           table: {
             is_expired: proposal.is_expired,
             currency: (proposal.currency ||  'USD') + ' ',
-            current_spot_time: undefined,
-            current_spot: undefined,
+            current_spot_time: proposal.current_spot_time,
+            current_spot: proposal.current_spot,
+            contract_type: proposal.contract_type,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
 
@@ -339,7 +355,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             exit_tick: proposal.exit_tick,
             exit_tick_time: proposal.exit_tick_time,
 
-            buy_price: proposal.buy_price && formatPrice(proposal.buy_price),
+            buy_price: proposal.buy_price,
             bid_price: undefined,
             final_price: proposal.is_sold ? proposal.sell_price && formatPrice(proposal.sell_price) : undefined,
 
@@ -375,6 +391,36 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           onclose: [], /* cleanup callback array when dialog is closed */
       };
 
+      // This values are required for SPREADS type contract.
+      if(proposal.contract_type.indexOf("SPREAD") === 0){
+        var shortcode = proposal.shortcode.toUpperCase();
+        var details   = shortcode.replace(proposal.underlying.toUpperCase() + '_', '').split('_');
+        state.table.contract_type = "SPREAD";
+        state.table.status = proposal.is_sold? "Closed": "Open";
+        state.table.per_point = details[1];
+        state.table.stop_loss = details[3];
+        state.table.stop_profit = details[4];
+        state.table.is_point = details[5] === 'POINT';
+        state.table.is_up = proposal.shortcode['spread'.length] === 'U';
+        state.table.direction = state.table.is_up ? 1 : -1;
+        state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
+        state.table.is_sold = proposal.is_sold;
+        state.table.exit_tick_time = state.table.is_sold ? proposal.sell_time : undefined;
+        state.table.profit = parseFloat(proposal.sell_price ? proposal.sell_price : proposal.bid_price) - parseFloat(proposal.buy_price);
+        state.table.profit_point = state.table.profit / state.table.per_point;
+        state.table.pro_los = "Profit/Loss (" + state.table.currency.replace(" ","") + ")";
+        state.table.request ={
+                "proposal"        : 1,
+                "symbol"          : proposal.underlying,
+                "currency"        : proposal.currency,
+                "contract_type"   : details[0],
+                "amount_per_point": state.table.per_point,
+                "stop_loss"       : state.table.stop_loss,
+                "stop_profit"     : state.table.stop_profit,
+                "stop_type"       : details[5].toLowerCase()
+        };
+      }
+
       state.sell.sell = function() { sell_at_market(state, root); }
 
       state.chart.manual_reflow = function() {
@@ -394,7 +440,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
 
       get_chart_data(state, root).then(function(){
           if(state.table.sell_time)
-            state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'});
+            state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'.i18n()});
       });
 
       /* backend doesn't always retun the sell_price when contract is soled,
@@ -448,7 +494,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
               if(perv_tick) {
                 state.table.exit_tick = perv_tick.quote;
                 state.table.exit_tick_time = perv_tick.epoch*1;
-                state.validation = 'This contract has expired';
+                state.validation = 'This contract has expired'.i18n();
+                state.table.is_expired = true;
               }
               clean_up();
             }
@@ -537,15 +584,32 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
           }
         }
         /* TODO: see if back-end is going to give uss (entry/exit)_tick and (entry/exit)_tick_time fileds or not! */
-        if(data.candles && !state.table.entry_tick_time) {
+        if((data.candles && !state.table.entry_tick_time) || state.table.contract_type.indexOf("SPREAD") === 0) {
+          state.table.entry_tick = undefined; // reseting value for calculation.
           get_tick_value(state.chart.symbol, state.table.date_start).then(function(data){
             var history = data.history;
             if(history.times.length !== 1) return;
             state.table.entry_tick_time = history.times[0];
-            chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
+
+            if(state.table.contract_type.indexOf("SPREAD") === 0){
+              liveapi.send(state.table.request). then(function(_data){
+                state.table.spread = _data.proposal.spread;
+                state.table.decPlaces = ((/^\d+(\.\d+)?$/).exec(history.prices[0])[1] || '-').length - 1;
+                state.table.entry_tick = parseFloat(history.prices[0]* 1 + state.table.direction * state.table.spread / 2);
+                state.table.stop_loss_level = state.table.entry_tick + state.table.stop_loss / (state.table.is_point ? 1 : state.table.per_point) * (- state.table.direction);
+                state.table.stop_profit_level = state.table.entry_tick + state.table.stop_profit / (state.table.is_point ? 1 : state.table.per_point) * (state.table.direction);
+                if(state.table.is_sold){
+                  state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction; // Above is here.
+                }
+                // unsubscribe
+                liveapi.send({forget: _data.proposal.id});
+              }).catch(function(err) { console.error(err); });
+            }
+
+            chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
           });
         }
-        if(data.history && !state.table.exit_tick_time && state.table.is_expired) {
+        if(data.history && !state.table.exit_tick_time && state.table.is_expired && state.table.contract_type != "SPREAD") {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
@@ -554,22 +618,28 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "portfolio/
             var history = data.history;
             if(history.times.length !== 1) return;
             state.table.exit_tick_time = history.times[0];
+
+            // Already set the value for exit tick above.
+            if(state.table.contract_type.indexOf("SPREAD") === 0){
+              return;
+            }
+
             state.table.exit_tick = history.prices[0];
-            chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
+            chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
           });
         }
 
-        state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'});
+        state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'.i18n()});
 
-        state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'});
-        state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot', text_left: true});
+        state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
+        state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
 
-        state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'});
-        state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time' ,text_left: true });
+        state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
+        state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
 
-        state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier (' + state.chart.barrier + ')'});
-        state.chart.high_barrier && chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier (' + state.chart.high_barrier + ')'});
-        state.chart.low_barrier && chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier (' + state.chart.low_barrier + ')', color: 'red'});
+        state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
+        state.chart.high_barrier && chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier ('.i18n() + state.chart.high_barrier + ')'});
+        state.chart.low_barrier && chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier ('.i18n() + state.chart.low_barrier + ')', color: 'red'});
 
         state.chart.chart = chart;
         state.chart.manual_reflow();

@@ -3,8 +3,6 @@
  */
 
 define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash'], function(liveapi, windows, rv, _) {
-    require(['text!oauth/login.html']);
-    require(['css!oauth/login.css']);
     var login_win = null;
     var login_win_view = null; // rivets view
 
@@ -14,16 +12,16 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         return;
       }
 
-      require(['text!oauth/login.html'], function(root) {
-        root = $(root);
+      require(['text!oauth/login.html', 'css!oauth/login.css'], function(root) {
+        root = $(root).i18n();
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
             resizable:false,
             collapsable:false,
             minimizable: false,
             maximizable: false,
-            width: 408,
-            height: 150,
+            width: 548,
+            height: 180,
             'data-authorized': true,
             close: function () {
               login_win.dialog('destroy');
@@ -43,12 +41,13 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
         /* update dialog position, this way when dialog is resized it will not move*/
         var offset = login_win.dialog('widget').offset();
-        offset.top = 80;
+        offset.top = 120;
         login_win.dialog("option", "position", { my: offset.left, at: offset.top });
         login_win.dialog('widget').css({
             left: offset.left + 'px',
             top: offset.top + 'px'
         });
+        login_win.dialog('widget').find('.ui-selectmenu-menu ul').css('max-height', '320px');
       });
     }
 
@@ -79,16 +78,17 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           },
           password_error_message: function() {
             var password = state.account.password;
-            if(password === '') return state.account.empty_fields.validate ? '* Please enter your password' : '';
-            if(password.length < 6) return '* Password must be 6 characters minimum';
-            if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers';
+            if(password === '') return state.account.empty_fields.validate ? '* Please enter your password'.i18n() : '';
+            if(password.length < 6) return '* Password must be 6 characters minimum'.i18n();
+            if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers'.i18n();
             return '';
           },
           verification: '',
           password: '',
           repeat_password:  '',
-          residence: 'my',
-          residence_list: [ { text: 'Malaysia', value: 'my'}],
+          residence: 'af',
+          residence_list: [ { text: 'Afghanistan', value: 'af'}],
+          residence_unsupported: ["cr", "gg", "hk", "ir", "iq", "jp", "je", "kp", "my", "mt", "us", "um", "vi"],
           disabled: false, /* is button disabled */
         },
         confirm: { disabled: false }
@@ -97,34 +97,34 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       state.login.login = function() {
           state.login.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
           window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
           window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
 
       state.route.update = function(route){
         var routes = {
           login: {
-            title: 'Log in',
-            height: 150
+            title: 'Log in'.i18n(),
+            height: 180
           },
           registration: {
-            title: 'Registration',
-            height: 190,
+            title: 'Registration'.i18n(),
+            height: 220,
           },
           account: {
-            title: 'Account opening',
-            height: 420
+            title: 'Account opening'.i18n(),
+            height: 465
           },
           confirm: {
-            title: 'Account opening',
-            height: 400
+            title: 'Account opening'.i18n(),
+            height: 415
           }
         };
         state.route.value = route;
@@ -143,7 +143,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.registration.validate.clear();
       }
 
-      /* { verify_email: 'emial' } step */
+      /* { verify_email: 'email' } step */
       state.registration.create = function() {
         var email = state.registration.email;
         if(email == '' || !validateEmail(email)) {
@@ -156,11 +156,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                 .then(function(data) {
                   state.registration.disabled = false;
                   if(data.verify_email) {
-                    $.growl.notice({ message: 'Verification code sent to ' + email });
+                    $.growl.notice({ message: 'Verification code sent to '.i18n() + email });
                     state.route.update('account');
                   }
                   else  {
-                    throw { message: 'Email verification failed (' + data.msg_type + ')' };
+                    throw { message: 'Email verification failed ('.i18n() + data.msg_type + ')' };
                   }
                 })
                 .catch(function(err) {
@@ -196,7 +196,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                   var account = data.new_account_virtual;
                   var oauth = [{id: account.client_id, token: account.oauth_token }];
                   local_storage.set('oauth', oauth);
-                  liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
+                  //liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
                   state.account.disabled = false;
                   state.route.update('confirm');
                })
@@ -211,12 +211,16 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
 
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
-               state.account.residence_list = data.residence_list;
+               state.account.residence_list = data.residence_list.map(function(r) {
+                 r.disabled = state.account.residence_unsupported.indexOf(r.value) !== -1;
+                 return r;
+               });
                state.account.residence = data.residence_list[0].value;
                liveapi.cached.send({website_status: 1})
                     .then(function(data){
                         var residence = data.website_status && data.website_status.clients_country;
-                        state.account.residence = residence || 'id';
+                        if(state.account.residence_unsupported.indexOf(residence) === -1)
+                          state.account.residence = residence || 'id';
                     })
                     .catch(function(err){
                       console.error(err);
@@ -234,7 +238,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       login: function() {
           var app_id = liveapi.app_id;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://www.binary.com/oauth2/authorize';
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
           window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
     }

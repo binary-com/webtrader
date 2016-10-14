@@ -7,28 +7,17 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
     var assetWin = null;
 
     function init(li) {
-        require(['css!assetindex/assetIndex.css']);
         li.click(function () {
-            //Store this new window in local_storage
-            var windows_ls = local_storage.get('windows') || {};
-            windows_ls.windows = (windows_ls.windows || []);
-            if (_.findIndex(windows_ls.windows, function(ew) { return ew.isAsset; }) == -1) {
-                windows_ls.windows.push({isAsset: true});
-                local_storage.set('windows', windows_ls);
-            }
             if (!assetWin) {
                 assetWin = windows.createBlankWindow($('<div/>'), {
-                    title: 'Asset Index',
-                    width: 750,
-                    minHeight:70,
-                    close: function () {
-                        windows_ls = local_storage.get('windows') || {};
-                        var storeIndex = _.findIndex(windows_ls.windows, function(ew) { return ew.isAsset; });
-                        if (storeIndex >= 0) {
-                            windows_ls.windows.splice(storeIndex, 1);
-                            local_storage.set('windows', windows_ls);
-                        }
-                    }
+                    title: 'Asset Index'.i18n(),
+                    width: 700 ,
+                    height: 400
+                });
+                assetWin.track({
+                  module_id: 'assetIndex',
+                  is_unique: true,
+                  data: null
                 });
                 assetWin.dialog('open'); /* bring window to front */
                 require(['text!assetindex/assetIndex.html'], initAssetWin);
@@ -102,18 +91,19 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
                             submarket_names.update_list(list);
                             updateTable(market_names.val(), submarket_names.val());
                         },
-                        width: '120px'
+                        width: '180px'
                     });
                 market_names.selectmenu('widget').addClass('asset-index-selectmenu');
 
+                var is_rtl_language = local_storage.get('i18n') && local_storage.get('i18n').value === 'ar';
                 var submarket_names = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
+                    .makeSelectmenu($('<select />').insertBefore(is_rtl_language ? market_names : dialog_buttons), {
                         list: Object.keys(markets[market_names.val()]),
                         inx: 0,
                         changed: function (val) {
                             updateTable(market_names.val(), submarket_names.val());
                         },
-                        width: '135px'
+                        width: '200px'
                     });
                 submarket_names.selectmenu('widget').addClass('asset-index-selectmenu');
 
@@ -128,7 +118,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "navigation
     }
 
     function initAssetWin($html) {
-        $html = $($html);
+        $html = $($html).i18n();
         table = $html.filter('table');
         $html.appendTo(assetWin);
 

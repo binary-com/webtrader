@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -21,16 +23,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
         };
         var defaultLevels = [];
 
-        require(['text!charts/indicators/cc/cc.html'], function ( $html ) {
+        require(['text!charts/indicators/cc/cc.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.cc;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.cc-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#cc_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -52,14 +66,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             var selectedDashStyle = "Solid";
             $('#cc_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#cc_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#cc_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#cc_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#cc_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
 
             var table = $html.find('#cc_levels').DataTable({
@@ -111,6 +125,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height:400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -165,6 +180,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 appliedTo: parseInt($html.find("#cc_appliedTo").val()),
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add CC for the main series
                             $($(".cc").data('refererChartID')).highcharts().series[0].addIndicator('cc', options);
 
@@ -180,8 +196,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -195,16 +213,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".cc").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".cc").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".cc").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

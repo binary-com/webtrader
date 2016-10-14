@@ -72,17 +72,21 @@ SAR = function (data, options, indicators) {
         else {
             this.trend[index] = { time: data[index].time, value: trendDirection };
         }
-
+        // Refer to https://www.tradingview.com/stock-charts-support/index.php/Parabolic_SAR_(SAR)#CALCULATION on updating the af.
         var afValue = 0.0;
         if (this.trend[index].value === this.trend[index - 1].value) {
             if (this.trend[index].value === "UP") {
-                if (this.af[index - 1].value === this.options.maximum) {
-                    afValue = this.af[index - 1].value;
-                } else {
-                    afValue = this.options.maximum;
+                if(this.ep[index].value > this.ep[index-1].value){
+                    afValue = Math.min(this.af[index-1].value + this.options.acceleration, this.options.maximum);
+                } else{
+                    afValue = this.af[index-1].value;
                 }
             } else {
-                afValue = this.af[index - 1].value;
+                if(this.ep[index].value < this.ep[index-1].value){
+                    afValue = Math.min(this.af[index-1].value + this.options.acceleration, this.options.maximum);
+                } else{
+                    afValue = this.af[index-1].value;
+                }
             }
         } else {
             afValue = this.options.acceleration;
@@ -93,7 +97,6 @@ SAR = function (data, options, indicators) {
         else {
             this.af[index] = { time: data[index].time, value: afValue };
         }
-
         return toFixed(sarValue, 4);
     };
     for (var index = 0; index < data.length; index++) {

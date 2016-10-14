@@ -1,9 +1,9 @@
 .max_input_width {
-    width: 140px;
+    width: 150px !important;
 }
 
 .max_input_width_for_period {
-    width: 135px;
+    width: 150px !important;
 }
 
 .max label {
@@ -12,8 +12,4 @@
 
 .max td {
     white-space: nowrap;
-}
-
-.max-ui-dialog , .max.ui-dialog-content {
-     overflow : visible;
 }

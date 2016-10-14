@@ -39,19 +39,21 @@
     <li> <span rv-text="buy.potential_profit_text"></span> <span rv-text='buy.potential_profit | to-fixed 2' /> </li>
   </ul>
 
+  <ul class='barrier-row' rv-show='buy.barrier'>
+    <li>
+      <span>Barrier:&nbsp;</span><span rv-text='buy.barrier' />
+    </li>
+  </ul>
+
   <ul class='transaction-row'>
     <li>
       <span>Your transaction reference is&nbsp;</span><span rv-text='buy.transaction_id' />
     </li>
   </ul>
 
-  <ul class='view-row'
-    rv-if="arrow.visible">
+  <ul class='view-row' rv-if="arrow.visible">
     <li class="view">
-      View
-    </li>
-    <li rv-on-click='arrow.onclick'>
-      <img class="arrow" src="images/up-arrow.svg"/>
+      <button rv-on-click='arrow.onclick'>View</button>
     </li>
   </ul>
 
@@ -67,7 +69,7 @@
       </li>
   </ul>
 
-  <div class='tick-chart'
+  <div class='tick-chart ltr-direction'
        rv-if="ticks.chart_visible"
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
@@ -80,8 +82,7 @@
   <ul class='balance-row'>
     <li>
       <span> Account balance: </span>
-      <span class="bold" rv-text="buy.currency"></span>
-      <span class="bold" rv-text="buy.balance_after | to-fixed 2"></span>
+      <span class="bold" rv-text="buy.balance_after | to-fixed 2 | format-price buy.currency"></span>
     </li>
   </ul>
 </div>

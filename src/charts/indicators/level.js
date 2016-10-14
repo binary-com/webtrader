@@ -25,12 +25,13 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
             var defaultStrokeColor = '#cd0a0a';
 
-            $html = $($html);
+            $html = $($html).i18n();
             //$html.hide();
             $html.appendTo("body");
             $html.find("input[type='button']").button();
 
             $html.find("#level_stroke").colorpicker({
+				showOn: 'click',
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -55,11 +56,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 118,
                 background: "white",
                 onSelected: function (data) {
-                    $('#level_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#level_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '85px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#level_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#level_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '85px');
 
 
             $html.dialog({

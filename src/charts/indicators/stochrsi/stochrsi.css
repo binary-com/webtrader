@@ -1,25 +1,19 @@
-﻿.stochrsi_input_width {
-    width: 120px;
+﻿.stochrsi {
+    overflow-y: scroll;
 }
 
-.stochrsi_input_width_for_period {
-    width: 115px;
+.stochrsi_input_width {
+    width: 150px !important;
 }
 
-.stochrsi_level_input_width_for_level {
-    width: 115px;
+.stochrsi_input_width_for_period, .stochrsi_level_input_width_for_level {
+    width: 150px !important;
 }
 
 .stochrsi label {
     display: block;
 }
 
-#stochrsi_levels_wrapper {
-    border: 1px solid #aaaaaa;
-    width: 100%;
-    border-radius: 5px;
-}
-
-.stochrsi-ui-dialog, .stochrsi.ui-dialog-content, .stochrsi_level.ui-dialog-content {
-    overflow: visible;
+.stochrsi input {
+    line-height: 10px !important;
 }

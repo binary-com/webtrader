@@ -1,9 +1,12 @@
 .git
 .grunt
 .idea
+.tern-project
+*.log
 
 dist
 !/lib/*/*/dist
+translations/i18n/json/
 
 node_modules
 bower_components

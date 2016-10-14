@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -13,16 +15,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
         require(['css!charts/indicators/cks/cks.css']);
 
-        require(['text!charts/indicators/cks/cks.html'], function ( $html ) {
+        require(['text!charts/indicators/cks/cks.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultShortStroke = '#cd0a0a';
             var defaultLongStroke = '#57a125';
 
             $html = $($html);
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.cks;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.cks-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#cks_short_stop_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -42,6 +56,12 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             $html.find("#cks_long_stop_stroke").colorpicker({
+						showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -66,17 +86,18 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 width: 158,
                 background: "white",
                 onSelected: function (data) {
-                    $('#cks_dashStyle .dd-selected-image').css('max-width', '125px');
+                    $('#cks_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '125px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#cks_dashStyle .dd-option-image').css('max-width', '125px');
+            $('#cks_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '125px');
 
 
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
-                width: 315,
+                width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -116,6 +137,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 strokeWidth : parseInt($html.find("#cks_strokeWidth").val()),
                                 dashStyle: selectedDashStyle,
                             }
+                            before_add_callback && before_add_callback();
                             //Add CKS for the main series
                             $($(".cks").data('refererChartID')).highcharts().series[0].addIndicator('cks', options);
 
@@ -130,8 +152,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 160
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -145,16 +169,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".cks").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".cks").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".cks").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

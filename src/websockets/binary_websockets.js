@@ -27,7 +27,8 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
 
     var connect = function () {
         var config = local_storage.get('config');
-        var api_url = (config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?app_id=' + app_id + '&l=EN';
+        var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+        var api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l='+i18n_name) + '&app_id=' + app_id;
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
@@ -35,10 +36,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         ws.addEventListener('message', onmessage);
 
         ws.addEventListener('error', function(event) {
-            console.log('WS connection error : ', event);
-            // TODO: 1-consume this notification 2-do not use global notifications, use a better approach.
-            $(document).trigger("feedTypeNotification", ['websocket-error', "noconnection-feed"]);
-            $.growl.error({message: "Connection error. Refresh page!"});
+            $.growl.error({message: 'Connection error. Refresh the page.'.i18n().i18n()});
             //Clear everything. No more changes on chart. Refresh of page is needed!
         });
 
@@ -96,7 +94,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
           var promise = unresolved_promises[key];
           if(!promise) continue;
           if(promise.sent_before) { /* reject if sent once before */
-              promise.reject({message: 'connection closed'});
+              promise.reject({message: 'Connection closed.'.i18n()});
           } else { /* send */
               promise.sent_before = true;
               socket.send(JSON.stringify(promise.data));
@@ -175,14 +173,21 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         return promise
             .then(function (val) {
                 is_authenitcated_session = true;
-                fire_event('login', val);
+                local_storage.set('authorize', val.authorize); /* we can use the 'email' field retruned later */
+                var is_jpy_account = val.authorize.landing_company_name.indexOf('japan') !== -1;
+                if(!is_jpy_account) {
+                   fire_event('login', val);
+                }
                 if(local_storage.get('oauth-login')) {
                   var ok = local_storage.get('oauth-login').value;
                   local_storage.remove('oauth-login');
-                  ok && fire_event('oauth-login', val);
+                  if(ok && !is_jpy_account) {
+                    fire_event('oauth-login', val);
+                  }
                 }
                 auth_successfull = true;
                 cached_promises[key] = { data: data, promise: promise }; /* cache successfull authentication */
+
                 return val; /* pass the result */
             })
             .catch(function (up) {
@@ -226,7 +231,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                     .then(send);
         }
         else
-          return Promise.reject({ message: 'Please log in.'});
+          return Promise.reject({ message: 'Please log in'.i18n()});
     };
 
     /* fire a custom event and call registered callbacks(api.events.on(name)) */
@@ -248,12 +253,14 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
          var promise = unresolved_promises[key];
          if (promise) {
              delete unresolved_promises[key];
-             promise.reject({message: 'timeout for websocket request'});
+             promise.reject({message: 'Timeout for websocket request'.i18n()});
          }
        },milliseconds);
     };
 
     var sell_expired_timeouts = {};
+    var proposal_open_contract =  {/* contract_id: { subscribers: n, promise: promise, stream_id: '' } */};
+    var proposal_open_contract_forget =  {/* contract_id:  promise */};
     var api = {
         events: {
             on: function (name, cb) {
@@ -276,6 +283,66 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
               api.events.on(name, once_cb);
             }
         },
+        proposal_open_contract: {
+          subscribe: function(contract_id) {
+            /* already subscribed */
+            if(proposal_open_contract[contract_id] && proposal_open_contract[contract_id].subscribers > 0) {
+                proposal_open_contract[contract_id].subscribers++;
+                return proposal_open_contract[contract_id].promise;
+            }
+            /* subscribe and keep the promise */
+            var promise = api.send({proposal_open_contract: 1, contract_id: contract_id, subscribe: 1})
+              .then(function(data){
+                /* keep stream_id to easily forget */
+                proposal_open_contract[contract_id].stream_id = data.proposal_open_contract.id;
+                return data;
+              })
+              .catch(function(up) {
+                proposal_open_contract[contract_id] = undefined;
+                throw up;
+              });
+            proposal_open_contract[contract_id] = { subscribers: 1, promise: promise };
+            return promise;
+          },
+          forget: function (contract_id) {
+            var proposal = proposal_open_contract[contract_id];
+            var forget = proposal_open_contract_forget[contract_id];
+            if(!proposal) {
+              return forget || Promise.resolve(); /* contract is being forgetted or does not exit */
+            }
+            if(proposal.subscribers == 0) {
+              return forget; /* contract is being forgetted */
+            }
+            proposal.subscribers--;
+            if(proposal.subscribers > 0) { /* there are still subscribers to this contract_id */
+              return Promise.resolve();
+            }
+            var forgetter = function() {
+              proposal_open_contract[contract_id] = undefined;
+              return api.send({forget: proposal.stream_id})
+                .catch(function(up) {
+                  proposal_open_contract_forget[contract_id] = undefined;
+                  throw up;
+                })
+                .then(function(data){
+                  proposal_open_contract_forget[contract_id] = undefined;
+                  return data;
+                })
+            };
+            if(proposal.stream_id) {
+              proposal_open_contract_forget[contract_id] = forgetter();
+            } else {
+              proposal_open_contract_forget[contract_id] = proposal.promise
+                .catch(function(ex){ return; })
+                .then(function(data){
+                  if(proposal.stream_id) /* proposal request had not exceptions */
+                    return forgetter();
+                  else return; /* no stream, no need to forget */
+                });
+            }
+            return proposal_open_contract_forget[contract_id];
+          }
+        },
         /* execute callback when the connection is ready */
         execute: function (cb) {
             if (is_connected())
@@ -288,16 +355,16 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         /* switch account */
         switch_account: function(id) {
           if(!is_authenitcated_session) {
-            return Promise.reject({message: 'Session is not authenticated.'})
+            return Promise.reject({message: 'Session is not authenticated.'.i18n()})
           }
           var oauth = local_storage.get('oauth');
           if(!oauth) {
-            return promise.reject({ message: 'Account token not found.' });
+            return Promise.reject({ message: 'Account token not found.'.i18n() });
           }
 
           var inx = oauth.map(function(acc) { return acc.id; }).indexOf(id);
           if(inx === -1) {
-            return promise.reject({ message: 'Account id not found.' });
+            return promise.reject({ message: 'Account id not found.'.i18n() });
           }
 
           /* move the new account to the front of oauth array */
@@ -352,14 +419,14 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                if the session is not already authorized will send an authentication request */
             authorize: function () {
                 var oauth = local_storage.get('oauth');
-                var token = oauth[0].token,
+                var token = oauth && oauth[0] && oauth[0].token,
                     key = JSON.stringify({ authorize: token });
 
                 if (is_authenitcated_session && token && cached_promises[key])
                     return cached_promises[key].promise;
 
                 return token ? authenticate(token) : /* we have a token => autheticate */
-                               Promise.reject('Please log in.');
+                               Promise.reject('Please log in.'.i18n());
             }
         },
         /* sends a request and returns an es6-promise */

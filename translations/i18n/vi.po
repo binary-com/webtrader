@@ -1,0 +1,2635 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-30 18:03+0200\n"
+"PO-Revision-Date: 2016-09-21 12:40+0000\n"
+"Last-Translator: Pham Minh Hieu <hphamv7@gmail.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.9-dev\n"
+
+msgid "%D MA Type"
+msgstr "Kiểu %D MA"
+
+msgid "%D Period"
+msgstr "%D Thời hạn"
+
+#, fuzzy
+msgid "%D Stroke"
+msgstr "%D Nét"
+
+#, fuzzy
+msgid "%K MA Type"
+msgstr "%K Kiểu MA"
+
+#, fuzzy
+msgid "%K Period"
+msgstr "%K Kì hạn"
+
+msgid "%K Stroke"
+msgstr "%K Nét"
+
+msgid ""
+"(if less than one day in duration), or at the end of the trading day (if one "
+"day or more in duration)"
+msgstr ""
+"(nếu thời hạn ít hơn một ngày), hoặc vào cuối ngày giao dịch (nếu thời hạn "
+"một ngày hoặc nhiều hơn)"
+
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
+"-Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở "
+"trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập "
+"và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG "
+"LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách "
+"hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi "
+"gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều "
+"sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng "
+"và Đại Lý Thanh Toán"
+
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr ""
+"---tiêu đề: không tìm thấy trang permalink: /404.html trích dẫn: \"\"---"
+
+#, fuzzy
+msgid "-DI Stroke"
+msgstr "-DI Nét"
+
+msgid "0-1 year"
+msgstr "0-1 năm"
+
+msgid "0-5 transactions in the past 12 months"
+msgstr "0-5 giao dịch trong 12 tháng qua"
+
+#, fuzzy
+msgid "1"
+msgstr "10"
+
+msgid "1 Day"
+msgstr "1 ngày"
+
+#, fuzzy
+msgid "1 Hour"
+msgstr "Giờ"
+
+#, fuzzy
+msgid "1 Minute"
+msgstr "Phút"
+
+#, fuzzy
+msgid "1 Tick"
+msgstr "Đánh dấu"
+
+msgid "1-2 years"
+msgstr "1-2 năm"
+
+msgid "10"
+msgstr "10"
+
+#, fuzzy
+msgid "10 Minutes"
+msgstr "Phút"
+
+msgid "10m"
+msgstr "10 tháng"
+
+msgid "15"
+msgstr "15"
+
+#, fuzzy
+msgid "15 Minutes"
+msgstr "Phút"
+
+msgid "15m"
+msgstr "15 tháng"
+
+msgid "1d"
+msgstr "1 ngày"
+
+msgid "1h"
+msgstr "1 giờ"
+
+msgid "1m"
+msgstr "1 tháng"
+
+#, fuzzy
+msgid "1t"
+msgstr "1t"
+
+#, fuzzy
+msgid "2"
+msgstr "2 giờ"
+
+#, fuzzy
+msgid "2 Hours"
+msgstr "Giờ"
+
+#, fuzzy
+msgid "2 Minutes"
+msgstr "Phút"
+
+msgid "2h"
+msgstr "2 giờ"
+
+msgid "2m"
+msgstr "2 tháng"
+
+#, fuzzy
+msgid "3"
+msgstr "30"
+
+#, fuzzy
+msgid "3 Minutes"
+msgstr "Phút"
+
+msgid "30"
+msgstr "30"
+
+#, fuzzy
+msgid "30 Minutes"
+msgstr "Phút"
+
+msgid "30-day limit on losses"
+msgstr "30 ngày giới hạn cho thua"
+
+msgid "30-day turnover limit"
+msgstr "30 ngày giới hạn cho doanh số"
+
+msgid "30m"
+msgstr "30 tháng"
+
+msgid "3m"
+msgstr "3 tháng"
+
+#, fuzzy
+msgid "4"
+msgstr "4 giờ"
+
+#, fuzzy
+msgid "4 Hours"
+msgstr "Giờ"
+
+msgid "40 transactions or more in the past 12 months"
+msgstr "40 giao dịch hoặc hơn trong 12 tháng qua"
+
+msgid "404"
+msgstr "404"
+
+msgid "4h"
+msgstr "4 giờ"
+
+#, fuzzy
+msgid "5"
+msgstr "15"
+
+#, fuzzy
+msgid "5 Minutes"
+msgstr "Phút"
+
+msgid "5m"
+msgstr "5 tháng"
+
+msgid "6-10 transactions in the past 12 months"
+msgstr "6-10 giao dịch trong 12 tháng qua"
+
+msgid "7-day limit on losses"
+msgstr "7-day giới hạn cho thua"
+
+msgid "7-day turnover limit"
+msgstr "7 ngày giới hạn cho doanh số"
+
+#, fuzzy
+msgid "8"
+msgstr "8 giờ"
+
+#, fuzzy
+msgid "8 Hours"
+msgstr "Giờ"
+
+msgid "8h"
+msgstr "8 giờ"
+
+msgid "ADX MA Type"
+msgstr "Kiểu ADX MA"
+
+msgid "ADX Stroke"
+msgstr "Nét ADX"
+
+msgid "ATR Period"
+msgstr "Thời gian ATR"
+
+msgid "Acceleration"
+msgstr "Gia tốc"
+
+msgid "Accept"
+msgstr "Chấp nhận"
+
+msgid "Account balance"
+msgstr "Số dư tài khoản"
+
+msgid "Account id not found"
+msgstr "Không tìm thấy id tài khoản"
+
+msgid "Account opening"
+msgstr "Tài khoản đang mở"
+
+msgid "Account token not found"
+msgstr "Không tìm thấy token tài khoản"
+
+msgid "Action"
+msgstr "Hành động"
+
+msgid "Add comparisons"
+msgstr "Thêm các so sánh"
+
+msgid "Add indicator"
+msgstr "Thêm chỉ dẫn"
+
+msgid "Add level"
+msgstr "Thêm cấp độ"
+
+#, fuzzy
+msgid "Add/remove comparisons"
+msgstr "Thêm/loại bỏ lớp phủ"
+
+msgid "Add/remove overlays"
+msgstr "Thêm/loại bỏ lớp phủ"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "All times are in GMT (Greenwich Mean Time)"
+msgstr "Tất cả thời gian ở GMT (Thời gian trung bình Greenwich )"
+
+msgid "Amount"
+msgstr "Tổng"
+
+msgid "Amount Per Point"
+msgstr "Số tiền cho mỗi điểm"
+
+msgid "Amount per point"
+msgstr "Số tiền cho mỗi điểm"
+
+msgid "Answer"
+msgstr "Câu trả lời"
+
+msgid "Applied to"
+msgstr "Áp dụng cho"
+
+msgid "Apply"
+msgstr "Áp dụng"
+
+msgid "Apply to become a Binary.com"
+msgstr "Đăng ký để để thành một Binary.com"
+
+msgid "Appropriateness Test: WARNING"
+msgstr "Bài kiểm tra sự thích hợp: CẢNH BÁO"
+
+msgid "Apr"
+msgstr "Tháng tư"
+
+msgid "April"
+msgstr "Tháng tư"
+
+msgid "Are you sure you want to delete this token?"
+msgstr "Bạn có chắc bạn muốn xóa token này?"
+
+#, fuzzy
+msgid "Aroon Down Stroke"
+msgstr "Aroon Nét Xuống"
+
+#, fuzzy
+msgid "Aroon Up Stroke"
+msgstr "Aroon Nét Lên"
+
+msgid "Asians"
+msgstr "Người châu Á"
+
+msgid "Asset"
+msgstr "Tài sản"
+
+msgid "Asset Index"
+msgstr "Chỉ số Tài sản"
+
+msgid "Aug"
+msgstr "Tháng tám"
+
+msgid "August"
+msgstr "Tháng tám"
+
+msgid "Average"
+msgstr "Trung bình"
+
+msgid "Back"
+msgstr "Trở lại"
+
+msgid "Back to list"
+msgstr "Quay lại danh sách"
+
+msgid "Background Color"
+msgstr "Màu nền"
+
+msgid "Barrier"
+msgstr "Barie"
+
+msgid "Barrier offset"
+msgstr "Offset barie"
+
+msgid "Binary options or other financial derivatives"
+msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"
+
+msgid "Binary.com"
+msgstr "Binary.com"
+
+msgid "Binary.com : Webtrader"
+msgstr "Binary.com: Webtrader"
+
+msgid "Blank window"
+msgstr "Cửa sổ trống"
+
+msgid "Bought"
+msgstr "Đã mua"
+
+msgid "Brand of first car"
+msgstr "Thương hiệu của chiếc xe đầu tiên"
+
+msgid "Browser upgrade required"
+msgstr "Yêu cầu nâng cấp trình duyệt"
+
+msgid "Buy Price"
+msgstr "Giá mua"
+
+msgid "Buy price"
+msgstr "Giá mua"
+
+msgid "By clicking"
+msgstr "Bằng cách nhấp vào"
+
+msgid "By clicking OK, you confirm that you have read and accepted the updated"
+msgstr ""
+"Bằng cách nhấn OK, bạn xác nhận rằng bạn đã đọc và chấp nhận phần đã cập nhật"
+
+msgid "CLOSE"
+msgstr "ĐÓNG"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+msgid "Candles"
+msgstr "Nến"
+
+#, fuzzy
+msgid "Candlestick down-color"
+msgstr "Giá đỡ nến xuống màu"
+
+#, fuzzy
+msgid "Candlestick down-line"
+msgstr "Giá đỡ nến xuống dòng"
+
+msgid "Candlestick up-color"
+msgstr "Giá đỡ nến lên màu"
+
+#, fuzzy
+msgid "Candlestick up-line"
+msgstr "Giá đỡ nến lên dòng"
+
+msgid "Cash Balance"
+msgstr "Số dư tiền mặt"
+
+#, fuzzy
+msgid "Change Backend Server"
+msgstr "Thay đổi máy chủ"
+
+msgid "Change password"
+msgstr "Thay đổi mật khẩu"
+
+msgid "Chart"
+msgstr "Bảng"
+
+msgid "Chart Themes"
+msgstr "Bảng chủ đề"
+
+msgid "Chart background"
+msgstr "Bảng nền"
+
+#, fuzzy
+msgid "Chart context menu"
+msgstr "Bảng chủ đề"
+
+#, fuzzy
+msgid "Chart template"
+msgstr "Bảng chủ đề"
+
+#, fuzzy
+msgid "Chart type"
+msgstr "Bảng"
+
+msgid "Choose password"
+msgstr "Lựa chọn mật khẩu"
+
+msgid "Choose your pereferred payment agent"
+msgstr "Chọn đại lý thanh toán ưa thích của bạn"
+
+msgid "Choose your pereferred withdrawal method"
+msgstr "Lựa chọn phương pháp rút tiền ưa thích của bạn"
+
+msgid "Chrome"
+msgstr "Chrome"
+
+msgid "Click Jacking test"
+msgstr "Nhấp vào kiểm tra Jacking"
+
+msgid "Click to log in with your Binary.com account"
+msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com của bạn"
+
+msgid "Close Price"
+msgstr "Giá chốt"
+
+msgid "Close all"
+msgstr "Đóng tất cả"
+
+msgid "Closes"
+msgstr "Kết thúc"
+
+msgid "Commodities trading experience"
+msgstr "Kinh nghiệm giao dịch hàng hóa"
+
+msgid "Commodities trading frequency"
+msgstr "Tần suất giao dịch hàng hóa"
+
+msgid "Comparisons"
+msgstr "So sánh"
+
+msgid "Conditions"
+msgstr "Điều kiện"
+
+msgid "Config changes successful"
+msgstr "Thay đổi cấu hình thành công"
+
+msgid "Confirm transfer"
+msgstr "Xác nhận chuyển khoản"
+
+msgid "Connection closed"
+msgstr "Kết nối đã đóng"
+
+msgid "Connection error. Refresh the page"
+msgstr "Lỗi kết nối. Làm mới lại trang"
+
+msgid "Construction"
+msgstr "Xây dựng"
+
+msgid "Continue"
+msgstr "Tiếp tục"
+
+msgid "Continue Trading"
+msgstr "Tiếp tục giao dịch"
+
+msgid "Contract"
+msgstr "Hợp đồng"
+
+msgid "Contract Confirmation"
+msgstr "Xác nhận hợp đồng"
+
+#, fuzzy
+msgid "Contract Details"
+msgstr "Hợp đồng"
+
+msgid "Contract is not yet started"
+msgstr "Hợp đồng chưa được bắt đầu"
+
+msgid "Contracts"
+msgstr "Hợp đồng"
+
+msgid "Country of residence"
+msgstr "Quốc gia cư trú"
+
+msgid "Create"
+msgstr "Tạo"
+
+msgid "Create token"
+msgstr "Tạo token"
+
+msgid "Credit/Debit"
+msgstr "Tín dụng/Ghi nợ"
+
+#, fuzzy
+msgid "Crosshair"
+msgstr "Chữ thập"
+
+msgid "Current Level"
+msgstr "Cấp độ hiện tại"
+
+msgid "Current Spot"
+msgstr "Vị trí hiện tại"
+
+msgid "Current Spot Time"
+msgstr "Thời gian vị trí hiện tại"
+
+#, fuzzy
+msgid "Current comparisons"
+msgstr "Mật khẩu hiện tại"
+
+msgid "Current indicators"
+msgstr "Chỉ số hiện tại"
+
+msgid "Current password"
+msgstr "Mật khẩu hiện tại"
+
+msgid "Current regulations require that you provide us the following"
+msgstr ""
+"Quy định hiện tại yêu cầu bạn cung cấp cho chúng tôi những điều sau đây"
+
+msgid "Current time"
+msgstr "Thời gian hiện tại"
+
+msgid "Custom Theme"
+msgstr "Chủ đề tùy chỉnh"
+
+msgid "Customize chart appearance"
+msgstr "Tùy chỉnh bề ngoài bảng"
+
+#, fuzzy
+msgid "DI Stroke"
+msgstr "Nét DI"
+
+msgid "DX MA Type"
+msgstr "Kiểu DX MA"
+
+msgid "Daily limit on losses"
+msgstr "Giới hạn hàng ngày cho thua"
+
+msgid "Daily turnover limit"
+msgstr "Giới hạn doanh số hàng ngày"
+
+msgid "Dark Blue"
+msgstr "Xanh Đậm"
+
+msgid "Dark Green"
+msgstr "Xanh lá cây đậm"
+
+msgid "Dark Unica"
+msgstr "Unica đậm"
+
+msgid "Dash style"
+msgstr "Kiểu đoạn gạch"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "Date of birth"
+msgstr "Ngày sinh"
+
+msgid "Days"
+msgstr "Ngày"
+
+#, fuzzy
+msgid "Dec"
+msgstr "Từ chối"
+
+msgid "December"
+msgstr "Tháng mười hai"
+
+msgid "Decline"
+msgstr "Từ chối"
+
+msgid "Default"
+msgstr "Mặc định"
+
+msgid "Delete"
+msgstr "Xóa bỏ"
+
+msgid "Delete level(s)"
+msgstr "Xóa level(s)"
+
+msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgstr "Thử nghiệm cho liên kết tới truy cập bảng Binary.com trong IFRAME"
+
+#, fuzzy
+msgid "Deposit funds"
+msgstr "Tiền gửi USD"
+
+msgid "Deposit of USD"
+msgstr "Tiền gửi USD"
+
+msgid "Describe what this token is for to find it later"
+msgstr "Mô tả token này để tìm nó về sau"
+
+msgid "Description"
+msgstr "Mô tả"
+
+msgid "Digits"
+msgstr "Chữ số"
+
+msgid "Do you want to install Webtrader chrome extension?"
+msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
+
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
+msgstr "Chưa có tài khoản? Đăng ký và nhận $10,000 cho tài khoản ảo"
+
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr "Đã hoàn tất. Tiền đang được chuyển giao cho đại lý thanh toán"
+
+msgid "Done. The funds are transferred"
+msgstr "Đã hoàn tất. Tiền đã được chuyển"
+
+msgid "Dot"
+msgstr "Dấu chấm"
+
+msgid "Double MA Period"
+msgstr "Gấp đôi thời gian MA"
+
+msgid "Double MA Type"
+msgstr "Gấp đôi kiểu MA"
+
+msgid "Double click the object to remove"
+msgstr "Nhấp đúp chuột vào đối tượng để loại bỏ"
+
+msgid "Download CSV"
+msgstr "Tải xuống CSV"
+
+#, fuzzy
+msgid "Download JPEG image"
+msgstr "Tải xuống PNG"
+
+#, fuzzy
+msgid "Download PDF document"
+msgstr "Tải xuống PNG"
+
+msgid "Download PNG"
+msgstr "Tải xuống PNG"
+
+#, fuzzy
+msgid "Download PNG image"
+msgstr "Tải xuống PNG"
+
+msgid "Download SVG"
+msgstr "Tải xuống SVG"
+
+#, fuzzy
+msgid "Download SVG vector image"
+msgstr "Tải xuống SVG"
+
+msgid "Download as"
+msgstr "Tải xuống thành"
+
+msgid "Downloading .csv"
+msgstr "Đang tải .scv"
+
+msgid "Drawing tools"
+msgstr "Công cụ vẽ"
+
+msgid "Duration"
+msgstr "Thời gian"
+
+msgid "EMA"
+msgstr "EMA"
+
+msgid "Edge"
+msgstr "Mép"
+
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+msgid "Education"
+msgstr "Giáo dục"
+
+msgid "Email verification failed"
+msgstr "Xác minh email thất bại"
+
+msgid "Embed code"
+msgstr "Mã nhúng"
+
+msgid "End Time"
+msgstr "Thời gian kết thúc"
+
+msgid "Ends In/Out"
+msgstr "Kết thúc Trong/Ngoài"
+
+msgid "Enter your current password"
+msgstr "Nhập mật khẩu hiện tại của bạn"
+
+msgid "Entry Spot"
+msgstr "Điểm khởi đầu"
+
+msgid "Entry spot"
+msgstr "Điểm khởi đầu"
+
+msgid "Error downloading .csv"
+msgstr "Lỗi tải xuống tệp .csv"
+
+msgid "Error getting data for"
+msgstr "Lỗi lấy dữ liệu cho"
+
+msgid "Estimated Net Worth"
+msgstr "Ước tính giá trị ròng"
+
+msgid "Exclude me from the website until"
+msgstr "Loại bỏ tôi khỏi trang web cho đến khi"
+
+msgid "Exclude time cannot be less than 6 months"
+msgstr "Thời gian loại trừ không thể ít hơn 6 tháng"
+
+msgid "Exit Spot"
+msgstr "Điểm chốt"
+
+msgid "Exit spot"
+msgstr "Điểm chốt"
+
+msgid "Explanation"
+msgstr "Lời giải thích"
+
+msgid "Failed to update the password"
+msgstr "Thất bại trong việc cập nhật mật khẩu"
+
+msgid "Fall"
+msgstr "Xuống"
+
+msgid "Family name"
+msgstr "Họ"
+
+msgid "Fast %K MA Type"
+msgstr "Kiểu %K MA nhanh"
+
+msgid "Fast %K Period"
+msgstr "Thời gian %K nhanh"
+
+msgid "Fast Limit"
+msgstr "Giới hạn nhanh"
+
+msgid "Fast MA Type"
+msgstr "Kiểu MA nhanh"
+
+msgid "Fast Period"
+msgstr "Thời gian nhanh"
+
+msgid "Favorites"
+msgstr "Yêu thích"
+
+msgid "Favourite artist"
+msgstr "Nghệ sĩ yêu thích"
+
+msgid "Favourite dish"
+msgstr "Món ăn ưa thích"
+
+msgid "Feb"
+msgstr "Tháng hai"
+
+msgid "February"
+msgstr "Tháng hai"
+
+msgid "Final Price"
+msgstr "Giá cuối cùng"
+
+msgid "Final price"
+msgstr "Giá cuối cùng"
+
+msgid "Finance"
+msgstr "Tài chính"
+
+msgid "Financial information"
+msgstr "Thông tin tài chính"
+
+msgid "Firefox"
+msgstr "Firefox"
+
+msgid "First name"
+msgstr "Họ"
+
+msgid "Forex trading experience"
+msgstr "Kinh nghiệm giao dịch ngoại hối"
+
+msgid "Forex trading frequency"
+msgstr "Tần suất giao dịch ngoại hối"
+
+msgid "Fri"
+msgstr "Thứ sáu"
+
+msgid "Friday"
+msgstr "Thứ sáu"
+
+msgid "From"
+msgstr "Từ"
+
+#, fuzzy
+msgid "Further instructions"
+msgstr "Xây dựng"
+
+msgid "Gray"
+msgstr "Màu xám"
+
+msgid "Grid"
+msgstr "Ô lưới"
+
+msgid "Grid Light"
+msgstr "Ô lưới nhẹ"
+
+msgid "HIGH"
+msgstr "CAO"
+
+msgid "Have better luck at trading!"
+msgstr "Chúc bạn may mắn trong giao dịch!"
+
+msgid "Health"
+msgstr "Sức khỏe"
+
+msgid "High Barrier"
+msgstr "Barie cao"
+
+msgid "High Price"
+msgstr "Giá cao"
+
+#, fuzzy
+msgid "High Stroke"
+msgstr "Nét cao"
+
+msgid "High barrier offset"
+msgstr "Offset barie cao"
+
+msgid "Higher"
+msgstr "Cao hơn"
+
+msgid "Histogram Color"
+msgstr "Màu sắc biểu đồ"
+
+msgid "Histogram Color For Higher Values"
+msgstr "Màu sắc biểu đồ cho giá trị cao hơn"
+
+msgid "Histogram Color For Lower Values"
+msgstr "Màu sắc biểu đồ cho giá trị thấp hơn"
+
+msgid "Home Address"
+msgstr "Địa chỉ nhà"
+
+msgid "Horizontal Line"
+msgstr "Đường ngang"
+
+#, fuzzy
+msgid "Horizontal line"
+msgstr "Đường ngang"
+
+msgid "Hours"
+msgstr "Giờ"
+
+msgid "I have read and agree to Binary.com"
+msgstr "Tôi đã đọc và đồng ý với Binary.com"
+
+msgid "IMPORTANT DISCLAIMER"
+msgstr "KHUYẾN CÁO QUAN TRỌNG"
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+"KHUYẾN CÁO QUAN TRỌNG - Binary.com không liên kết với bất kỳ Đại Lý Thanh "
+"Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà "
+"cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận "
+"bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI "
+"RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại "
+"Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong "
+"bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được "
+"thực hiện giữa khách hàng và Đại Lý Thanh Toán"
+
+msgid "If the issue keeps happening, please contact"
+msgstr "Nếu vấn đề tiếp tục xảy ra, xin vui lòng liên hệ"
+
+msgid "If you select a"
+msgstr "Nếu bạn chọn một"
+
+msgid "If you select a specific"
+msgstr "Nếu bạn chọn một cụ thể"
+
+msgid ""
+"In order to properly apply theme, a full refresh of page is required. Are "
+"you sure you want to proceed?"
+msgstr ""
+"Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn "
+"muốn tiếp tục không?"
+
+msgid ""
+"In providing our services to you, we are required to obtain information from "
+"you in order to assess whether a given product or service is appropriate for "
+"you (that is, whether you possess the experience and knowledge to understand "
+"the risks involved)"
+msgstr ""
+"Trong quá trình cung cấp dịch vụ tới bạn, chúng tôi cần thu thập thông tin "
+"từ bạn để đánh giá xem một sản phẩm hoặc dịch vụ nhất định có thích hợp cho "
+"bạn hay không (đó là, cho dù bạn có kinh nghiệm và kiến thức để hiểu các rủi "
+"ro liên quan)"
+
+msgid ""
+"In regards to binary options which are gambling products, remember that "
+"gambling can be addictive"
+msgstr ""
+"Liên quan tới quyền chọn nhị phân, là sản phẩm mang tính cá cược, hãy nhớ "
+"rằng chơi cá cược có thể bị nghiện"
+
+msgid "In/Out"
+msgstr "Vào/Ra"
+
+msgid "Income Source"
+msgstr "Nguồn thu nhập"
+
+#, fuzzy
+msgid "Indicative"
+msgstr "Giá biểu thị"
+
+msgid "Indicative Price"
+msgstr "Giá biểu thị"
+
+#, fuzzy
+msgid "Indicators"
+msgstr "Thêm chỉ dẫn"
+
+msgid "Indices trading experience"
+msgstr "Chỉ số kinh nghiệm giao dịch"
+
+msgid "Indices trading frequency"
+msgstr "Chỉ số tần số giao dịch"
+
+msgid "Industry of Employment"
+msgstr "Ngành công nghiệp việc làm"
+
+msgid "Instrument"
+msgstr "Công cụ"
+
+msgid "Instruments"
+msgstr "Công cụ"
+
+msgid "Investments & Dividends"
+msgstr "Đầu tư & Cổ tức"
+
+#, fuzzy
+msgid "Jan"
+msgstr "và"
+
+msgid "January"
+msgstr "Tháng một"
+
+#, fuzzy
+msgid "Japan accounts are not supported"
+msgstr "Trình duyệt của bạn không được hỗ trợ"
+
+msgid "Jul"
+msgstr "Tháng bảy"
+
+msgid "July"
+msgstr "Tháng bảy"
+
+msgid "Jump to"
+msgstr "Nhảy tới"
+
+#, fuzzy
+msgid "Jun"
+msgstr "Chủ nhật"
+
+msgid "June"
+msgstr "Tháng sáu"
+
+msgid "Just click  Grant  button on the page you will now be taken to"
+msgstr "Chỉ cần nhấp vào nút Cấp trên trang và bạn sẽ được đưa đến"
+
+msgid "LOW"
+msgstr "THẤP"
+
+msgid "Last Digit Prediction"
+msgstr "Dự đoán chữ số cuối"
+
+msgid "Last Digit is Over"
+msgstr "Chữ số cuối đã kết thúc"
+
+msgid "Last Digit is Under"
+msgstr "Chữ số cuối là Dưới"
+
+msgid "Last used"
+msgstr "Lần sử dụng cuối"
+
+msgid "Less than"
+msgstr "Ít hơn"
+
+msgid "Let's do it"
+msgstr "Chúng ta hãy làm điều đó"
+
+msgid "Level"
+msgstr "Cấp độ"
+
+msgid "Level of Education"
+msgstr "Cấp độ giáo dục"
+
+msgid "Line"
+msgstr "Dòng kẻ"
+
+msgid "Line Dot"
+msgstr "Dòng chấm"
+
+#, fuzzy
+msgid "Line Stroke"
+msgstr "Đường nét"
+
+msgid "Link"
+msgstr "Liên kết"
+
+#, fuzzy
+msgid "Load chart template"
+msgstr "Đang tải bảng và mục lục giao dịch"
+
+msgid "Loading"
+msgstr "Đang tải"
+
+msgid "Loading Asset Index"
+msgstr "Đang tải chỉ số tài sản"
+
+msgid "Loading Configurations"
+msgstr "Đang tải cấu hình"
+
+msgid "Loading Download/View Data"
+msgstr "Đang tải dữ liệu tải về/xem dữ liệu"
+
+msgid "Loading Password dialog"
+msgstr "Đang tải Mật Khẩu hội thoại"
+
+msgid "Loading Profit Table"
+msgstr "Đang tải bảng lợi nhuận"
+
+msgid "Loading Real account opening"
+msgstr "Đang tải mở tài khoản Thực"
+
+msgid "Loading Self-Exclusion"
+msgstr "Đang tải Tự Loại Trừ"
+
+msgid "Loading Statement Table"
+msgstr "Đang tải bảng kê khai"
+
+msgid "Loading Token management"
+msgstr "Đang tải quản lý Token"
+
+msgid "Loading Trading Times"
+msgstr "Đang tải thời gian giao dịch"
+
+msgid "Loading chart and trade menus"
+msgstr "Đang tải bảng và mục lục giao dịch"
+
+msgid "Loading custom theme configuration"
+msgstr "Đang tải cấu hình tùy chủ đề tùy chọn"
+
+msgid "Loading portfolio"
+msgstr "Đang tải danh mục đầu tư"
+
+msgid "Loading self-exclusion settings"
+msgstr "Đang tải chỉnh sửa Tự Loại Trừ"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Đang tải"
+
+msgid "Log in"
+msgstr "Đăng nhập"
+
+msgid "Log in time"
+msgstr "Thời gian đăng nhập"
+
+msgid "Logging out because of self-exclusion session time out!"
+msgstr "Đang đăng xuất vì hết hạn phiên Tự Loại Trừ!"
+
+msgid "Login"
+msgstr "Đăng nhập"
+
+msgid "Logout"
+msgstr "Đăng xuất"
+
+msgid "Long MA Type"
+msgstr "Kiểu MA dài"
+
+msgid "Long ROC Period"
+msgstr "Thời gian ROC dài"
+
+#, fuzzy
+msgid "Long Stop Line Stroke"
+msgstr "Đường nét chấm dài"
+
+msgid "Long Term Period"
+msgstr "Kì hạn dài"
+
+msgid "Low Barrier"
+msgstr "Barie thấp"
+
+msgid "Low Price"
+msgstr "Giá thấp"
+
+#, fuzzy
+msgid "Low Stroke"
+msgstr "Nét thấp"
+
+#, fuzzy
+msgid "Low barrier offset"
+msgstr "Offset barie thấp"
+
+msgid "Lower"
+msgstr "Thấp hơn"
+
+#, fuzzy
+msgid "Lower Band Stroke"
+msgstr "Nét thấp hơn"
+
+msgid "MA Type"
+msgstr "Kiểu MA"
+
+#, fuzzy
+msgid "MACD Line Stroke"
+msgstr "Đường nét MACD"
+
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+"Đầu tiên hãy chắc chắn rằng bạn đã đồng ý với Đại Lý Thanh Toán về các điều "
+"khoản thanh toán trước khi gửi yêu cầu của bạn. Một khi bạn nhấp vào nút "
+"'Xác nhận chuyển khoản' thì các khoản tiền sẽ được rút ra từ tài khoản của "
+"bạn và chuyển đến cho Đại Lý Thanh Toán mà bạn đã chọn. Đại Lý sẽ gửi cho "
+"bạn số tiền thu được (trừ đi khoản hoa hồng) thông qua phương thức thanh "
+"toán ưa thích của bạn"
+
+#, fuzzy
+msgid "Mar"
+msgstr "Ông"
+
+msgid "March"
+msgstr "Tháng ba"
+
+msgid "Mass Period"
+msgstr "Thời lượng lớn"
+
+msgid "Max/Min Period"
+msgstr "Thời hạn Tối đa/Tối thiểu"
+
+msgid "Maximum"
+msgstr "Tối đa"
+
+msgid "Maximum account cash balance"
+msgstr "Số dư tài khoản tối đa"
+
+msgid "Maximum aggregate contract purchases over a 30-day period"
+msgstr "Tổng tối đa hợp đồng mua trong thời hạn 30 ngày"
+
+msgid "Maximum aggregate contract purchases over a 7-day period"
+msgstr "Tổng tối đa hợp đồng mua trong thời hạn 7 ngày"
+
+msgid "Maximum aggregate contract purchases per day"
+msgstr "Tổng tối đa hơp đồng mua mỗi ngày"
+
+msgid "Maximum aggregate loss over a 30-day period"
+msgstr "Tổng tối đa thua trong thời hạn 30 ngày"
+
+msgid "Maximum aggregate loss per day"
+msgstr "Tổng tối đa thua mỗi ngày"
+
+msgid "Maximum number of open positions"
+msgstr "Số vị trí mở tối đa"
+
+#, fuzzy
+msgid "May"
+msgstr "ngày"
+
+msgid "Memorable date"
+msgstr "Ngày đáng nhớ"
+
+msgid "Memorable town/city"
+msgstr "Thị trấn/thành phố đáng nhớ"
+
+#, fuzzy
+msgid "Middle Band Stroke"
+msgstr "Nét trung"
+
+msgid "Min: 10 Max: 2000"
+msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
+
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "Tối thiểu 6 ký tự và phải có ít nhất 1 chữ số"
+
+msgid "Minus the agent's commission"
+msgstr "Trừ đi Hoa hồng của đại lý"
+
+msgid "Minutes"
+msgstr "Phút"
+
+msgid "Miss"
+msgstr "Trượt"
+
+msgid "Mon"
+msgstr "Thứ 2"
+
+#, fuzzy
+msgid "Monday"
+msgstr "Thứ cấp"
+
+msgid "Mother's maiden name"
+msgstr "Tên thời con gái của mẹ"
+
+msgid "Mr"
+msgstr "Ông"
+
+msgid "Mrs"
+msgstr "Bà"
+
+msgid "Ms"
+msgstr "Cô"
+
+msgid "Multiplier"
+msgstr "Số nhân"
+
+#, fuzzy
+msgid "NB Dev Down"
+msgstr "NB Dev xuống"
+
+#, fuzzy
+msgid "NB Dev Up"
+msgstr "NB Dev Lên"
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Name of first love"
+msgstr "Tên của tình yêu đầu tiên"
+
+msgid "Name of your pet"
+msgstr "Tên của con vật cưng của bạn"
+
+#, fuzzy
+msgid "Navigator handles background"
+msgstr "Điều hướng làm nền"
+
+#, fuzzy
+msgid "Navigator handles border"
+msgstr "Điều hướng làm viền"
+
+#, fuzzy
+msgid "Navigator mask-fill"
+msgstr "Điều hướng mask-fill"
+
+#, fuzzy
+msgid "Navigator outline"
+msgstr "Điều hướng viền ngoài"
+
+#, fuzzy
+msgid "Navigator series color"
+msgstr "Điều hướng nhiều màu"
+
+#, fuzzy
+msgid "Navigator series line"
+msgstr "Điều hướng nhiều đường"
+
+msgid "Net Annual Income"
+msgstr "Thu nhập ròng hàng năm"
+
+msgid "Net Profit"
+msgstr "Lợi nhuận ròng"
+
+msgid "New password"
+msgstr "Mật khẩu mới"
+
+msgid "No"
+msgstr "Không"
+
+msgid "Note that tokens can possess one or more of these scopes"
+msgstr "Lưu ý rằng token có thể có một hoặc nhiều hơn các phạm vi này"
+
+msgid ""
+"Note: Contract will be sold at the prevailing market price when the request "
+"is received by our servers. This price may differ from the indicated price"
+msgstr ""
+"Lưu ý: Hợp đồng sẽ được bán ở mức giá thị trường hiện hành khi nhận được yêu "
+"cầu từ các máy chủ của chúng tôi. Giá này có thể khác với giá chỉ định"
+
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr ""
+"Lưu ý: Rút tiền thông qua đại lý thanh toán sẽ chỉ khả dụng nếu bạn gửi tiền "
+"duy nhất thông qua đại lý thanh toán"
+
+#, fuzzy
+msgid "Nov"
+msgstr "Không"
+
+msgid "November"
+msgstr "Tháng mười một"
+
+msgid "Now"
+msgstr "Bây giờ"
+
+#, fuzzy
+msgid "Number of bars on sides"
+msgstr "Số thanh ở các bên"
+
+msgid "OAuth App ID (Optional)"
+msgstr "OAuth App ID (tùy chọn)"
+
+msgid "OAuth Server"
+msgstr "Máy chủ OAuth"
+
+msgid "OHLC"
+msgstr "OHLC"
+
+msgid "OPEN"
+msgstr "MỞ"
+
+msgid "Oct"
+msgstr "Tháng mười"
+
+msgid "October"
+msgstr "Tháng mười"
+
+msgid "Offset"
+msgstr "Bù đắp"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid ""
+"On the basis of the information provided in relation to your knowledge and "
+"experience, we consider that the investments available via this website are "
+"not appropriate for you"
+msgstr ""
+"Dựa trên cơ sở các thông tin được cung cấp liên quan đến kiến thức và kinh "
+"nghiệm của bạn, chúng tôi cho rằng những khoản đầu tư hiện có trên trang web "
+"này là không thích hợp cho bạn"
+
+msgid "Once this limit is reached, you may no longer deposit"
+msgstr "Một khi đã đạt đến giới hạn này, bạn sẽ không thể gửi tiền"
+
+msgid "One last step left"
+msgstr "Còn một bước cuối"
+
+msgid "Oops... Page Not Available"
+msgstr "Rất tiếc... Trang không tồn tại"
+
+msgid "Open"
+msgstr "Mở"
+
+msgid "Open Account"
+msgstr "Mở tài khoản"
+
+msgid "Open Price"
+msgstr "Giá mở cửa"
+
+#, fuzzy
+msgid "Open a Financial Account"
+msgstr "Mở tài khoản"
+
+msgid "Open account"
+msgstr "Mở tài khoản"
+
+msgid "Opens"
+msgstr "Mở"
+
+msgid "Opera"
+msgstr "Opera"
+
+msgid ""
+"Option trading can become a real addiction, as can any other activity pushed "
+"to its limits. To avoid the danger of such addiction, we provide a reality-"
+"check that gives you a summary of your trades and accounts on a regular basis"
+msgstr ""
+"Giao dịch quyền chọn có thể thực sự gây nghiện, cũng như bất kỳ hoạt động "
+"nào khác khi bị đẩy đến giới hạn của nó. Để tránh rủi ro của việc nghiện "
+"giao dịch, chúng tôi cung cấp một công cụ kiểm tra thực tế để cho bạn một "
+"bản tóm tắt của các giao dịch và tài khoản một cách thường xuyên"
+
+msgid "Optional field, within 20 characters and may not contain '+'"
+msgstr "Trường tùy chọn, trong vòng 20 ký tự và có thể không chứa '+'"
+
+msgid "Other"
+msgstr "Khác"
+
+msgid "Other financial instruments trading experience"
+msgstr "Kinh nghiệm giao dịch công cụ tài chính khác"
+
+msgid "Other financial instruments trading frequency"
+msgstr "Tần suất giao dịch công cụ tài chính khác"
+
+msgid "Over"
+msgstr "Qua"
+
+msgid "Over 3 years"
+msgstr "Hơn 3 năm"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "PNG"
+msgstr "PNG"
+
+#, fuzzy
+msgid "PPO Line Stroke"
+msgstr "Đường nét PPO"
+
+msgid "Page Not Found"
+msgstr "Trang không tìm thấy"
+
+msgid "Password must be 6 characters minimum"
+msgstr "Mật khẩu phải từ tối thiểu 6 ký tự"
+
+msgid "Password must contain lower and uppercase letters with numbers"
+msgstr "Mật khẩu phải chứa chữ thường và chữ hoa với chữ số"
+
+msgid "Password must contain uppercase letters and numbers"
+msgstr "Mật khẩu phải chứa chữ hoa và số"
+
+msgid "Password successfully updated"
+msgstr "Mật khẩu cập nhật thành công"
+
+msgid "Passwords didn't match. Please type them again"
+msgstr "Mật khẩu không khớp. Vui lòng nhập lại"
+
+#, fuzzy
+msgid "Payment agent"
+msgstr "Các khoản chi trả"
+
+#, fuzzy
+msgid "Payment agents"
+msgstr "Các khoản chi trả"
+
+msgid "Payments"
+msgstr "Các khoản chi trả"
+
+msgid "Payout"
+msgstr "Thanh toán"
+
+msgid "Pension"
+msgstr "Trợ cấp"
+
+msgid "Period"
+msgstr "Thời gian"
+
+msgid "Period 1"
+msgstr "Giai đoạn 1"
+
+msgid "Period 2"
+msgstr "Giai đoạn 2"
+
+msgid "Period 3"
+msgstr "Giai đoạn 3"
+
+msgid "Permissions"
+msgstr "Cấp phép"
+
+msgid "Personal Details"
+msgstr "Chi tiết cá nhân"
+
+msgid "Phone"
+msgstr "Điện thoại"
+
+msgid "Please"
+msgstr "Vui lòng"
+
+msgid "Please answer to secret question, within 4-50 characters"
+msgstr "Xin vui lòng trả lời câu hỏi bí mật, trong vòng 4-50 ký tự"
+
+msgid "Please choose at least one token scope"
+msgstr "Vui lòng chọn ít nhất một phạm vi token"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr "Vui lòng xác nhận các chi tiết sau để hoàn thành việc chuyển khoản"
+
+msgid "Please enter a number between"
+msgstr "Vui lòng nhập một số giữa"
+
+msgid "Please enter a valid date in yyyy-mm-dd format"
+msgstr "Vui lòng nhập ngày hợp lệ theo định dạng yyyy-mm-dd"
+
+msgid "Please enter a value for"
+msgstr "Vui lòng nhập một giá trị cho"
+
+msgid "Please enter a vlaid phone number"
+msgstr "Vui lòng nhập một số điện thoại hợp lệ"
+
+msgid "Please enter correct email"
+msgstr "Vui lòng nhập đúng email"
+
+msgid "Please enter date in the format YYYY-MM-DD"
+msgstr "Vui lòng nhập ngày theo định dạng YYYY-MM-DD"
+
+msgid "Please enter positive integer value between 0 and 9999"
+msgstr "Vui lòng nhập giá trị nguyên dương trong khoảng 0-9999"
+
+msgid "Please enter positive integer value for 30-day limit on losses"
+msgstr "Vui lòng nhập giá trị nguyên dương cho 30 ngày giới hạn thua"
+
+msgid "Please enter positive integer value for 30-day turnover limit"
+msgstr "Vui lòng nhập giá trị nguyên dương cho 30 ngày giới hạn doanh số"
+
+msgid "Please enter positive integer value for 7-day limit on losses"
+msgstr "Vui lòng nhập giá trị nguyên dương cho 7 ngày giới hạn thua"
+
+msgid "Please enter positive integer value for 7-day turnover limit"
+msgstr "Vui lòng nhập giá trị nguyên dương cho 7 ngày giới hạn doanh số"
+
+msgid "Please enter positive integer value for Daily limit on losses"
+msgstr "Vui lòng nhập giá trị nguyên dương cho giới hạn thua mỗi ngày"
+
+msgid "Please enter positive integer value for Daily turnover limit"
+msgstr "Vui lòng nhập giá trị nguyên dương cho giới hạn doanh số hàng ngày"
+
+msgid ""
+"Please enter positive integer value for Maximum number of open positions"
+msgstr "Vui lòng nhập giá trị nguyên dương cho số vị trí mở tối đa"
+
+msgid "Please enter the token name"
+msgstr "Vui lòng nhập tên token"
+
+msgid "Please enter the verification code sent to your email"
+msgstr "Vui lòng nhập mã xác minh được gửi tới email của bạn"
+
+msgid "Please enter value between 0 and 99999 for Session duration limit"
+msgstr "Vui lòng nhập giá trị từ 0 đến 99999 cho giới hạn thời lượng phiên"
+
+msgid "Please enter your city address"
+msgstr "Vui lòng nhập địa chỉ phố của bạn"
+
+msgid "Please enter your current password"
+msgstr "Vui lòng nhập mật khẩu hiện tại của bạn"
+
+msgid "Please enter your email"
+msgstr "Vui lòng nhập email của bạn"
+
+msgid "Please enter your family name"
+msgstr "Vui lòng nhập họ của bạn"
+
+msgid "Please enter your first name"
+msgstr "Vui lòng nhập tên của bạn"
+
+msgid "Please enter your new password"
+msgstr "Xin vui lòng nhập mật khẩu mới"
+
+msgid "Please enter your password"
+msgstr "Vui lòng nhập mật khẩu của bạn"
+
+msgid "Please enter your phone number"
+msgstr "Vui lòng nhập số điện thoại của bạn"
+
+msgid "Please enter your street address"
+msgstr "Vui lòng nhập địa chỉ đường phố của bạn"
+
+msgid "Please install the latest version of one of these browsers"
+msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
+
+msgid "Please log in"
+msgstr "Vui lòng đăng nhập"
+
+msgid "Please select"
+msgstr "Vui lòng chọn"
+
+msgid "Please try again after 1 minute"
+msgstr "Xin vui lòng thử lại sau 1 phút"
+
+msgid "Please use your new password to login"
+msgstr "Hãy sử dụng mật khẩu mới để đăng nhập"
+
+msgid "Plot"
+msgstr "Vẽ"
+
+msgid "Plot Color"
+msgstr "Vẽ màu"
+
+msgid "Pofit/Loss"
+msgstr "Lợi nhận/thiệt hại"
+
+msgid "Points"
+msgstr "Điểm"
+
+msgid "Portfolio"
+msgstr "Danh mục đầu tư"
+
+msgid "Postal code/ZIP"
+msgstr "Mã bưu chính/ZIP"
+
+msgid "Potential Payout"
+msgstr "Khả năng thanh toán"
+
+msgid "Potential Profit"
+msgstr "Lợi nhuận tiềm năng"
+
+msgid "Potential profit"
+msgstr "Lợi nhuận tiềm năng"
+
+msgid "Pre-Defined"
+msgstr "Được xác định trước"
+
+msgid "Preferred reality-check interval"
+msgstr "Khoảng kiểm tra thực tế ưu tiên"
+
+msgid "Press  Create token  button on the right to create your first token"
+msgstr "Bấm nút Tạo Token tở phía bên phải để tạo token đầu tiên của bạn"
+
+msgid "Price"
+msgstr "Giá"
+
+msgid "Primary"
+msgstr "Chính"
+
+msgid "Print chart"
+msgstr "In biểu đồ"
+
+msgid "Profit"
+msgstr "Lợi nhuận"
+
+msgid "Profit Table"
+msgstr "Bảng lợi nhuận"
+
+msgid "Profit table"
+msgstr "Bảng lợi nhuận"
+
+msgid "Profit/ Loss"
+msgstr "Lợi nhuận/Thua lỗ"
+
+msgid "Profit/Loss (points)"
+msgstr "Lợi nhuận/thua lỗ (điểm)"
+
+msgid "Purchase"
+msgstr "Mua"
+
+msgid "Purchase Date"
+msgstr "Ngày mua"
+
+msgid "Purchase Price"
+msgstr "Giá mua"
+
+msgid "Purchase Time"
+msgstr "Thời gian mua"
+
+msgid "Read"
+msgstr "Đọc"
+
+msgid "Real account opening"
+msgstr "Tài khoản Thật đang mở"
+
+msgid "Reality check"
+msgstr "Kiểm tra thực tế"
+
+msgid "Redirecting to oauth login page"
+msgstr "Chuyển hướng đến trang đăng nhập oauth"
+
+msgid "Ref"
+msgstr "REF"
+
+msgid "Register free account"
+msgstr "Đăng ký tài khoản miễn phí"
+
+msgid "Registration"
+msgstr "Đăng ký"
+
+msgid "Reloading page"
+msgstr "Đang tải lại trang"
+
+msgid "Remove Selected"
+msgstr "Xóa Lựa Chọn"
+
+#, fuzzy
+msgid "Rename"
+msgstr "Tên Token"
+
+msgid "Repeat password"
+msgstr "Lặp lại mật khẩu"
+
+msgid "Resale of this contract is not offered"
+msgstr "Việc bán lại hợp đồng này là không được phép"
+
+msgid "Reset to Defaults"
+msgstr "Đặt lại về mặc định"
+
+msgid "Reset zoom"
+msgstr "Đặt lại phóng to"
+
+msgid "Reset zoom level 1:1"
+msgstr "Đặt lại phóng to mức 1:1"
+
+msgid "Resources"
+msgstr "Tài nguyên"
+
+msgid "Responsible Trading"
+msgstr "Chịu trách nhiệm giao dịch"
+
+msgid "Results"
+msgstr "Kết quả"
+
+msgid "Return"
+msgstr "Quay trở lại"
+
+#, fuzzy
+msgid "Return to trading page"
+msgstr "Đang tải lại trang"
+
+msgid "Rise"
+msgstr "Tăng"
+
+msgid "SMA"
+msgstr "SMA"
+
+msgid "SVG"
+msgstr "SVG"
+
+msgid "Safari"
+msgstr "Safari"
+
+msgid "Salaried Employee"
+msgstr "Nhân viên được trả lương"
+
+msgid "Sale Date"
+msgstr "Ngày bán"
+
+msgid "Sale Price"
+msgstr "Giá bán"
+
+msgid "Sand Signika"
+msgstr "Cát Signika"
+
+msgid "Sat"
+msgstr "Thứ bảy"
+
+msgid "Saturday"
+msgstr "Thứ bảy"
+
+msgid "Save"
+msgstr "Lưu lại"
+
+msgid "Save as"
+msgstr "Lưu lại thành"
+
+msgid "Save changes"
+msgstr "Lưu các thay đổi"
+
+msgid "Secondary"
+msgstr "Thứ cấp"
+
+msgid "Security"
+msgstr "Bảo mật"
+
+msgid "Security question"
+msgstr "Câu hỏi bảo mật"
+
+msgid "Select Instrument"
+msgstr "Chọn công cụ"
+
+msgid "Self-Employed"
+msgstr "Tự làm"
+
+msgid "Self-Exclusion"
+msgstr "Tự Loại Trừ"
+
+msgid "Self-Exclusion Facilities"
+msgstr "Phương tiện Tự Loại Trừ"
+
+msgid "Sell At Market"
+msgstr "Bán tại thị trường"
+
+msgid "Sell Price"
+msgstr "Giá bán"
+
+msgid "Sell Spot"
+msgstr "Điểm bán"
+
+msgid "Sell Time"
+msgstr "Thời gian bán"
+
+#, fuzzy
+msgid "Send to account #"
+msgstr "Mở tài khoản"
+
+#, fuzzy
+msgid "Sent to account"
+msgstr "Mở tài khoản"
+
+msgid "Sep"
+msgstr "Tháng chín"
+
+msgid "September"
+msgstr "Tháng chín"
+
+msgid "Session"
+msgstr "Phiên"
+
+msgid "Session duration limit, in minutes"
+msgstr "Giới hạn thời lượng phiên, bằng phút"
+
+msgid "Session is not authenticated"
+msgstr "Phiên không được cấp phép"
+
+msgid "Settles"
+msgstr "Cài đặt"
+
+msgid "Share"
+msgstr "Chia sẻ"
+
+#, fuzzy
+msgid "Share chart"
+msgstr "Chia sẻ"
+
+msgid "Short MA Type"
+msgstr "Kiểu MA ngắn"
+
+msgid "Short ROC Period"
+msgstr "Thời hạn ROC ngắn"
+
+#, fuzzy
+msgid "Short Stop Line Stroke"
+msgstr "Đường nét dừng ngắn"
+
+msgid "Short Term Period"
+msgstr "Kì hạn ngắn"
+
+msgid "Show"
+msgstr "Hiển thị"
+
+msgid "Sigma"
+msgstr "Xích ma"
+
+#, fuzzy
+msgid "Signal Line Stroke"
+msgstr "Đường nét dấu hiệu"
+
+msgid "Signal MA Type"
+msgstr "Kiểu dấu hiệu MA"
+
+msgid "Signal Period"
+msgstr "Thời hạn dấu hiệu"
+
+msgid "Single MA Period"
+msgstr "Thời hạn MA đơn lẻ"
+
+msgid "Single MA Type"
+msgstr "Kiểu MA đơn lẻ"
+
+msgid "Slow %D MA Type"
+msgstr "Kiểu %D MA chậm"
+
+#, fuzzy
+msgid "Slow %D Period"
+msgstr "Thời gian %D chậm"
+
+#, fuzzy
+msgid "Slow %K MA Type"
+msgstr "Kiểu %K MA chậm"
+
+#, fuzzy
+msgid "Slow %K Period"
+msgstr "Thời gian %K chậm"
+
+msgid "Slow Limit"
+msgstr "Giới hạn chậm"
+
+msgid "Slow MA Type"
+msgstr "Kiểu MA chậm"
+
+msgid "Slow Period"
+msgstr "Thời hạn chậm"
+
+msgid "Sold"
+msgstr "Đã bán"
+
+msgid "Some random index"
+msgstr "Vài chỉ số ngẫu nhiên"
+
+msgid "Spline"
+msgstr "Chốt"
+
+msgid "Spreads"
+msgstr "Lan tỏa"
+
+msgid "Stake"
+msgstr "Cổ phần"
+
+msgid "Standard methods"
+msgstr "Phương pháp tiêu chuẩn"
+
+msgid "Standard withdrawal"
+msgstr "Rút tiền tiêu chuẩn"
+
+msgid "Start Time"
+msgstr "Thời gian bắt đầu"
+
+msgid "Start time"
+msgstr "Thời gian bắt đầu"
+
+msgid "State/province/region"
+msgstr "Bang/tỉnh/vùng"
+
+msgid "Statement"
+msgstr "Bảng kê"
+
+msgid "Status"
+msgstr "Trạng thái"
+
+msgid "Stays In/Goes Out"
+msgstr "Ở trong/Ra ngoài"
+
+msgid "Stocks trading experience"
+msgstr "Kinh nghiệm giao dịch cổ phiếu"
+
+msgid "Stocks trading frequency"
+msgstr "Tần suất giao dịch cổ phiếu"
+
+msgid "Stop Loss Level"
+msgstr "Ngăn chặn mức độ thua"
+
+msgid "Stop Profit Level"
+msgstr "Ngăn chặn mức độ lợi nhuận"
+
+msgid "Stop-loss"
+msgstr "Chặn thua"
+
+msgid "Stop-profit"
+msgstr "Dừng lợi nhuận"
+
+msgid "Stop-type"
+msgstr "Kiểu ngưng"
+
+msgid "Street address"
+msgstr "Địa chỉ đường phố"
+
+#, fuzzy
+msgid "Stroke"
+msgstr "Nét"
+
+#, fuzzy
+msgid "Stroke color"
+msgstr "Màu nét"
+
+#, fuzzy
+msgid "Stroke width"
+msgstr "Độ rộng nét"
+
+msgid "Submit"
+msgstr "Gửi"
+
+msgid "Successfully added new token"
+msgstr "Thêm thành công token mới"
+
+msgid "Sun"
+msgstr "Chủ nhật"
+
+msgid "Sunday"
+msgstr "Chủ Nhật"
+
+msgid "TEMA"
+msgstr "TEMA"
+
+msgid "TRIMA"
+msgstr "TRIMA"
+
+msgid "Table"
+msgstr "Bảng biểu"
+
+#, fuzzy
+msgid "Tel"
+msgstr "Thứ Ba"
+
+#, fuzzy
+msgid "Template name"
+msgstr "Tên Token"
+
+msgid "Terms"
+msgstr "Điều khoản"
+
+msgid "Terms and Conditions"
+msgstr "Điều Khoản và Điều Kiện"
+
+#, fuzzy
+msgid "Tertiary"
+msgstr "Mức độ 3"
+
+msgid "The"
+msgstr ""
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the aquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract permium"
+msgstr ""
+"Những dịch vụ giao dịch tài chính ở trên trang web này chỉ thích hợp cho "
+"những khách hàng là những người có thể chịu sự tổn thất của tất cả số tiền "
+"họ đầu tư vào và là những người có kiến thức và có kinh nghiệm với rủi ro "
+"liên quan đến hợp đồng tài chính. Giao dịch trong các hợp đồng tài chính "
+"chứa đựng một mức độ rủi ro cao. Nếu hợp đồng được mua bị hết thời hạn và "
+"trở nên vô giá trị, bạn sẽ bị mất toàn bộ khoản đầu tư cùng với lợi nhuận "
+"của hợp đồng"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
+msgstr ""
+"Không tìm thấy trang bạn yêu cầu. Nó không còn tồn tại hoặc địa chỉ bị sai. "
+"Vui lòng kiểm tra lỗi chính tả nếu có"
+
+msgid ""
+"There was a market data disruption during the contract period. For real-"
+"money accounts we will attempt to correct this and settle the contract "
+"properly, otherwise the contract will be cancelled and refunded. Virtual-"
+"money contracts will be cancelled and refunded"
+msgstr ""
+"Đã có một sự phá vỡ dữ liệu thị trường trong thời gian hợp đồng có hiệu lực. "
+"Đối với tài khoản tiền thật chúng tôi sẽ cố gắng khắc phục điều này và thanh "
+"toán các hợp đồng một cách chuẩn xác, nếu không hợp đồng sẽ được hủy bỏ và "
+"hoàn tiền. Hợp đồng tiền ảo sẽ được hủy bỏ và hoàn trả"
+
+msgid "There was an error"
+msgstr "Đã có lỗi"
+
+msgid "This contract has expired"
+msgstr "Hợp đồng này đã hết hạn"
+
+msgid "This contract lost"
+msgstr "Hợp đồng này đã thua"
+
+msgid "This contract won"
+msgstr "Hợp đồng này đã thắng"
+
+msgid "This field is required"
+msgstr "Trường này là bắt buộc"
+
+msgid "Thu"
+msgstr "Thứ năm"
+
+msgid "Thursday"
+msgstr "Thứ năm"
+
+msgid "Tick Trade app"
+msgstr "Đánh dấu app giao dịch"
+
+msgid "Tick {row.number}"
+msgstr "Đánh dấu {dòng.số}"
+
+msgid "Ticks"
+msgstr "Đánh dấu"
+
+msgid "Tile"
+msgstr "Kiểu xếp ngói"
+
+msgid "Time Period"
+msgstr "Thời hạn"
+
+msgid "Time interval"
+msgstr "Khoảng thời gian"
+
+msgid "Time period"
+msgstr "Thời hạn"
+
+#, fuzzy
+msgid "Timeout for websocket request"
+msgstr "Thời gian chờ websocket yêu cầu"
+
+msgid "Title"
+msgstr "Tiêu đề"
+
+msgid "To"
+msgstr "Tới"
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr "Phải gửi tiền xin vui lòng liên hệ trực tiếp với đại lý thanh toán"
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+"Để tiến hành gửi tiền và rút tiền cho các phương pháp thanh toán hoặc các "
+"loại tiền tệ địa phương mà không được hỗ trợ bởi Binary.com hãy liên hệ với "
+"một đại lý thanh toán"
+
+#, fuzzy
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
+msgstr "Vui lòng nhập mã xác minh được gửi tới email của bạn"
+
+msgid "Token"
+msgstr "Token"
+
+msgid "Token management"
+msgstr "Quản lý Token"
+
+msgid "Token name"
+msgstr "Tên Token"
+
+msgid "Token permissions"
+msgstr "Cấp phép Token"
+
+msgid ""
+"Tokens are special codes for accessing Binary mobile applications and third "
+"party tools"
+msgstr ""
+"Token là những mã đặc biệt để truy cập ứng dụng Nhị phân trên điện thoại và "
+"các công cụ của bên thứ ba"
+
+msgid "Tooltip background"
+msgstr "Công cụ chú thích nền"
+
+msgid "Tooltip text"
+msgstr "Chữ chú thích"
+
+msgid "Total Cost"
+msgstr "Tổng chi phí"
+
+msgid "Total Profit/Loss"
+msgstr "Tổng lợi nhuận/tổn thất"
+
+msgid "Touch/No Touch"
+msgstr "Chạm/Không chạm"
+
+msgid "Tourism"
+msgstr "Du lịch"
+
+msgid "Town/City"
+msgstr "Tỉnh/thành phố"
+
+msgid "Trade"
+msgstr "Giao dịch"
+
+msgid "Trade Confirmation"
+msgstr "Xác nhận giao dịch"
+
+msgid "Trade using"
+msgstr "Giao dịch đang sử dụng"
+
+msgid "Trading Times"
+msgstr "Thời Gian Giao Dịch"
+
+msgid ""
+"Trading binary options may not be suitable for everyone, so please ensure "
+"that you fully understand the risks involved. Your losses can exceed your "
+"initial deposit and you do not own or have any interest in the underlying "
+"asset"
+msgstr ""
+"Giao dịch quyền chọn nhị phân có thể không phù hợp cho tất cả mọi người, vì "
+"vậy hãy đảm bảo rằng bạn hoàn toàn hiểu những rủi ro liên quan. Thiệt hại "
+"của bạn có thể vượt quá tiền gửi ban đầu của bạn và bạn không sở hữu hoặc có "
+"bất kỳ lợi nhuận nào với các tài sản hữu quan"
+
+msgid ""
+"Trading the financial markets can become addictive. Fill in the form below "
+"to limit your participation on the website or send a signed letter or fax to "
+"our customer support team. Once set, you can only tighten your limits. "
+"Limits will only be removed or loosened after 7 days with the exception of "
+"the self- exclusion date, which cannot be removed or altered once you have "
+"confirmed it. To remove or increase your limits, please contact"
+msgstr ""
+"Việc giao dịch trên thị trường tài chính có thể trở thành nghiện. Hãy điền "
+"vào mẫu dưới đây để hạn chế sự tham gia của bạn trên các trang web hoặc gửi "
+"một bức thư đã ký hoặc fax cho nhóm hỗ trợ khách hàng của chúng tôi. Sau khi "
+"cài đặt, bạn chỉ có thể thắt chặt giới hạn của bạn. Giới hạn chỉ sẽ được gỡ "
+"bỏ hoặc nới lỏng sau 7 ngày cùng với ngoại lệ cho ngày Tự Loại Trừ, là thời "
+"gian mà không thể gỡ bỏ hoặc thay đổi một khi bạn đã xác nhận nó. Để loại bỏ "
+"hoặc tăng giới hạn của bạn, vui lòng liên hệ"
+
+msgid "Tradingview for Binary.com"
+msgstr "Xem giao dịch cho Binary.com"
+
+msgid "Transfer to another Binary account"
+msgstr "Chuyển khoản sang tài khoản nhị phân khác"
+
+msgid "Try"
+msgstr "Thử"
+
+msgid "Tue"
+msgstr "Thứ Ba"
+
+msgid "Tuesday"
+msgstr "Thứ ba"
+
+msgid "Turnover"
+msgstr "Doanh số"
+
+msgid "USD"
+msgstr "USD"
+
+msgid "Unfortunately, your browser does not support them"
+msgstr "Thật không may, trình duyệt của bạn không hỗ trợ họ"
+
+msgid "Unlock"
+msgstr "Mở khóa"
+
+msgid "Up/Down"
+msgstr "Lên/xuống"
+
+msgid "Upcoming Events"
+msgstr "Sự kiện sắp tới"
+
+msgid "Update Settings"
+msgstr "Cập Nhật cài đặt"
+
+#, fuzzy
+msgid "Upgrade to a Real Account"
+msgstr "Mở tài khoản"
+
+#, fuzzy
+msgid "Upper Band Stroke"
+msgstr "Nét lên"
+
+msgid "Use"
+msgstr "Sử dụng"
+
+msgid ""
+"Use the \"Save as ...\" button to save the chart settings, type, time "
+"period, indicators and comparisons"
+msgstr ""
+"Sử dụng nút \"Lưu lại thành...\" để lưu giữ lại các cài đặt biểu đồ, loại, "
+"thời gian, các chỉ số và so sánh"
+
+msgid "Verification code has been sent to your email"
+msgstr "Mã xác minh đã được gửi đến email của bạn"
+
+msgid "Verification code sent to"
+msgstr "Mã xác minh gửi đến"
+
+msgid "Verification token"
+msgstr "Xác nhận Token"
+
+msgid "Verify new password"
+msgstr "Xác nhận mật khẩu mới"
+
+msgid "Vertical Line"
+msgstr "Đường dọc"
+
+#, fuzzy
+msgid "Vertical line"
+msgstr "Đường dọc"
+
+msgid "View"
+msgstr "Xem"
+
+msgid "View Historical Data"
+msgstr "Xem dữ liệu lịch sử"
+
+msgid "Volume Factor"
+msgstr "Yếu tố khối lượng"
+
+msgid "WMA"
+msgstr "WMA"
+
+msgid "WMA Period"
+msgstr "Thời hạn WMA"
+
+msgid "Websocket Server"
+msgstr "Máy chủ Websocket"
+
+msgid "Webtrader"
+msgstr "WebTrader"
+
+msgid ""
+"Webtrader uses new web technologies for rich and enjoyable trading experience"
+msgstr ""
+"WebTrader sử dụng công nghệ web mới để cho ra một trải nghiệm giao dịch thú "
+"vị và phong phú"
+
+msgid "Wed"
+msgstr "Thứ Tư"
+
+msgid "Wednesday"
+msgstr "Thứ tư"
+
+msgid "While on the go, you can"
+msgstr "Khi đang tiến hành, bạn có thể"
+
+msgid "Windows"
+msgstr "Windows"
+
+msgid "Withdraw funds"
+msgstr "Rút tiền tài khoản"
+
+msgid "Withdrawal via payment agents"
+msgstr "Rút tiền thông qua đại lý thanh toán"
+
+msgid "X-axis labels"
+msgstr "Nhãn X-axis"
+
+msgid "X-axis line"
+msgstr "Đường X-axis"
+
+msgid "X-axis tick"
+msgstr "Đánh dấu X-axis"
+
+msgid "Y-axis gridline"
+msgstr "Đường kẻ ô Y-axis"
+
+msgid "Y-axis labels"
+msgstr "Nhãn Y-axis"
+
+#, fuzzy
+msgid "Yes"
+msgstr "Có"
+
+msgid "You have excluded yourself until"
+msgstr "Bạn đã Tự Loại Trừ bản thân cho đến"
+
+msgid "You have sold the following contract"
+msgstr "Bạn đã bán hợp đồng sau"
+
+msgid ""
+"You have to register webtrader and get App ID before you can use different "
+"OAuth server for authentication. For more information refer to OAuth details "
+"on"
+msgstr ""
+"Bạn phải đăng ký webtrader và cài App ID trước khi bạn có thể sử dụng các "
+"máy chủ OAuth khác nhau cho việc xác thực. Để biết thêm thông tin vui lòng "
+"tham khảo chi tiết OAuth trên"
+
+msgid "You haven't saved any templates yet"
+msgstr "Bạn chưa lưu lại bất kỳ mẫu nào"
+
+msgid "You pay"
+msgstr "Bạn trả"
+
+msgid "You will be automatically logged out after such time"
+msgstr "Bạn sẽ được tự động đăng xuất sau thời gian như vậy"
+
+msgid ""
+"Your Binary.com account is created, but to start trading you need to allow "
+"Webtrader access it"
+msgstr ""
+"Tài khoản Binary.com của bạn đã được tạo, nhưng để bắt đầu giao dịch bạn cần "
+"cho phép Webtrader truy cập nó"
+
+msgid "Your browser doesn't support copy to clipboard"
+msgstr "Trình duyệt của bạn không hỗ trợ sao chép vào clipboard"
+
+msgid "Your browser is not supported"
+msgstr "Trình duyệt của bạn không được hỗ trợ"
+
+msgid "Your changes have been updated"
+msgstr "Thay đổi của bạn đã được Cập Nhật"
+
+msgid "Your email"
+msgstr "Email của bạn"
+
+msgid "Your new account balance is"
+msgstr "Số dư tài khoản mới của bạn là"
+
+msgid "Your transaction reference is"
+msgstr "Tham chiếu của giao dịch của bạn là"
+
+msgid "Your transaction reference number is"
+msgstr "Số tham chiếu giao dịch của bạn là"
+
+msgid "Zoom"
+msgstr "Phóng to"
+
+msgid "admin"
+msgstr "admin"
+
+msgid "and"
+msgstr "và"
+
+msgid ""
+"below and proceeding with the Account Opening you should note that you may "
+"be exposing yourself to risks (which may be significant, including the risk "
+"of loss of the entire sum invested) that you may not have the knowledge and "
+"experience to properly assess or mitigate"
+msgstr ""
+"dưới đây và tiếp tục với việc mở tài khoản, bạn nên lưu ý rằng bạn có thể "
+"đang đối diện với những rủi ro (có thể là đáng kể, trong đó có nguy cơ mất "
+"toàn bộ số tiền đầu tư) mà bạn có thể không có kiến thức và kinh nghiệm để "
+"đánh giá đúng mực và giảm thiểu"
+
+msgid "between"
+msgstr "giữa"
+
+#, fuzzy
+msgid "commission"
+msgstr "Cấp phép"
+
+msgid "contact support"
+msgstr "liên hệ hỗ trợ"
+
+msgid "customer support"
+msgstr "hỗ trợ khách hàng"
+
+msgid "day"
+msgstr "ngày"
+
+msgid "days"
+msgstr "ngày"
+
+msgid "e.g"
+msgstr "ví dụ"
+
+msgid "e.g, www2.binary.com, www.binaryqa36.com"
+msgstr "Ví dụ: www2.binary.com, www.binaryqa36.com"
+
+msgid "end time"
+msgstr "thời gian kết thúc"
+
+msgid "entry spot"
+msgstr "Điểm khởi đầu"
+
+msgid "exit spot"
+msgstr "Điểm chốt"
+
+msgid "feed is delayed by"
+msgstr "nguồn cấp bị trì hoãn bởi"
+
+msgid "for API calls that can access the cashier"
+msgstr "dành cho các cuộc gọi API mà có thể truy cập vào thu ngân"
+
+msgid "for API calls that can create trades in the client account"
+msgstr ""
+"dành cho các cuộc gọi API mà có thể tạo giao dịch tới tài khoản của khách "
+"hàng"
+
+msgid "for API calls that change client settings"
+msgstr "dành cho các cuộc gọi API mà cò thể thay đổi cài đặt khách hàng"
+
+msgid "for API calls that only read client data"
+msgstr "dành cho các cuộc gọi API mà chỉ có thể đọc dữ liệu khách hàng"
+
+msgid "for mobile charts"
+msgstr "dành cho bảng điện thoại di động"
+
+msgid "has updated its"
+msgstr "đã nâng cấp"
+
+msgid "hour"
+msgstr "giờ"
+
+msgid "hours"
+msgstr "giờ"
+
+msgid "https://developers.binary.com/"
+msgstr "https://Developers.Binary.com/"
+
+msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+msgstr "ID-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+
+msgid "if this is not your country of residence"
+msgstr "nếu như đây không phải quốc gia bạn cư trú"
+
+msgid "in the future, the"
+msgstr "trong tương lai,"
+
+msgid "information about your trading exprience and personal finance"
+msgstr "thông tin về kinh nghiệm giao dịch và tài chính cá nhân của bạn"
+
+msgid ""
+"is Binary's advanced desktop trading platform. Its multi-window interface "
+"provides maximum flexibility and suits the needs of active traders working "
+"on their desktop PCs"
+msgstr ""
+"là nền tảng giao dịch cao cấp dành cho máy tính để bàn cao của Binary. Giao "
+"diện đa cửa sổ cung cấp sự linh hoạt tối đa và phù hợp với nhu cầu hoạt động "
+"của người giao dịch làm việc trên máy tính để bàn của họ"
+
+#, fuzzy
+msgid "is required. Current spread"
+msgstr "là cần. Hiện phân tán"
+
+msgid "is that which is selected and the"
+msgstr "là phần được chọn và"
+
+msgid "is the"
+msgstr "là"
+
+msgid "is the price in effect at that time"
+msgstr "là mức giá có hiệu lực tại thời điểm đó"
+
+msgid "is the selected number of minutes/hours after the"
+msgstr "là số phút/giờ được lựa chọn sau khi"
+
+msgid "is the selected time"
+msgstr "là thời gian đã chọn"
+
+msgid "is the spot at the"
+msgstr "là vị trí tại"
+
+msgid "is when the contract is processed by our servers and the"
+msgstr "là khi hợp đồng được xử lý bởi các máy chủ của chúng tôi và"
+
+msgid "main site"
+msgstr "Trang web chính"
+
+msgid "market is presently closed"
+msgstr "thị trường hiện đã đóng cửa"
+
+msgid "minute"
+msgstr "phút"
+
+msgid "minutes"
+msgstr "phút"
+
+msgid "next tick"
+msgstr "đánh dấu tiếp theo"
+
+msgid "oauth"
+msgstr "OAuth"
+
+msgid "of \"Now\", the"
+msgstr "của \"bây giờ\","
+
+#, fuzzy
+msgid "payment agent"
+msgstr "chi trả"
+
+msgid "payments"
+msgstr "chi trả"
+
+msgid "please play responsibly. Read about"
+msgstr "hãy chơi có trách nhiệm. Đọc về"
+
+msgid "points"
+msgstr "điểm số"
+
+msgid "read"
+msgstr "đọc"
+
+msgid "second"
+msgstr "giây"
+
+msgid "seconds"
+msgstr "giây"
+
+msgid "session overview"
+msgstr "tổng quan phiên giao dịch"
+
+msgid "start time"
+msgstr "thời gian bắt đầu"
+
+msgid "terms and conditions"
+msgstr "Điều Khoản và Điều Kiện"
+
+msgid "the"
+msgstr ""
+
+msgid "thereafter"
+msgstr "sau đó"
+
+msgid "tick"
+msgstr "đánh dấu"
+
+msgid "ticks"
+msgstr "đánh dấu"
+
+msgid "trade"
+msgstr "giao dịch"
+
+msgid "trading experience"
+msgstr "kinh nghiệm giao dịch"
+
+msgid "trading frequency"
+msgstr "tần xuất giao dịch"
+
+msgid "websocket"
+msgstr "websocket"
+
+msgid "yes"
+msgstr "Có"
+
+msgid "{agent.commission}%"
+msgstr "{hoa hồng cho đại lý}%"
+
+msgid "| Return"
+msgstr "| Quay trở lại"
+
+#~ msgid "Add overlays"
+#~ msgstr "Thêm lớp phủ"
+
+#~ msgid "Current overlays"
+#~ msgstr "Lớp phủ hiện tại"
+
+#, fuzzy
+#~ msgid ""
+#~ "In order to properly apply this language, a full refresh of page is "
+#~ "required. Are you sure you want to proceed?"
+#~ msgstr ""
+#~ "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc "
+#~ "bạn muốn tiếp tục không?"
+
+#~ msgid "Open real money account"
+#~ msgstr "Mở tài khoản tiền thật"
+
+#~ msgid "Apply new theme?"
+#~ msgstr "Áp dụng chủ đề mới?"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "Phần mở rộng của Chrome"

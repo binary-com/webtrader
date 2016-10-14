@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -21,16 +23,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
         };
         var defaultLevels = [];
 
-        require(['text!charts/indicators/sum/sum.html'], function ($html) {
+        require(['text!charts/indicators/sum/sum.html', 'text!charts/indicators/indicators.json'], function ($html, data) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.sum;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.sum-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#sum_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part: {
                     map: { size: 128 },
                     bar: { size: 128 }
@@ -52,14 +66,14 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#sum_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 118,
+                width: 148,
                 background: "white",
                 onSelected: function (data) {
-                    $('#sum_dashStyle .dd-selected-image').css('max-width', '85px');
+                    $('#sum_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#sum_dashStyle .dd-option-image').css('max-width', '85px');
+            $('#sum_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             var table = $html.find('#sum_levels').DataTable({
                 paging: false,
@@ -109,6 +123,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
@@ -156,6 +171,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 appliedTo: parseInt($html.find("#sum_appliedTo").val()),
                                 levels: levels
                             };
+                            before_add_callback && before_add_callback();
                             //Add SUM for the main series
                             $($(".sum").data('refererChartID')).highcharts().series[0].addIndicator('sum', options);
 
@@ -170,8 +186,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 120
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function") {
@@ -184,15 +202,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     return {
 
-        open: function (containerIDWithHash) {
-
-            if ($(".sum").length == 0) {
-                init(containerIDWithHash, this.open);
-                return;
-            }
-
-            $(".sum").data('refererChartID', containerIDWithHash).dialog("open");
-
+        open: function (containerIDWithHash, before_add_cb) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".sum").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
+            if ($(".sum").length == 0)
+                init( containerIDWithHash, this.open );
+            else
+                open();
         }
 
     };

@@ -1,20 +1,23 @@
-@font-face {
-    src: url('fonts/Roboto-Regular.ttf') format('truetype');
-    font-family: 'Roboto';
-}
-
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-size: 16px !important;
 }
 
-body {
-    font-size: 80%;
-    position:relative;
+body.rtl-direction { /* for arabic language */
+    direction: rtl;
 }
+body.rtl-direction .ltr-direction { /* exception dialogs */
+    direction: ltr;
+}
+
 .mainContainer {
     width: 100%;
+}
+
+body.affiliates {
+  overflow-x: hidden;
 }
 
 body > .footer {
@@ -22,8 +25,11 @@ body > .footer {
     top:0;
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 96px;
     text-align: center;
+    color :  #88a;
+    padding-top : 2px;
+    padding-bottom : 2px;
 }
 body > .footer .addiction-warning {
     position: absolute;
@@ -49,17 +55,9 @@ body > .footer .addiction-warning a:hover {
 }
 
 
-body * {
-    font-family: 'Roboto', sans-serif;
-}
-
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
   width: 14px !important;
   height: 14px !important;
-}
-
-.ui-dialog { /* add boxshadow to dialgos*/
-  box-shadow: 0px 2px 30px rgba(0,0,0,0.2);
 }
 
 .ui-dialog {
@@ -67,7 +65,7 @@ body * {
 }
 
 .ui-dialog-content {
-    background-color: #F5F6F8!important;
+    background-color: #f2f2f2!important;
 }
 
 .ui-corner-all {
@@ -103,25 +101,8 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
     line-height: 1.2em;
 }
 
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-    font-family: 'Roboto'!important;
-}
-
 .ui-widget {
     outline: 0;
-}
-
-.ui-button {
-    margin-top: 5px;
-}
-
-.ui-button-text-only.ui-state-hover,
-.ui-button-text-only.ui-button:hover {
-    color: #FFFFFF!important;
-    background: #3F476E!important;
 }
 
 .ui-dialog .ui-dialog-content {
@@ -131,10 +112,7 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
 .ui-dialog-titlebar-buttonpane {
   height: 14px !important;
   margin-top: -7px !important;
-}
-
-.gtm_data_layer {
-    display: none;
+  margin-right: 10px!important;
 }
 
 button.ui-button-text-only {
@@ -151,7 +129,6 @@ button.ui-button-text-only .ui-menu {
 .ui-menu {
     z-Index: 1003;
 }
-
 /*Overriding this class inheritted from dataTables jquery plugin*/
 
 .dataTables_scrollHeadInner,
@@ -182,7 +159,7 @@ button.ui-button-text-only .ui-menu {
 .sk-spinner-container {
     width: 60px;
     height: 60px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 60px;
@@ -271,35 +248,6 @@ input::-ms-clear {
 /* Remove dotted-underline around buttons in FF */
 button::-moz-focus-inner { border: 0; }
 
-/* CSS3 shine effects for buttons */
-.shine {
-  position: relative;
-}
-/* default style for green button */
-.green-button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    max-width: 200px;
-    line-height: 2em;
-    width: 100%;
-    cursor: pointer;
-}
-/* default style for blue button */
-.blue-button {
-    background: #273051;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    max-width: 200px;
-    line-height: 2em;
-    width: 100%;
-    cursor: pointer;
-}
-
 /* default style for inputs */
 input:not([type='checkbox']) {
   border: none;
@@ -312,35 +260,189 @@ input:not([type='checkbox']) {
   height: 26px;
   line-height: 26px;
 }
+
+/*Overriding css for color-picker*/
+input[type="radio"].ui-colorpicker-mode {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+input[type="number"].ui-colorpicker-number {
+  box-shadow: none;
+  width: 60px;
+  height: auto;
+  line-height: normal;
+}
+input[type="text"].ui-colorpicker-hex-input {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+input[type="text"].ui-colorpicker-hex-alpha {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  line-height: normal;
+}
+/*Ends here*/
+
 input:focus {
   box-shadow: inset 0 2px 2px rgba(0,0,120,.25);
 }
 
-
-/* sine effect, hover style if required */
-.shine:hover { }
-/* generated element for shine effect. normal state is semi-transparent
- * white but with zero width. Set no transition here for no mouse-leave
- * animations. Otherwise the effect will play in reverse when your mouse
- * leaves the element */
-.shine:not([disabled=disabled]):after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 0%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.4);
-    transition: none;
+.growl.growl-notice {
+    background: #fef1cf !important;
+    color: black !important;
 }
-/* on hover we animate the width to 100% and opacity to 0 so the element
- * grows and fades out */
-.shine:not([disabled=disabled]):hover:after {
-    width: 110%;
-    background-color: rgba(255,255,255,0);
-    transition: all 1s ease-out;
+.growl > .growl-close {
+  padding-left: 5px;
+}
+#growls { top: 110px !important; }
+
+.growl-error a {
+  color: white !important;
+  text-decoration: underline;
 }
 
-#growls.default {
-  top: 45px !important; /* show growl notifictions below the navigation-bar */
+button {
+    outline: 0 !important;
+}
+button.button-disabled,
+button[disabled] {
+  opacity: 0.5;
+}
+
+.table {
+    display: table;
+}
+.row {
+    display: table-row;
+}
+.cell {
+    display: table-cell;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+/* For confirmation dialogs */
+.dialog-confirm.ui-dialog  {
+    background: #f2f2f2;
+    border-bottom: 5px solid #EA9800;
+}
+
+.dialog-confirm.ui-dialog .ui-widget-content {
+    background: #f2f2f2;
+    border: none;
+    padding: 0.5em 1em 0em 1em;
+    text-align: center
+}
+/* Hide Dialog title-bar*/
+.dialog-confirm.ui-dialog .ui-dialog-titlebar {
+    display: none;
+}
+
+/* override timepciker styles */
+.ui-timepicker-table {
+  background: #f2f2f2;
+}
+.ui-timepicker-title {
+  margin: 2px;
+  border-radius: 3px!important;
+}
+.ui-timepicker-table table {
+  margin-right: 1px!important;
+}
+.ui-timepicker td a, .ui-timepicker td span {
+  text-align: center!important;
+  border-radius: 3px!important;
+  padding: 3px 5px!important;
+  font-size: 12px;
+}
+.ui-timepicker-table td a.ui-state-active {
+  background: #3F476E;
+  font-weight: bold;
+}
+.ui-timepicker-close {
+  background: #2E8836!important;
+  border-radius: 3px!important;
+  padding: 10px 15px!important;
+  font-size: 1em!important;
+}
+/* override datepicker syles */
+#ui-datepicker-div.ui-datepicker {
+  background: rgb(242, 242, 242);
+  padding: 0 0 0 0;
+}
+.ui-datepicker-month, .ui-datepicker-year {
+  margin-right:5px!important;
+  border: 1px solid #273051;
+}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar {
+  margin-left: 3.2px;
+  width: 98%;
+}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar a {
+  color: #FFF;
+  text-align: center;
+  line-height: 100%;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar a.ui-state-active {
+  background: #3F476E;
+  font-weight: bold;
+}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar tbody span {
+  border-radius: 3px;
+  text-align: center;
+  font-size: 12px;
+}
+.ui-datepicker-buttonpane {
+  text-align: center;
+  background: #f2f2f2;
+}
+.ui-datepicker-current, .ui-datepicker-close {
+  color: #FFF;
+  line-height: 100%;
+  background: #2E8836!important;
+  border-radius: 3px!important;
+  padding: 10px 15px!important;
+  font-size: 1em!important;
+  float: none!important;
+}
+.ui-datepicker-current:hover, .ui-datepicker-close:hover {
+  background: #14602B!important;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+  color: white!important;
+}
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover{
+  background: #394171!important;
+  border: 0!important;
+  border-radius: 3px!important;
+  height: 30px;
+}
+
+/* override table styles*/
+table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
+  border-bottom: none!important;
+}
+
+#doorbell-button  {
+    right: -37px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    font-size: inherit;
+    background-color: #2E8836;
+    bottom: 100px;
 }

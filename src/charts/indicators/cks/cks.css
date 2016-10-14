@@ -1,5 +1,5 @@
 ﻿.cks_input_width {
-    width: 160px;
+    width: 155px;
 }
 
 .cks_input_width_for_period {
@@ -11,5 +11,5 @@
 }
 
 .cks-ui-dialog, .cks.ui-dialog-content {
-    overflow: visible;
+    overflow: auto;
 }

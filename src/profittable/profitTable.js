@@ -7,6 +7,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
     var profitWin = null,
         table = null,
+        currency = local_storage.get("currency"),
         datepicker = null;
 
     function init($menuLink) {
@@ -61,15 +62,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
             var transactions = (data.profit_table && data.profit_table.transactions) || [];
             var rows = transactions.map(function (trans) {
                 var profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
+                var view_button = '<button>View</button>'.i18n();
                 return [
                     epoch_to_string(trans.purchase_time, { utc: true }),
                     trans.transaction_id,
                     trans.longcode,
-                    trans.buy_price,
+                    formatPrice(trans.buy_price,currency),
                     epoch_to_string(trans.sell_time, { utc: true }),
-                    trans.sell_price,
+                    formatPrice(trans.sell_price,currency),
                     profit,
-                    '<button class="green-button shine">View</button>',
+                    view_button,
                     trans, /* we will use it when handling arrow clicks to show view transaction dialog */
                 ];
             });
@@ -91,24 +93,24 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
     var on_arrow_click = function(e){
       var target = e.target;
       var $target = $(target);
-      if(target.tagName !== 'BUTTON' || $target.hasClass('disabled'))
+      if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
         return;
       var tr = target.parentElement.parentElement;
       var transaction = table.api().row(tr).data();
       transaction = _.last(transaction);
-      $target.addClass('disabled');
+      $target.addClass('button-disabled');
       require(['viewtransaction/viewTransaction'], function(viewTransaction){
         viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                       .then(function(){ $target.removeClass('disabled'); });
+                       .then(function(){ $target.removeClass('button-disabled'); });
       });
     }
 
     function initProfitWin() {
         require(['text!profittable/profitTable.html'], function (html) {
           profitWin = windows.createBlankWindow($('<div/>'), {
-              title: 'Profit Table',
-              width: 700,
-              minHeight:90,
+              title: 'Profit Table'.i18n(),
+              width: 700 ,
+              height: 400,
               destroy: function() { table && table.DataTable().destroy(true); profitWin = null; },
               refresh: function() {
                 datepicker.clear();
@@ -116,8 +118,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
               },
               'data-authorized': 'true'
           });
+          profitWin.track({
+            module_id: 'profitTable',
+            is_unique: true,
+            data: null
+          });
 
-            table = $(html);
+            table = $(html).i18n();
             table.appendTo(profitWin);
             var footer = $('<div/>').addClass('profit-table-info');
 
@@ -129,6 +136,8 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                         var css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
                         if (css_class)
                             $(td).addClass(css_class);
+                        $(td).attr("data-src", cellData);
+                        td.textContent = formatPrice(cellData,currency);
                     }
                 }],
                 info: false,
@@ -137,11 +146,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
                   var total = api.column(6).data()
                     .reduce(function(a, b) { return a*1 + b*1; }, 0);
-
+                
                   var css = 'total ' + (total >= 0 ? 'green' : 'red');
                   footer.html(
                     '<span class="title">Total Profit/Loss<span>' +
-                    '<span class="' + css + '">'+ formatPrice(total) +'</span>'
+                    '<span class="' + css + '">'+ formatPrice(total,currency) +'</span>'
                   );
                 },
                 paging: false,
@@ -149,7 +158,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
                 searching: true,
                 processing: true
             });
-            footer.appendTo(table.parent());
+            footer.i18n().appendTo(table.parent());
             table.parent().addClass('hide-search-input');
 
             // Apply the a search on each column input change
@@ -163,7 +172,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "
 
             refreshTable({clear: true});
             datepicker = profitWin.addDateToHeader({
-                title: 'Jump to: ',
+                title: 'Jump to: '.i18n(),
                 date: null, /* set date to null */
                 changed: refreshTable,
                 cleared: refreshTable

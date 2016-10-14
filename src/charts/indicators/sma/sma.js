@@ -4,6 +4,8 @@
 
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
+    var before_add_callback = null;
+
     function closeDialog() {
         $(this).dialog("close");
         $(this).find("*").removeClass('ui-state-error');
@@ -13,16 +15,28 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
         require(['css!charts/indicators/sma/sma.css']);
 
-        require(['text!charts/indicators/sma/sma.html'], function ( $html ) {
+        require(['text!charts/indicators/sma/sma.html', 'text!charts/indicators/indicators.json'], function ( $html, data ) {
 
             var defaultStrokeColor = '#cd0a0a';
 
             $html = $($html);
             //$html.hide();
             $html.appendTo("body");
+
+            data = JSON.parse(data);
+            var current_indicator_data = data.sma;
+            $html.attr('title', current_indicator_data.long_display_name);
+            $html.find('.sma-description').html(current_indicator_data.description);
+
             $html.find("input[type='button']").button();
 
             $html.find("#sma_stroke").colorpicker({
+				showOn: 'click',
+                position: {
+                    at: "right+100 bottom",
+                    of: "element",
+                    collision: "fit"
+                },
                 part:	{
                     map:		{ size: 128 },
                     bar:		{ size: 128 }
@@ -43,20 +57,21 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             var selectedDashStyle = "Solid";
             $('#sma_dashStyle').ddslick({
                 imagePosition: "left",
-                width: 138,
+                width: 150,
                 background: "white",
                 onSelected: function (data) {
-                    $('#sma_dashStyle .dd-selected-image').css('max-width', '105px');
+                    $('#sma_dashStyle .dd-selected-image').css('max-height','5px').css('max-width', '115px');
                     selectedDashStyle = data.selectedData.value
                 }
             });
-            $('#sma_dashStyle .dd-option-image').css('max-width', '105px');
+            $('#sma_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             $html.dialog({
                 autoOpen: false,
                 resizable: false,
                 modal: true,
-                width: 280,
+                width: 350,
+                height: 400,
                 my: 'center',
                 at: 'center',
                 of: window,
@@ -87,6 +102,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                                 dashStyle: selectedDashStyle,
                                 appliedTo: parseInt($html.find("#sma_appliedTo").val())
                             }
+                            before_add_callback && before_add_callback();
                             //Add SMA for the main series
                             $($(".sma").data('refererChartID')).highcharts().series[0].addIndicator('sma', options);
 
@@ -101,8 +117,10 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                     }
                 ]
             });
-            $html.find('select').selectmenu({
-                width : 140
+            $html.find('select').each(function(index, value){
+                $(value).selectmenu({
+                    width : 150
+                }).selectmenu("menuWidget").css("max-height","85px");
             });
 
             if (typeof _callback == "function")
@@ -116,16 +134,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
     return {
 
-        open : function ( containerIDWithHash ) {
-
+        open : function ( containerIDWithHash, before_add_cb ) {
+            var open = function() {
+                before_add_callback = before_add_cb;
+                $(".sma").data('refererChartID', containerIDWithHash).dialog( "open" );
+            };
             if ($(".sma").length == 0)
-            {
                 init( containerIDWithHash, this.open );
-                return;
-            }
-
-            $(".sma").data('refererChartID', containerIDWithHash).dialog( "open" );
-
+            else
+                open();
         }
 
     };

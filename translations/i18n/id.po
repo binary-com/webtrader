@@ -1,0 +1,2529 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-19 06:12+0200\n"
+"PO-Revision-Date: 2016-09-14 04:41+0000\n"
+"Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.8\n"
+
+msgid "%D MA Type"
+msgstr "Jenis MA %D"
+
+msgid "%D Period"
+msgstr "Periode %D"
+
+msgid "%D Stroke"
+msgstr "Stroke %D"
+
+msgid "%K MA Type"
+msgstr "Jenis MA %K"
+
+msgid "%K Period"
+msgstr "Periode %K"
+
+msgid "%K Stroke"
+msgstr "Stroke %K"
+
+msgid ""
+"(if less than one day in duration), or at the end of the trading day (if one "
+"day or more in duration)"
+msgstr ""
+"(jika durasi kurang dari satu hari), atau pada akhir hari trading (jika "
+"durasi satu hari atau lebih)"
+
+msgid ""
+"- Binary.com is not affiliated with any of the Payment Agents listed above. "
+"Each Payment Agent operates as an independent service provider and is not "
+"endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL "
+"WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to "
+"check the credentials of Payment Agents before sending them any money. "
+"Binary.com shall not in any circumstance be held responsible for "
+"transactions made between customers and Payment Agents"
+msgstr ""
+"- Binary.com tidak berafiliasi dengan Agen Pembayaran manapun. Setiap Agen "
+"Pembayaran beroperasi sendiri dan Binary.com tidak bertanggung jawab atas "
+"risiko penggunaannya. PELANGGAN BERURUSAN DENGAN AGEN PEMBAYARAN ATAS RISIKO "
+"SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi "
+"Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka"
+
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr ""
+"--- judul: kutipan permalink Halaman Tidak Ditemukan: /404.html: \"\" ---"
+
+msgid "-DI Stroke"
+msgstr "Stroke -DI"
+
+msgid "0-1 year"
+msgstr "0-1 tahun"
+
+msgid "0-5 transactions in the past 12 months"
+msgstr "0-5 transaksi pada 12 bulan terakhir"
+
+msgid "1"
+msgstr "1"
+
+msgid "1 Day"
+msgstr "1 Hari"
+
+msgid "1 Hour"
+msgstr "1 Jam"
+
+msgid "1 Minute"
+msgstr "1 Menit"
+
+msgid "1 Tick"
+msgstr "1 Tik"
+
+msgid "1-2 years"
+msgstr "1-2 tahun"
+
+msgid "10"
+msgstr "10"
+
+msgid "10 Minutes"
+msgstr "10 Menit"
+
+msgid "10m"
+msgstr "10m"
+
+msgid "15"
+msgstr "15"
+
+msgid "15 Minutes"
+msgstr "15 Menit"
+
+msgid "15m"
+msgstr "15m"
+
+msgid "1d"
+msgstr "1d"
+
+msgid "1h"
+msgstr "1h"
+
+msgid "1m"
+msgstr "1m"
+
+msgid "1t"
+msgstr "1t"
+
+msgid "2"
+msgstr "2"
+
+msgid "2 Hours"
+msgstr "2 Jam"
+
+msgid "2 Minutes"
+msgstr "2 Menit"
+
+msgid "2h"
+msgstr "2h"
+
+msgid "2m"
+msgstr "2m"
+
+msgid "3"
+msgstr "3"
+
+msgid "3 Minutes"
+msgstr "3 Menit"
+
+msgid "30"
+msgstr "30"
+
+msgid "30 Minutes"
+msgstr "30 Menit"
+
+msgid "30-day limit on losses"
+msgstr "batas kerugian 30-hari"
+
+msgid "30-day turnover limit"
+msgstr "batas pembelian 30-hari"
+
+msgid "30m"
+msgstr "30m"
+
+msgid "3m"
+msgstr "3m"
+
+msgid "4"
+msgstr "4"
+
+msgid "4 Hours"
+msgstr "4 Jam"
+
+msgid "40 transactions or more in the past 12 months"
+msgstr "40 transaksi atau lebih dalam 12 bulan terakhir"
+
+msgid "404"
+msgstr "404"
+
+msgid "4h"
+msgstr "4h"
+
+msgid "5"
+msgstr "5"
+
+msgid "5 Minutes"
+msgstr "5 Menit"
+
+msgid "5m"
+msgstr "5m"
+
+msgid "6-10 transactions in the past 12 months"
+msgstr "6-10 transaksi pada 12 bulan terakhir"
+
+msgid "7-day limit on losses"
+msgstr "batas kerugian 7-hari"
+
+msgid "7-day turnover limit"
+msgstr "batas pembelian 7-hari"
+
+msgid "8"
+msgstr "8"
+
+msgid "8 Hours"
+msgstr "8 Jam"
+
+msgid "8h"
+msgstr "8h"
+
+msgid "ADX MA Type"
+msgstr "Jenis ADX MA"
+
+msgid "ADX Stroke"
+msgstr "Stroke ADX"
+
+msgid "ATR Period"
+msgstr "Periode ATR"
+
+msgid "Acceleration"
+msgstr "Percepatan"
+
+msgid "Accept"
+msgstr "Menerima"
+
+msgid "Account balance"
+msgstr "Saldo"
+
+msgid "Account id not found"
+msgstr "ID akun tidak ditemukan"
+
+msgid "Account opening"
+msgstr "Pendaftaran Akun"
+
+msgid "Account token not found"
+msgstr "Token akun tidak ditemukan"
+
+msgid "Action"
+msgstr "Aksi"
+
+msgid "Add comparisons"
+msgstr "Tambah perbandingan"
+
+msgid "Add indicator"
+msgstr "Tambah indikator"
+
+msgid "Add level"
+msgstr "Tambah level"
+
+msgid "Add/remove comparisons"
+msgstr "Tambah/hapus perbandingan"
+
+msgid "Add/remove overlays"
+msgstr "Tambah/hapus overlays"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "All times are in GMT (Greenwich Mean Time)"
+msgstr "Semua waktu dalam GMT (Greenwich Mean Time)"
+
+msgid "Amount"
+msgstr "Jumlah"
+
+msgid "Amount Per Point"
+msgstr "Jumlah Per Poin"
+
+msgid "Amount per point"
+msgstr "Jumlah per poin"
+
+msgid "Answer"
+msgstr "Jawaban"
+
+msgid "Applied to"
+msgstr "Diaplikasikan ke"
+
+msgid "Apply"
+msgstr "Menerapkan"
+
+msgid "Apply to become a Binary.com"
+msgstr "Mendaftar sebagai Agen Pembayaran Binary.com"
+
+msgid "Appropriateness Test: WARNING"
+msgstr "Uji Kelayakan: PERINGATAN"
+
+msgid "Apr"
+msgstr "Apr"
+
+msgid "April"
+msgstr "April"
+
+msgid "Are you sure you want to delete this token?"
+msgstr "Apakah Anda yakin ingin menghapus token ini?"
+
+msgid "Aroon Down Stroke"
+msgstr "Stroke Aroon Down"
+
+msgid "Aroon Up Stroke"
+msgstr "Stroke Aroon Up"
+
+msgid "Asians"
+msgstr "Asia"
+
+msgid "Asset"
+msgstr "Aset"
+
+msgid "Asset Index"
+msgstr "Indeks Aset"
+
+msgid "Aug"
+msgstr "Agst"
+
+msgid "August"
+msgstr "Agustus"
+
+msgid "Average"
+msgstr "Rata-rata"
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "Back to list"
+msgstr "Kembali ke daftar"
+
+msgid "Background Color"
+msgstr "Warna latar"
+
+msgid "Barrier"
+msgstr "Batas"
+
+msgid "Barrier offset"
+msgstr "Batas offset"
+
+msgid "Binary options or other financial derivatives"
+msgstr "Opsi Binary atau derivatif keuangan lainnya"
+
+msgid "Binary.com"
+msgstr "Binary.com"
+
+msgid "Binary.com : Webtrader"
+msgstr "Binary.com : Webtrader"
+
+msgid "Blank window"
+msgstr "Tampilan kosong"
+
+msgid "Bought"
+msgstr "Membeli"
+
+msgid "Brand of first car"
+msgstr "Merek mobil pertama"
+
+msgid "Browser upgrade required"
+msgstr "Upgrade browser diperlukan"
+
+msgid "Buy Price"
+msgstr "Harga Beli"
+
+msgid "Buy price"
+msgstr "Harga beli"
+
+msgid "By clicking"
+msgstr "Dengan mengklik"
+
+msgid "By clicking OK, you confirm that you have read and accepted the updated"
+msgstr "Dengan mengklik OK, maka Anda telah membaca dan menerima pembaruan"
+
+msgid "CLOSE"
+msgstr "TUTUP"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Batalkan"
+
+msgid "Candles"
+msgstr "Lilin"
+
+msgid "Candlestick down-color"
+msgstr "Warna menurun Candlestick"
+
+msgid "Candlestick down-line"
+msgstr "Garis menurun candlestick"
+
+msgid "Candlestick up-color"
+msgstr "Warna naik candlestick"
+
+msgid "Candlestick up-line"
+msgstr "Garis naik candlestick"
+
+msgid "Cash Balance"
+msgstr "Saldo"
+
+msgid "Change Backend Server"
+msgstr "Perubahan Server Backend"
+
+msgid "Change password"
+msgstr "Ubah kata sandi"
+
+msgid "Chart"
+msgstr "Grafik"
+
+msgid "Chart Themes"
+msgstr "Tema Grafik"
+
+msgid "Chart background"
+msgstr "Latar belakang grafik"
+
+msgid "Chart context menu"
+msgstr "Menu konteks grafik"
+
+msgid "Chart template"
+msgstr "Template Grafik"
+
+msgid "Chart type"
+msgstr "Jenis grafik"
+
+msgid "Choose password"
+msgstr "Pilih kata sandi"
+
+msgid "Choose your pereferred payment agent"
+msgstr "Pilih agen pembayaran pilihan Anda"
+
+msgid "Choose your pereferred withdrawal method"
+msgstr "Pilih metode penarikan pilihan Anda"
+
+msgid "Chrome"
+msgstr "Chrome"
+
+msgid "Click Jacking test"
+msgstr "Klik Tes Jacking"
+
+msgid "Click to log in with your Binary.com account"
+msgstr "Klik untuk masuk pada akun Binary.com Anda"
+
+msgid "Close Price"
+msgstr "Harga Penutupan"
+
+msgid "Close all"
+msgstr "Tutup semua"
+
+msgid "Closes"
+msgstr "Tutup"
+
+msgid "Commodities trading experience"
+msgstr "Pengalaman trading komoditas"
+
+msgid "Commodities trading frequency"
+msgstr "Frekuensi trading komoditas"
+
+msgid "Comparisons"
+msgstr "Perbandingan"
+
+msgid "Conditions"
+msgstr "Persyaratan"
+
+msgid "Config changes successful"
+msgstr "Perubahan konfigurasi sukses"
+
+msgid "Confirm transfer"
+msgstr "Konfirmasi transfer"
+
+msgid "Connection closed"
+msgstr "Koneksi ditutup"
+
+msgid "Connection error. Refresh the page"
+msgstr "Koneksi error. Refresh halaman"
+
+msgid "Construction"
+msgstr "Konstruksi"
+
+msgid "Continue"
+msgstr "Lanjutkan"
+
+msgid "Continue Trading"
+msgstr "Lanjutkan Trading"
+
+msgid "Contract"
+msgstr "Kontrak"
+
+msgid "Contract Confirmation"
+msgstr "Konfirmasi Kontrak"
+
+msgid "Contract Details"
+msgstr "Rincian Kontrak"
+
+msgid "Contract is not yet started"
+msgstr "Kontrak belum dimulai"
+
+msgid "Contracts"
+msgstr "Kontrak"
+
+msgid "Country of residence"
+msgstr "Negara tempat tinggal"
+
+msgid "Create"
+msgstr "Membuat"
+
+msgid "Create token"
+msgstr "Membuat token"
+
+msgid "Credit/Debit"
+msgstr "Kredit/Debit"
+
+msgid "Crosshair"
+msgstr "Crosshair"
+
+msgid "Current Level"
+msgstr "Level Terkini"
+
+msgid "Current Spot"
+msgstr "Spot Terkini"
+
+msgid "Current Spot Time"
+msgstr "Waktu Spot Terkini"
+
+msgid "Current comparisons"
+msgstr "Perbandingan saat ini"
+
+msgid "Current indicators"
+msgstr "Indikator Terkini"
+
+msgid "Current password"
+msgstr "Kata sandi terkini"
+
+msgid "Current regulations require that you provide us the following"
+msgstr "Peraturan saat ini mengharuskan Anda menyediakan sebagai berikut"
+
+msgid "Current time"
+msgstr "Waktu Terkini"
+
+msgid "Custom Theme"
+msgstr "Tema Wajib"
+
+msgid "Customize chart appearance"
+msgstr "Menyesuaikan tampilan grafik"
+
+msgid "DI Stroke"
+msgstr "Stroke DI"
+
+msgid "DX MA Type"
+msgstr "Jenis DX MA"
+
+msgid "Daily limit on losses"
+msgstr "Batas harian rugi"
+
+msgid "Daily turnover limit"
+msgstr "Batas harian beli"
+
+msgid "Dark Blue"
+msgstr "Biru Tua"
+
+msgid "Dark Green"
+msgstr "Hijau Tua"
+
+msgid "Dark Unica"
+msgstr "Unica Tua"
+
+msgid "Dash style"
+msgstr "Gaya Dash"
+
+msgid "Date"
+msgstr "Tanggal"
+
+msgid "Date of birth"
+msgstr "Tanggal lahir"
+
+msgid "Days"
+msgstr "Hari"
+
+msgid "Dec"
+msgstr "Des"
+
+msgid "December"
+msgstr "Desember"
+
+msgid "Decline"
+msgstr "Menurun"
+
+msgid "Default"
+msgstr "Kelalaian"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Delete level(s)"
+msgstr "Hapus level"
+
+msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgstr "Demo untuk affiliasi untuk mengakses grafik Binary.com dalam IFRAME"
+
+msgid "Deposit funds"
+msgstr "Deposit dana"
+
+msgid "Deposit of USD"
+msgstr "Deposit sebesar USD"
+
+msgid "Describe what this token is for to find it later"
+msgstr "Jelaskan token apa ini untuk menemukannya nanti"
+
+msgid "Description"
+msgstr "Deskripsi"
+
+msgid "Digits"
+msgstr "Digits"
+
+msgid "Do you want to install Webtrader chrome extension?"
+msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
+
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
+msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
+
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr "Selesai. Dana tersebut telah ditransfer ke agen pembayaran"
+
+msgid "Done. The funds are transferred"
+msgstr "Selesai. Dana telah tertransfer"
+
+msgid "Dot"
+msgstr "Dot"
+
+msgid "Double MA Period"
+msgstr "Periode Double MA"
+
+msgid "Double MA Type"
+msgstr "Jenis Dobel MA"
+
+msgid "Double click the object to remove"
+msgstr "Klik dua kali untuk menghapus objek"
+
+msgid "Download CSV"
+msgstr "Download CSV"
+
+msgid "Download JPEG image"
+msgstr "Download gambar JPEG"
+
+msgid "Download PDF document"
+msgstr "Download dokumen PDF"
+
+msgid "Download PNG"
+msgstr "Download PNG"
+
+msgid "Download PNG image"
+msgstr "Download gambar PNG"
+
+msgid "Download SVG"
+msgstr "Download SVG"
+
+msgid "Download SVG vector image"
+msgstr "Download gambar vektor SVG"
+
+msgid "Download as"
+msgstr "Download dalam"
+
+msgid "Downloading .csv"
+msgstr "Downloading .csv"
+
+msgid "Drawing tools"
+msgstr "Alat gambar"
+
+msgid "Duration"
+msgstr "Durasi"
+
+msgid "EMA"
+msgstr "EMA"
+
+msgid "Edge"
+msgstr "Edge"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Education"
+msgstr "Edukasi"
+
+msgid "Email verification failed"
+msgstr "Verifikasi email gagal"
+
+msgid "Embed code"
+msgstr "Menanamkan kode"
+
+msgid "End Time"
+msgstr "Waktu Akhir"
+
+msgid "Ends In/Out"
+msgstr "Ends In/Out"
+
+msgid "Enter your current password"
+msgstr "Masukkan kata sandi Anda"
+
+msgid "Entry Spot"
+msgstr "Spot Awal"
+
+msgid "Entry spot"
+msgstr "Spot awal"
+
+msgid "Error downloading .csv"
+msgstr "Error downloading .csv"
+
+msgid "Error getting data for"
+msgstr "Error mendapatkan data untuk"
+
+msgid "Estimated Net Worth"
+msgstr "Estimasi Kekayaan"
+
+msgid "Exclude me from the website until"
+msgstr "Kecualikan saya dari website hingga"
+
+msgid "Exclude time cannot be less than 6 months"
+msgstr "Waktu pengecualian tidak dapat kurang dari 6 bulan"
+
+msgid "Exit Spot"
+msgstr "Spot Akhir"
+
+msgid "Exit spot"
+msgstr "Spot akhir"
+
+msgid "Explanation"
+msgstr "Penjelasan"
+
+msgid "Failed to update the password"
+msgstr "Gagal memperbarui kata sandi"
+
+msgid "Fall"
+msgstr "Fall"
+
+msgid "Family name"
+msgstr "Nama keluarga"
+
+msgid "Fast %K MA Type"
+msgstr "Jenis %K MA Cepat"
+
+msgid "Fast %K Period"
+msgstr "Periode Cepat %K"
+
+msgid "Fast Limit"
+msgstr "Batas Cepat"
+
+msgid "Fast MA Type"
+msgstr "Jenis MA Cepat"
+
+msgid "Fast Period"
+msgstr "Periode Cepat"
+
+msgid "Favorites"
+msgstr "Favorit"
+
+msgid "Favourite artist"
+msgstr "Artis Favorit"
+
+msgid "Favourite dish"
+msgstr "Makanan Favorit"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "February"
+msgstr "Februari"
+
+msgid "Final Price"
+msgstr "Harga Akhir"
+
+msgid "Final price"
+msgstr "Harga akhir"
+
+msgid "Finance"
+msgstr "Keuangan"
+
+msgid "Financial information"
+msgstr "Informasi keuangan"
+
+msgid "Firefox"
+msgstr "Firefox"
+
+msgid "First name"
+msgstr "Nama Depan"
+
+msgid "Forex trading experience"
+msgstr "Pengalaman trading forex"
+
+msgid "Forex trading frequency"
+msgstr "Frekuensi trading Forex"
+
+msgid "Fri"
+msgstr "Fri"
+
+msgid "Friday"
+msgstr "Jumat"
+
+msgid "From"
+msgstr "Dari"
+
+msgid "Further instructions"
+msgstr "Instruksi lebih lanjut"
+
+msgid "Gray"
+msgstr "Abu-abu"
+
+msgid "Grid"
+msgstr "Grid"
+
+msgid "Grid Light"
+msgstr "Grid Muda"
+
+msgid "HIGH"
+msgstr "TINGGI"
+
+msgid "Have better luck at trading!"
+msgstr "Lebih beruntung pada trading!"
+
+msgid "Health"
+msgstr "Kesehatan"
+
+msgid "High Barrier"
+msgstr "Batas Tinggi"
+
+msgid "High Price"
+msgstr "Harga Tinggi"
+
+msgid "High Stroke"
+msgstr "Stroke High"
+
+msgid "High barrier offset"
+msgstr "Batas offset tinggi"
+
+msgid "Higher"
+msgstr "Higher"
+
+msgid "Histogram Color"
+msgstr "Warna Histogram"
+
+msgid "Histogram Color For Higher Values"
+msgstr "Warna Histogram Untuk Nilai Lebih Tinggi"
+
+msgid "Histogram Color For Lower Values"
+msgstr "Warna Histogram Untuk Nilai Lebih Rendah"
+
+msgid "Home Address"
+msgstr "Alamat Rumah"
+
+msgid "Horizontal Line"
+msgstr "Garis Horisontal"
+
+msgid "Horizontal line"
+msgstr "Garis horisontal"
+
+msgid "Hours"
+msgstr "Jam"
+
+msgid "I have read and agree to Binary.com"
+msgstr "Saya telah membaca dan menyetujui Binary.com"
+
+msgid "IMPORTANT DISCLAIMER"
+msgstr "SANGGAHAN PENTING"
+
+msgid ""
+"IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
+"agents listed above. Each payment agent operates as an independent service "
+"provider and is not endorsed, guaranteed or otherwise approved by Binary."
+"com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. "
+"Customers are advised to check the credentials of payment agents before "
+"sending them any money. Binary.com shall not in any circumstance be held "
+"responsible for transactions made between customers and payment agents"
+msgstr ""
+"SANGGAHAN PENTING - Binary.com tidak berafiliasi dengan Agen Pembayaran "
+"manapun. Setiap Agen Pembayaran beroperasi sendiri dan Binary.com tidak "
+"bertanggungjawab atas risiko penggunaannya. PELANGGAN BERURUSAN DENGAN AGEN "
+"PEMBAYARAN ATAS RISIKO SENDIRI. Pelanggan disarankan untuk mengecek "
+"kredibilitas dan eksistensi Agen Pembayaran bersangkutan sebelum "
+"bertransaksi dengan mereka"
+
+msgid "If the issue keeps happening, please contact"
+msgstr "Jika masalah terus berlanjut, silahkan hubungi"
+
+msgid "If you select a"
+msgstr "Jika Anda memilih"
+
+msgid "If you select a specific"
+msgstr "Jika Anda memilih"
+
+msgid ""
+"In order to properly apply theme, a full refresh of page is required. Are "
+"you sure you want to proceed?"
+msgstr ""
+"Untuk menggunakan tema dengan benar, merefresh halaman adalah penting. Apa "
+"Anda ingin melanjutkan?"
+
+msgid ""
+"In providing our services to you, we are required to obtain information from "
+"you in order to assess whether a given product or service is appropriate for "
+"you (that is, whether you possess the experience and knowledge to understand "
+"the risks involved)"
+msgstr ""
+"Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari "
+"Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat "
+"untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk "
+"memahami risiko yang terlibat)"
+
+msgid ""
+"In regards to binary options which are gambling products, remember that "
+"gambling can be addictive"
+msgstr " "
+
+msgid "In/Out"
+msgstr "In/Out"
+
+msgid "Income Source"
+msgstr "Sumber Pendapatan"
+
+msgid "Indicative"
+msgstr "Indikatif"
+
+msgid "Indicative Price"
+msgstr "Harga Indikatif"
+
+msgid "Indicators"
+msgstr "Indikator"
+
+msgid "Indices trading experience"
+msgstr "Pengalaman trading indeks"
+
+msgid "Indices trading frequency"
+msgstr "Frekuensi trading indeks"
+
+msgid "Industry of Employment"
+msgstr "Industri Tenaga Kerja"
+
+msgid "Instrument"
+msgstr "Instrumen"
+
+msgid "Instruments"
+msgstr "Instrumen"
+
+msgid "Investments & Dividends"
+msgstr "Instrumen & Dividen"
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "January"
+msgstr "Januari"
+
+msgid "Japan accounts are not supported"
+msgstr "Akun Jepang tidak tersedia"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "July"
+msgstr "Juli"
+
+msgid "Jump to"
+msgstr "Langsung ke"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "June"
+msgstr "Juni"
+
+msgid "Just click  Grant  button on the page you will now be taken to"
+msgstr "Cukup klik tombol  Hibah  pada halaman dan Anda akan dibawa ke"
+
+msgid "LOW"
+msgstr "RENDAH"
+
+msgid "Last Digit Prediction"
+msgstr "Analisa Digit Terakhir"
+
+msgid "Last Digit is Over"
+msgstr "Digit Terakhir adalah Over"
+
+msgid "Last Digit is Under"
+msgstr "Digit Terakhir adalah Under"
+
+msgid "Last used"
+msgstr "Terakhir digunakan"
+
+msgid "Less than"
+msgstr "Kurang dari"
+
+msgid "Let's do it"
+msgstr "Mari kita lakukan"
+
+msgid "Level"
+msgstr "Level"
+
+msgid "Level of Education"
+msgstr "Tingkat Pendidikan"
+
+msgid "Line"
+msgstr "Garis"
+
+msgid "Line Dot"
+msgstr "Garis Titik"
+
+msgid "Line Stroke"
+msgstr "Garis Stroke"
+
+msgid "Link"
+msgstr "Link"
+
+msgid "Load chart template"
+msgstr "Memuat template grafik"
+
+msgid "Loading"
+msgstr "Loading"
+
+msgid "Loading Asset Index"
+msgstr "Loading Indeks Aset"
+
+msgid "Loading Configurations"
+msgstr "Loading Konfigurasi"
+
+msgid "Loading Download/View Data"
+msgstr "Pemuatan Download/Lihat Data"
+
+msgid "Loading Password dialog"
+msgstr "Pemuatan dialog kata sandi"
+
+msgid "Loading Profit Table"
+msgstr "Pemuatan Profit Table"
+
+msgid "Loading Real account opening"
+msgstr "Pemuatan pendaftaran akun Riil"
+
+msgid "Loading Self-Exclusion"
+msgstr "Pemuatan Pengecualian Diri"
+
+msgid "Loading Statement Table"
+msgstr "Pemuatan Tabel Pernyataan"
+
+msgid "Loading Token management"
+msgstr "Pemuatan Token manajemen"
+
+msgid "Loading Trading Times"
+msgstr "Pemuatan Waktu Trading"
+
+msgid "Loading chart and trade menus"
+msgstr "Pemuatan grafik dan menu trading"
+
+msgid "Loading custom theme configuration"
+msgstr "Pemuatan konfigurasi tema khusus"
+
+msgid "Loading portfolio"
+msgstr "Pemuatan portopolio"
+
+msgid "Loading self-exclusion settings"
+msgstr "Memuat pengaturan pengecualian diri"
+
+msgid "Loading..."
+msgstr "Pemuatan..."
+
+msgid "Log in"
+msgstr "Masuk"
+
+msgid "Log in time"
+msgstr "Waktu masuk"
+
+msgid "Logging out because of self-exclusion session time out!"
+msgstr "Logout karena pengecualian diri pada batas waktu sesi!"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Logout"
+msgstr "Keluar"
+
+msgid "Long MA Type"
+msgstr "Jenis MA Panjang"
+
+msgid "Long ROC Period"
+msgstr "Periode Long ROC"
+
+msgid "Long Stop Line Stroke"
+msgstr "Long Stop Line Stroke"
+
+msgid "Long Term Period"
+msgstr "Periode Long Term"
+
+msgid "Low Barrier"
+msgstr "Batas Rendah"
+
+msgid "Low Price"
+msgstr "Harga Rendah"
+
+msgid "Low Stroke"
+msgstr "Stroke Low"
+
+msgid "Low barrier offset"
+msgstr "Batas offset rendah"
+
+msgid "Lower"
+msgstr "Lower"
+
+msgid "Lower Band Stroke"
+msgstr "Stroke Lower Band"
+
+msgid "MA Type"
+msgstr "Jenis MA"
+
+msgid "MACD Line Stroke"
+msgstr "Garis Stroke MACD"
+
+msgid ""
+"Make sure that you have first agreed with the Agent on the terms of payment "
+"before submitting your request. Once you click the 'Confirm transfer' button "
+"the funds will be withdrawn from your account and will be sent to the "
+"Payment Agent you have chosen. The Agent will send you the withdrawal amount "
+"(minus the commission) via your preferred payment method"
+msgstr ""
+"Pastikan bahwa Anda telah bersetuju dengan Agen sesuai dengan ketentuan "
+"pembayaran sebelum mengirimkan permintaan Anda. Setelah mengklik tombol "
+"'Konfirmasi Transfer' maka dana akan ditarik dari akun Anda dan akan dikirim "
+"ke Agen Pembayaran yang telah Anda pilih. Agen akan mengirimkan jumlah "
+"penarikan (dikurangi komisi) melalui metode pembayaran sesuai dengan pilihan "
+"Anda"
+
+msgid "Mar"
+msgstr "Mar"
+
+msgid "March"
+msgstr "Maret"
+
+msgid "Mass Period"
+msgstr "Periode Mass"
+
+msgid "Max/Min Period"
+msgstr "Periode Maksimal/Minimal"
+
+msgid "Maximum"
+msgstr "Maksimum"
+
+msgid "Maximum account cash balance"
+msgstr "Maksimum saldo akun"
+
+msgid "Maximum aggregate contract purchases over a 30-day period"
+msgstr "Total maksimal pembelian kontrak dalam periode 30 hari"
+
+msgid "Maximum aggregate contract purchases over a 7-day period"
+msgstr "Total maksimal pembelian kontrak dalam periode 7 hari"
+
+msgid "Maximum aggregate contract purchases per day"
+msgstr "Maksimum jumlah total beli per hari"
+
+msgid "Maximum aggregate loss over a 30-day period"
+msgstr "Total maksimal kerugian dalam periode 30 hari"
+
+msgid "Maximum aggregate loss per day"
+msgstr "Maksimum jumlah kerugian per hari"
+
+msgid "Maximum number of open positions"
+msgstr "Maksimum jumlah posisi berjalan"
+
+msgid "May"
+msgstr "Mei"
+
+msgid "Memorable date"
+msgstr "Tanggal bersejarah"
+
+msgid "Memorable town/city"
+msgstr "Kota bersejarah"
+
+msgid "Middle Band Stroke"
+msgstr "Stroke Middle Band"
+
+msgid "Min: 10 Max: 2000"
+msgstr "Min: 10 Mak: 2000"
+
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
+
+msgid "Minus the agent's commission"
+msgstr "Minus komisi agen"
+
+msgid "Minutes"
+msgstr "Menit"
+
+msgid "Miss"
+msgstr "Nona"
+
+msgid "Mon"
+msgstr "Senin"
+
+msgid "Monday"
+msgstr "Senin"
+
+msgid "Mother's maiden name"
+msgstr "Nama panggilan Ibu Anda"
+
+msgid "Mr"
+msgstr "Bapak"
+
+msgid "Mrs"
+msgstr "Ibu"
+
+msgid "Ms"
+msgstr "Nona"
+
+msgid "Multiplier"
+msgstr "Dikalikan"
+
+msgid "NB Dev Down"
+msgstr "NB Dev Down"
+
+msgid "NB Dev Up"
+msgstr "NB Dev Up"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Name of first love"
+msgstr "Nama cinta pertama"
+
+msgid "Name of your pet"
+msgstr "Nama hewan peliharaan Anda"
+
+msgid "Navigator handles background"
+msgstr "Navigator menangani latar belakang"
+
+msgid "Navigator handles border"
+msgstr "Navigator menangani perbatasan"
+
+msgid "Navigator mask-fill"
+msgstr "Navigator mask-fill"
+
+msgid "Navigator outline"
+msgstr "Garis navigator"
+
+msgid "Navigator series color"
+msgstr "Warna seri navigator"
+
+msgid "Navigator series line"
+msgstr "Seri garis navigator"
+
+msgid "Net Annual Income"
+msgstr "Pendapatan Bersih Tahunan"
+
+msgid "Net Profit"
+msgstr "Profit Bersih"
+
+msgid "New password"
+msgstr "Kata sandi baru"
+
+msgid "No"
+msgstr "Tidak"
+
+msgid "Note that tokens can possess one or more of these scopes"
+msgstr "Perhatikan bahwa token dapat memiliki satu atau lebih dari lingkup ini"
+
+msgid ""
+"Note: Contract will be sold at the prevailing market price when the request "
+"is received by our servers. This price may differ from the indicated price"
+msgstr ""
+"Kontrak akan dijual pada harga pasar terkini ketika permintaan diterima oleh "
+"server kami. Harga ini mungkin berbeda dari harga yang diindikasikan"
+
+msgid ""
+"Note: withdrawal via payment agent is available only if you deposit "
+"exclusively via payment agent"
+msgstr ""
+"Nota: Penarikan via agen pembayaran hanya tersedia jika Anda mendeposit via "
+"agen pembayaran"
+
+msgid "Nov"
+msgstr "Nop"
+
+msgid "November"
+msgstr "Nopember"
+
+msgid "Now"
+msgstr "Sekarang"
+
+msgid "Number of bars on sides"
+msgstr "Jumlah bar di sisi"
+
+msgid "OAuth App ID (Optional)"
+msgstr "OAuth App ID (Pilihan)"
+
+msgid "OAuth Server"
+msgstr "Server OAuth"
+
+msgid "OHLC"
+msgstr "OHLC"
+
+msgid "OPEN"
+msgstr "BUKA"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "October"
+msgstr "Oktober"
+
+msgid "Offset"
+msgstr "Offset"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid ""
+"On the basis of the information provided in relation to your knowledge and "
+"experience, we consider that the investments available via this website are "
+"not appropriate for you"
+msgstr ""
+"Berdasarkan informasi yang diberikan berkaitan dengan pengetahuan dan "
+"pengalaman, kami menganggap bahwa investasi yang tersedia melalui website "
+"ini tidak sesuai untuk Anda"
+
+msgid "Once this limit is reached, you may no longer deposit"
+msgstr "Saat batasan ini tercapai, Anda tidak dapat mendeposit"
+
+msgid "One last step left"
+msgstr "Satu langkah terakhir"
+
+msgid "Oops... Page Not Available"
+msgstr "Maaf...Halaman Tidak Tersedia"
+
+msgid "Open"
+msgstr "Buka"
+
+msgid "Open Account"
+msgstr "Daftar Akun"
+
+msgid "Open Price"
+msgstr "Harga Awal"
+
+msgid "Open a Financial Account"
+msgstr "Daftar Akun Keuangan"
+
+msgid "Open account"
+msgstr "Daftar akun"
+
+msgid "Opens"
+msgstr "Buka"
+
+msgid "Opera"
+msgstr "Opera"
+
+msgid ""
+"Option trading can become a real addiction, as can any other activity pushed "
+"to its limits. To avoid the danger of such addiction, we provide a reality-"
+"check that gives you a summary of your trades and accounts on a regular basis"
+msgstr ""
+"Opsi trading dapat menyebabkan ketagihan seperti kegiatan lain yang "
+"dilakukan secara berlebihan. Untuk menghindari bahaya dari ketagihan "
+"tersebut, kami telah menyediakan pemeriksaan realitas yang memberi Anda "
+"rangkuman trading dan akun secara berkala"
+
+msgid "Optional field, within 20 characters and may not contain '+'"
+msgstr "Kolom opsional, terdiri dari 20 karakter dan tidak berisikan '+'"
+
+msgid "Other"
+msgstr "Lain"
+
+msgid "Other financial instruments trading experience"
+msgstr "Pengalaman trading instrumen keuangan lainnya"
+
+msgid "Other financial instruments trading frequency"
+msgstr "Frekuensi trading instrumen keuangan lainnya"
+
+msgid "Over"
+msgstr "Lebih"
+
+msgid "Over 3 years"
+msgstr "3 tahun lebih"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "PNG"
+msgstr "PNG"
+
+msgid "PPO Line Stroke"
+msgstr "Garis Stroke PPO"
+
+msgid "Page Not Found"
+msgstr "Halaman Tidak Tersedia"
+
+msgid "Password must be 6 characters minimum"
+msgstr "Kata sandi harus terdiri dari minimum 6 karakter"
+
+msgid "Password must contain lower and uppercase letters with numbers"
+msgstr "Kata sandi harus mengandung huruf kecil dan huruf besar beserta angka"
+
+msgid "Password must contain uppercase letters and numbers"
+msgstr "Kata sandi harus terdiri dari huruf besar dan angka"
+
+msgid "Password successfully updated"
+msgstr "Kata sandi berhasil dirubah"
+
+msgid "Passwords didn't match. Please type them again"
+msgstr "Kata sandi tidak cocok. Silahkan ketik ulang"
+
+msgid "Payment agent"
+msgstr "Agen Pembayaran"
+
+msgid "Payment agents"
+msgstr "Berbagai Agen Pembayaran"
+
+msgid "Payments"
+msgstr "Pembayaran"
+
+msgid "Payout"
+msgstr "Hasil"
+
+msgid "Pension"
+msgstr "Pensiun"
+
+msgid "Period"
+msgstr "Periode"
+
+msgid "Period 1"
+msgstr "Periode 1"
+
+msgid "Period 2"
+msgstr "Periode 2"
+
+msgid "Period 3"
+msgstr "Periode 3"
+
+msgid "Permissions"
+msgstr "Izin"
+
+msgid "Personal Details"
+msgstr "Data Pribadi"
+
+msgid "Phone"
+msgstr "Telepon"
+
+msgid "Please"
+msgstr "Silahkan"
+
+msgid "Please answer to secret question, within 4-50 characters"
+msgstr "Jawablah pertanyaan rahasia, dalam 4-50 karakter"
+
+msgid "Please choose at least one token scope"
+msgstr "Silakan pilih minimal satu jangkauan token"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr ""
+"Silahkan konfirmasi rincian sebagai berikut untuk menyelesaikan transfer"
+
+msgid "Please enter a number between"
+msgstr "Silakan masukkan nomor antara"
+
+msgid "Please enter a valid date in yyyy-mm-dd format"
+msgstr "Silahkan masukkan tanggal yang valid dalam format yyyy-mm-dd"
+
+msgid "Please enter a value for"
+msgstr "Masukkan nilai untuk"
+
+msgid "Please enter a vlaid phone number"
+msgstr "Silahkan masukkan nomor telepon yang benar"
+
+msgid "Please enter correct email"
+msgstr "Silakan masukkan email yang benar"
+
+msgid "Please enter date in the format YYYY-MM-DD"
+msgstr "Silahkan masukkan tanggal dalam format YYYY-MM-DD"
+
+msgid "Please enter positive integer value between 0 and 9999"
+msgstr "Masukkan nilai integer positif antara 0 dan 9999"
+
+msgid "Please enter positive integer value for 30-day limit on losses"
+msgstr "Masukkan nilai integer positif untuk batasan kerugian 30 hari"
+
+msgid "Please enter positive integer value for 30-day turnover limit"
+msgstr "Masukkan nilai integer positif untuk batasan turnover 30 hari"
+
+msgid "Please enter positive integer value for 7-day limit on losses"
+msgstr "Masukkan nilai integer positif untuk batasan kerugian 7 hari"
+
+msgid "Please enter positive integer value for 7-day turnover limit"
+msgstr "Masukkan nilai integer positif untuk batasan turnover 7 hari"
+
+msgid "Please enter positive integer value for Daily limit on losses"
+msgstr "Masukkan nilai integer positif untuk batasan kerugian harian"
+
+msgid "Please enter positive integer value for Daily turnover limit"
+msgstr "Masukkan nilai integer positif untuk batasan turnover harian"
+
+msgid ""
+"Please enter positive integer value for Maximum number of open positions"
+msgstr "Masukkan nilai integer positif untuk batasan maksimal posisi berjalan"
+
+msgid "Please enter the token name"
+msgstr "Silahkan masukkan nama token"
+
+msgid "Please enter the verification code sent to your email"
+msgstr "Silahkan masukkan kode verifikasi yang dikirim ke alamat email Anda"
+
+msgid "Please enter value between 0 and 99999 for Session duration limit"
+msgstr ""
+"Silahkan masukkan nilai antara 0 hingga 99999 untuk batasan sesi durasi"
+
+msgid "Please enter your city address"
+msgstr "Masukkan alamat kota Anda"
+
+msgid "Please enter your current password"
+msgstr "Silahkan masukkan kata sandi Anda"
+
+msgid "Please enter your email"
+msgstr "Masukkan email Anda"
+
+msgid "Please enter your family name"
+msgstr "Masukkan nama keluarga Anda"
+
+msgid "Please enter your first name"
+msgstr "Masukkan nama depan Anda"
+
+msgid "Please enter your new password"
+msgstr "Masukkan kata sandi baru Anda"
+
+msgid "Please enter your password"
+msgstr "Masukkan kata sandi Anda"
+
+msgid "Please enter your phone number"
+msgstr "Masukkan nomor telepon Anda"
+
+msgid "Please enter your street address"
+msgstr "Masukkan alamat jalan Anda"
+
+msgid "Please install the latest version of one of these browsers"
+msgstr "Silahkan install versi terbaru dari salah satu browser ini"
+
+msgid "Please log in"
+msgstr "Silahkan masuk"
+
+msgid "Please select"
+msgstr "Silahkan pilih"
+
+msgid "Please try again after 1 minute"
+msgstr "Silahkan coba kembali setelah 1 menit"
+
+msgid "Please use your new password to login"
+msgstr "Silahkan gunakan kata sandi Anda untuk masuk"
+
+msgid "Plot"
+msgstr "Plot"
+
+msgid "Plot Color"
+msgstr "Warna Plot"
+
+msgid "Pofit/Loss"
+msgstr "Untung/Rugi"
+
+msgid "Points"
+msgstr "Poin"
+
+msgid "Portfolio"
+msgstr "Portopolio"
+
+msgid "Postal code/ZIP"
+msgstr "Kode Pos"
+
+msgid "Potential Payout"
+msgstr "Potensi Hasil"
+
+msgid "Potential Profit"
+msgstr "Potensi Profit"
+
+msgid "Potential profit"
+msgstr "Potensi profit"
+
+msgid "Pre-Defined"
+msgstr "Ditetapkan"
+
+msgid "Preferred reality-check interval"
+msgstr "Interval cek-realitas yang dipilih"
+
+msgid "Press  Create token  button on the right to create your first token"
+msgstr ""
+"Tekan  tombol Membuat token  disebelah kanan untuk membuat token Anda "
+"terlebih dahulu"
+
+msgid "Price"
+msgstr "Harga"
+
+msgid "Primary"
+msgstr "Utama"
+
+msgid "Print chart"
+msgstr "Cetak grafik"
+
+msgid "Profit"
+msgstr "Untung"
+
+msgid "Profit Table"
+msgstr "Tabel Untung"
+
+msgid "Profit table"
+msgstr "Tabel untung"
+
+msgid "Profit/ Loss"
+msgstr "Untung/ Rugi"
+
+msgid "Profit/Loss (points)"
+msgstr "Untung/Rugi (poin)"
+
+msgid "Purchase"
+msgstr "Beli"
+
+msgid "Purchase Date"
+msgstr "Tanggal Beli"
+
+msgid "Purchase Price"
+msgstr "Harga Beli"
+
+msgid "Purchase Time"
+msgstr "Waktu Beli"
+
+msgid "Read"
+msgstr "Baca"
+
+msgid "Real account opening"
+msgstr "Pendaftaran akun riil"
+
+msgid "Reality check"
+msgstr "Pengecekan realitas"
+
+msgid "Redirecting to oauth login page"
+msgstr "Mengalihkan ke halaman login oauth"
+
+msgid "Ref"
+msgstr "Ref"
+
+msgid "Register free account"
+msgstr "Daftar akun gratis"
+
+msgid "Registration"
+msgstr "Pendaftaran"
+
+msgid "Reloading page"
+msgstr "Halaman reload"
+
+msgid "Remove Selected"
+msgstr "Hapus Pilihan"
+
+msgid "Rename"
+msgstr "Ganti nama"
+
+msgid "Repeat password"
+msgstr "Ulang kata sandi"
+
+msgid "Resale of this contract is not offered"
+msgstr "Penjualan kembali untuk kontrak ini tidak tersedia"
+
+msgid "Reset to Defaults"
+msgstr "Kembali ke Asal"
+
+msgid "Reset zoom"
+msgstr "Ulang zoom"
+
+msgid "Reset zoom level 1:1"
+msgstr "Ulang level zoom 1:1"
+
+msgid "Resources"
+msgstr "Berbagai Sumber"
+
+msgid "Responsible Trading"
+msgstr "Tanggung Jawab Trading"
+
+msgid "Results"
+msgstr "Hasil"
+
+msgid "Return"
+msgstr "Laba"
+
+msgid "Return to trading page"
+msgstr "Kembali ke halaman trading"
+
+msgid "Rise"
+msgstr "Rise"
+
+msgid "SMA"
+msgstr "SMA"
+
+msgid "SVG"
+msgstr "SVG"
+
+msgid "Safari"
+msgstr "Safari"
+
+msgid "Salaried Employee"
+msgstr "Gaji Karyawan"
+
+msgid "Sale Date"
+msgstr "Tanggal Penjualan"
+
+msgid "Sale Price"
+msgstr "Harga Jual"
+
+msgid "Sand Signika"
+msgstr "Sand Signika"
+
+msgid "Sat"
+msgstr "Sab"
+
+msgid "Saturday"
+msgstr "Sabtu"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Save as"
+msgstr "Simpan sebagai"
+
+msgid "Save changes"
+msgstr "Simpan perubahan"
+
+msgid "Secondary"
+msgstr "Sekunder"
+
+msgid "Security"
+msgstr "Keamanan"
+
+msgid "Security question"
+msgstr "Pertanyaan keamanan"
+
+msgid "Select Instrument"
+msgstr "Pilih Instrumen"
+
+msgid "Self-Employed"
+msgstr "Wirausaha"
+
+msgid "Self-Exclusion"
+msgstr "Pengecualian-Diri"
+
+msgid "Self-Exclusion Facilities"
+msgstr "Fasilitas Pengecualian-Diri"
+
+msgid "Sell At Market"
+msgstr "Jual Pada Pasar"
+
+msgid "Sell Price"
+msgstr "Harga Jual"
+
+msgid "Sell Spot"
+msgstr "Spot Jual"
+
+msgid "Sell Time"
+msgstr "Waktu Jual"
+
+msgid "Send to account #"
+msgstr "Kirim ke akun #"
+
+msgid "Sent to account"
+msgstr "Kirim ke akun"
+
+msgid "Sep"
+msgstr "Sep"
+
+msgid "September"
+msgstr "September"
+
+msgid "Session"
+msgstr "Sesi"
+
+msgid "Session duration limit, in minutes"
+msgstr "Batas sesi durasi, dalam menit"
+
+msgid "Session is not authenticated"
+msgstr "Sesi tidak dikonfirmasi"
+
+msgid "Settles"
+msgstr "Diselesaikan"
+
+msgid "Share"
+msgstr "Bagikan"
+
+msgid "Share chart"
+msgstr "Bagikan grafik"
+
+msgid "Short MA Type"
+msgstr "Jenis MA Pendek"
+
+msgid "Short ROC Period"
+msgstr "Periode Short ROC"
+
+msgid "Short Stop Line Stroke"
+msgstr "Stroke Short Stop Line"
+
+msgid "Short Term Period"
+msgstr "Periode Short Term"
+
+msgid "Show"
+msgstr "Tampilkan"
+
+msgid "Sigma"
+msgstr "Sigma"
+
+msgid "Signal Line Stroke"
+msgstr "Stroke Signal Line"
+
+msgid "Signal MA Type"
+msgstr "Jenis Signal MA"
+
+msgid "Signal Period"
+msgstr "Periode Signal"
+
+msgid "Single MA Period"
+msgstr "Periode Single MA"
+
+msgid "Single MA Type"
+msgstr "Jenis MA Single"
+
+msgid "Slow %D MA Type"
+msgstr "Jenis %D MA Lambat"
+
+msgid "Slow %D Period"
+msgstr "Periode Lambat %D"
+
+msgid "Slow %K MA Type"
+msgstr "Jenis %K MA Lambat"
+
+msgid "Slow %K Period"
+msgstr "Periode Lambat %K"
+
+msgid "Slow Limit"
+msgstr "Batas Pelan"
+
+msgid "Slow MA Type"
+msgstr "Jenis MA Lambat"
+
+msgid "Slow Period"
+msgstr "Periode Lambat"
+
+msgid "Sold"
+msgstr "Terjual"
+
+msgid "Some random index"
+msgstr "Beberapa indeks random"
+
+msgid "Spline"
+msgstr "Spline"
+
+msgid "Spreads"
+msgstr "Spreads"
+
+msgid "Stake"
+msgstr "Modal"
+
+msgid "Standard methods"
+msgstr "Metode standar"
+
+msgid "Standard withdrawal"
+msgstr "Penarikan standar"
+
+msgid "Start Time"
+msgstr "Waktu Mulai"
+
+msgid "Start time"
+msgstr "Waktu mulai"
+
+msgid "State/province/region"
+msgstr "Negera/provinsi/daerah"
+
+msgid "Statement"
+msgstr "Pernyataan"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Stays In/Goes Out"
+msgstr "Stays In/Goes Out"
+
+msgid "Stocks trading experience"
+msgstr "Pengalaman trading bursa saham"
+
+msgid "Stocks trading frequency"
+msgstr "Frekuensi trading bursa saham"
+
+msgid "Stop Loss Level"
+msgstr "Tingkat Stop Loss"
+
+msgid "Stop Profit Level"
+msgstr "Tingkat Stop Profit"
+
+msgid "Stop-loss"
+msgstr "Stop-loss"
+
+msgid "Stop-profit"
+msgstr "Stop-profit"
+
+msgid "Stop-type"
+msgstr "Jenis-Berhenti"
+
+msgid "Street address"
+msgstr "Alamat jalan"
+
+msgid "Stroke"
+msgstr "Stroke"
+
+msgid "Stroke color"
+msgstr "Warna Stroke"
+
+msgid "Stroke width"
+msgstr "Lebar Stroke"
+
+msgid "Submit"
+msgstr "Ajukan"
+
+msgid "Successfully added new token"
+msgstr "Berhasil menambahkan token baru"
+
+msgid "Sun"
+msgstr "Ming"
+
+msgid "Sunday"
+msgstr "Minggu"
+
+msgid "TEMA"
+msgstr "TEMA"
+
+msgid "TRIMA"
+msgstr "TRIMA"
+
+msgid "Table"
+msgstr "Tabel"
+
+msgid "Tel"
+msgstr "Tel"
+
+msgid "Template name"
+msgstr "Nama template"
+
+msgid "Terms"
+msgstr "Syarat"
+
+msgid "Terms and Conditions"
+msgstr "Syarat dan Ketentuan"
+
+msgid "Tertiary"
+msgstr "Tersier"
+
+msgid "The"
+msgstr "Itu"
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the aquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract permium"
+msgstr ""
+"Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk "
+"Pelanggan yang mampu menanggung kerugian pada semua modal yang mereka "
+"tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang "
+"akan dialami pada trading kontrak finansial. Kontrak transaksi finansial "
+"adalah memiliki risiko tinggi. Jika prediksi Anda tidak tepat maka Anda akan "
+"kehilangan semua modal yang anda tanamkan berupa harga kontrak yang Anda "
+"bayarkan"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
+msgstr ""
+"Halaman yang Anda minta tidak dapat ditemukan. Mungkin berhubung sudah tidak "
+"tersedia lagi atau alamat salah. Silakan periksa jika terdapat salah "
+"pengetikkan"
+
+msgid ""
+"There was a market data disruption during the contract period. For real-"
+"money accounts we will attempt to correct this and settle the contract "
+"properly, otherwise the contract will be cancelled and refunded. Virtual-"
+"money contracts will be cancelled and refunded"
+msgstr ""
+"Terjadi gangguan data pasar selama periode kontrak. Untuk akun uang riil "
+"kami akan berusaha untuk memperbaiki masalah ini dan akan menyelesaikan "
+"kontrak tersebut dengan benar, jika tidak ada masalah dengan kontrak yang "
+"bersangkutan maka kontrak akan dibatalkan dan dikembalikan. Untuk kontrak "
+"pada akun uang Virtual akan dibatalkan dan dikembalikan"
+
+msgid "There was an error"
+msgstr "Terdapat error"
+
+msgid "This contract has expired"
+msgstr "Kontrak telah berakhir"
+
+msgid "This contract lost"
+msgstr "Kontrak ini rugi"
+
+msgid "This contract won"
+msgstr "Kontrak ini untung"
+
+msgid "This field is required"
+msgstr "Bagian ini diperlukan"
+
+msgid "Thu"
+msgstr "Kms"
+
+msgid "Thursday"
+msgstr "Khamis"
+
+msgid "Tick Trade app"
+msgstr "App Trading Tik"
+
+msgid "Tick {row.number}"
+msgstr "Tik {row.number}"
+
+msgid "Ticks"
+msgstr "Tik"
+
+msgid "Tile"
+msgstr "Tile"
+
+msgid "Time Period"
+msgstr "Periode Waktu"
+
+msgid "Time interval"
+msgstr "Interval waktu"
+
+msgid "Time period"
+msgstr "Periode Waktu"
+
+msgid "Timeout for websocket request"
+msgstr "Timeout untuk permintaan websocket"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "To"
+msgstr "Kepada"
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr "Untuk mendeposit, silakan hubungi agen pembayaran langsung"
+
+msgid ""
+"To process deposits and withdrawals for payment methods or local currencies "
+"not supported by Binary.com contact a payment agent"
+msgstr ""
+"Untuk mendeposit dan menarik dana menggunakan transfer bank lokal atau e-"
+"cash yang tidak disediakan oleh Binary.com silahkan hubungi agen pembayaran"
+
+msgid ""
+"To withdraw funds please enter the special verification token we have just "
+"emailed you"
+msgstr ""
+"Untuk menarik dana silahkan masukkan token verifikasi khusus yang kami baru "
+"saja emailkan kepada Anda"
+
+msgid "Token"
+msgstr "Token"
+
+msgid "Token management"
+msgstr "Manajemen token"
+
+msgid "Token name"
+msgstr "Nama token"
+
+msgid "Token permissions"
+msgstr "Izin token"
+
+msgid ""
+"Tokens are special codes for accessing Binary mobile applications and third "
+"party tools"
+msgstr ""
+"Token adalah kode khusus untuk mengakses aplikasi mobile Binary dan alat-"
+"alat pihak ketiga"
+
+msgid "Tooltip background"
+msgstr "Latar belakang tooltip"
+
+msgid "Tooltip text"
+msgstr "Teks tooltip"
+
+msgid "Total Cost"
+msgstr "Total Biaya"
+
+msgid "Total Profit/Loss"
+msgstr "Total Untung/Rugi"
+
+msgid "Touch/No Touch"
+msgstr "Touch/No Touch"
+
+msgid "Tourism"
+msgstr "Pariwisata"
+
+msgid "Town/City"
+msgstr "Kota"
+
+msgid "Trade"
+msgstr "Trading"
+
+msgid "Trade Confirmation"
+msgstr "Konfirmasi Trading"
+
+msgid "Trade using"
+msgstr "Trading menggunakan"
+
+msgid "Trading Times"
+msgstr "Waktu Trading"
+
+msgid ""
+"Trading binary options may not be suitable for everyone, so please ensure "
+"that you fully understand the risks involved. Your losses can exceed your "
+"initial deposit and you do not own or have any interest in the underlying "
+"asset"
+msgstr ""
+"Trading opsi Binary memiliki resiko tinggi dan mungkin tidak cocok untuk "
+"semua, maka pastikan untuk memahami berbagai resiko yang terlibat. Kerugian "
+"Anda dapat melebihi deposit awal dan Anda tidak memiliki atau memperoleh "
+"bunga dari aset yang Anda beli"
+
+msgid ""
+"Trading the financial markets can become addictive. Fill in the form below "
+"to limit your participation on the website or send a signed letter or fax to "
+"our customer support team. Once set, you can only tighten your limits. "
+"Limits will only be removed or loosened after 7 days with the exception of "
+"the self- exclusion date, which cannot be removed or altered once you have "
+"confirmed it. To remove or increase your limits, please contact"
+msgstr ""
+"Trading pada pasar finansial dapat menyebabkan ketagihan. Isikan formulir "
+"dibawah ini untuk membatasi keikutsertaan Anda pada situs web ini atau "
+"kirimkan surat yang ditandatangani atau kirimkan fax kepada tim customer "
+"support kami. Setelah ditetapkan, Anda hanya dapat merubah batasan Anda. "
+"Batas hanya akan dihapus atau dirubah setelah 7 hari dengan pengecualian "
+"dari tanggal pengecualian diri, yang tidak dapat dihapus atau diubah setelah "
+"Anda konfirmasi. Untuk menghapus atau meningkatkan batasan Anda, silahkan "
+"hubungi"
+
+msgid "Tradingview for Binary.com"
+msgstr "Tradingview untuk Binary.com"
+
+msgid "Transfer to another Binary account"
+msgstr "Transfer ke akun Binary lainnya"
+
+msgid "Try"
+msgstr "Coba"
+
+msgid "Tue"
+msgstr "Sel"
+
+msgid "Tuesday"
+msgstr "Selasa"
+
+msgid "Turnover"
+msgstr "Turnover"
+
+msgid "USD"
+msgstr "USD"
+
+msgid "Unfortunately, your browser does not support them"
+msgstr "Sayangnya, browser Anda tidak mendukung mereka"
+
+msgid "Unlock"
+msgstr "Membuka"
+
+msgid "Up/Down"
+msgstr "Up/Down"
+
+msgid "Upcoming Events"
+msgstr "Acara Mendatang"
+
+msgid "Update Settings"
+msgstr "Pembaruan Pengaturan"
+
+msgid "Upgrade to a Real Account"
+msgstr "Mengupgrade ke Akun Riil"
+
+msgid "Upper Band Stroke"
+msgstr "Stroke Upper Band"
+
+msgid "Use"
+msgstr "Gunakan"
+
+msgid ""
+"Use the \"Save as ...\" button to save the chart settings, type, time "
+"period, indicators and comparisons"
+msgstr ""
+"Gunakan tombol \"Simpan sebagai...\" untuk menyimpan pengaturan grafik, "
+"jenis, periode waktu, indikator dan perbandingan"
+
+msgid "Verification code has been sent to your email"
+msgstr "Kode verifikasi telah dikirimkan ke email Anda"
+
+msgid "Verification code sent to"
+msgstr "Kode verifikasi terkirim ke"
+
+msgid "Verification token"
+msgstr "Token verifikasi"
+
+msgid "Verify new password"
+msgstr "Verifikasi kata sandi baru"
+
+msgid "Vertical Line"
+msgstr "Garis Vertikal"
+
+msgid "Vertical line"
+msgstr "Garis vertikal"
+
+msgid "View"
+msgstr "Lihat"
+
+msgid "View Historical Data"
+msgstr "Lihat Data Historikal"
+
+msgid "Volume Factor"
+msgstr "Faktor Volume"
+
+msgid "WMA"
+msgstr "WMA"
+
+msgid "WMA Period"
+msgstr "Periode WMA"
+
+msgid "Websocket Server"
+msgstr "Server Websocket"
+
+msgid "Webtrader"
+msgstr "Webtrader"
+
+msgid ""
+"Webtrader uses new web technologies for rich and enjoyable trading experience"
+msgstr ""
+"Webtrader menggunakan teknologi web baru untuk pengalaman trading yang "
+"menyenangkan"
+
+msgid "Wed"
+msgstr "Rab"
+
+msgid "Wednesday"
+msgstr "Rabu"
+
+msgid "While on the go, you can"
+msgstr "Saat bepergian, Anda dapat"
+
+msgid "Windows"
+msgstr "Windows"
+
+msgid "Withdraw funds"
+msgstr "Menarik dana"
+
+msgid "Withdrawal via payment agents"
+msgstr "Penarikan melalui agen pembayaran"
+
+msgid "X-axis labels"
+msgstr "Label x-axis"
+
+msgid "X-axis line"
+msgstr "Garis X-axis"
+
+msgid "X-axis tick"
+msgstr "Tik x-axis"
+
+msgid "Y-axis gridline"
+msgstr "Garis grid Y-axis"
+
+msgid "Y-axis labels"
+msgstr "Label y-axis"
+
+msgid "Yes"
+msgstr "Iya"
+
+msgid "You have excluded yourself until"
+msgstr "Anda telah mengecualikan diri hingga"
+
+msgid "You have sold the following contract"
+msgstr "Anda telah menjual kontrak berikut ini"
+
+msgid ""
+"You have to register webtrader and get App ID before you can use different "
+"OAuth server for authentication. For more information refer to OAuth details "
+"on"
+msgstr ""
+"Anda perlu mendaftar webtrader dan dapatkan ID App sebelum dapat menggunakan "
+"server OAuth lain. Untuk informasi lanjut silahkan lihat detail OAuth di"
+
+msgid "You haven't saved any templates yet"
+msgstr "Anda belum menyimpan template apa pun"
+
+msgid "You pay"
+msgstr "Anda membayar"
+
+msgid "You will be automatically logged out after such time"
+msgstr "Anda akan secara otomatis keluar setelah waktu tersebut"
+
+msgid ""
+"Your Binary.com account is created, but to start trading you need to allow "
+"Webtrader access it"
+msgstr ""
+"Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu "
+"mengijinkan Webtrader untuk mengaksesnya"
+
+msgid "Your browser doesn't support copy to clipboard"
+msgstr "Browser Anda tidak mendukung menyalin ke clipboard"
+
+msgid "Your browser is not supported"
+msgstr "Browser Anda tidak mendukung"
+
+msgid "Your changes have been updated"
+msgstr "Perubahan Anda telah diperbarui"
+
+msgid "Your email"
+msgstr "Email Anda"
+
+msgid "Your new account balance is"
+msgstr "Saldo akun baru Anda adalah"
+
+msgid "Your transaction reference is"
+msgstr "Referensi transaksi Anda adalah"
+
+msgid "Your transaction reference number is"
+msgstr "Nomor referensi transaksi Anda adalah"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "admin"
+msgstr "admin"
+
+msgid "and"
+msgstr "dan"
+
+msgid ""
+"below and proceeding with the Account Opening you should note that you may "
+"be exposing yourself to risks (which may be significant, including the risk "
+"of loss of the entire sum invested) that you may not have the knowledge and "
+"experience to properly assess or mitigate"
+msgstr ""
+"dibawah ini dan melanjutkan Pendaftaran Akun berarti Anda memahami bahwa "
+"Anda akan mungkin akan mengalami risiko (yang mungkin segnifikan termasuk "
+"risiko kehilangan semua dana yang Anda investasikan) dimana Anda mungkin "
+"tidak memiliki pengetahuan dan pengalaman untuk mengurangi atau "
+"menghindarinya"
+
+msgid "between"
+msgstr "antara"
+
+msgid "commission"
+msgstr "komisi"
+
+msgid "contact support"
+msgstr "hubungi support"
+
+msgid "customer support"
+msgstr "customer support"
+
+msgid "day"
+msgstr "hari"
+
+msgid "days"
+msgstr "hari"
+
+msgid "e.g"
+msgstr "contoh"
+
+msgid "e.g, www2.binary.com, www.binaryqa36.com"
+msgstr "contoh www2.binary.com, www.binaryqa36.com"
+
+msgid "end time"
+msgstr "waktu akhir"
+
+msgid "entry spot"
+msgstr "spot masuk"
+
+msgid "exit spot"
+msgstr "spot keluar"
+
+msgid "feed is delayed by"
+msgstr "feed tertunda dalam"
+
+msgid "for API calls that can access the cashier"
+msgstr "untuk panggilan API yang dapat mengakses kasir"
+
+msgid "for API calls that can create trades in the client account"
+msgstr "untuk panggilan API yang dapat membeli kontrak pada akun klien"
+
+msgid "for API calls that change client settings"
+msgstr "untuk panggilan API yang merubah pengaturan klien"
+
+msgid "for API calls that only read client data"
+msgstr "untuk panggilan API yang hanya dapat membaca data klien"
+
+msgid "for mobile charts"
+msgstr "untuk grafik mobile"
+
+msgid "has updated its"
+msgstr "telah memperbarui"
+
+msgid "hour"
+msgstr "jam"
+
+msgid "hours"
+msgstr "jam"
+
+msgid "https://developers.binary.com/"
+msgstr "https://developers.binary.com/"
+
+msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+
+msgid "if this is not your country of residence"
+msgstr "jika ini adalah bukan negara domisili Anda"
+
+msgid "in the future, the"
+msgstr "di masa depan,"
+
+msgid "information about your trading exprience and personal finance"
+msgstr "informasi tentang pengalaman trading Anda dan keuangan pribadi"
+
+msgid ""
+"is Binary's advanced desktop trading platform. Its multi-window interface "
+"provides maximum flexibility and suits the needs of active traders working "
+"on their desktop PCs"
+msgstr ""
+"adalah platform trading desktop Binary yang canggih. Tampilan multi-window "
+"memberikan fleksibilitas maksimum dan sesuai untuk kebutuhan trader yang "
+"aktif bekerja pada desktop PC mereka"
+
+msgid "is required. Current spread"
+msgstr "dibutuhkan. Spread terkini"
+
+msgid "is that which is selected and the"
+msgstr "adalah yang dipilih dan"
+
+msgid "is the"
+msgstr "adalah"
+
+msgid "is the price in effect at that time"
+msgstr "adalah harga yang berlaku saat itu"
+
+msgid "is the selected number of minutes/hours after the"
+msgstr "adalah jumlah menit/jam yang dipilih setelah"
+
+msgid "is the selected time"
+msgstr "adalah waktu yang dipilih"
+
+msgid "is the spot at the"
+msgstr "adalah spot pada"
+
+msgid "is when the contract is processed by our servers and the"
+msgstr "adalah ketika kontrak diproses oleh server dan"
+
+msgid "main site"
+msgstr "situs utama"
+
+msgid "market is presently closed"
+msgstr "pasar saat ini ditutup"
+
+msgid "minute"
+msgstr "menit"
+
+msgid "minutes"
+msgstr "menit"
+
+msgid "next tick"
+msgstr "tik berikutnya"
+
+msgid "oauth"
+msgstr "oauth"
+
+msgid "of \"Now\", the"
+msgstr "dari \"Sekarang\","
+
+msgid "payment agent"
+msgstr "agen pembayaran"
+
+msgid "payments"
+msgstr "pembayaran"
+
+msgid "please play responsibly. Read about"
+msgstr "mohon untuk bertrading secara bertanggung jawab. Baca tentang"
+
+msgid "points"
+msgstr "poin"
+
+msgid "read"
+msgstr "baca"
+
+msgid "second"
+msgstr "detik"
+
+msgid "seconds"
+msgstr "detik"
+
+msgid "session overview"
+msgstr "tinjauan sesi"
+
+msgid "start time"
+msgstr "waktu mulai"
+
+msgid "terms and conditions"
+msgstr "syarat dan ketentuan"
+
+msgid "the"
+msgstr "itu"
+
+msgid "thereafter"
+msgstr "kemudian"
+
+msgid "tick"
+msgstr "tik"
+
+msgid "ticks"
+msgstr "tik"
+
+msgid "trade"
+msgstr "trading"
+
+msgid "trading experience"
+msgstr "pengalaman trading"
+
+msgid "trading frequency"
+msgstr "frekuensi trading"
+
+msgid "websocket"
+msgstr "websocket"
+
+msgid "yes"
+msgstr "iya"
+
+msgid "{agent.commission}%"
+msgstr "{agent.commission}%"
+
+msgid "| Return"
+msgstr "| Laba"
+
+#~ msgid "Add overlays"
+#~ msgstr "Tambah overlays"
+
+#~ msgid "Current overlays"
+#~ msgstr "Overlays Terkini"
+
+#~ msgid ""
+#~ "In order to properly apply this language, a full refresh of page is "
+#~ "required. Are you sure you want to proceed?"
+#~ msgstr ""
+#~ "Untuk menggunakan pilihan bahasa ini dengan benar, Anda perlu merefresh "
+#~ "halaman. Apakah Anda yakin ingin melanjutkan?"
+
+#~ msgid "Open real money account"
+#~ msgstr "Daftar akun uang riil"
+
+#~ msgid "Apply new theme?"
+#~ msgstr "Terapkan tema baru?"
+
+#~ msgid "Chrome Extension"
+#~ msgstr "Exstensi Chrome"
