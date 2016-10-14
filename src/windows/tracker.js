@@ -213,12 +213,14 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
       if(state.is_unique){
         delete states[state.module_id];
       }
-      else{
-        var inx = states[state.module_id].indexOf(state);
-        if(states[state.module_id].length == 1)
-          delete states[state.module_id];
-        else
-          states[state.module_id].splice(inx, 1);
+      else {
+        if(states[state.module_id]) { /* if not already cleared by switching between accounts */
+          var inx = states[state.module_id].indexOf(state);
+          if(states[state.module_id].length == 1)
+            delete states[state.module_id];
+          else
+            states[state.module_id].splice(inx, 1);
+        }
       }
       save_states();
     });
