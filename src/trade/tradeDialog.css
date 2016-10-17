@@ -268,14 +268,16 @@ label.checkbox input:checked ~ span.check {
   left: 0;
 }
 .trade-dialog .trade-templates .save {
+  margin-bottom: 10px;
   display: flex;
   color: white;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
-.trade-dialog .trade-templates .save input { width: 150px; }
+.trade-dialog .trade-templates .save input { width: 160px; }
 .trade-dialog .trade-templates .save button { line-height: 10px; }
+.trade-dialog .trade-templates .save button:disabled:hover { background: #2E8836; cursor: not-allowed; }
 
 .trade-dialog .trade-templates .templates {
   width: 100%;

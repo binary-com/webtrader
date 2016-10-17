@@ -108,15 +108,50 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
     function init_templates(state) {
       var templates = {
           visible: false,
-          array: []
+          array: [],
+          name: '',
       };
 
       templates.toggle = function() {
+        if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
         var visible = templates.visible;
         state.templates.visible = !visible;
       }
       templates.hide = function() {
         state.templates.visible = false;
+      }
+      templates.save_as = function() {
+        var array = local_storage.get('trade-templates') || [];
+        if(_.filter(array, {'name': templates.name}).length > 0) {
+            $.growl.error({ message: 'Template name already exists'.i18n() });
+            return;
+        }
+
+        var tmpl = {
+          name: templates.name,
+          categories_value: state.categories.value,
+          categoriy_displays_selected: state.category_displays.selected,
+          date_start_value: state.date_start.value,
+          digits_value: state.digits.value,
+          duration_value: state.duration.value,
+          duration_count_value: state.duration_count.value,
+          duration_unit_value: state.duration_unit.value,
+          expiry_value_hour: state.date_expiry.value_hour,
+          expiry_value_data: state.date_expiry.value_date,
+          expiry_value: state.date_expiry.value,
+          barriers_barrier_count: state.barriers.barrier_count,
+          barriers_barrier: state.barriers.barrier,
+          barriers_high_barrier: state.barriers.high_barrier,
+          barriers_low_barrier: state.barriers.low_barrier,
+          basis_value: state.basis.value,
+          currency_value: state.currency.value,
+          basis_amount: state.basis.amount,
+          spreads_amount_per_point: state.spreads.amount_per_point,
+
+        }
+
+        console.warn(tmpl);
+        templates.name = '';
       }
 
       state.templates = templates;

@@ -279,15 +279,17 @@
     </ul>
   </div>
   <div class='trade-templates' rv-class-show='templates.visible'>
+    <div class='save'>
+      <button rv-on-click='templates.save_as'
+            rv-disabled='templates.name | trim | eq ""'
+            rv-css-opacity='templates.name | trim | eq "" | ternary 0.8 1'>Save as ...</button>
+      <input rv-value='templates.name'/>
+    </div>
     <div class='templates'>
       <div rv-if='templates.array | prop "length" | negate'>
         <div>You haven't saved any templates yet.</div><br/>
         <div>Use the "Save as ..." button to save current settings.</div>
       </div>
-    </div>
-    <div class='save'>
-      <button>Save as ...</button>
-      <input />
     </div>
   </div>
 </div>
