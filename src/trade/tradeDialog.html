@@ -1,5 +1,5 @@
 ﻿<div class="trade-dialog">
-  <div class="trade-fields">
+  <div class="trade-fields" rv-on-click='templates.hide'>
     <ul class="categories-row">
         <li>
             <select class="contract-category-display"
@@ -277,5 +277,17 @@
               rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">Purchase</button>
       </li>
     </ul>
+  </div>
+  <div class='trade-templates' rv-class-show='templates.visible'>
+    <div class='templates'>
+      <div rv-if='templates.array | prop "length" | negate'>
+        <div>You haven't saved any templates yet.</div><br/>
+        <div>Use the "Save as ..." button to save current settings.</div>
+      </div>
+    </div>
+    <div class='save'>
+      <button>Save as ...</button>
+      <input />
+    </div>
   </div>
 </div>

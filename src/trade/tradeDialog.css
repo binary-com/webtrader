@@ -249,3 +249,35 @@ label.checkbox input:checked ~ span.check {
   opacity: 1;
   transform: scale(1) rotate(45deg);
 }
+
+.trade-dialog .trade-templates {
+    padding: 5px;
+    color: white;
+    position: absolute;
+    left: -85%;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    transition: all 0.2s linear;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-flow: column;
+}
+.trade-dialog .trade-templates.show {
+  right: 15%;
+  left: 0;
+}
+.trade-dialog .trade-templates .save {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.trade-dialog .trade-templates .save input { width: 150px; }
+.trade-dialog .trade-templates .save button { line-height: 10px; }
+
+.trade-dialog .trade-templates .templates {
+  width: 100%;
+  flex-grow: 1;
+}

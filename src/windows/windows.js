@@ -647,6 +647,13 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                 var refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>").find(".reload");
                 refresh.on('click',options.refresh);
             }
+            /* check and add the template button if needed */
+            if(options.template) {
+                var header = blankWindow.parent().find('.ui-dialog-title');
+                var template = $("<span class='ui-icon ui-icon-template template'></span>").insertBefore(header);
+                template.on('click', options.template);
+            }
+
 
            /* options: {
             *    module_id: 'statement/statement'  // require js module id

@@ -105,6 +105,23 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
+    function init_templates(state) {
+      var templates = {
+          visible: false,
+          array: []
+      };
+
+      templates.toggle = function() {
+        var visible = templates.visible;
+        state.templates.visible = !visible;
+      }
+      templates.hide = function() {
+        state.templates.visible = false;
+      }
+
+      state.templates = templates;
+    }
+
     function init_state(available,root, dialog, symbol, contracts_for_spot){
 
       var state = {
@@ -693,6 +710,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
          }
       };
 
+      init_templates(state);
+
       state.categories.array = _(available).map('contract_category_display').uniq().value();
       state.categories.value = _(state.categories.array).includes('Up/Down') ? 'Up/Down' : _(state.categories.array).head(); // TODO: show first tab
 
@@ -763,7 +782,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         var root = $(html).i18n();
         var available = apply_fixes(contracts_for.available);
 
-
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
             resizable: false,
@@ -771,6 +789,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             minimizable: true,
             maximizable: false,
             'data-authorized': 'true',
+            template: function() {
+              state && state.templates && state.templates.toggle();
+            },
             close: function() {
               /* forget last proposal stream on close */
               if(state.proposal.last_promise) {
