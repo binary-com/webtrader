@@ -2,6 +2,8 @@
   <button rv-on-click='menu.templates'>Load chart template</button>
   <button rv-on-click='templates.confirm | bind null' rv-disabled='templates.current | negate' rv-css-opacity='templates.current | ternary 1 0.5'>Save changes</button>
   <button rv-on-click='menu.save_as'>Save as...</button>
+  <button rv-on-click='menu.open_file_selector'>Upload template</button>
+  <input type="file" rv-on-change='menu.upload'>
 </div>
 <div class='templates' rv-show='route.value | eq "templates"'>
   <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
@@ -16,6 +18,7 @@
       <div class='name' rv-class-active='tmpl.name | eq templates.current.name' rv-on-click='templates.apply| bind tmpl'>{tmpl.name}</div>
       <a class="options" href="#" rv-on-click='templates.rename | bind tmpl'>Rename</a>
       <a class="options" href="#" rv-on-click='templates.confirm | bind tmpl'>Delete</a>
+      <a class="options" rv-download="tmpl" rv-on-click="templates.download | bind tmpl">Download</a>
     </div>
   </div>
 </div>
