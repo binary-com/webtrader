@@ -76,6 +76,55 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         $.growl.notice({message: $("<div/>").text('Template changes saved '.i18n() + '(' + current.name + ')').html()});
       }
 
+      menu.open_file_selector = (event) => {
+        $(event.target).next().click();
+      }
+
+      menu.upload = (event) => {
+        const file = event.target.files[0];
+        if(!file)
+          return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const contents = e.target.result;
+          let data = null;
+          try{ 
+           data = JSON.parse(contents);
+           const hash = data.random;
+           delete data.random;
+           if(hash !== hashCode(JSON.stringify(data))){
+            throw new UserException("InvalidHash");;
+           }
+          } catch(e){
+            $.growl.error({message:"Invalid json file."});
+            return;
+          }
+          console.log(templates.current);
+          templates.apply(data);
+          const array = local_storage.get('templates');;
+          let unique = false,
+              file = 1,
+              name = data.name;
+          while(!unique){
+            if(array.map(t => t.name).includes(name)) {
+              name = data.name + " (" + file + ")"
+              file++;
+              continue;
+            }
+            data.name = name;
+            unique = true;
+          }
+
+          array.push(data);
+          local_storage.set('templates', array);
+          templates.array = array;
+          $.growl.notice({message: "Successfully applied the template and saved it as ".i18n() + "<b>" + data.name + "</b>"});
+        }
+
+        reader.readAsText(file);
+      }
+
       templates.save_as = (event) => {
         event.preventDefault();
         const name = templates.save_as_value.substring(0,20);
@@ -94,6 +143,10 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           route.update('menu');
           chartWindow.set_chart_options(dialog_id, options); /* update the name */
         }
+      }
+
+      templates.download = (tmpl) => {
+        $.growl.notice({message: "Downloading template as <b>".i18n() + tmpl.name + ".json</b>"});
       }
 
       templates.remove = (tmpl) => {
@@ -144,7 +197,6 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       templates.confirm = (tmpl, event) => {
         route.update("confirm");
-        console.log(event);
         const action = event.currentTarget.text;
         templates.confirm_prevMenu = action === "Delete".i18n() ? "templates" : "menu";
         templates.confirm_text = action === "Delete" ? "Are you sure you want to delete template?".i18n() : "Are you sure you want to overwrite current template?".i18n();
@@ -157,6 +209,18 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         templates.confirm_no = () => {
           route.update(templates.confirm_prevMenu);
         }
+      }
+
+      const hashCode = (s) => {
+        return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+      }
+
+      rv.binders.download = function(el, value) {
+        value.random = hashCode(JSON.stringify(value));
+        const href = "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(value));
+
+        $(el).attr("href", href);
+        $(el).attr("download",value.name + ".json");
       }
 
       return state;
