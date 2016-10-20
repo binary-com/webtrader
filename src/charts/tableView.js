@@ -6,13 +6,13 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
     function ($, moment, loki, chartingRequestMap, stream_handler) {
         var barsTable = chartingRequestMap.barsTable;
 
-        var show_table_view = function (dialog, instrumentCode) {
+        var show_table_view = function (dialog, instrumentCode, offset) {
             var table = dialog.find('.table-view');
             var chart = dialog.find('.chart-view');
             dialog.find('span.close').css('display', 'block');
             table.animate({left: '0'}, 250);
             chart.animate({left: '-100%'}, 250);
-            refresh_table(dialog, instrumentCode);
+            refresh_table(dialog, instrumentCode, offset);
             /* clear table and fill it again */
             //Adjust table column size
             var tbl = table.find('table').DataTable();
@@ -29,12 +29,12 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             dialog.view_table_visible = false;
         }
 
-        function getColumns(is_tick) {
+        function getColumns(is_tick, offset) {
             var columns = [
                 {
                     title: 'Date', orderable: false,
                     render: function (epoch) {
-                        return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss');
+                        return moment.utc(epoch).utcOffset(offset).format('YYYY-MM-DD HH:mm:ss');
                     }
                 },
                 {title: 'Open', orderable: false,},
@@ -50,7 +50,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                     {
                         title: 'Date', orderable: false,
                         render: function (epoch) {
-                            return moment.utc(epoch).format('YYYY-MM-DD HH:mm:ss');
+                            return moment.utc(epoch).utcOffset(offset).format('YYYY-MM-DD HH:mm:ss');
                         }
                     },
                     {title: 'Tick', orderable: false,},
@@ -62,7 +62,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             return {columns: columns, columnIndexes: columnIndexes};
         }
 
-        var refresh_table = function (dialog, instrumentCode) {
+        var refresh_table = function (dialog, instrumentCode, offset) {
             var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
             var is_tick = isTick(data.timePeriod);
             var table = dialog.find('.table-view');
@@ -96,7 +96,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             api.rows().remove();
             api.destroy();
             table.find('table *').remove();
-            var __ret = getColumns(is_tick);
+            var __ret = getColumns(is_tick, offset);
             table.find('table').dataTable({
                 data: [],
                 columns: __ret.columns,
@@ -128,7 +128,8 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
                 };
         };
 
-        function init(dialog) {
+        function init(dialog, offset) {
+            offset = offset ? offset *(-1) : 0;
             var container = dialog.find('.table-view');
             var data = dialog.find('#' + dialog.attr('id') + '_chart').data();
             var is_tick = isTick(data.timePeriod);
@@ -139,7 +140,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             var table = $("<table class='portfolio-dialog hover'/>");
             table.appendTo(container);
 
-            var __ret = getColumns(is_tick);
+            var __ret = getColumns(is_tick, offset);
             table = table.dataTable({
                 data: [],
                 columns: __ret.columns,
@@ -191,7 +192,7 @@ define(['jquery', 'moment', 'lokijs', 'charts/chartingRequestMap', 'websockets/s
             });
 
             return {
-                show: show_table_view.bind(null, dialog, data.instrumentCode),
+                show: show_table_view.bind(null, dialog, data.instrumentCode, offset),
                 hide: hide_table_view.bind(null, dialog)
             }
         }

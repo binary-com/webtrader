@@ -4,7 +4,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 		var id = dialog.attr('id');
 		/* initialize chartOptions & table-view once chart is rendered */
 		require(["charts/chartOptions", "charts/tableView"], function (chartOptions, tableView) {
-			var table_view = tableView.init(dialog);
+			var table_view = tableView.init(dialog,offset);
 			chartOptions.init(id, timePeriod, type, table_view.show, instrumentName, instrumentCode, !hideShare, !hideOverlay);
 		});
 	};

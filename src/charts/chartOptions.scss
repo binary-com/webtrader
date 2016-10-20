@@ -227,11 +227,15 @@
       overflow-y: auto;
       overflow-x: hidden;
       .menu {
-        button {
+        button{
           background-color: #273051;
           margin: 5px;
           display: block;
           width: 95%;
+        }
+
+        input[type="file"] {
+          display: none;
         }
       }
       .save-as, .rename, .confirm {
@@ -249,20 +253,20 @@
       }
       .templates {
         padding: 5px;
-        width: 165px;
+        width: 190px;
         & > div > div {
           margin: 5px 0;
         }
 
         .template {
           display: inline-block;
-          width: 150px;
+          width: 190px;
           padding-bottom: 5px;
           &:not(:last-child){
             border-bottom: 1px solid #dedede;
           }
           word-wrap: break-word;
-          a.options:nth-child(2n) {
+          a.options:not(:last-child) {
             margin-right: 10px;
           }
           .name {
