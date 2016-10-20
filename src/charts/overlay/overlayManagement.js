@@ -29,7 +29,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           root = $(root).i18n();
 
           /* affiliates route */
-          if (getParameterByName("affiliates") == 'true') {
+          if (isAffiliates()) {
             win = $(root).dialog({
               autoOpen: false,
               resizable: false,
@@ -220,7 +220,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
 
             var chart = $(containerIDWithHash).highcharts();
             update_overlays(chart);
-            var normal_open = first_time || getParameterByName("affiliates") == 'true';
+            var normal_open = first_time || isAffiliates();
             win.dialog('open');
             first_time = false;
         }).catch(console.error.bind(console));

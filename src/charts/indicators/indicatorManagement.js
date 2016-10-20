@@ -50,7 +50,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           root = $(root);
 
           /* affiliates route */
-          if (getParameterByName("affiliates") == 'true') {
+          if (isAffiliates()) {
             ind_win = $(root).dialog({
               autoOpen: false,
               resizable: false,
@@ -201,7 +201,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             var series = $(containerIDWithHash).highcharts().series;
             series = _.filter(series, 'options.isInstrument');
             update_indicators(series);
-            var normal_open = first_time || getParameterByName("affiliates") == 'true';
+            var normal_open = first_time || isAffiliates();
             ind_win.dialog('open')
             first_time = false;
         }).catch(console.error.bind(console));
