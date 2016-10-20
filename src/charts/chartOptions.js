@@ -382,7 +382,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 // Add event only once.
                 !isListenerAdded && $('body').on('click', function(event){
                     for (tab in state){
-                        if(tab != event.originalEvent.scope)
+                        if(event.originalEvent && tab != event.originalEvent.scope)
                             hideOverlays(state[tab]);
                     }
                 });

@@ -47,7 +47,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
 
     function init_dialog_async(root) {
         return new Promise(function(resolve, reject){
-          root = $(root);
+          root = $(root).i18n();
 
           /* affiliates route */
           if (isAffiliates()) {
@@ -71,7 +71,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
           /* normal route */
           require(['windows/windows'], function(windows){
             ind_win = windows.createBlankWindow(root, {
-                title: 'Add/remove indicators',
+                title: 'Add/remove indicators'.i18n(),
                 width: 700,
                 modal: true,
                 // minHeight: 60,
@@ -94,7 +94,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init_state(root){
       state = {
         dialog: {
-          title: 'Add/remove indicators',
+          title: 'Add/remove indicators'.i18n(),
           container_id: '',
           is_tick_chart: false
         },
@@ -192,7 +192,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     return {
       openDialog : function( containerIDWithHash, title ) {
         init().then(function(){
-            state.dialog.title = 'Add/remove indicators' + (title ? ' - ' + title : '');
+            state.dialog.title = 'Add/remove indicators'.i18n() + (title ? ' - ' + title : '');
             state.dialog.container_id = containerIDWithHash;
             state.indicators.current = $(containerIDWithHash).data('indicators-current') || [];
             var time_period = $(containerIDWithHash).data('timePeriod');
