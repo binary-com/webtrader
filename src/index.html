@@ -10,10 +10,10 @@
 </head>
 <body>
 	<script>
-      var affiliates = getParameterByName('affiliates') || 'false';
+      var affiliates = isAffiliates() || 'false';
       var suffix = "";
 
-      if (affiliates === 'true') {
+      if (affiliates === true) {
           var url = window.location.href;
           suffix = url.substring(url.indexOf('?')); //Pass all parameters
       }

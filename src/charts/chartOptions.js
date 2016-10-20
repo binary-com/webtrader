@@ -369,7 +369,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 });
 
                 // Listen for resize event
-                if(getParameterByName('affiliates')=='true'){
+                if(isAffiliates()){
                     $(window).resize(function(){
                         responsiveButtons(state[m_newTabId], $("#" + m_newTabId).find(".chart-view"));
                     });
