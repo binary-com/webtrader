@@ -701,6 +701,10 @@ msgstr "Error downloading .csv"
 msgid "Error getting data for"
 msgstr "Error getting data for"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Error getting market information!"
+
 msgid "Estimated Net Worth"
 msgstr "Estimated Net Worth"
 
@@ -933,8 +937,14 @@ msgstr "Industry of Employment"
 msgid "Instrument"
 msgstr "Instrument"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "Instrument Code Unknown/Unavailable!"
+
 msgid "Instruments"
 msgstr "Instruments"
+
+msgid "Invalid parameter(s)!"
+msgstr "Invalid parameter(s)!"
 
 msgid "Investments & Dividends"
 msgstr "Investments & Dividends"

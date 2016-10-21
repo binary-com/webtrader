@@ -665,6 +665,9 @@ msgstr ""
 msgid "Error getting data for"
 msgstr "" 
 
+msgid "Error getting market information!"
+msgstr "" 
+
 msgid "Estimated Net Worth"
 msgstr "" 
 
@@ -866,7 +869,13 @@ msgstr ""
 msgid "Instrument"
 msgstr "" 
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "" 
+
 msgid "Instruments"
+msgstr "" 
+
+msgid "Invalid parameter(s)!"
 msgstr "" 
 
 msgid "Investments & Dividends"

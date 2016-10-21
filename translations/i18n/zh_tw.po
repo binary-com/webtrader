@@ -695,6 +695,10 @@ msgstr "下載.csv時發生錯誤"
 msgid "Error getting data for"
 msgstr "取得以下資料時出錯"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "取得以下資料時出錯"
+
 msgid "Estimated Net Worth"
 msgstr "估計淨值"
 
@@ -918,8 +922,14 @@ msgstr "職業領域"
 msgid "Instrument"
 msgstr "工具"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "工具"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "投資與分紅"
