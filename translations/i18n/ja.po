@@ -237,6 +237,10 @@ msgstr "レベルを追加"
 msgid "Add/remove comparisons"
 msgstr "比較チャート追加/削除"
 
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "指標を追加（英語表示のみ）"
+
 msgid "Add/remove overlays"
 msgstr "オーバーレイの追加/削除"
 
@@ -621,6 +625,10 @@ msgstr "ダブル MA タイプ"
 msgid "Double click the object to remove"
 msgstr "削除するオブジェクトをダブルクリックしてください"
 
+#, fuzzy
+msgid "Download"
+msgstr "ダウンロード"
+
 msgid "Download CSV"
 msgstr "CSVでダウンロード"
 
@@ -678,6 +686,9 @@ msgstr "終了時刻"
 msgid "Ends In/Out"
 msgstr "END-IN/END-OUT"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
 
@@ -698,9 +709,6 @@ msgstr "推定純資産"
 
 msgid "Exclude me from the website until"
 msgstr "特定日まで利用禁止（日時単位）"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "5ヶ月以下の除外時間を設定することはできません"
 
 msgid "Exit Spot"
 msgstr "終値"
@@ -758,6 +766,10 @@ msgstr "最終価格"
 
 msgid "Finance"
 msgstr "金融"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "リアル口座開設"
 
 msgid "Financial information"
 msgstr "金融情報"
@@ -1427,6 +1439,9 @@ msgstr "4-50文字以内で、秘密の質問にお答えください"
 msgid "Please choose at least one token scope"
 msgstr "1つ以上のトークン範囲をご選択ください"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "送金を完了するために、下記詳細をご確認ください"
 
@@ -1448,39 +1463,11 @@ msgstr "正しいメールアドレスをご入力ください"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "年月日の順で日付をご入力ください"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "0から9999の間の正の整数値をご入力ください"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "30日間の損失制限は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "30日の取引数量限度額 は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "7日間の損失制限は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "7日の取引数量限度額は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "1日の損失限度額は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "1日の取引数量限度額は正の整数値でご入力ください"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "最大保有ポジション数は正の整数値でご入力ください"
-
 msgid "Please enter the token name"
 msgstr "トークン名をご入力ください"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "セッション期間制限は0から99999の間でご入力ください"
 
 msgid "Please enter your city address"
 msgstr "市区町村をご入力ください"
@@ -1558,7 +1545,8 @@ msgstr "所定の"
 msgid "Preferred reality-check interval"
 msgstr "好ましいリアリティチェック実施間隔"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr "最初のトークンを作成するには、右の トークン作成 ボタンを押してください"
 
 msgid "Price"
@@ -1600,7 +1588,8 @@ msgstr "購入時間"
 msgid "Read"
 msgstr "読む"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "リアル口座開設"
 
 msgid "Reality check"
@@ -1940,7 +1929,9 @@ msgstr ""
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
-msgstr "リクエストされたページが見つかりません。存在していないか、アドレスに誤りがあります。再度ご確認ください"
+msgstr ""
+"リクエストされたページが見つかりません。存在していないか、アドレスに誤りがあ"
+"ります。再度ご確認ください"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -2138,6 +2129,10 @@ msgstr "設定内容を更新"
 msgid "Upgrade to a Real Account"
 msgstr "リアル口座へアップグレード"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "チャートテンプレートを読み込む"
+
 msgid "Upper Band Stroke"
 msgstr "アッパーバンドストローク"
 
@@ -2147,7 +2142,9 @@ msgstr "使用する"
 msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
-msgstr "「名前を付けて保存」から、チャート設定、タイプ、期間、指標、比較などを保存することができます"
+msgstr ""
+"「名前を付けて保存」から、チャート設定、タイプ、期間、指標、比較などを保存す"
+"ることができます"
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -2259,6 +2256,9 @@ msgid ""
 msgstr ""
 "お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダー"
 "のアクセスを許可頂く必要があります"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
@@ -2491,6 +2491,37 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| 戻る"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "5ヶ月以下の除外時間を設定することはできません"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "0から9999の間の正の整数値をご入力ください"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "30日間の損失制限は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "30日の取引数量限度額 は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "7日間の損失制限は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "7日の取引数量限度額は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "1日の損失限度額は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "1日の取引数量限度額は正の整数値でご入力ください"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr "最大保有ポジション数は正の整数値でご入力ください"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "セッション期間制限は0から99999の間でご入力ください"
 
 #~ msgid "Add overlays"
 #~ msgstr "オーバーレイを追加"

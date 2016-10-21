@@ -234,6 +234,10 @@ msgstr "添加价位"
 msgid "Add/remove comparisons"
 msgstr "添加/删除比较"
 
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "添加指标"
+
 msgid "Add/remove overlays"
 msgstr "添加/删除覆盖"
 
@@ -612,6 +616,10 @@ msgstr "双MA类型"
 msgid "Double click the object to remove"
 msgstr "双击对象执行删除"
 
+#, fuzzy
+msgid "Download"
+msgstr "下载as"
+
 msgid "Download CSV"
 msgstr "下载CSV"
 
@@ -669,6 +677,9 @@ msgstr "结束时间"
 msgid "Ends In/Out"
 msgstr "“范围之内/之外”收盘"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "输入当前密码"
 
@@ -689,9 +700,6 @@ msgstr "估计净值"
 
 msgid "Exclude me from the website until"
 msgstr "禁止我访问本网站直到"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "禁止时间不能少于6个月"
 
 msgid "Exit Spot"
 msgstr "退市现价"
@@ -749,6 +757,10 @@ msgstr "最终价格"
 
 msgid "Finance"
 msgstr "金融"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "开立真实账户"
 
 msgid "Financial information"
 msgstr "财务信息"
@@ -1406,6 +1418,9 @@ msgstr "请回答密码提示问题，限4-50个字符"
 msgid "Please choose at least one token scope"
 msgstr "请选择至少一个令牌范围"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "请确认以下详情以完成转账"
 
@@ -1427,39 +1442,11 @@ msgstr "请输入正确的电子邮件"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "请输入日期，格式是年-月-日"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "请输入0与9999之间的正整数"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "请输入30天损失限额，限正整数"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "请输入30天交易限额，限正整数"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "请输入7天损失限额，限正整数"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "请输入7天交易限额，限正整数"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "请输入每日损失限额，限正整数"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "请输入每日交易限额，限正整数"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "请输入最大未平仓头寸数目，限正整数"
-
 msgid "Please enter the token name"
 msgstr "请输入令牌名称"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "请输入发送到您邮箱的验证码"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "请输入交易期持续时间限制0至99999之间的数值"
 
 msgid "Please enter your city address"
 msgstr "请输入您的城市住址"
@@ -1536,7 +1523,8 @@ msgstr "预定义"
 msgid "Preferred reality-check interval"
 msgstr "优选实况调查间隔时间"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr "按右方 创建令牌 按钮即可创建首个令牌"
 
 msgid "Price"
@@ -1578,7 +1566,8 @@ msgstr "买入时间"
 msgid "Read"
 msgstr "阅读"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "开立真实账户"
 
 msgid "Reality check"
@@ -2103,6 +2092,10 @@ msgstr "更新设置"
 msgid "Upgrade to a Real Account"
 msgstr "升级为真实账户"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "加载图表模板"
+
 msgid "Upper Band Stroke"
 msgstr "上方带状波幅"
 
@@ -2203,7 +2196,9 @@ msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
-msgstr "使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到此参阅OAuth信息"
+msgstr ""
+"使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到"
+"此参阅OAuth信息"
 
 msgid "You haven't saved any templates yet"
 msgstr "您尚未保存任何模板"
@@ -2218,6 +2213,9 @@ msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
 msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "您的浏览器不支持剪贴板复制操作"
@@ -2338,7 +2336,9 @@ msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
-msgstr "是Binary的先进桌面交易平台。多窗口界面保证了最大的灵活性，可满足活跃交易员通过桌面电脑交易的需求"
+msgstr ""
+"是Binary的先进桌面交易平台。多窗口界面保证了最大的灵活性，可满足活跃交易员通"
+"过桌面电脑交易的需求"
 
 msgid "is required. Current spread"
 msgstr "是必须的。当前价差"
@@ -2447,6 +2447,37 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回报率"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "禁止时间不能少于6个月"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "请输入0与9999之间的正整数"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "请输入30天损失限额，限正整数"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "请输入30天交易限额，限正整数"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "请输入7天损失限额，限正整数"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "请输入7天交易限额，限正整数"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "请输入每日损失限额，限正整数"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "请输入每日交易限额，限正整数"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr "请输入最大未平仓头寸数目，限正整数"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "请输入交易期持续时间限制0至99999之间的数值"
 
 #~ msgid "Add overlays"
 #~ msgstr "添加覆盖"

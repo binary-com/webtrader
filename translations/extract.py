@@ -2,7 +2,7 @@ import subprocess, os, fnmatch, re
 from HTMLParser import HTMLParser
 
 # This array will be added to generator .po files regardless of contents in html or js files.
-# These keys are mostly fileds returned from websocket that are not translated.(Or are not string literals in .js files).
+# These keys are mostly fields returned from websocket that are not translated.(Or are not string literals in .js files).
 static = [
     'Digits', 'ticks', 'Ms', 'Wed', 'Sun', 'Fri', 'Investments & Dividends', 'Up/Down', 'Primary',
     'second', 'Other', 'Health', 'Mrs', 'Lower', 'Higher', 'Download PNG', 'Name of your pet',
