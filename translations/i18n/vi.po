@@ -711,6 +711,10 @@ msgstr "Lỗi tải xuống tệp .csv"
 msgid "Error getting data for"
 msgstr "Lỗi lấy dữ liệu cho"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Lỗi lấy dữ liệu cho"
+
 msgid "Estimated Net Worth"
 msgstr "Ước tính giá trị ròng"
 
@@ -945,8 +949,14 @@ msgstr "Ngành công nghiệp việc làm"
 msgid "Instrument"
 msgstr "Công cụ"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "Công cụ"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Đầu tư & Cổ tức"

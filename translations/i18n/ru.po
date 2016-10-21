@@ -704,6 +704,10 @@ msgstr "Ошибка при загрузке файла в формате .csv"
 msgid "Error getting data for"
 msgstr "Ошибка в получении данных для"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Ошибка в получении данных для"
+
 msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
 
@@ -937,8 +941,14 @@ msgstr "Сфера занятости"
 msgid "Instrument"
 msgstr "Инструмент"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "Инструменты"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"

@@ -708,6 +708,10 @@ msgstr "Błąd podczas pobierania pliku .csv"
 msgid "Error getting data for"
 msgstr "Błąd pozyskiwania danych dla"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Błąd pozyskiwania danych dla"
+
 msgid "Estimated Net Worth"
 msgstr "Szacowana wartość netto"
 
@@ -940,8 +944,14 @@ msgstr "Sektor zatrudnienia"
 msgid "Instrument"
 msgstr "Instrument"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "Instrumenty"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Inwestycje i dywidenda"

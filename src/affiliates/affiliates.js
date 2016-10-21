@@ -102,7 +102,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 									} else {
 										require(["jquery", "jquery-growl"], function($) {
 											$.growl.error({
-												message: "Invalid parameter(s)!"
+												message: "Invalid parameter(s)!".i18n()
 											});
 										});
 										$html.find('div.chartSubContainerHeader').hide();
@@ -110,7 +110,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 								} else {
 									require(["jquery", "jquery-growl"], function($) {
 										$.growl.error({
-											message: "Instrument Code Unknown/Unavailable!"
+											message: "Instrument Code Unknown/Unavailable!".i18n()
 										});
 									});
 									$html.find('div.chartSubContainerHeader').hide();
@@ -120,7 +120,7 @@ define(['jquery', "websockets/binary_websockets", 'navigation/menu', 'lodash', '
 						.catch(function (e) {
 							require(["jquery", "jquery-growl"], function($) {
 								$.growl.error({
-									message: "Error getting market information!"
+									message: "Error getting market information!".i18n()
 								});
 							});
 							$html.find('div.chartSubContainerHeader').hide();

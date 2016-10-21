@@ -704,6 +704,10 @@ msgstr ".csvファイルのダウンロード中にエラーが発生しまし�
 msgid "Error getting data for"
 msgstr "xxxのデータ取得中にエラーが発生しました"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "xxxのデータ取得中にエラーが発生しました"
+
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
 
@@ -934,8 +938,14 @@ msgstr "雇用産業"
 msgid "Instrument"
 msgstr "商品"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "商品"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "投資と配当"

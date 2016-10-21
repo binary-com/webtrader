@@ -699,6 +699,10 @@ msgstr "Error downloading .csv"
 msgid "Error getting data for"
 msgstr "Error mendapatkan data untuk"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Error mendapatkan data untuk"
+
 msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
 
@@ -928,8 +932,14 @@ msgstr "Industri Tenaga Kerja"
 msgid "Instrument"
 msgstr "Instrumen"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "Instrumen"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
