@@ -22,7 +22,8 @@ static = [
     'Download JPEG image', 'Download PDF document', 'Download SVG vector image', 'Chart context menu',
     '1 Tick', '1 Minute', '2 Minutes', '3 Minutes', '5 Minutes', '10 Minutes', '15 Minutes', '30 Minutes', '1 Hour', '2 Hours', 
     '4 Hours', '8 Hours', '1 Day', 'Candles', 'OHLC', 'Line', 'Dot', 'Line Dot', 'Spline', 'Table', '1t', '1m', '2m', '3m', 
-    '5m', '10m', '15m', '30m', '1h', '2h', '4h', '8h', '1d', '1', '2', '3', '4', '5', '8', '10', '15', '30'
+    '5m', '10m', '15m', '30m', '1h', '2h', '4h', '8h', '1d', '1', '2', '3', '4', '5', '8', '10', '15', '30', 
+    'Add/remove indicators'
 ]
 
 # Parsing webtrader html files.

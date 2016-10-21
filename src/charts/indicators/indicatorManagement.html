@@ -52,7 +52,7 @@
 
   <div class='categories' rv-each-cat='indicators.array | indicators-categories indicators.search'>
     <div class='category'>
-      <span class='title' rv-text='cat'></span>
+      <span class='title' rv-text='cat | i18n'></span>
       <div rv-each-ind='indicators.array | indicators-filter cat indicators.search'>
         <span rv-text='ind.long_display_name'
               rv-on-click='indicators.add | bind ind'></span>
