@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-09-10 01:41+0000\n"
+"PO-Revision-Date: 2016-10-21 06:35+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.8\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 類型"
@@ -234,9 +234,8 @@ msgstr "新增價位"
 msgid "Add/remove comparisons"
 msgstr "新增/移除比較"
 
-#, fuzzy
 msgid "Add/remove indicators"
-msgstr "新增指標"
+msgstr "新增/刪除指標"
 
 msgid "Add/remove overlays"
 msgstr "新增/移除重疊"
@@ -616,9 +615,8 @@ msgstr "雙MA類型"
 msgid "Double click the object to remove"
 msgstr "雙擊物件執行刪除"
 
-#, fuzzy
 msgid "Download"
-msgstr "下載as"
+msgstr "下載"
 
 msgid "Download CSV"
 msgstr "下載CSV"
@@ -678,7 +676,7 @@ msgid "Ends In/Out"
 msgstr "收盤價在「範圍之內/之外」"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
+msgstr "請確認您輸入有效資訊，不然帳戶將被封鎖"
 
 msgid "Enter your current password"
 msgstr "輸入目前密碼"
@@ -695,9 +693,8 @@ msgstr "下載.csv時發生錯誤"
 msgid "Error getting data for"
 msgstr "取得以下資料時出錯"
 
-#, fuzzy
 msgid "Error getting market information!"
-msgstr "取得以下資料時出錯"
+msgstr "取得市場資料時出錯!"
 
 msgid "Estimated Net Worth"
 msgstr "估計淨值"
@@ -762,9 +759,8 @@ msgstr "最終價格"
 msgid "Finance"
 msgstr "金融"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "開立真實帳戶"
+msgstr "開立金融帳戶表格"
 
 msgid "Financial information"
 msgstr "財務資料"
@@ -923,13 +919,13 @@ msgid "Instrument"
 msgstr "工具"
 
 msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
+msgstr "工具代碼未知/不可用!"
 
 msgid "Instruments"
 msgstr "工具"
 
 msgid "Invalid parameter(s)!"
-msgstr ""
+msgstr "無效參數!"
 
 msgid "Investments & Dividends"
 msgstr "投資與分紅"
@@ -1429,7 +1425,7 @@ msgid "Please choose at least one token scope"
 msgstr "請選擇至少一個權杖範圍"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "請選擇交易貨幣種類"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "請確認以下詳細資料以完成轉帳"
@@ -1533,9 +1529,8 @@ msgstr "預定義"
 msgid "Preferred reality-check interval"
 msgstr "優選實況調查間隔時間"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
-msgstr "按右方 建立權杖 按鈕即可建立首個權杖"
+msgstr "按右方建立權杖按鈕即可建立首個權杖"
 
 msgid "Price"
 msgstr "價格"
@@ -1576,9 +1571,8 @@ msgstr "買入時間"
 msgid "Read"
 msgstr "閱讀"
 
-#, fuzzy
 msgid "Real Money Account Opening"
-msgstr "開立真實帳戶"
+msgstr "開立真實資金帳戶"
 
 msgid "Reality check"
 msgstr "真實情況檢查"
@@ -2102,9 +2096,8 @@ msgstr "更新設定"
 msgid "Upgrade to a Real Account"
 msgstr "升級為真實帳戶"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "載入圖表範本"
+msgstr "載入範本"
 
 msgid "Upper Band Stroke"
 msgstr "上方帶狀波幅"
@@ -2225,7 +2218,7 @@ msgid ""
 msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
 
 msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
+msgstr "您的帳戶已被封鎖，欲知詳情請聯繫客服部"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "您的瀏覽器不支持剪貼簿複製操作"
