@@ -58,7 +58,8 @@ msgstr ""
 "efetuadas entre clientes e agentes de pagamentos"
 
 msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- title: Página não encontrada permalink: /404.html excerpt: \"\" ---"
+msgstr ""
+"--- title: Página não encontrada permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Traço de -DI"
@@ -239,6 +240,10 @@ msgstr "Adicionar nível"
 
 msgid "Add/remove comparisons"
 msgstr "Adicionar/remover comparações"
+
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "Adicionar indicador"
 
 msgid "Add/remove overlays"
 msgstr "Adicionar/remover sobreposições"
@@ -620,6 +625,10 @@ msgstr "Tipo de MA duplo"
 msgid "Double click the object to remove"
 msgstr "Clique duas vezes no objeto para removê-lo"
 
+#, fuzzy
+msgid "Download"
+msgstr "Baixar como"
+
 msgid "Download CSV"
 msgstr "Baixar CSV"
 
@@ -677,6 +686,9 @@ msgstr "Hora de término"
 msgid "Ends In/Out"
 msgstr "Termina Dentro/Fora"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "Insira a sua senha atual"
 
@@ -697,9 +709,6 @@ msgstr "Patrimônio líquido estimado"
 
 msgid "Exclude me from the website until"
 msgstr "Exclua-me do website até"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "O período de exclusão não pode ser inferior a 6 meses"
 
 msgid "Exit Spot"
 msgstr "Preço de saída"
@@ -757,6 +766,10 @@ msgstr "Preço final"
 
 msgid "Finance"
 msgstr "Finanças"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "Abertura de conta real"
 
 msgid "Financial information"
 msgstr "Informações financeiras"
@@ -1438,6 +1451,9 @@ msgstr "Responda à pergunta secreta, dentro de 4 a 50 caracteres"
 msgid "Please choose at least one token scope"
 msgstr "Escolha pelo menos um escopo de token"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Confirme os seguintes dados para poder concluir a transferência"
 
@@ -1459,42 +1475,11 @@ msgstr "Insira um endereço de e-mail correto"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Insira uma data no formato AAAA-MM-DD"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Insira um valor positivo inteiro entre 0 e 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "Insira um valor positivo inteiro para o limite de perdas de 30 dias"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
-"Insira um valor positivo inteiro para o limite de volume de negócios de 30 "
-"dias"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "Insira um valor positivo inteiro para o limite de perdas de 7 dias"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "Insira um valor positivo inteiro para o limite de negócios de 7 dias"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "Insira um valor positivo inteiro para limite diário de perdas"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "Insira um valor positivo inteiro para o limite diário de negócios"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr ""
-"Insira um valor positivo inteiro para o número máximo de posições em aberto"
-
 msgid "Please enter the token name"
 msgstr "Insira o nome do token"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "Insira o código de verificação enviado para o seu e-mail"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "Insira um valor entre 0 e 99999 para o limite de duração de sessões"
 
 msgid "Please enter your city address"
 msgstr "Insira o seu endereço"
@@ -1571,7 +1556,8 @@ msgstr "Pré-definido"
 msgid "Preferred reality-check interval"
 msgstr "Intervalo preferido para o balanço da realidade"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr ""
 "Pressione o botão  Criar token  à direita para criar o seu primeiro token"
 
@@ -1614,7 +1600,8 @@ msgstr "Hora de compra"
 msgid "Read"
 msgstr "Ler"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "Abertura de conta real"
 
 msgid "Reality check"
@@ -2158,6 +2145,10 @@ msgstr "Atualizar configurações"
 msgid "Upgrade to a Real Account"
 msgstr "Atualize para uma conta de dinheiro real"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "Carregar modelo do gráfico"
+
 msgid "Upper Band Stroke"
 msgstr "Banda superior"
 
@@ -2282,6 +2273,9 @@ msgid ""
 msgstr ""
 "A sua conta Binary foi criada, mas para começar a negociar você precisa "
 "permitir que o Webtrader tenha acesso a ela"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "O seu navegador não suporta \"Copiar para área de transferência\""
@@ -2516,6 +2510,42 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr ""
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "O período de exclusão não pode ser inferior a 6 meses"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "Insira um valor positivo inteiro entre 0 e 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "Insira um valor positivo inteiro para o limite de perdas de 30 dias"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr ""
+#~ "Insira um valor positivo inteiro para o limite de volume de negócios de "
+#~ "30 dias"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "Insira um valor positivo inteiro para o limite de perdas de 7 dias"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr ""
+#~ "Insira um valor positivo inteiro para o limite de negócios de 7 dias"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "Insira um valor positivo inteiro para limite diário de perdas"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "Insira um valor positivo inteiro para o limite diário de negócios"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Insira um valor positivo inteiro para o número máximo de posições em "
+#~ "aberto"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "Insira um valor entre 0 e 99999 para o limite de duração de sessões"
 
 #~ msgid "Add overlays"
 #~ msgstr "Adicionar sobreposições"

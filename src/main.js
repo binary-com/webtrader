@@ -100,7 +100,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
     }
 
     //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && !isAffiliates()) || !Modernizr.localstorage || !Modernizr.webworkers) {
       window.location.href = 'unsupported_browsers/unsupported_browsers.html';
       return;
     }
@@ -281,7 +281,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
     }
 
 
-    if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
+    if (isAffiliates())  //Our chart is accessed by other applications
         handle_affiliate_route();
     else {
         //Our chart is accessed directly

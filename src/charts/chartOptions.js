@@ -115,9 +115,20 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             loadSaveOverlay.css("right", "auto");
             exportOverlay.css("right", "auto");
         }
+
+        //Place instrument name for affiliates based on frame width
+        if(isAffiliates()){
+            if(ele.width() > minWidth + stringWidth.inst){
+                scope.showInstrumentName = true;
+                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:""});
+            } else {
+                scope.showInstrumentName = false;
+                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:scope.instrumentName});
+            }
+        }
     }
 
-    function calculateStringWidth() {
+    function calculateStringWidth(instrument_name) {
         var longTp1 = timeperiod_arr.reduce(function(a,b){return a.value.i18n().length > b.value.i18n().length? a :b}),
             longTp2 = timeperiod_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a :b}),
             longCt = chartType_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a : b});
@@ -134,6 +145,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         stringWidth.tp.min = getWidth(longTp1.value);
         stringWidth.tp.max = getWidth(longTp2.name);
         stringWidth.ct = getWidth(longCt.name);
+        stringWidth.inst = getWidth(instrument_name)+20;
     }
 
     function preLoadImages(){
@@ -151,7 +163,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode, m_showShare, m_showOverlay) {
             
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function(html) {
-                calculateStringWidth();
+                calculateStringWidth(m_instrumentName);
                 if (view[m_newTabId]) view[m_newTabId].unbind();
                 state[m_newTabId] = {
                     //Input parameters
@@ -174,6 +186,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     showLoadSaveSelector: false,
                     showShare: typeof m_showShare == 'undefined' ? true : m_showShare,
                     showOverlay: typeof m_showOverlay == 'undefined' ? true : m_showOverlay,
+                    showInstrumentName: false,
 
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),
@@ -356,7 +369,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 });
 
                 // Listen for resize event
-                if(getParameterByName('affiliates')=='true'){
+                if(isAffiliates()){
                     $(window).resize(function(){
                         responsiveButtons(state[m_newTabId], $("#" + m_newTabId).find(".chart-view"));
                     });
@@ -369,7 +382,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 // Add event only once.
                 !isListenerAdded && $('body').on('click', function(event){
                     for (tab in state){
-                        if(tab != event.originalEvent.scope)
+                        if(event.originalEvent && tab != event.originalEvent.scope)
                             hideOverlays(state[tab]);
                     }
                 });

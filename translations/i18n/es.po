@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
 "PO-Revision-Date: 2016-09-26 14:18+0000\n"
 "Last-Translator: cameliagf <cameliagf@yahoo.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -239,6 +239,10 @@ msgstr "Añadir nivel"
 
 msgid "Add/remove comparisons"
 msgstr "Añadir/quitar comparaciones"
+
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "Añadir indicador"
 
 msgid "Add/remove overlays"
 msgstr "Añadir/quitar superposiciones"
@@ -623,6 +627,10 @@ msgstr "MA de Tipo Doble"
 msgid "Double click the object to remove"
 msgstr "Haga doble clic en el objeto para quitar"
 
+#, fuzzy
+msgid "Download"
+msgstr "Descargar como"
+
 msgid "Download CSV"
 msgstr "Descargar CSV"
 
@@ -680,6 +688,9 @@ msgstr "Hora de finalización"
 msgid "Ends In/Out"
 msgstr "Termina Dentro/Fuera"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "Introduzca su contraseña actual"
 
@@ -700,9 +711,6 @@ msgstr "Valor Neto Estimado"
 
 msgid "Exclude me from the website until"
 msgstr "Excluirme del sitio web hasta que"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Tiempo de exclusión no puede ser inferior a 6 meses"
 
 msgid "Exit Spot"
 msgstr "Punto de Salida"
@@ -760,6 +768,10 @@ msgstr "Precio final"
 
 msgid "Finance"
 msgstr "Finanzas"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "Apertura de cuenta real"
 
 msgid "Financial information"
 msgstr "Información financiera"
@@ -1439,6 +1451,9 @@ msgstr "Por favor responda a la pregunta secreta, con 4-50 caracteres"
 msgid "Please choose at least one token scope"
 msgstr "Por favor, elija al menos un ámbito de token"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
 "Por favor, confirme los siguientes datos para completar la transferencia"
@@ -1461,44 +1476,6 @@ msgstr "Por favor introduzca una dirección de correo electrónico correcta"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Por favor introduzca la fecha en formato AAAA-MM-DD"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Por favor introduzca un valor entero positivo entre 0 y 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr ""
-"Por favor introduzca un valor entero positivo para el límite de 30 días en "
-"pérdidas"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
-"Por favor introduzca un valor entero positivo para el límite de 30 días de "
-"volúmen de ventas"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr ""
-"Por favor introduzca un valor entero positivo para el límite de 7 días de "
-"pérdidas"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr ""
-"Por favor introduzca un valor entero positivo para el límite de 7 días de "
-"volúmen de negocios"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr ""
-"Por favor introduzca un valor entero positivo para el límite diario de "
-"pérdidas"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr ""
-"Por favor introduzca un valor entero positivo para el límite diario de ventas"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr ""
-"Por favor introduzca un valor entero positivo para el número máximo de "
-"posiciones abiertas"
-
 msgid "Please enter the token name"
 msgstr "Por favor, introduzca el nombre de token"
 
@@ -1506,11 +1483,6 @@ msgid "Please enter the verification code sent to your email"
 msgstr ""
 "Por favor introduzca el código de verificación enviado a su correo "
 "electrónico"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
-"Por favor escriba un valor entre 0 y 99999 para el límite de duración de la "
-"sesión"
 
 msgid "Please enter your city address"
 msgstr "Por favor, introduzca la dirección de su ciudad"
@@ -1587,7 +1559,8 @@ msgstr "Predefinido"
 msgid "Preferred reality-check interval"
 msgstr "Intervalo recomendado de prueba de la realidad"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr "Pulsar el botón Crear token a la derecha para crear su primer token"
 
 msgid "Price"
@@ -1629,7 +1602,8 @@ msgstr "Hora de la Compra"
 msgid "Read"
 msgstr "Leer"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "Apertura de cuenta real"
 
 msgid "Reality check"
@@ -2176,6 +2150,10 @@ msgstr "Actualizar Configuración"
 msgid "Upgrade to a Real Account"
 msgstr "Actualizar a una cuenta real"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "Cargar plantilla del gráfico"
+
 msgid "Upper Band Stroke"
 msgstr "Stroke de Banda Superior"
 
@@ -2300,6 +2278,9 @@ msgid ""
 msgstr ""
 "Su cuenta Binary.com ha sido creada, pero para comenzar a operar debe "
 "permitir que Webtrader acceda a ella"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Su navegador no es compatible con copiar al portapapeles"
@@ -2535,6 +2516,53 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retorno"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Tiempo de exclusión no puede ser inferior a 6 meses"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "Por favor introduzca un valor entero positivo entre 0 y 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr ""
+#~ "Por favor introduzca un valor entero positivo para el límite de 30 días "
+#~ "en pérdidas"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr ""
+#~ "Por favor introduzca un valor entero positivo para el límite de 30 días "
+#~ "de volúmen de ventas"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr ""
+#~ "Por favor introduzca un valor entero positivo para el límite de 7 días de "
+#~ "pérdidas"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr ""
+#~ "Por favor introduzca un valor entero positivo para el límite de 7 días de "
+#~ "volúmen de negocios"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr ""
+#~ "Por favor introduzca un valor entero positivo para el límite diario de "
+#~ "pérdidas"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr ""
+#~ "Por favor introduzca un valor entero positivo para el límite diario de "
+#~ "ventas"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Por favor introduzca un valor entero positivo para el número máximo de "
+#~ "posiciones abiertas"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr ""
+#~ "Por favor escriba un valor entre 0 y 99999 para el límite de duración de "
+#~ "la sesión"
 
 #~ msgid "Add overlays"
 #~ msgstr "Añadir superposiciones"

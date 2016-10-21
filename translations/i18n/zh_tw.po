@@ -234,6 +234,10 @@ msgstr "新增價位"
 msgid "Add/remove comparisons"
 msgstr "新增/移除比較"
 
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "新增指標"
+
 msgid "Add/remove overlays"
 msgstr "新增/移除重疊"
 
@@ -612,6 +616,10 @@ msgstr "雙MA類型"
 msgid "Double click the object to remove"
 msgstr "雙擊物件執行刪除"
 
+#, fuzzy
+msgid "Download"
+msgstr "下載as"
+
 msgid "Download CSV"
 msgstr "下載CSV"
 
@@ -669,6 +677,9 @@ msgstr "結束時間"
 msgid "Ends In/Out"
 msgstr "收盤價在「範圍之內/之外」"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "輸入目前密碼"
 
@@ -689,9 +700,6 @@ msgstr "估計淨值"
 
 msgid "Exclude me from the website until"
 msgstr "禁止我訪問本網站直到"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "禁止時間不能少於6個月"
 
 msgid "Exit Spot"
 msgstr "退市現價"
@@ -749,6 +757,10 @@ msgstr "最終價格"
 
 msgid "Finance"
 msgstr "金融"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "開立真實帳戶"
 
 msgid "Financial information"
 msgstr "財務資料"
@@ -1406,6 +1418,9 @@ msgstr "請用4-50個字元提供密碼提示問題的答案"
 msgid "Please choose at least one token scope"
 msgstr "請選擇至少一個權杖範圍"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "請確認以下詳細資料以完成轉帳"
 
@@ -1427,39 +1442,11 @@ msgstr "請輸入正確的電子郵件"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "請輸入日期，格式是年-月-日"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "請輸入0與9999之間的正整數"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "請輸入30天期損失限額正整數"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "請輸入30天交易限制正整數"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "請輸入7天損失限額正整數"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "請輸入7天交易限額正整數"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "請輸入每日損失限額正整數"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "請輸入每日交易限額正整數"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "請輸入最大未平倉頭寸數目正整數"
-
 msgid "Please enter the token name"
 msgstr "請輸入權杖名稱"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "請輸入發送到您郵箱的驗證碼"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "請輸入交易期持續時間限制0至99999之間的數值"
 
 msgid "Please enter your city address"
 msgstr "請輸入您的城市住址"
@@ -1536,7 +1523,8 @@ msgstr "預定義"
 msgid "Preferred reality-check interval"
 msgstr "優選實況調查間隔時間"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr "按右方 建立權杖 按鈕即可建立首個權杖"
 
 msgid "Price"
@@ -1578,7 +1566,8 @@ msgstr "買入時間"
 msgid "Read"
 msgstr "閱讀"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "開立真實帳戶"
 
 msgid "Reality check"
@@ -2103,6 +2092,10 @@ msgstr "更新設定"
 msgid "Upgrade to a Real Account"
 msgstr "升級為真實帳戶"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "載入圖表範本"
+
 msgid "Upper Band Stroke"
 msgstr "上方帶狀波幅"
 
@@ -2220,6 +2213,9 @@ msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
 msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "您的瀏覽器不支持剪貼簿複製操作"
@@ -2450,6 +2446,37 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回報率"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "禁止時間不能少於6個月"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "請輸入0與9999之間的正整數"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "請輸入30天期損失限額正整數"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "請輸入30天交易限制正整數"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "請輸入7天損失限額正整數"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "請輸入7天交易限額正整數"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "請輸入每日損失限額正整數"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "請輸入每日交易限額正整數"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr "請輸入最大未平倉頭寸數目正整數"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "請輸入交易期持續時間限制0至99999之間的數值"
 
 #~ msgid "Add overlays"
 #~ msgstr "新增重疊"

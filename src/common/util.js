@@ -26,6 +26,13 @@ function isLineDotType(type) {
     return type === 'linedot';
 }
 
+function isAffiliates(){
+  return getParameterByName("affiliates") === 'true';
+}
+
+function hideFooter(){
+  return getParameterByName('hideFooter').toLowerCase() === 'true';
+}
 
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {

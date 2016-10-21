@@ -206,6 +206,9 @@ msgstr ""
 msgid "Add/remove comparisons"
 msgstr "" 
 
+msgid "Add/remove indicators"
+msgstr "" 
+
 msgid "Add/remove overlays"
 msgstr "" 
 
@@ -584,6 +587,9 @@ msgstr ""
 msgid "Double click the object to remove"
 msgstr "" 
 
+msgid "Download"
+msgstr "" 
+
 msgid "Download CSV"
 msgstr "" 
 
@@ -641,6 +647,9 @@ msgstr ""
 msgid "Ends In/Out"
 msgstr "" 
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr "" 
+
 msgid "Enter your current password"
 msgstr "" 
 
@@ -660,9 +669,6 @@ msgid "Estimated Net Worth"
 msgstr "" 
 
 msgid "Exclude me from the website until"
-msgstr "" 
-
-msgid "Exclude time cannot be less than 6 months"
 msgstr "" 
 
 msgid "Exit Spot"
@@ -720,6 +726,9 @@ msgid "Final price"
 msgstr "" 
 
 msgid "Finance"
+msgstr "" 
+
+msgid "Financial Account Opening form"
 msgstr "" 
 
 msgid "Financial information"
@@ -1334,6 +1343,9 @@ msgstr ""
 msgid "Please choose at least one token scope"
 msgstr "" 
 
+msgid "Please choose which currency you would like to transact in"
+msgstr "" 
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "" 
 
@@ -1355,37 +1367,10 @@ msgstr ""
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "" 
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "" 
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "" 
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "" 
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "" 
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "" 
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "" 
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "" 
-
-msgid "Please enter positive integer value for Maximum number of open positions"
-msgstr "" 
-
 msgid "Please enter the token name"
 msgstr "" 
 
 msgid "Please enter the verification code sent to your email"
-msgstr "" 
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
 msgstr "" 
 
 msgid "Please enter your city address"
@@ -1463,7 +1448,7 @@ msgstr ""
 msgid "Preferred reality-check interval"
 msgstr "" 
 
-msgid "Press  Create token  button on the right to create your first token"
+msgid "Press Create token button on the right to create your first token"
 msgstr "" 
 
 msgid "Price"
@@ -1505,7 +1490,7 @@ msgstr ""
 msgid "Read"
 msgstr "" 
 
-msgid "Real account opening"
+msgid "Real Money Account Opening"
 msgstr "" 
 
 msgid "Reality check"
@@ -1991,6 +1976,9 @@ msgstr ""
 msgid "Upgrade to a Real Account"
 msgstr "" 
 
+msgid "Upload template"
+msgstr "" 
+
 msgid "Upper Band Stroke"
 msgstr "" 
 
@@ -2097,6 +2085,9 @@ msgid "You will be automatically logged out after such time"
 msgstr "" 
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+msgstr "" 
+
+msgid "Your account is locked, please contact customer support for more info"
 msgstr "" 
 
 msgid "Your browser doesn't support copy to clipboard"

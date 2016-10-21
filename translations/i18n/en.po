@@ -239,6 +239,10 @@ msgstr "Add level"
 msgid "Add/remove comparisons"
 msgstr "Add/remove comparisons"
 
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "Add/remove indicators"
+
 msgid "Add/remove overlays"
 msgstr "Add/remove overlays"
 
@@ -618,6 +622,10 @@ msgstr "Double MA Type"
 msgid "Double click the object to remove"
 msgstr "Double click the object to remove"
 
+#, fuzzy
+msgid "Download"
+msgstr "Download"
+
 msgid "Download CSV"
 msgstr "Download CSV"
 
@@ -675,6 +683,9 @@ msgstr "End Time"
 msgid "Ends In/Out"
 msgstr "Ends In/Out"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr "Ensure you are entering valid inputs else your account will get locked"
+
 msgid "Enter your current password"
 msgstr "Enter your current password"
 
@@ -695,9 +706,6 @@ msgstr "Estimated Net Worth"
 
 msgid "Exclude me from the website until"
 msgstr "Exclude me from the website until"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Exclude time cannot be less than 6 months"
 
 msgid "Exit Spot"
 msgstr "Exit Spot"
@@ -755,6 +763,10 @@ msgstr "Final price"
 
 msgid "Finance"
 msgstr "Finance"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "Financial Account Opening form"
 
 msgid "Financial information"
 msgstr "Financial information"
@@ -1428,6 +1440,9 @@ msgstr "Please answer to secret question, within 4-50 characters"
 msgid "Please choose at least one token scope"
 msgstr "Please choose at least one token scope"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr "Please choose which currency you would like to transact in"
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Please confirm the following details in order to complete the transfer"
 
@@ -1449,40 +1464,11 @@ msgstr "Please enter correct email"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Please enter date in the format YYYY-MM-DD"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Please enter positive integer value between 0 and 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "Please enter positive integer value for 30-day limit on losses"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "Please enter positive integer value for 30-day turnover limit"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "Please enter positive integer value for 7-day limit on losses"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "Please enter positive integer value for 7-day turnover limit"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "Please enter positive integer value for Daily limit on losses"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "Please enter positive integer value for Daily turnover limit"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr ""
-"Please enter positive integer value for Maximum number of open positions"
-
 msgid "Please enter the token name"
 msgstr "Please enter the token name"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "Please enter the verification code sent to your email"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "Please enter value between 0 and 99999 for Session duration limit"
 
 msgid "Please enter your city address"
 msgstr "Please enter your city address"
@@ -1559,8 +1545,9 @@ msgstr "Pre-Defined"
 msgid "Preferred reality-check interval"
 msgstr "Preferred reality-check interval"
 
-msgid "Press  Create token  button on the right to create your first token"
-msgstr "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
+msgstr "Press  Create token button on the right to create your first token"
 
 msgid "Price"
 msgstr "Price"
@@ -1601,8 +1588,9 @@ msgstr "Purchase Time"
 msgid "Read"
 msgstr "Read"
 
-msgid "Real account opening"
-msgstr "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
+msgstr "Real Money Account Opening"
 
 msgid "Reality check"
 msgstr "Reality check"
@@ -2143,6 +2131,10 @@ msgstr "Update Settings"
 msgid "Upgrade to a Real Account"
 msgstr "Upgrade to a Real Account"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "Upload template"
+
 msgid "Upper Band Stroke"
 msgstr "Upper Band Stroke"
 
@@ -2266,6 +2258,9 @@ msgid ""
 msgstr ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr "Your account is locked, please contact customer support for more info"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Your browser doesn't support copy to clipboard"
@@ -2499,6 +2494,38 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Return"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Exclude time cannot be less than 6 months"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "Please enter positive integer value between 0 and 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "Please enter positive integer value for 30-day limit on losses"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "Please enter positive integer value for 30-day turnover limit"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "Please enter positive integer value for 7-day limit on losses"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "Please enter positive integer value for 7-day turnover limit"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "Please enter positive integer value for Daily limit on losses"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "Please enter positive integer value for Daily turnover limit"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "Please enter value between 0 and 99999 for Session duration limit"
 
 #~ msgid "Add overlays"
 #~ msgstr "Add overlays"

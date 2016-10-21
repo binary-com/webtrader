@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
 "PO-Revision-Date: 2016-09-13 16:24+0000\n"
 "Last-Translator: Chloe Chevreton <chloe-che@hotmail.fr>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -239,6 +239,10 @@ msgstr "Ajouter un niveau"
 
 msgid "Add/remove comparisons"
 msgstr "Ajouter/supprimer des comparaisons"
+
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "Ajouter un indicateur"
 
 msgid "Add/remove overlays"
 msgstr "Ajouter/supprimer des superpositions"
@@ -626,6 +630,10 @@ msgstr "Type double MA"
 msgid "Double click the object to remove"
 msgstr "Double-cliquez sur l'objet pour le supprimer"
 
+#, fuzzy
+msgid "Download"
+msgstr "Télécharger au format"
+
 msgid "Download CSV"
 msgstr "Télécharger le fichier CSV"
 
@@ -683,6 +691,9 @@ msgstr "Heure de fin"
 msgid "Ends In/Out"
 msgstr "Termine dans/hors de la zone"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "Saisissez votre mot de passe actuel"
 
@@ -703,9 +714,6 @@ msgstr "Valeur nette estimée"
 
 msgid "Exclude me from the website until"
 msgstr "M'auto-exclure du site jusqu'au"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Le temps d'exclusion ne peut pas être inférieur à 6 mois"
 
 msgid "Exit Spot"
 msgstr "Point de sortie"
@@ -763,6 +771,10 @@ msgstr "Prix final"
 
 msgid "Finance"
 msgstr "Finance"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "Ouverture d'un compte réel"
 
 msgid "Financial information"
 msgstr "Informations financières"
@@ -1117,8 +1129,8 @@ msgid ""
 "(minus the commission) via your preferred payment method"
 msgstr ""
 "Avant d'envoyer votre demande, veillez à vous mettre d'accord avec l'Agent "
-"concernant les conditions de paiement. Lorsque vous cliquerez sur le bouton «"
-" Confirmer le virement », les fonds seront prélevés sur votre compte et "
+"concernant les conditions de paiement. Lorsque vous cliquerez sur le bouton "
+"« Confirmer le virement », les fonds seront prélevés sur votre compte et "
 "envoyés à l'Agent de paiement que vous avez choisi. L'Agent vous enverra le "
 "montant de retrait (après déduction de la commission) par le biais du moyen "
 "de paiement souhaité"
@@ -1450,6 +1462,9 @@ msgstr "Veuillez répondre à la question secrète (réponse de 4 à 50 caractè
 msgid "Please choose at least one token scope"
 msgstr "Veuillez sélectionner au moins un champ d'application de jeton"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
 "Veuillez confirmer les informations suivantes afin de procéder au transfert"
@@ -1472,56 +1487,12 @@ msgstr "Veuillez saisir une adresse e-mail correcte"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Veuillez saisir la date au format AAAA-MM-JJ."
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Veuillez saisir une valeur entière positive comprise entre 0 et 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite des pertes sur 30 "
-"jours"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite du volume de "
-"transactions sur 30 jours"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite des pertes sur 7 "
-"jours"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite du volume de "
-"transactions sur 7 jours"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite des pertes sur un "
-"jour"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite du volume de "
-"transactions sur un jour"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour le nombre maximal de "
-"positions ouvertes"
-
 msgid "Please enter the token name"
 msgstr "Veuillez saisir le nom du jeton"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
 "Veuillez saisir le code de vérification envoyé par e-mail à votre adresse"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
-"Veuillez saisir une valeur comprise entre 0 et 99999 pour la limite de durée "
-"de session"
 
 msgid "Please enter your city address"
 msgstr "Veuillez saisir votre ville"
@@ -1598,7 +1569,8 @@ msgstr "Prédéfini"
 msgid "Preferred reality-check interval"
 msgstr "Périodicité souhaitée pour les relevés d'activité"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr ""
 "Cliquez sur le bouton « Créer un jeton » sur la droite pour créer votre "
 "premier jeton"
@@ -1642,7 +1614,8 @@ msgstr "Heure d'achat"
 msgid "Read"
 msgstr "Lu"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "Ouverture d'un compte réel"
 
 msgid "Reality check"
@@ -2190,6 +2163,10 @@ msgstr "Mise à jour des paramètres"
 msgid "Upgrade to a Real Account"
 msgstr "Ouvrir un compte réel"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "Charger le modèle graphique"
+
 msgid "Upper Band Stroke"
 msgstr "Tracé de la bande supérieure"
 
@@ -2317,8 +2294,12 @@ msgstr ""
 "Votre compte Binary.com a été créé. Pour commencer à effectuer des "
 "opérations de trading, vous devez autoriser Webtrader à y accéder."
 
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
+
 msgid "Your browser doesn't support copy to clipboard"
-msgstr "Votre navigateur ne prend pas en charge la copie dans le presse-papiers"
+msgstr ""
+"Votre navigateur ne prend pas en charge la copie dans le presse-papiers"
 
 msgid "Your browser is not supported"
 msgstr "Votre navigateur n'est pas pris en charge"
@@ -2407,7 +2388,8 @@ msgid "for API calls that change client settings"
 msgstr "pour les appels d'API qui peuvent modifier les paramètres"
 
 msgid "for API calls that only read client data"
-msgstr "pour les appels d'API qui peuvent uniquement lire les données du client"
+msgstr ""
+"pour les appels d'API qui peuvent uniquement lire les données du client"
 
 msgid "for mobile charts"
 msgstr "pour les graphiques mobiles"
@@ -2554,6 +2536,54 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retours"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Le temps d'exclusion ne peut pas être inférieur à 6 mois"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive comprise entre 0 et 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite des pertes sur "
+#~ "30 jours"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite du volume de "
+#~ "transactions sur 30 jours"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite des pertes sur "
+#~ "7 jours"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite du volume de "
+#~ "transactions sur 7 jours"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite des pertes sur "
+#~ "un jour"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite du volume de "
+#~ "transactions sur un jour"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour le nombre maximal de "
+#~ "positions ouvertes"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur comprise entre 0 et 99999 pour la limite de "
+#~ "durée de session"
 
 #~ msgid "Add overlays"
 #~ msgstr "Ajouter des superpositions"
