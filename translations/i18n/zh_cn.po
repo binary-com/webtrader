@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-09-14 01:06+0000\n"
-"Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
+"PO-Revision-Date: 2016-10-21 06:35+0000\n"
+"Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.8\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 类型"
@@ -234,9 +234,8 @@ msgstr "添加价位"
 msgid "Add/remove comparisons"
 msgstr "添加/删除比较"
 
-#, fuzzy
 msgid "Add/remove indicators"
-msgstr "添加指标"
+msgstr "添加/删除指标"
 
 msgid "Add/remove overlays"
 msgstr "添加/删除覆盖"
@@ -616,9 +615,8 @@ msgstr "双MA类型"
 msgid "Double click the object to remove"
 msgstr "双击对象执行删除"
 
-#, fuzzy
 msgid "Download"
-msgstr "下载as"
+msgstr "下载"
 
 msgid "Download CSV"
 msgstr "下载CSV"
@@ -678,7 +676,7 @@ msgid "Ends In/Out"
 msgstr "“范围之内/之外”收盘"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
+msgstr "请确认您输入有效数据，不然账户将被封锁"
 
 msgid "Enter your current password"
 msgstr "输入当前密码"
@@ -695,9 +693,8 @@ msgstr "下载.csv时发生错误"
 msgid "Error getting data for"
 msgstr "获取以下数据时出错"
 
-#, fuzzy
 msgid "Error getting market information!"
-msgstr "获取以下数据时出错"
+msgstr "获取市场信息时出错！"
 
 msgid "Estimated Net Worth"
 msgstr "估计净值"
@@ -762,9 +759,8 @@ msgstr "最终价格"
 msgid "Finance"
 msgstr "金融"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "开立真实账户"
+msgstr "开立金融账户表格"
 
 msgid "Financial information"
 msgstr "财务信息"
@@ -923,13 +919,13 @@ msgid "Instrument"
 msgstr "工具"
 
 msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
+msgstr "工具代码未知/不可用！"
 
 msgid "Instruments"
 msgstr "工具"
 
 msgid "Invalid parameter(s)!"
-msgstr ""
+msgstr "无效参数！"
 
 msgid "Investments & Dividends"
 msgstr "投资与分红"
@@ -1429,7 +1425,7 @@ msgid "Please choose at least one token scope"
 msgstr "请选择至少一个令牌范围"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "请选择交易货币种类"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "请确认以下详情以完成转账"
@@ -1533,9 +1529,8 @@ msgstr "预定义"
 msgid "Preferred reality-check interval"
 msgstr "优选实况调查间隔时间"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
-msgstr "按右方 创建令牌 按钮即可创建首个令牌"
+msgstr "按右方创建令牌按钮即可创建首个令牌"
 
 msgid "Price"
 msgstr "价格"
@@ -1576,9 +1571,8 @@ msgstr "买入时间"
 msgid "Read"
 msgstr "阅读"
 
-#, fuzzy
 msgid "Real Money Account Opening"
-msgstr "开立真实账户"
+msgstr "开立真实资金账户"
 
 msgid "Reality check"
 msgstr "真实情况检查"
@@ -2102,9 +2096,8 @@ msgstr "更新设置"
 msgid "Upgrade to a Real Account"
 msgstr "升级为真实账户"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "加载图表模板"
+msgstr "加载模板"
 
 msgid "Upper Band Stroke"
 msgstr "上方带状波幅"
@@ -2225,7 +2218,7 @@ msgid ""
 msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
 
 msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
+msgstr "您的账户已被封锁，欲知详情请联系客服部"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "您的浏览器不支持剪贴板复制操作"

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-10-11 02:20+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-10-21 19:53+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
 "Language: ja\n"
@@ -237,9 +237,8 @@ msgstr "レベルを追加"
 msgid "Add/remove comparisons"
 msgstr "比較チャート追加/削除"
 
-#, fuzzy
 msgid "Add/remove indicators"
-msgstr "指標を追加（英語表示のみ）"
+msgstr "指標を追加/削除（英語表示のみ）"
 
 msgid "Add/remove overlays"
 msgstr "オーバーレイの追加/削除"
@@ -625,7 +624,6 @@ msgstr "ダブル MA タイプ"
 msgid "Double click the object to remove"
 msgstr "削除するオブジェクトをダブルクリックしてください"
 
-#, fuzzy
 msgid "Download"
 msgstr "ダウンロード"
 
@@ -687,7 +685,7 @@ msgid "Ends In/Out"
 msgstr "END-IN/END-OUT"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
+msgstr "入力内容が有効であることをよくお確かめください。情報が無効である場合、口座がロックされますのでご注意ください。"
 
 msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
@@ -704,9 +702,8 @@ msgstr ".csvファイルのダウンロード中にエラーが発生しまし�
 msgid "Error getting data for"
 msgstr "xxxのデータ取得中にエラーが発生しました"
 
-#, fuzzy
 msgid "Error getting market information!"
-msgstr "xxxのデータ取得中にエラーが発生しました"
+msgstr "市場情報の取得にエラーが発生しました！"
 
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
@@ -771,9 +768,8 @@ msgstr "最終価格"
 msgid "Finance"
 msgstr "金融"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "リアル口座開設"
+msgstr "口座開設申請フォーム"
 
 msgid "Financial information"
 msgstr "金融情報"
@@ -939,13 +935,13 @@ msgid "Instrument"
 msgstr "商品"
 
 msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
+msgstr "ツールコードが不明またはご利用いただけません！"
 
 msgid "Instruments"
 msgstr "商品"
 
 msgid "Invalid parameter(s)!"
-msgstr ""
+msgstr "パラメーターが無効です！"
 
 msgid "Investments & Dividends"
 msgstr "投資と配当"
@@ -1450,7 +1446,7 @@ msgid "Please choose at least one token scope"
 msgstr "1つ以上のトークン範囲をご選択ください"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "ご希望の取引通貨を選択してください"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "送金を完了するために、下記詳細をご確認ください"
@@ -1555,7 +1551,6 @@ msgstr "所定の"
 msgid "Preferred reality-check interval"
 msgstr "好ましいリアリティチェック実施間隔"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
 msgstr "最初のトークンを作成するには、右の トークン作成 ボタンを押してください"
 
@@ -1598,7 +1593,6 @@ msgstr "購入時間"
 msgid "Read"
 msgstr "読む"
 
-#, fuzzy
 msgid "Real Money Account Opening"
 msgstr "リアル口座開設"
 
@@ -2139,9 +2133,8 @@ msgstr "設定内容を更新"
 msgid "Upgrade to a Real Account"
 msgstr "リアル口座へアップグレード"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "チャートテンプレートを読み込む"
+msgstr "テンプレートをアップデート"
 
 msgid "Upper Band Stroke"
 msgstr "アッパーバンドストローク"
@@ -2268,7 +2261,7 @@ msgstr ""
 "のアクセスを許可頂く必要があります"
 
 msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
+msgstr "お客様の口座は現在ロックされています。詳しくはカスタマーサポートまでご連絡ください。"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
