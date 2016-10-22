@@ -813,7 +813,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       return state;
     }
 
-    function init(symbol, contracts_for) {
+    function init(symbol, contracts_for, saved_options) {
         var root = $(html).i18n();
         var available = apply_fixes(contracts_for.available);
 
@@ -837,11 +837,17 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               dialog.destroy();
             }
         });
-        dialog.track({
+        var update_track = dialog.track({
           module_id: 'tradeDialog',
           is_unique: false,
-          data: symbol
+          data: {
+            symbol : symbol,
+            options: saved_options || {}
+          }
         });
+        dialog.update_track = function(options) {
+          update_track({symbol: symbol, options: options});
+        }
 
         /********************** register for ticks_streams **********************/
         var key = chartingRequestMap.keyFor(symbol.symbol, /* granularity = */ 0);

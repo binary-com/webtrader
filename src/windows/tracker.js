@@ -79,10 +79,10 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
         when_authenticated().then(function() {
           data.data.tracker_id = ++counter;
           liveapi
-              .send({contracts_for: data.data.symbol})
+              .send({contracts_for: data.data.symbol.symbol})
               .then(function (res) {
                   require(['trade/tradeDialog'], function (tradeDialog) {
-                      tradeDialog.init(data.data, res.contracts_for);
+                      tradeDialog.init(data.data.symbol, res.contracts_for, data.data.options);
                   });
               }).catch(console.error.bind(console));
           return true; // unsubscribe from login event
