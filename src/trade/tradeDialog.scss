@@ -45,7 +45,7 @@
   .categories-row {
     justify-content: space-between;
     li {height: 30px; }
-    li.sparkline-chart { min-width: 95px;}
+    li.sparkline-chart { min-width: 93px;}
     li.tick-quote span {
       background: #29ABE2;
       text-align: center;
@@ -62,15 +62,16 @@
   .trade-template-manager {
     .img {
       display: inline-block;
-      width: 20px;
+      width: 18px;
       height: 20px;
-      margin: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      margin-left: 1px;
       background: #273051;
 
       img {
-        color: white;
-        width: 20px;
-        height: 20px;
+        width: 100%;
+        height: 100%;
       }
     }
     .manager-root {
