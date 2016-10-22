@@ -242,6 +242,10 @@ msgstr "Thêm cấp độ"
 msgid "Add/remove comparisons"
 msgstr "Thêm/bỏ so sánh"
 
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "Thêm chỉ dẫn"
+
 msgid "Add/remove overlays"
 msgstr "Thêm/loại bỏ lớp phủ"
 
@@ -628,6 +632,10 @@ msgstr "Gấp đôi kiểu MA"
 msgid "Double click the object to remove"
 msgstr "Nhấp đúp chuột vào đối tượng để loại bỏ"
 
+#, fuzzy
+msgid "Download"
+msgstr "Tải xuống thành"
+
 msgid "Download CSV"
 msgstr "Tải xuống CSV"
 
@@ -685,6 +693,9 @@ msgstr "Thời gian kết thúc"
 msgid "Ends In/Out"
 msgstr "Kết thúc Trong/Ngoài"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "Nhập mật khẩu hiện tại của bạn"
 
@@ -700,14 +711,15 @@ msgstr "Lỗi tải xuống tệp .csv"
 msgid "Error getting data for"
 msgstr "Lỗi lấy dữ liệu cho"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Lỗi lấy dữ liệu cho"
+
 msgid "Estimated Net Worth"
 msgstr "Ước tính giá trị ròng"
 
 msgid "Exclude me from the website until"
 msgstr "Loại bỏ tôi khỏi trang web cho đến khi"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Thời gian loại trừ không thể ít hơn 6 tháng"
 
 msgid "Exit Spot"
 msgstr "Điểm chốt"
@@ -765,6 +777,10 @@ msgstr "Giá cuối cùng"
 
 msgid "Finance"
 msgstr "Tài chính"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "Tài khoản Thật đang mở"
 
 msgid "Financial information"
 msgstr "Thông tin tài chính"
@@ -933,8 +949,14 @@ msgstr "Ngành công nghiệp việc làm"
 msgid "Instrument"
 msgstr "Công cụ"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "Công cụ"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Đầu tư & Cổ tức"
@@ -1451,6 +1473,9 @@ msgstr "Xin vui lòng trả lời câu hỏi bí mật, trong vòng 4-50 ký t�
 msgid "Please choose at least one token scope"
 msgstr "Vui lòng chọn ít nhất một phạm vi token"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Vui lòng xác nhận các chi tiết sau để hoàn thành việc chuyển khoản"
 
@@ -1472,39 +1497,11 @@ msgstr "Vui lòng nhập đúng email"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Vui lòng nhập ngày theo định dạng YYYY-MM-DD"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Vui lòng nhập giá trị nguyên dương trong khoảng 0-9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "Vui lòng nhập giá trị nguyên dương cho 30 ngày giới hạn thua"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "Vui lòng nhập giá trị nguyên dương cho 30 ngày giới hạn doanh số"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "Vui lòng nhập giá trị nguyên dương cho 7 ngày giới hạn thua"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "Vui lòng nhập giá trị nguyên dương cho 7 ngày giới hạn doanh số"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "Vui lòng nhập giá trị nguyên dương cho giới hạn thua mỗi ngày"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "Vui lòng nhập giá trị nguyên dương cho giới hạn doanh số hàng ngày"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "Vui lòng nhập giá trị nguyên dương cho số vị trí mở tối đa"
-
 msgid "Please enter the token name"
 msgstr "Vui lòng nhập tên token"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "Vui lòng nhập mã xác minh được gửi tới email của bạn"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "Vui lòng nhập giá trị từ 0 đến 99999 cho giới hạn thời lượng phiên"
 
 msgid "Please enter your city address"
 msgstr "Vui lòng nhập địa chỉ phố của bạn"
@@ -1581,7 +1578,8 @@ msgstr "Được xác định trước"
 msgid "Preferred reality-check interval"
 msgstr "Khoảng kiểm tra thực tế ưu tiên"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr "Bấm nút Tạo Token tở phía bên phải để tạo token đầu tiên của bạn"
 
 msgid "Price"
@@ -1623,7 +1621,8 @@ msgstr "Thời gian mua"
 msgid "Read"
 msgstr "Đọc"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "Tài khoản Thật đang mở"
 
 msgid "Reality check"
@@ -2170,6 +2169,10 @@ msgid "Upgrade to a Real Account"
 msgstr "Nâng cấp lên tài khoản Thực"
 
 #, fuzzy
+msgid "Upload template"
+msgstr "Tải mẫu biểu đồ"
+
+#, fuzzy
 msgid "Upper Band Stroke"
 msgstr "Nét lên"
 
@@ -2294,6 +2297,9 @@ msgid ""
 msgstr ""
 "Tài khoản Binary.com của bạn đã được tạo, nhưng để bắt đầu giao dịch bạn cần "
 "cho phép Webtrader truy cập nó"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Trình duyệt của bạn không hỗ trợ sao chép vào clipboard"
@@ -2530,6 +2536,37 @@ msgstr "{hoa hồng cho đại lý}%"
 
 msgid "| Return"
 msgstr "| Quay trở lại"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Thời gian loại trừ không thể ít hơn 6 tháng"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương trong khoảng 0-9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương cho 30 ngày giới hạn thua"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương cho 30 ngày giới hạn doanh số"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương cho 7 ngày giới hạn thua"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương cho 7 ngày giới hạn doanh số"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương cho giới hạn thua mỗi ngày"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương cho giới hạn doanh số hàng ngày"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr "Vui lòng nhập giá trị nguyên dương cho số vị trí mở tối đa"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "Vui lòng nhập giá trị từ 0 đến 99999 cho giới hạn thời lượng phiên"
 
 #~ msgid "Add overlays"
 #~ msgstr "Thêm lớp phủ"

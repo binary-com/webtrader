@@ -4,7 +4,7 @@
 
 define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, chartWindow, charts, moment, chartingRequestMap) {
 
-    var state = [], view = [], template_manager = {}, stringWidth= {};
+    var state = [], view = [], template_manager = {}, stringWidth= {}, isListenerAdded = false;
 
     var timeperiod_arr = [{value: "1t", name: "1 Tick", digit: 1, type: "ticks"}, 
         {value: "1m", name: "1 Minute", digit: 1, type: "minutes"}, 
@@ -115,9 +115,20 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             loadSaveOverlay.css("right", "auto");
             exportOverlay.css("right", "auto");
         }
+
+        //Place instrument name for affiliates based on frame width
+        if(isAffiliates()){
+            if(ele.width() > minWidth + stringWidth.inst){
+                scope.showInstrumentName = true;
+                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:""});
+            } else {
+                scope.showInstrumentName = false;
+                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:scope.instrumentName});
+            }
+        }
     }
 
-    function calculateStringWidth() {
+    function calculateStringWidth(instrument_name) {
         var longTp1 = timeperiod_arr.reduce(function(a,b){return a.value.i18n().length > b.value.i18n().length? a :b}),
             longTp2 = timeperiod_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a :b}),
             longCt = chartType_arr.reduce(function(a,b){return a.name.i18n().length > b.name.i18n().length? a : b});
@@ -134,6 +145,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         stringWidth.tp.min = getWidth(longTp1.value);
         stringWidth.tp.max = getWidth(longTp2.name);
         stringWidth.ct = getWidth(longCt.name);
+        stringWidth.inst = getWidth(instrument_name)+20;
     }
 
     function preLoadImages(){
@@ -151,7 +163,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode, m_showShare, m_showOverlay) {
             
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function(html) {
-                calculateStringWidth();
+                calculateStringWidth(m_instrumentName);
                 if (view[m_newTabId]) view[m_newTabId].unbind();
                 state[m_newTabId] = {
                     //Input parameters
@@ -174,6 +186,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     showLoadSaveSelector: false,
                     showShare: typeof m_showShare == 'undefined' ? true : m_showShare,
                     showOverlay: typeof m_showOverlay == 'undefined' ? true : m_showOverlay,
+                    showInstrumentName: false,
 
                     exportChartURLShare : urlShareTemplate.format(m_instrumentCode, m_timePeriod),
                     exportChartIframeShare : iframeShareTemplate.format(m_instrumentCode, m_timePeriod),
@@ -191,6 +204,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     var temp = !scope.showTimePeriodSelector;
                     hideOverlays(scope);
                     scope.showTimePeriodSelector = temp;
+                    event.originalEvent.scope = scope.newTabId;
                 };
                 state[m_newTabId].toggleChartTypeSelector = function(event, scope) {
                     var temp = !scope.showChartTypeSelector;
@@ -199,6 +213,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         hideOverlays(scope);
                         scope.showChartTypeSelector = temp;
                         ele.src = ele.src.replace(".svg","-w.svg");
+                        event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showChartTypeSelector = false;
                         ele.src = ele.src.replace("-w","");
@@ -210,7 +225,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         var title = scope.instrumentName + ' (' + scope.timePeriod.value + ')';
                         indicatorManagement.openDialog( '#' + scope.newTabId + '_chart', title);
                     });
-                    hideOverlays(scope);
                 };
 
                 state[m_newTabId].addRemoveOverlay = function(event, scope) {
@@ -218,7 +232,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         var title = scope.instrumentName + ' (' + scope.timePeriod.value + ')';
                         overlayManagement.openDialog( '#' + scope.newTabId + '_chart', title);
                     });
-                    hideOverlays(scope);
                 };
 
                 state[m_newTabId].changeChartType = function(event, scope) {
@@ -241,7 +254,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                             changeChartType(scope,'line');
                         showCandlestickAndOHLC(scope.newTabId, !tick && !isOverlaidView('#' + m_newTabId + '_chart'));
                         charts.refresh('#' + scope.newTabId + '_chart', timePeriod, scope.chartType.value);
-                        hideOverlays(scope);
                         scope.exportChartURLShare = urlShareTemplate.format(scope.instrumentCode, timePeriod);
                         scope.exportChartIframeShare = iframeShareTemplate.format(scope.instrumentCode, timePeriod);
                         scope.fbShareLink = fbShareTemplate.format(encodeURIComponent(urlShareTemplate.format(m_instrumentCode, m_timePeriod)));
@@ -265,7 +277,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     require(["charts/crosshair"], function( crosshair ) {
                         crosshair.toggleCrossHair('#' + scope.newTabId + '_chart');
                     });
-                    hideOverlays(scope);
                 };
 
                 state[m_newTabId].toggleDrawingToolSelector = function(event, scope) {
@@ -275,6 +286,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         hideOverlays(scope);
                         scope.showDrawingToolSelector = temp;
                         ele.src = ele.src.replace(".svg","-w.svg");
+                        event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showDrawingToolSelector = false;
                         ele.src = ele.src.replace("-w","");
@@ -289,7 +301,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                             $(refererChartID).highcharts().annotate = true;
                             draw.init(refererChartID);
                         });
-                        hideOverlays(scope);
                     }
                 };
 
@@ -300,6 +311,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         hideOverlays(scope);
                         scope.showExportSelector = temp;
                         ele.src = ele.src.replace(".svg","-w.svg");
+                        event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showExportSelector = false;
                         ele.src = ele.src.replace("-w","");
@@ -313,6 +325,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         hideOverlays(scope);
                         scope.showLoadSaveSelector = temp;
                         ele.src = ele.src.replace(".svg","-w.svg");
+                        event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showLoadSaveSelector = false;
                         ele.src = ele.src.replace("-w","");
@@ -334,10 +347,9 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                                 type: 'image/svg+xml'
                             }); break;
                         }
-                        hideOverlays(scope);
                     }
                 };
-
+                
                 // Listen for indicator changes.
                 $("#" + m_newTabId).on('chart-indicators-changed',function(e, chart){
                   state[m_newTabId].indicatorsCount = chart.get_indicators().length;
@@ -357,7 +369,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 });
 
                 // Listen for resize event
-                if(getParameterByName('affiliates')=='true'){
+                if(isAffiliates()){
                     $(window).resize(function(){
                         responsiveButtons(state[m_newTabId], $("#" + m_newTabId).find(".chart-view"));
                     });
@@ -366,6 +378,16 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         responsiveButtons(state[m_newTabId], $(this).find(".chart-view"));
                     });
                 }
+
+                // Add event only once.
+                !isListenerAdded && $('body').on('click', function(event){
+                    for (tab in state){
+                        if(event.originalEvent && tab != event.originalEvent.scope)
+                            hideOverlays(state[tab]);
+                    }
+                });
+
+                isListenerAdded = true;
 
                 // Preload images for better UI
                 preLoadImages();
@@ -385,7 +407,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 require(['charts/chartTemplateManager'], function(templateManager) {
                   var root = $html.find('.chart-template-manager-root');
                   template_manager[m_newTabId] = templateManager.init(root, m_newTabId);
-                })
+                });
+
+                // Stop event propagation for these overlays.
+                $html.find(".loadSaveOverlay").on("click",function(e){e.stopPropagation()});
+                $html.find(".exportOverlay").on("click",function(e){e.stopPropagation()});
 
             });
 

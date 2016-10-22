@@ -5,14 +5,14 @@ msgstr ""
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
 "PO-Revision-Date: 2016-09-15 20:37+0000\n"
 "Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
@@ -240,6 +240,10 @@ msgstr "Добавить уровень"
 
 msgid "Add/remove comparisons"
 msgstr "Добавить/удалить сравнения"
+
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "Добавить индикатор"
 
 msgid "Add/remove overlays"
 msgstr "Добавить/удалить наложение"
@@ -621,6 +625,10 @@ msgstr "Тип двойной СС"
 msgid "Double click the object to remove"
 msgstr "Дважды нажмите на объект, чтобы удалить его"
 
+#, fuzzy
+msgid "Download"
+msgstr "Загрузить как"
+
 msgid "Download CSV"
 msgstr "Загрузить в CSV"
 
@@ -678,6 +686,9 @@ msgstr "Окончание"
 msgid "Ends In/Out"
 msgstr "Заканчивается Внутри/Вне"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "Введите текущий пароль"
 
@@ -693,14 +704,15 @@ msgstr "Ошибка при загрузке файла в формате .csv"
 msgid "Error getting data for"
 msgstr "Ошибка в получении данных для"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Ошибка в получении данных для"
+
 msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
 
 msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Время исключения не может быть менее 6 месяцев"
 
 msgid "Exit Spot"
 msgstr "Выходная котировка"
@@ -758,6 +770,10 @@ msgstr "Цена продажи"
 
 msgid "Finance"
 msgstr "Финансы"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "Открытие реального счёта"
 
 msgid "Financial information"
 msgstr "Финансовая информация"
@@ -925,8 +941,14 @@ msgstr "Сфера занятости"
 msgid "Instrument"
 msgstr "Инструмент"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "Инструменты"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"
@@ -1439,6 +1461,9 @@ msgstr "Пожалуйста, ответьте на секретный вопр�
 msgid "Please choose at least one token scope"
 msgstr "Пожалуйста, выберите минимум один уровень ключа"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Пожалуйста, подтвердите следующие данные, чтобы завершить перевод"
 
@@ -1460,53 +1485,12 @@ msgstr "Пожалуйста, введите правильный email"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Пожалуйста, введите положительное целое число от 0 до 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 30-дневного лимита на "
-"убытки"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 30-дневного лимита на "
-"объём покупок"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 7-дневного лимита на убытки"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 7-дневного лимита на объём "
-"покупок"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr ""
-"Пожалуйста, введите положительное целое число для дневного лимита на убытки"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr ""
-"Пожалуйста, введите положительное целое число для дневного длимита на объём "
-"покупок"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr ""
-"Пожалуйста, введите положительное целое число для максимального числа "
-"открытых позиций"
-
 msgid "Please enter the token name"
 msgstr "Пожалуйста, введите название ключа"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
 "Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
-"Пожалуйста, укажите лимит продолжительности сессии: число от 0 до 99999"
 
 msgid "Please enter your city address"
 msgstr "Пожалуйста, введите адрес"
@@ -1583,7 +1567,8 @@ msgstr "Стандартные"
 msgid "Preferred reality-check interval"
 msgstr "Желаемый интервал для проверки реальности"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr "Нажмите кнопку  Создать ключ  справа, чтобы создать первый ключ"
 
 msgid "Price"
@@ -1625,7 +1610,8 @@ msgstr "Время покупки"
 msgid "Read"
 msgstr "Читать"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "Открытие реального счёта"
 
 msgid "Reality check"
@@ -2170,6 +2156,10 @@ msgstr "Обновить настройки"
 msgid "Upgrade to a Real Account"
 msgstr "Открыть Реальный счёт"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "Загрузить шаблон графика"
+
 msgid "Upper Band Stroke"
 msgstr "Штрих верхней полосы"
 
@@ -2294,6 +2284,9 @@ msgid ""
 msgstr ""
 "Вы успешно открыли счёт на Binary.com, но для начала торговли Вы должны "
 "открыть Webtrader доступ к нему"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Ваш браузер не поддерживает копирование в буфер"
@@ -2526,6 +2519,52 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Прибыль"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Время исключения не может быть менее 6 месяцев"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "Пожалуйста, введите положительное целое число от 0 до 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 30-дневного лимита на "
+#~ "убытки"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 30-дневного лимита на "
+#~ "объём покупок"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 7-дневного лимита на "
+#~ "убытки"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 7-дневного лимита на "
+#~ "объём покупок"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для дневного лимита на "
+#~ "убытки"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для дневного длимита на "
+#~ "объём покупок"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для максимального числа "
+#~ "открытых позиций"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr ""
+#~ "Пожалуйста, укажите лимит продолжительности сессии: число от 0 до 99999"
 
 #~ msgid "Add overlays"
 #~ msgstr "Добавить наложение"
