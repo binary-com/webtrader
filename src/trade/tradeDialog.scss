@@ -4,61 +4,133 @@
     position: relative;
     overflow-x: hidden !important;
     font-size: 14px !important;
-}
-.trade-dialog ul li {
-  line-height: 1em;
-  margin: 0;
-}
-.trade-dialog .text-align-center { text-align: center; }
-.trade-dialog .bold { font-weight: bold; }
-.trade-dialog .text-vertical-align { line-height:2em; }
-.trade-dialog .text-vertical-align span { vertical-align: bottom;}
-.trade-dialog .no-wrap { white-space: nowrap; }
-.trade-dialog .dotted-underline { border-bottom: 1px dotted #000; }
-.trade-dialog .box-shadow { box-shadow: 5px 5px 8px rgba(0,0,0,0.25); }
+    ul li {
+      line-height: 1em;
+      margin: 0;
+    }
+    .text-align-center { text-align: center; }
+    .bold { font-weight: bold; }
+    .text-vertical-align { line-height:2em; }
+    .text-vertical-align span { vertical-align: bottom;}
+    .no-wrap { white-space: nowrap; }
+    .dotted-underline { border-bottom: 1px dotted #000; }
+    .box-shadow { box-shadow: 5px 5px 8px rgba(0,0,0,0.25); }
 
-.rtl-direction .trade-dialog .ui-selectmenu-text {
-  text-align: right;
+    /* .trade-fields contains all the form fields */
+    .trade-fields {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    /* .trae-conf comes from tradeConf.js module */
+    .trade-conf {
+        left:-350px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
 }
-.rtl-direction .trade-dialog input {
-  direction: ltr;
-}
-
-/* .trade-fields contains all the form fields */
-.trade-dialog .trade-fields {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-/* .trae-conf comes from tradeConf.js module */
-.trade-dialog .trade-conf {
-    left:-350px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
+.rtl-direction .trade-dialog {
+  .ui-selectmenu-text { text-align: right; }
+  input { direction: ltr; }
 }
 
-.trade-fields .error { background: #fef1cf; }
+.trade-fields {
+  .error { background: #fef1cf; }
+  ul li select.contract-category-display + .ui-selectmenu-button { width: 145px !important; }
 
-.trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 160px !important; }
+  .duration-row li,
+  .date-start-row li,
+  .categories-row {
+    justify-content: space-between;
+    li {height: 30px; }
+    li.sparkline-chart { min-width: 95px;}
+    li.tick-quote span {
+      background: #29ABE2;
+      text-align: center;
+      display: inline-block;
+      min-width: 60px;
+      border-radius: 5px;
+      padding:3px;
+      color: white;
+      margin-top: 5px;
+    }
+    li.tick-quote span.down { background: #c03; }
+  }
 
-.trade-fields .duration-row li,
-.trade-fields .date-start-row li,
-.trade-fields .categories-row li {height: 30px; }
-.trade-fields .categories-row { justify-content: space-between; }
-.trade-fields .categories-row li.sparkline-chart { min-width: 95px;}
-.trade-fields .categories-row li.tick-quote span {
-  background: #29ABE2;
-  text-align: center;
-  display: inline-block;
-  min-width: 60px;
-  border-radius: 5px;
-  padding:3px;
-  color: white;
-  margin-top: 5px;
+  .trade-template-manager {
+    .img {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+      background: #273051;
+
+      img {
+        color: white;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .manager-root {
+        max-height: 310px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .menu {
+            button {
+                background-color: #273051;
+                margin: 5px;
+                display: block;
+                width: 95%;
+            }
+        }
+        .save-as, .rename, .confirm {
+            padding: 5px;
+
+            .title { margin: 5px 0; }
+            button { margin-top: 5px;}
+            .button {
+                width: 100%;
+                text-align: center;
+                button { margin-right: 5px; }
+            }
+        }
+        .templates {
+            padding: 5px;
+            width: 165px;
+            & > div > div {
+                margin: 5px 0;
+            }
+
+            .template {
+              display: inline-block;
+              width: 150px;
+              padding-bottom: 5px;
+              &:not(:last-child){
+                  border-bottom: 1px solid #dedede;
+              }
+              word-wrap: break-word;
+              a.options:nth-child(2n) {
+                  margin-right: 10px;
+              }
+              .name {
+                transition: color 0.2s;
+                cursor: pointer;
+                margin-bottom: 3px;
+                &.active {
+                    font-weight: bold;
+                    color: #e98024
+                }
+                &:hover {
+                    color: #e98024;
+                }
+              }
+            }
+        }
+    }
+  }
 }
-.trade-fields .categories-row li.tick-quote span.down { background: #c03; }
 
 /* style elments in the drop down*/
 .trade-dialog-date-start-ul li {
@@ -248,38 +320,4 @@ label.checkbox input:checked ~ span.box {
 label.checkbox input:checked ~ span.check {
   opacity: 1;
   transform: scale(1) rotate(45deg);
-}
-
-.trade-dialog .trade-templates {
-    padding: 5px;
-    color: white;
-    position: absolute;
-    left: -85%;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    transition: all 0.2s linear;
-    background-color: rgba(0,0,0,0.8);
-    display: flex;
-    flex-flow: column;
-}
-.trade-dialog .trade-templates.show {
-  right: 15%;
-  left: 0;
-}
-.trade-dialog .trade-templates .save {
-  margin-bottom: 10px;
-  display: flex;
-  color: white;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.trade-dialog .trade-templates .save input { width: 160px; }
-.trade-dialog .trade-templates .save button { line-height: 10px; }
-.trade-dialog .trade-templates .save button:disabled:hover { background: #2E8836; cursor: not-allowed; }
-
-.trade-dialog .trade-templates .templates {
-  width: 100%;
-  flex-grow: 1;
 }

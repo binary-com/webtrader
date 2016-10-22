@@ -824,9 +824,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             minimizable: true,
             maximizable: false,
             'data-authorized': 'true',
-            template: function() {
-              state && state.templates && state.templates.toggle();
-            },
             close: function() {
               /* forget last proposal stream on close */
               if(state.proposal.last_promise) {

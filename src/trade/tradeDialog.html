@@ -1,5 +1,5 @@
 ﻿<div class="trade-dialog">
-  <div class="trade-fields" rv-on-click='templates.hide'>
+  <div class="trade-fields">
     <ul class="categories-row">
         <li>
             <select class="contract-category-display"
@@ -9,6 +9,10 @@
                     <option rv-each-row="categories.array" rv-value="row">{row | i18n}</option>
            </select>
         </li>
+        <li class='trade-template-manager'>
+            <div class="img"><img src="images/chart_template.svg"></div>
+            <div class='manager-root'><!-- tradeTemplateManger will render here --></div>
+        <li>
         <li class="tick-quote">
             <span rv-text="tick.quote"
                   rv-class-down="tick.down < quote"></span>
@@ -277,19 +281,5 @@
               rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">Purchase</button>
       </li>
     </ul>
-  </div>
-  <div class='trade-templates' rv-class-show='templates.visible'>
-    <div class='save'>
-      <button rv-on-click='templates.save_as'
-            rv-disabled='templates.name | trim | eq ""'
-            rv-css-opacity='templates.name | trim | eq "" | ternary 0.8 1'>Save as ...</button>
-      <input rv-value='templates.name'/>
-    </div>
-    <div class='templates'>
-      <div rv-if='templates.array | prop "length" | negate'>
-        <div>You haven't saved any templates yet.</div><br/>
-        <div>Use the "Save as ..." button to save current settings.</div>
-      </div>
-    </div>
   </div>
 </div>
