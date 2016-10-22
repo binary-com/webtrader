@@ -49,15 +49,6 @@ img.reload {
     width: 14px;
     height: 14px;
 }
-/* used in trade dialog for instance */
-.ui-icon.template {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.3em;
-  cursor: pointer;
-  pointer-events: all;
-  z-index: +1;
-}
 
 .webtrader-dialog img.disabled { opacity: 0.5; }
 
