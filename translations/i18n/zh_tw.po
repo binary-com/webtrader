@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-10-21 06:35+0000\n"
+"PO-Revision-Date: 2016-10-24 10:29+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -601,7 +601,7 @@ msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。資金已轉給支付代理"
 
 msgid "Done. The funds are transferred"
-msgstr "已完成。資金已轉入"
+msgstr "已完成。資金已轉付"
 
 msgid "Dot"
 msgstr "點"
@@ -1069,7 +1069,7 @@ msgid "Long ROC Period"
 msgstr "長相對強弱指標期限"
 
 msgid "Long Stop Line Stroke"
-msgstr "長停損線波幅"
+msgstr "長停損線行程"
 
 msgid "Long Term Period"
 msgstr "長久期限"
@@ -1081,7 +1081,7 @@ msgid "Low Price"
 msgstr "低價"
 
 msgid "Low Stroke"
-msgstr "低價波幅"
+msgstr "低行程"
 
 msgid "Low barrier offset"
 msgstr "低障礙位移"
@@ -1090,13 +1090,13 @@ msgid "Lower"
 msgstr "低於"
 
 msgid "Lower Band Stroke"
-msgstr "低價帶波幅"
+msgstr "低價幅行程"
 
 msgid "MA Type"
 msgstr "移動平均線類型"
 
 msgid "MACD Line Stroke"
-msgstr "指數平滑異同平均線波幅"
+msgstr "指數平滑異同平均線行程"
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -1155,7 +1155,7 @@ msgid "Memorable town/city"
 msgstr "難忘的城鎮/城市"
 
 msgid "Middle Band Stroke"
-msgstr "中價帶波幅"
+msgstr "中價幅行程"
 
 msgid "Min: 10 Max: 2000"
 msgstr "最小: 10 最大: 2000"
@@ -1170,7 +1170,7 @@ msgid "Minutes"
 msgstr "分鐘"
 
 msgid "Miss"
-msgstr "小姐"
+msgstr "遺漏"
 
 msgid "Mon"
 msgstr "周一"
