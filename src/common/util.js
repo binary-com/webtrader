@@ -423,7 +423,10 @@ function setup_i18n_translation(dict) {
       keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
       /* Escape keys for using them in regex. */
       var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
-      var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
+      escaped[0] = /[\?\.]$/.test(escaped[0]) ? escaped[0] + '|' : escaped[0] +'\\b|';
+      var regexp = new RegExp ('\\b(' + escaped.reduce(function(a, b){
+        return /[\?\.]$/.test(b) ? a + b + '|' : a + b + '\\b|';
+      }) + ')', 'g');
       var replacer = function (_, word, index, data) {
         return (dict[word] && dict[word][1]) || word;
       };
