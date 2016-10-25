@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-10-25 20:54+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-10-25 20:57+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -704,9 +704,8 @@ msgstr "Ошибка при загрузке файла в формате .csv"
 msgid "Error getting data for"
 msgstr "Ошибка в получении данных для"
 
-#, fuzzy
 msgid "Error getting market information!"
-msgstr "Ошибка в получении данных для"
+msgstr "Ошибка при получении рыночных данных!"
 
 msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
@@ -771,9 +770,8 @@ msgstr "Цена продажи"
 msgid "Finance"
 msgstr "Финансы"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "Открытие реального счёта"
+msgstr "Форма для открытия реального счёта"
 
 msgid "Financial information"
 msgstr "Финансовая информация"
@@ -942,13 +940,13 @@ msgid "Instrument"
 msgstr "Инструмент"
 
 msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
+msgstr "Код инструмента неизвестен/недоступен!"
 
 msgid "Instruments"
 msgstr "Инструменты"
 
 msgid "Invalid parameter(s)!"
-msgstr ""
+msgstr "Неправильный параметр(ы)!"
 
 msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"
@@ -1462,7 +1460,7 @@ msgid "Please choose at least one token scope"
 msgstr "Пожалуйста, выберите минимум один уровень ключа"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "Пожалуйста, выберите валюту, в которой Вы хотите выполнить транзакцию"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Пожалуйста, подтвердите следующие данные, чтобы завершить перевод"
@@ -1567,9 +1565,8 @@ msgstr "Стандартные"
 msgid "Preferred reality-check interval"
 msgstr "Желаемый интервал для проверки реальности"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
-msgstr "Нажмите кнопку  Создать ключ  справа, чтобы создать первый ключ"
+msgstr "Нажмите кнопку \"Создать ключ\" справа, чтобы создать Ваш первый ключ"
 
 msgid "Price"
 msgstr "Цена"
@@ -1610,7 +1607,6 @@ msgstr "Время покупки"
 msgid "Read"
 msgstr "Читать"
 
-#, fuzzy
 msgid "Real Money Account Opening"
 msgstr "Открытие реального счёта"
 
@@ -2156,9 +2152,8 @@ msgstr "Обновить настройки"
 msgid "Upgrade to a Real Account"
 msgstr "Открыть Реальный счёт"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "Загрузить шаблон графика"
+msgstr "Загрузить шаблон"
 
 msgid "Upper Band Stroke"
 msgstr "Штрих верхней полосы"
@@ -2287,6 +2282,8 @@ msgstr ""
 
 msgid "Your account is locked, please contact customer support for more info"
 msgstr ""
+"Ваш счёт заблокирован; пожалуйста, свяжитесь со службой поддержки клиентов "
+"для получения дополнительной информации"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Ваш браузер не поддерживает копирование в буфер"
