@@ -93,6 +93,24 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         // This is needed for calculating relative position.
         var shareButton = ele.find('.shareButton'),
             minWidth = 420 + ((stringWidth.tp.max + stringWidth.ct +65) - (97+87));
+
+
+        //Place instrument name for affiliates based on frame width
+        if(isAffiliates()){
+            if($(window).width() > minWidth + stringWidth.inst){
+                $($("#" + scope.newTabId + " .chartOptions .table")[0]).css("margin","5px 0px");
+                $($("#" + scope.newTabId + " .chartOptions .table")[0]).css("float","left");
+                $("#" + scope.newTabId + " .chartOptions .instrument_name");
+                scope.showInstrumentName = true;
+                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:""});
+            } else {
+                $($("#" + scope.newTabId + " .chartOptions .table")[0]).css("margin","5px auto");
+                $($("#" + scope.newTabId + " .chartOptions .table")[0]).css("float","");
+                scope.showInstrumentName = false;
+                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:scope.instrumentName});
+            }
+        }
+
         if(ele.width() > minWidth){
             scope.showChartTypeLabel = true;
             scope.timePeriod_name = scope.timePeriod.name;
@@ -114,17 +132,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         } else {
             loadSaveOverlay.css("right", "auto");
             exportOverlay.css("right", "auto");
-        }
-
-        //Place instrument name for affiliates based on frame width
-        if(isAffiliates()){
-            if(ele.width() > minWidth + stringWidth.inst){
-                scope.showInstrumentName = true;
-                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:""});
-            } else {
-                scope.showInstrumentName = false;
-                $("#"+scope.newTabId+"_chart").highcharts().setTitle({text:scope.instrumentName});
-            }
         }
     }
 
@@ -396,8 +403,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 $("#" + m_newTabId + "_header").prepend($html);
 
-                responsiveButtons(state[m_newTabId], $("#" + m_newTabId).find(".chart-view"));
-
                 // Used to filter timeperiod array.
                 rv.formatters['filter'] = function(arr, type) {
                     return arr.filter(function(item){return item.type == type});
@@ -412,7 +417,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 // Stop event propagation for these overlays.
                 $html.find(".loadSaveOverlay").on("click",function(e){e.stopPropagation()});
                 $html.find(".exportOverlay").on("click",function(e){e.stopPropagation()});
-
+                responsiveButtons(state[m_newTabId], $("#" + m_newTabId).find(".chart-view"));
             });
 
         },

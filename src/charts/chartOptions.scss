@@ -17,12 +17,6 @@
       background: #dedede;
       cursor: pointer;
     }
-    .instrument_name {
-      font-weight: 900;
-      font-size: 0.9em;
-      padding: 0 5px 0 5px;
-      line-height: 6px;
-    }
   }
 
   .button_selected {
@@ -226,7 +220,7 @@
   }
 
   .chartOptions_overlay.loadSaveOverlay {
-    max-width: 200px;
+    width: 200px;
     font-size: 0.8em;
     .chart-template-manager-root {
       max-height: 310px;
@@ -319,5 +313,15 @@
     padding: 1px 1px 1px 2px;
     min-width: 10px;
     text-align: center;
+  }
+
+  .instrument_name {
+    float: right;
+    margin: 0px 11px 0px 5px;
+    font-weight: 900;
+    font-size: 1em;
+    padding: 0 5px 0 5px;
+    line-height: 40px;
+    color: #273051;
   }
 }
