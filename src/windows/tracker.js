@@ -82,7 +82,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
               .send({contracts_for: data.data.symbol.symbol})
               .then(function (res) {
                   require(['trade/tradeDialog'], function (tradeDialog) {
-                      tradeDialog.init(data.data.symbol, res.contracts_for, data.data.options);
+                      tradeDialog.init(data.data.symbol, res.contracts_for, data.data.template);
                   });
               }).catch(console.error.bind(console));
           return true; // unsubscribe from login event

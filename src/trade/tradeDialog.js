@@ -105,56 +105,34 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
-    function init_templates(state) {
-      var templates = {
-          visible: false,
-          array: [],
-          name: '',
-      };
+    /* return the current state of dialog as a template */
+    function get_current_template(state) {
+      return {
+        name: state.template.name,
+        categories_value: state.categories.value,
+        categoriy_displays_selected: state.category_displays.selected,
+        date_start_value: state.date_start.value,
+        digits_value: state.digits.value,
+        duration_value: state.duration.value,
+        duration_count_value: state.duration_count.value,
+        duration_unit_value: state.duration_unit.value,
+        expiry_value_hour: state.date_expiry.value_hour,
+        expiry_value_data: state.date_expiry.value_date,
+        expiry_value: state.date_expiry.value,
+        barriers_barrier_count: state.barriers.barrier_count,
+        barriers_barrier: state.barriers.barrier,
+        barriers_high_barrier: state.barriers.high_barrier,
+        barriers_low_barrier: state.barriers.low_barrier,
+        basis_value: state.basis.value,
+        currency_value: state.currency.value,
+        basis_amount: state.basis.amount,
+        spreads_amount_per_point: state.spreads.amount_per_point,
 
-      templates.toggle = function() {
-        if(state.purchase.loading) return; /* don't update ui while loading confirmation dialog */
-        var visible = templates.visible;
-        state.templates.visible = !visible;
       }
-      templates.hide = function() {
-        state.templates.visible = false;
-      }
-      templates.save_as = function() {
-        var array = local_storage.get('trade-templates') || [];
-        if(_.filter(array, {'name': templates.name}).length > 0) {
-            $.growl.error({ message: 'Template name already exists'.i18n() });
-            return;
-        }
+    };
 
-        var tmpl = {
-          name: templates.name,
-          categories_value: state.categories.value,
-          categoriy_displays_selected: state.category_displays.selected,
-          date_start_value: state.date_start.value,
-          digits_value: state.digits.value,
-          duration_value: state.duration.value,
-          duration_count_value: state.duration_count.value,
-          duration_unit_value: state.duration_unit.value,
-          expiry_value_hour: state.date_expiry.value_hour,
-          expiry_value_data: state.date_expiry.value_date,
-          expiry_value: state.date_expiry.value,
-          barriers_barrier_count: state.barriers.barrier_count,
-          barriers_barrier: state.barriers.barrier,
-          barriers_high_barrier: state.barriers.high_barrier,
-          barriers_low_barrier: state.barriers.low_barrier,
-          basis_value: state.basis.value,
-          currency_value: state.currency.value,
-          basis_amount: state.basis.amount,
-          spreads_amount_per_point: state.spreads.amount_per_point,
-
-        }
-
-        console.warn(tmpl);
-        templates.name = '';
-      }
-
-      state.templates = templates;
+    function set_current_template(state, template) {
+      // TODO
     }
 
     function init_state(available,root, dialog, symbol, contracts_for_spot){
@@ -310,6 +288,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
           barrier_p: { my: "left-5 top+10", at: "left bottom", collision: "flipfit" },
         },
+        template: {
+          name: ''
+        }
       };
       state.barriers.root = state; // reference to root object for computed properties
 
@@ -745,8 +726,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
          }
       };
 
-      init_templates(state);
-
       state.categories.array = _(available).map('contract_category_display').uniq().value();
       state.categories.value = _(state.categories.array).includes('Up/Down') ? 'Up/Down' : _(state.categories.array).head(); // TODO: show first tab
 
@@ -813,7 +792,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       return state;
     }
 
-    function init(symbol, contracts_for, saved_options) {
+    function init(symbol, contracts_for, saved_template) {
         var root = $(html).i18n();
         var available = apply_fixes(contracts_for.available);
 
@@ -842,12 +821,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           is_unique: false,
           data: {
             symbol : symbol,
-            options: saved_options || {}
+            template: saved_template || {}
           }
         });
-        dialog.update_track = function(options) {
-          update_track({symbol: symbol, options: options});
-        }
 
         /********************** register for ticks_streams **********************/
         var key = chartingRequestMap.keyFor(symbol.symbol, /* granularity = */ 0);
@@ -877,6 +853,15 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
+
+        dialog.update_track = function(template) {
+          update_track({symbol: symbol, template: template});
+        }
+        dialog.get_template = get_current_template.bind(undefined, state);
+        dialog.set_template = set_current_template.bind(undefined, state);
+        require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
+          tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
+        });
         // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
     }
 
