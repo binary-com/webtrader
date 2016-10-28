@@ -127,11 +127,11 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         currency_value: state.currency.value,
         basis_amount: state.basis.amount,
         spreads_amount_per_point: state.spreads.amount_per_point,
-
       }
     };
 
     function set_current_template(state, template) {
+      console.warn(template);
       // TODO
     }
 
@@ -289,9 +289,21 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           barrier_p: { my: "left-5 top+10", at: "left bottom", collision: "flipfit" },
         },
         template: {
-          name: ''
+          name: '',
+          visible: false,
         }
       };
+
+      state.template.hide = function(e) {
+        if($(e.target).closest('.trade-template-manager').length === 0) {
+          state.template.visible = false;
+        }
+      }
+      state.template.toggle = function() {
+        state.template.visible = !state.template.visible;
+        console.warn(state.template.visible);
+      }
+
       state.barriers.root = state; // reference to root object for computed properties
 
       state.date_expiry.update_times = function(){

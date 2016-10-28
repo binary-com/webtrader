@@ -61,6 +61,7 @@
 
   .trade-template-manager {
     z-index: +1;
+    display: relative;
     .img {
       display: inline-block;
       width: 18px;
@@ -76,8 +77,10 @@
       }
     }
     .trade-template-manager-root {
+        position: absolute;
+        margin-left: 4px;
         font-size: 12px;
-        width: 190px;
+        width: 185px;
         background: white;
         max-height: 310px;
         overflow-y: auto;
@@ -143,7 +146,7 @@
               }
               word-wrap: break-word;
               a.options {
-                  margin-right: 10px;
+                  margin-right: 5px;
               }
               .name {
                 transition: color 0.2s;

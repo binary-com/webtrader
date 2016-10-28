@@ -89,12 +89,18 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         reader.onload = (e) => {
           const contents = e.target.result;
           let data = null;
-          try{ 
+          try{
            data = JSON.parse(contents);
            const hash = data.random;
            delete data.random;
            if(hash !== hashCode(JSON.stringify(data))){
             throw new UserException("InvalidHash");;
+           }
+           if(!data.indicators) {
+             // We are not adding .template_type because we don't want to break
+             // exising user templates for charts, so if it has .indicators property
+             // then it's a chart template for sure.
+             throw new UserException("Invalid template type.");
            }
           } catch(e){
             $.growl.error({message:"Invalid json file."});
@@ -200,7 +206,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         const action = event.currentTarget.text;
         templates.confirm_prevMenu = action === "Delete".i18n() ? "templates" : "menu";
         templates.confirm_text = action === "Delete" ? "Are you sure you want to delete template?".i18n() : "Are you sure you want to overwrite current template?".i18n();
-        
+
         templates.confirm_yes = () => {
           action === "Delete".i18n()? templates.remove(tmpl) : menu.save_changes();
           templates.confirm_no();
@@ -212,7 +218,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       const hashCode = (s) => {
-        return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+        return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
       }
 
       rv.binders.download = function(el, value) {

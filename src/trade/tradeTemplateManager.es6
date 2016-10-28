@@ -87,17 +87,21 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           try{
            data = JSON.parse(contents);
            const hash = data.random;
+           const template_type = data.template_type;
            delete data.random;
            if(hash !== hashCode(JSON.stringify(data))){
-            throw new UserException("InvalidHash");;
+            throw new UserException("InvalidHash");
+           }
+           delete data.template_type;
+           if(template_type !== 'trade-template') {
+            throw new UserException("Invalid template type.");
            }
           } catch(e){
             $.growl.error({message:"Invalid json file."});
             return;
           }
-          console.log(templates.current);
           templates.apply(data);
-          const array = local_storage.get('templates');;
+          const array = local_storage.get('trade-templates');;
           let unique = false,
               file = 1,
               name = data.name;
@@ -112,7 +116,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           }
 
           array.push(data);
-          local_storage.set('templates', array);
+          local_storage.set('trade-templates', array);
           templates.array = array;
           $.growl.notice({message: "Successfully applied the template and saved it as ".i18n() + "<b>" + data.name + "</b>"});
         }
@@ -197,7 +201,14 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         templates.confirm_text = action === "Delete".i18n() ? "Are you sure you want to delete template?".i18n() : "Are you sure you want to overwrite current template?".i18n();
 
         templates.confirm_yes = () => {
-          action === "Delete".i18n()? templates.remove(tmpl) : menu.save_changes();
+          if(action === "Delete".i18n()) {
+            templates.remove(tmpl)
+            if(templates.current === tmpl)
+              templates.current = null;
+          }
+          else {
+            menu.save_changes();
+          }
           templates.confirm_no();
         }
 
@@ -211,6 +222,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       rv.binders.download = function(el, value) {
+        value.template_type = 'trade-template';
         value.random = hashCode(JSON.stringify(value));
         const href = "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(value));
 
