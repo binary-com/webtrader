@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-10-27 12:08+0000\n"
+"PO-Revision-Date: 2016-10-31 09:43+0000\n"
 "Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -952,6 +952,7 @@ msgstr "六月"
 msgid "June"
 msgstr "六月"
 
+#, fuzzy
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "僅須在您將被導入頁面上點擊 授予 按鈕"
 
@@ -1096,6 +1097,7 @@ msgstr "移動平均線類型"
 msgid "MACD Line Stroke"
 msgstr "指數平滑異同平均線行程"
 
+#, fuzzy
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
 "before submitting your request. Once you click the 'Confirm transfer' button "
@@ -1103,9 +1105,8 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
-"在送出要求前，請確保您首先同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資"
-"金將從您的帳戶取出，並轉至您選擇的支付代理。代理將通過您的偏好支付方式將取款"
-"金額（扣除佣金）支付給您"
+"在送出要求前，請確保您首先同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資金將從您的帳戶取出，並轉至您選擇的支付代理。代理將通過您的偏好支付方式將取款金"
+"額（扣除佣金）支付給您"
 
 msgid "Mar"
 msgstr "三月"
@@ -1122,21 +1123,27 @@ msgstr "最大/最小期限"
 msgid "Maximum"
 msgstr "最大"
 
+#, fuzzy
 msgid "Maximum account cash balance"
 msgstr "最大帳戶現金餘額"
 
+#, fuzzy
 msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr "30天期最大累計合約購入額"
 
+#, fuzzy
 msgid "Maximum aggregate contract purchases over a 7-day period"
 msgstr "7天期最大累計合約購入額"
 
+#, fuzzy
 msgid "Maximum aggregate contract purchases per day"
 msgstr "每天最大累計合約購入額"
 
+#, fuzzy
 msgid "Maximum aggregate loss over a 30-day period"
 msgstr "30天期最大累計虧損額"
 
+#, fuzzy
 msgid "Maximum aggregate loss per day"
 msgstr "每天最大累計虧損額"
 
@@ -1167,9 +1174,11 @@ msgstr "減去代理佣金"
 msgid "Minutes"
 msgstr "分鐘"
 
+#, fuzzy
 msgid "Miss"
 msgstr "遺漏"
 
+#, fuzzy
 msgid "Mon"
 msgstr "周一"
 
@@ -1182,6 +1191,7 @@ msgstr "母親婚前的姓氏"
 msgid "Mr"
 msgstr "先生"
 
+#, fuzzy
 msgid "Mrs"
 msgstr "夫人"
 
@@ -1236,16 +1246,17 @@ msgstr "新密碼"
 msgid "No"
 msgstr "否"
 
+#, fuzzy
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "請注意，權杖可能擁有一或多個所述領域"
 
+#, fuzzy
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
-msgstr ""
-"請注意:合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有"
-"差異"
+msgstr "請注意:合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有差異"
 
+#, fuzzy
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
