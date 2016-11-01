@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 00:06+0200\n"
-"PO-Revision-Date: 2016-10-13 13:22+0000\n"
+"PO-Revision-Date: 2016-11-01 00:51+0000\n"
 "Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/pl/>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -241,9 +241,8 @@ msgstr "Dodaj poziom"
 msgid "Add/remove comparisons"
 msgstr "Dodaj/usuń porównania"
 
-#, fuzzy
 msgid "Add/remove indicators"
-msgstr "Dodaj wskaźnik"
+msgstr "Dodaj/usuń wskaźnik"
 
 msgid "Add/remove overlays"
 msgstr "Dodaj/usuń nakładkę"
@@ -629,9 +628,8 @@ msgstr "Rodzaj DMA"
 msgid "Double click the object to remove"
 msgstr "Kliknij dwa razy na dany przedmiot, aby go usunąć"
 
-#, fuzzy
 msgid "Download"
-msgstr "Pobierz jako"
+msgstr "Pobierz"
 
 msgid "Download CSV"
 msgstr "Pobierz plik CSV"
@@ -708,9 +706,8 @@ msgstr "Błąd podczas pobierania pliku .csv"
 msgid "Error getting data for"
 msgstr "Błąd pozyskiwania danych dla"
 
-#, fuzzy
 msgid "Error getting market information!"
-msgstr "Błąd pozyskiwania danych dla"
+msgstr "Błąd podczas pozyskiwania danych rynkowych!"
 
 msgid "Estimated Net Worth"
 msgstr "Szacowana wartość netto"
@@ -775,9 +772,8 @@ msgstr "Cena końcowa"
 msgid "Finance"
 msgstr "Finanse"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "Otwieranie prawdziwego konta"
+msgstr "Formularz otwierania prawdziwego konta"
 
 msgid "Financial information"
 msgstr "Informacje finansowe"
@@ -1568,9 +1564,10 @@ msgstr "Domyślne"
 msgid "Preferred reality-check interval"
 msgstr "Preferowany odstęp czasu pomiędzy kontrolami konta"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
-msgstr "Aby utworzyć swój pierwszy token, naciśnij przycisk „Utwórz token”"
+msgstr ""
+"Aby utworzyć swój pierwszy token, naciśnij przycisk „Utwórz token” "
+"znajdujący się po prawej"
 
 msgid "Price"
 msgstr "Cena"
@@ -1611,9 +1608,8 @@ msgstr "Czas zakupu"
 msgid "Read"
 msgstr "Przeczytaj"
 
-#, fuzzy
 msgid "Real Money Account Opening"
-msgstr "Otwieranie prawdziwego konta"
+msgstr "Otwieranie konta z prawdziwymi pieniędzmi"
 
 msgid "Reality check"
 msgstr "Bieżąca kontrola konta"
@@ -2159,9 +2155,8 @@ msgstr "Aktualizuj ustawienia"
 msgid "Upgrade to a Real Account"
 msgstr "Przekształć w konto z prawdziwymi pieniędzmi"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "Załaduj szablon wykresu"
+msgstr "Załaduj szablon"
 
 msgid "Upper Band Stroke"
 msgstr "Wyższa wstęga"
