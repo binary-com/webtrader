@@ -206,13 +206,13 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 var key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
                 chartingRequestMap.removeChart(key, containerIDWithHash);
                 var chart = $(containerIDWithHash).highcharts();
-                indicators = chart.get_indicators();
-                overlays = options.overlays;
+                indicators = chart.get_indicators() || [];
+                overlays = options.overlays || [];
                 chart.destroy();
             }
             if(options.indicators) { /* this comes only from tracker.js & ChartTemplateManager.js */
-              indicators = options.indicators;
-              overlays = options.overlays;
+              indicators = options.indicators || [];
+              overlays = options.overlays || [];
               $(containerIDWithHash).data("overlayCount", overlays.length);
             }
 

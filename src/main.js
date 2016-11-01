@@ -87,7 +87,7 @@ requirejs.onError = function (err) {
     throw err;
 };
 
-/* Initialize the websocket as soon as posssilbe */
+/* Initialize the websocket as soon as possible */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
 var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
