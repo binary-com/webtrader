@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-10-31 09:43+0000\n"
+"PO-Revision-Date: 2016-11-02 07:48+0000\n"
 "Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -952,9 +952,8 @@ msgstr "六月"
 msgid "June"
 msgstr "六月"
 
-#, fuzzy
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "僅須在您將被導入頁面上點擊 授予 按鈕"
+msgstr "僅須即將導入的頁面上點擊 授予"
 
 msgid "LOW"
 msgstr "低"
@@ -1017,7 +1016,7 @@ msgid "Loading Profit Table"
 msgstr "載入利潤表"
 
 msgid "Loading Real account opening"
-msgstr "載入真實帳戶開立"
+msgstr "載入真實帳戶開立程序"
 
 msgid "Loading Self-Exclusion"
 msgstr "載入自我禁止"
@@ -1097,7 +1096,6 @@ msgstr "移動平均線類型"
 msgid "MACD Line Stroke"
 msgstr "指數平滑異同平均線行程"
 
-#, fuzzy
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
 "before submitting your request. Once you click the 'Confirm transfer' button "
@@ -1105,8 +1103,8 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
-"在送出要求前，請確保您首先同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資金將從您的帳戶取出，並轉至您選擇的支付代理。代理將通過您的偏好支付方式將取款金"
-"額（扣除佣金）支付給您"
+"在送出要求前，請確保您已同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資金將從您的帳戶轉給您選擇的支付代理。代理將通過您傾向的支付方式將相應金額（扣除佣"
+"金）支付給您"
 
 msgid "Mar"
 msgstr "三月"
@@ -1123,29 +1121,23 @@ msgstr "最大/最小期限"
 msgid "Maximum"
 msgstr "最大"
 
-#, fuzzy
 msgid "Maximum account cash balance"
-msgstr "最大帳戶現金餘額"
+msgstr "帳戶現金餘額上限"
 
-#, fuzzy
 msgid "Maximum aggregate contract purchases over a 30-day period"
-msgstr "30天期最大累計合約購入額"
+msgstr "30天內累計合約購入最大額"
 
-#, fuzzy
 msgid "Maximum aggregate contract purchases over a 7-day period"
-msgstr "7天期最大累計合約購入額"
+msgstr "7天內累計合約購入最大額"
 
-#, fuzzy
 msgid "Maximum aggregate contract purchases per day"
-msgstr "每天最大累計合約購入額"
+msgstr "每天累計合約購入最大額"
 
-#, fuzzy
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr "30天期最大累計虧損額"
+msgstr "30天內累計虧損最大額"
 
-#, fuzzy
 msgid "Maximum aggregate loss per day"
-msgstr "每天最大累計虧損額"
+msgstr "每天累計虧損最大額"
 
 msgid "Maximum number of open positions"
 msgstr "最大未平倉頭寸數目"
@@ -1174,13 +1166,11 @@ msgstr "減去代理佣金"
 msgid "Minutes"
 msgstr "分鐘"
 
-#, fuzzy
 msgid "Miss"
-msgstr "遺漏"
+msgstr "小姐"
 
-#, fuzzy
 msgid "Mon"
-msgstr "周一"
+msgstr "週一"
 
 msgid "Monday"
 msgstr "週一"
@@ -1191,9 +1181,8 @@ msgstr "母親婚前的姓氏"
 msgid "Mr"
 msgstr "先生"
 
-#, fuzzy
 msgid "Mrs"
-msgstr "夫人"
+msgstr "太太"
 
 msgid "Ms"
 msgstr "女士"
@@ -1246,21 +1235,18 @@ msgstr "新密碼"
 msgid "No"
 msgstr "否"
 
-#, fuzzy
 msgid "Note that tokens can possess one or more of these scopes"
-msgstr "請注意，權杖可能擁有一或多個所述領域"
+msgstr "請注意，權杖可能擁有一或多個上述領域"
 
-#, fuzzy
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
-msgstr "請注意:合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有差異"
+msgstr "請注意:合約將在我們的伺服器收到請求時以當時的市場價格賣出。此價格可能與報價有差異"
 
-#, fuzzy
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
-msgstr "注意:您必須完全通過付款代理存款才可使用付款代理提款"
+msgstr "請注意:如果要使用付款代理提款，您必須僅通過付款代理存款"
 
 msgid "Nov"
 msgstr "十一月"
@@ -1275,7 +1261,7 @@ msgid "Number of bars on sides"
 msgstr "兩邊條形數目"
 
 msgid "OAuth App ID (Optional)"
-msgstr "OAuth 應用 ID (選用項目)"
+msgstr "OAuth 應用 ID (可選項目)"
 
 msgid "OAuth Server"
 msgstr "OAuth 伺服器"
@@ -1339,9 +1325,7 @@ msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
-msgstr ""
-"二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免發生此種過於入"
-"迷的風險，我們定期向您提供交易和財務的實況簡報"
+msgstr "二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免此種風險，我們會定期向您提供交易和財務的實況簡報"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "可選欄位，不超過 20 個字元，並且不能包含「+」"
@@ -1428,7 +1412,7 @@ msgid "Please"
 msgstr "請"
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr "請用4-50個字元提供密碼提示問題的答案"
+msgstr "請用4-50個字元回答密碼提示問題"
 
 msgid "Please choose at least one token scope"
 msgstr "請選擇至少一個權杖範圍"
@@ -1446,7 +1430,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "請輸入有效日期，格式是年-月-日"
 
 msgid "Please enter a value for"
-msgstr "請為以下輸入數值"
+msgstr "請輸入數值，用以"
 
 msgid "Please enter a vlaid phone number"
 msgstr "請輸入有效的電話號"
@@ -1467,7 +1451,7 @@ msgid "Please enter your city address"
 msgstr "請輸入您的城市住址"
 
 msgid "Please enter your current password"
-msgstr "請輸入目前密碼"
+msgstr "請輸入當前密碼"
 
 msgid "Please enter your email"
 msgstr "請輸入電子郵件"
@@ -1491,7 +1475,7 @@ msgid "Please enter your street address"
 msgstr "請輸入街道住址"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr "以下瀏覽器請選擇一個並安裝最新版本"
+msgstr "請從以下瀏覽器中選擇一個，並安裝最新版本"
 
 msgid "Please log in"
 msgstr "請登入"
@@ -1521,7 +1505,7 @@ msgid "Portfolio"
 msgstr "投資組合"
 
 msgid "Postal code/ZIP"
-msgstr "郵遞區號"
+msgstr "郵區編號"
 
 msgid "Potential Payout"
 msgstr "可能的賠付額"
@@ -1539,7 +1523,7 @@ msgid "Preferred reality-check interval"
 msgstr "優選實況調查間隔時間"
 
 msgid "Press Create token button on the right to create your first token"
-msgstr "按右方建立權杖按鈕即可建立首個權杖"
+msgstr "點擊右邊按鈕即可建立首個權杖"
 
 msgid "Price"
 msgstr "價格"
