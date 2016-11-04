@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-11-02 07:48+0000\n"
+"PO-Revision-Date: 2016-11-04 10:59+0000\n"
 "Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.9-dev\n"
+"X-Generator: Weblate 2.9\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 類型"
@@ -1591,9 +1591,11 @@ msgstr "移除選定項目"
 msgid "Rename"
 msgstr "重命名"
 
+#, fuzzy
 msgid "Repeat password"
 msgstr "重覆輸入密碼"
 
+#, fuzzy
 msgid "Resale of this contract is not offered"
 msgstr "此合約不提供轉售"
 
@@ -1609,6 +1611,7 @@ msgstr "縮放等級1:1重設"
 msgid "Resources"
 msgstr "資源"
 
+#, fuzzy
 msgid "Responsible Trading"
 msgstr "負責任交易"
 
@@ -1900,19 +1903,19 @@ msgstr ""
 "了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風"
 "險。如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
 
+#, fuzzy
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
 msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查是否輸入錯誤"
 
+#, fuzzy
 msgid ""
 "There was a market data disruption during the contract period. For real-"
 "money accounts we will attempt to correct this and settle the contract "
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
-msgstr ""
-"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正並正確結算合約，否則合"
-"約將取消並退還投注金額。虛擬資金合約將取消並退還投注金額"
+msgstr "合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正並正確結算合約，否則合約將取消並退還投注金額。虛擬資金合約將取消並退還投注金額"
 
 msgid "There was an error"
 msgstr "出現錯誤"
@@ -1974,6 +1977,7 @@ msgid ""
 msgstr ""
 "對於不受Binary.com支持的支付方式或本地貨幣， 您可聯繫支付代理處理存款和取款"
 
+#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
@@ -2038,6 +2042,7 @@ msgstr ""
 "二元期權交易不一定適合每一個人。因此，請確保您完全明白有關的風險。您的虧損可"
 "能會超越起始資金存款，而您並不擁有或占有任何標的資產"
 
+#, fuzzy
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
 "to limit your participation on the website or send a signed letter or fax to "
@@ -2046,8 +2051,7 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
-"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，或傳送簽名信或傳"
-"真到我們的客服團隊。一旦設定好後，您只能收緊限制。限制只能在7天后取消或放寬，"
+"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，或傳送簽名信或傳真到我們的客服團隊。一旦設定好後，您只能收緊限制。限制只能在7天后取消或放寬，"
 "而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
 
 msgid "Tradingview for Binary.com"
@@ -2142,6 +2146,7 @@ msgstr "Websocket 伺服器"
 msgid "Webtrader"
 msgstr "Webtrader"
 
+#, fuzzy
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader採用新型網絡技術為您提供豐富與充滿樂趣的交易體驗"
@@ -2192,9 +2197,7 @@ msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
-msgstr ""
-"使用各OAuth伺服器進行驗證前須先註冊webtrader 並領取應用程式ID。欲知詳細資訊請"
-"前往此處參閱OAuth資料"
+msgstr "使用各OAuth伺服器進行驗證前，須先註冊webtrader 並領取應用程式ID。欲知詳細資訊，請前往此處參閱OAuth資料"
 
 msgid "You haven't saved any templates yet"
 msgstr "您尚未儲存任何範本"
