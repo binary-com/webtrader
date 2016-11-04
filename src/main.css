@@ -38,7 +38,6 @@ body > .footer .addiction-warning {
     right: 0;
     text-align: center;
     display: inline-block;
-    background: #2a3052;
 }
 body > .footer .addiction-warning span {
   color: white;
@@ -64,11 +63,7 @@ body > .footer .addiction-warning a:hover {
     padding: 0!important;
 }
 
-.ui-dialog-content {
-    background-color: #f2f2f2!important;
-}
-
-.ui-corner-all {
+.ui-dialog.ui-corner-all, .ui-dialog .ui-dialog-titlebar {
     border-bottom-right-radius: 0!important;
     border-bottom-left-radius: 0!important;
     border-top-right-radius: 0!important;
@@ -77,23 +72,6 @@ body > .footer .addiction-warning a:hover {
 
 .ui-priority-secondary {
     opacity: 1!important;
-}
-
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default {
-    border: 0px solid #273051;
-    background: #273051;
-    font-weight: normal;
-    color: #FFFFFF;
-}
-
-.ui-widget-header {
-    border: 1px solid #273051;
-    background: #273051!important;
-    color: #FFFFFF;
-    font-family: 'Roboto'!important;
-    font-weight: normal!important;
 }
 
 div.ui-tooltip { /* override default jquery ui max tooltip width */

@@ -5,14 +5,7 @@ body {
 }
 
 #topbar {
-    width: 100%;
-    color: #fff;
-    line-height: 1;
-    font-size: 100%;
-    text-align: right;
-    padding: 3px 0;
     height: 20px;
-    background: #15212d;
 }
 
 #topbar span.lang {
@@ -82,9 +75,6 @@ body {
 
 
 #header {
-    background: #2a3052;
-    border-top: 2px solid #394171;
-    border-bottom: 4px solid #e98024;
     height: 75px;
 }
 
@@ -170,7 +160,6 @@ body {
 
 .nav-normal-menu li > ul li {
     float: none;
-    background-color: #3F476E;
 }
 
 .nav-normal-menu li > ul li a {
