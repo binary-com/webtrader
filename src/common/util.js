@@ -6,18 +6,6 @@ function isTick(ohlc) {
     return ohlc.indexOf('t') != -1;
 }
 
-function isMinute(ohlc) {
-    return ohlc.indexOf('m') != -1;
-}
-
-function isHourly(ohlc) {
-    return ohlc.indexOf('h') != -1;
-}
-
-function isDaily(ohlc) {
-    return ohlc.indexOf('d') != -1;
-}
-
 function isDotType(type) {
     return type === 'dot';
 }
@@ -27,11 +15,19 @@ function isLineDotType(type) {
 }
 
 function isAffiliates(){
-  return getParameterByName("affiliates") === 'true';
+  return getParameterByName("affiliates") === true || (getParameterByName("affiliates") + '').toLowerCase() == 'true';
+}
+
+function isHideOverlay() {
+    return getParameterByName("hideOverlay") === true || (getParameterByName("hideOverlay") + '').toLowerCase() == 'true';
+}
+
+function isHideShare() {
+    return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
 }
 
 function hideFooter(){
-  return getParameterByName('hideFooter').toLowerCase() === 'true';
+  return getParameterByName('hideFooter') === true || (getParameterByName('hideFooter') + '').toLowerCase() == 'true';
 }
 
 function convertToTimeperiodObject(timePeriodInStringFormat) {
@@ -84,11 +80,28 @@ function isSmallView() {
   return ret;
 }
 
+function getParameterByNameFromURL(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+/**
+ * Understand the method behavior before using it. In order to allow other applications to use Webtrader charts, the behavior
+ * of this method has been changed. Webtrader has two modes of rendering
+ *  1. Full desktop style
+ *      - Just access the main URL of webtrader.
+ *  2. Chart only style
+ *      - In order to render this mode, several URL parameters are needed. Most importantly, affiliates=true parameter.
+ *        Check affiliates/affiliates.js for more details on parameter list.
+ *        This method will check for global variables (same as parameter). if the global variable is missing, then use the URL
+ *        parameter method to get the value
+ * @param name
+ */
 function getParameterByName(name) {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    if (window[name]) return window[name];
+    else return getParameterByNameFromURL(name);
 }
 
 /**
@@ -423,7 +436,10 @@ function setup_i18n_translation(dict) {
       keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
       /* Escape keys for using them in regex. */
       var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
-      var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
+      escaped[0] = /[\?\.]$/.test(escaped[0]) ? escaped[0] + '|' : escaped[0] +'\\b|';
+      var regexp = new RegExp ('\\b(' + escaped.reduce(function(a, b){
+        return /[\?\.]$/.test(b) ? a + b + '|' : a + b + '\\b|';
+      }) + ')', 'g');
       var replacer = function (_, word, index, data) {
         return (dict[word] && dict[word][1]) || word;
       };
