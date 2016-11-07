@@ -63,10 +63,6 @@ body > .footer .addiction-warning a:hover {
     padding: 0!important;
 }
 
-.ui-dialog-content {
-    background-color: #f2f2f2!important;
-}
-
 .ui-dialog.ui-corner-all, .ui-dialog .ui-dialog-titlebar {
     border-bottom-right-radius: 0!important;
     border-bottom-left-radius: 0!important;
@@ -427,4 +423,19 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
     font-size: inherit;
     background-color: #2E8836;
     bottom: 100px;
+}
+
+/* Hide arrows for input[type=number] */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Hide jquery-ui spinner button*/
+.ui-spinner button.ui-spinner-button {
+  display: none;
 }

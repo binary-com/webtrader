@@ -128,7 +128,6 @@
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
-        background: #c2c1c1;
         justify-content: center;
         padding: 10px 0;
         margin-bottom: 2px;
@@ -186,9 +185,7 @@
 }
 .trade-fields ul.message-row li span { display: inline; }
 
-.trade-fields .netprofit { background: #c2c1c1; }
 .trade-fields .spread-deposit {
-    background: #c2c1c1;
     white-space: nowrap;
     font-size: 85%;
 }
