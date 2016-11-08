@@ -1,0 +1,16 @@
+﻿.mama_input_width {
+    width: 150px !important;
+}
+
+.mama_input_width_for_period {
+    width: 150px !important;
+}
+
+.mama label {
+    display: block;
+}
+
+.mama_td_width
+{
+	width: 50%;
+}

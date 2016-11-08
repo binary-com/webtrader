@@ -1,0 +1,25 @@
+﻿.dx_input_width {
+    width: 150px !important;
+}
+
+.dx_input_width_for_period {
+    width: 150px !important;
+}
+
+.dx_level_input_width_for_level {
+  width: 150px !important;
+}
+
+.dx label {
+    display: block;
+}
+
+#dx_levels_wrapper {
+    border: 1px solid #aaaaaa;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.dx-ui-dialog, .dx.ui-dialog-content, .dx_level.ui-dialog-content {
+    overflow: auto;
+}

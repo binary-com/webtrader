@@ -1,0 +1,308 @@
+/* Created by Armin on 10/17/2015 */
+
+body {
+  min-width: 1000px !important;
+}
+
+#topbar {
+    width: 100%;
+    color: #fff;
+    line-height: 1;
+    font-size: 100%;
+    text-align: right;
+    padding: 3px 0;
+    height: 20px;
+    background: #15212d;
+}
+
+#topbar span.lang {
+    color: white;
+    float: right;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+#topbar div.languages {
+  width: 270px;
+  height: 190px;
+  position: absolute;
+  background: #f2f2f2;
+  z-index: +2147483647; /* maximum zindex value */
+  right: 0;
+  top: 26px;
+  border-bottom: 5px solid #EA9800;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+#topbar span.lang:hover + div.languages,
+#topbar div.languages:hover {
+  opacity: 1;
+  pointer-events: all;
+}
+#topbar div.languages > span {
+  display: inline-block;
+  width: 135px;
+  color:#000;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#topbar div.confirm {
+  width: 270px;
+  height: 150px;
+  position: absolute;
+  background: #f2f2f2;
+  z-index: +2147483647; /* maximum zindex value */
+  right: 0;
+  top: 26px;
+  border-bottom: 5px solid #EA9800;
+}
+#topbar div.confirm span.title {
+  color: #000;
+  display: block;
+  text-align: center;
+  line-height: 1.2em;
+  padding: 10px 0;
+}
+#topbar div.confirm div.buttons {
+  text-align: center;
+}
+#topbar span.time {
+    color: white;
+    float: right;
+    padding-right: 35px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+
+#header {
+    background: #2a3052;
+    border-top: 2px solid #394171;
+    border-bottom: 4px solid #e98024;
+    height: 75px;
+}
+
+#nav-container {
+    text-align: center;
+}
+
+#nav-container span.ui-icon {
+  display: inline-block;
+  padding-right: 10px;
+  margin-left: -25px;
+  position: relative;
+  top: 2px;
+}
+
+/** normal menu (desktop/tablet) **/
+.nav-normal-menu {
+    list-style: none outside none;
+    display: inline-table;
+}
+
+.nav-normal-menu li {
+    float: left;
+    position: relative;
+}
+
+.nav-normal-menu li:hover {
+    /* nothing should exceed this max value.
+       navigation menu should be on top of everything.
+    */
+    z-index: 999999;
+}
+
+.nav-normal-menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 20px 20px 30px;
+    transition: padding .5s;
+    white-space: nowrap;
+    text-align: left;
+    outline: none;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.nav-normal-menu li a:hover {
+    background-color: #3F476E;
+}
+
+.nav-normal-menu li a.disabled,
+.nav-normal-menu li a.disabled:hover {
+  opacity: 0.5;
+  background-color: #273051;
+}
+
+.nav-normal-menu > li > a {
+    font-size: 1.1em;
+    height: 30px;
+}
+.nav-normal-menu > li {
+    position: relative;
+    top: -17px;
+    padding-top: 10px;
+}
+
+.nav-normal-menu li > ul {
+    position: absolute;
+    display: none;
+    /* nothing should exceed this max value.
+       navigation menu should be on top of everything.
+    */
+    z-index: 999999;
+    list-style: none outside none;
+    min-width: 100%;
+}
+
+.nav-normal-menu li ul li ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.nav-normal-menu li > ul li {
+    float: none;
+    background-color: #3F476E;
+}
+
+.nav-normal-menu li > ul li a {
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.nav-normal-menu li > ul li a:hover {
+    background-color: #273051;
+}
+
+.nav-normal-menu li > ul.nav-closed {
+    display: none;
+}
+
+.nav-normal-menu li:hover > ul {
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-normal-menu li > ul.nav-closed {
+    display: none;
+}
+
+.nav-normal-menu li:hover {
+    background-color: #3F476E;
+}
+
+.nav-normal-menu li > ul li:hover {
+    background-color: #273051;
+}
+
+/** carets **/
+.nav-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.nav-submenu-caret {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: inline-block;
+    color: white;
+}
+
+.nav-submenu-caret:after {
+    content: '»';
+}
+
+/* login button */
+#nav-container .login {
+  position: absolute;
+  right: 10px;
+    top: 40px;
+}
+#nav-container .login:hover {
+  background: #2a3052;
+}
+
+#nav-container .login span.ui-icon {
+  margin-left: -10px;
+}
+
+#nav-container .login button[disabled] { opacity: 0.5;}
+
+/* account menu */
+#nav-container .account {
+  position: absolute;
+  right: 0px;
+  top: 27px;
+  width: 220px;
+}
+#nav-container .account > a {
+  cursor: default;
+  padding-left: 15px;
+  font-size: 15px;
+}
+#nav-container .account > ul > li > a { padding-left: 15px; }
+#nav-container .account > ul > li > a > span.ui-icon {
+  margin-left: 0;
+}
+#nav-container .account .nav-dropdown-toggle {
+  position: relative;
+  top: -10px;
+}
+
+#nav-container .account .nav-dropdown-toggle .nav-caret {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+}
+
+#nav-container .account .logout,
+#nav-container .account .info {
+  border-top: 2px solid #aaa;
+}
+
+#nav-container .account *[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#nav-menu li {
+    margin : 0 0 0;
+}
+
+#header .logo {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+}
+
+#header .logo div:nth-child(1) {
+    display: inline-block;
+    margin: 10px 10px;
+}
+#header .logo div:nth-child(2) {
+    display: inline-block;
+    margin: -12px;
+}
+
+.nav-normal-menu .resources > ul > li,
+.nav-normal-menu .windows > ul > li
+{
+    padding-left: 5px;
+}

@@ -1,0 +1,15 @@
+﻿.lsma_input_width {
+    width: 150px !important;
+}
+
+.lsma_input_width_for_period {
+    width: 150px !important;
+}
+
+.lsma label {
+    display: block;
+}
+
+.lsma-ui-dialog, .lsma.ui-dialog-content {
+    overflow: auto;
+}

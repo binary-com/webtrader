@@ -1,0 +1,15 @@
+.ema_input_width {
+    width: 150px !important;
+}
+
+.ema_input_width_for_period {
+    width: 150px !important;
+}
+
+.ema label {
+    display: block;
+}
+
+.ema-ui-dialog, .ema.ui-dialog-content {
+    overflow: auto;
+}

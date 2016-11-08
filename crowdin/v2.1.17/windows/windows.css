@@ -1,0 +1,74 @@
+﻿.span-in-dialog-header {
+    margin-top: 1px;
+    float:left;
+}
+
+.ui-dialog-titlebar {
+    height:20px;
+    overflow: hidden;
+    direction: ltr; /* .ltr-direction */
+}
+.rtl-direction .ui-dialog-titlebar .ui-selectmenu-text {
+  text-align: right;
+}
+
+
+.ui-dialog-titlebar .ui-dialog-title.with-content {
+    min-width:200px;
+    width: 20%;
+    padding-bottom: 5px;
+}
+
+.ui-dialog-titlebar .ui-selectmenu-button {
+    margin-top: -.4em;
+}
+
+.ui-dialog-titlebar .title {
+    margin-top: .1em;
+    float:left;
+}
+
+.ui-dialog-titlebar .ui-datepicker-trigger {
+  position: absolute;
+  top: 11px;
+}
+
+/* use a maximum height for jq-ui dropdowns */
+ul.date-day.ui-menu { max-height: 320px !important; }
+
+/* hide the search section from jq-datatables if hide-search-input is set */
+.hide-search-input .dataTables_filter {
+    display:none;
+}
+
+img.reload {
+    cursor: pointer;
+    position: relative;
+    left: 7px;
+    bottom: 2px;
+    width: 14px;
+    height: 14px;
+}
+
+.webtrader-dialog img.disabled { opacity: 0.5; }
+
+.custom-icon-close {
+    cursor: pointer;
+    background-image: url('../images/close.svg')!important;
+}
+.custom-icon-maximize {
+    cursor: pointer;
+    background-image: url('../images/maximize.svg')!important;
+    position: relative;
+    right: 3px;
+}
+.custom-icon-minimize {
+    cursor: pointer;
+    background-image: url('../images/minimize.svg')!important;
+    position: relative;
+    right: 6px;
+}
+.ui-icon-newwin {
+    position: relative;
+    right: 3px;
+}

@@ -1,0 +1,15 @@
+.max_input_width {
+    width: 150px !important;
+}
+
+.max_input_width_for_period {
+    width: 150px !important;
+}
+
+.max label {
+    display: block;
+}
+
+.max td {
+    white-space: nowrap;
+}

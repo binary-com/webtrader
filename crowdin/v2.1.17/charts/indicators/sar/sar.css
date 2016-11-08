@@ -1,0 +1,11 @@
+.sar_input_width {
+    width: 150px !important;
+}
+
+.sar_input_width_for_period {
+    width: 150px !important;
+}
+
+.sar label {
+    display: block;
+}

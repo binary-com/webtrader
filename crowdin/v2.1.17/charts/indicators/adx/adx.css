@@ -1,0 +1,25 @@
+﻿.adx_input_width {
+    width: 155px;
+}
+
+.adx_input_width_for_period {
+    width: 155px;
+}
+
+.adx_level_input_width_for_level {
+  width: 155px;
+}
+
+.adx label {
+    display: block;
+}
+
+#adx_levels_wrapper {
+    border: 1px solid #aaaaaa;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#adx_dashStyle {
+	overflow: all;
+}

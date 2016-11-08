@@ -1,0 +1,15 @@
+.min_input_width {
+    width: 150px !important;
+}
+
+.min_input_width_for_period {
+    width: 150px !important;
+}
+
+.min label {
+    display: block;
+}
+
+.min td {
+    white-space: nowrap;
+}

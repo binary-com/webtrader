@@ -1,0 +1,15 @@
+﻿.cmo_input_width {
+    width: 150px !important;
+}
+
+.cmo_input_width_for_period {
+    width: 150px !important;
+}
+
+.cmo label {
+    display: block;
+}
+
+.cmo-ui-dialog, .cmo.ui-dialog-content {
+    overflow: auto;
+}

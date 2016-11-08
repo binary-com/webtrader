@@ -1,0 +1,16 @@
+﻿.smma_input_width {
+    width: 150px !important;
+}
+
+.smma_input_width_for_period {
+    width: 150px !important;
+}
+
+.smma label {
+    display: block;
+}
+
+.smma_td_width
+{
+	width: 50%;
+}
