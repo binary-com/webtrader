@@ -228,7 +228,7 @@ module.exports = function (grunt) {
                     base: 'dist/compressed',
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
+                    message: 'Commit v<%=pkg.version%> for ' + process.env.TRAVIS_BRANCH + ' changes'
                 },
                 src: ['**/*']
             },
@@ -236,7 +236,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod'
+                    message: 'Commit v<%=pkg.version%> for ' + process.env.TRAVIS_BRANCH + ' changes'
                 },
                 src: ['**/*']
             },
@@ -359,6 +359,9 @@ module.exports = function (grunt) {
         shell: {
             moveEverythingToBETA_folder: {
                 command: 'mkdir beta; mv dist/compressed/* beta; mv beta dist/compressed'
+            },
+            moveEverythingToCrowdin_folder: {
+                command: 'mkdir crowdin; mv dist/compressed/* crowdin; mv crowdin dist/compressed'
             }
         },
         if: {
@@ -383,6 +386,17 @@ module.exports = function (grunt) {
                 },
                 //array of tasks to execute if all tests pass
                 ifTrue: [ 'shell:moveEverythingToBETA_folder', 'gh-pages:travis-deploy' ]
+            },
+            crowdin: {
+                // Target-specific file lists and/or options go here.
+                options: {
+                    // execute test function(s)
+                    test: function() {
+                        return process.env.TRAVIS_BRANCH === 'crowdin';
+                    }
+                },
+                //array of tasks to execute if all tests pass
+                ifTrue: [ 'shell:moveEverythingToCrowdin_folder', 'gh-pages:travis-deploy' ]
             }
         },
         concat: {

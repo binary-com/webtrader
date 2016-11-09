@@ -90,7 +90,7 @@ requirejs.onError = function (err) {
 /* Initialize the websocket as soon as possible */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
-var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+var i18n_name = (local_storage.get('i18n') || { value: 'ach' }).value;
 require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
     "use strict";
     /* setup translating string literals */
@@ -288,12 +288,17 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
         handle_normal_route();
     }
 
+    //For crowdin
+    window._jipt = [];
+    window._jipt.push(['project', 'webtrader']);
+
     //load all other .css files asynchronously
     require([
         'css!charts/charts.css',
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
-        'css!lib/colorpicker/jquery.colorpicker.css'
+        'css!lib/colorpicker/jquery.colorpicker.css',
+        '//cdn.crowdin.com/jipt/jipt.js'
     ]);
 
 });

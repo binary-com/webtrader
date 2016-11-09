@@ -1,0 +1,2319 @@
+msgid "%D MA Type"
+msgstr "crwdns15414:0%Dcrwdne15414:0"
+
+msgid "%D Period"
+msgstr "crwdns15415:0%Dcrwdne15415:0"
+
+msgid "%D Stroke"
+msgstr "crwdns15416:0%Dcrwdne15416:0"
+
+msgid "%K MA Type"
+msgstr "crwdns15417:0crwdne15417:0"
+
+msgid "%K Period"
+msgstr "crwdns15418:0crwdne15418:0"
+
+msgid "%K Stroke"
+msgstr "crwdns15419:0crwdne15419:0"
+
+msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
+msgstr "crwdns15420:0crwdne15420:0"
+
+msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
+msgstr "crwdns15421:0crwdne15421:0"
+
+msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+msgstr "crwdns15422:0crwdne15422:0"
+
+msgid "-DI Stroke"
+msgstr "crwdns15423:0crwdne15423:0"
+
+msgid "0-1 year"
+msgstr "crwdns15424:0crwdne15424:0"
+
+msgid "0-5 transactions in the past 12 months"
+msgstr "crwdns15425:0crwdne15425:0"
+
+msgid "1"
+msgstr "crwdns15426:0crwdne15426:0"
+
+msgid "1 Day"
+msgstr "crwdns15427:0crwdne15427:0"
+
+msgid "1 Hour"
+msgstr "crwdns15428:0crwdne15428:0"
+
+msgid "1 Minute"
+msgstr "crwdns15429:0crwdne15429:0"
+
+msgid "1 Tick"
+msgstr "crwdns15430:0crwdne15430:0"
+
+msgid "1-2 years"
+msgstr "crwdns15431:0crwdne15431:0"
+
+msgid "10"
+msgstr "crwdns15432:0crwdne15432:0"
+
+msgid "10 Minutes"
+msgstr "crwdns15433:0crwdne15433:0"
+
+msgid "10m"
+msgstr "crwdns15434:0crwdne15434:0"
+
+msgid "15"
+msgstr "crwdns15435:0crwdne15435:0"
+
+msgid "15 Minutes"
+msgstr "crwdns15436:0crwdne15436:0"
+
+msgid "15m"
+msgstr "crwdns15437:0crwdne15437:0"
+
+msgid "1d"
+msgstr "crwdns15438:0crwdne15438:0"
+
+msgid "1h"
+msgstr "crwdns15439:0crwdne15439:0"
+
+msgid "1m"
+msgstr "crwdns15440:0crwdne15440:0"
+
+msgid "1t"
+msgstr "crwdns15441:0crwdne15441:0"
+
+msgid "2"
+msgstr "crwdns15442:0crwdne15442:0"
+
+msgid "2 Hours"
+msgstr "crwdns15443:0crwdne15443:0"
+
+msgid "2 Minutes"
+msgstr "crwdns15444:0crwdne15444:0"
+
+msgid "2h"
+msgstr "crwdns15445:0crwdne15445:0"
+
+msgid "2m"
+msgstr "crwdns15446:0crwdne15446:0"
+
+msgid "3"
+msgstr "crwdns15447:0crwdne15447:0"
+
+msgid "3 Minutes"
+msgstr "crwdns15448:0crwdne15448:0"
+
+msgid "30"
+msgstr "crwdns15449:0crwdne15449:0"
+
+msgid "30 Minutes"
+msgstr "crwdns15450:0crwdne15450:0"
+
+msgid "30-day limit on losses"
+msgstr "crwdns15451:0crwdne15451:0"
+
+msgid "30-day turnover limit"
+msgstr "crwdns15452:0crwdne15452:0"
+
+msgid "30m"
+msgstr "crwdns15453:0crwdne15453:0"
+
+msgid "3m"
+msgstr "crwdns15454:0crwdne15454:0"
+
+msgid "4"
+msgstr "crwdns15455:0crwdne15455:0"
+
+msgid "4 Hours"
+msgstr "crwdns15456:0crwdne15456:0"
+
+msgid "40 transactions or more in the past 12 months"
+msgstr "crwdns15457:0crwdne15457:0"
+
+msgid "404"
+msgstr "crwdns15458:0crwdne15458:0"
+
+msgid "4h"
+msgstr "crwdns15459:0crwdne15459:0"
+
+msgid "5"
+msgstr "crwdns15460:0crwdne15460:0"
+
+msgid "5 Minutes"
+msgstr "crwdns15461:0crwdne15461:0"
+
+msgid "5m"
+msgstr "crwdns15462:0crwdne15462:0"
+
+msgid "6-10 transactions in the past 12 months"
+msgstr "crwdns15463:0crwdne15463:0"
+
+msgid "7-day limit on losses"
+msgstr "crwdns15464:0crwdne15464:0"
+
+msgid "7-day turnover limit"
+msgstr "crwdns15465:0crwdne15465:0"
+
+msgid "8"
+msgstr "crwdns15466:0crwdne15466:0"
+
+msgid "8 Hours"
+msgstr "crwdns15467:0crwdne15467:0"
+
+msgid "8h"
+msgstr "crwdns15468:0crwdne15468:0"
+
+msgid "ADX MA Type"
+msgstr "crwdns15469:0crwdne15469:0"
+
+msgid "ADX Stroke"
+msgstr "crwdns15470:0crwdne15470:0"
+
+msgid "ATR Period"
+msgstr "crwdns15471:0crwdne15471:0"
+
+msgid "Acceleration"
+msgstr "crwdns15472:0crwdne15472:0"
+
+msgid "Accept"
+msgstr "crwdns15473:0crwdne15473:0"
+
+msgid "Account balance"
+msgstr "crwdns15474:0crwdne15474:0"
+
+msgid "Account id not found"
+msgstr "crwdns15475:0crwdne15475:0"
+
+msgid "Account opening"
+msgstr "crwdns15476:0crwdne15476:0"
+
+msgid "Account token not found"
+msgstr "crwdns15477:0crwdne15477:0"
+
+msgid "Action"
+msgstr "crwdns15478:0crwdne15478:0"
+
+msgid "Add comparisons"
+msgstr "crwdns15479:0crwdne15479:0"
+
+msgid "Add indicator"
+msgstr "crwdns15480:0crwdne15480:0"
+
+msgid "Add level"
+msgstr "crwdns15481:0crwdne15481:0"
+
+msgid "Add/remove comparisons"
+msgstr "crwdns15482:0crwdne15482:0"
+
+msgid "Add/remove indicators"
+msgstr "crwdns15483:0crwdne15483:0"
+
+msgid "Add/remove overlays"
+msgstr "crwdns15484:0crwdne15484:0"
+
+msgid "Admin"
+msgstr "crwdns15485:0crwdne15485:0"
+
+msgid "All times are in GMT (Greenwich Mean Time)"
+msgstr "crwdns15486:0crwdne15486:0"
+
+msgid "Amount"
+msgstr "crwdns15487:0crwdne15487:0"
+
+msgid "Amount Per Point"
+msgstr "crwdns15488:0crwdne15488:0"
+
+msgid "Amount per point"
+msgstr "crwdns15489:0crwdne15489:0"
+
+msgid "Answer"
+msgstr "crwdns15490:0crwdne15490:0"
+
+msgid "Applied to"
+msgstr "crwdns15491:0crwdne15491:0"
+
+msgid "Apply"
+msgstr "crwdns15492:0crwdne15492:0"
+
+msgid "Apply to become a Binary.com"
+msgstr "crwdns15493:0crwdne15493:0"
+
+msgid "Appropriateness Test: WARNING"
+msgstr "crwdns15494:0crwdne15494:0"
+
+msgid "Apr"
+msgstr "crwdns15495:0crwdne15495:0"
+
+msgid "April"
+msgstr "crwdns15496:0crwdne15496:0"
+
+msgid "Are you sure you want to delete this token?"
+msgstr "crwdns15497:0crwdne15497:0"
+
+msgid "Aroon Down Stroke"
+msgstr "crwdns15498:0crwdne15498:0"
+
+msgid "Aroon Up Stroke"
+msgstr "crwdns15499:0crwdne15499:0"
+
+msgid "Asians"
+msgstr "crwdns15500:0crwdne15500:0"
+
+msgid "Asset"
+msgstr "crwdns15501:0crwdne15501:0"
+
+msgid "Asset Index"
+msgstr "crwdns15502:0crwdne15502:0"
+
+msgid "Aug"
+msgstr "crwdns15503:0crwdne15503:0"
+
+msgid "August"
+msgstr "crwdns15504:0crwdne15504:0"
+
+msgid "Average"
+msgstr "crwdns15505:0crwdne15505:0"
+
+msgid "Back"
+msgstr "crwdns15506:0crwdne15506:0"
+
+msgid "Back to list"
+msgstr "crwdns15507:0crwdne15507:0"
+
+msgid "Background Color"
+msgstr "crwdns15508:0crwdne15508:0"
+
+msgid "Barrier"
+msgstr "crwdns15509:0crwdne15509:0"
+
+msgid "Barrier offset"
+msgstr "crwdns15510:0crwdne15510:0"
+
+msgid "Binary options or other financial derivatives"
+msgstr "crwdns15511:0crwdne15511:0"
+
+msgid "Binary.com"
+msgstr "crwdns15512:0crwdne15512:0"
+
+msgid "Binary.com : Webtrader"
+msgstr "crwdns15513:0crwdne15513:0"
+
+msgid "Blank window"
+msgstr "crwdns15514:0crwdne15514:0"
+
+msgid "Bought"
+msgstr "crwdns15515:0crwdne15515:0"
+
+msgid "Brand of first car"
+msgstr "crwdns15516:0crwdne15516:0"
+
+msgid "Browser upgrade required"
+msgstr "crwdns15517:0crwdne15517:0"
+
+msgid "Buy Price"
+msgstr "crwdns15518:0crwdne15518:0"
+
+msgid "Buy price"
+msgstr "crwdns15519:0crwdne15519:0"
+
+msgid "By clicking"
+msgstr "crwdns15520:0crwdne15520:0"
+
+msgid "By clicking OK, you confirm that you have read and accepted the updated"
+msgstr "crwdns15521:0crwdne15521:0"
+
+msgid "CLOSE"
+msgstr "crwdns15522:0crwdne15522:0"
+
+msgid "CSV"
+msgstr "crwdns15523:0crwdne15523:0"
+
+msgid "Cancel"
+msgstr "crwdns15524:0crwdne15524:0"
+
+msgid "Candles"
+msgstr "crwdns15525:0crwdne15525:0"
+
+msgid "Candlestick down-color"
+msgstr "crwdns15526:0crwdne15526:0"
+
+msgid "Candlestick down-line"
+msgstr "crwdns15527:0crwdne15527:0"
+
+msgid "Candlestick up-color"
+msgstr "crwdns15528:0crwdne15528:0"
+
+msgid "Candlestick up-line"
+msgstr "crwdns15529:0crwdne15529:0"
+
+msgid "Cash Balance"
+msgstr "crwdns15530:0crwdne15530:0"
+
+msgid "Change Backend Server"
+msgstr "crwdns15531:0crwdne15531:0"
+
+msgid "Change password"
+msgstr "crwdns15532:0crwdne15532:0"
+
+msgid "Chart"
+msgstr "crwdns15533:0crwdne15533:0"
+
+msgid "Chart Themes"
+msgstr "crwdns15534:0crwdne15534:0"
+
+msgid "Chart background"
+msgstr "crwdns15535:0crwdne15535:0"
+
+msgid "Chart context menu"
+msgstr "crwdns15536:0crwdne15536:0"
+
+msgid "Chart template"
+msgstr "crwdns15537:0crwdne15537:0"
+
+msgid "Chart type"
+msgstr "crwdns15538:0crwdne15538:0"
+
+msgid "Choose password"
+msgstr "crwdns15539:0crwdne15539:0"
+
+msgid "Choose your pereferred payment agent"
+msgstr "crwdns15540:0crwdne15540:0"
+
+msgid "Choose your pereferred withdrawal method"
+msgstr "crwdns15541:0crwdne15541:0"
+
+msgid "Chrome"
+msgstr "crwdns15542:0crwdne15542:0"
+
+msgid "Click Jacking test"
+msgstr "crwdns15543:0crwdne15543:0"
+
+msgid "Click to log in with your Binary.com account"
+msgstr "crwdns15544:0crwdne15544:0"
+
+msgid "Close Price"
+msgstr "crwdns15545:0crwdne15545:0"
+
+msgid "Close all"
+msgstr "crwdns15546:0crwdne15546:0"
+
+msgid "Closes"
+msgstr "crwdns15547:0crwdne15547:0"
+
+msgid "Commodities trading experience"
+msgstr "crwdns15548:0crwdne15548:0"
+
+msgid "Commodities trading frequency"
+msgstr "crwdns15549:0crwdne15549:0"
+
+msgid "Comparisons"
+msgstr "crwdns15550:0crwdne15550:0"
+
+msgid "Conditions"
+msgstr "crwdns15551:0crwdne15551:0"
+
+msgid "Config changes successful"
+msgstr "crwdns15552:0crwdne15552:0"
+
+msgid "Confirm transfer"
+msgstr "crwdns15553:0crwdne15553:0"
+
+msgid "Connection closed"
+msgstr "crwdns15554:0crwdne15554:0"
+
+msgid "Connection error. Refresh the page"
+msgstr "crwdns15555:0crwdne15555:0"
+
+msgid "Construction"
+msgstr "crwdns15556:0crwdne15556:0"
+
+msgid "Continue"
+msgstr "crwdns15557:0crwdne15557:0"
+
+msgid "Continue Trading"
+msgstr "crwdns15558:0crwdne15558:0"
+
+msgid "Contract"
+msgstr "crwdns15559:0crwdne15559:0"
+
+msgid "Contract Confirmation"
+msgstr "crwdns15560:0crwdne15560:0"
+
+msgid "Contract Details"
+msgstr "crwdns15561:0crwdne15561:0"
+
+msgid "Contract is not yet started"
+msgstr "crwdns15562:0crwdne15562:0"
+
+msgid "Contracts"
+msgstr "crwdns15563:0crwdne15563:0"
+
+msgid "Country of residence"
+msgstr "crwdns15564:0crwdne15564:0"
+
+msgid "Create"
+msgstr "crwdns15565:0crwdne15565:0"
+
+msgid "Create token"
+msgstr "crwdns15566:0crwdne15566:0"
+
+msgid "Credit/Debit"
+msgstr "crwdns15567:0crwdne15567:0"
+
+msgid "Crosshair"
+msgstr "crwdns15568:0crwdne15568:0"
+
+msgid "Current Level"
+msgstr "crwdns15569:0crwdne15569:0"
+
+msgid "Current Spot"
+msgstr "crwdns15570:0crwdne15570:0"
+
+msgid "Current Spot Time"
+msgstr "crwdns15571:0crwdne15571:0"
+
+msgid "Current comparisons"
+msgstr "crwdns15572:0crwdne15572:0"
+
+msgid "Current indicators"
+msgstr "crwdns15573:0crwdne15573:0"
+
+msgid "Current password"
+msgstr "crwdns15574:0crwdne15574:0"
+
+msgid "Current regulations require that you provide us the following"
+msgstr "crwdns15575:0crwdne15575:0"
+
+msgid "Current time"
+msgstr "crwdns15576:0crwdne15576:0"
+
+msgid "Custom Theme"
+msgstr "crwdns15577:0crwdne15577:0"
+
+msgid "Customize chart appearance"
+msgstr "crwdns15578:0crwdne15578:0"
+
+msgid "DI Stroke"
+msgstr "crwdns15579:0crwdne15579:0"
+
+msgid "DX MA Type"
+msgstr "crwdns15580:0crwdne15580:0"
+
+msgid "Daily limit on losses"
+msgstr "crwdns15581:0crwdne15581:0"
+
+msgid "Daily turnover limit"
+msgstr "crwdns15582:0crwdne15582:0"
+
+msgid "Dark Blue"
+msgstr "crwdns15583:0crwdne15583:0"
+
+msgid "Dark Green"
+msgstr "crwdns15584:0crwdne15584:0"
+
+msgid "Dark Unica"
+msgstr "crwdns15585:0crwdne15585:0"
+
+msgid "Dash style"
+msgstr "crwdns15586:0crwdne15586:0"
+
+msgid "Date"
+msgstr "crwdns15587:0crwdne15587:0"
+
+msgid "Date of birth"
+msgstr "crwdns15588:0crwdne15588:0"
+
+msgid "Days"
+msgstr "crwdns15589:0crwdne15589:0"
+
+msgid "Dec"
+msgstr "crwdns15590:0crwdne15590:0"
+
+msgid "December"
+msgstr "crwdns15591:0crwdne15591:0"
+
+msgid "Decline"
+msgstr "crwdns15592:0crwdne15592:0"
+
+msgid "Default"
+msgstr "crwdns15593:0crwdne15593:0"
+
+msgid "Delete"
+msgstr "crwdns15594:0crwdne15594:0"
+
+msgid "Delete level(s)"
+msgstr "crwdns15595:0crwdne15595:0"
+
+msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgstr "crwdns15596:0crwdne15596:0"
+
+msgid "Deposit funds"
+msgstr "crwdns15597:0crwdne15597:0"
+
+msgid "Deposit of USD"
+msgstr "crwdns15598:0crwdne15598:0"
+
+msgid "Describe what this token is for to find it later"
+msgstr "crwdns15599:0crwdne15599:0"
+
+msgid "Description"
+msgstr "crwdns15600:0crwdne15600:0"
+
+msgid "Digits"
+msgstr "crwdns15601:0crwdne15601:0"
+
+msgid "Do you want to install Webtrader chrome extension?"
+msgstr "crwdns15602:0crwdne15602:0"
+
+msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
+msgstr "crwdns15603:0crwdne15603:0"
+
+msgid "Done. The funds are being transferred to the payment agent"
+msgstr "crwdns15604:0crwdne15604:0"
+
+msgid "Done. The funds are transferred"
+msgstr "crwdns15605:0crwdne15605:0"
+
+msgid "Dot"
+msgstr "crwdns15606:0crwdne15606:0"
+
+msgid "Double MA Period"
+msgstr "crwdns15607:0crwdne15607:0"
+
+msgid "Double MA Type"
+msgstr "crwdns15608:0crwdne15608:0"
+
+msgid "Double click the object to remove"
+msgstr "crwdns15609:0crwdne15609:0"
+
+msgid "Download"
+msgstr "crwdns15610:0crwdne15610:0"
+
+msgid "Download CSV"
+msgstr "crwdns15611:0crwdne15611:0"
+
+msgid "Download JPEG image"
+msgstr "crwdns15612:0crwdne15612:0"
+
+msgid "Download PDF document"
+msgstr "crwdns15613:0crwdne15613:0"
+
+msgid "Download PNG"
+msgstr "crwdns15614:0crwdne15614:0"
+
+msgid "Download PNG image"
+msgstr "crwdns15615:0crwdne15615:0"
+
+msgid "Download SVG"
+msgstr "crwdns15616:0crwdne15616:0"
+
+msgid "Download SVG vector image"
+msgstr "crwdns15617:0crwdne15617:0"
+
+msgid "Download as"
+msgstr "crwdns15618:0crwdne15618:0"
+
+msgid "Downloading .csv"
+msgstr "crwdns15619:0crwdne15619:0"
+
+msgid "Drawing tools"
+msgstr "crwdns15620:0crwdne15620:0"
+
+msgid "Duration"
+msgstr "crwdns15621:0crwdne15621:0"
+
+msgid "EMA"
+msgstr "crwdns15622:0crwdne15622:0"
+
+msgid "Edge"
+msgstr "crwdns15623:0crwdne15623:0"
+
+msgid "Edit"
+msgstr "crwdns15624:0crwdne15624:0"
+
+msgid "Education"
+msgstr "crwdns15625:0crwdne15625:0"
+
+msgid "Email verification failed"
+msgstr "crwdns15626:0crwdne15626:0"
+
+msgid "Embed code"
+msgstr "crwdns15627:0crwdne15627:0"
+
+msgid "End Time"
+msgstr "crwdns15628:0crwdne15628:0"
+
+msgid "Ends In/Out"
+msgstr "crwdns15629:0crwdne15629:0"
+
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr "crwdns15630:0crwdne15630:0"
+
+msgid "Enter your current password"
+msgstr "crwdns15631:0crwdne15631:0"
+
+msgid "Entry Spot"
+msgstr "crwdns15632:0crwdne15632:0"
+
+msgid "Entry spot"
+msgstr "crwdns15633:0crwdne15633:0"
+
+msgid "Error downloading .csv"
+msgstr "crwdns15634:0crwdne15634:0"
+
+msgid "Error getting data for"
+msgstr "crwdns15635:0crwdne15635:0"
+
+msgid "Error getting market information!"
+msgstr "crwdns15636:0crwdne15636:0"
+
+msgid "Estimated Net Worth"
+msgstr "crwdns15637:0crwdne15637:0"
+
+msgid "Exclude me from the website until"
+msgstr "crwdns15638:0crwdne15638:0"
+
+msgid "Exit Spot"
+msgstr "crwdns15639:0crwdne15639:0"
+
+msgid "Exit spot"
+msgstr "crwdns15640:0crwdne15640:0"
+
+msgid "Explanation"
+msgstr "crwdns15641:0crwdne15641:0"
+
+msgid "Failed to update the password"
+msgstr "crwdns15642:0crwdne15642:0"
+
+msgid "Fall"
+msgstr "crwdns15643:0crwdne15643:0"
+
+msgid "Family name"
+msgstr "crwdns15644:0crwdne15644:0"
+
+msgid "Fast %K MA Type"
+msgstr "crwdns15645:0crwdne15645:0"
+
+msgid "Fast %K Period"
+msgstr "crwdns15646:0crwdne15646:0"
+
+msgid "Fast Limit"
+msgstr "crwdns15647:0crwdne15647:0"
+
+msgid "Fast MA Type"
+msgstr "crwdns15648:0crwdne15648:0"
+
+msgid "Fast Period"
+msgstr "crwdns15649:0crwdne15649:0"
+
+msgid "Favorites"
+msgstr "crwdns15650:0crwdne15650:0"
+
+msgid "Favourite artist"
+msgstr "crwdns15651:0crwdne15651:0"
+
+msgid "Favourite dish"
+msgstr "crwdns15652:0crwdne15652:0"
+
+msgid "Feb"
+msgstr "crwdns15653:0crwdne15653:0"
+
+msgid "February"
+msgstr "crwdns15654:0crwdne15654:0"
+
+msgid "Final Price"
+msgstr "crwdns15655:0crwdne15655:0"
+
+msgid "Final price"
+msgstr "crwdns15656:0crwdne15656:0"
+
+msgid "Finance"
+msgstr "crwdns15657:0crwdne15657:0"
+
+msgid "Financial Account Opening form"
+msgstr "crwdns15658:0crwdne15658:0"
+
+msgid "Financial information"
+msgstr "crwdns15659:0crwdne15659:0"
+
+msgid "Firefox"
+msgstr "crwdns15660:0crwdne15660:0"
+
+msgid "First name"
+msgstr "crwdns15661:0crwdne15661:0"
+
+msgid "Forex trading experience"
+msgstr "crwdns15662:0crwdne15662:0"
+
+msgid "Forex trading frequency"
+msgstr "crwdns15663:0crwdne15663:0"
+
+msgid "Fri"
+msgstr "crwdns15664:0crwdne15664:0"
+
+msgid "Friday"
+msgstr "crwdns15665:0crwdne15665:0"
+
+msgid "From"
+msgstr "crwdns15666:0crwdne15666:0"
+
+msgid "Further instructions"
+msgstr "crwdns15667:0crwdne15667:0"
+
+msgid "Gray"
+msgstr "crwdns15668:0crwdne15668:0"
+
+msgid "Grid"
+msgstr "crwdns15669:0crwdne15669:0"
+
+msgid "Grid Light"
+msgstr "crwdns15670:0crwdne15670:0"
+
+msgid "HIGH"
+msgstr "crwdns15671:0crwdne15671:0"
+
+msgid "Have better luck at trading!"
+msgstr "crwdns15672:0crwdne15672:0"
+
+msgid "Health"
+msgstr "crwdns15673:0crwdne15673:0"
+
+msgid "High Barrier"
+msgstr "crwdns15674:0crwdne15674:0"
+
+msgid "High Price"
+msgstr "crwdns15675:0crwdne15675:0"
+
+msgid "High Stroke"
+msgstr "crwdns15676:0crwdne15676:0"
+
+msgid "High barrier offset"
+msgstr "crwdns15677:0crwdne15677:0"
+
+msgid "Higher"
+msgstr "crwdns15678:0crwdne15678:0"
+
+msgid "Histogram Color"
+msgstr "crwdns15679:0crwdne15679:0"
+
+msgid "Histogram Color For Higher Values"
+msgstr "crwdns15680:0crwdne15680:0"
+
+msgid "Histogram Color For Lower Values"
+msgstr "crwdns15681:0crwdne15681:0"
+
+msgid "Home Address"
+msgstr "crwdns15682:0crwdne15682:0"
+
+msgid "Horizontal Line"
+msgstr "crwdns15683:0crwdne15683:0"
+
+msgid "Horizontal line"
+msgstr "crwdns15684:0crwdne15684:0"
+
+msgid "Hours"
+msgstr "crwdns15685:0crwdne15685:0"
+
+msgid "I have read and agree to Binary.com"
+msgstr "crwdns15686:0crwdne15686:0"
+
+msgid "IMPORTANT DISCLAIMER"
+msgstr "crwdns15687:0crwdne15687:0"
+
+msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
+msgstr "crwdns15688:0crwdne15688:0"
+
+msgid "If the issue keeps happening, please contact"
+msgstr "crwdns15689:0crwdne15689:0"
+
+msgid "If you select a"
+msgstr "crwdns15690:0crwdne15690:0"
+
+msgid "If you select a specific"
+msgstr "crwdns15691:0crwdne15691:0"
+
+msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
+msgstr "crwdns15692:0crwdne15692:0"
+
+msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
+msgstr "crwdns15693:0crwdne15693:0"
+
+msgid "In regards to binary options which are gambling products, remember that gambling can be addictive"
+msgstr "crwdns15694:0crwdne15694:0"
+
+msgid "In/Out"
+msgstr "crwdns15695:0crwdne15695:0"
+
+msgid "Income Source"
+msgstr "crwdns15696:0crwdne15696:0"
+
+msgid "Indicative"
+msgstr "crwdns15697:0crwdne15697:0"
+
+msgid "Indicative Price"
+msgstr "crwdns15698:0crwdne15698:0"
+
+msgid "Indicators"
+msgstr "crwdns15699:0crwdne15699:0"
+
+msgid "Indices trading experience"
+msgstr "crwdns15700:0crwdne15700:0"
+
+msgid "Indices trading frequency"
+msgstr "crwdns15701:0crwdne15701:0"
+
+msgid "Industry of Employment"
+msgstr "crwdns15702:0crwdne15702:0"
+
+msgid "Instrument"
+msgstr "crwdns15703:0crwdne15703:0"
+
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "crwdns15704:0crwdne15704:0"
+
+msgid "Instruments"
+msgstr "crwdns15705:0crwdne15705:0"
+
+msgid "Invalid parameter(s)!"
+msgstr "crwdns15706:0crwdne15706:0"
+
+msgid "Investments & Dividends"
+msgstr "crwdns15707:0crwdne15707:0"
+
+msgid "Jan"
+msgstr "crwdns15708:0crwdne15708:0"
+
+msgid "January"
+msgstr "crwdns15709:0crwdne15709:0"
+
+msgid "Japan accounts are not supported"
+msgstr "crwdns15710:0crwdne15710:0"
+
+msgid "Jul"
+msgstr "crwdns15711:0crwdne15711:0"
+
+msgid "July"
+msgstr "crwdns15712:0crwdne15712:0"
+
+msgid "Jump to"
+msgstr "crwdns15713:0crwdne15713:0"
+
+msgid "Jun"
+msgstr "crwdns15714:0crwdne15714:0"
+
+msgid "June"
+msgstr "crwdns15715:0crwdne15715:0"
+
+msgid "Just click  Grant  button on the page you will now be taken to"
+msgstr "crwdns15716:0crwdne15716:0"
+
+msgid "LOW"
+msgstr "crwdns15717:0crwdne15717:0"
+
+msgid "Last Digit Prediction"
+msgstr "crwdns15718:0crwdne15718:0"
+
+msgid "Last Digit is Over"
+msgstr "crwdns15719:0crwdne15719:0"
+
+msgid "Last Digit is Under"
+msgstr "crwdns15720:0crwdne15720:0"
+
+msgid "Last used"
+msgstr "crwdns15721:0crwdne15721:0"
+
+msgid "Less than"
+msgstr "crwdns15722:0crwdne15722:0"
+
+msgid "Let's do it"
+msgstr "crwdns15723:0crwdne15723:0"
+
+msgid "Level"
+msgstr "crwdns15724:0crwdne15724:0"
+
+msgid "Level of Education"
+msgstr "crwdns15725:0crwdne15725:0"
+
+msgid "Line"
+msgstr "crwdns15726:0crwdne15726:0"
+
+msgid "Line Dot"
+msgstr "crwdns15727:0crwdne15727:0"
+
+msgid "Line Stroke"
+msgstr "crwdns15728:0crwdne15728:0"
+
+msgid "Link"
+msgstr "crwdns15729:0crwdne15729:0"
+
+msgid "Load chart template"
+msgstr "crwdns15730:0crwdne15730:0"
+
+msgid "Loading"
+msgstr "crwdns15731:0crwdne15731:0"
+
+msgid "Loading Asset Index"
+msgstr "crwdns15732:0crwdne15732:0"
+
+msgid "Loading Configurations"
+msgstr "crwdns15733:0crwdne15733:0"
+
+msgid "Loading Download/View Data"
+msgstr "crwdns15734:0crwdne15734:0"
+
+msgid "Loading Password dialog"
+msgstr "crwdns15735:0crwdne15735:0"
+
+msgid "Loading Profit Table"
+msgstr "crwdns15736:0crwdne15736:0"
+
+msgid "Loading Real account opening"
+msgstr "crwdns15737:0crwdne15737:0"
+
+msgid "Loading Self-Exclusion"
+msgstr "crwdns15738:0crwdne15738:0"
+
+msgid "Loading Statement Table"
+msgstr "crwdns15739:0crwdne15739:0"
+
+msgid "Loading Token management"
+msgstr "crwdns15740:0crwdne15740:0"
+
+msgid "Loading Trading Times"
+msgstr "crwdns15741:0crwdne15741:0"
+
+msgid "Loading chart and trade menus"
+msgstr "crwdns15742:0crwdne15742:0"
+
+msgid "Loading custom theme configuration"
+msgstr "crwdns15743:0crwdne15743:0"
+
+msgid "Loading portfolio"
+msgstr "crwdns15744:0crwdne15744:0"
+
+msgid "Loading self-exclusion settings"
+msgstr "crwdns15745:0crwdne15745:0"
+
+msgid "Loading..."
+msgstr "crwdns15746:0crwdne15746:0"
+
+msgid "Log in"
+msgstr "crwdns15747:0crwdne15747:0"
+
+msgid "Log in time"
+msgstr "crwdns15748:0crwdne15748:0"
+
+msgid "Logging out because of self-exclusion session time out!"
+msgstr "crwdns15749:0crwdne15749:0"
+
+msgid "Login"
+msgstr "crwdns15750:0crwdne15750:0"
+
+msgid "Logout"
+msgstr "crwdns15751:0crwdne15751:0"
+
+msgid "Long MA Type"
+msgstr "crwdns15752:0crwdne15752:0"
+
+msgid "Long ROC Period"
+msgstr "crwdns15753:0crwdne15753:0"
+
+msgid "Long Stop Line Stroke"
+msgstr "crwdns15754:0crwdne15754:0"
+
+msgid "Long Term Period"
+msgstr "crwdns15755:0crwdne15755:0"
+
+msgid "Low Barrier"
+msgstr "crwdns15756:0crwdne15756:0"
+
+msgid "Low Price"
+msgstr "crwdns15757:0crwdne15757:0"
+
+msgid "Low Stroke"
+msgstr "crwdns15758:0crwdne15758:0"
+
+msgid "Low barrier offset"
+msgstr "crwdns15759:0crwdne15759:0"
+
+msgid "Lower"
+msgstr "crwdns15760:0crwdne15760:0"
+
+msgid "Lower Band Stroke"
+msgstr "crwdns15761:0crwdne15761:0"
+
+msgid "MA Type"
+msgstr "crwdns15762:0crwdne15762:0"
+
+msgid "MACD Line Stroke"
+msgstr "crwdns15763:0crwdne15763:0"
+
+msgid "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
+msgstr "crwdns15764:0crwdne15764:0"
+
+msgid "Mar"
+msgstr "crwdns15765:0crwdne15765:0"
+
+msgid "March"
+msgstr "crwdns15766:0crwdne15766:0"
+
+msgid "Mass Period"
+msgstr "crwdns15767:0crwdne15767:0"
+
+msgid "Max/Min Period"
+msgstr "crwdns15768:0crwdne15768:0"
+
+msgid "Maximum"
+msgstr "crwdns15769:0crwdne15769:0"
+
+msgid "Maximum account cash balance"
+msgstr "crwdns15770:0crwdne15770:0"
+
+msgid "Maximum aggregate contract purchases over a 30-day period"
+msgstr "crwdns15771:0crwdne15771:0"
+
+msgid "Maximum aggregate contract purchases over a 7-day period"
+msgstr "crwdns15772:0crwdne15772:0"
+
+msgid "Maximum aggregate contract purchases per day"
+msgstr "crwdns15773:0crwdne15773:0"
+
+msgid "Maximum aggregate loss over a 30-day period"
+msgstr "crwdns15774:0crwdne15774:0"
+
+msgid "Maximum aggregate loss per day"
+msgstr "crwdns15775:0crwdne15775:0"
+
+msgid "Maximum number of open positions"
+msgstr "crwdns15776:0crwdne15776:0"
+
+msgid "May"
+msgstr "crwdns15777:0crwdne15777:0"
+
+msgid "Memorable date"
+msgstr "crwdns15778:0crwdne15778:0"
+
+msgid "Memorable town/city"
+msgstr "crwdns15779:0crwdne15779:0"
+
+msgid "Middle Band Stroke"
+msgstr "crwdns15780:0crwdne15780:0"
+
+msgid "Min: 10 Max: 2000"
+msgstr "crwdns15781:0crwdne15781:0"
+
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "crwdns15782:0crwdne15782:0"
+
+msgid "Minus the agent's commission"
+msgstr "crwdns15783:0crwdne15783:0"
+
+msgid "Minutes"
+msgstr "crwdns15784:0crwdne15784:0"
+
+msgid "Miss"
+msgstr "crwdns15785:0crwdne15785:0"
+
+msgid "Mon"
+msgstr "crwdns15786:0crwdne15786:0"
+
+msgid "Monday"
+msgstr "crwdns15787:0crwdne15787:0"
+
+msgid "Mother's maiden name"
+msgstr "crwdns15788:0crwdne15788:0"
+
+msgid "Mr"
+msgstr "crwdns15789:0crwdne15789:0"
+
+msgid "Mrs"
+msgstr "crwdns15790:0crwdne15790:0"
+
+msgid "Ms"
+msgstr "crwdns15791:0crwdne15791:0"
+
+msgid "Multiplier"
+msgstr "crwdns15792:0crwdne15792:0"
+
+msgid "NB Dev Down"
+msgstr "crwdns15793:0crwdne15793:0"
+
+msgid "NB Dev Up"
+msgstr "crwdns15794:0crwdne15794:0"
+
+msgid "Name"
+msgstr "crwdns15795:0crwdne15795:0"
+
+msgid "Name of first love"
+msgstr "crwdns15796:0crwdne15796:0"
+
+msgid "Name of your pet"
+msgstr "crwdns15797:0crwdne15797:0"
+
+msgid "Navigator handles background"
+msgstr "crwdns15798:0crwdne15798:0"
+
+msgid "Navigator handles border"
+msgstr "crwdns15799:0crwdne15799:0"
+
+msgid "Navigator mask-fill"
+msgstr "crwdns15800:0crwdne15800:0"
+
+msgid "Navigator outline"
+msgstr "crwdns15801:0crwdne15801:0"
+
+msgid "Navigator series color"
+msgstr "crwdns15802:0crwdne15802:0"
+
+msgid "Navigator series line"
+msgstr "crwdns15803:0crwdne15803:0"
+
+msgid "Net Annual Income"
+msgstr "crwdns15804:0crwdne15804:0"
+
+msgid "Net Profit"
+msgstr "crwdns15805:0crwdne15805:0"
+
+msgid "New password"
+msgstr "crwdns15806:0crwdne15806:0"
+
+msgid "No"
+msgstr "crwdns15807:0crwdne15807:0"
+
+msgid "Note that tokens can possess one or more of these scopes"
+msgstr "crwdns15808:0crwdne15808:0"
+
+msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price"
+msgstr "crwdns15809:0crwdne15809:0"
+
+msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
+msgstr "crwdns15810:0crwdne15810:0"
+
+msgid "Nov"
+msgstr "crwdns15811:0crwdne15811:0"
+
+msgid "November"
+msgstr "crwdns15812:0crwdne15812:0"
+
+msgid "Now"
+msgstr "crwdns15813:0crwdne15813:0"
+
+msgid "Number of bars on sides"
+msgstr "crwdns15814:0crwdne15814:0"
+
+msgid "OAuth App ID (Optional)"
+msgstr "crwdns15815:0crwdne15815:0"
+
+msgid "OAuth Server"
+msgstr "crwdns15816:0crwdne15816:0"
+
+msgid "OHLC"
+msgstr "crwdns15817:0crwdne15817:0"
+
+msgid "OPEN"
+msgstr "crwdns15818:0crwdne15818:0"
+
+msgid "Oct"
+msgstr "crwdns15819:0crwdne15819:0"
+
+msgid "October"
+msgstr "crwdns15820:0crwdne15820:0"
+
+msgid "Offset"
+msgstr "crwdns15821:0crwdne15821:0"
+
+msgid "Ok"
+msgstr "crwdns15822:0crwdne15822:0"
+
+msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
+msgstr "crwdns15823:0crwdne15823:0"
+
+msgid "Once this limit is reached, you may no longer deposit"
+msgstr "crwdns15824:0crwdne15824:0"
+
+msgid "One last step left"
+msgstr "crwdns15825:0crwdne15825:0"
+
+msgid "Oops... Page Not Available"
+msgstr "crwdns15826:0crwdne15826:0"
+
+msgid "Open"
+msgstr "crwdns15827:0crwdne15827:0"
+
+msgid "Open Account"
+msgstr "crwdns15828:0crwdne15828:0"
+
+msgid "Open Price"
+msgstr "crwdns15829:0crwdne15829:0"
+
+msgid "Open a Financial Account"
+msgstr "crwdns15830:0crwdne15830:0"
+
+msgid "Open account"
+msgstr "crwdns15831:0crwdne15831:0"
+
+msgid "Opens"
+msgstr "crwdns15832:0crwdne15832:0"
+
+msgid "Opera"
+msgstr "crwdns15833:0crwdne15833:0"
+
+msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
+msgstr "crwdns15834:0crwdne15834:0"
+
+msgid "Optional field, within 20 characters and may not contain '+'"
+msgstr "crwdns15835:0crwdne15835:0"
+
+msgid "Other"
+msgstr "crwdns15836:0crwdne15836:0"
+
+msgid "Other financial instruments trading experience"
+msgstr "crwdns15837:0crwdne15837:0"
+
+msgid "Other financial instruments trading frequency"
+msgstr "crwdns15838:0crwdne15838:0"
+
+msgid "Over"
+msgstr "crwdns15839:0crwdne15839:0"
+
+msgid "Over 3 years"
+msgstr "crwdns15840:0crwdne15840:0"
+
+msgid "PDF"
+msgstr "crwdns15841:0crwdne15841:0"
+
+msgid "PNG"
+msgstr "crwdns15842:0crwdne15842:0"
+
+msgid "PPO Line Stroke"
+msgstr "crwdns15843:0crwdne15843:0"
+
+msgid "Page Not Found"
+msgstr "crwdns15844:0crwdne15844:0"
+
+msgid "Password must be 6 characters minimum"
+msgstr "crwdns15845:0crwdne15845:0"
+
+msgid "Password must contain lower and uppercase letters with numbers"
+msgstr "crwdns15846:0crwdne15846:0"
+
+msgid "Password must contain uppercase letters and numbers"
+msgstr "crwdns15847:0crwdne15847:0"
+
+msgid "Password successfully updated"
+msgstr "crwdns15848:0crwdne15848:0"
+
+msgid "Passwords didn't match. Please type them again"
+msgstr "crwdns15849:0crwdne15849:0"
+
+msgid "Payment agent"
+msgstr "crwdns15850:0crwdne15850:0"
+
+msgid "Payment agents"
+msgstr "crwdns15851:0crwdne15851:0"
+
+msgid "Payments"
+msgstr "crwdns15852:0crwdne15852:0"
+
+msgid "Payout"
+msgstr "crwdns15853:0crwdne15853:0"
+
+msgid "Pension"
+msgstr "crwdns15854:0crwdne15854:0"
+
+msgid "Period"
+msgstr "crwdns15855:0crwdne15855:0"
+
+msgid "Period 1"
+msgstr "crwdns15856:0crwdne15856:0"
+
+msgid "Period 2"
+msgstr "crwdns15857:0crwdne15857:0"
+
+msgid "Period 3"
+msgstr "crwdns15858:0crwdne15858:0"
+
+msgid "Permissions"
+msgstr "crwdns15859:0crwdne15859:0"
+
+msgid "Personal Details"
+msgstr "crwdns15860:0crwdne15860:0"
+
+msgid "Phone"
+msgstr "crwdns15861:0crwdne15861:0"
+
+msgid "Please"
+msgstr "crwdns15862:0crwdne15862:0"
+
+msgid "Please answer to secret question, within 4-50 characters"
+msgstr "crwdns15863:0crwdne15863:0"
+
+msgid "Please choose at least one token scope"
+msgstr "crwdns15864:0crwdne15864:0"
+
+msgid "Please choose which currency you would like to transact in"
+msgstr "crwdns15865:0crwdne15865:0"
+
+msgid "Please confirm the following details in order to complete the transfer"
+msgstr "crwdns15866:0crwdne15866:0"
+
+msgid "Please enter a number between"
+msgstr "crwdns15867:0crwdne15867:0"
+
+msgid "Please enter a valid date in yyyy-mm-dd format"
+msgstr "crwdns15868:0crwdne15868:0"
+
+msgid "Please enter a value for"
+msgstr "crwdns15869:0crwdne15869:0"
+
+msgid "Please enter a vlaid phone number"
+msgstr "crwdns15870:0crwdne15870:0"
+
+msgid "Please enter correct email"
+msgstr "crwdns15871:0crwdne15871:0"
+
+msgid "Please enter date in the format YYYY-MM-DD"
+msgstr "crwdns15872:0crwdne15872:0"
+
+msgid "Please enter the token name"
+msgstr "crwdns15873:0crwdne15873:0"
+
+msgid "Please enter the verification code sent to your email"
+msgstr "crwdns15874:0crwdne15874:0"
+
+msgid "Please enter your city address"
+msgstr "crwdns15875:0crwdne15875:0"
+
+msgid "Please enter your current password"
+msgstr "crwdns15876:0crwdne15876:0"
+
+msgid "Please enter your email"
+msgstr "crwdns15877:0crwdne15877:0"
+
+msgid "Please enter your family name"
+msgstr "crwdns15878:0crwdne15878:0"
+
+msgid "Please enter your first name"
+msgstr "crwdns15879:0crwdne15879:0"
+
+msgid "Please enter your new password"
+msgstr "crwdns15880:0crwdne15880:0"
+
+msgid "Please enter your password"
+msgstr "crwdns15881:0crwdne15881:0"
+
+msgid "Please enter your phone number"
+msgstr "crwdns15882:0crwdne15882:0"
+
+msgid "Please enter your street address"
+msgstr "crwdns15883:0crwdne15883:0"
+
+msgid "Please install the latest version of one of these browsers"
+msgstr "crwdns15884:0crwdne15884:0"
+
+msgid "Please log in"
+msgstr "crwdns15885:0crwdne15885:0"
+
+msgid "Please select"
+msgstr "crwdns15886:0crwdne15886:0"
+
+msgid "Please try again after 1 minute"
+msgstr "crwdns15887:0crwdne15887:0"
+
+msgid "Please use your new password to login"
+msgstr "crwdns15888:0crwdne15888:0"
+
+msgid "Plot"
+msgstr "crwdns15889:0crwdne15889:0"
+
+msgid "Plot Color"
+msgstr "crwdns15890:0crwdne15890:0"
+
+msgid "Pofit/Loss"
+msgstr "crwdns15891:0crwdne15891:0"
+
+msgid "Points"
+msgstr "crwdns15892:0crwdne15892:0"
+
+msgid "Portfolio"
+msgstr "crwdns15893:0crwdne15893:0"
+
+msgid "Postal code/ZIP"
+msgstr "crwdns15894:0crwdne15894:0"
+
+msgid "Potential Payout"
+msgstr "crwdns15895:0crwdne15895:0"
+
+msgid "Potential Profit"
+msgstr "crwdns15896:0crwdne15896:0"
+
+msgid "Potential profit"
+msgstr "crwdns15897:0crwdne15897:0"
+
+msgid "Pre-Defined"
+msgstr "crwdns15898:0crwdne15898:0"
+
+msgid "Preferred reality-check interval"
+msgstr "crwdns15899:0crwdne15899:0"
+
+msgid "Press Create token button on the right to create your first token"
+msgstr "crwdns15900:0crwdne15900:0"
+
+msgid "Price"
+msgstr "crwdns15901:0crwdne15901:0"
+
+msgid "Primary"
+msgstr "crwdns15902:0crwdne15902:0"
+
+msgid "Print chart"
+msgstr "crwdns15903:0crwdne15903:0"
+
+msgid "Profit"
+msgstr "crwdns15904:0crwdne15904:0"
+
+msgid "Profit Table"
+msgstr "crwdns15905:0crwdne15905:0"
+
+msgid "Profit table"
+msgstr "crwdns15906:0crwdne15906:0"
+
+msgid "Profit/ Loss"
+msgstr "crwdns15907:0crwdne15907:0"
+
+msgid "Profit/Loss (points)"
+msgstr "crwdns15908:0crwdne15908:0"
+
+msgid "Purchase"
+msgstr "crwdns15909:0crwdne15909:0"
+
+msgid "Purchase Date"
+msgstr "crwdns15910:0crwdne15910:0"
+
+msgid "Purchase Price"
+msgstr "crwdns15911:0crwdne15911:0"
+
+msgid "Purchase Time"
+msgstr "crwdns15912:0crwdne15912:0"
+
+msgid "Read"
+msgstr "crwdns15913:0crwdne15913:0"
+
+msgid "Real Money Account Opening"
+msgstr "crwdns15914:0crwdne15914:0"
+
+msgid "Reality check"
+msgstr "crwdns15915:0crwdne15915:0"
+
+msgid "Redirecting to oauth login page"
+msgstr "crwdns15916:0crwdne15916:0"
+
+msgid "Ref"
+msgstr "crwdns15917:0crwdne15917:0"
+
+msgid "Register free account"
+msgstr "crwdns15918:0crwdne15918:0"
+
+msgid "Registration"
+msgstr "crwdns15919:0crwdne15919:0"
+
+msgid "Reloading page"
+msgstr "crwdns15920:0crwdne15920:0"
+
+msgid "Remove Selected"
+msgstr "crwdns15921:0crwdne15921:0"
+
+msgid "Rename"
+msgstr "crwdns15922:0crwdne15922:0"
+
+msgid "Repeat password"
+msgstr "crwdns15923:0crwdne15923:0"
+
+msgid "Resale of this contract is not offered"
+msgstr "crwdns15924:0crwdne15924:0"
+
+msgid "Reset to Defaults"
+msgstr "crwdns15925:0crwdne15925:0"
+
+msgid "Reset zoom"
+msgstr "crwdns15926:0crwdne15926:0"
+
+msgid "Reset zoom level 1:1"
+msgstr "crwdns15927:0crwdne15927:0"
+
+msgid "Resources"
+msgstr "crwdns15928:0crwdne15928:0"
+
+msgid "Responsible Trading"
+msgstr "crwdns15929:0crwdne15929:0"
+
+msgid "Results"
+msgstr "crwdns15930:0crwdne15930:0"
+
+msgid "Return"
+msgstr "crwdns15931:0crwdne15931:0"
+
+msgid "Return to trading page"
+msgstr "crwdns15932:0crwdne15932:0"
+
+msgid "Rise"
+msgstr "crwdns15933:0crwdne15933:0"
+
+msgid "SMA"
+msgstr "crwdns15934:0crwdne15934:0"
+
+msgid "SVG"
+msgstr "crwdns15935:0crwdne15935:0"
+
+msgid "Safari"
+msgstr "crwdns15936:0crwdne15936:0"
+
+msgid "Salaried Employee"
+msgstr "crwdns15937:0crwdne15937:0"
+
+msgid "Sale Date"
+msgstr "crwdns15938:0crwdne15938:0"
+
+msgid "Sale Price"
+msgstr "crwdns15939:0crwdne15939:0"
+
+msgid "Sand Signika"
+msgstr "crwdns15940:0crwdne15940:0"
+
+msgid "Sat"
+msgstr "crwdns15941:0crwdne15941:0"
+
+msgid "Saturday"
+msgstr "crwdns15942:0crwdne15942:0"
+
+msgid "Save"
+msgstr "crwdns15943:0crwdne15943:0"
+
+msgid "Save as"
+msgstr "crwdns15944:0crwdne15944:0"
+
+msgid "Save changes"
+msgstr "crwdns15945:0crwdne15945:0"
+
+msgid "Secondary"
+msgstr "crwdns15946:0crwdne15946:0"
+
+msgid "Security"
+msgstr "crwdns15947:0crwdne15947:0"
+
+msgid "Security question"
+msgstr "crwdns15948:0crwdne15948:0"
+
+msgid "Select Instrument"
+msgstr "crwdns15949:0crwdne15949:0"
+
+msgid "Self-Employed"
+msgstr "crwdns15950:0crwdne15950:0"
+
+msgid "Self-Exclusion"
+msgstr "crwdns15951:0crwdne15951:0"
+
+msgid "Self-Exclusion Facilities"
+msgstr "crwdns15952:0crwdne15952:0"
+
+msgid "Sell At Market"
+msgstr "crwdns15953:0crwdne15953:0"
+
+msgid "Sell Price"
+msgstr "crwdns15954:0crwdne15954:0"
+
+msgid "Sell Spot"
+msgstr "crwdns15955:0crwdne15955:0"
+
+msgid "Sell Time"
+msgstr "crwdns15956:0crwdne15956:0"
+
+msgid "Send to account #"
+msgstr "crwdns15957:0crwdne15957:0"
+
+msgid "Sent to account"
+msgstr "crwdns15958:0crwdne15958:0"
+
+msgid "Sep"
+msgstr "crwdns15959:0crwdne15959:0"
+
+msgid "September"
+msgstr "crwdns15960:0crwdne15960:0"
+
+msgid "Session"
+msgstr "crwdns15961:0crwdne15961:0"
+
+msgid "Session duration limit, in minutes"
+msgstr "crwdns15962:0crwdne15962:0"
+
+msgid "Session is not authenticated"
+msgstr "crwdns15963:0crwdne15963:0"
+
+msgid "Settles"
+msgstr "crwdns15964:0crwdne15964:0"
+
+msgid "Share"
+msgstr "crwdns15965:0crwdne15965:0"
+
+msgid "Share chart"
+msgstr "crwdns15966:0crwdne15966:0"
+
+msgid "Short MA Type"
+msgstr "crwdns15967:0crwdne15967:0"
+
+msgid "Short ROC Period"
+msgstr "crwdns15968:0crwdne15968:0"
+
+msgid "Short Stop Line Stroke"
+msgstr "crwdns15969:0crwdne15969:0"
+
+msgid "Short Term Period"
+msgstr "crwdns15970:0crwdne15970:0"
+
+msgid "Show"
+msgstr "crwdns15971:0crwdne15971:0"
+
+msgid "Sigma"
+msgstr "crwdns15972:0crwdne15972:0"
+
+msgid "Signal Line Stroke"
+msgstr "crwdns15973:0crwdne15973:0"
+
+msgid "Signal MA Type"
+msgstr "crwdns15974:0crwdne15974:0"
+
+msgid "Signal Period"
+msgstr "crwdns15975:0crwdne15975:0"
+
+msgid "Single MA Period"
+msgstr "crwdns15976:0crwdne15976:0"
+
+msgid "Single MA Type"
+msgstr "crwdns15977:0crwdne15977:0"
+
+msgid "Slow %D MA Type"
+msgstr "crwdns15978:0%Dcrwdne15978:0"
+
+msgid "Slow %D Period"
+msgstr "crwdns15979:0%Dcrwdne15979:0"
+
+msgid "Slow %K MA Type"
+msgstr "crwdns15980:0crwdne15980:0"
+
+msgid "Slow %K Period"
+msgstr "crwdns15981:0crwdne15981:0"
+
+msgid "Slow Limit"
+msgstr "crwdns15982:0crwdne15982:0"
+
+msgid "Slow MA Type"
+msgstr "crwdns15983:0crwdne15983:0"
+
+msgid "Slow Period"
+msgstr "crwdns15984:0crwdne15984:0"
+
+msgid "Sold"
+msgstr "crwdns15985:0crwdne15985:0"
+
+msgid "Some random index"
+msgstr "crwdns15986:0crwdne15986:0"
+
+msgid "Spline"
+msgstr "crwdns15987:0crwdne15987:0"
+
+msgid "Spreads"
+msgstr "crwdns15988:0crwdne15988:0"
+
+msgid "Stake"
+msgstr "crwdns15989:0crwdne15989:0"
+
+msgid "Standard methods"
+msgstr "crwdns15990:0crwdne15990:0"
+
+msgid "Standard withdrawal"
+msgstr "crwdns15991:0crwdne15991:0"
+
+msgid "Start Time"
+msgstr "crwdns15992:0crwdne15992:0"
+
+msgid "Start time"
+msgstr "crwdns15993:0crwdne15993:0"
+
+msgid "State/province/region"
+msgstr "crwdns15994:0crwdne15994:0"
+
+msgid "Statement"
+msgstr "crwdns15995:0crwdne15995:0"
+
+msgid "Status"
+msgstr "crwdns15996:0crwdne15996:0"
+
+msgid "Stays In/Goes Out"
+msgstr "crwdns15997:0crwdne15997:0"
+
+msgid "Stocks trading experience"
+msgstr "crwdns15998:0crwdne15998:0"
+
+msgid "Stocks trading frequency"
+msgstr "crwdns15999:0crwdne15999:0"
+
+msgid "Stop Loss Level"
+msgstr "crwdns16000:0crwdne16000:0"
+
+msgid "Stop Profit Level"
+msgstr "crwdns16001:0crwdne16001:0"
+
+msgid "Stop-loss"
+msgstr "crwdns16002:0crwdne16002:0"
+
+msgid "Stop-profit"
+msgstr "crwdns16003:0crwdne16003:0"
+
+msgid "Stop-type"
+msgstr "crwdns16004:0crwdne16004:0"
+
+msgid "Street address"
+msgstr "crwdns16005:0crwdne16005:0"
+
+msgid "Stroke"
+msgstr "crwdns16006:0crwdne16006:0"
+
+msgid "Stroke color"
+msgstr "crwdns16007:0crwdne16007:0"
+
+msgid "Stroke width"
+msgstr "crwdns16008:0crwdne16008:0"
+
+msgid "Submit"
+msgstr "crwdns16009:0crwdne16009:0"
+
+msgid "Successfully added new token"
+msgstr "crwdns16010:0crwdne16010:0"
+
+msgid "Sun"
+msgstr "crwdns16011:0crwdne16011:0"
+
+msgid "Sunday"
+msgstr "crwdns16012:0crwdne16012:0"
+
+msgid "TEMA"
+msgstr "crwdns16013:0crwdne16013:0"
+
+msgid "TRIMA"
+msgstr "crwdns16014:0crwdne16014:0"
+
+msgid "Table"
+msgstr "crwdns16015:0crwdne16015:0"
+
+msgid "Tel"
+msgstr "crwdns16016:0crwdne16016:0"
+
+msgid "Template name"
+msgstr "crwdns16017:0crwdne16017:0"
+
+msgid "Terms"
+msgstr "crwdns16018:0crwdne16018:0"
+
+msgid "Terms and Conditions"
+msgstr "crwdns16019:0crwdne16019:0"
+
+msgid "Tertiary"
+msgstr "crwdns16020:0crwdne16020:0"
+
+msgid "The"
+msgstr "crwdns16021:0crwdne16021:0"
+
+msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+msgstr "crwdns16022:0crwdne16022:0"
+
+msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos"
+msgstr "crwdns16023:0crwdne16023:0"
+
+msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded"
+msgstr "crwdns16024:0crwdne16024:0"
+
+msgid "There was an error"
+msgstr "crwdns16025:0crwdne16025:0"
+
+msgid "This contract has expired"
+msgstr "crwdns16026:0crwdne16026:0"
+
+msgid "This contract lost"
+msgstr "crwdns16027:0crwdne16027:0"
+
+msgid "This contract won"
+msgstr "crwdns16028:0crwdne16028:0"
+
+msgid "This field is required"
+msgstr "crwdns16029:0crwdne16029:0"
+
+msgid "Thu"
+msgstr "crwdns16030:0crwdne16030:0"
+
+msgid "Thursday"
+msgstr "crwdns16031:0crwdne16031:0"
+
+msgid "Tick Trade app"
+msgstr "crwdns16032:0crwdne16032:0"
+
+msgid "Tick {row.number}"
+msgstr "crwdns16033:0{row.number}crwdne16033:0"
+
+msgid "Ticks"
+msgstr "crwdns16034:0crwdne16034:0"
+
+msgid "Tile"
+msgstr "crwdns16035:0crwdne16035:0"
+
+msgid "Time Period"
+msgstr "crwdns16036:0crwdne16036:0"
+
+msgid "Time interval"
+msgstr "crwdns16037:0crwdne16037:0"
+
+msgid "Time period"
+msgstr "crwdns16038:0crwdne16038:0"
+
+msgid "Timeout for websocket request"
+msgstr "crwdns16039:0crwdne16039:0"
+
+msgid "Title"
+msgstr "crwdns16040:0crwdne16040:0"
+
+msgid "To"
+msgstr "crwdns16041:0crwdne16041:0"
+
+msgid "To deposit money please contact the payment agent directly"
+msgstr "crwdns16042:0crwdne16042:0"
+
+msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
+msgstr "crwdns16043:0crwdne16043:0"
+
+msgid "To withdraw funds please enter the special verification token we have just emailed you"
+msgstr "crwdns16044:0crwdne16044:0"
+
+msgid "Token"
+msgstr "crwdns16045:0crwdne16045:0"
+
+msgid "Token management"
+msgstr "crwdns16046:0crwdne16046:0"
+
+msgid "Token name"
+msgstr "crwdns16047:0crwdne16047:0"
+
+msgid "Token permissions"
+msgstr "crwdns16048:0crwdne16048:0"
+
+msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
+msgstr "crwdns16049:0crwdne16049:0"
+
+msgid "Tooltip background"
+msgstr "crwdns16050:0crwdne16050:0"
+
+msgid "Tooltip text"
+msgstr "crwdns16051:0crwdne16051:0"
+
+msgid "Total Cost"
+msgstr "crwdns16052:0crwdne16052:0"
+
+msgid "Total Profit/Loss"
+msgstr "crwdns16053:0crwdne16053:0"
+
+msgid "Touch/No Touch"
+msgstr "crwdns16054:0crwdne16054:0"
+
+msgid "Tourism"
+msgstr "crwdns16055:0crwdne16055:0"
+
+msgid "Town/City"
+msgstr "crwdns16056:0crwdne16056:0"
+
+msgid "Trade"
+msgstr "crwdns16057:0crwdne16057:0"
+
+msgid "Trade Confirmation"
+msgstr "crwdns16058:0crwdne16058:0"
+
+msgid "Trade using"
+msgstr "crwdns16059:0crwdne16059:0"
+
+msgid "Trading Times"
+msgstr "crwdns16060:0crwdne16060:0"
+
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr "crwdns16061:0crwdne16061:0"
+
+msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgstr "crwdns16062:0crwdne16062:0"
+
+msgid "Tradingview for Binary.com"
+msgstr "crwdns16063:0crwdne16063:0"
+
+msgid "Transfer to another Binary account"
+msgstr "crwdns16064:0crwdne16064:0"
+
+msgid "Try"
+msgstr "crwdns16065:0crwdne16065:0"
+
+msgid "Tue"
+msgstr "crwdns16066:0crwdne16066:0"
+
+msgid "Tuesday"
+msgstr "crwdns16067:0crwdne16067:0"
+
+msgid "Turnover"
+msgstr "crwdns16068:0crwdne16068:0"
+
+msgid "USD"
+msgstr "crwdns16069:0crwdne16069:0"
+
+msgid "Unfortunately, your browser does not support them"
+msgstr "crwdns16070:0crwdne16070:0"
+
+msgid "Unlock"
+msgstr "crwdns16071:0crwdne16071:0"
+
+msgid "Up/Down"
+msgstr "crwdns16072:0crwdne16072:0"
+
+msgid "Upcoming Events"
+msgstr "crwdns16073:0crwdne16073:0"
+
+msgid "Update Settings"
+msgstr "crwdns16074:0crwdne16074:0"
+
+msgid "Upgrade to a Real Account"
+msgstr "crwdns16075:0crwdne16075:0"
+
+msgid "Upload template"
+msgstr "crwdns16076:0crwdne16076:0"
+
+msgid "Upper Band Stroke"
+msgstr "crwdns16077:0crwdne16077:0"
+
+msgid "Use"
+msgstr "crwdns16078:0crwdne16078:0"
+
+msgid "Use the \"Save as ...\" button to save the chart settings, type, time period, indicators and comparisons"
+msgstr "crwdns16079:0crwdne16079:0"
+
+msgid "Verification code has been sent to your email"
+msgstr "crwdns16080:0crwdne16080:0"
+
+msgid "Verification code sent to"
+msgstr "crwdns16081:0crwdne16081:0"
+
+msgid "Verification token"
+msgstr "crwdns16082:0crwdne16082:0"
+
+msgid "Verify new password"
+msgstr "crwdns16083:0crwdne16083:0"
+
+msgid "Vertical Line"
+msgstr "crwdns16084:0crwdne16084:0"
+
+msgid "Vertical line"
+msgstr "crwdns16085:0crwdne16085:0"
+
+msgid "View"
+msgstr "crwdns16086:0crwdne16086:0"
+
+msgid "View Historical Data"
+msgstr "crwdns16087:0crwdne16087:0"
+
+msgid "Volume Factor"
+msgstr "crwdns16088:0crwdne16088:0"
+
+msgid "WMA"
+msgstr "crwdns16089:0crwdne16089:0"
+
+msgid "WMA Period"
+msgstr "crwdns16090:0crwdne16090:0"
+
+msgid "Websocket Server"
+msgstr "crwdns16091:0crwdne16091:0"
+
+msgid "Webtrader"
+msgstr "crwdns16092:0crwdne16092:0"
+
+msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
+msgstr "crwdns16093:0crwdne16093:0"
+
+msgid "Wed"
+msgstr "crwdns16094:0crwdne16094:0"
+
+msgid "Wednesday"
+msgstr "crwdns16095:0crwdne16095:0"
+
+msgid "While on the go, you can"
+msgstr "crwdns16096:0crwdne16096:0"
+
+msgid "Windows"
+msgstr "crwdns16097:0crwdne16097:0"
+
+msgid "Withdraw funds"
+msgstr "crwdns16098:0crwdne16098:0"
+
+msgid "Withdrawal via payment agents"
+msgstr "crwdns16099:0crwdne16099:0"
+
+msgid "X-axis labels"
+msgstr "crwdns16100:0crwdne16100:0"
+
+msgid "X-axis line"
+msgstr "crwdns16101:0crwdne16101:0"
+
+msgid "X-axis tick"
+msgstr "crwdns16102:0crwdne16102:0"
+
+msgid "Y-axis gridline"
+msgstr "crwdns16103:0crwdne16103:0"
+
+msgid "Y-axis labels"
+msgstr "crwdns16104:0crwdne16104:0"
+
+msgid "Yes"
+msgstr "crwdns16105:0crwdne16105:0"
+
+msgid "You have excluded yourself until"
+msgstr "crwdns16106:0crwdne16106:0"
+
+msgid "You have sold the following contract"
+msgstr "crwdns16107:0crwdne16107:0"
+
+msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
+msgstr "crwdns16108:0crwdne16108:0"
+
+msgid "You haven't saved any templates yet"
+msgstr "crwdns16109:0crwdne16109:0"
+
+msgid "You pay"
+msgstr "crwdns16110:0crwdne16110:0"
+
+msgid "You will be automatically logged out after such time"
+msgstr "crwdns16111:0crwdne16111:0"
+
+msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+msgstr "crwdns16112:0crwdne16112:0"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr "crwdns16113:0crwdne16113:0"
+
+msgid "Your browser doesn't support copy to clipboard"
+msgstr "crwdns16114:0crwdne16114:0"
+
+msgid "Your browser is not supported"
+msgstr "crwdns16115:0crwdne16115:0"
+
+msgid "Your changes have been updated"
+msgstr "crwdns16116:0crwdne16116:0"
+
+msgid "Your email"
+msgstr "crwdns16117:0crwdne16117:0"
+
+msgid "Your new account balance is"
+msgstr "crwdns16118:0crwdne16118:0"
+
+msgid "Your transaction reference is"
+msgstr "crwdns16119:0crwdne16119:0"
+
+msgid "Your transaction reference number is"
+msgstr "crwdns16120:0crwdne16120:0"
+
+msgid "Zoom"
+msgstr "crwdns16121:0crwdne16121:0"
+
+msgid "admin"
+msgstr "crwdns16122:0crwdne16122:0"
+
+msgid "and"
+msgstr "crwdns16123:0crwdne16123:0"
+
+msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
+msgstr "crwdns16124:0crwdne16124:0"
+
+msgid "between"
+msgstr "crwdns16125:0crwdne16125:0"
+
+msgid "commission"
+msgstr "crwdns16126:0crwdne16126:0"
+
+msgid "contact support"
+msgstr "crwdns16127:0crwdne16127:0"
+
+msgid "customer support"
+msgstr "crwdns16128:0crwdne16128:0"
+
+msgid "day"
+msgstr "crwdns16129:0crwdne16129:0"
+
+msgid "days"
+msgstr "crwdns16130:0crwdne16130:0"
+
+msgid "e.g"
+msgstr "crwdns16131:0crwdne16131:0"
+
+msgid "e.g, www2.binary.com, www.binaryqa36.com"
+msgstr "crwdns16132:0crwdne16132:0"
+
+msgid "end time"
+msgstr "crwdns16133:0crwdne16133:0"
+
+msgid "entry spot"
+msgstr "crwdns16134:0crwdne16134:0"
+
+msgid "exit spot"
+msgstr "crwdns16135:0crwdne16135:0"
+
+msgid "feed is delayed by"
+msgstr "crwdns16136:0crwdne16136:0"
+
+msgid "for API calls that can access the cashier"
+msgstr "crwdns16137:0crwdne16137:0"
+
+msgid "for API calls that can create trades in the client account"
+msgstr "crwdns16138:0crwdne16138:0"
+
+msgid "for API calls that change client settings"
+msgstr "crwdns16139:0crwdne16139:0"
+
+msgid "for API calls that only read client data"
+msgstr "crwdns16140:0crwdne16140:0"
+
+msgid "for mobile charts"
+msgstr "crwdns16141:0crwdne16141:0"
+
+msgid "has updated its"
+msgstr "crwdns16142:0crwdne16142:0"
+
+msgid "hour"
+msgstr "crwdns16143:0crwdne16143:0"
+
+msgid "hours"
+msgstr "crwdns16144:0crwdne16144:0"
+
+msgid "https://developers.binary.com/"
+msgstr "crwdns16145:0crwdne16145:0"
+
+msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
+msgstr "crwdns16146:0crwdne16146:0"
+
+msgid "if this is not your country of residence"
+msgstr "crwdns16147:0crwdne16147:0"
+
+msgid "in the future, the"
+msgstr "crwdns16148:0crwdne16148:0"
+
+msgid "information about your trading exprience and personal finance"
+msgstr "crwdns16149:0crwdne16149:0"
+
+msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
+msgstr "crwdns16150:0crwdne16150:0"
+
+msgid "is required. Current spread"
+msgstr "crwdns16151:0crwdne16151:0"
+
+msgid "is that which is selected and the"
+msgstr "crwdns16152:0crwdne16152:0"
+
+msgid "is the"
+msgstr "crwdns16153:0crwdne16153:0"
+
+msgid "is the price in effect at that time"
+msgstr "crwdns16154:0crwdne16154:0"
+
+msgid "is the selected number of minutes/hours after the"
+msgstr "crwdns16155:0crwdne16155:0"
+
+msgid "is the selected time"
+msgstr "crwdns16156:0crwdne16156:0"
+
+msgid "is the spot at the"
+msgstr "crwdns16157:0crwdne16157:0"
+
+msgid "is when the contract is processed by our servers and the"
+msgstr "crwdns16158:0crwdne16158:0"
+
+msgid "main site"
+msgstr "crwdns16159:0crwdne16159:0"
+
+msgid "market is presently closed"
+msgstr "crwdns16160:0crwdne16160:0"
+
+msgid "minute"
+msgstr "crwdns16161:0crwdne16161:0"
+
+msgid "minutes"
+msgstr "crwdns16162:0crwdne16162:0"
+
+msgid "next tick"
+msgstr "crwdns16163:0crwdne16163:0"
+
+msgid "oauth"
+msgstr "crwdns16164:0crwdne16164:0"
+
+msgid "of \"Now\", the"
+msgstr "crwdns16165:0crwdne16165:0"
+
+msgid "payment agent"
+msgstr "crwdns16166:0crwdne16166:0"
+
+msgid "payments"
+msgstr "crwdns16167:0crwdne16167:0"
+
+msgid "please play responsibly. Read about"
+msgstr "crwdns16168:0crwdne16168:0"
+
+msgid "points"
+msgstr "crwdns16169:0crwdne16169:0"
+
+msgid "read"
+msgstr "crwdns16170:0crwdne16170:0"
+
+msgid "second"
+msgstr "crwdns16171:0crwdne16171:0"
+
+msgid "seconds"
+msgstr "crwdns16172:0crwdne16172:0"
+
+msgid "session overview"
+msgstr "crwdns16173:0crwdne16173:0"
+
+msgid "start time"
+msgstr "crwdns16174:0crwdne16174:0"
+
+msgid "terms and conditions"
+msgstr "crwdns16175:0crwdne16175:0"
+
+msgid "the"
+msgstr "crwdns16176:0crwdne16176:0"
+
+msgid "thereafter"
+msgstr "crwdns16177:0crwdne16177:0"
+
+msgid "tick"
+msgstr "crwdns16178:0crwdne16178:0"
+
+msgid "ticks"
+msgstr "crwdns16179:0crwdne16179:0"
+
+msgid "trade"
+msgstr "crwdns16180:0crwdne16180:0"
+
+msgid "trading experience"
+msgstr "crwdns16181:0crwdne16181:0"
+
+msgid "trading frequency"
+msgstr "crwdns16182:0crwdne16182:0"
+
+msgid "websocket"
+msgstr "crwdns16183:0crwdne16183:0"
+
+msgid "yes"
+msgstr "crwdns16184:0crwdne16184:0"
+
+msgid "{agent.commission}%"
+msgstr "crwdns16185:0{agent.commission}crwdne16185:0"
+
+msgid "| Return"
+msgstr "crwdns16186:0crwdne16186:0"
+

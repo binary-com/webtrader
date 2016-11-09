@@ -186,6 +186,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             { value: 'vi', name: 'Vietnamese'},
             { value: 'zh_cn', name: '简体中文'},
             { value: 'zh_tw', name: '繁體中文'},
+            { value: 'ach', name: 'Acho'},
         ]
       };
       state.onclick = function(value) {
