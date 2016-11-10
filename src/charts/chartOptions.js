@@ -165,6 +165,16 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         new Image().src="images/chart_template-w.svg";
     }
 
+    function toggleIcon (ele,active) {
+        ele = $(ele);
+        var cls = ele.attr("class");
+        ele.toggleClass(cls);
+        var type = cls.split("-")[0];
+        cls = active===true ? type + "-w-icon" : type + "-icon";
+        ele.toggleClass(cls);
+        console.log(cls,active);
+    }
+
     return {
 
         init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode, m_showShare, m_showOverlay) {
@@ -219,12 +229,13 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showChartTypeSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showChartTypeSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
+                    
                 };
 
                 state[m_newTabId].addRemoveIndicator = function(event, scope) {
@@ -292,11 +303,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showDrawingToolSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showDrawingToolSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
@@ -317,11 +328,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showExportSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showExportSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
@@ -331,11 +342,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showLoadSaveSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showLoadSaveSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
