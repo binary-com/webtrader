@@ -117,7 +117,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         duration_count_value: state.duration_count.value,
         duration_unit_value: state.duration_unit.value,
         expiry_value_hour: state.date_expiry.value_hour,
-        expiry_value_data: state.date_expiry.value_date,
+        expiry_value_date: state.date_expiry.value_date,
         expiry_value: state.date_expiry.value,
         barriers_barrier_count: state.barriers.barrier_count,
         barriers_barrier: state.barriers.barrier,
@@ -127,12 +127,82 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         currency_value: state.currency.value,
         basis_amount: state.basis.amount,
         spreads_amount_per_point: state.spreads.amount_per_point,
-      }
+        spreads_stop_type: state.spreads.stop_type,
+        spreads_stop_loss: state.spreads.stop_loss,
+        spreads_stop_profit: state.spreads.stop_profit
+      };
     };
 
-    function set_current_template(state, template) {
-      console.warn(template);
-      // TODO
+    function set_current_template(state, tpl) {
+      state.template.name = tpl.name;
+      var warn = function(msg) { $.growl.warning({ message: msg || 'Template applied partially.'.i18n() }); }
+      if(!_.includes(state.categories.array, tpl.categories_value)) {
+        $.growl.error({ message: msg || 'Template is not applicable.'.i18n() });
+        return;
+      }
+      state.categories.value = tpl.categories_value;
+      _.defer(function() {
+        if(!_.includes(state.category_displays.array, tpl.categoriy_displays_selected)) {
+          warn();
+          return;
+        }
+        state.category_displays.selected = tpl.categoriy_displays_selected;
+        _.defer(function() {
+          if(state.date_start.visible) {
+            state.date_start.value = tpl.date_start_value;
+          }
+          if(state.digits.visible) {
+            state.digits.value = tpl.digits_value;
+          }
+          if(state.categories.value !== 'Spreads') { /* <----- duration */
+            state.duration.value = tpl.duration_value;
+            if(state.duration.value === 'Duration' ) {
+              _.defer(function() {
+                state.duration_unit.value = tpl.duration_unit_value;
+                _.defer(function() {
+                  state.duration_count.value = tpl.duration_count_value;
+                });
+              });
+            }
+            if(state.duration.value === 'End Time') {
+              _.defer(function() {
+                  state.date_expiry.value_date = tpl.expiry_value_date;
+                  var is_today = !moment.utc(state.date_expiry.value_date).isAfter(moment.utc(),'day');
+                  if(is_today) {
+                    _.defer(function() {
+                      state.date_expiry.value_hour = tpl.expiry_value_hour;
+                    });
+                  }
+              });
+            }
+          } /* <---- duration */
+
+          state.barriers.barrier_count = tpl.barriers_barrier_count;
+          if(state.barriers.barrier_count === 1) {
+            _.defer(function() {
+              state.barriers.barrier = tpl.barriers_barrier;
+            });
+          }
+          if(state.barriers.barrier_count === 2) {
+            _.defer(function() {
+              state.barriers.high_barrier = tpl.barriers_high_barrier;
+              state.barriers.low_barrier = tpl.barriers_low_barrier;
+            });
+          }
+          /*barriers_barrier_count: state.barriers.barrier_count,
+          barriers_barrier: state.barriers.barrier,
+          barriers_high_barrier: state.barriers.high_barrier,
+          barriers_low_barrier: state.barriers.low_barrier,
+          basis_value: state.basis.value,
+          currency_value: state.currency.value,
+          basis_amount: state.basis.amount,
+          spreads_amount_per_point: state.spreads.amount_per_point,
+          spreads_stop_type: state.spreads.stop_type,
+          spreads_stop_loss: state.spreads.stop_loss,
+          spreads_stop_profit: state.spreads.stop_profit */
+        });
+      })
+      console.warn(tpl);
     }
 
     function init_state(available,root, dialog, symbol, contracts_for_spot){
@@ -301,7 +371,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       }
       state.template.toggle = function() {
         state.template.visible = !state.template.visible;
-        console.warn(state.template.visible);
       }
 
       state.barriers.root = state; // reference to root object for computed properties
@@ -322,7 +391,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           });
       }
 
-      state.categories.update = function () {
+      state.categories.update = function (msg) {
         var name = state.categories.value;
         state.category_displays.array = _(available).filter(['contract_category_display', name]).map('contract_display').uniq().value();
         state.category_displays.selected = _.head(state.category_displays.array);
