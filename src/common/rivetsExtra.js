@@ -563,7 +563,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /******************************** components *****************************/
-    function component_twoway_bind(self, keypathes) {
+    function component_twoway_bind(self, data, keypathes) {
         /* make sure to call async */
         setTimeout(function() {
           for(var i = 0; i < keypathes.length; ++i){
@@ -571,6 +571,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
               var key = _.last(keypath.split('.'));
               var observer = self.observers[key];
               if(observer) {
+                observer.options.adapters['.'].observe(observer.target, _.last(observer.keypath.split('.')), function() {
+                    var updated = observer.target[_.last(observer.keypath.split('.'))];
+                    data.value = updated;
+                });
                 self.componentView.observe(keypath, function(value){
                     observer.setValue(value);
                 });
@@ -595,7 +599,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       initialize: function(el, data) {
         var decimals = (data.decimals || 2)*1;
         var min = (data.min || 0)*1;
-        component_twoway_bind(this, ['data.value']);
+        component_twoway_bind(this, data, ['data.value']);
 
         return {
           data: data,

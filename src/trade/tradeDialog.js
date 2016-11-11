@@ -149,7 +149,12 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.category_displays.selected = tpl.categoriy_displays_selected;
         _.defer(function() {
           if(state.date_start.visible) {
-            state.date_start.value = tpl.date_start_value;
+            _.defer(function() {
+              if(tpl.date_start_value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1}))
+                state.date_start.value = tpl.date_start_value*1;
+              else
+                state.date_start.value = 'now';
+            });
           }
           if(state.digits.visible) {
             state.digits.value = tpl.digits_value;
@@ -189,10 +194,17 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               state.barriers.low_barrier = tpl.barriers_low_barrier;
             });
           }
-          /*barriers_barrier_count: state.barriers.barrier_count,
-          barriers_barrier: state.barriers.barrier,
-          barriers_high_barrier: state.barriers.high_barrier,
-          barriers_low_barrier: state.barriers.low_barrier,
+          /* <---- barriers */
+          if(state.categories.value !== 'Spreads') {
+            _.defer(function() {
+              console.warn('here');
+              state.basis.value = tpl.basis_value;
+              state.currency.value = tpl.currency_value;
+              state.basis.amount = tpl.basis_amount;
+            });
+          }
+
+          /*
           basis_value: state.basis.value,
           currency_value: state.currency.value,
           basis_amount: state.basis.amount,
