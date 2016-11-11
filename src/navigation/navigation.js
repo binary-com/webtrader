@@ -8,6 +8,8 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             var $li = $(this);
             if ($li.hasClass('update-list-item-handlers'))
                 return;
+            if(!$li.hasClass('.primary-bg-color'))
+              $li.addClass('primary-bg-color');
             $li.addClass('update-list-item-handlers');
             $li.on("click", function() {
                 var $elem = $(this);

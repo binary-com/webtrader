@@ -2,11 +2,6 @@
     <div class="table">
         <div class="row">
             <div class="cell">
-                <div class="button_selected chartOptions_button" rv-show="showInstrumentName">
-                    <span class="vertical-bottom instrument_name">{instrumentName}</span>
-                </div>
-            </div>
-            <div class="cell">
                 <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector" data-balloon="Time interval" data-balloon-pos="down">
                     <span class="vertical-bottom" rv-text="timePeriod_name | i18n"></span>
                     <span class="nav-caret triangle"></span>
@@ -72,7 +67,7 @@
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="addRemoveIndicator">
                     <span data-balloon="Indicators" data-balloon-pos="down">
-                        <div class="img"><img src="images/indicator.svg"></div>
+                        <div class="img"><img src='data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw==' class="indicator"></div>
                     </span>
                 </div>
                 <span class="countBubl" rv-show="indicatorsCount | gt 0" rv-text="indicatorsCount"></span>
@@ -204,5 +199,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="instrument_name" rv-show="showInstrumentName">
+        <span>{instrumentName}</span>
     </div>
 </div>

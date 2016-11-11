@@ -216,11 +216,10 @@
 
 .trade-fields ul li span.ui-spinner { border: 0; }
 .trade-fields ul li input {
-  border: none;
-  background: #273051;
-  color: white;
   margin: 0;
   height: 30px;
+  border: 1px solid #F2F2F2;
+  box-shadow: none;
   padding-left: 10px;
 }
 .trade-fields ul li:nth-child(2) input { width: 100px !important; }
@@ -235,10 +234,10 @@
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
-        background: #c2c1c1;
         justify-content: center;
         padding: 10px 0;
         margin-bottom: 2px;
+        margin-top: 3px;
     }
 
     .trade-fields ul.contract-displays li {
@@ -292,9 +291,7 @@
 }
 .trade-fields ul.message-row li span { display: inline; }
 
-.trade-fields .netprofit { background: #c2c1c1; }
 .trade-fields .spread-deposit {
-    background: #c2c1c1;
     white-space: nowrap;
     font-size: 85%;
 }
