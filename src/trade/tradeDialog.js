@@ -195,26 +195,25 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             });
           }
           /* <---- barriers */
+
           if(state.categories.value !== 'Spreads') {
             _.defer(function() {
-              console.warn('here');
               state.basis.value = tpl.basis_value;
               state.currency.value = tpl.currency_value;
               state.basis.amount = tpl.basis_amount;
             });
-          }
+          } /* <----- basis, currency */
 
-          /*
-          basis_value: state.basis.value,
-          currency_value: state.currency.value,
-          basis_amount: state.basis.amount,
-          spreads_amount_per_point: state.spreads.amount_per_point,
-          spreads_stop_type: state.spreads.stop_type,
-          spreads_stop_loss: state.spreads.stop_loss,
-          spreads_stop_profit: state.spreads.stop_profit */
+          if(state.categories.value === 'Spreads') {
+              state.currency.value = tpl.currency_value;
+              state.spreads.amount_per_point = tpl.spreads_amount_per_point;
+              state.spreads.stop_type = tpl.spreads_stop_type;
+              state.spreads.stop_loss = tpl.spreads_stop_loss;
+              state.spreads.stop_profit = tpl.spreads_stop_profit;
+
+          } /* <---- Spreads */
         });
       })
-      console.warn(tpl);
     }
 
     function init_state(available,root, dialog, symbol, contracts_for_spot){
@@ -952,6 +951,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         dialog.get_template = get_current_template.bind(undefined, state);
         dialog.set_template = set_current_template.bind(undefined, state);
+        dialog.hide_template_menu = function() { state.template.visible = false; }
         require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
           tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
         });

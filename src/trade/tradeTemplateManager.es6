@@ -192,6 +192,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       templates.apply = tmpl => {
         dialog.set_template(tmpl);
         templates.current = tmpl;
+        route.update('menu');
+        dialog.hide_template_menu();
       }
 
       templates.confirm = (tmpl, event) => {
