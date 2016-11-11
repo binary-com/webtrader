@@ -215,9 +215,6 @@ body {
   right: 10px;
     top: 40px;
 }
-#nav-container .login:hover {
-  background: #2a3052;
-}
 
 #nav-container .login span.ui-icon {
   margin-left: -10px;
