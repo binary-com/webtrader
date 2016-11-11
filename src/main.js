@@ -30,8 +30,7 @@ requirejs.config({
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level',
-        'paralleljs' : 'lib/parallel_js/lib/parallel',
-        'binary-style' : 'https://4p00rv.github.io/binary-style/binary'
+        'paralleljs' : 'lib/parallel_js/lib/parallel'
     },
     map: {
         '*': {
@@ -48,7 +47,7 @@ requirejs.config({
             deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']
         },
         "jquery-ui": {
-            deps: ["jquery","css!binary-style"]
+            deps: ["jquery"]
         },
         "highstock": {
             deps: ["jquery"]
@@ -79,6 +78,11 @@ requirejs.config({
 });
 
 requirejs.onError = function (err) {
+    //Avoiding script errors on timeout. Showing a warning so that developers can track wrong path errors on local servers.
+    if (err.requireType === 'scripterror') {
+        console.warn(err);
+        return;
+    }
     console.error(err); // For more descriptive errors locally.
     throw err;
 };
