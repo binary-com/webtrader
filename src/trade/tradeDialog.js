@@ -637,10 +637,15 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               state.barriers.is_last_barrier_daily = true;
           }
           else {
-              var def_barrier = (state.barriers.barrier || barriers.barrier) * 1;
+              var def_barrier = (barriers.barrier) * 1;
               def_barrier = (barriers.barrier*1 >= 0 ? '+' : '') + barriers.barrier*1;
-              state.barriers.barrier =
-                (state.barriers.is_last_barrier_daily ? state.barriers.barrier_perv : state.barriers.barrier) || def_barrier;
+                if(state.barriers.is_last_barrier_daily && /^[+-]/.test(state.barriers.barrier_perv)) {
+                  state.barriers.barrier = state.barriers.barrier_perv;
+                }
+                else if(!/^[+-]/.test(state.barriers.barrier)) {
+                  state.barriers.barrier = def_barrier;
+                }
+                else {} // no need to update it
               state.barriers.barrier_perv = state.barriers.barrier;
               state.barriers.is_last_barrier_daily = false;
           }
