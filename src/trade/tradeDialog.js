@@ -34,8 +34,8 @@
     }
 */
 
-define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui', 'common/util'],
-    function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui', 'common/util'],
+    function (_, $, moment, windows, rv, liveapi, chartingRequestMap, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
     var debounce = rv.formatters.debounce;
@@ -286,6 +286,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         barriers: {
           barrier_count: 0,
           barrier : '',
+          barrier_perv: '', // previous barrier value for intraday and tick contracts.
+          is_last_barrier_daily: false, // was the last barrier a daily one?
           high_barrier: '',
           low_barrier: '',
           barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; },
@@ -467,12 +469,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                 var value_hour = times.close !== '--' ? times.close : '00:00:00';
                 expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
                 expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
+                state.barriers.update();
                 debounce(expiry.value, state.proposal.onchange);
               });
         }
         else {
             if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
             expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
+            state.barriers.update();
             debounce(expiry.value, state.proposal.onchange);
         }
       }
@@ -621,8 +625,25 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           return;
 
         if(barriers.barrier) {
-          var barrier = (state.barriers.barrier || barriers.barrier) * 1;
-          state.barriers.barrier = (barrier >= 0 ? '+' : '') + barrier;
+          if((expiry_type === 'daily' && state.duration.value !== 'End Time') ||
+             (state.duration.value === 'End Time' && moment.utc(state.date_expiry.value_date).isAfter(moment.utc(),'day')) )
+          {
+              if(!state.barriers.is_last_barrier_daily) {
+                state.barriers.barrier_perv = state.barriers.barrier;
+              }
+              // var decimal_digits = chartingRequestMap.digits_after_decimal(symbol.pip, symbol.symbol);
+              state.barriers.barrier =
+                (state.barriers.is_last_barrier_daily ? state.barriers.barrier : 0) || state.tick.quote || barriers.barrier;
+              state.barriers.is_last_barrier_daily = true;
+          }
+          else {
+              var def_barrier = (state.barriers.barrier || barriers.barrier) * 1;
+              def_barrier = (barriers.barrier*1 >= 0 ? '+' : '') + barriers.barrier*1;
+              state.barriers.barrier =
+                (state.barriers.is_last_barrier_daily ? state.barriers.barrier_perv : state.barriers.barrier) || def_barrier;
+              state.barriers.barrier_perv = state.barriers.barrier;
+              state.barriers.is_last_barrier_daily = false;
+          }
         }
         if(barriers.high_barrier){
           var high_barrier = (state.barriers.high_barrier || barriers.high_barrier) * 1;

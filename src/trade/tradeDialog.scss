@@ -14,6 +14,10 @@
     .text-vertical-align span { vertical-align: bottom;}
     .no-wrap { white-space: nowrap; }
     .dotted-underline { border-bottom: 1px dotted #000; }
+    .align-text {
+      padding-left: 10px;
+      box-sizing: border-box;
+    }
     .box-shadow { box-shadow: 5px 5px 8px rgba(0,0,0,0.25); }
 
     /* .trade-fields contains all the form fields */
@@ -195,7 +199,7 @@
     transition: padding-top 0.5s ease;
     list-style:none;
     margin: 0;
-    padding: 2px 5px 2px 5px;
+    padding: 2px 3px 2px 3px;
     position: relative;
     display: flex;
     justify-content: space-between;
