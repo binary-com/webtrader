@@ -49,41 +49,40 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
         return new Promise(function(resolve, reject){
           root = $(root).i18n();
 
+          var option = {
+            title: 'Add/remove indicators'.i18n(),
+            modal: true,
+            destroy: function () {
+              ind_win_view && ind_win_view.unbind();
+              ind_win_view = null;
+              ind_win.dialog('destroy').remove();
+              ind_win = null;
+            },
+            open: function () { },
+          };
+          
           /* affiliates route */
           if (isAffiliates()) {
-            ind_win = $(root).dialog({
-              autoOpen: false,
+            option = _.extend(option, {
               resizable: false,
               width: Math.min(480, $(window).width() - 10),
               height: 400,
-              modal: true,
-              my: 'center',
-              at: 'center',
-              of: window,
-              buttons: []
+              ignoreTileAction: true,
+              maximizable: false,
+              minimizable: false,
+              collapsable: false,
             });
-
-            init_state(root);
-            resolve();
-            return;
+          } 
+          /* normal route */
+          else {
+            option = _.extend(option, {
+              width: 700,
+              // minHeight: 60,
+            })
           }
 
-          /* normal route */
           require(['windows/windows'], function(windows){
-            ind_win = windows.createBlankWindow(root, {
-                title: 'Add/remove indicators'.i18n(),
-                width: 700,
-                modal: true,
-                // minHeight: 60,
-                destroy: function () {
-                  ind_win_view && ind_win_view.unbind();
-                  ind_win_view = null;
-                  ind_win.dialog('destroy').remove();
-                  ind_win = null;
-                },
-                open: function () { },
-            });
-
+            ind_win = windows.createBlankWindow(root, option);
             init_state(root);
             resolve();
           });
