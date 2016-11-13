@@ -435,6 +435,9 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
   border-bottom: none!important;
 }
 
+/* make dropdowns consistent with binary-style */
+select + .ui-selectmenu-button { border-radius: 3px !important;}
+
 #doorbell-button  {
     right: -37px;
     transform: rotate(-90deg);
