@@ -56,8 +56,10 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
         /* refresh the table with result of { profit_table:1 } from WS */
         var refresh = function (data) {
             var transactions = (data.statement && data.statement.transactions) || [];
-            var view_button = '<button>View</button>'.i18n();
+            var view_button_text = 'View'.i18n();
             var rows = transactions.map(function (trans) {
+                var view_button_class = _(['buy', 'sell']).includes(trans.action_type) ? '' : 'class="button-disabled"';
+                var view_button = '<button '+view_button_class+'>' + view_button_text + '</button>';
                 var amount = trans.amount * 1;
                 return [
                     epoch_to_string(trans.transaction_time, { utc: true }),
@@ -124,7 +126,7 @@ define(['module', "jquery", "windows/windows", "websockets/binary_websockets", "
                 processing: true,
             });
 
-            table.parent().addClass('hide-search-input');
+            table.closest('.ui-dialog-content').addClass('hide-search-input').addClass('statement-dialog-content');
 
             // Apply the a search on each column input change
             table.api().columns().every(function () {
