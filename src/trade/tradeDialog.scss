@@ -279,9 +279,11 @@
     padding-top: 5px;
     border-top: 1px solid #c2c1c1;
     bottom: 85px;
-}
-.trade-fields .proposal-message li {
-    line-height: 1.2em;
+    li {
+        box-sizing: border-box;
+        padding: 0 5px;
+        line-height: 1.2em;
+    }
 }
 
 .trade-fields ul.message-row {
