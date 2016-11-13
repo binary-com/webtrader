@@ -98,6 +98,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
     liveapi.events.on('tick', function(data) {
       var tick = data.tick;
       tick.quote *= 1;
+      tick.epoch *= 1;
       last_1000_ticks.push(tick);
       if(last_1000_ticks.length > 1000)
         last_1000_ticks.shift();
@@ -111,7 +112,7 @@ define(['lodash', 'jquery', 'moment', 'websockets/binary_websockets', 'common/ri
 
       /* No need to worry about WS connection getting closed, because the user will be logged out */
       function add_tick(tick){
-          if (_.findIndex(state.ticks.array, function(t) { return t.epoch === tick.epoch }) === -1 && tick_count > 0) {
+          if (_.findIndex(state.ticks.array, function(t) { return t.epoch*1 === tick.epoch*1 }) === -1 && tick_count > 0) {
               var decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
               state.ticks.array.push({
                   quote: tick.quote,
