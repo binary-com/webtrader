@@ -30,7 +30,7 @@ LSMA = function (data, options, indicators) {
             var lsma = this.CalculateLSMAValue(data, index);
             this.indicatorData.push({ time: data[index].time, value: lsma });
         } else {
-            this.indicatorData.push({ time: data[index].time, value: 0.0 });
+            this.indicatorData.push({ time: data[index].time, value: null });
         }
         this.priceData.push(data[index]);
     };
