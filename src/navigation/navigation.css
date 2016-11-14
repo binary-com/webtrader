@@ -31,7 +31,7 @@ body {
   opacity: 0;
   transition: opacity 0.25s;
   pointer-events: none;
-  border-bottom: 5px solid #EA9800;
+  border-bottom: 5px solid #e98024;
 }
 #topbar span.lang:hover + div.languages,
 #topbar div.languages:hover {
@@ -265,19 +265,14 @@ body {
     margin : 0 0 0;
 }
 
-#header .logo {
+#header .logo-wrapper {
     position: absolute;
-    left: 0px;
-    top: 30px;
+    left: 60px;
+    top: 15px;
 }
 
-#header .logo div:nth-child(1) {
-    display: inline-block;
-    margin: 10px 10px;
-}
-#header .logo div:nth-child(2) {
-    display: inline-block;
-    margin: -12px;
+#header .logo-wrapper .binary-logo-text {
+    padding: 0;
 }
 
 .nav-normal-menu .resources > ul > li,
