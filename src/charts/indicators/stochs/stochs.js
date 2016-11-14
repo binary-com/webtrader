@@ -217,8 +217,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
     return {
 
         open : function ( containerIDWithHash, before_add_cb ) {
+            before_add_callback = before_add_cb || before_add_callback;
             var open = function() {
-                before_add_callback = before_add_cb;
                 $(".stochs").data('refererChartID', containerIDWithHash).dialog( "open" );
             };
             if ($(".stochs").length == 0)
