@@ -461,6 +461,25 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         $(el).css(style);
     }
 
+    $.fn.getHiddenOffsetWidth = function () {
+        // save a reference to a cloned element that can be measured
+        var $hiddenElement = $(this).clone().appendTo('body');
+        // calculate the width of the clone
+        var width = $hiddenElement.outerWidth();
+        // remove the clone from the DOM
+        $hiddenElement.remove();
+        return width;
+    };
+    /* scale the font-size to fit the text on the given width*/
+    rv.binders['scale-font-size'] = function (el, value) {
+        var cur_font = 14;
+        $el = $(el);
+        do {
+          el.style.fontSize = cur_font + 'px';
+          cur_font -= 1;
+        } while($el.getHiddenOffsetWidth() > value*1)
+    }
+
     rv.binders['show'] = function(el, value) {
         el.style.display = value ? '' : 'none';
         return value;
