@@ -366,7 +366,9 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 changeMonth: model.changeMonth || true,
                 changeYear: model.changeYear || true,
                 onSelect: function () { $(this).change(); },
-                beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
+                beforeShow: function (input, inst) { inst.dpDiv.css(styles); },
+                closeText: 'Done'.i18n(),
+                currentText: 'Today'.i18n()
             };
             if(model.yearRange)
               options.yearRange = model.yearRange;
@@ -423,6 +425,12 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 },
                 onClose: update,
                 onSelect: update,
+                hourText: 'Hour'.i18n(),
+                minuteText: 'Minute'.i18n(),
+                amPmText: ['AM'.i18n(), 'PM'.i18n()],
+                closeButtonText: 'Done'.i18n(),
+                nowButtonText: 'Now'.i18n(),
+                deselectButtonText: 'Deselect'.i18n()
             });
         },
         unbind: function (el) {
