@@ -184,6 +184,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                 appliedTo: parseInt($("#stochs_applied_to").val()),
                                 levels:levels
                             }
+                            before_add_callback && before_add_callback();
                             //Add STOCH for the main series
                             $($(".stochs").data('refererChartID')).highcharts().series[0].addIndicator('stochs', options);
 
