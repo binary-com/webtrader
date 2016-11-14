@@ -322,7 +322,6 @@ button[disabled] {
 }
 .cell {
     display: table-cell;
-    vertical-align: middle;
 }
 .share-icon {
     margin-top: 2px !important;
