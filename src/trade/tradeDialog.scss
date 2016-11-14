@@ -15,7 +15,8 @@
     .no-wrap { white-space: nowrap; }
     .dotted-underline { border-bottom: 1px dotted #000; }
     .align-text {
-      padding-left: 10px;
+      padding-left: 5px;
+      padding-right: 2px;
       box-sizing: border-box;
     }
     .box-shadow { box-shadow: 5px 5px 8px rgba(0,0,0,0.25); }
@@ -48,7 +49,7 @@
   .date-start-row li,
   .categories-row {
     justify-content: space-between;
-    li {height: 30px; }
+    li {height: 28px; }
     li.sparkline-chart { min-width: 93px;}
     li.tick-quote span {
       background: #29ABE2;
@@ -69,7 +70,7 @@
     .img {
       display: inline-block;
       width: 18px;
-      height: 20px;
+      height: 18px;
       padding: 5px;
       border-radius: 5px;
       margin-left: 1px;
@@ -205,12 +206,17 @@
     justify-content: space-between;
 }
 
-.trade-fields ul li:nth-child(1) > span { min-width: 130px !important; display: inline-block;}
+.trade-fields ul li:nth-child(1) > span {
+  min-width: 130px !important;
+  line-height: 28px;
+  display: inline-block;
+  white-space: nowrap;
+}
 .trade-fields ul.digits-row li:nth-child(1) > span { min-width: 140px !important; display: inline-block;}
 .trade-fields ul li:nth-child(3) > span {
   min-width: 100px !important; display: inline-block;
   box-sizing: border-box;
-  line-height: 30px;
+  line-height: 28px;
 }
 .trade-fields ul.date-start-row li:nth-child(3) > span { min-width: 85px !important }
 
@@ -218,13 +224,15 @@
 .trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { width: 100px !important; }
 .trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 100px !important; }
 
+.trade-fields ul li select + .ui-selectmenu-button { border: 0 !important; height: 28px;}
+
 .trade-fields ul li span.ui-spinner { border: 0; }
 .trade-fields ul li input {
   border: none;
   background: #273051;
   color: white;
   margin: 0;
-  height: 30px;
+  height: 28px;
   padding-left: 10px;
 }
 .trade-fields ul li:nth-child(2) input { width: 100px !important; }
@@ -249,7 +257,8 @@
         opacity: .5;
         cursor: pointer;
         width: auto;
-        padding: 0 7px;
+        padding: 0 5px;
+        white-space: nowrap;
     }
 
     .trade-fields ul.contract-displays li.active {
@@ -278,7 +287,7 @@
 .trade-fields .proposal-message {
     padding-top: 5px;
     border-top: 1px solid #c2c1c1;
-    bottom: 85px;
+    bottom: 80px;
     li {
         box-sizing: border-box;
         padding: 0 5px;
@@ -288,7 +297,7 @@
 
 .trade-fields ul.message-row {
   justify-content: center;
-  bottom: 50px;
+  bottom: 45px;
   padding: 2px 0;
 }
 .trade-fields ul.proposal-message li,

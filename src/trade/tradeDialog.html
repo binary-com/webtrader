@@ -108,6 +108,7 @@
         <li> <span class="dotted-underline align-text text-vertical-align"
                    rv-tooltip="'Enter the barrier in terms of the difference from the spot price.  If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot.  The entry spot will be the next tick after your order has been received'"
                    rv-tooltip-position="tooltips.barrier_p"
+                   rv-scale-font-size="130"
                    rv-show="barriers.is_last_barrier_daily | eq false">Barrier offset</span>
              <span class="align-text text-vertical-align" rv-show="barriers.is_last_barrier_daily">Barrier</span>
         </li>
@@ -131,6 +132,7 @@
         rv-show="barriers.barrier_count | eq 2">
         <li> <span class="dotted-underline align-text text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
+                rv-scale-font-size="130"
                 >High barrier offset</span> </li>
         <li>
             <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
@@ -150,6 +152,7 @@
         rv-show="barriers.barrier_count | eq 2">
         <li> <span class="dotted-underline align-text text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
+                rv-scale-font-size="130"
                 >Low barrier offset</span> </li>
         <li>
             <input class="barriers-barrier" type="text" prefered-sign='-' rv-decimal-round="5"
