@@ -263,19 +263,10 @@ body {
     margin : 0 0 0;
 }
 
-#header .logo {
+#header .logo-wrapper {
     position: absolute;
-    left: 0px;
-    top: 30px;
-}
-
-#header .logo div:nth-child(1) {
-    display: inline-block;
-    margin: 10px 10px;
-}
-#header .logo div:nth-child(2) {
-    display: inline-block;
-    margin: -12px;
+    left: 60px;
+    top: 25px;
 }
 
 .nav-normal-menu .resources > ul > li,

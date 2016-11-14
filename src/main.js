@@ -31,7 +31,7 @@ requirejs.config({
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level',
         'paralleljs' : 'lib/parallel_js/lib/parallel',
-        'binary-style' : 'https://style.binary.com/binary'
+        'binary-style' : 'https://style.champion-fx.com/binary'
     },
     map: {
         '*': {
