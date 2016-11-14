@@ -44,7 +44,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           minimizable: true,
           maximizable: false,
           width: 360,
-          height: 980,
+          height: 1010,
           'data-authorized': true,
           close: function () {
             real_win.dialog('destroy');
@@ -330,8 +330,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
       state.route.update = function(route){
         var routes = {
-          'user' : 980,
-          'financial': 1500
+          'user' : 1010,
+          'financial': 1540
         };
         state.route.value = route;
         real_win.dialog('option', 'height', routes[route]);
