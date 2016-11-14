@@ -12,11 +12,9 @@
 	<link href="/v<version>/images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 	<link rel="stylesheet" type="text/css" href="https://style.binary.com/binary.css">
 	<style type="text/css">
-		.logo a {
-			display: flex;
-    		padding: 10px;
-    		width: 20%;
-		}
+        .binary-logo-text {
+            padding: 0;
+        }
 		#nav-container {
 		    width: 100%;
 		    background-color: #273051;
@@ -52,16 +50,16 @@
 <body>
 	<nav id="nav-container">
     <!-- logo -->
-    	<div class="logo">
-            <a href="https://binary.com" target="_blank">
-                <div>
-                    <img class="responsive" style="margin-right: 20px;" src="https://www.binary.com/images/pages/binary-symbol-logo.svg">
-                </div>
-                <div>
-                    <img class="responsive" src="https://www.binary.com/images/pages/binary-type-logo.svg" style="width: 144px;top: 5px;position: relative;">
-                </div>
-            </a>
-        </div>
+	<div class="logo-wrapper">
+		<a class="logo-parent" href="https://binary.com">
+			<div class='logo'>
+				<img class='responsive' src="https://style.binary.com/images/logo/symbol.svg" />
+			</div>
+			<div class='binary-logo-text'>
+				<img class='responsive' src="https://style.binary.com/images/logo/type.svg" />
+			</div>
+		</a>
+	</div>
 	</nav>
 	<div class="wrapper">
 		<div class="page_404">

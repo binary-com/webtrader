@@ -261,7 +261,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }
     }
 
-    /* extend jquery ui spinner to support multiple buttons */
+    /* extend jquery ui spinner to support multiple buttons*/
     $.widget('ui.webtrader_spinner', $.ui.spinner, {
         _buttonHtml: function () {
             var btn = function(dir, icon, step, radius, right){
@@ -270,16 +270,17 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 radius = radius || '5px';
                 radius = 'border-radius: 0 ' + (dir == 'up' ? radius + ' 0' : '0 ' + radius) + ' 0';
 
-                return "<button step='" + step + "' class='ui-spinner-button ui-spinner-" + dir +
+                /*return "<button step='" + step + "' class='ui-spinner-button ui-spinner-" + dir +
                         "' style='" + right + radius + "'>" +
                           "<span class='ui-icon " + icon +"'>&#9650;</span>" +
-                       "</button>";
+                       "</button>";*/
+                return;
             }
 
-            var ret = '';
+            /*var ret = '';
             ret += btn('up', 'triangle', this.options.step_big || this.options.step, '5px');
             ret += btn('down', 'triangle', '-' +(this.options.step_big || this.options.step), '5px');
-            return ret;
+            return ret;*/
         }
     });
     /* turn input element into jquery-ui-spinner, model = {min:, max, value:},
@@ -587,13 +588,6 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       template: function() {
         return '<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">' +
                   '<input rv-class="data.class" type="text" rv-value="data.value" rv-decimal-round="data.decimals | or 5" no-symbol="no-symbol" />' +
-
-                    '<button rv-on-click="increment" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">' +
-                      '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>' +
-                    '</button>' +
-                    '<button rv-on-click="decrement" step="-1" class="ui-spinner-button ui-spinner-down ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 0 5px 0" tabindex="-1" role="button">' +
-                      '<span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-s">▼</span> </span>' +
-                    '</button>' +
                 '</span>';
       },
       initialize: function(el, data) {

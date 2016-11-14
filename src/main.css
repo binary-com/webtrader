@@ -323,6 +323,9 @@ button[disabled] {
 .cell {
     display: table-cell;
 }
+.share-icon {
+    margin-top: 2px !important;
+}
 
 .horizontal-line {
     width: 100%;

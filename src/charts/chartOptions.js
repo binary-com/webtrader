@@ -6,22 +6,22 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
     var state = [], view = [], template_manager = {}, stringWidth= {}, isListenerAdded = false;
 
-    var timeperiod_arr = [{value: "1t", name: "1 Tick", digit: 1, type: "ticks"}, 
-        {value: "1m", name: "1 Minute", digit: 1, type: "minutes"}, 
+    var timeperiod_arr = [{value: "1t", name: "1 Tick", digit: 1, type: "ticks"},
+        {value: "1m", name: "1 Minute", digit: 1, type: "minutes"},
         {value: "2m", name: "2 Minutes", digit: 2, type: "minutes"},
-        {value: "3m", name: "3 Minutes", digit: 3, type: "minutes"}, 
+        {value: "3m", name: "3 Minutes", digit: 3, type: "minutes"},
         {value: "5m", name: "5 Minutes", digit: 5, type: "minutes"},
-        {value: "10m", name: "10 Minutes", digit: 10, type: "minutes"}, 
+        {value: "10m", name: "10 Minutes", digit: 10, type: "minutes"},
         {value: "15m", name: "15 Minutes", digit: 15, type: "minutes"},
         {value: "30m", name: "30 Minutes", digit: 30, type: "minutes"},
-        {value: "1h", name: "1 Hour", digit: 1, type: "hours"}, 
-        {value: "2h", name: "2 Hours", digit: 2, type: "hours"}, 
-        {value: "4h", name: "4 Hours", digit: 4, type: "hours"}, 
+        {value: "1h", name: "1 Hour", digit: 1, type: "hours"},
+        {value: "2h", name: "2 Hours", digit: 2, type: "hours"},
+        {value: "4h", name: "4 Hours", digit: 4, type: "hours"},
         {value: "8h", name: "8 Hours", digit: 8, type: "hours"},
         {value: "1d", name: "1 Day", digit: 1, type: "days"}];
 
-    var chartType_arr = [{value:'candlestick', name:'Candles'}, {value:'ohlc', name:'OHLC'}, 
-        {value:'line', name:'Line'}, {value:'dot', name:'Dot'}, {value:'linedot', name:'Line Dot'}, 
+    var chartType_arr = [{value:'candlestick', name:'Candles'}, {value:'ohlc', name:'OHLC'},
+        {value:'line', name:'Line'}, {value:'dot', name:'Dot'}, {value:'linedot', name:'Line Dot'},
         {value:'spline', name:'Spline'}, {value:'table', name:'Table'}];
         i18n_name = (local_storage.get('i18n') || { value: 'en' }).value,
         appURL = getAppURL(); // Get current apps url.
@@ -80,7 +80,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
             state[newTabId].chartTypes = chartType_arr;
             state[newTabId].chartTypes[1].showBorder = true;
         }
-        
+
     }
 
     function responsiveButtons(scope, ele) {
@@ -165,10 +165,21 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         new Image().src="images/chart_template-w.svg";
     }
 
+    function toggleIcon (ele,active) {
+        ele = $(ele);
+        var cls = ele.attr("class");
+        if (!cls) return;
+        ele.toggleClass(cls);
+        var type = cls.split("-")[0];
+        cls = active===true ? type + "-w-icon" : type + "-icon";
+        ele.toggleClass(cls);
+        console.log(cls,active);
+    }
+
     return {
 
         init : function (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_instrumentName, m_instrumentCode, m_showShare, m_showOverlay) {
-            
+
             require(['text!charts/chartOptions.html','css!charts/chartOptions.css'], function(html) {
                 calculateStringWidth(m_instrumentName);
                 if (view[m_newTabId]) view[m_newTabId].unbind();
@@ -219,12 +230,13 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showChartTypeSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showChartTypeSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
+
                 };
 
                 state[m_newTabId].addRemoveIndicator = function(event, scope) {
@@ -292,11 +304,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showDrawingToolSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showDrawingToolSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
@@ -317,11 +329,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showExportSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showExportSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
@@ -331,11 +343,11 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showLoadSaveSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showLoadSaveSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
@@ -356,7 +368,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                         }
                     }
                 };
-                
+
                 // Listen for indicator changes.
                 $("#" + m_newTabId).on('chart-indicators-changed',function(e, chart){
                   state[m_newTabId].indicatorsCount = chart.get_indicators().length;
@@ -407,7 +419,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 rv.formatters['filter'] = function(arr, type) {
                     return arr.filter(function(item){return item.type == type});
                 }
-                               
+
                 view[m_newTabId] = rv.bind($html[0], state[m_newTabId]);
                 require(['charts/chartTemplateManager'], function(templateManager) {
                   var root = $html.find('.chart-template-manager-root');

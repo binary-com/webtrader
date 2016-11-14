@@ -5,12 +5,7 @@ body {
 }
 
 #topbar {
-    width: 100%;
-    color: #fff;
-    line-height: 1;
     font-size: 100%;
-    text-align: right;
-    padding: 3px 0;
     height: 20px;
     background: #15212d;
 }
@@ -38,6 +33,7 @@ body {
   opacity: 0;
   transition: opacity 0.25s;
   pointer-events: none;
+  border-bottom: 5px solid #e98024;
 }
 #topbar span.lang:hover + div.languages,
 #topbar div.languages:hover {
@@ -235,9 +231,6 @@ body {
   right: 10px;
     top: 40px;
 }
-#nav-container .login:hover {
-  background: #2a3052;
-}
 
 #nav-container .login span.ui-icon {
   margin-left: -10px;
@@ -286,19 +279,14 @@ body {
     margin : 0 0 0;
 }
 
-#header .logo {
+#header .logo-wrapper {
     position: absolute;
-    left: 0px;
-    top: 30px;
+    left: 60px;
+    top: 28px;
 }
 
-#header .logo div:nth-child(1) {
-    display: inline-block;
-    margin: 10px 10px;
-}
-#header .logo div:nth-child(2) {
-    display: inline-block;
-    margin: -12px;
+#header .logo-wrapper .binary-logo-text {
+    padding: 0;
 }
 
 .nav-normal-menu .resources > ul > li,
