@@ -257,7 +257,8 @@
         opacity: .5;
         cursor: pointer;
         width: auto;
-        padding: 0 7px;
+        padding: 0 5px;
+        white-space: nowrap;
     }
 
     .trade-fields ul.contract-displays li.active {
