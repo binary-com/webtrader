@@ -213,7 +213,11 @@
   display: inline-block;
   white-space: nowrap;
 }
-.trade-fields ul.digits-row li:nth-child(1) > span { min-width: 140px !important; display: inline-block;}
+.trade-fields ul.digits-row li:nth-child(1) > span {
+  min-width: 140px !important;
+  display: inline-block;
+  padding-right: 5px;
+}
 .trade-fields ul li:nth-child(3) > span {
   min-width: 100px !important; display: inline-block;
   box-sizing: border-box;
@@ -250,7 +254,7 @@
     .trade-fields ul.contract-displays {
         background: #c2c1c1;
         justify-content: center;
-        padding: 10px 0;
+        padding: 9px 0;
         margin-bottom: 2px;
     }
 
@@ -286,13 +290,13 @@
 }
 
 .trade-fields .proposal-message {
-    padding-top: 5px;
+    padding-top: 4px;
     border-top: 1px solid #c2c1c1;
     bottom: 80px;
     li {
         box-sizing: border-box;
         padding: 0 5px;
-        line-height: 1.2em;
+        line-height: 1.1em;
     }
 }
 
