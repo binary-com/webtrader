@@ -521,22 +521,7 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
             });
             var csv = (is_tick ? 'Date,Tick\n' : 'Date,Open,High,Low,Close\n') + lines.join('\n');
 
-            var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-            if (navigator.msSaveBlob) { // IE 10+
-                navigator.msSaveBlob(blob, filename);
-            }
-            else {
-                var link = document.createElement("a");
-                if (link.download !== undefined) {  /* Evergreen Browsers :) */
-                    var url = URL.createObjectURL(blob);
-                    link.setAttribute("href", url);
-                    link.setAttribute("download", filename);
-                    link.style.visibility = 'hidden';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                }
-            }
+            download_file_in_browser(filename, 'text/csv;charset=utf-8;', csv);
         });
     }
 

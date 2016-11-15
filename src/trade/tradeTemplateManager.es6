@@ -94,10 +94,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
            }
            delete data.template_type;
            if(template_type !== 'trade-template') {
-            throw new UserException("Invalid template type.");
+            $.growl.error({message:"Invalid template type.".i18n()});
+            return;
            }
           } catch(e){
-            $.growl.error({message:"Invalid json file."});
+            $.growl.error({message:"Invalid json file.".i18n()});
             return;
           }
           templates.apply(data);
@@ -145,6 +146,10 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       templates.download = (tmpl) => {
+        tmpl.template_type = 'trade-template';
+        tmpl.random = hashCode(JSON.stringify(tmpl));
+        var json = JSON.stringify(tmpl);
+        download_file_in_browser(tmpl.name + '.json', 'text/json;charset=utf-8;', json);
         $.growl.notice({message: "Downloading template as <b>".i18n() + tmpl.name + ".json</b>"});
       }
 
@@ -221,15 +226,6 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       const hashCode = (s) => {
         return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
-      }
-
-      rv.binders.download = function(el, value) {
-        value.template_type = 'trade-template';
-        value.random = hashCode(JSON.stringify(value));
-        const href = "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(value));
-
-        $(el).attr("href", href);
-        $(el).attr("download",value.name + ".json");
       }
 
       return state;

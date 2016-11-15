@@ -2,7 +2,7 @@
  * Created by arnab on 2/16/15.
  */
 
-define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, chartWindow, charts, moment, chartingRequestMap) {
+define(['jquery', 'common/rivetsExtra', 'lodash', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, _, chartWindow, charts, moment, chartingRequestMap) {
 
     var state = [], view = [], template_manager = {}, stringWidth= {}, isListenerAdded = false;
 
@@ -388,10 +388,10 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 // Add event only once.
                 !isListenerAdded && $('body').on('click', function(event){
-                    for (tab in state){
+                  _.forEach(state, function(tab) {
                         if(event.originalEvent && tab != event.originalEvent.scope)
                             hideOverlays(state[tab]);
-                    }
+                  });
                 });
 
                 isListenerAdded = true;

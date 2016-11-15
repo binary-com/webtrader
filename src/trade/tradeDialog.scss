@@ -92,6 +92,7 @@
         overflow-x: hidden;
         border: solid gray 1px;
         box-sizing: border-box;
+        z-index: 1;
         input[type='file'] {
           display: none;
         }
