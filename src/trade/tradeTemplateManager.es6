@@ -94,10 +94,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
            }
            delete data.template_type;
            if(template_type !== 'trade-template') {
-            throw new UserException("Invalid template type.");
+            $.growl.error({message:"Invalid template type.".i18n()});
+            return;
            }
           } catch(e){
-            $.growl.error({message:"Invalid json file."});
+            $.growl.error({message:"Invalid json file.".i18n()});
             return;
           }
           templates.apply(data);

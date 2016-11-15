@@ -100,10 +100,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
              // We are not adding .template_type because we don't want to break
              // exising user templates for charts, so if it has .indicators property
              // then it's a chart template for sure.
-             throw new UserException("Invalid template type.");
+            $.growl.error({message:"Invalid template type.".i18n()});
+            return;
            }
           } catch(e){
-            $.growl.error({message:"Invalid json file."});
+            $.growl.error({message:"Invalid json file.".i18n()});
             return;
           }
           console.log(templates.current);
