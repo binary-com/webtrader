@@ -476,3 +476,23 @@ function setup_i18n_translation(dict) {
 function getAppURL() {
   return window.location.href.split("/v")[0];
 }
+
+/* type = 'text/csv;charset=utf-8;' */
+function download_file_in_browser(filename, type, content){
+            var blob = new Blob([content], { type: type });
+            if (navigator.msSaveBlob) { // IE 10+
+                navigator.msSaveBlob(blob, filename);
+            }
+            else {
+                var link = document.createElement("a");
+                if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                    var url = URL.createObjectURL(blob);
+                    link.setAttribute("href", url);
+                    link.setAttribute("download", filename);
+                    link.style.visibility = 'hidden';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+}
