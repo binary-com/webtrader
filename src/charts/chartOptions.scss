@@ -3,7 +3,7 @@
   .table {
     margin: 5px auto;
     .row .cell {
-
+      vertical-align: middle;
     }
   }
 
@@ -33,11 +33,12 @@
   .img {
     display: inline;
 
-    img {
+    img, span, div {
       width: 20px;
       height: 20px;
       margin: 5px;
     }
+    
   }
 
   .vertical-bottom {
@@ -46,6 +47,7 @@
     line-height: 8px;
     &.name {
       margin-left: -5px;
+      vertical-align: top;
     }
     &.button {
       padding: 4px 7px 2px 7px;

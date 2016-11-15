@@ -155,16 +155,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         stringWidth.inst = getWidth(instrument_name)+20;
     }
 
-    function preLoadImages(){
-        chartType_arr.forEach(function(chartType){
-            if(chartType.value !== "table")
-                new Image().src="images/" + chartType.value + "-w.svg";
-        });
-        new Image().src="images/share-w.svg";
-        new Image().src="images/drawing-w.svg";
-        new Image().src="images/chart_template-w.svg";
-    }
-
     function toggleIcon (ele,active) {
         ele = $(ele);
         var cls = ele.attr("class");
@@ -172,7 +162,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         var type = cls.split("-")[0];
         cls = active===true ? type + "-w-icon" : type + "-icon";
         ele.toggleClass(cls);
-        console.log(cls,active);
     }
 
     return {
@@ -225,7 +214,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 };
                 state[m_newTabId].toggleChartTypeSelector = function(event, scope) {
                     var temp = !scope.showChartTypeSelector;
-                    var ele = $("#" + scope.newTabId + " .chart_type .img img")[0];
+                    var ele = $("#" + scope.newTabId + " .chart_type .img span")[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showChartTypeSelector = temp;
@@ -299,7 +288,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleDrawingToolSelector = function(event, scope) {
                     var temp = !scope.showDrawingToolSelector;
-                    var ele = $("#" + scope.newTabId + ' .drawButton .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .drawButton .img span')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showDrawingToolSelector = temp;
@@ -324,7 +313,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleExportSelector = function(event, scope) {
                     var temp = !scope.showExportSelector;
-                    var ele = $("#" + scope.newTabId + ' .shareButton .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .shareButton .img span')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showExportSelector = temp;
@@ -338,7 +327,7 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleLoadSaveSelector = function(event, scope) {
                     var temp = !scope.showLoadSaveSelector;
-                    var ele = $("#" + scope.newTabId + ' .templateButton .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .templateButton .img span')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showLoadSaveSelector = temp;
@@ -406,9 +395,6 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 });
 
                 isListenerAdded = true;
-
-                // Preload images for better UI
-                preLoadImages();
 
                 var $html = $(html).i18n();
 

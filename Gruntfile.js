@@ -160,6 +160,14 @@ module.exports = function (grunt) {
                     from: '<description>',
                     to: "<%=pkg.description%>"
                 }]
+            },
+            style : {
+                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html'],
+                overwrite: true,
+                replacements: [{
+                    from: '<style-url>',
+                    to: 'https://style.binary.com'
+                }]  
             }
         },
         cssmin: {

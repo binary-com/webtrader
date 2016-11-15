@@ -64,6 +64,10 @@
     li.tick-quote span.down { background: #c03; }
   }
 
+  .categories-row {
+    margin-bottom: 5px;
+  }
+
   .trade-template-manager {
     z-index: +1;
     display: relative;
@@ -74,7 +78,6 @@
       padding: 5px;
       border-radius: 5px;
       margin-left: 1px;
-      background: #273051;
 
       img {
         width: 100%;
@@ -97,7 +100,6 @@
         }
         .menu {
             button {
-                background-color: #273051;
                 margin: 5px;
                 display: block;
                 width: 95%;
@@ -228,13 +230,10 @@
 .trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { width: 100px !important; }
 .trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 100px !important; }
 
-.trade-fields ul li select + .ui-selectmenu-button { border: 0 !important; height: 28px;}
+.trade-fields ul li select + .ui-selectmenu-button { height: 28px;}
 
 .trade-fields ul li span.ui-spinner { border: 0; }
 .trade-fields ul li input {
-  border: none;
-  background: #273051;
-  color: white;
   margin: 0;
   height: 28px;
   padding-left: 10px;
@@ -251,7 +250,6 @@
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
-        background: #c2c1c1;
         justify-content: center;
         padding: 9px 0;
         margin-bottom: 2px;
@@ -311,7 +309,6 @@
 }
 .trade-fields ul.message-row li span { display: inline; }
 
-.trade-fields .netprofit { background: #c2c1c1; }
 .trade-fields .spread-deposit {
     background: #c2c1c1;
     white-space: nowrap;
