@@ -121,8 +121,8 @@ define(["jquery",  "jquery-ui", 'color-picker'], function ($) {
     return {
 
         open: function (containerIDWithHash, before_add_cb) {
+            before_add_callback = before_add_cb || before_add_callback;
             var open = function() {
-                before_add_callback = before_add_cb;
                 $(".sar").data('refererChartID', containerIDWithHash).dialog( "open" );
             };
             if ($(".sar").length == 0)
