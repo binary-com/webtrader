@@ -273,11 +273,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             if ($.isFunction(onload)) {
                                 onload();
                             }
-                            if(isAffiliates() && hideFooter()){
+                            if(isAffiliates() && isHideFooter()){
                                 $(this.credits.element).remove();
                                 this.margin[2] = 5;
                                 this.spacing[2] = 0;
-                                console.log(this);
                             } else {
                                 this.credits.element.onclick = function() {
                                     window.open(

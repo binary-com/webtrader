@@ -26,7 +26,7 @@ function isHideShare() {
     return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
 }
 
-function hideFooter(){
+function isHideFooter(){
   return getParameterByName('hideFooter') === true || (getParameterByName('hideFooter') + '').toLowerCase() == 'true';
 }
 
@@ -100,6 +100,7 @@ function getParameterByNameFromURL(name) {
  * @param name
  */
 function getParameterByName(name) {
+    console.log(111, name, window[name]);
     if (window[name]) return window[name];
     else return getParameterByNameFromURL(name);
 }
