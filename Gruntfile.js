@@ -162,7 +162,7 @@ module.exports = function (grunt) {
                 }]
             },
             style : {
-                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html'],
+                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/404.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<style-url>',

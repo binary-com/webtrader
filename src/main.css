@@ -393,7 +393,7 @@ button[disabled] {
   text-align: center;
   background: #f2f2f2;
 }
-.ui-datepicker-current, .ui-datepicker-close {
+.ui-datepicker-current, .ui-datepicker-close, .ui-datepicker-clear {
   color: #FFF;
   line-height: 100%;
   background: #2E8836!important;
@@ -402,7 +402,7 @@ button[disabled] {
   font-size: 1em!important;
   float: none!important;
 }
-.ui-datepicker-current:hover, .ui-datepicker-close:hover {
+.ui-datepicker-current:hover, .ui-datepicker-close:hover, .ui-datepicker-clear:hover {
   background: #14602B!important;
 }
 .ui-datepicker-prev, .ui-datepicker-next {
