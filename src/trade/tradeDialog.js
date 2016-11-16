@@ -978,9 +978,6 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         dialog.get_template = get_current_template.bind(undefined, state);
         dialog.set_template = set_current_template.bind(undefined, state);
         dialog.hide_template_menu = function() { state.template.visible = false; }
-        require(['css!binary-style'],function(){
-          console.log('hello');
-        });
         require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
           tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
         });

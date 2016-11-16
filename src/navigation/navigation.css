@@ -273,6 +273,7 @@ body {
 #header .logo-wrapper div:nth-child(1) {
     display: inline-block;
     margin: 10px 10px;
+    width: 18.7%;
 }
 #header .logo-wrapper div:nth-child(2) {
     display: inline-block;

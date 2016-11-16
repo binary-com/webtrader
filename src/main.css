@@ -82,6 +82,9 @@ body > .footer .addiction-warning a:hover {
     font-weight: normal;
     color: #FFFFFF;
 }
+.ui-selectmenu-button span.ui-selectmenu-text {
+  padding-top: 0.2em;
+}
 
 div.ui-tooltip { /* override default jquery ui max tooltip width */
     max-width: 400px;
@@ -364,7 +367,6 @@ button[disabled] {
 }
 .ui-datepicker-month, .ui-datepicker-year {
   margin-right:5px!important;
-  border: 1px solid #273051;
 }
 #ui-datepicker-div.ui-datepicker .ui-datepicker-calendar {
   margin-left: 3.2px;
@@ -407,10 +409,9 @@ button[disabled] {
   color: white!important;
 }
 .ui-datepicker-prev:hover, .ui-datepicker-next:hover{
-  background: #394171!important;
-  border: 0!important;
-  border-radius: 3px!important;
-  height: 30px;
+  opacity: 0.75;
+  background: none;
+  border: none;
 }
 
 /* override table styles*/
@@ -437,4 +438,8 @@ select + .ui-selectmenu-button { border-radius: 3px !important;}
 /*hide input buttons*/
 .ui-spinner-button {
   display: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
