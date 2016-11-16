@@ -15,19 +15,19 @@ function isLineDotType(type) {
 }
 
 function isAffiliates(){
-  return getParameterByName("affiliates") === true || (getParameterByName("affiliates") + '').toLowerCase() == 'true';
+  return getParameterByNameFromURL("affiliates") === true || (getParameterByNameFromURL("affiliates") + '').toLowerCase() == 'true';
 }
 
 function isHideOverlay() {
-    return getParameterByName("hideOverlay") === true || (getParameterByName("hideOverlay") + '').toLowerCase() == 'true';
+    return getParameterByNameFromURL("hideOverlay") === true || (getParameterByNameFromURL("hideOverlay") + '').toLowerCase() == 'true';
 }
 
 function isHideShare() {
-    return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
+    return getParameterByNameFromURL("hideShare") === true || (getParameterByNameFromURL("hideShare") + '').toLowerCase() == 'true';
 }
 
 function hideFooter(){
-  return getParameterByName('hideFooter') === true || (getParameterByName('hideFooter') + '').toLowerCase() == 'true';
+  return getParameterByNameFromURL('hideFooter') === true || (getParameterByNameFromURL('hideFooter') + '').toLowerCase() == 'true';
 }
 
 function convertToTimeperiodObject(timePeriodInStringFormat) {
