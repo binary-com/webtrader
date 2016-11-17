@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-04 12:23+0200\n"
-"PO-Revision-Date: 2016-10-31 19:36+0000\n"
-"Last-Translator: Gabriela Balieiro Moreira <eusouagabi@gmail.com>\n"
+"PO-Revision-Date: 2016-11-17 08:28+0000\n"
+"Last-Translator: Alcino Jorge <alcino@binary.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pt/>\n"
 "Language: pt\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.9-dev\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "Tipo de %D MA"
@@ -686,6 +686,8 @@ msgstr "Termina Dentro/Fora"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
+"Certifique-se de que você esteja inserindo entradas válidas, caso contrário "
+"a sua conta será bloqueada"
 
 msgid "Enter your current password"
 msgstr "Insira a sua senha atual"
@@ -768,9 +770,8 @@ msgstr "Preço final"
 msgid "Finance"
 msgstr "Finanças"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "Abertura de conta real"
+msgstr "Formulário de abertura de conta financeiro"
 
 msgid "Financial information"
 msgstr "Informações financeiras"
@@ -940,13 +941,13 @@ msgid "Instrument"
 msgstr "Instrumento"
 
 msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
+msgstr "Código do instrumento desconhecido/indisponível!"
 
 msgid "Instruments"
 msgstr "Instrumentos"
 
 msgid "Invalid parameter(s)!"
-msgstr ""
+msgstr "Parâmetro(s) inválido(s)!"
 
 msgid "Investments & Dividends"
 msgstr "Investimentos e dividendos"
@@ -1459,7 +1460,7 @@ msgid "Please choose at least one token scope"
 msgstr "Escolha pelo menos um escopo de token"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "Escolha a moeda na qual você deseja negociar"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Confirme os seguintes dados para poder concluir a transferência"
@@ -1563,10 +1564,8 @@ msgstr "Pré-definido"
 msgid "Preferred reality-check interval"
 msgstr "Intervalo preferido para o balanço da realidade"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
-msgstr ""
-"Pressione o botão  Criar token  à direita para criar o seu primeiro token"
+msgstr "Pressione o botão Criar token à direita para criar o seu primeiro token"
 
 msgid "Price"
 msgstr "Preço"
@@ -1607,9 +1606,8 @@ msgstr "Hora de compra"
 msgid "Read"
 msgstr "Ler"
 
-#, fuzzy
 msgid "Real Money Account Opening"
-msgstr "Abertura de conta real"
+msgstr "Abertura de conta de dinheiro real"
 
 msgid "Reality check"
 msgstr "Balanço da realidade"
@@ -2152,9 +2150,8 @@ msgstr "Atualizar configurações"
 msgid "Upgrade to a Real Account"
 msgstr "Atualize para uma conta de dinheiro real"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "Carregar modelo do gráfico"
+msgstr "Carregar modelo"
 
 msgid "Upper Band Stroke"
 msgstr "Banda superior"
@@ -2283,6 +2280,7 @@ msgstr ""
 
 msgid "Your account is locked, please contact customer support for more info"
 msgstr ""
+"A sua conta foi bloqueada. Contate o apoio ao cliente para mais informações"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "O seu navegador não suporta \"Copiar para área de transferência\""
