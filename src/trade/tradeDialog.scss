@@ -100,10 +100,14 @@
           display: none;
         }
         .menu {
-            button {
+            a {
                 margin: 5px;
                 display: block;
                 width: 95%;
+                
+                span {
+                  display: block;
+                }
             }
         }
         .back-arrow > * {

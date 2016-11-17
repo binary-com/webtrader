@@ -199,11 +199,14 @@
       overflow-y: auto;
       overflow-x: hidden;
       .menu {
-        button{
-          background-color: #273051;
+        a {
           margin: 5px;
           display: block;
           width: 95%;
+
+          span {
+            display: block;
+          }
         }
 
         input[type="file"] {
