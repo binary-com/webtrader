@@ -166,8 +166,8 @@ module.exports = function (grunt) {
                 overwrite: true,
                 replacements: [{
                     from: '<style-url>',
-                    to: 'https://style.binary.com'
-                }]  
+                    to: 'https://style.champion-fx.com'
+                }]
             }
         },
         cssmin: {
