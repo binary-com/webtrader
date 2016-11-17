@@ -57,10 +57,6 @@ msgstr ""
 "sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng "
 "và Đại Lý Thanh Toán"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr ""
-"---tiêu đề: không tìm thấy trang permalink: /404.html trích dẫn: \"\"---"
-
 msgid "-DI Stroke"
 msgstr "-DI Nét"
 
@@ -205,6 +201,9 @@ msgstr "Kiểu ADX MA"
 
 msgid "ADX Stroke"
 msgstr "Nét ADX"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "Thời gian ATR"
@@ -429,6 +428,9 @@ msgstr "Lựa chọn phương pháp rút tiền ưa thích của bạn"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Nhấp vào kiểm tra Jacking"
 
@@ -590,6 +592,9 @@ msgstr "Xóa bỏ"
 msgid "Delete level(s)"
 msgstr "Xóa level(s)"
 
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "Thử nghiệm cho liên kết tới truy cập bảng Webtrader trong IFRAME"
 
@@ -605,6 +610,9 @@ msgstr "Mô tả token này để tìm nó về sau"
 msgid "Description"
 msgstr "Mô tả"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Chữ số"
 
@@ -613,6 +621,9 @@ msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Chưa có tài khoản? Đăng ký và nhận $10,000 cho tài khoản ảo"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Đã hoàn tất. Tiền đang được chuyển giao cho đại lý thanh toán"
@@ -671,6 +682,9 @@ msgstr "Thời gian"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "Mép"
@@ -861,6 +875,9 @@ msgstr "Đường ngang"
 msgid "Horizontal line"
 msgstr "Đường ngang"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Giờ"
 
@@ -1030,6 +1047,9 @@ msgstr "Liên kết"
 
 msgid "Load chart template"
 msgstr "Tải mẫu biểu đồ"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "Đang tải"
@@ -1206,6 +1226,9 @@ msgstr "Tối thiểu 6 ký tự và phải có ít nhất 1 chữ số"
 
 msgid "Minus the agent's commission"
 msgstr "Trừ đi Hoa hồng của đại lý"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Phút"
@@ -1403,6 +1426,9 @@ msgstr "Hơn 3 năm"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1932,6 +1958,12 @@ msgstr "Bảng biểu"
 msgid "Tel"
 msgstr "Điện thoại"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "Tên mẫu"
 
@@ -2050,6 +2082,9 @@ msgstr ""
 "Để rút tiền xin vui lòng nhập mã xác minh token đặc biệt mà chúng tôi vừa "
 "gửi qua email cho bạn"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Token"
 
@@ -2150,6 +2185,9 @@ msgstr "Doanh số"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "Thật không may, trình duyệt của bạn không hỗ trợ họ"
 
@@ -2185,6 +2223,9 @@ msgid ""
 msgstr ""
 "Sử dụng nút \"Lưu lại thành...\" để lưu giữ lại các cài đặt biểu đồ, loại, "
 "thời gian, các chỉ số và so sánh"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Mã xác minh đã được gửi đến email của bạn"
@@ -2536,6 +2577,10 @@ msgstr "{hoa hồng cho đại lý}%"
 
 msgid "| Return"
 msgstr "| Quay trở lại"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr ""
+#~ "---tiêu đề: không tìm thấy trang permalink: /404.html trích dẫn: \"\"---"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "Thời gian loại trừ không thể ít hơn 6 tháng"

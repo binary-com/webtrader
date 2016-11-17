@@ -51,9 +51,6 @@ msgstr ""
 "来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情"
 "况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- 标题：找不到页面的固定链接：/404.html 摘录: \"\" ---"
-
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
 
@@ -197,6 +194,9 @@ msgstr "ADX MA 类型"
 
 msgid "ADX Stroke"
 msgstr "ADX 波幅"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "ATR 期限"
@@ -414,6 +414,9 @@ msgstr "选择您较倾向的提款方法"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "点击劫持测试"
 
@@ -573,6 +576,9 @@ msgstr "删除"
 msgid "Delete level(s)"
 msgstr "删除水平"
 
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "在IFRAME查看联盟会员访问Webtrader图表的演示"
 
@@ -588,6 +594,9 @@ msgstr "令牌用途说明，以便稍后查找"
 msgid "Description"
 msgstr "说明"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "数字"
 
@@ -596,6 +605,9 @@ msgstr "是否安装Webtrader chrome扩展程序？"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。资金已转给支付代理"
@@ -653,6 +665,9 @@ msgstr "持续时间"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "边缘"
@@ -840,6 +855,9 @@ msgstr "水平线"
 msgid "Horizontal line"
 msgstr "水平线"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "小时"
 
@@ -998,6 +1016,9 @@ msgstr "链接"
 
 msgid "Load chart template"
 msgstr "加载图表模板"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "加载"
@@ -1165,6 +1186,9 @@ msgstr "需至少6个字符与1个数字"
 
 msgid "Minus the agent's commission"
 msgstr "减去代理佣金"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分钟"
@@ -1354,6 +1378,9 @@ msgstr "3年以上"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1880,6 +1907,12 @@ msgstr "表"
 msgid "Tel"
 msgstr "电话"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "模板名称"
 
@@ -1986,6 +2019,9 @@ msgid ""
 "emailed you"
 msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "令牌"
 
@@ -2078,6 +2114,9 @@ msgstr "交易额"
 msgid "USD"
 msgstr "美元"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遗憾，您的浏览器不支持这些程序"
 
@@ -2109,6 +2148,9 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr "使用\"另存为...\"按钮保存图表设置、类型、时间段、指标和比较"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
@@ -2450,6 +2492,9 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回报率"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- 标题：找不到页面的固定链接：/404.html 摘录: \"\" ---"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "禁止时间不能少于6个月"

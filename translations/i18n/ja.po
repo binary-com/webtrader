@@ -54,9 +54,6 @@ msgstr ""
 "とをお勧めいたします。Binary.comはいかなる状況下においても、お客さまと決済"
 "サービス会社の間で生じた処理への責任は負いません。"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- タイトル: ページが存在しません: /404.html エラー: \"\" ---"
-
 msgid "-DI Stroke"
 msgstr "-DI ストローク"
 
@@ -200,6 +197,9 @@ msgstr "ADX MA タイプ"
 
 msgid "ADX Stroke"
 msgstr "ADX ストローク"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "ATR期間"
@@ -420,6 +420,9 @@ msgstr "ご希望の出金方法をご選択ください"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "ジャッキテストをクリック"
 
@@ -579,6 +582,9 @@ msgstr "削除"
 msgid "Delete level(s)"
 msgstr "レベルを削除"
 
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "IFRAME内のWebtraderチャートにアクセスするアフィリエイトデモ"
 
@@ -594,6 +600,9 @@ msgstr "後で認識できるよう、このトークンの説明を記入して
 msgid "Description"
 msgstr "取引内容"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "数字"
 
@@ -604,6 +613,9 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマ"
 "ネーでお取引を始めましょう"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
@@ -663,6 +675,9 @@ msgstr "期間"
 msgid "EMA"
 msgstr "EMA"
 
+msgid "EURUSD"
+msgstr ""
+
 msgid "Edge"
 msgstr "エッジ"
 
@@ -685,7 +700,9 @@ msgid "Ends In/Out"
 msgstr "END-IN/END-OUT"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr "入力内容が有効であることをよくお確かめください。情報が無効である場合、口座がロックされますのでご注意ください。"
+msgstr ""
+"入力内容が有効であることをよくお確かめください。情報が無効である場合、口座が"
+"ロックされますのでご注意ください。"
 
 msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
@@ -848,6 +865,9 @@ msgstr "水平線"
 
 msgid "Horizontal line"
 msgstr "水平線"
+
+msgid "Hour"
+msgstr ""
 
 msgid "Hours"
 msgstr "時間"
@@ -1014,6 +1034,9 @@ msgstr "リンク"
 
 msgid "Load chart template"
 msgstr "チャートテンプレートを読み込む"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "読み込み中"
@@ -1183,6 +1206,9 @@ msgstr "数字を含む6文字以上でご入力ください"
 
 msgid "Minus the agent's commission"
 msgstr "決済サービスの手数料を引く"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分"
@@ -1375,6 +1401,9 @@ msgstr "3年以上"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1902,6 +1931,12 @@ msgstr "明細"
 msgid "Tel"
 msgstr "電話番号"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "テンプレート名"
 
@@ -2018,6 +2053,9 @@ msgstr ""
 "資金のご出金には、お客様のアドレスに只今送信されたワンタイムパスワードをご入"
 "力ください"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "トークン"
 
@@ -2115,6 +2153,9 @@ msgstr "取引数量"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
 
@@ -2148,6 +2189,9 @@ msgid ""
 msgstr ""
 "「名前を付けて保存」から、チャート設定、タイプ、期間、指標、比較などを保存す"
 "ることができます"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -2261,7 +2305,9 @@ msgstr ""
 "のアクセスを許可頂く必要があります"
 
 msgid "Your account is locked, please contact customer support for more info"
-msgstr "お客様の口座は現在ロックされています。詳しくはカスタマーサポートまでご連絡ください。"
+msgstr ""
+"お客様の口座は現在ロックされています。詳しくはカスタマーサポートまでご連絡く"
+"ださい。"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
@@ -2494,6 +2540,9 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| 戻る"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- タイトル: ページが存在しません: /404.html エラー: \"\" ---"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "5ヶ月以下の除外時間を設定することはできません"

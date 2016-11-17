@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
 "PO-Revision-Date: 2016-11-02 13:29+0000\n"
 "Last-Translator: Chloe Chevreton <chloe-che@hotmail.fr>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,9 +56,6 @@ msgstr ""
 "les références des agents de paiement avant de leur envoyer toute somme "
 "d'argent. Binary.com ne pourra en aucun cas être tenue responsable des "
 "transactions réalisées entre les clients et les agents de paiement."
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Tracé -DI"
@@ -203,6 +200,9 @@ msgstr "Type ADX MA"
 
 msgid "ADX Stroke"
 msgstr "Tracé ADX"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "Période ATR"
@@ -422,6 +422,9 @@ msgstr "Sélectionnez le moyen de retrait souhaité"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Test de Click Jacking"
 
@@ -583,6 +586,9 @@ msgstr "Supprimer"
 msgid "Delete level(s)"
 msgstr "Supprimer le(s) niveau(x)"
 
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr ""
 "Démonstration pour les affiliés souhaitant accéder aux graphiques Webtrader "
@@ -600,6 +606,9 @@ msgstr "Décrivez l'utilité de ce jeton pour le retrouver plus tard"
 msgid "Description"
 msgstr "Description"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Chiffres"
 
@@ -610,6 +619,9 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "Vous n'avez pas encore de compte ? Inscrivez-vous pour accéder à un compte "
 "virtuel de 10 000 dollars US."
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Terminé. Le transfert des fonds vers l'agent de paiement est en cours."
@@ -667,6 +679,9 @@ msgstr "Durée"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "Edge"
@@ -857,6 +872,9 @@ msgstr "Ligne horizontale"
 msgid "Horizontal line"
 msgstr "Ligne horizontale"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Heures"
 
@@ -1030,6 +1048,9 @@ msgstr "Lien"
 msgid "Load chart template"
 msgstr "Charger le modèle graphique"
 
+msgid "Load trade template"
+msgstr ""
+
 msgid "Loading"
 msgstr "Chargement"
 
@@ -1199,6 +1220,9 @@ msgstr "Au moins 6 caractères et au moins 1 chiffre"
 
 msgid "Minus the agent's commission"
 msgstr "Moins la commission de l'agent"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minutes"
@@ -1397,6 +1421,9 @@ msgstr "Plus de 3 ans"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1932,6 +1959,12 @@ msgstr "Tableau"
 msgid "Tel"
 msgstr "Tél."
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "Nom du modèle"
 
@@ -2052,6 +2085,9 @@ msgstr ""
 "Pour retirer des fonds, veuillez saisir le jeton de vérification spécifique "
 "que nous venons de vous envoyer par e-mail"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Jeton"
 
@@ -2153,6 +2189,9 @@ msgstr "Volume de transactions"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "Malheureusement, votre navigateur ne les prend pas en charge"
 
@@ -2187,6 +2226,9 @@ msgstr ""
 "Utilisez le bouton « Enregistrer sous... » pour sauvegarder les paramètres "
 "du graphique, le type, la période de temps, les indicateurs et les "
 "comparaisons."
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Un code de vérification vous a été envoyé par e-mail"
@@ -2545,6 +2587,9 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retours"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "Le temps d'exclusion ne peut pas être inférieur à 6 mois"

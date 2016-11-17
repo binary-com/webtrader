@@ -57,9 +57,6 @@ msgstr ""
 "com kann für Transaktionen zwischen Kunden und Zahlungsagenten nicht haftbar "
 "gemacht werden"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-
 msgid "-DI Stroke"
 msgstr "-DI Streich"
 
@@ -203,6 +200,9 @@ msgstr "ADX MA Typ"
 
 msgid "ADX Stroke"
 msgstr "ADX Streich"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "ATR Periode"
@@ -423,6 +423,9 @@ msgstr "Wählen Sie Ihren bevorzugte Auszahlungsmethode"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Jacking Test klicken"
 
@@ -584,6 +587,9 @@ msgstr "Löschen"
 msgid "Delete level(s)"
 msgstr "Stand (Stände) löschen"
 
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr ""
 "Demo für Geschäftspartner, um auf Webtrader Charts in IFRAME zuzugreifen"
@@ -602,6 +608,9 @@ msgstr ""
 msgid "Description"
 msgstr "Beschreibung"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Ziffern"
 
@@ -612,6 +621,9 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "Sie haben noch kein Konto? Melden Sie sich an und Sie erhalten ein "
 "virtuelles Konto mit 10.000 $"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Geschafft. Der Betrag wird dem Zahlungsagenten überwiesen"
@@ -670,6 +682,9 @@ msgstr "Dauer"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "Rand"
@@ -859,6 +874,9 @@ msgstr "Horizontale Linie"
 msgid "Horizontal line"
 msgstr "Horizontale Linie"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Stunden"
 
@@ -1030,6 +1048,9 @@ msgstr "Link"
 msgid "Load chart template"
 msgstr "Chartvorlage wird geladen"
 
+msgid "Load trade template"
+msgstr ""
+
 msgid "Loading"
 msgstr "Wird geladen"
 
@@ -1200,6 +1221,9 @@ msgstr "Mindestens 6 Zeichen und muss zumindest 1 Ziffer beinhalten"
 
 msgid "Minus the agent's commission"
 msgstr "Abzüglich der Provision des Agenten"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minuten"
@@ -1400,6 +1424,9 @@ msgstr "Über 3 Jahre"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1934,6 +1961,12 @@ msgstr "Tabelle"
 msgid "Tel"
 msgstr "Tel"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "Vorlagenname"
 
@@ -2056,6 +2089,9 @@ msgstr ""
 "Um Gelder abzuheben, geben Sie bitte den speziellen Verifikationstoken, den "
 "wir gerade per E-mail an Sie verschickt haben, ein"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Token"
 
@@ -2158,6 +2194,9 @@ msgstr "Umsatz"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "Leider unterstützt Ihr Browser diese nicht"
 
@@ -2192,6 +2231,9 @@ msgid ""
 msgstr ""
 "Verwenden Sie die „Speichern als ...” Taste, um die Chart-Einstellungen, den "
 "Typ, die Zeitspanne, die Indikatoren und die Vergleiche zu speichern"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr ""
@@ -2542,6 +2584,9 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "Rendite"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "Die Ausschlusszeit darf nicht kürzer als 6 Monate sein"
