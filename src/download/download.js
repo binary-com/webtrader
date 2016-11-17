@@ -386,12 +386,6 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
 
                     $html.find(".share-button").click(function(){
                         $html.find(".overlay").toggle();
-                        img = $(this).find("img");
-                        if(img.attr("src").indexOf("-w")==-1){
-                            $(this).css("background","#2a3052").find("img").attr("src","images/share-w.svg");
-                        }else{
-                            $(this).css("background","#f3f1f2").find("img").attr("src","images/share.svg");
-                        }
                     });
 
                     initDownloadChartOptions();

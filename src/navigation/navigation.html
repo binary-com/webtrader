@@ -1,6 +1,6 @@
-<div id="topbar">
+<div id="topbar" class="primary-bg-color-dark">
     <span class='lang'>{lang.name}</span>
-    <div class='languages' rv-if='confirm.visible | eq false'>
+    <div class='languages fill-bg-color border-color' rv-if='confirm.visible | eq false'>
       <span rv-each-lang='languages' rv-on-click='onclick | bind lang.value'>{lang.name}</span>
     </div>
     <span class="time"></span>
@@ -9,13 +9,13 @@
     <nav id="nav-container">
 
         <!-- logo -->
-        <div class="logo">
+        <div class="logo-wrapper">
             <a href="https://binary.com" target="_blank">
-                <div>
-                    <img class="responsive" src="https://www.binary.com/images/pages/binary-symbol-logo.svg">
+                <div class="logo">
+                    <img class="responsive" src="<style-url>/images/logo/symbol.svg">
                 </div>
-                <div>
-                    <img class="responsive" src="https://www.binary.com/images/pages/binary-type-logo.svg" style="width:80%;">
+                <div class="binary-logo-text">
+                    <img class="responsive" src="<style-url>/images/logo/type.svg" style="width:80%;">
                 </div>
             </a>
         </div>
@@ -29,7 +29,7 @@
                         </li>
                         <li class="resources ltr-direction">
                             <a href="#" class="nav-dropdown-toggle">Resources <span class="nav-caret"></span></a>
-                            <ul>
+                            <ul class="primary-color">
                                 <li class="resourceIndex"><a href="#" class="assetIndex"><span class="ui-icon ui-icon-list"></span>Asset Index</a></li>
                                 <li class="resourceIndex"><a href="#" class="tradingTimes"><span class="ui-icon ui-icon-clock-b"></span>Trading Times</a></li>
                                 <!-- TODO - Build a better help nativation system for the following menu item -->
@@ -43,9 +43,9 @@
                                 <li><a href="#download" class="download"><span class="ui-icon ui-icon-databases"></span>View Historical Data</a></li>
                                 <li><a href="#selfexclusion" class="selfexclusion disabled"><span class="ui-icon ui-icon-gears"></span>Self-Exclusion</a></li>
                                 <li><a href="#"><span class="ui-icon ui-icon-image"></span>Chart Themes<span class="nav-submenu-caret"></span></a>
-                                    <ul>
+                                    <ul class="primary-color">
                                         <li> <a href="#">Pre-Defined<span class="nav-submenu-caret"></span></a>
-                                            <ul>
+                                            <ul class="primary-color">
                                                 <li> <a href="#theme_dark_blue" class="theme_dark_blue">Dark Blue</a> </li>
                                                 <li> <a href="#theme_dark_green" class="theme_dark_green">Dark Green</a> </li>
                                                 <li> <a href="#theme_dark_unica" class="theme_dark_unica">Dark Unica</a> </li>
@@ -64,7 +64,7 @@
                         </li>
                         <li class="windows ltr-direction">
                             <a href="#" class="nav-dropdown-toggle">Windows <span class="nav-caret"></span></a>
-                            <ul>
+                            <ul class="primary-color">
                                 <li><a href="#" class="tile"><span class="ui-icon ui-icon-view-icons"></span>Tile</a></li>
                                 <li><a href="#" class="closeAll"><span class="ui-icon ui-icon-closethick"></span>Close all</a></li>
                             </ul>
@@ -75,7 +75,7 @@
                                 <span class="nav-caret"></span> <br/>
                                 <span class="balance"></span>
                             </a>
-                            <ul>
+                            <ul class="primary-color">
                                 <li class='upgrade-account'>
                                   <a href="#" class="real-account">
                                     <span class="ui-icon ui-icon-arrowthick-1-e"></span>

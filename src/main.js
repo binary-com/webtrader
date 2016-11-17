@@ -30,7 +30,8 @@ requirejs.config({
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level',
-        'paralleljs' : 'lib/parallel_js/lib/parallel'
+        'paralleljs' : 'lib/parallel_js/lib/parallel',
+        'binary-style' : '<style-url>/binary'
     },
     map: {
         '*': {
@@ -47,7 +48,7 @@ requirejs.config({
             deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']
         },
         "jquery-ui": {
-            deps: ["jquery"]
+            deps: ["jquery","css!binary-style"]
         },
         "highstock": {
             deps: ["jquery"]
