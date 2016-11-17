@@ -5,14 +5,14 @@ msgstr ""
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
 "PO-Revision-Date: 2016-10-25 20:57+0000\n"
 "Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
@@ -57,9 +57,6 @@ msgstr ""
 "денег. Ни при каких обстоятельствах Binary.com не будет нести "
 "ответственности за транзакции, осуществляемые между клиентами и платёжными "
 "агентами"
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- title: Страница не найдена permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Штрих -DI"
@@ -204,6 +201,9 @@ msgstr "Тип СС ADX"
 
 msgid "ADX Stroke"
 msgstr "Штрих ADX"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "Период ATR"
@@ -423,6 +423,9 @@ msgstr "Выберите способ вывода средств"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Нажмите на Тест"
 
@@ -582,8 +585,11 @@ msgstr "Удалить"
 msgid "Delete level(s)"
 msgstr "Удалить уровень (уровни)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "Демо-ролик для партнёров о доступе к графикам Binary.com в IFRAME"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "Демо-ролик для партнёров о доступе к графикам Webtrader в IFRAME"
 
 msgid "Deposit funds"
 msgstr "Пополнить счет"
@@ -597,6 +603,9 @@ msgstr "Опишите, для чего нужен данный ключ, что
 msgid "Description"
 msgstr "Описание"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Цифры"
 
@@ -605,6 +614,9 @@ msgstr "Хотите установить расширение Webtrader для 
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Готово. Средства переведены платёжному агенту"
@@ -662,6 +674,9 @@ msgstr "Продолжит."
 
 msgid "EMA"
 msgstr "ЭСС"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "Граница"
@@ -851,6 +866,9 @@ msgstr "Горизонтальная линия"
 msgid "Horizontal line"
 msgstr "Горизонтальная линия"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Часы"
 
@@ -1019,6 +1037,9 @@ msgstr "Ссылка"
 
 msgid "Load chart template"
 msgstr "Загрузить шаблон графика"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "Идёт загрузка"
@@ -1192,6 +1213,9 @@ msgstr "Минимум 6 символов и минимум 1 цифра"
 
 msgid "Minus the agent's commission"
 msgstr "Минус комиссия агента"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -1389,6 +1413,9 @@ msgstr "Более 3 лет"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1916,6 +1943,12 @@ msgstr "Таблица"
 msgid "Tel"
 msgstr "Тел"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "Название шаблона"
 
@@ -2034,6 +2067,9 @@ msgstr ""
 "Чтобы вывести средства, пожалуйста, введите специальный проверочный код, "
 "отправленный на Ваш электронный адрес"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Ключ"
 
@@ -2134,6 +2170,9 @@ msgstr "Объём покупок"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"
 
@@ -2167,6 +2206,9 @@ msgid ""
 msgstr ""
 "Нажмите на кнопку \"Сохранить как ...\", чтобы сохранить настройки графика, "
 "его вид, период времени, индикаторы и параметры сравнения"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
@@ -2516,6 +2558,10 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Прибыль"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr ""
+#~ "--- title: Страница не найдена permalink: /404.html excerpt: \"\" ---"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "Время исключения не может быть менее 6 месяцев"
