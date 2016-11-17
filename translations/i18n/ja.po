@@ -579,8 +579,8 @@ msgstr "削除"
 msgid "Delete level(s)"
 msgstr "レベルを削除"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "IFRAME内のBinary.comチャートにアクセスするアフィリエイトデモ"
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "IFRAME内のWebtraderチャートにアクセスするアフィリエイトデモ"
 
 msgid "Deposit funds"
 msgstr "資金のご入金"

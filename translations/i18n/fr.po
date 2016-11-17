@@ -583,9 +583,9 @@ msgstr "Supprimer"
 msgid "Delete level(s)"
 msgstr "Supprimer le(s) niveau(x)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr ""
-"Démonstration pour les affiliés souhaitant accéder aux graphiques Binary.com "
+"Démonstration pour les affiliés souhaitant accéder aux graphiques Webtrader "
 "en IFRAME"
 
 msgid "Deposit funds"

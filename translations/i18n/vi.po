@@ -590,8 +590,8 @@ msgstr "Xóa bỏ"
 msgid "Delete level(s)"
 msgstr "Xóa level(s)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "Thử nghiệm cho liên kết tới truy cập bảng Binary.com trong IFRAME"
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "Thử nghiệm cho liên kết tới truy cập bảng Webtrader trong IFRAME"
 
 msgid "Deposit funds"
 msgstr "Khoản tiền đặt cọc"

@@ -582,9 +582,9 @@ msgstr "Eliminar"
 msgid "Delete level(s)"
 msgstr "Borrar nivel(es)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr ""
-"Demo para que los afiliados accedan a los gráficos Binary.com en IFRAME"
+"Demo para que los afiliados accedan a los gráficos Webtrader en IFRAME"
 
 msgid "Deposit funds"
 msgstr "Depositar fondos"

@@ -582,8 +582,8 @@ msgstr "Удалить"
 msgid "Delete level(s)"
 msgstr "Удалить уровень (уровни)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "Демо-ролик для партнёров о доступе к графикам Binary.com в IFRAME"
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "Демо-ролик для партнёров о доступе к графикам Webtrader в IFRAME"
 
 msgid "Deposit funds"
 msgstr "Пополнить счет"

@@ -573,8 +573,8 @@ msgstr "删除"
 msgid "Delete level(s)"
 msgstr "删除水平"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "在IFRAME查看联盟会员访问Binary.com图表的演示"
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "在IFRAME查看联盟会员访问Webtrader图表的演示"
 
 msgid "Deposit funds"
 msgstr "存入资金"

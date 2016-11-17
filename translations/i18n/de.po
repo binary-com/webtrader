@@ -584,9 +584,9 @@ msgstr "Löschen"
 msgid "Delete level(s)"
 msgstr "Stand (Stände) löschen"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr ""
-"Demo für Geschäftspartner, um auf Binary.com Charts in IFRAME zuzugreifen"
+"Demo für Geschäftspartner, um auf Webtrader Charts in IFRAME zuzugreifen"
 
 msgid "Deposit funds"
 msgstr "Geld einzahlen"
