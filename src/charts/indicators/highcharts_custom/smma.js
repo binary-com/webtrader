@@ -15,7 +15,7 @@ SMMA = function (data, options, indicators) {
          //SMMA(i) — is the smoothed moving average of the current bar (except for the first one);
          //CLOSE(i) — is the current closing price;
          //N — is the smoothing period.*/
-        var preSma = this.indicatorData[index - 1].value;
+        var preSma = this.indicatorData[index - 1].value || 0;
         var preSum = preSma * this.options.period;
         var smmaValue = (preSum - preSma + this.indicators.getIndicatorOrPriceValue(data[index], this.options.appliedTo)) / this.options.period;
         return toFixed(smmaValue, 4);
@@ -38,6 +38,12 @@ SMMA = function (data, options, indicators) {
         }
         this.priceData.push(data[index]);
     }
+    /* hide entries that are 0 */
+    this.indicatorData.forEach(function(entry) {
+      if(entry.value === 0) {
+        entry.value = null;
+      }
+    });
 };
 
 SMMA.prototype = Object.create(IndicatorBase.prototype);

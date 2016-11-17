@@ -2,7 +2,7 @@
  * Created by arnab on 2/16/15.
  */
 
-define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, chartWindow, charts, moment, chartingRequestMap) {
+define(['jquery', 'common/rivetsExtra', 'lodash', "charts/chartWindow", "charts/charts", 'moment', 'charts/chartingRequestMap', "common/util"], function($, rv, _, chartWindow, charts, moment, chartingRequestMap) {
 
     var state = [], view = [], template_manager = {}, stringWidth= {}, isListenerAdded = false;
 
@@ -155,14 +155,13 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
         stringWidth.inst = getWidth(instrument_name)+20;
     }
 
-    function preLoadImages(){
-        chartType_arr.forEach(function(chartType){
-            if(chartType.value !== "table")
-                new Image().src="images/" + chartType.value + "-w.svg";
-        });
-        new Image().src="images/share-w.svg";
-        new Image().src="images/drawing-w.svg";
-        new Image().src="images/chart_template-w.svg";
+    function toggleIcon (ele,active) {
+        ele = $(ele);
+        var cls = ele.attr("class");
+        ele.toggleClass(cls);
+        var type = cls.split("-")[0];
+        cls = active===true ? type + "-w-icon" : type + "-icon";
+        ele.toggleClass(cls);
     }
 
     return {
@@ -215,16 +214,17 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
                 };
                 state[m_newTabId].toggleChartTypeSelector = function(event, scope) {
                     var temp = !scope.showChartTypeSelector;
-                    var ele = $("#" + scope.newTabId + " .chart_type .img img")[0];
+                    var ele = $("#" + scope.newTabId + " .chart_type .img span")[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showChartTypeSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showChartTypeSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
+                    
                 };
 
                 state[m_newTabId].addRemoveIndicator = function(event, scope) {
@@ -288,15 +288,15 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleDrawingToolSelector = function(event, scope) {
                     var temp = !scope.showDrawingToolSelector;
-                    var ele = $("#" + scope.newTabId + ' .drawButton .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .drawButton .img span')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showDrawingToolSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showDrawingToolSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
@@ -313,29 +313,29 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 state[m_newTabId].toggleExportSelector = function(event, scope) {
                     var temp = !scope.showExportSelector;
-                    var ele = $("#" + scope.newTabId + ' .shareButton .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .shareButton .img span')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showExportSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showExportSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
                 state[m_newTabId].toggleLoadSaveSelector = function(event, scope) {
                     var temp = !scope.showLoadSaveSelector;
-                    var ele = $("#" + scope.newTabId + ' .templateButton .img img')[0];
+                    var ele = $("#" + scope.newTabId + ' .templateButton .img span')[0];
                     if(temp==true && event){
                         hideOverlays(scope);
                         scope.showLoadSaveSelector = temp;
-                        ele.src = ele.src.replace(".svg","-w.svg");
+                        toggleIcon(ele,true);
                         event.originalEvent.scope = scope.newTabId;
                     } else{
                         scope.showLoadSaveSelector = false;
-                        ele.src = ele.src.replace("-w","");
+                        toggleIcon(ele,false);
                     }
                 };
 
@@ -388,16 +388,13 @@ define(['jquery', 'common/rivetsExtra', "charts/chartWindow", "charts/charts", '
 
                 // Add event only once.
                 !isListenerAdded && $('body').on('click', function(event){
-                    for (tab in state){
+                  _.forEach(state, function(tab) {
                         if(event.originalEvent && tab != event.originalEvent.scope)
                             hideOverlays(state[tab]);
-                    }
+                  });
                 });
 
                 isListenerAdded = true;
-
-                // Preload images for better UI
-                preLoadImages();
 
                 var $html = $(html).i18n();
 

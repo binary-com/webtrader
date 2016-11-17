@@ -5,6 +5,11 @@ body {
 }
 
 #topbar {
+    width: 100%;
+    line-height: 1;
+    font-size: 100%;
+    text-align: right;
+    padding: 3px 0;
     height: 20px;
 }
 
@@ -166,10 +171,6 @@ body {
     padding: 10px 30px;
 }
 
-.nav-normal-menu li > ul li a:hover {
-    opacity: 0.75;
-}
-
 .nav-normal-menu li > ul.nav-closed {
     display: none;
 }
@@ -214,9 +215,6 @@ body {
   position: absolute;
   right: 10px;
     top: 40px;
-}
-#nav-container .login:hover {
-  background: #2a3052;
 }
 
 #nav-container .login span.ui-icon {
@@ -266,17 +264,16 @@ body {
     margin : 0 0 0;
 }
 
-#header .logo {
+#header .logo-wrapper {
     position: absolute;
     left: 0px;
     top: 30px;
 }
 
-#header .logo div:nth-child(1) {
-    display: inline-block;
+#header .logo-wrapper div:nth-child(1) {
     margin: 10px 10px;
 }
-#header .logo div:nth-child(2) {
+#header .logo-wrapper div:nth-child(2) {
     display: inline-block;
     margin: -12px;
 }
