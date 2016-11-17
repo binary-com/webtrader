@@ -100,7 +100,6 @@ function getParameterByNameFromURL(name) {
  * @param name
  */
 function getParameterByName(name) {
-    console.log(111, name, window[name]);
     if (window[name]) return window[name];
     else return getParameterByNameFromURL(name);
 }
@@ -170,25 +169,26 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
     return new Date(y, m - 1, d).getTime() / 1000;
 }
 
-function formatNumber(number) {
-    return new Intl.NumberFormat(i18n_name.replace("_","-")).format(number);
-}
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-    var currency_symbols = {
-      'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
-      'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
-      'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
-      'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
-      'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
-      'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
-      'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
-    };
-    float = new Intl.NumberFormat(i18n_name.replace("_","-")).format(float);
-    if(currency){
-      float = (currency_symbols[currency] || currency) + float;
-    }
-    return float;
+	var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+	var currency_symbols = {
+		'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
+		'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
+		'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
+		'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
+		'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
+		'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
+		'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
+	};
+	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
+						style: 'decimal',
+						minimumFractionDigits: 2,
+					}).format(float);
+	if(currency){
+		float = (currency_symbols[currency] || currency) + float;
+	}
+	return float;
 }
 
 function sortAlphaNum(property) {
