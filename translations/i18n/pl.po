@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-19 00:06+0200\n"
 "PO-Revision-Date: 2016-11-10 21:07+0000\n"
 "Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/pl/>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,10 +56,6 @@ msgstr ""
 "się sprawdzenie danych pośredników płatności przed wysłaniem do nich "
 "pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za transakcje "
 "zawarte między klientami a pośrednikami płatności"
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr ""
-"--- title: Nie znaleziono strony permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Linia -DI"
@@ -204,6 +200,9 @@ msgstr "Rodzaj ADX MA"
 
 msgid "ADX Stroke"
 msgstr "Linia ADX"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "Okres ATR"
@@ -422,6 +421,9 @@ msgstr "Wybierz preferowaną metodę wypłaty"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Test Clickjacking"
 
@@ -583,8 +585,11 @@ msgstr "Usuń"
 msgid "Delete level(s)"
 msgstr "Usuń poziom(y)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "Wersja demo dla partnerów umożliwiająca dostęp do wykresów w IFRAME"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr ""
 
 msgid "Deposit funds"
 msgstr "Wpłać środki"
@@ -598,6 +603,9 @@ msgstr "Opisz zastosowanie tokenu, aby później z łatwością go odnaleźć"
 msgid "Description"
 msgstr "Opis"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Cyfry"
 
@@ -609,6 +617,9 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "Nie masz jeszcze konta? Zarejestruj się i otrzymaj 10 000 $ na wirtualnym "
 "koncie"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Gotowe. Trwa przelewanie środków do pośrednika płatności"
@@ -666,6 +677,9 @@ msgstr "Czas trwania"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "Krawędź"
@@ -855,6 +869,9 @@ msgstr "Linia pozioma"
 msgid "Horizontal line"
 msgstr "Linia pozioma"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Godziny"
 
@@ -1024,6 +1041,9 @@ msgstr "Łącze"
 
 msgid "Load chart template"
 msgstr "Załaduj szablon wykresu"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "Ładowanie"
@@ -1195,6 +1215,9 @@ msgstr "Minimum 6 znaków i przynajmniej jedna cyfra"
 
 msgid "Minus the agent's commission"
 msgstr "Minus prowizja pośrednika"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minuty"
@@ -1391,6 +1414,9 @@ msgstr "Ponad 3 lata"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1919,6 +1945,12 @@ msgstr "Tabela"
 msgid "Tel"
 msgstr "Tel."
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "Nazwa szablonu"
 
@@ -2039,6 +2071,9 @@ msgstr ""
 "Aby wypłacić środki, wpisz specjalny kod weryfikacyjny wysłany na Twój adres "
 "e-mail"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Token"
 
@@ -2139,6 +2174,9 @@ msgstr "Obrót"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "Niestety Twoja przeglądarka ich nie obsługuje"
 
@@ -2172,6 +2210,9 @@ msgid ""
 msgstr ""
 "Użyj przycisku „Zapisz jako ...”, aby zapisać ustawienia wykresu, jego "
 "rodzaj, a także przedział czasu, wskaźniki i porównania"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Kod weryfikacyjny został wysłany na Twój adres e-mail"
@@ -2525,6 +2566,13 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Zwrot"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr ""
+#~ "--- title: Nie znaleziono strony permalink: /404.html excerpt: \"\" ---"
+
+#~ msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+#~ msgstr "Wersja demo dla partnerów umożliwiająca dostęp do wykresów w IFRAME"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "zas wyłączenia nie może być krótszy niż 6 miesięcy"

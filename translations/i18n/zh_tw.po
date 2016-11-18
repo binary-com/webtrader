@@ -51,9 +51,6 @@ msgstr ""
 "來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情"
 "況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"
-
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
 
@@ -197,6 +194,9 @@ msgstr "ADX MA 類型"
 
 msgid "ADX Stroke"
 msgstr "ADX 波幅"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "ATR 期限"
@@ -414,6 +414,9 @@ msgstr "選擇您較傾向的取款方法"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "點擊劫持測試"
 
@@ -573,8 +576,11 @@ msgstr "刪除"
 msgid "Delete level(s)"
 msgstr "刪除水平"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "採用IFRAME演示聯盟會員存取Binary.com圖表"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr ""
 
 msgid "Deposit funds"
 msgstr "存入資金"
@@ -588,6 +594,9 @@ msgstr "權杖用途說明，以備稍後找尋"
 msgid "Description"
 msgstr "說明"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "數字"
 
@@ -596,6 +605,9 @@ msgstr "是否安裝Webtrader chrome擴充套件?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。資金已轉給支付代理"
@@ -653,6 +665,9 @@ msgstr "期間"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "邊緣"
@@ -840,6 +855,9 @@ msgstr "水平線"
 msgid "Horizontal line"
 msgstr "水平線"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "小時"
 
@@ -882,7 +900,9 @@ msgid ""
 "you in order to assess whether a given product or service is appropriate for "
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
-msgstr "為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
+msgstr ""
+"為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也"
+"就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
@@ -997,6 +1017,9 @@ msgstr "連結"
 msgid "Load chart template"
 msgstr "載入圖表範本"
 
+msgid "Load trade template"
+msgstr ""
+
 msgid "Loading"
 msgstr "載入"
 
@@ -1103,8 +1126,9 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
-"在送出要求前，請確保您已同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資金將從您的帳戶轉給您選擇的支付代理。代理將通過您傾向的支付方式將相應金額（扣除佣"
-"金）支付給您"
+"在送出要求前，請確保您已同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資金"
+"將從您的帳戶轉給您選擇的支付代理。代理將通過您傾向的支付方式將相應金額（扣除"
+"佣金）支付給您"
 
 msgid "Mar"
 msgstr "三月"
@@ -1162,6 +1186,9 @@ msgstr "需至少6個字元和1個數字"
 
 msgid "Minus the agent's commission"
 msgstr "減去代理佣金"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分鐘"
@@ -1241,7 +1268,9 @@ msgstr "請注意，權杖可能擁有一或多個上述領域"
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
-msgstr "請注意:合約將在我們的伺服器收到請求時以當時的市場價格賣出。此價格可能與報價有差異"
+msgstr ""
+"請注意:合約將在我們的伺服器收到請求時以當時的市場價格賣出。此價格可能與報價有"
+"差異"
 
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
@@ -1325,7 +1354,9 @@ msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
-msgstr "二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免此種風險，我們會定期向您提供交易和財務的實況簡報"
+msgstr ""
+"二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免此種風險，我們"
+"會定期向您提供交易和財務的實況簡報"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "可選欄位，不超過 20 個字元，並且不能包含「+」"
@@ -1347,6 +1378,9 @@ msgstr "3年以上"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1917,7 +1951,8 @@ msgid ""
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
-"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正，並正確結算合約，否則合約將取消，投注金額也將被退還。虛擬資金合約將取消，投注金額也將被退還"
+"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正，並正確結算合約，否則"
+"合約將取消，投注金額也將被退還。虛擬資金合約將取消，投注金額也將被退還"
 
 msgid "There was an error"
 msgstr "出現錯誤"
@@ -1983,6 +2018,9 @@ msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
 msgstr "如要提款，請輸入剛發送到您郵箱的權杖驗證碼"
+
+msgid "Today"
+msgstr ""
 
 msgid "Token"
 msgstr "權杖"
@@ -2051,7 +2089,8 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
-"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，您也可以傳送簽名信或傳真到我們的客服團隊。設定好後，您將只能收緊限制。限制只能在7天后取消或放"
+"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，您也可以傳送簽名"
+"信或傳真到我們的客服團隊。設定好後，您將只能收緊限制。限制只能在7天后取消或放"
 "寬，而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
 
 msgid "Tradingview for Binary.com"
@@ -2202,7 +2241,9 @@ msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
-msgstr "使用各OAuth伺服器進行驗證前，須先註冊webtrader 並領取應用程式ID。欲知詳細資訊，請前往此處參閱OAuth資料"
+msgstr ""
+"使用各OAuth伺服器進行驗證前，須先註冊webtrader 並領取應用程式ID。欲知詳細資"
+"訊，請前往此處參閱OAuth資料"
 
 msgid "You haven't saved any templates yet"
 msgstr "您尚未儲存任何範本"
@@ -2256,7 +2297,9 @@ msgid ""
 "be exposing yourself to risks (which may be significant, including the risk "
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
-msgstr "以下並繼續開立帳戶，請注意您可能會冒一些風險（可能很嚴重，甚至損失整個投資資金），而您可能缺乏正確評估或化解風險的知識及經驗"
+msgstr ""
+"以下並繼續開立帳戶，請注意您可能會冒一些風險（可能很嚴重，甚至損失整個投資資"
+"金），而您可能缺乏正確評估或化解風險的知識及經驗"
 
 msgid "between"
 msgstr "之間"
@@ -2337,7 +2380,9 @@ msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
-msgstr "是Binary的先進桌面交易平台。其多視窗式介面提供了最大的彈性，以符合活躍員通過桌面電腦交易的需求"
+msgstr ""
+"是Binary的先進桌面交易平台。其多視窗式介面提供了最大的彈性，以符合活躍員通過"
+"桌面電腦交易的需求"
 
 msgid "is required. Current spread"
 msgstr "是必須的。目前價差"
@@ -2446,6 +2491,12 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回報率"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"
+
+#~ msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+#~ msgstr "採用IFRAME演示聯盟會員存取Binary.com圖表"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "禁止時間不能少於6個月"
