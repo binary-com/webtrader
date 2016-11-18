@@ -388,7 +388,7 @@ define(['jquery', 'common/rivetsExtra', 'lodash', "charts/chartWindow", "charts/
 
                 // Add event only once.
                 !isListenerAdded && $('body').on('click', function(event){
-                  _.forEach(state, function(tab) {
+                  _.forEach(Object.keys(state), function(tab) {
                         if(event.originalEvent && tab != event.originalEvent.scope)
                             hideOverlays(state[tab]);
                   });
