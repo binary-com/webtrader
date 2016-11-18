@@ -435,6 +435,9 @@ select + .ui-selectmenu-button { border-radius: 3px !important;}
     z-index: +1000;
 }
 
+#doorbell-error { color: red; }
+#doorbell-form textarea { outline: 0; }
+
 /*hide input buttons*/
 .ui-spinner-button {
   display: none;
