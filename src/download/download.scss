@@ -48,8 +48,12 @@
 
     button {
       &.img{
-        background: #f3f1f2;
         padding: 5px;
+
+        div {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
 

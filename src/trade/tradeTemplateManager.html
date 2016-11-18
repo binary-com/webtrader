@@ -1,5 +1,5 @@
-<div class='menu' rv-if='route.value | eq "menu"'>
-  <a class="button-secondary" rv-on-click='menu.templates'><span>Load chart template</span></a>
+<div class='menu' rv-show='route.value | eq "menu"'>
+  <a class="button-secondary" rv-on-click='menu.templates'><span>Load trade template</span></a>
   <a class="button-secondary" rv-on-click='templates.confirm | bind null' rv-class-button-disabled='templates.current | negate'><span>Save changes</span></a>
   <a class="button-secondary" rv-on-click='menu.save_as'><span>Save as...</span></a>
   <a class="button-secondary" rv-on-click='menu.open_file_selector'><span>Upload template</span></a>
@@ -9,11 +9,11 @@
   <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
     <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
   </span>
-  <div rv-if='templates.array | prop "length" | negate'>
+  <div rv-show='templates.array | prop "length" | negate'>
     <div>You haven't saved any templates yet.</div><br/>
-    <div>Use the "Save as ..." button to save the chart settings, type, time period, indicators and comparisons.</div>
+    <div>Use the "Save as ..." button to save the trade settings.</div>
   </div>
-  <div rv-if='templates.array | prop "length"'>
+  <div rv-show='templates.array | prop "length"'>
     <div rv-each-tmpl='templates.array' class='template'>
       <div class='name' rv-class-active='tmpl.name | eq templates.current.name' rv-on-click='templates.apply| bind tmpl'>{tmpl.name}</div>
       <a class="options" href="#" rv-on-click='templates.rename | bind tmpl'>Rename</a>
@@ -23,7 +23,7 @@
   </div>
 </div>
 
-<div class='save-as' rv-if='route.value | eq "save-as"'>
+<div class='save-as' rv-show='route.value | eq "save-as"'>
     <span class='back-arrow' rv-on-click='route.update | bind "menu"'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
     </span>
@@ -40,7 +40,7 @@
     </form>
 </div>
 
-<div class='rename' rv-if='route.value | eq "rename"'>
+<div class='rename' rv-show='route.value | eq "rename"'>
     <span class='back-arrow' rv-on-click='route.update | bind "templates"'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
     </span>
@@ -56,7 +56,7 @@
               rv-css-opacity='templates.rename_value | trim | eq "" | ternary 0.5 1' >Rename</button>
     </form>
 </div>
-<div class='confirm' rv-if='route.value | eq "confirm"'>
+<div class='confirm' rv-show='route.value | eq "confirm"'>
     <span class='back-arrow' rv-on-click='route.update | bind templates.confirm_prevMenu'>
       <span class='ui-icon ui-icon-triangle-1-w'></span> <a>Back</a>
     </span>

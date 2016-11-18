@@ -160,6 +160,14 @@ module.exports = function (grunt) {
                     from: '<description>',
                     to: "<%=pkg.description%>"
                 }]
+            },
+            style : {
+                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/404.html'],
+                overwrite: true,
+                replacements: [{
+                    from: '<style-url>',
+                    to: 'https://style.binary.com'
+                }]  
             }
         },
         cssmin: {
@@ -228,7 +236,7 @@ module.exports = function (grunt) {
                     base: 'dist/compressed',
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
+                    message: 'Commit v<%=pkg.version%> from TravisCI for [' + process.env.TRAVIS_BRANCH + ']'
                 },
                 src: ['**/*']
             },
@@ -236,7 +244,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod'
+                    message: 'Commiting v<%=pkg.version%> using deploy cmd'
                 },
                 src: ['**/*']
             },
@@ -317,9 +325,9 @@ module.exports = function (grunt) {
         removelogging: {
             dist: {
                 src : ["dist/compressed/**/*.js"],
-				options : {
-					"verbose" : false
-				}
+                options : {
+                  "verbose" : false
+                }
             }
         },
         watch: {
@@ -459,7 +467,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 

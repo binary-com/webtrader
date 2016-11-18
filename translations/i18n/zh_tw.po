@@ -1873,6 +1873,12 @@ msgstr "表"
 msgid "Tel"
 msgstr "電話"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "範本名稱"
 
@@ -2069,6 +2075,9 @@ msgstr "交易額"
 msgid "USD"
 msgstr "美元"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遺憾。您的瀏覽器不支持這些程式"
 
@@ -2100,6 +2109,9 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr "使用「另存為...」按鈕儲存圖表設置、類型、時間段、指標和比較"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "驗證代碼已發送到您的郵箱"

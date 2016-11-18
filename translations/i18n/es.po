@@ -57,9 +57,6 @@ msgstr ""
 "ninguna circunstancia por las transacciones realizadas entre los clientes y "
 "los agentes de pago"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "---título: Página no encontrada permalink: /404.html extracto: \"\"---"
-
 msgid "-DI Stroke"
 msgstr "-DI Stroke"
 
@@ -203,6 +200,9 @@ msgstr "Tipo ADX MA"
 
 msgid "ADX Stroke"
 msgstr "Stroke ADX"
+
+msgid "AM"
+msgstr ""
 
 msgid "ATR Period"
 msgstr "Período ATR"
@@ -423,6 +423,9 @@ msgstr "Seleccione el método de retirada preferido"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Prueba Click Jacking"
 
@@ -582,9 +585,11 @@ msgstr "Eliminar"
 msgid "Delete level(s)"
 msgstr "Borrar nivel(es)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
-"Demo para que los afiliados accedan a los gráficos Binary.com en IFRAME"
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "Demo para que los afiliados accedan a los gráficos Webtrader en IFRAME"
 
 msgid "Deposit funds"
 msgstr "Depositar fondos"
@@ -598,6 +603,9 @@ msgstr "Describir para qué es este token para encontrarlo más tarde"
 msgid "Description"
 msgstr "Descripción"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Dígitos"
 
@@ -608,6 +616,9 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "¿Todavía no tiene una cuenta? Regístrese y obtenga una cuenta virtual de "
 "$10.000"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Hecho. Los fondos están siendo transferidos al agente de pago"
@@ -666,6 +677,9 @@ msgstr "Duración"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr ""
 
 msgid "Edge"
 msgstr "Borde"
@@ -855,6 +869,9 @@ msgstr "Línea horizontal"
 msgid "Horizontal line"
 msgstr "Línea horizontal"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Horas"
 
@@ -1026,6 +1043,9 @@ msgstr "Enlace"
 msgid "Load chart template"
 msgstr "Cargar plantilla del gráfico"
 
+msgid "Load trade template"
+msgstr ""
+
 msgid "Loading"
 msgstr "Cargando"
 
@@ -1194,6 +1214,9 @@ msgstr "Mínimo de 6 caracteres y debe contener al menos 1 dígito"
 
 msgid "Minus the agent's commission"
 msgstr "Menos la comisión del agente"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minutos"
@@ -1391,6 +1414,9 @@ msgstr "Más de 3 años"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr ""
 
 msgid "PNG"
 msgstr "PNG"
@@ -1922,6 +1948,12 @@ msgstr "Tabla"
 msgid "Tel"
 msgstr "Tel"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "Nombre de la plantilla"
 
@@ -2041,6 +2073,9 @@ msgstr ""
 "Para retirar fondos, introduzca el token de verificación especial que le "
 "hemos enviado por correo electrónico"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Token"
 
@@ -2142,6 +2177,9 @@ msgstr "Volumen de ventas"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "Desafortunadamente, su navegador no es compatible"
 
@@ -2176,6 +2214,9 @@ msgid ""
 msgstr ""
 "Utilice el botón de \"Guardar como...\" para guardar los ajustes del "
 "gráfico, el tipo, el período de tiempo, los indicadores y las comparaciones"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "El código de verificación ha sido enviado a su correo electrónico"
@@ -2526,6 +2567,10 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retorno"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr ""
+#~ "---título: Página no encontrada permalink: /404.html extracto: \"\"---"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "Tiempo de exclusión no puede ser inferior a 6 meses"

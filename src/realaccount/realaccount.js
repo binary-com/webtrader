@@ -44,7 +44,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           minimizable: true,
           maximizable: false,
           width: 360,
-          height: 950,
+          height: 1010,
           'data-authorized': true,
           close: function () {
             real_win.dialog('destroy');
@@ -330,8 +330,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
       state.route.update = function(route){
         var routes = {
-          'user' : 950,
-          'financial': 1390,
+          'user' : 1010,
+          'financial': 1540
         };
         state.route.value = route;
         real_win.dialog('option', 'height', routes[route]);
@@ -344,7 +344,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       var residence_promise = liveapi.send({get_settings: 1})
              .then(function(data){
                data = data.get_settings;
-               state.user.salutation = data.salutation;
+               state.user.salutation = data.salutation || state.user.salutation;
                state.user.first_name = data.first_name;
                state.user.last_name = data.last_name;
                state.user.date_of_birth = moment.unix(data.date_of_birth).format("YYYY-MM-DD");

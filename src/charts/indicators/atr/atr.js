@@ -208,8 +208,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
          * @param before_add_cb - callback that will be called just before adding the indicator
          */
         open : function ( containerIDWithHash, before_add_cb ) {
+            before_add_callback = before_add_cb || before_add_callback;
             var open = function() {
-              before_add_callback = before_add_cb;
               $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
             };
 
