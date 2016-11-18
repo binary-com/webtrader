@@ -28,7 +28,7 @@ TRIMA = function(data, options, indicators) {
             var trima = (preTrima * (Nm - 1) + price) / Nm;
             this.indicatorData.push({ time : data[index].time, value : toFixed(trima, 4) });
         } else {
-            this.indicatorData.push({ time : data[index].time, value : 0.0 });
+            this.indicatorData.push({ time : data[index].time, value : null });
         }
     }
 

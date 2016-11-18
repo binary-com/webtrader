@@ -16,7 +16,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
       if(chart.series.length > 0){
           indicator_values.forEach(function(ind){
             var id = ind.id;
-            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, name: ind.long_display_name, options: chart.series[0][id][0].options})
+            chart.series[0][id] && chart.series[0][id].forEach(function(entry) {
+              indicators.push({id: id, name: ind.long_display_name, options: entry.options})
+            });
           });
       }
 
@@ -271,11 +273,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             if ($.isFunction(onload)) {
                                 onload();
                             }
-                            if(isAffiliates() && hideFooter()){
+                            if(isAffiliates() && isHideFooter()){
                                 $(this.credits.element).remove();
                                 this.margin[2] = 5;
                                 this.spacing[2] = 0;
-                                console.log(this);
                             } else {
                                 this.credits.element.onclick = function() {
                                     window.open(

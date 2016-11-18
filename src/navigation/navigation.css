@@ -6,13 +6,11 @@ body {
 
 #topbar {
     width: 100%;
-    color: #fff;
     line-height: 1;
     font-size: 100%;
     text-align: right;
     padding: 3px 0;
     height: 20px;
-    background: #15212d;
 }
 
 #topbar span.lang {
@@ -30,11 +28,10 @@ body {
   width: 270px;
   height: 190px;
   position: absolute;
-  background: #f2f2f2;
   z-index: +2147483647; /* maximum zindex value */
   right: 0;
   top: 26px;
-  border-bottom: 5px solid #EA9800;
+  border-bottom: 5px solid;
   opacity: 0;
   transition: opacity 0.25s;
   pointer-events: none;
@@ -82,9 +79,6 @@ body {
 
 
 #header {
-    background: #2a3052;
-    border-top: 2px solid #394171;
-    border-bottom: 4px solid #e98024;
     height: 75px;
 }
 
@@ -132,7 +126,7 @@ body {
 }
 
 .nav-normal-menu li a:hover {
-    background-color: #3F476E;
+    opacity: 0.75;
 }
 
 .nav-normal-menu li a.disabled,
@@ -170,16 +164,11 @@ body {
 
 .nav-normal-menu li > ul li {
     float: none;
-    background-color: #3F476E;
 }
 
 .nav-normal-menu li > ul li a {
     font-size: 14px;
     padding: 10px 30px;
-}
-
-.nav-normal-menu li > ul li a:hover {
-    background-color: #273051;
 }
 
 .nav-normal-menu li > ul.nav-closed {
@@ -195,14 +184,6 @@ body {
 
 .nav-normal-menu li > ul.nav-closed {
     display: none;
-}
-
-.nav-normal-menu li:hover {
-    background-color: #3F476E;
-}
-
-.nav-normal-menu li > ul li:hover {
-    background-color: #273051;
 }
 
 /** carets **/
@@ -234,9 +215,6 @@ body {
   position: absolute;
   right: 10px;
     top: 40px;
-}
-#nav-container .login:hover {
-  background: #2a3052;
 }
 
 #nav-container .login span.ui-icon {
@@ -286,17 +264,18 @@ body {
     margin : 0 0 0;
 }
 
-#header .logo {
+#header .logo-wrapper {
     position: absolute;
     left: 0px;
     top: 30px;
 }
 
-#header .logo div:nth-child(1) {
+#header .logo-wrapper div:nth-child(1) {
     display: inline-block;
     margin: 10px 10px;
+    width: 18.7%;
 }
-#header .logo div:nth-child(2) {
+#header .logo-wrapper div:nth-child(2) {
     display: inline-block;
     margin: -12px;
 }

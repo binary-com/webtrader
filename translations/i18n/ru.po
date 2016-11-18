@@ -58,9 +58,6 @@ msgstr ""
 "ответственности за транзакции, осуществляемые между клиентами и платёжными "
 "агентами"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- title: Страница не найдена permalink: /404.html excerpt: \"\" ---"
-
 msgid "-DI Stroke"
 msgstr "Штрих -DI"
 

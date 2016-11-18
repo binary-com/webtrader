@@ -26,7 +26,7 @@ function isHideShare() {
     return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
 }
 
-function hideFooter(){
+function isHideFooter(){
   return getParameterByName('hideFooter') === true || (getParameterByName('hideFooter') + '').toLowerCase() == 'true';
 }
 
@@ -169,25 +169,26 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
     return new Date(y, m - 1, d).getTime() / 1000;
 }
 
-function formatNumber(number) {
-    return new Intl.NumberFormat(i18n_name.replace("_","-")).format(number);
-}
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-    var currency_symbols = {
-      'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
-      'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
-      'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
-      'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
-      'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
-      'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
-      'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
-    };
-    float = new Intl.NumberFormat(i18n_name.replace("_","-")).format(float);
-    if(currency){
-      float = (currency_symbols[currency] || currency) + float;
-    }
-    return float;
+	var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+	var currency_symbols = {
+		'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
+		'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
+		'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
+		'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
+		'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
+		'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
+		'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
+	};
+	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
+						style: 'decimal',
+						minimumFractionDigits: 2,
+					}).format(float);
+	if(currency){
+		float = (currency_symbols[currency] || currency) + float;
+	}
+	return float;
 }
 
 function sortAlphaNum(property) {
@@ -475,4 +476,24 @@ function setup_i18n_translation(dict) {
 
 function getAppURL() {
   return window.location.href.split("/v")[0];
+}
+
+/* type = 'text/csv;charset=utf-8;' */
+function download_file_in_browser(filename, type, content){
+            var blob = new Blob([content], { type: type });
+            if (navigator.msSaveBlob) { // IE 10+
+                navigator.msSaveBlob(blob, filename);
+            }
+            else {
+                var link = document.createElement("a");
+                if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                    var url = URL.createObjectURL(blob);
+                    link.setAttribute("href", url);
+                    link.setAttribute("download", filename);
+                    link.style.visibility = 'hidden';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
 }
