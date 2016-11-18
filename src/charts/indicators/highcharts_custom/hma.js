@@ -31,7 +31,10 @@ HMA = function(data, options, indicators) {
         appliedTo : indicators.CLOSE
     }, indicators);
     this.indicatorData = this.someTypeOfMa3.indicatorData;
-
+    this.indicatorData.forEach(function(entry) {
+      if(entry.value === 0)
+        entry.value = null;
+    })
 };
 
 HMA.prototype = Object.create(IndicatorBase.prototype);

@@ -54,10 +54,6 @@ msgstr ""
 "SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi "
 "Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka"
 
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr ""
-"--- judul: kutipan permalink Halaman Tidak Ditemukan: /404.html: \"\" ---"
-
 msgid "-DI Stroke"
 msgstr "Stroke -DI"
 
@@ -202,6 +198,9 @@ msgstr "Jenis ADX MA"
 msgid "ADX Stroke"
 msgstr "Stroke ADX"
 
+msgid "AM"
+msgstr ""
+
 msgid "ATR Period"
 msgstr "Periode ATR"
 
@@ -237,6 +236,10 @@ msgstr "Tambah level"
 
 msgid "Add/remove comparisons"
 msgstr "Tambah/hapus perbandingan"
+
+#, fuzzy
+msgid "Add/remove indicators"
+msgstr "Tambah indikator"
 
 msgid "Add/remove overlays"
 msgstr "Tambah/hapus overlays"
@@ -415,6 +418,9 @@ msgstr "Pilih metode penarikan pilihan Anda"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Klik Tes Jacking"
 
@@ -574,8 +580,11 @@ msgstr "Hapus"
 msgid "Delete level(s)"
 msgstr "Hapus level"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "Demo untuk affiliasi untuk mengakses grafik Binary.com dalam IFRAME"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "Demo untuk affiliasi untuk mengakses grafik Webtrader dalam IFRAME"
 
 msgid "Deposit funds"
 msgstr "Deposit dana"
@@ -589,6 +598,9 @@ msgstr "Jelaskan token apa ini untuk menemukannya nanti"
 msgid "Description"
 msgstr "Deskripsi"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Digits"
 
@@ -597,6 +609,9 @@ msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Selesai. Dana tersebut telah ditransfer ke agen pembayaran"
@@ -615,6 +630,10 @@ msgstr "Jenis Dobel MA"
 
 msgid "Double click the object to remove"
 msgstr "Klik dua kali untuk menghapus objek"
+
+#, fuzzy
+msgid "Download"
+msgstr "Download dalam"
 
 msgid "Download CSV"
 msgstr "Download CSV"
@@ -652,6 +671,9 @@ msgstr "Durasi"
 msgid "EMA"
 msgstr "EMA"
 
+msgid "EURUSD"
+msgstr ""
+
 msgid "Edge"
 msgstr "Edge"
 
@@ -673,6 +695,9 @@ msgstr "Waktu Akhir"
 msgid "Ends In/Out"
 msgstr "Ends In/Out"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
 
@@ -688,14 +713,15 @@ msgstr "Error downloading .csv"
 msgid "Error getting data for"
 msgstr "Error mendapatkan data untuk"
 
+#, fuzzy
+msgid "Error getting market information!"
+msgstr "Error mendapatkan data untuk"
+
 msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
 
 msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari website hingga"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Waktu pengecualian tidak dapat kurang dari 6 bulan"
 
 msgid "Exit Spot"
 msgstr "Spot Akhir"
@@ -753,6 +779,10 @@ msgstr "Harga akhir"
 
 msgid "Finance"
 msgstr "Keuangan"
+
+#, fuzzy
+msgid "Financial Account Opening form"
+msgstr "Pendaftaran akun riil"
 
 msgid "Financial information"
 msgstr "Informasi keuangan"
@@ -831,6 +861,9 @@ msgstr "Garis Horisontal"
 
 msgid "Horizontal line"
 msgstr "Garis horisontal"
+
+msgid "Hour"
+msgstr ""
 
 msgid "Hours"
 msgstr "Jam"
@@ -916,8 +949,14 @@ msgstr "Industri Tenaga Kerja"
 msgid "Instrument"
 msgstr "Instrumen"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr ""
+
 msgid "Instruments"
 msgstr "Instrumen"
+
+msgid "Invalid parameter(s)!"
+msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
@@ -990,6 +1029,9 @@ msgstr "Link"
 
 msgid "Load chart template"
 msgstr "Memuat template grafik"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "Loading"
@@ -1160,6 +1202,9 @@ msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
 
 msgid "Minus the agent's commission"
 msgstr "Minus komisi agen"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Menit"
@@ -1356,6 +1401,9 @@ msgstr "3 tahun lebih"
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PM"
+msgstr ""
+
 msgid "PNG"
 msgstr "PNG"
 
@@ -1425,6 +1473,9 @@ msgstr "Jawablah pertanyaan rahasia, dalam 4-50 karakter"
 msgid "Please choose at least one token scope"
 msgstr "Silakan pilih minimal satu jangkauan token"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
 "Silahkan konfirmasi rincian sebagai berikut untuk menyelesaikan transfer"
@@ -1447,40 +1498,11 @@ msgstr "Silakan masukkan email yang benar"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Silahkan masukkan tanggal dalam format YYYY-MM-DD"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Masukkan nilai integer positif antara 0 dan 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "Masukkan nilai integer positif untuk batasan kerugian 30 hari"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "Masukkan nilai integer positif untuk batasan turnover 30 hari"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "Masukkan nilai integer positif untuk batasan kerugian 7 hari"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "Masukkan nilai integer positif untuk batasan turnover 7 hari"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "Masukkan nilai integer positif untuk batasan kerugian harian"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "Masukkan nilai integer positif untuk batasan turnover harian"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "Masukkan nilai integer positif untuk batasan maksimal posisi berjalan"
-
 msgid "Please enter the token name"
 msgstr "Silahkan masukkan nama token"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "Silahkan masukkan kode verifikasi yang dikirim ke alamat email Anda"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
-"Silahkan masukkan nilai antara 0 hingga 99999 untuk batasan sesi durasi"
 
 msgid "Please enter your city address"
 msgstr "Masukkan alamat kota Anda"
@@ -1557,7 +1579,8 @@ msgstr "Ditetapkan"
 msgid "Preferred reality-check interval"
 msgstr "Interval cek-realitas yang dipilih"
 
-msgid "Press  Create token  button on the right to create your first token"
+#, fuzzy
+msgid "Press Create token button on the right to create your first token"
 msgstr ""
 "Tekan  tombol Membuat token  disebelah kanan untuk membuat token Anda "
 "terlebih dahulu"
@@ -1601,7 +1624,8 @@ msgstr "Waktu Beli"
 msgid "Read"
 msgstr "Baca"
 
-msgid "Real account opening"
+#, fuzzy
+msgid "Real Money Account Opening"
 msgstr "Pendaftaran akun riil"
 
 msgid "Reality check"
@@ -1910,6 +1934,12 @@ msgstr "Tabel"
 msgid "Tel"
 msgstr "Tel"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "Nama template"
 
@@ -2029,6 +2059,9 @@ msgstr ""
 "Untuk menarik dana silahkan masukkan token verifikasi khusus yang kami baru "
 "saja emailkan kepada Anda"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Token"
 
@@ -2130,6 +2163,9 @@ msgstr "Turnover"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "Sayangnya, browser Anda tidak mendukung mereka"
 
@@ -2148,6 +2184,10 @@ msgstr "Pembaruan Pengaturan"
 msgid "Upgrade to a Real Account"
 msgstr "Mengupgrade ke Akun Riil"
 
+#, fuzzy
+msgid "Upload template"
+msgstr "Memuat template grafik"
+
 msgid "Upper Band Stroke"
 msgstr "Stroke Upper Band"
 
@@ -2160,6 +2200,9 @@ msgid ""
 msgstr ""
 "Gunakan tombol \"Simpan sebagai...\" untuk menyimpan pengaturan grafik, "
 "jenis, periode waktu, indikator dan perbandingan"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
@@ -2271,6 +2314,9 @@ msgid ""
 msgstr ""
 "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu "
 "mengijinkan Webtrader untuk mengaksesnya"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Browser Anda tidak mendukung menyalin ke clipboard"
@@ -2505,6 +2551,43 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Laba"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr ""
+#~ "--- judul: kutipan permalink Halaman Tidak Ditemukan: /404.html: \"\" ---"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Waktu pengecualian tidak dapat kurang dari 6 bulan"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "Masukkan nilai integer positif antara 0 dan 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "Masukkan nilai integer positif untuk batasan kerugian 30 hari"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "Masukkan nilai integer positif untuk batasan turnover 30 hari"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "Masukkan nilai integer positif untuk batasan kerugian 7 hari"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "Masukkan nilai integer positif untuk batasan turnover 7 hari"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "Masukkan nilai integer positif untuk batasan kerugian harian"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "Masukkan nilai integer positif untuk batasan turnover harian"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Masukkan nilai integer positif untuk batasan maksimal posisi berjalan"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr ""
+#~ "Silahkan masukkan nilai antara 0 hingga 99999 untuk batasan sesi durasi"
 
 #~ msgid "Add overlays"
 #~ msgstr "Tambah overlays"

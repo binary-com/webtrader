@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
-"PO-Revision-Date: 2016-09-13 16:24+0000\n"
+"PO-Revision-Date: 2016-11-02 13:29+0000\n"
 "Last-Translator: Chloe Chevreton <chloe-che@hotmail.fr>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.8\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 msgid "%D MA Type"
 msgstr "Type %D MA"
@@ -56,9 +56,6 @@ msgstr ""
 "les références des agents de paiement avant de leur envoyer toute somme "
 "d'argent. Binary.com ne pourra en aucun cas être tenue responsable des "
 "transactions réalisées entre les clients et les agents de paiement."
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Tracé -DI"
@@ -204,6 +201,9 @@ msgstr "Type ADX MA"
 msgid "ADX Stroke"
 msgstr "Tracé ADX"
 
+msgid "AM"
+msgstr ""
+
 msgid "ATR Period"
 msgstr "Période ATR"
 
@@ -239,6 +239,9 @@ msgstr "Ajouter un niveau"
 
 msgid "Add/remove comparisons"
 msgstr "Ajouter/supprimer des comparaisons"
+
+msgid "Add/remove indicators"
+msgstr "Ajouter/supprimer des indicateurs"
 
 msgid "Add/remove overlays"
 msgstr "Ajouter/supprimer des superpositions"
@@ -419,6 +422,9 @@ msgstr "Sélectionnez le moyen de retrait souhaité"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "Test de Click Jacking"
 
@@ -580,9 +586,12 @@ msgstr "Supprimer"
 msgid "Delete level(s)"
 msgstr "Supprimer le(s) niveau(x)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
-"Démonstration pour les affiliés souhaitant accéder aux graphiques Binary.com "
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr ""
+"Démonstration pour les affiliés souhaitant accéder aux graphiques Webtrader "
 "en IFRAME"
 
 msgid "Deposit funds"
@@ -597,6 +606,9 @@ msgstr "Décrivez l'utilité de ce jeton pour le retrouver plus tard"
 msgid "Description"
 msgstr "Description"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "Chiffres"
 
@@ -607,6 +619,9 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "Vous n'avez pas encore de compte ? Inscrivez-vous pour accéder à un compte "
 "virtuel de 10 000 dollars US."
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Terminé. Le transfert des fonds vers l'agent de paiement est en cours."
@@ -625,6 +640,9 @@ msgstr "Type double MA"
 
 msgid "Double click the object to remove"
 msgstr "Double-cliquez sur l'objet pour le supprimer"
+
+msgid "Download"
+msgstr "Télécharger"
 
 msgid "Download CSV"
 msgstr "Télécharger le fichier CSV"
@@ -662,8 +680,11 @@ msgstr "Durée"
 msgid "EMA"
 msgstr "EMA"
 
+msgid "EURUSD"
+msgstr ""
+
 msgid "Edge"
-msgstr "Bord"
+msgstr "Edge"
 
 msgid "Edit"
 msgstr "Édition"
@@ -683,6 +704,11 @@ msgstr "Heure de fin"
 msgid "Ends In/Out"
 msgstr "Termine dans/hors de la zone"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+"Veillez à saisir des données valides. Dans le cas contraire, votre compte "
+"sera verrouillé."
+
 msgid "Enter your current password"
 msgstr "Saisissez votre mot de passe actuel"
 
@@ -698,14 +724,14 @@ msgstr "Erreur lors du téléchargement du fichier .csv"
 msgid "Error getting data for"
 msgstr "Erreur lors de la récupération des données pour"
 
+msgid "Error getting market information!"
+msgstr "Erreur lors de la récupération des données de marché !"
+
 msgid "Estimated Net Worth"
 msgstr "Valeur nette estimée"
 
 msgid "Exclude me from the website until"
 msgstr "M'auto-exclure du site jusqu'au"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Le temps d'exclusion ne peut pas être inférieur à 6 mois"
 
 msgid "Exit Spot"
 msgstr "Point de sortie"
@@ -763,6 +789,9 @@ msgstr "Prix final"
 
 msgid "Finance"
 msgstr "Finance"
+
+msgid "Financial Account Opening form"
+msgstr "Formulaire d'ouverture d'un compte réel"
 
 msgid "Financial information"
 msgstr "Informations financières"
@@ -842,6 +871,9 @@ msgstr "Ligne horizontale"
 
 msgid "Horizontal line"
 msgstr "Ligne horizontale"
+
+msgid "Hour"
+msgstr ""
 
 msgid "Hours"
 msgstr "Heures"
@@ -933,8 +965,14 @@ msgstr "Secteur professionnel"
 msgid "Instrument"
 msgstr "Instrument"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "Code instrument inconnu/indisponible !"
+
 msgid "Instruments"
 msgstr "Instruments"
+
+msgid "Invalid parameter(s)!"
+msgstr "Paramètre(s) non valide(s) !"
 
 msgid "Investments & Dividends"
 msgstr "Investissements et dividendes"
@@ -1009,6 +1047,9 @@ msgstr "Lien"
 
 msgid "Load chart template"
 msgstr "Charger le modèle graphique"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "Chargement"
@@ -1117,8 +1158,8 @@ msgid ""
 "(minus the commission) via your preferred payment method"
 msgstr ""
 "Avant d'envoyer votre demande, veillez à vous mettre d'accord avec l'Agent "
-"concernant les conditions de paiement. Lorsque vous cliquerez sur le bouton «"
-" Confirmer le virement », les fonds seront prélevés sur votre compte et "
+"concernant les conditions de paiement. Lorsque vous cliquerez sur le bouton "
+"« Confirmer le virement », les fonds seront prélevés sur votre compte et "
 "envoyés à l'Agent de paiement que vous avez choisi. L'Agent vous enverra le "
 "montant de retrait (après déduction de la commission) par le biais du moyen "
 "de paiement souhaité"
@@ -1179,6 +1220,9 @@ msgstr "Au moins 6 caractères et au moins 1 chiffre"
 
 msgid "Minus the agent's commission"
 msgstr "Moins la commission de l'agent"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minutes"
@@ -1378,6 +1422,9 @@ msgstr "Plus de 3 ans"
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PM"
+msgstr ""
+
 msgid "PNG"
 msgstr "PNG"
 
@@ -1450,6 +1497,11 @@ msgstr "Veuillez répondre à la question secrète (réponse de 4 à 50 caractè
 msgid "Please choose at least one token scope"
 msgstr "Veuillez sélectionner au moins un champ d'application de jeton"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr ""
+"Veuillez sélectionner la devise dans laquelle vous souhaitez effectuer vos "
+"transactions"
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
 "Veuillez confirmer les informations suivantes afin de procéder au transfert"
@@ -1472,56 +1524,12 @@ msgstr "Veuillez saisir une adresse e-mail correcte"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Veuillez saisir la date au format AAAA-MM-JJ."
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Veuillez saisir une valeur entière positive comprise entre 0 et 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite des pertes sur 30 "
-"jours"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite du volume de "
-"transactions sur 30 jours"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite des pertes sur 7 "
-"jours"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite du volume de "
-"transactions sur 7 jours"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite des pertes sur un "
-"jour"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour la limite du volume de "
-"transactions sur un jour"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr ""
-"Veuillez saisir une valeur entière positive pour le nombre maximal de "
-"positions ouvertes"
-
 msgid "Please enter the token name"
 msgstr "Veuillez saisir le nom du jeton"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
 "Veuillez saisir le code de vérification envoyé par e-mail à votre adresse"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr ""
-"Veuillez saisir une valeur comprise entre 0 et 99999 pour la limite de durée "
-"de session"
 
 msgid "Please enter your city address"
 msgstr "Veuillez saisir votre ville"
@@ -1598,7 +1606,7 @@ msgstr "Prédéfini"
 msgid "Preferred reality-check interval"
 msgstr "Périodicité souhaitée pour les relevés d'activité"
 
-msgid "Press  Create token  button on the right to create your first token"
+msgid "Press Create token button on the right to create your first token"
 msgstr ""
 "Cliquez sur le bouton « Créer un jeton » sur la droite pour créer votre "
 "premier jeton"
@@ -1642,7 +1650,7 @@ msgstr "Heure d'achat"
 msgid "Read"
 msgstr "Lu"
 
-msgid "Real account opening"
+msgid "Real Money Account Opening"
 msgstr "Ouverture d'un compte réel"
 
 msgid "Reality check"
@@ -1793,7 +1801,7 @@ msgid "Session is not authenticated"
 msgstr "La session n'est pas authentifiée"
 
 msgid "Settles"
-msgstr "Settles"
+msgstr "Règlements"
 
 msgid "Share"
 msgstr "Part"
@@ -1859,7 +1867,7 @@ msgid "Sold"
 msgstr "Vendu"
 
 msgid "Some random index"
-msgstr "Un indice aléatoire"
+msgstr "Some random index"
 
 msgid "Spline"
 msgstr "Spline"
@@ -1950,6 +1958,12 @@ msgstr "Tableau"
 
 msgid "Tel"
 msgstr "Tél."
+
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
 
 msgid "Template name"
 msgstr "Nom du modèle"
@@ -2071,6 +2085,9 @@ msgstr ""
 "Pour retirer des fonds, veuillez saisir le jeton de vérification spécifique "
 "que nous venons de vous envoyer par e-mail"
 
+msgid "Today"
+msgstr ""
+
 msgid "Token"
 msgstr "Jeton"
 
@@ -2172,6 +2189,9 @@ msgstr "Volume de transactions"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "Malheureusement, votre navigateur ne les prend pas en charge"
 
@@ -2190,6 +2210,9 @@ msgstr "Mise à jour des paramètres"
 msgid "Upgrade to a Real Account"
 msgstr "Ouvrir un compte réel"
 
+msgid "Upload template"
+msgstr "Charger le modèle"
+
 msgid "Upper Band Stroke"
 msgstr "Tracé de la bande supérieure"
 
@@ -2203,6 +2226,9 @@ msgstr ""
 "Utilisez le bouton « Enregistrer sous... » pour sauvegarder les paramètres "
 "du graphique, le type, la période de temps, les indicateurs et les "
 "comparaisons."
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Un code de vérification vous a été envoyé par e-mail"
@@ -2317,8 +2343,14 @@ msgstr ""
 "Votre compte Binary.com a été créé. Pour commencer à effectuer des "
 "opérations de trading, vous devez autoriser Webtrader à y accéder."
 
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
+"Votre compte est verrouillé. Veuillez contacter le service clientèle pour "
+"obtenir des informations."
+
 msgid "Your browser doesn't support copy to clipboard"
-msgstr "Votre navigateur ne prend pas en charge la copie dans le presse-papiers"
+msgstr ""
+"Votre navigateur ne prend pas en charge la copie dans le presse-papiers"
 
 msgid "Your browser is not supported"
 msgstr "Votre navigateur n'est pas pris en charge"
@@ -2407,7 +2439,8 @@ msgid "for API calls that change client settings"
 msgstr "pour les appels d'API qui peuvent modifier les paramètres"
 
 msgid "for API calls that only read client data"
-msgstr "pour les appels d'API qui peuvent uniquement lire les données du client"
+msgstr ""
+"pour les appels d'API qui peuvent uniquement lire les données du client"
 
 msgid "for mobile charts"
 msgstr "pour les graphiques mobiles"
@@ -2554,6 +2587,57 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retours"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Le temps d'exclusion ne peut pas être inférieur à 6 mois"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive comprise entre 0 et 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite des pertes sur "
+#~ "30 jours"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite du volume de "
+#~ "transactions sur 30 jours"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite des pertes sur "
+#~ "7 jours"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite du volume de "
+#~ "transactions sur 7 jours"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite des pertes sur "
+#~ "un jour"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour la limite du volume de "
+#~ "transactions sur un jour"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur entière positive pour le nombre maximal de "
+#~ "positions ouvertes"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr ""
+#~ "Veuillez saisir une valeur comprise entre 0 et 99999 pour la limite de "
+#~ "durée de session"
 
 #~ msgid "Add overlays"
 #~ msgstr "Ajouter des superpositions"
