@@ -235,7 +235,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    repo: 'https://' + process.env.GIT_KEY + '@github.com/champion-fx/webtrader.git',
+                    repo: 'https://' + process.env.GIT_KEY + '@github.com/ChampionFX/webtrader.git',
                     message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
                 },
                 src: ['**/*']
