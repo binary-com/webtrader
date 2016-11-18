@@ -70,9 +70,9 @@
     .agent {
       border-top: 1px solid #aaa;
       &:first-child { border-top: none; }
-      .header {
+      .agent-header {
+        background: #F2F2F2;
         padding: 10px;
-        padding-bottom: 0;
         cursor: pointer;
         * { pointer-events: none; }
         .name {
@@ -92,8 +92,7 @@
       }
 
       .info {
-        padding: 10px;
-        padding-top: 0;
+        padding: 0 10px;
         overflow: hidden;
         max-height: 0; /* fighting css3 not animating on height:auto!*/
         height: auto;
@@ -117,6 +116,7 @@
           margin-bottom: 10px;
         }
         .contact {
+          padding-bottom: 5px;
           display: flex;
           flex-flow: row;
           justify-content: space-between;

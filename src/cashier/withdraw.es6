@@ -2,7 +2,7 @@
  * Created by amin on July 16, 2016.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, rv, _, moment) {
+define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'cashier/currency', 'lodash', 'moment'], function($, liveapi, windows, rv, currencyDialog, _, moment) {
     require(['text!cashier/withdraw.html']);
     require(['css!cashier/withdraw.css']);
 
@@ -17,8 +17,15 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
     class Withdraw {
       init = li => {
         li.click(() => {
-            if(!win)
-              require(['text!cashier/withdraw.html'], this._init_win);
+            if(!win) {
+              liveapi.cached.authorize().then(data => {
+                if(!data.authorize.currency) // if currency is not set ask for currency
+                  return currencyDialog.check_currency();
+                return true; // OK
+              })
+              .then(() => require(['text!cashier/withdraw.html'], this._init_win))
+              .catch(error_handler);
+            }
             else
               win.moveToTop();
         });

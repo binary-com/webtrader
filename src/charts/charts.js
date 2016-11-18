@@ -16,7 +16,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
       if(chart.series.length > 0){
           indicator_values.forEach(function(ind){
             var id = ind.id;
-            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, name: ind.long_display_name, options: chart.series[0][id][0].options})
+            chart.series[0][id] && chart.series[0][id].forEach(function(entry) {
+              indicators.push({id: id, name: ind.long_display_name, options: entry.options})
+            });
           });
       }
 
@@ -206,13 +208,13 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 var key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
                 chartingRequestMap.removeChart(key, containerIDWithHash);
                 var chart = $(containerIDWithHash).highcharts();
-                indicators = chart.get_indicators();
-                overlays = options.overlays;
+                indicators = chart.get_indicators() || [];
+                overlays = options.overlays || [];
                 chart.destroy();
             }
             if(options.indicators) { /* this comes only from tracker.js & ChartTemplateManager.js */
-              indicators = options.indicators;
-              overlays = options.overlays;
+              indicators = options.indicators || [];
+              overlays = options.overlays || [];
               $(containerIDWithHash).data("overlayCount", overlays.length);
             }
 
@@ -271,8 +273,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             if ($.isFunction(onload)) {
                                 onload();
                             }
-                            if(getParameterByName("affiliates") === 'true' && getParameterByName('hideFooter').toLowerCase() === 'true'){
-                                this.credits.element.remove();
+                            if(isAffiliates() && isHideFooter()){
+                                $(this.credits.element).remove();
+                                this.margin[2] = 5;
+                                this.spacing[2] = 0;
                             } else {
                                 this.credits.element.onclick = function() {
                                     window.open(
@@ -286,7 +290,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     },
                     spacingLeft: 0,
                     marginLeft: 45,  /* disable the auto size labels so the Y axes become aligned */
-                    //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
+                    marginBottom: 15,
+                    spacingBottom: 15
                 },
 
                 navigator: {
@@ -328,14 +333,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 title: {
-                    //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
-                    text: getParameterByName("affiliates") === 'true' ? options.instrumentName : "" //name to display
+                    text: "" //name to display
                 },
 
                 credits: {
                     href: 'http://webtrader.binary.com',
                     text: 'Binary.com : Webtrader',
-
                 },
 
                 xAxis: {

@@ -1,5 +1,5 @@
 .view-transaction-confirm {
-    background: #f2f2f2;
+    background: #fff;
     position: absolute;
     top: 32px;
     right: 0;
@@ -31,7 +31,6 @@
 .view-transaction-confirm .longcode {
   max-width: 800px;
   border: 2px solid #dedede;
-  background: #fff;
   padding: 10px 5px;
   box-sizing: border-box;
   line-height: 100%;
@@ -50,9 +49,9 @@
 .view-transaction-confirm .confirm-row .sell-price p { font-weight: 700; }
 
 .view-transaction-confirm .balance-row {
-  background: #e98024;
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 50px;
+  color: #fff;
 }

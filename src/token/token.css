@@ -84,7 +84,7 @@
 }
 
 .token-dialog .create-token-pane .token-scopes > label {
-  width: 120px;
+  width: auto;
   display: inline-block;
   margin-bottom: 20px;
 }

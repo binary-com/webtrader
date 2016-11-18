@@ -4,61 +4,184 @@
     position: relative;
     overflow-x: hidden !important;
     font-size: 14px !important;
-}
-.trade-dialog ul li {
-  line-height: 1em;
-  margin: 0;
-}
-.trade-dialog .text-align-center { text-align: center; }
-.trade-dialog .bold { font-weight: bold; }
-.trade-dialog .text-vertical-align { line-height:2em; }
-.trade-dialog .text-vertical-align span { vertical-align: bottom;}
-.trade-dialog .no-wrap { white-space: nowrap; }
-.trade-dialog .dotted-underline { border-bottom: 1px dotted #000; }
-.trade-dialog .box-shadow { box-shadow: 5px 5px 8px rgba(0,0,0,0.25); }
+    ul li {
+      line-height: 1em;
+      margin: 0;
+    }
+    .text-align-center { text-align: center; }
+    .bold { font-weight: bold; }
+    .text-vertical-align { line-height:2em; }
+    .text-vertical-align span { vertical-align: bottom;}
+    .no-wrap { white-space: nowrap; }
+    .dotted-underline { border-bottom: 1px dotted #000; }
+    .align-text {
+      padding-left: 5px;
+      padding-right: 2px;
+      box-sizing: border-box;
+    }
+    .box-shadow { box-shadow: 5px 5px 8px rgba(0,0,0,0.25); }
 
-.rtl-direction .trade-dialog .ui-selectmenu-text {
-  text-align: right;
+    /* .trade-fields contains all the form fields */
+    .trade-fields {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    /* .trae-conf comes from tradeConf.js module */
+    .trade-conf {
+        left:-350px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
 }
-.rtl-direction .trade-dialog input {
-  direction: ltr;
-}
-
-/* .trade-fields contains all the form fields */
-.trade-dialog .trade-fields {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-/* .trae-conf comes from tradeConf.js module */
-.trade-dialog .trade-conf {
-    left:-350px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
+.rtl-direction .trade-dialog {
+  .ui-selectmenu-text { text-align: right; }
+  input { direction: ltr; }
 }
 
-.trade-fields .error { background: #fef1cf; }
+.trade-fields {
+  .error { background: #fef1cf; }
+  ul li select.contract-category-display + .ui-selectmenu-button { width: 145px !important; }
 
-.trade-fields ul li select.contract-category-display + .ui-selectmenu-button { width: 160px !important; }
+  .duration-row li,
+  .date-start-row li,
+  .categories-row {
+    justify-content: space-between;
+    li {height: 28px; }
+    li.sparkline-chart { min-width: 93px;}
+    li.tick-quote span {
+      background: #29ABE2;
+      text-align: center;
+      display: inline-block;
+      min-width: 60px;
+      border-radius: 5px;
+      padding:3px;
+      color: white;
+      margin-top: 5px;
+    }
+    li.tick-quote span.down { background: #c03; }
+  }
 
-.trade-fields .duration-row li,
-.trade-fields .date-start-row li,
-.trade-fields .categories-row li {height: 30px; }
-.trade-fields .categories-row { justify-content: space-between; }
-.trade-fields .categories-row li.sparkline-chart { min-width: 95px;}
-.trade-fields .categories-row li.tick-quote span {
-  background: #29ABE2;
-  text-align: center;
-  display: inline-block;
-  min-width: 60px;
-  border-radius: 5px;
-  padding:3px;
-  color: white;
-  margin-top: 5px;
+  .categories-row {
+    margin-bottom: 5px;
+  }
+
+  .trade-template-manager {
+    z-index: +1;
+    display: relative;
+    .img {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      border-radius: 5px;
+      margin-left: 1px;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.75;
+        }
+      }
+    }
+    .trade-template-manager-root {
+        position: absolute;
+        margin: -2px 0 0 4px;
+        font-size: 12px;
+        width: 185px;
+        background: white;
+        max-height: 310px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: solid gray 1px;
+        box-sizing: border-box;
+        z-index: 1;
+        input[type='file'] {
+          display: none;
+        }
+        .menu {
+            a {
+                margin: 5px;
+                display: block;
+                width: 95%;
+                
+                span {
+                  display: block;
+                }
+            }
+        }
+        .back-arrow > * {
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+          text-decoration: none;
+        }
+        .errors {
+          height: 1em;
+          .error {
+            color: red;
+            background: white;
+          }
+        }
+        .save-as, .rename, .confirm {
+            padding: 5px;
+
+            .title { margin: 5px 0; }
+            button { margin-top: 5px;}
+            .button {
+                width: 100%;
+                text-align: center;
+                button { margin-right: 5px; }
+            }
+            input {
+              background: white;
+              outline: 0;
+              border: solid 1px gray;
+              color: black;
+              height: 26px;
+              margin-bottom: 5px;
+              width: 100% !important;
+              box-sizing: border-box;
+            }
+        }
+        .templates {
+            padding: 5px;
+            & > div > div {
+                margin: 5px 0;
+            }
+
+            .template {
+              display: inline-block;
+              font-weight: normal;
+              &:not(:last-child){
+                  border-bottom: 1px solid #dedede;
+              }
+              word-wrap: break-word;
+              a.options {
+                  margin-right: 5px;
+              }
+              .name {
+                transition: color 0.2s;
+                cursor: pointer;
+                margin-bottom: 3px;
+                &.active {
+                    font-weight: bold;
+                    color: #e98024
+                }
+                &:hover {
+                    color: #e98024;
+                }
+              }
+            }
+        }
+    }
+  }
 }
-.trade-fields .categories-row li.tick-quote span.down { background: #c03; }
 
 /* style elments in the drop down*/
 .trade-dialog-date-start-ul li {
@@ -89,18 +212,27 @@
     transition: padding-top 0.5s ease;
     list-style:none;
     margin: 0;
-    padding: 2px 5px 2px 5px;
+    padding: 2px 3px 2px 3px;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-.trade-fields ul li:nth-child(1) > span { min-width: 130px !important; display: inline-block;}
-.trade-fields ul.digits-row li:nth-child(1) > span { min-width: 140px !important; display: inline-block;}
+.trade-fields ul li:nth-child(1) > span {
+  min-width: 130px !important;
+  line-height: 28px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.trade-fields ul.digits-row li:nth-child(1) > span {
+  min-width: 140px !important;
+  display: inline-block;
+  padding-right: 5px;
+}
 .trade-fields ul li:nth-child(3) > span {
   min-width: 100px !important; display: inline-block;
   box-sizing: border-box;
-  line-height: 30px;
+  line-height: 28px;
 }
 .trade-fields ul.date-start-row li:nth-child(3) > span { min-width: 85px !important }
 
@@ -108,13 +240,12 @@
 .trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { width: 100px !important; }
 .trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 100px !important; }
 
+.trade-fields ul li select + .ui-selectmenu-button { height: 28px;}
+
 .trade-fields ul li span.ui-spinner { border: 0; }
 .trade-fields ul li input {
-  border: none;
-  background: #273051;
-  color: white;
   margin: 0;
-  height: 30px;
+  height: 28px;
   padding-left: 10px;
 }
 .trade-fields ul li:nth-child(2) input { width: 100px !important; }
@@ -129,9 +260,8 @@
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
-        background: #c2c1c1;
         justify-content: center;
-        padding: 10px 0;
+        padding: 9px 0;
         margin-bottom: 2px;
     }
 
@@ -139,7 +269,8 @@
         opacity: .5;
         cursor: pointer;
         width: auto;
-        padding: 0 7px;
+        padding: 0 5px;
+        white-space: nowrap;
     }
 
     .trade-fields ul.contract-displays li.active {
@@ -166,17 +297,19 @@
 }
 
 .trade-fields .proposal-message {
-    padding-top: 5px;
+    padding-top: 4px;
     border-top: 1px solid #c2c1c1;
-    bottom: 85px;
-}
-.trade-fields .proposal-message li {
-    line-height: 1.2em;
+    bottom: 80px;
+    li {
+        box-sizing: border-box;
+        padding: 0 5px;
+        line-height: 1.1em;
+    }
 }
 
 .trade-fields ul.message-row {
   justify-content: center;
-  bottom: 50px;
+  bottom: 45px;
   padding: 2px 0;
 }
 .trade-fields ul.proposal-message li,
@@ -186,7 +319,6 @@
 }
 .trade-fields ul.message-row li span { display: inline; }
 
-.trade-fields .netprofit { background: #c2c1c1; }
 .trade-fields .spread-deposit {
     background: #c2c1c1;
     white-space: nowrap;

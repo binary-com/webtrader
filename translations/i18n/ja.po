@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-09-23 01:50+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-10-21 19:53+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
 "Language: ja\n"
@@ -53,9 +53,6 @@ msgstr ""
 "ビスに処断します。送金をされる前に、決済サービス会社の資格情報を確認されるこ"
 "とをお勧めいたします。Binary.comはいかなる状況下においても、お客さまと決済"
 "サービス会社の間で生じた処理への責任は負いません。"
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- タイトル: ページが存在しません: /404.html エラー: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "-DI ストローク"
@@ -201,6 +198,9 @@ msgstr "ADX MA タイプ"
 msgid "ADX Stroke"
 msgstr "ADX ストローク"
 
+msgid "AM"
+msgstr ""
+
 msgid "ATR Period"
 msgstr "ATR期間"
 
@@ -236,6 +236,9 @@ msgstr "レベルを追加"
 
 msgid "Add/remove comparisons"
 msgstr "比較チャート追加/削除"
+
+msgid "Add/remove indicators"
+msgstr "指標を追加/削除（英語表示のみ）"
 
 msgid "Add/remove overlays"
 msgstr "オーバーレイの追加/削除"
@@ -417,6 +420,9 @@ msgstr "ご希望の出金方法をご選択ください"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr ""
+
 msgid "Click Jacking test"
 msgstr "ジャッキテストをクリック"
 
@@ -576,8 +582,11 @@ msgstr "削除"
 msgid "Delete level(s)"
 msgstr "レベルを削除"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "IFRAME内のBinary.comチャートにアクセスするアフィリエイトデモ"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr ""
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "IFRAME内のWebtraderチャートにアクセスするアフィリエイトデモ"
 
 msgid "Deposit funds"
 msgstr "資金のご入金"
@@ -591,6 +600,9 @@ msgstr "後で認識できるよう、このトークンの説明を記入して
 msgid "Description"
 msgstr "取引内容"
 
+msgid "Deselect"
+msgstr ""
+
 msgid "Digits"
 msgstr "数字"
 
@@ -601,6 +613,9 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマ"
 "ネーでお取引を始めましょう"
+
+msgid "Done"
+msgstr ""
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
@@ -620,6 +635,9 @@ msgstr "ダブル MA タイプ"
 
 msgid "Double click the object to remove"
 msgstr "削除するオブジェクトをダブルクリックしてください"
+
+msgid "Download"
+msgstr "ダウンロード"
 
 msgid "Download CSV"
 msgstr "CSVでダウンロード"
@@ -657,6 +675,9 @@ msgstr "期間"
 msgid "EMA"
 msgstr "EMA"
 
+msgid "EURUSD"
+msgstr ""
+
 msgid "Edge"
 msgstr "エッジ"
 
@@ -678,14 +699,19 @@ msgstr "終了時刻"
 msgid "Ends In/Out"
 msgstr "END-IN/END-OUT"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+"入力内容が有効であることをよくお確かめください。情報が無効である場合、口座が"
+"ロックされますのでご注意ください。"
+
 msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
 
 msgid "Entry Spot"
-msgstr "取引時レート"
+msgstr "取引時刻直後のテック"
 
 msgid "Entry spot"
-msgstr "取引時レート"
+msgstr "取引時刻直後のテック"
 
 msgid "Error downloading .csv"
 msgstr ".csvファイルのダウンロード中にエラーが発生しました"
@@ -693,20 +719,20 @@ msgstr ".csvファイルのダウンロード中にエラーが発生しまし�
 msgid "Error getting data for"
 msgstr "xxxのデータ取得中にエラーが発生しました"
 
+msgid "Error getting market information!"
+msgstr "市場情報の取得にエラーが発生しました！"
+
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
 
 msgid "Exclude me from the website until"
 msgstr "特定日まで利用禁止（日時単位）"
 
-msgid "Exclude time cannot be less than 6 months"
-msgstr "5ヶ月以下の除外時間を設定することはできません"
-
 msgid "Exit Spot"
-msgstr "判定時レート"
+msgstr "終値"
 
 msgid "Exit spot"
-msgstr "判定時レート"
+msgstr "終値"
 
 msgid "Explanation"
 msgstr "取引概要"
@@ -758,6 +784,9 @@ msgstr "最終価格"
 
 msgid "Finance"
 msgstr "金融"
+
+msgid "Financial Account Opening form"
+msgstr "口座開設申請フォーム"
 
 msgid "Financial information"
 msgstr "金融情報"
@@ -836,6 +865,9 @@ msgstr "水平線"
 
 msgid "Horizontal line"
 msgstr "水平線"
+
+msgid "Hour"
+msgstr ""
 
 msgid "Hours"
 msgstr "時間"
@@ -922,8 +954,14 @@ msgstr "雇用産業"
 msgid "Instrument"
 msgstr "商品"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "ツールコードが不明またはご利用いただけません！"
+
 msgid "Instruments"
 msgstr "商品"
+
+msgid "Invalid parameter(s)!"
+msgstr "パラメーターが無効です！"
 
 msgid "Investments & Dividends"
 msgstr "投資と配当"
@@ -996,6 +1034,9 @@ msgstr "リンク"
 
 msgid "Load chart template"
 msgstr "チャートテンプレートを読み込む"
+
+msgid "Load trade template"
+msgstr ""
 
 msgid "Loading"
 msgstr "読み込み中"
@@ -1165,6 +1206,9 @@ msgstr "数字を含む6文字以上でご入力ください"
 
 msgid "Minus the agent's commission"
 msgstr "決済サービスの手数料を引く"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分"
@@ -1358,6 +1402,9 @@ msgstr "3年以上"
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PM"
+msgstr ""
+
 msgid "PNG"
 msgstr "PNG"
 
@@ -1427,6 +1474,9 @@ msgstr "4-50文字以内で、秘密の質問にお答えください"
 msgid "Please choose at least one token scope"
 msgstr "1つ以上のトークン範囲をご選択ください"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr "ご希望の取引通貨を選択してください"
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "送金を完了するために、下記詳細をご確認ください"
 
@@ -1448,39 +1498,11 @@ msgstr "正しいメールアドレスをご入力ください"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "年月日の順で日付をご入力ください"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "0から9999の間の正の整数値をご入力ください"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "30日間の損失制限は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "30日の取引数量限度額 は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "7日間の損失制限は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "7日の取引数量限度額は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "1日の損失限度額は正の整数値でご入力ください"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "1日の取引数量限度額は正の整数値でご入力ください"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "最大保有ポジション数は正の整数値でご入力ください"
-
 msgid "Please enter the token name"
 msgstr "トークン名をご入力ください"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
-
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "セッション期間制限は0から99999の間でご入力ください"
 
 msgid "Please enter your city address"
 msgstr "市区町村をご入力ください"
@@ -1558,7 +1580,7 @@ msgstr "所定の"
 msgid "Preferred reality-check interval"
 msgstr "好ましいリアリティチェック実施間隔"
 
-msgid "Press  Create token  button on the right to create your first token"
+msgid "Press Create token button on the right to create your first token"
 msgstr "最初のトークンを作成するには、右の トークン作成 ボタンを押してください"
 
 msgid "Price"
@@ -1600,7 +1622,7 @@ msgstr "購入時間"
 msgid "Read"
 msgstr "読む"
 
-msgid "Real account opening"
+msgid "Real Money Account Opening"
 msgstr "リアル口座開設"
 
 msgid "Reality check"
@@ -1835,10 +1857,10 @@ msgid "Standard withdrawal"
 msgstr "スタンダード出金"
 
 msgid "Start Time"
-msgstr "開始時間"
+msgstr "取引時刻"
 
 msgid "Start time"
-msgstr "開始時間"
+msgstr "取引時刻"
 
 msgid "State/province/region"
 msgstr "都道府県名"
@@ -1909,6 +1931,12 @@ msgstr "明細"
 msgid "Tel"
 msgstr "電話番号"
 
+msgid "Template applied partially"
+msgstr ""
+
+msgid "Template is not applicable"
+msgstr ""
+
 msgid "Template name"
 msgstr "テンプレート名"
 
@@ -1940,7 +1968,9 @@ msgstr ""
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
-msgstr "リクエストされたページが見つかりません。存在していないか、アドレスに誤りがあります。再度ご確認ください"
+msgstr ""
+"リクエストされたページが見つかりません。存在していないか、アドレスに誤りがあ"
+"ります。再度ご確認ください"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -2022,6 +2052,9 @@ msgid ""
 msgstr ""
 "資金のご出金には、お客様のアドレスに只今送信されたワンタイムパスワードをご入"
 "力ください"
+
+msgid "Today"
+msgstr ""
 
 msgid "Token"
 msgstr "トークン"
@@ -2120,6 +2153,9 @@ msgstr "取引数量"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
 
@@ -2138,6 +2174,9 @@ msgstr "設定内容を更新"
 msgid "Upgrade to a Real Account"
 msgstr "リアル口座へアップグレード"
 
+msgid "Upload template"
+msgstr "テンプレートをアップデート"
+
 msgid "Upper Band Stroke"
 msgstr "アッパーバンドストローク"
 
@@ -2147,7 +2186,12 @@ msgstr "使用する"
 msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
-msgstr "「名前を付けて保存」から、チャート設定、タイプ、期間、指標、比較などを保存することができます"
+msgstr ""
+"「名前を付けて保存」から、チャート設定、タイプ、期間、指標、比較などを保存す"
+"ることができます"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -2259,6 +2303,11 @@ msgid ""
 msgstr ""
 "お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダー"
 "のアクセスを許可頂く必要があります"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
+"お客様の口座は現在ロックされています。詳しくはカスタマーサポートまでご連絡く"
+"ださい。"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
@@ -2491,6 +2540,40 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| 戻る"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- タイトル: ページが存在しません: /404.html エラー: \"\" ---"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "5ヶ月以下の除外時間を設定することはできません"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "0から9999の間の正の整数値をご入力ください"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "30日間の損失制限は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "30日の取引数量限度額 は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "7日間の損失制限は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "7日の取引数量限度額は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "1日の損失限度額は正の整数値でご入力ください"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "1日の取引数量限度額は正の整数値でご入力ください"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr "最大保有ポジション数は正の整数値でご入力ください"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "セッション期間制限は0から99999の間でご入力ください"
 
 #~ msgid "Add overlays"
 #~ msgstr "オーバーレイを追加"
