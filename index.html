@@ -1,7 +1,7 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Binary.com : Webtrader</title><script src="v2.1.14/common/util.js"></script></head><body><script>var affiliates = getParameterByName('affiliates') || 'false';
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Binary.com : Webtrader</title><script src="v2.1.15/common/util.js"></script></head><body><script>var affiliates = isAffiliates() || 'false';
       var suffix = "";
 
-      if (affiliates === 'true') {
+      if (affiliates === true) {
           var url = window.location.href;
           suffix = url.substring(url.indexOf('?')); //Pass all parameters
       }
@@ -25,7 +25,7 @@
       if (isLangSupported(lang)) {
           local_storage.set('i18n', {value: lang});
       }
-      window.location.href = 'v2.1.14/main.html' + suffix;</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PDDC6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      window.location.href = 'v2.1.15/main.html' + suffix;</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PDDC6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
