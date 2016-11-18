@@ -5,7 +5,7 @@ matrix:
 language: node_js
 notifications:
   email:
-  - arnab@binary.com
+  - ashkan@binary.com
 branches:
   only:
   - master
@@ -15,8 +15,8 @@ script:
 - npm install -g bower
 - npm install
 - bower install
-- git config --global user.email "arnab@binary.com"
-- git config --global user.name "Arnab Karmakar"
+- git config --global user.email "ashkan@binary.com"
+- git config --global user.name "ashkan nemati"
 - grunt default if:live if:beta
 env:
   global:
