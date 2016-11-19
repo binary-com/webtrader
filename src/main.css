@@ -447,3 +447,9 @@ select + .ui-selectmenu-button { border-radius: 3px !important;}
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+/* jquery ui selectmenu on options hover*/
+.ui-menu-item.ui-state-focus {
+  background: #1e90ff;
+  color: #fff;
+}

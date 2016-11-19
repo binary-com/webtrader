@@ -76,7 +76,14 @@ body {
     padding-top: 5px;
     font-size: 12px;
 }
-
+#topbar span.contact-us {
+    color: white;
+    float: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-weight: 900;
+    font-size: 12px;
+}
 
 #header {
     height: 75px;
