@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-11-04 10:59+0000\n"
+"PO-Revision-Date: 2016-11-08 03:45+0000\n"
 "Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -580,7 +580,7 @@ msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "採用IFRAME演示聯盟會員存取Webtrader圖表"
+msgstr ""
 
 msgid "Deposit funds"
 msgstr "存入資金"
@@ -1625,13 +1625,11 @@ msgstr "移除選定項目"
 msgid "Rename"
 msgstr "重命名"
 
-#, fuzzy
 msgid "Repeat password"
-msgstr "重覆輸入密碼"
+msgstr "再次輸入密碼"
 
-#, fuzzy
 msgid "Resale of this contract is not offered"
-msgstr "此合約不提供轉售"
+msgstr "此合約不可轉售"
 
 msgid "Reset to Defaults"
 msgstr "重設為預設值"
@@ -1645,9 +1643,8 @@ msgstr "縮放等級1:1重設"
 msgid "Resources"
 msgstr "資源"
 
-#, fuzzy
 msgid "Responsible Trading"
-msgstr "負責任交易"
+msgstr "負責任的交易"
 
 msgid "Results"
 msgstr "成績"
@@ -1943,21 +1940,19 @@ msgstr ""
 "了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風"
 "險。如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
 
-#, fuzzy
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
-msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查是否輸入錯誤"
+msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查輸入是否有誤"
 
-#, fuzzy
 msgid ""
 "There was a market data disruption during the contract period. For real-"
 "money accounts we will attempt to correct this and settle the contract "
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
-"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正並正確結算合約，否則合"
-"約將取消並退還投注金額。虛擬資金合約將取消並退還投注金額"
+"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正，並正確結算合約，否則"
+"合約將取消，投注金額也將被退還。虛擬資金合約將取消，投注金額也將被退還"
 
 msgid "There was an error"
 msgstr "出現錯誤"
@@ -2019,11 +2014,10 @@ msgid ""
 msgstr ""
 "對於不受Binary.com支持的支付方式或本地貨幣， 您可聯繫支付代理處理存款和取款"
 
-#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
-msgstr "要提款前請輸入剛發送到您郵箱的特殊驗證權杖碼"
+msgstr "如要提款，請輸入剛發送到您郵箱的權杖驗證碼"
 
 msgid "Today"
 msgstr ""
@@ -2087,7 +2081,6 @@ msgstr ""
 "二元期權交易不一定適合每一個人。因此，請確保您完全明白有關的風險。您的虧損可"
 "能會超越起始資金存款，而您並不擁有或占有任何標的資產"
 
-#, fuzzy
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
 "to limit your participation on the website or send a signed letter or fax to "
@@ -2096,9 +2089,9 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
-"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，或傳送簽名信或傳"
-"真到我們的客服團隊。一旦設定好後，您只能收緊限制。限制只能在7天后取消或放寬，"
-"而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
+"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，您也可以傳送簽名"
+"信或傳真到我們的客服團隊。設定好後，您將只能收緊限制。限制只能在7天后取消或放"
+"寬，而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
 
 msgid "Tradingview for Binary.com"
 msgstr "通過Binary.com使用Tradingview"
@@ -2198,10 +2191,9 @@ msgstr "Websocket 伺服器"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-#, fuzzy
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr "Webtrader採用新型網絡技術為您提供豐富與充滿樂趣的交易體驗"
+msgstr "Webtrader採用新型網絡技術，為您提供豐富而充滿樂趣的交易體驗"
 
 msgid "Wed"
 msgstr "週三"
@@ -2274,7 +2266,7 @@ msgid "Your browser doesn't support copy to clipboard"
 msgstr "您的瀏覽器不支持剪貼簿複製操作"
 
 msgid "Your browser is not supported"
-msgstr "您的瀏覽器不受支持"
+msgstr "不支持您的瀏覽器"
 
 msgid "Your changes have been updated"
 msgstr "您的更改已成功更新"
@@ -2286,10 +2278,10 @@ msgid "Your new account balance is"
 msgstr "您的新帳戶餘額是"
 
 msgid "Your transaction reference is"
-msgstr "您的交易參考號是"
+msgstr "您的交易號是"
 
 msgid "Your transaction reference number is"
-msgstr "您的交易參考號是"
+msgstr "您的交易號是"
 
 msgid "Zoom"
 msgstr "縮放"
@@ -2306,8 +2298,8 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
-"以下並繼續開立帳戶，請注意您可能讓自己冒一些風險（可能會很嚴重，包括損失整個"
-"投資資金的風險），而您可能缺乏正確評估或化解風險的知識或經驗"
+"以下並繼續開立帳戶，請注意您可能會冒一些風險（可能很嚴重，甚至損失整個投資資"
+"金），而您可能缺乏正確評估或化解風險的知識及經驗"
 
 msgid "between"
 msgstr "之間"
@@ -2322,10 +2314,10 @@ msgid "customer support"
 msgstr "客服部"
 
 msgid "day"
-msgstr "日"
+msgstr "天"
 
 msgid "days"
-msgstr "日"
+msgstr "天"
 
 msgid "e.g"
 msgstr "例如"
@@ -2346,19 +2338,19 @@ msgid "feed is delayed by"
 msgstr "資料源延遲的原因為"
 
 msgid "for API calls that can access the cashier"
-msgstr "可存取收銀台的API通話專用"
+msgstr "用於可存取收銀台的API通話"
 
 msgid "for API calls that can create trades in the client account"
-msgstr "可為客戶帳戶創建交易的API通話專用"
+msgstr "用於為客戶帳戶創建交易的API通話"
 
 msgid "for API calls that change client settings"
-msgstr "更改客戶設定的API通話專用"
+msgstr "用於更改客戶設定的API通話"
 
 msgid "for API calls that only read client data"
-msgstr "唯讀客戶資料的API通話專用"
+msgstr "用於唯讀客戶資料的API通話"
 
 msgid "for mobile charts"
-msgstr "移動式圖表專用"
+msgstr "用於移動式圖表"
 
 msgid "has updated its"
 msgstr "已更新其"
@@ -2389,7 +2381,7 @@ msgid ""
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
 msgstr ""
-"是Binary的先進桌面交易平台。其多視窗式介面提供最大彈性。可符合活躍交易員通過"
+"是Binary的先進桌面交易平台。其多視窗式介面提供了最大的彈性，以符合活躍員通過"
 "桌面電腦交易的需求"
 
 msgid "is required. Current spread"
@@ -2402,19 +2394,19 @@ msgid "is the"
 msgstr "是"
 
 msgid "is the price in effect at that time"
-msgstr "就是當時的實時價格"
+msgstr "是當時的實時價格"
 
 msgid "is the selected number of minutes/hours after the"
 msgstr "之後所選的分鐘數或小時數"
 
 msgid "is the selected time"
-msgstr "就是您選擇的時間"
+msgstr "是您選擇的時間"
 
 msgid "is the spot at the"
 msgstr "的現價"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr "就是我們的伺服器處理合約交易的時間"
+msgstr "是我們的伺服器處理合約交易的時間"
 
 msgid "main site"
 msgstr "主要網站"
@@ -2502,6 +2494,9 @@ msgstr "回報率"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"
+
+#~ msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+#~ msgstr "採用IFRAME演示聯盟會員存取Binary.com圖表"
 
 #~ msgid "Exclude time cannot be less than 6 months"
 #~ msgstr "禁止時間不能少於6個月"
