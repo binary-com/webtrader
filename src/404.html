@@ -37,6 +37,15 @@
 			}
 		}
 	</style>
+	<script>
+		function redirect() {
+			if (window.location.href.indexOf('/beta') !== -1) {
+				window.location.href = '/beta';
+			} else {
+				window.location.href = '/';
+			}
+		}
+	</script>
 </head>
 <body>
 	<div id="header">
@@ -68,7 +77,7 @@
 						Have better luck at trading!
 					</p>
 					<p>
-						<a href="/">Return to trading page</a>
+						<a href="#" onclick="redirect()">Return to trading page</a>
 					</p>
 					<p>
 						If the issue keeps happening, please contact <a href="https://www.binary.com/en/contact.html">customer support</a>.
