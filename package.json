@@ -4,7 +4,7 @@
   "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">=0.10",
+    "node": ">=6.0",
     "npm": ">=3.0"
   },
   "devDependencies": {
@@ -47,16 +47,13 @@
     "type": "git",
     "url": "https://github.com/binary-com/webtrader.git"
   },
-  "keywords": [
-    "highcharts",
-    "binary.com"
-  ],
+  "keywords": [ "Webtrader" ],
   "author": {
     "name": "Arnab Karmakar",
     "email": "arnab@binary.com",
     "url": "http://webtrader.binary.com/"
   },
-  "license": "CC-BY-NC-ND-4.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/binary-com/webtrader/issues"
   },
