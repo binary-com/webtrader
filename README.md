@@ -116,5 +116,5 @@ Some of these parameters are
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
 
-        $ grunt deploy
+        $ grunt deploy-branch
         For releasing compressed code

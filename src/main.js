@@ -87,6 +87,11 @@ requirejs.onError = function (err) {
     throw err;
 };
 
+/* Polyfill Intl for old browsers */
+if (typeof Intl === 'undefined') {
+	require(['lib/intl/dist/Intl', 'lib/intl/locale-data/jsonp/' + (local_storage.get('i18n') || { value: 'en' }).value]);
+}
+
 /* Initialize the websocket as soon as possible */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 

@@ -242,14 +242,6 @@ module.exports = function (grunt) {
                 },
                 src: ['**/*']
             },
-            'deploy': {
-                options: {
-                    base: 'dist/compressed',
-                    add: true,
-                    message: 'Commiting v<%=pkg.version%> using deploy cmd'
-                },
-                src: ['**/*']
-            },
             'deploy-branch': {
                 options: {
                     base: 'dist/branches/compressed',
@@ -474,9 +466,7 @@ module.exports = function (grunt) {
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
-    /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
-    grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
-    /* Deoploy to a subfolder of gh-pages with the name of current branch,
+    /* Deploy to a sub-folder of gh-pages with the name of current branch,
        This is only for developers working on different branches in their forks. */
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
     /* clean all the files in gh-pages branch */
