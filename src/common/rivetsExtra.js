@@ -408,10 +408,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var allways_ok = function () { return true };
 
             var styles = { marginTop: input.attr('marginTop') || '0px', marginLeft: input.attr('marginLeft') || '0px' };
-            var update = function () {
-                var value = input.val();
-                publish(value);
-            };
+            input.on('change', function(){
+                publish(input.val());
+                input.blur();
+            });
 
             input.timepicker({
                 showPeriod: model.showPeriod || false,
@@ -423,8 +423,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 beforeShow: function (input, inst) {
                     inst.tpDiv.css(styles);
                 },
-                onClose: update,
-                onSelect: update,
+                onSelect: function(){$(this).change()},
                 hourText: 'Hour'.i18n(),
                 minuteText: 'Minute'.i18n(),
                 amPmText: ['AM'.i18n(), 'PM'.i18n()],
