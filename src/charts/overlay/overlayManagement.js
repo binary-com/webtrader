@@ -28,41 +28,39 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
         return new Promise(function(resolve, reject){
           root = $(root).i18n();
 
+					var option = {
+						title: 'Add/remove overlays'.i18n(),
+						modal: true,
+						destroy: function () {
+							win_view && win_view.unbind();
+							win_view = null;
+							win.dialog('destroy').remove();
+							win = null;
+						},
+						open: function () { },
+					};
+
           /* affiliates route */
           if (isAffiliates()) {
-            win = $(root).dialog({
-              autoOpen: false,
-              resizable: false,
-              width: Math.min(480, $(window).width() - 10),
-              height: 400,
-              modal: true,
-              my: 'center',
-              at: 'center',
-              of: window,
-              buttons: []
-            });
-
-            init_state(root);
-            resolve();
-            return;
+						option = _.extend(option, {
+							resizable: false,
+							width: Math.min(480, $(window).width() - 10),
+							height: 400,
+							ignoreTileAction: true,
+							maximizable: false,
+							minimizable: false,
+							collapsable: false,
+						});
+          } else {
+						option = _.extend(option, {
+							width: 700,
+							// minHeight: 60,
+						})
           }
 
           /* normal route */
           require(['windows/windows'], function(windows){
-            win = windows.createBlankWindow(root, {
-                title: 'Add/remove overlays'.i18n(),
-                width: 700,
-                modal: true,
-                // minHeight: 60,
-                destroy: function () {
-                  win_view && win_view.unbind();
-                  win_view = null;
-                  win.dialog('destroy').remove();
-                  win = null;
-                },
-                open: function () { },
-            });
-
+            win = windows.createBlankWindow(root, option);
             init_state(root);
             resolve();
           });
