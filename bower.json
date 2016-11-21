@@ -1,6 +1,6 @@
 {
   "name": "Webtrader",
-  "version": "2.1.15",
+  "version": "2.1.17",
   "homepage": "https://github.com/binary-com/webtrader.git",
   "authors": [
     "Armin Zia",
@@ -48,6 +48,7 @@
     "ddslick": "prashantchaudhary/ddslick",
     "jquery-ui-iconfont": "mkkeck/jquery-ui-iconfont#^1.4.1",
     "clipboard": "^1.5.10",
-    "parallel.js": "paralleljs#*"
+    "parallel.js": "paralleljs#*",
+    "intl": "^1.2.5"
   }
 }

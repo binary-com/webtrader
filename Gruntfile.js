@@ -81,7 +81,9 @@ module.exports = function (grunt) {
                             'moment/min/moment.min.js',
                             'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
-                            'parallel.js/lib/**'
+                            'parallel.js/lib/**',
+                            'intl/dist/Intl.js',
+                            'intl/locale-data/jsonp/**',
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                         rename: function(dest, src) {
@@ -236,7 +238,7 @@ module.exports = function (grunt) {
                     base: 'dist/compressed',
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/ChampionFX/webtrader.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
+                    message: 'Commit v<%=pkg.version%> from TravisCI for [' + process.env.TRAVIS_BRANCH + ']'
                 },
                 src: ['**/*']
             },
@@ -244,7 +246,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'dist/compressed',
                     add: true,
-                    message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod'
+                    message: 'Commiting v<%=pkg.version%> using deploy cmd'
                 },
                 src: ['**/*']
             },
@@ -325,9 +327,9 @@ module.exports = function (grunt) {
         removelogging: {
             dist: {
                 src : ["dist/compressed/**/*.js"],
-				options : {
-					"verbose" : false
-				}
+                options : {
+                  "verbose" : false
+                }
             }
         },
         watch: {

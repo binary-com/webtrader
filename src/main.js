@@ -17,7 +17,6 @@ requirejs.config({
         'lokijs': 'lib/lokijs/build/lokijs.min',
         'color-picker': "lib/colorpicker/jquery.colorpicker",
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
-        //TODO find out whats the advantage of using datatables-jquery-ui
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'es6-promise':'lib/es6-promise/promise.min',
