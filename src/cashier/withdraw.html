@@ -3,7 +3,8 @@
 	<div class='menu' rv-show='route.value | eq "menu"'>
 		<span class='title'>Choose your pereferred withdrawal method:</span>
 		<button rv-on-click='menu.click | bind "standard"'>Standard withdrawal</button>
-		<button rv-on-click='menu.click | bind "transfer"'>Transfer to another Binary account</button>
+		<button rv-if="login_details.is_mf | or login_details.is_mlt" 
+		rv-on-click='menu.click | bind "transfer"'>Transfer to another Binary account</button>
 		<button rv-if='agent.agents | prop "length"' rv-on-click='menu.click | bind "agent"'>Withdrawal via payment agents</button>
 		<span rv-if='agent.agents | prop "length"' class='explanation'>Note: withdrawal via payment agent is available only
 					if you deposit exclusively via payment agent.</span>
