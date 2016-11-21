@@ -81,7 +81,9 @@ module.exports = function (grunt) {
                             'moment/min/moment.min.js',
                             'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
-                            'parallel.js/lib/**'
+                            'parallel.js/lib/**',
+                            'intl/dist/Intl.js',
+                            'intl/locale-data/jsonp/**',
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                         rename: function(dest, src) {

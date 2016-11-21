@@ -3,8 +3,6 @@ git:
 matrix:
   fast_finish: true
 language: node_js
-node_js:
-  - "6"
 notifications:
   email:
   - arnab@binary.com
