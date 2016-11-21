@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-04 12:23+0200\n"
-"PO-Revision-Date: 2016-11-17 08:28+0000\n"
+"PO-Revision-Date: 2016-11-21 21:50+0000\n"
 "Last-Translator: Alcino Jorge <alcino@binary.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pt/>\n"
@@ -583,7 +583,7 @@ msgid "Delete level(s)"
 msgstr "Excluir níveis"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "Demo para que os afiliados possam acessar gráficos do Webtrader"
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "Demo para afiliados poderem acessar os gráficos Webtrader em IFRAME"
@@ -601,7 +601,7 @@ msgid "Description"
 msgstr "Descrição"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Desmarcar"
 
 msgid "Digits"
 msgstr "Dígitos"
@@ -614,7 +614,7 @@ msgstr ""
 "Ainda não tem uma conta? Inscreva-se e receba uma conta virtual com $10.000"
 
 msgid "Done"
-msgstr ""
+msgstr "Concluído"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
@@ -675,7 +675,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Edge"
 msgstr "Borda"
@@ -866,7 +866,7 @@ msgid "Horizontal line"
 msgstr "Linha horizontal"
 
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 msgid "Hours"
 msgstr "Horas"
@@ -1039,7 +1039,7 @@ msgid "Load chart template"
 msgstr "Carregar modelo do gráfico"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "Carregar modelo de negociação"
 
 msgid "Loading"
 msgstr "Carregando"
@@ -1214,7 +1214,7 @@ msgid "Minus the agent's commission"
 msgstr "Menos a comissão do agente"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 msgid "Minutes"
 msgstr "Minutos"
@@ -1933,7 +1933,7 @@ msgid "TEMA"
 msgstr ""
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Tabela"
@@ -1942,10 +1942,10 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "Modelo parcialmente aplicado"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "O modelo não é aplicável"
 
 msgid "Template name"
 msgstr "Nome do modelo"
@@ -2065,7 +2065,7 @@ msgstr ""
 "lhe enviar por e-mail"
 
 msgid "Today"
-msgstr ""
+msgstr "Hoje"
 
 msgid "Token"
 msgstr "Token"
@@ -2168,7 +2168,7 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr ""
@@ -2206,6 +2206,7 @@ msgstr ""
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr ""
+"Use o botão \"Salvar como ...\" para salvar as configurações de negociação"
 
 msgid "Verification code has been sent to your email"
 msgstr "O código de verificação foi enviado para o seu e-mail"
