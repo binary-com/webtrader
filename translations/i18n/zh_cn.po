@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-10-21 06:35+0000\n"
+"PO-Revision-Date: 2016-11-21 03:23+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.9-dev\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 类型"
@@ -196,7 +196,7 @@ msgid "ADX Stroke"
 msgstr "ADX 波幅"
 
 msgid "AM"
-msgstr ""
+msgstr "上午"
 
 msgid "ATR Period"
 msgstr "ATR 期限"
@@ -415,7 +415,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 msgid "Click Jacking test"
 msgstr "点击劫持测试"
@@ -577,7 +577,7 @@ msgid "Delete level(s)"
 msgstr "删除水平"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "联盟成员访问Webtrader图表的演示"
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "在IFRAME查看联盟会员访问Webtrader图表的演示"
@@ -595,7 +595,7 @@ msgid "Description"
 msgstr "说明"
 
 msgid "Deselect"
-msgstr ""
+msgstr "取消选择"
 
 msgid "Digits"
 msgstr "数字"
@@ -607,7 +607,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
 
 msgid "Done"
-msgstr ""
+msgstr "已完成"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。资金已转给支付代理"
@@ -667,7 +667,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "欧元美元"
 
 msgid "Edge"
 msgstr "边缘"
@@ -856,7 +856,7 @@ msgid "Horizontal line"
 msgstr "水平线"
 
 msgid "Hour"
-msgstr ""
+msgstr "小时"
 
 msgid "Hours"
 msgstr "小时"
@@ -1018,7 +1018,7 @@ msgid "Load chart template"
 msgstr "加载图表模板"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "加载交易模板"
 
 msgid "Loading"
 msgstr "加载"
@@ -1188,7 +1188,7 @@ msgid "Minus the agent's commission"
 msgstr "减去代理佣金"
 
 msgid "Minute"
-msgstr ""
+msgstr "分钟"
 
 msgid "Minutes"
 msgstr "分钟"
@@ -1380,7 +1380,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "下午"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1908,10 +1908,10 @@ msgid "Tel"
 msgstr "电话"
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "部分模板已经使用"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "模板不适用"
 
 msgid "Template name"
 msgstr "模板名称"
@@ -2020,7 +2020,7 @@ msgid ""
 msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
 
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 msgid "Token"
 msgstr "令牌"
@@ -2115,7 +2115,7 @@ msgid "USD"
 msgstr "美元"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "美元日元"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遗憾，您的浏览器不支持这些程序"
@@ -2150,7 +2150,7 @@ msgid ""
 msgstr "使用\"另存为...\"按钮保存图表设置、类型、时间段、指标和比较"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "使用“另存为...”按键保存交易设定"
 
 msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
