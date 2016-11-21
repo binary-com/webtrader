@@ -82,8 +82,7 @@ module.exports = function (grunt) {
                             'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
                             'parallel.js/lib/**',
-                            'intl/dist/Intl.js',
-                            'intl/locale-data/jsonp/**',
+                            'intl/dist/Intl.complete.js',
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                         rename: function(dest, src) {
