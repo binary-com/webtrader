@@ -82,6 +82,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       menu.upload = (event) => {
         const file = event.target.files[0];
+        event.target.files = null;
+        event.target.value = null;
         if(!file)
           return;
 
@@ -206,8 +208,6 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       templates.confirm = (tmpl, event) => {
-        if(!templates.current)
-          return;
         route.update("confirm");
         const action = event.currentTarget.text;
         templates.confirm_prevMenu = action === "Delete".i18n() ? "templates" : "menu";
