@@ -80,6 +80,18 @@
             </div>
         </div>
         <div class="selfexclusion_row">
+            <div class="selfexclusion_col">Time out until</div>
+            <div class="selfexclusion_col">
+                <input type="text" class="selfexclusion_input datepicker" rv-datepicker="timeout_until_date" numberOfMonths="1">
+                <br>
+                <span class="selfexclusion_inputHint">Please enter date in the format YYYY-MM-DD</span>
+            </div>
+            <div class="selfexclusion_col">
+                <input type="text" class="selfexclusion_input timepicker" rv-timepicker="timeout_until_time">
+                <span class="selfexclusion_inputHint">Please enter time in the format HH:MM</span>
+            </div>
+        </div>
+        <div class="selfexclusion_row">
             <div class="selfexclusion_col">Exclude me from the website until</div>
             <div class="selfexclusion_col">
                 <input type="text" class="selfexclusion_input" rv-datepicker="exclude_until" numberOfMonths="1">
@@ -87,10 +99,10 @@
                 <span class="selfexclusion_inputHint">Please enter date in the format YYYY-MM-DD</span>
             </div>
         </div>
-        <div class="selfexclusion_row">
-            <div class="selfexclusion_updateBtnContainer">
-                <button class="update-button text-vertical-align" rv-on-click="update">Update Settings</button>
-            </div>
+    </div>
+    <div>
+        <div class="selfexclusion_updateBtnContainer">
+            <button class="update-button text-vertical-align" rv-on-click="update">Update Settings</button>
         </div>
     </div>
 </div>

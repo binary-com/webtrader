@@ -473,8 +473,3 @@ function download_file_in_browser(filename, type, content){
                 }
             }
 }
-
-/* Polyfill Intl for old browsers */
-if (!Intl) {
-	require(['lib/intl/dist/Intl', 'lib/intl/locale-data/jsonp/' + (local_storage.get('i18n') || { value: 'en' }).value + '.js']);
-}
