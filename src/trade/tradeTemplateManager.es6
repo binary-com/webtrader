@@ -10,6 +10,16 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
   class TradeTemplateManager {
     constructor(root, dialog) {
+      const _this = this;
+      const templates = local_storage.get("trade-templates");
+      templates.forEach(function(tmpl){
+        if(!tmpl.random){
+          tmpl.template_type = 'trade-template';
+          const random = _this.hashCode(JSON.stringify(tmpl));
+          tmpl.random = random;
+        }
+      });
+      local_storage.set("trade-templates", templates);
       const state = this.init_state(root, dialog);
       require(['text!trade/tradeTemplateManager.html'], html => {
         root.append(html.i18n());
@@ -34,7 +44,10 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       /* persist applied templates between page reloads */
       const current_tmpl = dialog.get_template();
-      if(_.findIndex(templates.array, t => t.name === current_tmpl.name) !== -1) {
+      delete current_tmpl.random;
+      current_tmpl.random = this.hashCode(JSON.stringify(current_tmpl));
+      templates.array = local_storage.get("templates");
+      if(_.findIndex(templates.array, t => t.random === current_tmpl.random) !== -1) {
         templates.current = current_tmpl;
       }
 
@@ -56,7 +69,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       menu.save_changes = () => {
         const current = dialog.get_template();
-
+        delete current.random;
+        current.random = this.hashCode(JSON.stringify(current));
         const name = current.name;
         const array = local_storage.get('trade-templates');
         const inx = _.findIndex(array, t => t.name === name);
@@ -85,39 +99,31 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         const reader = new FileReader();
         reader.onload = (e) => {
           const contents = e.target.result;
+          const array = local_storage.get("trade-templates");
           let data = null;
           try{
-           data = JSON.parse(contents);
-           const hash = data.random;
-           const template_type = data.template_type;
-           delete data.random;
-           if(hash !== hashCode(JSON.stringify(data))){
-            throw new UserException("InvalidHash");
-           }
-           delete data.template_type;
-           if(template_type !== 'trade-template') {
-            $.growl.error({message:"Invalid template type.".i18n()});
-            return;
-           }
+            data = JSON.parse(contents);
+            const hash = data.random;
+            const template_type = data.template_type;
+            delete data.random;
+            if(hash !== this.hashCode(JSON.stringify(data))){
+              throw "Invalid JSON file".i18n();
+            }
+            data.random = hash;
+            // Check if template was already uploaded
+            array.forEach(function(tmpl){
+              if(tmpl.random == data.random){
+                throw "Template already exists".i18n();
+              }
+            });
+            if(template_type !== 'trade-template') {
+              throw "Invalid template type.".i18n();
+            }
           } catch(e){
-            $.growl.error({message:"Invalid json file.".i18n()});
+            $.growl.error({message:e});
             return;
           }
           templates.apply(data);
-          const array = local_storage.get('trade-templates');;
-          let unique = false,
-              file = 1,
-              name = data.name;
-          while(!unique){
-            if(array.map(t => t.name).includes(name)) {
-              name = data.name + " (" + file + ")"
-              file++;
-              continue;
-            }
-            data.name = name;
-            unique = true;
-          }
-
           array.push(data);
           local_storage.set('trade-templates', array);
           templates.array = array;
@@ -138,6 +144,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
             $.growl.error({message: 'Template name already exists'.i18n() });
             return;
           }
+          delete tmpl.random;
+          tmpl.random = this.hashCode(JSON.stringify(tmpl));
           array.push(tmpl);
           templates.current = tmpl;
           local_storage.set('trade-templates', array);
@@ -148,8 +156,6 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       templates.download = (tmpl) => {
-        tmpl.template_type = 'trade-template';
-        tmpl.random = hashCode(JSON.stringify(tmpl));
         var json = JSON.stringify(tmpl);
         download_file_in_browser(tmpl.name + '.json', 'text/json;charset=utf-8;', json);
         $.growl.notice({message: "Downloading template as <b>".i18n() + tmpl.name + ".json</b>"});
@@ -181,7 +187,9 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         };
         const tmpl = array.find(t => t.name === name);
         if(tmpl) {
+          delete tmpl.random;
           tmpl.name = new_name;
+          tmpl.random = this.hashCode(JSON.stringify(tmpl));
           local_storage.set('trade-templates', array);
           templates.array = array;
           route.update('templates');
@@ -189,9 +197,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           /* update template name in current dialog */
           const current = dialog.get_template();
           if(current.name == name) {
-            templates.current = current;
             current.name = new_name;
+            delete current.random;
+            current.random = this.hashCode(JSON.stringify(current));
             dialog.set_template(current);
+            templates.current = current;
           }
         }
       }
@@ -226,11 +236,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         }
       }
 
-      const hashCode = (s) => {
-        return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
-      }
-
       return state;
+    }
+
+    hashCode(s) {
+      return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
     }
 
     unbind() {

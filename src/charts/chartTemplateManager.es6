@@ -9,7 +9,17 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
   }
 
   class ChartTemplateManager {
-    constructor(root, dialog_id) {
+    constructor(root, dialog_id) { 
+      const _this = this;
+      const templates = local_storage.get("templates");
+      templates.forEach(function(tmpl){
+        if(!tmpl.random){
+          const random = _this.hashCode(JSON.stringify(tmpl));
+          tmpl.random = random;
+        }
+      });
+      local_storage.set("templates",templates);
+
       const state = this.init_state(root, dialog_id);
       require(['text!charts/chartTemplateManager.html'], html => {
         root.append(html.i18n());
@@ -36,10 +46,13 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       /* persist applied templates between page reloads */
       const current_tmpl = chartWindow.get_chart_options(dialog_id);
-      if(_.findIndex(templates.array, t => t.name === current_tmpl.name) !== -1) {
+      delete current_tmpl.random;
+      current_tmpl.random = this.hashCode(JSON.stringify(current_tmpl));
+      templates.array = local_storage.get("templates");
+      if(_.findIndex(templates.array, t => t.random === current_tmpl.random) !== -1) {
         templates.current = current_tmpl;
       }
-
+      
       route.update = value => {
         route.value = value;
       };
@@ -61,6 +74,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       menu.save_changes = () => {
         const current = chartWindow.get_chart_options(dialog_id);
+        delete current.random;
+        current.random = this.hashCode(JSON.stringify(current));
 
         const name = current.name;
         const array = local_storage.get('templates');
@@ -90,41 +105,32 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         const reader = new FileReader();
         reader.onload = (e) => {
           const contents = e.target.result;
+          const array = local_storage.get("templates");
           let data = null;
           try{
-           data = JSON.parse(contents);
-           const hash = data.random;
-           delete data.random;
-           if(hash !== hashCode(JSON.stringify(data))){
-            throw new UserException("InvalidHash");;
-           }
-           if(!data.indicators) {
-             // We are not adding .template_type because we don't want to break
-             // exising user templates for charts, so if it has .indicators property
-             // then it's a chart template for sure.
-            $.growl.error({message:"Invalid template type.".i18n()});
-            return;
-           }
-          } catch(e){
-            $.growl.error({message:"Invalid json file.".i18n()});
-            return;
-          }
-          console.log(templates.current);
-          templates.apply(data);
-          const array = local_storage.get('templates');;
-          let unique = false,
-              file = 1,
-              name = data.name;
-          while(!unique){
-            if(array.map(t => t.name).includes(name)) {
-              name = data.name + " (" + file + ")"
-              file++;
-              continue;
+            data = JSON.parse(contents);
+            const hash = data.random;
+            delete data.random;
+            if(hash !== this.hashCode(JSON.stringify(data))){
+              throw "Invalid JSON file".i18n();
             }
-            data.name = name;
-            unique = true;
-          }
+            data.random = hash;
+             
+            //Check if template is already uploaded.
+            array.forEach(function(tmpl){
+              if(tmpl.random == data.random){
+                throw "Template already exists".i18n();
+              }
+            });
 
+            if(!data.indicators) {
+              throw "Invalid template type".i18n();
+            }
+          } catch(e){
+            $.growl.error({message:e});
+            return;
+          }
+          templates.apply(data);
           array.push(data);
           local_storage.set('templates', array);
           templates.array = array;
@@ -145,6 +151,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
             $.growl.error({message: 'Template name already exists'.i18n() });
             return;
           }
+          delete options.random;
+          options.random = this.hashCode(JSON.stringify(options));
           array.push(options);
           templates.current = options;
           local_storage.set('templates', array);
@@ -155,7 +163,6 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       templates.download = (tmpl) => {
-        tmpl.random = hashCode(JSON.stringify(tmpl));
         var json = JSON.stringify(tmpl);
         download_file_in_browser(tmpl.name + '.json', 'text/json;charset=utf-8;', json);
         $.growl.notice({message: "Downloading template as <b>".i18n() + tmpl.name + ".json</b>"});
@@ -187,7 +194,9 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         };
         const tmpl = array.find(t => t.name === name);
         if(tmpl) {
+          delete tmpl.random;
           tmpl.name = new_name;
+          tmpl.random = this.hashCode(JSON.stringify(tmpl));
           local_storage.set('templates', array);
           templates.array = array;
           route.update('templates');
@@ -195,9 +204,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           /* update template name in chartWindow options */
           const current = chartWindow.get_chart_options(dialog_id);
           if(current.name == name) {
-            templates.current = current;
             current.name = new_name;
+            delete current.random;
+            current.random = this.hashCode(JSON.stringify(current));
             chartWindow.set_chart_options(dialog_id, current);
+            templates.current = current;
           }
         }
       }
@@ -223,11 +234,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         }
       }
 
-      const hashCode = (s) => {
-        return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
-      }
-
       return state;
+    }
+
+    hashCode(s) {
+      return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
     }
 
     unbind() {
