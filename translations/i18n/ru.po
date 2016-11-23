@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-11-23 10:03+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2016-11-23 10:06+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -606,7 +606,7 @@ msgid "Description"
 msgstr "Описание"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Отменить"
 
 msgid "Digits"
 msgstr "Цифры"
@@ -618,7 +618,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
 
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Готово. Средства переведены платёжному агенту"
@@ -678,7 +678,7 @@ msgid "EMA"
 msgstr "ЭСС"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Edge"
 msgstr "Граница"
@@ -869,7 +869,7 @@ msgid "Horizontal line"
 msgstr "Горизонтальная линия"
 
 msgid "Hour"
-msgstr ""
+msgstr "Час"
 
 msgid "Hours"
 msgstr "Часы"
@@ -1041,7 +1041,7 @@ msgid "Load chart template"
 msgstr "Загрузить шаблон графика"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "Загрузить шаблон контракта"
 
 msgid "Loading"
 msgstr "Идёт загрузка"
@@ -1217,7 +1217,7 @@ msgid "Minus the agent's commission"
 msgstr "Минус комиссия агента"
 
 msgid "Minute"
-msgstr ""
+msgstr "Мин."
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -1417,7 +1417,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "вечера"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1946,10 +1946,10 @@ msgid "Tel"
 msgstr "Тел"
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "Шаблон частично применён"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "Шаблон неприменим"
 
 msgid "Template name"
 msgstr "Название шаблона"
@@ -2070,7 +2070,7 @@ msgstr ""
 "отправленный на Ваш электронный адрес"
 
 msgid "Today"
-msgstr ""
+msgstr "Сегодня"
 
 msgid "Token"
 msgstr "Ключ"
@@ -2173,7 +2173,7 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"
@@ -2210,7 +2210,7 @@ msgstr ""
 "его вид, период времени, индикаторы и параметры сравнения"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "Нажмите кнопку \"Сохранить как...,\" чтобы сохранить торговые настройки"
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
