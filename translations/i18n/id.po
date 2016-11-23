@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 06:12+0200\n"
-"PO-Revision-Date: 2016-09-14 04:41+0000\n"
+"PO-Revision-Date: 2016-11-18 07:55+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/id/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.8\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "Jenis MA %D"
@@ -199,7 +199,7 @@ msgid "ADX Stroke"
 msgstr "Stroke ADX"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "ATR Period"
 msgstr "Periode ATR"
@@ -237,9 +237,8 @@ msgstr "Tambah level"
 msgid "Add/remove comparisons"
 msgstr "Tambah/hapus perbandingan"
 
-#, fuzzy
 msgid "Add/remove indicators"
-msgstr "Tambah indikator"
+msgstr "Tambah/hapus indikator"
 
 msgid "Add/remove overlays"
 msgstr "Tambah/hapus overlays"
@@ -419,7 +418,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Clear"
-msgstr ""
+msgstr "Hapus"
 
 msgid "Click Jacking test"
 msgstr "Klik Tes Jacking"
@@ -581,7 +580,7 @@ msgid "Delete level(s)"
 msgstr "Hapus level"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "Demo untuk afiliasi mengakses grafik Webtrader"
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "Demo untuk affiliasi untuk mengakses grafik Webtrader dalam IFRAME"
@@ -599,7 +598,7 @@ msgid "Description"
 msgstr "Deskripsi"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Hapus"
 
 msgid "Digits"
 msgstr "Digits"
@@ -611,7 +610,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 
 msgid "Done"
-msgstr ""
+msgstr "Selesai"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Selesai. Dana tersebut telah ditransfer ke agen pembayaran"
@@ -631,9 +630,8 @@ msgstr "Jenis Dobel MA"
 msgid "Double click the object to remove"
 msgstr "Klik dua kali untuk menghapus objek"
 
-#, fuzzy
 msgid "Download"
-msgstr "Download dalam"
+msgstr "Muat"
 
 msgid "Download CSV"
 msgstr "Download CSV"
@@ -672,7 +670,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Edge"
 msgstr "Edge"
@@ -696,7 +694,7 @@ msgid "Ends In/Out"
 msgstr "Ends In/Out"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
+msgstr "Pastikan untuk memasukkan data yang benar atau akun Anda akan terkunci"
 
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
@@ -713,9 +711,8 @@ msgstr "Error downloading .csv"
 msgid "Error getting data for"
 msgstr "Error mendapatkan data untuk"
 
-#, fuzzy
 msgid "Error getting market information!"
-msgstr "Error mendapatkan data untuk"
+msgstr "Error saat mendapatkan informasi pasar!"
 
 msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
@@ -780,9 +777,8 @@ msgstr "Harga akhir"
 msgid "Finance"
 msgstr "Keuangan"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "Pendaftaran akun riil"
+msgstr "Formulir Pendaftaran Akun Finasial"
 
 msgid "Financial information"
 msgstr "Informasi keuangan"
@@ -863,7 +859,7 @@ msgid "Horizontal line"
 msgstr "Garis horisontal"
 
 msgid "Hour"
-msgstr ""
+msgstr "Jam"
 
 msgid "Hours"
 msgstr "Jam"
@@ -950,13 +946,13 @@ msgid "Instrument"
 msgstr "Instrumen"
 
 msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
+msgstr "Instrumen Kode Tidak Diketahui/Tidak Tersedia!"
 
 msgid "Instruments"
 msgstr "Instrumen"
 
 msgid "Invalid parameter(s)!"
-msgstr ""
+msgstr "Parameter tidak berlaku!"
 
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
@@ -1031,7 +1027,7 @@ msgid "Load chart template"
 msgstr "Memuat template grafik"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "Muat template trading"
 
 msgid "Loading"
 msgstr "Loading"
@@ -1204,7 +1200,7 @@ msgid "Minus the agent's commission"
 msgstr "Minus komisi agen"
 
 msgid "Minute"
-msgstr ""
+msgstr "Menit"
 
 msgid "Minutes"
 msgstr "Menit"
@@ -1402,7 +1398,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1474,7 +1470,7 @@ msgid "Please choose at least one token scope"
 msgstr "Silakan pilih minimal satu jangkauan token"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "Silahkan pilih mata uang yang ingin Anda transaksikan"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
@@ -1579,11 +1575,8 @@ msgstr "Ditetapkan"
 msgid "Preferred reality-check interval"
 msgstr "Interval cek-realitas yang dipilih"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
-msgstr ""
-"Tekan  tombol Membuat token  disebelah kanan untuk membuat token Anda "
-"terlebih dahulu"
+msgstr "Tekan tombol Membuat token disebelah kanan untuk membuat token"
 
 msgid "Price"
 msgstr "Harga"
@@ -1624,9 +1617,8 @@ msgstr "Waktu Beli"
 msgid "Read"
 msgstr "Baca"
 
-#, fuzzy
 msgid "Real Money Account Opening"
-msgstr "Pendaftaran akun riil"
+msgstr "Pendaftaran Akun Uang Riil"
 
 msgid "Reality check"
 msgstr "Pengecekan realitas"
@@ -1935,10 +1927,10 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "Template diterapkan sebagian"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "Template tidak berlaku"
 
 msgid "Template name"
 msgstr "Nama template"
@@ -2060,7 +2052,7 @@ msgstr ""
 "saja emailkan kepada Anda"
 
 msgid "Today"
-msgstr ""
+msgstr "Hari ini"
 
 msgid "Token"
 msgstr "Token"
@@ -2164,7 +2156,7 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Sayangnya, browser Anda tidak mendukung mereka"
@@ -2184,9 +2176,8 @@ msgstr "Pembaruan Pengaturan"
 msgid "Upgrade to a Real Account"
 msgstr "Mengupgrade ke Akun Riil"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "Memuat template grafik"
+msgstr "Memuat template"
 
 msgid "Upper Band Stroke"
 msgstr "Stroke Upper Band"
@@ -2202,7 +2193,7 @@ msgstr ""
 "jenis, periode waktu, indikator dan perbandingan"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "Gunakan tombol \"Simpan sebagai...\" untuk menyimpan susunan trading"
 
 msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
@@ -2317,6 +2308,7 @@ msgstr ""
 
 msgid "Your account is locked, please contact customer support for more info"
 msgstr ""
+"Akun Anda terkunci, silahkan hubungi customer support untuk info lebih lanjut"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Browser Anda tidak mendukung menyalin ke clipboard"
