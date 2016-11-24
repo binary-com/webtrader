@@ -13,10 +13,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       const _this = this;
       const templates = local_storage.get("trade-templates");
       templates.forEach(function(tmpl){
-        if(!tmpl.random){
-          tmpl.template_type = 'trade-template';
-          const random = _this.hashCode(JSON.stringify(tmpl));
-          tmpl.random = random;
+        if(!tmpl.random || !tmpl.template_type){
+          tmpl = _this.setRandom(tmpl);
         }
       });
       local_storage.set("trade-templates", templates);
@@ -43,9 +41,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       const {route, templates, menu} = state;
 
       /* persist applied templates between page reloads */
-      const current_tmpl = dialog.get_template();
-      delete current_tmpl.random;
-      current_tmpl.random = this.hashCode(JSON.stringify(current_tmpl));
+      const current_tmpl = this.setRandom(dialog.get_template());
       templates.array = local_storage.get("templates");
       if(_.findIndex(templates.array, t => t.random === current_tmpl.random) !== -1) {
         templates.current = current_tmpl;
@@ -68,9 +64,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       menu.save_changes = () => {
-        const current = dialog.get_template();
-        delete current.random;
-        current.random = this.hashCode(JSON.stringify(current));
+        const current = this.setRandom(dialog.get_template());
         const name = current.name;
         const array = local_storage.get('trade-templates');
         const inx = _.findIndex(array, t => t.name === name);
@@ -82,7 +76,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         local_storage.set('trade-templates', array);
         templates.array = array;
         templates.current = current;
-        $.growl.notice({message: $("<div/>").text('Template changes saved '.i18n() + '(' + current.name + ')').html()});
+        $.growl.notice({message: 'Template changes saved '.i18n() + '(' + current.name + ')'});
       }
 
       menu.open_file_selector = (event) => {
@@ -90,6 +84,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       }
 
       menu.upload = (event) => {
+        const _this = this;
         const file = event.target.files[0];
         event.target.files = null;
         event.target.value = null;
@@ -103,26 +98,36 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
           let data = null;
           try{
             data = JSON.parse(contents);
+            data.name = data.name.substring(0,20).replace(/[<>]/g,"-");
             const hash = data.random;
-            const template_type = data.template_type;
-            delete data.random;
-            if(hash !== this.hashCode(JSON.stringify(data))){
+            data = _this.setRandom(data);
+            if(hash !== data.random){
               throw "Invalid JSON file".i18n();
             }
-            data.random = hash;
-            // Check if template was already uploaded
-            array.forEach(function(tmpl){
-              if(tmpl.random == data.random){
-                throw "Template already exists".i18n();
-              }
-            });
-            if(template_type !== 'trade-template') {
+            if(_this.isDuplicate(data, array)){
+              return;
+            }
+            if(data.template_type !== 'trade-template') {
               throw "Invalid template type.".i18n();
             }
           } catch(e){
             $.growl.error({message:e});
             return;
           }
+
+          // Rename duplicate template names.
+          let file = 1,
+              name = data.name;
+          while(1){
+            if(array.map(t => t.name).includes(name)) {
+              name = data.name + " (" + file + ")"
+              file++;
+              continue;
+            }
+            data.name = name;
+            break;
+          }
+
           templates.apply(data);
           array.push(data);
           local_storage.set('trade-templates', array);
@@ -135,8 +140,8 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       templates.save_as = (event) => {
         event.preventDefault();
-        const name = templates.save_as_value.substring(0,20);
-        const tmpl = dialog.get_template();
+        const name = templates.save_as_value.substring(0,20).replace(/[<>]/g,"-");
+        const tmpl = this.setRandom(dialog.get_template());
         if(tmpl) {
           tmpl.name = name;
           const array = local_storage.get('trade-templates');
@@ -144,8 +149,10 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
             $.growl.error({message: 'Template name already exists'.i18n() });
             return;
           }
-          delete tmpl.random;
-          tmpl.random = this.hashCode(JSON.stringify(tmpl));
+
+          if(this.isDuplicate(tmpl, array)){
+            return;
+          }
           array.push(tmpl);
           templates.current = tmpl;
           local_storage.set('trade-templates', array);
@@ -157,6 +164,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
       templates.download = (tmpl) => {
         var json = JSON.stringify(tmpl);
+        console.log(tmpl);
         download_file_in_browser(tmpl.name + '.json', 'text/json;charset=utf-8;', json);
         $.growl.notice({message: "Downloading template as <b>".i18n() + tmpl.name + ".json</b>"});
       }
@@ -179,7 +187,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       templates.do_rename = (event) => {
         event.preventDefault();
         const name = templates.rename_tmpl.name;
-        const new_name = templates.rename_value.substring(0,20);
+        const new_name = templates.rename_value.substring(0,20).replace(/[<>]/g,"-");
         const array = local_storage.get('trade-templates');
         if(array.map(t => t.name).includes(new_name)) {
             $.growl.error({message: 'Template name already exists'.i18n() });
@@ -187,19 +195,15 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
         };
         const tmpl = array.find(t => t.name === name);
         if(tmpl) {
-          delete tmpl.random;
           tmpl.name = new_name;
-          tmpl.random = this.hashCode(JSON.stringify(tmpl));
           local_storage.set('trade-templates', array);
           templates.array = array;
           route.update('templates');
 
           /* update template name in current dialog */
-          const current = dialog.get_template();
-          if(current.name == name) {
-            current.name = new_name;
-            delete current.random;
-            current.random = this.hashCode(JSON.stringify(current));
+          const current = this.setRandom(dialog.get_template());
+          if(current.random == tmpl.random) {
+            current.name = new_name
             dialog.set_template(current);
             templates.current = current;
           }
@@ -239,8 +243,32 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       return state;
     }
 
+    setRandom(tmpl) {
+      const name = tmpl.name;
+      delete tmpl.name;
+      delete tmpl.random;
+      tmpl.template_type = 'trade-template';
+      tmpl.random = this.hashCode(JSON.stringify(tmpl));
+      tmpl.name = name;
+      return tmpl;
+    }
+
     hashCode(s) {
       return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
+    }
+
+    isDuplicate(tmpl, array){
+      // get template with same values.
+      const tmpl_copy = array.find(function(e){
+        if(e.random == tmpl.random){
+          return e;
+        }
+      });
+      if(tmpl_copy){
+        $.growl.error({message: 'Template already saved as '.i18n() +'<b>' + tmpl_copy.name + '</b>.'});
+        return true;
+      }
+      return false;
     }
 
     unbind() {
