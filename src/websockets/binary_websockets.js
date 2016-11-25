@@ -191,7 +191,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                 return val; /* pass the result */
             })
             .catch(function (up) {
-                if (!auth_successfull) {    /* authentication request is failed, clear local_storage */
+                if (up.code!=="SelfExclusion" && !auth_successfull) {    /* authentication request is failed, clear local_storage */
                     is_authenitcated_session = false;
                     fire_event('logout');
                     local_storage.remove('oauth');
@@ -282,6 +282,9 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                   api.events.off(name,once_cb);
               }
               api.events.on(name, once_cb);
+            },
+            trigger: function(name){
+              fire_event(name);
             }
         },
         proposal_open_contract: {

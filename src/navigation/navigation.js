@@ -131,7 +131,12 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
                         liveapi.switch_account(data.id)
                             .catch(function (err) {
                                 $.growl.error({message: err.message});
-                            })
+                                // logout user if he decided to self exclude himself.
+                                if(err.code==="SelfExclusion"){
+                                  console.log("logging out because of self exclude");
+                                  liveapi.events.trigger("logout");
+                                }
+                            });
                     })
                     li.insertBefore(logout_btn.parent());
                 }
