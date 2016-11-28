@@ -203,7 +203,6 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
 
     /* un-athenticate current session */
     var invalidate = function(){
-        if(!is_authenitcated_session) { return; }
         local_storage.remove('oauth');
         local_storage.remove('authorize');
 
