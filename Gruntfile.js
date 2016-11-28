@@ -82,8 +82,7 @@ module.exports = function (grunt) {
                             'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
                             'parallel.js/lib/**',
-                            'intl/dist/Intl.js',
-                            'intl/locale-data/jsonp/**',
+                            'intl/dist/Intl.complete.js',
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                         rename: function(dest, src) {
@@ -164,7 +163,7 @@ module.exports = function (grunt) {
                 }]
             },
             style : {
-                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/404.html'],
+                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/404.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<style-url>',
@@ -239,14 +238,6 @@ module.exports = function (grunt) {
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/ChampionFX/webtrader.git',
                     message: 'Commit v<%=pkg.version%> from TravisCI for [' + process.env.TRAVIS_BRANCH + ']'
-                },
-                src: ['**/*']
-            },
-            'deploy': {
-                options: {
-                    base: 'dist/compressed',
-                    add: true,
-                    message: 'Commiting v<%=pkg.version%> using deploy cmd'
                 },
                 src: ['**/*']
             },
@@ -474,9 +465,7 @@ module.exports = function (grunt) {
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
-    /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
-    grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
-    /* Deoploy to a subfolder of gh-pages with the name of current branch,
+    /* Deploy to a sub-folder of gh-pages with the name of current branch,
        This is only for developers working on different branches in their forks. */
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
     /* clean all the files in gh-pages branch */

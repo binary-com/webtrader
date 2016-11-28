@@ -280,7 +280,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             } else {
                                 this.credits.element.onclick = function() {
                                     window.open(
-                                        'http://webtrader.binary.com',
+                                        'https://webtrader.champion-fx.com',
                                         '_blank'
                                     );
                                 }
@@ -337,8 +337,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 credits: {
-                    href: 'http://webtrader.binary.com',
-                    text: 'Binary.com : Webtrader',
+                    href: 'https://webtrader.champion-fx.com',
+                    text: 'Champion-fx : Webtrader',
                 },
 
                 xAxis: {

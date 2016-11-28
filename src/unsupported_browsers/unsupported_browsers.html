@@ -9,10 +9,12 @@
 	<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="<style-url>/binary.css">
 	<link rel="stylesheet" type="text/css" href="unsupported_browsers.css">
+	<script type="text/javascript" src="../lib/modernizr/modernizr.js"></script>
 	<script>
 	// For showing links based on OS
-	function showLinks(){
+	function updateLinks(){
 		if (navigator.appVersion.indexOf("Win")!=-1) {
 			document.getElementById("edge").style.display = "block";
 			document.getElementById("edge-text").style.display = "block";
@@ -21,17 +23,31 @@
 			document.getElementById("safari").style.display = "block";
 			document.getElementById("safari-text").style.display = "block";
 		}
+		//For svg-unsupported browsers.
+		if(!Modernizr.svg){
+			document.getElementsByClassName("binary-logo-text")[0].style.display="none";
+			document.getElementsByClassName("logo")[0].style.width="100%";
+			document.getElementsByClassName("logo")[0].childNodes[1].src = "<style-url>/images/logo/CFX_logomark_light.svg";
+		}
 	}
- </script>
+	</script>
 </head>
-<body onload= "showLinks()">
-	<nav id="nav-container">
-    <!-- logo -->
-    <a class="nav-logo" href="https://www.binary.com" target="_blank">
-      <img src="../images/binary-symbol-logo.png" width="40px" height="40px">
-    </a>
-    <span id="menu-heading">Binary.com</span>
-	</nav>
+<body onload= "updateLinks()">
+	<div id="header">
+		<nav id="nav-container">
+	     <!-- logo -->
+	        <div class="logo-wrapper">
+	            <a href="https://champion-fx.com" target="_blank">
+	                <div class="logo">
+	                    <img class="responsive" src="<style-url>/images/logo/CFX_logomark_light.svg">
+	                </div>
+	                <div class="binary-logo-text">
+	                    <img class="responsive" src="<style-url>/images/logo/CFX_logotype_light.svg">
+	                </div>
+	            </a>
+	        </div>
+		</nav>
+	</div>
 	<div id="container">
 		<h1 class="upgrade">Browser upgrade required</h1>
 		<p>Webtrader uses new web technologies for rich and enjoyable trading experience.<br> Unfortunately, your browser does not support them.</p>
@@ -75,8 +91,8 @@
 	</div>
 	<div id="mobile-container">
 		<p><b>Webtrader</b> is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs.</p>
-		<p class="orange"><b>While on the go, you can:</b></p>
-		<table class="mobile-options">
+		<p class="alternatives secondary-color hidden"><b>While on the go, you can:</b></p>
+		<table class="mobile-options fill-bg-color hidden">
 			<tr>
 				<td>Try <a href="http://ticktrade.binary.com/" target="_blank">Tick Trade app</a></td>
 				<td>Use <a href="http://tradingview.binary.com/" target="_blank">Tradingview for Binary.com</a> for mobile charts</td>
@@ -84,6 +100,6 @@
 			</tr>
 		</table>
 	</div>
-	
+
 </body>
 </html>
