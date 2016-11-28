@@ -282,9 +282,6 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                   api.events.off(name,once_cb);
               }
               api.events.on(name, once_cb);
-            },
-            trigger: function(name){
-              fire_event(name);
             }
         },
         proposal_open_contract: {
@@ -358,9 +355,6 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         invalidate: invalidate,
         /* switch account */
         switch_account: function(id) {
-          if(!is_authenitcated_session) {
-            return Promise.reject({message: 'Session is not authenticated.'.i18n()})
-          }
           var oauth = local_storage.get('oauth');
           if(!oauth) {
             return Promise.reject({ message: 'Account token not found.'.i18n() });

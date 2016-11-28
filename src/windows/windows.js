@@ -516,10 +516,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                         //Login to virtual account instead.
                         oauth.forEach(function(ele, i){
                             if(ele.id.match(/^VRTC/)){
-                                oauth[i] = oauth[0];
-                                oauth[0] = ele;
-                                local_storage.set('oauth',oauth);
-                                liveapi.cached.authorize();
+                                liveapi.switch_account(ele.id);
+                                return;
                             }
                         });
                         return;

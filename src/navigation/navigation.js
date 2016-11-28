@@ -66,10 +66,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             balance.text(formatPrice(value, currency)).fadeIn();
         };
 
-        /* update balance on change */
-        liveapi.events.on('balance', update_balance);
-
-        liveapi.events.on('logout', function () {
+        function restoreLoginButton() {
             $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
             /* destroy all authorized dialogs */
             logout_btn.removeAttr('disabled');
@@ -80,7 +77,13 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             balance.fadeOut();
             currency = '';
             local_storage.remove("currency");
-        });
+        }
+
+
+        /* update balance on change */
+        liveapi.events.on('balance', update_balance);
+
+        liveapi.events.on('logout', restoreLoginButton);
 
         liveapi.events.on('login', function (data) {
             $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
@@ -134,7 +137,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
                                 // logout user if he decided to self exclude himself.
                                 if(err.code==="SelfExclusion"){
                                   console.log("logging out because of self exclude");
-                                  liveapi.events.trigger("logout");
+                                  restoreLoginButton(); //Only restoring the UI because the websocket connection was never authenticated.
                                 }
                             });
                     })
