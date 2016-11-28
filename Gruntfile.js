@@ -81,7 +81,8 @@ module.exports = function (grunt) {
                             'moment/min/moment.min.js',
                             'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
-                            'parallel.js/lib/**'
+                            'parallel.js/lib/**',
+                            'intl/dist/Intl.complete.js',
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                         rename: function(dest, src) {
@@ -162,7 +163,7 @@ module.exports = function (grunt) {
                 }]
             },
             style : {
-                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/404.html'],
+                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/404.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<style-url>',
@@ -236,15 +237,7 @@ module.exports = function (grunt) {
                     base: 'dist/compressed',
                     add: true,
                     repo: 'https://' + process.env.GIT_KEY + '@github.com/ChampionFX/webtrader.git',
-                    message: 'Commiting v<%=pkg.version%> using TravisCI and GruntJS build process'
-                },
-                src: ['**/*']
-            },
-            'deploy': {
-                options: {
-                    base: 'dist/compressed',
-                    add: true,
-                    message: 'Commiting v<%=pkg.version%> using GruntJS build process for prod'
+                    message: 'Commit v<%=pkg.version%> from TravisCI for [' + process.env.TRAVIS_BRANCH + ']'
                 },
                 src: ['**/*']
             },
@@ -325,9 +318,9 @@ module.exports = function (grunt) {
         removelogging: {
             dist: {
                 src : ["dist/compressed/**/*.js"],
-				options : {
-					"verbose" : false
-				}
+                options : {
+                  "verbose" : false
+                }
             }
         },
         watch: {
@@ -472,9 +465,7 @@ module.exports = function (grunt) {
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 
     //Meant for local development use ONLY - for pushing to individual forks
-    /* Note: between "grunt deploy" and "grunt deploy-branch" only use one of them. */
-    grunt.registerTask('deploy', ['default', 'gh-pages:deploy']);
-    /* Deoploy to a subfolder of gh-pages with the name of current branch,
+    /* Deploy to a sub-folder of gh-pages with the name of current branch,
        This is only for developers working on different branches in their forks. */
     grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
     /* clean all the files in gh-pages branch */
