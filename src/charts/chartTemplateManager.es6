@@ -92,7 +92,6 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
       menu.upload = (event) => {
         const _this = this;
         const file = event.target.files[0];
-        event.target.files = null;
         event.target.value = null;
         if(!file)
           return;
