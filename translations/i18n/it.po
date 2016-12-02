@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2016-09-15 08:38+0000\n"
+"PO-Revision-Date: 2016-11-29 10:09+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/it/>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.8\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "Tipologia %D MA"
@@ -202,7 +202,7 @@ msgid "ADX Stroke"
 msgstr "Stroke ADX"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "ATR Period"
 msgstr "Periodo ATR"
@@ -240,9 +240,8 @@ msgstr "Aggiungi livello"
 msgid "Add/remove comparisons"
 msgstr "Aggiungi/rimuovi confronti"
 
-#, fuzzy
 msgid "Add/remove indicators"
-msgstr "Aggiungi indicatore"
+msgstr "Aggiungi/Rimuovi indicatori"
 
 msgid "Add/remove overlays"
 msgstr "Aggiungi/rimuovi overlay"
@@ -602,7 +601,7 @@ msgid "Description"
 msgstr "Descrizione"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Deseleziona"
 
 msgid "Digits"
 msgstr "Cifre"
@@ -616,7 +615,7 @@ msgstr ""
 "10.000"
 
 msgid "Done"
-msgstr ""
+msgstr "Fatto"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Fatto. I fondi sono stati trasferiti all'agente di pagamento"
@@ -636,9 +635,8 @@ msgstr "Tipologia doppio MA"
 msgid "Double click the object to remove"
 msgstr "Doppio clic sull'oggetto per rimuovere"
 
-#, fuzzy
 msgid "Download"
-msgstr "Scarica come"
+msgstr "Download"
 
 msgid "Download CSV"
 msgstr "Download di CSV"
@@ -677,7 +675,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Edge"
 msgstr "Vantaggio"
@@ -718,9 +716,8 @@ msgstr "Errore nel download .csv"
 msgid "Error getting data for"
 msgstr "Errore nell'ottenimento dei dati per"
 
-#, fuzzy
 msgid "Error getting market information!"
-msgstr "Errore nell'ottenimento dei dati per"
+msgstr "Errore nell'ottenimento delle informazioni del mercato!"
 
 msgid "Estimated Net Worth"
 msgstr "Valore netto stimato"
@@ -785,9 +782,8 @@ msgstr "Prezzo finale"
 msgid "Finance"
 msgstr "Finanza"
 
-#, fuzzy
 msgid "Financial Account Opening form"
-msgstr "Apertura di un account vero"
+msgstr "Modulo per l'apertura di un account finanziario"
 
 msgid "Financial information"
 msgstr "Informazioni finanziarie"
@@ -868,7 +864,7 @@ msgid "Horizontal line"
 msgstr "Linea orizzontale"
 
 msgid "Hour"
-msgstr ""
+msgstr "Ora"
 
 msgid "Hours"
 msgstr "Ore"
@@ -1212,7 +1208,7 @@ msgid "Minus the agent's commission"
 msgstr "Meno la commissione dell'agente"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 msgid "Minutes"
 msgstr "Minuti"
@@ -1411,7 +1407,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1483,7 +1479,7 @@ msgid "Please choose at least one token scope"
 msgstr "Scegli almeno uno scopo dei token"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "Scegli in quale valuta desideri negoziare"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Per poter completare il trasferimento, conferma i seguenti dati"
@@ -1587,10 +1583,8 @@ msgstr "Predefinito"
 msgid "Preferred reality-check interval"
 msgstr "Intervallo preferito per il controllo della situazione"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
-msgstr ""
-"Premi il pulsante  Crea token  sulla destra per creare il tuo primo token"
+msgstr "Premi il pulsante Crea token sulla destra per creare il tuo primo token"
 
 msgid "Price"
 msgstr "Prezzo"
@@ -1631,7 +1625,6 @@ msgstr "Orario dell'acquisto"
 msgid "Read"
 msgstr "Leggi"
 
-#, fuzzy
 msgid "Real Money Account Opening"
 msgstr "Apertura di un account vero"
 
@@ -1942,10 +1935,10 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "Modello applicato parzialmente"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "Il modello non è applicabile"
 
 msgid "Template name"
 msgstr "Nome del modello"
@@ -2020,7 +2013,7 @@ msgid "Time Period"
 msgstr "Periodo di tempo"
 
 msgid "Time interval"
-msgstr ""
+msgstr "Intervallo di tempo"
 
 msgid "Time period"
 msgstr "Periodo di tempo"
@@ -2052,7 +2045,7 @@ msgstr ""
 "appena inviato tramite email"
 
 msgid "Today"
-msgstr ""
+msgstr "Oggi"
 
 msgid "Token"
 msgstr "Token"
@@ -2155,7 +2148,7 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Purtroppo il tuo browser non li supporta"
@@ -2175,9 +2168,8 @@ msgstr "Aggiorna impostazioni"
 msgid "Upgrade to a Real Account"
 msgstr "Passa a un account vero"
 
-#, fuzzy
 msgid "Upload template"
-msgstr "Carica modello del grafico"
+msgstr "Carica modello"
 
 msgid "Upper Band Stroke"
 msgstr "Stroke della banda superiore"
@@ -2193,7 +2185,7 @@ msgstr ""
 "tipologia, periodo di tempo, indicatori e confronti"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del trade"
 
 msgid "Verification code has been sent to your email"
 msgstr "Il codice di verifica è stato inviato al tuo indirizzo email"
@@ -2309,6 +2301,8 @@ msgstr ""
 
 msgid "Your account is locked, please contact customer support for more info"
 msgstr ""
+"Il tuo account è bloccato. Per ulteriori informazioni, contatta l'assistenza "
+"clienti"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Il tuo browser non supporta la copia negli appunti"
