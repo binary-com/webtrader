@@ -2,9 +2,11 @@
     <div class="table">
         <div class="row">
             <div class="cell">
-                <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector" data-balloon="Time interval" data-balloon-pos="down">
-                    <span class="vertical-bottom" rv-text="timePeriod_name | i18n"></span>
-                    <span class="nav-caret triangle"></span>
+                <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector">
+                    <span data-balloon="Time interval" data-balloon-pos="down">
+                        <span class="vertical-bottom" rv-text="timePeriod_name | i18n"></span>
+                        <span class="nav-caret triangle"></span>
+                    </span>
                 </div>
                 <div class="chartOptions_overlay table timePeriodOverlay" rv-show="showTimePeriodSelector">
                     <div class="row">
@@ -43,10 +45,12 @@
             </div>
             
             <div class="cell">
-                <div class="chartOptions_button chart_type" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector" data-balloon="Chart type" data-balloon-pos="down">
-                    <div class="img"><span rv-class="chartType.value | append '-icon'"></span></div>
-                    <span class="vertical-bottom name" rv-show="showChartTypeLabel" rv-text="chartType.name | i18n"></span>
-                    <span class="nav-caret triangle"></span>
+                <div class="chartOptions_button chart_type" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector">
+                    <span data-balloon="Chart type" data-balloon-pos="down">
+                        <div class="img"><span rv-class="chartType.value | append '-icon'"></span></div>
+                        <span class="vertical-bottom name" rv-show="showChartTypeLabel" rv-text="chartType.name | i18n"></span>
+                        <span class="nav-caret triangle"></span>
+                    </span>
                 </div>
                 <div class="chartOptions_overlay chartTypeOverlay table" rv-show="showChartTypeSelector">
                     <div class="row" rv-each-item="chartTypes" rv-class-showBorder="item.showBorder">
