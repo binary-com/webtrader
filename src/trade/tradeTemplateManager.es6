@@ -1,7 +1,7 @@
 /**
  * Created by amin on July 31, 2016.
  */
-define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chartWindow, rv) {
+define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], function($, chartWindow, rv, _) {
   require(['text!trade/tradeTemplateManager.html']);
 
   if(!local_storage.get('trade-templates')) {
@@ -258,11 +258,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra'], function($, chart
 
     isDuplicate(tmpl, array){
       // get template with same values.
-      const tmpl_copy = array.find(function(e){
-        if(e.random == tmpl.random){
-          return e;
-        }
-      });
+      const tmpl_copy = _.find(array, ['random', tmpl.random]);
       if(tmpl_copy){
         $.growl.error({message: 'Template already saved as '.i18n() +'<b>' + tmpl_copy.name + '</b>.'});
         return true;
