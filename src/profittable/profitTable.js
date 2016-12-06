@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by amin on October 29, 2015.
  */
 define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", "datatables", "jquery-growl", 'common/util'],

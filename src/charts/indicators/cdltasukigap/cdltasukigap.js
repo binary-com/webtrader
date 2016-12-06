@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 12/28/15
  */
 define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function ($, rv) {

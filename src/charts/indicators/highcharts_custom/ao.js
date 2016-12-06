@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 2/3/16.
  */
 AO = function (data, options, indicators) {

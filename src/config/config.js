@@ -23,7 +23,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
       open: function () {
         var config = local_storage.get('config');
         if(config && config.app_id) state.app_id = config.app_id;
-        if(config && config.websocket_url) state.websocket_url = _.replace(_.replace(config.websocket_url || '', 'wss://', ''), '/websockets/v3?l=EN', '');
+        if(config && config.websocket_url) state.websocket_url = _.replace(_.replace(config.websocket_url || '', 'wss://', ''), '/websockets/v3?l=EN&brand=champion', '');
         if(config && config.oauth_url) state.oauth_url = _.replace(_.replace(config.oauth_url || '', 'https://', ''), '/oauth2/authorize', '');
       },
       close: function() {
@@ -57,7 +57,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
 
     state.apply = function() {
       var config = {
-        websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN',
+        websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN&brand=champion',
         oauth_url: 'https://' + state.oauth_url + '/oauth2/authorize',
         app_id: state.app_id
       }

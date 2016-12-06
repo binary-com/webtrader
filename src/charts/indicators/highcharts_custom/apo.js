@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 2/7/16.
  */
 APO = function (data, options, indicators) {
