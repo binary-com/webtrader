@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 2/9/16.
  */
 MASS = function (data, options, indicators) {

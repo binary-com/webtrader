@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 2/8/16.
  */
 DC = function (data, options, indicators) {

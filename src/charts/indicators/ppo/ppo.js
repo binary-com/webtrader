@@ -1,4 +1,4 @@
-﻿/**
+/**
 Created By Mahboob.M on 2/1/2015
 */
 define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
