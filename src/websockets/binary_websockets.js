@@ -50,6 +50,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
          *  The connection is closed, resubscrible to tick streaming.
          *  We have to make sure that resubscribe is atleast 1 second delayed
          **/
+        /*
         setTimeout(function(){
             socket = connect();
             if(local_storage.get('oauth'))
@@ -57,7 +58,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
                 Object.keys(chartingRequestMap).forEach(function (key) {
                     var req = chartingRequestMap[key];
-                    if (req && req.symbol && !req.timerHandler) { /* resubscribe */
+                    if (req && req.symbol && !req.timerHandler) { // resubscribe
                         chartingRequestMap.register({
                           symbol: req.symbol,
                           granularity: req.granularity,
@@ -68,7 +69,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                     }
                 });
             });
-        }, 1000);
+        }, 1000);*/
     }
 
     var callbacks = {};
