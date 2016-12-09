@@ -465,6 +465,9 @@ msgstr "接続エラー。ページを更新してください"
 msgid "Construction"
 msgstr "設営"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "続行"
 
@@ -716,8 +719,8 @@ msgstr "取引時刻直後のテック"
 msgid "Error downloading .csv"
 msgstr ".csvファイルのダウンロード中にエラーが発生しました"
 
-msgid "Error getting data for"
-msgstr "xxxのデータ取得中にエラーが発生しました"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "市場情報の取得にエラーが発生しました！"
@@ -1503,6 +1506,9 @@ msgstr "トークン名をご入力ください"
 msgid "Please enter the verification code sent to your email"
 msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "市区町村をご入力ください"
 
@@ -1768,9 +1774,6 @@ msgstr "セッション"
 msgid "Session duration limit, in minutes"
 msgstr "取引継続時間の制限(分単位)"
 
-msgid "Session is not authenticated"
-msgstr "セッションが許可されていません"
-
 msgid "Settles"
 msgstr "約定時間"
 
@@ -2020,6 +2023,9 @@ msgstr "取引期間"
 
 msgid "Time interval"
 msgstr "期間"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "取引期間"
@@ -2540,6 +2546,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| 戻る"
+
+#~ msgid "Error getting data for"
+#~ msgstr "xxxのデータ取得中にエラーが発生しました"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "セッションが許可されていません"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr "--- タイトル: ページが存在しません: /404.html エラー: \"\" ---"

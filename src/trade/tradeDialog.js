@@ -749,6 +749,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             console.error(err);
             state.proposal.error = err.message;
             state.proposal.message = '';
+            state.proposal.loading = false;
             if (err.echo_req && err.echo_req.proposal && err.details) {
               state.proposal.ask_price = err.details.display_value;
               state.proposal.message = err.details.longcode;

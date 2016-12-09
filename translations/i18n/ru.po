@@ -5,14 +5,14 @@ msgstr ""
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
 "PO-Revision-Date: 2016-11-24 03:58+0000\n"
 "Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
@@ -468,6 +468,9 @@ msgstr "Ошибка соединения. Обновите страницу"
 msgid "Construction"
 msgstr "Строительство"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "Продолжить"
 
@@ -718,8 +721,8 @@ msgstr "Входная котировка"
 msgid "Error downloading .csv"
 msgstr "Ошибка при загрузке файла в формате .csv"
 
-msgid "Error getting data for"
-msgstr "Ошибка в получении данных для"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "Ошибка при получении рыночных данных!"
@@ -1519,6 +1522,9 @@ msgid "Please enter the verification code sent to your email"
 msgstr ""
 "Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "Пожалуйста, введите адрес"
 
@@ -1783,9 +1789,6 @@ msgstr "Сессия"
 msgid "Session duration limit, in minutes"
 msgstr "Ограничение на длительность сессии, в минутах"
 
-msgid "Session is not authenticated"
-msgstr "Сессия не авторизована"
-
 msgid "Settles"
 msgstr "Заканч."
 
@@ -2039,6 +2042,9 @@ msgstr "Период"
 msgid "Time interval"
 msgstr "Врем. интервал"
 
+msgid "Time out until"
+msgstr ""
+
 msgid "Time period"
 msgstr "Период"
 
@@ -2210,7 +2216,8 @@ msgstr ""
 "его вид, период времени, индикаторы и параметры сравнения"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr "Нажмите кнопку \"Сохранить как...,\" чтобы сохранить торговые настройки"
+msgstr ""
+"Нажмите кнопку \"Сохранить как...,\" чтобы сохранить торговые настройки"
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
@@ -2560,6 +2567,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Прибыль"
+
+#~ msgid "Error getting data for"
+#~ msgstr "Ошибка в получении данных для"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "Сессия не авторизована"
 
 #~ msgid "Demo for affiliates to access Binary.com charts in IFRAME"
 #~ msgstr "Демо-ролик для партнёров о доступе к графикам Binary.com в IFRAME"

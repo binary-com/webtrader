@@ -113,6 +113,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             residence: '',
             instructions: '',
           },
+          login_details: Cookies.loginids().reduce(function(a,b){if(a.id == local_storage.get("authorize").loginid)return a;else return b})
         };
         let {route, menu, verify, empty_fields, standard, agent, transfer} = state;
 

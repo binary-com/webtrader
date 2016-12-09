@@ -437,6 +437,8 @@ select + .ui-selectmenu-button { border-radius: 3px !important;}
 
 #doorbell-error { color: red; }
 #doorbell-form textarea { outline: 0; }
+#doorbell-container legend { font-size: 1em !important; }
+#doorbell-close { opacity: 1 !important; }
 
 /*hide input buttons*/
 .ui-spinner-button {
@@ -445,4 +447,10 @@ select + .ui-selectmenu-button { border-radius: 3px !important;}
 
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+/* jquery ui selectmenu on options hover*/
+.ui-menu-item.ui-state-focus {
+  background: #1e90ff;
+  color: #fff;
 }

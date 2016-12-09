@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 4/5/16.
  */
-define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', 'moment', "jquery-growl", 'common/util'], function($, windows, liveapi, _, rv, moment) {
+define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', 'moment', 'text!selfexclusion/selfexclusion.html', "jquery-growl", 'common/util'], function($, windows, liveapi, _, rv, moment, html) {
 
     var win = null, timerHandlerForSessionTimeout = null, loginTime = null;
     var limits = {
@@ -54,6 +54,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         "limit": null,
         "set": false,
         "name": "Exclude time"
+      },
+      "timeout_until": {
+        "limit": null,
+        "set": false,
+        "name": "Time out until"
       }
     };
 
@@ -68,11 +73,26 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         max_open_bets: null,
         session_duration_limit: null,
         exclude_until: null,
+        timeout_until_date: null,
+        timeout_until_time: null,
         update : function(event, scope) {
 
             var data = {"set_self_exclusion": 1};
             var check_passed = true;
 
+            if(scope.timeout_until_date && scope.timeout_until_time){
+                var time_out = moment(scope.timeout_until_date + " " + scope.timeout_until_time, "YYYY-MM-DD hh:mm");
+                if(time_out.isAfter(moment().add(6,"weeks"))){
+                    check_passed = false;
+                    $.growl.error({message: "Please enter a value less than 6 weeks for time out until."});
+                }
+                scope.timeout_until = time_out.unix().valueOf();
+            } else {
+                if(scope.timeout_until_date || scope.timeout_until_time){
+                    check_passed = false;
+                    $.growl.error({message:"Please enter both date and time for Time out until."});
+                }
+            }
             //validation
             $.each(limits, function(index, value){
                 if(scope[index] || value.set){
@@ -83,16 +103,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                         return;
                     } 
 
-                    if(!scope[index] || scope[index] <= 0 || scope[index] > value.limit){
+                    if(!scope[index] || scope[index] <= 0 || (value.limit && scope[index] > value.limit)){
                         var message = "Please enter a value between 0 and " + value.limit + " for " + value.name;
                         check_passed = false;
                         $.growl.error({ message: message});
                         return;
                     }
-
                     data[index] = scope[index];
-                    limits[index].limit = scope[index];
-                    limits[index].set = true;
                 }
             });
 
@@ -102,7 +119,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             liveapi.send(data)
                 .then(function(response) {
                     $.growl.notice({ message : 'Your changes have been updated'.i18n() });
-                    logoutBasedOnExcludeDate();
+                    logoutBasedOnExcludeDateAndTimeOut();
                     setOrRefreshTimer();
                 })
                 .catch(function (err) {
@@ -115,33 +132,45 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     var init = function() {
         require(["css!selfexclusion/selfexclusion.css"]);
         return new Promise(function(res) {
-            require(['text!selfexclusion/selfexclusion.html'], function(html) {
-                var div = $(html).i18n();
-                win = windows.createBlankWindow($('<div/>'), {
-                    title: 'Self-Exclusion Facilities'.i18n(),
-                    width: 900 ,
-                    minHeight:500,
-                    height: 500,
-                    'data-authorized': 'true',
-                    destroy: function() {
-                        win = null;
-                    }
-                });
-                div.appendTo(win);
-                rv.bind(div[0], settingsData);
-                refreshData();
-                res();
+            var div = $(html).i18n();
+            div.find(".datepicker").datepicker({
+                dateFormat : 'yy-mm-dd',
+                minDate: moment.utc().toDate(),
+                maxDate: moment.utc().add(6,"weeks").toDate()
             });
+            div.find(".timepicker").timepicker({
+                timeFormat : 'HH:MM'
+            });
+            win = windows.createBlankWindow($('<div/>'), {
+                title: 'Self-Exclusion Facilities'.i18n(),
+                width: 900 ,
+                minHeight:500,
+                height: 500,
+                'data-authorized': 'true',
+                destroy: function() {
+                    win = null;
+                }
+            });
+            div.appendTo(win);
+            rv.bind(div[0], settingsData);
+            refreshData();
+            res();
         });
     };
 
-    function logoutBasedOnExcludeDate() {
+    function logoutBasedOnExcludeDateAndTimeOut() {
         if (settingsData.exclude_until) {
             if (moment.utc(settingsData.exclude_until, 'YYYY-MM-DD').isAfter(moment.utc().startOf('day'))) {
                 _.defer(function () {
                     $.growl.error( { message : 'You have excluded yourself until '.i18n() + settingsData.exclude_until });
                     liveapi.invalidate();
                 });
+            }
+        }
+        if (settingsData.timeout_until) {
+            if (moment(settingsData.timeout_until).isAfter(moment().unix().valueOf())) {
+                $.growl.error( { message : 'You have excluded yourself until '.i18n() + moment.unix(settingsData.timeout_until).utc().format("YYYY-MM-DD HH:mm") + "GMT" });
+                liveapi.invalidate();
             }
         }
     }
@@ -160,7 +189,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                             }
                         });
 
-                        logoutBasedOnExcludeDate();
+                        logoutBasedOnExcludeDateAndTimeOut();
                     }
                 })
                 .catch(function (err) {
