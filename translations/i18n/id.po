@@ -462,6 +462,9 @@ msgstr "Koneksi error. Refresh halaman"
 msgid "Construction"
 msgstr "Konstruksi"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "Lanjutkan"
 
@@ -708,8 +711,8 @@ msgstr "Spot awal"
 msgid "Error downloading .csv"
 msgstr "Error downloading .csv"
 
-msgid "Error getting data for"
-msgstr "Error mendapatkan data untuk"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "Error saat mendapatkan informasi pasar!"
@@ -1500,6 +1503,9 @@ msgstr "Silahkan masukkan nama token"
 msgid "Please enter the verification code sent to your email"
 msgstr "Silahkan masukkan kode verifikasi yang dikirim ke alamat email Anda"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "Masukkan alamat kota Anda"
 
@@ -1764,9 +1770,6 @@ msgstr "Sesi"
 msgid "Session duration limit, in minutes"
 msgstr "Batas sesi durasi, dalam menit"
 
-msgid "Session is not authenticated"
-msgstr "Sesi tidak dikonfirmasi"
-
 msgid "Settles"
 msgstr "Diselesaikan"
 
@@ -2021,6 +2024,9 @@ msgstr "Periode Waktu"
 
 msgid "Time interval"
 msgstr "Interval waktu"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "Periode Waktu"
@@ -2543,6 +2549,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Laba"
+
+#~ msgid "Error getting data for"
+#~ msgstr "Error mendapatkan data untuk"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "Sesi tidak dikonfirmasi"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr ""
