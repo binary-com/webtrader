@@ -19,6 +19,10 @@
       display: inline-block;
       img { max-height: 20px; }
     }
+    span[data-balloon] {
+      display: block;
+      height: 34px;
+    }
   }
   .chartOptions_overlay {
     margin-top: 0px;
@@ -110,18 +114,6 @@
         display: flex;
         width: 100%;
       }
-    }
-  }
-
-  [data-balloon] {
-    border-bottom: 0px;
-    cursor: pointer;
-    &:before {
-      padding: 0.5em;
-      font-size: 0.8em;
-      border: none;
-      box-shadow: none;
-      border-radius: 0px;
     }
   }
 

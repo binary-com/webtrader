@@ -465,6 +465,9 @@ msgstr "Erro de conexão. Atualize a página"
 msgid "Construction"
 msgstr "Construção"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "Continuar"
 
@@ -715,8 +718,8 @@ msgstr "Preço de entrada"
 msgid "Error downloading .csv"
 msgstr "Erro ao baixar .csv"
 
-msgid "Error getting data for"
-msgstr "Erro ao obter dados para"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "Erro ao obter informações do mercado!"
@@ -1515,6 +1518,9 @@ msgstr "Insira o nome do token"
 msgid "Please enter the verification code sent to your email"
 msgstr "Insira o código de verificação enviado para o seu e-mail"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "Insira o seu endereço"
 
@@ -1591,7 +1597,8 @@ msgid "Preferred reality-check interval"
 msgstr "Intervalo preferido para o balanço da realidade"
 
 msgid "Press Create token button on the right to create your first token"
-msgstr "Pressione o botão Criar token à direita para criar o seu primeiro token"
+msgstr ""
+"Pressione o botão Criar token à direita para criar o seu primeiro token"
 
 msgid "Price"
 msgstr "Preço"
@@ -1778,9 +1785,6 @@ msgstr "Sessão"
 
 msgid "Session duration limit, in minutes"
 msgstr "Limite de duração da sessão, em minutos"
-
-msgid "Session is not authenticated"
-msgstr "A sessão não está autenticada"
 
 msgid "Settles"
 msgstr "Liquida"
@@ -2034,6 +2038,9 @@ msgstr "Período de tempo"
 
 msgid "Time interval"
 msgstr "Intervalo de tempo"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "Período de tempo"
@@ -2557,6 +2564,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr ""
+
+#~ msgid "Error getting data for"
+#~ msgstr "Erro ao obter dados para"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "A sessão não está autenticada"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr ""

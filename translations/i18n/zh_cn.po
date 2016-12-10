@@ -459,6 +459,9 @@ msgstr "连接出错：请刷新页面"
 msgid "Construction"
 msgstr "建筑"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "继续"
 
@@ -705,8 +708,8 @@ msgstr "入市现价"
 msgid "Error downloading .csv"
 msgstr "下载.csv时发生错误"
 
-msgid "Error getting data for"
-msgstr "获取以下数据时出错"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "获取市场信息时出错！"
@@ -1481,6 +1484,9 @@ msgstr "请输入令牌名称"
 msgid "Please enter the verification code sent to your email"
 msgstr "请输入发送到您邮箱的验证码"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "请输入您的城市住址"
 
@@ -1745,9 +1751,6 @@ msgstr "会话"
 msgid "Session duration limit, in minutes"
 msgstr "交易期持续时间限制，以分钟为单位"
 
-msgid "Session is not authenticated"
-msgstr "会话未经验证"
-
 msgid "Settles"
 msgstr "结算"
 
@@ -1992,6 +1995,9 @@ msgstr "期限"
 
 msgid "Time interval"
 msgstr "时间间隔"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "期限"
@@ -2492,6 +2498,12 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回报率"
+
+#~ msgid "Error getting data for"
+#~ msgstr "获取以下数据时出错"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "会话未经验证"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr "--- 标题：找不到页面的固定链接：/404.html 摘录: \"\" ---"

@@ -459,6 +459,9 @@ msgstr "連結出錯:請重新整理頁面"
 msgid "Construction"
 msgstr "建構"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "繼續"
 
@@ -705,8 +708,8 @@ msgstr "入市現價"
 msgid "Error downloading .csv"
 msgstr "下載.csv時發生錯誤"
 
-msgid "Error getting data for"
-msgstr "取得以下資料時出錯"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "取得市場資料時出錯!"
@@ -1481,6 +1484,9 @@ msgstr "請輸入權杖名稱"
 msgid "Please enter the verification code sent to your email"
 msgstr "請輸入發送到您郵箱的驗證碼"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "請輸入您的城市住址"
 
@@ -1745,9 +1751,6 @@ msgstr "工作階段"
 msgid "Session duration limit, in minutes"
 msgstr "交易期持續時間限制，以分鐘作單位"
 
-msgid "Session is not authenticated"
-msgstr "工作階段未經驗證"
-
 msgid "Settles"
 msgstr "結算"
 
@@ -1992,6 +1995,9 @@ msgstr "期限"
 
 msgid "Time interval"
 msgstr "時間間隔"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "期限"
@@ -2491,6 +2497,12 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回報率"
+
+#~ msgid "Error getting data for"
+#~ msgstr "取得以下資料時出錯"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "工作階段未經驗證"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"
