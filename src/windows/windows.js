@@ -301,7 +301,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
 
             var options = {
                 showOn: 'both',
-                numberOfMonths: 2,
+                numberOfMonths: 1,
                 maxDate: 0,
                 minDate: new Date(2010, 0, 1),
                 dateFormat: 'yy-mm-dd',
