@@ -1,23 +1,11 @@
-body * {
-    font-family: 'Roboto', sans-serif;
+.logo {
+	width: 18.3%;
 }
-#nav-container {
-    position: absolute;
-    width: 100%;
-    background-color: #273051;
-    height: 53px;
-    text-align: center;
-    top:0%;
-    left:0%;
+.logo-wrapper{
+	margin:5px 0 10px 10px;
 }
-
-#nav-container .nav-logo {
-    position: absolute;
-    margin-top: 6px;
-    left: 10px;
-}
-#nav-container .nav-logo img {
-    width: 40px;
+table td{
+	border:none;
 }
 #mobile-nav {
     position: absolute;
@@ -28,14 +16,6 @@ body * {
     background-color: #273051;
     z-index: 999999;
 }
-#menu-heading {
-    position: absolute;
-    color: white;
-    font-size: 24px;
-    left: 60px;
-    top: 12px;
-    text-shadow: 0 0 3px #333;
-}
 #container {
 	position: relative;
 	margin: auto;
@@ -44,17 +24,11 @@ body * {
 	width:60%;
 	margin-top: 5%;
 	top: 15%\9; /*for IE8 and below*/
-  color: #2E2A2B;
-}
-#container .upgrade {
-	color: #E67E1F;
-  font-weight: lighter;
-  font-size: 2.5em;
 }
 #container p {
 	position: relative;
-  font-weight: lighter;
-  font-size: 1.3em;
+  	font-weight: lighter;
+  	font-size: 1.3em;
 }
 #container table {
 	position: relative;
@@ -64,8 +38,6 @@ body * {
 }
 #container table tr td a {
 	text-decoration: none;
-	color: #0C163A;
-	font-weight: bold;
 }
 .hidden {
 	display: none;
@@ -73,8 +45,10 @@ body * {
 a img{
     border: 0;
 }
-#mobile-container .orange{
-	color: #E67E1F!important;
+#mobile-container p{
+	margin: 30px 15px 5px 15px;
+}
+p.alternatives {
 	font-size: 1.2em;
 }
 #mobile-container{
@@ -88,10 +62,11 @@ a img{
 }
 .mobile-options tr td{
 	display: block;
-	padding: 10px;
-	background: #F5F6F8;
-	border-top: 1px solid #E4E5E7;
+	padding: 10px 10px 10px 15px;;
 	border-bottom: 1px solid #E4E5E7;
+}
+.mobile-options tr td:first-child{
+	border-top: 1px solid #E4E5E7;
 }
 .mobile-options tr td a{
 	text-decoration: none;

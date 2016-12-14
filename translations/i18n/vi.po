@@ -473,6 +473,9 @@ msgstr "Lỗi kết nối. Làm mới lại trang"
 msgid "Construction"
 msgstr "Xây dựng"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "Tiếp tục"
 
@@ -722,8 +725,8 @@ msgstr "Điểm khởi đầu"
 msgid "Error downloading .csv"
 msgstr "Lỗi tải xuống tệp .csv"
 
-msgid "Error getting data for"
-msgstr "Lỗi lấy dữ liệu cho"
+msgid "Error getting data for %1"
+msgstr ""
 
 #, fuzzy
 msgid "Error getting market information!"
@@ -1529,6 +1532,9 @@ msgstr "Vui lòng nhập tên token"
 msgid "Please enter the verification code sent to your email"
 msgstr "Vui lòng nhập mã xác minh được gửi tới email của bạn"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "Vui lòng nhập địa chỉ phố của bạn"
 
@@ -1795,9 +1801,6 @@ msgstr "Phiên"
 msgid "Session duration limit, in minutes"
 msgstr "Giới hạn thời lượng phiên, bằng phút"
 
-msgid "Session is not authenticated"
-msgstr "Phiên không được cấp phép"
-
 msgid "Settles"
 msgstr "Cài đặt"
 
@@ -2051,6 +2054,9 @@ msgstr "Thời hạn"
 
 msgid "Time interval"
 msgstr "Khoảng thời gian"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "Thời hạn"
@@ -2577,6 +2583,12 @@ msgstr "{hoa hồng cho đại lý}%"
 
 msgid "| Return"
 msgstr "| Quay trở lại"
+
+#~ msgid "Error getting data for"
+#~ msgstr "Lỗi lấy dữ liệu cho"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "Phiên không được cấp phép"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr ""

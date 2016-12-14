@@ -511,6 +511,17 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                    }
                 })
                 .catch(function(err) {
+                    //Switch to virtual account on selfexclusion error.
+                    if(err.code==="SelfExclusion"){
+                        //Login to virtual account instead.
+                        oauth.forEach(function(ele, i){
+                            if(ele.id.match(/^VRTC/)){
+                                liveapi.switch_account(ele.id);
+                                return;
+                            }
+                        });
+                        return;
+                    }
                     console.error(err.message);
                     $.growl.error({message: err.message});
                     //Remove token and trigger login-error event.
