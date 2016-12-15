@@ -2,39 +2,36 @@
  * Created by amin on July 31, 2016.
  */
 define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], function($, chartWindow, rv, _) {
-  require(['text!charts/chartTemplateManager.html']);
+  require(['text!trade/tradeTemplateManager.html']);
 
-  if(!local_storage.get('templates')) {
-    local_storage.set('templates', []);
+  if(!local_storage.get('trade-templates')) {
+    local_storage.set('trade-templates', []);
   }
 
-  class ChartTemplateManager {
-    constructor(root, dialog_id) { 
+  class TradeTemplateManager {
+    constructor(root, dialog) {
       const _this = this;
-      const templates = local_storage.get("templates");
+      const templates = local_storage.get("trade-templates");
       templates.forEach(function(tmpl){
-        if(!tmpl.random){
+        if(!tmpl.random || !tmpl.template_type){
           tmpl = _this.setRandom(tmpl);
         }
       });
-      local_storage.set("templates",templates);
-
-      const state = this.init_state(root, dialog_id);
-      require(['text!charts/chartTemplateManager.html'], html => {
+      local_storage.set("trade-templates", templates);
+      const state = this.init_state(root, dialog);
+      require(['text!trade/tradeTemplateManager.html'], html => {
         root.append(html.i18n());
         this.view = rv.bind(root[0], state);
       });
     }
 
-    init_state(root, dialog_id) {
-      const chart = $('#' + dialog_id + '_chart').highcharts();
+    init_state(root, dialog) {
       const state = {
         route: { value: 'menu' },
         menu: {
-          save_changes_disabled: true
         },
         templates: {
-          array: local_storage.get('templates'),
+          array: local_storage.get('trade-templates'),
           save_as_value: '',
           rename_tmpl: null,
           rename_value: '',
@@ -44,42 +41,39 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
       const {route, templates, menu} = state;
 
       /* persist applied templates between page reloads */
-      const current_tmpl = this.setRandom(chartWindow.get_chart_options(dialog_id));
+      const current_tmpl = this.setRandom(dialog.get_template());
       templates.array = local_storage.get("templates");
       if(_.findIndex(templates.array, t => t.random === current_tmpl.random) !== -1) {
         templates.current = current_tmpl;
       }
-      
+
       route.update = value => {
         route.value = value;
       };
 
       menu.save_as = () => {
-        const options = chartWindow.get_chart_options(dialog_id) || {};
-        options.name = [`${options.timePeriod} ${options.type}`]
-                      .concat(options.indicators.map(ind => ind.name))
-                      .concat(options.overlays.map(overlay => overlay.displaySymbol))
-                      .join(' + ');
-        templates.save_as_value = options.name;
+        const tmpl = dialog.get_template();
+        tmpl.name = `${tmpl.categories_value} ${_.capitalize(tmpl.categoriy_displays_selected)}`;
+        templates.save_as_value = tmpl.name;
         route.update('save-as');
       }
 
       menu.templates = () => {
-        templates.array = local_storage.get('templates'); // it can be modified from other dialogs.
+        templates.array = local_storage.get('trade-templates'); // it can be modified from other dialogs.
         route.update('templates');
       }
 
       menu.save_changes = () => {
-        const current = this.setRandom(chartWindow.get_chart_options(dialog_id));
+        const current = this.setRandom(dialog.get_template());
         const name = current.name;
-        const array = local_storage.get('templates');
+        const array = local_storage.get('trade-templates');
         const inx = _.findIndex(array, t => t.name === name);
         if(inx !== -1) {
           array[inx] = current;
         } else {
           array.push(current);
         }
-        local_storage.set('templates', array);
+        local_storage.set('trade-templates', array);
         templates.array = array;
         templates.current = current;
         $.growl.notice({message: 'Template changes saved '.i18n() + '(' + current.name + ')'});
@@ -99,7 +93,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
         const reader = new FileReader();
         reader.onload = (e) => {
           const contents = e.target.result;
-          const array = local_storage.get("templates");
+          const array = local_storage.get("trade-templates");
           let data = null;
           try{
             data = JSON.parse(contents);
@@ -109,19 +103,17 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
             if(hash !== data.random){
               throw "Invalid JSON file".i18n();
             }
-             
             if(_this.isDuplicate(data, array)){
               return;
             }
-
-            if(!data.indicators) {
-              throw "Invalid template type".i18n();
+            if(data.template_type !== 'trade-template') {
+              throw "Invalid template type.".i18n();
             }
           } catch(e){
             $.growl.error({message:e});
             return;
           }
-          
+
           // Rename duplicate template names.
           let file = 1,
               name = data.name;
@@ -137,7 +129,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
 
           templates.apply(data);
           array.push(data);
-          local_storage.set('templates', array);
+          local_storage.set('trade-templates', array);
           templates.array = array;
           $.growl.notice({message: "Successfully applied the template and saved it as ".i18n() + "<b>" + data.name + "</b>"});
         }
@@ -148,32 +140,38 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
       templates.save_as = (event) => {
         event.preventDefault();
         const name = templates.save_as_value.substring(0,20).replace(/[<>]/g,"-");
-        const options = this.setRandom(chartWindow.get_chart_options(dialog_id));
-        if(options) {
-          options.name = name;
-          const array = local_storage.get('templates');
-          if(this.isDuplicate(options, array)){
+        const tmpl = this.setRandom(dialog.get_template());
+        if(tmpl) {
+          tmpl.name = name;
+          const array = local_storage.get('trade-templates');
+          if(array.map(t => t.name).includes(name)) {
+            $.growl.error({message: 'Template name already exists'.i18n() });
             return;
           }
-          array.push(options);
-          templates.current = options;
-          local_storage.set('templates', array);
+
+          if(this.isDuplicate(tmpl, array)){
+            return;
+          }
+          array.push(tmpl);
+          templates.current = tmpl;
+          local_storage.set('trade-templates', array);
           templates.array = array;
           route.update('menu');
-          chartWindow.set_chart_options(dialog_id, options); /* update the name */
+          dialog.set_template(tmpl);
         }
       }
 
       templates.download = (tmpl) => {
         var json = JSON.stringify(tmpl);
+        console.log(tmpl);
         download_file_in_browser(tmpl.name + '.json', 'text/json;charset=utf-8;', json);
         $.growl.notice({message: "Downloading template as <b>".i18n() + tmpl.name + ".json</b>"});
       }
 
       templates.remove = (tmpl) => {
-        let array = local_storage.get('templates');
+        let array = local_storage.get('trade-templates');
         templates.array = array.filter(t => t.name !== tmpl.name);
-        local_storage.set('templates', templates.array);
+        local_storage.set('trade-templates', templates.array);
         if(templates.current && tmpl.name === templates.current.name) {
           templates.current = null;
         }
@@ -189,7 +187,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
         event.preventDefault();
         const name = templates.rename_tmpl.name;
         const new_name = templates.rename_value.substring(0,20).replace(/[<>]/g,"-");
-        const array = local_storage.get('templates');
+        const array = local_storage.get('trade-templates');
         if(array.map(t => t.name).includes(new_name)) {
             $.growl.error({message: 'Template name already exists'.i18n() });
             return;
@@ -197,33 +195,42 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
         const tmpl = array.find(t => t.name === name);
         if(tmpl) {
           tmpl.name = new_name;
-          local_storage.set('templates', array);
+          local_storage.set('trade-templates', array);
           templates.array = array;
           route.update('templates');
 
-          /* update template name in chartWindow options */
-          const current = this.setRandom(chartWindow.get_chart_options(dialog_id));
-          if(current.name == name) {
-            current.name = new_name;
-            chartWindow.set_chart_options(dialog_id, current);
+          /* update template name in current dialog */
+          const current = this.setRandom(dialog.get_template());
+          if(current.random == tmpl.random) {
+            current.name = new_name
+            dialog.set_template(current);
             templates.current = current;
           }
         }
       }
 
       templates.apply = tmpl => {
-        chartWindow.apply_chart_options(dialog_id, tmpl);
+        dialog.set_template(tmpl);
         templates.current = tmpl;
+        route.update('menu');
+        dialog.hide_template_menu();
       }
 
       templates.confirm = (tmpl, event) => {
         route.update("confirm");
         const action = event.currentTarget.text;
         templates.confirm_prevMenu = action === "Delete".i18n() ? "templates" : "menu";
-        templates.confirm_text = action === "Delete" ? "Are you sure you want to delete template?".i18n() : "Are you sure you want to overwrite current template?".i18n();
+        templates.confirm_text = action === "Delete".i18n() ? "Are you sure you want to delete template?".i18n() : "Are you sure you want to overwrite current template?".i18n();
 
         templates.confirm_yes = () => {
-          action === "Delete".i18n()? templates.remove(tmpl) : menu.save_changes();
+          if(action === "Delete".i18n()) {
+            templates.remove(tmpl)
+            if(templates.current === tmpl)
+              templates.current = null;
+          }
+          else {
+            menu.save_changes();
+          }
           templates.confirm_no();
         }
 
@@ -235,11 +242,11 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
       return state;
     }
 
-    // Create random independent of template name to find duplicates more accurately.
     setRandom(tmpl) {
       const name = tmpl.name;
       delete tmpl.name;
       delete tmpl.random;
+      tmpl.template_type = 'trade-template';
       tmpl.random = this.hashCode(JSON.stringify(tmpl));
       tmpl.name = name;
       return tmpl;
@@ -266,6 +273,6 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
   }
 
   return {
-    init: (root, dialog_id) => new ChartTemplateManager(root, dialog_id)
+    init: (root, dialog) => new TradeTemplateManager(root, dialog)
   }
 });

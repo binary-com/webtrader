@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by amin on November 18, 2015.
  */
 
@@ -34,8 +34,8 @@
     }
 */
 
-define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui', 'common/util'],
-    function (_, $, moment, windows, rv, liveapi, chartingRequestMap, html) {
+define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', 'websockets/binary_websockets', 'charts/chartingRequestMap', 'charts/chartingRequestMap', 'text!trade/tradeDialog.html', 'css!trade/tradeDialog.css', 'timepicker', 'jquery-ui', 'common/util'],
+    function (_, $, moment, windows, rv, liveapi, chartingRequestMap, chartingRequestMap, html) {
     require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
     var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
     var debounce = rv.formatters.debounce;
@@ -105,6 +105,117 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                });
     }
 
+    /* return the current state of dialog as a template */
+    function get_current_template(state) {
+      return {
+        name: state.template.name,
+        categories_value: state.categories.value,
+        categoriy_displays_selected: state.category_displays.selected,
+        date_start_value: state.date_start.value,
+        digits_value: state.digits.value,
+        duration_value: state.duration.value,
+        duration_count_value: state.duration_count.value,
+        duration_unit_value: state.duration_unit.value,
+        expiry_value_hour: state.date_expiry.value_hour,
+        expiry_value_date: state.date_expiry.value_date,
+        expiry_value: state.date_expiry.value,
+        barriers_barrier_count: state.barriers.barrier_count,
+        barriers_barrier: state.barriers.barrier,
+        barriers_high_barrier: state.barriers.high_barrier,
+        barriers_low_barrier: state.barriers.low_barrier,
+        basis_value: state.basis.value,
+        currency_value: state.currency.value,
+        basis_amount: state.basis.amount,
+        spreads_amount_per_point: state.spreads.amount_per_point,
+        spreads_stop_type: state.spreads.stop_type,
+        spreads_stop_loss: state.spreads.stop_loss,
+        spreads_stop_profit: state.spreads.stop_profit
+      };
+    };
+
+    function set_current_template(state, tpl) {
+      state.template.name = tpl.name;
+      var warn = function(msg) { $.growl.warning({ message: msg || 'Template applied partially.'.i18n() }); }
+      if(!_.includes(state.categories.array, tpl.categories_value)) {
+        $.growl.error({ message: msg || 'Template is not applicable.'.i18n() });
+        return;
+      }
+      state.categories.value = tpl.categories_value;
+      _.defer(function() {
+        if(!_.includes(state.category_displays.array, tpl.categoriy_displays_selected)) {
+          warn();
+          return;
+        }
+        state.category_displays.selected = tpl.categoriy_displays_selected;
+        _.defer(function() {
+          if(state.date_start.visible) {
+            _.defer(function() {
+              if(tpl.date_start_value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1}))
+                state.date_start.value = tpl.date_start_value*1;
+              else
+                state.date_start.value = 'now';
+            });
+          }
+          if(state.digits.visible) {
+            state.digits.value = tpl.digits_value;
+          }
+          if(state.categories.value !== 'Spreads') { /* <----- duration */
+            state.duration.value = tpl.duration_value;
+            if(state.duration.value === 'Duration' ) {
+              _.defer(function() {
+                state.duration_unit.value = tpl.duration_unit_value;
+                _.defer(function() {
+                  state.duration_count.value = tpl.duration_count_value;
+                });
+              });
+            }
+            if(state.duration.value === 'End Time') {
+              _.defer(function() {
+                  state.date_expiry.value_date = tpl.expiry_value_date;
+                  var is_today = !moment.utc(state.date_expiry.value_date).isAfter(moment.utc(),'day');
+                  if(is_today) {
+                    _.defer(function() {
+                      state.date_expiry.value_hour = tpl.expiry_value_hour;
+                    });
+                  }
+              });
+            }
+          } /* <---- duration */
+
+          state.barriers.barrier_count = tpl.barriers_barrier_count;
+          if(state.barriers.barrier_count === 1) {
+            _.defer(function() {
+              state.barriers.barrier = tpl.barriers_barrier;
+            });
+          }
+          if(state.barriers.barrier_count === 2) {
+            _.defer(function() {
+              state.barriers.high_barrier = tpl.barriers_high_barrier;
+              state.barriers.low_barrier = tpl.barriers_low_barrier;
+            });
+          }
+          /* <---- barriers */
+
+          if(state.categories.value !== 'Spreads') {
+            _.defer(function() {
+              state.basis.value = tpl.basis_value;
+              state.currency.value = tpl.currency_value;
+              state.basis.amount = tpl.basis_amount;
+            });
+          } /* <----- basis, currency */
+
+          if(state.categories.value === 'Spreads') {
+              state.currency.value = tpl.currency_value;
+              state.spreads.amount_per_point = tpl.spreads_amount_per_point;
+              state.spreads.stop_type = tpl.spreads_stop_type;
+              state.spreads.stop_loss = tpl.spreads_stop_loss;
+              state.spreads.stop_profit = tpl.spreads_stop_profit;
+
+          } /* <---- Spreads */
+        });
+      })
+    }
+
     function init_state(available,root, dialog, symbol, contracts_for_spot){
 
       var state = {
@@ -164,7 +275,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           array: [],
           value: '',
           paddingTop: function(){
-            var paddings = { "Asians" : '26px', "Up/Down" : '8px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '16px' , "Spreads":'5px' };
+            var paddings = { "Asians" : '26px', "Up/Down" : '8px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '12px' , "Spreads":'5px' };
             return paddings[state.categories.value] || '3px';
           }
         },
@@ -175,8 +286,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         barriers: {
           barrier_count: 0,
           barrier : '',
+          perv_barrier: '', // previous barrier value for intraday and tick contracts.
+          was_perv_barrier_daily: false, // was the perv barrier a daily one?
           high_barrier: '',
+          perv_high_barrier: '',
+          was_perv_high_barrier_daily: false,
           low_barrier: '',
+          perv_low_barrier: '',
+          was_perv_low_barrier_daily: false,
           barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; },
           high_barrier_live: function() { return this.high_barrier * 1 + state.tick.quote * 1; },
           low_barrier_live: function() { return this.low_barrier * 1 + state.tick.quote * 1; },
@@ -258,7 +375,21 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           barrier: { my: "left-215 top+10", at: "left bottom", collision: "flipfit" },
           barrier_p: { my: "left-5 top+10", at: "left bottom", collision: "flipfit" },
         },
+        template: {
+          name: '',
+          visible: false,
+        }
       };
+
+      state.template.hide = function(e) {
+        if($(e.target).closest('.trade-template-manager').length === 0) {
+          state.template.visible = false;
+        }
+      }
+      state.template.toggle = function() {
+        state.template.visible = !state.template.visible;
+      }
+
       state.barriers.root = state; // reference to root object for computed properties
 
       state.date_expiry.update_times = function(){
@@ -277,7 +408,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           });
       }
 
-      state.categories.update = function () {
+      state.categories.update = function (msg) {
         var name = state.categories.value;
         state.category_displays.array = _(available).filter(['contract_category_display', name]).map('contract_display').uniq().value();
         state.category_displays.selected = _.head(state.category_displays.array);
@@ -342,12 +473,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
                 var value_hour = times.close !== '--' ? times.close : '00:00:00';
                 expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
                 expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
+                state.barriers.update();
                 debounce(expiry.value, state.proposal.onchange);
               });
         }
         else {
             if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
             expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
+            state.barriers.update();
             debounce(expiry.value, state.proposal.onchange);
         }
       }
@@ -495,17 +628,54 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if (!barriers)
           return;
 
+         var update_barrier = function(barrier, perv_barrier, new_barrier, was_perv_barrier_daily, sign) {
+            var is_daily = (expiry_type === 'daily' && state.duration.value !== 'End Time') ||
+               (state.duration.value === 'End Time' && moment.utc(state.date_expiry.value_date).isAfter(moment.utc(),'day'));
+            if(is_daily) {
+               if(was_perv_barrier_daily) {
+                  perv_barrier = barrier;
+               }
+               barrier = (was_perv_barrier_daily ? barrier : 0) || new_barrier;
+               was_perv_barrier_daily = true;
+            }
+            else {
+               var def_barrier = (new_barrier*1 >= 0 ? sign : '') + new_barrier*1;
+               if(was_perv_barrier_daily && /^[+-]/.test(perv_barrier)) {
+                  barrier = perv_barrier;
+               }
+               else if(!/^[+-]/.test(barrier)) {
+                  barrier = def_barrier;
+               }
+               else {} // no need to update it
+               perv_barrier = barrier;
+               was_perv_barrier_daily = false;
+            }
+            return {
+               barrier: barrier,
+               perv_barrier: perv_barrier,
+               was_perv_barrier_daily: was_perv_barrier_daily
+            };
+         }
         if(barriers.barrier) {
-          var barrier = (state.barriers.barrier || barriers.barrier) * 1;
-          state.barriers.barrier = (barrier >= 0 ? '+' : '') + barrier;
+           var result = update_barrier(state.barriers.barrier, state.barriers.perv_barrier,
+              barriers.barrier, state.barriers.was_perv_barrier_daily, '+');
+           state.barriers.barrier = result.barrier;
+           state.barriers.perv_barrier = result.perv_barrier;
+           state.barriers.was_perv_barrier_daily = result.was_perv_barrier_daily;
         }
         if(barriers.high_barrier){
-          var high_barrier = (state.barriers.high_barrier || barriers.high_barrier) * 1;
-          state.barriers.high_barrier = (high_barrier >= 0 ? '+' : '') + high_barrier;
+           var result = update_barrier(state.barriers.high_barrier, state.barriers.perv_high_barrier,
+              barriers.high_barrier, state.barriers.was_perv_high_barrier_daily, '+');
+           state.barriers.high_barrier = result.barrier;
+           state.barriers.perv_high_barrier = result.perv_barrier;
+           state.barriers.was_perv_high_barrier_daily = result.was_perv_barrier_daily;
         }
         if(barriers.low_barrier){
-          var low_barrier = (state.barriers.low_barrier || barriers.low_barrier) * 1;
-          state.barriers.low_barrier = (low_barrier >= 0 ? '-' : '') + low_barrier;
+           var result = update_barrier(state.barriers.low_barrier, state.barriers.perv_low_barrier,
+              barriers.low_barrier, state.barriers.was_perv_low_barrier_daily, '-');
+           state.barriers.low_barrier = result.barrier;
+           state.barriers.perv_low_barrier = result.perv_barrier;
+           state.barriers.was_perv_low_barrier_daily = result.was_perv_barrier_daily;
         }
       };
 
@@ -598,6 +768,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
             console.error(err);
             state.proposal.error = err.message;
             state.proposal.message = '';
+            state.proposal.loading = false;
             if (err.echo_req && err.echo_req.proposal && err.details) {
               state.proposal.ask_price = err.details.display_value;
               state.proposal.message = err.details.longcode;
@@ -759,10 +930,9 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
       return state;
     }
 
-    function init(symbol, contracts_for) {
+    function init(symbol, contracts_for, saved_template) {
         var root = $(html).i18n();
         var available = apply_fixes(contracts_for.available);
-
 
         var dialog = windows.createBlankWindow(root, {
             title: symbol.display_name,
@@ -784,10 +954,13 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
               dialog.destroy();
             }
         });
-        dialog.track({
+        var update_track = dialog.track({
           module_id: 'tradeDialog',
           is_unique: false,
-          data: symbol
+          data: {
+            symbol : symbol,
+            template: saved_template || {}
+          }
         });
 
         /********************** register for ticks_streams **********************/
@@ -818,6 +991,16 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         state.categories.update();            // trigger update to init categories_display submenu
 
         dialog.dialog('open');
+
+        dialog.update_track = function(template) {
+          update_track({symbol: symbol, template: template});
+        }
+        dialog.get_template = get_current_template.bind(undefined, state);
+        dialog.set_template = set_current_template.bind(undefined, state);
+        dialog.hide_template_menu = function() { state.template.visible = false; }
+        require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
+          tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
+        });
         // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
     }
 

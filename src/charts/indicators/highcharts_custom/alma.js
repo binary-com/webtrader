@@ -27,7 +27,7 @@ ALMA = function (data, options, indicators) {
         for (var i = 0; i < this.options.period; i++) {
             var coeff = Math.exp(-(Math.pow((i - m), 2) / (2 * Math.pow(s, 2))));
             sum += this.indicators.getIndicatorOrPriceValue(data[index - i], this.options.appliedTo) * coeff;
-            norm += coeff; 
+            norm += coeff;
         }
         var alma = 0;
         if (norm !== 0)
@@ -40,7 +40,7 @@ ALMA = function (data, options, indicators) {
             var alma = this.CalculateALMAValue(data, index);
             this.indicatorData.push({ time: data[index].time, value: alma });
         } else {
-            this.indicatorData.push({ time: data[index].time, value: 0.0 });
+            this.indicatorData.push({ time: data[index].time, value: null });
         }
         this.priceData.push(data[index]);
     }

@@ -176,7 +176,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     function initTokenWin(root) {
       root = $(root).i18n();
       token_win = windows.createBlankWindow(root, {
-          title: 'Token management',
+          title: 'Token management'.i18n(),
           resizable: false,
           collapsable:false,
           minimizable: true,

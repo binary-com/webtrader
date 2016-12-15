@@ -47,43 +47,42 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
 
     function init_dialog_async(root) {
         return new Promise(function(resolve, reject){
-          root = $(root);
+          root = $(root).i18n();
 
+          var option = {
+            title: 'Add/remove indicators'.i18n(),
+            modal: true,
+            destroy: function () {
+              ind_win_view && ind_win_view.unbind();
+              ind_win_view = null;
+              ind_win.dialog('destroy').remove();
+              ind_win = null;
+            },
+            open: function () { },
+          };
+          
           /* affiliates route */
-          if (getParameterByName("affiliates") == 'true') {
-            ind_win = $(root).dialog({
-              autoOpen: false,
+          if (isAffiliates()) {
+            option = _.extend(option, {
               resizable: false,
               width: Math.min(480, $(window).width() - 10),
               height: 400,
-              modal: true,
-              my: 'center',
-              at: 'center',
-              of: window,
-              buttons: []
+              ignoreTileAction: true,
+              maximizable: false,
+              minimizable: false,
+              collapsable: false,
             });
-
-            init_state(root);
-            resolve();
-            return;
+          } 
+          /* normal route */
+          else {
+            option = _.extend(option, {
+              width: 700,
+              // minHeight: 60,
+            })
           }
 
-          /* normal route */
           require(['windows/windows'], function(windows){
-            ind_win = windows.createBlankWindow(root, {
-                title: 'Add/remove indicators',
-                width: 700,
-                modal: true,
-                // minHeight: 60,
-                destroy: function () {
-                  ind_win_view && ind_win_view.unbind();
-                  ind_win_view = null;
-                  ind_win.dialog('destroy').remove();
-                  ind_win = null;
-                },
-                open: function () { },
-            });
-
+            ind_win = windows.createBlankWindow(root, option);
             init_state(root);
             resolve();
           });
@@ -94,7 +93,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     function init_state(root){
       state = {
         dialog: {
-          title: 'Add/remove indicators',
+          title: 'Add/remove indicators'.i18n(),
           container_id: '',
           is_tick_chart: false
         },
@@ -192,7 +191,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     return {
       openDialog : function( containerIDWithHash, title ) {
         init().then(function(){
-            state.dialog.title = 'Add/remove indicators' + (title ? ' - ' + title : '');
+            state.dialog.title = 'Add/remove indicators'.i18n() + (title ? ' - ' + title : '');
             state.dialog.container_id = containerIDWithHash;
             state.indicators.current = $(containerIDWithHash).data('indicators-current') || [];
             var time_period = $(containerIDWithHash).data('timePeriod');
@@ -201,7 +200,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             var series = $(containerIDWithHash).highcharts().series;
             series = _.filter(series, 'options.isInstrument');
             update_indicators(series);
-            var normal_open = first_time || getParameterByName("affiliates") == 'true';
+            var normal_open = first_time || isAffiliates();
             ind_win.dialog('open')
             first_time = false;
         }).catch(console.error.bind(console));

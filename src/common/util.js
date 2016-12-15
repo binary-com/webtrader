@@ -6,18 +6,6 @@ function isTick(ohlc) {
     return ohlc.indexOf('t') != -1;
 }
 
-function isMinute(ohlc) {
-    return ohlc.indexOf('m') != -1;
-}
-
-function isHourly(ohlc) {
-    return ohlc.indexOf('h') != -1;
-}
-
-function isDaily(ohlc) {
-    return ohlc.indexOf('d') != -1;
-}
-
 function isDotType(type) {
     return type === 'dot';
 }
@@ -26,6 +14,21 @@ function isLineDotType(type) {
     return type === 'linedot';
 }
 
+function isAffiliates(){
+  return getParameterByName("affiliates") === true || (getParameterByName("affiliates") + '').toLowerCase() == 'true';
+}
+
+function isHideOverlay() {
+    return getParameterByName("hideOverlay") === true || (getParameterByName("hideOverlay") + '').toLowerCase() == 'true';
+}
+
+function isHideShare() {
+    return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
+}
+
+function isHideFooter(){
+  return getParameterByName('hideFooter') === true || (getParameterByName('hideFooter') + '').toLowerCase() == 'true';
+}
 
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
@@ -77,11 +80,28 @@ function isSmallView() {
   return ret;
 }
 
+function getParameterByNameFromURL(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+/**
+ * Understand the method behavior before using it. In order to allow other applications to use Webtrader charts, the behavior
+ * of this method has been changed. Webtrader has two modes of rendering
+ *  1. Full desktop style
+ *      - Just access the main URL of webtrader.
+ *  2. Chart only style
+ *      - In order to render this mode, several URL parameters are needed. Most importantly, affiliates=true parameter.
+ *        Check affiliates/affiliates.js for more details on parameter list.
+ *        This method will check for global variables (same as parameter). if the global variable is missing, then use the URL
+ *        parameter method to get the value
+ * @param name
+ */
 function getParameterByName(name) {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    if (window[name]) return window[name];
+    else return getParameterByNameFromURL(name);
 }
 
 /**
@@ -149,25 +169,26 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
     return new Date(y, m - 1, d).getTime() / 1000;
 }
 
-function formatNumber(number) {
-    return new Intl.NumberFormat(i18n_name.replace("_","-")).format(number);
-}
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-    var currency_symbols = {
-      'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
-      'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
-      'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
-      'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
-      'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
-      'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
-      'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
-    };
-    float = new Intl.NumberFormat(i18n_name.replace("_","-")).format(float);
-    if(currency){
-      float = (currency_symbols[currency] || currency) + float;
-    }
-    return float;
+	var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+	var currency_symbols = {
+		'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
+		'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
+		'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
+		'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
+		'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
+		'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
+		'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
+	};
+	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
+						style: 'decimal',
+						minimumFractionDigits: 2,
+					}).format(float);
+	if(currency){
+		float = (currency_symbols[currency] || currency) + float;
+	}
+	return float;
 }
 
 function sortAlphaNum(property) {
@@ -337,30 +358,6 @@ var local_storage = {
   }
 }
 
-function flatten_object(data) {
-    var result = {};
-    function recurse (cur, prop) {
-        if (Object(cur) !== cur) {
-            result[prop] = cur;
-        } else if (Array.isArray(cur)) {
-             for(var i=0, l=cur.length; i<l; i++)
-                 recurse(cur[i], prop + "[" + i + "]");
-            if (l == 0)
-                result[prop] = [];
-        } else {
-            var isEmpty = true;
-            for (var p in cur) {
-                isEmpty = false;
-                recurse(cur[p], prop ? prop+"."+p : p);
-            }
-            if (isEmpty && prop)
-                result[prop] = {};
-        }
-    }
-    recurse(data, "");
-    return result;
-}
-
 function isLangSupported(lang) {
     lang = (lang || '').trim().toLowerCase();
     return lang === 'ar' || lang === 'de' || lang === 'en' || lang === 'es' || lang === 'fr' || lang === 'id' || lang === 'it'
@@ -416,7 +413,10 @@ function setup_i18n_translation(dict) {
       keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
       /* Escape keys for using them in regex. */
       var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
-      var regexp = new RegExp ('\\b(' + escaped.join('|') + ')\\b', 'g');
+      escaped[0] = /[\?\.]$/.test(escaped[0]) ? escaped[0] + '|' : escaped[0] +'\\b|';
+      var regexp = new RegExp ('\\b(' + escaped.reduce(function(a, b){
+        return /[\?\.]$/.test(b) ? a + b + '|' : a + b + '\\b|';
+      }) + ')', 'g');
       var replacer = function (_, word, index, data) {
         return (dict[word] && dict[word][1]) || word;
       };
@@ -452,4 +452,24 @@ function setup_i18n_translation(dict) {
 
 function getAppURL() {
   return window.location.href.split("/v")[0];
+}
+
+/* type = 'text/csv;charset=utf-8;' */
+function download_file_in_browser(filename, type, content){
+            var blob = new Blob([content], { type: type });
+            if (navigator.msSaveBlob) { // IE 10+
+                navigator.msSaveBlob(blob, filename);
+            }
+            else {
+                var link = document.createElement("a");
+                if (link.download !== undefined) {  /* Evergreen Browsers :) */
+                    var url = URL.createObjectURL(blob);
+                    link.setAttribute("href", url);
+                    link.setAttribute("download", filename);
+                    link.style.visibility = 'hidden';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
 }

@@ -6,7 +6,7 @@
         will only be removed or loosened after 7 days with the exception of the self-
         exclusion date, which cannot be removed or altered once you have confirmed it.
         To remove or increase your limits, please contact
-        <a href="https://www.binary.com/contact?l=EN" target="_blank">customer support</a>.
+        <a href="https://www.binary.com/en/contact?l=EN" target="_blank">customer support</a>.
     </div>
     <div class="selfexclusion_bodyContent">
         <div class="selfexclusion_row">
@@ -80,6 +80,18 @@
             </div>
         </div>
         <div class="selfexclusion_row">
+            <div class="selfexclusion_col">Time out until</div>
+            <div class="selfexclusion_col">
+                <input type="text" class="selfexclusion_input datepicker" rv-datepicker="timeout_until_date" numberOfMonths="1">
+                <br>
+                <span class="selfexclusion_inputHint">Please enter date in the format YYYY-MM-DD</span>
+            </div>
+            <div class="selfexclusion_col">
+                <input type="text" class="selfexclusion_input timepicker" rv-timepicker="timeout_until_time">
+                <span class="selfexclusion_inputHint">Please enter time in the format HH:MM</span>
+            </div>
+        </div>
+        <div class="selfexclusion_row">
             <div class="selfexclusion_col">Exclude me from the website until</div>
             <div class="selfexclusion_col">
                 <input type="text" class="selfexclusion_input" rv-datepicker="exclude_until" numberOfMonths="1">
@@ -87,10 +99,10 @@
                 <span class="selfexclusion_inputHint">Please enter date in the format YYYY-MM-DD</span>
             </div>
         </div>
-        <div class="selfexclusion_row">
-            <div class="selfexclusion_updateBtnContainer">
-                <button class="update-button text-vertical-align" rv-on-click="update">Update Settings</button>
-            </div>
+    </div>
+    <div>
+        <div class="selfexclusion_updateBtnContainer">
+            <button class="update-button text-vertical-align" rv-on-click="update">Update Settings</button>
         </div>
     </div>
 </div>

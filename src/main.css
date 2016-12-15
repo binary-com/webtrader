@@ -38,7 +38,6 @@ body > .footer .addiction-warning {
     right: 0;
     text-align: center;
     display: inline-block;
-    background: #2a3052;
 }
 body > .footer .addiction-warning span {
   color: white;
@@ -64,10 +63,6 @@ body > .footer .addiction-warning a:hover {
     padding: 0!important;
 }
 
-.ui-dialog-content {
-    background-color: #f2f2f2!important;
-}
-
 .ui-corner-all {
     border-bottom-right-radius: 0!important;
     border-bottom-left-radius: 0!important;
@@ -87,13 +82,8 @@ body > .footer .addiction-warning a:hover {
     font-weight: normal;
     color: #FFFFFF;
 }
-
-.ui-widget-header {
-    border: 1px solid #273051;
-    background: #273051!important;
-    color: #FFFFFF;
-    font-family: 'Roboto'!important;
-    font-weight: normal!important;
+.ui-selectmenu-button span.ui-selectmenu-text {
+  padding-top: 0.2em;
 }
 
 div.ui-tooltip { /* override default jquery ui max tooltip width */
@@ -250,12 +240,8 @@ button::-moz-focus-inner { border: 0; }
 
 /* default style for inputs */
 input:not([type='checkbox']) {
-  border: none;
-  border: 1px solid gray;
   outline: 0;
   box-sizing: border-box;
-  box-shadow: inset 0 2px 2px rgba(0,0,100,.10);
-  transition: box-shadow 0.3s;
   width: 100%;
   height: 26px;
   line-height: 26px;
@@ -381,7 +367,6 @@ button[disabled] {
 }
 .ui-datepicker-month, .ui-datepicker-year {
   margin-right:5px!important;
-  border: 1px solid #273051;
 }
 #ui-datepicker-div.ui-datepicker .ui-datepicker-calendar {
   margin-left: 3.2px;
@@ -408,7 +393,7 @@ button[disabled] {
   text-align: center;
   background: #f2f2f2;
 }
-.ui-datepicker-current, .ui-datepicker-close {
+.ui-datepicker-current, .ui-datepicker-close, .ui-datepicker-clear {
   color: #FFF;
   line-height: 100%;
   background: #2E8836!important;
@@ -417,23 +402,25 @@ button[disabled] {
   font-size: 1em!important;
   float: none!important;
 }
-.ui-datepicker-current:hover, .ui-datepicker-close:hover {
+.ui-datepicker-current:hover, .ui-datepicker-close:hover, .ui-datepicker-clear:hover {
   background: #14602B!important;
 }
 .ui-datepicker-prev, .ui-datepicker-next {
   color: white!important;
 }
 .ui-datepicker-prev:hover, .ui-datepicker-next:hover{
-  background: #394171!important;
-  border: 0!important;
-  border-radius: 3px!important;
-  height: 30px;
+  opacity: 0.75;
+  background: none;
+  border: none;
 }
 
 /* override table styles*/
 table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
   border-bottom: none!important;
 }
+
+/* make dropdowns consistent with binary-style */
+select + .ui-selectmenu-button { border-radius: 3px !important;}
 
 #doorbell-button  {
     right: -37px;
@@ -445,4 +432,25 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
     font-size: inherit;
     background-color: #2E8836;
     bottom: 100px;
+    z-index: +1000;
+}
+
+#doorbell-error { color: red; }
+#doorbell-form textarea { outline: 0; }
+#doorbell-container legend { font-size: 1em !important; }
+#doorbell-close { opacity: 1 !important; }
+
+/*hide input buttons*/
+.ui-spinner-button {
+  display: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* jquery ui selectmenu on options hover*/
+.ui-menu-item.ui-state-focus {
+  background: #1e90ff;
+  color: #fff;
 }

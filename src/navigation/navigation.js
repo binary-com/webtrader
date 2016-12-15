@@ -96,7 +96,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
 
             getLandingCompany().then(function(what_todo){
-              var show_financial_link = (what_todo === 'upgrade-mf');
+              var show_financial_link = is_current_account_real && (what_todo === 'upgrade-mf');
               var show_realaccount_link = !is_current_account_real && (what_todo === 'upgrade-mlt');
               var loginids = Cookies.loginids();
               var has_real_account = _.some(loginids, {is_real: true});
@@ -131,7 +131,12 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
                         liveapi.switch_account(data.id)
                             .catch(function (err) {
                                 $.growl.error({message: err.message});
-                            })
+                                // logout user if he decided to self exclude himself.
+                                if(err.code==="SelfExclusion"){
+                                  console.log("logging out because of self exclude");
+                                  liveapi.invalidate();
+                                }
+                            });
                     })
                     li.insertBefore(logout_btn.parent());
                 }
@@ -173,19 +178,19 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
           visible: false
         },
         languages: [
-            { value: 'en', name: 'English'},
-            { value: 'ar', name: 'Arabic'},
-            { value: 'de', name: 'Deutsch'},
-            { value: 'es', name: 'Español'},
-            { value: 'fr', name: 'Français'},
-            { value: 'id', name: 'Bahasa Indonesia'},
-            { value: 'it', name: 'Italiano'},
-            { value: 'pl', name: 'Polish'},
-            { value: 'pt', name: 'Português'},
-            { value: 'ru', name: 'Русский'},
-            { value: 'vi', name: 'Vietnamese'},
-            { value: 'zh_cn', name: '简体中文'},
-            { value: 'zh_tw', name: '繁體中文'},
+          { value: 'en', name: 'English'},
+          { value: 'ar', name: 'Arabic'},
+          { value: 'de', name: 'Deutsch'},
+          { value: 'es', name: 'Español'},
+          { value: 'fr', name: 'Français'},
+          { value: 'id', name: 'Bahasa Indonesia'},
+          { value: 'it', name: 'Italiano'},
+          { value: 'pl', name: 'Polish'},
+          { value: 'pt', name: 'Português'},
+          { value: 'ru', name: 'Русский'},
+          { value: 'vi', name: 'Vietnamese'},
+          { value: 'zh_cn', name: '简体中文'},
+          { value: 'zh_tw', name: '繁體中文'},
         ]
       };
       state.onclick = function(value) {
@@ -201,6 +206,22 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
       state.lang = _.find(state.languages, {value: value}); // set the initial state.
 
       rv.bind(root[0], state);
+
+      //Init the trigger of loading language list from server
+      liveapi
+        .cached
+        .send({website_status: 1})
+        .then(function(data){
+          var supported_languages = (data.website_status || {}).supported_languages || [];
+          supported_languages = _.map(supported_languages, function(m) { return {value: m.toLowerCase()} });
+          var newList = _.intersectionBy(state.languages, supported_languages, 'value') || [];
+          state.languages.length = 0;
+          newList.forEach(function(e) {
+            state.languages.push(e);
+          });
+        })
+        .catch(console.error)
+
     }
 
     /*

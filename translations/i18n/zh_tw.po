@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-09-10 01:41+0000\n"
+"PO-Revision-Date: 2016-12-09 08:27+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.8\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 類型"
@@ -50,9 +50,6 @@ msgstr ""
 "身份運營，未由Binary.com支持、擔保或經其它方式批准。客戶與支付代理的業務往"
 "來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情"
 "況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
@@ -157,7 +154,7 @@ msgid "4 Hours"
 msgstr "4小時"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr "過去12月內40次交易或以上"
+msgstr "過去12月內交易40次或以上"
 
 msgid "404"
 msgstr "404"
@@ -175,7 +172,7 @@ msgid "5m"
 msgstr "5分鐘"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr "過去12月內6-10次交易"
+msgstr "過去12月內交易6-10次"
 
 msgid "7-day limit on losses"
 msgstr "7天期損失限額"
@@ -197,6 +194,9 @@ msgstr "ADX MA 類型"
 
 msgid "ADX Stroke"
 msgstr "ADX 波幅"
+
+msgid "AM"
+msgstr "上午"
 
 msgid "ATR Period"
 msgstr "ATR 期限"
@@ -233,6 +233,9 @@ msgstr "新增價位"
 
 msgid "Add/remove comparisons"
 msgstr "新增/移除比較"
+
+msgid "Add/remove indicators"
+msgstr "新增/刪除指標"
 
 msgid "Add/remove overlays"
 msgstr "新增/移除重疊"
@@ -411,6 +414,9 @@ msgstr "選擇您較傾向的取款方法"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr "清除"
+
 msgid "Click Jacking test"
 msgstr "點擊劫持測試"
 
@@ -452,6 +458,9 @@ msgstr "連結出錯:請重新整理頁面"
 
 msgid "Construction"
 msgstr "建構"
+
+msgid "Contact Us"
+msgstr "聯繫我們"
 
 msgid "Continue"
 msgstr "繼續"
@@ -570,8 +579,11 @@ msgstr "刪除"
 msgid "Delete level(s)"
 msgstr "刪除水平"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "採用IFRAME演示聯盟會員存取Binary.com圖表"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr "聯盟成員存取Webtrader圖表的示範"
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "聯盟成員在IFRAME存取Webtrader圖表的示範"
 
 msgid "Deposit funds"
 msgstr "存入資金"
@@ -580,25 +592,31 @@ msgid "Deposit of USD"
 msgstr "美元存款"
 
 msgid "Describe what this token is for to find it later"
-msgstr "權杖用途說明以備稍後找尋"
+msgstr "權杖用途說明，以備稍後找尋"
 
 msgid "Description"
 msgstr "說明"
+
+msgid "Deselect"
+msgstr "取消選取"
 
 msgid "Digits"
 msgstr "數字"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr "是否安裝Webtrader chrome延伸程式?"
+msgstr "是否安裝Webtrader chrome擴充套件?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
+
+msgid "Done"
+msgstr "已完成"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。資金已轉給支付代理"
 
 msgid "Done. The funds are transferred"
-msgstr "已完成。資金已轉入"
+msgstr "已完成。資金已轉付"
 
 msgid "Dot"
 msgstr "點"
@@ -611,6 +629,9 @@ msgstr "雙MA類型"
 
 msgid "Double click the object to remove"
 msgstr "雙擊物件執行刪除"
+
+msgid "Download"
+msgstr "下載"
 
 msgid "Download CSV"
 msgstr "下載CSV"
@@ -634,7 +655,7 @@ msgid "Download SVG vector image"
 msgstr "下載SVG向量圖像"
 
 msgid "Download as"
-msgstr "下載as"
+msgstr "下載為"
 
 msgid "Downloading .csv"
 msgstr "正在下載.csv"
@@ -647,6 +668,9 @@ msgstr "期間"
 
 msgid "EMA"
 msgstr "EMA"
+
+msgid "EURUSD"
+msgstr "歐元美元"
 
 msgid "Edge"
 msgstr "邊緣"
@@ -669,6 +693,9 @@ msgstr "結束時間"
 msgid "Ends In/Out"
 msgstr "收盤價在「範圍之內/之外」"
 
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr "請確認您輸入有效資訊，不然帳戶將被封鎖"
+
 msgid "Enter your current password"
 msgstr "輸入目前密碼"
 
@@ -681,17 +708,17 @@ msgstr "入市現價"
 msgid "Error downloading .csv"
 msgstr "下載.csv時發生錯誤"
 
-msgid "Error getting data for"
-msgstr "取得以下資料時出錯"
+msgid "Error getting data for %1"
+msgstr "獲取 %1資料時出錯"
+
+msgid "Error getting market information!"
+msgstr "取得市場資料時出錯!"
 
 msgid "Estimated Net Worth"
 msgstr "估計淨值"
 
 msgid "Exclude me from the website until"
 msgstr "禁止我訪問本網站直到"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "禁止時間不能少於6個月"
 
 msgid "Exit Spot"
 msgstr "退市現價"
@@ -749,6 +776,9 @@ msgstr "最終價格"
 
 msgid "Finance"
 msgstr "金融"
+
+msgid "Financial Account Opening form"
+msgstr "開立金融帳戶表格"
 
 msgid "Financial information"
 msgstr "財務資料"
@@ -828,6 +858,9 @@ msgstr "水平線"
 msgid "Horizontal line"
 msgstr "水平線"
 
+msgid "Hour"
+msgstr "小時"
+
 msgid "Hours"
 msgstr "小時"
 
@@ -863,7 +896,7 @@ msgstr "如您選擇特定的"
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
-msgstr "必須完整重新整理頁面才能正確啟用主題。確定要繼續?"
+msgstr "必須完全重新整理頁面才能正確啟用主題。確定要繼續?"
 
 msgid ""
 "In providing our services to you, we are required to obtain information from "
@@ -871,13 +904,13 @@ msgid ""
 "you (that is, whether you possess the experience and knowledge to understand "
 "the risks involved)"
 msgstr ""
-"為了給您提供服務，我們必須向您獲取資訊，以便評估某項產品或服務對您是否合適"
-"（就是說要看您是否擁有足夠經驗和知識來了解相關的風險）"
+"為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也"
+"就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
 
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
-msgstr "對於進行博彩產品交易之二元期權，請務必要記住博彩活動可能會上癮"
+msgstr "關於進行博彩產品交易之二元期權，請務必要記住博彩活動可能會上癮"
 
 msgid "In/Out"
 msgstr "「範圍之內/之外」"
@@ -906,8 +939,14 @@ msgstr "職業領域"
 msgid "Instrument"
 msgstr "工具"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "工具代碼未知/不可用！"
+
 msgid "Instruments"
 msgstr "工具"
+
+msgid "Invalid parameter(s)!"
+msgstr "無效參數！"
 
 msgid "Investments & Dividends"
 msgstr "投資與分紅"
@@ -919,7 +958,7 @@ msgid "January"
 msgstr "一月"
 
 msgid "Japan accounts are not supported"
-msgstr "日本帳戶不受支持"
+msgstr "不支持日本帳戶"
 
 msgid "Jul"
 msgstr "七月"
@@ -937,7 +976,7 @@ msgid "June"
 msgstr "六月"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "僅須在您將被導入頁面上點擊 授予 按鈕"
+msgstr "僅須即將導入的頁面上點擊 授予"
 
 msgid "LOW"
 msgstr "低"
@@ -981,6 +1020,9 @@ msgstr "連結"
 msgid "Load chart template"
 msgstr "載入圖表範本"
 
+msgid "Load trade template"
+msgstr "載入交易範本"
+
 msgid "Loading"
 msgstr "載入"
 
@@ -1000,7 +1042,7 @@ msgid "Loading Profit Table"
 msgstr "載入利潤表"
 
 msgid "Loading Real account opening"
-msgstr "載入真實帳戶開立"
+msgstr "載入真實帳戶開立程序"
 
 msgid "Loading Self-Exclusion"
 msgstr "載入自我禁止"
@@ -1051,7 +1093,7 @@ msgid "Long ROC Period"
 msgstr "長相對強弱指標期限"
 
 msgid "Long Stop Line Stroke"
-msgstr "長停損線波幅"
+msgstr "長停損線行程"
 
 msgid "Long Term Period"
 msgstr "長久期限"
@@ -1063,7 +1105,7 @@ msgid "Low Price"
 msgstr "低價"
 
 msgid "Low Stroke"
-msgstr "低價波幅"
+msgstr "低行程"
 
 msgid "Low barrier offset"
 msgstr "低障礙位移"
@@ -1072,13 +1114,13 @@ msgid "Lower"
 msgstr "低於"
 
 msgid "Lower Band Stroke"
-msgstr "低價帶波幅"
+msgstr "低價幅行程"
 
 msgid "MA Type"
 msgstr "移動平均線類型"
 
 msgid "MACD Line Stroke"
-msgstr "指數平滑異同平均線波幅"
+msgstr "指數平滑異同平均線行程"
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -1087,9 +1129,9 @@ msgid ""
 "Payment Agent you have chosen. The Agent will send you the withdrawal amount "
 "(minus the commission) via your preferred payment method"
 msgstr ""
-"在送出要求前，請確保您首先同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資"
-"金將從您的帳戶取出，並轉至您選擇的支付代理。代理將通過您的偏好支付方式將取款"
-"金額（扣除佣金）支付給您"
+"在送出要求前，請確保您已同意代理的支付條款。一旦您點選「確認轉帳」按鈕，資金"
+"將從您的帳戶轉給您選擇的支付代理。代理將通過您傾向的支付方式將相應金額（扣除"
+"佣金）支付給您"
 
 msgid "Mar"
 msgstr "三月"
@@ -1107,22 +1149,22 @@ msgid "Maximum"
 msgstr "最大"
 
 msgid "Maximum account cash balance"
-msgstr "最大帳戶現金餘額"
+msgstr "帳戶現金餘額上限"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
-msgstr "30天期最大累計合約購入額"
+msgstr "30天內累計合約購入最大額"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
-msgstr "7天期最大累計合約購入額"
+msgstr "7天內累計合約購入最大額"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr "每天最大累計合約購入額"
+msgstr "每天累計合約購入最大額"
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr "30天期最大累計虧損額"
+msgstr "30天內累計虧損最大額"
 
 msgid "Maximum aggregate loss per day"
-msgstr "每天最大累計虧損額"
+msgstr "每天累計虧損最大額"
 
 msgid "Maximum number of open positions"
 msgstr "最大未平倉頭寸數目"
@@ -1137,7 +1179,7 @@ msgid "Memorable town/city"
 msgstr "難忘的城鎮/城市"
 
 msgid "Middle Band Stroke"
-msgstr "中價帶波幅"
+msgstr "中價幅行程"
 
 msgid "Min: 10 Max: 2000"
 msgstr "最小: 10 最大: 2000"
@@ -1148,6 +1190,9 @@ msgstr "需至少6個字元和1個數字"
 msgid "Minus the agent's commission"
 msgstr "減去代理佣金"
 
+msgid "Minute"
+msgstr "分鐘"
+
 msgid "Minutes"
 msgstr "分鐘"
 
@@ -1155,7 +1200,7 @@ msgid "Miss"
 msgstr "小姐"
 
 msgid "Mon"
-msgstr "周一"
+msgstr "週一"
 
 msgid "Monday"
 msgstr "週一"
@@ -1167,7 +1212,7 @@ msgid "Mr"
 msgstr "先生"
 
 msgid "Mrs"
-msgstr "夫人"
+msgstr "太太"
 
 msgid "Ms"
 msgstr "女士"
@@ -1221,19 +1266,19 @@ msgid "No"
 msgstr "否"
 
 msgid "Note that tokens can possess one or more of these scopes"
-msgstr "請注意，權杖可能擁有一或多個所述領域"
+msgstr "請注意，權杖可能擁有一或多個上述領域"
 
 msgid ""
 "Note: Contract will be sold at the prevailing market price when the request "
 "is received by our servers. This price may differ from the indicated price"
 msgstr ""
-"請注意:合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有"
+"請注意:合約將在我們的伺服器收到請求時以當時的市場價格賣出。此價格可能與報價有"
 "差異"
 
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
-msgstr "注意:您必須完全通過付款代理存款才可使用付款代理提款"
+msgstr "請注意:如果要使用付款代理提款，您必須僅通過付款代理存款"
 
 msgid "Nov"
 msgstr "十一月"
@@ -1248,7 +1293,7 @@ msgid "Number of bars on sides"
 msgstr "兩邊條形數目"
 
 msgid "OAuth App ID (Optional)"
-msgstr "OAuth 應用 ID (選用項目)"
+msgstr "OAuth 應用 ID (可選項目)"
 
 msgid "OAuth Server"
 msgstr "OAuth 伺服器"
@@ -1313,8 +1358,8 @@ msgid ""
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
 "check that gives you a summary of your trades and accounts on a regular basis"
 msgstr ""
-"二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免發生此種過於入"
-"迷的風險，我們定期向您提供交易和財務的實況簡報"
+"二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免此種風險，我們"
+"會定期向您提供交易和財務的實況簡報"
 
 msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "可選欄位，不超過 20 個字元，並且不能包含「+」"
@@ -1336,6 +1381,9 @@ msgstr "3年以上"
 
 msgid "PDF"
 msgstr "PDF"
+
+msgid "PM"
+msgstr "下午"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1401,10 +1449,13 @@ msgid "Please"
 msgstr "請"
 
 msgid "Please answer to secret question, within 4-50 characters"
-msgstr "請用4-50個字元提供密碼提示問題的答案"
+msgstr "請用4-50個字元回答密碼提示問題"
 
 msgid "Please choose at least one token scope"
 msgstr "請選擇至少一個權杖範圍"
+
+msgid "Please choose which currency you would like to transact in"
+msgstr "請選擇交易貨幣種類"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "請確認以下詳細資料以完成轉帳"
@@ -1416,7 +1467,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "請輸入有效日期，格式是年-月-日"
 
 msgid "Please enter a value for"
-msgstr "請為以下輸入數值"
+msgstr "請輸入數值，用以"
 
 msgid "Please enter a vlaid phone number"
 msgstr "請輸入有效的電話號"
@@ -1427,45 +1478,20 @@ msgstr "請輸入正確的電子郵件"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "請輸入日期，格式是年-月-日"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "請輸入0與9999之間的正整數"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "請輸入30天期損失限額正整數"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "請輸入30天交易限制正整數"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "請輸入7天損失限額正整數"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "請輸入7天交易限額正整數"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "請輸入每日損失限額正整數"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "請輸入每日交易限額正整數"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "請輸入最大未平倉頭寸數目正整數"
-
 msgid "Please enter the token name"
 msgstr "請輸入權杖名稱"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "請輸入發送到您郵箱的驗證碼"
 
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "請輸入交易期持續時間限制0至99999之間的數值"
+msgid "Please enter time in the format HH:MM"
+msgstr "請輸入時間，格式為小時:分鐘"
 
 msgid "Please enter your city address"
 msgstr "請輸入您的城市住址"
 
 msgid "Please enter your current password"
-msgstr "請輸入目前密碼"
+msgstr "請輸入當前密碼"
 
 msgid "Please enter your email"
 msgstr "請輸入電子郵件"
@@ -1489,7 +1515,7 @@ msgid "Please enter your street address"
 msgstr "請輸入街道住址"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr "以下瀏覽器請選擇一個並安裝最新版本"
+msgstr "請從以下瀏覽器中選擇一個，並安裝最新版本"
 
 msgid "Please log in"
 msgstr "請登入"
@@ -1519,7 +1545,7 @@ msgid "Portfolio"
 msgstr "投資組合"
 
 msgid "Postal code/ZIP"
-msgstr "郵遞區號"
+msgstr "郵區編號"
 
 msgid "Potential Payout"
 msgstr "可能的賠付額"
@@ -1536,8 +1562,8 @@ msgstr "預定義"
 msgid "Preferred reality-check interval"
 msgstr "優選實況調查間隔時間"
 
-msgid "Press  Create token  button on the right to create your first token"
-msgstr "按右方 建立權杖 按鈕即可建立首個權杖"
+msgid "Press Create token button on the right to create your first token"
+msgstr "點擊右邊按鈕即可建立首個權杖"
 
 msgid "Price"
 msgstr "價格"
@@ -1578,8 +1604,8 @@ msgstr "買入時間"
 msgid "Read"
 msgstr "閱讀"
 
-msgid "Real account opening"
-msgstr "開立真實帳戶"
+msgid "Real Money Account Opening"
+msgstr "開立真實資金帳戶"
 
 msgid "Reality check"
 msgstr "真實情況檢查"
@@ -1606,10 +1632,10 @@ msgid "Rename"
 msgstr "重命名"
 
 msgid "Repeat password"
-msgstr "重覆輸入密碼"
+msgstr "再次輸入密碼"
 
 msgid "Resale of this contract is not offered"
-msgstr "此合約不提供轉售"
+msgstr "此合約不可轉售"
 
 msgid "Reset to Defaults"
 msgstr "重設為預設值"
@@ -1624,7 +1650,7 @@ msgid "Resources"
 msgstr "資源"
 
 msgid "Responsible Trading"
-msgstr "負責任交易"
+msgstr "負責任的交易"
 
 msgid "Results"
 msgstr "成績"
@@ -1724,9 +1750,6 @@ msgstr "工作階段"
 
 msgid "Session duration limit, in minutes"
 msgstr "交易期持續時間限制，以分鐘作單位"
-
-msgid "Session is not authenticated"
-msgstr "工作階段未經驗證"
 
 msgid "Settles"
 msgstr "結算"
@@ -1887,6 +1910,12 @@ msgstr "表"
 msgid "Tel"
 msgstr "電話"
 
+msgid "Template applied partially"
+msgstr "部份範本已經使用"
+
+msgid "Template is not applicable"
+msgstr "範本不適用"
+
 msgid "Template name"
 msgstr "範本名稱"
 
@@ -1917,7 +1946,7 @@ msgstr ""
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
-msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查是否輸入錯誤"
+msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查輸入是否有誤"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -1925,8 +1954,8 @@ msgid ""
 "properly, otherwise the contract will be cancelled and refunded. Virtual-"
 "money contracts will be cancelled and refunded"
 msgstr ""
-"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正並正確結算合約，否則合"
-"約將取消並退還投注金額。虛擬資金合約將取消並退還投注金額"
+"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正，並正確結算合約，否則"
+"合約將取消，投注金額也將被退還。虛擬資金合約將取消，投注金額也將被退還"
 
 msgid "There was an error"
 msgstr "出現錯誤"
@@ -1967,6 +1996,9 @@ msgstr "期限"
 msgid "Time interval"
 msgstr "時間間隔"
 
+msgid "Time out until"
+msgstr "時間已過。下次開啟時間為"
+
 msgid "Time period"
 msgstr "期限"
 
@@ -1991,7 +2023,10 @@ msgstr ""
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
-msgstr "要提款前請輸入剛發送到您郵箱的特殊驗證權杖碼"
+msgstr "如要提款，請輸入剛發送到您郵箱的權杖驗證碼"
+
+msgid "Today"
+msgstr "今天"
 
 msgid "Token"
 msgstr "權杖"
@@ -2060,9 +2095,9 @@ msgid ""
 "the self- exclusion date, which cannot be removed or altered once you have "
 "confirmed it. To remove or increase your limits, please contact"
 msgstr ""
-"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，或傳送簽名信或傳"
-"真到我們的客服團隊。一旦設定好後，您只能收緊限制。限制只能在7天后取消或放寬，"
-"而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
+"金融市場交易可能使人上癮。請填寫下表以限制您對本網站的參與，您也可以傳送簽名"
+"信或傳真到我們的客服團隊。設定好後，您將只能收緊限制。限制只能在7天后取消或放"
+"寬，而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
 
 msgid "Tradingview for Binary.com"
 msgstr "通過Binary.com使用Tradingview"
@@ -2085,6 +2120,9 @@ msgstr "交易額"
 msgid "USD"
 msgstr "美元"
 
+msgid "USDJPY"
+msgstr "美元日圓"
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遺憾。您的瀏覽器不支持這些程式"
 
@@ -2103,6 +2141,9 @@ msgstr "更新設定"
 msgid "Upgrade to a Real Account"
 msgstr "升級為真實帳戶"
 
+msgid "Upload template"
+msgstr "載入範本"
+
 msgid "Upper Band Stroke"
 msgstr "上方帶狀波幅"
 
@@ -2113,6 +2154,9 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr "使用「另存為...」按鈕儲存圖表設置、類型、時間段、指標和比較"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr "使用「另存為...」按鍵儲存交易設定"
 
 msgid "Verification code has been sent to your email"
 msgstr "驗證代碼已發送到您的郵箱"
@@ -2155,7 +2199,7 @@ msgstr "Webtrader"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr "Webtrader採用新型網絡技術為您提供豐富與充滿樂趣的交易體驗"
+msgstr "Webtrader採用新型網絡技術，為您提供豐富而充滿樂趣的交易體驗"
 
 msgid "Wed"
 msgstr "週三"
@@ -2204,8 +2248,8 @@ msgid ""
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
-"使用各OAuth伺服器進行驗證前須先註冊webtrader 並領取應用程式ID。欲知詳細資訊請"
-"前往此處參閱OAuth資料"
+"使用各OAuth伺服器進行驗證前，須先註冊webtrader 並領取應用程式ID。欲知詳細資"
+"訊，請前往此處參閱OAuth資料"
 
 msgid "You haven't saved any templates yet"
 msgstr "您尚未儲存任何範本"
@@ -2221,11 +2265,14 @@ msgid ""
 "Webtrader access it"
 msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
 
+msgid "Your account is locked, please contact customer support for more info"
+msgstr "您的帳戶已被封鎖，欲知詳情請聯繫客服部"
+
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "您的瀏覽器不支持剪貼簿複製操作"
 
 msgid "Your browser is not supported"
-msgstr "您的瀏覽器不受支持"
+msgstr "不支持您的瀏覽器"
 
 msgid "Your changes have been updated"
 msgstr "您的更改已成功更新"
@@ -2237,10 +2284,10 @@ msgid "Your new account balance is"
 msgstr "您的新帳戶餘額是"
 
 msgid "Your transaction reference is"
-msgstr "您的交易參考號是"
+msgstr "您的交易號是"
 
 msgid "Your transaction reference number is"
-msgstr "您的交易參考號是"
+msgstr "您的交易號是"
 
 msgid "Zoom"
 msgstr "縮放"
@@ -2257,8 +2304,8 @@ msgid ""
 "of loss of the entire sum invested) that you may not have the knowledge and "
 "experience to properly assess or mitigate"
 msgstr ""
-"以下並繼續開立帳戶，請注意您可能讓自己冒一些風險（可能會很嚴重，包括損失整個"
-"投資資金的風險），而您可能缺乏正確評估或化解風險的知識或經驗"
+"以下並繼續開立帳戶，請注意您可能會冒一些風險（可能很嚴重，甚至損失整個投資資"
+"金），而您可能缺乏正確評估或化解風險的知識及經驗"
 
 msgid "between"
 msgstr "之間"
@@ -2273,10 +2320,10 @@ msgid "customer support"
 msgstr "客服部"
 
 msgid "day"
-msgstr "日"
+msgstr "天"
 
 msgid "days"
-msgstr "日"
+msgstr "天"
 
 msgid "e.g"
 msgstr "例如"
@@ -2297,19 +2344,19 @@ msgid "feed is delayed by"
 msgstr "資料源延遲的原因為"
 
 msgid "for API calls that can access the cashier"
-msgstr "可存取收銀台的API通話專用"
+msgstr "用於可存取收銀台的API通話"
 
 msgid "for API calls that can create trades in the client account"
-msgstr "可為客戶帳戶創建交易的API通話專用"
+msgstr "用於為客戶帳戶創建交易的API通話"
 
 msgid "for API calls that change client settings"
-msgstr "更改客戶設定的API通話專用"
+msgstr "用於更改客戶設定的API通話"
 
 msgid "for API calls that only read client data"
-msgstr "唯讀客戶資料的API通話專用"
+msgstr "用於唯讀客戶資料的API通話"
 
 msgid "for mobile charts"
-msgstr "移動式圖表專用"
+msgstr "用於移動式圖表"
 
 msgid "has updated its"
 msgstr "已更新其"
@@ -2340,7 +2387,7 @@ msgid ""
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
 msgstr ""
-"是Binary的先進桌面交易平台。其多視窗式介面提供最大彈性。可符合活躍交易員通過"
+"是Binary的先進桌面交易平台。其多視窗式介面提供了最大的彈性，以符合活躍員通過"
 "桌面電腦交易的需求"
 
 msgid "is required. Current spread"
@@ -2353,19 +2400,19 @@ msgid "is the"
 msgstr "是"
 
 msgid "is the price in effect at that time"
-msgstr "就是當時的實時價格"
+msgstr "是當時的實時價格"
 
 msgid "is the selected number of minutes/hours after the"
 msgstr "之後所選的分鐘數或小時數"
 
 msgid "is the selected time"
-msgstr "就是您選擇的時間"
+msgstr "是您選擇的時間"
 
 msgid "is the spot at the"
 msgstr "的現價"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr "就是我們的伺服器處理合約交易的時間"
+msgstr "是我們的伺服器處理合約交易的時間"
 
 msgid "main site"
 msgstr "主要網站"
@@ -2450,6 +2497,49 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回報率"
+
+#~ msgid "Error getting data for"
+#~ msgstr "取得以下資料時出錯"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "工作階段未經驗證"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"
+
+#~ msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+#~ msgstr "採用IFRAME演示聯盟會員存取Binary.com圖表"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "禁止時間不能少於6個月"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "請輸入0與9999之間的正整數"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "請輸入30天期損失限額正整數"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "請輸入30天交易限制正整數"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "請輸入7天損失限額正整數"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "請輸入7天交易限額正整數"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "請輸入每日損失限額正整數"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "請輸入每日交易限額正整數"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr "請輸入最大未平倉頭寸數目正整數"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "請輸入交易期持續時間限制0至99999之間的數值"
 
 #~ msgid "Add overlays"
 #~ msgstr "新增重疊"

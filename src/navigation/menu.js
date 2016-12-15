@@ -22,7 +22,7 @@ define(['jquery', 'navigation/navigation', 'lodash', 'common/util'], function ($
             newLI.appendTo( root);
 
             if (isDropdownMenu) {
-                var newUL = $("<ul>");
+                var newUL = $("<ul>").addClass("primary-color");
                 newUL.appendTo(newLI);
                 refreshMenu( newUL, value.submarkets || value.instruments, on_click );
             }

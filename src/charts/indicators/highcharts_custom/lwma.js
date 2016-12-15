@@ -9,7 +9,7 @@ LWMA = function (data, options, indicators) {
 
     /* LWMA :
     LWMA = SUM(Close(i)*i, N)/SUM(i, N)
-    Where: 
+    Where:
     SUM(i, N) — is the total sum of weight coefficients.*/
 
     for (var index = 0; index < data.length; index++) {
@@ -23,7 +23,7 @@ LWMA = function (data, options, indicators) {
             var lwma = toFixed(sum / sumI, 4);
             this.indicatorData.push({ time: data[index].time, value: lwma });
         } else {
-            this.indicatorData.push({ time: data[index].time, value: 0.0 });
+            this.indicatorData.push({ time: data[index].time, value: null });
         }
         this.priceData.push(data[index]);
     }

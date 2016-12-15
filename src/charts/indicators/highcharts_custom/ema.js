@@ -23,7 +23,7 @@ EMA = function(data, options, indicators) {
             ema = toFixed(ema, 4);
             this.indicatorData.push({ time : data[index].time, value : ema });
         } else {
-            this.indicatorData.push({ time : data[index].time, value : 0.0 });
+            this.indicatorData.push({ time : data[index].time, value : null });
         }
     }
 
