@@ -286,10 +286,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         barriers: {
           barrier_count: 0,
           barrier : '',
-          barrier_perv: '', // previous barrier value for intraday and tick contracts.
-          is_last_barrier_daily: false, // was the last barrier a daily one?
+          perv_barrier: '', // previous barrier value for intraday and tick contracts.
+          was_perv_barrier_daily: false, // was the perv barrier a daily one?
           high_barrier: '',
+          perv_high_barrier: '',
+          was_perv_high_barrier_daily: false,
           low_barrier: '',
+          perv_low_barrier: '',
+          was_perv_low_barrier_daily: false,
           barrier_live: function() { return this.barrier * 1 + state.tick.quote * 1; },
           high_barrier_live: function() { return this.high_barrier * 1 + state.tick.quote * 1; },
           low_barrier_live: function() { return this.low_barrier * 1 + state.tick.quote * 1; },
@@ -624,39 +628,54 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         if (!barriers)
           return;
 
+         var update_barrier = function(barrier, perv_barrier, new_barrier, was_perv_barrier_daily, sign) {
+            var is_daily = (expiry_type === 'daily' && state.duration.value !== 'End Time') ||
+               (state.duration.value === 'End Time' && moment.utc(state.date_expiry.value_date).isAfter(moment.utc(),'day'));
+            if(is_daily) {
+               if(was_perv_barrier_daily) {
+                  perv_barrier = barrier;
+               }
+               barrier = (was_perv_barrier_daily ? barrier : 0) || new_barrier;
+               was_perv_barrier_daily = true;
+            }
+            else {
+               var def_barrier = (new_barrier*1 >= 0 ? sign : '') + new_barrier*1;
+               if(was_perv_barrier_daily && /^[+-]/.test(perv_barrier)) {
+                  barrier = perv_barrier;
+               }
+               else if(!/^[+-]/.test(barrier)) {
+                  barrier = def_barrier;
+               }
+               else {} // no need to update it
+               perv_barrier = barrier;
+               was_perv_barrier_daily = false;
+            }
+            return {
+               barrier: barrier,
+               perv_barrier: perv_barrier,
+               was_perv_barrier_daily: was_perv_barrier_daily
+            };
+         }
         if(barriers.barrier) {
-          if((expiry_type === 'daily' && state.duration.value !== 'End Time') ||
-             (state.duration.value === 'End Time' && moment.utc(state.date_expiry.value_date).isAfter(moment.utc(),'day')) )
-          {
-              if(!state.barriers.is_last_barrier_daily) {
-                state.barriers.barrier_perv = state.barriers.barrier;
-              }
-              // var decimal_digits = chartingRequestMap.digits_after_decimal(symbol.pip, symbol.symbol);
-              state.barriers.barrier =
-                (state.barriers.is_last_barrier_daily ? state.barriers.barrier : 0) || state.tick.quote || barriers.barrier;
-              state.barriers.is_last_barrier_daily = true;
-          }
-          else {
-              var def_barrier = (barriers.barrier) * 1;
-              def_barrier = (barriers.barrier*1 >= 0 ? '+' : '') + barriers.barrier*1;
-                if(state.barriers.is_last_barrier_daily && /^[+-]/.test(state.barriers.barrier_perv)) {
-                  state.barriers.barrier = state.barriers.barrier_perv;
-                }
-                else if(!/^[+-]/.test(state.barriers.barrier)) {
-                  state.barriers.barrier = def_barrier;
-                }
-                else {} // no need to update it
-              state.barriers.barrier_perv = state.barriers.barrier;
-              state.barriers.is_last_barrier_daily = false;
-          }
+           var result = update_barrier(state.barriers.barrier, state.barriers.perv_barrier,
+              barriers.barrier, state.barriers.was_perv_barrier_daily, '+');
+           state.barriers.barrier = result.barrier;
+           state.barriers.perv_barrier = result.perv_barrier;
+           state.barriers.was_perv_barrier_daily = result.was_perv_barrier_daily;
         }
         if(barriers.high_barrier){
-          var high_barrier = (state.barriers.high_barrier || barriers.high_barrier) * 1;
-          state.barriers.high_barrier = (high_barrier >= 0 ? '+' : '') + high_barrier;
+           var result = update_barrier(state.barriers.high_barrier, state.barriers.perv_high_barrier,
+              barriers.high_barrier, state.barriers.was_perv_high_barrier_daily, '+');
+           state.barriers.high_barrier = result.barrier;
+           state.barriers.perv_high_barrier = result.perv_barrier;
+           state.barriers.was_perv_high_barrier_daily = result.was_perv_barrier_daily;
         }
         if(barriers.low_barrier){
-          var low_barrier = (state.barriers.low_barrier || barriers.low_barrier) * 1;
-          state.barriers.low_barrier = (low_barrier >= 0 ? '-' : '') + low_barrier;
+           var result = update_barrier(state.barriers.low_barrier, state.barriers.perv_low_barrier,
+              barriers.low_barrier, state.barriers.was_perv_low_barrier_daily, '-');
+           state.barriers.low_barrier = result.barrier;
+           state.barriers.perv_low_barrier = result.perv_barrier;
+           state.barriers.was_perv_low_barrier_daily = result.was_perv_barrier_daily;
         }
       };
 

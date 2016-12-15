@@ -253,7 +253,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     series_compare : options.series_compare,
                                     delayAmount : options.delayAmount
                                 }).catch(function(err){
-                                    var msg = 'Error getting data for '.i18n() + instrumentName + "";
+																	  var msg = 'Error getting data for %1'.i18n().replace('%1', options.instrumentName);
                                     require(["jquery-growl"], function($) { $.growl.error({ message: msg }); });
                                     var chart = $(containerIDWithHash).highcharts();
                                     chart && chart.showLoading(msg);

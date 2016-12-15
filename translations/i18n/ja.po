@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-11-09 23:10+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"PO-Revision-Date: 2016-12-09 07:12+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
 "Language: ja\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.9\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA タイプ"
@@ -199,7 +199,7 @@ msgid "ADX Stroke"
 msgstr "ADX ストローク"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "ATR Period"
 msgstr "ATR期間"
@@ -421,7 +421,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Clear"
-msgstr ""
+msgstr "クリア"
 
 msgid "Click Jacking test"
 msgstr "ジャッキテストをクリック"
@@ -464,6 +464,9 @@ msgstr "接続エラー。ページを更新してください"
 
 msgid "Construction"
 msgstr "設営"
+
+msgid "Contact Us"
+msgstr "お問い合わせ"
 
 msgid "Continue"
 msgstr "続行"
@@ -583,7 +586,7 @@ msgid "Delete level(s)"
 msgstr "レベルを削除"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "アフィリエイト会員専用ウェブトレーダーチャートへのアクセス例"
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "IFRAME内のWebtraderチャートにアクセスするアフィリエイトデモ"
@@ -601,7 +604,7 @@ msgid "Description"
 msgstr "取引内容"
 
 msgid "Deselect"
-msgstr ""
+msgstr "選択解除"
 
 msgid "Digits"
 msgstr "数字"
@@ -615,7 +618,7 @@ msgstr ""
 "ネーでお取引を始めましょう"
 
 msgid "Done"
-msgstr ""
+msgstr "完了"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
@@ -676,7 +679,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Edge"
 msgstr "エッジ"
@@ -716,8 +719,8 @@ msgstr "取引時刻直後のテック"
 msgid "Error downloading .csv"
 msgstr ".csvファイルのダウンロード中にエラーが発生しました"
 
-msgid "Error getting data for"
-msgstr "xxxのデータ取得中にエラーが発生しました"
+msgid "Error getting data for %1"
+msgstr "%1のデータ取得中にエラーが発生しました"
 
 msgid "Error getting market information!"
 msgstr "市場情報の取得にエラーが発生しました！"
@@ -867,7 +870,7 @@ msgid "Horizontal line"
 msgstr "水平線"
 
 msgid "Hour"
-msgstr ""
+msgstr "時間"
 
 msgid "Hours"
 msgstr "時間"
@@ -1035,7 +1038,7 @@ msgid "Load chart template"
 msgstr "チャートテンプレートを読み込む"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "取引テンプレートを読み込む"
 
 msgid "Loading"
 msgstr "読み込み中"
@@ -1207,7 +1210,7 @@ msgid "Minus the agent's commission"
 msgstr "決済サービスの手数料を引く"
 
 msgid "Minute"
-msgstr ""
+msgstr "分"
 
 msgid "Minutes"
 msgstr "分"
@@ -1402,7 +1405,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1502,6 +1505,9 @@ msgstr "トークン名をご入力ください"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
+
+msgid "Please enter time in the format HH:MM"
+msgstr "時刻の形式をHH:MMで入力してください"
 
 msgid "Please enter your city address"
 msgstr "市区町村をご入力ください"
@@ -1768,9 +1774,6 @@ msgstr "セッション"
 msgid "Session duration limit, in minutes"
 msgstr "取引継続時間の制限(分単位)"
 
-msgid "Session is not authenticated"
-msgstr "セッションが許可されていません"
-
 msgid "Settles"
 msgstr "約定時間"
 
@@ -1925,16 +1928,16 @@ msgid "TRIMA"
 msgstr "TRIMA"
 
 msgid "Table"
-msgstr "明細"
+msgstr "高値/安値の表"
 
 msgid "Tel"
 msgstr "電話番号"
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "テンプレートを一部適用する"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "テンプレートは適用されません"
 
 msgid "Template name"
 msgstr "テンプレート名"
@@ -2021,6 +2024,9 @@ msgstr "取引期間"
 msgid "Time interval"
 msgstr "期間"
 
+msgid "Time out until"
+msgstr "タイムアウト"
+
 msgid "Time period"
 msgstr "取引期間"
 
@@ -2053,7 +2059,7 @@ msgstr ""
 "力ください"
 
 msgid "Today"
-msgstr ""
+msgstr "今日"
 
 msgid "Token"
 msgstr "トークン"
@@ -2154,7 +2160,7 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
@@ -2191,7 +2197,7 @@ msgstr ""
 "ることができます"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "取引設定は「名前を付けて保存」から保存をしてください"
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -2540,6 +2546,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| 戻る"
+
+#~ msgid "Error getting data for"
+#~ msgstr "xxxのデータ取得中にエラーが発生しました"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "セッションが許可されていません"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr "--- タイトル: ページが存在しません: /404.html エラー: \"\" ---"

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 00:06+0200\n"
-"PO-Revision-Date: 2016-11-10 21:07+0000\n"
-"Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
+"PO-Revision-Date: 2016-11-23 14:56+0000\n"
+"Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/binary-webtrader/"
 "translations/pl/>\n"
 "Language: pl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.9\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "Rodzaj %D MA"
@@ -202,7 +202,7 @@ msgid "ADX Stroke"
 msgstr "Linia ADX"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "ATR Period"
 msgstr "Okres ATR"
@@ -422,7 +422,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Clear"
-msgstr ""
+msgstr "Wyczyść"
 
 msgid "Click Jacking test"
 msgstr "Test Clickjacking"
@@ -465,6 +465,9 @@ msgstr "Błąd połączenia. Odśwież stronę"
 
 msgid "Construction"
 msgstr "Budownictwo"
+
+msgid "Contact Us"
+msgstr ""
 
 msgid "Continue"
 msgstr "Kontynuuj"
@@ -586,10 +589,11 @@ msgid "Delete level(s)"
 msgstr "Usuń poziom(y)"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "Wersja demo dla partnerów umożliwiająca dostęp do wykresów Webtrader"
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr ""
+"Wersja demo w IFRAME dla partnerów umożliwiająca dostęp do wykresów Webtrader"
 
 msgid "Deposit funds"
 msgstr "Wpłać środki"
@@ -604,7 +608,7 @@ msgid "Description"
 msgstr "Opis"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Odznacz"
 
 msgid "Digits"
 msgstr "Cyfry"
@@ -619,7 +623,7 @@ msgstr ""
 "koncie"
 
 msgid "Done"
-msgstr ""
+msgstr "Gotowe"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Gotowe. Trwa przelewanie środków do pośrednika płatności"
@@ -679,7 +683,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Edge"
 msgstr "Krawędź"
@@ -719,8 +723,8 @@ msgstr "Pozycja wejściowa"
 msgid "Error downloading .csv"
 msgstr "Błąd podczas pobierania pliku .csv"
 
-msgid "Error getting data for"
-msgstr "Błąd pozyskiwania danych dla"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "Błąd podczas pozyskiwania danych rynkowych!"
@@ -870,7 +874,7 @@ msgid "Horizontal line"
 msgstr "Linia pozioma"
 
 msgid "Hour"
-msgstr ""
+msgstr "Godzina"
 
 msgid "Hours"
 msgstr "Godziny"
@@ -1043,7 +1047,7 @@ msgid "Load chart template"
 msgstr "Załaduj szablon wykresu"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "Załaduj szablon handlowy"
 
 msgid "Loading"
 msgstr "Ładowanie"
@@ -1217,7 +1221,7 @@ msgid "Minus the agent's commission"
 msgstr "Minus prowizja pośrednika"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minuta"
 
 msgid "Minutes"
 msgstr "Minuty"
@@ -1416,7 +1420,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1516,6 +1520,9 @@ msgstr "Proszę podać nazwę tokenu"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "Wpisz kod weryfikacyjny wysłany na Twój adres e-mail"
+
+msgid "Please enter time in the format HH:MM"
+msgstr ""
 
 msgid "Please enter your city address"
 msgstr "Podaj miasto i kod pocztowy"
@@ -1783,9 +1790,6 @@ msgstr "Sesja"
 msgid "Session duration limit, in minutes"
 msgstr "Limit czasu sesji, w minutach"
 
-msgid "Session is not authenticated"
-msgstr "Sesja nie jest zweryfikowana"
-
 msgid "Settles"
 msgstr "Rozliczenie"
 
@@ -1946,10 +1950,10 @@ msgid "Tel"
 msgstr "Tel."
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "Szablon zastosowany częściowo"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "Nie można zastosować szablonu"
 
 msgid "Template name"
 msgstr "Nazwa szablonu"
@@ -2041,6 +2045,9 @@ msgstr "Okres czasu"
 msgid "Time interval"
 msgstr "Odstęp czasu"
 
+msgid "Time out until"
+msgstr ""
+
 msgid "Time period"
 msgstr "Okres czasu"
 
@@ -2072,7 +2079,7 @@ msgstr ""
 "e-mail"
 
 msgid "Today"
-msgstr ""
+msgstr "Dziś"
 
 msgid "Token"
 msgstr "Token"
@@ -2175,7 +2182,7 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Niestety Twoja przeglądarka ich nie obsługuje"
@@ -2212,7 +2219,7 @@ msgstr ""
 "rodzaj, a także przedział czasu, wskaźniki i porównania"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "Aby zapisać ustawienia handlowe, użyj przycisku „Zapisz jako…”"
 
 msgid "Verification code has been sent to your email"
 msgstr "Kod weryfikacyjny został wysłany na Twój adres e-mail"
@@ -2566,6 +2573,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Zwrot"
+
+#~ msgid "Error getting data for"
+#~ msgstr "Błąd pozyskiwania danych dla"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "Sesja nie jest zweryfikowana"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr ""
