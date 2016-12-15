@@ -468,6 +468,9 @@ msgstr "Error de conexión. Actualice la página"
 msgid "Construction"
 msgstr "Construcción"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "Continuar"
 
@@ -717,8 +720,8 @@ msgstr "Punto de entrada"
 msgid "Error downloading .csv"
 msgstr "Error al descargar .csv"
 
-msgid "Error getting data for"
-msgstr "Error al obtener datos para"
+msgid "Error getting data for %1"
+msgstr ""
 
 #, fuzzy
 msgid "Error getting market information!"
@@ -1520,6 +1523,9 @@ msgstr ""
 "Por favor introduzca el código de verificación enviado a su correo "
 "electrónico"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "Por favor, introduzca la dirección de su ciudad"
 
@@ -1786,9 +1792,6 @@ msgstr "Sesión"
 msgid "Session duration limit, in minutes"
 msgstr "Límite de duración de la sesión, en minutos"
 
-msgid "Session is not authenticated"
-msgstr "Sesión no autenticada"
-
 msgid "Settles"
 msgstr "Se queda en"
 
@@ -2041,6 +2044,9 @@ msgstr "Período de Tiempo"
 
 msgid "Time interval"
 msgstr "Intervalo de tiempo"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "Período de tiempo"
@@ -2567,6 +2573,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retorno"
+
+#~ msgid "Error getting data for"
+#~ msgstr "Error al obtener datos para"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "Sesión no autenticada"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr ""

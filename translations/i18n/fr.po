@@ -467,6 +467,9 @@ msgstr "Erreur de connexion. Veuillez actualiser la page."
 msgid "Construction"
 msgstr "Construction"
 
+msgid "Contact Us"
+msgstr ""
+
 msgid "Continue"
 msgstr "Continuer"
 
@@ -721,8 +724,8 @@ msgstr "Point d'entrée"
 msgid "Error downloading .csv"
 msgstr "Erreur lors du téléchargement du fichier .csv"
 
-msgid "Error getting data for"
-msgstr "Erreur lors de la récupération des données pour"
+msgid "Error getting data for %1"
+msgstr ""
 
 msgid "Error getting market information!"
 msgstr "Erreur lors de la récupération des données de marché !"
@@ -1531,6 +1534,9 @@ msgid "Please enter the verification code sent to your email"
 msgstr ""
 "Veuillez saisir le code de vérification envoyé par e-mail à votre adresse"
 
+msgid "Please enter time in the format HH:MM"
+msgstr ""
+
 msgid "Please enter your city address"
 msgstr "Veuillez saisir votre ville"
 
@@ -1797,9 +1803,6 @@ msgstr "Session"
 msgid "Session duration limit, in minutes"
 msgstr "Limite de durée de session, en minutes"
 
-msgid "Session is not authenticated"
-msgstr "La session n'est pas authentifiée"
-
 msgid "Settles"
 msgstr "Règlements"
 
@@ -2053,6 +2056,9 @@ msgstr "Période de temps"
 
 msgid "Time interval"
 msgstr "Intervalle de temps"
+
+msgid "Time out until"
+msgstr ""
 
 msgid "Time period"
 msgstr "Période de temps"
@@ -2587,6 +2593,12 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retours"
+
+#~ msgid "Error getting data for"
+#~ msgstr "Erreur lors de la récupération des données pour"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "La session n'est pas authentifiée"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"

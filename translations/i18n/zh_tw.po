@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-11-08 03:45+0000\n"
-"Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
+"PO-Revision-Date: 2016-12-09 08:27+0000\n"
+"Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
 "Language: zh_tw\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.9\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 類型"
@@ -196,7 +196,7 @@ msgid "ADX Stroke"
 msgstr "ADX 波幅"
 
 msgid "AM"
-msgstr ""
+msgstr "上午"
 
 msgid "ATR Period"
 msgstr "ATR 期限"
@@ -415,7 +415,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 msgid "Click Jacking test"
 msgstr "點擊劫持測試"
@@ -458,6 +458,9 @@ msgstr "連結出錯:請重新整理頁面"
 
 msgid "Construction"
 msgstr "建構"
+
+msgid "Contact Us"
+msgstr "聯繫我們"
 
 msgid "Continue"
 msgstr "繼續"
@@ -577,10 +580,10 @@ msgid "Delete level(s)"
 msgstr "刪除水平"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "聯盟成員存取Webtrader圖表的示範"
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr ""
+msgstr "聯盟成員在IFRAME存取Webtrader圖表的示範"
 
 msgid "Deposit funds"
 msgstr "存入資金"
@@ -595,7 +598,7 @@ msgid "Description"
 msgstr "說明"
 
 msgid "Deselect"
-msgstr ""
+msgstr "取消選取"
 
 msgid "Digits"
 msgstr "數字"
@@ -607,7 +610,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
 
 msgid "Done"
-msgstr ""
+msgstr "已完成"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。資金已轉給支付代理"
@@ -667,7 +670,7 @@ msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "歐元美元"
 
 msgid "Edge"
 msgstr "邊緣"
@@ -705,8 +708,8 @@ msgstr "入市現價"
 msgid "Error downloading .csv"
 msgstr "下載.csv時發生錯誤"
 
-msgid "Error getting data for"
-msgstr "取得以下資料時出錯"
+msgid "Error getting data for %1"
+msgstr "獲取 %1資料時出錯"
 
 msgid "Error getting market information!"
 msgstr "取得市場資料時出錯!"
@@ -856,7 +859,7 @@ msgid "Horizontal line"
 msgstr "水平線"
 
 msgid "Hour"
-msgstr ""
+msgstr "小時"
 
 msgid "Hours"
 msgstr "小時"
@@ -1018,7 +1021,7 @@ msgid "Load chart template"
 msgstr "載入圖表範本"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "載入交易範本"
 
 msgid "Loading"
 msgstr "載入"
@@ -1188,7 +1191,7 @@ msgid "Minus the agent's commission"
 msgstr "減去代理佣金"
 
 msgid "Minute"
-msgstr ""
+msgstr "分鐘"
 
 msgid "Minutes"
 msgstr "分鐘"
@@ -1380,7 +1383,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "下午"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1480,6 +1483,9 @@ msgstr "請輸入權杖名稱"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "請輸入發送到您郵箱的驗證碼"
+
+msgid "Please enter time in the format HH:MM"
+msgstr "請輸入時間，格式為小時:分鐘"
 
 msgid "Please enter your city address"
 msgstr "請輸入您的城市住址"
@@ -1745,9 +1751,6 @@ msgstr "工作階段"
 msgid "Session duration limit, in minutes"
 msgstr "交易期持續時間限制，以分鐘作單位"
 
-msgid "Session is not authenticated"
-msgstr "工作階段未經驗證"
-
 msgid "Settles"
 msgstr "結算"
 
@@ -1908,10 +1911,10 @@ msgid "Tel"
 msgstr "電話"
 
 msgid "Template applied partially"
-msgstr ""
+msgstr "部份範本已經使用"
 
 msgid "Template is not applicable"
-msgstr ""
+msgstr "範本不適用"
 
 msgid "Template name"
 msgstr "範本名稱"
@@ -1993,6 +1996,9 @@ msgstr "期限"
 msgid "Time interval"
 msgstr "時間間隔"
 
+msgid "Time out until"
+msgstr "時間已過。下次開啟時間為"
+
 msgid "Time period"
 msgstr "期限"
 
@@ -2020,7 +2026,7 @@ msgid ""
 msgstr "如要提款，請輸入剛發送到您郵箱的權杖驗證碼"
 
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 msgid "Token"
 msgstr "權杖"
@@ -2115,7 +2121,7 @@ msgid "USD"
 msgstr "美元"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "美元日圓"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遺憾。您的瀏覽器不支持這些程式"
@@ -2150,7 +2156,7 @@ msgid ""
 msgstr "使用「另存為...」按鈕儲存圖表設置、類型、時間段、指標和比較"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "使用「另存為...」按鍵儲存交易設定"
 
 msgid "Verification code has been sent to your email"
 msgstr "驗證代碼已發送到您的郵箱"
@@ -2491,6 +2497,12 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回報率"
+
+#~ msgid "Error getting data for"
+#~ msgstr "取得以下資料時出錯"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "工作階段未經驗證"
 
 #~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
 #~ msgstr "--- 標題:找不到頁面的固定連結: /404.html 摘錄: \"\" ---"

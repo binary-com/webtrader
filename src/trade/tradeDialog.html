@@ -109,8 +109,8 @@
                    rv-tooltip="'Enter the barrier in terms of the difference from the spot price.  If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot.  The entry spot will be the next tick after your order has been received'"
                    rv-tooltip-position="tooltips.barrier_p"
                    rv-scale-font-size="130"
-                   rv-show="barriers.is_last_barrier_daily | eq false">Barrier offset</span>
-             <span class="align-text text-vertical-align" rv-show="barriers.is_last_barrier_daily">Barrier</span>
+                   rv-show="barriers.was_perv_barrier_daily | eq false">Barrier offset</span>
+             <span class="align-text text-vertical-align" rv-show="barriers.was_perv_barrier_daily">Barrier</span>
         </li>
         <li>
             <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
@@ -121,9 +121,9 @@
                   rv-text="barriers.barrier_live < barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-tooltip='"This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."'
                   rv-tooltip-position='tooltips.barrier'
-                  rv-show="barriers.is_last_barrier_daily | eq false"
+                  rv-show="barriers.was_perv_barrier_daily | eq false"
                   />
-             <span rv-show="barriers.is_last_barrier_daily"></span>
+             <span rv-show="barriers.was_perv_barrier_daily"></span>
         </li>
     </ul>
 
@@ -133,7 +133,9 @@
         <li> <span class="dotted-underline align-text text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
                 rv-scale-font-size="130"
-                >High barrier offset</span> </li>
+                rv-show="barriers.was_perv_high_barrier_daily | eq false">High barrier offset</span>
+             <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
+        </li>
         <li>
             <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
                    rv-value="barriers.high_barrier | debounce proposal.onchange" />
@@ -143,7 +145,9 @@
                   rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   rv-tooltip-position='tooltips.barrier'
+                  rv-show="barriers.was_perv_high_barrier_daily | eq false"
                   />
+            <span rv-show="barriers.was_perv_high_barrier_daily"></span>
         </li>
     </ul>
 
@@ -153,7 +157,9 @@
         <li> <span class="dotted-underline align-text text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 rv-tooltip-position="tooltips.barrier_p"
                 rv-scale-font-size="130"
-                >Low barrier offset</span> </li>
+                rv-show="barriers.was_perv_low_barrier_daily | eq false">Low barrier offset</span>
+             <span class="align-text text-vertical-align" rv-show="barriers.was_perv_low_barrier_daily">Low barrier</span>
+        </li>
         <li>
             <input class="barriers-barrier" type="text" prefered-sign='-' rv-decimal-round="5"
                    rv-value="barriers.low_barrier | debounce proposal.onchange" />
@@ -163,7 +169,9 @@
                   rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   rv-tooltip-position='tooltips.barrier'
+                  rv-show="barriers.was_perv_low_barrier_daily | eq false"
                   />
+            <span rv-show="barriers.was_perv_low_barrier_daily"></span>
         </li>
     </ul>
 

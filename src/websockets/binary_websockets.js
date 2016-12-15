@@ -191,7 +191,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                 return val; /* pass the result */
             })
             .catch(function (up) {
-                if (!auth_successfull) {    /* authentication request is failed, clear local_storage */
+                if (up.code!=="SelfExclusion" && !auth_successfull) {    /* authentication request is failed, clear local_storage */
                     is_authenitcated_session = false;
                     fire_event('logout');
                     local_storage.remove('oauth');
@@ -203,7 +203,6 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
 
     /* un-athenticate current session */
     var invalidate = function(){
-        if(!is_authenitcated_session) { return; }
         local_storage.remove('oauth');
         local_storage.remove('authorize');
 
@@ -355,9 +354,6 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         invalidate: invalidate,
         /* switch account */
         switch_account: function(id) {
-          if(!is_authenitcated_session) {
-            return Promise.reject({message: 'Session is not authenticated.'.i18n()})
-          }
           var oauth = local_storage.get('oauth');
           if(!oauth) {
             return Promise.reject({ message: 'Account token not found.'.i18n() });

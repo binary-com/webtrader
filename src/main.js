@@ -87,22 +87,24 @@ requirejs.onError = function (err) {
     throw err;
 };
 
+require(['modernizr'], function(){
+    //By pass touch check for affiliates=true(because they just embed our charts)
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && !isAffiliates()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
+      window.location.href = 'unsupported_browsers/unsupported_browsers.html';
+      return;
+    }
+})
+
 /* Initialize the websocket as soon as possible */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
 var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
+require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) {
     "use strict";
     /* setup translating string literals */
     setup_i18n_translation(JSON.parse(lang_json));
     if (i18n_name == 'ar') {
       $('body').addClass('rtl-direction');
-    }
-
-    //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && !isAffiliates()) || !Modernizr.localstorage || !Modernizr.webworkers) {
-      window.location.href = 'unsupported_browsers/unsupported_browsers.html';
-      return;
     }
 
     /* Trigger *Parallel* loading of big .js files,

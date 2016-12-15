@@ -29,6 +29,10 @@
 			document.getElementsByClassName("logo")[0].style.width="100%";
 			document.getElementsByClassName("logo")[0].childNodes[1].src = "<style-url>/images/logo/CFX_logomark_light.svg";
 		}
+
+		if(!Object.defineProperty){
+			document.getElementsByClassName("logo")[0].style.width="50px";
+		}
 	}
 	</script>
 </head>

@@ -431,6 +431,9 @@ msgstr ""
 msgid "Construction"
 msgstr "" 
 
+msgid "Contact Us"
+msgstr "" 
+
 msgid "Continue"
 msgstr "" 
 
@@ -677,7 +680,7 @@ msgstr ""
 msgid "Error downloading .csv"
 msgstr "" 
 
-msgid "Error getting data for"
+msgid "Error getting data for %1"
 msgstr "" 
 
 msgid "Error getting market information!"
@@ -1409,6 +1412,9 @@ msgstr ""
 msgid "Please enter the verification code sent to your email"
 msgstr "" 
 
+msgid "Please enter time in the format HH:MM"
+msgstr "" 
+
 msgid "Please enter your city address"
 msgstr "" 
 
@@ -1673,9 +1679,6 @@ msgstr ""
 msgid "Session duration limit, in minutes"
 msgstr "" 
 
-msgid "Session is not authenticated"
-msgstr "" 
-
 msgid "Settles"
 msgstr "" 
 
@@ -1902,6 +1905,9 @@ msgid "Time Period"
 msgstr "" 
 
 msgid "Time interval"
+msgstr "" 
+
+msgid "Time out until"
 msgstr "" 
 
 msgid "Time period"
