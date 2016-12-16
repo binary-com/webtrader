@@ -385,7 +385,9 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
           api.send({forget_all: 'balance'})
              .catch(function(err){ console.error(err); });
 
-          return api.cached.authorize();
+          return api.cached.authorize().then(function(){
+            fire_event("switch_account");
+          });
         },
         /* if you want a request to be cached, that is when multiple modules request
            the same data or a module request a data multiple times, instead of calling
