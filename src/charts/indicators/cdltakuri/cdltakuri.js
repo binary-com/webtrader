@@ -57,6 +57,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function (
                 ]
             });
 
+            $html.closest('.ui-dialog').find('span.ui-dialog-title').attr('title', current_indicator_data.long_display_name);
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);
             }

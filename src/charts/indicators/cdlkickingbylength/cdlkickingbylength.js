@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 7/2/16
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function ($, rv) {
+define(["jquery", "common/rivetsExtra", 'lodash', "jquery-ui", 'color-picker'], function ($, rv, _) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -56,6 +56,8 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function (
                     }
                 ]
             });
+
+            $html.closest('.ui-dialog').find('span.ui-dialog-title').attr('title', current_indicator_data.long_display_name);
 
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);

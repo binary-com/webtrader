@@ -38,7 +38,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#adxr_stroke").colorpicker({
-				showOn: 'click',
+				        showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -195,6 +195,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 }).selectmenu("menuWidget").css("max-height","85px");
             });
 
+            $html.closest('.ui-dialog').find('span.ui-dialog-title').attr('title', current_indicator_data.long_display_name);
             if (typeof _callback == "function")
             {
                 _callback( containerIDWithHash );
