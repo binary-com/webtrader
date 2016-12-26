@@ -44,7 +44,7 @@ requirejs.config({
           deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
         },
         "timepicker": {
-            deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']
+            deps:['jquery-ui', 'jquery']
         },
         "jquery-ui": {
             deps: ["jquery","css!binary-style"]
