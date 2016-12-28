@@ -47,7 +47,7 @@ requirejs.config({
             deps:['jquery-ui', 'jquery']
         },
         "jquery-ui": {
-            deps: ["jquery","css!binary-style"]
+            deps: ["jquery"]
         },
         "highstock": {
             deps: ["jquery"]
@@ -107,16 +107,15 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
       $('body').addClass('rtl-direction');
     }
 
+    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
+    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css', 'css!main.css', "css!binary-style"])
+
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
     require(['jquery-ui', 'highstock', 'lokijs']);
-
-
-    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);

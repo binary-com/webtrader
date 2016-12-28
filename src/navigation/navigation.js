@@ -4,51 +4,96 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
     "use strict";
 
     function updateListItemHandlers() {
-        $("#nav-menu li > ul li").each(function () {
-            var $li = $(this);
-            if ($li.hasClass('update-list-item-handlers'))
-                return;
-            $li.addClass('update-list-item-handlers');
-            $li.on("click", function() {
-                var $elem = $(this);
-                var hasSubMenus = $elem.find("ul").length > 0;
-                if (!hasSubMenus) {
-                    if(!$elem.parent("ul").hasClass("nav-closed")){
-                        $elem.parent("ul").not("#nav-menu").toggleClass("nav-closed");
-                    }
-
-                }
-            });
+        $("#nav-menu .nav-dropdown-toggle").each(function(){
+          $(this).unbind("click").on("click",function(){
+            var $ul = $(this).next();
+            if($ul){
+              if($($ul[0]).css("visibility")==="hidden") 
+                $($ul[0]).css({visibility:"visible",opacity:1,display:"block"});
+              else 
+                $($ul[0]).css({visibility:"",opacity:"",display:""});
+            } else{
+              console.log("ul not found");
+            }
+          });
         });
-        $("#nav-menu.nav-normal-menu li").each(function () {
-            $(this).on("mouseover", function () {
-                $(this).find("ul.nav-closed").each(function () {
-                    $(this).removeClass("nav-closed");
-                });
-            });
+        $("#nav-menu li").each(function(){
+          $(this).unbind("mouseleave").on("mouseleave",function(){
+            var $ul = $(this).find("ul");
+            if($ul){
+              $($ul[0]).css({visibility:"",opacity:"",display:""});
+            }
+          });
         });
+        
     }
 
     function initLoginButton(root) {
-        var login_menu = root.find('.login');
-        var account_menu = root.find('.account').hide();
-        var real_accounts_only = account_menu.find('li.visible-on-real-accounts-only').hide();
-        var upgrade_account_li = account_menu.find('li.upgrade-account').hide();
+        var account_menu = root.find('.account-menu');
         var time = root.find('span.time');
-        var login_btn = root.find('.login button');
-        var logout_btn = root.find('.account .logout');
-        var loginid = root.find('.account span.login-id');
-        var balance = root.find('.account span.balance').fadeOut();
-        var currency = '';
-        /* don't show the login menu if redirecting from oauth */
-        local_storage.get('oauth') && login_menu.hide();
+        var state = {
+          show_login: local_storage.get('oauth') ? false : true,
+          login_disabled: false,
+          currency: '',
+          logout_disabled: false,
+          account: {
+            show:false,
+            type:'',
+            id:'',
+            balance: '',
+            is_virtual:0
+          },
+          show_submenu: false,
+        };
+        state.oauth = local_storage.get('oauth') || [];
+        state.oauth = state.oauth.map(function(e){
+          e.type = getType(e.id);
+          return e;
+        })
+        state.showLoginWin = function () {
+            state.login_disabled = true;
+            require(['oauth/login'], function (login_win) {
+                state.login_disabled = false;
+                login_win.init();
+            });
+        };
+
+        state.toggleVisibility = function(value){
+          state.show_submenu = value;
+        };
+
+        state.logout = function(){
+          liveapi.invalidate();
+          state.logout_disabled = true;
+        };
+
+        state.switchAccount = function(id){
+          liveapi.switch_account(id)
+            .catch(function (err) {
+                $.growl.error({message: err.message});
+                // logout user if he decided to self exclude himself.
+                if(err.code==="SelfExclusion"){
+                  console.log("logging out because of self exclude");
+                  liveapi.invalidate();
+                }
+            });
+        }
+
+        function getType(id){
+          if(!id) return;
+          var type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real"};
+          var id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
+          return type[id]+" Account";
+        };
+
+        rv.bind(account_menu, state);
 
         function update_balance(data) {
-            if (!currency) {
+            if (!state.currency) {
                 liveapi.send({payout_currencies: 1})
                     .then(function (_data) {
-                        currency = _data.payout_currencies[0];
-                        local_storage.set("currency",currency);
+                        state.currency = _data.payout_currencies[0];
+                        local_storage.set("currency", state.currency);
                         setTimeout(function () {
                             update_balance(data);
                         }, 0);
@@ -63,7 +108,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             if (data.authorize) value = data.authorize.balance;
             else value = data.balance ? data.balance.balance : '0';
 
-            balance.text(formatPrice(value, currency)).fadeIn();
+            state.account.balance = formatPrice(value, state.currency);
         };
 
         /* update balance on change */
@@ -72,35 +117,42 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
         liveapi.events.on('logout', function () {
             $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
             /* destroy all authorized dialogs */
-            logout_btn.removeAttr('disabled');
-            account_menu.fadeOut();
-            login_menu.fadeIn();
-            loginid.fadeOut();
-            // time.fadeOut();
-            balance.fadeOut();
-            currency = '';
+            state.logout_disabled = false;
+            state.account.show = false;
+            state.show_login = true;
+            state.account.id = '';
+            state.account.balance = '';
+            state.account.type = '';
+            state.currency = '';
+
             local_storage.remove("currency");
         });
 
         liveapi.events.on('login', function (data) {
             $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
             /* destroy all authorized dialogs */
-            login_menu.fadeOut();
-            account_menu.fadeIn();
+            console.log(data);
+            state.show_login = false;
+            state.account.show = true;
+            state.account.id = data.authorize.loginid;
+            state.account.is_virtual = data.authorize.is_virtual;
+            if(!data.authorize.is_virtual){
+              var type = {MLT:"Investment", MF:"Gaming",REAL:"Real"};
+              var id = data.authorize.loginid.match(/^(MLT|MF)/i) ? data.authorize.loginid.match(/^(MLT|MF)/i)[0] : "REAL";
+              state.account.type = type[id]+" Account";
+            } else {
+              state.account.type = "Virtual Account";
+            }
 
             update_balance(data);
-            loginid.text('Account ' + data.authorize.loginid).fadeIn();
-
-            var oauth = local_storage.get('oauth') || [];
             var is_current_account_real = data.authorize.is_virtual === 0;
-            is_current_account_real ? real_accounts_only.show() : real_accounts_only.hide();
 
             getLandingCompany().then(function(what_todo){
-              var show_financial_link = is_current_account_real && (what_todo === 'upgrade-mf');
-              var show_realaccount_link = !is_current_account_real && (what_todo === 'upgrade-mlt');
+              state.show_financial_link = is_current_account_real && (what_todo === 'upgrade-mf');
+              state.show_realaccount_link = !is_current_account_real && (what_todo === 'upgrade-mlt');
               var loginids = Cookies.loginids();
-              var has_real_account = _.some(loginids, {is_real: true});
-              var has_disabled_account =  _.some(loginids, {is_disabled: true});
+              state.has_real_account = _.some(loginids, {is_real: true});
+              state.has_disabled_account =  _.some(loginids, {is_disabled: true});
 
               if(_.some(loginids, {is_disabled: true})) {
                 $.growl.error({
@@ -110,55 +162,13 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
                           + "</a>"
                 });
               }
-
-              var toggle = function(show, el) { show ? el.show() : el.hide(); }
-              toggle(!show_financial_link, upgrade_account_li.find('.upgrade-to-real-account-span'));
-              toggle(show_financial_link, upgrade_account_li.find('.open-financial-account-span'));
-              toggle(show_realaccount_link || show_financial_link, upgrade_account_li);
-              toggle(show_realaccount_link || show_financial_link, upgrade_account_li.find('a.real-account'));
             });
-
-            /* switch between account on user click */
-            $('.account li.info').remove();
-            oauth.forEach(function (account) {
-                if (account.id !== data.authorize.loginid) {
-                    var a = $('<a href="#"></a>').html('<span class="ui-icon ui-icon-login"></span>' + account.id);
-                    var li = $('<li/>').append(a).addClass('info');
-                    li.data(account);
-                    li.click(function () {
-                        var data = $(this).data();
-                        $('.account li.info').remove();
-                        liveapi.switch_account(data.id)
-                            .catch(function (err) {
-                                $.growl.error({message: err.message});
-                                // logout user if he decided to self exclude himself.
-                                if(err.code==="SelfExclusion"){
-                                  console.log("logging out because of self exclude");
-                                  liveapi.invalidate();
-                                }
-                            });
-                    })
-                    li.insertBefore(logout_btn.parent());
-                }
-            });
-        });
-
-        login_btn.on('click', function () {
-            login_btn.attr('disabled', 'disabled');
-            require(['oauth/login'], function (login_win) {
-                login_btn.removeAttr('disabled');
-                login_win.init();
-            });
-        });
-        logout_btn.on('click', function () {
-            liveapi.invalidate();
-            logout_btn.attr('disabled', 'disabled');
         });
 
         // Restore login-button in case of login-error
         $('.login').on("login-error",function(e) {
             console.log("Encountered login error");
-            login_menu.fadeIn();
+            state.show_login = true;
         });
 
         /* update time every one minute */
@@ -183,17 +193,18 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
           { value: 'de', name: 'Deutsch'},
           { value: 'es', name: 'Español'},
           { value: 'fr', name: 'Français'},
-          { value: 'id', name: 'Bahasa Indonesia'},
+          { value: 'id', name: 'Indonesia'},
           { value: 'it', name: 'Italiano'},
           { value: 'pl', name: 'Polish'},
           { value: 'pt', name: 'Português'},
           { value: 'ru', name: 'Русский'},
-          { value: 'vi', name: 'Vietnamese'},
+          { value: 'vi', name: 'Tiếng Việt'},
           { value: 'zh_cn', name: '简体中文'},
           { value: 'zh_tw', name: '繁體中文'},
         ]
       };
       state.onclick = function(value) {
+        state.confirm.visible = false;
         var lang = _.find(state.languages, {value: value});
         if(lang.value == state.lang.value)
           return;
@@ -201,6 +212,10 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
         local_storage.set('i18n', {value: lang.value});
         window.location.reload();
       };
+
+      state.toggleVisibility = function(visible){
+          state.confirm.visible = visible;
+        }
 
       var value = (local_storage.get('i18n') || {value: 'en'}).value;
       state.lang = _.find(state.languages, {value: value}); // set the initial state.

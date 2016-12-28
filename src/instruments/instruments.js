@@ -33,7 +33,7 @@ define(["jquery", "jquery-ui", "websockets/binary_websockets", "navigation/menu"
                     .then(function (data) {
                         markets = menu.extractChartableMarkets(data);
                         if ($("#nav-menu").length > 0) {
-                            var rootUL = $("<ul>").addClass("primary-color").appendTo($("#nav-menu").find(".instruments"));
+                            var rootUL = $("<ul>").appendTo($("#nav-menu").find(".instruments"));
                             /* add to instruments menu */
                             markets = menu.sortMenu(markets);
                             menu.refreshMenu(rootUL, markets, onMenuItemClick);
