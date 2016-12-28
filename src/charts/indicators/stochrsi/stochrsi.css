@@ -17,3 +17,7 @@
 .stochrsi input {
     line-height: 10px !important;
 }
+
+#stochrsi_level_delete {
+    white-space: nowrap;
+}

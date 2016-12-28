@@ -13,3 +13,7 @@
 .ultosc input {
     line-height: 10px !important;
 }
+
+#ultosc_level_delete {
+    white-space: nowrap;
+}
