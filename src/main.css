@@ -63,7 +63,7 @@ body > .footer .addiction-warning a:hover {
     padding: 0!important;
 }
 
-.ui-corner-all {
+.ui-dialog.ui-corner-all .ui-corner-all {
     border-bottom-right-radius: 0!important;
     border-bottom-left-radius: 0!important;
     border-top-right-radius: 0!important;
@@ -334,6 +334,13 @@ button[disabled] {
 }
 
 /* override datepicker syles */
+.ui-datepicker, .ui-timepicker .ui-widget-content {
+  padding: 0;
+  border: none;
+}
+.ui-datepicker-buttonpane {
+  border: none;
+}
 .ui-datepicker-prev, .ui-datepicker-next {
   color: white!important;
 }
