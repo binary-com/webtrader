@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function($, rv) {
+define(["jquery", "common/rivetsExtra", "lodash", "jquery-ui", 'color-picker'], function($, rv, _) {
 
     function closeDialog() {
         $(this).dialog("close");
@@ -25,7 +25,7 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function($
             }
             rv.bind($html[0], state);
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
@@ -53,8 +53,15 @@ define(["jquery", "common/rivetsExtra", "jquery-ui", 'color-picker'], function($
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
 
             if (typeof _callback == "function")
             {

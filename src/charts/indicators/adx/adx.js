@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/6/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function($,_) {
 
     var before_add_callback = null;
 
@@ -39,7 +39,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#adx_stroke").colorpicker({
-				showOn: 'click',
+								showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -121,75 +121,82 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 });
             });
 
-            $html.dialog({
-                autoOpen: false,
-                resizable: false,
-                width: 350,
-                height:400,
-                modal: true,
-                my: 'center',
-                at: 'center',
-                of: window,
-                dialogClass:'adx-ui-dialog',
-                buttons: [
-                    {
-                        text: "OK",
-                        click: function() {
-                            var $elem = $(".adx_input_width_for_period");
-                            if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
-                                            parseInt($elem.attr("min")),
-                                            parseInt($elem.attr("max")) + 1)) {
-                                require(["jquery", "jquery-growl"], function ($) {
-                                    $.growl.error({
-                                        message: "Only numbers between " + $elem.attr("min")
-                                                + " to " + $elem.attr("max")
-                                                + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-                                    });
-                                });
-                                $elem.val($elem.prop("defaultValue"));
-                                return;
-                            };
+            var options = {
+							autoOpen: false,
+							resizable: false,
+							width: 350,
+							height:400,
+							modal: true,
+							my: 'center',
+							at: 'center',
+							of: window,
+							dialogClass:'adx-ui-dialog',
+							buttons: [
+								{
+									text: "OK",
+									click: function() {
+										var $elem = $(".adx_input_width_for_period");
+										if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+												parseInt($elem.attr("min")),
+												parseInt($elem.attr("max")) + 1)) {
+											require(["jquery", "jquery-growl"], function ($) {
+												$.growl.error({
+													message: "Only numbers between " + $elem.attr("min")
+													+ " to " + $elem.attr("max")
+													+ " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+												});
+											});
+											$elem.val($elem.prop("defaultValue"));
+											return;
+										};
 
-                            var levels = [];
-                            $.each(table.rows().nodes(), function () {
-                                var data = $(this).data('level');
-                                if (data) {
-                                    levels.push({
-                                        color: data.stroke,
-                                        dashStyle: data.dashStyle,
-                                        width: data.strokeWidth,
-                                        value: data.level,
-                                        label: {
-                                            text: data.level
-                                        }
-                                    });
-                                }
-                            });
-                            var options = {
-                                period: parseInt($html.find(".adx_input_width_for_period").val()),
-                                maType: $html.find("#adx_ma_type").val(),
-                                stroke: defaultStrokeColor,
-                                strokeWidth: parseInt($html.find("#adx_strokeWidth").val()),
-                                dashStyle: selectedDashStyle,
-                                appliedTo: parseInt($html.find("#adx_appliedTo").val()),
-                                levels: levels
-                            };
-                            before_add_callback && before_add_callback();
-                            //Add ADX for the main series
-                            $($(".adx").data('refererChartID')).highcharts().series[0].addIndicator('adx', options);
+										var levels = [];
+										$.each(table.rows().nodes(), function () {
+											var data = $(this).data('level');
+											if (data) {
+												levels.push({
+													color: data.stroke,
+													dashStyle: data.dashStyle,
+													width: data.strokeWidth,
+													value: data.level,
+													label: {
+														text: data.level
+													}
+												});
+											}
+										});
+										var options = {
+											period: parseInt($html.find(".adx_input_width_for_period").val()),
+											maType: $html.find("#adx_ma_type").val(),
+											stroke: defaultStrokeColor,
+											strokeWidth: parseInt($html.find("#adx_strokeWidth").val()),
+											dashStyle: selectedDashStyle,
+											appliedTo: parseInt($html.find("#adx_appliedTo").val()),
+											levels: levels
+										};
+										before_add_callback && before_add_callback();
+										//Add ADX for the main series
+										$($(".adx").data('refererChartID')).highcharts().series[0].addIndicator('adx', options);
 
-                            closeDialog.call($html);
+										closeDialog.call($html);
 
-                        }
-                    },
-                    {
-                        text: "Cancel",
-                        click: function() {
-                            closeDialog.call(this);
-                        }
-                    }
-                ]
-            });
+									}
+								},
+								{
+									text: "Cancel",
+									click: function() {
+										closeDialog.call(this);
+									}
+								}
+							],
+							icons: {
+								close: 'custom-icon-close',
+								minimize: 'custom-icon-minimize',
+								maximize: 'custom-icon-maximize'
+							}
+						};
+            $html.dialog(options)
+									.dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 155

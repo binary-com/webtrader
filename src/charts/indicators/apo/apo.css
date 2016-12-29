@@ -13,3 +13,7 @@
 .apo-ui-dialog, .apo.ui-dialog-content {
     overflow: auto;
 }
+
+#apo_level_delete {
+    white-space: nowrap;
+}

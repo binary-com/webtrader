@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 12/21/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($) {
+define(["jquery", "lodash", "jquery-ui", 'color-picker', 'ddslick'], function($, _) {
 
     var before_add_callback = null;
 
@@ -31,7 +31,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
             $html.find("input[type='button']").button();
 
             $html.find("#mama_stroke").colorpicker({
-				showOn: 'click',
+                showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -67,7 +67,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
             });
             $('#mama_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
@@ -121,8 +121,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
+
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 150

@@ -23,3 +23,7 @@
 .willr input {
     line-height: 10px !important;
 }
+
+#willr_level_delete {
+    white-space: nowrap;
+}

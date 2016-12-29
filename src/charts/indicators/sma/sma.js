@@ -2,7 +2,7 @@
  * Created by arnab on 3/1/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "lodash", "jquery-ui", 'color-picker', 'ddslick'], function($, _) {
 
     var before_add_callback = null;
 
@@ -31,7 +31,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#sma_stroke").colorpicker({
-				showOn: 'click',
+				        showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -66,7 +66,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
             $('#sma_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 modal: true,
@@ -115,8 +115,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
+
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 150

@@ -2,7 +2,7 @@
 Created By Mahboob.M on 24/11/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "lodash", "jquery-ui", 'color-picker', 'ddslick'], function ($, _) {
 
     var before_add_callback = null;
 
@@ -28,7 +28,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
             $html.find("#bbands_mdl_stroke,#bbands_up_stroke,#bbands_lwr_stroke").each(function(){
    				 $(this).colorpicker({
-					showOn: 'click',
+							showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -57,7 +57,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
             $html.find("#bbands_background").colorpicker({
-						showOn: 'click',
+								showOn: 'click',
                 alpha: true,
                 colorFormat: 'RGBA',
                 position: {
@@ -97,11 +97,11 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $('#bbands_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
             
-			$html.dialog({
+			var options = {
 				autoOpen:false,
 				resizable:false,
 				width:350,
-                height:400,
+				height:400,
 				modal:true,
 				my:"center",
 				at:"center",
@@ -111,49 +111,56 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					{
 						text: "OK",
 						click: function() {
-							   var $elem = $(".bbands_input_width_for_period");
-							   if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
-                                               parseInt($elem.attr("min")),
-                                               parseInt($elem.attr("max")) + 1)) {
-							       require(["jquery", "jquery-growl"], function ($) {
-							           $.growl.error({
-							               message: "Only numbers between " + $elem.attr("min")
-                                                   + " to " + $elem.attr("max")
-                                                   + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-							           });
-							       });
-                                   $elem.val($elem.prop("defaultValue"));
-							       return;
-							   };
+							var $elem = $(".bbands_input_width_for_period");
+							if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+									parseInt($elem.attr("min")),
+									parseInt($elem.attr("max")) + 1)) {
+								require(["jquery", "jquery-growl"], function ($) {
+									$.growl.error({
+										message: "Only numbers between " + $elem.attr("min")
+										+ " to " + $elem.attr("max")
+										+ " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+									});
+								});
+								$elem.val($elem.prop("defaultValue"));
+								return;
+							};
 
-                                var options = {
-                                    period : parseInt($("#bbands_time_period").val()),
-                                    devUp:parseInt($("#bbands_dev_up").val()),
-                                    devDn:parseInt($("#bbands_dev_dn").val()),
-                                    maType:$("#bbands_ma_type").val(),
-                                    mdlBndStroke : $("#bbands_mdl_stroke").css("background-color"),
-                                    uprBndStroke : $("#bbands_up_stroke").css('background-color'),
-                                    lwrBndStroke: $("#bbands_lwr_stroke").css('background-color'),
-                                    backgroundColor:$("#bbands_background").css("background-color"),
-                                    strokeWidth : parseInt($("#bbands_strokeWidth").val()),
-                                    dashStyle: selectedDashStyle,
-                                    appliedTo: parseInt($("#bbands_appliedTo").val())
-                                }
-                                before_add_callback && before_add_callback();
-                                //Add Bollinger for the main series
-                                $($(".bbands").data('refererChartID')).highcharts().series[0].addIndicator('bbands', options);
+							var options = {
+								period : parseInt($("#bbands_time_period").val()),
+								devUp:parseInt($("#bbands_dev_up").val()),
+								devDn:parseInt($("#bbands_dev_dn").val()),
+								maType:$("#bbands_ma_type").val(),
+								mdlBndStroke : $("#bbands_mdl_stroke").css("background-color"),
+								uprBndStroke : $("#bbands_up_stroke").css('background-color'),
+								lwrBndStroke: $("#bbands_lwr_stroke").css('background-color'),
+								backgroundColor:$("#bbands_background").css("background-color"),
+								strokeWidth : parseInt($("#bbands_strokeWidth").val()),
+								dashStyle: selectedDashStyle,
+								appliedTo: parseInt($("#bbands_appliedTo").val())
+							}
+							before_add_callback && before_add_callback();
+							//Add Bollinger for the main series
+							$($(".bbands").data('refererChartID')).highcharts().series[0].addIndicator('bbands', options);
 
-                            closeDialog.call($html);
+							closeDialog.call($html);
 						}
-                    },
+					},
 					{
 						text: "Cancel",
 						click:function() {
 							closeDialog.call(this);
 						}
 					}
-				]
-			});
+				],
+				icons: {
+					close: 'custom-icon-close',
+					minimize: 'custom-icon-minimize',
+					maximize: 'custom-icon-maximize'
+				}
+			};
+			$html.dialog(options)
+				.dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
 			$html.find('select').selectmenu({
 				width : 150
 			});

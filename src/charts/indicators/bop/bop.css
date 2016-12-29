@@ -20,3 +20,7 @@
 .bop-ui-dialog, .bop.ui-dialog-content, .bop_level.ui-dialog-content {
     overflow: auto;
 }
+
+#bop_level_delete {
+    white-space: nowrap;
+}

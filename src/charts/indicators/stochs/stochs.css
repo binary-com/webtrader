@@ -17,3 +17,7 @@
 .stochs input {
     line-height: 10px !important;
 }
+
+#stochs_level_delete {
+    white-space: nowrap;
+}
