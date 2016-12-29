@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 00:06+0200\n"
-"PO-Revision-Date: 2016-12-28 20:39+0000\n"
+"PO-Revision-Date: 2016-12-29 23:07+0000\n"
 "Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pl/>\n"
@@ -292,10 +292,10 @@ msgid "Aroon Up Stroke"
 msgstr "Wzrostowa linia Aroon"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Azjatycki – Spadek"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Azjatycki – Wzrost"
 
 msgid "Asians"
 msgstr "Azjatyckie"
@@ -617,7 +617,7 @@ msgid "Deselect"
 msgstr "Odznacz"
 
 msgid "Differs"
-msgstr ""
+msgstr "Różni się"
 
 msgid "Digits"
 msgstr "Cyfry"
@@ -716,10 +716,10 @@ msgid "Ends In/Out"
 msgstr "Zakończy się w/poza"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Zakończy się w"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Zakończy się poza"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
@@ -748,7 +748,7 @@ msgid "Estimated Net Worth"
 msgstr "Szacowana wartość netto"
 
 msgid "Even"
-msgstr ""
+msgstr "Parzysta"
 
 msgid "Exclude me from the website until"
 msgstr "Wyłącz mnie z portalu do dnia"
@@ -841,7 +841,7 @@ msgid "Further instructions"
 msgstr "Dalsze instrukcje"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Przekroczy"
 
 msgid "Gray"
 msgstr "Szary"
@@ -871,7 +871,7 @@ msgid "High Stroke"
 msgstr "Linia wysoka"
 
 msgid "High barrier"
-msgstr ""
+msgstr "Górny limit"
 
 msgid "High barrier offset"
 msgstr "Wyrównanie górnego limitu"
@@ -1160,7 +1160,7 @@ msgid "Low Stroke"
 msgstr "Linia niska"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Dolny limit"
 
 msgid "Low barrier offset"
 msgstr "Wyrównanie dolnego limitu"
@@ -1200,7 +1200,7 @@ msgid "Mass Period"
 msgstr "Okres masowy"
 
 msgid "Matches"
-msgstr ""
+msgstr "Zgadza się"
 
 msgid "Max/Min Period"
 msgstr "Maks./min. okres"
@@ -1326,7 +1326,7 @@ msgid "No"
 msgstr "Nie"
 
 msgid "No touch"
-msgstr ""
+msgstr "Nie osiągnie"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "Pamiętaj, że token może zawierać jeden lub więcej z tych zakresów"
@@ -1376,7 +1376,7 @@ msgid "October"
 msgstr "Październik"
 
 msgid "Odd"
-msgstr ""
+msgstr "Nieparzysta"
 
 msgid "Offset"
 msgstr "Offset"
@@ -1902,10 +1902,10 @@ msgid "Spreads"
 msgstr "Spready"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "Spready – Spadek"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "Spready – Wzrost"
 
 msgid "Stake"
 msgstr "Stawka"
@@ -1935,7 +1935,7 @@ msgid "Stays In/Goes Out"
 msgstr "Pozostanie w/przekroczy"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Pozostaje w"
 
 msgid "Stocks trading experience"
 msgstr "Doświadczenie w handlowaniu akcjami"
@@ -2158,7 +2158,7 @@ msgid "Total Profit/Loss"
 msgstr "Całkowity zysk / całkowita strata"
 
 msgid "Touch"
-msgstr ""
+msgstr "Osiągnie"
 
 msgid "Touch/No Touch"
 msgstr "Osiągnie/nie osiągnie"
@@ -2233,7 +2233,7 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Under"
-msgstr ""
+msgstr "Poniżej"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Niestety Twoja przeglądarka ich nie obsługuje"
