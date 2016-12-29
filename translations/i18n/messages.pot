@@ -257,6 +257,12 @@ msgstr ""
 msgid "Aroon Up Stroke"
 msgstr "" 
 
+msgid "Asian down"
+msgstr "" 
+
+msgid "Asian up"
+msgstr "" 
+
 msgid "Asians"
 msgstr "" 
 
@@ -572,6 +578,9 @@ msgstr ""
 msgid "Deselect"
 msgstr "" 
 
+msgid "Differs"
+msgstr "" 
+
 msgid "Digits"
 msgstr "" 
 
@@ -665,6 +674,12 @@ msgstr ""
 msgid "Ends In/Out"
 msgstr "" 
 
+msgid "Ends in"
+msgstr "" 
+
+msgid "Ends out"
+msgstr "" 
+
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr "" 
 
@@ -687,6 +702,9 @@ msgid "Error getting market information!"
 msgstr "" 
 
 msgid "Estimated Net Worth"
+msgstr "" 
+
+msgid "Even"
 msgstr "" 
 
 msgid "Exclude me from the website until"
@@ -779,6 +797,9 @@ msgstr ""
 msgid "Further instructions"
 msgstr "" 
 
+msgid "Goes out"
+msgstr "" 
+
 msgid "Gray"
 msgstr "" 
 
@@ -804,6 +825,9 @@ msgid "High Price"
 msgstr "" 
 
 msgid "High Stroke"
+msgstr "" 
+
+msgid "High barrier"
 msgstr "" 
 
 msgid "High barrier offset"
@@ -1058,6 +1082,9 @@ msgstr ""
 msgid "Low Stroke"
 msgstr "" 
 
+msgid "Low barrier"
+msgstr "" 
+
 msgid "Low barrier offset"
 msgstr "" 
 
@@ -1083,6 +1110,9 @@ msgid "March"
 msgstr "" 
 
 msgid "Mass Period"
+msgstr "" 
+
+msgid "Matches"
 msgstr "" 
 
 msgid "Max/Min Period"
@@ -1208,6 +1238,9 @@ msgstr ""
 msgid "No"
 msgstr "" 
 
+msgid "No touch"
+msgstr "" 
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "" 
 
@@ -1245,6 +1278,9 @@ msgid "Oct"
 msgstr "" 
 
 msgid "October"
+msgstr "" 
+
+msgid "Odd"
 msgstr "" 
 
 msgid "Offset"
@@ -1754,6 +1790,12 @@ msgstr ""
 msgid "Spreads"
 msgstr "" 
 
+msgid "Spreads down"
+msgstr "" 
+
+msgid "Spreads up"
+msgstr "" 
+
 msgid "Stake"
 msgstr "" 
 
@@ -1779,6 +1821,9 @@ msgid "Status"
 msgstr "" 
 
 msgid "Stays In/Goes Out"
+msgstr "" 
+
+msgid "Stays in"
 msgstr "" 
 
 msgid "Stocks trading experience"
@@ -1961,6 +2006,9 @@ msgstr ""
 msgid "Total Profit/Loss"
 msgstr "" 
 
+msgid "Touch"
+msgstr "" 
+
 msgid "Touch/No Touch"
 msgstr "" 
 
@@ -2010,6 +2058,9 @@ msgid "USD"
 msgstr "" 
 
 msgid "USDJPY"
+msgstr "" 
+
+msgid "Under"
 msgstr "" 
 
 msgid "Unfortunately, your browser does not support them"
