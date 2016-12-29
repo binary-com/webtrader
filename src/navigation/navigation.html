@@ -23,7 +23,7 @@
     <span class="contact-us"><a href="https://www.binary.com/en/contact.html" target="_blank">Contact Us</a></span>
     <span class="time"></span>
 </div>
-<div class="dark-blue header">
+<div id="nav-menu" class="dark-blue header">
     <div class="container">
         <div class="logo-wrapper">
             <a href="https://binary.com" class="logo-parent">
@@ -35,7 +35,7 @@
               </div>
             </a>
         </div>
-        <ul id="nav-menu" class="top-nav-menu mobile-hide">
+        <ul class="top-nav-menu mobile-hide">
             <li class="trade ltr-direction">
               <a href="javascript:;" class="nav-dropdown-toggle">
                 Trade
@@ -136,8 +136,8 @@
                   </a>
                   <div class="separator-line-thin-gray"></div>
                   <div class="login-id-list">
-                    <a href="javascript:;" value="VRTC1191226">
-                      <li rv-each-ele="oauth" rv-show="ele.id | not-eq account.id" rv-on-click="switchAccount | bind ele.id">
+                    <a href="javascript:;" rv-each-ele="oauth" rv-show="ele.id | not-eq account.id" rv-on-click="switchAccount | bind ele.id">
+                      <li>
                         <div>{ele.type}</div>
                         <div>{ele.id}</div>
                       </li>
