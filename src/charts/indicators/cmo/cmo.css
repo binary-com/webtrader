@@ -13,3 +13,7 @@
 .cmo-ui-dialog, .cmo.ui-dialog-content {
     overflow: auto;
 }
+
+#cmo_level_delete {
+    white-space: nowrap;
+}

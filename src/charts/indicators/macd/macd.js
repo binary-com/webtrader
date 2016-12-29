@@ -1,7 +1,7 @@
 /**
 Created By Mahboob.M on 12/12/2015
 */
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "lodash", "jquery-ui", 'color-picker', 'ddslick'], function($, _) {
 
     var before_add_callback = null;
 
@@ -25,7 +25,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
             $html.find("#macd_line_stroke,#signal_line_stroke,#macd_hstgrm_color").each(function () {
                 $(this).colorpicker({
-					showOn: 'click',
+										showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -66,7 +66,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $("#signal_line_stroke").css("background", 'red');
             $("#macd_hstgrm_color").css("background", '#7e9fc9');
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: true,
                 width: 350,
@@ -128,14 +128,23 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 					        closeDialog.call(this);
 					    }
 					}
-                ]
-            });
+                ],
+								icons: {
+									close: 'custom-icon-close',
+									minimize: 'custom-icon-minimize',
+									maximize: 'custom-icon-maximize'
+								}
+            };
+						$html.dialog(options)
+							.dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
+
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 150
                 }).selectmenu("menuWidget").css("max-height","85px");
             });
 
+						$html.closest('.ui-dialog').find('span.ui-dialog-title').attr('title', current_indicator_data.long_display_name);
             if ($.isFunction(_callback)) {
                 _callback(containerIDWithHash);
             }

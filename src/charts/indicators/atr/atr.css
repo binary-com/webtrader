@@ -23,3 +23,7 @@
 .atr-ui-dialog, .atr.ui-dialog-content, .atr_level.ui-dialog-content {
     overflow: auto;
 }
+
+#atr_level_delete {
+    white-space: nowrap;
+}

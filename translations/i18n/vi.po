@@ -295,6 +295,12 @@ msgstr "Aroon Nét Xuống"
 msgid "Aroon Up Stroke"
 msgstr "Aroon Nét Lên"
 
+msgid "Asian down"
+msgstr ""
+
+msgid "Asian up"
+msgstr ""
+
 msgid "Asians"
 msgstr "Người châu Á"
 
@@ -616,6 +622,9 @@ msgstr "Mô tả"
 msgid "Deselect"
 msgstr ""
 
+msgid "Differs"
+msgstr ""
+
 msgid "Digits"
 msgstr "Chữ số"
 
@@ -710,6 +719,12 @@ msgstr "Thời gian kết thúc"
 msgid "Ends In/Out"
 msgstr "Kết thúc Trong/Ngoài"
 
+msgid "Ends in"
+msgstr ""
+
+msgid "Ends out"
+msgstr ""
+
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
 
@@ -734,6 +749,9 @@ msgstr "Lỗi lấy dữ liệu cho"
 
 msgid "Estimated Net Worth"
 msgstr "Ước tính giá trị ròng"
+
+msgid "Even"
+msgstr ""
 
 msgid "Exclude me from the website until"
 msgstr "Loại bỏ tôi khỏi trang web cho đến khi"
@@ -826,6 +844,9 @@ msgstr "Từ"
 msgid "Further instructions"
 msgstr "Hướng dẫn thêm"
 
+msgid "Goes out"
+msgstr ""
+
 msgid "Gray"
 msgstr "Màu xám"
 
@@ -853,6 +874,9 @@ msgstr "Giá cao"
 #, fuzzy
 msgid "High Stroke"
 msgstr "Nét cao"
+
+msgid "High barrier"
+msgstr ""
 
 msgid "High barrier offset"
 msgstr "Offset barie cao"
@@ -1140,6 +1164,9 @@ msgstr "Giá thấp"
 msgid "Low Stroke"
 msgstr "Nét thấp"
 
+msgid "Low barrier"
+msgstr ""
+
 #, fuzzy
 msgid "Low barrier offset"
 msgstr "Offset barie thấp"
@@ -1180,6 +1207,9 @@ msgstr "Tháng ba"
 
 msgid "Mass Period"
 msgstr "Thời lượng lớn"
+
+msgid "Matches"
+msgstr ""
 
 msgid "Max/Min Period"
 msgstr "Thời hạn Tối đa/Tối thiểu"
@@ -1307,6 +1337,9 @@ msgstr "Mật khẩu mới"
 msgid "No"
 msgstr "Không"
 
+msgid "No touch"
+msgstr ""
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "Lưu ý rằng token có thể có một hoặc nhiều hơn các phạm vi này"
 
@@ -1353,6 +1386,9 @@ msgstr "Tháng mười"
 
 msgid "October"
 msgstr "Tháng mười"
+
+msgid "Odd"
+msgstr ""
 
 msgid "Offset"
 msgstr "Bù đắp"
@@ -1877,6 +1913,12 @@ msgstr "Chốt"
 msgid "Spreads"
 msgstr "Lan tỏa"
 
+msgid "Spreads down"
+msgstr ""
+
+msgid "Spreads up"
+msgstr ""
+
 msgid "Stake"
 msgstr "Cổ phần"
 
@@ -1903,6 +1945,9 @@ msgstr "Trạng thái"
 
 msgid "Stays In/Goes Out"
 msgstr "Ở trong/Ra ngoài"
+
+msgid "Stays in"
+msgstr ""
 
 msgid "Stocks trading experience"
 msgstr "Kinh nghiệm giao dịch cổ phiếu"
@@ -2122,6 +2167,9 @@ msgstr "Tổng chi phí"
 msgid "Total Profit/Loss"
 msgstr "Tổng lợi nhuận/tổn thất"
 
+msgid "Touch"
+msgstr ""
+
 msgid "Touch/No Touch"
 msgstr "Chạm/Không chạm"
 
@@ -2192,6 +2240,9 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
+msgstr ""
+
+msgid "Under"
 msgstr ""
 
 msgid "Unfortunately, your browser does not support them"

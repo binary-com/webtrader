@@ -292,6 +292,12 @@ msgstr "Штрих индикатора Арун (вниз)"
 msgid "Aroon Up Stroke"
 msgstr "Штрих индикатора Арун (вверх)"
 
+msgid "Asian down"
+msgstr ""
+
+msgid "Asian up"
+msgstr ""
+
 msgid "Asians"
 msgstr "Азиатские"
 
@@ -611,6 +617,9 @@ msgstr "Описание"
 msgid "Deselect"
 msgstr "Отменить"
 
+msgid "Differs"
+msgstr ""
+
 msgid "Digits"
 msgstr "Цифры"
 
@@ -704,6 +713,12 @@ msgstr "Окончание"
 msgid "Ends In/Out"
 msgstr "Заканчивается Внутри/Вне"
 
+msgid "Ends in"
+msgstr ""
+
+msgid "Ends out"
+msgstr ""
+
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
 "Проверьте правильность вводимых Вами данных; в противном случае Ваш счёт "
@@ -729,6 +744,9 @@ msgstr "Ошибка при получении рыночных данных!"
 
 msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
+
+msgid "Even"
+msgstr ""
 
 msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
@@ -820,6 +838,9 @@ msgstr "От"
 msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
 
+msgid "Goes out"
+msgstr ""
+
 msgid "Gray"
 msgstr "Серый"
 
@@ -846,6 +867,9 @@ msgstr "Верхняя цена"
 
 msgid "High Stroke"
 msgstr "Верхний штрих"
+
+msgid "High barrier"
+msgstr ""
 
 msgid "High barrier offset"
 msgstr "Изменение верхнего барьера"
@@ -1130,6 +1154,9 @@ msgstr "Нижняя цена"
 msgid "Low Stroke"
 msgstr "Нижний штрих"
 
+msgid "Low barrier"
+msgstr ""
+
 msgid "Low barrier offset"
 msgstr "Изменение нижнего барьера"
 
@@ -1166,6 +1193,9 @@ msgstr "Март"
 
 msgid "Mass Period"
 msgstr "период Индекса массы"
+
+msgid "Matches"
+msgstr ""
 
 msgid "Max/Min Period"
 msgstr "Макс./мин. период"
@@ -1294,6 +1324,9 @@ msgstr "Новый пароль"
 msgid "No"
 msgstr "Нет"
 
+msgid "No touch"
+msgstr ""
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr ""
 "Имейте ввиду, что ключи могут охватывать одну или несколько данных областей"
@@ -1343,6 +1376,9 @@ msgstr "Окт."
 
 msgid "October"
 msgstr "Октябрь"
+
+msgid "Odd"
+msgstr ""
 
 msgid "Offset"
 msgstr "Изменение"
@@ -1864,6 +1900,12 @@ msgstr "Кривая"
 msgid "Spreads"
 msgstr "Спреды"
 
+msgid "Spreads down"
+msgstr ""
+
+msgid "Spreads up"
+msgstr ""
+
 msgid "Stake"
 msgstr "Ставка"
 
@@ -1890,6 +1932,9 @@ msgstr "Статус"
 
 msgid "Stays In/Goes Out"
 msgstr "Останется Внутри/Выйдет за пределы"
+
+msgid "Stays in"
+msgstr ""
 
 msgid "Stocks trading experience"
 msgstr "Опыт торговли акциями"
@@ -2109,6 +2154,9 @@ msgstr "Общая стоимость"
 msgid "Total Profit/Loss"
 msgstr "Общая прибыль/убыток"
 
+msgid "Touch"
+msgstr ""
+
 msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
 
@@ -2180,6 +2228,9 @@ msgstr "USD"
 
 msgid "USDJPY"
 msgstr "USDJPY"
+
+msgid "Under"
+msgstr ""
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"
