@@ -23,3 +23,7 @@
 .aroonosc-ui-dialog, .aroonosc.ui-dialog-content, .aroonosc_level.ui-dialog-content {
     overflow: auto;
 }
+
+#aroonosc_level_delete {
+    white-space: nowrap;
+}

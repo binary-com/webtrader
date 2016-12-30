@@ -30,6 +30,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         if(chart.series[0]) {
           indicators.forEach(function(ind) {
              require(["charts/indicators/" + ind.id + "/" + ind.id], function () {
+                 //make sure that we are using the new onSeriesID value
+                 if (ind.options.onSeriesID) ind.options.onSeriesID = chart.series[0].options.id;
                chart.series[0].addIndicator(ind.id, ind.options);
              });
           });
@@ -218,7 +220,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
               $(containerIDWithHash).data("overlayCount", overlays.length);
             }
 
-            /* ingore overlays if chart type is candlestick or ohlc */
+            /* ignore overlays if chart type is candlestick or ohlc */
             if ((options.type === 'candlestick' || options.type === 'ohlc') && overlays.length > 0) {
               /* we should not come here, logging a warning as an alert if we somehow do */
               console.warn("Ingoring overlays because chart type is " + options.type);
