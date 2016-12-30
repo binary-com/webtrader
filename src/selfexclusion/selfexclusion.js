@@ -245,7 +245,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
                     refreshData().then(function () {
                         setOrRefreshTimer();
                     });
-                    $("#nav-container a.selfexclusion").removeClass('disabled');
+                    $("#nav-menu a.selfexclusion").removeClass('disabled');
                 } else {
                     logout();
                 }
