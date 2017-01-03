@@ -186,6 +186,10 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
         local_storage.remove('realitycheck');
     });
 
+    liveapi.events.on('switch_account', function() {
+        oauthLogin();
+    });
+
     return {};
 
 });

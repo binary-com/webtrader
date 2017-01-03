@@ -9,3 +9,7 @@
 .mass label {
     display: block;
 }
+
+#mass_level_delete {
+    white-space: nowrap;
+}

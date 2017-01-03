@@ -17,3 +17,7 @@
 .stochf input {
     line-height: 10px !important;
 }
+
+#stochf_level_delete {
+    white-space: nowrap;
+}

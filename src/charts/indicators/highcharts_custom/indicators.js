@@ -296,7 +296,7 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
         getIndicatorsJSONData :function()
         {
             return indicatorsMetaData;
-        }
+        },
 
     };
 

@@ -288,6 +288,12 @@ msgstr "Stroke Aroon Down"
 msgid "Aroon Up Stroke"
 msgstr "Stroke Aroon Up"
 
+msgid "Asian down"
+msgstr ""
+
+msgid "Asian up"
+msgstr ""
+
 msgid "Asians"
 msgstr "Asia"
 
@@ -603,6 +609,9 @@ msgstr "Deskripsi"
 msgid "Deselect"
 msgstr "Hapus"
 
+msgid "Differs"
+msgstr ""
+
 msgid "Digits"
 msgstr "Digits"
 
@@ -696,6 +705,12 @@ msgstr "Waktu Akhir"
 msgid "Ends In/Out"
 msgstr "Ends In/Out"
 
+msgid "Ends in"
+msgstr ""
+
+msgid "Ends out"
+msgstr ""
+
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr "Pastikan untuk memasukkan data yang benar atau akun Anda akan terkunci"
 
@@ -719,6 +734,9 @@ msgstr "Error saat mendapatkan informasi pasar!"
 
 msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
+
+msgid "Even"
+msgstr ""
 
 msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari website hingga"
@@ -810,6 +828,9 @@ msgstr "Dari"
 msgid "Further instructions"
 msgstr "Instruksi lebih lanjut"
 
+msgid "Goes out"
+msgstr ""
+
 msgid "Gray"
 msgstr "Abu-abu"
 
@@ -836,6 +857,9 @@ msgstr "Harga Tinggi"
 
 msgid "High Stroke"
 msgstr "Stroke High"
+
+msgid "High barrier"
+msgstr ""
 
 msgid "High barrier offset"
 msgstr "Batas offset tinggi"
@@ -1116,6 +1140,9 @@ msgstr "Harga Rendah"
 msgid "Low Stroke"
 msgstr "Stroke Low"
 
+msgid "Low barrier"
+msgstr ""
+
 msgid "Low barrier offset"
 msgstr "Batas offset rendah"
 
@@ -1153,6 +1180,9 @@ msgstr "Maret"
 
 msgid "Mass Period"
 msgstr "Periode Mass"
+
+msgid "Matches"
+msgstr ""
 
 msgid "Max/Min Period"
 msgstr "Periode Maksimal/Minimal"
@@ -1277,6 +1307,9 @@ msgstr "Kata sandi baru"
 msgid "No"
 msgstr "Tidak"
 
+msgid "No touch"
+msgstr ""
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "Perhatikan bahwa token dapat memiliki satu atau lebih dari lingkup ini"
 
@@ -1323,6 +1356,9 @@ msgstr "Okt"
 
 msgid "October"
 msgstr "Oktober"
+
+msgid "Odd"
+msgstr ""
 
 msgid "Offset"
 msgstr "Offset"
@@ -1845,6 +1881,12 @@ msgstr "Spline"
 msgid "Spreads"
 msgstr "Spreads"
 
+msgid "Spreads down"
+msgstr ""
+
+msgid "Spreads up"
+msgstr ""
+
 msgid "Stake"
 msgstr "Modal"
 
@@ -1871,6 +1913,9 @@ msgstr "Status"
 
 msgid "Stays In/Goes Out"
 msgstr "Stays In/Goes Out"
+
+msgid "Stays in"
+msgstr ""
 
 msgid "Stocks trading experience"
 msgstr "Pengalaman trading bursa saham"
@@ -2091,6 +2136,9 @@ msgstr "Total Biaya"
 msgid "Total Profit/Loss"
 msgstr "Total Untung/Rugi"
 
+msgid "Touch"
+msgstr ""
+
 msgid "Touch/No Touch"
 msgstr "Touch/No Touch"
 
@@ -2163,6 +2211,9 @@ msgstr "USD"
 
 msgid "USDJPY"
 msgstr "USDJPY"
+
+msgid "Under"
+msgstr ""
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Sayangnya, browser Anda tidak mendukung mereka"

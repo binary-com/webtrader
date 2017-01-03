@@ -2,7 +2,7 @@
 Created By Mahboob.M on 12/16/2015
 */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "lodash", "jquery-ui", 'color-picker', 'ddslick'], function ($, _) {
 
     var before_add_callback = null;
 
@@ -26,7 +26,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
 
             $html.find("#cci_stroke_color").each(function () {
                 $(this).colorpicker({
-					showOn: 'click',
+					          showOn: 'click',
                     position: {
                         at: "right+100 bottom",
                         of: "element",
@@ -63,7 +63,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
             $('#cci_dash_style .dd-option-image').css('max-height','5px').css('max-width', '115px');
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
@@ -74,46 +74,53 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                 of: window,
                 dialogClass: 'cci-ui-dialog',
                 buttons: [
-					{
-					    text: "OK",
-					    click: function () {
-                             var $elem = $(".cci_input_width_for_period");
-                             if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
-                                             parseInt($elem.attr("min")),
-                                             parseInt($elem.attr("max")) + 1)) {
-                                 require(["jquery", "jquery-growl"], function ($) {
-                                     $.growl.error({
-                                         message: "Only numbers between " + $elem.attr("min")
-                                                 + " to " + $elem.attr("max")
-                                                 + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-                                     });
-                                 });
-                                 $elem.val($elem.prop("defaultValue"));
-                                 return;
-                             };
+                  {
+                      text: "OK",
+                      click: function () {
+                                     var $elem = $(".cci_input_width_for_period");
+                                     if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(),
+                                                     parseInt($elem.attr("min")),
+                                                     parseInt($elem.attr("max")) + 1)) {
+                                         require(["jquery", "jquery-growl"], function ($) {
+                                             $.growl.error({
+                                                 message: "Only numbers between " + $elem.attr("min")
+                                                         + " to " + $elem.attr("max")
+                                                         + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                             });
+                                         });
+                                         $elem.val($elem.prop("defaultValue"));
+                                         return;
+                                     };
 
-					        var options = {
-					            period: parseInt($("#cci_period").val()),
-					            maType: $("#cci_ma_type").val(),
-					            stroke: $("#cci_stroke_color").css("background-color"),
-					            strokeWidth: parseInt($("#cci_stroke_width").val()),
-					            dashStyle: selectedDashStyle
-					        }
-                            before_add_callback && before_add_callback();
-					        //Add CCI to the main series
-					        $($(".cci").data('refererChartID')).highcharts().series[0].addIndicator('cci', options);
+                          var options = {
+                              period: parseInt($("#cci_period").val()),
+                              maType: $("#cci_ma_type").val(),
+                              stroke: $("#cci_stroke_color").css("background-color"),
+                              strokeWidth: parseInt($("#cci_stroke_width").val()),
+                              dashStyle: selectedDashStyle
+                          }
+                                    before_add_callback && before_add_callback();
+                          //Add CCI to the main series
+                          $($(".cci").data('refererChartID')).highcharts().series[0].addIndicator('cci', options);
 
-					        closeDialog.call($html);
-					    }
-					},
-					{
-					    text: "Cancel",
-					    click: function () {
-					        closeDialog.call(this);
-					    }
-					}
-                ]
-            });
+                          closeDialog.call($html);
+                      }
+                  },
+                  {
+                      text: "Cancel",
+                      click: function () {
+                          closeDialog.call(this);
+                      }
+                  }
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 150

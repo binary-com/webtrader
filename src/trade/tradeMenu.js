@@ -33,7 +33,7 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
 
               var trade = $("#nav-menu").find(".trade");
               trade.find('> ul').remove();
-              var root = $("<ul>").addClass("primary-color").appendTo(trade); /* add to trade menu */
+              var root = $("<ul>").appendTo(trade); /* add to trade menu */
               menu.refreshMenu(root, markets, function (li) {
                   var data = li.data();
                   liveapi

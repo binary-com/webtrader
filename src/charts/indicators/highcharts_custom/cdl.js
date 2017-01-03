@@ -60,7 +60,7 @@ CDL.prototype.toString = function() {
 };
 
 CDL.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
-    return [
+  return [
         {
             seriesConf : {
                 id: this.uniqueID,
@@ -592,15 +592,17 @@ CDL.prototype.CDLHANGINGMAN = function () {
 
     var isBearishContinuation = params.isCandleTwo_Bullish && (params.candleTwo_Open > Math.max(params.candleThree_Close, params.candleThree_Open)) //a downward trend indicating a bullish reversal, it is a hammer
                               && isOpenCloseHighAlmostSame //the open, high, and close are roughly the same price. means it has a small body.
-                              && (candleOneLowerShadow >= (2.0 * candleOneBody) && (params.candleOne_Close > params.candleTwo_Close)); //there is a long lower shadow, twice the length as the real body.
+                              && params.isCandleOne_Bearish
+                              && (candleOneLowerShadow >= (2.0 * candleOneBody)) && (params.candleOne_Close > params.candleTwo_Close); //there is a long lower shadow, twice the length as the real body.
 
     //It's a bearish candlestick
     var isBullishContinuation = false;
-
-    return {
-        isBear: isBearishContinuation,
-        isBull: isBullishContinuation
+    var response = {
+      isBear: isBearishContinuation,
+      isBull: isBullishContinuation
     };
+
+    return response;
 }
 
 CDL.prototype.CDLHARAMI = function () {

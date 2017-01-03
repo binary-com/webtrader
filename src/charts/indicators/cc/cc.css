@@ -23,3 +23,7 @@
 .cc-ui-dialog, .cc.ui-dialog-content, .cc_level.ui-dialog-content {
     overflow: auto;
 }
+
+#cc_level_delete {
+    white-space: nowrap;
+}
