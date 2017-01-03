@@ -2211,7 +2211,7 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Under"
-msgstr "下"
+msgstr "未満"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
