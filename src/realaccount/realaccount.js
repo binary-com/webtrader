@@ -247,7 +247,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           return;
         }
         if(!state.financial.accepted) {
-          $.growl.error({ message: 'Binary.com terms and conditions unchecked.' });
+          $.growl.error({ message: 'Champion FX terms and conditions unchecked.' });
           return;
         }
 
