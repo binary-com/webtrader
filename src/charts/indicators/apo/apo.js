@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/7/16
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function($, _) {
 
     var before_add_callback = null;
 
@@ -38,7 +38,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#apo_stroke").colorpicker({
-				showOn: 'click',
+				        showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -120,38 +120,38 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 });
             });
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
-                height:400,
+                height: 400,
                 modal: true,
                 my: 'center',
                 at: 'center',
                 of: window,
-                dialogClass: 'apo-ui-dialog',
+                dialogClass:'ao-ui-dialog',
                 buttons: [
                     {
                         text: "OK",
-                        click: function () {
-                           //Check validation
-					        var isValid = true;
-					        $(".apo_input_width_for_period").each(function () {
-					            var $elem = $(this);
+                        click: function() {
+                            var isValid = true;
+                            $(".ao_input_width_for_period").each(function () {
+                                var $elem = $(this);
                                 if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")) + 1)) {
-					                require(["jquery", "jquery-growl"], function ($) {
-					                    $.growl.error({
-					                        message: "Only numbers between " + $elem.attr("min")
-                                                    + " to " + $elem.attr("max")
-                                                    + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-					                    });
-					                });
+                                    require(["jquery", "jquery-growl"], function ($) {
+                                        $.growl.error({
+                                            message: "Only numbers between " + $elem.attr("min")
+                                            + " to " + $elem.attr("max")
+                                            + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                        });
+                                    });
                                     $elem.val($elem.prop("defaultValue"));
-					                isValid = false;
-					                return;
-					            }
-					        });
-					        if (!isValid) return;
+                                    isValid = false;
+                                    return;
+                                }
+                            });
+
+                            if (!isValid) return;
 
                             var levels = [];
                             $.each(table.rows().nodes(), function () {
@@ -168,21 +168,18 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                     });
                                 }
                             });
-
                             var options = {
-                                fastPeriod: parseInt($("#apo_fast_period").val()),
-                                slowPeriod: parseInt($("#apo_slow_period").val()),
-                                fastMaType: $("#apo_fast_ma_type").val(),
-                                slowMaType: $("#apo_slow_ma_type").val(),
-                                stroke: defaultStrokeColor,
-                                strokeWidth: parseInt($("#apo_stroke_width").val()),
-                                dashStyle: selectedDashStyle,
-                                appliedTo: parseInt($("#apo_applied_to").val()),
-                                levels:levels
-                            }
+                                shortPeriod: parseInt($html.find("#ao_short_term_period").val()),
+                                longPeriod: parseInt($html.find("#ao_long_term_period").val()),
+                                shortMaType: $("#ao_short_ma_type").val(),
+                                longMaType: $("#ao_long_ma_type").val(),
+                                aoHighStroke: defaultHighStrokeColor,
+                                aoLowStroke: defaultLowStrokeColor,
+                                levels: levels
+                            };
                             before_add_callback && before_add_callback();
-                            //Add APO for the main series
-                            $($(".apo").data('refererChartID')).highcharts().series[0].addIndicator('apo', options);
+                            //Add AO for the main series
+                            $($(".ao").data('refererChartID')).highcharts().series[0].addIndicator('ao', options);
 
                             closeDialog.call($html);
 
@@ -190,12 +187,19 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                     },
                     {
                         text: "Cancel",
-                        click: function () {
+                        click: function() {
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 150

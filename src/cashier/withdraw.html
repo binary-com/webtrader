@@ -4,7 +4,7 @@
 		<span class='title'>Choose your pereferred withdrawal method:</span>
 		<button rv-on-click='menu.click | bind "standard"'>Standard withdrawal</button>
 		<button rv-if="login_details.is_mf | or login_details.is_mlt" 
-		rv-on-click='menu.click | bind "transfer"'>Transfer to another Binary account</button>
+		rv-on-click='menu.click | bind "transfer"'>Transfer to another Champion FX account</button>
 		<button rv-if='agent.agents | prop "length"' rv-on-click='menu.click | bind "agent"'>Withdrawal via payment agents</button>
 		<span rv-if='agent.agents | prop "length"' class='explanation'>Note: withdrawal via payment agent is available only
 					if you deposit exclusively via payment agent.</span>
@@ -98,11 +98,11 @@
 		<button class='submit' rv-on-click='agent.click'>Submit</button>
 
 		<span class='disclaimer'>
-			<strong>IMPORTANT DISCLAIMER </strong>- Binary.com is not affiliated with any of the Payment Agents listed above.
+			<strong>IMPORTANT DISCLAIMER </strong>- Champion FX is not affiliated with any of the Payment Agents listed above.
 			Each Payment Agent operates as an independent service provider and is not endorsed,
-			guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL.
+			guaranteed or otherwise approved by Champion FX. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL.
 			Customers are advised to check the credentials of Payment Agents before sending them any money.
-			Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents.
+			Champion FX shall not in any circumstance be held responsible for transactions made between customers and Payment Agents.
 		</span>
 	</div>
 

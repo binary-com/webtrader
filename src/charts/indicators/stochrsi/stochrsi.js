@@ -2,7 +2,7 @@
  * Created by Mahboob.M on 2/2/15.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
+define(["jquery", "lodash", "jquery-ui", 'color-picker', 'ddslick'], function($, _) {
 
     var before_add_callback = null;
 
@@ -37,7 +37,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             $html.find("input[type='button']").button();
 
             $html.find("#stochrsi_stroke").colorpicker({
-				showOn: 'click',
+				        showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -117,7 +117,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
             });
 
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
@@ -182,8 +182,16 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function ($) {
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
+
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 150

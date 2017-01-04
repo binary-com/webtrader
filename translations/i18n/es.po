@@ -292,6 +292,12 @@ msgstr "Aroon Down Stroke"
 msgid "Aroon Up Stroke"
 msgstr "Aroon Up Stroke"
 
+msgid "Asian down"
+msgstr ""
+
+msgid "Asian up"
+msgstr ""
+
 msgid "Asians"
 msgstr "Asiáticas"
 
@@ -609,6 +615,9 @@ msgstr "Descripción"
 msgid "Deselect"
 msgstr ""
 
+msgid "Differs"
+msgstr ""
+
 msgid "Digits"
 msgstr "Dígitos"
 
@@ -705,6 +714,12 @@ msgstr "Hora de finalización"
 msgid "Ends In/Out"
 msgstr "Termina Dentro/Fuera"
 
+msgid "Ends in"
+msgstr ""
+
+msgid "Ends out"
+msgstr ""
+
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
 
@@ -729,6 +744,9 @@ msgstr "Error al obtener datos para"
 
 msgid "Estimated Net Worth"
 msgstr "Valor Neto Estimado"
+
+msgid "Even"
+msgstr ""
 
 msgid "Exclude me from the website until"
 msgstr "Excluirme del sitio web hasta que"
@@ -821,6 +839,9 @@ msgstr "De"
 msgid "Further instructions"
 msgstr "Otras instrucciones"
 
+msgid "Goes out"
+msgstr ""
+
 msgid "Gray"
 msgstr "Gris"
 
@@ -847,6 +868,9 @@ msgstr "Precio Alto"
 
 msgid "High Stroke"
 msgstr "Stroke Alto"
+
+msgid "High barrier"
+msgstr ""
 
 msgid "High barrier offset"
 msgstr "Offset del límite alto"
@@ -1133,6 +1157,9 @@ msgstr "Precio Bajo"
 msgid "Low Stroke"
 msgstr "Stroke Bajo"
 
+msgid "Low barrier"
+msgstr ""
+
 msgid "Low barrier offset"
 msgstr "Offset límite bajo"
 
@@ -1169,6 +1196,9 @@ msgstr "Marzo"
 
 msgid "Mass Period"
 msgstr "Período Total"
+
+msgid "Matches"
+msgstr ""
 
 msgid "Max/Min Period"
 msgstr "Período Máx/Mín"
@@ -1293,6 +1323,9 @@ msgstr "Nueva contraseña"
 msgid "No"
 msgstr "Núm"
 
+msgid "No touch"
+msgstr ""
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr ""
 "Tenga en cuenta que los tokens pueden poseer uno o más de estos ámbitos"
@@ -1341,6 +1374,9 @@ msgstr "Oct"
 
 msgid "October"
 msgstr "Octubre"
+
+msgid "Odd"
+msgstr ""
 
 msgid "Offset"
 msgstr "Offset"
@@ -1867,6 +1903,12 @@ msgstr "Spline"
 msgid "Spreads"
 msgstr "Spreads"
 
+msgid "Spreads down"
+msgstr ""
+
+msgid "Spreads up"
+msgstr ""
+
 msgid "Stake"
 msgstr "Apuesta"
 
@@ -1893,6 +1935,9 @@ msgstr "Estado"
 
 msgid "Stays In/Goes Out"
 msgstr "Queda dentro/Sale fuera"
+
+msgid "Stays in"
+msgstr ""
 
 msgid "Stocks trading experience"
 msgstr "Experiencia de comerciar con acciones"
@@ -2113,6 +2158,9 @@ msgstr "Coste Total"
 msgid "Total Profit/Loss"
 msgstr "Ganancia/Pérdida Total"
 
+msgid "Touch"
+msgstr ""
+
 msgid "Touch/No Touch"
 msgstr "Toque/No Toque"
 
@@ -2184,6 +2232,9 @@ msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
+msgstr ""
+
+msgid "Under"
 msgstr ""
 
 msgid "Unfortunately, your browser does not support them"

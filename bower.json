@@ -1,7 +1,7 @@
 {
   "name": "Webtrader",
   "version": "2.1.17",
-  "homepage": "https://github.com/binary-com/webtrader.git",
+  "homepage": "https://github.com/ChampionFX/webtrader.git",
   "authors": [
     "Armin Zia",
     "Amin Roosta",
@@ -9,12 +9,12 @@
     "Mahboobeh Mohammadi",
     "Apoorv Joshi"
   ],
-  "description": "Webtrader for Binary.com",
+  "description": "Webtrader for champion-fx.com",
   "main": "Gruntfile.js",
   "moduleType": [],
   "keywords": [
     "hightcharts",
-    "binary.com"
+    "champion-fx.com"
   ],
   "license": "CC-BY-NC-ND-4.0",
   "private": true,

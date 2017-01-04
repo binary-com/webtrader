@@ -1,7 +1,7 @@
 {
   "name": "Webtrader",
   "version": "2.1.17",
-  "description": "Webtrader for Binary.com",
+  "description": "Webtrader for champion-fx.com",
   "main": "Gruntfile.js",
   "engines": {
     "node": ">=6.0",
@@ -45,17 +45,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/binary-com/webtrader.git"
+    "url": "https://github.com/ChampionFX/webtrader.git"
   },
   "keywords": [ "Webtrader" ],
   "author": {
     "name": "Arnab Karmakar",
     "email": "arnab@binary.com",
-    "url": "http://webtrader.binary.com/"
+    "url": "http://webtrader.champion-fx.com/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/binary-com/webtrader/issues"
+    "url": "https://github.com/ChampionFX/webtrader/issues"
   },
   "dependencies": {
     "jquery-ui-iconfont": "^2.1.0",

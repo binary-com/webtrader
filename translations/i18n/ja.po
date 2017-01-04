@@ -288,6 +288,12 @@ msgstr "アルーンダウン ストローク"
 msgid "Aroon Up Stroke"
 msgstr "アルーンアップ ストローク"
 
+msgid "Asian down"
+msgstr ""
+
+msgid "Asian up"
+msgstr ""
+
 msgid "Asians"
 msgstr "Asians"
 
@@ -606,6 +612,9 @@ msgstr "取引内容"
 msgid "Deselect"
 msgstr "選択解除"
 
+msgid "Differs"
+msgstr ""
+
 msgid "Digits"
 msgstr "数字"
 
@@ -702,6 +711,12 @@ msgstr "終了時刻"
 msgid "Ends In/Out"
 msgstr "END-IN/END-OUT"
 
+msgid "Ends in"
+msgstr ""
+
+msgid "Ends out"
+msgstr ""
+
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
 "入力内容が有効であることをよくお確かめください。情報が無効である場合、口座が"
@@ -727,6 +742,9 @@ msgstr "市場情報の取得にエラーが発生しました！"
 
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
+
+msgid "Even"
+msgstr ""
 
 msgid "Exclude me from the website until"
 msgstr "特定日まで利用禁止（日時単位）"
@@ -818,6 +836,9 @@ msgstr "開始"
 msgid "Further instructions"
 msgstr "詳細説明"
 
+msgid "Goes out"
+msgstr ""
+
 msgid "Gray"
 msgstr "グレー"
 
@@ -844,6 +865,9 @@ msgstr "高値"
 
 msgid "High Stroke"
 msgstr "高ストローク"
+
+msgid "High barrier"
+msgstr ""
 
 msgid "High barrier offset"
 msgstr "上限追加バリア値"
@@ -1124,6 +1148,9 @@ msgstr "安値"
 msgid "Low Stroke"
 msgstr "低ストローク"
 
+msgid "Low barrier"
+msgstr ""
+
 msgid "Low barrier offset"
 msgstr "下限追加バリア値"
 
@@ -1160,6 +1187,9 @@ msgstr "3月"
 
 msgid "Mass Period"
 msgstr "マスインデックス期間"
+
+msgid "Matches"
+msgstr ""
 
 msgid "Max/Min Period"
 msgstr "最長/最短 期間"
@@ -1284,6 +1314,9 @@ msgstr "新しいパスワード"
 msgid "No"
 msgstr "いいえ"
 
+msgid "No touch"
+msgstr ""
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "トークンは複数の範囲を持つことができます"
 
@@ -1330,6 +1363,9 @@ msgstr "10月"
 
 msgid "October"
 msgstr "10月"
+
+msgid "Odd"
+msgstr ""
 
 msgid "Offset"
 msgstr "追加"
@@ -1849,6 +1885,12 @@ msgstr "スプライン"
 msgid "Spreads"
 msgstr "スプレッド"
 
+msgid "Spreads down"
+msgstr ""
+
+msgid "Spreads up"
+msgstr ""
+
 msgid "Stake"
 msgstr "購入価格"
 
@@ -1875,6 +1917,9 @@ msgstr "金融資産"
 
 msgid "Stays In/Goes Out"
 msgstr "STAY-IN/BREAK-OUT"
+
+msgid "Stays in"
+msgstr ""
 
 msgid "Stocks trading experience"
 msgstr "株取引の経験"
@@ -2092,6 +2137,9 @@ msgstr "合計投資額"
 msgid "Total Profit/Loss"
 msgstr "合計　損益"
 
+msgid "Touch"
+msgstr ""
+
 msgid "Touch/No Touch"
 msgstr "TOUCH/NO-TOUCH"
 
@@ -2161,6 +2209,9 @@ msgstr "USD"
 
 msgid "USDJPY"
 msgstr "USDJPY"
+
+msgid "Under"
+msgstr ""
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
