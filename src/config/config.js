@@ -57,7 +57,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
 
     state.apply = function() {
       var config = {
-        websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN&brand=champion',
+        websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN',
         oauth_url: 'https://' + state.oauth_url + '/oauth2/authorize',
         app_id: state.app_id
       }
