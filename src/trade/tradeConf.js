@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by amin on December 4, 2015.
  */
 

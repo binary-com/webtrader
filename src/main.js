@@ -17,7 +17,6 @@ requirejs.config({
         'lokijs': 'lib/lokijs/build/lokijs.min',
         'color-picker': "lib/colorpicker/jquery.colorpicker",
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
-        //TODO find out whats the advantage of using datatables-jquery-ui
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
         'es6-promise':'lib/es6-promise/promise.min',
@@ -30,7 +29,8 @@ requirejs.config({
         'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level',
-        'paralleljs' : 'lib/parallel_js/lib/parallel'
+        'paralleljs' : 'lib/parallel_js/lib/parallel',
+        'binary-style' : '<style-url>/binary'
     },
     map: {
         '*': {
@@ -44,7 +44,7 @@ requirejs.config({
           deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
         },
         "timepicker": {
-            deps:['css!lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css','jquery-ui', 'jquery']
+            deps:['jquery-ui', 'jquery']
         },
         "jquery-ui": {
             deps: ["jquery"]
@@ -83,15 +83,23 @@ requirejs.onError = function (err) {
         console.warn(err);
         return;
     }
-
+    console.error(err); // For more descriptive errors locally.
     throw err;
 };
 
-/* Initialize the websocket as soon as posssilbe */
+require(['modernizr'], function(){
+    //By pass touch check for affiliates=true(because they just embed our charts)
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && !isAffiliates()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
+      window.location.href = 'unsupported_browsers/unsupported_browsers.html';
+      return;
+    }
+})
+
+/* Initialize the websocket as soon as possible */
 require(['websockets/binary_websockets','text!oauth/app_id.json']);
 
 var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $, lang_json) {
+require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) {
     "use strict";
     /* setup translating string literals */
     setup_i18n_translation(JSON.parse(lang_json));
@@ -99,11 +107,8 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
       $('body').addClass('rtl-direction');
     }
 
-    //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && getParameterByName("affiliates") !== 'true') || !Modernizr.localstorage || !Modernizr.webworkers) {
-      window.location.href = 'unsupported_browsers/unsupported_browsers.html';
-      return;
-    }
+    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
+    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css', 'css!main.css', "css!binary-style"])
 
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,
@@ -111,10 +116,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
     require(['jquery-ui', 'highstock', 'lokijs']);
-
-
-    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css', 'css!main.css'])
 
     // load jq-ui & growl stylesheets.
     require(['css!lib/growl/stylesheets/jquery.growl.css']);
@@ -277,11 +278,12 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json', "modernizr"], function( $
         });
 
         /*Trigger T&C check, self-exclusion, reality check, chrome extension check*/
-        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'tc/tc', 'realitycheck/realitycheck']);
+        //require(['selfexclusion/selfexclusion', 'chrome/chrome', 'tc/tc', 'realitycheck/realitycheck']);
+        require(['selfexclusion/selfexclusion', 'tc/tc', 'realitycheck/realitycheck']);
     }
 
 
-    if (getParameterByName("affiliates") == 'true')  //Our chart is accessed by other applications
+    if (isAffiliates())  //Our chart is accessed by other applications
         handle_affiliate_route();
     else {
         //Our chart is accessed directly

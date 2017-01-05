@@ -1,4 +1,4 @@
-﻿.ao_input_width {
+.ao_input_width {
     width: 150px !important;
 }
 
@@ -22,4 +22,8 @@
 
 .ao-ui-dialog, .ao.ui-dialog-content, .ao_level.ui-dialog-content {
     overflow: auto;
+}
+
+#ao_level_delete {
+    white-space: nowrap;
 }

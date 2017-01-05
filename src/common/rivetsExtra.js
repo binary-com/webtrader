@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by amin on November 25, 2015.
  */
 
@@ -366,7 +366,9 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 changeMonth: model.changeMonth || true,
                 changeYear: model.changeYear || true,
                 onSelect: function () { $(this).change(); },
-                beforeShow: function (input, inst) { inst.dpDiv.css(styles); }
+                beforeShow: function (input, inst) { inst.dpDiv.css(styles); },
+                closeText: 'Done'.i18n(),
+                currentText: 'Today'.i18n()
             };
             if(model.yearRange)
               options.yearRange = model.yearRange;
@@ -406,10 +408,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var allways_ok = function () { return true };
 
             var styles = { marginTop: input.attr('marginTop') || '0px', marginLeft: input.attr('marginLeft') || '0px' };
-            var update = function () {
-                var value = input.val();
-                publish(value);
-            };
+            input.on('change', function(){
+                publish(input.val());
+                input.blur();
+            });
 
             input.timepicker({
                 showPeriod: model.showPeriod || false,
@@ -421,8 +423,13 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 beforeShow: function (input, inst) {
                     inst.tpDiv.css(styles);
                 },
-                onClose: update,
-                onSelect: update,
+                onSelect: function(){$(this).change()},
+                hourText: 'Hour'.i18n(),
+                minuteText: 'Minute'.i18n(),
+                amPmText: ['AM'.i18n(), 'PM'.i18n()],
+                closeButtonText: 'Done'.i18n(),
+                nowButtonText: 'Now'.i18n(),
+                deselectButtonText: 'Deselect'.i18n()
             });
         },
         unbind: function (el) {
@@ -459,6 +466,25 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         var style = {};
         style[this.args[0]] = value;
         $(el).css(style);
+    }
+
+    $.fn.getHiddenOffsetWidth = function () {
+        // save a reference to a cloned element that can be measured
+        var $hiddenElement = $(this).clone().appendTo('body');
+        // calculate the width of the clone
+        var width = $hiddenElement.outerWidth();
+        // remove the clone from the DOM
+        $hiddenElement.remove();
+        return width;
+    };
+    /* scale the font-size to fit the text on the given width*/
+    rv.binders['scale-font-size'] = function (el, value) {
+        var cur_font = 14;
+        $el = $(el);
+        do {
+          el.style.fontSize = cur_font + 'px';
+          cur_font -= 1;
+        } while($el.getHiddenOffsetWidth() > value*1)
     }
 
     rv.binders['show'] = function(el, value) {
@@ -563,7 +589,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /******************************** components *****************************/
-    function component_twoway_bind(self, keypathes) {
+    function component_twoway_bind(self, data, keypathes) {
         /* make sure to call async */
         setTimeout(function() {
           for(var i = 0; i < keypathes.length; ++i){
@@ -571,6 +597,10 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
               var key = _.last(keypath.split('.'));
               var observer = self.observers[key];
               if(observer) {
+                observer.options.adapters['.'].observe(observer.target, _.last(observer.keypath.split('.')), function() {
+                    var updated = observer.target[_.last(observer.keypath.split('.'))];
+                    data.value = updated;
+                });
                 self.componentView.observe(keypath, function(value){
                     observer.setValue(value);
                 });
@@ -595,7 +625,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
       initialize: function(el, data) {
         var decimals = (data.decimals || 2)*1;
         var min = (data.min || 0)*1;
-        component_twoway_bind(this, ['data.value']);
+        component_twoway_bind(this, data, ['data.value']);
 
         return {
           data: data,

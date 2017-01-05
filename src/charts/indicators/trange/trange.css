@@ -1,4 +1,4 @@
-﻿.trange_input_width {
+.trange_input_width {
     width: 150px !important;
 }
 
@@ -18,4 +18,8 @@
     border: 1px solid #aaaaaa;
     width: 100%;
     border-radius: 5px;
+}
+
+#trange_level_delete {
+    white-space: nowrap;
 }

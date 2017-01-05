@@ -28,7 +28,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
     var connect = function () {
         var config = local_storage.get('config');
         var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-        var api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l='+i18n_name) + '&app_id=' + app_id;
+        var api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l='+i18n_name) + '&brand=champion' + '&app_id=' + app_id;
         var ws = new WebSocket(api_url);
 
         ws.addEventListener('open', onopen);
@@ -191,7 +191,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
                 return val; /* pass the result */
             })
             .catch(function (up) {
-                if (!auth_successfull) {    /* authentication request is failed, clear local_storage */
+                if (up.code!=="SelfExclusion" && !auth_successfull) {    /* authentication request is failed, clear local_storage */
                     is_authenitcated_session = false;
                     fire_event('logout');
                     local_storage.remove('oauth');
@@ -203,8 +203,8 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
 
     /* un-athenticate current session */
     var invalidate = function(){
-        if(!is_authenitcated_session) { return; }
         local_storage.remove('oauth');
+        local_storage.remove('authorize');
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){
@@ -354,9 +354,6 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         invalidate: invalidate,
         /* switch account */
         switch_account: function(id) {
-          if(!is_authenitcated_session) {
-            return Promise.reject({message: 'Session is not authenticated.'.i18n()})
-          }
           var oauth = local_storage.get('oauth');
           if(!oauth) {
             return Promise.reject({ message: 'Account token not found.'.i18n() });
@@ -388,7 +385,9 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
           api.send({forget_all: 'balance'})
              .catch(function(err){ console.error(err); });
 
-          return api.cached.authorize();
+          return api.cached.authorize().then(function(){
+            fire_event("switch_account");
+          });
         },
         /* if you want a request to be cached, that is when multiple modules request
            the same data or a module request a data multiple times, instead of calling

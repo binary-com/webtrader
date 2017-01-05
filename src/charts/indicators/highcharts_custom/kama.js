@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 1/22/16.
  */
 
@@ -39,9 +39,9 @@ KAMA = function (data, options, indicators) {
             this.indicatorData.push({ time: data[index].time, value: kama });
         } else if (index === (this.options.period - 1)) {
             var kama = toFixed(indicators.getIndicatorOrPriceValue(data[index], this.options.appliedTo), 4);
-            this.indicatorData.push({ time: data[index].time, value: 0.0 });
+            this.indicatorData.push({ time: data[index].time, value: null });
         } else {
-            this.indicatorData.push({ time: data[index].time, value: 0.0 });
+            this.indicatorData.push({ time: data[index].time, value: null });
         }
         this.priceData.push(data[index]);
     }

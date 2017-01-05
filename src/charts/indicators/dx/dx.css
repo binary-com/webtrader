@@ -1,4 +1,4 @@
-﻿.dx_input_width {
+.dx_input_width {
     width: 150px !important;
 }
 
@@ -22,4 +22,8 @@
 
 .dx-ui-dialog, .dx.ui-dialog-content, .dx_level.ui-dialog-content {
     overflow: auto;
+}
+
+#dx_level_delete {
+    white-space: nowrap;
 }

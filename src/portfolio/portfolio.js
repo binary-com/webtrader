@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by amin on 10/9/15.
  */
 
@@ -133,7 +133,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                       var row = [
                           transaction.transaction_id,
                           transaction.longcode,
-                          formatPrice(Math.abs(transaction.amount)),
+                          Math.abs(transaction.amount),
                           '0.00',
                           view_button,
                           transaction.contract_id, /* for jq-datatables rowId */
@@ -265,7 +265,7 @@ define(['jquery', 'windows/windows', 'websockets/binary_websockets','jquery-ui',
                     return [
                         contract.transaction_id,
                         contract.longcode,
-                        formatPrice(contract.buy_price),
+                        contract.buy_price,
                         '0.00',
                         view_button,
                         contract.contract_id, /* for jq-datatables rowId */

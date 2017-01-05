@@ -1,4 +1,4 @@
-﻿.mass_input_width {
+.mass_input_width {
     width: 155px !important;
 }
 
@@ -8,4 +8,8 @@
 
 .mass label {
     display: block;
+}
+
+#mass_level_delete {
+    white-space: nowrap;
 }

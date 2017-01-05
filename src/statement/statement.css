@@ -1,3 +1,6 @@
+.statement-dialog-content {
+  padding: 0 !important;
+}
 ﻿table.statement-dialog th,
 table.statement-dialog td
  {

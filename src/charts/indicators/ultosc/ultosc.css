@@ -1,4 +1,4 @@
-﻿.ultosc_input_width {
+.ultosc_input_width {
     width: 150px !important;
 }
 
@@ -12,4 +12,8 @@
 
 .ultosc input {
     line-height: 10px !important;
+}
+
+#ultosc_level_delete {
+    white-space: nowrap;
 }

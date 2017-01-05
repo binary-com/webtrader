@@ -2,9 +2,11 @@
     <div class="table">
         <div class="row">
             <div class="cell">
-                <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector" data-balloon="Time interval" data-balloon-pos="down">
-                    <span class="vertical-bottom" rv-text="timePeriod_name | i18n"></span>
-                    <span class="nav-caret triangle"></span>
+                <div class="chartOptions_button timeperiod" rv-on-click="toggleTimerPeriodSelector" rv-class-button_selected="showTimePeriodSelector">
+                    <span data-balloon="Time interval" data-balloon-pos="down">
+                        <span class="vertical-bottom" rv-text="timePeriod_name | i18n"></span>
+                        <span class="nav-caret triangle"></span>
+                    </span>
                 </div>
                 <div class="chartOptions_overlay table timePeriodOverlay" rv-show="showTimePeriodSelector">
                     <div class="row">
@@ -12,7 +14,7 @@
                             <span class="vertical-bottom time">Ticks</span>
                         </div>
                         <div class="cell">
-                            <span class="vertical-bottom button" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value" rv-each-timeperiod="timeperiod_arr | filter 'ticks'">{timeperiod.digit}</span>
+                            <span class="vertical-bottom button fill-bg-color" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value" rv-each-timeperiod="timeperiod_arr | filter 'ticks'">{timeperiod.digit}</span>
                         </div>
                     </div>
                     <div class="row">
@@ -20,7 +22,7 @@
                             <span class="vertical-bottom time">Minutes</span>
                         </div>
                         <div class="cell">
-                            <span class="vertical-bottom button" rv-each-timeperiod="timeperiod_arr | filter 'minutes'" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value">{timeperiod.digit}</span>
+                            <span class="vertical-bottom button fill-bg-color" rv-each-timeperiod="timeperiod_arr | filter 'minutes'" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value">{timeperiod.digit}</span>
                         </div>
                     </div>
                     <div class="row">
@@ -28,7 +30,7 @@
                             <span class="vertical-bottom time">Hours</span>
                         </div>
                         <div class="cell">
-                            <span class="vertical-bottom button" rv-each-timeperiod="timeperiod_arr | filter 'hours'" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value">{timeperiod.digit}</span>
+                            <span class="vertical-bottom button fill-bg-color" rv-each-timeperiod="timeperiod_arr | filter 'hours'" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value">{timeperiod.digit}</span>
                         </div>
                     </div>
                     <div class="row">
@@ -36,28 +38,30 @@
                             <span class="vertical-bottom time">Days</span>
                         </div>
                         <div class="cell">
-                            <span class="vertical-bottom button" rv-each-timeperiod="timeperiod_arr | filter 'days'" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value">{timeperiod.digit}</span>
+                            <span class="vertical-bottom button fill-bg-color" rv-each-timeperiod="timeperiod_arr | filter 'days'" rv-on-click="changeTimePeriod" rv-data-timeperiod="timeperiod.value">{timeperiod.digit}</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="cell">
-                <div class="chartOptions_button chart_type" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector" data-balloon="Chart type" data-balloon-pos="down">
-                    <div class="img"><img rv-src="chartType.value | append '.svg' | prepend 'images/'"></div>
-                    <span class="vertical-bottom name" rv-show="showChartTypeLabel" rv-text="chartType.name | i18n"></span>
-                    <span class="nav-caret triangle"></span>
+                <div class="chartOptions_button chart_type" rv-on-click="toggleChartTypeSelector"rv-class-button_selected="showChartTypeSelector">
+                    <span data-balloon="Chart type" data-balloon-pos="down">
+                        <div class="img"><span rv-class="chartType.value | append '-icon'"></span></div>
+                        <span class="vertical-bottom name" rv-show="showChartTypeLabel" rv-text="chartType.name | i18n"></span>
+                        <span class="nav-caret triangle"></span>
+                    </span>
                 </div>
                 <div class="chartOptions_overlay chartTypeOverlay table" rv-show="showChartTypeSelector">
                     <div class="row" rv-each-item="chartTypes" rv-class-showBorder="item.showBorder">
                         <div class="cell" rv-data-charttype="item.value" rv-on-click="changeChartType">
-                            <div class="img"><img rv-data-charttype="item.value" rv-src="item.value | append '.svg' | prepend 'images/'"></div>
+                            <div class="img"><div rv-data-charttype="item.value" rv-class="item.value | append '-icon'"></div></div>
                             <span class="vertical-bottom" rv-data-charttype="item.value" rv-text="item.name | i18n"></span>
                         </div>
                     </div>
                     <div class="row" rv-on-click="toggleCrosshair">
                         <div class="cell">
-                            <div class="img"><img src="images/crosshair.svg"></div>
+                            <div class="img"><div class="crosshair-icon"></div></div>
                             <span class="vertical-bottom" rv-class-bold="enableCrosshair">Crosshair</span>
                         </div>
                     </div>
@@ -67,7 +71,7 @@
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="addRemoveIndicator">
                     <span data-balloon="Indicators" data-balloon-pos="down">
-                        <div class="img"><img src="images/indicator.svg"></div>
+                        <div class="img"><span class="indicator-icon"></span></div>
                     </span>
                 </div>
                 <span class="countBubl" rv-show="indicatorsCount | gt 0" rv-text="indicatorsCount"></span>
@@ -76,7 +80,7 @@
             <div class="cell" rv-show="showOverlay">
                 <div class="chartOptions_button" rv-on-click="addRemoveOverlay">
                     <span data-balloon="Comparisons" data-balloon-pos="down">
-                        <div class="img"> <img src="images/comparison.svg" ></div>
+                        <div class="img"> <span class="comparison-icon" ></span></div>
                     </span>
                 </div>
                 <span class="countBubl" rv-show="overlayCount | gt 0" rv-text="overlayCount"></span>
@@ -85,7 +89,7 @@
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleDrawingToolSelector" rv-class-button_selected="showDrawingToolSelector">
                     <span class = "drawButton" data-balloon="Drawing tools" data-balloon-pos="down">
-                        <div class="img"><img src="images/drawing.svg"></div>
+                        <div class="img"><span class="drawing-icon"></span></div>
                     </span>
                 </div>
                 <div class="chartOptions_overlay drawingToolOverlay table" rv-show="showDrawingToolSelector">
@@ -109,7 +113,7 @@
             <div class="cell">
                 <div class="chartOptions_button" rv-on-click="toggleLoadSaveSelector" rv-class-button_selected="showLoadSaveSelector">
                   <span class = "templateButton" data-balloon="Chart template" data-balloon-pos="down">
-                    <div class="img"><img src="images/chart_template.svg"></div>
+                    <div class="img"><span class="chart_template-icon"></span></div>
                   </span>
                 </div>
                 <div class="chartOptions_overlay table font-s loadSaveOverlay" rv-show="showLoadSaveSelector">
@@ -119,7 +123,7 @@
             <div class="cell" rv-show="showShare">
                 <div class="chartOptions_button" rv-on-click="toggleExportSelector" rv-class-button_selected="showExportSelector">
                     <span class = "shareButton" data-balloon="Share chart" data-balloon-pos="down">
-                        <div class="img"><img src="images/share.svg"></div>
+                        <div class="img"><span class="share-icon"></span></div>
                     </span>
                 </div>
                 <div class="table chartOptions_overlay exportOverlay" rv-show="showExportSelector">
@@ -181,16 +185,16 @@
                             <div class="table download">
                                 <div class="row">
                                     <div class="cell">
-                                        <span class="vertical-bottom button" rv-on-click="export" data-exporttype="png">PNG</span>
+                                        <span class="vertical-bottom button fill-bg-color" rv-on-click="export" data-exporttype="png">PNG</span>
                                     </div>
                                     <div class="cell">
-                                        <span class="vertical-bottom button" rv-on-click="export" data-exporttype="pdf">PDF</span>
+                                        <span class="vertical-bottom button fill-bg-color" rv-on-click="export" data-exporttype="pdf">PDF</span>
                                     </div>
                                     <div class="cell">
-                                        <span class="vertical-bottom button" rv-on-click="export" data-exporttype="csv">CSV</span>
+                                        <span class="vertical-bottom button fill-bg-color" rv-on-click="export" data-exporttype="csv">CSV</span>
                                     </div>
                                     <div class="cell">
-                                        <span class="vertical-bottom button" rv-on-click="export" data-exporttype="svg">SVG</span>
+                                        <span class="vertical-bottom button fill-bg-color" rv-on-click="export" data-exporttype="svg">SVG</span>
                                     </div>
                                 </div>
                             </div>
@@ -199,5 +203,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="instrument_name" rv-show="showInstrumentName">
+        <strong>{instrumentName}</strong>
     </div>
 </div>

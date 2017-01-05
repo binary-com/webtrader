@@ -2,7 +2,7 @@ import subprocess, os, fnmatch, re
 from HTMLParser import HTMLParser
 
 # This array will be added to generator .po files regardless of contents in html or js files.
-# These keys are mostly fileds returned from websocket that are not translated.(Or are not string literals in .js files).
+# These keys are mostly fields returned from websocket that are not translated.(Or are not string literals in .js files).
 static = [
     'Digits', 'ticks', 'Ms', 'Wed', 'Sun', 'Fri', 'Investments & Dividends', 'Up/Down', 'Primary',
     'second', 'Other', 'Health', 'Mrs', 'Lower', 'Higher', 'Download PNG', 'Name of your pet',
@@ -22,7 +22,9 @@ static = [
     'Download JPEG image', 'Download PDF document', 'Download SVG vector image', 'Chart context menu',
     '1 Tick', '1 Minute', '2 Minutes', '3 Minutes', '5 Minutes', '10 Minutes', '15 Minutes', '30 Minutes', '1 Hour', '2 Hours', 
     '4 Hours', '8 Hours', '1 Day', 'Candles', 'OHLC', 'Line', 'Dot', 'Line Dot', 'Spline', 'Table', '1t', '1m', '2m', '3m', 
-    '5m', '10m', '15m', '30m', '1h', '2h', '4h', '8h', '1d', '1', '2', '3', '4', '5', '8', '10', '15', '30'
+    '5m', '10m', '15m', '30m', '1h', '2h', '4h', '8h', '1d', '1', '2', '3', '4', '5', '8', '10', '15', '30', 
+    'Add/remove indicators', 'Touch', 'No touch', 'Ends out', 'Ends in', 'Stays in', 'Goes out', 'Matches', 'Differs',
+    'Under', 'Odd', 'Even', 'Asian up', 'Asian down', 'Spreads up', 'Spreads down'
 ]
 
 # Parsing webtrader html files.
@@ -106,7 +108,7 @@ files = [
 # brew install gettext
 # brew link gettext --force
 for f in files:
-    subprocess.call(['msgmerge', '--output-file=' + f, f, './i18n/messages.pot'])
+    subprocess.call(['msgmerge', '--no-fuzzy-matching', '--output-file=' + f, f, './i18n/messages.pot'])
 
 # to extract translated string from a to b
 # msgmerge -N -o i18n/zh_tw.po temp/zh_tw.po ref/zh_tw.po

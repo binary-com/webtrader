@@ -1,4 +1,4 @@
-﻿.aroon_input_width {
+.aroon_input_width {
     width: 150px !important;
 }
 
@@ -22,4 +22,8 @@
 
 .aroon-ui-dialog, .aroon.ui-dialog-content, .aroon_level.ui-dialog-content {
     overflow: auto;
+}
+
+#aroon_level_delete {
+    white-space: nowrap;
 }

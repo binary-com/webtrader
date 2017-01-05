@@ -5,15 +5,16 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Binary.com : Webtrader</title>
+    <title>Champion FX : Webtrader</title>
+    <script src="v<version>/lib/intl/dist/Intl.complete.js"></script>
     <script src="v<version>/common/util.js"></script>
 </head>
 <body>
 	<script>
-      var affiliates = getParameterByName('affiliates') || 'false';
+      var affiliates = isAffiliates() || 'false';
       var suffix = "";
 
-      if (affiliates === 'true') {
+      if (affiliates === true) {
           var url = window.location.href;
           suffix = url.substring(url.indexOf('?')); //Pass all parameters
       }

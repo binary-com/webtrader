@@ -1,4 +1,4 @@
-﻿.cc_input_width {
+.cc_input_width {
     width: 150px !important;
 }
 
@@ -22,4 +22,8 @@
 
 .cc-ui-dialog, .cc.ui-dialog-content, .cc_level.ui-dialog-content {
     overflow: auto;
+}
+
+#cc_level_delete {
+    white-space: nowrap;
 }

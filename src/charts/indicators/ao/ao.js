@@ -1,8 +1,8 @@
-﻿/**
+/**
  * Created by Mahboob.M on 2/3/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
+define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function($, _) {
 
     var before_add_callback = null;
 
@@ -40,7 +40,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             $html.find("input[type='button']").button();
 
             $html.find("#ao_high_hstgrm_color").colorpicker({
-				showOn: 'click',
+				        showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -65,7 +65,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
             });
 
             $html.find("#ao_low_hstgrm_color").colorpicker({
-						showOn: 'click',
+						    showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -148,7 +148,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                 });
             });
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
@@ -169,8 +169,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                                     require(["jquery", "jquery-growl"], function ($) {
                                         $.growl.error({
                                             message: "Only numbers between " + $elem.attr("min")
-                                                    + " to " + $elem.attr("max")
-                                                    + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                            + " to " + $elem.attr("max")
+                                            + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                         });
                                     });
                                     $elem.val($elem.prop("defaultValue"));
@@ -219,8 +219,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 150
@@ -239,8 +246,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'ddslick'], function($) {
     return {
 
         open : function ( containerIDWithHash, before_add_cb ) {
+            before_add_callback = before_add_cb || before_add_callback;
             var open = function() {
-                before_add_callback = before_add_cb;
                 $(".ao").data('refererChartID', containerIDWithHash).dialog( "open" );
             };
             if ($(".ao").length == 0)

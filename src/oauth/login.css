@@ -21,16 +21,6 @@
   margin-top: -2px;
 }
 
-.oauth-dialog button {
-    background: #2e8836;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: 0;
-    width: 50%;
-    line-height: 27px;
-}
-
 /* default style for inputs */
 .oauth-dialog input {
   padding: 0px 5px;

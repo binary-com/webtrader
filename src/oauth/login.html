@@ -1,7 +1,7 @@
 <div class='oauth-dialog'>
   <div class='login-dialog' rv-show='route.value | eq "login"'>
     <div class='login-pane'>
-      <span> Click to log in with your Binary.com account </span>
+      <span> Click to log in with your Champion FX account </span>
       <button rv-on-click="login.login"
               rv-disabled='login.disabled' rv-css-opacity='login.disabled | ternary 0.5 1'
               class='login-button text-vertical-align'>Log in</button>
@@ -83,7 +83,7 @@
 
   <div class='confirm-dialog'  rv-show='route.value |  eq "confirm"'>
       <span class='confirm-title'>One last step left</span>
-      <span class='confirm-msg'>Your Binary.com account is created, but to start trading you need to allow Webtrader access it.</span>
+      <span class='confirm-msg'>Your Champion FX account is created, but to start trading you need to allow Webtrader access it.</span>
 
       <img src="images/grant_permission.png" />
       <span class='confirm-grant'>Just click “Grant” button on the page you will now be taken to.</span>

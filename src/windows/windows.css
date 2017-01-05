@@ -1,4 +1,4 @@
-﻿.span-in-dialog-header {
+.span-in-dialog-header {
     margin-top: 1px;
     float:left;
 }
@@ -20,7 +20,10 @@
 }
 
 .ui-dialog-titlebar .ui-selectmenu-button {
-    margin-top: -.4em;
+    margin-top: -.3em;
+    height: 28px;
+    margin-right: 5px;
+    vertical-align: top;
 }
 
 .ui-dialog-titlebar .title {
@@ -71,4 +74,11 @@ img.reload {
 .ui-icon-newwin {
     position: relative;
     right: 3px;
+}
+.ui-datepicker-trigger.ui-button {
+    border: none;
+    background: none;
+    box-shadow: none;
+    font-weight: normal;
+    color: #FFFFFF;
 }

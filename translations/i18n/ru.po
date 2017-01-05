@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-09-15 20:37+0000\n"
-"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/ru/>\n"
+"PO-Revision-Date: 2016-11-24 03:58+0000\n"
+"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.9-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 msgid "%D MA Type"
 msgstr "Тип СС %D"
@@ -57,9 +57,6 @@ msgstr ""
 "денег. Ни при каких обстоятельствах Binary.com не будет нести "
 "ответственности за транзакции, осуществляемые между клиентами и платёжными "
 "агентами"
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- title: Страница не найдена permalink: /404.html excerpt: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "Штрих -DI"
@@ -205,6 +202,9 @@ msgstr "Тип СС ADX"
 msgid "ADX Stroke"
 msgstr "Штрих ADX"
 
+msgid "AM"
+msgstr "утра"
+
 msgid "ATR Period"
 msgstr "Период ATR"
 
@@ -240,6 +240,9 @@ msgstr "Добавить уровень"
 
 msgid "Add/remove comparisons"
 msgstr "Добавить/удалить сравнения"
+
+msgid "Add/remove indicators"
+msgstr "Добавить/удалить индикаторы"
 
 msgid "Add/remove overlays"
 msgstr "Добавить/удалить наложение"
@@ -288,6 +291,12 @@ msgstr "Штрих индикатора Арун (вниз)"
 
 msgid "Aroon Up Stroke"
 msgstr "Штрих индикатора Арун (вверх)"
+
+msgid "Asian down"
+msgstr ""
+
+msgid "Asian up"
+msgstr ""
 
 msgid "Asians"
 msgstr "Азиатские"
@@ -420,6 +429,9 @@ msgstr "Выберите способ вывода средств"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr "Очистить"
+
 msgid "Click Jacking test"
 msgstr "Нажмите на Тест"
 
@@ -461,6 +473,9 @@ msgstr "Ошибка соединения. Обновите страницу"
 
 msgid "Construction"
 msgstr "Строительство"
+
+msgid "Contact Us"
+msgstr ""
 
 msgid "Continue"
 msgstr "Продолжить"
@@ -579,8 +594,13 @@ msgstr "Удалить"
 msgid "Delete level(s)"
 msgstr "Удалить уровень (уровни)"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "Демо-ролик для партнёров о доступе к графикам Binary.com в IFRAME"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr "Демо-ролик для партнёров о том, как работать с графиками на Webtrader"
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr ""
+"Демо-ролик для партнёров о том, как работать с графиками на Webtrader через "
+"IFRAME"
 
 msgid "Deposit funds"
 msgstr "Пополнить счет"
@@ -594,6 +614,12 @@ msgstr "Опишите, для чего нужен данный ключ, что
 msgid "Description"
 msgstr "Описание"
 
+msgid "Deselect"
+msgstr "Отменить"
+
+msgid "Differs"
+msgstr ""
+
 msgid "Digits"
 msgstr "Цифры"
 
@@ -602,6 +628,9 @@ msgstr "Хотите установить расширение Webtrader для 
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
+
+msgid "Done"
+msgstr "Готово"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Готово. Средства переведены платёжному агенту"
@@ -620,6 +649,9 @@ msgstr "Тип двойной СС"
 
 msgid "Double click the object to remove"
 msgstr "Дважды нажмите на объект, чтобы удалить его"
+
+msgid "Download"
+msgstr "Загрузить"
 
 msgid "Download CSV"
 msgstr "Загрузить в CSV"
@@ -657,6 +689,9 @@ msgstr "Продолжит."
 msgid "EMA"
 msgstr "ЭСС"
 
+msgid "EURUSD"
+msgstr "EURUSD"
+
 msgid "Edge"
 msgstr "Граница"
 
@@ -678,6 +713,17 @@ msgstr "Окончание"
 msgid "Ends In/Out"
 msgstr "Заканчивается Внутри/Вне"
 
+msgid "Ends in"
+msgstr ""
+
+msgid "Ends out"
+msgstr ""
+
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr ""
+"Проверьте правильность вводимых Вами данных; в противном случае Ваш счёт "
+"будет заблокирован"
+
 msgid "Enter your current password"
 msgstr "Введите текущий пароль"
 
@@ -690,17 +736,20 @@ msgstr "Входная котировка"
 msgid "Error downloading .csv"
 msgstr "Ошибка при загрузке файла в формате .csv"
 
-msgid "Error getting data for"
-msgstr "Ошибка в получении данных для"
+msgid "Error getting data for %1"
+msgstr ""
+
+msgid "Error getting market information!"
+msgstr "Ошибка при получении рыночных данных!"
 
 msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
 
+msgid "Even"
+msgstr ""
+
 msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "Время исключения не может быть менее 6 месяцев"
 
 msgid "Exit Spot"
 msgstr "Выходная котировка"
@@ -759,6 +808,9 @@ msgstr "Цена продажи"
 msgid "Finance"
 msgstr "Финансы"
 
+msgid "Financial Account Opening form"
+msgstr "Форма для открытия реального счёта"
+
 msgid "Financial information"
 msgstr "Финансовая информация"
 
@@ -785,6 +837,9 @@ msgstr "От"
 
 msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
+
+msgid "Goes out"
+msgstr ""
 
 msgid "Gray"
 msgstr "Серый"
@@ -813,6 +868,9 @@ msgstr "Верхняя цена"
 msgid "High Stroke"
 msgstr "Верхний штрих"
 
+msgid "High barrier"
+msgstr ""
+
 msgid "High barrier offset"
 msgstr "Изменение верхнего барьера"
 
@@ -836,6 +894,9 @@ msgstr "Горизонтальная линия"
 
 msgid "Horizontal line"
 msgstr "Горизонтальная линия"
+
+msgid "Hour"
+msgstr "Час"
 
 msgid "Hours"
 msgstr "Часы"
@@ -925,8 +986,14 @@ msgstr "Сфера занятости"
 msgid "Instrument"
 msgstr "Инструмент"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "Код инструмента неизвестен/недоступен!"
+
 msgid "Instruments"
 msgstr "Инструменты"
+
+msgid "Invalid parameter(s)!"
+msgstr "Неправильный параметр(ы)!"
 
 msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"
@@ -999,6 +1066,9 @@ msgstr "Ссылка"
 
 msgid "Load chart template"
 msgstr "Загрузить шаблон графика"
+
+msgid "Load trade template"
+msgstr "Загрузить шаблон контракта"
 
 msgid "Loading"
 msgstr "Идёт загрузка"
@@ -1084,6 +1154,9 @@ msgstr "Нижняя цена"
 msgid "Low Stroke"
 msgstr "Нижний штрих"
 
+msgid "Low barrier"
+msgstr ""
+
 msgid "Low barrier offset"
 msgstr "Изменение нижнего барьера"
 
@@ -1120,6 +1193,9 @@ msgstr "Март"
 
 msgid "Mass Period"
 msgstr "период Индекса массы"
+
+msgid "Matches"
+msgstr ""
 
 msgid "Max/Min Period"
 msgstr "Макс./мин. период"
@@ -1172,6 +1248,9 @@ msgstr "Минимум 6 символов и минимум 1 цифра"
 
 msgid "Minus the agent's commission"
 msgstr "Минус комиссия агента"
+
+msgid "Minute"
+msgstr "Мин."
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -1245,6 +1324,9 @@ msgstr "Новый пароль"
 msgid "No"
 msgstr "Нет"
 
+msgid "No touch"
+msgstr ""
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr ""
 "Имейте ввиду, что ключи могут охватывать одну или несколько данных областей"
@@ -1294,6 +1376,9 @@ msgstr "Окт."
 
 msgid "October"
 msgstr "Октябрь"
+
+msgid "Odd"
+msgstr ""
 
 msgid "Offset"
 msgstr "Изменение"
@@ -1370,6 +1455,9 @@ msgstr "Более 3 лет"
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PM"
+msgstr "вечера"
+
 msgid "PNG"
 msgstr "PNG"
 
@@ -1439,6 +1527,9 @@ msgstr "Пожалуйста, ответьте на секретный вопр�
 msgid "Please choose at least one token scope"
 msgstr "Пожалуйста, выберите минимум один уровень ключа"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr "Пожалуйста, выберите валюту, в которой Вы хотите выполнить транзакцию"
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Пожалуйста, подтвердите следующие данные, чтобы завершить перевод"
 
@@ -1460,43 +1551,6 @@ msgstr "Пожалуйста, введите правильный email"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "Пожалуйста, введите положительное целое число от 0 до 9999"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 30-дневного лимита на "
-"убытки"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 30-дневного лимита на "
-"объём покупок"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 7-дневного лимита на убытки"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr ""
-"Пожалуйста, введите положительное целое число для 7-дневного лимита на объём "
-"покупок"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr ""
-"Пожалуйста, введите положительное целое число для дневного лимита на убытки"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr ""
-"Пожалуйста, введите положительное целое число для дневного длимита на объём "
-"покупок"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr ""
-"Пожалуйста, введите положительное целое число для максимального числа "
-"открытых позиций"
-
 msgid "Please enter the token name"
 msgstr "Пожалуйста, введите название ключа"
 
@@ -1504,9 +1558,8 @@ msgid "Please enter the verification code sent to your email"
 msgstr ""
 "Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
 
-msgid "Please enter value between 0 and 99999 for Session duration limit"
+msgid "Please enter time in the format HH:MM"
 msgstr ""
-"Пожалуйста, укажите лимит продолжительности сессии: число от 0 до 99999"
 
 msgid "Please enter your city address"
 msgstr "Пожалуйста, введите адрес"
@@ -1583,8 +1636,8 @@ msgstr "Стандартные"
 msgid "Preferred reality-check interval"
 msgstr "Желаемый интервал для проверки реальности"
 
-msgid "Press  Create token  button on the right to create your first token"
-msgstr "Нажмите кнопку  Создать ключ  справа, чтобы создать первый ключ"
+msgid "Press Create token button on the right to create your first token"
+msgstr "Нажмите кнопку \"Создать ключ\" справа, чтобы создать Ваш первый ключ"
 
 msgid "Price"
 msgstr "Цена"
@@ -1625,7 +1678,7 @@ msgstr "Время покупки"
 msgid "Read"
 msgstr "Читать"
 
-msgid "Real account opening"
+msgid "Real Money Account Opening"
 msgstr "Открытие реального счёта"
 
 msgid "Reality check"
@@ -1770,10 +1823,7 @@ msgid "Session"
 msgstr "Сессия"
 
 msgid "Session duration limit, in minutes"
-msgstr "Ограничение на продолжительность сессии, в минутах"
-
-msgid "Session is not authenticated"
-msgstr "Сессия не авторизована"
+msgstr "Ограничение на длительность сессии, в минутах"
 
 msgid "Settles"
 msgstr "Заканч."
@@ -1850,6 +1900,12 @@ msgstr "Кривая"
 msgid "Spreads"
 msgstr "Спреды"
 
+msgid "Spreads down"
+msgstr ""
+
+msgid "Spreads up"
+msgstr ""
+
 msgid "Stake"
 msgstr "Ставка"
 
@@ -1876,6 +1932,9 @@ msgstr "Статус"
 
 msgid "Stays In/Goes Out"
 msgstr "Останется Внутри/Выйдет за пределы"
+
+msgid "Stays in"
+msgstr ""
 
 msgid "Stocks trading experience"
 msgstr "Опыт торговли акциями"
@@ -1933,6 +1992,12 @@ msgstr "Таблица"
 
 msgid "Tel"
 msgstr "Тел"
+
+msgid "Template applied partially"
+msgstr "Шаблон частично применён"
+
+msgid "Template is not applicable"
+msgstr "Шаблон неприменим"
 
 msgid "Template name"
 msgstr "Название шаблона"
@@ -2022,6 +2087,9 @@ msgstr "Период"
 msgid "Time interval"
 msgstr "Врем. интервал"
 
+msgid "Time out until"
+msgstr ""
+
 msgid "Time period"
 msgstr "Период"
 
@@ -2051,6 +2119,9 @@ msgid ""
 msgstr ""
 "Чтобы вывести средства, пожалуйста, введите специальный проверочный код, "
 "отправленный на Ваш электронный адрес"
+
+msgid "Today"
+msgstr "Сегодня"
 
 msgid "Token"
 msgstr "Ключ"
@@ -2082,6 +2153,9 @@ msgstr "Общая стоимость"
 
 msgid "Total Profit/Loss"
 msgstr "Общая прибыль/убыток"
+
+msgid "Touch"
+msgstr ""
 
 msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
@@ -2152,6 +2226,12 @@ msgstr "Объём покупок"
 msgid "USD"
 msgstr "USD"
 
+msgid "USDJPY"
+msgstr "USDJPY"
+
+msgid "Under"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"
 
@@ -2170,6 +2250,9 @@ msgstr "Обновить настройки"
 msgid "Upgrade to a Real Account"
 msgstr "Открыть Реальный счёт"
 
+msgid "Upload template"
+msgstr "Загрузить шаблон"
+
 msgid "Upper Band Stroke"
 msgstr "Штрих верхней полосы"
 
@@ -2182,6 +2265,10 @@ msgid ""
 msgstr ""
 "Нажмите на кнопку \"Сохранить как ...\", чтобы сохранить настройки графика, "
 "его вид, период времени, индикаторы и параметры сравнения"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
+"Нажмите кнопку \"Сохранить как...,\" чтобы сохранить торговые настройки"
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
@@ -2294,6 +2381,11 @@ msgid ""
 msgstr ""
 "Вы успешно открыли счёт на Binary.com, но для начала торговли Вы должны "
 "открыть Webtrader доступ к нему"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
+"Ваш счёт заблокирован; пожалуйста, свяжитесь со службой поддержки клиентов "
+"для получения дополнительной информации"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Ваш браузер не поддерживает копирование в буфер"
@@ -2526,6 +2618,61 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Прибыль"
+
+#~ msgid "Error getting data for"
+#~ msgstr "Ошибка в получении данных для"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "Сессия не авторизована"
+
+#~ msgid "Demo for affiliates to access Binary.com charts in IFRAME"
+#~ msgstr "Демо-ролик для партнёров о доступе к графикам Binary.com в IFRAME"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "Время исключения не может быть менее 6 месяцев"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "Пожалуйста, введите положительное целое число от 0 до 9999"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 30-дневного лимита на "
+#~ "убытки"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 30-дневного лимита на "
+#~ "объём покупок"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 7-дневного лимита на "
+#~ "убытки"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для 7-дневного лимита на "
+#~ "объём покупок"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для дневного лимита на "
+#~ "убытки"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для дневного длимита на "
+#~ "объём покупок"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr ""
+#~ "Пожалуйста, введите положительное целое число для максимального числа "
+#~ "открытых позиций"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr ""
+#~ "Пожалуйста, укажите лимит продолжительности сессии: число от 0 до 99999"
 
 #~ msgid "Add overlays"
 #~ msgstr "Добавить наложение"

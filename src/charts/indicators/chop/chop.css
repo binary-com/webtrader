@@ -1,4 +1,4 @@
-﻿.chop_input_width {
+.chop_input_width {
     width: 150px !important;
 }
 
@@ -22,4 +22,8 @@
 
 .chop-ui-dialog, .chop.ui-dialog-content, .chop_level.ui-dialog-content {
     overflow: auto;
+}
+
+#chop_level_delete {
+    white-space: nowrap;
 }

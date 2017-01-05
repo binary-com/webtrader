@@ -1,8 +1,3 @@
----
-title: Page Not Found
-permalink: /404.html
-excerpt: ""
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,23 +10,12 @@ excerpt: ""
 	<link href="/v<version>/images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
 	<link href="/v<version>/images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 	<link href="/v<version>/images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-	<link rel="stylesheet" type="text/css" href="https://style.binary.com/binary.css">
+	<link rel="stylesheet" type="text/css" href="https://style.champion-fx.com/binary.css">
 	<style type="text/css">
-		.logo a {
+		.logo-wrapper a {
 			display: flex;
-    		padding: 10px;
-    		width: 20%;
+    		padding: 7px;
 		}
-		#nav-container {
-		    width: 100%;
-		    background-color: #273051;
-		    height: 70px;
-		    text-align: center;
-		    top: 0%;
-		    left: 0%;
-		    border-bottom: 4px solid #e98024;
-		}
-
 		.page_404 {
 			margin-top: 50px;
     		margin-left: 70px;
@@ -53,17 +37,26 @@ excerpt: ""
 			}
 		}
 	</style>
+	<script>
+		function redirect() {
+			if (window.location.href.indexOf('/beta') !== -1) {
+				window.location.href = '/beta';
+			} else {
+				window.location.href = '/';
+			}
+		}
+	</script>
 </head>
 <body>
 	<nav id="nav-container">
-    <!-- logo -->
-    	<div class="logo">
-            <a href="https://binary.com" target="_blank">
-                <div>
-                    <img class="responsive" style="margin-right: 20px;" src="https://www.binary.com/images/pages/binary-symbol-logo.svg">
+     <!-- logo -->
+        <div class="logo-wrapper">
+            <a href="https://champion-fx.com" target="_blank">
+                <div class="logo">
+                    <img class="responsive" src="<style-url>/images/logo/CFX_logomark_light.svg">
                 </div>
-                <div>
-                    <img class="responsive" src="https://www.binary.com/images/pages/binary-type-logo.svg" style="width: 144px;top: 5px;position: relative;">
+                <div class="binary-logo-text">
+                    <img class="responsive" src="<style-url>/images/logo/CFX_logotype_light.svg" style="width:80%;">
                 </div>
             </a>
         </div>
@@ -82,10 +75,10 @@ excerpt: ""
 						Have better luck at trading!
 					</p>
 					<p>
-						<a href="/">Return to trading page</a>
+						<a href="#" onclick="redirect()">Return to trading page</a>
 					</p>
 					<p>
-						If the issue keeps happening, please contact <a href="https://www.binary.com/en/contact.html">customer support</a>.
+						If the issue keeps happening, please contact <a href="https://www.champion-fx.com/en/contactus">customer support</a>.
 					</p>
 				</div>
 			</div>

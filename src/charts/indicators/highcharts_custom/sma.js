@@ -22,7 +22,7 @@ SMA = function(data, options, indicators) {
             var sma = toFixed(sum / this.options.period, 4);
             this.indicatorData.push({ time : data[index].time, value : sma });
         } else {
-            this.indicatorData.push({ time : data[index].time, value : 0.0 });
+            this.indicatorData.push({ time : data[index].time, value : 0.0 || null });
         }
         this.priceData.push(data[index]);
     }

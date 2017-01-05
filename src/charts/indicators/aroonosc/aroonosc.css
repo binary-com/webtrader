@@ -1,4 +1,4 @@
-﻿.aroonosc_input_width {
+.aroonosc_input_width {
     width: 150px !important;
 }
 
@@ -22,4 +22,8 @@
 
 .aroonosc-ui-dialog, .aroonosc.ui-dialog-content, .aroonosc_level.ui-dialog-content {
     overflow: auto;
+}
+
+#aroonosc_level_delete {
+    white-space: nowrap;
 }

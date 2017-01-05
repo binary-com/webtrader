@@ -1,8 +1,8 @@
-﻿/**
+/**
  * Created by Mahboob.M on 2/2/16.
  */
 
-define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($) {
+define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($, _) {
 
     var before_add_callback = null;
 
@@ -31,7 +31,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
             $html.find("input[type='button']").button();
 
             $html.find("#alma_stroke").colorpicker({
-				showOn: 'click',
+				        showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -66,7 +66,7 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
             });
             $('#alma_dashStyle .dd-option-image').css('max-height','5px').css('max-width', '120px');
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 modal: true,
@@ -83,29 +83,29 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
                             var isValid = true;
                             $("#alma_period,#alma_sigma").each(function () {
                                 var $elem = $(this);
-					            if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")) + 1)) {
-					                require(["jquery", "jquery-growl"], function ($) {
-					                    $.growl.error({
-					                        message: "Only numbers between " + $elem.attr("min")
-                                                    + " to " + $elem.attr("max")
-                                                    + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
-					                    });
-					                });
-					                isValid = false;
-					                $elem.val($elem.prop("defaultValue"));
-					                return;
-					            }
-					        });
-					        if (!isValid) return;
-					        var $elem=$html.find("#alma_offset");
+                                if (!_.isInteger(_.toNumber($elem.val())) || !_.inRange($elem.val(), parseInt($elem.attr("min")), parseInt($elem.attr("max")) + 1)) {
+                                    require(["jquery", "jquery-growl"], function ($) {
+                                        $.growl.error({
+                                            message: "Only numbers between " + $elem.attr("min")
+                                            + " to " + $elem.attr("max")
+                                            + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                        });
+                                    });
+                                    isValid = false;
+                                    $elem.val($elem.prop("defaultValue"));
+                                    return;
+                                }
+                            });
+                            if (!isValid) return;
+                            var $elem=$html.find("#alma_offset");
                             if (!_.inRange($elem.val(),
-                                            parseInt($elem.attr("min")),
-                                            parseInt($elem.attr("max")) +.01)) {
+                                parseInt($elem.attr("min")),
+                                parseInt($elem.attr("max")) +.01)) {
                                 require(["jquery", "jquery-growl"], function ($) {
                                     $.growl.error({
                                         message: "Only numbers between " + $elem.attr("min")
-                                                + " to " + $elem.attr("max")
-                                                + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                        + " to " + $elem.attr("max")
+                                        + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
                                 $elem.val($elem.prop("defaultValue"));
@@ -134,8 +134,15 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
             $html.find('select').each(function(index, value){
                 $(value).selectmenu({
                     width : 155
@@ -154,8 +161,8 @@ define(["jquery", "jquery-ui", 'color-picker', 'lodash', 'ddslick'], function ($
     return {
 
         open : function ( containerIDWithHash, before_add_cb ) {
+            before_add_callback = before_add_cb || before_add_callback;
             var open = function() {
-                before_add_callback = before_add_cb;
                 $(".alma").data('refererChartID', containerIDWithHash).dialog( "open" );
             };
             if ($(".alma").length == 0)

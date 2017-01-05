@@ -16,7 +16,9 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
       if(chart.series.length > 0){
           indicator_values.forEach(function(ind){
             var id = ind.id;
-            chart.series[0][id] && chart.series[0][id][0] && indicators.push({id: id, name: ind.long_display_name, options: chart.series[0][id][0].options})
+            chart.series[0][id] && chart.series[0][id].forEach(function(entry) {
+              indicators.push({id: id, name: ind.long_display_name, options: entry.options})
+            });
           });
       }
 
@@ -28,6 +30,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         if(chart.series[0]) {
           indicators.forEach(function(ind) {
              require(["charts/indicators/" + ind.id + "/" + ind.id], function () {
+                 //make sure that we are using the new onSeriesID value
+                 if (ind.options.onSeriesID) ind.options.onSeriesID = chart.series[0].options.id;
                chart.series[0].addIndicator(ind.id, ind.options);
              });
           });
@@ -206,17 +210,17 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 var key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
                 chartingRequestMap.removeChart(key, containerIDWithHash);
                 var chart = $(containerIDWithHash).highcharts();
-                indicators = chart.get_indicators();
-                overlays = options.overlays;
+                indicators = chart.get_indicators() || [];
+                overlays = options.overlays || [];
                 chart.destroy();
             }
             if(options.indicators) { /* this comes only from tracker.js & ChartTemplateManager.js */
-              indicators = options.indicators;
-              overlays = options.overlays;
+              indicators = options.indicators || [];
+              overlays = options.overlays || [];
               $(containerIDWithHash).data("overlayCount", overlays.length);
             }
 
-            /* ingore overlays if chart type is candlestick or ohlc */
+            /* ignore overlays if chart type is candlestick or ohlc */
             if ((options.type === 'candlestick' || options.type === 'ohlc') && overlays.length > 0) {
               /* we should not come here, logging a warning as an alert if we somehow do */
               console.warn("Ingoring overlays because chart type is " + options.type);
@@ -251,7 +255,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                                     series_compare : options.series_compare,
                                     delayAmount : options.delayAmount
                                 }).catch(function(err){
-                                    var msg = 'Error getting data for '.i18n() + instrumentName + "";
+																	  var msg = 'Error getting data for %1'.i18n().replace('%1', options.instrumentName);
                                     require(["jquery-growl"], function($) { $.growl.error({ message: msg }); });
                                     var chart = $(containerIDWithHash).highcharts();
                                     chart && chart.showLoading(msg);
@@ -271,12 +275,14 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                             if ($.isFunction(onload)) {
                                 onload();
                             }
-                            if(getParameterByName("affiliates") === 'true' && getParameterByName('hideFooter').toLowerCase() === 'true'){
-                                this.credits.element.remove();
+                            if(isAffiliates() && isHideFooter()){
+                                $(this.credits.element).remove();
+                                this.margin[2] = 5;
+                                this.spacing[2] = 0;
                             } else {
                                 this.credits.element.onclick = function() {
                                     window.open(
-                                        'http://webtrader.binary.com',
+                                        'https://webtrader.champion-fx.com',
                                         '_blank'
                                     );
                                 }
@@ -286,7 +292,8 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     },
                     spacingLeft: 0,
                     marginLeft: 45,  /* disable the auto size labels so the Y axes become aligned */
-                    //,plotBackgroundImage: 'images/binary-watermark-logo.svg'
+                    marginBottom: 15,
+                    spacingBottom: 15
                 },
 
                 navigator: {
@@ -328,14 +335,12 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                 },
 
                 title: {
-                    //Show name on chart if it is accessed with affiliates = true parameter. In normal webtrader mode, we dont need this title because the dialog will have one
-                    text: getParameterByName("affiliates") === 'true' ? options.instrumentName : "" //name to display
+                    text: "" //name to display
                 },
 
                 credits: {
-                    href: 'http://webtrader.binary.com',
-                    text: 'Binary.com : Webtrader',
-
+                    href: 'https://webtrader.champion-fx.com',
+                    text: 'Champion-fx : Webtrader',
                 },
 
                 xAxis: {

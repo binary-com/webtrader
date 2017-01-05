@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-09-14 01:06+0000\n"
-"Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
+"PO-Revision-Date: 2016-12-23 09:45+0000\n"
+"Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.8\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 类型"
@@ -50,9 +50,6 @@ msgstr ""
 "身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往"
 "来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情"
 "况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
-
-msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
-msgstr "--- 标题：找不到页面的固定链接：/404.html 摘录: \"\" ---"
 
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
@@ -198,6 +195,9 @@ msgstr "ADX MA 类型"
 msgid "ADX Stroke"
 msgstr "ADX 波幅"
 
+msgid "AM"
+msgstr "早上"
+
 msgid "ATR Period"
 msgstr "ATR 期限"
 
@@ -233,6 +233,9 @@ msgstr "添加价位"
 
 msgid "Add/remove comparisons"
 msgstr "添加/删除比较"
+
+msgid "Add/remove indicators"
+msgstr "添加/删除指标"
 
 msgid "Add/remove overlays"
 msgstr "添加/删除覆盖"
@@ -281,6 +284,12 @@ msgstr "阿隆下行线波幅"
 
 msgid "Aroon Up Stroke"
 msgstr "阿隆上升线波幅"
+
+msgid "Asian down"
+msgstr ""
+
+msgid "Asian up"
+msgstr ""
 
 msgid "Asians"
 msgstr "亚洲期权"
@@ -411,6 +420,9 @@ msgstr "选择您较倾向的提款方法"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Clear"
+msgstr "清除"
+
 msgid "Click Jacking test"
 msgstr "点击劫持测试"
 
@@ -452,6 +464,9 @@ msgstr "连接出错：请刷新页面"
 
 msgid "Construction"
 msgstr "建筑"
+
+msgid "Contact Us"
+msgstr "联系我们"
 
 msgid "Continue"
 msgstr "继续"
@@ -570,8 +585,11 @@ msgstr "删除"
 msgid "Delete level(s)"
 msgstr "删除水平"
 
-msgid "Demo for affiliates to access Binary.com charts in IFRAME"
-msgstr "在IFRAME查看联盟会员访问Binary.com图表的演示"
+msgid "Demo for affiliates to access Webtrader charts"
+msgstr "联盟成员访问Webtrader图表的演示"
+
+msgid "Demo for affiliates to access Webtrader charts in IFRAME"
+msgstr "在IFRAME查看联盟会员访问Webtrader图表的演示"
 
 msgid "Deposit funds"
 msgstr "存入资金"
@@ -585,6 +603,12 @@ msgstr "令牌用途说明，以便稍后查找"
 msgid "Description"
 msgstr "说明"
 
+msgid "Deselect"
+msgstr "取消选择"
+
+msgid "Differs"
+msgstr ""
+
 msgid "Digits"
 msgstr "数字"
 
@@ -593,6 +617,9 @@ msgstr "是否安装Webtrader chrome扩展程序？"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
+
+msgid "Done"
+msgstr "已完成"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。资金已转给支付代理"
@@ -611,6 +638,9 @@ msgstr "双MA类型"
 
 msgid "Double click the object to remove"
 msgstr "双击对象执行删除"
+
+msgid "Download"
+msgstr "下载"
 
 msgid "Download CSV"
 msgstr "下载CSV"
@@ -648,6 +678,9 @@ msgstr "持续时间"
 msgid "EMA"
 msgstr "EMA"
 
+msgid "EURUSD"
+msgstr "欧元美元"
+
 msgid "Edge"
 msgstr "边缘"
 
@@ -669,6 +702,15 @@ msgstr "结束时间"
 msgid "Ends In/Out"
 msgstr "“范围之内/之外”收盘"
 
+msgid "Ends in"
+msgstr ""
+
+msgid "Ends out"
+msgstr ""
+
+msgid "Ensure you are entering valid inputs else your account will get locked"
+msgstr "请确认您输入有效数据，不然账户将被封锁"
+
 msgid "Enter your current password"
 msgstr "输入当前密码"
 
@@ -681,17 +723,20 @@ msgstr "入市现价"
 msgid "Error downloading .csv"
 msgstr "下载.csv时发生错误"
 
-msgid "Error getting data for"
-msgstr "获取以下数据时出错"
+msgid "Error getting data for %1"
+msgstr "获取 %1数据时出错"
+
+msgid "Error getting market information!"
+msgstr "获取市场信息时出错！"
 
 msgid "Estimated Net Worth"
 msgstr "估计净值"
 
+msgid "Even"
+msgstr ""
+
 msgid "Exclude me from the website until"
 msgstr "禁止我访问本网站直到"
-
-msgid "Exclude time cannot be less than 6 months"
-msgstr "禁止时间不能少于6个月"
 
 msgid "Exit Spot"
 msgstr "退市现价"
@@ -750,6 +795,9 @@ msgstr "最终价格"
 msgid "Finance"
 msgstr "金融"
 
+msgid "Financial Account Opening form"
+msgstr "开立金融账户表格"
+
 msgid "Financial information"
 msgstr "财务信息"
 
@@ -776,6 +824,9 @@ msgstr "从"
 
 msgid "Further instructions"
 msgstr "详细说明"
+
+msgid "Goes out"
+msgstr ""
 
 msgid "Gray"
 msgstr "灰色"
@@ -804,6 +855,9 @@ msgstr "高价位"
 msgid "High Stroke"
 msgstr "高价波幅"
 
+msgid "High barrier"
+msgstr ""
+
 msgid "High barrier offset"
 msgstr "高障碍位移"
 
@@ -827,6 +881,9 @@ msgstr "水平线"
 
 msgid "Horizontal line"
 msgstr "水平线"
+
+msgid "Hour"
+msgstr "小时"
 
 msgid "Hours"
 msgstr "小时"
@@ -906,8 +963,14 @@ msgstr "职业领域"
 msgid "Instrument"
 msgstr "工具"
 
+msgid "Instrument Code Unknown/Unavailable!"
+msgstr "工具代码未知/不可用！"
+
 msgid "Instruments"
 msgstr "工具"
+
+msgid "Invalid parameter(s)!"
+msgstr "无效参数！"
 
 msgid "Investments & Dividends"
 msgstr "投资与分红"
@@ -980,6 +1043,9 @@ msgstr "链接"
 
 msgid "Load chart template"
 msgstr "加载图表模板"
+
+msgid "Load trade template"
+msgstr "加载交易模板"
 
 msgid "Loading"
 msgstr "加载"
@@ -1065,6 +1131,9 @@ msgstr "低价"
 msgid "Low Stroke"
 msgstr "低行程"
 
+msgid "Low barrier"
+msgstr ""
+
 msgid "Low barrier offset"
 msgstr "低障碍位移"
 
@@ -1099,6 +1168,9 @@ msgstr "三月"
 
 msgid "Mass Period"
 msgstr "梅斯线期限"
+
+msgid "Matches"
+msgstr ""
 
 msgid "Max/Min Period"
 msgstr "最大/最小期限"
@@ -1147,6 +1219,9 @@ msgstr "需至少6个字符与1个数字"
 
 msgid "Minus the agent's commission"
 msgstr "减去代理佣金"
+
+msgid "Minute"
+msgstr "分钟"
 
 msgid "Minutes"
 msgstr "分钟"
@@ -1220,6 +1295,9 @@ msgstr "新密码"
 msgid "No"
 msgstr "否"
 
+msgid "No touch"
+msgstr ""
+
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "请注意，令牌可能拥有一或多个领域"
 
@@ -1264,6 +1342,9 @@ msgstr "十月"
 
 msgid "October"
 msgstr "十月"
+
+msgid "Odd"
+msgstr ""
 
 msgid "Offset"
 msgstr "位移"
@@ -1337,6 +1418,9 @@ msgstr "3年以上"
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PM"
+msgstr "下午"
+
 msgid "PNG"
 msgstr "PNG"
 
@@ -1406,6 +1490,9 @@ msgstr "请回答密码提示问题，限4-50个字符"
 msgid "Please choose at least one token scope"
 msgstr "请选择至少一个令牌范围"
 
+msgid "Please choose which currency you would like to transact in"
+msgstr "请选择交易货币种类"
+
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "请确认以下详情以完成转账"
 
@@ -1427,39 +1514,14 @@ msgstr "请输入正确的电子邮件"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "请输入日期，格式是年-月-日"
 
-msgid "Please enter positive integer value between 0 and 9999"
-msgstr "请输入0与9999之间的正整数"
-
-msgid "Please enter positive integer value for 30-day limit on losses"
-msgstr "请输入30天损失限额，限正整数"
-
-msgid "Please enter positive integer value for 30-day turnover limit"
-msgstr "请输入30天交易限额，限正整数"
-
-msgid "Please enter positive integer value for 7-day limit on losses"
-msgstr "请输入7天损失限额，限正整数"
-
-msgid "Please enter positive integer value for 7-day turnover limit"
-msgstr "请输入7天交易限额，限正整数"
-
-msgid "Please enter positive integer value for Daily limit on losses"
-msgstr "请输入每日损失限额，限正整数"
-
-msgid "Please enter positive integer value for Daily turnover limit"
-msgstr "请输入每日交易限额，限正整数"
-
-msgid ""
-"Please enter positive integer value for Maximum number of open positions"
-msgstr "请输入最大未平仓头寸数目，限正整数"
-
 msgid "Please enter the token name"
 msgstr "请输入令牌名称"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "请输入发送到您邮箱的验证码"
 
-msgid "Please enter value between 0 and 99999 for Session duration limit"
-msgstr "请输入交易期持续时间限制0至99999之间的数值"
+msgid "Please enter time in the format HH:MM"
+msgstr "请输入时间，格式为小时：分钟"
 
 msgid "Please enter your city address"
 msgstr "请输入您的城市住址"
@@ -1536,8 +1598,8 @@ msgstr "预定义"
 msgid "Preferred reality-check interval"
 msgstr "优选实况调查间隔时间"
 
-msgid "Press  Create token  button on the right to create your first token"
-msgstr "按右方 创建令牌 按钮即可创建首个令牌"
+msgid "Press Create token button on the right to create your first token"
+msgstr "按右方创建令牌按钮即可创建首个令牌"
 
 msgid "Price"
 msgstr "价格"
@@ -1578,8 +1640,8 @@ msgstr "买入时间"
 msgid "Read"
 msgstr "阅读"
 
-msgid "Real account opening"
-msgstr "开立真实账户"
+msgid "Real Money Account Opening"
+msgstr "开立真实资金账户"
 
 msgid "Reality check"
 msgstr "真实情况检查"
@@ -1725,9 +1787,6 @@ msgstr "会话"
 msgid "Session duration limit, in minutes"
 msgstr "交易期持续时间限制，以分钟为单位"
 
-msgid "Session is not authenticated"
-msgstr "会话未经验证"
-
 msgid "Settles"
 msgstr "结算"
 
@@ -1803,6 +1862,12 @@ msgstr "Spline法"
 msgid "Spreads"
 msgstr "价差交易"
 
+msgid "Spreads down"
+msgstr ""
+
+msgid "Spreads up"
+msgstr ""
+
 msgid "Stake"
 msgstr "投注资金"
 
@@ -1829,6 +1894,9 @@ msgstr "统计"
 
 msgid "Stays In/Goes Out"
 msgstr "“保持在范围之内/超出范围之外”"
+
+msgid "Stays in"
+msgstr ""
 
 msgid "Stocks trading experience"
 msgstr "股票交易经验"
@@ -1886,6 +1954,12 @@ msgstr "表"
 
 msgid "Tel"
 msgstr "电话"
+
+msgid "Template applied partially"
+msgstr "部分模板已经使用"
+
+msgid "Template is not applicable"
+msgstr "模板不适用"
 
 msgid "Template name"
 msgstr "模板名称"
@@ -1967,6 +2041,9 @@ msgstr "期限"
 msgid "Time interval"
 msgstr "时间间隔"
 
+msgid "Time out until"
+msgstr "时间已过。下次开启时间为"
+
 msgid "Time period"
 msgstr "期限"
 
@@ -1992,6 +2069,9 @@ msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
 msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
+
+msgid "Today"
+msgstr "今天"
 
 msgid "Token"
 msgstr "令牌"
@@ -2021,6 +2101,9 @@ msgstr "成本总计"
 
 msgid "Total Profit/Loss"
 msgstr "利润/亏损合计"
+
+msgid "Touch"
+msgstr ""
 
 msgid "Touch/No Touch"
 msgstr "触及/未触及"
@@ -2085,6 +2168,12 @@ msgstr "交易额"
 msgid "USD"
 msgstr "美元"
 
+msgid "USDJPY"
+msgstr "美元日元"
+
+msgid "Under"
+msgstr ""
+
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遗憾，您的浏览器不支持这些程序"
 
@@ -2103,6 +2192,9 @@ msgstr "更新设置"
 msgid "Upgrade to a Real Account"
 msgstr "升级为真实账户"
 
+msgid "Upload template"
+msgstr "加载模板"
+
 msgid "Upper Band Stroke"
 msgstr "上方带状波幅"
 
@@ -2113,6 +2205,9 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr "使用\"另存为...\"按钮保存图表设置、类型、时间段、指标和比较"
+
+msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr "使用“另存为...”按键保存交易设置"
 
 msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
@@ -2203,7 +2298,9 @@ msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
-msgstr "使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到此参阅OAuth信息"
+msgstr ""
+"使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到"
+"此参阅OAuth信息"
 
 msgid "You haven't saved any templates yet"
 msgstr "您尚未保存任何模板"
@@ -2218,6 +2315,9 @@ msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
 msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr "您的账户已被封锁，欲知详情请联系客服部"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "您的浏览器不支持剪贴板复制操作"
@@ -2338,7 +2438,9 @@ msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
 "on their desktop PCs"
-msgstr "是Binary的先进桌面交易平台。多窗口界面保证了最大的灵活性，可满足活跃交易员通过桌面电脑交易的需求"
+msgstr ""
+"是Binary的先进桌面交易平台。多窗口界面保证了最大的灵活性，可满足活跃交易员通"
+"过桌面电脑交易的需求"
 
 msgid "is required. Current spread"
 msgstr "是必须的。当前价差"
@@ -2447,6 +2549,46 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回报率"
+
+#~ msgid "Error getting data for"
+#~ msgstr "获取以下数据时出错"
+
+#~ msgid "Session is not authenticated"
+#~ msgstr "会话未经验证"
+
+#~ msgid "--- title: Page Not Found permalink: /404.html excerpt: \"\" ---"
+#~ msgstr "--- 标题：找不到页面的固定链接：/404.html 摘录: \"\" ---"
+
+#~ msgid "Exclude time cannot be less than 6 months"
+#~ msgstr "禁止时间不能少于6个月"
+
+#~ msgid "Please enter positive integer value between 0 and 9999"
+#~ msgstr "请输入0与9999之间的正整数"
+
+#~ msgid "Please enter positive integer value for 30-day limit on losses"
+#~ msgstr "请输入30天损失限额，限正整数"
+
+#~ msgid "Please enter positive integer value for 30-day turnover limit"
+#~ msgstr "请输入30天交易限额，限正整数"
+
+#~ msgid "Please enter positive integer value for 7-day limit on losses"
+#~ msgstr "请输入7天损失限额，限正整数"
+
+#~ msgid "Please enter positive integer value for 7-day turnover limit"
+#~ msgstr "请输入7天交易限额，限正整数"
+
+#~ msgid "Please enter positive integer value for Daily limit on losses"
+#~ msgstr "请输入每日损失限额，限正整数"
+
+#~ msgid "Please enter positive integer value for Daily turnover limit"
+#~ msgstr "请输入每日交易限额，限正整数"
+
+#~ msgid ""
+#~ "Please enter positive integer value for Maximum number of open positions"
+#~ msgstr "请输入最大未平仓头寸数目，限正整数"
+
+#~ msgid "Please enter value between 0 and 99999 for Session duration limit"
+#~ msgstr "请输入交易期持续时间限制0至99999之间的数值"
 
 #~ msgid "Add overlays"
 #~ msgstr "添加覆盖"

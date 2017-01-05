@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob>M on 1/30/16.
  */
 T3 = function (data, options, indicators) {
@@ -12,7 +12,7 @@ T3 = function (data, options, indicators) {
     {
         this.ema1[key] = new EMA(data, {
             period: this.options.period,
-            appliedTo: appliedTo 
+            appliedTo: appliedTo
         }, this.indicators);
         var ema1Data = [];
         this.ema1[key].indicatorData.forEach(function (e) {
@@ -48,7 +48,7 @@ T3 = function (data, options, indicators) {
     EMA1 = EMA(x,Period)
     EMA2 = EMA(EMA1,Period)
     GD = EMA1*(1+vFactor)) - (EMA2*vFactor)
-    Where vFactor is a volume factor between 0 and 1 which determines how the moving averages responds. A value of 0 returns an EMA. A value of 1 returns DEMA. 
+    Where vFactor is a volume factor between 0 and 1 which determines how the moving averages responds. A value of 0 returns an EMA. A value of 1 returns DEMA.
     Tim Tillson advised or preferred a value of 0.7.
     //T3 = GD(GD(GD(t, Period, vFactor), Period, vFactor), Period, vFactor);
     */
@@ -57,7 +57,7 @@ T3 = function (data, options, indicators) {
     this.CalculateGD(this.gd2,'gd3', this.gd3 ,this.indicators.CLOSE);
 
     for (var index = 0; index < data.length; index++) {
-        this.indicatorData.push({ time: this.gd3[index].time, value: toFixed(this.gd3[index].close, 4) });
+        this.indicatorData.push({ time: this.gd3[index].time, value: toFixed(this.gd3[index].close, 4) || null });
         this.priceData.push(data[index]);
     }
 };

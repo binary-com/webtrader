@@ -288,7 +288,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                         .find('.ui-datepicker-buttonpane');
 
                     $('<button/>', {
-                        text: 'Clear',
+                        text: 'Clear'.i18n(),
                         click: function () {
                             opts.onclear && opts.onclear();
                             $(input).datepicker('hide');
@@ -301,7 +301,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
 
             var options = {
                 showOn: 'both',
-                numberOfMonths: 2,
+                numberOfMonths: 1,
                 maxDate: 0,
                 minDate: new Date(2010, 0, 1),
                 dateFormat: 'yy-mm-dd',
@@ -314,7 +314,9 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                     add_clear_button(input);
                     inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' });
                 },
-                onChangeMonthYear:add_clear_button
+                onChangeMonthYear:add_clear_button,
+                closeText: 'Done'.i18n(),
+                currentText: 'Today'.i18n()
             };
 
             var dpicker = dpicker_input
@@ -509,6 +511,17 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                    }
                 })
                 .catch(function(err) {
+                    //Switch to virtual account on selfexclusion error.
+                    if(err.code==="SelfExclusion"){
+                        //Login to virtual account instead.
+                        oauth.forEach(function(ele, i){
+                            if(ele.id.match(/^VRTC/)){
+                                liveapi.switch_account(ele.id);
+                                return;
+                            }
+                        });
+                        return;
+                    }
                     console.error(err.message);
                     $.growl.error({message: err.message});
                     //Remove token and trigger login-error event.
@@ -644,7 +657,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             /* check and add the refresh button if needed */
             if(options.refresh){
                 var header = blankWindow.parent().find('.ui-dialog-title');
-                var refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>");
+                var refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>").find(".reload");
                 refresh.on('click',options.refresh);
             }
 

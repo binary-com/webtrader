@@ -93,7 +93,7 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','jqu
               adjust_start_time: 1
             })
             .catch(function(err){
-                 var msg = 'Error getting data for '.i18n() + instrumentName + "";
+                 var msg = 'Error getting data for %1'.i18n().replace('%1', instrumentName);
                  require(["jquery", "jquery-growl"], function($) { $.growl.error({ message: msg }); });
                  var chart = $(containerIDWithHash).highcharts();
                  chart && chart.showLoading(msg);

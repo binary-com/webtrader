@@ -1,4 +1,4 @@
-﻿.stoch {
+.stoch {
     overflow-y: scroll;
 }
 
@@ -16,4 +16,8 @@
 
 .stoch input {
     line-height: 10px !important;
+}
+
+#stoch_level_delete {
+    white-space: nowrap;
 }

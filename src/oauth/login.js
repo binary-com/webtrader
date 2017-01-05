@@ -97,14 +97,14 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       state.login.login = function() {
           state.login.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.champion-fx.com/oauth2/authorize';
           window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.champion-fx.com/oauth2/authorize';
           window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
 
@@ -238,7 +238,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       login: function() {
           var app_id = liveapi.app_id;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.champion-fx.com/oauth2/authorize';
           window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
       }
     }

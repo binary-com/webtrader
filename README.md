@@ -1,15 +1,15 @@
-#Webtrader ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
+#Webtrader ![Build Status](https://travis-ci.org/ChampionFX/webtrader.svg?branch=master)
 
-This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://binary-com.github.io/webtrader) website.
+This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://ChampionFX.github.io/webtrader) website.
 
 ##Project goal
-The goal of this project is to create a full-screen trading interface for [Binary.com](https://www.binary.com) according to the following design:
+The goal of this project is to create a full-screen trading interface for [champion-fx.com](https://www.champion-fx.com) according to the following design:
 ![Webtrader](https://banners.binary.com/misc/webtrader-layout.jpg)
 
 ##How to work with this project
 ####Linux Users
         $ sudo apt-get install git
-        $ git clone https://github.com/binary-com/webtrader.git
+        $ git clone https://github.com/ChampionFX/webtrader.git
         $ cd webtrader
         $ sudo apt-get install node npm
         $ sudo apt-get install nodejs-legacy
@@ -22,7 +22,7 @@ The goal of this project is to create a full-screen trading interface for [Binar
     * Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
     * Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
     * Open Git Bash and run the following commands:
-        $ git clone https://github.com/binary-com/webtrader.git
+        $ git clone https://github.com/ChampionFX/webtrader.git
         $ cd webtrader
         $ npm install -g grunt-cli
         $ npm install -g bower
@@ -76,35 +76,45 @@ In order to get SLOC(Source line of Code, which displays total number of lines o
 To bump release version, run
 
         $ grunt bump:major
-
         or
-
         $ grunt bump:minor
-
         or
-
         $ grunt bump:patch
 
 Every checkin or merge into master will trigger travis-ci build and do a release to production.
 
 Every checkin or merge of PR into development will trigger travis-ci build and do a beta release
 
-#####Translation-related command
+####Translation-related command
 
 Translation related files are in `/translations` folder.
-to extract text for translation:
+    
+  To extract text for translation:
 
-1- `cd ./translations`
-2- `python extract.py` This will extract text from `../src/**/*.html` files.
-`extract.py` runs `extract.js` which extracts string literals form `../src/**/*.js` files.
-3- `extract.py` for merging `.po` files uses `msgmerge` command line tool.
+        $ cd ./translations
+        $ python extract.py # This will extract text from `../src/**/*.html` files.
+        $ extract.py # runs `extract.js` which extracts string literals form `../src/**/*.js` files.
+        $ extract.py # for merging `.po` files uses `msgmerge` command line tool.
 
 The tool should be available on linux, if you are on Osx try `brew install gettext && brew link gettext --force`.
 to submit text to translators: push to *translation* branch, weblate hook will be triggered.
 
-#####Contribution
+####Including Webtrader charts in your application
+You can generate the embedding code from any webtrader chart. There are several parameters that could be passed to webtrader to control the charts.
+Some of these parameters are 
+
+    * affiliates - true/false
+    * instrument - e.g, frxUSDJPY
+    * timePeriod - 1t, 1m, 2m, 3m, 5m, 10, 15m, 30m, 1h, 2h, 4h, 8h, 1d
+    * lang
+    * hideOverlay - true/false
+    * hideShare - true/false
+    * hideFooter - true/false
+    * timezone
+
+###Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
 
-        $ grunt deploy
+        $ grunt deploy-branch
         For releasing compressed code

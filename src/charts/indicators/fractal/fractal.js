@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Maahboob.M on 2/18/16.
  */
 
@@ -30,7 +30,7 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
             $html.find("input[type='button']").button();
 
             $html.find("#fractal_color").colorpicker({
-				showOn: 'click',
+				        showOn: 'click',
                 position: {
                     at: "right+100 bottom",
                     of: "element",
@@ -54,7 +54,7 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
                 }
             });
 
-            $html.dialog({
+            var options = {
                 autoOpen: false,
                 resizable: false,
                 width: 350,
@@ -70,13 +70,13 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
                         click: function () {
                             var $elem = $('#number_of_bars');
                             if (!_.inRange($elem.val(),
-                                            parseInt($elem.attr("min")),
-                                            parseInt($elem.attr("max")) + 1)) {
+                                parseInt($elem.attr("min")),
+                                parseInt($elem.attr("max")) + 1)) {
                                 require(["jquery", "jquery-growl"], function ($) {
                                     $.growl.error({
                                         message: "Only numbers between " + $elem.attr("min")
-                                                + " to " + $elem.attr("max")
-                                                + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
+                                        + " to " + $elem.attr("max")
+                                        + " is allowed for " + $elem.closest('tr').find('td:first').text() + "!"
                                     });
                                 });
                                 return;
@@ -111,8 +111,15 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
                             closeDialog.call(this);
                         }
                     }
-                ]
-            });
+                ],
+                icons: {
+                    close: 'custom-icon-close',
+                    minimize: 'custom-icon-minimize',
+                    maximize: 'custom-icon-maximize'
+                }
+            };
+            $html.dialog(options)
+              .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
 
             if (_.isFunction(_callback)) {
                 _callback(containerIDWithHash);
@@ -125,8 +132,8 @@ define(["jquery", 'lodash', "jquery-ui", 'color-picker', 'ddslick'], function ($
     return {
 
         open: function (containerIDWithHash, before_add_cb) {
+            before_add_callback = before_add_cb || before_add_callback;
             var open = function() {
-                before_add_callback = before_add_cb;
                 $(".fractal").data('refererChartID', containerIDWithHash).dialog( "open" );
             };
             if ($(".fractal").length == 0)
