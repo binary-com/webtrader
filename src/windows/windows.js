@@ -515,7 +515,7 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                     if(err.code==="SelfExclusion"){
                         //Login to virtual account instead.
                         oauth.forEach(function(ele, i){
-                            if(ele.id.match(/^VRTC/)){
+                            if(ele.id.match(/^VRTC|VRTH/)){
                                 liveapi.switch_account(ele.id);
                                 return;
                             }

@@ -6,7 +6,7 @@ define(["jquery", "lodash", "websockets/binary_websockets", "navigation/menu", "
     var show_error = function (err) { $.growl.error({ message: err.message }); console.error(err); };
     function refresh_active_symbols() {
         liveapi
-            .send({ active_symbols: 'brief' })
+            .send({ active_symbols: 'brief', landing_company: 'champion' })
             .then(function (data) {
               /* clean up the data! */
               var markets = _(data.active_symbols).groupBy('market').map(function(symbols){

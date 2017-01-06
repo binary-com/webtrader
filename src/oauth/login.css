@@ -55,13 +55,14 @@
 .oauth-dialog .login-dialog > div > span {
   display: block;
   margin-bottom: 10px;
+  min-height: 70px;
 }
 
 .oauth-dialog .login-dialog > div > button { width: 100%; }
 
 .oauth-dialog .login-dialog .login-pane {
   float: left;
-  width: 208px;
+  width: 211px;
 }
 
 .oauth-dialog .login-dialog .register-pane {

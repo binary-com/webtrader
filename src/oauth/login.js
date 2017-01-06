@@ -20,7 +20,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             collapsable:false,
             minimizable: false,
             maximizable: false,
-            width: 548,
+            width: 551,
             height: 180,
             'data-authorized': true,
             close: function () {
