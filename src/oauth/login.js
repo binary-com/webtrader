@@ -36,7 +36,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         });
         login_win.parent().css('overflow', 'visible');
 
-        init_state(root);
+        init_state(root, login_win);
         login_win.dialog('open');
 
         /* update dialog position, this way when dialog is resized it will not move*/
@@ -51,7 +51,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       });
     }
 
-    function init_state(root) {
+    function init_state(root, login_win) {
       var app_id = liveapi.app_id;
       var state = {
         route: { value: 'login' },
@@ -196,9 +196,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                   var account = data.new_account_virtual;
                   var oauth = [{id: account.client_id, token: account.oauth_token }];
                   local_storage.set('oauth', oauth);
-                  //liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
                   state.account.disabled = false;
-                  state.route.update('confirm');
+                  liveapi.cached.authorize()
+                  .then(function() { login_win.dialog('destroy'); })
+                  .catch(function(err) { console.error(err.message) });
+                  //state.route.update('confirm');
                })
                .catch(function(err){
                   console.error(err);
