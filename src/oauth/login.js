@@ -98,14 +98,14 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           state.login.disabled = true;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id;
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id;
       }
 
       state.route.update = function(route){
@@ -240,7 +240,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           var app_id = liveapi.app_id;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id;
       }
     }
 });
