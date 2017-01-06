@@ -382,7 +382,7 @@ var Cookies = {
         is_mf: /MF/gi.test(parts[0]),
         is_mlt: /MLT/gi.test(parts[0]),
         is_mx: /MX/gi.test(parts[0]),
-        is_cr: /CR/gi.test(parts[0])
+        is_cr: /CR|CH/gi.test(parts[0])
       };
     });
    /* when new accounts are created document.cookie doesn't change,
@@ -395,7 +395,7 @@ var Cookies = {
         is_mf: /MF/gi.test(id.id),
         is_mlt: /MLT/gi.test(id.id),
         is_mx: /MX/gi.test(id.id),
-        is_cr: /CR/gi.test(id.id)
+        is_cr: /CR|CH/gi.test(id.id)
       }
     }).filter(function(id) {
       return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;

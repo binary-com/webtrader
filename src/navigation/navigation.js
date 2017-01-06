@@ -81,8 +81,8 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
 
         function getType(id){
           if(!id) return;
-          var type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real"};
-          var id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
+          var type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real",VRTH:"Virtual"};
+          var id = id.match(/^(MLT|MF|VRTC|VRTH)/i) ? id.match(/^(MLT|MF|VRTC|VRTH)/i)[0] : "REAL";
           return type[id]+" Account";
         };
 
@@ -259,7 +259,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
     */
     function getLandingCompany() {
        return liveapi
-       .cached.send({landing_company: Cookies.residence() })
+       .cached.send({landing_company: Cookies.residence() || local_storage.get("authorize").country })
         .then(function(data) {
              var financial = data.landing_company.financial_company;
              var gaming = data.landing_company.gaming_company;
