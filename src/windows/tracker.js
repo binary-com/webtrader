@@ -30,10 +30,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
       });
     });
   }
-  function reopen_dialogs(symbols){
-    saved_states = states;
-    states = { };
-    save_states();
+  function reopen_dialogs(symbols, saved_states){
 
     var unique_modules = {
       assetIndex: '#nav-container .assetIndex',
@@ -82,7 +79,17 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
               .send({contracts_for: data.data.symbol.symbol})
               .then(function (res) {
                   require(['trade/tradeDialog'], function (tradeDialog) {
-                      tradeDialog.init(data.data.symbol, res.contracts_for, data.data.template);
+                      var dialog = tradeDialog.init(data.data.symbol, res.contracts_for, data.data.template);
+                      if(data.position.offset) {
+                         var x = data.position.offset.left;
+                         var y = data.position.offset.top;
+                          dialog.dialog('widget').animate({
+                              left: x + 'px',
+                              top: y + 'px'
+                          }, 1000, dialog.trigger.bind(dialog, 'animated'));
+                          /* update dialog option.position */
+                          dialog.dialog("option", "position", { my: x, at: y });
+                      }
                   });
               }).catch(console.error.bind(console));
           return true; // unsubscribe from login event
@@ -249,8 +256,20 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
   return {
     track: track,
     reopen: function() {
-      symbols_promise.then(reopen_dialogs);
+      symbols_promise.then(function(symbols){
+        saved_states = states;
+        states = { };
+        save_states();
+        reopen_dialogs(symbols, saved_states);
+      });
     },
+    /* used in case of connection drops in binary_websockets onclose() function */
+    reopen_trade_dialogs: function(trade_dialogs) {
+      symbols_promise.then(function(symbols){
+        reopen_dialogs(symbols, {tradeDialog: trade_dialogs});
+      });
+    },
+    get_trade_dialogs: function() { return _.cloneDeep(states.tradeDialog || []); },
     is_empty: function(){
       var ok = _.values(states).filter(function(s) {
         return _.isArray(s) || s.position.mode !== 'closed';

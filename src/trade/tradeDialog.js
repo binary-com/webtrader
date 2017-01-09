@@ -1006,6 +1006,7 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
           tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
         });
         // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
+        return dialog; // used in tracker to set position.
     }
 
     return {
