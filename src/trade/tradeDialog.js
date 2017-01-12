@@ -778,6 +778,8 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         /* update last_promise to invalidate previous requests */
         state.proposal.last_promise = new_proposal_promise;
         state.proposal.id = ''; /* invalidate last proposal.id */
+
+        dialog.update_track(dialog.get_template());
       };
 
       state.purchase.onclick = function() {
@@ -997,11 +999,14 @@ define(['lodash', 'jquery', 'moment', 'windows/windows', 'common/rivetsExtra', '
         }
         dialog.get_template = get_current_template.bind(undefined, state);
         dialog.set_template = set_current_template.bind(undefined, state);
+        saved_template && (saved_template.name !== undefined)
+                      && dialog.set_template(saved_template);
         dialog.hide_template_menu = function() { state.template.visible = false; }
         require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
           tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
         });
         // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
+        return dialog; // used in tracker to set position.
     }
 
     return {

@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2016-11-24 03:58+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/ru/>\n"
+"PO-Revision-Date: 2017-01-04 09:38+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.10-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "Тип СС %D"
@@ -293,10 +293,10 @@ msgid "Aroon Up Stroke"
 msgstr "Штрих индикатора Арун (вверх)"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Азиатские вниз"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Азиатские вверх"
 
 msgid "Asians"
 msgstr "Азиатские"
@@ -475,7 +475,7 @@ msgid "Construction"
 msgstr "Строительство"
 
 msgid "Contact Us"
-msgstr ""
+msgstr "Контакты"
 
 msgid "Continue"
 msgstr "Продолжить"
@@ -618,10 +618,10 @@ msgid "Deselect"
 msgstr "Отменить"
 
 msgid "Differs"
-msgstr ""
+msgstr "Отличается"
 
 msgid "Digits"
-msgstr "Цифры"
+msgstr "Цифровые"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Хотите установить расширение Webtrader для Chrome?"
@@ -714,10 +714,10 @@ msgid "Ends In/Out"
 msgstr "Заканчивается Внутри/Вне"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Закончится внутри"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Закончится вне"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
@@ -737,7 +737,7 @@ msgid "Error downloading .csv"
 msgstr "Ошибка при загрузке файла в формате .csv"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Ошибка при получении данных для %1"
 
 msgid "Error getting market information!"
 msgstr "Ошибка при получении рыночных данных!"
@@ -746,7 +746,7 @@ msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
 
 msgid "Even"
-msgstr ""
+msgstr "Чётное"
 
 msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
@@ -839,7 +839,7 @@ msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Выйдет за пределы"
 
 msgid "Gray"
 msgstr "Серый"
@@ -869,7 +869,7 @@ msgid "High Stroke"
 msgstr "Верхний штрих"
 
 msgid "High barrier"
-msgstr ""
+msgstr "Верхний барьер"
 
 msgid "High barrier offset"
 msgstr "Изменение верхнего барьера"
@@ -1155,7 +1155,7 @@ msgid "Low Stroke"
 msgstr "Нижний штрих"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Нижний барьер"
 
 msgid "Low barrier offset"
 msgstr "Изменение нижнего барьера"
@@ -1195,7 +1195,7 @@ msgid "Mass Period"
 msgstr "период Индекса массы"
 
 msgid "Matches"
-msgstr ""
+msgstr "Совпадёт"
 
 msgid "Max/Min Period"
 msgstr "Макс./мин. период"
@@ -1325,7 +1325,7 @@ msgid "No"
 msgstr "Нет"
 
 msgid "No touch"
-msgstr ""
+msgstr "Нет касания"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr ""
@@ -1378,7 +1378,7 @@ msgid "October"
 msgstr "Октябрь"
 
 msgid "Odd"
-msgstr ""
+msgstr "Нечётное"
 
 msgid "Offset"
 msgstr "Изменение"
@@ -1559,7 +1559,7 @@ msgstr ""
 "Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
 
 msgid "Please enter time in the format HH:MM"
-msgstr ""
+msgstr "Пожалуйста, введите время в формате ЧЧ:ММ"
 
 msgid "Please enter your city address"
 msgstr "Пожалуйста, введите адрес"
@@ -1901,10 +1901,10 @@ msgid "Spreads"
 msgstr "Спреды"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "Спреды вниз"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "Спреды вверх"
 
 msgid "Stake"
 msgstr "Ставка"
@@ -1934,7 +1934,7 @@ msgid "Stays In/Goes Out"
 msgstr "Останется Внутри/Выйдет за пределы"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Останется внутри"
 
 msgid "Stocks trading experience"
 msgstr "Опыт торговли акциями"
@@ -2088,7 +2088,7 @@ msgid "Time interval"
 msgstr "Врем. интервал"
 
 msgid "Time out until"
-msgstr ""
+msgstr "Перерыв до"
 
 msgid "Time period"
 msgstr "Период"
@@ -2155,7 +2155,7 @@ msgid "Total Profit/Loss"
 msgstr "Общая прибыль/убыток"
 
 msgid "Touch"
-msgstr ""
+msgstr "Касание"
 
 msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
@@ -2230,7 +2230,7 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Under"
-msgstr ""
+msgstr "Под"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "К сожалению, Ваш браузер не поддерживает данные элементы"

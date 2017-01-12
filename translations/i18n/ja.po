@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2016-12-09 07:12+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2017-01-03 19:01+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
 "Language: ja\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.10-dev\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA タイプ"
@@ -289,10 +289,10 @@ msgid "Aroon Up Stroke"
 msgstr "アルーンアップ ストローク"
 
 msgid "Asian down"
-msgstr ""
+msgstr "ASIAN DOWN"
 
 msgid "Asian up"
-msgstr ""
+msgstr "ASIAN UP"
 
 msgid "Asians"
 msgstr "Asians"
@@ -613,7 +613,7 @@ msgid "Deselect"
 msgstr "選択解除"
 
 msgid "Differs"
-msgstr ""
+msgstr "DIFFERS"
 
 msgid "Digits"
 msgstr "数字"
@@ -712,10 +712,10 @@ msgid "Ends In/Out"
 msgstr "END-IN/END-OUT"
 
 msgid "Ends in"
-msgstr ""
+msgstr "END-IN"
 
 msgid "Ends out"
-msgstr ""
+msgstr "END-OUT"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
@@ -744,7 +744,7 @@ msgid "Estimated Net Worth"
 msgstr "推定純資産"
 
 msgid "Even"
-msgstr ""
+msgstr "偶数"
 
 msgid "Exclude me from the website until"
 msgstr "特定日まで利用禁止（日時単位）"
@@ -837,7 +837,7 @@ msgid "Further instructions"
 msgstr "詳細説明"
 
 msgid "Goes out"
-msgstr ""
+msgstr "BREAK-OUT"
 
 msgid "Gray"
 msgstr "グレー"
@@ -867,7 +867,7 @@ msgid "High Stroke"
 msgstr "高ストローク"
 
 msgid "High barrier"
-msgstr ""
+msgstr "上限バリア"
 
 msgid "High barrier offset"
 msgstr "上限追加バリア値"
@@ -1149,7 +1149,7 @@ msgid "Low Stroke"
 msgstr "低ストローク"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "下限バリア"
 
 msgid "Low barrier offset"
 msgstr "下限追加バリア値"
@@ -1189,7 +1189,7 @@ msgid "Mass Period"
 msgstr "マスインデックス期間"
 
 msgid "Matches"
-msgstr ""
+msgstr "MATCHE"
 
 msgid "Max/Min Period"
 msgstr "最長/最短 期間"
@@ -1315,7 +1315,7 @@ msgid "No"
 msgstr "いいえ"
 
 msgid "No touch"
-msgstr ""
+msgstr "NO-TOUCH"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "トークンは複数の範囲を持つことができます"
@@ -1365,7 +1365,7 @@ msgid "October"
 msgstr "10月"
 
 msgid "Odd"
-msgstr ""
+msgstr "奇数"
 
 msgid "Offset"
 msgstr "追加"
@@ -1886,10 +1886,10 @@ msgid "Spreads"
 msgstr "スプレッド"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "SPREAD DOWN"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "SPREAD UP"
 
 msgid "Stake"
 msgstr "購入価格"
@@ -1919,7 +1919,7 @@ msgid "Stays In/Goes Out"
 msgstr "STAY-IN/BREAK-OUT"
 
 msgid "Stays in"
-msgstr ""
+msgstr "STAY-IN"
 
 msgid "Stocks trading experience"
 msgstr "株取引の経験"
@@ -2138,7 +2138,7 @@ msgid "Total Profit/Loss"
 msgstr "合計　損益"
 
 msgid "Touch"
-msgstr ""
+msgstr "TOUCH"
 
 msgid "Touch/No Touch"
 msgstr "TOUCH/NO-TOUCH"
@@ -2211,7 +2211,7 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Under"
-msgstr ""
+msgstr "未満"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"

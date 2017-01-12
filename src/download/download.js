@@ -420,34 +420,30 @@ define(["jquery", "windows/windows","websockets/binary_websockets","navigation/m
                 var tp = $("<li>");
                 timePeriodValue = convertToTimeperiodObject(timePeriod.code).timeInSeconds();
                 tp.append(timePeriod.name);
-                if (delay_amount > timePeriodValue) {
-                    tp.addClass("ui-button-disabled ui-state-disabled");
-                } else {
-                    tp.data("timePeriodObject", timePeriod);
-                    tp.click(function() {
-                        var timePeriodObject = $(this).data("timePeriodObject");
-                        $(".download_timePeriod")
-                            .data("timePeriodObject", timePeriodObject)
-                            .html($(this).data("timePeriodObject").name);
-                        $(".download_timePeriod_container > ul").toggle();
-                        var isDayCandles = timePeriodObject.code === '1d';
-                        var $download_fromTime = $html.find(".download_fromTime");
-                        if (isDayCandles) {
-                            $download_fromTime.val("00:00");
-                            $download_fromTime.hide()
-                        } else {
-                            $download_fromTime.show();
-                        }
-                    });
-                    if (!_.isUndefined($download_timePeriod.data("timePeriodObject")) && !isChecked) {
-                        var obj = $download_timePeriod.data("timePeriodObject");
-                        var value = convertToTimeperiodObject(obj.code).timeInSeconds();
-                        if(value < delay_amount){
-                            tp.click();
-                            $(".download_timePeriod_container > ul").toggle();
-                        }
-                        isChecked = true;
+                tp.data("timePeriodObject", timePeriod);
+                tp.click(function() {
+                    var timePeriodObject = $(this).data("timePeriodObject");
+                    $(".download_timePeriod")
+                        .data("timePeriodObject", timePeriodObject)
+                        .html($(this).data("timePeriodObject").name);
+                    $(".download_timePeriod_container > ul").toggle();
+                    var isDayCandles = timePeriodObject.code === '1d';
+                    var $download_fromTime = $html.find(".download_fromTime");
+                    if (isDayCandles) {
+                        $download_fromTime.val("00:00");
+                        $download_fromTime.hide()
+                    } else {
+                        $download_fromTime.show();
                     }
+                });
+                if (!_.isUndefined($download_timePeriod.data("timePeriodObject")) && !isChecked) {
+                    var obj = $download_timePeriod.data("timePeriodObject");
+                    var value = convertToTimeperiodObject(obj.code).timeInSeconds();
+                    if(value < delay_amount){
+                        tp.click();
+                        $(".download_timePeriod_container > ul").toggle();
+                    }
+                    isChecked = true;
                 }
                 subMenu.append(tp);
 
