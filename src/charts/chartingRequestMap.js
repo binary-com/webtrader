@@ -198,12 +198,13 @@ define(['lokijs', 'lodash', 'jquery', 'websockets/binary_websockets', 'jquery-gr
             var key = map.keyFor(options.symbol, options.granularity);
 
             var granularity = options.granularity || 0;
-            var style = options.style || 'ticks';
+            //If granularity = 0, then style should be ticks
+            var style = (granularity == 0 || !options.style) ? 'ticks' : options.style;
 
             var is_tick = true;
             if(typeof granularity === 'string') {
-                if ($.trim(granularity) === '0') {
-                } else if($.trim(granularity).toLowerCase() === '1t') {
+                if ($.trim(granularity) == '0') {
+                } else if($.trim(granularity).toLowerCase() == '1t') {
                     granularity = convertToTimeperiodObject(granularity).timeInSeconds();
                 } else {
                     is_tick = false;
