@@ -17,7 +17,6 @@ BBANDS = function(data, options, indicators) {
 
     //this is not great way of doing it
     this.precision = guessDigits(_.map(this.ma.indicatorData.slice(0, options.period * 2), function(f) { return f.value; })) || 4;
-    console.log('precision', this.precision);
 
     /*
      Bollinger Bands:
