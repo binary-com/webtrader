@@ -26,7 +26,7 @@ SMA = function(data, options, indicators) {
         }
         this.priceData.push(data[index]);
     }
-    console.log('Last price data : ', this.priceData[this.priceData.length - 1]);
+    //console.log('Last price data : ', this.priceData[this.priceData.length - 1]);
 
 };
 

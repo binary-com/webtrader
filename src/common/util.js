@@ -473,3 +473,16 @@ function download_file_in_browser(filename, type, content){
                 }
             }
 }
+
+function guessDigits(prices) {
+    var defaultDigits = 0;
+    (prices || []).forEach(function(price) {
+        var priceStr = (price + '');
+        var priceSplitted = priceStr.split('.') || [];
+        if (priceSplitted.length > 1) {
+            var len = priceSplitted[1].length;
+            if ( len > defaultDigits) defaultDigits = len;
+        }
+    });
+    return defaultDigits || 4;
+}

@@ -15,6 +15,9 @@ BBANDS = function(data, options, indicators) {
     //middle, upper, lower, arearange
     this.uniqueID = [uuid(), uuid(), uuid(), uuid()];
 
+    //this is not great way of doing it
+    this.precision = guessDigits(_.map(this.ma.indicatorData.slice(0, options.period * 2), function(f) { return f.value; })) || 4;
+
     /*
      Bollinger Bands:
      * Middle Band = 20-day simple moving average (SMA)
@@ -22,8 +25,10 @@ BBANDS = function(data, options, indicators) {
      * Lower Band = 20-day SMA - (20-day standard deviation of price x 2)
      */
     for (var index = 0; index < data.length; index++) {
-        var upper = toFixed(this.ma.indicatorData[index].value + this.stddev.indicatorData[index].value * options.devUp, 4);
-        var lower = toFixed(this.ma.indicatorData[index].value - this.stddev.indicatorData[index].value * options.devDn, 4);
+        var ma = this.ma.indicatorData[index].value;
+        var stddev = this.stddev.indicatorData[index].value;
+        var upper = toFixed(ma + stddev * options.devUp, this.precision);
+        var lower = toFixed(ma - stddev * options.devDn, this.precision);
         this.upperBandData.push({ time : data[index].time, value : upper });
         this.lowerBandData.push({ time : data[index].time, value : lower });
         this.areaRangeData.push({ time : data[index].time, value : [upper, lower] });
@@ -37,8 +42,8 @@ BBANDS.prototype.constructor = BBANDS;
 BBANDS.prototype.addPoint = function(data) {
     var ma = this.ma.addPoint(data)[0].value;
     var stddev = this.stddev.addPoint(data)[0].value;
-    var upper = toFixed(ma + stddev * this.options.devUp, 4);
-    var lower = toFixed(ma - stddev * this.options.devDn, 4);
+    var upper = toFixed(ma + stddev * this.options.devUp, this.precision);
+    var lower = toFixed(ma - stddev * this.options.devDn, this.precision);
     this.indicatorData = this.ma.indicatorData;
     this.upperBandData.push({ time : data.time, value : upper });
     this.lowerBandData.push({ time : data.time, value : lower });
@@ -62,8 +67,8 @@ BBANDS.prototype.update = function(data) {
     var index = this.indicatorData.length - 1;
     var ma = this.ma.update(data)[0].value;
     var stddev = this.stddev.update(data)[0].value;
-    var upper = toFixed(ma + stddev * this.options.devUp, 4);
-    var lower = toFixed(ma - stddev * this.options.devDn, 4);
+    var upper = toFixed(ma + stddev * this.options.devUp, this.precision);
+    var lower = toFixed(ma - stddev * this.options.devDn, this.precision);
     this.indicatorData = this.ma.indicatorData;
     this.upperBandData[index].value = upper;
     this.lowerBandData[index].value = lower;
