@@ -48,7 +48,9 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'node_modules/',
                         src: [
-                            'jquery-ui-iconfont/jquery-ui.icon-font.css', 'jquery-ui-iconfont/font/*',
+                            'jquery-ui-iconfont/jquery-ui.icon-font.css',
+                            'jquery-ui-iconfont/font/*',
+                            'regenerator-runtime/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                     },
@@ -445,7 +447,15 @@ module.exports = function (grunt) {
           options: {
             sourceMap: true,
             presets: ['es2015', 'stage-0'],
-            "plugins": ["transform-es2015-modules-amd"]
+            "plugins": [
+              "transform-es2015-modules-amd",
+              ["transform-runtime", {
+                "helpers": false,
+                "polyfill": false,
+                "regenerator": true,
+                "moduleName": "babel-runtime"
+              }]
+            ]
           },
           dist: {
             files: [

@@ -29,7 +29,8 @@ requirejs.config({
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level',
         'paralleljs' : 'lib/parallel_js/lib/parallel',
-        'binary-style' : '<style-url>/binary'
+        'binary-style' : '<style-url>/binary',
+        'babel-runtime/regenerator' : 'lib/regenerator-runtime/runtime'
     },
     map: {
         '*': {
@@ -39,6 +40,9 @@ requirejs.config({
     },
     waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
+        "babel-runtime/regenerator": {
+            exports: 'regeneratorRuntime'
+        },
         "websockets/binary_websockets": {
           deps:('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? [] : ['es6-promise']
         },
