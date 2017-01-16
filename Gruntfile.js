@@ -70,7 +70,7 @@ module.exports = function (grunt) {
                             'clipboard/dist/clipboard.min.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
-                            'requirejs/require.js',
+                            'alameda/alameda.js',
                             'require-css/css.min.js',
                             'text/text.js',
                             'lodash/dist/lodash.min.js',

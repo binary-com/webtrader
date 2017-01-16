@@ -49,6 +49,7 @@
     "jquery-ui-iconfont": "mkkeck/jquery-ui-iconfont#^1.4.1",
     "clipboard": "^1.5.10",
     "parallel.js": "paralleljs#*",
-    "intl": "^1.2.5"
+    "intl": "^1.2.5",
+    "alameda": "^1.1.0"
   }
 }
