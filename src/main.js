@@ -194,6 +194,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
             //Register async loading of real account opening window
             load_ondemand($navMenu.find("a.withdraw"), 'click', 'Loading Withdraw funds ...', 'cashier/withdraw',
                 function (withdraw) {
+                    withdraw = withdraw.default || withdraw;
                     var elem = $navMenu.find("a.withdraw");
                     withdraw.init(elem);
                     elem.click();
