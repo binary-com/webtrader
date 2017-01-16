@@ -473,8 +473,8 @@ msgstr "Xác nhận chuyển khoản"
 msgid "Connection closed"
 msgstr "Kết nối đã đóng"
 
-msgid "Connection error. Refresh the page"
-msgstr "Lỗi kết nối. Làm mới lại trang"
+msgid "Connection error"
+msgstr "Lỗi kết nối"
 
 msgid "Construction"
 msgstr "Xây dựng"

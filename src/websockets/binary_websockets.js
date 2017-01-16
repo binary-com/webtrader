@@ -36,8 +36,8 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         ws.addEventListener('message', onmessage);
 
         ws.addEventListener('error', function(event) {
-            $.growl.error({message: 'Connection error. Refresh the page.'.i18n().i18n()});
-            //Clear everything. No more changes on chart. Refresh of page is needed!
+            $.growl.error({message: 'Connection error.'.i18n()});
+            onclose(); // try to reconnect
         });
 
         return ws;

@@ -467,8 +467,8 @@ msgstr "Confirmer le virement"
 msgid "Connection closed"
 msgstr "Connexion terminée"
 
-msgid "Connection error. Refresh the page"
-msgstr "Erreur de connexion. Veuillez actualiser la page."
+msgid "Connection error"
+msgstr "Erreur de connexion"
 
 msgid "Construction"
 msgstr "Construction"
