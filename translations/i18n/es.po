@@ -468,8 +468,8 @@ msgstr "Confirmar la transferencia"
 msgid "Connection closed"
 msgstr "Conexión cerrada"
 
-msgid "Connection error. Refresh the page"
-msgstr "Error de conexión. Actualice la página"
+msgid "Connection error"
+msgstr "Error de conexión"
 
 msgid "Construction"
 msgstr "Construcción"

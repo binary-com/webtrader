@@ -459,8 +459,8 @@ msgstr "確認轉帳"
 msgid "Connection closed"
 msgstr "連結已關閉"
 
-msgid "Connection error. Refresh the page"
-msgstr "連結出錯:請重新整理頁面"
+msgid "Connection error"
+msgstr ""
 
 msgid "Construction"
 msgstr "建構"
