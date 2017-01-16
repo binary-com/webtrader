@@ -2,7 +2,14 @@
  * Created by amin on June 26, 2016.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'cashier/currency', 'common/rivetsExtra', 'lodash', 'moment'], function($, liveapi, windows, currencyDialog, rv, _, moment) {
+import $ from 'jquery';
+import liveapi from 'websockets/binary_websockets';
+import windows from 'windows/windows';
+import currencyDialog from 'cashier/currency';
+import rv from 'common/rivetsExtra';
+import _ from 'lodash';
+import moment from 'moment';
+
     require(['text!cashier/deposit.html']);
     require(['css!cashier/deposit.css']);
     var deposit_win = null;
@@ -13,7 +20,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'cashier/cu
       $.growl.error({ message: err.message });
     };
 
-    function init(li) {
+    export function init(li) {
       li.click(() => {
           if(!deposit_win) {
               liveapi.cached.authorize().then(data => {
@@ -162,7 +169,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'cashier/cu
       }).catch(error_handler);
     }
 
-    return {
+    export default {
       init: init
     }
-});

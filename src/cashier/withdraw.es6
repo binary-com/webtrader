@@ -2,7 +2,14 @@
  * Created by amin on July 16, 2016.
  */
 
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'cashier/currency', 'lodash', 'moment'], function($, liveapi, windows, rv, currencyDialog, _, moment) {
+import $ from 'jquery';
+import liveapi from 'websockets/binary_websockets';
+import windows from 'windows/windows';
+import rv from 'common/rivetsExtra';
+import currencyDialog from 'cashier/currency';
+import _ from 'lodash';
+import moment from 'moment';
+
     require(['text!cashier/withdraw.html']);
     require(['css!cashier/withdraw.css']);
 
@@ -286,5 +293,4 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       };
     };
 
-    return new Withdraw();
-});
+    export default new Withdraw();

@@ -1,7 +1,11 @@
 /**
  * Created by amin on July 31, 2016.
  */
-define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], function($, chartWindow, rv, _) {
+import $ from 'jquery';
+import chartWindow from 'charts/chartWindow';
+import rv from 'common/rivetsExtra';
+import _ from 'lodash';
+
   require(['text!trade/tradeTemplateManager.html']);
 
   if(!local_storage.get('trade-templates')) {
@@ -272,7 +276,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
     }
   }
 
-  return {
-    init: (root, dialog) => new TradeTemplateManager(root, dialog)
+  export const init = (root, dialog) => new TradeTemplateManager(root, dialog);
+  export default {
+    init
   }
-});

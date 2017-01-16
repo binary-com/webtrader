@@ -1,15 +1,18 @@
 /**
  * Created by amin on July 31, 2016.
  */
-define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], function($, chartWindow, rv, _) {
-  require(['text!charts/chartTemplateManager.html']);
+
+import $ from 'jquery';
+import chartWindow from 'charts/chartWindow';
+import rv from 'common/rivetsExtra';
+import _ from 'lodash';
 
   if(!local_storage.get('templates')) {
     local_storage.set('templates', []);
   }
 
   class ChartTemplateManager {
-    constructor(root, dialog_id) { 
+    constructor(root, dialog_id) {
       const _this = this;
       const templates = local_storage.get("templates");
       templates.forEach(function(tmpl){
@@ -27,6 +30,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
     }
 
     init_state(root, dialog_id) {
+
       const chart = $('#' + dialog_id + '_chart').highcharts();
       const state = {
         route: { value: 'menu' },
@@ -49,7 +53,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
       if(_.findIndex(templates.array, t => t.random === current_tmpl.random) !== -1) {
         templates.current = current_tmpl;
       }
-      
+
       route.update = value => {
         route.value = value;
       };
@@ -109,7 +113,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
             if(hash !== data.random){
               throw "Invalid JSON file".i18n();
             }
-             
+
             if(_this.isDuplicate(data, array)){
               return;
             }
@@ -121,7 +125,7 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
             $.growl.error({message:e});
             return;
           }
-          
+
           // Rename duplicate template names.
           let file = 1,
               name = data.name;
@@ -263,9 +267,9 @@ define(['jquery', 'charts/chartWindow', 'common/rivetsExtra', 'lodash'], functio
       this.view && this.view.unbind();
       this.view = null;
     }
-  }
+}
 
-  return {
-    init: (root, dialog_id) => new ChartTemplateManager(root, dialog_id)
+  export const init = (root, dialog_id) => new ChartTemplateManager(root, dialog_id);
+  export default {
+    init,
   }
-});

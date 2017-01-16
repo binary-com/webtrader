@@ -1,8 +1,13 @@
-define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra', 'text!cashier/currency.html'], function($, liveapi, windows, rv, html) {
+import $ from 'jquery';
+import liveapi from 'websockets/binary_websockets';
+import windows from 'windows/windows';
+import rv from 'common/rivetsExtra';
+import html from 'text!cashier/currency.html';
+
     require(['text!cashier/currency.html']);
 
     var check_promise = null;
-    var check_currency = () => new Promise((resolve, reject) => {
+    var check_currency_async = () => new Promise((resolve, reject) => {
         var $html = $(html);
         var win = windows.createBlankWindow($html, {
             dialogClass: "dialog-confirm",
@@ -45,14 +50,16 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         win.dialog('open');
     });
 
-    return {
-      check_currency: () => {
-        if(check_promise) { return check_promise; }
-        check_promise = check_currency().catch(up => {
-          check_promise = null;
-          throw up;
-        });
-        return check_promise;
-      }
+    export const check_currency = () => {
+      if(check_promise) { return check_promise; }
+      check_promise = check_currency_async().catch(up => {
+        check_promise = null;
+        throw up;
+      });
+      return check_promise;
     }
-});
+
+    export default {
+      check_currency
+    }
+//});
