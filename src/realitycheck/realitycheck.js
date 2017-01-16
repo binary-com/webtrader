@@ -181,7 +181,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     });
 
-    liveapi.events.on('logout', function() {
+    liveapi.events.on('reset_realitycheck', function() {
         logout();
         local_storage.remove('realitycheck');
     });
