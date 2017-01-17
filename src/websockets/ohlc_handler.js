@@ -30,6 +30,11 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','jqu
     liveapi.events.on('candles', function (data) {
         var key = (data.echo_req.ticks_history + data.echo_req.granularity).toUpperCase();
         for ( var index in data.candles ) {
+            //This is for microsoft products. 
+            //They some how also include the include() while iterating over the object.
+            if(index === 'includes'){
+              return;
+            }
             var eachData = data.candles[index],
                     open  = parseFloat(eachData.open),
                     high  = parseFloat(eachData.high),
@@ -44,6 +49,10 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','jqu
         //For tick history handling
         var key = (data.echo_req.ticks_history + '0').toUpperCase();
         for (var index in data.history.times) {
+            //Look above for why I did this.
+            if(index === 'includes'){
+              return;
+            }
             var time = parseInt(data.history.times[index]) * 1000,
                 price = parseFloat(data.history.prices[index]);
             processCandles(key, time, price, price, price, price);
