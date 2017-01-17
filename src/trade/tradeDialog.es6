@@ -793,7 +793,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     dialog.update_track(dialog.get_template());
   };
 
-  state.purchase.onclick = function() {
+  state.purchase.onclick = async function() {
     state.purchase.loading = true;
     var show = function(div){
       div.appendTo(root);
@@ -846,35 +846,33 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if(!liveapi.is_authenticated()) {
         $.growl.warning({ message: 'Please log in'.i18n() });
         state.purchase.loading = false;
+        return;
     }
-    else {
-      require(['trade/tradeConf'], function(tradeConf) {
-        liveapi.send({
-              buy: state.proposal.id,
-              price: state.proposal.ask_price * 1,
-           })
-           .then(function(data){
-                extra.contract_id = data.buy.contract_id;
-                extra.transaction_id = data.buy.transaction_id;
-                if(extra.show_tick_chart || extra.category === 'Digits') {
-                  liveapi.proposal_open_contract.subscribe(extra.contract_id);
-                }
-                tradeConf.init(data, extra, show, hide, symbol);
-           })
-           .catch(function(err){
-             state.purchase.loading = false;
-             $.growl.error({ message: err.message });
-             console.error(err);
-             /*Logout if the error code is 42*/
-             if (err.code === 'InvalidToken') {
-               liveapi.invalidate();
-             } else {
-               /* trigger a new proposal stream */
-               state.proposal.onchange();
-             }
-           });
-      });
-     }
+    try {
+        const [tradeConf] = await require(['trade/tradeConf']);
+        const data = await liveapi.send({
+                buy: state.proposal.id,
+                price: state.proposal.ask_price * 1,
+             });
+        extra.contract_id = data.buy.contract_id;
+        extra.transaction_id = data.buy.transaction_id;
+        if(extra.show_tick_chart || extra.category === 'Digits') {
+          liveapi.proposal_open_contract.subscribe(extra.contract_id);
+        }
+        tradeConf.init(data, extra, show, hide, symbol);
+    }
+    catch(err) {
+        state.purchase.loading = false;
+        $.growl.error({ message: err.message });
+        console.error(err);
+        /*Logout if the error code is 42*/
+        if (err.code === 'InvalidToken') {
+          liveapi.invalidate();
+        } else {
+          /* trigger a new proposal stream */
+          state.proposal.onchange();
+        }
+    }
   };
 
   state.categories.array = _(available).map('contract_category_display').uniq().value();

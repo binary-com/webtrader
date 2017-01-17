@@ -1,9 +1,8 @@
 /**
  * Created by arnab on 2/11/15.
  */
-
 requirejs.config({
-    baseUrl: ".",
+    baseUrl: './',
     paths: {
         'jquery': "lib/jquery/dist/jquery.min",
         'jquery-ui': "lib/jquery-ui/jquery-ui.min",
@@ -30,7 +29,8 @@ requirejs.config({
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels" : 'charts/indicators/level',
         'paralleljs' : 'lib/parallel_js/lib/parallel',
-        'binary-style' : '<style-url>/binary'
+        'binary-style' : '<style-url>/binary',
+        'babel-runtime/regenerator' : 'lib/regenerator-runtime/runtime'
     },
     map: {
         '*': {
@@ -40,8 +40,11 @@ requirejs.config({
     },
     waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
+        "babel-runtime/regenerator": {
+            exports: 'regeneratorRuntime'
+        },
         "websockets/binary_websockets": {
-          deps:[('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? '' : 'es6-promise']
+          deps:('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? [] : ['es6-promise']
         },
         "timepicker": {
             deps:['jquery-ui', 'jquery']
@@ -96,7 +99,7 @@ require(['modernizr'], function(){
 })
 
 /* Initialize the websocket as soon as possible */
-require(['websockets/binary_websockets','text!oauth/app_id.json']);
+require(['websockets/binary_websockets','text!./oauth/app_id.json']);
 
 var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
 require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) {
