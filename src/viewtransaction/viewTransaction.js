@@ -338,9 +338,9 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
           longcode: proposal.longcode,
           validation: proposal.validation_error
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
-                || (proposal.is_expired && 'This contract has expired'.i18n()) || '-',
+                || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
           table: {
-            is_expired: proposal.is_expired,
+            is_ended: proposal.is_settleable || proposal.is_sold,
             currency: (proposal.currency ||  'USD') + ' ',
             current_spot_time: proposal.current_spot_time,
             current_spot: proposal.current_spot,
@@ -493,7 +493,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
                 state.table.exit_tick = perv_tick.quote;
                 state.table.exit_tick_time = perv_tick.epoch*1;
                 state.validation = 'This contract has expired'.i18n();
-                state.table.is_expired = true;
+                state.table.is_ended = true;
               }
               clean_up();
             }
@@ -563,7 +563,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
       state.chart.type = 'candles';
     }
 
-    if(!state.table.is_expired) {
+    if(!state.table.is_ended) {
       update_live_chart(state, granularity);
     }
 
@@ -607,11 +607,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
             chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
           });
         }
-        if(data.history && !state.table.exit_tick_time && state.table.is_expired && state.table.contract_type != "SPREAD") {
+        if(data.history && !state.table.exit_tick_time && state.table.is_ended && state.table.contract_type != "SPREAD") {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
-        if(data.candles && !state.table.exit_tick_time && state.table.is_expired) {
+        if(data.candles && !state.table.exit_tick_time && state.table.is_ended) {
           get_tick_value(state.chart.symbol, state.table.date_expiry -2).then(function(data){
             var history = data.history;
             if(history.times.length !== 1) return;
