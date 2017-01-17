@@ -6,7 +6,13 @@
         </tr>
         <tr rv-each-row="fields" rv-value="row">
           <td>{row.title}</td>
-          <td> <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max"></div> </td>
+          <td rv-if="row.type | eq 'slider'">
+            <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max"></div>
+          </td>
+          <td rv-if="row.type | eq 'colorpicker'">
+            <div rv-colorpicker="row.value"></div>
+            <div class="colorpicker-preview" rv-css-background="row.value"></div>
+          </td>
         </tr>
         <tr>
             <td><strong>Period</strong></td>

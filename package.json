@@ -64,6 +64,7 @@
   "dependencies": {
     "jquery-ui-iconfont": "^2.1.0",
     "node-sass": "^3.10.0",
-    "regenerator-runtime": "^0.10.1"
+    "regenerator-runtime": "^0.10.1",
+    "tinycolor2": "^1.4.1"
   }
 }

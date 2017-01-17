@@ -347,6 +347,48 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         $(el).dialog('option', this.args[0], value);
     }
 
+    require(['tinycolor', 'colorpicker']).then(function(tinycolor) {
+      window.tinycolor = window.tinycolor || tinycolor[0];
+      rv.binders.colorpicker = {
+          priority: 96,
+          publishes: true,
+          bind: function (el) {
+              var div = $(el);
+
+              var publish = this.publish;
+              var model = this.model;
+
+              div.ColorPickerSliders({
+                size: 'sm',
+                flat: true,
+                placement: 'bottom',
+                swatches: false,
+                grouping: false,
+                color: '#cd0a0a',
+                labels: {
+                  hslhue: '',
+                  hslsaturation: '',
+                  hsllightness: '',
+                  preview: ''
+                },
+                order: {
+                  hsl: 1,
+                },
+                onchange: function(container, color) {
+                  var rgba = 'rgba('+ color.rgba.r + ',' + color.rgba.g + ','+ color.rgba.b + ','+ color.rgba.a + ')';
+                  publish(rgba)
+                }
+              });
+              div.find('.cp-hslsaturation').hide();
+              div.find('.cp-hsllightness').hide();
+          },
+          unbind: function (el) { },
+          routine: function (el, value) {
+              $(el).trigger("colorpickersliders.updateColor", value);
+          }
+      }
+    })
+
     rv.binders.slider = {
         priority: 95,
         publishes: true,

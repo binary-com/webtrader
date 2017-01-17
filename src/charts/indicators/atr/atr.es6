@@ -7,7 +7,8 @@ import _ from "lodash";
 import rv from 'common/rivetsExtra';
 import 'jquery-ui';
 import 'color-picker';
-import 'ddslick'
+import 'ddslick';
+import 'colorpicker';
 
 let before_add_callback = null;
 

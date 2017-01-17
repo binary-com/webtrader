@@ -50,6 +50,7 @@ module.exports = function (grunt) {
                         src: [
                             'jquery-ui-iconfont/jquery-ui.icon-font.css',
                             'jquery-ui-iconfont/font/*',
+                            'tinycolor2/dist/tinycolor-min.js',
                             'regenerator-runtime/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
@@ -74,6 +75,7 @@ module.exports = function (grunt) {
                             'es6-promise/promise.min.js',
                             'alameda/alameda.js',
                             'require-css/css.min.js',
+                            'bootstrap-colorpickersliders/dist/bootstrap.colorpickersliders.min.*',
                             'text/text.js',
                             'lodash/dist/lodash.min.js',
                             'underscore/underscore-min.js',

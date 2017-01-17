@@ -5,7 +5,8 @@
     "short_display_name": "ATR",
     "editable": true,
     "fields": [
-      {"title": "Period", "min": 1, "max": 100, "value": 14, "type": "slider"}
+      {"title": "Period", "min": 1, "max": 100, "value": 14, "type": "slider"},
+      {"title": "Stroke", "value": "#cd0a0a", "type": "colorpicker"}
     ],
     "category": [
       "Volatility Indicators"
