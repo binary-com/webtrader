@@ -4,6 +4,9 @@
     "long_display_name": "Average True Range",
     "short_display_name": "ATR",
     "editable": true,
+    "fields": [
+      {"title": "Period", "min": 1, "max": 100, "value": 14, "type": "slider"}
+    ],
     "category": [
       "Volatility Indicators"
     ],

@@ -4,6 +4,10 @@
           <td colspan="2" class="atr-description">
           </td>
         </tr>
+        <tr rv-each-row="fields" rv-value="row">
+          <td>{row.title}</td>
+          <td> <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max"></div> </td>
+        </tr>
         <tr>
             <td><strong>Period</strong></td>
             <td><input value="14" min="1" max="200" class="atr_input_width_for_period"/></td>

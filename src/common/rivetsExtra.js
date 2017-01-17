@@ -347,6 +347,39 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         $(el).dialog('option', this.args[0], value);
     }
 
+    rv.binders.slider = {
+        priority: 95,
+        publishes: true,
+        bind: function (el) {
+            var div = $(el);
+            var handle = $('<div class="ui-slider-handle"></div>');
+            div.append(handle);
+
+            var publish = this.publish;
+            var model = this.model;
+
+            div.slider({
+              min: div.attr('min')*1 || 1,
+              max: div.attr('max')*1 || 100,
+              create: function() {
+                handle.text($(this).slider("value"));
+              },
+              slide: function( event, ui ) {
+                handle.text(ui.value);
+                model.value = ui.value*1;
+                //publish(ui.value*1);
+              }
+            });
+        },
+        unbind: function (el) {
+            $(el).slider('destroy');
+        },
+        routine: function (el, value) {
+            $(el).slider('value', value);
+            $(el).find('> div').text(value);
+        }
+    }
+
     /* trun input element in jquery-ui-datepicker */
     rv.binders.datepicker = {
         priority: 94,
