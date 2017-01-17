@@ -31,9 +31,9 @@ const check_currency_async = () => new Promise((resolve, reject) => {
     });
 
     var state = {
-      disabled: false,
-      value: 'USD',
-      array: ['USD', 'EUR', 'GBP', 'AUD'],
+      disabled: true,
+      value: 'Select a value',
+      array: ['Select a value'],
       continue: () => {
         state.disabled = true;
         liveapi.send({ set_account_currency: state.value })
@@ -45,6 +45,11 @@ const check_currency_async = () => new Promise((resolve, reject) => {
         reject({ message: 'Please set currency.'.i18n() });
       }
     };
+    liveapi.cached.send({payout_currencies:1}).then((data) => {
+      state.disabled = false;
+      state.array = data.payout_currencies;
+      state.value = data.payout_currencies[0];
+    }).catch(()=> reject({message: 'Please try again after few minutes.'.i18n()}));
 
     var win_view = rv.bind($html[0], state);
     win.dialog('open');
