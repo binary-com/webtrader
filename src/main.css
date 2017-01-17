@@ -328,6 +328,10 @@ button[disabled] {
     padding: 0.5em 1em 0em 1em;
     text-align: center
 }
+.dialog-confirm.ui-dialog .ui-selectmenu-menu ul{
+  background: #fff;
+  padding: 0px;
+}
 /* Hide Dialog title-bar*/
 .dialog-confirm.ui-dialog .ui-dialog-titlebar {
     display: none;
