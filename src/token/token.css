@@ -23,13 +23,12 @@
 .token-dialog .token-list-pane > span {
   display: inline;
   position: relative;
-  left: 10px;
-  top: 3px;
+  left: 12px;
   color: #aaa;
 }
 .token-dialog .token-list-pane input.token-search {
   display:  inline;
-  padding-left: 20px;
+  padding-left: 25px;
   width: 200px;
   line-height: 28px;
 }
