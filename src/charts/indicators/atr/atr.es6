@@ -36,7 +36,17 @@ async function init( containerIDWithHash, callback ) {
     data = JSON.parse(data).atr;
 
     const state = {
-      fields: data.fields
+      fields: data.fields,
+      dash_styles: [
+        "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot",
+        "Dot", "Dash", "LongDash", "DashDot", "LongDashDot", "LongDashDotDot"
+      ].map(dash => ({ name: dash, url: `url('images/dashstyle/${dash}.svg')`})),
+      update_dash(dash, field) {
+        field.value = dash.name;
+      },
+      update_appliedto(row, value) {
+        row.value = value*1;
+      }
     }
 
     $html = $($html);

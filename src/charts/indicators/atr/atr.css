@@ -21,6 +21,35 @@
     margin: 0;
 }
 
+.dash-styles > div {
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  box-sizing: border-box;
+  background-position: center;
+  margin: 0 2px;
+  width: 30%;
+}
+.dash-styles > div.dash-selected {
+  border-bottom: 3px solid rgba(0,0,200,.5);
+}
+
+.applied-to {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.applied-to div {
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  box-sizing: border-box;
+  font-size: 12px;
+  padding: 0 4px;
+}
+.applied-to div.selected {
+  border-bottom: 3px solid rgba(0,0,200,.5);
+}
+
 .atr_input_width {
     width: 150px !important;
 }

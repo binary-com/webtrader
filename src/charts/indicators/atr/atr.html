@@ -4,7 +4,7 @@
           <td colspan="2" class="atr-description">
           </td>
         </tr>
-        <tr rv-each-row="fields" rv-value="row">
+        <tr rv-each-row="fields">
           <td>{row.title}</td>
           <td rv-if="row.type | eq 'slider'">
             <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max"></div>
@@ -12,6 +12,24 @@
           <td rv-if="row.type | eq 'colorpicker'">
             <div rv-colorpicker="row.value"></div>
             <div class="colorpicker-preview" rv-css-background="row.value"></div>
+          </td>
+          <td rv-if="row.type | eq 'dashstyle'">
+            <div class="dash-styles">
+                <div
+                  rv-each-dash="dash_styles"
+                  rv-class-dash-selected="row.value | eq dash.name"
+                  rv-attr-value="dash.name"
+                  rv-on-click="update_dash | bind dash | bind row"
+                  rv-css-background-image="dash.url"></div>
+            </div>
+          </td>
+          <td rv-if="row.type | eq 'appliedto'">
+            <div class="applied-to">
+                <div rv-class-selected="row.value | eq 0" rv-on-click="update_appliedto | bind row | bind 0">OPEN</div>
+                <div rv-class-selected="row.value | eq 1" rv-on-click="update_appliedto | bind row | bind 1">HIGH</div>
+                <div rv-class-selected="row.value | eq 2" rv-on-click="update_appliedto | bind row | bind 2">LOW</div>
+                <div rv-class-selected="row.value | eq 3" rv-on-click="update_appliedto | bind row | bind 3">CLOSE</div>
+            </div>
           </td>
         </tr>
         <tr>

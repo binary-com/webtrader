@@ -6,7 +6,10 @@
     "editable": true,
     "fields": [
       {"title": "Period", "min": 1, "max": 100, "value": 14, "type": "slider"},
-      {"title": "Stroke", "value": "#cd0a0a", "type": "colorpicker"}
+      {"title": "Stroke", "value": "#cd0a0a", "type": "colorpicker"},
+      {"title": "Stroke width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "value": 3, "type": "appliedto"}
     ],
     "category": [
       "Volatility Indicators"
