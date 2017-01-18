@@ -80,8 +80,7 @@ AO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
     //Prepare the data before sending a configuration
     for (var index = 0; index < this.indicatorData.length; index++) {
         var data = this.indicatorData[index];
-        aoData.push([data.time, data.value]);
-        colors.push(this.getBarColor(index));
+        aoData.push({x:data.time, y:data.value, color:this.getBarColor(index)});
     };
 
     return [{
@@ -106,9 +105,7 @@ AO.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: aoData,
                  type: 'column',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID,
-                 onChartIndicator: false,
-                 colorByPoint:true,
-                 colors: colors
+                 onChartIndicator: false
              }
         }];
 };
