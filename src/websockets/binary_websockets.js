@@ -36,14 +36,16 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         ws.addEventListener('message', onmessage);
 
         ws.addEventListener('error', function(event) {
-            $.growl.error({message: 'Connection error. Refresh the page.'.i18n().i18n()});
-            //Clear everything. No more changes on chart. Refresh of page is needed!
+            $.growl.error({message: 'Connection error.'.i18n()});
+            onclose(); // try to reconnect
         });
 
         return ws;
     }
 
     var onclose = function () {
+      require(['windows/tracker'],function(tracker) {
+        var trade_dialogs = tracker.get_trade_dialogs();
         is_authenitcated_session = false;
         fire_event('logout');
         /**
@@ -52,23 +54,39 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
          **/
         setTimeout(function(){
             socket = connect();
-            if(local_storage.get('oauth'))
-              api.cached.authorize();
+            if(local_storage.get('oauth')) {
+              api.cached.authorize().then(function() {
+                tracker.reopen_trade_dialogs(trade_dialogs);
+              });
+            }
             require(['charts/chartingRequestMap'], function (chartingRequestMap) {
+                var chart_registration_promises = [];
                 Object.keys(chartingRequestMap).forEach(function (key) {
                     var req = chartingRequestMap[key];
                     if (req && req.symbol && !req.timerHandler) { /* resubscribe */
-                        chartingRequestMap.register({
+                      var promise = chartingRequestMap.register({
                           symbol: req.symbol,
                           granularity: req.granularity,
                           subscribe: 1,
                           count: 1,
                           style: req.granularity > 0 ? 'candles' : 'ticks'
-                        }).catch(function (err) { console.error(err); });
+                        })
+                        .catch(function (err) { console.error(err); });
+                      chart_registration_promises.push(promise);
                     }
                 });
+                /* refresh the charts when they are reregistered.  */
+                Promise.all(chart_registration_promises)
+                  .then(function() {
+                      require(['charts/charts', 'charts/chartOptions'], function(charts, chartOptions) {
+                        chartOptions.getAllChartsWithTheirTypes().forEach(function(chart) {
+                          charts.refresh('#' + chart.id + '_chart', null, chart.chartType);
+                        });
+                      });
+                  })
             });
         }, 1000);
+      });
     }
 
     var callbacks = {};
@@ -205,6 +223,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
     var invalidate = function(){
         local_storage.remove('oauth');
         local_storage.remove('authorize');
+        fire_event("reset_realitycheck");
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){

@@ -465,8 +465,8 @@ msgstr "送金を実行する"
 msgid "Connection closed"
 msgstr "接続が切断されました"
 
-msgid "Connection error. Refresh the page"
-msgstr "接続エラー。ページを更新してください"
+msgid "Connection error"
+msgstr ""
 
 msgid "Construction"
 msgstr "設営"

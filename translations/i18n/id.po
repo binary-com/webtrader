@@ -462,8 +462,8 @@ msgstr "Konfirmasi transfer"
 msgid "Connection closed"
 msgstr "Koneksi ditutup"
 
-msgid "Connection error. Refresh the page"
-msgstr "Koneksi error. Refresh halaman"
+msgid "Connection error"
+msgstr "Koneksi error"
 
 msgid "Construction"
 msgstr "Konstruksi"

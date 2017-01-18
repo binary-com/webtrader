@@ -36,7 +36,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         });
         login_win.parent().css('overflow', 'visible');
 
-        init_state(root);
+        init_state(root, login_win);
         login_win.dialog('open');
 
         /* update dialog position, this way when dialog is resized it will not move*/
@@ -51,7 +51,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       });
     }
 
-    function init_state(root) {
+    function init_state(root, login_win) {
       var app_id = liveapi.app_id;
       var state = {
         route: { value: 'login' },
@@ -86,9 +86,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           verification: '',
           password: '',
           repeat_password:  '',
-          residence: 'af',
-          residence_list: [ { text: 'Afghanistan', value: 'af'}],
-          residence_unsupported: ["cr", "gg", "hk", "ir", "iq", "jp", "je", "kp", "my", "mt", "us", "um", "vi"],
+          residence: '',
+          residence_list: [ { text: 'Indonesia', value: 'id'}],
+          residence_unsupported: [],
           disabled: false, /* is button disabled */
         },
         confirm: { disabled: false }
@@ -98,14 +98,14 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           state.login.disabled = true;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id;
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id;
       }
 
       state.route.update = function(route){
@@ -196,9 +196,14 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                   var account = data.new_account_virtual;
                   var oauth = [{id: account.client_id, token: account.oauth_token }];
                   local_storage.set('oauth', oauth);
-                  //liveapi.cached.authorize().catch(function(err) { console.error(err.message) });
                   state.account.disabled = false;
-                  state.route.update('confirm');
+                  liveapi.cached.authorize()
+                  .then(function() { 
+                    login_win.dialog('destroy'); 
+                    login_win = null;
+                  })
+                  .catch(function(err) { console.error(err.message) });
+                  //state.route.update('confirm');
                })
                .catch(function(err){
                   console.error(err);
@@ -212,10 +217,11 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
                state.account.residence_list = data.residence_list.map(function(r) {
-                 r.disabled = state.account.residence_unsupported.indexOf(r.value) !== -1;
+                 r.disabled = (r.disabled === 'DISABLED');
+                 r.disabled && state.account.residence_unsupported.push(r.value);
                  return r;
                });
-               state.account.residence = data.residence_list[0].value;
+               state.account.residence = 'id'; // make indonesia default
                liveapi.cached.send({website_status: 1})
                     .then(function(data){
                         var residence = data.website_status && data.website_status.clients_country;
@@ -224,7 +230,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                     })
                     .catch(function(err){
                       console.error(err);
-                      state.account.residence = 'id'; // make indonesia default
+                      state.account.residence = 'id';
                     })
              })
              .catch(function(err){
@@ -239,7 +245,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           var app_id = liveapi.app_id;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id + '&scope=read,trade,payments,admin';
+          window.location =  oauth_url + '?app_id=' + app_id;
       }
     }
 });
