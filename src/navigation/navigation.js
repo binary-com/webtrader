@@ -49,7 +49,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
         state.oauth = state.oauth.map(function(e){
           e.type = getType(e.id);
           return e;
-        })
+        });
         state.showLoginWin = function () {
             state.login_disabled = true;
             require(['oauth/login'], function (login_win) {
@@ -136,13 +136,12 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             state.account.show = true;
             state.account.id = data.authorize.loginid;
             state.account.is_virtual = data.authorize.is_virtual;
-            if(!data.authorize.is_virtual){
-              var type = {MLT:"Investment", MF:"Gaming",REAL:"Real"};
-              var id = data.authorize.loginid.match(/^(MLT|MF)/i) ? data.authorize.loginid.match(/^(MLT|MF)/i)[0] : "REAL";
-              state.account.type = type[id]+" Account";
-            } else {
-              state.account.type = "Virtual Account";
-            }
+            state.oauth = local_storage.get('oauth') || [];
+            state.oauth = state.oauth.map(function(e){
+              e.type = getType(e.id);
+              return e;
+            });
+            state.account.type = getType(data.authorize.loginid);
 
             update_balance(data);
             var is_current_account_real = data.authorize.is_virtual === 0;

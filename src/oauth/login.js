@@ -198,7 +198,10 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                   local_storage.set('oauth', oauth);
                   state.account.disabled = false;
                   liveapi.cached.authorize()
-                  .then(function() { login_win.dialog('destroy'); })
+                  .then(function() { 
+                    login_win.dialog('destroy'); 
+                    login_win = null;
+                  })
                   .catch(function(err) { console.error(err.message) });
                   //state.route.update('confirm');
                })
