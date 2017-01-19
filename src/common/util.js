@@ -400,7 +400,7 @@ var Cookies = {
     }).filter(function(id) {
       return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
     });
-    return loginids.concat(oauth_loginids)
+    return oauth_loginids;
   },
   residence: function() {
     return Cookies.get_by_name('residence');
