@@ -4,6 +4,7 @@ import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import html from 'text!cashier/currency.html';
 
+require(['common/util'])
 require(['text!cashier/currency.html']);
 
 let check_promise = null;
@@ -45,10 +46,19 @@ const check_currency_async = () => new Promise((resolve, reject) => {
         reject({ message: 'Please set currency.'.i18n() });
       }
     };
+
+    const oauth = local_storage.get("oauth")[0];
+    $.extend(oauth, {
+      is_mf: /MF/gi.test(oauth.id),
+      is_mlt: /MLT/gi.test(oauth.id),
+      is_mx: /MX/gi.test(oauth.id),
+      is_cr: /CR/gi.test(oauth.id)
+    });
+
     liveapi.cached.send({payout_currencies:1}).then((data) => {
       state.disabled = false;
       state.array = data.payout_currencies;
-      state.value = data.payout_currencies[0];
+      state.value = oauth.is_mx ? 'GBP' : oauth.is_mf || oauth.is_mlt ? 'EUR' : data.payout_currencies[0];
     }).catch(()=> reject({message: 'Please try again after few minutes.'.i18n()}));
 
     var win_view = rv.bind($html[0], state);

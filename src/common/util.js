@@ -401,7 +401,7 @@ var Cookies = {
       return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
     });
 
-    return oauth_loginids ? oauth_loginids : loginids
+    return oauth_loginids.length > 0 ? oauth_loginids : loginids
   },
   residence: function() {
     return Cookies.get_by_name('residence');
