@@ -105,7 +105,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
         series: [{
           name: title,
           data: data,
-          type: type,
+          type: type
         }],
         exporting: {enabled: false, enableImages: false},
         legend: {enabled: false},
@@ -347,6 +347,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
             contract_type: proposal.contract_type,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
+            user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
 
             entry_tick: proposal.entry_tick || proposal.entry_spot,
             entry_tick_time: proposal.entry_tick_time,
@@ -553,7 +554,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
     var request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
-      end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
+      end: state.table.sell_time ? state.table.sell_time*1 + margin : state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
@@ -623,16 +624,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
             }
 
             state.table.exit_tick = history.prices[0];
-            chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+            !state.table.user_sold && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
           });
         }
 
         state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'.i18n()});
-
+        
         state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
-        state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+        !state.table.user_sold && state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
 
-        state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
+        !state.table.user_sold && state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
         state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
 
         state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
