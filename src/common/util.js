@@ -387,7 +387,6 @@ var Cookies = {
     });
    /* when new accounts are created document.cookie doesn't change,
     * use local_storage to return the full list of loginids. */
-    var common_ids_count = 0;
     var oauth_loginids = (local_storage.get('oauth') || []).map(function(id){
       return {
         id: id.id,
@@ -399,13 +398,10 @@ var Cookies = {
         is_cr: /CR/gi.test(id.id)
       }
     }).filter(function(id) {
-      return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1? true : common_ids_count++ && false;
+      return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
     });
-    //If there are no common ids, then the cookies are from different sub domain. We need to ignore those cookies.
-    if(common_ids_count === loginids.length)
-      return loginids;
-    else
-      return oauth_loginids;
+
+    return oauth_loginids ? oauth_loginids : loginids
   },
   residence: function() {
     return Cookies.get_by_name('residence');
