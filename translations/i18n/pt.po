@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-04 12:23+0200\n"
-"PO-Revision-Date: 2016-11-21 21:50+0000\n"
+"PO-Revision-Date: 2017-01-20 05:32+0000\n"
 "Last-Translator: Alcino Jorge <alcino@binary.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pt/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.10-dev\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "Tipo de %D MA"
@@ -202,7 +202,7 @@ msgid "ADX Stroke"
 msgstr "Traço de ADX"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "ATR Period"
 msgstr "Período ATR"
@@ -265,7 +265,7 @@ msgid "Answer"
 msgstr "Resposta"
 
 msgid "Applied to"
-msgstr ""
+msgstr "Aplicado a"
 
 msgid "Apply"
 msgstr "Candidatar-se"
@@ -292,10 +292,10 @@ msgid "Aroon Up Stroke"
 msgstr "Traço para cima aroon"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Asiático abaixo"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Asiático acima"
 
 msgid "Asians"
 msgstr "Asiáticos"
@@ -472,7 +472,7 @@ msgid "Construction"
 msgstr "Construção"
 
 msgid "Contact Us"
-msgstr ""
+msgstr "Contate-nos"
 
 msgid "Continue"
 msgstr "Continuar"
@@ -613,7 +613,7 @@ msgid "Deselect"
 msgstr "Desmarcar"
 
 msgid "Differs"
-msgstr ""
+msgstr "Difere"
 
 msgid "Digits"
 msgstr "Dígitos"
@@ -711,10 +711,10 @@ msgid "Ends In/Out"
 msgstr "Termina Dentro/Fora"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Termina dentro"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Termina fora"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
@@ -734,7 +734,7 @@ msgid "Error downloading .csv"
 msgstr "Erro ao baixar .csv"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Erro ao obter dados para %1"
 
 msgid "Error getting market information!"
 msgstr "Erro ao obter informações do mercado!"
@@ -743,7 +743,7 @@ msgid "Estimated Net Worth"
 msgstr "Patrimônio líquido estimado"
 
 msgid "Even"
-msgstr ""
+msgstr "Par"
 
 msgid "Exclude me from the website until"
 msgstr "Exclua-me do website até"
@@ -836,7 +836,7 @@ msgid "Further instructions"
 msgstr "Mais instruções"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Sai fora"
 
 msgid "Gray"
 msgstr "Cinza"
@@ -866,7 +866,7 @@ msgid "High Stroke"
 msgstr "Traço alto"
 
 msgid "High barrier"
-msgstr ""
+msgstr "Barreira alta"
 
 msgid "High barrier offset"
 msgstr "Deslocamento da barreira alta"
@@ -1153,7 +1153,7 @@ msgid "Low Stroke"
 msgstr "Traço baixo"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Barreira baixa"
 
 msgid "Low barrier offset"
 msgstr "Deslocamento de barreira baixa"
@@ -1194,7 +1194,7 @@ msgid "Mass Period"
 msgstr "Período da massa"
 
 msgid "Matches"
-msgstr ""
+msgstr "Combina"
 
 msgid "Max/Min Period"
 msgstr "Período mín/máx"
@@ -1322,7 +1322,7 @@ msgid "No"
 msgstr "Não"
 
 msgid "No touch"
-msgstr ""
+msgstr "Não toca"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "Note que os tokens podem possuir um ou mais destes escopos"
@@ -1373,7 +1373,7 @@ msgid "October"
 msgstr "Outubro"
 
 msgid "Odd"
-msgstr ""
+msgstr "Ímpar"
 
 msgid "Offset"
 msgstr "Deslocamento"
@@ -1453,7 +1453,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1555,7 +1555,7 @@ msgid "Please enter the verification code sent to your email"
 msgstr "Insira o código de verificação enviado para o seu e-mail"
 
 msgid "Please enter time in the format HH:MM"
-msgstr ""
+msgstr "Insira a hora no formato HH:MM"
 
 msgid "Please enter your city address"
 msgstr "Insira o seu endereço"
@@ -1931,7 +1931,7 @@ msgid "Stays In/Goes Out"
 msgstr "Fica dentro/Sai fora"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Fica dentro"
 
 msgid "Stocks trading experience"
 msgstr "Experiência com negociação de ações"
@@ -1979,7 +1979,7 @@ msgid "Sunday"
 msgstr "Domingo"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
 msgstr "TRIMA"
@@ -2085,7 +2085,7 @@ msgid "Time interval"
 msgstr "Intervalo de tempo"
 
 msgid "Time out until"
-msgstr ""
+msgstr "Bloqueio até"
 
 msgid "Time period"
 msgstr "Período de tempo"
@@ -2151,7 +2151,7 @@ msgid "Total Profit/Loss"
 msgstr "Lucro/Perda Total"
 
 msgid "Touch"
-msgstr ""
+msgstr "Toca"
 
 msgid "Touch/No Touch"
 msgstr "Toca/Não Toca"
