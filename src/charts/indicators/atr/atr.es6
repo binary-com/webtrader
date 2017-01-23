@@ -4,7 +4,7 @@
 
 import $ from "jquery";
 import _ from "lodash";
-import rv from 'common/rivetsExtra';
+import rv from '../../../common/rivetsExtra';
 import 'jquery-ui';
 import 'color-picker';
 import 'ddslick';
