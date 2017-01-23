@@ -43,6 +43,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         return ws;
     }
 
+    var timeoutIsSet = false;
     var onclose = function () {
       require(['windows/tracker'],function(tracker) {
         var trade_dialogs = tracker.get_trade_dialogs();
@@ -52,7 +53,10 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
          *  The connection is closed, resubscrible to tick streaming.
          *  We have to make sure that resubscribe is atleast 1 second delayed
          **/
-        setTimeout(function(){
+        if (timeoutIsSet) { return; }
+        timeoutIsSet = true;
+        setTimeout(function() {
+            timeoutIsSet = false;
             socket = connect();
             if(local_storage.get('oauth')) {
               api.cached.authorize().then(function() {
