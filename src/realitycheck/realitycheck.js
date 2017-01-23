@@ -28,6 +28,13 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             local_storage.set("realitycheck", { timeOutInMins : scope.timeOutInMins | 0, accepted_time : moment.utc().valueOf() });
             setOrRefreshTimer(scope.timeOutInMins);
         },
+        openStatement: function() {
+            require(['statement/statement'], function(statement) {
+                var elem = $("#nav-menu").find("a.statement");
+                statement.init(elem);
+                elem.click();
+            });
+        },
         logout : function() {
             liveapi.invalidate();
         }
