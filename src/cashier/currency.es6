@@ -4,8 +4,7 @@ import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import html from 'text!cashier/currency.html';
 
-require(['common/util'])
-require(['text!cashier/currency.html']);
+require(['common/util']);
 
 let check_promise = null;
 const check_currency_async = () => new Promise((resolve, reject) => {
@@ -39,7 +38,13 @@ const check_currency_async = () => new Promise((resolve, reject) => {
         state.disabled = true;
         liveapi.send({ set_account_currency: state.value })
           .then(resolve, reject)
-          .then(() => win.dialog('close'));
+          .then(() => {
+            local_storage.set("currency", state.value);
+            //For updating balance in navigation
+            liveapi.send({balance: 1, subscribe:1})
+            .catch(function(err){ console.error(err); });
+            win.dialog('close');
+          });
       },
       cancel: () => {
         win.dialog('close');
@@ -47,18 +52,10 @@ const check_currency_async = () => new Promise((resolve, reject) => {
       }
     };
 
-    const oauth = local_storage.get("oauth")[0];
-    $.extend(oauth, {
-      is_mf: /MF/gi.test(oauth.id),
-      is_mlt: /MLT/gi.test(oauth.id),
-      is_mx: /MX/gi.test(oauth.id),
-      is_cr: /CR/gi.test(oauth.id)
-    });
-
     liveapi.cached.send({payout_currencies:1}).then((data) => {
       state.disabled = false;
       state.array = data.payout_currencies;
-      state.value = oauth.is_mx ? 'GBP' : oauth.is_mf || oauth.is_mlt ? 'EUR' : data.payout_currencies[0];
+      state.value = data.payout_currencies[0];
     }).catch(()=> reject({message: 'Please try again after few minutes.'.i18n()}));
 
     var win_view = rv.bind($html[0], state);

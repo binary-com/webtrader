@@ -480,5 +480,13 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
       api.send({balance: 1, subscribe:1})
          .catch(function(err){ console.error(err); });
     });
+    /* always forget transaction & balance streams on logout */
+    api.events.on('logout', function() {
+      api.send({forget_all: 'transaction'})
+         .catch(function(err){ console.error(err); });
+
+      api.send({forget_all: 'balance'})
+         .catch(function(err){ console.error(err); });
+    });
     return api;
 });

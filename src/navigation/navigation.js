@@ -90,18 +90,11 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
 
         function update_balance(data) {
             if (!state.currency) {
-                liveapi.send({payout_currencies: 1})
-                    .then(function (_data) {
-                        state.currency = _data.payout_currencies[0];
-                        local_storage.set("currency", state.currency);
-                        setTimeout(function () {
-                            update_balance(data);
-                        }, 0);
-                        /* now that we have currency update balance */
-                    }).catch(function (err) {
-                    console.error(err);
-                })
-                return;
+                /* We're not going to set currency automatically, since the user might select a different currency  */
+                if (local_storage.get("currency")){
+                  state.currency = local_storage.get("currency");
+                } else 
+                  return;
             }
 
             var value = '0';
@@ -131,7 +124,6 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
         liveapi.events.on('login', function (data) {
             $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
             /* destroy all authorized dialogs */
-            console.log(data);
             state.show_login = false;
             state.account.show = true;
             state.account.id = data.authorize.loginid;
@@ -143,6 +135,8 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             });
             state.account.type = getType(data.authorize.loginid);
 
+            state.currency = data.authorize.currency;
+            local_storage.set("currency", state.currency);
             update_balance(data);
             var is_current_account_real = data.authorize.is_virtual === 0;
 
