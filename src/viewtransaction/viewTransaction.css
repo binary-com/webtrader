@@ -72,19 +72,21 @@
   flex: 1 1 30%;
   background: #fff;
   margin: 0;
-  height: 105px;
 }
 .view-transaction-dialog .content .table div:nth-child(3n + 1) { margin: 1px 2px 1px 0; }
 .view-transaction-dialog .content .table div:nth-child(3n + 2) { margin: 1px 0; }
 .view-transaction-dialog .content .table div:nth-child(3n) { margin: 1px 0 1px 2px; }
+.view-transaction-dialog .content .table div:nth-child(3n + 1).center {
+  text-align: center;
+}
 
 .view-transaction-dialog .content .table div p {
-  padding: 10px 0;
-  margin-left: 15%;
+  padding: 5px 0;
+  margin-left: 35px;
   font-weight: bold;
 }
 .view-transaction-dialog .content .table div span {
-  margin-left: 15%;
+  margin-left: 35px;
 }
 
 /******************* chart tab ******************/

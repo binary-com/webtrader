@@ -41,8 +41,8 @@
                 rv-tooltip='"running"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-if="table.sell_time | not-eq undefined"> <p>Sell Time</p>
-          <span rv-text="table.user_sold | eq false | and table.sell_time | moment | or '-'"></span>
+      <div rv-if="table.user_sold | not-eq true | and table.sell_time "> <p>Sell Time</p>
+          <span rv-text="table.sell_time | moment | or '-'"></span>
       </div>
       <div> <p>End Time</p>
           <span rv-text="table.date_expiry | moment | or '-'"></span>
@@ -62,8 +62,8 @@
       <div rv-if="table.sell_spot | eq undefined"> <p>Current Spot</p>
           <span rv-text="table.current_spot | or '-'" rv-indicative-color="table.current_spot"></span>
       </div>
-      <div rv-if="table.sell_spot | not-eq undefined"> <p>Sell Spot</p>
-          <span rv-text="table.user_sold | eq false | and table.sell_spot | or '-'"></span>
+      <div rv-if="table.user_sold | not-eq true | and table.sell_spot "> <p>Sell Spot</p>
+          <span rv-text="table.sell_spot | or '-'"></span>
       </div>
       <div> <p>Barrier</p>
           <span rv-text="chart.barrier | or '-'"></span>
@@ -86,7 +86,7 @@
                 rv-tooltip='table.sell_time | moment | or "return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div> <p>Final Price</p>
+      <div rv-class-center="table.user_sold | eq true"> <p>Final Price</p>
           <span rv-text="table.final_price | format-price table.currency | or '-'"></span>
           <br/>
           <span rv-text="table.final_price | percent-of table.buy_price"
