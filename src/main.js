@@ -301,6 +301,19 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
         'css!lib/colorpicker/jquery.colorpicker.css'
     ]);
 
+
+    /* This is for Feedback (doorbell) button */
+    // Hide the button after initial loading of page is compleated.
+    _.delay(function(){$("#doorbell-button").animate({right:"-67px"})},2000);
+    //This is the vent listener for the button
+    $("#doorbell-button").hover(
+        function(){
+            $("#doorbell-button").animate({right:"-37px"});
+        },
+        function(){
+            $("#doorbell-button").animate({right:"-67px"});
+    });
+
 });
 
 
