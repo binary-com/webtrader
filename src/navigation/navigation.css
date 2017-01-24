@@ -73,3 +73,9 @@ body {
 #all-accounts-top {
   margin-top:3px;
 }
+
+.main-nav .nav-caret {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+}
