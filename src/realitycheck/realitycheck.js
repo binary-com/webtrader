@@ -3,7 +3,7 @@
  */
 define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", 'common/rivetsExtra', 'moment', 'jquery-growl', 'common/util'], function($, windows, liveapi, _, rv, moment) {
 
-    var win = null, timerHandler = null, FIRST_SCREEN_HEIGHT = 260, SECOND_SCREEN_HEIGHT = 310;
+    var win = null, timerHandler = null, FIRST_SCREEN_HEIGHT = 260, SECOND_SCREEN_HEIGHT = 310, promises= [];
     var settingsData = {
         timeOutInMins: (local_storage.get("realitycheck") || {}).timeOutInMins || 10,
         timeOutMin: 10, timeOutMax: 120,
@@ -162,11 +162,15 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
 
     var oauthLogin = function() {
         logout();
-        if(!local_storage.get("authorize").is_virtual)
-            init().then(function() {
+        if(!local_storage.get("authorize").is_virtual){
+            var p = init();
+            promises.push(p);
+            Promise.all(promises).then(function() {
                 resetWindow(true);
                 win.dialog('open');
             });
+        }
+            
     };
 
     liveapi.events.on('oauth-login', oauthLogin);
@@ -194,6 +198,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
     });
 
     liveapi.events.on('switch_account', function() {
+        local_storage.remove('realitycheck');
         oauthLogin();
     });
 
