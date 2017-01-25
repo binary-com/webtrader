@@ -64,7 +64,7 @@ const check_currency_async = () => new Promise((resolve, reject) => {
 
 export const check_currency = () => {
   if(check_promise) { return check_promise; }
-  check_promise = check_currency_async().catch(up => {
+  check_promise = check_currency_async().then(()=> check_promise = null).catch(up => {
     check_promise = null;
     throw up;
   });
