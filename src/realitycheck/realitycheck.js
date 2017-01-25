@@ -168,6 +168,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "lodash", '
             Promise.all(promises).then(function() {
                 resetWindow(true);
                 win.dialog('open');
+                promises = [];
             });
         }
             
