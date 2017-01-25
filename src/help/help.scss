@@ -1,0 +1,29 @@
+.ui-dialog .ui-dialog-content.help-dialog {
+	padding: 0px;
+	.list, .sublist{
+		width: 200px;
+		float: left;
+		height: 100%;
+		border-right: 1px solid #dedede;
+		overflow: auto;
+		padding-top: 10px;
+	}
+
+	.content{
+		float: left;
+		height: 100%;
+		overflow: auto;
+		width: 320px;
+	}
+	.items {
+		margin-left: 10px;
+		.selected {
+
+		}
+		span {
+			display: block;
+			height: 30px;
+			line-height: 2em;
+		}
+	}
+}
