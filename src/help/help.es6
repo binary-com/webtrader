@@ -43,11 +43,11 @@ const init = () => {
 			},
 			{
 				text: "Getting started",
-				sublist_id: ""
+				sublist_id: "getting_started"
 			},
 			{
 				text: " Types of trades",
-				sublist_id:""
+				sublist_id:"trade_types"
 			},
 			{
 				text: "Indicators",
@@ -55,7 +55,7 @@ const init = () => {
 			},
 			{
 				text: "FAQ",
-				sublist_id: ""
+				sublist_id: "faq"
 			},
 			{
 				text: "Glossary",
@@ -66,11 +66,69 @@ const init = () => {
 			about_us: [
 				{
 					text: "About us",
-					url: "About-us.html"
+					url: "about-us.html"
 				},
 				{
 					text: "Group history",
-					url: "Group-history.html"
+					url: "group-history.html"
+				}
+			],
+			getting_started: [
+				{
+					text: "Why choose Binary Trading",
+					url: "why-binary.html"
+				},
+				{
+					text: "Benefits of Binary Trading",
+					url: "binary-benefits.html"
+				},
+				{
+					text: "How to trade Binaries",
+					url: "trade-binaries.html"
+				}
+			],
+			trade_types: [
+				{
+					text: "Up/Down",
+					url: "up-down.html"
+				},
+				{
+					text: "Touch/No Touch",
+					url: "touch-no-touch.html"
+				},
+				{
+					text: "In/Out",
+					url: "in-out.html"
+				},
+				{
+					text: "Asians",
+					url: "asians.html"
+				},
+				{
+					text: "Digits",
+					url: "digits.html"
+				},
+				{
+					text: "Spreads",
+					url: "spreads.html"
+				}
+			],
+			faq: [
+				{
+					text: "Opening an account",
+					url: "opening-account.html"
+				},
+				{
+					text: "Financial Security",
+					url: "financial-security.html"
+				},
+				{
+					text: "Depositing and withdrawing funds",
+					url: "deposit-withdraw.html"
+				},
+				{
+					text: "Learning to trade",
+					url: "learn-trade.html"
 				}
 			]
 		}

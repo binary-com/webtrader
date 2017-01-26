@@ -1,7 +1,6 @@
 .ui-dialog .ui-dialog-content.help-dialog {
 	padding: 0px;
 	.list, .sublist{
-		width: 200px;
 		float: left;
 		height: 97.5%;
 		border-right: 1px solid #dedede;
@@ -17,15 +16,24 @@
 				height: 40px;
 				line-height: 2.5em;
 				padding-left: 10px;
+				cursor: pointer;
 			}
 		}
+	}
+
+	.list {
+		width: 180px;
+	}
+
+	.sublist {
+		width: 270px;
 	}
 
 	.content{
 		float: left;
 		height: 100%;
 		overflow: auto;
-		width: 440px;
+		width: 395px;
 		.loading {
 			display: flex;
 			width: 100%;
@@ -40,6 +48,10 @@
 			ul {
 				list-style-type: circle;
 				font-size: 15px;
+			}
+			img {
+				display: block;
+				margin:auto;
 			}
 		}
 	}
