@@ -468,10 +468,37 @@ module.exports = function (grunt) {
               }
             ]
           }
+        },
+        markdown: {
+            convertToHtml: { 
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/help/docs/',
+                        src: ['**/*.md'],
+                        dest: 'dist/uncompressed/v<%=pkg.version%>/help/',
+                        ext: '.html'
+                    }
+                ]
+            }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
+    // This markdown to html converter.
+    var showdown = require('showdown'),
+        converter = new showdown.Converter();
+
+    grunt.registerMultiTask('markdown','Converts md files to html', function(){
+        this.files.forEach(function(f){
+            var html = converter.makeHtml(grunt.file.read(f.src[0]));
+            var write_successfull = grunt.file.write(f.dest,html);
+            if(!write_successfull){
+                grunt.log.error("Couldn't convert " + f.src[0] + " to html");
+            }
+        });
+    });
+
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'markdown:convertToHtml', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 

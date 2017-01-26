@@ -9,11 +9,11 @@ import 'css!help/help.css';
 var win = null;
 const init = () => {
 	var $html = $(html);
-	win = windows.createBlankWindow($html, {
+	win = windows.createBlankWindow($("<div class='help-dialog'/>"), {
 		title: "Help",
-        width: 750,
+        width: 850,
         height: 400,
-        resizable: true,
+        resizable: false,
         minimizable: true,
         maximizable: true,
         modal: false,
@@ -30,10 +30,78 @@ const init = () => {
 	});
 
 	var state = {
-		view: '',
-		view2: '',
+		current: {
+			list: null,
+			sublist: null,
+			content_page: null,
+			content: null
+		},
+		list:[
+			{
+				text: "About Binary.com",
+				sublist_id: "about_us"
+			},
+			{
+				text: "Getting started",
+				sublist_id: ""
+			},
+			{
+				text: " Types of trades",
+				sublist_id:""
+			},
+			{
+				text: "Indicators",
+				sublist_id: ""
+			},
+			{
+				text: "FAQ",
+				sublist_id: ""
+			},
+			{
+				text: "Glossary",
+				sublist_id: ""
+			}
+		],
+		sublist: {
+			about_us: [
+				{
+					text: "About us",
+					url: "About-us.html"
+				},
+				{
+					text: "Group history",
+					url: "Group-history.html"
+				}
+			]
+		}
 	};
-	var win_view = rv.bind($html[0], state);
+
+	state.updateSublist = (list) => {
+		state.current.list = list;
+		state.current.sublist = state.sublist[list.sublist_id];
+		state.current.content_page = null;
+		state.current.content = null;
+	};
+
+	state.getContent = (url) => {
+		state.current.content_page = url;
+		require(['text!help/'+url],(content) => {
+			state.current.content = content;
+			//Change links in content to open in new tab.
+			$(".help-dialog .content").find("a").each((i, node)=>{
+				$(node).attr('target','_blank');
+			});
+		});
+	};
+
+	//Show the about us page initially
+	state.current.list = state.list[0];
+	state.updateSublist(state.current.list);
+	state.current.content_page = state.sublist[state.current.list.sublist_id][0].url;
+	state.getContent(state.current.content_page);
+
+	$html.appendTo(win);
+	var win_view = rv.bind(win[0], state);
     win.dialog('open');
 };
 
