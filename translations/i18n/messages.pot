@@ -452,9 +452,6 @@ msgstr ""
 msgid "Contract Confirmation"
 msgstr "" 
 
-msgid "Contract Details"
-msgstr "" 
-
 msgid "Contract is not yet started"
 msgstr "" 
 
@@ -818,6 +815,9 @@ msgstr ""
 msgid "Health"
 msgstr "" 
 
+msgid "Help"
+msgstr "" 
+
 msgid "High Barrier"
 msgstr "" 
 
@@ -893,9 +893,6 @@ msgstr ""
 msgid "Income Source"
 msgstr "" 
 
-msgid "Indicative"
-msgstr "" 
-
 msgid "Indicative Price"
 msgstr "" 
 
@@ -954,15 +951,6 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "" 
 
 msgid "LOW"
-msgstr "" 
-
-msgid "Last Digit Prediction"
-msgstr "" 
-
-msgid "Last Digit is Over"
-msgstr "" 
-
-msgid "Last Digit is Under"
 msgstr "" 
 
 msgid "Last used"
@@ -1035,6 +1023,9 @@ msgid "Loading chart and trade menus"
 msgstr "" 
 
 msgid "Loading custom theme configuration"
+msgstr "" 
+
+msgid "Loading help docs"
 msgstr "" 
 
 msgid "Loading portfolio"
@@ -1883,12 +1874,6 @@ msgstr ""
 msgid "Tel"
 msgstr "" 
 
-msgid "Template applied partially"
-msgstr "" 
-
-msgid "Template is not applicable"
-msgstr "" 
-
 msgid "Template name"
 msgstr "" 
 
@@ -2118,6 +2103,9 @@ msgid "View"
 msgstr "" 
 
 msgid "View Historical Data"
+msgstr "" 
+
+msgid "View Statement"
 msgstr "" 
 
 msgid "Volume Factor"

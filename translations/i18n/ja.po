@@ -486,9 +486,6 @@ msgstr "取引内容"
 msgid "Contract Confirmation"
 msgstr "トレード確定"
 
-msgid "Contract Details"
-msgstr "トレードの詳細"
-
 msgid "Contract is not yet started"
 msgstr "トレードはまだ開始していません"
 
@@ -857,6 +854,9 @@ msgstr "お取引に幸あれ！"
 msgid "Health"
 msgstr "健全度"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "高限バリア"
 
@@ -959,9 +959,6 @@ msgstr "In/Out"
 msgid "Income Source"
 msgstr "収入源"
 
-msgid "Indicative"
-msgstr "気配値"
-
 msgid "Indicative Price"
 msgstr "気配値"
 
@@ -1021,15 +1018,6 @@ msgstr "表示されるページの 承認 ボタンをクリックしてくだ�
 
 msgid "LOW"
 msgstr "LOW"
-
-msgid "Last Digit Prediction"
-msgstr "下一桁の数字を予想"
-
-msgid "Last Digit is Over"
-msgstr "下一桁の数字は予想値より上です"
-
-msgid "Last Digit is Under"
-msgstr "下一桁の数字は予想値より下です"
 
 msgid "Last used"
 msgstr "最後に使用したもの"
@@ -1102,6 +1090,9 @@ msgstr "チャートと取引メニューを読込み中"
 
 msgid "Loading custom theme configuration"
 msgstr "カスタムテーマの設定を読込み中"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "ポートフォリオを読込み中"
@@ -1978,12 +1969,6 @@ msgstr "高値/安値"
 msgid "Tel"
 msgstr "電話番号"
 
-msgid "Template applied partially"
-msgstr "テンプレートを一部適用する"
-
-msgid "Template is not applicable"
-msgstr "テンプレートは適用されません"
-
 msgid "Template name"
 msgstr "テンプレート名"
 
@@ -2273,6 +2258,9 @@ msgstr "表示"
 
 msgid "View Historical Data"
 msgstr "履歴データの表示"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "容積係数"
@@ -2597,6 +2585,27 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| 戻る"
+
+#~ msgid "Contract Details"
+#~ msgstr "トレードの詳細"
+
+#~ msgid "Indicative"
+#~ msgstr "気配値"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "下一桁の数字を予想"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "下一桁の数字は予想値より上です"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "下一桁の数字は予想値より下です"
+
+#~ msgid "Template applied partially"
+#~ msgstr "テンプレートを一部適用する"
+
+#~ msgid "Template is not applicable"
+#~ msgstr "テンプレートは適用されません"
 
 #~ msgid "Error getting data for"
 #~ msgstr "xxxのデータ取得中にエラーが発生しました"

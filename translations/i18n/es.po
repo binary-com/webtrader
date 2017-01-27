@@ -489,9 +489,6 @@ msgstr "Contrato"
 msgid "Contract Confirmation"
 msgstr "Confirmación del Contrato"
 
-msgid "Contract Details"
-msgstr "Detalles del contrato"
-
 msgid "Contract is not yet started"
 msgstr "El contrato no ha comenzado todavía"
 
@@ -860,6 +857,9 @@ msgstr "¡Tenga mejor suerte con el comercio!"
 msgid "Health"
 msgstr "Salud"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Barrera Alta"
 
@@ -966,9 +966,6 @@ msgstr "Dentro/Fuera"
 msgid "Income Source"
 msgstr "Fuente de Ingresos"
 
-msgid "Indicative"
-msgstr "Indicativo"
-
 msgid "Indicative Price"
 msgstr "Precio Indicativo"
 
@@ -1030,15 +1027,6 @@ msgstr ""
 
 msgid "LOW"
 msgstr "BAJO"
-
-msgid "Last Digit Prediction"
-msgstr "Predicción de Último Dígito"
-
-msgid "Last Digit is Over"
-msgstr "El Último Dígito está por Encima"
-
-msgid "Last Digit is Under"
-msgstr "El Último Dígito está por Bajo"
 
 msgid "Last used"
 msgstr "Utilizado por última vez"
@@ -1111,6 +1099,9 @@ msgstr "Cargando gráficos y menús de comercio"
 
 msgid "Loading custom theme configuration"
 msgstr "Cargando configuración de tema personalizado"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Cargando cartera"
@@ -1996,12 +1987,6 @@ msgstr "Tabla"
 msgid "Tel"
 msgstr "Tel"
 
-msgid "Template applied partially"
-msgstr ""
-
-msgid "Template is not applicable"
-msgstr ""
-
 msgid "Template name"
 msgstr "Nombre de la plantilla"
 
@@ -2298,6 +2283,9 @@ msgstr "Ver"
 
 msgid "View Historical Data"
 msgstr "Ver Datos Históricos"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Factor de Volumen"
@@ -2624,6 +2612,21 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retorno"
+
+#~ msgid "Contract Details"
+#~ msgstr "Detalles del contrato"
+
+#~ msgid "Indicative"
+#~ msgstr "Indicativo"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Predicción de Último Dígito"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "El Último Dígito está por Encima"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "El Último Dígito está por Bajo"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Error al obtener datos para"

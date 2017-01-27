@@ -480,9 +480,6 @@ msgstr "合約"
 msgid "Contract Confirmation"
 msgstr "合約確認"
 
-msgid "Contract Details"
-msgstr "合約詳細資料"
-
 msgid "Contract is not yet started"
 msgstr "合約還未開始生效"
 
@@ -846,6 +843,9 @@ msgstr "祝您好運!"
 msgid "Health"
 msgstr "健康情況"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "高障礙"
 
@@ -942,9 +942,6 @@ msgstr "「範圍之內/之外」"
 msgid "Income Source"
 msgstr "收入來源"
 
-msgid "Indicative"
-msgstr "指示性"
-
 msgid "Indicative Price"
 msgstr "指示性價格"
 
@@ -1004,15 +1001,6 @@ msgstr "僅須即將導入的頁面上點擊 授予"
 
 msgid "LOW"
 msgstr "低"
-
-msgid "Last Digit Prediction"
-msgstr "最後數字的預測"
-
-msgid "Last Digit is Over"
-msgstr "最後數字已超過"
-
-msgid "Last Digit is Under"
-msgstr "低於最後數字"
 
 msgid "Last used"
 msgstr "上一次使用"
@@ -1085,6 +1073,9 @@ msgstr "載入圖表與交易功能表"
 
 msgid "Loading custom theme configuration"
 msgstr "載入自定義主題設定"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "載入投資組合"
@@ -1955,12 +1946,6 @@ msgstr "表"
 msgid "Tel"
 msgstr "電話"
 
-msgid "Template applied partially"
-msgstr "部份範本已經使用"
-
-msgid "Template is not applicable"
-msgstr "範本不適用"
-
 msgid "Template name"
 msgstr "範本名稱"
 
@@ -2232,6 +2217,9 @@ msgstr "檢視"
 
 msgid "View Historical Data"
 msgstr "檢視歷史資料"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "體積系數"
@@ -2548,6 +2536,27 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "回報率"
+
+#~ msgid "Contract Details"
+#~ msgstr "合約詳細資料"
+
+#~ msgid "Indicative"
+#~ msgstr "指示性"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "最後數字的預測"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "最後數字已超過"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "低於最後數字"
+
+#~ msgid "Template applied partially"
+#~ msgstr "部份範本已經使用"
+
+#~ msgid "Template is not applicable"
+#~ msgstr "範本不適用"
 
 #~ msgid "Error getting data for"
 #~ msgstr "取得以下資料時出錯"

@@ -484,7 +484,7 @@ module.exports = function (grunt) {
         }
     });
 
-    // This markdown to html converter.
+    // This is markdown to html converter.
     var showdown = require('showdown'),
         converter = new showdown.Converter();
 

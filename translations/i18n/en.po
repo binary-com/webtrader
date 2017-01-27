@@ -487,9 +487,6 @@ msgstr "Contract"
 msgid "Contract Confirmation"
 msgstr "Contract Confirmation"
 
-msgid "Contract Details"
-msgstr "Contracts Details"
-
 msgid "Contract is not yet started"
 msgstr "Contract is not yet started"
 
@@ -856,6 +853,9 @@ msgstr "Have better luck at trading!"
 msgid "Health"
 msgstr "Health"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "High Barrier"
 
@@ -961,9 +961,6 @@ msgstr "In/Out"
 msgid "Income Source"
 msgstr "Income Source"
 
-msgid "Indicative"
-msgstr "Indicative"
-
 msgid "Indicative Price"
 msgstr "Indicative Price"
 
@@ -1023,15 +1020,6 @@ msgstr "Just click  Grant  button on the page you will now be taken to"
 
 msgid "LOW"
 msgstr "LOW"
-
-msgid "Last Digit Prediction"
-msgstr "Last Digit Prediction"
-
-msgid "Last Digit is Over"
-msgstr "Last Digit is Over"
-
-msgid "Last Digit is Under"
-msgstr "Last Digit is Under"
 
 msgid "Last used"
 msgstr "Last used"
@@ -1104,6 +1092,9 @@ msgstr "Loading chart and trade menus"
 
 msgid "Loading custom theme configuration"
 msgstr "Loading custom theme configuration"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Loading portfolio"
@@ -1983,12 +1974,6 @@ msgstr "Table"
 msgid "Tel"
 msgstr "Tel"
 
-msgid "Template applied partially"
-msgstr ""
-
-msgid "Template is not applicable"
-msgstr ""
-
 msgid "Template name"
 msgstr "Template name"
 
@@ -2280,6 +2265,9 @@ msgstr "View"
 
 msgid "View Historical Data"
 msgstr "View Historical Data"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Volume Factor"
@@ -2603,6 +2591,21 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Return"
+
+#~ msgid "Contract Details"
+#~ msgstr "Contracts Details"
+
+#~ msgid "Indicative"
+#~ msgstr "Indicative"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Last Digit Prediction"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "Last Digit is Over"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "Last Digit is Under"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Error getting data for"

@@ -486,9 +486,6 @@ msgstr "Contrato"
 msgid "Contract Confirmation"
 msgstr "Confirmação de contrato"
 
-msgid "Contract Details"
-msgstr "Detalhes do contrato"
-
 msgid "Contract is not yet started"
 msgstr "O contrato ainda não começou"
 
@@ -856,6 +853,9 @@ msgstr "Tenha mais sorte nas negociações!"
 msgid "Health"
 msgstr "Saúde"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Barreira alta"
 
@@ -963,9 +963,6 @@ msgstr "Dentro/Fora"
 msgid "Income Source"
 msgstr "Fonte dos rendimentos"
 
-msgid "Indicative"
-msgstr "Indicativo"
-
 msgid "Indicative Price"
 msgstr "Preço indicativo"
 
@@ -1025,15 +1022,6 @@ msgstr ""
 
 msgid "LOW"
 msgstr ""
-
-msgid "Last Digit Prediction"
-msgstr "Previsão do último dígito"
-
-msgid "Last Digit is Over"
-msgstr "Último dígito é superior a"
-
-msgid "Last Digit is Under"
-msgstr "Último dígito é inferior a"
 
 msgid "Last used"
 msgstr ""
@@ -1106,6 +1094,9 @@ msgstr "Carregando menus de gráficos e negociações"
 
 msgid "Loading custom theme configuration"
 msgstr "Carregando configuração personalizada do tema"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Carregando portfólio"
@@ -1990,12 +1981,6 @@ msgstr "Tabela"
 msgid "Tel"
 msgstr "Tel"
 
-msgid "Template applied partially"
-msgstr "Modelo parcialmente aplicado"
-
-msgid "Template is not applicable"
-msgstr "O modelo não é aplicável"
-
 msgid "Template name"
 msgstr "Nome do modelo"
 
@@ -2289,6 +2274,9 @@ msgstr ""
 
 msgid "View Historical Data"
 msgstr "Ver dados históricos"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Fator de volume"
@@ -2615,6 +2603,27 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr ""
+
+#~ msgid "Contract Details"
+#~ msgstr "Detalhes do contrato"
+
+#~ msgid "Indicative"
+#~ msgstr "Indicativo"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Previsão do último dígito"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "Último dígito é superior a"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "Último dígito é inferior a"
+
+#~ msgid "Template applied partially"
+#~ msgstr "Modelo parcialmente aplicado"
+
+#~ msgid "Template is not applicable"
+#~ msgstr "O modelo não é aplicável"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Erro ao obter dados para"

@@ -494,9 +494,6 @@ msgstr "Hợp đồng"
 msgid "Contract Confirmation"
 msgstr "Xác nhận hợp đồng"
 
-msgid "Contract Details"
-msgstr "Hợp đồng chi tiết"
-
 msgid "Contract is not yet started"
 msgstr "Hợp đồng chưa được bắt đầu"
 
@@ -865,6 +862,9 @@ msgstr "Chúc bạn may mắn trong giao dịch!"
 msgid "Health"
 msgstr "Sức khỏe"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Barie cao"
 
@@ -972,9 +972,6 @@ msgstr "Vào/Ra"
 msgid "Income Source"
 msgstr "Nguồn thu nhập"
 
-msgid "Indicative"
-msgstr "Biểu thị"
-
 msgid "Indicative Price"
 msgstr "Giá biểu thị"
 
@@ -1034,15 +1031,6 @@ msgstr "Chỉ cần nhấp vào nút Cấp trên trang và bạn sẽ được �
 
 msgid "LOW"
 msgstr "THẤP"
-
-msgid "Last Digit Prediction"
-msgstr "Dự đoán chữ số cuối"
-
-msgid "Last Digit is Over"
-msgstr "Chữ số cuối đã kết thúc"
-
-msgid "Last Digit is Under"
-msgstr "Chữ số cuối là Dưới"
 
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
@@ -1116,6 +1104,9 @@ msgstr "Đang tải bảng và mục lục giao dịch"
 
 msgid "Loading custom theme configuration"
 msgstr "Đang tải cấu hình tùy chủ đề tùy chọn"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Đang tải danh mục đầu tư"
@@ -2006,12 +1997,6 @@ msgstr "Bảng biểu"
 msgid "Tel"
 msgstr "Điện thoại"
 
-msgid "Template applied partially"
-msgstr ""
-
-msgid "Template is not applicable"
-msgstr ""
-
 msgid "Template name"
 msgstr "Tên mẫu"
 
@@ -2307,6 +2292,9 @@ msgstr "Xem"
 
 msgid "View Historical Data"
 msgstr "Xem dữ liệu lịch sử"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Yếu tố khối lượng"
@@ -2634,6 +2622,21 @@ msgstr "{hoa hồng cho đại lý}%"
 
 msgid "| Return"
 msgstr "| Quay trở lại"
+
+#~ msgid "Contract Details"
+#~ msgstr "Hợp đồng chi tiết"
+
+#~ msgid "Indicative"
+#~ msgstr "Biểu thị"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Dự đoán chữ số cuối"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "Chữ số cuối đã kết thúc"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "Chữ số cuối là Dưới"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Lỗi lấy dữ liệu cho"

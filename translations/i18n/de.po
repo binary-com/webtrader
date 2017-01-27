@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-08-07 15:45+0200\n"
 "PO-Revision-Date: 2017-01-13 14:59+0000\n"
 "Last-Translator: Karin Graf <karin_graf@hotmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -488,9 +488,6 @@ msgstr "Kontrakt"
 msgid "Contract Confirmation"
 msgstr "Kontraktbestätigung"
 
-msgid "Contract Details"
-msgstr "Kontrakt Details"
-
 msgid "Contract is not yet started"
 msgstr "Kontrakt ist noch nicht angelaufen"
 
@@ -863,6 +860,9 @@ msgstr "Haben Sie mehr Glück beim Handel!"
 msgid "Health"
 msgstr "Gesundheit"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Obere Schwelle"
 
@@ -969,9 +969,6 @@ msgstr "Innerhalb/Außerhalb"
 msgid "Income Source"
 msgstr "Einkommensquelle"
 
-msgid "Indicative"
-msgstr "Indikativ"
-
 msgid "Indicative Price"
 msgstr "Richtkurs"
 
@@ -1033,15 +1030,6 @@ msgstr ""
 
 msgid "LOW"
 msgstr "NIEDRIG"
-
-msgid "Last Digit Prediction"
-msgstr "Voraussage der letzen Stelle"
-
-msgid "Last Digit is Over"
-msgstr "Letzte Stelle ist über"
-
-msgid "Last Digit is Under"
-msgstr "Letzte Stelle ist unter"
 
 msgid "Last used"
 msgstr "Zuletzt verwendet"
@@ -1114,6 +1102,9 @@ msgstr "Chart- und Handelsmenüs werden geladen"
 
 msgid "Loading custom theme configuration"
 msgstr "Konfiguration des benutzerdefineierten Themas wird geladen"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Portfolio wird geladen"
@@ -2006,12 +1997,6 @@ msgstr "Tabelle"
 msgid "Tel"
 msgstr "Tel"
 
-msgid "Template applied partially"
-msgstr "Vorlage gilt zum Teil"
-
-msgid "Template is not applicable"
-msgstr "Vorlage ist nicht anwendbar"
-
 msgid "Template name"
 msgstr "Vorlagenname"
 
@@ -2315,6 +2300,9 @@ msgstr "Ansicht"
 
 msgid "View Historical Data"
 msgstr "Historische Daten Ansicht"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Volumenfaktor"
@@ -2641,6 +2629,27 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "Rendite"
+
+#~ msgid "Contract Details"
+#~ msgstr "Kontrakt Details"
+
+#~ msgid "Indicative"
+#~ msgstr "Indikativ"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Voraussage der letzen Stelle"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "Letzte Stelle ist über"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "Letzte Stelle ist unter"
+
+#~ msgid "Template applied partially"
+#~ msgstr "Vorlage gilt zum Teil"
+
+#~ msgid "Template is not applicable"
+#~ msgstr "Vorlage ist nicht anwendbar"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Fehler beim Datenerhalt für"

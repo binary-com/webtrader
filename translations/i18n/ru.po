@@ -489,9 +489,6 @@ msgstr "Контракт"
 msgid "Contract Confirmation"
 msgstr "Подтверждение контракта"
 
-msgid "Contract Details"
-msgstr "Детали контракта"
-
 msgid "Contract is not yet started"
 msgstr "Контракт ещё не начался"
 
@@ -859,6 +856,9 @@ msgstr "Удачи в торговле!"
 msgid "Health"
 msgstr "Здравоохранение"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Верхний барьер"
 
@@ -965,9 +965,6 @@ msgstr "Внутри/Вне"
 msgid "Income Source"
 msgstr "Источник дохода"
 
-msgid "Indicative"
-msgstr "Ориентировочная цена"
-
 msgid "Indicative Price"
 msgstr "Ориентировочная цена"
 
@@ -1027,15 +1024,6 @@ msgstr "Просто нажмите кнопку  Разрешить  на от�
 
 msgid "LOW"
 msgstr "НИЖНЕЕ ЗНАЧЕНИЕ"
-
-msgid "Last Digit Prediction"
-msgstr "Прогноз последней десятичной"
-
-msgid "Last Digit is Over"
-msgstr "Последняя десятичная находится выше"
-
-msgid "Last Digit is Under"
-msgstr "Последняя десятичная находится ниже"
 
 msgid "Last used"
 msgstr "Недавние"
@@ -1108,6 +1096,9 @@ msgstr "Загружается график и торговое меню"
 
 msgid "Loading custom theme configuration"
 msgstr "Загрузка индивидуальных настроек"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Загрузка портфеля"
@@ -1993,12 +1984,6 @@ msgstr "Таблица"
 msgid "Tel"
 msgstr "Тел"
 
-msgid "Template applied partially"
-msgstr "Шаблон частично применён"
-
-msgid "Template is not applicable"
-msgstr "Шаблон неприменим"
-
 msgid "Template name"
 msgstr "Название шаблона"
 
@@ -2293,6 +2278,9 @@ msgstr "Обзор"
 
 msgid "View Historical Data"
 msgstr "Обзор истории"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Фактор объёма"
@@ -2618,6 +2606,27 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Прибыль"
+
+#~ msgid "Contract Details"
+#~ msgstr "Детали контракта"
+
+#~ msgid "Indicative"
+#~ msgstr "Ориентировочная цена"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Прогноз последней десятичной"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "Последняя десятичная находится выше"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "Последняя десятичная находится ниже"
+
+#~ msgid "Template applied partially"
+#~ msgstr "Шаблон частично применён"
+
+#~ msgid "Template is not applicable"
+#~ msgstr "Шаблон неприменим"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Ошибка в получении данных для"

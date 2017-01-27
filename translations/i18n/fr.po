@@ -488,9 +488,6 @@ msgstr "Contrat"
 msgid "Contract Confirmation"
 msgstr "Confirmation de contrat"
 
-msgid "Contract Details"
-msgstr "Détails du contrat"
-
 msgid "Contract is not yet started"
 msgstr "Le contrat n'est pas encore actif"
 
@@ -863,6 +860,9 @@ msgstr ""
 msgid "Health"
 msgstr "Santé"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Barrière supérieure"
 
@@ -971,9 +971,6 @@ msgstr "Zone In/Out"
 msgid "Income Source"
 msgstr "Source de revenus"
 
-msgid "Indicative"
-msgstr "Indicatif"
-
 msgid "Indicative Price"
 msgstr "Prix indicatif"
 
@@ -1035,15 +1032,6 @@ msgstr ""
 
 msgid "LOW"
 msgstr "PLUS BAS"
-
-msgid "Last Digit Prediction"
-msgstr "Prédiction sur le dernier chiffre"
-
-msgid "Last Digit is Over"
-msgstr "Le dernier chiffre est au-dessus"
-
-msgid "Last Digit is Under"
-msgstr "Le dernier chiffre est en dessous"
 
 msgid "Last used"
 msgstr "Dernière utilisation"
@@ -1116,6 +1104,9 @@ msgstr "Chargement des menus graphiques et de trading"
 
 msgid "Loading custom theme configuration"
 msgstr "Chargement de la configuration de thème personnalisé"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Chargement du portefeuille"
@@ -2007,12 +1998,6 @@ msgstr "Tableau"
 msgid "Tel"
 msgstr "Tél."
 
-msgid "Template applied partially"
-msgstr ""
-
-msgid "Template is not applicable"
-msgstr ""
-
 msgid "Template name"
 msgstr "Nom du modèle"
 
@@ -2310,6 +2295,9 @@ msgstr "Affichage"
 
 msgid "View Historical Data"
 msgstr "Voir les données historiques"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Facteur de volume"
@@ -2644,6 +2632,21 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retours"
+
+#~ msgid "Contract Details"
+#~ msgstr "Détails du contrat"
+
+#~ msgid "Indicative"
+#~ msgstr "Indicatif"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Prédiction sur le dernier chiffre"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "Le dernier chiffre est au-dessus"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "Le dernier chiffre est en dessous"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Erreur lors de la récupération des données pour"

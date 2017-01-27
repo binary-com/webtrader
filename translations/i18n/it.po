@@ -486,9 +486,6 @@ msgstr "Contratto"
 msgid "Contract Confirmation"
 msgstr "Conferma del contratto"
 
-msgid "Contract Details"
-msgstr "Dettagli del contratto"
-
 msgid "Contract is not yet started"
 msgstr "Il contratto non è ancora iniziato"
 
@@ -854,6 +851,9 @@ msgstr "Buona fortuna nel trading!"
 msgid "Health"
 msgstr "Salute"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Barriera superiore"
 
@@ -959,9 +959,6 @@ msgstr "In/Out"
 msgid "Income Source"
 msgstr "Fonte di reddito"
 
-msgid "Indicative"
-msgstr "Indicativo"
-
 msgid "Indicative Price"
 msgstr "Prezzo indicativo"
 
@@ -1021,15 +1018,6 @@ msgstr "Basta cliccare sul pulsante Grant sulla pagina da adottare"
 
 msgid "LOW"
 msgstr "LOW"
-
-msgid "Last Digit Prediction"
-msgstr "Previsione dell'ultima cifra"
-
-msgid "Last Digit is Over"
-msgstr "L'ultima cifra è al di sopra"
-
-msgid "Last Digit is Under"
-msgstr "L'ultima cifra è al di sotto"
 
 msgid "Last used"
 msgstr "Ultima volta"
@@ -1102,6 +1090,9 @@ msgstr "Caricamento dei menu grafici e di trading"
 
 msgid "Loading custom theme configuration"
 msgstr "Caricamento della configurazione dello sfondo personalizzata"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Caricamento del portafoglio"
@@ -1983,12 +1974,6 @@ msgstr "Tabella"
 msgid "Tel"
 msgstr "Tel"
 
-msgid "Template applied partially"
-msgstr "Modello applicato parzialmente"
-
-msgid "Template is not applicable"
-msgstr "Il modello non è applicabile"
-
 msgid "Template name"
 msgstr "Nome del modello"
 
@@ -2269,6 +2254,9 @@ msgstr "Mostra"
 
 msgid "View Historical Data"
 msgstr "Mostra dati storici"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Fattore del volume"
@@ -2594,6 +2582,27 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Investimento"
+
+#~ msgid "Contract Details"
+#~ msgstr "Dettagli del contratto"
+
+#~ msgid "Indicative"
+#~ msgstr "Indicativo"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Previsione dell'ultima cifra"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "L'ultima cifra è al di sopra"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "L'ultima cifra è al di sotto"
+
+#~ msgid "Template applied partially"
+#~ msgstr "Modello applicato parzialmente"
+
+#~ msgid "Template is not applicable"
+#~ msgstr "Il modello non è applicabile"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Errore nell'ottenimento dei dati per"

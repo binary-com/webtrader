@@ -483,9 +483,6 @@ msgstr "Kontrak"
 msgid "Contract Confirmation"
 msgstr "Konfirmasi Kontrak"
 
-msgid "Contract Details"
-msgstr "Rincian Kontrak"
-
 msgid "Contract is not yet started"
 msgstr "Kontrak belum dimulai"
 
@@ -849,6 +846,9 @@ msgstr "Lebih beruntung pada trading!"
 msgid "Health"
 msgstr "Kesehatan"
 
+msgid "Help"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Batas Tinggi"
 
@@ -951,9 +951,6 @@ msgstr "In/Out"
 msgid "Income Source"
 msgstr "Sumber Pendapatan"
 
-msgid "Indicative"
-msgstr "Indikatif"
-
 msgid "Indicative Price"
 msgstr "Harga Indikatif"
 
@@ -1013,15 +1010,6 @@ msgstr "Cukup klik tombol  Hibah  pada halaman dan Anda akan dibawa ke"
 
 msgid "LOW"
 msgstr "RENDAH"
-
-msgid "Last Digit Prediction"
-msgstr "Analisa Digit Terakhir"
-
-msgid "Last Digit is Over"
-msgstr "Digit Terakhir adalah Over"
-
-msgid "Last Digit is Under"
-msgstr "Digit Terakhir adalah Under"
 
 msgid "Last used"
 msgstr "Terakhir digunakan"
@@ -1094,6 +1082,9 @@ msgstr "Pemuatan grafik dan menu trading"
 
 msgid "Loading custom theme configuration"
 msgstr "Pemuatan konfigurasi tema khusus"
+
+msgid "Loading help docs"
+msgstr ""
 
 msgid "Loading portfolio"
 msgstr "Pemuatan portopolio"
@@ -1974,12 +1965,6 @@ msgstr "Tabel"
 msgid "Tel"
 msgstr "Tel"
 
-msgid "Template applied partially"
-msgstr "Template diterapkan sebagian"
-
-msgid "Template is not applicable"
-msgstr "Template tidak berlaku"
-
 msgid "Template name"
 msgstr "Nama template"
 
@@ -2275,6 +2260,9 @@ msgstr "Lihat"
 
 msgid "View Historical Data"
 msgstr "Lihat Data Historikal"
+
+msgid "View Statement"
+msgstr ""
 
 msgid "Volume Factor"
 msgstr "Faktor Volume"
@@ -2600,6 +2588,27 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Laba"
+
+#~ msgid "Contract Details"
+#~ msgstr "Rincian Kontrak"
+
+#~ msgid "Indicative"
+#~ msgstr "Indikatif"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Analisa Digit Terakhir"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "Digit Terakhir adalah Over"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "Digit Terakhir adalah Under"
+
+#~ msgid "Template applied partially"
+#~ msgstr "Template diterapkan sebagian"
+
+#~ msgid "Template is not applicable"
+#~ msgstr "Template tidak berlaku"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Error mendapatkan data untuk"
