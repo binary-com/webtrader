@@ -1,4 +1,6 @@
 <div class="list">
+	<span class="ui-icon ui-icon-search"></span>
+	<input class="help-search" rv-on-input="searchSublist">
 	<div class="items">
 		<span rv-each-elem="list" rv-on-click="updateSublist | bind elem" rv-class-selected="current.list.text | eq elem.text">{elem.text}</span>
 	</div>
@@ -9,6 +11,6 @@
 	</div>
 </div>
 <div class="content">
-	<div class="loading" rv-if="current.content | eq null">Example text</div>
+	<div class="loading" rv-if="current.loading | eq true">Loading...</div>
 	<div class="items" rv-html="current.content"></div>
 </div>
