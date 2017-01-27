@@ -4,7 +4,7 @@ import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import html from 'text!cashier/currency.html';
 
-require(['text!cashier/currency.html']);
+require(['common/util']);
 
 let check_promise = null;
 const check_currency_async = () => new Promise((resolve, reject) => {
@@ -38,13 +38,20 @@ const check_currency_async = () => new Promise((resolve, reject) => {
         state.disabled = true;
         liveapi.send({ set_account_currency: state.value })
           .then(resolve, reject)
-          .then(() => win.dialog('close'));
+          .then(() => {
+            local_storage.set("currency", state.value);
+            //For updating balance in navigation
+            liveapi.send({balance: 1, subscribe:1})
+            .catch(function(err){ console.error(err); });
+            win.dialog('close');
+          });
       },
       cancel: () => {
         win.dialog('close');
         reject({ message: 'Please set currency.'.i18n() });
       }
     };
+
     liveapi.cached.send({payout_currencies:1}).then((data) => {
       state.disabled = false;
       state.array = data.payout_currencies;
@@ -57,7 +64,7 @@ const check_currency_async = () => new Promise((resolve, reject) => {
 
 export const check_currency = () => {
   if(check_promise) { return check_promise; }
-  check_promise = check_currency_async().catch(up => {
+  check_promise = check_currency_async().then(()=> check_promise = null).catch(up => {
     check_promise = null;
     throw up;
   });
