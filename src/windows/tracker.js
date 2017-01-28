@@ -15,7 +15,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
         return symbols;
       })
       .catch(function(err){
-        console.console(err);
+        console.error(err);
         return [];
       });
 

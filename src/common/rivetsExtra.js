@@ -413,9 +413,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
               }
             });
         },
-        unbind: function (el) {
-            $(el).slider('destroy');
-        },
+        unbind: function (el) { $(el).slider('destroy'); },
         routine: function (el, value) {
             $(el).slider('value', value);
             $(el).find('> div').text(value);

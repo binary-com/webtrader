@@ -52,7 +52,20 @@ async function init( containerIDWithHash, callback ) {
       level: {
         dialog: {
           bottom: '0px',
-          visible: true
+          visible: false,
+          add: () => {
+            const fields = state.levels.fields;
+            var level = {
+              color: _.find(fields, {title: 'Stroke'}).value,
+              dashStyle: _.find(fields, {title: 'Dash style'}).value,
+              value: _.find(fields, {title: 'Level'}).value,
+              width: _.find(fields, {title: 'Stroke width'}).value,
+            }
+            level.label = { text: level.value };
+            state.levels.values.push(level);
+            state.level.dialog.visible = false;
+          },
+          cancel: () => { state.level.dialog.visible = false; }
        },
         remove: row => {
           const values = state.levels.values;
@@ -61,12 +74,13 @@ async function init( containerIDWithHash, callback ) {
         },
         add: (e) => {
           const btn = $(e.target);
-          console.warn(btn);
-          const bottom = btn.position().top + btn.closest('table').parent().scrollTop();
+          const bottom = btn.position().top + btn.closest('table').parent().scrollTop() + 45;
           state.level.dialog.bottom = bottom*-1 + 'px';
+          state.level.dialog.visible = !state.level.dialog.visible;
         }
       }
     }
+    window.ss = state;
 
     $html = $($html);
     const view = rv.bind($html[0], state);

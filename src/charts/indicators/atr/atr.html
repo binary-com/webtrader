@@ -69,7 +69,7 @@
             </td>
         </tr>
     </table>
-    <div class='levels-dialog' rv-if='levels' rv-css-bottom="level.dialog.bottom">
+    <div class='levels-dialog' rv-if='levels' rv-show='level.dialog.visible' rv-css-bottom="level.dialog.bottom">
       <table>
         <tr rv-each-row="levels.fields">
           <td>{row.title}</td>
@@ -90,14 +90,18 @@
                   rv-css-background-image="dash.url"></div>
             </div>
           </td>
-          <td rv-if="row.type | eq 'appliedto'">
+          <!-- <td rv-if="row.type | eq 'appliedto'">
             <div class="applied-to">
                 <div rv-class-selected="row.value | eq 0" rv-on-click="update_appliedto | bind row | bind 0">OPEN</div>
                 <div rv-class-selected="row.value | eq 1" rv-on-click="update_appliedto | bind row | bind 1">HIGH</div>
                 <div rv-class-selected="row.value | eq 2" rv-on-click="update_appliedto | bind row | bind 2">LOW</div>
                 <div rv-class-selected="row.value | eq 3" rv-on-click="update_appliedto | bind row | bind 3">CLOSE</div>
             </div>
-          </td>
+          </td> -->
+        </tr>
+        <tr>
+          <td></td>
+          <td><button rv-on-click='level.dialog.cancel'>Cancel</button><button rv-on-click='level.dialog.add'>Add</button></td>
         </tr>
       </table>
     </div>

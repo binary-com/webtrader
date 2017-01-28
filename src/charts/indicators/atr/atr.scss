@@ -33,6 +33,7 @@
     background-position: center;
     margin: 0 2px;
     width: 30%;
+    cursor: pointer;
   }
   .dash-styles > div.dash-selected {
     border-bottom: 3px solid rgba(0,0,200,.5);
@@ -83,6 +84,14 @@
     position: absolute;
     z-index: 1;
     tr td:nth-child(1) { width: 35%; }
+
+    table tr:last-child td {
+      text-align: center;
+      button { margin: 0 3px;}
+    }
+    button {
+      line-height: 10px;
+    }
   }
 
   .levels-dialog:after {
