@@ -5,18 +5,18 @@
     "short_display_name": "ATR",
     "editable": true,
     "fields": [
-      {"title": "Period", "min": 1, "max": 100, "value": 14, "type": "slider"},
-      {"title": "Stroke width", "min": 1, "max": 10, "value": 1, "type": "slider"},
-      {"title": "Stroke", "value": "#cd0a0a", "type": "colorpicker"},
-      {"title": "Dash style", "value": "Solid", "type": "dashstyle"},
-      {"title": "Applied to", "value": 3, "type": "appliedto"}
+      {"title": "Period", "key": "period", "min": 1, "max": 100, "value": 14, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#cd0a0a", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
     ],
     "levels":{
       "fields": [
-        {"title": "Level", "min": 1, "max": 100, "value": 50, "type": "slider"},
-        {"title": "Stroke width", "min": 1, "max": 10, "value": 1, "type": "slider"},
-        {"title": "Stroke", "value": "#ff0000", "type": "colorpicker"},
-        {"title": "Dash style", "value": "Solid", "type": "dashstyle"}
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#ff0000", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
       ],
       "values": [
         {"color": "#ff0000", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
