@@ -105,7 +105,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
         series: [{
           name: title,
           data: data,
-          type: type,
+          type: type
         }],
         exporting: {enabled: false, enableImages: false},
         legend: {enabled: false},
@@ -338,15 +338,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
           longcode: proposal.longcode,
           validation: proposal.validation_error
                 || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
-                || (proposal.is_expired && 'This contract has expired'.i18n()) || '-',
+                || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
           table: {
-            is_expired: proposal.is_expired,
+            is_ended: proposal.is_settleable || proposal.is_sold,
             currency: (proposal.currency ||  'USD') + ' ',
             current_spot_time: proposal.current_spot_time,
             current_spot: proposal.current_spot,
             contract_type: proposal.contract_type,
             date_start: proposal.date_start,
             date_expiry: proposal.date_expiry,
+            user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
 
             entry_tick: proposal.entry_tick || proposal.entry_spot,
             entry_tick_time: proposal.entry_tick_time,
@@ -493,7 +494,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
                 state.table.exit_tick = perv_tick.quote;
                 state.table.exit_tick_time = perv_tick.epoch*1;
                 state.validation = 'This contract has expired'.i18n();
-                state.table.is_expired = true;
+                state.table.is_ended = true;
               }
               clean_up();
             }
@@ -553,7 +554,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
     var request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
-      end: state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
+      end: state.table.sell_time ? state.table.sell_time*1 + margin : state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
@@ -563,7 +564,7 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
       state.chart.type = 'candles';
     }
 
-    if(!state.table.is_expired) {
+    if(!state.table.is_ended) {
       update_live_chart(state, granularity);
     }
 
@@ -607,11 +608,11 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
             chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
           });
         }
-        if(data.history && !state.table.exit_tick_time && state.table.is_expired && state.table.contract_type != "SPREAD") {
+        if(data.history && !state.table.exit_tick_time && state.table.is_ended && state.table.contract_type != "SPREAD") {
           state.table.exit_tick_time = _.last(data.history.times.filter(function(t){ return t*1 <= state.table.date_expiry*1 }));
           state.table.exit_tick = _.last(data.history.prices.filter(function(p, inx){ return data.history.times[inx]*1 <= state.table.date_expiry*1 }));
         }
-        if(data.candles && !state.table.exit_tick_time && state.table.is_expired) {
+        if(data.candles && !state.table.exit_tick_time && state.table.is_ended) {
           get_tick_value(state.chart.symbol, state.table.date_expiry -2).then(function(data){
             var history = data.history;
             if(history.times.length !== 1) return;
@@ -623,16 +624,16 @@ define(["jquery", "windows/windows", "websockets/binary_websockets", "charts/cha
             }
 
             state.table.exit_tick = history.prices[0];
-            chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+            !state.table.user_sold && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
           });
         }
 
         state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'.i18n()});
-
+        
         state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
-        state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+        !state.table.user_sold && state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
 
-        state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
+        !state.table.user_sold && state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
         state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
 
         state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});

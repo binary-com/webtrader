@@ -465,8 +465,8 @@ msgstr "Confirmar transferência"
 msgid "Connection closed"
 msgstr "Conexão fechada"
 
-msgid "Connection error. Refresh the page"
-msgstr "Erro de conexão. Atualize a página"
+msgid "Connection error"
+msgstr "Erro de conexão"
 
 msgid "Construction"
 msgstr "Construção"

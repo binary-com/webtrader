@@ -48,9 +48,6 @@ requirejs.config({
         "babel-runtime/regenerator": {
             exports: 'regeneratorRuntime'
         },
-        "websockets/binary_websockets": {
-          deps:('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? [] : ['es6-promise']
-        },
         "timepicker": {
             deps:['jquery-ui', 'jquery']
         },
