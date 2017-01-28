@@ -37,6 +37,8 @@ async function init( containerIDWithHash, callback ) {
 
     const state = {
       fields: data.fields,
+      levels: data.levels, /* optional */
+      description: data.description,
       dash_styles: [
         "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot",
         "Dot", "Dash", "LongDash", "DashDot", "LongDashDot", "LongDashDotDot"
@@ -46,6 +48,23 @@ async function init( containerIDWithHash, callback ) {
       },
       update_appliedto(row, value) {
         row.value = value*1;
+      },
+      level: {
+        dialog: {
+          bottom: '0px',
+          visible: true
+       },
+        remove: row => {
+          const values = state.levels.values;
+          const inx = values.indexOf(row);
+          inx !== -1 && values.splice(inx, 1);
+        },
+        add: (e) => {
+          const btn = $(e.target);
+          console.warn(btn);
+          const bottom = btn.position().top + btn.closest('table').parent().scrollTop();
+          state.level.dialog.bottom = bottom*-1 + 'px';
+        }
       }
     }
 

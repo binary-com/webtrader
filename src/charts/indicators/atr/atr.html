@@ -3,9 +3,10 @@
       <colgroup>
         <col style="width:30%">
         <col style="width:70%">
-      </colgroup> 
+      </colgroup>
         <tr>
-          <td colspan="2" class="atr-description">
+          <td colspan="2" class="description">
+            {description}
           </td>
         </tr>
         <tr rv-each-row="fields">
@@ -36,79 +37,68 @@
             </div>
           </td>
         </tr>
-        <tr>
-            <td><strong>Period</strong></td>
-            <td><input value="14" min="1" max="200" class="atr_input_width_for_period"/></td>
+
+        <tr rv-if="levels" class="levels-tr">
+            <td>Levels:</td>
+            <td><button rv-on-click='level.add'>Add level</button></td>
         </tr>
-        <tr>
-            <td><strong>Stroke</strong></td>
-            <td><input value="" id="atr_stroke" type="button" class="atr_input_width" style="background: #cd0a0a;"/></td>
-        </tr>
-        <tr>
-            <td><strong>Stroke width</strong></td>
-            <td>
-                <select id="atr_strokeWidth" class="atr_input_width">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><strong>Dash style</strong></td>
-            <td>
-                <select id="atr_dashStyle" class="atr_input_width">
-                    <option value="Solid" data-imagesrc="images/dashstyle/Solid.svg" title="Solid"></option>
-                    <option value="ShortDash" data-imagesrc="images/dashstyle/ShortDash.svg"></option>
-                    <option value="ShortDot" data-imagesrc="images/dashstyle/ShortDot.svg"></option>
-                    <option value="ShortDashDot" data-imagesrc="images/dashstyle/ShortDashDot.svg"></option>
-                    <option value="ShortDashDotDot" data-imagesrc="images/dashstyle/ShortDashDotDot.svg"></option>
-                    <option value="Dot" data-imagesrc="images/dashstyle/Dot.svg"></option>
-                    <option value="Dash" data-imagesrc="images/dashstyle/Dash.svg"></option>
-                    <option value="LongDash" data-imagesrc="images/dashstyle/LongDash.svg"></option>
-                    <option value="DashDot" data-imagesrc="images/dashstyle/DashDot.svg"></option>
-                    <option value="LongDashDot" data-imagesrc="images/dashstyle/LongDashDot.svg"></option>
-                    <option value="LongDashDotDot" data-imagesrc="images/dashstyle/LongDashDotDot.svg"></option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><strong>Applied to</strong></td>
-            <td>
-                <select id="atr_appliedTo" class="atr_input_width">
-                    <option value="0">OPEN</option>
-                    <option value="1">HIGH</option>
-                    <option value="2">LOW</option>
-                    <option value="3" selected>CLOSE</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><button id="atr_level_delete" class="atr_input_width" >Delete level(s)</button></td>
-            <td><button id="atr_level_add" class="atr_input_width" >Add level</button></td>
-        </tr>
-        <tr>
+        <tr rv-if="levels">
             <td colspan="2">
-                <table id="atr_levels" class="display">
-                    <thead>
-                        <tr>
-                            <td>Level</td>
-                            <td>Stroke</td>
-                            <td>Stroke width</td>
-                            <td>Dash style</td>
-                        </tr>
-                    </thead>
+                <table class="levels">
+                    <thead> <tr>
+                        <td rv-each-row="levels.fields">{row.title}</td>
+                        <td></td>
+                    </tr> </thead>
                     <tbody>
+                      <tr rv-each-row="levels.values">
+                        <td>{row.value}</td>
+                        <td>{row.width}</td>
+                        <td>
+                          <div style="width:width:100%; height: 20px;" rv-css-background-color="row.color"/>
+                        </td>
+                        <td>
+                          <div class="levels-dash-style"
+                            rv-css-background-image="row.dashStyle | prepend 'url('images/dashstyle/' | append '.svg'"/>
+                        </td>
+                        <td>
+                          <span rv-on-click='level.remove | bind row' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
+                        </td>
+                      </tr>
                     </tbody>
                 </table>
             </td>
         </tr>
     </table>
+    <div class='levels-dialog' rv-if='levels' rv-css-bottom="level.dialog.bottom">
+      <table>
+        <tr rv-each-row="levels.fields">
+          <td>{row.title}</td>
+          <td rv-if="row.type | eq 'slider'">
+            <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max"></div>
+          </td>
+          <td rv-if="row.type | eq 'colorpicker'">
+            <div rv-colorpicker="row.value"></div>
+            <div class="colorpicker-preview" rv-css-background="row.value"></div>
+          </td>
+          <td rv-if="row.type | eq 'dashstyle'">
+            <div class="dash-styles">
+                <div
+                  rv-each-dash="dash_styles"
+                  rv-class-dash-selected="row.value | eq dash.name"
+                  rv-attr-value="dash.name"
+                  rv-on-click="update_dash | bind dash | bind row"
+                  rv-css-background-image="dash.url"></div>
+            </div>
+          </td>
+          <td rv-if="row.type | eq 'appliedto'">
+            <div class="applied-to">
+                <div rv-class-selected="row.value | eq 0" rv-on-click="update_appliedto | bind row | bind 0">OPEN</div>
+                <div rv-class-selected="row.value | eq 1" rv-on-click="update_appliedto | bind row | bind 1">HIGH</div>
+                <div rv-class-selected="row.value | eq 2" rv-on-click="update_appliedto | bind row | bind 2">LOW</div>
+                <div rv-class-selected="row.value | eq 3" rv-on-click="update_appliedto | bind row | bind 3">CLOSE</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
 </div>

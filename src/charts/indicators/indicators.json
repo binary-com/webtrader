@@ -11,6 +11,18 @@
       {"title": "Dash style", "value": "Solid", "type": "dashstyle"},
       {"title": "Applied to", "value": 3, "type": "appliedto"}
     ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "value": "#ff0000", "type": "colorpicker"},
+        {"title": "Dash style", "value": "Solid", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#ff0000", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#ff0000", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Volatility Indicators"
     ],
