@@ -29,25 +29,24 @@ define(['websockets/binary_websockets','charts/chartingRequestMap','jquery','jqu
 
     liveapi.events.on('candles', function (data) {
         var key = (data.echo_req.ticks_history + data.echo_req.granularity).toUpperCase();
-        for ( var index in data.candles ) {
-            var eachData = data.candles[index],
-                    open  = parseFloat(eachData.open),
-                    high  = parseFloat(eachData.high),
-                    low   = parseFloat(eachData.low),
-                    close = parseFloat(eachData.close),
-                    time  = parseInt(eachData.epoch) * 1000;
+        data.candles.forEach(function(eachData){
+          var open  = parseFloat(eachData.open),
+              high  = parseFloat(eachData.high),
+              low   = parseFloat(eachData.low),
+              close = parseFloat(eachData.close),
+              time  = parseInt(eachData.epoch) * 1000;
             processCandles(key, time, open, high, low, close);
-        }
+        });
         chartingRequestMap.barsLoaded(key);
     });
     liveapi.events.on('history', function (data) {
         //For tick history handling
         var key = (data.echo_req.ticks_history + '0').toUpperCase();
-        for (var index in data.history.times) {
-            var time = parseInt(data.history.times[index]) * 1000,
+        data.history.times.forEach(function(eachData,index){
+            var time = parseInt(eachData) * 1000,
                 price = parseFloat(data.history.prices[index]);
-            processCandles(key, time, price, price, price, price);
-        }
+            processCandles(key, time, price, price, price, price);    
+        });
         chartingRequestMap.barsLoaded(key);
     });
 

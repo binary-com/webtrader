@@ -36,13 +36,14 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
         ws.addEventListener('message', onmessage);
 
         ws.addEventListener('error', function(event) {
-            $.growl.error({message: 'Connection error. Refresh the page.'.i18n().i18n()});
-            //Clear everything. No more changes on chart. Refresh of page is needed!
+            $.growl.error({message: 'Connection error.'.i18n()});
+            onclose(); // try to reconnect
         });
 
         return ws;
     }
 
+    var timeoutIsSet = false;
     var onclose = function () {
       require(['windows/tracker'],function(tracker) {
         var trade_dialogs = tracker.get_trade_dialogs();
@@ -52,7 +53,10 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
          *  The connection is closed, resubscrible to tick streaming.
          *  We have to make sure that resubscribe is atleast 1 second delayed
          **/
-        setTimeout(function(){
+        if (timeoutIsSet) { return; }
+        timeoutIsSet = true;
+        setTimeout(function() {
+            timeoutIsSet = false;
             socket = connect();
             if(local_storage.get('oauth')) {
               api.cached.authorize().then(function() {
@@ -223,6 +227,7 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
     var invalidate = function(){
         local_storage.remove('oauth');
         local_storage.remove('authorize');
+        fire_event("reset_realitycheck");
 
         api.send({logout: 1}) /* try to logout and if it fails close the socket */
           .catch(function(err){
@@ -477,6 +482,14 @@ define(['jquery', 'text!oauth/app_id.json', 'common/util'], function ($, app_ids
          .catch(function(err){ console.error(err); });
 
       api.send({balance: 1, subscribe:1})
+         .catch(function(err){ console.error(err); });
+    });
+    /* always forget transaction & balance streams on logout */
+    api.events.on('logout', function() {
+      api.send({forget_all: 'transaction'})
+         .catch(function(err){ console.error(err); });
+
+      api.send({forget_all: 'balance'})
          .catch(function(err){ console.error(err); });
     });
     return api;
