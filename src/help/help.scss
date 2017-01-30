@@ -45,10 +45,10 @@
 	}
 
 	.content{
-		float: left;
 		height: 100%;
-		overflow: auto;
-		width: 395px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		width: 390px;
 		.loading {
 			display: flex;
 			width: 395px;
@@ -63,7 +63,7 @@
 		    position: absolute;
 		}
 		.items {
-			padding-left: 10px;
+			padding: 0 5px 0 10px;
 			ul {
 				list-style-type: circle;
 				font-size: 15px;

@@ -119,4 +119,3 @@ for f in files:
 
 # to extract translated string from a to b
 # msgmerge -N -o i18n/zh_tw.po temp/zh_tw.po ref/zh_tw.po
-'''

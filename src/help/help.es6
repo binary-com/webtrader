@@ -6,10 +6,10 @@ import 'css!help/help.css';
 
 "use strict";
 
-var win = null,
-	sublist_items = [];
+let win = null, sublist_items = [];
+
 const init = () => {
-	var $html = $(html);
+	const $html = $(html);
 	win = windows.createBlankWindow($("<div class='help-dialog'/>"), {
 		title: "Help",
         width: 850,
@@ -30,7 +30,7 @@ const init = () => {
         }
 	});
 
-	var state = {
+	const state = {
 		current: {
 			list: null,
 			loading: false,
@@ -266,7 +266,7 @@ const init = () => {
 	};
 
 	state.searchSublist = (e,scope) => {
-		var query = $(e.target).val().toLowerCase();
+		const query = $(e.target).val().toLowerCase();
 		if(query.length > 0){
 			state.current.sublist = sublist_items.filter((item) => {
 				return item.text.toLowerCase().indexOf(query) != -1;
@@ -276,7 +276,7 @@ const init = () => {
 	}
 
 	//Concat all the sublist items into one array so that we can later use it for searching.
-	for (var key in state.sublist){
+	for (let key in state.sublist){
 		sublist_items = sublist_items.concat(state.sublist[key]);
 	}
 
@@ -287,7 +287,7 @@ const init = () => {
 	state.getContent(state.current.content_page);
 
 	$html.appendTo(win);
-	var win_view = rv.bind(win[0], state);
+	let win_view = rv.bind(win[0], state);
     win.dialog('open');
 };
 
