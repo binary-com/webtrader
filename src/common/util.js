@@ -400,7 +400,8 @@ var Cookies = {
     }).filter(function(id) {
       return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
     });
-    return loginids.concat(oauth_loginids)
+
+    return oauth_loginids && oauth_loginids.length > 0 ? oauth_loginids : loginids;
   },
   residence: function() {
     return Cookies.get_by_name('residence');
@@ -472,4 +473,17 @@ function download_file_in_browser(filename, type, content){
                     document.body.removeChild(link);
                 }
             }
+}
+
+function guessDigits(prices) {
+    var defaultDigits = 0;
+    (prices || []).forEach(function(price) {
+        var priceStr = (price + '');
+        var priceSplitted = priceStr.split('.') || [];
+        if (priceSplitted.length > 1) {
+            var len = priceSplitted[1].length;
+            if ( len > defaultDigits) defaultDigits = len;
+        }
+    });
+    return defaultDigits || 4;
 }

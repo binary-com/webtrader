@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-04 12:23+0200\n"
-"PO-Revision-Date: 2016-11-21 21:50+0000\n"
+"PO-Revision-Date: 2017-01-26 04:21+0000\n"
 "Last-Translator: Alcino Jorge <alcino@binary.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/pt/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.10-dev\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "Tipo de %D MA"
@@ -202,7 +202,7 @@ msgid "ADX Stroke"
 msgstr "Traço de ADX"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "ATR Period"
 msgstr "Período ATR"
@@ -265,7 +265,7 @@ msgid "Answer"
 msgstr "Resposta"
 
 msgid "Applied to"
-msgstr ""
+msgstr "Aplicado a"
 
 msgid "Apply"
 msgstr "Candidatar-se"
@@ -292,10 +292,10 @@ msgid "Aroon Up Stroke"
 msgstr "Traço para cima aroon"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Asiático abaixo"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Asiático acima"
 
 msgid "Asians"
 msgstr "Asiáticos"
@@ -343,7 +343,7 @@ msgid "Blank window"
 msgstr "Janela negra"
 
 msgid "Bought"
-msgstr ""
+msgstr "Adquiridos"
 
 msgid "Brand of first car"
 msgstr "Marca do primeiro carro"
@@ -364,7 +364,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
 
 msgid "CLOSE"
-msgstr "FECHAR"
+msgstr "FECHAMENTO"
 
 msgid "CSV"
 msgstr "CSV"
@@ -427,7 +427,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Clear"
-msgstr ""
+msgstr "Limpar"
 
 msgid "Click Jacking test"
 msgstr "Teste de \"Click Jacking\""
@@ -465,14 +465,14 @@ msgstr "Confirmar transferência"
 msgid "Connection closed"
 msgstr "Conexão fechada"
 
-msgid "Connection error. Refresh the page"
-msgstr "Erro de conexão. Atualize a página"
+msgid "Connection error"
+msgstr "Erro de conexão"
 
 msgid "Construction"
 msgstr "Construção"
 
 msgid "Contact Us"
-msgstr ""
+msgstr "Contate-nos"
 
 msgid "Continue"
 msgstr "Continuar"
@@ -529,7 +529,7 @@ msgid "Current password"
 msgstr "Senha atual"
 
 msgid "Current regulations require that you provide us the following"
-msgstr ""
+msgstr "Regulamentos atuais exigem que você nos forneça as seguintes"
 
 msgid "Current time"
 msgstr "Hora atual"
@@ -613,7 +613,7 @@ msgid "Deselect"
 msgstr "Desmarcar"
 
 msgid "Differs"
-msgstr ""
+msgstr "Difere"
 
 msgid "Digits"
 msgstr "Dígitos"
@@ -711,10 +711,10 @@ msgid "Ends In/Out"
 msgstr "Termina Dentro/Fora"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Termina dentro"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Termina fora"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
@@ -734,7 +734,7 @@ msgid "Error downloading .csv"
 msgstr "Erro ao baixar .csv"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Erro ao obter dados para %1"
 
 msgid "Error getting market information!"
 msgstr "Erro ao obter informações do mercado!"
@@ -743,7 +743,7 @@ msgid "Estimated Net Worth"
 msgstr "Patrimônio líquido estimado"
 
 msgid "Even"
-msgstr ""
+msgstr "Par"
 
 msgid "Exclude me from the website until"
 msgstr "Exclua-me do website até"
@@ -836,7 +836,7 @@ msgid "Further instructions"
 msgstr "Mais instruções"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Sai fora"
 
 msgid "Gray"
 msgstr "Cinza"
@@ -848,7 +848,7 @@ msgid "Grid Light"
 msgstr "Luz de grelha"
 
 msgid "HIGH"
-msgstr ""
+msgstr "ALTA"
 
 msgid "Have better luck at trading!"
 msgstr "Tenha mais sorte nas negociações!"
@@ -866,13 +866,13 @@ msgid "High Stroke"
 msgstr "Traço alto"
 
 msgid "High barrier"
-msgstr ""
+msgstr "Barreira alta"
 
 msgid "High barrier offset"
 msgstr "Deslocamento da barreira alta"
 
 msgid "Higher"
-msgstr ""
+msgstr "Superior"
 
 msgid "Histogram Color"
 msgstr "Cor do histograma"
@@ -1024,7 +1024,7 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
 
 msgid "LOW"
-msgstr ""
+msgstr "BAIXA"
 
 msgid "Last Digit Prediction"
 msgstr "Previsão do último dígito"
@@ -1036,7 +1036,7 @@ msgid "Last Digit is Under"
 msgstr "Último dígito é inferior a"
 
 msgid "Last used"
-msgstr ""
+msgstr "Última utilização"
 
 msgid "Less than"
 msgstr "Inferior a"
@@ -1153,13 +1153,13 @@ msgid "Low Stroke"
 msgstr "Traço baixo"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Barreira baixa"
 
 msgid "Low barrier offset"
 msgstr "Deslocamento de barreira baixa"
 
 msgid "Lower"
-msgstr ""
+msgstr "Inferior"
 
 msgid "Lower Band Stroke"
 msgstr "Banda Baixa"
@@ -1194,7 +1194,7 @@ msgid "Mass Period"
 msgstr "Período da massa"
 
 msgid "Matches"
-msgstr ""
+msgstr "Combina"
 
 msgid "Max/Min Period"
 msgstr "Período mín/máx"
@@ -1322,7 +1322,7 @@ msgid "No"
 msgstr "Não"
 
 msgid "No touch"
-msgstr ""
+msgstr "Não toca"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "Note que os tokens podem possuir um ou mais destes escopos"
@@ -1364,7 +1364,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OPEN"
-msgstr ""
+msgstr "ABERTURA"
 
 msgid "Oct"
 msgstr "Out"
@@ -1373,7 +1373,7 @@ msgid "October"
 msgstr "Outubro"
 
 msgid "Odd"
-msgstr ""
+msgstr "Ímpar"
 
 msgid "Offset"
 msgstr "Deslocamento"
@@ -1401,13 +1401,13 @@ msgid "Oops... Page Not Available"
 msgstr "Ops... Página indisponível"
 
 msgid "Open"
-msgstr "Aberto"
+msgstr "Abertura"
 
 msgid "Open Account"
 msgstr "Conta aberta"
 
 msgid "Open Price"
-msgstr "Preço aberto"
+msgstr "Preço de abertura"
 
 msgid "Open a Financial Account"
 msgstr "Abrir uma conta financeira"
@@ -1435,7 +1435,7 @@ msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "Campo opcional, dentro de 20 caracteres e pode não conter '+'"
 
 msgid "Other"
-msgstr ""
+msgstr "Outro"
 
 msgid "Other financial instruments trading experience"
 msgstr "Experiência com outros instrumentos financeiros"
@@ -1444,7 +1444,7 @@ msgid "Other financial instruments trading frequency"
 msgstr "Frequência de negociação de outros instrumentos financeiros"
 
 msgid "Over"
-msgstr ""
+msgstr "Acima"
 
 msgid "Over 3 years"
 msgstr "Mais de 3 anos"
@@ -1453,7 +1453,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "PNG"
 msgstr "PNG"
@@ -1555,7 +1555,7 @@ msgid "Please enter the verification code sent to your email"
 msgstr "Insira o código de verificação enviado para o seu e-mail"
 
 msgid "Please enter time in the format HH:MM"
-msgstr ""
+msgstr "Insira a hora no formato HH:MM"
 
 msgid "Please enter your city address"
 msgstr "Insira o seu endereço"
@@ -1640,7 +1640,7 @@ msgid "Price"
 msgstr "Preço"
 
 msgid "Primary"
-msgstr ""
+msgstr "Primário"
 
 msgid "Print chart"
 msgstr "Imprimir gráfico"
@@ -1661,7 +1661,7 @@ msgid "Profit/Loss (points)"
 msgstr "Lucro/Perda (pontos)"
 
 msgid "Purchase"
-msgstr ""
+msgstr "Comprar"
 
 msgid "Purchase Date"
 msgstr "Data de aquisição"
@@ -1727,7 +1727,7 @@ msgid "Results"
 msgstr "Resultados"
 
 msgid "Return"
-msgstr ""
+msgstr "Voltar"
 
 msgid "Return to trading page"
 msgstr "Voltar para a página de negociação"
@@ -1772,7 +1772,7 @@ msgid "Save changes"
 msgstr "Salvar alterações"
 
 msgid "Secondary"
-msgstr ""
+msgstr "Secundário"
 
 msgid "Security"
 msgstr "Segurança"
@@ -1931,7 +1931,7 @@ msgid "Stays In/Goes Out"
 msgstr "Fica dentro/Sai fora"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Fica dentro"
 
 msgid "Stocks trading experience"
 msgstr "Experiência com negociação de ações"
@@ -1979,7 +1979,7 @@ msgid "Sunday"
 msgstr "Domingo"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
 msgstr "TRIMA"
@@ -2006,7 +2006,7 @@ msgid "Terms and Conditions"
 msgstr "Termos e condições"
 
 msgid "Tertiary"
-msgstr ""
+msgstr "Terciário/Superior"
 
 msgid "The"
 msgstr ""
@@ -2085,7 +2085,7 @@ msgid "Time interval"
 msgstr "Intervalo de tempo"
 
 msgid "Time out until"
-msgstr ""
+msgstr "Bloqueio até"
 
 msgid "Time period"
 msgstr "Período de tempo"
@@ -2151,7 +2151,7 @@ msgid "Total Profit/Loss"
 msgstr "Lucro/Perda Total"
 
 msgid "Touch"
-msgstr ""
+msgstr "Toca"
 
 msgid "Touch/No Touch"
 msgstr "Toca/Não Toca"
@@ -2163,7 +2163,7 @@ msgid "Town/City"
 msgstr "Cidade"
 
 msgid "Trade"
-msgstr ""
+msgstr "Negociar"
 
 msgid "Trade Confirmation"
 msgstr "Confirmação da negociação"
@@ -2226,10 +2226,10 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Under"
-msgstr ""
+msgstr "Inferior"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr ""
+msgstr "Infelizmente, o seu navegador não suporta estas tecnologias"
 
 msgid "Unlock"
 msgstr "Desbloquear"
@@ -2253,7 +2253,7 @@ msgid "Upper Band Stroke"
 msgstr "Banda superior"
 
 msgid "Use"
-msgstr ""
+msgstr "Use"
 
 msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
@@ -2285,7 +2285,7 @@ msgid "Vertical line"
 msgstr "Linha vertical"
 
 msgid "View"
-msgstr ""
+msgstr "Modo de exibição"
 
 msgid "View Historical Data"
 msgstr "Ver dados históricos"
@@ -2321,7 +2321,7 @@ msgid "While on the go, you can"
 msgstr "Em qualquer lugar, você pode"
 
 msgid "Windows"
-msgstr ""
+msgstr "Janelas"
 
 msgid "Withdraw funds"
 msgstr "Retirar fundos"

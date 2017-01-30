@@ -48,7 +48,9 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'node_modules/',
                         src: [
-                            'jquery-ui-iconfont/jquery-ui.icon-font.css', 'jquery-ui-iconfont/font/*',
+                            'jquery-ui-iconfont/jquery-ui.icon-font.css',
+                            'jquery-ui-iconfont/font/*',
+                            'regenerator-runtime/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                     },
@@ -70,7 +72,7 @@ module.exports = function (grunt) {
                             'clipboard/dist/clipboard.min.js',
                             'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
-                            'requirejs/require.js',
+                            'alameda/alameda.js',
                             'require-css/css.min.js',
                             'text/text.js',
                             'lodash/dist/lodash.min.js',
@@ -444,7 +446,16 @@ module.exports = function (grunt) {
         babel: {
           options: {
             sourceMap: true,
-            presets: ['es2015', 'stage-0']
+            presets: ['es2015', 'stage-0'],
+            "plugins": [
+              "transform-es2015-modules-amd",
+              ["transform-runtime", {
+                "helpers": false,
+                "polyfill": false,
+                "regenerator": true,
+                "moduleName": "babel-runtime"
+              }]
+            ]
           },
           dist: {
             files: [

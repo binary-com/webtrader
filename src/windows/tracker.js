@@ -69,6 +69,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
         }
         data.data.tracker_id = ++counter;
         require(['charts/chartWindow'], function(chartWindow) {
+          data.data.isTrackerInitiated = true;
           chartWindow.addNewWindow(data.data);
         });
       }
@@ -79,7 +80,7 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
               .send({contracts_for: data.data.symbol.symbol})
               .then(function (res) {
                   require(['trade/tradeDialog'], function (tradeDialog) {
-                      var dialog = tradeDialog.init(data.data.symbol, res.contracts_for, data.data.template);
+                      var dialog = tradeDialog.init(data.data.symbol, res.contracts_for, data.data.template, true/*isTrackerInitiated*/);
                       if(data.position.offset) {
                          var x = data.position.offset.left;
                          var y = data.position.offset.top;

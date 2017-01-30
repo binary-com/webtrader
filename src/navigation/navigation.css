@@ -10,7 +10,7 @@ body {
     font-size: 100%;
     text-align: right;
     padding: 3px 0;
-    height: 20px;
+    height: 23px;
 }
 
 #topbar span.time {
@@ -69,6 +69,22 @@ body {
   display: none;
 }
 
+.top-nav-menu li a {
+  font-size: 18px;
+}
+.top-nav-menu li > ul li a{
+  font-size: 1rem;
+}
 .login button {
   margin: 15px 0;
+}
+
+#all-accounts-top {
+  margin-top:3px;
+}
+
+.main-nav .nav-caret {
+  position: absolute;
+  top: 30px;
+  right: 15px;
 }

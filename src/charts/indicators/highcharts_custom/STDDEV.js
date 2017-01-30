@@ -20,17 +20,26 @@ STDDEV = function(data, options, indicators) {
      // 	5-Divide this sum by the number of observations.
      // 	6-The standard deviation is then equal to the square root of that number.
      */
+
+    //this is not great way of doing it
+    this.precision = guessDigits(_.map(data.slice(0, 10), function(f) { return f.close; })) || 4;
+
+    this._calculate = function(data, index, ma) {
+        var sum = 0.0;
+        for (var i = this.options.period - 1; i >= 0; i--) {
+            var price = indicators.getIndicatorOrPriceValue(data[index - i], this.options.appliedTo);
+            sum += Math.pow(price - ma, 2);
+        }
+        return Math.sqrt(sum / this.options.period);
+    };
+    
     for (var index = 0; index < data.length; index++)
     {
         if (index >= options.period) {
-            var sum = 0.0;
-            for (var i = this.options.period - 1; i >= 0; i--) {
-                sum += Math.pow(indicators.getIndicatorOrPriceValue(data[index - i], this.options.appliedTo) - this.sma.indicatorData[index - i].value, 2)
-            }
-            var stddev = Math.sqrt(sum / (this.options.period - 1));
+            var ma = this.sma.indicatorData[index].value;
+            var stddev = this._calculate(data, index, ma);
             this.indicatorData.push({
-                time: data[index].time,
-                value: toFixed(stddev, 4)
+                time: data[index].time, value: toFixed(stddev, this.precision)
             });
         }
         else {
@@ -49,14 +58,9 @@ STDDEV.prototype.constructor = STDDEV;
  */
 STDDEV.prototype.addPoint = function(data) {
     this.priceData.push(data);
-    this.sma.addPoint(data);
+    var ma = this.sma.addPoint(data)[0].value;
     var index = this.priceData.length - 1;
-    var sum = 0.0;
-    for (var i = this.options.period - 1; i >= 0; i--) {
-        var val = Math.pow(this.indicators.getIndicatorOrPriceValue(this.priceData[index - i], this.options.appliedTo) - this.sma.indicatorData[index - i].value, 2);
-        sum += val;
-    }
-    var stddev = toFixed(Math.sqrt(sum / (this.options.period - 1)), 4);
+    var stddev = this._calculate(this.priceData, index, ma);
     this.indicatorData.push({
         time: data.time,
         value: stddev
@@ -77,12 +81,8 @@ STDDEV.prototype.update = function(data) {
     this.priceData[index].high  = data.high;
     this.priceData[index].low   = data.low;
     this.priceData[index].close = data.close;
-    this.sma.update(data);
-    var sum = 0.0;
-    for (var i = this.options.period - 1; i >= 0; i--) {
-        sum += Math.pow(this.indicators.getIndicatorOrPriceValue(this.priceData[index - i], this.options.appliedTo) - this.sma.indicatorData[index - i].value, 2)
-    }
-    var stddev = toFixed(Math.sqrt(sum / (this.options.period - 1)), 4);
+    var ma = this.sma.update(data)[0].value;
+    var stddev = this._calculate(this.priceData, index, ma);
     this.indicatorData[this.indicatorData.length - 1].value = stddev;
     return [{
         id : this.uniqueID,

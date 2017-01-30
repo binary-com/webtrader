@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2016-12-23 09:45+0000\n"
+"PO-Revision-Date: 2017-01-19 01:32+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
@@ -286,10 +286,10 @@ msgid "Aroon Up Stroke"
 msgstr "阿隆上升线波幅"
 
 msgid "Asian down"
-msgstr ""
+msgstr "亚洲下跌"
 
 msgid "Asian up"
-msgstr ""
+msgstr "亚洲上涨"
 
 msgid "Asians"
 msgstr "亚洲期权"
@@ -459,8 +459,8 @@ msgstr "确认转账"
 msgid "Connection closed"
 msgstr "连接已关闭"
 
-msgid "Connection error. Refresh the page"
-msgstr "连接出错：请刷新页面"
+msgid "Connection error"
+msgstr "连接出错"
 
 msgid "Construction"
 msgstr "建筑"
@@ -607,7 +607,7 @@ msgid "Deselect"
 msgstr "取消选择"
 
 msgid "Differs"
-msgstr ""
+msgstr "差异"
 
 msgid "Digits"
 msgstr "数字"
@@ -703,10 +703,10 @@ msgid "Ends In/Out"
 msgstr "“范围之内/之外”收盘"
 
 msgid "Ends in"
-msgstr ""
+msgstr "范围之内收盘"
 
 msgid "Ends out"
-msgstr ""
+msgstr "范围之外收盘"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr "请确认您输入有效数据，不然账户将被封锁"
@@ -733,7 +733,7 @@ msgid "Estimated Net Worth"
 msgstr "估计净值"
 
 msgid "Even"
-msgstr ""
+msgstr "偶"
 
 msgid "Exclude me from the website until"
 msgstr "禁止我访问本网站直到"
@@ -826,7 +826,7 @@ msgid "Further instructions"
 msgstr "详细说明"
 
 msgid "Goes out"
-msgstr ""
+msgstr "范围外"
 
 msgid "Gray"
 msgstr "灰色"
@@ -856,7 +856,7 @@ msgid "High Stroke"
 msgstr "高价波幅"
 
 msgid "High barrier"
-msgstr ""
+msgstr "高障碍"
 
 msgid "High barrier offset"
 msgstr "高障碍位移"
@@ -1132,7 +1132,7 @@ msgid "Low Stroke"
 msgstr "低行程"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "低障碍"
 
 msgid "Low barrier offset"
 msgstr "低障碍位移"
@@ -1170,7 +1170,7 @@ msgid "Mass Period"
 msgstr "梅斯线期限"
 
 msgid "Matches"
-msgstr ""
+msgstr "相符"
 
 msgid "Max/Min Period"
 msgstr "最大/最小期限"
@@ -1296,7 +1296,7 @@ msgid "No"
 msgstr "否"
 
 msgid "No touch"
-msgstr ""
+msgstr "未触及"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "请注意，令牌可能拥有一或多个领域"
@@ -1344,7 +1344,7 @@ msgid "October"
 msgstr "十月"
 
 msgid "Odd"
-msgstr ""
+msgstr "奇"
 
 msgid "Offset"
 msgstr "位移"
@@ -1863,10 +1863,10 @@ msgid "Spreads"
 msgstr "价差交易"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "点差下跌"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "点差上涨"
 
 msgid "Stake"
 msgstr "投注资金"
@@ -1896,7 +1896,7 @@ msgid "Stays In/Goes Out"
 msgstr "“保持在范围之内/超出范围之外”"
 
 msgid "Stays in"
-msgstr ""
+msgstr "范围内"
 
 msgid "Stocks trading experience"
 msgstr "股票交易经验"
@@ -2103,7 +2103,7 @@ msgid "Total Profit/Loss"
 msgstr "利润/亏损合计"
 
 msgid "Touch"
-msgstr ""
+msgstr "触及"
 
 msgid "Touch/No Touch"
 msgstr "触及/未触及"
@@ -2172,7 +2172,7 @@ msgid "USDJPY"
 msgstr "美元日元"
 
 msgid "Under"
-msgstr ""
+msgstr "下部"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遗憾，您的浏览器不支持这些程序"

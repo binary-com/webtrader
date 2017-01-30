@@ -431,7 +431,7 @@ msgstr ""
 msgid "Connection closed"
 msgstr "" 
 
-msgid "Connection error. Refresh the page"
+msgid "Connection error"
 msgstr "" 
 
 msgid "Construction"

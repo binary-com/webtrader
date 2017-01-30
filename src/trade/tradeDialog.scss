@@ -7,6 +7,7 @@
     ul li {
       line-height: 1em;
       margin: 0;
+      padding: 2px;
     }
     .text-align-center { text-align: center; }
     .bold { font-weight: bold; }
@@ -215,7 +216,7 @@
     padding: 2px 3px 2px 3px;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: inherit;
 }
 
 .trade-fields ul li:nth-child(1) > span {
@@ -236,9 +237,21 @@
 }
 .trade-fields ul.date-start-row li:nth-child(3) > span { min-width: 85px !important }
 
-.trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { min-width: 130px !important; }
-.trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { width: 100px !important; }
-.trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { width: 100px !important; }
+.trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { 
+  min-width: 130px !important;
+  height: 26px;
+  border-radius:3px;
+}
+.trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { 
+  width: 100px !important; 
+  height: 26px;
+  border-radius:3px;
+}
+.trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { 
+  width: 100px !important; 
+  height: 28px;
+  border-radius:3px;
+}
 
 .trade-fields ul li select + .ui-selectmenu-button { height: 28px;}
 
@@ -248,7 +261,7 @@
   height: 28px;
   padding-left: 10px;
 }
-.trade-fields ul li:nth-child(2) input { width: 100px !important; }
+.trade-fields ul li:nth-child(2) input { width: 100px !important;}
 .trade-fields ul li:nth-child(3) input { width: 85px !important; }
 
 .trade-fields ul li:nth-child(2n) input:not([step]),

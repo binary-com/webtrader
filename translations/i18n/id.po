@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 06:12+0200\n"
-"PO-Revision-Date: 2016-12-09 06:44+0000\n"
+"PO-Revision-Date: 2017-01-06 02:40+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/id/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.10-dev\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "Jenis MA %D"
@@ -289,10 +289,10 @@ msgid "Aroon Up Stroke"
 msgstr "Stroke Aroon Up"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Asian down"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Asian up"
 
 msgid "Asians"
 msgstr "Asia"
@@ -462,8 +462,8 @@ msgstr "Konfirmasi transfer"
 msgid "Connection closed"
 msgstr "Koneksi ditutup"
 
-msgid "Connection error. Refresh the page"
-msgstr "Koneksi error. Refresh halaman"
+msgid "Connection error"
+msgstr "Koneksi error"
 
 msgid "Construction"
 msgstr "Konstruksi"
@@ -610,7 +610,7 @@ msgid "Deselect"
 msgstr "Hapus"
 
 msgid "Differs"
-msgstr ""
+msgstr "Differs"
 
 msgid "Digits"
 msgstr "Digits"
@@ -706,10 +706,10 @@ msgid "Ends In/Out"
 msgstr "Ends In/Out"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Ends in"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Ends out"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr "Pastikan untuk memasukkan data yang benar atau akun Anda akan terkunci"
@@ -736,7 +736,7 @@ msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
 
 msgid "Even"
-msgstr ""
+msgstr "Even"
 
 msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari website hingga"
@@ -829,7 +829,7 @@ msgid "Further instructions"
 msgstr "Instruksi lebih lanjut"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Goes out"
 
 msgid "Gray"
 msgstr "Abu-abu"
@@ -859,7 +859,7 @@ msgid "High Stroke"
 msgstr "Stroke High"
 
 msgid "High barrier"
-msgstr ""
+msgstr "Batasan Tinggi"
 
 msgid "High barrier offset"
 msgstr "Batas offset tinggi"
@@ -1141,7 +1141,7 @@ msgid "Low Stroke"
 msgstr "Stroke Low"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Batasan Rendah"
 
 msgid "Low barrier offset"
 msgstr "Batas offset rendah"
@@ -1182,7 +1182,7 @@ msgid "Mass Period"
 msgstr "Periode Mass"
 
 msgid "Matches"
-msgstr ""
+msgstr "Matches"
 
 msgid "Max/Min Period"
 msgstr "Periode Maksimal/Minimal"
@@ -1308,7 +1308,7 @@ msgid "No"
 msgstr "Tidak"
 
 msgid "No touch"
-msgstr ""
+msgstr "No touch"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "Perhatikan bahwa token dapat memiliki satu atau lebih dari lingkup ini"
@@ -1358,7 +1358,7 @@ msgid "October"
 msgstr "Oktober"
 
 msgid "Odd"
-msgstr ""
+msgstr "Odd"
 
 msgid "Offset"
 msgstr "Offset"
@@ -1882,10 +1882,10 @@ msgid "Spreads"
 msgstr "Spreads"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "Spreads down"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "Spreads up"
 
 msgid "Stake"
 msgstr "Modal"
@@ -1915,7 +1915,7 @@ msgid "Stays In/Goes Out"
 msgstr "Stays In/Goes Out"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Stays in"
 
 msgid "Stocks trading experience"
 msgstr "Pengalaman trading bursa saham"
@@ -2137,7 +2137,7 @@ msgid "Total Profit/Loss"
 msgstr "Total Untung/Rugi"
 
 msgid "Touch"
-msgstr ""
+msgstr "Touch"
 
 msgid "Touch/No Touch"
 msgstr "Touch/No Touch"
@@ -2213,7 +2213,7 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Under"
-msgstr ""
+msgstr "Under"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Sayangnya, browser Anda tidak mendukung mereka"
