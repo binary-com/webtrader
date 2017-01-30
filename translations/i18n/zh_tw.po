@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2016-12-09 08:27+0000\n"
+"PO-Revision-Date: 2017-01-19 01:33+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.10-dev\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "%D MA 類型"
@@ -286,10 +286,10 @@ msgid "Aroon Up Stroke"
 msgstr "阿隆上升線波幅"
 
 msgid "Asian down"
-msgstr ""
+msgstr "亞洲下跌"
 
 msgid "Asian up"
-msgstr ""
+msgstr "亞洲上漲"
 
 msgid "Asians"
 msgstr "亞洲期權"
@@ -459,8 +459,8 @@ msgstr "確認轉帳"
 msgid "Connection closed"
 msgstr "連結已關閉"
 
-msgid "Connection error. Refresh the page"
-msgstr "連結出錯:請重新整理頁面"
+msgid "Connection error"
+msgstr "連結出錯"
 
 msgid "Construction"
 msgstr "建構"
@@ -607,7 +607,7 @@ msgid "Deselect"
 msgstr "取消選取"
 
 msgid "Differs"
-msgstr ""
+msgstr "差異"
 
 msgid "Digits"
 msgstr "數字"
@@ -703,10 +703,10 @@ msgid "Ends In/Out"
 msgstr "收盤價在「範圍之內/之外」"
 
 msgid "Ends in"
-msgstr ""
+msgstr "範圍之內收盤"
 
 msgid "Ends out"
-msgstr ""
+msgstr "範圍之外收盤"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr "請確認您輸入有效資訊，不然帳戶將被封鎖"
@@ -733,7 +733,7 @@ msgid "Estimated Net Worth"
 msgstr "估計淨值"
 
 msgid "Even"
-msgstr ""
+msgstr "偶"
 
 msgid "Exclude me from the website until"
 msgstr "禁止我訪問本網站直到"
@@ -826,7 +826,7 @@ msgid "Further instructions"
 msgstr "詳細說明"
 
 msgid "Goes out"
-msgstr ""
+msgstr "範圍外"
 
 msgid "Gray"
 msgstr "灰色"
@@ -856,7 +856,7 @@ msgid "High Stroke"
 msgstr "高價波幅"
 
 msgid "High barrier"
-msgstr ""
+msgstr "高障礙"
 
 msgid "High barrier offset"
 msgstr "高障礙位移"
@@ -1132,7 +1132,7 @@ msgid "Low Stroke"
 msgstr "低行程"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "低障礙"
 
 msgid "Low barrier offset"
 msgstr "低障礙位移"
@@ -1170,7 +1170,7 @@ msgid "Mass Period"
 msgstr "梅斯線期限"
 
 msgid "Matches"
-msgstr ""
+msgstr "相符"
 
 msgid "Max/Min Period"
 msgstr "最大/最小期限"
@@ -1296,7 +1296,7 @@ msgid "No"
 msgstr "否"
 
 msgid "No touch"
-msgstr ""
+msgstr "未觸及"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "請注意，權杖可能擁有一或多個上述領域"
@@ -1344,7 +1344,7 @@ msgid "October"
 msgstr "十月"
 
 msgid "Odd"
-msgstr ""
+msgstr "奇"
 
 msgid "Offset"
 msgstr "位移"
@@ -1863,10 +1863,10 @@ msgid "Spreads"
 msgstr "價差交易"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "點差下跌"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "點差上漲"
 
 msgid "Stake"
 msgstr "投注資金"
@@ -1896,7 +1896,7 @@ msgid "Stays In/Goes Out"
 msgstr "「保持在範圍之內/超出範圍之外」"
 
 msgid "Stays in"
-msgstr ""
+msgstr "範圍內"
 
 msgid "Stocks trading experience"
 msgstr "股票交易經驗"
@@ -2103,7 +2103,7 @@ msgid "Total Profit/Loss"
 msgstr "利潤/虧損合計"
 
 msgid "Touch"
-msgstr ""
+msgstr "觸及"
 
 msgid "Touch/No Touch"
 msgstr "觸及/未觸及"
@@ -2172,7 +2172,7 @@ msgid "USDJPY"
 msgstr "美元日圓"
 
 msgid "Under"
-msgstr ""
+msgstr "下方"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遺憾。您的瀏覽器不支持這些程式"

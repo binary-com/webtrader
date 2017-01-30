@@ -88,7 +88,7 @@
                         <div class="main-account">
                             <div class="account-type">{account.type}</div>
                             <div class="account-id">{account.id}</div>
-                            <div class="topMenuBalance">{account.balance}</div>
+                            <div rv-if="currency | not-eq ''" class="topMenuBalance">{account.balance}</div>
                         </div>
                     <div class="nav-caret"></div>
                     </a>
@@ -103,7 +103,7 @@
                   <div class="main-account">
                     <div class="account-type">{account.type}</div>
                     <div class="account-id">{account.id}</div>
-                    <div class="topMenuBalance">{account.balance}</div>
+                    <div rv-if="currency | not-eq ''" class="topMenuBalance">{account.balance}</div>
                   </div>
                   <div class="nav-caret"></div>
                 </a>

@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2016-11-29 10:09+0000\n"
+"PO-Revision-Date: 2017-01-24 14:41+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/it/>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.10-dev\n"
+"X-Generator: Weblate 2.11-dev\n"
 
 msgid "%D MA Type"
 msgstr "Tipologia %D MA"
@@ -292,10 +292,10 @@ msgid "Aroon Up Stroke"
 msgstr "Stroke Aroon Up"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Asian down"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Asian up"
 
 msgid "Asians"
 msgstr "Asiatiche"
@@ -427,7 +427,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Clear"
-msgstr ""
+msgstr "Elimina"
 
 msgid "Click Jacking test"
 msgstr "Clicca sul test Jacking"
@@ -465,14 +465,14 @@ msgstr "Conferma il trasferimento"
 msgid "Connection closed"
 msgstr "Collegamento chiuso"
 
-msgid "Connection error. Refresh the page"
-msgstr "Errore di connessione. Aggiornare la pagina"
+msgid "Connection error"
+msgstr "Errore di connessione"
 
 msgid "Construction"
 msgstr "Edilizia"
 
 msgid "Contact Us"
-msgstr ""
+msgstr "Contattaci"
 
 msgid "Continue"
 msgstr "Continua"
@@ -592,7 +592,7 @@ msgid "Delete level(s)"
 msgstr "Elimina livello(i)"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "Demo per gli affiliati per accedere ai grafici di Webtrader"
 
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "Demo degli affiliati per accedere ai grafici di Webtrader su IFRAME"
@@ -613,7 +613,7 @@ msgid "Deselect"
 msgstr "Deseleziona"
 
 msgid "Differs"
-msgstr ""
+msgstr "Differisce"
 
 msgid "Digits"
 msgstr "Cifre"
@@ -711,10 +711,10 @@ msgid "Ends In/Out"
 msgstr "Ends In/Out"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Ends in"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Ends out"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
@@ -732,7 +732,7 @@ msgid "Error downloading .csv"
 msgstr "Errore nel download .csv"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Errore nell'ottenimento dei dati per %1"
 
 msgid "Error getting market information!"
 msgstr "Errore nell'ottenimento delle informazioni del mercato!"
@@ -741,7 +741,7 @@ msgid "Estimated Net Worth"
 msgstr "Valore netto stimato"
 
 msgid "Even"
-msgstr ""
+msgstr "Pari"
 
 msgid "Exclude me from the website until"
 msgstr "Escludimi dal sito internet fino al"
@@ -834,7 +834,7 @@ msgid "Further instructions"
 msgstr "Ulteriori istruzioni"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Goes out"
 
 msgid "Gray"
 msgstr "Grigio"
@@ -864,7 +864,7 @@ msgid "High Stroke"
 msgstr "Stroke superiore"
 
 msgid "High barrier"
-msgstr ""
+msgstr "Barriera superiore"
 
 msgid "High barrier offset"
 msgstr "Offset barriera superiore"
@@ -981,13 +981,13 @@ msgid "Instrument"
 msgstr "Strumento"
 
 msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
+msgstr "Codice dello strumento sconosciuto/non disponibile!"
 
 msgid "Instruments"
 msgstr "Strumenti"
 
 msgid "Invalid parameter(s)!"
-msgstr ""
+msgstr "Parametro(i) non valido(i)!"
 
 msgid "Investments & Dividends"
 msgstr "Investimenti e dividendi"
@@ -1062,7 +1062,7 @@ msgid "Load chart template"
 msgstr "Carica modello del grafico"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "Carica modello del trade"
 
 msgid "Loading"
 msgstr "Caricamento"
@@ -1149,7 +1149,7 @@ msgid "Low Stroke"
 msgstr "Stroke inferiore"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Barriera inferiore"
 
 msgid "Low barrier offset"
 msgstr "Offset della barriera inferiore"
@@ -1190,7 +1190,7 @@ msgid "Mass Period"
 msgstr "Periodo di massa"
 
 msgid "Matches"
-msgstr ""
+msgstr "Corrisponde"
 
 msgid "Max/Min Period"
 msgstr "Periodo max/min"
@@ -1316,7 +1316,7 @@ msgid "No"
 msgstr "No"
 
 msgid "No touch"
-msgstr ""
+msgstr "No touch"
 
 msgid "Note that tokens can possess one or more of these scopes"
 msgstr "Nota che i token possono avere uno o più di questi scopi"
@@ -1367,7 +1367,7 @@ msgid "October"
 msgstr "Ottobre"
 
 msgid "Odd"
-msgstr ""
+msgstr "Dispari"
 
 msgid "Offset"
 msgstr "Offset"
@@ -1548,7 +1548,7 @@ msgid "Please enter the verification code sent to your email"
 msgstr "Inserisci il codice di verifica inviato al tuo indirizzo email"
 
 msgid "Please enter time in the format HH:MM"
-msgstr ""
+msgstr "Inserisci l'orario nel formato HH:MM"
 
 msgid "Please enter your city address"
 msgstr "Inserisci il tuo indirizzo"
@@ -1891,10 +1891,10 @@ msgid "Spreads"
 msgstr "Spread"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "Spread down"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "Spread up"
 
 msgid "Stake"
 msgstr "Puntata"
@@ -1924,7 +1924,7 @@ msgid "Stays In/Goes Out"
 msgstr "Stays In/Goes Out"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Stays in"
 
 msgid "Stocks trading experience"
 msgstr "Esperienza di trading in azioni"
@@ -2012,11 +2012,20 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract permium"
 msgstr ""
+"I servizi di trading finanziario contenuti nel presente sito sono "
+"disponibili solo per i clienti che possono supportare la perdita di tutto il "
+"denaro investito e che comprendono e hanno esperienza del rischio connesso "
+"all'acquisizione di contratti finanziari. Le transazioni nei contratti "
+"finanziari comportano un alto livello di rischio. Se i contratti acquistati "
+"scadono senza produrre un profitto, perderai l'intero investimento, "
+"consistente nel contratto premium"
 
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
 msgstr ""
+"Impossibile trovare la pagina richiesta. Non esiste più oppure l'indirizzo è "
+"errato. Verifica eventuali errori di battitura"
 
 msgid ""
 "There was a market data disruption during the contract period. For real-"
@@ -2491,7 +2500,7 @@ msgid "is required. Current spread"
 msgstr "è richiesto. Spread attuale"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "è quella selezionata e "
 
 msgid "is the"
 msgstr "è il"
@@ -2530,7 +2539,7 @@ msgid "oauth"
 msgstr "oauth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "di \"Ora\", "
 
 msgid "payment agent"
 msgstr "agente di pagamento"
