@@ -43,9 +43,6 @@ requirejs.config({
         "babel-runtime/regenerator": {
             exports: 'regeneratorRuntime'
         },
-        "websockets/binary_websockets": {
-          deps:('Promise' in window && 'reject' in window.Promise && 'all' in window.Promise) ? [] : ['es6-promise']
-        },
         "timepicker": {
             deps:['jquery-ui', 'jquery']
         },
@@ -309,21 +306,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
         'css!lib/colorpicker/jquery.colorpicker.css'
     ]);
-
-
-    /* This is for Feedback (doorbell) button */
-    require(['lodash'], function(_){
-        // Hide the button after initial loading of page is compleated.
-        _.delay(function(){$("#doorbell-button").animate({right:"-67px"})},2000);
-        //This is the vent listener for the button
-        $("#doorbell-button").hover(
-            function(){
-                $("#doorbell-button").animate({right:"-37px"});
-            },
-            function(){
-                $("#doorbell-button").animate({right:"-67px"});
-        });
-    });
 
 });
 

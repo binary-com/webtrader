@@ -28,6 +28,7 @@ define(["jquery","windows/windows", "text!charts/chartWindow.html", 'lodash', "j
             var options_copy = options;
             options = $.extend({
                 title: options.instrumentName,
+                relativePosition: true,
                 close: function () {
                     var id = $(this).attr('id');
                     var container = $("#" + id + "_chart");

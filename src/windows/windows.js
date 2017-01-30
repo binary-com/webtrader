@@ -5,7 +5,7 @@
 
 define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.dialogextend', 'modernizr', 'common/util', 'css!windows/windows.css'], function ($, _, navigation, tracker) {
 
-    var closeAllObject = null, dialogCounter = 0, $menuUL = null;
+    var closeAllObject = null, dialogCounter = 0, $menuUL = null, last_dialog =null;
 
     /* options: { width: 350, height: 400 } */
     function calculateChartCount(options) {
@@ -143,7 +143,8 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
             best.push(d);
         });
         arrange(best, true);
-
+        //Do not track last dialog after re-arranging dialogs
+        last_dialog = null;
         //Trigger tile when the animation is done
         setTimeout(function () { fire_event("tile"); }, 1500 + 100);
     }
@@ -569,7 +570,6 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
         createBlankWindow: function($html,options){
             $html = $($html);
             var id = "windows-dialog-" + ++dialogCounter;
-
             options = $.extend({
                 autoOpen: false,
                 resizable: true,
@@ -585,6 +585,27 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                   close: 'custom-icon-close',
                   minimize: 'custom-icon-minimize',
                   maximize: 'custom-icon-maximize'
+                },
+                open: function() {
+                    $(this).promise().done(function () {
+                        var changePos = $(this).dialog("option","isTrackerInitiated");
+                        var pos = $(this).dialog("option","relativePosition");
+                        // Open chart at a relative position if it is a chart or trade type
+                        if(!changePos && pos){
+                            if(!$(last_dialog).parent().length){
+                                last_dialog = $(this);
+                                return;
+                            }
+                            var top = parseInt($(last_dialog).parent().css("top"));
+                            var left = parseInt($(last_dialog).parent().css("left"));
+                            console.log(top,left);
+                            $($(this).parent()).css("top",top+5+"px");
+                            $($(this).parent()).css("left",left+5+"px");
+                            last_dialog = $(this);
+                        }
+                    });
+                }, close: function() {
+                    console.log($(this).parent().attr("id"));
                 }
             }, options || {});
             options.minWidth = options.minWidth || options.width;
