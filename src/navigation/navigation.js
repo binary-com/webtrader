@@ -251,30 +251,32 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
       returns 'upgrade-mlt' | 'upgrade-mf' | 'do-nothing'
     */
     function getLandingCompany() {
-       return liveapi
-       .cached.send({landing_company: Cookies.residence() })
-        .then(function(data) {
-             var financial = data.landing_company.financial_company;
-             var gaming = data.landing_company.gaming_company;
+       return liveapi.cached.authorize().then(function(data){
+        return liveapi
+           .cached.send({landing_company: data.authorize.country })
+            .then(function(data) {
+                 var financial = data.landing_company.financial_company;
+                 var gaming = data.landing_company.gaming_company;
 
-             var loginids = Cookies.loginids();
-             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-                 if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
-                    return 'do-nothing';
-                 if (_.some(loginids, {is_mlt: true})) // 1-b
-                    return 'upgrade-mf';
-                 return 'upgrade-mlt'; // 1-a
-             }
-             if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
-                if (_.some(loginids, {is_mf: true})) // 2-b
-                  return 'do-nothing';
-                return 'upgrade-mf'; // 2-a
-             }
-             // 3:
-             if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
-                return 'do-nothing'; // 3-b
-             return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
+                 var loginids = Cookies.loginids();
+                 if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
+                     if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
+                        return 'do-nothing';
+                     if (_.some(loginids, {is_mlt: true})) // 1-b
+                        return 'upgrade-mf';
+                     return 'upgrade-mlt'; // 1-a
+                 }
+                 if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
+                    if (_.some(loginids, {is_mf: true})) // 2-b
+                      return 'do-nothing';
+                    return 'upgrade-mf'; // 2-a
+                 }
+                 // 3:
+                 if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
+                    return 'do-nothing'; // 3-b
+                 return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
              // 4: never happens, japan accounts are not able to log into webtrader.
+          });
         });
     }
 
