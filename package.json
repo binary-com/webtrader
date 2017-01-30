@@ -1,6 +1,6 @@
 {
   "name": "Webtrader",
-  "version": "2.1.17",
+  "version": "2.1.21",
   "description": "Webtrader for champion-fx.com",
   "main": "Gruntfile.js",
   "engines": {
