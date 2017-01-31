@@ -4,7 +4,7 @@
 
 import $ from "jquery";
 import _ from "lodash";
-import rv from '../../../common/rivetsExtra';
+import rv from '../../common/rivetsExtra';
 import 'jquery-ui';
 import 'color-picker';
 import 'ddslick';
@@ -13,25 +13,22 @@ import 'colorpicker';
 let before_add_callback = null;
 
 function closeDialog(dialog) {
-    dialog.dialog("close");
-    dialog.find("*").removeClass('ui-state-error');
+    dialog.dialog("destroy").remove();
 }
 
-async function init(containerIDWithHash, indicator) {
+async function init(chart, indicator) {
 
     require(['css!charts/indicators/indicatorBuilder.css']);
 
-    let [$html, data] = await require(['text!charts/indicators/indicatorBuilder.html', 'text!charts/indicators/indicators.json']);
+    let [$html] = await require(['text!charts/indicators/indicatorBuilder.html']);
 
     var defaultStrokeColor = '#cd0a0a';
 
-    console.warn(indicator);
-    data = JSON.parse(data).atr;
-
     const state = {
-      fields: data.fields,
-      levels: data.levels, /* optional */
-      description: data.description,
+      id: indicator.id,
+      fields: indicator.fields,
+      levels: indicator.levels, /* optional */
+      description: indicator.description,
       dash_styles: [
         "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot",
         "Dot", "Dash", "LongDash", "DashDot", "LongDashDot", "LongDashDotDot"
@@ -70,6 +67,19 @@ async function init(containerIDWithHash, indicator) {
       }
     }
 
+    window.ss = state;
+    if(indicator.editable && indicator.current_options) {
+      _.forEach(indicator.current_options, (opt_val, opt_key) => {
+        const field = _.find(state.fields, {key: opt_key})
+        field && (field.value = opt_val);
+      });
+
+      if(indicator.current_options.values) {
+        state.levels.values = _.cloneDeep(indicator.current_options.values);
+      }
+    }
+
+
     $html = $($html);
     const view = rv.bind($html[0], state);
 
@@ -77,7 +87,7 @@ async function init(containerIDWithHash, indicator) {
         autoOpen: false,
         resizable: false,
         width: 350,
-        height:400,
+        height: 400,
         modal: true,
         my: 'center',
         at: 'center',
@@ -94,8 +104,8 @@ async function init(containerIDWithHash, indicator) {
                     state.fields.forEach(field => options[field.key] = field.value);
 
                     before_add_callback && before_add_callback();
-                    //Add ATR for the main series
-                    $($html.data('refererChartID')).highcharts().series[0].addIndicator('atr', options);
+                    //Add indicator for the main series
+                    chart.series[0].addIndicator(state.id, options);
 
                     closeDialog($html);
                 }
@@ -113,17 +123,20 @@ async function init(containerIDWithHash, indicator) {
     };
     $html.dialog(options)
       .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
+    return $html;
 }
 
 /**
+ * @param indicator - indicator options from indicators.json
  * @param containerIDWithHash - containerId where indicator needs to be added
  * @param before_add_cb - callback that will be called just before adding the indicator
  */
 export const open = async function (indicator, containerIDWithHash, before_add_cb) {
     before_add_callback = before_add_cb || before_add_callback;
 
-    if ($(".indicator-builder").length == 0)
-      await init(containerIDWithHash, indicator);
-    $(".indicator-builder").data('refererChartID', containerIDWithHash).dialog('open');
+    const chart = $(containerIDWithHash).highcharts();
+    await init(chart, indicator);
+
+    $(".indicator-builder").dialog('open');
 }
 export default { open, };

@@ -357,6 +357,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
 
               var publish = this.publish;
               var model = this.model;
+              var color = model.value || '#cd0a0a';
 
               div.ColorPickerSliders({
                 size: 'sm',
@@ -364,7 +365,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                 placement: 'bottom',
                 swatches: false,
                 grouping: false,
-                color: '#cd0a0a',
+                color: color,
                 labels: {
                   hslhue: '',
                   hslsaturation: '',
