@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Binary.com : Webtrader</title><link href="https://style.binary.com/binary.css" rel="stylesheet" type="text/css"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Demo for affiliates to access Webtrader charts</title><style>.mainContainer {
+            height: 500px;
+        }</style><script>var chartCounter = 0;
+        window['affiliates'] = true;
+        window['instrument'] = 'frxUSDJPY';
+        window['timePeriod'] = '1h';
+        //If webtrader changed timePeriod, update window['timePeriod']
+        window['timePeriodChangeListener'] = function(timePeriod) {
+            window['timePeriod'] = timePeriod;
+        };
+        <!--
+                I have not tested lang change. Change of lang will require refresh of the page because a new WS connection is needed.
+                In webtrader, when lang is changed, we do a full page refresh.
+                I believe binary.com will be refreshed when lang is changed. That means, when the trading page is loaded,
+                it will know what lang the page is currently in and so when initializing webtrader, we could pass that lang in the
+                window['lang'] variable.
+        -->
+        window['lang'] = 'en';
+        window['hideOverlay'] = false;
+        window['hideShare'] = true;
+        window['hideFooter'] = true;
+        window['timezone'] = 'GMT+0';
+        window['chartContainerID'] = 'webtrader-dialog-' + (++chartCounter);
+        function onChangeInstrument(event) {
+            window['instrument'] = event.target.value; // TODO have not tested for 'lang' parameter change.
+            require(['jquery', 'charts/charts', "charts/chartOptions", 'affiliates/affiliates'], function($, charts, chartOptions, affiliates) {
+                var containerIDWithHash = '#' + $('.chartSubContainer').attr('id');
+                var id = containerIDWithHash.replace('#', '').replace('_chart', '');
+                charts.destroy({
+                    containerIDWithHash: '#' + window['chartContainerID'] + '_ chart', //There should be only one .chartSubContainer for affiliate view
+                    instrumentCode: window['instrument'],
+                    timePeriod: window['timePeriod'],
+                });
+                chartOptions.cleanBinding( window['chartContainerID'] );
+                $('#' + id).remove(); //Remove from DOM
+                //Change the chart ID so that we get a clean chart
+                window['chartContainerID'] = 'webtrader-dialog-' + (++chartCounter);
+                affiliates.init();
+            });
+        }</script><script src="lib/intl/dist/Intl.complete.js"></script><script src="common/util.js"></script><script src="lib/requirejs/require.js" data-main="main"></script></head><body><table width="600px" align="center"><tr><td>Instruments :<select onchange="onChangeInstrument(event)"><option value="frxUSDJPY">USDJPY</option><option value="frxEURUSD">EURUSD</option></select></td></tr><tr align="center"><td><div class="ui-widget mainContainer"><div class="sk-spinner-container"><div class="sk-spinner sk-spinner-wave"><div class="sk-rect1"></div><div class="sk-rect2"></div><div class="sk-rect3"></div><div class="sk-rect4"></div><div class="sk-rect5"></div></div></div></div></td></tr></table></body></html>
