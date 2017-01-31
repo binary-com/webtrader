@@ -17,14 +17,15 @@ function closeDialog(dialog) {
     dialog.find("*").removeClass('ui-state-error');
 }
 
-async function init( containerIDWithHash, callback ) {
+async function init(containerIDWithHash, indicator) {
 
-    require(['css!charts/indicators/atr/atr.css']);
+    require(['css!charts/indicators/indicatorBuilder.css']);
 
-    let [$html, data] = await require(['text!charts/indicators/atr/atr.html', 'text!charts/indicators/indicators.json']);
+    let [$html, data] = await require(['text!charts/indicators/indicatorBuilder.html', 'text!charts/indicators/indicators.json']);
 
     var defaultStrokeColor = '#cd0a0a';
 
+    console.warn(indicator);
     data = JSON.parse(data).atr;
 
     const state = {
@@ -81,7 +82,7 @@ async function init( containerIDWithHash, callback ) {
         my: 'center',
         at: 'center',
         of: window,
-        dialogClass:'atr-ui-dialog',
+        dialogClass:'indicator-builder-ui-dialog',
         buttons: [
             {
                 text: "OK",
@@ -112,31 +113,17 @@ async function init( containerIDWithHash, callback ) {
     };
     $html.dialog(options)
       .dialogExtend(_.extend(options, {maximizable:false, minimizable:false, collapsable:false}));
-
-    /*
-    $html.find('select').each(function(index, value){
-        $(value).selectmenu({
-            width : 150
-        }).selectmenu("menuWidget").css("max-height","85px");
-    });
-    */
-
-    callback && callback();
 }
 
 /**
  * @param containerIDWithHash - containerId where indicator needs to be added
  * @param before_add_cb - callback that will be called just before adding the indicator
  */
-export const open = function (containerIDWithHash, before_add_cb) {
+export const open = async function (indicator, containerIDWithHash, before_add_cb) {
     before_add_callback = before_add_cb || before_add_callback;
-    var open = function() {
-      $(".atr").data('refererChartID', containerIDWithHash).dialog( "open" );
-    };
 
-    if ($(".atr").length == 0)
-      init(containerIDWithHash, open);
-    else
-      open();
+    if ($(".indicator-builder").length == 0)
+      await init(containerIDWithHash, indicator);
+    $(".indicator-builder").data('refererChartID', containerIDWithHash).dialog('open');
 }
 export default { open, };

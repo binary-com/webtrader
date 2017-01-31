@@ -60,7 +60,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             },
             open: function () { },
           };
-          
+
           /* affiliates route */
           if (isAffiliates()) {
             option = _.extend(option, {
@@ -72,7 +72,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
               minimizable: false,
               collapsable: false,
             });
-          } 
+          }
           /* normal route */
           else {
             option = _.extend(option, {
@@ -108,10 +108,18 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
       state.indicators.clear_search = function() { state.indicators.search = ''; }
 
       state.indicators.add = function(indicator){
-        var indicator_id = indicator.id;
-        require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
-            ind.open(state.dialog.container_id);
-        });
+        if(indicator.fields) { /* use indicatorBuilder.es6 */
+          require(["charts/indicators/indicatorBuilder"], function(indicatorBuilder) {
+            indicatorBuilder.open(indicator, state.dialog.container_id)
+          });
+          return;
+        }
+        else {
+          var indicator_id = indicator.id;
+          require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
+              ind.open(state.dialog.container_id);
+          });
+        }
         ind_win.dialog('close');
       }
 
