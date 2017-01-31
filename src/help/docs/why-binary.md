@@ -1,4 +1,4 @@
-#Why Choose Binary Trading?
+## Why Choose Binary Trading?
 
 ###Binary trading is very simple.
 

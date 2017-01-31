@@ -1,4 +1,4 @@
-# Up/Down
+## Up/Down
 
 Choose Rise/Fall when you want to profit from the market rising or falling from its current level.
 

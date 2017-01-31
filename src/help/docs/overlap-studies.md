@@ -1,4 +1,4 @@
-# Overlap Studies
+## Overlap Studies
 
 ###Exponential Moving Average (EMA)
 

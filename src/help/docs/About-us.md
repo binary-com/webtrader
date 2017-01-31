@@ -1,4 +1,4 @@
-# The premier platform for trading binary options in the world's financial markets
+## The premier platform for trading binary options in the world's financial markets
 
 Binary.com is one of the oldest and most respected names in online binary trading.
 

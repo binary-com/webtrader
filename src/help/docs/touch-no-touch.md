@@ -1,4 +1,4 @@
-#Touch/No Touch
+## Touch/No Touch
 
 Choose Touch / No Touch when you want to profit from the market touching or not touching a target any time during the contract period.
 

@@ -1,4 +1,4 @@
-# Financial Security
+## Financial Security
 
 ### How safe is my money with Binary.com?
 

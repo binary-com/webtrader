@@ -7,7 +7,7 @@
 </div>
 <div class="sublist">
 	<div class="items">
-		<span rv-each-item="current.sublist" rv-on-click="getContent | bind item.url" rv-class-selected="current.content_page | eq item.url">{item.text}</span>
+		<span rv-each-item="current.sublist" rv-on-click="getContent | bind item.id" rv-class-selected="current.content_page | eq item.id">{item.text}</span>
 	</div>
 </div>
 <div class="content">

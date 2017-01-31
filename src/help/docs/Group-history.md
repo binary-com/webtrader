@@ -1,4 +1,4 @@
-# 2016
+## 2016
 
 ### Binary KK granted Japan license
 Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan.
@@ -17,7 +17,7 @@ Binary.com is honoured as the world's "Best Binary Options Broker" at the 16th a
 
 ----
 
-# 2015
+## 2015
 
 ### EGR Operator Award
 Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London.
@@ -39,7 +39,7 @@ Binary.com hits 1 million users, reaching a historic milestone. The company cont
 
 ----
 
-# 2014
+## 2014
 
 ### Binary.com reaches $2 billion turnover since starting in 1999
 Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers.
@@ -55,14 +55,14 @@ Our customers clearly like us. In mid-2014, Binary.com has over 100 million hist
 
 ----
 
-# 2013
+## 2013
 
 ### BetOnMarkets.com is successfully rebranded Binary.com
 We rebrand BetOnMarkets.com as [www.Binary.com](https://www.binary.com/en/home.html). The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients.
 
 ----
 
-#2012
+## 2012
 
 ### BetOnMarkets.com reaches $1 billion turnover since starting in 1999
 BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers.
@@ -75,7 +75,7 @@ Times are changing. We increase payouts so our clients can make the most of thei
 
 -----
 
-#2011
+## 2011
 
 ### Regent Markets granted two new US patents
 We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack.
@@ -85,7 +85,7 @@ This is another award we really savour. Trade2win is a portal for active traders
 
 -----
 
-#2009
+## 2009
 
 ### 'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK
 For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category.
@@ -98,7 +98,7 @@ Our fast organic growth is supplemented by the acquisition of the client base of
 
 -----
 
-# 2008
+## 2008
 
 ### Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK
 We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008.
@@ -111,7 +111,7 @@ This is big. We pick up a double award from the Financial Times and Investors Ch
 
 ----
 
-#2007
+## 2007
 
 ### Regent Markets granted US patent for 'Betting system and method'
 The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations.
@@ -121,7 +121,7 @@ Only five years after inception, we pick up this major award for our online trad
 
 ----
 
-#2004	
+## 2004	
 
 ### Regent Markets sets up a programming centre in Cyberjaya, Malaysia
 It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com.
@@ -131,7 +131,7 @@ Our company continues to thrive and obtains a license in the Isle of Man to bett
 
 ----
 
-#2000
+## 2000
 
 ### BetOnMarkets goes live
 In April, [Betonmarkets.com](http://www.betonmarkets.com/) (formerly known as [Xodds.com](http://www.xodds.com/)) goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting.
@@ -141,7 +141,7 @@ Regent Markets files for a patent in March 2000 on the basis of our unique posit
 
 ----
 
-# 1999
+## 1999
 
 ### Regent Markets receives funding to provide on-line financial betting services
 In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company.

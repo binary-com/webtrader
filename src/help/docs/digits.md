@@ -1,4 +1,4 @@
-# Digits
+## Digits
 
 Choose digit if you want to profit from predicting the last decimal digit of the spot.
 

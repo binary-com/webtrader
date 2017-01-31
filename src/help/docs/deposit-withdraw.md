@@ -1,4 +1,4 @@
-# Depositing and withdrawing funds
+## Depositing and withdrawing funds
 
 
 ###Do I need to deposit any funds to open an account?

@@ -1,4 +1,4 @@
-# How to trade binaries?
+## How to trade binaries?
 
 Trading binaries is remarkably easy, and requires only 3 simple steps:
 
@@ -15,6 +15,7 @@ Trading binaries is remarkably easy, and requires only 3 simple steps:
 
 ![](https://www.binary.com/images/pages/home/step-3.svg =150x150)
 
+---
 
 ##Step 1: Define your position
 

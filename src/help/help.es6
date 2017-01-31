@@ -2,6 +2,7 @@ import $ from 'jquery';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import html from 'text!help/help.html';
+import content from 'text!help/content.html'
 import 'css!help/help.css';
 
 "use strict";
@@ -10,11 +11,16 @@ let win = null, sublist_items = [];
 
 const init = () => {
 	const $html = $(html);
+	const $content = $(content);
+	//Modify links in content to open in new tab.
+	$content.find("a").each((i, node)=>{
+		$(node).attr('target','_blank');
+	});
 	win = windows.createBlankWindow($("<div class='help-dialog'/>"), {
 		title: "Help",
         width: 850,
         height: 400,
-        resizable: false,
+        resizable: true,
         minimizable: true,
         maximizable: true,
         modal: false,
@@ -68,180 +74,180 @@ const init = () => {
 			about_us: [
 				{
 					text: "About us",
-					url: "about-us.html"
+					id: "about-us"
 				},
 				{
 					text: "Group history",
-					url: "group-history.html"
+					id: "group-history"
 				}
 			],
 			getting_started: [
 				{
 					text: "Why choose Binary Trading",
-					url: "why-binary.html"
+					id: "why-binary"
 				},
 				{
 					text: "Benefits of Binary Trading",
-					url: "binary-benefits.html"
+					id: "binary-benefits"
 				},
 				{
 					text: "How to trade Binaries",
-					url: "trade-binaries.html"
+					id: "trade-binaries"
 				}
 			],
 			trade_types: [
 				{
 					text: "Up/Down",
-					url: "up-down.html"
+					id: "up-down"
 				},
 				{
 					text: "Touch/No Touch",
-					url: "touch-no-touch.html"
+					id: "touch-no-touch"
 				},
 				{
 					text: "In/Out",
-					url: "in-out.html"
+					id: "in-out"
 				},
 				{
 					text: "Asians",
-					url: "asians.html"
+					id: "asians"
 				},
 				{
 					text: "Digits",
-					url: "digits.html"
+					id: "digits"
 				},
 				{
 					text: "Spreads",
-					url: "spreads.html"
+					id: "spreads"
 				}
 			],
 			indicators: [{
 				"text": "Volatility Indicators",
-				"url": "volatility-indicators.html"
+				"id": "volatility-indicators"
 			}, {
 				"text": "Overlap Studies",
-				"url": "overlap-studies.html"
+				"id": "overlap-studies"
 			}, {
 				"text": "Momentum Indicators",
-				"url": "momentum-indicators.html"
+				"id": "momentum-indicators"
 			}, {
 				"text": "Price Transformation",
-				"url": "price-transformation.html"
+				"id": "price-transformation"
 			}, {
 				"text": "Statistical Functions",
-				"url": "statistical-functions.html"
+				"id": "statistical-functions"
 			}, {
 				"text": "Pattern Recognition",
-				"url": "pattern-recognition.html"
+				"id": "pattern-recognition"
 			}, {
 				"text": "Bill Williams",
-				"url": "bill-williams.html"
+				"id": "bill-williams"
 			}],
 			faq: [
 				{
 					text: "Opening an account",
-					url: "opening-account.html"
+					id: "opening-account"
 				}, {
 					text: "Financial Security",
-					url: "financial-security.html"
+					id: "financial-security"
 				}, {
 					text: "Depositing and withdrawing funds",
-					url: "deposit-withdraw.html"
+					id: "deposit-withdraw"
 				}, {
 					text: "Learning to trade",
-					url: "learn-trade.html"
+					id: "learn-trade"
 				}
 			],
 			glossary: [{
 				"text": "Barrier(s)",
-				"url": "barriers.html"
+				"id": "barriers"
 			}, {
 				"text": "Binary option",
-				"url": "binary-option.html"
+				"id": "binary-option"
 			}, {
 				"text": "Commodities",
-				"url": "commodities.html"
+				"id": "commodities"
 			}, {
 				"text": "Contract period",
-				"url": "contract-period.html"
+				"id": "contract-period"
 			}, {
 				"text": "Derivative",
-				"url": "derivative.html"
+				"id": "derivative"
 			}, {
 				"text": "Duration",
-				"url": "duration.html"
+				"id": "duration"
 			}, {
 				"text": "Ends Between/Ends Outside trades",
-				"url": "ends-between.html"
+				"id": "ends-between"
 			}, {
 				"text": "Entry spot price",
-				"url": "entry-spot.html"
+				"id": "entry-spot"
 			}, {
 				"text": "Expiry price",
-				"url": "expiry-price.html"
+				"id": "expiry-price"
 			}, {
 				"text": "Forex",
-				"url": "forex.html"
+				"id": "forex"
 			}, {
 				"text": "GMT",
-				"url": "gmt.html"
+				"id": "gmt"
 			}, {
 				"text": "Higher/Lower trades",
-				"url": "h_l-trades.html"
+				"id": "h_l-trades"
 			}, {
 				"text": "Indices",
-				"url": "indices.html"
+				"id": "indices"
 			}, {
 				"text": "In/Out trades",
-				"url": "i_o-trades.html"
+				"id": "i_o-trades"
 			}, {
 				"text": "Market exit price",
-				"url": "m_exit-price.html"
+				"id": "m_exit-price"
 			}, {
 				"text": "No Touch trades",
-				"url": "no-touch-trades.html"
+				"id": "no-touch-trades"
 			}, {
 				"text": "(One) Touch trades",
-				"url": "touch-trades.html"
+				"id": "touch-trades"
 			}, {
 				"text": "Payout",
-				"url": "payout.html"
+				"id": "payout"
 			}, {
 				"text": "Pip",
-				"url": "pip.html"
+				"id": "pip"
 			}, {
 				"text": "Profit",
-				"url": "profit.html"
+				"id": "profit"
 			}, {
 				"text": "Volatility Indices",
-				"url": "volatility-indices.html"
+				"id": "volatility-indices"
 			}, {
 				"text": "Resale price",
-				"url": "resale-price.html"
+				"id": "resale-price"
 			}, {
 				"text": "Return",
-				"url": "return.html"
+				"id": "return"
 			}, {
 				"text": "Rise/Fall trades",
-				"url": "r_f-trades.html"
+				"id": "r_f-trades"
 			}, {
 				"text": "Sell option",
-				"url": "sell-option.html"
+				"id": "sell-option"
 			}, {
 				"text": "Spot price",
-				"url": "spot-price.html"
+				"id": "spot-price"
 			}, {
 				"text": "Stake",
-				"url": "stake.html"
+				"id": "stake"
 			}, {
 				"text": "Stays Between/Goes Outside trades",
-				"url": "stays-between-goes-outside-trades.html"
+				"id": "stays-between-goes-outside-trades"
 			}, {
 				"text": "Tick",
-				"url": "tick.html"
+				"id": "tick"
 			}, {
 				"text": "Underlying",
-				"url": "underlying.html"
+				"id": "underlying"
 			}]
 		}
 	};
@@ -249,29 +255,22 @@ const init = () => {
 	state.updateSublist = (list) => {
 		state.current.list = list;
 		state.current.sublist = state.sublist[list.sublist_id];
-		state.getContent(state.current.sublist[0].url);
+		state.getContent(state.current.sublist[0].id);
 	};
 
-	state.getContent = (url) => {
-		state.current.loading = true;
-		state.current.content_page = url;
-		require(['text!help/'+url],(content) => {
-			state.current.loading = false;
-			state.current.content = content;
-			//Modify links in content to open in new tab.
-			$(".help-dialog .content").find("a").each((i, node)=>{
-				$(node).attr('target','_blank');
-			});
-		});
+	state.getContent = (id) => {
+		state.current.content_page = id;
+		state.current.content = $content.filter("#"+id)[0].innerHTML;
 	};
 
 	state.searchSublist = (e,scope) => {
 		const query = $(e.target).val().toLowerCase();
 		if(query.length > 0){
+			state.current.list = null;
 			state.current.sublist = sublist_items.filter((item) => {
 				return item.text.toLowerCase().indexOf(query) != -1;
 			});
-			state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].url);
+			state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
 		}
 	}
 
@@ -283,7 +282,7 @@ const init = () => {
 	//Show the about us page initially
 	state.current.list = state.list[0];
 	state.updateSublist(state.current.list);
-	state.current.content_page = state.sublist[state.current.list.sublist_id][0].url;
+	state.current.content_page = state.sublist[state.current.list.sublist_id][0].id;
 	state.getContent(state.current.content_page);
 
 	$html.appendTo(win);

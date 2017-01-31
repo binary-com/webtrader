@@ -1,4 +1,4 @@
-# Asians
+## Asians
 
 Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price.
 

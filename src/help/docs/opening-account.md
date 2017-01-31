@@ -1,4 +1,4 @@
-# Opening an account
+## Opening an account
 
 
 ###I'm new to binaries, where do I start?

@@ -1,4 +1,4 @@
-# Price Transformation
+## Price Transformation
 
 ###Typical Price (TYPPRICE)
 

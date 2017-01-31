@@ -1,4 +1,4 @@
-# Momentum Indicators
+## Momentum Indicators
 
 ###Relative Strength Index (RSI)
 

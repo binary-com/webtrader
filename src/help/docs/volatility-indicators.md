@@ -1,4 +1,4 @@
-# Volatility Indicators
+## Volatility Indicators
 
 ###Average True Range (ATR)
 

@@ -470,14 +470,14 @@ module.exports = function (grunt) {
           }
         },
         markdown: {
-            convertToHtml: { 
+            helpDocs: { 
                 files: [
                     {
                         expand: true,
                         cwd: 'src/help/docs/',
                         src: ['**/*.md'],
-                        dest: 'dist/uncompressed/v<%=pkg.version%>/help/',
-                        ext: '.html'
+                        bundle: true, //Bundle the markdown text in one file?
+                        bundle_dest: 'dist/uncompressed/v<%=pkg.version%>/help/content.html'
                     }
                 ]
             }
@@ -487,18 +487,35 @@ module.exports = function (grunt) {
     // This is markdown to html converter.
     var showdown = require('showdown'),
         converter = new showdown.Converter();
-
-    grunt.registerMultiTask('markdown','Converts md files to html', function(){
+    /*
+     * pass a bundle: true to bundle files
+     * with bundle_dest: "path" to save it to a specific file at path
+     */
+    grunt.registerMultiTask('markdown','Converts md files to html and bundles them into one file', function(){
+        var content = "";
         this.files.forEach(function(f){
-            var html = converter.makeHtml(grunt.file.read(f.src[0]));
-            var write_successfull = grunt.file.write(f.dest,html);
-            if(!write_successfull){
-                grunt.log.error("Couldn't convert " + f.src[0] + " to html");
+            var src= f.src[0].split("/");
+            var id = src[src.length-1].replace(".md","");
+            var html = "<div id=\"" + id + "\">" + converter.makeHtml(grunt.file.read(f.src[0])) + "</div>";
+            if(f.bundle){
+                content = content + "\n" + html;
+            } else {
+                var write_successfull = grunt.file.write(f.dest,html);
+                if(!write_successfull){
+                    grunt.log.error("Couldn't convert " + f.src[0] + " to html");
+                }
             }
         });
+
+        if(this.data.files[0].bundle){
+            var write_successfull = grunt.file.write(this.data.files[0].bundle_dest,content);
+            if(!write_successfull){
+                grunt.log.error("Failed bundling the files");
+            }
+        }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'markdown:convertToHtml', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'markdown:helpDocs', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 

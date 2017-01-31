@@ -1,4 +1,4 @@
-# Spreads
+## Spreads
 
 Binary.com's Spread Contracts are leveraged derivative contracts, the value of which is directly tied to the underlying market movements. Clients who 'Long' a rising market (and those who 'Short' a falling market) profit from those movements with much less investment than would be required in the live market.
 

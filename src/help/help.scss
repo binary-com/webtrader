@@ -38,17 +38,16 @@
 	}
 
 	.sublist {
-		width: 270px;
+		width: 285px;
 		.items {
 			padding-top: 42px;
 		}
 	}
 
 	.content{
-		height: 100%;
+		height: 98%;
 		overflow-y: auto;
 		overflow-x: hidden;
-		width: 390px;
 		.loading {
 			display: flex;
 			width: 395px;

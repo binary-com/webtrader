@@ -1,4 +1,4 @@
-# Statistical Functions
+## Statistical Functions
 
 ###Minimum (MIN)
 

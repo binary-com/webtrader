@@ -1,4 +1,4 @@
-# In/Out
+## In/Out
 
 Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period.
 

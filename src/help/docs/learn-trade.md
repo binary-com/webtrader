@@ -1,4 +1,4 @@
-#Learning to trade
+## Learning to trade
 
 ###Do you offer virtual-money accounts?
 

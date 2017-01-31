@@ -1,4 +1,4 @@
-# Benefits of binary trading
+## Benefits of binary trading
 
 ###Simplicity
 
