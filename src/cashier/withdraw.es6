@@ -85,10 +85,19 @@ class Withdraw {
       route: { value: 'menu'},
       empty_fields: {
         validate: false,
-        clear: _.debounce(() => ( state.empty_fields.validate = false ), 4000),
+        token_length:false,
+        clear: _.debounce(() => { state.empty_fields.validate = false; state.empty_fields.token_length = false}, 4000),
         show: () => {
           state.empty_fields.validate = true;
           state.empty_fields.clear();
+        },
+        validateLength: () => {
+          if(state.verify.token.length != 48){
+            state.empty_fields.token_length = true;
+            state.empty_fields.clear();
+            return false;
+          }
+          return true;
         }
       },
       menu: {
@@ -156,6 +165,10 @@ class Withdraw {
     verify.unlock = () => {
       if(!verify.token) {
         empty_fields.show();
+        return;
+      }
+
+      if(!empty_fields.validateLength()){
         return;
       }
 
