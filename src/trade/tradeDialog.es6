@@ -946,9 +946,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   return state;
 }
-
-
-export function init(symbol, contracts_for, saved_template) {
+export function init(symbol, contracts_for, saved_template, isTrackerInitiated) {
     var root = $(html).i18n();
     var available = apply_fixes(contracts_for.available);
 
@@ -959,6 +957,8 @@ export function init(symbol, contracts_for, saved_template) {
         minimizable: true,
         maximizable: false,
         'data-authorized': 'true',
+        isTrackerInitiated: isTrackerInitiated,
+        relativePosition: true,
         close: function() {
           /* forget last proposal stream on close */
           if(state.proposal.last_promise) {
