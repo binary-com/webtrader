@@ -598,14 +598,11 @@ define(['jquery', 'lodash', 'navigation/navigation', 'windows/tracker', 'jquery.
                             }
                             var top = parseInt($(last_dialog).parent().css("top"));
                             var left = parseInt($(last_dialog).parent().css("left"));
-                            console.log(top,left);
                             $($(this).parent()).css("top",top+5+"px");
                             $($(this).parent()).css("left",left+5+"px");
                             last_dialog = $(this);
                         }
                     });
-                }, close: function() {
-                    console.log($(this).parent().attr("id"));
                 }
             }, options || {});
             options.minWidth = options.minWidth || options.width;

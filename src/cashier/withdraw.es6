@@ -85,10 +85,19 @@ class Withdraw {
       route: { value: 'menu'},
       empty_fields: {
         validate: false,
-        clear: _.debounce(() => ( state.empty_fields.validate = false ), 4000),
+        token_length:false,
+        clear: _.debounce(() => { state.empty_fields.validate = false; state.empty_fields.token_length = false}, 4000),
         show: () => {
           state.empty_fields.validate = true;
           state.empty_fields.clear();
+        },
+        validateLength: () => {
+          if(state.verify.token.length != 48){
+            state.empty_fields.token_length = true;
+            state.empty_fields.clear();
+            return false;
+          }
+          return true;
         }
       },
       menu: {
@@ -119,6 +128,18 @@ class Withdraw {
         currency: local_storage.get('authorize').currency,
         residence: '',
         instructions: '',
+        checkAmount: (e,scope) => {
+          const amount = scope.agent.amount;
+          if(amount == ''){
+            return;
+          }
+          if(amount > 2000) {
+            scope.agent.amount = 2000;
+          } 
+          if(amount < 0) {
+            scope.agent.amount = '';
+          }
+        }
       },
       login_details: Cookies.loginids().reduce(function(a,b){if(a.id == local_storage.get("authorize").loginid)return a;else return b})
     };
@@ -156,6 +177,10 @@ class Withdraw {
     verify.unlock = () => {
       if(!verify.token) {
         empty_fields.show();
+        return;
+      }
+
+      if(!empty_fields.validateLength()){
         return;
       }
 
