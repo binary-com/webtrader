@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Demo for affiliates to access Webtrader charts in IFRAME</title><script src="../lib/jquery/dist/jquery.min.js"></script></head><body><table width="600px" align="center"><tr><td align="right" width="25%">Instruments :</td><td align="left" width="25%"><select id="instruments"></select></td><td align="right" width="25%">Time period :</td><td align="left" width="25%"><select id="timePeriod"><option value="1m">1m</option><option value="2m">2m</option><option value="3m">3m</option><option value="5m">5m</option><option value="10m">10m</option><option value="15m">15m</option><option value="30m">30m</option><option value="1h">1h</option><option value="2h">2h</option><option value="4h">4h</option><option value="8h">8h</option><option value="1d">1d</option></select></td></tr><tr align="center"><td colspan="4"><iframe src="" width="100%" height="630" id="chartFrame" style="overflow-y : hidden" scrolling="no"></iframe></td></tr></table><script charset="utf-8">$(document).ready(function() {
+
+          var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3");
+          ws.debug = false;
+          ws.timeoutInterval = 5400;
+          ws.onopen = function(event) {
+            var now = new Date();
+            ws.send(JSON.stringify({"trading_times": now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate()}));
+          };
+          ws.onmessage = function(event) {
+            var data = JSON.parse( event.data );
+            switch( data.msg_type ) {
+              case "trading_times":
+                for (var marketIndex in data.trading_times.markets) {
+                  var marketFromResponse = data.trading_times.markets[marketIndex];
+                  for (var submarketIndxx in marketFromResponse.submarkets) {
+                    var submarket = marketFromResponse.submarkets[submarketIndxx];
+                    for (var eachSymbolIndx in submarket.symbols) {
+                      var eachSymbol = submarket.symbols[eachSymbolIndx];
+                      if (eachSymbol.feed_license !== 'chartonly')
+                        $("<option>").append(eachSymbol.name)
+                                     .attr('value', eachSymbol.symbol)
+                                     .appendTo( $('#instruments') );
+                    }
+                  }
+                }
+                $('#instruments').val('R_25').change();
+                ws.close();
+              break;
+            }
+          }
+
+          /*
+            Attaching change event to the drop downs
+          */
+          $("#instruments, #timePeriod").change(function() {
+            var instrumentCode = $("#instruments").val();
+            var timePeriod = $("#timePeriod").val();
+            if (instrumentCode && timePeriod) {
+              $("#chartFrame").attr('src', '/index.html?affiliates=true&instrument=' + instrumentCode + '&timePeriod=' + timePeriod);
+            }
+          });
+
+        });</script></body></html>
