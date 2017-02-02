@@ -88,6 +88,7 @@ async function init(chart, indicator) {
     const view = rv.bind($html[0], state);
 
     var options = {
+        title: indicator.long_display_name,
         autoOpen: false,
         resizable: false,
         width: 350,
