@@ -20,10 +20,11 @@
 		<input rv-value='verify.token'></input>
 		<div class='errors'>
 			<span class='error' rv-show='verify.token | eq "" | and empty_fields.validate'>This field is required.</span>
+			<span class='error' rv-show='verify.token | not-eq "" | and empty_fields.token_length'>Please input correct token.</span>
 		</div>
 
 		<button rv-on-click='verify.unlock'
-            rv-disabled='verify.disabled' rv-css-opacity='verify.disabled | ternary 0.5 1'>Unlock</button>
+            rv-disabled='verify.disabled' rv-css-opacity='verify.disabled | ternary 0.5 1'>Submit</button>
 	</div>
 
 	<div class='transfer' rv-show='route.value | eq "transfer"'>
@@ -82,7 +83,7 @@
 			</div>
 			<div class='fields'>
 				<span>{agent.currency}</span>
-				<input rv-disabled='agent.loginid | eq ""' rv-value='agent.amount'/>
+				<input rv-disabled='agent.loginid | eq ""' rv-value='agent.amount' rv-on-input="agent.checkAmount"/>
 
 				<span rv-visible='agent.amount'>{agent.currency}</span>
 				<span rv-visible='agent.amount' rv-text='agent.amount_with_commission < amount'></span>
