@@ -318,6 +318,13 @@
     "short_display_name": "TRIMA",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 21, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#C44D58", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
     "category": [
       "Overlap Studies"
     ],
@@ -328,6 +335,25 @@
     "long_display_name": "Normalized Average True Range",
     "short_display_name": "NATR",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 14, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#351330", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#351330", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#351330", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#351330", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Volatility Indicators"
     ],
