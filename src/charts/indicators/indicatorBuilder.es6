@@ -67,7 +67,6 @@ async function init(chart, indicator) {
       }
     }
 
-    window.ss = state;
     if(indicator.editable && indicator.current_options) {
       _.forEach(indicator.current_options, (opt_val, opt_key) => {
         const field = _.find(state.fields, {key: opt_key})
