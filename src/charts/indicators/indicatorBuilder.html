@@ -4,7 +4,12 @@
         <col style="width:30%">
         <col style="width:70%">
       </colgroup>
-        <tr>
+        <tr rv-if="formula">
+          <td colspan="2" class="formula">
+            <img rv-attr-src="formula">
+          </td>
+        </tr>
+        <tr rv-if="formula | negate">
           <td colspan="2" class="description">
             {description}
           </td>

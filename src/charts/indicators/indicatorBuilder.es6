@@ -28,6 +28,7 @@ async function init(chart, indicator) {
       id: indicator.id,
       fields: indicator.fields,
       levels: indicator.levels, /* optional */
+      formula: indicator.formula, /* optional */
       description: indicator.description,
       dash_styles: [
         "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot",
