@@ -380,8 +380,6 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
                   publish(rgba)
                 }
               });
-              div.find('.cp-hslsaturation').hide();
-              div.find('.cp-hsllightness').hide();
           },
           unbind: function (el) { },
           routine: function (el, value) {

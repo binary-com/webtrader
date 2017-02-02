@@ -138,5 +138,6 @@ export const open = async function (indicator, containerIDWithHash, before_add_c
     await init(chart, indicator);
 
     $(".indicator-builder").dialog('open');
+    $(".indicator-builder").animate({ scrollTop: 0 }, 800);
 }
 export default { open, };

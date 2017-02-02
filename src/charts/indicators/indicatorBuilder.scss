@@ -2,12 +2,14 @@
   padding: 0;
   .ui-slider-handle {
     padding: 0 5px;
+    text-align: center;
+    width: 30px;
     border-radius: 3px;
     font-size: 12px;
     position: relative !important;
     top: -2px !important;
     text-align: center !important;
-    margin-left: -15px !important;
+    margin-left: -20px !important;
     height: 18px !important;
   }
 
@@ -18,8 +20,9 @@
     display: inline-block;
   }
 
-  .cp-slider.cp-hslhue.cp-transparency {
-      height: 20px;
+  .cp-slider {
+      height: 12px;
+      margin-top: 5px;
       border: none;
       margin: 0;
   }

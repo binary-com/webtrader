@@ -7,7 +7,7 @@
     "fields": [
       {"title": "Period", "key": "period", "min": 1, "max": 100, "value": 14, "type": "slider"},
       {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
-      {"title": "Stroke", "key": "stroke", "value": "#cd0a0a", "type": "colorpicker"},
+      {"title": "Stroke", "key": "stroke", "value": "#FA6B0D", "type": "colorpicker"},
       {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
       {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
     ],
@@ -15,12 +15,12 @@
       "fields": [
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
-        {"title": "Stroke", "key": "color", "value": "#ff0000", "type": "colorpicker"},
+        {"title": "Stroke", "key": "color", "value": "#FA6B0D", "type": "colorpicker"},
         {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
       ],
       "values": [
-        {"color": "#ff0000", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
-        {"color": "#ff0000", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+        {"color": "#FA6B0D", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#FA6B0D", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
       ]
     },
     "category": [
@@ -37,7 +37,7 @@
     "fields": [
       {"title": "Period", "key": "period", "min": 1, "max": 100, "value": 21, "type": "slider"},
       {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
-      {"title": "Stroke", "key": "stroke", "value": "#cd0a0a", "type": "colorpicker"},
+      {"title": "Stroke", "key": "stroke", "value": "#E14906", "type": "colorpicker"},
       {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
       {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
     ],
@@ -51,6 +51,25 @@
     "long_display_name": "Relative Strength Index",
     "short_display_name": "RSI",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 14, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#806C3D", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#806C3D", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#806C3D", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#806C3D", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
