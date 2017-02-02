@@ -61,9 +61,13 @@ async function init(chart, indicator) {
         },
         add: (e) => {
           const btn = $(e.target);
-          const bottom = btn.position().top + btn.closest('table').parent().scrollTop() + 45;
+          const bottom = btn.position().top + btn.closest('table').parent().scrollTop() + 12;
           state.level.dialog.bottom = bottom*-1 + 'px';
           state.level.dialog.visible = !state.level.dialog.visible;
+          if(state.level.dialog.visible) {
+            const content = $('.indicator-builder');
+            content.animate({ scrollTop: content.prop('scrollHeight')}, 700);
+          }
         }
       }
     }

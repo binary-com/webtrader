@@ -141,6 +141,22 @@
     "long_display_name": "Williams' %R",
     "short_display_name": "WILLR",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 14, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#D95B43", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#D95B43", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+      ],
+      "values": [ ]
+    },
     "category": [
       "Momentum Indicators"
     ],
