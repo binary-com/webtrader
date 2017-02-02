@@ -7,12 +7,11 @@ import liveapi from 'websockets/binary_websockets';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import currencyDialog from 'cashier/currency';
-import _ from 'lodash';
+import {debounce} from 'lodash'
 import moment from 'moment';
 
 require(['text!cashier/withdraw.html']);
 require(['css!cashier/withdraw.css']);
-
 let win = null;
 let win_view = null;
 
@@ -86,7 +85,7 @@ class Withdraw {
       empty_fields: {
         validate: false,
         token_length:false,
-        clear: _.debounce(() => { state.empty_fields.validate = false; state.empty_fields.token_length = false}, 4000),
+        clear: debounce(() => { state.empty_fields.validate = false; state.empty_fields.token_length = false}, 4000),
         show: () => {
           state.empty_fields.validate = true;
           state.empty_fields.clear();
