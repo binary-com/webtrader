@@ -35,10 +35,27 @@
           </td>
           <td rv-if="row.type | eq 'appliedto'">
             <div class="applied-to">
-                <div rv-class-selected="row.value | eq 0" rv-on-click="update_appliedto | bind row | bind 0">OPEN</div>
-                <div rv-class-selected="row.value | eq 1" rv-on-click="update_appliedto | bind row | bind 1">HIGH</div>
-                <div rv-class-selected="row.value | eq 2" rv-on-click="update_appliedto | bind row | bind 2">LOW</div>
-                <div rv-class-selected="row.value | eq 3" rv-on-click="update_appliedto | bind row | bind 3">CLOSE</div>
+                <div rv-class-selected="row.value | eq 0" rv-on-click="update_value | bind row | bind 0">OPEN</div>
+                <div rv-class-selected="row.value | eq 1" rv-on-click="update_value | bind row | bind 1">HIGH</div>
+                <div rv-class-selected="row.value | eq 2" rv-on-click="update_value | bind row | bind 2">LOW</div>
+                <div rv-class-selected="row.value | eq 3" rv-on-click="update_value | bind row | bind 3">CLOSE</div>
+            </div>
+          </td>
+          <td rv-if="row.type | eq 'price'">
+            <div class="price">
+                <div rv-class-selected="row.value | eq 0" rv-on-click="update_value | bind row | bind 0">Open Price</div>
+                <div rv-class-selected="row.value | eq 1" rv-on-click="update_value | bind row | bind 1">High Price</div>
+                <div rv-class-selected="row.value | eq 2" rv-on-click="update_value | bind row | bind 2">Low Price</div>
+                <div rv-class-selected="row.value | eq 3" rv-on-click="update_value | bind row | bind 3">Close Price</div>
+            </div>
+          </td>
+          <td rv-if="row.type | eq 'matype'">
+            <div class="matype">
+                <div rv-class-selected="row.value | eq 'SMA'" rv-on-click="update_value | bind row | bind 'SMA'">SMA</div>
+                <div rv-class-selected="row.value | eq 'WMA'" rv-on-click="update_value | bind row | bind 'WMA'">WMA</div>
+                <div rv-class-selected="row.value | eq 'EMA'" rv-on-click="update_value | bind row | bind 'EMA'">EMA</div>
+                <div rv-class-selected="row.value | eq 'TEMA'" rv-on-click="update_value | bind row | bind 'TEMA'">TEMA</div>
+                <div rv-class-selected="row.value | eq 'TRIMA'" rv-on-click="update_value | bind row | bind 'TRIMA'">TRIMA</div>
             </div>
           </td>
         </tr>

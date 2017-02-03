@@ -530,6 +530,10 @@
     "id": "cdlthrusting",
     "long_display_name": "Thrusting Pattern",
     "short_display_name": "CDLTHRUSTING",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/thrusting_pattern.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -541,6 +545,19 @@
     "short_display_name": "BBANDS",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Price", "key": "appliedTo", "value": 3, "type": "price"},
+      {"title": "Time Period", "key": "period", "min": 1, "max": 50, "value": 20, "type": "slider"},
+      {"title": "NB Dev Up", "key": "devUp", "min": 1, "max": 20, "value": 2, "type": "slider"},
+      {"title": "NB Dev Down", "key": "devDn", "min": 1, "max": 20, "value": 2, "type": "slider"},
+      {"title": "MA Type", "key": "maType", "value": "SMA", "type": "matype"},
+      {"title": "Middle Band Stroke", "key": "mdlBndStroke", "value": "rgb(205, 10, 10)", "type": "colorpicker"},
+      {"title": "Upper Band Stroke", "key": "uprBndStroke", "value": "rgb(11, 88, 162)", "type": "colorpicker"},
+      {"title": "Lower Band Stroke", "key": "lwrBndStroke", "value": "rgb(11, 88, 162)", "type": "colorpicker"},
+      {"title": "Background Color", "key": "backgroundColor", "value": "rgba(178, 191, 217, 0.3", "type": "colorpicker"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
     "category": [
       "Momentum Indicators"
     ],

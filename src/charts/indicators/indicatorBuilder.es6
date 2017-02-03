@@ -38,8 +38,8 @@ async function init(chart, indicator) {
       update_dash(dash, field) {
         field.value = dash.name;
       },
-      update_appliedto(row, value) {
-        row.value = value*1;
+      update_value(row, value) {
+        row.value = value;
       },
       level: {
         dialog: {
