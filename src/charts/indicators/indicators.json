@@ -465,6 +465,10 @@
     "id": "cdl3whitesoldiers",
     "long_display_name": "Three Advancing White Soldiers",
     "short_display_name": "CDL3WHITESOLDIERS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/three_white_soldiers.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -474,6 +478,10 @@
     "id": "cdldoji",
     "long_display_name": "Doji",
     "short_display_name": "CDLDOJI",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/doji.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -483,6 +491,10 @@
     "id": "cdlabandonedbaby",
     "long_display_name": "Abandoned Baby",
     "short_display_name": "CDLABANDONEDBABY",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/abandoned_baby.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
