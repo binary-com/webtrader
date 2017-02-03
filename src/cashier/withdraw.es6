@@ -7,12 +7,11 @@ import liveapi from 'websockets/binary_websockets';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import currencyDialog from 'cashier/currency';
-import _ from 'lodash';
+import {debounce} from 'lodash'
 import moment from 'moment';
 
 require(['text!cashier/withdraw.html']);
 require(['css!cashier/withdraw.css']);
-
 let win = null;
 let win_view = null;
 
