@@ -319,7 +319,6 @@ button[disabled] {
 /* For confirmation dialogs */
 .dialog-confirm.ui-dialog  {
     background: #f2f2f2;
-    border-bottom: 5px solid #EA9800;
 }
 
 .dialog-confirm.ui-dialog .ui-widget-content {
