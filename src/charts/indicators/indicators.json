@@ -387,6 +387,10 @@
     "id": "cdl2crows",
     "long_display_name": "Two Crows",
     "short_display_name": "CDL2CROWS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/two_crows.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -396,6 +400,10 @@
     "id": "cdl3blackcrows",
     "long_display_name": "Three Black Crows",
     "short_display_name": "CDL3BLACKCROWS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/three_black_crows.png"
+    },
     "category": [
       "Pattern Recognition"
     ],

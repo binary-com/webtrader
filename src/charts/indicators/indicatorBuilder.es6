@@ -30,6 +30,7 @@ async function init(chart, indicator) {
       levels: indicator.levels, /* optional */
       formula: indicator.formula, /* optional */
       description: indicator.description,
+      cdl_indicator: indicator.cdl_indicator, /* optional (cdl indicators only) */
       dash_styles: [
         "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot",
         "Dot", "Dash", "LongDash", "DashDot", "LongDashDot", "LongDashDotDot"
@@ -102,13 +103,20 @@ async function init(chart, indicator) {
             {
                 text: "OK",
                 click: function() {
-                    var options = { };
-                    if(state.levels) {
-                      options.values = JSON.parse(JSON.stringify(state.levels.values));
+                    const options = { };
+                    if(!indicator.cdl_indicator) { /* normal indicator */
+                      if(state.levels) {
+                        options.values = JSON.parse(JSON.stringify(state.levels.values));
+                      }
+                      state.fields.forEach(field => options[field.key] = field.value);
                     }
-                    state.fields.forEach(field => options[field.key] = field.value);
+                    else { /* cdl indicator */
+                       options.cdlIndicatorCode = state.id;
+                       options.onSeriesID = chart.series[0].options.id
+                    }
 
                     before_add_callback && before_add_callback();
+
                     //Add indicator for the main series
                     chart.series[0].addIndicator(state.id, options);
 

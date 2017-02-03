@@ -5,7 +5,7 @@
         <col style="width:70%">
       </colgroup>
         <tr rv-if="formula">
-          <td colspan="2" class="formula">
+          <td colspan="2" class="image">
             <img rv-attr-src="formula">
           </td>
         </tr>
@@ -72,6 +72,11 @@
                     </tbody>
                 </table>
             </td>
+        </tr>
+        <tr rv-if="cdl_indicator">
+          <td colspan="2" class="image">
+            <img rv-attr-src="cdl_indicator.image">
+          </td>
         </tr>
     </table>
     <div class='levels-dialog' rv-if='levels' rv-show='level.dialog.visible' rv-css-bottom="level.dialog.bottom">
