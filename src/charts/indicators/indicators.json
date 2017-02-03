@@ -504,6 +504,10 @@
     "id": "cdlclosingmarubozu",
     "long_display_name": "Closing Marubozu",
     "short_display_name": "CDLCLOSINGMARUBOZU",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/closing_marubozu.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -513,6 +517,10 @@
     "id": "cdldojistar",
     "long_display_name": "Doji Star",
     "short_display_name": "CDLDOJISTAR",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/doji_star.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
