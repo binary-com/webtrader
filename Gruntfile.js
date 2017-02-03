@@ -495,7 +495,7 @@ module.exports = function (grunt) {
         var content = "";
         this.files.forEach(function(f){
             var src= f.src[0].split("/");
-            var id = src[src.length-1].replace(".md","");
+            var id = src[src.length-1].replace(".md","").toLowerCase();
             var html = "<div id=\"" + id + "\">" + converter.makeHtml(grunt.file.read(f.src[0])) + "</div>";
             if(f.bundle){
                 content = content + "\n" + html;
