@@ -60,6 +60,10 @@ const init_state = (root) => {
                 $.growl.error({message:"Token name can contain alphanumeric characters with spaces and underscores".i18n()});
                 scope.token.name = token_name.replace(/[^\w\s]+/g, "");
               }
+              if(!/^[\w]/.test(token_name)){
+                $.growl.error({message:"Token name should begin with alphanumeric characters only".i18n()});
+                scope.token.name = token_name.replace(/^[^\w]+/g, "");
+              }
             }
         },
         confirm: {
