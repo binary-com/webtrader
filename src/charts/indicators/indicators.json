@@ -439,6 +439,10 @@
     "id": "cdl3outside",
     "long_display_name": "Three Outside Up/Down",
     "short_display_name": "CDL3OUTSIDE",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/three_outside_up_down.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -448,6 +452,10 @@
     "id": "cdl3starssouth",
     "long_display_name": "Three Stars In The South",
     "short_display_name": "CDL3STARSSOUTH",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/three_stars_in_the_south.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
