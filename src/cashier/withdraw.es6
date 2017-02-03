@@ -81,19 +81,31 @@ class Withdraw {
 
   _init_state = root => {
     var state = {
+      clear: _.debounce((obj,prop) => {obj[prop] = false}, 4000),
       route: { value: 'menu'},
       empty_fields: {
         validate: false,
         token_length:false,
-        clear: debounce(() => { state.empty_fields.validate = false; state.empty_fields.token_length = false}, 4000),
         show: () => {
           state.empty_fields.validate = true;
-          state.empty_fields.clear();
-        },
-        validateLength: () => {
+          state.clear(state.empty_fields, 'validate');
+        }
+      },
+      validate: {
+        invalid_length: false,
+        invalid_text: false,
+        length: () => {
           if(state.verify.token.length != 48){
-            state.empty_fields.token_length = true;
-            state.empty_fields.clear();
+            state.validate.invalid_length = true;
+            state.clear(state.validate,'invalid_length');
+            return false;
+          }
+          return true;
+        },
+        text : () =>{
+          if(/[^1-9a-zA-Z'\- ,.]/g.test(state.agent.instructions)){
+            state.validate.invalid_text = true;
+            state.clear(state.validate, "invalid_text");
             return false;
           }
           return true;
@@ -142,7 +154,7 @@ class Withdraw {
       },
       login_details: Cookies.loginids().reduce(function(a,b){if(a.id == local_storage.get("authorize").loginid)return a;else return b})
     };
-    let {route, menu, verify, empty_fields, standard, agent, transfer} = state;
+    let {route, menu, verify, empty_fields, standard, agent, transfer, validate} = state;
 
     let routes = { menu : 400, verify: 400, transfer: 400, 'transfer-done': 300, standard: 400, agent: 550, 'agent-confirm': 400, 'agent-done': 300 };
     route.update = r => {
@@ -179,7 +191,7 @@ class Withdraw {
         return;
       }
 
-      if(!empty_fields.validateLength()){
+      if(!validate.length()){
         return;
       }
 
@@ -242,8 +254,7 @@ class Withdraw {
         $.growl.error({message: 'Amount Min: 10 Max: 2000'.i18n()});
         return;
       }
-      if(!agent.instructions) {
-        empty_fields.show();
+      if(agent.instructions && !validate.text()) {
         return;
       }
 
@@ -256,6 +267,7 @@ class Withdraw {
         paymentagent_loginid: agent.loginid,
         currency: agent.currency,
         amount: agent.amount*1,
+        description: agent.instructions,
         verification_code: verify.code
       };
       agent.disabled = true;

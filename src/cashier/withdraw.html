@@ -20,7 +20,7 @@
 		<input rv-value='verify.token'></input>
 		<div class='errors'>
 			<span class='error' rv-show='verify.token | eq "" | and empty_fields.validate'>This field is required.</span>
-			<span class='error' rv-show='verify.token | not-eq "" | and empty_fields.token_length'>Please input correct token.</span>
+			<span class='error' rv-show='validate.invalid_length'>Please input correct token.</span>
 		</div>
 
 		<button rv-on-click='verify.unlock'
@@ -93,8 +93,8 @@
 		<span class="hint">Min: 10 Max: 2000</span>
 
 		<span class='title'>Further instructions</span>
-		<textarea class='instructions' rows='8' rv-value='agent.instructions'></textarea>
-		<span class='error' rv-visible='agent.instructions | eq "" | and empty_fields.validate'>This field is required.</span>
+		<textarea class='instructions' rows='8' rv-value='agent.instructions' type="text" maxlength="300"></textarea>
+		<span class='error' rv-show='validate.invalid_text'>Only letters, numbers, space, period, comma, dash(-) &amp; apostrophe (') are allowed</span>
 
 		<button class='submit' rv-on-click='agent.click'>Submit</button>
 
