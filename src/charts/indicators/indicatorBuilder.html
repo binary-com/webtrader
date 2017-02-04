@@ -17,7 +17,7 @@
         <tr rv-each-row="fields">
           <td>{row.title}</td>
           <td rv-if="row.type | eq 'slider'">
-            <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max"></div>
+            <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max" rv-attr-step="row.step"></div>
           </td>
           <td rv-if="row.type | eq 'colorpicker'">
             <div rv-colorpicker="row.value"></div>

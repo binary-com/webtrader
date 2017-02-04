@@ -411,7 +411,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
 
             div.slider({
               step: div.attr('step')*1 || 1,
-              min: div.attr('min')*1 || 1,
+              min: div.attr('min') === undefined ? 1 : div.attr('min')*1,
               max: div.attr('max')*1 || 100,
               create: function() {
                 handle.text($(this).slider("value"));
