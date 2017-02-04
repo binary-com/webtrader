@@ -642,14 +642,21 @@
     ],
     "category": [
       "Price Transformation"
-    ],
-    "description": "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day."
+     ],
+     "description": "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day."
   },
   "cci": {
     "id": "cci",
     "long_display_name": "Commodity Channel Index",
     "short_display_name": "CCI",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 50, "value": 20, "type": "slider"},
+      {"title": "MA Type", "key": "maType", "value": "SMA", "type": "matype"},
+      {"title": "Stroke", "key": "stroke", "value": "#AAFF00", "type": "colorpicker"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
     "category": [
       "Momentum Indicators"
     ],
@@ -661,6 +668,13 @@
     "short_display_name": "DEMA",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 21, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#FFAA00", "type": "colorpicker"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
     "category": [
       "Overlap Studies"
     ],
