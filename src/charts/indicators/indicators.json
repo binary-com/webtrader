@@ -620,6 +620,10 @@
     "id": "cdlengulfing",
     "long_display_name": "Engulfing Pattern",
     "short_display_name": "CDLENGULFING",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/engulfing_pattern.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -631,6 +635,11 @@
     "short_display_name": "WCLPRICE",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#FA023C", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
     "category": [
       "Price Transformation"
     ],
