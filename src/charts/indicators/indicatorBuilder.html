@@ -58,6 +58,9 @@
                 <div rv-class-selected="row.value | eq 'TRIMA'" rv-on-click="update_value | bind row | bind 'TRIMA'">TRIMA</div>
             </div>
           </td>
+          <td rv-if="row.type | eq 'numeric'">
+             <input rv-value="row.value" type="text" rv-validate="'^(?!0\d)\d*(\.\d{1,4})?$'" />
+          </td>
         </tr>
 
         <tr rv-if="levels" class="levels-tr">

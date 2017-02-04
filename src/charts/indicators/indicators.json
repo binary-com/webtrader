@@ -567,6 +567,10 @@
     "id": "cdlshootingstar",
     "long_display_name": "Shooting Star",
     "short_display_name": "CDLSHOOTINGSTAR",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/shooting_star.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -578,6 +582,11 @@
     "short_display_name": "SAR",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Acceleration", "key": "acceleration", "value": 0.02, "type": "numeric"},
+      {"title": "Maximum", "key": "maximum", "value": 0.2, "type": "numeric"},
+      {"title": "Stroke", "key": "stroke", "value": "#413D3D", "type": "colorpicker"}
+    ],
     "category": [
       "Overlap Studies"
     ],

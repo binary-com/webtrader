@@ -247,6 +247,16 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         $(el).selectmenu('option', this.args[0], value);
     }
 
+   rv.binders.validate = function(input, pattern) {
+      var $input = $(input);
+      var reg = new RegExp(pattern, 'i');
+      $input.on('input', function() {
+         var val = $input.val();
+         if(reg.test(val)) $input.removeClass('invalid');
+         else $input.addClass('invalid');
+      });
+   }
+
     /* refersh the selectmenu on array changes */
     rv.binders.selectrefresh = {
         priority: 99,
@@ -400,6 +410,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
             var model = this.model;
 
             div.slider({
+              step: div.attr('step')*1 || 1,
               min: div.attr('min')*1 || 1,
               max: div.attr('max')*1 || 100,
               create: function() {

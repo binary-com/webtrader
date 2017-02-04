@@ -114,6 +114,12 @@
     position: absolute;
     bottom: 100%;
   }
+  input {
+     transition: border 0.7s;
+     &.invalid {
+        border: 1px solid red;
+     }
+  }
 }
 .indicator-builder-ui-dialog {
   .ui-dialog-buttonpane {
