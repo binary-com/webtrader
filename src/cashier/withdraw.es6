@@ -9,6 +9,7 @@ import rv from 'common/rivetsExtra';
 import currencyDialog from 'cashier/currency';
 import {debounce} from 'lodash'
 import moment from 'moment';
+import tncApprovalWin from 'cashier/uk_funds_protection';
 
 require(['text!cashier/withdraw.html']);
 require(['css!cashier/withdraw.css']);
@@ -213,6 +214,12 @@ class Withdraw {
         })
         .catch(err => {
           verify.disabled = false;
+          if(err.code === "ASK_UK_FUNDS_PROTECTION"){
+            tncApprovalWin.init_win().then().catch(err => {
+              error_handler(err);
+            });
+            return;
+          }
           error_handler(err);
         });
       }
