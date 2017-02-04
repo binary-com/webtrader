@@ -597,6 +597,20 @@
     "long_display_name": "Moving Average Convergence/Divergence",
     "short_display_name": "MACD",
     "editable": true,
+    "fields": [
+      {"title": "Price", "key": "appliedTo", "value": 3, "type": "price"},
+      {"title": "Fast Period", "key": "fastPeriod", "min": 1, "max": 50, "value": 12, "type": "slider"},
+      {"title": "Slow Period", "key": "slowPeriod", "min": 1, "max": 50, "value": 26, "type": "slider"},
+      {"title": "Signal Period", "key": "signalPeriod", "min": 1, "max": 50, "value": 9, "type": "slider"},
+      {"title": "Fast MA Type", "key": "fastMaType", "value": "SMA", "type": "matype"},
+      {"title": "Slow MA Type", "key": "slowMaType", "value": "SMA", "type": "matype"},
+      {"title": "Signal MA Type", "key": "signalMaType", "value": "SMA", "type": "matype"},
+      {"title": "MACD Line Stroke", "key": "macdStroke", "value": "#2a277a", "type": "colorpicker"},
+      {"title": "Signal Line Stroke", "key": "signalLineStroke", "value": "#ff0000", "type": "colorpicker"},
+      {"title": "Histogram Color", "key": "macdHstgrmColor", "value": "#7e9fc9", "type": "colorpicker"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
     "category": [
       "Momentum Indicators"
     ],
