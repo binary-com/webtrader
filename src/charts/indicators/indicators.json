@@ -992,6 +992,10 @@
     "id": "cdleveningstar",
     "long_display_name": "Evening Star",
     "short_display_name": "CDLEVENINGSTAR",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/evening_star.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1001,6 +1005,10 @@
     "id": "cdlhighwave",
     "long_display_name": "High-Wave Candle",
     "short_display_name": "CDLHIGHWAVE",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/high_wave.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1010,6 +1018,10 @@
     "id": "cdlhikkake",
     "long_display_name": "Hikkake Pattern",
     "short_display_name": "CDLHIKKAKE",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/hikkake.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
