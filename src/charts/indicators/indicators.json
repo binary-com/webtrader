@@ -1304,6 +1304,10 @@
     "id": "cdlunique3river",
     "long_display_name": "Unique 3 River",
     "short_display_name": "CDLUNIQUE3RIVER",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/three_river.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1313,6 +1317,10 @@
     "id": "cdlseparatinglines",
     "long_display_name": "Separating Lines",
     "short_display_name": "CDLSEPARATINGLINES",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/separating_lines.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1322,6 +1330,10 @@
     "id": "cdlmathold",
     "long_display_name": "Mat Hold",
     "short_display_name": "CDLMATHOLD",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/mat_hold.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1331,6 +1343,10 @@
     "id": "cdlsticksandwich",
     "long_display_name": "Stick Sandwich",
     "short_display_name": "CDLSTICKSANDWICH",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/stick_sandwich.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1340,6 +1356,10 @@
     "id": "cdlkickingbylength",
     "long_display_name": "Kicking - bull/bear determined by the longer marubozu",
     "short_display_name": "CDLKICKINGBYLENGTH",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/kicking.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
