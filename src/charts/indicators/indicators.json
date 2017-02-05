@@ -1187,6 +1187,10 @@
     "id": "cdllongleggeddoji",
     "long_display_name": "Long Legged Doji",
     "short_display_name": "CDLLONGLEGGEDDOJI",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/long_legged_doji.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1196,6 +1200,10 @@
     "id": "cdleveningdojistar",
     "long_display_name": "Evening Doji Star",
     "short_display_name": "CDLEVENINGDOJISTAR",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/evening_doji_star.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1205,6 +1213,10 @@
     "id": "cdlbreakaway",
     "long_display_name": "Breakaway",
     "short_display_name": "CDLBREAKAWAY",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/breakaway_pattern.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
