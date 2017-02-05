@@ -725,6 +725,14 @@
     "short_display_name": "HMA",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 50, "value": 20, "type": "slider"},
+      {"title": "MA Type", "key": "maType", "value": "SMA", "type": "matype"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#031634", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
     "category": [
       "Overlap Studies"
     ],
@@ -736,6 +744,13 @@
     "short_display_name": "LWMA",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 50, "value": 20, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#033649", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
     "category": [
       "Overlap Studies"
     ],
@@ -747,6 +762,13 @@
     "short_display_name": "SMMA",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 50, "value": 20, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#036564", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
     "category": [
       "Overlap Studies"
     ],
