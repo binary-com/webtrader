@@ -1070,6 +1070,10 @@
     "id": "cdlmarubozu",
     "long_display_name": "Marubozu",
     "short_display_name": "CDLMARUBOZU",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/marubozu.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1079,6 +1083,10 @@
     "id": "cdlkicking",
     "long_display_name": "Kicking",
     "short_display_name": "CDLKICKING",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/kicking.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1088,6 +1096,10 @@
     "id": "cdlmatchinglow",
     "long_display_name": "Matching Low",
     "short_display_name": "CDLMATCHINGLOW",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/matching_low.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
