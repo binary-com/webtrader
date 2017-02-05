@@ -1265,6 +1265,10 @@
     "id": "cdlinneck",
     "long_display_name": "In-Neck Pattern",
     "short_display_name": "CDLINNECK",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/in_neck.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1274,6 +1278,10 @@
     "id": "cdlonneck",
     "long_display_name": "On-Neck Pattern",
     "short_display_name": "CDLONNECK",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/on_neck.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1283,6 +1291,10 @@
     "id": "cdlrickshawman",
     "long_display_name": "Rickshaw Man",
     "short_display_name": "CDLRICKSHAWMAN",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/rickshaw_man.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
