@@ -1031,6 +1031,10 @@
     "id": "cdlhomingpigeon",
     "long_display_name": "Homing Pigeon",
     "short_display_name": "CDLHOMINGPIGEON",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/homing_pigeon.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1040,6 +1044,10 @@
     "id": "cdltristar",
     "long_display_name": "Tristar Pattern",
     "short_display_name": "CDLTRISTAR",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/tristar.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1049,6 +1057,10 @@
     "id": "cdllongline",
     "long_display_name": "Long Line Candle",
     "short_display_name": "CDLLONGLINE",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/long_line_candle.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
