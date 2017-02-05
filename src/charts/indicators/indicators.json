@@ -823,6 +823,10 @@
     "id": "cdltasukigap",
     "long_display_name": "Tasuki Gap",
     "short_display_name": "CDLTASUKIGAP",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/tasuki_gap.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -832,6 +836,10 @@
     "id": "cdlpiercing",
     "long_display_name": "Piercing Pattern",
     "short_display_name": "CDLPIERCING",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/piercing_pattern.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -841,6 +849,10 @@
     "id": "cdlbelthold",
     "long_display_name": "Belt-hold ",
     "short_display_name": "CDLBELTHOLD",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/belt_hold.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -850,6 +862,10 @@
     "id": "cdldarkcloudcover",
     "long_display_name": "Dark Cloud Cover ",
     "short_display_name": "CDLDARKCLOUDCOVER",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/dark_cloud_cover.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -859,6 +875,10 @@
     "id": "cdlgapsidesidewhite",
     "long_display_name": "Up/Down-Gap Side-By-Side White Lines",
     "short_display_name": "CDLGAPSIDESIDEWHITE",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/side_by_side_white_line.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -868,6 +888,10 @@
     "id": "cdltakuri",
     "long_display_name": "Takuri (Dragonfly Doji with very long lower shadow)",
     "short_display_name": "CDLTAKURI",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/takuri_line.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
