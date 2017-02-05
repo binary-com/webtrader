@@ -901,6 +901,10 @@
     "id": "cdlharami",
     "long_display_name": "Harami Pattern",
     "short_display_name": "CDLHARAMI",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/harami_pattern.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -910,6 +914,10 @@
     "id": "cdlhammer",
     "long_display_name": "Hammer",
     "short_display_name": "CDLHAMMER",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/hammer.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -919,6 +927,10 @@
     "id": "cdlhangingman",
     "long_display_name": "Hanging Man",
     "short_display_name": "CDLHANGINGMAN",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/hanging_man.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
