@@ -1109,6 +1109,10 @@
     "id": "cdlladderbottom",
     "long_display_name": "Ladder Bottom",
     "short_display_name": "CDLLADDERBOTTOM",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/ladder_bottom.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1118,6 +1122,10 @@
     "id": "cdlrisefall3methods",
     "long_display_name": "Rising/Falling Three Methods",
     "short_display_name": "CDLRISEFALL3METHODS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/rising_falling_three_methods.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1127,6 +1135,10 @@
     "id": "cdlidentical3crows",
     "long_display_name": "Identical Three Crows",
     "short_display_name": "CDLIDENTICAL3CROWS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/identical_three_crows.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
