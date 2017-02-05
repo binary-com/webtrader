@@ -940,6 +940,10 @@
     "id": "cdlinvertedhammer",
     "long_display_name": "Inverted Hammer",
     "short_display_name": "CDLINVERTEDHAMMER",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/inverted_hammer.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -949,6 +953,10 @@
     "id": "cdlgravestonedoji",
     "long_display_name": "Gravestone Doji",
     "short_display_name": "CDLGRAVESTONEDOJI",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/gravestone_doji.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -958,6 +966,10 @@
     "id": "cdlharamicross",
     "long_display_name": "Harami Cross Pattern",
     "short_display_name": "CDLHARAMICROSS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/harami_cross.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -967,6 +979,10 @@
     "id": "cdlstalledpattern",
     "long_display_name": "Stalled Pattern",
     "short_display_name": "CDLSTALLEDPATTERN",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/salled_pattern.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
