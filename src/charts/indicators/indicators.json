@@ -1148,6 +1148,10 @@
     "id": "cdlmorningstar",
     "long_display_name": "Morning Star",
     "short_display_name": "CDLMORNINGSTAR",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/morning_star.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1157,6 +1161,10 @@
     "id": "cdlspinningtop",
     "long_display_name": "Spinning Top",
     "short_display_name": "CDLSPINNINGTOP",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/spinning_top.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1166,6 +1174,10 @@
     "id": "cdldragonflydoji",
     "long_display_name": "Dragonfly Doji",
     "short_display_name": "CDLDRAGONFLYDOJI",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/dragonfly_doji.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
