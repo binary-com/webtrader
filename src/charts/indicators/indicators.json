@@ -780,6 +780,14 @@
     "short_display_name": "MAMA",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Fast Limit", "key": "fastLimit", "value": 0.5, "min": 0, "max": 1, "step": 0.01, "type": "slider"},
+      {"title": "Slow Limit", "key": "slowLimit", "value": 0.05, "min": 0, "max": 1, "step": 0.01, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#CDB380", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
     "category": [
       "Overlap Studies"
     ],
@@ -789,6 +797,10 @@
     "id": "cdlupsidegap2crows",
     "long_display_name": "Upside/Downside Gap Two Crows",
     "short_display_name": "CDLUPSIDEGAP2CROWS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/upside_gap_two_crows.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -798,6 +810,10 @@
     "id": "cdlxsidegap3methods",
     "long_display_name": "Upside/Downside Gap Three Methods",
     "short_display_name": "CDLXSIDEGAP3METHODS",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/gap_three_methods.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
