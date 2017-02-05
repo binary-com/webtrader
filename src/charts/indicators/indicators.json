@@ -1226,6 +1226,10 @@
     "id": "cdladvanceblock",
     "long_display_name": "Advance Block",
     "short_display_name": "CDLADVANCEBLOCK",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/advance_block.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1235,6 +1239,10 @@
     "id": "cdlcounterattack",
     "long_display_name": "Counterattack",
     "short_display_name": "CDLCOUNTERATTACK",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/counterattack.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
@@ -1244,6 +1252,10 @@
     "id": "cdlmorningdojistar",
     "long_display_name": "Morning Doji Star",
     "short_display_name": "CDLMORNINGDOJISTAR",
+    "fields": [ ],
+    "cdl_indicator": {
+      "image": "images/indicators/morning_doji_star.png"
+    },
     "category": [
       "Pattern Recognition"
     ],
