@@ -1477,6 +1477,22 @@
     "long_display_name": "Momentum",
     "short_display_name": "MOM",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 14, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#6299FD", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": -40, "max": 20, "value": 0, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#6299FD", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [ ]
+    },
     "category": [
       "Momentum Indicators"
     ],
@@ -1487,6 +1503,15 @@
     "long_display_name": "Arnaud Legoux Moving Average",
     "short_display_name": "ALMA",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 9, "type": "slider"},
+      {"title": "Offset", "key": "offset", "min": 0, "max": 1, "value": 0.85, "step": 0.01, "type": "slider"},
+      {"title": "Sigma", "key": "sigma", "min": 1, "max": 200, "value": 6, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#1693A5", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
     "onChartIndicator": true,
     "category": [
       "Overlap Studies"
