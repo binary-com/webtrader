@@ -16,7 +16,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#FA6B0D", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [
         {"color": "#FA6B0D", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
@@ -63,7 +63,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#806C3D", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [
         {"color": "#806C3D", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
@@ -110,7 +110,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#319F67", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [ ]
     },
@@ -153,7 +153,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#D95B43", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [ ]
     },
@@ -179,7 +179,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#C02942", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [ ]
     },
@@ -205,7 +205,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#542437", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [ ]
     },
@@ -267,7 +267,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#4ECDC4", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [ ]
     },
@@ -347,7 +347,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#351330", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [
         {"color": "#351330", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
@@ -374,7 +374,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#424254", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [ ]
     },
@@ -1381,7 +1381,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#5A0397", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [ ]
     },
@@ -1431,7 +1431,7 @@
         {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
         {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
         {"title": "Stroke", "key": "color", "value": "#890357", "type": "colorpicker"},
-        {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
       ],
       "values": [
         {"color": "#890357", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
@@ -1448,6 +1448,25 @@
     "long_display_name": "Stochastic Relative Strength Index",
     "short_display_name": "STOCHRSI",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 14, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#DEA02D", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 0, "max": 2, "value": 1, "step": 0.01, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#DEA02D", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#DEA02D", "dashStyle": "Dash", "label": { "text": 0.3}, "value": 0.3, "width" : 1},
+        {"color": "#DEA02D", "dashStyle": "Dash", "label": { "text": 0.7}, "value": 0.7, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
