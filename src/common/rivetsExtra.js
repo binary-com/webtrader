@@ -247,6 +247,11 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         $(el).selectmenu('option', this.args[0], value);
     }
 
+    /*binder for hidding overflow on selctmenu*/
+    rv.binders['selectmenu-css-*'] = function(el,value) {
+        $(el).selectmenu("menuWidget").css(this.args[0], value);
+    }
+
     /* refersh the selectmenu on array changes */
     rv.binders.selectrefresh = {
         priority: 99,
