@@ -1523,6 +1523,25 @@
     "long_display_name": "Aroon",
     "short_display_name": "AROON",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 25, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Aroon Up Stroke", "key": "aroonUpStroke", "value": "#02AAB0", "type": "colorpicker"},
+      {"title": "Aroon Down Stroke", "key": "aroonDownStroke", "value": "#00CDAC", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#DEA02D", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#02AAB0", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#00CDAC", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
@@ -1533,6 +1552,24 @@
     "long_display_name": "Aroon Oscillator",
     "short_display_name": "AROONOSC",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 25, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#7FFF24", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#7FFF24", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#7FFF24", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#7FFF24", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
