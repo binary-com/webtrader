@@ -1580,6 +1580,26 @@
     "long_display_name": "Awesome Oscillator",
     "short_display_name": "AO",
     "editable": true,
+    "fields": [
+      {"title": "Short Term Period", "key": "shortPeriod", "min": 5, "max": 35, "value": 5, "type": "slider"},
+      {"title": "Long Term Period", "key": "longPeriod", "min": 5, "max": 35, "value": 35, "type": "slider"},
+      {"title": "Short MA Type", "key": "shortMaType", "value": "SMA", "type": "matype"},
+      {"title": "Long MA Type", "key": "longMaType", "value": "SMA", "type": "matype"},
+      {"title": "Histogram Color For Higher Values", "key": "aoHighStroke", "value": "#00C176", "type": "colorpicker"},
+      {"title": "Histogram Color For Lower Values", "key": "aoLowStroke", "value": "#FF003C", "type": "colorpicker"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#FF003C", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#FF003C", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#00C176", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Bill Williams"
     ],
@@ -1590,6 +1610,21 @@
     "long_display_name": "Variance",
     "short_display_name": "VAR",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 20, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#058789", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 0, "max": 0.005, "value": 0.001, "step": 0.0001, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#058789", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [ ]
+    },
     "category": [
       "Statistical Functions"
     ],
