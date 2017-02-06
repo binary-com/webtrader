@@ -79,8 +79,8 @@ async function init(chart, indicator) {
         field && (field.value = opt_val);
       });
 
-      if(indicator.current_options.values) {
-        state.levels.values = _.cloneDeep(indicator.current_options.values);
+      if(indicator.current_options.levels) {
+        state.levels.values = _.cloneDeep(indicator.current_options.levels);
       }
     }
 
@@ -106,7 +106,7 @@ async function init(chart, indicator) {
                     const options = { };
                     if(!indicator.cdl_indicator) { /* normal indicator */
                       if(state.levels) {
-                        options.values = JSON.parse(JSON.stringify(state.levels.values));
+                        options.levels = JSON.parse(JSON.stringify(state.levels.values));
                       }
                       state.fields.forEach(field => options[field.key] = field.value);
                     }
