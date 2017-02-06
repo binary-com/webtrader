@@ -23,6 +23,10 @@
             <div rv-colorpicker="row.value"></div>
             <div class="colorpicker-preview" rv-css-background="row.value"></div>
           </td>
+          <td rv-if="row.type | eq 'plotcolor'">
+            <div rv-colorpicker="row.value"></div>
+            <div class="colorpicker-preview" rv-css-background="row.value"></div>
+          </td>
           <td rv-if="row.type | eq 'dashstyle'">
             <div class="dash-styles">
                 <div

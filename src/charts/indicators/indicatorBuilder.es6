@@ -108,7 +108,20 @@ async function init(chart, indicator) {
                       if(state.levels) {
                         options.levels = JSON.parse(JSON.stringify(state.levels.values));
                       }
-                      state.fields.forEach(field => options[field.key] = field.value);
+                      state.fields.forEach(field => {
+                         if(field.type !== 'plotcolor') {
+                            options[field.key] = field.value
+                            return;
+                         }
+                         options[field.key] = [];
+                         if(options.levels && options.levels.length > 0) {
+                            options[field.key].push({
+                               color: field.value,
+                               from: _.minBy(options.levels, 'value').value,
+                               to: _.maxBy(options.levels, 'value').value
+                            });
+                         }
+                      });
                     }
                     else { /* cdl indicator */
                        options.cdlIndicatorCode = state.id;

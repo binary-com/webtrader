@@ -1683,6 +1683,27 @@
     "long_display_name": "Choppiness Index",
     "short_display_name": "CHOP",
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 25, "type": "slider"},
+      {"title": "ATR Period", "key": "atrPeriod", "min": 1, "max": 200, "value": 25, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#D54B1A", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"},
+      {"title": "Plot Color", "key": "plotBands", "value": "rgba(178, 191, 217, 0.2)", "type": "plotcolor"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 1, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#D54B1A", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#D54B1A", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#D54B1A", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
