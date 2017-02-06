@@ -1636,6 +1636,15 @@
     "short_display_name": "CKS",
     "onChartIndicator": true,
     "editable": true,
+    "fields": [
+      {"title": "Period", "key": "period", "min": 1, "max": 200, "value": 10, "type": "slider"},
+      {"title": "Max/Min Period", "key": "maxMinPeriod", "min": 1, "max": 200, "value": 20, "type": "slider"},
+      {"title": "Multiplier", "key": "multiplier", "min": 1, "max": 50, "value": 3, "type": "slider"},
+      {"title": "Long Stop Line Stroke", "key": "longStopStroke", "value": "#00C176", "type": "colorpicker"},
+      {"title": "Short Stop Line Stroke", "key": "shortStopStroke", "value": "#FF003C", "type": "colorpicker"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
+    ],
     "category": [
       "Volatility Indicators"
     ],
@@ -1646,6 +1655,24 @@
     "long_display_name": "Coppock Curve",
     "short_display_name": "CC",
     "editable": true,
+    "fields": [
+      {"title": "Short ROC Period", "key": "shortRocPeriod", "min": 1, "max": 200, "value": 11, "type": "slider"},
+      {"title": "Long ROC Period", "key": "longRocPeriod", "min": 1, "max": 200, "value": 14, "type": "slider"},
+      {"title": "WMA Period", "key": "wmaPeriod", "min": 1, "max": 200, "value": 10, "type": "slider"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#503D2E", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": -0.5, "max": 0.5, "value": 0, "step": 0.01, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#503D2E", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [ ]
+    },
     "category": [
       "Momentum Indicators"
     ],
