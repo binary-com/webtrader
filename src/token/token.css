@@ -118,5 +118,6 @@
   margin-bottom: 5px;
 }
 .token-dialog label[data-balloon]:before {
-  margin-left: 190px;
+  margin-left: 115px;
+  width: 275px;
 }

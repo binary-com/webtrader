@@ -5,6 +5,7 @@ import rv from 'common/rivetsExtra';
 import moment from 'moment';
 import clipboard from 'clipboard';
 import html from 'text!token/token.html';
+import {find} from 'lodash';
 import 'css!token/token.css';
 
 let token_win = null;
@@ -59,6 +60,10 @@ const init_state = (root) => {
                 $.growl.error({message:"Token name can contain alphanumeric characters with spaces and underscores".i18n()});
                 scope.token.name = token_name.replace(/[^\w\s]+/g, "");
               }
+              if(!/^[\w]/.test(token_name)){
+                $.growl.error({message:"Token name should begin with alphanumeric characters only".i18n()});
+                scope.token.name = token_name.replace(/^[^\w]+/g, "");
+              }
             }
         },
         confirm: {
@@ -79,7 +84,7 @@ const init_state = (root) => {
         const span = $(e.target);
         const top = span.position().top - span.parent().parent().height();
         let token = span.attr('token-id');
-        token = _.find(state.tokens, { token: token });
+        token = find(state.tokens, { token: token });
         state.confirm.top = top + 'px';
         state.confirm.visible = true;
         state.confirm.token = token;
