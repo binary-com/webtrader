@@ -64,10 +64,20 @@
             ul {
                 list-style-type: circle;
                 font-size: 15px;
+                li {
+                    margin-left: -20px;
+                }
+            }
+            ol li {
+                margin-left: -40px;
             }
             img {
                 display: block;
                 margin: auto;
+            }
+
+            #binary-benefits h3 {
+                color: #E98024;
             }
         }
     }

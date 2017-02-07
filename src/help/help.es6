@@ -15,6 +15,8 @@ const init = () => {
     const $content = $(content);
     //Modify links in content to open in new tab.
     $content.find("a").each((i, node) => {
+        if($(node).attr("href").indexOf("contract-period")!=-1)
+            return;
         $(node).attr('target', '_blank');
     });
     win = windows.createBlankWindow($("<div class='help-dialog'/>"), {
@@ -30,9 +32,11 @@ const init = () => {
             win.dialog('destroy');
             win.remove();
             win = null;
+            sublist_items = [];
         },
         destroy: () => {
             win_view && win_view.unbind();
+            sublist_items = [];
             win_view = null;
         }
     });
@@ -238,8 +242,12 @@ const init = () => {
 
     state.getContent = (id) => {
         state.current.content_page = id;
-        console.log($content.filter("#" + id));
-        state.current.content = $content.filter("#" + id)[0].innerHTML;
+        state.current.content = $("<div/>").append($content.filter("#" + id))[0].innerHTML;
+        $(".content").animate({scrollTop:0}, 500);
+        $(document).find("a[href$='#contract-period']").click(()=>{
+            state.openSublist("contract period");
+            return false;
+        })
     };
 
     state.searchSublist = (e, scope) => {
@@ -251,6 +259,10 @@ const init = () => {
             });
             state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
         }
+    }
+
+    state.openSublist = (sublist) => {
+        $(".help-search").val(sublist).trigger("input");
     }
 
     //Concat all the sublist items into one array so that we can later use it for searching.
@@ -278,6 +290,16 @@ export const init_help = (elem) => {
     });
 };
 
+export const showSpecificContent = (search_text) => {
+    if(!win)
+        init();
+    else
+        win.moveToTop();
+
+    $(".help-search").val(search_text).trigger("input");
+}
+
 export default {
-    init_help
+    init_help,
+    showSpecificContent
 }
