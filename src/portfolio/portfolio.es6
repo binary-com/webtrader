@@ -25,6 +25,9 @@ export const init = (li) => {
 }
 
 const update_indicative = (data) => {
+    if(data.error)
+        return;
+
     var contract = data.proposal_open_contract;
     var id = contract.contract_id,
         bid_price = contract.bid_price;
@@ -114,7 +117,9 @@ var on_arrow_click = function(e){
     $target.addClass('button-disabled');
     require(['viewtransaction/viewTransaction'], function(viewTransaction){
     viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                    .then(function(){ $target.removeClass('button-disabled'); });
+                    .then(function(){ $target.removeClass('button-disabled'); }).catch((err)=>{
+                        $target.removeClass('button-disabled');
+                    });
     });
 }
 
@@ -234,7 +239,7 @@ function subscribe_to_contracts(contracts) {
         liveapi.proposal_open_contract
             .subscribe(contract.contract_id)
             .catch(function(err) {
-                $.growl.error({ message: err.message });
+                console.error({ message: err.message });
             });
     });
 }
