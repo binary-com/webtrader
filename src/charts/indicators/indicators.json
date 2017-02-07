@@ -1816,6 +1816,28 @@
     "long_display_name": "Stochastic",
     "short_display_name": "STOCH  ",
     "editable": true,
+    "fields": [
+      {"title": "%K Period", "key": "fastKPeriod", "min": 1, "max": 50, "value": 14, "type": "slider"},
+      {"title": "%D Period", "key": "fastDPeriod", "min": 1, "max": 50, "value": 3, "type": "slider"},
+      {"title": "%D MA Type", "key": "fastDMaType", "value": "SMA", "type": "matype"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "%K Stroke", "key": "stroke", "value": "#060100", "type": "colorpicker"},
+      {"title": "%D Stroke", "key": "dStroke", "value": "#DD061C", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 0, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#DD061C", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#060100", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#DD061C", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
@@ -1826,6 +1848,29 @@
     "long_display_name": "Stochastic Fast",
     "short_display_name": "STOCHF",
     "editable": true,
+    "fields": [
+      {"title": "%K Period", "key": "fastKPeriod", "min": 1, "max": 50, "value": 14, "type": "slider"},
+      {"title": "%D Period", "key": "fastDPeriod", "min": 1, "max": 50, "value": 3, "type": "slider"},
+      {"title": "%K MA Type", "key": "fastKMaType", "value": "SMA", "type": "matype"},
+      {"title": "%D MA Type", "key": "fastDMaType", "value": "SMA", "type": "matype"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "%K Stroke", "key": "stroke", "value": "#060100", "type": "colorpicker"},
+      {"title": "%D Stroke", "key": "dStroke", "value": "#F2501A", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 0, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#F2501A", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#060100", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#F2501A", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
@@ -1836,6 +1881,31 @@
     "long_display_name": "Stochastic Slow",
     "short_display_name": "STOCHS",
     "editable": true,
+    "fields": [
+      {"title": "Fast %K Period", "key": "fastKPeriod", "min": 1, "max": 50, "value": 14, "type": "slider"},
+      {"title": "Slow %K Period", "key": "slowKPeriod", "min": 1, "max": 50, "value": 14, "type": "slider"},
+      {"title": "Slow %D Period", "key": "slowDPeriod", "min": 1, "max": 50, "value": 3, "type": "slider"},
+      {"title": "Fast %K MA Type", "key": "fastKMaType", "value": "SMA", "type": "matype"},
+      {"title": "Slow %K MA Type", "key": "slowKMaType", "value": "SMA", "type": "matype"},
+      {"title": "Slow %D MA Type", "key": "slowDMaType", "value": "SMA", "type": "matype"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "%K Stroke", "key": "stroke", "value": "#060100", "type": "colorpicker"},
+      {"title": "%D Stroke", "key": "dStroke", "value": "#C10329", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": 0, "max": 100, "value": 50, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#C10329", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [
+        {"color": "#060100", "dashStyle": "Dash", "label": { "text": 30}, "value": 30, "width" : 1},
+        {"color": "#C10329", "dashStyle": "Dash", "label": { "text": 70}, "value": 70, "width" : 1}
+      ]
+    },
     "category": [
       "Momentum Indicators"
     ],
