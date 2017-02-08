@@ -15,7 +15,7 @@ const init = () => {
     const $content = $(content);
     //Modify links in content to open in new tab.
     $content.find("a").each((i, node) => {
-        if($(node).attr("href").indexOf("contract-period")!=-1)
+        if ($(node).attr("href").indexOf("contract-period") != -1)
             return;
         $(node).attr('target', '_blank');
     });
@@ -50,185 +50,185 @@ const init = () => {
             content: null
         },
         list: [{
-            text: "About Binary.com",
+            text: "About Binary.com".i18n(),
             sublist_id: "about_us"
         }, {
-            text: "Getting started",
+            text: "Getting started".i18n(),
             sublist_id: "getting_started"
         }, {
-            text: " Types of trades",
+            text: " Types of trades".i18n(),
             sublist_id: "trade_types"
         }, {
-            text: "Indicators",
+            text: "Indicators".i18n(),
             sublist_id: "indicators"
         }, {
-            text: "FAQ",
+            text: "FAQ".i18n(),
             sublist_id: "faq"
         }, {
-            text: "Glossary",
+            text: "Glossary".i18n(),
             sublist_id: "glossary"
         }],
         sublist: {
             about_us: [{
-                text: "About us",
+                text: "About us".i18n(),
                 id: "about-us"
             }, {
-                text: "Group history",
+                text: "Group history".i18n(),
                 id: "group-history"
             }],
             getting_started: [{
-                text: "Why choose Binary Trading",
+                text: "Why choose Binary Trading".i18n(),
                 id: "why-binary"
             }, {
-                text: "Benefits of Binary Trading",
+                text: "Benefits of Binary Trading".i18n(),
                 id: "binary-benefits"
             }, {
-                text: "How to trade Binaries",
+                text: "How to trade Binaries".i18n(),
                 id: "trade-binaries"
             }],
             trade_types: [{
-                text: "Up/Down",
+                text: "Up/Down".i18n(),
                 id: "up-down"
             }, {
-                text: "Touch/No Touch",
+                text: "Touch/No Touch".i18n(),
                 id: "touch-no-touch"
             }, {
-                text: "In/Out",
+                text: "In/Out".i18n(),
                 id: "in-out"
             }, {
-                text: "Asians",
+                text: "Asians".i18n(),
                 id: "asians"
             }, {
-                text: "Digits",
+                text: "Digits".i18n(),
                 id: "digits"
             }, {
-                text: "Spreads",
+                text: "Spreads".i18n(),
                 id: "spreads"
             }],
             indicators: [{
-                "text": "Volatility Indicators",
+                "text": "Volatility Indicators".i18n(),
                 "id": "volatility-indicators"
             }, {
-                "text": "Overlap Studies",
+                "text": "Overlap Studies".i18n(),
                 "id": "overlap-studies"
             }, {
-                "text": "Momentum Indicators",
+                "text": "Momentum Indicators".i18n(),
                 "id": "momentum-indicators"
             }, {
-                "text": "Price Transformation",
+                "text": "Price Transformation".i18n(),
                 "id": "price-transformation"
             }, {
-                "text": "Statistical Functions",
+                "text": "Statistical Functions".i18n(),
                 "id": "statistical-functions"
             }, {
-                "text": "Pattern Recognition",
+                "text": "Pattern Recognition".i18n(),
                 "id": "pattern-recognition"
             }, {
-                "text": "Bill Williams",
+                "text": "Bill Williams".i18n(),
                 "id": "bill-williams"
             }],
             faq: [{
-                text: "Opening an account",
+                text: "Opening an account".i18n(),
                 id: "opening-account"
             }, {
-                text: "Financial Security",
+                text: "Financial Security".i18n(),
                 id: "financial-security"
             }, {
-                text: "Depositing and withdrawing funds",
+                text: "Depositing and withdrawing funds".i18n(),
                 id: "deposit-withdraw"
             }, {
-                text: "Learning to trade",
+                text: "Learning to trade".i18n(),
                 id: "learn-trade"
             }],
             glossary: [{
-                "text": "Barrier(s)",
+                "text": "Barrier(s)".i18n(),
                 "id": "barriers"
             }, {
-                "text": "Binary option",
+                "text": "Binary option".i18n(),
                 "id": "binary-option"
             }, {
-                "text": "Commodities",
+                "text": "Commodities".i18n(),
                 "id": "commodities"
             }, {
-                "text": "Contract period",
+                "text": "Contract period".i18n(),
                 "id": "contract-period"
             }, {
-                "text": "Derivative",
+                "text": "Derivative".i18n(),
                 "id": "derivative"
             }, {
-                "text": "Duration",
+                "text": "Duration".i18n(),
                 "id": "duration"
             }, {
-                "text": "Ends Between/Ends Outside trades",
+                "text": "Ends Between/Ends Outside trades".i18n(),
                 "id": "ends-between"
             }, {
-                "text": "Entry spot price",
+                "text": "Entry spot price".i18n(),
                 "id": "entry-spot"
             }, {
-                "text": "Expiry price",
+                "text": "Expiry price".i18n(),
                 "id": "expiry-price"
             }, {
-                "text": "Forex",
+                "text": "Forex".i18n(),
                 "id": "forex"
             }, {
-                "text": "GMT",
+                "text": "GMT".i18n(),
                 "id": "gmt"
             }, {
-                "text": "Higher/Lower trades",
+                "text": "Higher/Lower trades".i18n(),
                 "id": "h_l-trades"
             }, {
-                "text": "Indices",
+                "text": "Indices".i18n(),
                 "id": "indices"
             }, {
-                "text": "In/Out trades",
+                "text": "In/Out trades".i18n(),
                 "id": "i_o-trades"
             }, {
-                "text": "Market exit price",
+                "text": "Market exit price".i18n(),
                 "id": "m_exit-price"
             }, {
-                "text": "No Touch trades",
+                "text": "No Touch trades".i18n(),
                 "id": "no-touch-trades"
             }, {
-                "text": "(One) Touch trades",
+                "text": "(One) Touch trades".i18n(),
                 "id": "touch-trades"
             }, {
-                "text": "Payout",
+                "text": "Payout".i18n(),
                 "id": "payout"
             }, {
-                "text": "Pip",
+                "text": "Pip".i18n(),
                 "id": "pip"
             }, {
-                "text": "Profit",
+                "text": "Profit".i18n(),
                 "id": "profit"
             }, {
-                "text": "Volatility Indices",
+                "text": "Volatility Indices".i18n(),
                 "id": "volatility-indices"
             }, {
-                "text": "Resale price",
+                "text": "Resale price".i18n(),
                 "id": "resale-price"
             }, {
-                "text": "Return",
+                "text": "Return".i18n(),
                 "id": "return"
             }, {
-                "text": "Rise/Fall trades",
+                "text": "Rise/Fall trades".i18n(),
                 "id": "r_f-trades"
             }, {
-                "text": "Sell option",
+                "text": "Sell option".i18n(),
                 "id": "sell-option"
             }, {
-                "text": "Spot price",
+                "text": "Spot price".i18n(),
                 "id": "spot-price"
             }, {
-                "text": "Stake",
+                "text": "Stake".i18n(),
                 "id": "stake"
             }, {
-                "text": "Stays Between/Goes Outside trades",
+                "text": "Stays Between/Goes Outside trades".i18n(),
                 "id": "stays-between-goes-outside-trades"
             }, {
-                "text": "Tick",
+                "text": "Tick".i18n(),
                 "id": "tick"
             }, {
-                "text": "Underlying",
+                "text": "Underlying".i18n(),
                 "id": "underlying"
             }]
         }
@@ -243,8 +243,8 @@ const init = () => {
     state.getContent = (id) => {
         state.current.content_page = id;
         state.current.content = $("<div/>").append($content.filter("#" + id))[0].innerHTML;
-        $(".content").animate({scrollTop:0}, 500);
-        $(document).find("a[href$='#contract-period']").click(()=>{
+        $(".content").animate({ scrollTop: 0 }, 500);
+        $(document).find("a[href$='#contract-period']").click(() => {
             state.openSublist("contract period");
             return false;
         })
@@ -254,21 +254,62 @@ const init = () => {
         const query = $(e.target).val().toLowerCase();
         if (query.length > 0) {
             state.current.list = null;
+            state.current.content_page = null;
             state.current.sublist = sublist_items.filter((item) => {
                 return item.text.toLowerCase().indexOf(query) != -1;
             });
-            state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
+            state.current.content = '<div class="search-text">' + content_array.reduce(function(content, ele) {
+                const index = ele.text.toLowerCase().indexOf(query);
+                if (index != -1) {
+                    const subtext = ele.text.substr(index, 100);
+                    const html = "<a href='#'>" + ele.section.text + "</a>" + "<br>" +
+                        "<p>..." + subtext + "...</p>"
+                    content = content ? content + "<hr>" + html : html;
+                }
+                return content;
+            }, '') + "</div>";
+            if (state.current.content)
+                $(".help-dialog .content .items").find("a").each(function(i, link) {
+                    link.onclick = (e) => {
+                        state.openSublist($(e.target).text());
+                    };
+                });
         }
     }
 
-    state.openSublist = (sublist) => {
-        $(".help-search").val(sublist).trigger("input");
+    state.openSublist = (sublist_name) => {
+        state.current.list = null;
+        state.current.sublist = sublist_items.filter((item) => {
+            return item.text.toLowerCase().indexOf(sublist_name.toLowerCase()) != -1;
+        });
+        console.log(sublist_name, state.current.sublist);
+        state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
     }
 
     //Concat all the sublist items into one array so that we can later use it for searching.
     for (let key in state.sublist) {
         sublist_items = sublist_items.concat(state.sublist[key]);
     }
+
+    // Create an array of all the text section wise, to be used later for searching.
+    var content_array = [];
+
+    var section = document.createTreeWalker($("<div/>").append($content)[0], NodeFilter.SHOW_ELEMENT, (node) => {
+        if (node.tagName == "DIV")
+            return NodeFilter.FILTER_ACCEPT;
+        else
+            return NodeFilter.FILTER_SKIP;
+    }, false);
+    while (section.nextNode()) {
+        var obj = {};
+        obj.section = sublist_items.filter(function(item) {
+            return item.id == $(section.currentNode).attr("id")
+        })[0];
+        obj.text = $(section.currentNode)[0].innerText;
+        content_array.push(obj);
+
+    }
+
 
     //Show the about us page initially
     state.current.list = state.list[0];
@@ -291,7 +332,7 @@ export const init_help = (elem) => {
 };
 
 export const showSpecificContent = (search_text) => {
-    if(!win)
+    if (!win)
         init();
     else
         win.moveToTop();
