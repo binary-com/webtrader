@@ -29,6 +29,15 @@
     }
   }
 
+  .notice-msg {
+    text-align: center;
+    position: relative;
+    top: 45%;
+    -ms-transform: translateY(-45%);
+    -webkit-transform: translateY(-45%);
+    transform: translateY(-45%);
+  }
+
   /* ------------------- STANDARD-METHODS IFRAME --------------------------*/
   .standard-methods {
     height: calc(100% - 26px);
