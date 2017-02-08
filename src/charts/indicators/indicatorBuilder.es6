@@ -128,6 +128,10 @@ async function init(chart, indicator) {
                        options.onSeriesID = chart.series[0].options.id
                     }
 
+                   if(state.id === 'fractal') { /* special case */
+                       options.onSeriesID = chart.series[0].options.id
+                   }
+
                     before_add_callback && before_add_callback();
 
                     //Add indicator for the main series
