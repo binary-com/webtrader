@@ -156,7 +156,7 @@ function init_state(root) {
       });
       return;
     }
-    error_handler(err)
+    state.error_text = err.message;
   });
 
   /* get the residence field and its states */
