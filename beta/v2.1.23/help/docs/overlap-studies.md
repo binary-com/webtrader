@@ -32,7 +32,7 @@ The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to remov
 
 The Kaufman's Adaptive Moving Average (KAMA) Developed by Perry Kaufman, is a moving average designed to account for market noise or volatility. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements.
 
-###Triple Exponential Moving Average (T3) (T3)
+###Triple Exponential Moving Average (T3)
 
 The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers a moving average with better smoothing then traditional exponential moving average.
 
