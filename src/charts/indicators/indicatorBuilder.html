@@ -19,11 +19,11 @@
           <td rv-if="row.type | eq 'slider'">
             <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max" rv-attr-step="row.step"></div>
           </td>
-          <td rv-if="row.type | eq 'colorpicker'">
-            <div rv-colorpicker="row.value"></div>
+          <td rv-if="row.type | eq 'colorpicker'" class='colorpicker-td'>
+            <div rv-colorpicker="row.value" class="colorpicker"></div>
             <div class="colorpicker-preview" rv-css-background="row.value"></div>
           </td>
-          <td rv-if="row.type | eq 'plotcolor'">
+          <td rv-if="row.type | eq 'plotcolor'" class='colorpicker'>
             <div rv-colorpicker="row.value"></div>
             <div class="colorpicker-preview" rv-css-background="row.value"></div>
           </td>
