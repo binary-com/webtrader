@@ -1806,6 +1806,25 @@
     "long_display_name": "Absolute Price Oscillator",
     "short_display_name": "APO",
     "editable": true,
+    "fields": [
+      {"title": "Fast Period", "key": "fastPeriod", "min": 1, "max": 50, "value": 12, "type": "slider"},
+      {"title": "Slow Period", "key": "slowPeriod", "min": 1, "max": 50, "value": 26, "type": "slider"},
+      {"title": "Fast MA Type", "key": "fastMaType", "value": "SMA", "type": "matype"},
+      {"title": "Slow MA Type", "key": "slowMaType", "value": "SMA", "type": "matype"},
+      {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Stroke", "key": "stroke", "value": "#229BC6", "type": "colorpicker"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "levels":{
+      "fields": [
+        {"title": "Level", "key": "value", "min": -0.1, "max": 0.2, "value": 0, "step": 0.01, "type": "slider"},
+        {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+        {"title": "Stroke", "key": "color", "value": "#229BC6", "type": "colorpicker"},
+        {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"}
+      ],
+      "values": [ ]
+    },
     "category": [
       "Momentum Indicators"
     ],
