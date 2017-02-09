@@ -70,21 +70,27 @@
       margin: 0;
   }
 
-  .dash-styles > div {
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 15px;
-    background-color: #f5f5f5;
-    box-sizing: border-box;
-    background-position: center;
-    margin: 0 2px;
-    width: 30%;
-    cursor: pointer;
+  .dash-styles {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     box-sizing: border-box;
+      > div {
+       background-repeat: no-repeat;
+       display: inline-block;
+       height: 15px;
+       box-sizing: border-box;
+       background-position: center;
+       margin: 0 2px;
+       width: 22%;
+       cursor: pointer;
+     }
+      > div.dash-selected {
+       background-color: gray;
+       //border-left: 5px solid black;
+     }
   }
-  .dash-styles > div.dash-selected {
-    background-color: lightgray;
-    border-left: 5px solid black;
-  }
+
 
   .applied-to, .price, .matype {
     display: flex;
