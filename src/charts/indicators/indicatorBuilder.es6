@@ -34,10 +34,7 @@ async function init(chart, indicator) {
       dash_styles: [
         "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot",
         "Dot", "Dash", "LongDash", "DashDot", "LongDashDot", "LongDashDotDot"
-      ].map(dash => ({ name: dash, url: `url('images/dashstyle/${dash}.svg')`})),
-      update_dash(dash, field) {
-        field.value = dash.name;
-      },
+      ].map(dash => ({ name: dash, url: `images/dashstyle/${dash}.svg`})),
       update_value(row, value) {
         row.value = value;
       },

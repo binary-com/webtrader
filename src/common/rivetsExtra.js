@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline'], function (_, $, rv, moment) {
+define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline', 'ddslick'], function (_, $, rv, moment) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -218,6 +218,51 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /*************************************  binding *****************************************/
+    rv.binders.ddslick = {
+        priority: 101,
+        publishes: true,
+        bind: function (el) {
+            var publish = this.publish,
+                model = this.model,
+                select = $(el);
+            var parent = select.parent();
+            var values = select.find('option').map(function(inx,opt) { return $(opt).val(); }).get();
+
+            var update = function(value) {
+               var inx = values.indexOf(value);
+
+               parent.find('.dd-select input').val(value);
+               var selected_img = parent.find('img.dd-selected-image');
+               var img = parent.find('img')[inx+1];
+
+               selected_img.attr('src', $(img).attr('src'));
+            }
+         
+            el._update = update;
+
+            var model_value = model.value;
+            select.ddslick({
+                imagePosition: "left",
+                data: [],
+                // width: 155,
+                background: "white",
+                onSelected: function (data) {
+                   var value = data.selectedData.value
+                   value = model_value || value;
+                   model_value = null;
+                   model.value = value;
+                   update(value);
+                }
+            });
+        },
+        unbind: function(el) {
+            $(el).ddslick('destroy')
+        },
+        routine: function (el, value) {
+           el._update(value);
+        }
+    };
+
     /* turn current select item into a jquery-ui-selectmenu, update value on change */
     rv.binders.selectmenu = {
         priority: 100,

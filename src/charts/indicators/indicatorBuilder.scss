@@ -72,22 +72,18 @@
 
   .dash-styles {
      display: flex;
-     flex-flow: row wrap;
-     justify-content: space-between;
-     box-sizing: border-box;
-      > div {
-       background-repeat: no-repeat;
-       display: inline-block;
-       height: 15px;
-       box-sizing: border-box;
-       background-position: center;
-       margin: 0 2px;
-       width: 22%;
-       cursor: pointer;
-     }
-      > div.dash-selected {
-       background-color: gray;
-       //border-left: 5px solid black;
+     flex-direction: row;
+     justify-content: space-around;
+     .dd-container {
+        width: 155px !important;
+        .dd-select, .dd-options {
+           width: 145px !important;
+        }
+        li {
+           line-height: 1em;
+           margin: 0;
+        }
+        img { max-width: 100px; }
      }
   }
 

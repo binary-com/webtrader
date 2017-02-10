@@ -29,12 +29,12 @@
           </td>
           <td rv-if="row.type | eq 'dashstyle'">
             <div class="dash-styles">
-                <div
-                  rv-each-dash="dash_styles"
-                  rv-class-dash-selected="row.value | eq dash.name"
-                  rv-attr-value="dash.name"
-                  rv-on-click="update_dash | bind dash | bind row"
-                  rv-css-background-image="dash.url"></div>
+               <select rv-ddslick='row.value'>
+                  <option
+                    rv-each-dash="dash_styles"
+                    rv-attr-value="dash.name"
+                    rv-attr-data-imagesrc="dash.url"></option>
+               </select>
             </div>
           </td>
           <td rv-if="row.type | eq 'appliedto'">
@@ -116,22 +116,14 @@
           </td>
           <td rv-if="row.type | eq 'dashstyle'">
             <div class="dash-styles">
-                <div
-                  rv-each-dash="dash_styles"
-                  rv-class-dash-selected="row.value | eq dash.name"
-                  rv-attr-value="dash.name"
-                  rv-on-click="update_dash | bind dash | bind row"
-                  rv-css-background-image="dash.url"></div>
+               <select rv-ddslick='row.value'>
+                  <option
+                    rv-each-dash="dash_styles"
+                    rv-attr-value="dash.name"
+                    rv-attr-data-imagesrc="dash.url"></option>
+               </select>
             </div>
           </td>
-          <!-- <td rv-if="row.type | eq 'appliedto'">
-            <div class="applied-to">
-                <div rv-class-selected="row.value | eq 0" rv-on-click="update_appliedto | bind row | bind 0">OPEN</div>
-                <div rv-class-selected="row.value | eq 1" rv-on-click="update_appliedto | bind row | bind 1">HIGH</div>
-                <div rv-class-selected="row.value | eq 2" rv-on-click="update_appliedto | bind row | bind 2">LOW</div>
-                <div rv-class-selected="row.value | eq 3" rv-on-click="update_appliedto | bind row | bind 3">CLOSE</div>
-            </div>
-          </td> -->
         </tr>
         <tr>
           <td></td>
