@@ -8,21 +8,18 @@ import rv from '../../common/rivetsExtra';
 import 'jquery-ui';
 import 'color-picker';
 import 'ddslick';
-import 'colorpicker';
 
 let before_add_callback = null;
 
-function closeDialog(dialog) {
+const closeDialog = (dialog) => {
     dialog.dialog("destroy").remove();
 }
 
-async function init(chart, indicator) {
+const init = async (chart, indicator) => {
 
     require(['css!charts/indicators/indicatorBuilder.css']);
 
     let [$html] = await require(['text!charts/indicators/indicatorBuilder.html']);
-
-    var defaultStrokeColor = '#cd0a0a';
 
     const state = {
       id: indicator.id,
@@ -40,11 +37,11 @@ async function init(chart, indicator) {
       },
       level: {
         dialog: {
-          bottom: '0px',
+          marginTop: '0px',
           visible: false,
           add: () => {
             const fields = state.levels.fields;
-            var level = { };
+            const level = { };
             fields.forEach(field => level[field.key] = field.value);
             level.label = { text: level.value };
             state.levels.values.push(level);
@@ -59,8 +56,8 @@ async function init(chart, indicator) {
         },
         add: (e) => {
           const btn = $(e.target);
-          const bottom = btn.position().top + btn.closest('table').parent().scrollTop() + 12;
-          state.level.dialog.bottom = bottom*-1 + 'px';
+          const marginTop =  $html.find('.levels-tr').next().height() - 3;
+          state.level.dialog.marginTop = marginTop*-1 + 'px';
           state.level.dialog.visible = !state.level.dialog.visible;
           if(state.level.dialog.visible) {
             const content = $('.indicator-builder');
@@ -85,7 +82,7 @@ async function init(chart, indicator) {
     $html = $($html);
     const view = rv.bind($html[0], state);
 
-    var options = {
+    const options = {
         title: indicator.long_display_name,
         autoOpen: false,
         resizable: false,
@@ -99,7 +96,7 @@ async function init(chart, indicator) {
         buttons: [
             {
                 text: "OK",
-                click: function() {
+                click: () => {
                     const options = { };
                     if(!indicator.cdl_indicator) { /* normal indicator */
                       if(state.levels) {
@@ -139,7 +136,7 @@ async function init(chart, indicator) {
             },
             {
                 text: "Cancel",
-                click: function() { closeDialog($html); }
+                click: () => closeDialog($html)
             }
         ],
         icons: {
@@ -158,7 +155,7 @@ async function init(chart, indicator) {
  * @param containerIDWithHash - containerId where indicator needs to be added
  * @param before_add_cb - callback that will be called just before adding the indicator
  */
-export const open = async function (indicator, containerIDWithHash, before_add_cb) {
+export const open = async (indicator, containerIDWithHash, before_add_cb) => {
     before_add_callback = before_add_cb || before_add_callback;
 
     const chart = $(containerIDWithHash).highcharts();

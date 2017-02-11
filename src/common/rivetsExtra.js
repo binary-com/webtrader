@@ -406,10 +406,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
     rv.binders['dialog-*'] = function (el, value) {
         $(el).dialog('option', this.args[0], value);
     }
-
-    require(['tinycolor', 'colorpicker']).then(function(tinycolor) {
-      window.tinycolor = window.tinycolor || tinycolor[0];
-      rv.binders.colorpicker = {
+      rv.binders['color-picker'] = {
           priority: 96,
           publishes: true,
           bind: function (el) {
@@ -419,34 +416,41 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
               var model = this.model;
               var color = model.value || '#cd0a0a';
 
-              div.ColorPickerSliders({
-                size: 'sm',
-                flat: true,
-                placement: 'bottom',
-                swatches: false,
-                grouping: false,
-                color: color,
-                labels: {
-                  hslhue: '',
-                  hslsaturation: '',
-                  hsllightness: '',
-                  preview: ''
-                },
-                order: {
-                  hsl: 1,
-                },
-                onchange: function(container, color) {
-                  var rgba = 'rgba('+ color.rgba.r + ',' + color.rgba.g + ','+ color.rgba.b + ','+ color.rgba.a + ')';
-                  publish(rgba)
-                }
-              });
+               var altField = $('<div style="width:100%; height: 20px;display:inline-block"/>');
+               div.before(altField);
+               div.css({visibility: 'hidden', width: '1px', display: 'inline-block'});
+
+               div.colorpicker({
+                  showOn: 'alt',
+                  altField: altField,
+                  position: {
+                     my: "left-200 bottom-10",
+                     of: "element",
+                     collision: "fit"
+                  },
+                  parts:  [ 'map', 'bar' ],
+                  alpha:  true,
+                  layout: {
+                     map: [0, 0, 2, 2],
+                     bar: [2, 0, 1, 2],
+                  },
+                  colorFormat: "RGBA",
+                  part: { map: {size: 128}, bar: {size: 128} },
+                  select: function (event, color) {
+                     publish(color);
+                  },
+               });
+             
+               setTimeout(function() {
+                  parent = div.scrollParent();
+                  parent.scroll(function() {
+                     div.colorpicker('close');
+                  });
+               }, 1000);
           },
           unbind: function (el) { },
-          routine: function (el, value) {
-              $(el).trigger("colorpickersliders.updateColor", value);
-          }
+          routine: function (el, value) { }
       }
-    })
 
     rv.binders.slider = {
         priority: 95,

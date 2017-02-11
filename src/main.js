@@ -15,8 +15,6 @@ requirejs.config({
         'modernizr': 'lib/modernizr/modernizr',
         'lokijs': 'lib/lokijs/build/lokijs.min',
         'color-picker': "lib/colorpicker/jquery.colorpicker",
-        'colorpicker': 'lib/bootstrap-colorpickersliders/dist/bootstrap.colorpickersliders.min',
-        'tinycolor': 'lib/tinycolor2/dist/tinycolor-min',
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
         'currentPriceIndicator': 'charts/indicators/highcharts_custom/currentprice',
@@ -42,9 +40,6 @@ requirejs.config({
     },
     waitSeconds: 0, /* fix for requriejs timeout on slow internet connectins */
     "shim": {
-        "colorpicker": {
-            deps: ['tinycolor']
-        },
         "babel-runtime/regenerator": {
             exports: 'regeneratorRuntime'
         },
@@ -114,7 +109,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require([
-      'css!lib/bootstrap-colorpickersliders/dist/bootstrap.colorpickersliders.min.css',
       'css!lib/jquery-ui/themes/base/jquery-ui.min.css',
       'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
       'css!main.css',

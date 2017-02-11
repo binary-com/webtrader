@@ -20,12 +20,16 @@
             <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max" rv-attr-step="row.step"></div>
           </td>
           <td rv-if="row.type | eq 'colorpicker'" class='colorpicker-td'>
-            <div rv-colorpicker="row.value" class="colorpicker"></div>
-            <div class="colorpicker-preview" rv-css-background="row.value"></div>
+            <input
+               rv-color-picker="row.value"
+               rv-value="row.value"
+               rv-css-background="row.value" />
           </td>
-          <td rv-if="row.type | eq 'plotcolor'" class='colorpicker'>
-            <div rv-colorpicker="row.value"></div>
-            <div class="colorpicker-preview" rv-css-background="row.value"></div>
+          <td rv-if="row.type | eq 'plotcolor'" class='colorpicker-td'>
+            <input
+               rv-color-picker="row.value"
+               rv-value="row.value"
+               rv-css-background="row.value" />
           </td>
           <td rv-if="row.type | eq 'dashstyle'">
             <div class="dash-styles">
@@ -71,7 +75,7 @@
             <td>Levels:</td>
             <td><button rv-on-click='level.add'>Add level</button></td>
         </tr>
-        <tr rv-if="levels">
+        <tr rv-if="levels" rv-css-visibility='level.dialog.visible | ternary "hidden" "visible"'>
             <td colspan="2">
                 <table class="levels">
                     <thead> <tr>
@@ -103,16 +107,18 @@
           </td>
         </tr>
     </table>
-    <div class='levels-dialog' rv-if='levels' rv-show='level.dialog.visible' rv-css-bottom="level.dialog.bottom">
+    <div class='levels-dialog' rv-if='levels' rv-show='level.dialog.visible' rv-css-margin-top="level.dialog.marginTop">
       <table>
         <tr rv-each-row="levels.fields">
           <td>{row.title}</td>
           <td rv-if="row.type | eq 'slider'">
             <div rv-slider="row.value" rv-attr-min="row.min" rv-attr-max="row.max" rv-attr-step="row.step"></div>
           </td>
-          <td rv-if="row.type | eq 'colorpicker'">
-            <div rv-colorpicker="row.value"></div>
-            <div class="colorpicker-preview" rv-css-background="row.value"></div>
+          <td rv-if="row.type | eq 'colorpicker'" class='colorpicker-td'>
+            <input
+               rv-color-picker="row.value"
+               rv-value="row.value"
+               rv-css-background="row.value" />
           </td>
           <td rv-if="row.type | eq 'dashstyle'">
             <div class="dash-styles">
