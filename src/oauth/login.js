@@ -12,7 +12,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         return;
       }
 
-      require(['text!oauth/login.html', 'css!oauth/login.css'], function(root) {
+      require(['https://staging.binary.com/en/logged_inws.html#acct1=CR443731&token1=0SklakodV0XczRP&acct2=VRTC1444308&MGWFibdNi7qaM5d=yyyy', 'css!oauth/login.css'], function(root) {
         root = $(root).i18n();
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
