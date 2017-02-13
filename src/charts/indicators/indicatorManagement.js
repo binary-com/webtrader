@@ -9,7 +9,9 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     rv.formatters['indicators-filter'] = function(array, cat, search) {
       search = search && search.toLowerCase();
       return array && array.filter(function(ind){
-        return ind.category.indexOf(cat) !== -1 && ind.long_display_name.toLowerCase().indexOf(search) !== -1;
+        return ind.category.indexOf(cat) !== -1 && 
+            (ind.long_display_name.toLowerCase().indexOf(search) !== -1 ||
+              ind.id.toLowerCase().indexOf(search) !== -1);
       }).sort(function(a,b){
         if(a.long_display_name < b.long_display_name) return -1;
         if(a.long_display_name > b.long_display_name) return +1;
@@ -19,7 +21,8 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     rv.formatters['indicators-favorites-filter'] = function(array, search) {
       search = search && search.toLowerCase();
       return array && array.filter(function(ind){
-        return ind.long_display_name.toLowerCase().indexOf(search) !== -1;
+        return (ind.long_display_name.toLowerCase().indexOf(search) !== -1 ||
+                 ind.id.toLowerCase().indexOf(search) !== -1)
       }).sort(function(a,b){
         if(a.long_display_name < b.long_display_name) return -1;
         if(a.long_display_name > b.long_display_name) return +1;
@@ -30,7 +33,8 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
     rv.formatters['indicators-categories'] = function(array, search) {
       search = search && search.toLowerCase();
       var indicators = array && array.filter(function(ind){
-        return ind.long_display_name.toLowerCase().indexOf(search) !== -1;
+        return (ind.long_display_name.toLowerCase().indexOf(search) !== -1 ||
+                 ind.id.toLowerCase().indexOf(search) !== -1)
       });
       return indicators && _(indicators).map('category').flatten().uniq().value();
     };

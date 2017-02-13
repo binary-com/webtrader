@@ -40,9 +40,9 @@ TEMA = function(data, options, indicators) {
         var tema2Value = this.ema2.indicatorData[index].value;
         var tema3Value = this.ema3.indicatorData[index].value;
         var tema = toFixed(3 * tema1Value - 3 * tema2Value + tema3Value, 4);
+        tema = (index < 3*options.period) ? null : tema;
         this.indicatorData.push({ time : data[index].time, value : tema || null });
     }
-
 };
 
 TEMA.prototype = Object.create(IndicatorBase.prototype);
