@@ -9,10 +9,10 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     function init() {
       if(login_win){
         login_win.moveToTop();
-        return;
+        return;1
       }
 
-      require(['https://staging.binary.com/en/logged_inws.html#acct1=CR443731&token1=0SklakodV0XczRP&acct2=VRTC1444308&MGWFibdNi7qaM5d=yyyy', 'css!oauth/login.css'], function(root) {
+      require(['', 'css!oauth/login.css'], function(root) {
         root = $(root).i18n();
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
@@ -97,15 +97,15 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       state.login.login = function() {
           state.login.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id;
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize?app_id=11';
+          window.location =  oauth_url + '?app_id=' +2627 ;
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id;
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize?app_id=11';
+          window.location =  oauth_url + '?app_id='+2627 ;
       }
 
       state.route.update = function(route){
@@ -246,7 +246,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           var app_id = liveapi.app_id;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id;
+          window.location =  oauth_url + '?='app_id + 2627;
       }
     }
 });
