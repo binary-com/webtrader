@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline'], function (_, $, rv, moment) {
+define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline', 'ddslick'], function (_, $, rv, moment) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -218,6 +218,51 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /*************************************  binding *****************************************/
+    rv.binders.ddslick = {
+        priority: 101,
+        publishes: true,
+        bind: function (el) {
+            var publish = this.publish,
+                model = this.model,
+                select = $(el);
+            var parent = select.parent();
+            var values = select.find('option').map(function(inx,opt) { return $(opt).val(); }).get();
+
+            var update = function(value) {
+               var inx = values.indexOf(value);
+
+               parent.find('.dd-select input').val(value);
+               var selected_img = parent.find('img.dd-selected-image');
+               var img = parent.find('img')[inx+1];
+
+               selected_img.attr('src', $(img).attr('src'));
+            }
+         
+            el._update = update;
+
+            var model_value = model.value;
+            select.ddslick({
+                imagePosition: "left",
+                data: [],
+                // width: 155,
+                background: "white",
+                onSelected: function (data) {
+                   var value = data.selectedData.value
+                   value = model_value || value;
+                   model_value = null;
+                   model.value = value;
+                   update(value);
+                }
+            });
+        },
+        unbind: function(el) {
+            $(el).ddslick('destroy')
+        },
+        routine: function (el, value) {
+           el._update(value);
+        }
+    };
+
     /* turn current select item into a jquery-ui-selectmenu, update value on change */
     rv.binders.selectmenu = {
         priority: 100,
@@ -246,6 +291,16 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     rv.binders['selectmenu-*'] = function (el, value) {
         $(el).selectmenu('option', this.args[0], value);
     }
+
+   rv.binders.validate = function(input, pattern) {
+      var $input = $(input);
+      var reg = new RegExp(pattern, 'i');
+      $input.on('input', function() {
+         var val = $input.val();
+         if(reg.test(val)) $input.removeClass('invalid');
+         else $input.addClass('invalid');
+      });
+   }
 
     /*binder for hidding overflow on selctmenu*/
     rv.binders['selectmenu-css-*'] = function(el,value) {
@@ -350,6 +405,83 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     /* bindar for jqueyr ui dialog options */
     rv.binders['dialog-*'] = function (el, value) {
         $(el).dialog('option', this.args[0], value);
+    }
+      rv.binders['color-picker'] = {
+          priority: 96,
+          publishes: true,
+          bind: function (el) {
+              var div = $(el);
+
+              var publish = this.publish;
+              var model = this.model;
+              var color = model.value || '#cd0a0a';
+
+               var altField = $('<div style="width:100%; height: 20px;display:inline-block"/>');
+               div.before(altField);
+               div.css({visibility: 'hidden', width: '1px', display: 'inline-block'});
+
+               div.colorpicker({
+                  showOn: 'alt',
+                  altField: altField,
+                  position: {
+                     my: "left-200 bottom-10",
+                     of: "element",
+                     collision: "fit"
+                  },
+                  parts:  [ 'map', 'bar' ],
+                  alpha:  true,
+                  layout: {
+                     map: [0, 0, 2, 2],
+                     bar: [2, 0, 1, 2],
+                  },
+                  colorFormat: "RGBA",
+                  part: { map: {size: 128}, bar: {size: 128} },
+                  select: function (event, color) {
+                     publish(color);
+                  },
+               });
+             
+               setTimeout(function() {
+                  parent = div.scrollParent();
+                  parent.scroll(function() {
+                     div.colorpicker('close');
+                  });
+               }, 1000);
+          },
+          unbind: function (el) { },
+          routine: function (el, value) { }
+      }
+
+    rv.binders.slider = {
+        priority: 95,
+        publishes: true,
+        bind: function (el) {
+            var div = $(el);
+            var handle = $('<div class="ui-slider-handle"></div>');
+            div.append(handle);
+
+            var publish = this.publish;
+            var model = this.model;
+
+            div.slider({
+              step: div.attr('step')*1 || 1,
+              min: div.attr('min') === undefined ? 1 : div.attr('min')*1,
+              max: div.attr('max')*1 || 100,
+              create: function() {
+                handle.text($(this).slider("value"));
+              },
+              slide: function( event, ui ) {
+                handle.text(ui.value);
+                model.value = ui.value*1;
+                //publish(ui.value*1);
+              }
+            });
+        },
+        unbind: function (el) { $(el).slider('destroy'); },
+        routine: function (el, value) {
+            $(el).slider('value', value);
+            $(el).find('> div').text(value);
+        }
     }
 
     /* trun input element in jquery-ui-datepicker */

@@ -108,7 +108,12 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
     }
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css', 'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css', 'css!main.css', "css!binary-style"])
+    require([
+      'css!lib/jquery-ui/themes/base/jquery-ui.min.css',
+      'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
+      'css!main.css',
+      'css!binary-style',
+    ]);
 
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,

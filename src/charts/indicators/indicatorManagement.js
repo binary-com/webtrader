@@ -64,7 +64,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
             },
             open: function () { },
           };
-          
+
           /* affiliates route */
           if (isAffiliates()) {
             option = _.extend(option, {
@@ -76,7 +76,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
               minimizable: false,
               collapsable: false,
             });
-          } 
+          }
           /* normal route */
           else {
             option = _.extend(option, {
@@ -112,22 +112,40 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
       state.indicators.clear_search = function() { state.indicators.search = ''; }
 
       state.indicators.add = function(indicator){
-        var indicator_id = indicator.id;
-        require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
-            ind.open(state.dialog.container_id);
-        });
+        if(indicator.fields) { /* use indicatorBuilder.es6 */
+          require(["charts/indicators/indicatorBuilder"], function(indicatorBuilder) {
+            const copy = JSON.parse(JSON.stringify(indicator));
+            indicatorBuilder.open(copy, state.dialog.container_id)
+          });
+        }
+        else {
+          var indicator_id = indicator.id;
+          require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
+              ind.open(state.dialog.container_id);
+          });
+        }
         ind_win.dialog('close');
       }
 
-        state.indicators.edit = function(indicator){
-            var indicator_id = indicator.id;
-            require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
-                ind.open(state.dialog.container_id, function() {
-                  state.indicators.remove(indicator);
-                });
-            });
-            ind_win.dialog('close');
+      state.indicators.edit = function(indicator){
+        if(indicator.fields) { /* use indicatorBuilder.es6 */
+          require(["charts/indicators/indicatorBuilder"], function(indicatorBuilder) {
+            const copy = JSON.parse(JSON.stringify(indicator));
+            indicatorBuilder.open(copy, state.dialog.container_id, function() {
+                state.indicators.remove(indicator);
+            })
+          })
         }
+        else {
+          var indicator_id = indicator.id;
+          require(["charts/indicators/" + indicator_id + "/" + indicator_id], function (ind) {
+              ind.open(state.dialog.container_id, function() {
+                state.indicators.remove(indicator);
+              });
+          });
+        }
+        ind_win.dialog('close');
+      }
 
       state.indicators.remove = function(indicator){
         var inx = state.indicators.current.indexOf(indicator);
@@ -179,6 +197,7 @@ define(['websockets/binary_websockets', 'common/rivetsExtra' , 'lodash'], functi
                 ind_clone.shortName = (show ? instance.toString() : "");
                 ind_clone.showEdit = ind.editable;
                 ind_clone.series_ids = instance.getIDs()
+                ind_clone.current_options = _.cloneDeep(instance.options); /* used in indicatorBuilder.es6 */
                 current.push(ind_clone);
             });
           });

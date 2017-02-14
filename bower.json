@@ -50,6 +50,7 @@
     "clipboard": "^1.5.10",
     "parallel.js": "paralleljs#*",
     "intl": "^1.2.5",
-    "alameda": "^1.1.0"
+    "alameda": "^1.1.0",
+    "bootstrap-colorpickersliders": "^3.0.1"
   }
 }
