@@ -129,7 +129,7 @@ const initPortfolioWin = () => {
     const on_balance = liveapi.events.on('balance',(data) => {
         if(data.balance !== undefined && data.balance.currency !== undefined) {
            currency = data.balance.currency;
-           balance_span && balance_span.update(data.balance.balance);
+           balance_span && balance_span && balance_span.update(data.balance.balance);
         }
     });
     /* refresh portfolio when a new contract is added or closed */
