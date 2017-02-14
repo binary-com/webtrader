@@ -1,6 +1,18 @@
 .indicator-builder.ui-dialog-content {
   padding: 0;
   overflow-x: hidden;
+  > table {
+     tr:nth-child(n+2) td:nth-child(1) {
+        width: 40%;
+        font-size: 14px;
+        height: 100%;
+     }
+     tr:nth-child(n+2) {
+        td:nth-child(2) {
+           height: 100%;
+        }
+     }
+  }
   .ui-slider {
       height: 2px;
       border: 1px solid #2A3052;
@@ -88,7 +100,7 @@
            line-height: 1em;
            margin: 0;
         }
-        img { max-width: 200px; }
+        img { max-width: 200px; max-height: 4px; }
      }
   }
 
@@ -119,11 +131,15 @@
   }
 
   .levels-tr td:nth-child(2) {
-    text-align: center;;
+    text-align: center;
     button { line-height: 10px; }
   }
   table.levels td {
     text-align: center;
+    width: 24%;
+  }
+  table.levels tr td:nth-child(1) {
+     width: 20%;
   }
 
   .levels-dash-style {
@@ -144,7 +160,10 @@
     box-shadow: 0 0 20px rgba(0,0,0,.4);
     padding-top: 5px;
     background: white;
-    tr td:nth-child(1) { width: 35%; }
+    tr td:nth-child(1) {
+       max-width: 40%;
+       font-size: 13px;
+    }
 
     table tr:last-child td {
       text-align: center;
