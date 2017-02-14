@@ -90,18 +90,11 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
 
         function update_balance(data) {
             if (!state.currency) {
-                liveapi.send({payout_currencies: 1})
-                    .then(function (_data) {
-                        state.currency = _data.payout_currencies[0];
-                        local_storage.set("currency", state.currency);
-                        setTimeout(function () {
-                            update_balance(data);
-                        }, 0);
-                        /* now that we have currency update balance */
-                    }).catch(function (err) {
-                    console.error(err);
-                })
-                return;
+                /* We're not going to set currency automatically, since the user might select a different currency  */
+                if (local_storage.get("currency")){
+                  state.currency = local_storage.get("currency");
+                } else 
+                  return;
             }
 
             var value = '0';
@@ -131,7 +124,6 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
         liveapi.events.on('login', function (data) {
             $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
             /* destroy all authorized dialogs */
-            console.log(data);
             state.show_login = false;
             state.account.show = true;
             state.account.id = data.authorize.loginid;
@@ -143,6 +135,8 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             });
             state.account.type = getType(data.authorize.loginid);
 
+            state.currency = data.authorize.currency;
+            local_storage.set("currency", state.currency);
             update_balance(data);
             var is_current_account_real = data.authorize.is_virtual === 0;
 
@@ -257,30 +251,32 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
       returns 'upgrade-mlt' | 'upgrade-mf' | 'do-nothing'
     */
     function getLandingCompany() {
-       return liveapi
-       .cached.send({landing_company: Cookies.residence() })
-        .then(function(data) {
-             var financial = data.landing_company.financial_company;
-             var gaming = data.landing_company.gaming_company;
+       return liveapi.cached.authorize().then(function(data){
+        return liveapi
+           .cached.send({landing_company: data.authorize.country })
+            .then(function(data) {
+                 var financial = data.landing_company.financial_company;
+                 var gaming = data.landing_company.gaming_company;
 
-             var loginids = Cookies.loginids();
-             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-                 if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
-                    return 'do-nothing';
-                 if (_.some(loginids, {is_mlt: true})) // 1-b
-                    return 'upgrade-mf';
-                 return 'upgrade-mlt'; // 1-a
-             }
-             if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
-                if (_.some(loginids, {is_mf: true})) // 2-b
-                  return 'do-nothing';
-                return 'upgrade-mf'; // 2-a
-             }
-             // 3:
-             if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
-                return 'do-nothing'; // 3-b
-             return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
+                 var loginids = Cookies.loginids();
+                 if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
+                     if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
+                        return 'do-nothing';
+                     if (_.some(loginids, {is_mlt: true})) // 1-b
+                        return 'upgrade-mf';
+                     return 'upgrade-mlt'; // 1-a
+                 }
+                 if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
+                    if (_.some(loginids, {is_mf: true})) // 2-b
+                      return 'do-nothing';
+                    return 'upgrade-mf'; // 2-a
+                 }
+                 // 3:
+                 if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
+                    return 'do-nothing'; // 3-b
+                 return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
              // 4: never happens, japan accounts are not able to log into webtrader.
+          });
         });
     }
 

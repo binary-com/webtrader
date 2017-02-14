@@ -335,7 +335,7 @@ if (!Array.prototype.includes) {
 }
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
-  var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
+  var _is_beta_ = window.location.href.indexOf('/beta') !== -1 || window.location.href.indexOf('localhost') !== -1;
   return function() {
     return _is_beta_;
   };
@@ -400,7 +400,8 @@ var Cookies = {
     }).filter(function(id) {
       return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
     });
-    return loginids.concat(oauth_loginids)
+
+    return oauth_loginids && oauth_loginids.length > 0 ? oauth_loginids : loginids;
   },
   residence: function() {
     return Cookies.get_by_name('residence');

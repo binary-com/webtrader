@@ -46,6 +46,7 @@ import 'css!trade/tradeDialog.css';
 import 'timepicker';
 import 'jquery-ui';
 import 'common/util';
+import help from 'help/help';
 
 require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
 var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
@@ -389,6 +390,22 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     template: {
       name: '',
       visible: false,
+    },
+    openHelp: ()=>{
+      $.growl.notice({message:"Loading help text for ".i18n() + state.categories.value});
+      help.showSpecificContent(state.categories.value);
+    }
+  };
+
+  var update_currency = function() {
+    /* change currency on user login */
+    if(liveapi.is_authenticated()) {
+      liveapi.send({payout_currencies: 1})
+             .then(function(data){
+               state.currency.value = data.payout_currencies[0];
+               state.currency.array = data.payout_currencies;
+             })
+             .catch(function(err) { console.error(err); });
     }
   };
 
@@ -928,20 +945,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       });
   });
 
-  /* change currency on user login */
-  if(liveapi.is_authenticated()) {
-    liveapi.send({payout_currencies: 1})
-           .then(function(data){
-             state.currency.value = data.payout_currencies[0];
-             state.currency.array = data.payout_currencies;
-           })
-           .catch(function(err) { console.error(err); });
-  }
+  liveapi.events.on('set_account_currency', update_currency);
+
+  update_currency();
 
   return state;
 }
-
-export function init(symbol, contracts_for, saved_template) {
+export function init(symbol, contracts_for, saved_template, isTrackerInitiated) {
     var root = $(html).i18n();
     var available = apply_fixes(contracts_for.available);
 
@@ -952,6 +962,8 @@ export function init(symbol, contracts_for, saved_template) {
         minimizable: true,
         maximizable: false,
         'data-authorized': 'true',
+        isTrackerInitiated: isTrackerInitiated,
+        relativePosition: true,
         close: function() {
           /* forget last proposal stream on close */
           if(state.proposal.last_promise) {

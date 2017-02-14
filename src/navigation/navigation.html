@@ -80,6 +80,9 @@
                     <li><a href="#" class="closeAll"><span class="ui-icon ui-icon-closethick"></span>Close all</a></li>
                 </ul>
             </li>
+            <li>
+              <a href="#" class="help">Help</a>
+            </li>
         </ul>
         <div id="main-logout" class="account-menu">
             <ul id="main-account" class="nav-menu main-nav">
@@ -88,7 +91,7 @@
                         <div class="main-account">
                             <div class="account-type">{account.type}</div>
                             <div class="account-id">{account.id}</div>
-                            <div class="topMenuBalance">{account.balance}</div>
+                            <div rv-if="currency | not-eq ''" class="topMenuBalance">{account.balance}</div>
                         </div>
                     <div class="nav-caret"></div>
                     </a>
@@ -103,7 +106,7 @@
                   <div class="main-account">
                     <div class="account-type">{account.type}</div>
                     <div class="account-id">{account.id}</div>
-                    <div class="topMenuBalance">{account.balance}</div>
+                    <div rv-if="currency | not-eq ''" class="topMenuBalance">{account.balance}</div>
                   </div>
                   <div class="nav-caret"></div>
                 </a>

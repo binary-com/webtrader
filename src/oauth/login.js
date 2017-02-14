@@ -22,7 +22,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             maximizable: false,
             width: 548,
             height: 180,
-            'data-authorized': true,
             close: function () {
               login_win.dialog('destroy');
               login_win.remove();
@@ -51,7 +50,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       });
     }
 
-    function init_state(root, login_win) {
+    function init_state(root, win) {
       var app_id = liveapi.app_id;
       var state = {
         route: { value: 'login' },
@@ -130,8 +129,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.route.value = route;
         var title = routes[route].title;
         var height = routes[route].height;
-        login_win.dialog('option', 'title', title);
-        login_win.dialog('option', 'height', height);
+        win.dialog('option', 'title', title);
+        win.dialog('option', 'height', height);
       };
 
       state.registration.validate.clear = _.debounce(function(){
@@ -198,8 +197,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                   local_storage.set('oauth', oauth);
                   state.account.disabled = false;
                   liveapi.cached.authorize()
-                  .then(function() { 
-                    login_win.dialog('destroy'); 
+                  .then(function() {
+                    win.dialog('destroy'); 
+                    win.remove();
                     login_win = null;
                   })
                   .catch(function(err) { console.error(err.message) });
@@ -217,7 +217,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
                state.account.residence_list = data.residence_list.map(function(r) {
-                 r.disabled = (r.disabled === 'DISABLED');
+                 r.disabled = (r.disabled === 'DISABLED' || r.disabled === true);
                  r.disabled && state.account.residence_unsupported.push(r.value);
                  return r;
                });
