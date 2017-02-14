@@ -33,15 +33,15 @@ define(["windows/windows", "websockets/binary_websockets", "lodash", "navigation
   function reopen_dialogs(symbols, saved_states){
 
     var unique_modules = {
-      assetIndex: '#nav-container .assetIndex',
-      statement: '#nav-container .statement',
-      tradingTimes: '#nav-container .tradingTimes',
-      download: '#nav-container .download', // view historical data
-      portfolio: '#nav-container .portfolio',
-      profitTable: '#nav-container .profitTable',
-      token: '#nav-container .token-management',
-      deposit: '#nav-container .deposit',
-      withdraw: '#nav-container .withdraw',
+      assetIndex: '#nav-menu .assetIndex',
+      statement: '#nav-menu .statement',
+      tradingTimes: '#nav-menu .tradingTimes',
+      download: '#nav-menu .download', // view historical data
+      portfolio: '#nav-menu .portfolio',
+      profitTable: '#nav-menu .profitTable',
+      token: '#nav-menu .token-management',
+      deposit: '#nav-menu .deposit',
+      withdraw: '#nav-menu .withdraw',
     };
 
     var counter = 0;
