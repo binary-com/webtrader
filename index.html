@@ -12,7 +12,7 @@
         //Remove the '#' check later once the backend changes are released TODO
         var params = href.indexOf('#') != -1 ? href.split('#')[1].split('&') : href.split('?')[1].split('&');
         var oauth = [ ];
-        for(var i = 0; i < params.length; i+=2){
+        for(var i = 0; i < params.length-1; i+=2){
           var id = params[i].split('=')[1];
           var token = params[i+1].split('=')[1];
           oauth.push({ id: id, token: token });
