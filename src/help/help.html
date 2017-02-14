@@ -1,6 +1,5 @@
 <div class="list">
-    <span class="ui-icon ui-icon-search"></span>
-    <input class="help-search" rv-on-input="searchSublist">
+    <input class="help-search" rv-on-input="search" placeholder=' &#x1F50E; Search'>
     <div class="items">
         <span rv-each-elem="list" rv-on-click="updateSublist | bind elem" rv-class-selected="current.list.text | eq elem.text">{elem.text}</span>
     </div>
