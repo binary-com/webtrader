@@ -487,3 +487,18 @@ function guessDigits(prices) {
     });
     return defaultDigits || 4;
 }
+
+/* This is for Feedback (doorbell) button */
+function initializeDoorbell() {
+  // Hide the button after initial loading of page is compleated.
+  setTimeout(function(){$("#doorbell-button").animate({right:"-67px"})},2000);
+  //This is the event listener for the button
+  $("#doorbell-button").hover(
+      function(){
+          $("#doorbell-button").animate({right:"-37px"});
+      },
+      function(){
+          $("#doorbell-button").animate({right:"-67px"});
+  });\
+}
+
