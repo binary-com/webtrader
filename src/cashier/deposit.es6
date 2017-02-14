@@ -9,6 +9,8 @@ import currencyDialog from 'cashier/currency';
 import rv from 'common/rivetsExtra';
 import _ from 'lodash';
 import moment from 'moment';
+import tncApprovalWin from "cashier/uk_funds_protection"
+import html from 'text!cashier/deposit.html';
 
 require(['text!cashier/deposit.html']);
 require(['css!cashier/deposit.css']);
@@ -28,7 +30,7 @@ export function init(li) {
               return currencyDialog.check_currency();
             return true; // OK
           })
-          .then(() => require(['text!cashier/deposit.html'], init_deposit_win))
+          .then(() => init_deposit_win(html))
           .catch(error_handler);
       }
       else
@@ -144,7 +146,18 @@ function init_state(root) {
     cashier: 'deposit'
   }).then(function(data) {
       state.user.cashier_url = data.cashier;
-  }).catch(error_handler);
+  }).catch((err) => {
+    if(err.code === "ASK_UK_FUNDS_PROTECTION"){
+      deposit_win.dialog("close");
+      tncApprovalWin.init_win().then(()=>{
+        init_deposit_win(html);
+      }).catch(err => {
+        error_handler(err);
+      });
+      return;
+    }
+    error_handler(err)
+  });
 
   /* get the residence field and its states */
   var residence_promise = liveapi.send({get_settings: 1})
