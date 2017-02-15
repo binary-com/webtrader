@@ -1,7 +1,7 @@
-language: node_js
 git:
  depth: 1
 cache:
+ yarn: true
  directories:
   - $HOME/.npm
   - $HOME/.yarn-cache
@@ -9,6 +9,7 @@ cache:
   - bower_components
 matrix:
   fast_finish: true
+language: node_js
 node_js:
   - "6"
 notifications:
@@ -18,6 +19,8 @@ branches:
   only:
     - master
     - development
+before_script:
+  - yarn install
 script:
   - git config --global user.email "arnab@binary.com"
   - git config --global user.name "Arnab Karmakar"
