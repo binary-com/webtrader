@@ -250,7 +250,7 @@ const init = () => {
         })
     };
 
-    state.searchSublist = (e, scope) => {
+    state.search = (e) => {
         const query = $(e.target).val().toLowerCase();
         if (query.length > 0) {
             state.current.list = null;
@@ -258,16 +258,10 @@ const init = () => {
             state.current.sublist = sublist_items.filter((item) => {
                 return item.text.toLowerCase().indexOf(query) != -1;
             });
-            state.current.content = '<div class="search-text">' + content_array.reduce(function(content, ele) {
-                const index = ele.text.toLowerCase().indexOf(query);
-                if (index != -1) {
-                    const subtext = ele.text.substr(index, 100);
-                    const html = "<a href='#'>" + ele.section.text + "</a>" + "<br>" +
-                        "<p>..." + subtext + "...</p>"
-                    content = content ? content + "<hr>" + html : html;
-                }
-                return content;
-            }, '') + "</div>";
+            const getContent = _.flow(searchSubsection, searchDescription);
+            state.current.content = getContent(query);
+            /*
+            state.current.content = */
             if (state.current.content)
                 $(".help-dialog .content .items").find("a").each(function(i, link) {
                     link.onclick = (e) => {
@@ -305,9 +299,52 @@ const init = () => {
         obj.section = sublist_items.filter(function(item) {
             return item.id == $(section.currentNode).attr("id")
         })[0];
+        const childNodes = $(section.currentNode).children();
+        obj.subSection = childNodes.map(function(i, ele) {
+            if (ele.nodeName === "H3" && childNodes[i + 1].nodeName === "P" && childNodes[i + 1].innerText)
+                return { title: ele.innerText, description: childNodes[i + 1].innerText }
+            else
+                return null;
+        }).get();
         obj.text = $(section.currentNode)[0].innerText;
         content_array.push(obj);
 
+    }
+
+    const searchSubsection = (query) => {
+        // Create copy for modifying the array and passing it to the next function.
+        const temp_content_array = JSON.parse(JSON.stringify(content_array));
+        const content = temp_content_array.reduce(function(content, elem) {
+            const subContent = elem.subSection.reduce(function(text, ele) {
+                if (ele.title && ele.title.toLowerCase().indexOf(query) != -1 && ele.description.replaceAll("\n", "")) {
+                    elem.text = elem.text.replace(ele.title, "").replace(ele.description, "");
+                    return text + "<strong>" + ele.title + "</strong>" + "<p>" + ele.description + "</p>"
+                }
+                return text;
+            }, '');
+            if (subContent) {
+                const html = "<a href='#'><h3>" + elem.section.text + "</h3></a>" + subContent;
+                content = content ? content + "<hr>" + html : html;
+            }
+            return content;
+        }, '');
+        return { query: query, content: content ? content : '', array: temp_content_array};
+    }
+
+    const searchDescription = (some) => {
+        const content = some.array.reduce(function(content, ele) {
+            const index = ele.text.toLowerCase().indexOf(some.query);
+            if (index != -1) {
+                const subtext = ele.text.substr(index, 100).replaceAll("\n", "<br>");
+                const html = "<a href='#'><h3>" + ele.section.text + "</h3></a>" +
+                    "<p>..." + subtext + "...</p>"
+                content = content ? content + "<hr>" + html : html;
+            }
+            return content;
+        }, '');
+        console.log(content);
+        return '<div class="search-text">' + (some.content && content ? some.content + "<hr>" : some.content) + content +
+            "</div>";
     }
 
 
