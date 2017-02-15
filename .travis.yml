@@ -1,10 +1,10 @@
 git:
  depth: 1
 cache:
-    yarn: true
-    directories:
-      - node_modules
- matrix:
+ directories:
+  - node_modules
+  - bower_components
+matrix:
   fast_finish: true
 language: node_js
 notifications:
