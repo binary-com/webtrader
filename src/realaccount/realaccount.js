@@ -167,7 +167,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           user.residence !== '-' && user.address_line_1 !== '' &&
           user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
           user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
-          /.{4,8}$/.test(user.secret_answer);
+          (state.what_todo!="upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)); // Check secret answer if mlt account
       };
 
       state.user.click = function() {
@@ -278,8 +278,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           address_state: user.state_address || undefined,
           address_postcode: user.address_postcode || undefined,
           phone: user.phone,
-          secret_question: user.secret_question_array[user.secret_question_inx],
-          secret_answer: user.secret_answer.replace('""', "'"),
 
           affiliate_token: '',
           forex_trading_experience: financial.forex_trading_experience,
