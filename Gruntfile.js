@@ -356,7 +356,7 @@ module.exports = function (grunt) {
           scripts: {
             options: { livereload: false },
             files: ['src/**','!src/index.html', '!src/**/*.scss', '!src/**/*.es6'],
-            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest'],
+            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest', 'replace:style'],
           },
         },
         shell: {
