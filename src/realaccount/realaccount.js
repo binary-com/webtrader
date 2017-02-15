@@ -148,6 +148,13 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
           estimated_worth: '',
 
+          occupation_array:["Chief Executives, Senior Officials and Legislators","Managers","Professionals","Clerks",
+                            "Personal Care, Sales and Service Workers","Agricultural, Forestry and Fishery Workers",
+                            "Craft, Metal, Electrical and Electronics Workers","Plant and Machine Operators and Assemblers",
+                            "Mining, Construction, Manufacturing and Transport Workers","Armed Forces","Government Officers",
+                            "Others"],
+          occupation: '',
+
           accepted: false,
           disabled: false
         }
@@ -234,6 +241,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           financial.other_instruments_trading_experience !== '' &&
           financial.other_instruments_trading_frequency !== '' &&
           financial.employment_industry !== '' &&
+          financial.occupation !== '' &&
           financial.education_level !== '' &&
           financial.income_source !== '' &&
           financial.net_income !== '' &&
@@ -287,6 +295,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           other_instruments_trading_experience: financial.other_instruments_trading_experience,
           other_instruments_trading_frequency: financial.other_instruments_trading_frequency,
           employment_industry: financial.employment_industry,
+          occupation: financial.occupation,
           education_level: financial.education_level,
           income_source: financial.income_source,
           net_income: financial.net_income,
