@@ -9,10 +9,10 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
     function init() {
       if(login_win){
         login_win.moveToTop();
-        return;
+        return;1
       }
 
-      require(['text!oauth/login.html', 'css!oauth/login.css'], function(root) {
+      require(['', 'css!oauth/login.css'], function(root) {
         root = $(root).i18n();
         login_win = windows.createBlankWindow(root, {
             title: 'Log in',
@@ -51,7 +51,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       });
     }
 
-    function init_state(root, login_win) {
+    function init_state(root, win) {
       var app_id = liveapi.app_id;
       var state = {
         route: { value: 'login' },
@@ -97,15 +97,15 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       state.login.login = function() {
           state.login.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id;
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize?app_id=11';
+          window.location =  oauth_url + '?app_id=' +2627 ;
       }
 
       state.confirm.confirm = function() {
           state.confirm.disabled = true;
           var config = local_storage.get('config');
-          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id;
+          var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize?app_id=11';
+          window.location =  oauth_url + '?app_id='+2627 ;
       }
 
       state.route.update = function(route){
@@ -130,8 +130,8 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
         state.route.value = route;
         var title = routes[route].title;
         var height = routes[route].height;
-        login_win.dialog('option', 'title', title);
-        login_win.dialog('option', 'height', height);
+        win.dialog('option', 'title', title);
+        win.dialog('option', 'height', height);
       };
 
       state.registration.validate.clear = _.debounce(function(){
@@ -198,8 +198,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
                   local_storage.set('oauth', oauth);
                   state.account.disabled = false;
                   liveapi.cached.authorize()
-                  .then(function() { 
-                    login_win.dialog('destroy'); 
+                  .then(function() {
+                    win.dialog('destroy'); 
+                    win.remove();
                     login_win = null;
                   })
                   .catch(function(err) { console.error(err.message) });
@@ -245,7 +246,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           var app_id = liveapi.app_id;
           var config = local_storage.get('config');
           var oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-          window.location =  oauth_url + '?app_id=' + app_id;
+          window.location =  oauth_url + '?='app_id + 2627;
       }
     }
 });
