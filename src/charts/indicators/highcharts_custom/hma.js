@@ -31,8 +31,8 @@ HMA = function(data, options, indicators) {
         appliedTo : indicators.CLOSE
     }, indicators);
     this.indicatorData = this.someTypeOfMa3.indicatorData;
-    this.indicatorData.forEach(function(entry) {
-      if(entry.value === 0)
+    this.indicatorData.forEach(function(entry, inx) {
+      if(inx <= options.period + 1)
         entry.value = null;
     })
 };
