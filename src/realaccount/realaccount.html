@@ -321,6 +321,19 @@
     </select>
     </div>
 
+    <div class="row">
+      <span class="title">Occupation</span>
+      <span class="please-select" rv-show="financial.occupation | eq '' | and empty_fields.validate">*</span>
+      <select rv-jq-class='"real-dialog-ul"'
+            rv-selectmenu-width='330'
+            rv-selectmenu="financial.occupation"
+            rv-selectrefresh="financial.occupation_array">
+
+          <option value="" selected="selected" disabled="disabled">Please select</option>
+          <option rv-each-row="financial.occupation_array" rv-value="row">{row | i18n}</option>
+      </select>
+    </div>
+
     <div class='row'>
       <span class='title'>Level of Education</span>
       <span class="please-select" rv-show="financial.education_level | eq '' | and empty_fields.validate">*</span>
