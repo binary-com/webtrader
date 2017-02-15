@@ -7,12 +7,12 @@ import liveapi from 'websockets/binary_websockets';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import currencyDialog from 'cashier/currency';
-import _ from 'lodash';
+import {debounce} from 'lodash'
 import moment from 'moment';
+import tncApprovalWin from 'cashier/uk_funds_protection';
 
 require(['text!cashier/withdraw.html']);
 require(['css!cashier/withdraw.css']);
-
 let win = null;
 let win_view = null;
 
@@ -82,13 +82,34 @@ class Withdraw {
 
   _init_state = root => {
     var state = {
+      clear: _.debounce((obj,prop) => {obj[prop] = false}, 4000),
       route: { value: 'menu'},
       empty_fields: {
         validate: false,
-        clear: _.debounce(() => ( state.empty_fields.validate = false ), 4000),
+        token_length:false,
         show: () => {
           state.empty_fields.validate = true;
-          state.empty_fields.clear();
+          state.clear(state.empty_fields, 'validate');
+        }
+      },
+      validate: {
+        invalid_length: false,
+        invalid_text: false,
+        length: () => {
+          if(state.verify.token.length != 48){
+            state.validate.invalid_length = true;
+            state.clear(state.validate,'invalid_length');
+            return false;
+          }
+          return true;
+        },
+        text : () =>{
+          if(/[^1-9a-zA-Z'\- ,.]/g.test(state.agent.instructions)){
+            state.validate.invalid_text = true;
+            state.clear(state.validate, "invalid_text");
+            return false;
+          }
+          return true;
         }
       },
       menu: {
@@ -119,10 +140,22 @@ class Withdraw {
         currency: local_storage.get('authorize').currency,
         residence: '',
         instructions: '',
+        checkAmount: (e,scope) => {
+          const amount = scope.agent.amount;
+          if(amount == ''){
+            return;
+          }
+          if(amount > 2000) {
+            scope.agent.amount = 2000;
+          } 
+          if(amount < 0) {
+            scope.agent.amount = '';
+          }
+        }
       },
       login_details: Cookies.loginids().reduce(function(a,b){if(a.id == local_storage.get("authorize").loginid)return a;else return b})
     };
-    let {route, menu, verify, empty_fields, standard, agent, transfer} = state;
+    let {route, menu, verify, empty_fields, standard, agent, transfer, validate} = state;
 
     let routes = { menu : 400, verify: 400, transfer: 400, 'transfer-done': 300, standard: 400, agent: 550, 'agent-confirm': 400, 'agent-done': 300 };
     route.update = r => {
@@ -159,6 +192,10 @@ class Withdraw {
         return;
       }
 
+      if(!validate.length()){
+        return;
+      }
+
       if(menu.choice === 'standard') {
         verify.disabled = true;
         liveapi.send({
@@ -177,6 +214,12 @@ class Withdraw {
         })
         .catch(err => {
           verify.disabled = false;
+          if(err.code === "ASK_UK_FUNDS_PROTECTION"){
+            tncApprovalWin.init_win().then().catch(err => {
+              error_handler(err);
+            });
+            return;
+          }
           error_handler(err);
         });
       }
@@ -218,8 +261,7 @@ class Withdraw {
         $.growl.error({message: 'Amount Min: 10 Max: 2000'.i18n()});
         return;
       }
-      if(!agent.instructions) {
-        empty_fields.show();
+      if(agent.instructions && !validate.text()) {
         return;
       }
 
@@ -232,6 +274,7 @@ class Withdraw {
         paymentagent_loginid: agent.loginid,
         currency: agent.currency,
         amount: agent.amount*1,
+        description: agent.instructions,
         verification_code: verify.code
       };
       agent.disabled = true;

@@ -29,11 +29,10 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
         var chart = this;
         if(chart.series[0]) {
           indicators.forEach(function(ind) {
-             require(["charts/indicators/" + ind.id + "/" + ind.id], function () {
-                 //make sure that we are using the new onSeriesID value
-                 if (ind.options.onSeriesID) ind.options.onSeriesID = chart.series[0].options.id;
-               chart.series[0].addIndicator(ind.id, ind.options);
-             });
+             if (ind.options.onSeriesID) { //make sure that we are using the new onSeriesID value
+               ind.options.onSeriesID = chart.series[0].options.id;
+             }
+             chart.series[0].addIndicator(ind.id, ind.options);
           });
         }
     }

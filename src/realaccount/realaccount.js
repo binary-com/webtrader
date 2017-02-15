@@ -148,6 +148,13 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
           estimated_worth: '',
 
+          occupation_array:["Chief Executives, Senior Officials and Legislators","Managers","Professionals","Clerks",
+                            "Personal Care, Sales and Service Workers","Agricultural, Forestry and Fishery Workers",
+                            "Craft, Metal, Electrical and Electronics Workers","Plant and Machine Operators and Assemblers",
+                            "Mining, Construction, Manufacturing and Transport Workers","Armed Forces","Government Officers",
+                            "Others"],
+          occupation: '',
+
           accepted: false,
           disabled: false
         }
@@ -160,7 +167,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           user.residence !== '-' && user.address_line_1 !== '' &&
           user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
           user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
-          /.{4,8}$/.test(user.secret_answer);
+          (state.what_todo!="upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)); // Check secret answer if mlt account
       };
 
       state.user.click = function() {
@@ -209,7 +216,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  /* login with the new account */
                  return liveapi.switch_account(info.client_id)
                                .then(function() {
-                                 real_win.dialog('close');
+                                 real_win && real_win.dialog('close');
                                  real_win_li.hide();
                                });
                })
@@ -234,6 +241,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           financial.other_instruments_trading_experience !== '' &&
           financial.other_instruments_trading_frequency !== '' &&
           financial.employment_industry !== '' &&
+          financial.occupation !== '' &&
           financial.education_level !== '' &&
           financial.income_source !== '' &&
           financial.net_income !== '' &&
@@ -270,8 +278,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           address_state: user.state_address || undefined,
           address_postcode: user.address_postcode || undefined,
           phone: user.phone,
-          secret_question: user.secret_question_array[user.secret_question_inx],
-          secret_answer: user.secret_answer.replace('""', "'"),
 
           affiliate_token: '',
           forex_trading_experience: financial.forex_trading_experience,
@@ -287,6 +293,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           other_instruments_trading_experience: financial.other_instruments_trading_experience,
           other_instruments_trading_frequency: financial.other_instruments_trading_frequency,
           employment_industry: financial.employment_industry,
+          occupation: financial.occupation,
           education_level: financial.education_level,
           income_source: financial.income_source,
           net_income: financial.net_income,
@@ -315,7 +322,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  /* login with the new account */
                  return liveapi.switch_account(info.client_id)
                                .then(function() {
-                                 real_win.dialog('close');
+                                 real_win && real_win.dialog('close');
                                  real_win_li.hide();
                                });
                })
