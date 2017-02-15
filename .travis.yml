@@ -20,7 +20,7 @@ branches:
     - master
     - development
 before_script:
-  - yarn install
+  - npm install yarn #For some reason, travis is NOT auto detecting yarn settings TODO
 script:
   - git config --global user.email "arnab@binary.com"
   - git config --global user.name "Arnab Karmakar"
