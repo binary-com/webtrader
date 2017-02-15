@@ -896,6 +896,16 @@ bin-wrapper@^3.0.0:
     lazy-req "^1.0.0"
     os-filter-obj "^1.0.0"
 
+binary-com-jquery-dialogextended@binary-com/jquery-dialogextend#master:
+  version "2.0.5"
+  resolved "https://codeload.github.com/binary-com/jquery-dialogextend/tar.gz/3ceda3bb04b1f213f53ab43ab74e0cce3e5c40b2"
+
+binary-com-jquery-ui-timepicker@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/binary-com-jquery-ui-timepicker/-/binary-com-jquery-ui-timepicker-1.0.1.tgz#7f2a71a07e5a939d3d187d17ea5c50680256b801"
+  dependencies:
+    jquery "^3.0.0"
+
 bind-obj-methods@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/bind-obj-methods/-/bind-obj-methods-1.0.0.tgz#4f5979cac15793adf70e488161e463e209ca509c"
@@ -3082,6 +3092,10 @@ jquery-ui-iconfont@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jquery-ui-iconfont/-/jquery-ui-iconfont-2.2.0.tgz#6f83c3896af96ef521b817ca951fa12b7ee77413"
 
+jquery@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
+
 js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
@@ -4770,6 +4784,10 @@ test-exclude@^3.3.0:
     object-assign "^4.1.0"
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
+
+text@requirejs/text:
+  version "2.0.15"
+  resolved "https://codeload.github.com/requirejs/text/tar.gz/d04de4ffd7bf5ba6cb80cdca2d40d4f6f52a1b1f"
 
 through2-filter@^2.0.0:
   version "2.0.0"

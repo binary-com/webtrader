@@ -75,8 +75,11 @@
     "url": "https://github.com/binary-com/webtrader/issues"
   },
   "dependencies": {
+    "binary-com-jquery-dialogextended": "binary-com/jquery-dialogextend#master",
+    "binary-com-jquery-ui-timepicker": "^1.0.1",
     "jquery-ui-iconfont": "^2.1.0",
-    "regenerator-runtime": "^0.10.1"
+    "regenerator-runtime": "^0.10.1",
+    "text": "requirejs/text"
   },
   "contributors": [
     {
