@@ -1,9 +1,8 @@
 {
-  "https://webtrader.binary.com/beta/": 1086,
-  "https://webtrader.binary.com/": 11,
-  "http://webtrader.binary.com/beta/": 1086,
-  "http://webtrader.binary.com/": 11,
-  "https://webtrader.local/" : 1085,
-  "https://localhost.binary.com/": 1283,
-  "https://arnabk.github.io/webtrader/development/" : 1149
+   "https://staging.binary.com/en/trading.html": 2721,
+   "https://ticktrade.binary.com": 2726,
+   "https://ticktrade.binary.com": 2727,
+   "https://app.binary.com": 2729,
+   "https://bot.binary.com/bot.html": 2730,
+   "https://developers.binary.com": 2733,
 }
