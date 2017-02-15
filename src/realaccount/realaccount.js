@@ -216,7 +216,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  /* login with the new account */
                  return liveapi.switch_account(info.client_id)
                                .then(function() {
-                                 real_win.dialog('close');
+                                 real_win && real_win.dialog('close');
                                  real_win_li.hide();
                                });
                })
@@ -324,7 +324,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                  /* login with the new account */
                  return liveapi.switch_account(info.client_id)
                                .then(function() {
-                                 real_win.dialog('close');
+                                 real_win && real_win.dialog('close');
                                  real_win_li.hide();
                                });
                })
