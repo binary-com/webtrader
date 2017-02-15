@@ -108,11 +108,11 @@
       </div>
     </div>
 
-    <div class='row'>
+    <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
       <span class="title-big">Security</span>
     </div>
 
-    <div class='row'>
+    <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
       <span class='title'>Security question</span>
       <select rv-jq-class='"real-dialog-ul"'
               rv-selectmenu-width='330'
@@ -123,7 +123,7 @@
       </select>
     </div>
 
-    <div class='row'>
+    <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
       <span class='title'>Answer</span>
       <input rv-value='user.secret_answer' />
       <div class='validations'>
