@@ -116,6 +116,11 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             'Brand of first car', 'Favourite artist'
           ],
           secret_answer: '',
+          place_of_birth: '-',
+          country_array: [{text: '-', value: '-'}],
+          tax_residence: '',
+          tax_identification_number: ''
+
         },
         financial: {
           experience_array:  ['0-1 year', '1-2 years', 'Over 3 years'],
@@ -167,7 +172,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           user.residence !== '-' && user.address_line_1 !== '' &&
           user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
           user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
-          (state.what_todo!="upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)); // Check secret answer if mlt account
+          (state.what_todo!="upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
+          (state.what_todo!="upgrade-mf"||(state.user.place_of_birth && 
+            state.user.tax_residence && state.user.tax_identification_number && /^[\w-]{0,20}/.test(state.user.tax_identification_number))); 
       };
 
       state.user.click = function() {
@@ -261,7 +268,6 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
         state.risk.visible = true;
       };
-
       state.financial.create_request = function() {
         var user = state.user;
         var financial = state.financial;
@@ -278,6 +284,9 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
           address_state: user.state_address || undefined,
           address_postcode: user.address_postcode || undefined,
           phone: user.phone,
+          place_of_birth:state.user.place_of_birth,
+          tax_residence: state.user.tax_residence.join(","),
+          tax_identification_number: state.user.tax_identification_number,
 
           affiliate_token: '',
           forex_trading_experience: financial.forex_trading_experience,
@@ -369,6 +378,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
       residence_promise
            .then( function() { return liveapi.cached.send({residence_list: 1}); } )
            .then(function(data){
+              state.user.country_array = data.residence_list;
+              state.user.place_of_birth = data.residence_list[0].value;
               var residence = _.find(data.residence_list, { value: state.user.residence });
               state.user.phone = state.user.phone ? state.user.phone : '+' + residence.phone_idd;
            })

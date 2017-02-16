@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'text/text.js',
-                            'regenerator-runtime/*'
+                            'regenerator-runtime/*',
+                            'chosen-js/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                     },
