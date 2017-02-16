@@ -30,7 +30,8 @@ requirejs.config({
         "indicator_levels" : 'charts/indicators/level',
         'paralleljs' : 'lib/parallel_js/lib/parallel',
         'binary-style' : '<style-url>/binary',
-        'babel-runtime/regenerator' : 'lib/regenerator-runtime/runtime'
+        'babel-runtime/regenerator' : 'lib/regenerator-runtime/runtime',
+        'chosen': 'lib/chosen-js/chosen.jquery'
     },
     map: {
         '*': {
@@ -73,6 +74,9 @@ requirejs.config({
         },
         "highcharts-more": {
             deps: ["highstock"]
+        },
+        chosen: {
+            deps:["css!lib/chosen-js/chosen.css"]
         }
     }
 });
