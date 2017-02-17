@@ -3,8 +3,8 @@
  */
 import $ from 'jquery';
 import lodash from 'lodash';
-import liveapi from 'websockets/binary_websockets';
-import menu from 'navigation/menu';
+import liveapi from '../websockets/binary_websockets';
+import menu from '../navigation/menu';
 import "jquery-growl";
 
 const show_error = (err) => {
