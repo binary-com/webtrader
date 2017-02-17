@@ -183,9 +183,10 @@
     top: -32px;
   }
   input {
-     transition: border 0.7s;
+     transition: border 0.7s, background-color 0.7s;
      &.invalid {
         border: 1px solid red;
+        background-color: rgba(255, 0, 0, 0.2);
      }
   }
 }

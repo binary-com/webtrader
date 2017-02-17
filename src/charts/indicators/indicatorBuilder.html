@@ -67,7 +67,7 @@
             </div>
           </td>
           <td rv-if="row.type | eq 'numeric'">
-             <input rv-value="row.value" type="text" rv-validate="'^(?!0\d)\d*(\.\d{1,4})?$'" />
+             <input rv-value="row.value" type="text" rv-is-valid-number="row.is_valid" rv-class-invalid="row.is_valid | negate"/>
           </td>
         </tr>
 

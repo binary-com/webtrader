@@ -292,15 +292,26 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
         $(el).selectmenu('option', this.args[0], value);
     }
 
-   rv.binders.validate = function(input, pattern) {
-      var $input = $(input);
-      var reg = new RegExp(pattern, 'i');
-      $input.on('input', function() {
-         var val = $input.val();
-         if(reg.test(val)) $input.removeClass('invalid');
-         else $input.addClass('invalid');
-      });
-   }
+   rv.binders['is-valid-number'] = {
+      priority: 100,
+      publishes: true,
+      bind: function (el) {
+         var prop = this.keypath.split('.')[1];
+         var model = this.model;
+         var $input = $(el);
+         var reg = /^(?!0\d)\d*(\.\d{1,4})?$/;
+
+         $input.on('input', function() {
+            var val = $input.val();
+            var is_ok = reg.test(val);
+
+            model[prop] = is_ok && val !== '';
+         });
+      },
+      unbind: function(el){ },
+      routine: function (el, value) { }
+   };
+    /* bindar for jqueyr ui selectmenu options */
 
     /*binder for hidding overflow on selctmenu*/
     rv.binders['selectmenu-css-*'] = function(el,value) {
