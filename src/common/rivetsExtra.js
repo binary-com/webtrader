@@ -327,7 +327,7 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
       publishes: true,
       bind: function(el){
         var publish = this.publish;
-        $(el).chosen({width:"330px"}).change(function(){
+        $(el).chosen({width:$(el).css("width")}).change(function(){
           publish($(this).val())
         });
       },

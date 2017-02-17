@@ -107,7 +107,7 @@
         </div>
         <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
             <span class="title">Tax residence</span>
-            <select multiple data-placeholder="Please select atleast one country" rv-chosen="user.tax_residence" rv-chosenrefresh="user.country_array">
+            <select multiple style="width: 330px" data-placeholder="Please select a country" rv-chosen="user.tax_residence" rv-chosenrefresh="user.country_array">
                 <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
             </select>
             <div class='validations'>
