@@ -12,12 +12,15 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
                 $($ul[0]).css({visibility:"visible",opacity:1,display:"block"});
               else 
                 $($ul[0]).css({visibility:"",opacity:"",display:""});
-            } else{
-              console.log("ul not found");
             }
           });
         });
         $("#nav-menu li").each(function(){
+          $(this).unbind("click").on("click", function(){
+            if($(this)[0].lastChild.nodeName === "A"){
+              $(this).trigger("mouseleave");
+            }
+          });
           $(this).unbind("mouseleave").on("mouseleave",function(){
             var $ul = $(this).find("ul");
             if($ul){
