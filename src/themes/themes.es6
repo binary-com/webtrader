@@ -2,8 +2,8 @@
  * Created by arnab on 4/24/16.
  */
 import $ from 'jquery';
-import windows from 'windows/windows';
-import 'common/util';
+import windows from '../windows/windows';
+import '../common/util';
 import 'highstock';
 import 'jquery-growl';
 
