@@ -5,11 +5,11 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import moment from 'moment';
-import liveapi from 'websockets/binary_websockets';
-import rv from 'common/rivetsExtra';
-import chartingRequestMap from 'charts/chartingRequestMap';
-import html from 'text!trade/tradeConf.html';
-import 'css!trade/tradeConf.css';
+import liveapi from '../websockets/binary_websockets';
+import rv from '../common/rivetsExtra';
+import chartingRequestMap from '../charts/chartingRequestMap';
+import html from 'text!../trade/tradeConf.html';
+import 'css!../trade/tradeConf.css';
 
 require(['websockets/stream_handler']);
 const barsTable = chartingRequestMap.barsTable;
