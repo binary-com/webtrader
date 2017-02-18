@@ -1108,6 +1108,12 @@ change-case@2.3.x:
     upper-case "^1.1.1"
     upper-case-first "^1.1.0"
 
+chosen-js@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/chosen-js/-/chosen-js-1.6.2.tgz#9609b997cbac40bd084c2fc9d952de8643fde9cb"
+  dependencies:
+    jquery ">=1.4.4"
+
 clap@^1.0.9:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/clap/-/clap-1.1.2.tgz#316545bf22229225a2cecaa6824cd2f56a9709ed"
@@ -3092,7 +3098,7 @@ jquery-ui-iconfont@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jquery-ui-iconfont/-/jquery-ui-iconfont-2.2.0.tgz#6f83c3896af96ef521b817ca951fa12b7ee77413"
 
-jquery@^3.0.0:
+jquery@>=1.4.4, jquery@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
 
