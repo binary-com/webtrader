@@ -30,7 +30,8 @@ requirejs.config({
         "indicator_levels" : 'charts/indicators/level',
         'paralleljs' : 'lib/parallel_js/lib/parallel',
         'binary-style' : '<style-url>/binary',
-        'babel-runtime/regenerator' : 'lib/regenerator-runtime/runtime'
+        'babel-runtime/regenerator' : 'lib/regenerator-runtime/runtime',
+        'chosen': 'lib/chosen-js/chosen.jquery'
     },
     map: {
         '*': {
@@ -111,6 +112,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
     require([
       'css!lib/jquery-ui/themes/base/jquery-ui.min.css',
       'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
+      "css!lib/chosen-js/chosen.css",
       'css!main.css',
       'css!binary-style',
     ]);
@@ -292,8 +294,8 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function( $, lang_json) 
             });
         });
 
-        /*Trigger T&C check, self-exclusion, reality check, chrome extension check*/
-        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'tc/tc', 'realitycheck/realitycheck']);
+        /*Trigger T&C check, self-exclusion, reality check, chrome extension check, csr_tax_information check*/
+        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'tc/tc', 'realitycheck/realitycheck','taxInformation/taxInformation']);
     }
 
 
