@@ -258,8 +258,8 @@ const init = () => {
             state.current.sublist = sublist_items.filter((item) => {
                 return item.text.toLowerCase().indexOf(query) != -1;
             });
-            const getContent = _.flow(searchSubsection, searchDescription);
-            state.current.content = getContent(query);
+            /*Extract search text from content*/
+            state.content = getContent(query);
             /*
             state.current.content = */
             if (state.current.content)
@@ -286,32 +286,48 @@ const init = () => {
     }
 
     // Create an array of all the text section wise, to be used later for searching.
-    var content_array = [];
 
-    var section = document.createTreeWalker($("<div/>").append($content)[0], NodeFilter.SHOW_ELEMENT, (node) => {
-        if (node.tagName == "DIV")
-            return NodeFilter.FILTER_ACCEPT;
-        else
-            return NodeFilter.FILTER_SKIP;
-    }, false);
-    while (section.nextNode()) {
-        var obj = {};
-        obj.section = sublist_items.filter(function(item) {
-            return item.id == $(section.currentNode).attr("id")
-        })[0];
-        const childNodes = $(section.currentNode).children();
-        obj.subSection = childNodes.map(function(i, ele) {
-            if (ele.nodeName === "H3" && childNodes[i + 1].nodeName === "P" && childNodes[i + 1].innerText)
-                return { title: ele.innerText, description: childNodes[i + 1].innerText }
-            else
-                return null;
-        }).get();
-        obj.text = $(section.currentNode)[0].innerText;
-        content_array.push(obj);
 
+    const getContent = (q) => {
+        const walker = document.createTreeWalker($("<div/>").append($content)[0], NodeFilter.SHOW_ELEMENT);
+        let subSectionArray = [];
+        let descriptionArray = [];
+        let title = '',
+            title_s = '';
+        while (walker.nextNode()) {
+            let description = '';
+            if (walker.currentNode.nodeName == "H2") {
+                title = walker.currentNode.innerText;
+                title_s = "";
+            } else if (walker.currentNode.nodeName == "H3") {
+                title_s = walker.currentNode.innerText;
+                if (title_s.toLowerCase().indexOf(q) != -1) {
+                    while (walker.nextNode()) {
+                        console.log(walker.currentNode);
+                        if (walker.currentNode.nodeName == "H2" || walker.currentNode.nodeName == "H3")
+                            break;
+                        description = description + walker.currentNode.innerHTML;
+                    }
+                    subSectionArray.push({
+                        title: title,
+                        title_s: title_s,
+                        description: description
+                    });
+                }
+            } else if (walker.currentNode.innerText.toLowerCase().indexOf(q) != -1) {
+                const index = walker.currentNode.innerText.toLowerCase().indexOf(q);
+                description = "..." + walker.currentNode.innerText.substr(index, 100) + "...";
+                descriptionArray.push({
+                    title: title,
+                    title_s: title_s,
+                    description: description
+                });
+            }
+        }
+        console.log(descriptionArray, subSectionArray);
     }
 
-    const searchSubsection = (query) => {
+    /*const searchSubsection = (query) => {
         // Create copy for modifying the array and passing it to the next function.
         const temp_content_array = JSON.parse(JSON.stringify(content_array));
         const content = temp_content_array.reduce(function(content, elem) {
@@ -342,10 +358,9 @@ const init = () => {
             }
             return content;
         }, '');
-        console.log(content);
         return '<div class="search-text">' + (some.content && content ? some.content + "<hr>" : some.content) + content +
             "</div>";
-    }
+    }*/
 
 
     //Show the about us page initially
