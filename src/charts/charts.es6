@@ -130,8 +130,8 @@ export const generate_csv = (chart, data) => {
         }) || [];
         if (index == 0) {
             const ohlc = newDataLines[0].split(',').length > 2;
-            if (ohlc) lines.push('Date,Open,High,Low,Close');
-            else lines.push('Date,"' + series.options.name + '"');
+            if (ohlc) lines.push('Date,Time,Open,High,Low,Close');
+            else lines.push('Date,Time,"' + series.options.name + '"');
             //newDataLines is incorrect - get it from lokijs
             const key = chartingRequestMap.keyFor(data.instrumentCode, data.timePeriod);
             const bars = chartingRequestMap.barsTable
@@ -170,8 +170,10 @@ export const generate_csv = (chart, data) => {
                     });
                     if (line.indexOf('Date') == -1 && !added) line += ','; //Add a gap since we did not add a value
                 });
-
-                return line;
+                if (index === 0) {
+                    return line;
+                }
+                return line.split(" ").join("\",\""); //Separate date and time.
             });
             return l;
         })
