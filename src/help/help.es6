@@ -47,7 +47,8 @@ const init = () => {
             loading: false,
             sublist: null,
             content_page: null,
-            content: null
+            content: null,
+            show_clear: false
         },
         list: [{
             text: "About Binary.com".i18n(),
@@ -250,30 +251,37 @@ const init = () => {
         })
     };
 
-    state.searchSublist = (e, scope) => {
+    state.search = (e) => {
         const query = $(e.target).val().toLowerCase();
         if (query.length > 0) {
+            state.current.show_clear = true;
             state.current.list = null;
             state.current.content_page = null;
             state.current.sublist = sublist_items.filter((item) => {
                 return item.text.toLowerCase().indexOf(query) != -1;
             });
-            state.current.content = '<div class="search-text">' + content_array.reduce(function(content, ele) {
-                const index = ele.text.toLowerCase().indexOf(query);
-                if (index != -1) {
-                    const subtext = ele.text.substr(index, 100);
-                    const html = "<a href='#'>" + ele.section.text + "</a>" + "<br>" +
-                        "<p>..." + subtext + "...</p>"
-                    content = content ? content + "<hr>" + html : html;
-                }
-                return content;
-            }, '') + "</div>";
+            /*Extract search text from content*/
+            const content = getContent(query);
+
+            // Formatting content to show in a particular format;
+            state.current.content = '<div class="search-text">' + content.reduce(function(prev, curr) {
+                let formatted = "<a href=\"#\"><h3>" + curr.title + "</h3></a>" +
+                    "<strong>" + curr.title_s + "</strong>" +
+                    "<br/><br/>" + curr.description;
+                prev = prev ? prev + "<hr>" + formatted : formatted;
+                return prev
+            }, '') + '</div>';
+
+            /*
+            state.current.content = */
             if (state.current.content)
                 $(".help-dialog .content .items").find("a").each(function(i, link) {
                     link.onclick = (e) => {
                         state.openSublist($(e.target).text());
                     };
                 });
+        } else {
+            show_clear = false;
         }
     }
 
@@ -282,8 +290,12 @@ const init = () => {
         state.current.sublist = sublist_items.filter((item) => {
             return item.text.toLowerCase().indexOf(sublist_name.toLowerCase()) != -1;
         });
-        console.log(sublist_name, state.current.sublist);
         state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
+    }
+
+    state.clearSearch = () => {
+        $(".help-dialog .help-search").val("");
+        state.current.show_clear = false;
     }
 
     //Concat all the sublist items into one array so that we can later use it for searching.
@@ -291,25 +303,53 @@ const init = () => {
         sublist_items = sublist_items.concat(state.sublist[key]);
     }
 
-    // Create an array of all the text section wise, to be used later for searching.
-    var content_array = [];
+    const getContent = (q) => {
+        const walker = document.createTreeWalker($("<div/>").append($content)[0], NodeFilter.SHOW_ELEMENT);
+        let subSectionArray = [];
+        let descriptionArray = [];
+        let title = '',
+            title_s = '';
+        while (1) {
+            let description = '';
+            if (walker.currentNode.nodeName == "DIV" && walker.currentNode.id) {
+                title = "";
+                title_s = "";
+                description = "";
+            } else if (walker.currentNode.nodeName == "H2") {
+                title = walker.currentNode.innerText;
+                title_s = "";
+            } else if (walker.currentNode.nodeName == "H3") {
+                title_s = walker.currentNode.innerText;
+                if (title_s.toLowerCase().indexOf(q) != -1) {
+                    while (walker.nextNode()) {
+                        if (walker.currentNode.nodeName == "DIV" || walker.currentNode.nodeName == "H3")
+                            break;
+                        description = description + walker.currentNode.innerHTML;
+                    }
 
-    var section = document.createTreeWalker($("<div/>").append($content)[0], NodeFilter.SHOW_ELEMENT, (node) => {
-        if (node.tagName == "DIV")
-            return NodeFilter.FILTER_ACCEPT;
-        else
-            return NodeFilter.FILTER_SKIP;
-    }, false);
-    while (section.nextNode()) {
-        var obj = {};
-        obj.section = sublist_items.filter(function(item) {
-            return item.id == $(section.currentNode).attr("id")
-        })[0];
-        obj.text = $(section.currentNode)[0].innerText;
-        content_array.push(obj);
+                    subSectionArray.push({
+                        title: title,
+                        title_s: title_s,
+                        description: description
+                    });
+                    continue;
+                }
+            } else if (walker.currentNode.nodeName !== "DIV" && walker.currentNode.nodeName !== "H2" &&
+                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) != -1) {
+                const index = walker.currentNode.innerText.toLowerCase().indexOf(q);
+                description = "<p>..." + walker.currentNode.innerText.substr(index, 100) + "...</p>";
+                descriptionArray.push({
+                    title: title,
+                    title_s: title_s,
+                    description: description
+                });
+            }
 
+            if (!walker.nextNode())
+                break;
+        }
+        return subSectionArray.concat(descriptionArray);
     }
-
 
     //Show the about us page initially
     state.current.list = state.list[0];

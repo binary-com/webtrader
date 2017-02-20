@@ -7,18 +7,18 @@
         border-right: 1px solid #dedede;
         overflow: auto;
         padding-top: 10px;
-        .ui-icon-search {
-            z-index: +1;
-            position: relative;
-            top: 6px;
-            left: 15px;
-        }
         .help-search {
             width: 85%;
             margin-left: 10px;
-            padding-left: 25px;
-            top: -15px;
+            margin-bottom: 16px;
+            padding-left: 5px;
             position: relative;
+        }
+        .ui-icon-circle-close {
+            display: inline;
+            left: -15px;
+            width: 10px;
+            cursor: pointer;
         }
         .items {
             .selected {
@@ -80,6 +80,7 @@
             }
             .search-text {
                 margin-top: 30px;
+                margin-bottom: 20px;
             }
         }
     }

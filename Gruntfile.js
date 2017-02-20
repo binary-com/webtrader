@@ -50,7 +50,11 @@ module.exports = function (grunt) {
                         src: [
                             'jquery-ui-iconfont/jquery-ui.icon-font.css',
                             'jquery-ui-iconfont/font/*',
-                            'regenerator-runtime/*'
+                            '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
+                            'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
+                            'text/text.js',
+                            'regenerator-runtime/*',
+                            'chosen-js/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                     },
@@ -58,25 +62,20 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'bower_components/',
                         src: [
-                            '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             '!colorpicker/**', 'colorpicker/jquery.colorpicker.js', 'colorpicker/images/**', 'colorpicker/jquery.colorpicker.css',
                             '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
                             '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
-                            'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'clipboard/dist/clipboard.min.js',
-                            'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
                             'alameda/alameda.js',
                             'require-css/css.min.js',
-                            'text/text.js',
                             'lodash/dist/lodash.min.js',
-                            'underscore/underscore-min.js',
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
@@ -356,7 +355,7 @@ module.exports = function (grunt) {
           scripts: {
             options: { livereload: false },
             files: ['src/**','!src/index.html', '!src/**/*.scss', '!src/**/*.es6'],
-            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest'],
+            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest', 'replace:style'],
           },
         },
         shell: {

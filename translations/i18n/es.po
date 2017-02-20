@@ -14,23 +14,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.9-dev\n"
 
-msgid "%D MA Type"
-msgstr "Tipo %D MA"
-
-msgid "%D Period"
-msgstr "Período %D"
-
-msgid "%D Stroke"
-msgstr "%D Stroke"
-
-msgid "%K MA Type"
-msgstr "Tipo %K MA"
-
-msgid "%K Period"
-msgstr "Periodo %K"
-
-msgid "%K Stroke"
-msgstr "%K Stroke"
+msgid ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
+msgstr ""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
@@ -71,6 +58,9 @@ msgstr ""
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
+msgstr ""
+
+msgid "'contract period'"
 msgstr ""
 
 msgid "(One) Touch trades"
@@ -268,9 +258,6 @@ msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
 msgstr ""
-
-msgid "-DI Stroke"
-msgstr "-DI Stroke"
 
 msgid "0-1 year"
 msgstr "0-1 año"
@@ -634,17 +621,8 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "ADX MA Type"
-msgstr "Tipo ADX MA"
-
-msgid "ADX Stroke"
-msgstr "Stroke ADX"
-
 msgid "AM"
 msgstr ""
-
-msgid "ATR Period"
-msgstr "Período ATR"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
@@ -652,26 +630,20 @@ msgstr ""
 msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
-msgid "Acceleration"
-msgstr "Aceleración"
-
 msgid "Accept"
 msgstr "Aceptar"
 
 msgid "Account balance"
 msgstr "Saldo de la cuenta"
 
-msgid "Account id not found"
-msgstr "ID de cuenta no encontrado"
-
 msgid "Account opening"
 msgstr "Apertura de cuenta"
 
-msgid "Account token not found"
-msgstr "Token de la cuenta no encontrado"
-
 msgid "Action"
 msgstr "Acción"
+
+msgid "Add"
+msgstr ""
 
 msgid "Add comparisons"
 msgstr "Añadir comparaciones"
@@ -742,9 +714,6 @@ msgstr ""
 msgid "Answer"
 msgstr "Respuesta"
 
-msgid "Applied to"
-msgstr "Aplicado a"
-
 msgid "Apply"
 msgstr "Aplicar"
 
@@ -769,14 +738,8 @@ msgstr ""
 msgid "Aroon (AROON)"
 msgstr ""
 
-msgid "Aroon Down Stroke"
-msgstr "Aroon Down Stroke"
-
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
-
-msgid "Aroon Up Stroke"
-msgstr "Aroon Up Stroke"
 
 msgid "Asian down"
 msgstr ""
@@ -825,9 +788,6 @@ msgstr "Atrás"
 
 msgid "Back to list"
 msgstr "Volver a la lista"
-
-msgid "Background Color"
-msgstr "Color de Fondo"
 
 msgid "Balance of Power (BOP)"
 msgstr ""
@@ -1062,9 +1022,6 @@ msgid ""
 "day (including virtual accounts)"
 msgstr ""
 
-msgid "Blank window"
-msgstr "Ventana en blanco"
-
 msgid "Bollinger Bands (BBANDS)"
 msgstr ""
 
@@ -1109,6 +1066,25 @@ msgstr "CERRAR"
 
 msgid "CSV"
 msgstr "CSV"
+
+msgid ""
+"Can be used to buy and sell contracts, renew expired purchases, and top-up "
+"virtual-money accounts."
+msgstr ""
+
+msgid ""
+"Can be used to open accounts, set settings, manage token usage, and more."
+msgstr ""
+
+msgid ""
+"Can be used to view account activity, including settings, limits, balance "
+"sheets, trade purchase history, and more."
+msgstr ""
+
+msgid ""
+"Can be used to withdraw to payment agents, transfer funds between accounts, "
+"and set / clear cashier passwords."
+msgstr ""
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -1245,9 +1221,6 @@ msgstr ""
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Clear"
-msgstr ""
-
 msgid "Click Jacking test"
 msgstr "Prueba Click Jacking"
 
@@ -1295,12 +1268,6 @@ msgstr "Configuración cambiada con exito"
 msgid "Confirm transfer"
 msgstr "Confirmar la transferencia"
 
-msgid "Connection closed"
-msgstr "Conexión cerrada"
-
-msgid "Connection error"
-msgstr "Error de conexión"
-
 msgid "Construction"
 msgstr "Construcción"
 
@@ -1318,9 +1285,6 @@ msgstr "Contrato"
 
 msgid "Contract Confirmation"
 msgstr "Confirmación del Contrato"
-
-msgid "Contract is not yet started"
-msgstr "El contrato no ha comenzado todavía"
 
 msgid "Contract period"
 msgstr ""
@@ -1382,12 +1346,6 @@ msgstr "Tema personalizado"
 msgid "Customize chart appearance"
 msgstr "Personalizar la apariencia del gráfico"
 
-msgid "DI Stroke"
-msgstr "DI Stroke"
-
-msgid "DX MA Type"
-msgstr "Tipo DX MA"
-
 msgid "Daily limit on losses"
 msgstr "Límite diario de pérdidas"
 
@@ -1446,9 +1404,6 @@ msgstr ""
 
 msgid "Delete"
 msgstr "Eliminar"
-
-msgid "Delete level(s)"
-msgstr "Borrar nivel(es)"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
@@ -1562,12 +1517,6 @@ msgstr "Punto"
 
 msgid "Double Exponential Moving Average (DEMA)"
 msgstr ""
-
-msgid "Double MA Period"
-msgstr "Periodo MA Doble"
-
-msgid "Double MA Type"
-msgstr "MA de Tipo Doble"
 
 msgid "Double click the object to remove"
 msgstr "Haga doble clic en el objeto para quitar"
@@ -1685,10 +1634,6 @@ msgstr "Error al descargar .csv"
 msgid "Error getting data for %1"
 msgstr ""
 
-#, fuzzy
-msgid "Error getting market information!"
-msgstr "Error al obtener datos para"
-
 msgid "Estimated Net Worth"
 msgstr "Valor Neto Estimado"
 
@@ -1733,21 +1678,6 @@ msgstr ""
 
 msgid "Family name"
 msgstr "Apellido"
-
-msgid "Fast %K MA Type"
-msgstr "%K Tipo MA Rápido"
-
-msgid "Fast %K Period"
-msgstr "Periodo %K Rápido"
-
-msgid "Fast Limit"
-msgstr "Límite Rápido"
-
-msgid "Fast MA Type"
-msgstr "Tipo MA Rápido"
-
-msgid "Fast Period"
-msgstr "Período Rápido"
 
 msgid "Favorites"
 msgstr "Favoritos"
@@ -1875,6 +1805,9 @@ msgstr "Rejilla"
 msgid "Grid Light"
 msgstr "Luz de la Rejilla"
 
+msgid "Group History"
+msgstr ""
+
 msgid "HIGH"
 msgstr "ALTO"
 
@@ -1899,14 +1832,8 @@ msgstr "Salud"
 msgid "Help"
 msgstr ""
 
-msgid "High Barrier"
-msgstr "Barrera Alta"
-
 msgid "High Price"
 msgstr "Precio Alto"
-
-msgid "High Stroke"
-msgstr "Stroke Alto"
 
 msgid "High barrier"
 msgstr ""
@@ -1931,15 +1858,6 @@ msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr ""
-
-msgid "Histogram Color"
-msgstr "Color del Histograma"
-
-msgid "Histogram Color For Higher Values"
-msgstr "Color del Histograma para Valores más Altos"
-
-msgid "Histogram Color For Lower Values"
-msgstr "Color del Histograma para Valores más Bajos"
 
 msgid "Home Address"
 msgstr "Domicilio"
@@ -2167,14 +2085,8 @@ msgstr ""
 msgid "Instrument"
 msgstr "Instrumento"
 
-msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
-
 msgid "Instruments"
 msgstr "Instrumentos"
-
-msgid "Invalid parameter(s)!"
-msgstr ""
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
@@ -2209,9 +2121,6 @@ msgstr "Ene"
 
 msgid "January"
 msgstr "Enero"
-
-msgid "Japan accounts are not supported"
-msgstr "No se admiten cuentas de Japón"
 
 msgid "Jul"
 msgstr "Jul"
@@ -2295,6 +2204,9 @@ msgstr "Nivel"
 msgid "Level of Education"
 msgstr "Nivel de Educación"
 
+msgid "Levels"
+msgstr ""
+
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
 "Ireland, and Japan"
@@ -2311,9 +2223,6 @@ msgstr "Línea"
 
 msgid "Line Dot"
 msgstr "Punto de la línea"
-
-msgid "Line Stroke"
-msgstr "Stroke de la Línea"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr ""
@@ -2372,9 +2281,6 @@ msgstr ""
 msgid "Loading portfolio"
 msgstr "Cargando cartera"
 
-msgid "Loading self-exclusion settings"
-msgstr "Cargando ajustes de auto exclusión"
-
 msgid "Loading..."
 msgstr "Cargando..."
 
@@ -2383,9 +2289,6 @@ msgstr "Iniciar sesión"
 
 msgid "Log in time"
 msgstr "Tiempo de inicio de sesión"
-
-msgid "Logging out because of self-exclusion session time out!"
-msgstr "¡Deconectar por que la sesión de autoexclusión ha caducado!"
 
 msgid "Login"
 msgstr "Iniciar sesión"
@@ -2398,18 +2301,6 @@ msgstr ""
 
 msgid "Long Line Candle (CDLLONGLINE)"
 msgstr ""
-
-msgid "Long MA Type"
-msgstr "Tipo MA Largo"
-
-msgid "Long ROC Period"
-msgstr "Período ROC Largo"
-
-msgid "Long Stop Line Stroke"
-msgstr "Stroke de Línea de Parada Larga"
-
-msgid "Long Term Period"
-msgstr "Período de Largo Plazo"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2443,14 +2334,8 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
-msgid "Low Barrier"
-msgstr "Límite Inferior"
-
 msgid "Low Price"
 msgstr "Precio Bajo"
-
-msgid "Low Stroke"
-msgstr "Stroke Bajo"
 
 msgid "Low barrier"
 msgstr ""
@@ -2463,15 +2348,6 @@ msgstr ""
 
 msgid "Lower"
 msgstr "Inferior"
-
-msgid "Lower Band Stroke"
-msgstr "Stroke de Banda Inferior"
-
-msgid "MA Type"
-msgstr "Tipo MA"
-
-msgid "MACD Line Stroke"
-msgstr "Stroke de Línea MACD"
 
 msgid ""
 "MACD is a trading indicator used in technical analysis of stock prices.It is "
@@ -2516,9 +2392,6 @@ msgstr ""
 msgid "Mass Index (MASS)"
 msgstr ""
 
-msgid "Mass Period"
-msgstr "Período Total"
-
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr ""
 
@@ -2527,12 +2400,6 @@ msgstr ""
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr ""
-
-msgid "Max/Min Period"
-msgstr "Período Máx/Mín"
-
-msgid "Maximum"
-msgstr "Máximo"
 
 msgid "Maximum (MAX)"
 msgstr ""
@@ -2572,9 +2439,6 @@ msgstr "Ciudad memorable"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr ""
-
-msgid "Middle Band Stroke"
-msgstr "Stroke de Banda Media"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Mín: 10 máx: 2000"
@@ -2632,15 +2496,6 @@ msgstr "Sra."
 
 msgid "Ms"
 msgstr "Señorita"
-
-msgid "Multiplier"
-msgstr "Multiplicador"
-
-msgid "NB Dev Down"
-msgstr "NB Dev Abajo"
-
-msgid "NB Dev Up"
-msgstr "NB Dev Arriba"
 
 msgid "Name"
 msgstr "Nombre"
@@ -2703,18 +2558,6 @@ msgid ""
 "range values across instruments by using the formula below"
 msgstr ""
 
-msgid "Note that tokens can possess one or more of these scopes"
-msgstr ""
-"Tenga en cuenta que los tokens pueden poseer uno o más de estos ámbitos"
-
-msgid ""
-"Note: Contract will be sold at the prevailing market price when the request "
-"is received by our servers. This price may differ from the indicated price"
-msgstr ""
-"Nota: El contrato se venderá al precio de mercado que prevalece cuando la "
-"solicitud se reciba por nuestros servidores. Este precio puede diferir del "
-"precio indicado"
-
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
@@ -2731,9 +2574,6 @@ msgstr "Noviembre"
 msgid "Now"
 msgstr "Ahora"
 
-msgid "Number of bars on sides"
-msgstr "Número de barras en los lados"
-
 msgid "OAuth App ID (Optional)"
 msgstr "OAuth App ID (opcional)"
 
@@ -2746,6 +2586,9 @@ msgstr "OHLC"
 msgid "OPEN"
 msgstr "ABIERTO"
 
+msgid "Occupation"
+msgstr ""
+
 msgid "Oct"
 msgstr "Oct"
 
@@ -2757,9 +2600,6 @@ msgstr ""
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
-
-msgid "Offset"
-msgstr "Offset"
 
 msgid "Ok"
 msgstr "Ok"
@@ -2787,6 +2627,9 @@ msgid ""
 "trading services. The award recognises BetOnMarkets.com's reliable, fast and "
 "secure online trading for novice and expert traders. At this time, our "
 "website has received over 15 million trades"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
 msgid "Oops... Page Not Available"
@@ -2877,9 +2720,6 @@ msgstr ""
 msgid "PNG"
 msgstr "PNG"
 
-msgid "PPO Line Stroke"
-msgstr "Stroke de Linea PPO"
-
 msgid "Page Not Found"
 msgstr "Página no encontrada"
 
@@ -2928,18 +2768,6 @@ msgstr "Pensión"
 msgid "Percentage Price Oscillator (PPO)"
 msgstr ""
 
-msgid "Period"
-msgstr "Período"
-
-msgid "Period 1"
-msgstr "Período 1"
-
-msgid "Period 2"
-msgstr "Periodo 2"
-
-msgid "Period 3"
-msgstr "Período 3"
-
 msgid "Permissions"
 msgstr "Permisos"
 
@@ -2966,9 +2794,6 @@ msgstr "Por favor"
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "Por favor responda a la pregunta secreta, con 4-50 caracteres"
 
-msgid "Please choose at least one token scope"
-msgstr "Por favor, elija al menos un ámbito de token"
-
 msgid "Please choose which currency you would like to transact in"
 msgstr ""
 
@@ -2993,9 +2818,6 @@ msgstr "Por favor introduzca una dirección de correo electrónico correcta"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Por favor introduzca la fecha en formato AAAA-MM-DD"
-
-msgid "Please enter the token name"
-msgstr "Por favor, introduzca el nombre de token"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
@@ -3032,11 +2854,11 @@ msgstr "Por favor introduzca su número de teléfono"
 msgid "Please enter your street address"
 msgstr "Por favor, introduzca su dirección"
 
+msgid "Please input correct token"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers"
 msgstr "Por favor, instale la última versión de uno de estos navegadores"
-
-msgid "Please log in"
-msgstr "Por favor, inicie sesión"
 
 msgid "Please select"
 msgstr "Por favor, seleccione"
@@ -3049,9 +2871,6 @@ msgstr "Por favor utilice su nueva contraseña para iniciar sesión"
 
 msgid "Plot"
 msgstr "Tema"
-
-msgid "Plot Color"
-msgstr "Color del Tema"
 
 msgid "Pofit/Loss"
 msgstr "Ganancias/Pérdidas"
@@ -3088,9 +2907,6 @@ msgstr "Intervalo recomendado de prueba de la realidad"
 #, fuzzy
 msgid "Press Create token button on the right to create your first token"
 msgstr "Pulsar el botón Crear token a la derecha para crear su primer token"
-
-msgid "Price"
-msgstr "Precio"
 
 msgid "Price Transformation"
 msgstr ""
@@ -3147,9 +2963,6 @@ msgstr "Fecha de Compra"
 
 msgid "Purchase Price"
 msgstr "Precio de Compra"
-
-msgid "Purchase Time"
-msgstr "Hora de la Compra"
 
 msgid "Quiet markets"
 msgstr ""
@@ -3253,9 +3066,6 @@ msgstr "Renombrar"
 msgid "Repeat password"
 msgstr "Repetir contraseña"
 
-msgid "Resale of this contract is not offered"
-msgstr "La reventa de este contrato no se ofrece"
-
 msgid "Resale price"
 msgstr ""
 
@@ -3358,9 +3168,6 @@ msgstr "Autónomo"
 msgid "Self-Exclusion"
 msgstr "Autoexclusión"
 
-msgid "Self-Exclusion Facilities"
-msgstr "Instalaciones de Autoexclusión"
-
 msgid "Sell At Market"
 msgstr "Vender en el Mercado"
 
@@ -3412,18 +3219,6 @@ msgstr "Compartir gráfico"
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr ""
 
-msgid "Short MA Type"
-msgstr "Tipo MA Corto"
-
-msgid "Short ROC Period"
-msgstr "Período ROC Corto"
-
-msgid "Short Stop Line Stroke"
-msgstr "Stroke de Línea Parada Corta"
-
-msgid "Short Term Period"
-msgstr "Periodo de Corto Plazo"
-
 msgid "Short to long-term"
 msgstr ""
 
@@ -3445,50 +3240,11 @@ msgid ""
 "downtrend"
 msgstr ""
 
-msgid "Sigma"
-msgstr "Sigma"
-
-msgid "Signal Line Stroke"
-msgstr "Stroke de Línea de Señal"
-
-msgid "Signal MA Type"
-msgstr "Tipo Señal MA"
-
-msgid "Signal Period"
-msgstr "Periodo de la Señal"
-
 msgid "Simple Moving Average (SMA)"
 msgstr ""
 
 msgid "Simplicity"
 msgstr ""
-
-msgid "Single MA Period"
-msgstr "Período MA Único"
-
-msgid "Single MA Type"
-msgstr "Tipo MA Único"
-
-msgid "Slow %D MA Type"
-msgstr "Tipo %D MA Lento"
-
-msgid "Slow %D Period"
-msgstr "Periodo %D Lento"
-
-msgid "Slow %K MA Type"
-msgstr "Tipo %K MA Lento"
-
-msgid "Slow %K Period"
-msgstr "Periodo %K Lento"
-
-msgid "Slow Limit"
-msgstr "Límite Lento"
-
-msgid "Slow MA Type"
-msgstr "Typo MA Lento"
-
-msgid "Slow Period"
-msgstr "Periodo Lento"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
@@ -3637,9 +3393,6 @@ msgstr "Anchura del stroke"
 
 msgid "Submit"
 msgstr "Enviar"
-
-msgid "Successfully added new token"
-msgstr "Nuevo token añadido con éxito"
 
 msgid "Summation (SUM)"
 msgstr ""
@@ -4007,11 +3760,18 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The company holds customer funds in separate bank accounts to the "
+"operational accounts which would not, in the event of insolvency, form part "
+"of the Company's assets. This meets the Gambling Commission's requirements "
+"for the segregation of customer funds at the level"
+msgstr ""
+
+msgid ""
 "The contract period is the timeframe of a trade. It is also called the "
 "duration"
 msgstr ""
 
-msgid "The duration is the length of a purchased trade (see 'contract period')"
+msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid ""
@@ -4180,20 +3940,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"There was a market data disruption during the contract period. For real-"
-"money accounts we will attempt to correct this and settle the contract "
-"properly, otherwise the contract will be cancelled and refunded. Virtual-"
-"money contracts will be cancelled and refunded"
-msgstr ""
-"Hubo una interrupción de datos del mercado durante el período del contrato. "
-"Para cuentas de dinero real intentaremos corregirlo y liquidar el contrato "
-"correctamente, sino el contrato será cancelado y devuelto. Los contratos de "
-"dinero virtual serán cancelados y devueltos"
-
-msgid "There was an error"
-msgstr "Hubo un error"
-
-msgid ""
 "These are trades where the trader predicts if a market will finish higher or "
 "lower than a specified price target"
 msgstr ""
@@ -4225,9 +3971,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract has expired"
-msgstr "Este contrato ha caducado"
 
 msgid "This contract lost"
 msgstr "Este contrato perdió"
@@ -4317,9 +4060,6 @@ msgstr "Ticks"
 msgid "Tile"
 msgstr "Mosaico"
 
-msgid "Time Period"
-msgstr "Período de Tiempo"
-
 msgid "Time interval"
 msgstr "Intervalo de tiempo"
 
@@ -4328,9 +4068,6 @@ msgstr ""
 
 msgid "Time period"
 msgstr "Período de tiempo"
-
-msgid "Timeout for websocket request"
-msgstr "Solicitud de tiempo de espera para websocket"
 
 msgid ""
 "Times are changing. We increase payouts so our clients can make the most of "
@@ -4478,7 +4215,7 @@ msgstr "Transferir a otra cuenta Binary"
 msgid "Triangular Moving Average (TRIMA)"
 msgstr ""
 
-msgid "Triple Exponential Moving Average (T3) (T3)"
+msgid "Triple Exponential Moving Average (T3)"
 msgstr ""
 
 msgid "Triple Exponential Moving Average (TEMA)"
@@ -4543,9 +4280,6 @@ msgid ""
 "and bullish, its Close price is lower than 2nd bar's"
 msgstr ""
 
-msgid "Unlock"
-msgstr "Desbloquear"
-
 msgid "Up to 100% returns on rise/fall trades"
 msgstr ""
 
@@ -4567,9 +4301,6 @@ msgstr "Actualizar a una cuenta real"
 #, fuzzy
 msgid "Upload template"
 msgstr "Cargar plantilla del gráfico"
-
-msgid "Upper Band Stroke"
-msgstr "Stroke de Banda Superior"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr ""
@@ -4638,19 +4369,19 @@ msgstr ""
 msgid "Volatility indices"
 msgstr ""
 
-msgid "Volume Factor"
-msgstr "Factor de Volumen"
-
 msgid "WMA"
 msgstr "WMA"
-
-msgid "WMA Period"
-msgstr "Período WMA"
 
 msgid ""
 "WMA stands for weighted moving average. It helps to smooth the price curve "
 "for better trend identification. It places even greater importance on recent "
 "data than the EMA does"
+msgstr ""
+
+msgid ""
+"We are required by our license to inform you about what happens to funds "
+"which we hold on account for you, and the extent to which funds are "
+"protected in the event of insolvency"
 msgstr ""
 
 msgid ""
@@ -4811,9 +4542,6 @@ msgstr ""
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr ""
 
-msgid "You have excluded yourself until"
-msgstr "Se ha excluido a sí mismo hasta"
-
 msgid "You have sold the following contract"
 msgstr "Han vendido el siguiente contrato"
 
@@ -4851,14 +4579,8 @@ msgstr ""
 msgid "Your account is locked, please contact customer support for more info"
 msgstr ""
 
-msgid "Your browser doesn't support copy to clipboard"
-msgstr "Su navegador no es compatible con copiar al portapapeles"
-
 msgid "Your browser is not supported"
 msgstr "Su navegador no es compatible"
-
-msgid "Your changes have been updated"
-msgstr "Se han actualizado sus cambios"
 
 msgid "Your email"
 msgstr "Su correo electrónico"
@@ -4883,9 +4605,6 @@ msgstr "Su número de referencia de la transacción es"
 msgid "Zoom"
 msgstr "Zoom"
 
-msgid "admin"
-msgstr "admin"
-
 msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
@@ -4893,6 +4612,9 @@ msgstr ""
 
 msgid "and"
 msgstr "y"
+
+msgid "apostrophe (') are allowed"
+msgstr ""
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
@@ -4949,23 +4671,6 @@ msgstr "punto de entrada"
 
 msgid "exit spot"
 msgstr "punto de salida"
-
-msgid "feed is delayed by"
-msgstr "feed es retrasado por"
-
-msgid "for API calls that can access the cashier"
-msgstr "para llamadas de API que pueden acceder a la caja"
-
-msgid "for API calls that can create trades in the client account"
-msgstr ""
-"para llamadas de API que pueden crear transacciones en la cuenta del cliente"
-
-msgid "for API calls that change client settings"
-msgstr ""
-"para las llamadas de API que pueden cambiar la configuración del cliente"
-
-msgid "for API calls that only read client data"
-msgstr "para llamadas de API que solo leen datos del cliente"
 
 msgid "for mobile charts"
 msgstr "para los gráficos móviles"
@@ -5030,8 +4735,8 @@ msgstr "es cuando el contrato es procesado por nuestros servidores y el"
 msgid "main site"
 msgstr "sitio web principal"
 
-msgid "market is presently closed"
-msgstr "el mercado está actualmente cerrado"
+msgid "medium protection"
+msgstr ""
 
 msgid "minute"
 msgstr "minuto"
@@ -5054,17 +4759,11 @@ msgstr ""
 msgid "payment agent"
 msgstr "agente de pago"
 
-msgid "payments"
-msgstr "pagos"
-
 msgid "please play responsibly. Read about"
 msgstr "por favor juegue responsablemente. Lea sobre"
 
 msgid "points"
 msgstr "puntos"
-
-msgid "read"
-msgstr "leer"
 
 msgid "second"
 msgstr "segundo"
@@ -5093,9 +4792,6 @@ msgstr "tick"
 msgid "ticks"
 msgstr "ticks"
 
-msgid "trade"
-msgstr "comercio"
-
 msgid "trading experience"
 msgstr "experiencia comercial"
 
@@ -5121,6 +4817,367 @@ msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "%D MA Type"
+#~ msgstr "Tipo %D MA"
+
+#~ msgid "%D Period"
+#~ msgstr "Período %D"
+
+#~ msgid "%D Stroke"
+#~ msgstr "%D Stroke"
+
+#~ msgid "%K MA Type"
+#~ msgstr "Tipo %K MA"
+
+#~ msgid "%K Period"
+#~ msgstr "Periodo %K"
+
+#~ msgid "%K Stroke"
+#~ msgstr "%K Stroke"
+
+#~ msgid "-DI Stroke"
+#~ msgstr "-DI Stroke"
+
+#~ msgid "ADX MA Type"
+#~ msgstr "Tipo ADX MA"
+
+#~ msgid "ADX Stroke"
+#~ msgstr "Stroke ADX"
+
+#~ msgid "ATR Period"
+#~ msgstr "Período ATR"
+
+#~ msgid "Acceleration"
+#~ msgstr "Aceleración"
+
+#~ msgid "Account id not found"
+#~ msgstr "ID de cuenta no encontrado"
+
+#~ msgid "Account token not found"
+#~ msgstr "Token de la cuenta no encontrado"
+
+#~ msgid "Applied to"
+#~ msgstr "Aplicado a"
+
+#~ msgid "Aroon Down Stroke"
+#~ msgstr "Aroon Down Stroke"
+
+#~ msgid "Aroon Up Stroke"
+#~ msgstr "Aroon Up Stroke"
+
+#~ msgid "Background Color"
+#~ msgstr "Color de Fondo"
+
+#~ msgid "Blank window"
+#~ msgstr "Ventana en blanco"
+
+#~ msgid "Connection closed"
+#~ msgstr "Conexión cerrada"
+
+#~ msgid "Connection error"
+#~ msgstr "Error de conexión"
+
+#~ msgid "Contract is not yet started"
+#~ msgstr "El contrato no ha comenzado todavía"
+
+#~ msgid "DI Stroke"
+#~ msgstr "DI Stroke"
+
+#~ msgid "DX MA Type"
+#~ msgstr "Tipo DX MA"
+
+#~ msgid "Delete level(s)"
+#~ msgstr "Borrar nivel(es)"
+
+#~ msgid "Double MA Period"
+#~ msgstr "Periodo MA Doble"
+
+#~ msgid "Double MA Type"
+#~ msgstr "MA de Tipo Doble"
+
+#, fuzzy
+#~ msgid "Error getting market information!"
+#~ msgstr "Error al obtener datos para"
+
+#~ msgid "Fast %K MA Type"
+#~ msgstr "%K Tipo MA Rápido"
+
+#~ msgid "Fast %K Period"
+#~ msgstr "Periodo %K Rápido"
+
+#~ msgid "Fast Limit"
+#~ msgstr "Límite Rápido"
+
+#~ msgid "Fast MA Type"
+#~ msgstr "Tipo MA Rápido"
+
+#~ msgid "Fast Period"
+#~ msgstr "Período Rápido"
+
+#~ msgid "High Barrier"
+#~ msgstr "Barrera Alta"
+
+#~ msgid "High Stroke"
+#~ msgstr "Stroke Alto"
+
+#~ msgid "Histogram Color"
+#~ msgstr "Color del Histograma"
+
+#~ msgid "Histogram Color For Higher Values"
+#~ msgstr "Color del Histograma para Valores más Altos"
+
+#~ msgid "Histogram Color For Lower Values"
+#~ msgstr "Color del Histograma para Valores más Bajos"
+
+#~ msgid "Japan accounts are not supported"
+#~ msgstr "No se admiten cuentas de Japón"
+
+#~ msgid "Line Stroke"
+#~ msgstr "Stroke de la Línea"
+
+#~ msgid "Loading self-exclusion settings"
+#~ msgstr "Cargando ajustes de auto exclusión"
+
+#~ msgid "Logging out because of self-exclusion session time out!"
+#~ msgstr "¡Deconectar por que la sesión de autoexclusión ha caducado!"
+
+#~ msgid "Long MA Type"
+#~ msgstr "Tipo MA Largo"
+
+#~ msgid "Long ROC Period"
+#~ msgstr "Período ROC Largo"
+
+#~ msgid "Long Stop Line Stroke"
+#~ msgstr "Stroke de Línea de Parada Larga"
+
+#~ msgid "Long Term Period"
+#~ msgstr "Período de Largo Plazo"
+
+#~ msgid "Low Barrier"
+#~ msgstr "Límite Inferior"
+
+#~ msgid "Low Stroke"
+#~ msgstr "Stroke Bajo"
+
+#~ msgid "Lower Band Stroke"
+#~ msgstr "Stroke de Banda Inferior"
+
+#~ msgid "MA Type"
+#~ msgstr "Tipo MA"
+
+#~ msgid "MACD Line Stroke"
+#~ msgstr "Stroke de Línea MACD"
+
+#~ msgid "Mass Period"
+#~ msgstr "Período Total"
+
+#~ msgid "Max/Min Period"
+#~ msgstr "Período Máx/Mín"
+
+#~ msgid "Maximum"
+#~ msgstr "Máximo"
+
+#~ msgid "Middle Band Stroke"
+#~ msgstr "Stroke de Banda Media"
+
+#~ msgid "Multiplier"
+#~ msgstr "Multiplicador"
+
+#~ msgid "NB Dev Down"
+#~ msgstr "NB Dev Abajo"
+
+#~ msgid "NB Dev Up"
+#~ msgstr "NB Dev Arriba"
+
+#~ msgid "Note that tokens can possess one or more of these scopes"
+#~ msgstr ""
+#~ "Tenga en cuenta que los tokens pueden poseer uno o más de estos ámbitos"
+
+#~ msgid ""
+#~ "Note: Contract will be sold at the prevailing market price when the "
+#~ "request is received by our servers. This price may differ from the "
+#~ "indicated price"
+#~ msgstr ""
+#~ "Nota: El contrato se venderá al precio de mercado que prevalece cuando la "
+#~ "solicitud se reciba por nuestros servidores. Este precio puede diferir "
+#~ "del precio indicado"
+
+#~ msgid "Number of bars on sides"
+#~ msgstr "Número de barras en los lados"
+
+#~ msgid "Offset"
+#~ msgstr "Offset"
+
+#~ msgid "PPO Line Stroke"
+#~ msgstr "Stroke de Linea PPO"
+
+#~ msgid "Period"
+#~ msgstr "Período"
+
+#~ msgid "Period 1"
+#~ msgstr "Período 1"
+
+#~ msgid "Period 2"
+#~ msgstr "Periodo 2"
+
+#~ msgid "Period 3"
+#~ msgstr "Período 3"
+
+#~ msgid "Please choose at least one token scope"
+#~ msgstr "Por favor, elija al menos un ámbito de token"
+
+#~ msgid "Please enter the token name"
+#~ msgstr "Por favor, introduzca el nombre de token"
+
+#~ msgid "Please log in"
+#~ msgstr "Por favor, inicie sesión"
+
+#~ msgid "Plot Color"
+#~ msgstr "Color del Tema"
+
+#~ msgid "Price"
+#~ msgstr "Precio"
+
+#~ msgid "Purchase Time"
+#~ msgstr "Hora de la Compra"
+
+#~ msgid "Resale of this contract is not offered"
+#~ msgstr "La reventa de este contrato no se ofrece"
+
+#~ msgid "Self-Exclusion Facilities"
+#~ msgstr "Instalaciones de Autoexclusión"
+
+#~ msgid "Short MA Type"
+#~ msgstr "Tipo MA Corto"
+
+#~ msgid "Short ROC Period"
+#~ msgstr "Período ROC Corto"
+
+#~ msgid "Short Stop Line Stroke"
+#~ msgstr "Stroke de Línea Parada Corta"
+
+#~ msgid "Short Term Period"
+#~ msgstr "Periodo de Corto Plazo"
+
+#~ msgid "Sigma"
+#~ msgstr "Sigma"
+
+#~ msgid "Signal Line Stroke"
+#~ msgstr "Stroke de Línea de Señal"
+
+#~ msgid "Signal MA Type"
+#~ msgstr "Tipo Señal MA"
+
+#~ msgid "Signal Period"
+#~ msgstr "Periodo de la Señal"
+
+#~ msgid "Single MA Period"
+#~ msgstr "Período MA Único"
+
+#~ msgid "Single MA Type"
+#~ msgstr "Tipo MA Único"
+
+#~ msgid "Slow %D MA Type"
+#~ msgstr "Tipo %D MA Lento"
+
+#~ msgid "Slow %D Period"
+#~ msgstr "Periodo %D Lento"
+
+#~ msgid "Slow %K MA Type"
+#~ msgstr "Tipo %K MA Lento"
+
+#~ msgid "Slow %K Period"
+#~ msgstr "Periodo %K Lento"
+
+#~ msgid "Slow Limit"
+#~ msgstr "Límite Lento"
+
+#~ msgid "Slow MA Type"
+#~ msgstr "Typo MA Lento"
+
+#~ msgid "Slow Period"
+#~ msgstr "Periodo Lento"
+
+#~ msgid "Successfully added new token"
+#~ msgstr "Nuevo token añadido con éxito"
+
+#~ msgid ""
+#~ "There was a market data disruption during the contract period. For real-"
+#~ "money accounts we will attempt to correct this and settle the contract "
+#~ "properly, otherwise the contract will be cancelled and refunded. Virtual-"
+#~ "money contracts will be cancelled and refunded"
+#~ msgstr ""
+#~ "Hubo una interrupción de datos del mercado durante el período del "
+#~ "contrato. Para cuentas de dinero real intentaremos corregirlo y liquidar "
+#~ "el contrato correctamente, sino el contrato será cancelado y devuelto. "
+#~ "Los contratos de dinero virtual serán cancelados y devueltos"
+
+#~ msgid "There was an error"
+#~ msgstr "Hubo un error"
+
+#~ msgid "This contract has expired"
+#~ msgstr "Este contrato ha caducado"
+
+#~ msgid "Time Period"
+#~ msgstr "Período de Tiempo"
+
+#~ msgid "Timeout for websocket request"
+#~ msgstr "Solicitud de tiempo de espera para websocket"
+
+#~ msgid "Unlock"
+#~ msgstr "Desbloquear"
+
+#~ msgid "Upper Band Stroke"
+#~ msgstr "Stroke de Banda Superior"
+
+#~ msgid "Volume Factor"
+#~ msgstr "Factor de Volumen"
+
+#~ msgid "WMA Period"
+#~ msgstr "Período WMA"
+
+#~ msgid "You have excluded yourself until"
+#~ msgstr "Se ha excluido a sí mismo hasta"
+
+#~ msgid "Your browser doesn't support copy to clipboard"
+#~ msgstr "Su navegador no es compatible con copiar al portapapeles"
+
+#~ msgid "Your changes have been updated"
+#~ msgstr "Se han actualizado sus cambios"
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "feed is delayed by"
+#~ msgstr "feed es retrasado por"
+
+#~ msgid "for API calls that can access the cashier"
+#~ msgstr "para llamadas de API que pueden acceder a la caja"
+
+#~ msgid "for API calls that can create trades in the client account"
+#~ msgstr ""
+#~ "para llamadas de API que pueden crear transacciones en la cuenta del "
+#~ "cliente"
+
+#~ msgid "for API calls that change client settings"
+#~ msgstr ""
+#~ "para las llamadas de API que pueden cambiar la configuración del cliente"
+
+#~ msgid "for API calls that only read client data"
+#~ msgstr "para llamadas de API que solo leen datos del cliente"
+
+#~ msgid "market is presently closed"
+#~ msgstr "el mercado está actualmente cerrado"
+
+#~ msgid "payments"
+#~ msgstr "pagos"
+
+#~ msgid "read"
+#~ msgstr "leer"
+
+#~ msgid "trade"
+#~ msgstr "comercio"
 
 #~ msgid "Contract Details"
 #~ msgstr "Detalles del contrato"
