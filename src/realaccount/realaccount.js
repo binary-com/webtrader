@@ -88,6 +88,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                 }
             },
             what_todo: what_todo,
+            input_disabled: what_todo === "upgrade-mf" ? true : false,
             risk: {
                 visible: false,
             },

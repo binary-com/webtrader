@@ -5,27 +5,27 @@
         </div>
         <div class='row'>
             <span class='title'>Title</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='100' rv-selectmenu="user.salutation" rv-selectrefresh="account.salutation_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='100' rv-selectmenu="user.salutation" rv-selectrefresh="account.salutation_array" rv-selectmenu-disabled="input_disabled">
                 <option rv-each-row="user.salutation_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>
             <span class='title'>First name</span>
-            <input rv-value='user.first_name' />
+            <input rv-value='user.first_name' rv-disabled="input_disabled"/>
             <div class='validations'>
                 <span rv-show='user.first_name | eq "" | and empty_fields.validate' class='validation'>* Please enter your first name.</span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Family name</span>
-            <input rv-value='user.last_name' />
+            <input rv-value='user.last_name' rv-disabled="input_disabled"/>
             <div class='validations'>
                 <span rv-show='user.last_name | eq "" | and empty_fields.validate' class='validation'>* Please enter your family name.</span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Date of birth</span>
-            <input type="text" rv-datepicker="user.date_of_birth" numberOfMonths="1">
+            <input type="text" rv-datepicker="user.date_of_birth" numberOfMonths="1" rv-disabled="input_disabled">
             <!-- <input rv-value='user.date_of_birth' /> -->
             <div class='validations'>
                 <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false | and empty_fields.validate' class='validation'>* Please enter a valid date in yyyy-mm-dd format.</span>
