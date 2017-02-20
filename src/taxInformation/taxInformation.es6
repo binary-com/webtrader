@@ -19,7 +19,7 @@ liveapi.events.on("login", (data) => {
                     win = windows.createBlankWindow($($html).i18n(), {
                         title: "Tax Information".i18n(),
                         width: 700,
-                        height: 280,
+                        height: 'auto',
                         resizable: false,
                         collapsable: false,
                         minimizable: false,
@@ -46,7 +46,7 @@ liveapi.events.on("login", (data) => {
                         },
                         place_of_birth: data[1].residence_list[0].value,
                         tax_residence: '',
-                        tax_identification_number: '',
+                        tax_identification_number: null,
                         country_array: data[1].residence_list,
                         submit_disabled: false,
                         cancel: () => {
