@@ -4,7 +4,7 @@ Binary.com's Spread Contracts are leveraged derivative contracts, the value of w
 
 Binary.com's Spread Contracts require a 'stop loss' which limits the maximum losses incurred by a client. This 'stop loss' amount will act as a deposit and may not be used for further trading until that Spread Contract is closed. Spread Contracts are closed when sold by the client, upon hitting the 'stop loss' or 'stop profit' level.
 
-###Example:
+####Example:
 
 The entry spot of an instrument XYZ is 1000 and the spread on this instrument is 2 points.
 
