@@ -16,6 +16,9 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
           });
         });
         $("#nav-menu li").each(function(){
+          var class_name = $(this).attr("class") && $(this).attr("class").split(" ")[0];
+          if(class_name=== "account" || class_name === "login")
+            return;
           $(this).unbind("click").on("click", function(){
             if($(this)[0].lastChild.nodeName === "A"){
               $(this).trigger("mouseleave");
