@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2017-02-15 06:44+0000\n"
+"PO-Revision-Date: 2017-02-20 03:37+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_CN/>\n"
@@ -244,24 +244,24 @@ msgid ""
 msgstr "- 在上涨、下跌、横盘整理、交易清淡和震荡市场中交易外汇、指数、大宗商品及其它"
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "- 交易黄金和原油等主要大宗商品"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "- 上涨/下跌，触及/未触及，范围内/范围外"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr ""
+msgstr "- 我们保证您无法找到比我们回报率更高的网站"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- 无论投入多少资金进行交易，均可获得同等回报率"
 
 msgid "- you know from the start what you will win or lose"
-msgstr ""
+msgstr "- 开始交易前您已知道赢或输的金额"
 
 msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
-msgstr ""
+msgstr "- 我们将永不向您追加保证金、不会有缺口风险、或收取滑价费用、隐藏费或佣金"
 
 msgid "-DI Stroke"
 msgstr "-DI 波幅"
@@ -288,7 +288,7 @@ msgid "1 Tick"
 msgstr "1跳动点"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1百万笔交易/天"
 
 msgid "1-2 years"
 msgstr "1-2 年"
@@ -312,7 +312,7 @@ msgid "15m"
 msgstr "15分钟"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1天"
@@ -336,40 +336,40 @@ msgid "2 Minutes"
 msgstr "2分钟"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "双向报价"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2小时"
@@ -449,18 +449,19 @@ msgid ""
 "within the body of the first candle and in doing so confirming the reversal. "
 "It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
+"十字夜星包括长线看涨烛图， 接下来是其上有缺口的十字图，然后是在首个烛图主体内完整收盘并同时确认翻转的第三看跌烛图。被视为强大的看跌价翻转烛台形态"
 
 msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
 "and an Exponential Moving Average, only with a longer period applied"
-msgstr ""
+msgstr "平滑移动平均线类似简单移动平均线与指数移动平均线的混合，但应用期限较长"
 
 msgid ""
 "A Spinning Top Candlestick is a bullish or bearish candlestick with a small "
 "body. The length of the head and tail shadows can vary. Like a Doji "
 "Candlestick it represents a point of indecision with buyers and seller "
 "matched"
-msgstr ""
+msgstr "陀螺型蜡烛线是体型较小的看涨或看跌蜡烛线。影子头部和尾部长度不一。它与十字星蜡烛线一样代表买卖双方相符时的犹疑不决点"
 
 msgid ""
 "A Stays Between trade pays out if the market stays between (does not touch) "
@@ -469,6 +470,8 @@ msgid ""
 "EITHER the high barrier or the low barrier at any time during the period "
 "chosen by a trader"
 msgstr ""
+"如果市场在所选期限内一直保持在（没有触及）高障碍或低障碍之间，所选择的“保持在范围之内”交易即可获利。如果市场在所选期限内只要触及高障碍或低障碍，所选择的"
+"“超出范围之外”交易即可获利"
 
 msgid ""
 "A bearish candlestick pattern consisting of three candles that have "
