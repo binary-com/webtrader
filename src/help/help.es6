@@ -47,7 +47,8 @@ const init = () => {
             loading: false,
             sublist: null,
             content_page: null,
-            content: null
+            content: null,
+            show_clear: false
         },
         list: [{
             text: "About Binary.com".i18n(),
@@ -253,13 +254,24 @@ const init = () => {
     state.search = (e) => {
         const query = $(e.target).val().toLowerCase();
         if (query.length > 0) {
+            state.current.show_clear = true;
             state.current.list = null;
             state.current.content_page = null;
             state.current.sublist = sublist_items.filter((item) => {
                 return item.text.toLowerCase().indexOf(query) != -1;
             });
             /*Extract search text from content*/
-            state.content = getContent(query);
+            const content = getContent(query);
+
+            // Formatting content to show in a particular format;
+            state.current.content = '<div class="search-text">' + content.reduce(function(prev, curr) {
+                let formatted = "<a href=\"#\"><h3>" + curr.title + "</h3></a>" +
+                    "<strong>" + curr.title_s + "</strong>" +
+                    "<br/><br/>" + curr.description;
+                prev = prev ? prev + "<hr>" + formatted : formatted;
+                return prev
+            }, '') + '</div>';
+
             /*
             state.current.content = */
             if (state.current.content)
@@ -268,6 +280,8 @@ const init = () => {
                         state.openSublist($(e.target).text());
                     };
                 });
+        } else {
+            show_clear = false;
         }
     }
 
@@ -276,8 +290,12 @@ const init = () => {
         state.current.sublist = sublist_items.filter((item) => {
             return item.text.toLowerCase().indexOf(sublist_name.toLowerCase()) != -1;
         });
-        console.log(sublist_name, state.current.sublist);
         state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
+    }
+
+    state.clearSearch = () => {
+        $(".help-dialog .help-search").val("");
+        state.current.show_clear = false;
     }
 
     //Concat all the sublist items into one array so that we can later use it for searching.
@@ -285,83 +303,53 @@ const init = () => {
         sublist_items = sublist_items.concat(state.sublist[key]);
     }
 
-    // Create an array of all the text section wise, to be used later for searching.
-
-
     const getContent = (q) => {
         const walker = document.createTreeWalker($("<div/>").append($content)[0], NodeFilter.SHOW_ELEMENT);
         let subSectionArray = [];
         let descriptionArray = [];
         let title = '',
             title_s = '';
-        while (walker.nextNode()) {
+        while (1) {
             let description = '';
-            if (walker.currentNode.nodeName == "H2") {
+            if (walker.currentNode.nodeName == "DIV" && walker.currentNode.id) {
+                title = "";
+                title_s = "";
+                description = "";
+            } else if (walker.currentNode.nodeName == "H2") {
                 title = walker.currentNode.innerText;
                 title_s = "";
             } else if (walker.currentNode.nodeName == "H3") {
                 title_s = walker.currentNode.innerText;
                 if (title_s.toLowerCase().indexOf(q) != -1) {
                     while (walker.nextNode()) {
-                        console.log(walker.currentNode);
-                        if (walker.currentNode.nodeName == "H2" || walker.currentNode.nodeName == "H3")
+                        if (walker.currentNode.nodeName == "DIV" || walker.currentNode.nodeName == "H3")
                             break;
                         description = description + walker.currentNode.innerHTML;
                     }
+
                     subSectionArray.push({
                         title: title,
                         title_s: title_s,
                         description: description
                     });
+                    continue;
                 }
-            } else if (walker.currentNode.innerText.toLowerCase().indexOf(q) != -1) {
+            } else if (walker.currentNode.nodeName !== "DIV" && walker.currentNode.nodeName !== "H2" &&
+                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) != -1) {
                 const index = walker.currentNode.innerText.toLowerCase().indexOf(q);
-                description = "..." + walker.currentNode.innerText.substr(index, 100) + "...";
+                description = "<p>..." + walker.currentNode.innerText.substr(index, 100) + "...</p>";
                 descriptionArray.push({
                     title: title,
                     title_s: title_s,
                     description: description
                 });
             }
+
+            if (!walker.nextNode())
+                break;
         }
-        console.log(descriptionArray, subSectionArray);
+        return subSectionArray.concat(descriptionArray);
     }
-
-    /*const searchSubsection = (query) => {
-        // Create copy for modifying the array and passing it to the next function.
-        const temp_content_array = JSON.parse(JSON.stringify(content_array));
-        const content = temp_content_array.reduce(function(content, elem) {
-            const subContent = elem.subSection.reduce(function(text, ele) {
-                if (ele.title && ele.title.toLowerCase().indexOf(query) != -1 && ele.description.replaceAll("\n", "")) {
-                    elem.text = elem.text.replace(ele.title, "").replace(ele.description, "");
-                    return text + "<strong>" + ele.title + "</strong>" + "<p>" + ele.description + "</p>"
-                }
-                return text;
-            }, '');
-            if (subContent) {
-                const html = "<a href='#'><h3>" + elem.section.text + "</h3></a>" + subContent;
-                content = content ? content + "<hr>" + html : html;
-            }
-            return content;
-        }, '');
-        return { query: query, content: content ? content : '', array: temp_content_array};
-    }
-
-    const searchDescription = (some) => {
-        const content = some.array.reduce(function(content, ele) {
-            const index = ele.text.toLowerCase().indexOf(some.query);
-            if (index != -1) {
-                const subtext = ele.text.substr(index, 100).replaceAll("\n", "<br>");
-                const html = "<a href='#'><h3>" + ele.section.text + "</h3></a>" +
-                    "<p>..." + subtext + "...</p>"
-                content = content ? content + "<hr>" + html : html;
-            }
-            return content;
-        }, '');
-        return '<div class="search-text">' + (some.content && content ? some.content + "<hr>" : some.content) + content +
-            "</div>";
-    }*/
-
 
     //Show the about us page initially
     state.current.list = state.list[0];
