@@ -250,7 +250,7 @@ export const drawChart = (containerIDWithHash, options, onload) => {
 
         chart: {
             events: {
-                load: function() {
+                load: function(event) {
 
                     this.showLoading();
                     currentPrice.init();
@@ -270,6 +270,9 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                             chart && chart.showLoading(msg);
                             console.error(err);
                         }).then(() => {
+                            if ($.isFunction(onload)) {
+                                onload("ASdas");
+                            }
                             const chart = $(containerIDWithHash).highcharts();
                             /* the data is loaded but is not applied yet, its on the js event loop,
                                wait till the chart data is applied and then add the indicators */
@@ -280,10 +283,8 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                                 });
                             }, 0);
                         });
-                    })
-                    if ($.isFunction(onload)) {
-                        onload();
-                    }
+                    });
+
                     if (isAffiliates() && isHideFooter()) {
                         $(this.credits.element).remove();
                         this.margin[2] = 5;
