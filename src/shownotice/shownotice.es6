@@ -71,11 +71,11 @@ export const init = (triggered_by) => {
                 });
                 if (triggered_by === "event" && (account_status === "locked" || account_status === "withdrawal_allowed")) {
                     win.dialog("open");
-                    reject({ msg: "Problem with account" });
+                    reject({ message: "Problem with account" });
                 }
                 if (triggered_by === "withdrawal" && account_status !== "withdrawal_allowed") {
                     win.dialog("open");
-                    reject({ msg: "Withdrawal not allowed" });
+                    reject({ message: "Withdrawal not allowed" });
                 }
                 if (triggered_by === "deposit" && (account_status === "locked" || account_status === "cashier_locked")) {
                     win.dialog("open");
