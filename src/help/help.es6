@@ -78,13 +78,13 @@ const init = () => {
                 id: "group-history"
             }],
             getting_started: [{
-                text: "Why choose Binary Trading".i18n(),
+                text: "Why choose Binary Trading?".i18n(),
                 id: "why-binary"
             }, {
                 text: "Benefits of Binary Trading".i18n(),
                 id: "binary-benefits"
             }, {
-                text: "How to trade Binaries".i18n(),
+                text: "How to trade Binaries?".i18n(),
                 id: "trade-binaries"
             }],
             trade_types: [{
@@ -281,7 +281,7 @@ const init = () => {
                     };
                 });
         } else {
-            show_clear = false;
+            state.current.show_clear = false;
         }
     }
 
@@ -290,6 +290,9 @@ const init = () => {
         state.current.sublist = sublist_items.filter((item) => {
             return item.text.toLowerCase().indexOf(sublist_name.toLowerCase()) != -1;
         });
+        if (sublist_name.toLowerCase().indexOf("The premier platform".toLowerCase()) != -1) {
+            state.current.sublist = [sublist_items[0]]; //About us page
+        }
         state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
     }
 
