@@ -6,13 +6,17 @@ import $html from 'text!./taxInformation.html';
 import liveapi from 'websockets/binary_websockets';
 import 'common/util';
 import 'jquery-growl'
-
+let win = null;
 liveapi.events.on("login", (data) => {
     if (Cookies.loginids()[0].is_mf)
         liveapi.send({ "get_account_status": 1 }).then((data) => {
             if (!/crs_tin_information/.test(data.get_account_status.status)) {
+                if (win) {
+                    win.moveToTop();
+                    return;
+                }
                 Promise.all([liveapi.send({ "get_settings": 1 }), liveapi.send({ residence_list: 1 })]).then((data) => {
-                    const win = windows.createBlankWindow($($html).i18n(), {
+                    win = windows.createBlankWindow($($html).i18n(), {
                         title: "Tax Information".i18n(),
                         width: 700,
                         height: 'auto',
@@ -26,6 +30,7 @@ liveapi.events.on("login", (data) => {
                         ignoreTileAction: true,
                         close: () => {
                             win.dialog('destroy');
+                            win = null
                         }
                     });
                     const state = {
