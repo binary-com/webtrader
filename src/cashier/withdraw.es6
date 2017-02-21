@@ -27,17 +27,13 @@ class Withdraw {
     init = li => {
         li.click(() => {
             if (!win) {
-                liveapi.cached.authorize().then(data => {
-                        if (!data.authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
-                            return currencyDialog.check_currency();
-                        return true; // OK
-                    })
-                    .then(() => {
-                        checkAccountStatus.init("withdrawal").then(() => {
-                            this._init_win(html)
-                        }).catch(err => { console.error(err.message) });
-                    })
-                    .catch(error_handler);
+                Promise.all([liveapi.cached.authorize(), checkAccountStatus.init("withdrawal")]).then(data => {
+                    if (!data[0].authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
+                        return currencyDialog.check_currency();
+                    return true; // OK
+                }).then(() => {
+                    this._init_win(html)
+                }).catch(error_handler);
             } else
                 win.moveToTop();
         });

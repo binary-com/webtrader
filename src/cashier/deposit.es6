@@ -26,18 +26,13 @@ const error_handler = function(err) {
 export function init(li) {
     li.click(() => {
         if (!deposit_win) {
-            liveapi.cached.authorize().then(data => {
-                    if (!data.authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
-                        return currencyDialog.check_currency();
-                    return true; // OK
-                })
-                .then(() => {
-                    //Check if deposit is allowed or not.
-                    checkAccountStatus.init("deposit").then(() => {
-                        init_deposit_win(html);
-                    }).catch(err => { console.error(err.message) });
-                })
-                .catch(error_handler);
+            Promise.all([liveapi.cached.authorize(), checkAccountStatus.init("deposit")]).then(data => {
+                if (!data[0].authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
+                    return currencyDialog.check_currency();
+                return true; // OK
+            }).then(() => {
+                init_deposit_win(html);
+            }).catch(error_handler);
         } else
             deposit_win.moveToTop();
     });
