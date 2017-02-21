@@ -44,7 +44,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             minimizable: true,
             maximizable: false,
             width: 360,
-            height: 1010,
+            height: 'auto',
             'data-authorized': true,
             close: function() {
                 real_win.dialog('destroy');
@@ -177,7 +177,7 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
                 user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
                 (state.what_todo != "upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
                 (state.what_todo != "upgrade-mf" || (state.user.place_of_birth &&
-                    state.user.tax_residence && state.user.tax_identification_number && /^[\w-]{0,20}/.test(state.user.tax_identification_number)));
+                    state.user.tax_residence && state.user.tax_identification_number && /^[\w-]{0,20}$/.test(state.user.tax_identification_number)));
         };
 
         state.user.click = function() {
@@ -380,7 +380,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
         residence_promise
             .then(function() {
-                return liveapi.cached.send({ residence_list: 1 }); })
+                return liveapi.cached.send({ residence_list: 1 });
+            })
             .then(function(data) {
                 state.user.country_array = data.residence_list;
                 state.user.place_of_birth = data.residence_list[0].value;
@@ -391,7 +392,8 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
 
         residence_promise
             .then(function() {
-                return liveapi.cached.send({ states_list: state.user.residence }); })
+                return liveapi.cached.send({ states_list: state.user.residence });
+            })
             .then(function(data) {
                 state.user.state_address_array = data.states_list;
                 state.user.state_address = data.states_list[0].value;
