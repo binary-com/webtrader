@@ -129,7 +129,7 @@ define(["jquery","charts/chartingRequestMap", "websockets/binary_websockets", "w
                     .simplesort('time', false)
                     .data();
                 lines = lines.concat(bars.map(function (b) {
-                    return ohlc ? ['"' + moment.utc(b.time).format('YYYY-MM-DD HH:mm') + '"', b.open, b.high, b.low, b.close].join(',') : ['"' + moment.utc(b.time).format('YYYY-MM-DD HH:mm') + '"', b.close].join(',');
+                    return ohlc ? ['"' + moment.utc(b.time).format('YYYY-MM-DD HH:mm') + '"', b.open, b.high, b.low, b.close].join(',') : ['"' + moment.utc(b.time).format('YYYY-MM-DD HH:mm:ss') + '"', b.close].join(',');
                 }));
             }
             else {
