@@ -48,16 +48,6 @@ export const addNewWindow = function(options) {
         resize: _trigger_Resize_Effects,
         refresh: function() {
             charts.refresh('#' + id + '_chart');
-        },
-        open: function() {
-            const dialog = $(this);
-            $(this).parent().promise().done(function() {
-                setTimeout(function() {
-                    const table_view = tableView.init(dialog);
-                    chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName, options.instrumentCode);
-                }, 0);
-
-            });
         }
     }, options);
     const dialog = windows.createBlankWindow($($chartWindowHtml).i18n(), options),
@@ -102,7 +92,8 @@ export const addNewWindow = function(options) {
     dialog.dialog('open');
     /* initialize chartOptions & table-view once chart is rendered */
     charts.drawChart("#" + id + "_chart", options, options.resize.bind($(dialog)));
-
+    const table_view = tableView.init(dialog);
+    chartOptions.init(id, options.timePeriod, options.type, table_view.show, options.instrumentName, options.instrumentCode);
 
     return dialog;
 }

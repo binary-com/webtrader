@@ -271,7 +271,7 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                             console.error(err);
                         }).then(() => {
                             if ($.isFunction(onload)) {
-                                onload("ASdas");
+                                onload();
                             }
                             const chart = $(containerIDWithHash).highcharts();
                             /* the data is loaded but is not applied yet, its on the js event loop,
