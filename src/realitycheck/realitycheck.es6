@@ -8,7 +8,7 @@ import rv from '../common/rivetsExtra';
 import _ from 'lodash';
 import moment from 'moment';
 import 'jquery-growl';
-import 'common/util';
+import '../common/util';
 
 let win = null, timerHandler = null, promises= [];
 const FIRST_SCREEN_HEIGHT = 260, SECOND_SCREEN_HEIGHT = 310;
