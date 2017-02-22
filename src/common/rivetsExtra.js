@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline', 'ddslick','chosen'], function (_, $, rv, moment) {
+define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline', 'ddslick','chosen', 'color-picker'], function (_, $, rv, moment) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -434,50 +434,50 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
     rv.binders['dialog-*'] = function (el, value) {
         $(el).dialog('option', this.args[0], value);
     }
-      rv.binders['color-picker'] = {
-          priority: 96,
-          publishes: true,
-          bind: function (el) {
-              var input = $(el);
+    rv.binders['color-picker'] = {
+        priority: 96,
+        publishes: true,
+        bind: function (el) {
+           var input = $(el);
 
-              var publish = this.publish;
-              var model = this.model;
-              var color = model.value || '#cd0a0a';
+           var publish = this.publish;
+           var model = this.model;
+           var color = model.value || '#cd0a0a';
 
-               var altField = $('<div style="width:100%;"/>');
-               input.after(altField);
+            var altField = $('<div style="width:100%;"/>');
+            input.after(altField);
 
-               input.colorpicker({
-                  showOn: 'alt',
-                  altField: altField,
-                  position: {
-                     my: "left-100 bottom+5",
-                     of: "element",
-                     collision: "fit"
-                  },
-                  parts:  [ 'map', 'bar' ],
-                  alpha:  true,
-                  layout: {
-                     map: [0, 0, 2, 2],
-                     bar: [2, 0, 1, 2],
-                  },
-                  colorFormat: "RGBA",
-                  part: { map: {size: 128}, bar: {size: 128} },
-                  select: function (event, color) {
-                     publish(color);
-                  },
+            input.colorpicker({
+               showOn: 'alt',
+               altField: altField,
+               position: {
+                  my: "left-100 bottom+5",
+                  of: "element",
+                  collision: "fit"
+               },
+               parts:  [ 'map', 'bar' ],
+               alpha:  true,
+               layout: {
+                  map: [0, 0, 2, 2],
+                  bar: [2, 0, 1, 2],
+               },
+               colorFormat: "RGBA",
+               part: { map: {size: 128}, bar: {size: 128} },
+               select: function (event, color) {
+                  publish(color);
+               },
+            });
+          
+            setTimeout(function() {
+               parent = input.scrollParent();
+               parent.scroll(function() {
+                  input.colorpicker('close');
                });
-             
-               setTimeout(function() {
-                  parent = input.scrollParent();
-                  parent.scroll(function() {
-                     input.colorpicker('close');
-                  });
-               }, 1000);
-          },
-          unbind: function (el) { },
-          routine: function (el, value) { }
-      }
+            }, 1000);
+        },
+        unbind: function (el) { },
+        routine: function (el, value) { }
+    }
 
     rv.binders.slider = {
         priority: 95,
