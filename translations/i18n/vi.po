@@ -14,23 +14,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.11-dev\n"
 
-msgid "%D MA Type"
-msgstr "Kiểu %D MA"
-
-msgid "%D Period"
-msgstr "%D Thời hạn"
-
-msgid "%D Stroke"
-msgstr "%D Nét"
-
-msgid "%K MA Type"
-msgstr "%K Kiểu MA"
-
-msgid "%K Period"
-msgstr "%K Kì hạn"
-
-msgid "%K Stroke"
-msgstr "%K Nét"
+msgid ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
+msgstr ""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
@@ -71,6 +58,9 @@ msgstr ""
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
+msgstr ""
+
+msgid "'contract period'"
 msgstr ""
 
 msgid "(One) Touch trades"
@@ -268,9 +258,6 @@ msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
 msgstr ""
-
-msgid "-DI Stroke"
-msgstr "-DI Nét"
 
 msgid "0-1 year"
 msgstr "0-1 năm"
@@ -634,17 +621,8 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "ADX MA Type"
-msgstr "Kiểu ADX MA"
-
-msgid "ADX Stroke"
-msgstr "Nét ADX"
-
 msgid "AM"
 msgstr "AM"
-
-msgid "ATR Period"
-msgstr "Thời gian ATR"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
@@ -652,26 +630,20 @@ msgstr ""
 msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
-msgid "Acceleration"
-msgstr "Gia tốc"
-
 msgid "Accept"
 msgstr "Chấp nhận"
 
 msgid "Account balance"
 msgstr "Số dư tài khoản"
 
-msgid "Account id not found"
-msgstr "Không tìm thấy id tài khoản"
-
 msgid "Account opening"
 msgstr "Tài khoản đang mở"
 
-msgid "Account token not found"
-msgstr "Không tìm thấy token tài khoản"
-
 msgid "Action"
 msgstr "Hành động"
+
+msgid "Add"
+msgstr ""
 
 msgid "Add comparisons"
 msgstr "Thêm các so sánh"
@@ -741,9 +713,6 @@ msgstr ""
 msgid "Answer"
 msgstr "Câu trả lời"
 
-msgid "Applied to"
-msgstr "Áp dụng cho"
-
 msgid "Apply"
 msgstr "Áp dụng"
 
@@ -768,14 +737,8 @@ msgstr ""
 msgid "Aroon (AROON)"
 msgstr ""
 
-msgid "Aroon Down Stroke"
-msgstr "Aroon Xuống"
-
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
-
-msgid "Aroon Up Stroke"
-msgstr "Aroon Lên"
 
 msgid "Asian down"
 msgstr "Châu Á xuống"
@@ -824,9 +787,6 @@ msgstr "Trở lại"
 
 msgid "Back to list"
 msgstr "Quay lại danh sách"
-
-msgid "Background Color"
-msgstr "Màu nền"
 
 msgid "Balance of Power (BOP)"
 msgstr ""
@@ -1061,9 +1021,6 @@ msgid ""
 "day (including virtual accounts)"
 msgstr ""
 
-msgid "Blank window"
-msgstr "Cửa sổ trống"
-
 msgid "Bollinger Bands (BBANDS)"
 msgstr ""
 
@@ -1107,6 +1064,25 @@ msgstr "ĐÓNG"
 
 msgid "CSV"
 msgstr "CSV"
+
+msgid ""
+"Can be used to buy and sell contracts, renew expired purchases, and top-up "
+"virtual-money accounts."
+msgstr ""
+
+msgid ""
+"Can be used to open accounts, set settings, manage token usage, and more."
+msgstr ""
+
+msgid ""
+"Can be used to view account activity, including settings, limits, balance "
+"sheets, trade purchase history, and more."
+msgstr ""
+
+msgid ""
+"Can be used to withdraw to payment agents, transfer funds between accounts, "
+"and set / clear cashier passwords."
+msgstr ""
 
 msgid "Cancel"
 msgstr "Hủy bỏ"
@@ -1243,9 +1219,6 @@ msgstr ""
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Clear"
-msgstr "Xóa"
-
 msgid "Click Jacking test"
 msgstr "Nhấp vào kiểm tra Jacking"
 
@@ -1293,12 +1266,6 @@ msgstr "Thay đổi cấu hình thành công"
 msgid "Confirm transfer"
 msgstr "Xác nhận chuyển khoản"
 
-msgid "Connection closed"
-msgstr "Kết nối đã đóng"
-
-msgid "Connection error"
-msgstr "Lỗi kết nối"
-
 msgid "Construction"
 msgstr "Xây dựng"
 
@@ -1316,9 +1283,6 @@ msgstr "Hợp đồng"
 
 msgid "Contract Confirmation"
 msgstr "Xác nhận hợp đồng"
-
-msgid "Contract is not yet started"
-msgstr "Hợp đồng chưa được bắt đầu"
 
 msgid "Contract period"
 msgstr ""
@@ -1381,12 +1345,6 @@ msgstr "Chủ đề tùy chỉnh"
 msgid "Customize chart appearance"
 msgstr "Tùy chỉnh bề ngoài bảng"
 
-msgid "DI Stroke"
-msgstr "Nét DI"
-
-msgid "DX MA Type"
-msgstr "Kiểu DX MA"
-
 msgid "Daily limit on losses"
 msgstr "Giới hạn hàng ngày cho thua"
 
@@ -1445,9 +1403,6 @@ msgstr ""
 
 msgid "Delete"
 msgstr "Xóa bỏ"
-
-msgid "Delete level(s)"
-msgstr "Xóa level(s)"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Giới thiệu cho các chi nhánh để truy cập vào bảng xếp hạng Webtrader"
@@ -1559,12 +1514,6 @@ msgstr "Dấu chấm"
 
 msgid "Double Exponential Moving Average (DEMA)"
 msgstr ""
-
-msgid "Double MA Period"
-msgstr "Gấp đôi thời gian MA"
-
-msgid "Double MA Type"
-msgstr "Gấp đôi kiểu MA"
 
 msgid "Double click the object to remove"
 msgstr "Nhấp đúp chuột vào đối tượng để loại bỏ"
@@ -1683,9 +1632,6 @@ msgstr "Lỗi tải xuống tệp .csv"
 msgid "Error getting data for %1"
 msgstr "Lỗi lấy dữ liệu cho %1"
 
-msgid "Error getting market information!"
-msgstr "Lỗi nhận thông tin thị trường!"
-
 msgid "Estimated Net Worth"
 msgstr "Ước tính giá trị ròng"
 
@@ -1730,21 +1676,6 @@ msgstr ""
 
 msgid "Family name"
 msgstr "Họ"
-
-msgid "Fast %K MA Type"
-msgstr "Kiểu %K MA nhanh"
-
-msgid "Fast %K Period"
-msgstr "Thời gian %K nhanh"
-
-msgid "Fast Limit"
-msgstr "Giới hạn nhanh"
-
-msgid "Fast MA Type"
-msgstr "Kiểu MA nhanh"
-
-msgid "Fast Period"
-msgstr "Thời gian nhanh"
 
 msgid "Favorites"
 msgstr "Yêu thích"
@@ -1871,6 +1802,9 @@ msgstr "Ô lưới"
 msgid "Grid Light"
 msgstr "Ô lưới nhẹ"
 
+msgid "Group History"
+msgstr ""
+
 msgid "HIGH"
 msgstr "CAO"
 
@@ -1895,14 +1829,8 @@ msgstr "Sức khỏe"
 msgid "Help"
 msgstr ""
 
-msgid "High Barrier"
-msgstr "Barie cao"
-
 msgid "High Price"
 msgstr "Giá cao"
-
-msgid "High Stroke"
-msgstr "Stroke cao"
 
 msgid "High barrier"
 msgstr "Hàng rào cao"
@@ -1927,15 +1855,6 @@ msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr ""
-
-msgid "Histogram Color"
-msgstr "Màu sắc biểu đồ"
-
-msgid "Histogram Color For Higher Values"
-msgstr "Màu sắc biểu đồ cho giá trị cao hơn"
-
-msgid "Histogram Color For Lower Values"
-msgstr "Màu sắc biểu đồ cho giá trị thấp hơn"
 
 msgid "Home Address"
 msgstr "Địa chỉ nhà"
@@ -2163,14 +2082,8 @@ msgstr ""
 msgid "Instrument"
 msgstr "Công cụ"
 
-msgid "Instrument Code Unknown/Unavailable!"
-msgstr "Mã công cụ không xác định/Không có sẵn!"
-
 msgid "Instruments"
 msgstr "Công cụ"
-
-msgid "Invalid parameter(s)!"
-msgstr "Thông số không hợp lệ!"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
@@ -2205,9 +2118,6 @@ msgstr "Tháng một"
 
 msgid "January"
 msgstr "Tháng một"
-
-msgid "Japan accounts are not supported"
-msgstr "Tài khoản Nhật Bản không được hỗ trợ"
 
 msgid "Jul"
 msgstr "Tháng bảy"
@@ -2289,6 +2199,9 @@ msgstr "Cấp độ"
 msgid "Level of Education"
 msgstr "Cấp độ giáo dục"
 
+msgid "Levels"
+msgstr ""
+
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
 "Ireland, and Japan"
@@ -2305,9 +2218,6 @@ msgstr "Dòng kẻ"
 
 msgid "Line Dot"
 msgstr "Dòng chấm"
-
-msgid "Line Stroke"
-msgstr "Đường Stroke"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr ""
@@ -2366,9 +2276,6 @@ msgstr ""
 msgid "Loading portfolio"
 msgstr "Đang tải danh mục đầu tư"
 
-msgid "Loading self-exclusion settings"
-msgstr "Đang tải chỉnh sửa Tự Loại Trừ"
-
 msgid "Loading..."
 msgstr "Đang tải..."
 
@@ -2377,9 +2284,6 @@ msgstr "Đăng nhập"
 
 msgid "Log in time"
 msgstr "Thời gian đăng nhập"
-
-msgid "Logging out because of self-exclusion session time out!"
-msgstr "Đang đăng xuất vì hết hạn phiên Tự Loại Trừ!"
 
 msgid "Login"
 msgstr "Đăng nhập"
@@ -2392,18 +2296,6 @@ msgstr ""
 
 msgid "Long Line Candle (CDLLONGLINE)"
 msgstr ""
-
-msgid "Long MA Type"
-msgstr "Kiểu MA dài"
-
-msgid "Long ROC Period"
-msgstr "Thời gian ROC dài"
-
-msgid "Long Stop Line Stroke"
-msgstr "Đường dừng dài Stroke"
-
-msgid "Long Term Period"
-msgstr "Kì hạn dài"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2437,14 +2329,8 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
-msgid "Low Barrier"
-msgstr "Barie thấp"
-
 msgid "Low Price"
 msgstr "Giá thấp"
-
-msgid "Low Stroke"
-msgstr "Stroke thấp"
 
 msgid "Low barrier"
 msgstr "Hàng rào thấp"
@@ -2457,15 +2343,6 @@ msgstr ""
 
 msgid "Lower"
 msgstr "Thấp hơn"
-
-msgid "Lower Band Stroke"
-msgstr "Nét thấp hơn"
-
-msgid "MA Type"
-msgstr "Kiểu MA"
-
-msgid "MACD Line Stroke"
-msgstr "Đường nét MACD"
 
 msgid ""
 "MACD is a trading indicator used in technical analysis of stock prices.It is "
@@ -2511,9 +2388,6 @@ msgstr ""
 msgid "Mass Index (MASS)"
 msgstr ""
 
-msgid "Mass Period"
-msgstr "Thời lượng lớn"
-
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr ""
 
@@ -2522,12 +2396,6 @@ msgstr "Trận đấu"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr ""
-
-msgid "Max/Min Period"
-msgstr "Thời hạn Tối đa/Tối thiểu"
-
-msgid "Maximum"
-msgstr "Tối đa"
 
 msgid "Maximum (MAX)"
 msgstr ""
@@ -2567,9 +2435,6 @@ msgstr "Thị trấn/thành phố đáng nhớ"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr ""
-
-msgid "Middle Band Stroke"
-msgstr "Nét trung"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
@@ -2627,15 +2492,6 @@ msgstr "Bà"
 
 msgid "Ms"
 msgstr "Cô"
-
-msgid "Multiplier"
-msgstr "Số nhân"
-
-msgid "NB Dev Down"
-msgstr "NB Dev xuống"
-
-msgid "NB Dev Up"
-msgstr "NB Dev Lên"
 
 msgid "Name"
 msgstr "Tên"
@@ -2698,16 +2554,6 @@ msgid ""
 "range values across instruments by using the formula below"
 msgstr ""
 
-msgid "Note that tokens can possess one or more of these scopes"
-msgstr "Lưu ý rằng token có thể có một hoặc nhiều hơn các phạm vi này"
-
-msgid ""
-"Note: Contract will be sold at the prevailing market price when the request "
-"is received by our servers. This price may differ from the indicated price"
-msgstr ""
-"Lưu ý: Hợp đồng sẽ được bán ở mức giá thị trường hiện hành khi nhận được yêu "
-"cầu từ các máy chủ của chúng tôi. Giá này có thể khác với giá chỉ định"
-
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
@@ -2724,9 +2570,6 @@ msgstr "Tháng mười một"
 msgid "Now"
 msgstr "Bây giờ"
 
-msgid "Number of bars on sides"
-msgstr "Số thanh ở các bên"
-
 msgid "OAuth App ID (Optional)"
 msgstr "OAuth App ID (tùy chọn)"
 
@@ -2739,6 +2582,9 @@ msgstr "OHLC"
 msgid "OPEN"
 msgstr "MỞ"
 
+msgid "Occupation"
+msgstr ""
+
 msgid "Oct"
 msgstr "Tháng mười"
 
@@ -2750,9 +2596,6 @@ msgstr "Lẻ"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
-
-msgid "Offset"
-msgstr "Bù đắp"
 
 msgid "Ok"
 msgstr "Ok"
@@ -2780,6 +2623,9 @@ msgid ""
 "trading services. The award recognises BetOnMarkets.com's reliable, fast and "
 "secure online trading for novice and expert traders. At this time, our "
 "website has received over 15 million trades"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
 msgid "Oops... Page Not Available"
@@ -2870,9 +2716,6 @@ msgstr "PM"
 msgid "PNG"
 msgstr "PNG"
 
-msgid "PPO Line Stroke"
-msgstr "Đường nét PPO"
-
 msgid "Page Not Found"
 msgstr "Trang không tìm thấy"
 
@@ -2921,18 +2764,6 @@ msgstr "Trợ cấp"
 msgid "Percentage Price Oscillator (PPO)"
 msgstr ""
 
-msgid "Period"
-msgstr "Thời gian"
-
-msgid "Period 1"
-msgstr "Giai đoạn 1"
-
-msgid "Period 2"
-msgstr "Giai đoạn 2"
-
-msgid "Period 3"
-msgstr "Giai đoạn 3"
-
 msgid "Permissions"
 msgstr "Cấp phép"
 
@@ -2959,9 +2790,6 @@ msgstr "Vui lòng"
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "Xin vui lòng trả lời câu hỏi bí mật, trong vòng 4-50 ký tự"
 
-msgid "Please choose at least one token scope"
-msgstr "Vui lòng chọn ít nhất một phạm vi token"
-
 msgid "Please choose which currency you would like to transact in"
 msgstr "Xin vui lòng chọn loại tiền tệ mà bạn muốn giao dịch tại"
 
@@ -2985,9 +2813,6 @@ msgstr "Vui lòng nhập đúng email"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Vui lòng nhập ngày theo định dạng YYYY-MM-DD"
-
-msgid "Please enter the token name"
-msgstr "Vui lòng nhập tên token"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "Vui lòng nhập mã xác minh được gửi tới email của bạn"
@@ -3022,11 +2847,11 @@ msgstr "Vui lòng nhập số điện thoại của bạn"
 msgid "Please enter your street address"
 msgstr "Vui lòng nhập địa chỉ đường phố của bạn"
 
+msgid "Please input correct token"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers"
 msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
-
-msgid "Please log in"
-msgstr "Vui lòng đăng nhập"
 
 msgid "Please select"
 msgstr "Vui lòng chọn"
@@ -3039,9 +2864,6 @@ msgstr "Hãy sử dụng mật khẩu mới để đăng nhập"
 
 msgid "Plot"
 msgstr "Vẽ"
-
-msgid "Plot Color"
-msgstr "Vẽ màu"
 
 msgid "Pofit/Loss"
 msgstr "Lợi nhận/thiệt hại"
@@ -3077,9 +2899,6 @@ msgstr "Khoảng kiểm tra thực tế ưu tiên"
 
 msgid "Press Create token button on the right to create your first token"
 msgstr "Bấm nút Tạo Token tở phía bên phải để tạo token đầu tiên của bạn"
-
-msgid "Price"
-msgstr "Giá"
 
 msgid "Price Transformation"
 msgstr ""
@@ -3136,9 +2955,6 @@ msgstr "Ngày mua"
 
 msgid "Purchase Price"
 msgstr "Giá mua"
-
-msgid "Purchase Time"
-msgstr "Thời gian mua"
 
 msgid "Quiet markets"
 msgstr ""
@@ -3240,9 +3056,6 @@ msgstr "Đổi tên"
 
 msgid "Repeat password"
 msgstr "Lặp lại mật khẩu"
-
-msgid "Resale of this contract is not offered"
-msgstr "Việc bán lại hợp đồng này là không được phép"
 
 msgid "Resale price"
 msgstr ""
@@ -3346,9 +3159,6 @@ msgstr "Tự làm"
 msgid "Self-Exclusion"
 msgstr "Tự Loại Trừ"
 
-msgid "Self-Exclusion Facilities"
-msgstr "Phương tiện Tự Loại Trừ"
-
 msgid "Sell At Market"
 msgstr "Bán tại thị trường"
 
@@ -3400,18 +3210,6 @@ msgstr "Chia sẻ biểu đồ"
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr ""
 
-msgid "Short MA Type"
-msgstr "Kiểu MA ngắn"
-
-msgid "Short ROC Period"
-msgstr "Thời hạn ROC ngắn"
-
-msgid "Short Stop Line Stroke"
-msgstr "Đường nét dừng ngắn"
-
-msgid "Short Term Period"
-msgstr "Kì hạn ngắn"
-
 msgid "Short to long-term"
 msgstr ""
 
@@ -3433,50 +3231,11 @@ msgid ""
 "downtrend"
 msgstr ""
 
-msgid "Sigma"
-msgstr "Xích ma"
-
-msgid "Signal Line Stroke"
-msgstr "Đường nét dấu hiệu"
-
-msgid "Signal MA Type"
-msgstr "Kiểu dấu hiệu MA"
-
-msgid "Signal Period"
-msgstr "Thời hạn dấu hiệu"
-
 msgid "Simple Moving Average (SMA)"
 msgstr ""
 
 msgid "Simplicity"
 msgstr ""
-
-msgid "Single MA Period"
-msgstr "Thời hạn MA đơn lẻ"
-
-msgid "Single MA Type"
-msgstr "Kiểu MA đơn lẻ"
-
-msgid "Slow %D MA Type"
-msgstr "Kiểu %D MA chậm"
-
-msgid "Slow %D Period"
-msgstr "Chậm %D Thời gian"
-
-msgid "Slow %K MA Type"
-msgstr "Chậm %K kiểu MA"
-
-msgid "Slow %K Period"
-msgstr "Chậm %D Chu kỳ"
-
-msgid "Slow Limit"
-msgstr "Giới hạn chậm"
-
-msgid "Slow MA Type"
-msgstr "Kiểu MA chậm"
-
-msgid "Slow Period"
-msgstr "Thời hạn chậm"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
@@ -3625,9 +3384,6 @@ msgstr "Độ rộng nét"
 
 msgid "Submit"
 msgstr "Gửi"
-
-msgid "Successfully added new token"
-msgstr "Thêm thành công token mới"
 
 msgid "Summation (SUM)"
 msgstr ""
@@ -3995,11 +3751,18 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The company holds customer funds in separate bank accounts to the "
+"operational accounts which would not, in the event of insolvency, form part "
+"of the Company's assets. This meets the Gambling Commission's requirements "
+"for the segregation of customer funds at the level"
+msgstr ""
+
+msgid ""
 "The contract period is the timeframe of a trade. It is also called the "
 "duration"
 msgstr ""
 
-msgid "The duration is the length of a purchased trade (see 'contract period')"
+msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid ""
@@ -4168,20 +3931,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"There was a market data disruption during the contract period. For real-"
-"money accounts we will attempt to correct this and settle the contract "
-"properly, otherwise the contract will be cancelled and refunded. Virtual-"
-"money contracts will be cancelled and refunded"
-msgstr ""
-"Đã có một sự phá vỡ dữ liệu thị trường trong thời gian hợp đồng có hiệu lực. "
-"Đối với tài khoản tiền thật chúng tôi sẽ cố gắng khắc phục điều này và thanh "
-"toán các hợp đồng một cách chuẩn xác, nếu không hợp đồng sẽ được hủy bỏ và "
-"hoàn tiền. Hợp đồng tiền ảo sẽ được hủy bỏ và hoàn trả"
-
-msgid "There was an error"
-msgstr "Đã có lỗi"
-
-msgid ""
 "These are trades where the trader predicts if a market will finish higher or "
 "lower than a specified price target"
 msgstr ""
@@ -4213,9 +3962,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract has expired"
-msgstr "Hợp đồng này đã hết hạn"
 
 msgid "This contract lost"
 msgstr "Hợp đồng này đã thua"
@@ -4305,9 +4051,6 @@ msgstr "Đánh dấu"
 msgid "Tile"
 msgstr "Kiểu xếp ngói"
 
-msgid "Time Period"
-msgstr "Thời hạn"
-
 msgid "Time interval"
 msgstr "Khoảng thời gian"
 
@@ -4316,9 +4059,6 @@ msgstr "Thời gian ra đến khi"
 
 msgid "Time period"
 msgstr "Thời hạn"
-
-msgid "Timeout for websocket request"
-msgstr "Hết thời gian chờ yêu cầu websocket"
 
 msgid ""
 "Times are changing. We increase payouts so our clients can make the most of "
@@ -4464,7 +4204,7 @@ msgstr "Chuyển khoản sang tài khoản nhị phân khác"
 msgid "Triangular Moving Average (TRIMA)"
 msgstr ""
 
-msgid "Triple Exponential Moving Average (T3) (T3)"
+msgid "Triple Exponential Moving Average (T3)"
 msgstr ""
 
 msgid "Triple Exponential Moving Average (TEMA)"
@@ -4529,9 +4269,6 @@ msgid ""
 "and bullish, its Close price is lower than 2nd bar's"
 msgstr ""
 
-msgid "Unlock"
-msgstr "Mở khóa"
-
 msgid "Up to 100% returns on rise/fall trades"
 msgstr ""
 
@@ -4552,9 +4289,6 @@ msgstr "Nâng cấp lên tài khoản Thực"
 
 msgid "Upload template"
 msgstr "Tải mẫu biểu đồ"
-
-msgid "Upper Band Stroke"
-msgstr "Nét lên"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr ""
@@ -4623,19 +4357,19 @@ msgstr ""
 msgid "Volatility indices"
 msgstr ""
 
-msgid "Volume Factor"
-msgstr "Yếu tố khối lượng"
-
 msgid "WMA"
 msgstr "WMA"
-
-msgid "WMA Period"
-msgstr "Thời hạn WMA"
 
 msgid ""
 "WMA stands for weighted moving average. It helps to smooth the price curve "
 "for better trend identification. It places even greater importance on recent "
 "data than the EMA does"
+msgstr ""
+
+msgid ""
+"We are required by our license to inform you about what happens to funds "
+"which we hold on account for you, and the extent to which funds are "
+"protected in the event of insolvency"
 msgstr ""
 
 msgid ""
@@ -4796,9 +4530,6 @@ msgstr ""
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr ""
 
-msgid "You have excluded yourself until"
-msgstr "Bạn đã Tự Loại Trừ bản thân cho đến"
-
 msgid "You have sold the following contract"
 msgstr "Bạn đã bán hợp đồng sau"
 
@@ -4838,14 +4569,8 @@ msgstr ""
 "Tài khoản của bạn đã bị khóa, xin vui lòng liên hệ với hỗ trợ khách hàng để "
 "xem thêm thông tin"
 
-msgid "Your browser doesn't support copy to clipboard"
-msgstr "Trình duyệt của bạn không hỗ trợ sao chép vào clipboard"
-
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
-
-msgid "Your changes have been updated"
-msgstr "Thay đổi của bạn đã được Cập Nhật"
 
 msgid "Your email"
 msgstr "Email của bạn"
@@ -4870,9 +4595,6 @@ msgstr "Số tham chiếu giao dịch của bạn là"
 msgid "Zoom"
 msgstr "Phóng to"
 
-msgid "admin"
-msgstr "admin"
-
 msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
@@ -4880,6 +4602,9 @@ msgstr ""
 
 msgid "and"
 msgstr "và"
+
+msgid "apostrophe (') are allowed"
+msgstr ""
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
@@ -4936,23 +4661,6 @@ msgstr "Điểm khởi đầu"
 
 msgid "exit spot"
 msgstr "Điểm chốt"
-
-msgid "feed is delayed by"
-msgstr "nguồn cấp bị trì hoãn bởi"
-
-msgid "for API calls that can access the cashier"
-msgstr "dành cho các cuộc gọi API mà có thể truy cập vào thu ngân"
-
-msgid "for API calls that can create trades in the client account"
-msgstr ""
-"dành cho các cuộc gọi API mà có thể tạo giao dịch tới tài khoản của khách "
-"hàng"
-
-msgid "for API calls that change client settings"
-msgstr "dành cho các cuộc gọi API mà cò thể thay đổi cài đặt khách hàng"
-
-msgid "for API calls that only read client data"
-msgstr "dành cho các cuộc gọi API mà chỉ có thể đọc dữ liệu khách hàng"
 
 msgid "for mobile charts"
 msgstr "dành cho bảng điện thoại di động"
@@ -5017,8 +4725,8 @@ msgstr "là khi hợp đồng được xử lý bởi các máy chủ của chú
 msgid "main site"
 msgstr "Trang web chính"
 
-msgid "market is presently closed"
-msgstr "thị trường hiện đã đóng cửa"
+msgid "medium protection"
+msgstr ""
 
 msgid "minute"
 msgstr "phút"
@@ -5041,17 +4749,11 @@ msgstr ""
 msgid "payment agent"
 msgstr "Đại lý thanh toán"
 
-msgid "payments"
-msgstr "chi trả"
-
 msgid "please play responsibly. Read about"
 msgstr "hãy chơi có trách nhiệm. Đọc về"
 
 msgid "points"
 msgstr "điểm số"
-
-msgid "read"
-msgstr "đọc"
 
 msgid "second"
 msgstr "giây"
@@ -5080,9 +4782,6 @@ msgstr "đánh dấu"
 msgid "ticks"
 msgstr "đánh dấu"
 
-msgid "trade"
-msgstr "giao dịch"
-
 msgid "trading experience"
 msgstr "kinh nghiệm giao dịch"
 
@@ -5108,6 +4807,372 @@ msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "%D MA Type"
+#~ msgstr "Kiểu %D MA"
+
+#~ msgid "%D Period"
+#~ msgstr "%D Thời hạn"
+
+#~ msgid "%D Stroke"
+#~ msgstr "%D Nét"
+
+#~ msgid "%K MA Type"
+#~ msgstr "%K Kiểu MA"
+
+#~ msgid "%K Period"
+#~ msgstr "%K Kì hạn"
+
+#~ msgid "%K Stroke"
+#~ msgstr "%K Nét"
+
+#~ msgid "-DI Stroke"
+#~ msgstr "-DI Nét"
+
+#~ msgid "ADX MA Type"
+#~ msgstr "Kiểu ADX MA"
+
+#~ msgid "ADX Stroke"
+#~ msgstr "Nét ADX"
+
+#~ msgid "ATR Period"
+#~ msgstr "Thời gian ATR"
+
+#~ msgid "Acceleration"
+#~ msgstr "Gia tốc"
+
+#~ msgid "Account id not found"
+#~ msgstr "Không tìm thấy id tài khoản"
+
+#~ msgid "Account token not found"
+#~ msgstr "Không tìm thấy token tài khoản"
+
+#~ msgid "Applied to"
+#~ msgstr "Áp dụng cho"
+
+#~ msgid "Aroon Down Stroke"
+#~ msgstr "Aroon Xuống"
+
+#~ msgid "Aroon Up Stroke"
+#~ msgstr "Aroon Lên"
+
+#~ msgid "Background Color"
+#~ msgstr "Màu nền"
+
+#~ msgid "Blank window"
+#~ msgstr "Cửa sổ trống"
+
+#~ msgid "Clear"
+#~ msgstr "Xóa"
+
+#~ msgid "Connection closed"
+#~ msgstr "Kết nối đã đóng"
+
+#~ msgid "Connection error"
+#~ msgstr "Lỗi kết nối"
+
+#~ msgid "Contract is not yet started"
+#~ msgstr "Hợp đồng chưa được bắt đầu"
+
+#~ msgid "DI Stroke"
+#~ msgstr "Nét DI"
+
+#~ msgid "DX MA Type"
+#~ msgstr "Kiểu DX MA"
+
+#~ msgid "Delete level(s)"
+#~ msgstr "Xóa level(s)"
+
+#~ msgid "Double MA Period"
+#~ msgstr "Gấp đôi thời gian MA"
+
+#~ msgid "Double MA Type"
+#~ msgstr "Gấp đôi kiểu MA"
+
+#~ msgid "Error getting market information!"
+#~ msgstr "Lỗi nhận thông tin thị trường!"
+
+#~ msgid "Fast %K MA Type"
+#~ msgstr "Kiểu %K MA nhanh"
+
+#~ msgid "Fast %K Period"
+#~ msgstr "Thời gian %K nhanh"
+
+#~ msgid "Fast Limit"
+#~ msgstr "Giới hạn nhanh"
+
+#~ msgid "Fast MA Type"
+#~ msgstr "Kiểu MA nhanh"
+
+#~ msgid "Fast Period"
+#~ msgstr "Thời gian nhanh"
+
+#~ msgid "High Barrier"
+#~ msgstr "Barie cao"
+
+#~ msgid "High Stroke"
+#~ msgstr "Stroke cao"
+
+#~ msgid "Histogram Color"
+#~ msgstr "Màu sắc biểu đồ"
+
+#~ msgid "Histogram Color For Higher Values"
+#~ msgstr "Màu sắc biểu đồ cho giá trị cao hơn"
+
+#~ msgid "Histogram Color For Lower Values"
+#~ msgstr "Màu sắc biểu đồ cho giá trị thấp hơn"
+
+#~ msgid "Instrument Code Unknown/Unavailable!"
+#~ msgstr "Mã công cụ không xác định/Không có sẵn!"
+
+#~ msgid "Invalid parameter(s)!"
+#~ msgstr "Thông số không hợp lệ!"
+
+#~ msgid "Japan accounts are not supported"
+#~ msgstr "Tài khoản Nhật Bản không được hỗ trợ"
+
+#~ msgid "Line Stroke"
+#~ msgstr "Đường Stroke"
+
+#~ msgid "Loading self-exclusion settings"
+#~ msgstr "Đang tải chỉnh sửa Tự Loại Trừ"
+
+#~ msgid "Logging out because of self-exclusion session time out!"
+#~ msgstr "Đang đăng xuất vì hết hạn phiên Tự Loại Trừ!"
+
+#~ msgid "Long MA Type"
+#~ msgstr "Kiểu MA dài"
+
+#~ msgid "Long ROC Period"
+#~ msgstr "Thời gian ROC dài"
+
+#~ msgid "Long Stop Line Stroke"
+#~ msgstr "Đường dừng dài Stroke"
+
+#~ msgid "Long Term Period"
+#~ msgstr "Kì hạn dài"
+
+#~ msgid "Low Barrier"
+#~ msgstr "Barie thấp"
+
+#~ msgid "Low Stroke"
+#~ msgstr "Stroke thấp"
+
+#~ msgid "Lower Band Stroke"
+#~ msgstr "Nét thấp hơn"
+
+#~ msgid "MA Type"
+#~ msgstr "Kiểu MA"
+
+#~ msgid "MACD Line Stroke"
+#~ msgstr "Đường nét MACD"
+
+#~ msgid "Mass Period"
+#~ msgstr "Thời lượng lớn"
+
+#~ msgid "Max/Min Period"
+#~ msgstr "Thời hạn Tối đa/Tối thiểu"
+
+#~ msgid "Maximum"
+#~ msgstr "Tối đa"
+
+#~ msgid "Middle Band Stroke"
+#~ msgstr "Nét trung"
+
+#~ msgid "Multiplier"
+#~ msgstr "Số nhân"
+
+#~ msgid "NB Dev Down"
+#~ msgstr "NB Dev xuống"
+
+#~ msgid "NB Dev Up"
+#~ msgstr "NB Dev Lên"
+
+#~ msgid "Note that tokens can possess one or more of these scopes"
+#~ msgstr "Lưu ý rằng token có thể có một hoặc nhiều hơn các phạm vi này"
+
+#~ msgid ""
+#~ "Note: Contract will be sold at the prevailing market price when the "
+#~ "request is received by our servers. This price may differ from the "
+#~ "indicated price"
+#~ msgstr ""
+#~ "Lưu ý: Hợp đồng sẽ được bán ở mức giá thị trường hiện hành khi nhận được "
+#~ "yêu cầu từ các máy chủ của chúng tôi. Giá này có thể khác với giá chỉ định"
+
+#~ msgid "Number of bars on sides"
+#~ msgstr "Số thanh ở các bên"
+
+#~ msgid "Offset"
+#~ msgstr "Bù đắp"
+
+#~ msgid "PPO Line Stroke"
+#~ msgstr "Đường nét PPO"
+
+#~ msgid "Period"
+#~ msgstr "Thời gian"
+
+#~ msgid "Period 1"
+#~ msgstr "Giai đoạn 1"
+
+#~ msgid "Period 2"
+#~ msgstr "Giai đoạn 2"
+
+#~ msgid "Period 3"
+#~ msgstr "Giai đoạn 3"
+
+#~ msgid "Please choose at least one token scope"
+#~ msgstr "Vui lòng chọn ít nhất một phạm vi token"
+
+#~ msgid "Please enter the token name"
+#~ msgstr "Vui lòng nhập tên token"
+
+#~ msgid "Please log in"
+#~ msgstr "Vui lòng đăng nhập"
+
+#~ msgid "Plot Color"
+#~ msgstr "Vẽ màu"
+
+#~ msgid "Price"
+#~ msgstr "Giá"
+
+#~ msgid "Purchase Time"
+#~ msgstr "Thời gian mua"
+
+#~ msgid "Resale of this contract is not offered"
+#~ msgstr "Việc bán lại hợp đồng này là không được phép"
+
+#~ msgid "Self-Exclusion Facilities"
+#~ msgstr "Phương tiện Tự Loại Trừ"
+
+#~ msgid "Short MA Type"
+#~ msgstr "Kiểu MA ngắn"
+
+#~ msgid "Short ROC Period"
+#~ msgstr "Thời hạn ROC ngắn"
+
+#~ msgid "Short Stop Line Stroke"
+#~ msgstr "Đường nét dừng ngắn"
+
+#~ msgid "Short Term Period"
+#~ msgstr "Kì hạn ngắn"
+
+#~ msgid "Sigma"
+#~ msgstr "Xích ma"
+
+#~ msgid "Signal Line Stroke"
+#~ msgstr "Đường nét dấu hiệu"
+
+#~ msgid "Signal MA Type"
+#~ msgstr "Kiểu dấu hiệu MA"
+
+#~ msgid "Signal Period"
+#~ msgstr "Thời hạn dấu hiệu"
+
+#~ msgid "Single MA Period"
+#~ msgstr "Thời hạn MA đơn lẻ"
+
+#~ msgid "Single MA Type"
+#~ msgstr "Kiểu MA đơn lẻ"
+
+#~ msgid "Slow %D MA Type"
+#~ msgstr "Kiểu %D MA chậm"
+
+#~ msgid "Slow %D Period"
+#~ msgstr "Chậm %D Thời gian"
+
+#~ msgid "Slow %K MA Type"
+#~ msgstr "Chậm %K kiểu MA"
+
+#~ msgid "Slow %K Period"
+#~ msgstr "Chậm %D Chu kỳ"
+
+#~ msgid "Slow Limit"
+#~ msgstr "Giới hạn chậm"
+
+#~ msgid "Slow MA Type"
+#~ msgstr "Kiểu MA chậm"
+
+#~ msgid "Slow Period"
+#~ msgstr "Thời hạn chậm"
+
+#~ msgid "Successfully added new token"
+#~ msgstr "Thêm thành công token mới"
+
+#~ msgid ""
+#~ "There was a market data disruption during the contract period. For real-"
+#~ "money accounts we will attempt to correct this and settle the contract "
+#~ "properly, otherwise the contract will be cancelled and refunded. Virtual-"
+#~ "money contracts will be cancelled and refunded"
+#~ msgstr ""
+#~ "Đã có một sự phá vỡ dữ liệu thị trường trong thời gian hợp đồng có hiệu "
+#~ "lực. Đối với tài khoản tiền thật chúng tôi sẽ cố gắng khắc phục điều này "
+#~ "và thanh toán các hợp đồng một cách chuẩn xác, nếu không hợp đồng sẽ được "
+#~ "hủy bỏ và hoàn tiền. Hợp đồng tiền ảo sẽ được hủy bỏ và hoàn trả"
+
+#~ msgid "There was an error"
+#~ msgstr "Đã có lỗi"
+
+#~ msgid "This contract has expired"
+#~ msgstr "Hợp đồng này đã hết hạn"
+
+#~ msgid "Time Period"
+#~ msgstr "Thời hạn"
+
+#~ msgid "Timeout for websocket request"
+#~ msgstr "Hết thời gian chờ yêu cầu websocket"
+
+#~ msgid "Unlock"
+#~ msgstr "Mở khóa"
+
+#~ msgid "Upper Band Stroke"
+#~ msgstr "Nét lên"
+
+#~ msgid "Volume Factor"
+#~ msgstr "Yếu tố khối lượng"
+
+#~ msgid "WMA Period"
+#~ msgstr "Thời hạn WMA"
+
+#~ msgid "You have excluded yourself until"
+#~ msgstr "Bạn đã Tự Loại Trừ bản thân cho đến"
+
+#~ msgid "Your browser doesn't support copy to clipboard"
+#~ msgstr "Trình duyệt của bạn không hỗ trợ sao chép vào clipboard"
+
+#~ msgid "Your changes have been updated"
+#~ msgstr "Thay đổi của bạn đã được Cập Nhật"
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "feed is delayed by"
+#~ msgstr "nguồn cấp bị trì hoãn bởi"
+
+#~ msgid "for API calls that can access the cashier"
+#~ msgstr "dành cho các cuộc gọi API mà có thể truy cập vào thu ngân"
+
+#~ msgid "for API calls that can create trades in the client account"
+#~ msgstr ""
+#~ "dành cho các cuộc gọi API mà có thể tạo giao dịch tới tài khoản của khách "
+#~ "hàng"
+
+#~ msgid "for API calls that change client settings"
+#~ msgstr "dành cho các cuộc gọi API mà cò thể thay đổi cài đặt khách hàng"
+
+#~ msgid "for API calls that only read client data"
+#~ msgstr "dành cho các cuộc gọi API mà chỉ có thể đọc dữ liệu khách hàng"
+
+#~ msgid "market is presently closed"
+#~ msgstr "thị trường hiện đã đóng cửa"
+
+#~ msgid "payments"
+#~ msgstr "chi trả"
+
+#~ msgid "read"
+#~ msgstr "đọc"
+
+#~ msgid "trade"
+#~ msgstr "giao dịch"
 
 #~ msgid "Template applied partially"
 #~ msgstr "Mẫu áp dụng một phần"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2017-01-20 08:08+0000\n"
+"PO-Revision-Date: 2017-02-15 19:46+0000\n"
 "Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -12,72 +12,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.11-dev\n"
+"X-Generator: Weblate 2.12-dev\n"
 
-msgid "%D MA Type"
-msgstr "%D MA タイプ"
-
-msgid "%D Period"
-msgstr "%D 期間"
-
-msgid "%D Stroke"
-msgstr "%D ストローク"
-
-msgid "%K MA Type"
-msgstr "%K MA タイプ"
-
-msgid "%K Period"
-msgstr "%K 期間"
-
-msgid "%K Stroke"
-msgstr "%K ストローク"
+msgid ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
+msgstr ""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
 "ticks during the trade"
-msgstr ""
+msgstr "「Asian ダウン」 - 最終Tickが取引期間中のTick平均値より低い場合に条件が満たされます"
 
 msgid ""
 "'Asian Rise' - You win when the last tick is higher than the average of the "
 "ticks during the trade"
-msgstr ""
+msgstr "「Asian アップ」 - 最終Tickが取引期間中のTick平均値より高い場合に条件が満たされます"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr ""
+msgstr "Investors Chronicleによる「ベストカスタマーコミュニケーション会社」賞を受賞"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
-msgstr ""
+msgstr "Trade2Winによる「ベスト固定オッズブローカー賞」銀賞受賞"
 
 msgid ""
 "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
 "Chronicle UK"
-msgstr ""
+msgstr "Financial TimesとInvestors Chronicle UKによる「ベスト固定オッズ金融プロバイダー賞」受賞"
 
 msgid ""
 "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "Shares Magazine UKによる「ベスト固定オッズ金融取引プロバイダー賞」受賞"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
-msgstr ""
+msgstr "Global BankingとFinance Reviewによる「ベスト固定オッズ会社2012」を受賞"
 
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
 "prediction"
-msgstr ""
+msgstr "「アンマッチ」 - 最終値が予想した数字と合致しない場合に条件が満たされます"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr ""
+msgstr "eGaming Reviewによる「ベッティング金融業者オブザイヤー」受賞"
 
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
+msgstr "「マッチ」 - 最終Tickの下一桁が、予想した数字と合致した場合に条件が満たされます"
+
+msgid "'contract period'"
 msgstr ""
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "（ワン）タッチ取引"
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "（旧名："
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -90,15 +80,19 @@ msgid ""
 "variety of financial indices. Business grows quickly, and we soon become the "
 "market leader in fixed-odds financial betting"
 msgstr ""
+"）各種金融インデックスにおいて24時間体制の金融ベッティングサービスを確立。（日本では提供しておりません。）急速な発展を遂げ、固定オッズ金融ベッティング業"
+"界における市場リーダーとなるのも遅くはありません。"
 
 msgid ""
 "- Binary.com benchmarks its prices daily against inter-bank derivatives "
 "markets"
 msgstr ""
+"- Binary.comではインターバンク取引と同じリターン率から利益を得ることができます。当社の価格はインターバンクオプション市場のベンチマークを用いて"
+"います。"
 
 msgid ""
 "- Binary.com ensures your personal data and transactions are always secure"
-msgstr ""
+msgstr "- Binary.comでは常にお客様の個人情報とお取引を安全に保護しています"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -118,40 +112,40 @@ msgstr ""
 
 msgid ""
 "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr ""
+msgstr "- Binary.comは業界のパイオニアであり、価格設定の特許技術を保持しています"
 
 msgid ""
 "- Binary.com offers many payment methods, such as credit/debit cards, bank "
 "wires, e-cash and e-wallets"
-msgstr ""
+msgstr "- Binary.comでは多様な決済方法を提供しています。日本国内でのご利用は銀行振込のみとなります。"
 
 msgid ""
 "- Binary.com quotes a trade and the counter-trade, so you always get "
 "unbiased, transparent prices"
-msgstr ""
+msgstr "- Binary.comではトレードと店頭取引を採用しているため、常に公平で、透明性のある価格でお取引いただけます"
 
 msgid ""
 "- binaries are licensed as a betting activity in the UK, so your winnings "
 "are tax-free"
-msgstr ""
+msgstr "- バイナリーはイギリスでライセンス認定された賭博活動のため、ペイアウトは非課税です"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
-msgstr ""
+msgstr "- 2時間から取引期間を選択"
 
 msgid ""
 "- choose the falls trade, lower trade, one-touch trade with a low barrier, "
 "or no-touch trade with a high barrier"
-msgstr ""
+msgstr "- 下限バリアを用いたワンタッチトレードまたは上限バリアを用いたノータッチトレードをご選択ください"
 
 msgid ""
 "- choose the no-touch trade, the stays-between trade, or the ends-between "
 "trade"
-msgstr ""
+msgstr "- ノータッチ、STAY-IN、END-INトレードをご選択ください"
 
 msgid ""
 "- choose the one-touch trade, the goes-outside trade, or the ends outside "
 "trade"
-msgstr ""
+msgstr "- ワンタッチ、BREAK-OUT、END-OUTトレードをご選択ください"
 
 msgid ""
 "- choose the rise trade, higher trade, one-touch trade with a high barrier, "
@@ -265,9 +259,6 @@ msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
 msgstr ""
-
-msgid "-DI Stroke"
-msgstr "-DI ストローク"
 
 msgid "0-1 year"
 msgstr "0~1年"
@@ -631,17 +622,8 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "ADX MA Type"
-msgstr "ADX MA タイプ"
-
-msgid "ADX Stroke"
-msgstr "ADX ストローク"
-
 msgid "AM"
 msgstr "AM"
-
-msgid "ATR Period"
-msgstr "ATR期間"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
@@ -649,26 +631,20 @@ msgstr ""
 msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
-msgid "Acceleration"
-msgstr "加速度"
-
 msgid "Accept"
 msgstr "承諾"
 
 msgid "Account balance"
 msgstr "口座残高"
 
-msgid "Account id not found"
-msgstr "アカウントIDが見つかりません"
-
 msgid "Account opening"
 msgstr "口座開設"
 
-msgid "Account token not found"
-msgstr "アカウントトークンが見つかりません"
-
 msgid "Action"
 msgstr "売買"
+
+msgid "Add"
+msgstr ""
 
 msgid "Add comparisons"
 msgstr "比較チャート追加"
@@ -738,9 +714,6 @@ msgstr ""
 msgid "Answer"
 msgstr "答え"
 
-msgid "Applied to"
-msgstr "適用する"
-
 msgid "Apply"
 msgstr "適用"
 
@@ -765,14 +738,8 @@ msgstr ""
 msgid "Aroon (AROON)"
 msgstr ""
 
-msgid "Aroon Down Stroke"
-msgstr "アルーンダウン ストローク"
-
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
-
-msgid "Aroon Up Stroke"
-msgstr "アルーンアップ ストローク"
 
 msgid "Asian down"
 msgstr "ASIAN DOWN"
@@ -821,9 +788,6 @@ msgstr "戻る"
 
 msgid "Back to list"
 msgstr "一覧へ戻る"
-
-msgid "Background Color"
-msgstr "背景カラー"
 
 msgid "Balance of Power (BOP)"
 msgstr ""
@@ -1058,9 +1022,6 @@ msgid ""
 "day (including virtual accounts)"
 msgstr ""
 
-msgid "Blank window"
-msgstr "空白のウィンドウ"
-
 msgid "Bollinger Bands (BBANDS)"
 msgstr ""
 
@@ -1106,6 +1067,25 @@ msgstr "閉じる"
 
 msgid "CSV"
 msgstr "CSV"
+
+msgid ""
+"Can be used to buy and sell contracts, renew expired purchases, and top-up "
+"virtual-money accounts."
+msgstr ""
+
+msgid ""
+"Can be used to open accounts, set settings, manage token usage, and more."
+msgstr ""
+
+msgid ""
+"Can be used to view account activity, including settings, limits, balance "
+"sheets, trade purchase history, and more."
+msgstr ""
+
+msgid ""
+"Can be used to withdraw to payment agents, transfer funds between accounts, "
+"and set / clear cashier passwords."
+msgstr ""
 
 msgid "Cancel"
 msgstr "キャンセル"
@@ -1242,9 +1222,6 @@ msgstr ""
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Clear"
-msgstr "クリア"
-
 msgid "Click Jacking test"
 msgstr "ジャッキテストをクリック"
 
@@ -1292,12 +1269,6 @@ msgstr "設定が変更されました"
 msgid "Confirm transfer"
 msgstr "送金を実行する"
 
-msgid "Connection closed"
-msgstr "接続が切断されました"
-
-msgid "Connection error"
-msgstr "接続エラー"
-
 msgid "Construction"
 msgstr "設営"
 
@@ -1315,9 +1286,6 @@ msgstr "取引内容"
 
 msgid "Contract Confirmation"
 msgstr "トレード確定"
-
-msgid "Contract is not yet started"
-msgstr "トレードはまだ開始していません"
 
 msgid "Contract period"
 msgstr ""
@@ -1379,12 +1347,6 @@ msgstr "カスタムテーマ"
 msgid "Customize chart appearance"
 msgstr "チャートの外観をカスタマイズする"
 
-msgid "DI Stroke"
-msgstr "DI ストローク"
-
-msgid "DX MA Type"
-msgstr "DX MA タイプ"
-
 msgid "Daily limit on losses"
 msgstr "損失限度額（1日）"
 
@@ -1443,9 +1405,6 @@ msgstr ""
 
 msgid "Delete"
 msgstr "削除"
-
-msgid "Delete level(s)"
-msgstr "レベルを削除"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "アフィリエイト会員専用ウェブトレーダーチャートへのアクセス例"
@@ -1560,12 +1519,6 @@ msgstr "ドット"
 
 msgid "Double Exponential Moving Average (DEMA)"
 msgstr ""
-
-msgid "Double MA Period"
-msgstr "ダブル MA 期間"
-
-msgid "Double MA Type"
-msgstr "ダブル MA タイプ"
 
 msgid "Double click the object to remove"
 msgstr "削除するオブジェクトをダブルクリックしてください"
@@ -1684,9 +1637,6 @@ msgstr ".csvファイルのダウンロード中にエラーが発生しまし�
 msgid "Error getting data for %1"
 msgstr "%1のデータ取得中にエラーが発生しました"
 
-msgid "Error getting market information!"
-msgstr "市場情報の取得にエラーが発生しました！"
-
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
 
@@ -1731,21 +1681,6 @@ msgstr ""
 
 msgid "Family name"
 msgstr "氏名(全角)"
-
-msgid "Fast %K MA Type"
-msgstr "高速 %K MA タイプ"
-
-msgid "Fast %K Period"
-msgstr "高速 %K 期間"
-
-msgid "Fast Limit"
-msgstr "高速 制限"
-
-msgid "Fast MA Type"
-msgstr "高速 MA タイプ"
-
-msgid "Fast Period"
-msgstr "高速 期間"
 
 msgid "Favorites"
 msgstr "お気に入り"
@@ -1872,6 +1807,9 @@ msgstr "グリッド"
 msgid "Grid Light"
 msgstr "グリッド ライト"
 
+msgid "Group History"
+msgstr ""
+
 msgid "HIGH"
 msgstr "HIGH"
 
@@ -1896,14 +1834,8 @@ msgstr "健全度"
 msgid "Help"
 msgstr ""
 
-msgid "High Barrier"
-msgstr "高限バリア"
-
 msgid "High Price"
 msgstr "高値"
-
-msgid "High Stroke"
-msgstr "高ストローク"
 
 msgid "High barrier"
 msgstr "上限バリア"
@@ -1928,15 +1860,6 @@ msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr ""
-
-msgid "Histogram Color"
-msgstr "ヒストグラム カラー"
-
-msgid "Histogram Color For Higher Values"
-msgstr "高い値のヒストグラムカラー"
-
-msgid "Histogram Color For Lower Values"
-msgstr "低い値のヒストグラムカラー"
 
 msgid "Home Address"
 msgstr "現住所"
@@ -2160,14 +2083,8 @@ msgstr ""
 msgid "Instrument"
 msgstr "商品"
 
-msgid "Instrument Code Unknown/Unavailable!"
-msgstr "ツールコードが不明またはご利用いただけません！"
-
 msgid "Instruments"
 msgstr "商品"
-
-msgid "Invalid parameter(s)!"
-msgstr "パラメーターが無効です！"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
@@ -2202,9 +2119,6 @@ msgstr "1月"
 
 msgid "January"
 msgstr "1月"
-
-msgid "Japan accounts are not supported"
-msgstr "日本のお客さまは、ご利用なれません。"
 
 msgid "Jul"
 msgstr "7月"
@@ -2286,6 +2200,9 @@ msgstr "レベル"
 msgid "Level of Education"
 msgstr "能力レベル"
 
+msgid "Levels"
+msgstr ""
+
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
 "Ireland, and Japan"
@@ -2302,9 +2219,6 @@ msgstr "ライン"
 
 msgid "Line Dot"
 msgstr "ラインドット"
-
-msgid "Line Stroke"
-msgstr "ラインストローク"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr ""
@@ -2363,9 +2277,6 @@ msgstr ""
 msgid "Loading portfolio"
 msgstr "ポートフォリオを読込み中"
 
-msgid "Loading self-exclusion settings"
-msgstr "取引制限の設定を読込み中"
-
 msgid "Loading..."
 msgstr "読み込み中…"
 
@@ -2374,9 +2285,6 @@ msgstr "ログイン"
 
 msgid "Log in time"
 msgstr "ログイン時間"
-
-msgid "Logging out because of self-exclusion session time out!"
-msgstr "取引継続時間制限に達したためログアウトしました！"
 
 msgid "Login"
 msgstr "ログイン"
@@ -2389,18 +2297,6 @@ msgstr ""
 
 msgid "Long Line Candle (CDLLONGLINE)"
 msgstr ""
-
-msgid "Long MA Type"
-msgstr "ロング MA タイプ"
-
-msgid "Long ROC Period"
-msgstr "ロング ROC 期間"
-
-msgid "Long Stop Line Stroke"
-msgstr "ロングストップ ラインストローク"
-
-msgid "Long Term Period"
-msgstr "長期"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2434,14 +2330,8 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
-msgid "Low Barrier"
-msgstr "下限バリア"
-
 msgid "Low Price"
 msgstr "安値"
-
-msgid "Low Stroke"
-msgstr "低ストローク"
 
 msgid "Low barrier"
 msgstr "下限バリア"
@@ -2454,15 +2344,6 @@ msgstr ""
 
 msgid "Lower"
 msgstr "LOW"
-
-msgid "Lower Band Stroke"
-msgstr "ローバンド ストローク"
-
-msgid "MA Type"
-msgstr "MA タイプ"
-
-msgid "MACD Line Stroke"
-msgstr "MACD ラインストローク"
 
 msgid ""
 "MACD is a trading indicator used in technical analysis of stock prices.It is "
@@ -2507,9 +2388,6 @@ msgstr ""
 msgid "Mass Index (MASS)"
 msgstr ""
 
-msgid "Mass Period"
-msgstr "マスインデックス期間"
-
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr ""
 
@@ -2518,12 +2396,6 @@ msgstr "MATCHE"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr ""
-
-msgid "Max/Min Period"
-msgstr "最長/最短 期間"
-
-msgid "Maximum"
-msgstr "最大"
 
 msgid "Maximum (MAX)"
 msgstr ""
@@ -2563,9 +2435,6 @@ msgstr "思い出のある都市／街の名前"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr ""
-
-msgid "Middle Band Stroke"
-msgstr "ミドルバンド ストローク"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -2623,15 +2492,6 @@ msgstr "Mrs"
 
 msgid "Ms"
 msgstr "Ms"
-
-msgid "Multiplier"
-msgstr "乗数"
-
-msgid "NB Dev Down"
-msgstr "NB Dev ダウン"
-
-msgid "NB Dev Up"
-msgstr "NB Dev アップ"
 
 msgid "Name"
 msgstr "お名前"
@@ -2694,16 +2554,6 @@ msgid ""
 "range values across instruments by using the formula below"
 msgstr ""
 
-msgid "Note that tokens can possess one or more of these scopes"
-msgstr "トークンは複数の範囲を持つことができます"
-
-msgid ""
-"Note: Contract will be sold at the prevailing market price when the request "
-"is received by our servers. This price may differ from the indicated price"
-msgstr ""
-"ご注意：当社のサーバでリクエストが受理された場合、その時点での市場価格でト"
-"レードを売ることができます。この価格は表示価格と異なる場合があります。"
-
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
@@ -2720,9 +2570,6 @@ msgstr "11月"
 msgid "Now"
 msgstr "Now"
 
-msgid "Number of bars on sides"
-msgstr "サイドのバーの数"
-
 msgid "OAuth App ID (Optional)"
 msgstr "OAuth アプリ ID (任意)"
 
@@ -2735,6 +2582,9 @@ msgstr "OHLC"
 msgid "OPEN"
 msgstr "OPEN"
 
+msgid "Occupation"
+msgstr ""
+
 msgid "Oct"
 msgstr "10月"
 
@@ -2746,9 +2596,6 @@ msgstr "奇数"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
-
-msgid "Offset"
-msgstr "追加"
 
 msgid "Ok"
 msgstr "Ok"
@@ -2775,6 +2622,9 @@ msgid ""
 "trading services. The award recognises BetOnMarkets.com's reliable, fast and "
 "secure online trading for novice and expert traders. At this time, our "
 "website has received over 15 million trades"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
 msgid "Oops... Page Not Available"
@@ -2863,9 +2713,6 @@ msgstr "PM"
 msgid "PNG"
 msgstr "PNG"
 
-msgid "PPO Line Stroke"
-msgstr "PPO ラインストローク"
-
 msgid "Page Not Found"
 msgstr "ページが存在しません"
 
@@ -2914,18 +2761,6 @@ msgstr "年金"
 msgid "Percentage Price Oscillator (PPO)"
 msgstr ""
 
-msgid "Period"
-msgstr "期間"
-
-msgid "Period 1"
-msgstr "期間 1"
-
-msgid "Period 2"
-msgstr "期間 2"
-
-msgid "Period 3"
-msgstr "期間 3"
-
 msgid "Permissions"
 msgstr "アクセス許可"
 
@@ -2952,9 +2787,6 @@ msgstr "どうぞ"
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "4-50文字以内で、秘密の質問にお答えください"
 
-msgid "Please choose at least one token scope"
-msgstr "1つ以上のトークン範囲をご選択ください"
-
 msgid "Please choose which currency you would like to transact in"
 msgstr "ご希望の取引通貨を選択してください"
 
@@ -2978,9 +2810,6 @@ msgstr "正しいメールアドレスをご入力ください"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "年月日の順で日付をご入力ください"
-
-msgid "Please enter the token name"
-msgstr "トークン名をご入力ください"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
@@ -3015,12 +2844,12 @@ msgstr "電話番号をご入力ください"
 msgid "Please enter your street address"
 msgstr "番地をご入力ください"
 
+msgid "Please input correct token"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers"
 msgstr ""
 "いずれかのブラウザをご利用の方は最新バージョンをインストールしてください"
-
-msgid "Please log in"
-msgstr "ログインしてください"
 
 msgid "Please select"
 msgstr "選択してください"
@@ -3033,9 +2862,6 @@ msgstr "新しいパスワードでログインをしてください"
 
 msgid "Plot"
 msgstr "プロット"
-
-msgid "Plot Color"
-msgstr "プロットカラー"
 
 msgid "Pofit/Loss"
 msgstr "損益"
@@ -3071,9 +2897,6 @@ msgstr "好ましいリアリティチェック実施間隔"
 
 msgid "Press Create token button on the right to create your first token"
 msgstr "最初のトークンを作成するには、右の トークン作成 ボタンを押してください"
-
-msgid "Price"
-msgstr "価格"
 
 msgid "Price Transformation"
 msgstr ""
@@ -3130,9 +2953,6 @@ msgstr "購入日時"
 
 msgid "Purchase Price"
 msgstr "購入金額"
-
-msgid "Purchase Time"
-msgstr "購入時間"
 
 msgid "Quiet markets"
 msgstr ""
@@ -3234,9 +3054,6 @@ msgstr "名前変更"
 
 msgid "Repeat password"
 msgstr "パスワード再入力"
-
-msgid "Resale of this contract is not offered"
-msgstr "このトレードを売ることはできません"
 
 msgid "Resale price"
 msgstr ""
@@ -3340,9 +3157,6 @@ msgstr "自営業"
 msgid "Self-Exclusion"
 msgstr "取引制限"
 
-msgid "Self-Exclusion Facilities"
-msgstr "取引上限の設定"
-
 msgid "Sell At Market"
 msgstr "売却"
 
@@ -3394,18 +3208,6 @@ msgstr "チャートを共有"
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr ""
 
-msgid "Short MA Type"
-msgstr "ショート MA タイプ"
-
-msgid "Short ROC Period"
-msgstr "ショート ROC 期間"
-
-msgid "Short Stop Line Stroke"
-msgstr "ショートストップ ラインストローク"
-
-msgid "Short Term Period"
-msgstr "短期間"
-
 msgid "Short to long-term"
 msgstr ""
 
@@ -3427,50 +3229,11 @@ msgid ""
 "downtrend"
 msgstr ""
 
-msgid "Sigma"
-msgstr "シグマ"
-
-msgid "Signal Line Stroke"
-msgstr "シグナル ラインストローク"
-
-msgid "Signal MA Type"
-msgstr "シグナル MA タイプ"
-
-msgid "Signal Period"
-msgstr "シグナル期間"
-
 msgid "Simple Moving Average (SMA)"
 msgstr ""
 
 msgid "Simplicity"
 msgstr ""
-
-msgid "Single MA Period"
-msgstr "シングル MA 期間"
-
-msgid "Single MA Type"
-msgstr "シングル MA タイプ"
-
-msgid "Slow %D MA Type"
-msgstr "スロー %D MA タイプ"
-
-msgid "Slow %D Period"
-msgstr "スロー %D 期間"
-
-msgid "Slow %K MA Type"
-msgstr "スロー %K MA タイプ"
-
-msgid "Slow %K Period"
-msgstr "スロー %K 期間"
-
-msgid "Slow Limit"
-msgstr "スローリミット"
-
-msgid "Slow MA Type"
-msgstr "スロー MA タイプ"
-
-msgid "Slow Period"
-msgstr "スロー期間"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
@@ -3619,9 +3382,6 @@ msgstr "ストローク幅"
 
 msgid "Submit"
 msgstr "送信"
-
-msgid "Successfully added new token"
-msgstr "新しいトークンを追加しました"
 
 msgid "Summation (SUM)"
 msgstr ""
@@ -3989,11 +3749,18 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The company holds customer funds in separate bank accounts to the "
+"operational accounts which would not, in the event of insolvency, form part "
+"of the Company's assets. This meets the Gambling Commission's requirements "
+"for the segregation of customer funds at the level"
+msgstr ""
+
+msgid ""
 "The contract period is the timeframe of a trade. It is also called the "
 "duration"
 msgstr ""
 
-msgid "The duration is the length of a purchased trade (see 'contract period')"
+msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid ""
@@ -4159,20 +3926,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"There was a market data disruption during the contract period. For real-"
-"money accounts we will attempt to correct this and settle the contract "
-"properly, otherwise the contract will be cancelled and refunded. Virtual-"
-"money contracts will be cancelled and refunded"
-msgstr ""
-"取引期間中に市場データが中断されました。リアル口座でお取引されたお客様に関し"
-"ましては、これを修正し、適切にトレードを決済させていただきます。修正ができな"
-"い場合は、トレードはキャンセルされ、投資額は返金されます。デモ口座の方のト"
-"レードはキャンセルされ、投資額が返金されます。"
-
-msgid "There was an error"
-msgstr "エラーが発生しました"
-
-msgid ""
 "These are trades where the trader predicts if a market will finish higher or "
 "lower than a specified price target"
 msgstr ""
@@ -4204,9 +3957,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract has expired"
-msgstr "このトレードは終了しています"
 
 msgid "This contract lost"
 msgstr "トレードの条件が満たされませんでした"
@@ -4296,9 +4046,6 @@ msgstr "Tick"
 msgid "Tile"
 msgstr "タイル表示"
 
-msgid "Time Period"
-msgstr "取引期間"
-
 msgid "Time interval"
 msgstr "期間"
 
@@ -4307,9 +4054,6 @@ msgstr "タイムアウト"
 
 msgid "Time period"
 msgstr "取引期間"
-
-msgid "Timeout for websocket request"
-msgstr "websocketリクエストの期限が切れています"
 
 msgid ""
 "Times are changing. We increase payouts so our clients can make the most of "
@@ -4454,7 +4198,7 @@ msgstr "他のBinary口座へ送金する"
 msgid "Triangular Moving Average (TRIMA)"
 msgstr ""
 
-msgid "Triple Exponential Moving Average (T3) (T3)"
+msgid "Triple Exponential Moving Average (T3)"
 msgstr ""
 
 msgid "Triple Exponential Moving Average (TEMA)"
@@ -4519,9 +4263,6 @@ msgid ""
 "and bullish, its Close price is lower than 2nd bar's"
 msgstr ""
 
-msgid "Unlock"
-msgstr "ロック解除"
-
 msgid "Up to 100% returns on rise/fall trades"
 msgstr ""
 
@@ -4542,9 +4283,6 @@ msgstr "リアル口座へアップグレード"
 
 msgid "Upload template"
 msgstr "テンプレートをアップデート"
-
-msgid "Upper Band Stroke"
-msgstr "アッパーバンドストローク"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr ""
@@ -4572,7 +4310,7 @@ msgid ""
 msgstr ""
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "偏差 (VAR)"
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -4599,33 +4337,33 @@ msgid "View Historical Data"
 msgstr "履歴データの表示"
 
 msgid "View Statement"
-msgstr ""
+msgstr "取引履歴を表示する"
 
 msgid "Volatile markets"
-msgstr ""
+msgstr "揮発性市場"
 
 msgid "Volatility Indicators"
-msgstr ""
+msgstr "ボラティリティ指標"
 
 msgid "Volatility Indices"
-msgstr ""
+msgstr "ボラティリティインデックス"
 
 msgid "Volatility indices"
-msgstr ""
-
-msgid "Volume Factor"
-msgstr "容積係数"
+msgstr "ボラティリティインデックス"
 
 msgid "WMA"
 msgstr "WMA"
-
-msgid "WMA Period"
-msgstr "WMA 期間"
 
 msgid ""
 "WMA stands for weighted moving average. It helps to smooth the price curve "
 "for better trend identification. It places even greater importance on recent "
 "data than the EMA does"
+msgstr ""
+
+msgid ""
+"We are required by our license to inform you about what happens to funds "
+"which we hold on account for you, and the extent to which funds are "
+"protected in the event of insolvency"
 msgstr ""
 
 msgid ""
@@ -4674,10 +4412,10 @@ msgid "Wednesday"
 msgstr "水曜日"
 
 msgid "Weighted Close Price (WCLPRICE)"
-msgstr ""
+msgstr "加重終値価格 (WCLPRICE)"
 
 msgid "Weighted Moving Average (WMA)"
-msgstr ""
+msgstr "加重移動平均線 (WMA)"
 
 msgid ""
 "When you are satisfied with the trade price, instantly execute your trade"
@@ -4692,10 +4430,10 @@ msgid "While on the go, you can"
 msgstr "出先でもお取引が可能"
 
 msgid "Why Choose Binary Trading?"
-msgstr ""
+msgstr "バイナリー取引が選ばれる理由"
 
 msgid "Will I need to install any software?"
-msgstr ""
+msgstr "ソフトウェアをインストールする必要はありますか？"
 
 msgid "Williams' %R (WILLR)"
 msgstr ""
@@ -4748,7 +4486,7 @@ msgid "X-axis tick"
 msgstr "X軸目盛"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Y 軸目盛線"
@@ -4785,9 +4523,6 @@ msgstr ""
 
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr ""
-
-msgid "You have excluded yourself until"
-msgstr "xxxまで自己制限としてアクセスを制限されています"
 
 msgid "You have sold the following contract"
 msgstr "以下のトレードを売却しました"
@@ -4827,14 +4562,8 @@ msgstr ""
 "お客様の口座は現在ロックされています。詳しくはカスタマーサポートまでご連絡く"
 "ださい。"
 
-msgid "Your browser doesn't support copy to clipboard"
-msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
-
 msgid "Your browser is not supported"
 msgstr "お使いのブラウザは対応しておりません"
-
-msgid "Your changes have been updated"
-msgstr "変更が更新されました"
 
 msgid "Your email"
 msgstr "メールアドレス"
@@ -4859,9 +4588,6 @@ msgstr "トレード参照番号："
 msgid "Zoom"
 msgstr "ズーム"
 
-msgid "admin"
-msgstr "管理者"
-
 msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
@@ -4869,6 +4595,9 @@ msgstr ""
 
 msgid "and"
 msgstr "かつ"
+
+msgid "apostrophe (') are allowed"
+msgstr ""
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
@@ -4924,21 +4653,6 @@ msgstr "エントリー価格"
 
 msgid "exit spot"
 msgstr "終値"
-
-msgid "feed is delayed by"
-msgstr "xxxによりフィードに遅れが生じています"
-
-msgid "for API calls that can access the cashier"
-msgstr "入出金にアクセスするAPIを呼び出すために"
-
-msgid "for API calls that can create trades in the client account"
-msgstr "クライアントの口座でトレードを作成するAPIを呼び出すために"
-
-msgid "for API calls that change client settings"
-msgstr "クライアントの設定を変更するAPIを呼び出すために"
-
-msgid "for API calls that only read client data"
-msgstr "クライアントデータのみ閲覧するAPIを呼び出すために"
 
 msgid "for mobile charts"
 msgstr "モバイルチャート"
@@ -5003,8 +4717,8 @@ msgstr "トレードの際に、当サーバーにより処理されました"
 msgid "main site"
 msgstr "メインサイト"
 
-msgid "market is presently closed"
-msgstr "市場は現在閉鎖しています"
+msgid "medium protection"
+msgstr ""
 
 msgid "minute"
 msgstr "分"
@@ -5027,17 +4741,11 @@ msgstr ""
 msgid "payment agent"
 msgstr "決済サービス"
 
-msgid "payments"
-msgstr "アフィリエイト報酬の支払いについて"
-
 msgid "please play responsibly. Read about"
 msgstr "責任をもってお取引ください。XXXを読む"
 
 msgid "points"
 msgstr "ポイント"
-
-msgid "read"
-msgstr "読む"
 
 msgid "second"
 msgstr "秒"
@@ -5066,9 +4774,6 @@ msgstr "ティック"
 msgid "ticks"
 msgstr "ティック"
 
-msgid "trade"
-msgstr "トレード"
-
 msgid "trading experience"
 msgstr "取引のご経験"
 
@@ -5079,7 +4784,7 @@ msgid "websocket"
 msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "はい"
@@ -5094,6 +4799,370 @@ msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "%D MA Type"
+#~ msgstr "%D MA タイプ"
+
+#~ msgid "%D Period"
+#~ msgstr "%D 期間"
+
+#~ msgid "%D Stroke"
+#~ msgstr "%D ストローク"
+
+#~ msgid "%K MA Type"
+#~ msgstr "%K MA タイプ"
+
+#~ msgid "%K Period"
+#~ msgstr "%K 期間"
+
+#~ msgid "%K Stroke"
+#~ msgstr "%K ストローク"
+
+#~ msgid "-DI Stroke"
+#~ msgstr "-DI ストローク"
+
+#~ msgid "ADX MA Type"
+#~ msgstr "ADX MA タイプ"
+
+#~ msgid "ADX Stroke"
+#~ msgstr "ADX ストローク"
+
+#~ msgid "ATR Period"
+#~ msgstr "ATR期間"
+
+#~ msgid "Acceleration"
+#~ msgstr "加速度"
+
+#~ msgid "Account id not found"
+#~ msgstr "アカウントIDが見つかりません"
+
+#~ msgid "Account token not found"
+#~ msgstr "アカウントトークンが見つかりません"
+
+#~ msgid "Applied to"
+#~ msgstr "適用する"
+
+#~ msgid "Aroon Down Stroke"
+#~ msgstr "アルーンダウン ストローク"
+
+#~ msgid "Aroon Up Stroke"
+#~ msgstr "アルーンアップ ストローク"
+
+#~ msgid "Background Color"
+#~ msgstr "背景カラー"
+
+#~ msgid "Blank window"
+#~ msgstr "空白のウィンドウ"
+
+#~ msgid "Clear"
+#~ msgstr "クリア"
+
+#~ msgid "Connection closed"
+#~ msgstr "接続が切断されました"
+
+#~ msgid "Connection error"
+#~ msgstr "接続エラー"
+
+#~ msgid "Contract is not yet started"
+#~ msgstr "トレードはまだ開始していません"
+
+#~ msgid "DI Stroke"
+#~ msgstr "DI ストローク"
+
+#~ msgid "DX MA Type"
+#~ msgstr "DX MA タイプ"
+
+#~ msgid "Delete level(s)"
+#~ msgstr "レベルを削除"
+
+#~ msgid "Double MA Period"
+#~ msgstr "ダブル MA 期間"
+
+#~ msgid "Double MA Type"
+#~ msgstr "ダブル MA タイプ"
+
+#~ msgid "Error getting market information!"
+#~ msgstr "市場情報の取得にエラーが発生しました！"
+
+#~ msgid "Fast %K MA Type"
+#~ msgstr "高速 %K MA タイプ"
+
+#~ msgid "Fast %K Period"
+#~ msgstr "高速 %K 期間"
+
+#~ msgid "Fast Limit"
+#~ msgstr "高速 制限"
+
+#~ msgid "Fast MA Type"
+#~ msgstr "高速 MA タイプ"
+
+#~ msgid "Fast Period"
+#~ msgstr "高速 期間"
+
+#~ msgid "High Barrier"
+#~ msgstr "高限バリア"
+
+#~ msgid "High Stroke"
+#~ msgstr "高ストローク"
+
+#~ msgid "Histogram Color"
+#~ msgstr "ヒストグラム カラー"
+
+#~ msgid "Histogram Color For Higher Values"
+#~ msgstr "高い値のヒストグラムカラー"
+
+#~ msgid "Histogram Color For Lower Values"
+#~ msgstr "低い値のヒストグラムカラー"
+
+#~ msgid "Instrument Code Unknown/Unavailable!"
+#~ msgstr "ツールコードが不明またはご利用いただけません！"
+
+#~ msgid "Invalid parameter(s)!"
+#~ msgstr "パラメーターが無効です！"
+
+#~ msgid "Japan accounts are not supported"
+#~ msgstr "日本のお客さまは、ご利用なれません。"
+
+#~ msgid "Line Stroke"
+#~ msgstr "ラインストローク"
+
+#~ msgid "Loading self-exclusion settings"
+#~ msgstr "取引制限の設定を読込み中"
+
+#~ msgid "Logging out because of self-exclusion session time out!"
+#~ msgstr "取引継続時間制限に達したためログアウトしました！"
+
+#~ msgid "Long MA Type"
+#~ msgstr "ロング MA タイプ"
+
+#~ msgid "Long ROC Period"
+#~ msgstr "ロング ROC 期間"
+
+#~ msgid "Long Stop Line Stroke"
+#~ msgstr "ロングストップ ラインストローク"
+
+#~ msgid "Long Term Period"
+#~ msgstr "長期"
+
+#~ msgid "Low Barrier"
+#~ msgstr "下限バリア"
+
+#~ msgid "Low Stroke"
+#~ msgstr "低ストローク"
+
+#~ msgid "Lower Band Stroke"
+#~ msgstr "ローバンド ストローク"
+
+#~ msgid "MA Type"
+#~ msgstr "MA タイプ"
+
+#~ msgid "MACD Line Stroke"
+#~ msgstr "MACD ラインストローク"
+
+#~ msgid "Mass Period"
+#~ msgstr "マスインデックス期間"
+
+#~ msgid "Max/Min Period"
+#~ msgstr "最長/最短 期間"
+
+#~ msgid "Maximum"
+#~ msgstr "最大"
+
+#~ msgid "Middle Band Stroke"
+#~ msgstr "ミドルバンド ストローク"
+
+#~ msgid "Multiplier"
+#~ msgstr "乗数"
+
+#~ msgid "NB Dev Down"
+#~ msgstr "NB Dev ダウン"
+
+#~ msgid "NB Dev Up"
+#~ msgstr "NB Dev アップ"
+
+#~ msgid "Note that tokens can possess one or more of these scopes"
+#~ msgstr "トークンは複数の範囲を持つことができます"
+
+#~ msgid ""
+#~ "Note: Contract will be sold at the prevailing market price when the "
+#~ "request is received by our servers. This price may differ from the "
+#~ "indicated price"
+#~ msgstr ""
+#~ "ご注意：当社のサーバでリクエストが受理された場合、その時点での市場価格でト"
+#~ "レードを売ることができます。この価格は表示価格と異なる場合があります。"
+
+#~ msgid "Number of bars on sides"
+#~ msgstr "サイドのバーの数"
+
+#~ msgid "Offset"
+#~ msgstr "追加"
+
+#~ msgid "PPO Line Stroke"
+#~ msgstr "PPO ラインストローク"
+
+#~ msgid "Period"
+#~ msgstr "期間"
+
+#~ msgid "Period 1"
+#~ msgstr "期間 1"
+
+#~ msgid "Period 2"
+#~ msgstr "期間 2"
+
+#~ msgid "Period 3"
+#~ msgstr "期間 3"
+
+#~ msgid "Please choose at least one token scope"
+#~ msgstr "1つ以上のトークン範囲をご選択ください"
+
+#~ msgid "Please enter the token name"
+#~ msgstr "トークン名をご入力ください"
+
+#~ msgid "Please log in"
+#~ msgstr "ログインしてください"
+
+#~ msgid "Plot Color"
+#~ msgstr "プロットカラー"
+
+#~ msgid "Price"
+#~ msgstr "価格"
+
+#~ msgid "Purchase Time"
+#~ msgstr "購入時間"
+
+#~ msgid "Resale of this contract is not offered"
+#~ msgstr "このトレードを売ることはできません"
+
+#~ msgid "Self-Exclusion Facilities"
+#~ msgstr "取引上限の設定"
+
+#~ msgid "Short MA Type"
+#~ msgstr "ショート MA タイプ"
+
+#~ msgid "Short ROC Period"
+#~ msgstr "ショート ROC 期間"
+
+#~ msgid "Short Stop Line Stroke"
+#~ msgstr "ショートストップ ラインストローク"
+
+#~ msgid "Short Term Period"
+#~ msgstr "短期間"
+
+#~ msgid "Sigma"
+#~ msgstr "シグマ"
+
+#~ msgid "Signal Line Stroke"
+#~ msgstr "シグナル ラインストローク"
+
+#~ msgid "Signal MA Type"
+#~ msgstr "シグナル MA タイプ"
+
+#~ msgid "Signal Period"
+#~ msgstr "シグナル期間"
+
+#~ msgid "Single MA Period"
+#~ msgstr "シングル MA 期間"
+
+#~ msgid "Single MA Type"
+#~ msgstr "シングル MA タイプ"
+
+#~ msgid "Slow %D MA Type"
+#~ msgstr "スロー %D MA タイプ"
+
+#~ msgid "Slow %D Period"
+#~ msgstr "スロー %D 期間"
+
+#~ msgid "Slow %K MA Type"
+#~ msgstr "スロー %K MA タイプ"
+
+#~ msgid "Slow %K Period"
+#~ msgstr "スロー %K 期間"
+
+#~ msgid "Slow Limit"
+#~ msgstr "スローリミット"
+
+#~ msgid "Slow MA Type"
+#~ msgstr "スロー MA タイプ"
+
+#~ msgid "Slow Period"
+#~ msgstr "スロー期間"
+
+#~ msgid "Successfully added new token"
+#~ msgstr "新しいトークンを追加しました"
+
+#~ msgid ""
+#~ "There was a market data disruption during the contract period. For real-"
+#~ "money accounts we will attempt to correct this and settle the contract "
+#~ "properly, otherwise the contract will be cancelled and refunded. Virtual-"
+#~ "money contracts will be cancelled and refunded"
+#~ msgstr ""
+#~ "取引期間中に市場データが中断されました。リアル口座でお取引されたお客様に関"
+#~ "しましては、これを修正し、適切にトレードを決済させていただきます。修正がで"
+#~ "きない場合は、トレードはキャンセルされ、投資額は返金されます。デモ口座の方"
+#~ "のトレードはキャンセルされ、投資額が返金されます。"
+
+#~ msgid "There was an error"
+#~ msgstr "エラーが発生しました"
+
+#~ msgid "This contract has expired"
+#~ msgstr "このトレードは終了しています"
+
+#~ msgid "Time Period"
+#~ msgstr "取引期間"
+
+#~ msgid "Timeout for websocket request"
+#~ msgstr "websocketリクエストの期限が切れています"
+
+#~ msgid "Unlock"
+#~ msgstr "ロック解除"
+
+#~ msgid "Upper Band Stroke"
+#~ msgstr "アッパーバンドストローク"
+
+#~ msgid "Volume Factor"
+#~ msgstr "容積係数"
+
+#~ msgid "WMA Period"
+#~ msgstr "WMA 期間"
+
+#~ msgid "You have excluded yourself until"
+#~ msgstr "xxxまで自己制限としてアクセスを制限されています"
+
+#~ msgid "Your browser doesn't support copy to clipboard"
+#~ msgstr "お使いのブラウザはクリップボードへのコピーに対応しておりません"
+
+#~ msgid "Your changes have been updated"
+#~ msgstr "変更が更新されました"
+
+#~ msgid "admin"
+#~ msgstr "管理者"
+
+#~ msgid "feed is delayed by"
+#~ msgstr "xxxによりフィードに遅れが生じています"
+
+#~ msgid "for API calls that can access the cashier"
+#~ msgstr "入出金にアクセスするAPIを呼び出すために"
+
+#~ msgid "for API calls that can create trades in the client account"
+#~ msgstr "クライアントの口座でトレードを作成するAPIを呼び出すために"
+
+#~ msgid "for API calls that change client settings"
+#~ msgstr "クライアントの設定を変更するAPIを呼び出すために"
+
+#~ msgid "for API calls that only read client data"
+#~ msgstr "クライアントデータのみ閲覧するAPIを呼び出すために"
+
+#~ msgid "market is presently closed"
+#~ msgstr "市場は現在閉鎖しています"
+
+#~ msgid "payments"
+#~ msgstr "アフィリエイト報酬の支払いについて"
+
+#~ msgid "read"
+#~ msgstr "読む"
+
+#~ msgid "trade"
+#~ msgstr "トレード"
 
 #~ msgid "Contract Details"
 #~ msgstr "トレードの詳細"

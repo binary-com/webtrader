@@ -15,23 +15,10 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.11-dev\n"
 
-msgid "%D MA Type"
-msgstr "Тип СС %D"
-
-msgid "%D Period"
-msgstr "Период %D"
-
-msgid "%D Stroke"
-msgstr "Штрих %D"
-
-msgid "%K MA Type"
-msgstr "Тип СС %K"
-
-msgid "%K Period"
-msgstr "Период %K"
-
-msgid "%K Stroke"
-msgstr "Штрих %K"
+msgid ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
+msgstr ""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
@@ -72,6 +59,9 @@ msgstr ""
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
+msgstr ""
+
+msgid "'contract period'"
 msgstr ""
 
 msgid "(One) Touch trades"
@@ -269,9 +259,6 @@ msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
 msgstr ""
-
-msgid "-DI Stroke"
-msgstr "Штрих -DI"
 
 msgid "0-1 year"
 msgstr "0-1 года"
@@ -635,17 +622,8 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "ADX MA Type"
-msgstr "Тип СС ADX"
-
-msgid "ADX Stroke"
-msgstr "Штрих ADX"
-
 msgid "AM"
 msgstr "утра"
-
-msgid "ATR Period"
-msgstr "Период ATR"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
@@ -653,26 +631,20 @@ msgstr ""
 msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
-msgid "Acceleration"
-msgstr "Ускорение"
-
 msgid "Accept"
 msgstr "Принять"
 
 msgid "Account balance"
 msgstr "Баланс счёта"
 
-msgid "Account id not found"
-msgstr "ID счёта не найден"
-
 msgid "Account opening"
 msgstr "Открытие счёта"
 
-msgid "Account token not found"
-msgstr "Ключ счёта не найден"
-
 msgid "Action"
 msgstr "Действие"
+
+msgid "Add"
+msgstr ""
 
 msgid "Add comparisons"
 msgstr "Добавить сравнения"
@@ -742,9 +714,6 @@ msgstr ""
 msgid "Answer"
 msgstr "Ответ"
 
-msgid "Applied to"
-msgstr "Применимо для"
-
 msgid "Apply"
 msgstr "Применить"
 
@@ -769,14 +738,8 @@ msgstr ""
 msgid "Aroon (AROON)"
 msgstr ""
 
-msgid "Aroon Down Stroke"
-msgstr "Штрих индикатора Арун (вниз)"
-
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
-
-msgid "Aroon Up Stroke"
-msgstr "Штрих индикатора Арун (вверх)"
 
 msgid "Asian down"
 msgstr "Азиатские вниз"
@@ -825,9 +788,6 @@ msgstr "Назад"
 
 msgid "Back to list"
 msgstr "Вернуться к списку"
-
-msgid "Background Color"
-msgstr "Цвет фона"
 
 msgid "Balance of Power (BOP)"
 msgstr ""
@@ -1062,9 +1022,6 @@ msgid ""
 "day (including virtual accounts)"
 msgstr ""
 
-msgid "Blank window"
-msgstr "Пустое окно"
-
 msgid "Bollinger Bands (BBANDS)"
 msgstr ""
 
@@ -1109,6 +1066,25 @@ msgstr "ЗАКРЫТЬ"
 
 msgid "CSV"
 msgstr "CSV"
+
+msgid ""
+"Can be used to buy and sell contracts, renew expired purchases, and top-up "
+"virtual-money accounts."
+msgstr ""
+
+msgid ""
+"Can be used to open accounts, set settings, manage token usage, and more."
+msgstr ""
+
+msgid ""
+"Can be used to view account activity, including settings, limits, balance "
+"sheets, trade purchase history, and more."
+msgstr ""
+
+msgid ""
+"Can be used to withdraw to payment agents, transfer funds between accounts, "
+"and set / clear cashier passwords."
+msgstr ""
 
 msgid "Cancel"
 msgstr "Отмена"
@@ -1245,9 +1221,6 @@ msgstr ""
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Clear"
-msgstr "Очистить"
-
 msgid "Click Jacking test"
 msgstr "Нажмите на Тест"
 
@@ -1295,12 +1268,6 @@ msgstr "Конфигурация изменена успешно"
 msgid "Confirm transfer"
 msgstr "Подтвердить перевод"
 
-msgid "Connection closed"
-msgstr "Соединение закрыто"
-
-msgid "Connection error"
-msgstr "Ошибка соединения"
-
 msgid "Construction"
 msgstr "Строительство"
 
@@ -1318,9 +1285,6 @@ msgstr "Контракт"
 
 msgid "Contract Confirmation"
 msgstr "Подтверждение контракта"
-
-msgid "Contract is not yet started"
-msgstr "Контракт ещё не начался"
 
 msgid "Contract period"
 msgstr ""
@@ -1382,12 +1346,6 @@ msgstr "Индивид. настройка"
 msgid "Customize chart appearance"
 msgstr "Настройка вида графика"
 
-msgid "DI Stroke"
-msgstr "Штрих DI"
-
-msgid "DX MA Type"
-msgstr "Тип СС DX"
-
 msgid "Daily limit on losses"
 msgstr "Дневной лимит на убытки"
 
@@ -1446,9 +1404,6 @@ msgstr ""
 
 msgid "Delete"
 msgstr "Удалить"
-
-msgid "Delete level(s)"
-msgstr "Удалить уровень (уровни)"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Демо-ролик для партнёров о том, как работать с графиками на Webtrader"
@@ -1562,12 +1517,6 @@ msgstr "Точечный"
 
 msgid "Double Exponential Moving Average (DEMA)"
 msgstr ""
-
-msgid "Double MA Period"
-msgstr "Двойной период СС"
-
-msgid "Double MA Type"
-msgstr "Тип двойной СС"
 
 msgid "Double click the object to remove"
 msgstr "Дважды нажмите на объект, чтобы удалить его"
@@ -1686,9 +1635,6 @@ msgstr "Ошибка при загрузке файла в формате .csv"
 msgid "Error getting data for %1"
 msgstr "Ошибка при получении данных для %1"
 
-msgid "Error getting market information!"
-msgstr "Ошибка при получении рыночных данных!"
-
 msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
 
@@ -1733,21 +1679,6 @@ msgstr ""
 
 msgid "Family name"
 msgstr "Фамилия"
-
-msgid "Fast %K MA Type"
-msgstr "Быстрый тип %K СС"
-
-msgid "Fast %K Period"
-msgstr "Быстрый период %K"
-
-msgid "Fast Limit"
-msgstr "Быстрый лимит"
-
-msgid "Fast MA Type"
-msgstr "Быстрый тип СС"
-
-msgid "Fast Period"
-msgstr "Быстрый период"
 
 msgid "Favorites"
 msgstr "Избранное"
@@ -1874,6 +1805,9 @@ msgstr "Сетка"
 msgid "Grid Light"
 msgstr "Светлая сетка"
 
+msgid "Group History"
+msgstr ""
+
 msgid "HIGH"
 msgstr "ВЕРХНЕЕ ЗНАЧЕНИЕ"
 
@@ -1898,14 +1832,8 @@ msgstr "Здравоохранение"
 msgid "Help"
 msgstr ""
 
-msgid "High Barrier"
-msgstr "Верхний барьер"
-
 msgid "High Price"
 msgstr "Верхняя цена"
-
-msgid "High Stroke"
-msgstr "Верхний штрих"
 
 msgid "High barrier"
 msgstr "Верхний барьер"
@@ -1930,15 +1858,6 @@ msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr ""
-
-msgid "Histogram Color"
-msgstr "Цвет гистограммы"
-
-msgid "Histogram Color For Higher Values"
-msgstr "Цвет гистограммы для высоких значений"
-
-msgid "Histogram Color For Lower Values"
-msgstr "Цвет гистограммы для низких значений"
 
 msgid "Home Address"
 msgstr "Адрес"
@@ -2166,14 +2085,8 @@ msgstr ""
 msgid "Instrument"
 msgstr "Инструмент"
 
-msgid "Instrument Code Unknown/Unavailable!"
-msgstr "Код инструмента неизвестен/недоступен!"
-
 msgid "Instruments"
 msgstr "Инструменты"
-
-msgid "Invalid parameter(s)!"
-msgstr "Неправильный параметр(ы)!"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
@@ -2208,9 +2121,6 @@ msgstr "Янв"
 
 msgid "January"
 msgstr "Январь"
-
-msgid "Japan accounts are not supported"
-msgstr "Японские счета не поддерживаются"
 
 msgid "Jul"
 msgstr "Июль"
@@ -2292,6 +2202,9 @@ msgstr "Уровень"
 msgid "Level of Education"
 msgstr "Уровень образования"
 
+msgid "Levels"
+msgstr ""
+
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
 "Ireland, and Japan"
@@ -2308,9 +2221,6 @@ msgstr "Линейный"
 
 msgid "Line Dot"
 msgstr "Линейно-точечн."
-
-msgid "Line Stroke"
-msgstr "Штрих линии"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr ""
@@ -2369,9 +2279,6 @@ msgstr ""
 msgid "Loading portfolio"
 msgstr "Загрузка портфеля"
 
-msgid "Loading self-exclusion settings"
-msgstr "Загрузка настроек самоисключения"
-
 msgid "Loading..."
 msgstr "Идёт загрузка..."
 
@@ -2380,9 +2287,6 @@ msgstr "Вход"
 
 msgid "Log in time"
 msgstr "Время входа"
-
-msgid "Logging out because of self-exclusion session time out!"
-msgstr "Выход из системы на период самоисключения!"
 
 msgid "Login"
 msgstr "Вход"
@@ -2395,18 +2299,6 @@ msgstr ""
 
 msgid "Long Line Candle (CDLLONGLINE)"
 msgstr ""
-
-msgid "Long MA Type"
-msgstr "Тип длинной СС"
-
-msgid "Long ROC Period"
-msgstr "Длинный период ROC"
-
-msgid "Long Stop Line Stroke"
-msgstr "Штрих длинной стоп-линии"
-
-msgid "Long Term Period"
-msgstr "Долгосрочный период"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2440,14 +2332,8 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
-msgid "Low Barrier"
-msgstr "Нижний барьер"
-
 msgid "Low Price"
 msgstr "Нижняя цена"
-
-msgid "Low Stroke"
-msgstr "Нижний штрих"
 
 msgid "Low barrier"
 msgstr "Нижний барьер"
@@ -2460,15 +2346,6 @@ msgstr ""
 
 msgid "Lower"
 msgstr "Ниже"
-
-msgid "Lower Band Stroke"
-msgstr "Штрих нижней полосы"
-
-msgid "MA Type"
-msgstr "Тип СС"
-
-msgid "MACD Line Stroke"
-msgstr "Штрих линии MACD"
 
 msgid ""
 "MACD is a trading indicator used in technical analysis of stock prices.It is "
@@ -2513,9 +2390,6 @@ msgstr ""
 msgid "Mass Index (MASS)"
 msgstr ""
 
-msgid "Mass Period"
-msgstr "период Индекса массы"
-
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr ""
 
@@ -2524,12 +2398,6 @@ msgstr "Совпадёт"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr ""
-
-msgid "Max/Min Period"
-msgstr "Макс./мин. период"
-
-msgid "Maximum"
-msgstr "Максимум"
 
 msgid "Maximum (MAX)"
 msgstr ""
@@ -2573,9 +2441,6 @@ msgstr "Любимый город"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr ""
-
-msgid "Middle Band Stroke"
-msgstr "Штрих средней линии"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Мин: 10; Макс: 2000"
@@ -2633,15 +2498,6 @@ msgstr "Госпожа"
 
 msgid "Ms"
 msgstr "Госпожа"
-
-msgid "Multiplier"
-msgstr "Коэффициент"
-
-msgid "NB Dev Down"
-msgstr "NB Dev вниз"
-
-msgid "NB Dev Up"
-msgstr "NB Dev вверх"
 
 msgid "Name"
 msgstr "Имя"
@@ -2704,18 +2560,6 @@ msgid ""
 "range values across instruments by using the formula below"
 msgstr ""
 
-msgid "Note that tokens can possess one or more of these scopes"
-msgstr ""
-"Имейте ввиду, что ключи могут охватывать одну или несколько данных областей"
-
-msgid ""
-"Note: Contract will be sold at the prevailing market price when the request "
-"is received by our servers. This price may differ from the indicated price"
-msgstr ""
-"Примечание: контракт будет продан по цене, действующей на момент получения "
-"запроса нашими серверами. Эта цена может отличаться от указанной в настоящее "
-"время цены"
-
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
@@ -2733,9 +2577,6 @@ msgstr "Ноябрь"
 msgid "Now"
 msgstr "Сейчас"
 
-msgid "Number of bars on sides"
-msgstr "Количество столбцов по бокам"
-
 msgid "OAuth App ID (Optional)"
 msgstr "Номер приложения OAuth (опционально)"
 
@@ -2748,6 +2589,9 @@ msgstr "OHLC"
 msgid "OPEN"
 msgstr "ОТКРЫТИЕ"
 
+msgid "Occupation"
+msgstr ""
+
 msgid "Oct"
 msgstr "Окт."
 
@@ -2759,9 +2603,6 @@ msgstr "Нечётное"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
-
-msgid "Offset"
-msgstr "Изменение"
 
 msgid "Ok"
 msgstr "Ok"
@@ -2788,6 +2629,9 @@ msgid ""
 "trading services. The award recognises BetOnMarkets.com's reliable, fast and "
 "secure online trading for novice and expert traders. At this time, our "
 "website has received over 15 million trades"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
 msgid "Oops... Page Not Available"
@@ -2878,9 +2722,6 @@ msgstr "вечера"
 msgid "PNG"
 msgstr "PNG"
 
-msgid "PPO Line Stroke"
-msgstr "Штрих линии ПЦО"
-
 msgid "Page Not Found"
 msgstr "Страница не найдена"
 
@@ -2929,18 +2770,6 @@ msgstr "Пенсия"
 msgid "Percentage Price Oscillator (PPO)"
 msgstr ""
 
-msgid "Period"
-msgstr "Период"
-
-msgid "Period 1"
-msgstr "Период 1"
-
-msgid "Period 2"
-msgstr "Период 2"
-
-msgid "Period 3"
-msgstr "Период 3"
-
 msgid "Permissions"
 msgstr "Разрешения"
 
@@ -2967,9 +2796,6 @@ msgstr "Пожалуйста"
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "Пожалуйста, ответьте на секретный вопрос (4-50 знаков)"
 
-msgid "Please choose at least one token scope"
-msgstr "Пожалуйста, выберите минимум один уровень ключа"
-
 msgid "Please choose which currency you would like to transact in"
 msgstr "Пожалуйста, выберите валюту, в которой Вы хотите выполнить транзакцию"
 
@@ -2993,9 +2819,6 @@ msgstr "Пожалуйста, введите правильный email"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
-
-msgid "Please enter the token name"
-msgstr "Пожалуйста, введите название ключа"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
@@ -3031,11 +2854,11 @@ msgstr "Пожалуйста, введите номер телефона"
 msgid "Please enter your street address"
 msgstr "Пожалуйста, введите адрес"
 
+msgid "Please input correct token"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers"
 msgstr "Пожалуйста, установите последнюю версию одного из следующих браузеров"
-
-msgid "Please log in"
-msgstr "Пожалуйста, войдите"
 
 msgid "Please select"
 msgstr "Пожалуйста, выберите"
@@ -3048,9 +2871,6 @@ msgstr "Пожалуйста, используйте для входа новы�
 
 msgid "Plot"
 msgstr "Тема"
-
-msgid "Plot Color"
-msgstr "Цвет темы"
 
 msgid "Pofit/Loss"
 msgstr "Прибыль/Убытки"
@@ -3086,9 +2906,6 @@ msgstr "Желаемый интервал для проверки реально
 
 msgid "Press Create token button on the right to create your first token"
 msgstr "Нажмите кнопку \"Создать ключ\" справа, чтобы создать Ваш первый ключ"
-
-msgid "Price"
-msgstr "Цена"
 
 msgid "Price Transformation"
 msgstr ""
@@ -3145,9 +2962,6 @@ msgstr "Дата покупки"
 
 msgid "Purchase Price"
 msgstr "Цена покупки"
-
-msgid "Purchase Time"
-msgstr "Время покупки"
 
 msgid "Quiet markets"
 msgstr ""
@@ -3249,9 +3063,6 @@ msgstr "Переименовать"
 
 msgid "Repeat password"
 msgstr "Повторите пароль"
-
-msgid "Resale of this contract is not offered"
-msgstr "Повторная продажа данного контракта невозможна"
 
 msgid "Resale price"
 msgstr ""
@@ -3355,9 +3166,6 @@ msgstr "Частный предприниматель"
 msgid "Self-Exclusion"
 msgstr "Самоисключение"
 
-msgid "Self-Exclusion Facilities"
-msgstr "Услуги самоисключения"
-
 msgid "Sell At Market"
 msgstr "Продать по текущей цене"
 
@@ -3409,18 +3217,6 @@ msgstr "Поделиться графиком"
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr ""
 
-msgid "Short MA Type"
-msgstr "Короткий тип СС"
-
-msgid "Short ROC Period"
-msgstr "Короткий период ROC"
-
-msgid "Short Stop Line Stroke"
-msgstr "Штрих короткой стоп-линии"
-
-msgid "Short Term Period"
-msgstr "Краткосрочный период"
-
 msgid "Short to long-term"
 msgstr ""
 
@@ -3442,50 +3238,11 @@ msgid ""
 "downtrend"
 msgstr ""
 
-msgid "Sigma"
-msgstr "Сигма"
-
-msgid "Signal Line Stroke"
-msgstr "Штрих сигнальной линии"
-
-msgid "Signal MA Type"
-msgstr "Тип сигнальной СС"
-
-msgid "Signal Period"
-msgstr "Период сигнала"
-
 msgid "Simple Moving Average (SMA)"
 msgstr ""
 
 msgid "Simplicity"
 msgstr ""
-
-msgid "Single MA Period"
-msgstr "Единичный период СС"
-
-msgid "Single MA Type"
-msgstr "Единичный тип СС"
-
-msgid "Slow %D MA Type"
-msgstr "Медленный тип СС %D"
-
-msgid "Slow %D Period"
-msgstr "Медленный период %D"
-
-msgid "Slow %K MA Type"
-msgstr "Медленный тип СС %K"
-
-msgid "Slow %K Period"
-msgstr "Медленный период %K"
-
-msgid "Slow Limit"
-msgstr "Медленный лимит"
-
-msgid "Slow MA Type"
-msgstr "Медленный тип СС"
-
-msgid "Slow Period"
-msgstr "Медленный период"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
@@ -3634,9 +3391,6 @@ msgstr "Ширина штриха"
 
 msgid "Submit"
 msgstr "Подтвердить"
-
-msgid "Successfully added new token"
-msgstr "Новый ключ добавлен успешно"
 
 msgid "Summation (SUM)"
 msgstr ""
@@ -4004,11 +3758,18 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The company holds customer funds in separate bank accounts to the "
+"operational accounts which would not, in the event of insolvency, form part "
+"of the Company's assets. This meets the Gambling Commission's requirements "
+"for the segregation of customer funds at the level"
+msgstr ""
+
+msgid ""
 "The contract period is the timeframe of a trade. It is also called the "
 "duration"
 msgstr ""
 
-msgid "The duration is the length of a purchased trade (see 'contract period')"
+msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid ""
@@ -4176,21 +3937,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"There was a market data disruption during the contract period. For real-"
-"money accounts we will attempt to correct this and settle the contract "
-"properly, otherwise the contract will be cancelled and refunded. Virtual-"
-"money contracts will be cancelled and refunded"
-msgstr ""
-"Во время действия данного контракта произошло прерывание в получении "
-"котировок. Для реальных счетов: мы постараемся исправить проблему и позже "
-"рассчитать контракт правильно; в противном случае, мы отменим контракт и "
-"вернем его стоимость. Для демо-счетов: мы отменим Ваш контракт и вернем цену "
-"его покупки"
-
-msgid "There was an error"
-msgstr "Произошла ошибка"
-
-msgid ""
 "These are trades where the trader predicts if a market will finish higher or "
 "lower than a specified price target"
 msgstr ""
@@ -4222,9 +3968,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract has expired"
-msgstr "Время контракта истекло"
 
 msgid "This contract lost"
 msgstr "Контракт проиграл"
@@ -4314,9 +4057,6 @@ msgstr "Тики"
 msgid "Tile"
 msgstr "Плитка"
 
-msgid "Time Period"
-msgstr "Период"
-
 msgid "Time interval"
 msgstr "Врем. интервал"
 
@@ -4325,9 +4065,6 @@ msgstr "Перерыв до"
 
 msgid "Time period"
 msgstr "Период"
-
-msgid "Timeout for websocket request"
-msgstr "Перерыв по запросу Websocket"
 
 msgid ""
 "Times are changing. We increase payouts so our clients can make the most of "
@@ -4473,7 +4210,7 @@ msgstr "Перевести на другой счёт на Binary"
 msgid "Triangular Moving Average (TRIMA)"
 msgstr ""
 
-msgid "Triple Exponential Moving Average (T3) (T3)"
+msgid "Triple Exponential Moving Average (T3)"
 msgstr ""
 
 msgid "Triple Exponential Moving Average (TEMA)"
@@ -4538,9 +4275,6 @@ msgid ""
 "and bullish, its Close price is lower than 2nd bar's"
 msgstr ""
 
-msgid "Unlock"
-msgstr "Разблокировать"
-
 msgid "Up to 100% returns on rise/fall trades"
 msgstr ""
 
@@ -4561,9 +4295,6 @@ msgstr "Открыть Реальный счёт"
 
 msgid "Upload template"
 msgstr "Загрузить шаблон"
-
-msgid "Upper Band Stroke"
-msgstr "Штрих верхней полосы"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr ""
@@ -4633,19 +4364,19 @@ msgstr ""
 msgid "Volatility indices"
 msgstr ""
 
-msgid "Volume Factor"
-msgstr "Фактор объёма"
-
 msgid "WMA"
 msgstr "ВСС"
-
-msgid "WMA Period"
-msgstr "Период ВСС"
 
 msgid ""
 "WMA stands for weighted moving average. It helps to smooth the price curve "
 "for better trend identification. It places even greater importance on recent "
 "data than the EMA does"
+msgstr ""
+
+msgid ""
+"We are required by our license to inform you about what happens to funds "
+"which we hold on account for you, and the extent to which funds are "
+"protected in the event of insolvency"
 msgstr ""
 
 msgid ""
@@ -4806,9 +4537,6 @@ msgstr ""
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr ""
 
-msgid "You have excluded yourself until"
-msgstr "Вы ограничили свою деятельность до"
-
 msgid "You have sold the following contract"
 msgstr "Вы продали следующий контракт"
 
@@ -4848,14 +4576,8 @@ msgstr ""
 "Ваш счёт заблокирован; пожалуйста, свяжитесь со службой поддержки клиентов "
 "для получения дополнительной информации"
 
-msgid "Your browser doesn't support copy to clipboard"
-msgstr "Ваш браузер не поддерживает копирование в буфер"
-
 msgid "Your browser is not supported"
 msgstr "Ваш браузер не поддерживается"
-
-msgid "Your changes have been updated"
-msgstr "Ваши изменения обновлены успешно"
 
 msgid "Your email"
 msgstr "Ваш эл. адрес"
@@ -4880,9 +4602,6 @@ msgstr "Номер Вашей сделки"
 msgid "Zoom"
 msgstr "Приблизить"
 
-msgid "admin"
-msgstr "администратор"
-
 msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
@@ -4890,6 +4609,9 @@ msgstr ""
 
 msgid "and"
 msgstr "и"
+
+msgid "apostrophe (') are allowed"
+msgstr ""
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
@@ -4946,21 +4668,6 @@ msgstr "котировка на входе"
 
 msgid "exit spot"
 msgstr "котировка на выходе"
-
-msgid "feed is delayed by"
-msgstr "котировки задерживаются"
-
-msgid "for API calls that can access the cashier"
-msgstr "для вызовов API, действующих для кассы"
-
-msgid "for API calls that can create trades in the client account"
-msgstr "для вызовов API, способных открыть сделки на счету клиента"
-
-msgid "for API calls that change client settings"
-msgstr "для вызовов API, способных изменить настройки клиента"
-
-msgid "for API calls that only read client data"
-msgstr "для вызовов API, способных считывать только данные клиента"
 
 msgid "for mobile charts"
 msgstr "для мобильных графиков"
@@ -5024,8 +4731,8 @@ msgstr "является момент, когда контракт был обр
 msgid "main site"
 msgstr "основной сайт"
 
-msgid "market is presently closed"
-msgstr "рынок сейчас закрыт"
+msgid "medium protection"
+msgstr ""
 
 msgid "minute"
 msgstr "мин."
@@ -5048,17 +4755,11 @@ msgstr ""
 msgid "payment agent"
 msgstr "платёжный агент"
 
-msgid "payments"
-msgstr "выплаты"
-
 msgid "please play responsibly. Read about"
 msgstr "пожалуйста, играйте ответственно. Подробнее о разделе"
 
 msgid "points"
 msgstr "пункт."
-
-msgid "read"
-msgstr "прочитать"
 
 msgid "second"
 msgstr "сек."
@@ -5087,9 +4788,6 @@ msgstr "тик(а)"
 msgid "ticks"
 msgstr "тика(ов)"
 
-msgid "trade"
-msgstr "торговать"
-
 msgid "trading experience"
 msgstr "опыт торговли"
 
@@ -5115,6 +4813,374 @@ msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "%D MA Type"
+#~ msgstr "Тип СС %D"
+
+#~ msgid "%D Period"
+#~ msgstr "Период %D"
+
+#~ msgid "%D Stroke"
+#~ msgstr "Штрих %D"
+
+#~ msgid "%K MA Type"
+#~ msgstr "Тип СС %K"
+
+#~ msgid "%K Period"
+#~ msgstr "Период %K"
+
+#~ msgid "%K Stroke"
+#~ msgstr "Штрих %K"
+
+#~ msgid "-DI Stroke"
+#~ msgstr "Штрих -DI"
+
+#~ msgid "ADX MA Type"
+#~ msgstr "Тип СС ADX"
+
+#~ msgid "ADX Stroke"
+#~ msgstr "Штрих ADX"
+
+#~ msgid "ATR Period"
+#~ msgstr "Период ATR"
+
+#~ msgid "Acceleration"
+#~ msgstr "Ускорение"
+
+#~ msgid "Account id not found"
+#~ msgstr "ID счёта не найден"
+
+#~ msgid "Account token not found"
+#~ msgstr "Ключ счёта не найден"
+
+#~ msgid "Applied to"
+#~ msgstr "Применимо для"
+
+#~ msgid "Aroon Down Stroke"
+#~ msgstr "Штрих индикатора Арун (вниз)"
+
+#~ msgid "Aroon Up Stroke"
+#~ msgstr "Штрих индикатора Арун (вверх)"
+
+#~ msgid "Background Color"
+#~ msgstr "Цвет фона"
+
+#~ msgid "Blank window"
+#~ msgstr "Пустое окно"
+
+#~ msgid "Clear"
+#~ msgstr "Очистить"
+
+#~ msgid "Connection closed"
+#~ msgstr "Соединение закрыто"
+
+#~ msgid "Connection error"
+#~ msgstr "Ошибка соединения"
+
+#~ msgid "Contract is not yet started"
+#~ msgstr "Контракт ещё не начался"
+
+#~ msgid "DI Stroke"
+#~ msgstr "Штрих DI"
+
+#~ msgid "DX MA Type"
+#~ msgstr "Тип СС DX"
+
+#~ msgid "Delete level(s)"
+#~ msgstr "Удалить уровень (уровни)"
+
+#~ msgid "Double MA Period"
+#~ msgstr "Двойной период СС"
+
+#~ msgid "Double MA Type"
+#~ msgstr "Тип двойной СС"
+
+#~ msgid "Error getting market information!"
+#~ msgstr "Ошибка при получении рыночных данных!"
+
+#~ msgid "Fast %K MA Type"
+#~ msgstr "Быстрый тип %K СС"
+
+#~ msgid "Fast %K Period"
+#~ msgstr "Быстрый период %K"
+
+#~ msgid "Fast Limit"
+#~ msgstr "Быстрый лимит"
+
+#~ msgid "Fast MA Type"
+#~ msgstr "Быстрый тип СС"
+
+#~ msgid "Fast Period"
+#~ msgstr "Быстрый период"
+
+#~ msgid "High Barrier"
+#~ msgstr "Верхний барьер"
+
+#~ msgid "High Stroke"
+#~ msgstr "Верхний штрих"
+
+#~ msgid "Histogram Color"
+#~ msgstr "Цвет гистограммы"
+
+#~ msgid "Histogram Color For Higher Values"
+#~ msgstr "Цвет гистограммы для высоких значений"
+
+#~ msgid "Histogram Color For Lower Values"
+#~ msgstr "Цвет гистограммы для низких значений"
+
+#~ msgid "Instrument Code Unknown/Unavailable!"
+#~ msgstr "Код инструмента неизвестен/недоступен!"
+
+#~ msgid "Invalid parameter(s)!"
+#~ msgstr "Неправильный параметр(ы)!"
+
+#~ msgid "Japan accounts are not supported"
+#~ msgstr "Японские счета не поддерживаются"
+
+#~ msgid "Line Stroke"
+#~ msgstr "Штрих линии"
+
+#~ msgid "Loading self-exclusion settings"
+#~ msgstr "Загрузка настроек самоисключения"
+
+#~ msgid "Logging out because of self-exclusion session time out!"
+#~ msgstr "Выход из системы на период самоисключения!"
+
+#~ msgid "Long MA Type"
+#~ msgstr "Тип длинной СС"
+
+#~ msgid "Long ROC Period"
+#~ msgstr "Длинный период ROC"
+
+#~ msgid "Long Stop Line Stroke"
+#~ msgstr "Штрих длинной стоп-линии"
+
+#~ msgid "Long Term Period"
+#~ msgstr "Долгосрочный период"
+
+#~ msgid "Low Barrier"
+#~ msgstr "Нижний барьер"
+
+#~ msgid "Low Stroke"
+#~ msgstr "Нижний штрих"
+
+#~ msgid "Lower Band Stroke"
+#~ msgstr "Штрих нижней полосы"
+
+#~ msgid "MA Type"
+#~ msgstr "Тип СС"
+
+#~ msgid "MACD Line Stroke"
+#~ msgstr "Штрих линии MACD"
+
+#~ msgid "Mass Period"
+#~ msgstr "период Индекса массы"
+
+#~ msgid "Max/Min Period"
+#~ msgstr "Макс./мин. период"
+
+#~ msgid "Maximum"
+#~ msgstr "Максимум"
+
+#~ msgid "Middle Band Stroke"
+#~ msgstr "Штрих средней линии"
+
+#~ msgid "Multiplier"
+#~ msgstr "Коэффициент"
+
+#~ msgid "NB Dev Down"
+#~ msgstr "NB Dev вниз"
+
+#~ msgid "NB Dev Up"
+#~ msgstr "NB Dev вверх"
+
+#~ msgid "Note that tokens can possess one or more of these scopes"
+#~ msgstr ""
+#~ "Имейте ввиду, что ключи могут охватывать одну или несколько данных "
+#~ "областей"
+
+#~ msgid ""
+#~ "Note: Contract will be sold at the prevailing market price when the "
+#~ "request is received by our servers. This price may differ from the "
+#~ "indicated price"
+#~ msgstr ""
+#~ "Примечание: контракт будет продан по цене, действующей на момент "
+#~ "получения запроса нашими серверами. Эта цена может отличаться от "
+#~ "указанной в настоящее время цены"
+
+#~ msgid "Number of bars on sides"
+#~ msgstr "Количество столбцов по бокам"
+
+#~ msgid "Offset"
+#~ msgstr "Изменение"
+
+#~ msgid "PPO Line Stroke"
+#~ msgstr "Штрих линии ПЦО"
+
+#~ msgid "Period"
+#~ msgstr "Период"
+
+#~ msgid "Period 1"
+#~ msgstr "Период 1"
+
+#~ msgid "Period 2"
+#~ msgstr "Период 2"
+
+#~ msgid "Period 3"
+#~ msgstr "Период 3"
+
+#~ msgid "Please choose at least one token scope"
+#~ msgstr "Пожалуйста, выберите минимум один уровень ключа"
+
+#~ msgid "Please enter the token name"
+#~ msgstr "Пожалуйста, введите название ключа"
+
+#~ msgid "Please log in"
+#~ msgstr "Пожалуйста, войдите"
+
+#~ msgid "Plot Color"
+#~ msgstr "Цвет темы"
+
+#~ msgid "Price"
+#~ msgstr "Цена"
+
+#~ msgid "Purchase Time"
+#~ msgstr "Время покупки"
+
+#~ msgid "Resale of this contract is not offered"
+#~ msgstr "Повторная продажа данного контракта невозможна"
+
+#~ msgid "Self-Exclusion Facilities"
+#~ msgstr "Услуги самоисключения"
+
+#~ msgid "Short MA Type"
+#~ msgstr "Короткий тип СС"
+
+#~ msgid "Short ROC Period"
+#~ msgstr "Короткий период ROC"
+
+#~ msgid "Short Stop Line Stroke"
+#~ msgstr "Штрих короткой стоп-линии"
+
+#~ msgid "Short Term Period"
+#~ msgstr "Краткосрочный период"
+
+#~ msgid "Sigma"
+#~ msgstr "Сигма"
+
+#~ msgid "Signal Line Stroke"
+#~ msgstr "Штрих сигнальной линии"
+
+#~ msgid "Signal MA Type"
+#~ msgstr "Тип сигнальной СС"
+
+#~ msgid "Signal Period"
+#~ msgstr "Период сигнала"
+
+#~ msgid "Single MA Period"
+#~ msgstr "Единичный период СС"
+
+#~ msgid "Single MA Type"
+#~ msgstr "Единичный тип СС"
+
+#~ msgid "Slow %D MA Type"
+#~ msgstr "Медленный тип СС %D"
+
+#~ msgid "Slow %D Period"
+#~ msgstr "Медленный период %D"
+
+#~ msgid "Slow %K MA Type"
+#~ msgstr "Медленный тип СС %K"
+
+#~ msgid "Slow %K Period"
+#~ msgstr "Медленный период %K"
+
+#~ msgid "Slow Limit"
+#~ msgstr "Медленный лимит"
+
+#~ msgid "Slow MA Type"
+#~ msgstr "Медленный тип СС"
+
+#~ msgid "Slow Period"
+#~ msgstr "Медленный период"
+
+#~ msgid "Successfully added new token"
+#~ msgstr "Новый ключ добавлен успешно"
+
+#~ msgid ""
+#~ "There was a market data disruption during the contract period. For real-"
+#~ "money accounts we will attempt to correct this and settle the contract "
+#~ "properly, otherwise the contract will be cancelled and refunded. Virtual-"
+#~ "money contracts will be cancelled and refunded"
+#~ msgstr ""
+#~ "Во время действия данного контракта произошло прерывание в получении "
+#~ "котировок. Для реальных счетов: мы постараемся исправить проблему и позже "
+#~ "рассчитать контракт правильно; в противном случае, мы отменим контракт и "
+#~ "вернем его стоимость. Для демо-счетов: мы отменим Ваш контракт и вернем "
+#~ "цену его покупки"
+
+#~ msgid "There was an error"
+#~ msgstr "Произошла ошибка"
+
+#~ msgid "This contract has expired"
+#~ msgstr "Время контракта истекло"
+
+#~ msgid "Time Period"
+#~ msgstr "Период"
+
+#~ msgid "Timeout for websocket request"
+#~ msgstr "Перерыв по запросу Websocket"
+
+#~ msgid "Unlock"
+#~ msgstr "Разблокировать"
+
+#~ msgid "Upper Band Stroke"
+#~ msgstr "Штрих верхней полосы"
+
+#~ msgid "Volume Factor"
+#~ msgstr "Фактор объёма"
+
+#~ msgid "WMA Period"
+#~ msgstr "Период ВСС"
+
+#~ msgid "You have excluded yourself until"
+#~ msgstr "Вы ограничили свою деятельность до"
+
+#~ msgid "Your browser doesn't support copy to clipboard"
+#~ msgstr "Ваш браузер не поддерживает копирование в буфер"
+
+#~ msgid "Your changes have been updated"
+#~ msgstr "Ваши изменения обновлены успешно"
+
+#~ msgid "admin"
+#~ msgstr "администратор"
+
+#~ msgid "feed is delayed by"
+#~ msgstr "котировки задерживаются"
+
+#~ msgid "for API calls that can access the cashier"
+#~ msgstr "для вызовов API, действующих для кассы"
+
+#~ msgid "for API calls that can create trades in the client account"
+#~ msgstr "для вызовов API, способных открыть сделки на счету клиента"
+
+#~ msgid "for API calls that change client settings"
+#~ msgstr "для вызовов API, способных изменить настройки клиента"
+
+#~ msgid "for API calls that only read client data"
+#~ msgstr "для вызовов API, способных считывать только данные клиента"
+
+#~ msgid "market is presently closed"
+#~ msgstr "рынок сейчас закрыт"
+
+#~ msgid "payments"
+#~ msgstr "выплаты"
+
+#~ msgid "read"
+#~ msgstr "прочитать"
+
+#~ msgid "trade"
+#~ msgstr "торговать"
 
 #~ msgid "Contract Details"
 #~ msgstr "Детали контракта"

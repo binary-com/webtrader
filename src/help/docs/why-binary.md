@@ -13,12 +13,12 @@ With Binary.com you can trade:
 - **All durations** - from 10 seconds to 365 days.
 - **All payouts** - from $1 to $50,000.
 
-## Binary trading is ideal for both individuals and market professionals.
+### Binary trading is ideal for both individuals and market professionals.
 
-###Individual Traders
+####Individual Traders
 
 If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access [our helpful support desk](https://www.binary.com/en/contact.html).
 
-###Market Professionals
+####Market Professionals
 
 Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades.
