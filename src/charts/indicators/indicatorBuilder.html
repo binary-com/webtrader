@@ -22,14 +22,12 @@
           <td rv-if="row.type | eq 'colorpicker'" class='colorpicker-td'>
             <input
                rv-color-picker="row.value"
-               rv-value="row.value"
-               rv-css-background="row.value" />
+               rv-value="row.value" />
           </td>
           <td rv-if="row.type | eq 'plotcolor'" class='colorpicker-td'>
             <input
                rv-color-picker="row.value"
-               rv-value="row.value"
-               rv-css-background="row.value" />
+               rv-value="row.value" />
           </td>
           <td rv-if="row.type | eq 'dashstyle'">
             <div class="dash-styles">
@@ -67,7 +65,7 @@
             </div>
           </td>
           <td rv-if="row.type | eq 'numeric'">
-             <input rv-value="row.value" type="text" rv-validate="'^(?!0\d)\d*(\.\d{1,4})?$'" />
+             <input rv-value="row.value" type="text" rv-is-valid-number="row.is_valid" rv-class-invalid="row.is_valid | negate"/>
           </td>
         </tr>
 

@@ -554,7 +554,7 @@
       {"title": "Middle Band Stroke", "key": "mdlBndStroke", "value": "rgb(205, 10, 10)", "type": "colorpicker"},
       {"title": "Upper Band Stroke", "key": "uprBndStroke", "value": "rgb(11, 88, 162)", "type": "colorpicker"},
       {"title": "Lower Band Stroke", "key": "lwrBndStroke", "value": "rgb(11, 88, 162)", "type": "colorpicker"},
-      {"title": "Background Color", "key": "backgroundColor", "value": "rgba(178, 191, 217, 0.3", "type": "colorpicker"},
+      {"title": "Background Color", "key": "backgroundColor", "value": "rgba(178, 191, 217, 0.3)", "type": "colorpicker"},
       {"title": "Stroke width", "key": "strokeWidth", "min": 1, "max": 10, "value": 1, "type": "slider"},
       {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"}
     ],
