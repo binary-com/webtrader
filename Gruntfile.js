@@ -50,7 +50,8 @@ module.exports = function (grunt) {
                         src: [
                             'jquery-ui-iconfont/jquery-ui.icon-font.css',
                             'jquery-ui-iconfont/font/*',
-                            'regenerator-runtime/*'
+                            'regenerator-runtime/*',
+                            'chosen-js/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                     },

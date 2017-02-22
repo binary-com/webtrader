@@ -1,168 +1,202 @@
 .real-dialog {
-  padding: 0 10px !important;
-  background: white !important;
-  overflow: hidden !important;
+    padding: 0 10px !important;
+    background: white !important;
+    overflow: hidden !important;
 }
 
 .real-dialog span.validation {
-  color: red;
-  font-size: 11px;
+    color: red;
+    font-size: 11px;
 }
 
 .real-dialog span.explanation {
-  font-size: 11.5px;
-  color: #aaa;
+    font-size: 11.5px;
+    color: #aaa;
 }
 
 .real-dialog div.validations {
-  height: 18px;
-  margin-top: -2px;
+    height: 18px;
+    margin-top: -2px;
 }
-
 
 .real-dialog select + .ui-selectmenu-button {
-  margin-bottom: 10px;
-  border-radius: 5px !important;
-  font-size: 14px;
-  z-index: 100;
+    margin-bottom: 10px;
+    border-radius: 5px !important;
+    font-size: 14px;
+    z-index: 100;
 }
 
+
 /* for jq select menu */
+
 .real-dialog-ul {
-  font-size: 14px !important;
-  max-height: 100px;
+    font-size: 14px !important;
+    max-height: 100px;
 }
 
 .real-dialog .row > span {
-  display:  block;
+    display: block;
 }
 
 .real-dialog span.title {
-  font-size: 14px;
-  margin-bottom: 2px;
-  width: calc(100% - 20px);
-  display: inline-block;
+    font-size: 14px;
+    margin-bottom: 2px;
+    width: calc(100% - 20px);
+    display: inline-block;
 }
+
 .real-dialog span.title-big {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 8px 0 3px 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0 3px 0;
 }
 
 .real-dialog span.residence {
-  margin-left: 10px;
+    margin-left: 10px;
 }
+
 .real-dialog span.residence + .validations {
-  margin-left: 10px;
-  white-space: nowrap;
+    margin-left: 10px;
+    white-space: nowrap;
 }
 
 .real-dialog input {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 .real-dialog input + input {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .real-dialog button {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 .real-dialog a {
-  color: #EA9800;
-  font-weight: normal;
-  text-decoration: underline;
+    color: #EA9800;
+    font-weight: normal;
+    text-decoration: underline;
 }
 
+
 /* financial step styles */
+
 .real-dialog span.back-arrow {
-  color: #aaa;
-  font-size: 12px;
-  cursor: pointer;
-  margin-top: 10px;
+    color: #aaa;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
 }
+
 .real-dialog .back-arrow > span {
-  display: inline-block;
-  position: relative;
-  top: 2px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
 }
 
 .real-dialog .user,
 .real-dialog .financial {
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
 }
-
 
 .real-dialog .user label {
-  display: block;
-  font-size: 12px;
+    display: block;
+    font-size: 12px;
 }
+
 .real-dialog .user label input {
-  float: left;
-  position: relative;
-  top: -2px;
+    float: left;
+    position: relative;
+    top: -2px;
 }
 
 .real-dialog .user button {
-  float: right;
+    float: right;
 }
 
 .real-dialog .financial .title-big + div {
-  height: auto;
-  margin-bottom: 10px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .real-dialog .financial .financial-explanation {
-  font-size: 12px;
-  display: block;
+    font-size: 12px;
+    display: block;
 }
 
 .real-dialog .financial label {
-  display: block;
-  margin: 10px 0;
-  font-size: 14px;
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
 }
+
 .real-dialog .financial label input {
-  float: left;
-  margin-bottom: 1em;
+    float: left;
+    margin-bottom: 1em;
 }
 
 .real-dialog .financial span.please-select {
-  color: red;
-  font-size: 16px;
-  display: inline-block;
-  text-align: right;
+    color: red;
+    font-size: 16px;
+    display: inline-block;
+    text-align: right;
 }
 
 .real-dialog .disabled-form {
-  pointer-events: none;
-  opacity: 0.6;
+    pointer-events: none;
+    opacity: 0.6;
 }
 
 .real-dialog .risk span {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 .real-dialog .risk {
-  width: 300px;
-  padding: 5px;
-  font-size: 15px;
-  position: absolute;
-  background: white;
-  z-index: 1000000000;
-  bottom: 65px;
-  right: 20px;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.7) 0 6px 50px;
+    width: 300px;
+    padding: 5px;
+    font-size: 15px;
+    position: absolute;
+    background: white;
+    z-index: 1000000000;
+    bottom: 65px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0 6px 50px;
 }
+
 .real-dialog .risk:after {
-  border: 8px solid;
-  border-color: white transparent transparent transparent ;
-  content: "";
-  left: 33%;
-  margin-left: -8px;
-  position: absolute;
-  top: 100%;
+    border: 8px solid;
+    border-color: white transparent transparent transparent;
+    content: "";
+    left: 33%;
+    margin-left: -8px;
+    position: absolute;
+    top: 100%;
+}
+
+.chosen-drop .chosen-results {
+    max-height: 90px;
+}
+
+.chosen-container-active .chosen-choices {
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.chosen-container .chosen-choices {
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    background-image: none;
+}
+
+.chosen-container-active .chosen-drop {
+    border: 1px solid #f2f2f2;
+}
+
+.chosen-container-active .chosen-drop .chosen-results li.highlighted {
+    background: #1e90ff;
 }
