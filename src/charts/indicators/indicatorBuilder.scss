@@ -58,23 +58,25 @@
   }
 
   .colorpicker-td {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     position: relative;
-     top: 2px;
+     //display: flex;
+     //flex-direction: row;
+     //justify-content: space-between;
+     //position: relative;
+     //top: 2px;
 
+     line-height: 1px;
      div {
         height: 26px !important;
         position: relative;
-        top: -2px;
-        display: block;
+        top: -1px;
+        padding: 0;
+        border: none;
      }
      input {
-        display: block;
+        height: 1px;
         padding: 0;
-        margin: 0;
         border: none;
+        visibility: hidden;
      }
   }
 

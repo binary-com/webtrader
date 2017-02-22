@@ -438,21 +438,20 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
           priority: 96,
           publishes: true,
           bind: function (el) {
-              var div = $(el);
+              var input = $(el);
 
               var publish = this.publish;
               var model = this.model;
               var color = model.value || '#cd0a0a';
 
-               var altField = $('<div style="width:100%; height: 20px;display:inline-block"/>');
-               div.before(altField);
-               div.css({visibility: 'hidden', width: '1px', display: 'inline-block'});
+               var altField = $('<div style="width:100%;"/>');
+               input.after(altField);
 
-               div.colorpicker({
+               input.colorpicker({
                   showOn: 'alt',
                   altField: altField,
                   position: {
-                     my: "left-200 bottom-10",
+                     my: "left-100 bottom+5",
                      of: "element",
                      collision: "fit"
                   },
@@ -470,9 +469,9 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
                });
              
                setTimeout(function() {
-                  parent = div.scrollParent();
+                  parent = input.scrollParent();
                   parent.scroll(function() {
-                     div.colorpicker('close');
+                     input.colorpicker('close');
                   });
                }, 1000);
           },
