@@ -14,7 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.12-dev\n"
 
-#, fuzzy
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
 "funds.aspx\""
@@ -22,7 +21,6 @@ msgstr ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
 "funds.aspx\""
 
-#, fuzzy
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
 "ticks during the trade"
@@ -30,7 +28,6 @@ msgstr ""
 "\"Asian Fall\" - Você ganha quando o último tique-taque fica abaixo da média "
 "dos tique-taques durante a negociação"
 
-#, fuzzy
 msgid ""
 "'Asian Rise' - You win when the last tick is higher than the average of the "
 "ticks during the trade"
@@ -38,19 +35,16 @@ msgstr ""
 "\"Asian Fall\" - Você ganha quando o último tique-taque fica abaixo da média "
 "dos tique-taques durante a negociação"
 
-#, fuzzy
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr ""
 "Prêmio de \"Empresa de melhor comunicação com clientes\" atribuída pela "
 "Investors Chronicle"
 
-#, fuzzy
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
 msgstr ""
 "Prêmio de prata na categoria \"Melhor corretora de probabilidades fixas\" "
 "atribuída pela Trade2Win"
 
-#, fuzzy
 msgid ""
 "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
 "Chronicle UK"
@@ -58,20 +52,17 @@ msgstr ""
 "Prêmio de \"Melhor prestador de serviços financeiros de probabilidades "
 "fixas\" atribuída pela Financial Times e a Investors Chronicle UK"
 
-#, fuzzy
 msgid ""
 "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr ""
 "Prêmio de \"Melhor prestador de serviços de negociação financeira de "
 "probabilidades fixas\" atribuída pela Shares Magazine UK"
 
-#, fuzzy
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr ""
 "Prêmio de \"Melhor empresa de probabilidades fixas de 2012\" atribuída pela "
 "Global Banking and Finance Review"
 
-#, fuzzy
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
 "prediction"
@@ -79,12 +70,10 @@ msgstr ""
 "\"Difere\" - Você ganha quando o último dígito do último tique-taque não "
 "corresponde à sua previsão"
 
-#, fuzzy
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr ""
 "Prêmio de \"Melhor operador de apostas do ano\" atribuída pela eGaming Review"
 
-#, fuzzy
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
@@ -92,18 +81,15 @@ msgstr ""
 "\"Combina\" - Você ganha quando o último dígito do último tique-taque "
 "corresponde à sua previsão"
 
-#, fuzzy
 msgid "'contract period'"
 msgstr "\"período do contrato\""
 
-#, fuzzy
 msgid "(One) Touch trades"
 msgstr "Negociações de toque (único)"
 
 msgid "(formerly known as"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
 "day or more in duration)"
@@ -126,7 +112,6 @@ msgid ""
 "- Binary.com ensures your personal data and transactions are always secure"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
 "Each Payment Agent operates as an independent service provider and is not "
@@ -145,14 +130,12 @@ msgstr ""
 "Binary.com não será responsável, em qualquer circunstância, pelas transações "
 "efetuadas entre clientes e agentes de pagamentos"
 
-#, fuzzy
 msgid ""
 "- Binary.com is the industry pioneer and holds patented pricing technology"
 msgstr ""
 "- A Binary.com é a pioneira da indústria e possui tecnologia de preços "
 "patenteada"
 
-#, fuzzy
 msgid ""
 "- Binary.com offers many payment methods, such as credit/debit cards, bank "
 "wires, e-cash and e-wallets"
@@ -161,7 +144,6 @@ msgstr ""
 "de crédito/débito, transferências bancárias, dinheiro eletrônico e carteiras "
 "eletrônicas"
 
-#, fuzzy
 msgid ""
 "- Binary.com quotes a trade and the counter-trade, so you always get "
 "unbiased, transparent prices"
@@ -169,7 +151,6 @@ msgstr ""
 "- A Binary.com cita o preço de uma negociação e também o do seu inverso, "
 "portanto, você recebe sempre preços imparciais"
 
-#, fuzzy
 msgid ""
 "- binaries are licensed as a betting activity in the UK, so your winnings "
 "are tax-free"
@@ -177,11 +158,9 @@ msgstr ""
 "- a negociação de opções binárias é licenciada como uma atividade de apostas "
 "no Reino Unido, portanto, os seus ganhos estão isentos de impostos"
 
-#, fuzzy
 msgid "- choose intraday trades from 1 minute to 24 hours"
 msgstr "- escolha negociações intradiárias de 1 minuto a 24 horas"
 
-#, fuzzy
 msgid ""
 "- choose the falls trade, lower trade, one-touch trade with a low barrier, "
 "or no-touch trade with a high barrier"
@@ -190,7 +169,6 @@ msgstr ""
 "toque\" com uma barreira baixa ou a negociação \"nenhum toque\" com uma "
 "barreira alta"
 
-#, fuzzy
 msgid ""
 "- choose the no-touch trade, the stays-between trade, or the ends-between "
 "trade"
@@ -198,7 +176,6 @@ msgstr ""
 "- escolha a negociação \"nenhum toque\", a negociação \"fica entre\" ou a "
 "negociação \"termina entre\""
 
-#, fuzzy
 msgid ""
 "- choose the one-touch trade, the goes-outside trade, or the ends outside "
 "trade"
@@ -206,7 +183,6 @@ msgstr ""
 "- escolha a negociação \"um toque\", a negociação \"sai fora\" ou a "
 "negociação \"termina fora\""
 
-#, fuzzy
 msgid ""
 "- choose the rise trade, higher trade, one-touch trade with a high barrier, "
 "or no-touch trade with a low barrier"
@@ -215,15 +191,12 @@ msgstr ""
 "um toque\" com uma barreira alta ou a negociação \"nenhum toque\" com uma "
 "barreira baixa"
 
-#, fuzzy
 msgid "- choose timeframes from 10 seconds to 365 days"
 msgstr "- escolha prazos de 10 segundos a 365 dias"
 
-#, fuzzy
 msgid "- choose trades with durations of up to 365 days"
 msgstr "- escolha negociações com durações até 365 dias"
 
-#, fuzzy
 msgid ""
 "- choose trades with high returns and a low probability to win, or with low "
 "returns and a high probability to win"
@@ -231,33 +204,26 @@ msgstr ""
 "- escolha negociações com altos retornos e baixa probabilidade de ganhar ou "
 "baixos retornos mas uma alta probabilidade de ganhar"
 
-#, fuzzy
 msgid "- currencies, stock indices, and commodities"
 msgstr "- moedas, índices de ações e matérias-primas"
 
-#, fuzzy
 msgid "- customize your trades to meet your needs"
 msgstr "- personalize as suas negociações para atender às suas necessidades"
 
-#, fuzzy
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
 msgstr "- comece prudentemente com $2 ou bote para quebrar com $50.000"
 
-#, fuzzy
 msgid "- from $1 to $50,000"
 msgstr "- de $1 a $50.000"
 
-#, fuzzy
 msgid "- from 10 seconds to 365 days"
 msgstr "- de 10 segundos a 365 dias"
 
-#, fuzzy
 msgid "- get pricing that is normally reserved for big institutional players"
 msgstr ""
 "- receba ofertas de preço que geralmente são reservadas para grande "
 "instituições"
 
-#, fuzzy
 msgid ""
 "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden "
 "fees or commissions"
@@ -265,26 +231,21 @@ msgstr ""
 "- nenhumas \"derrapagens\", nenhumas \"chamadas de margem\", nenhumas "
 "situações de \"fechamento\" e nenhumas taxas ou comissões ocultas"
 
-#, fuzzy
 msgid "- open an account in minutes"
 msgstr "- abra uma conta em poucos minutos"
 
-#, fuzzy
 msgid ""
 "- open, fund, or withdraw from your account within minutes, 24 hours a day"
 msgstr ""
 "- abra, financie ou retire fundos da sua conta em pouco minutos, 24 horas "
 "por dia"
 
-#, fuzzy
 msgid "- predict if the market will end higher or lower than a price target"
 msgstr "- preveja se o mercado irá terminar acima ou abaixo de um preço-alvo"
 
-#, fuzzy
 msgid "- predict if the market will rise or fall from its current level"
 msgstr "- preveja se o mercado irá subir ou descer do seu nível atual"
 
-#, fuzzy
 msgid ""
 "- predict if the market will stay inside two price targets, or end between "
 "or outside them"
@@ -292,52 +253,41 @@ msgstr ""
 "- preveja se o mercado irá ficar dentro dois alvos de preço ou terminar "
 "entre ou fora deles"
 
-#, fuzzy
 msgid "- predict if the market will touch or not touch a price target"
 msgstr "- preveja se o mercado irá tocar ou não tocar num preço-alvo"
 
-#, fuzzy
 msgid "- sell your long-term trades at market prices before they expire"
 msgstr ""
 "- venda as suas negociações de longo prazo a preços de mercado antes delas "
 "expirarem"
 
-#, fuzzy
 msgid ""
 "- set your trades on 'gut feel', or use technical or fundamental analysis"
 msgstr ""
 "- defina as suas negociações com base nos seus \"instintos\" ou use análise "
 "técnica ou fundamental"
 
-#, fuzzy
 msgid "- start trading with as little as $5"
 msgstr "- comece a negociar com apenas $5"
 
-#, fuzzy
 msgid "- trade 24/7, even on weekends"
 msgstr "- negocie 24/7, mesmo nos finais de semana"
 
-#, fuzzy
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr "- negocie os índices próprios (Volatility) da Binary.com, 24/7"
 
-#, fuzzy
 msgid "- trade Binary.com's proprietary volatility indices"
 msgstr "- negocie os índices próprios \"Volatility\" da Binary.com"
 
-#, fuzzy
 msgid "- trade all major FX pairs"
 msgstr "- negocie todos os principais pares de moedas"
 
-#, fuzzy
 msgid "- trade all major FX pairs, around the clock"
 msgstr "- negocie todos os principais pares de moedas, 24 horas por dia"
 
-#, fuzzy
 msgid "- trade all major worldwide stock indices"
 msgstr "- negocie todos os principais índices de ações internacionais"
 
-#, fuzzy
 msgid ""
 "- trade currencies, indices and commodities in rising, falling, sideways, "
 "quiet and volatile markets"
@@ -345,28 +295,22 @@ msgstr ""
 "- negocie moedas, índices e matérias-primas em mercados de tendência "
 "altista, baixista, horizontais, parados e voláteis"
 
-#, fuzzy
 msgid "- trade major commodities such as gold and oil"
 msgstr "- negocie matérias-primas principais como ouro e petróleo"
 
-#, fuzzy
 msgid "- up/down, touch/no-touch, stays in/goes out"
 msgstr "- acima/abaixo, toca/não toca, fica dentro/sai fora"
 
-#, fuzzy
 msgid "- we challenge you to find better returns on any competing website"
 msgstr ""
 "- desafiamo-lo a encontrar melhores retornos em qualquer site concorrente"
 
-#, fuzzy
 msgid "- win the same proportional return on stakes of all values"
 msgstr "- ganhe o mesmo retorno proporcional em apostas de qualquer valor"
 
-#, fuzzy
 msgid "- you know from the start what you will win or lose"
 msgstr "- você sabe desde o princípio o que irá ganhar ou perder"
 
-#, fuzzy
 msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
@@ -374,239 +318,180 @@ msgstr ""
 "- você nunca terá chamadas de margem, risco de desvalorização, custos com "
 "derrapagens, taxas ocultas ou comissões"
 
-#, fuzzy
 msgid "0-1 year"
 msgstr "0 a 1 ano"
 
-#, fuzzy
 msgid "0-5 transactions in the past 12 months"
 msgstr "0 a 5 transações nos últimos 12 meses"
 
-#, fuzzy
 msgid "1"
 msgstr "1"
 
-#, fuzzy
 msgid "1 Day"
 msgstr "1 dia"
 
-#, fuzzy
 msgid "1 Hour"
 msgstr "1 hora"
 
-#, fuzzy
 msgid "1 Minute"
 msgstr "1 minuto"
 
-#, fuzzy
 msgid "1 Tick"
 msgstr "1 Tique-taque"
 
-#, fuzzy
 msgid "1 million transactions/day"
 msgstr "1 milhão de transações/dia"
 
-#, fuzzy
 msgid "1-2 years"
 msgstr "1 a 2 anos"
 
-#, fuzzy
 msgid "10"
 msgstr "10"
 
-#, fuzzy
 msgid "10 Minutes"
 msgstr "10 minutos"
 
-#, fuzzy
 msgid "10m"
 msgstr "10m"
 
-#, fuzzy
 msgid "15"
 msgstr "15"
 
-#, fuzzy
 msgid "15 Minutes"
 msgstr "15 minutos"
 
-#, fuzzy
 msgid "15m"
 msgstr "10 m"
 
-#, fuzzy
 msgid "1999"
 msgstr "1999"
 
-#, fuzzy
 msgid "1d"
 msgstr "1d"
 
-#, fuzzy
 msgid "1h"
 msgstr "1h"
 
-#, fuzzy
 msgid "1m"
 msgstr "1m"
 
-#, fuzzy
 msgid "1t"
 msgstr "1t"
 
-#, fuzzy
 msgid "2"
 msgstr "2"
 
-#, fuzzy
 msgid "2 Hours"
 msgstr "2 horas"
 
-#, fuzzy
 msgid "2 Minutes"
 msgstr "2 minutos"
 
-#, fuzzy
 msgid "2-way pricing"
 msgstr "Preços bidirecionais"
 
-#, fuzzy
 msgid "2000"
 msgstr "2000"
 
-#, fuzzy
 msgid "2004"
 msgstr "2004"
 
-#, fuzzy
 msgid "2007"
 msgstr "2007"
 
-#, fuzzy
 msgid "2008"
 msgstr "2008"
 
-#, fuzzy
 msgid "2009"
 msgstr "2009"
 
-#, fuzzy
 msgid "2011"
 msgstr "2011"
 
-#, fuzzy
 msgid "2012"
 msgstr "2012"
 
-#, fuzzy
 msgid "2013"
 msgstr "2013"
 
-#, fuzzy
 msgid "2014"
 msgstr "2014"
 
-#, fuzzy
 msgid "2015"
 msgstr "2015"
 
-#, fuzzy
 msgid "2016"
 msgstr "2016"
 
-#, fuzzy
 msgid "2h"
 msgstr "2h"
 
-#, fuzzy
 msgid "2m"
 msgstr "2m"
 
-#, fuzzy
 msgid "3"
 msgstr "3"
 
-#, fuzzy
 msgid "3 Minutes"
 msgstr "3 minutos"
 
-#, fuzzy
 msgid "30"
 msgstr "30"
 
-#, fuzzy
 msgid "30 Minutes"
 msgstr "30 minutos"
 
-#, fuzzy
 msgid "30-day limit on losses"
 msgstr "Limite de perdas de 30 dias"
 
-#, fuzzy
 msgid "30-day turnover limit"
 msgstr "Limite de volume de negócios de 30 dias"
 
-#, fuzzy
 msgid "30m"
 msgstr "30m"
 
-#, fuzzy
 msgid "3m"
 msgstr "3m"
 
-#, fuzzy
 msgid "4"
 msgstr "4"
 
-#, fuzzy
 msgid "4 Hours"
 msgstr "4 horas"
 
-#, fuzzy
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transações ou mais nos últimos 12 meses"
 
-#, fuzzy
 msgid "404"
 msgstr "404"
 
-#, fuzzy
 msgid "4h"
 msgstr "4h"
 
-#, fuzzy
 msgid "5"
 msgstr "5"
 
-#, fuzzy
 msgid "5 Minutes"
 msgstr "5 minutos"
 
-#, fuzzy
 msgid "5m"
 msgstr "5m"
 
-#, fuzzy
 msgid "6-10 transactions in the past 12 months"
 msgstr "6 a 10 transações nos últimos 12 meses"
 
-#, fuzzy
 msgid "7-day limit on losses"
 msgstr "Limite de perdas de 7 dias"
 
-#, fuzzy
 msgid "7-day turnover limit"
 msgstr "Limite de volume de negócios de 7 dias"
 
-#, fuzzy
 msgid "8"
 msgstr "8"
 
-#, fuzzy
 msgid "8 Hours"
 msgstr "8 horas"
 
-#, fuzzy
 msgid "8h"
 msgstr "8h"
 
@@ -795,7 +680,6 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-#, fuzzy
 msgid "AM"
 msgstr "AM"
 
@@ -805,50 +689,39 @@ msgstr ""
 msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
-#, fuzzy
 msgid "Accept"
 msgstr "Aceitar"
 
-#, fuzzy
 msgid "Account balance"
 msgstr "Saldo de conta"
 
-#, fuzzy
 msgid "Account opening"
 msgstr "Abertura de conta"
 
-#, fuzzy
 msgid "Action"
 msgstr "Ação"
 
 msgid "Add"
 msgstr ""
 
-#, fuzzy
 msgid "Add comparisons"
 msgstr "Adicionar comparações"
 
-#, fuzzy
 msgid "Add indicator"
 msgstr "Adicionar indicador"
 
-#, fuzzy
 msgid "Add level"
 msgstr "Adicionar nível"
 
-#, fuzzy
 msgid "Add/remove comparisons"
 msgstr "Adicionar/remover comparações"
 
-#, fuzzy
 msgid "Add/remove indicators"
 msgstr "Adicionar/remover indicadores"
 
-#, fuzzy
 msgid "Add/remove overlays"
 msgstr "Adicionar/remover sobreposições"
 
-#, fuzzy
 msgid "Admin"
 msgstr "Administração"
 
@@ -870,19 +743,15 @@ msgstr ""
 msgid "All payouts"
 msgstr ""
 
-#, fuzzy
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todos os horários são exibidos em GMT (Greenwich Mean Time)"
 
-#, fuzzy
 msgid "Amount"
 msgstr "Valor"
 
-#, fuzzy
 msgid "Amount Per Point"
 msgstr "Montante por ponto"
 
-#, fuzzy
 msgid "Amount per point"
 msgstr "Montante por ponto"
 
@@ -900,30 +769,24 @@ msgid ""
 "trades, pricing, customer service and extensive knowledge"
 msgstr ""
 
-#, fuzzy
 msgid "Answer"
 msgstr "Resposta"
 
-#, fuzzy
 msgid "Apply"
 msgstr "Candidatar-se"
 
 msgid "Apply to become a Binary.com"
 msgstr ""
 
-#, fuzzy
 msgid "Appropriateness Test: WARNING"
 msgstr "Teste de adequação: AVISO"
 
-#, fuzzy
 msgid "Apr"
 msgstr "Abr"
 
-#, fuzzy
 msgid "April"
 msgstr "Abril"
 
-#, fuzzy
 msgid "Are you sure you want to delete this token?"
 msgstr "Tem certeza que deseja excluir este token?"
 
@@ -936,35 +799,27 @@ msgstr ""
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
 
-#, fuzzy
 msgid "Asian down"
 msgstr "Asiático abaixo"
 
-#, fuzzy
 msgid "Asian up"
 msgstr "Asiático acima"
 
-#, fuzzy
 msgid "Asians"
 msgstr "Asiáticos"
 
-#, fuzzy
 msgid "Asset"
 msgstr "Ativo"
 
-#, fuzzy
 msgid "Asset Index"
 msgstr "Índice de ativos"
 
-#, fuzzy
 msgid "Aug"
 msgstr "Ago"
 
-#, fuzzy
 msgid "August"
 msgstr "Agosto"
 
-#, fuzzy
 msgid "Average"
 msgstr "Média"
 
@@ -986,11 +841,9 @@ msgstr ""
 msgid "Awesome Oscillator (AO)"
 msgstr ""
 
-#, fuzzy
 msgid "Back"
 msgstr "Voltar"
 
-#, fuzzy
 msgid "Back to list"
 msgstr "Voltar para a lista"
 
@@ -1003,11 +856,9 @@ msgid ""
 "trust the Binary.com platform for high-volume flexible trades"
 msgstr ""
 
-#, fuzzy
 msgid "Barrier"
 msgstr "Barreira"
 
-#, fuzzy
 msgid "Barrier offset"
 msgstr "Deslocação da barreira"
 
@@ -1080,7 +931,6 @@ msgstr ""
 msgid "Binary option"
 msgstr ""
 
-#, fuzzy
 msgid "Binary options or other financial derivatives"
 msgstr "Opções binárias ou outros derivados financeiros"
 
@@ -1112,11 +962,9 @@ msgstr ""
 msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr ""
 
-#, fuzzy
 msgid "Binary.com"
 msgstr "Binary.com"
 
-#, fuzzy
 msgid "Binary.com : Webtrader"
 msgstr "BInary.com: Webtrader"
 
@@ -1240,18 +1088,15 @@ msgid ""
 "relative to previous trades"
 msgstr ""
 
-#, fuzzy
 msgid "Bought"
 msgstr "Adquiridos"
 
-#, fuzzy
 msgid "Brand of first car"
 msgstr "Marca do primeiro carro"
 
 msgid "Breakaway (CDLBREAKAWAY)"
 msgstr ""
 
-#, fuzzy
 msgid "Browser upgrade required"
 msgstr "Atualização de navegador necessária"
 
@@ -1260,26 +1105,21 @@ msgid ""
 "at any time to profit from changing market conditions"
 msgstr ""
 
-#, fuzzy
 msgid "Buy Price"
 msgstr "Preço de compra"
 
-#, fuzzy
 msgid "Buy price"
 msgstr "Preço de compra"
 
-#, fuzzy
 msgid "By clicking"
 msgstr "Ao clicar"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
 
-#, fuzzy
 msgid "CLOSE"
 msgstr "FECHAMENTO"
 
-#, fuzzy
 msgid "CSV"
 msgstr "CSV"
 
@@ -1302,31 +1142,24 @@ msgid ""
 "and set / clear cashier passwords."
 msgstr ""
 
-#, fuzzy
 msgid "Cancel"
 msgstr "Cancelar"
 
-#, fuzzy
 msgid "Candles"
 msgstr "Velas"
 
-#, fuzzy
 msgid "Candlestick down-color"
 msgstr "Cor da vela para baixo"
 
-#, fuzzy
 msgid "Candlestick down-line"
 msgstr "Linha da vela para baixo"
 
-#, fuzzy
 msgid "Candlestick up-color"
 msgstr "Cor da vela para cima"
 
-#, fuzzy
 msgid "Candlestick up-line"
 msgstr "Linha da vela para cima"
 
-#, fuzzy
 msgid "Cash Balance"
 msgstr "Saldo de dinheiro"
 
@@ -1336,35 +1169,27 @@ msgstr ""
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr ""
 
-#, fuzzy
 msgid "Change Backend Server"
 msgstr "Alterar servidor back-end"
 
-#, fuzzy
 msgid "Change password"
 msgstr "Alterar senha"
 
-#, fuzzy
 msgid "Chart"
 msgstr "Gráfico"
 
-#, fuzzy
 msgid "Chart Themes"
 msgstr "Temas do gráfico"
 
-#, fuzzy
 msgid "Chart background"
 msgstr "Imagem de fundo do gráfico"
 
-#, fuzzy
 msgid "Chart context menu"
 msgstr "Menu do contexto do gráfico"
 
-#, fuzzy
 msgid "Chart template"
 msgstr "Modelo do gráfico"
 
-#, fuzzy
 msgid "Chart type"
 msgstr "Tipo de gráfico"
 
@@ -1412,7 +1237,6 @@ msgstr ""
 msgid "Choose from over a million possible trades at any time"
 msgstr ""
 
-#, fuzzy
 msgid "Choose password"
 msgstr "Escolher senha"
 
@@ -1441,38 +1265,30 @@ msgstr ""
 msgid "Choose the underlying market"
 msgstr ""
 
-#, fuzzy
 msgid "Choose your pereferred payment agent"
 msgstr "Escolha o seu agente de pagamentos preferido"
 
-#, fuzzy
 msgid "Choose your pereferred withdrawal method"
 msgstr "Escolha o seu método de retirada preferido"
 
 msgid "Choppiness Index (CHOP)"
 msgstr ""
 
-#, fuzzy
 msgid "Chrome"
 msgstr "Chrome"
 
-#, fuzzy
 msgid "Click Jacking test"
 msgstr "Teste de \"Click Jacking\""
 
-#, fuzzy
 msgid "Click to log in with your Binary.com account"
 msgstr "Clique para conectar-se com a sua conta Binary.com"
 
-#, fuzzy
 msgid "Close Price"
 msgstr "Preço de fechamento"
 
-#, fuzzy
 msgid "Close all"
 msgstr "Fechar tudo"
 
-#, fuzzy
 msgid "Closes"
 msgstr "Fecha"
 
@@ -1487,61 +1303,48 @@ msgid ""
 "as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr ""
 
-#, fuzzy
 msgid "Commodities trading experience"
 msgstr "Experiência com a negociação de matérias-primas"
 
-#, fuzzy
 msgid "Commodities trading frequency"
 msgstr "Frequência de negociação de matérias-primas"
 
 msgid "Commodity Channel Index (CCI)"
 msgstr ""
 
-#, fuzzy
 msgid "Comparisons"
 msgstr "Comparações"
 
-#, fuzzy
 msgid "Conditions"
 msgstr "Condições"
 
-#, fuzzy
 msgid "Config changes successful"
 msgstr "Configurações alteradas com sucesso"
 
-#, fuzzy
 msgid "Confirm transfer"
 msgstr "Confirmar transferência"
 
-#, fuzzy
 msgid "Construction"
 msgstr "Construção"
 
-#, fuzzy
 msgid "Contact Us"
 msgstr "Contate-nos"
 
-#, fuzzy
 msgid "Continue"
 msgstr "Continuar"
 
-#, fuzzy
 msgid "Continue Trading"
 msgstr "Continuar a negociar"
 
-#, fuzzy
 msgid "Contract"
 msgstr "Contrato"
 
-#, fuzzy
 msgid "Contract Confirmation"
 msgstr "Confirmação de contrato"
 
 msgid "Contract period"
 msgstr ""
 
-#, fuzzy
 msgid "Contracts"
 msgstr "Contratos"
 
@@ -1551,78 +1354,60 @@ msgstr ""
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr ""
 
-#, fuzzy
 msgid "Country of residence"
 msgstr "País de residência"
 
-#, fuzzy
 msgid "Create"
 msgstr "Criar"
 
-#, fuzzy
 msgid "Create token"
 msgstr "Criar token"
 
-#, fuzzy
 msgid "Credit/Debit"
 msgstr "Crédito/Débito"
 
-#, fuzzy
 msgid "Crosshair"
 msgstr "Fio de retículo"
 
 msgid "Currencies"
 msgstr ""
 
-#, fuzzy
 msgid "Current Level"
 msgstr "Nível atual"
 
-#, fuzzy
 msgid "Current Spot"
 msgstr "Preço atual"
 
-#, fuzzy
 msgid "Current Spot Time"
 msgstr "Hora do preço à vista atual"
 
-#, fuzzy
 msgid "Current comparisons"
 msgstr "Comparações atuais"
 
-#, fuzzy
 msgid "Current indicators"
 msgstr "Indicadores atuais"
 
-#, fuzzy
 msgid "Current password"
 msgstr "Senha atual"
 
-#, fuzzy
 msgid "Current regulations require that you provide us the following"
 msgstr "Regulamentos atuais exigem que você nos forneça as seguintes"
 
-#, fuzzy
 msgid "Current time"
 msgstr "Hora atual"
 
-#, fuzzy
 msgid "Custom Theme"
 msgstr "Tema personalizado"
 
-#, fuzzy
 msgid "Customize chart appearance"
 msgstr "Personalizar aparência do gráfico"
 
-#, fuzzy
 msgid "Daily limit on losses"
 msgstr "Limite diário de perdas"
 
-#, fuzzy
 msgid "Daily turnover limit"
 msgstr "Limite diário de volume de negócios"
 
-#, fuzzy
 msgid "Dark Blue"
 msgstr "Azul-escuro"
 
@@ -1637,69 +1422,54 @@ msgid ""
 "market"
 msgstr ""
 
-#, fuzzy
 msgid "Dark Green"
 msgstr "Verde-escuro"
 
-#, fuzzy
 msgid "Dark Unica"
 msgstr "Unica escuro"
 
-#, fuzzy
 msgid "Dash style"
 msgstr "Estilo do tracejado"
 
-#, fuzzy
 msgid "Date"
 msgstr "Data"
 
-#, fuzzy
 msgid "Date of birth"
 msgstr "Data de nascimento"
 
-#, fuzzy
 msgid "Days"
 msgstr "Dias"
 
 msgid "Debt-free"
 msgstr ""
 
-#, fuzzy
 msgid "Dec"
 msgstr "Dez"
 
-#, fuzzy
 msgid "December"
 msgstr "Dezembro"
 
-#, fuzzy
 msgid "Decline"
 msgstr "Rejeitar"
 
-#, fuzzy
 msgid "Default"
 msgstr "Padrão"
 
 msgid "Define your position"
 msgstr ""
 
-#, fuzzy
 msgid "Delete"
 msgstr "Excluir"
 
-#, fuzzy
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Demo para que os afiliados possam acessar gráficos do Webtrader"
 
-#, fuzzy
 msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr "Demo para afiliados poderem acessar os gráficos Webtrader em IFRAME"
 
-#, fuzzy
 msgid "Deposit funds"
 msgstr "Depositar fundos"
 
-#, fuzzy
 msgid "Deposit of USD"
 msgstr "Depósito de USD"
 
@@ -1709,15 +1479,12 @@ msgstr ""
 msgid "Derivative"
 msgstr ""
 
-#, fuzzy
 msgid "Describe what this token is for to find it later"
 msgstr "Descreva para o que serve este token para encontrá-lo mais tarde"
 
-#, fuzzy
 msgid "Description"
 msgstr "Descrição"
 
-#, fuzzy
 msgid "Deselect"
 msgstr "Desmarcar"
 
@@ -1744,11 +1511,9 @@ msgid ""
 "measures the number of days since a 25-day low"
 msgstr ""
 
-#, fuzzy
 msgid "Differs"
 msgstr "Difere"
 
-#, fuzzy
 msgid "Digits"
 msgstr "Dígitos"
 
@@ -1771,7 +1536,6 @@ msgstr ""
 msgid "Do you offer virtual-money accounts?"
 msgstr ""
 
-#, fuzzy
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Deseja instalar a extensão do Chrome do Webtrader?"
 
@@ -1787,7 +1551,6 @@ msgid ""
 "like a cross, inverted cross or plus sign"
 msgstr ""
 
-#, fuzzy
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "Ainda não tem uma conta? Inscreva-se e receba uma conta virtual com $10.000"
@@ -1795,89 +1558,70 @@ msgstr ""
 msgid "Donchian Channel (DC)"
 msgstr ""
 
-#, fuzzy
 msgid "Done"
 msgstr "Concluído"
 
-#, fuzzy
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
 "Concluído. Os fundos estão sendo transferidos para o agente de pagamentos"
 
-#, fuzzy
 msgid "Done. The funds are transferred"
 msgstr "Concluído. Os fundos foram transferidos"
 
-#, fuzzy
 msgid "Dot"
 msgstr "Pontos"
 
 msgid "Double Exponential Moving Average (DEMA)"
 msgstr ""
 
-#, fuzzy
 msgid "Double click the object to remove"
 msgstr "Clique duas vezes no objeto para removê-lo"
 
-#, fuzzy
 msgid "Download"
 msgstr "Baixar"
 
-#, fuzzy
 msgid "Download CSV"
 msgstr "Baixar CSV"
 
-#, fuzzy
 msgid "Download JPEG image"
 msgstr "Baixar imagem JPEG"
 
-#, fuzzy
 msgid "Download PDF document"
 msgstr "Baixar documento PDF"
 
-#, fuzzy
 msgid "Download PNG"
 msgstr "Baixar PNG"
 
-#, fuzzy
 msgid "Download PNG image"
 msgstr "Baixar imagem PNG"
 
-#, fuzzy
 msgid "Download SVG"
 msgstr "Baixar SVG"
 
-#, fuzzy
 msgid "Download SVG vector image"
 msgstr "Baixar imagem vetorial SVG"
 
-#, fuzzy
 msgid "Download as"
 msgstr "Baixar como"
 
-#, fuzzy
 msgid "Downloading .csv"
 msgstr "Baixar .csv"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr ""
 
-#, fuzzy
 msgid "Drawing tools"
 msgstr "Ferramentas de desenho"
 
-#, fuzzy
 msgid "Duration"
 msgstr "Duração"
 
 msgid "EGR Operator Award"
 msgstr ""
 
-#, fuzzy
 msgid "EMA"
 msgstr "EMA"
 
-#, fuzzy
 msgid "EURUSD"
 msgstr "EURUSD"
 
@@ -1891,82 +1635,65 @@ msgid ""
 "if your prediction is correct"
 msgstr ""
 
-#, fuzzy
 msgid "Edge"
 msgstr "Borda"
 
-#, fuzzy
 msgid "Edit"
 msgstr "Editar"
 
-#, fuzzy
 msgid "Education"
 msgstr "Educação"
 
-#, fuzzy
 msgid "Email verification failed"
 msgstr "Verificação de e-mail falhou"
 
-#, fuzzy
 msgid "Embed code"
 msgstr "Código de inserção"
 
-#, fuzzy
 msgid "End Time"
 msgstr "Hora de término"
 
 msgid "Ends Between/Ends Outside trades"
 msgstr ""
 
-#, fuzzy
 msgid "Ends In/Out"
 msgstr "Termina Dentro/Fora"
 
-#, fuzzy
 msgid "Ends in"
 msgstr "Termina dentro"
 
-#, fuzzy
 msgid "Ends out"
 msgstr "Termina fora"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
-#, fuzzy
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
 "Certifique-se de que você esteja inserindo entradas válidas, caso contrário "
 "a sua conta será bloqueada"
 
-#, fuzzy
 msgid "Enter your current password"
 msgstr "Insira a sua senha atual"
 
-#, fuzzy
 msgid "Entry Spot"
 msgstr "Preço de entrada"
 
-#, fuzzy
 msgid "Entry spot"
 msgstr "Preço de entrada"
 
 msgid "Entry spot price"
 msgstr ""
 
-#, fuzzy
 msgid "Error downloading .csv"
 msgstr "Erro ao baixar .csv"
 
-#, fuzzy
 msgid "Error getting data for %1"
 msgstr "Erro ao obter dados para %1"
 
-#, fuzzy
 msgid "Estimated Net Worth"
 msgstr "Patrimônio líquido estimado"
 
-#, fuzzy
 msgid "Even"
 msgstr "Par"
 
@@ -1979,60 +1706,48 @@ msgstr ""
 msgid "Example"
 msgstr ""
 
-#, fuzzy
 msgid "Exclude me from the website until"
 msgstr "Exclua-me do website até"
 
-#, fuzzy
 msgid "Exit Spot"
 msgstr "Preço de saída"
 
-#, fuzzy
 msgid "Exit spot"
 msgstr "Preço de saída"
 
 msgid "Expiry price"
 msgstr ""
 
-#, fuzzy
 msgid "Explanation"
 msgstr "Explicação"
 
 msgid "Exponential Moving Average (EMA)"
 msgstr ""
 
-#, fuzzy
 msgid "Failed to update the password"
 msgstr "Falha na atualização da senha"
 
-#, fuzzy
 msgid "Fall"
 msgstr "Cair"
 
 msgid "Falling markets"
 msgstr ""
 
-#, fuzzy
 msgid "Family name"
 msgstr "Sobrenome"
 
-#, fuzzy
 msgid "Favorites"
 msgstr "Favoritos"
 
-#, fuzzy
 msgid "Favourite artist"
 msgstr "Artista favorito"
 
-#, fuzzy
 msgid "Favourite dish"
 msgstr "Prato favorito"
 
-#, fuzzy
 msgid "Feb"
 msgstr "Fev"
 
-#, fuzzy
 msgid "February"
 msgstr "Fevereiro"
 
@@ -2044,37 +1759,30 @@ msgid ""
 "available to the retail public"
 msgstr ""
 
-#, fuzzy
 msgid "Final Price"
 msgstr "Preço final"
 
-#, fuzzy
 msgid "Final price"
 msgstr "Preço final"
 
-#, fuzzy
 msgid "Finance"
 msgstr "Finanças"
 
-#, fuzzy
 msgid "Financial Account Opening form"
 msgstr "Formulário de abertura de conta financeiro"
 
 msgid "Financial Security"
 msgstr ""
 
-#, fuzzy
 msgid "Financial information"
 msgstr "Informações financeiras"
 
 msgid "Financial rewards"
 msgstr ""
 
-#, fuzzy
 msgid "Firefox"
 msgstr "Firefox"
 
-#, fuzzy
 msgid "First name"
 msgstr "Primeiro nome"
 
@@ -2095,11 +1803,9 @@ msgstr ""
 msgid "Forex"
 msgstr ""
 
-#, fuzzy
 msgid "Forex trading experience"
 msgstr "Experiência com negociações Forex"
 
-#, fuzzy
 msgid "Forex trading frequency"
 msgstr "Frequência das negociações Forex"
 
@@ -2116,19 +1822,15 @@ msgid ""
 "pattern happens on a chart"
 msgstr ""
 
-#, fuzzy
 msgid "Fri"
 msgstr "Sex"
 
-#, fuzzy
 msgid "Friday"
 msgstr "Sexta-feira"
 
-#, fuzzy
 msgid "From"
 msgstr "De"
 
-#, fuzzy
 msgid "Further instructions"
 msgstr "Mais instruções"
 
@@ -2144,29 +1846,24 @@ msgstr ""
 msgid "Get your price"
 msgstr ""
 
-#, fuzzy
 msgid "Goes out"
 msgstr "Sai fora"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
 msgstr ""
 
-#, fuzzy
 msgid "Gray"
 msgstr "Cinza"
 
-#, fuzzy
 msgid "Grid"
 msgstr "Grelha"
 
-#, fuzzy
 msgid "Grid Light"
 msgstr "Luz de grelha"
 
 msgid "Group History"
 msgstr ""
 
-#, fuzzy
 msgid "HIGH"
 msgstr "ALTA"
 
@@ -2182,26 +1879,21 @@ msgstr ""
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr ""
 
-#, fuzzy
 msgid "Have better luck at trading!"
 msgstr "Tenha mais sorte nas negociações!"
 
-#, fuzzy
 msgid "Health"
 msgstr "Saúde"
 
 msgid "Help"
 msgstr ""
 
-#, fuzzy
 msgid "High Price"
 msgstr "Preço alto"
 
-#, fuzzy
 msgid "High barrier"
 msgstr "Barreira alta"
 
-#, fuzzy
 msgid "High barrier offset"
 msgstr "Deslocamento da barreira alta"
 
@@ -2211,7 +1903,6 @@ msgstr ""
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr ""
 
-#, fuzzy
 msgid "Higher"
 msgstr "Superior"
 
@@ -2224,26 +1915,21 @@ msgstr ""
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr ""
 
-#, fuzzy
 msgid "Home Address"
 msgstr "Endereço da residência"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr ""
 
-#, fuzzy
 msgid "Horizontal Line"
 msgstr "Linha horizontal"
 
-#, fuzzy
 msgid "Horizontal line"
 msgstr "Linha horizontal"
 
-#, fuzzy
 msgid "Hour"
 msgstr "Hora"
 
-#, fuzzy
 msgid "Hours"
 msgstr "Horas"
 
@@ -2271,11 +1957,9 @@ msgstr ""
 msgid "I'm new to binaries, where do I start?"
 msgstr ""
 
-#, fuzzy
 msgid "IMPORTANT DISCLAIMER"
 msgstr "ISENÇÃO DE RESPONSABILIDADE IMPORTANTE"
 
-#, fuzzy
 msgid ""
 "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment "
 "agents listed above. Each payment agent operates as an independent service "
@@ -2301,7 +1985,6 @@ msgstr ""
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr ""
 
-#, fuzzy
 msgid "If the issue keeps happening, please contact"
 msgstr "Caso o problema persista, contate"
 
@@ -2385,7 +2068,6 @@ msgid ""
 "value of the Euro will rise in relation to the value of the US dollar"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
 "you sure you want to proceed?"
@@ -2393,7 +2075,6 @@ msgstr ""
 "Para poder aplicar o tema de forma correta, uma atualização total da página "
 "é necessária. Tem certeza que deseja continuar?"
 
-#, fuzzy
 msgid ""
 "In providing our services to you, we are required to obtain information from "
 "you in order to assess whether a given product or service is appropriate for "
@@ -2405,7 +2086,6 @@ msgstr ""
 "é adequado para você (isto é, se você possui a experiência e os "
 "conhecimentos necessários para compreender os riscos envolvidos)"
 
-#, fuzzy
 msgid ""
 "In regards to binary options which are gambling products, remember that "
 "gambling can be addictive"
@@ -2423,40 +2103,33 @@ msgstr ""
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr ""
 
-#, fuzzy
 msgid "In/Out"
 msgstr "Dentro/Fora"
 
 msgid "In/Out trades"
 msgstr ""
 
-#, fuzzy
 msgid "Income Source"
 msgstr "Fonte dos rendimentos"
 
-#, fuzzy
 msgid "Indicative Price"
 msgstr "Preço indicativo"
 
-#, fuzzy
 msgid "Indicators"
 msgstr "Indicadores"
 
 msgid "Indices"
 msgstr ""
 
-#, fuzzy
 msgid "Indices trading experience"
 msgstr "Experiência com a negociação de índices"
 
-#, fuzzy
 msgid "Indices trading frequency"
 msgstr "Frequência de negociação de índices"
 
 msgid "Individual Traders"
 msgstr ""
 
-#, fuzzy
 msgid "Industry of Employment"
 msgstr "Área profissional"
 
@@ -2466,18 +2139,15 @@ msgstr ""
 msgid "Instant funding"
 msgstr ""
 
-#, fuzzy
 msgid "Instrument"
 msgstr "Instrumento"
 
-#, fuzzy
 msgid "Instruments"
 msgstr "Instrumentos"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
 
-#, fuzzy
 msgid "Investments & Dividends"
 msgstr "Investimentos e dividendos"
 
@@ -2503,31 +2173,24 @@ msgid ""
 "Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr ""
 
-#, fuzzy
 msgid "Jan"
 msgstr "Jan"
 
-#, fuzzy
 msgid "January"
 msgstr "Janeiro"
 
-#, fuzzy
 msgid "Jul"
 msgstr "Jul"
 
-#, fuzzy
 msgid "July"
 msgstr "Julho"
 
-#, fuzzy
 msgid "Jump to"
 msgstr "Saltar para"
 
-#, fuzzy
 msgid "Jun"
 msgstr "Jun"
 
-#, fuzzy
 msgid "June"
 msgstr "Junho"
 
@@ -2569,14 +2232,12 @@ msgstr ""
 msgid "Kuala Lumpur Office"
 msgstr ""
 
-#, fuzzy
 msgid "LOW"
 msgstr "BAIXA"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr ""
 
-#, fuzzy
 msgid "Last used"
 msgstr "Última utilização"
 
@@ -2586,19 +2247,15 @@ msgstr ""
 msgid "Least Squares Moving Average (LSMA)"
 msgstr ""
 
-#, fuzzy
 msgid "Less than"
 msgstr "Inferior a"
 
-#, fuzzy
 msgid "Let's do it"
 msgstr "Vamos a isso"
 
-#, fuzzy
 msgid "Level"
 msgstr "Nível"
 
-#, fuzzy
 msgid "Level of Education"
 msgstr "Nível de formação educacional"
 
@@ -2616,105 +2273,81 @@ msgid ""
 "detecting a trend reversal, though it they can be more prone to market noise"
 msgstr ""
 
-#, fuzzy
 msgid "Line"
 msgstr "Linhas"
 
-#, fuzzy
 msgid "Line Dot"
 msgstr "Linhas e pontos"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr ""
 
-#, fuzzy
 msgid "Link"
 msgstr "Link"
 
-#, fuzzy
 msgid "Load chart template"
 msgstr "Carregar modelo do gráfico"
 
-#, fuzzy
 msgid "Load trade template"
 msgstr "Carregar modelo de negociação"
 
-#, fuzzy
 msgid "Loading"
 msgstr "Carregando"
 
-#, fuzzy
 msgid "Loading Asset Index"
 msgstr "Carregando índice de ativos"
 
-#, fuzzy
 msgid "Loading Configurations"
 msgstr "Carregando configurações"
 
-#, fuzzy
 msgid "Loading Download/View Data"
 msgstr "Carregando dados de download/visualização"
 
-#, fuzzy
 msgid "Loading Password dialog"
 msgstr "Carregando caixa de diálogo da senha"
 
-#, fuzzy
 msgid "Loading Profit Table"
 msgstr "Carregando tabela de lucros"
 
-#, fuzzy
 msgid "Loading Real account opening"
 msgstr "Carregando a abertura de contas reais"
 
-#, fuzzy
 msgid "Loading Self-Exclusion"
 msgstr "Carregando auto-exclusão"
 
-#, fuzzy
 msgid "Loading Statement Table"
 msgstr "Carregando tabela de extrato"
 
-#, fuzzy
 msgid "Loading Token management"
 msgstr "Carregando gerenciamento de tokens"
 
-#, fuzzy
 msgid "Loading Trading Times"
 msgstr "Carregando horas de neociação"
 
-#, fuzzy
 msgid "Loading chart and trade menus"
 msgstr "Carregando menus de gráficos e negociações"
 
-#, fuzzy
 msgid "Loading custom theme configuration"
 msgstr "Carregando configuração personalizada do tema"
 
 msgid "Loading help docs"
 msgstr ""
 
-#, fuzzy
 msgid "Loading portfolio"
 msgstr "Carregando portfólio"
 
-#, fuzzy
 msgid "Loading..."
 msgstr "Carregando..."
 
-#, fuzzy
 msgid "Log in"
 msgstr "Conecte-se"
 
-#, fuzzy
 msgid "Log in time"
 msgstr "Hora de login"
 
-#, fuzzy
 msgid "Login"
 msgstr "Conectar-se"
 
-#, fuzzy
 msgid "Logout"
 msgstr "Sair"
 
@@ -2756,22 +2389,18 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
-#, fuzzy
 msgid "Low Price"
 msgstr "Preço baixo"
 
-#, fuzzy
 msgid "Low barrier"
 msgstr "Barreira baixa"
 
-#, fuzzy
 msgid "Low barrier offset"
 msgstr "Deslocamento de barreira baixa"
 
 msgid "Low minimum stakes"
 msgstr ""
 
-#, fuzzy
 msgid "Lower"
 msgstr "Inferior"
 
@@ -2784,7 +2413,6 @@ msgstr ""
 msgid "MENA FFXPO Award"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
 "before submitting your request. Once you click the 'Confirm transfer' button "
@@ -2802,11 +2430,9 @@ msgstr ""
 msgid "Make your trade"
 msgstr ""
 
-#, fuzzy
 msgid "Mar"
 msgstr "Mar"
 
-#, fuzzy
 msgid "March"
 msgstr "Março"
 
@@ -2825,7 +2451,6 @@ msgstr ""
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr ""
 
-#, fuzzy
 msgid "Matches"
 msgstr "Combina"
 
@@ -2835,80 +2460,64 @@ msgstr ""
 msgid "Maximum (MAX)"
 msgstr ""
 
-#, fuzzy
 msgid "Maximum account cash balance"
 msgstr "Saldo máximo de dinheiro em conta"
 
-#, fuzzy
 msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr "Aquisições máximas de contratos agregados durante um período de 30 dias"
 
-#, fuzzy
 msgid "Maximum aggregate contract purchases over a 7-day period"
 msgstr ""
 "Máximo de aquisições agregadas de contratos durante um período de 7 dias"
 
-#, fuzzy
 msgid "Maximum aggregate contract purchases per day"
 msgstr "Máximo de aquisições agregadas de contratos por dia"
 
-#, fuzzy
 msgid "Maximum aggregate loss over a 30-day period"
 msgstr "Máximo de perdas agregadas durante um período de 30 dias"
 
-#, fuzzy
 msgid "Maximum aggregate loss per day"
 msgstr "Máximo de perdas agregadas por dia"
 
-#, fuzzy
 msgid "Maximum number of open positions"
 msgstr "Número máximo de posições em aberto"
 
 msgid "Maximum price over selected period"
 msgstr ""
 
-#, fuzzy
 msgid "May"
 msgstr "Maio"
 
-#, fuzzy
 msgid "Memorable date"
 msgstr "Data memorável"
 
-#, fuzzy
 msgid "Memorable town/city"
 msgstr "Cidade memorável"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr ""
 
-#, fuzzy
 msgid "Min: 10 Max: 2000"
 msgstr "Mín: 10 Máx: 2000"
 
 msgid "Minimum (MIN)"
 msgstr ""
 
-#, fuzzy
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Mínimo de 6 caracteres, devendo conter pelo menos 1 dígito"
 
 msgid "Minimum price over selected period"
 msgstr ""
 
-#, fuzzy
 msgid "Minus the agent's commission"
 msgstr "Menos a comissão do agente"
 
-#, fuzzy
 msgid "Minute"
 msgstr "Minuto"
 
-#, fuzzy
 msgid "Minutes"
 msgstr "Minutos"
 
-#, fuzzy
 msgid "Miss"
 msgstr "Senhora"
 
@@ -2918,11 +2527,9 @@ msgstr ""
 msgid "Momentum Indicators"
 msgstr ""
 
-#, fuzzy
 msgid "Mon"
 msgstr "Seg"
 
-#, fuzzy
 msgid "Monday"
 msgstr "Segunda-feira"
 
@@ -2932,74 +2539,57 @@ msgstr ""
 msgid "Morning Star (CDLMORNINGSTAR)"
 msgstr ""
 
-#, fuzzy
 msgid "Mother's maiden name"
 msgstr "Sobrenome de solteira da mãe"
 
 msgid "Moving Average Convergence/Divergence (MACD)"
 msgstr ""
 
-#, fuzzy
 msgid "Mr"
 msgstr "Sr"
 
-#, fuzzy
 msgid "Mrs"
 msgstr "Sra"
 
-#, fuzzy
 msgid "Ms"
 msgstr "Sra"
 
-#, fuzzy
 msgid "Name"
 msgstr "Nome"
 
-#, fuzzy
 msgid "Name of first love"
 msgstr "Nome do seu primeiro amor"
 
-#, fuzzy
 msgid "Name of your pet"
 msgstr "Nome do seu animal de estimação"
 
-#, fuzzy
 msgid "Navigator handles background"
 msgstr "Imagem de fundo das teclas de navegação"
 
-#, fuzzy
 msgid "Navigator handles border"
 msgstr "Borda das teclas de navegação"
 
-#, fuzzy
 msgid "Navigator mask-fill"
 msgstr "Preenchimento da navegação"
 
-#, fuzzy
 msgid "Navigator outline"
 msgstr "Contorno do navegador"
 
-#, fuzzy
 msgid "Navigator series color"
 msgstr "Cor da série do navegador"
 
-#, fuzzy
 msgid "Navigator series line"
 msgstr "Linha da série do navegador"
 
-#, fuzzy
 msgid "Net Annual Income"
 msgstr "Rendimento líquido anual"
 
-#, fuzzy
 msgid "Net Profit"
 msgstr "Lucro líquido"
 
-#, fuzzy
 msgid "New password"
 msgstr "Nova senha"
 
-#, fuzzy
 msgid "No"
 msgstr "Não"
 
@@ -3014,7 +2604,6 @@ msgstr ""
 msgid "No surprises"
 msgstr ""
 
-#, fuzzy
 msgid "No touch"
 msgstr "Não toca"
 
@@ -3026,7 +2615,6 @@ msgid ""
 "range values across instruments by using the formula below"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
@@ -3034,57 +2622,45 @@ msgstr ""
 "Nota: retiradas através de agentes de pagamentos somente estão disponíveis "
 "no caso de você depositar exclusivamente por via de agentes de pagaemento"
 
-#, fuzzy
 msgid "Nov"
 msgstr "Nov"
 
-#, fuzzy
 msgid "November"
 msgstr "Novembro"
 
-#, fuzzy
 msgid "Now"
 msgstr "Agora"
 
-#, fuzzy
 msgid "OAuth App ID (Optional)"
 msgstr "ID do aplicativo OAuth (Opcional)"
 
-#, fuzzy
 msgid "OAuth Server"
 msgstr "Servidor OAuth"
 
-#, fuzzy
 msgid "OHLC"
 msgstr "OHLC"
 
-#, fuzzy
 msgid "OPEN"
 msgstr "ABERTURA"
 
 msgid "Occupation"
 msgstr ""
 
-#, fuzzy
 msgid "Oct"
 msgstr "Out"
 
-#, fuzzy
 msgid "October"
 msgstr "Outubro"
 
-#, fuzzy
 msgid "Odd"
 msgstr "Ímpar"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
 
-#, fuzzy
 msgid "Ok"
 msgstr "Ok"
 
-#, fuzzy
 msgid ""
 "On the basis of the information provided in relation to your knowledge and "
 "experience, we consider that the investments available via this website are "
@@ -3097,11 +2673,9 @@ msgstr ""
 msgid "On-Neck Pattern (CDLONNECK)"
 msgstr ""
 
-#, fuzzy
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Uma vez que este limite for atingido, você já não poderá depositar mais"
 
-#, fuzzy
 msgid "One last step left"
 msgstr "Resta apenas uma etapa"
 
@@ -3115,42 +2689,33 @@ msgstr ""
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
-#, fuzzy
 msgid "Oops... Page Not Available"
 msgstr "Ops... Página indisponível"
 
-#, fuzzy
 msgid "Open"
 msgstr "Abertura"
 
-#, fuzzy
 msgid "Open Account"
 msgstr "Conta aberta"
 
-#, fuzzy
 msgid "Open Price"
 msgstr "Preço de abertura"
 
-#, fuzzy
 msgid "Open a Financial Account"
 msgstr "Abrir uma conta financeira"
 
-#, fuzzy
 msgid "Open account"
 msgstr "Abrir conta"
 
 msgid "Opening an account"
 msgstr ""
 
-#, fuzzy
 msgid "Opens"
 msgstr "Abre"
 
-#, fuzzy
 msgid "Opera"
 msgstr "Opera"
 
-#, fuzzy
 msgid ""
 "Option trading can become a real addiction, as can any other activity pushed "
 "to its limits. To avoid the danger of such addiction, we provide a reality-"
@@ -3161,19 +2726,15 @@ msgstr ""
 "fornecemos um balanço da realidade que lhe proporciona um resumo das suas "
 "negociações e contas numa base regular"
 
-#, fuzzy
 msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "Campo opcional, dentro de 20 caracteres e pode não conter '+'"
 
-#, fuzzy
 msgid "Other"
 msgstr "Outro"
 
-#, fuzzy
 msgid "Other financial instruments trading experience"
 msgstr "Experiência com outros instrumentos financeiros"
 
-#, fuzzy
 msgid "Other financial instruments trading frequency"
 msgstr "Frequência de negociação de outros instrumentos financeiros"
 
@@ -3192,14 +2753,12 @@ msgid ""
 "base of BetsForTraders, one of our main competitors"
 msgstr ""
 
-#, fuzzy
 msgid "Over"
 msgstr "Acima"
 
 msgid "Over 1 million registered accounts worldwide"
 msgstr ""
 
-#, fuzzy
 msgid "Over 3 years"
 msgstr "Mais de 3 anos"
 
@@ -3209,42 +2768,33 @@ msgstr ""
 msgid "Overlap Studies"
 msgstr ""
 
-#, fuzzy
 msgid "PDF"
 msgstr "PDF"
 
-#, fuzzy
 msgid "PM"
 msgstr "PM"
 
-#, fuzzy
 msgid "PNG"
 msgstr "PNG"
 
-#, fuzzy
 msgid "Page Not Found"
 msgstr "Página não encontrada"
 
 msgid "Parabolic SAR (SAR)"
 msgstr ""
 
-#, fuzzy
 msgid "Password must be 6 characters minimum"
 msgstr "A senha deve conter no mínimo 6 caracteres"
 
-#, fuzzy
 msgid "Password must contain lower and uppercase letters with numbers"
 msgstr "A senha deve conter minúsculas, maiúsculas e números"
 
-#, fuzzy
 msgid "Password must contain uppercase letters and numbers"
 msgstr "A senha deve conter maiúsculas e números"
 
-#, fuzzy
 msgid "Password successfully updated"
 msgstr "Senha atualizada com sucesso"
 
-#, fuzzy
 msgid "Passwords didn't match. Please type them again"
 msgstr "As senhas não correspondem. Digite novamente"
 
@@ -3254,41 +2804,33 @@ msgstr ""
 msgid "Pattern Recognition"
 msgstr ""
 
-#, fuzzy
 msgid "Payment agent"
 msgstr "Agente de pagamentos"
 
-#, fuzzy
 msgid "Payment agents"
 msgstr "Agentes de pagamentos"
 
 msgid "Payment options"
 msgstr ""
 
-#, fuzzy
 msgid "Payments"
 msgstr "Pagamentos"
 
-#, fuzzy
 msgid "Payout"
 msgstr "Prêmio"
 
-#, fuzzy
 msgid "Pension"
 msgstr "Pensão"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr ""
 
-#, fuzzy
 msgid "Permissions"
 msgstr "Permissões"
 
-#, fuzzy
 msgid "Personal Details"
 msgstr "Dados pessoais"
 
-#, fuzzy
 msgid "Phone"
 msgstr "Telefone"
 
@@ -3303,138 +2845,105 @@ msgid ""
 "place (i.e. 0.0001)"
 msgstr ""
 
-#, fuzzy
 msgid "Please"
 msgstr "Por favor"
 
-#, fuzzy
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "Responda à pergunta secreta, dentro de 4 a 50 caracteres"
 
-#, fuzzy
 msgid "Please choose which currency you would like to transact in"
 msgstr "Escolha a moeda na qual você deseja negociar"
 
-#, fuzzy
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Confirme os seguintes dados para poder concluir a transferência"
 
-#, fuzzy
 msgid "Please enter a number between"
 msgstr "Insira um número entre"
 
-#, fuzzy
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Insira uma data válida no formato aaaa-mm-dd"
 
-#, fuzzy
 msgid "Please enter a value for"
 msgstr "Insira um valor para"
 
-#, fuzzy
 msgid "Please enter a vlaid phone number"
 msgstr "Insira uma número de telefone válido"
 
-#, fuzzy
 msgid "Please enter correct email"
 msgstr "Insira um endereço de e-mail correto"
 
-#, fuzzy
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Insira uma data no formato AAAA-MM-DD"
 
-#, fuzzy
 msgid "Please enter the verification code sent to your email"
 msgstr "Insira o código de verificação enviado para o seu e-mail"
 
-#, fuzzy
 msgid "Please enter time in the format HH:MM"
 msgstr "Insira a hora no formato HH:MM"
 
-#, fuzzy
 msgid "Please enter your city address"
 msgstr "Insira o seu endereço"
 
-#, fuzzy
 msgid "Please enter your current password"
 msgstr "Insira a sua senha atual"
 
-#, fuzzy
 msgid "Please enter your email"
 msgstr "Insira o seu e-mail"
 
-#, fuzzy
 msgid "Please enter your family name"
 msgstr "Insira o seu sobrenome"
 
-#, fuzzy
 msgid "Please enter your first name"
 msgstr "Insira o seu primeiro nome"
 
-#, fuzzy
 msgid "Please enter your new password"
 msgstr "Insira a sua nova senha"
 
-#, fuzzy
 msgid "Please enter your password"
 msgstr "Insira a sua senha"
 
-#, fuzzy
 msgid "Please enter your phone number"
 msgstr "Insira o seu número de telefone"
 
-#, fuzzy
 msgid "Please enter your street address"
 msgstr "Insira o seu endereço residencial"
 
 msgid "Please input correct token"
 msgstr ""
 
-#, fuzzy
 msgid "Please install the latest version of one of these browsers"
 msgstr "Instale a versão mais recente de um destes navegadores"
 
-#, fuzzy
 msgid "Please select"
 msgstr "Selecione"
 
-#, fuzzy
 msgid "Please try again after 1 minute"
 msgstr "Tente novamente depois de 1 minuto"
 
-#, fuzzy
 msgid "Please use your new password to login"
 msgstr "Use a sua senha nova para fazer o login"
 
-#, fuzzy
 msgid "Plot"
 msgstr "Dispersão"
 
-#, fuzzy
 msgid "Pofit/Loss"
 msgstr "Lucro/Perda"
 
-#, fuzzy
 msgid "Points"
 msgstr "Pontos"
 
-#, fuzzy
 msgid "Portfolio"
 msgstr "Portfólio"
 
-#, fuzzy
 msgid "Postal code/ZIP"
 msgstr "Código postal/CEP"
 
-#, fuzzy
 msgid "Potential Payout"
 msgstr "Prêmio potencial"
 
-#, fuzzy
 msgid "Potential Profit"
 msgstr "Lucro potencial"
 
-#, fuzzy
 msgid "Potential profit"
 msgstr "Lucro potencial"
 
@@ -3443,15 +2952,12 @@ msgid ""
 "respectively"
 msgstr ""
 
-#, fuzzy
 msgid "Pre-Defined"
 msgstr "Pré-definido"
 
-#, fuzzy
 msgid "Preferred reality-check interval"
 msgstr "Intervalo preferido para o balanço da realidade"
 
-#, fuzzy
 msgid "Press Create token button on the right to create your first token"
 msgstr "Pressione o botão Criar token à direita para criar o seu primeiro token"
 
@@ -3476,31 +2982,24 @@ msgid ""
 "prior close, which it does. The combination suggests price has reversed trend"
 msgstr ""
 
-#, fuzzy
 msgid "Primary"
 msgstr "Primário"
 
-#, fuzzy
 msgid "Print chart"
 msgstr "Imprimir gráfico"
 
-#, fuzzy
 msgid "Profit"
 msgstr "Lucro"
 
-#, fuzzy
 msgid "Profit Table"
 msgstr "Tabela de lucro"
 
-#, fuzzy
 msgid "Profit table"
 msgstr "Tabela de lucro"
 
-#, fuzzy
 msgid "Profit/ Loss"
 msgstr "Lucro/Perda"
 
-#, fuzzy
 msgid "Profit/Loss (points)"
 msgstr "Lucro/Perda (pontos)"
 
@@ -3509,15 +3008,12 @@ msgid ""
 "Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr ""
 
-#, fuzzy
 msgid "Purchase"
 msgstr "Comprar"
 
-#, fuzzy
 msgid "Purchase Date"
 msgstr "Data de aquisição"
 
-#, fuzzy
 msgid "Purchase Price"
 msgstr "Preço de compra"
 
@@ -3533,15 +3029,12 @@ msgstr ""
 msgid "Rate Of Change Ratio (ROCR)"
 msgstr ""
 
-#, fuzzy
 msgid "Read"
 msgstr "Ler"
 
-#, fuzzy
 msgid "Real Money Account Opening"
 msgstr "Abertura de conta de dinheiro real"
 
-#, fuzzy
 msgid "Reality check"
 msgstr "Balanço da realidade"
 
@@ -3549,11 +3042,9 @@ msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
 
-#, fuzzy
 msgid "Redirecting to oauth login page"
 msgstr "Redirecionando para a página de login"
 
-#, fuzzy
 msgid "Ref"
 msgstr "Ref"
 
@@ -3606,72 +3097,57 @@ msgstr ""
 msgid "Regent Pacific transaction"
 msgstr ""
 
-#, fuzzy
 msgid "Register free account"
 msgstr "Registrar conta gratuita"
 
-#, fuzzy
 msgid "Registration"
 msgstr "Registro"
 
 msgid "Relative Strength Index (RSI)"
 msgstr ""
 
-#, fuzzy
 msgid "Reloading page"
 msgstr "Recarregando página"
 
-#, fuzzy
 msgid "Remove Selected"
 msgstr "Remover selecionado"
 
-#, fuzzy
 msgid "Rename"
 msgstr "Renomear"
 
-#, fuzzy
 msgid "Repeat password"
 msgstr "Repetir senha"
 
 msgid "Resale price"
 msgstr ""
 
-#, fuzzy
 msgid "Reset to Defaults"
 msgstr "Redefinir para valores padrão"
 
-#, fuzzy
 msgid "Reset zoom"
 msgstr "Redefinir zoom"
 
-#, fuzzy
 msgid "Reset zoom level 1:1"
 msgstr "Redefinir nível de zoom 1:1"
 
-#, fuzzy
 msgid "Resources"
 msgstr "Recursos"
 
-#, fuzzy
 msgid "Responsible Trading"
 msgstr "Negociação responsável"
 
-#, fuzzy
 msgid "Results"
 msgstr "Resultados"
 
-#, fuzzy
 msgid "Return"
 msgstr "Voltar"
 
-#, fuzzy
 msgid "Return to trading page"
 msgstr "Voltar para a página de negociação"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
 msgstr ""
 
-#, fuzzy
 msgid "Rise"
 msgstr "Subir"
 
@@ -3687,139 +3163,108 @@ msgstr ""
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr ""
 
-#, fuzzy
 msgid "SMA"
 msgstr "SMA"
 
-#, fuzzy
 msgid "SVG"
 msgstr "SVG"
 
-#, fuzzy
 msgid "Safari"
 msgstr "Safari"
 
-#, fuzzy
 msgid "Salaried Employee"
 msgstr "Trabalhador assalariado"
 
-#, fuzzy
 msgid "Sale Date"
 msgstr "Data de venda"
 
-#, fuzzy
 msgid "Sale Price"
 msgstr "Preço de venda"
 
-#, fuzzy
 msgid "Sand Signika"
 msgstr "Sand Signika"
 
-#, fuzzy
 msgid "Sat"
 msgstr "Sáb"
 
-#, fuzzy
 msgid "Saturday"
 msgstr "Sábado"
 
-#, fuzzy
 msgid "Save"
 msgstr "Salvar"
 
-#, fuzzy
 msgid "Save as"
 msgstr "Salvar como"
 
-#, fuzzy
 msgid "Save changes"
 msgstr "Salvar alterações"
 
 msgid "Scalable trading"
 msgstr ""
 
-#, fuzzy
 msgid "Secondary"
 msgstr "Secundário"
 
-#, fuzzy
 msgid "Security"
 msgstr "Segurança"
 
-#, fuzzy
 msgid "Security question"
 msgstr "Pergunta de segurança"
 
-#, fuzzy
 msgid "Select Instrument"
 msgstr "Selecionar instrumento"
 
-#, fuzzy
 msgid "Self-Employed"
 msgstr "Trabalhador autônomo"
 
-#, fuzzy
 msgid "Self-Exclusion"
 msgstr "Auto-exclusão"
 
-#, fuzzy
 msgid "Sell At Market"
 msgstr "Vender no mercado"
 
-#, fuzzy
 msgid "Sell Price"
 msgstr "Preço de venda"
 
-#, fuzzy
 msgid "Sell Spot"
 msgstr "Preço à vista de venda"
 
-#, fuzzy
 msgid "Sell Time"
 msgstr "Hora de venda"
 
 msgid "Sell option"
 msgstr ""
 
-#, fuzzy
 msgid "Send to account #"
 msgstr "Enviar para conta n.º"
 
-#, fuzzy
 msgid "Sent to account"
 msgstr "Enviar para conta"
 
-#, fuzzy
 msgid "Sep"
 msgstr "Set"
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
 msgstr ""
 
-#, fuzzy
 msgid "September"
 msgstr "Setembro"
 
-#, fuzzy
 msgid "Session"
 msgstr "Sessão"
 
-#, fuzzy
 msgid "Session duration limit, in minutes"
 msgstr "Limite de duração da sessão, em minutos"
 
 msgid "Set your probability of winning"
 msgstr ""
 
-#, fuzzy
 msgid "Settles"
 msgstr "Liquida"
 
-#, fuzzy
 msgid "Share"
 msgstr "Compartilhar"
 
-#, fuzzy
 msgid "Share chart"
 msgstr "Compartilhar gráfico"
 
@@ -3832,7 +3277,6 @@ msgstr ""
 msgid "Short-term action"
 msgstr ""
 
-#, fuzzy
 msgid "Show"
 msgstr "Mostrar"
 
@@ -3857,25 +3301,21 @@ msgstr ""
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
 
-#, fuzzy
 msgid "Sold"
 msgstr "Vendido"
 
-#, fuzzy
 msgid "Some random index"
 msgstr "Um índice qualquer"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr ""
 
-#, fuzzy
 msgid "Spline"
 msgstr "Spline"
 
 msgid "Spot price"
 msgstr ""
 
-#, fuzzy
 msgid "Spreads"
 msgstr "Spreads"
 
@@ -3885,7 +3325,6 @@ msgstr ""
 msgid "Spreads up"
 msgstr ""
 
-#, fuzzy
 msgid "Stake"
 msgstr "Aposta"
 
@@ -3903,45 +3342,36 @@ msgid ""
 "out over a large range of values"
 msgstr ""
 
-#, fuzzy
 msgid "Standard methods"
 msgstr "Métodos padrão"
 
-#, fuzzy
 msgid "Standard withdrawal"
 msgstr "Retirada padrão"
 
-#, fuzzy
 msgid "Start Time"
 msgstr "Hora de início"
 
-#, fuzzy
 msgid "Start time"
 msgstr "Hora de início"
 
-#, fuzzy
 msgid "State/province/region"
 msgstr "Estado/província/região"
 
-#, fuzzy
 msgid "Statement"
 msgstr "Extrato"
 
 msgid "Statistical Functions"
 msgstr ""
 
-#, fuzzy
 msgid "Status"
 msgstr "Status"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr ""
 
-#, fuzzy
 msgid "Stays In/Goes Out"
 msgstr "Fica dentro/Sai fora"
 
-#, fuzzy
 msgid "Stays in"
 msgstr "Fica dentro"
 
@@ -3980,74 +3410,57 @@ msgid ""
 "stock market"
 msgstr ""
 
-#, fuzzy
 msgid "Stocks trading experience"
 msgstr "Experiência com negociação de ações"
 
-#, fuzzy
 msgid "Stocks trading frequency"
 msgstr "Frequência da negociação de ações"
 
-#, fuzzy
 msgid "Stop Loss Level"
 msgstr "Nível do limite de perdas"
 
-#, fuzzy
 msgid "Stop Profit Level"
 msgstr "Nível do limite de lucros"
 
-#, fuzzy
 msgid "Stop-loss"
 msgstr "Limite de perdas"
 
-#, fuzzy
 msgid "Stop-profit"
 msgstr "Limite de lucros"
 
-#, fuzzy
 msgid "Stop-type"
 msgstr "Tipo de limite"
 
-#, fuzzy
 msgid "Street address"
 msgstr "Endereço residencial"
 
-#, fuzzy
 msgid "Stroke"
 msgstr "Traço"
 
-#, fuzzy
 msgid "Stroke color"
 msgstr "Cor do traço"
 
-#, fuzzy
 msgid "Stroke width"
 msgstr "Largura do traço"
 
-#, fuzzy
 msgid "Submit"
 msgstr "Enviar"
 
 msgid "Summation (SUM)"
 msgstr ""
 
-#, fuzzy
 msgid "Sun"
 msgstr "Dom"
 
-#, fuzzy
 msgid "Sunday"
 msgstr "Domingo"
 
-#, fuzzy
 msgid "TEMA"
 msgstr "TEMA"
 
-#, fuzzy
 msgid "TRIMA"
 msgstr "TRIMA"
 
-#, fuzzy
 msgid "Table"
 msgstr "Tabela"
 
@@ -4063,23 +3476,18 @@ msgstr ""
 msgid "Tax-free"
 msgstr ""
 
-#, fuzzy
 msgid "Tel"
 msgstr "Tel"
 
-#, fuzzy
 msgid "Template name"
 msgstr "Nome do modelo"
 
-#, fuzzy
 msgid "Terms"
 msgstr "Termos"
 
-#, fuzzy
 msgid "Terms and Conditions"
 msgstr "Termos e condições"
 
-#, fuzzy
 msgid "Tertiary"
 msgstr "Terciário/Superior"
 
@@ -4443,7 +3851,6 @@ msgid ""
 "The expiry price is the price of the underlying when the contract expires"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "The financial trading services contained within this site are only suitable "
 "for customers who are able to bear the loss of all the money they invest and "
@@ -4496,7 +3903,6 @@ msgid ""
 "period"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
@@ -4618,15 +4024,12 @@ msgid ""
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
 
-#, fuzzy
 msgid "This contract lost"
 msgstr "Este contrato perdeu"
 
-#, fuzzy
 msgid "This contract won"
 msgstr "Este contrato ganhou"
 
-#, fuzzy
 msgid "This field is required"
 msgstr "Este campo é obrigatório"
 
@@ -4688,42 +4091,33 @@ msgstr ""
 msgid "Thrusting Pattern (CDLTHRUSTING)"
 msgstr ""
 
-#, fuzzy
 msgid "Thu"
 msgstr "Qui"
 
-#, fuzzy
 msgid "Thursday"
 msgstr "Quinta-feira"
 
 msgid "Tick"
 msgstr ""
 
-#, fuzzy
 msgid "Tick Trade app"
 msgstr "Aplicativo de tique-taques"
 
-#, fuzzy
 msgid "Tick {row.number}"
 msgstr "Tique-taque {row.number}"
 
-#, fuzzy
 msgid "Ticks"
 msgstr "Tique-taques"
 
-#, fuzzy
 msgid "Tile"
 msgstr "Lado a lado"
 
-#, fuzzy
 msgid "Time interval"
 msgstr "Intervalo de tempo"
 
-#, fuzzy
 msgid "Time out until"
 msgstr "Bloqueio até"
 
-#, fuzzy
 msgid "Time period"
 msgstr "Período de tempo"
 
@@ -4732,19 +4126,15 @@ msgid ""
 "their winning trades"
 msgstr ""
 
-#, fuzzy
 msgid "Title"
 msgstr "Título"
 
-#, fuzzy
 msgid "To"
 msgstr "Para"
 
-#, fuzzy
 msgid "To deposit money please contact the payment agent directly"
 msgstr "Para depositar dinheiro contate o agente de pagamentos diretamente"
 
-#, fuzzy
 msgid ""
 "To process deposits and withdrawals for payment methods or local currencies "
 "not supported by Binary.com contact a payment agent"
@@ -4752,7 +4142,6 @@ msgstr ""
 "Para processar depósitos e retiradas de métodos de pagamento ou moedas "
 "locais não suportadas pela Binary.com, contate um agente de pagamentos"
 
-#, fuzzy
 msgid ""
 "To withdraw funds please enter the special verification token we have just "
 "emailed you"
@@ -4760,27 +4149,21 @@ msgstr ""
 "Para retirar fundos, insira o token de verificação especial que acabamos de "
 "lhe enviar por e-mail"
 
-#, fuzzy
 msgid "Today"
 msgstr "Hoje"
 
-#, fuzzy
 msgid "Token"
 msgstr "Token"
 
-#, fuzzy
 msgid "Token management"
 msgstr "Gerenciamento do token"
 
-#, fuzzy
 msgid "Token name"
 msgstr "Nome do token"
 
-#, fuzzy
 msgid "Token permissions"
 msgstr "Permissões do token"
 
-#, fuzzy
 msgid ""
 "Tokens are special codes for accessing Binary mobile applications and third "
 "party tools"
@@ -4788,43 +4171,33 @@ msgstr ""
 "Tokens são códigos especiais para o acesso de aplicativos móveis Binary e "
 "outras ferramentas de terceiros"
 
-#, fuzzy
 msgid "Tooltip background"
 msgstr "Plano de fundo da dica de ferramenta"
 
-#, fuzzy
 msgid "Tooltip text"
 msgstr "Texto da dica de ferramenta"
 
-#, fuzzy
 msgid "Total Cost"
 msgstr "Custo total"
 
-#, fuzzy
 msgid "Total Profit/Loss"
 msgstr "Lucro/Perda Total"
 
-#, fuzzy
 msgid "Touch"
 msgstr "Toca"
 
-#, fuzzy
 msgid "Touch/No Touch"
 msgstr "Toca/Não Toca"
 
-#, fuzzy
 msgid "Tourism"
 msgstr "Turismo"
 
-#, fuzzy
 msgid "Town/City"
 msgstr "Cidade"
 
-#, fuzzy
 msgid "Trade"
 msgstr "Negociar"
 
-#, fuzzy
 msgid "Trade Confirmation"
 msgstr "Confirmação da negociação"
 
@@ -4837,7 +4210,6 @@ msgstr ""
 msgid "Trade to your strategy"
 msgstr ""
 
-#, fuzzy
 msgid "Trade using"
 msgstr "Negociar usando"
 
@@ -4850,14 +4222,12 @@ msgstr ""
 msgid "Trade your way"
 msgstr ""
 
-#, fuzzy
 msgid "Trading Times"
 msgstr "Horas de negociação"
 
 msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
 "that you fully understand the risks involved. Your losses can exceed your "
@@ -4869,7 +4239,6 @@ msgstr ""
 "perdas podem exceder o seu depósito inicial e você não será proprietário nem "
 "terá quaisquer interesses no ativo subjacente"
 
-#, fuzzy
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
 "to limit your participation on the website or send a signed letter or fax to "
@@ -4886,11 +4255,9 @@ msgstr ""
 "exclusão, que não pode ser removida ou alterada uma vez que você a tiver "
 "confirmado. Para remover ou aumentar os seus limites, contate"
 
-#, fuzzy
 msgid "Tradingview for Binary.com"
 msgstr "TradingView para Binary.com"
 
-#, fuzzy
 msgid "Transfer to another Binary account"
 msgstr "Transferir para outra conta Binary"
 
@@ -4909,19 +4276,15 @@ msgstr ""
 msgid "True Range (TRANGE)"
 msgstr ""
 
-#, fuzzy
 msgid "Try"
 msgstr "Experimentar"
 
-#, fuzzy
 msgid "Tue"
 msgstr "Ter"
 
-#, fuzzy
 msgid "Tuesday"
 msgstr "Terça-feria"
 
-#, fuzzy
 msgid "Turnover"
 msgstr "Volume de negócios"
 
@@ -4931,18 +4294,15 @@ msgstr ""
 msgid "Typical Price (TYPPRICE)"
 msgstr ""
 
-#, fuzzy
 msgid "USD"
 msgstr "USD"
 
-#, fuzzy
 msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
 msgstr ""
 
-#, fuzzy
 msgid "Under"
 msgstr "Inferior"
 
@@ -4956,7 +4316,6 @@ msgid ""
 "methods, to suit your specific needs and preferences"
 msgstr ""
 
-#, fuzzy
 msgid "Unfortunately, your browser does not support them"
 msgstr "Infelizmente, o seu navegador não suporta estas tecnologias"
 
@@ -4973,26 +4332,21 @@ msgstr ""
 msgid "Up to 100% returns on rise/fall trades"
 msgstr ""
 
-#, fuzzy
 msgid "Up/Down"
 msgstr "Acima/Abaixo"
 
 msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
 msgstr ""
 
-#, fuzzy
 msgid "Upcoming Events"
 msgstr "Próximos eventos"
 
-#, fuzzy
 msgid "Update Settings"
 msgstr "Atualizar configurações"
 
-#, fuzzy
 msgid "Upgrade to a Real Account"
 msgstr "Atualize para uma conta de dinheiro real"
 
-#, fuzzy
 msgid "Upload template"
 msgstr "Carregar modelo"
 
@@ -5002,11 +4356,9 @@ msgstr ""
 msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
 msgstr ""
 
-#, fuzzy
 msgid "Use"
 msgstr "Use"
 
-#, fuzzy
 msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
@@ -5014,7 +4366,6 @@ msgstr ""
 "Use o botão \"Salvar como...\" para salvar as configurações, tipo, período "
 "de tempo, indicadores e comparações do gráfico"
 
-#, fuzzy
 msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr ""
 "Use o botão \"Salvar como ...\" para salvar as configurações de negociação"
@@ -5028,35 +4379,27 @@ msgstr ""
 msgid "Variance (VAR)"
 msgstr ""
 
-#, fuzzy
 msgid "Verification code has been sent to your email"
 msgstr "O código de verificação foi enviado para o seu e-mail"
 
-#, fuzzy
 msgid "Verification code sent to"
 msgstr "Código de verificação enviado para"
 
-#, fuzzy
 msgid "Verification token"
 msgstr "Token de verificação"
 
-#, fuzzy
 msgid "Verify new password"
 msgstr "Verificar nova senha"
 
-#, fuzzy
 msgid "Vertical Line"
 msgstr "Linha vertical"
 
-#, fuzzy
 msgid "Vertical line"
 msgstr "Linha vertical"
 
-#, fuzzy
 msgid "View"
 msgstr "Modo de exibição"
 
-#, fuzzy
 msgid "View Historical Data"
 msgstr "Ver dados históricos"
 
@@ -5075,7 +4418,6 @@ msgstr ""
 msgid "Volatility indices"
 msgstr ""
 
-#, fuzzy
 msgid "WMA"
 msgstr "WMA"
 
@@ -5118,26 +4460,21 @@ msgid ""
 "in English, Indonesian, Russian, Chinese and Spanish"
 msgstr ""
 
-#, fuzzy
 msgid "Websocket Server"
 msgstr "Servidor Websocket"
 
-#, fuzzy
 msgid "Webtrader"
 msgstr "Webtrader"
 
-#, fuzzy
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr ""
 "Webtrader utiliza novas tecnologias web para uma experiência de negociação "
 "rica e divertida"
 
-#, fuzzy
 msgid "Wed"
 msgstr "Qua"
 
-#, fuzzy
 msgid "Wednesday"
 msgstr "Quarta-feira"
 
@@ -5156,7 +4493,6 @@ msgid ""
 "held in a separate trust account and are not used for any other purpose"
 msgstr ""
 
-#, fuzzy
 msgid "While on the go, you can"
 msgstr "Em qualquer lugar, você pode"
 
@@ -5185,7 +4521,6 @@ msgid ""
 "by choosing a price target farther away from the current price"
 msgstr ""
 
-#, fuzzy
 msgid "Windows"
 msgstr "Janelas"
 
@@ -5202,38 +4537,30 @@ msgid ""
 "of your trade"
 msgstr ""
 
-#, fuzzy
 msgid "Withdraw funds"
 msgstr "Retirar fundos"
 
-#, fuzzy
 msgid "Withdrawal via payment agents"
 msgstr "Retiradas através de agentes de pagamentos"
 
-#, fuzzy
 msgid "X-axis labels"
 msgstr "Etiquetas do eixo X"
 
-#, fuzzy
 msgid "X-axis line"
 msgstr "Linha do eixo X"
 
-#, fuzzy
 msgid "X-axis tick"
 msgstr "Tique-taque eixo X"
 
 msgid "Xodds.com"
 msgstr ""
 
-#, fuzzy
 msgid "Y-axis gridline"
 msgstr "Linha de grelha eixo Y"
 
-#, fuzzy
 msgid "Y-axis labels"
 msgstr "Etiquetas eixo Y"
 
-#, fuzzy
 msgid "Yes"
 msgstr "Sim"
 
@@ -5264,11 +4591,9 @@ msgstr ""
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr ""
 
-#, fuzzy
 msgid "You have sold the following contract"
 msgstr "Você vendeu o seguinte contrato"
 
-#, fuzzy
 msgid ""
 "You have to register webtrader and get App ID before you can use different "
 "OAuth server for authentication. For more information refer to OAuth details "
@@ -5278,25 +4603,21 @@ msgstr ""
 "poder usar um servidor OAuth diferente para a autenticação. Para mais "
 "informações, refira-se aos detalhes OAuth sobre"
 
-#, fuzzy
 msgid "You haven't saved any templates yet"
 msgstr "Você ainda não salvou nenhum modelo"
 
-#, fuzzy
 msgid "You pay"
 msgstr "Você paga"
 
 msgid "You set the barrier(s) to define your position"
 msgstr ""
 
-#, fuzzy
 msgid "You will be automatically logged out after such time"
 msgstr "Você será automaticamente desconectado após tal hora"
 
 msgid "You'll be surprised by the returns you can make"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
@@ -5304,16 +4625,13 @@ msgstr ""
 "A sua conta Binary foi criada, mas para começar a negociar você precisa "
 "permitir que o Webtrader tenha acesso a ela"
 
-#, fuzzy
 msgid "Your account is locked, please contact customer support for more info"
 msgstr ""
 "A sua conta foi bloqueada. Contate o apoio ao cliente para mais informações"
 
-#, fuzzy
 msgid "Your browser is not supported"
 msgstr "O seu navegador não é suportado"
 
-#, fuzzy
 msgid "Your email"
 msgstr "O seu endereço de e-mail"
 
@@ -5322,18 +4640,15 @@ msgid ""
 "segregated AAA-rated banks, which is a condition of our trading licenses"
 msgstr ""
 
-#, fuzzy
 msgid "Your new account balance is"
 msgstr "O seu novo saldo de conta é"
 
 msgid "Your risks are known"
 msgstr ""
 
-#, fuzzy
 msgid "Your transaction reference is"
 msgstr "A referência da sua transação é"
 
-#, fuzzy
 msgid "Your transaction reference number is"
 msgstr "O número de referência da sua transação é"
 
@@ -5345,7 +4660,6 @@ msgid ""
 "and-drop  simplicity"
 msgstr ""
 
-#, fuzzy
 msgid "and"
 msgstr "e"
 
@@ -5358,7 +4672,6 @@ msgstr ""
 msgid "auto-trader programming tool"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
 "be exposing yourself to risks (which may be significant, including the risk "
@@ -5370,27 +4683,21 @@ msgstr ""
 "da perda do valor total investido) que possa não compreender e ter a "
 "experiência para avaliar ou mitigar"
 
-#, fuzzy
 msgid "between"
 msgstr "entre"
 
-#, fuzzy
 msgid "commission"
 msgstr "comissão"
 
-#, fuzzy
 msgid "contact support"
 msgstr "contatar o apoio ao cliente"
 
-#, fuzzy
 msgid "customer support"
 msgstr "apoio ao cliente"
 
-#, fuzzy
 msgid "day"
 msgstr "dia"
 
-#, fuzzy
 msgid "days"
 msgstr "dias"
 
@@ -5400,61 +4707,48 @@ msgstr ""
 msgid "e-commerce site for branded merchandise"
 msgstr ""
 
-#, fuzzy
 msgid "e.g"
 msgstr "por exemplo"
 
-#, fuzzy
 msgid "e.g, www2.binary.com, www.binaryqa36.com"
 msgstr "por exemplo, www2.binary.com, www.binaryqa36.com"
 
-#, fuzzy
 msgid "end time"
 msgstr "hora de fim"
 
-#, fuzzy
 msgid "entry spot"
 msgstr "preço de entrada"
 
-#, fuzzy
 msgid "exit spot"
 msgstr "preço de saída"
 
-#, fuzzy
 msgid "for mobile charts"
 msgstr "para gráficos móveis"
 
 msgid "has updated its"
 msgstr ""
 
-#, fuzzy
 msgid "hour"
 msgstr "hora"
 
-#, fuzzy
 msgid "hours"
 msgstr "horas"
 
-#, fuzzy
 msgid "https://developers.binary.com/"
 msgstr "https://developers.binary.com/"
 
-#, fuzzy
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
-#, fuzzy
 msgid "if this is not your country of residence"
 msgstr "se este não for o seu país de residência"
 
 msgid "in the future, the"
 msgstr ""
 
-#, fuzzy
 msgid "information about your trading exprience and personal finance"
 msgstr "informações sobre a sua experiência com negociações e finanças pessoais"
 
-#, fuzzy
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
 "provides maximum flexibility and suits the needs of active traders working "
@@ -5473,14 +4767,12 @@ msgstr ""
 msgid "is the"
 msgstr ""
 
-#, fuzzy
 msgid "is the price in effect at that time"
 msgstr "é o preço em vigor naquele momento"
 
 msgid "is the selected number of minutes/hours after the"
 msgstr ""
 
-#, fuzzy
 msgid "is the selected time"
 msgstr "é a hora selecionada"
 
@@ -5490,26 +4782,21 @@ msgstr ""
 msgid "is when the contract is processed by our servers and the"
 msgstr ""
 
-#, fuzzy
 msgid "main site"
 msgstr "Site principal"
 
 msgid "medium protection"
 msgstr ""
 
-#, fuzzy
 msgid "minute"
 msgstr "minuto"
 
-#, fuzzy
 msgid "minutes"
 msgstr "minutos"
 
-#, fuzzy
 msgid "next tick"
 msgstr "próximo tique-taque"
 
-#, fuzzy
 msgid "oauth"
 msgstr "oauth"
 
@@ -5519,73 +4806,57 @@ msgstr ""
 msgid "our helpful support desk"
 msgstr ""
 
-#, fuzzy
 msgid "payment agent"
 msgstr "agente de pagamentos"
 
-#, fuzzy
 msgid "please play responsibly. Read about"
 msgstr "jogue responsavelmente. Leia sobre"
 
-#, fuzzy
 msgid "points"
 msgstr "pontos"
 
-#, fuzzy
 msgid "second"
 msgstr "segundo"
 
-#, fuzzy
 msgid "seconds"
 msgstr "segundos"
 
-#, fuzzy
 msgid "session overview"
 msgstr "visão geral da sessão"
 
-#, fuzzy
 msgid "start time"
 msgstr "hora de início"
 
-#, fuzzy
 msgid "terms and conditions"
 msgstr "termos e condições"
 
 msgid "the"
 msgstr ""
 
-#, fuzzy
 msgid "thereafter"
 msgstr "depois"
 
-#, fuzzy
 msgid "tick"
 msgstr "tique-taque"
 
-#, fuzzy
 msgid "ticks"
 msgstr "tique-taques"
 
-#, fuzzy
 msgid "trading experience"
 msgstr "experiência com negociações"
 
-#, fuzzy
 msgid "trading frequency"
 msgstr "frequência de negociação"
 
-#, fuzzy
 msgid "websocket"
 msgstr "Websocket"
 
 msgid "www.Binary.com"
 msgstr ""
 
-#, fuzzy
 msgid "yes"
 msgstr "sim"
 
-#, fuzzy
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
