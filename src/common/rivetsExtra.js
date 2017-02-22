@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline', 'ddslick'], function (_, $, rv, moment) {
+define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline', 'ddslick','chosen'], function (_, $, rv, moment) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -332,6 +332,23 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline',
         }
     }
 
+    /* Multiselect select menu "chosen"*/
+    rv.binders.chosen = {
+      priority: 100,
+      publishes: true,
+      bind: function(el){
+        var publish = this.publish;
+        $(el).chosen({width:$(el).css("width")}).change(function(){
+          publish($(this).val())
+        });
+      },
+      unbind: function(el){
+        $(el).chosen("destroy");
+      }
+    }
+    rv.binders.chosenrefresh = function(el){
+      $(el).trigger("chosen:updated");
+    }
     /* extend jquery ui spinner to support multiple buttons */
     $.widget('ui.webtrader_spinner', $.ui.spinner, {
         _buttonHtml: function () {

@@ -394,3 +394,7 @@ input[type="number"] {
   background: #1e90ff;
   color: #fff;
 }
+
+.dialog-message.ui-dialog .ui-dialog-content{
+  padding: 0;
+}

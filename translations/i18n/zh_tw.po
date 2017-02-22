@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 09:02+0200\n"
-"PO-Revision-Date: 2017-01-19 01:33+0000\n"
+"PO-Revision-Date: 2017-02-20 04:11+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/zh_TW/>\n"
@@ -12,72 +12,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.11-dev\n"
+"X-Generator: Weblate 2.12-dev\n"
 
-msgid "%D MA Type"
-msgstr "%D MA 類型"
-
-msgid "%D Period"
-msgstr "%D 期限"
-
-msgid "%D Stroke"
-msgstr "%D 波幅"
-
-msgid "%K MA Type"
-msgstr "%K MA 類型"
-
-msgid "%K Period"
-msgstr "%K 期限"
-
-msgid "%K Stroke"
-msgstr "%K 波幅"
+msgid ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
+msgstr ""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
 "ticks during the trade"
-msgstr ""
+msgstr "「亞洲下跌」期權 - 交易期內當最新價格低於平均價格時，您將獲得賠付"
 
 msgid ""
 "'Asian Rise' - You win when the last tick is higher than the average of the "
 "ticks during the trade"
-msgstr ""
+msgstr "「亞洲上漲」期權 - 交易期內當最新價格高於平均價格時，您將獲得賠付"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr ""
+msgstr "《 Investors Chronicle》頒發的「最佳客戶通訊企業」獎項"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
-msgstr ""
+msgstr "Trade2Win頒發的「最佳固定賠率經紀」銀獎"
 
 msgid ""
 "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
 "Chronicle UK"
-msgstr ""
+msgstr "英國《金融時報》和《 Investors Chronicle》頒發的「最佳固定賠率金融提供商」獎項"
 
 msgid ""
 "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "英國《Shares Magazine》頒發的「最佳固定賠率金融交易提供商」獎項"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
-msgstr ""
+msgstr "《Global Banking and Finance Review》頒發的「2012年最佳固定賠率企業」獎項"
 
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
 "prediction"
-msgstr ""
+msgstr "「差異」- 當最新價格的最後一個數字跟您的預測不同時，您將獲得賠付"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr ""
+msgstr "《 eGaming Review》頒發的「年度最佳金融投注運作商」獎項"
 
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
+msgstr "「符合」- 只要最新價格的最後一個數字與您的預測相同，您將獲得賠付"
+
+msgid "'contract period'"
 msgstr ""
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "一觸即付交易"
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "(原名"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -88,16 +78,16 @@ msgid ""
 ") goes live, establishing a round-the-clock financial betting service on a "
 "variety of financial indices. Business grows quickly, and we soon become the "
 "market leader in fixed-odds financial betting"
-msgstr ""
+msgstr "正式上線，提供基於各種金融指數的全天侯金融投注服務。公司業務快速增長，我們很快即成為固定賠率金融投注的市場領導者"
 
 msgid ""
 "- Binary.com benchmarks its prices daily against inter-bank derivatives "
 "markets"
-msgstr ""
+msgstr "- Binary.com每日基於銀行間衍生品市場提供基準價格"
 
 msgid ""
 "- Binary.com ensures your personal data and transactions are always secure"
-msgstr ""
+msgstr "- Binary.com確保您的個人資料和交易總是安全"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -115,156 +105,153 @@ msgstr ""
 
 msgid ""
 "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr ""
+msgstr "- Binary.com是擁有受專利保護的報價技術的業內領先企業"
 
 msgid ""
 "- Binary.com offers many payment methods, such as credit/debit cards, bank "
 "wires, e-cash and e-wallets"
-msgstr ""
+msgstr "- Binary.com 提供多種付款方式，包括借記卡和信用卡、銀行電匯、電子現金及電子錢包等"
 
 msgid ""
 "- Binary.com quotes a trade and the counter-trade, so you always get "
 "unbiased, transparent prices"
-msgstr ""
+msgstr "- Binary.com提供交易與反向交易的報價，因此您將始終獲得公正透明的價格"
 
 msgid ""
 "- binaries are licensed as a betting activity in the UK, so your winnings "
 "are tax-free"
-msgstr ""
+msgstr "- 二元期權牌照在英國屬於博彩活動，因此您的收益是免稅的"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
-msgstr ""
+msgstr "- 選擇從1分鐘至24小時的日內交易期限"
 
 msgid ""
 "- choose the falls trade, lower trade, one-touch trade with a low barrier, "
 "or no-touch trade with a high barrier"
-msgstr ""
+msgstr "- 選擇下跌交易、低於交易、設低障礙的一觸即付交易或設高障礙的未觸及交易"
 
 msgid ""
 "- choose the no-touch trade, the stays-between trade, or the ends-between "
 "trade"
-msgstr ""
+msgstr "- 選擇未觸及交易、保持在範圍之內交易或收盤位於範圍之內交易"
 
 msgid ""
 "- choose the one-touch trade, the goes-outside trade, or the ends outside "
 "trade"
-msgstr ""
+msgstr "- 選擇一觸即付交易、保持在範圍之外交易或收盤位於範圍之外交易"
 
 msgid ""
 "- choose the rise trade, higher trade, one-touch trade with a high barrier, "
 "or no-touch trade with a low barrier"
-msgstr ""
+msgstr "- 選擇上漲交易、高於交易、設高障礙的一觸即付交易或設低障礙的未觸及交易"
 
 msgid "- choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- 選擇從10 秒至 365 天的交易期限"
 
 msgid "- choose trades with durations of up to 365 days"
-msgstr ""
+msgstr "- 選擇交易期限，最大為365天"
 
 msgid ""
 "- choose trades with high returns and a low probability to win, or with low "
 "returns and a high probability to win"
-msgstr ""
+msgstr "- 選擇高回報但低獲利概率，或低迴報但高獲利概率的交易"
 
 msgid "- currencies, stock indices, and commodities"
-msgstr ""
+msgstr "- 貨幣、股票指數和大宗商品"
 
 msgid "- customize your trades to meet your needs"
-msgstr ""
+msgstr "- 自訂符合您需求的交易"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
-msgstr ""
+msgstr "- 僅下注2美元試試，或一舉投注5萬美元"
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "- 從 1 美元到 5 萬美元"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "- 從10秒到365天"
 
 msgid "- get pricing that is normally reserved for big institutional players"
-msgstr ""
+msgstr "- 獲取通常僅向大型機構投資者提供的報價"
 
 msgid ""
 "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden "
 "fees or commissions"
-msgstr ""
+msgstr "- 無滑點、無追加保證金、不會被止損離場、以及無隱藏費用或佣金"
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "- 僅需數分鐘即可完成開戶"
 
 msgid ""
 "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr ""
+msgstr "- 僅需數分鐘即可開戶或通過帳戶完成存取款，全天候服務"
 
 msgid "- predict if the market will end higher or lower than a price target"
-msgstr ""
+msgstr "- 預測到期時市場價格是高於還是低於目標價格"
 
 msgid "- predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "- 預測市場價格是否會從目前水平上漲或下跌"
 
 msgid ""
 "- predict if the market will stay inside two price targets, or end between "
 "or outside them"
-msgstr ""
+msgstr "- 預測市場價格是否會保持在兩個目標價格之內， 或收於其範圍之內/之外"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr ""
+msgstr "- 預測市場價格是否會觸及目標價格"
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "- 在長期合約到期前以市價售出"
 
 msgid ""
 "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr ""
+msgstr "- 按您的「直覺」或使用技術或基本面分析設定交易"
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "- 以低至5美元開始交易"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "- 全天候均可進行交易（包括週末）"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr ""
+msgstr "- 全天候進行Binary.com自帶的波動率指數交易"
 
 msgid "- trade Binary.com's proprietary volatility indices"
-msgstr ""
+msgstr "- 進行Binary.com專有的波動率指數交易"
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "- 進行所有的主要外匯貨幣對交易"
 
 msgid "- trade all major FX pairs, around the clock"
-msgstr ""
+msgstr "- 全天候進行所有的主要外匯貨幣對交易"
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "- 進行全球所有主要的股票指數交易"
 
 msgid ""
 "- trade currencies, indices and commodities in rising, falling, sideways, "
 "quiet and volatile markets"
-msgstr ""
+msgstr "- 在上漲、下跌、橫盤整理、交易清淡和震盪市場中交易外匯、指數、商品及其它"
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "- 交易黃金和原油等主要大宗商品"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "- 上漲/下跌，觸及/未觸及，範圍內/範圍外"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr ""
+msgstr "- 我們保證您無法找到比我們回報率更高的網站"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- 無論投入多少資金進行交易，均可獲得同等回報率"
 
 msgid "- you know from the start what you will win or lose"
-msgstr ""
+msgstr "- 開始交易前您已知道贏或輸的金額"
 
 msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
-msgstr ""
-
-msgid "-DI Stroke"
-msgstr "-DI 波幅"
+msgstr "- 我們將永不向您追加保證金、不會有缺口風險、或收取滑價費用、隱藏費或佣金"
 
 msgid "0-1 year"
 msgstr "0-1 年"
@@ -288,7 +275,7 @@ msgid "1 Tick"
 msgstr "1跳動點"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1百萬筆交易/天"
 
 msgid "1-2 years"
 msgstr "1-2 年"
@@ -312,7 +299,7 @@ msgid "15m"
 msgstr "15分鐘"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1天"
@@ -336,40 +323,40 @@ msgid "2 Minutes"
 msgstr "2分鐘"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "雙向報價"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2小時"
@@ -449,18 +436,19 @@ msgid ""
 "within the body of the first candle and in doing so confirming the reversal. "
 "It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
+"十字夜星包括長線看漲燭圖， 接下來是其上有缺口的十字圖，然後是在首個燭圖主體內完整收盤並同時確認翻轉的第三看跌燭圖。被視為強大的看跌價翻轉燭台形態"
 
 msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
 "and an Exponential Moving Average, only with a longer period applied"
-msgstr ""
+msgstr "平滑移動平均線類似簡單移動平均線與指數移動平均線的混合，但應用期限較長"
 
 msgid ""
 "A Spinning Top Candlestick is a bullish or bearish candlestick with a small "
 "body. The length of the head and tail shadows can vary. Like a Doji "
 "Candlestick it represents a point of indecision with buyers and seller "
 "matched"
-msgstr ""
+msgstr "陀螺型蠟燭線是體型較小的看漲或看跌蠟燭線。影子頭部和尾部長度不一。它與十字星蠟燭線一樣代表買賣雙方相符時的猶疑不決點"
 
 msgid ""
 "A Stays Between trade pays out if the market stays between (does not touch) "
@@ -469,6 +457,8 @@ msgid ""
 "EITHER the high barrier or the low barrier at any time during the period "
 "chosen by a trader"
 msgstr ""
+"如果市場在所選期限內一直保持在（沒有觸及）高障礙或低障礙之間，所選擇的「保持在範圍之內」交易即可獲利。如果市場在所選期限內只要觸及高障礙或低障礙，所選擇的"
+"「超出範圍之外」交易即可獲利"
 
 msgid ""
 "A bearish candlestick pattern consisting of three candles that have "
@@ -628,17 +618,8 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "ADX MA Type"
-msgstr "ADX MA 類型"
-
-msgid "ADX Stroke"
-msgstr "ADX 波幅"
-
 msgid "AM"
 msgstr "上午"
-
-msgid "ATR Period"
-msgstr "ATR 期限"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
@@ -646,26 +627,20 @@ msgstr ""
 msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
-msgid "Acceleration"
-msgstr "加速"
-
 msgid "Accept"
 msgstr "接受"
 
 msgid "Account balance"
 msgstr "帳戶餘額"
 
-msgid "Account id not found"
-msgstr "沒找到帳戶ID"
-
 msgid "Account opening"
 msgstr "帳戶開立"
 
-msgid "Account token not found"
-msgstr "沒找到帳戶權杖"
-
 msgid "Action"
 msgstr "動作"
+
+msgid "Add"
+msgstr ""
 
 msgid "Add comparisons"
 msgstr "新增比較"
@@ -735,9 +710,6 @@ msgstr ""
 msgid "Answer"
 msgstr "答案"
 
-msgid "Applied to"
-msgstr "應用為"
-
 msgid "Apply"
 msgstr "申請"
 
@@ -762,14 +734,8 @@ msgstr ""
 msgid "Aroon (AROON)"
 msgstr ""
 
-msgid "Aroon Down Stroke"
-msgstr "阿隆下行線波幅"
-
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
-
-msgid "Aroon Up Stroke"
-msgstr "阿隆上升線波幅"
 
 msgid "Asian down"
 msgstr "亞洲下跌"
@@ -818,9 +784,6 @@ msgstr "返回"
 
 msgid "Back to list"
 msgstr "返回表單"
-
-msgid "Background Color"
-msgstr "背景顏色"
 
 msgid "Balance of Power (BOP)"
 msgstr ""
@@ -1055,9 +1018,6 @@ msgid ""
 "day (including virtual accounts)"
 msgstr ""
 
-msgid "Blank window"
-msgstr "空白視窗"
-
 msgid "Bollinger Bands (BBANDS)"
 msgstr ""
 
@@ -1100,6 +1060,25 @@ msgstr "關"
 
 msgid "CSV"
 msgstr "CSV"
+
+msgid ""
+"Can be used to buy and sell contracts, renew expired purchases, and top-up "
+"virtual-money accounts."
+msgstr ""
+
+msgid ""
+"Can be used to open accounts, set settings, manage token usage, and more."
+msgstr ""
+
+msgid ""
+"Can be used to view account activity, including settings, limits, balance "
+"sheets, trade purchase history, and more."
+msgstr ""
+
+msgid ""
+"Can be used to withdraw to payment agents, transfer funds between accounts, "
+"and set / clear cashier passwords."
+msgstr ""
 
 msgid "Cancel"
 msgstr "取消"
@@ -1236,9 +1215,6 @@ msgstr ""
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Clear"
-msgstr "清除"
-
 msgid "Click Jacking test"
 msgstr "點擊劫持測試"
 
@@ -1286,12 +1262,6 @@ msgstr "成功更改配置"
 msgid "Confirm transfer"
 msgstr "確認轉帳"
 
-msgid "Connection closed"
-msgstr "連結已關閉"
-
-msgid "Connection error"
-msgstr "連結出錯"
-
 msgid "Construction"
 msgstr "建構"
 
@@ -1309,9 +1279,6 @@ msgstr "合約"
 
 msgid "Contract Confirmation"
 msgstr "合約確認"
-
-msgid "Contract is not yet started"
-msgstr "合約還未開始生效"
 
 msgid "Contract period"
 msgstr ""
@@ -1373,12 +1340,6 @@ msgstr "自訂主題"
 msgid "Customize chart appearance"
 msgstr "自訂圖表外觀"
 
-msgid "DI Stroke"
-msgstr "DI波幅"
-
-msgid "DX MA Type"
-msgstr "DX MA類型"
-
 msgid "Daily limit on losses"
 msgstr "每日損失限額"
 
@@ -1437,9 +1398,6 @@ msgstr ""
 
 msgid "Delete"
 msgstr "刪除"
-
-msgid "Delete level(s)"
-msgstr "刪除水平"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "聯盟成員存取Webtrader圖表的示範"
@@ -1551,12 +1509,6 @@ msgstr "點"
 
 msgid "Double Exponential Moving Average (DEMA)"
 msgstr ""
-
-msgid "Double MA Period"
-msgstr "雙MA期限"
-
-msgid "Double MA Type"
-msgstr "雙MA類型"
 
 msgid "Double click the object to remove"
 msgstr "雙擊物件執行刪除"
@@ -1673,9 +1625,6 @@ msgstr "下載.csv時發生錯誤"
 msgid "Error getting data for %1"
 msgstr "獲取 %1資料時出錯"
 
-msgid "Error getting market information!"
-msgstr "取得市場資料時出錯!"
-
 msgid "Estimated Net Worth"
 msgstr "估計淨值"
 
@@ -1720,21 +1669,6 @@ msgstr ""
 
 msgid "Family name"
 msgstr "姓氏"
-
-msgid "Fast %K MA Type"
-msgstr "快捷 %K MA 類型"
-
-msgid "Fast %K Period"
-msgstr "快解 %K 期限"
-
-msgid "Fast Limit"
-msgstr "快捷限值"
-
-msgid "Fast MA Type"
-msgstr "快捷 MA 類型"
-
-msgid "Fast Period"
-msgstr "快捷期限"
 
 msgid "Favorites"
 msgstr "我的最愛"
@@ -1861,6 +1795,9 @@ msgstr "格線"
 msgid "Grid Light"
 msgstr "格線光源"
 
+msgid "Group History"
+msgstr ""
+
 msgid "HIGH"
 msgstr "高"
 
@@ -1885,14 +1822,8 @@ msgstr "健康情況"
 msgid "Help"
 msgstr ""
 
-msgid "High Barrier"
-msgstr "高障礙"
-
 msgid "High Price"
 msgstr "高價位"
-
-msgid "High Stroke"
-msgstr "高價波幅"
 
 msgid "High barrier"
 msgstr "高障礙"
@@ -1917,15 +1848,6 @@ msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr ""
-
-msgid "Histogram Color"
-msgstr "直方圖顏色"
-
-msgid "Histogram Color For Higher Values"
-msgstr "較高數值的直方圖顏色"
-
-msgid "Histogram Color For Lower Values"
-msgstr "較低數值的直方圖顏色"
 
 msgid "Home Address"
 msgstr "家庭地址"
@@ -2143,14 +2065,8 @@ msgstr ""
 msgid "Instrument"
 msgstr "工具"
 
-msgid "Instrument Code Unknown/Unavailable!"
-msgstr "工具代碼未知/不可用！"
-
 msgid "Instruments"
 msgstr "工具"
-
-msgid "Invalid parameter(s)!"
-msgstr "無效參數！"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
@@ -2185,9 +2101,6 @@ msgstr "一月"
 
 msgid "January"
 msgstr "一月"
-
-msgid "Japan accounts are not supported"
-msgstr "不支持日本帳戶"
 
 msgid "Jul"
 msgstr "七月"
@@ -2269,6 +2182,9 @@ msgstr "水平"
 msgid "Level of Education"
 msgstr "教育水平"
 
+msgid "Levels"
+msgstr ""
+
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
 "Ireland, and Japan"
@@ -2285,9 +2201,6 @@ msgstr "列"
 
 msgid "Line Dot"
 msgstr "列點"
-
-msgid "Line Stroke"
-msgstr "線波幅"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr ""
@@ -2346,9 +2259,6 @@ msgstr ""
 msgid "Loading portfolio"
 msgstr "載入投資組合"
 
-msgid "Loading self-exclusion settings"
-msgstr "載入自我禁止設定"
-
 msgid "Loading..."
 msgstr "正在載入..."
 
@@ -2357,9 +2267,6 @@ msgstr "登入"
 
 msgid "Log in time"
 msgstr "登入時間"
-
-msgid "Logging out because of self-exclusion session time out!"
-msgstr "正在登出，因為自我禁止時段已到期!"
 
 msgid "Login"
 msgstr "登入"
@@ -2372,18 +2279,6 @@ msgstr ""
 
 msgid "Long Line Candle (CDLLONGLINE)"
 msgstr ""
-
-msgid "Long MA Type"
-msgstr "長移動平均線類型"
-
-msgid "Long ROC Period"
-msgstr "長相對強弱指標期限"
-
-msgid "Long Stop Line Stroke"
-msgstr "長停損線行程"
-
-msgid "Long Term Period"
-msgstr "長久期限"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2417,14 +2312,8 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
-msgid "Low Barrier"
-msgstr "低障礙"
-
 msgid "Low Price"
 msgstr "低價"
-
-msgid "Low Stroke"
-msgstr "低行程"
 
 msgid "Low barrier"
 msgstr "低障礙"
@@ -2437,15 +2326,6 @@ msgstr ""
 
 msgid "Lower"
 msgstr "低於"
-
-msgid "Lower Band Stroke"
-msgstr "低價幅行程"
-
-msgid "MA Type"
-msgstr "移動平均線類型"
-
-msgid "MACD Line Stroke"
-msgstr "指數平滑異同平均線行程"
 
 msgid ""
 "MACD is a trading indicator used in technical analysis of stock prices.It is "
@@ -2488,9 +2368,6 @@ msgstr ""
 msgid "Mass Index (MASS)"
 msgstr ""
 
-msgid "Mass Period"
-msgstr "梅斯線期限"
-
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr ""
 
@@ -2499,12 +2376,6 @@ msgstr "相符"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr ""
-
-msgid "Max/Min Period"
-msgstr "最大/最小期限"
-
-msgid "Maximum"
-msgstr "最大"
 
 msgid "Maximum (MAX)"
 msgstr ""
@@ -2544,9 +2415,6 @@ msgstr "難忘的城鎮/城市"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr ""
-
-msgid "Middle Band Stroke"
-msgstr "中價幅行程"
 
 msgid "Min: 10 Max: 2000"
 msgstr "最小: 10 最大: 2000"
@@ -2604,15 +2472,6 @@ msgstr "太太"
 
 msgid "Ms"
 msgstr "女士"
-
-msgid "Multiplier"
-msgstr "乘數"
-
-msgid "NB Dev Down"
-msgstr "NB Dev 下跌"
-
-msgid "NB Dev Up"
-msgstr "NB Dev 上漲"
 
 msgid "Name"
 msgstr "名字"
@@ -2675,16 +2534,6 @@ msgid ""
 "range values across instruments by using the formula below"
 msgstr ""
 
-msgid "Note that tokens can possess one or more of these scopes"
-msgstr "請注意，權杖可能擁有一或多個上述領域"
-
-msgid ""
-"Note: Contract will be sold at the prevailing market price when the request "
-"is received by our servers. This price may differ from the indicated price"
-msgstr ""
-"請注意:合約將在我們的伺服器收到請求時以當時的市場價格賣出。此價格可能與報價有"
-"差異"
-
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
 "exclusively via payment agent"
@@ -2699,9 +2548,6 @@ msgstr "十一月"
 msgid "Now"
 msgstr "現在"
 
-msgid "Number of bars on sides"
-msgstr "兩邊條形數目"
-
 msgid "OAuth App ID (Optional)"
 msgstr "OAuth 應用 ID (可選項目)"
 
@@ -2714,6 +2560,9 @@ msgstr "OHLC條形圖"
 msgid "OPEN"
 msgstr "開盤"
 
+msgid "Occupation"
+msgstr ""
+
 msgid "Oct"
 msgstr "十月"
 
@@ -2725,9 +2574,6 @@ msgstr "奇"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
-
-msgid "Offset"
-msgstr "位移"
 
 msgid "Ok"
 msgstr "確定"
@@ -2753,6 +2599,9 @@ msgid ""
 "trading services. The award recognises BetOnMarkets.com's reliable, fast and "
 "secure online trading for novice and expert traders. At this time, our "
 "website has received over 15 million trades"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
 msgid "Oops... Page Not Available"
@@ -2841,9 +2690,6 @@ msgstr "下午"
 msgid "PNG"
 msgstr "PNG"
 
-msgid "PPO Line Stroke"
-msgstr "PPO 線波幅"
-
 msgid "Page Not Found"
 msgstr "找不到頁面"
 
@@ -2892,18 +2738,6 @@ msgstr "退休金"
 msgid "Percentage Price Oscillator (PPO)"
 msgstr ""
 
-msgid "Period"
-msgstr "週期"
-
-msgid "Period 1"
-msgstr "週期1"
-
-msgid "Period 2"
-msgstr "週期2"
-
-msgid "Period 3"
-msgstr "週期3"
-
 msgid "Permissions"
 msgstr "權限"
 
@@ -2930,9 +2764,6 @@ msgstr "請"
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "請用4-50個字元回答密碼提示問題"
 
-msgid "Please choose at least one token scope"
-msgstr "請選擇至少一個權杖範圍"
-
 msgid "Please choose which currency you would like to transact in"
 msgstr "請選擇交易貨幣種類"
 
@@ -2956,9 +2787,6 @@ msgstr "請輸入正確的電子郵件"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "請輸入日期，格式是年-月-日"
-
-msgid "Please enter the token name"
-msgstr "請輸入權杖名稱"
 
 msgid "Please enter the verification code sent to your email"
 msgstr "請輸入發送到您郵箱的驗證碼"
@@ -2993,11 +2821,11 @@ msgstr "請輸入電話號"
 msgid "Please enter your street address"
 msgstr "請輸入街道住址"
 
+msgid "Please input correct token"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers"
 msgstr "請從以下瀏覽器中選擇一個，並安裝最新版本"
-
-msgid "Please log in"
-msgstr "請登入"
 
 msgid "Please select"
 msgstr "請選擇"
@@ -3010,9 +2838,6 @@ msgstr "請用新密碼登入"
 
 msgid "Plot"
 msgstr "繪圖"
-
-msgid "Plot Color"
-msgstr "繪圖顏色"
 
 msgid "Pofit/Loss"
 msgstr "利潤/虧損"
@@ -3048,9 +2873,6 @@ msgstr "優選實況調查間隔時間"
 
 msgid "Press Create token button on the right to create your first token"
 msgstr "點擊右邊按鈕即可建立首個權杖"
-
-msgid "Price"
-msgstr "價格"
 
 msgid "Price Transformation"
 msgstr ""
@@ -3107,9 +2929,6 @@ msgstr "買入日期"
 
 msgid "Purchase Price"
 msgstr "買入價格"
-
-msgid "Purchase Time"
-msgstr "買入時間"
 
 msgid "Quiet markets"
 msgstr ""
@@ -3211,9 +3030,6 @@ msgstr "重命名"
 
 msgid "Repeat password"
 msgstr "再次輸入密碼"
-
-msgid "Resale of this contract is not offered"
-msgstr "此合約不可轉售"
 
 msgid "Resale price"
 msgstr ""
@@ -3317,9 +3133,6 @@ msgstr "自雇者"
 msgid "Self-Exclusion"
 msgstr "自我禁止"
 
-msgid "Self-Exclusion Facilities"
-msgstr "自我禁止工具"
-
 msgid "Sell At Market"
 msgstr "按市價賣出"
 
@@ -3371,18 +3184,6 @@ msgstr "共享圖表"
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr ""
 
-msgid "Short MA Type"
-msgstr "短移動平均線類型"
-
-msgid "Short ROC Period"
-msgstr "短期價格變化率"
-
-msgid "Short Stop Line Stroke"
-msgstr "短止損線波幅"
-
-msgid "Short Term Period"
-msgstr "短交易期"
-
 msgid "Short to long-term"
 msgstr ""
 
@@ -3404,50 +3205,11 @@ msgid ""
 "downtrend"
 msgstr ""
 
-msgid "Sigma"
-msgstr "西格瑪交易軟體"
-
-msgid "Signal Line Stroke"
-msgstr "訊號線波幅"
-
-msgid "Signal MA Type"
-msgstr "訊號移動平均線類型"
-
-msgid "Signal Period"
-msgstr "訊號期"
-
 msgid "Simple Moving Average (SMA)"
 msgstr ""
 
 msgid "Simplicity"
 msgstr ""
-
-msgid "Single MA Period"
-msgstr "單移動平均線期"
-
-msgid "Single MA Type"
-msgstr "單移動平均線類型"
-
-msgid "Slow %D MA Type"
-msgstr "慢速%D移動平均線類型"
-
-msgid "Slow %D Period"
-msgstr "慢速%D期"
-
-msgid "Slow %K MA Type"
-msgstr "慢速 %K移動平均線類型"
-
-msgid "Slow %K Period"
-msgstr "慢速%K期"
-
-msgid "Slow Limit"
-msgstr "慢速限額"
-
-msgid "Slow MA Type"
-msgstr "慢速移動平均線類型"
-
-msgid "Slow Period"
-msgstr "慢速期"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
@@ -3596,9 +3358,6 @@ msgstr "波幅寬度"
 
 msgid "Submit"
 msgstr "提交"
-
-msgid "Successfully added new token"
-msgstr "成功新增權杖"
 
 msgid "Summation (SUM)"
 msgstr ""
@@ -3966,11 +3725,18 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The company holds customer funds in separate bank accounts to the "
+"operational accounts which would not, in the event of insolvency, form part "
+"of the Company's assets. This meets the Gambling Commission's requirements "
+"for the segregation of customer funds at the level"
+msgstr ""
+
+msgid ""
 "The contract period is the timeframe of a trade. It is also called the "
 "duration"
 msgstr ""
 
-msgid "The duration is the length of a purchased trade (see 'contract period')"
+msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid ""
@@ -4133,18 +3899,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"There was a market data disruption during the contract period. For real-"
-"money accounts we will attempt to correct this and settle the contract "
-"properly, otherwise the contract will be cancelled and refunded. Virtual-"
-"money contracts will be cancelled and refunded"
-msgstr ""
-"合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正，並正確結算合約，否則"
-"合約將取消，投注金額也將被退還。虛擬資金合約將取消，投注金額也將被退還"
-
-msgid "There was an error"
-msgstr "出現錯誤"
-
-msgid ""
 "These are trades where the trader predicts if a market will finish higher or "
 "lower than a specified price target"
 msgstr ""
@@ -4176,9 +3930,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract has expired"
-msgstr "合約已過期"
 
 msgid "This contract lost"
 msgstr "合約輸了"
@@ -4268,9 +4019,6 @@ msgstr "跳動點"
 msgid "Tile"
 msgstr "圖標"
 
-msgid "Time Period"
-msgstr "期限"
-
 msgid "Time interval"
 msgstr "時間間隔"
 
@@ -4279,9 +4027,6 @@ msgstr "時間已過。下次開啟時間為"
 
 msgid "Time period"
 msgstr "期限"
-
-msgid "Timeout for websocket request"
-msgstr "websocket 請求已過期"
 
 msgid ""
 "Times are changing. We increase payouts so our clients can make the most of "
@@ -4415,7 +4160,7 @@ msgstr "轉帳到另一個Binary帳戶"
 msgid "Triangular Moving Average (TRIMA)"
 msgstr ""
 
-msgid "Triple Exponential Moving Average (T3) (T3)"
+msgid "Triple Exponential Moving Average (T3)"
 msgstr ""
 
 msgid "Triple Exponential Moving Average (TEMA)"
@@ -4480,9 +4225,6 @@ msgid ""
 "and bullish, its Close price is lower than 2nd bar's"
 msgstr ""
 
-msgid "Unlock"
-msgstr "解鎖"
-
 msgid "Up to 100% returns on rise/fall trades"
 msgstr ""
 
@@ -4503,9 +4245,6 @@ msgstr "升級為真實帳戶"
 
 msgid "Upload template"
 msgstr "載入範本"
-
-msgid "Upper Band Stroke"
-msgstr "上方帶狀波幅"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr ""
@@ -4572,19 +4311,19 @@ msgstr ""
 msgid "Volatility indices"
 msgstr ""
 
-msgid "Volume Factor"
-msgstr "體積系數"
-
 msgid "WMA"
 msgstr "加權移動平均線"
-
-msgid "WMA Period"
-msgstr "加權移動平均線期限"
 
 msgid ""
 "WMA stands for weighted moving average. It helps to smooth the price curve "
 "for better trend identification. It places even greater importance on recent "
 "data than the EMA does"
+msgstr ""
+
+msgid ""
+"We are required by our license to inform you about what happens to funds "
+"which we hold on account for you, and the extent to which funds are "
+"protected in the event of insolvency"
 msgstr ""
 
 msgid ""
@@ -4743,9 +4482,6 @@ msgstr ""
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr ""
 
-msgid "You have excluded yourself until"
-msgstr "您已設定自我禁止，有效期至"
-
 msgid "You have sold the following contract"
 msgstr "您已賣出以下合約"
 
@@ -4780,14 +4516,8 @@ msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才�
 msgid "Your account is locked, please contact customer support for more info"
 msgstr "您的帳戶已被封鎖，欲知詳情請聯繫客服部"
 
-msgid "Your browser doesn't support copy to clipboard"
-msgstr "您的瀏覽器不支持剪貼簿複製操作"
-
 msgid "Your browser is not supported"
 msgstr "不支持您的瀏覽器"
-
-msgid "Your changes have been updated"
-msgstr "您的更改已成功更新"
 
 msgid "Your email"
 msgstr "您的電子郵件"
@@ -4812,9 +4542,6 @@ msgstr "您的交易號是"
 msgid "Zoom"
 msgstr "縮放"
 
-msgid "admin"
-msgstr "管理中心"
-
 msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
@@ -4822,6 +4549,9 @@ msgstr ""
 
 msgid "and"
 msgstr "以及"
+
+msgid "apostrophe (') are allowed"
+msgstr ""
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
@@ -4876,21 +4606,6 @@ msgstr "入市現價"
 
 msgid "exit spot"
 msgstr "退市現價"
-
-msgid "feed is delayed by"
-msgstr "資料源延遲的原因為"
-
-msgid "for API calls that can access the cashier"
-msgstr "用於可存取收銀台的API通話"
-
-msgid "for API calls that can create trades in the client account"
-msgstr "用於為客戶帳戶創建交易的API通話"
-
-msgid "for API calls that change client settings"
-msgstr "用於更改客戶設定的API通話"
-
-msgid "for API calls that only read client data"
-msgstr "用於唯讀客戶資料的API通話"
 
 msgid "for mobile charts"
 msgstr "用於移動式圖表"
@@ -4954,8 +4669,8 @@ msgstr "是我們的伺服器處理合約交易的時間"
 msgid "main site"
 msgstr "主要網站"
 
-msgid "market is presently closed"
-msgstr "市場現已關閉"
+msgid "medium protection"
+msgstr ""
 
 msgid "minute"
 msgstr "分鐘"
@@ -4978,17 +4693,11 @@ msgstr ""
 msgid "payment agent"
 msgstr "支付代理"
 
-msgid "payments"
-msgstr "付款"
-
 msgid "please play responsibly. Read about"
 msgstr "請在玩時提醒自己要承擔責任。請查閱"
 
 msgid "points"
 msgstr "點"
-
-msgid "read"
-msgstr "閱讀"
 
 msgid "second"
 msgstr "秒"
@@ -5017,9 +4726,6 @@ msgstr "跳動點"
 msgid "ticks"
 msgstr "跳動點"
 
-msgid "trade"
-msgstr "交易"
-
 msgid "trading experience"
 msgstr "交易經驗"
 
@@ -5045,6 +4751,368 @@ msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "%D MA Type"
+#~ msgstr "%D MA 類型"
+
+#~ msgid "%D Period"
+#~ msgstr "%D 期限"
+
+#~ msgid "%D Stroke"
+#~ msgstr "%D 波幅"
+
+#~ msgid "%K MA Type"
+#~ msgstr "%K MA 類型"
+
+#~ msgid "%K Period"
+#~ msgstr "%K 期限"
+
+#~ msgid "%K Stroke"
+#~ msgstr "%K 波幅"
+
+#~ msgid "-DI Stroke"
+#~ msgstr "-DI 波幅"
+
+#~ msgid "ADX MA Type"
+#~ msgstr "ADX MA 類型"
+
+#~ msgid "ADX Stroke"
+#~ msgstr "ADX 波幅"
+
+#~ msgid "ATR Period"
+#~ msgstr "ATR 期限"
+
+#~ msgid "Acceleration"
+#~ msgstr "加速"
+
+#~ msgid "Account id not found"
+#~ msgstr "沒找到帳戶ID"
+
+#~ msgid "Account token not found"
+#~ msgstr "沒找到帳戶權杖"
+
+#~ msgid "Applied to"
+#~ msgstr "應用為"
+
+#~ msgid "Aroon Down Stroke"
+#~ msgstr "阿隆下行線波幅"
+
+#~ msgid "Aroon Up Stroke"
+#~ msgstr "阿隆上升線波幅"
+
+#~ msgid "Background Color"
+#~ msgstr "背景顏色"
+
+#~ msgid "Blank window"
+#~ msgstr "空白視窗"
+
+#~ msgid "Clear"
+#~ msgstr "清除"
+
+#~ msgid "Connection closed"
+#~ msgstr "連結已關閉"
+
+#~ msgid "Connection error"
+#~ msgstr "連結出錯"
+
+#~ msgid "Contract is not yet started"
+#~ msgstr "合約還未開始生效"
+
+#~ msgid "DI Stroke"
+#~ msgstr "DI波幅"
+
+#~ msgid "DX MA Type"
+#~ msgstr "DX MA類型"
+
+#~ msgid "Delete level(s)"
+#~ msgstr "刪除水平"
+
+#~ msgid "Double MA Period"
+#~ msgstr "雙MA期限"
+
+#~ msgid "Double MA Type"
+#~ msgstr "雙MA類型"
+
+#~ msgid "Error getting market information!"
+#~ msgstr "取得市場資料時出錯!"
+
+#~ msgid "Fast %K MA Type"
+#~ msgstr "快捷 %K MA 類型"
+
+#~ msgid "Fast %K Period"
+#~ msgstr "快解 %K 期限"
+
+#~ msgid "Fast Limit"
+#~ msgstr "快捷限值"
+
+#~ msgid "Fast MA Type"
+#~ msgstr "快捷 MA 類型"
+
+#~ msgid "Fast Period"
+#~ msgstr "快捷期限"
+
+#~ msgid "High Barrier"
+#~ msgstr "高障礙"
+
+#~ msgid "High Stroke"
+#~ msgstr "高價波幅"
+
+#~ msgid "Histogram Color"
+#~ msgstr "直方圖顏色"
+
+#~ msgid "Histogram Color For Higher Values"
+#~ msgstr "較高數值的直方圖顏色"
+
+#~ msgid "Histogram Color For Lower Values"
+#~ msgstr "較低數值的直方圖顏色"
+
+#~ msgid "Instrument Code Unknown/Unavailable!"
+#~ msgstr "工具代碼未知/不可用！"
+
+#~ msgid "Invalid parameter(s)!"
+#~ msgstr "無效參數！"
+
+#~ msgid "Japan accounts are not supported"
+#~ msgstr "不支持日本帳戶"
+
+#~ msgid "Line Stroke"
+#~ msgstr "線波幅"
+
+#~ msgid "Loading self-exclusion settings"
+#~ msgstr "載入自我禁止設定"
+
+#~ msgid "Logging out because of self-exclusion session time out!"
+#~ msgstr "正在登出，因為自我禁止時段已到期!"
+
+#~ msgid "Long MA Type"
+#~ msgstr "長移動平均線類型"
+
+#~ msgid "Long ROC Period"
+#~ msgstr "長相對強弱指標期限"
+
+#~ msgid "Long Stop Line Stroke"
+#~ msgstr "長停損線行程"
+
+#~ msgid "Long Term Period"
+#~ msgstr "長久期限"
+
+#~ msgid "Low Barrier"
+#~ msgstr "低障礙"
+
+#~ msgid "Low Stroke"
+#~ msgstr "低行程"
+
+#~ msgid "Lower Band Stroke"
+#~ msgstr "低價幅行程"
+
+#~ msgid "MA Type"
+#~ msgstr "移動平均線類型"
+
+#~ msgid "MACD Line Stroke"
+#~ msgstr "指數平滑異同平均線行程"
+
+#~ msgid "Mass Period"
+#~ msgstr "梅斯線期限"
+
+#~ msgid "Max/Min Period"
+#~ msgstr "最大/最小期限"
+
+#~ msgid "Maximum"
+#~ msgstr "最大"
+
+#~ msgid "Middle Band Stroke"
+#~ msgstr "中價幅行程"
+
+#~ msgid "Multiplier"
+#~ msgstr "乘數"
+
+#~ msgid "NB Dev Down"
+#~ msgstr "NB Dev 下跌"
+
+#~ msgid "NB Dev Up"
+#~ msgstr "NB Dev 上漲"
+
+#~ msgid "Note that tokens can possess one or more of these scopes"
+#~ msgstr "請注意，權杖可能擁有一或多個上述領域"
+
+#~ msgid ""
+#~ "Note: Contract will be sold at the prevailing market price when the "
+#~ "request is received by our servers. This price may differ from the "
+#~ "indicated price"
+#~ msgstr ""
+#~ "請注意:合約將在我們的伺服器收到請求時以當時的市場價格賣出。此價格可能與報"
+#~ "價有差異"
+
+#~ msgid "Number of bars on sides"
+#~ msgstr "兩邊條形數目"
+
+#~ msgid "Offset"
+#~ msgstr "位移"
+
+#~ msgid "PPO Line Stroke"
+#~ msgstr "PPO 線波幅"
+
+#~ msgid "Period"
+#~ msgstr "週期"
+
+#~ msgid "Period 1"
+#~ msgstr "週期1"
+
+#~ msgid "Period 2"
+#~ msgstr "週期2"
+
+#~ msgid "Period 3"
+#~ msgstr "週期3"
+
+#~ msgid "Please choose at least one token scope"
+#~ msgstr "請選擇至少一個權杖範圍"
+
+#~ msgid "Please enter the token name"
+#~ msgstr "請輸入權杖名稱"
+
+#~ msgid "Please log in"
+#~ msgstr "請登入"
+
+#~ msgid "Plot Color"
+#~ msgstr "繪圖顏色"
+
+#~ msgid "Price"
+#~ msgstr "價格"
+
+#~ msgid "Purchase Time"
+#~ msgstr "買入時間"
+
+#~ msgid "Resale of this contract is not offered"
+#~ msgstr "此合約不可轉售"
+
+#~ msgid "Self-Exclusion Facilities"
+#~ msgstr "自我禁止工具"
+
+#~ msgid "Short MA Type"
+#~ msgstr "短移動平均線類型"
+
+#~ msgid "Short ROC Period"
+#~ msgstr "短期價格變化率"
+
+#~ msgid "Short Stop Line Stroke"
+#~ msgstr "短止損線波幅"
+
+#~ msgid "Short Term Period"
+#~ msgstr "短交易期"
+
+#~ msgid "Sigma"
+#~ msgstr "西格瑪交易軟體"
+
+#~ msgid "Signal Line Stroke"
+#~ msgstr "訊號線波幅"
+
+#~ msgid "Signal MA Type"
+#~ msgstr "訊號移動平均線類型"
+
+#~ msgid "Signal Period"
+#~ msgstr "訊號期"
+
+#~ msgid "Single MA Period"
+#~ msgstr "單移動平均線期"
+
+#~ msgid "Single MA Type"
+#~ msgstr "單移動平均線類型"
+
+#~ msgid "Slow %D MA Type"
+#~ msgstr "慢速%D移動平均線類型"
+
+#~ msgid "Slow %D Period"
+#~ msgstr "慢速%D期"
+
+#~ msgid "Slow %K MA Type"
+#~ msgstr "慢速 %K移動平均線類型"
+
+#~ msgid "Slow %K Period"
+#~ msgstr "慢速%K期"
+
+#~ msgid "Slow Limit"
+#~ msgstr "慢速限額"
+
+#~ msgid "Slow MA Type"
+#~ msgstr "慢速移動平均線類型"
+
+#~ msgid "Slow Period"
+#~ msgstr "慢速期"
+
+#~ msgid "Successfully added new token"
+#~ msgstr "成功新增權杖"
+
+#~ msgid ""
+#~ "There was a market data disruption during the contract period. For real-"
+#~ "money accounts we will attempt to correct this and settle the contract "
+#~ "properly, otherwise the contract will be cancelled and refunded. Virtual-"
+#~ "money contracts will be cancelled and refunded"
+#~ msgstr ""
+#~ "合約期間發生資料中斷。我們將嘗試為真實資金帳戶提供修正，並正確結算合約，否"
+#~ "則合約將取消，投注金額也將被退還。虛擬資金合約將取消，投注金額也將被退還"
+
+#~ msgid "There was an error"
+#~ msgstr "出現錯誤"
+
+#~ msgid "This contract has expired"
+#~ msgstr "合約已過期"
+
+#~ msgid "Time Period"
+#~ msgstr "期限"
+
+#~ msgid "Timeout for websocket request"
+#~ msgstr "websocket 請求已過期"
+
+#~ msgid "Unlock"
+#~ msgstr "解鎖"
+
+#~ msgid "Upper Band Stroke"
+#~ msgstr "上方帶狀波幅"
+
+#~ msgid "Volume Factor"
+#~ msgstr "體積系數"
+
+#~ msgid "WMA Period"
+#~ msgstr "加權移動平均線期限"
+
+#~ msgid "You have excluded yourself until"
+#~ msgstr "您已設定自我禁止，有效期至"
+
+#~ msgid "Your browser doesn't support copy to clipboard"
+#~ msgstr "您的瀏覽器不支持剪貼簿複製操作"
+
+#~ msgid "Your changes have been updated"
+#~ msgstr "您的更改已成功更新"
+
+#~ msgid "admin"
+#~ msgstr "管理中心"
+
+#~ msgid "feed is delayed by"
+#~ msgstr "資料源延遲的原因為"
+
+#~ msgid "for API calls that can access the cashier"
+#~ msgstr "用於可存取收銀台的API通話"
+
+#~ msgid "for API calls that can create trades in the client account"
+#~ msgstr "用於為客戶帳戶創建交易的API通話"
+
+#~ msgid "for API calls that change client settings"
+#~ msgstr "用於更改客戶設定的API通話"
+
+#~ msgid "for API calls that only read client data"
+#~ msgstr "用於唯讀客戶資料的API通話"
+
+#~ msgid "market is presently closed"
+#~ msgstr "市場現已關閉"
+
+#~ msgid "payments"
+#~ msgstr "付款"
+
+#~ msgid "read"
+#~ msgstr "閱讀"
+
+#~ msgid "trade"
+#~ msgstr "交易"
 
 #~ msgid "Contract Details"
 #~ msgstr "合約詳細資料"

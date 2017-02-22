@@ -29,7 +29,7 @@ export const barsTable = db.addCollection('bars_table');
 //       move code from charts.js, ohlc_handler.js, stream_handler.js and symbol_handler.js
 
 
-export const barsLoaded = function (instrumentCdAndTp) {
+export const barsLoaded = function(instrumentCdAndTp) {
 
     const key = instrumentCdAndTp;
     if (!this[key] || !this[key].chartIDs) return;
@@ -40,7 +40,7 @@ export const barsLoaded = function (instrumentCdAndTp) {
     chartIDList.forEach((chartID) => {
 
         if (!chartID) return;
-
+        if (!$(chartID.containerIDWithHash).highcharts()) return;
         const series = $(chartID.containerIDWithHash).highcharts().get(key),
             type = $(chartID.containerIDWithHash).data('type'),
             timePeriod = $(chartID.containerIDWithHash).data('timePeriod');
@@ -262,7 +262,8 @@ export const register = function(options) {
 export const subscribe = function(key, chartID) {
     const map = this;
     if (!map[key]) {
-        return; }
+        return;
+    }
     map[key].subscribers += 1;
     if (chartID) {
         map[key].chartIDs.push(chartID);
@@ -272,7 +273,8 @@ export const subscribe = function(key, chartID) {
 export const unregister = function(key, containerIDWithHash) {
     const map = this;
     if (!map[key]) {
-        return; }
+        return;
+    }
     if (containerIDWithHash) {
         _.remove(map[key].chartIDs, { containerIDWithHash: containerIDWithHash });
     }
@@ -330,9 +332,13 @@ export const digits_after_decimal = function(pip, symbol) {
 }
 
 export default {
-  barsLoaded, processOHLC,
-  keyFor, barsTable,
-  register, subscribe,
-  unregister, removeChart,
-  digits_after_decimal
+    barsLoaded,
+    processOHLC,
+    keyFor,
+    barsTable,
+    register,
+    subscribe,
+    unregister,
+    removeChart,
+    digits_after_decimal
 }
