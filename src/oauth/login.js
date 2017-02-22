@@ -77,9 +77,9 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
           },
           password_error_message: function() {
             var password = state.account.password;
-            if(password === '') return state.account.empty_fields.validate ? '* Please enter your password'.i18n() : '';
-            if(password.length < 6) return '* Password must be 6 characters minimum'.i18n();
-            if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return '* Password must contain lower and uppercase letters with numbers'.i18n();
+            if(password === '') return state.account.empty_fields.validate ? 'You should enter between 6-25 characters.'.i18n() : '';
+            if(password.length < 6) return 'Password must be 6 characters minimum'.i18n();
+            if(!/\d/.test(password) || !/[a-z]/.test(password) || !/[A-Z]/.test(password)) return 'Password must contain lower and uppercase letters with numbers'.i18n();
             return '';
           },
           verification: '',
