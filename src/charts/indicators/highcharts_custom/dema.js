@@ -30,6 +30,7 @@ DEMA = function(data, options, indicators) {
         var dema1Value = this.ema1.indicatorData[index].value;
         var dema2Value = this.ema2.indicatorData[index].value;
         var dema = toFixed(2 * dema1Value - dema2Value, 4);
+        dema = index < options.period*3 ? null : dema;
         this.indicatorData.push({ time : data[index].time, value : dema || null });
     }
 

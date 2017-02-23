@@ -22,7 +22,6 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
             maximizable: false,
             width: 551,
             height: 180,
-            'data-authorized': true,
             close: function () {
               login_win.dialog('destroy');
               login_win.remove();
@@ -218,7 +217,7 @@ define(['websockets/binary_websockets', 'windows/windows', 'common/rivetsExtra',
       liveapi.cached.send({residence_list: 1})
              .then(function(data) {
                state.account.residence_list = data.residence_list.map(function(r) {
-                 r.disabled = (r.disabled === 'DISABLED');
+                 r.disabled = (r.disabled === 'DISABLED' || r.disabled === true);
                  r.disabled && state.account.residence_unsupported.push(r.value);
                  return r;
                });

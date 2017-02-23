@@ -2,7 +2,7 @@
  * Created by amin on November 25, 2015.
  */
 
-define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline'], function (_, $, rv, moment) {
+define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline', 'ddslick','chosen', 'color-picker'], function (_, $, rv, moment) {
 
     /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -218,6 +218,51 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     }
 
     /*************************************  binding *****************************************/
+    rv.binders.ddslick = {
+        priority: 101,
+        publishes: true,
+        bind: function (el) {
+            var publish = this.publish,
+                model = this.model,
+                select = $(el);
+            var parent = select.parent();
+            var values = select.find('option').map(function(inx,opt) { return $(opt).val(); }).get();
+
+            var update = function(value) {
+               var inx = values.indexOf(value);
+
+               parent.find('.dd-select input').val(value);
+               var selected_img = parent.find('img.dd-selected-image');
+               var img = parent.find('img')[inx+1];
+
+               selected_img.attr('src', $(img).attr('src'));
+            }
+         
+            el._update = update;
+
+            var model_value = model.value;
+            select.ddslick({
+                imagePosition: "left",
+                data: [],
+                // width: 155,
+                background: "white",
+                onSelected: function (data) {
+                   var value = data.selectedData.value
+                   value = model_value || value;
+                   model_value = null;
+                   model.value = value;
+                   update(value);
+                }
+            });
+        },
+        unbind: function(el) {
+            $(el).ddslick('destroy')
+        },
+        routine: function (el, value) {
+           el._update(value);
+        }
+    };
+
     /* turn current select item into a jquery-ui-selectmenu, update value on change */
     rv.binders.selectmenu = {
         priority: 100,
@@ -247,6 +292,32 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         $(el).selectmenu('option', this.args[0], value);
     }
 
+   rv.binders['is-valid-number'] = {
+      priority: 100,
+      publishes: true,
+      bind: function (el) {
+         var prop = this.keypath.split('.')[1];
+         var model = this.model;
+         var $input = $(el);
+         var reg = /^(?!0\d)\d*(\.\d{1,4})?$/;
+
+         $input.on('input', function() {
+            var val = $input.val();
+            var is_ok = reg.test(val);
+
+            model[prop] = is_ok && val !== '';
+         });
+      },
+      unbind: function(el){ },
+      routine: function (el, value) { }
+   };
+    /* bindar for jqueyr ui selectmenu options */
+
+    /*binder for hidding overflow on selctmenu*/
+    rv.binders['selectmenu-css-*'] = function(el,value) {
+        $(el).selectmenu("menuWidget").css(this.args[0], value);
+    }
+
     /* refersh the selectmenu on array changes */
     rv.binders.selectrefresh = {
         priority: 99,
@@ -261,6 +332,23 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
         }
     }
 
+    /* Multiselect select menu "chosen"*/
+    rv.binders.chosen = {
+      priority: 100,
+      publishes: true,
+      bind: function(el){
+        var publish = this.publish;
+        $(el).chosen({width:$(el).css("width")}).change(function(){
+          publish($(this).val())
+        });
+      },
+      unbind: function(el){
+        $(el).chosen("destroy");
+      }
+    }
+    rv.binders.chosenrefresh = function(el){
+      $(el).trigger("chosen:updated");
+    }
     /* extend jquery ui spinner to support multiple buttons */
     $.widget('ui.webtrader_spinner', $.ui.spinner, {
         _buttonHtml: function () {
@@ -345,6 +433,82 @@ define(['lodash', 'jquery', 'rivets', 'moment', 'jquery-ui', 'jquery-sparkline']
     /* bindar for jqueyr ui dialog options */
     rv.binders['dialog-*'] = function (el, value) {
         $(el).dialog('option', this.args[0], value);
+    }
+    rv.binders['color-picker'] = {
+        priority: 96,
+        publishes: true,
+        bind: function (el) {
+           var input = $(el);
+
+           var publish = this.publish;
+           var model = this.model;
+           var color = model.value || '#cd0a0a';
+
+            var altField = $('<div style="width:100%;"/>');
+            input.after(altField);
+
+            input.colorpicker({
+               showOn: 'alt',
+               altField: altField,
+               position: {
+                  my: "left-100 bottom+5",
+                  of: "element",
+                  collision: "fit"
+               },
+               parts:  [ 'map', 'bar' ],
+               alpha:  true,
+               layout: {
+                  map: [0, 0, 2, 2],
+                  bar: [2, 0, 1, 2],
+               },
+               colorFormat: "RGBA",
+               part: { map: {size: 128}, bar: {size: 128} },
+               select: function (event, color) {
+                  publish(color);
+               },
+            });
+          
+            setTimeout(function() {
+               parent = input.scrollParent();
+               parent.scroll(function() {
+                  input.colorpicker('close');
+               });
+            }, 1000);
+        },
+        unbind: function (el) { },
+        routine: function (el, value) { }
+    }
+
+    rv.binders.slider = {
+        priority: 95,
+        publishes: true,
+        bind: function (el) {
+            var div = $(el);
+            var handle = $('<div class="ui-slider-handle"></div>');
+            div.append(handle);
+
+            var publish = this.publish;
+            var model = this.model;
+
+            div.slider({
+              step: div.attr('step')*1 || 1,
+              min: div.attr('min') === undefined ? 1 : div.attr('min')*1,
+              max: div.attr('max')*1 || 100,
+              create: function() {
+                handle.text($(this).slider("value"));
+              },
+              slide: function( event, ui ) {
+                handle.text(ui.value);
+                model.value = ui.value*1;
+                //publish(ui.value*1);
+              }
+            });
+        },
+        unbind: function (el) { $(el).slider('destroy'); },
+        routine: function (el, value) {
+            $(el).slider('value', value);
+            $(el).find('> div').text(value);
+        }
     }
 
     /* trun input element in jquery-ui-datepicker */
