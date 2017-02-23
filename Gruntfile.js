@@ -290,7 +290,7 @@ module.exports = function (grunt) {
                     //Check the negate option. Its not working
                     //Currently open ticket https://github.com/rhiokim/grunt-sloc/issues/14
                     //TODO
-                    src: ['**/*.js', '**/*.css', '**/*.html', '!**/libs/**']
+                    src: ['**/*.js', '**/*.es6', '**/*.css', '**/*.html', '!**/libs/**']
                 }
             }
         },

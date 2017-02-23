@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2017-02-17 08:14+0000\n"
+"PO-Revision-Date: 2017-02-20 20:55+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/it/>\n"
@@ -18,6 +18,8 @@ msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
 "funds.aspx\""
 msgstr ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
@@ -65,7 +67,7 @@ msgid ""
 msgstr ""
 
 msgid "'contract period'"
-msgstr ""
+msgstr "'periodo del contratto'"
 
 msgid "(One) Touch trades"
 msgstr ""
@@ -94,6 +96,8 @@ msgstr ""
 msgid ""
 "- Binary.com ensures your personal data and transactions are always secure"
 msgstr ""
+"- Binary.com garantisce che i tuoi dati personali e le tue transazioni "
+"saranno sempre al sicuro"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -145,7 +149,7 @@ msgstr ""
 msgid ""
 "- choose the no-touch trade, the stays-between trade, or the ends-between "
 "trade"
-msgstr ""
+msgstr "- scegli un trade no-touch, stays-between o ends-between"
 
 msgid ""
 "- choose the one-touch trade, the goes-outside trade, or the ends outside "
@@ -666,7 +670,7 @@ msgid "Action"
 msgstr "Azione"
 
 msgid "Add"
-msgstr ""
+msgstr "Aggiungi"
 
 msgid "Add comparisons"
 msgstr "Aggiungi confronti"
@@ -693,19 +697,19 @@ msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr ""
 
 msgid "All durations"
-msgstr ""
+msgstr "Tutte le durate"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "Tutte le condizioni di mercato"
 
 msgid "All markets"
-msgstr ""
+msgstr "Tutti i mercati"
 
 msgid "All markets, all conditions"
-msgstr ""
+msgstr "Tutti i mercati, tutte le condizioni"
 
 msgid "All payouts"
-msgstr ""
+msgstr "Tutti i payout"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tutti gli orari sono in GMT (Greenwich Mean Time)"
@@ -758,7 +762,7 @@ msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr ""
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
@@ -803,7 +807,7 @@ msgid "Average True Range (ATR)"
 msgstr ""
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Awesome Oscillator (AO)"
 
 msgid "Back"
 msgstr "Indietro"
@@ -827,7 +831,7 @@ msgid "Barrier offset"
 msgstr "Offset di barriera"
 
 msgid "Barrier(s)"
-msgstr ""
+msgstr "Barriera(e)"
 
 msgid ""
 "Bearish: This is an end-of-trend pattern composed of three candlesticks in "
@@ -848,7 +852,7 @@ msgid "Benchmarked prices"
 msgstr ""
 
 msgid "Benefits of binary trading"
-msgstr ""
+msgstr "Vantaggi del trading binario"
 
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr ""
@@ -872,16 +876,16 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr ""
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr ""
 
 msgid "Binary KK granted Japan license"
-msgstr ""
+msgstr "Binary KK ha ottenuto la licenza giapponese"
 
 msgid "Binary Trading is simple to learn and to execute"
 msgstr ""
@@ -890,10 +894,10 @@ msgid "Binary granted Investment Services license"
 msgstr ""
 
 msgid "Binary opens Japan office"
-msgstr ""
+msgstr "Binary apre una sede in Giappone"
 
 msgid "Binary option"
-msgstr ""
+msgstr "Opzione binaria"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opzioni binarie o altri derivati finanziari"

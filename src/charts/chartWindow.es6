@@ -48,6 +48,12 @@ export const addNewWindow = function(options) {
         resize: _trigger_Resize_Effects,
         refresh: function() {
             charts.refresh('#' + id + '_chart');
+        },
+        open: function() {
+            const dialog = $(this);
+            $(this).parent().promise().done(function() {
+                triggerResizeEffects(dialog);
+            });
         }
     }, options);
     const dialog = windows.createBlankWindow($($chartWindowHtml).i18n(), options),
