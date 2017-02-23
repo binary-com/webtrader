@@ -92,7 +92,9 @@
                             rv-css-background-image="row.dashStyle | prepend 'url('images/dashstyle/' | append '.svg'"/>
                         </td>
                         <td>
-                          <span rv-on-click='level.remove | bind row' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
+                           <span data-balloon="Remove" class="no-underline">
+                             <span rv-on-click='level.remove | bind row' class='ui-icon ui-icon-delete'></span>
+                           </span>
                         </td>
                       </tr>
                     </tbody>
