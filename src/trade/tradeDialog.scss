@@ -67,20 +67,8 @@
 
   .categories-row {
     margin-bottom: 5px;
-    .ui-icon-help {
-      min-width: 28px!important;
-      height: 28px;
-      color: #2a3052;
-      position:absolute;
-      z-index: +1;
-      &:hover {
-        opacity: 0.8;
-        cursor: help;
-      }
-    }
     .ui-selectmenu-button .ui-selectmenu-text {
-      padding-left: 2em;
-      text-align: center;
+      padding-left: 0.5em;
     }
   }
 

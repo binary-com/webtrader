@@ -83,6 +83,7 @@ class Withdraw {
 
     _init_state = root => {
         var state = {
+            is_champion: isChampionFx(),
             clear: _.debounce((obj, prop) => { obj[prop] = false }, 4000),
             route: { value: 'menu' },
             empty_fields: {
@@ -333,8 +334,11 @@ class Withdraw {
             .then(data => {
                 agent.currency = data.payout_currencies[0];
             }).catch(err => console.error(err));
-
+        
         win_view = rv.bind(root[0], state);
+        if(isChampionFx()){
+            menu.click("standard");
+        }
     };
 };
 

@@ -231,6 +231,7 @@ function set_current_template(state, tpl) {
 function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   var state = {
+    is_champion: isChampionFx(),
     duration: {
       array: ['Duration', 'End Time'],
       value: 'Duration',
