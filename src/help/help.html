@@ -1,0 +1,16 @@
+<div class="list">
+    <input class="help-search" rv-on-input="search" placeholder=' &#x1F50E; Search'>
+    <span class='ui-icon ui-icon-circle-close' rv-show="current.show_clear" rv-on-click="clearSearch"></span>
+    <div class="items">
+        <span rv-each-elem="list" rv-on-click="updateSublist | bind elem" rv-class-selected="current.list.text | eq elem.text">{elem.text}</span>
+    </div>
+</div>
+<div class="sublist">
+    <div class="items">
+        <span rv-each-item="current.sublist" rv-on-click="getContent | bind item.id" rv-class-selected="current.content_page | eq item.id">{item.text}</span>
+    </div>
+</div>
+<div class="content">
+    <div class="loading" rv-if="current.loading | eq true">Loading...</div>
+    <div class="items" rv-html="current.content"></div>
+</div>

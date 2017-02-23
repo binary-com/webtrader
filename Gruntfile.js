@@ -50,7 +50,11 @@ module.exports = function (grunt) {
                         src: [
                             'jquery-ui-iconfont/jquery-ui.icon-font.css',
                             'jquery-ui-iconfont/font/*',
-                            'regenerator-runtime/*'
+                            '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
+                            'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
+                            'text/text.js',
+                            'regenerator-runtime/*',
+                            'chosen-js/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
                     },
@@ -58,25 +62,20 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'bower_components/',
                         src: [
-                            '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             '!colorpicker/**', 'colorpicker/jquery.colorpicker.js', 'colorpicker/images/**', 'colorpicker/jquery.colorpicker.css',
                             '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
                             '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
-                            'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'clipboard/dist/clipboard.min.js',
-                            'reconnectingWebsocket/reconnecting-websocket.min.js',
                             'es6-promise/promise.min.js',
                             'alameda/alameda.js',
                             'require-css/css.min.js',
-                            'text/text.js',
                             'lodash/dist/lodash.min.js',
-                            'underscore/underscore-min.js',
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
@@ -100,7 +99,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}', '**/404.html'
+                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -143,15 +142,11 @@ module.exports = function (grunt) {
             moveThis: {
                 src: 'dist/uncompressed/v<%=pkg.version%>/index.html',
                 dest: 'dist/uncompressed/index.html'
-            },
-            move404: {
-                src: 'dist/uncompressed/v<%=pkg.version%>/404.html',
-                dest: 'dist/uncompressed/404.html'
             }
         },
         replace: {
             version: {
-                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml', 'dist/uncompressed/404.html'],
+                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml'],
                 overwrite: true,
                 replacements: [{
                     from: '<version>',
@@ -165,7 +160,7 @@ module.exports = function (grunt) {
                 }]
             },
             style : {
-                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/404.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
+                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<style-url>',
@@ -189,7 +184,7 @@ module.exports = function (grunt) {
             minify: {
                 expand: true,
                 cwd: 'dist/uncompressed',
-                src: ['**/*.html','!**/404.html'],
+                src: ['**/*.html'],
                 dest: 'dist/compressed'
             }
         },
@@ -356,7 +351,7 @@ module.exports = function (grunt) {
           scripts: {
             options: { livereload: false },
             files: ['src/**','!src/index.html', '!src/**/*.scss', '!src/**/*.es6'],
-            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest'],
+            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest', 'replace:style'],
           },
         },
         shell: {
@@ -468,10 +463,54 @@ module.exports = function (grunt) {
               }
             ]
           }
+        },
+        markdown: {
+            helpDocs: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/help/docs/',
+                        src: ['**/*.md'],
+                        bundle: true, //Bundle the markdown text in one file?
+                        bundle_dest: 'dist/uncompressed/v<%=pkg.version%>/help/content.html'
+                    }
+                ]
+            }
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
+    // This is markdown to html converter.
+    var showdown = require('showdown'),
+        converter = new showdown.Converter();
+    /*
+     * pass a bundle: true to bundle files
+     * with bundle_dest: "path" to save it to a specific file at path
+     */
+    grunt.registerMultiTask('markdown','Converts md files to html and bundles them into one file', function(){
+        var content = "";
+        this.files.forEach(function(f){
+            var src= f.src[0].split("/");
+            var id = src[src.length-1].replace(".md","").toLowerCase();
+            var html = "<div id=\"" + id + "\">" + converter.makeHtml(grunt.file.read(f.src[0])) + "</div>";
+            if(f.bundle){
+                content = content + "\n" + html;
+            } else {
+                var write_successfull = grunt.file.write(f.dest,html);
+                if(!write_successfull){
+                    grunt.log.error("Couldn't convert " + f.src[0] + " to html");
+                }
+            }
+        });
+
+        if(this.data.files[0].bundle){
+            var write_successfull = grunt.file.write(this.data.files[0].bundle_dest,content);
+            if(!write_successfull){
+                grunt.log.error("Failed bundling the files");
+            }
+        }
+    });
+
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'markdown:helpDocs', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 

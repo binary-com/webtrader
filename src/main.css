@@ -30,6 +30,7 @@ body > .footer {
     color :  #88a;
     padding-top : 2px;
     padding-bottom : 2px;
+    min-width: 1025px;
 }
 body > .footer .addiction-warning {
     position: absolute;
@@ -319,7 +320,6 @@ button[disabled] {
 /* For confirmation dialogs */
 .dialog-confirm.ui-dialog  {
     background: #f2f2f2;
-    border-bottom: 5px solid #EA9800;
 }
 
 .dialog-confirm.ui-dialog .ui-widget-content {
@@ -393,4 +393,8 @@ input[type="number"] {
 .ui-menu-item.ui-state-focus {
   background: #1e90ff;
   color: #fff;
+}
+
+.dialog-message.ui-dialog .ui-dialog-content{
+  padding: 0;
 }

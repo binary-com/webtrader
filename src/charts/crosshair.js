@@ -13,8 +13,8 @@ define(["charts/charts"], function() {
         var chart = $(containerIDWithHash).highcharts();
         if (chart)
         {
-            chart.xAxis[0].crosshair = chart.xAxis[0].crosshair ? null : crossHair_highchartsConf;
-            chart.yAxis[0].crosshair = chart.yAxis[0].crosshair ? null : crossHair_highchartsConf;
+            chart.xAxis[0].crosshair = chart.xAxis[0].crosshair ? false : crossHair_highchartsConf;
+            chart.yAxis[0].crosshair = chart.yAxis[0].crosshair ? false : crossHair_highchartsConf;
             if (chart.yAxis[0].crosshair)
             {
                 chart.tooltip.options.formatter = null;

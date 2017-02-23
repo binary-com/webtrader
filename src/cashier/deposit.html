@@ -16,6 +16,8 @@
 						rv-on-load='standard_methods.iframe_loaded'></iframe>
 	</div>
 
+	<div class="notice-msg" rv-if="error_text" rv-show="route.value | not-eq 'payment-agents'">{error_text}</div>
+
 	<div class='payment-agents' rv-show='route.value | eq "payment-agents"'>
 		<span class="title">
 			To process deposits and withdrawals for payment methods or local currencies not
