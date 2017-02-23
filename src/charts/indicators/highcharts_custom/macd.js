@@ -130,7 +130,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: histogramData,
                  type: 'column',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
-                 color: this.options.stroke,
+                 color: this.options.macdHstgrmColor,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
                  onChartIndicator: false
@@ -143,7 +143,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: macdData,
                  type: 'line',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
-                 color: this.options.stroke,
+                 color: this.options.macdStroke,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
                  onChartIndicator: false
@@ -156,7 +156,7 @@ MACD.prototype.buildSeriesAndAxisConfFromData = function (indicatorMetadata) {
                  data: signaldata,
                  type: 'line',
                  yAxis: indicatorMetadata.id + '-' + this.uniqueID[0],
-                 color: this.options.stroke,
+                 color: this.options.signalLineStroke,
                  lineWidth: this.options.strokeWidth,
                  dashStyle: this.options.dashStyle,
                  onChartIndicator: false

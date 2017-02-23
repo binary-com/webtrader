@@ -11,6 +11,7 @@ body {
     text-align: right;
     padding: 3px 0;
     height: 23px;
+    min-width: 1025px;
 }
 
 #topbar span.time {
@@ -33,8 +34,16 @@ body {
   top:-3px;
   z-index: 999999;/*should be at the top of other dialogs*/
 }
+
+#nav-menu {
+  min-width: 1025px;
+}
+
+#nav-menu .container {
+  text-align: center;
+}
 .top-nav-menu {
-  margin-left: 10%;
+  margin: 0 auto 0 auto;
 }
 .top-nav-menu li ul {
   z-index: 999999;
@@ -79,12 +88,17 @@ body {
   margin: 15px 0;
 }
 
-#all-accounts-top {
-  margin-top:3px;
-}
+#main-account {
+  top: -2px;
+} 
 
 .main-nav .nav-caret {
   position: absolute;
   top: 30px;
   right: 15px;
+}
+
+.logo-wrapper {
+  float: left;
+  margin-left: 5px;
 }

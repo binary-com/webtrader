@@ -335,7 +335,7 @@ if (!Array.prototype.includes) {
 }
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
-  var _is_beta_ = window.location.href.indexOf('/beta') !== -1;
+  var _is_beta_ = window.location.href.indexOf('/beta') !== -1 || window.location.href.indexOf('localhost') !== -1;
   return function() {
     return _is_beta_;
   };

@@ -46,15 +46,15 @@
 
       <span> Token name </span>
       <input class='token-input'
-             rv-value='token.name' />
+             rv-value='token.name' rv-on-input="token.checkTokenName"/>
       <span class='explanation'>Describe what this token is for to find it later.</span>
 
-      <span> Token permissions <span class='question-mark' rv-tooltip='tooltip'> ? </span> </span>
+      <span> Token permissions</span>
       <div class='token-scopes'>
-        <label> <input type='checkbox' rv-checked='token.scopes.read' /> Read </label>
-        <label> <input type='checkbox' rv-checked='token.scopes.trade' /> Trade </label>
-        <label> <input type='checkbox' rv-checked='token.scopes.payments' /> Payments </label>
-        <label> <input type='checkbox' rv-checked='token.scopes.admin' /> Admin </label>
+        <label data-balloon="Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.read' /> Read </label>
+        <label data-balloon="Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.trade'/> Trade </label>
+        <label data-balloon="Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.payments'/> Payments </label>
+        <label data-balloon="Can be used to open accounts, set settings, manage token usage, and more." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.admin'/> Admin </label>
       </div>
 
       <button

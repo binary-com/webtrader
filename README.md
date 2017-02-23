@@ -11,45 +11,29 @@ The goal of this project is to create a full-screen trading interface for [champ
         $ sudo apt-get install git
         $ git clone https://github.com/ChampionFX/webtrader.git
         $ cd webtrader
-        $ sudo apt-get install node npm
-        $ sudo apt-get install nodejs-legacy
-        $ sudo npm install -g grunt-cli
-        $ sudo npm install -g bower
-        $ npm install
-        $ bower install
+        $ sudo apt-get install node npm nodejs-legacy yarn
+        $ yarn
 
 ####Windows Users
     * Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
     * Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
+    * Download and install yarn from [the official website](https://yarnpkg.com/docs/install/#windows-tab).
     * Open Git Bash and run the following commands:
         $ git clone https://github.com/ChampionFX/webtrader.git
         $ cd webtrader
-        $ npm install -g grunt-cli
-        $ npm install -g bower
-        $ npm install
-        $ bower install
-These will clone the repository, install `grunt-cli` and then resolve all of the dependencies from `package.json` and `bower.json` files.
+        $ yarn
 
 At this point, your project is properly setup.
 
 Run grunt to compile the project
 
-        $ grunt
+        $ yarn build-all
 
 You can now run following command to start a local server
 
-        $ grunt connect:compressed
-        For compressed file serving
-
-        $ grunt connect:uncompressed
-        For uncompressed file serving(this is default, you can just do grunt connect)
+        $ yarn start
 
 Running this command will launch local server at http://localhost:9001
-
-You should always combine the above command with
-
-        $ grunt watch
-This command will help to automatically run grunt task when files are changed under src directory
 
 Since backend needs an https web address for **oauth app register** if you intend to debug oauth login on localhost,  you need to modify your `/etc/hosts` file. For example the `https://webtrader.local/` token in `src/oauth/app_id.josn` is registered to `https://webtrader.local/` address, you need to do the following in order to use it locally.
 
@@ -59,11 +43,11 @@ Since backend needs an https web address for **oauth app register** if you inten
 
 *Use this command to run your local server on https.*
 
-        $ sudo grunt connect:https
+        $ sudo node_modules/.bin/grunt connect:https
 
 *Use this command to watch the files.*
 
-        $ grunt && grunt watch:https
+        $ node_modules/.bin/grunt && node_modules/.bin/grunt watch:https
 
 Go to https://webtrader.local:35729 and accept the self signed ssl certificate for grunt livereload.
 
@@ -71,19 +55,19 @@ Now you can debug your app on https://webtrader.local/ locally.
 
 In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
 
-        $ grunt sloc
+        $ yarn sloc
 
 To bump release version, run
 
-        $ grunt bump:major
+        $ yarn major-rel
         or
-        $ grunt bump:minor
+        $ yarn minor-rel
         or
-        $ grunt bump:patch
+        $ yarn patch-rel
 
-Every checkin or merge into master will trigger travis-ci build and do a release to production.
+Every check-in or merge into master will trigger travis-ci build and do a release to production.
 
-Every checkin or merge of PR into development will trigger travis-ci build and do a beta release
+Every check-in or merge of PR into development will trigger travis-ci build and do a beta release
 
 ####Translation-related command
 

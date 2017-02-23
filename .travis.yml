@@ -1,23 +1,22 @@
 git:
  depth: 1
+cache: yarn
 matrix:
   fast_finish: true
 language: node_js
+node_js:
+  - "6"
 notifications:
   email:
   - ashkan@binary.com
 branches:
   only:
-  - master
-  - development
+    - master
+    - development
 script:
-- npm install -g grunt-cli
-- npm install -g bower
-- npm install
-- bower install
-- git config --global user.email "ashkan@binary.com"
-- git config --global user.name "ashkan nemati"
-- grunt default if:live if:beta
+  - git config --global user.email "arnab@binary.com"
+  - git config --global user.name "Arnab Karmakar"
+  - yarn deploy-gh-pages
 env:
   global:
     secure: "aUqb70r21T/uOeUPhTBZTXhwKDnbBrMUuM4YBF+nFIgYJ8plTleKoptzHgQBa59xJnMlA7c/SF1D6T9b9S4xTSNc+BQ9bYvGMmjPxVx9wHqa/AfvKL0PR5SF1FSTi0AWRwr532UYGSmhj/kpamisuysEFPyunvZjc1V1rmVWWyI7MTEUKWOt4sVvdrzKHFLwilFngwhvfxSgWF2mb3vfB6CNxxmg5oMz5+cS8+108gu3EekI5Ql2jI724afaB4Jji3ASxGnKSmNxV9DFrgFMwkyckK/8VhW/WKRFW1yENRjPZ/xacGVHlCtZiGIyd/jQemdgoQXNi471/pa4BmLWCq2OaVDEoi9OtAG8L/aYJy7CTrKcZ4voA1jo3A6Gsso8IHtxtRtwKzAuk/kr92VG6WCD0pwkDSx8CMpYY8rRmIiz72ZOrn6HjnQY0HSP4TgFz42jc0WXM/tXf9xwWrzJzBYov6GsmNO6yYFblE4mjb5N+yOF0+wrh3MN01vFV/zNjWNgFNRqSpABCqN0BknL3eRKNnSgq+UNlBRJ2tFF8U+TXlvbiBvzuol4Dxux0bItZPnSIR34ruThpmV8UseB2Mp2wd/mnBjaN2EtGSDu8jroWtIHrLpajsaygsFykZjQUkmIm2QSmKJqzUjOPzZhiXWZx6p2t820ex7k2iHYzW8="

@@ -14,23 +14,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.9-dev\n"
 
-msgid "%D MA Type"
-msgstr "Tipo %D MA"
+msgid ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
+msgstr ""
 
-msgid "%D Period"
-msgstr "Período %D"
+msgid ""
+"'Asian Fall' - You win when the last tick is lower than the average of the "
+"ticks during the trade"
+msgstr ""
 
-msgid "%D Stroke"
-msgstr "%D Stroke"
+msgid ""
+"'Asian Rise' - You win when the last tick is higher than the average of the "
+"ticks during the trade"
+msgstr ""
 
-msgid "%K MA Type"
-msgstr "Tipo %K MA"
+msgid "'Best Customer Communication Firm' award by Investors Chronicle"
+msgstr ""
 
-msgid "%K Period"
-msgstr "Periodo %K"
+msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
+msgstr ""
 
-msgid "%K Stroke"
-msgstr "%K Stroke"
+msgid ""
+"'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
+"Chronicle UK"
+msgstr ""
+
+msgid ""
+"'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
+msgstr ""
+
+msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
+msgstr ""
+
+msgid ""
+"'Differs' - You win when the last digit of the last tick does not match your "
+"prediction"
+msgstr ""
+
+msgid "'Financial Betting Operator of the Year' award by eGaming Review"
+msgstr ""
+
+msgid ""
+"'Matches' - You win when the last digit of the last tick matches your "
+"prediction"
+msgstr ""
+
+msgid "'contract period'"
+msgstr ""
+
+msgid "(One) Touch trades"
+msgstr ""
+
+msgid "(formerly known as"
+msgstr ""
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -38,6 +75,21 @@ msgid ""
 msgstr ""
 "(si menos de un día de duración), o al final de la jornada bursátil (si un "
 "día o más de duración)"
+
+msgid ""
+") goes live, establishing a round-the-clock financial betting service on a "
+"variety of financial indices. Business grows quickly, and we soon become the "
+"market leader in fixed-odds financial betting"
+msgstr ""
+
+msgid ""
+"- Binary.com benchmarks its prices daily against inter-bank derivatives "
+"markets"
+msgstr ""
+
+msgid ""
+"- Binary.com ensures your personal data and transactions are always secure"
+msgstr ""
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -57,8 +109,155 @@ msgstr ""
 "ninguna circunstancia por las transacciones realizadas entre los clientes y "
 "los agentes de pago"
 
-msgid "-DI Stroke"
-msgstr "-DI Stroke"
+msgid ""
+"- Binary.com is the industry pioneer and holds patented pricing technology"
+msgstr ""
+
+msgid ""
+"- Binary.com offers many payment methods, such as credit/debit cards, bank "
+"wires, e-cash and e-wallets"
+msgstr ""
+
+msgid ""
+"- Binary.com quotes a trade and the counter-trade, so you always get "
+"unbiased, transparent prices"
+msgstr ""
+
+msgid ""
+"- binaries are licensed as a betting activity in the UK, so your winnings "
+"are tax-free"
+msgstr ""
+
+msgid "- choose intraday trades from 1 minute to 24 hours"
+msgstr ""
+
+msgid ""
+"- choose the falls trade, lower trade, one-touch trade with a low barrier, "
+"or no-touch trade with a high barrier"
+msgstr ""
+
+msgid ""
+"- choose the no-touch trade, the stays-between trade, or the ends-between "
+"trade"
+msgstr ""
+
+msgid ""
+"- choose the one-touch trade, the goes-outside trade, or the ends outside "
+"trade"
+msgstr ""
+
+msgid ""
+"- choose the rise trade, higher trade, one-touch trade with a high barrier, "
+"or no-touch trade with a low barrier"
+msgstr ""
+
+msgid "- choose timeframes from 10 seconds to 365 days"
+msgstr ""
+
+msgid "- choose trades with durations of up to 365 days"
+msgstr ""
+
+msgid ""
+"- choose trades with high returns and a low probability to win, or with low "
+"returns and a high probability to win"
+msgstr ""
+
+msgid "- currencies, stock indices, and commodities"
+msgstr ""
+
+msgid "- customize your trades to meet your needs"
+msgstr ""
+
+msgid "- dip a toe in the water with $2 or go all out for $50,000"
+msgstr ""
+
+msgid "- from $1 to $50,000"
+msgstr ""
+
+msgid "- from 10 seconds to 365 days"
+msgstr ""
+
+msgid "- get pricing that is normally reserved for big institutional players"
+msgstr ""
+
+msgid ""
+"- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden "
+"fees or commissions"
+msgstr ""
+
+msgid "- open an account in minutes"
+msgstr ""
+
+msgid ""
+"- open, fund, or withdraw from your account within minutes, 24 hours a day"
+msgstr ""
+
+msgid "- predict if the market will end higher or lower than a price target"
+msgstr ""
+
+msgid "- predict if the market will rise or fall from its current level"
+msgstr ""
+
+msgid ""
+"- predict if the market will stay inside two price targets, or end between "
+"or outside them"
+msgstr ""
+
+msgid "- predict if the market will touch or not touch a price target"
+msgstr ""
+
+msgid "- sell your long-term trades at market prices before they expire"
+msgstr ""
+
+msgid ""
+"- set your trades on 'gut feel', or use technical or fundamental analysis"
+msgstr ""
+
+msgid "- start trading with as little as $5"
+msgstr ""
+
+msgid "- trade 24/7, even on weekends"
+msgstr ""
+
+msgid "- trade Binary.com's own volatility indices, 24/7"
+msgstr ""
+
+msgid "- trade Binary.com's proprietary volatility indices"
+msgstr ""
+
+msgid "- trade all major FX pairs"
+msgstr ""
+
+msgid "- trade all major FX pairs, around the clock"
+msgstr ""
+
+msgid "- trade all major worldwide stock indices"
+msgstr ""
+
+msgid ""
+"- trade currencies, indices and commodities in rising, falling, sideways, "
+"quiet and volatile markets"
+msgstr ""
+
+msgid "- trade major commodities such as gold and oil"
+msgstr ""
+
+msgid "- up/down, touch/no-touch, stays in/goes out"
+msgstr ""
+
+msgid "- we challenge you to find better returns on any competing website"
+msgstr ""
+
+msgid "- win the same proportional return on stakes of all values"
+msgstr ""
+
+msgid "- you know from the start what you will win or lose"
+msgstr ""
+
+msgid ""
+"- you will never have margin calls, gap risk, slippage costs, hidden fees or "
+"commissions"
+msgstr ""
 
 msgid "0-1 year"
 msgstr "0-1 año"
@@ -81,6 +280,9 @@ msgstr "1 Minuto"
 msgid "1 Tick"
 msgstr "1 Tick"
 
+msgid "1 million transactions/day"
+msgstr ""
+
 msgid "1-2 years"
 msgstr "1-2 años"
 
@@ -102,6 +304,9 @@ msgstr "15 Minutos"
 msgid "15m"
 msgstr "15m"
 
+msgid "1999"
+msgstr ""
+
 msgid "1d"
 msgstr "1d"
 
@@ -122,6 +327,42 @@ msgstr "2 Horas"
 
 msgid "2 Minutes"
 msgstr "2 Minutos"
+
+msgid "2-way pricing"
+msgstr ""
+
+msgid "2000"
+msgstr ""
+
+msgid "2004"
+msgstr ""
+
+msgid "2007"
+msgstr ""
+
+msgid "2008"
+msgstr ""
+
+msgid "2009"
+msgstr ""
+
+msgid "2011"
+msgstr ""
+
+msgid "2012"
+msgstr ""
+
+msgid "2013"
+msgstr ""
+
+msgid "2014"
+msgstr ""
+
+msgid "2015"
+msgstr ""
+
+msgid "2016"
+msgstr ""
 
 msgid "2h"
 msgstr "2h"
@@ -195,20 +436,199 @@ msgstr "8 Horas"
 msgid "8h"
 msgstr "8h"
 
-msgid "ADX MA Type"
-msgstr "Tipo ADX MA"
+msgid ""
+"A Evening Doji Star consists of a long bullish candle, followed by a Doji "
+"that has gapped above it, then a third bearish candle that closes well "
+"within the body of the first candle and in doing so confirming the reversal. "
+"It is considered a strong bearish price reversal candlestick pattern"
+msgstr ""
 
-msgid "ADX Stroke"
-msgstr "Stroke ADX"
+msgid ""
+"A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
+"and an Exponential Moving Average, only with a longer period applied"
+msgstr ""
+
+msgid ""
+"A Spinning Top Candlestick is a bullish or bearish candlestick with a small "
+"body. The length of the head and tail shadows can vary. Like a Doji "
+"Candlestick it represents a point of indecision with buyers and seller "
+"matched"
+msgstr ""
+
+msgid ""
+"A Stays Between trade pays out if the market stays between (does not touch) "
+"BOTH the high barrier or the low barrier at any time during the period "
+"chosen by a trader. A Goes Outside trade pays out if the market touches "
+"EITHER the high barrier or the low barrier at any time during the period "
+"chosen by a trader"
+msgstr ""
+
+msgid ""
+"A bearish candlestick pattern consisting of three candles that have "
+"demonstrated the following characteristics, the first bar is a large white "
+"candlestick located within an uptrend, the middle bar is a small-bodied "
+"candle (red or white) that closes above the first white bar, the last bar is "
+"a large red candle that opens below the middle candle and closes near the "
+"center of the first bar's body"
+msgstr ""
+
+msgid ""
+"A bearish candlestick pattern that is used to predict the reversal of the "
+"current uptrend. This pattern consists of three consecutive long-bodied "
+"candlesticks that have closed lower than the previous day with each "
+"session's open occurring within the body of the previous candle"
+msgstr ""
+
+msgid ""
+"A bearish counterattack is a long white candle in an uptrend, followed by a "
+"long black candle. Closing prices of both candles are at the same price "
+"level. A bullish counterattack is a long black candle in an downtrend, "
+"followed by a long white candle. Closing prices of both candles are at the "
+"same price level"
+msgstr ""
+
+msgid ""
+"A bearish separating line is a bearish continuation pattern. It is the exact "
+"opposite of the bullish separating line. There are two components to the "
+"bearish separating line: The first day is a green candlestick and the second "
+"day gaps down, opens at the first candlestick's open and closes weakly"
+msgstr ""
+
+msgid ""
+"A binary option is a contract purchased by a trader, which pays a pre-"
+"determined amount if their prediction is correct"
+msgstr ""
+
+msgid ""
+"A binary option is an option with a fixed payout that is determined at the "
+"start of the trade. If your prediction is correct, you receive an agreed "
+"payout. If not, you lose your initial stake, and no more. The options are "
+"called 'binary' because there can be only two outcomes - win or lose"
+msgstr ""
+
+msgid ""
+"A bullish candlestick pattern that consists of five candles, the first day "
+"is a long white day, the second day gaps up and is a black day, the second, "
+"third, and fourth days have small real bodies and follow a brief downtrend "
+"pattern, but stay within the range of the first day and the fifth day is a "
+"long white day that closes above the close of the first day"
+msgstr ""
+
+msgid ""
+"A bullish candlestick pattern that consists of three candles, the first bar "
+"is a large red candlestick located within a defined downtrend, the second "
+"bar is a small-bodied candle (either red or white) that closes below the "
+"first red bar and the last bar is a large white candle that opens above the "
+"middle candle and closes near the center of the first bar's body"
+msgstr ""
+
+msgid ""
+"A bullish candlestick pattern that consists of three candles, the first bar "
+"is a large red candlestick located within a defined downtrend, the second "
+"bar is a small-bodied candle (either red or white) that closes below the "
+"first red bar., he last bar is a large white candle that opens above the "
+"middle candle and closes near the center of the first bar's body"
+msgstr ""
+
+msgid ""
+"A bullish or bearish candle followed by a doji with with a downward or "
+"uptrend gap"
+msgstr ""
+
+msgid ""
+"A candlestick chart pattern in which a large candlestick is followed by a "
+"smaller candlestick whose body is located within the vertical range of the "
+"larger body. In terms of candlestick colors, the bullish harami is a "
+"downtrend of negative-colored (black) candlesticks engulfing a small "
+"positive (white) candlestick, giving a sign of a reversal of the downward "
+"trend"
+msgstr ""
+
+msgid ""
+"A candlestick with a long black body (long line) represents a bearish force "
+"in the market. The price of the stock was up and down in a wide range, "
+"opening near the high and closing near the low of the day. One with a long "
+"white line represents a bullish force in the market. The price of the stock "
+"was up and down in a wide range, opening near the low of the day and closing "
+"near the high"
+msgstr ""
+
+msgid ""
+"A candlestick with very long upper and lower shadows and a small real body "
+"on a Japanese candlestick chart. It shows that the market is losing its "
+"direction bias that it had before this candle appeared"
+msgstr ""
+
+msgid ""
+"A chart pattern that consists of a small white candlestick with short "
+"shadows or tails followed by a large black candlestick that eclipses or "
+"'engulfs' the small white one"
+msgstr ""
+
+msgid ""
+"A derivative is a financial instrument whose value is determined by "
+"reference to an underlying market. Derivatives are commonly traded in the "
+"inter-bank market, and binaries are one of the simplest forms of derivatives"
+msgstr ""
+
+msgid ""
+"A medium to long bullish or bearish candlestick with the key defining trait "
+"being no head or tail shadows"
+msgstr ""
+
+msgid ""
+"A panel featuring industry leaders awards BetOnMarkets.com 'Financial "
+"Betting Operator of the Year' over two other finalists. It's a major victory "
+"for our brand and further recognition of our world-beating service. Ten "
+"years on, and going from strength to strength"
+msgstr ""
+
+msgid ""
+"A technical indicator invented by Larry Williams that uses the weighted "
+"average of three different time periods to reduce the volatility and false "
+"transaction signals that are associated with many other indicators that "
+"mainly rely on a single time period"
+msgstr ""
+
+msgid ""
+"A technical momentum indicator that compares a security's closing price to "
+"its price range over a given time period. The oscillator's sensitivity to "
+"market movements can be reduced by adjusting the time period or by taking a "
+"moving average of the result"
+msgstr ""
+
+msgid ""
+"A technical trading pattern in which three candlesticks form what appears to "
+"be a sandwich on the trader's screen. Stick sandwiches will have the middle "
+"candlestick oppositely colored of the candlesticks on either side of it, "
+"both of which will have a larger trading range than the middle candlestick. "
+"Stick sandwich patterns can occur in both bearish and bullish indications"
+msgstr ""
+
+msgid ""
+"A tick is the minimum upward or downward movement in the price of a market"
+msgstr ""
+
+msgid ""
+"A trend indicated by a large candlestick followed by a doji that is located "
+"within the top and bottom of the candlestick's body. This indicates that the "
+"previous trend is about to reverse"
+msgstr ""
+
+msgid ""
+"A white candle in an upward price trend followed by a doji whose lower "
+"shadow remains above the prior candle's high. The third day is a black "
+"candle with an upper shadow below the doji's low"
+msgstr ""
 
 msgid "AM"
 msgstr ""
 
-msgid "ATR Period"
-msgstr "Período ATR"
+msgid "Abandoned Baby (CDLABANDONEDBABY)"
+msgstr ""
 
-msgid "Acceleration"
-msgstr "Aceleración"
+msgid "Absolute Price Oscillator (APO)"
+msgstr ""
 
 msgid "Accept"
 msgstr "Aceptar"
@@ -216,17 +636,14 @@ msgstr "Aceptar"
 msgid "Account balance"
 msgstr "Saldo de la cuenta"
 
-msgid "Account id not found"
-msgstr "ID de cuenta no encontrado"
-
 msgid "Account opening"
 msgstr "Apertura de cuenta"
 
-msgid "Account token not found"
-msgstr "Token de la cuenta no encontrado"
-
 msgid "Action"
 msgstr "Acción"
+
+msgid "Add"
+msgstr ""
 
 msgid "Add comparisons"
 msgstr "Añadir comparaciones"
@@ -250,6 +667,24 @@ msgstr "Añadir/quitar superposiciones"
 msgid "Admin"
 msgstr "Admin"
 
+msgid "Advance Block (CDLADVANCEBLOCK)"
+msgstr ""
+
+msgid "All durations"
+msgstr ""
+
+msgid "All market conditions"
+msgstr ""
+
+msgid "All markets"
+msgstr ""
+
+msgid "All markets, all conditions"
+msgstr ""
+
+msgid "All payouts"
+msgstr ""
+
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todas las horas están en GMT (Greenwich Mean Time)"
 
@@ -262,11 +697,22 @@ msgstr "Cantidad Por Punto"
 msgid "Amount per point"
 msgstr "Cantidad por punto"
 
+msgid ""
+"An Ends Between trade pays out if the market exit price is strictly higher "
+"than the low price target AND strictly lower than the high price target. An "
+"Ends Outside binary pays out if the market exit price is EITHER strictly "
+"higher than the high price target OR strictly lower than the low price target"
+msgstr ""
+
+msgid ""
+"Another major award. This time we're nominated by the online readers of "
+"Global Banking and Finance Review and judged by a panel of industry experts "
+"and analysts who recognise our 13 years of platform reliability, range of "
+"trades, pricing, customer service and extensive knowledge"
+msgstr ""
+
 msgid "Answer"
 msgstr "Respuesta"
-
-msgid "Applied to"
-msgstr "Aplicado a"
 
 msgid "Apply"
 msgstr "Aplicar"
@@ -286,11 +732,14 @@ msgstr "Abril"
 msgid "Are you sure you want to delete this token?"
 msgstr "¿Está seguro de que desea eliminar este token?"
 
-msgid "Aroon Down Stroke"
-msgstr "Aroon Down Stroke"
+msgid "Arnaud Legoux Moving Average (ALMA)"
+msgstr ""
 
-msgid "Aroon Up Stroke"
-msgstr "Aroon Up Stroke"
+msgid "Aroon (AROON)"
+msgstr ""
+
+msgid "Aroon Oscillator (AROONOSC)"
+msgstr ""
 
 msgid "Asian down"
 msgstr ""
@@ -316,14 +765,38 @@ msgstr "Agosto"
 msgid "Average"
 msgstr "Promedio"
 
+msgid "Average Directional Movement Index (ADX)"
+msgstr ""
+
+msgid "Average Directional Movement Index Rating (ADXR)"
+msgstr ""
+
+msgid ""
+"Average Directional Movement Rating quantifies momentum change in the ADX. "
+"It is calculated by adding two values of ADX (the current value and a value "
+"n periods back), then dividing by two"
+msgstr ""
+
+msgid "Average True Range (ATR)"
+msgstr ""
+
+msgid "Awesome Oscillator (AO)"
+msgstr ""
+
 msgid "Back"
 msgstr "Atrás"
 
 msgid "Back to list"
 msgstr "Volver a la lista"
 
-msgid "Background Color"
-msgstr "Color de Fondo"
+msgid "Balance of Power (BOP)"
+msgstr ""
+
+msgid ""
+"Banks, hedge funds and professional investors routinely trade binary options "
+"in over-the-counter derivatives markets. Many market professionals use and "
+"trust the Binary.com platform for high-volume flexible trades"
+msgstr ""
 
 msgid "Barrier"
 msgstr "Barrera"
@@ -331,8 +804,105 @@ msgstr "Barrera"
 msgid "Barrier offset"
 msgstr "Desplazamiento de la barrera"
 
+msgid "Barrier(s)"
+msgstr ""
+
+msgid ""
+"Bearish: This is an end-of-trend pattern composed of three candlesticks in "
+"an uptrend. The second candlestick must open close to the close of the "
+"previous day. The last candlestick should be short and can form an upside "
+"gap. There could also be a selling shadow.The pattern represents a weakness "
+"in a rise with a risk of consolidation and possible reversal. Bullish: This "
+"is an end-of-trend pattern composed of three candlesticks in a downtrend. "
+"The second candlestick must open close to the close of the previous day. the "
+"last candlestick must be shore. The pattern represents a weakness and "
+"consolidation and a possible reversal in trend"
+msgstr ""
+
+msgid "Belt-hold (CDLBELTHOLD)"
+msgstr ""
+
+msgid "Benchmarked prices"
+msgstr ""
+
+msgid "Benefits of binary trading"
+msgstr ""
+
+msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
+msgstr ""
+
+msgid "BetOnMarkets goes live"
+msgstr ""
+
+msgid ""
+"BetOnMarkets.com has over 400,000 clients in its database and reach the US$ "
+"1 billion milestone in only our 13th year, making us one of the leading "
+"fixed-odds trading providers"
+msgstr ""
+
+msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
+msgstr ""
+
+msgid "BetOnMarkets.com is successfully rebranded Binary.com"
+msgstr ""
+
+msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
+msgstr ""
+
+msgid "Betonmarkets.com"
+msgstr ""
+
+msgid "Bill Williams"
+msgstr ""
+
+msgid "Binary Bot released"
+msgstr ""
+
+msgid "Binary KK granted Japan license"
+msgstr ""
+
+msgid "Binary Trading is simple to learn and to execute"
+msgstr ""
+
+msgid "Binary granted Investment Services license"
+msgstr ""
+
+msgid "Binary opens Japan office"
+msgstr ""
+
+msgid "Binary option"
+msgstr ""
+
 msgid "Binary options or other financial derivatives"
 msgstr "Opciones binarias u otros derivados financieros"
+
+msgid "Binary trading is flexible"
+msgstr ""
+
+msgid "Binary trading is ideal for both individuals and market professionals"
+msgstr ""
+
+msgid "Binary trading is very simple"
+msgstr ""
+
+msgid ""
+"Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 "
+"Financial Instruments Business in Japan"
+msgstr ""
+
+msgid ""
+"Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts "
+"the process of applying for relevant licenses"
+msgstr ""
+
+msgid ""
+"Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a "
+"Category 3 Investment Services license by the Malta Financial Services "
+"Authority"
+msgstr ""
+
+msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
+msgstr ""
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -340,8 +910,125 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
-msgid "Blank window"
-msgstr "Ventana en blanco"
+msgid "Binary.com Shop introduced"
+msgstr ""
+
+msgid "Binary.com continues to innovate and grow"
+msgstr ""
+
+msgid ""
+"Binary.com has earned an enviable reputation for our commitment to high "
+"ethical standards and the quality of the trading experience we provide"
+msgstr ""
+
+msgid ""
+"Binary.com has over 800,000 clients in its database and reaches the US$ 2 "
+"billion milestone in our 15th year, making us one of the leading binary "
+"options providers"
+msgstr ""
+
+msgid ""
+"Binary.com has thousands of clients taking a variety of positions on the "
+"financial markets at any one time, and earns a small margin on these trades"
+msgstr ""
+
+msgid ""
+"Binary.com hits 1 million users, reaching a historic milestone. The company "
+"continues to see exponential growth and this reconfirms its position as an "
+"industry leader"
+msgstr ""
+
+msgid "Binary.com introduces an"
+msgstr ""
+
+msgid "Binary.com is entirely web-based and requires no software installation"
+msgstr ""
+
+msgid ""
+"Binary.com is honoured as the world's \"Best Binary Options Broker\" at the "
+"16th annual MENA International Financial Conference and Exhibition, hosted "
+"in Dubai"
+msgstr ""
+
+msgid ""
+"Binary.com is one of the oldest and most respected names in online binary "
+"trading"
+msgstr ""
+
+msgid ""
+"Binary.com is owned and operated by the Binary Ltd. group of companies. For "
+"more information, visit our history page"
+msgstr ""
+
+msgid "Binary.com is tailored to traders of all levels"
+msgstr ""
+
+msgid "Binary.com launches an"
+msgstr ""
+
+msgid ""
+"Binary.com offers a range of common deposit and withdrawal methods, from "
+"credit and debit cards to bank wires, e-cash and e-wallets"
+msgstr ""
+
+msgid ""
+"Binary.com offers a virtual-money account so you can get the hang of trading "
+"binaries. Why not open a free $10k fully-functional virtual-money account, "
+"and start learning how to trade"
+msgstr ""
+
+msgid "Binary.com offers new ways to trade"
+msgstr ""
+
+msgid ""
+"Binary.com opens an office in the QSentral office building in central Kuala "
+"Lumpur to further expand its IT development team"
+msgstr ""
+
+msgid ""
+"Binary.com prices are benchmarked against the interbank options market, so "
+"you always get best-in-class prices for your trades"
+msgstr ""
+
+msgid "Binary.com reaches $2 billion turnover since starting in 1999"
+msgstr ""
+
+msgid "Binary.com reaches 1 million registered users"
+msgstr ""
+
+msgid ""
+"Binary.com takes home first prize in the Financial Betting Operator category "
+"at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
+msgstr ""
+
+msgid ""
+"Binary.com's Spread Contracts are leveraged derivative contracts, the value "
+"of which is directly tied to the underlying market movements. Clients who "
+"'Long' a rising market (and those who 'Short' a falling market) profit from "
+"those movements with much less investment than would be required in the live "
+"market"
+msgstr ""
+
+msgid ""
+"Binary.com's Spread Contracts require a 'stop loss' which limits the maximum "
+"losses incurred by a client. This 'stop loss' amount will act as a deposit "
+"and may not be used for further trading until that Spread Contract is "
+"closed. Spread Contracts are closed when sold by the client, upon hitting "
+"the 'stop loss' or 'stop profit' level"
+msgstr ""
+
+msgid ""
+"Binary.com's systems are now processing in excess of 1 million transactions/"
+"day (including virtual accounts)"
+msgstr ""
+
+msgid "Bollinger Bands (BBANDS)"
+msgstr ""
+
+msgid ""
+"Bollinger Bands can be used to measure the highness or lowness of the price "
+"relative to previous trades"
+msgstr ""
 
 msgid "Bought"
 msgstr "Comprado"
@@ -349,8 +1036,16 @@ msgstr "Comprado"
 msgid "Brand of first car"
 msgstr "Marca del primer coche"
 
+msgid "Breakaway (CDLBREAKAWAY)"
+msgstr ""
+
 msgid "Browser upgrade required"
 msgstr "Actualización del navegador requerida"
+
+msgid ""
+"But there's no need to wait until expiry. You can sell back long-term trades "
+"at any time to profit from changing market conditions"
+msgstr ""
 
 msgid "Buy Price"
 msgstr "Precio de Compra"
@@ -372,6 +1067,25 @@ msgstr "CERRAR"
 msgid "CSV"
 msgstr "CSV"
 
+msgid ""
+"Can be used to buy and sell contracts, renew expired purchases, and top-up "
+"virtual-money accounts."
+msgstr ""
+
+msgid ""
+"Can be used to open accounts, set settings, manage token usage, and more."
+msgstr ""
+
+msgid ""
+"Can be used to view account activity, including settings, limits, balance "
+"sheets, trade purchase history, and more."
+msgstr ""
+
+msgid ""
+"Can be used to withdraw to payment agents, transfer funds between accounts, "
+"and set / clear cashier passwords."
+msgstr ""
+
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -392,6 +1106,12 @@ msgstr "Gráfico de velas línea hacia arriba"
 
 msgid "Cash Balance"
 msgstr "Saldo de efectivo"
+
+msgid "Chande Kroll Stop (CKS)"
+msgstr ""
+
+msgid "Chande Momentum Oscillator (CMO)"
+msgstr ""
 
 msgid "Change Backend Server"
 msgstr "Cambiar el Servidor de back-end"
@@ -417,8 +1137,77 @@ msgstr "Plantilla del gráfico"
 msgid "Chart type"
 msgstr "Tipo de gráfico"
 
+msgid ""
+"Choose Asian Rise/Fall when you want to profit from the market ending higher "
+"or lower than the average price"
+msgstr ""
+
+msgid ""
+"Choose Ends In/Out to profit from the market stopping inside or outside two "
+"price targets at the end of the time period"
+msgstr ""
+
+msgid ""
+"Choose Higher/Lower when you want to profit from the market ending higher or "
+"lower than a price target"
+msgstr ""
+
+msgid ""
+"Choose Rise/Fall when you want to profit from the market rising or falling "
+"from its current level"
+msgstr ""
+
+msgid ""
+"Choose Stays In/Out to profit from the market staying inside or going "
+"outside two price targets any time during the contract period"
+msgstr ""
+
+msgid ""
+"Choose Touch / No Touch when you want to profit from the market touching or "
+"not touching a target any time during the contract period"
+msgstr ""
+
+msgid "Choose a trade type"
+msgstr ""
+
+msgid ""
+"Choose digit if you want to profit from predicting the last decimal digit of "
+"the spot"
+msgstr ""
+
+msgid "Choose from over 1 million trades"
+msgstr ""
+
+msgid "Choose from over a million possible trades at any time"
+msgstr ""
+
 msgid "Choose password"
 msgstr "Elegir contraseña"
+
+msgid "Choose the barrier(s)"
+msgstr ""
+
+msgid "Choose the duration"
+msgstr ""
+
+msgid ""
+"Choose the market, the price target, the time period, and how much you wish "
+"to win"
+msgstr ""
+
+msgid ""
+"Choose the market, the price targets, the time period, and how much you wish "
+"to win"
+msgstr ""
+
+msgid "Choose the market, the time period, and how much you wish to win"
+msgstr ""
+
+msgid "Choose the payout"
+msgstr ""
+
+msgid "Choose the underlying market"
+msgstr ""
 
 msgid "Choose your pereferred payment agent"
 msgstr "Seleccione su agente de pago preferido"
@@ -426,11 +1215,11 @@ msgstr "Seleccione su agente de pago preferido"
 msgid "Choose your pereferred withdrawal method"
 msgstr "Seleccione el método de retirada preferido"
 
+msgid "Choppiness Index (CHOP)"
+msgstr ""
+
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Clear"
-msgstr ""
 
 msgid "Click Jacking test"
 msgstr "Prueba Click Jacking"
@@ -447,11 +1236,25 @@ msgstr "Cerrar todo"
 msgid "Closes"
 msgstr "Cierra"
 
+msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
+msgstr ""
+
+msgid "Commodities"
+msgstr ""
+
+msgid ""
+"Commodities are resources that are grown or extracted from the ground, such "
+"as silver, gold and oil. On Binary.com, they are priced in US dollars"
+msgstr ""
+
 msgid "Commodities trading experience"
 msgstr "Experiencia de comerciar con materias primas"
 
 msgid "Commodities trading frequency"
 msgstr "Frecuencia de comerciar con materias primas"
+
+msgid "Commodity Channel Index (CCI)"
+msgstr ""
 
 msgid "Comparisons"
 msgstr "Comparaciones"
@@ -464,12 +1267,6 @@ msgstr "Configuración cambiada con exito"
 
 msgid "Confirm transfer"
 msgstr "Confirmar la transferencia"
-
-msgid "Connection closed"
-msgstr "Conexión cerrada"
-
-msgid "Connection error"
-msgstr "Error de conexión"
 
 msgid "Construction"
 msgstr "Construcción"
@@ -489,14 +1286,17 @@ msgstr "Contrato"
 msgid "Contract Confirmation"
 msgstr "Confirmación del Contrato"
 
-msgid "Contract Details"
-msgstr "Detalles del contrato"
-
-msgid "Contract is not yet started"
-msgstr "El contrato no ha comenzado todavía"
+msgid "Contract period"
+msgstr ""
 
 msgid "Contracts"
 msgstr "Contratos"
+
+msgid "Coppock Curve (CC)"
+msgstr ""
+
+msgid "Counterattack (CDLCOUNTERATTACK)"
+msgstr ""
 
 msgid "Country of residence"
 msgstr "País de residencia"
@@ -512,6 +1312,9 @@ msgstr "Crédito/Débito"
 
 msgid "Crosshair"
 msgstr "Punto de mira"
+
+msgid "Currencies"
+msgstr ""
 
 msgid "Current Level"
 msgstr "Nivel Actual"
@@ -543,12 +1346,6 @@ msgstr "Tema personalizado"
 msgid "Customize chart appearance"
 msgstr "Personalizar la apariencia del gráfico"
 
-msgid "DI Stroke"
-msgstr "DI Stroke"
-
-msgid "DX MA Type"
-msgstr "Tipo DX MA"
-
 msgid "Daily limit on losses"
 msgstr "Límite diario de pérdidas"
 
@@ -557,6 +1354,17 @@ msgstr "Límite diario de ventas"
 
 msgid "Dark Blue"
 msgstr "Azul Oscuro"
+
+msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
+msgstr ""
+
+msgid ""
+"Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when "
+"a red bearish candlestick (close price below open price) on day 2 closes "
+"below the middle of day 1 bullish candlestick (close price above open "
+"price). We will be using this pattern to sell rallies in a bearish currency "
+"market"
+msgstr ""
 
 msgid "Dark Green"
 msgstr "Verde Oscuro"
@@ -576,6 +1384,9 @@ msgstr "Fecha de nacimiento"
 msgid "Days"
 msgstr "Días"
 
+msgid "Debt-free"
+msgstr ""
+
 msgid "Dec"
 msgstr "Dic"
 
@@ -588,11 +1399,11 @@ msgstr "Disminución"
 msgid "Default"
 msgstr "Predeterminado"
 
+msgid "Define your position"
+msgstr ""
+
 msgid "Delete"
 msgstr "Eliminar"
-
-msgid "Delete level(s)"
-msgstr "Borrar nivel(es)"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
@@ -606,6 +1417,12 @@ msgstr "Depositar fondos"
 msgid "Deposit of USD"
 msgstr "Depósito de USD"
 
+msgid "Depositing and withdrawing funds"
+msgstr ""
+
+msgid "Derivative"
+msgstr ""
+
 msgid "Describe what this token is for to find it later"
 msgstr "Describir para qué es este token para encontrarlo más tarde"
 
@@ -615,19 +1432,76 @@ msgstr "Descripción"
 msgid "Deselect"
 msgstr ""
 
+msgid ""
+"Developed by Donald Dorsey, the Mass Index uses the high-low range to "
+"identify trend reversals based on range expansions. In this sense, the Mass "
+"Index is a volatility indicator that does not have a directional bias. "
+"Instead, the Mass Index identifies range bulges that can foreshadow a "
+"reversal of the current trend"
+msgstr ""
+
+msgid ""
+"Developed by Larry Williams, Williams %R is a momentum indicator that is the "
+"inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams "
+"%R reflects the level of the close relative to the highest high for the look-"
+"back period"
+msgstr ""
+
+msgid ""
+"Developed by Tushar Chande in 1995, Aroon is an indicator system that "
+"determines whether a stock is trending or not and how strong the trend is. "
+"There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-"
+"Up measures the number of days since a 25-day high. A 25-day Aroon-Down "
+"measures the number of days since a 25-day low"
+msgstr ""
+
 msgid "Differs"
 msgstr ""
 
 msgid "Digits"
 msgstr "Dígitos"
 
+msgid ""
+"Directional Movement (DMI) is actually a collection of three separate "
+"indicators combined into one. Directional Movement consists of the Average "
+"Directional Index (ADX), Plus Directional Indicator (+DI) and Minus "
+"Directional Indicator (-DI)"
+msgstr ""
+
+msgid "Directional Movement Index (DX)"
+msgstr ""
+
+msgid "Do I need to deposit any funds to open an account?"
+msgstr ""
+
+msgid "Do I need to send any documents?"
+msgstr ""
+
+msgid "Do you offer virtual-money accounts?"
+msgstr ""
+
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "¿Quiere instalar la extensión Webtrader de chrome?"
+
+msgid "Doji (CDLDOJI)"
+msgstr ""
+
+msgid "Doji Star (CDLDOJISTAR)"
+msgstr ""
+
+msgid ""
+"Doji form when a security's open and close are virtually equal. The length "
+"of the upper and lower shadows can vary and the resulting candlestick looks "
+"like a cross, inverted cross or plus sign"
+msgstr ""
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 "¿Todavía no tiene una cuenta? Regístrese y obtenga una cuenta virtual de "
 "$10.000"
+
+msgid "Donchian Channel (DC)"
+msgstr ""
 
 msgid "Done"
 msgstr ""
@@ -641,11 +1515,8 @@ msgstr "Hecho. Los fondos se han transferido"
 msgid "Dot"
 msgstr "Punto"
 
-msgid "Double MA Period"
-msgstr "Periodo MA Doble"
-
-msgid "Double MA Type"
-msgstr "MA de Tipo Doble"
+msgid "Double Exponential Moving Average (DEMA)"
+msgstr ""
 
 msgid "Double click the object to remove"
 msgstr "Haga doble clic en el objeto para quitar"
@@ -681,16 +1552,32 @@ msgstr "Descargar como"
 msgid "Downloading .csv"
 msgstr "Descargando .csv"
 
+msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
+msgstr ""
+
 msgid "Drawing tools"
 msgstr "Herramientas para dibujar"
 
 msgid "Duration"
 msgstr "Duración"
 
+msgid "EGR Operator Award"
+msgstr ""
+
 msgid "EMA"
 msgstr "EMA"
 
 msgid "EURUSD"
+msgstr ""
+
+msgid ""
+"Each binary option is a prediction on the future movement of an underlying "
+"market"
+msgstr ""
+
+msgid ""
+"Each binary trade is for a pre-determined payout amount. You win the payout "
+"if your prediction is correct"
 msgstr ""
 
 msgid "Edge"
@@ -711,6 +1598,9 @@ msgstr "Incrustar código"
 msgid "End Time"
 msgstr "Hora de finalización"
 
+msgid "Ends Between/Ends Outside trades"
+msgstr ""
+
 msgid "Ends In/Out"
 msgstr "Termina Dentro/Fuera"
 
@@ -718,6 +1608,9 @@ msgid "Ends in"
 msgstr ""
 
 msgid "Ends out"
+msgstr ""
+
+msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
@@ -732,20 +1625,28 @@ msgstr "Punto de Entrada"
 msgid "Entry spot"
 msgstr "Punto de entrada"
 
+msgid "Entry spot price"
+msgstr ""
+
 msgid "Error downloading .csv"
 msgstr "Error al descargar .csv"
 
 msgid "Error getting data for %1"
 msgstr ""
 
-#, fuzzy
-msgid "Error getting market information!"
-msgstr "Error al obtener datos para"
-
 msgid "Estimated Net Worth"
 msgstr "Valor Neto Estimado"
 
 msgid "Even"
+msgstr ""
+
+msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
+msgstr ""
+
+msgid "Evening Star (CDLEVENINGSTAR)"
+msgstr ""
+
+msgid "Example"
 msgstr ""
 
 msgid "Exclude me from the website until"
@@ -757,8 +1658,14 @@ msgstr "Punto de Salida"
 msgid "Exit spot"
 msgstr "Punto de salida"
 
+msgid "Expiry price"
+msgstr ""
+
 msgid "Explanation"
 msgstr "Explicación"
+
+msgid "Exponential Moving Average (EMA)"
+msgstr ""
 
 msgid "Failed to update the password"
 msgstr "No se pudo actualizar la contraseña"
@@ -766,23 +1673,11 @@ msgstr "No se pudo actualizar la contraseña"
 msgid "Fall"
 msgstr "Baja"
 
+msgid "Falling markets"
+msgstr ""
+
 msgid "Family name"
 msgstr "Apellido"
-
-msgid "Fast %K MA Type"
-msgstr "%K Tipo MA Rápido"
-
-msgid "Fast %K Period"
-msgstr "Periodo %K Rápido"
-
-msgid "Fast Limit"
-msgstr "Límite Rápido"
-
-msgid "Fast MA Type"
-msgstr "Tipo MA Rápido"
-
-msgid "Fast Period"
-msgstr "Período Rápido"
 
 msgid "Favorites"
 msgstr "Favoritos"
@@ -799,6 +1694,14 @@ msgstr "Feb"
 msgid "February"
 msgstr "Febrero"
 
+msgid ""
+"Fifteen years on, and we're still innovating, growing and working on new "
+"ways to serve our customers better. For the first time, we offer short-term "
+"touch/no-touch trades and introduce a new charting application. We believe "
+"we have the most competitive and comprehensive digital options platform "
+"available to the retail public"
+msgstr ""
+
 msgid "Final Price"
 msgstr "Precio Final"
 
@@ -812,8 +1715,14 @@ msgstr "Finanzas"
 msgid "Financial Account Opening form"
 msgstr "Apertura de cuenta real"
 
+msgid "Financial Security"
+msgstr ""
+
 msgid "Financial information"
 msgstr "Información financiera"
+
+msgid "Financial rewards"
+msgstr ""
 
 msgid "Firefox"
 msgstr "Firefox"
@@ -821,11 +1730,41 @@ msgstr "Firefox"
 msgid "First name"
 msgstr "Nombre"
 
+msgid ""
+"First, you need to set the parameters of your trade. Here's what you need to "
+"consider"
+msgstr ""
+
+msgid "Flexibility"
+msgstr ""
+
+msgid ""
+"For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds "
+"Financial Trading Provider' by Shares Magazine UK. It's the last time we win "
+"it because Shares Magazine stops awarding in this category"
+msgstr ""
+
+msgid "Forex"
+msgstr ""
+
 msgid "Forex trading experience"
 msgstr "Experiencia de comercio con Forex"
 
 msgid "Forex trading frequency"
 msgstr "Frecuencia de comercio con Forex"
+
+msgid "Founded October 1999"
+msgstr ""
+
+msgid "Fractal (FRACTAL)"
+msgstr ""
+
+msgid ""
+"Fractals are indicators on candlestick charts that identify reversal points "
+"in the market. Traders often use fractals to get an idea about the direction "
+"in which the price will develop. A fractal will form when a particular price "
+"pattern happens on a chart"
+msgstr ""
 
 msgid "Fri"
 msgstr "Vie"
@@ -839,7 +1778,22 @@ msgstr "De"
 msgid "Further instructions"
 msgstr "Otras instrucciones"
 
+msgid "GMT"
+msgstr ""
+
+msgid ""
+"GMT stands for Greenwich Mean Time, the official time used in the UK during "
+"winter. In summer, the UK changes to British Summer Time, which is GMT + 1 "
+"hour. All times on the Binary.com site use GMT all year round"
+msgstr ""
+
+msgid "Get your price"
+msgstr ""
+
 msgid "Goes out"
+msgstr ""
+
+msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
 msgstr ""
 
 msgid "Gray"
@@ -851,8 +1805,23 @@ msgstr "Rejilla"
 msgid "Grid Light"
 msgstr "Luz de la Rejilla"
 
+msgid "Group History"
+msgstr ""
+
 msgid "HIGH"
 msgstr "ALTO"
+
+msgid "Hammer (CDLHAMMER)"
+msgstr ""
+
+msgid "Hanging Man (CDLHANGINGMAN)"
+msgstr ""
+
+msgid "Harami Cross Pattern (CDLHARAMICROSS)"
+msgstr ""
+
+msgid "Harami Pattern (CDLHARAMI)"
+msgstr ""
 
 msgid "Have better luck at trading!"
 msgstr "¡Tenga mejor suerte con el comercio!"
@@ -860,14 +1829,11 @@ msgstr "¡Tenga mejor suerte con el comercio!"
 msgid "Health"
 msgstr "Salud"
 
-msgid "High Barrier"
-msgstr "Barrera Alta"
+msgid "Help"
+msgstr ""
 
 msgid "High Price"
 msgstr "Precio Alto"
-
-msgid "High Stroke"
-msgstr "Stroke Alto"
 
 msgid "High barrier"
 msgstr ""
@@ -875,20 +1841,29 @@ msgstr ""
 msgid "High barrier offset"
 msgstr "Offset del límite alto"
 
+msgid "High returns"
+msgstr ""
+
+msgid "High-Wave Candle (CDLHIGHWAVE)"
+msgstr ""
+
 msgid "Higher"
 msgstr "Más alto"
 
-msgid "Histogram Color"
-msgstr "Color del Histograma"
+msgid "Higher/Lower"
+msgstr ""
 
-msgid "Histogram Color For Higher Values"
-msgstr "Color del Histograma para Valores más Altos"
+msgid "Higher/Lower trades"
+msgstr ""
 
-msgid "Histogram Color For Lower Values"
-msgstr "Color del Histograma para Valores más Bajos"
+msgid "Hikkake Pattern (CDLHIKKAKE)"
+msgstr ""
 
 msgid "Home Address"
 msgstr "Domicilio"
+
+msgid "Homing Pigeon (CDLHOMINGPIGEON)"
+msgstr ""
 
 msgid "Horizontal Line"
 msgstr "Línea horizontal"
@@ -902,8 +1877,29 @@ msgstr ""
 msgid "Hours"
 msgstr "Horas"
 
+msgid "How do I fund my account?"
+msgstr ""
+
+msgid "How does Binary.com make money?"
+msgstr ""
+
+msgid "How safe is my money with Binary.com?"
+msgstr ""
+
+msgid "How soon can I start trading?"
+msgstr ""
+
+msgid "How to trade binaries?"
+msgstr ""
+
+msgid "Hull Moving Average (HMA)"
+msgstr ""
+
 msgid "I have read and agree to Binary.com"
 msgstr "He leído y estoy de acuerdo con"
+
+msgid "I'm new to binaries, where do I start?"
+msgstr ""
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "AVISO IMPORTANTE"
@@ -926,6 +1922,12 @@ msgstr ""
 "será responsable en ninguna circunstancia por las transacciones realizadas "
 "entre los clientes y los agentes de pago"
 
+msgid "Ideal for both pros and novices"
+msgstr ""
+
+msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
+msgstr ""
+
 msgid "If the issue keeps happening, please contact"
 msgstr "Si el problema sigue ocurriendo , póngase en contacto con"
 
@@ -934,6 +1936,80 @@ msgstr "Si selecciona un"
 
 msgid "If you select a specific"
 msgstr "Si  selecciona un"
+
+msgid ""
+"If you're an individual trader, you'll appreciate the simplicity, "
+"flexibility, and limited risk of binary trading. With Binary.com's low "
+"minimum stakes, you'll soon learn how to trade with skill and confidence. "
+"And if you have any questions, you're free to access"
+msgstr ""
+
+msgid "In April"
+msgstr ""
+
+msgid ""
+"In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or "
+"white candlestick forms. The opening price, which becomes the low for the "
+"day, is significantly lower then the closing price. This results in a long "
+"white candlestick with a short upper shadow and no lower shadow. In Berish "
+"Belt Hold, a bearish or black candlestick occurs, the opening price, which "
+"becomes the high for the day, is higher than the close of the previous day, "
+"resulting in a long black candlestick with a short lower shadow and no upper "
+"shadow"
+msgstr ""
+
+msgid ""
+"In Bullish Hikkake Pattern After the downward move, the bullish candle "
+"reaches above the range of the three preceding candles and most likely "
+"triggers a number of stop loss orders. This additional buying leads to a "
+"more distinct upward movement. In Bearish Hikkake Pattern After an upward "
+"move, the bearish candle reaches below the range of the three preceding , "
+"which most likely triggers a number of stop loss orders. This additional "
+"selling leads to a more distinct downward move"
+msgstr ""
+
+msgid ""
+"In October 1999, Regent Markets receives US$ 2 million investment funding "
+"from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund "
+"management company"
+msgstr ""
+
+msgid ""
+"In a downtrend, one small short body candlestick has a long lower shadow at "
+"least three times the real body, and little or no upper shadow. Confirmation "
+"from prices closing higher the next day"
+msgstr ""
+
+msgid ""
+"In a downward price trend, a black candle appears followed by a white candle "
+"that opens below the prior body, but it may be difficult to see that from "
+"the chart. The white candle closes above the body, too. The last day of the "
+"three line candle is another white candle in this example. It shows a higher "
+"close"
+msgstr ""
+
+msgid ""
+"In an uptrend three successive days opens at or near the previous day's "
+"close and close down on the day. This pattern is more severe than the Three "
+"Black Crows pattern and thus has a higher reliability as a reversal pattern"
+msgstr ""
+
+msgid ""
+"In classic Silicon Valley style, Hong Kong based hedge fund manager and "
+"entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong "
+"bedroom. He develops the systems, methods and algorithms for implementing a "
+"fixed-odds financial betting system. Jean-Yves's vision is to create a "
+"market in the simplest of all derivatives contracts - the fixed-odds bet - "
+"and to offer ordinary investors the chance to make small bets. Until his "
+"innovation, binary options are normally only traded in large quantities"
+msgstr ""
+
+msgid ""
+"In foreign exchange markets, traders can enter contracts based on the change "
+"in price of one currency as it relates to another currency. For example if a "
+"trader selects Rise in the EUR/USD market, they are predicting that the "
+"value of the Euro will rise in relation to the value of the US dollar"
+msgstr ""
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -960,14 +2036,24 @@ msgstr ""
 "Con respecto a las opciones binarias, estas entran dentro de la categoría de "
 "juegos de azar, y debe tener en cuenta que estos pueden ser adictivos"
 
+msgid ""
+"In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In "
+"Japan, they trade through Binary KK. In the European Union (except UK), they "
+"trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In "
+"the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr ""
+
+msgid "In-Neck Pattern (CDLINNECK)"
+msgstr ""
+
 msgid "In/Out"
 msgstr "Dentro/Fuera"
 
+msgid "In/Out trades"
+msgstr ""
+
 msgid "Income Source"
 msgstr "Fuente de Ingresos"
-
-msgid "Indicative"
-msgstr "Indicativo"
 
 msgid "Indicative Price"
 msgstr "Precio Indicativo"
@@ -975,38 +2061,66 @@ msgstr "Precio Indicativo"
 msgid "Indicators"
 msgstr "Indicadores"
 
+msgid "Indices"
+msgstr ""
+
 msgid "Indices trading experience"
 msgstr "Experiencia de comercio con índices"
 
 msgid "Indices trading frequency"
 msgstr "Frecuencia de comercio índices"
 
+msgid "Individual Traders"
+msgstr ""
+
 msgid "Industry of Employment"
 msgstr "Sector del Empleo"
+
+msgid "Instant access"
+msgstr ""
+
+msgid "Instant funding"
+msgstr ""
 
 msgid "Instrument"
 msgstr "Instrumento"
 
-msgid "Instrument Code Unknown/Unavailable!"
-msgstr ""
-
 msgid "Instruments"
 msgstr "Instrumentos"
 
-msgid "Invalid parameter(s)!"
+msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
 
 msgid "Investments & Dividends"
 msgstr "Inversiones y Dividendos"
+
+msgid ""
+"Is it possible to deposit the same funds through different payment methods?"
+msgstr ""
+
+msgid ""
+"It has a long white candle, followed by another that opens above the first "
+"(gaps up), followed by a downward black candlestick that opens below the "
+"close of the second day (gaps down) and has a low below the close of the "
+"first day. The upward trend is expected to continue"
+msgstr ""
+
+msgid ""
+"It is sometimes possible to sell an option before the expiry of a trade, but "
+"only if a fair price can be determined. If this option is available, you "
+"will see a blue 'Sell' button next to your trade in the portfolio"
+msgstr ""
+
+msgid ""
+"It's time to expand. We set up a programming center in Cyberjaya - the "
+"Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
+msgstr ""
 
 msgid "Jan"
 msgstr "Ene"
 
 msgid "January"
 msgstr "Enero"
-
-msgid "Japan accounts are not supported"
-msgstr "No se admiten cuentas de Japón"
 
 msgid "Jul"
 msgstr "Jul"
@@ -1028,20 +2142,55 @@ msgstr ""
 "Simplemente haga clic en el botón Grant en la página a la que será llevado "
 "ahora"
 
+msgid "Kaufman's Adaptive Moving Average (KAMA)"
+msgstr ""
+
+msgid "Key facts"
+msgstr ""
+
+msgid "Kicking (CDLKICKING)"
+msgstr ""
+
+msgid ""
+"Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
+msgstr ""
+
+msgid ""
+"Kicking patterns on a candlestick chart are formed when there are two long "
+"marubozu - one white and one black - with a gap between them. Bullish "
+"kicking patterns would present as a black or filled candlestick without any "
+"wicks (shadows) followed by a gap higher with a white or hollow candlestick "
+"that is also without wicks"
+msgstr ""
+
+msgid ""
+"Kicking patterns on a candlestick chart are formed when there are two "
+"marubozu - one white and one black - with a gap between them. Bullish "
+"kicking patterns would present as a black or filled candlestick without any "
+"wicks (shadows) followed by a gap higher with a white or hollow candlestick "
+"that is also without wicks"
+msgstr ""
+
+msgid "Known risks"
+msgstr ""
+
+msgid "Kuala Lumpur Office"
+msgstr ""
+
 msgid "LOW"
 msgstr "BAJO"
 
-msgid "Last Digit Prediction"
-msgstr "Predicción de Último Dígito"
-
-msgid "Last Digit is Over"
-msgstr "El Último Dígito está por Encima"
-
-msgid "Last Digit is Under"
-msgstr "El Último Dígito está por Bajo"
+msgid "Ladder Bottom (CDLLADDERBOTTOM)"
+msgstr ""
 
 msgid "Last used"
 msgstr "Utilizado por última vez"
+
+msgid "Learning to trade"
+msgstr ""
+
+msgid "Least Squares Moving Average (LSMA)"
+msgstr ""
 
 msgid "Less than"
 msgstr "Menos de"
@@ -1055,14 +2204,28 @@ msgstr "Nivel"
 msgid "Level of Education"
 msgstr "Nivel de Educación"
 
+msgid "Levels"
+msgstr ""
+
+msgid ""
+"Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
+"Ireland, and Japan"
+msgstr ""
+
+msgid ""
+"Like the EMA, the LWMA assigns more meaning to the recent prices and less to "
+"the closing price from the period's beginning. Thus they are faster at "
+"detecting a trend reversal, though it they can be more prone to market noise"
+msgstr ""
+
 msgid "Line"
 msgstr "Línea"
 
 msgid "Line Dot"
 msgstr "Punto de la línea"
 
-msgid "Line Stroke"
-msgstr "Stroke de la Línea"
+msgid "Linearly Weighted Moving Average (LWMA)"
+msgstr ""
 
 msgid "Link"
 msgstr "Enlace"
@@ -1112,11 +2275,11 @@ msgstr "Cargando gráficos y menús de comercio"
 msgid "Loading custom theme configuration"
 msgstr "Cargando configuración de tema personalizado"
 
+msgid "Loading help docs"
+msgstr ""
+
 msgid "Loading portfolio"
 msgstr "Cargando cartera"
-
-msgid "Loading self-exclusion settings"
-msgstr "Cargando ajustes de auto exclusión"
 
 msgid "Loading..."
 msgstr "Cargando..."
@@ -1127,35 +2290,52 @@ msgstr "Iniciar sesión"
 msgid "Log in time"
 msgstr "Tiempo de inicio de sesión"
 
-msgid "Logging out because of self-exclusion session time out!"
-msgstr "¡Deconectar por que la sesión de autoexclusión ha caducado!"
-
 msgid "Login"
 msgstr "Iniciar sesión"
 
 msgid "Logout"
 msgstr "Cerrar sesión"
 
-msgid "Long MA Type"
-msgstr "Tipo MA Largo"
+msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
+msgstr ""
 
-msgid "Long ROC Period"
-msgstr "Período ROC Largo"
+msgid "Long Line Candle (CDLLONGLINE)"
+msgstr ""
 
-msgid "Long Stop Line Stroke"
-msgstr "Stroke de Línea de Parada Larga"
+msgid ""
+"Long-legged doji have long upper and lower shadows that are almost equal in "
+"length. These doji reflect a great amount of indecision in the market. Long-"
+"legged doji indicate that prices traded well above and below the session's "
+"opening level, but closed virtually even with the open. After a whole lot of "
+"yelling and screaming, the end result showed little change from the initial "
+"open"
+msgstr ""
 
-msgid "Long Term Period"
-msgstr "Período de Largo Plazo"
+msgid "Long-term action"
+msgstr ""
 
-msgid "Low Barrier"
-msgstr "Límite Inferior"
+msgid ""
+"Look for a black candle in a downward price trend followed by a white candle "
+"that opens below the prior low but closes near but below the midpoint of the "
+"black candle's body"
+msgstr ""
+
+msgid ""
+"Look for a tall black candle with a long lower shadow to appear in a "
+"downward price trend. The second day should be similar to the first day, but "
+"smaller and with a higher low. The last day is a black marubozu that "
+"squeezes inside the high-low range of the prior day"
+msgstr ""
+
+msgid ""
+"Look for a tall white candle in an upward price trend. Following that, a "
+"black candle has a body that gaps above the prior candle's body. The last "
+"day is another black candle, but this one engulfs the previous bearish "
+"candle but closes above first bar's open"
+msgstr ""
 
 msgid "Low Price"
 msgstr "Precio Bajo"
-
-msgid "Low Stroke"
-msgstr "Stroke Bajo"
 
 msgid "Low barrier"
 msgstr ""
@@ -1163,17 +2343,20 @@ msgstr ""
 msgid "Low barrier offset"
 msgstr "Offset límite bajo"
 
+msgid "Low minimum stakes"
+msgstr ""
+
 msgid "Lower"
 msgstr "Inferior"
 
-msgid "Lower Band Stroke"
-msgstr "Stroke de Banda Inferior"
+msgid ""
+"MACD is a trading indicator used in technical analysis of stock prices.It is "
+"supposed to reveal changes in the strength, direction, momentum, and "
+"duration of a trend in a stock's price"
+msgstr ""
 
-msgid "MA Type"
-msgstr "Tipo MA"
-
-msgid "MACD Line Stroke"
-msgstr "Stroke de Línea MACD"
+msgid "MENA FFXPO Award"
+msgstr ""
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -1188,23 +2371,38 @@ msgstr ""
 "agente de pago que haya elegido. El agente le enviará la cantidad retirada "
 "(menos la comisión) a través de su método de pago preferido"
 
+msgid "Make your trade"
+msgstr ""
+
 msgid "Mar"
 msgstr "Mar"
 
 msgid "March"
 msgstr "Marzo"
 
-msgid "Mass Period"
-msgstr "Período Total"
+msgid "Market Professionals"
+msgstr ""
+
+msgid "Market exit price"
+msgstr ""
+
+msgid "Marubozu (CDLMARUBOZU)"
+msgstr ""
+
+msgid "Mass Index (MASS)"
+msgstr ""
+
+msgid "Mat Hold (CDLMATHOLD)"
+msgstr ""
 
 msgid "Matches"
 msgstr ""
 
-msgid "Max/Min Period"
-msgstr "Período Máx/Mín"
+msgid "Matching Low (CDLMATCHINGLOW)"
+msgstr ""
 
-msgid "Maximum"
-msgstr "Máximo"
+msgid "Maximum (MAX)"
+msgstr ""
 
 msgid "Maximum account cash balance"
 msgstr "Saldo máximo de la cuenta"
@@ -1227,6 +2425,9 @@ msgstr "Pérdida total máxima por día"
 msgid "Maximum number of open positions"
 msgstr "Número máximo de posiciones abiertas"
 
+msgid "Maximum price over selected period"
+msgstr ""
+
 msgid "May"
 msgstr "Mayo"
 
@@ -1236,14 +2437,20 @@ msgstr "Fecha memorable"
 msgid "Memorable town/city"
 msgstr "Ciudad memorable"
 
-msgid "Middle Band Stroke"
-msgstr "Stroke de Banda Media"
+msgid "Mesa Adaptive Moving Average (MAMA)"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Mín: 10 máx: 2000"
 
+msgid "Minimum (MIN)"
+msgstr ""
+
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Mínimo de 6 caracteres y debe contener al menos 1 dígito"
+
+msgid "Minimum price over selected period"
+msgstr ""
 
 msgid "Minus the agent's commission"
 msgstr "Menos la comisión del agente"
@@ -1257,14 +2464,29 @@ msgstr "Minutos"
 msgid "Miss"
 msgstr "Fallido"
 
+msgid "Momentum (MOM)"
+msgstr ""
+
+msgid "Momentum Indicators"
+msgstr ""
+
 msgid "Mon"
 msgstr "Lun"
 
 msgid "Monday"
 msgstr "Lunes"
 
+msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
+msgstr ""
+
+msgid "Morning Star (CDLMORNINGSTAR)"
+msgstr ""
+
 msgid "Mother's maiden name"
 msgstr "Apellido de soltera de su madre"
+
+msgid "Moving Average Convergence/Divergence (MACD)"
+msgstr ""
 
 msgid "Mr"
 msgstr "Sr."
@@ -1274,15 +2496,6 @@ msgstr "Sra."
 
 msgid "Ms"
 msgstr "Señorita"
-
-msgid "Multiplier"
-msgstr "Multiplicador"
-
-msgid "NB Dev Down"
-msgstr "NB Dev Abajo"
-
-msgid "NB Dev Up"
-msgstr "NB Dev Arriba"
 
 msgid "Name"
 msgstr "Nombre"
@@ -1323,20 +2536,27 @@ msgstr "Nueva contraseña"
 msgid "No"
 msgstr "Núm"
 
+msgid "No Touch trades"
+msgstr ""
+
+msgid ""
+"No matter the market - rising or falling, quiet or volatile - you'll find a "
+"trade to suit your outlook"
+msgstr ""
+
+msgid "No surprises"
+msgstr ""
+
 msgid "No touch"
 msgstr ""
 
-msgid "Note that tokens can possess one or more of these scopes"
+msgid "Normalized Average True Range (NATR)"
 msgstr ""
-"Tenga en cuenta que los tokens pueden poseer uno o más de estos ámbitos"
 
 msgid ""
-"Note: Contract will be sold at the prevailing market price when the request "
-"is received by our servers. This price may differ from the indicated price"
+"Normalized Average True Range (NATR) attempts to normalize the average true "
+"range values across instruments by using the formula below"
 msgstr ""
-"Nota: El contrato se venderá al precio de mercado que prevalece cuando la "
-"solicitud se reciba por nuestros servidores. Este precio puede diferir del "
-"precio indicado"
 
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
@@ -1354,9 +2574,6 @@ msgstr "Noviembre"
 msgid "Now"
 msgstr "Ahora"
 
-msgid "Number of bars on sides"
-msgstr "Número de barras en los lados"
-
 msgid "OAuth App ID (Optional)"
 msgstr "OAuth App ID (opcional)"
 
@@ -1369,6 +2586,9 @@ msgstr "OHLC"
 msgid "OPEN"
 msgstr "ABIERTO"
 
+msgid "Occupation"
+msgstr ""
+
 msgid "Oct"
 msgstr "Oct"
 
@@ -1378,8 +2598,8 @@ msgstr "Octubre"
 msgid "Odd"
 msgstr ""
 
-msgid "Offset"
-msgstr "Offset"
+msgid "Offices in Malta, Malaysia and Japan"
+msgstr ""
 
 msgid "Ok"
 msgstr "Ok"
@@ -1393,11 +2613,24 @@ msgstr ""
 "conocimientos y experiencia, consideramos que las inversiones disponibles a "
 "través de este sitio web no son adecuadas para usted"
 
+msgid "On-Neck Pattern (CDLONNECK)"
+msgstr ""
+
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una vez que se alcanza este límite, ya no puede depositar"
 
 msgid "One last step left"
 msgstr "Queda un último paso"
+
+msgid ""
+"Only five years after inception, we pick up this major award for our online "
+"trading services. The award recognises BetOnMarkets.com's reliable, fast and "
+"secure online trading for novice and expert traders. At this time, our "
+"website has received over 15 million trades"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, dash(-)"
+msgstr ""
 
 msgid "Oops... Page Not Available"
 msgstr "Vaya... Página no disponible"
@@ -1416,6 +2649,9 @@ msgstr "Abrir una cuenta financiera"
 
 msgid "Open account"
 msgstr "Abrir una cuenta"
+
+msgid "Opening an account"
+msgstr ""
 
 msgid "Opens"
 msgstr "Se abre"
@@ -1445,11 +2681,35 @@ msgstr "Experiencia de comerciar con otros instrumentos financieros"
 msgid "Other financial instruments trading frequency"
 msgstr "Frecuencia de comerciar con otros instumentos financieros"
 
+msgid ""
+"Our company continues to thrive and obtains a license in the Isle of Man to "
+"better service our UK clients"
+msgstr ""
+
+msgid ""
+"Our customers clearly like us. In mid-2014, Binary.com has over 100 million "
+"historical transactions and over 130,000 new daily transactions"
+msgstr ""
+
+msgid ""
+"Our fast organic growth is supplemented by the acquisition of the client "
+"base of BetsForTraders, one of our main competitors"
+msgstr ""
+
 msgid "Over"
 msgstr "Encima"
 
+msgid "Over 1 million registered accounts worldwide"
+msgstr ""
+
 msgid "Over 3 years"
 msgstr "Más de 3 años"
+
+msgid "Over 90 staff and contractors worldwide"
+msgstr ""
+
+msgid "Overlap Studies"
+msgstr ""
 
 msgid "PDF"
 msgstr "PDF"
@@ -1460,11 +2720,11 @@ msgstr ""
 msgid "PNG"
 msgstr "PNG"
 
-msgid "PPO Line Stroke"
-msgstr "Stroke de Linea PPO"
-
 msgid "Page Not Found"
 msgstr "Página no encontrada"
+
+msgid "Parabolic SAR (SAR)"
+msgstr ""
 
 msgid "Password must be 6 characters minimum"
 msgstr "La contraseña debe tener 6 caracteres como mínimo"
@@ -1481,11 +2741,20 @@ msgstr "Contraseña actualizada correctamente"
 msgid "Passwords didn't match. Please type them again"
 msgstr "Las contraseñas no coinciden. Por favor, escríbalas otra vez"
 
+msgid "Patented technology"
+msgstr ""
+
+msgid "Pattern Recognition"
+msgstr ""
+
 msgid "Payment agent"
 msgstr "Agente de pago"
 
 msgid "Payment agents"
 msgstr "Agentes de pago"
+
+msgid "Payment options"
+msgstr ""
 
 msgid "Payments"
 msgstr "Pagos"
@@ -1496,17 +2765,8 @@ msgstr "Pago"
 msgid "Pension"
 msgstr "Pensión"
 
-msgid "Period"
-msgstr "Período"
-
-msgid "Period 1"
-msgstr "Período 1"
-
-msgid "Period 2"
-msgstr "Periodo 2"
-
-msgid "Period 3"
-msgstr "Período 3"
+msgid "Percentage Price Oscillator (PPO)"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Permisos"
@@ -1517,14 +2777,22 @@ msgstr "Datos personales"
 msgid "Phone"
 msgstr "Teléfono"
 
+msgid "Piercing Pattern (CDLPIERCING)"
+msgstr ""
+
+msgid "Pip"
+msgstr ""
+
+msgid ""
+"Pip stands for 'percentage in point' which is generally the fourth decimal "
+"place (i.e. 0.0001)"
+msgstr ""
+
 msgid "Please"
 msgstr "Por favor"
 
 msgid "Please answer to secret question, within 4-50 characters"
 msgstr "Por favor responda a la pregunta secreta, con 4-50 caracteres"
-
-msgid "Please choose at least one token scope"
-msgstr "Por favor, elija al menos un ámbito de token"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr ""
@@ -1550,9 +2818,6 @@ msgstr "Por favor introduzca una dirección de correo electrónico correcta"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Por favor introduzca la fecha en formato AAAA-MM-DD"
-
-msgid "Please enter the token name"
-msgstr "Por favor, introduzca el nombre de token"
 
 msgid "Please enter the verification code sent to your email"
 msgstr ""
@@ -1589,11 +2854,11 @@ msgstr "Por favor introduzca su número de teléfono"
 msgid "Please enter your street address"
 msgstr "Por favor, introduzca su dirección"
 
+msgid "Please input correct token"
+msgstr ""
+
 msgid "Please install the latest version of one of these browsers"
 msgstr "Por favor, instale la última versión de uno de estos navegadores"
-
-msgid "Please log in"
-msgstr "Por favor, inicie sesión"
 
 msgid "Please select"
 msgstr "Por favor, seleccione"
@@ -1606,9 +2871,6 @@ msgstr "Por favor utilice su nueva contraseña para iniciar sesión"
 
 msgid "Plot"
 msgstr "Tema"
-
-msgid "Plot Color"
-msgstr "Color del Tema"
 
 msgid "Pofit/Loss"
 msgstr "Ganancias/Pérdidas"
@@ -1631,6 +2893,11 @@ msgstr "Ganancias Potenciales"
 msgid "Potential profit"
 msgstr "Ganancias potenciales"
 
+msgid ""
+"Potential profit and losses are limited to stop profit and stop loss levels "
+"respectively"
+msgstr ""
+
 msgid "Pre-Defined"
 msgstr "Predefinido"
 
@@ -1641,8 +2908,26 @@ msgstr "Intervalo recomendado de prueba de la realidad"
 msgid "Press Create token button on the right to create your first token"
 msgstr "Pulsar el botón Crear token a la derecha para crear su primer token"
 
-msgid "Price"
-msgstr "Precio"
+msgid "Price Transformation"
+msgstr ""
+
+msgid ""
+"Price forms three black candles, each with lower closes, in a downward price "
+"trend. A tall white candle engulfs the price action of the prior three days. "
+"The candle acts as a bullish reversal when price breaks out upward, and "
+"closes above the top of the candle pattern"
+msgstr ""
+
+msgid "Price the trade"
+msgstr ""
+
+msgid ""
+"Price trends downward into the start of the pattern, a tall black candle. "
+"Following that, a white candle appears that fits inside the body of the "
+"prior candle. This completes the bullish harami candlestick. The final day "
+"of the pattern is the confirming candle, a white one that closes above the "
+"prior close, which it does. The combination suggests price has reversed trend"
+msgstr ""
 
 msgid "Primary"
 msgstr "Primario"
@@ -1665,6 +2950,11 @@ msgstr "Ganancias/Pérdidas"
 msgid "Profit/Loss (points)"
 msgstr "Ganancias/Pérdidas (puntos)"
 
+msgid ""
+"Published in English, Indonesian, Japanese, Chinese, Polish, German, French, "
+"Spanish, Portuguese, Italian, Russian, and Thai"
+msgstr ""
+
 msgid "Purchase"
 msgstr "Comprar"
 
@@ -1674,8 +2964,17 @@ msgstr "Fecha de Compra"
 msgid "Purchase Price"
 msgstr "Precio de Compra"
 
-msgid "Purchase Time"
-msgstr "Hora de la Compra"
+msgid "Quiet markets"
+msgstr ""
+
+msgid "Rate Of Change (ROC)"
+msgstr ""
+
+msgid "Rate Of Change Percentage (ROCP)"
+msgstr ""
+
+msgid "Rate Of Change Ratio (ROCR)"
+msgstr ""
 
 msgid "Read"
 msgstr "Leer"
@@ -1687,17 +2986,73 @@ msgstr "Apertura de cuenta real"
 msgid "Reality check"
 msgstr "Prueba de realidad"
 
+msgid ""
+"Reap the rewards of trading binaries, knowing your funds are always safe"
+msgstr ""
+
 msgid "Redirecting to oauth login page"
 msgstr "Redireccionando a la página de inicio de sesión oauth"
 
 msgid "Ref"
 msgstr "Ref"
 
+msgid "Regent Markets Group Ltd. renames to Binary Ltd"
+msgstr ""
+
+msgid ""
+"Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and "
+"website branding throughout the organisation"
+msgstr ""
+
+msgid "Regent Markets acquires BetsForTraders client base"
+msgstr ""
+
+msgid ""
+"Regent Markets files for a patent in March 2000 on the basis of our unique "
+"position as the sole serious competitor in the business of fixed-odds "
+"financial betting. In May, we register the trading name BetOnMarkets and "
+"move to Malta to receive an internet betting licence"
+msgstr ""
+
+msgid ""
+"Regent Markets files for patent, and registers BetOnMarkets trading name"
+msgstr ""
+
+msgid "Regent Markets granted US patent for 'Betting system and method'"
+msgstr ""
+
+msgid "Regent Markets granted two new US patents"
+msgstr ""
+
+msgid "Regent Markets is founded by Jean-Yves Sireau"
+msgstr ""
+
+msgid "Regent Markets obtains a licence in the Isle of Man"
+msgstr ""
+
+msgid ""
+"Regent Markets receives funding to provide on-line financial betting services"
+msgstr ""
+
+msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
+msgstr ""
+
+msgid ""
+"Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of "
+"Binary.com"
+msgstr ""
+
+msgid "Regent Pacific transaction"
+msgstr ""
+
 msgid "Register free account"
 msgstr "Registrar una cuenta gratis"
 
 msgid "Registration"
 msgstr "Registro"
+
+msgid "Relative Strength Index (RSI)"
+msgstr ""
 
 msgid "Reloading page"
 msgstr "Recargando página"
@@ -1711,8 +3066,8 @@ msgstr "Renombrar"
 msgid "Repeat password"
 msgstr "Repetir contraseña"
 
-msgid "Resale of this contract is not offered"
-msgstr "La reventa de este contrato no se ofrece"
+msgid "Resale price"
+msgstr ""
 
 msgid "Reset to Defaults"
 msgstr "Restablecer valores predeterminados"
@@ -1738,8 +3093,23 @@ msgstr "Volver"
 msgid "Return to trading page"
 msgstr "Volver a la página de comercio"
 
+msgid "Rickshaw Man (CDLRICKSHAWMAN)"
+msgstr ""
+
 msgid "Rise"
 msgstr "Aumento"
+
+msgid "Rise/Fall"
+msgstr ""
+
+msgid "Rise/Fall trades"
+msgstr ""
+
+msgid "Rising markets"
+msgstr ""
+
+msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
+msgstr ""
 
 msgid "SMA"
 msgstr "SMA"
@@ -1777,6 +3147,9 @@ msgstr "Guardar como"
 msgid "Save changes"
 msgstr "Guardar cambios"
 
+msgid "Scalable trading"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Secundario"
 
@@ -1795,9 +3168,6 @@ msgstr "Autónomo"
 msgid "Self-Exclusion"
 msgstr "Autoexclusión"
 
-msgid "Self-Exclusion Facilities"
-msgstr "Instalaciones de Autoexclusión"
-
 msgid "Sell At Market"
 msgstr "Vender en el Mercado"
 
@@ -1810,6 +3180,9 @@ msgstr "Punto de Venta"
 msgid "Sell Time"
 msgstr "Tiempo de Venta"
 
+msgid "Sell option"
+msgstr ""
+
 msgid "Send to account #"
 msgstr "Enviar al número de cuenta"
 
@@ -1818,6 +3191,9 @@ msgstr "Enviado a la cuenta"
 
 msgid "Sep"
 msgstr "Sep"
+
+msgid "Separating Lines (CDLSEPARATINGLINES)"
+msgstr ""
 
 msgid "September"
 msgstr "Septiembre"
@@ -1828,6 +3204,9 @@ msgstr "Sesión"
 msgid "Session duration limit, in minutes"
 msgstr "Límite de duración de la sesión, en minutos"
 
+msgid "Set your probability of winning"
+msgstr ""
+
 msgid "Settles"
 msgstr "Se queda en"
 
@@ -1837,59 +3216,38 @@ msgstr "Compartir"
 msgid "Share chart"
 msgstr "Compartir gráfico"
 
-msgid "Short MA Type"
-msgstr "Tipo MA Corto"
+msgid "Shooting Star (CDLSHOOTINGSTAR)"
+msgstr ""
 
-msgid "Short ROC Period"
-msgstr "Período ROC Corto"
+msgid "Short to long-term"
+msgstr ""
 
-msgid "Short Stop Line Stroke"
-msgstr "Stroke de Línea Parada Corta"
-
-msgid "Short Term Period"
-msgstr "Periodo de Corto Plazo"
+msgid "Short-term action"
+msgstr ""
 
 msgid "Show"
 msgstr "Mostrar"
 
-msgid "Sigma"
-msgstr "Sigma"
+msgid ""
+"Side by side white lines candlestick pattern is a triple pattern. Bullish "
+"pattern: In an upward trend, the first candlestick is followed by another "
+"upward that opens above the close of the first (gap up), that is followed by "
+"a third upward candlestick that opens below the close of the second (gap "
+"down). Bearish pattern: During a downtrend, the first candlestick is "
+"downward, followed by an upward candlestick that opens below the close of "
+"the first one (gap down), followed by an upward candlestick that opens below "
+"the close of the second one. This pattern indicates the continuation of a "
+"downtrend"
+msgstr ""
 
-msgid "Signal Line Stroke"
-msgstr "Stroke de Línea de Señal"
+msgid "Simple Moving Average (SMA)"
+msgstr ""
 
-msgid "Signal MA Type"
-msgstr "Tipo Señal MA"
+msgid "Simplicity"
+msgstr ""
 
-msgid "Signal Period"
-msgstr "Periodo de la Señal"
-
-msgid "Single MA Period"
-msgstr "Período MA Único"
-
-msgid "Single MA Type"
-msgstr "Tipo MA Único"
-
-msgid "Slow %D MA Type"
-msgstr "Tipo %D MA Lento"
-
-msgid "Slow %D Period"
-msgstr "Periodo %D Lento"
-
-msgid "Slow %K MA Type"
-msgstr "Tipo %K MA Lento"
-
-msgid "Slow %K Period"
-msgstr "Periodo %K Lento"
-
-msgid "Slow Limit"
-msgstr "Límite Lento"
-
-msgid "Slow MA Type"
-msgstr "Typo MA Lento"
-
-msgid "Slow Period"
-msgstr "Periodo Lento"
+msgid "Smoothed Moving Average (SMMA)"
+msgstr ""
 
 msgid "Sold"
 msgstr "Vendido"
@@ -1897,8 +3255,14 @@ msgstr "Vendido"
 msgid "Some random index"
 msgstr "Un índice aleatorio"
 
+msgid "Spinning Top (CDLSPINNINGTOP)"
+msgstr ""
+
 msgid "Spline"
 msgstr "Spline"
+
+msgid "Spot price"
+msgstr ""
 
 msgid "Spreads"
 msgstr "Spreads"
@@ -1911,6 +3275,20 @@ msgstr ""
 
 msgid "Stake"
 msgstr "Apuesta"
+
+msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
+msgstr ""
+
+msgid "Standard Deviation (STDDEV)"
+msgstr ""
+
+msgid ""
+"Standard Deviation is a statistical calculation used to measure the "
+"variability. In trading this value is known as volatility. A low standard "
+"deviation indicates that the data points tend to be very close to the mean, "
+"whereas high standard deviation indicates that the data points are spread "
+"out over a large range of values"
+msgstr ""
 
 msgid "Standard methods"
 msgstr "Métodos estándar"
@@ -1930,13 +3308,54 @@ msgstr "Estado/provincia/región"
 msgid "Statement"
 msgstr "Declaración"
 
+msgid "Statistical Functions"
+msgstr ""
+
 msgid "Status"
 msgstr "Estado"
+
+msgid "Stays Between/Goes Outside trades"
+msgstr ""
 
 msgid "Stays In/Goes Out"
 msgstr "Queda dentro/Sale fuera"
 
 msgid "Stays in"
+msgstr ""
+
+msgid "Step 1: Define your position"
+msgstr ""
+
+msgid "Step 2: Get your trade price"
+msgstr ""
+
+msgid "Step 3: Make your trade"
+msgstr ""
+
+msgid "Stick Sandwich (CDLSTICKSANDWICH)"
+msgstr ""
+
+msgid "Stochastic (STOCH )"
+msgstr ""
+
+msgid "Stochastic Fast (STOCHF)"
+msgstr ""
+
+msgid "Stochastic Relative Strength Index (STOCHRSI)"
+msgstr ""
+
+msgid "Stochastic Slow (STOCHS)"
+msgstr ""
+
+msgid "Stock Indices"
+msgstr ""
+
+msgid "Stock indices"
+msgstr ""
+
+msgid ""
+"Stock market indices measure the value of a selection of companies in the "
+"stock market"
 msgstr ""
 
 msgid "Stocks trading experience"
@@ -1975,8 +3394,8 @@ msgstr "Anchura del stroke"
 msgid "Submit"
 msgstr "Enviar"
 
-msgid "Successfully added new token"
-msgstr "Nuevo token añadido con éxito"
+msgid "Summation (SUM)"
+msgstr ""
 
 msgid "Sun"
 msgstr "Dom"
@@ -1993,14 +3412,20 @@ msgstr "TRIMA"
 msgid "Table"
 msgstr "Tabla"
 
+msgid "Take early profits"
+msgstr ""
+
+msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
+msgstr ""
+
+msgid "Tasuki Gap (CDLTASUKIGAP)"
+msgstr ""
+
+msgid "Tax-free"
+msgstr ""
+
 msgid "Tel"
 msgstr "Tel"
-
-msgid "Template applied partially"
-msgstr ""
-
-msgid "Template is not applicable"
-msgstr ""
 
 msgid "Template name"
 msgstr "Nombre de la plantilla"
@@ -2016,6 +3441,363 @@ msgstr "Terciario"
 
 msgid "The"
 msgstr "El"
+
+msgid ""
+"The Absolute Price Oscillator (APO) is based on the absolute differences "
+"between two moving averages of different lengths, a  Fast  and a  Slow  "
+"moving average"
+msgstr ""
+
+msgid ""
+"The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. "
+"These two indicators are usually plotted together for easy comparison, but "
+"chartists can also view the difference of these two indicators with the "
+"Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero "
+"as the middle line"
+msgstr ""
+
+msgid ""
+"The Average Directional Movement Index index (ADX) was developed in 1978 by "
+"J. Welles Wilder as an indicator of trend strength in a series of prices of "
+"a financial instrument ADX will range between 0 and 100. Generally, ADX "
+"readings below 20 indicate trend weakness, and readings above 40 indicate "
+"trend strength"
+msgstr ""
+
+msgid ""
+"The Average True Range (TRANGE) study measures the size of the period s "
+"range, and takes into account any gap from the close of the previous period"
+msgstr ""
+
+msgid ""
+"The Awesome Oscillator is an indicator used to measure market momentum. AO "
+"calculates the difference of a 34 Period and 5 Period Simple Moving "
+"Averages. The Simple Moving Averages that are used are not calculated using "
+"closing price but rather each bar's midpoints. AO is generally used to "
+"affirm trends or to anticipate possible reversals"
+msgstr ""
+
+msgid ""
+"The Bearish I-Neck Pattern occurs after a downtrend when first day is a long "
+"red candle and the second day is a blue day, opening below the low of the "
+"first day and closing barely into the body of the first day"
+msgstr ""
+
+msgid ""
+"The Bearish On-Neck Pattern occurs after a downtrend when a long black day "
+"is followed by a long white day that gaps down at the open and closes below "
+"the close of the black day"
+msgstr ""
+
+msgid ""
+"The Bullish Three Star appears after a downtrend and it consists of three "
+"consecutive Doji, in which the second Doji gaps below the other two Doji. "
+"The Bearish Three Star appears after a uptrend and it consists of three "
+"consecutive Doji, in which the second Doji gaps above the other two Doji"
+msgstr ""
+
+msgid ""
+"The CMO indicator is created by calculating the difference between the sum "
+"of all recent higher closes and the sum of all recent lower closes and then "
+"dividing the result by the sum of all price movement over a given time "
+"period. The result is multiplied by 100 to give the -100 to +100 range"
+msgstr ""
+
+msgid ""
+"The Choppiness Index (CHOP) is an indicator designed to determine if the "
+"market is choppy (trading sideways) or not choppy (trading within a trend in "
+"either direction). CHOP is not meant to predict future market direction, it "
+"is a metric to be used to for defining the market's trendiness only"
+msgstr ""
+
+msgid ""
+"The Commodity Channel Index (CCI) is a versatile indicator that can be used "
+"to identify a new trend or warn of extreme conditions"
+msgstr ""
+
+msgid ""
+"The Donchian Channel is an indicator used in market trading developed by "
+"Richard Donchian. It is formed by taking the highest high and the lowest low "
+"of the last n periods. The area between the high and the low is the channel "
+"for the period chosen"
+msgstr ""
+
+msgid ""
+"The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to "
+"remove the inherent lag associated to Moving Averages by placing more weight "
+"on recent values"
+msgstr ""
+
+msgid ""
+"The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to "
+"remove the inherent lag associated to Moving Averages by placing more weight "
+"on recent values"
+msgstr ""
+
+msgid ""
+"The Dragonfly Doji is created when the open, high, and close are the same or "
+"about the same price (Where the open, high, and close are exactly the same "
+"price is quite rare).The most important part of the Dragonfly Doji is the "
+"long lower shadow"
+msgstr ""
+
+msgid ""
+"The Exponential Moving Average (EMA) represents an average of prices, but "
+"places more weight on recent prices. The weighting applied to the most "
+"recent price depends on the selected period of the moving average. The "
+"shorter the period for the EMA, the more weight that will be applied to the "
+"most recent price"
+msgstr ""
+
+msgid ""
+"The Fast Stochastic Oscillator is based on George Lane's original formulas "
+"for %K and %D. %K in the fast version that appears rather choppy. %D is the "
+"3-day SMA of %K"
+msgstr ""
+
+msgid ""
+"The Gravestone Doji is created when the open, low, and close are the same or "
+"about the same price (Where the open, low, and close are exactly the same "
+"price is quite rare). The most important part of the Graveston Doji is the "
+"long upper shadow"
+msgstr ""
+
+msgid ""
+"The Hammer formation is created when the open, high, and close are roughly "
+"the same price.Also, there is a long lower shadow, twice the length as the "
+"real body"
+msgstr ""
+
+msgid ""
+"The Hanging Man formation, just like the Hammer, is created when the open, "
+"high, and close are roughly the same price. Also, there is a long lower "
+"shadow, which should be at least twice the length of the real body"
+msgstr ""
+
+msgid ""
+"The Hull Moving Average solves the age old dilemma of making a moving "
+"average more responsive to current price activity whilst maintaining curve "
+"smoothness. In fact the HMA almost eliminates lag altogether and manages to "
+"improve smoothing at the same time"
+msgstr ""
+
+msgid ""
+"The Inverted Hammer occurs mainly at the bottom of downtrends when the open, "
+"low, and close are roughly the same price. Also, there is a long upper "
+"shadow, which should be at least twice the length of the real body"
+msgstr ""
+
+msgid ""
+"The Kaufman's Adaptive Moving Average (KAMA) Developed by Perry Kaufman, is "
+"a moving average designed to account for market noise or volatility. This "
+"trend-following indicator can be used to identify the overall trend, time "
+"turning points and filter price movements"
+msgstr ""
+
+msgid ""
+"The Least Squares Moving Average first calculates a least squares regression "
+"line over the preceding time periods, then projects it forward to the "
+"current period. In essence, it calculates what the value would be if the "
+"regression line continued"
+msgstr ""
+
+msgid ""
+"The MESA Adaptive Moving Average is developed by John Ehlers of Mesa "
+"Software. This trend-following indicator can be used to identify the overall "
+"trend, time turning points and filter price movements"
+msgstr ""
+
+msgid ""
+"The Momentum indicator compares where the current price is in relation to "
+"where the price was in the past. How far in the past the comparison is made "
+"is up to the technical analysis trader. The calculation of Momentum is quite "
+"simple (n is the number of periods the technical trader selects): The "
+"current price minus the price n-periods ago"
+msgstr ""
+
+msgid ""
+"The Percentage Price Oscillator (PPO) is a momentum oscillator that measures "
+"the difference between two moving averages as a percentage of the larger "
+"moving average"
+msgstr ""
+
+msgid ""
+"The Price Rate-of-Change (ROC) indicator displays the difference between the "
+"current price and the price x-time periods ago. The difference can be "
+"displayed in either points or as a percentage"
+msgstr ""
+
+msgid ""
+"The Rate of Change Percentage (ROCP) indicator compares the current price "
+"with the previous price from a selected number of periods ago. The current "
+"price is divided by the previous price. ROCP does not express as a "
+"percentage. This indicator is also commonly known as a momentum indicator"
+msgstr ""
+
+msgid ""
+"The Rate of Change Rate (ROCR) indicator compares the current price with the "
+"previous price from a selected number of periods ago. The current price is "
+"divided by the previous price. This indicator is also commonly known as a "
+"momentum indicator"
+msgstr ""
+
+msgid ""
+"The Relative Strength Index (RSI) was published by J. Welles Wilder. The "
+"current price is normalized as a percentage between 0 and 100. The name of "
+"this oscillator is misleading because it does not compare the instrument "
+"relative to another instrument or set of instruments, but rather represents "
+"the current price relative to other recent pieces within the selected "
+"lookback window length"
+msgstr ""
+
+msgid ""
+"The Rickshaw Man has unusually tall upper and lower shadows, a body in which "
+"the opening and closing prices are about the same, and the body is near the "
+"middle of the candlestick"
+msgstr ""
+
+msgid ""
+"The Shooting formation is created when the open, low, and close are roughly "
+"the same price. There is a long upper shadow, generally defined as at least "
+"twice the length of the real body"
+msgstr ""
+
+msgid ""
+"The Simple Moving Average (SMA) is calculated by adding the price of an "
+"instrument over a number of time periods and then dividing the sum by the "
+"number of time periods. The SMA is basically the average price of the given "
+"time period, with equal weighting given to the price of each period"
+msgstr ""
+
+msgid ""
+"The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar "
+"Chande and Stanley Kroll, StochRSI is an oscillator that measures the level "
+"of RSI relative to its high-low range over a set time period. StochRSI "
+"applies the Stochastics formula to RSI values, instead of price values. This "
+"makes it an indicator of an indicator. The result is an oscillator that "
+"fluctuates between 0 and 1"
+msgstr ""
+
+msgid ""
+"The Tasuki Gap pattern is made up of three candlesticks, the first bar is a "
+"red candlestick within a defined downtrend, the second bar is another red "
+"candlestick that has gapped below the close of the previous bar and the last "
+"bar is a white candlestick that closes within the gap of the first two bars"
+msgstr ""
+
+msgid ""
+"The Three Methods pattern is a trend continuation pattern that can appear in "
+"an uptrend or a down trend. In an uptrend it is called the rising three "
+"methods pattern and in a downtrend it is called the falling three methods "
+"pattern. The three methods pattern consists of at least five candlesticks"
+msgstr ""
+
+msgid ""
+"The Triangular Moving Average (TRIMA) represents an average of prices, but "
+"places weight on the middle prices of the time period. The calculations "
+"double-smooth the data using a window width that is one-half the length of "
+"the series"
+msgstr ""
+
+msgid ""
+"The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers "
+"a moving average with better smoothing then traditional exponential moving "
+"average"
+msgstr ""
+
+msgid ""
+"The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a "
+"moving average with less lag then traditional exponential moving average"
+msgstr ""
+
+msgid ""
+"The Typical Price function measures the average of the high, low, and "
+"closing prices for the day using a simple, single-line plot. The ordinary "
+"price gives a simplified view of the day trading prices for as well as it "
+"happens with other price-adjustment functions. You can use it for smoothing "
+"out some of the inconstancy of the closing price because it comprises "
+"information for the whole trading day and not only the result of the day's "
+"end. The Typical Price indicator is measured by adding the high, low, and "
+"closing prices together, and then dividing by three"
+msgstr ""
+
+msgid ""
+"The Weighted Close indicator is simply an average of each day's price. It "
+"can be used to smooth out some of the inconstancy of a chart of closing "
+"prices, as it comprises information for the whole trading day"
+msgstr ""
+
+msgid ""
+"The balance of power (BOP) indicator measures the strength of the bulls vs. "
+"bears by assessing the ability of each to push price to an extreme level"
+msgstr ""
+
+msgid ""
+"The barrier of a binary option trade is the price target you set for the "
+"underlying. You can choose trades that stay below or go above a price "
+"target, or stay between two targets"
+msgstr ""
+
+msgid ""
+"The barrier(s) you choose defines your position and triggers your payout"
+msgstr ""
+
+msgid ""
+"The breakaway pattern begins with a long candle representing the current "
+"trend. The following candle is the same color and it gaps away from that "
+"first long candle. While the third day s candle can be either color, it will "
+"not show a change in the current trend. The fourth day continues the trend "
+"and therefore continues to produce the same color candles. The fifth day "
+"however, reverses the trend. Please note that it only opens slightly the "
+"opposite of the current trend and it continues in the same direction to "
+"where it then closes in the gap area"
+msgstr ""
+
+msgid ""
+"The closing black marubozu candlestick is a tall black candle with an upper "
+"shadow but no lower one. The closing white marubozu candlestick is a tall "
+"white candle with an lower shadow but no upper shadow"
+msgstr ""
+
+msgid ""
+"The company holds customer funds in separate bank accounts to the "
+"operational accounts which would not, in the event of insolvency, form part "
+"of the Company's assets. This meets the Gambling Commission's requirements "
+"for the segregation of customer funds at the level"
+msgstr ""
+
+msgid ""
+"The contract period is the timeframe of a trade. It is also called the "
+"duration"
+msgstr ""
+
+msgid "The duration is the length of a purchased trade (see"
+msgstr ""
+
+msgid ""
+"The entry level for a long contract is 1001, which is entry spot + half "
+"spread. At exit, the spot is at 1100 and hence the exit level for a long "
+"contract is 1099, which is exit spot - half spread"
+msgstr ""
+
+msgid ""
+"The entry level for a short contract is 999, which is entry spot - half "
+"spread. At exit, the spot is at 1100 and hence the exit level for a short "
+"contract is 1101, which is exit spot + half spread"
+msgstr ""
+
+msgid ""
+"The entry spot of an instrument XYZ is 1000 and the spread on this "
+"instrument is 2 points"
+msgstr ""
+
+msgid ""
+"The entry spot price is the starting price of the trade purchased by a trader"
+msgstr ""
+
+msgid ""
+"The expiry price is the price of the underlying when the contract expires"
+msgstr ""
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -2034,6 +3816,42 @@ msgstr ""
 "consiste en el contrato permium"
 
 msgid ""
+"The first step is to open an account. You can apply online in just a few "
+"minutes"
+msgstr ""
+
+msgid ""
+"The first three days of the Bullish Ladder Bottom are strong black "
+"candlesticks with consecutive lower opens and lower closes. The fourth day "
+"is a short black candlestick, but it opens higher and trades higher, leaving "
+"a long upper shadow, then closes making a new low. The fifth day is a strong "
+"white candlestick that makes a body gap with the fourth day"
+msgstr ""
+
+msgid ""
+"The homing pigeon is a bullish candlestick reversal pattern comprised of two "
+"red candlesticks. The first candle is a tall black one that appears in a "
+"downward price trend. The second day is also a black candle, but it is "
+"smaller and fits inside the body of the first black candle"
+msgstr ""
+
+msgid ""
+"The indicator is designed for use on a monthly time scale. It is the sum of "
+"a 14-month rate of change and 11-month rate of change, smoothed by a 10-"
+"period weighted moving average"
+msgstr ""
+
+msgid ""
+"The loss of USD 306 is the difference between the exit and entry level "
+"multiplied by the amount per point"
+msgstr ""
+
+msgid ""
+"The market exit price is the price in effect at the end of the contract "
+"period"
+msgstr ""
+
+msgid ""
 "The page you requested could not be found. Either it no longer exists or the "
 "address is wrong. Please check for any typos"
 msgstr ""
@@ -2041,21 +3859,118 @@ msgstr ""
 "incorrecta. Verifique las faltas de ortografía"
 
 msgid ""
-"There was a market data disruption during the contract period. For real-"
-"money accounts we will attempt to correct this and settle the contract "
-"properly, otherwise the contract will be cancelled and refunded. Virtual-"
-"money contracts will be cancelled and refunded"
+"The parabolic SAR is calculated almost independently for each trend in the "
+"price. When the price is in an uptrend, the SAR emerges below the price and "
+"converges upwards towards it. Similarly, on a downtrend, the SAR emerges "
+"above the price and converges downwards. At each step within a trend, the "
+"SAR is calculated one period in advance"
 msgstr ""
-"Hubo una interrupción de datos del mercado durante el período del contrato. "
-"Para cuentas de dinero real intentaremos corregirlo y liquidar el contrato "
-"correctamente, sino el contrato será cancelado y devuelto. Los contratos de "
-"dinero virtual serán cancelados y devueltos"
 
-msgid "There was an error"
-msgstr "Hubo un error"
+msgid ""
+"The patent means Regent Markets is the recognised pioneer of binary betting. "
+"The patent helps protect our innovations"
+msgstr ""
 
-msgid "This contract has expired"
-msgstr "Este contrato ha caducado"
+msgid ""
+"The payout is the amount paid to an options trader if their prediction is "
+"correct"
+msgstr ""
+
+msgid ""
+"The piercing pattern is made up of two candlesticks, the first black and the "
+"second white.Both candlesticks should have fairly large bodies and the "
+"shadows are usually, but not necessarily, small or nonexistent. The white "
+"candlestick must open below the previous close and close above the midpoint "
+"of the black candlestick's body. A close below the midpoint might qualify as "
+"a reversal, but would not be considered as bullish"
+msgstr ""
+
+msgid ""
+"The premier platform for trading binary options in the world's financial "
+"markets"
+msgstr ""
+
+msgid ""
+"The profit is the difference between the purchase price (the stake) and the "
+"payout on a winning trade"
+msgstr ""
+
+msgid ""
+"The profit of USD 294 is the difference between the exit and entry level "
+"multiplied by the amount per point"
+msgstr ""
+
+msgid ""
+"The rebranding is a natural evolution for the platform as it continues to "
+"grow market share in the highly competitive field of binary trading. The new "
+"brand reflects the nature of the business, and our new tagline - Sharp "
+"Prices, Smart Trading - communicates our ethos and commitment to our clients"
+msgstr ""
+
+msgid ""
+"The resale price indicates a contract's current market price. Resale prices "
+"are on a best-efforts basis and may not be available at all times after "
+"purchase. See 'Sell option' for more details on selling contracts before "
+"expiry"
+msgstr ""
+
+msgid ""
+"The return is the money realized when the contract expires (see 'Payout')"
+msgstr ""
+
+msgid "The stake is the amount that a trader must pay to enter into a trade"
+msgstr ""
+
+msgid "The sum of price over selected period"
+msgstr ""
+
+msgid ""
+"The variance and the closely-related standard deviation are measures of how "
+"spread out a distribution is. In other words, they are measures of "
+"variability. The variance is computed as the average squared deviation of "
+"each number from its mean"
+msgstr ""
+
+msgid ""
+"The volatility indices simulate various real market situations and provide "
+"an ideal platform for getting used to trading and testing strategies under "
+"various market conditions. These indices depend on volatility and drift, and "
+"help users to try out scenarios like - high volatility, low volatility, "
+"bullish and bearish trends"
+msgstr ""
+
+msgid ""
+"These are trades where the trader predicts if a market will finish higher or "
+"lower than a specified price target"
+msgstr ""
+
+msgid ""
+"These are trades where the trader predicts if a market will rise or fall at "
+"the end of a selected time period"
+msgstr ""
+
+msgid ""
+"These are trades where the trader selects a low and high barrier, and "
+"predicts if the market will stay within these barriers or go outside them "
+"(see also 'Stays Between/Goes Outside trades')"
+msgstr ""
+
+msgid ""
+"These are trades where the trader selects a price target, and predicts that "
+"the market will never touch the target before the expiry of the trade"
+msgstr ""
+
+msgid ""
+"These are trades where the trader selects a price target, and predicts that "
+"the market will touch the target before the expiry of the trade"
+msgstr ""
+
+msgid ""
+"This Moving Average uses curve of the Normal (Gauss) distribution which can "
+"be placed by Offset parameter from 0 to 1. This parameter allows regulating "
+"the smoothness and high sensitivity of the Moving Average. Sigma is another "
+"parameter that is responsible for the shape of the curve coefficients"
+msgstr ""
 
 msgid "This contract lost"
 msgstr "Este contrato perdió"
@@ -2066,11 +3981,72 @@ msgstr "Este contrato ganó"
 msgid "This field is required"
 msgstr "Este campo es requerido"
 
+msgid ""
+"This is another award we really savour. Trade2win is a portal for active "
+"traders seeking to profit from stocks, futures, options and forex, and these "
+"traders award us silver (we are just pipped for gold by Betfair). It means "
+"active traders worldwide rate our trading platform extremely highly"
+msgstr ""
+
+msgid ""
+"This is big. We pick up a double award from the Financial Times and "
+"Investors Chronicle, reflecting our success in improving the quality and "
+"usability of our website and products"
+msgstr ""
+
+msgid ""
+"This is the current price at which an underlying can be bought or sold at a "
+"particular time"
+msgstr ""
+
+msgid ""
+"This pattern occurs when two black days appear with equal closes in a "
+"downtrend. Matching Low indicates a bottom has been made, even though the "
+"new low was tested and there was no follow through, which is indicative of a "
+"good support price"
+msgstr ""
+
+msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
+msgstr ""
+
+msgid "Three Black Crows (CDL3BLACKCROWS)"
+msgstr ""
+
+msgid "Three Inside Up/Down (CDL3INSIDE)"
+msgstr ""
+
+msgid "Three Outside Up/Down (CDL3OUTSIDE)"
+msgstr ""
+
+msgid "Three Stars In The South (CDL3STARSSOUTH)"
+msgstr ""
+
+msgid ""
+"Three tall white candles, each with higher closes, and bodies that overlap "
+"(an opening price within the prior candle's body)"
+msgstr ""
+
+msgid ""
+"Three white days occur. Each successive day opens within the body of the "
+"previous day and closes above the previous day. The bodies of the candles "
+"get progressively smaller with the upper shadows of day 2 and 3 getting "
+"progressively longer"
+msgstr ""
+
+msgid "Three-Line Strike (CDL3LINESTRIKE)"
+msgstr ""
+
+msgid "Thrusting Pattern (CDLTHRUSTING)"
+msgstr ""
+
 msgid "Thu"
 msgstr "Jue"
 
 msgid "Thursday"
 msgstr "Jueves"
+
+msgid "Tick"
+msgstr ""
 
 msgid "Tick Trade app"
 msgstr "App Tick Trade"
@@ -2084,9 +4060,6 @@ msgstr "Ticks"
 msgid "Tile"
 msgstr "Mosaico"
 
-msgid "Time Period"
-msgstr "Período de Tiempo"
-
 msgid "Time interval"
 msgstr "Intervalo de tiempo"
 
@@ -2096,8 +4069,10 @@ msgstr ""
 msgid "Time period"
 msgstr "Período de tiempo"
 
-msgid "Timeout for websocket request"
-msgstr "Solicitud de tiempo de espera para websocket"
+msgid ""
+"Times are changing. We increase payouts so our clients can make the most of "
+"their winning trades"
+msgstr ""
 
 msgid "Title"
 msgstr "Título"
@@ -2176,11 +4151,32 @@ msgstr "Comerciar"
 msgid "Trade Confirmation"
 msgstr "Confirmación del Comercio"
 
+msgid "Trade all market conditions"
+msgstr ""
+
+msgid "Trade to your budget"
+msgstr ""
+
+msgid "Trade to your strategy"
+msgstr ""
+
 msgid "Trade using"
 msgstr "Comercie usando"
 
+msgid "Trade when you want to trade"
+msgstr ""
+
+msgid "Trade with confidence"
+msgstr ""
+
+msgid "Trade your way"
+msgstr ""
+
 msgid "Trading Times"
 msgstr "Horario de Comercio"
+
+msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
+msgstr ""
 
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
@@ -2216,6 +4212,21 @@ msgstr "Tradingview para Binary.com"
 msgid "Transfer to another Binary account"
 msgstr "Transferir a otra cuenta Binary"
 
+msgid "Triangular Moving Average (TRIMA)"
+msgstr ""
+
+msgid "Triple Exponential Moving Average (T3)"
+msgstr ""
+
+msgid "Triple Exponential Moving Average (TEMA)"
+msgstr ""
+
+msgid "Tristar Pattern (CDLTRISTAR)"
+msgstr ""
+
+msgid "True Range (TRANGE)"
+msgstr ""
+
 msgid "Try"
 msgstr "Pruebe"
 
@@ -2228,23 +4239,55 @@ msgstr "Martes"
 msgid "Turnover"
 msgstr "Volumen de ventas"
 
+msgid "Two Crows (CDL2CROWS)"
+msgstr ""
+
+msgid "Typical Price (TYPPRICE)"
+msgstr ""
+
 msgid "USD"
 msgstr "USD"
 
 msgid "USDJPY"
 msgstr ""
 
+msgid "Ultimate Oscillator (ULTOSC)"
+msgstr ""
+
 msgid "Under"
+msgstr ""
+
+msgid "Underlying"
+msgstr ""
+
+msgid ""
+"Unfortunately, no - funds initially deposited through one payment method "
+"must be withdrawn through the same system; funds cannot be transferred to an "
+"alternate system for withdrawal. We do offer a wide variety of payment "
+"methods, to suit your specific needs and preferences"
 msgstr ""
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Desafortunadamente, su navegador no es compatible"
 
-msgid "Unlock"
-msgstr "Desbloquear"
+msgid "Unique 3 River (CDLUNIQUE3RIVER)"
+msgstr ""
+
+msgid ""
+"Unique Three River Bottom is a bullish candlestick pattern made up of three "
+"candles: The 1st candle has a long and bearish body, the 2nd candle is a "
+"hammer, and its body is inside the 1st bar's body, the 3rd candle is small "
+"and bullish, its Close price is lower than 2nd bar's"
+msgstr ""
+
+msgid "Up to 100% returns on rise/fall trades"
+msgstr ""
 
 msgid "Up/Down"
 msgstr "Arriba/Abajo"
+
+msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
+msgstr ""
 
 msgid "Upcoming Events"
 msgstr "Próximos Eventos"
@@ -2259,8 +4302,11 @@ msgstr "Actualizar a una cuenta real"
 msgid "Upload template"
 msgstr "Cargar plantilla del gráfico"
 
-msgid "Upper Band Stroke"
-msgstr "Stroke de Banda Superior"
+msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
+msgstr ""
+
+msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
+msgstr ""
 
 msgid "Use"
 msgstr "Usar"
@@ -2273,6 +4319,15 @@ msgstr ""
 "gráfico, el tipo, el período de tiempo, los indicadores y las comparaciones"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
+msgstr ""
+
+msgid ""
+"Using our website, customers can trade currencies, indices, stocks and "
+"commodities 24/7. We have the most flexible pricing and the most "
+"comprehensive suite of products available"
+msgstr ""
+
+msgid "Variance (VAR)"
 msgstr ""
 
 msgid "Verification code has been sent to your email"
@@ -2299,14 +4354,62 @@ msgstr "Ver"
 msgid "View Historical Data"
 msgstr "Ver Datos Históricos"
 
-msgid "Volume Factor"
-msgstr "Factor de Volumen"
+msgid "View Statement"
+msgstr ""
+
+msgid "Volatile markets"
+msgstr ""
+
+msgid "Volatility Indicators"
+msgstr ""
+
+msgid "Volatility Indices"
+msgstr ""
+
+msgid "Volatility indices"
+msgstr ""
 
 msgid "WMA"
 msgstr "WMA"
 
-msgid "WMA Period"
-msgstr "Período WMA"
+msgid ""
+"WMA stands for weighted moving average. It helps to smooth the price curve "
+"for better trend identification. It places even greater importance on recent "
+"data than the EMA does"
+msgstr ""
+
+msgid ""
+"We are required by our license to inform you about what happens to funds "
+"which we hold on account for you, and the extent to which funds are "
+"protected in the event of insolvency"
+msgstr ""
+
+msgid ""
+"We do it again. BetOnMarkets.com follows up our 2007 award by being voted "
+"'Best Fixed-Odds Financial Trading Provider' for 2008"
+msgstr ""
+
+msgid ""
+"We don't usually require any documents as we can verify your identity online"
+msgstr ""
+
+msgid "We rebrand BetOnMarkets.com as"
+msgstr ""
+
+msgid ""
+"We're granted patents for 'Computer trading system and method for "
+"speculating on a financial market' and 'Computer trading system for offering "
+"custom financial market speculations'. The patents show our ability to "
+"innovate and stay ahead of the pack"
+msgstr ""
+
+msgid ""
+"We're really proud of this award. We're strongly committed to offering an "
+"ethical and customer-focused trading experience, and the award shows that "
+"BetOnMarkets is a trusted brand that listens and caters to customers, "
+"whether they are experienced traders or novices. We offer customer services "
+"in English, Indonesian, Russian, Chinese and Spanish"
+msgstr ""
 
 msgid "Websocket Server"
 msgstr "Servidor WebSocket"
@@ -2326,11 +4429,64 @@ msgstr "Mié"
 msgid "Wednesday"
 msgstr "Miércoles"
 
+msgid "Weighted Close Price (WCLPRICE)"
+msgstr ""
+
+msgid "Weighted Moving Average (WMA)"
+msgstr ""
+
+msgid ""
+"When you are satisfied with the trade price, instantly execute your trade"
+msgstr ""
+
+msgid ""
+"When you trade with Binary.com, you can be assured that your deposits are "
+"held in a separate trust account and are not used for any other purpose"
+msgstr ""
+
 msgid "While on the go, you can"
 msgstr "Mientras viaja, puede"
 
+msgid "Why Choose Binary Trading?"
+msgstr ""
+
+msgid "Will I need to install any software?"
+msgstr ""
+
+msgid "Williams' %R (WILLR)"
+msgstr ""
+
+msgid ""
+"Win 10-1000% on your stake if you are correct. Increase your winning return "
+"by choosing 'Stays In' with a narrow price target"
+msgstr ""
+
+msgid ""
+"Win 10-1000% on your stake if you are correct. Increase your winning return "
+"by choosing a 'Touch' trade, with a price target farther away from the "
+"current price"
+msgstr ""
+
+msgid ""
+"Win 10-1000% on your stake if you are correct. Increase your winning return "
+"by choosing a price target farther away from the current price"
+msgstr ""
+
 msgid "Windows"
 msgstr "Windows"
+
+msgid "With Binary.com you can trade"
+msgstr ""
+
+msgid ""
+"With Binary.com's unique platform, there's no risk of 'slippage' or gapping "
+"markets. And no hidden fees"
+msgstr ""
+
+msgid ""
+"With Binary.com, the most you can lose is the amount you stake at the start "
+"of your trade"
+msgstr ""
 
 msgid "Withdraw funds"
 msgstr "Retirar fondos"
@@ -2347,6 +4503,9 @@ msgstr "Línea de eje-x"
 msgid "X-axis tick"
 msgstr "Tick de eje-x"
 
+msgid "Xodds.com"
+msgstr ""
+
 msgid "Y-axis gridline"
 msgstr "Cuadrícula del eje-y"
 
@@ -2356,8 +4515,32 @@ msgstr "Etiquetas del eje-y"
 msgid "Yes"
 msgstr "Sí"
 
-msgid "You have excluded yourself until"
-msgstr "Se ha excluido a sí mismo hasta"
+msgid ""
+"You can choose payouts from $1 to $50,000. This wide payout range is ideal "
+"for both small and large traders"
+msgstr ""
+
+msgid "You can open an account, deposit funds and begin trading within minutes"
+msgstr ""
+
+msgid ""
+"You can sell back long-term trades at any time to profit from changing "
+"market conditions"
+msgstr ""
+
+msgid "You can set the length of your trade, from 10 seconds to 365 days"
+msgstr ""
+
+msgid "You can trade a range of markets, timescales and indices - 24/7"
+msgstr ""
+
+msgid ""
+"You don't need to deposit any money to open an account, but you need to "
+"deposit funds before you can start trading"
+msgstr ""
+
+msgid "You get fair and transparent pricing, whatever your position"
+msgstr ""
 
 msgid "You have sold the following contract"
 msgstr "Han vendido el siguiente contrato"
@@ -2377,8 +4560,14 @@ msgstr "Aún no ha guardado ninguna plantilla"
 msgid "You pay"
 msgstr "Usted paga"
 
+msgid "You set the barrier(s) to define your position"
+msgstr ""
+
 msgid "You will be automatically logged out after such time"
 msgstr "Usted será deconectado automáticamente después de esa hora"
+
+msgid "You'll be surprised by the returns you can make"
+msgstr ""
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
@@ -2390,20 +4579,22 @@ msgstr ""
 msgid "Your account is locked, please contact customer support for more info"
 msgstr ""
 
-msgid "Your browser doesn't support copy to clipboard"
-msgstr "Su navegador no es compatible con copiar al portapapeles"
-
 msgid "Your browser is not supported"
 msgstr "Su navegador no es compatible"
-
-msgid "Your changes have been updated"
-msgstr "Se han actualizado sus cambios"
 
 msgid "Your email"
 msgstr "Su correo electrónico"
 
+msgid ""
+"Your money is always safe with Binary.com. At all times, it is held in "
+"segregated AAA-rated banks, which is a condition of our trading licenses"
+msgstr ""
+
 msgid "Your new account balance is"
 msgstr "El nuevo saldo de su cuenta es"
+
+msgid "Your risks are known"
+msgstr ""
 
 msgid "Your transaction reference is"
 msgstr "Su referencia de transacción es"
@@ -2414,11 +4605,22 @@ msgstr "Su número de referencia de la transacción es"
 msgid "Zoom"
 msgstr "Zoom"
 
-msgid "admin"
-msgstr "admin"
+msgid ""
+"allowing clients to develop their own automated trading robots with  drag-"
+"and-drop  simplicity"
+msgstr ""
 
 msgid "and"
 msgstr "y"
+
+msgid "apostrophe (') are allowed"
+msgstr ""
+
+msgid "at a valuation of US$ 50.5 million"
+msgstr ""
+
+msgid "auto-trader programming tool"
+msgstr ""
 
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
@@ -2449,6 +4651,12 @@ msgstr "día"
 msgid "days"
 msgstr "días"
 
+msgid "disposes of its stake"
+msgstr ""
+
+msgid "e-commerce site for branded merchandise"
+msgstr ""
+
 msgid "e.g"
 msgstr "ej."
 
@@ -2463,23 +4671,6 @@ msgstr "punto de entrada"
 
 msgid "exit spot"
 msgstr "punto de salida"
-
-msgid "feed is delayed by"
-msgstr "feed es retrasado por"
-
-msgid "for API calls that can access the cashier"
-msgstr "para llamadas de API que pueden acceder a la caja"
-
-msgid "for API calls that can create trades in the client account"
-msgstr ""
-"para llamadas de API que pueden crear transacciones en la cuenta del cliente"
-
-msgid "for API calls that change client settings"
-msgstr ""
-"para las llamadas de API que pueden cambiar la configuración del cliente"
-
-msgid "for API calls that only read client data"
-msgstr "para llamadas de API que solo leen datos del cliente"
 
 msgid "for mobile charts"
 msgstr "para los gráficos móviles"
@@ -2544,8 +4735,8 @@ msgstr "es cuando el contrato es procesado por nuestros servidores y el"
 msgid "main site"
 msgstr "sitio web principal"
 
-msgid "market is presently closed"
-msgstr "el mercado está actualmente cerrado"
+msgid "medium protection"
+msgstr ""
 
 msgid "minute"
 msgstr "minuto"
@@ -2562,20 +4753,17 @@ msgstr "oauth"
 msgid "of \"Now\", the"
 msgstr "de \"Ahora\", el"
 
+msgid "our helpful support desk"
+msgstr ""
+
 msgid "payment agent"
 msgstr "agente de pago"
-
-msgid "payments"
-msgstr "pagos"
 
 msgid "please play responsibly. Read about"
 msgstr "por favor juegue responsablemente. Lea sobre"
 
 msgid "points"
 msgstr "puntos"
-
-msgid "read"
-msgstr "leer"
 
 msgid "second"
 msgstr "segundo"
@@ -2604,9 +4792,6 @@ msgstr "tick"
 msgid "ticks"
 msgstr "ticks"
 
-msgid "trade"
-msgstr "comercio"
-
 msgid "trading experience"
 msgstr "experiencia comercial"
 
@@ -2616,6 +4801,9 @@ msgstr "frecuencia de comercio"
 msgid "websocket"
 msgstr "websocket"
 
+msgid "www.Binary.com"
+msgstr ""
+
 msgid "yes"
 msgstr "sí"
 
@@ -2624,6 +4812,387 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Retorno"
+
+msgid ""
+"enabling clients, affiliates, and developers to buy and sell Binary.com "
+"products"
+msgstr ""
+
+#~ msgid "%D MA Type"
+#~ msgstr "Tipo %D MA"
+
+#~ msgid "%D Period"
+#~ msgstr "Período %D"
+
+#~ msgid "%D Stroke"
+#~ msgstr "%D Stroke"
+
+#~ msgid "%K MA Type"
+#~ msgstr "Tipo %K MA"
+
+#~ msgid "%K Period"
+#~ msgstr "Periodo %K"
+
+#~ msgid "%K Stroke"
+#~ msgstr "%K Stroke"
+
+#~ msgid "-DI Stroke"
+#~ msgstr "-DI Stroke"
+
+#~ msgid "ADX MA Type"
+#~ msgstr "Tipo ADX MA"
+
+#~ msgid "ADX Stroke"
+#~ msgstr "Stroke ADX"
+
+#~ msgid "ATR Period"
+#~ msgstr "Período ATR"
+
+#~ msgid "Acceleration"
+#~ msgstr "Aceleración"
+
+#~ msgid "Account id not found"
+#~ msgstr "ID de cuenta no encontrado"
+
+#~ msgid "Account token not found"
+#~ msgstr "Token de la cuenta no encontrado"
+
+#~ msgid "Applied to"
+#~ msgstr "Aplicado a"
+
+#~ msgid "Aroon Down Stroke"
+#~ msgstr "Aroon Down Stroke"
+
+#~ msgid "Aroon Up Stroke"
+#~ msgstr "Aroon Up Stroke"
+
+#~ msgid "Background Color"
+#~ msgstr "Color de Fondo"
+
+#~ msgid "Blank window"
+#~ msgstr "Ventana en blanco"
+
+#~ msgid "Connection closed"
+#~ msgstr "Conexión cerrada"
+
+#~ msgid "Connection error"
+#~ msgstr "Error de conexión"
+
+#~ msgid "Contract is not yet started"
+#~ msgstr "El contrato no ha comenzado todavía"
+
+#~ msgid "DI Stroke"
+#~ msgstr "DI Stroke"
+
+#~ msgid "DX MA Type"
+#~ msgstr "Tipo DX MA"
+
+#~ msgid "Delete level(s)"
+#~ msgstr "Borrar nivel(es)"
+
+#~ msgid "Double MA Period"
+#~ msgstr "Periodo MA Doble"
+
+#~ msgid "Double MA Type"
+#~ msgstr "MA de Tipo Doble"
+
+#, fuzzy
+#~ msgid "Error getting market information!"
+#~ msgstr "Error al obtener datos para"
+
+#~ msgid "Fast %K MA Type"
+#~ msgstr "%K Tipo MA Rápido"
+
+#~ msgid "Fast %K Period"
+#~ msgstr "Periodo %K Rápido"
+
+#~ msgid "Fast Limit"
+#~ msgstr "Límite Rápido"
+
+#~ msgid "Fast MA Type"
+#~ msgstr "Tipo MA Rápido"
+
+#~ msgid "Fast Period"
+#~ msgstr "Período Rápido"
+
+#~ msgid "High Barrier"
+#~ msgstr "Barrera Alta"
+
+#~ msgid "High Stroke"
+#~ msgstr "Stroke Alto"
+
+#~ msgid "Histogram Color"
+#~ msgstr "Color del Histograma"
+
+#~ msgid "Histogram Color For Higher Values"
+#~ msgstr "Color del Histograma para Valores más Altos"
+
+#~ msgid "Histogram Color For Lower Values"
+#~ msgstr "Color del Histograma para Valores más Bajos"
+
+#~ msgid "Japan accounts are not supported"
+#~ msgstr "No se admiten cuentas de Japón"
+
+#~ msgid "Line Stroke"
+#~ msgstr "Stroke de la Línea"
+
+#~ msgid "Loading self-exclusion settings"
+#~ msgstr "Cargando ajustes de auto exclusión"
+
+#~ msgid "Logging out because of self-exclusion session time out!"
+#~ msgstr "¡Deconectar por que la sesión de autoexclusión ha caducado!"
+
+#~ msgid "Long MA Type"
+#~ msgstr "Tipo MA Largo"
+
+#~ msgid "Long ROC Period"
+#~ msgstr "Período ROC Largo"
+
+#~ msgid "Long Stop Line Stroke"
+#~ msgstr "Stroke de Línea de Parada Larga"
+
+#~ msgid "Long Term Period"
+#~ msgstr "Período de Largo Plazo"
+
+#~ msgid "Low Barrier"
+#~ msgstr "Límite Inferior"
+
+#~ msgid "Low Stroke"
+#~ msgstr "Stroke Bajo"
+
+#~ msgid "Lower Band Stroke"
+#~ msgstr "Stroke de Banda Inferior"
+
+#~ msgid "MA Type"
+#~ msgstr "Tipo MA"
+
+#~ msgid "MACD Line Stroke"
+#~ msgstr "Stroke de Línea MACD"
+
+#~ msgid "Mass Period"
+#~ msgstr "Período Total"
+
+#~ msgid "Max/Min Period"
+#~ msgstr "Período Máx/Mín"
+
+#~ msgid "Maximum"
+#~ msgstr "Máximo"
+
+#~ msgid "Middle Band Stroke"
+#~ msgstr "Stroke de Banda Media"
+
+#~ msgid "Multiplier"
+#~ msgstr "Multiplicador"
+
+#~ msgid "NB Dev Down"
+#~ msgstr "NB Dev Abajo"
+
+#~ msgid "NB Dev Up"
+#~ msgstr "NB Dev Arriba"
+
+#~ msgid "Note that tokens can possess one or more of these scopes"
+#~ msgstr ""
+#~ "Tenga en cuenta que los tokens pueden poseer uno o más de estos ámbitos"
+
+#~ msgid ""
+#~ "Note: Contract will be sold at the prevailing market price when the "
+#~ "request is received by our servers. This price may differ from the "
+#~ "indicated price"
+#~ msgstr ""
+#~ "Nota: El contrato se venderá al precio de mercado que prevalece cuando la "
+#~ "solicitud se reciba por nuestros servidores. Este precio puede diferir "
+#~ "del precio indicado"
+
+#~ msgid "Number of bars on sides"
+#~ msgstr "Número de barras en los lados"
+
+#~ msgid "Offset"
+#~ msgstr "Offset"
+
+#~ msgid "PPO Line Stroke"
+#~ msgstr "Stroke de Linea PPO"
+
+#~ msgid "Period"
+#~ msgstr "Período"
+
+#~ msgid "Period 1"
+#~ msgstr "Período 1"
+
+#~ msgid "Period 2"
+#~ msgstr "Periodo 2"
+
+#~ msgid "Period 3"
+#~ msgstr "Período 3"
+
+#~ msgid "Please choose at least one token scope"
+#~ msgstr "Por favor, elija al menos un ámbito de token"
+
+#~ msgid "Please enter the token name"
+#~ msgstr "Por favor, introduzca el nombre de token"
+
+#~ msgid "Please log in"
+#~ msgstr "Por favor, inicie sesión"
+
+#~ msgid "Plot Color"
+#~ msgstr "Color del Tema"
+
+#~ msgid "Price"
+#~ msgstr "Precio"
+
+#~ msgid "Purchase Time"
+#~ msgstr "Hora de la Compra"
+
+#~ msgid "Resale of this contract is not offered"
+#~ msgstr "La reventa de este contrato no se ofrece"
+
+#~ msgid "Self-Exclusion Facilities"
+#~ msgstr "Instalaciones de Autoexclusión"
+
+#~ msgid "Short MA Type"
+#~ msgstr "Tipo MA Corto"
+
+#~ msgid "Short ROC Period"
+#~ msgstr "Período ROC Corto"
+
+#~ msgid "Short Stop Line Stroke"
+#~ msgstr "Stroke de Línea Parada Corta"
+
+#~ msgid "Short Term Period"
+#~ msgstr "Periodo de Corto Plazo"
+
+#~ msgid "Sigma"
+#~ msgstr "Sigma"
+
+#~ msgid "Signal Line Stroke"
+#~ msgstr "Stroke de Línea de Señal"
+
+#~ msgid "Signal MA Type"
+#~ msgstr "Tipo Señal MA"
+
+#~ msgid "Signal Period"
+#~ msgstr "Periodo de la Señal"
+
+#~ msgid "Single MA Period"
+#~ msgstr "Período MA Único"
+
+#~ msgid "Single MA Type"
+#~ msgstr "Tipo MA Único"
+
+#~ msgid "Slow %D MA Type"
+#~ msgstr "Tipo %D MA Lento"
+
+#~ msgid "Slow %D Period"
+#~ msgstr "Periodo %D Lento"
+
+#~ msgid "Slow %K MA Type"
+#~ msgstr "Tipo %K MA Lento"
+
+#~ msgid "Slow %K Period"
+#~ msgstr "Periodo %K Lento"
+
+#~ msgid "Slow Limit"
+#~ msgstr "Límite Lento"
+
+#~ msgid "Slow MA Type"
+#~ msgstr "Typo MA Lento"
+
+#~ msgid "Slow Period"
+#~ msgstr "Periodo Lento"
+
+#~ msgid "Successfully added new token"
+#~ msgstr "Nuevo token añadido con éxito"
+
+#~ msgid ""
+#~ "There was a market data disruption during the contract period. For real-"
+#~ "money accounts we will attempt to correct this and settle the contract "
+#~ "properly, otherwise the contract will be cancelled and refunded. Virtual-"
+#~ "money contracts will be cancelled and refunded"
+#~ msgstr ""
+#~ "Hubo una interrupción de datos del mercado durante el período del "
+#~ "contrato. Para cuentas de dinero real intentaremos corregirlo y liquidar "
+#~ "el contrato correctamente, sino el contrato será cancelado y devuelto. "
+#~ "Los contratos de dinero virtual serán cancelados y devueltos"
+
+#~ msgid "There was an error"
+#~ msgstr "Hubo un error"
+
+#~ msgid "This contract has expired"
+#~ msgstr "Este contrato ha caducado"
+
+#~ msgid "Time Period"
+#~ msgstr "Período de Tiempo"
+
+#~ msgid "Timeout for websocket request"
+#~ msgstr "Solicitud de tiempo de espera para websocket"
+
+#~ msgid "Unlock"
+#~ msgstr "Desbloquear"
+
+#~ msgid "Upper Band Stroke"
+#~ msgstr "Stroke de Banda Superior"
+
+#~ msgid "Volume Factor"
+#~ msgstr "Factor de Volumen"
+
+#~ msgid "WMA Period"
+#~ msgstr "Período WMA"
+
+#~ msgid "You have excluded yourself until"
+#~ msgstr "Se ha excluido a sí mismo hasta"
+
+#~ msgid "Your browser doesn't support copy to clipboard"
+#~ msgstr "Su navegador no es compatible con copiar al portapapeles"
+
+#~ msgid "Your changes have been updated"
+#~ msgstr "Se han actualizado sus cambios"
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "feed is delayed by"
+#~ msgstr "feed es retrasado por"
+
+#~ msgid "for API calls that can access the cashier"
+#~ msgstr "para llamadas de API que pueden acceder a la caja"
+
+#~ msgid "for API calls that can create trades in the client account"
+#~ msgstr ""
+#~ "para llamadas de API que pueden crear transacciones en la cuenta del "
+#~ "cliente"
+
+#~ msgid "for API calls that change client settings"
+#~ msgstr ""
+#~ "para las llamadas de API que pueden cambiar la configuración del cliente"
+
+#~ msgid "for API calls that only read client data"
+#~ msgstr "para llamadas de API que solo leen datos del cliente"
+
+#~ msgid "market is presently closed"
+#~ msgstr "el mercado está actualmente cerrado"
+
+#~ msgid "payments"
+#~ msgstr "pagos"
+
+#~ msgid "read"
+#~ msgstr "leer"
+
+#~ msgid "trade"
+#~ msgstr "comercio"
+
+#~ msgid "Contract Details"
+#~ msgstr "Detalles del contrato"
+
+#~ msgid "Indicative"
+#~ msgstr "Indicativo"
+
+#~ msgid "Last Digit Prediction"
+#~ msgstr "Predicción de Último Dígito"
+
+#~ msgid "Last Digit is Over"
+#~ msgstr "El Último Dígito está por Encima"
+
+#~ msgid "Last Digit is Under"
+#~ msgstr "El Último Dígito está por Bajo"
 
 #~ msgid "Error getting data for"
 #~ msgstr "Error al obtener datos para"
