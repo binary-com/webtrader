@@ -45,7 +45,7 @@
     <script charset="utf-8">
         $(document).ready(function() {
 
-          var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3?app_id=0");
+          var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3?app_id=11");
           ws.debug = false;
           ws.timeoutInterval = 5400;
           ws.onopen = function(event) {
@@ -54,7 +54,6 @@
           };
           ws.onmessage = function(event) {
             var data = JSON.parse( event.data );
-            console.log(data)
             switch( data.msg_type ) {
               case "trading_times":
                 for (var marketIndex in data.trading_times.markets) {
