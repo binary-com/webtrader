@@ -87,8 +87,8 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
 
         function getType(id){
           if(!id) return;
-          var type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real",VRTH:"Virtual"};
-          var id = id.match(/^(MLT|MF|VRTC|VRTH)/i) ? id.match(/^(MLT|MF|VRTC|VRTH)/i)[0] : "REAL";
+          var type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real",VRCH:"Virtual"};
+          var id = id.match(/^(MLT|MF|VRTC|VRCH)/i) ? id.match(/^(MLT|MF|VRTC|VRCH)/i)[0] : "REAL";
           return type[id]+" Account";
         };
 
@@ -147,6 +147,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
             var is_current_account_real = data.authorize.is_virtual === 0;
 
             getLandingCompany().then(function(what_todo){
+              console.log(what_todo);
               state.show_financial_link = is_current_account_real && (what_todo === 'upgrade-mf');
               state.show_realaccount_link = !is_current_account_real && (what_todo === 'upgrade-mlt');
               var loginids = Cookies.loginids();

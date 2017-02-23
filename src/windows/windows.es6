@@ -503,7 +503,7 @@ export const init = function($parentObj) {
             if(err.code==="SelfExclusion"){
                //Login to virtual account instead.
                oauth.forEach((ele, i) => {
-                  if(ele.id.match(/^VRTC|VRTH/)){
+                  if(ele.id.match(/^VRTC|VRCH/)){
                      liveapi.switch_account(ele.id);
                      return;
                   }
