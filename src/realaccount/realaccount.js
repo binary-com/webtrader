@@ -169,11 +169,18 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         };
 
         state.user.is_valid = function() {
+            //All special characters /[~`!@#\$%\^\&\*\(\)\-\+=\{\}\[\]\\|:;\'\",.<>?/]/
             var user = state.user;
-            return user.first_name !== '' && user.last_name !== '' &&
+            return /^[a-zA-Z\xC0-\uFFFF\s\'.-]{2,30}$/.test(user.first_name)&& 
+                /^[a-zA-Z\xC0-\uFFFF\s\'.-]{2,30}$/.test(user.last_name) &&
                 moment(user.date_of_birth, 'YYYY-MM-DD', true).isValid() &&
-                user.residence !== '-' && user.address_line_1 !== '' &&
-                user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
+                user.residence !== '-' && 
+                user.address_line_1 !== '' && 
+                !/[~!#$%^&*)(_=+\[}{\]\\\"\;\:\?\><\|]+/.test(user.address_line_1) &&
+                !/[~!#$%^&*)(_=+\[}{\]\\\"\;\:\?\><\|]+/.test(user.address_line_2) &&
+                user.city_address !== '' &&
+                !/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|\d]+/.test(user.city_address) && 
+                /^[^+]{0,20}$/.test(user.address_postcode) &&
                 user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
                 (state.what_todo != "upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
                 (state.what_todo != "upgrade-mf" || (state.user.place_of_birth &&
@@ -364,17 +371,17 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
             .then(function(data) {
                 data = data.get_settings;
                 state.user.salutation = data.salutation || state.user.salutation;
-                state.user.first_name = data.first_name;
-                state.user.last_name = data.last_name;
-                state.user.date_of_birth = moment.unix(data.date_of_birth).format("YYYY-MM-DD");
-                state.user.address_line_1 = data.address_line_1;
-                state.user.address_line_2 = data.address_line_2;
-                state.user.city_address = data.address_city;
-                state.user.state_address = data.address_state;
-                state.user.address_postcode = data.address_postcode;
-                state.user.phone = data.phone;
-                state.user.residence = data.country_code;
-                state.user.residence_name = data.country;
+                state.user.first_name = data.first_name || '';
+                state.user.last_name = data.last_name || '';
+                state.user.date_of_birth = data.date_of_birth ? moment.unix(data.date_of_birth).format("YYYY-MM-DD") : moment().subtract(17,"years").format("YYYY-MM-DD");
+                state.user.address_line_1 = data.address_line_1 || '';
+                state.user.address_line_2 = data.address_line_2 || '';
+                state.user.city_address = data.address_city || '';
+                state.user.state_address = data.address_state || '';
+                state.user.address_postcode = data.address_postcode || '';
+                state.user.phone = data.phone || '';
+                state.user.residence = data.country_code || '';
+                state.user.residence_name = data.country || '';
             })
             .catch(error_handler);
 

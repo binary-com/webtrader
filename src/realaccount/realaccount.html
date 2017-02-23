@@ -13,14 +13,22 @@
             <span class='title'>First name</span>
             <input rv-value='user.first_name' rv-disabled="input_disabled"/>
             <div class='validations'>
-                <span rv-show='user.first_name | eq "" | and empty_fields.validate' class='validation'>* Please enter your first name.</span>
+                <span rv-show='user.first_name | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.first_name | length | lt 2 | and user.last_name | not-eq "" | and empty_fields.validate' class='validation'>Minimum of 2 characters required.</span>
+                <span rv-show="user.first_name | is-valid-regex '^[a-zA-Z\xC0-\uFFFF\s\'.-]{0,30}$' | eq false" class='validation'>
+                Only letters, space, hyphen, period, apostrophe are allowed.
+                </span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Family name</span>
             <input rv-value='user.last_name' rv-disabled="input_disabled"/>
             <div class='validations'>
-                <span rv-show='user.last_name | eq "" | and empty_fields.validate' class='validation'>* Please enter your family name.</span>
+                <span rv-show='user.last_name | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.last_name | length | lt 2 | and user.last_name | not-eq "" | and empty_fields.validate' class='validation'>Minimum of 2 characters required.</span>
+                <span rv-show="user.last_name | is-valid-regex '^[a-zA-Z\xC0-\uFFFF\s\'.-]{0,30}$' | eq false" class='validation'>
+                Only letters, space, hyphen, period, apostrophe are allowed.
+                </span>
             </div>
         </div>
         <div class='row'>
@@ -28,7 +36,7 @@
             <input type="text" rv-datepicker="user.date_of_birth" numberOfMonths="1" rv-disabled="input_disabled">
             <!-- <input rv-value='user.date_of_birth' /> -->
             <div class='validations'>
-                <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false | and empty_fields.validate' class='validation'>* Please enter a valid date in yyyy-mm-dd format.</span>
+                <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false | and empty_fields.validate' class='validation'>Please enter a valid date in yyyy-mm-dd format.</span>
             </div>
         </div>
         <div class='row'>
@@ -45,18 +53,26 @@
             <span class="title-big">Home Address</span>
         </div>
         <div class='row'>
-            <span class='title'>Street address</span>
-            <input rv-value='user.address_line_1' />
-            <input rv-value='user.address_line_2' />
+            <span class='title'>First line of home address</span>
+            <input rv-value='user.address_line_1' type="text" maxlength="70" />
             <div class='validations'>
-                <span rv-show='user.address_line_1 | eq "" | and empty_fields.validate' class='validation'>* Please enter your street address.</span>
+                <span rv-show='user.address_line_1 | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.address_line_1 | is-valid-regex "[^~!#$%^&*)(_=+\[}{\]\\\"\;\:\?\><\|]+" | eq false' class='validation'>Only letters, numbers, space, period, comma, - / @ ' are allowed.</span>
+            </div>
+        </div>
+        <div class='row'>
+            <span class='title'>Second line of home address</span>
+            <input rv-value='user.address_line_2' type="text" maxlength="70" />
+            <div class='validations'>
+                <span rv-show='user.address_line_2 | is-valid-regex "[^~!#$%^&*)(_=+\[}{\]\\\"\;\:\?\><\|]+" | eq false' class='validation'>Only letters, numbers, space, period, comma, - / @ ' are allowed.</span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Town/City</span>
-            <input rv-value='user.city_address' />
+            <input rv-value='user.city_address' type="text" maxlength="35" />
             <div class='validations'>
-                <span rv-show='user.city_address | eq "" | and empty_fields.validate' class='validation'>* Please enter your city address.</span>
+                <span rv-show='user.city_address | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.city_address | is-valid-regex "[^`~!@#$%^&*)(_=+\[}{\]\\\/\";:\?><,|\d]+" | eq false' class='validation'>Only letters, space, hyphen, period, apostrophe are allowed.</span>
             </div>
         </div>
         <div class='row'>
