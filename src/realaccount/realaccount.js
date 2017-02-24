@@ -171,15 +171,17 @@ define(['jquery', 'websockets/binary_websockets', 'windows/windows', 'common/riv
         state.user.is_valid = function() {
             //All special characters /[~`!@#\$%\^\&\*\(\)\-\+=\{\}\[\]\\|:;\'\",.<>?/]/
             var user = state.user;
-            return /^[a-zA-Z\xC0-\uFFFF\s\'.-]{2,30}$/.test(user.first_name)&& 
-                /^[a-zA-Z\xC0-\uFFFF\s\'.-]{2,30}$/.test(user.last_name) &&
+            return user.first_name !== '' && 
+                !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.first_name)&& 
+                user.last_name !== '' && 
+                !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.last_name) &&
                 moment(user.date_of_birth, 'YYYY-MM-DD', true).isValid() &&
                 user.residence !== '-' && 
                 user.address_line_1 !== '' && 
-                !/[~!#$%^&*)(_=+\[}{\]\\\"\;\:\?\><\|]+/.test(user.address_line_1) &&
-                !/[~!#$%^&*)(_=+\[}{\]\\\"\;\:\?\><\|]+/.test(user.address_line_2) &&
+                !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_1) &&
+                !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_2) &&
                 user.city_address !== '' &&
-                !/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|\d]+/.test(user.city_address) && 
+                !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.city_address) && 
                 /^[^+]{0,20}$/.test(user.address_postcode) &&
                 user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
                 (state.what_todo != "upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
