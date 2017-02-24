@@ -85,7 +85,7 @@
             <span class='title'>Postal code/ZIP</span>
             <input rv-value='user.address_postcode'  type="text" maxlength="20"/>
             <div class='validations'>
-                <span rv-show='user.address_postcode | is-valid-regex "^[^+]{0,20}$" | eq false' class='validation'>* Optional field, within 20 characters and may not contain '+'.</span>
+                <span rv-show="user.address_postcode | is-valid-regex '[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\&quot;,<>?/\s.\']' | eq true" class='validation'>Only letters, numbers, hyphen are allowed.</span>
             </div>
         </div>
         <div class='row'>

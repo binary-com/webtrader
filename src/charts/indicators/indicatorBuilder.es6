@@ -23,7 +23,7 @@ const init = async (chart, indicator) => {
 
     const state = {
       id: indicator.id,
-      fields: indicator.fields,
+      fields: indicator.fields.map(f => ({...f, is_valid: true})),
       levels: indicator.levels, /* optional */
       formula: indicator.formula, /* optional */
       description: indicator.description,
@@ -98,11 +98,13 @@ const init = async (chart, indicator) => {
                 text: "OK",
                 click: () => {
                     const options = { };
+                    let fields_are_valid = true;
                     if(!indicator.cdl_indicator) { /* normal indicator */
                       if(state.levels) {
                         options.levels = JSON.parse(JSON.stringify(state.levels.values));
                       }
                       state.fields.forEach(field => {
+                         fields_are_valid = field.is_valid && fields_are_valid;
                          if(field.type !== 'plotcolor') {
                             options[field.key] = field.value
                             return;
@@ -124,6 +126,11 @@ const init = async (chart, indicator) => {
 
                    if(state.id === 'fractal') { /* special case */
                        options.onSeriesID = chart.series[0].options.id
+                   }
+
+                   if(!fields_are_valid) {
+                      $.growl.error({ message: "Invalid parameter(s)!".i18n() });
+                      return;
                    }
 
                     before_add_callback && before_add_callback();

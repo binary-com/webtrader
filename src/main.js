@@ -109,20 +109,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         $('body').addClass('rtl-direction');
     }
 
-    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require([
-        'css!lib/jquery-ui/themes/base/jquery-ui.min.css',
-        'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
-        "css!lib/chosen-js/chosen.css",
-        'css!lib/growl/stylesheets/jquery.growl.css',
-        'css!lib/datatables/media/css/jquery.dataTables.min.css',
-        'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
-        'css!lib/colorpicker/jquery.colorpicker.css',
-        'css!charts/charts.css',
-        'css!main.css',
-        'css!binary-style',
-    ]);
-
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
@@ -268,8 +254,17 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
 
 
         }
-
-        require(["navigation/navigation", "jquery-ui"], function(navigation) {
+        /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
+        require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css',
+            'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
+            "css!lib/chosen-js/chosen.css",
+            'css!lib/growl/stylesheets/jquery.growl.css',
+            'css!lib/datatables/media/css/jquery.dataTables.min.css',
+            'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
+            'css!lib/colorpicker/jquery.colorpicker.css',
+            'css!charts/charts.css']);
+        
+        require(["navigation/navigation", "jquery-ui", 'css!main.css','css!binary-style'], function(navigation) {
             navigation.init(registerMenusCallback);
 
             /* initialize the top menu because other dialogs
