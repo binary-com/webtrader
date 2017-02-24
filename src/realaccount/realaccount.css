@@ -15,7 +15,7 @@
 }
 
 .real-dialog div.validations {
-    height: 18px;
+    height: auto;
     margin-top: -2px;
 }
 
