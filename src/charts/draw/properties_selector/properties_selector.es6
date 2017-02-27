@@ -4,7 +4,7 @@
 
 import $ from "jquery";
 import windows from "windows/windows";
-import html from "text!.//properties_selector.html";
+import html from "text!./properties_selector.html";
 
 let win = null;
 
