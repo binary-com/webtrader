@@ -1,32 +1,33 @@
 /**
  * Created by Arnab Karmakar on 12/7/15.
  */
+
 import 'highstock';
+import 'common/util';
 import $ from 'jquery';
 import popup from "charts/draw/properties_selector/properties_selector";
 
 /*
      This is a map storing information as -
-     horizontalLineOptions[seriesID] = {
+     verticalLineOptions[seriesID] = {
          stroke : 'red',
          strokeWidth : 1,
          dashStyle : 'dash',
          parentSeriesID : seriesID
      }
  */
-let horizontalLineOptionsMap = {};
+let verticalLineOptionsMap = {};
+
 
 export const init = function(refererChartID) {
    const H = Highcharts;
-
    //Make sure that HighStocks have been loaded
-   if (!H)
-      return;
+   if (!H) return;
 
    const chart = $(refererChartID).highcharts();
 
-   let options = {};
-   options.title = 'Horizontal Line'.i18n();
+   const options = {};
+   options.title = 'Vertical Line'.i18n();
    options.inputValues = [{
       name: 'Stroke width'.i18n(),
       type: 'number',
@@ -46,14 +47,14 @@ export const init = function(refererChartID) {
       H.addEvent(chart, 'click', function(evt) {
          if (chart.annotate) {
             chart.annotate = false;
-            addPlotLines(evt.yAxis[0].value, evt.yAxis[0].axis, css);
+            addPlotLines(evt.xAxis[0].value, evt.xAxis[0].axis, css);
             H.removeEvent(chart, 'click');
          }
       });
    }
 
    function addPlotLines(value, axis, css) {
-      const uniqueID = 'horizontalLine_' + new Date().getTime();
+      const uniqueID = 'verticalLine_' + new Date().getTime();
       const options = {
          value: value,
          width: 2,
@@ -68,17 +69,18 @@ export const init = function(refererChartID) {
          .css({ 'cursor': 'pointer' })
          .attr('id', uniqueID)
          .translate(0, 0)
-         .on('mousedown', updateHorizontalLine)
+         .on('mousedown', updateverticalLine)
          .on('dblclick', removeLine);
-      horizontalLineOptionsMap[uniqueID] = line;
+      verticalLineOptionsMap[uniqueID] = line;
       return line;
    }
 
-   function updateHorizontalLine(evt) {
+   function updateverticalLine(evt) {
       chart.annotate = true;
       const lineID = $(this).attr('id');
-      let line = horizontalLineOptionsMap[lineID];
-      let mouseUpEventAdded = false;
+      let line = verticalLineOptionsMap[lineID],
+         mouseUpEventAdded = false;
+
       H.wrap(H.Pointer.prototype, 'drag', function(c, e) {
          if (chart.annotate) {
             if (!mouseUpEventAdded) {
@@ -86,13 +88,12 @@ export const init = function(refererChartID) {
                $(refererChartID).one("mouseup", function() {
                   chart.annotate = false;
                   mouseUpEventAdded = false;
-                  H.removeEvent(chart, 'mousemove');
                });
             }
             if (chart.isInsidePlot(e.chartX - chart.plotLeft, e.chartY - chart.plotTop)) {
                if (line.element) {
-                  const value = chart.yAxis[0].toValue(e.chartY),
-                     axis = chart.yAxis[0],
+                  const value = chart.xAxis[0].toValue(e.chartX),
+                     axis = chart.xAxis[0],
                      css = {
                         color: line.stroke,
                         width: line["stroke-width"]
@@ -101,6 +102,7 @@ export const init = function(refererChartID) {
                   line = addPlotLines(value, axis, css);
                }
             }
+
          } else {
             c.call(this, e);
          }
@@ -109,18 +111,14 @@ export const init = function(refererChartID) {
 
    function removeLine(evt) {
       const lineID = $(this).attr('id');
-      removeLineWithID(lineID);
+      removeLineWithID(lineID)
    }
 
    function removeLineWithID(lineID) {
       // Remove all associated events.
       $("#" + lineID).off();
-      delete horizontalLineOptionsMap[lineID];
-      chart.yAxis[0].removePlotLine(lineID);
+      delete verticalLineOptionsMap[lineID];
+      chart.xAxis[0].removePlotLine(lineID);
    }
 
-}
-
-export default {
-   init
 }
