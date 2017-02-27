@@ -30,8 +30,7 @@ export const init = (li) => {
                (what_todo) => init_real_win(html, what_todo)
             )
             .catch(error_handler);
-      }
-      else {
+      } else {
          real_win.moveToTop();
       }
    });
@@ -177,10 +176,18 @@ const init_state = (root, what_todo) => {
 
    state.user.is_valid = () => {
       const user = state.user;
-      return user.first_name !== '' && user.last_name !== '' &&
+      return user.first_name !== '' &&
+         !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.first_name) &&
+         user.last_name !== '' &&
+         !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.last_name) &&
          moment(user.date_of_birth, 'YYYY-MM-DD', true).isValid() &&
-         user.residence !== '-' && user.address_line_1 !== '' &&
-         user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
+         user.residence !== '-' &&
+         user.address_line_1 !== '' &&
+         !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_1) &&
+         !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_2) &&
+         user.city_address !== '' &&
+         !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.city_address) &&
+         /^[^+]{0,20}$/.test(user.address_postcode) &&
          user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
          (state.what_todo != "upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
          (state.what_todo != "upgrade-mf" || (state.user.place_of_birth &&
@@ -225,7 +232,7 @@ const init_state = (root, what_todo) => {
          .then((data) => {
             state.user.disabled = false;
             const info = data.new_account_real;
-            oauth = local_storage.get('oauth');
+            const oauth = local_storage.get('oauth');
             oauth.push({ id: info.client_id, token: info.oauth_token, is_virtual: 0 });
             local_storage.set('oauth', oauth);
             $.growl.notice({ message: 'Account successfully created' });
@@ -371,17 +378,17 @@ const init_state = (root, what_todo) => {
       .then((data) => {
          data = data.get_settings;
          state.user.salutation = data.salutation || state.user.salutation;
-         state.user.first_name = data.first_name;
-         state.user.last_name = data.last_name;
-         state.user.date_of_birth = moment.unix(data.date_of_birth).format("YYYY-MM-DD");
-         state.user.address_line_1 = data.address_line_1;
-         state.user.address_line_2 = data.address_line_2;
-         state.user.city_address = data.address_city;
-         state.user.state_address = data.address_state;
-         state.user.address_postcode = data.address_postcode;
-         state.user.phone = data.phone;
-         state.user.residence = data.country_code;
-         state.user.residence_name = data.country;
+         state.user.first_name = data.first_name || '';
+         state.user.last_name = data.last_name || '';
+         state.user.date_of_birth = data.date_of_birth ? moment.unix(data.date_of_birth).format("YYYY-MM-DD") : moment().subtract(17, "years").format("YYYY-MM-DD");
+         state.user.address_line_1 = data.address_line_1 || '';
+         state.user.address_line_2 = data.address_line_2 || '';
+         state.user.city_address = data.address_city || '';
+         state.user.state_address = data.address_state || '';
+         state.user.address_postcode = data.address_postcode || '';
+         state.user.phone = data.phone || '';
+         state.user.residence = data.country_code || '';
+         state.user.residence_name = data.country || '';
       })
       .catch(error_handler);
 
@@ -408,4 +415,4 @@ const init_state = (root, what_todo) => {
       .catch(error_handler);
 }
 
-export default  { init }
+export default { init }

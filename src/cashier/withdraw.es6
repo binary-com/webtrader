@@ -28,7 +28,7 @@ class Withdraw {
         li.click(() => {
             if (!win) {
                 Promise.all([liveapi.cached.authorize(), checkAccountStatus.init("withdrawal")]).then(data => {
-                    if (!data[0].authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
+                    if (!data[0].authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
                         return currencyDialog.check_currency();
                     return true; // OK
                 }).then(() => {
