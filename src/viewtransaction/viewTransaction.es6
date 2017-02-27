@@ -239,9 +239,9 @@ const update_indicative = (data, state) => {
       }
    }
 
-   if(contract.sell_price){
-      state.table.sell_spot = contract.sell_spot;
-      state.table.sell_time = contract.sell_time;
+   if(contract.is_sold){
+      state.table.exit_tick = contract.exit_tick;
+      state.table.exit_tick_time = contract.exit_tick_time;
       state.table.sell_price = contract.sell_price;
       state.table.final_price = contract.sell_price;
    }
