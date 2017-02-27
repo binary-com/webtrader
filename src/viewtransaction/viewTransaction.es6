@@ -85,8 +85,7 @@ const init_chart = (root, state, options) => {
          }
       },
       title:{
-         text: title,
-         style: { fontSize:'16px' }
+         text: '' // Removing the title because it is redundant.
       },
       tooltip:{
          xDateFormat:'%A, %b %e, %H:%M:%S GMT',
@@ -227,16 +226,19 @@ const update_indicative = (data, state) => {
    }
    /*Required for spreads only*/
    if(state.table.contract_type === "SPREAD"){
+      console.log(state.table);
       state.table.profit = contract.bid_price - contract.buy_price;
       state.table.profit_point = state.table.profit / state.table.per_point;
+      state.table.entry_tick = contract.entry_level + '';
       if(state.table.entry_tick)
-         state.table.current_spot = state.table.entry_tick + state.table.profit_point * state.table.direction;
+         state.table.current_spot = contract.current_level;
       if(contract.is_sold){
          state.table.status = "Closed";
          state.table.is_sold = contract.is_sold;
-         state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction;
-         state.table.exit_tick_time = contract.sell_timeS;
+         state.table.exit_tick = contract.exit_level;
+         state.table.exit_tick_time = contract.sell_time;
       }
+      return;
    }
 
    if(contract.is_sold){
@@ -353,9 +355,14 @@ const init_state = (proposal, root) =>{
          user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
 
          entry_tick: proposal.entry_tick || proposal.entry_spot,
-         entry_tick_time: proposal.entry_tick_time,
+         entry_tick_time: proposal.date_start,
          exit_tick: proposal.exit_tick,
          exit_tick_time: proposal.exit_tick_time,
+         decPlaces: proposal.entry_tick ? ((/^\d+(\.\d+)?$/).exec(proposal.entry_tick)[1] || '-').length - 1 : undefined,
+
+         barrier_count: proposal.barrier_count,
+         low_barrier: proposal.low_barrier,
+         high_barrier: proposal.high_barrier,
 
          buy_price: proposal.buy_price,
          bid_price: undefined,
@@ -399,6 +406,7 @@ const init_state = (proposal, root) =>{
       const details   = shortcode.replace(proposal.underlying.toUpperCase() + '_', '').split('_');
       state.table.contract_type = "SPREAD";
       state.table.status = proposal.is_sold? "Closed": "Open";
+      state.table.decPlaces = ((/^\d+(\.\d+)?$/).exec(proposal.entry_level)[1] || '-').length - 1;
       state.table.per_point = details[1];
       state.table.stop_loss = details[3];
       state.table.stop_profit = details[4];
@@ -407,10 +415,18 @@ const init_state = (proposal, root) =>{
       state.table.direction = state.table.is_up ? 1 : -1;
       state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
       state.table.is_sold = proposal.is_sold;
+      state.table.exit_tick = proposal.exit_level
       state.table.exit_tick_time = state.table.is_sold ? proposal.sell_time : undefined;
       state.table.profit = parseFloat(proposal.sell_price ? proposal.sell_price : proposal.bid_price) - parseFloat(proposal.buy_price);
       state.table.profit_point = state.table.profit / state.table.per_point;
       state.table.pro_los = "Profit/Loss (" + state.table.currency.replace(" ","") + ")";
+      state.table.entry_tick = proposal.entry_level;
+      state.table.entry_tick_time = proposal.purchase_time;
+      state.table.current_spot = proposal.current_level;
+      state.table.current_spot_time = proposal.current_spot_time;
+      state.table.stop_loss_level = proposal.stop_loss_level;
+      state.table.stop_profit_level = proposal.stop_profit_level;
+
       state.table.request ={
          "proposal"        : 1,
          "symbol"          : proposal.underlying,
@@ -441,22 +457,7 @@ const init_state = (proposal, root) =>{
          state.chart.chart.hideLoading();
    };
 
-   get_chart_data(state, root).then(() => {
-      if(state.table.sell_time)
-         state.chart.chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Time'.i18n()});
-   });
-
-   /* backend doesn't always retun the sell_price when contract is soled,
-         TODO: remove this when it does */
-   liveapi.events.on_till('transaction', (data) => {
-      const transaction = data.transaction;
-      if(transaction.action === 'sell' && transaction.contract_id == state.contract_id) {
-         liveapi.send({proposal_open_contract: 1, contract_id: state.contract_id})
-            .then((_data) => update_indicative(_data, state))
-            .catch((err) => console.error(err));
-         return true; // unsubscribe
-      }
-   });
+   get_chart_data(state, root);
 
    return state;
 }
@@ -556,7 +557,7 @@ const get_chart_data = (state, root) => {
    const request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
-      end: state.table.sell_time ? state.table.sell_time*1 + margin : state.table.date_expiry ? state.table.date_expiry*1 + margin : 'latest',
+      end: state.table.sell_time ? state.table.sell_time*1 + margin : state.table.exit_tick_time ? state.table.exit_tick_time*1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
    };
@@ -571,68 +572,17 @@ const get_chart_data = (state, root) => {
    }
 
    return liveapi.send(request).then((data) => {
+
       state.chart.loading = '';
 
       const options = { title: state.chart.display_name };
       if(data.history) options.history = data.history;
       if(data.candles) options.candles = data.candles;
       const chart = init_chart(root, state, options);
+      
+      state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
 
-      if(data.history && !state.table.entry_tick_time) {
-         state.table.entry_tick_time = data.history.times.filter((t) => (t*1 > state.table.date_start*1) )[0];
-         if(!state.table.entry_tick) {
-            state.table.entry_tick = data.history.prices.filter(
-               (p,inx) => (data.history.times[inx]*1 > state.table.date_start*1)
-            )[0];
-         }
-      }
-      /* TODO: see if back-end is going to give uss (entry/exit)_tick and (entry/exit)_tick_time fileds or not! */
-      if((data.candles && !state.table.entry_tick_time) || state.table.contract_type.indexOf("SPREAD") === 0) {
-         state.table.entry_tick = undefined; // reseting value for calculation.
-         get_tick_value(state.chart.symbol, state.table.date_start).then((data) => {
-            const history = data.history;
-            if(history.times.length !== 1) return;
-            state.table.entry_tick_time = history.times[0];
-
-            if(state.table.contract_type.indexOf("SPREAD") === 0){
-               liveapi.send(state.table.request). then((_data) => {
-                  state.table.spread = _data.proposal.spread;
-                  state.table.decPlaces = ((/^\d+(\.\d+)?$/).exec(history.prices[0])[1] || '-').length - 1;
-                  state.table.entry_tick = parseFloat(history.prices[0]* 1 + state.table.direction * state.table.spread / 2);
-                  state.table.stop_loss_level = state.table.entry_tick + state.table.stop_loss / (state.table.is_point ? 1 : state.table.per_point) * (- state.table.direction);
-                  state.table.stop_profit_level = state.table.entry_tick + state.table.stop_profit / (state.table.is_point ? 1 : state.table.per_point) * (state.table.direction);
-                  if(state.table.is_sold){
-                     state.table.exit_tick = state.table.entry_tick + state.table.profit_point * state.table.direction; // Above is here.
-                  }
-                  // unsubscribe
-                  liveapi.send({forget: _data.proposal.id});
-               }).catch((err) => console.error(err));
-            }
-
-            chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
-         });
-      }
-      if(data.history && !state.table.exit_tick_time && state.table.is_ended && state.table.contract_type != "SPREAD") {
-         state.table.exit_tick_time = _.last(data.history.times.filter((t) => (t*1 <= state.table.date_expiry*1)));
-         state.table.exit_tick = _.last(data.history.prices.filter((p, inx) => (data.history.times[inx]*1 <= state.table.date_expiry*1)));
-      }
-      if(data.candles && !state.table.exit_tick_time && state.table.is_ended) {
-         get_tick_value(state.chart.symbol, state.table.date_expiry -2).then((data) => {
-            const history = data.history;
-            if(history.times.length !== 1) return;
-            state.table.exit_tick_time = history.times[0];
-
-            // Already set the value for exit tick above.
-            if(state.table.contract_type.indexOf("SPREAD") === 0){
-               return;
-            }
-
-            state.table.exit_tick = history.prices[0];
-            !state.table.user_sold && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-         });
-      }
-
-      state.table.purchase_time && chart.addPlotLineX({ value: state.table.purchase_time*1000, label: 'Purchase Time'.i18n()});
+      (!state.table.user_sold || state.table.contract_type === "SPREAD") && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
 
       state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
       !state.table.user_sold && state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
