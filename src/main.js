@@ -116,8 +116,18 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
     require(['jquery-ui', 'highstock', 'lokijs']);
 
+    /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
+    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css',
+        'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
+        "css!lib/chosen-js/chosen.css",
+        'css!lib/growl/stylesheets/jquery.growl.css',
+        'css!lib/datatables/media/css/jquery.dataTables.min.css',
+        'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
+        'css!lib/colorpicker/jquery.colorpicker.css',
+        'css!charts/charts.css']);
+
     function handle_affiliate_route() {
-        require(['affiliates/affiliates'], function(affiliates) {
+        require(['affiliates/affiliates', 'css!main.css', 'css!binary-style'], function(affiliates) {
             affiliates.init();
         });
     }
@@ -254,15 +264,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
 
 
         }
-        /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-        require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css',
-            'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
-            "css!lib/chosen-js/chosen.css",
-            'css!lib/growl/stylesheets/jquery.growl.css',
-            'css!lib/datatables/media/css/jquery.dataTables.min.css',
-            'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
-            'css!lib/colorpicker/jquery.colorpicker.css',
-            'css!charts/charts.css']);
         
         require(["navigation/navigation", "jquery-ui", 'css!main.css','css!binary-style'], function(navigation) {
             navigation.init(registerMenusCallback);
