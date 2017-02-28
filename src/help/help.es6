@@ -244,7 +244,7 @@ const init = () => {
     state.getContent = (id) => {
         state.current.content_page = id;
         state.current.content = $("<div/>").append($content.filter("#" + id))[0].innerHTML;
-        $(".content").animate({ scrollTop: 0 }, 500);
+        $(".content").animate({ scrollTop: 0 }, 0);
         $(document).find("a[href$='#contract-period']").click(() => {
             state.openSublist("contract period");
             return false;
@@ -275,7 +275,6 @@ const init = () => {
             if (state.current.content)
                 $(".help-dialog .content .items").find("a").each(function(i, link) {
                     link.onclick = (e) => {
-                        console.log($(e.target))
                         state.openSublist($(e.target).text(), $(e.target).parent().attr("href"));
                         return false;
                     };
@@ -294,9 +293,9 @@ const init = () => {
             state.current.sublist = [sublist_items[0]]; //About us page
         }
         state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
-        if (subsection) {
+        if (subsection && subsection.length > 1) {
             subsection = subsection.toLowerCase().replace(/[\s\(\)\.]/g, "");
-            const offset = $(".content " + subsection).offset().top - 100;
+            const offset = $(".content " + subsection).offset().top - 50;
             $(".content").animate({ scrollTop: offset }, 500);
         }
     }
@@ -410,6 +409,7 @@ export const showSpecificContent = (search_text) => {
         win.moveToTop();
 
     $(".help-search").val(search_text).trigger("input");
+    $($(".sublist .items").children()[0]).click();
 }
 
 export default {
