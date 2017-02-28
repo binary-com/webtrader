@@ -60,7 +60,7 @@ const hideOverlays = (scope) => {
     scope.toggleExportSelector(null, scope);
 }
 
-const changeChartType = (scope, chartType) => {
+const changeChartType = (scope, chartType, newTimePeriod = null) => {
     if (chartType == 'table') {
         //Do not change chart type
         state[scope.newTabId].showChartTypeSelector = false;
@@ -70,7 +70,7 @@ const changeChartType = (scope, chartType) => {
             return chart.value == chartType
         })[0];
         state[scope.newTabId].showChartTypeSelector = false;
-        charts.refresh('#' + scope.newTabId + '_chart', null, chartType);
+        charts.refresh('#' + scope.newTabId + '_chart', newTimePeriod, chartType);
         /* trigger an event on the chart dialog, so we can listen on type changes,
          * note: this will be use to update chart state for tracker.js */
         $('#' + scope.newTabId).trigger('chart-type-changed', chartType);
@@ -283,10 +283,13 @@ export const init = (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_ins
             })[0];
             responsiveButtons(scope, $("#" + scope.newTabId).find(".chart-view"));
             const tick = isTick(timePeriod);
-            if (tick && (scope.chartType.value === 'candlestick' || scope.chartType.value === 'ohlc'))
-                changeChartType(scope, 'line');
+            if (tick && (scope.chartType.value === 'candlestick' || scope.chartType.value === 'ohlc')) {
+                changeChartType(scope, 'line', timePeriod);
+            }
+            else {
+               charts.refresh('#' + scope.newTabId + '_chart', timePeriod, scope.chartType.value);
+            }
             showCandlestickAndOHLC(scope.newTabId, !tick && !isOverlaidView('#' + m_newTabId + '_chart'));
-            charts.refresh('#' + scope.newTabId + '_chart', timePeriod, scope.chartType.value);
             scope.exportChartURLShare = urlShareTemplate.format(scope.instrumentCode, timePeriod);
             scope.exportChartIframeShare = iframeShareTemplate.format(scope.instrumentCode, timePeriod);
             scope.fbShareLink = fbShareTemplate.format(encodeURIComponent(urlShareTemplate.format(m_instrumentCode, m_timePeriod)));
