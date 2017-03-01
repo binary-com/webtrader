@@ -127,12 +127,18 @@ const settingsData = {
                         return;
                     }
                 }
+                if(scope[index] && scope[index].indexOf("e")!==-1) {
+                    message.push("Please enter a valid value for ".i18n() + value.name);
+                    return;
+                }
                 if (!scope[index] || scope[index] <= 0 || (value.limit && scope[index] > value.limit)) {
                     message.push("Please enter a value between 0 and ".i18n() + value.limit + " for ".i18n() + value.name);
                     return;
                 }
 
                 data[index] = scope[index];
+            } else {
+                scope[index] = undefined;
             }
         });
 
