@@ -340,7 +340,7 @@ const init_state = (root, what_todo) => {
       liveapi.send(request)
          .then((data) => {
             const info = data.new_account_maltainvest;
-            oauth = local_storage.get('oauth');
+            const oauth = local_storage.get('oauth');
             oauth.push({ id: info.client_id, token: info.oauth_token, is_virtual: 0 });
             local_storage.set('oauth', oauth);
             $.growl.notice({ message: 'Account successfully created' });
