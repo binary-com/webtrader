@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 3/2/16.
  */
 VAR = function(data, options, indicators) {

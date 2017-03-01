@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 2/1/16.
  */
 PPO = function (data, options, indicators) {

@@ -87,8 +87,8 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
 
         function getType(id){
           if(!id) return;
-          var type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real"};
-          var id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
+          var type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real",VRCH:"Virtual"};
+          var id = id.match(/^(MLT|MF|VRTC|VRCH)/i) ? id.match(/^(MLT|MF|VRTC|VRCH)/i)[0] : "REAL";
           return type[id]+" Account";
         };
 
@@ -156,7 +156,7 @@ define(["jquery", "moment", "lodash", "websockets/binary_websockets", "common/ri
               if(_.some(loginids, {is_disabled: true})) {
                 $.growl.error({
                   fixed: true,
-                  message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
+                  message:"<a href='https://www.champion-fx.com/en/contactus' target='_blank'>"
                           + "Your account is locked, please contact customer support for more info.".i18n()
                           + "</a>"
                 });

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob>M on 1/30/16.
  */
 T3 = function (data, options, indicators) {

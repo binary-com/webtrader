@@ -65,6 +65,15 @@ body {
   opacity: 1;
 }
 
+#header .logo-wrapper div:nth-child(1) {
+    margin: 10px 10px;
+}
+
+#header .logo-wrapper div:nth-child(2) {
+    display: inline-block;
+    margin: -12px;
+}
+
 .top-nav-menu li ul {
   display: none;
 }

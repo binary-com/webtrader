@@ -1,15 +1,15 @@
-#Webtrader ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
+#Webtrader ![Build Status](https://travis-ci.org/ChampionFX/webtrader.svg?branch=master)
 
-This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://binary-com.github.io/webtrader) website.
+This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://ChampionFX.github.io/webtrader) website.
 
 ##Project goal
-The goal of this project is to create a full-screen trading interface for [Binary.com](https://www.binary.com) according to the following design:
+The goal of this project is to create a full-screen trading interface for [champion-fx.com](https://www.champion-fx.com) according to the following design:
 ![Webtrader](https://banners.binary.com/misc/webtrader-layout.jpg)
 
 ##How to work with this project
 ####Linux Users
         $ sudo apt-get install git
-        $ git clone https://github.com/binary-com/webtrader.git
+        $ git clone https://github.com/ChampionFX/webtrader.git
         $ cd webtrader
         $ sudo apt-get install node npm nodejs-legacy yarn
         $ yarn
@@ -19,7 +19,7 @@ The goal of this project is to create a full-screen trading interface for [Binar
     * Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
     * Download and install yarn from [the official website](https://yarnpkg.com/docs/install/#windows-tab).
     * Open Git Bash and run the following commands:
-        $ git clone https://github.com/binary-com/webtrader.git
+        $ git clone https://github.com/ChampionFX/webtrader.git
         $ cd webtrader
         $ yarn
 

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 1/30/16.
  */
 MACD = function (data, options, indicators) {

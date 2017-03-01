@@ -80,7 +80,7 @@ const refreshTable = () => {
     Promise.all(
             [
                 liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
-                liveapi.cached.send({ asset_index: 1 })
+                liveapi.cached.send({ asset_index: 1, landing_company: 'champion' })
             ])
         .then((results) => {
             try {

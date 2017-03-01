@@ -27,7 +27,7 @@
 		if(!Modernizr.svg){
 			document.getElementsByClassName("binary-logo-text")[0].style.display="none";
 			document.getElementsByClassName("logo")[0].style.width="100%";
-			document.getElementsByClassName("logo")[0].childNodes[1].src = "../images/binary-symbol-logo.png";
+			document.getElementsByClassName("logo")[0].childNodes[1].src = "<style-url>/images/logo/CFX_logomark_light.svg";
 		}
 
 		if(!Object.defineProperty){
@@ -41,12 +41,12 @@
 		<nav id="nav-container">
 	     <!-- logo -->
 	        <div class="logo-wrapper">
-	            <a href="https://binary.com" target="_blank">
+	            <a href="https://champion-fx.com" target="_blank">
 	                <div class="logo">
-	                    <img class="responsive" src="<style-url>/images/logo/symbol.svg">
+	                    <img class="responsive" src="<style-url>/images/logo/CFX_logomark_light.svg">
 	                </div>
 	                <div class="binary-logo-text">
-	                    <img class="responsive" src="<style-url>/images/logo/type.svg" style="width:80%;">
+	                    <img class="responsive" src="<style-url>/images/logo/CFX_logotype_light.svg">
 	                </div>
 	            </a>
 	        </div>
@@ -95,8 +95,8 @@
 	</div>
 	<div id="mobile-container">
 		<p><b>Webtrader</b> is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs.</p>
-		<p class="alternatives secondary-color"><b>While on the go, you can:</b></p>
-		<table class="mobile-options fill-bg-color">
+		<p class="alternatives secondary-color hidden"><b>While on the go, you can:</b></p>
+		<table class="mobile-options fill-bg-color hidden">
 			<tr>
 				<td>Try <a href="http://ticktrade.binary.com/" target="_blank">Tick Trade app</a></td>
 				<td>Use <a href="http://tradingview.binary.com/" target="_blank">Tradingview for Binary.com</a> for mobile charts</td>
@@ -104,6 +104,6 @@
 			</tr>
 		</table>
 	</div>
-	
+
 </body>
 </html>

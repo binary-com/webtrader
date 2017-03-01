@@ -51,7 +51,7 @@ define(['jquery', 'windows/windows', 'common/rivetsExtra', 'lodash', 'common/uti
   function init_state(root) {
     var state = {
       websocket_url: 'ws.binaryws.com',
-      oauth_url: 'oauth.binary.com',
+      oauth_url: 'oauth.champion-fx.com',
       app_id: ''
     };
 

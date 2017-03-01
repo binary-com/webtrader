@@ -27,7 +27,7 @@ export function init(li) {
     li.click(() => {
         if (!deposit_win) {
             Promise.all([liveapi.cached.authorize(), checkAccountStatus.init("deposit")]).then(data => {
-                if (!data[0].authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
+                if (!data[0].authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
                     return currencyDialog.check_currency();
                 return true; // OK
             }).then(() => {
@@ -166,9 +166,11 @@ function init_state(root) {
         })
         .catch(error_handler);
 
+
     /* get payment agents list */
     residence_promise.then(function() {
-        if (!state.user.residence)
+        /*if champion-fx then don't get payment agent*/
+        if (!state.user.residence || isChampionFx())
             return { paymentagent_list: { list: [] } };
         return liveapi.send({ paymentagent_list: state.user.residence });
     }).then(function(data) {

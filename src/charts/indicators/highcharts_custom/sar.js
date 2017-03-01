@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Mahboob.M on 1/30/16.
  */
 SAR = function (data, options, indicators) {

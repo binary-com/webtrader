@@ -1,8 +1,8 @@
-﻿<div class="trade-dialog">
+<div class="trade-dialog">
   <div class="trade-fields" rv-on-click='template.hide'>
     <ul class="categories-row">
         <li>
-            <span class="ui-icon ui-icon-help" rv-on-click="openHelp"></span>
+            <span class="ui-icon ui-icon-help" rv-if="is_champion | eq false" rv-on-click="openHelp"></span>
             <select class="contract-category-display"
                     rv-selectmenu="categories.value | notify categories.update duration.update | debounce proposal.onchange"
                     rv-selectrefresh="categories.array" >
