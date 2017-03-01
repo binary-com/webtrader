@@ -2081,9 +2081,9 @@
     "onChartIndicator": true,
     "editable": true,
     "fields": [
-      {"title": "Jaw Line Stroke", "key": "color", "value": "#0070ff", "type": "colorpicker"},
-      {"title": "Teeth Line Stroke", "key": "color", "value": "#ff003c", "type": "colorpicker"},
-      {"title": "Lips Line Stroke", "key": "color", "value": "#00c176", "type": "colorpicker"},
+      {"title": "Jaw Line Stroke", "key": "jawStroke", "value": "#0070ff", "type": "colorpicker"},
+      {"title": "Teeth Line Stroke", "key": "teethStroke", "value": "#ff003c", "type": "colorpicker"},
+      {"title": "Lips Line Stroke", "key": "lipsStroke", "value": "#00c176", "type": "colorpicker"},
       {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
       {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"},
       {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
