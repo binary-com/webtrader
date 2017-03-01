@@ -8,7 +8,8 @@ import 'common/util';
 import 'jquery-growl'
 let win = null;
 liveapi.events.on("login", (data) => {
-    if (Cookies.loginids()[0].is_mf)
+    const is_mf = /MF/gi.test(local_storage.get('oauth')[0].id);
+    if (is_mf)
         liveapi.send({ "get_account_status": 1 }).then((data) => {
             if (!/crs_tin_information/.test(data.get_account_status.status)) {
                 if (win) {
