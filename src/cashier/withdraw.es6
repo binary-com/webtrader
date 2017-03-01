@@ -319,23 +319,21 @@ class Withdraw {
         }
 
         transfer.isAvailable = () => {
-            if(state.login_details.is_mlt || state.login_details.is_mf) {
+            if (state.login_details.is_mlt || state.login_details.is_mf) {
                 let is_upgradable = true;
-                Cookies.loginids().forEach((id)=>{
-                    if(id.id !== state.login_details.id && (id.is_mf || id.is_mlt)){
+                Cookies.loginids().forEach((id) => {
+                    if (id.id !== state.login_details.id && (id.is_mf || id.is_mlt)) {
                         is_upgradable = false;
                         transfer.value = [{
-                                value: state.login_details.id+"_to_"+id.id,
-                                text: "from account ("+state.login_details.id+
-                                ") to account ("+id.id+")"
-                            }];
-                        if(state.login_details.is_mf) {
-                            transfer.value.push({
-                                value: id.id+"_to_"+state.login_details.id,
-                                text: "from account ("+id.id+
-                                ") to account ("+state.login_details.id+")"
-                            });
-                        }
+                            value: state.login_details.id + "_to_" + id.id,
+                            text: "from account (" + state.login_details.id +
+                                ") to account (" + id.id + ")"
+                        }];
+                        transfer.value.push({
+                            value: id.id + "_to_" + state.login_details.id,
+                            text: "from account (" + id.id +
+                                ") to account (" + state.login_details.id + ")"
+                        });
                         transfer.account = transfer.value[0].value;
                     }
                 });
