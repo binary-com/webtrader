@@ -8,6 +8,7 @@ import liveapi from '../websockets/binary_websockets';
 import 'jquery-ui';
 import 'datatables';
 import 'jquery-growl';
+import 'css!./portfolio.css';
 
 let portfolioWin = null;
 let table = null;
@@ -124,7 +125,6 @@ const on_arrow_click =(e) => {
 }
 
 const initPortfolioWin = () => {
-    require(['css!portfolio/portfolio.css']);
     /* refresh blance on blance change */
     const on_balance = liveapi.events.on('balance',(data) => {
         if(data.balance !== undefined && data.balance.currency !== undefined) {
