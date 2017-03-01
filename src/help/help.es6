@@ -244,7 +244,7 @@ const init = () => {
     state.getContent = (id) => {
         state.current.content_page = id;
         state.current.content = $("<div/>").append($content.filter("#" + id))[0].innerHTML;
-        $(".content").animate({ scrollTop: 0 }, 500);
+        $(".content").animate({ scrollTop: 0 }, 0);
         $(document).find("a[href$='#contract-period']").click(() => {
             state.openSublist("contract period");
             return false;
@@ -265,19 +265,18 @@ const init = () => {
 
             // Formatting content to show in a particular format;
             state.current.content = '<div class="search-text">' + content.reduce(function(prev, curr) {
-                let formatted = "<a href=\"#\"><h3>" + curr.title + "</h3></a>" +
-                    "<strong>" + curr.title_s + "</strong>" +
+                let formatted = "<a href=\"#" + curr.title_s + "\"><h3>" + curr.title + "</h3></a>" +
+                    "<strong>" + (curr.title_s_copy ? curr.title_s_copy : '') + "</strong>" +
                     "<br/><br/>" + curr.description;
                 prev = prev ? prev + "<hr>" + formatted : formatted;
                 return prev
             }, '') + '</div>';
 
-            /*
-            state.current.content = */
             if (state.current.content)
                 $(".help-dialog .content .items").find("a").each(function(i, link) {
                     link.onclick = (e) => {
-                        state.openSublist($(e.target).text());
+                        state.openSublist($(e.target).text(), $(e.target).parent().attr("href"));
+                        return false;
                     };
                 });
         } else {
@@ -285,7 +284,7 @@ const init = () => {
         }
     }
 
-    state.openSublist = (sublist_name) => {
+    state.openSublist = (sublist_name, subsection) => {
         state.current.list = null;
         state.current.sublist = sublist_items.filter((item) => {
             return item.text.toLowerCase().indexOf(sublist_name.toLowerCase()) != -1;
@@ -294,6 +293,11 @@ const init = () => {
             state.current.sublist = [sublist_items[0]]; //About us page
         }
         state.current.sublist && state.current.sublist.length && state.getContent(state.current.sublist[0].id);
+        if (subsection && subsection.length > 1) {
+            subsection = subsection.toLowerCase().replace(/[\s\(\)\.]/g, "");
+            const offset = $(".content " + subsection).offset().top - 50;
+            $(".content").animate({ scrollTop: offset }, 500);
+        }
     }
 
     state.clearSearch = () => {
@@ -311,7 +315,8 @@ const init = () => {
         let subSectionArray = [];
         let descriptionArray = [];
         let title = '',
-            title_s = '';
+            title_s = '',
+            prev_text = '';
         while (1) {
             let description = '';
             if (walker.currentNode.nodeName == "DIV" && walker.currentNode.id) {
@@ -324,28 +329,51 @@ const init = () => {
             } else if (walker.currentNode.nodeName == "H3") {
                 title_s = walker.currentNode.innerText;
                 if (title_s.toLowerCase().indexOf(q) != -1) {
+                    const matchingText = title_s.substr(title_s.toLowerCase().indexOf(q), q.length);
+                    const title_s_copy = title_s.replace(matchingText, "<span class='highlight'>" + matchingText + "</span>");
                     while (walker.nextNode()) {
                         if (walker.currentNode.nodeName == "DIV" || walker.currentNode.nodeName == "H3")
                             break;
+                        if (walker.currentNode.nodeName === "UL") {
+                            description = description + "<ul>" + walker.currentNode.innerHTML + "</ul>";
+                            continue;
+                        }
+                        if (walker.currentNode.nodeName === "LI" || walker.currentNode.nodeName === "STRONG")
+                            continue;
                         description = description + walker.currentNode.innerHTML;
                     }
 
                     subSectionArray.push({
                         title: title,
                         title_s: title_s,
+                        title_s_copy: title_s_copy,
                         description: description
                     });
                     continue;
                 }
             } else if (walker.currentNode.nodeName !== "DIV" && walker.currentNode.nodeName !== "H2" &&
-                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) != -1) {
-                const index = walker.currentNode.innerText.toLowerCase().indexOf(q);
-                description = "<p>..." + walker.currentNode.innerText.substr(index, 100) + "...</p>";
+                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) != -1 &&
+                walker.currentNode.nodeName !== "LI" && walker.currentNode.nodeName !== "STRONG" &&
+                walker.currentNode.nodeName !== "H4") {
+                let index = walker.currentNode.innerText.toLowerCase().indexOf(q);
+
+                if (walker.currentNode.nodeName === "UL" && index !== -1) {
+                    index = walker.currentNode.innerHTML.toLowerCase().indexOf(q);
+                    const matchingText = walker.currentNode.innerHTML.substr(index, q.length);
+                    description = "<ul>" + walker.currentNode.innerHTML.replace(matchingText, "<span class='highlight'>" + matchingText + "</span>") + "</ul>";
+                } else {
+                    const matchingText = walker.currentNode.innerText.substr(index, q.length);
+                    description = walker.currentNode.innerText.replace(matchingText, "<span class='highlight'>" + matchingText + "</span>");
+                }
+
                 descriptionArray.push({
                     title: title,
                     title_s: title_s,
+                    title_s_copy: title_s,
                     description: description
                 });
+            } else {
+                prev_text = walker.currentNode.innerText;
             }
 
             if (!walker.nextNode())
@@ -381,6 +409,7 @@ export const showSpecificContent = (search_text) => {
         win.moveToTop();
 
     $(".help-search").val(search_text).trigger("input");
+    $($(".sublist .items").children()[0]).click();
 }
 
 export default {
