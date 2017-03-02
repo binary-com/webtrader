@@ -355,7 +355,7 @@ const init_state = (proposal, root) =>{
          user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
 
          entry_tick: proposal.entry_tick || proposal.entry_spot,
-         entry_tick_time: proposal.date_start,
+         entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
          exit_tick: proposal.exit_tick,
          exit_tick_time: proposal.exit_tick_time,
          decPlaces: proposal.entry_tick ? ((/^\d+(\.\d+)?$/).exec(proposal.entry_tick)[1] || '-').length - 1 : undefined,
@@ -399,7 +399,6 @@ const init_state = (proposal, root) =>{
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
-
    // This values are required for SPREADS type contract.
    if(proposal.contract_type.indexOf("SPREAD") === 0){
       const shortcode = proposal.shortcode.toUpperCase();
@@ -593,6 +592,9 @@ const get_chart_data = (state, root) => {
       state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
       state.chart.high_barrier && chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier ('.i18n() + state.chart.high_barrier + ')'});
       state.chart.low_barrier && chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier ('.i18n() + state.chart.low_barrier + ')', color: 'red'});
+
+      state.table.stop_loss_level && chart.addPlotLineY({value: state.table.stop_loss_level*1, label: 'Stop Loss ('.i18n() + state.table.stop_loss_level + ')', color: 'red'});
+      state.table.stop_profit_level && chart.addPlotLineY({value: state.table.stop_profit_level*1, label: 'Stop Profit ('.i18n() + state.table.stop_profit_level + ')'});
 
       state.chart.chart = chart;
       state.chart.manual_reflow();
