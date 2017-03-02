@@ -14,7 +14,7 @@ import 'highcharts-exporting';
 import 'common/util';
 import 'paralleljs';
 import 'jquery-growl';
-import $Hmw from 'common/highcharts.mousewheel';
+import $Hmw from 'common/highchartsMousewheel';
 import ins from 'instruments/instruments';
 
 const indicator_values = _(JSON.parse(indicators_json)).values().value();
