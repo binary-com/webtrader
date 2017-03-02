@@ -355,7 +355,7 @@ const init_state = (proposal, root) =>{
          user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
 
          entry_tick: proposal.entry_tick || proposal.entry_spot,
-         entry_tick_time: proposal.date_start,
+         entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
          exit_tick: proposal.exit_tick,
          exit_tick_time: proposal.exit_tick_time,
          decPlaces: proposal.entry_tick ? ((/^\d+(\.\d+)?$/).exec(proposal.entry_tick)[1] || '-').length - 1 : undefined,
