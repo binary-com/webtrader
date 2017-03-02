@@ -399,7 +399,6 @@ const init_state = (proposal, root) =>{
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
-   console.log(state,proposal);
    // This values are required for SPREADS type contract.
    if(proposal.contract_type.indexOf("SPREAD") === 0){
       const shortcode = proposal.shortcode.toUpperCase();
