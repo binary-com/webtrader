@@ -2092,5 +2092,24 @@
       "Bill Williams"
     ],
     "description": "Bill Williams introduced the Alligator indicator in 1995.  The Alligator is as much a metaphor as it is an indicator.  It consists of three lines, overlaid on a pricing chart, that represent the jaw, the teeth and the lips of the beast, and was created to help the trader confirm the presence of a trend and its direction.  The Alligator indicator can also help traders designate impulse and corrective wave formations, but the tool works best when combined with a momentum indicator."
+  },
+  "ichimoku": {
+    "id": "ichimoku",
+    "long_display_name": "Ichimoku",
+    "short_display_name": "ICHIMOKU",
+    "onChartIndicator": true,
+    "editable": true,
+    "fields": [
+      {"title": "Jaw Line Stroke", "key": "tenkanSenStroke", "value": "#0070ff", "type": "colorpicker"},
+      {"title": "Teeth Line Stroke", "key": "teethStroke", "value": "#ff003c", "type": "colorpicker"},
+      {"title": "Lips Line Stroke", "key": "lipsStroke", "value": "#00c176", "type": "colorpicker"},
+      {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "category": [
+      "Momentum Indicators"
+    ],
+    "description": "The Ichimoku Cloud, also known as Ichimoku Kinko Hyo, is a versatile indicator that defines support and resistance, identifies trend direction, gauges momentum and provides trading signals. Ichimoku Kinko Hyo translates into “one look equilibrium chart”."
   }
 }
