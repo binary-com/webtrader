@@ -107,24 +107,24 @@
       <div> <p>Entry Spot</p>
           <span rv-tooltip="table.entry_tick_time | moment | or '-'"
                 rv-if="table.entry_tick_time"
-                rv-text="table.entry_tick | to-fixed table.decPlaces | or '-'"
+                rv-text="table.entry_tick | or '-'"
                 class="dotted-underline"></span>
       </div>
       <div rv-if="table.is_sold | eq 1"> <p>Exit Spot</p>
           <span rv-tooltip="table.exit_tick_time | moment | or '-'"
-                rv-text="table.exit_tick | to-fixed table.decPlaces | or '-'"
+                rv-text="table.exit_tick | or '-'"
                 rv-class-dotted-underline="table.exit_tick"></span>
       </div>
       <div rv-if="table.is_sold | eq 0"> <p>Current Level</p>
           <span rv-tooltip="table.current_spot_time | moment | or '-'"
-                rv-text="table.current_spot | to-fixed table.decPlaces | or '-'"
+                rv-text="table.current_spot | or '-'"
                 rv-class-dotted-underline="table.current_spot"></span>
       </div>
       <div> <p>Stop Loss Level</p>
-          <span rv-text="table.stop_loss_level | to-fixed table.decPlaces"></span>
+          <span rv-text="table.stop_loss_level"></span>
       </div>
       <div> <p>Stop Profit Level</p>
-          <span rv-text="table.stop_profit_level | to-fixed table.decPlaces"></span>
+          <span rv-text="table.stop_profit_level"></span>
       </div>
       <div> <p>Amount Per Point</p>
           <span rv-text="table.amount_per_point"></span>
