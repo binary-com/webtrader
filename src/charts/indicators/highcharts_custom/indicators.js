@@ -150,7 +150,10 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                                                 indicatorSeries.data[indicatorSeries.data.length - 1].update({
                                                     color: iu.color
                                                 });
-                                            } else {
+                                            } else if (iu.time) { // iu.time is used by ichimoku indicator
+                                                indicatorSeries.addPoint([iu.time, iu.value]);
+                                            }
+                                            else {
                                                 indicatorSeries.addPoint([time, iu.value]);
                                             }
                                         }

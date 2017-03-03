@@ -2100,11 +2100,15 @@
     "onChartIndicator": true,
     "editable": true,
     "fields": [
-      {"title": "Jaw Line Stroke", "key": "tenkanSenStroke", "value": "#0070ff", "type": "colorpicker"},
-      {"title": "Teeth Line Stroke", "key": "teethStroke", "value": "#ff003c", "type": "colorpicker"},
+      {"title": "Tenkan Sen Stroke", "key": "tenkanSenStroke", "value": "#ff003c", "type": "colorpicker"},
+      {"title": "Tenkan Sen Period", "key": "tenkanSenPeriod", "min": 1, "max": 100, "value": 7, "type": "slider"},
+      {"title": "Kijun Sen Stroke", "key": "kijunSenStroke", "value": "#640e22", "type": "colorpicker"},
+      {"title": "Kijun Sen Period", "key": "kijunSenPeriod", "min": 1, "max": 100, "value": 22, "type": "slider"},
+      {"title": "Chikou Span Stroke", "key": "chikouSpanStroke", "value": "#ffabbf", "type": "colorpicker"},
+      {"title": "Chikou Span Period", "key": "chikouSpanPeriod", "min": 1, "max": 100, "value": 22, "type": "slider"},
       {"title": "Lips Line Stroke", "key": "lipsStroke", "value": "#00c176", "type": "colorpicker"},
       {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
-      {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
       {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
     ],
     "category": [
