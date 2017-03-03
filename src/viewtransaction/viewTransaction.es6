@@ -226,7 +226,6 @@ const update_indicative = (data, state) => {
    }
    /*Required for spreads only*/
    if(state.table.contract_type === "SPREAD"){
-      console.log(state.table);
       state.table.profit = contract.bid_price - contract.buy_price;
       state.table.profit_point = state.table.profit / state.table.per_point;
       state.table.entry_tick = contract.entry_level + '';
@@ -246,6 +245,7 @@ const update_indicative = (data, state) => {
       state.table.exit_tick_time = contract.exit_tick_time;
       state.table.sell_price = contract.sell_price;
       state.table.final_price = contract.sell_price;
+      !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
    }
 
    if(!state.chart.barrier && contract.barrier) {
@@ -358,7 +358,6 @@ const init_state = (proposal, root) =>{
          entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
          exit_tick: proposal.exit_tick,
          exit_tick_time: proposal.exit_tick_time,
-         decPlaces: proposal.entry_tick ? ((/^\d+(\.\d+)?$/).exec(proposal.entry_tick)[1] || '-').length - 1 : undefined,
 
          barrier_count: proposal.barrier_count,
          low_barrier: proposal.low_barrier,
@@ -405,7 +404,6 @@ const init_state = (proposal, root) =>{
       const details   = shortcode.replace(proposal.underlying.toUpperCase() + '_', '').split('_');
       state.table.contract_type = "SPREAD";
       state.table.status = proposal.is_sold? "Closed": "Open";
-      state.table.decPlaces = ((/^\d+(\.\d+)?$/).exec(proposal.entry_level)[1] || '-').length - 1;
       state.table.per_point = details[1];
       state.table.stop_loss = details[3];
       state.table.stop_profit = details[4];
