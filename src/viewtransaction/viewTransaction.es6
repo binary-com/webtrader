@@ -226,7 +226,6 @@ const update_indicative = (data, state) => {
    }
    /*Required for spreads only*/
    if(state.table.contract_type === "SPREAD"){
-      console.log(state.table);
       state.table.profit = contract.bid_price - contract.buy_price;
       state.table.profit_point = state.table.profit / state.table.per_point;
       state.table.entry_tick = contract.entry_level + '';
@@ -335,7 +334,6 @@ const sell_at_market = (state, root) => {
 }
 
 const init_state = (proposal, root) =>{
-   console.log(proposal);
    const state = {
       route: {
          value: 'table',
@@ -578,7 +576,6 @@ const get_chart_data = (state, root) => {
       if(data.history) options.history = data.history;
       if(data.candles) options.candles = data.candles;
       const chart = init_chart(root, state, options);
-      console.log(state.table);
       
       state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
 
