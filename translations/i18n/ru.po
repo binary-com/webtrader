@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2017-02-28 07:19+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2017-03-06 21:47+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Weblate 2.12\n"
 
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
@@ -85,7 +85,7 @@ msgid "'contract period'"
 msgstr "\"период контракта\""
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "Контракты Касание"
 
 msgid "(formerly known as"
 msgstr "(ранее известный как"
@@ -259,10 +259,10 @@ msgstr ""
 "выйдет за них"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr ""
+msgstr "– сделайте прогноз, коснется ли рынок выбранного ценового барьера"
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "– досрочно продайте свои долгосрочные контракты по рыночной цене"
 
 msgid ""
 "- set your trades on 'gut feel', or use technical or fundamental analysis"
@@ -272,42 +272,48 @@ msgid "- start trading with as little as $5"
 msgstr ""
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "– торгуйте 24/7, даже на выходных"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr ""
+"– круглосуточно торгуйте Индексами волатильности, собственной разработкой "
+"Binary.com"
 
 msgid "- trade Binary.com's proprietary volatility indices"
-msgstr ""
+msgstr "– торгуйте Индексами волатильности – уникальной разработкой Binary.com"
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "– торгуйте всеми основными валютными парами"
 
 msgid "- trade all major FX pairs, around the clock"
-msgstr ""
+msgstr "– круглосуточно торгуйте всеми основными валюными парами"
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "– торгуйте крупнейшими мировыми биржевыми индексами"
 
 msgid ""
 "- trade currencies, indices and commodities in rising, falling, sideways, "
 "quiet and volatile markets"
 msgstr ""
+"– торгуйте валютами, индексами и сырьевыми товарами в условиях снижающихся "
+"или растущих, волатильных или неподвижных рынков"
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "– торгуйте золотом и нефтью – самыми популярными сырьевыми товарами"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "– вверх/вниз, касание/нет касания, внутри/вне"
 
 msgid "- we challenge you to find better returns on any competing website"
 msgstr ""
+"– Вы едва ли сможете найти более выгодное предложение на сайтах конкурентов"
 
 msgid "- win the same proportional return on stakes of all values"
 msgstr ""
 
 msgid "- you know from the start what you will win or lose"
 msgstr ""
+"– Вы всегда знаете сумму возможной прибыли или потерь ещё до начала контакта"
 
 msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
