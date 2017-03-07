@@ -1,8 +1,8 @@
 <div class="trade-conf">
 
   <span class="close secondary-bg-color"
-        rv-show='back.visible'
-        rv-on-click='back.onclick'>X</span>
+        rv-show='close_button.visible'
+        rv-on-click='close_button.onclick'>X</span>
 
   <ul class="title-row fill-bg-color">
     <li>
@@ -51,9 +51,9 @@
     </li>
   </ul>
 
-  <ul class='view-row fill-bg-color' rv-if="arrow.visible">
+  <ul class='view-row fill-bg-color' rv-if="view_button.visible">
     <li class="view">
-      <button rv-on-click='arrow.onclick'>View</button>
+      <button rv-on-click='view_button.onclick'>View</button>
     </li>
   </ul>
 
