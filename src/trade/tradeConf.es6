@@ -111,7 +111,7 @@ const register_ticks = (state, extra) => {
 
     /* No need to worry about WS connection getting closed, because the user will be logged out */
     const add_tick = (tick) => {
-        if (_.findIndex(state.ticks.array, (t) => (t.epoch * 1 === tick.current_spot_time * 1)) === -1 && tick_count > 0 && tick.barrier) {
+        if (_.findIndex(state.ticks.array, (t) => (t.epoch * 1 === tick.current_spot_time * 1)) === -1 && tick_count > 0 && (tick.barrier || state.ticks.category === 'Digits')) {
             const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
             state.ticks.array.push({
                 quote: tick.current_spot,
@@ -119,8 +119,7 @@ const register_ticks = (state, extra) => {
                 number: state.ticks.array.length + 1,
                 tooltip: moment.utc(tick.current_spot_time * 1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
                     extra.symbol_name + " " + tick.current_spot,
-                barrier: tick.barrier,
-                decimal_digits: decimal_digits
+                barrier: tick.barrier
             });
             --tick_count;
             if (tick_count === 0) {
@@ -147,7 +146,8 @@ const register_ticks = (state, extra) => {
         if (contract.contract_id !== extra.contract_id) return;
         entry = contract.entry_tick_time * 1;
         expiry = contract.date_expiry * 1; /* date_expiry gets updated when contract is settled !!! */
-        add_tick(data.proposal_open_contract);
+        if(contract.current_spot_time >= entry)
+            add_tick(data.proposal_open_contract);
         return;
     });
 }
