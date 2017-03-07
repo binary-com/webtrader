@@ -493,7 +493,7 @@ const update_live_chart = (state, granularity) => {
          const tick = data.tick;
          chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
          /* stop updating when contract is expired */
-         if(tick.epoch*1 > state.table.date_expiry*1) {
+         if(tick.epoch*1 > state.table.date_expiry*1 || state.table.is_sold) {
             if(perv_tick) {
                state.table.exit_tick = perv_tick.quote;
                state.table.exit_tick_time = perv_tick.epoch*1;
