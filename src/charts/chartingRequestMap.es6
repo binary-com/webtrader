@@ -47,7 +47,8 @@ export const barsLoaded = function(instrumentCdAndTp) {
 
         if (series) { //Update mode
 
-            const lastBarOpenTime = series.data[series.data.length - 1].x || series.data[series.data.length - 1].time;
+            const lastBarOpenTime = series.data[series.data.length - 1] && (series.data[series.data.length - 1].x || series.data[series.data.length - 1].time);
+            if(!lastBarOpenTime) return;
             const db_bars = barsTable
                 .chain()
                 .find({ instrumentCdAndTp: key })

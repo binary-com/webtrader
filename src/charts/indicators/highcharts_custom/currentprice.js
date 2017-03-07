@@ -41,11 +41,12 @@ define(['common/util', 'highstock'], function () {
                     {
 
                         var lastData = data[data.length - 1];
-                        var price = lastData.y || lastData.close || lastData[4];
-                        if (price > 0.0) {
-                            addPlotLines.call(this, currentPriceOptions, price);
+                        if(lastData){
+                            var price = lastData.y || lastData.close || lastData[4];
+                            if (price > 0.0) {
+                                addPlotLines.call(this, currentPriceOptions, price);
+                            }
                         }
-
                     }
 
                 };

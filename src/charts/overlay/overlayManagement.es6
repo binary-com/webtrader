@@ -118,6 +118,7 @@ const init_state = (root) =>{
 
          state.overlays.current.push(displaySymbol);
          ovlay.dont_show = true;
+         win.dialog("close");
       });
    }
 
@@ -153,7 +154,11 @@ const init_state = (root) =>{
                            chartOptions.disableEnableCandlestickAndOHLC(newTabId, true);
                         });
                         _.defer(
-                           () => chart.redraw()
+                           () => {
+                              require(["charts/charts"], (charts)=>{
+                                 charts.refresh(containerIDWithHash); //Refresh chart when all the overlays are removed.
+                              });
+                           }
                         )
                         return false;
                      }
