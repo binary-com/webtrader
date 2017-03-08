@@ -35,7 +35,7 @@ Highcharts.Chart.prototype.get_indicators = function() {
 
 Highcharts.Chart.prototype.set_indicators = function(indicators) {
     const chart = this;
-    if (chart.series[0]) {
+    if (chart.series && chart.series[0]) {
         indicators.forEach((ind) => {
             if (ind.options.onSeriesID) { //make sure that we are using the new onSeriesID value
                 ind.options.onSeriesID = chart.series[0].options.id;
@@ -59,7 +59,7 @@ Highcharts.Chart.prototype.get_indicator_series = function() {
 
 Highcharts.Chart.prototype.set_indicator_series = function(series) {
     const chart = this;
-    if (chart.series.length == 0) {
+    if (!chart.series || chart.series.length == 0) {
         return;
     }
     series.forEach((seri) => {
@@ -530,6 +530,9 @@ export const overlay = (containerIDWithHash, overlayInsCode, overlayInsName, del
                     delayAmount: delayAmount
                 }).then(() => {
                     chart && chart.set_indicator_series(indicator_series);
+                    if(chart.series[0].data.length ===0){
+                        console.trace();
+                    }
                     resolve();
                 }).catch(resolve);
             });
