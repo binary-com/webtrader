@@ -2106,7 +2106,10 @@
       {"title": "Kijun Sen Period", "key": "kijunSenPeriod", "min": 1, "max": 100, "value": 22, "type": "slider"},
       {"title": "Chikou Span Stroke", "key": "chikouSpanStroke", "value": "#ffabbf", "type": "colorpicker"},
       {"title": "Chikou Span Period", "key": "chikouSpanPeriod", "min": 1, "max": 100, "value": 22, "type": "slider"},
-      {"title": "Lips Line Stroke", "key": "lipsStroke", "value": "#00c176", "type": "colorpicker"},
+      {"title": "Senkou Span-A Stroke", "key": "senkouSpanAStroke", "value": "#73d351", "type": "colorpicker"},
+      {"title": "Senkou Span-A Period", "key": "senkouSpanAPeriod", "min": 1, "max": 100, "value": 26, "type": "slider"},
+      {"title": "Senkou Span-B Stroke", "key": "senkouSpanBStroke", "value": "#003fa1", "type": "colorpicker"},
+      {"title": "Senkou Span-B Period", "key": "senkouSpanBPeriod", "min": 1, "max": 100, "value": 44, "type": "slider"},
       {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
       {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
       {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
