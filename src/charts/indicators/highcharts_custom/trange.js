@@ -68,5 +68,5 @@ TRANGE.prototype.update = function (data) {
  * @returns {string}
  */
 TRANGE.prototype.toString = function() {
-    return 'TRANGE (' + this.options.period + ')';
+    return 'TRANGE (' + this.options.period + ", " + this.indicators.appliedPriceString(this.options.appliedTo) + ')';
 };
