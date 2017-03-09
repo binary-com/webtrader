@@ -97,7 +97,7 @@ class Withdraw {
                 invalid_length: false,
                 invalid_text: false,
                 length: () => {
-                    if (state.verify.token.length != 48) {
+                    if (state.verify.token.length != 8) {
                         state.validate.invalid_length = true;
                         state.clear(state.validate, 'invalid_length');
                         return false;
