@@ -51,12 +51,14 @@
     </select>
 
     <span class='title'>Verification token</span>
-    <input rv-value='account.verification' />
-    <div class='validations'>
-      <span rv-show='account.verification | not-eq "" | or-not account.empty_fields.validate'
+    <input rv-value='account.verification' type="text" maxlength="8" />
+    <div class='error-msg'>
+      <span rv-show='account.verification | eq "" | and-not account.empty_fields.validate'
             class='explanation'>Verification code has been sent to your email</span>
       <span rv-show='account.verification | eq "" | and account.empty_fields.validate'
-            class='validation'>* Please enter the verification code sent to your email.</span>
+            class='validation'>This field is required.</span>
+      <span rv-show='account.verification | length | not-eq 8 | and account.verification'
+            class='validation'>Please submit a valid verification token.</span>
     </div>
 
     <span class='title'>Choose password</span>
