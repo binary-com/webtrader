@@ -174,7 +174,9 @@ const init_state = (root, what_todo) => {
       }
    };
 
-   state.input_disabled = /MLT/.test(local_storage.get("oauth")[0].id) && what_todo === "upgrade-mf";
+   state.input_disabled = local_storage.get("oauth").reduce((a,b)=>{
+         return a || /MLT/.test(b.id)
+      },false) && what_todo === "upgrade-mf";
 
    state.user.is_valid = () => {
       const user = state.user;

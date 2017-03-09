@@ -274,8 +274,10 @@ export const getLandingCompany = () => {
             const gaming = data.landing_company.gaming_company;
 
             const loginids = Cookies.loginids();
+            const curr_login = local_storage.get("oauth")[0];
+            curr_login.is_mlt = /MLT/.test(curr_login.id);
             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-               if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
+               if (_.some(loginids, {is_mlt: true}) && (_.some(loginids, {is_mf: true}) || !curr_login.is_mlt)) // 1-c
                   return 'do-nothing';
                if (_.some(loginids, {is_mlt: true})) // 1-b
                   return 'upgrade-mf';
