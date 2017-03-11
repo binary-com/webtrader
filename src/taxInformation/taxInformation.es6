@@ -29,6 +29,7 @@ liveapi.events.on("login", (data) => {
                         closeOnEscape: false,
                         modal: true,
                         ignoreTileAction: true,
+                        'data-authorized': 'true',
                         close: () => {
                             win.dialog('destroy');
                             win = null
