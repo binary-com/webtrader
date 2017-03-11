@@ -155,8 +155,8 @@ const initLoginButton = (root) => {
       const is_current_account_real = data.authorize.is_virtual === 0;
 
       getLandingCompany().then((what_todo) => {
-         state.show_financial_link = is_current_account_real && (what_todo === 'upgrade-mf');
-         state.show_realaccount_link = !is_current_account_real && (what_todo === 'upgrade-mlt');
+         state.show_financial_link = (what_todo === 'upgrade-mf');
+         state.show_realaccount_link = (what_todo === 'upgrade-mlt');
          const loginids = Cookies.loginids();
          state.has_real_account = _.some(loginids, {is_real: true});
          state.has_disabled_account =  _.some(loginids, {is_disabled: true});
@@ -274,8 +274,10 @@ export const getLandingCompany = () => {
             const gaming = data.landing_company.gaming_company;
 
             const loginids = Cookies.loginids();
+            const curr_login = local_storage.get("oauth")[0];
+            curr_login.is_mlt = /MLT/.test(curr_login.id);
             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-               if (_.some(loginids, {is_mlt: true}) && _.some(loginids, {is_mf: true})) // 1-c
+               if (_.some(loginids, {is_mlt: true}) && (_.some(loginids, {is_mf: true}) || !curr_login.is_mlt)) // 1-c
                   return 'do-nothing';
                if (_.some(loginids, {is_mlt: true})) // 1-b
                   return 'upgrade-mf';

@@ -100,13 +100,13 @@
         <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
             <span class="title-big">Security</span>
         </div>
-        <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
+        <div class='row' rv-show="input_disabled | eq false">
             <span class='title'>Security question</span>
             <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="user.secret_question_inx" rv-selectrefresh="user.secret_question_array">
                 <option rv-each-row="user.secret_question_array" rv-value="index">{row | i18n}</option>
             </select>
         </div>
-        <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
+        <div class='row' rv-show="input_disabled | eq false">
             <span class='title'>Answer</span>
             <input rv-value='user.secret_answer' type="text" maxlength="50" />
             <div class='validations'>
