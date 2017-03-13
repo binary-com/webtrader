@@ -17,7 +17,7 @@
 		<span class='title'>To withdraw funds please enter the special verification token we have just emailed you.</span>
 
 		<span class='input-title'>Verification token</span>
-		<input rv-value='verify.token'></input>
+		<input rv-value='verify.token' type="text" maxlength="8"></input>
 		<div class='errors'>
 			<span class='error' rv-show='verify.token | eq "" | and empty_fields.validate'>This field is required.</span>
 			<span class='error' rv-show='validate.invalid_length'>Please input correct token.</span>
