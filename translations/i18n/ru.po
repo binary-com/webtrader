@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2017-03-20 01:34+0000\n"
-"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
+"PO-Revision-Date: 2017-03-20 01:41+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -393,9 +393,8 @@ msgstr "2 Часа"
 msgid "2 Minutes"
 msgstr "2 Минуты"
 
-#, fuzzy
 msgid "2-way pricing"
-msgstr ""
+msgstr "Оцените движение рынка в двух направлениях"
 
 msgid "2000"
 msgstr "2000"
@@ -857,9 +856,8 @@ msgstr "На всех рынках"
 msgid "All markets, all conditions"
 msgstr "На любых рынках, при любых условиях"
 
-#, fuzzy
 msgid "All payouts"
-msgstr ""
+msgstr "С выплатами по контрактам"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Всё время указано в GMT (по Гринвичу)"
@@ -3428,16 +3426,16 @@ msgid "Purchase Price"
 msgstr "Цена покупки"
 
 msgid "Quiet markets"
-msgstr ""
+msgstr "Неподвижные рынки"
 
 msgid "Rate Of Change (ROC)"
-msgstr ""
+msgstr "Скорость изменения (ROC)"
 
 msgid "Rate Of Change Percentage (ROCP)"
-msgstr ""
+msgstr "Процент скорости изменения (ROCP)"
 
 msgid "Rate Of Change Ratio (ROCR)"
-msgstr ""
+msgstr "Коэффициент скорости изменения (ROCR)"
 
 msgid "Read"
 msgstr "Читать"
@@ -3451,6 +3449,8 @@ msgstr "Проверка реальности"
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
+"Наслаждайтесь торговлей бинарными опционами, зная, что Ваши средства всегда "
+"в безопасности"
 
 msgid "Redirecting to oauth login page"
 msgstr "Перенаправление на страницу входа в oauth"
@@ -3459,15 +3459,17 @@ msgid "Ref"
 msgstr "Номер"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
-msgstr ""
+msgstr "Компания Regent Markets Group Limited переименована в Binary Ltd."
 
 msgid ""
 "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and "
 "website branding throughout the organisation"
 msgstr ""
+"Regent Markets Group Ltd. переименована в Binary Ltd., для гармонизации "
+"брендов компании и вебсайта нашей организации"
 
 msgid "Regent Markets acquires BetsForTraders client base"
-msgstr ""
+msgstr "Regent Markets приобретает базу данных клиентов BetsForTraders"
 
 msgid ""
 "Regent Markets files for a patent in March 2000 on the basis of our unique "
@@ -3475,37 +3477,46 @@ msgid ""
 "financial betting. In May, we register the trading name BetOnMarkets and "
 "move to Malta to receive an internet betting licence"
 msgstr ""
+"Regent Markets подаёт на патент в марте 2000 на основе своей уникальной "
+"позиции единственного серьезного участника в бизнесе финансового беттинга с "
+"фиксированным коэффициентом выигрыша. В мае мы регистрируем торговую марку "
+"BetOnMarkets и переезжаем на Мальту для получения игровой лицензии на "
+"предоставление услуг в интернете"
 
 msgid ""
 "Regent Markets files for patent, and registers BetOnMarkets trading name"
 msgstr ""
+"Regent Markets подает на патент и регистрирует торговое имя BetOnMarkets"
 
 msgid "Regent Markets granted US patent for 'Betting system and method'"
-msgstr ""
+msgstr "Regent Markets получает патент в США как “Система и метод беттинга”"
 
 msgid "Regent Markets granted two new US patents"
-msgstr ""
+msgstr "Regent Markets получает два новых патента в США"
 
 msgid "Regent Markets is founded by Jean-Yves Sireau"
-msgstr ""
+msgstr "Проект Regent Markets основан Жан-Ивом Сиро"
 
 msgid "Regent Markets obtains a licence in the Isle of Man"
-msgstr ""
+msgstr "Regent Markets получает лицензию на Острове Мэн"
 
 msgid ""
 "Regent Markets receives funding to provide on-line financial betting services"
 msgstr ""
+"Regent Markets получает финансирование для предоставления сервиса "
+"финансового онлайн-беттинга"
 
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
-msgstr ""
+msgstr "Regent Markets открывает центр программирования в Cyberjaya, Малайзия"
 
 msgid ""
 "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of "
 "Binary.com"
 msgstr ""
+"Regent Pacific Group Ltd., акционер Binary.com, зарегистрированный в Гонконге"
 
 msgid "Regent Pacific transaction"
-msgstr ""
+msgstr "Выкуп доли у Regent Pacific"
 
 msgid "Register free account"
 msgstr "Откройте бесплатный счёт"
@@ -3514,7 +3525,7 @@ msgid "Registration"
 msgstr "Регистрация"
 
 msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgstr "Индекс относительной силы (RSI)"
 
 msgid "Reloading page"
 msgstr "Перезагрузка страницы"
@@ -3529,7 +3540,7 @@ msgid "Repeat password"
 msgstr "Повторите пароль"
 
 msgid "Resale price"
-msgstr ""
+msgstr "Цена перепродажи"
 
 msgid "Reset to Defaults"
 msgstr "Возврат к настройкам по умолчанию"
@@ -3556,22 +3567,22 @@ msgid "Return to trading page"
 msgstr "Вернуться к странице торговли"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Рикша (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr "Повышение"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Повышение/Падение"
 
 msgid "Rise/Fall trades"
-msgstr ""
+msgstr "Контракты Повышение/Падение"
 
 msgid "Rising markets"
-msgstr ""
+msgstr "Растущие рынки"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "Метод трёх поднимающихся/падающих (CDLRISEFALL3METHODS)"
 
 msgid "SMA"
 msgstr "ПСС"
@@ -3610,10 +3621,10 @@ msgid "Save changes"
 msgstr "Сохранить изменения"
 
 msgid "Scalable trading"
-msgstr ""
+msgstr "Масштабируемость торговли"
 
 msgid "Secondary"
-msgstr "Вторичн."
+msgstr "Среднее"
 
 msgid "Security"
 msgstr "Безопасность"
@@ -3643,7 +3654,7 @@ msgid "Sell Time"
 msgstr "Время продажи"
 
 msgid "Sell option"
-msgstr ""
+msgstr "Продажа опциона"
 
 msgid "Send to account #"
 msgstr "Отправить на счёт #"
@@ -3899,7 +3910,7 @@ msgid "Terms and Conditions"
 msgstr "Правила и условия"
 
 msgid "Tertiary"
-msgstr "Третичн."
+msgstr "Высшее"
 
 msgid "The"
 msgstr " "
@@ -3950,6 +3961,10 @@ msgid ""
 "is followed by a long white day that gaps down at the open and closes below "
 "the close of the black day"
 msgstr ""
+"Медвежья фигура \"У основания\" возникает на графике после нисходящего "
+"тренда, когда после длинной чёрной свечи следует длинная белая свеча, "
+"которая начинается с нижнего гэпа перед открытием и закрывается ниже уровня "
+"закрытия чёрной свечи"
 
 msgid ""
 "The Bullish Three Star appears after a downtrend and it consists of three "
@@ -4471,7 +4486,7 @@ msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr ""
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "Три чёрные вороны (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
 msgstr ""
@@ -4913,7 +4928,7 @@ msgid "Will I need to install any software?"
 msgstr ""
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Диапазон Вильямса (%R, WILLR)"
 
 msgid ""
 "Win 10-1000% on your stake if you are correct. Increase your winning return "
@@ -5214,7 +5229,7 @@ msgid "of \"Now\", the"
 msgstr "\"Сейчас\","
 
 msgid "our helpful support desk"
-msgstr ""
+msgstr "служба поддержки"
 
 msgid "payment agent"
 msgstr "платёжный агент"
