@@ -189,7 +189,7 @@ export const init = (contract_id, transaction_id) => {
 
 const update_indicative = (data, state) => {
    const contract = data.proposal_open_contract;
-   const id = contract.contract_id,
+   const id = contract.contract_id || data.echo_req.contract_id,
       bid_price = contract.bid_price;
    if(id != state.contract_id) { return; }
    if(contract.validation_error)
@@ -241,6 +241,14 @@ const update_indicative = (data, state) => {
    }
 
    if(contract.is_sold){
+      if(!contract.exit_tick && !state.table.user_sold) {
+         /*
+          * Since the backend stopped sending exit_tick and time on contract sell, this is a work around for
+          * getting the required fields.
+          */
+         liveapi.send({contract_id: id, proposal_open_contract: 1});
+         return;
+      }
       state.table.exit_tick = contract.exit_tick;
       state.table.exit_tick_time = contract.exit_tick_time;
       state.table.sell_price = contract.sell_price;
@@ -594,6 +602,8 @@ const get_chart_data = (state, root) => {
       state.table.stop_loss_level && chart.addPlotLineY({value: state.table.stop_loss_level*1, label: 'Stop Loss ('.i18n() + state.table.stop_loss_level + ')', color: 'red'});
       state.table.stop_profit_level && chart.addPlotLineY({value: state.table.stop_profit_level*1, label: 'Stop Profit ('.i18n() + state.table.stop_profit_level + ')'});
 
+      state.table.user_sold && chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Spot'.i18n(), text_left: true})
+ 
       state.chart.chart = chart;
       state.chart.manual_reflow();
    })
