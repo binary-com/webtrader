@@ -79,7 +79,7 @@ module.exports = function (grunt) {
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
-                            'moment/min/moment.min.js',
+                            'moment/min/moment.min.js', 'moment/locale/**',
                             'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
                             'parallel.js/lib/**',
