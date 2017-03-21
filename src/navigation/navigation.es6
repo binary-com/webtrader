@@ -237,7 +237,6 @@ const initLangButton = (root) => {
       .send({website_status: 1})
       .then((data) => {
          let supported_languages = (data.website_status || {}).supported_languages || [];
-         console.log(supported_languages);
          supported_languages = _.map(supported_languages, (m) => ({value: m.toLowerCase()}));
          const newList = _.intersectionBy(state.languages, supported_languages, 'value') || [];
          state.languages.length = 0;
