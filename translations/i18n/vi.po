@@ -403,9 +403,6 @@ msgstr "4 Giờ"
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 giao dịch hoặc hơn trong 12 tháng qua"
 
-msgid "404"
-msgstr "404"
-
 msgid "4h"
 msgstr "4 giờ"
 
@@ -621,9 +618,6 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "AM"
-msgstr "AM"
-
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
 
@@ -635,9 +629,6 @@ msgstr "Chấp nhận"
 
 msgid "Account balance"
 msgstr "Số dư tài khoản"
-
-msgid "Account opening"
-msgstr "Tài khoản đang mở"
 
 msgid "Action"
 msgstr "Hành động"
@@ -654,14 +645,8 @@ msgstr "Thêm chỉ dẫn"
 msgid "Add level"
 msgstr "Thêm cấp độ"
 
-msgid "Add/remove comparisons"
-msgstr "Thêm/bỏ so sánh"
-
 msgid "Add/remove indicators"
 msgstr "Thêm/loại bỏ các chỉ số"
-
-msgid "Add/remove overlays"
-msgstr "Thêm/loại bỏ lớp phủ"
 
 msgid "Admin"
 msgstr "Admin"
@@ -760,9 +745,6 @@ msgstr "Tháng tám"
 
 msgid "August"
 msgstr "Tháng tám"
-
-msgid "Average"
-msgstr "Trung bình"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr ""
@@ -874,6 +856,12 @@ msgstr ""
 
 msgid "Binary options or other financial derivatives"
 msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"
+
+msgid "Binary options or other financial derivatives trading experience"
+msgstr ""
+
+msgid "Binary options or other financial derivatives trading frequency"
+msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr ""
@@ -1260,9 +1248,6 @@ msgstr "So sánh"
 msgid "Conditions"
 msgstr "Điều kiện"
 
-msgid "Config changes successful"
-msgstr "Thay đổi cấu hình thành công"
-
 msgid "Confirm transfer"
 msgstr "Xác nhận chuyển khoản"
 
@@ -1280,9 +1265,6 @@ msgstr "Tiếp tục giao dịch"
 
 msgid "Contract"
 msgstr "Hợp đồng"
-
-msgid "Contract Confirmation"
-msgstr "Xác nhận hợp đồng"
 
 msgid "Contract period"
 msgstr ""
@@ -1341,9 +1323,6 @@ msgstr "Thời gian hiện tại"
 
 msgid "Custom Theme"
 msgstr "Chủ đề tùy chỉnh"
-
-msgid "Customize chart appearance"
-msgstr "Tùy chỉnh bề ngoài bảng"
 
 msgid "Daily limit on losses"
 msgstr "Giới hạn hàng ngày cho thua"
@@ -1428,9 +1407,6 @@ msgstr "Mô tả token này để tìm nó về sau"
 msgid "Description"
 msgstr "Mô tả"
 
-msgid "Deselect"
-msgstr "Bỏ chọn"
-
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
 "identify trend reversals based on range expansions. In this sense, the Mass "
@@ -1500,9 +1476,6 @@ msgstr "Chưa có tài khoản? Đăng ký và nhận $10,000 cho tài khoản �
 msgid "Donchian Channel (DC)"
 msgstr ""
 
-msgid "Done"
-msgstr "Hoàn thành"
-
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Đã hoàn tất. Tiền đang được chuyển giao cho đại lý thanh toán"
 
@@ -1545,14 +1518,17 @@ msgstr "Tải về hình ảnh véc tơ SVG"
 msgid "Download as"
 msgstr "Tải xuống thành"
 
-msgid "Downloading .csv"
-msgstr "Đang tải .scv"
-
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr ""
 
 msgid "Drawing tools"
 msgstr "Công cụ vẽ"
+
+msgid ""
+"Due to recent changes in the regulations, we are required to ask our clients "
+"to complete the following Financial Assessment. Please note that you will "
+"not be able to continue trading until this is completed"
+msgstr ""
 
 msgid "Duration"
 msgstr "Thời gian"
@@ -1585,9 +1561,6 @@ msgstr "Chỉnh sửa"
 msgid "Education"
 msgstr "Giáo dục"
 
-msgid "Email verification failed"
-msgstr "Xác minh email thất bại"
-
 msgid "Embed code"
 msgstr "Mã nhúng"
 
@@ -1609,11 +1582,6 @@ msgstr "Kết thúc ngoài"
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
-msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
-"Vui lòng đảm bảo rằng bạn đang nhập đúng thông tin nếu không tài khoản sẽ bị "
-"khóa"
-
 msgid "Enter your current password"
 msgstr "Nhập mật khẩu hiện tại của bạn"
 
@@ -1625,12 +1593,6 @@ msgstr "Điểm khởi đầu"
 
 msgid "Entry spot price"
 msgstr ""
-
-msgid "Error downloading .csv"
-msgstr "Lỗi tải xuống tệp .csv"
-
-msgid "Error getting data for %1"
-msgstr "Lỗi lấy dữ liệu cho %1"
 
 msgid "Estimated Net Worth"
 msgstr "Ước tính giá trị ròng"
@@ -1653,6 +1615,9 @@ msgstr "Loại bỏ tôi khỏi trang web cho đến khi"
 msgid "Exit Spot"
 msgstr "Điểm chốt"
 
+msgid "Exit Spot Time"
+msgstr ""
+
 msgid "Exit spot"
 msgstr "Điểm chốt"
 
@@ -1664,9 +1629,6 @@ msgstr "Lời giải thích"
 
 msgid "Exponential Moving Average (EMA)"
 msgstr ""
-
-msgid "Failed to update the password"
-msgstr "Thất bại trong việc cập nhật mật khẩu"
 
 msgid "Fall"
 msgstr "Xuống"
@@ -1709,8 +1671,8 @@ msgstr "Giá cuối cùng"
 msgid "Finance"
 msgstr "Tài chính"
 
-msgid "Financial Account Opening form"
-msgstr "Mẫu Mở Tài Khoản Tài Chính"
+msgid "Financial Information"
+msgstr ""
 
 msgid "Financial Security"
 msgstr ""
@@ -1723,6 +1685,9 @@ msgstr ""
 
 msgid "Firefox"
 msgstr "Firefox"
+
+msgid "First line of home address"
+msgstr ""
 
 msgid "First name"
 msgstr "Họ"
@@ -1820,14 +1785,14 @@ msgstr ""
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr ""
 
-msgid "Have better luck at trading!"
-msgstr "Chúc bạn may mắn trong giao dịch!"
-
 msgid "Health"
 msgstr "Sức khỏe"
 
 msgid "Help"
 msgstr ""
+
+msgid "High Barrier"
+msgstr "Barie cao"
 
 msgid "High Price"
 msgstr "Giá cao"
@@ -1862,14 +1827,8 @@ msgstr "Địa chỉ nhà"
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr ""
 
-msgid "Horizontal Line"
-msgstr "Đường ngang"
-
 msgid "Horizontal line"
 msgstr "Đường ngang"
-
-msgid "Hour"
-msgstr "Giờ"
 
 msgid "Hours"
 msgstr "Giờ"
@@ -1924,9 +1883,6 @@ msgstr ""
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr ""
-
-msgid "If the issue keeps happening, please contact"
-msgstr "Nếu vấn đề tiếp tục xảy ra, xin vui lòng liên hệ"
 
 msgid "If you select a"
 msgstr "Nếu bạn chọn một"
@@ -2124,9 +2080,6 @@ msgstr "Tháng bảy"
 
 msgid "July"
 msgstr "Tháng bảy"
-
-msgid "Jump to"
-msgstr "Nhảy tới"
 
 msgid "Jun"
 msgstr "Tháng sáu"
@@ -2329,6 +2282,9 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
+msgid "Low Barrier"
+msgstr "Barie thấp"
+
 msgid "Low Price"
 msgstr "Giá thấp"
 
@@ -2445,14 +2401,20 @@ msgstr ""
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Tối thiểu 6 ký tự và phải có ít nhất 1 chữ số"
 
+msgid "Minimum of 2 characters required"
+msgstr ""
+
+msgid "Minimum of 4 characters required"
+msgstr ""
+
+msgid "Minimum of 6 characters required"
+msgstr ""
+
 msgid "Minimum price over selected period"
 msgstr ""
 
 msgid "Minus the agent's commission"
 msgstr "Trừ đi Hoa hồng của đại lý"
-
-msgid "Minute"
-msgstr "Phút"
 
 msgid "Minutes"
 msgstr "Phút"
@@ -2625,11 +2587,26 @@ msgid ""
 "website has received over 15 million trades"
 msgstr ""
 
+msgid "Only letters, numbers, hyphen are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+msgstr ""
+
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
-msgid "Oops... Page Not Available"
-msgstr "Rất tiếc... Trang không tồn tại"
+msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only numbers and space are allowed"
+msgstr ""
+
+msgid "Only numbers, letters, hyphens are allowed"
+msgstr ""
 
 msgid "Open"
 msgstr "Mở"
@@ -2664,9 +2641,6 @@ msgstr ""
 "nào khác khi bị đẩy đến giới hạn của nó. Để tránh rủi ro của việc nghiện "
 "giao dịch, chúng tôi cung cấp một công cụ kiểm tra thực tế để cho bạn một "
 "bản tóm tắt của các giao dịch và tài khoản một cách thường xuyên"
-
-msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr "Trường tùy chọn, trong vòng 20 ký tự và có thể không chứa '+'"
 
 msgid "Other"
 msgstr "Khác"
@@ -2710,29 +2684,11 @@ msgstr ""
 msgid "PDF"
 msgstr "PDF"
 
-msgid "PM"
-msgstr "PM"
-
 msgid "PNG"
 msgstr "PNG"
 
-msgid "Page Not Found"
-msgstr "Trang không tìm thấy"
-
 msgid "Parabolic SAR (SAR)"
 msgstr ""
-
-msgid "Password must be 6 characters minimum"
-msgstr "Mật khẩu phải từ tối thiểu 6 ký tự"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "Mật khẩu phải chứa chữ thường và chữ hoa với chữ số"
-
-msgid "Password must contain uppercase letters and numbers"
-msgstr "Mật khẩu phải chứa chữ hoa và số"
-
-msgid "Password successfully updated"
-msgstr "Mật khẩu cập nhật thành công"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Mật khẩu không khớp. Vui lòng nhập lại"
@@ -2784,11 +2740,11 @@ msgid ""
 "place (i.e. 0.0001)"
 msgstr ""
 
+msgid "Place of birth"
+msgstr ""
+
 msgid "Please"
 msgstr "Vui lòng"
-
-msgid "Please answer to secret question, within 4-50 characters"
-msgstr "Xin vui lòng trả lời câu hỏi bí mật, trong vòng 4-50 ký tự"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Xin vui lòng chọn loại tiền tệ mà bạn muốn giao dịch tại"
@@ -2796,17 +2752,11 @@ msgstr "Xin vui lòng chọn loại tiền tệ mà bạn muốn giao dịch t�
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Vui lòng xác nhận các chi tiết sau để hoàn thành việc chuyển khoản"
 
-msgid "Please enter a number between"
-msgstr "Vui lòng nhập một số giữa"
-
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Vui lòng nhập ngày hợp lệ theo định dạng yyyy-mm-dd"
 
-msgid "Please enter a value for"
-msgstr "Vui lòng nhập một giá trị cho"
-
-msgid "Please enter a vlaid phone number"
-msgstr "Vui lòng nhập một số điện thoại hợp lệ"
+msgid "Please enter a value greater than 0"
+msgstr ""
 
 msgid "Please enter correct email"
 msgstr "Vui lòng nhập đúng email"
@@ -2814,14 +2764,8 @@ msgstr "Vui lòng nhập đúng email"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Vui lòng nhập ngày theo định dạng YYYY-MM-DD"
 
-msgid "Please enter the verification code sent to your email"
-msgstr "Vui lòng nhập mã xác minh được gửi tới email của bạn"
-
 msgid "Please enter time in the format HH:MM"
 msgstr "Vui lòng nhập thời gian với định dạng HH:MM"
-
-msgid "Please enter your city address"
-msgstr "Vui lòng nhập địa chỉ phố của bạn"
 
 msgid "Please enter your current password"
 msgstr "Vui lòng nhập mật khẩu hiện tại của bạn"
@@ -2829,38 +2773,23 @@ msgstr "Vui lòng nhập mật khẩu hiện tại của bạn"
 msgid "Please enter your email"
 msgstr "Vui lòng nhập email của bạn"
 
-msgid "Please enter your family name"
-msgstr "Vui lòng nhập họ của bạn"
-
-msgid "Please enter your first name"
-msgstr "Vui lòng nhập tên của bạn"
-
-msgid "Please enter your new password"
-msgstr "Xin vui lòng nhập mật khẩu mới"
-
-msgid "Please enter your password"
-msgstr "Vui lòng nhập mật khẩu của bạn"
-
-msgid "Please enter your phone number"
-msgstr "Vui lòng nhập số điện thoại của bạn"
-
-msgid "Please enter your street address"
-msgstr "Vui lòng nhập địa chỉ đường phố của bạn"
-
 msgid "Please input correct token"
 msgstr ""
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
 
+msgid "Please provide your tax information"
+msgstr ""
+
 msgid "Please select"
 msgstr "Vui lòng chọn"
 
+msgid "Please submit a valid verification token"
+msgstr ""
+
 msgid "Please try again after 1 minute"
 msgstr "Xin vui lòng thử lại sau 1 phút"
-
-msgid "Please use your new password to login"
-msgstr "Hãy sử dụng mật khẩu mới để đăng nhập"
 
 msgid "Plot"
 msgstr "Vẽ"
@@ -2900,6 +2829,9 @@ msgstr "Khoảng kiểm tra thực tế ưu tiên"
 msgid "Press Create token button on the right to create your first token"
 msgstr "Bấm nút Tạo Token tở phía bên phải để tạo token đầu tiên của bạn"
 
+msgid "Price"
+msgstr "Giá"
+
 msgid "Price Transformation"
 msgstr ""
 
@@ -2929,9 +2861,6 @@ msgstr "In biểu đồ"
 
 msgid "Profit"
 msgstr "Lợi nhuận"
-
-msgid "Profit Table"
-msgstr "Bảng lợi nhuận"
 
 msgid "Profit table"
 msgstr "Bảng lợi nhuận"
@@ -2971,18 +2900,9 @@ msgstr ""
 msgid "Read"
 msgstr "Đọc"
 
-msgid "Real Money Account Opening"
-msgstr "Tài khoản Thật đang mở"
-
-msgid "Reality check"
-msgstr "Kiểm tra thực tế"
-
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
-
-msgid "Redirecting to oauth login page"
-msgstr "Chuyển hướng đến trang đăng nhập oauth"
 
 msgid "Ref"
 msgstr "REF"
@@ -3039,14 +2959,11 @@ msgstr ""
 msgid "Register free account"
 msgstr "Đăng ký tài khoản miễn phí"
 
-msgid "Registration"
-msgstr "Đăng ký"
-
 msgid "Relative Strength Index (RSI)"
 msgstr ""
 
-msgid "Reloading page"
-msgstr "Đang tải lại trang"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Selected"
 msgstr "Xóa Lựa Chọn"
@@ -3059,9 +2976,6 @@ msgstr "Lặp lại mật khẩu"
 
 msgid "Resale price"
 msgstr ""
-
-msgid "Reset to Defaults"
-msgstr "Đặt lại về mặc định"
 
 msgid "Reset zoom"
 msgstr "Đặt lại phóng to"
@@ -3080,9 +2994,6 @@ msgstr "Kết quả"
 
 msgid "Return"
 msgstr "Quay trở lại"
-
-msgid "Return to trading page"
-msgstr "Trở về trang giao dịch"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
 msgstr ""
@@ -3141,6 +3052,9 @@ msgstr "Lưu các thay đổi"
 msgid "Scalable trading"
 msgstr ""
 
+msgid "Second line of home address"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Thứ cấp"
 
@@ -3162,20 +3076,8 @@ msgstr "Tự Loại Trừ"
 msgid "Sell At Market"
 msgstr "Bán tại thị trường"
 
-msgid "Sell Price"
-msgstr "Giá bán"
-
-msgid "Sell Spot"
-msgstr "Điểm bán"
-
-msgid "Sell Time"
-msgstr "Thời gian bán"
-
 msgid "Sell option"
 msgstr ""
-
-msgid "Send to account #"
-msgstr "Gửi đến tài khoản #"
 
 msgid "Sent to account"
 msgstr "Gửi đến tài khoản"
@@ -3242,9 +3144,6 @@ msgstr ""
 
 msgid "Sold"
 msgstr "Đã bán"
-
-msgid "Some random index"
-msgstr "Vài chỉ số ngẫu nhiên"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr ""
@@ -3370,14 +3269,8 @@ msgstr "Dừng lợi nhuận"
 msgid "Stop-type"
 msgstr "Kiểu ngưng"
 
-msgid "Street address"
-msgstr "Địa chỉ đường phố"
-
 msgid "Stroke"
 msgstr "Nét"
-
-msgid "Stroke color"
-msgstr "Màu nét"
 
 msgid "Stroke width"
 msgstr "Độ rộng nét"
@@ -3412,6 +3305,15 @@ msgstr ""
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr ""
 
+msgid "Tax identification number"
+msgstr ""
+
+msgid "Tax information"
+msgstr ""
+
+msgid "Tax residence"
+msgstr ""
+
 msgid "Tax-free"
 msgstr ""
 
@@ -3423,9 +3325,6 @@ msgstr "Tên mẫu"
 
 msgid "Terms"
 msgstr "Điều khoản"
-
-msgid "Terms and Conditions"
-msgstr "Điều Khoản và Điều Kiện"
 
 msgid "Tertiary"
 msgstr "Cấp 3"
@@ -3793,6 +3692,15 @@ msgstr ""
 msgid ""
 "The financial trading services contained within this site are only suitable "
 "for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the acquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract premium"
+msgstr ""
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
 "who understand and have experience of the risk involved in the aquistion of "
 "financial contracts. Transactions in financial contracts carry a high degree "
 "of risk. If purchased contracts expire worthless, you will suffer a total "
@@ -3841,13 +3749,6 @@ msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr ""
-
-msgid ""
-"The page you requested could not be found. Either it no longer exists or the "
-"address is wrong. Please check for any typos"
-msgstr ""
-"Không tìm thấy trang bạn yêu cầu. Nó không còn tồn tại hoặc địa chỉ bị sai. "
-"Vui lòng kiểm tra lỗi chính tả nếu có"
 
 msgid ""
 "The parabolic SAR is calculated almost independently for each trend in the "
@@ -3962,12 +3863,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract lost"
-msgstr "Hợp đồng này đã thua"
-
-msgid "This contract won"
-msgstr "Hợp đồng này đã thắng"
 
 msgid "This field is required"
 msgstr "Trường này là bắt buộc"
@@ -4089,9 +3984,6 @@ msgstr ""
 "Để rút tiền xin vui lòng nhập mã xác minh token đặc biệt mà chúng tôi vừa "
 "gửi qua email cho bạn"
 
-msgid "Today"
-msgstr "Hôm nay"
-
 msgid "Token"
 msgstr "Token"
 
@@ -4198,6 +4090,9 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Xem giao dịch cho Binary.com"
 
+msgid "Transfer"
+msgstr ""
+
 msgid "Transfer to another Binary account"
 msgstr "Chuyển khoản sang tài khoản nhị phân khác"
 
@@ -4281,6 +4176,9 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr "Sự kiện sắp tới"
 
+msgid "Update"
+msgstr ""
+
 msgid "Update Settings"
 msgstr "Cập Nhật cài đặt"
 
@@ -4321,17 +4219,11 @@ msgstr ""
 msgid "Verification code has been sent to your email"
 msgstr "Mã xác minh đã được gửi đến email của bạn"
 
-msgid "Verification code sent to"
-msgstr "Mã xác minh gửi đến"
-
 msgid "Verification token"
 msgstr "Xác nhận Token"
 
 msgid "Verify new password"
 msgstr "Xác nhận mật khẩu mới"
-
-msgid "Vertical Line"
-msgstr "Đường dọc"
 
 msgid "Vertical line"
 msgstr "Đường dọc"
@@ -4564,11 +4456,6 @@ msgstr ""
 "Tài khoản Binary.com của bạn đã được tạo, nhưng để bắt đầu giao dịch bạn cần "
 "cho phép Webtrader truy cập nó"
 
-msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
-"Tài khoản của bạn đã bị khóa, xin vui lòng liên hệ với hỗ trợ khách hàng để "
-"xem thêm thông tin"
-
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
 
@@ -4600,9 +4487,6 @@ msgid ""
 "and-drop  simplicity"
 msgstr ""
 
-msgid "and"
-msgstr "và"
-
 msgid "apostrophe (') are allowed"
 msgstr ""
 
@@ -4622,9 +4506,6 @@ msgstr ""
 "đang đối diện với những rủi ro (có thể là đáng kể, trong đó có nguy cơ mất "
 "toàn bộ số tiền đầu tư) mà bạn có thể không có kiến thức và kinh nghiệm để "
 "đánh giá đúng mực và giảm thiểu"
-
-msgid "between"
-msgstr "giữa"
 
 msgid "commission"
 msgstr "Hoa hồng"
@@ -4808,6 +4689,226 @@ msgid ""
 "products"
 msgstr ""
 
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "AM"
+#~ msgstr "AM"
+
+#~ msgid "Account opening"
+#~ msgstr "Tài khoản đang mở"
+
+#~ msgid "Add/remove comparisons"
+#~ msgstr "Thêm/bỏ so sánh"
+
+#~ msgid "Add/remove overlays"
+#~ msgstr "Thêm/loại bỏ lớp phủ"
+
+#~ msgid "Average"
+#~ msgstr "Trung bình"
+
+#~ msgid "Config changes successful"
+#~ msgstr "Thay đổi cấu hình thành công"
+
+#~ msgid "Contract Confirmation"
+#~ msgstr "Xác nhận hợp đồng"
+
+#~ msgid "Customize chart appearance"
+#~ msgstr "Tùy chỉnh bề ngoài bảng"
+
+#~ msgid "Deselect"
+#~ msgstr "Bỏ chọn"
+
+#~ msgid "Done"
+#~ msgstr "Hoàn thành"
+
+#~ msgid "Downloading .csv"
+#~ msgstr "Đang tải .scv"
+
+#~ msgid "Email verification failed"
+#~ msgstr "Xác minh email thất bại"
+
+#~ msgid ""
+#~ "Ensure you are entering valid inputs else your account will get locked"
+#~ msgstr ""
+#~ "Vui lòng đảm bảo rằng bạn đang nhập đúng thông tin nếu không tài khoản sẽ "
+#~ "bị khóa"
+
+#~ msgid "Error downloading .csv"
+#~ msgstr "Lỗi tải xuống tệp .csv"
+
+#~ msgid "Error getting data for %1"
+#~ msgstr "Lỗi lấy dữ liệu cho %1"
+
+#~ msgid "Failed to update the password"
+#~ msgstr "Thất bại trong việc cập nhật mật khẩu"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Mẫu Mở Tài Khoản Tài Chính"
+
+#~ msgid "Have better luck at trading!"
+#~ msgstr "Chúc bạn may mắn trong giao dịch!"
+
+#~ msgid "Horizontal Line"
+#~ msgstr "Đường ngang"
+
+#~ msgid "Hour"
+#~ msgstr "Giờ"
+
+#~ msgid "If the issue keeps happening, please contact"
+#~ msgstr "Nếu vấn đề tiếp tục xảy ra, xin vui lòng liên hệ"
+
+#~ msgid "Jump to"
+#~ msgstr "Nhảy tới"
+
+#~ msgid "Minute"
+#~ msgstr "Phút"
+
+#~ msgid "Oops... Page Not Available"
+#~ msgstr "Rất tiếc... Trang không tồn tại"
+
+#~ msgid "Optional field, within 20 characters and may not contain '+'"
+#~ msgstr "Trường tùy chọn, trong vòng 20 ký tự và có thể không chứa '+'"
+
+#~ msgid "PM"
+#~ msgstr "PM"
+
+#~ msgid "Page Not Found"
+#~ msgstr "Trang không tìm thấy"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "Mật khẩu phải từ tối thiểu 6 ký tự"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "Mật khẩu phải chứa chữ thường và chữ hoa với chữ số"
+
+#~ msgid "Password must contain uppercase letters and numbers"
+#~ msgstr "Mật khẩu phải chứa chữ hoa và số"
+
+#~ msgid "Password successfully updated"
+#~ msgstr "Mật khẩu cập nhật thành công"
+
+#~ msgid "Please answer to secret question, within 4-50 characters"
+#~ msgstr "Xin vui lòng trả lời câu hỏi bí mật, trong vòng 4-50 ký tự"
+
+#~ msgid "Please enter a number between"
+#~ msgstr "Vui lòng nhập một số giữa"
+
+#~ msgid "Please enter a value for"
+#~ msgstr "Vui lòng nhập một giá trị cho"
+
+#~ msgid "Please enter a vlaid phone number"
+#~ msgstr "Vui lòng nhập một số điện thoại hợp lệ"
+
+#~ msgid "Please enter the verification code sent to your email"
+#~ msgstr "Vui lòng nhập mã xác minh được gửi tới email của bạn"
+
+#~ msgid "Please enter your city address"
+#~ msgstr "Vui lòng nhập địa chỉ phố của bạn"
+
+#~ msgid "Please enter your family name"
+#~ msgstr "Vui lòng nhập họ của bạn"
+
+#~ msgid "Please enter your first name"
+#~ msgstr "Vui lòng nhập tên của bạn"
+
+#~ msgid "Please enter your new password"
+#~ msgstr "Xin vui lòng nhập mật khẩu mới"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Vui lòng nhập mật khẩu của bạn"
+
+#~ msgid "Please enter your phone number"
+#~ msgstr "Vui lòng nhập số điện thoại của bạn"
+
+#~ msgid "Please enter your street address"
+#~ msgstr "Vui lòng nhập địa chỉ đường phố của bạn"
+
+#~ msgid "Please use your new password to login"
+#~ msgstr "Hãy sử dụng mật khẩu mới để đăng nhập"
+
+#~ msgid "Profit Table"
+#~ msgstr "Bảng lợi nhuận"
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Tài khoản Thật đang mở"
+
+#~ msgid "Reality check"
+#~ msgstr "Kiểm tra thực tế"
+
+#~ msgid "Redirecting to oauth login page"
+#~ msgstr "Chuyển hướng đến trang đăng nhập oauth"
+
+#~ msgid "Registration"
+#~ msgstr "Đăng ký"
+
+#~ msgid "Reloading page"
+#~ msgstr "Đang tải lại trang"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Đặt lại về mặc định"
+
+#~ msgid "Return to trading page"
+#~ msgstr "Trở về trang giao dịch"
+
+#~ msgid "Sell Price"
+#~ msgstr "Giá bán"
+
+#~ msgid "Sell Spot"
+#~ msgstr "Điểm bán"
+
+#~ msgid "Sell Time"
+#~ msgstr "Thời gian bán"
+
+#~ msgid "Send to account #"
+#~ msgstr "Gửi đến tài khoản #"
+
+#~ msgid "Some random index"
+#~ msgstr "Vài chỉ số ngẫu nhiên"
+
+#~ msgid "Street address"
+#~ msgstr "Địa chỉ đường phố"
+
+#~ msgid "Stroke color"
+#~ msgstr "Màu nét"
+
+#~ msgid "Terms and Conditions"
+#~ msgstr "Điều Khoản và Điều Kiện"
+
+#~ msgid ""
+#~ "The page you requested could not be found. Either it no longer exists or "
+#~ "the address is wrong. Please check for any typos"
+#~ msgstr ""
+#~ "Không tìm thấy trang bạn yêu cầu. Nó không còn tồn tại hoặc địa chỉ bị "
+#~ "sai. Vui lòng kiểm tra lỗi chính tả nếu có"
+
+#~ msgid "This contract lost"
+#~ msgstr "Hợp đồng này đã thua"
+
+#~ msgid "This contract won"
+#~ msgstr "Hợp đồng này đã thắng"
+
+#~ msgid "Today"
+#~ msgstr "Hôm nay"
+
+#~ msgid "Verification code sent to"
+#~ msgstr "Mã xác minh gửi đến"
+
+#~ msgid "Vertical Line"
+#~ msgstr "Đường dọc"
+
+#~ msgid ""
+#~ "Your account is locked, please contact customer support for more info"
+#~ msgstr ""
+#~ "Tài khoản của bạn đã bị khóa, xin vui lòng liên hệ với hỗ trợ khách hàng "
+#~ "để xem thêm thông tin"
+
+#~ msgid "and"
+#~ msgstr "và"
+
+#~ msgid "between"
+#~ msgstr "giữa"
+
 #~ msgid "%D MA Type"
 #~ msgstr "Kiểu %D MA"
 
@@ -4907,9 +5008,6 @@ msgstr ""
 #~ msgid "Fast Period"
 #~ msgstr "Thời gian nhanh"
 
-#~ msgid "High Barrier"
-#~ msgstr "Barie cao"
-
 #~ msgid "High Stroke"
 #~ msgstr "Stroke cao"
 
@@ -4951,9 +5049,6 @@ msgstr ""
 
 #~ msgid "Long Term Period"
 #~ msgstr "Kì hạn dài"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Barie thấp"
 
 #~ msgid "Low Stroke"
 #~ msgstr "Stroke thấp"
@@ -5031,9 +5126,6 @@ msgstr ""
 
 #~ msgid "Plot Color"
 #~ msgstr "Vẽ màu"
-
-#~ msgid "Price"
-#~ msgstr "Giá"
 
 #~ msgid "Purchase Time"
 #~ msgstr "Thời gian mua"

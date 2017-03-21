@@ -106,6 +106,7 @@ files = [
     './i18n/pl.po',
     './i18n/pt.po',
     './i18n/ru.po',
+    './i18n/th.po',
     './i18n/vi.po',
     './i18n/zh_cn.po',
     './i18n/zh_tw.po',

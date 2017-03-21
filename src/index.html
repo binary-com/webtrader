@@ -37,6 +37,8 @@
       var lang = getParameterByName('lang') || 'en';
       if (isLangSupported(lang)) {
           local_storage.set('i18n', {value: lang});
+      } else { // In case of invalid language fallback to EN
+        local_storage.set('i18n', {value: 'en'});
       }
       window.location.href = 'v<version>/main.html' + suffix;
     </script>

@@ -400,9 +400,6 @@ msgstr "4 Jam"
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transaksi atau lebih dalam 12 bulan terakhir"
 
-msgid "404"
-msgstr "404"
-
 msgid "4h"
 msgstr "4h"
 
@@ -618,9 +615,6 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "AM"
-msgstr "AM"
-
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
 
@@ -632,9 +626,6 @@ msgstr "Menerima"
 
 msgid "Account balance"
 msgstr "Saldo"
-
-msgid "Account opening"
-msgstr "Pendaftaran Akun"
 
 msgid "Action"
 msgstr "Aksi"
@@ -651,14 +642,8 @@ msgstr "Tambah indikator"
 msgid "Add level"
 msgstr "Tambah level"
 
-msgid "Add/remove comparisons"
-msgstr "Tambah/hapus perbandingan"
-
 msgid "Add/remove indicators"
 msgstr "Tambah/hapus indikator"
-
-msgid "Add/remove overlays"
-msgstr "Tambah/hapus overlays"
 
 msgid "Admin"
 msgstr "Admin"
@@ -757,9 +742,6 @@ msgstr "Agst"
 
 msgid "August"
 msgstr "Agustus"
-
-msgid "Average"
-msgstr "Rata-rata"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr ""
@@ -871,6 +853,12 @@ msgstr ""
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opsi Binary atau derivatif keuangan lainnya"
+
+msgid "Binary options or other financial derivatives trading experience"
+msgstr ""
+
+msgid "Binary options or other financial derivatives trading frequency"
+msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr ""
@@ -1256,9 +1244,6 @@ msgstr "Perbandingan"
 msgid "Conditions"
 msgstr "Persyaratan"
 
-msgid "Config changes successful"
-msgstr "Perubahan konfigurasi sukses"
-
 msgid "Confirm transfer"
 msgstr "Konfirmasi transfer"
 
@@ -1276,9 +1261,6 @@ msgstr "Lanjutkan Trading"
 
 msgid "Contract"
 msgstr "Kontrak"
-
-msgid "Contract Confirmation"
-msgstr "Konfirmasi Kontrak"
 
 msgid "Contract period"
 msgstr ""
@@ -1336,9 +1318,6 @@ msgstr "Waktu Terkini"
 
 msgid "Custom Theme"
 msgstr "Tema Wajib"
-
-msgid "Customize chart appearance"
-msgstr "Menyesuaikan tampilan grafik"
 
 msgid "Daily limit on losses"
 msgstr "Batas harian rugi"
@@ -1423,9 +1402,6 @@ msgstr "Jelaskan token apa ini untuk menemukannya nanti"
 msgid "Description"
 msgstr "Deskripsi"
 
-msgid "Deselect"
-msgstr "Hapus"
-
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
 "identify trend reversals based on range expansions. In this sense, the Mass "
@@ -1495,9 +1471,6 @@ msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 msgid "Donchian Channel (DC)"
 msgstr ""
 
-msgid "Done"
-msgstr "Selesai"
-
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Selesai. Dana tersebut telah ditransfer ke agen pembayaran"
 
@@ -1540,14 +1513,17 @@ msgstr "Download gambar vektor SVG"
 msgid "Download as"
 msgstr "Download dalam"
 
-msgid "Downloading .csv"
-msgstr "Downloading .csv"
-
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr ""
 
 msgid "Drawing tools"
 msgstr "Alat gambar"
+
+msgid ""
+"Due to recent changes in the regulations, we are required to ask our clients "
+"to complete the following Financial Assessment. Please note that you will "
+"not be able to continue trading until this is completed"
+msgstr ""
 
 msgid "Duration"
 msgstr "Durasi"
@@ -1580,9 +1556,6 @@ msgstr "Edit"
 msgid "Education"
 msgstr "Edukasi"
 
-msgid "Email verification failed"
-msgstr "Verifikasi email gagal"
-
 msgid "Embed code"
 msgstr "Menanamkan kode"
 
@@ -1604,9 +1577,6 @@ msgstr "Ends out"
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
-msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr "Pastikan untuk memasukkan data yang benar atau akun Anda akan terkunci"
-
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
 
@@ -1618,12 +1588,6 @@ msgstr "Spot awal"
 
 msgid "Entry spot price"
 msgstr ""
-
-msgid "Error downloading .csv"
-msgstr "Error downloading .csv"
-
-msgid "Error getting data for %1"
-msgstr "Terjadi error saat memperoleh data untuk %1"
 
 msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
@@ -1646,6 +1610,9 @@ msgstr "Kecualikan saya dari website hingga"
 msgid "Exit Spot"
 msgstr "Spot Akhir"
 
+msgid "Exit Spot Time"
+msgstr ""
+
 msgid "Exit spot"
 msgstr "Spot akhir"
 
@@ -1657,9 +1624,6 @@ msgstr "Penjelasan"
 
 msgid "Exponential Moving Average (EMA)"
 msgstr ""
-
-msgid "Failed to update the password"
-msgstr "Gagal memperbarui kata sandi"
 
 msgid "Fall"
 msgstr "Fall"
@@ -1702,8 +1666,8 @@ msgstr "Harga akhir"
 msgid "Finance"
 msgstr "Keuangan"
 
-msgid "Financial Account Opening form"
-msgstr "Formulir Pendaftaran Akun Finasial"
+msgid "Financial Information"
+msgstr ""
 
 msgid "Financial Security"
 msgstr ""
@@ -1716,6 +1680,9 @@ msgstr ""
 
 msgid "Firefox"
 msgstr "Firefox"
+
+msgid "First line of home address"
+msgstr ""
 
 msgid "First name"
 msgstr "Nama Depan"
@@ -1813,14 +1780,14 @@ msgstr ""
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr ""
 
-msgid "Have better luck at trading!"
-msgstr "Lebih beruntung pada trading!"
-
 msgid "Health"
 msgstr "Kesehatan"
 
 msgid "Help"
 msgstr ""
+
+msgid "High Barrier"
+msgstr "Batas Tinggi"
 
 msgid "High Price"
 msgstr "Harga Tinggi"
@@ -1855,14 +1822,8 @@ msgstr "Alamat Rumah"
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr ""
 
-msgid "Horizontal Line"
-msgstr "Garis Horisontal"
-
 msgid "Horizontal line"
 msgstr "Garis horisontal"
-
-msgid "Hour"
-msgstr "Jam"
 
 msgid "Hours"
 msgstr "Jam"
@@ -1915,9 +1876,6 @@ msgstr ""
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr ""
-
-msgid "If the issue keeps happening, please contact"
-msgstr "Jika masalah terus berlanjut, silahkan hubungi"
 
 msgid "If you select a"
 msgstr "Jika Anda memilih"
@@ -2113,9 +2071,6 @@ msgstr "Jul"
 
 msgid "July"
 msgstr "Juli"
-
-msgid "Jump to"
-msgstr "Langsung ke"
 
 msgid "Jun"
 msgstr "Jun"
@@ -2318,6 +2273,9 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
+msgid "Low Barrier"
+msgstr "Batas Rendah"
+
 msgid "Low Price"
 msgstr "Harga Rendah"
 
@@ -2434,14 +2392,20 @@ msgstr ""
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
 
+msgid "Minimum of 2 characters required"
+msgstr ""
+
+msgid "Minimum of 4 characters required"
+msgstr ""
+
+msgid "Minimum of 6 characters required"
+msgstr ""
+
 msgid "Minimum price over selected period"
 msgstr ""
 
 msgid "Minus the agent's commission"
 msgstr "Minus komisi agen"
-
-msgid "Minute"
-msgstr "Menit"
 
 msgid "Minutes"
 msgstr "Menit"
@@ -2614,11 +2578,26 @@ msgid ""
 "website has received over 15 million trades"
 msgstr ""
 
+msgid "Only letters, numbers, hyphen are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+msgstr ""
+
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
-msgid "Oops... Page Not Available"
-msgstr "Maaf...Halaman Tidak Tersedia"
+msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only numbers and space are allowed"
+msgstr ""
+
+msgid "Only numbers, letters, hyphens are allowed"
+msgstr ""
 
 msgid "Open"
 msgstr "Buka"
@@ -2653,9 +2632,6 @@ msgstr ""
 "dilakukan secara berlebihan. Untuk menghindari bahaya dari ketagihan "
 "tersebut, kami telah menyediakan pemeriksaan realitas yang memberi Anda "
 "rangkuman trading dan akun secara berkala"
-
-msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr "Kolom opsional, terdiri dari 20 karakter dan tidak berisikan '+'"
 
 msgid "Other"
 msgstr "Lain"
@@ -2699,29 +2675,11 @@ msgstr ""
 msgid "PDF"
 msgstr "PDF"
 
-msgid "PM"
-msgstr "PM"
-
 msgid "PNG"
 msgstr "PNG"
 
-msgid "Page Not Found"
-msgstr "Halaman Tidak Tersedia"
-
 msgid "Parabolic SAR (SAR)"
 msgstr ""
-
-msgid "Password must be 6 characters minimum"
-msgstr "Kata sandi harus terdiri dari minimum 6 karakter"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "Kata sandi harus mengandung huruf kecil dan huruf besar beserta angka"
-
-msgid "Password must contain uppercase letters and numbers"
-msgstr "Kata sandi harus terdiri dari huruf besar dan angka"
-
-msgid "Password successfully updated"
-msgstr "Kata sandi berhasil dirubah"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Kata sandi tidak cocok. Silahkan ketik ulang"
@@ -2773,11 +2731,11 @@ msgid ""
 "place (i.e. 0.0001)"
 msgstr ""
 
+msgid "Place of birth"
+msgstr ""
+
 msgid "Please"
 msgstr "Silahkan"
-
-msgid "Please answer to secret question, within 4-50 characters"
-msgstr "Jawablah pertanyaan rahasia, dalam 4-50 karakter"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Silahkan pilih mata uang yang ingin Anda transaksikan"
@@ -2786,17 +2744,11 @@ msgid "Please confirm the following details in order to complete the transfer"
 msgstr ""
 "Silahkan konfirmasi rincian sebagai berikut untuk menyelesaikan transfer"
 
-msgid "Please enter a number between"
-msgstr "Silakan masukkan nomor antara"
-
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Silahkan masukkan tanggal yang valid dalam format yyyy-mm-dd"
 
-msgid "Please enter a value for"
-msgstr "Masukkan nilai untuk"
-
-msgid "Please enter a vlaid phone number"
-msgstr "Silahkan masukkan nomor telepon yang benar"
+msgid "Please enter a value greater than 0"
+msgstr ""
 
 msgid "Please enter correct email"
 msgstr "Silakan masukkan email yang benar"
@@ -2804,14 +2756,8 @@ msgstr "Silakan masukkan email yang benar"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Silahkan masukkan tanggal dalam format YYYY-MM-DD"
 
-msgid "Please enter the verification code sent to your email"
-msgstr "Silahkan masukkan kode verifikasi yang dikirim ke alamat email Anda"
-
 msgid "Please enter time in the format HH:MM"
 msgstr "Masukkan format waktu dalam JJ:MM"
-
-msgid "Please enter your city address"
-msgstr "Masukkan alamat kota Anda"
 
 msgid "Please enter your current password"
 msgstr "Silahkan masukkan kata sandi Anda"
@@ -2819,38 +2765,23 @@ msgstr "Silahkan masukkan kata sandi Anda"
 msgid "Please enter your email"
 msgstr "Masukkan email Anda"
 
-msgid "Please enter your family name"
-msgstr "Masukkan nama keluarga Anda"
-
-msgid "Please enter your first name"
-msgstr "Masukkan nama depan Anda"
-
-msgid "Please enter your new password"
-msgstr "Masukkan kata sandi baru Anda"
-
-msgid "Please enter your password"
-msgstr "Masukkan kata sandi Anda"
-
-msgid "Please enter your phone number"
-msgstr "Masukkan nomor telepon Anda"
-
-msgid "Please enter your street address"
-msgstr "Masukkan alamat jalan Anda"
-
 msgid "Please input correct token"
 msgstr ""
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Silahkan install versi terbaru dari salah satu browser ini"
 
+msgid "Please provide your tax information"
+msgstr ""
+
 msgid "Please select"
 msgstr "Silahkan pilih"
 
+msgid "Please submit a valid verification token"
+msgstr ""
+
 msgid "Please try again after 1 minute"
 msgstr "Silahkan coba kembali setelah 1 menit"
-
-msgid "Please use your new password to login"
-msgstr "Silahkan gunakan kata sandi Anda untuk masuk"
 
 msgid "Plot"
 msgstr "Plot"
@@ -2890,6 +2821,9 @@ msgstr "Interval cek-realitas yang dipilih"
 msgid "Press Create token button on the right to create your first token"
 msgstr "Tekan tombol Membuat token disebelah kanan untuk membuat token"
 
+msgid "Price"
+msgstr "Harga"
+
 msgid "Price Transformation"
 msgstr ""
 
@@ -2919,9 +2853,6 @@ msgstr "Cetak grafik"
 
 msgid "Profit"
 msgstr "Untung"
-
-msgid "Profit Table"
-msgstr "Tabel Untung"
 
 msgid "Profit table"
 msgstr "Tabel untung"
@@ -2961,18 +2892,9 @@ msgstr ""
 msgid "Read"
 msgstr "Baca"
 
-msgid "Real Money Account Opening"
-msgstr "Pendaftaran Akun Uang Riil"
-
-msgid "Reality check"
-msgstr "Pengecekan realitas"
-
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
-
-msgid "Redirecting to oauth login page"
-msgstr "Mengalihkan ke halaman login oauth"
 
 msgid "Ref"
 msgstr "Ref"
@@ -3029,14 +2951,11 @@ msgstr ""
 msgid "Register free account"
 msgstr "Daftar akun gratis"
 
-msgid "Registration"
-msgstr "Pendaftaran"
-
 msgid "Relative Strength Index (RSI)"
 msgstr ""
 
-msgid "Reloading page"
-msgstr "Halaman reload"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Selected"
 msgstr "Hapus Pilihan"
@@ -3049,9 +2968,6 @@ msgstr "Ulang kata sandi"
 
 msgid "Resale price"
 msgstr ""
-
-msgid "Reset to Defaults"
-msgstr "Kembali ke Asal"
 
 msgid "Reset zoom"
 msgstr "Ulang zoom"
@@ -3070,9 +2986,6 @@ msgstr "Hasil"
 
 msgid "Return"
 msgstr "Laba"
-
-msgid "Return to trading page"
-msgstr "Kembali ke halaman trading"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
 msgstr ""
@@ -3131,6 +3044,9 @@ msgstr "Simpan perubahan"
 msgid "Scalable trading"
 msgstr ""
 
+msgid "Second line of home address"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Sekunder"
 
@@ -3152,20 +3068,8 @@ msgstr "Pengecualian-Diri"
 msgid "Sell At Market"
 msgstr "Jual Pada Pasar"
 
-msgid "Sell Price"
-msgstr "Harga Jual"
-
-msgid "Sell Spot"
-msgstr "Spot Jual"
-
-msgid "Sell Time"
-msgstr "Waktu Jual"
-
 msgid "Sell option"
 msgstr ""
-
-msgid "Send to account #"
-msgstr "Kirim ke akun #"
 
 msgid "Sent to account"
 msgstr "Kirim ke akun"
@@ -3232,9 +3136,6 @@ msgstr ""
 
 msgid "Sold"
 msgstr "Terjual"
-
-msgid "Some random index"
-msgstr "Beberapa indeks random"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr ""
@@ -3360,14 +3261,8 @@ msgstr "Stop-profit"
 msgid "Stop-type"
 msgstr "Jenis-Berhenti"
 
-msgid "Street address"
-msgstr "Alamat jalan"
-
 msgid "Stroke"
 msgstr "Stroke"
-
-msgid "Stroke color"
-msgstr "Warna Stroke"
 
 msgid "Stroke width"
 msgstr "Lebar Stroke"
@@ -3402,6 +3297,15 @@ msgstr ""
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr ""
 
+msgid "Tax identification number"
+msgstr ""
+
+msgid "Tax information"
+msgstr ""
+
+msgid "Tax residence"
+msgstr ""
+
 msgid "Tax-free"
 msgstr ""
 
@@ -3413,9 +3317,6 @@ msgstr "Nama template"
 
 msgid "Terms"
 msgstr "Syarat"
-
-msgid "Terms and Conditions"
-msgstr "Syarat dan Ketentuan"
 
 msgid "Tertiary"
 msgstr "Tersier"
@@ -3783,6 +3684,15 @@ msgstr ""
 msgid ""
 "The financial trading services contained within this site are only suitable "
 "for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the acquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract premium"
+msgstr ""
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
 "who understand and have experience of the risk involved in the aquistion of "
 "financial contracts. Transactions in financial contracts carry a high degree "
 "of risk. If purchased contracts expire worthless, you will suffer a total "
@@ -3831,14 +3741,6 @@ msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr ""
-
-msgid ""
-"The page you requested could not be found. Either it no longer exists or the "
-"address is wrong. Please check for any typos"
-msgstr ""
-"Halaman yang Anda minta tidak dapat ditemukan. Mungkin berhubung sudah tidak "
-"tersedia lagi atau alamat salah. Silakan periksa jika terdapat salah "
-"pengetikkan"
 
 msgid ""
 "The parabolic SAR is calculated almost independently for each trend in the "
@@ -3953,12 +3855,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract lost"
-msgstr "Kontrak ini rugi"
-
-msgid "This contract won"
-msgstr "Kontrak ini untung"
 
 msgid "This field is required"
 msgstr "Bagian ini diperlukan"
@@ -4079,9 +3975,6 @@ msgstr ""
 "Untuk menarik dana silahkan masukkan token verifikasi khusus yang kami baru "
 "saja emailkan kepada Anda"
 
-msgid "Today"
-msgstr "Hari ini"
-
 msgid "Token"
 msgstr "Token"
 
@@ -4189,6 +4082,9 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview untuk Binary.com"
 
+msgid "Transfer"
+msgstr ""
+
 msgid "Transfer to another Binary account"
 msgstr "Transfer ke akun Binary lainnya"
 
@@ -4272,6 +4168,9 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr "Acara Mendatang"
 
+msgid "Update"
+msgstr ""
+
 msgid "Update Settings"
 msgstr "Pembaruan Pengaturan"
 
@@ -4312,17 +4211,11 @@ msgstr ""
 msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
 
-msgid "Verification code sent to"
-msgstr "Kode verifikasi terkirim ke"
-
 msgid "Verification token"
 msgstr "Token verifikasi"
 
 msgid "Verify new password"
 msgstr "Verifikasi kata sandi baru"
-
-msgid "Vertical Line"
-msgstr "Garis Vertikal"
 
 msgid "Vertical line"
 msgstr "Garis vertikal"
@@ -4554,10 +4447,6 @@ msgstr ""
 "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu "
 "mengijinkan Webtrader untuk mengaksesnya"
 
-msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
-"Akun Anda terkunci, silahkan hubungi customer support untuk info lebih lanjut"
-
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
 
@@ -4589,9 +4478,6 @@ msgid ""
 "and-drop  simplicity"
 msgstr ""
 
-msgid "and"
-msgstr "dan"
-
 msgid "apostrophe (') are allowed"
 msgstr ""
 
@@ -4612,9 +4498,6 @@ msgstr ""
 "risiko kehilangan semua dana yang Anda investasikan) dimana Anda mungkin "
 "tidak memiliki pengetahuan dan pengalaman untuk mengurangi atau "
 "menghindarinya"
-
-msgid "between"
-msgstr "antara"
 
 msgid "commission"
 msgstr "komisi"
@@ -4798,6 +4681,227 @@ msgid ""
 "products"
 msgstr ""
 
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "AM"
+#~ msgstr "AM"
+
+#~ msgid "Account opening"
+#~ msgstr "Pendaftaran Akun"
+
+#~ msgid "Add/remove comparisons"
+#~ msgstr "Tambah/hapus perbandingan"
+
+#~ msgid "Add/remove overlays"
+#~ msgstr "Tambah/hapus overlays"
+
+#~ msgid "Average"
+#~ msgstr "Rata-rata"
+
+#~ msgid "Config changes successful"
+#~ msgstr "Perubahan konfigurasi sukses"
+
+#~ msgid "Contract Confirmation"
+#~ msgstr "Konfirmasi Kontrak"
+
+#~ msgid "Customize chart appearance"
+#~ msgstr "Menyesuaikan tampilan grafik"
+
+#~ msgid "Deselect"
+#~ msgstr "Hapus"
+
+#~ msgid "Done"
+#~ msgstr "Selesai"
+
+#~ msgid "Downloading .csv"
+#~ msgstr "Downloading .csv"
+
+#~ msgid "Email verification failed"
+#~ msgstr "Verifikasi email gagal"
+
+#~ msgid ""
+#~ "Ensure you are entering valid inputs else your account will get locked"
+#~ msgstr ""
+#~ "Pastikan untuk memasukkan data yang benar atau akun Anda akan terkunci"
+
+#~ msgid "Error downloading .csv"
+#~ msgstr "Error downloading .csv"
+
+#~ msgid "Error getting data for %1"
+#~ msgstr "Terjadi error saat memperoleh data untuk %1"
+
+#~ msgid "Failed to update the password"
+#~ msgstr "Gagal memperbarui kata sandi"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Formulir Pendaftaran Akun Finasial"
+
+#~ msgid "Have better luck at trading!"
+#~ msgstr "Lebih beruntung pada trading!"
+
+#~ msgid "Horizontal Line"
+#~ msgstr "Garis Horisontal"
+
+#~ msgid "Hour"
+#~ msgstr "Jam"
+
+#~ msgid "If the issue keeps happening, please contact"
+#~ msgstr "Jika masalah terus berlanjut, silahkan hubungi"
+
+#~ msgid "Jump to"
+#~ msgstr "Langsung ke"
+
+#~ msgid "Minute"
+#~ msgstr "Menit"
+
+#~ msgid "Oops... Page Not Available"
+#~ msgstr "Maaf...Halaman Tidak Tersedia"
+
+#~ msgid "Optional field, within 20 characters and may not contain '+'"
+#~ msgstr "Kolom opsional, terdiri dari 20 karakter dan tidak berisikan '+'"
+
+#~ msgid "PM"
+#~ msgstr "PM"
+
+#~ msgid "Page Not Found"
+#~ msgstr "Halaman Tidak Tersedia"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "Kata sandi harus terdiri dari minimum 6 karakter"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr ""
+#~ "Kata sandi harus mengandung huruf kecil dan huruf besar beserta angka"
+
+#~ msgid "Password must contain uppercase letters and numbers"
+#~ msgstr "Kata sandi harus terdiri dari huruf besar dan angka"
+
+#~ msgid "Password successfully updated"
+#~ msgstr "Kata sandi berhasil dirubah"
+
+#~ msgid "Please answer to secret question, within 4-50 characters"
+#~ msgstr "Jawablah pertanyaan rahasia, dalam 4-50 karakter"
+
+#~ msgid "Please enter a number between"
+#~ msgstr "Silakan masukkan nomor antara"
+
+#~ msgid "Please enter a value for"
+#~ msgstr "Masukkan nilai untuk"
+
+#~ msgid "Please enter a vlaid phone number"
+#~ msgstr "Silahkan masukkan nomor telepon yang benar"
+
+#~ msgid "Please enter the verification code sent to your email"
+#~ msgstr "Silahkan masukkan kode verifikasi yang dikirim ke alamat email Anda"
+
+#~ msgid "Please enter your city address"
+#~ msgstr "Masukkan alamat kota Anda"
+
+#~ msgid "Please enter your family name"
+#~ msgstr "Masukkan nama keluarga Anda"
+
+#~ msgid "Please enter your first name"
+#~ msgstr "Masukkan nama depan Anda"
+
+#~ msgid "Please enter your new password"
+#~ msgstr "Masukkan kata sandi baru Anda"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Masukkan kata sandi Anda"
+
+#~ msgid "Please enter your phone number"
+#~ msgstr "Masukkan nomor telepon Anda"
+
+#~ msgid "Please enter your street address"
+#~ msgstr "Masukkan alamat jalan Anda"
+
+#~ msgid "Please use your new password to login"
+#~ msgstr "Silahkan gunakan kata sandi Anda untuk masuk"
+
+#~ msgid "Profit Table"
+#~ msgstr "Tabel Untung"
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Pendaftaran Akun Uang Riil"
+
+#~ msgid "Reality check"
+#~ msgstr "Pengecekan realitas"
+
+#~ msgid "Redirecting to oauth login page"
+#~ msgstr "Mengalihkan ke halaman login oauth"
+
+#~ msgid "Registration"
+#~ msgstr "Pendaftaran"
+
+#~ msgid "Reloading page"
+#~ msgstr "Halaman reload"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Kembali ke Asal"
+
+#~ msgid "Return to trading page"
+#~ msgstr "Kembali ke halaman trading"
+
+#~ msgid "Sell Price"
+#~ msgstr "Harga Jual"
+
+#~ msgid "Sell Spot"
+#~ msgstr "Spot Jual"
+
+#~ msgid "Sell Time"
+#~ msgstr "Waktu Jual"
+
+#~ msgid "Send to account #"
+#~ msgstr "Kirim ke akun #"
+
+#~ msgid "Some random index"
+#~ msgstr "Beberapa indeks random"
+
+#~ msgid "Street address"
+#~ msgstr "Alamat jalan"
+
+#~ msgid "Stroke color"
+#~ msgstr "Warna Stroke"
+
+#~ msgid "Terms and Conditions"
+#~ msgstr "Syarat dan Ketentuan"
+
+#~ msgid ""
+#~ "The page you requested could not be found. Either it no longer exists or "
+#~ "the address is wrong. Please check for any typos"
+#~ msgstr ""
+#~ "Halaman yang Anda minta tidak dapat ditemukan. Mungkin berhubung sudah "
+#~ "tidak tersedia lagi atau alamat salah. Silakan periksa jika terdapat "
+#~ "salah pengetikkan"
+
+#~ msgid "This contract lost"
+#~ msgstr "Kontrak ini rugi"
+
+#~ msgid "This contract won"
+#~ msgstr "Kontrak ini untung"
+
+#~ msgid "Today"
+#~ msgstr "Hari ini"
+
+#~ msgid "Verification code sent to"
+#~ msgstr "Kode verifikasi terkirim ke"
+
+#~ msgid "Vertical Line"
+#~ msgstr "Garis Vertikal"
+
+#~ msgid ""
+#~ "Your account is locked, please contact customer support for more info"
+#~ msgstr ""
+#~ "Akun Anda terkunci, silahkan hubungi customer support untuk info lebih "
+#~ "lanjut"
+
+#~ msgid "and"
+#~ msgstr "dan"
+
+#~ msgid "between"
+#~ msgstr "antara"
+
 #~ msgid "%D MA Type"
 #~ msgstr "Jenis MA %D"
 
@@ -4897,9 +5001,6 @@ msgstr ""
 #~ msgid "Fast Period"
 #~ msgstr "Periode Cepat"
 
-#~ msgid "High Barrier"
-#~ msgstr "Batas Tinggi"
-
 #~ msgid "High Stroke"
 #~ msgstr "Stroke High"
 
@@ -4941,9 +5042,6 @@ msgstr ""
 
 #~ msgid "Long Term Period"
 #~ msgstr "Periode Long Term"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Batas Rendah"
 
 #~ msgid "Low Stroke"
 #~ msgstr "Stroke Low"
@@ -5022,9 +5120,6 @@ msgstr ""
 
 #~ msgid "Plot Color"
 #~ msgstr "Warna Plot"
-
-#~ msgid "Price"
-#~ msgstr "Harga"
 
 #~ msgid "Purchase Time"
 #~ msgstr "Waktu Beli"
