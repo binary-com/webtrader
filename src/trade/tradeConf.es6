@@ -164,7 +164,10 @@ const register_ticks = (state, extra) => {
       const contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
       entry = contract.entry_tick_time * 1;
-      expiry = contract.date_expiry * 1; /* date_expiry gets updated when contract is settled !!! */
+      const tick_interval = last_1000_ticks[1].epoch*1 - last_1000_ticks[0].epoch*1;
+      // contract.date_epxiry is WRONG with odd numbers.
+      // DONT TRUST BACKEND! I'm really angry right now :/
+      expiry = entry +  (tick_interval * (extra.tick_count-1));
       if(!tracking_timeout_set)
          track_ticks();
       return;
