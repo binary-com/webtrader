@@ -162,9 +162,13 @@ const register_ticks = (state, extra) => {
 
    fn = liveapi.events.on('proposal_open_contract', (data) => {
       const contract = data.proposal_open_contract;
-      if(contract.contract_id !== extra.contract_id) return;
-      entry = contract.entry_tick_time * 1;
-      expiry = contract.date_expiry * 1; /* date_expiry gets updated when contract is settled !!! */
+      if(contract.contract_id !== extra.contract_id && data.echo_req.contract_id !== extra.contract_id) return;
+      if(contract.is_sold != 1) {
+         entry = contract.entry_tick_time * 1;
+         expiry = contract.date_expiry * 1; /* date_expiry gets updated when contract is settled !!! */
+      } else {
+         expiry = contract.date_expiry * 1 || contract.sell_time * 1;
+      }
       if(!tracking_timeout_set)
          track_ticks();
       return;
