@@ -102,16 +102,6 @@ rv.binders['tick-chart'] = {
    } /* end of routine() */
 };
 
-const last_1000_ticks = []; /* record the last 1k ticks returned */
-liveapi.events.on('tick', (data) => {
-   const tick = data.tick;
-   tick.quote *= 1;
-   tick.epoch *= 1;
-   last_1000_ticks.push(tick);
-   if(last_1000_ticks.length > 1000)
-      last_1000_ticks.shift();
-});
-
 const register_ticks = (state, extra) => {
    let tick_count = extra.tick_count * 1,
       symbol = extra.symbol,
@@ -119,24 +109,24 @@ const register_ticks = (state, extra) => {
       fn = null;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const add_tick = (tick) =>{
-      if (_.findIndex(state.ticks.array, (t) => (t.epoch*1 === tick.epoch*1)) === -1 && tick_count > 0) {
+   const add_tick = (tick) => {
+      if (_.findIndex(state.ticks.array, (t) => (t.epoch * 1 === tick.current_spot_time * 1)) === -1 && tick_count > 0 && (tick.barrier || state.ticks.category === 'Digits')) {
          const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
          state.ticks.array.push({
-            quote: tick.quote,
-            epoch: tick.epoch,
+            quote: tick.current_spot,
+            epoch: tick.current_spot_time,
             number: state.ticks.array.length + 1,
-            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
-            extra.symbol_name + " " + tick.quote,
-            decimal_digits : decimal_digits
+            tooltip: moment.utc(tick.current_spot_time * 1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
+               extra.symbol_name + " " + tick.current_spot,
+            barrier: tick.barrier
          });
          --tick_count;
          if (tick_count === 0) {
             state.ticks.update_status();
             state.buy.update();
             /* show buy-price final and profit & update title */
-            state.back.visible = true;
-            /* show back button */
+            state.close_button.visible = true;
+            /* show closef button */
             liveapi.events.off('proposal_open_contract', fn);
             liveapi.proposal_open_contract.forget(extra.contract_id);
             /* unregister from proposal_open_contract stream */
@@ -147,26 +137,16 @@ const register_ticks = (state, extra) => {
       }
    }
 
-   let entry = null, expiry = null;
-   let tracking_timeout_set = false;
-   const track_ticks = () => {
-      tracking_timeout_set = false;
-      last_1000_ticks.filter(
-         (tick) => (tick.symbol === extra.symbol && tick.epoch*1 >= entry && tick.epoch*1 <= expiry)
-      ).forEach(add_tick);
-      if(tick_count > 0) {
-         tracking_timeout_set = true;
-         setTimeout(track_ticks, 300);
-      }
-   }
+   let entry = null,
+      expiry = null;
 
    fn = liveapi.events.on('proposal_open_contract', (data) => {
       const contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
       entry = contract.entry_tick_time * 1;
       expiry = contract.date_expiry * 1; /* date_expiry gets updated when contract is settled !!! */
-      if(!tracking_timeout_set)
-         track_ticks();
+      if (contract.current_spot_time >= entry)
+         add_tick(data.proposal_open_contract);
       return;
    });
 }
@@ -193,7 +173,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
       if(extra.barrier && _(['higher','lower']).includes(extra.category_display)) {
          barrier += extra.barrier*1;
       }
-      return barrier.toFixed(decimal_digits);
+      return barrier;
    }
    const state = {
       title: {
@@ -220,15 +200,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
       },
       ticks: {
          array: [],
-         average: () => {
-            const ticks = state.ticks;
-            const array = ticks.array;
-            let sum = 0;
-            for(let i = 0; i < array.length; ++i)
-               sum += array[i].quote*1;
-            const avg = sum / (array.length || 1);
-            return avg;
-         },
          getPlotX: () => {
             const ticks = state.ticks;
             const inx = ticks.array.length;
@@ -248,7 +219,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
 
             if(ticks.category === 'Asians') {
                //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
-               const avg = ticks.average().toFixed(decimal_digits + 1);
+               const avg = tick.barrier;
                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
             }
             return null;
@@ -260,16 +231,17 @@ export const init = (data, extra, show_callback, hide_callback) => {
          status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
          chart_visible: extra.show_tick_chart,
       },
-      arrow: {
+      view_button: {
          visible: !extra.show_tick_chart && extra.category !== 'Digits',
       },
-      back: { visible: false }, /* back buttom */
+      close_button: { visible: false },
+      /* close buttom */
    };
 
    state.buy.update = () => {
       const status = state.ticks.status;
       state.title.text = { waiting: 'Contract Confirmation'.i18n(),
-         won : 'This contract won'.i18n(),
+         won: 'This contract won'.i18n(),
          lost: 'This contract lost'.i18n()
       }[status];
       if(status === 'lost') {
@@ -284,13 +256,12 @@ export const init = (data, extra, show_callback, hide_callback) => {
       state.buy.show_result = true;
    }
    state.ticks.update_status = () => {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
 
-      const first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
+      const first_quote = _.head(state.ticks.array).quote + '',
+         last_quote = _.last(state.ticks.array).quote + '',
          barrier = extra.getbarrier(_.head(state.ticks.array)) + '',
          digits_value = state.ticks.value + '',
-         average = state.ticks.average().toFixed(5);
+         average = _.last(state.ticks.array).barrier;
       const category = state.ticks.category,
          display = state.ticks.category_display;
       const css = {
@@ -317,8 +288,8 @@ export const init = (data, extra, show_callback, hide_callback) => {
       state.ticks.status = css[category][display] ? 'won' : 'lost';
    }
 
-   state.back.onclick = () => hide_callback(root);
-   state.arrow.onclick = (e) => {
+   state.close_button.onclick = () => hide_callback(root);
+   state.view_button.onclick = (e) => {
       const $target = $(e.target);
       if(!$target.hasClass('disabled')) {
          $target.addClass('disabled');
@@ -331,8 +302,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
 
    const view = rv.bind(root[0], state)
 
-   if(!state.arrow.visible) { register_ticks(state, extra); }
-   else { state.back.visible = true; }
+   if (!state.view_button.visible) { register_ticks(state, extra); } else { state.close_button.visible = true; }
 
    show_callback(root);
 }
