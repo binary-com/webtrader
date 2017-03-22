@@ -38,14 +38,16 @@ msgstr "Trade2Win 颁发的“最佳固定赔率经纪”银奖"
 msgid ""
 "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
 "Chronicle UK"
-msgstr "英国《金融时报》和《 Investors Chronicle》颁发的“最佳固定赔率金融提供商”奖项"
+msgstr ""
+"英国《金融时报》和《 Investors Chronicle》颁发的“最佳固定赔率金融提供商”奖项"
 
 msgid ""
 "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr "英国《Shares Magazine》颁发的“最佳固定赔率金融交易提供商”奖项"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
-msgstr "《Global Banking and Finance Review》颁发的“2012年最佳固定赔率企业”奖项"
+msgstr ""
+"《Global Banking and Finance Review》颁发的“2012年最佳固定赔率企业”奖项"
 
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
@@ -78,7 +80,9 @@ msgid ""
 ") goes live, establishing a round-the-clock financial betting service on a "
 "variety of financial indices. Business grows quickly, and we soon become the "
 "market leader in fixed-odds financial betting"
-msgstr "正式上线，提供基于各种金融指数的全天侯金融投注服务。公司业务快速增长，我们很快即成为固定赔率金融投注的市场领导者"
+msgstr ""
+"正式上线，提供基于各种金融指数的全天侯金融投注服务。公司业务快速增长，我们很"
+"快即成为固定赔率金融投注的市场领导者"
 
 msgid ""
 "- Binary.com benchmarks its prices daily against inter-bank derivatives "
@@ -110,7 +114,9 @@ msgstr "- Binary.com是拥有受专利保护的报价技术的业内领先企业
 msgid ""
 "- Binary.com offers many payment methods, such as credit/debit cards, bank "
 "wires, e-cash and e-wallets"
-msgstr "- Binary.com 提供多种付款方式，包括借记卡和信用卡、银行电汇、电子现金及电子钱包等"
+msgstr ""
+"- Binary.com 提供多种付款方式，包括借记卡和信用卡、银行电汇、电子现金及电子钱"
+"包等"
 
 msgid ""
 "- Binary.com quotes a trade and the counter-trade, so you always get "
@@ -231,7 +237,8 @@ msgstr "- 进行全球所有的主要股票指数交易"
 msgid ""
 "- trade currencies, indices and commodities in rising, falling, sideways, "
 "quiet and volatile markets"
-msgstr "- 在上涨、下跌、横盘整理、交易清淡和震荡市场中交易外汇、指数、大宗商品及其它"
+msgstr ""
+"- 在上涨、下跌、横盘整理、交易清淡和震荡市场中交易外汇、指数、大宗商品及其它"
 
 msgid "- trade major commodities such as gold and oil"
 msgstr "- 交易黄金和原油等主要大宗商品"
@@ -251,7 +258,8 @@ msgstr "- 开始交易前您已知道赢或输的金额"
 msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
-msgstr "- 我们将永不向您追加保证金、不会有缺口风险、或收取滑价费用、隐藏费或佣金"
+msgstr ""
+"- 我们将永不向您追加保证金、不会有缺口风险、或收取滑价费用、隐藏费或佣金"
 
 msgid "0-1 year"
 msgstr "0-1 年"
@@ -397,9 +405,6 @@ msgstr "4小时"
 msgid "40 transactions or more in the past 12 months"
 msgstr "过去12月内交易40次及以上"
 
-msgid "404"
-msgstr "404"
-
 msgid "4h"
 msgstr "4小时"
 
@@ -436,7 +441,8 @@ msgid ""
 "within the body of the first candle and in doing so confirming the reversal. "
 "It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
-"十字夜星包括长线看涨烛图， 接下来是其上有缺口的十字图，然后是在首个烛图主体内完整收盘并同时确认翻转的第三看跌烛图。被视为强大的看跌价翻转烛台形态"
+"十字夜星包括长线看涨烛图， 接下来是其上有缺口的十字图，然后是在首个烛图主体内"
+"完整收盘并同时确认翻转的第三看跌烛图。被视为强大的看跌价翻转烛台形态"
 
 msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
@@ -448,7 +454,9 @@ msgid ""
 "body. The length of the head and tail shadows can vary. Like a Doji "
 "Candlestick it represents a point of indecision with buyers and seller "
 "matched"
-msgstr "陀螺型蜡烛线是体型较小的看涨或看跌蜡烛线。影子头部和尾部长度不一。它与十字星蜡烛线一样代表买卖双方相符时的犹疑不决点"
+msgstr ""
+"陀螺型蜡烛线是体型较小的看涨或看跌蜡烛线。影子头部和尾部长度不一。它与十字星"
+"蜡烛线一样代表买卖双方相符时的犹疑不决点"
 
 msgid ""
 "A Stays Between trade pays out if the market stays between (does not touch) "
@@ -457,8 +465,9 @@ msgid ""
 "EITHER the high barrier or the low barrier at any time during the period "
 "chosen by a trader"
 msgstr ""
-"如果市场在所选期限内一直保持在（没有触及）高障碍或低障碍之间，所选择的“保持在范围之内”交易即可获利。如果市场在所选期限内只要触及高障碍或低障碍，所选择的"
-"“超出范围之外”交易即可获利"
+"如果市场在所选期限内一直保持在（没有触及）高障碍或低障碍之间，所选择的“保持在"
+"范围之内”交易即可获利。如果市场在所选期限内只要触及高障碍或低障碍，所选择"
+"的“超出范围之外”交易即可获利"
 
 msgid ""
 "A bearish candlestick pattern consisting of three candles that have "
@@ -618,9 +627,6 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "AM"
-msgstr "早上"
-
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
 
@@ -632,9 +638,6 @@ msgstr "接受"
 
 msgid "Account balance"
 msgstr "账户余额"
-
-msgid "Account opening"
-msgstr "账户开立"
 
 msgid "Action"
 msgstr "操作"
@@ -651,14 +654,8 @@ msgstr "添加指标"
 msgid "Add level"
 msgstr "添加价位"
 
-msgid "Add/remove comparisons"
-msgstr "添加/删除比较"
-
 msgid "Add/remove indicators"
 msgstr "添加/删除指标"
-
-msgid "Add/remove overlays"
-msgstr "添加/删除覆盖"
 
 msgid "Admin"
 msgstr "管理中心"
@@ -757,9 +754,6 @@ msgstr "八月"
 
 msgid "August"
 msgstr "八月"
-
-msgid "Average"
-msgstr "平均"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr ""
@@ -871,6 +865,12 @@ msgstr ""
 
 msgid "Binary options or other financial derivatives"
 msgstr "二元期权或其他金融衍生品"
+
+msgid "Binary options or other financial derivatives trading experience"
+msgstr ""
+
+msgid "Binary options or other financial derivatives trading frequency"
+msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr ""
@@ -1256,9 +1256,6 @@ msgstr "比较"
 msgid "Conditions"
 msgstr "条件"
 
-msgid "Config changes successful"
-msgstr "成功更改配置"
-
 msgid "Confirm transfer"
 msgstr "确认转账"
 
@@ -1276,9 +1273,6 @@ msgstr "继续交易"
 
 msgid "Contract"
 msgstr "合约"
-
-msgid "Contract Confirmation"
-msgstr "合约确认"
 
 msgid "Contract period"
 msgstr ""
@@ -1336,9 +1330,6 @@ msgstr "当前时间"
 
 msgid "Custom Theme"
 msgstr "自定义主题"
-
-msgid "Customize chart appearance"
-msgstr "自定义图表外观"
 
 msgid "Daily limit on losses"
 msgstr "每日损失限额"
@@ -1423,9 +1414,6 @@ msgstr "令牌用途说明，以便稍后查找"
 msgid "Description"
 msgstr "说明"
 
-msgid "Deselect"
-msgstr "取消选择"
-
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
 "identify trend reversals based on range expansions. In this sense, the Mass "
@@ -1495,9 +1483,6 @@ msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
 msgid "Donchian Channel (DC)"
 msgstr ""
 
-msgid "Done"
-msgstr "已完成"
-
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。资金已转给支付代理"
 
@@ -1540,14 +1525,17 @@ msgstr "下载SVG矢量图像"
 msgid "Download as"
 msgstr "下载as"
 
-msgid "Downloading .csv"
-msgstr "正在下载 .csv"
-
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr ""
 
 msgid "Drawing tools"
 msgstr "绘图工具"
+
+msgid ""
+"Due to recent changes in the regulations, we are required to ask our clients "
+"to complete the following Financial Assessment. Please note that you will "
+"not be able to continue trading until this is completed"
+msgstr ""
 
 msgid "Duration"
 msgstr "持续时间"
@@ -1580,9 +1568,6 @@ msgstr "编辑"
 msgid "Education"
 msgstr "教育"
 
-msgid "Email verification failed"
-msgstr "电子邮件验证失败"
-
 msgid "Embed code"
 msgstr "嵌入代码"
 
@@ -1604,9 +1589,6 @@ msgstr "范围之外收盘"
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
-msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr "请确认您输入有效数据，不然账户将被封锁"
-
 msgid "Enter your current password"
 msgstr "输入当前密码"
 
@@ -1618,12 +1600,6 @@ msgstr "入市现价"
 
 msgid "Entry spot price"
 msgstr ""
-
-msgid "Error downloading .csv"
-msgstr "下载.csv时发生错误"
-
-msgid "Error getting data for %1"
-msgstr "获取 %1数据时出错"
 
 msgid "Estimated Net Worth"
 msgstr "估计净值"
@@ -1646,6 +1622,9 @@ msgstr "禁止我访问本网站直到"
 msgid "Exit Spot"
 msgstr "退市现价"
 
+msgid "Exit Spot Time"
+msgstr ""
+
 msgid "Exit spot"
 msgstr "退市现价"
 
@@ -1657,9 +1636,6 @@ msgstr "说明"
 
 msgid "Exponential Moving Average (EMA)"
 msgstr ""
-
-msgid "Failed to update the password"
-msgstr "密码更新失败"
 
 msgid "Fall"
 msgstr "下跌"
@@ -1702,8 +1678,8 @@ msgstr "最终价格"
 msgid "Finance"
 msgstr "金融"
 
-msgid "Financial Account Opening form"
-msgstr "开立金融账户表格"
+msgid "Financial Information"
+msgstr ""
 
 msgid "Financial Security"
 msgstr ""
@@ -1716,6 +1692,9 @@ msgstr ""
 
 msgid "Firefox"
 msgstr "Firefox"
+
+msgid "First line of home address"
+msgstr ""
 
 msgid "First name"
 msgstr "名字"
@@ -1813,14 +1792,14 @@ msgstr ""
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr ""
 
-msgid "Have better luck at trading!"
-msgstr "祝您好运！"
-
 msgid "Health"
 msgstr "健康状况"
 
 msgid "Help"
 msgstr ""
+
+msgid "High Barrier"
+msgstr "高障碍"
 
 msgid "High Price"
 msgstr "高价位"
@@ -1855,14 +1834,8 @@ msgstr "家庭地址"
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr ""
 
-msgid "Horizontal Line"
-msgstr "水平线"
-
 msgid "Horizontal line"
 msgstr "水平线"
-
-msgid "Hour"
-msgstr "小时"
 
 msgid "Hours"
 msgstr "小时"
@@ -1913,9 +1886,6 @@ msgstr ""
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr ""
-
-msgid "If the issue keeps happening, please contact"
-msgstr "如果这个问题持续发生，请联系"
 
 msgid "If you select a"
 msgstr "如您选择"
@@ -2107,9 +2077,6 @@ msgstr "七月"
 
 msgid "July"
 msgstr "七月"
-
-msgid "Jump to"
-msgstr "跳至"
 
 msgid "Jun"
 msgstr "六月"
@@ -2312,6 +2279,9 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
+msgid "Low Barrier"
+msgstr "低障碍"
+
 msgid "Low Price"
 msgstr "低价"
 
@@ -2425,14 +2395,20 @@ msgstr ""
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "需至少6个字符与1个数字"
 
+msgid "Minimum of 2 characters required"
+msgstr ""
+
+msgid "Minimum of 4 characters required"
+msgstr ""
+
+msgid "Minimum of 6 characters required"
+msgstr ""
+
 msgid "Minimum price over selected period"
 msgstr ""
 
 msgid "Minus the agent's commission"
 msgstr "减去代理佣金"
-
-msgid "Minute"
-msgstr "分钟"
 
 msgid "Minutes"
 msgstr "分钟"
@@ -2601,11 +2577,26 @@ msgid ""
 "website has received over 15 million trades"
 msgstr ""
 
+msgid "Only letters, numbers, hyphen are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+msgstr ""
+
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
-msgid "Oops... Page Not Available"
-msgstr "哎呀...页面不可用"
+msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only numbers and space are allowed"
+msgstr ""
+
+msgid "Only numbers, letters, hyphens are allowed"
+msgstr ""
 
 msgid "Open"
 msgstr "开盘"
@@ -2638,9 +2629,6 @@ msgid ""
 msgstr ""
 "二元期权交易和其他类似活动一样，过于沉迷可能会上瘾。为了避免这种风险，我们会"
 "定期向您提供交易和财务的实况简报"
-
-msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr "可选字段，不超过 20 个字符，并且不能包含“+”"
 
 msgid "Other"
 msgstr "其它"
@@ -2684,29 +2672,11 @@ msgstr ""
 msgid "PDF"
 msgstr "PDF"
 
-msgid "PM"
-msgstr "下午"
-
 msgid "PNG"
 msgstr "PNG"
 
-msgid "Page Not Found"
-msgstr "找不到页面"
-
 msgid "Parabolic SAR (SAR)"
 msgstr ""
-
-msgid "Password must be 6 characters minimum"
-msgstr "密码需至少6个字符"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "密码须包含大小写字母与数字"
-
-msgid "Password must contain uppercase letters and numbers"
-msgstr "密码须包含大写字母与数字"
-
-msgid "Password successfully updated"
-msgstr "密码已成功更新"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "密码不相符。请重新输入"
@@ -2758,11 +2728,11 @@ msgid ""
 "place (i.e. 0.0001)"
 msgstr ""
 
+msgid "Place of birth"
+msgstr ""
+
 msgid "Please"
 msgstr "请"
-
-msgid "Please answer to secret question, within 4-50 characters"
-msgstr "请回答密码提示问题，限4-50个字符"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "请选择交易货币种类"
@@ -2770,17 +2740,11 @@ msgstr "请选择交易货币种类"
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "请确认以下详情以完成转账"
 
-msgid "Please enter a number between"
-msgstr "请输入以下范围之间的数字"
-
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "请输入有效日期，格式为年-月-日"
 
-msgid "Please enter a value for"
-msgstr "请为以下输入数值"
-
-msgid "Please enter a vlaid phone number"
-msgstr "请输入有效的电话号"
+msgid "Please enter a value greater than 0"
+msgstr ""
 
 msgid "Please enter correct email"
 msgstr "请输入正确的电子邮件"
@@ -2788,14 +2752,8 @@ msgstr "请输入正确的电子邮件"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "请输入日期，格式是年-月-日"
 
-msgid "Please enter the verification code sent to your email"
-msgstr "请输入发送到您邮箱的验证码"
-
 msgid "Please enter time in the format HH:MM"
 msgstr "请输入时间，格式为小时：分钟"
-
-msgid "Please enter your city address"
-msgstr "请输入您的城市住址"
 
 msgid "Please enter your current password"
 msgstr "请输入当前密码"
@@ -2803,38 +2761,23 @@ msgstr "请输入当前密码"
 msgid "Please enter your email"
 msgstr "请输入电子邮件"
 
-msgid "Please enter your family name"
-msgstr "请输入您的姓氏"
-
-msgid "Please enter your first name"
-msgstr "请输入您的名字"
-
-msgid "Please enter your new password"
-msgstr "请输入新密码"
-
-msgid "Please enter your password"
-msgstr "请输入密码"
-
-msgid "Please enter your phone number"
-msgstr "请输入电话号"
-
-msgid "Please enter your street address"
-msgstr "请输入街道住址"
-
 msgid "Please input correct token"
 msgstr ""
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "以下浏览器请选择一个并安装最新版本"
 
+msgid "Please provide your tax information"
+msgstr ""
+
 msgid "Please select"
 msgstr "请选择"
 
+msgid "Please submit a valid verification token"
+msgstr ""
+
 msgid "Please try again after 1 minute"
 msgstr "请于1分钟后重试"
-
-msgid "Please use your new password to login"
-msgstr "请用新密码登录"
 
 msgid "Plot"
 msgstr "绘图"
@@ -2874,6 +2817,9 @@ msgstr "优选实况调查间隔时间"
 msgid "Press Create token button on the right to create your first token"
 msgstr "按右方创建令牌按钮即可创建首个令牌"
 
+msgid "Price"
+msgstr "价格"
+
 msgid "Price Transformation"
 msgstr ""
 
@@ -2903,9 +2849,6 @@ msgstr "打印图表"
 
 msgid "Profit"
 msgstr "利润"
-
-msgid "Profit Table"
-msgstr "利润表"
 
 msgid "Profit table"
 msgstr "利润表"
@@ -2945,18 +2888,9 @@ msgstr ""
 msgid "Read"
 msgstr "阅读"
 
-msgid "Real Money Account Opening"
-msgstr "开立真实资金账户"
-
-msgid "Reality check"
-msgstr "真实情况检查"
-
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
-
-msgid "Redirecting to oauth login page"
-msgstr "重新导入oauth登录页面"
 
 msgid "Ref"
 msgstr "参考"
@@ -3013,14 +2947,11 @@ msgstr ""
 msgid "Register free account"
 msgstr "注册免费账户"
 
-msgid "Registration"
-msgstr "注册"
-
 msgid "Relative Strength Index (RSI)"
 msgstr ""
 
-msgid "Reloading page"
-msgstr "重新载入页面"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Selected"
 msgstr "移除选定项目"
@@ -3033,9 +2964,6 @@ msgstr "重复输入密码"
 
 msgid "Resale price"
 msgstr ""
-
-msgid "Reset to Defaults"
-msgstr "重设为默认值"
 
 msgid "Reset zoom"
 msgstr "缩放重设"
@@ -3054,9 +2982,6 @@ msgstr "成绩"
 
 msgid "Return"
 msgstr "回报"
-
-msgid "Return to trading page"
-msgstr "返回交易页面"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
 msgstr ""
@@ -3115,6 +3040,9 @@ msgstr "保存更改"
 msgid "Scalable trading"
 msgstr ""
 
+msgid "Second line of home address"
+msgstr ""
+
 msgid "Secondary"
 msgstr "次要"
 
@@ -3136,20 +3064,8 @@ msgstr "自我禁止"
 msgid "Sell At Market"
 msgstr "按市价卖出"
 
-msgid "Sell Price"
-msgstr "卖出价格"
-
-msgid "Sell Spot"
-msgstr "卖出现价"
-
-msgid "Sell Time"
-msgstr "卖出时间"
-
 msgid "Sell option"
 msgstr ""
-
-msgid "Send to account #"
-msgstr "发送到账户 #"
 
 msgid "Sent to account"
 msgstr "发送到账户"
@@ -3216,9 +3132,6 @@ msgstr ""
 
 msgid "Sold"
 msgstr "已卖出"
-
-msgid "Some random index"
-msgstr "部分随机指数"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr ""
@@ -3344,14 +3257,8 @@ msgstr "止盈"
 msgid "Stop-type"
 msgstr "停止类型"
 
-msgid "Street address"
-msgstr "街道地址"
-
 msgid "Stroke"
 msgstr "波幅"
-
-msgid "Stroke color"
-msgstr "波幅颜色"
 
 msgid "Stroke width"
 msgstr "波幅宽度"
@@ -3386,6 +3293,15 @@ msgstr ""
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr ""
 
+msgid "Tax identification number"
+msgstr ""
+
+msgid "Tax information"
+msgstr ""
+
+msgid "Tax residence"
+msgstr ""
+
 msgid "Tax-free"
 msgstr ""
 
@@ -3397,9 +3313,6 @@ msgstr "模板名称"
 
 msgid "Terms"
 msgstr "条款"
-
-msgid "Terms and Conditions"
-msgstr "条款和条件"
 
 msgid "Tertiary"
 msgstr "三级"
@@ -3767,6 +3680,15 @@ msgstr ""
 msgid ""
 "The financial trading services contained within this site are only suitable "
 "for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the acquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract premium"
+msgstr ""
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
 "who understand and have experience of the risk involved in the aquistion of "
 "financial contracts. Transactions in financial contracts carry a high degree "
 "of risk. If purchased contracts expire worthless, you will suffer a total "
@@ -3811,11 +3733,6 @@ msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr ""
-
-msgid ""
-"The page you requested could not be found. Either it no longer exists or the "
-"address is wrong. Please check for any typos"
-msgstr "找不到相关的页面。该页面已过期，或输入网址出错。请检查您的输入"
 
 msgid ""
 "The parabolic SAR is calculated almost independently for each trend in the "
@@ -3930,12 +3847,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract lost"
-msgstr "合约输了"
-
-msgid "This contract won"
-msgstr "合约赢了"
 
 msgid "This field is required"
 msgstr "此为必填项"
@@ -4053,9 +3964,6 @@ msgid ""
 "emailed you"
 msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
 
-msgid "Today"
-msgstr "今天"
-
 msgid "Token"
 msgstr "令牌"
 
@@ -4154,6 +4062,9 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "通过Binary.com使用Tradingview"
 
+msgid "Transfer"
+msgstr ""
+
 msgid "Transfer to another Binary account"
 msgstr "转账到另一个Binary账户"
 
@@ -4237,6 +4148,9 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr "未来事件"
 
+msgid "Update"
+msgstr ""
+
 msgid "Update Settings"
 msgstr "更新设置"
 
@@ -4275,17 +4189,11 @@ msgstr ""
 msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
 
-msgid "Verification code sent to"
-msgstr "验证代码已发送到"
-
 msgid "Verification token"
 msgstr "验证令牌"
 
 msgid "Verify new password"
 msgstr "验证新密码"
-
-msgid "Vertical Line"
-msgstr "垂直线"
 
 msgid "Vertical line"
 msgstr "垂直线"
@@ -4513,9 +4421,6 @@ msgid ""
 "Webtrader access it"
 msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
 
-msgid "Your account is locked, please contact customer support for more info"
-msgstr "您的账户已被封锁，欲知详情请联系客服部"
-
 msgid "Your browser is not supported"
 msgstr "您的浏览器不受支持"
 
@@ -4547,9 +4452,6 @@ msgid ""
 "and-drop  simplicity"
 msgstr ""
 
-msgid "and"
-msgstr "以及"
-
 msgid "apostrophe (') are allowed"
 msgstr ""
 
@@ -4568,9 +4470,6 @@ msgstr ""
 "以下并依照后续流程开立账户，您须注意，您可能承担一些风险（可能会很严重，包括"
 "损失整个投资资金的风险），而对于此类风险缺，你可能乏知识与经验以作出正确评估"
 "或化解"
-
-msgid "between"
-msgstr "之间"
 
 msgid "commission"
 msgstr "佣金"
@@ -4753,6 +4652,220 @@ msgid ""
 "products"
 msgstr ""
 
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "AM"
+#~ msgstr "早上"
+
+#~ msgid "Account opening"
+#~ msgstr "账户开立"
+
+#~ msgid "Add/remove comparisons"
+#~ msgstr "添加/删除比较"
+
+#~ msgid "Add/remove overlays"
+#~ msgstr "添加/删除覆盖"
+
+#~ msgid "Average"
+#~ msgstr "平均"
+
+#~ msgid "Config changes successful"
+#~ msgstr "成功更改配置"
+
+#~ msgid "Contract Confirmation"
+#~ msgstr "合约确认"
+
+#~ msgid "Customize chart appearance"
+#~ msgstr "自定义图表外观"
+
+#~ msgid "Deselect"
+#~ msgstr "取消选择"
+
+#~ msgid "Done"
+#~ msgstr "已完成"
+
+#~ msgid "Downloading .csv"
+#~ msgstr "正在下载 .csv"
+
+#~ msgid "Email verification failed"
+#~ msgstr "电子邮件验证失败"
+
+#~ msgid ""
+#~ "Ensure you are entering valid inputs else your account will get locked"
+#~ msgstr "请确认您输入有效数据，不然账户将被封锁"
+
+#~ msgid "Error downloading .csv"
+#~ msgstr "下载.csv时发生错误"
+
+#~ msgid "Error getting data for %1"
+#~ msgstr "获取 %1数据时出错"
+
+#~ msgid "Failed to update the password"
+#~ msgstr "密码更新失败"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "开立金融账户表格"
+
+#~ msgid "Have better luck at trading!"
+#~ msgstr "祝您好运！"
+
+#~ msgid "Horizontal Line"
+#~ msgstr "水平线"
+
+#~ msgid "Hour"
+#~ msgstr "小时"
+
+#~ msgid "If the issue keeps happening, please contact"
+#~ msgstr "如果这个问题持续发生，请联系"
+
+#~ msgid "Jump to"
+#~ msgstr "跳至"
+
+#~ msgid "Minute"
+#~ msgstr "分钟"
+
+#~ msgid "Oops... Page Not Available"
+#~ msgstr "哎呀...页面不可用"
+
+#~ msgid "Optional field, within 20 characters and may not contain '+'"
+#~ msgstr "可选字段，不超过 20 个字符，并且不能包含“+”"
+
+#~ msgid "PM"
+#~ msgstr "下午"
+
+#~ msgid "Page Not Found"
+#~ msgstr "找不到页面"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "密码需至少6个字符"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "密码须包含大小写字母与数字"
+
+#~ msgid "Password must contain uppercase letters and numbers"
+#~ msgstr "密码须包含大写字母与数字"
+
+#~ msgid "Password successfully updated"
+#~ msgstr "密码已成功更新"
+
+#~ msgid "Please answer to secret question, within 4-50 characters"
+#~ msgstr "请回答密码提示问题，限4-50个字符"
+
+#~ msgid "Please enter a number between"
+#~ msgstr "请输入以下范围之间的数字"
+
+#~ msgid "Please enter a value for"
+#~ msgstr "请为以下输入数值"
+
+#~ msgid "Please enter a vlaid phone number"
+#~ msgstr "请输入有效的电话号"
+
+#~ msgid "Please enter the verification code sent to your email"
+#~ msgstr "请输入发送到您邮箱的验证码"
+
+#~ msgid "Please enter your city address"
+#~ msgstr "请输入您的城市住址"
+
+#~ msgid "Please enter your family name"
+#~ msgstr "请输入您的姓氏"
+
+#~ msgid "Please enter your first name"
+#~ msgstr "请输入您的名字"
+
+#~ msgid "Please enter your new password"
+#~ msgstr "请输入新密码"
+
+#~ msgid "Please enter your password"
+#~ msgstr "请输入密码"
+
+#~ msgid "Please enter your phone number"
+#~ msgstr "请输入电话号"
+
+#~ msgid "Please enter your street address"
+#~ msgstr "请输入街道住址"
+
+#~ msgid "Please use your new password to login"
+#~ msgstr "请用新密码登录"
+
+#~ msgid "Profit Table"
+#~ msgstr "利润表"
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "开立真实资金账户"
+
+#~ msgid "Reality check"
+#~ msgstr "真实情况检查"
+
+#~ msgid "Redirecting to oauth login page"
+#~ msgstr "重新导入oauth登录页面"
+
+#~ msgid "Registration"
+#~ msgstr "注册"
+
+#~ msgid "Reloading page"
+#~ msgstr "重新载入页面"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "重设为默认值"
+
+#~ msgid "Return to trading page"
+#~ msgstr "返回交易页面"
+
+#~ msgid "Sell Price"
+#~ msgstr "卖出价格"
+
+#~ msgid "Sell Spot"
+#~ msgstr "卖出现价"
+
+#~ msgid "Sell Time"
+#~ msgstr "卖出时间"
+
+#~ msgid "Send to account #"
+#~ msgstr "发送到账户 #"
+
+#~ msgid "Some random index"
+#~ msgstr "部分随机指数"
+
+#~ msgid "Street address"
+#~ msgstr "街道地址"
+
+#~ msgid "Stroke color"
+#~ msgstr "波幅颜色"
+
+#~ msgid "Terms and Conditions"
+#~ msgstr "条款和条件"
+
+#~ msgid ""
+#~ "The page you requested could not be found. Either it no longer exists or "
+#~ "the address is wrong. Please check for any typos"
+#~ msgstr "找不到相关的页面。该页面已过期，或输入网址出错。请检查您的输入"
+
+#~ msgid "This contract lost"
+#~ msgstr "合约输了"
+
+#~ msgid "This contract won"
+#~ msgstr "合约赢了"
+
+#~ msgid "Today"
+#~ msgstr "今天"
+
+#~ msgid "Verification code sent to"
+#~ msgstr "验证代码已发送到"
+
+#~ msgid "Vertical Line"
+#~ msgstr "垂直线"
+
+#~ msgid ""
+#~ "Your account is locked, please contact customer support for more info"
+#~ msgstr "您的账户已被封锁，欲知详情请联系客服部"
+
+#~ msgid "and"
+#~ msgstr "以及"
+
+#~ msgid "between"
+#~ msgstr "之间"
+
 #~ msgid "%D MA Type"
 #~ msgstr "%D MA 类型"
 
@@ -4852,9 +4965,6 @@ msgstr ""
 #~ msgid "Fast Period"
 #~ msgstr "快捷期限"
 
-#~ msgid "High Barrier"
-#~ msgstr "高障碍"
-
 #~ msgid "High Stroke"
 #~ msgstr "高价波幅"
 
@@ -4896,9 +5006,6 @@ msgstr ""
 
 #~ msgid "Long Term Period"
 #~ msgstr "长久期限"
-
-#~ msgid "Low Barrier"
-#~ msgstr "低障碍"
 
 #~ msgid "Low Stroke"
 #~ msgstr "低行程"
@@ -4976,9 +5083,6 @@ msgstr ""
 
 #~ msgid "Plot Color"
 #~ msgstr "绘图颜色"
-
-#~ msgid "Price"
-#~ msgstr "价格"
 
 #~ msgid "Purchase Time"
 #~ msgstr "买入时间"

@@ -323,9 +323,6 @@ msgstr ""
 msgid "40 transactions or more in the past 12 months"
 msgstr "" 
 
-msgid "404"
-msgstr "" 
-
 msgid "4h"
 msgstr "" 
 
@@ -437,9 +434,6 @@ msgstr ""
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
 msgstr "" 
 
-msgid "AM"
-msgstr "" 
-
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "" 
 
@@ -450,9 +444,6 @@ msgid "Accept"
 msgstr "" 
 
 msgid "Account balance"
-msgstr "" 
-
-msgid "Account opening"
 msgstr "" 
 
 msgid "Action"
@@ -470,13 +461,7 @@ msgstr ""
 msgid "Add level"
 msgstr "" 
 
-msgid "Add/remove comparisons"
-msgstr "" 
-
 msgid "Add/remove indicators"
-msgstr "" 
-
-msgid "Add/remove overlays"
 msgstr "" 
 
 msgid "Admin"
@@ -567,9 +552,6 @@ msgid "Aug"
 msgstr "" 
 
 msgid "August"
-msgstr "" 
-
-msgid "Average"
 msgstr "" 
 
 msgid "Average Directional Movement Index (ADX)"
@@ -663,6 +645,12 @@ msgid "Binary option"
 msgstr "" 
 
 msgid "Binary options or other financial derivatives"
+msgstr "" 
+
+msgid "Binary options or other financial derivatives trading experience"
+msgstr "" 
+
+msgid "Binary options or other financial derivatives trading frequency"
 msgstr "" 
 
 msgid "Binary trading is flexible"
@@ -971,9 +959,6 @@ msgstr ""
 msgid "Conditions"
 msgstr "" 
 
-msgid "Config changes successful"
-msgstr "" 
-
 msgid "Confirm transfer"
 msgstr "" 
 
@@ -990,9 +975,6 @@ msgid "Continue Trading"
 msgstr "" 
 
 msgid "Contract"
-msgstr "" 
-
-msgid "Contract Confirmation"
 msgstr "" 
 
 msgid "Contract period"
@@ -1050,9 +1032,6 @@ msgid "Current time"
 msgstr "" 
 
 msgid "Custom Theme"
-msgstr "" 
-
-msgid "Customize chart appearance"
 msgstr "" 
 
 msgid "Daily limit on losses"
@@ -1133,9 +1112,6 @@ msgstr ""
 msgid "Description"
 msgstr "" 
 
-msgid "Deselect"
-msgstr "" 
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "" 
 
@@ -1184,9 +1160,6 @@ msgstr ""
 msgid "Donchian Channel (DC)"
 msgstr "" 
 
-msgid "Done"
-msgstr "" 
-
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "" 
 
@@ -1229,13 +1202,13 @@ msgstr ""
 msgid "Download as"
 msgstr "" 
 
-msgid "Downloading .csv"
-msgstr "" 
-
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "" 
 
 msgid "Drawing tools"
+msgstr "" 
+
+msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
 msgstr "" 
 
 msgid "Duration"
@@ -1265,9 +1238,6 @@ msgstr ""
 msgid "Education"
 msgstr "" 
 
-msgid "Email verification failed"
-msgstr "" 
-
 msgid "Embed code"
 msgstr "" 
 
@@ -1289,9 +1259,6 @@ msgstr ""
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "" 
 
-msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr "" 
-
 msgid "Enter your current password"
 msgstr "" 
 
@@ -1302,12 +1269,6 @@ msgid "Entry spot"
 msgstr "" 
 
 msgid "Entry spot price"
-msgstr "" 
-
-msgid "Error downloading .csv"
-msgstr "" 
-
-msgid "Error getting data for %1"
 msgstr "" 
 
 msgid "Estimated Net Worth"
@@ -1331,6 +1292,9 @@ msgstr ""
 msgid "Exit Spot"
 msgstr "" 
 
+msgid "Exit Spot Time"
+msgstr "" 
+
 msgid "Exit spot"
 msgstr "" 
 
@@ -1341,9 +1305,6 @@ msgid "Explanation"
 msgstr "" 
 
 msgid "Exponential Moving Average (EMA)"
-msgstr "" 
-
-msgid "Failed to update the password"
 msgstr "" 
 
 msgid "Fall"
@@ -1382,7 +1343,7 @@ msgstr ""
 msgid "Finance"
 msgstr "" 
 
-msgid "Financial Account Opening form"
+msgid "Financial Information"
 msgstr "" 
 
 msgid "Financial Security"
@@ -1395,6 +1356,9 @@ msgid "Financial rewards"
 msgstr "" 
 
 msgid "Firefox"
+msgstr "" 
+
+msgid "First line of home address"
 msgstr "" 
 
 msgid "First name"
@@ -1481,13 +1445,13 @@ msgstr ""
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr "" 
 
-msgid "Have better luck at trading!"
-msgstr "" 
-
 msgid "Health"
 msgstr "" 
 
 msgid "Help"
+msgstr "" 
+
+msgid "High Barrier"
 msgstr "" 
 
 msgid "High Price"
@@ -1523,13 +1487,7 @@ msgstr ""
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "" 
 
-msgid "Horizontal Line"
-msgstr "" 
-
 msgid "Horizontal line"
-msgstr "" 
-
-msgid "Hour"
 msgstr "" 
 
 msgid "Hours"
@@ -1569,9 +1527,6 @@ msgid "Ideal for both pros and novices"
 msgstr "" 
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr "" 
-
-msgid "If the issue keeps happening, please contact"
 msgstr "" 
 
 msgid "If you select a"
@@ -1695,9 +1650,6 @@ msgid "Jul"
 msgstr "" 
 
 msgid "July"
-msgstr "" 
-
-msgid "Jump to"
 msgstr "" 
 
 msgid "Jun"
@@ -1868,6 +1820,9 @@ msgstr ""
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr "" 
 
+msgid "Low Barrier"
+msgstr "" 
+
 msgid "Low Price"
 msgstr "" 
 
@@ -1970,13 +1925,19 @@ msgstr ""
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "" 
 
+msgid "Minimum of 2 characters required"
+msgstr "" 
+
+msgid "Minimum of 4 characters required"
+msgstr "" 
+
+msgid "Minimum of 6 characters required"
+msgstr "" 
+
 msgid "Minimum price over selected period"
 msgstr "" 
 
 msgid "Minus the agent's commission"
-msgstr "" 
-
-msgid "Minute"
 msgstr "" 
 
 msgid "Minutes"
@@ -2132,10 +2093,25 @@ msgstr ""
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "" 
 
+msgid "Only letters, numbers, hyphen are allowed"
+msgstr "" 
+
+msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+msgstr "" 
+
+msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+msgstr "" 
+
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "" 
 
-msgid "Oops... Page Not Available"
+msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+msgstr "" 
+
+msgid "Only numbers and space are allowed"
+msgstr "" 
+
+msgid "Only numbers, letters, hyphens are allowed"
 msgstr "" 
 
 msgid "Open"
@@ -2163,9 +2139,6 @@ msgid "Opera"
 msgstr "" 
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
-msgstr "" 
-
-msgid "Optional field, within 20 characters and may not contain '+'"
 msgstr "" 
 
 msgid "Other"
@@ -2204,28 +2177,10 @@ msgstr ""
 msgid "PDF"
 msgstr "" 
 
-msgid "PM"
-msgstr "" 
-
 msgid "PNG"
 msgstr "" 
 
-msgid "Page Not Found"
-msgstr "" 
-
 msgid "Parabolic SAR (SAR)"
-msgstr "" 
-
-msgid "Password must be 6 characters minimum"
-msgstr "" 
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "" 
-
-msgid "Password must contain uppercase letters and numbers"
-msgstr "" 
-
-msgid "Password successfully updated"
 msgstr "" 
 
 msgid "Passwords didn't match. Please type them again"
@@ -2276,10 +2231,10 @@ msgstr ""
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr "" 
 
-msgid "Please"
+msgid "Place of birth"
 msgstr "" 
 
-msgid "Please answer to secret question, within 4-50 characters"
+msgid "Please"
 msgstr "" 
 
 msgid "Please choose which currency you would like to transact in"
@@ -2288,16 +2243,10 @@ msgstr ""
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "" 
 
-msgid "Please enter a number between"
-msgstr "" 
-
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "" 
 
-msgid "Please enter a value for"
-msgstr "" 
-
-msgid "Please enter a vlaid phone number"
+msgid "Please enter a value greater than 0"
 msgstr "" 
 
 msgid "Please enter correct email"
@@ -2306,13 +2255,7 @@ msgstr ""
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "" 
 
-msgid "Please enter the verification code sent to your email"
-msgstr "" 
-
 msgid "Please enter time in the format HH:MM"
-msgstr "" 
-
-msgid "Please enter your city address"
 msgstr "" 
 
 msgid "Please enter your current password"
@@ -2321,37 +2264,22 @@ msgstr ""
 msgid "Please enter your email"
 msgstr "" 
 
-msgid "Please enter your family name"
-msgstr "" 
-
-msgid "Please enter your first name"
-msgstr "" 
-
-msgid "Please enter your new password"
-msgstr "" 
-
-msgid "Please enter your password"
-msgstr "" 
-
-msgid "Please enter your phone number"
-msgstr "" 
-
-msgid "Please enter your street address"
-msgstr "" 
-
 msgid "Please input correct token"
 msgstr "" 
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "" 
 
+msgid "Please provide your tax information"
+msgstr "" 
+
 msgid "Please select"
 msgstr "" 
 
-msgid "Please try again after 1 minute"
+msgid "Please submit a valid verification token"
 msgstr "" 
 
-msgid "Please use your new password to login"
+msgid "Please try again after 1 minute"
 msgstr "" 
 
 msgid "Plot"
@@ -2390,6 +2318,9 @@ msgstr ""
 msgid "Press Create token button on the right to create your first token"
 msgstr "" 
 
+msgid "Price"
+msgstr "" 
+
 msgid "Price Transformation"
 msgstr "" 
 
@@ -2409,9 +2340,6 @@ msgid "Print chart"
 msgstr "" 
 
 msgid "Profit"
-msgstr "" 
-
-msgid "Profit Table"
 msgstr "" 
 
 msgid "Profit table"
@@ -2450,16 +2378,7 @@ msgstr ""
 msgid "Read"
 msgstr "" 
 
-msgid "Real Money Account Opening"
-msgstr "" 
-
-msgid "Reality check"
-msgstr "" 
-
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
-msgstr "" 
-
-msgid "Redirecting to oauth login page"
 msgstr "" 
 
 msgid "Ref"
@@ -2507,13 +2426,10 @@ msgstr ""
 msgid "Register free account"
 msgstr "" 
 
-msgid "Registration"
-msgstr "" 
-
 msgid "Relative Strength Index (RSI)"
 msgstr "" 
 
-msgid "Reloading page"
+msgid "Remove"
 msgstr "" 
 
 msgid "Remove Selected"
@@ -2526,9 +2442,6 @@ msgid "Repeat password"
 msgstr "" 
 
 msgid "Resale price"
-msgstr "" 
-
-msgid "Reset to Defaults"
 msgstr "" 
 
 msgid "Reset zoom"
@@ -2547,9 +2460,6 @@ msgid "Results"
 msgstr "" 
 
 msgid "Return"
-msgstr "" 
-
-msgid "Return to trading page"
 msgstr "" 
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
@@ -2609,6 +2519,9 @@ msgstr ""
 msgid "Scalable trading"
 msgstr "" 
 
+msgid "Second line of home address"
+msgstr "" 
+
 msgid "Secondary"
 msgstr "" 
 
@@ -2630,19 +2543,7 @@ msgstr ""
 msgid "Sell At Market"
 msgstr "" 
 
-msgid "Sell Price"
-msgstr "" 
-
-msgid "Sell Spot"
-msgstr "" 
-
-msgid "Sell Time"
-msgstr "" 
-
 msgid "Sell option"
-msgstr "" 
-
-msgid "Send to account #"
 msgstr "" 
 
 msgid "Sent to account"
@@ -2700,9 +2601,6 @@ msgid "Smoothed Moving Average (SMMA)"
 msgstr "" 
 
 msgid "Sold"
-msgstr "" 
-
-msgid "Some random index"
 msgstr "" 
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
@@ -2822,13 +2720,7 @@ msgstr ""
 msgid "Stop-type"
 msgstr "" 
 
-msgid "Street address"
-msgstr "" 
-
 msgid "Stroke"
-msgstr "" 
-
-msgid "Stroke color"
 msgstr "" 
 
 msgid "Stroke width"
@@ -2864,6 +2756,15 @@ msgstr ""
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "" 
 
+msgid "Tax identification number"
+msgstr "" 
+
+msgid "Tax information"
+msgstr "" 
+
+msgid "Tax residence"
+msgstr "" 
+
 msgid "Tax-free"
 msgstr "" 
 
@@ -2874,9 +2775,6 @@ msgid "Template name"
 msgstr "" 
 
 msgid "Terms"
-msgstr "" 
-
-msgid "Terms and Conditions"
 msgstr "" 
 
 msgid "Tertiary"
@@ -3050,6 +2948,9 @@ msgstr ""
 msgid "The expiry price is the price of the underlying when the contract expires"
 msgstr "" 
 
+msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
+msgstr "" 
+
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "" 
 
@@ -3069,9 +2970,6 @@ msgid "The loss of USD 306 is the difference between the exit and entry level mu
 msgstr "" 
 
 msgid "The market exit price is the price in effect at the end of the contract period"
-msgstr "" 
-
-msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos"
 msgstr "" 
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
@@ -3132,12 +3030,6 @@ msgid "These are trades where the trader selects a price target, and predicts th
 msgstr "" 
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
-msgstr "" 
-
-msgid "This contract lost"
-msgstr "" 
-
-msgid "This contract won"
 msgstr "" 
 
 msgid "This field is required"
@@ -3230,9 +3122,6 @@ msgstr ""
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "" 
 
-msgid "Today"
-msgstr "" 
-
 msgid "Token"
 msgstr "" 
 
@@ -3314,6 +3203,9 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "" 
 
+msgid "Transfer"
+msgstr "" 
+
 msgid "Transfer to another Binary account"
 msgstr "" 
 
@@ -3389,6 +3281,9 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr "" 
 
+msgid "Update"
+msgstr "" 
+
 msgid "Update Settings"
 msgstr "" 
 
@@ -3422,16 +3317,10 @@ msgstr ""
 msgid "Verification code has been sent to your email"
 msgstr "" 
 
-msgid "Verification code sent to"
-msgstr "" 
-
 msgid "Verification token"
 msgstr "" 
 
 msgid "Verify new password"
-msgstr "" 
-
-msgid "Vertical Line"
 msgstr "" 
 
 msgid "Vertical line"
@@ -3614,9 +3503,6 @@ msgstr ""
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "" 
 
-msgid "Your account is locked, please contact customer support for more info"
-msgstr "" 
-
 msgid "Your browser is not supported"
 msgstr "" 
 
@@ -3644,9 +3530,6 @@ msgstr ""
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "" 
 
-msgid "and"
-msgstr "" 
-
 msgid "apostrophe (') are allowed"
 msgstr "" 
 
@@ -3657,9 +3540,6 @@ msgid "auto-trader programming tool"
 msgstr "" 
 
 msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "" 
-
-msgid "between"
 msgstr "" 
 
 msgid "commission"

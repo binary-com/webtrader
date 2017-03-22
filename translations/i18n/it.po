@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
 "PO-Revision-Date: 2017-02-20 20:55+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/it/>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -423,9 +423,6 @@ msgstr "4 ore"
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transazioni o più negli ultimi 12 mesi"
 
-msgid "404"
-msgstr "404"
-
 msgid "4h"
 msgstr "4h"
 
@@ -648,9 +645,6 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
-msgid "AM"
-msgstr "AM"
-
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
 
@@ -662,9 +656,6 @@ msgstr "Accetta"
 
 msgid "Account balance"
 msgstr "Saldo dell'account"
-
-msgid "Account opening"
-msgstr "Apertura dell'account"
 
 msgid "Action"
 msgstr "Azione"
@@ -681,14 +672,8 @@ msgstr "Aggiungi indicatore"
 msgid "Add level"
 msgstr "Aggiungi livello"
 
-msgid "Add/remove comparisons"
-msgstr "Aggiungi/rimuovi confronti"
-
 msgid "Add/remove indicators"
 msgstr "Aggiungi/Rimuovi indicatori"
-
-msgid "Add/remove overlays"
-msgstr "Aggiungi/rimuovi overlay"
 
 msgid "Admin"
 msgstr "Amministratore"
@@ -787,9 +772,6 @@ msgstr "Ago"
 
 msgid "August"
 msgstr "Agosto"
-
-msgid "Average"
-msgstr "Media"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr ""
@@ -901,6 +883,12 @@ msgstr "Opzione binaria"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opzioni binarie o altri derivati finanziari"
+
+msgid "Binary options or other financial derivatives trading experience"
+msgstr ""
+
+msgid "Binary options or other financial derivatives trading frequency"
+msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr ""
@@ -1286,9 +1274,6 @@ msgstr "Confronti"
 msgid "Conditions"
 msgstr "Condizioni"
 
-msgid "Config changes successful"
-msgstr "Configurazione modificata con successo"
-
 msgid "Confirm transfer"
 msgstr "Conferma il trasferimento"
 
@@ -1306,9 +1291,6 @@ msgstr "Continua il trading"
 
 msgid "Contract"
 msgstr "Contratto"
-
-msgid "Contract Confirmation"
-msgstr "Conferma del contratto"
 
 msgid "Contract period"
 msgstr ""
@@ -1366,9 +1348,6 @@ msgstr "Orario attuale"
 
 msgid "Custom Theme"
 msgstr "Personalizza argomento"
-
-msgid "Customize chart appearance"
-msgstr "Personalizza il grafico"
 
 msgid "Daily limit on losses"
 msgstr "Limite giornaliero delle perdite"
@@ -1453,9 +1432,6 @@ msgstr "Descrivi a cosa serve questo token per trovarlo più tardi"
 msgid "Description"
 msgstr "Descrizione"
 
-msgid "Deselect"
-msgstr "Deseleziona"
-
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
 "identify trend reversals based on range expansions. In this sense, the Mass "
@@ -1527,9 +1503,6 @@ msgstr ""
 msgid "Donchian Channel (DC)"
 msgstr ""
 
-msgid "Done"
-msgstr "Fatto"
-
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Fatto. I fondi sono stati trasferiti all'agente di pagamento"
 
@@ -1572,14 +1545,17 @@ msgstr "Download dell'immagine vettoriale SVG"
 msgid "Download as"
 msgstr "Scarica come"
 
-msgid "Downloading .csv"
-msgstr "Download in corso di .csv"
-
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr ""
 
 msgid "Drawing tools"
 msgstr "Strumenti grafici"
+
+msgid ""
+"Due to recent changes in the regulations, we are required to ask our clients "
+"to complete the following Financial Assessment. Please note that you will "
+"not be able to continue trading until this is completed"
+msgstr ""
 
 msgid "Duration"
 msgstr "Durata"
@@ -1612,9 +1588,6 @@ msgstr "Modifica"
 msgid "Education"
 msgstr "Istruzione"
 
-msgid "Email verification failed"
-msgstr "Verifica dell'email non riuscita"
-
 msgid "Embed code"
 msgstr "Codice inserito"
 
@@ -1636,9 +1609,6 @@ msgstr "Ends out"
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
-msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
-
 msgid "Enter your current password"
 msgstr "Inserisci la tua password attuale"
 
@@ -1650,12 +1620,6 @@ msgstr "Spot d'ingresso"
 
 msgid "Entry spot price"
 msgstr ""
-
-msgid "Error downloading .csv"
-msgstr "Errore nel download .csv"
-
-msgid "Error getting data for %1"
-msgstr "Errore nell'ottenimento dei dati per %1"
 
 msgid "Estimated Net Worth"
 msgstr "Valore netto stimato"
@@ -1678,6 +1642,9 @@ msgstr "Escludimi dal sito internet fino al"
 msgid "Exit Spot"
 msgstr "Spot d'uscita"
 
+msgid "Exit Spot Time"
+msgstr ""
+
 msgid "Exit spot"
 msgstr "Spot d'uscita"
 
@@ -1689,9 +1656,6 @@ msgstr "Spiegazione"
 
 msgid "Exponential Moving Average (EMA)"
 msgstr ""
-
-msgid "Failed to update the password"
-msgstr "Aggiornamento della password non riuscito"
 
 msgid "Fall"
 msgstr "Ribasso"
@@ -1734,8 +1698,8 @@ msgstr "Prezzo finale"
 msgid "Finance"
 msgstr "Finanza"
 
-msgid "Financial Account Opening form"
-msgstr "Modulo per l'apertura di un account finanziario"
+msgid "Financial Information"
+msgstr ""
 
 msgid "Financial Security"
 msgstr ""
@@ -1748,6 +1712,9 @@ msgstr ""
 
 msgid "Firefox"
 msgstr "Firefox"
+
+msgid "First line of home address"
+msgstr ""
 
 msgid "First name"
 msgstr "Nome"
@@ -1845,14 +1812,14 @@ msgstr ""
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr ""
 
-msgid "Have better luck at trading!"
-msgstr "Buona fortuna nel trading!"
-
 msgid "Health"
 msgstr "Salute"
 
 msgid "Help"
 msgstr ""
+
+msgid "High Barrier"
+msgstr "Barriera superiore"
 
 msgid "High Price"
 msgstr "Prezzo superiore"
@@ -1887,14 +1854,8 @@ msgstr "Indirizzo di casa"
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr ""
 
-msgid "Horizontal Line"
-msgstr "Linea orizzontale"
-
 msgid "Horizontal line"
 msgstr "Linea orizzontale"
-
-msgid "Hour"
-msgstr "Ora"
 
 msgid "Hours"
 msgstr "Ore"
@@ -1949,9 +1910,6 @@ msgstr ""
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr ""
-
-msgid "If the issue keeps happening, please contact"
-msgstr "Se il problema persiste, contatta"
 
 msgid "If you select a"
 msgstr "Se selezioni un"
@@ -2148,9 +2106,6 @@ msgstr "Lug"
 
 msgid "July"
 msgstr "Luglio"
-
-msgid "Jump to"
-msgstr "Salta a"
 
 msgid "Jun"
 msgstr "Giu"
@@ -2353,6 +2308,9 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
+msgid "Low Barrier"
+msgstr "Barriera inferiore"
+
 msgid "Low Price"
 msgstr "Prezzo inferiore"
 
@@ -2469,14 +2427,20 @@ msgstr ""
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimo 6 caratteri e deve contenere almeno 1 cifra"
 
+msgid "Minimum of 2 characters required"
+msgstr ""
+
+msgid "Minimum of 4 characters required"
+msgstr ""
+
+msgid "Minimum of 6 characters required"
+msgstr ""
+
 msgid "Minimum price over selected period"
 msgstr ""
 
 msgid "Minus the agent's commission"
 msgstr "Meno la commissione dell'agente"
-
-msgid "Minute"
-msgstr "Minuto"
 
 msgid "Minutes"
 msgstr "Minuti"
@@ -2649,11 +2613,26 @@ msgid ""
 "website has received over 15 million trades"
 msgstr ""
 
+msgid "Only letters, numbers, hyphen are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+msgstr ""
+
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
-msgid "Oops... Page Not Available"
-msgstr "Ops...Pagina non disponibile"
+msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only numbers and space are allowed"
+msgstr ""
+
+msgid "Only numbers, letters, hyphens are allowed"
+msgstr ""
 
 msgid "Open"
 msgstr "Apri"
@@ -2688,9 +2667,6 @@ msgstr ""
 "attività spinta al limite. Per evitare il pericolo di tale dipendenza, "
 "forniamo un controllo della situazione che ti fornisce un quadro generale "
 "dei tuoi trade e account su base regolare"
-
-msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr "Campo facoltativo, entro 20 caratteri e non può contenere '+'"
 
 msgid "Other"
 msgstr "Altro"
@@ -2734,29 +2710,11 @@ msgstr ""
 msgid "PDF"
 msgstr "PDF"
 
-msgid "PM"
-msgstr "PM"
-
 msgid "PNG"
 msgstr "PNG"
 
-msgid "Page Not Found"
-msgstr "Pagina non trovata"
-
 msgid "Parabolic SAR (SAR)"
 msgstr ""
-
-msgid "Password must be 6 characters minimum"
-msgstr "La password deve contenere almeno 6 caratteri"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "La password deve contenere lettere maiuscole, minuscole e numeri"
-
-msgid "Password must contain uppercase letters and numbers"
-msgstr "La password deve contenere lettere maiuscole e numeri"
-
-msgid "Password successfully updated"
-msgstr "Password aggiornata con successo"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Le password non corrispondono. Digitale di nuovo"
@@ -2808,11 +2766,11 @@ msgid ""
 "place (i.e. 0.0001)"
 msgstr ""
 
+msgid "Place of birth"
+msgstr ""
+
 msgid "Please"
 msgstr "Prego"
-
-msgid "Please answer to secret question, within 4-50 characters"
-msgstr "Rispondi alla domanda segreta con 4-50 caratteri"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Scegli in quale valuta desideri negoziare"
@@ -2820,17 +2778,11 @@ msgstr "Scegli in quale valuta desideri negoziare"
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Per poter completare il trasferimento, conferma i seguenti dati"
 
-msgid "Please enter a number between"
-msgstr "Inserisci un numero tra"
-
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Inserisci una data valida nel formato aaaa-mm-gg"
 
-msgid "Please enter a value for"
-msgstr "Inserisci un valore per"
-
-msgid "Please enter a vlaid phone number"
-msgstr "Inserisci un numero di telefono valido"
+msgid "Please enter a value greater than 0"
+msgstr ""
 
 msgid "Please enter correct email"
 msgstr "Inserisci l'indirizzo email corretto"
@@ -2838,14 +2790,8 @@ msgstr "Inserisci l'indirizzo email corretto"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Inserisci la data nel formato AAAA-MM-GG"
 
-msgid "Please enter the verification code sent to your email"
-msgstr "Inserisci il codice di verifica inviato al tuo indirizzo email"
-
 msgid "Please enter time in the format HH:MM"
 msgstr "Inserisci l'orario nel formato HH:MM"
-
-msgid "Please enter your city address"
-msgstr "Inserisci il tuo indirizzo"
 
 msgid "Please enter your current password"
 msgstr "Inserisci la tua password attuale"
@@ -2853,38 +2799,23 @@ msgstr "Inserisci la tua password attuale"
 msgid "Please enter your email"
 msgstr "Inserisci il tuo indirizzo email"
 
-msgid "Please enter your family name"
-msgstr "Inserisci il tuo cognome"
-
-msgid "Please enter your first name"
-msgstr "Inserisci il tuo nome"
-
-msgid "Please enter your new password"
-msgstr "Inserisci la tua nuova password"
-
-msgid "Please enter your password"
-msgstr "Inserisci la tua password"
-
-msgid "Please enter your phone number"
-msgstr "Inserisci il tuo numero di telefono"
-
-msgid "Please enter your street address"
-msgstr "Inserisci il tuo indirizzo"
-
 msgid "Please input correct token"
 msgstr ""
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
 
+msgid "Please provide your tax information"
+msgstr ""
+
 msgid "Please select"
 msgstr "Seleziona"
 
+msgid "Please submit a valid verification token"
+msgstr ""
+
 msgid "Please try again after 1 minute"
 msgstr "Riprova fra 1 minuto"
-
-msgid "Please use your new password to login"
-msgstr "Per accedere, utilizza la tua nuova password"
 
 msgid "Plot"
 msgstr "Grafico"
@@ -2925,6 +2856,9 @@ msgid "Press Create token button on the right to create your first token"
 msgstr ""
 "Premi il pulsante Crea token sulla destra per creare il tuo primo token"
 
+msgid "Price"
+msgstr "Prezzo"
+
 msgid "Price Transformation"
 msgstr ""
 
@@ -2954,9 +2888,6 @@ msgstr "Stampa il grafico"
 
 msgid "Profit"
 msgstr "Profitto"
-
-msgid "Profit Table"
-msgstr "Tabella dei profitti"
 
 msgid "Profit table"
 msgstr "Tabella dei profitti"
@@ -2996,18 +2927,9 @@ msgstr ""
 msgid "Read"
 msgstr "Leggi"
 
-msgid "Real Money Account Opening"
-msgstr "Apertura di un account vero"
-
-msgid "Reality check"
-msgstr "Controllo della veridicità"
-
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
-
-msgid "Redirecting to oauth login page"
-msgstr "Reindirizzamento alla pagina d'accesso di oauth"
 
 msgid "Ref"
 msgstr "Rif"
@@ -3064,14 +2986,11 @@ msgstr ""
 msgid "Register free account"
 msgstr "Registra un account gratis"
 
-msgid "Registration"
-msgstr "Registrazione"
-
 msgid "Relative Strength Index (RSI)"
 msgstr ""
 
-msgid "Reloading page"
-msgstr "Ricaricamento della pagina"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Selected"
 msgstr "Rimuovi selezione"
@@ -3084,9 +3003,6 @@ msgstr "Ripeti la password"
 
 msgid "Resale price"
 msgstr ""
-
-msgid "Reset to Defaults"
-msgstr "Ripristina default"
 
 msgid "Reset zoom"
 msgstr "Ripristina lo zoom"
@@ -3105,9 +3021,6 @@ msgstr "Risultati"
 
 msgid "Return"
 msgstr "Rendimento"
-
-msgid "Return to trading page"
-msgstr "Ritorna alla pagina del trading"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
 msgstr ""
@@ -3166,6 +3079,9 @@ msgstr "Salva le variazioni"
 msgid "Scalable trading"
 msgstr ""
 
+msgid "Second line of home address"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Secondario"
 
@@ -3187,20 +3103,8 @@ msgstr "Auto esclusione"
 msgid "Sell At Market"
 msgstr "Vendere sul mercato"
 
-msgid "Sell Price"
-msgstr "Prezzo di vendita"
-
-msgid "Sell Spot"
-msgstr "Spot di vendita"
-
-msgid "Sell Time"
-msgstr "Orario di vendita"
-
 msgid "Sell option"
 msgstr ""
-
-msgid "Send to account #"
-msgstr "Invia sull'account #"
 
 msgid "Sent to account"
 msgstr "Inviato sull'account"
@@ -3267,9 +3171,6 @@ msgstr ""
 
 msgid "Sold"
 msgstr "Venduto"
-
-msgid "Some random index"
-msgstr "Alcuni indici random"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr ""
@@ -3395,14 +3296,8 @@ msgstr "Stop profit"
 msgid "Stop-type"
 msgstr "Tipologia di stop"
 
-msgid "Street address"
-msgstr "Indirizzo"
-
 msgid "Stroke"
 msgstr "Stroke"
-
-msgid "Stroke color"
-msgstr "Colore dello stroke"
 
 msgid "Stroke width"
 msgstr "Ampiezza dello stroke"
@@ -3437,6 +3332,15 @@ msgstr ""
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr ""
 
+msgid "Tax identification number"
+msgstr ""
+
+msgid "Tax information"
+msgstr ""
+
+msgid "Tax residence"
+msgstr ""
+
 msgid "Tax-free"
 msgstr ""
 
@@ -3448,9 +3352,6 @@ msgstr "Nome del modello"
 
 msgid "Terms"
 msgstr "Termini"
-
-msgid "Terms and Conditions"
-msgstr "Termini e condizioni"
 
 msgid "Tertiary"
 msgstr "Terziario"
@@ -3818,6 +3719,15 @@ msgstr ""
 msgid ""
 "The financial trading services contained within this site are only suitable "
 "for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the acquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract premium"
+msgstr ""
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
 "who understand and have experience of the risk involved in the aquistion of "
 "financial contracts. Transactions in financial contracts carry a high degree "
 "of risk. If purchased contracts expire worthless, you will suffer a total "
@@ -3866,13 +3776,6 @@ msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr ""
-
-msgid ""
-"The page you requested could not be found. Either it no longer exists or the "
-"address is wrong. Please check for any typos"
-msgstr ""
-"Impossibile trovare la pagina richiesta. Non esiste più oppure l'indirizzo è "
-"errato. Verifica eventuali errori di battitura"
 
 msgid ""
 "The parabolic SAR is calculated almost independently for each trend in the "
@@ -3987,12 +3890,6 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
-
-msgid "This contract lost"
-msgstr "Questo contratto ha perso"
-
-msgid "This contract won"
-msgstr "Questo contratto ha vinto"
 
 msgid "This field is required"
 msgstr "Questo campo è obbligatorio"
@@ -4113,9 +4010,6 @@ msgstr ""
 "Per prelevare fondi, inserisci lo speciale token di verifica che ti abbiamo "
 "appena inviato tramite email"
 
-msgid "Today"
-msgstr "Oggi"
-
 msgid "Token"
 msgstr "Token"
 
@@ -4222,6 +4116,9 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview per Binary.com"
 
+msgid "Transfer"
+msgstr ""
+
 msgid "Transfer to another Binary account"
 msgstr "Trasferisci a un altro account Binary"
 
@@ -4305,6 +4202,9 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr "Eventi in arrivo"
 
+msgid "Update"
+msgstr ""
+
 msgid "Update Settings"
 msgstr "Aggiorna impostazioni"
 
@@ -4346,17 +4246,11 @@ msgstr ""
 msgid "Verification code has been sent to your email"
 msgstr "Il codice di verifica è stato inviato al tuo indirizzo email"
 
-msgid "Verification code sent to"
-msgstr "Codice di verifica inviato a"
-
 msgid "Verification token"
 msgstr "Token di verifica"
 
 msgid "Verify new password"
 msgstr "Verifica nuova password"
-
-msgid "Vertical Line"
-msgstr "Linea verticale"
 
 msgid "Vertical line"
 msgstr "Linea verticale"
@@ -4589,11 +4483,6 @@ msgstr ""
 "Il tuo account Binary.com è stato creato ma per iniziare a fare trading "
 "bisogna consentire a Webtrader di accedere"
 
-msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
-"Il tuo account è bloccato. Per ulteriori informazioni, contatta l'assistenza "
-"clienti"
-
 msgid "Your browser is not supported"
 msgstr "Il tuo browser non è supportato"
 
@@ -4625,9 +4514,6 @@ msgid ""
 "and-drop  simplicity"
 msgstr ""
 
-msgid "and"
-msgstr "e"
-
 msgid "apostrophe (') are allowed"
 msgstr ""
 
@@ -4647,9 +4533,6 @@ msgstr ""
 "potresti esporti a dei rischi (che possono essere cospicui, incluso il "
 "rischio di perdita dell'intera somma investita) senza avere la conoscenza e "
 "l'esperienza giusta per valutarli e attenuarli"
-
-msgid "between"
-msgstr "tra"
 
 msgid "commission"
 msgstr "commissione"
@@ -4832,6 +4715,220 @@ msgid ""
 "products"
 msgstr ""
 
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "AM"
+#~ msgstr "AM"
+
+#~ msgid "Account opening"
+#~ msgstr "Apertura dell'account"
+
+#~ msgid "Add/remove comparisons"
+#~ msgstr "Aggiungi/rimuovi confronti"
+
+#~ msgid "Add/remove overlays"
+#~ msgstr "Aggiungi/rimuovi overlay"
+
+#~ msgid "Average"
+#~ msgstr "Media"
+
+#~ msgid "Config changes successful"
+#~ msgstr "Configurazione modificata con successo"
+
+#~ msgid "Contract Confirmation"
+#~ msgstr "Conferma del contratto"
+
+#~ msgid "Customize chart appearance"
+#~ msgstr "Personalizza il grafico"
+
+#~ msgid "Deselect"
+#~ msgstr "Deseleziona"
+
+#~ msgid "Done"
+#~ msgstr "Fatto"
+
+#~ msgid "Downloading .csv"
+#~ msgstr "Download in corso di .csv"
+
+#~ msgid "Email verification failed"
+#~ msgstr "Verifica dell'email non riuscita"
+
+#~ msgid "Error downloading .csv"
+#~ msgstr "Errore nel download .csv"
+
+#~ msgid "Error getting data for %1"
+#~ msgstr "Errore nell'ottenimento dei dati per %1"
+
+#~ msgid "Failed to update the password"
+#~ msgstr "Aggiornamento della password non riuscito"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Modulo per l'apertura di un account finanziario"
+
+#~ msgid "Have better luck at trading!"
+#~ msgstr "Buona fortuna nel trading!"
+
+#~ msgid "Horizontal Line"
+#~ msgstr "Linea orizzontale"
+
+#~ msgid "Hour"
+#~ msgstr "Ora"
+
+#~ msgid "If the issue keeps happening, please contact"
+#~ msgstr "Se il problema persiste, contatta"
+
+#~ msgid "Jump to"
+#~ msgstr "Salta a"
+
+#~ msgid "Minute"
+#~ msgstr "Minuto"
+
+#~ msgid "Oops... Page Not Available"
+#~ msgstr "Ops...Pagina non disponibile"
+
+#~ msgid "Optional field, within 20 characters and may not contain '+'"
+#~ msgstr "Campo facoltativo, entro 20 caratteri e non può contenere '+'"
+
+#~ msgid "PM"
+#~ msgstr "PM"
+
+#~ msgid "Page Not Found"
+#~ msgstr "Pagina non trovata"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "La password deve contenere almeno 6 caratteri"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "La password deve contenere lettere maiuscole, minuscole e numeri"
+
+#~ msgid "Password must contain uppercase letters and numbers"
+#~ msgstr "La password deve contenere lettere maiuscole e numeri"
+
+#~ msgid "Password successfully updated"
+#~ msgstr "Password aggiornata con successo"
+
+#~ msgid "Please answer to secret question, within 4-50 characters"
+#~ msgstr "Rispondi alla domanda segreta con 4-50 caratteri"
+
+#~ msgid "Please enter a number between"
+#~ msgstr "Inserisci un numero tra"
+
+#~ msgid "Please enter a value for"
+#~ msgstr "Inserisci un valore per"
+
+#~ msgid "Please enter a vlaid phone number"
+#~ msgstr "Inserisci un numero di telefono valido"
+
+#~ msgid "Please enter the verification code sent to your email"
+#~ msgstr "Inserisci il codice di verifica inviato al tuo indirizzo email"
+
+#~ msgid "Please enter your city address"
+#~ msgstr "Inserisci il tuo indirizzo"
+
+#~ msgid "Please enter your family name"
+#~ msgstr "Inserisci il tuo cognome"
+
+#~ msgid "Please enter your first name"
+#~ msgstr "Inserisci il tuo nome"
+
+#~ msgid "Please enter your new password"
+#~ msgstr "Inserisci la tua nuova password"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Inserisci la tua password"
+
+#~ msgid "Please enter your phone number"
+#~ msgstr "Inserisci il tuo numero di telefono"
+
+#~ msgid "Please enter your street address"
+#~ msgstr "Inserisci il tuo indirizzo"
+
+#~ msgid "Please use your new password to login"
+#~ msgstr "Per accedere, utilizza la tua nuova password"
+
+#~ msgid "Profit Table"
+#~ msgstr "Tabella dei profitti"
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Apertura di un account vero"
+
+#~ msgid "Reality check"
+#~ msgstr "Controllo della veridicità"
+
+#~ msgid "Redirecting to oauth login page"
+#~ msgstr "Reindirizzamento alla pagina d'accesso di oauth"
+
+#~ msgid "Registration"
+#~ msgstr "Registrazione"
+
+#~ msgid "Reloading page"
+#~ msgstr "Ricaricamento della pagina"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Ripristina default"
+
+#~ msgid "Return to trading page"
+#~ msgstr "Ritorna alla pagina del trading"
+
+#~ msgid "Sell Price"
+#~ msgstr "Prezzo di vendita"
+
+#~ msgid "Sell Spot"
+#~ msgstr "Spot di vendita"
+
+#~ msgid "Sell Time"
+#~ msgstr "Orario di vendita"
+
+#~ msgid "Send to account #"
+#~ msgstr "Invia sull'account #"
+
+#~ msgid "Some random index"
+#~ msgstr "Alcuni indici random"
+
+#~ msgid "Street address"
+#~ msgstr "Indirizzo"
+
+#~ msgid "Stroke color"
+#~ msgstr "Colore dello stroke"
+
+#~ msgid "Terms and Conditions"
+#~ msgstr "Termini e condizioni"
+
+#~ msgid ""
+#~ "The page you requested could not be found. Either it no longer exists or "
+#~ "the address is wrong. Please check for any typos"
+#~ msgstr ""
+#~ "Impossibile trovare la pagina richiesta. Non esiste più oppure "
+#~ "l'indirizzo è errato. Verifica eventuali errori di battitura"
+
+#~ msgid "This contract lost"
+#~ msgstr "Questo contratto ha perso"
+
+#~ msgid "This contract won"
+#~ msgstr "Questo contratto ha vinto"
+
+#~ msgid "Today"
+#~ msgstr "Oggi"
+
+#~ msgid "Verification code sent to"
+#~ msgstr "Codice di verifica inviato a"
+
+#~ msgid "Vertical Line"
+#~ msgstr "Linea verticale"
+
+#~ msgid ""
+#~ "Your account is locked, please contact customer support for more info"
+#~ msgstr ""
+#~ "Il tuo account è bloccato. Per ulteriori informazioni, contatta "
+#~ "l'assistenza clienti"
+
+#~ msgid "and"
+#~ msgstr "e"
+
+#~ msgid "between"
+#~ msgstr "tra"
+
 #~ msgid "%D MA Type"
 #~ msgstr "Tipologia %D MA"
 
@@ -4931,9 +5028,6 @@ msgstr ""
 #~ msgid "Fast Period"
 #~ msgstr "Periodo veloce"
 
-#~ msgid "High Barrier"
-#~ msgstr "Barriera superiore"
-
 #~ msgid "High Stroke"
 #~ msgstr "Stroke superiore"
 
@@ -4975,9 +5069,6 @@ msgstr ""
 
 #~ msgid "Long Term Period"
 #~ msgstr "Periodo a lungo termine"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Barriera inferiore"
 
 #~ msgid "Low Stroke"
 #~ msgstr "Stroke inferiore"
@@ -5056,9 +5147,6 @@ msgstr ""
 
 #~ msgid "Plot Color"
 #~ msgstr "Colore del grafico"
-
-#~ msgid "Price"
-#~ msgstr "Prezzo"
 
 #~ msgid "Purchase Time"
 #~ msgstr "Orario dell'acquisto"

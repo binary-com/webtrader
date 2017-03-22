@@ -205,9 +205,10 @@ const initLangButton = (root) => {
          { value: 'pl', name: 'Polish'},
          { value: 'pt', name: 'Português'},
          { value: 'ru', name: 'Русский'},
+         { value: 'th', name: 'Thai'},
          { value: 'vi', name: 'Tiếng Việt'},
          { value: 'zh_cn', name: '简体中文'},
-         { value: 'zh_tw', name: '繁體中文'},
+         { value: 'zh_tw', name: '繁體中文'}
       ]
    };
 
