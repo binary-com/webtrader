@@ -24,6 +24,8 @@
       var lang = getParameterByName('lang') || 'en';
       if (isLangSupported(lang)) {
           local_storage.set('i18n', {value: lang});
+      } else { // In case of invalid language fallback to EN
+        local_storage.set('i18n', {value: 'en'});
       }
       window.location.href = 'v2.1.24/main.html' + suffix;</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PDDC6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
