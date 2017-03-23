@@ -57,7 +57,7 @@
             class='explanation'>Verification code has been sent to your email</span>
       <span rv-show='account.verification | eq "" | and account.empty_fields.validate'
             class='validation'>This field is required.</span>
-      <span rv-show='account.verification | length | not-eq 8 | and account.verification'
+      <span rv-show='account.verification | prop "length" | not-eq 8 | and account.verification'
             class='validation'>Please submit a valid verification token.</span>
     </div>
 
