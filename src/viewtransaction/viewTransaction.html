@@ -2,7 +2,7 @@
   <p class='longcode' rv-text='longcode'></p>
   <ul class='tabs'>
       <li rv-class-active="route.value | eq 'table'" rv-on-click="route.update | bind 'table'"> Table </li>
-      <li rv-class-active="route.value | eq 'chart'" rv-on-click="route.update | bind 'chart'"> Chart </li>
+      <li rv-if="table.contract_type | not-eq 'SPREAD'" rv-class-active="route.value | eq 'chart'" rv-on-click="route.update | bind 'chart'"> Chart </li>
       <li rv-class-active="route.value | eq 'explanation'" rv-on-click="route.update | bind 'explanation'"> Explanation </li>
   </ul>
   <div class="content">
@@ -33,7 +33,7 @@
       <div> <p>Start Time</p>
           <span rv-text="table.date_start | moment | or '-'"></span>
       </div>
-      <div rv-if="table.exit_tick_time | eq undefined"> <p>Current Spot Time</p>
+      <div rv-if="table.user_sold | not-eq true | and table.exit_tick_time | eq undefined"> <p>Current Spot Time</p>
           <span rv-text="table.current_spot_time | moment | or '-'"></span>
           <br />
           <span rv-if="table.current_spot_time"
@@ -59,7 +59,7 @@
                 rv-text="table.entry_tick | or '-'"
                 class="dotted-underline"></span>
       </div>
-      <div rv-if="table.exit_tick | eq undefined"> <p>Current Spot</p>
+      <div rv-if="table.user_sold | not-eq true | and table.exit_tick | eq undefined"> <p>Current Spot</p>
           <span rv-text="table.current_spot | or '-'" rv-indicative-color="table.current_spot"></span>
       </div>
       <div rv-if="table.user_sold | not-eq true | and table.exit_tick "> <p>Exit Spot</p>

@@ -189,8 +189,12 @@ export const init = (contract_id, transaction_id) => {
 
 const update_indicative = (data, state) => {
    const contract = data.proposal_open_contract;
-   const id = contract.contract_id,
+   const id = contract.contract_id || data.echo_req.contract_id,
       bid_price = contract.bid_price;
+   if(contract.is_sold && !contract.exit_tick && !contract.exit_level && !state.table.user_sold) {
+      liveapi.send({contract_id: id, proposal_open_contract: 1});
+      return;
+   }
    if(id != state.contract_id) { return; }
    if(contract.validation_error)
       state.validation = contract.validation_error;
@@ -246,6 +250,7 @@ const update_indicative = (data, state) => {
       state.table.sell_price = contract.sell_price;
       state.table.final_price = contract.sell_price;
       !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+      !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
    }
 
    if(!state.chart.barrier && contract.barrier) {
@@ -411,7 +416,7 @@ const init_state = (proposal, root) =>{
       state.table.is_up = proposal.shortcode['spread'.length] === 'U';
       state.table.direction = state.table.is_up ? 1 : -1;
       state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
-      state.table.is_sold = proposal.is_sold;
+      state.table.is_sold = proposal.is_sold || proposal.is_expired;
       state.table.exit_tick = proposal.exit_level
       state.table.exit_tick_time = state.table.is_sold ? proposal.sell_time : undefined;
       state.table.profit = parseFloat(proposal.sell_price ? proposal.sell_price : proposal.bid_price) - parseFloat(proposal.buy_price);
@@ -489,8 +494,8 @@ const update_live_chart = (state, granularity) => {
          const tick = data.tick;
          chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
          /* stop updating when contract is expired */
-         if(tick.epoch*1 > state.table.date_expiry*1) {
-            if(perv_tick) {
+         if(tick.epoch*1 > state.table.date_expiry*1 || state.table.is_sold) {
+            if(perv_tick && state.table.contract_type !== 'SPREAD') {
                state.table.exit_tick = perv_tick.quote;
                state.table.exit_tick_time = perv_tick.epoch*1;
                state.validation = 'This contract has expired'.i18n();
@@ -593,6 +598,8 @@ const get_chart_data = (state, root) => {
 
       state.table.stop_loss_level && chart.addPlotLineY({value: state.table.stop_loss_level*1, label: 'Stop Loss ('.i18n() + state.table.stop_loss_level + ')', color: 'red'});
       state.table.stop_profit_level && chart.addPlotLineY({value: state.table.stop_profit_level*1, label: 'Stop Profit ('.i18n() + state.table.stop_profit_level + ')'});
+
+      state.table.user_sold && chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Spot'.i18n(), text_left: true});
 
       state.chart.chart = chart;
       state.chart.manual_reflow();
