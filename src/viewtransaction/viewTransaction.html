@@ -33,7 +33,7 @@
       <div> <p>Start Time</p>
           <span rv-text="table.date_start | moment | or '-'"></span>
       </div>
-      <div rv-if="table.exit_tick_time | eq undefined"> <p>Current Spot Time</p>
+      <div rv-if="table.user_sold | not-eq true | and table.exit_tick_time | eq undefined"> <p>Current Spot Time</p>
           <span rv-text="table.current_spot_time | moment | or '-'"></span>
           <br />
           <span rv-if="table.current_spot_time"
@@ -59,7 +59,7 @@
                 rv-text="table.entry_tick | or '-'"
                 class="dotted-underline"></span>
       </div>
-      <div rv-if="table.exit_tick | eq undefined"> <p>Current Spot</p>
+      <div rv-if="table.user_sold | not-eq true | and table.exit_tick | eq undefined"> <p>Current Spot</p>
           <span rv-text="table.current_spot | or '-'" rv-indicative-color="table.current_spot"></span>
       </div>
       <div rv-if="table.user_sold | not-eq true | and table.exit_tick "> <p>Exit Spot</p>
