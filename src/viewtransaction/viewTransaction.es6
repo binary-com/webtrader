@@ -191,6 +191,10 @@ const update_indicative = (data, state) => {
    const contract = data.proposal_open_contract;
    const id = contract.contract_id || data.echo_req.contract_id,
       bid_price = contract.bid_price;
+   if(contract.is_sold && !contract.exit_tick && !contract.exit_level && !state.table.user_sold) {
+      liveapi.send({contract_id: id, proposal_open_contract: 1});
+      return;
+   }
    if(id != state.contract_id) { return; }
    if(contract.validation_error)
       state.validation = contract.validation_error;
@@ -236,24 +240,19 @@ const update_indicative = (data, state) => {
          state.table.is_sold = contract.is_sold;
          state.table.exit_tick = contract.exit_level;
          state.table.exit_tick_time = contract.sell_time;
+         !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+         !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
       }
       return;
    }
 
    if(contract.is_sold){
-      if(!contract.exit_tick && !state.table.user_sold) {
-         /*
-          * Since the backend stopped sending exit_tick and time on contract sell, this is a work around for
-          * getting the required fields.
-          */
-         liveapi.send({contract_id: id, proposal_open_contract: 1});
-         return;
-      }
       state.table.exit_tick = contract.exit_tick;
       state.table.exit_tick_time = contract.exit_tick_time;
       state.table.sell_price = contract.sell_price;
       state.table.final_price = contract.sell_price;
       !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+      !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
    }
 
    if(!state.chart.barrier && contract.barrier) {
@@ -497,7 +496,7 @@ const update_live_chart = (state, granularity) => {
          const tick = data.tick;
          chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
          /* stop updating when contract is expired */
-         if(tick.epoch*1 > state.table.date_expiry*1) {
+         if(tick.epoch*1 > state.table.date_expiry*1 || state.table.is_sold) {
             if(perv_tick) {
                state.table.exit_tick = perv_tick.quote;
                state.table.exit_tick_time = perv_tick.epoch*1;
