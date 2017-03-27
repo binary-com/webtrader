@@ -228,6 +228,7 @@ export const generate_csv = (chart, data) => {
 export const drawChart = (containerIDWithHash, options, onload) => {
     let indicators = [];
     let overlays = [];
+    let current_symbol = [];
 
     if ($(containerIDWithHash).highcharts()) {
         //Just making sure that everything has been cleared out before starting a new thread
@@ -285,6 +286,7 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                             chart && chart.showLoading(msg);
                             console.error(err);
                         }).then(() => {
+                            current_symbol = _.filter(ins.get_symbols,{symbol:options.instrumentCode})[0];
                             const chart = $(containerIDWithHash).highcharts();
                             /* the data is loaded but is not applied yet, its on the js event loop,
                                wait till the chart data is applied and then add the indicators */
@@ -317,7 +319,7 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                 }
             },
             spacingLeft: 0,
-            marginLeft: 45,
+            marginLeft: 55,
             /* disable the auto size labels so the Y axes become aligned */
             marginBottom: 15,
             spacingBottom: 15
@@ -394,11 +396,15 @@ export const drawChart = (containerIDWithHash, options, onload) => {
             opposite: false,
             labels: {
                 formatter: function() {
+                    if(!current_symbol) return;
+                    let value = null;
+                    const digits_after_decimal = (current_symbol.pip+"").split(".")[1].length;
                     if ($(containerIDWithHash).data("overlayIndicator")) {
-                        return (this.value > 0 ? ' + ' : '') + this.value + '%';
+                        value = (this.value > 0 ? ' + ' : '') + this.value + '%';
                     } else {
-                        return this.value;
+                        value = this.value;
                     }
+                    return value.toFixed(digits_after_decimal);
                 },
                 align: 'center'
             }
