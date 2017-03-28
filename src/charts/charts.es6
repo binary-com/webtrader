@@ -395,8 +395,9 @@ export const drawChart = (containerIDWithHash, options, onload) => {
         yAxis: [{
             opposite: false,
             labels: {
+                reserveSpace: true,
                 formatter: function() {
-                    if(!current_symbol) return;
+                    if(!current_symbol || !current_symbol.pip) return;
                     let value = null;
                     const digits_after_decimal = (current_symbol.pip+"").split(".")[1].length;
                     if ($(containerIDWithHash).data("overlayIndicator")) {
