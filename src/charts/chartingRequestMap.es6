@@ -271,7 +271,7 @@ export const subscribe = function(key, chartID) {
     }
 }
 
-export const unregister = function(key, containerIDWithHash) {
+export const unregister = function(key, containerIDWithHash, instrument) {
     const map = this;
     if (!map[key]) {
         return;
@@ -284,8 +284,28 @@ export const unregister = function(key, containerIDWithHash) {
         clearInterval(map[key].timerHandler);
         map[key].timerHandler = null;
     }
+    /* Remove the following code if backend fixes this issue: 
+     * https://trello.com/c/1IZRihrH/4662-1-forget-call-for-one-stream-id-affects-all-other-streams-with-the-same-symbol
+     * Also remove instrument from function argument list.
+     * Files changed: "charts.es6"(destroy())
+     */
+    //-----Start-----//
+    instrument = instrument || $(containerIDWithHash).data("instrumentCode");
+    const tickSubscribers = map[map.keyFor(instrument, 0)] && map[map.keyFor(instrument, 0)].subscribers;
+    //-----End-----//
     if (map[key].subscribers === 0 && map[key].id) { /* id is set in stream_handler.js */
         liveapi.send({ forget: map[key].id })
+            // Remove this part as well.
+            .then(()=>{
+                // Resubscribe to tick stream if there are any tickSubscribers.
+                if(tickSubscribers)
+                    map.register({
+                        symbol: instrument,
+                        granularity: 0,
+                        subscribe: 1,
+                        count: 50 // To avoid missing any ticks.
+                    });
+            })
             .catch((err) => { console.error(err); });
     }
     if (map[key].subscribers === 0) {
