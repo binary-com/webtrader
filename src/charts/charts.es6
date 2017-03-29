@@ -230,6 +230,10 @@ export const drawChart = (containerIDWithHash, options, onload) => {
     let overlays = [];
     let current_symbol = [];
 
+    liveapi.send({active_symbols: "brief"}).then((data)=>{
+        current_symbol = _.filter(data.active_symbols,{symbol: options.instrumentCode})[0];
+    });
+
     if ($(containerIDWithHash).highcharts()) {
         //Just making sure that everything has been cleared out before starting a new thread
         const key = chartingRequestMap.keyFor(options.instrumentCode, options.timePeriod);
@@ -286,7 +290,6 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                             chart && chart.showLoading(msg);
                             console.error(err);
                         }).then(() => {
-                            current_symbol = _.filter(ins.get_symbols,{symbol:options.instrumentCode})[0];
                             const chart = $(containerIDWithHash).highcharts();
                             /* the data is loaded but is not applied yet, its on the js event loop,
                                wait till the chart data is applied and then add the indicators */
