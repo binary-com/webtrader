@@ -52,7 +52,8 @@ liveapi.events.on('tick', (data) => {
             return;
          }
          //notify all registered charts
-         chartingRequest.chartIDs.forEach((chartID) => {
+         for(let i = 0; i < chartingRequest.chartIDs.length; i++) {
+            const chartID = chartingRequest.chartIDs[i];
             const chart = $(chartID.containerIDWithHash).highcharts();
             if (!chart) return;
 
@@ -62,7 +63,7 @@ liveapi.events.on('tick', (data) => {
             series.addPoint([time, price]);
             //setExtremePointsForXAxis(chart, time);
 
-         });
+         };
 
       }
 
@@ -130,8 +131,8 @@ liveapi.events.on('ohlc', (data) => {
       fire_event('ohlc', { ohlc: bar, is_new: isNew, key: key, preOhlc: preOhlc });
 
       //notify all registered charts
-      chartingRequest.chartIDs.forEach((chartID) => {
-
+      for(let i = 0;i < chartingRequest.chartIDs.length; i++){
+         const chartID = chartingRequest.chartIDs[i];
          const chart = $(chartID.containerIDWithHash).highcharts();
          if (!chart) return;
 
@@ -167,7 +168,7 @@ liveapi.events.on('ohlc', (data) => {
                });
             }
          }
-      });
+      };
    }
 });
 

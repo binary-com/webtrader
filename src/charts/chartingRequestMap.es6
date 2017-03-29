@@ -37,8 +37,8 @@ export const barsLoaded = function(instrumentCdAndTp) {
     const chartIDList = this[key].chartIDs;
     const processOHLC = this.processOHLC;
 
-    chartIDList.forEach((chartID) => {
-
+    for(let i =0;i<chartIDList.length;i++){
+        let chartID = chartIDList[i];
         if (!chartID) return;
         if (!$(chartID.containerIDWithHash).highcharts()) return;
         const series = $(chartID.containerIDWithHash).highcharts().get(key),
@@ -156,7 +156,7 @@ export const barsLoaded = function(instrumentCdAndTp) {
 
         }
 
-    });
+    };
 
 }
 
