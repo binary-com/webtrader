@@ -276,8 +276,6 @@ export const init = (m_newTabId, m_timePeriod, m_chartType, m_tableViewCb, m_ins
         const timePeriod = event.target.dataset.timeperiod;
         if (timePeriod) {
             scope = state[scope.newTabId];
-            //Unregister previous subscription
-            chartingRequestMap.unregister(chartingRequestMap.keyFor(scope.instrumentCode, scope.timePeriod.value), '#' + scope.newTabId + '_chart');
             scope.timePeriod = timeperiod_arr.filter((obj) => {
                 return timePeriod == obj.value
             })[0];
