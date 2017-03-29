@@ -163,7 +163,7 @@ const register_ticks = (state, extra) => {
    fn = liveapi.events.on('proposal_open_contract', (data) => {
       const contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
-      entry = contract.entry_tick_time * 1;
+      entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
       const tick_interval = last_1000_ticks[1].epoch*1 - last_1000_ticks[0].epoch*1;
       // contract.date_epxiry is WRONG with odd numbers.
       // DONT TRUST BACKEND! I'm really angry right now :/
