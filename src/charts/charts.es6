@@ -230,7 +230,7 @@ export const drawChart = (containerIDWithHash, options, onload) => {
     let overlays = [];
     let current_symbol = [];
 
-    liveapi.send({active_symbols: "brief"}).then((data)=>{
+    liveapi.cached.send({active_symbols: "brief"}).then((data)=>{
         current_symbol = _.filter(data.active_symbols,{symbol: options.instrumentCode})[0];
     });
 
