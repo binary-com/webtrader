@@ -5,12 +5,13 @@ define(['common/util', 'highstock'], function () {
 
     function removePlotLine() {
         var series = this;
-        this.yAxis.plotLinesAndBands.forEach(function (plotLine) {
+        for(var i=0; i< this.yAxis.plotLinesAndBands.length; i++) {
+            var plotLine = this.yAxis.plotLinesAndBands[i];
             if (plotLine.options.id && plotLine.options.id.indexOf(series.options.id + '_CurrentPrice') == 0) {
                 series.yAxis.removePlotLine(plotLine.options.id);
                 return false;
             }
-        });
+        };
     }
 
     return {

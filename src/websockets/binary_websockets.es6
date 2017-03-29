@@ -136,11 +136,13 @@ const onmessage = (message) => {
    /* do not block the main thread */
    /* note: this will prevent subscribers from altering callbacks[data.msg_type] array
            while we are iterating on it. this is especially important for tick trades */
-   (callbacks[data.msg_type] || []).forEach((cb) => {
+   callbacks[data.msg_type] = callbacks[data.msg_type] || [];
+   for(let i = 0; i < callbacks[data.msg_type].length; i++){
+      const cb = callbacks[data.msg_type][i];
       setTimeout(
          () => cb(data)
          , 0);
-   });
+   };
 
    const key = data.req_id;
    const promise = unresolved_promises[key];
