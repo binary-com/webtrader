@@ -1221,6 +1221,9 @@ msgstr "点击劫持测试"
 msgid "Click to log in with your Binary.com account"
 msgstr "点击登录Binary.com账户"
 
+msgid "Close"
+msgstr ""
+
 msgid "Close Price"
 msgstr ":收盘价"
 
@@ -1798,6 +1801,9 @@ msgstr "健康状况"
 msgid "Help"
 msgstr ""
 
+msgid "High"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "高障碍"
 
@@ -2277,6 +2283,9 @@ msgid ""
 "black candle has a body that gaps above the prior candle's body. The last "
 "day is another black candle, but this one engulfs the previous bearish "
 "candle but closes above first bar's open"
+msgstr ""
+
+msgid "Low"
 msgstr ""
 
 msgid "Low Barrier"

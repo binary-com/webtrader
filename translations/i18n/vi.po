@@ -1213,6 +1213,9 @@ msgstr "Nhấp vào kiểm tra Jacking"
 msgid "Click to log in with your Binary.com account"
 msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com của bạn"
 
+msgid "Close"
+msgstr ""
+
 msgid "Close Price"
 msgstr "Giá chốt"
 
@@ -1791,6 +1794,9 @@ msgstr "Sức khỏe"
 msgid "Help"
 msgstr ""
 
+msgid "High"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Barie cao"
 
@@ -2280,6 +2286,9 @@ msgid ""
 "black candle has a body that gaps above the prior candle's body. The last "
 "day is another black candle, but this one engulfs the previous bearish "
 "candle but closes above first bar's open"
+msgstr ""
+
+msgid "Low"
 msgstr ""
 
 msgid "Low Barrier"
