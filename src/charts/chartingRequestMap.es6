@@ -271,7 +271,7 @@ export const subscribe = function(key, chartID) {
     }
 }
 
-export const unregister = function(key, containerIDWithHash, instrument) {
+export const unregister = function(key, containerIDWithHash) {
     const map = this;
     if (!map[key]) {
         return;
@@ -287,10 +287,9 @@ export const unregister = function(key, containerIDWithHash, instrument) {
     /* Remove the following code if backend fixes this issue: 
      * https://trello.com/c/1IZRihrH/4662-1-forget-call-for-one-stream-id-affects-all-other-streams-with-the-same-symbol
      * Also remove instrument from function argument list.
-     * Files changed: "charts.es6"(destroy())
      */
     //-----Start-----//
-    instrument = instrument || $(containerIDWithHash).data("instrumentCode");
+    const instrument = map[key].symbol;
     const tickSubscribers = map[map.keyFor(instrument, 0)] && map[map.keyFor(instrument, 0)].subscribers;
     //-----End-----//
     if (map[key].subscribers === 0 && map[key].id) { /* id is set in stream_handler.js */

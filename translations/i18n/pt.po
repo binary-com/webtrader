@@ -1271,6 +1271,9 @@ msgstr "Teste de \"Click Jacking\""
 msgid "Click to log in with your Binary.com account"
 msgstr "Clique para conectar-se com a sua conta Binary.com"
 
+msgid "Close"
+msgstr ""
+
 msgid "Close Price"
 msgstr "Preço de fechamento"
 
@@ -1850,6 +1853,9 @@ msgstr "Saúde"
 msgid "Help"
 msgstr ""
 
+msgid "High"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "Barreira alta"
 
@@ -2340,6 +2346,9 @@ msgid ""
 "black candle has a body that gaps above the prior candle's body. The last "
 "day is another black candle, but this one engulfs the previous bearish "
 "candle but closes above first bar's open"
+msgstr ""
+
+msgid "Low"
 msgstr ""
 
 msgid "Low Barrier"

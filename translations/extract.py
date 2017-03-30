@@ -24,7 +24,7 @@ static = [
     '4 Hours', '8 Hours', '1 Day', 'Candles', 'OHLC', 'Line', 'Dot', 'Line Dot', 'Spline', 'Table', '1t', '1m', '2m', '3m', 
     '5m', '10m', '15m', '30m', '1h', '2h', '4h', '8h', '1d', '1', '2', '3', '4', '5', '8', '10', '15', '30', 
     'Add/remove indicators', 'Touch', 'No touch', 'Ends out', 'Ends in', 'Stays in', 'Goes out', 'Matches', 'Differs',
-    'Under', 'Odd', 'Even', 'Asian up', 'Asian down', 'Spreads up', 'Spreads down'
+    'Under', 'Odd', 'Even', 'Asian up', 'Asian down', 'Spreads up', 'Spreads down', 'Open', 'High', 'Low', 'Close'
 ]
 
 # Parsing webtrader html files.

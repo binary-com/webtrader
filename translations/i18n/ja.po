@@ -1236,6 +1236,9 @@ msgstr "ジャッキテストをクリック"
 msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
+msgid "Close"
+msgstr ""
+
 msgid "Close Price"
 msgstr "：終値"
 
@@ -1816,6 +1819,9 @@ msgstr "健全度"
 msgid "Help"
 msgstr ""
 
+msgid "High"
+msgstr ""
+
 msgid "High Barrier"
 msgstr "高限バリア"
 
@@ -2301,6 +2307,9 @@ msgid ""
 "black candle has a body that gaps above the prior candle's body. The last "
 "day is another black candle, but this one engulfs the previous bearish "
 "candle but closes above first bar's open"
+msgstr ""
+
+msgid "Low"
 msgstr ""
 
 msgid "Low Barrier"
