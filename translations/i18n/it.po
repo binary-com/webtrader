@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2017-03-28 10:04+0000\n"
+"PO-Revision-Date: 2017-04-03 05:22+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/it/>\n"
@@ -4103,7 +4103,7 @@ msgid "Thursday"
 msgstr "Giovedì"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Trade app"
 msgstr "App Tick Trade"
@@ -4189,7 +4189,7 @@ msgid "Total Profit/Loss"
 msgstr "Profitto/Perdita totale"
 
 msgid "Touch"
-msgstr ""
+msgstr "Touch"
 
 msgid "Touch/No Touch"
 msgstr "Touch/No Touch"
@@ -4267,13 +4267,13 @@ msgid "Transfer to another Binary account"
 msgstr "Trasferisci a un altro account Binary"
 
 msgid "Triangular Moving Average (TRIMA)"
-msgstr ""
+msgstr "Media mobile triangolare (TRIMA)"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "Triple Exponential Moving Average (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "Triple Exponential Moving Average (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
 msgstr ""
@@ -4325,7 +4325,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "Purtroppo il tuo browser non li supporta"
 
 msgid "Unique 3 River (CDLUNIQUE3RIVER)"
-msgstr ""
+msgstr "Unique 3 River (CDLUNIQUE3RIVER)"
 
 msgid ""
 "Unique Three River Bottom is a bullish candlestick pattern made up of three "
@@ -4382,7 +4382,7 @@ msgid ""
 msgstr ""
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Varianza (VAR)"
 
 msgid "Verification code has been sent to your email"
 msgstr "Il codice di verifica è stato inviato al tuo indirizzo email"
@@ -4412,16 +4412,16 @@ msgid "View Statement"
 msgstr ""
 
 msgid "Volatile markets"
-msgstr ""
+msgstr "Mercati volatili"
 
 msgid "Volatility Indicators"
-msgstr ""
+msgstr "Indicatori di volatilità"
 
 msgid "Volatility Indices"
-msgstr ""
+msgstr "Indici di volatilità"
 
 msgid "Volatility indices"
-msgstr ""
+msgstr "Indici di volatilità"
 
 msgid "WMA"
 msgstr "WMA"
