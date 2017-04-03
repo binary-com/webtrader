@@ -171,3 +171,7 @@
     line-height: 2em;
 }
 .view-transaction-dialog .footer .sell-at-market .sell-button[disabled] { opacity: 0.5; }
+
+.entry-spot[data-balloon]:before {
+  transform: translate(-40%,0);
+}

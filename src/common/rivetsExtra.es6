@@ -351,25 +351,6 @@ rv.binders['spinner-*'] = function(el,value) {
    $(el).webtrader_spinner('option', this.args[0], value);
 }
 
-/* binder for jquery ui tooltip */
-rv.binders.tooltip = {
-   priority: 97,
-   bind: (el) => {
-      $(el).attr('title',' ');
-      $(el).tooltip();
-   },
-   unbind: (el) => $(el).tooltip().tooltip('destroy'),
-   routine: (el, value) => {
-      if(value)
-         $(el).tooltip('enable').tooltip('option', 'content', value);
-      else
-         $(el).tooltip('disable');
-   }
-}
-/* bindar for jqueyr ui tooltip options */
-rv.binders['tooltip-*'] = function (el, value) {
-   $(el).tooltip('option', this.args[0], value);
-}
 /* bindar for jqueyr ui dialog options */
 rv.binders['dialog-*'] = function (el, value) {
    $(el).dialog('option', this.args[0], value);
