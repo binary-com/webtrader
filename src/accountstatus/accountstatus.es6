@@ -1,6 +1,7 @@
 import $ from "jquery";
 import liveapi from "../websockets/binary_websockets";
 import _ from "lodash";
+import notice from "shownotice/shownotice";
 import "../common/util";
 
 class AccountStatus {
@@ -35,6 +36,7 @@ class AccountStatus {
                 message: "Please [_1]authenticate your account[_2] to lift your withdrawal and trading limits".i18n()
                 .replace("[_1]","<a href='#'>").replace("[_2]","</a>"),
                 is_valid: () => {return (!/authenticated/.test(status) || !/age_verification/.test(status))},
+                callback: notice.init
             }
         }
 
@@ -46,6 +48,7 @@ class AccountStatus {
             // Show message
             $ele.html(invalid_obj.message);
             $ele.slideDown(500);
+            $ele.find("a").on("click", invalid_obj.callback);
         }
     }
 }
