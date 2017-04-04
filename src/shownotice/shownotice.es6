@@ -1,12 +1,6 @@
-import rv from 'common/rivetsExtra';
 import $ from 'jquery';
 import windows from 'windows/windows';
-import liveapi from 'websockets/binary_websockets';
-import 'common/util';
-import 'jquery-growl';
 
-liveapi.events.on("login", () => { init("event").catch((err) => { console.error(err.msg) }) });
-liveapi.events.on("buy", () => { init("event").catch((err) => { console.error(err.msg) }) });
 let win = null;
 //Triggered by is used to determine which fucntion invokes it.
 export const init = (triggered_by) => {

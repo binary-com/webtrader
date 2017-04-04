@@ -294,11 +294,8 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
             });
         });
 
-        /*Trigger account status check.*/
-        require(["shownotice/shownotice"]);
-
         /*Trigger T&C check, self-exclusion, reality check, chrome extension check, csr_tax_information check*/
-        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'tc/tc', 'realitycheck/realitycheck', 'taxInformation/taxInformation', 'financialassessment/financialassessment']);
+        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'realitycheck/realitycheck', 'accountstatus/accountstatus']);
     }
 
 

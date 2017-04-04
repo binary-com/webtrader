@@ -398,3 +398,10 @@ input[type="number"] {
 .dialog-message.ui-dialog .ui-dialog-content{
   padding: 0;
 }
+
+#msg-notification {
+    font-size: .86957rem;
+    padding: 3px 0;
+    line-height: 20px;
+    display: none;
+}
