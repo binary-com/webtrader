@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 06:12+0200\n"
-"PO-Revision-Date: 2017-03-14 07:26+0000\n"
+"PO-Revision-Date: 2017-04-04 05:24+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/id/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.12\n"
+"X-Generator: Weblate 2.13-dev\n"
 
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
@@ -630,6 +630,8 @@ msgid ""
 "A medium to long bullish or bearish candlestick with the key defining trait "
 "being no head or tail shadows"
 msgstr ""
+"Grafik candlestick bullish atau bearish sedang hingga panjang dengan sifat "
+"utama tanpa kepala atau ekor bayangan"
 
 msgid ""
 "A panel featuring industry leaders awards BetOnMarkets.com 'Financial "
@@ -1149,6 +1151,8 @@ msgid ""
 "Bollinger Bands can be used to measure the highness or lowness of the price "
 "relative to previous trades"
 msgstr ""
+"Bollinger Bands dapat digunakan untuk mengukur tinggi atau rendahnya harga "
+"relatif terhadap trading sebelumnya"
 
 msgid "Bought"
 msgstr "Membeli"
@@ -1166,6 +1170,9 @@ msgid ""
 "But there's no need to wait until expiry. You can sell back long-term trades "
 "at any time to profit from changing market conditions"
 msgstr ""
+"Namun tidak perlu menunggu hingga berakhir. Anda dapat menjual kembali "
+"kontrak jangka panjang kapan saja untuk memperoleh laba dari perubahan "
+"kondisi pasar"
 
 msgid "Buy Price"
 msgstr "Harga Beli"
@@ -1189,20 +1196,28 @@ msgid ""
 "Can be used to buy and sell contracts, renew expired purchases, and top-up "
 "virtual-money accounts."
 msgstr ""
+"Dapat digunakan untuk membeli dan menjual kontrak, memperbaharui kontrak "
+"yang telah berakhir, dan mengisi ulang akun virtual."
 
 msgid ""
 "Can be used to open accounts, set settings, manage token usage, and more."
 msgstr ""
+"Dapat digunakan untuk membuka akun, pengaturan, mengatur penggunaan token, "
+"dan banyak lagi."
 
 msgid ""
 "Can be used to view account activity, including settings, limits, balance "
 "sheets, trade purchase history, and more."
 msgstr ""
+"Dapat digunakan untuk melihat aktivitas akun, termasuk pengaturan, batas, "
+"neraca, sejarah pembelian kontrak, dan banyak lagi."
 
 msgid ""
 "Can be used to withdraw to payment agents, transfer funds between accounts, "
 "and set / clear cashier passwords."
 msgstr ""
+"Dapat digunakan untuk menarik dana ke agen pembayaran, transfer dana antar "
+"akun, dan mengatur/menghapus kata sandi kasir."
 
 msgid "Cancel"
 msgstr "Batalkan"
@@ -1259,31 +1274,43 @@ msgid ""
 "Choose Asian Rise/Fall when you want to profit from the market ending higher "
 "or lower than the average price"
 msgstr ""
+"Pilih Asian Rise/Fall untuk profit pada pasar yang berakhir lebih tinggi "
+"atau lebih rendah dari harga rata-rata"
 
 msgid ""
 "Choose Ends In/Out to profit from the market stopping inside or outside two "
 "price targets at the end of the time period"
 msgstr ""
+"Pilih Ends In/Out untuk profit pada pasar yang berakhir didalam atau diluar "
+"dua target harga pada akhir periode"
 
 msgid ""
 "Choose Higher/Lower when you want to profit from the market ending higher or "
 "lower than a price target"
 msgstr ""
+"Pilih Higher/Lower untuk profit pada pasar yang berakhir lebih tinggi atau "
+"lebih rendah dari target harga"
 
 msgid ""
 "Choose Rise/Fall when you want to profit from the market rising or falling "
 "from its current level"
 msgstr ""
+"Pilih Rise/Fall untuk profit pada pergerakan pasar naik atau turun dari "
+"level terkini"
 
 msgid ""
 "Choose Stays In/Out to profit from the market staying inside or going "
 "outside two price targets any time during the contract period"
 msgstr ""
+"Pilih Stays In/Out untuk profit pada pasar yang tetap berada didalam atau "
+"keluar dua target harga kapan saja selama periode kontrak"
 
 msgid ""
 "Choose Touch / No Touch when you want to profit from the market touching or "
 "not touching a target any time during the contract period"
 msgstr ""
+"Pilih Touch/No Touch untuk profit pada pasar yang menyentuh atau tidak "
+"target kapan saja selama periode kontrak"
 
 msgid "Choose a trade type"
 msgstr "Pilih jenis trading"
@@ -1292,6 +1319,7 @@ msgid ""
 "Choose digit if you want to profit from predicting the last decimal digit of "
 "the spot"
 msgstr ""
+"Pilih digit untuk profit dengan menganalisa angka desimal terakhir pada spot"
 
 msgid "Choose from over 1 million trades"
 msgstr "Pilih lebih dari 1 juta transaksi"
@@ -1311,21 +1339,21 @@ msgstr "Pilih durasi"
 msgid ""
 "Choose the market, the price target, the time period, and how much you wish "
 "to win"
-msgstr ""
+msgstr "Pilih pasar, target harga, jangka waktu, dan jumlah keuntungan Anda"
 
 msgid ""
 "Choose the market, the price targets, the time period, and how much you wish "
 "to win"
-msgstr ""
+msgstr "Pilih pasar, target harga, jangka waktu, dan jumlah keuntungan Anda"
 
 msgid "Choose the market, the time period, and how much you wish to win"
-msgstr ""
+msgstr "Pilih pasar, jangka waktu, dan jumlah keuntungan Anda"
 
 msgid "Choose the payout"
-msgstr ""
+msgstr "Pilih hasil"
 
 msgid "Choose the underlying market"
-msgstr ""
+msgstr "Pilih pasar dasar"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Pilih agen pembayaran pilihan Anda"
@@ -1334,7 +1362,7 @@ msgid "Choose your pereferred withdrawal method"
 msgstr "Pilih metode penarikan pilihan Anda"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "Indeks Choppiness (CHOP)"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -1355,15 +1383,17 @@ msgid "Closes"
 msgstr "Tutup"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
-msgstr ""
+msgstr "Komoditas"
 
 msgid ""
 "Commodities are resources that are grown or extracted from the ground, such "
 "as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr ""
+"Komoditas adalah sumber yang berkembang dan disaring dari tanah seperti "
+"perak, emas dan minyak. Di Binary.com, mereka memiliki harga dalam dolar AS"
 
 msgid "Commodities trading experience"
 msgstr "Pengalaman trading komoditas"
@@ -1372,7 +1402,7 @@ msgid "Commodities trading frequency"
 msgstr "Frekuensi trading komoditas"
 
 msgid "Commodity Channel Index (CCI)"
-msgstr ""
+msgstr "Indeks Commodity Channel (CCI)"
 
 msgid "Comparisons"
 msgstr "Perbandingan"
@@ -1405,16 +1435,16 @@ msgid "Contract Confirmation"
 msgstr "Konfirmasi Kontrak"
 
 msgid "Contract period"
-msgstr ""
+msgstr "Periode kontrak"
 
 msgid "Contracts"
 msgstr "Kontrak"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Coppock Curve (CC)"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "Counterattack (CDLCOUNTERATTACK)"
 
 msgid "Country of residence"
 msgstr "Negara tempat tinggal"
@@ -1432,7 +1462,7 @@ msgid "Crosshair"
 msgstr "Crosshair"
 
 msgid "Currencies"
-msgstr ""
+msgstr "Mata uang"
 
 msgid "Current Level"
 msgstr "Level Terkini"
@@ -1474,7 +1504,7 @@ msgid "Dark Blue"
 msgstr "Biru Tua"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
-msgstr ""
+msgstr "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 
 msgid ""
 "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when "
@@ -1503,7 +1533,7 @@ msgid "Days"
 msgstr "Hari"
 
 msgid "Debt-free"
-msgstr ""
+msgstr "Bebas utang"
 
 msgid "Dec"
 msgstr "Des"
@@ -1518,7 +1548,7 @@ msgid "Default"
 msgstr "Kelalaian"
 
 msgid "Define your position"
-msgstr ""
+msgstr "Tentukan posisi Anda"
 
 msgid "Delete"
 msgstr "Hapus"
@@ -1536,10 +1566,10 @@ msgid "Deposit of USD"
 msgstr "Deposit sebesar USD"
 
 msgid "Depositing and withdrawing funds"
-msgstr ""
+msgstr "Deposit dan penarikan dana"
 
 msgid "Derivative"
-msgstr ""
+msgstr "Derivatif"
 
 msgid "Describe what this token is for to find it later"
 msgstr "Jelaskan token apa ini untuk menemukannya nanti"
@@ -1587,25 +1617,25 @@ msgid ""
 msgstr ""
 
 msgid "Directional Movement Index (DX)"
-msgstr ""
+msgstr "Indeks Directional Movement (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr ""
+msgstr "Apakah saya perlu menyetor dana untuk membuka akun?"
 
 msgid "Do I need to send any documents?"
-msgstr ""
+msgstr "Apakah saya perlu mengirim dokumen?"
 
 msgid "Do you offer virtual-money accounts?"
-msgstr ""
+msgstr "Apakah Anda menawarkan akun uang virtual?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Doji Star (CDLDOJISTAR)"
 
 msgid ""
 "Doji form when a security's open and close are virtually equal. The length "
@@ -1617,7 +1647,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "Donchian Channel (DC)"
 
 msgid "Done"
 msgstr "Selesai"
@@ -1632,7 +1662,7 @@ msgid "Dot"
 msgstr "Dot"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "Double Exponential Moving Average (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr "Klik dua kali untuk menghapus objek"
@@ -1668,7 +1698,7 @@ msgid "Downloading .csv"
 msgstr "Downloading .csv"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "Alat gambar"
@@ -1677,7 +1707,7 @@ msgid "Duration"
 msgstr "Durasi"
 
 msgid "EGR Operator Award"
-msgstr ""
+msgstr "Operator Penghargaan EGR"
 
 msgid "EMA"
 msgstr "EMA"
@@ -1689,11 +1719,14 @@ msgid ""
 "Each binary option is a prediction on the future movement of an underlying "
 "market"
 msgstr ""
+"Setiap opsi binary merupakan analisa pada pergerakan bursa saham pasar dasar"
 
 msgid ""
 "Each binary trade is for a pre-determined payout amount. You win the payout "
 "if your prediction is correct"
 msgstr ""
+"Setiap kontrak binary memiliki hasil yang telah ditentukan. Anda akan "
+"memperoleh hasil jika analisa Anda benar"
 
 msgid "Edge"
 msgstr "Edge"
@@ -1714,7 +1747,7 @@ msgid "End Time"
 msgstr "Waktu Akhir"
 
 msgid "Ends Between/Ends Outside trades"
-msgstr ""
+msgstr "Kontrak Ends Between/Ends Outside"
 
 msgid "Ends In/Out"
 msgstr "Ends In/Out"
@@ -1726,7 +1759,7 @@ msgid "Ends out"
 msgstr "Ends out"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
-msgstr ""
+msgstr "Engulfing Pattern (CDLENGULFING)"
 
 msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr "Pastikan untuk memasukkan data yang benar atau akun Anda akan terkunci"
@@ -1741,7 +1774,7 @@ msgid "Entry spot"
 msgstr "Spot awal"
 
 msgid "Entry spot price"
-msgstr ""
+msgstr "Harga spot masuk"
 
 msgid "Error downloading .csv"
 msgstr "Error downloading .csv"
@@ -1756,13 +1789,13 @@ msgid "Even"
 msgstr "Even"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "Evening Doji Star (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Evening Star (CDLEVENINGSTAR)"
 
 msgid "Example"
-msgstr ""
+msgstr "Contoh"
 
 msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari website hingga"
@@ -1774,13 +1807,13 @@ msgid "Exit spot"
 msgstr "Spot akhir"
 
 msgid "Expiry price"
-msgstr ""
+msgstr "Harga akhir"
 
 msgid "Explanation"
 msgstr "Penjelasan"
 
 msgid "Exponential Moving Average (EMA)"
-msgstr ""
+msgstr "Exponential Moving Average (EMA)"
 
 msgid "Failed to update the password"
 msgstr "Gagal memperbarui kata sandi"
@@ -1789,7 +1822,7 @@ msgid "Fall"
 msgstr "Fall"
 
 msgid "Falling markets"
-msgstr ""
+msgstr "Pasar jatuh"
 
 msgid "Family name"
 msgstr "Nama keluarga"
@@ -1830,13 +1863,13 @@ msgid "Financial Account Opening form"
 msgstr "Formulir Pendaftaran Akun Finasial"
 
 msgid "Financial Security"
-msgstr ""
+msgstr "Keamanan Keuangan"
 
 msgid "Financial information"
 msgstr "Informasi keuangan"
 
 msgid "Financial rewards"
-msgstr ""
+msgstr "Imbalan keuangan"
 
 msgid "Firefox"
 msgstr "Firefox"
@@ -1848,9 +1881,11 @@ msgid ""
 "First, you need to set the parameters of your trade. Here's what you need to "
 "consider"
 msgstr ""
+"Pertama, Anda perlu menentukan parameter trading Anda. Berikut adalah hal "
+"yang perlu Anda pertimbangkan"
 
 msgid "Flexibility"
-msgstr ""
+msgstr "Flexibilitas"
 
 msgid ""
 "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds "
@@ -1859,7 +1894,7 @@ msgid ""
 msgstr ""
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Pengalaman trading forex"
@@ -1868,10 +1903,10 @@ msgid "Forex trading frequency"
 msgstr "Frekuensi trading Forex"
 
 msgid "Founded October 1999"
-msgstr ""
+msgstr "Didirikan Oktober 1999"
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid ""
 "Fractals are indicators on candlestick charts that identify reversal points "
@@ -1893,7 +1928,7 @@ msgid "Further instructions"
 msgstr "Instruksi lebih lanjut"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid ""
 "GMT stands for Greenwich Mean Time, the official time used in the UK during "
@@ -1902,13 +1937,13 @@ msgid ""
 msgstr ""
 
 msgid "Get your price"
-msgstr ""
+msgstr "Dapatkan harga"
 
 msgid "Goes out"
 msgstr "Goes out"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
 msgstr "Abu-abu"
@@ -1920,22 +1955,22 @@ msgid "Grid Light"
 msgstr "Grid Muda"
 
 msgid "Group History"
-msgstr ""
+msgstr "Sejarah Group"
 
 msgid "HIGH"
 msgstr "TINGGI"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Hammer (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "Hanging Man (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr ""
+msgstr "Harami Cross Pattern (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
-msgstr ""
+msgstr "Harami Pattern (CDLHARAMI)"
 
 msgid "Have better luck at trading!"
 msgstr "Lebih beruntung pada trading!"
@@ -1944,7 +1979,7 @@ msgid "Health"
 msgstr "Kesehatan"
 
 msgid "Help"
-msgstr ""
+msgstr "Bantuan"
 
 msgid "High Price"
 msgstr "Harga Tinggi"
@@ -1956,28 +1991,28 @@ msgid "High barrier offset"
 msgstr "Batas offset tinggi"
 
 msgid "High returns"
-msgstr ""
+msgstr "Laba tinggi"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "High-Wave Candle (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr "Higher"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "Higher/Lower"
 
 msgid "Higher/Lower trades"
-msgstr ""
+msgstr "Kontrak Higher/Lower"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
-msgstr ""
+msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
 msgid "Home Address"
 msgstr "Alamat Rumah"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
+msgstr "Homing Pigeon (CDLHOMINGPIGEON)"
 
 msgid "Horizontal Line"
 msgstr "Garis Horisontal"
@@ -1992,28 +2027,28 @@ msgid "Hours"
 msgstr "Jam"
 
 msgid "How do I fund my account?"
-msgstr ""
+msgstr "Bagaimana cara mendanai akun saya?"
 
 msgid "How does Binary.com make money?"
-msgstr ""
+msgstr "Bagaimana Binary.com menghasilkan uang?"
 
 msgid "How safe is my money with Binary.com?"
-msgstr ""
+msgstr "Berapa amankah dana saya di Binary.com?"
 
 msgid "How soon can I start trading?"
-msgstr ""
+msgstr "Seberapa cepat saya bisa memulai trading?"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "Bagaimana cara bertrading binary?"
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "Hull Moving Average (HMA)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "Saya telah membaca dan menyetujui Binary.com"
 
 msgid "I'm new to binaries, where do I start?"
-msgstr ""
+msgstr "Saya baru di binary, di mana saya mulai?"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "SANGGAHAN PENTING"
@@ -2035,10 +2070,10 @@ msgstr ""
 "bertransaksi dengan mereka"
 
 msgid "Ideal for both pros and novices"
-msgstr ""
+msgstr "Ideal untuk pro dan pemula"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
+msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
 
 msgid "If the issue keeps happening, please contact"
 msgstr "Jika masalah terus berlanjut, silahkan hubungi"
@@ -2061,7 +2096,7 @@ msgstr ""
 "keyakinan. Dan jika Anda memiliki pertanyaan, silahkan hubungi"
 
 msgid "In April"
-msgstr ""
+msgstr "Pada bulan April"
 
 msgid ""
 "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or "
@@ -2089,6 +2124,9 @@ msgid ""
 "from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund "
 "management company"
 msgstr ""
+"Pada bulan Oktober 1999, Regent Markets menerima $ 2 juta AS dana investasi "
+"dari Jim Mellon melalui Regent Pacific Group, sebuah perusahaan pengelola "
+"dana yang berbasis di Hong Kong"
 
 msgid ""
 "In a downtrend, one small short body candlestick has a long lower shadow at "
@@ -2119,6 +2157,14 @@ msgid ""
 "and to offer ordinary investors the chance to make small bets. Until his "
 "innovation, binary options are normally only traded in large quantities"
 msgstr ""
+"Dengan gaya klasik Silicon Valley, seorang manager pengelola dana berjiwa "
+"pengusaha bernama Jean-Yves Sireau memulai Regent Markets dari kamar "
+"tidurnya di Hong Kong. Beliau membangun sistem, metode dan algoritma untuk "
+"mengimplementasikannya pada sistem trading financial fixed-odds. Visi Jean-"
+"Yves adalah untuk menciptakan pasar pada kontrak derivatif sederhana - "
+"trading fixed-odds - dan menawarkan kesempatan bagi investor umum untuk "
+"membeli kontrak berukuran kecil. Hingga inovasi beliau, opsi binary biasanya "
+"hanya ditradingkan dalam jumlah besar"
 
 msgid ""
 "In foreign exchange markets, traders can enter contracts based on the change "
@@ -2126,6 +2172,11 @@ msgid ""
 "trader selects Rise in the EUR/USD market, they are predicting that the "
 "value of the Euro will rise in relation to the value of the US dollar"
 msgstr ""
+"Pada pasar valuta asing, para trader dapat membeli kontrak berdasarkan "
+"pertukaran harga dari satu mata uang ke mata uang lainnya. Sebagai contoh "
+"jika trader memilih kontrak Naik pada market EUR/USD, hal ini berarti mereka "
+"menganalisa nilai mata uang Euro akan lebih tinggi dari harga mata uang "
+"dolar AS"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -2156,15 +2207,20 @@ msgid ""
 "trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In "
 "the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr ""
+"Di Inggris dan Isle of Man, klien kami bertrading melalui Binary (IOM) Ltd. "
+"Di Jepang, mereka bertrading melalui Binary KK. Di Uni Eropa (kecuali "
+"Inggris), mereka bertrading melalui Binary (Europe) Ltd dan Binary "
+"Investments (Europe) Ltd. Sisa bagian dunia lainnya, mereka bertrading "
+"melalui Binary (C.R.) S.A"
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "In-Neck Pattern (CDLINNECK)"
 
 msgid "In/Out"
 msgstr "In/Out"
 
 msgid "In/Out trades"
-msgstr ""
+msgstr "Kontrak In/Out"
 
 msgid "Income Source"
 msgstr "Sumber Pendapatan"
@@ -2176,7 +2232,7 @@ msgid "Indicators"
 msgstr "Indikator"
 
 msgid "Indices"
-msgstr ""
+msgstr "Indeks"
 
 msgid "Indices trading experience"
 msgstr "Pengalaman trading indeks"
@@ -2185,16 +2241,16 @@ msgid "Indices trading frequency"
 msgstr "Frekuensi trading indeks"
 
 msgid "Individual Traders"
-msgstr ""
+msgstr "Trader Perorangan"
 
 msgid "Industry of Employment"
 msgstr "Industri Tenaga Kerja"
 
 msgid "Instant access"
-msgstr ""
+msgstr "Akses cepat"
 
 msgid "Instant funding"
-msgstr ""
+msgstr "Pendanaan instan"
 
 msgid "Instrument"
 msgstr "Instrumen"
@@ -2203,7 +2259,7 @@ msgid "Instruments"
 msgstr "Instrumen"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
-msgstr ""
+msgstr "Inverted Hammer (CDLINVERTEDHAMMER)"
 
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
@@ -2211,6 +2267,8 @@ msgstr "Instrumen & Dividen"
 msgid ""
 "Is it possible to deposit the same funds through different payment methods?"
 msgstr ""
+"Apakah mungkin untuk mendeposit dana yang sama menggunakan metode pembayaran "
+"lain?"
 
 msgid ""
 "It has a long white candle, followed by another that opens above the first "
@@ -2255,13 +2313,13 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Cukup klik tombol  Hibah  pada halaman dan Anda akan dibawa ke"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "Kaufman's Adaptive Moving Average (KAMA)"
 
 msgid "Key facts"
-msgstr ""
+msgstr "Fakta kunci"
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Kicking (CDLKICKING)"
 
 msgid ""
 "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
