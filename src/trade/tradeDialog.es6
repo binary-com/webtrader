@@ -56,16 +56,18 @@ function apply_fixes(available){
     /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
 
     _(available).filter({
-      'contract_category_display': 'Up/Down',
+      'contract_category_display': 'Up/Down'.i18n(),
       'barrier_category' : 'euro_atm',
-      'contract_display' : 'higher'
-    }).each(replacer('contract_display', 'rise'));
+      'barriers': 0,
+      'sentiment': 'up'
+    }).each(replacer('contract_display', 'Rise'.i18n()));
 
     _(available).filter({
-      'contract_category_display':'Up/Down',
+      'contract_category_display':'Up/Down'.i18n(),
       'barrier_category': 'euro_atm',
-      'contract_display': 'lower',
-    }).each(replacer('contract_display','fall'));
+      'barriers': 0,
+      'sentiment': 'down'
+    }).each(replacer('contract_display','Fall'.i18n()));
     /* fix for server side api, returning two different contract_category_displays for In/Out */
     _(available).filter(['contract_category_display', 'Stays In/Goes Out'])
                 .each(replacer('contract_category_display', 'In/Out'));
@@ -84,7 +86,13 @@ function apply_fixes(available){
 
     /* sort the items in the array according to the way we want to show them */
     available = _.sortBy(available,function(row){
-      var rank = { 'Up/Down': 1, 'Touch/No Touch':2, 'In/Out': 3, 'Digits': 4, 'Asians': 5, 'Spreads': 6 }[row.contract_category_display];
+      var rank = _.find({ 'Up/Down': 1, 'Touch/No Touch':2, 'In/Out': 3, 'Digits': 4, 'Asians': 5, 'Spreads': 6 },
+        (val, key) => {
+          if(key.i18n() == row.contract_category_display || key == row.contract_category_display){
+            return val;
+          }
+        }
+      );
       if(rank === 4) { /* Digits */
         rank = {'odd': 4, 'even' : 4.5}[row.contract_display] || 3.5;
       }
@@ -149,7 +157,7 @@ function set_current_template(state, tpl) {
   state.template.name = tpl.name;
   var warn = function(msg) { $.growl.warning({ message: msg || 'Template applied partially.'.i18n() }); }
   if(!_.includes(state.categories.array, tpl.categories_value)) {
-    $.growl.error({ message: msg || 'Template is not applicable.'.i18n() });
+    $.growl.error({ message: 'Template is not applicable.'.i18n() });
     return;
   }
   state.categories.value = tpl.categories_value;
