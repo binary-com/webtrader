@@ -295,7 +295,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         });
 
         /*Trigger T&C check, self-exclusion, reality check, chrome extension check, csr_tax_information check*/
-        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'realitycheck/realitycheck', 'accountstatus/accountstatus']);
+        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'accountstatus/accountstatus', 'realitycheck/realitycheck']);
     }
 
 
