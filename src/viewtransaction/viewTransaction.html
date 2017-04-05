@@ -85,13 +85,6 @@
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-if="table.sell_price | not-eq undefined"> <p>Price</p>
-          <span rv-text="table.sell_price | format-price table.currency | or '-'"></span>
-          <br />
-          <span rv-text="table.sell_price | percent-of table.buy_price"
-                rv-data-balloon='table.sell_time | moment | or "return"'
-                class="dotted-underline smaller"></span>
-      </div>
       <div rv-class-center="table.user_sold | or table.barrier_count | eq 2"> <p>Final Price</p>
           <span rv-text="table.final_price | format-price table.currency | or '-'"></span>
           <br/>
