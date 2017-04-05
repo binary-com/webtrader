@@ -10,11 +10,11 @@ import "../common/util";
 class AccountStatus {
 
   constructor() {
-    const _this = this;
+    const _this = this,
+      $ele = $("#msg-notification");
     // Initiating account check on login.
     liveapi.events.on("login", async (response) => {
       if (+response.authorize.is_virtual === 1) {
-        const $ele = $("#msg-notification");
         if ($ele.is(":visible"))
           $ele.slideUp(500);
         return;
@@ -40,6 +40,9 @@ class AccountStatus {
 
       _this.checkStatus(response.authorize, account_status.get_account_status.status);
     });
+
+    // Hide msg bar on logout.
+    liveapi.events.on('logout', _ => $ele.is(":visible") && $ele.slideUp(500));
   }
 
   getStatus() {
