@@ -36,8 +36,6 @@ class AccountStatus {
         _this.financial_assessment_submitted = false;
       }
 
-      console.log(account_status);
-
       _this.checkStatus(response.authorize, account_status.get_account_status.status);
     });
 
@@ -109,7 +107,6 @@ class AccountStatus {
       $ele.find("a").on("click", invalid_obj.callback);
 
       if ($ele.is(":hidden")) {
-        console.log(invalid_obj, _this.tc_accepted);
         $ele.slideDown(500);
       }
     }
