@@ -93,3 +93,23 @@
 }
 
 .indicator-dialog .add-indicators span { display: inline-block; }
+
+.categories:not(:nth-last-child(-n+2)) div:nth-of-type(3n) [data-balloon]:nth-child(2n):before,
+.favorite div:nth-of-type(3n) [data-balloon]:nth-child(2n):before {
+  -webkit-transform: translate(-90%,0);
+  -ms-transform: translate(-90%,0);
+  transform: translate(-90%,0);
+}
+
+.categories:nth-last-child(1) [data-balloon]:nth-child(2n):after,
+.categories:nth-last-child(2) [data-balloon]:nth-child(2n):after {
+  display: none;
+}
+.categories:nth-last-child(1) div:nth-of-type(3n) [data-balloon]:nth-child(2n):before,
+.categories:nth-last-child(2) div:nth-of-type(3n) [data-balloon]:nth-child(2n):before {
+  transform: translate(-90%,-115%);
+}
+.categories:nth-last-child(1) [data-balloon]:nth-child(2n):before,
+.categories:nth-last-child(2) [data-balloon]:nth-child(2n):before {
+  transform: translate(-50%,-114%);
+}
