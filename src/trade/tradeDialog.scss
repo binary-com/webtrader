@@ -197,6 +197,16 @@
         }
     }
   }
+
+  /* data-balloon styling */ 
+  .barriers-high-barrier-row, .barriers-low-barrier-row, .barriers-barrier-row{
+    li:first-of-type span:before {
+      transform: translate(-20%,0);
+    }
+    li:last-of-type span:before {
+      transform: translate(-90%,0);
+    }
+  }
 }
 
 /* style elments in the drop down*/

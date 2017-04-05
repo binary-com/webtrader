@@ -107,8 +107,9 @@
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 1">
         <li> <span class="dotted-underline align-text text-vertical-align"
-                   rv-tooltip="'Enter the barrier in terms of the difference from the spot price.  If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot.  The entry spot will be the next tick after your order has been received'"
-                   rv-tooltip-position="tooltips.barrier_p"
+                   rv-data-balloon="'Enter the barrier in terms of the difference from the spot price.  If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot.  The entry spot will be the next tick after your order has been received'"
+                   data-balloon-length='large'
+                   data-balloon-pos="down"
                    rv-scale-font-size="130"
                    rv-show="barriers.was_perv_barrier_daily | eq false">Barrier offset</span>
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_barrier_daily">Barrier</span>
@@ -120,8 +121,9 @@
         <li>
             <span class="dotted-underline align-text text-vertical-align"
                   rv-text="barriers.barrier_live < barrier root.tick.quote | to-fixed 3 | or '-'"
-                  rv-tooltip='"This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."'
-                  rv-tooltip-position='tooltips.barrier'
+                  rv-data-balloon='"This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."'
+                  data-balloon-pos="down"
+                  data-balloon-length='large'
                   rv-show="barriers.was_perv_barrier_daily | eq false"
                   />
              <span rv-show="barriers.was_perv_barrier_daily"></span>
@@ -131,8 +133,9 @@
     <ul class="barriers-high-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <span class="dotted-underline align-text text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
-                rv-tooltip-position="tooltips.barrier_p"
+        <li> <span class="dotted-underline align-text text-vertical-align" rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+                data-balloon-pos="down"
+                data-balloon-length='large'
                 rv-scale-font-size="130"
                 rv-show="barriers.was_perv_high_barrier_daily | eq false">High barrier offset</span>
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
@@ -144,8 +147,9 @@
         <li>
             <span class="dotted-underline align-text"
                   rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3 | or '-'"
-                  rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
-                  rv-tooltip-position='tooltips.barrier'
+                  rv-data-balloon="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
+                  data-balloon-pos="down"
+                  data-balloon-length='large'
                   rv-show="barriers.was_perv_high_barrier_daily | eq false"
                   />
             <span rv-show="barriers.was_perv_high_barrier_daily"></span>
@@ -155,8 +159,10 @@
     <ul class="barriers-low-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <span class="dotted-underline align-text text-vertical-align" rv-tooltip="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
-                rv-tooltip-position="tooltips.barrier_p"
+        <li> <span class="dotted-underline align-text text-vertical-align" 
+                rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+                data-balloon-length='large'
+                data-balloon-pos="down"
                 rv-scale-font-size="130"
                 rv-show="barriers.was_perv_low_barrier_daily | eq false">Low barrier offset</span>
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_low_barrier_daily">Low barrier</span>
@@ -168,8 +174,9 @@
         <li>
             <span class="dotted-underline align-text"
                   rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 3 | or '-'"
-                  rv-tooltip="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
-                  rv-tooltip-position='tooltips.barrier'
+                  rv-data-balloon="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
+                  data-balloon-pos="down"
+                  data-balloon-length='large'
                   rv-show="barriers.was_perv_low_barrier_daily | eq false"
                   />
             <span rv-show="barriers.was_perv_low_barrier_daily"></span>

@@ -75,6 +75,8 @@ const tileDialogs = () => {
 
       const max_x = $(window).width();
       let y = 110; // position of the next window from top
+      if($("#msg-notification").is(":visible"))
+            y = 150;
 
       for (var inx = 0; inx < dialogs.length;) {
          var inx_start = inx;

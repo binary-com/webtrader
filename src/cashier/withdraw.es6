@@ -10,7 +10,6 @@ import currencyDialog from 'cashier/currency';
 import { debounce } from 'lodash'
 import moment from 'moment';
 import tncApprovalWin from 'cashier/uk_funds_protection';
-import checkAccountStatus from 'shownotice/shownotice';
 import html from 'text!cashier/withdraw.html';
 
 require(['text!cashier/withdraw.html']);
@@ -27,8 +26,8 @@ class Withdraw {
     init = li => {
         li.click(() => {
             if (!win) {
-                Promise.all([liveapi.cached.authorize(), checkAccountStatus.init("withdrawal")]).then(data => {
-                    if (!data[0].authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
+                liveapi.cached.authorize().then(data => {
+                    if (!data.authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
                         return currencyDialog.check_currency();
                     return true; // OK
                 }).then(() => {

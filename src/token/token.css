@@ -121,3 +121,6 @@
   margin-left: 115px;
   width: 275px;
 }
+[data-balloon] {
+  border-bottom: 3px solid #F2F2F2;
+}
