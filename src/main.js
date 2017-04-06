@@ -76,6 +76,9 @@ requirejs.config({
         },
         "highcharts-more": {
             deps: ["highstock"]
+        },
+        "color-picker": {
+            deps: ["jquery"] //This should fix the widget not found error
         }
     }
 });
