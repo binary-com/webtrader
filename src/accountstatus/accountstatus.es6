@@ -84,9 +84,9 @@ class AccountStatus {
       authenticate: {
         message: "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available.".i18n()
           .replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
-        is_valid: _ => (/authenticated/.test(status) && (/age_verification/.test(status) || _this.is_cr)
+        is_valid: _ => (/authenticated/.test(status) && (/age_verification/.test(status) || _this.is_cr))
           //For cr accounts show authentication msg if the user balance is more than 200 or has mt5 account
-          || !(_this.is_cr && (+authorize.balance > 200 || _this.has_mt5_account))),
+          || (!/authenticated/.test(status) && _this.is_cr && (+authorize.balance < 200 || !_this.has_mt5_account)),
         callback: notice.init
       },
       unwelcome: {
@@ -113,8 +113,8 @@ class AccountStatus {
         $ele.slideDown(500);
       }
     } else
-        $ele.is(":visible") && $ele.slideUp(500);
-      
+      $ele.is(":visible") && $ele.slideUp(500);
+
   }
 }
 
