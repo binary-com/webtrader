@@ -50,6 +50,7 @@ let timeoutIsSet = false;
 const onclose = () => {
    require(['windows/tracker'], (tracker) => {
       const trade_dialogs = tracker.get_trade_dialogs();
+      const unique_dialogs = tracker.get_unique_dialogs();
       is_authenitcated_session = false;
       fire_event('logout');
       /**
@@ -63,7 +64,10 @@ const onclose = () => {
             socket = connect();
             if(local_storage.get('oauth')) {
               api.cached.authorize().then(
-                 () => tracker.reopen_trade_dialogs(trade_dialogs)
+                 () => {
+                       tracker.reopen_trade_dialogs(trade_dialogs);
+                       setTimeout( _ => tracker.reopen_unique_dialogs(unique_dialogs), 0);
+                 }
               );
             }
             require(['charts/chartingRequestMap'], (chartingRequestMap) => {
