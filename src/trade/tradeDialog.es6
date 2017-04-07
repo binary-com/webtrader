@@ -60,21 +60,21 @@ function apply_fixes(available){
       'barrier_category' : 'euro_atm',
       'barriers': 0,
       'sentiment': 'up'
-    }).each(replacer('contract_display', 'Rise'.i18n()));
+    }).each(replacer('contract_display', 'rise'));
 
     _(available).filter({
       'contract_category_display':'Up/Down'.i18n(),
       'barrier_category': 'euro_atm',
       'barriers': 0,
       'sentiment': 'down'
-    }).each(replacer('contract_display','Fall'.i18n()));
+    }).each(replacer('contract_display','fall'));
     /* fix for server side api, returning two different contract_category_displays for In/Out */
-    _(available).filter(['contract_category_display', 'Stays In/Goes Out'])
-                .each(replacer('contract_category_display', 'In/Out'));
-    _(available).filter(['contract_category_display', 'Ends In/Out'])
-                .each(replacer('contract_category_display', 'In/Out'));
+    _(available).filter(['contract_category_display', 'Stays In/Goes Out'.i18n()])
+                .each(replacer('contract_category_display', 'In/Out'.i18n()));
+    _(available).filter(['contract_category_display', 'Ends In/Out'.i18n()])
+                .each(replacer('contract_category_display', 'In/Out'.i18n()));
     /* fix for websocket having a useless barrier value for digits */
-    _(available).filter(['contract_category_display', 'Digits'])
+    _(available).filter(['contract_category_display', 'Digits'.i18n()])
                 .each(replacer('barriers', 0));
     /* fix for contract_display text in In/Out menue */
     _(available).filter(['contract_display', 'ends outside']).each(replacer('contract_display', 'ends out'));
@@ -624,21 +624,22 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.digits.update = function() {
-      var subcat = state.category_displays.selected;
-      if(state.categories.value !== 'Digits' || subcat === 'odd' || subcat === 'even') {
+      var subcat = _.find(available, ['contract_display',state.category_displays.selected]).sentiment;
+      console.log(subcat);
+      if(state.categories.value !== 'Digits'.i18n() || subcat === 'odd' || subcat === 'even') {
         state.digits.visible = false;
         return;
       }
 
       var array = {
-        matches: ['0', '1','2','3','4','5','6','7','8', '9'],
-        differs: ['0', '1','2','3','4','5','6','7','8', '9'],
+        match: ['0', '1','2','3','4','5','6','7','8', '9'],
+        differ: ['0', '1','2','3','4','5','6','7','8', '9'],
         under: ['1','2','3','4','5','6','7','8', '9'],
         over: ['0','1','2','3','4','5','6','7','8'],
       }[subcat];
       var text = {
-        matches: 'Last Digit Prediction'.i18n(),
-        differs: 'Last Digit Prediction'.i18n(),
+        match: 'Last Digit Prediction'.i18n(),
+        differ: 'Last Digit Prediction'.i18n(),
         under: 'Last Digit is Under'.i18n(),
         over: 'Last Digit is Over'.i18n()
       }[subcat];
@@ -849,6 +850,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         duration_unit: state.duration_unit.value,
         pip: symbol.pip,
     };
+    const category_en = [{locale: "Up/Down".i18n(), value: "Up/Down"},
+      {locale:"Asians".i18n(),value:"Asians"},{locale:"Digits".i18n(),value:"Digits"}];
+    const category_to_en = _.find(category_en,{locale:extra.category});
+    extra.category = category_to_en ? category_to_en.value : extra.category;
     /* pass data which is needed to show live tick purchase results */
     extra.show_tick_chart = false;
     if(_(['Digits','Up/Down','Asians']).includes(extra.category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
