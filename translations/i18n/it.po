@@ -54,7 +54,8 @@ msgstr ""
 "Premio \"Best Fixed-Odds Financial Trading Provider\" di Shares Magazine UK"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
-msgstr "Premio \"Best Fixed-Odds Firm 2012\" di Global Banking e Finance Review"
+msgstr ""
+"Premio \"Best Fixed-Odds Firm 2012\" di Global Banking e Finance Review"
 
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
@@ -891,7 +892,8 @@ msgid "BetOnMarkets.com is successfully rebranded Binary.com"
 msgstr "BetOnMarkets.com è rinominato con successo Binary.com"
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
-msgstr "BetOnMarkets.com raggiunge 1 milardo di dollari dal suo inizio nel 1999"
+msgstr ""
+"BetOnMarkets.com raggiunge 1 milardo di dollari dal suo inizio nel 1999"
 
 msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
@@ -1418,9 +1420,6 @@ msgstr "Verde scuro"
 
 msgid "Dark Unica"
 msgstr "Dark Unica"
-
-msgid "Dash style"
-msgstr "Stile trattino"
 
 msgid "Date"
 msgstr "Data"
@@ -2219,9 +2218,6 @@ msgstr "Meno di"
 msgid "Let's do it"
 msgstr "Facciamolo"
 
-msgid "Level"
-msgstr "Livello"
-
 msgid "Level of Education"
 msgstr "Livello d'istruzione"
 
@@ -2906,9 +2902,6 @@ msgid "Press Create token button on the right to create your first token"
 msgstr ""
 "Premi il pulsante Crea token sulla destra per creare il tuo primo token"
 
-msgid "Price"
-msgstr "Prezzo"
-
 msgid "Price Transformation"
 msgstr ""
 
@@ -3345,12 +3338,6 @@ msgstr "Stop profit"
 
 msgid "Stop-type"
 msgstr "Tipologia di stop"
-
-msgid "Stroke"
-msgstr "Stroke"
-
-msgid "Stroke width"
-msgstr "Ampiezza dello stroke"
 
 msgid "Submit"
 msgstr "Invia"
@@ -4786,8 +4773,8 @@ msgstr "sì"
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
-msgid "| Return"
-msgstr "| Investimento"
+msgid "| Payout"
+msgstr ""
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
@@ -4795,6 +4782,24 @@ msgid ""
 msgstr ""
 "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e "
 "vendere prodotti di Binary.com"
+
+#~ msgid "Dash style"
+#~ msgstr "Stile trattino"
+
+#~ msgid "Level"
+#~ msgstr "Livello"
+
+#~ msgid "Price"
+#~ msgstr "Prezzo"
+
+#~ msgid "Stroke"
+#~ msgstr "Stroke"
+
+#~ msgid "Stroke width"
+#~ msgstr "Ampiezza dello stroke"
+
+#~ msgid "| Return"
+#~ msgstr "| Investimento"
 
 #~ msgid "404"
 #~ msgstr "404"

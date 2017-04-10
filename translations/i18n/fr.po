@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-25 01:48+0200\n"
 "PO-Revision-Date: 2017-02-21 13:25+0000\n"
 "Last-Translator: Chloe Chevreton <chloe-che@hotmail.fr>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1362,9 +1362,6 @@ msgstr "Vert foncé"
 msgid "Dark Unica"
 msgstr "Dark Unica"
 
-msgid "Dash style"
-msgstr "Ligne discontinue"
-
 msgid "Date"
 msgstr "Date"
 
@@ -2169,9 +2166,6 @@ msgstr "Moins de"
 msgid "Let's do it"
 msgstr "C'est parti"
 
-msgid "Level"
-msgstr "Niveau"
-
 msgid "Level of Education"
 msgstr "Niveau de qualification"
 
@@ -2862,9 +2856,6 @@ msgstr ""
 "Cliquez sur le bouton « Créer un jeton » sur la droite pour créer votre "
 "premier jeton"
 
-msgid "Price"
-msgstr "Prix"
-
 msgid "Price Transformation"
 msgstr ""
 
@@ -3301,12 +3292,6 @@ msgstr "Stop-profit"
 
 msgid "Stop-type"
 msgstr "Type d'ordre stop"
-
-msgid "Stroke"
-msgstr "Tracé"
-
-msgid "Stroke width"
-msgstr "Largeur du tracé"
 
 msgid "Submit"
 msgstr "Envoyer"
@@ -4723,13 +4708,31 @@ msgstr "oui"
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
-msgid "| Return"
-msgstr "| Retours"
+msgid "| Payout"
+msgstr ""
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "Dash style"
+#~ msgstr "Ligne discontinue"
+
+#~ msgid "Level"
+#~ msgstr "Niveau"
+
+#~ msgid "Price"
+#~ msgstr "Prix"
+
+#~ msgid "Stroke"
+#~ msgstr "Tracé"
+
+#~ msgid "Stroke width"
+#~ msgstr "Largeur du tracé"
+
+#~ msgid "| Return"
+#~ msgstr "| Retours"
 
 #~ msgid "404"
 #~ msgstr "404"

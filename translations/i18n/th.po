@@ -1325,9 +1325,6 @@ msgstr ""
 msgid "Dark Unica"
 msgstr ""
 
-msgid "Dash style"
-msgstr ""
-
 msgid "Date"
 msgstr ""
 
@@ -2108,9 +2105,6 @@ msgstr ""
 msgid "Let's do it"
 msgstr ""
 
-msgid "Level"
-msgstr ""
-
 msgid "Level of Education"
 msgstr ""
 
@@ -2779,9 +2773,6 @@ msgstr ""
 msgid "Press Create token button on the right to create your first token"
 msgstr ""
 
-msgid "Price"
-msgstr ""
-
 msgid "Price Transformation"
 msgstr ""
 
@@ -3217,12 +3208,6 @@ msgid "Stop-profit"
 msgstr ""
 
 msgid "Stop-type"
-msgstr ""
-
-msgid "Stroke"
-msgstr ""
-
-msgid "Stroke width"
 msgstr ""
 
 msgid "Submit"
@@ -4590,7 +4575,7 @@ msgstr ""
 msgid "{agent.commission}%"
 msgstr ""
 
-msgid "| Return"
+msgid "| Payout"
 msgstr ""
 
 msgid ""

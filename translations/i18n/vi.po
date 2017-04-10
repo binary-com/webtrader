@@ -211,7 +211,8 @@ msgid "- customize your trades to meet your needs"
 msgstr "- tùy biến các giao dịch của bạn để đáp ứng nhu cầu của bạn"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
-msgstr "- nhúng một ngón chân vào nước với 2 đô hoặc đẩy tất cả ra cho 50000 đô"
+msgstr ""
+"- nhúng một ngón chân vào nước với 2 đô hoặc đẩy tất cả ra cho 50000 đô"
 
 msgid "- from $1 to $50,000"
 msgstr "- từ 1 đô đến 50000 đô"
@@ -1575,9 +1576,6 @@ msgstr "Xanh lá cây đậm"
 msgid "Dark Unica"
 msgstr "Unica đậm"
 
-msgid "Dash style"
-msgstr "Kiểu đoạn gạch"
-
 msgid "Date"
 msgstr "Ngày"
 
@@ -2374,9 +2372,6 @@ msgstr "Ít hơn"
 msgid "Let's do it"
 msgstr "Chúng ta hãy làm điều đó"
 
-msgid "Level"
-msgstr "Cấp độ"
-
 msgid "Level of Education"
 msgstr "Cấp độ giáo dục"
 
@@ -3060,9 +3055,6 @@ msgstr "Khoảng kiểm tra thực tế ưu tiên"
 msgid "Press Create token button on the right to create your first token"
 msgstr "Bấm nút Tạo Token tở phía bên phải để tạo token đầu tiên của bạn"
 
-msgid "Price"
-msgstr "Giá"
-
 msgid "Price Transformation"
 msgstr ""
 
@@ -3499,12 +3491,6 @@ msgstr "Dừng lợi nhuận"
 
 msgid "Stop-type"
 msgstr "Kiểu ngưng"
-
-msgid "Stroke"
-msgstr "Nét"
-
-msgid "Stroke width"
-msgstr "Độ rộng nét"
 
 msgid "Submit"
 msgstr "Gửi"
@@ -4912,13 +4898,31 @@ msgstr "Có"
 msgid "{agent.commission}%"
 msgstr "{hoa hồng cho đại lý}%"
 
-msgid "| Return"
-msgstr "| Quay trở lại"
+msgid "| Payout"
+msgstr ""
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "Dash style"
+#~ msgstr "Kiểu đoạn gạch"
+
+#~ msgid "Level"
+#~ msgstr "Cấp độ"
+
+#~ msgid "Price"
+#~ msgstr "Giá"
+
+#~ msgid "Stroke"
+#~ msgstr "Nét"
+
+#~ msgid "Stroke width"
+#~ msgstr "Độ rộng nét"
+
+#~ msgid "| Return"
+#~ msgstr "| Quay trở lại"
 
 #~ msgid "404"
 #~ msgstr "404"

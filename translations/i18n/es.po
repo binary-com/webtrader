@@ -1354,9 +1354,6 @@ msgstr "Verde Oscuro"
 msgid "Dark Unica"
 msgstr "Oscuro Única"
 
-msgid "Dash style"
-msgstr "Estilo Dash"
-
 msgid "Date"
 msgstr "Fecha"
 
@@ -2158,9 +2155,6 @@ msgstr "Menos de"
 msgid "Let's do it"
 msgstr "Hagámoslo"
 
-msgid "Level"
-msgstr "Nivel"
-
 msgid "Level of Education"
 msgstr "Nivel de Educación"
 
@@ -2845,9 +2839,6 @@ msgstr "Intervalo recomendado de prueba de la realidad"
 msgid "Press Create token button on the right to create your first token"
 msgstr "Pulsar el botón Crear token a la derecha para crear su primer token"
 
-msgid "Price"
-msgstr "Precio"
-
 msgid "Price Transformation"
 msgstr ""
 
@@ -3284,12 +3275,6 @@ msgstr "Stop-ganancia"
 
 msgid "Stop-type"
 msgstr "Tipo de stop"
-
-msgid "Stroke"
-msgstr "Stroke"
-
-msgid "Stroke width"
-msgstr "Anchura del stroke"
 
 msgid "Submit"
 msgstr "Enviar"
@@ -4700,13 +4685,31 @@ msgstr "sí"
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
-msgid "| Return"
-msgstr "| Retorno"
+msgid "| Payout"
+msgstr ""
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+
+#~ msgid "Dash style"
+#~ msgstr "Estilo Dash"
+
+#~ msgid "Level"
+#~ msgstr "Nivel"
+
+#~ msgid "Price"
+#~ msgstr "Precio"
+
+#~ msgid "Stroke"
+#~ msgstr "Stroke"
+
+#~ msgid "Stroke width"
+#~ msgstr "Anchura del stroke"
+
+#~ msgid "| Return"
+#~ msgstr "| Retorno"
 
 #~ msgid "404"
 #~ msgstr "404"
