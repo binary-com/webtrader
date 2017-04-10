@@ -159,9 +159,11 @@ function set_current_template(state, tpl) {
     $.growl.error({ message: 'Template is not applicable.'.i18n() });
     return;
   }
-  state.categories.value = tpl.categories_value;
+  state.categories.selected = tpl.categories_value.contract_category;
   _.defer(function() {
-    if(!_.includes(state.category_displays.array, tpl.categoriy_displays_selected)) {
+    console.log(state.category_displays.array, tpl.categoriy_displays_selected);
+    if(!_.find(state.category_displays.array, 
+      type => type.name===tpl.categoriy_displays_selected.name && type.sentiment===tpl.categoriy_displays_selected.sentiment)) {
       warn();
       return;
     }
@@ -444,6 +446,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   }
 
   state.categories.update = function (msg) {
+    console.log(JSON.stringify(state.categories.value));
     state.categories.value = _.find(state.categories.array,{contract_category: state.categories.selected});
     var category = state.categories.value.contract_category;
     state.category_displays.array = [];
