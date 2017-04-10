@@ -26,10 +26,6 @@ function isHideShare() {
     return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
 }
 
-function isHideFooter(){
-  return getParameterByName('hideFooter') === true || (getParameterByName('hideFooter') + '').toLowerCase() == 'true';
-}
-
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {

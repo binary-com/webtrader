@@ -69,7 +69,7 @@ const init_chart = (root, state, options) => {
    const el = root.find('.transaction-chart')[0];
 
    const chart_options = {
-      credits: { href: 'https://www.binary.com', text: 'Binary.com' },
+      credits: { href: '#', text: '' },
       chart: {
          type: 'line',
          renderTo: el,
@@ -77,12 +77,7 @@ const init_chart = (root, state, options) => {
          width: 0,
          height: 0,
          marginLeft:20,
-         marginRight:20,
-         events: {
-            load: function() {
-               this.credits.element.onclick = () => window.open( 'https://www.binary.com', '_blank' );
-            }
-         }
+         marginRight:20
       },
       title:{
          text: '' // Removing the title because it is redundant.
