@@ -6,7 +6,6 @@
 	 lang - en, de, etc - Any supported lang code
 	 hideOverlay - true/false
 	 hideShare - true/false
-	 hideFooter - true/false
 	 timezone
  	 chartContainerID - chart container ID which will have chart header and highchart chart
  */
@@ -88,7 +87,6 @@ export const init = () => {
                         /* @@url-param
                          * hideOverlay(boolean) - used for hiding comparison in chart options
                          * hideShare(boolean) - used for hidinig share in chart options.
-                         * hideFooter(boolean) - used for hiding link in the footer
                          * timezone(GMT+5.30) - get timezone.
                          */
                         const hideOverlay = isHideOverlay(),

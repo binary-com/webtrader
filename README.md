@@ -93,7 +93,6 @@ Some of these parameters are
     * lang
     * hideOverlay - true/false
     * hideShare - true/false
-    * hideFooter - true/false
     * timezone
 
 ###Contribution
