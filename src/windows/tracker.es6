@@ -275,6 +275,18 @@ export const reopen_trade_dialogs = (trade_dialogs) => {
 
 export const get_trade_dialogs = () => _.cloneDeep(states.tradeDialog || []);
 
+export const get_unique_dialogs = () => _.filter(states, {is_unique: true});
+
+export const reopen_unique_dialogs = (unique_dialogs) => {
+      const copy = {};
+      _.forEach(unique_dialogs, data => {
+            copy[data.module_id] = copy[data.module_id] || [];
+            data.position.mode = 'normal';
+            copy[data.module_id].push(data);
+      });
+      reopen_dialogs(null, copy);
+} 
+
 export const is_empty = () => {
    const ok = _.values(states).filter(
       (s) => (_.isArray(s) || s.position.mode !== 'closed')
@@ -287,5 +299,7 @@ export default {
    reopen,
    reopen_trade_dialogs,
    get_trade_dialogs,
-   is_empty
+   is_empty,
+   get_unique_dialogs,
+   reopen_unique_dialogs
 }
