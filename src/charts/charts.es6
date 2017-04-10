@@ -306,19 +306,8 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                         onload();
                     }
 
-                    if (isAffiliates() && isHideFooter()) {
-                        $(this.credits.element).remove();
-                        this.margin[2] = 5;
-                        this.spacing[2] = 0;
-                    } else {
-                        this.credits.element.onclick = () => {
-                            window.open(
-                                'http://webtrader.binary.com',
-                                '_blank'
-                            );
-                        }
-                    }
-
+                    this.margin[2] = 5;
+                    this.spacing[2] = 0;
                 }
             },
             spacingLeft: 0,
@@ -369,8 +358,8 @@ export const drawChart = (containerIDWithHash, options, onload) => {
         },
 
         credits: {
-            href: 'http://webtrader.binary.com',
-            text: 'Binary.com : Webtrader',
+            href: '#',
+            text: '',
         },
 
         xAxis: {

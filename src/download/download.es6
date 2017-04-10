@@ -73,16 +73,6 @@ import html from 'text!./download.html';
         $downloadChart.highcharts('StockChart', {
 
             chart: {
-                events: {
-                    load: function () {
-                        this.credits.element.onclick = () => {
-                            window.open(
-                                'http://www.binary.com',
-                                '_blank'
-                            );
-                        }
-                    }
-                },
                 spacingLeft: 0,
                 marginLeft: 45
             },
@@ -111,8 +101,8 @@ import html from 'text!./download.html';
             },
 
             credits: {
-                href: 'http://www.binary.com',
-                text: 'Binary.com'
+                href: '#',
+                text: ''
             },
 
             xAxis: {
