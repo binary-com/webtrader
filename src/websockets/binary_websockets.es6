@@ -66,7 +66,7 @@ const onclose = () => {
               api.cached.authorize().then(
                  () => {
                        tracker.reopen_trade_dialogs(trade_dialogs);
-                       setTimeout( _ => tracker.reopen_unique_dialogs(unique_dialogs), 0);
+                       setTimeout( () => tracker.reopen_unique_dialogs(unique_dialogs), 0);
                  }
               );
             }
