@@ -8,17 +8,9 @@
         window['timePeriodChangeListener'] = function(timePeriod) {
             window['timePeriod'] = timePeriod;
         };
-        <!--
-                I have not tested lang change. Change of lang will require refresh of the page because a new WS connection is needed.
-                In webtrader, when lang is changed, we do a full page refresh.
-                I believe binary.com will be refreshed when lang is changed. That means, when the trading page is loaded,
-                it will know what lang the page is currently in and so when initializing webtrader, we could pass that lang in the
-                window['lang'] variable.
-        -->
         window['lang'] = 'en';
         window['hideOverlay'] = false;
         window['hideShare'] = true;
-        window['hideFooter'] = true;
         window['timezone'] = 'GMT+0';
         window['chartContainerID'] = 'webtrader-dialog-' + (++chartCounter);
         function onChangeInstrument(event) {
