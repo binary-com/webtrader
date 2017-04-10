@@ -161,7 +161,7 @@ function set_current_template(state, tpl) {
   }
   state.categories.value = tpl.categories_value;
   _.defer(function() {
-    if(!_.find(state.category_displays.array, tpl.categoriy_displays_selected)) {
+    if(!_.includes(state.category_displays.array, tpl.categoriy_displays_selected)) {
       warn();
       return;
     }
