@@ -161,7 +161,6 @@ function set_current_template(state, tpl) {
   }
   state.categories.selected = tpl.categories_value.contract_category;
   _.defer(function() {
-    console.log(state.category_displays.array, tpl.categoriy_displays_selected);
     if(!_.find(state.category_displays.array, 
       type => type.name===tpl.categoriy_displays_selected.name && type.sentiment===tpl.categoriy_displays_selected.sentiment)) {
       warn();
@@ -873,7 +872,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
             extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
           }
           /* for higher/lower final barrier value is entry_quote + barrrier */
-          if(extra.category.contract_category === 'callput' && _(['higher','lower']).includes(extra.category_display)) {
+          if(extra.category.contract_category === 'callput' && _(['higher','lower']).includes(extra.category_display.name)) {
             extra.barrier = state.barriers.barrier;
           }
           extra.show_tick_chart = true;
