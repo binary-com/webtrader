@@ -1,0 +1,29 @@
+.assessment {
+    fieldset {
+        margin-top: 25px;
+        legend {
+            color: #44484c;
+            padding: 0 0.8em;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            margin-top: 15px;
+            .column-1 {
+                -webkit-flex-basis: 33.33333%;
+                flex-basis: 33.33333%;
+                max-width: 33.33333%;
+            }
+            .column-2 {
+                -webkit-flex-basis: 66.66667%;
+                flex-basis: 66.66667%;
+                max-width: 66.66667%;
+            }
+        }
+    }
+    .center-text {
+        padding: 10px 0 10px 0;
+    }
+}

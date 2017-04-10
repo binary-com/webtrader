@@ -26,10 +26,6 @@ function isHideShare() {
     return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
 }
 
-function isHideFooter(){
-  return getParameterByName('hideFooter') === true || (getParameterByName('hideFooter') + '').toLowerCase() == 'true';
-}
-
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {
@@ -360,7 +356,7 @@ var local_storage = {
 
 function isLangSupported(lang) {
     lang = (lang || '').trim().toLowerCase();
-    return lang === 'ar' || lang === 'de' || lang === 'en' || lang === 'es' || lang === 'fr' || lang === 'id' || lang === 'it'
+    return lang === 'ar' || lang === 'de' || lang === 'en' || lang === 'es' || lang === 'fr' || lang === 'id' || lang === 'it' || lang === 'th'
             || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
 }
 

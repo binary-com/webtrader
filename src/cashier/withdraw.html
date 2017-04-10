@@ -3,7 +3,7 @@
 	<div class='menu' rv-show='route.value | eq "menu"'>
 		<span class='title'>Choose your pereferred withdrawal method:</span>
 		<button rv-on-click='menu.click | bind "standard"'>Standard withdrawal</button>
-		<button rv-if="login_details.is_mf | or login_details.is_mlt" 
+		<button rv-if="transfer.isAvailable" 
 		rv-on-click='menu.click | bind "transfer"'>Transfer to another Binary account</button>
 		<button rv-if='agent.agents | prop "length"' rv-on-click='menu.click | bind "agent"'>Withdrawal via payment agents</button>
 		<span rv-if='agent.agents | prop "length"' class='explanation'>Note: withdrawal via payment agent is available only
@@ -17,7 +17,7 @@
 		<span class='title'>To withdraw funds please enter the special verification token we have just emailed you.</span>
 
 		<span class='input-title'>Verification token</span>
-		<input rv-value='verify.token'></input>
+		<input rv-value='verify.token' type="text" maxlength="8"></input>
 		<div class='errors'>
 			<span class='error' rv-show='verify.token | eq "" | and empty_fields.validate'>This field is required.</span>
 			<span class='error' rv-show='validate.invalid_length'>Please input correct token.</span>
@@ -32,22 +32,22 @@
       <span class='ui-icon ui-icon-triangle-1-w'></span> Back
     </span>
 
-		<div class='title'>Send to account #</div>
-		<span class='explanation'>Ensure you are entering valid inputs else your account will get locked. </span>
-		<input class='account' rv-value='transfer.account' placeholder="E.g. MLT379421" />
-		<span class='error' rv-visible='transfer.account | eq "" | and empty_fields.validate'>This field is required.</span>
-
+		<div class='title'>Transfer</div>
+		<select rv-value="transfer.account">
+			<option rv-each-acc="transfer.value" rv-value="acc.value">{acc.text}</option>
+		</select>
 		<div class='title'>Amount</div>
 		<span>{agent.currency}</span>
-		<input class='amount' rv-value='transfer.amount' />
+		<input class='amount' rv-value='transfer.amount' type="number"/>
 		<span class='error' rv-visible='transfer.amount | eq "" | and empty_fields.validate'>This field is required.</span>
+		<span class='error' rv-visible='transfer.amount | eq "0" | and empty_fields.validate'>Please enter a value greater than 0.</span>
 		<button class='submit' rv-on-click='transfer.submit' rv-css-opacity='transfer.disabled | ternary 0.5 1'>Submit</button>
 	</div>
 
 	<div class='transfer-done' rv-show='route.value | eq "transfer-done"'>
 		<div><strong>Done. The funds are transferred.</strong></div>
 		<div><strong>Sent to account: </strong><span>{transfer.account}</span></div>
-		<div><strong>Amount: </strong><span>{agent.currency}</span> <span>{agent.amount}</span></div>
+		<div><strong>Amount: </strong><span>{agent.currency}</span> <span>{transfer.amount}</span></div>
 	</div>
 
 	<div class='standard' rv-show='route.value | eq "standard"'>

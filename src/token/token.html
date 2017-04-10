@@ -29,10 +29,10 @@
           <td rv-text='token.display_name'></td>
           <td rv-text='token.token'></td>
           <td rv-text='token.permissions'></td>
-          <td rv-text='token.last_used | or -' rv-tooltip='token.last_used_tooltip'></td>
+          <td rv-text='token.last_used | or -' rv-data-balloon='token.last_used_tooltip'></td>
           <td>
-            <span rv-clipboard='token.token' class='ui-icon ui-icon-copy' rv-tooltip='"Copy"'></span>
-            <span rv-on-click='confirm.show' rv-attr-token-id='token.token' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
+            <span rv-clipboard='token.token' class='ui-icon ui-icon-copy'></span>
+            <span rv-on-click='confirm.show' rv-attr-token-id='token.token' class='ui-icon ui-icon-delete'></span>
           </td>
         </tr>
       </tbody>

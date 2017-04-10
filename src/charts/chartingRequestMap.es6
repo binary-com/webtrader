@@ -37,8 +37,8 @@ export const barsLoaded = function(instrumentCdAndTp) {
     const chartIDList = this[key].chartIDs;
     const processOHLC = this.processOHLC;
 
-    chartIDList.forEach((chartID) => {
-
+    for(let i =0;i<chartIDList.length;i++){
+        let chartID = chartIDList[i];
         if (!chartID) return;
         if (!$(chartID.containerIDWithHash).highcharts()) return;
         const series = $(chartID.containerIDWithHash).highcharts().get(key),
@@ -47,7 +47,8 @@ export const barsLoaded = function(instrumentCdAndTp) {
 
         if (series) { //Update mode
 
-            const lastBarOpenTime = series.data[series.data.length - 1].x || series.data[series.data.length - 1].time;
+            const lastBarOpenTime = series.data[series.data.length - 1] && (series.data[series.data.length - 1].x || series.data[series.data.length - 1].time);
+            if(!lastBarOpenTime) return;
             const db_bars = barsTable
                 .chain()
                 .find({ instrumentCdAndTp: key })
@@ -155,7 +156,7 @@ export const barsLoaded = function(instrumentCdAndTp) {
 
         }
 
-    });
+    };
 
 }
 
@@ -283,8 +284,27 @@ export const unregister = function(key, containerIDWithHash) {
         clearInterval(map[key].timerHandler);
         map[key].timerHandler = null;
     }
+    /* Remove the following code if backend fixes this issue: 
+     * https://trello.com/c/1IZRihrH/4662-1-forget-call-for-one-stream-id-affects-all-other-streams-with-the-same-symbol
+     * Also remove instrument from function argument list.
+     */
+    //-----Start-----//
+    const instrument = map[key].symbol;
+    const tickSubscribers = map[map.keyFor(instrument, 0)] && map[map.keyFor(instrument, 0)].subscribers;
+    //-----End-----//
     if (map[key].subscribers === 0 && map[key].id) { /* id is set in stream_handler.js */
         liveapi.send({ forget: map[key].id })
+            // Remove this part as well.
+            .then(()=>{
+                // Resubscribe to tick stream if there are any tickSubscribers.
+                if(tickSubscribers)
+                    map.register({
+                        symbol: instrument,
+                        granularity: 0,
+                        subscribe: 1,
+                        count: 50 // To avoid missing any ticks.
+                    });
+            })
             .catch((err) => { console.error(err); });
     }
     if (map[key].subscribers === 0) {

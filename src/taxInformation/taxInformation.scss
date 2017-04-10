@@ -34,10 +34,20 @@
         width: 500px;
         margin: auto;
         padding: 10px;
+        margin-bottom: 20px;
         text-align: center;
         .field {
             display: inline-block;
             margin-bottom: 10px;
+            clear: both;
+            .left {
+                float: left;
+                width: 50%;
+            }
+            .right {
+                float: right;
+                width: 50%;
+            }
             input {
                 width: 250px;
                 float: right
@@ -46,7 +56,7 @@
                 float: right;
             }
             .title {
-                text-align: initial;
+                text-align: right;
                 width: 200px;
                 display: inline-block;
                 margin-right: 50px;
@@ -61,7 +71,8 @@
             span.validation {
                 font-size: 14px;
                 float: left;
-                text-align: end;
+                text-align: left;
+                width: 100%;
                 margin: 5px 0 0 5px;
             }
         }

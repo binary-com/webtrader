@@ -121,7 +121,7 @@ BBANDS.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
                 name: 'Middle - ' + this.toString(),
                 data: middleData,
                 type: 'line',
-                color: this.options.stroke,
+                color: this.options.mdlBndStroke,
                 lineWidth: this.options.strokeWidth,
                 dashStyle: this.options.dashStyle,
                 onChartIndicator: true
@@ -133,7 +133,7 @@ BBANDS.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
                 name: 'Upper - ' + this.toString(),
                 data: upperData,
                 type: 'line',
-                color: this.options.stroke,
+                color: this.options.uprBndStroke,
                 lineWidth: this.options.strokeWidth,
                 dashStyle: this.options.dashStyle,
                 onChartIndicator: true
@@ -145,7 +145,7 @@ BBANDS.prototype.buildSeriesAndAxisConfFromData = function(indicatorMetadata) {
                 name: 'Lower - ' + this.toString(),
                 data: lowerData,
                 type: 'line',
-                color: this.options.stroke,
+                color: this.options.lwrBndStroke,
                 lineWidth: this.options.strokeWidth,
                 dashStyle: this.options.dashStyle,
                 onChartIndicator: true

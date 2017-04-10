@@ -23,7 +23,7 @@
              rv-value='registration.email'
              rv-input-default-btn="'.oauth-dialog button.register-button'" />
 
-      <div class='validations'>
+      <div class='error-msg'>
         <!-- <span rv-show='registration.email_show_explanation < email validate.value'
               class='explanation'>Enter you email address to get a vierfication code</span> -->
         <span rv-show='registration.email | eq "" | and registration.validate.value'
@@ -51,17 +51,19 @@
     </select>
 
     <span class='title'>Verification token</span>
-    <input rv-value='account.verification' />
-    <div class='validations'>
-      <span rv-show='account.verification | not-eq "" | or-not account.empty_fields.validate'
+    <input rv-value='account.verification' type="text" maxlength="8" />
+    <div class='error-msg'>
+      <span rv-show='account.verification | eq "" | and-not account.empty_fields.validate'
             class='explanation'>Verification code has been sent to your email</span>
       <span rv-show='account.verification | eq "" | and account.empty_fields.validate'
-            class='validation'>* Please enter the verification code sent to your email.</span>
+            class='validation'>This field is required.</span>
+      <span rv-show='account.verification | length | not-eq 8 | and account.verification'
+            class='validation'>Please submit a valid verification token.</span>
     </div>
 
     <span class='title'>Choose password</span>
-    <input type='password' rv-value='account.password' />
-    <div class='validations'>
+    <input type='password' rv-value='account.password' type="text" maxlength="25"/>
+    <div class='error-msg'>
       <span rv-show='account.password_error_message < password empty_fields.validate | eq ""'
             class='explanation'>Minimum 6 characters and must contain at least 1 digit</span>
       <span rv-show='account.password_error_message < password empty_fields.validate'
@@ -70,10 +72,10 @@
     </div>
 
     <span class='title'>Repeat password</span>
-    <input type='password' rv-value='account.repeat_password' />
-    <div class='validations repeat-password-validations'>
+    <input type='password' rv-value='account.repeat_password' type="text" maxlength="25" />
+    <div class='error-msg repeat-password-validations'>
       <span rv-show='account.password | not-eq account.repeat_password | and account.empty_fields.validate'
-            class='validation'>* Passwords didn't match. Please type them again</span>
+            class='validation'>Passwords didn't match. Please type them again</span>
     </div>
 
       <button rv-on-click='account.open' rv-disabled='account.disabled'

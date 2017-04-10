@@ -75,6 +75,8 @@ const tileDialogs = () => {
 
       const max_x = $(window).width();
       let y = 110; // position of the next window from top
+      if($("#msg-notification").is(":visible"))
+            y = 150;
 
       for (var inx = 0; inx < dialogs.length;) {
          var inx_start = inx;
@@ -429,7 +431,7 @@ export const init = function($parentObj) {
    require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], (chartWindowObj,liveapi, menu) => {
       if(!tracker.is_empty()) {
          tracker.reopen();
-         setTimeout(fixFooterPosition, 200);
+         setTimeout(fixFooterPosition, 800);
          return;
       }
       const counts = calculateChartCount();
@@ -645,7 +647,11 @@ export const createBlankWindow = function($html,options) {
       // bring window to top on click
       link.click(blankWindow.moveToTop);
       li = $('<li />').addClass(id + 'LI').html(link);
-      $menuUL.append(li);
+      if($menuUL) {
+         $menuUL.append(li);
+      } else { // try in 10 seconds.
+         setTimeout(() => ($menuUL && $menuUL.append(li)), 10*10000);
+      }
    };
    if(!options.ignoreTileAction) {
       add_to_windows_menu();

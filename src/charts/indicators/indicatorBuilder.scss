@@ -58,23 +58,25 @@
   }
 
   .colorpicker-td {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     position: relative;
-     top: 2px;
+     //display: flex;
+     //flex-direction: row;
+     //justify-content: space-between;
+     //position: relative;
+     //top: 2px;
 
+     line-height: 1px;
      div {
         height: 26px !important;
         position: relative;
-        top: -2px;
-        display: block;
+        top: -1px;
+        padding: 0;
+        border: none;
      }
      input {
-        display: block;
+        height: 1px;
         padding: 0;
-        margin: 0;
         border: none;
+        visibility: hidden;
      }
   }
 
@@ -183,9 +185,27 @@
     top: -32px;
   }
   input {
-     transition: border 0.7s;
+     transition: border 0.7s, background-color 0.7s;
      &.invalid {
         border: 1px solid red;
+        background-color: rgba(255, 0, 0, 0.2);
+     }
+  }
+  [data-balloon] {
+     border-bottom: 0px;
+     cursor: pointer;
+     &:before {
+        padding: 0.5em;
+        font-size: 0.8em;
+        border: none;
+        box-shadow: none;
+        border-radius: 0px;
+        left: -10px;
+        bottom: -4px;
+     }
+     &:after {
+        bottom: 12px;
+        left: -4px;
      }
   }
 }

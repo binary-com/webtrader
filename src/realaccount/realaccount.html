@@ -5,30 +5,38 @@
         </div>
         <div class='row'>
             <span class='title'>Title</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='100' rv-selectmenu="user.salutation" rv-selectrefresh="account.salutation_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='100' rv-selectmenu="user.salutation" rv-selectrefresh="account.salutation_array" rv-selectmenu-disabled="input_disabled">
                 <option rv-each-row="user.salutation_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>
             <span class='title'>First name</span>
-            <input rv-value='user.first_name' />
+            <input rv-value='user.first_name' rv-disabled="input_disabled" type="text" maxlength="30" />
             <div class='validations'>
-                <span rv-show='user.first_name | eq "" | and empty_fields.validate' class='validation'>* Please enter your first name.</span>
+                <span rv-show='user.first_name | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.first_name | length | eq 1 | and empty_fields.validate' class='validation'>Minimum of 2 characters required.</span>
+                <span rv-show="user.first_name | is-valid-regex '[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\&quot;,<>?/\d]' | eq true" class='validation'>
+                Only letters, space, hyphen, period, apostrophe are allowed.
+                </span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Family name</span>
-            <input rv-value='user.last_name' />
+            <input rv-value='user.last_name' rv-disabled="input_disabled" type="text" maxlength="30"/>
             <div class='validations'>
-                <span rv-show='user.last_name | eq "" | and empty_fields.validate' class='validation'>* Please enter your family name.</span>
+                <span rv-show='user.last_name | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.last_name | length | eq 1 | and empty_fields.validate' class='validation'>Minimum of 2 characters required.</span>
+                <span rv-show='user.last_name | is-valid-regex "[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\",<>?/\d]"'  class='validation'>
+                Only letters, space, hyphen, period, apostrophe are allowed.
+                </span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Date of birth</span>
-            <input type="text" rv-datepicker="user.date_of_birth" numberOfMonths="1">
+            <input type="text" rv-datepicker="user.date_of_birth" numberOfMonths="1" rv-disabled="input_disabled">
             <!-- <input rv-value='user.date_of_birth' /> -->
             <div class='validations'>
-                <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false | and empty_fields.validate' class='validation'>* Please enter a valid date in yyyy-mm-dd format.</span>
+                <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false | and empty_fields.validate' class='validation'>Please enter a valid date in yyyy-mm-dd format.</span>
             </div>
         </div>
         <div class='row'>
@@ -45,18 +53,26 @@
             <span class="title-big">Home Address</span>
         </div>
         <div class='row'>
-            <span class='title'>Street address</span>
-            <input rv-value='user.address_line_1' />
-            <input rv-value='user.address_line_2' />
+            <span class='title'>First line of home address</span>
+            <input rv-value='user.address_line_1' type="text" maxlength="70" />
             <div class='validations'>
-                <span rv-show='user.address_line_1 | eq "" | and empty_fields.validate' class='validation'>* Please enter your street address.</span>
+                <span rv-show='user.address_line_1 | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.address_line_1 | is-valid-regex "[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\"<>?]"' class='validation'>Only letters, numbers, space, period, comma, - / @ ' are allowed.</span>
+            </div>
+        </div>
+        <div class='row'>
+            <span class='title'>Second line of home address</span>
+            <input rv-value='user.address_line_2' type="text" maxlength="70" />
+            <div class='validations'>
+                <span rv-show='user.address_line_2 | is-valid-regex "[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\"<>?]"' class='validation'>Only letters, numbers, space, period, comma, - / @ ' are allowed.</span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Town/City</span>
-            <input rv-value='user.city_address' />
+            <input rv-value='user.city_address' type="text" maxlength="35" />
             <div class='validations'>
-                <span rv-show='user.city_address | eq "" | and empty_fields.validate' class='validation'>* Please enter your city address.</span>
+                <span rv-show='user.city_address | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.city_address | is-valid-regex "[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\",<>?/\d]"' class='validation'>Only letters, space, hyphen, period, apostrophe are allowed.</span>
             </div>
         </div>
         <div class='row'>
@@ -67,33 +83,38 @@
         </div>
         <div class='row'>
             <span class='title'>Postal code/ZIP</span>
-            <input rv-value='user.address_postcode' />
+            <input rv-value='user.address_postcode'  type="text" maxlength="20"/>
             <div class='validations'>
-                <span rv-show='user.address_postcode | is-valid-regex "^[^+]{0,20}$" | eq false' class='validation'>* Optional field, within 20 characters and may not contain '+'.</span>
+                <span rv-show="user.address_postcode | is-valid-regex '[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\&quot;,<>?/\s.\']' | eq true" class='validation'>Only letters, numbers, hyphen are allowed.</span>
             </div>
         </div>
         <div class='row'>
             <span class='title'>Phone</span>
-            <input rv-value='user.phone' />
+            <input rv-value='user.phone'  type="text" maxlength="35"/>
             <div class='validations'>
-                <span rv-if='user.phone | not-eq ""' rv-show='user.phone | is-valid-regex "^\+?[0-9\s]{6,35}$" | or-not empty_fields.validate | eq false' class='validation'>* Please enter a vlaid phone number.</span>
-                <span rv-show='user.phone | eq "" | and empty_fields.validate' class='validation'>* Please enter your phone number.</span>
+                <span rv-if='user.phone | not-eq ""' rv-show='user.phone | is-valid-regex "^\+?[0-9\s]{0,35}$" | eq false' class='validation'>Only numbers and space are allowed.</span>
+                <span rv-show='user.phone | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.phone | not-eq "" | and user.phone | length | lt 6 | and empty_fields.validate' class='validation'>Minimum of 6 characters required.</span>
             </div>
         </div>
         <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
             <span class="title-big">Security</span>
         </div>
-        <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
+        <div class='row' rv-show="input_disabled | eq false">
             <span class='title'>Security question</span>
             <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="user.secret_question_inx" rv-selectrefresh="user.secret_question_array">
                 <option rv-each-row="user.secret_question_array" rv-value="index">{row | i18n}</option>
             </select>
         </div>
-        <div class='row' rv-show="what_todo | eq 'upgrade-mlt'">
+        <div class='row' rv-show="input_disabled | eq false">
             <span class='title'>Answer</span>
-            <input rv-value='user.secret_answer' />
+            <input rv-value='user.secret_answer' type="text" maxlength="50" />
             <div class='validations'>
-                <span rv-if="empty_fields.validate" rv-show='user.secret_answer | is-valid-regex ".{4,8}$" | eq false' class='validation'>* Please answer to secret question, within 4-50 characters.</span>
+                <span rv-show='user.secret_answer | eq "" | and empty_fields.validate' class='validation'>This field is required.</span>
+                <span rv-show='user.secret_answer | not-eq "" | and user.secret_answer | length | lt 4 | and empty_fields.validate' class='validation'>Minimum of 4 characters required.</span>
+                <span rv-show='user.secret_answer | is-valid-regex "[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\:;\",<>?/]"'  class='validation'>
+                Only letters, numbers, space, hyphen, period, apostrophe are allowed.
+                </span>
             </div>
         </div>
         <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
@@ -111,14 +132,15 @@
                 <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
             </select>
             <div class='validations'>
-                <span rv-show='user.tax_residence | negate | and empty_fields.validate' class='validation'>* Please select a country</span>
+                <span rv-show='user.tax_residence | negate | and empty_fields.validate' class='validation error-msg'>This field is required.</span>
             </div>
         </div>
         <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
             <span class="title">Tax identification number</span>
             <input type="text" maxlength="20" rv-value="user.tax_identification_number">
             <div class='validations'>
-                <span rv-show='user.tax_identification_number | eq "" | and empty_fields.validate' class='validation'>* Please enter a valid value</span>
+                <span class='validation error-msg ' rv-show='user.tax_identification_number | negate | and empty_fields.validate'> This field is required.</span>
+                <span rv-show='user.tax_identification_number | is-valid-regex "^[\w-]{0,20}$" | eq false' class='validation error-msg '>Only numbers, letters, hyphens are allowed.</span>
             </div>
         </div>
         <div class='row'>

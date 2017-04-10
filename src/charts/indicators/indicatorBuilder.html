@@ -22,14 +22,12 @@
           <td rv-if="row.type | eq 'colorpicker'" class='colorpicker-td'>
             <input
                rv-color-picker="row.value"
-               rv-value="row.value"
-               rv-css-background="row.value" />
+               rv-value="row.value" />
           </td>
           <td rv-if="row.type | eq 'plotcolor'" class='colorpicker-td'>
             <input
                rv-color-picker="row.value"
-               rv-value="row.value"
-               rv-css-background="row.value" />
+               rv-value="row.value" />
           </td>
           <td rv-if="row.type | eq 'dashstyle'">
             <div class="dash-styles">
@@ -67,7 +65,7 @@
             </div>
           </td>
           <td rv-if="row.type | eq 'numeric'">
-             <input rv-value="row.value" type="text" rv-validate="'^(?!0\d)\d*(\.\d{1,4})?$'" />
+             <input rv-value="row.value" type="text" rv-is-valid-number="row.is_valid" rv-class-invalid="row.is_valid | negate"/>
           </td>
         </tr>
 
@@ -94,7 +92,9 @@
                             rv-css-background-image="row.dashStyle | prepend 'url('images/dashstyle/' | append '.svg'"/>
                         </td>
                         <td>
-                          <span rv-on-click='level.remove | bind row' class='ui-icon ui-icon-delete' rv-tooltip='"Remove"'></span>
+                           <span data-balloon="Remove" class="no-underline">
+                             <span rv-on-click='level.remove | bind row' class='ui-icon ui-icon-delete'></span>
+                           </span>
                         </td>
                       </tr>
                     </tbody>

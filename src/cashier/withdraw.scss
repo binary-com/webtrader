@@ -75,6 +75,10 @@ $size_tiny: 12px;
     padding: 10px;
     .title {
       margin: 10px 0 2px 0;
+      &:first-of-type {
+        display: inline-block;
+        margin: 10px 20px 20px 0;
+      }
     }
     input.account {
       width: 200px;
@@ -193,6 +197,7 @@ $size_tiny: 12px;
   }
 
   .back-arrow {
+    display: block;
     color: $gray;
     font-size: $size_tiny;
     cursor: pointer;

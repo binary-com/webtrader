@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-19 00:06+0200\n"
 "PO-Revision-Date: 2017-02-28 17:11+0000\n"
 "Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/pl/>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/binary-webtrader/"
+"translations/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -310,8 +310,8 @@ msgstr "– handluj głównymi towarami, takimi jak złoto czy ropa"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
 msgstr ""
-"– zakłady typu góra/dół, osiągnie/nie osiągnie, pozostanie na danym "
-"poziomie/przekroczy"
+"– zakłady typu góra/dół, osiągnie/nie osiągnie, pozostanie na danym poziomie/"
+"przekroczy"
 
 msgid "- we challenge you to find better returns on any competing website"
 msgstr ""
@@ -475,9 +475,6 @@ msgstr "4 godziny"
 msgid "40 transactions or more in the past 12 months"
 msgstr "Co najmniej 40 transakcji w ciągu ostatnich 12 miesięcy"
 
-msgid "404"
-msgstr "404"
-
 msgid "4h"
 msgstr "4 godz."
 
@@ -559,12 +556,12 @@ msgid ""
 "a large red candle that opens below the middle candle and closes near the "
 "center of the first bar's body"
 msgstr ""
-"Formacja świecowa spadkowa składa się z trzech świec o następujących cechach:"
-" pierwsza z nich jest białą świecą o długim korpusie w trendzie wzrostowym, "
-"środkowa jest świecą o krótkim korpusie (czerwoną lub białą), która zamyka "
-"się powyżej pierwszej, ostatnia świeca jest świecą czerwoną o długim "
-"korpusie, która otwiera się poniżej świecy środkowej i zamyka się blisko "
-"środka korpusu pierwszej świecy"
+"Formacja świecowa spadkowa składa się z trzech świec o następujących "
+"cechach: pierwsza z nich jest białą świecą o długim korpusie w trendzie "
+"wzrostowym, środkowa jest świecą o krótkim korpusie (czerwoną lub białą), "
+"która zamyka się powyżej pierwszej, ostatnia świeca jest świecą czerwoną o "
+"długim korpusie, która otwiera się poniżej świecy środkowej i zamyka się "
+"blisko środka korpusu pierwszej świecy"
 
 msgid ""
 "A bearish candlestick pattern that is used to predict the reversal of the "
@@ -806,9 +803,6 @@ msgstr ""
 "dolnym cieniem powyżej górnego cienia poprzedniej świecy. Trzeci dzień do "
 "świeca czarna z górnym cieniem poniżej dolnego cienia świecy doji"
 
-msgid "AM"
-msgstr "AM"
-
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "Abandoned Baby – porzucone dziecko (CDLABANDONEDBABY)"
 
@@ -820,9 +814,6 @@ msgstr "Akceptuj"
 
 msgid "Account balance"
 msgstr "Saldo konta"
-
-msgid "Account opening"
-msgstr "Otwieranie konta"
 
 msgid "Action"
 msgstr "Czynność"
@@ -839,14 +830,8 @@ msgstr "Dodaj wskaźnik"
 msgid "Add level"
 msgstr "Dodaj poziom"
 
-msgid "Add/remove comparisons"
-msgstr "Dodaj/usuń porównania"
-
 msgid "Add/remove indicators"
 msgstr "Dodaj/usuń wskaźnik"
-
-msgid "Add/remove overlays"
-msgstr "Dodaj/usuń nakładkę"
 
 msgid "Admin"
 msgstr "Admin"
@@ -955,9 +940,6 @@ msgstr "Sierpień"
 
 msgid "August"
 msgstr "Sierpień"
-
-msgid "Average"
-msgstr "Średnia"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Wskaźnik ADX (Average Directional Movement Index)"
@@ -1092,6 +1074,12 @@ msgstr "Opcje binarne"
 msgid "Binary options or other financial derivatives"
 msgstr "Opcje binarne lub inne instrumenty pochodne"
 
+msgid "Binary options or other financial derivatives trading experience"
+msgstr ""
+
+msgid "Binary options or other financial derivatives trading frequency"
+msgstr ""
+
 msgid "Binary trading is flexible"
 msgstr "Opcje binarne są elastyczne"
 
@@ -1190,8 +1178,8 @@ msgid ""
 "in Dubai"
 msgstr ""
 "Podczas 16. edycji corocznego wydarzenia MENA International Financial "
-"Conference and Exhibition w Dubaju firma Binary.com zostaje uznana za „"
-"Najlepszego brokera opcji binarnych”"
+"Conference and Exhibition w Dubaju firma Binary.com zostaje uznana za "
+"„Najlepszego brokera opcji binarnych”"
 
 msgid ""
 "Binary.com is one of the oldest and most respected names in online binary "
@@ -1273,9 +1261,10 @@ msgstr ""
 "Kontrakty Spread oferowane przez Binary.com to lewarowane instrumenty "
 "pochodne, których wartość jest bezpośrednio związana z ruchami na rynku "
 "instrumentu bazowego. Ruchy te przynoszą zyski klientom, którzy wybierają "
-"pozycje „długie” na rynku rosnącym (i tym, którzy wybierają pozycje „krótkie”"
-" na rynku zniżkującym) przy znacznie mniejszych inwestowanych kwotach w "
-"porównaniu z kwotami wymaganymi przy handlu na rynkach rzeczywistych."
+"pozycje „długie” na rynku rosnącym (i tym, którzy wybierają pozycje "
+"„krótkie” na rynku zniżkującym) przy znacznie mniejszych inwestowanych "
+"kwotach w porównaniu z kwotami wymaganymi przy handlu na rynkach "
+"rzeczywistych."
 
 msgid ""
 "Binary.com's Spread Contracts require a 'stop loss' which limits the maximum "
@@ -1284,8 +1273,8 @@ msgid ""
 "closed. Spread Contracts are closed when sold by the client, upon hitting "
 "the 'stop loss' or 'stop profit' level"
 msgstr ""
-"Kontrakty Spread oferowane przez Binary.com wiążą się z określeniem kwoty „"
-"stop stratom”, która stanowi maksymalny limit strat ponoszonych przez "
+"Kontrakty Spread oferowane przez Binary.com wiążą się z określeniem kwoty "
+"„stop stratom”, która stanowi maksymalny limit strat ponoszonych przez "
 "klienta. Kwota „stop stratom” odgrywa rolę depozytu i nie będzie można jej "
 "wykorzystać do dalszego handlu do czasu zamknięcia kontraktu Spread. "
 "Kontrakty Spread są zamykane w chwili sprzedania ich przez Klienta lub w "
@@ -1295,8 +1284,8 @@ msgid ""
 "Binary.com's systems are now processing in excess of 1 million transactions/"
 "day (including virtual accounts)"
 msgstr ""
-"Systemy Binary.com przetwarzają obecnie ponad 1 milion transakcji dziennie ("
-"z uwzględnieniem kont wirtualnych)"
+"Systemy Binary.com przetwarzają obecnie ponad 1 milion transakcji dziennie "
+"(z uwzględnieniem kont wirtualnych)"
 
 msgid "Bollinger Bands (BBANDS)"
 msgstr "Wstęgi Bollingera (BBANDS)"
@@ -1532,6 +1521,9 @@ msgstr "Test Clickjacking"
 msgid "Click to log in with your Binary.com account"
 msgstr "Kliknij, aby zalogować się przy użyciu konta na Binary.com"
 
+msgid "Close"
+msgstr ""
+
 msgid "Close Price"
 msgstr "Cena końcowa"
 
@@ -1570,9 +1562,6 @@ msgstr "Porównania"
 msgid "Conditions"
 msgstr "Warunki"
 
-msgid "Config changes successful"
-msgstr "Wprowadzono zmiany konfiguracji"
-
 msgid "Confirm transfer"
 msgstr "Potwierdź przelew"
 
@@ -1590,9 +1579,6 @@ msgstr "Kontynuuj handlowanie"
 
 msgid "Contract"
 msgstr "Kontrakt"
-
-msgid "Contract Confirmation"
-msgstr "Potwierdzenie kontraktu"
 
 msgid "Contract period"
 msgstr "Okres trwania kontraktu"
@@ -1653,9 +1639,6 @@ msgstr "Obecny czas"
 msgid "Custom Theme"
 msgstr "Motyw niestandardowy"
 
-msgid "Customize chart appearance"
-msgstr "Dostosuj wygląd wykresu"
-
 msgid "Daily limit on losses"
 msgstr "Dzienny limit strat"
 
@@ -1676,8 +1659,8 @@ msgid ""
 "market"
 msgstr ""
 "Dark Cloud Cover (zasłona ciemnej chmury) to spadkowa formacja świecowa "
-"odwrócenia trendu, która występuje, gdy drugiego dnia czerwona świeca bessy ("
-"cena zamknięcia poniżej ceny otwarcia) zamyka się poniżej środka świecy "
+"odwrócenia trendu, która występuje, gdy drugiego dnia czerwona świeca bessy "
+"(cena zamknięcia poniżej ceny otwarcia) zamyka się poniżej środka świecy "
 "hossy z pierwszego dnia (cena zamknięcia powyżej ceny otwarcia). Skorzystamy "
 "z tej formacji, aby sprzedać akcje w przypadku wzrostu ich kursu na rynku o "
 "tendencji spadkowej"
@@ -1687,9 +1670,6 @@ msgstr "Ciemnozielony"
 
 msgid "Dark Unica"
 msgstr "Dark Unica"
-
-msgid "Dash style"
-msgstr "Styl linii"
 
 msgid "Date"
 msgstr "Data"
@@ -1746,9 +1726,6 @@ msgstr "Opisz zastosowanie tokenu, aby później z łatwością go odnaleźć"
 msgid "Description"
 msgstr "Opis"
 
-msgid "Deselect"
-msgstr "Odznacz"
-
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
 "identify trend reversals based on range expansions. In this sense, the Mass "
@@ -1801,8 +1778,8 @@ msgid ""
 msgstr ""
 "Wskaźnik kierunkowy DMI (Directional Movement) jest zbiorem trzech "
 "oddzielnych wskaźników połączonych w jeden: indeksu ADX (Average Directional "
-"Index), wskaźnika kierunkowego +DI (Plus Directional Indicator) oraz -DI ("
-"Minus Directional Indicator)"
+"Index), wskaźnika kierunkowego +DI (Plus Directional Indicator) oraz -DI "
+"(Minus Directional Indicator)"
 
 msgid "Directional Movement Index (DX)"
 msgstr "Indeks DX (Directional Movement Index)"
@@ -1842,9 +1819,6 @@ msgstr ""
 
 msgid "Donchian Channel (DC)"
 msgstr "Kanał Donchiana (DC)"
-
-msgid "Done"
-msgstr "Gotowe"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Gotowe. Trwa przelewanie środków do pośrednika płatności"
@@ -1888,14 +1862,17 @@ msgstr "Pobierz obraz wektorowy SVG"
 msgid "Download as"
 msgstr "Pobierz jako"
 
-msgid "Downloading .csv"
-msgstr "Pobieranie pliku .csv"
-
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "Dragonfly Doji – ważka doji (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "Narzędzia do rysowania"
+
+msgid ""
+"Due to recent changes in the regulations, we are required to ask our clients "
+"to complete the following Financial Assessment. Please note that you will "
+"not be able to continue trading until this is completed"
+msgstr ""
 
 msgid "Duration"
 msgstr "Czas trwania"
@@ -1931,9 +1908,6 @@ msgstr "Edytuj"
 msgid "Education"
 msgstr "Edukacja"
 
-msgid "Email verification failed"
-msgstr "Weryfikacja e-mailowa nie powiodła się"
-
 msgid "Embed code"
 msgstr "Kod osadzania"
 
@@ -1955,11 +1929,6 @@ msgstr "Zakończy się poza"
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Engulfing Pattern – formacja objęcia (CDLENGULFING)"
 
-msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
-"Upewnij się, że wprowadzasz prawidłowe wartości, w przeciwnym razie Twoje "
-"konto zostanie zablokowane"
-
 msgid "Enter your current password"
 msgstr "Wprowadź swoje obecne hasło"
 
@@ -1971,12 +1940,6 @@ msgstr "Pozycja wejściowa"
 
 msgid "Entry spot price"
 msgstr "Cena wejściowa"
-
-msgid "Error downloading .csv"
-msgstr "Błąd podczas pobierania pliku .csv"
-
-msgid "Error getting data for %1"
-msgstr "Błąd podczas pozyskiwania danych dla %1"
 
 msgid "Estimated Net Worth"
 msgstr "Szacowana wartość netto"
@@ -1999,6 +1962,9 @@ msgstr "Wyłącz mnie z portalu do dnia"
 msgid "Exit Spot"
 msgstr "Pozycja wyjściowa"
 
+msgid "Exit Spot Time"
+msgstr ""
+
 msgid "Exit spot"
 msgstr "Pozycja wyjściowa"
 
@@ -2010,9 +1976,6 @@ msgstr "Wyjaśnienie"
 
 msgid "Exponential Moving Average (EMA)"
 msgstr "Wykładnicza średnia krocząca (EMA)"
-
-msgid "Failed to update the password"
-msgstr "Nie udało się zmienić hasła"
 
 msgid "Fall"
 msgstr "Spadek"
@@ -2061,8 +2024,8 @@ msgstr "Cena końcowa"
 msgid "Finance"
 msgstr "Finanse"
 
-msgid "Financial Account Opening form"
-msgstr "Formularz otwierania prawdziwego konta"
+msgid "Financial Information"
+msgstr ""
 
 msgid "Financial Security"
 msgstr "Bezpieczeństwo finansowe"
@@ -2075,6 +2038,9 @@ msgstr "Korzyści finansowe"
 
 msgid "Firefox"
 msgstr "Firefox"
+
+msgid "First line of home address"
+msgstr ""
 
 msgid "First name"
 msgstr "Pierwsze imię"
@@ -2184,14 +2150,17 @@ msgstr "Harami Cross Pattern – krzyż Harami (CDLHARAMICROSS)"
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr "Harami Pattern – formacja Harami (CDLHARAMI)"
 
-msgid "Have better luck at trading!"
-msgstr "Życzymy szczęścia w handlowaniu!"
-
 msgid "Health"
 msgstr "Sektor opieki zdrowotnej"
 
 msgid "Help"
 msgstr "Pomoc"
+
+msgid "High"
+msgstr ""
+
+msgid "High Barrier"
+msgstr "Górny limit"
 
 msgid "High Price"
 msgstr "Wysoka cena"
@@ -2226,14 +2195,8 @@ msgstr "Adres domowy"
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "Homing Pigeon – formacja gołębia (CDLHOMINGPIGEON)"
 
-msgid "Horizontal Line"
-msgstr "Linia pozioma"
-
 msgid "Horizontal line"
 msgstr "Linia pozioma"
-
-msgid "Hour"
-msgstr "Godzina"
 
 msgid "Hours"
 msgstr "Godziny"
@@ -2287,9 +2250,6 @@ msgstr "Idealna zarówno dla profesjonalistów i nowicjuszy"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Identical Three Crows – trzy identyczne kruki (CDLIDENTICAL3CROWS)"
-
-msgid "If the issue keeps happening, please contact"
-msgstr "Jeśli problem będzie się powtarzał, skontaktuj się z"
 
 msgid "If you select a"
 msgstr "Jeśli wybierzesz"
@@ -2510,7 +2470,8 @@ msgstr "Inwestycje i dywidenda"
 
 msgid ""
 "Is it possible to deposit the same funds through different payment methods?"
-msgstr "Czy można wpłacić te same środki, korzystając z innych metod płatności?"
+msgstr ""
+"Czy można wpłacić te same środki, korzystając z innych metod płatności?"
 
 msgid ""
 "It has a long white candle, followed by another that opens above the first "
@@ -2539,8 +2500,8 @@ msgid ""
 "Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr ""
 "Czas się rozwijać. Tworzymy centrum programistyczne w Cyberjaya – Dolinie "
-"Krzemowej w pobliżu Kuala Lumpur – aby utrzymywać i usprawniać "
-"BetOnMarkets.com"
+"Krzemowej w pobliżu Kuala Lumpur – aby utrzymywać i usprawniać BetOnMarkets."
+"com"
 
 msgid "Jan"
 msgstr "Styczeń"
@@ -2553,9 +2514,6 @@ msgstr "Lipiec"
 
 msgid "July"
 msgstr "Lipiec"
-
-msgid "Jump to"
-msgstr "Przejdź do"
 
 msgid "Jun"
 msgstr "Czerwiec"
@@ -2635,9 +2593,6 @@ msgstr "Mniej niż"
 
 msgid "Let's do it"
 msgstr "Zróbmy to"
-
-msgid "Level"
-msgstr "Poziom"
 
 msgid "Level of Education"
 msgstr "Poziom wykształcenia"
@@ -2796,6 +2751,12 @@ msgstr ""
 "która obejmuje poprzednią świecę bessy, ale zamyka się powyżej ceny otwarcia "
 "pierwszej świecy"
 
+msgid "Low"
+msgstr ""
+
+msgid "Low Barrier"
+msgstr "Dolny limit"
+
 msgid "Low Price"
 msgstr "Niska cena"
 
@@ -2914,14 +2875,20 @@ msgstr "Minimum (MIN)"
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimum 6 znaków i przynajmniej jedna cyfra"
 
+msgid "Minimum of 2 characters required"
+msgstr ""
+
+msgid "Minimum of 4 characters required"
+msgstr ""
+
+msgid "Minimum of 6 characters required"
+msgstr ""
+
 msgid "Minimum price over selected period"
 msgstr "Minimalna cena w wybranym okresie"
 
 msgid "Minus the agent's commission"
 msgstr "Minus prowizja pośrednika"
-
-msgid "Minute"
-msgstr "Minuta"
 
 msgid "Minutes"
 msgstr "Minuty"
@@ -3102,11 +3069,26 @@ msgstr ""
 "i bezpieczny portal zarówno dla początkujących, jak i profesjonalnych "
 "graczy. W tym okresie nasz portal obsłużył ponad 15 milionów zakładów"
 
+msgid "Only letters, numbers, hyphen are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+msgstr ""
+
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "Tylko litery, cyfry, spacja, kropka, przecinek, myślnik (-)"
 
-msgid "Oops... Page Not Available"
-msgstr "Ups... Nie znaleziono strony"
+msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only numbers and space are allowed"
+msgstr ""
+
+msgid "Only numbers, letters, hyphens are allowed"
+msgstr ""
 
 msgid "Open"
 msgstr "Otwórz"
@@ -3142,9 +3124,6 @@ msgstr ""
 "niebezpieczeństwu takiego uzależnienia, umożliwiamy sprawdzanie rzeczywistej "
 "sytuacji na bieżąco, co zapewnia Ci regularne zestawienie Twoich zakładów i "
 "kont"
-
-msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr "Pole opcjonalne: do 20 znaków, może zawierać „+”"
 
 msgid "Other"
 msgstr "Inne"
@@ -3194,29 +3173,11 @@ msgstr "Analiza techniczna „Overlap Studies”"
 msgid "PDF"
 msgstr "PDF"
 
-msgid "PM"
-msgstr "PM"
-
 msgid "PNG"
 msgstr "PNG"
 
-msgid "Page Not Found"
-msgstr "Nie znaleziono strony"
-
 msgid "Parabolic SAR (SAR)"
 msgstr "Wskaźnik SAR (Parabolic SAR)"
-
-msgid "Password must be 6 characters minimum"
-msgstr "Hasło musi składać się z co najmniej 6 znaków"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "Hasło musi zawierać małe i wielkie litery oraz cyfry"
-
-msgid "Password must contain uppercase letters and numbers"
-msgstr "Hasło musi zawierać małe i wielkie litery"
-
-msgid "Password successfully updated"
-msgstr "Hasło zostało zaktualizowane"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Hasła nie zgadzają się. Wprowadź je ponownie"
@@ -3270,11 +3231,11 @@ msgstr ""
 "Pip to wartość procentowa w punktach, zwykle jest to czwarte miejsce po "
 "przecinku (np. 0,0001)"
 
+msgid "Place of birth"
+msgstr ""
+
 msgid "Please"
 msgstr "Proszę"
-
-msgid "Please answer to secret question, within 4-50 characters"
-msgstr "Podaj odpowiedź na pytanie zabezpieczające, 4-50 znaków"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Wybierz w jakiej walucie chcesz przeprowadzić transakcję"
@@ -3282,17 +3243,11 @@ msgstr "Wybierz w jakiej walucie chcesz przeprowadzić transakcję"
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Potwierdź następujące dane w celu dokonania przelewu"
 
-msgid "Please enter a number between"
-msgstr "Wpisz liczbę z przedziału"
-
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Wprowadź poprawną datę w formacie rrrr-mm-dd"
 
-msgid "Please enter a value for"
-msgstr "Podaj wartość dla"
-
-msgid "Please enter a vlaid phone number"
-msgstr "Proszę podać poprawny numer telefonu"
+msgid "Please enter a value greater than 0"
+msgstr ""
 
 msgid "Please enter correct email"
 msgstr "Proszę podać poprawny adres e-mail"
@@ -3300,14 +3255,8 @@ msgstr "Proszę podać poprawny adres e-mail"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Wprowadź datę w formacie RRRR-MM-DD"
 
-msgid "Please enter the verification code sent to your email"
-msgstr "Wpisz kod weryfikacyjny wysłany na Twój adres e-mail"
-
 msgid "Please enter time in the format HH:MM"
 msgstr "Proszę podać godzinę w formacie GG:MM"
-
-msgid "Please enter your city address"
-msgstr "Podaj miasto i kod pocztowy"
 
 msgid "Please enter your current password"
 msgstr "Wpisz obecne hasło"
@@ -3315,38 +3264,23 @@ msgstr "Wpisz obecne hasło"
 msgid "Please enter your email"
 msgstr "Podaj swój adres e-mail"
 
-msgid "Please enter your family name"
-msgstr "Podaj swoje nazwisko"
-
-msgid "Please enter your first name"
-msgstr "Podaj swoje imię"
-
-msgid "Please enter your new password"
-msgstr "Wpisz nowe hasło"
-
-msgid "Please enter your password"
-msgstr "Wpisz hasło"
-
-msgid "Please enter your phone number"
-msgstr "Podaj swój numer telefonu"
-
-msgid "Please enter your street address"
-msgstr "Podaj nazwę ulicy i numer domu lub mieszkania"
-
 msgid "Please input correct token"
 msgstr "Proszę wprowadzić poprawny token"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Zainstaluj najnowszą wersję jednej z tych przeglądarek"
 
+msgid "Please provide your tax information"
+msgstr ""
+
 msgid "Please select"
 msgstr "Wybierz"
 
+msgid "Please submit a valid verification token"
+msgstr ""
+
 msgid "Please try again after 1 minute"
 msgstr "Spróbuj ponownie za minutę"
-
-msgid "Please use your new password to login"
-msgstr "Użyj nowego hasła, aby się zalogować"
 
 msgid "Plot"
 msgstr "Motyw"
@@ -3376,8 +3310,8 @@ msgid ""
 "Potential profit and losses are limited to stop profit and stop loss levels "
 "respectively"
 msgstr ""
-"Wysokość potencjalnych zysków i strat jest ograniczona do wysokości poziomu „"
-"stop zyskom” i „stop stratom” odpowiednio"
+"Wysokość potencjalnych zysków i strat jest ograniczona do wysokości poziomu "
+"„stop zyskom” i „stop stratom” odpowiednio"
 
 msgid "Pre-Defined"
 msgstr "Domyślne"
@@ -3431,9 +3365,6 @@ msgstr "Drukuj wykres"
 msgid "Profit"
 msgstr "Zysk"
 
-msgid "Profit Table"
-msgstr "Tabela zysków"
-
 msgid "Profit table"
 msgstr "Tabela zysków"
 
@@ -3475,20 +3406,11 @@ msgstr "Współczynnik zmiany ceny (ROCR)"
 msgid "Read"
 msgstr "Przeczytaj"
 
-msgid "Real Money Account Opening"
-msgstr "Otwieranie konta z prawdziwymi pieniędzmi"
-
-msgid "Reality check"
-msgstr "Bieżąca kontrola konta"
-
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
 "Ciesz się korzyściami handlu opcjami binarnymi, wiedząc, że Twoje środki są "
 "w pełni bezpieczne"
-
-msgid "Redirecting to oauth login page"
-msgstr "Przekierowywanie do strony logowania OAuth"
 
 msgid "Ref"
 msgstr "Ref"
@@ -3559,14 +3481,11 @@ msgstr "Transakcje Regent Pacific"
 msgid "Register free account"
 msgstr "Zarejestruj darmowe konto"
 
-msgid "Registration"
-msgstr "Rejestracja"
-
 msgid "Relative Strength Index (RSI)"
 msgstr "Wskaźnik względnej siły (RSI – Relative Strength Index)"
 
-msgid "Reloading page"
-msgstr "Ponowne logowanie strony"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Selected"
 msgstr "Usuń zaznaczone"
@@ -3579,9 +3498,6 @@ msgstr "Wprowadź hasło ponownie"
 
 msgid "Resale price"
 msgstr "Cena odsprzedaży"
-
-msgid "Reset to Defaults"
-msgstr "Przywróć domyślne"
 
 msgid "Reset zoom"
 msgstr "Resetuj powiększenie"
@@ -3600,9 +3516,6 @@ msgstr "Wyniki"
 
 msgid "Return"
 msgstr "Zwrot"
-
-msgid "Return to trading page"
-msgstr "Wróć do strony handlowania"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
 msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
@@ -3661,6 +3574,9 @@ msgstr "Zapisz zmiany"
 msgid "Scalable trading"
 msgstr "Skalowalne handlowanie"
 
+msgid "Second line of home address"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Średnie"
 
@@ -3682,20 +3598,8 @@ msgstr "Samodzielne wyłączenie"
 msgid "Sell At Market"
 msgstr "Sprzedaj na rynku"
 
-msgid "Sell Price"
-msgstr "Cena sprzedaży"
-
-msgid "Sell Spot"
-msgstr "Cena sprzedaży"
-
-msgid "Sell Time"
-msgstr "Czas sprzedaży"
-
 msgid "Sell option"
 msgstr "Sprzedaj opcję"
-
-msgid "Send to account #"
-msgstr "Wyślij na konto #"
 
 msgid "Sent to account"
 msgstr "Wyślij na konto"
@@ -3772,9 +3676,6 @@ msgstr "Wygładzona średnia krocząca (SMMA – Smoothed Moving Average)"
 
 msgid "Sold"
 msgstr "Sprzedane"
-
-msgid "Some random index"
-msgstr "Jakiś indeks losowy"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -3882,7 +3783,8 @@ msgstr "Wskaźniki giełdowe"
 msgid ""
 "Stock market indices measure the value of a selection of companies in the "
 "stock market"
-msgstr "Wskaźniki indeksów giełdowych mierzą wartość wybranych firm na giełdzie"
+msgstr ""
+"Wskaźniki indeksów giełdowych mierzą wartość wybranych firm na giełdzie"
 
 msgid "Stocks trading experience"
 msgstr "Doświadczenie w handlowaniu akcjami"
@@ -3904,18 +3806,6 @@ msgstr "Stop zyskom"
 
 msgid "Stop-type"
 msgstr "Stop-rodzaj"
-
-msgid "Street address"
-msgstr "Ulica"
-
-msgid "Stroke"
-msgstr "Kolor"
-
-msgid "Stroke color"
-msgstr "Kolor"
-
-msgid "Stroke width"
-msgstr "Szerokość"
 
 msgid "Submit"
 msgstr "Wyślij"
@@ -3947,6 +3837,15 @@ msgstr "Takuri (ważka doji z bardzo długim dolnym cieniem) (CDLTAKURI)"
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "Luka Tasuki (CDLTASUKIGAP)"
 
+msgid "Tax identification number"
+msgstr ""
+
+msgid "Tax information"
+msgstr ""
+
+msgid "Tax residence"
+msgstr ""
+
 msgid "Tax-free"
 msgstr "Brak opodatkowania"
 
@@ -3958,9 +3857,6 @@ msgstr "Nazwa szablonu"
 
 msgid "Terms"
 msgstr "Warunki"
-
-msgid "Terms and Conditions"
-msgstr "Regulamin"
 
 msgid "Tertiary"
 msgstr "Wyższe"
@@ -4076,8 +3972,8 @@ msgid ""
 "is a metric to be used to for defining the market's trendiness only"
 msgstr ""
 "Indeks CHOP (Choppiness Index) jest wskaźnikiem stworzonym w celu "
-"określania, czy rynek jest zmienny (odchylenia handlowe) czy nie ("
-"handlowanie w ramach jednego trendu: spadkowego lub wzrostowego). Indeksu "
+"określania, czy rynek jest zmienny (odchylenia handlowe) czy nie "
+"(handlowanie w ramach jednego trendu: spadkowego lub wzrostowego). Indeksu "
 "CHOP nie stosuje się do przewidywania przyszłego kierunku cen, lecz jako "
 "wskaźnika określającego, czy rynek jest podatny na zmiany trendów"
 
@@ -4205,10 +4101,10 @@ msgid ""
 "trend-following indicator can be used to identify the overall trend, time "
 "turning points and filter price movements"
 msgstr ""
-"Adaptacyjna średnia krocząca Kaufmana (KAMA) została stworzona przez Perry’"
-"ego Kaufmana w celu uwzględnienia zmienności rynku i jego zakłóceń. Ten "
-"wskaźnik śledzący trendy można stosować, aby identyfikować trend główny i "
-"momenty przełomowe, a także filtrować zmiany ceny"
+"Adaptacyjna średnia krocząca Kaufmana (KAMA) została stworzona przez "
+"Perry’ego Kaufmana w celu uwzględnienia zmienności rynku i jego zakłóceń. "
+"Ten wskaźnik śledzący trendy można stosować, aby identyfikować trend główny "
+"i momenty przełomowe, a także filtrować zmiany ceny"
 
 msgid ""
 "The Least Squares Moving Average first calculates a least squares regression "
@@ -4532,6 +4428,15 @@ msgstr ""
 msgid ""
 "The financial trading services contained within this site are only suitable "
 "for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the acquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract premium"
+msgstr ""
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
 "who understand and have experience of the risk involved in the aquistion of "
 "financial contracts. Transactions in financial contracts carry a high degree "
 "of risk. If purchased contracts expire worthless, you will suffer a total "
@@ -4599,13 +4504,6 @@ msgid ""
 msgstr ""
 "Rynkowa cena wyjściowa to cena obowiązująca w momencie zakończenia okresu "
 "kontraktu"
-
-msgid ""
-"The page you requested could not be found. Either it no longer exists or the "
-"address is wrong. Please check for any typos"
-msgstr ""
-"Nie znaleziono żądanej strony. Strona już nie istnieje lub podany adres jest "
-"nieprawidłowy. Proszę sprawdzić, czy adres strony został wpisany prawidłowo"
 
 msgid ""
 "The parabolic SAR is calculated almost independently for each trend in the "
@@ -4695,7 +4593,8 @@ msgstr ""
 
 msgid ""
 "The return is the money realized when the contract expires (see 'Payout')"
-msgstr "Zwrot to kwota wypłacana, gdy kontrakt się zakończy (zobacz: „Wypłata”)"
+msgstr ""
+"Zwrot to kwota wypłacana, gdy kontrakt się zakończy (zobacz: „Wypłata”)"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
 msgstr ""
@@ -4775,12 +4674,6 @@ msgstr ""
 "do 1. Pozwala to regulować wygładzenie i wrażliwość średniej kroczącej. "
 "Sigma to kolejny wskaźnik odpowiedzialny za kształt współczynników krzywej"
 
-msgid "This contract lost"
-msgstr "Ten kontrakt przegrał"
-
-msgid "This contract won"
-msgstr "Ten kontrakt wygrał"
-
 msgid "This field is required"
 msgstr "To pole jest wymagane"
 
@@ -4836,7 +4729,8 @@ msgid "Three Outside Up/Down (CDL3OUTSIDE)"
 msgstr "Three Outside Up/Down (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr "Three Stars In The South – południowa potrójna gwiazda (CDL3STARSSOUTH)"
+msgstr ""
+"Three Stars In The South – południowa potrójna gwiazda (CDL3STARSSOUTH)"
 
 msgid ""
 "Three tall white candles, each with higher closes, and bodies that overlap "
@@ -4923,9 +4817,6 @@ msgid ""
 msgstr ""
 "Aby wypłacić środki, wpisz specjalny kod weryfikacyjny wysłany na Twój adres "
 "e-mail"
-
-msgid "Today"
-msgstr "Dziś"
 
 msgid "Token"
 msgstr "Token"
@@ -5035,6 +4926,9 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Widok handlowy Binary.com"
 
+msgid "Transfer"
+msgstr ""
+
 msgid "Transfer to another Binary account"
 msgstr "Przelew na inne konto Binary"
 
@@ -5130,6 +5024,9 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr "Nadchodzące wydarzenia"
 
+msgid "Update"
+msgstr ""
+
 msgid "Update Settings"
 msgstr "Aktualizuj ustawienia"
 
@@ -5173,17 +5070,11 @@ msgstr "Wariancja (VAR)"
 msgid "Verification code has been sent to your email"
 msgstr "Kod weryfikacyjny został wysłany na Twój adres e-mail"
 
-msgid "Verification code sent to"
-msgstr "Kod weryfikacyjny został wysłany na"
-
 msgid "Verification token"
 msgstr "Token weryfikacyjny"
 
 msgid "Verify new password"
 msgstr "Zweryfikuj nowe hasło"
-
-msgid "Vertical Line"
-msgstr "Linia pionowa"
 
 msgid "Vertical line"
 msgstr "Linia pionowa"
@@ -5234,8 +5125,8 @@ msgid ""
 "We do it again. BetOnMarkets.com follows up our 2007 award by being voted "
 "'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr ""
-"Znowu nam się udało. W 2008 r. BetOnMarkets.com zdobywa tę samą nagrodę „"
-"Najlepszy dostawca zakładów o ustalonej stawce”, co w 2007 r."
+"Znowu nam się udało. W 2008 r. BetOnMarkets.com zdobywa tę samą nagrodę "
+"„Najlepszy dostawca zakładów o ustalonej stawce”, co w 2007 r."
 
 msgid ""
 "We don't usually require any documents as we can verify your identity online"
@@ -5465,11 +5356,6 @@ msgstr ""
 "Twoje konto Binary.com zostało utworzone, ale żeby rozpocząć handlowanie, "
 "musisz udzielić aplikacji Webtrader dostępu do niego"
 
-msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
-"Twoje konto jest zablokowane, skontaktuj się z dziełem obsługi klienta, aby "
-"uzyskać więcej informacji"
-
 msgid "Your browser is not supported"
 msgstr "Twoja przeglądarka nie jest obsługiwana"
 
@@ -5504,11 +5390,8 @@ msgid ""
 "and-drop  simplicity"
 msgstr ""
 "pozwalające klientom na tworzenie swoich własnych robotów do automatycznego "
-"handlowania, korzystając z prostych narzędzi i funkcji, takich jak „"
-"przeciągnij i upuść”"
-
-msgid "and"
-msgstr "i"
+"handlowania, korzystając z prostych narzędzi i funkcji, takich jak "
+"„przeciągnij i upuść”"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrof (') są dozwolone"
@@ -5530,9 +5413,6 @@ msgstr ""
 "ryzyko utraty całej zainwestowanej sumy) i możesz nie posiadać "
 "wystarczającej wiedzy i wystarczającego doświadczenia, aby sobie z nimi "
 "poradzić."
-
-msgid "between"
-msgstr "pomiędzy"
 
 msgid "commission"
 msgstr "prowizja"
@@ -5710,8 +5590,8 @@ msgstr "tak"
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
-msgid "| Return"
-msgstr "| Zwrot"
+msgid "| Payout"
+msgstr ""
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
@@ -5719,6 +5599,245 @@ msgid ""
 msgstr ""
 "umożliwiając klientom, partnerom i programistom zakup i sprzedaż produktów "
 "firmy Binary.com"
+
+#~ msgid "Dash style"
+#~ msgstr "Styl linii"
+
+#~ msgid "Level"
+#~ msgstr "Poziom"
+
+#~ msgid "Price"
+#~ msgstr "Cena"
+
+#~ msgid "Stroke"
+#~ msgstr "Kolor"
+
+#~ msgid "Stroke width"
+#~ msgstr "Szerokość"
+
+#~ msgid "| Return"
+#~ msgstr "| Zwrot"
+
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "AM"
+#~ msgstr "AM"
+
+#~ msgid "Account opening"
+#~ msgstr "Otwieranie konta"
+
+#~ msgid "Add/remove comparisons"
+#~ msgstr "Dodaj/usuń porównania"
+
+#~ msgid "Add/remove overlays"
+#~ msgstr "Dodaj/usuń nakładkę"
+
+#~ msgid "Average"
+#~ msgstr "Średnia"
+
+#~ msgid "Config changes successful"
+#~ msgstr "Wprowadzono zmiany konfiguracji"
+
+#~ msgid "Contract Confirmation"
+#~ msgstr "Potwierdzenie kontraktu"
+
+#~ msgid "Customize chart appearance"
+#~ msgstr "Dostosuj wygląd wykresu"
+
+#~ msgid "Deselect"
+#~ msgstr "Odznacz"
+
+#~ msgid "Done"
+#~ msgstr "Gotowe"
+
+#~ msgid "Downloading .csv"
+#~ msgstr "Pobieranie pliku .csv"
+
+#~ msgid "Email verification failed"
+#~ msgstr "Weryfikacja e-mailowa nie powiodła się"
+
+#~ msgid ""
+#~ "Ensure you are entering valid inputs else your account will get locked"
+#~ msgstr ""
+#~ "Upewnij się, że wprowadzasz prawidłowe wartości, w przeciwnym razie Twoje "
+#~ "konto zostanie zablokowane"
+
+#~ msgid "Error downloading .csv"
+#~ msgstr "Błąd podczas pobierania pliku .csv"
+
+#~ msgid "Error getting data for %1"
+#~ msgstr "Błąd podczas pozyskiwania danych dla %1"
+
+#~ msgid "Failed to update the password"
+#~ msgstr "Nie udało się zmienić hasła"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Formularz otwierania prawdziwego konta"
+
+#~ msgid "Have better luck at trading!"
+#~ msgstr "Życzymy szczęścia w handlowaniu!"
+
+#~ msgid "Horizontal Line"
+#~ msgstr "Linia pozioma"
+
+#~ msgid "Hour"
+#~ msgstr "Godzina"
+
+#~ msgid "If the issue keeps happening, please contact"
+#~ msgstr "Jeśli problem będzie się powtarzał, skontaktuj się z"
+
+#~ msgid "Jump to"
+#~ msgstr "Przejdź do"
+
+#~ msgid "Minute"
+#~ msgstr "Minuta"
+
+#~ msgid "Oops... Page Not Available"
+#~ msgstr "Ups... Nie znaleziono strony"
+
+#~ msgid "Optional field, within 20 characters and may not contain '+'"
+#~ msgstr "Pole opcjonalne: do 20 znaków, może zawierać „+”"
+
+#~ msgid "PM"
+#~ msgstr "PM"
+
+#~ msgid "Page Not Found"
+#~ msgstr "Nie znaleziono strony"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "Hasło musi składać się z co najmniej 6 znaków"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "Hasło musi zawierać małe i wielkie litery oraz cyfry"
+
+#~ msgid "Password must contain uppercase letters and numbers"
+#~ msgstr "Hasło musi zawierać małe i wielkie litery"
+
+#~ msgid "Password successfully updated"
+#~ msgstr "Hasło zostało zaktualizowane"
+
+#~ msgid "Please answer to secret question, within 4-50 characters"
+#~ msgstr "Podaj odpowiedź na pytanie zabezpieczające, 4-50 znaków"
+
+#~ msgid "Please enter a number between"
+#~ msgstr "Wpisz liczbę z przedziału"
+
+#~ msgid "Please enter a value for"
+#~ msgstr "Podaj wartość dla"
+
+#~ msgid "Please enter a vlaid phone number"
+#~ msgstr "Proszę podać poprawny numer telefonu"
+
+#~ msgid "Please enter the verification code sent to your email"
+#~ msgstr "Wpisz kod weryfikacyjny wysłany na Twój adres e-mail"
+
+#~ msgid "Please enter your city address"
+#~ msgstr "Podaj miasto i kod pocztowy"
+
+#~ msgid "Please enter your family name"
+#~ msgstr "Podaj swoje nazwisko"
+
+#~ msgid "Please enter your first name"
+#~ msgstr "Podaj swoje imię"
+
+#~ msgid "Please enter your new password"
+#~ msgstr "Wpisz nowe hasło"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Wpisz hasło"
+
+#~ msgid "Please enter your phone number"
+#~ msgstr "Podaj swój numer telefonu"
+
+#~ msgid "Please enter your street address"
+#~ msgstr "Podaj nazwę ulicy i numer domu lub mieszkania"
+
+#~ msgid "Please use your new password to login"
+#~ msgstr "Użyj nowego hasła, aby się zalogować"
+
+#~ msgid "Profit Table"
+#~ msgstr "Tabela zysków"
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Otwieranie konta z prawdziwymi pieniędzmi"
+
+#~ msgid "Reality check"
+#~ msgstr "Bieżąca kontrola konta"
+
+#~ msgid "Redirecting to oauth login page"
+#~ msgstr "Przekierowywanie do strony logowania OAuth"
+
+#~ msgid "Registration"
+#~ msgstr "Rejestracja"
+
+#~ msgid "Reloading page"
+#~ msgstr "Ponowne logowanie strony"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Przywróć domyślne"
+
+#~ msgid "Return to trading page"
+#~ msgstr "Wróć do strony handlowania"
+
+#~ msgid "Sell Price"
+#~ msgstr "Cena sprzedaży"
+
+#~ msgid "Sell Spot"
+#~ msgstr "Cena sprzedaży"
+
+#~ msgid "Sell Time"
+#~ msgstr "Czas sprzedaży"
+
+#~ msgid "Send to account #"
+#~ msgstr "Wyślij na konto #"
+
+#~ msgid "Some random index"
+#~ msgstr "Jakiś indeks losowy"
+
+#~ msgid "Street address"
+#~ msgstr "Ulica"
+
+#~ msgid "Stroke color"
+#~ msgstr "Kolor"
+
+#~ msgid "Terms and Conditions"
+#~ msgstr "Regulamin"
+
+#~ msgid ""
+#~ "The page you requested could not be found. Either it no longer exists or "
+#~ "the address is wrong. Please check for any typos"
+#~ msgstr ""
+#~ "Nie znaleziono żądanej strony. Strona już nie istnieje lub podany adres "
+#~ "jest nieprawidłowy. Proszę sprawdzić, czy adres strony został wpisany "
+#~ "prawidłowo"
+
+#~ msgid "This contract lost"
+#~ msgstr "Ten kontrakt przegrał"
+
+#~ msgid "This contract won"
+#~ msgstr "Ten kontrakt wygrał"
+
+#~ msgid "Today"
+#~ msgstr "Dziś"
+
+#~ msgid "Verification code sent to"
+#~ msgstr "Kod weryfikacyjny został wysłany na"
+
+#~ msgid "Vertical Line"
+#~ msgstr "Linia pionowa"
+
+#~ msgid ""
+#~ "Your account is locked, please contact customer support for more info"
+#~ msgstr ""
+#~ "Twoje konto jest zablokowane, skontaktuj się z dziełem obsługi klienta, "
+#~ "aby uzyskać więcej informacji"
+
+#~ msgid "and"
+#~ msgstr "i"
+
+#~ msgid "between"
+#~ msgstr "pomiędzy"
 
 #~ msgid "%D MA Type"
 #~ msgstr "Rodzaj %D MA"
@@ -5816,9 +5935,6 @@ msgstr ""
 #~ msgid "Fast Period"
 #~ msgstr "Szybki okres"
 
-#~ msgid "High Barrier"
-#~ msgstr "Górny limit"
-
 #~ msgid "High Stroke"
 #~ msgstr "Linia wysoka"
 
@@ -5862,9 +5978,6 @@ msgstr ""
 
 #~ msgid "Long Term Period"
 #~ msgstr "Okres długoterminowy"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Dolny limit"
 
 #~ msgid "Low Stroke"
 #~ msgstr "Linia niska"
@@ -5942,9 +6055,6 @@ msgstr ""
 
 #~ msgid "Plot Color"
 #~ msgstr "Kolor motywu"
-
-#~ msgid "Price"
-#~ msgstr "Cena"
 
 #~ msgid "Purchase Time"
 #~ msgstr "Czas zakupu"

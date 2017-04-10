@@ -45,7 +45,7 @@
     <script charset="utf-8">
         $(document).ready(function() {
 
-          var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3");
+          var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3?app_id=11");
           ws.debug = false;
           ws.timeoutInterval = 5400;
           ws.onopen = function(event) {

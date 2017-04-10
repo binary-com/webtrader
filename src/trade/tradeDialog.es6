@@ -54,37 +54,44 @@ var debounce = rv.formatters.debounce;
 
 function apply_fixes(available){
     /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
-
     _(available).filter({
-      'contract_category_display': 'Up/Down',
+      'contract_category': 'callput',
       'barrier_category' : 'euro_atm',
-      'contract_display' : 'higher'
+      'barriers': 0,
+      'sentiment': 'up'
     }).each(replacer('contract_display', 'rise'));
 
     _(available).filter({
-      'contract_category_display':'Up/Down',
+      'contract_category': 'callput',      
       'barrier_category': 'euro_atm',
-      'contract_display': 'lower',
+      'barriers': 0,
+      'sentiment': 'down'
     }).each(replacer('contract_display','fall'));
     /* fix for server side api, returning two different contract_category_displays for In/Out */
-    _(available).filter(['contract_category_display', 'Stays In/Goes Out'])
+    _(available).filter(['contract_category', 'staysinout'])
                 .each(replacer('contract_category_display', 'In/Out'));
-    _(available).filter(['contract_category_display', 'Ends In/Out'])
+    _(available).filter(['contract_category', 'endsinout'])
                 .each(replacer('contract_category_display', 'In/Out'));
     /* fix for websocket having a useless barrier value for digits */
-    _(available).filter(['contract_category_display', 'Digits'])
+    _(available).filter(['contract_category', 'digits'])
                 .each(replacer('barriers', 0));
     /* fix for contract_display text in In/Out menue */
-    _(available).filter(['contract_display', 'ends outside']).each(replacer('contract_display', 'ends out'));
-    _(available).filter(['contract_display', 'ends between']).each(replacer('contract_display', 'ends in'));
-    _(available).filter(['contract_display', 'stays between']).each(replacer('contract_display', 'stays in'));
-    _(available).filter(['contract_display', 'goes outside']).each(replacer('contract_display', 'goes out'));
-    _(available).filter(['contract_display', 'touches']).each(replacer('contract_display', 'touch'));
-    _(available).filter(['contract_display', 'does not touch']).each(replacer('contract_display', 'no touch'));
+    _(available).filter({"contract_type": "EXPIRYMISS"}).each(replacer('contract_display', 'ends out'));
+    _(available).filter({"contract_type": "EXPIRYRANGE"}).each(replacer('contract_display', 'ends in'));
+    _(available).filter({"contract_type": "RANGE"}).each(replacer('contract_display', 'stays in'));
+    _(available).filter({"contract_type": "UPORDOWN"}).each(replacer('contract_display', 'goes out'));
+    _(available).filter({"contract_type": "ONETOUCH"}).each(replacer('contract_display', 'touch'));
+    _(available).filter({"contract_type": "NOTOUCH"}).each(replacer('contract_display', 'no touch'));
 
     /* sort the items in the array according to the way we want to show them */
     available = _.sortBy(available,function(row){
-      var rank = { 'Up/Down': 1, 'Touch/No Touch':2, 'In/Out': 3, 'Digits': 4, 'Asians': 5, 'Spreads': 6 }[row.contract_category_display];
+      var rank = _.find({ 'Up/Down': 1, 'Touch/No Touch':2, 'In/Out': 3, 'Digits': 4, 'Asians': 5, 'Spreads': 6 },
+        (val, key) => {
+          if(key.i18n() == row.contract_category_display || key == row.contract_category_display){
+            return val;
+          }
+        }
+      );
       if(rank === 4) { /* Digits */
         rank = {'odd': 4, 'even' : 4.5}[row.contract_display] || 3.5;
       }
@@ -148,13 +155,14 @@ function get_current_template(state) {
 function set_current_template(state, tpl) {
   state.template.name = tpl.name;
   var warn = function(msg) { $.growl.warning({ message: msg || 'Template applied partially.'.i18n() }); }
-  if(!_.includes(state.categories.array, tpl.categories_value)) {
-    $.growl.error({ message: msg || 'Template is not applicable.'.i18n() });
+  if(!_.find(state.categories.array, tpl.categories_value)) {
+    $.growl.error({ message: 'Template is not applicable.'.i18n() });
     return;
   }
-  state.categories.value = tpl.categories_value;
+  state.categories.selected = tpl.categories_value.contract_category;
   _.defer(function() {
-    if(!_.includes(state.category_displays.array, tpl.categoriy_displays_selected)) {
+    if(!_.find(state.category_displays.array, 
+      type => type.name===tpl.categoriy_displays_selected.name && type.sentiment===tpl.categoriy_displays_selected.sentiment)) {
       warn();
       return;
     }
@@ -171,7 +179,7 @@ function set_current_template(state, tpl) {
       if(state.digits.visible) {
         state.digits.value = tpl.digits_value;
       }
-      if(state.categories.value !== 'Spreads') { /* <----- duration */
+      if(state.categories.value.contract_category !== 'spreads') { /* <----- duration */
         state.duration.value = tpl.duration_value;
         if(state.duration.value === 'Duration' ) {
           _.defer(function() {
@@ -208,7 +216,7 @@ function set_current_template(state, tpl) {
       }
       /* <---- barriers */
 
-      if(state.categories.value !== 'Spreads') {
+      if(state.categories.value.contract_category !== 'spreads') {
         _.defer(function() {
           state.basis.value = tpl.basis_value;
           state.currency.value = tpl.currency_value;
@@ -216,7 +224,7 @@ function set_current_template(state, tpl) {
         });
       } /* <----- basis, currency */
 
-      if(state.categories.value === 'Spreads') {
+      if(state.categories.value.contract_category === 'spreads') {
           state.currency.value = tpl.currency_value;
           state.spreads.amount_per_point = tpl.spreads_amount_per_point;
           state.spreads.stop_type = tpl.spreads_stop_type;
@@ -287,8 +295,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       array: [],
       value: '',
       paddingTop: function(){
-        var paddings = { "Asians" : '26px', "Up/Down" : '8px', "Digits" : '14px', "In/Out" : '4px', "Touch/No Touch" : '12px' , "Spreads":'5px' };
-        return paddings[state.categories.value] || '3px';
+        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "spreads":'5px' };
+        return paddings[state.categories.value.contract_category] || '3px';
       }
     },
     category_displays: {
@@ -374,10 +382,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       netprofit_: function () {
         return formatPrice(((this.payout - this.ask_price) || 0).toFixed(2), state.currency.value);
       },
-      return_: function () {
-        var ret = (((this.payout - this.ask_price) / this.ask_price) * 100);
-        ret = (ret && ret.toFixed(1)) || 0;
-        return ret + '%';
+      payout_: function () {
+        return formatPrice((+this.payout || 0).toFixed(2), state.currency.value);
       }
     },
     purchase: {
@@ -392,8 +398,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       visible: false,
     },
     openHelp: ()=>{
-      $.growl.notice({message:"Loading help text for ".i18n() + state.categories.value});
-      help.showSpecificContent(state.categories.value);
+      $.growl.notice({message:"Loading help text for ".i18n() + state.categories.value.contract_category_display});
+      help.showSpecificContent(state.categories.value.contract_category_display);
     }
   };
 
@@ -437,25 +443,38 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   }
 
   state.categories.update = function (msg) {
-    var name = state.categories.value;
-    state.category_displays.array = _(available).filter(['contract_category_display', name]).map('contract_display').uniq().value();
+    state.categories.value = _.find(state.categories.array,{contract_category: state.categories.selected});
+    var category = state.categories.value.contract_category;
+    state.category_displays.array = [];
+    _(available).filter(['contract_category', category]).map('contract_display').uniq().value().forEach(
+      x => {
+        let y = {};
+        y.name = x;
+        let category_object = _.find(available, {contract_display:x});
+        if (category_object)
+          y.sentiment = category_object.sentiment;
+
+        state.category_displays.array.push(y);
+    });
     state.category_displays.selected = _.head(state.category_displays.array);
   };
 
   state.category_displays.onclick = function (e) {
-    state.category_displays.selected = $(e.target).attr('data');
+    state.category_displays.selected = {};
+    state.category_displays.selected.name = $(e.target).attr('data-name');
+    state.category_displays.selected.sentiment = $(e.target).attr('data-sentiment');
   };
 
   state.date_start.update = function () {
     var forward_starting_options = _(available).filter({
-      'contract_category_display': state.categories.value,
-      'contract_display': state.category_displays.selected,
+      'contract_category_display': state.categories.value.contract_category_display,
+      'contract_display': state.category_displays.selected.name,
       'start_type': 'forward'
     }).head();
     // For markets with spot start_type
     var spot_starting_options = _(available).filter({
-      'contract_category_display': state.categories.value,
-      'contract_display': state.category_displays.selected,
+      'contract_category_display': state.categories.value.contract_category_display,
+      'contract_display': state.category_displays.selected.name,
       'start_type': 'spot'
     }).head();
 
@@ -514,8 +533,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   }
 
   state.duration.update = function () {
-    var category = state.categories.value;
-    if (_(["Up/Down", "In/Out", "Touch/No Touch"]).includes(category)) {
+    var category = state.categories.value.contract_category;
+    if (_(["callput", "endsinout", "staysinout", "touchnotouch"]).includes(category)) {
       if(state.duration.array.length !== 2)
         state.duration.array = ['Duration', 'End Time'];
     }
@@ -530,8 +549,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     var start_type = state.date_start.value !== 'now' ? 'forward' : 'spot';
 
     var durations = _(available).filter({
-      'contract_category_display': state.categories.value,
-      'contract_display': state.category_displays.selected,
+      'contract_category_display': state.categories.value.contract_category_display,
+      'contract_display': state.category_displays.selected.name,
       'start_type': start_type
     })
     .map(function (r) {
@@ -616,21 +635,21 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.digits.update = function() {
-      var subcat = state.category_displays.selected;
-      if(state.categories.value !== 'Digits' || subcat === 'odd' || subcat === 'even') {
+      var subcat = state.category_displays.selected.sentiment;
+      if(state.categories.value.contract_category !== 'digits' || subcat === 'odd' || subcat === 'even') {
         state.digits.visible = false;
         return;
       }
 
       var array = {
-        matches: ['0', '1','2','3','4','5','6','7','8', '9'],
-        differs: ['0', '1','2','3','4','5','6','7','8', '9'],
+        match: ['0', '1','2','3','4','5','6','7','8', '9'],
+        differ: ['0', '1','2','3','4','5','6','7','8', '9'],
         under: ['1','2','3','4','5','6','7','8', '9'],
         over: ['0','1','2','3','4','5','6','7','8'],
       }[subcat];
       var text = {
-        matches: 'Last Digit Prediction'.i18n(),
-        differs: 'Last Digit Prediction'.i18n(),
+        match: 'Last Digit Prediction'.i18n(),
+        differ: 'Last Digit Prediction'.i18n(),
         under: 'Last Digit is Under'.i18n(),
         over: 'Last Digit is Over'.i18n()
       }[subcat];
@@ -647,8 +666,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     var unit = state.duration_unit.value;
     var expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
     var barriers = _(available).filter({
-      'contract_category_display': state.categories.value,
-      'contract_display': state.category_displays.selected,
+      'contract_category_display': state.categories.value.contract_category_display,
+      'contract_display': state.category_displays.selected.name,
       'expiry_type':expiry_type
     }).filter(function (r) { return r.barriers >= 1; }).head();
 
@@ -710,8 +729,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   state.basis.update_limit = function () {
     var basis = state.basis;
     var limit = _(available).filter({
-      'contract_category_display': state.categories.value,
-      'contract_display': state.category_displays.selected
+      'contract_category_display': state.categories.value.contract_category_display,
+      'contract_display': state.category_displays.selected.name
     }).head();
 
     limit = (limit && limit.payout_limit) || null;
@@ -724,10 +743,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   state.proposal.onchange = function () {
     var unit = state.duration_unit.value;
     var expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
-    if(state.categories.value === 'Spreads') expiry_type = 'intraday';
+    if(state.categories.value.contract_category === 'spreads') expiry_type = 'intraday';
     var row = _(available).filter({
-      'contract_category_display': state.categories.value,
-      'contract_display': state.category_displays.selected,
+      'contract_category_display': state.categories.value.contract_category_display,
+      'contract_display': state.category_displays.selected.name,
       'expiry_type': expiry_type
     }).head();
     var request = {
@@ -737,7 +756,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       currency: state.currency.value, /* This can only be the account-holder's currency */
       symbol: state.proposal.symbol, /* Symbol code */
     };
-    if(state.categories.value !== 'Spreads') {
+    if(state.categories.value.contract_category !== 'spreads') {
       request.amount = state.basis.amount*1; /* Proposed payout or stake value */
       request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
     } else {
@@ -754,7 +773,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       request.barrier = state.barriers.high_barrier;
       request.barrier2 = state.barriers.low_barrier + '';
     }
-    if (state.categories.value === 'Digits') {
+    if (state.categories.value.contract_category === 'digits') {
       request.barrier = state.digits.value + '';
     }
     if (state.date_start.value !== 'now') {
@@ -830,7 +849,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       /* trigger a new proposal stream */
       state.proposal.onchange();
     }
-
+    
     /* workaround for api not providing this fields */
     var extra = {
         currency: state.currency.value,
@@ -843,15 +862,15 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     /* pass data which is needed to show live tick purchase results */
     extra.show_tick_chart = false;
-    if(_(['Digits','Up/Down','Asians']).includes(extra.category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
+    if(_(['digits','callput','asian']).includes(extra.category.contract_category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
         extra.digits_value = state.digits.value;
         extra.tick_count = state.duration_count.value*1;
-        if(extra.category !== 'Digits') {
-          if (extra.category !== 'Asians') {
+        if(extra.category.contract_category !== 'digits') {
+          if (extra.category.contract_category !== 'asian') {
             extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
           }
           /* for higher/lower final barrier value is entry_quote + barrrier */
-          if(extra.category === 'Up/Down' && _(['higher','lower']).includes(extra.category_display)) {
+          if(extra.category.contract_category === 'callput' && _(['higher','lower']).includes(extra.category_display.name)) {
             extra.barrier = state.barriers.barrier;
           }
           extra.show_tick_chart = true;
@@ -873,7 +892,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
              });
         extra.contract_id = data.buy.contract_id;
         extra.transaction_id = data.buy.transaction_id;
-        if(extra.show_tick_chart || extra.category === 'Digits') {
+        if(extra.show_tick_chart || extra.category.contract_category === 'digits') {
           liveapi.proposal_open_contract.subscribe(extra.contract_id);
         }
         tradeConf.init(data, extra, show, hide, symbol);
@@ -892,8 +911,18 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     }
   };
 
-  state.categories.array = _(available).map('contract_category_display').uniq().value();
-  state.categories.value = _(state.categories.array).includes('Up/Down') ? 'Up/Down' : _(state.categories.array).head(); // TODO: show first tab
+  _(available).map('contract_category_display').uniq().value().forEach(x => {
+    let y = {}; 
+    y.contract_category_display = x; 
+    let contract_object = _.find(available, {contract_category_display: x});
+    if(contract_object){
+      y.contract_category = contract_object.contract_category;
+      state.categories.array.push(y);
+    }
+  });
+
+  state.categories.value = _(state.categories.array).head(); // TODO: show first tab
+  state.categories.selected = state.categories.value.contract_category;
 
   var tick_stream_alive = false;
   /* register for tick stream of the corresponding symbol */

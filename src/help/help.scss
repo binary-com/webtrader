@@ -13,6 +13,7 @@
             margin-bottom: 16px;
             padding-left: 5px;
             position: relative;
+            padding-right: 20px;
         }
         .ui-icon-circle-close {
             display: inline;
@@ -81,6 +82,9 @@
             .search-text {
                 margin-top: 30px;
                 margin-bottom: 20px;
+                span.highlight {
+                    color: #E98024;
+                }
             }
         }
     }
