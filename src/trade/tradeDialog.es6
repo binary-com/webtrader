@@ -446,7 +446,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   }
 
   state.categories.update = function (msg) {
-    console.log(JSON.stringify(state.categories.value));
     state.categories.value = _.find(state.categories.array,{contract_category: state.categories.selected});
     var category = state.categories.value.contract_category;
     state.category_displays.array = [];
