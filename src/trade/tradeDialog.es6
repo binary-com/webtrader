@@ -382,10 +382,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       netprofit_: function () {
         return formatPrice(((this.payout - this.ask_price) || 0).toFixed(2), state.currency.value);
       },
-      return_: function () {
-        var ret = (((this.payout - this.ask_price) / this.ask_price) * 100);
-        ret = (ret && ret.toFixed(1)) || 0;
-        return ret + '%';
+      payout_: function () {
+        return formatPrice((+this.payout || 0).toFixed(2), state.currency.value);
       }
     },
     purchase: {
