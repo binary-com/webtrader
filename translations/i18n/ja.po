@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2017-02-15 19:46+0000\n"
+"PO-Revision-Date: 2017-03-14 07:32+0000\n"
 "Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -12,30 +12,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Weblate 2.12\n"
 
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
 "funds.aspx\""
 msgstr ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
 "ticks during the trade"
-msgstr ""
-"「Asian ダウン」 - 最終Tickが取引期間中のTick平均値より低い場合に条件が満たさ"
-"れます"
+msgstr "「Asian ダウン」 - 最終Tickが取引期間中のTick平均値より低い場合に条件が満たされます"
 
 msgid ""
 "'Asian Rise' - You win when the last tick is higher than the average of the "
 "ticks during the trade"
-msgstr ""
-"「Asian アップ」 - 最終Tickが取引期間中のTick平均値より高い場合に条件が満たさ"
-"れます"
+msgstr "「Asian アップ」 - 最終Tickが取引期間中のTick平均値より高い場合に条件が満たされます"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr ""
-"Investors Chronicleによる「ベストカスタマーコミュニケーション会社」賞を受賞"
+msgstr "Investors Chronicleによる「ベストカスタマーコミュニケーション会社」賞を受賞"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
 msgstr "Trade2Winによる「ベスト固定オッズブローカー賞」銀賞受賞"
@@ -43,9 +40,7 @@ msgstr "Trade2Winによる「ベスト固定オッズブローカー賞」銀賞
 msgid ""
 "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
 "Chronicle UK"
-msgstr ""
-"Financial TimesとInvestors Chronicle UKによる「ベスト固定オッズ金融プロバイ"
-"ダー賞」受賞"
+msgstr "Financial TimesとInvestors Chronicle UKによる「ベスト固定オッズ金融プロバイダー賞」受賞"
 
 msgid ""
 "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
@@ -57,8 +52,7 @@ msgstr "Global BankingとFinance Reviewによる「ベスト固定オッズ会�
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
 "prediction"
-msgstr ""
-"「アンマッチ」 - 最終値が予想した数字と合致しない場合に条件が満たされます"
+msgstr "「アンマッチ」 - 最終値が予想した数字と合致しない場合に条件が満たされます"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "eGaming Reviewによる「ベッティング金融業者オブザイヤー」受賞"
@@ -66,18 +60,16 @@ msgstr "eGaming Reviewによる「ベッティング金融業者オブザイヤ�
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
-msgstr ""
-"「マッチ」 - 最終Tickの下一桁が、予想した数字と合致した場合に条件が満たされま"
-"す"
+msgstr "「マッチ」 - 最終Tickの下一桁が、予想した数字と合致した場合に条件が満たされます"
 
 msgid "'contract period'"
-msgstr ""
+msgstr "「取引期間」"
 
 msgid "(One) Touch trades"
 msgstr "（ワン）タッチ取引"
 
 msgid "(formerly known as"
-msgstr "（旧名："
+msgstr "(旧サービス名："
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -90,16 +82,15 @@ msgid ""
 "variety of financial indices. Business grows quickly, and we soon become the "
 "market leader in fixed-odds financial betting"
 msgstr ""
-"）各種金融インデックスにおいて24時間体制の金融ベッティングサービスを確立。"
-"（日本では提供しておりません。）急速な発展を遂げ、固定オッズ金融ベッティング"
-"業界における市場リーダーとなるのも遅くはありません。"
+")のサービスの提供を開始し、24時間のオンライトレードで様々な金融商品を展開したところ瞬く間に成長。固定オッズ方式の金融オンライントレード業界のリーダーと"
+"なりました。"
 
 msgid ""
 "- Binary.com benchmarks its prices daily against inter-bank derivatives "
 "markets"
 msgstr ""
-"- Binary.comではインターバンク取引と同じリターン率から利益を得ることができま"
-"す。当社の価格はインターバンクオプション市場のベンチマークを用いています。"
+"- Binary.comではインターバンク取引と同じリターン率から利益を得ることができます。当社の価格はインターバンクオプション市場のベンチマークを用いて"
+"います。"
 
 msgid ""
 "- Binary.com ensures your personal data and transactions are always secure"
@@ -123,29 +114,22 @@ msgstr ""
 
 msgid ""
 "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr ""
-"- Binary.comは業界のパイオニアであり、価格設定の特許技術を保持しています"
+msgstr "- Binary.comは業界のパイオニアであり、価格設定の特許技術を保持しています"
 
 msgid ""
 "- Binary.com offers many payment methods, such as credit/debit cards, bank "
 "wires, e-cash and e-wallets"
-msgstr ""
-"- Binary.comでは多様な決済方法を提供しています。日本国内でのご利用は銀行振込"
-"のみとなります。"
+msgstr "- Binary.comでは多様な決済方法を提供しています。日本国内でのご利用は銀行振込のみとなります。"
 
 msgid ""
 "- Binary.com quotes a trade and the counter-trade, so you always get "
 "unbiased, transparent prices"
-msgstr ""
-"- Binary.comではトレードと店頭取引を採用しているため、常に公平で、透明性のあ"
-"る価格でお取引いただけます"
+msgstr "- Binary.comではトレードと店頭取引を採用しているため、常に公平で、透明性のある価格でお取引いただけます"
 
 msgid ""
 "- binaries are licensed as a betting activity in the UK, so your winnings "
 "are tax-free"
-msgstr ""
-"- バイナリーはイギリスでライセンス認定された賭博活動のため、ペイアウトは非課"
-"税です"
+msgstr "- バイナリーはイギリスでライセンス認定された賭博活動のため、ペイアウトは非課税です"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
 msgstr "- 2時間から取引期間を選択"
@@ -153,9 +137,7 @@ msgstr "- 2時間から取引期間を選択"
 msgid ""
 "- choose the falls trade, lower trade, one-touch trade with a low barrier, "
 "or no-touch trade with a high barrier"
-msgstr ""
-"- 下限バリアを用いたワンタッチトレードまたは上限バリアを用いたノータッチト"
-"レードをご選択ください"
+msgstr "- 下限バリアを用いたワンタッチトレードまたは上限バリアを用いたノータッチトレードをご選択ください"
 
 msgid ""
 "- choose the no-touch trade, the stays-between trade, or the ends-between "
@@ -170,115 +152,115 @@ msgstr "- ワンタッチ、BREAK-OUT、END-OUTトレードをご選択くださ
 msgid ""
 "- choose the rise trade, higher trade, one-touch trade with a high barrier, "
 "or no-touch trade with a low barrier"
-msgstr ""
+msgstr "-  上限バリアを用いたワンタッチトレード、下限バリアを用いたノータッチトレードをご選択ください"
 
 msgid "- choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- 2時間以上から取引期間の指定が可能です"
 
 msgid "- choose trades with durations of up to 365 days"
-msgstr ""
+msgstr "- 最大365日の取引期間の選択が可能"
 
 msgid ""
 "- choose trades with high returns and a low probability to win, or with low "
 "returns and a high probability to win"
-msgstr ""
+msgstr "- ハイリターンで条件達成率が低いトレードを選ぶか、ローリターンで条件達成率が高いトレードを選ぶか"
 
 msgid "- currencies, stock indices, and commodities"
-msgstr ""
+msgstr "- 外国為替市場の主要通貨ペア"
 
 msgid "- customize your trades to meet your needs"
-msgstr ""
+msgstr "- ニーズに合ったトレードをカスタマイズ"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
-msgstr ""
+msgstr "- $2で慎重にいくか、$50,000のために全力でいくか"
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "- 1ロット1,000円、最大100ロット"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "- 2時間以上から取引期間の指定が可能です"
 
 msgid "- get pricing that is normally reserved for big institutional players"
-msgstr ""
+msgstr "- 大きな投資機関が通常予約する価格で入手"
 
 msgid ""
 "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden "
 "fees or commissions"
-msgstr ""
+msgstr "- 「スリップページ」「マージンコール」「ロスカット」なし、追加手数料もありません"
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "- 即座に口座開設が可能"
 
 msgid ""
 "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr ""
+msgstr "- 銀行振込による入出金"
 
 msgid "- predict if the market will end higher or lower than a price target"
-msgstr ""
+msgstr "- 市場価格が目標価格よりも低価で終了すると予測"
 
 msgid "- predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "- 権利行使価格を上回るか、下回るかを予測します"
 
 msgid ""
 "- predict if the market will stay inside two price targets, or end between "
 "or outside them"
-msgstr ""
+msgstr "- 市場価格が2つのバリア内に留まる、または範囲内若しくは範囲外で終了すると予測"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr ""
+msgstr "- 市場価格がターゲット価格に達するか、達しないかを予測"
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "- 判定時間を迎える前に市場価格で長期取引を売却"
 
 msgid ""
 "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr ""
+msgstr "-時には直感的に、時には分析を用いて取引"
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "- 1ロットのペイアウト1,000円から"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "- 平日24時間取引が可能"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr ""
+msgstr "- Binary.comのボラティリティインデックスで平日24時間お取引"
 
 msgid "- trade Binary.com's proprietary volatility indices"
-msgstr ""
+msgstr "- Binary.com独自のボラティリティインデックスで取引"
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "- 全主要通貨ペアをご利用いただけます"
 
 msgid "- trade all major FX pairs, around the clock"
-msgstr ""
+msgstr "- 全主要通貨で平日24時間お取引"
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "- 世界の主要株価指数でお取引"
 
 msgid ""
 "- trade currencies, indices and commodities in rising, falling, sideways, "
 "quiet and volatile markets"
-msgstr ""
+msgstr "- 外国為替でお取引"
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "- 金や原油などの主要商品取引"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "- HIGH/LOW、TOUCH/NO-TOUCH、STAY-IN/BREAK-OUT"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr ""
+msgstr "- 他よりもより良い取引条件をお客さまに提供できるよう努めております"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- 全ての値の購入価格で同じリターン率"
 
 msgid "- you know from the start what you will win or lose"
-msgstr ""
+msgstr "- あらかじめペイアウト条件を把握"
 
 msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
-msgstr ""
+msgstr "- マージンコール、ギャップリスク、スリップページ、隠れた手数料、追加料金はありません"
 
 msgid "0-1 year"
 msgstr "0~1年"
@@ -299,10 +281,10 @@ msgid "1 Minute"
 msgstr "1分"
 
 msgid "1 Tick"
-msgstr "1ティック"
+msgstr "1 Tick"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1日に100万を超える取引が行われています"
 
 msgid "1-2 years"
 msgstr "1-2年"
@@ -326,7 +308,7 @@ msgid "15m"
 msgstr "15分"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1日"
@@ -350,40 +332,40 @@ msgid "2 Minutes"
 msgstr "2分"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "2ウェイ・プライス"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2時間"
@@ -424,6 +406,9 @@ msgstr "4時間"
 msgid "40 transactions or more in the past 12 months"
 msgstr "過去12ヶ月で40以上のお取引"
 
+msgid "404"
+msgstr "404"
+
 msgid "4h"
 msgstr "4時間"
 
@@ -460,11 +445,13 @@ msgid ""
 "within the body of the first candle and in doing so confirming the reversal. "
 "It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
+"宵の明星は長い陰線のローソク足から成ります。長めの陽線のあとに、ギャップの明けた十字線が発生しその次に下放れて大陰線で１日目の陽線の下半分あたり確定した状"
+"態をいいます。上昇トレンドからの大きな転向サインとなるローソク足のパターンです。"
 
 msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
 "and an Exponential Moving Average, only with a longer period applied"
-msgstr ""
+msgstr "平滑移動平均は、単純移動平均と指数移動平均を合せたようなもので、長期間のみ適用されます。"
 
 msgid ""
 "A Spinning Top Candlestick is a bullish or bearish candlestick with a small "
@@ -472,6 +459,8 @@ msgid ""
 "Candlestick it represents a point of indecision with buyers and seller "
 "matched"
 msgstr ""
+"コマ足は陽線または陰線の短いローソク足をいいます。上ヒゲと下ヒゲの長さに決まりはありません。十字線のように、買い手と売り手の需要が合致していないポイントを"
+"表しています。"
 
 msgid ""
 "A Stays Between trade pays out if the market stays between (does not touch) "
@@ -480,6 +469,9 @@ msgid ""
 "EITHER the high barrier or the low barrier at any time during the period "
 "chosen by a trader"
 msgstr ""
+"レンジトレードにおける「STAY-IN」トレードは、取引期間中常に上限バリア、及び下限バリアの間に価格が留まれば条件が満たされたと判定され、上下どちらかの"
+"バリア値にタッチした瞬間に条件が満たされないと判定されます。「BREAK-"
+"OUT」では取引期間以内に一度でも上限バリア、または下限バリアにタッチすれば条件が満たされたと判定されます。"
 
 msgid ""
 "A bearish candlestick pattern consisting of three candles that have "
@@ -489,6 +481,10 @@ msgid ""
 "a large red candle that opens below the middle candle and closes near the "
 "center of the first bar's body"
 msgstr ""
+"ベアリッシュローソク足パターンは次の特徴を実証した3つのローソク足から成り立っています。\n"
+"- 最初のバーは上昇トレンドにある大きな白いローソク足\n"
+"- 中央のバーは最初の白いバーよりも上値で終了する短いローソク（赤または白）\n"
+"- 最後のバーは中央のバーよりも下値で始まり最初のバーのローソク中央値近くで終了する大きなローソク足"
 
 msgid ""
 "A bearish candlestick pattern that is used to predict the reversal of the "
@@ -496,6 +492,8 @@ msgid ""
 "candlesticks that have closed lower than the previous day with each "
 "session's open occurring within the body of the previous candle"
 msgstr ""
+"ベアリッシュローソク足パターンは上昇トレンドへの反転を予測するのに用いられます。このパターンは、各セッションが前日のローソク足内で開始し、前日よりも下値で"
+"終了する長いローソク足が3回連続で発生することで反転を予測します。"
 
 msgid ""
 "A bearish counterattack is a long white candle in an uptrend, followed by a "
@@ -504,6 +502,9 @@ msgid ""
 "followed by a long white candle. Closing prices of both candles are at the "
 "same price level"
 msgstr ""
+"ベアリッシュ・カウンターアタックは、上昇トレンドにある長い白ローソクの後に長い黒ローソクがくることをいいます。白ローソクの終値と始値は同じ価格レベルです。"
+"ブリッシュカウンターアタックは、下降トレンドにある長い黒ローソクの後に長い白ローソクが続くことをいい、黒ローソクの終値と白ローソクの始値は同じレベルとなり"
+"ます。"
 
 msgid ""
 "A bearish separating line is a bearish continuation pattern. It is the exact "
@@ -511,11 +512,15 @@ msgid ""
 "bearish separating line: The first day is a green candlestick and the second "
 "day gaps down, opens at the first candlestick's open and closes weakly"
 msgstr ""
+"ベアリッシュ・セパレーティングラインは陰線が続くパターンをいいます。ブリッシュ・セパレーティングラインと真逆です。ベアリッシュ・セパレーティングラインは2"
+"つの要素から成り立ちます。\n"
+"- 初日のローソク足が緑で2日目の始値が初日の終値で、陰線で終了した場合"
 
 msgid ""
 "A binary option is a contract purchased by a trader, which pays a pre-"
 "determined amount if their prediction is correct"
 msgstr ""
+"バイナリーオプションとはトレーダーがトレードを購入し、条件が満たされた場合にあらかじめ決められたペイアウトがトレーダーに支払われることをいいます。"
 
 msgid ""
 "A binary option is an option with a fixed payout that is determined at the "
@@ -523,6 +528,9 @@ msgid ""
 "payout. If not, you lose your initial stake, and no more. The options are "
 "called 'binary' because there can be only two outcomes - win or lose"
 msgstr ""
+"バイナリーオプションは、取引開始時に予め決められた固定ペイアウトを用いたオプション取引です。条件が満たされた場合、そのペイアウトをお受け取りいただけます。"
+"条件が満たされなかった場合は、ペイアウトは支払われず購入金額を失うことになります。条件が満たされるか・満たされないか - "
+"の2つだけの結果からなることから、「バイナリーオプション」と呼ばれています。"
 
 msgid ""
 "A bullish candlestick pattern that consists of five candles, the first day "
@@ -531,6 +539,11 @@ msgid ""
 "pattern, but stay within the range of the first day and the fifth day is a "
 "long white day that closes above the close of the first day"
 msgstr ""
+"ブリッシュローソク足パターンは5つのローソクから成り立ちます。\n"
+"- 初日は長い白ローソク\n"
+"- 2日目は差のある黒ローソク\n"
+"- 2日目、3日目、4日目のローソク足は短く、下降トレンド少し続きます。しかし、初日の範囲内に留まり、5日目は初日の終値よりも高値で終了する長い白ローソク"
+"がきます"
 
 msgid ""
 "A bullish candlestick pattern that consists of three candles, the first bar "
@@ -539,6 +552,10 @@ msgid ""
 "first red bar and the last bar is a large white candle that opens above the "
 "middle candle and closes near the center of the first bar's body"
 msgstr ""
+"ブリッシュローソク足パターンは3つのローソク足から成ります。\n"
+"- 下降トレンドにある初日は長い赤ローソク\n"
+"- 2日目は初日のローソクよりも低値で終了する短いローソク（赤または白）\n"
+"- 最終日は2日目のローソク足よりも高値で始まり、初日のローソクの中央あたりで終了します"
 
 msgid ""
 "A bullish candlestick pattern that consists of three candles, the first bar "
@@ -547,11 +564,15 @@ msgid ""
 "first red bar., he last bar is a large white candle that opens above the "
 "middle candle and closes near the center of the first bar's body"
 msgstr ""
+"ブリッシュローソク足パターンは3つのローソク足から成ります。\n"
+"- 下降トレンドにある初日は長い赤ローソク\n"
+"- 2日目は初日のローソクよりも低値で終了する短いローソク（赤または白）\n"
+"- 最終日は2日目のローソク足よりも高値で始まり、初日のローソクの中央あたりで終了します"
 
 msgid ""
 "A bullish or bearish candle followed by a doji with with a downward or "
 "uptrend gap"
-msgstr ""
+msgstr "ブリッシュまたはベアリッシュローソク足は下降または上昇トレンドの差がある十字線がきます"
 
 msgid ""
 "A candlestick chart pattern in which a large candlestick is followed by a "
@@ -588,6 +609,8 @@ msgid ""
 "reference to an underlying market. Derivatives are commonly traded in the "
 "inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr ""
+"デリバティブとは金融市場で任意の取引対象にて予測される価値のことです。デリバティブはインターバンク市場にて盛んに取引されており、バイナリーはシンプルなデリ"
+"バティブの一形態です。"
 
 msgid ""
 "A medium to long bullish or bearish candlestick with the key defining trait "
@@ -600,6 +623,8 @@ msgid ""
 "for our brand and further recognition of our world-beating service. Ten "
 "years on, and going from strength to strength"
 msgstr ""
+"他の２社のファイナリストを勝ち抜き、BetOnMarkets.comは最も優秀なベッティングブローカーとして受賞。これは当社のブランドと世界一のサービスを"
+"提供していることに関する、素晴らしい評価です。創業１０周年を迎え、当社は年々強みを増しています。"
 
 msgid ""
 "A technical indicator invented by Larry Williams that uses the weighted "
@@ -625,13 +650,13 @@ msgstr ""
 
 msgid ""
 "A tick is the minimum upward or downward movement in the price of a market"
-msgstr ""
+msgstr "Tickとは、市場価格の上下の振れ幅の最小値のことです。"
 
 msgid ""
 "A trend indicated by a large candlestick followed by a doji that is located "
 "within the top and bottom of the candlestick's body. This indicates that the "
 "previous trend is about to reverse"
-msgstr ""
+msgstr "トレンドはローソク足の先端または底に位置する十字線がくる長いローソク足を示します。これは現行トレンドからの反転を意味します。"
 
 msgid ""
 "A white candle in an upward price trend followed by a doji whose lower "
@@ -639,11 +664,14 @@ msgid ""
 "candle with an upper shadow below the doji's low"
 msgstr ""
 
+msgid "AM"
+msgstr "AM"
+
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "捨て子（CDLABANDONEDBABY）"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "アブソリュート プライス オシレーター （APO）"
 
 msgid "Accept"
 msgstr "承諾"
@@ -651,11 +679,14 @@ msgstr "承諾"
 msgid "Account balance"
 msgstr "口座残高"
 
+msgid "Account opening"
+msgstr "口座開設"
+
 msgid "Action"
 msgstr "売買"
 
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 msgid "Add comparisons"
 msgstr "比較チャート追加"
@@ -666,29 +697,35 @@ msgstr "指標を追加（英語表示のみ）"
 msgid "Add level"
 msgstr "レベルを追加"
 
+msgid "Add/remove comparisons"
+msgstr "比較チャート追加/削除"
+
 msgid "Add/remove indicators"
 msgstr "指標を追加/削除（英語表示のみ）"
+
+msgid "Add/remove overlays"
+msgstr "オーバーレイの追加/削除"
 
 msgid "Admin"
 msgstr "管理者"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "アドバンス・ブロック（CDLADVANCEBLOCK）"
 
 msgid "All durations"
-msgstr ""
+msgstr "全ての期間"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "全ての市場状況"
 
 msgid "All markets"
-msgstr ""
+msgstr "全ての市場"
 
 msgid "All markets, all conditions"
-msgstr ""
+msgstr "全ての市場、全ての状況"
 
 msgid "All payouts"
-msgstr ""
+msgstr "全てのペイアウト"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "当社サイトの時間表示は全て、GMT（グリニッジ標準時）に基づきます。"
@@ -708,6 +745,9 @@ msgid ""
 "Ends Outside binary pays out if the market exit price is EITHER strictly "
 "higher than the high price target OR strictly lower than the low price target"
 msgstr ""
+"「END-IN」トレードは、トレードの終値が最小値に設定したバリアよりも高値、”かつ”、最高値に設定したバリアよりも安値であれば条件が満たされたことになり"
+"ます。同値では条件が満たさないと判定され、終値のみが評価対象になります。「END-"
+"OUT」のトレードタイプでは、トレードの終値が最高値に設定したバリアよりも高値、”または”、最小値に設定したバリアよりも安値であれば条件が満たされます。"
 
 msgid ""
 "Another major award. This time we're nominated by the online readers of "
@@ -715,6 +755,8 @@ msgid ""
 "and analysts who recognise our 13 years of platform reliability, range of "
 "trades, pricing, customer service and extensive knowledge"
 msgstr ""
+"他の主な賞として、”Global Banking”及び”Finance Review”の読者からノミネートされ、業界の専門家、アナリストによって当社の１３"
+"年以上に及ぶシステムの信頼性、トレードの幅、価格決定システム、カスタマーサービス、幅広い専門知識が評価されました。"
 
 msgid "Answer"
 msgstr "答え"
@@ -738,13 +780,13 @@ msgid "Are you sure you want to delete this token?"
 msgstr "このトークンを完全に削除してもよろしいですか？"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
-msgstr ""
+msgstr "Arnaud Legoux Moving Average (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "アルーン（AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "アルーン オシレーター (AROONOSC)"
 
 msgid "Asian down"
 msgstr "ASIAN DOWN"
@@ -767,11 +809,14 @@ msgstr "8月"
 msgid "August"
 msgstr "8月"
 
+msgid "Average"
+msgstr "平均"
+
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "平均方向性指数（ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "アベレージ・ダイレクショナル・ムーブメント・インデックス・レーティング（ADXR）"
 
 msgid ""
 "Average Directional Movement Rating quantifies momentum change in the ADX. "
@@ -780,10 +825,10 @@ msgid ""
 msgstr ""
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "アベレージ・トゥルー・レンジ（ATR）"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "オーサム・オシレーター（AO)"
 
 msgid "Back"
 msgstr "戻る"
@@ -792,13 +837,15 @@ msgid "Back to list"
 msgstr "一覧へ戻る"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "バランス・オブ・パワー（BOP)"
 
 msgid ""
 "Banks, hedge funds and professional investors routinely trade binary options "
 "in over-the-counter derivatives markets. Many market professionals use and "
 "trust the Binary.com platform for high-volume flexible trades"
 msgstr ""
+"銀行、ヘッジファンド、プロ投資家の皆様はデリバティブ市場でバイナリーオプションを日常的に取引されています。当社の取引プラットフォームは多くのプロ投資家から"
+"信頼され、ご利用いただいております。"
 
 msgid "Barrier"
 msgstr "バリア"
@@ -807,7 +854,7 @@ msgid "Barrier offset"
 msgstr "追加バリア値"
 
 msgid "Barrier(s)"
-msgstr ""
+msgstr "バリア"
 
 msgid ""
 "Bearish: This is an end-of-trend pattern composed of three candlesticks in "
@@ -822,95 +869,94 @@ msgid ""
 msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "ベルトホールド（CDLBELTHOLD）"
 
 msgid "Benchmarked prices"
-msgstr ""
+msgstr "ベンチマーク価格"
 
 msgid "Benefits of binary trading"
-msgstr ""
+msgstr "バイナリー取引の利点"
 
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "Shares Magazine UKによる「ベスト固定オッズ金融取引プロバイダー」受賞"
 
 msgid "BetOnMarkets goes live"
-msgstr ""
+msgstr "BetOnMarkets（オンライントレードサイト）を公開"
 
 msgid ""
 "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ "
 "1 billion milestone in only our 13th year, making us one of the leading "
 "fixed-odds trading providers"
 msgstr ""
+"BetOnMarkets.comの口座数は40万以上になりました。開業13年目にして累計で10億USDのターンオーバーを達成し、固定オッズトレード業界での"
+"牽引役として位置付けられるようになります。"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
-msgstr ""
+msgstr "BetOnMarkets.comはペイアウト金額を10万 USD/EUR/GBP/AUDに拡大"
 
 msgid "BetOnMarkets.com is successfully rebranded Binary.com"
-msgstr ""
+msgstr "BetOnMarkets.comはBinary.comに商号変更"
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
-msgstr ""
+msgstr "BetOnMarkets.comは1999年から累計で10億USDのターンオーバーを達成"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
-msgstr ""
+msgstr "バイナリーボット(ロボット)を導入(日本を除く)"
 
 msgid "Binary KK granted Japan license"
-msgstr ""
+msgstr "Binary株式会社は日本で第一種金融商品取引業者として登録され、金融先物取引業協会に加入しています"
 
 msgid "Binary Trading is simple to learn and to execute"
-msgstr ""
+msgstr "バイナリーオプションは比較的に分かりやすい取引です"
 
 msgid "Binary granted Investment Services license"
-msgstr ""
+msgstr "Binary (Europe) Ltd.は、投資サービスライセンスを付与されています。"
 
 msgid "Binary opens Japan office"
-msgstr ""
+msgstr "日本オフィスを開設"
 
 msgid "Binary option"
-msgstr ""
+msgstr "バイナリーオプション"
 
 msgid "Binary options or other financial derivatives"
 msgstr "バイナリーオプション または その他金融派生商品"
 
-msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
-
 msgid "Binary trading is flexible"
-msgstr ""
+msgstr "柔軟な取引"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
-msgstr ""
+msgstr "バイナリーは個人投資家にもプロの投資家にも最適"
 
 msgid "Binary trading is very simple"
-msgstr ""
+msgstr "見やすい画面でお取引が可能"
 
 msgid ""
 "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 "
 "Financial Instruments Business in Japan"
-msgstr ""
+msgstr "Binary株式会社 (和文名称 バイナリー株式会社)は、第一種金融商品取引業者として関東財務局に登録された"
 
 msgid ""
 "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts "
 "the process of applying for relevant licenses"
 msgstr ""
+"Binary Ltd.の子会社Binary株式会社 (和文名称 バイナリー株式会社)が東京にオフィスを開設し、金融商品取引業者の登録申請を開始します。"
 
 msgid ""
 "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a "
 "Category 3 Investment Services license by the Malta Financial Services "
 "Authority"
 msgstr ""
+"Binaryの子会社 Binary Investments (Europe) "
+"Ltdはマルタ金融サービス庁によってカテゴリー3投資サービスライセンスが付与されています。"
 
 msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
-msgstr ""
+msgstr "Binaryのプラットフォームは1秒に15もの取引を処理しています"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -919,95 +965,98 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : ウェブトレーダー"
 
 msgid "Binary.com Shop introduced"
-msgstr ""
+msgstr "オンラインショップを開設(日本を除く)"
 
 msgid "Binary.com continues to innovate and grow"
-msgstr ""
+msgstr "日々進化、成長への歩みを止めません"
 
 msgid ""
 "Binary.com has earned an enviable reputation for our commitment to high "
 "ethical standards and the quality of the trading experience we provide"
-msgstr ""
+msgstr "当社の高い倫理観のある取り組みと当社が提供する取引経験の質から好評化を頂いております。"
 
 msgid ""
 "Binary.com has over 800,000 clients in its database and reaches the US$ 2 "
 "billion milestone in our 15th year, making us one of the leading binary "
 "options providers"
-msgstr ""
+msgstr "口座数が80万を超え、創業15年目で20億ドルの取引額を達成、バイナリーオプション業界にて確固たる地位を確立しました"
 
 msgid ""
 "Binary.com has thousands of clients taking a variety of positions on the "
 "financial markets at any one time, and earns a small margin on these trades"
 msgstr ""
+"Binary.comでは常時、たくさんのお客さまがバイナリーオプションをお取引されており、当社はこれらのお取引のスプレッドから利益を得ております"
 
 msgid ""
 "Binary.com hits 1 million users, reaching a historic milestone. The company "
 "continues to see exponential growth and this reconfirms its position as an "
 "industry leader"
-msgstr ""
+msgstr "口座数が100万口座を超え、社史に残る実績を達成、業界トップのポジションを確実なものにしました"
 
 msgid "Binary.com introduces an"
-msgstr ""
+msgstr "Binary.comからのお知らせ"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
-msgstr ""
+msgstr "Binary.comのプラットフォームはウェブベースですので、特定のソフトウェアをインストールする必要は一切ございません"
 
 msgid ""
 "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the "
 "16th annual MENA International Financial Conference and Exhibition, hosted "
 "in Dubai"
-msgstr ""
+msgstr "ドバイで開催された第16回 MENA国際金融会議/展示会において「最優秀バイナリーオプションブローカー」を受賞しました"
 
 msgid ""
 "Binary.com is one of the oldest and most respected names in online binary "
 "trading"
-msgstr ""
+msgstr "Binary.comはオンラインバイナリーオプション取引業界のパイオニアであり、世界中の個人投資家にサービスを提供しています"
 
 msgid ""
 "Binary.com is owned and operated by the Binary Ltd. group of companies. For "
 "more information, visit our history page"
-msgstr ""
+msgstr "Binary 株式会社はBinary Ltdの子会社です。詳細はグループの沿革よりご確認いただけます"
 
 msgid "Binary.com is tailored to traders of all levels"
-msgstr ""
+msgstr "Binary.comはどのレベルのトレーダーの方にもご利用いただけるようになっています"
 
 msgid "Binary.com launches an"
-msgstr ""
+msgstr "〜をローンチします"
 
 msgid ""
 "Binary.com offers a range of common deposit and withdrawal methods, from "
 "credit and debit cards to bank wires, e-cash and e-wallets"
-msgstr ""
+msgstr "当社でご利用いただけるご入金・ご出金方法は銀行振込になります"
 
 msgid ""
 "Binary.com offers a virtual-money account so you can get the hang of trading "
 "binaries. Why not open a free $10k fully-functional virtual-money account, "
 "and start learning how to trade"
 msgstr ""
+"Binary.comではバイナリーオプション取引のコツを掴んでいただけるよう、バーチャルマネー口座を提供しています。100万円のバーチャルマネーをご利用い"
+"ただける口座を無料で開設して、取引を学んでみませんか？"
 
 msgid "Binary.com offers new ways to trade"
-msgstr ""
+msgstr "新たなトレードの提供を開始"
 
 msgid ""
 "Binary.com opens an office in the QSentral office building in central Kuala "
 "Lumpur to further expand its IT development team"
-msgstr ""
+msgstr "新たなIT開発チームの拠点としてクアラルンプールの中心街にあるQSentralオフィスビルにオフィスを開設"
 
 msgid ""
 "Binary.com prices are benchmarked against the interbank options market, so "
 "you always get best-in-class prices for your trades"
-msgstr ""
+msgstr "当社ではインターバンク市場と同等レベルの算出方法を用い、より良い取引条件をお客さまに提供できるよう努めております。"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr ""
+msgstr "Binary.comは1999年から累計で20億USDのターンオーバーを達成"
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr ""
+msgstr "Binary.comの口座数が１００万口座を達成"
 
 msgid ""
 "Binary.com takes home first prize in the Financial Betting Operator category "
 "at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr ""
+msgstr "ロンドンで開催された名誉あるEGRオペレーター賞授賞式にて金融ベッティングオペレーター部門で最優秀賞を受賞しました"
 
 msgid ""
 "Binary.com's Spread Contracts are leveraged derivative contracts, the value "
@@ -1016,6 +1065,8 @@ msgid ""
 "those movements with much less investment than would be required in the live "
 "market"
 msgstr ""
+"Binary.comのスプレッドトレードには、市場動向が直接関連する値のデリバティブトレードを活用しています。上昇傾向にある市場で「ロング」を選んだ場合（"
+"及び下落傾向にある市場で「ショート」を選んだ場合）はライブマーケットで必要とされる投資額よりもはるかに少額で、利益を得られます"
 
 msgid ""
 "Binary.com's Spread Contracts require a 'stop loss' which limits the maximum "
@@ -1024,19 +1075,22 @@ msgid ""
 "closed. Spread Contracts are closed when sold by the client, upon hitting "
 "the 'stop loss' or 'stop profit' level"
 msgstr ""
+"Binary.comのスプレッドトレードでは、生じる損失の最大を制限できる「損切り」が必要となります。この「損切り」の金額は、口座内の資金に作用し、スプレ"
+"ッドトレードが終了するまでそれ以外のお取引ができないよう機能します。スプレッドトレードは転売する際に「損切り」と「利益ストップ」のレベルに到達次第閉鎖され"
+"ます。"
 
 msgid ""
 "Binary.com's systems are now processing in excess of 1 million transactions/"
 "day (including virtual accounts)"
-msgstr ""
+msgstr "Binary.comのシステムでは毎日100万を超える取引が行われています。（バーチャル口座を含む）"
 
 msgid "Bollinger Bands (BBANDS)"
-msgstr ""
+msgstr "ボリンジャー・バンド（BBANDS）"
 
 msgid ""
 "Bollinger Bands can be used to measure the highness or lowness of the price "
 "relative to previous trades"
-msgstr ""
+msgstr "ボリンジャー・バンドは前の取引に関する価格の上値と下値を測定するために使用します"
 
 msgid "Bought"
 msgstr "購入済"
@@ -1045,7 +1099,7 @@ msgid "Brand of first car"
 msgstr "最初の車のブランド"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "ブレイクアウェイ（CDLBREAKAWAY）"
 
 msgid "Browser upgrade required"
 msgstr "ブラウザのアップデートが必要です"
@@ -1053,7 +1107,7 @@ msgstr "ブラウザのアップデートが必要です"
 msgid ""
 "But there's no need to wait until expiry. You can sell back long-term trades "
 "at any time to profit from changing market conditions"
-msgstr ""
+msgstr "しかし、判定時間まで待つ必要はありません。市場の変動から利益を得るために、長期取引を売却することができます。"
 
 msgid "Buy Price"
 msgstr "購入"
@@ -1079,21 +1133,21 @@ msgstr "CSV"
 msgid ""
 "Can be used to buy and sell contracts, renew expired purchases, and top-up "
 "virtual-money accounts."
-msgstr ""
+msgstr "トレードの売買、期限切れトレードの更新、デモ口座の補充にご利用いただけます。"
 
 msgid ""
 "Can be used to open accounts, set settings, manage token usage, and more."
-msgstr ""
+msgstr "口座開設、設定、トークン使用状況の管理などをご利用いただけます。"
 
 msgid ""
 "Can be used to view account activity, including settings, limits, balance "
 "sheets, trade purchase history, and more."
-msgstr ""
+msgstr "設定、制限、バランスシート、購入履歴などの口座アクティビティ"
 
 msgid ""
 "Can be used to withdraw to payment agents, transfer funds between accounts, "
 "and set / clear cashier passwords."
-msgstr ""
+msgstr "決済サービスでのご出金、口座間の資金送金、入出金パスワードの設定/削除をご利用いただけます。"
 
 msgid "Cancel"
 msgstr "キャンセル"
@@ -1117,10 +1171,10 @@ msgid "Cash Balance"
 msgstr "口座預託額"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "シャンデクロールストップ（CKS）"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "シャンデ・モメンタム・オシレーター (CMO)"
 
 msgid "Change Backend Server"
 msgstr "バックエンドサーバーの変更"
@@ -1149,74 +1203,76 @@ msgstr "チャートタイプ"
 msgid ""
 "Choose Asian Rise/Fall when you want to profit from the market ending higher "
 "or lower than the average price"
-msgstr ""
+msgstr "市場価格が平均価格よりも上値で終了するか？下値で終了するか？を予測されたい場合は、Asianアップをご選択ください"
 
 msgid ""
 "Choose Ends In/Out to profit from the market stopping inside or outside two "
 "price targets at the end of the time period"
 msgstr ""
+"判定時刻に市場価格が2つのターゲット価格の範囲内で終了するか？範囲外で終了するか？を予測されたい場合は、END-IN/END-OUTをご選択ください"
 
 msgid ""
 "Choose Higher/Lower when you want to profit from the market ending higher or "
 "lower than a price target"
-msgstr ""
+msgstr "市場価格がターゲット価格よりも上値で終了するか？下値で終了するか？を予測されたい場合は、HIGH/LOWをご選択ください"
 
 msgid ""
 "Choose Rise/Fall when you want to profit from the market rising or falling "
 "from its current level"
-msgstr ""
+msgstr "市場価格が現行価格よりも上値になるか？下値になるか？を予測されたい場合は、HIGH/LOWをご選択ください"
 
 msgid ""
 "Choose Stays In/Out to profit from the market staying inside or going "
 "outside two price targets any time during the contract period"
 msgstr ""
+"取引期間中に市場価格が2つのターゲット価格の範囲内に留まるか？範囲外に出るか？を予測されたい場合は、STAY-IN/BREAK-OUTをご選択ください"
 
 msgid ""
 "Choose Touch / No Touch when you want to profit from the market touching or "
 "not touching a target any time during the contract period"
-msgstr ""
+msgstr "取引期間中に市場価格がターゲット価格に達するか？達しないか？を予測されたい場合は、TOUCH/NO-TOUCHをご選択ください"
 
 msgid "Choose a trade type"
-msgstr ""
+msgstr "取引タイプをご選択ください"
 
 msgid ""
 "Choose digit if you want to profit from predicting the last decimal digit of "
 "the spot"
-msgstr ""
+msgstr "スポット価格の下一桁を予測されたい場合はDIGITをご選択ください"
 
 msgid "Choose from over 1 million trades"
-msgstr ""
+msgstr "100万人を超えるトレーダーの皆様に選ばれています"
 
 msgid "Choose from over a million possible trades at any time"
-msgstr ""
+msgstr "100万を超えるトレードからいつでもご選択いただけます"
 
 msgid "Choose password"
 msgstr "パスワードを選択してください"
 
 msgid "Choose the barrier(s)"
-msgstr ""
+msgstr "バリアを選択してください"
 
 msgid "Choose the duration"
-msgstr ""
+msgstr "期間を選択してください"
 
 msgid ""
 "Choose the market, the price target, the time period, and how much you wish "
 "to win"
-msgstr ""
+msgstr "市場、ターゲット価格、取引期間をご選択ください"
 
 msgid ""
 "Choose the market, the price targets, the time period, and how much you wish "
 "to win"
-msgstr ""
+msgstr "市場、ターゲット価格、取引期間をご選択ください"
 
 msgid "Choose the market, the time period, and how much you wish to win"
-msgstr ""
+msgstr "市場、ターゲット価格、取引期間をご選択ください"
 
 msgid "Choose the payout"
-msgstr ""
+msgstr "ペイアウトをご選択ください"
 
 msgid "Choose the underlying market"
-msgstr ""
+msgstr "原資産をご選択ください"
 
 msgid "Choose your pereferred payment agent"
 msgstr "ご希望の決済サービスをご選択ください"
@@ -1225,7 +1281,7 @@ msgid "Choose your pereferred withdrawal method"
 msgstr "ご希望の出金方法をご選択ください"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "チョピネス・インデックス（CHOP）"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -1235,9 +1291,6 @@ msgstr "ジャッキテストをクリック"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
-
-msgid "Close"
-msgstr ""
 
 msgid "Close Price"
 msgstr "：終値"
@@ -1249,15 +1302,15 @@ msgid "Closes"
 msgstr "取引終了時間"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "丸坊主（CDLCLOSINGMARUBOZU）"
 
 msgid "Commodities"
-msgstr ""
+msgstr "コモディティ"
 
 msgid ""
 "Commodities are resources that are grown or extracted from the ground, such "
 "as silver, gold and oil. On Binary.com, they are priced in US dollars"
-msgstr ""
+msgstr "コモディティとは、金、銀、石油といった資源のことです。Binary.comでは米ドルベースでコモディティに価格情報を与えています。"
 
 msgid "Commodities trading experience"
 msgstr "コモディティ取引のご経験"
@@ -1266,13 +1319,16 @@ msgid "Commodities trading frequency"
 msgstr "コモディティ取引の頻度"
 
 msgid "Commodity Channel Index (CCI)"
-msgstr ""
+msgstr "コモディティ・チャネル・インデックス（CCI)"
 
 msgid "Comparisons"
 msgstr "比較チャート"
 
 msgid "Conditions"
 msgstr "条件"
+
+msgid "Config changes successful"
+msgstr "設定が変更されました"
 
 msgid "Confirm transfer"
 msgstr "送金を実行する"
@@ -1292,17 +1348,20 @@ msgstr "取引を継続"
 msgid "Contract"
 msgstr "取引内容"
 
+msgid "Contract Confirmation"
+msgstr "トレード確定"
+
 msgid "Contract period"
-msgstr ""
+msgstr "取引期間"
 
 msgid "Contracts"
 msgstr "トレード"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "コポックカーブ（CC）"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "カウンターアタック（CDLCOUNTERATTACK）"
 
 msgid "Country of residence"
 msgstr "居住国"
@@ -1320,7 +1379,7 @@ msgid "Crosshair"
 msgstr "クロスヘア"
 
 msgid "Currencies"
-msgstr ""
+msgstr "通貨"
 
 msgid "Current Level"
 msgstr "現在のレベル"
@@ -1349,6 +1408,9 @@ msgstr "現在時刻："
 msgid "Custom Theme"
 msgstr "カスタムテーマ"
 
+msgid "Customize chart appearance"
+msgstr "チャートの外観をカスタマイズする"
+
 msgid "Daily limit on losses"
 msgstr "損失限度額（1日）"
 
@@ -1359,7 +1421,7 @@ msgid "Dark Blue"
 msgstr "ダークブルー"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
-msgstr ""
+msgstr "かぶせ線（CDLDARKCLOUDCOVER）"
 
 msgid ""
 "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when "
@@ -1368,6 +1430,8 @@ msgid ""
 "price). We will be using this pattern to sell rallies in a bearish currency "
 "market"
 msgstr ""
+"かぶせ線とは当日の赤い陰線（終値が始値より低い）が前日の陽線（終値が始値より高い）の中心以下で終値をつける、陰線のローソク足に見られるパターンです。"
+"弱気通貨市場でSELL ON RALLIESするのにこのパターンを用います。"
 
 msgid "Dark Green"
 msgstr "ダークグリーン"
@@ -1388,7 +1452,7 @@ msgid "Days"
 msgstr "日"
 
 msgid "Debt-free"
-msgstr ""
+msgstr "借入金なし"
 
 msgid "Dec"
 msgstr "12月"
@@ -1403,7 +1467,7 @@ msgid "Default"
 msgstr "規定"
 
 msgid "Define your position"
-msgstr ""
+msgstr "ポジションを選択しましょう。"
 
 msgid "Delete"
 msgstr "削除"
@@ -1421,16 +1485,19 @@ msgid "Deposit of USD"
 msgstr "USDでのご入金"
 
 msgid "Depositing and withdrawing funds"
-msgstr ""
+msgstr "入金/出金について"
 
 msgid "Derivative"
-msgstr ""
+msgstr "デリバティブ"
 
 msgid "Describe what this token is for to find it later"
 msgstr "後で認識できるよう、このトークンの説明を記入してください"
 
 msgid "Description"
 msgstr "取引内容"
+
+msgid "Deselect"
+msgstr "選択解除"
 
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
@@ -1467,33 +1534,38 @@ msgid ""
 "Directional Index (ADX), Plus Directional Indicator (+DI) and Minus "
 "Directional Indicator (-DI)"
 msgstr ""
+"シャンデのダイナミック・モメンタム・インデックス（DMI）は下記3つのインジケーターを1つに集約したものです。\n"
+"- アベレージ・ダイレクショナル・ムーブメント・インデックス（ADX）のダイレクショナル・ムーブメント\n"
+"- プラス・ディレクショナル・インジケーター（+DI）\n"
+"- マイナス・ディレクショナル・インジケーター（-DI）"
 
 msgid "Directional Movement Index (DX)"
-msgstr ""
+msgstr "ディレクショナル・ムーブメント・インデックス（DX）"
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr ""
+msgstr "口座を開設するにあたり入金は必須でしょうか？"
 
 msgid "Do I need to send any documents?"
-msgstr ""
+msgstr "口座を開設するにあたり、各種証明書を送付する必要はありますか？"
 
 msgid "Do you offer virtual-money accounts?"
-msgstr ""
+msgstr "デモ口座を利用できますか？"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "ウェブトレーダーのchrome拡張機能をインストールしますか？"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "十字線（CDLDOJI）"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "十字線（CDLDOJISTAR）"
 
 msgid ""
 "Doji form when a security's open and close are virtually equal. The length "
 "of the upper and lower shadows can vary and the resulting candlestick looks "
 "like a cross, inverted cross or plus sign"
 msgstr ""
+"始値と終値が同じ価格であった場合を十字線といいます。上ひげと下ヒゲの長さは変化しますが、足のないローソク足が受十字にみえることから十字線といいます。"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
@@ -1501,7 +1573,10 @@ msgstr ""
 "ネーでお取引を始めましょう"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "ドンチャン・チャネル（DC）"
+
+msgid "Done"
+msgstr "完了"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
@@ -1514,7 +1589,7 @@ msgid "Dot"
 msgstr "ドット"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "二重指数移動平均（DEMA）"
 
 msgid "Double click the object to remove"
 msgstr "削除するオブジェクトをダブルクリックしてください"
@@ -1546,23 +1621,20 @@ msgstr "SVGでダウンロード"
 msgid "Download as"
 msgstr "ダウンロード"
 
+msgid "Downloading .csv"
+msgstr ".csvファイルでダウンロード"
+
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "たくり線（CDLDRAGONFLYDOJI）"
 
 msgid "Drawing tools"
 msgstr "描画ツール"
-
-msgid ""
-"Due to recent changes in the regulations, we are required to ask our clients "
-"to complete the following Financial Assessment. Please note that you will "
-"not be able to continue trading until this is completed"
-msgstr ""
 
 msgid "Duration"
 msgstr "期間"
 
 msgid "EGR Operator Award"
-msgstr ""
+msgstr "EGR オペレーター賞"
 
 msgid "EMA"
 msgstr "EMA"
@@ -1573,12 +1645,12 @@ msgstr "EURUSD"
 msgid ""
 "Each binary option is a prediction on the future movement of an underlying "
 "market"
-msgstr ""
+msgstr "バイナリーオプションは、原資産の将来の値動きを予測する取引です"
 
 msgid ""
 "Each binary trade is for a pre-determined payout amount. You win the payout "
 "if your prediction is correct"
-msgstr ""
+msgstr "各バイナリー取引のペイアウトは固定制です。条件が満たされた場合にペイアウトをお受け取りいただけます。"
 
 msgid "Edge"
 msgstr "エッジ"
@@ -1589,6 +1661,9 @@ msgstr "編集"
 msgid "Education"
 msgstr "お役立ち情報"
 
+msgid "Email verification failed"
+msgstr "Eメール認証に失敗しました"
+
 msgid "Embed code"
 msgstr "埋め込みコード"
 
@@ -1596,7 +1671,7 @@ msgid "End Time"
 msgstr "終了時刻"
 
 msgid "Ends Between/Ends Outside trades"
-msgstr ""
+msgstr "END-IN/END-OUT トレード"
 
 msgid "Ends In/Out"
 msgstr "END-IN/END-OUT"
@@ -1608,7 +1683,12 @@ msgid "Ends out"
 msgstr "END-OUT"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
+msgstr "つつみ線（CDLENGULFING）"
+
+msgid "Ensure you are entering valid inputs else your account will get locked"
 msgstr ""
+"入力内容が有効であることをよくお確かめください。情報が無効である場合、口座が"
+"ロックされますのでご注意ください。"
 
 msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
@@ -1620,7 +1700,13 @@ msgid "Entry spot"
 msgstr "取引時刻直後のテック"
 
 msgid "Entry spot price"
-msgstr ""
+msgstr "取引時レート"
+
+msgid "Error downloading .csv"
+msgstr ".csvファイルのダウンロード中にエラーが発生しました"
+
+msgid "Error getting data for %1"
+msgstr "%1のデータ取得中にエラーが発生しました"
 
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
@@ -1629,13 +1715,13 @@ msgid "Even"
 msgstr "偶数"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "宵の明星（CDLEVENINGDOJISTAR）"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Evening Star (CDLEVENINGSTAR)"
 
 msgid "Example"
-msgstr ""
+msgstr "例"
 
 msgid "Exclude me from the website until"
 msgstr "特定日まで利用禁止（日時単位）"
@@ -1643,26 +1729,26 @@ msgstr "特定日まで利用禁止（日時単位）"
 msgid "Exit Spot"
 msgstr "終値"
 
-msgid "Exit Spot Time"
-msgstr ""
-
 msgid "Exit spot"
 msgstr "終値"
 
 msgid "Expiry price"
-msgstr ""
+msgstr "終値"
 
 msgid "Explanation"
 msgstr "取引概要"
 
 msgid "Exponential Moving Average (EMA)"
-msgstr ""
+msgstr "指数移動平均（EMA）"
+
+msgid "Failed to update the password"
+msgstr "パスワードの変更に失敗しました"
 
 msgid "Fall"
 msgstr "Fall"
 
 msgid "Falling markets"
-msgstr ""
+msgstr "下降市場"
 
 msgid "Family name"
 msgstr "氏名(全角)"
@@ -1689,6 +1775,9 @@ msgid ""
 "we have the most competitive and comprehensive digital options platform "
 "available to the retail public"
 msgstr ""
+"創業１５年を迎えてもなお、当社は進化と成長を続けることで顧客目線の新たなサービスの提供に注力しています。短期間でのタッチ/ノータッチ・トレードの提供と新し"
+"いチャートアプリケーションを開発。個人向けのオプション取引にて他の追従を許さない、かつ理解しやすいシステムを提供しているという確かな自信と共にサービスを提"
+"供します。"
 
 msgid "Final Price"
 msgstr "最終価格"
@@ -1699,23 +1788,20 @@ msgstr "最終価格"
 msgid "Finance"
 msgstr "金融"
 
-msgid "Financial Information"
-msgstr ""
+msgid "Financial Account Opening form"
+msgstr "口座開設申請フォーム"
 
 msgid "Financial Security"
-msgstr ""
+msgstr "金融セキュリティ"
 
 msgid "Financial information"
 msgstr "金融情報"
 
 msgid "Financial rewards"
-msgstr ""
+msgstr "報酬"
 
 msgid "Firefox"
 msgstr "Firefox"
-
-msgid "First line of home address"
-msgstr ""
 
 msgid "First name"
 msgstr "名前（名）"
@@ -1723,19 +1809,21 @@ msgstr "名前（名）"
 msgid ""
 "First, you need to set the parameters of your trade. Here's what you need to "
 "consider"
-msgstr ""
+msgstr "まず初めにお取引のパラメータを設定します。設定すべき要素は下記の通りです。"
 
 msgid "Flexibility"
-msgstr ""
+msgstr "柔軟性"
 
 msgid ""
 "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds "
 "Financial Trading Provider' by Shares Magazine UK. It's the last time we win "
 "it because Shares Magazine stops awarding in this category"
 msgstr ""
+"３年連続でBetOnMarkets.comは、Shares Magazine "
+"UKから「最優秀な固定オッズ金融取引業者」を認定されてきましたが、同誌がこの分野への授与を中止したため、これが当社が同賞を受賞する最後の年になります。"
 
 msgid "Forex"
-msgstr ""
+msgstr "外国為替"
 
 msgid "Forex trading experience"
 msgstr "外国為替取引のご経験"
@@ -1744,10 +1832,10 @@ msgid "Forex trading frequency"
 msgstr "外国為替取引の頻度"
 
 msgid "Founded October 1999"
-msgstr ""
+msgstr "1999年10月に創立"
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "フラクタル（FRACTAL）"
 
 msgid ""
 "Fractals are indicators on candlestick charts that identify reversal points "
@@ -1755,6 +1843,8 @@ msgid ""
 "in which the price will develop. A fractal will form when a particular price "
 "pattern happens on a chart"
 msgstr ""
+"フラクタルは市場での反転ポイントを表示する、ローソク足チャートのインジケーターです。価格が変動する方向を判断するのによく用いられます。フラクタルはチャート"
+"で起こる特定のパターンを形にします。"
 
 msgid "Fri"
 msgstr "金曜日"
@@ -1769,22 +1859,24 @@ msgid "Further instructions"
 msgstr "詳細説明"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid ""
 "GMT stands for Greenwich Mean Time, the official time used in the UK during "
 "winter. In summer, the UK changes to British Summer Time, which is GMT + 1 "
 "hour. All times on the Binary.com site use GMT all year round"
 msgstr ""
+"グリニッジ標準時とは、イギリスの冬時間を示します。イギリスの夏時間はグリニッジ標準時に１時間プラスされGMT+１と表記されます。%1サイトの時間は全てGM"
+"Tで表記されます。"
 
 msgid "Get your price"
-msgstr ""
+msgstr "価格を確認"
 
 msgid "Goes out"
 msgstr "BREAK-OUT"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "トウバ（CDLGRAVESTONEDOJI）"
 
 msgid "Gray"
 msgstr "グレー"
@@ -1796,34 +1888,31 @@ msgid "Grid Light"
 msgstr "グリッド ライト"
 
 msgid "Group History"
-msgstr ""
+msgstr "グループの沿革"
 
 msgid "HIGH"
 msgstr "HIGH"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "ハンマー（CDLHAMMER）"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "首吊り線（CDLHANGINGMAN）"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr ""
+msgstr "ハラミ・クロス・パターン（CDLHARAMICROSS）"
 
 msgid "Harami Pattern (CDLHARAMI)"
-msgstr ""
+msgstr "はらみ線（CDLHARAMI）"
+
+msgid "Have better luck at trading!"
+msgstr "お取引に幸あれ！"
 
 msgid "Health"
 msgstr "健全度"
 
 msgid "Help"
-msgstr ""
-
-msgid "High"
-msgstr ""
-
-msgid "High Barrier"
-msgstr "高限バリア"
+msgstr "ヘルプ"
 
 msgid "High Price"
 msgstr "高値"
@@ -1835,58 +1924,64 @@ msgid "High barrier offset"
 msgstr "上限追加バリア値"
 
 msgid "High returns"
-msgstr ""
+msgstr "ハイリターン"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "高波ロウソク足（CDLHIGHWAVE）"
 
 msgid "Higher"
 msgstr "HIGH"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "ラダーHIGH/ラダーLOW"
 
 msgid "Higher/Lower trades"
-msgstr ""
+msgstr "HIGH/LOW・トレード"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
-msgstr ""
+msgstr "ひっかけパターン（CDLHIKKAKE）"
 
 msgid "Home Address"
 msgstr "現住所"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
+msgstr "伝書鳩（CDLHOMINGPIGEON）"
+
+msgid "Horizontal Line"
+msgstr "水平線"
 
 msgid "Horizontal line"
 msgstr "水平線"
+
+msgid "Hour"
+msgstr "時間"
 
 msgid "Hours"
 msgstr "時間"
 
 msgid "How do I fund my account?"
-msgstr ""
+msgstr "どうやって口座に入金できますか？"
 
 msgid "How does Binary.com make money?"
-msgstr ""
+msgstr "御社はどのようにして利益を得ているのですか？"
 
 msgid "How safe is my money with Binary.com?"
-msgstr ""
+msgstr "わたしの資金はBinary.comでどのように保管されていますか？"
 
 msgid "How soon can I start trading?"
-msgstr ""
+msgstr "口座開設の所要時間は？"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "バイナリーオプションの取引方法は？"
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "ハル移動平均（HMA）"
 
 msgid "I have read and agree to Binary.com"
 msgstr "よく読んだうえで、Binary.comに同意します"
 
 msgid "I'm new to binaries, where do I start?"
-msgstr ""
+msgstr "バイナリー取引未経験者です。どうしたら取引を開始できますか？"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "重要な免責事項"
@@ -1908,10 +2003,13 @@ msgstr ""
 "も、お客さまと決済サービス会社の間で生じた処理への責任は負いません。"
 
 msgid "Ideal for both pros and novices"
-msgstr ""
+msgstr "初心者にもプロにも最適"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
+msgstr "同三羽カラス（CDLIDENTICAL3CROWS）"
+
+msgid "If the issue keeps happening, please contact"
+msgstr "問題が解決されないようでしたら、〜までご連絡ください"
 
 msgid "If you select a"
 msgstr "xxxを選択した場合"
@@ -1925,9 +2023,11 @@ msgid ""
 "minimum stakes, you'll soon learn how to trade with skill and confidence. "
 "And if you have any questions, you're free to access"
 msgstr ""
+"個人投資家の方はバイナリーオプション取引の簡潔性、柔軟性、そして限定されたリスクにメリットを見い出されることでしょう。当社では少額取引も提供しておりますの"
+"で、お気軽に取引スキルの向上にチャレンジいただけます。ご不明な点がございましたらお気軽にお問い合わせください。"
 
 msgid "In April"
-msgstr ""
+msgstr "4月に"
 
 msgid ""
 "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or "
@@ -1955,6 +2055,7 @@ msgid ""
 "from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund "
 "management company"
 msgstr ""
+"1999年10月、Regent Marketsは香港のファンドマネジメント企業のRegent Pacific Groupより2億USDの投資を受けました。"
 
 msgid ""
 "In a downtrend, one small short body candlestick has a long lower shadow at "
@@ -1992,6 +2093,8 @@ msgid ""
 "trader selects Rise in the EUR/USD market, they are predicting that the "
 "value of the Euro will rise in relation to the value of the US dollar"
 msgstr ""
+"外国為替市場では、任意の通貨が特定の通貨に対する価格の変化の予測に基づくトレードを実施できます。例えば、EUR/USD市場が上昇すると予測した場合は、米ド"
+"ルに対してユーロの価値が上がると予測したことになります。"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -2022,15 +2125,20 @@ msgid ""
 "trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In "
 "the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr ""
+"英国とマン島の居住者は、Binary (IOM) Ltd.の下に口座開設されます。日本の方はBinary株式会社 (和文名称 "
+"バイナリー株式会社)を通してのお取引となり、英国をのぞく欧州連合では、Binary (Europe) Ltd.とBinary Investments "
+"(Europe) Ltd.を介します。英国を除く欧州連合の居住者は、Binary (Europe) LtdとBinary Investments "
+"(Europe) Ltd.の下に口座を開設されます。その他以外の国は、Binary Investments (Europe) "
+"Ltd.の下に口座開設されます。"
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "入り首線（CDLINNECK）"
 
 msgid "In/Out"
 msgstr "In/Out"
 
 msgid "In/Out trades"
-msgstr ""
+msgstr "レンジ トレード"
 
 msgid "Income Source"
 msgstr "収入源"
@@ -2042,7 +2150,7 @@ msgid "Indicators"
 msgstr "指標（英語表示のみ）"
 
 msgid "Indices"
-msgstr ""
+msgstr "インデックス"
 
 msgid "Indices trading experience"
 msgstr "インデックス取引のご経験"
@@ -2051,16 +2159,16 @@ msgid "Indices trading frequency"
 msgstr "インデックス取引の頻度"
 
 msgid "Individual Traders"
-msgstr ""
+msgstr "個人投資家"
 
 msgid "Industry of Employment"
 msgstr "雇用産業"
 
 msgid "Instant access"
-msgstr ""
+msgstr "インスタントアクセス"
 
 msgid "Instant funding"
-msgstr ""
+msgstr "素早い入金対応"
 
 msgid "Instrument"
 msgstr "商品"
@@ -2069,14 +2177,14 @@ msgid "Instruments"
 msgstr "商品"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
-msgstr ""
+msgstr "トンカチ"
 
 msgid "Investments & Dividends"
 msgstr "投資と配当"
 
 msgid ""
 "Is it possible to deposit the same funds through different payment methods?"
-msgstr ""
+msgstr "他の支払い方法で同じ資金の入金はできますか？"
 
 msgid ""
 "It has a long white candle, followed by another that opens above the first "
@@ -2089,12 +2197,12 @@ msgid ""
 "It is sometimes possible to sell an option before the expiry of a trade, but "
 "only if a fair price can be determined. If this option is available, you "
 "will see a blue 'Sell' button next to your trade in the portfolio"
-msgstr ""
+msgstr "お客さまは保有しているポジションを公正な価格でいつでも転売することができます。"
 
 msgid ""
 "It's time to expand. We set up a programming center in Cyberjaya - the "
 "Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
-msgstr ""
+msgstr "BetOnMarkets.comの機能性強化とサービス向上を目的とし、マレーシアのシリコンバレーと称されるサイバージャヤに開発センターを開設。"
 
 msgid "Jan"
 msgstr "1月"
@@ -2108,6 +2216,9 @@ msgstr "7月"
 msgid "July"
 msgstr "7月"
 
+msgid "Jump to"
+msgstr "xxxへ移動する"
+
 msgid "Jun"
 msgstr "6月"
 
@@ -2118,17 +2229,18 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "表示されるページの 承認 ボタンをクリックしてください"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "カウフマン適応移動平均（KAMA）"
 
 msgid "Key facts"
-msgstr ""
+msgstr "グループ会社概要"
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "足蹴り（CDLKICKING）"
 
 msgid ""
 "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
 msgstr ""
+"Kicking – bull/bear determined by the longer marubozu（CDLKICKINGBYLENGTH）"
 
 msgid ""
 "Kicking patterns on a candlestick chart are formed when there are two long "
@@ -2147,25 +2259,25 @@ msgid ""
 msgstr ""
 
 msgid "Known risks"
-msgstr ""
+msgstr "既知のリスク"
 
 msgid "Kuala Lumpur Office"
-msgstr ""
+msgstr "クアラルンプール（マレーシア）"
 
 msgid "LOW"
 msgstr "LOW"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "梯子下（CDLLADDERBOTTOM）"
 
 msgid "Last used"
 msgstr "最後に使用したもの"
 
 msgid "Learning to trade"
-msgstr ""
+msgstr "トレードの練習"
 
 msgid "Least Squares Moving Average (LSMA)"
-msgstr ""
+msgstr "移動最小二乗近似（LSMA）"
 
 msgid "Less than"
 msgstr "未満"
@@ -2180,12 +2292,12 @@ msgid "Level of Education"
 msgstr "能力レベル"
 
 msgid "Levels"
-msgstr ""
+msgstr "レベル"
 
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
 "Ireland, and Japan"
-msgstr ""
+msgstr "マルタ、英国、マン島、アイルランド、日本では、監督機関による監査を受けながら発行ライセンスを保持。"
 
 msgid ""
 "Like the EMA, the LWMA assigns more meaning to the recent prices and less to "
@@ -2200,7 +2312,7 @@ msgid "Line Dot"
 msgstr "ラインドット"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
-msgstr ""
+msgstr "線形加重移動平均（LWMA）"
 
 msgid "Link"
 msgstr "リンク"
@@ -2251,7 +2363,7 @@ msgid "Loading custom theme configuration"
 msgstr "カスタムテーマの設定を読込み中"
 
 msgid "Loading help docs"
-msgstr ""
+msgstr "ヘルプドキュメントを読み込み中"
 
 msgid "Loading portfolio"
 msgstr "ポートフォリオを読込み中"
@@ -2272,10 +2384,10 @@ msgid "Logout"
 msgstr "ログアウト"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "長い足の十字（CDLLONGLEGGEDDOJI）"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "長い線のロウソク足（CDLLONGLINE）"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2309,12 +2421,6 @@ msgid ""
 "candle but closes above first bar's open"
 msgstr ""
 
-msgid "Low"
-msgstr ""
-
-msgid "Low Barrier"
-msgstr "下限バリア"
-
 msgid "Low Price"
 msgstr "安値"
 
@@ -2325,7 +2431,7 @@ msgid "Low barrier offset"
 msgstr "下限追加バリア値"
 
 msgid "Low minimum stakes"
-msgstr ""
+msgstr "最低取引金額"
 
 msgid "Lower"
 msgstr "LOW"
@@ -2337,7 +2443,7 @@ msgid ""
 msgstr ""
 
 msgid "MENA FFXPO Award"
-msgstr ""
+msgstr "MENA FFXPO 賞を受賞"
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -2353,7 +2459,7 @@ msgstr ""
 "望の支払方法でお客様のアカウントへ送金します。"
 
 msgid "Make your trade"
-msgstr ""
+msgstr "取引を実行しましょう。"
 
 msgid "Mar"
 msgstr "3月"
@@ -2362,28 +2468,28 @@ msgid "March"
 msgstr "3月"
 
 msgid "Market Professionals"
-msgstr ""
+msgstr "市場のプロ投資家"
 
 msgid "Market exit price"
-msgstr ""
+msgstr "市場出口価格"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "丸坊主（CDLMARUBOZU）"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "マスインデックス（MASS）"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "マット・ホールド（CDLMATHOLD）"
 
 msgid "Matches"
 msgstr "MATCHE"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
-msgstr ""
+msgstr "Matching Low （CDLMATCHINGLOW）"
 
 msgid "Maximum (MAX)"
-msgstr ""
+msgstr "特定期間の最高値（MAX）"
 
 msgid "Maximum account cash balance"
 msgstr "口座預託額の上限額"
@@ -2419,31 +2525,25 @@ msgid "Memorable town/city"
 msgstr "思い出のある都市／街の名前"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
-msgstr ""
+msgstr "メサ適応移動平均（MAMA）"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "特定期間の最安値（MIN）"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "数字を含む6文字以上でご入力ください"
 
-msgid "Minimum of 2 characters required"
-msgstr ""
-
-msgid "Minimum of 4 characters required"
-msgstr ""
-
-msgid "Minimum of 6 characters required"
-msgstr ""
-
 msgid "Minimum price over selected period"
-msgstr ""
+msgstr "特定期間の最安値"
 
 msgid "Minus the agent's commission"
 msgstr "決済サービスの手数料を引く"
+
+msgid "Minute"
+msgstr "分"
 
 msgid "Minutes"
 msgstr "分"
@@ -2452,10 +2552,10 @@ msgid "Miss"
 msgstr "Miss"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "モメンタム（MOM）"
 
 msgid "Momentum Indicators"
-msgstr ""
+msgstr "モメンタム・インジケーター"
 
 msgid "Mon"
 msgstr "月曜日"
@@ -2464,16 +2564,16 @@ msgid "Monday"
 msgstr "月曜日"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
-msgstr ""
+msgstr "明けの明星（CDLMORNINGDOJISTAR）"
 
 msgid "Morning Star (CDLMORNINGSTAR)"
-msgstr ""
+msgstr "Morning Star（CDLMORNINGSTAR）"
 
 msgid "Mother's maiden name"
 msgstr "母親の旧姓"
 
 msgid "Moving Average Convergence/Divergence (MACD)"
-msgstr ""
+msgstr "移動平均収束拡散法（MACD）"
 
 msgid "Mr"
 msgstr "Mr"
@@ -2524,26 +2624,26 @@ msgid "No"
 msgstr "いいえ"
 
 msgid "No Touch trades"
-msgstr ""
+msgstr "NO-TOUCHトレード"
 
 msgid ""
 "No matter the market - rising or falling, quiet or volatile - you'll find a "
 "trade to suit your outlook"
-msgstr ""
+msgstr "あらゆる市場状況に対応 - 上昇、下降、閑散、ボラタイルなどあなたの見通しに合った取引を見つけられます"
 
 msgid "No surprises"
-msgstr ""
+msgstr "当然"
 
 msgid "No touch"
 msgstr "NO-TOUCH"
 
 msgid "Normalized Average True Range (NATR)"
-msgstr ""
+msgstr "正規化ATR（NATR）"
 
 msgid ""
 "Normalized Average True Range (NATR) attempts to normalize the average true "
 "range values across instruments by using the formula below"
-msgstr ""
+msgstr "正規化ATR（NATR）は次の計算式を利用して、計測器のアベレージ・トゥルー・レンジ値の正規化を行います"
 
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
@@ -2574,7 +2674,7 @@ msgid "OPEN"
 msgstr "OPEN"
 
 msgid "Occupation"
-msgstr ""
+msgstr "職業"
 
 msgid "Oct"
 msgstr "10月"
@@ -2586,7 +2686,7 @@ msgid "Odd"
 msgstr "奇数"
 
 msgid "Offices in Malta, Malaysia and Japan"
-msgstr ""
+msgstr "マルタ、マレーシア、日本にオフィスを構えています"
 
 msgid "Ok"
 msgstr "Ok"
@@ -2600,7 +2700,7 @@ msgstr ""
 "まには適していないと思います。"
 
 msgid "On-Neck Pattern (CDLONNECK)"
-msgstr ""
+msgstr "あて首線（CDLONNECK）"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "上限額に達した場合、入金頂くことができません。"
@@ -2614,27 +2714,14 @@ msgid ""
 "secure online trading for novice and expert traders. At this time, our "
 "website has received over 15 million trades"
 msgstr ""
-
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+"サービス開始からわずか5年にて、当社のオンライントレードサービスに対しこのような主要な賞を受賞。この賞では、BetOnMarkets.com’が信頼できる"
+"迅速で安全なオンライントレードの機会をトレード初心者をはじめ、上級者にも提供していることが評価され、この時点で当社の口座数は1,500万以上となりました。"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr ""
+msgstr "文字、数字、スペース、ピリオド、カンマ、ダッシュ（-）のみご利用いただけます"
 
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
-
-msgid "Only numbers and space are allowed"
-msgstr ""
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgid "Oops... Page Not Available"
+msgstr "ページをご利用いただくことができません"
 
 msgid "Open"
 msgstr "Open"
@@ -2652,7 +2739,7 @@ msgid "Open account"
 msgstr "口座開設"
 
 msgid "Opening an account"
-msgstr ""
+msgstr "口座開設"
 
 msgid "Opens"
 msgstr "取引開始時間"
@@ -2668,6 +2755,9 @@ msgstr ""
 "オプション取引は依存性があります。依存を防ぐために、当社ではお客様のお取引や"
 "口座の概要を定期的に提供するリアリティチェックを行っています"
 
+msgid "Optional field, within 20 characters and may not contain '+'"
+msgstr "任意の項目は、20字以内で'+'を含めないようにしてください"
+
 msgid "Other"
 msgstr "その他"
 
@@ -2680,29 +2770,29 @@ msgstr "その他金融商品取引の頻度"
 msgid ""
 "Our company continues to thrive and obtains a license in the Isle of Man to "
 "better service our UK clients"
-msgstr ""
+msgstr "英国居住者へのサービスを向上を目指し、マン島に法人を設立し、ライセンスを取得。"
 
 msgid ""
 "Our customers clearly like us. In mid-2014, Binary.com has over 100 million "
 "historical transactions and over 130,000 new daily transactions"
-msgstr ""
+msgstr "顧客からの高い評価を得て、２０１４年の中頃には累計で１億件の取引を達成し、１３万件以上の新たな取引が日々行われています。"
 
 msgid ""
 "Our fast organic growth is supplemented by the acquisition of the client "
 "base of BetsForTraders, one of our main competitors"
-msgstr ""
+msgstr "当社の競合相手であったBetsForTraders社の顧客を獲得し、組織として成長していきます。"
 
 msgid "Over"
 msgstr "オーバー"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "世界中で100万口座以上"
 
 msgid "Over 3 years"
 msgstr "3年以上"
 
 msgid "Over 90 staff and contractors worldwide"
-msgstr ""
+msgstr "世界中で90人を超えるスタッフと請負業者"
 
 msgid "Overlap Studies"
 msgstr ""
@@ -2710,20 +2800,38 @@ msgstr ""
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PM"
+msgstr "PM"
+
 msgid "PNG"
 msgstr "PNG"
 
+msgid "Page Not Found"
+msgstr "ページが存在しません"
+
 msgid "Parabolic SAR (SAR)"
-msgstr ""
+msgstr "パラボリックSAR（SAR）"
+
+msgid "Password must be 6 characters minimum"
+msgstr "パスワードは6文字以上でご入力ください"
+
+msgid "Password must contain lower and uppercase letters with numbers"
+msgstr "パスワードには大文字と小文字を含む英字と数字を組み合わせてください"
+
+msgid "Password must contain uppercase letters and numbers"
+msgstr "パスワードに大文字の英字と数字を含めてください"
+
+msgid "Password successfully updated"
+msgstr "パスワードは正常に変更されました"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "パスワードが一致しませんでした。再度お試しください。"
 
 msgid "Patented technology"
-msgstr ""
+msgstr "特許技術"
 
 msgid "Pattern Recognition"
-msgstr ""
+msgstr "パターン認識"
 
 msgid "Payment agent"
 msgstr "決済サービス"
@@ -2732,7 +2840,7 @@ msgid "Payment agents"
 msgstr "決済サービス"
 
 msgid "Payment options"
-msgstr ""
+msgstr "決済オプション"
 
 msgid "Payments"
 msgstr "アフィリエイト報酬の支払いについて"
@@ -2744,7 +2852,7 @@ msgid "Pension"
 msgstr "年金"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "パーセント・プライス・オシレーター（PPO）"
 
 msgid "Permissions"
 msgstr "アクセス許可"
@@ -2756,21 +2864,21 @@ msgid "Phone"
 msgstr "電話番号"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "差し込み線（CDLPIERCING）"
 
 msgid "Pip"
-msgstr ""
+msgstr "Pip"
 
 msgid ""
 "Pip stands for 'percentage in point' which is generally the fourth decimal "
 "place (i.e. 0.0001)"
-msgstr ""
-
-msgid "Place of birth"
-msgstr ""
+msgstr "Pipとは ‘percentage in point’の略語であり、通常は小数第４位の値を示します。例）0.0001"
 
 msgid "Please"
 msgstr "どうぞ"
+
+msgid "Please answer to secret question, within 4-50 characters"
+msgstr "4-50文字以内で、秘密の質問にお答えください"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "ご希望の取引通貨を選択してください"
@@ -2778,11 +2886,17 @@ msgstr "ご希望の取引通貨を選択してください"
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "送金を完了するために、下記詳細をご確認ください"
 
+msgid "Please enter a number between"
+msgstr "XXX間の数字をご入力ください"
+
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "有効な日付をご入力ください（年月日）"
 
-msgid "Please enter a value greater than 0"
-msgstr ""
+msgid "Please enter a value for"
+msgstr "XXXの値をご入力ください"
+
+msgid "Please enter a vlaid phone number"
+msgstr "有効な電話番号をご入力ください"
 
 msgid "Please enter correct email"
 msgstr "正しいメールアドレスをご入力ください"
@@ -2790,8 +2904,14 @@ msgstr "正しいメールアドレスをご入力ください"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "年月日の順で日付をご入力ください"
 
+msgid "Please enter the verification code sent to your email"
+msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
+
 msgid "Please enter time in the format HH:MM"
 msgstr "時刻の形式をHH:MMで入力してください"
+
+msgid "Please enter your city address"
+msgstr "市区町村をご入力ください"
 
 msgid "Please enter your current password"
 msgstr "現在のパスワードをご入力ください"
@@ -2799,24 +2919,39 @@ msgstr "現在のパスワードをご入力ください"
 msgid "Please enter your email"
 msgstr "メールアドレスをご入力ください"
 
+msgid "Please enter your family name"
+msgstr "氏名（姓）をご入力ください"
+
+msgid "Please enter your first name"
+msgstr "氏名（名）をご入力ください"
+
+msgid "Please enter your new password"
+msgstr "新しいパスワードをご入力ください"
+
+msgid "Please enter your password"
+msgstr "パスワードをご入力ください"
+
+msgid "Please enter your phone number"
+msgstr "電話番号をご入力ください"
+
+msgid "Please enter your street address"
+msgstr "番地をご入力ください"
+
 msgid "Please input correct token"
-msgstr ""
+msgstr "正しいトークンをご入力ください"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr ""
 "いずれかのブラウザをご利用の方は最新バージョンをインストールしてください"
 
-msgid "Please provide your tax information"
-msgstr ""
-
 msgid "Please select"
 msgstr "選択してください"
 
-msgid "Please submit a valid verification token"
-msgstr ""
-
 msgid "Please try again after 1 minute"
 msgstr "1分後に再度お試しください"
+
+msgid "Please use your new password to login"
+msgstr "新しいパスワードでログインをしてください"
 
 msgid "Plot"
 msgstr "プロット"
@@ -2845,7 +2980,7 @@ msgstr "期待利益"
 msgid ""
 "Potential profit and losses are limited to stop profit and stop loss levels "
 "respectively"
-msgstr ""
+msgstr "潜在利益と損失は、それぞれ利益ストップと損切りレベルで制限されます。"
 
 msgid "Pre-Defined"
 msgstr "所定の"
@@ -2856,11 +2991,8 @@ msgstr "好ましいリアリティチェック実施間隔"
 msgid "Press Create token button on the right to create your first token"
 msgstr "最初のトークンを作成するには、右の トークン作成 ボタンを押してください"
 
-msgid "Price"
-msgstr "価格"
-
 msgid "Price Transformation"
-msgstr ""
+msgstr "価格変換"
 
 msgid ""
 "Price forms three black candles, each with lower closes, in a downward price "
@@ -2870,7 +3002,7 @@ msgid ""
 msgstr ""
 
 msgid "Price the trade"
-msgstr ""
+msgstr "トレード価格"
 
 msgid ""
 "Price trends downward into the start of the pattern, a tall black candle. "
@@ -2889,6 +3021,9 @@ msgstr "チャートを印刷"
 msgid "Profit"
 msgstr "利益"
 
+msgid "Profit Table"
+msgstr "取引明細"
+
 msgid "Profit table"
 msgstr "取引明細"
 
@@ -2902,6 +3037,8 @@ msgid ""
 "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, "
 "Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr ""
+"ライブチャットは英語、インドネシア語、中国語、ポーランド語、ドイツ語、フランス語、スペイン語、ポルトガル語、イタリア語、ロシア語、タイ語の11ヵ国語で対応"
+"。（日本語は、現在対応しておりません。）"
 
 msgid "Purchase"
 msgstr "購入"
@@ -2913,37 +3050,48 @@ msgid "Purchase Price"
 msgstr "購入金額"
 
 msgid "Quiet markets"
-msgstr ""
+msgstr "閑散市場"
 
 msgid "Rate Of Change (ROC)"
-msgstr ""
+msgstr "変化率（ROC）"
 
 msgid "Rate Of Change Percentage (ROCP)"
-msgstr ""
+msgstr "Rate Of Change Percentage（ROCP）"
 
 msgid "Rate Of Change Ratio (ROCR)"
-msgstr ""
+msgstr "Rate Of Change Ratio （ROCR）"
 
 msgid "Read"
 msgstr "読む"
 
+msgid "Real Money Account Opening"
+msgstr "リアル口座開設"
+
+msgid "Reality check"
+msgstr "リアリティチェック"
+
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
-msgstr ""
+msgstr "資金を安全に保管しているため、安心してバイナリー取引を行ってください"
+
+msgid "Redirecting to oauth login page"
+msgstr "OAuthログインページヘリダイレクト"
 
 msgid "Ref"
 msgstr "参照"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
-msgstr ""
+msgstr "Regent Markets Group LimitedはBinary Ltd.に会社名変更"
 
 msgid ""
 "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and "
 "website branding throughout the organisation"
 msgstr ""
+"Regent Markets Group Ltd.からBinary "
+"Ltd.に会社名変更することで、当社とウェブサイトのブランディングの調和を組織的にもたらしました。"
 
 msgid "Regent Markets acquires BetsForTraders client base"
-msgstr ""
+msgstr "BetsForTradersをRegent Marketsに統合"
 
 msgid ""
 "Regent Markets files for a patent in March 2000 on the basis of our unique "
@@ -2951,46 +3099,51 @@ msgid ""
 "financial betting. In May, we register the trading name BetOnMarkets and "
 "move to Malta to receive an internet betting licence"
 msgstr ""
+"2000年3月に固定オッズ業界での独自のポジションを明確にするため、取引技術の特許を申請。5月にオンライントレードサービスをBetOnMarkets.co"
+"mに変更。本社をマルタ共和国に移転し、インターネット上のベッティング免許を取得。"
 
 msgid ""
 "Regent Markets files for patent, and registers BetOnMarkets trading name"
-msgstr ""
+msgstr "Regent Marketsは特許取得を申請し、BetOnMarketsを商標登録"
 
 msgid "Regent Markets granted US patent for 'Betting system and method'"
-msgstr ""
+msgstr "Regent Marketsは、「トレードシステムと手法」に関する米国特許を取得"
 
 msgid "Regent Markets granted two new US patents"
-msgstr ""
+msgstr "Regent Marketsは新たに２点の米国特許を取得"
 
 msgid "Regent Markets is founded by Jean-Yves Sireau"
-msgstr ""
+msgstr "ン・イヴス・シローがRegent Marketsを創立"
 
 msgid "Regent Markets obtains a licence in the Isle of Man"
-msgstr ""
+msgstr "Regent Marketsはマン島The Gambling Supervision Commissionからライセンスを取得"
 
 msgid ""
 "Regent Markets receives funding to provide on-line financial betting services"
-msgstr ""
+msgstr "Regent Marketsはオンライン上のトレードシステム開始のため、融資を受ける"
 
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
-msgstr ""
+msgstr "Regent Marketsは、サイバージャヤ（マレーシア）に開発センターを設立"
 
 msgid ""
 "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of "
 "Binary.com"
-msgstr ""
+msgstr "Regent Pacific Group Ltd はBinary.comの大株主でり、香港取引所で上場している企業です"
 
 msgid "Regent Pacific transaction"
-msgstr ""
+msgstr "Regent Pacific株式売却"
 
 msgid "Register free account"
 msgstr "無料口座に登録"
 
-msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgid "Registration"
+msgstr "登録"
 
-msgid "Remove"
-msgstr ""
+msgid "Relative Strength Index (RSI)"
+msgstr "相対力指数（RSI）"
+
+msgid "Reloading page"
+msgstr "ページを再度読み込む"
 
 msgid "Remove Selected"
 msgstr "選択項目を削除"
@@ -3002,7 +3155,10 @@ msgid "Repeat password"
 msgstr "パスワード再入力"
 
 msgid "Resale price"
-msgstr ""
+msgstr "売却価格"
+
+msgid "Reset to Defaults"
+msgstr "既定にリセット"
 
 msgid "Reset zoom"
 msgstr "ズームをリセット"
@@ -3022,23 +3178,26 @@ msgstr "結果"
 msgid "Return"
 msgstr "リターン率"
 
+msgid "Return to trading page"
+msgstr "トレードページに戻る"
+
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "無法松の一生（CDLRICKSHAWMAN）"
 
 msgid "Rise"
 msgstr "RISE"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "ラダー"
 
 msgid "Rise/Fall trades"
-msgstr ""
+msgstr "ラダートレード"
 
 msgid "Rising markets"
-msgstr ""
+msgstr "上昇市場"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "上昇/下降スリーメソッド（CDLRISEFALL3METHODS）"
 
 msgid "SMA"
 msgstr "SMA"
@@ -3077,10 +3236,7 @@ msgid "Save changes"
 msgstr "変更が保存されました"
 
 msgid "Scalable trading"
-msgstr ""
-
-msgid "Second line of home address"
-msgstr ""
+msgstr "スケーラブルな取引"
 
 msgid "Secondary"
 msgstr "第二"
@@ -3103,8 +3259,20 @@ msgstr "取引制限"
 msgid "Sell At Market"
 msgstr "売却"
 
+msgid "Sell Price"
+msgstr "売却"
+
+msgid "Sell Spot"
+msgstr "売却レート"
+
+msgid "Sell Time"
+msgstr "売却時間"
+
 msgid "Sell option"
-msgstr ""
+msgstr "オプションの売却"
+
+msgid "Send to account #"
+msgstr "口座 #へ送金"
 
 msgid "Sent to account"
 msgstr "口座に送金"
@@ -3113,7 +3281,7 @@ msgid "Sep"
 msgstr "9月"
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
-msgstr ""
+msgstr "分離ライン（CDLSEPARATINGLINES）"
 
 msgid "September"
 msgstr "9月"
@@ -3125,7 +3293,7 @@ msgid "Session duration limit, in minutes"
 msgstr "取引継続時間の制限(分単位)"
 
 msgid "Set your probability of winning"
-msgstr ""
+msgstr "条件達成率を設定してください"
 
 msgid "Settles"
 msgstr "約定時間"
@@ -3137,10 +3305,10 @@ msgid "Share chart"
 msgstr "チャートを共有"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
-msgstr ""
+msgstr "流れ星（CDLSHOOTINGSTAR）"
 
 msgid "Short to long-term"
-msgstr ""
+msgstr "短期から長期のお取引"
 
 msgid "Short-term action"
 msgstr ""
@@ -3161,25 +3329,28 @@ msgid ""
 msgstr ""
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "単純移動平均（SMA）"
 
 msgid "Simplicity"
-msgstr ""
+msgstr "簡潔"
 
 msgid "Smoothed Moving Average (SMMA)"
-msgstr ""
+msgstr "平滑移動平均（SMMA）"
 
 msgid "Sold"
 msgstr "売却"
 
+msgid "Some random index"
+msgstr "スローランダムインデックス"
+
 msgid "Spinning Top (CDLSPINNINGTOP)"
-msgstr ""
+msgstr "コマ（CDLSPINNINGTOP）"
 
 msgid "Spline"
 msgstr "スプライン"
 
 msgid "Spot price"
-msgstr ""
+msgstr "スポット価格"
 
 msgid "Spreads"
 msgstr "スプレッド"
@@ -3194,10 +3365,10 @@ msgid "Stake"
 msgstr "購入価格"
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
-msgstr ""
+msgstr "失速パターン（CDLSTALLEDPATTERN）"
 
 msgid "Standard Deviation (STDDEV)"
-msgstr ""
+msgstr "標準偏差（STDDEV）"
 
 msgid ""
 "Standard Deviation is a statistical calculation used to measure the "
@@ -3226,13 +3397,13 @@ msgid "Statement"
 msgstr "口座残高"
 
 msgid "Statistical Functions"
-msgstr ""
+msgstr "統計関数"
 
 msgid "Status"
 msgstr "金融資産"
 
 msgid "Stays Between/Goes Outside trades"
-msgstr ""
+msgstr "STAY-IN/BREAK-OUT トレード"
 
 msgid "Stays In/Goes Out"
 msgstr "STAY-IN/BREAK-OUT"
@@ -3241,39 +3412,39 @@ msgid "Stays in"
 msgstr "STAY-IN"
 
 msgid "Step 1: Define your position"
-msgstr ""
+msgstr "ステップ１：ポジションの選択"
 
 msgid "Step 2: Get your trade price"
-msgstr ""
+msgstr "ステップ２：価格情報を入手"
 
 msgid "Step 3: Make your trade"
-msgstr ""
+msgstr "ステップ３：取引を実行"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "スティックサンド（CDLSTICKSANDWICH）"
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "ストキャスティクス（STOCH）"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "ストキャスティクス・ファースト（STOCHF）"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
-msgstr ""
+msgstr "ストキャスティクス・相対力指数（STOCHRSI）"
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr ""
+msgstr "スローストキャスティック（STOCHS）"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "株価指数"
 
 msgid "Stock indices"
-msgstr ""
+msgstr "株価指数"
 
 msgid ""
 "Stock market indices measure the value of a selection of companies in the "
 "stock market"
-msgstr ""
+msgstr "株式市場インデックスは、株式市場での企業の選択値を測定します。"
 
 msgid "Stocks trading experience"
 msgstr "株取引の経験"
@@ -3296,8 +3467,14 @@ msgstr "利益ストップ"
 msgid "Stop-type"
 msgstr "ストップタイプ"
 
+msgid "Street address"
+msgstr "番地"
+
 msgid "Stroke"
 msgstr "ストローク"
+
+msgid "Stroke color"
+msgstr "ストロークカラー"
 
 msgid "Stroke width"
 msgstr "ストローク幅"
@@ -3306,7 +3483,7 @@ msgid "Submit"
 msgstr "送信"
 
 msgid "Summation (SUM)"
-msgstr ""
+msgstr "総和（SUM）"
 
 msgid "Sun"
 msgstr "日曜日"
@@ -3324,25 +3501,16 @@ msgid "Table"
 msgstr "高値/安値"
 
 msgid "Take early profits"
-msgstr ""
+msgstr "期限前にトレードを売却"
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
-msgstr ""
+msgstr "たくり線（CDLTAKURI）"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
-msgstr ""
-
-msgid "Tax identification number"
-msgstr ""
-
-msgid "Tax information"
-msgstr ""
-
-msgid "Tax residence"
-msgstr ""
+msgstr "たすきギャップ（CDLTASUKIGAP）"
 
 msgid "Tax-free"
-msgstr ""
+msgstr "非課税"
 
 msgid "Tel"
 msgstr "電話番号"
@@ -3352,6 +3520,9 @@ msgstr "テンプレート名"
 
 msgid "Terms"
 msgstr "各種規約"
+
+msgid "Terms and Conditions"
+msgstr "利用規約"
 
 msgid "Tertiary"
 msgstr "第三"
@@ -3431,6 +3602,8 @@ msgid ""
 "The Commodity Channel Index (CCI) is a versatile indicator that can be used "
 "to identify a new trend or warn of extreme conditions"
 msgstr ""
+"コモディティ・チャネル・インデックス（CCI）は新しい傾向を特定したり、極端な条件に陥った際に警告を通知するために使用される汎用性の高いインジケーターです"
+"。"
 
 msgid ""
 "The Donchian Channel is an indicator used in market trading developed by "
@@ -3654,10 +3827,12 @@ msgid ""
 "underlying. You can choose trades that stay below or go above a price "
 "target, or stay between two targets"
 msgstr ""
+"バイナリー取引でのバリアとは、取引対象に設定する価格ターゲットのことです。その価格ターゲットに対して、価格が下回る、上回る、上下の価格ターゲットの間に留ま"
+"るか否かを選択することができます。"
 
 msgid ""
 "The barrier(s) you choose defines your position and triggers your payout"
-msgstr ""
+msgstr "選択されたバリアによってポジションとペイアウト条件が決まります"
 
 msgid ""
 "The breakaway pattern begins with a long candle representing the current "
@@ -3686,44 +3861,39 @@ msgstr ""
 msgid ""
 "The contract period is the timeframe of a trade. It is also called the "
 "duration"
-msgstr ""
+msgstr "トレード期間とはトレードのタイムフレームのことであり、取引期間と同じ意味です。"
 
 msgid "The duration is the length of a purchased trade (see"
-msgstr ""
+msgstr "購入したトレードの取引期間のことです（「取引期間」の項目を参照して下さい）。"
 
 msgid ""
 "The entry level for a long contract is 1001, which is entry spot + half "
 "spread. At exit, the spot is at 1100 and hence the exit level for a long "
 "contract is 1099, which is exit spot - half spread"
 msgstr ""
+"ロングトレードのエントリーレベルが1001（始値 + スプレッドの半分）の場合、判定の際に値が1100であるとロングトレードの判定レベルは1099です。（"
+"終値 - スプレッドの半分）"
 
 msgid ""
 "The entry level for a short contract is 999, which is entry spot - half "
 "spread. At exit, the spot is at 1100 and hence the exit level for a short "
 "contract is 1101, which is exit spot + half spread"
 msgstr ""
+"ショートトレードのエントリーレベルが999（始値 - "
+"スプレッドの半分）の場合、判定の際に値が1100であるとショートトレードの判定レベルは1101です。（終値 + スプレッドの半分）"
 
 msgid ""
 "The entry spot of an instrument XYZ is 1000 and the spread on this "
 "instrument is 2 points"
-msgstr ""
+msgstr "金融商品XYZの始値は1000で、この商品のスプレッドは2ポイントです。"
 
 msgid ""
 "The entry spot price is the starting price of the trade purchased by a trader"
-msgstr ""
+msgstr "取引時レートとは、購入時のレートのことです。"
 
 msgid ""
 "The expiry price is the price of the underlying when the contract expires"
-msgstr ""
-
-msgid ""
-"The financial trading services contained within this site are only suitable "
-"for customers who are able to bear the loss of all the money they invest and "
-"who understand and have experience of the risk involved in the acquistion of "
-"financial contracts. Transactions in financial contracts carry a high degree "
-"of risk. If purchased contracts expire worthless, you will suffer a total "
-"loss of your investment, which consists of the contract premium"
-msgstr ""
+msgstr "判定レートとは、判定時刻時の市場価格を指します。"
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -3741,7 +3911,7 @@ msgstr ""
 msgid ""
 "The first step is to open an account. You can apply online in just a few "
 "minutes"
-msgstr ""
+msgstr "最初のステップは口座開設です。オンラインで申込ができます。"
 
 msgid ""
 "The first three days of the Bullish Ladder Bottom are strong black "
@@ -3767,12 +3937,19 @@ msgstr ""
 msgid ""
 "The loss of USD 306 is the difference between the exit and entry level "
 "multiplied by the amount per point"
-msgstr ""
+msgstr "USD306の損失は、判定レベルとエントリーレベルを1ポイントの金額で掛けた分の差額になります。"
 
 msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
+msgstr "市場出口価格とは、トレードの終了期間に影響を及ぼす価格のことです。"
+
+msgid ""
+"The page you requested could not be found. Either it no longer exists or the "
+"address is wrong. Please check for any typos"
 msgstr ""
+"リクエストされたページが見つかりません。存在していないか、アドレスに誤りがあ"
+"ります。再度ご確認ください"
 
 msgid ""
 "The parabolic SAR is calculated almost independently for each trend in the "
@@ -3785,12 +3962,12 @@ msgstr ""
 msgid ""
 "The patent means Regent Markets is the recognised pioneer of binary betting. "
 "The patent helps protect our innovations"
-msgstr ""
+msgstr "この特許取得により、Regent Marketsはバイナリー取引におけるパイオニアと認識され、より一層の進化を遂げました。"
 
 msgid ""
 "The payout is the amount paid to an options trader if their prediction is "
 "correct"
-msgstr ""
+msgstr "ペイアウトとは、条件が満たされた際に支払われる金額のことです。"
 
 msgid ""
 "The piercing pattern is made up of two candlesticks, the first black and the "
@@ -3805,16 +3982,18 @@ msgid ""
 "The premier platform for trading binary options in the world's financial "
 "markets"
 msgstr ""
+"世界の金融市場において\n"
+"最高水準のFXバイナリーオプション取引プラットフォーム"
 
 msgid ""
 "The profit is the difference between the purchase price (the stake) and the "
 "payout on a winning trade"
-msgstr ""
+msgstr "勝ちトレードの払い戻し金額と購入金額の差額が利益になります。"
 
 msgid ""
 "The profit of USD 294 is the difference between the exit and entry level "
 "multiplied by the amount per point"
-msgstr ""
+msgstr "USD 294の利益は、判定レベルとエントリーレベルのそれぞれをポイントごとの金額で掛け算した差額です。"
 
 msgid ""
 "The rebranding is a natural evolution for the platform as it continues to "
@@ -3822,23 +4001,25 @@ msgid ""
 "brand reflects the nature of the business, and our new tagline - Sharp "
 "Prices, Smart Trading - communicates our ethos and commitment to our clients"
 msgstr ""
+"今回の変更は、競争が激しくなっているバイナリー業界でのマーケットシェアの維持のため、当社システムが進化していることの裏付けです。この新しいブランドは当社の"
+"ビジネスの本質、及び当社の新しいコンセプトである「優れた価格設定、賢くトレード」を体現し、当社の精神とコミットメントを顧客に伝達します。"
 
 msgid ""
 "The resale price indicates a contract's current market price. Resale prices "
 "are on a best-efforts basis and may not be available at all times after "
 "purchase. See 'Sell option' for more details on selling contracts before "
 "expiry"
-msgstr ""
+msgstr "期限前の契約転売の詳細は「オプションの売却」からご覧いただけます。"
 
 msgid ""
 "The return is the money realized when the contract expires (see 'Payout')"
-msgstr ""
+msgstr "ペイアウトとは、トレードの予測が正しかった場合に得る金額のことです。（「払い戻し価格」の項目をご確認下さい）"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
-msgstr ""
+msgstr "購入金額とは、トレード開始のために支払わなければならない金額のことです。"
 
 msgid "The sum of price over selected period"
-msgstr ""
+msgstr "選択期間の合計"
 
 msgid ""
 "The variance and the closely-related standard deviation are measures of how "
@@ -3854,32 +4035,35 @@ msgid ""
 "help users to try out scenarios like - high volatility, low volatility, "
 "bullish and bearish trends"
 msgstr ""
+"ボラリティ指数は、様々なリアル市場の状況をシミュレートし、取引や戦略に慣れるための理想的なプラットフォームです。これらインデックスはボラティリティとドリフ"
+"トに依存しており、高ボラティリティ、低ボラティリティ、強気傾向、弱気傾向などのシナリオを試すのに役立ちます。"
 
 msgid ""
 "These are trades where the trader predicts if a market will finish higher or "
 "lower than a specified price target"
-msgstr ""
+msgstr "定めた価格バリアーよりも、終値が高いか低いかを予測するトレードです。"
 
 msgid ""
 "These are trades where the trader predicts if a market will rise or fall at "
 "the end of a selected time period"
-msgstr ""
+msgstr "ご指定して頂いた取引期間終了時に市場価格が上昇するか下降するかを予測するトレードです。"
 
 msgid ""
 "These are trades where the trader selects a low and high barrier, and "
 "predicts if the market will stay within these barriers or go outside them "
 "(see also 'Stays Between/Goes Outside trades')"
 msgstr ""
+"上下に設定した価格バリアー内に市場価格が収まるか否かを予測するトレードタイプです。（「STAY-IN/BREAK-OUT」の項目もご参照ください）"
 
 msgid ""
 "These are trades where the trader selects a price target, and predicts that "
 "the market will never touch the target before the expiry of the trade"
-msgstr ""
+msgstr "ターゲット価格を設定し、取引対象の価格が取引終了時までにターゲット価格に一度も触れないことを予測するトレードタイプのことです。"
 
 msgid ""
 "These are trades where the trader selects a price target, and predicts that "
 "the market will touch the target before the expiry of the trade"
-msgstr ""
+msgstr "ターゲット価格を設定し、取引対象の価格が取引終了時までにターゲット価格に触れることを予測するトレードタイプのことです。"
 
 msgid ""
 "This Moving Average uses curve of the Normal (Gauss) distribution which can "
@@ -3887,6 +4071,12 @@ msgid ""
 "the smoothness and high sensitivity of the Moving Average. Sigma is another "
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
+
+msgid "This contract lost"
+msgstr "トレードの条件が満たされませんでした"
+
+msgid "This contract won"
+msgstr "トレードの条件が満たされました"
 
 msgid "This field is required"
 msgstr "この項目は必須です"
@@ -3897,17 +4087,21 @@ msgid ""
 "traders award us silver (we are just pipped for gold by Betfair). It means "
 "active traders worldwide rate our trading platform extremely highly"
 msgstr ""
+"Trade2Winは株式、先物、オプション、そして為替取引から利益を得ることを目的にした活発なトレーダー向けのポータルサイトであり、当社は銀賞を受賞しまし"
+"た。（金賞のBetfair社とは僅差の評価です。）この受賞は、世界中の活発なトレーダーが当社のシステムを大変高く評価していることを意味します。"
 
 msgid ""
 "This is big. We pick up a double award from the Financial Times and "
 "Investors Chronicle, reflecting our success in improving the quality and "
 "usability of our website and products"
 msgstr ""
+"”the Financial Times”と”Investors "
+"Chronicle”の両誌から、当社のウェブサイト、商品の質とユーザビリティの向上を高く評価されました。"
 
 msgid ""
 "This is the current price at which an underlying can be bought or sold at a "
 "particular time"
-msgstr ""
+msgstr "特定の時間にて、とある取引対象を売買できる現在の価格のことです。"
 
 msgid ""
 "This pattern occurs when two black days appear with equal closes in a "
@@ -3917,19 +4111,19 @@ msgid ""
 msgstr ""
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
-msgstr ""
+msgstr "三前進ホワイトソルジャー（CDL3WHITESOLDIERS）"
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "3羽ガラス（CDL3BLACKCROWS）"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
-msgstr ""
+msgstr "スリー・インサイド・アップ/ダウン（CDL3INSIDE）"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "スリー・アウトサイド・アップ/ダウン（CDL3OUTSIDE）"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr ""
+msgstr "南三ツ星（CDL3STARSSOUTH）"
 
 msgid ""
 "Three tall white candles, each with higher closes, and bodies that overlap "
@@ -3944,10 +4138,10 @@ msgid ""
 msgstr ""
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
-msgstr ""
+msgstr "スリーライン・ストライク（CDL3LINESTRIKE）"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Thrusting Pattern（CDLTHRUSTING）"
 
 msgid "Thu"
 msgstr "木曜日"
@@ -3956,7 +4150,7 @@ msgid "Thursday"
 msgstr "木曜日"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Trade app"
 msgstr "Tickトレードアプリ"
@@ -3982,7 +4176,7 @@ msgstr "取引期間"
 msgid ""
 "Times are changing. We increase payouts so our clients can make the most of "
 "their winning trades"
-msgstr ""
+msgstr "時代のニーズを汲み、ペイアウト金額を増大させることで顧客の利益拡大を目指します。"
 
 msgid "Title"
 msgstr "敬称"
@@ -4008,6 +4202,9 @@ msgid ""
 msgstr ""
 "資金のご出金には、お客様のアドレスに只今送信されたワンタイムパスワードをご入"
 "力ください"
+
+msgid "Today"
+msgstr "今日"
 
 msgid "Token"
 msgstr "トークン"
@@ -4059,31 +4256,31 @@ msgid "Trade Confirmation"
 msgstr "トレード確定"
 
 msgid "Trade all market conditions"
-msgstr ""
+msgstr "あらゆる市場状況でお取引いただけます"
 
 msgid "Trade to your budget"
-msgstr ""
+msgstr "予算内でお取引"
 
 msgid "Trade to your strategy"
-msgstr ""
+msgstr "ご自身の戦略を利用してお取引"
 
 msgid "Trade using"
 msgstr "XXXでお取引"
 
 msgid "Trade when you want to trade"
-msgstr ""
+msgstr "いつでも取引が可能"
 
 msgid "Trade with confidence"
-msgstr ""
+msgstr "安心してお取引できます"
 
 msgid "Trade your way"
-msgstr ""
+msgstr "柔軟な取引"
 
 msgid "Trading Times"
 msgstr "取引時間"
 
 msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
-msgstr ""
+msgstr "バイナリーは3つのシンプルなステップでお取引いただける、非常に分かりやすい取引です"
 
 msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
@@ -4113,26 +4310,23 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Binary.comのTradingView"
 
-msgid "Transfer"
-msgstr ""
-
 msgid "Transfer to another Binary account"
 msgstr "他のBinary口座へ送金する"
 
 msgid "Triangular Moving Average (TRIMA)"
-msgstr ""
+msgstr "三角移動平均（TRIMA）"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "三重指数移動平均（T3）"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "三重指数移動平均（TEMA）"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "三ツ星（CDLTRISTAR）"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "トゥルー・レンジ（TRANGE）"
 
 msgid "Try"
 msgstr "試してみる"
@@ -4147,10 +4341,10 @@ msgid "Turnover"
 msgstr "取引数量"
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "2羽カラス（CDL2CROWS）"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "典型価格（TYPPRICE）"
 
 msgid "USD"
 msgstr "USD"
@@ -4159,13 +4353,13 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "究極オシレーター（ULTOSC）"
 
 msgid "Under"
 msgstr "未満"
 
 msgid "Underlying"
-msgstr ""
+msgstr "原資産"
 
 msgid ""
 "Unfortunately, no - funds initially deposited through one payment method "
@@ -4173,12 +4367,14 @@ msgid ""
 "alternate system for withdrawal. We do offer a wide variety of payment "
 "methods, to suit your specific needs and preferences"
 msgstr ""
+"残念ながらできません。- 初めにあるお支払い方法で入金されたご資金は、同じ支払方法で出金される必要があります。そのため、入金にご使用された決済方法以外での"
+"ご出金はできません。当社ではお客さまの特定のニーズやご希望に合わせて幅広い決済方法を提供しています。"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
 
 msgid "Unique 3 River (CDLUNIQUE3RIVER)"
-msgstr ""
+msgstr "三川（CDLUNIQUE3RIVER）"
 
 msgid ""
 "Unique Three River Bottom is a bullish candlestick pattern made up of three "
@@ -4188,19 +4384,16 @@ msgid ""
 msgstr ""
 
 msgid "Up to 100% returns on rise/fall trades"
-msgstr ""
+msgstr "ラダートレードのリターン率は最高100%"
 
 msgid "Up/Down"
 msgstr "ラダー"
 
 msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
-msgstr ""
+msgstr "ダウンギャップ・サイドバイサイド・ホワイト・ライン（CDLGAPSIDESIDEWHITE）"
 
 msgid "Upcoming Events"
 msgstr "取引時間短縮日"
-
-msgid "Update"
-msgstr ""
 
 msgid "Update Settings"
 msgstr "設定内容を更新"
@@ -4212,10 +4405,10 @@ msgid "Upload template"
 msgstr "テンプレートをアップデート"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
-msgstr ""
+msgstr "Upside/Downside Gap Three Methods（CDLXSIDEGAP3METHODS）"
 
 msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
-msgstr ""
+msgstr "2羽カラス（CDLUPSIDEGAP2CROWS）"
 
 msgid "Use"
 msgstr "使用する"
@@ -4234,7 +4427,7 @@ msgid ""
 "Using our website, customers can trade currencies, indices, stocks and "
 "commodities 24/7. We have the most flexible pricing and the most "
 "comprehensive suite of products available"
-msgstr ""
+msgstr "当WEBブラウザ版取引画面上で、お客さまは最も柔軟な価格設定でバイナリーオプション取引が祝日を含む平日24時間可能です。"
 
 msgid "Variance (VAR)"
 msgstr "偏差 (VAR)"
@@ -4242,11 +4435,17 @@ msgstr "偏差 (VAR)"
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
 
+msgid "Verification code sent to"
+msgstr "認証コードが送信されました"
+
 msgid "Verification token"
 msgstr "ワンタイムパスワード"
 
 msgid "Verify new password"
 msgstr "新しいパスワード（確認用）"
+
+msgid "Vertical Line"
+msgstr "垂直線"
 
 msgid "Vertical line"
 msgstr "垂直線"
@@ -4286,18 +4485,20 @@ msgid ""
 "which we hold on account for you, and the extent to which funds are "
 "protected in the event of insolvency"
 msgstr ""
+"当社はライセンスにより、当社が保持しているお客さまの口座の資金に何か起きた場合、及び支払不能になった場合にどの資金が保護されるかその範囲をお知らせする必要"
+"があります。"
 
 msgid ""
 "We do it again. BetOnMarkets.com follows up our 2007 award by being voted "
 "'Best Fixed-Odds Financial Trading Provider' for 2008"
-msgstr ""
+msgstr "BetOnMarkets.comは2007年度に引き続き、「最優秀固定オッズ金融取引業者」を受賞。"
 
 msgid ""
 "We don't usually require any documents as we can verify your identity online"
-msgstr ""
+msgstr "通常は口座開設に際し各種証明書の郵送を求めることはありません。オンラインで送付いただくことで手続きは完了いたします。"
 
 msgid "We rebrand BetOnMarkets.com as"
-msgstr ""
+msgstr "BetOnMarkets.comをwww.binary.comに変更してリニューアル。"
 
 msgid ""
 "We're granted patents for 'Computer trading system and method for "
@@ -4305,6 +4506,8 @@ msgid ""
 "custom financial market speculations'. The patents show our ability to "
 "innovate and stay ahead of the pack"
 msgstr ""
+"米国で「金融市場投機用コンピューター取引システムとメソッド」と「カスタムの金融市場投機用コンピューター取引システムとメソッド」に関する特許を取得。この特許"
+"取得により、当社の進化を証明し、及び競合他社との差別化を実現。"
 
 msgid ""
 "We're really proud of this award. We're strongly committed to offering an "
@@ -4313,6 +4516,9 @@ msgid ""
 "whether they are experienced traders or novices. We offer customer services "
 "in English, Indonesian, Russian, Chinese and Spanish"
 msgstr ""
+"この受賞は大変光栄なものです。当社は、倫理的で顧客を重視したトレード機会を提供することに注力します。そしてこの受賞は、BetOnMarketsがトレード初"
+"心者、及び上級者に対し、顧客の声を重視したサービスを提供するブランドであることを示します。当社は英語、インドネシア語、ロシア語、中国語、及びスペイン語での"
+"カスタマーサービスを提供します。"
 
 msgid "Websocket Server"
 msgstr "Websocket サーバー"
@@ -4340,12 +4546,12 @@ msgstr "加重移動平均線 (WMA)"
 
 msgid ""
 "When you are satisfied with the trade price, instantly execute your trade"
-msgstr ""
+msgstr "価格に満足したら、すぐにトレードを実行しましょう。"
 
 msgid ""
 "When you trade with Binary.com, you can be assured that your deposits are "
 "held in a separate trust account and are not used for any other purpose"
-msgstr ""
+msgstr "当社とお取引される際、お客さまからお預かりしている口座の預託金は、日証信託銀行にて全額信託されます。その他の目的で使用することはありません。"
 
 msgid "While on the go, you can"
 msgstr "出先でもお取引が可能"
@@ -4357,39 +4563,43 @@ msgid "Will I need to install any software?"
 msgstr "ソフトウェアをインストールする必要はありますか？"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "ウィリアムズ・パーセントアール（WILLR）"
 
 msgid ""
 "Win 10-1000% on your stake if you are correct. Increase your winning return "
 "by choosing 'Stays In' with a narrow price target"
 msgstr ""
+"条件が満たされた場合、購入金額の10%〜1000%を獲得いただけます。「STAY-"
+"INトレード」で狭いバリア範囲を選択するほど、リターン率も大きくなります。"
 
 msgid ""
 "Win 10-1000% on your stake if you are correct. Increase your winning return "
 "by choosing a 'Touch' trade, with a price target farther away from the "
 "current price"
 msgstr ""
+"条件が満たされた場合、購入金額の10%〜1000%を獲得いただけます。「TOUCHトレード」で現行価格から離れた価格を選択するほど、リターン率も大きくなり"
+"ます。"
 
 msgid ""
 "Win 10-1000% on your stake if you are correct. Increase your winning return "
 "by choosing a price target farther away from the current price"
-msgstr ""
+msgstr "条件が満たされた場合、購入金額の10%〜1000%を獲得いただけます。現行価格から離れた価格を選択するほど、リターン率も大きくなります。"
 
 msgid "Windows"
 msgstr "Windows"
 
 msgid "With Binary.com you can trade"
-msgstr ""
+msgstr "当社では下記のお取引が可能です。"
 
 msgid ""
 "With Binary.com's unique platform, there's no risk of 'slippage' or gapping "
 "markets. And no hidden fees"
-msgstr ""
+msgstr "Binary.com独自のプラットフォームなら「スリップページ」や市場との差はありません。もちろん隠れた手数料や追加手数料などは発生しません"
 
 msgid ""
 "With Binary.com, the most you can lose is the amount you stake at the start "
 "of your trade"
-msgstr ""
+msgstr "Binary.comでの最大損失額はトレードの購入金額です"
 
 msgid "Withdraw funds"
 msgstr "資金のご出金"
@@ -4421,29 +4631,29 @@ msgstr "はい"
 msgid ""
 "You can choose payouts from $1 to $50,000. This wide payout range is ideal "
 "for both small and large traders"
-msgstr ""
+msgstr "ペイアウトは¥1,000からご選択いただけます。幅広い当社のペイアウトはどのトレードの規模にも最適です"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "口座を開設し、資金を入金するだけですぐに取引を始められます"
 
 msgid ""
 "You can sell back long-term trades at any time to profit from changing "
 "market conditions"
-msgstr ""
+msgstr "市場状況の変化から利益を得られるよう、長期トレードに関してはトレードを売却することができます。"
 
 msgid "You can set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "2時間以上から取引期間の指定が可能です"
 
 msgid "You can trade a range of markets, timescales and indices - 24/7"
-msgstr ""
+msgstr "当WEBブラウザ版取引画面上で、お客さまは最も柔軟な価格設定でバイナリーオプション取引が祝日を含む平日24時間可能です。"
 
 msgid ""
 "You don't need to deposit any money to open an account, but you need to "
 "deposit funds before you can start trading"
-msgstr ""
+msgstr "口座開設条件として預託金は必須ではありませんが、取引を開始するにはあらかじめ預託金をご入金いただく必要があります。"
 
 msgid "You get fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "より良い取引条件をお客さまに提供できるよう努めております。"
 
 msgid "You have sold the following contract"
 msgstr "以下のトレードを売却しました"
@@ -4463,13 +4673,13 @@ msgid "You pay"
 msgstr "xxxを支払う"
 
 msgid "You set the barrier(s) to define your position"
-msgstr ""
+msgstr "ポジションを決定するためにバリアを設定します"
 
 msgid "You will be automatically logged out after such time"
 msgstr "その時間が経過しますと、自動的にログアウトされます"
 
 msgid "You'll be surprised by the returns you can make"
-msgstr ""
+msgstr "リターンに驚かれることでしょう"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
@@ -4477,6 +4687,11 @@ msgid ""
 msgstr ""
 "お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダー"
 "のアクセスを許可頂く必要があります"
+
+msgid "Your account is locked, please contact customer support for more info"
+msgstr ""
+"お客様の口座は現在ロックされています。詳しくはカスタマーサポートまでご連絡く"
+"ださい。"
 
 msgid "Your browser is not supported"
 msgstr "お使いのブラウザは対応しておりません"
@@ -4487,7 +4702,7 @@ msgstr "メールアドレス"
 msgid ""
 "Your money is always safe with Binary.com. At all times, it is held in "
 "segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr ""
+msgstr "皆様の資金は日証金信託銀行の顧客区分管理信託口にて、当社の固有財産とは区分して管理されます。"
 
 msgid "Your new account balance is"
 msgstr "最新の口座残高："
@@ -4507,16 +4722,19 @@ msgstr "ズーム"
 msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
-msgstr ""
+msgstr "「ドラッグ&ドロップ」操作で簡単に自動売買ロボットを作成することができます"
+
+msgid "and"
+msgstr "かつ"
 
 msgid "apostrophe (') are allowed"
-msgstr ""
+msgstr "アポストロフィ (') もご利用いただけます"
 
 msgid "at a valuation of US$ 50.5 million"
-msgstr ""
+msgstr "5,050万 US$"
 
 msgid "auto-trader programming tool"
-msgstr ""
+msgstr "自動トレーダープログラミングツール"
 
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
@@ -4527,6 +4745,9 @@ msgstr ""
 "口座開設にお進みください。その際は、リスクを判断したり、軽減させるための知識"
 "や経験がないために、自信へ生じるリスク（投資全体の損失リスクを含むような重大"
 "になりうるものなど）について注意していただく必要があります。"
+
+msgid "between"
+msgstr "間"
 
 msgid "commission"
 msgstr "手数料"
@@ -4544,10 +4765,10 @@ msgid "days"
 msgstr "日"
 
 msgid "disposes of its stake"
-msgstr ""
+msgstr "保有する当社の株式をすべて売却しました"
 
 msgid "e-commerce site for branded merchandise"
-msgstr ""
+msgstr "海外で自社ブランド商品のECサイト"
 
 msgid "e.g"
 msgstr "例"
@@ -4628,7 +4849,7 @@ msgid "main site"
 msgstr "メインサイト"
 
 msgid "medium protection"
-msgstr ""
+msgstr "媒体保護"
 
 msgid "minute"
 msgstr "分"
@@ -4646,7 +4867,7 @@ msgid "of \"Now\", the"
 msgstr "「今」のXXX"
 
 msgid "our helpful support desk"
-msgstr ""
+msgstr "カスタマーサポート"
 
 msgid "payment agent"
 msgstr "決済サービス"
@@ -4708,227 +4929,7 @@ msgstr "| 戻る"
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
-msgstr ""
-
-#~ msgid "404"
-#~ msgstr "404"
-
-#~ msgid "AM"
-#~ msgstr "AM"
-
-#~ msgid "Account opening"
-#~ msgstr "口座開設"
-
-#~ msgid "Add/remove comparisons"
-#~ msgstr "比較チャート追加/削除"
-
-#~ msgid "Add/remove overlays"
-#~ msgstr "オーバーレイの追加/削除"
-
-#~ msgid "Average"
-#~ msgstr "平均"
-
-#~ msgid "Config changes successful"
-#~ msgstr "設定が変更されました"
-
-#~ msgid "Contract Confirmation"
-#~ msgstr "トレード確定"
-
-#~ msgid "Customize chart appearance"
-#~ msgstr "チャートの外観をカスタマイズする"
-
-#~ msgid "Deselect"
-#~ msgstr "選択解除"
-
-#~ msgid "Done"
-#~ msgstr "完了"
-
-#~ msgid "Downloading .csv"
-#~ msgstr ".csvファイルでダウンロード"
-
-#~ msgid "Email verification failed"
-#~ msgstr "Eメール認証に失敗しました"
-
-#~ msgid ""
-#~ "Ensure you are entering valid inputs else your account will get locked"
-#~ msgstr ""
-#~ "入力内容が有効であることをよくお確かめください。情報が無効である場合、口座"
-#~ "がロックされますのでご注意ください。"
-
-#~ msgid "Error downloading .csv"
-#~ msgstr ".csvファイルのダウンロード中にエラーが発生しました"
-
-#~ msgid "Error getting data for %1"
-#~ msgstr "%1のデータ取得中にエラーが発生しました"
-
-#~ msgid "Failed to update the password"
-#~ msgstr "パスワードの変更に失敗しました"
-
-#~ msgid "Financial Account Opening form"
-#~ msgstr "口座開設申請フォーム"
-
-#~ msgid "Have better luck at trading!"
-#~ msgstr "お取引に幸あれ！"
-
-#~ msgid "Horizontal Line"
-#~ msgstr "水平線"
-
-#~ msgid "Hour"
-#~ msgstr "時間"
-
-#~ msgid "If the issue keeps happening, please contact"
-#~ msgstr "問題が解決されないようでしたら、〜までご連絡ください"
-
-#~ msgid "Jump to"
-#~ msgstr "xxxへ移動する"
-
-#~ msgid "Minute"
-#~ msgstr "分"
-
-#~ msgid "Oops... Page Not Available"
-#~ msgstr "ページをご利用いただくことができません"
-
-#~ msgid "Optional field, within 20 characters and may not contain '+'"
-#~ msgstr "任意の項目は、20字以内で'+'を含めないようにしてください"
-
-#~ msgid "PM"
-#~ msgstr "PM"
-
-#~ msgid "Page Not Found"
-#~ msgstr "ページが存在しません"
-
-#~ msgid "Password must be 6 characters minimum"
-#~ msgstr "パスワードは6文字以上でご入力ください"
-
-#~ msgid "Password must contain lower and uppercase letters with numbers"
-#~ msgstr "パスワードには大文字と小文字を含む英字と数字を組み合わせてください"
-
-#~ msgid "Password must contain uppercase letters and numbers"
-#~ msgstr "パスワードに大文字の英字と数字を含めてください"
-
-#~ msgid "Password successfully updated"
-#~ msgstr "パスワードは正常に変更されました"
-
-#~ msgid "Please answer to secret question, within 4-50 characters"
-#~ msgstr "4-50文字以内で、秘密の質問にお答えください"
-
-#~ msgid "Please enter a number between"
-#~ msgstr "XXX間の数字をご入力ください"
-
-#~ msgid "Please enter a value for"
-#~ msgstr "XXXの値をご入力ください"
-
-#~ msgid "Please enter a vlaid phone number"
-#~ msgstr "有効な電話番号をご入力ください"
-
-#~ msgid "Please enter the verification code sent to your email"
-#~ msgstr "お客様のメールアドレスに送信された認証コードをご入力ください"
-
-#~ msgid "Please enter your city address"
-#~ msgstr "市区町村をご入力ください"
-
-#~ msgid "Please enter your family name"
-#~ msgstr "氏名（姓）をご入力ください"
-
-#~ msgid "Please enter your first name"
-#~ msgstr "氏名（名）をご入力ください"
-
-#~ msgid "Please enter your new password"
-#~ msgstr "新しいパスワードをご入力ください"
-
-#~ msgid "Please enter your password"
-#~ msgstr "パスワードをご入力ください"
-
-#~ msgid "Please enter your phone number"
-#~ msgstr "電話番号をご入力ください"
-
-#~ msgid "Please enter your street address"
-#~ msgstr "番地をご入力ください"
-
-#~ msgid "Please use your new password to login"
-#~ msgstr "新しいパスワードでログインをしてください"
-
-#~ msgid "Profit Table"
-#~ msgstr "取引明細"
-
-#~ msgid "Real Money Account Opening"
-#~ msgstr "リアル口座開設"
-
-#~ msgid "Reality check"
-#~ msgstr "リアリティチェック"
-
-#~ msgid "Redirecting to oauth login page"
-#~ msgstr "OAuthログインページヘリダイレクト"
-
-#~ msgid "Registration"
-#~ msgstr "登録"
-
-#~ msgid "Reloading page"
-#~ msgstr "ページを再度読み込む"
-
-#~ msgid "Reset to Defaults"
-#~ msgstr "既定にリセット"
-
-#~ msgid "Return to trading page"
-#~ msgstr "トレードページに戻る"
-
-#~ msgid "Sell Price"
-#~ msgstr "売却"
-
-#~ msgid "Sell Spot"
-#~ msgstr "売却レート"
-
-#~ msgid "Sell Time"
-#~ msgstr "売却時間"
-
-#~ msgid "Send to account #"
-#~ msgstr "口座 #へ送金"
-
-#~ msgid "Some random index"
-#~ msgstr "スローランダムインデックス"
-
-#~ msgid "Street address"
-#~ msgstr "番地"
-
-#~ msgid "Stroke color"
-#~ msgstr "ストロークカラー"
-
-#~ msgid "Terms and Conditions"
-#~ msgstr "利用規約"
-
-#~ msgid ""
-#~ "The page you requested could not be found. Either it no longer exists or "
-#~ "the address is wrong. Please check for any typos"
-#~ msgstr ""
-#~ "リクエストされたページが見つかりません。存在していないか、アドレスに誤りが"
-#~ "あります。再度ご確認ください"
-
-#~ msgid "This contract lost"
-#~ msgstr "トレードの条件が満たされませんでした"
-
-#~ msgid "This contract won"
-#~ msgstr "トレードの条件が満たされました"
-
-#~ msgid "Today"
-#~ msgstr "今日"
-
-#~ msgid "Verification code sent to"
-#~ msgstr "認証コードが送信されました"
-
-#~ msgid "Vertical Line"
-#~ msgstr "垂直線"
-
-#~ msgid ""
-#~ "Your account is locked, please contact customer support for more info"
-#~ msgstr ""
-#~ "お客様の口座は現在ロックされています。詳しくはカスタマーサポートまでご連絡"
-#~ "ください。"
-
-#~ msgid "and"
-#~ msgstr "かつ"
-
-#~ msgid "between"
-#~ msgstr "間"
+msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
 
 #~ msgid "%D MA Type"
 #~ msgstr "%D MA タイプ"
@@ -5029,6 +5030,9 @@ msgstr ""
 #~ msgid "Fast Period"
 #~ msgstr "高速 期間"
 
+#~ msgid "High Barrier"
+#~ msgstr "高限バリア"
+
 #~ msgid "High Stroke"
 #~ msgstr "高ストローク"
 
@@ -5070,6 +5074,9 @@ msgstr ""
 
 #~ msgid "Long Term Period"
 #~ msgstr "長期"
+
+#~ msgid "Low Barrier"
+#~ msgstr "下限バリア"
 
 #~ msgid "Low Stroke"
 #~ msgstr "低ストローク"
@@ -5147,6 +5154,9 @@ msgstr ""
 
 #~ msgid "Plot Color"
 #~ msgstr "プロットカラー"
+
+#~ msgid "Price"
+#~ msgstr "価格"
 
 #~ msgid "Purchase Time"
 #~ msgstr "購入時間"
