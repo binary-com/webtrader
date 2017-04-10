@@ -116,7 +116,7 @@
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_barrier_daily">Barrier</span>
         </li>
         <li>
-            <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_barrier_daily | negate | ternary '+' ''" rv-decimal-round="5"
                    rv-value="barriers.barrier | debounce proposal.onchange" />
         </li>
         <li>
@@ -142,7 +142,7 @@
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
         </li>
         <li>
-            <input class="barriers-barrier" type="text" prefered-sign='+' rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_high_barrier_daily | negate | ternary '+' ''" rv-decimal-round="5"
                    rv-value="barriers.high_barrier | debounce proposal.onchange" />
         </li>
         <li>
@@ -169,7 +169,7 @@
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_low_barrier_daily">Low barrier</span>
         </li>
         <li>
-            <input class="barriers-barrier" type="text" prefered-sign='-' rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_low_barrier_daily | negate | ternary '-' ''" rv-decimal-round="5"
                    rv-value="barriers.low_barrier | debounce proposal.onchange" />
         </li>
         <li>
