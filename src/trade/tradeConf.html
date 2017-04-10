@@ -18,14 +18,14 @@
 
   <div rv-if="buy.show_result | not-eq true">
       <ul class='payout-row'
-          rv-if="ticks.category | not-eq 'Spreads'">
+          rv-if="ticks.category.contract_category | not-eq 'Spreads'">
         <li> <span>Potential Payout</span> <span rv-text='buy.payout' /> </li>
         <li> <span>Total Cost</span> <span rv-text='buy.buy_price' /> </li>
         <li> <span>Potential Profit</span> <span rv-text='buy.potential_profit | to-fixed 2' /> </li>
       </ul>
 
       <ul class='payout-row spreads-result'
-          rv-if="ticks.category | eq 'Spreads'">
+          rv-if="ticks.category.contract_category | eq 'spreads'">
         <li> <span>Stop-loss</span> <span rv-text='spreads.stop_loss_level' /> </li>
         <li class='amount-per-point'> <span>Amount per point</span> <span rv-text='spreads.amount_per_point' /> </li>
         <li> <span>Stop-profit</span> <span rv-text='spreads.stop_profit_level' /> </li>
@@ -61,7 +61,7 @@
       rv-auto-scroll-bottom="ticks.array"
       rv-class-won="ticks.status | eq 'won'"
       rv-class-lost="ticks.status | eq 'lost'"
-      rv-if="ticks.category | eq 'Digits'">
+      rv-if="ticks.category.contract_category | eq 'digits'">
       <li rv-each-row="ticks.array">
           <span> Tick {row.number} </span>
           <span>{row.epoch | utc-time}</span>
@@ -79,7 +79,7 @@
        height='130'>
   </div>
 
-  <ul class='balance-row' rv-css-bottom="ticks.category | eq 'Digits' | or ticks.chart_visible | ternary 0 '10%'">
+  <ul class='balance-row' rv-css-bottom="ticks.category.contract_category | eq 'digits' | or ticks.chart_visible | ternary 0 '10%'">
     <li>
       <span> Account balance: </span>
       <span class="bold" rv-text="buy.balance_after | to-fixed 2 | format-price buy.currency"></span>

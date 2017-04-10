@@ -17,7 +17,7 @@ import 'jquery-growl';
 import $Hmw from 'common/highchartsMousewheel';
 import ins from 'instruments/instruments';
 
-const lang = local_storage.get("i18n").value.replace("_","-");
+const lang = local_storage.get("i18n") ? local_storage.get("i18n").value.replace("_","-") : 'en';
 if(lang !== "en") // Load moment js locale file.
     require(['moment-locale/'+lang]); 
 

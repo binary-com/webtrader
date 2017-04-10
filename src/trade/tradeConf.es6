@@ -142,7 +142,7 @@ const register_ticks = (state, extra) => {
             /* unregister from proposal_open_contract stream */
          }
          /* update state for each new tick in Up/Down && Asians contracts */
-         if (state.ticks.category !== 'Digits')
+         if (state.ticks.category.contract_category !== 'digits')
             state.ticks.update_status();
       }
    }
@@ -179,7 +179,7 @@ const register_ticks = (state, extra) => {
 *    currency: ,
 *    symbol: "frxXAUUSD",
 *    symbol_name: "Gold/USD",
-*    category: ,
+*    category: {},
 *    category_display: ,
 *    duration_unit: ,
 *      pip: "0.001",
@@ -193,7 +193,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    extra.getbarrier = (tick) => {
       let barrier = tick.quote*1;
-      if(extra.barrier && _(['higher','lower']).includes(extra.category_display)) {
+      if(extra.barrier && _(['higher','lower']).includes(extra.category_display.name)) {
          barrier += extra.barrier*1;
       }
       return barrier.toFixed(decimal_digits);
@@ -243,13 +243,13 @@ export const init = (data, extra, show_callback, hide_callback) => {
             const ticks = state.ticks;
             const inx = ticks.array.length;
             const tick = ticks.array[inx-1];
-            if(ticks.category === 'Up/Down' && inx === 1) {
+            if(ticks.category.contract_category === 'callput' && inx === 1) {
                const barrier = extra.getbarrier(tick);
                state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
                return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
             }
 
-            if(ticks.category === 'Asians') {
+            if(ticks.category.contract_category === 'asian') {
                //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
                const avg = ticks.average().toFixed(decimal_digits + 1);
                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
@@ -260,11 +260,12 @@ export const init = (data, extra, show_callback, hide_callback) => {
          value: (extra.digits_value || '0') + '', // last digit value selected by the user
          category: extra.category,
          category_display: extra.category_display,
+
          status: 'waiting', /* could be 'waiting', 'lost' or 'won' */
          chart_visible: extra.show_tick_chart,
       },
       arrow: {
-         visible: !extra.show_tick_chart && extra.category !== 'Digits',
+         visible: !extra.show_tick_chart && extra.category.contract_category !== 'digits',
       },
       back: { visible: false }, /* back buttom */
    };
@@ -295,29 +296,27 @@ export const init = (data, extra, show_callback, hide_callback) => {
          digits_value = state.ticks.value + '',
          average = state.ticks.average().toFixed(5);
       const category = state.ticks.category,
-         display = state.ticks.category_display;
+         display = state.ticks.category_display.sentiment;
       const css = {
-         Digits: {
-            matches:  _.last(last_quote) === digits_value,
-            differs:  _.last(last_quote) !== digits_value,
+         digits: {
+            match:  _.last(last_quote) === digits_value,
+            differ:  _.last(last_quote) !== digits_value,
             over: _.last(last_quote)*1 > digits_value*1,
             under: _.last(last_quote)*1 < digits_value*1,
             odd: (_.last(last_quote)*1)%2 === 1,
             even: (_.last(last_quote)*1)%2 === 0
          },
-         'Up/Down': {
-            rise: last_quote*1 > first_quote*1,
-            fall: last_quote*1 < first_quote*1,
-            higher: last_quote*1 > barrier*1,
-            lower: last_quote*1 < barrier*1,
+         callput: {
+            up: last_quote*1 > barrier*1,
+            down: last_quote*1 < barrier*1,
          },
-         Asians: {
-            'asian up': average < last_quote*1,
-            'asian down': average > last_quote*1,
+         asian: {
+            up: average < last_quote*1,
+            down: average > last_quote*1,
          }
       };
       /* set the css class */
-      state.ticks.status = css[category][display] ? 'won' : 'lost';
+      state.ticks.status = css[category.contract_category][display] ? 'won' : 'lost';
    }
 
    state.back.onclick = () => hide_callback(root);
