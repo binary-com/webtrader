@@ -93,3 +93,15 @@ body {
         bottom: 0;
     }
 }
+#doorbell-button  {
+    right: -37px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    font-size: inherit;
+    background-color: #2E8836;
+    bottom: 100px;
+    z-index: +1000;
+}
