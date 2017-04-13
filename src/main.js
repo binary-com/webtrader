@@ -291,8 +291,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
                 // hide the main loading spinner,
                 // after the `last module` has been loaded.
                 $(".sk-spinner-container").hide();
-                // show the footer
-                windows.fixFooterPosition();
                 $('body > .footer').show();
             });
         });
