@@ -73,7 +73,6 @@ class Withdraw {
             left: offset.left + 'px',
             top: offset.top + 'px'
         });
-        win.fixFooterPosition();
         win.track({
             module_id: 'withdraw',
             is_unique: true

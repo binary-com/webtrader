@@ -160,7 +160,7 @@ module.exports = function (grunt) {
                 }]
             },
             style : {
-                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
+                src: ['dist/uncompressed/index.html', 'dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<style-url>',
